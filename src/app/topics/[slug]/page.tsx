@@ -8,6 +8,9 @@ import remarkMath from 'remark-math'
 import 'katex/dist/katex.min.css'
 import Link from 'next/link'
 
+// Force dynamic rendering
+export const dynamic = 'force-dynamic'
+
 interface TopicPageProps {
   params: Promise<{
     slug: string

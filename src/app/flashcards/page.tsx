@@ -2,6 +2,9 @@ import Link from 'next/link'
 import { prisma } from '@/lib/prisma'
 import { AdBanner } from '@/components/ad-banner'
 
+// Force dynamic rendering
+export const dynamic = 'force-dynamic'
+
 export default async function FlashcardsPage() {
   const categories = await prisma.category.findMany({
     include: {
