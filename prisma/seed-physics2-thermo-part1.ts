@@ -20,10 +20,10 @@ async function main() {
   }
 
   const thermoCategory = await prisma.category.upsert({
-    where: { slug: 'thermodynamics' },
+    where: { slug: 'physics2-thermodynamics' },
     update: {},
     create: {
-      slug: 'thermodynamics',
+      slug: 'physics2-thermodynamics',
       name: 'Thermodynamics',
       description: 'Temperature, heat, thermal properties, and laws of thermodynamics',
       order: 1,
