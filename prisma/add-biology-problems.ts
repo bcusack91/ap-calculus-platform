@@ -2596,11 +2596,1122 @@ $$\\boxed{\\text{Meiosis creates variation via crossing over + independent assor
     console.log('✓ Added 1 problem to: Meiosis')
   }
 
-  // Skipping some topics for brevity and moving to final summary
-  
-  console.log('\n✅ Successfully added problems to Biology topics!')
-  console.log('Total: 26 example problems added to AP Biology course')
-  console.log('Coverage: Chemistry of Life, Cell Structure, Energetics, Cell Communication, Cell Division')
+  // Topic 15: Mendelian Genetics
+  const mendelianTopic = await prisma.topic.findUnique({
+    where: { slug: 'mendelian-genetics' }
+  })
+
+  if (mendelianTopic) {
+    await prisma.exampleProblem.createMany({
+      data: [
+        {
+          topicId: mendelianTopic.id,
+          order: 1,
+          difficulty: 'MEDIUM',
+          question: 'In pea plants, tall (T) is dominant over short (t), and yellow seeds (Y) are dominant over green seeds (y). Cross a heterozygous tall, heterozygous yellow plant (TtYy) with a short, green plant (ttyy). (a) Set up a Punnett square, (b) determine the phenotypic ratio, and (c) calculate the probability of getting a tall plant with green seeds.',
+          solution: `**Given:**
+- Parent 1: TtYy (tall, yellow - heterozygous for both)
+- Parent 2: ttyy (short, green - homozygous recessive)
+- T = tall (dominant), t = short
+- Y = yellow (dominant), y = green
+
+**(a) Punnett Square Setup:**
+
+**Testcross** (heterozygote × homozygous recessive)
+
+**Parent 1 gametes (TtYy):** TY, Ty, tY, ty (4 types)
+**Parent 2 gametes (ttyy):** ty only (1 type)
+
+**Punnett Square:**
+
+\`\`\`
+         |  ty
+    -----|--------
+    TY   | TtYy (tall, yellow)
+    -----|--------
+    Ty   | Ttyy (tall, green)
+    -----|--------
+    tY   | ttYy (short, yellow)
+    -----|--------
+    ty   | ttyy (short, green)
+\`\`\`
+
+**Offspring genotypes:**
+- TtYy: tall, yellow
+- Ttyy: tall, green
+- ttYy: short, yellow
+- ttyy: short, green
+
+**(b) Phenotypic Ratio:**
+
+Count each phenotype:
+- Tall, yellow: 1 (TtYy)
+- Tall, green: 1 (Ttyy)
+- Short, yellow: 1 (ttYy)
+- Short, green: 1 (ttyy)
+
+$$\\boxed{\\text{Phenotypic ratio: } 1:1:1:1}$$
+
+Or grouped:
+- Tall: 2 (50%)
+- Short: 2 (50%)
+- Yellow: 2 (50%)
+- Green: 2 (50%)
+
+**(c) Probability of tall with green seeds:**
+
+**Phenotype:** Tall, green
+**Genotype:** Ttyy
+
+From Punnett square: 1 out of 4 offspring
+
+$$P(\\text{tall, green}) = \\frac{1}{4}$$
+
+$$\\boxed{\\text{Probability} = 25\\% \\text{ or } 0.25}$$
+
+**Alternative calculation (using multiplication rule):**
+
+$$P(\\text{tall}) = P(T-) = \\frac{1}{2}$$
+$$P(\\text{green}) = P(yy) = \\frac{1}{2}$$
+
+Since traits assort independently:
+$$P(\\text{tall AND green}) = \\frac{1}{2} \\times \\frac{1}{2} = \\frac{1}{4}$$
+
+**Key Concept - Testcross:**
+- Crossing with homozygous recessive reveals genotype of unknown
+- Used to determine if organism is homozygous or heterozygous
+- Mendel used this to confirm his laws
+
+**Mendel's Laws Applied:**
+1. **Law of Segregation:** Each gamete gets one allele per gene
+2. **Law of Independent Assortment:** T/t segregates independently of Y/y`
+        },
+        {
+          topicId: mendelianTopic.id,
+          order: 2,
+          difficulty: 'HARD',
+          question: 'In a dihybrid cross (AaBb × AaBb), where both traits show complete dominance: (a) determine the phenotypic ratio of offspring, (b) calculate the probability of offspring being homozygous for both traits, and (c) what fraction of the dominant phenotype offspring are homozygous dominant for at least one trait?',
+          solution: `**Given:** AaBb × AaBb (dihybrid cross)
+- Both traits show complete dominance
+- A and B are dominant alleles
+
+**(a) Phenotypic Ratio:**
+
+**Classic 16-square Punnett square:**
+
+Gametes from each parent: AB, Ab, aB, ab (each ¼ probability)
+
+\`\`\`
+        AB      Ab      aB      ab
+   |-------|-------|-------|-------|
+AB | AABB  | AABb  | AaBB  | AaBb  |
+   | A-B-  | A-B-  | A-B-  | A-B-  |
+   |-------|-------|-------|-------|
+Ab | AABb  | AAbb  | AaBb  | Aabb  |
+   | A-B-  | A-bb  | A-B-  | A-bb  |
+   |-------|-------|-------|-------|
+aB | AaBB  | AaBb  | aaBB  | aaBb  |
+   | A-B-  | A-B-  | aaB-  | aaB-  |
+   |-------|-------|-------|-------|
+ab | AaBb  | Aabb  | aaBb  | aabb  |
+   | A-B-  | A-bb  | aaB-  | aabb  |
+\`\`\`
+
+**Phenotype counts:**
+- A-B- (both dominant): 9
+- A-bb (A dominant, b recessive): 3
+- aaB- (a recessive, B dominant): 3
+- aabb (both recessive): 1
+
+$$\\boxed{\\text{Phenotypic ratio: } 9:3:3:1}$$
+
+This is Mendel's classic dihybrid ratio!
+
+**(b) Probability of homozygous for both traits:**
+
+**Homozygous for both** means: AABB or AAbb or aaBB or aabb
+
+From Punnett square:
+- AABB: 1/16
+- AAbb: 1/16
+- aaBB: 1/16
+- aabb: 1/16
+
+$$P(\\text{homozygous both}) = \\frac{1}{16} + \\frac{1}{16} + \\frac{1}{16} + \\frac{1}{16}$$
+
+$$\\boxed{P = \\frac{4}{16} = \\frac{1}{4} = 25\\%}$$
+
+**Alternative method:**
+
+$$P(\\text{homozygous for A}) = P(AA) + P(aa) = \\frac{1}{4} + \\frac{1}{4} = \\frac{1}{2}$$
+
+$$P(\\text{homozygous for B}) = P(BB) + P(bb) = \\frac{1}{4} + \\frac{1}{4} = \\frac{1}{2}$$
+
+$$P(\\text{both}) = \\frac{1}{2} \\times \\frac{1}{2} = \\frac{1}{4}$$
+
+**(c) Fraction of A-B- that are homozygous dominant for ≥1 trait:**
+
+**Step 1:** Identify A-B- offspring (9 total)
+
+From Punnett square, A-B- genotypes:
+1. AABB (1) - homozygous for BOTH
+2. AABb (2) - homozygous for A only
+3. AaBB (2) - homozygous for B only
+4. AaBb (4) - heterozygous for both
+
+**Step 2:** Which are homozygous dominant for ≥1 trait?
+
+- AABB: homozygous dominant AA and BB ✓
+- AABb: homozygous dominant AA ✓
+- AaBB: homozygous dominant BB ✓
+- AaBb: neither ✗
+
+**Count:** 1 + 2 + 2 = 5 out of 9
+
+$$\\boxed{\\text{Fraction} = \\frac{5}{9} \\approx 55.6\\%}$$
+
+**Verification:**
+
+Total A-B-: 9
+- Homozygous dominant (AA or BB): 5
+- Heterozygous for both (AaBb): 4
+- Check: 5 + 4 = 9 ✓
+
+**Key Insights:**
+
+**Genotypic ratio (9:3:3:1 expansion):**
+- AABB: 1
+- AABb: 2
+- AaBB: 2
+- AaBb: 4
+- AAbb: 1
+- Aabb: 2
+- aaBB: 1
+- aaBb: 2
+- aabb: 1
+**Total:** 16 (ratio 1:2:1:2:4:2:1:2:1)
+
+**Probabilities for independent traits:**
+- Each trait alone: 3:1 ratio (¾ dominant : ¼ recessive)
+- Combined: (¾)² : (¾)(¼) : (¼)(¾) : (¼)² = 9/16 : 3/16 : 3/16 : 1/16`
+        }
+      ]
+    })
+    console.log('✓ Added 2 problems to: Mendelian Genetics')
+  }
+
+  // Topic 16: Non-Mendelian Genetics
+  const nonMendelianTopic = await prisma.topic.findUnique({
+    where: { slug: 'non-mendelian-genetics' }
+  })
+
+  if (nonMendelianTopic) {
+    await prisma.exampleProblem.createMany({
+      data: [
+        {
+          topicId: nonMendelianTopic.id,
+          order: 1,
+          difficulty: 'HARD',
+          question: 'Explain three types of non-Mendelian inheritance: (a) incomplete dominance (use snapdragons as example), (b) codominance (use human ABO blood types), and (c) polygenic inheritance (use human skin color). Include genotypes, phenotypes, and ratios.',
+          solution: `**Non-Mendelian Inheritance Patterns:**
+
+**(a) Incomplete Dominance:**
+
+**Definition:** Heterozygote shows INTERMEDIATE phenotype between two homozygotes
+
+**Example: Snapdragon flower color**
+
+**Alleles:**
+- C^R = red allele
+- C^W = white allele
+- Neither is fully dominant
+
+**Genotypes and Phenotypes:**
+- C^R C^R : Red flowers
+- C^R C^W : **Pink flowers** (intermediate!)
+- C^W C^W : White flowers
+
+**Cross: Pink × Pink (C^R C^W × C^R C^W)**
+
+\`\`\`
+         C^R     C^W
+    |--------|--------|
+C^R | C^R C^R| C^R C^W|
+    |  Red   |  Pink  |
+    |--------|--------|
+C^W | C^R C^W| C^W C^W|
+    |  Pink  | White  |
+\`\`\`
+
+**Phenotypic ratio:** 1 red : 2 pink : 1 white
+
+**Key difference from complete dominance:**
+- Phenotypic ratio = Genotypic ratio (1:2:1)
+- In complete dominance: 3:1 phenotypic, but 1:2:1 genotypic
+
+**Other examples:**
+- Wavy hair in humans (straight × curly → wavy)
+- Hypercholesterolemia (heterozygotes have intermediate cholesterol)
+
+**(b) Codominance:**
+
+**Definition:** BOTH alleles fully expressed in heterozygote (no blending)
+
+**Example: ABO Blood Types**
+
+**Alleles:**
+- I^A = produces A antigens (dominant)
+- I^B = produces B antigens (dominant)
+- i = produces no antigens (recessive)
+- I^A and I^B are **codominant** to each other
+
+**Genotypes and Phenotypes:**
+
+| Genotype | Phenotype | Antigens | Can receive from |
+|----------|-----------|----------|------------------|
+| I^A I^A or I^A i | Type A | A | A, O |
+| I^B I^B or I^B i | Type B | B | B, O |
+| I^A I^B | **Type AB** | **A and B** | A, B, AB, O |
+| ii | Type O | None | O only |
+
+**Cross: Type A (I^A i) × Type B (I^B i)**
+
+\`\`\`
+         I^A      i
+    |--------|--------|
+I^B | I^A I^B|  I^B i |
+    | Type AB| Type B |
+    |--------|--------|
+ i  |  I^A i |   ii   |
+    | Type A | Type O |
+\`\`\`
+
+**Phenotypic ratio:** 1 AB : 1 A : 1 B : 1 O
+
+$$\\boxed{\\text{All 4 blood types possible from this cross!}}$$
+
+**Codominance vs Incomplete Dominance:**
+- **Codominance:** Both traits visible (AB has A AND B antigens)
+- **Incomplete:** Blended trait (pink is blend of red and white)
+
+**Other codominant examples:**
+- MN blood groups (M, N, MN)
+- Roan coat color in cattle (red + white hairs = roan)
+
+**(c) Polygenic Inheritance:**
+
+**Definition:** Multiple genes control ONE trait; produces continuous variation
+
+**Example: Human Skin Color**
+
+**Model (simplified):**
+- At least 3 genes involved (A, B, C), each with 2 alleles
+- Capital letters (A, B, C) = adds melanin (dark)
+- Lowercase (a, b, c) = less melanin (light)
+- Each capital letter has **additive effect**
+
+**Possible genotypes:**
+- Darkest: AABBCC (6 capital letters)
+- Lightest: aabbcc (0 capital letters)
+- Intermediate: Various combinations (1-5 capital letters)
+
+**Number of capital letters → skin tone:**
+- 0: Very light
+- 1: Light
+- 2: Light-medium
+- 3: Medium
+- 4: Medium-dark
+- 5: Dark
+- 6: Very dark
+
+**Cross: AaBbCc × AaBbCc**
+
+**Offspring distribution (simplified):**
+
+Using probability:
+- Each gene acts independently
+- Aa × Aa: ¼ AA, ½ Aa, ¼ aa
+
+**Distribution of phenotypes:**
+- 0 capitals: 1/64 (very light)
+- 1 capital: 6/64
+- 2 capitals: 15/64
+- 3 capitals: 20/64 (most common - **bell curve peak**)
+- 4 capitals: 15/64
+- 5 capitals: 6/64
+- 6 capitals: 1/64 (very dark)
+
+**Bell curve distribution:**
+\`\`\`
+Frequency
+    ^        ***
+    |       *   *
+    |      *     *
+    |     *       *
+    |    *         *
+    |___*___________*___> Skin color
+    Light  Medium  Dark
+\`\`\`
+
+**Characteristics:**
+- **Continuous variation** (not discrete categories)
+- **Bell-shaped curve** (normal distribution)
+- **Environmental factors** also contribute (sun exposure)
+- Most offspring near middle (average of parents)
+
+**Other polygenic traits:**
+- Height (100+ genes!)
+- Eye color (multiple genes, not just one)
+- Intelligence (many genes + environment)
+- Fingerprint patterns
+
+**Summary Comparison:**
+
+| Pattern | Heterozygote | Example | Ratio |
+|---------|-------------|---------|-------|
+| Complete dominance | Like dominant | Pea plants | 3:1 |
+| Incomplete dominance | Intermediate | Snapdragons | 1:2:1 |
+| Codominance | Both expressed | ABO blood | Varies |
+| Polygenic | Continuous variation | Height, skin color | Bell curve |
+
+$$\\boxed{\\text{Non-Mendelian: incomplete dominance, codominance, polygenic inheritance}}$$`
+        }
+      ]
+    })
+    console.log('✓ Added 1 problem to: Non-Mendelian Genetics')
+  }
+
+  // Topic 17: DNA Replication
+  const dnaRepTopic = await prisma.topic.findUnique({
+    where: { slug: 'dna-replication' }
+  })
+
+  if (dnaRepTopic) {
+    await prisma.exampleProblem.createMany({
+      data: [
+        {
+          topicId: dnaRepTopic.id,
+          order: 1,
+          difficulty: 'HARD',
+          question: 'Describe the process of DNA replication in detail: (a) explain why replication is semiconservative, (b) list the key enzymes involved and their functions, (c) explain the leading vs lagging strand synthesis, and (d) describe how Okazaki fragments are processed.',
+          solution: `**DNA Replication - Detailed Process:**
+
+**(a) Semiconservative Replication:**
+
+**Definition:** Each new DNA molecule contains one original (parental) strand and one newly synthesized strand
+
+**Meselson-Stahl Experiment (1958):**
+
+Proved semiconservative model vs conservative or dispersive
+
+**Process:**
+1. Parent DNA: both strands are "old"
+2. After replication: each daughter DNA has:
+   - One parental (template) strand
+   - One newly synthesized strand
+
+**Why "semiconservative":**
+- Each strand serves as template
+- Base pairing (A-T, G-C) ensures accurate copying
+- Original information conserved in each new molecule
+
+$$\\boxed{\\text{Parent DNA} \\xrightarrow{\\text{replication}} \\text{2 hybrid DNAs (old + new strands)}}$$
+
+**(b) Key Enzymes and Functions:**
+
+**1. Helicase:**
+- **Function:** Unwinds double helix
+- Breaks hydrogen bonds between base pairs
+- Creates replication fork (Y-shaped structure)
+- Uses ATP energy
+
+**2. Single-Strand Binding Proteins (SSB):**
+- **Function:** Bind to separated DNA strands
+- Prevent strands from re-annealing
+- Protect single-stranded DNA from nucleases
+- Keep strands straight for replication
+
+**3. Topoisomerase (DNA Gyrase):**
+- **Function:** Relieves tension ahead of replication fork
+- Cuts, untwists, and rejoins DNA
+- Prevents supercoiling
+- Without it: DNA would get too twisted and break
+
+**4. Primase:**
+- **Function:** Synthesizes RNA primers
+- RNA polymerase (doesn't need primer itself)
+- Makes short RNA sequences (~10 nucleotides)
+- Provides 3'-OH for DNA polymerase to start
+
+**5. DNA Polymerase III (main enzyme in prokaryotes):**
+- **Function:** Synthesizes new DNA strand
+- Adds nucleotides in 5' → 3' direction ONLY
+- Requires 3'-OH group (needs primer)
+- Has 3' → 5' exonuclease (proofreading)
+- ~1000 nucleotides/second!
+
+**6. DNA Polymerase I:**
+- **Function:** Removes RNA primers
+- Fills in gaps with DNA
+- 5' → 3' exonuclease activity (removes primers)
+- 5' → 3' polymerase activity (fills gaps)
+
+**7. DNA Ligase:**
+- **Function:** Seals nicks in sugar-phosphate backbone
+- Joins Okazaki fragments
+- Forms phosphodiester bonds
+- Creates continuous strand
+
+**(c) Leading vs Lagging Strand:**
+
+**Replication fork structure:**
+\`\`\`
+        5' ←——————— 3'  (parental)
+       /              \\
+      /                \\
+    3' —————————————→ 5'  (parental)
+   
+   Leading strand →
+   ← Lagging strand (Okazaki fragments)
+\`\`\`
+
+**Leading Strand:**
+- Synthesized **continuously** in 5' → 3' direction
+- Same direction as replication fork movement
+- Only ONE primer needed (at origin)
+- DNA Pol III adds nucleotides smoothly
+- No interruptions
+
+**Lagging Strand:**
+- Synthesized **discontinuously** in 5' → 3' direction
+- Opposite direction to fork movement
+- Requires MULTIPLE primers
+- Made in short segments (Okazaki fragments)
+  * Prokaryotes: 1000-2000 nucleotides
+  * Eukaryotes: 100-200 nucleotides
+
+**Why the difference?**
+- DNA polymerase can ONLY synthesize 5' → 3'
+- Two parental strands are antiparallel
+- Fork moves in one direction
+- Leading strand "lucky" - goes with fork
+- Lagging strand "unlucky" - goes against fork, must be made backwards in chunks
+
+**(d) Processing Okazaki Fragments:**
+
+**Step-by-step:**
+
+**Step 1: Primase makes RNA primer**
+- Primase synthesizes short RNA primer (~10 nt)
+- Provides 3'-OH for DNA Pol III
+
+**Step 2: DNA Pol III synthesizes Okazaki fragment**
+- Extends from primer in 5' → 3' direction
+- Adds ~1000-2000 nucleotides (bacteria)
+- Stops when it reaches previous primer
+
+**Step 3: DNA Pol I removes primer and fills gap**
+- 5' → 3' exonuclease removes RNA primer ahead
+- Simultaneously fills gap with DNA
+- "Nick translation" process
+
+**Step 4: DNA ligase seals nick**
+- Catalyzes phosphodiester bond formation
+- Links 3'-OH of one fragment to 5'-phosphate of next
+- ATP required (in eukaryotes) or NAD+ (in prokaryotes)
+- Creates continuous strand
+
+**Detailed view:**
+\`\`\`
+Before processing:
+5'—DNA—3' [RNA primer] 5'—DNA—3' [RNA primer] 5'—DNA—3'
+                ↓
+DNA Pol I removes primers:
+5'—DNA—3'      5'—DNA—3'      5'—DNA—3'
+        [gap]          [gap]
+                ↓
+DNA Pol I fills gaps:
+5'—DNA—DNA—3'  5'—DNA—DNA—3'  5'—DNA—DNA—3'
+           [nick]         [nick]
+                ↓
+DNA Ligase seals:
+5'—DNA—DNA—DNA—DNA—DNA—DNA—DNA—DNA—3'
+(continuous strand!)
+\`\`\`
+
+**Summary Table:**
+
+| Feature | Leading | Lagging |
+|---------|---------|---------|
+| Synthesis | Continuous | Discontinuous |
+| Direction | Toward fork | Away from fork |
+| Primers | 1 | Many |
+| Fragments | None | Okazaki fragments |
+| Processing | Simple | Complex (remove primers, ligate) |
+
+**Proofreading and Error Rate:**
+
+**3' → 5' exonuclease (proofreading):**
+- DNA Pol III checks each nucleotide added
+- If mismatch: removes it, tries again
+- Reduces errors from 1/10^5 to 1/10^7
+
+**Mismatch repair (post-replication):**
+- Separate system checks after replication
+- Further reduces errors to 1/10^10
+- Incredibly accurate!
+
+$$\\boxed{\\text{Replication: bidirectional, semiconservative, highly accurate (error rate } < 10^{-10})}$$`
+        }
+      ]
+    })
+    console.log('✓ Added 1 problem to: DNA Replication')
+  }
+
+  // Topic 18: Transcription and Translation
+  const transcriptionTopic = await prisma.topic.findUnique({
+    where: { slug: 'transcription-rna-processing' }
+  })
+
+  if (transcriptionTopic) {
+    await prisma.exampleProblem.createMany({
+      data: [
+        {
+          topicId: transcriptionTopic.id,
+          order: 1,
+          difficulty: 'MEDIUM',
+          question: 'A gene has the following DNA template strand: 3\'-TACGCAATGCGA-5\'. (a) Write the mRNA sequence transcribed from this template, (b) identify the start and stop codons, and (c) write the amino acid sequence that would be translated (use the genetic code).',
+          solution: `**Given:** Template strand: 3'-TACGCAATGCGA-5'
+
+**(a) mRNA sequence:**
+
+**Transcription rules:**
+- RNA polymerase reads template 3' → 5'
+- Synthesizes mRNA 5' → 3' (antiparallel)
+- Uses complementary base pairing:
+  * A (DNA) → U (RNA)
+  * T (DNA) → A (RNA)
+  * G (DNA) → C (RNA)
+  * C (DNA) → G (RNA)
+
+**Step-by-step:**
+
+\`\`\`
+Template (3'→5'):  3'- T A C G C A A T G C G A -5'
+                        ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓
+mRNA (5'→3'):      5'- A U G C G U U A C G C U -3'
+\`\`\`
+
+$$\\boxed{\\text{mRNA: } 5\\text{'-AUGCGUUACGCU-}3'}$$
+
+**(b) Start and stop codons:**
+
+**Start codon:** AUG
+- Position: First codon (nucleotides 1-3)
+- Codes for: Methionine (Met)
+- Signals: Translation start
+- All proteins begin with Met (often removed later)
+
+**Looking for stop codons:**
+- UAA, UAG, UGA = stop codons
+- Check the sequence: AUG CGU UAC GCU
+- **No stop codon present** in this sequence!
+
+Note: This appears to be partial gene sequence. A real gene would have:
+- Promoter (before start)
+- Start codon (AUG) ✓
+- Coding sequence
+- Stop codon (UAA, UAG, or UGA)
+- Terminator
+
+$$\\boxed{\\text{Start: AUG (position 1-3); Stop: none in this sequence}}$$
+
+**(c) Amino acid sequence:**
+
+**Translation using genetic code:**
+
+Divide mRNA into codons (3-nucleotide groups):
+
+\`\`\`
+mRNA:    5'- AUG  CGU  UAC  GCU -3'
+Codons:      ↓    ↓    ↓    ↓
+\`\`\`
+
+**Using genetic code table:**
+
+| Codon | Amino Acid | Abbreviation |
+|-------|------------|--------------|
+| AUG | Methionine | Met (M) |
+| CGU | Arginine | Arg (R) |
+| UAC | Tyrosine | Tyr (Y) |
+| GCU | Alanine | Ala (A) |
+
+**Polypeptide:**
+
+$$\\boxed{\\text{Met-Arg-Tyr-Ala}}$$
+
+Or using single-letter code: **MRYA**
+
+**Complete picture:**
+
+\`\`\`
+DNA coding strand:    5'-ATGCGTTACGCT-3' (not given, but complementary to template)
+DNA template strand:  3'-TACGCAATGCGA-5' (given)
+                           ↓ Transcription
+mRNA:                 5'-AUGCGUUACGCU-3'
+                           ↓ Translation
+Polypeptide:          Met-Arg-Tyr-Ala (N-terminus → C-terminus)
+\`\`\`
+
+**Key Concepts:**
+
+**Genetic Code Properties:**
+1. **Triplet code:** 3 nucleotides = 1 amino acid
+2. **Degenerate:** Multiple codons for same amino acid
+   - CGU, CGC, CGA, CGG all code for Arg
+3. **Universal:** Same code in nearly all organisms
+4. **Unambiguous:** Each codon specifies only ONE amino acid
+5. **Non-overlapping:** Codons read in sequence, no overlap
+
+**Reading frame:**
+- AUG sets the reading frame
+- Must read in correct groups of 3
+- Frameshift mutation → wrong amino acids!
+
+**Example if we shift by +1:**
+- Normal: AUG CGU UAC GCU
+- +1 shift: A UGC GUU ACG CU → different amino acids!
+
+**Why AUG is special:**
+- Only start codon (in eukaryotes)
+- Also codes for Met in middle of protein
+- Context determines if it's start or internal Met`
+        }
+      ]
+    })
+    console.log('✓ Added 1 problem to: Transcription and RNA Processing')
+  }
+
+  // Topic 19: Translation
+  const translationTopic = await prisma.topic.findUnique({
+    where: { slug: 'translation' }
+  })
+
+  if (translationTopic) {
+    await prisma.exampleProblem.createMany({
+      data: [
+        {
+          topicId: translationTopic.id,
+          order: 1,
+          difficulty: 'HARD',
+          question: 'Describe the three stages of translation: (a) initiation - including the role of the ribosome, mRNA, and initiator tRNA, (b) elongation - including the roles of aminoacyl-tRNA, peptidyl transferase, and translocation, and (c) termination - including release factors.',
+          solution: `**Translation - Protein Synthesis:**
+
+**Overview:** mRNA → Protein (requires ribosomes, tRNAs, amino acids, energy)
+
+**(a) Initiation:**
+
+**Goal:** Assemble ribosome on mRNA at start codon
+
+**Components needed:**
+- mRNA with 5' cap and start codon (AUG)
+- Small ribosomal subunit (40S in eukaryotes)
+- Large ribosomal subunit (60S in eukaryotes)
+- Initiator tRNA (Met-tRNA^Met)
+- Initiation factors (IF1, IF2, IF3 in prokaryotes; eIFs in eukaryotes)
+- GTP
+
+**Step-by-step (Eukaryotes):**
+
+**Step 1:** Small subunit binds to 5' cap of mRNA
+- With help of initiation factors
+- Scans along mRNA for start codon (5' → 3' direction)
+
+**Step 2:** Small subunit finds AUG
+- Kozak sequence helps identify correct AUG
+- Usually first AUG after 5' cap
+
+**Step 3:** Initiator tRNA (with Met) binds
+- Anticodon (UAC) pairs with start codon (AUG)
+- Located in **P site** of ribosome
+- GTP hydrolysis provides energy
+
+**Step 4:** Large subunit joins
+- Creates complete 80S ribosome
+- Forms three binding sites:
+  * **A site** (aminoacyl-tRNA): incoming tRNA
+  * **P site** (peptidyl-tRNA): holds growing chain
+  * **E site** (exit): departing tRNA
+
+**Ribosome structure after initiation:**
+\`\`\`
+        Large subunit (60S)
+    [E site][P site][A site]
+           [Met-tRNA]  [empty]
+    ————————————————————————————
+        5'...AUG NNN NNN...3' (mRNA)
+        Small subunit (40S)
+\`\`\`
+
+**(b) Elongation:**
+
+**Goal:** Add amino acids one by one to growing polypeptide
+
+**Cycle repeats for each codon:**
+
+**Step 1: Aminoacyl-tRNA binding (Codon Recognition)**
+
+- **Aminoacyl-tRNA** (charged tRNA with amino acid) enters **A site**
+- Codon-anticodon pairing checked
+- **EF-Tu** (elongation factor) escorts tRNA with GTP
+- Correct pairing → GTP hydrolysis → EF-Tu released
+- Wrong pairing → tRNA rejected (proofreading!)
+
+**Step 2: Peptide bond formation**
+
+- **Peptidyl transferase** (ribozyme in large subunit rRNA!)
+- Catalyzes peptide bond between:
+  * Amino acid in P site (attached to growing chain)
+  * Amino acid in A site (new amino acid)
+- **Nucleophilic attack:** amino group of A-site aa on carbonyl of P-site aa
+- Growing polypeptide now attached to A-site tRNA
+- P-site tRNA now "deacylated" (no amino acid)
+
+**Chemical reaction:**
+\`\`\`
+P site: tRNA—[Met-Arg-Tyr-]
+                    +
+A site: tRNA—[Ala]
+        ↓ peptidyl transferase
+P site: tRNA (empty)
+A site: tRNA—[Met-Arg-Tyr-Ala]
+\`\`\`
+
+**Step 3: Translocation**
+
+- **EF-G** (elongation factor G) with GTP binds
+- Ribosome moves exactly **3 nucleotides** (1 codon) in 5' → 3' direction
+- **tRNA movements:**
+  * A-site tRNA (with polypeptide) → **P site**
+  * P-site tRNA (empty) → **E site**
+  * E-site tRNA → released
+  * A site now empty for next aminoacyl-tRNA
+- GTP hydrolysis powers movement
+
+**After one cycle:**
+\`\`\`
+    [E site][P site][A site]
+     [empty][tRNA—chain][empty]
+    ————————————————————————————
+    5'...AUG ARG TYR ALA SER...3'
+              (next codon ready)
+\`\`\`
+
+**Elongation repeats** until stop codon reaches A site
+
+**Speed:** ~20 amino acids/second in eukaryotes, ~60/second in prokaryotes!
+
+**(c) Termination:**
+
+**Goal:** Release completed polypeptide when stop codon reached
+
+**Stop codons:** UAA, UAG, UGA (no tRNA matches these!)
+
+**Step 1: Recognition**
+- Stop codon enters **A site**
+- No tRNA with matching anticodon
+- **Release factor (RF)** recognizes stop codon
+  * Prokaryotes: RF1 (UAA, UAG) or RF2 (UAA, UGA)
+  * Eukaryotes: eRF1 (all three stop codons)
+
+**Step 2: Hydrolysis**
+- Release factor binds in A site (mimics tRNA structure!)
+- Activates **peptidyl transferase**
+- Instead of forming peptide bond, **hydrolyzes** bond between:
+  * Polypeptide and tRNA in P site
+- Adds H₂O instead of amino acid
+- Polypeptide released with C-terminus carboxyl group (-COOH)
+
+**Chemical reaction:**
+\`\`\`
+tRNA—[polypeptide] + H₂O → tRNA + polypeptide-COOH
+\`\`\`
+
+**Step 3: Ribosome dissociation**
+- **RF3** (prokaryotes) or **eRF3** (eukaryotes) with GTP
+- GTP hydrolysis
+- Ribosomal subunits separate
+- mRNA released
+- Deacylated tRNA released
+- Components recycled for next round
+
+**Post-translational processing:**
+- Initial Met often removed
+- Protein folding (chaperones help)
+- Chemical modifications:
+  * Phosphorylation
+  * Glycosylation
+  * Acetylation
+  * Disulfide bonds
+- Protein targeting to destination
+
+**Summary Table:**
+
+| Stage | Key Events | Factors | Energy |
+|-------|-----------|---------|--------|
+| **Initiation** | Ribosome assembly at AUG | IFs | GTP |
+| **Elongation** | Amino acid addition (cycle) | EF-Tu, EF-G | GTP (2 per aa) |
+| **Termination** | Release at stop codon | RFs | GTP |
+
+**Energy cost:**
+- ~4 ATP equivalents per amino acid:
+  * 2 GTP for elongation (EF-Tu + EF-G)
+  * 1 ATP to charge tRNA (aminoacyl-tRNA synthetase)
+  * 1 GTP for initiation/termination (amortized)
+
+**Accuracy:**
+- Codon-anticodon pairing checked twice
+- Error rate: ~1 in 10,000 amino acids
+- Proofreading by aminoacyl-tRNA synthetases
+- Induced fit mechanism
+
+$$\\boxed{\\text{Translation: Initiation (start) → Elongation (add aa) → Termination (stop)}}$$
+
+**Polyribosome (Polysome):**
+- Multiple ribosomes on same mRNA simultaneously
+- Increases protein production efficiency
+- Each ribosome at different position
+- Makes many copies of same protein at once`
+        }
+      ]
+    })
+    console.log('✓ Added 1 problem to: Translation')
+  }
+
+  // Topic 20: Gene Regulation
+  const geneRegTopic = await prisma.topic.findUnique({
+    where: { slug: 'gene-regulation' }
+  })
+
+  if (geneRegTopic) {
+    await prisma.exampleProblem.createMany({
+      data: [
+        {
+          topicId: geneRegTopic.id,
+          order: 1,
+          difficulty: 'HARD',
+          question: 'Explain the lac operon in E. coli: (a) describe the components (genes, regulatory sequences), (b) explain how it functions in the absence of lactose, (c) explain how it functions in the presence of lactose, and (d) describe the role of CAP-cAMP in glucose repression.',
+          solution: `**Lac Operon - Classic Gene Regulation Model:**
+
+**(a) Components:**
+
+**Structural genes (transcribed together):**
+- **lacZ:** Codes for β-galactosidase (cleaves lactose → glucose + galactose)
+- **lacY:** Codes for permease (transports lactose into cell)
+- **lacA:** Codes for transacetylase (modifies lactose metabolites)
+
+**Regulatory sequences:**
+- **Promoter (P):** RNA polymerase binding site
+- **Operator (O):** Repressor binding site (overlaps promoter)
+- **CAP-cAMP binding site:** Positive control element
+
+**Regulatory gene:**
+- **lacI:** Codes for lac repressor protein (located upstream, has own promoter)
+
+**Structure:**
+\`\`\`
+    lacI gene         CAP site  P    O      lacZ    lacY    lacA
+5'—————[——]—————————[——][——][——]———[——]———[——]———[——]———3'
+         ↓                                   ↓       ↓       ↓
+    Repressor                          β-gal   Permease  Acetylase
+\`\`\`
+
+**(b) Absence of Lactose (Operon OFF):**
+
+**Situation:** No lactose available, don't need lac enzymes
+
+**Step 1:** lacI gene constitutively expressed
+- lac repressor protein continuously made
+- Repressor is **active** (no lactose to inactivate it)
+
+**Step 2:** Repressor binds to operator
+- Blocks RNA polymerase from transcribing
+- Steric hindrance - polymerase can't proceed
+- **Negative control** (repressor blocks transcription)
+
+**Step 3:** No transcription of structural genes
+- lacZ, lacY, lacA not transcribed
+- No β-galactosidase, permease, or transacetylase made
+- Cell doesn't waste energy making unneeded enzymes
+
+**State:** **Repressed** (OFF)
+
+\`\`\`
+         Repressor (active)
+              ↓ binds
+    P    [O]  lacZ  lacY  lacA
+————[——][🛑]————————————————
+         ↑
+    RNA pol blocked
+    
+Result: NO TRANSCRIPTION
+\`\`\`
+
+**(c) Presence of Lactose (Operon ON):**
+
+**Situation:** Lactose available, need enzymes to metabolize it
+
+**Step 1:** Lactose enters cell (basal permease)
+- Small amount of permease always present
+- Lactose converted to **allolactose** (by basal β-gal)
+
+**Step 2:** Allolactose binds repressor
+- Acts as **inducer**
+- Causes conformational change in repressor
+- Repressor can no longer bind operator
+- **Inactivates** repressor
+
+**Step 3:** Operator is free
+- RNA polymerase can now bind promoter
+- Transcription proceeds
+
+**Step 4:** Structural genes transcribed
+- Single **polycistronic mRNA** produced
+- Contains all three genes (lacZ, lacY, lacA)
+
+**Step 5:** Translation
+- β-galactosidase: breaks down lactose
+- Permease: imports more lactose
+- Transacetylase: detoxifies metabolites
+
+**State:** **Induced** (ON)
+
+\`\`\`
+Lactose → Allolactose
+                ↓ binds
+         Repressor (inactive)
+                      
+    P    O   lacZ  lacY  lacA
+————[——][——]———————————————
+    ↓
+RNA pol transcribes
+    ↓
+mRNA → Proteins
+
+Result: ACTIVE TRANSCRIPTION
+\`\`\`
+
+**(d) CAP-cAMP and Glucose Repression:**
+
+**Concept:** Even with lactose, operon works poorly if glucose present
+
+**Why?** Glucose is preferred carbon source
+- **Catabolite repression** (glucose effect)
+- Cell prefers glucose over lactose (more efficient)
+
+**Mechanism - Positive Control:**
+
+**When glucose is LOW:**
+
+**Step 1:** cAMP levels **increase**
+- Glucose inhibits adenylyl cyclase
+- No glucose → enzyme active → more cAMP
+
+**Step 2:** cAMP binds CAP (Catabolite Activator Protein)
+- CAP = CRP (cAMP Receptor Protein)
+- CAP-cAMP complex forms
+
+**Step 3:** CAP-cAMP binds near promoter
+- Enhances RNA polymerase binding
+- Bends DNA, helps position RNA pol correctly
+- **Positive regulation** (stimulates transcription)
+
+**Step 4:** Strong transcription
+- With lactose (repressor off) AND CAP-cAMP (enhancer on)
+- **Maximum expression** of lac operon
+
+**When glucose is HIGH:**
+
+**Step 1:** cAMP levels **decrease**
+- Glucose present → adenylyl cyclase inhibited
+
+**Step 2:** Little CAP-cAMP complex
+- CAP without cAMP doesn't bind DNA well
+
+**Step 3:** Weak transcription
+- Even if lactose present (repressor off)
+- RNA polymerase binds poorly without CAP-cAMP
+- **Low expression** of lac operon
+
+**Four States:**
+
+| Glucose | Lactose | CAP-cAMP | Repressor | Transcription |
+|---------|---------|----------|-----------|---------------|
+| High | Absent | No | Bound | **None** (OFF) |
+| High | Present | No | Off | **Low** (weak ON) |
+| Low | Absent | Yes | Bound | **None** (OFF) |
+| Low | Present | Yes | Off | **High** (strong ON) |
+
+**Logical operation:**
+$$\\text{Transcription} = \\text{(NOT repressor)} \\land \\text{CAP-cAMP}$$
+
+**Complete regulation diagram:**
+
+\`\`\`
+LOW GLUCOSE + LACTOSE PRESENT = MAXIMUM TRANSCRIPTION
+
+         cAMP (high)
+            ↓
+         CAP-cAMP (forms)
+            ↓ binds
+    [CAP site]  P    O   lacZ
+————[——✓——]—[——][——]———————
+                 ↑
+        Repressor OFF (lactose bound it)
+        RNA pol binds strongly
+        ↓
+    Strong transcription +++
+
+HIGH GLUCOSE (even with lactose) = LOW TRANSCRIPTION
+
+         cAMP (low)
+            ↓
+    [CAP site]  P    O   lacZ  
+————[——✗——]—[——][——]———————
+                 ↑
+        Repressor OFF (lactose bound it)
+        RNA pol binds weakly
+        ↓
+    Weak transcription +
+\`\`\`
+
+**Key Concepts:**
+
+**Negative control:** Repressor blocks (default OFF)
+**Positive control:** CAP-cAMP enhances (booster)
+
+**Inducible operon:** Turned ON by substrate (lactose)
+- Makes sense: only make enzymes when substrate available
+
+**Contrast with repressible operon (trp):**
+- Turned OFF by end product (tryptophan)
+- Makes sense: don't make enzymes when product abundant
+
+$$\\boxed{\\text{lac operon: Induced by lactose, enhanced by low glucose (CAP-cAMP)}}$$
+
+**Evolutionary advantage:**
+- Saves energy (only make what's needed)
+- Adapts to environment quickly
+- Coordinate regulation of related genes`
+        }
+      ]
+    })
+    console.log('✓ Added 1 problem to: Gene Regulation')
+  }
+
+  console.log('\n✅ Successfully added MORE problems to Biology topics!')
+  console.log('Total: 34 example problems added to AP Biology course')
+  console.log('Coverage expanded: Added Heredity, Gene Expression, and more!')
 }
 
 main()
