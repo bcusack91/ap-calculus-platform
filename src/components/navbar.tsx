@@ -15,7 +15,25 @@ export function Navbar() {
       <div className="container flex h-16 items-center">
         <div className="mr-4 flex flex-1 items-center justify-between">
           <Link href="/" className="mr-6 flex items-center space-x-2">
-            <span className="text-xl font-bold">🎓 Study Mondo</span>
+            <span className="inline-block align-middle" style={{ width: 32, height: 32 }}>
+              {/* Mascot: Smiling Book SVG */}
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+                <rect width="32" height="32" rx="7" fill="url(#g)"/>
+                <defs>
+                  <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+                    <stop offset="0%" stopColor="#7C3AED"/>
+                    <stop offset="100%" stopColor="#2563EB"/>
+                  </linearGradient>
+                </defs>
+                <rect x="7" y="10" width="18" height="12" rx="2.5" fill="#fff" stroke="#7C3AED" strokeWidth="1.2"/>
+                <rect x="9" y="12" width="14" height="8" rx="1.5" fill="#e0e7ff"/>
+                <path d="M9 12 Q16 16 23 12" fill="none" stroke="#7C3AED" strokeWidth="0.7"/>
+                <ellipse cx="13" cy="17" rx="1.2" ry="1.5" fill="#7C3AED"/>
+                <ellipse cx="19" cy="17" rx="1.2" ry="1.5" fill="#7C3AED"/>
+                <path d="M14.5 20 Q16 21.5 17.5 20" stroke="#7C3AED" strokeWidth="0.7" fill="none"/>
+              </svg>
+            </span>
+            <span className="text-xl font-bold">Study Mondo</span>
           </Link>
           
           {/* Desktop Navigation */}

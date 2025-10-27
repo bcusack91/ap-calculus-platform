@@ -262,7 +262,7 @@ export default async function TopicPage(props: TopicPageProps) {
             {/* Related Links with card styling */}
             <div className="mt-12 grid gap-4 sm:grid-cols-2">
               <Link
-                href={`/flashcards?topic=${topic.id}`}
+                href={`/flashcards/${topic.slug}`}
                 className="block rounded-lg border-2 border-blue-300 bg-gradient-to-br from-blue-50 to-cyan-50 p-6 hover:shadow-lg transition-all hover:border-blue-400"
               >
                 <div className="flex items-center gap-3 mb-2">
@@ -319,7 +319,7 @@ export default async function TopicPage(props: TopicPageProps) {
                   <Link href={`/topics?category=${topic.category.slug}`} className="block text-purple-700 hover:text-purple-900 hover:underline">
                     📂 {topic.category.name}
                   </Link>
-                  <Link href={`/flashcards?topic=${topic.id}`} className="block text-purple-700 hover:text-purple-900 hover:underline">
+                  <Link href={`/flashcards/${topic.slug}`} className="block text-purple-700 hover:text-purple-900 hover:underline">
                     🎴 Flashcards
                   </Link>
                 </div>
