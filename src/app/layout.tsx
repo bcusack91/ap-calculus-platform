@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Providers } from "@/components/providers";
 import { Navbar } from "@/components/navbar";
+import Link from "next/link";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -10,9 +11,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Calculus Learning Platform - Master AP Calculus",
-  description: "Free and premium calculus resources including text explanations, flashcards, quizzes, and adaptive learning modules for AP Calculus students.",
-  keywords: ["calculus", "AP Calculus", "math", "learning", "flashcards", "study"],
+  title: "Free AP Study Platform - Master Science & Math",
+  description: "Free comprehensive study resources for AP Calculus, Physics, Chemistry, and Biology. Original notes, flashcards, and practice problems created by educators.",
+  keywords: ["calculus", "AP study", "physics", "chemistry", "biology", "math", "science", "learning", "flashcards", "free study resources"],
 };
 
 export default function RootLayout({
@@ -27,11 +28,26 @@ export default function RootLayout({
           <div className="flex min-h-screen flex-col">
             <Navbar />
             <main className="flex-1">{children}</main>
-            <footer className="border-t py-6 md:py-0">
-              <div className="container flex flex-col items-center justify-between gap-4 md:h-16 md:flex-row">
-                <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
-                  Built for AP Calculus students. © {new Date().getFullYear()} Calculus Learning Platform
-                </p>
+            <footer className="border-t py-6 md:py-8">
+              <div className="container">
+                <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
+                  <div className="text-center md:text-left">
+                    <p className="text-sm leading-loose text-muted-foreground">
+                      Built for AP students. © {new Date().getFullYear()} Calculus Learning Platform
+                    </p>
+                    <p className="text-xs text-muted-foreground/80 mt-1">
+                      AP® is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this website.
+                    </p>
+                  </div>
+                  <div className="flex gap-6 text-sm text-muted-foreground">
+                    <Link href="/terms" className="hover:text-foreground transition-colors">
+                      Terms of Service
+                    </Link>
+                    <Link href="/privacy" className="hover:text-foreground transition-colors">
+                      Privacy Policy
+                    </Link>
+                  </div>
+                </div>
               </div>
             </footer>
           </div>
