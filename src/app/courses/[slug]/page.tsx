@@ -35,13 +35,27 @@ export default async function CoursePage({ params }: CoursePageProps) {
 
   const totalTopics = course.categories.reduce((sum, cat) => sum + cat.topics.length, 0)
 
+  // Map course colors to Tailwind classes
+  const colorMap: Record<string, { bg: string; gradient: string }> = {
+    purple: { bg: 'from-purple-50 to-purple-100', gradient: 'from-purple-600 to-blue-600' },
+    blue: { bg: 'from-blue-50 to-blue-100', gradient: 'from-blue-600 to-cyan-600' },
+    green: { bg: 'from-green-50 to-green-100', gradient: 'from-green-600 to-emerald-600' },
+    teal: { bg: 'from-teal-50 to-teal-100', gradient: 'from-teal-600 to-cyan-600' },
+    indigo: { bg: 'from-indigo-50 to-indigo-100', gradient: 'from-indigo-600 to-purple-600' },
+    violet: { bg: 'from-violet-50 to-violet-100', gradient: 'from-violet-600 to-fuchsia-600' },
+    orange: { bg: 'from-orange-50 to-orange-100', gradient: 'from-orange-600 to-red-600' },
+    rose: { bg: 'from-rose-50 to-rose-100', gradient: 'from-rose-600 to-pink-600' },
+  }
+
+  const colors = colorMap[course.color || 'purple'] || colorMap.purple
+
   return (
     <div className="container py-10">
       <div className="mx-auto max-w-6xl">
         {/* Course Header */}
-        <div className={`rounded-3xl bg-gradient-to-br ${course.color ? `from-${course.color}-50 to-${course.color}-100` : 'from-purple-50 to-blue-100'} p-12 mb-12`}>
+        <div className={`rounded-3xl bg-gradient-to-br ${colors.bg} p-12 mb-12`}>
           <div className="flex items-start gap-6">
-            <div className={`flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br ${course.color ? `from-${course.color}-600 to-${course.color}-700` : 'from-purple-600 to-blue-600'} text-white text-5xl font-bold shadow-lg`}>
+            <div className={`flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br ${colors.gradient} text-white text-5xl font-bold shadow-lg`}>
               {course.icon || '📚'}
             </div>
             <div className="flex-1">
