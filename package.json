@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "postinstall": "prisma generate",
     "seed": "tsx prisma/seed.ts",
     "seed:courses": "node --import tsx prisma/seed-courses.ts",
     "seed:chemistry": "node --import tsx prisma/seed-chemistry-categories.ts && npm run seed:chem-all",
