@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation'
 import { prisma } from '@/lib/prisma'
 import { auth } from '@/lib/auth'
-import { AdBanner, InArticleAd } from '@/components/ad-banner'
+import { AdBanner, InArticleAd, SidebarAd } from '@/components/ad-banner'
 import ReactMarkdown from 'react-markdown'
 import rehypeKatex from 'rehype-katex'
 import remarkMath from 'remark-math'
@@ -297,15 +297,7 @@ export default async function TopicPage(props: TopicPageProps) {
           <aside className="hidden lg:block w-80 flex-shrink-0">
             <div className="sticky top-4 space-y-6">
               {/* Sidebar Ad 1 */}
-              <div className="bg-gray-100 border-2 border-gray-300 rounded-lg p-4">
-                <div className="text-xs text-gray-500 mb-2 text-center">Advertisement</div>
-                <div className="bg-white h-[250px] flex items-center justify-center text-gray-400 border border-gray-200 rounded">
-                  <div className="text-center">
-                    <div className="text-4xl mb-2">📢</div>
-                    <div className="text-sm">300x250 Ad</div>
-                  </div>
-                </div>
-              </div>
+              <SidebarAd />
 
               {/* Quick Links Card */}
               <div className="bg-gradient-to-br from-purple-50 to-blue-50 border-2 border-purple-200 rounded-lg p-4">
@@ -326,15 +318,7 @@ export default async function TopicPage(props: TopicPageProps) {
               </div>
 
               {/* Sidebar Ad 2 */}
-              <div className="bg-gray-100 border-2 border-gray-300 rounded-lg p-4">
-                <div className="text-xs text-gray-500 mb-2 text-center">Advertisement</div>
-                <div className="bg-white h-[250px] flex items-center justify-center text-gray-400 border border-gray-200 rounded">
-                  <div className="text-center">
-                    <div className="text-4xl mb-2">📢</div>
-                    <div className="text-sm">300x250 Ad</div>
-                  </div>
-                </div>
-              </div>
+              <SidebarAd />
 
               {/* Study Tips Card */}
               <div className="bg-gradient-to-br from-green-50 to-teal-50 border-2 border-green-200 rounded-lg p-4">
