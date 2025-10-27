@@ -26,6 +26,12 @@ export function Navbar() {
             <Link href="/flashcards" className="transition-colors hover:text-foreground/80">
               Flashcards
             </Link>
+            <Link href="/about" className="transition-colors hover:text-foreground/80">
+              About
+            </Link>
+            <Link href="/contact" className="transition-colors hover:text-foreground/80">
+              Contact
+            </Link>
             {isPremium && (
               <>
                 <Link href="/adaptive-learning" className="transition-colors hover:text-foreground/80 text-purple-600">
@@ -99,6 +105,12 @@ export function Navbar() {
             </Link>
             <Link href="/flashcards" className="block px-3 py-2 text-base font-medium hover:bg-accent rounded-md">
               Flashcards
+            </Link>
+            <Link href="/about" className="block px-3 py-2 text-base font-medium hover:bg-accent rounded-md">
+              About
+            </Link>
+            <Link href="/contact" className="block px-3 py-2 text-base font-medium hover:bg-accent rounded-md">
+              Contact
             </Link>
             {isPremium && (
               <>

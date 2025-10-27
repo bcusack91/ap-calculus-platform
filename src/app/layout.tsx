@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Providers } from "@/components/providers";
 import { Navbar } from "@/components/navbar";
+import { CookieConsent } from "@/components/cookie-consent";
 import Link from "next/link";
 
 const inter = Inter({
@@ -40,17 +41,24 @@ export default function RootLayout({
                     </p>
                   </div>
                   <div className="flex gap-6 text-sm text-muted-foreground">
+                    <Link href="/about" className="hover:text-foreground transition-colors">
+                      About
+                    </Link>
+                    <Link href="/contact" className="hover:text-foreground transition-colors">
+                      Contact
+                    </Link>
                     <Link href="/terms" className="hover:text-foreground transition-colors">
-                      Terms of Service
+                      Terms
                     </Link>
                     <Link href="/privacy" className="hover:text-foreground transition-colors">
-                      Privacy Policy
+                      Privacy
                     </Link>
                   </div>
                 </div>
               </div>
             </footer>
           </div>
+          <CookieConsent />
         </Providers>
       </body>
     </html>
