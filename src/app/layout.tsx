@@ -54,8 +54,19 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const adsenseClientId = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID
+
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        {adsenseClientId && (
+          <script
+            async
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseClientId}`}
+            crossOrigin="anonymous"
+          />
+        )}
+      </head>
       <body className={`${inter.variable} font-sans antialiased`}>
         <Providers>
           <div className="flex min-h-screen flex-col">
