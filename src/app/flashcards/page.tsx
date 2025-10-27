@@ -25,7 +25,7 @@ export default async function FlashcardsPage() {
       <div className="mx-auto max-w-4xl">
         <h1 className="text-4xl font-bold tracking-tight mb-4">Flashcards</h1>
         <p className="text-lg text-muted-foreground mb-8">
-          Review calculus concepts with our flashcard system. Premium members get spaced-repetition for optimal retention!
+          Review calculus concepts with our flashcard system!
         </p>
 
         <AdBanner slot="flashcards-top" />
@@ -54,11 +54,13 @@ export default async function FlashcardsPage() {
                         <h3 className="font-semibold group-hover:text-purple-600 transition-colors">
                           {topic.title}
                         </h3>
+                        {/* Temporarily hidden for free tier launch
                         {topic.isPremium && (
                           <span className="inline-flex items-center px-2 py-1 text-xs font-semibold rounded-full bg-purple-100 text-purple-800">
                             Premium
                           </span>
                         )}
+                        */}
                       </div>
                       <p className="text-sm text-muted-foreground">
                         {topic._count.flashcards} {topic._count.flashcards === 1 ? 'card' : 'cards'}
@@ -74,6 +76,7 @@ export default async function FlashcardsPage() {
           )}
         </div>
 
+        {/* Temporarily hidden for free tier launch
         <div className="mt-12 p-6 rounded-lg bg-purple-50 border border-purple-200">
           <h3 className="text-xl font-bold mb-2">🌟 Upgrade for Spaced Repetition</h3>
           <p className="text-muted-foreground mb-4">
@@ -86,6 +89,7 @@ export default async function FlashcardsPage() {
             Learn More
           </Link>
         </div>
+        */}
 
         <div className="mt-8">
           <AdBanner slot="flashcards-bottom" />

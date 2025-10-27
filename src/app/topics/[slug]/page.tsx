@@ -75,6 +75,7 @@ export default async function TopicPage(props: TopicPageProps) {
     notFound()
   }
 
+  /* Temporarily hidden for free tier launch - all content is free
   // Check if user has access
   if (topic.isPremium && !isPremium) {
     return (
@@ -116,6 +117,7 @@ export default async function TopicPage(props: TopicPageProps) {
       </div>
     )
   }
+  */
 
   return (
     <div className="container py-10">
@@ -141,11 +143,13 @@ export default async function TopicPage(props: TopicPageProps) {
             <div className="mb-8 bg-gradient-to-r from-purple-600 to-blue-600 text-white p-8 rounded-lg shadow-lg">
               <h1 className="text-4xl font-bold tracking-tight mb-4">{topic.title}</h1>
               <p className="text-lg text-purple-100">{topic.description}</p>
+              {/* Temporarily hidden for free tier launch
               {topic.isPremium && (
                 <span className="inline-flex items-center px-3 py-1 mt-3 text-xs font-semibold rounded-full bg-yellow-400 text-purple-900">
                   ⭐ Premium Content
                 </span>
               )}
+              */}
             </div>
 
             {/* Video (Premium only) */}
@@ -218,11 +222,13 @@ export default async function TopicPage(props: TopicPageProps) {
                             </span>
                           </span>
                         </h3>
+                        {/* Temporarily hidden for free tier launch
                         {problem.isPremium && (
                           <span className="inline-flex items-center px-2 py-1 text-xs font-semibold rounded-full bg-purple-100 text-purple-800">
                             Premium
                           </span>
                         )}
+                        */}
                       </div>
 
                       <div className="mb-4 bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r">
@@ -236,18 +242,17 @@ export default async function TopicPage(props: TopicPageProps) {
                         </div>
                       </div>
 
-                      {(!problem.isPremium || isPremium) && (
-                        <details className="mt-4">
-                          <summary className="cursor-pointer font-semibold hover:text-purple-600 bg-purple-50 p-3 rounded border-2 border-purple-200 transition-colors">
-                            💡 Show Solution
-                          </summary>
-                          <div className="mt-4 prose max-w-none bg-purple-50 p-4 rounded border-l-4 border-purple-500">
-                            <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]} components={MarkdownComponents}>
-                              {problem.solution}
-                            </ReactMarkdown>
-                          </div>
-                        </details>
-                      )}
+                      {/* Show solution for all problems in free tier launch */}
+                      <details className="mt-4">
+                        <summary className="cursor-pointer font-semibold hover:text-purple-600 bg-purple-50 p-3 rounded border-2 border-purple-200 transition-colors">
+                          💡 Show Solution
+                        </summary>
+                        <div className="mt-4 prose max-w-none bg-purple-50 p-4 rounded border-l-4 border-purple-500">
+                          <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]} components={MarkdownComponents}>
+                            {problem.solution}
+                          </ReactMarkdown>
+                        </div>
+                      </details>
                     </div>
                   ))
                 )}

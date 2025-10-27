@@ -32,26 +32,12 @@ export function Navbar() {
             <Link href="/contact" className="transition-colors hover:text-foreground/80">
               Contact
             </Link>
-            {isPremium && (
-              <>
-                <Link href="/adaptive-learning" className="transition-colors hover:text-foreground/80 text-purple-600">
-                  Adaptive Learning
-                </Link>
-                <Link href="/dashboard" className="transition-colors hover:text-foreground/80 text-purple-600">
-                  Dashboard
-                </Link>
-              </>
-            )}
-            {!isPremium && (
-              <Link href="/premium" className="transition-colors hover:text-foreground/80 text-purple-600 font-semibold">
-                Go Premium ⭐
-              </Link>
-            )}
           </nav>
         </div>
 
-        {/* Auth Section */}
+        {/* Auth Section - Hidden for free launch */}
         <div className="flex items-center space-x-4">
+          {/* Temporarily hidden for free tier launch
           {session ? (
             <div className="flex items-center space-x-4">
               {isPremium && (
@@ -83,6 +69,7 @@ export function Navbar() {
               </Link>
             </div>
           )}
+          */}
 
           {/* Mobile Menu Button */}
           <button
@@ -112,6 +99,7 @@ export function Navbar() {
             <Link href="/contact" className="block px-3 py-2 text-base font-medium hover:bg-accent rounded-md">
               Contact
             </Link>
+            {/* Temporarily hidden for free tier launch
             {isPremium && (
               <>
                 <Link href="/adaptive-learning" className="block px-3 py-2 text-base font-medium text-purple-600 hover:bg-accent rounded-md">
@@ -127,6 +115,7 @@ export function Navbar() {
                 Go Premium ⭐
               </Link>
             )}
+            */}
           </div>
         </div>
       )}
