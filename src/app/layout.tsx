@@ -12,11 +12,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Study Mondy — Free AP Study Platform",
+  metadataBase: new URL("https://studymondo.com"),
+  title: "Study Mondo — Free AP Study Platform",
   description:
-    "Study Mondy offers free notes, flashcards, and practice problems for AP Calculus, Physics, Chemistry, and Biology — created by educators to help you ace your exams.",
+    "Study Mondo offers free notes, flashcards, and practice problems for AP Calculus, Physics, Chemistry, and Biology — created by educators to help you ace your exams.",
   keywords: [
-    "study mondy",
+    "study mondo",
+    "studymondo",
     "ap study",
     "calculus",
     "physics",
@@ -28,6 +30,23 @@ export const metadata: Metadata = {
     "flashcards",
     "free study resources",
   ],
+  openGraph: {
+    title: "Study Mondo — Free AP Study Platform",
+    description:
+      "Study Mondo offers free notes, flashcards, and practice problems for AP Calculus, Physics, Chemistry, and Biology — created by educators to help you ace your exams.",
+    url: "https://studymondo.com",
+    siteName: "Study Mondo",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Study Mondo — Free AP Study Platform",
+    description:
+      "Free notes, flashcards, and practice problems for AP Calculus, Physics, Chemistry, and Biology.",
+  },
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
@@ -47,7 +66,7 @@ export default function RootLayout({
                 <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
                   <div className="text-center md:text-left">
                     <p className="text-sm leading-loose text-muted-foreground">
-                      Built for AP students. © {new Date().getFullYear()} Study Mondy
+                      Built for AP students. © {new Date().getFullYear()} Study Mondo
                     </p>
                     <p className="text-xs text-muted-foreground/80 mt-1">
                       AP® is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this website.

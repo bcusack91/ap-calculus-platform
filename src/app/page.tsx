@@ -70,8 +70,11 @@ export default function Home() {
             <h1 className="text-4xl font-bold tracking-tight sm:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600">
               Master AP Science & Math
             </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-              Free comprehensive notes, example problems, and flashcards for 8 AP courses. Everything you need to ace your exams.
+            <p className="mt-4 text-base font-semibold tracking-wide uppercase text-purple-700">
+              Daily bites. Big Wins.
+            </p>
+            <p className="mt-3 text-lg leading-8 text-gray-600">
+              Free notes, flashcards, and practice problems for AP Calculus, Physics, Chemistry, and Biology.
             </p>
           </div>
         </div>
