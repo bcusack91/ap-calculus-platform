@@ -15,7 +15,7 @@ export function Navbar() {
       <div className="container flex h-16 items-center">
         <div className="mr-4 flex flex-1 items-center justify-between">
           <Link href="/" className="mr-6 flex items-center space-x-2">
-            <span className="text-xl font-bold">📐 Calculus Hub</span>
+            <span className="text-xl font-bold">🎓 Study Mondy</span>
           </Link>
           
           {/* Desktop Navigation */}

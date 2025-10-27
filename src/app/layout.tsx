@@ -12,9 +12,22 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Free AP Study Platform - Master Science & Math",
-  description: "Free comprehensive study resources for AP Calculus, Physics, Chemistry, and Biology. Original notes, flashcards, and practice problems created by educators.",
-  keywords: ["calculus", "AP study", "physics", "chemistry", "biology", "math", "science", "learning", "flashcards", "free study resources"],
+  title: "Study Mondy — Free AP Study Platform",
+  description:
+    "Study Mondy offers free notes, flashcards, and practice problems for AP Calculus, Physics, Chemistry, and Biology — created by educators to help you ace your exams.",
+  keywords: [
+    "study mondy",
+    "ap study",
+    "calculus",
+    "physics",
+    "chemistry",
+    "biology",
+    "math",
+    "science",
+    "learning",
+    "flashcards",
+    "free study resources",
+  ],
 };
 
 export default function RootLayout({
@@ -34,7 +47,7 @@ export default function RootLayout({
                 <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
                   <div className="text-center md:text-left">
                     <p className="text-sm leading-loose text-muted-foreground">
-                      Built for AP students. © {new Date().getFullYear()} Calculus Learning Platform
+                      Built for AP students. © {new Date().getFullYear()} Study Mondy
                     </p>
                     <p className="text-xs text-muted-foreground/80 mt-1">
                       AP® is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this website.
