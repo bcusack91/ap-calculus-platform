@@ -4,7 +4,7 @@ import "./globals.css";
 import { Providers } from "@/components/providers";
 import { Navbar } from "@/components/navbar";
 import { CookieConsent } from "@/components/cookie-consent";
-import { Analytics } from "@vercel/analytics/next";
+import { Analytics } from "@vercel/analytics/next"; // Temporarily disabled for local dev
 import Link from "next/link";
 
 const inter = Inter({
@@ -107,7 +107,7 @@ export default function RootLayout({
           </div>
           <CookieConsent />
         </Providers>
-        <Analytics />
+        {/* <Analytics /> */}
       </body>
     </html>
   );
