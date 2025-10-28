@@ -92,6 +92,13 @@ const coursesBySection: Record<string, Course[]> = {
       description: 'Limits, derivatives, integrals, series',
       gradient: 'from-purple-600 to-violet-600'
     },
+    {
+      slug: 'ap-statistics',
+      name: 'AP Statistics',
+      icon: '📊',
+      description: 'Data, probability, statistical inference',
+      gradient: 'from-pink-600 to-rose-600'
+    },
   ],
   'AP Sciences': [
     {
@@ -187,7 +194,7 @@ export default function Home() {
               From Grade 4 to AP. SAT to ACT.
             </p>
             <p className="mt-3 text-lg leading-8 text-gray-600">
-              19 courses · 372 topics
+              20 courses · 534 topics
             </p>
           </div>
         </div>
