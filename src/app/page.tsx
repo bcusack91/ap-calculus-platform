@@ -1,85 +1,159 @@
 import Link from "next/link";
 import { AdBanner } from "@/components/ad-banner";
 
-const courses = [
-  {
-    slug: 'algebra-1',
-    name: 'Algebra 1',
-    icon: '🔢',
-    description: 'Linear equations, functions, and quadratic equations',
-    gradient: 'from-sky-600 to-blue-600'
-  },
-  {
-    slug: 'geometry',
-    name: 'Geometry',
-    icon: '📐',
-    description: 'Shapes, angles, proofs, and spatial reasoning',
-    gradient: 'from-emerald-600 to-green-600'
-  },
-  {
-    slug: 'algebra-2',
-    name: 'Algebra 2',
-    icon: '🔣',
-    description: 'Advanced functions, exponentials, and logarithms',
-    gradient: 'from-cyan-600 to-teal-600'
-  },
-  {
-    slug: 'ap-precalculus',
-    name: 'AP Precalculus',
-    icon: '�',
-    description: 'Functions, trigonometry, vectors, and complex numbers',
-    gradient: 'from-blue-600 to-indigo-600'
-  },
-  {
-    slug: 'ap-calculus-ab-bc',
-    name: 'AP Calculus AB/BC',
-    icon: '∫',
-    description: 'Limits, derivatives, integrals, series, and more',
-    gradient: 'from-purple-600 to-violet-600'
-  },
-  {
-    slug: 'ap-physics-1',
-    name: 'AP Physics 1',
-    icon: '⚛️',
-    description: 'Mechanics, waves, and basic circuits',
-    gradient: 'from-green-600 to-emerald-600'
-  },
-  {
-    slug: 'ap-physics-2',
-    name: 'AP Physics 2',
-    icon: '🔬',
-    description: 'Fluids, thermodynamics, E&M, and modern physics',
-    gradient: 'from-teal-600 to-cyan-600'
-  },
-  {
-    slug: 'ap-physics-c-mechanics',
-    name: 'AP Physics C: Mechanics',
-    icon: '🎯',
-    description: 'Calculus-based mechanics and kinematics',
-    gradient: 'from-indigo-600 to-purple-600'
-  },
-  {
-    slug: 'ap-physics-c-em',
-    name: 'AP Physics C: E&M',
-    icon: '⚡',
-    description: 'Electricity, magnetism, and electromagnetic induction',
-    gradient: 'from-violet-600 to-fuchsia-600'
-  },
-  {
-    slug: 'ap-chemistry',
-    name: 'AP Chemistry',
-    icon: '🧪',
-    description: 'Atomic structure, bonding, reactions, and equilibrium',
-    gradient: 'from-orange-600 to-red-600'
-  },
-  {
-    slug: 'ap-biology',
-    name: 'AP Biology',
-    icon: '🧬',
-    description: 'Cells, genetics, evolution, and ecology',
-    gradient: 'from-rose-600 to-pink-600'
-  }
-];
+// Course type definition
+type Course = {
+  slug: string;
+  name: string;
+  icon: string;
+  description: string;
+  gradient: string;
+};
+
+// Organized course sections
+const coursesBySection: Record<string, Course[]> = {
+  'Middle School Math (Grades 4-8)': [
+    {
+      slug: 'grade-4-math',
+      name: 'Grade 4 Math',
+      icon: '4️⃣',
+      description: 'Multiplication, division, fractions, decimals',
+      gradient: 'from-pink-500 to-rose-500'
+    },
+    {
+      slug: 'grade-5-math',
+      name: 'Grade 5 Math',
+      icon: '5️⃣',
+      description: 'Place value, fractions, volume, coordinates',
+      gradient: 'from-rose-500 to-red-500'
+    },
+    {
+      slug: 'grade-6-math',
+      name: 'Grade 6 Math',
+      icon: '6️⃣',
+      description: 'Ratios, rates, integers, geometry basics',
+      gradient: 'from-red-500 to-orange-500'
+    },
+    {
+      slug: 'grade-7-math',
+      name: 'Grade 7 Math',
+      icon: '7️⃣',
+      description: 'Rational numbers, proportions, percents',
+      gradient: 'from-orange-500 to-amber-500'
+    },
+    {
+      slug: 'grade-8-math',
+      name: 'Grade 8 Math',
+      icon: '8️⃣',
+      description: 'Exponents, linear functions, geometry',
+      gradient: 'from-amber-500 to-yellow-500'
+    },
+  ],
+  'High School Math (Grades 9-12)': [
+    {
+      slug: 'pre-algebra',
+      name: 'Pre-Algebra',
+      icon: '🔢',
+      description: 'Integers, fractions, basic equations',
+      gradient: 'from-yellow-500 to-lime-500'
+    },
+    {
+      slug: 'algebra-1',
+      name: 'Algebra 1',
+      icon: '📊',
+      description: 'Linear equations, functions, quadratics',
+      gradient: 'from-sky-600 to-blue-600'
+    },
+    {
+      slug: 'geometry',
+      name: 'Geometry',
+      icon: '📐',
+      description: 'Shapes, angles, proofs, spatial reasoning',
+      gradient: 'from-emerald-600 to-green-600'
+    },
+    {
+      slug: 'algebra-2',
+      name: 'Algebra 2',
+      icon: '🔣',
+      description: 'Advanced functions, exponentials, logs',
+      gradient: 'from-cyan-600 to-teal-600'
+    },
+    {
+      slug: 'ap-precalculus',
+      name: 'AP Precalculus',
+      icon: '📈',
+      description: 'Functions, trig, vectors, matrices',
+      gradient: 'from-blue-600 to-indigo-600'
+    },
+    {
+      slug: 'ap-calculus-ab-bc',
+      name: 'AP Calculus AB/BC',
+      icon: '∫',
+      description: 'Limits, derivatives, integrals, series',
+      gradient: 'from-purple-600 to-violet-600'
+    },
+  ],
+  'AP Sciences': [
+    {
+      slug: 'ap-physics-1',
+      name: 'AP Physics 1',
+      icon: '⚛️',
+      description: 'Mechanics, waves, basic circuits',
+      gradient: 'from-green-600 to-emerald-600'
+    },
+    {
+      slug: 'ap-physics-2',
+      name: 'AP Physics 2',
+      icon: '🔬',
+      description: 'Fluids, thermodynamics, E&M, modern',
+      gradient: 'from-teal-600 to-cyan-600'
+    },
+    {
+      slug: 'ap-physics-c-mechanics',
+      name: 'AP Physics C: Mechanics',
+      icon: '🎯',
+      description: 'Calculus-based mechanics',
+      gradient: 'from-indigo-600 to-purple-600'
+    },
+    {
+      slug: 'ap-physics-c-em',
+      name: 'AP Physics C: E&M',
+      icon: '⚡',
+      description: 'Electricity, magnetism, induction',
+      gradient: 'from-violet-600 to-fuchsia-600'
+    },
+    {
+      slug: 'ap-chemistry',
+      name: 'AP Chemistry',
+      icon: '🧪',
+      description: 'Atomic structure, bonding, equilibrium',
+      gradient: 'from-orange-600 to-red-600'
+    },
+    {
+      slug: 'ap-biology',
+      name: 'AP Biology',
+      icon: '🧬',
+      description: 'Cells, genetics, evolution, ecology',
+      gradient: 'from-rose-600 to-pink-600'
+    }
+  ],
+  'Test Prep': [
+    {
+      slug: 'sat-prep',
+      name: 'SAT Prep',
+      icon: '📝',
+      description: 'Math, Reading, Writing strategies',
+      gradient: 'from-blue-600 to-cyan-600'
+    },
+    {
+      slug: 'act-prep',
+      name: 'ACT Prep',
+      icon: '📋',
+      description: 'Math, English, Reading, Science',
+      gradient: 'from-purple-600 to-pink-600'
+    }
+  ]
+};
 
 export default function Home() {
   return (
@@ -107,13 +181,13 @@ export default function Home() {
               </svg>
             </span>
             <h1 className="text-4xl font-bold tracking-tight sm:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600">
-              Master AP Science & Math
+              Master Math & Science
             </h1>
             <p className="mt-4 text-base font-semibold tracking-wide uppercase text-purple-700">
-              Daily bites. Big Wins.
+              From Grade 4 to AP. SAT to ACT.
             </p>
             <p className="mt-3 text-lg leading-8 text-gray-600">
-              Free notes, flashcards, and practice problems for AP Calculus, Physics, Chemistry, and Biology.
+              19 courses · 372 topics · Always free
             </p>
           </div>
         </div>
@@ -132,33 +206,40 @@ export default function Home() {
           </div>
           
           <div className="mx-auto max-w-7xl">
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-              {courses.map((course) => (
-                <Link
-                  key={course.slug}
-                  href={`/courses/${course.slug}`}
-                  className="group relative flex flex-col rounded-2xl border border-gray-200 bg-white p-8 shadow-sm transition-all hover:shadow-xl hover:scale-105 hover:border-transparent"
-                >
-                  <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${course.gradient} opacity-0 transition-opacity group-hover:opacity-5`}></div>
-                  <div className="relative">
-                    <div className={`mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br ${course.gradient} text-white text-3xl font-bold`}>
-                      {course.icon}
-                    </div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                      {course.name}
-                    </h3>
-                    <p className="text-sm text-gray-600">
-                      {course.description}
-                    </p>
-                    <div className="mt-4 flex items-center text-sm font-semibold">
-                      <span className={`bg-gradient-to-r ${course.gradient} bg-clip-text text-transparent`}>
-                        Explore Course →
-                      </span>
-                    </div>
-                  </div>
-                </Link>
-              ))}
-            </div>
+            {Object.entries(coursesBySection).map(([sectionName, courses], sectionIdx) => (
+              <div key={sectionName} className={sectionIdx > 0 ? 'mt-20' : ''}>
+                <h3 className="text-2xl font-bold text-gray-900 mb-6 pb-2 border-b-2 border-purple-200">
+                  {sectionName}
+                </h3>
+                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                  {courses.map((course) => (
+                    <Link
+                      key={course.slug}
+                      href={`/courses/${course.slug}`}
+                      className="group relative flex flex-col rounded-2xl border border-gray-200 bg-white p-8 shadow-sm transition-all hover:shadow-xl hover:scale-105 hover:border-transparent"
+                    >
+                      <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${course.gradient} opacity-0 transition-opacity group-hover:opacity-5`}></div>
+                      <div className="relative">
+                        <div className={`mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br ${course.gradient} text-white text-3xl font-bold`}>
+                          {course.icon}
+                        </div>
+                        <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                          {course.name}
+                        </h3>
+                        <p className="text-sm text-gray-600">
+                          {course.description}
+                        </p>
+                        <div className="mt-4 flex items-center text-sm font-semibold">
+                          <span className={`bg-gradient-to-r ${course.gradient} bg-clip-text text-transparent`}>
+                            Explore Course →
+                          </span>
+                        </div>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
