@@ -3,18 +3,39 @@ import { AdBanner } from "@/components/ad-banner";
 
 const courses = [
   {
-    slug: 'ap-calculus-ab-bc',
-    name: 'AP Calculus AB/BC',
-    icon: '∫',
-    description: 'Limits, derivatives, integrals, series, and more',
-    gradient: 'from-purple-600 to-blue-600'
+    slug: 'algebra-1',
+    name: 'Algebra 1',
+    icon: '🔢',
+    description: 'Linear equations, functions, and quadratic equations',
+    gradient: 'from-sky-600 to-blue-600'
+  },
+  {
+    slug: 'geometry',
+    name: 'Geometry',
+    icon: '📐',
+    description: 'Shapes, angles, proofs, and spatial reasoning',
+    gradient: 'from-emerald-600 to-green-600'
+  },
+  {
+    slug: 'algebra-2',
+    name: 'Algebra 2',
+    icon: '🔣',
+    description: 'Advanced functions, exponentials, and logarithms',
+    gradient: 'from-cyan-600 to-teal-600'
   },
   {
     slug: 'ap-precalculus',
     name: 'AP Precalculus',
-    icon: '📐',
+    icon: '�',
     description: 'Functions, trigonometry, vectors, and complex numbers',
-    gradient: 'from-blue-600 to-cyan-600'
+    gradient: 'from-blue-600 to-indigo-600'
+  },
+  {
+    slug: 'ap-calculus-ab-bc',
+    name: 'AP Calculus AB/BC',
+    icon: '∫',
+    description: 'Limits, derivatives, integrals, series, and more',
+    gradient: 'from-purple-600 to-violet-600'
   },
   {
     slug: 'ap-physics-1',

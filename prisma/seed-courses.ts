@@ -7,12 +7,39 @@ async function seedCourses() {
 
   const courses = [
     {
+      id: 'algebra-1',
+      slug: 'algebra-1',
+      name: 'Algebra 1',
+      description: 'Master linear equations, inequalities, functions, polynomials, and quadratic equations.',
+      order: 0,
+      icon: '🔢',
+      color: 'sky',
+    },
+    {
+      id: 'geometry',
+      slug: 'geometry',
+      name: 'Geometry',
+      description: 'Explore points, lines, angles, triangles, circles, area, volume, and geometric proofs.',
+      order: 1,
+      icon: '📐',
+      color: 'emerald',
+    },
+    {
+      id: 'algebra-2',
+      slug: 'algebra-2',
+      name: 'Algebra 2',
+      description: 'Study advanced functions, polynomials, exponentials, logarithms, rational expressions, and sequences.',
+      order: 2,
+      icon: '🔣',
+      color: 'cyan',
+    },
+    {
       id: 'ap-precalculus',
       slug: 'ap-precalculus',
       name: 'AP Precalculus',
       description: 'Build a strong foundation in functions, trigonometry, vectors, matrices, and complex numbers to prepare for calculus.',
-      order: 2,
-      icon: '📐',
+      order: 3,
+      icon: '�',
       color: 'blue',
     },
     {
@@ -20,7 +47,7 @@ async function seedCourses() {
       slug: 'ap-physics-1',
       name: 'AP Physics 1',
       description: 'Explore mechanics, waves, sound, and basic circuits in this algebra-based physics course.',
-      order: 3,
+      order: 4,
       icon: '⚛️',
       color: 'green',
     },
@@ -30,7 +57,7 @@ async function seedCourses() {
       name: 'AP Physics 2',
       icon: '🔬',
       description: 'Study fluids, thermodynamics, electricity, magnetism, optics, and modern physics using algebra-based approaches.',
-      order: 4,
+      order: 5,
       color: 'teal',
     },
     {
@@ -39,7 +66,7 @@ async function seedCourses() {
       name: 'AP Physics C: Mechanics',
       icon: '🎯',
       description: 'Master calculus-based mechanics including kinematics, energy, momentum, rotation, and oscillations.',
-      order: 5,
+      order: 6,
       color: 'indigo',
     },
     {
@@ -48,7 +75,7 @@ async function seedCourses() {
       name: 'AP Physics C: Electricity & Magnetism',
       icon: '⚡',
       description: 'Dive deep into electrostatics, conductors, capacitors, electric circuits, magnetic fields, and electromagnetic induction with calculus.',
-      order: 6,
+      order: 7,
       color: 'violet',
     },
     {
@@ -57,7 +84,7 @@ async function seedCourses() {
       name: 'AP Chemistry',
       icon: '🧪',
       description: 'Explore atomic structure, chemical bonding, states of matter, reactions, kinetics, thermodynamics, and equilibrium.',
-      order: 7,
+      order: 8,
       color: 'orange',
     },
     {
@@ -66,7 +93,7 @@ async function seedCourses() {
       name: 'AP Biology',
       icon: '🧬',
       description: 'Study the chemistry of life, cells, genetics, evolution, ecology, and the diversity of organisms.',
-      order: 8,
+      order: 9,
       color: 'rose',
     },
   ]
