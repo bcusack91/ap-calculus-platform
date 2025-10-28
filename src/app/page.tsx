@@ -187,7 +187,7 @@ export default function Home() {
               From Grade 4 to AP. SAT to ACT.
             </p>
             <p className="mt-3 text-lg leading-8 text-gray-600">
-              19 courses · 372 topics · Always free
+              19 courses · 372 topics
             </p>
           </div>
         </div>
@@ -271,7 +271,7 @@ export default function Home() {
                   Comprehensive Notes
                 </dt>
                 <dd className="mt-1 flex flex-auto flex-col text-base leading-7 text-gray-600">
-                  <p className="flex-auto">Clear, detailed text explanations for every topic. Concise, easy to understand, and always free.</p>
+                  <p className="flex-auto">Clear, detailed text explanations for every topic. Concise and easy to understand.</p>
                 </dd>
               </div>
 

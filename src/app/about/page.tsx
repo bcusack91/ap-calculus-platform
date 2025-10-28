@@ -77,10 +77,10 @@ export default function AboutPage() {
                 <div className="p-6 border border-gray-200 rounded-xl hover:shadow-lg transition-shadow">
                   <div className="text-3xl mb-4">✨</div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    Always Free
+                    Quality Content
                   </h3>
                   <p className="text-gray-600">
-                    No paywalls, no subscriptions—all content is 100% free forever
+                    Comprehensive study materials with clear explanations and practice problems
                   </p>
                 </div>
               </div>
