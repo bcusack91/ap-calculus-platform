@@ -7,7 +7,7 @@ async function fillGrade6Batch3() {
 
   // Topic 1: Measures of Center and Variability
   await prisma.topic.updateMany({
-    where: { slug: 'measures-of-center-and-variability' },
+    where: { slug: 'measures-center-variability' },
     data: {
       textContent: `# Measures of Center and Variability
 

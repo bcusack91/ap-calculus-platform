@@ -873,7 +873,7 @@ Understanding equations is one of the most powerful tools in all of mathematics.
   // Topic 3: Statistical Questions and Data Display
   await prisma.topic.updateMany({
     where: {
-      slug: 'statistical-questions-and-data-display'
+      slug: 'statistical-questions-data-display'
     },
     data: {
       textContent: `# Statistical Questions and Data Display

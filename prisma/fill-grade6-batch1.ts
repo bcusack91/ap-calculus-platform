@@ -8,7 +8,7 @@ async function main() {
   // Topic 1: Dividing Fractions
   await prisma.topic.updateMany({
     where: {
-      slug: 'dividing-fractions'
+      slug: 'grade6-dividing-fractions'
     },
     data: {
       textContent: `# Dividing Fractions
