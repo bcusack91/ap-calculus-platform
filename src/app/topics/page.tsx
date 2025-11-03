@@ -1,8 +1,17 @@
 import Link from 'next/link'
 import { prisma } from '@/lib/prisma'
 import { AdBanner } from '@/components/ad-banner'
+import type { Metadata } from 'next'
 
 export const dynamic = 'force-dynamic'
+
+export const metadata: Metadata = {
+  title: 'All Topics | Study Mondo',
+  description: 'Browse all study topics across 20 AP courses and subjects',
+  alternates: {
+    canonical: 'https://studymondo.com/topics',
+  },
+}
 
 export default async function TopicsPage() {
   const courses = await prisma.course.findMany({

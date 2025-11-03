@@ -7,6 +7,7 @@ import rehypeKatex from 'rehype-katex'
 import remarkMath from 'remark-math'
 import 'katex/dist/katex.min.css'
 import Link from 'next/link'
+import type { Metadata } from 'next'
 
 // Force dynamic rendering
 export const dynamic = 'force-dynamic'
@@ -15,6 +16,35 @@ interface TopicPageProps {
   params: Promise<{
     slug: string
   }>
+}
+
+// Generate metadata with canonical URL
+export async function generateMetadata(props: TopicPageProps): Promise<Metadata> {
+  const params = await props.params
+  const topic = await prisma.topic.findUnique({
+    where: { slug: params.slug },
+    select: { title: true, description: true, slug: true }
+  })
+
+  if (!topic) {
+    return {}
+  }
+
+  const canonicalUrl = `https://studymondo.com/topics/${topic.slug}`
+
+  return {
+    title: `${topic.title} | Study Mondo`,
+    description: topic.description,
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    openGraph: {
+      title: topic.title,
+      description: topic.description,
+      url: canonicalUrl,
+      type: 'article',
+    },
+  }
 }
 
 // Custom components for styled markdown

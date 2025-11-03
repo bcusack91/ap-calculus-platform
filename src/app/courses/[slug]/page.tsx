@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { prisma } from '@/lib/prisma'
 import { AdBanner } from '@/components/ad-banner'
+import type { Metadata } from 'next'
 
 // Force dynamic rendering
 export const dynamic = 'force-dynamic'
@@ -10,6 +11,35 @@ interface CoursePageProps {
   params: Promise<{
     slug: string
   }>
+}
+
+// Generate metadata with canonical URL
+export async function generateMetadata(props: CoursePageProps): Promise<Metadata> {
+  const params = await props.params
+  const course = await prisma.course.findUnique({
+    where: { slug: params.slug },
+    select: { name: true, slug: true }
+  })
+
+  if (!course) {
+    return {}
+  }
+
+  const canonicalUrl = `https://studymondo.com/courses/${course.slug}`
+
+  return {
+    title: `${course.name} | Study Mondo`,
+    description: `Comprehensive ${course.name} study materials, practice problems, and flashcards`,
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    openGraph: {
+      title: course.name,
+      description: `Study ${course.name} with comprehensive notes and practice problems`,
+      url: canonicalUrl,
+      type: 'website',
+    },
+  }
 }
 
 export default async function CoursePage({ params }: CoursePageProps) {
