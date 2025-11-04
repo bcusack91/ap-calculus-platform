@@ -240,7 +240,7 @@ export default async function TopicPage(props: TopicPageProps) {
                           <span className="bg-green-600 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold">
                             {index + 1}
                           </span>
-                          <span>
+                          <span className="text-gray-900">
                             Problem {index + 1}
                             <span className={`ml-2 text-sm font-normal px-2 py-1 rounded ${
                               problem.difficulty === 'EASY' ? 'bg-green-100 text-green-800' :
