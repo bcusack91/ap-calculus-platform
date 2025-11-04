@@ -74,7 +74,7 @@ export default function TwoDigitMultiplicationAnimation({
       // Sub-step 2: Color code if there's a carry
       if (newCarry > 0) {
         steps.push({
-          description: `The result ${product} splits into carry ${newCarry} and digit ${digitToWrite}`,
+          description: `The result ${product} splits: ${newCarry} carries to the next column, ${digitToWrite} goes in this position`,
           digit,
           multiplierDigit,
           product,
@@ -86,9 +86,9 @@ export default function TwoDigitMultiplicationAnimation({
           subStep: 'colorize'
         })
         
-        // Sub-step 3: Slide digits to positions
+        // Sub-step 3: Slide digits to positions - BOTH the carry and the digit to write
         steps.push({
-          description: `The ${newCarry} carries to the next column, and ${digitToWrite} goes in row ${mRow + 1}`,
+          description: `Write ${digitToWrite} in row ${mRow + 1}, and place carry ${newCarry} above the next column`,
           digit,
           multiplierDigit,
           product,
@@ -164,11 +164,31 @@ export default function TwoDigitMultiplicationAnimation({
     for (let i = 0; i < currentStep; i++) {
       const step = steps[i]
       if (step.subStep === 'slide' && step.carry > 0 && step.multiplierRow >= 0) {
-        carriesVisible.push({ 
-          row: step.multiplierRow,
-          position: step.highlight - 1, 
-          value: step.carry 
-        })
+        // Carry goes to the LEFT of the current position (one position higher in place value)
+        // If highlight is 0 (ones place), carry goes to position 1 (tens place)
+        const carryPosition = step.highlight + 1
+        
+        // Check if this carry has been used in a subsequent step
+        let carryUsed = false
+        for (let j = i + 1; j < currentStep; j++) {
+          const laterStep = steps[j]
+          if (laterStep.multiplierRow === step.multiplierRow && 
+              laterStep.highlight === carryPosition && 
+              laterStep.previousCarry > 0 &&
+              laterStep.subStep === 'slide') {
+            carryUsed = true
+            break
+          }
+        }
+        
+        // Only show the carry if it hasn't been used yet
+        if (!carryUsed) {
+          carriesVisible.push({ 
+            row: step.multiplierRow,
+            position: carryPosition,
+            value: step.carry 
+          })
+        }
       }
     }
   }
@@ -177,18 +197,28 @@ export default function TwoDigitMultiplicationAnimation({
   const getPartialProductDigits = (rowIndex: number): string => {
     if (currentStep === 0) return ''
     
-    let digitsWritten = 0
+    let product = ''
+    let currentCarry = 0
+    
+    // Build the partial product up to the current step
     for (let i = 0; i < currentStep; i++) {
       const step = steps[i]
-      if (step.multiplierRow === rowIndex && (step.subStep === 'slide' || step.subStep === 'complete')) {
-        digitsWritten++
+      if (step.multiplierRow === rowIndex && step.subStep === 'slide') {
+        // Add the digit to write
+        product = step.digitToWrite + product
+        currentCarry = step.carry
       }
     }
     
-    if (digitsWritten === 0) return ''
+    // If we've completed all digits for this row and there's a final carry, add it
+    const rowSteps = steps.filter(s => s.multiplierRow === rowIndex && s.subStep === 'slide')
+    const completedDigits = product.length
     
-    const product = partialProducts[rowIndex]
-    return product.slice(-digitsWritten)
+    if (completedDigits > 0 && currentCarry > 0 && completedDigits >= multiplicandDigits.length) {
+      product = currentCarry + product
+    }
+    
+    return product
   }
 
   const currentStepData = currentStep > 0 ? steps[currentStep - 1] : null
@@ -204,23 +234,24 @@ export default function TwoDigitMultiplicationAnimation({
       <div className="bg-white rounded-lg p-6 mb-4 font-mono text-2xl relative">
         {/* Carry rows - one for each multiplier digit */}
         {multiplierDigits.map((_, mRow) => (
-          <div key={`carry-row-${mRow}`} className="text-right mb-1 h-8">
+          <div key={`carry-row-${mRow}`} className="text-right mb-0.5 h-6">
             <div className="inline-flex justify-end" style={{ width: `${(multiplicandDigits.length + multiplierDigits.length) * 3}rem` }}>
               {/* Add padding for position */}
               {Array(mRow).fill(0).map((_, idx) => (
                 <span key={`pad-${idx}`} className="inline-block w-12"></span>
               ))}
-              {multiplicandDigits.map((_, i) => {
+              {/* Need to add extra position for potential leftmost carry */}
+              {[...multiplicandDigits, 'extra'].map((_, i) => {
                 const carryAtPosition = carriesVisible.find(c => c.row === mRow && c.position === i)
                 const isHighlightedCarry = currentStepData && 
                   currentStepData.multiplierRow === mRow &&
                   currentStepData.previousCarry > 0 && 
-                  i === currentStepData.highlight &&
+                  i === currentStepData.highlight + 1 &&
                   carryAtPosition
                 return (
                   <span 
                     key={i} 
-                    className={`inline-block w-12 text-right transition-all duration-500 relative ${
+                    className={`inline-block w-12 text-right text-sm transition-all duration-500 relative ${
                       isHighlightedCarry 
                         ? 'text-purple-600 bg-purple-100 rounded scale-110' 
                         : 'text-blue-600'
