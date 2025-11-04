@@ -164,7 +164,7 @@ export default async function TopicPage(props: TopicPageProps) {
             <nav className="mb-4 text-sm text-muted-foreground">
               <Link href="/topics" className="hover:text-purple-600 transition-colors">Topics</Link>
               {' / '}
-              <Link href={`/topics?category=${topic.category.slug}`} className="hover:text-purple-600 transition-colors">{topic.category.name}</Link>
+              <Link href={`/categories/${topic.category.slug}`} className="hover:text-purple-600 transition-colors">{topic.category.name}</Link>
               {' / '}
               <span className="text-foreground font-medium">{topic.title}</span>
             </nav>
@@ -338,7 +338,7 @@ export default async function TopicPage(props: TopicPageProps) {
                   <Link href="/topics" className="block text-purple-700 hover:text-purple-900 hover:underline">
                     ← All Topics
                   </Link>
-                  <Link href={`/topics?category=${topic.category.slug}`} className="block text-purple-700 hover:text-purple-900 hover:underline">
+                  <Link href={`/categories/${topic.category.slug}`} className="block text-purple-700 hover:text-purple-900 hover:underline">
                     📂 {topic.category.name}
                   </Link>
                   <Link href={`/flashcards/${topic.slug}`} className="block text-purple-700 hover:text-purple-900 hover:underline">
