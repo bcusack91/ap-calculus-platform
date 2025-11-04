@@ -7,10 +7,48 @@ import AnimationWrapper from './AnimationWrapper'
 
 interface ContentWithAnimationsProps {
   content: string
-  MarkdownComponents: any
 }
 
-export default function ContentWithAnimations({ content, MarkdownComponents }: ContentWithAnimationsProps) {
+// Define markdown components here in the client component
+const MarkdownComponents = {
+  h1: ({ children }: any) => (
+    <h1 className="text-3xl font-bold mb-6 mt-8 text-blue-900 border-b-2 border-blue-200 pb-2">{children}</h1>
+  ),
+  h2: ({ children }: any) => (
+    <h2 className="text-2xl font-bold mb-4 mt-6 text-blue-800">{children}</h2>
+  ),
+  h3: ({ children }: any) => (
+    <h3 className="text-xl font-bold mb-3 mt-4 text-blue-700">{children}</h3>
+  ),
+  p: ({ children }: any) => (
+    <p className="mb-4 leading-relaxed text-gray-800">{children}</p>
+  ),
+  ul: ({ children }: any) => (
+    <ul className="list-disc list-inside mb-4 space-y-2 ml-4">{children}</ul>
+  ),
+  ol: ({ children }: any) => (
+    <ol className="list-decimal list-inside mb-4 space-y-2 ml-4">{children}</ol>
+  ),
+  li: ({ children }: any) => (
+    <li className="text-gray-700">{children}</li>
+  ),
+  blockquote: ({ children }: any) => (
+    <blockquote className="border-l-4 border-blue-500 bg-blue-50 pl-4 py-3 mb-4 italic rounded-r">
+      {children}
+    </blockquote>
+  ),
+  code: ({ inline, children }: any) => 
+    inline ? (
+      <code className="bg-gray-100 px-2 py-1 rounded text-sm font-mono text-purple-700">{children}</code>
+    ) : (
+      <code className="block bg-gray-900 text-gray-100 p-4 rounded-lg mb-4 overflow-x-auto">{children}</code>
+    ),
+  strong: ({ children }: any) => (
+    <strong className="font-bold text-purple-700">{children}</strong>
+  ),
+}
+
+export default function ContentWithAnimations({ content }: ContentWithAnimationsProps) {
   const parts: JSX.Element[] = []
   let key = 0
   
