@@ -123,20 +123,17 @@ export default function FlashcardStudyPage() {
 
   return (
     <div className="container py-10">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-          {/* Main Content */}
-          <div className="lg:col-span-3">
-            {/* Header */}
-            <div className="mb-6">
-              <Link href={`/topics/${topic.slug}`} className="text-purple-600 hover:underline mb-4 inline-block">
-                ← Back to Topic
-              </Link>
-              <h1 className="text-3xl font-bold mb-2">{topic.title} - Flashcards</h1>
-              <p className="text-muted-foreground">
-                Card {currentIndex + 1} of {topic.flashcards.length}
-              </p>
-            </div>
+      <div className="max-w-4xl mx-auto">
+        {/* Header */}
+        <div className="mb-6">
+          <Link href={`/topics/${topic.slug}`} className="text-purple-600 hover:underline mb-4 inline-block">
+            ← Back to Topic
+          </Link>
+          <h1 className="text-3xl font-bold mb-2">{topic.title} - Flashcards</h1>
+          <p className="text-muted-foreground">
+            Card {currentIndex + 1} of {topic.flashcards.length}
+          </p>
+        </div>
 
             {/* Progress Bar */}
             <div className="mb-8">
@@ -285,34 +282,31 @@ export default function FlashcardStudyPage() {
                 </div>
               </div>
             )}
-          </div>
 
-          {/* Sidebar */}
-          <div className="lg:col-span-1">
-            <div className="lg:sticky lg:top-4 space-y-6">
-              {/* Quick Links Card */}
-              <div className="bg-gradient-to-br from-purple-50 to-blue-50 border-2 border-purple-200 rounded-lg p-4">
-                <h3 className="font-bold text-purple-900 mb-3 flex items-center gap-2">
-                  <span>🎯</span> Quick Navigation
-                </h3>
-                <div className="space-y-2 text-sm">
-                  <Link href="/" className="block text-purple-700 hover:text-purple-900 hover:underline">
-                    ← All Courses
-                  </Link>
-                  <Link href={`/courses/${topic.category.course.slug}`} className="block text-purple-700 hover:text-purple-900 hover:underline">
-                    📚 {topic.category.course.name}
-                  </Link>
-                  <Link href={`/categories/${topic.category.slug}`} className="block text-purple-700 hover:text-purple-900 hover:underline">
-                    📂 {topic.category.name}
-                  </Link>
-                  <Link href={`/topics/${topic.slug}`} className="block text-purple-700 hover:text-purple-900 hover:underline">
-                    📖 Topic Page
-                  </Link>
-                </div>
+            {/* Quick Navigation */}
+            <div className="mt-8 bg-gradient-to-br from-purple-50 to-blue-50 border-2 border-purple-200 rounded-lg p-6">
+              <h3 className="font-bold text-purple-900 mb-4 flex items-center gap-2">
+                <span>🎯</span> Quick Navigation
+              </h3>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <Link href="/" className="text-center p-3 bg-white rounded-lg border border-purple-200 text-purple-700 hover:text-purple-900 hover:border-purple-400 transition-all">
+                  <div className="text-2xl mb-1">🏠</div>
+                  <div className="text-sm font-semibold">All Courses</div>
+                </Link>
+                <Link href={`/courses/${topic.category.course.slug}`} className="text-center p-3 bg-white rounded-lg border border-purple-200 text-purple-700 hover:text-purple-900 hover:border-purple-400 transition-all">
+                  <div className="text-2xl mb-1">📚</div>
+                  <div className="text-sm font-semibold">{topic.category.course.name}</div>
+                </Link>
+                <Link href={`/categories/${topic.category.slug}`} className="text-center p-3 bg-white rounded-lg border border-purple-200 text-purple-700 hover:text-purple-900 hover:border-purple-400 transition-all">
+                  <div className="text-2xl mb-1">📂</div>
+                  <div className="text-sm font-semibold">{topic.category.name}</div>
+                </Link>
+                <Link href={`/topics/${topic.slug}`} className="text-center p-3 bg-white rounded-lg border border-purple-200 text-purple-700 hover:text-purple-900 hover:border-purple-400 transition-all">
+                  <div className="text-2xl mb-1">📖</div>
+                  <div className="text-sm font-semibold">Topic Page</div>
+                </Link>
               </div>
             </div>
-          </div>
-        </div>
       </div>
     </div>
   )
