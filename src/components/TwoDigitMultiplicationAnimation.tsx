@@ -197,14 +197,23 @@ export default function TwoDigitMultiplicationAnimation({
   const getPartialProductDigits = (rowIndex: number): string => {
     if (currentStep === 0) return ''
     
+    // Check if we've started working on this row
+    const hasStartedRow = steps.slice(0, currentStep).some(s => s.multiplierRow === rowIndex)
+    if (!hasStartedRow) return ''
+    
+    // Add placeholder zeros for position (e.g., for row 1, start with "0")
     let product = ''
+    for (let z = 0; z < rowIndex; z++) {
+      product = '0' + product
+    }
+    
     let currentCarry = 0
     
     // Build the partial product up to the current step
     for (let i = 0; i < currentStep; i++) {
       const step = steps[i]
       if (step.multiplierRow === rowIndex && step.subStep === 'slide') {
-        // Add the digit to write
+        // Add the digit to write (to the left of placeholder zeros)
         product = step.digitToWrite + product
         currentCarry = step.carry
       }
@@ -212,7 +221,7 @@ export default function TwoDigitMultiplicationAnimation({
     
     // If we've completed all digits for this row and there's a final carry, add it
     const rowSteps = steps.filter(s => s.multiplierRow === rowIndex && s.subStep === 'slide')
-    const completedDigits = product.length
+    const completedDigits = rowSteps.length
     
     if (completedDigits > 0 && currentCarry > 0 && completedDigits >= multiplicandDigits.length) {
       product = currentCarry + product
