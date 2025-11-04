@@ -8,11 +8,7 @@ import remarkMath from 'remark-math'
 import 'katex/dist/katex.min.css'
 import Link from 'next/link'
 import type { Metadata } from 'next'
-import dynamicImport from 'next/dynamic'
-
-// Dynamically import animation components with no SSR
-const MultiplicationAnimation = dynamicImport(() => import('@/components/MultiplicationAnimation'), { ssr: false })
-const TwoDigitMultiplicationAnimation = dynamicImport(() => import('@/components/TwoDigitMultiplicationAnimation'), { ssr: false })
+import TopicContentRenderer from '@/components/TopicContentRenderer'
 
 // Force dynamic rendering
 export const dynamic = 'force-dynamic'
@@ -223,54 +219,7 @@ export default async function TopicPage(props: TopicPageProps) {
               <div className="prose prose-lg max-w-none">
                 {/* Check if content includes animation markers */}
                 {topic.textContent.includes('<MultiplicationAnimation') || topic.textContent.includes('<TwoDigitMultiplicationAnimation') ? (
-                  <>
-                    {(() => {
-                      const content = topic.textContent
-                      const parts: any[] = []
-                      let key = 0
-                      
-                      // Split by all component markers
-                      const segments = content.split(/(<(?:MultiplicationAnimation|TwoDigitMultiplicationAnimation)[^>]*\/>)/)
-                      
-                      segments.forEach((segment) => {
-                        const multiMatch = segment.match(/<MultiplicationAnimation multiplicand="(\d+)" multiplier="(\d+)" result="(\d+)" \/>/)
-                        const twoDigitMatch = segment.match(/<TwoDigitMultiplicationAnimation multiplicand="(\d+)" multiplier="(\d+)" result="(\d+)" \/>/)
-                        
-                        if (multiMatch) {
-                          parts.push(
-                            <MultiplicationAnimation 
-                              key={key++}
-                              multiplicand={multiMatch[1]} 
-                              multiplier={multiMatch[2]} 
-                              result={multiMatch[3]} 
-                            />
-                          )
-                        } else if (twoDigitMatch) {
-                          parts.push(
-                            <TwoDigitMultiplicationAnimation 
-                              key={key++}
-                              multiplicand={twoDigitMatch[1]} 
-                              multiplier={twoDigitMatch[2]} 
-                              result={twoDigitMatch[3]} 
-                            />
-                          )
-                        } else if (segment.trim()) {
-                          parts.push(
-                            <ReactMarkdown
-                              key={key++}
-                              remarkPlugins={[remarkMath]}
-                              rehypePlugins={[rehypeKatex]}
-                              components={MarkdownComponents}
-                            >
-                              {segment}
-                            </ReactMarkdown>
-                          )
-                        }
-                      })
-                      
-                      return parts
-                    })()}
-                  </>
+                  <TopicContentRenderer content={topic.textContent} />
                 ) : (
                   <ReactMarkdown
                     remarkPlugins={[remarkMath]}
