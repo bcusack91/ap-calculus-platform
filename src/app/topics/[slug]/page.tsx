@@ -274,7 +274,7 @@ export default async function TopicPage(props: TopicPageProps) {
 
                       {/* Show solution for all problems in free tier launch */}
                       <details className="mt-4">
-                        <summary className="cursor-pointer font-semibold hover:text-purple-600 bg-purple-50 p-3 rounded border-2 border-purple-200 transition-colors">
+                        <summary className="cursor-pointer font-semibold text-gray-900 hover:text-purple-600 bg-purple-50 p-3 rounded border-2 border-purple-200 transition-colors">
                           💡 Show Solution
                         </summary>
                         <div className="mt-4 prose max-w-none bg-purple-50 p-4 rounded border-l-4 border-purple-500">
