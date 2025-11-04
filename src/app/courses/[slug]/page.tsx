@@ -113,16 +113,29 @@ export default async function CoursePage({ params }: CoursePageProps) {
           <div className="space-y-12">
             {course.categories.map((category) => (
               <div key={category.id} className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm">
-                <div className="flex items-center gap-3 mb-6">
-                  {category.icon && (
-                    <span className="text-3xl">{category.icon}</span>
-                  )}
-                  <div>
-                    <h2 className="text-2xl font-bold text-gray-900">{category.name}</h2>
-                    {category.description && (
-                      <p className="text-gray-600 mt-1">{category.description}</p>
+                <div className="flex items-center justify-between mb-6">
+                  <div className="flex items-center gap-3">
+                    {category.icon && (
+                      <span className="text-3xl">{category.icon}</span>
                     )}
+                    <div>
+                      <Link 
+                        href={`/categories/${category.slug}`}
+                        className="text-2xl font-bold text-gray-900 hover:text-purple-600 transition-colors"
+                      >
+                        {category.name}
+                      </Link>
+                      {category.description && (
+                        <p className="text-gray-600 mt-1">{category.description}</p>
+                      )}
+                    </div>
                   </div>
+                  <Link
+                    href={`/categories/${category.slug}`}
+                    className="text-sm text-purple-600 hover:text-purple-700 font-medium whitespace-nowrap ml-4"
+                  >
+                    View All →
+                  </Link>
                 </div>
 
                 {category.topics.length > 0 ? (
