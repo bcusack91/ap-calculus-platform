@@ -14,6 +14,18 @@ export async function GET(
         id: true,
         title: true,
         slug: true,
+        category: {
+          select: {
+            name: true,
+            slug: true,
+            course: {
+              select: {
+                name: true,
+                slug: true,
+              }
+            }
+          }
+        },
         flashcards: {
           select: {
             id: true,

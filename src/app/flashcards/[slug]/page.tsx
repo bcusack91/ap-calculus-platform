@@ -19,6 +19,14 @@ interface Topic {
   id: string
   title: string
   slug: string
+  category: {
+    name: string
+    slug: string
+    course: {
+      name: string
+      slug: string
+    }
+  }
   flashcards: Flashcard[]
 }
 
@@ -115,165 +123,196 @@ export default function FlashcardStudyPage() {
 
   return (
     <div className="container py-10">
-      <div className="max-w-4xl mx-auto">
-        {/* Header */}
-        <div className="mb-6">
-          <Link href="/flashcards" className="text-purple-600 hover:underline mb-4 inline-block">
-            ← Back to Flashcards
-          </Link>
-          <h1 className="text-3xl font-bold mb-2">{topic.title}</h1>
-          <p className="text-muted-foreground">
-            Card {currentIndex + 1} of {topic.flashcards.length}
-          </p>
-        </div>
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+          {/* Main Content */}
+          <div className="lg:col-span-3">
+            {/* Header */}
+            <div className="mb-6">
+              <Link href={`/topics/${topic.slug}`} className="text-purple-600 hover:underline mb-4 inline-block">
+                ← Back to Topic
+              </Link>
+              <h1 className="text-3xl font-bold mb-2">{topic.title} - Flashcards</h1>
+              <p className="text-muted-foreground">
+                Card {currentIndex + 1} of {topic.flashcards.length}
+              </p>
+            </div>
 
-        {/* Progress Bar */}
-        <div className="mb-8">
-          <div className="w-full bg-gray-200 rounded-full h-2">
-            <div
-              className="bg-purple-600 h-2 rounded-full transition-all duration-300"
-              style={{ width: `${progress}%` }}
-            />
-          </div>
-        </div>
-
-        {/* Flashcard */}
-        <div className="mb-8">
-          <div
-            onClick={handleFlip}
-            className="relative min-h-[300px] cursor-pointer perspective-1000"
-          >
-            <div
-              className={`relative w-full min-h-[300px] transition-all duration-500 preserve-3d ${
-                isFlipped ? 'rotate-y-180' : ''
-              }`}
-              style={{
-                transformStyle: 'preserve-3d',
-                transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0)',
-              }}
-            >
-              {/* Front */}
-              <div
-                className={`absolute w-full backface-hidden ${
-                  isFlipped ? 'opacity-0' : 'opacity-100'
-                }`}
-                style={{ backfaceVisibility: 'hidden' }}
-              >
-                <div className="border-2 border-purple-300 rounded-lg p-8 bg-gradient-to-br from-purple-50 to-blue-50 min-h-[300px] flex flex-col justify-center">
-                  <div className="text-sm text-purple-900 font-semibold mb-4">QUESTION</div>
-                  <div className="text-lg prose prose-purple max-w-none text-gray-900">
-                    <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
-                      {currentCard.front}
-                    </ReactMarkdown>
-                  </div>
-                  <div className="mt-6 text-sm text-gray-700 text-center">
-                    Click to reveal answer
-                  </div>
-                </div>
-              </div>
-
-              {/* Back */}
-              <div
-                className={`absolute w-full backface-hidden ${
-                  isFlipped ? 'opacity-100' : 'opacity-0'
-                }`}
-                style={{
-                  backfaceVisibility: 'hidden',
-                  transform: 'rotateY(180deg)',
-                }}
-              >
-                <div className="border-2 border-green-300 rounded-lg p-8 bg-gradient-to-br from-green-50 to-teal-50 min-h-[300px] flex flex-col justify-center">
-                  <div className="text-sm text-green-900 font-semibold mb-4">ANSWER</div>
-                  <div className="text-lg prose prose-green max-w-none text-gray-900">
-                    <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
-                      {currentCard.back}
-                    </ReactMarkdown>
-                  </div>
-                  <div className="mt-6 text-sm text-gray-700 text-center">
-                    Click to see question again
-                  </div>
-                </div>
+            {/* Progress Bar */}
+            <div className="mb-8">
+              <div className="w-full bg-gray-200 rounded-full h-2">
+                <div
+                  className="bg-purple-600 h-2 rounded-full transition-all duration-300"
+                  style={{ width: `${progress}%` }}
+                />
               </div>
             </div>
-          </div>
 
-          {/* Hint */}
-          {currentCard.hint && (
-            <div className="mt-4">
-              {!showHint ? (
-                <button
-                  onClick={() => setShowHint(true)}
-                  className="text-sm text-purple-900 hover:underline font-semibold"
+            {/* Flashcard */}
+            <div className="mb-8">
+              <div
+                onClick={handleFlip}
+                className="relative min-h-[300px] cursor-pointer perspective-1000"
+              >
+                <div
+                  className={`relative w-full min-h-[300px] transition-all duration-500 preserve-3d ${
+                    isFlipped ? 'rotate-y-180' : ''
+                  }`}
+                  style={{
+                    transformStyle: 'preserve-3d',
+                    transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0)',
+                  }}
                 >
-                  💡 Show Hint
-                </button>
-              ) : (
-                <div className="p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
-                  <div className="text-sm text-yellow-900 font-semibold mb-2">💡 HINT</div>
-                  <div className="text-sm prose prose-yellow max-w-none text-gray-900">
-                    <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
-                      {currentCard.hint}
-                    </ReactMarkdown>
+                  {/* Front */}
+                  <div
+                    className={`absolute w-full backface-hidden ${
+                      isFlipped ? 'opacity-0' : 'opacity-100'
+                    }`}
+                    style={{ backfaceVisibility: 'hidden' }}
+                  >
+                    <div className="border-2 border-purple-300 rounded-lg p-8 bg-gradient-to-br from-purple-50 to-blue-50 min-h-[300px] flex flex-col justify-center">
+                      <div className="text-sm text-purple-900 font-semibold mb-4">QUESTION</div>
+                      <div className="text-lg prose prose-purple max-w-none text-gray-900">
+                        <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
+                          {currentCard.front}
+                        </ReactMarkdown>
+                      </div>
+                      <div className="mt-6 text-sm text-gray-700 text-center">
+                        Click to reveal answer
+                      </div>
+                    </div>
                   </div>
+
+                  {/* Back */}
+                  <div
+                    className={`absolute w-full backface-hidden ${
+                      isFlipped ? 'opacity-100' : 'opacity-0'
+                    }`}
+                    style={{
+                      backfaceVisibility: 'hidden',
+                      transform: 'rotateY(180deg)',
+                    }}
+                  >
+                    <div className="border-2 border-green-300 rounded-lg p-8 bg-gradient-to-br from-green-50 to-teal-50 min-h-[300px] flex flex-col justify-center">
+                      <div className="text-sm text-green-900 font-semibold mb-4">ANSWER</div>
+                      <div className="text-lg prose prose-green max-w-none text-gray-900">
+                        <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
+                          {currentCard.back}
+                        </ReactMarkdown>
+                      </div>
+                      <div className="mt-6 text-sm text-gray-700 text-center">
+                        Click to see question again
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Hint */}
+              {currentCard.hint && (
+                <div className="mt-4">
+                  {!showHint ? (
+                    <button
+                      onClick={() => setShowHint(true)}
+                      className="text-sm text-purple-900 hover:underline font-semibold"
+                    >
+                      💡 Show Hint
+                    </button>
+                  ) : (
+                    <div className="p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+                      <div className="text-sm text-yellow-900 font-semibold mb-2">💡 HINT</div>
+                      <div className="text-sm prose prose-yellow max-w-none text-gray-900">
+                        <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
+                          {currentCard.hint}
+                        </ReactMarkdown>
+                      </div>
+                    </div>
+                  )}
                 </div>
               )}
             </div>
-          )}
-        </div>
 
-        {/* Navigation */}
-        <div className="flex justify-between items-center">
-          <button
-            onClick={handlePrevious}
-            disabled={currentIndex === 0}
-            className="px-6 py-3 rounded-lg font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed bg-gray-200 hover:bg-gray-300 text-gray-900"
-          >
-            ← Previous
-          </button>
-
-          <button
-            onClick={handleFlip}
-            className="px-6 py-3 rounded-lg font-semibold bg-purple-600 hover:bg-purple-700 text-white transition-all"
-          >
-            {isFlipped ? 'Show Question' : 'Show Answer'}
-          </button>
-
-          <button
-            onClick={handleNext}
-            disabled={currentIndex === topic.flashcards.length - 1}
-            className="px-6 py-3 rounded-lg font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed bg-gray-200 hover:bg-gray-300 text-gray-900"
-          >
-            Next →
-          </button>
-        </div>
-
-        {/* Completion Message */}
-        {currentIndex === topic.flashcards.length - 1 && (
-          <div className="mt-8 p-6 bg-green-50 border border-green-200 rounded-lg text-center">
-            <h3 className="text-xl font-bold text-green-900 mb-2">🎉 Great Job!</h3>
-            <p className="text-green-900 mb-4">
-              You've reviewed all {topic.flashcards.length} flashcards for this topic.
-            </p>
-            <div className="flex gap-4 justify-center">
+            {/* Navigation */}
+            <div className="flex justify-between items-center">
               <button
-                onClick={() => {
-                  setCurrentIndex(0)
-                  setIsFlipped(false)
-                  setShowHint(false)
-                }}
-                className="px-4 py-2 rounded-lg bg-green-600 hover:bg-green-700 text-white font-semibold"
+                onClick={handlePrevious}
+                disabled={currentIndex === 0}
+                className="px-6 py-3 rounded-lg font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed bg-gray-200 hover:bg-gray-300 text-gray-900"
               >
-                Review Again
+                ← Previous
               </button>
-              <Link
-                href="/flashcards"
-                className="px-4 py-2 rounded-lg bg-white border border-green-600 text-green-900 font-semibold hover:bg-green-50"
+
+              <button
+                onClick={handleFlip}
+                className="px-6 py-3 rounded-lg font-semibold bg-purple-600 hover:bg-purple-700 text-white transition-all"
               >
-                Choose Another Topic
-              </Link>
+                {isFlipped ? 'Show Question' : 'Show Answer'}
+              </button>
+
+              <button
+                onClick={handleNext}
+                disabled={currentIndex === topic.flashcards.length - 1}
+                className="px-6 py-3 rounded-lg font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed bg-gray-200 hover:bg-gray-300 text-gray-900"
+              >
+                Next →
+              </button>
+            </div>
+
+            {/* Completion Message */}
+            {currentIndex === topic.flashcards.length - 1 && (
+              <div className="mt-8 p-6 bg-green-50 border border-green-200 rounded-lg text-center">
+                <h3 className="text-xl font-bold text-green-900 mb-2">🎉 Great Job!</h3>
+                <p className="text-green-900 mb-4">
+                  You've reviewed all {topic.flashcards.length} flashcards for this topic.
+                </p>
+                <div className="flex gap-4 justify-center">
+                  <button
+                    onClick={() => {
+                      setCurrentIndex(0)
+                      setIsFlipped(false)
+                      setShowHint(false)
+                    }}
+                    className="px-4 py-2 rounded-lg bg-green-600 hover:bg-green-700 text-white font-semibold"
+                  >
+                    Review Again
+                  </button>
+                  <Link
+                    href={`/topics/${topic.slug}`}
+                    className="px-4 py-2 rounded-lg bg-white border border-green-600 text-green-900 font-semibold hover:bg-green-50"
+                  >
+                    Back to Topic
+                  </Link>
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* Sidebar */}
+          <div className="lg:col-span-1">
+            <div className="lg:sticky lg:top-4 space-y-6">
+              {/* Quick Links Card */}
+              <div className="bg-gradient-to-br from-purple-50 to-blue-50 border-2 border-purple-200 rounded-lg p-4">
+                <h3 className="font-bold text-purple-900 mb-3 flex items-center gap-2">
+                  <span>🎯</span> Quick Navigation
+                </h3>
+                <div className="space-y-2 text-sm">
+                  <Link href="/" className="block text-purple-700 hover:text-purple-900 hover:underline">
+                    ← All Courses
+                  </Link>
+                  <Link href={`/courses/${topic.category.course.slug}`} className="block text-purple-700 hover:text-purple-900 hover:underline">
+                    📚 {topic.category.course.name}
+                  </Link>
+                  <Link href={`/categories/${topic.category.slug}`} className="block text-purple-700 hover:text-purple-900 hover:underline">
+                    📂 {topic.category.name}
+                  </Link>
+                  <Link href={`/topics/${topic.slug}`} className="block text-purple-700 hover:text-purple-900 hover:underline">
+                    📖 Topic Page
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
-        )}
+        </div>
       </div>
     </div>
   )
