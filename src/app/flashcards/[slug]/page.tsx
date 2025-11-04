@@ -160,13 +160,13 @@ export default function FlashcardStudyPage() {
                 style={{ backfaceVisibility: 'hidden' }}
               >
                 <div className="border-2 border-purple-300 rounded-lg p-8 bg-gradient-to-br from-purple-50 to-blue-50 min-h-[300px] flex flex-col justify-center">
-                  <div className="text-sm text-purple-600 font-semibold mb-4">QUESTION</div>
-                  <div className="text-lg prose prose-purple max-w-none">
+                  <div className="text-sm text-purple-900 font-semibold mb-4">QUESTION</div>
+                  <div className="text-lg prose prose-purple max-w-none text-gray-900">
                     <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
                       {currentCard.front}
                     </ReactMarkdown>
                   </div>
-                  <div className="mt-6 text-sm text-gray-500 text-center">
+                  <div className="mt-6 text-sm text-gray-700 text-center">
                     Click to reveal answer
                   </div>
                 </div>
@@ -183,13 +183,13 @@ export default function FlashcardStudyPage() {
                 }}
               >
                 <div className="border-2 border-green-300 rounded-lg p-8 bg-gradient-to-br from-green-50 to-teal-50 min-h-[300px] flex flex-col justify-center">
-                  <div className="text-sm text-green-600 font-semibold mb-4">ANSWER</div>
-                  <div className="text-lg prose prose-green max-w-none">
+                  <div className="text-sm text-green-900 font-semibold mb-4">ANSWER</div>
+                  <div className="text-lg prose prose-green max-w-none text-gray-900">
                     <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
                       {currentCard.back}
                     </ReactMarkdown>
                   </div>
-                  <div className="mt-6 text-sm text-gray-500 text-center">
+                  <div className="mt-6 text-sm text-gray-700 text-center">
                     Click to see question again
                   </div>
                 </div>
@@ -203,14 +203,14 @@ export default function FlashcardStudyPage() {
               {!showHint ? (
                 <button
                   onClick={() => setShowHint(true)}
-                  className="text-sm text-purple-600 hover:underline"
+                  className="text-sm text-purple-900 hover:underline font-semibold"
                 >
                   💡 Show Hint
                 </button>
               ) : (
                 <div className="p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
-                  <div className="text-sm text-yellow-800 font-semibold mb-2">💡 HINT</div>
-                  <div className="text-sm prose prose-yellow max-w-none">
+                  <div className="text-sm text-yellow-900 font-semibold mb-2">💡 HINT</div>
+                  <div className="text-sm prose prose-yellow max-w-none text-gray-900">
                     <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
                       {currentCard.hint}
                     </ReactMarkdown>
@@ -226,7 +226,7 @@ export default function FlashcardStudyPage() {
           <button
             onClick={handlePrevious}
             disabled={currentIndex === 0}
-            className="px-6 py-3 rounded-lg font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed bg-gray-200 hover:bg-gray-300 text-gray-700"
+            className="px-6 py-3 rounded-lg font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed bg-gray-200 hover:bg-gray-300 text-gray-900"
           >
             ← Previous
           </button>
@@ -241,7 +241,7 @@ export default function FlashcardStudyPage() {
           <button
             onClick={handleNext}
             disabled={currentIndex === topic.flashcards.length - 1}
-            className="px-6 py-3 rounded-lg font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed bg-gray-200 hover:bg-gray-300 text-gray-700"
+            className="px-6 py-3 rounded-lg font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed bg-gray-200 hover:bg-gray-300 text-gray-900"
           >
             Next →
           </button>
@@ -251,7 +251,7 @@ export default function FlashcardStudyPage() {
         {currentIndex === topic.flashcards.length - 1 && (
           <div className="mt-8 p-6 bg-green-50 border border-green-200 rounded-lg text-center">
             <h3 className="text-xl font-bold text-green-900 mb-2">🎉 Great Job!</h3>
-            <p className="text-green-700 mb-4">
+            <p className="text-green-900 mb-4">
               You've reviewed all {topic.flashcards.length} flashcards for this topic.
             </p>
             <div className="flex gap-4 justify-center">
@@ -267,7 +267,7 @@ export default function FlashcardStudyPage() {
               </button>
               <Link
                 href="/flashcards"
-                className="px-4 py-2 rounded-lg bg-white border border-green-600 text-green-600 font-semibold hover:bg-green-50"
+                className="px-4 py-2 rounded-lg bg-white border border-green-600 text-green-900 font-semibold hover:bg-green-50"
               >
                 Choose Another Topic
               </Link>

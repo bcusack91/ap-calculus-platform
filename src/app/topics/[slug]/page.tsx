@@ -94,7 +94,16 @@ export default async function TopicPage(props: TopicPageProps) {
   const topic = await prisma.topic.findUnique({
     where: { slug: params.slug },
     include: {
-      category: true,
+      category: {
+        include: {
+          course: {
+            select: {
+              name: true,
+              slug: true,
+            }
+          }
+        }
+      },
       exampleProblems: {
         orderBy: { order: 'asc' }
       }
@@ -335,8 +344,11 @@ export default async function TopicPage(props: TopicPageProps) {
                   <span>🎯</span> Quick Navigation
                 </h3>
                 <div className="space-y-2 text-sm">
-                  <Link href="/topics" className="block text-purple-700 hover:text-purple-900 hover:underline">
-                    ← All Topics
+                  <Link href="/" className="block text-purple-700 hover:text-purple-900 hover:underline">
+                    ← All Courses
+                  </Link>
+                  <Link href={`/courses/${topic.category.course.slug}`} className="block text-purple-700 hover:text-purple-900 hover:underline">
+                    📚 {topic.category.course.name}
                   </Link>
                   <Link href={`/categories/${topic.category.slug}`} className="block text-purple-700 hover:text-purple-900 hover:underline">
                     📂 {topic.category.name}
