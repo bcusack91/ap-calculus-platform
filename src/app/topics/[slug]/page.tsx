@@ -8,6 +8,7 @@ import remarkMath from 'remark-math'
 import 'katex/dist/katex.min.css'
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import ContentWithAnimations from '@/components/ContentWithAnimations'
 
 // Force dynamic rendering
 export const dynamic = 'force-dynamic'
@@ -216,13 +217,21 @@ export default async function TopicPage(props: TopicPageProps) {
             {/* Main Content with styled boxes */}
             <div className="bg-white rounded-lg shadow-md p-8 mb-8 border border-gray-200">
               <div className="prose prose-lg max-w-none">
-                <ReactMarkdown
-                  remarkPlugins={[remarkMath]}
-                  rehypePlugins={[rehypeKatex]}
-                  components={MarkdownComponents}
-                >
-                  {topic.textContent}
-                </ReactMarkdown>
+                {/* Check if content includes animation markers */}
+                {topic.textContent.includes('<MultiplicationAnimation') || topic.textContent.includes('<TwoDigitMultiplicationAnimation') ? (
+                  <ContentWithAnimations 
+                    content={topic.textContent}
+                    MarkdownComponents={MarkdownComponents}
+                  />
+                ) : (
+                  <ReactMarkdown
+                    remarkPlugins={[remarkMath]}
+                    rehypePlugins={[rehypeKatex]}
+                    components={MarkdownComponents}
+                  >
+                    {topic.textContent}
+                  </ReactMarkdown>
+                )}
               </div>
             </div>
 
