@@ -57,7 +57,7 @@ export default function TopicContentRenderer({ content }: TopicContentRendererPr
   const parts: any[] = []
   let key = 0
   
-  // Split by all component markers
+  // Split content by component markers to extract them
   const segments = content.split(/(<(?:MultiplicationAnimation|TwoDigitMultiplicationAnimation|UnitCircleTable)[^>]*\/?>)/)
   
   segments.forEach((segment) => {
