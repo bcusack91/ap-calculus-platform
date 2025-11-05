@@ -22,6 +22,23 @@ const nextConfig: NextConfig = {
           },
         ],
       },
+      {
+        source: '/ads.txt',
+        headers: [
+          {
+            key: 'Content-Type',
+            value: 'text/plain; charset=utf-8'
+          },
+        ],
+      },
+    ]
+  },
+  async rewrites() {
+    return [
+      {
+        source: '/ads.txt',
+        destination: '/ads.txt',
+      },
     ]
   },
 };
