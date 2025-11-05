@@ -8,6 +8,7 @@ import remarkMath from 'remark-math'
 // Dynamically import animation components with no SSR
 const MultiplicationAnimation = dynamic(() => import('./MultiplicationAnimation'), { ssr: false })
 const TwoDigitMultiplicationAnimation = dynamic(() => import('./TwoDigitMultiplicationAnimation'), { ssr: false })
+const UnitCircleTable = dynamic(() => import('./UnitCircleTable'), { ssr: false })
 
 // Define markdown components
 const MarkdownComponents = {
@@ -57,11 +58,12 @@ export default function TopicContentRenderer({ content }: TopicContentRendererPr
   let key = 0
   
   // Split by all component markers
-  const segments = content.split(/(<(?:MultiplicationAnimation|TwoDigitMultiplicationAnimation)[^>]*\/>)/)
+  const segments = content.split(/(<(?:MultiplicationAnimation|TwoDigitMultiplicationAnimation|UnitCircleTable)[^>]*\/?>)/)
   
   segments.forEach((segment) => {
     const multiMatch = segment.match(/<MultiplicationAnimation multiplicand="(\d+)" multiplier="(\d+)" result="(\d+)" \/>/)
     const twoDigitMatch = segment.match(/<TwoDigitMultiplicationAnimation multiplicand="(\d+)" multiplier="(\d+)" result="(\d+)" \/>/)
+    const unitCircleMatch = segment.match(/<UnitCircleTable *\/?>/)
     
     if (multiMatch) {
       parts.push(
@@ -80,6 +82,10 @@ export default function TopicContentRenderer({ content }: TopicContentRendererPr
           multiplier={twoDigitMatch[2]} 
           result={twoDigitMatch[3]} 
         />
+      )
+    } else if (unitCircleMatch) {
+      parts.push(
+        <UnitCircleTable key={key++} />
       )
     } else if (segment.trim()) {
       parts.push(
