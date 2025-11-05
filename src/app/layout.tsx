@@ -6,6 +6,7 @@ import { Navbar } from "@/components/navbar";
 import { CookieConsent } from "@/components/cookie-consent";
 import { Analytics } from "@vercel/analytics/next"; // Temporarily disabled for local dev
 import Link from "next/link";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -59,6 +60,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const adsenseClientId = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID
+  const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
 
   return (
     <html lang="en" suppressHydrationWarning>
@@ -72,6 +74,7 @@ export default function RootLayout({
         )}
       </head>
       <body className={`${inter.variable} font-sans antialiased`}>
+        {gaId && <GoogleAnalytics measurementId={gaId} />}
         <Providers>
           <div className="flex min-h-screen flex-col">
             <Navbar />
