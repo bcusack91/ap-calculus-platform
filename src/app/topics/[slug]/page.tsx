@@ -217,8 +217,10 @@ export default async function TopicPage(props: TopicPageProps) {
             {/* Main Content with styled boxes */}
             <div className="bg-white rounded-lg shadow-md p-8 mb-8 border border-gray-200">
               <div className="prose prose-lg max-w-none">
-                {/* Check if content includes animation markers */}
-                {topic.textContent.includes('<MultiplicationAnimation') || topic.textContent.includes('<TwoDigitMultiplicationAnimation') ? (
+                {/* Check if content includes component markers */}
+                {topic.textContent.includes('<MultiplicationAnimation') || 
+                 topic.textContent.includes('<TwoDigitMultiplicationAnimation') ||
+                 topic.textContent.includes('<UnitCircleTable') ? (
                   <TopicContentRenderer content={topic.textContent} />
                 ) : (
                   <ReactMarkdown
