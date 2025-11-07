@@ -5,7 +5,7 @@ export const unitCircleLessonData = {
       id: 'intro',
       type: 'text' as const,
       content: `
-## Welcome to the Interactive Unit Circle Lesson!
+**Welcome to the Interactive Unit Circle Lesson!**
 
 In this interactive lesson, you'll master the unit circle through a simple counting technique that makes memorizing those tricky values super easy!
 
@@ -16,7 +16,7 @@ Click "Next" when you're ready to begin learning the counting method.
       id: 'step1-intro',
       type: 'text' as const,
       content: `
-## Step 1: Count from 0 to 4
+**Step 1: Count from 0 to 4**
 
 The first step is simple: we're going to count from 0 to 4, including both 0 and 4.
 
@@ -27,7 +27,7 @@ These five numbers will become the foundation for remembering all the key sine a
       id: 'step1-practice',
       type: 'input-boxes' as const,
       content: `
-### Now it's your turn!
+**Now it's your turn!**
 
 Fill in the boxes below by counting from 0 to 4:
       `,
@@ -40,7 +40,7 @@ Fill in the boxes below by counting from 0 to 4:
       id: 'step2-intro',
       type: 'text' as const,
       content: `
-## Step 2: Put Each Number Under a Square Root
+**Step 2: Put Each Number Under a Square Root**
 
 Great job! Now we're going to take those numbers (0, 1, 2, 3, 4) and put each one under a square root symbol.
 
@@ -53,7 +53,7 @@ This might seem strange, but trust the process - it's about to make perfect sens
       id: 'step3-intro',
       type: 'text' as const,
       content: `
-## Step 3: Simplify the Perfect Squares
+**Step 3: Simplify the Perfect Squares**
 
 Now we simplify any perfect squares in our list: $\\sqrt{0}, \\sqrt{1}, \\sqrt{2}, \\sqrt{3}, \\sqrt{4}$
 
@@ -70,7 +70,7 @@ Remember: A perfect square is a number whose square root is a whole number.
       id: 'step3-practice',
       type: 'dropdown-select' as const,
       content: `
-### Practice: Simplify the Square Roots
+**Practice: Simplify the Square Roots**
 
 Select the correct simplified form for each square root:
       `,
@@ -104,7 +104,7 @@ Select the correct simplified form for each square root:
       id: 'step4-intro',
       type: 'text' as const,
       content: `
-## Step 4: Divide Everything by 2
+**Step 4: Divide Everything by 2**
 
 Almost there! Now we take our simplified values $(0, 1, \\sqrt{2}, \\sqrt{3}, 2)$ and divide each by 2.
 
@@ -121,7 +121,7 @@ $$0, \\frac{1}{2}, \\frac{\\sqrt{2}}{2}, \\frac{\\sqrt{3}}{2}, 1$$
       id: 'revelation',
       type: 'text' as const,
       content: `
-## 🎉 You Did It!
+**🎉 You Did It!**
 
 > **These are the SINE values for 0°, 30°, 45°, 60°, and 90°!**
 
@@ -152,7 +152,7 @@ $$\\cos(90°) = 0$$
       id: 'completion',
       type: 'text' as const,
       content: `
-## 🌟 Lesson Complete! 🌟
+**🌟 Lesson Complete! 🌟**
 
 Congratulations! You've mastered the counting method for memorizing unit circle values.
 
