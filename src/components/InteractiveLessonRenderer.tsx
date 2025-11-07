@@ -322,9 +322,11 @@ function SineTable() {
                 ) : (
                   <span
                     dangerouslySetInnerHTML={{
-                      __html: typeof window !== 'undefined' && (window as any).katex
-                        ? (window as any).katex.renderToString(row.value, { throwOnError: false })
-                        : row.value
+                      __html: katex.renderToString(row.value, { 
+                        throwOnError: false,
+                        displayMode: false,
+                        output: 'html'
+                      })
                     }}
                   />
                 )}
@@ -372,9 +374,11 @@ function CosineTable() {
                 ) : (
                   <span
                     dangerouslySetInnerHTML={{
-                      __html: typeof window !== 'undefined' && (window as any).katex
-                        ? (window as any).katex.renderToString(row.value, { throwOnError: false })
-                        : row.value
+                      __html: katex.renderToString(row.value, { 
+                        throwOnError: false,
+                        displayMode: false,
+                        output: 'html'
+                      })
                     }}
                   />
                 )}
