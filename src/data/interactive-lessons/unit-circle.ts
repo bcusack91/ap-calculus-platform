@@ -124,14 +124,54 @@ export const unitCircleLessonData = {
         <p class="text-lg mb-4 text-foreground">
           This gives us:
         </p>
-        <div class="text-center text-2xl font-bold my-6 text-foreground">
-          0/2, 1/2, √2/2, √3/2, 2/2
+        <div class="text-center text-2xl font-bold my-6 text-foreground flex gap-4 justify-center items-center">
+          <span class="inline-flex flex-col items-center">
+            <span>0</span>
+            <span class="border-t-2 border-current pt-1">2</span>
+          </span>
+          <span>,</span>
+          <span class="inline-flex flex-col items-center">
+            <span>1</span>
+            <span class="border-t-2 border-current pt-1">2</span>
+          </span>
+          <span>,</span>
+          <span class="inline-flex flex-col items-center">
+            <span>√2</span>
+            <span class="border-t-2 border-current pt-1">2</span>
+          </span>
+          <span>,</span>
+          <span class="inline-flex flex-col items-center">
+            <span>√3</span>
+            <span class="border-t-2 border-current pt-1">2</span>
+          </span>
+          <span>,</span>
+          <span class="inline-flex flex-col items-center">
+            <span>2</span>
+            <span class="border-t-2 border-current pt-1">2</span>
+          </span>
         </div>
         <p class="text-lg mb-4 text-foreground">
           Which simplifies to:
         </p>
-        <div class="text-center text-2xl font-bold my-6 text-green-600 dark:text-green-400">
-          0, 1/2, √2/2, √3/2, 1
+        <div class="text-center text-2xl font-bold my-6 text-green-600 dark:text-green-400 flex gap-4 justify-center items-center">
+          <span>0</span>
+          <span>,</span>
+          <span class="inline-flex flex-col items-center">
+            <span>1</span>
+            <span class="border-t-2 border-current pt-1">2</span>
+          </span>
+          <span>,</span>
+          <span class="inline-flex flex-col items-center">
+            <span>√2</span>
+            <span class="border-t-2 border-current pt-1">2</span>
+          </span>
+          <span>,</span>
+          <span class="inline-flex flex-col items-center">
+            <span>√3</span>
+            <span class="border-t-2 border-current pt-1">2</span>
+          </span>
+          <span>,</span>
+          <span>1</span>
         </div>
       `
     },
@@ -146,9 +186,27 @@ export const unitCircleLessonData = {
           </p>
           <div class="text-center text-2xl font-bold text-green-700 dark:text-green-400 space-y-2">
             <div>sin(0°) = 0</div>
-            <div>sin(30°) = 1/2</div>
-            <div>sin(45°) = √2/2</div>
-            <div>sin(60°) = √3/2</div>
+            <div class="flex items-center justify-center gap-2">
+              <span>sin(30°) =</span>
+              <span class="inline-flex flex-col items-center">
+                <span>1</span>
+                <span class="border-t-2 border-current pt-1">2</span>
+              </span>
+            </div>
+            <div class="flex items-center justify-center gap-2">
+              <span>sin(45°) =</span>
+              <span class="inline-flex flex-col items-center">
+                <span>√2</span>
+                <span class="border-t-2 border-current pt-1">2</span>
+              </span>
+            </div>
+            <div class="flex items-center justify-center gap-2">
+              <span>sin(60°) =</span>
+              <span class="inline-flex flex-col items-center">
+                <span>√3</span>
+                <span class="border-t-2 border-current pt-1">2</span>
+              </span>
+            </div>
             <div>sin(90°) = 1</div>
           </div>
         </div>
@@ -157,9 +215,27 @@ export const unitCircleLessonData = {
         </p>
         <div class="text-center text-xl font-bold text-blue-700 dark:text-blue-400 space-y-2">
           <div>cos(0°) = 1</div>
-          <div>cos(30°) = √3/2</div>
-          <div>cos(45°) = √2/2</div>
-          <div>cos(60°) = 1/2</div>
+          <div class="flex items-center justify-center gap-2">
+            <span>cos(30°) =</span>
+            <span class="inline-flex flex-col items-center">
+              <span>√3</span>
+              <span class="border-t-2 border-current pt-1">2</span>
+            </span>
+          </div>
+          <div class="flex items-center justify-center gap-2">
+            <span>cos(45°) =</span>
+            <span class="inline-flex flex-col items-center">
+              <span>√2</span>
+              <span class="border-t-2 border-current pt-1">2</span>
+            </span>
+          </div>
+          <div class="flex items-center justify-center gap-2">
+            <span>cos(60°) =</span>
+            <span class="inline-flex flex-col items-center">
+              <span>1</span>
+              <span class="border-t-2 border-current pt-1">2</span>
+            </span>
+          </div>
           <div>cos(90°) = 0</div>
         </div>
       `

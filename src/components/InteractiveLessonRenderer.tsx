@@ -30,6 +30,11 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
   const progress = ((completedSections.size) / sections.length) * 100
 
   const handleNext = () => {
+    // Mark current section as complete when moving to next
+    if (!completedSections.has(currentSectionIndex)) {
+      setCompletedSections(prev => new Set([...prev, currentSectionIndex]))
+    }
+    
     if (currentSectionIndex < sections.length - 1) {
       setCurrentSectionIndex(currentSectionIndex + 1)
       window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -203,10 +208,10 @@ function InputBoxExercise({
             disabled={isComplete}
             className={`w-20 h-20 text-3xl text-center border-4 rounded-lg font-bold transition-all ${
               isComplete || (showFeedback && isCorrect)
-                ? 'border-green-500 bg-green-50'
+                ? 'border-green-500 bg-green-50 dark:bg-green-900/30 text-gray-900 dark:text-white'
                 : showFeedback && !isCorrect
-                ? 'border-red-500 bg-red-50'
-                : 'border-purple-300 focus:border-purple-600'
+                ? 'border-red-500 bg-red-50 dark:bg-red-900/30 text-gray-900 dark:text-white'
+                : 'border-purple-300 focus:border-purple-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white'
             }`}
             placeholder="?"
           />
@@ -278,10 +283,10 @@ function DropdownExercise({
               disabled={isComplete}
               className={`px-4 py-2 text-lg border-2 rounded-lg transition-all ${
                 isComplete || (showFeedback && isCorrect)
-                  ? 'border-green-500 bg-green-50'
+                  ? 'border-green-500 bg-green-50 dark:bg-green-900/30 text-gray-900 dark:text-white'
                   : showFeedback && !isCorrect
-                  ? 'border-red-500 bg-red-50'
-                  : 'border-purple-300 focus:border-purple-600'
+                  ? 'border-red-500 bg-red-50 dark:bg-red-900/30 text-gray-900 dark:text-white'
+                  : 'border-purple-300 focus:border-purple-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white'
               }`}
             >
               <option value="">Select...</option>
