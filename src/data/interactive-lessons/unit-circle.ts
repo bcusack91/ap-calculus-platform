@@ -338,22 +338,14 @@ The unit circle values come from two special right triangles that you may alread
       content: `
 **The First Quadrant (0° to 90°)** 🎯
 
-Let's focus on the first quadrant where both x and y coordinates are positive.
+Now it's your turn! Let's see if you can fill in the first quadrant of the unit circle.
 
-Here are our five key points:
+[UNIT_CIRCLE_GAME]
 
-| Angle | Point (x, y) | cos(θ) | sin(θ) |
-|-------|--------------|--------|--------|
-| **0°** | (1, 0) | 1 | 0 |
-| **30°** | $(\\frac{\\sqrt{3}}{2}, \\frac{1}{2})$ | $\\frac{\\sqrt{3}}{2}$ | $\\frac{1}{2}$ |
-| **45°** | $(\\frac{\\sqrt{2}}{2}, \\frac{\\sqrt{2}}{2})$ | $\\frac{\\sqrt{2}}{2}$ | $\\frac{\\sqrt{2}}{2}$ |
-| **60°** | $(\\frac{1}{2}, \\frac{\\sqrt{3}}{2})$ | $\\frac{1}{2}$ | $\\frac{\\sqrt{3}}{2}$ |
-| **90°** | (0, 1) | 0 | 1 |
-
-Notice the pattern:
-- **At 0°:** You're on the positive x-axis → cos = 1, sin = 0
-- **At 90°:** You're on the positive y-axis → cos = 0, sin = 1
-- **At 45°:** You're exactly in between → cos and sin are equal!
+Fill in all the angles and coordinates to complete the game. Remember:
+- **Angles:** 0°, 30°, 45°, 60°, 90°
+- **Key coordinates:** (1, 0), (0, 1), and the three special triangle points
+- **Tip:** Use the patterns from 30-60-90 and 45-45-90 triangles!
       `
     },
     {

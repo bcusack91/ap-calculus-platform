@@ -6,6 +6,7 @@ import ReactMarkdown from 'react-markdown'
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
 import { useSearchParams, useRouter } from 'next/navigation'
+import katex from 'katex'
 
 interface Section {
   id: string
@@ -498,6 +499,326 @@ function UnitCircleAnimation() {
   )
 }
 
+// Interactive Unit Circle Game Component
+function UnitCircleGame() {
+  const [answers, setAnswers] = useState<Record<string, string>>({
+    angle0: '',
+    angle30: '',
+    angle45: '',
+    angle60: '',
+    angle90: '',
+    x0: '',
+    y0: '',
+    x30: '',
+    y30: '',
+    x45: '',
+    y45: '',
+    x60: '',
+    y60: '',
+    x90: '',
+    y90: '',
+  })
+
+  const [checked, setChecked] = useState<Record<string, boolean | null>>({})
+  const [allCorrect, setAllCorrect] = useState(false)
+
+  const correctAnswers: Record<string, string[]> = {
+    angle0: ['0'],
+    angle30: ['30'],
+    angle45: ['45'],
+    angle60: ['60'],
+    angle90: ['90'],
+    x0: ['1'],
+    y0: ['0'],
+    x30: ['√3/2', 'sqrt3/2', 'sqrt(3)/2'],
+    y30: ['1/2'],
+    x45: ['√2/2', 'sqrt2/2', 'sqrt(2)/2'],
+    y45: ['√2/2', 'sqrt2/2', 'sqrt(2)/2'],
+    x60: ['1/2'],
+    y60: ['√3/2', 'sqrt3/2', 'sqrt(3)/2'],
+    x90: ['0'],
+    y90: ['1'],
+  }
+
+  const handleInputChange = (key: string, value: string) => {
+    setAnswers({ ...answers, [key]: value })
+    // Reset check status when user changes input
+    if (checked[key] !== undefined) {
+      setChecked({ ...checked, [key]: null })
+    }
+  }
+
+  const handleBlur = (key: string) => {
+    const userAnswer = answers[key].trim().toLowerCase().replace(/\s+/g, '')
+    if (userAnswer === '') {
+      setChecked({ ...checked, [key]: null })
+      return
+    }
+
+    const isCorrect = correctAnswers[key].some(correct => 
+      userAnswer === correct.toLowerCase().replace(/\s+/g, '')
+    )
+    
+    setChecked({ ...checked, [key]: isCorrect })
+
+    // Check if all answers are correct
+    const allKeys = Object.keys(correctAnswers)
+    const allAnswered = allKeys.every(k => answers[k].trim() !== '')
+    if (allAnswered) {
+      const allRight = allKeys.every(k => {
+        const uAnswer = answers[k].trim().toLowerCase().replace(/\s+/g, '')
+        return correctAnswers[k].some(correct => 
+          uAnswer === correct.toLowerCase().replace(/\s+/g, '')
+        )
+      })
+      setAllCorrect(allRight)
+    }
+  }
+
+  const getInputClassName = (key: string) => {
+    const baseClasses = "w-full px-2 py-1 border-2 rounded text-center text-sm font-medium focus:outline-none focus:ring-2 focus:ring-indigo-400"
+    if (checked[key] === true) {
+      return `${baseClasses} border-green-500 bg-green-50 dark:bg-green-900 text-gray-900 dark:text-white`
+    } else if (checked[key] === false) {
+      return `${baseClasses} border-red-500 bg-red-50 dark:bg-red-900 text-gray-900 dark:text-white`
+    }
+    return `${baseClasses} border-gray-300 bg-white dark:bg-gray-700 dark:border-gray-600 dark:text-white`
+  }
+
+  // Format display value to show √ instead of sqrt
+  const formatDisplayValue = (value: string) => {
+    if (!value || value.trim() === '') return value
+    
+    // Convert common patterns to LaTeX
+    let latex = value
+      .replace(/sqrt\((\d+)\)\/(\d+)/gi, '\\frac{\\sqrt{$1}}{$2}')
+      .replace(/sqrt(\d+)\/(\d+)/gi, '\\frac{\\sqrt{$1}}{$2}')
+      .replace(/sqrt\((\d+)\)/gi, '\\sqrt{$1}')
+      .replace(/sqrt(\d+)/gi, '\\sqrt{$1}')
+    
+    // Check if we need to apply fraction formatting (only if not already in a fraction)
+    if (!latex.includes('\\frac') && latex.match(/(\d+)\/(\d+)/)) {
+      latex = latex.replace(/(\d+)\/(\d+)/g, '\\frac{$1}{$2}')
+    }
+    
+    // If it contains LaTeX commands, render with KaTeX
+    if (latex.includes('\\')) {
+      try {
+        const html = katex.renderToString(latex, {
+          throwOnError: false,
+          displayMode: false,
+          output: 'html',
+          strict: false
+        })
+        return html
+      } catch (e) {
+        console.error('KaTeX rendering error:', e)
+        // Fallback to simple replacement
+        return value
+          .replace(/sqrt\((\d+)\)/gi, '√$1')
+          .replace(/sqrt(\d+)/gi, '√$1')
+      }
+    }
+    
+    return value
+  }
+
+  // Render input with formatted display
+  const renderInput = (key: string, placeholder: string, width: string) => {
+    const displayValue = formatDisplayValue(answers[key])
+    const hasLatex = displayValue && displayValue.includes('katex')
+    
+    return (
+      <div style={{ width, height: '32px', position: 'relative' }}>
+        <input
+          type="text"
+          value={answers[key]}
+          onChange={(e) => handleInputChange(key, e.target.value)}
+          onBlur={() => handleBlur(key)}
+          placeholder={placeholder}
+          className={getInputClassName(key)}
+          style={{ 
+            fontSize: '14px',
+            opacity: answers[key] ? 0 : 1,
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%'
+          }}
+        />
+        {answers[key] && (
+          <div 
+            className={getInputClassName(key)}
+            style={{ 
+              fontSize: hasLatex ? '16px' : '14px',
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              pointerEvents: 'none',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              height: '100%',
+              width: '100%',
+              overflow: 'hidden'
+            }}
+          >
+            {hasLatex ? (
+              <span dangerouslySetInnerHTML={{ __html: displayValue }} />
+            ) : (
+              displayValue
+            )}
+          </div>
+        )}
+      </div>
+    )
+  }
+
+  return (
+    <div className="my-8 flex justify-center">
+      <div className="bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-gray-800 dark:to-gray-900 rounded-xl shadow-2xl p-8 border-2 border-indigo-300 dark:border-indigo-700 max-w-5xl w-full">
+        <h3 className="text-2xl font-bold text-center mb-4 text-indigo-900 dark:text-indigo-200">
+          🎮 Fill in the First Quadrant!
+        </h3>
+        
+        {allCorrect && (
+          <div className="mb-4 p-4 bg-green-100 dark:bg-green-900 border-2 border-green-500 rounded-lg text-center animate-bounce">
+            <p className="text-xl font-bold text-green-800 dark:text-green-200">🎉 Perfect! You've mastered the first quadrant!</p>
+          </div>
+        )}
+
+        <div className="mb-4 p-3 bg-blue-50 dark:bg-blue-900 rounded-lg">
+          <p className="text-sm text-blue-800 dark:text-blue-200 text-center">
+            <strong>💡 Instructions:</strong> Fill in the angles and x, y coordinates. Use √ or sqrt for square roots (e.g., √2/2 or sqrt(2)/2).
+          </p>
+        </div>
+
+        <div className="relative w-full mx-auto" style={{ maxWidth: '900px' }}>
+          <svg width="100%" height="700" viewBox="0 0 900 700" className="bg-white rounded-lg shadow-inner">
+            {/* Grid */}
+            <g stroke="#e2e8f0" strokeWidth="1">
+              <line x1="0" y1="350" x2="900" y2="350"/>
+              <line x1="450" y1="0" x2="450" y2="700"/>
+              <circle cx="450" cy="350" r="280" fill="none" stroke="#cbd5e1" strokeDasharray="5,5"/>
+            </g>
+            
+            {/* Axes */}
+            <line x1="50" y1="350" x2="850" y2="350" stroke="#64748b" strokeWidth="3"/>
+            <line x1="450" y1="650" x2="450" y2="50" stroke="#64748b" strokeWidth="3"/>
+            
+            {/* Axis labels */}
+            <text x="820" y="340" fontSize="24" fill="#64748b" fontWeight="bold">x</text>
+            <text x="460" y="80" fontSize="24" fill="#64748b" fontWeight="bold">y</text>
+            
+            {/* Unit circle */}
+            <circle cx="450" cy="350" r="280" fill="none" stroke="#8b5cf6" strokeWidth="5"/>
+            
+            {/* Origin */}
+            <circle cx="450" cy="350" r="6" fill="#64748b"/>
+            <text x="460" y="370" fontSize="16" fill="#64748b">(0, 0)</text>
+            
+            {/* Angle points - positioned exactly on the circle perimeter */}
+            {/* 0° at (450 + 280, 350) = (730, 350) */}
+            <circle cx="730" cy="350" r="10" fill="#10b981"/>
+            
+            {/* 30° at angle 60° from horizontal (cos(60°), sin(60°)) */}
+            {/* x = 450 + 280*cos(60°) = 450 + 280*0.5 = 590 */}
+            {/* y = 350 - 280*sin(60°) = 350 - 280*0.866 = 107.5 */}
+            <circle cx="590" cy="107.5" r="10" fill="#10b981"/>
+            
+            {/* 45° at (cos(45°), sin(45°)) */}
+            {/* x = 450 + 280*cos(45°) = 450 + 280*0.707 = 648 */}
+            {/* y = 350 - 280*sin(45°) = 350 - 280*0.707 = 152 */}
+            <circle cx="648" cy="152" r="10" fill="#10b981"/>
+            
+            {/* 60° at angle 30° from horizontal (cos(30°), sin(30°)) */}
+            {/* x = 450 + 280*cos(30°) = 450 + 280*0.866 = 692.5 */}
+            {/* y = 350 - 280*sin(30°) = 350 - 280*0.5 = 210 */}
+            <circle cx="692.5" cy="210" r="10" fill="#10b981"/>
+            
+            {/* 90° at (450, 350 - 280) = (450, 70) */}
+            <circle cx="450" cy="70" r="10" fill="#10b981"/>
+            
+            {/* 0° - angle and coordinates */}
+            <foreignObject x="660" y="380" width="70" height="32">
+              {renderInput('angle0', 'angle', '70px')}
+            </foreignObject>
+            <text x="755" y="340" fontSize="14" fill="#666" fontWeight="bold">(</text>
+            <foreignObject x="765" y="320" width="50" height="32">
+              {renderInput('x0', 'x', '50px')}
+            </foreignObject>
+            <text x="818" y="340" fontSize="14" fill="#666" fontWeight="bold">,</text>
+            <foreignObject x="825" y="320" width="50" height="32">
+              {renderInput('y0', 'y', '50px')}
+            </foreignObject>
+            <text x="878" y="340" fontSize="14" fill="#666" fontWeight="bold">)</text>
+
+            {/* 30° - angle and coordinates */}
+            <foreignObject x="610" y="235" width="70" height="32">
+              {renderInput('angle30', 'angle', '70px')}
+            </foreignObject>
+            <text x="715" y="205" fontSize="14" fill="#666" fontWeight="bold">(</text>
+            <foreignObject x="725" y="185" width="70" height="32">
+              {renderInput('x30', 'x', '70px')}
+            </foreignObject>
+            <text x="798" y="205" fontSize="14" fill="#666" fontWeight="bold">,</text>
+            <foreignObject x="805" y="185" width="50" height="32">
+              {renderInput('y30', 'y', '50px')}
+            </foreignObject>
+            <text x="858" y="205" fontSize="14" fill="#666" fontWeight="bold">)</text>
+
+            {/* 45° - angle and coordinates */}
+            <foreignObject x="565" y="165" width="70" height="32">
+              {renderInput('angle45', 'angle', '70px')}
+            </foreignObject>
+            <text x="675" y="145" fontSize="14" fill="#666" fontWeight="bold">(</text>
+            <foreignObject x="685" y="125" width="70" height="32">
+              {renderInput('x45', 'x', '70px')}
+            </foreignObject>
+            <text x="758" y="145" fontSize="14" fill="#666" fontWeight="bold">,</text>
+            <foreignObject x="765" y="125" width="70" height="32">
+              {renderInput('y45', 'y', '70px')}
+            </foreignObject>
+            <text x="838" y="145" fontSize="14" fill="#666" fontWeight="bold">)</text>
+
+            {/* 60° - angle and coordinates */}
+            <foreignObject x="510" y="118" width="70" height="32">
+              {renderInput('angle60', 'angle', '70px')}
+            </foreignObject>
+            <text x="610" y="88" fontSize="14" fill="#666" fontWeight="bold">(</text>
+            <foreignObject x="620" y="68" width="50" height="32">
+              {renderInput('x60', 'x', '50px')}
+            </foreignObject>
+            <text x="673" y="88" fontSize="14" fill="#666" fontWeight="bold">,</text>
+            <foreignObject x="680" y="68" width="70" height="32">
+              {renderInput('y60', 'y', '70px')}
+            </foreignObject>
+            <text x="753" y="88" fontSize="14" fill="#666" fontWeight="bold">)</text>
+
+            {/* 90° - angle and coordinates */}
+            <foreignObject x="365" y="95" width="70" height="32">
+              {renderInput('angle90', 'angle', '70px')}
+            </foreignObject>
+            <text x="310" y="50" fontSize="14" fill="#666" fontWeight="bold">(</text>
+            <foreignObject x="320" y="30" width="50" height="32">
+              {renderInput('x90', 'x', '50px')}
+            </foreignObject>
+            <text x="373" y="50" fontSize="14" fill="#666" fontWeight="bold">,</text>
+            <foreignObject x="380" y="30" width="50" height="32">
+              {renderInput('y90', 'y', '50px')}
+            </foreignObject>
+            <text x="433" y="50" fontSize="14" fill="#666" fontWeight="bold">)</text>
+          </svg>
+        </div>
+
+        <div className="mt-4 text-center text-sm text-gray-600 dark:text-gray-400">
+          <p>Boxes turn <span className="text-green-600 font-bold">green ✓</span> when correct, <span className="text-red-600 font-bold">red ✗</span> when incorrect</p>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 // Fade-in Text Component with LaTeX support
 function FadeInText({ content }: { content: string }) {
   const hasLatex = content.includes('$')
@@ -505,10 +826,11 @@ function FadeInText({ content }: { content: string }) {
   const hasCosineTable = content.includes('[COSINE_TABLE]')
   const hasUnitCircle = content.includes('[UNIT_CIRCLE]')
   const hasUnitCircleAnimation = content.includes('[UNIT_CIRCLE_ANIMATION]')
+  const hasUnitCircleGame = content.includes('[UNIT_CIRCLE_GAME]')
   
-  // If content has tables, unit circle, or animation, split and render
-  if (hasSineTable || hasCosineTable || hasUnitCircle || hasUnitCircleAnimation) {
-    const parts = content.split(/(\[SINE_TABLE\]|\[COSINE_TABLE\]|\[UNIT_CIRCLE\]|\[UNIT_CIRCLE_ANIMATION\])/)
+  // If content has tables, unit circle, animation, or game, split and render
+  if (hasSineTable || hasCosineTable || hasUnitCircle || hasUnitCircleAnimation || hasUnitCircleGame) {
+    const parts = content.split(/(\[SINE_TABLE\]|\[COSINE_TABLE\]|\[UNIT_CIRCLE\]|\[UNIT_CIRCLE_ANIMATION\]|\[UNIT_CIRCLE_GAME\])/)
     
     return (
       <div className="animate-fade-in prose prose-lg max-w-none">
@@ -521,6 +843,8 @@ function FadeInText({ content }: { content: string }) {
             return <UnitCircleDiagram key={index} />
           } else if (part === '[UNIT_CIRCLE_ANIMATION]') {
             return <UnitCircleAnimation key={index} />
+          } else if (part === '[UNIT_CIRCLE_GAME]') {
+            return <UnitCircleGame key={index} />
           } else if (part.trim()) {
             return (
               <ReactMarkdown
