@@ -1,10 +1,11 @@
 'use client'
 
 import { useState, useRef, useEffect } from 'react'
-import { unitCircleLessonData, unitCircleAnglesLessonData } from '@/data/interactive-lessons/unit-circle'
+import { unitCircleLessonData, unitCircleAnglesLessonData, unitCircleConceptLessonData } from '@/data/interactive-lessons/unit-circle'
 import ReactMarkdown from 'react-markdown'
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
+import { useSearchParams, useRouter } from 'next/navigation'
 
 interface Section {
   id: string
@@ -18,14 +19,32 @@ interface InteractiveLessonRendererProps {
 }
 
 export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLessonRendererProps) {
-  const [lessonPart, setLessonPart] = useState<1 | 2>(1) // Track which part of the lesson
+  const searchParams = useSearchParams()
+  const router = useRouter()
+  
+  // Get initial part from URL parameter (e.g., ?part=2)
+  const urlPart = searchParams.get('part')
+  const initialPart = urlPart ? parseInt(urlPart) as 1 | 2 | 3 : 1
+  
+  const [lessonPart, setLessonPart] = useState<1 | 2 | 3>(initialPart)
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0)
   const [completedSections, setCompletedSections] = useState<Set<number>>(new Set())
   const [showPracticeMode, setShowPracticeMode] = useState(false)
 
+  // Update URL when lesson part changes
+  const updateLessonPart = (newPart: 1 | 2 | 3) => {
+    setLessonPart(newPart)
+    setCurrentSectionIndex(0)
+    setCompletedSections(new Set())
+    // Update URL without page reload
+    const url = new URL(window.location.href)
+    url.searchParams.set('part', newPart.toString())
+    window.history.pushState({}, '', url.toString())
+  }
+
   // Get lesson data based on topic and part
   const lessonData = topicSlug === 'the-unit-circle' 
-    ? (lessonPart === 1 ? unitCircleLessonData : unitCircleAnglesLessonData)
+    ? (lessonPart === 1 ? unitCircleLessonData : lessonPart === 2 ? unitCircleAnglesLessonData : unitCircleConceptLessonData)
     : null
 
   if (!lessonData) {
@@ -41,7 +60,7 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
           onBack={() => setShowPracticeMode(false)} 
           onComplete={() => {
             setShowPracticeMode(false)
-            // Could add more logic here for what happens after Part 2 practice
+            updateLessonPart(3) // Move to part 3 after completing Part 2 practice
           }}
         />
       )
@@ -53,9 +72,7 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
         onBack={() => setShowPracticeMode(false)} 
         onComplete={() => {
           setShowPracticeMode(false)
-          setLessonPart(2) // Move to part 2 after completing practice
-          setCurrentSectionIndex(0)
-          setCompletedSections(new Set())
+          updateLessonPart(2) // Move to part 2 after completing practice
         }}
       />
     )
@@ -102,14 +119,51 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
 
   return (
     <div className="space-y-6">
-      {/* Part Indicator */}
-      {lessonPart === 2 && (
-        <div className="text-center">
-          <span className="inline-flex items-center px-4 py-2 text-sm font-semibold rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-900 dark:text-purple-200">
-            📚 Part 2: Angles & Patterns
-          </span>
+      {/* Part Navigation Menu - for development convenience */}
+      <div className="bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-indigo-950/50 dark:to-purple-950/50 rounded-lg p-4 border-2 border-indigo-200 dark:border-indigo-800">
+        <div className="flex items-center justify-between flex-wrap gap-4">
+          <div className="flex items-center gap-2">
+            <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">Jump to:</span>
+            <div className="flex gap-2">
+              <button
+                onClick={() => updateLessonPart(1)}
+                className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
+                  lessonPart === 1
+                    ? 'bg-purple-600 text-white shadow-lg'
+                    : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30'
+                }`}
+              >
+                Part 1: Counting Method
+              </button>
+              <button
+                onClick={() => updateLessonPart(2)}
+                className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
+                  lessonPart === 2
+                    ? 'bg-purple-600 text-white shadow-lg'
+                    : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30'
+                }`}
+              >
+                Part 2: Angles & Tables
+              </button>
+              <button
+                onClick={() => updateLessonPart(3)}
+                className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
+                  lessonPart === 3
+                    ? 'bg-purple-600 text-white shadow-lg'
+                    : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30'
+                }`}
+              >
+                Part 3: What Is the Unit Circle?
+              </button>
+            </div>
+          </div>
+          <div className="text-xs text-gray-600 dark:text-gray-400">
+            Currently viewing: <span className="font-bold text-purple-700 dark:text-purple-400">
+              Part {lessonPart}
+            </span>
+          </div>
         </div>
-      )}
+      </div>
       
       {/* Progress Bar */}
       <div className="bg-gray-200 rounded-full h-3 overflow-hidden">
@@ -332,15 +386,129 @@ function CosineTable() {
   )
 }
 
+// Unit Circle Diagram Component
+function UnitCircleDiagram() {
+  return (
+    <div className="my-8 flex justify-center">
+      <div className="bg-white dark:bg-gray-800 rounded-xl shadow-2xl p-8 border-2 border-purple-200 dark:border-purple-700">
+        <svg width="500" height="500" viewBox="-260 -260 520 520" className="max-w-full h-auto">
+          {/* Grid lines */}
+          <g stroke="#e5e7eb" strokeWidth="1" opacity="0.3">
+            {[-200, -150, -100, -50, 50, 100, 150, 200].map(pos => (
+              <g key={pos}>
+                <line x1={pos} y1="-250" x2={pos} y2="250" />
+                <line x1="-250" y1={pos} x2="250" y2={pos} />
+              </g>
+            ))}
+          </g>
+          
+          {/* Axes */}
+          <line x1="-250" y1="0" x2="250" y2="0" stroke="#6b7280" strokeWidth="2" markerEnd="url(#arrowhead-x)" />
+          <line x1="0" y1="250" x2="0" y2="-250" stroke="#6b7280" strokeWidth="2" markerEnd="url(#arrowhead-y)" />
+          
+          {/* Arrow markers */}
+          <defs>
+            <marker id="arrowhead-x" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+              <polygon points="0 0, 10 3, 0 6" fill="#6b7280" />
+            </marker>
+            <marker id="arrowhead-y" markerWidth="10" markerHeight="10" refX="3" refY="1" orient="auto">
+              <polygon points="0 0, 6 10, 3 0" fill="#6b7280" />
+            </marker>
+          </defs>
+          
+          {/* Axis labels */}
+          <text x="230" y="-10" fill="#6b7280" fontSize="18" fontWeight="bold">x</text>
+          <text x="10" y="-230" fill="#6b7280" fontSize="18" fontWeight="bold">y</text>
+          
+          {/* The Unit Circle */}
+          <circle cx="0" cy="0" r="200" fill="none" stroke="#8b5cf6" strokeWidth="4" />
+          
+          {/* Radius = 1 label */}
+          <line x1="0" y1="0" x2="141" y2="-141" stroke="#ec4899" strokeWidth="2" strokeDasharray="5,5" />
+          <text x="75" y="-80" fill="#ec4899" fontSize="16" fontWeight="bold">r = 1</text>
+          
+          {/* Origin point */}
+          <circle cx="0" cy="0" r="5" fill="#6b7280" />
+          <text x="10" y="20" fill="#6b7280" fontSize="14">(0, 0)</text>
+          
+          {/* Key points on the circle (First Quadrant) */}
+          {/* 0° - (1, 0) */}
+          <circle cx="200" cy="0" r="6" fill="#10b981" />
+          <text x="210" y="5" fill="#10b981" fontSize="14" fontWeight="bold">(1, 0)</text>
+          <text x="210" y="20" fill="#10b981" fontSize="12">0°</text>
+          
+          {/* 30° */}
+          <circle cx="173" cy="-100" r="6" fill="#10b981" />
+          <text x="180" y="-95" fill="#10b981" fontSize="12" fontWeight="bold">30°</text>
+          
+          {/* 45° */}
+          <circle cx="141" cy="-141" r="6" fill="#10b981" />
+          <text x="150" y="-145" fill="#10b981" fontSize="12" fontWeight="bold">45°</text>
+          
+          {/* 60° */}
+          <circle cx="100" cy="-173" r="6" fill="#10b981" />
+          <text x="105" y="-175" fill="#10b981" fontSize="12" fontWeight="bold">60°</text>
+          
+          {/* 90° - (0, 1) */}
+          <circle cx="0" cy="-200" r="6" fill="#10b981" />
+          <text x="10" y="-195" fill="#10b981" fontSize="14" fontWeight="bold">(0, 1)</text>
+          <text x="10" y="-180" fill="#10b981" fontSize="12">90°</text>
+          
+          {/* Quadrant labels */}
+          <text x="120" y="-120" fill="#8b5cf6" fontSize="20" fontWeight="bold" opacity="0.5">Q1</text>
+          <text x="-140" y="-120" fill="#8b5cf6" fontSize="20" fontWeight="bold" opacity="0.3">Q2</text>
+          <text x="-140" y="140" fill="#8b5cf6" fontSize="20" fontWeight="bold" opacity="0.3">Q3</text>
+          <text x="120" y="140" fill="#8b5cf6" fontSize="20" fontWeight="bold" opacity="0.3">Q4</text>
+          
+          {/* Scale markers */}
+          <text x="195" y="20" fill="#6b7280" fontSize="12">1</text>
+          <text x="-215" y="20" fill="#6b7280" fontSize="12">-1</text>
+          <text x="10" y="-195" fill="#6b7280" fontSize="12">1</text>
+          <text x="10" y="210" fill="#6b7280" fontSize="12">-1</text>
+        </svg>
+        
+        <div className="mt-4 text-center text-sm text-gray-600 dark:text-gray-400">
+          <p className="font-semibold">The Unit Circle: A circle with radius = 1 centered at the origin</p>
+          <p className="mt-2">First quadrant (Q1) highlighted with key angles: 0°, 30°, 45°, 60°, 90°</p>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+// Unit Circle Animation Component
+function UnitCircleAnimation() {
+  return (
+    <div className="my-8 flex justify-center">
+      <div className="bg-white dark:bg-gray-800 rounded-xl shadow-2xl p-6 border-2 border-indigo-200 dark:border-indigo-700">
+        <div className="relative w-full max-w-2xl mx-auto">
+          {/* Use iframe to embed the HTML animation */}
+          <iframe
+            src="/animations/unit-circle-animation.html"
+            className="w-full h-[800px] rounded-lg border-0"
+            title="Animated visualization of the unit circle showing the first quadrant with angles and coordinates"
+          />
+        </div>
+        <div className="mt-4 text-center text-sm text-gray-600 dark:text-gray-400">
+          <p className="font-semibold">Interactive Animation: Building the Unit Circle</p>
+          <p className="mt-2">Watch how the angles and coordinate values populate in the first quadrant</p>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 // Fade-in Text Component with LaTeX support
 function FadeInText({ content }: { content: string }) {
   const hasLatex = content.includes('$')
   const hasSineTable = content.includes('[SINE_TABLE]')
   const hasCosineTable = content.includes('[COSINE_TABLE]')
+  const hasUnitCircle = content.includes('[UNIT_CIRCLE]')
+  const hasUnitCircleAnimation = content.includes('[UNIT_CIRCLE_ANIMATION]')
   
-  // If content has tables, split and render
-  if (hasSineTable || hasCosineTable) {
-    const parts = content.split(/(\[SINE_TABLE\]|\[COSINE_TABLE\])/)
+  // If content has tables, unit circle, or animation, split and render
+  if (hasSineTable || hasCosineTable || hasUnitCircle || hasUnitCircleAnimation) {
+    const parts = content.split(/(\[SINE_TABLE\]|\[COSINE_TABLE\]|\[UNIT_CIRCLE\]|\[UNIT_CIRCLE_ANIMATION\])/)
     
     return (
       <div className="animate-fade-in prose prose-lg max-w-none">
@@ -349,6 +517,10 @@ function FadeInText({ content }: { content: string }) {
             return <SineTable key={index} />
           } else if (part === '[COSINE_TABLE]') {
             return <CosineTable key={index} />
+          } else if (part === '[UNIT_CIRCLE]') {
+            return <UnitCircleDiagram key={index} />
+          } else if (part === '[UNIT_CIRCLE_ANIMATION]') {
+            return <UnitCircleAnimation key={index} />
           } else if (part.trim()) {
             return (
               <ReactMarkdown
