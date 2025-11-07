@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react'
 import { unitCircleLessonData, unitCircleAnglesLessonData, unitCircleConceptLessonData } from '@/data/interactive-lessons/unit-circle'
+import { fullUnitCircleLessonData } from '@/data/interactive-lessons/full-unit-circle'
 import ReactMarkdown from 'react-markdown'
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
@@ -25,15 +26,15 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
   
   // Get initial part from URL parameter (e.g., ?part=2)
   const urlPart = searchParams.get('part')
-  const initialPart = urlPart ? parseInt(urlPart) as 1 | 2 | 3 : 1
+  const initialPart = urlPart ? parseInt(urlPart) as 1 | 2 | 3 | 4 : 1
   
-  const [lessonPart, setLessonPart] = useState<1 | 2 | 3>(initialPart)
+  const [lessonPart, setLessonPart] = useState<1 | 2 | 3 | 4>(initialPart)
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0)
   const [completedSections, setCompletedSections] = useState<Set<number>>(new Set())
   const [showPracticeMode, setShowPracticeMode] = useState(false)
 
   // Update URL when lesson part changes
-  const updateLessonPart = (newPart: 1 | 2 | 3) => {
+  const updateLessonPart = (newPart: 1 | 2 | 3 | 4) => {
     setLessonPart(newPart)
     setCurrentSectionIndex(0)
     setCompletedSections(new Set())
@@ -45,7 +46,10 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
 
   // Get lesson data based on topic and part
   const lessonData = topicSlug === 'the-unit-circle' 
-    ? (lessonPart === 1 ? unitCircleLessonData : lessonPart === 2 ? unitCircleAnglesLessonData : unitCircleConceptLessonData)
+    ? (lessonPart === 1 ? unitCircleLessonData : 
+       lessonPart === 2 ? unitCircleAnglesLessonData : 
+       lessonPart === 3 ? unitCircleConceptLessonData :
+       fullUnitCircleLessonData)
     : null
 
   if (!lessonData) {
@@ -68,15 +72,20 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
     }
     
     // Part 1 practice mode (counting method)
-    return (
-      <IndependentPracticeMode 
-        onBack={() => setShowPracticeMode(false)} 
-        onComplete={() => {
-          setShowPracticeMode(false)
-          updateLessonPart(2) // Move to part 2 after completing practice
-        }}
-      />
-    )
+    if (lessonPart === 1) {
+      return (
+        <IndependentPracticeMode 
+          onBack={() => setShowPracticeMode(false)} 
+          onComplete={() => {
+            setShowPracticeMode(false)
+            updateLessonPart(2) // Move to part 2 after completing practice
+          }}
+        />
+      )
+    }
+    
+    // Parts 3 and 4 don't have practice modes yet
+    setShowPracticeMode(false)
   }
 
   const { sections } = lessonData
@@ -113,7 +122,10 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
   
   // Check if current section requires completion before proceeding
   const currentSectionRequiresCompletion = 
-    currentSection.type === 'input-boxes' || currentSection.type === 'dropdown-select'
+    currentSection.type === 'input-boxes' || 
+    currentSection.type === 'dropdown-select' ||
+    (currentSection.type === 'text' && currentSection.content.includes('[UNIT_CIRCLE_GAME]')) ||
+    (currentSection.type === 'text' && currentSection.content.includes('[FULL_UNIT_CIRCLE_GAME]'))
   
   // Disable Next button if it's an exercise that hasn't been completed
   const canProceedToNext = !currentSectionRequiresCompletion || isCurrentSectionComplete
@@ -155,6 +167,16 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
                 }`}
               >
                 Part 3: What Is the Unit Circle?
+              </button>
+              <button
+                onClick={() => updateLessonPart(4)}
+                className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
+                  lessonPart === 4
+                    ? 'bg-purple-600 text-white shadow-lg'
+                    : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30'
+                }`}
+              >
+                Part 4: Complete Unit Circle
               </button>
             </div>
           </div>
@@ -249,7 +271,7 @@ function SectionRenderer({
   if (section.type === 'text') {
     return (
       <div className="prose prose-lg max-w-none">
-        <FadeInText content={section.content} />
+        <FadeInText content={section.content} onComplete={onComplete} />
         {isLastSection && onStartPractice && (
           <div className="mt-8 flex flex-col gap-4">
             <button
@@ -504,7 +526,7 @@ function UnitCircleAnimation() {
 }
 
 // Interactive Unit Circle Game Component
-function UnitCircleGame() {
+function UnitCircleGame({ onComplete }: { onComplete?: () => void }) {
   const [answers, setAnswers] = useState<Record<string, string>>({
     angle0: '',
     angle30: '',
@@ -575,7 +597,15 @@ function UnitCircleGame() {
           uAnswer === correct.toLowerCase().replace(/\s+/g, '')
         )
       })
-      setAllCorrect(allRight)
+      if (allRight) {
+        setAllCorrect(true)
+        // Call onComplete when all answers are correct
+        if (onComplete) {
+          onComplete()
+        }
+      } else {
+        setAllCorrect(false)
+      }
     }
   }
 
@@ -823,18 +853,463 @@ function UnitCircleGame() {
   )
 }
 
+// Full Unit Circle Game Component (All 4 Quadrants)
+function FullUnitCircleGame({ onComplete }: { onComplete?: () => void }) {
+  // 16 angles total (0, 30, 45, 60, 90, 120, 135, 150, 180, 210, 225, 240, 270, 300, 315, 330)
+  // 32 coordinates (x and y for each angle)
+  // Total: 48 inputs
+  const [answers, setAnswers] = useState<Record<string, string>>({
+    // Quadrant I
+    angle0: '', x0: '', y0: '',
+    angle30: '', x30: '', y30: '',
+    angle45: '', x45: '', y45: '',
+    angle60: '', x60: '', y60: '',
+    angle90: '', x90: '', y90: '',
+    // Quadrant II
+    angle120: '', x120: '', y120: '',
+    angle135: '', x135: '', y135: '',
+    angle150: '', x150: '', y150: '',
+    angle180: '', x180: '', y180: '',
+    // Quadrant III
+    angle210: '', x210: '', y210: '',
+    angle225: '', x225: '', y225: '',
+    angle240: '', x240: '', y240: '',
+    angle270: '', x270: '', y270: '',
+    // Quadrant IV
+    angle300: '', x300: '', y300: '',
+    angle315: '', x315: '', y315: '',
+    angle330: '', x330: '', y330: '',
+  })
+
+  const [checked, setChecked] = useState<Record<string, boolean | null>>({})
+  const [allCorrect, setAllCorrect] = useState(false)
+
+  const correctAnswers: Record<string, string[]> = {
+    // Quadrant I (0° to 90°)
+    angle0: ['0'], x0: ['1'], y0: ['0'],
+    angle30: ['30'], x30: ['√3/2', 'sqrt3/2', 'sqrt(3)/2'], y30: ['1/2'],
+    angle45: ['45'], x45: ['√2/2', 'sqrt2/2', 'sqrt(2)/2'], y45: ['√2/2', 'sqrt2/2', 'sqrt(2)/2'],
+    angle60: ['60'], x60: ['1/2'], y60: ['√3/2', 'sqrt3/2', 'sqrt(3)/2'],
+    angle90: ['90'], x90: ['0'], y90: ['1'],
+    // Quadrant II (90° to 180°)
+    angle120: ['120'], x120: ['-1/2'], y120: ['√3/2', 'sqrt3/2', 'sqrt(3)/2'],
+    angle135: ['135'], x135: ['-√2/2', '-sqrt2/2', '-sqrt(2)/2'], y135: ['√2/2', 'sqrt2/2', 'sqrt(2)/2'],
+    angle150: ['150'], x150: ['-√3/2', '-sqrt3/2', '-sqrt(3)/2'], y150: ['1/2'],
+    angle180: ['180'], x180: ['-1'], y180: ['0'],
+    // Quadrant III (180° to 270°)
+    angle210: ['210'], x210: ['-√3/2', '-sqrt3/2', '-sqrt(3)/2'], y210: ['-1/2'],
+    angle225: ['225'], x225: ['-√2/2', '-sqrt2/2', '-sqrt(2)/2'], y225: ['-√2/2', '-sqrt2/2', '-sqrt(2)/2'],
+    angle240: ['240'], x240: ['-1/2'], y240: ['-√3/2', '-sqrt3/2', '-sqrt(3)/2'],
+    angle270: ['270'], x270: ['0'], y270: ['-1'],
+    // Quadrant IV (270° to 360°)
+    angle300: ['300'], x300: ['1/2'], y300: ['-√3/2', '-sqrt3/2', '-sqrt(3)/2'],
+    angle315: ['315'], x315: ['√2/2', 'sqrt2/2', 'sqrt(2)/2'], y315: ['-√2/2', '-sqrt2/2', '-sqrt(2)/2'],
+    angle330: ['330'], x330: ['√3/2', 'sqrt3/2', 'sqrt(3)/2'], y330: ['-1/2'],
+  }
+
+  const handleInputChange = (key: string, value: string) => {
+    setAnswers({ ...answers, [key]: value })
+    if (checked[key] !== undefined) {
+      setChecked({ ...checked, [key]: null })
+    }
+  }
+
+  const handleBlur = (key: string) => {
+    const userAnswer = answers[key].trim().toLowerCase().replace(/\s+/g, '')
+    if (userAnswer === '') {
+      setChecked({ ...checked, [key]: null })
+      return
+    }
+
+    const isCorrect = correctAnswers[key].some(
+      (correct) => userAnswer === correct.toLowerCase().replace(/\s+/g, '')
+    )
+    setChecked({ ...checked, [key]: isCorrect })
+
+    // Check if all fields are filled and correct
+    const allKeys = Object.keys(correctAnswers)
+    const allAnswered = allKeys.every((k) => answers[k]?.trim() !== '')
+    
+    if (allAnswered) {
+      const allRight = allKeys.every((k) => {
+        const uAnswer = answers[k].trim().toLowerCase().replace(/\s+/g, '')
+        return correctAnswers[k].some((correct) => uAnswer === correct.toLowerCase().replace(/\s+/g, ''))
+      })
+      if (allRight) {
+        setAllCorrect(true)
+        if (onComplete) {
+          onComplete()
+        }
+      } else {
+        setAllCorrect(false)
+      }
+    }
+  }
+
+  const formatDisplayValue = (value: string): string => {
+    if (!value) return ''
+    
+    let formatted = value
+    // Handle negative sqrt patterns
+    formatted = formatted.replace(/-sqrt\((\d+)\)\/(\d+)/gi, '-\\frac{\\sqrt{$1}}{$2}')
+    formatted = formatted.replace(/-sqrt(\d+)\/(\d+)/gi, '-\\frac{\\sqrt{$1}}{$2}')
+    // Handle positive sqrt patterns
+    formatted = formatted.replace(/sqrt\((\d+)\)\/(\d+)/gi, '\\frac{\\sqrt{$1}}{$2}')
+    formatted = formatted.replace(/sqrt(\d+)\/(\d+)/gi, '\\frac{\\sqrt{$1}}{$2}')
+    // Handle simple fractions
+    formatted = formatted.replace(/^-(\d+)\/(\d+)$/gi, '-\\frac{$1}{$2}')
+    formatted = formatted.replace(/^(\d+)\/(\d+)$/gi, '\\frac{$1}{$2}')
+    
+    try {
+      return katex.renderToString(formatted, {
+        throwOnError: false,
+        displayMode: false,
+        output: 'html',
+      })
+    } catch {
+      return value
+    }
+  }
+
+  const renderInput = (key: string, placeholder: string, width: string) => {
+    const borderColor = 
+      checked[key] === true ? '#22c55e' : 
+      checked[key] === false ? '#ef4444' : 
+      '#d1d5db'
+    
+    return (
+      <div style={{ position: 'relative', width, height: '32px' }}>
+        <input
+          type="text"
+          value={answers[key] || ''}
+          onChange={(e) => handleInputChange(key, e.target.value)}
+          onBlur={() => handleBlur(key)}
+          placeholder={placeholder}
+          style={{
+            width: '100%',
+            height: '100%',
+            padding: '4px 6px',
+            border: `2px solid ${borderColor}`,
+            borderRadius: '4px',
+            fontSize: '14px',
+            textAlign: 'center',
+            opacity: answers[key] ? 0 : 1,
+            position: 'absolute',
+            top: 0,
+            left: 0,
+          }}
+        />
+        {answers[key] && (
+          <div
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              padding: '4px 6px',
+              border: `2px solid ${borderColor}`,
+              borderRadius: '4px',
+              fontSize: '14px',
+              textAlign: 'center',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              backgroundColor: 'white',
+              pointerEvents: 'none',
+            }}
+            dangerouslySetInnerHTML={{ __html: formatDisplayValue(answers[key]) }}
+          />
+        )}
+      </div>
+    )
+  }
+
+  return (
+    <div className="my-8">
+      <div className="max-w-5xl mx-auto bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-950/30 dark:to-purple-950/30 rounded-lg p-8 border-2 border-purple-300 dark:border-purple-700">
+        {allCorrect && (
+          <div className="mb-6 p-4 bg-green-100 dark:bg-green-900/30 border-2 border-green-500 rounded-lg text-center">
+            <p className="text-2xl font-bold text-green-700 dark:text-green-300">🎉 Perfect! You've mastered the complete unit circle! 🎉</p>
+          </div>
+        )}
+        
+        <div className="flex justify-center">
+          <svg viewBox="0 0 1000 1000" style={{ width: '100%', maxWidth: '900px', height: 'auto' }}>
+            {/* Axes */}
+            <line x1="50" y1="500" x2="950" y2="500" stroke="#666" strokeWidth="2" />
+            <line x1="500" y1="50" x2="500" y2="950" stroke="#666" strokeWidth="2" />
+            
+            {/* Circle */}
+            <circle cx="500" cy="500" r="350" fill="none" stroke="#9333ea" strokeWidth="3" />
+            
+            {/* Center dot */}
+            <circle cx="500" cy="500" r="4" fill="#666" />
+
+            {/* Quadrant I: 0° */}
+            <circle cx="850" cy="500" r="6" fill="#22c55e" />
+            <foreignObject x="870" y="480" width="70" height="32">
+              {renderInput('angle0', 'angle', '70px')}
+            </foreignObject>
+            <text x="965" y="500" fontSize="16" fill="#666" fontWeight="bold">(</text>
+            <foreignObject x="975" y="480" width="50" height="32">
+              {renderInput('x0', 'x', '50px')}
+            </foreignObject>
+            <text x="1028" y="500" fontSize="16" fill="#666" fontWeight="bold">,</text>
+            <foreignObject x="1035" y="480" width="50" height="32">
+              {renderInput('y0', 'y', '50px')}
+            </foreignObject>
+            <text x="1088" y="500" fontSize="16" fill="#666" fontWeight="bold">)</text>
+
+            {/* Quadrant I: 30° */}
+            <circle cx="803.1" cy="325" r="6" fill="#22c55e" />
+            <foreignObject x="820" y="305" width="70" height="32">
+              {renderInput('angle30', 'angle', '70px')}
+            </foreignObject>
+            <text x="910" y="315" fontSize="14" fill="#666" fontWeight="bold">(</text>
+            <foreignObject x="920" y="295" width="50" height="32">
+              {renderInput('x30', 'x', '50px')}
+            </foreignObject>
+            <text x="973" y="315" fontSize="14" fill="#666" fontWeight="bold">,</text>
+            <foreignObject x="980" y="295" width="70" height="32">
+              {renderInput('y30', 'y', '70px')}
+            </foreignObject>
+            <text x="1053" y="315" fontSize="14" fill="#666" fontWeight="bold">)</text>
+
+            {/* Quadrant I: 45° */}
+            <circle cx="747.5" cy="252.5" r="6" fill="#22c55e" />
+            <foreignObject x="765" y="232" width="70" height="32">
+              {renderInput('angle45', 'angle', '70px')}
+            </foreignObject>
+            <text x="850" y="242" fontSize="14" fill="#666" fontWeight="bold">(</text>
+            <foreignObject x="860" y="222" width="70" height="32">
+              {renderInput('x45', 'x', '70px')}
+            </foreignObject>
+            <text x="933" y="242" fontSize="14" fill="#666" fontWeight="bold">,</text>
+            <foreignObject x="940" y="222" width="70" height="32">
+              {renderInput('y45', 'y', '70px')}
+            </foreignObject>
+            <text x="1013" y="242" fontSize="14" fill="#666" fontWeight="bold">)</text>
+
+            {/* Quadrant I: 60° */}
+            <circle cx="675" cy="196.9" r="6" fill="#22c55e" />
+            <foreignObject x="690" y="176" width="70" height="32">
+              {renderInput('angle60', 'angle', '70px')}
+            </foreignObject>
+            <text x="775" y="178" fontSize="14" fill="#666" fontWeight="bold">(</text>
+            <foreignObject x="785" y="158" width="50" height="32">
+              {renderInput('x60', 'x', '50px')}
+            </foreignObject>
+            <text x="838" y="178" fontSize="14" fill="#666" fontWeight="bold">,</text>
+            <foreignObject x="845" y="158" width="70" height="32">
+              {renderInput('y60', 'y', '70px')}
+            </foreignObject>
+            <text x="918" y="178" fontSize="14" fill="#666" fontWeight="bold">)</text>
+
+            {/* Quadrant I: 90° */}
+            <circle cx="500" cy="150" r="6" fill="#22c55e" />
+            <foreignObject x="405" y="115" width="70" height="32">
+              {renderInput('angle90', 'angle', '70px')}
+            </foreignObject>
+            <text x="360" y="90" fontSize="14" fill="#666" fontWeight="bold">(</text>
+            <foreignObject x="370" y="70" width="50" height="32">
+              {renderInput('x90', 'x', '50px')}
+            </foreignObject>
+            <text x="423" y="90" fontSize="14" fill="#666" fontWeight="bold">,</text>
+            <foreignObject x="430" y="70" width="50" height="32">
+              {renderInput('y90', 'y', '50px')}
+            </foreignObject>
+            <text x="483" y="90" fontSize="14" fill="#666" fontWeight="bold">)</text>
+
+            {/* Quadrant II: 120° */}
+            <circle cx="325" cy="196.9" r="6" fill="#22c55e" />
+            <foreignObject x="240" y="176" width="70" height="32">
+              {renderInput('angle120', 'angle', '70px')}
+            </foreignObject>
+            <text x="70" y="178" fontSize="14" fill="#666" fontWeight="bold">(</text>
+            <foreignObject x="80" y="158" width="50" height="32">
+              {renderInput('x120', 'x', '50px')}
+            </foreignObject>
+            <text x="133" y="178" fontSize="14" fill="#666" fontWeight="bold">,</text>
+            <foreignObject x="140" y="158" width="70" height="32">
+              {renderInput('y120', 'y', '70px')}
+            </foreignObject>
+            <text x="213" y="178" fontSize="14" fill="#666" fontWeight="bold">)</text>
+
+            {/* Quadrant II: 135° */}
+            <circle cx="252.5" cy="252.5" r="6" fill="#22c55e" />
+            <foreignObject x="165" y="232" width="70" height="32">
+              {renderInput('angle135', 'angle', '70px')}
+            </foreignObject>
+            <text x="0" y="242" fontSize="14" fill="#666" fontWeight="bold">(</text>
+            <foreignObject x="10" y="222" width="70" height="32">
+              {renderInput('x135', 'x', '70px')}
+            </foreignObject>
+            <text x="83" y="242" fontSize="14" fill="#666" fontWeight="bold">,</text>
+            <foreignObject x="90" y="222" width="70" height="32">
+              {renderInput('y135', 'y', '70px')}
+            </foreignObject>
+            <text x="163" y="242" fontSize="14" fill="#666" fontWeight="bold">)</text>
+
+            {/* Quadrant II: 150° */}
+            <circle cx="196.9" cy="325" r="6" fill="#22c55e" />
+            <foreignObject x="110" y="305" width="70" height="32">
+              {renderInput('angle150', 'angle', '70px')}
+            </foreignObject>
+            <text x="0" y="315" fontSize="14" fill="#666" fontWeight="bold">(</text>
+            <foreignObject x="10" y="295" width="70" height="32">
+              {renderInput('x150', 'x', '70px')}
+            </foreignObject>
+            <text x="83" y="315" fontSize="14" fill="#666" fontWeight="bold">,</text>
+            <foreignObject x="90" y="295" width="50" height="32">
+              {renderInput('y150', 'y', '50px')}
+            </foreignObject>
+            <text x="143" y="315" fontSize="14" fill="#666" fontWeight="bold">)</text>
+
+            {/* Quadrant II: 180° */}
+            <circle cx="150" cy="500" r="6" fill="#22c55e" />
+            <foreignObject x="30" y="480" width="70" height="32">
+              {renderInput('angle180', 'angle', '70px')}
+            </foreignObject>
+            <text x="0" y="465" fontSize="14" fill="#666" fontWeight="bold">(</text>
+            <foreignObject x="10" y="445" width="50" height="32">
+              {renderInput('x180', 'x', '50px')}
+            </foreignObject>
+            <text x="63" y="465" fontSize="14" fill="#666" fontWeight="bold">,</text>
+            <foreignObject x="70" y="445" width="50" height="32">
+              {renderInput('y180', 'y', '50px')}
+            </foreignObject>
+            <text x="123" y="465" fontSize="14" fill="#666" fontWeight="bold">)</text>
+
+            {/* Quadrant III: 210° */}
+            <circle cx="196.9" cy="675" r="6" fill="#22c55e" />
+            <foreignObject x="110" y="695" width="70" height="32">
+              {renderInput('angle210', 'angle', '70px')}
+            </foreignObject>
+            <text x="0" y="695" fontSize="14" fill="#666" fontWeight="bold">(</text>
+            <foreignObject x="10" y="675" width="70" height="32">
+              {renderInput('x210', 'x', '70px')}
+            </foreignObject>
+            <text x="83" y="695" fontSize="14" fill="#666" fontWeight="bold">,</text>
+            <foreignObject x="90" y="675" width="50" height="32">
+              {renderInput('y210', 'y', '50px')}
+            </foreignObject>
+            <text x="143" y="695" fontSize="14" fill="#666" fontWeight="bold">)</text>
+
+            {/* Quadrant III: 225° */}
+            <circle cx="252.5" cy="747.5" r="6" fill="#22c55e" />
+            <foreignObject x="165" y="767" width="70" height="32">
+              {renderInput('angle225', 'angle', '70px')}
+            </foreignObject>
+            <text x="0" y="767" fontSize="14" fill="#666" fontWeight="bold">(</text>
+            <foreignObject x="10" y="747" width="70" height="32">
+              {renderInput('x225', 'x', '70px')}
+            </foreignObject>
+            <text x="83" y="767" fontSize="14" fill="#666" fontWeight="bold">,</text>
+            <foreignObject x="90" y="747" width="70" height="32">
+              {renderInput('y225', 'y', '70px')}
+            </foreignObject>
+            <text x="163" y="767" fontSize="14" fill="#666" fontWeight="bold">)</text>
+
+            {/* Quadrant III: 240° */}
+            <circle cx="325" cy="803.1" r="6" fill="#22c55e" />
+            <foreignObject x="240" y="823" width="70" height="32">
+              {renderInput('angle240', 'angle', '70px')}
+            </foreignObject>
+            <text x="70" y="831" fontSize="14" fill="#666" fontWeight="bold">(</text>
+            <foreignObject x="80" y="811" width="50" height="32">
+              {renderInput('x240', 'x', '50px')}
+            </foreignObject>
+            <text x="133" y="831" fontSize="14" fill="#666" fontWeight="bold">,</text>
+            <foreignObject x="140" y="811" width="70" height="32">
+              {renderInput('y240', 'y', '70px')}
+            </foreignObject>
+            <text x="213" y="831" fontSize="14" fill="#666" fontWeight="bold">)</text>
+
+            {/* Quadrant III: 270° */}
+            <circle cx="500" cy="850" r="6" fill="#22c55e" />
+            <foreignObject x="405" y="870" width="70" height="32">
+              {renderInput('angle270', 'angle', '70px')}
+            </foreignObject>
+            <text x="360" y="925" fontSize="14" fill="#666" fontWeight="bold">(</text>
+            <foreignObject x="370" y="905" width="50" height="32">
+              {renderInput('x270', 'x', '50px')}
+            </foreignObject>
+            <text x="423" y="925" fontSize="14" fill="#666" fontWeight="bold">,</text>
+            <foreignObject x="430" y="905" width="50" height="32">
+              {renderInput('y270', 'y', '50px')}
+            </foreignObject>
+            <text x="483" y="925" fontSize="14" fill="#666" fontWeight="bold">)</text>
+
+            {/* Quadrant IV: 300° */}
+            <circle cx="675" cy="803.1" r="6" fill="#22c55e" />
+            <foreignObject x="690" y="823" width="70" height="32">
+              {renderInput('angle300', 'angle', '70px')}
+            </foreignObject>
+            <text x="775" y="831" fontSize="14" fill="#666" fontWeight="bold">(</text>
+            <foreignObject x="785" y="811" width="50" height="32">
+              {renderInput('x300', 'x', '50px')}
+            </foreignObject>
+            <text x="838" y="831" fontSize="14" fill="#666" fontWeight="bold">,</text>
+            <foreignObject x="845" y="811" width="70" height="32">
+              {renderInput('y300', 'y', '70px')}
+            </foreignObject>
+            <text x="918" y="831" fontSize="14" fill="#666" fontWeight="bold">)</text>
+
+            {/* Quadrant IV: 315° */}
+            <circle cx="747.5" cy="747.5" r="6" fill="#22c55e" />
+            <foreignObject x="765" y="767" width="70" height="32">
+              {renderInput('angle315', 'angle', '70px')}
+            </foreignObject>
+            <text x="850" y="767" fontSize="14" fill="#666" fontWeight="bold">(</text>
+            <foreignObject x="860" y="747" width="70" height="32">
+              {renderInput('x315', 'x', '70px')}
+            </foreignObject>
+            <text x="933" y="767" fontSize="14" fill="#666" fontWeight="bold">,</text>
+            <foreignObject x="940" y="747" width="70" height="32">
+              {renderInput('y315', 'y', '70px')}
+            </foreignObject>
+            <text x="1013" y="767" fontSize="14" fill="#666" fontWeight="bold">)</text>
+
+            {/* Quadrant IV: 330° */}
+            <circle cx="803.1" cy="675" r="6" fill="#22c55e" />
+            <foreignObject x="820" y="695" width="70" height="32">
+              {renderInput('angle330', 'angle', '70px')}
+            </foreignObject>
+            <text x="910" y="695" fontSize="14" fill="#666" fontWeight="bold">(</text>
+            <foreignObject x="920" y="675" width="70" height="32">
+              {renderInput('x330', 'x', '70px')}
+            </foreignObject>
+            <text x="993" y="695" fontSize="14" fill="#666" fontWeight="bold">,</text>
+            <foreignObject x="1000" y="675" width="50" height="32">
+              {renderInput('y330', 'y', '50px')}
+            </foreignObject>
+            <text x="1053" y="695" fontSize="14" fill="#666" fontWeight="bold">)</text>
+          </svg>
+        </div>
+
+        <div className="mt-4 text-center text-sm text-gray-600 dark:text-gray-400">
+          <p>Boxes turn <span className="text-green-600 font-bold">green ✓</span> when correct, <span className="text-red-600 font-bold">red ✗</span> when incorrect</p>
+          <p className="mt-2">Total: 16 angles + 32 coordinates = <strong>48 inputs</strong></p>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 // Fade-in Text Component with LaTeX support
-function FadeInText({ content }: { content: string }) {
+function FadeInText({ content, onComplete }: { content: string; onComplete?: () => void }) {
   const hasLatex = content.includes('$')
   const hasSineTable = content.includes('[SINE_TABLE]')
   const hasCosineTable = content.includes('[COSINE_TABLE]')
   const hasUnitCircle = content.includes('[UNIT_CIRCLE]')
   const hasUnitCircleAnimation = content.includes('[UNIT_CIRCLE_ANIMATION]')
   const hasUnitCircleGame = content.includes('[UNIT_CIRCLE_GAME]')
+  const hasFullUnitCircleGame = content.includes('[FULL_UNIT_CIRCLE_GAME]')
   
   // If content has tables, unit circle, animation, or game, split and render
-  if (hasSineTable || hasCosineTable || hasUnitCircle || hasUnitCircleAnimation || hasUnitCircleGame) {
-    const parts = content.split(/(\[SINE_TABLE\]|\[COSINE_TABLE\]|\[UNIT_CIRCLE\]|\[UNIT_CIRCLE_ANIMATION\]|\[UNIT_CIRCLE_GAME\])/)
+  if (hasSineTable || hasCosineTable || hasUnitCircle || hasUnitCircleAnimation || hasUnitCircleGame || hasFullUnitCircleGame) {
+    const parts = content.split(/(\[SINE_TABLE\]|\[COSINE_TABLE\]|\[UNIT_CIRCLE\]|\[UNIT_CIRCLE_ANIMATION\]|\[UNIT_CIRCLE_GAME\]|\[FULL_UNIT_CIRCLE_GAME\])/)
     
     return (
       <div className="animate-fade-in prose prose-lg max-w-none">
@@ -848,7 +1323,9 @@ function FadeInText({ content }: { content: string }) {
           } else if (part === '[UNIT_CIRCLE_ANIMATION]') {
             return <UnitCircleAnimation key={index} />
           } else if (part === '[UNIT_CIRCLE_GAME]') {
-            return <UnitCircleGame key={index} />
+            return <UnitCircleGame key={index} onComplete={onComplete} />
+          } else if (part === '[FULL_UNIT_CIRCLE_GAME]') {
+            return <FullUnitCircleGame key={index} onComplete={onComplete} />
           } else if (part.trim()) {
             return (
               <ReactMarkdown
