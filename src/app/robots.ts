@@ -14,6 +14,6 @@ export default function robots(): MetadataRoute.Robots {
         ],
       },
     ],
-    sitemap: 'https://studymondo.com/sitemap.xml',
+    sitemap: 'https://www.studymondo.com/sitemap.xml',
   }
 }
