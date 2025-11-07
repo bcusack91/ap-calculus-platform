@@ -206,7 +206,7 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
           onComplete={handleSectionComplete}
           isComplete={isCurrentSectionComplete}
           isLastSection={currentSectionIndex === sections.length - 1}
-          onStartPractice={() => setShowPracticeMode(true)}
+          onStartPractice={lessonPart <= 2 ? () => setShowPracticeMode(true) : undefined}
         />
       </div>
 
