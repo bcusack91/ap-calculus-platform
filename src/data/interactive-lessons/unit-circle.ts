@@ -152,11 +152,116 @@ $$\\cos(90°) = 0$$
       id: 'completion',
       type: 'text' as const,
       content: `
-**🌟 Lesson Complete! 🌟**
+**🌟 Part 1 Complete! 🌟**
 
 Congratulations! You've mastered the counting method for memorizing unit circle values.
 
-Practice this technique a few times, and you'll never forget these values again!
+Ready to practice on your own? Try the independent practice mode to reinforce what you've learned!
+      `
+    }
+  ]
+}
+
+export const unitCircleAnglesLessonData = {
+  topicSlug: 'the-unit-circle',
+  sections: [
+    {
+      id: 'angles-intro',
+      type: 'text' as const,
+      content: `
+**Now Let's Learn the Angles!**
+
+The first quadrant of the unit circle has five key angles:
+
+**0°, 30°, 45°, 60°, and 90°**
+
+These correspond to the values we just calculated!
+
+Let's practice identifying these angles.
+      `
+    },
+    {
+      id: 'angles-practice',
+      type: 'input-boxes' as const,
+      content: `
+**Practice: Fill in the First Quadrant Angles**
+
+Enter the five key angles in the first quadrant in order:
+      `,
+      exercise: {
+        boxes: 5,
+        correctAnswers: ['0', '30', '45', '60', '90'],
+        hint1: 'Remember: Start at 0° and go up to 90°',
+        hint2: 'The angles are: 0, 30, 45, 60, and 90 degrees',
+        explanation: 'The five key angles in the first quadrant are 0°, 30°, 45°, 60°, and 90°'
+      }
+    },
+    {
+      id: 'sin-up-intro',
+      type: 'text' as const,
+      content: `
+**Understanding "Sin UP"** 📈
+
+Look at how sine values change as we go from 0° to 90°:
+
+[SINE_TABLE]
+
+**Sin goes UP!** ⬆️ The values increase from 0 to 1 as the angle increases.
+
+Remember: **"Sin UP"** - Sine values go UP from 0° to 90°!
+      `
+    },
+    {
+      id: 'coast-down-intro',
+      type: 'text' as const,
+      content: `
+**Understanding "COAST DOWN"** 📉
+
+Now look at how **CO**sine values change (remember: **CO**SINE → **CO**AST):
+
+[COSINE_TABLE]
+
+**Cosine goes DOWN!** ⬇️ The values decrease from 1 to 0 as the angle increases.
+
+Remember: **"COAST DOWN"** - COsine values go DOWN from 90° to 0°!
+
+**Even better:** Cosine values are just the sine values in reverse order!
+      `
+    },
+    {
+      id: 'memory-trick',
+      type: 'text' as const,
+      content: `
+**🧠 The Ultimate Memory Trick! 🧠**
+
+Put it all together:
+
+1. **Count from 0 to 4**: 0, 1, 2, 3, 4
+2. **Square root each**: √0, √1, √2, √3, √4
+3. **Simplify**: 0, 1, √2, √3, 2
+4. **Divide by 2**: 0, ½, √2/2, √3/2, 1
+5. **These are your angles**: 0°, 30°, 45°, 60°, 90°
+
+**For Sine:** "**Sin UP**" - Use the values going up (0 → 1)
+
+**For Cosine:** "**COAST DOWN**" - Use the values going down (1 → 0)
+
+That's it! You now know the entire first quadrant of the unit circle! 🎉
+      `
+    },
+    {
+      id: 'completion',
+      type: 'text' as const,
+      content: `
+**🌟 Lesson Complete! 🌟**
+
+Congratulations! You've mastered:
+- The counting method for memorizing unit circle values
+- The five key angles: 0°, 30°, 45°, 60°, 90°
+- "Sin UP" - Sine values increase from 0 to 1
+- "COAST DOWN" - Cosine values decrease from 1 to 0
+
+Ready to practice on your own? Try the independent practice mode to reinforce what you've learned!
       `
     }
   ]

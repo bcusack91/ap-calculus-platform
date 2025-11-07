@@ -2,7 +2,9 @@ import { notFound } from 'next/navigation'
 import { prisma } from '@/lib/prisma'
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import InteractiveLessonRenderer from '@/components/InteractiveLessonRenderer'
+import 'katex/dist/katex.min.css'
 
 // Force dynamic rendering
 export const dynamic = 'force-dynamic'
@@ -91,6 +93,12 @@ export default async function InteractivePage(props: InteractivePageProps) {
 
   return (
     <div className="container py-10">
+      {/* Load KaTeX from CDN */}
+      <Script 
+        src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" 
+        strategy="beforeInteractive"
+      />
+      
       <div className="mx-auto max-w-4xl">
         {/* Breadcrumb */}
         <nav className="mb-4 text-sm text-muted-foreground">
