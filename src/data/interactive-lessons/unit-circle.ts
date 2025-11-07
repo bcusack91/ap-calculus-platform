@@ -5,37 +5,31 @@ export const unitCircleLessonData = {
       id: 'intro',
       type: 'text' as const,
       content: `
-        <h2 class="text-3xl font-bold mb-4 text-foreground">Welcome to the Interactive Unit Circle Lesson!</h2>
-        <p class="text-lg mb-4 text-foreground">
-          In this interactive lesson, you'll master the unit circle through a simple counting technique 
-          that makes memorizing those tricky values super easy!
-        </p>
-        <p class="text-lg text-foreground">
-          Click "Next" when you're ready to begin learning the counting method.
-        </p>
+## Welcome to the Interactive Unit Circle Lesson!
+
+In this interactive lesson, you'll master the unit circle through a simple counting technique that makes memorizing those tricky values super easy!
+
+Click "Next" when you're ready to begin learning the counting method.
       `
     },
     {
       id: 'step1-intro',
       type: 'text' as const,
       content: `
-        <h2 class="text-2xl font-bold mb-4 text-foreground">Step 1: Count from 0 to 4</h2>
-        <p class="text-lg mb-4 text-foreground">
-          The first step is simple: we're going to count from 0 to 4, including both 0 and 4.
-        </p>
-        <p class="text-lg text-foreground">
-          These five numbers will become the foundation for remembering all the key sine and cosine values!
-        </p>
+## Step 1: Count from 0 to 4
+
+The first step is simple: we're going to count from 0 to 4, including both 0 and 4.
+
+These five numbers will become the foundation for remembering all the key sine and cosine values!
       `
     },
     {
       id: 'step1-practice',
       type: 'input-boxes' as const,
       content: `
-        <h3 class="text-xl font-bold mb-6 text-foreground">Now it's your turn!</h3>
-        <p class="text-lg mb-6 text-foreground">
-          Fill in the boxes below by counting from 0 to 4:
-        </p>
+### Now it's your turn!
+
+Fill in the boxes below by counting from 0 to 4:
       `,
       exercise: {
         boxes: 5,
@@ -46,46 +40,39 @@ export const unitCircleLessonData = {
       id: 'step2-intro',
       type: 'text' as const,
       content: `
-        <h2 class="text-2xl font-bold mb-4 text-foreground">Step 2: Put Each Number Under a Square Root</h2>
-        <p class="text-lg mb-4 text-foreground">
-          Great job! Now we're going to take those numbers (0, 1, 2, 3, 4) and put each one under a square root symbol.
-        </p>
-        <p class="text-lg mb-4 text-foreground">
-          So we get: √0, √1, √2, √3, √4
-        </p>
-        <p class="text-lg text-foreground">
-          This might seem strange, but trust the process - it's about to make perfect sense!
-        </p>
+## Step 2: Put Each Number Under a Square Root
+
+Great job! Now we're going to take those numbers (0, 1, 2, 3, 4) and put each one under a square root symbol.
+
+So we get: $\\sqrt{0}, \\sqrt{1}, \\sqrt{2}, \\sqrt{3}, \\sqrt{4}$
+
+This might seem strange, but trust the process - it's about to make perfect sense!
       `
     },
     {
       id: 'step3-intro',
       type: 'text' as const,
       content: `
-        <h2 class="text-2xl font-bold mb-4 text-foreground">Step 3: Simplify the Perfect Squares</h2>
-        <p class="text-lg mb-4 text-foreground">
-          Now we simplify any perfect squares in our list: √0, √1, √2, √3, √4
-        </p>
-        <p class="text-lg mb-4 text-foreground">
-          Remember: A perfect square is a number whose square root is a whole number.
-        </p>
-        <ul class="list-disc list-inside space-y-2 text-lg ml-6 mb-4 text-foreground">
-          <li>√0 = 0 (because 0² = 0)</li>
-          <li>√1 = 1 (because 1² = 1)</li>
-          <li>√2 stays as √2 (not a perfect square)</li>
-          <li>√3 stays as √3 (not a perfect square)</li>
-          <li>√4 = 2 (because 2² = 4)</li>
-        </ul>
+## Step 3: Simplify the Perfect Squares
+
+Now we simplify any perfect squares in our list: $\\sqrt{0}, \\sqrt{1}, \\sqrt{2}, \\sqrt{3}, \\sqrt{4}$
+
+Remember: A perfect square is a number whose square root is a whole number.
+
+- $\\sqrt{0} = 0$ (because $0^2 = 0$)
+- $\\sqrt{1} = 1$ (because $1^2 = 1$)
+- $\\sqrt{2}$ stays as $\\sqrt{2}$ (not a perfect square)
+- $\\sqrt{3}$ stays as $\\sqrt{3}$ (not a perfect square)
+- $\\sqrt{4} = 2$ (because $2^2 = 4$)
       `
     },
     {
       id: 'step3-practice',
       type: 'dropdown-select' as const,
       content: `
-        <h3 class="text-xl font-bold mb-6 text-foreground">Practice: Simplify the Square Roots</h3>
-        <p class="text-lg mb-6 text-foreground">
-          Select the correct simplified form for each square root:
-        </p>
+### Practice: Simplify the Square Roots
+
+Select the correct simplified form for each square root:
       `,
       exercise: {
         dropdowns: [
@@ -117,140 +104,59 @@ export const unitCircleLessonData = {
       id: 'step4-intro',
       type: 'text' as const,
       content: `
-        <h2 class="text-2xl font-bold mb-4 text-foreground">Step 4: Divide Everything by 2</h2>
-        <p class="text-lg mb-4 text-foreground">
-          Almost there! Now we take our simplified values (0, 1, √2, √3, 2) and divide each by 2.
-        </p>
-        <p class="text-lg mb-4 text-foreground">
-          This gives us:
-        </p>
-        <div class="text-center text-2xl font-bold my-6 text-foreground flex gap-4 justify-center items-center">
-          <span class="inline-flex flex-col items-center">
-            <span>0</span>
-            <span class="border-t-2 border-current pt-1">2</span>
-          </span>
-          <span>,</span>
-          <span class="inline-flex flex-col items-center">
-            <span>1</span>
-            <span class="border-t-2 border-current pt-1">2</span>
-          </span>
-          <span>,</span>
-          <span class="inline-flex flex-col items-center">
-            <span>√2</span>
-            <span class="border-t-2 border-current pt-1">2</span>
-          </span>
-          <span>,</span>
-          <span class="inline-flex flex-col items-center">
-            <span>√3</span>
-            <span class="border-t-2 border-current pt-1">2</span>
-          </span>
-          <span>,</span>
-          <span class="inline-flex flex-col items-center">
-            <span>2</span>
-            <span class="border-t-2 border-current pt-1">2</span>
-          </span>
-        </div>
-        <p class="text-lg mb-4 text-foreground">
-          Which simplifies to:
-        </p>
-        <div class="text-center text-2xl font-bold my-6 text-green-600 dark:text-green-400 flex gap-4 justify-center items-center">
-          <span>0</span>
-          <span>,</span>
-          <span class="inline-flex flex-col items-center">
-            <span>1</span>
-            <span class="border-t-2 border-current pt-1">2</span>
-          </span>
-          <span>,</span>
-          <span class="inline-flex flex-col items-center">
-            <span>√2</span>
-            <span class="border-t-2 border-current pt-1">2</span>
-          </span>
-          <span>,</span>
-          <span class="inline-flex flex-col items-center">
-            <span>√3</span>
-            <span class="border-t-2 border-current pt-1">2</span>
-          </span>
-          <span>,</span>
-          <span>1</span>
-        </div>
+## Step 4: Divide Everything by 2
+
+Almost there! Now we take our simplified values $(0, 1, \\sqrt{2}, \\sqrt{3}, 2)$ and divide each by 2.
+
+This gives us:
+
+$$\\frac{0}{2}, \\frac{1}{2}, \\frac{\\sqrt{2}}{2}, \\frac{\\sqrt{3}}{2}, \\frac{2}{2}$$
+
+Which simplifies to:
+
+$$0, \\frac{1}{2}, \\frac{\\sqrt{2}}{2}, \\frac{\\sqrt{3}}{2}, 1$$
       `
     },
     {
       id: 'revelation',
       type: 'text' as const,
       content: `
-        <h2 class="text-3xl font-bold mb-4 text-foreground">🎉 You Did It!</h2>
-        <div class="bg-yellow-100 dark:bg-yellow-900/30 border-4 border-yellow-400 dark:border-yellow-600 rounded-lg p-6 mb-6">
-          <p class="text-xl font-bold mb-4 text-center text-foreground">
-            These are the SINE values for 0°, 30°, 45°, 60°, and 90°!
-          </p>
-          <div class="text-center text-2xl font-bold text-green-700 dark:text-green-400 space-y-2">
-            <div>sin(0°) = 0</div>
-            <div class="flex items-center justify-center gap-2">
-              <span>sin(30°) =</span>
-              <span class="inline-flex flex-col items-center">
-                <span>1</span>
-                <span class="border-t-2 border-current pt-1">2</span>
-              </span>
-            </div>
-            <div class="flex items-center justify-center gap-2">
-              <span>sin(45°) =</span>
-              <span class="inline-flex flex-col items-center">
-                <span>√2</span>
-                <span class="border-t-2 border-current pt-1">2</span>
-              </span>
-            </div>
-            <div class="flex items-center justify-center gap-2">
-              <span>sin(60°) =</span>
-              <span class="inline-flex flex-col items-center">
-                <span>√3</span>
-                <span class="border-t-2 border-current pt-1">2</span>
-              </span>
-            </div>
-            <div>sin(90°) = 1</div>
-          </div>
-        </div>
-        <p class="text-lg mb-4 text-foreground">
-          <strong>BONUS TIP:</strong> For cosine values, just reverse the order!
-        </p>
-        <div class="text-center text-xl font-bold text-blue-700 dark:text-blue-400 space-y-2">
-          <div>cos(0°) = 1</div>
-          <div class="flex items-center justify-center gap-2">
-            <span>cos(30°) =</span>
-            <span class="inline-flex flex-col items-center">
-              <span>√3</span>
-              <span class="border-t-2 border-current pt-1">2</span>
-            </span>
-          </div>
-          <div class="flex items-center justify-center gap-2">
-            <span>cos(45°) =</span>
-            <span class="inline-flex flex-col items-center">
-              <span>√2</span>
-              <span class="border-t-2 border-current pt-1">2</span>
-            </span>
-          </div>
-          <div class="flex items-center justify-center gap-2">
-            <span>cos(60°) =</span>
-            <span class="inline-flex flex-col items-center">
-              <span>1</span>
-              <span class="border-t-2 border-current pt-1">2</span>
-            </span>
-          </div>
-          <div>cos(90°) = 0</div>
-        </div>
+## 🎉 You Did It!
+
+> **These are the SINE values for 0°, 30°, 45°, 60°, and 90°!**
+
+$$\\sin(0°) = 0$$
+
+$$\\sin(30°) = \\frac{1}{2}$$
+
+$$\\sin(45°) = \\frac{\\sqrt{2}}{2}$$
+
+$$\\sin(60°) = \\frac{\\sqrt{3}}{2}$$
+
+$$\\sin(90°) = 1$$
+
+**BONUS TIP:** For cosine values, just reverse the order!
+
+$$\\cos(0°) = 1$$
+
+$$\\cos(30°) = \\frac{\\sqrt{3}}{2}$$
+
+$$\\cos(45°) = \\frac{\\sqrt{2}}{2}$$
+
+$$\\cos(60°) = \\frac{1}{2}$$
+
+$$\\cos(90°) = 0$$
       `
     },
     {
       id: 'completion',
       type: 'text' as const,
       content: `
-        <h2 class="text-3xl font-bold mb-4 text-center text-foreground">🌟 Lesson Complete! 🌟</h2>
-        <p class="text-lg text-center mb-6 text-foreground">
-          Congratulations! You've mastered the counting method for memorizing unit circle values.
-        </p>
-        <p class="text-lg text-center text-foreground">
-          Practice this technique a few times, and you'll never forget these values again!
-        </p>
+## 🌟 Lesson Complete! 🌟
+
+Congratulations! You've mastered the counting method for memorizing unit circle values.
+
+Practice this technique a few times, and you'll never forget these values again!
       `
     }
   ]

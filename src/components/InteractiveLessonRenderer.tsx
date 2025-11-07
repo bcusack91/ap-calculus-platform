@@ -2,6 +2,10 @@
 
 import { useState } from 'react'
 import { unitCircleLessonData } from '@/data/interactive-lessons/unit-circle'
+import ReactMarkdown from 'react-markdown'
+import remarkMath from 'remark-math'
+import rehypeKatex from 'rehype-katex'
+import 'katex/dist/katex.min.css'
 
 interface Section {
   id: string
@@ -154,8 +158,24 @@ function SectionRenderer({
   return <div>Unknown section type</div>
 }
 
-// Fade-in Text Component
+// Fade-in Text Component with LaTeX support
 function FadeInText({ content }: { content: string }) {
+  // Check if content has LaTeX math
+  const hasLatex = content.includes('$')
+  
+  if (hasLatex) {
+    return (
+      <div className="animate-fade-in">
+        <ReactMarkdown
+          remarkPlugins={[remarkMath]}
+          rehypePlugins={[rehypeKatex]}
+        >
+          {content}
+        </ReactMarkdown>
+      </div>
+    )
+  }
+  
   return (
     <div className="animate-fade-in">
       <div dangerouslySetInnerHTML={{ __html: content }} />
