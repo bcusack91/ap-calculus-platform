@@ -63,7 +63,7 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
       </div>
 
       {/* Current Section Content */}
-      <div className="bg-white rounded-lg shadow-lg p-8 border-2 border-purple-200 min-h-[400px]">
+      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 border-2 border-purple-200 dark:border-purple-700 min-h-[400px]">
         <SectionRenderer 
           section={currentSection} 
           onComplete={handleSectionComplete}
