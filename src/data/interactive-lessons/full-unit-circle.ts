@@ -42,6 +42,17 @@ A **reference angle** is the acute angle (0° to 90°) that any angle makes with
       `
     },
     {
+      id: 'reference-angle-quiz',
+      type: 'reference-angle-quiz' as const,
+      content: `
+**Practice: Find the Reference Angle** 🎯
+
+Let's practice finding reference angles! You need to answer **5 questions correctly in a row** to proceed.
+
+For each angle given, determine its reference angle (the acute angle it makes with the x-axis).
+      `
+    },
+    {
       id: 'quadrant-signs',
       type: 'text' as const,
       content: `

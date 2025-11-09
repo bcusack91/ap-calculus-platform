@@ -12,7 +12,7 @@ import katex from 'katex'
 
 interface Section {
   id: string
-  type: 'text' | 'input-boxes' | 'dropdown-select' | 'multiple-choice'
+  type: 'text' | 'input-boxes' | 'dropdown-select' | 'multiple-choice' | 'reference-angle-quiz'
   content: string
   exercise?: any
 }
@@ -133,6 +133,7 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
   const currentSectionRequiresCompletion = 
     currentSection.type === 'input-boxes' || 
     currentSection.type === 'dropdown-select' ||
+    currentSection.type === 'reference-angle-quiz' ||
     (currentSection.type === 'text' && currentSection.content.includes('[UNIT_CIRCLE_GAME]')) ||
     (currentSection.type === 'text' && currentSection.content.includes('[FULL_UNIT_CIRCLE_GAME]'))
   
@@ -320,7 +321,237 @@ function SectionRenderer({
     )
   }
 
+  if (section.type === 'reference-angle-quiz') {
+    return (
+      <ReferenceAngleQuiz 
+        section={section} 
+        onComplete={onComplete}
+        isComplete={isComplete}
+      />
+    )
+  }
+
   return <div>Unknown section type</div>
+}
+
+// Reference Angle Quiz Component
+function ReferenceAngleQuiz({ section, onComplete, isComplete }: { section: Section, onComplete: () => void, isComplete: boolean }) {
+  const [currentAngle, setCurrentAngle] = useState<number>(0)
+  const [userAnswer, setUserAnswer] = useState<string>('')
+  const [correctStreak, setCorrectStreak] = useState<number>(0)
+  const [showHint1, setShowHint1] = useState<boolean>(false)
+  const [showHint2, setShowHint2] = useState<boolean>(false)
+  const [feedback, setFeedback] = useState<string>('')
+  const [feedbackType, setFeedbackType] = useState<'correct' | 'incorrect' | ''>('')
+  const [hintsUsedThisQuestion, setHintsUsedThisQuestion] = useState<boolean>(false)
+
+  // Generate random angle on mount and when moving to next question
+  useEffect(() => {
+    if (currentAngle === 0) {
+      generateNewAngle()
+    }
+  }, [])
+
+  const generateNewAngle = () => {
+    const angle = Math.floor(Math.random() * 361) // 0 to 360 inclusive
+    setCurrentAngle(angle)
+    setUserAnswer('')
+    setShowHint1(false)
+    setShowHint2(false)
+    setFeedback('')
+    setFeedbackType('')
+    setHintsUsedThisQuestion(false)
+  }
+
+  const getQuadrant = (angle: number): number => {
+    if (angle >= 0 && angle <= 90) return 1
+    if (angle > 90 && angle <= 180) return 2
+    if (angle > 180 && angle <= 270) return 3
+    return 4
+  }
+
+  const calculateReferenceAngle = (angle: number): number => {
+    const quadrant = getQuadrant(angle)
+    if (quadrant === 1) return angle
+    if (quadrant === 2) return 180 - angle
+    if (quadrant === 3) return angle - 180
+    return 360 - angle
+  }
+
+  const getQuadrantFormula = (angle: number): string => {
+    const quadrant = getQuadrant(angle)
+    if (quadrant === 1) return 'the angle itself'
+    if (quadrant === 2) return '180° - angle'
+    if (quadrant === 3) return 'angle - 180°'
+    return '360° - angle'
+  }
+
+  const handleSubmit = () => {
+    const correctAnswer = calculateReferenceAngle(currentAngle)
+    const userNum = parseFloat(userAnswer)
+
+    if (isNaN(userNum)) {
+      setFeedback('Please enter a valid number')
+      setFeedbackType('incorrect')
+      return
+    }
+
+    if (Math.abs(userNum - correctAnswer) < 0.01) {
+      // Correct!
+      if (!hintsUsedThisQuestion) {
+        const newStreak = correctStreak + 1
+        setCorrectStreak(newStreak)
+        setFeedback(`✅ Correct! Streak: ${newStreak}/5`)
+        setFeedbackType('correct')
+        
+        if (newStreak >= 5) {
+          setTimeout(() => {
+            onComplete()
+          }, 1500)
+        } else {
+          setTimeout(() => {
+            generateNewAngle()
+          }, 1500)
+        }
+      } else {
+        setFeedback('✅ Correct, but you used hints. Streak reset to 0.')
+        setFeedbackType('correct')
+        setCorrectStreak(0)
+        setTimeout(() => {
+          generateNewAngle()
+        }, 2000)
+      }
+    } else {
+      setFeedback(`❌ Incorrect. The reference angle for ${currentAngle}° is ${correctAnswer}°. Streak reset to 0.`)
+      setFeedbackType('incorrect')
+      setCorrectStreak(0)
+      setTimeout(() => {
+        generateNewAngle()
+      }, 3000)
+    }
+  }
+
+  const handleHint1 = () => {
+    setShowHint1(true)
+    setHintsUsedThisQuestion(true)
+    const quadrant = getQuadrant(currentAngle)
+    setFeedback(`💡 Hint: ${currentAngle}° is in Quadrant ${quadrant === 1 ? 'I' : quadrant === 2 ? 'II' : quadrant === 3 ? 'III' : 'IV'}`)
+    setFeedbackType('')
+  }
+
+  const handleHint2 = () => {
+    setShowHint2(true)
+    setHintsUsedThisQuestion(true)
+    const formula = getQuadrantFormula(currentAngle)
+    setFeedback(`💡 Formula: Reference angle = ${formula}`)
+    setFeedbackType('')
+  }
+
+  if (isComplete || correctStreak >= 5) {
+    return (
+      <div className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-xl p-8 border-2 border-green-500">
+        <div className="text-center">
+          <div className="text-6xl mb-4">🎉</div>
+          <h3 className="text-3xl font-bold text-green-700 dark:text-green-400 mb-4">
+            Perfect! 5 Correct in a Row!
+          </h3>
+          <p className="text-xl text-gray-700 dark:text-gray-300">
+            You've mastered finding reference angles without hints!
+          </p>
+        </div>
+      </div>
+    )
+  }
+
+  return (
+    <div className="space-y-6">
+      <FadeInText content={section.content} onComplete={() => {}} />
+      
+      <div className="bg-white dark:bg-gray-800 rounded-xl shadow-xl p-8 border-2 border-purple-300 dark:border-purple-700">
+        {/* Progress */}
+        <div className="mb-6 text-center">
+          <div className="inline-block bg-purple-100 dark:bg-purple-900/40 rounded-full px-6 py-3">
+            <span className="text-2xl font-bold text-purple-700 dark:text-purple-400">
+              Correct Streak: {correctStreak}/5
+            </span>
+          </div>
+        </div>
+
+        {/* Question */}
+        <div className="text-center mb-8">
+          <p className="text-xl mb-4 text-gray-700 dark:text-gray-300">
+            What is the reference angle for:
+          </p>
+          <div className="text-6xl font-bold text-purple-700 dark:text-purple-400 mb-6">
+            {currentAngle}°
+          </div>
+
+          {/* Answer Input */}
+          <div className="flex items-center justify-center gap-4 mb-6">
+            <input
+              type="number"
+              value={userAnswer}
+              onChange={(e) => setUserAnswer(e.target.value)}
+              onKeyPress={(e) => e.key === 'Enter' && handleSubmit()}
+              className="w-32 h-16 text-center text-2xl font-bold border-2 border-purple-500 rounded-lg focus:ring-2 focus:ring-purple-500 focus:outline-none"
+              placeholder="?"
+              disabled={feedbackType === 'correct'}
+            />
+            <span className="text-2xl font-bold text-gray-600 dark:text-gray-400">°</span>
+          </div>
+
+          {/* Submit Button */}
+          <button
+            onClick={handleSubmit}
+            disabled={feedbackType === 'correct'}
+            className="px-8 py-4 bg-purple-600 hover:bg-purple-700 disabled:bg-gray-400 text-white font-bold rounded-lg text-xl transition-all shadow-lg hover:shadow-xl disabled:cursor-not-allowed"
+          >
+            Check Answer
+          </button>
+        </div>
+
+        {/* Hints */}
+        {feedbackType !== 'correct' && (
+          <div className="flex gap-4 justify-center mb-6">
+            <button
+              onClick={handleHint1}
+              disabled={showHint1}
+              className="px-6 py-3 bg-yellow-500 hover:bg-yellow-600 disabled:bg-gray-400 text-white font-semibold rounded-lg transition-all disabled:cursor-not-allowed"
+            >
+              {showHint1 ? '✓ Hint 1 Used' : '💡 Hint 1: Quadrant'}
+            </button>
+            <button
+              onClick={handleHint2}
+              disabled={showHint2 || !showHint1}
+              className="px-6 py-3 bg-yellow-500 hover:bg-yellow-600 disabled:bg-gray-400 text-white font-semibold rounded-lg transition-all disabled:cursor-not-allowed"
+            >
+              {showHint2 ? '✓ Hint 2 Used' : '💡 Hint 2: Formula'}
+            </button>
+          </div>
+        )}
+
+        {/* Feedback */}
+        {feedback && (
+          <div className={`text-center p-4 rounded-lg text-xl font-semibold ${
+            feedbackType === 'correct' 
+              ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 border-2 border-green-500' 
+              : feedbackType === 'incorrect'
+              ? 'bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400 border-2 border-red-500'
+              : 'bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-400 border-2 border-yellow-500'
+          }`}>
+            {feedback}
+          </div>
+        )}
+
+        {/* Note about hints */}
+        {hintsUsedThisQuestion && feedbackType !== 'correct' && (
+          <div className="text-center mt-4 text-sm text-gray-600 dark:text-gray-400">
+            ⚠️ Using hints will reset your streak
+          </div>
+        )}
+      </div>
+    </div>
+  )
 }
 
 // Sine Table Component
