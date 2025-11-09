@@ -121,10 +121,15 @@ export default function CompetitiveUnitCircle({
               r={dotRadius + 10}
               fill="transparent"
               className={disabled ? 'cursor-not-allowed' : 'cursor-pointer'}
-              onClick={() => !disabled && onPositionClick(index)}
+              onClick={() => {
+                console.log('Circle clicked! Index:', index, 'Disabled:', disabled);
+                if (!disabled) {
+                  onPositionClick(index);
+                }
+              }}
             />
             
-            {/* Visual dot */}
+            {/* Visual dot - pointer-events-none so clicks pass through to clickable area */}
             <circle
               cx={svgPos.x}
               cy={svgPos.y}
@@ -133,7 +138,7 @@ export default function CompetitiveUnitCircle({
               stroke={strokeColor}
               strokeWidth="2"
               opacity={opacity}
-              className={`transition-all duration-200 ${
+              className={`transition-all duration-200 pointer-events-none ${
                 !disabled && !showFeedback ? 'hover:opacity-100 hover:scale-110' : ''
               }`}
               style={{ transformOrigin: `${svgPos.x}px ${svgPos.y}px` }}
