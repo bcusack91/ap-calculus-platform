@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { getServerSession } from 'next-auth'
+import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 
 /**
@@ -11,7 +11,7 @@ import { prisma } from '@/lib/prisma'
  */
 export async function GET(req: NextRequest) {
   try {
-    const session = await getServerSession()
+    const session = await auth()
     
     if (!session?.user?.email) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
@@ -22,7 +22,9 @@ export async function GET(req: NextRequest) {
       include: {
         topicProgress: {
           where: {
-            topicId: { in: ['the-unit-circle'] } // Add more topics as they unlock
+            topic: {
+              slug: 'the-unit-circle'
+            }
           }
         },
         competitiveProfile: true
@@ -43,7 +45,7 @@ export async function GET(req: NextRequest) {
 
     // Check Unit Circle completion
     const unitCircleProgress = user.topicProgress.find(
-      p => p.topicId === 'the-unit-circle'
+      (p: any) => p.topic?.slug === 'the-unit-circle'
     )
 
     const hasCompletedUnitCircle = unitCircleProgress?.status === 'COMPLETED' || 
