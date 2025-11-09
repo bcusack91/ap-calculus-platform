@@ -347,7 +347,8 @@ function ReferenceAngleQuiz({ section, onComplete, isComplete }: { section: Sect
   const [attemptCount, setAttemptCount] = useState<number>(0)
   const [feedback, setFeedback] = useState<string>('')
   const [feedbackType, setFeedbackType] = useState<'correct' | 'incorrect' | 'hint' | ''>('')
-  const [hintsUsedThisQuestion, setHintsUsedThisQuestion] = useState<boolean>(false)
+  const [hint1UsedCount, setHint1UsedCount] = useState<number>(0) // Track how many times hint 1 used
+  const [hint2Used, setHint2Used] = useState<boolean>(false) // Track if hint 2 was used
   const [showingAnswer, setShowingAnswer] = useState<boolean>(false)
 
   // Generate random angle on mount and when moving to next question
@@ -364,7 +365,8 @@ function ReferenceAngleQuiz({ section, onComplete, isComplete }: { section: Sect
     setAttemptCount(0)
     setFeedback('')
     setFeedbackType('')
-    setHintsUsedThisQuestion(false)
+    setHint1UsedCount(0)
+    setHint2Used(false)
     setShowingAnswer(false)
   }
 
@@ -403,10 +405,17 @@ function ReferenceAngleQuiz({ section, onComplete, isComplete }: { section: Sect
 
     if (Math.abs(userNum - correctAnswer) < 0.01) {
       // Correct!
-      if (!hintsUsedThisQuestion) {
+      // Only reset streak if hint 2 was used OR hint 1 was used more than once
+      const shouldResetStreak = hint2Used || hint1UsedCount > 1
+      
+      if (!shouldResetStreak) {
         const newStreak = correctStreak + 1
         setCorrectStreak(newStreak)
-        setFeedback(`✅ Correct! Streak: ${newStreak}/5`)
+        if (hint1UsedCount === 1) {
+          setFeedback(`✅ Correct! Streak: ${newStreak}/5 (used hint 1 once - no penalty)`)
+        } else {
+          setFeedback(`✅ Correct! Streak: ${newStreak}/5`)
+        }
         setFeedbackType('correct')
         
         if (newStreak >= 5) {
@@ -419,7 +428,11 @@ function ReferenceAngleQuiz({ section, onComplete, isComplete }: { section: Sect
           }, 1500)
         }
       } else {
-        setFeedback('✅ Correct, but you used hints. Streak reset to 0.')
+        if (hint2Used) {
+          setFeedback('✅ Correct, but you used hint 2. Streak reset to 0.')
+        } else {
+          setFeedback('✅ Correct, but you used hint 1 multiple times. Streak reset to 0.')
+        }
         setFeedbackType('correct')
         setCorrectStreak(0)
         setTimeout(() => {
@@ -433,19 +446,21 @@ function ReferenceAngleQuiz({ section, onComplete, isComplete }: { section: Sect
       
       if (newAttemptCount === 1) {
         // First incorrect attempt - show Hint 1
-        setHintsUsedThisQuestion(true)
+        setHint1UsedCount(prev => prev + 1)
         const quadrant = getQuadrant(currentAngle)
         setFeedback(`❌ Incorrect. Hint: ${currentAngle}° is in Quadrant ${quadrant === 1 ? 'I' : quadrant === 2 ? 'II' : quadrant === 3 ? 'III' : 'IV'}. Try again!`)
         setFeedbackType('hint')
         setUserAnswer('')
       } else if (newAttemptCount === 2) {
         // Second incorrect attempt - show Hint 2
+        setHint1UsedCount(prev => prev + 1)
         const formula = getQuadrantFormula(currentAngle)
         setFeedback(`❌ Incorrect again. Hint: Use the formula: ${formula}. One more try!`)
         setFeedbackType('hint')
         setUserAnswer('')
       } else {
         // Third incorrect attempt - show answer and move to next
+        setHint2Used(true)
         setFeedback(`❌ The correct answer is ${correctAnswer}°. Let's try another one.`)
         setFeedbackType('incorrect')
         setCorrectStreak(0)
@@ -544,7 +559,15 @@ function ReferenceAngleQuiz({ section, onComplete, isComplete }: { section: Sect
         {/* Attempt counter */}
         {attemptCount > 0 && !showingAnswer && feedbackType !== 'correct' && (
           <div className="text-center mt-4 text-sm text-gray-600 dark:text-gray-400">
-            Attempt {attemptCount}/3 • {hintsUsedThisQuestion ? 'Using hints will reset your streak' : 'Get it right for your streak!'}
+            Attempt {attemptCount}/3 • {
+              hint2Used 
+                ? 'Used hint 2 - streak will reset' 
+                : hint1UsedCount > 1 
+                ? 'Used hint 1 multiple times - streak will reset'
+                : hint1UsedCount === 1
+                ? 'Used hint 1 once - no penalty!'
+                : 'Get it right for your streak!'
+            }
           </div>
         )}
       </div>
