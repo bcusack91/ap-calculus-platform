@@ -53,7 +53,34 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
     if (!session?.user) return // Only save if user is logged in
     
     try {
-      const masteryLevel = lessonPart === 4 ? 1.0 : (lessonPart - 1) * 0.25 + (completedSections.size / sections.length) * 0.25
+      // Calculate mastery level based on overall progress
+      let masteryLevel = 0
+      
+      if (lessonPart === 4 && completedSections.size === sections.length) {
+        // Completed all of Part 4 = full mastery
+        masteryLevel = 1.0
+      } else if (lessonPart === 4) {
+        // In Part 4 but not complete
+        masteryLevel = 0.75 + (completedSections.size / sections.length) * 0.25
+      } else if (lessonPart === 3 && completedSections.size === sections.length) {
+        // Completed all of Part 3
+        masteryLevel = 0.75
+      } else if (lessonPart === 3) {
+        // In Part 3 but not complete
+        masteryLevel = 0.5 + (completedSections.size / sections.length) * 0.25
+      } else if (lessonPart === 2 && completedSections.size === sections.length) {
+        // Completed all of Part 2
+        masteryLevel = 0.5
+      } else if (lessonPart === 2) {
+        // In Part 2 but not complete
+        masteryLevel = 0.25 + (completedSections.size / sections.length) * 0.25
+      } else if (lessonPart === 1 && completedSections.size === sections.length) {
+        // Completed all of Part 1
+        masteryLevel = 0.25
+      } else {
+        // In Part 1 but not complete
+        masteryLevel = (completedSections.size / sections.length) * 0.25
+      }
       
       await fetch('/api/progress/save', {
         method: 'POST',
@@ -194,8 +221,32 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
         setCompletedSections(new Set())
         window.scrollTo({ top: 0, behavior: 'smooth' })
       } else if (lessonPart === 4) {
-        // On final section of part 4, go to competitive mode
-        router.push('/competitive')
+        // On final section of part 4, save progress then go to competitive mode
+        const finalSave = async () => {
+          if (session?.user) {
+            try {
+              // Mark all sections as complete and save with mastery 1.0
+              const allSections = new Set(sections.map((_, i) => i))
+              setCompletedSections(allSections)
+              
+              await fetch('/api/progress/save', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                  topicSlug,
+                  lessonPart: 4,
+                  completedSections: Array.from(allSections),
+                  masteryLevel: 1.0, // Full mastery
+                  timeSpent: 0,
+                }),
+              })
+            } catch (error) {
+              console.error('Failed to save final progress:', error)
+            }
+          }
+          router.push('/competitive')
+        }
+        finalSave()
       } else {
         // On final page of other parts, mark as 100% complete
         setCompletedSections(new Set(sections.map((_, i) => i)))
