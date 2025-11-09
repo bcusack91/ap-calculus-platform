@@ -17,14 +17,21 @@ export async function GET(req: NextRequest) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
+    // First, get the Unit Circle topic
+    const unitCircleTopic = await prisma.topic.findUnique({
+      where: { slug: 'the-unit-circle' }
+    })
+
+    if (!unitCircleTopic) {
+      return NextResponse.json({ error: 'Unit Circle topic not found' }, { status: 404 })
+    }
+
     const user = await prisma.user.findUnique({
       where: { email: session.user.email },
       include: {
         topicProgress: {
           where: {
-            topic: {
-              slug: 'the-unit-circle'
-            }
+            topicId: unitCircleTopic.id
           }
         },
         competitiveProfile: true
@@ -44,9 +51,7 @@ export async function GET(req: NextRequest) {
     }
 
     // Check Unit Circle completion
-    const unitCircleProgress = user.topicProgress.find(
-      (p: any) => p.topic?.slug === 'the-unit-circle'
-    )
+    const unitCircleProgress = user.topicProgress[0] // Should only be one since we filtered by topicId
 
     const hasCompletedUnitCircle = unitCircleProgress?.status === 'COMPLETED' || 
                                     unitCircleProgress?.status === 'MASTERED'
