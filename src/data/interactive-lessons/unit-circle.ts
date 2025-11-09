@@ -293,13 +293,42 @@ That's it! You now know the entire first quadrant of the unit circle! 🎉
       content: `
 **🌟 Lesson Complete! 🌟**
 
-Congratulations! You've mastered:
-- The counting method for memorizing unit circle values
-- The five key angles: 0°, 30°, 45°, 60°, 90°
-- "Sin UP" - Sine values increase from 0 to 1
-- "COAST DOWN" - Cosine values decrease from 1 to 0
+---
 
-Ready to practice on your own? Try the independent practice mode to reinforce what you've learned!
+Congratulations! You've mastered the essential skills for memorizing the unit circle:
+
+---
+
+**✅ Key Takeaways:**
+
+**1. The Counting Method**
+- Count 0, 1, 2, 3, 4
+- Take square roots
+- Divide by 2
+
+---
+
+**2. The Five Key Angles**
+
+$$0°, \\quad 30°, \\quad 45°, \\quad 60°, \\quad 90°$$
+
+---
+
+**3. The Sin UP Pattern** ⬆️
+
+Sine values **increase** from $0$ to $1$ as angles go from $0°$ to $90°$
+
+---
+
+**4. The COAST DOWN Pattern** ⬇️
+
+Cosine values **decrease** from $1$ to $0$ as angles go from $0°$ to $90°$
+
+---
+
+**🎯 What's Next?**
+
+Ready to practice on your own? Try the independent practice mode to reinforce what you've learned and master these patterns!
       `
     }
   ]
