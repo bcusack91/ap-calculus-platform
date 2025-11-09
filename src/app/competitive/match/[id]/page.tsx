@@ -16,6 +16,7 @@ interface Question {
   type: 'find-angle' | 'find-coordinate';
   target: UnitCirclePosition;
   prompt: string;
+  answerIndex: number; // Index in UNIT_CIRCLE_POSITIONS array
 }
 
 interface MatchState {
@@ -71,6 +72,8 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
   const [selectedPosition, setSelectedPosition] = useState<number | null>(null);
   const [feedback, setFeedback] = useState<'correct' | 'incorrect' | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [wrongAttempt, setWrongAttempt] = useState(false); // Track if student made a wrong attempt
+  const [correctAnswerIndex, setCorrectAnswerIndex] = useState<number | null>(null); // Store correct answer after wrong attempt
 
   // Fetch initial match state
   useEffect(() => {
@@ -104,15 +107,22 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
   };
 
   const handlePositionClick = async (positionIndex: number) => {
-    if (!matchState || isSubmitting || feedback) return;
+    console.log('Position clicked:', positionIndex);
+    
+    if (!matchState || isSubmitting) return;
     if (matchState.status === 'COMPLETED') return;
 
     const isPlayer1 = currentUserId === matchState.player1Id;
     const currentQuestion = matchState.questions[matchState.currentQuestionIndex];
     
+    console.log('Current question:', currentQuestion);
+    console.log('Clicked position index:', positionIndex);
+    console.log('Correct answer index:', currentQuestion.answerIndex);
+    
     // Check if this player already answered this question
     const playerAnswers = isPlayer1 ? matchState.player1Answers : matchState.player2Answers;
-    if (playerAnswers[matchState.currentQuestionIndex] !== null) {
+    if (playerAnswers[matchState.currentQuestionIndex] !== null && !wrongAttempt) {
+      console.log('Already answered this question');
       return; // Already answered
     }
 
@@ -126,25 +136,52 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
         body: JSON.stringify({
           questionIndex: matchState.currentQuestionIndex,
           answerIndex: positionIndex,
+          isSecondAttempt: wrongAttempt, // Tell server this is a retry for half credit
         }),
       });
 
       const data = await response.json();
+      console.log('Answer response:', data);
       
       if (data.correct) {
         setFeedback('correct');
+        setWrongAttempt(false);
+        setCorrectAnswerIndex(null);
         // Refresh state to see if we got the point
         await fetchMatchState();
+        
+        // Clear feedback after 1.5 seconds and move on
+        setTimeout(() => {
+          setFeedback(null);
+          setSelectedPosition(null);
+          setIsSubmitting(false);
+        }, 1500);
       } else {
         setFeedback('incorrect');
+        
+        if (!wrongAttempt) {
+          // First wrong attempt - show correct answer and allow retry
+          setWrongAttempt(true);
+          setCorrectAnswerIndex(currentQuestion.answerIndex);
+          
+          // Clear the red feedback after 1 second but keep the question active
+          setTimeout(() => {
+            setFeedback(null);
+            setIsSubmitting(false);
+          }, 1000);
+        } else {
+          // Second wrong attempt - move on without points
+          setWrongAttempt(false);
+          setCorrectAnswerIndex(null);
+          await fetchMatchState();
+          
+          setTimeout(() => {
+            setFeedback(null);
+            setSelectedPosition(null);
+            setIsSubmitting(false);
+          }, 1500);
+        }
       }
-
-      // Clear feedback after 1 second
-      setTimeout(() => {
-        setFeedback(null);
-        setSelectedPosition(null);
-        setIsSubmitting(false);
-      }, 1000);
     } catch (error) {
       console.error('Error submitting answer:', error);
       setIsSubmitting(false);
@@ -339,14 +376,21 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
 
         {/* Unit Circle */}
         <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8">
+          {wrongAttempt && correctAnswerIndex !== null && (
+            <div className="text-center mb-4 p-4 bg-yellow-100 dark:bg-yellow-900/30 rounded-lg">
+              <p className="text-yellow-800 dark:text-yellow-200 font-semibold">
+                Try again for half credit! The correct answer is highlighted in green.
+              </p>
+            </div>
+          )}
           <div className="flex justify-center">
             <CompetitiveUnitCircle
               positions={UNIT_CIRCLE_POSITIONS}
               onPositionClick={handlePositionClick}
               selectedPosition={selectedPosition}
-              correctPosition={null}
-              showFeedback={feedback !== null}
-              disabled={isSubmitting || hasAnswered}
+              correctPosition={wrongAttempt ? correctAnswerIndex : null}
+              showFeedback={feedback !== null || wrongAttempt}
+              disabled={isSubmitting || (hasAnswered && !wrongAttempt)}
             />
           </div>
         </div>

@@ -16,7 +16,9 @@ export async function POST(
 
     const { id: matchId } = await params;
     const body = await request.json();
-    const { questionIndex, answerIndex } = body;
+    const { questionIndex, answerIndex, isSecondAttempt = false } = body;
+
+    console.log('Answer submission:', { matchId, questionIndex, answerIndex, isSecondAttempt });
 
     // Fetch match
     const match = await prisma.competitiveMatch.findUnique({
@@ -58,43 +60,68 @@ export async function POST(
     const currentQuestionIndex = gameData?.currentQuestionIndex || 0;
     const player1Answers = gameData?.player1Answers || Array(questions.length).fill(null);
     const player2Answers = gameData?.player2Answers || Array(questions.length).fill(null);
+    const player1Attempts = gameData?.player1Attempts || Array(questions.length).fill(0);
+    const player2Attempts = gameData?.player2Attempts || Array(questions.length).fill(0);
     let player1Score = match.player1Score;
     let player2Score = match.player2Score;
+
+    console.log('Game data:', { currentQuestionIndex, questionIndex, questions: questions.length });
 
     // Check if question index matches
     if (questionIndex !== currentQuestionIndex) {
       return NextResponse.json({ error: 'Invalid question index' }, { status: 400 });
     }
 
-    // Check if player already answered this question
+    // Track attempts
+    const playerAttempts = isPlayer1 ? player1Attempts : player2Attempts;
+    const currentAttempts = playerAttempts[questionIndex] || 0;
+    
+    console.log('Current attempts for this question:', currentAttempts);
+
+    // Check if player already answered this question correctly
     const playerAnswers = isPlayer1 ? player1Answers : player2Answers;
-    if (playerAnswers[questionIndex] !== null) {
+    if (playerAnswers[questionIndex] !== null && currentAttempts >= 2) {
       return NextResponse.json({ error: 'Already answered' }, { status: 400 });
+    }
+
+    // Increment attempt count
+    if (isPlayer1) {
+      player1Attempts[questionIndex] = currentAttempts + 1;
+    } else {
+      player2Attempts[questionIndex] = currentAttempts + 1;
     }
 
     // Check answer
     const currentQuestion = questions[questionIndex];
-    const isCorrect = checkAnswer(answerIndex, currentQuestion.target);
+    console.log('Checking answer:', { answerIndex, correctIndex: currentQuestion.answerIndex });
+    const isCorrect = answerIndex === currentQuestion.answerIndex;
 
-    // Record answer
-    if (isPlayer1) {
-      player1Answers[questionIndex] = answerIndex;
-    } else {
-      player2Answers[questionIndex] = answerIndex;
+    console.log('Answer is correct:', isCorrect);
+
+    // Record answer (only if correct, otherwise allow retry)
+    if (isCorrect) {
+      if (isPlayer1) {
+        player1Answers[questionIndex] = answerIndex;
+      } else {
+        player2Answers[questionIndex] = answerIndex;
+      }
     }
 
-    // Award point if correct AND opponent hasn't answered correctly yet
+    // Award points based on attempts
     const opponentAnswers = isPlayer1 ? player2Answers : player1Answers;
-    const opponentAnsweredCorrectly = opponentAnswers[questionIndex] !== null && 
-      checkAnswer(opponentAnswers[questionIndex], currentQuestion.target);
+    const opponentAnsweredCorrectly = opponentAnswers[questionIndex] !== null;
 
     if (isCorrect && !opponentAnsweredCorrectly) {
-      // This player gets the point!
+      // Award full point for first attempt, half point for second attempt
+      const pointValue = currentAttempts === 1 ? 1 : 0.5;
+      
       if (isPlayer1) {
-        player1Score += 1;
+        player1Score += pointValue;
       } else {
-        player2Score += 1;
+        player2Score += pointValue;
       }
+      
+      console.log('Points awarded:', pointValue);
     }
 
     // Check if both players have answered - if so, move to next question
@@ -151,6 +178,10 @@ export async function POST(
             currentQuestionIndex: newQuestionIndex,
             player1Answers,
             player2Answers,
+            player1Attempts,
+            player2Attempts,
+            ...(gameData?.aiDifficulty && { aiDifficulty: gameData.aiDifficulty }),
+            ...(gameData?.isPracticeMatch && { isPracticeMatch: gameData.isPracticeMatch }),
           },
           player1MMRAfter,
           player2MMRAfter,
@@ -245,6 +276,8 @@ export async function POST(
             currentQuestionIndex: newQuestionIndex,
             player1Answers,
             player2Answers,
+            player1Attempts,
+            player2Attempts,
             ...(gameData?.aiDifficulty && { aiDifficulty: gameData.aiDifficulty }),
             ...(gameData?.isPracticeMatch && { isPracticeMatch: gameData.isPracticeMatch }),
           },

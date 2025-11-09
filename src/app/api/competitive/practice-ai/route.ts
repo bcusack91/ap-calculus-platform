@@ -91,6 +91,8 @@ export async function POST(req: NextRequest) {
           currentQuestionIndex: 0,
           player1Answers: Array(questions.length).fill(null),
           player2Answers: Array(questions.length).fill(null),
+          player1Attempts: Array(questions.length).fill(0),
+          player2Attempts: Array(questions.length).fill(0),
           aiDifficulty, // Store AI difficulty for answer simulation
           isPracticeMatch: true, // Flag to indicate this is practice
         },
