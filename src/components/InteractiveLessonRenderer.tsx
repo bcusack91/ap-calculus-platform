@@ -99,6 +99,12 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
       setCompletedSections(prev => new Set([...prev, currentSectionIndex]))
     }
     
+    // Special case: Part 2 Section 6 (last section) - enter practice mode instead of advancing
+    if (lessonPart === 2 && currentSectionIndex === sections.length - 1) {
+      setShowPracticeMode(true)
+      return
+    }
+    
     if (currentSectionIndex < sections.length - 1) {
       setCurrentSectionIndex(currentSectionIndex + 1)
       window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -251,12 +257,14 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
         <button
           onClick={handleNext}
           disabled={
-            (currentSectionIndex === sections.length - 1 && lessonPart !== 3 && lessonPart !== 4) || 
+            (currentSectionIndex === sections.length - 1 && lessonPart !== 2 && lessonPart !== 3 && lessonPart !== 4) || 
             !canProceedToNext
           }
           className="px-6 py-3 rounded-lg font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700"
         >
-          {currentSectionIndex === sections.length - 1 && lessonPart === 3 
+          {currentSectionIndex === sections.length - 1 && lessonPart === 2
+            ? '🎯 Practice Independently →'
+            : currentSectionIndex === sections.length - 1 && lessonPart === 3 
             ? 'Continue to Part 4 →' 
             : currentSectionIndex === sections.length - 1 && lessonPart === 4
             ? '🎮 Enter Competitive Mode →'
@@ -292,16 +300,6 @@ function SectionRenderer({
     return (
       <div className="prose prose-lg max-w-none">
         <FadeInText content={section.content} onComplete={onComplete} />
-        {isLastSection && onStartPractice && (
-          <div className="mt-8 flex flex-col gap-4">
-            <button
-              onClick={onStartPractice}
-              className="px-10 py-5 bg-gradient-to-r from-green-500 to-emerald-600 text-white text-xl rounded-xl font-bold hover:from-green-600 hover:to-emerald-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
-            >
-              🎯 Practice Independently
-            </button>
-          </div>
-        )}
       </div>
     )
   }
@@ -2510,6 +2508,7 @@ function Part2PracticeMode({ onBack, onComplete }: { onBack: () => void, onCompl
   const [thetaValidation, setThetaValidation] = useState<(boolean | null)[]>([null, null, null, null, null])
   const [sineValidation, setSineValidation] = useState<(boolean | null)[]>([null, null, null, null, null])
   const [cosineValidation, setCosineValidation] = useState<(boolean | null)[]>([null, null, null, null, null])
+  const [errorMade, setErrorMade] = useState(false) // Track if any errors were made during this attempt
   
   const thetaRefs = useRef<(HTMLInputElement | null)[]>([])
   const sineRefs = useRef<(HTMLInputElement | null)[]>([])
@@ -2573,6 +2572,12 @@ function Part2PracticeMode({ onBack, onComplete }: { onBack: () => void, onCompl
     
     setValidation(validation)
 
+    // Track if any errors in this row
+    const hasErrors = validation.some(isCorrect => isCorrect === false)
+    if (hasErrors) {
+      setErrorMade(true) // Mark that an error was made during this attempt
+    }
+
     // Check if all are correct
     const allCorrect = validation.every(isCorrect => isCorrect === true)
 
@@ -2627,6 +2632,7 @@ function Part2PracticeMode({ onBack, onComplete }: { onBack: () => void, onCompl
     setThetaValidation([null, null, null, null, null])
     setSineValidation([null, null, null, null, null])
     setCosineValidation([null, null, null, null, null])
+    setErrorMade(false) // Reset error tracking for new attempt
     // Focus first input after a brief delay
     setTimeout(() => {
       thetaRefs.current[0]?.focus()
@@ -2847,13 +2853,24 @@ function Part2PracticeMode({ onBack, onComplete }: { onBack: () => void, onCompl
 
         {/* Completion Message */}
         {currentRow === 'complete' && (
-          <div className="text-center p-12 bg-gradient-to-r from-green-100 to-blue-100 dark:from-green-900/30 dark:to-blue-900/30 rounded-xl border-2 border-green-500 mt-8">
-            <div className="text-6xl mb-4">🎉</div>
-            <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
-              Excellent! You've completed the table!
+          <div className={`text-center p-12 rounded-xl border-2 mt-8 ${
+            errorMade 
+              ? 'bg-gradient-to-r from-yellow-100 to-orange-100 dark:from-yellow-900/30 dark:to-orange-900/30 border-orange-500'
+              : 'bg-gradient-to-r from-green-100 to-blue-100 dark:from-green-900/30 dark:to-blue-900/30 border-green-500'
+          }`}>
+            <div className="text-6xl mb-4">{errorMade ? '📝' : '🎉'}</div>
+            <h2 className={`text-4xl font-bold mb-4 bg-gradient-to-r ${
+              errorMade 
+                ? 'from-orange-600 to-red-600'
+                : 'from-green-600 to-blue-600'
+            } bg-clip-text text-transparent`}>
+              {errorMade ? 'Some errors were found!' : 'Perfect! Zero errors!'}
             </h2>
             <p className="text-xl text-foreground mb-6">
-              You've successfully filled in all the unit circle values for the first quadrant!
+              {errorMade 
+                ? 'You completed the table, but some answers were incorrect. Please try again to master the unit circle!'
+                : "Excellent work! You've completed the table with zero errors. You're ready to continue to Part 3!"
+              }
             </p>
             <div className="flex gap-4 justify-center flex-wrap">
               <button
@@ -2868,12 +2885,12 @@ function Part2PracticeMode({ onBack, onComplete }: { onBack: () => void, onCompl
               >
                 Return to Lesson
               </button>
-              {onComplete && (
+              {onComplete && !errorMade && (
                 <button
                   onClick={onComplete}
                   className="px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white font-bold rounded-lg text-xl transition-all shadow-lg hover:shadow-xl"
                 >
-                  Continue →
+                  Continue to Part 3 →
                 </button>
               )}
             </div>
