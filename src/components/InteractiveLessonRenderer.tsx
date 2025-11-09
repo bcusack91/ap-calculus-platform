@@ -180,8 +180,15 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
       setCurrentSectionIndex(currentSectionIndex + 1)
       window.scrollTo({ top: 0, behavior: 'smooth' })
     } else {
-      // On final section of part 3, move to part 4
-      if (lessonPart === 3) {
+      // On final section, advance to next part or complete
+      if (lessonPart === 1) {
+        // Move to part 2 after completing part 1
+        updateLessonPart(2)
+        setCurrentSectionIndex(0)
+        setCompletedSections(new Set())
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+      } else if (lessonPart === 3) {
+        // Move to part 4 after completing part 3
         updateLessonPart(4)
         setCurrentSectionIndex(0)
         setCompletedSections(new Set())
@@ -328,12 +335,14 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
         <button
           onClick={handleNext}
           disabled={
-            (currentSectionIndex === sections.length - 1 && lessonPart !== 2 && lessonPart !== 3 && lessonPart !== 4) || 
+            (currentSectionIndex === sections.length - 1 && lessonPart !== 1 && lessonPart !== 2 && lessonPart !== 3 && lessonPart !== 4) || 
             !canProceedToNext
           }
           className="px-6 py-3 rounded-lg font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700"
         >
-          {currentSectionIndex === sections.length - 1 && lessonPart === 2
+          {currentSectionIndex === sections.length - 1 && lessonPart === 1
+            ? 'On to Part 2 →'
+            : currentSectionIndex === sections.length - 1 && lessonPart === 2
             ? '🎯 Practice Independently →'
             : currentSectionIndex === sections.length - 1 && lessonPart === 3 
             ? 'Continue to Part 4 →' 
