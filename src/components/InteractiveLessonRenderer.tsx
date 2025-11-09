@@ -8,6 +8,7 @@ import remarkMath from 'remark-math'
 import remarkGfm from 'remark-gfm'
 import rehypeKatex from 'rehype-katex'
 import { useSearchParams, useRouter } from 'next/navigation'
+import { useSession } from 'next-auth/react'
 import katex from 'katex'
 
 interface Section {
@@ -24,6 +25,7 @@ interface InteractiveLessonRendererProps {
 export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLessonRendererProps) {
   const searchParams = useSearchParams()
   const router = useRouter()
+  const { data: session } = useSession()
   
   // Get initial part from URL parameter (e.g., ?part=2)
   const urlPart = searchParams.get('part')
@@ -33,6 +35,7 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0)
   const [completedSections, setCompletedSections] = useState<Set<number>>(new Set())
   const [showPracticeMode, setShowPracticeMode] = useState(false)
+  const [progressLoaded, setProgressLoaded] = useState(false)
 
   // Update URL when lesson part changes
   const updateLessonPart = (newPart: 1 | 2 | 3 | 4) => {
@@ -44,6 +47,74 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
     url.searchParams.set('part', newPart.toString())
     window.history.pushState({}, '', url.toString())
   }
+
+  // Save progress to database
+  const saveProgress = async () => {
+    if (!session?.user) return // Only save if user is logged in
+    
+    try {
+      const masteryLevel = lessonPart === 4 ? 1.0 : (lessonPart - 1) * 0.25 + (completedSections.size / sections.length) * 0.25
+      
+      await fetch('/api/progress/save', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          topicSlug,
+          lessonPart,
+          completedSections: Array.from(completedSections),
+          masteryLevel,
+          timeSpent: 0, // Could track actual time if needed
+        }),
+      })
+    } catch (error) {
+      console.error('Failed to save progress:', error)
+    }
+  }
+
+  // Load progress from database on mount
+  useEffect(() => {
+    const loadProgress = async () => {
+      if (!session?.user || progressLoaded) return
+      
+      try {
+        const response = await fetch(`/api/progress/load?topicSlug=${topicSlug}`)
+        const data = await response.json()
+        
+        if (data.exists && data.progress) {
+          // Determine lesson part from mastery level
+          const mastery = data.progress.masteryLevel
+          let part: 1 | 2 | 3 | 4 = 1
+          
+          if (mastery >= 0.75) {
+            part = 4
+          } else if (mastery >= 0.5) {
+            part = 3
+          } else if (mastery >= 0.25) {
+            part = 2
+          }
+          
+          // Only update if not overridden by URL parameter
+          if (!urlPart) {
+            setLessonPart(part)
+          }
+        }
+        
+        setProgressLoaded(true)
+      } catch (error) {
+        console.error('Failed to load progress:', error)
+        setProgressLoaded(true)
+      }
+    }
+    
+    loadProgress()
+  }, [session, topicSlug, progressLoaded, urlPart])
+
+  // Save progress whenever it changes
+  useEffect(() => {
+    if (progressLoaded && completedSections.size > 0) {
+      saveProgress()
+    }
+  }, [lessonPart, completedSections, progressLoaded])
 
   // Get lesson data based on topic and part
   const lessonData = topicSlug === 'the-unit-circle' 

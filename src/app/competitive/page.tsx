@@ -2,9 +2,11 @@
 
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
+import { useSession } from 'next-auth/react'
 
 export default function CompetitivePage() {
   const router = useRouter()
+  const { data: session, status } = useSession()
   const [loading, setLoading] = useState(true)
   const [unlocked, setUnlocked] = useState(false)
   const [profile, setProfile] = useState<any>(null)
@@ -12,9 +14,18 @@ export default function CompetitivePage() {
   const [queueStatus, setQueueStatus] = useState<any>(null)
   const [selectedMode, setSelectedMode] = useState('SPEED_RACE')
 
+  // Redirect to signin if not authenticated
   useEffect(() => {
-    checkUnlock()
-  }, [])
+    if (status === 'unauthenticated') {
+      router.push('/auth/signin?callbackUrl=/competitive')
+    }
+  }, [status, router])
+
+  useEffect(() => {
+    if (session) {
+      checkUnlock()
+    }
+  }, [session])
 
   useEffect(() => {
     if (inQueue) {
@@ -92,12 +103,16 @@ export default function CompetitivePage() {
     }
   }
 
-  if (loading) {
+  if (status === 'loading' || loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-2xl">Loading...</div>
       </div>
     )
+  }
+
+  if (!session) {
+    return null // Will redirect in useEffect
   }
 
   if (!unlocked) {
