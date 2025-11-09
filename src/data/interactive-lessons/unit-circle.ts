@@ -264,21 +264,23 @@ $$0, \\quad \\frac{1}{2}, \\quad \\frac{\\sqrt{2}}{2}, \\quad \\frac{\\sqrt{3}}{
 
 **Step 5: Match with the angles**
 
-| Angle | Value |
-|-------|-------|
-| 0° | $0$ |
-| 30° | $\\frac{1}{2}$ |
-| 45° | $\\frac{\\sqrt{2}}{2}$ |
-| 60° | $\\frac{\\sqrt{3}}{2}$ |
-| 90° | $1$ |
+Now see how these values become sine and cosine:
+
+| Angle | sin (UP ⬆️) | cos (DOWN ⬇️) |
+|-------|------------|---------------|
+| **0°** | $0$ | $1$ |
+| **30°** | $\\frac{1}{2}$ | $\\frac{\\sqrt{3}}{2}$ |
+| **45°** | $\\frac{\\sqrt{2}}{2}$ | $\\frac{\\sqrt{2}}{2}$ |
+| **60°** | $\\frac{\\sqrt{3}}{2}$ | $\\frac{1}{2}$ |
+| **90°** | $1$ | $0$ |
 
 ---
 
-**Now apply the pattern:**
+**Remember the pattern:**
 
-✅ **For Sine: "Sin UP"** - Use the values going **up** from $0$ to $1$
+✅ **For Sine: "Sin UP"** - Values go **up** from $0$ to $1$ (reading down the table)
 
-✅ **For Cosine: "COAST DOWN"** - Use the values going **down** from $1$ to $0$
+✅ **For Cosine: "COAST DOWN"** - Values go **down** from $1$ to $0$ (reading down the table)
 
 ---
 
