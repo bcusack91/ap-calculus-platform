@@ -5,6 +5,7 @@ import { unitCircleLessonData, unitCircleAnglesLessonData, unitCircleConceptLess
 import { fullUnitCircleLessonData } from '@/data/interactive-lessons/full-unit-circle'
 import ReactMarkdown from 'react-markdown'
 import remarkMath from 'remark-math'
+import remarkGfm from 'remark-gfm'
 import rehypeKatex from 'rehype-katex'
 import { useSearchParams, useRouter } from 'next/navigation'
 import katex from 'katex'
@@ -1331,7 +1332,7 @@ function FadeInText({ content, onComplete }: { content: string; onComplete?: () 
             return (
               <ReactMarkdown
                 key={index}
-                remarkPlugins={[remarkMath]}
+                remarkPlugins={[remarkMath, remarkGfm]}
                 rehypePlugins={[rehypeKatex]}
                 components={{
                   p: ({ children }) => <p className="text-xl leading-relaxed mb-4">{children}</p>,
@@ -1360,7 +1361,7 @@ function FadeInText({ content, onComplete }: { content: string; onComplete?: () 
     return (
       <div className="animate-fade-in prose prose-lg max-w-none">
         <ReactMarkdown
-          remarkPlugins={[remarkMath]}
+          remarkPlugins={[remarkMath, remarkGfm]}
           rehypePlugins={[rehypeKatex]}
           components={{
             p: ({ children }) => <p className="text-xl leading-relaxed mb-4">{children}</p>,
