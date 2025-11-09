@@ -81,26 +81,27 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
     // Check if prompt contains LaTeX (backslashes or \left, \right, \frac, etc.)
     if (prompt.includes('\\')) {
       try {
-        // Extract the coordinate part and render it with KaTeX
-        const match = prompt.match(/coordinate (.+)$/);
+        // Extract the coordinate part - everything between "coordinate " and end
+        const match = prompt.match(/coordinate\s+(.+)$/);
         if (match) {
-          const coordLatex = match[1];
+          const coordLatex = match[1].trim();
           const rendered = katex.renderToString(coordLatex, {
             throwOnError: false,
             displayMode: false,
           });
           return (
-            <span>
-              Click the position for coordinate{' '}
+            <div>
+              <span>Click the position for coordinate </span>
               <span dangerouslySetInnerHTML={{ __html: rendered }} />
-            </span>
+            </div>
           );
         }
       } catch (e) {
         console.error('KaTeX render error:', e);
+        console.error('Prompt:', prompt);
       }
     }
-    return prompt;
+    return <span>{prompt}</span>;
   };
 
   // Fetch initial match state
