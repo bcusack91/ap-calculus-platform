@@ -22,6 +22,8 @@ model User {
   stripeCurrentPeriodEnd DateTime?
   createdAt              DateTime            @default(now())
   updatedAt              DateTime            @updatedAt
+  schoolId               String?
+  classCode              String?
   accounts               Account[]
   diagnosticTests        DiagnosticTest[]
   flashcardProgress      FlashcardProgress[]
@@ -29,6 +31,11 @@ model User {
   quizAttempts           QuizAttempt[]
   sessions               Session[]
   topicProgress          TopicProgress[]
+  school                 School?             @relation(fields: [schoolId], references: [id])
+  competitiveProfile     CompetitiveProfile?
+  matchesAsPlayer1       CompetitiveMatch[]  @relation("Player1Matches")
+  matchesAsPlayer2       CompetitiveMatch[]  @relation("Player2Matches")
+  mmrHistory             MMRHistory[]
 }
 
 model Account {
@@ -308,4 +315,131 @@ enum ProgressStatus {
   IN_PROGRESS
   COMPLETED
   MASTERED
+}
+
+// Competitive Mode Models
+
+model School {
+  id        String   @id @default(cuid())
+  name      String
+  district  String?
+  state     String?
+  country   String   @default("USA")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  users     User[]
+
+  @@index([name])
+}
+
+model CompetitiveProfile {
+  id                      String   @id @default(cuid())
+  userId                  String   @unique
+  overallMMR              Int      @default(1000)
+  unitCircleMMR           Int      @default(1000)
+  derivativesMMR          Int      @default(1000)
+  integralsMMR            Int      @default(1000)
+  limitsMMR               Int      @default(1000)
+  totalMatches            Int      @default(0)
+  wins                    Int      @default(0)
+  losses                  Int      @default(0)
+  winStreak               Int      @default(0)
+  bestWinStreak           Int      @default(0)
+  averageAccuracy         Float    @default(0)
+  averageSpeed            Float    @default(0)
+  rank                    String   @default("Bronze")
+  lastMatchAt             DateTime?
+  competitiveModeUnlocked Boolean  @default(false)
+  createdAt               DateTime @default(now())
+  updatedAt               DateTime @updatedAt
+  user                    User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([overallMMR])
+  @@index([rank])
+}
+
+model CompetitiveMatch {
+  id             String          @id @default(cuid())
+  player1Id      String
+  player2Id      String
+  gameMode       CompetitiveMode
+  topicSlug      String
+  player1Score   Int             @default(0)
+  player2Score   Int             @default(0)
+  player1Time    Int?
+  player2Time    Int?
+  winnerId       String?
+  player1MMRBefore Int
+  player2MMRBefore Int
+  player1MMRAfter  Int
+  player2MMRAfter  Int
+  status         MatchStatus     @default(PENDING)
+  startedAt      DateTime        @default(now())
+  completedAt    DateTime?
+  player1        User            @relation("Player1Matches", fields: [player1Id], references: [id], onDelete: Cascade)
+  player2        User            @relation("Player2Matches", fields: [player2Id], references: [id], onDelete: Cascade)
+
+  @@index([status])
+  @@index([startedAt])
+  @@index([player1Id])
+  @@index([player2Id])
+}
+
+model MMRHistory {
+  id           String          @id @default(cuid())
+  userId       String
+  matchId      String?
+  topicSlug    String
+  mmrBefore    Int
+  mmrAfter     Int
+  mmrChange    Int
+  gameMode     CompetitiveMode
+  performance  String?
+  timestamp    DateTime        @default(now())
+  user         User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([timestamp])
+}
+
+model Leaderboard {
+  id         String          @id @default(cuid())
+  scope      LeaderboardScope
+  scopeId    String?
+  period     LeaderboardPeriod
+  topicSlug  String?
+  rankings   String
+  updatedAt  DateTime        @updatedAt
+  createdAt  DateTime        @default(now())
+
+  @@unique([scope, scopeId, period, topicSlug])
+  @@index([scope, period])
+}
+
+enum CompetitiveMode {
+  SPEED_RACE
+  ACCURACY_CHALLENGE
+  SURVIVAL
+  MIXED
+}
+
+enum MatchStatus {
+  PENDING
+  IN_PROGRESS
+  COMPLETED
+  CANCELLED
+}
+
+enum LeaderboardScope {
+  GLOBAL
+  SCHOOL
+  CLASS
+  REGION
+}
+
+enum LeaderboardPeriod {
+  DAILY
+  WEEKLY
+  MONTHLY
+  ALL_TIME
 }
