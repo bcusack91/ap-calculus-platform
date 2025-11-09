@@ -77,12 +77,22 @@ export async function GET(req: NextRequest) {
       })
     }
 
+    // Calculate part completion based on mastery level
+    const masteryLevel = unitCircleProgress?.masteryLevel || 0
+    const partsCompleted = {
+      part1: masteryLevel >= 0.25,
+      part2: masteryLevel >= 0.5,
+      part3: masteryLevel >= 0.75,
+      part4: masteryLevel >= 1.0
+    }
+
     return NextResponse.json({
       unlocked: meetsRequirements,
       requirements: {
         unitCircleCompleted: hasCompletedUnitCircle,
-        masteryLevel: unitCircleProgress?.masteryLevel || 0,
-        masteryRequired: 0.8
+        masteryLevel: masteryLevel,
+        masteryRequired: 0.8,
+        partsCompleted
       }
     })
 
