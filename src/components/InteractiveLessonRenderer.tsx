@@ -2238,6 +2238,9 @@ function Part2PracticeMode({ onBack, onComplete }: { onBack: () => void, onCompl
   const [thetaAnswers, setThetaAnswers] = useState(['', '', '', '', ''])
   const [sineAnswers, setSineAnswers] = useState(['', '', '', '', ''])
   const [cosineAnswers, setCosineAnswers] = useState(['', '', '', '', ''])
+  const [thetaValidation, setThetaValidation] = useState<(boolean | null)[]>([null, null, null, null, null])
+  const [sineValidation, setSineValidation] = useState<(boolean | null)[]>([null, null, null, null, null])
+  const [cosineValidation, setCosineValidation] = useState<(boolean | null)[]>([null, null, null, null, null])
   
   const thetaRefs = useRef<(HTMLInputElement | null)[]>([])
   const sineRefs = useRef<(HTMLInputElement | null)[]>([])
@@ -2278,33 +2281,46 @@ function Part2PracticeMode({ onBack, onComplete }: { onBack: () => void, onCompl
   const checkRow = (rowType: 'theta' | 'sine' | 'cosine') => {
     let answers: string[]
     let correct: string[]
+    let setValidation: (validation: (boolean | null)[]) => void
     
     if (rowType === 'theta') {
       answers = thetaAnswers
       correct = thetaCorrect
+      setValidation = setThetaValidation
     } else if (rowType === 'sine') {
       answers = sineAnswers
       correct = sineCorrect
+      setValidation = setSineValidation
     } else {
       answers = cosineAnswers
       correct = cosineCorrect
+      setValidation = setCosineValidation
     }
 
-    const isCorrect = answers.every((answer, index) => 
+    // Check each cell individually
+    const validation = answers.map((answer, index) => 
       normalizeAnswer(answer) === normalizeAnswer(correct[index])
     )
+    
+    setValidation(validation)
 
-    if (isCorrect) {
-      // Move to next row
-      if (rowType === 'theta') {
-        setCurrentRow('sine')
-      } else if (rowType === 'sine') {
-        setCurrentRow('cosine')
-      } else {
-        setCurrentRow('complete')
-      }
-    } else {
-      alert('Not quite right. Check your answers and try again!')
+    // Check if all are correct
+    const allCorrect = validation.every(isCorrect => isCorrect === true)
+
+    if (allCorrect) {
+      // Move to next row after a brief delay to show green feedback
+      setTimeout(() => {
+        if (rowType === 'theta') {
+          setCurrentRow('sine')
+          setThetaValidation([null, null, null, null, null])
+        } else if (rowType === 'sine') {
+          setCurrentRow('cosine')
+          setSineValidation([null, null, null, null, null])
+        } else {
+          setCurrentRow('complete')
+          setCosineValidation([null, null, null, null, null])
+        }
+      }, 1000)
     }
   }
 
@@ -2339,6 +2355,9 @@ function Part2PracticeMode({ onBack, onComplete }: { onBack: () => void, onCompl
     setThetaAnswers(['', '', '', '', ''])
     setSineAnswers(['', '', '', '', ''])
     setCosineAnswers(['', '', '', '', ''])
+    setThetaValidation([null, null, null, null, null])
+    setSineValidation([null, null, null, null, null])
+    setCosineValidation([null, null, null, null, null])
     // Focus first input after a brief delay
     setTimeout(() => {
       thetaRefs.current[0]?.focus()
@@ -2386,7 +2405,13 @@ function Part2PracticeMode({ onBack, onComplete }: { onBack: () => void, onCompl
                         type="text"
                         value={thetaAnswers[i]}
                         onChange={(e) => handleThetaChange(i, e.target.value)}
-                        className="w-20 h-16 text-center text-xl font-bold border-2 border-purple-500 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+                        className={`w-20 h-16 text-center text-xl font-bold border-2 rounded-lg focus:ring-2 focus:ring-purple-500 ${
+                          thetaValidation[i] === null 
+                            ? 'border-purple-500 focus:border-purple-500' 
+                            : thetaValidation[i] 
+                              ? 'border-green-500 bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400' 
+                              : 'border-red-500 bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-400'
+                        }`}
                         placeholder="?"
                       />
                     ) : (
@@ -2408,10 +2433,22 @@ function Part2PracticeMode({ onBack, onComplete }: { onBack: () => void, onCompl
                     {currentRow === 'sine' ? (
                       <div className="flex flex-col items-center gap-2">
                         {/* KaTeX Preview */}
-                        <div className="w-24 h-12 flex items-center justify-center border-2 border-purple-300 rounded-lg bg-purple-50 dark:bg-purple-900/20">
+                        <div className={`w-24 h-12 flex items-center justify-center border-2 rounded-lg ${
+                          sineValidation[i] === null 
+                            ? 'border-purple-300 bg-purple-50 dark:bg-purple-900/20' 
+                            : sineValidation[i] 
+                              ? 'border-green-500 bg-green-50 dark:bg-green-900/20' 
+                              : 'border-red-500 bg-red-50 dark:bg-red-900/20'
+                        }`}>
                           {sineAnswers[i] ? (
                             <span
-                              className="text-lg"
+                              className={`text-lg ${
+                                sineValidation[i] === null 
+                                  ? '' 
+                                  : sineValidation[i] 
+                                    ? 'text-green-700 dark:text-green-400' 
+                                    : 'text-red-700 dark:text-red-400'
+                              }`}
                               dangerouslySetInnerHTML={{
                                 __html: typeof window !== 'undefined' && (window as any).katex
                                   ? (window as any).katex.renderToString(toLatex(sineAnswers[i]), { throwOnError: false })
@@ -2428,7 +2465,13 @@ function Part2PracticeMode({ onBack, onComplete }: { onBack: () => void, onCompl
                           type="text"
                           value={sineAnswers[i]}
                           onChange={(e) => handleSineChange(i, e.target.value)}
-                          className="w-24 h-10 text-center text-sm border-2 border-purple-500 rounded-lg focus:ring-2 focus:ring-purple-500"
+                          className={`w-24 h-10 text-center text-sm border-2 rounded-lg focus:ring-2 focus:ring-purple-500 ${
+                            sineValidation[i] === null 
+                              ? 'border-purple-500' 
+                              : sineValidation[i] 
+                                ? 'border-green-500' 
+                                : 'border-red-500'
+                          }`}
                           placeholder="e.g. 1/2"
                         />
                       </div>
@@ -2459,10 +2502,22 @@ function Part2PracticeMode({ onBack, onComplete }: { onBack: () => void, onCompl
                     {currentRow === 'cosine' ? (
                       <div className="flex flex-col items-center gap-2">
                         {/* KaTeX Preview */}
-                        <div className="w-24 h-12 flex items-center justify-center border-2 border-purple-300 rounded-lg bg-purple-50 dark:bg-purple-900/20">
+                        <div className={`w-24 h-12 flex items-center justify-center border-2 rounded-lg ${
+                          cosineValidation[i] === null 
+                            ? 'border-purple-300 bg-purple-50 dark:bg-purple-900/20' 
+                            : cosineValidation[i] 
+                              ? 'border-green-500 bg-green-50 dark:bg-green-900/20' 
+                              : 'border-red-500 bg-red-50 dark:bg-red-900/20'
+                        }`}>
                           {cosineAnswers[i] ? (
                             <span
-                              className="text-lg"
+                              className={`text-lg ${
+                                cosineValidation[i] === null 
+                                  ? '' 
+                                  : cosineValidation[i] 
+                                    ? 'text-green-700 dark:text-green-400' 
+                                    : 'text-red-700 dark:text-red-400'
+                              }`}
                               dangerouslySetInnerHTML={{
                                 __html: typeof window !== 'undefined' && (window as any).katex
                                   ? (window as any).katex.renderToString(toLatex(cosineAnswers[i]), { throwOnError: false })
@@ -2479,7 +2534,13 @@ function Part2PracticeMode({ onBack, onComplete }: { onBack: () => void, onCompl
                           type="text"
                           value={cosineAnswers[i]}
                           onChange={(e) => handleCosineChange(i, e.target.value)}
-                          className="w-24 h-10 text-center text-sm border-2 border-purple-500 rounded-lg focus:ring-2 focus:ring-purple-500"
+                          className={`w-24 h-10 text-center text-sm border-2 rounded-lg focus:ring-2 focus:ring-purple-500 ${
+                            cosineValidation[i] === null 
+                              ? 'border-purple-500' 
+                              : cosineValidation[i] 
+                                ? 'border-green-500' 
+                                : 'border-red-500'
+                          }`}
                           placeholder="e.g. 1/2"
                         />
                       </div>
