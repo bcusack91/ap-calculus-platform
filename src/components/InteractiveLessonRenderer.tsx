@@ -36,6 +36,7 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
   const [completedSections, setCompletedSections] = useState<Set<number>>(new Set())
   const [showPracticeMode, setShowPracticeMode] = useState(false)
   const [progressLoaded, setProgressLoaded] = useState(false)
+  const [unlockedParts, setUnlockedParts] = useState<Set<1 | 2 | 3 | 4>>(new Set([1])) // Part 1 always unlocked
 
   // Update URL when lesson part changes
   const updateLessonPart = (newPart: 1 | 2 | 3 | 4) => {
@@ -111,14 +112,23 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
           // Determine lesson part from mastery level
           const mastery = data.progress.masteryLevel
           let part: 1 | 2 | 3 | 4 = 1
+          const unlocked: Set<1 | 2 | 3 | 4> = new Set([1]) // Part 1 always unlocked
           
           if (mastery >= 0.75) {
             part = 4
+            unlocked.add(2)
+            unlocked.add(3)
+            unlocked.add(4)
           } else if (mastery >= 0.5) {
             part = 3
+            unlocked.add(2)
+            unlocked.add(3)
           } else if (mastery >= 0.25) {
             part = 2
+            unlocked.add(2)
           }
+          
+          setUnlockedParts(unlocked)
           
           // Only update if not overridden by URL parameter
           if (!urlPart) {
@@ -164,6 +174,7 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
           onBack={() => setShowPracticeMode(false)} 
           onComplete={() => {
             setShowPracticeMode(false)
+            setUnlockedParts(prev => new Set([...prev, 3])) // Unlock Part 3
             updateLessonPart(3) // Move to part 3 after completing Part 2 practice
           }}
         />
@@ -210,12 +221,14 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
       // On final section, advance to next part or complete
       if (lessonPart === 1) {
         // Move to part 2 after completing part 1
+        setUnlockedParts(prev => new Set([...prev, 2])) // Unlock Part 2
         updateLessonPart(2)
         setCurrentSectionIndex(0)
         setCompletedSections(new Set())
         window.scrollTo({ top: 0, behavior: 'smooth' })
       } else if (lessonPart === 3) {
         // Move to part 4 after completing part 3
+        setUnlockedParts(prev => new Set([...prev, 4])) // Unlock Part 4
         updateLessonPart(4)
         setCurrentSectionIndex(0)
         setCompletedSections(new Set())
@@ -280,51 +293,63 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
 
   return (
     <div className="space-y-6">
-      {/* Part Navigation Menu - for development convenience */}
+      {/* Part Navigation Menu */}
       <div className="bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-indigo-950/50 dark:to-purple-950/50 rounded-lg p-4 border-2 border-indigo-200 dark:border-indigo-800">
         <div className="flex items-center justify-between flex-wrap gap-4">
           <div className="flex items-center gap-2">
             <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">Jump to:</span>
-            <div className="flex gap-2">
+            <div className="flex gap-2 flex-wrap">
               <button
                 onClick={() => updateLessonPart(1)}
+                disabled={!unlockedParts.has(1)}
                 className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
                   lessonPart === 1
                     ? 'bg-purple-600 text-white shadow-lg'
-                    : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30'
+                    : unlockedParts.has(1)
+                    ? 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30'
+                    : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500 cursor-not-allowed opacity-50'
                 }`}
               >
                 Part 1: Counting Method
               </button>
               <button
-                onClick={() => updateLessonPart(2)}
+                onClick={() => unlockedParts.has(2) && updateLessonPart(2)}
+                disabled={!unlockedParts.has(2)}
                 className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
                   lessonPart === 2
                     ? 'bg-purple-600 text-white shadow-lg'
-                    : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30'
+                    : unlockedParts.has(2)
+                    ? 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30'
+                    : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500 cursor-not-allowed opacity-50'
                 }`}
               >
-                Part 2: Angles & Tables
+                {!unlockedParts.has(2) && '🔒 '}Part 2: Angles & Tables
               </button>
               <button
-                onClick={() => updateLessonPart(3)}
+                onClick={() => unlockedParts.has(3) && updateLessonPart(3)}
+                disabled={!unlockedParts.has(3)}
                 className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
                   lessonPart === 3
                     ? 'bg-purple-600 text-white shadow-lg'
-                    : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30'
+                    : unlockedParts.has(3)
+                    ? 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30'
+                    : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500 cursor-not-allowed opacity-50'
                 }`}
               >
-                Part 3: What Is the Unit Circle?
+                {!unlockedParts.has(3) && '🔒 '}Part 3: What Is the Unit Circle?
               </button>
               <button
-                onClick={() => updateLessonPart(4)}
+                onClick={() => unlockedParts.has(4) && updateLessonPart(4)}
+                disabled={!unlockedParts.has(4)}
                 className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
                   lessonPart === 4
                     ? 'bg-purple-600 text-white shadow-lg'
-                    : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30'
+                    : unlockedParts.has(4)
+                    ? 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30'
+                    : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500 cursor-not-allowed opacity-50'
                 }`}
               >
-                Part 4: Complete Unit Circle
+                {!unlockedParts.has(4) && '🔒 '}Part 4: Complete Unit Circle
               </button>
             </div>
           </div>
