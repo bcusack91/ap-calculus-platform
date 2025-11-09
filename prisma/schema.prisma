@@ -376,6 +376,7 @@ model CompetitiveMatch {
   status         MatchStatus     @default(PENDING)
   startedAt      DateTime        @default(now())
   completedAt    DateTime?
+  gameData       Json?           // Stores questions, answers, current question index
   player1        User            @relation("Player1Matches", fields: [player1Id], references: [id], onDelete: Cascade)
   player2        User            @relation("Player2Matches", fields: [player2Id], references: [id], onDelete: Cascade)
 

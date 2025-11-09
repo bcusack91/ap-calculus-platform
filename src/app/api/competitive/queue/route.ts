@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
+import { generateMatchQuestions } from '@/lib/competitive-utils'
 
 // In-memory matchmaking queue (would use Redis in production)
 const matchmakingQueue: Map<string, {
@@ -51,6 +52,9 @@ export async function POST(req: NextRequest) {
     const match = findMatch(user.id, mmr, topicSlug)
 
     if (match) {
+      // Generate questions for the match
+      const questions = generateMatchQuestions(10);
+      
       // Create match in database
       const competitiveMatch = await prisma.competitiveMatch.create({
         data: {
@@ -62,7 +66,16 @@ export async function POST(req: NextRequest) {
           player2MMRBefore: match.player2MMR,
           player1MMRAfter: match.player1MMR, // Will update after match
           player2MMRAfter: match.player2MMR,
-          status: 'IN_PROGRESS'
+          player1Score: 0,
+          player2Score: 0,
+          status: 'IN_PROGRESS',
+          startedAt: new Date(),
+          gameData: {
+            questions,
+            currentQuestionIndex: 0,
+            player1Answers: Array(questions.length).fill(null),
+            player2Answers: Array(questions.length).fill(null),
+          },
         }
       })
 

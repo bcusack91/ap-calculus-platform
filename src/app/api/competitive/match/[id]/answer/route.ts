@@ -1,0 +1,265 @@
+import { NextRequest, NextResponse } from 'next/server';
+import { auth } from '@/lib/auth';
+import { prisma } from '@/lib/prisma';
+import { checkAnswer, UNIT_CIRCLE_POSITIONS, calculateMMRChange, getRankFromMMR } from '@/lib/competitive-utils';
+
+export async function POST(
+  request: NextRequest,
+  { params }: { params: Promise<{ id: string }> }
+) {
+  try {
+    const session = await auth();
+    if (!session?.user?.id) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
+
+    const { id: matchId } = await params;
+    const body = await request.json();
+    const { questionIndex, answerIndex } = body;
+
+    // Fetch match
+    const match = await prisma.competitiveMatch.findUnique({
+      where: { id: matchId },
+      include: {
+        player1: {
+          include: {
+            competitiveProfile: true,
+          },
+        },
+        player2: {
+          include: {
+            competitiveProfile: true,
+          },
+        },
+      },
+    });
+
+    if (!match) {
+      return NextResponse.json({ error: 'Match not found' }, { status: 404 });
+    }
+
+    // Verify user is a participant
+    const isPlayer1 = match.player1Id === session.user.id;
+    const isPlayer2 = match.player2Id === session.user.id;
+    
+    if (!isPlayer1 && !isPlayer2) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 403 });
+    }
+
+    // Verify match is still in progress
+    if (match.status !== 'IN_PROGRESS') {
+      return NextResponse.json({ error: 'Match is not in progress' }, { status: 400 });
+    }
+
+    // Parse current game data
+    const gameData = match.gameData as any;
+    const questions = gameData?.questions || [];
+    const currentQuestionIndex = gameData?.currentQuestionIndex || 0;
+    const player1Answers = gameData?.player1Answers || Array(questions.length).fill(null);
+    const player2Answers = gameData?.player2Answers || Array(questions.length).fill(null);
+    let player1Score = match.player1Score;
+    let player2Score = match.player2Score;
+
+    // Check if question index matches
+    if (questionIndex !== currentQuestionIndex) {
+      return NextResponse.json({ error: 'Invalid question index' }, { status: 400 });
+    }
+
+    // Check if player already answered this question
+    const playerAnswers = isPlayer1 ? player1Answers : player2Answers;
+    if (playerAnswers[questionIndex] !== null) {
+      return NextResponse.json({ error: 'Already answered' }, { status: 400 });
+    }
+
+    // Check answer
+    const currentQuestion = questions[questionIndex];
+    const isCorrect = checkAnswer(answerIndex, currentQuestion.target);
+
+    // Record answer
+    if (isPlayer1) {
+      player1Answers[questionIndex] = answerIndex;
+    } else {
+      player2Answers[questionIndex] = answerIndex;
+    }
+
+    // Award point if correct AND opponent hasn't answered correctly yet
+    const opponentAnswers = isPlayer1 ? player2Answers : player1Answers;
+    const opponentAnsweredCorrectly = opponentAnswers[questionIndex] !== null && 
+      checkAnswer(opponentAnswers[questionIndex], currentQuestion.target);
+
+    if (isCorrect && !opponentAnsweredCorrectly) {
+      // This player gets the point!
+      if (isPlayer1) {
+        player1Score += 1;
+      } else {
+        player2Score += 1;
+      }
+    }
+
+    // Check if both players have answered - if so, move to next question
+    const bothAnswered = player1Answers[questionIndex] !== null && player2Answers[questionIndex] !== null;
+    let newQuestionIndex = currentQuestionIndex;
+    if (bothAnswered && currentQuestionIndex < questions.length - 1) {
+      newQuestionIndex = currentQuestionIndex + 1;
+    }
+
+    // Check if match is complete (all questions answered)
+    const allQuestionsAnswered = newQuestionIndex === questions.length - 1 && bothAnswered;
+    let winnerId = match.winnerId;
+    let completedAt = match.completedAt;
+
+    if (allQuestionsAnswered) {
+      const newStatus = 'COMPLETED' as const;
+      completedAt = new Date();
+      
+      // Determine winner
+      if (player1Score > player2Score) {
+        winnerId = match.player1Id;
+      } else if (player2Score > player1Score) {
+        winnerId = match.player2Id;
+      }
+      // else it's a tie (winnerId remains null)
+
+      // Calculate MMR changes
+      const player1MMR = match.player1MMRBefore || match.player1.competitiveProfile?.unitCircleMMR || 1000;
+      const player2MMR = match.player2MMRBefore || match.player2.competitiveProfile?.unitCircleMMR || 1000;
+
+      const player1TotalMatches = match.player1.competitiveProfile?.totalMatches || 0;
+      const player2TotalMatches = match.player2.competitiveProfile?.totalMatches || 0;
+
+      const player1Won = winnerId === match.player1Id;
+      const player2Won = winnerId === match.player2Id;
+
+      const player1MMRChange = calculateMMRChange(player1MMR, player2MMR, player1Won, player1TotalMatches);
+      const player2MMRChange = calculateMMRChange(player2MMR, player1MMR, player2Won, player2TotalMatches);
+
+      const player1MMRAfter = player1MMR + player1MMRChange;
+      const player2MMRAfter = player2MMR + player2MMRChange;
+
+      // Update match with final data
+      await prisma.competitiveMatch.update({
+        where: { id: matchId },
+        data: {
+          status: newStatus,
+          winnerId,
+          completedAt,
+          player1Score,
+          player2Score,
+          gameData: {
+            questions,
+            currentQuestionIndex: newQuestionIndex,
+            player1Answers,
+            player2Answers,
+          },
+          player1MMRAfter,
+          player2MMRAfter,
+        },
+      });
+
+      // Update both players' competitive profiles
+      await prisma.competitiveProfile.update({
+        where: { userId: match.player1Id },
+        data: {
+          unitCircleMMR: player1MMRAfter,
+          overallMMR: player1MMRAfter, // For now, overall = unit circle
+          totalMatches: { increment: 1 },
+          wins: player1Won ? { increment: 1 } : undefined,
+          losses: player2Won ? { increment: 1 } : undefined,
+          winStreak: player1Won ? { increment: 1 } : 0,
+          bestWinStreak: player1Won && match.player1.competitiveProfile ? 
+            Math.max(match.player1.competitiveProfile.winStreak + 1, match.player1.competitiveProfile.bestWinStreak) : 
+            undefined,
+          rank: getRankFromMMR(player1MMRAfter),
+        },
+      });
+
+      await prisma.competitiveProfile.update({
+        where: { userId: match.player2Id },
+        data: {
+          unitCircleMMR: player2MMRAfter,
+          overallMMR: player2MMRAfter,
+          totalMatches: { increment: 1 },
+          wins: player2Won ? { increment: 1 } : undefined,
+          losses: player1Won ? { increment: 1 } : undefined,
+          winStreak: player2Won ? { increment: 1 } : 0,
+          bestWinStreak: player2Won && match.player2.competitiveProfile ? 
+            Math.max(match.player2.competitiveProfile.winStreak + 1, match.player2.competitiveProfile.bestWinStreak) : 
+            undefined,
+          rank: getRankFromMMR(player2MMRAfter),
+        },
+      });
+
+      // Create MMR history records
+      await prisma.mMRHistory.create({
+        data: {
+          userId: match.player1Id,
+          matchId,
+          topicSlug: 'unit-circle',
+          mmrBefore: player1MMR,
+          mmrAfter: player1MMRAfter,
+          mmrChange: player1MMRChange,
+          gameMode: match.gameMode,
+          performance: JSON.stringify({
+            score: player1Score,
+            totalQuestions: questions.length,
+            accuracy: player1Score / questions.length,
+          }),
+        },
+      });
+
+      await prisma.mMRHistory.create({
+        data: {
+          userId: match.player2Id,
+          matchId,
+          topicSlug: 'unit-circle',
+          mmrBefore: player2MMR,
+          mmrAfter: player2MMRAfter,
+          mmrChange: player2MMRChange,
+          gameMode: match.gameMode,
+          performance: JSON.stringify({
+            score: player2Score,
+            totalQuestions: questions.length,
+            accuracy: player2Score / questions.length,
+          }),
+        },
+      });
+
+      return NextResponse.json({
+        correct: isCorrect,
+        matchComplete: true,
+        winnerId,
+        finalScores: { player1: player1Score, player2: player2Score },
+        mmrChange: isPlayer1 ? player1MMRChange : player2MMRChange,
+        newMMR: isPlayer1 ? player1MMRAfter : player2MMRAfter,
+      });
+    } else {
+      // Just update the match with new answers and possibly new question index
+      await prisma.competitiveMatch.update({
+        where: { id: matchId },
+        data: {
+          player1Score,
+          player2Score,
+          gameData: {
+            questions,
+            currentQuestionIndex: newQuestionIndex,
+            player1Answers,
+            player2Answers,
+          },
+        },
+      });
+
+      return NextResponse.json({
+        correct: isCorrect,
+        matchComplete: false,
+        currentScore: isPlayer1 ? player1Score : player2Score,
+        opponentScore: isPlayer1 ? player2Score : player1Score,
+      });
+    }
+  } catch (error) {
+    console.error('Error submitting answer:', error);
+    return NextResponse.json(
+      { error: 'Internal server error' },
+      { status: 500 }
+    );
+  }
+}
