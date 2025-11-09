@@ -118,6 +118,15 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
         throw new Error('Failed to fetch match state');
       }
       const data = await response.json();
+      
+      // Check if question changed - if so, clear feedback and selection
+      if (matchState && data.match.currentQuestionIndex !== matchState.currentQuestionIndex) {
+        setFeedback(null);
+        setSelectedPosition(null);
+        setWrongAttempt(false);
+        setCorrectAnswerIndex(null);
+      }
+      
       setMatchState(data.match);
       setCurrentUserId(data.currentUserId);
       setLoading(false);
@@ -202,12 +211,9 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
         // Refresh state to see if we got the point
         await fetchMatchState();
         
-        // Clear feedback after 1.5 seconds and move on
-        setTimeout(() => {
-          setFeedback(null);
-          setSelectedPosition(null);
-          setIsSubmitting(false);
-        }, 1500);
+        // Keep the green color showing - don't clear feedback or selectedPosition
+        // They'll be cleared when moving to next question
+        setIsSubmitting(false);
       } else {
         console.log('Answer was INCORRECT');
         setFeedback('incorrect');
@@ -415,19 +421,6 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
             {renderPrompt(currentQuestion.prompt)}
           </h2>
-          
-          {/* Debug test button */}
-          <button
-            onClick={() => {
-              console.log('TEST BUTTON CLICKED');
-              alert('Button click works! Check console for details.');
-              console.log('Match state:', matchState);
-              console.log('Current question:', currentQuestion);
-            }}
-            className="mb-4 px-4 py-2 bg-blue-500 text-white rounded text-sm"
-          >
-            🔧 Test Click (Debug)
-          </button>
           
           {isSubmitting && (
             <div className="flex items-center justify-center gap-2 text-purple-600">
