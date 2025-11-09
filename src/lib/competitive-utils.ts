@@ -12,6 +12,7 @@ interface Question {
   type: 'find-angle' | 'find-coordinate';
   target: UnitCirclePosition;
   prompt: string;
+  answerIndex: number; // Index in UNIT_CIRCLE_POSITIONS array
 }
 
 // All 16 unit circle positions
@@ -98,6 +99,7 @@ export function generateMatchQuestions(totalQuestions: number = 10): Question[] 
       type,
       target: position,
       prompt,
+      answerIndex: randomIndex, // Store the correct answer index
     });
   }
 
