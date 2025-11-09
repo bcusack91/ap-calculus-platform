@@ -44,6 +44,9 @@ export function Navbar() {
             <Link href="/flashcards" className="transition-colors hover:text-foreground/80">
               Flashcards
             </Link>
+            <Link href="/competitive" className="transition-colors hover:text-foreground/80 text-purple-600 dark:text-purple-400 font-semibold">
+              🎮 Competitive
+            </Link>
             <Link href="/about" className="transition-colors hover:text-foreground/80">
               About
             </Link>
@@ -110,6 +113,9 @@ export function Navbar() {
             </Link>
             <Link href="/flashcards" className="block px-3 py-2 text-base font-medium hover:bg-accent rounded-md">
               Flashcards
+            </Link>
+            <Link href="/competitive" className="block px-3 py-2 text-base font-medium text-purple-600 dark:text-purple-400 hover:bg-accent rounded-md">
+              🎮 Competitive Mode
             </Link>
             <Link href="/about" className="block px-3 py-2 text-base font-medium hover:bg-accent rounded-md">
               About
