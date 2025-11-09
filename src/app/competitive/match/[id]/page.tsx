@@ -107,10 +107,26 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
   };
 
   const handlePositionClick = async (positionIndex: number) => {
+    console.log('=== CLICK HANDLER TRIGGERED ===');
     console.log('Position clicked:', positionIndex);
+    console.log('Match state exists:', !!matchState);
+    console.log('Is submitting:', isSubmitting);
+    console.log('Match status:', matchState?.status);
     
-    if (!matchState || isSubmitting) return;
-    if (matchState.status === 'COMPLETED') return;
+    if (!matchState) {
+      console.log('No match state - returning');
+      return;
+    }
+    
+    if (isSubmitting) {
+      console.log('Already submitting - returning');
+      return;
+    }
+    
+    if (matchState.status === 'COMPLETED') {
+      console.log('Match completed - returning');
+      return;
+    }
 
     const isPlayer1 = currentUserId === matchState.player1Id;
     const currentQuestion = matchState.questions[matchState.currentQuestionIndex];
@@ -126,10 +142,14 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
       return; // Already answered
     }
 
+    console.log('Setting selected position and submitting...');
     setSelectedPosition(positionIndex);
     setIsSubmitting(true);
 
     try {
+      console.log('Sending POST to API...');
+      const startTime = Date.now();
+      
       const response = await fetch(`/api/competitive/match/${matchId}/answer`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -140,10 +160,14 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
         }),
       });
 
+      const endTime = Date.now();
+      console.log(`API response received in ${endTime - startTime}ms`);
+
       const data = await response.json();
       console.log('Answer response:', data);
       
       if (data.correct) {
+        console.log('Answer was CORRECT!');
         setFeedback('correct');
         setWrongAttempt(false);
         setCorrectAnswerIndex(null);
@@ -157,9 +181,11 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
           setIsSubmitting(false);
         }, 1500);
       } else {
+        console.log('Answer was INCORRECT');
         setFeedback('incorrect');
         
         if (!wrongAttempt) {
+          console.log('First wrong attempt - showing correct answer');
           // First wrong attempt - show correct answer and allow retry
           setWrongAttempt(true);
           setCorrectAnswerIndex(currentQuestion.answerIndex);
@@ -170,6 +196,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
             setIsSubmitting(false);
           }, 1000);
         } else {
+          console.log('Second wrong attempt - moving on');
           // Second wrong attempt - move on without points
           setWrongAttempt(false);
           setCorrectAnswerIndex(null);
@@ -183,7 +210,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
         }
       }
     } catch (error) {
-      console.error('Error submitting answer:', error);
+      console.error('ERROR submitting answer:', error);
       setIsSubmitting(false);
       setSelectedPosition(null);
     }
@@ -360,7 +387,27 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
             {currentQuestion.prompt}
           </h2>
-          {hasAnswered && (
+          
+          {/* Debug test button */}
+          <button
+            onClick={() => {
+              console.log('TEST BUTTON CLICKED');
+              alert('Button click works! Check console for details.');
+              console.log('Match state:', matchState);
+              console.log('Current question:', currentQuestion);
+            }}
+            className="mb-4 px-4 py-2 bg-blue-500 text-white rounded text-sm"
+          >
+            🔧 Test Click (Debug)
+          </button>
+          
+          {isSubmitting && (
+            <div className="flex items-center justify-center gap-2 text-purple-600">
+              <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-purple-600"></div>
+              <p className="font-semibold">Submitting answer...</p>
+            </div>
+          )}
+          {!isSubmitting && hasAnswered && !wrongAttempt && (
             <p className="text-gray-600 dark:text-gray-400">
               Waiting for opponent...
             </p>
