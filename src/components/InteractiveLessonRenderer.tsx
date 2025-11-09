@@ -1338,6 +1338,12 @@ function FadeInText({ content, onComplete }: { content: string; onComplete?: () 
                   strong: ({ children }) => <strong className="text-2xl font-bold text-purple-700 dark:text-purple-400">{children}</strong>,
                   ul: ({ children }) => <ul className="space-y-3 text-lg ml-6">{children}</ul>,
                   li: ({ children }) => <li className="text-lg">{children}</li>,
+                  table: ({ children }) => <table className="min-w-full border-collapse border-2 border-purple-300 dark:border-purple-700 my-6">{children}</table>,
+                  thead: ({ children }) => <thead className="bg-purple-100 dark:bg-purple-900/40">{children}</thead>,
+                  tbody: ({ children }) => <tbody>{children}</tbody>,
+                  tr: ({ children }) => <tr className="border-b border-purple-200 dark:border-purple-800">{children}</tr>,
+                  th: ({ children }) => <th className="px-6 py-3 text-left text-lg font-bold text-purple-900 dark:text-purple-100 border border-purple-300 dark:border-purple-700">{children}</th>,
+                  td: ({ children }) => <td className="px-6 py-4 text-lg border border-purple-200 dark:border-purple-800">{children}</td>,
                 }}
               >
                 {part}
@@ -1366,6 +1372,12 @@ function FadeInText({ content, onComplete }: { content: string; onComplete?: () 
                 {children}
               </blockquote>
             ),
+            table: ({ children }) => <table className="min-w-full border-collapse border-2 border-purple-300 dark:border-purple-700 my-6">{children}</table>,
+            thead: ({ children }) => <thead className="bg-purple-100 dark:bg-purple-900/40">{children}</thead>,
+            tbody: ({ children }) => <tbody>{children}</tbody>,
+            tr: ({ children }) => <tr className="border-b border-purple-200 dark:border-purple-800">{children}</tr>,
+            th: ({ children }) => <th className="px-6 py-3 text-left text-lg font-bold text-purple-900 dark:text-purple-100 border border-purple-300 dark:border-purple-700">{children}</th>,
+            td: ({ children }) => <td className="px-6 py-4 text-lg border border-purple-200 dark:border-purple-800">{children}</td>,
           }}
         >
           {content}
