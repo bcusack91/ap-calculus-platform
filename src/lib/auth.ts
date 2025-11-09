@@ -4,6 +4,7 @@ import Google from "next-auth/providers/google"
 import Credentials from "next-auth/providers/credentials"
 import { prisma } from "@/lib/prisma"
 import type { UserRole } from "@prisma/client"
+import bcrypt from "bcryptjs"
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
   adapter: PrismaAdapter(prisma),
@@ -24,15 +25,33 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         password: { label: "Password", type: "password" }
       },
       async authorize(credentials) {
-        // TODO: Implement password verification
-        // For now, this is a placeholder
-        if (!credentials?.email) return null
+        if (!credentials?.email || !credentials?.password) {
+          return null
+        }
         
         const user = await prisma.user.findUnique({
           where: { email: credentials.email as string }
         })
         
-        return user
+        if (!user || !user.password) {
+          return null
+        }
+        
+        const isPasswordValid = await bcrypt.compare(
+          credentials.password as string,
+          user.password
+        )
+        
+        if (!isPasswordValid) {
+          return null
+        }
+        
+        return {
+          id: user.id,
+          email: user.email,
+          name: user.name,
+          role: user.role,
+        }
       }
     })
   ],
@@ -66,7 +85,6 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         await prisma.learningPath.create({
           data: {
             userId: user.id,
-            topicOrder: [],
           }
         })
       }

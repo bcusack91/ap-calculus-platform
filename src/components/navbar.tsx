@@ -56,41 +56,41 @@ export function Navbar() {
           </nav>
         </div>
 
-        {/* Auth Section - Hidden for free launch */}
+        {/* Auth Section */}
         <div className="flex items-center space-x-4">
-          {/* Temporarily hidden for free tier launch
-          {session ? (
-            <div className="flex items-center space-x-4">
-              {isPremium && (
-                <span className="hidden md:inline-flex items-center px-2 py-1 text-xs font-semibold rounded-full bg-purple-100 text-purple-800">
-                  Premium
-                </span>
-              )}
-              <span className="hidden md:inline text-sm">{session.user?.name || session.user?.email}</span>
-              <button
-                onClick={() => signOut()}
-                className="rounded-md px-4 py-2 text-sm font-medium hover:bg-accent"
-              >
-                Sign Out
-              </button>
-            </div>
-          ) : (
-            <div className="flex items-center space-x-2">
-              <button
-                onClick={() => signIn()}
-                className="rounded-md px-4 py-2 text-sm font-medium hover:bg-accent"
-              >
-                Sign In
-              </button>
-              <Link
-                href="/premium"
-                className="rounded-md bg-purple-600 px-4 py-2 text-sm font-medium text-white hover:bg-purple-700"
-              >
-                Get Premium
-              </Link>
-            </div>
-          )}
-          */}
+          <div className="hidden md:flex items-center space-x-4">
+            {session ? (
+              <div className="flex items-center space-x-4">
+                {isPremium && (
+                  <span className="inline-flex items-center px-2 py-1 text-xs font-semibold rounded-full bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200">
+                    Premium
+                  </span>
+                )}
+                <span className="text-sm text-gray-700 dark:text-gray-300">{session.user?.name || session.user?.email}</span>
+                <button
+                  onClick={() => signOut()}
+                  className="rounded-md px-4 py-2 text-sm font-medium hover:bg-accent bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
+                >
+                  Sign Out
+                </button>
+              </div>
+            ) : (
+              <div className="flex items-center space-x-2">
+                <Link
+                  href="/auth/signin"
+                  className="rounded-md px-4 py-2 text-sm font-medium hover:bg-accent bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
+                >
+                  Sign In
+                </Link>
+                <Link
+                  href="/auth/signup"
+                  className="rounded-md px-4 py-2 text-sm font-medium bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700 transition-all"
+                >
+                  Sign Up
+                </Link>
+              </div>
+            )}
+          </div>
 
           {/* Mobile Menu Button */}
           <button
@@ -123,23 +123,38 @@ export function Navbar() {
             <Link href="/contact" className="block px-3 py-2 text-base font-medium hover:bg-accent rounded-md">
               Contact
             </Link>
-            {/* Temporarily hidden for free tier launch
-            {isPremium && (
-              <>
-                <Link href="/adaptive-learning" className="block px-3 py-2 text-base font-medium text-purple-600 hover:bg-accent rounded-md">
-                  Adaptive Learning
-                </Link>
-                <Link href="/dashboard" className="block px-3 py-2 text-base font-medium text-purple-600 hover:bg-accent rounded-md">
-                  Dashboard
-                </Link>
-              </>
-            )}
-            {!isPremium && (
-              <Link href="/premium" className="block px-3 py-2 text-base font-medium text-purple-600 hover:bg-accent rounded-md">
-                Go Premium ⭐
-              </Link>
-            )}
-            */}
+            
+            {/* Mobile Auth Section */}
+            <div className="pt-4 border-t mt-2">
+              {session ? (
+                <div className="space-y-2">
+                  <div className="px-3 py-2 text-sm text-gray-700 dark:text-gray-300">
+                    {session.user?.name || session.user?.email}
+                  </div>
+                  <button
+                    onClick={() => signOut()}
+                    className="block w-full text-left px-3 py-2 text-base font-medium hover:bg-accent rounded-md"
+                  >
+                    Sign Out
+                  </button>
+                </div>
+              ) : (
+                <div className="space-y-2">
+                  <Link
+                    href="/auth/signin"
+                    className="block px-3 py-2 text-base font-medium hover:bg-accent rounded-md"
+                  >
+                    Sign In
+                  </Link>
+                  <Link
+                    href="/auth/signup"
+                    className="block px-3 py-2 text-base font-medium bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-md text-center"
+                  >
+                    Sign Up
+                  </Link>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       )}
