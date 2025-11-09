@@ -14,6 +14,8 @@ export default function CompetitivePage() {
   const [queueStatus, setQueueStatus] = useState<any>(null)
   const [selectedMode, setSelectedMode] = useState('SPEED_RACE')
   const [requirements, setRequirements] = useState<any>(null)
+  const [showAIOptions, setShowAIOptions] = useState(false)
+  const [aiDifficulty, setAiDifficulty] = useState<'easy' | 'medium' | 'hard'>('medium')
 
   // Redirect to signin if not authenticated
   useEffect(() => {
@@ -86,6 +88,28 @@ export default function CompetitivePage() {
       setQueueStatus(null)
     } catch (error) {
       console.error('Error leaving queue:', error)
+    }
+  }
+
+  const startAIPractice = async (difficulty: 'easy' | 'medium' | 'hard') => {
+    try {
+      const res = await fetch('/api/competitive/practice-ai', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          topicSlug: 'the-unit-circle',
+          gameMode: selectedMode,
+          aiDifficulty: difficulty
+        })
+      })
+      
+      const data = await res.json()
+      
+      if (data.matchId) {
+        router.push(`/competitive/match/${data.matchId}`)
+      }
+    } catch (error) {
+      console.error('Error starting AI practice:', error)
     }
   }
 
@@ -291,10 +315,42 @@ export default function CompetitivePage() {
             <div className="text-center">
               <button
                 onClick={joinQueue}
-                className="px-12 py-6 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-bold rounded-lg text-2xl transition-all shadow-lg hover:shadow-xl"
+                className="px-12 py-6 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-bold rounded-lg text-2xl transition-all shadow-lg hover:shadow-xl mb-4"
               >
                 Find Match
               </button>
+              
+              <div className="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700">
+                <button
+                  onClick={() => setShowAIOptions(!showAIOptions)}
+                  className="px-8 py-3 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-800 dark:text-gray-200 font-semibold rounded-lg transition-all"
+                >
+                  🤖 Practice vs AI
+                </button>
+                
+                {showAIOptions && (
+                  <div className="mt-4 flex justify-center gap-4">
+                    <button
+                      onClick={() => startAIPractice('easy')}
+                      className="px-6 py-3 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-lg transition-all"
+                    >
+                      Easy Bot
+                    </button>
+                    <button
+                      onClick={() => startAIPractice('medium')}
+                      className="px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-white font-semibold rounded-lg transition-all"
+                    >
+                      Medium Bot
+                    </button>
+                    <button
+                      onClick={() => startAIPractice('hard')}
+                      className="px-6 py-3 bg-red-500 hover:bg-red-600 text-white font-semibold rounded-lg transition-all"
+                    >
+                      Hard Bot
+                    </button>
+                  </div>
+                )}
+              </div>
             </div>
           ) : (
             <div className="text-center">

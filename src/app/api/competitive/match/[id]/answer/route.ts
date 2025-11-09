@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { auth } from '@/lib/auth';
 import { prisma } from '@/lib/prisma';
 import { checkAnswer, UNIT_CIRCLE_POSITIONS, calculateMMRChange, getRankFromMMR } from '@/lib/competitive-utils';
+import { simulateAIAnswer, isAIOpponent } from '@/lib/ai-opponent';
 
 export async function POST(
   request: NextRequest,
@@ -244,9 +245,92 @@ export async function POST(
             currentQuestionIndex: newQuestionIndex,
             player1Answers,
             player2Answers,
+            ...(gameData?.aiDifficulty && { aiDifficulty: gameData.aiDifficulty }),
+            ...(gameData?.isPracticeMatch && { isPracticeMatch: gameData.isPracticeMatch }),
           },
         },
       });
+
+      // If opponent is AI and hasn't answered this question yet, simulate AI answer
+      const isOpponentAI = isAIOpponent(
+        isPlayer1 ? match.player2Id : match.player1Id,
+        isPlayer1 ? match.player2.email : match.player1.email
+      )
+
+      if (isOpponentAI && opponentAnswers[questionIndex] === null) {
+        // Schedule AI answer asynchronously (don't await - let it happen in background)
+        const aiDifficulty = gameData?.aiDifficulty || 'medium'
+        const correctAnswerIndex = questions[questionIndex].answerIndex
+        
+        setTimeout(async () => {
+          try {
+            const aiAnswer = simulateAIAnswer(
+              questionIndex,
+              correctAnswerIndex,
+              aiDifficulty,
+              UNIT_CIRCLE_POSITIONS.length
+            )
+
+            if (aiAnswer.shouldAnswer && aiAnswer.answerIndex !== null) {
+              // Re-fetch latest match state
+              const latestMatch = await prisma.competitiveMatch.findUnique({
+                where: { id: matchId }
+              })
+
+              if (!latestMatch || latestMatch.status !== 'IN_PROGRESS') return
+
+              const latestGameData = latestMatch.gameData as any
+              const latestP1Answers = latestGameData?.player1Answers || []
+              const latestP2Answers = latestGameData?.player2Answers || []
+              
+              // Double check AI hasn't already answered
+              const aiAnswers = isPlayer1 ? latestP2Answers : latestP1Answers
+              if (aiAnswers[questionIndex] !== null) return
+
+              // Submit AI answer
+              if (isPlayer1) {
+                latestP2Answers[questionIndex] = aiAnswer.answerIndex
+              } else {
+                latestP1Answers[questionIndex] = aiAnswer.answerIndex
+              }
+
+              // Check if AI got it correct and award point
+              let aiScore = isPlayer1 ? latestMatch.player2Score : latestMatch.player1Score
+              if (aiAnswer.isCorrect && !isCorrect) {
+                aiScore += 1
+              }
+
+              // Update scores
+              const newP1Score = isPlayer1 ? latestMatch.player1Score : aiScore
+              const newP2Score = isPlayer1 ? aiScore : latestMatch.player2Score
+
+              // Check if both answered - move to next question
+              const bothAnsweredNow = latestP1Answers[questionIndex] !== null && 
+                                     latestP2Answers[questionIndex] !== null
+              let nextQuestionIndex = latestGameData?.currentQuestionIndex || questionIndex
+              if (bothAnsweredNow && questionIndex < questions.length - 1) {
+                nextQuestionIndex = questionIndex + 1
+              }
+
+              await prisma.competitiveMatch.update({
+                where: { id: matchId },
+                data: {
+                  player1Score: newP1Score,
+                  player2Score: newP2Score,
+                  gameData: {
+                    ...latestGameData,
+                    currentQuestionIndex: nextQuestionIndex,
+                    player1Answers: latestP1Answers,
+                    player2Answers: latestP2Answers,
+                  },
+                },
+              })
+            }
+          } catch (error) {
+            console.error('Error processing AI answer:', error)
+          }
+        }, 800) // Small delay before AI answers (800ms minimum)
+      }
 
       return NextResponse.json({
         correct: isCorrect,
