@@ -36,20 +36,23 @@ export const UNIT_CIRCLE_POSITIONS: UnitCirclePosition[] = [
 ];
 
 /**
- * Format coordinate for display
+ * Format coordinate for display with LaTeX
  */
 function formatCoordinate(x: number, y: number): string {
   const formatValue = (val: number): string => {
-    if (val === 0) return '0';
-    if (val === 1) return '1';
-    if (val === -1) return '-1';
-    if (Math.abs(val - 0.5) < 0.001) return val > 0 ? '1/2' : '-1/2';
-    if (Math.abs(val - Math.sqrt(2)/2) < 0.001) return val > 0 ? '√2/2' : '-√2/2';
-    if (Math.abs(val - Math.sqrt(3)/2) < 0.001) return val > 0 ? '√3/2' : '-√3/2';
+    if (Math.abs(val) < 0.001) return '0';
+    if (Math.abs(val - 1) < 0.001) return '1';
+    if (Math.abs(val + 1) < 0.001) return '-1';
+    if (Math.abs(val - 0.5) < 0.001) return '\\frac{1}{2}';
+    if (Math.abs(val + 0.5) < 0.001) return '-\\frac{1}{2}';
+    if (Math.abs(val - Math.sqrt(2)/2) < 0.01) return '\\frac{\\sqrt{2}}{2}';
+    if (Math.abs(val + Math.sqrt(2)/2) < 0.01) return '-\\frac{\\sqrt{2}}{2}';
+    if (Math.abs(val - Math.sqrt(3)/2) < 0.01) return '\\frac{\\sqrt{3}}{2}';
+    if (Math.abs(val + Math.sqrt(3)/2) < 0.01) return '-\\frac{\\sqrt{3}}{2}';
     return val.toFixed(2);
   };
 
-  return `(${formatValue(x)}, ${formatValue(y)})`;
+  return `\\left(${formatValue(x)}, ${formatValue(y)}\\right)`;
 }
 
 /**

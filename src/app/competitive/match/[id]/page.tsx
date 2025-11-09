@@ -3,6 +3,7 @@
 import { useEffect, useState, use } from 'react';
 import { useRouter } from 'next/navigation';
 import CompetitiveUnitCircle from '@/components/CompetitiveUnitCircle';
+import katex from 'katex';
 
 interface UnitCirclePosition {
   angle: number; // in degrees
@@ -74,6 +75,33 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [wrongAttempt, setWrongAttempt] = useState(false); // Track if student made a wrong attempt
   const [correctAnswerIndex, setCorrectAnswerIndex] = useState<number | null>(null); // Store correct answer after wrong attempt
+
+  // Render math in prompt
+  const renderPrompt = (prompt: string) => {
+    // Check if prompt contains LaTeX (backslashes or \left, \right, \frac, etc.)
+    if (prompt.includes('\\')) {
+      try {
+        // Extract the coordinate part and render it with KaTeX
+        const match = prompt.match(/coordinate (.+)$/);
+        if (match) {
+          const coordLatex = match[1];
+          const rendered = katex.renderToString(coordLatex, {
+            throwOnError: false,
+            displayMode: false,
+          });
+          return (
+            <span>
+              Click the position for coordinate{' '}
+              <span dangerouslySetInnerHTML={{ __html: rendered }} />
+            </span>
+          );
+        }
+      } catch (e) {
+        console.error('KaTeX render error:', e);
+      }
+    }
+    return prompt;
+  };
 
   // Fetch initial match state
   useEffect(() => {
@@ -385,7 +413,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
         {/* Question prompt */}
         <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 mb-6 text-center">
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-            {currentQuestion.prompt}
+            {renderPrompt(currentQuestion.prompt)}
           </h2>
           
           {/* Debug test button */}
