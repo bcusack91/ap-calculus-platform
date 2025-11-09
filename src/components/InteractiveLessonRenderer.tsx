@@ -1230,6 +1230,7 @@ function FullUnitCircleGame({ onComplete }: { onComplete?: () => void }) {
           onChange={(e) => handleInputChange(key, e.target.value)}
           onBlur={() => handleBlur(key)}
           placeholder={placeholder}
+          className="dark:bg-gray-800 dark:text-white"
           style={{
             width: '100%',
             height: '100%',
@@ -1239,6 +1240,7 @@ function FullUnitCircleGame({ onComplete }: { onComplete?: () => void }) {
             fontSize: '14px',
             textAlign: 'center',
             backgroundColor: 'white',
+            color: 'black',
             opacity: answers[key] ? 0 : 1,
             position: 'absolute',
             top: 0,
@@ -1247,6 +1249,7 @@ function FullUnitCircleGame({ onComplete }: { onComplete?: () => void }) {
         />
         {answers[key] && (
           <div
+            className="dark:bg-gray-800 dark:text-white"
             style={{
               position: 'absolute',
               top: 0,
@@ -1262,6 +1265,7 @@ function FullUnitCircleGame({ onComplete }: { onComplete?: () => void }) {
               alignItems: 'center',
               justifyContent: 'center',
               backgroundColor: 'white',
+              color: 'black',
               pointerEvents: 'none',
             }}
             dangerouslySetInnerHTML={{ __html: formatDisplayValue(answers[key]) }}
