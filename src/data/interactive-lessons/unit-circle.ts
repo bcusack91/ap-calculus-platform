@@ -234,17 +234,53 @@ Remember: **"COAST DOWN"** - COsine values go DOWN from 90° to 0°!
       content: `
 **🧠 The Ultimate Memory Trick! 🧠**
 
-Put it all together:
+Follow these simple steps to memorize all the values:
 
-1. **Count from 0 to 4**: 0, 1, 2, 3, 4
-2. **Square root each**: √0, √1, √2, √3, √4
-3. **Simplify**: 0, 1, √2, √3, 2
-4. **Divide by 2**: 0, ½, √2/2, √3/2, 1
-5. **These are your angles**: 0°, 30°, 45°, 60°, 90°
+---
 
-**For Sine:** "**Sin UP**" - Use the values going up (0 → 1)
+**Step 1: Count from 0 to 4**
 
-**For Cosine:** "**COAST DOWN**" - Use the values going down (1 → 0)
+$$0, \\quad 1, \\quad 2, \\quad 3, \\quad 4$$
+
+---
+
+**Step 2: Take the square root of each number**
+
+$$\\sqrt{0}, \\quad \\sqrt{1}, \\quad \\sqrt{2}, \\quad \\sqrt{3}, \\quad \\sqrt{4}$$
+
+---
+
+**Step 3: Simplify the square roots**
+
+$$0, \\quad 1, \\quad \\sqrt{2}, \\quad \\sqrt{3}, \\quad 2$$
+
+---
+
+**Step 4: Divide everything by 2**
+
+$$0, \\quad \\frac{1}{2}, \\quad \\frac{\\sqrt{2}}{2}, \\quad \\frac{\\sqrt{3}}{2}, \\quad 1$$
+
+---
+
+**Step 5: Match with the angles**
+
+| Angle | Value |
+|-------|-------|
+| 0° | $0$ |
+| 30° | $\\frac{1}{2}$ |
+| 45° | $\\frac{\\sqrt{2}}{2}$ |
+| 60° | $\\frac{\\sqrt{3}}{2}$ |
+| 90° | $1$ |
+
+---
+
+**Now apply the pattern:**
+
+✅ **For Sine: "Sin UP"** - Use the values going **up** from $0$ to $1$
+
+✅ **For Cosine: "COAST DOWN"** - Use the values going **down** from $1$ to $0$
+
+---
 
 That's it! You now know the entire first quadrant of the unit circle! 🎉
       `

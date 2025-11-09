@@ -993,6 +993,7 @@ function FullUnitCircleGame({ onComplete }: { onComplete?: () => void }) {
             borderRadius: '4px',
             fontSize: '14px',
             textAlign: 'center',
+            backgroundColor: 'white',
             opacity: answers[key] ? 0 : 1,
             position: 'absolute',
             top: 0,
@@ -1027,7 +1028,7 @@ function FullUnitCircleGame({ onComplete }: { onComplete?: () => void }) {
 
   return (
     <div className="my-8">
-      <div className="max-w-5xl mx-auto bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-950/30 dark:to-purple-950/30 rounded-lg p-8 border-2 border-purple-300 dark:border-purple-700">
+      <div className="max-w-7xl mx-auto bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-950/30 dark:to-purple-950/30 rounded-lg p-8 border-2 border-purple-300 dark:border-purple-700">
         {allCorrect && (
           <div className="mb-6 p-4 bg-green-100 dark:bg-green-900/30 border-2 border-green-500 rounded-lg text-center">
             <p className="text-2xl font-bold text-green-700 dark:text-green-300">🎉 Perfect! You've mastered the complete unit circle! 🎉</p>
@@ -1035,7 +1036,7 @@ function FullUnitCircleGame({ onComplete }: { onComplete?: () => void }) {
         )}
         
         <div className="flex justify-center">
-          <svg viewBox="0 0 1000 1000" style={{ width: '100%', maxWidth: '900px', height: 'auto' }}>
+          <svg viewBox="-50 0 1100 1000" style={{ width: '100%', maxWidth: '1200px', height: 'auto' }}>
             {/* Axes */}
             <line x1="50" y1="500" x2="950" y2="500" stroke="#666" strokeWidth="2" />
             <line x1="500" y1="50" x2="500" y2="950" stroke="#666" strokeWidth="2" />
@@ -1048,87 +1049,87 @@ function FullUnitCircleGame({ onComplete }: { onComplete?: () => void }) {
 
             {/* Quadrant I: 0° */}
             <circle cx="850" cy="500" r="6" fill="#22c55e" />
-            <foreignObject x="730" y="480" width="70" height="32">
+            <foreignObject x="740" y="484" width="70" height="32">
               {renderInput('angle0', 'angle', '70px')}
             </foreignObject>
-            <text x="870" y="495" fontSize="14" fill="#666" fontWeight="bold">(</text>
-            <foreignObject x="880" y="475" width="50" height="32">
-              {renderInput('x0', 'x', '50px')}
+            <text x="870" y="482" fontSize="14" fill="#666" fontWeight="bold">(</text>
+            <foreignObject x="880" y="462" width="70" height="32">
+              {renderInput('x0', 'x', '70px')}
             </foreignObject>
-            <text x="933" y="495" fontSize="14" fill="#666" fontWeight="bold">,</text>
-            <foreignObject x="940" y="475" width="50" height="32">
-              {renderInput('y0', 'y', '50px')}
+            <text x="953" y="482" fontSize="14" fill="#666" fontWeight="bold">,</text>
+            <foreignObject x="960" y="462" width="70" height="32">
+              {renderInput('y0', 'y', '70px')}
             </foreignObject>
-            <text x="993" y="495" fontSize="14" fill="#666" fontWeight="bold">)</text>
+            <text x="1033" y="482" fontSize="14" fill="#666" fontWeight="bold">)</text>
 
             {/* Quadrant I: 30° */}
             <circle cx="803.1" cy="325" r="6" fill="#22c55e" />
-            <foreignObject x="710" y="305" width="70" height="32">
+            <foreignObject x="710" y="310" width="70" height="32">
               {renderInput('angle30', 'angle', '70px')}
             </foreignObject>
-            <text x="820" y="310" fontSize="14" fill="#666" fontWeight="bold">(</text>
-            <foreignObject x="830" y="290" width="50" height="32">
-              {renderInput('x30', 'x', '50px')}
+            <text x="820" y="315" fontSize="14" fill="#666" fontWeight="bold">(</text>
+            <foreignObject x="830" y="295" width="70" height="32">
+              {renderInput('x30', 'x', '70px')}
             </foreignObject>
-            <text x="883" y="310" fontSize="14" fill="#666" fontWeight="bold">,</text>
-            <foreignObject x="890" y="290" width="70" height="32">
+            <text x="903" y="315" fontSize="14" fill="#666" fontWeight="bold">,</text>
+            <foreignObject x="910" y="295" width="70" height="32">
               {renderInput('y30', 'y', '70px')}
             </foreignObject>
-            <text x="963" y="310" fontSize="14" fill="#666" fontWeight="bold">)</text>
+            <text x="983" y="315" fontSize="14" fill="#666" fontWeight="bold">)</text>
 
             {/* Quadrant I: 45° */}
             <circle cx="747.5" cy="252.5" r="6" fill="#22c55e" />
-            <foreignObject x="640" y="232" width="70" height="32">
+            <foreignObject x="647" y="238" width="70" height="32">
               {renderInput('angle45', 'angle', '70px')}
             </foreignObject>
-            <text x="760" y="237" fontSize="14" fill="#666" fontWeight="bold">(</text>
-            <foreignObject x="770" y="217" width="70" height="32">
+            <text x="763" y="241" fontSize="14" fill="#666" fontWeight="bold">(</text>
+            <foreignObject x="773" y="221" width="70" height="32">
               {renderInput('x45', 'x', '70px')}
             </foreignObject>
-            <text x="843" y="237" fontSize="14" fill="#666" fontWeight="bold">,</text>
-            <foreignObject x="850" y="217" width="70" height="32">
+            <text x="846" y="241" fontSize="14" fill="#666" fontWeight="bold">,</text>
+            <foreignObject x="853" y="221" width="70" height="32">
               {renderInput('y45', 'y', '70px')}
             </foreignObject>
-            <text x="923" y="237" fontSize="14" fill="#666" fontWeight="bold">)</text>
+            <text x="926" y="241" fontSize="14" fill="#666" fontWeight="bold">)</text>
 
             {/* Quadrant I: 60° */}
             <circle cx="675" cy="196.9" r="6" fill="#22c55e" />
-            <foreignObject x="570" y="176" width="70" height="32">
+            <foreignObject x="570" y="179" width="70" height="32">
               {renderInput('angle60', 'angle', '70px')}
             </foreignObject>
             <text x="685" y="173" fontSize="14" fill="#666" fontWeight="bold">(</text>
-            <foreignObject x="695" y="153" width="50" height="32">
-              {renderInput('x60', 'x', '50px')}
+            <foreignObject x="695" y="153" width="70" height="32">
+              {renderInput('x60', 'x', '70px')}
             </foreignObject>
-            <text x="748" y="173" fontSize="14" fill="#666" fontWeight="bold">,</text>
-            <foreignObject x="755" y="153" width="70" height="32">
+            <text x="768" y="173" fontSize="14" fill="#666" fontWeight="bold">,</text>
+            <foreignObject x="775" y="153" width="70" height="32">
               {renderInput('y60', 'y', '70px')}
             </foreignObject>
-            <text x="828" y="173" fontSize="14" fill="#666" fontWeight="bold">)</text>
+            <text x="848" y="173" fontSize="14" fill="#666" fontWeight="bold">)</text>
 
             {/* Quadrant I: 90° */}
             <circle cx="500" cy="150" r="6" fill="#22c55e" />
-            <foreignObject x="415" y="180" width="70" height="32">
+            <foreignObject x="465" y="180" width="70" height="32">
               {renderInput('angle90', 'angle', '70px')}
             </foreignObject>
             <text x="410" y="125" fontSize="14" fill="#666" fontWeight="bold">(</text>
-            <foreignObject x="420" y="105" width="50" height="32">
-              {renderInput('x90', 'x', '50px')}
+            <foreignObject x="420" y="105" width="70" height="32">
+              {renderInput('x90', 'x', '70px')}
             </foreignObject>
-            <text x="473" y="125" fontSize="14" fill="#666" fontWeight="bold">,</text>
-            <foreignObject x="480" y="105" width="50" height="32">
-              {renderInput('y90', 'y', '50px')}
+            <text x="493" y="125" fontSize="14" fill="#666" fontWeight="bold">,</text>
+            <foreignObject x="500" y="105" width="70" height="32">
+              {renderInput('y90', 'y', '70px')}
             </foreignObject>
-            <text x="533" y="125" fontSize="14" fill="#666" fontWeight="bold">)</text>
+            <text x="573" y="125" fontSize="14" fill="#666" fontWeight="bold">)</text>
 
             {/* Quadrant II: 120° */}
             <circle cx="325" cy="196.9" r="6" fill="#22c55e" />
-            <foreignObject x="260" y="176" width="70" height="32">
+            <foreignObject x="360" y="179" width="70" height="32">
               {renderInput('angle120', 'angle', '70px')}
             </foreignObject>
-            <text x="170" y="173" fontSize="14" fill="#666" fontWeight="bold">(</text>
-            <foreignObject x="180" y="153" width="50" height="32">
-              {renderInput('x120', 'x', '50px')}
+            <text x="150" y="173" fontSize="14" fill="#666" fontWeight="bold">(</text>
+            <foreignObject x="160" y="153" width="70" height="32">
+              {renderInput('x120', 'x', '70px')}
             </foreignObject>
             <text x="233" y="173" fontSize="14" fill="#666" fontWeight="bold">,</text>
             <foreignObject x="240" y="153" width="70" height="32">
@@ -1138,7 +1139,7 @@ function FullUnitCircleGame({ onComplete }: { onComplete?: () => void }) {
 
             {/* Quadrant II: 135° */}
             <circle cx="252.5" cy="252.5" r="6" fill="#22c55e" />
-            <foreignObject x="195" y="232" width="70" height="32">
+            <foreignObject x="283" y="238" width="70" height="32">
               {renderInput('angle135', 'angle', '70px')}
             </foreignObject>
             <text x="75" y="237" fontSize="14" fill="#666" fontWeight="bold">(</text>
@@ -1153,52 +1154,52 @@ function FullUnitCircleGame({ onComplete }: { onComplete?: () => void }) {
 
             {/* Quadrant II: 150° */}
             <circle cx="196.9" cy="325" r="6" fill="#22c55e" />
-            <foreignObject x="135" y="305" width="70" height="32">
+            <foreignObject x="220" y="310" width="70" height="32">
               {renderInput('angle150', 'angle', '70px')}
             </foreignObject>
-            <text x="35" y="310" fontSize="14" fill="#666" fontWeight="bold">(</text>
-            <foreignObject x="45" y="290" width="70" height="32">
+            <text x="15" y="310" fontSize="14" fill="#666" fontWeight="bold">(</text>
+            <foreignObject x="25" y="290" width="70" height="32">
               {renderInput('x150', 'x', '70px')}
             </foreignObject>
-            <text x="118" y="310" fontSize="14" fill="#666" fontWeight="bold">,</text>
-            <foreignObject x="125" y="290" width="50" height="32">
-              {renderInput('y150', 'y', '50px')}
+            <text x="98" y="310" fontSize="14" fill="#666" fontWeight="bold">,</text>
+            <foreignObject x="105" y="290" width="70" height="32">
+              {renderInput('y150', 'y', '70px')}
             </foreignObject>
             <text x="178" y="310" fontSize="14" fill="#666" fontWeight="bold">)</text>
 
             {/* Quadrant II: 180° */}
             <circle cx="150" cy="500" r="6" fill="#22c55e" />
-            <foreignObject x="135" y="480" width="70" height="32">
+            <foreignObject x="190" y="484" width="70" height="32">
               {renderInput('angle180', 'angle', '70px')}
             </foreignObject>
-            <text x="5" y="495" fontSize="14" fill="#666" fontWeight="bold">(</text>
-            <foreignObject x="15" y="475" width="50" height="32">
-              {renderInput('x180', 'x', '50px')}
+            <text x="-27" y="495" fontSize="14" fill="#666" fontWeight="bold">(</text>
+            <foreignObject x="-17" y="475" width="70" height="32">
+              {renderInput('x180', 'x', '70px')}
             </foreignObject>
-            <text x="68" y="495" fontSize="14" fill="#666" fontWeight="bold">,</text>
-            <foreignObject x="75" y="475" width="50" height="32">
-              {renderInput('y180', 'y', '50px')}
+            <text x="56" y="495" fontSize="14" fill="#666" fontWeight="bold">,</text>
+            <foreignObject x="63" y="475" width="70" height="32">
+              {renderInput('y180', 'y', '70px')}
             </foreignObject>
-            <text x="128" y="495" fontSize="14" fill="#666" fontWeight="bold">)</text>
+            <text x="138" y="495" fontSize="14" fill="#666" fontWeight="bold">)</text>
 
             {/* Quadrant III: 210° */}
             <circle cx="196.9" cy="675" r="6" fill="#22c55e" />
-            <foreignObject x="135" y="695" width="70" height="32">
+            <foreignObject x="220" y="658" width="70" height="32">
               {renderInput('angle210', 'angle', '70px')}
             </foreignObject>
-            <text x="35" y="690" fontSize="14" fill="#666" fontWeight="bold">(</text>
-            <foreignObject x="45" y="670" width="70" height="32">
+            <text x="15" y="690" fontSize="14" fill="#666" fontWeight="bold">(</text>
+            <foreignObject x="25" y="670" width="70" height="32">
               {renderInput('x210', 'x', '70px')}
             </foreignObject>
-            <text x="118" y="690" fontSize="14" fill="#666" fontWeight="bold">,</text>
-            <foreignObject x="125" y="670" width="50" height="32">
-              {renderInput('y210', 'y', '50px')}
+            <text x="98" y="690" fontSize="14" fill="#666" fontWeight="bold">,</text>
+            <foreignObject x="105" y="670" width="70" height="32">
+              {renderInput('y210', 'y', '70px')}
             </foreignObject>
             <text x="178" y="690" fontSize="14" fill="#666" fontWeight="bold">)</text>
 
             {/* Quadrant III: 225° */}
             <circle cx="252.5" cy="747.5" r="6" fill="#22c55e" />
-            <foreignObject x="195" y="767" width="70" height="32">
+            <foreignObject x="283" y="730" width="70" height="32">
               {renderInput('angle225', 'angle', '70px')}
             </foreignObject>
             <text x="75" y="762" fontSize="14" fill="#666" fontWeight="bold">(</text>
@@ -1213,12 +1214,12 @@ function FullUnitCircleGame({ onComplete }: { onComplete?: () => void }) {
 
             {/* Quadrant III: 240° */}
             <circle cx="325" cy="803.1" r="6" fill="#22c55e" />
-            <foreignObject x="260" y="823" width="70" height="32">
+            <foreignObject x="360" y="789" width="70" height="32">
               {renderInput('angle240', 'angle', '70px')}
             </foreignObject>
-            <text x="170" y="826" fontSize="14" fill="#666" fontWeight="bold">(</text>
-            <foreignObject x="180" y="806" width="50" height="32">
-              {renderInput('x240', 'x', '50px')}
+            <text x="150" y="826" fontSize="14" fill="#666" fontWeight="bold">(</text>
+            <foreignObject x="160" y="806" width="70" height="32">
+              {renderInput('x240', 'x', '70px')}
             </foreignObject>
             <text x="233" y="826" fontSize="14" fill="#666" fontWeight="bold">,</text>
             <foreignObject x="240" y="806" width="70" height="32">
@@ -1228,37 +1229,37 @@ function FullUnitCircleGame({ onComplete }: { onComplete?: () => void }) {
 
             {/* Quadrant III: 270° */}
             <circle cx="500" cy="850" r="6" fill="#22c55e" />
-            <foreignObject x="415" y="820" width="70" height="32">
+            <foreignObject x="465" y="795" width="70" height="32">
               {renderInput('angle270', 'angle', '70px')}
             </foreignObject>
             <text x="410" y="875" fontSize="14" fill="#666" fontWeight="bold">(</text>
-            <foreignObject x="420" y="855" width="50" height="32">
-              {renderInput('x270', 'x', '50px')}
+            <foreignObject x="420" y="855" width="70" height="32">
+              {renderInput('x270', 'x', '70px')}
             </foreignObject>
-            <text x="473" y="875" fontSize="14" fill="#666" fontWeight="bold">,</text>
-            <foreignObject x="480" y="855" width="50" height="32">
-              {renderInput('y270', 'y', '50px')}
+            <text x="493" y="875" fontSize="14" fill="#666" fontWeight="bold">,</text>
+            <foreignObject x="500" y="855" width="70" height="32">
+              {renderInput('y270', 'y', '70px')}
             </foreignObject>
-            <text x="533" y="875" fontSize="14" fill="#666" fontWeight="bold">)</text>
+            <text x="573" y="875" fontSize="14" fill="#666" fontWeight="bold">)</text>
 
             {/* Quadrant IV: 300° */}
             <circle cx="675" cy="803.1" r="6" fill="#22c55e" />
-            <foreignObject x="570" y="823" width="70" height="32">
+            <foreignObject x="570" y="789" width="70" height="32">
               {renderInput('angle300', 'angle', '70px')}
             </foreignObject>
             <text x="685" y="826" fontSize="14" fill="#666" fontWeight="bold">(</text>
-            <foreignObject x="695" y="806" width="50" height="32">
-              {renderInput('x300', 'x', '50px')}
+            <foreignObject x="695" y="806" width="70" height="32">
+              {renderInput('x300', 'x', '70px')}
             </foreignObject>
-            <text x="748" y="826" fontSize="14" fill="#666" fontWeight="bold">,</text>
-            <foreignObject x="755" y="806" width="70" height="32">
+            <text x="768" y="826" fontSize="14" fill="#666" fontWeight="bold">,</text>
+            <foreignObject x="775" y="806" width="70" height="32">
               {renderInput('y300', 'y', '70px')}
             </foreignObject>
-            <text x="828" y="826" fontSize="14" fill="#666" fontWeight="bold">)</text>
+            <text x="848" y="826" fontSize="14" fill="#666" fontWeight="bold">)</text>
 
             {/* Quadrant IV: 315° */}
             <circle cx="747.5" cy="747.5" r="6" fill="#22c55e" />
-            <foreignObject x="640" y="767" width="70" height="32">
+            <foreignObject x="647" y="730" width="70" height="32">
               {renderInput('angle315', 'angle', '70px')}
             </foreignObject>
             <text x="760" y="762" fontSize="14" fill="#666" fontWeight="bold">(</text>
@@ -1273,7 +1274,7 @@ function FullUnitCircleGame({ onComplete }: { onComplete?: () => void }) {
 
             {/* Quadrant IV: 330° */}
             <circle cx="803.1" cy="675" r="6" fill="#22c55e" />
-            <foreignObject x="710" y="695" width="70" height="32">
+            <foreignObject x="710" y="658" width="70" height="32">
               {renderInput('angle330', 'angle', '70px')}
             </foreignObject>
             <text x="820" y="690" fontSize="14" fill="#666" fontWeight="bold">(</text>
