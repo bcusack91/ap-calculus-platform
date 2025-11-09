@@ -109,6 +109,9 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
         setCurrentSectionIndex(0)
         setCompletedSections(new Set())
         window.scrollTo({ top: 0, behavior: 'smooth' })
+      } else if (lessonPart === 4) {
+        // On final section of part 4, go to competitive mode
+        router.push('/competitive')
       } else {
         // On final page of other parts, mark as 100% complete
         setCompletedSections(new Set(sections.map((_, i) => i)))
@@ -248,13 +251,15 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
         <button
           onClick={handleNext}
           disabled={
-            (currentSectionIndex === sections.length - 1 && lessonPart !== 3) || 
+            (currentSectionIndex === sections.length - 1 && lessonPart !== 3 && lessonPart !== 4) || 
             !canProceedToNext
           }
           className="px-6 py-3 rounded-lg font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700"
         >
           {currentSectionIndex === sections.length - 1 && lessonPart === 3 
             ? 'Continue to Part 4 →' 
+            : currentSectionIndex === sections.length - 1 && lessonPart === 4
+            ? '🎮 Enter Competitive Mode →'
             : 'Next →'}
         </button>
       </div>
