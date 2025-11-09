@@ -339,11 +339,11 @@ function ReferenceAngleQuiz({ section, onComplete, isComplete }: { section: Sect
   const [currentAngle, setCurrentAngle] = useState<number>(0)
   const [userAnswer, setUserAnswer] = useState<string>('')
   const [correctStreak, setCorrectStreak] = useState<number>(0)
-  const [showHint1, setShowHint1] = useState<boolean>(false)
-  const [showHint2, setShowHint2] = useState<boolean>(false)
+  const [attemptCount, setAttemptCount] = useState<number>(0)
   const [feedback, setFeedback] = useState<string>('')
-  const [feedbackType, setFeedbackType] = useState<'correct' | 'incorrect' | ''>('')
+  const [feedbackType, setFeedbackType] = useState<'correct' | 'incorrect' | 'hint' | ''>('')
   const [hintsUsedThisQuestion, setHintsUsedThisQuestion] = useState<boolean>(false)
+  const [showingAnswer, setShowingAnswer] = useState<boolean>(false)
 
   // Generate random angle on mount and when moving to next question
   useEffect(() => {
@@ -356,11 +356,11 @@ function ReferenceAngleQuiz({ section, onComplete, isComplete }: { section: Sect
     const angle = Math.floor(Math.random() * 361) // 0 to 360 inclusive
     setCurrentAngle(angle)
     setUserAnswer('')
-    setShowHint1(false)
-    setShowHint2(false)
+    setAttemptCount(0)
     setFeedback('')
     setFeedbackType('')
     setHintsUsedThisQuestion(false)
+    setShowingAnswer(false)
   }
 
   const getQuadrant = (angle: number): number => {
@@ -422,29 +422,42 @@ function ReferenceAngleQuiz({ section, onComplete, isComplete }: { section: Sect
         }, 2000)
       }
     } else {
-      setFeedback(`❌ Incorrect. The reference angle for ${currentAngle}° is ${correctAnswer}°. Streak reset to 0.`)
-      setFeedbackType('incorrect')
-      setCorrectStreak(0)
-      setTimeout(() => {
-        generateNewAngle()
-      }, 3000)
+      // Incorrect answer
+      const newAttemptCount = attemptCount + 1
+      setAttemptCount(newAttemptCount)
+      
+      if (newAttemptCount === 1) {
+        // First incorrect attempt - show Hint 1
+        setHintsUsedThisQuestion(true)
+        const quadrant = getQuadrant(currentAngle)
+        setFeedback(`❌ Incorrect. Hint: ${currentAngle}° is in Quadrant ${quadrant === 1 ? 'I' : quadrant === 2 ? 'II' : quadrant === 3 ? 'III' : 'IV'}. Try again!`)
+        setFeedbackType('hint')
+        setUserAnswer('')
+      } else if (newAttemptCount === 2) {
+        // Second incorrect attempt - show Hint 2
+        const formula = getQuadrantFormula(currentAngle)
+        setFeedback(`❌ Incorrect again. Hint: Use the formula: ${formula}. One more try!`)
+        setFeedbackType('hint')
+        setUserAnswer('')
+      } else {
+        // Third incorrect attempt - show answer and move to next
+        setFeedback(`❌ The correct answer is ${correctAnswer}°. Let's try another one.`)
+        setFeedbackType('incorrect')
+        setCorrectStreak(0)
+        setShowingAnswer(true)
+        setTimeout(() => {
+          generateNewAngle()
+        }, 3000)
+      }
     }
   }
 
   const handleHint1 = () => {
-    setShowHint1(true)
-    setHintsUsedThisQuestion(true)
-    const quadrant = getQuadrant(currentAngle)
-    setFeedback(`💡 Hint: ${currentAngle}° is in Quadrant ${quadrant === 1 ? 'I' : quadrant === 2 ? 'II' : quadrant === 3 ? 'III' : 'IV'}`)
-    setFeedbackType('')
+    // Hints are now shown automatically after incorrect attempts
   }
 
   const handleHint2 = () => {
-    setShowHint2(true)
-    setHintsUsedThisQuestion(true)
-    const formula = getQuadrantFormula(currentAngle)
-    setFeedback(`💡 Formula: Reference angle = ${formula}`)
-    setFeedbackType('')
+    // Hints are now shown automatically after incorrect attempts
   }
 
   if (isComplete || correctStreak >= 5) {
@@ -503,50 +516,30 @@ function ReferenceAngleQuiz({ section, onComplete, isComplete }: { section: Sect
           {/* Submit Button */}
           <button
             onClick={handleSubmit}
-            disabled={feedbackType === 'correct'}
+            disabled={feedbackType === 'correct' || showingAnswer}
             className="px-8 py-4 bg-purple-600 hover:bg-purple-700 disabled:bg-gray-400 text-white font-bold rounded-lg text-xl transition-all shadow-lg hover:shadow-xl disabled:cursor-not-allowed"
           >
             Check Answer
           </button>
         </div>
 
-        {/* Hints */}
-        {feedbackType !== 'correct' && (
-          <div className="flex gap-4 justify-center mb-6">
-            <button
-              onClick={handleHint1}
-              disabled={showHint1}
-              className="px-6 py-3 bg-yellow-500 hover:bg-yellow-600 disabled:bg-gray-400 text-white font-semibold rounded-lg transition-all disabled:cursor-not-allowed"
-            >
-              {showHint1 ? '✓ Hint 1 Used' : '💡 Hint 1: Quadrant'}
-            </button>
-            <button
-              onClick={handleHint2}
-              disabled={showHint2 || !showHint1}
-              className="px-6 py-3 bg-yellow-500 hover:bg-yellow-600 disabled:bg-gray-400 text-white font-semibold rounded-lg transition-all disabled:cursor-not-allowed"
-            >
-              {showHint2 ? '✓ Hint 2 Used' : '💡 Hint 2: Formula'}
-            </button>
-          </div>
-        )}
-
         {/* Feedback */}
         {feedback && (
           <div className={`text-center p-4 rounded-lg text-xl font-semibold ${
             feedbackType === 'correct' 
               ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 border-2 border-green-500' 
-              : feedbackType === 'incorrect'
-              ? 'bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400 border-2 border-red-500'
-              : 'bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-400 border-2 border-yellow-500'
+              : feedbackType === 'hint'
+              ? 'bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-400 border-2 border-yellow-500'
+              : 'bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400 border-2 border-red-500'
           }`}>
             {feedback}
           </div>
         )}
 
-        {/* Note about hints */}
-        {hintsUsedThisQuestion && feedbackType !== 'correct' && (
+        {/* Attempt counter */}
+        {attemptCount > 0 && !showingAnswer && feedbackType !== 'correct' && (
           <div className="text-center mt-4 text-sm text-gray-600 dark:text-gray-400">
-            ⚠️ Using hints will reset your streak
+            Attempt {attemptCount}/3 • {hintsUsedThisQuestion ? 'Using hints will reset your streak' : 'Get it right for your streak!'}
           </div>
         )}
       </div>
