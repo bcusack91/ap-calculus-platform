@@ -183,7 +183,11 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
     
     // Check if this player already answered this question
     const playerAnswers = isPlayer1 ? matchState.player1Answers : matchState.player2Answers;
-    if (playerAnswers[matchState.currentQuestionIndex] !== null) {
+    const alreadyAnswered = matchState.currentQuestionIndex < playerAnswers.length &&
+                            playerAnswers[matchState.currentQuestionIndex] !== null &&
+                            playerAnswers[matchState.currentQuestionIndex] !== undefined;
+    
+    if (alreadyAnswered) {
       console.log('Already answered this question');
       return;
     }
@@ -306,7 +310,9 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
   const isPlayer1 = currentUserId === matchState.player1Id;
   const currentQuestion = matchState.questions[matchState.currentQuestionIndex];
   const playerAnswers = isPlayer1 ? matchState.player1Answers : matchState.player2Answers;
-  const hasAnswered = playerAnswers[matchState.currentQuestionIndex] !== null;
+  const hasAnswered = matchState.currentQuestionIndex < playerAnswers.length && 
+                      playerAnswers[matchState.currentQuestionIndex] !== null &&
+                      playerAnswers[matchState.currentQuestionIndex] !== undefined;
 
   // Results screen
   if (matchState.status === 'COMPLETED') {
