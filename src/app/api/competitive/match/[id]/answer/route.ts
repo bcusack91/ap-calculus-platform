@@ -78,10 +78,14 @@ export async function POST(
     
     console.log('Current attempts for this question:', currentAttempts);
 
-    // Check if player already answered this question correctly
+    // Check if player already answered this specific question in this round
+    // Only block if they've already submitted an answer for the current question
     const playerAnswers = isPlayer1 ? player1Answers : player2Answers;
-    if (playerAnswers[questionIndex] !== null && currentAttempts >= 2) {
-      return NextResponse.json({ error: 'Already answered' }, { status: 400 });
+    const alreadyAnsweredThisQuestion = playerAnswers[questionIndex] !== null && playerAnswers[questionIndex] !== undefined;
+    
+    if (alreadyAnsweredThisQuestion) {
+      console.log('Player already answered this question');
+      return NextResponse.json({ error: 'Already answered this question' }, { status: 400 });
     }
 
     // Increment attempt count
@@ -260,9 +264,20 @@ export async function POST(
       const bothAnswered = player1Answers[questionIndex] !== null && player2Answers[questionIndex] !== null;
       let newQuestionIndex = currentQuestionIndex;
       
-      // Move to next question if both answered and we have more questions
-      if (bothAnswered && currentQuestionIndex < questions.length - 1) {
+      // Move to next question if both answered
+      if (bothAnswered) {
         newQuestionIndex = currentQuestionIndex + 1;
+        
+        // If we've reached the end of questions, cycle back to start
+        if (newQuestionIndex >= questions.length) {
+          newQuestionIndex = 0;
+        }
+        
+        // Clear answers for the new question to allow re-answering
+        player1Answers[newQuestionIndex] = null;
+        player2Answers[newQuestionIndex] = null;
+        player1Attempts[newQuestionIndex] = 0;
+        player2Attempts[newQuestionIndex] = 0;
       }
       
       // Just update the match with new answers and possibly new question index
