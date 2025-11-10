@@ -304,11 +304,8 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
         
         setIsSubmitting(false);
         
-        // Refresh state to get updated scores
-        await fetchMatchState();
-        
-        // Show green and happy face for 1 second, then clear
-        setTimeout(() => {
+        // Wait 500ms to show feedback, then refresh state for next question
+        setTimeout(async () => {
           setFeedback(null);
           setSelectedPosition(null);
           if (isPlayer1) {
@@ -316,7 +313,9 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
           } else {
             setPlayer2Emotion('neutral');
           }
-        }, 1000);
+          // Refresh state to get updated question
+          await fetchMatchState();
+        }, 500);
       } else {
         console.log('Answer was INCORRECT');
         setFeedback('incorrect');
@@ -328,15 +327,12 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
           setPlayer2Emotion('sad');
         }
         
-        // Show correct answer in green for 1 second
+        // Show correct answer in green for 500ms
         setCorrectAnswerIndex(currentQuestion.answerIndex);
         setIsSubmitting(false);
         
-        // Refresh match state
-        await fetchMatchState();
-        
-        // Clear after 1 second
-        setTimeout(() => {
+        // Wait 500ms to show feedback, then clear and refresh
+        setTimeout(async () => {
           setFeedback(null);
           setSelectedPosition(null);
           setCorrectAnswerIndex(null);
@@ -345,7 +341,9 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
           } else {
             setPlayer2Emotion('neutral');
           }
-        }, 1000);
+          // Refresh match state for next question
+          await fetchMatchState();
+        }, 500);
       }
     } catch (error) {
       console.error('ERROR submitting answer:', error);
