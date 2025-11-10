@@ -2,7 +2,6 @@ import { NextRequest, NextResponse } from 'next/server';
 import { auth } from '@/lib/auth';
 import { prisma } from '@/lib/prisma';
 import { checkAnswer, UNIT_CIRCLE_POSITIONS, calculateMMRChange, getRankFromMMR } from '@/lib/competitive-utils';
-import { simulateAIAnswer, isAIOpponent } from '@/lib/ai-opponent';
 
 export async function POST(
   request: NextRequest,
@@ -253,17 +252,9 @@ export async function POST(
       if (bothAnswered) {
         newQuestionIndex = currentQuestionIndex + 1;
         
-        console.log('🔄 Both answered - advancing question:', {
-          currentIndex: currentQuestionIndex,
-          newIndex: newQuestionIndex,
-          totalQuestions: questions.length,
-          willWrap: newQuestionIndex >= questions.length
-        });
-        
         // If we've reached the end of questions, cycle back to start
         if (newQuestionIndex >= questions.length) {
           newQuestionIndex = 0;
-          console.log('♻️ Wrapping back to question 0');
         }
         
         // Reset answered flags for the new question
@@ -287,92 +278,6 @@ export async function POST(
           },
         },
       });
-
-      // If opponent is AI and hasn't answered this question yet, simulate AI answer
-      const opponentAnsweredCurrent = isPlayer1 ? flagsToSave.player2AnsweredCurrent : flagsToSave.player1AnsweredCurrent;
-      const isOpponentAI = isAIOpponent(
-        isPlayer1 ? match.player2Id : match.player1Id,
-        isPlayer1 ? match.player2.email : match.player1.email
-      )
-
-      if (isOpponentAI && !opponentAnsweredCurrent) {
-        // Schedule AI answer asynchronously (don't await - let it happen in background)
-        const aiDifficulty = gameData?.aiDifficulty || 'medium'
-        const correctAnswerIndex = questions[currentQuestionIndex].answerIndex
-        
-        setTimeout(async () => {
-          try {
-            const aiAnswer = simulateAIAnswer(
-              currentQuestionIndex,
-              correctAnswerIndex,
-              aiDifficulty,
-              UNIT_CIRCLE_POSITIONS.length
-            )
-
-            if (aiAnswer.shouldAnswer && aiAnswer.answerIndex !== null) {
-              // Re-fetch latest match state
-              const latestMatch = await prisma.competitiveMatch.findUnique({
-                where: { id: matchId }
-              })
-
-              if (!latestMatch || latestMatch.status !== 'IN_PROGRESS') return
-
-              const latestGameData = latestMatch.gameData as any
-              const latestQuestionIndex = latestGameData?.currentQuestionIndex || 0
-              
-              // Only answer if we're still on the same question
-              if (latestQuestionIndex !== currentQuestionIndex) return
-              
-              // Check if AI hasn't already answered
-              const aiAnsweredFlag = isPlayer1 ? latestGameData?.player2AnsweredCurrent : latestGameData?.player1AnsweredCurrent
-              if (aiAnsweredFlag) return
-
-              // Calculate AI score change
-              let aiScore = isPlayer1 ? latestMatch.player2Score : latestMatch.player1Score
-              if (aiAnswer.isCorrect) {
-                aiScore += 1
-              } else {
-                aiScore = Math.max(0, aiScore - 1)
-              }
-
-              // Update scores and mark AI as answered
-              const newP1Score = isPlayer1 ? latestMatch.player1Score : aiScore
-              const newP2Score = isPlayer1 ? aiScore : latestMatch.player2Score
-              const newP1AnsweredCurrent = isPlayer1 ? latestGameData?.player1AnsweredCurrent : true
-              const newP2AnsweredCurrent = isPlayer1 ? true : latestGameData?.player2AnsweredCurrent
-
-              // Check if both players have now answered
-              const bothAnsweredNow = newP1AnsweredCurrent && newP2AnsweredCurrent
-              let nextQuestionIndex = latestQuestionIndex
-              let nextP1AnsweredCurrent = newP1AnsweredCurrent
-              let nextP2AnsweredCurrent = newP2AnsweredCurrent
-              
-              if (bothAnsweredNow) {
-                // Move to next question and reset flags
-                nextQuestionIndex = (latestQuestionIndex + 1) % questions.length
-                nextP1AnsweredCurrent = false
-                nextP2AnsweredCurrent = false
-              }
-
-              await prisma.competitiveMatch.update({
-                where: { id: matchId },
-                data: {
-                  player1Score: newP1Score,
-                  player2Score: newP2Score,
-                  gameData: {
-                    ...latestGameData,
-                    currentQuestionIndex: nextQuestionIndex,
-                    player1AnsweredCurrent: nextP1AnsweredCurrent,
-                    player2AnsweredCurrent: nextP2AnsweredCurrent,
-                  },
-                },
-              })
-            }
-          } catch (error) {
-            console.error('Error processing AI answer:', error)
-          }
-        }, 800) // Small delay before AI answers (800ms minimum)
-      }
 
       return NextResponse.json({
         correct: isCorrect,

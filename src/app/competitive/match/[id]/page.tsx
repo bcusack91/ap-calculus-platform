@@ -386,17 +386,6 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
     (matchState.gameData as any)?.player1AnsweredCurrent : 
     (matchState.gameData as any)?.player2AnsweredCurrent;
 
-  // Debug logging for question 10+ issue
-  if (matchState.currentQuestionIndex >= 9) {
-    console.log('🔍 Question index >= 9 detected:', {
-      currentQuestionIndex: matchState.currentQuestionIndex,
-      totalQuestions: matchState.questions.length,
-      currentQuestion,
-      hasAnswered,
-    });
-  }
-
-
   // Results screen
   if (matchState.status === 'COMPLETED') {
     const isWinner = matchState.winnerId === currentUserId;
