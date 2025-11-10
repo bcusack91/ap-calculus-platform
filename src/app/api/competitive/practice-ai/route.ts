@@ -88,9 +88,8 @@ export async function POST(req: NextRequest) {
         startedAt: new Date(),
         gameData: {
           questions,
-          currentQuestionIndex: 0,
-          player1AnsweredCurrent: false,
-          player2AnsweredCurrent: false,
+          player1QuestionIndex: 0,
+          player2QuestionIndex: 0,
           aiDifficulty, // Store AI difficulty for answer simulation
           isPracticeMatch: true, // Flag to indicate this is practice
         },

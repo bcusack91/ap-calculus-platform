@@ -61,13 +61,12 @@ export async function GET(
         player2Email: match.player2.email,
         player1Avatar: match.player1.avatarData,
         player2Avatar: match.player2.avatarData,
-        currentQuestionIndex: gameData?.currentQuestionIndex || 0,
+        player1QuestionIndex: gameData?.player1QuestionIndex ?? 0,
+        player2QuestionIndex: gameData?.player2QuestionIndex ?? 0,
         questions: gameData?.questions || [],
         player1Score: match.player1Score,
         player2Score: match.player2Score,
-        player1Answers: gameData?.player1Answers || [],
-        player2Answers: gameData?.player2Answers || [],
-        gameData: gameData, // Include full gameData for flags
+        gameData: gameData, // Include full gameData for AI difficulty
         status: match.status,
         winnerId: match.winnerId,
         startedAt: match.startedAt?.toISOString(),

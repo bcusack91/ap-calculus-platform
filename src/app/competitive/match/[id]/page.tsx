@@ -32,12 +32,11 @@ interface MatchState {
   player2Email?: string;
   player1Avatar?: any;
   player2Avatar?: any;
-  currentQuestionIndex: number;
+  player1QuestionIndex: number;
+  player2QuestionIndex: number;
   questions: Question[];
   player1Score: number;
   player2Score: number;
-  player1Answers: (number | null)[];
-  player2Answers: (number | null)[];
   gameData?: any;
   status: 'IN_PROGRESS' | 'COMPLETED' | 'PENDING';
   winnerId: string | null;
@@ -131,13 +130,8 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
     const isOpponentAI = opponentEmail === 'ai-opponent@studyai.com';
     if (!isOpponentAI) return;
 
-    // Check if AI has already answered this question
-    const aiAnsweredCurrent = isPlayer1 
-      ? (matchState.gameData as any)?.player2AnsweredCurrent 
-      : (matchState.gameData as any)?.player1AnsweredCurrent;
+    const opponentQuestionIndex = isPlayer1 ? matchState.player2QuestionIndex : matchState.player1QuestionIndex;
     
-    if (aiAnsweredCurrent) return; // AI already answered
-
     // Get AI difficulty and calculate delay
     const aiDifficulty = (matchState.gameData as any)?.aiDifficulty || 'medium';
     const difficultySettings = {
@@ -149,33 +143,33 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
     const settings = difficultySettings[aiDifficulty as keyof typeof difficultySettings];
     const delay = settings.min + Math.random() * (settings.max - settings.min);
     
-    console.log(`🤖 Scheduling AI answer in ${Math.round(delay)}ms for question ${matchState.currentQuestionIndex}`);
+    console.log(`🤖 Scheduling AI answer in ${Math.round(delay)}ms for AI question ${opponentQuestionIndex}`);
     
     // Schedule AI answer
     const timeoutId = setTimeout(async () => {
       try {
         // Determine if AI answers correctly
         const willAnswerCorrectly = Math.random() < settings.accuracy;
-        const currentQuestion = matchState.questions[matchState.currentQuestionIndex];
+        const aiCurrentQuestion = matchState.questions[opponentQuestionIndex];
         
         let answerIndex: number;
         if (willAnswerCorrectly) {
-          answerIndex = currentQuestion.answerIndex;
+          answerIndex = aiCurrentQuestion.answerIndex;
         } else {
           // Choose random wrong answer
           do {
             answerIndex = Math.floor(Math.random() * UNIT_CIRCLE_POSITIONS.length);
-          } while (answerIndex === currentQuestion.answerIndex);
+          } while (answerIndex === aiCurrentQuestion.answerIndex);
         }
         
-        console.log(`🤖 AI submitting answer: ${answerIndex} (correct: ${currentQuestion.answerIndex}, will be correct: ${willAnswerCorrectly})`);
+        console.log(`🤖 AI submitting answer for question ${opponentQuestionIndex}: ${answerIndex} (correct: ${aiCurrentQuestion.answerIndex})`);
         
         // Submit AI answer
         await fetch(`/api/competitive/match/${matchId}/answer`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
-            questionIndex: matchState.currentQuestionIndex,
+            questionIndex: opponentQuestionIndex,
             answerIndex,
           }),
         });
@@ -188,7 +182,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
     
     // Cleanup timeout if question changes or component unmounts
     return () => clearTimeout(timeoutId);
-  }, [matchState?.currentQuestionIndex, matchState?.status, currentUserId, matchId]);
+  }, [matchState?.player1QuestionIndex, matchState?.player2QuestionIndex, matchState?.status, currentUserId, matchId]);
 
 
   const fetchMatchState = async () => {
@@ -199,9 +193,13 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
       }
       const data = await response.json();
       
-      // Check if question changed - if so, clear ALL feedback states
-      if (matchState && data.match.currentQuestionIndex !== matchState.currentQuestionIndex) {
-        console.log('🔄 Question changed! Clearing all states. Old:', matchState.currentQuestionIndex, 'New:', data.match.currentQuestionIndex);
+      // Check if player's question changed - if so, clear feedback states
+      const newIsPlayer1 = data.currentUserId === data.match.player1Id;
+      const newPlayerQuestionIndex = newIsPlayer1 ? data.match.player1QuestionIndex : data.match.player2QuestionIndex;
+      const oldPlayerQuestionIndex = matchState && (data.currentUserId === matchState.player1Id ? matchState.player1QuestionIndex : matchState.player2QuestionIndex);
+      
+      if (matchState && newPlayerQuestionIndex !== oldPlayerQuestionIndex) {
+        console.log('🔄 Question changed! Clearing all states. Old:', oldPlayerQuestionIndex, 'New:', newPlayerQuestionIndex);
         setFeedback(null);
         setSelectedPosition(null);
         setCorrectAnswerIndex(null);
@@ -249,7 +247,8 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
     }
 
     const isPlayer1 = currentUserId === matchState.player1Id;
-    const currentQuestion = matchState.questions[matchState.currentQuestionIndex];
+    const playerQuestionIndex = isPlayer1 ? matchState.player1QuestionIndex : matchState.player2QuestionIndex;
+    const currentQuestion = matchState.questions[playerQuestionIndex];
     
     console.log('Current question:', currentQuestion);
     console.log('Clicked position index:', positionIndex);
@@ -277,7 +276,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          questionIndex: matchState.currentQuestionIndex,
+          questionIndex: playerQuestionIndex,
           answerIndex: positionIndex,
         }),
       });
@@ -381,11 +380,10 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
   }
 
   const isPlayer1 = currentUserId === matchState.player1Id;
-  const currentQuestion = matchState.questions[matchState.currentQuestionIndex];
-  const hasAnswered = isPlayer1 ? 
-    (matchState.gameData as any)?.player1AnsweredCurrent : 
-    (matchState.gameData as any)?.player2AnsweredCurrent;
-
+  const playerQuestionIndex = isPlayer1 ? matchState.player1QuestionIndex : matchState.player2QuestionIndex;
+  const opponentQuestionIndex = isPlayer1 ? matchState.player2QuestionIndex : matchState.player1QuestionIndex;
+  const currentQuestion = matchState.questions[playerQuestionIndex];
+  
   // Results screen
   if (matchState.status === 'COMPLETED') {
     const isWinner = matchState.winnerId === currentUserId;
@@ -519,7 +517,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
           {/* Center - Game Area */}
           <div className="space-y-6">
         {/* Question prompt */}
-        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 mb-6 text-center" key={`q-${matchState.currentQuestionIndex}-${currentQuestion.prompt}`}>
+        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 mb-6 text-center" key={`q-${playerQuestionIndex}-${currentQuestion.prompt}`}>
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4" key={currentQuestion.prompt}>
             {renderPrompt(currentQuestion.prompt)}
           </h2>
@@ -551,7 +549,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
                 (feedback === 'correct' ? selectedPosition : null)
               }
               showFeedback={feedback !== null}
-              disabled={isSubmitting || hasAnswered}
+              disabled={isSubmitting}
             />
           </div>
         </div>

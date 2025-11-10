@@ -56,25 +56,24 @@ export async function POST(
     // Parse current game data
     const gameData = match.gameData as any;
     const questions = gameData?.questions || [];
-    const currentQuestionIndex = gameData?.currentQuestionIndex || 0;
-    let player1AnsweredCurrent = gameData?.player1AnsweredCurrent || false;
-    let player2AnsweredCurrent = gameData?.player2AnsweredCurrent || false;
+    let player1QuestionIndex = gameData?.player1QuestionIndex ?? 0;
+    let player2QuestionIndex = gameData?.player2QuestionIndex ?? 0;
     let player1Score = match.player1Score;
     let player2Score = match.player2Score;
 
-    console.log('Game data:', { currentQuestionIndex, questionIndex, questions: questions.length });
+    // Get the current question index for this player
+    const playerQuestionIndex = isPlayer1 ? player1QuestionIndex : player2QuestionIndex;
 
-    // Check if question index matches
-    if (questionIndex !== currentQuestionIndex) {
+    console.log('Game data:', { 
+      player1QuestionIndex, 
+      player2QuestionIndex, 
+      submittedQuestionIndex: questionIndex, 
+      questions: questions.length 
+    });
+
+    // Check if question index matches this player's current question
+    if (questionIndex !== playerQuestionIndex) {
       return NextResponse.json({ error: 'Invalid question index' }, { status: 400 });
-    }
-
-    // Check if this player already answered the current question
-    const alreadyAnswered = isPlayer1 ? player1AnsweredCurrent : player2AnsweredCurrent;
-    
-    if (alreadyAnswered) {
-      console.log('Player already answered this question');
-      return NextResponse.json({ error: 'Already answered this question' }, { status: 400 });
     }
 
     // Check answer
@@ -83,13 +82,6 @@ export async function POST(
     const isCorrect = answerIndex === currentQuestion.answerIndex;
 
     console.log('Answer is correct:', isCorrect);
-
-    // Mark that this player has answered the current question
-    if (isPlayer1) {
-      player1AnsweredCurrent = true;
-    } else {
-      player2AnsweredCurrent = true;
-    }
 
     // Award/deduct points - 1 point for correct, -1 for incorrect
     if (isCorrect) {
@@ -113,6 +105,13 @@ export async function POST(
     let winnerId = match.winnerId;
     let completedAt = match.completedAt;
 
+    // Advance this player to the next question
+    if (isPlayer1) {
+      player1QuestionIndex = (player1QuestionIndex + 1) % questions.length;
+    } else {
+      player2QuestionIndex = (player2QuestionIndex + 1) % questions.length;
+    }
+
     if (matchComplete) {
       const newStatus = 'COMPLETED' as const;
       completedAt = new Date();
@@ -123,7 +122,6 @@ export async function POST(
       } else if (player2Score >= 10) {
         winnerId = match.player2Id;
       }
-      // Note: Both can't reach 10 in same turn due to turn-based nature
 
       // Calculate MMR changes
       const player1MMR = match.player1MMRBefore || match.player1.competitiveProfile?.unitCircleMMR || 1000;
@@ -152,9 +150,8 @@ export async function POST(
           player2Score,
           gameData: {
             questions,
-            currentQuestionIndex,
-            player1AnsweredCurrent,
-            player2AnsweredCurrent,
+            player1QuestionIndex,
+            player2QuestionIndex,
             ...(gameData?.aiDifficulty && { aiDifficulty: gameData.aiDifficulty }),
             ...(gameData?.isPracticeMatch && { isPracticeMatch: gameData.isPracticeMatch }),
           },
@@ -240,29 +237,7 @@ export async function POST(
         newMMR: isPlayer1 ? player1MMRAfter : player2MMRAfter,
       });
     } else {
-      // Match continues - check if both players answered and move to next question
-      const bothAnswered = player1AnsweredCurrent && player2AnsweredCurrent;
-      let newQuestionIndex = currentQuestionIndex;
-      let flagsToSave = {
-        player1AnsweredCurrent,
-        player2AnsweredCurrent,
-      };
-      
-      // Move to next question if both answered
-      if (bothAnswered) {
-        newQuestionIndex = currentQuestionIndex + 1;
-        
-        // If we've reached the end of questions, cycle back to start
-        if (newQuestionIndex >= questions.length) {
-          newQuestionIndex = 0;
-        }
-        
-        // Reset answered flags for the new question
-        flagsToSave.player1AnsweredCurrent = false;
-        flagsToSave.player2AnsweredCurrent = false;
-      }
-      
-      // Just update the match with new scores and possibly new question index
+      // Match continues - just update scores and player's question index
       await prisma.competitiveMatch.update({
         where: { id: matchId },
         data: {
@@ -270,9 +245,8 @@ export async function POST(
           player2Score,
           gameData: {
             questions,
-            currentQuestionIndex: newQuestionIndex,
-            player1AnsweredCurrent: flagsToSave.player1AnsweredCurrent,
-            player2AnsweredCurrent: flagsToSave.player2AnsweredCurrent,
+            player1QuestionIndex,
+            player2QuestionIndex,
             ...(gameData?.aiDifficulty && { aiDifficulty: gameData.aiDifficulty }),
             ...(gameData?.isPracticeMatch && { isPracticeMatch: gameData.isPracticeMatch }),
           },
