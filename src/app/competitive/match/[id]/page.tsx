@@ -211,12 +211,16 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
         setFeedback('correct');
         setWrongAttempt(false);
         setCorrectAnswerIndex(null);
-        // Refresh state to see if we got the point
+        setIsSubmitting(false);
+        
+        // Refresh state to get updated scores
         await fetchMatchState();
         
-        // Keep the green color showing - don't clear feedback or selectedPosition
-        // They'll be cleared when moving to next question
-        setIsSubmitting(false);
+        // Show green for 1 second, then clear everything for next question
+        setTimeout(() => {
+          setFeedback(null);
+          setSelectedPosition(null);
+        }, 1000);
       } else {
         console.log('Answer was INCORRECT');
         setFeedback('incorrect');
