@@ -120,12 +120,14 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
       }
       const data = await response.json();
       
-      // Check if question changed - if so, clear feedback and selection
+      // Check if question changed - if so, clear ALL feedback states
       if (matchState && data.match.currentQuestionIndex !== matchState.currentQuestionIndex) {
+        console.log('🔄 Question changed! Clearing all states. Old:', matchState.currentQuestionIndex, 'New:', data.match.currentQuestionIndex);
         setFeedback(null);
         setSelectedPosition(null);
         setWrongAttempt(false);
         setCorrectAnswerIndex(null);
+        setIsSubmitting(false);
       }
       
       setMatchState(data.match);
@@ -457,7 +459,10 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
               positions={UNIT_CIRCLE_POSITIONS}
               onPositionClick={handlePositionClick}
               selectedPosition={selectedPosition}
-              correctPosition={wrongAttempt ? correctAnswerIndex : null}
+              correctPosition={
+                wrongAttempt ? correctAnswerIndex : 
+                (feedback === 'correct' ? selectedPosition : null)
+              }
               showFeedback={feedback !== null || wrongAttempt}
               disabled={isSubmitting || (hasAnswered && !wrongAttempt)}
             />

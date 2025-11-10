@@ -29,6 +29,14 @@ export default function CompetitiveUnitCircle({
   const radius = 220;
   const dotRadius = 18;
 
+  // Debug logging
+  console.log('🎨 CompetitiveUnitCircle render:', {
+    selectedPosition,
+    correctPosition,
+    showFeedback,
+    disabled
+  });
+
   // Convert unit circle coordinates to SVG coordinates
   const toSVG = (x: number, y: number) => ({
     x: center + x * radius,
