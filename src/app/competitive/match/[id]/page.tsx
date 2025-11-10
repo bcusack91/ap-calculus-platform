@@ -452,11 +452,6 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
               <p className="font-semibold">Submitting answer...</p>
             </div>
           )}
-          {!isSubmitting && hasAnswered && (
-            <p className="text-gray-600 dark:text-gray-400">
-              Waiting for opponent...
-            </p>
-          )}
           {feedback && (
             <p className={`text-xl font-semibold ${
               feedback === 'correct' ? 'text-green-600' : 'text-red-600'
