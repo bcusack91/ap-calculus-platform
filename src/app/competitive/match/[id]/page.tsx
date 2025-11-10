@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import CompetitiveUnitCircle from '@/components/CompetitiveUnitCircle';
 import AvatarDisplay from '@/components/AvatarDisplay';
 import katex from 'katex';
+import 'katex/dist/katex.min.css';
 
 interface UnitCirclePosition {
   angle: number; // in degrees
@@ -90,11 +91,11 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
           const coordLatex = match[1].trim();
           const rendered = katex.renderToString(coordLatex, {
             throwOnError: false,
-            displayMode: false,
+            displayMode: true, // Use display mode for better fraction rendering
           });
           return (
-            <div>
-              <span>Click the position for coordinate </span>
+            <div className="flex items-center justify-center gap-2">
+              <span>Click the position for coordinate</span>
               <span dangerouslySetInnerHTML={{ __html: rendered }} />
             </div>
           );
