@@ -58,10 +58,8 @@ export async function POST(
     const gameData = match.gameData as any;
     const questions = gameData?.questions || [];
     const currentQuestionIndex = gameData?.currentQuestionIndex || 0;
-    const player1Answers = gameData?.player1Answers || Array(questions.length).fill(null);
-    const player2Answers = gameData?.player2Answers || Array(questions.length).fill(null);
-    const player1Attempts = gameData?.player1Attempts || Array(questions.length).fill(0);
-    const player2Attempts = gameData?.player2Attempts || Array(questions.length).fill(0);
+    const player1AnsweredCurrent = gameData?.player1AnsweredCurrent || false;
+    const player2AnsweredCurrent = gameData?.player2AnsweredCurrent || false;
     let player1Score = match.player1Score;
     let player2Score = match.player2Score;
 
@@ -72,37 +70,12 @@ export async function POST(
       return NextResponse.json({ error: 'Invalid question index' }, { status: 400 });
     }
 
-    // Track attempts
-    const playerAttempts = isPlayer1 ? player1Attempts : player2Attempts;
-    const currentAttempts = playerAttempts[questionIndex] || 0;
+    // Check if this player already answered the current question
+    const alreadyAnswered = isPlayer1 ? player1AnsweredCurrent : player2AnsweredCurrent;
     
-    console.log('Current attempts for this question:', currentAttempts);
-
-    // Check if player already answered this specific question in this round
-    // Only block if they've already submitted an answer for the current question
-    const playerAnswers = isPlayer1 ? player1Answers : player2Answers;
-    
-    // Ensure the answers array is large enough
-    while (playerAnswers.length <= questionIndex) {
-      playerAnswers.push(null);
-    }
-    while (player1Attempts.length <= questionIndex) {
-      player1Attempts.push(0);
-      player2Attempts.push(0);
-    }
-    
-    const alreadyAnsweredThisQuestion = playerAnswers[questionIndex] !== null && playerAnswers[questionIndex] !== undefined;
-    
-    if (alreadyAnsweredThisQuestion) {
+    if (alreadyAnswered) {
       console.log('Player already answered this question');
       return NextResponse.json({ error: 'Already answered this question' }, { status: 400 });
-    }
-
-    // Increment attempt count
-    if (isPlayer1) {
-      player1Attempts[questionIndex] = currentAttempts + 1;
-    } else {
-      player2Attempts[questionIndex] = currentAttempts + 1;
     }
 
     // Check answer
@@ -112,11 +85,11 @@ export async function POST(
 
     console.log('Answer is correct:', isCorrect);
 
-    // Record answer - no second attempts, every submission counts
+    // Mark that this player has answered the current question
     if (isPlayer1) {
-      player1Answers[questionIndex] = answerIndex;
+      gameData.player1AnsweredCurrent = true;
     } else {
-      player2Answers[questionIndex] = answerIndex;
+      gameData.player2AnsweredCurrent = true;
     }
 
     // Award/deduct points - 1 point for correct, -1 for incorrect
@@ -181,10 +154,8 @@ export async function POST(
           gameData: {
             questions,
             currentQuestionIndex,
-            player1Answers,
-            player2Answers,
-            player1Attempts,
-            player2Attempts,
+            player1AnsweredCurrent: gameData.player1AnsweredCurrent,
+            player2AnsweredCurrent: gameData.player2AnsweredCurrent,
             ...(gameData?.aiDifficulty && { aiDifficulty: gameData.aiDifficulty }),
             ...(gameData?.isPracticeMatch && { isPracticeMatch: gameData.isPracticeMatch }),
           },
@@ -271,7 +242,7 @@ export async function POST(
       });
     } else {
       // Match continues - check if both players answered and move to next question
-      const bothAnswered = player1Answers[questionIndex] !== null && player2Answers[questionIndex] !== null;
+      const bothAnswered = player1AnsweredCurrent && player2AnsweredCurrent;
       let newQuestionIndex = currentQuestionIndex;
       
       // Move to next question if both answered
@@ -283,22 +254,12 @@ export async function POST(
           newQuestionIndex = 0;
         }
         
-        // Ensure arrays are large enough
-        while (player1Answers.length <= newQuestionIndex) {
-          player1Answers.push(null);
-          player2Answers.push(null);
-          player1Attempts.push(0);
-          player2Attempts.push(0);
-        }
-        
-        // Clear answers for the new question to allow re-answering
-        player1Answers[newQuestionIndex] = null;
-        player2Answers[newQuestionIndex] = null;
-        player1Attempts[newQuestionIndex] = 0;
-        player2Attempts[newQuestionIndex] = 0;
+        // Reset answered flags for the new question
+        gameData.player1AnsweredCurrent = false;
+        gameData.player2AnsweredCurrent = false;
       }
       
-      // Just update the match with new answers and possibly new question index
+      // Just update the match with new scores and possibly new question index
       await prisma.competitiveMatch.update({
         where: { id: matchId },
         data: {
@@ -307,10 +268,8 @@ export async function POST(
           gameData: {
             questions,
             currentQuestionIndex: newQuestionIndex,
-            player1Answers,
-            player2Answers,
-            player1Attempts,
-            player2Attempts,
+            player1AnsweredCurrent: gameData.player1AnsweredCurrent,
+            player2AnsweredCurrent: gameData.player2AnsweredCurrent,
             ...(gameData?.aiDifficulty && { aiDifficulty: gameData.aiDifficulty }),
             ...(gameData?.isPracticeMatch && { isPracticeMatch: gameData.isPracticeMatch }),
           },
@@ -318,13 +277,13 @@ export async function POST(
       });
 
       // If opponent is AI and hasn't answered this question yet, simulate AI answer
-      const opponentAnswers = isPlayer1 ? player2Answers : player1Answers;
+      const opponentAnsweredCurrent = isPlayer1 ? player2AnsweredCurrent : player1AnsweredCurrent;
       const isOpponentAI = isAIOpponent(
         isPlayer1 ? match.player2Id : match.player1Id,
         isPlayer1 ? match.player2.email : match.player1.email
       )
 
-      if (isOpponentAI && opponentAnswers[questionIndex] === null) {
+      if (isOpponentAI && !opponentAnsweredCurrent) {
         // Schedule AI answer asynchronously (don't await - let it happen in background)
         const aiDifficulty = gameData?.aiDifficulty || 'medium'
         const correctAnswerIndex = questions[questionIndex].answerIndex

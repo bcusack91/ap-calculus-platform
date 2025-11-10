@@ -36,6 +36,7 @@ interface MatchState {
   player2Score: number;
   player1Answers: (number | null)[];
   player2Answers: (number | null)[];
+  gameData?: any;
   status: 'IN_PROGRESS' | 'COMPLETED' | 'PENDING';
   winnerId: string | null;
   startedAt: string;
@@ -181,11 +182,10 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
     console.log('Clicked position index:', positionIndex);
     console.log('Correct answer index:', currentQuestion.answerIndex);
     
-    // Check if this player already answered this question
-    const playerAnswers = isPlayer1 ? matchState.player1Answers : matchState.player2Answers;
-    const alreadyAnswered = matchState.currentQuestionIndex < playerAnswers.length &&
-                            playerAnswers[matchState.currentQuestionIndex] !== null &&
-                            playerAnswers[matchState.currentQuestionIndex] !== undefined;
+    // Check if this player already answered the current question
+    const alreadyAnswered = isPlayer1 ? 
+      (matchState.gameData as any)?.player1AnsweredCurrent : 
+      (matchState.gameData as any)?.player2AnsweredCurrent;
     
     if (alreadyAnswered) {
       console.log('Already answered this question');
@@ -309,10 +309,9 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
 
   const isPlayer1 = currentUserId === matchState.player1Id;
   const currentQuestion = matchState.questions[matchState.currentQuestionIndex];
-  const playerAnswers = isPlayer1 ? matchState.player1Answers : matchState.player2Answers;
-  const hasAnswered = matchState.currentQuestionIndex < playerAnswers.length && 
-                      playerAnswers[matchState.currentQuestionIndex] !== null &&
-                      playerAnswers[matchState.currentQuestionIndex] !== undefined;
+  const hasAnswered = isPlayer1 ? 
+    (matchState.gameData as any)?.player1AnsweredCurrent : 
+    (matchState.gameData as any)?.player2AnsweredCurrent;
 
   // Results screen
   if (matchState.status === 'COMPLETED') {
