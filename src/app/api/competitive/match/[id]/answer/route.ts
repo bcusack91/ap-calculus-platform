@@ -244,6 +244,10 @@ export async function POST(
       // Match continues - check if both players answered and move to next question
       const bothAnswered = player1AnsweredCurrent && player2AnsweredCurrent;
       let newQuestionIndex = currentQuestionIndex;
+      let flagsToSave = {
+        player1AnsweredCurrent,
+        player2AnsweredCurrent,
+      };
       
       // Move to next question if both answered
       if (bothAnswered) {
@@ -255,8 +259,8 @@ export async function POST(
         }
         
         // Reset answered flags for the new question
-        player1AnsweredCurrent = false;
-        player2AnsweredCurrent = false;
+        flagsToSave.player1AnsweredCurrent = false;
+        flagsToSave.player2AnsweredCurrent = false;
       }
       
       // Just update the match with new scores and possibly new question index
@@ -268,8 +272,8 @@ export async function POST(
           gameData: {
             questions,
             currentQuestionIndex: newQuestionIndex,
-            player1AnsweredCurrent,
-            player2AnsweredCurrent,
+            player1AnsweredCurrent: flagsToSave.player1AnsweredCurrent,
+            player2AnsweredCurrent: flagsToSave.player2AnsweredCurrent,
             ...(gameData?.aiDifficulty && { aiDifficulty: gameData.aiDifficulty }),
             ...(gameData?.isPracticeMatch && { isPracticeMatch: gameData.isPracticeMatch }),
           },
@@ -277,7 +281,7 @@ export async function POST(
       });
 
       // If opponent is AI and hasn't answered this question yet, simulate AI answer
-      const opponentAnsweredCurrent = isPlayer1 ? player2AnsweredCurrent : player1AnsweredCurrent;
+      const opponentAnsweredCurrent = isPlayer1 ? flagsToSave.player2AnsweredCurrent : flagsToSave.player1AnsweredCurrent;
       const isOpponentAI = isAIOpponent(
         isPlayer1 ? match.player2Id : match.player1Id,
         isPlayer1 ? match.player2.email : match.player1.email
@@ -286,12 +290,12 @@ export async function POST(
       if (isOpponentAI && !opponentAnsweredCurrent) {
         // Schedule AI answer asynchronously (don't await - let it happen in background)
         const aiDifficulty = gameData?.aiDifficulty || 'medium'
-        const correctAnswerIndex = questions[questionIndex].answerIndex
+        const correctAnswerIndex = questions[currentQuestionIndex].answerIndex
         
         setTimeout(async () => {
           try {
             const aiAnswer = simulateAIAnswer(
-              questionIndex,
+              currentQuestionIndex,
               correctAnswerIndex,
               aiDifficulty,
               UNIT_CIRCLE_POSITIONS.length
@@ -306,36 +310,40 @@ export async function POST(
               if (!latestMatch || latestMatch.status !== 'IN_PROGRESS') return
 
               const latestGameData = latestMatch.gameData as any
-              const latestP1Answers = latestGameData?.player1Answers || []
-              const latestP2Answers = latestGameData?.player2Answers || []
+              const latestQuestionIndex = latestGameData?.currentQuestionIndex || 0
               
-              // Double check AI hasn't already answered
-              const aiAnswers = isPlayer1 ? latestP2Answers : latestP1Answers
-              if (aiAnswers[questionIndex] !== null) return
+              // Only answer if we're still on the same question
+              if (latestQuestionIndex !== currentQuestionIndex) return
+              
+              // Check if AI hasn't already answered
+              const aiAnsweredFlag = isPlayer1 ? latestGameData?.player2AnsweredCurrent : latestGameData?.player1AnsweredCurrent
+              if (aiAnsweredFlag) return
 
-              // Submit AI answer
-              if (isPlayer1) {
-                latestP2Answers[questionIndex] = aiAnswer.answerIndex
-              } else {
-                latestP1Answers[questionIndex] = aiAnswer.answerIndex
-              }
-
-              // Check if AI got it correct and award point
+              // Calculate AI score change
               let aiScore = isPlayer1 ? latestMatch.player2Score : latestMatch.player1Score
-              if (aiAnswer.isCorrect && !isCorrect) {
+              if (aiAnswer.isCorrect) {
                 aiScore += 1
+              } else {
+                aiScore = Math.max(0, aiScore - 1)
               }
 
-              // Update scores
+              // Update scores and mark AI as answered
               const newP1Score = isPlayer1 ? latestMatch.player1Score : aiScore
               const newP2Score = isPlayer1 ? aiScore : latestMatch.player2Score
+              const newP1AnsweredCurrent = isPlayer1 ? latestGameData?.player1AnsweredCurrent : true
+              const newP2AnsweredCurrent = isPlayer1 ? true : latestGameData?.player2AnsweredCurrent
 
-              // Check if both answered - move to next question
-              const bothAnsweredNow = latestP1Answers[questionIndex] !== null && 
-                                     latestP2Answers[questionIndex] !== null
-              let nextQuestionIndex = latestGameData?.currentQuestionIndex || questionIndex
-              if (bothAnsweredNow && questionIndex < questions.length - 1) {
-                nextQuestionIndex = questionIndex + 1
+              // Check if both players have now answered
+              const bothAnsweredNow = newP1AnsweredCurrent && newP2AnsweredCurrent
+              let nextQuestionIndex = latestQuestionIndex
+              let nextP1AnsweredCurrent = newP1AnsweredCurrent
+              let nextP2AnsweredCurrent = newP2AnsweredCurrent
+              
+              if (bothAnsweredNow) {
+                // Move to next question and reset flags
+                nextQuestionIndex = (latestQuestionIndex + 1) % questions.length
+                nextP1AnsweredCurrent = false
+                nextP2AnsweredCurrent = false
               }
 
               await prisma.competitiveMatch.update({
@@ -346,8 +354,8 @@ export async function POST(
                   gameData: {
                     ...latestGameData,
                     currentQuestionIndex: nextQuestionIndex,
-                    player1Answers: latestP1Answers,
-                    player2Answers: latestP2Answers,
+                    player1AnsweredCurrent: nextP1AnsweredCurrent,
+                    player2AnsweredCurrent: nextP2AnsweredCurrent,
                   },
                 },
               })

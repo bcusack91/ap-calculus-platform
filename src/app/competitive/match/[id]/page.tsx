@@ -313,11 +313,6 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
     (matchState.gameData as any)?.player1AnsweredCurrent : 
     (matchState.gameData as any)?.player2AnsweredCurrent;
 
-  console.log('=== RENDER STATE ===');
-  console.log('Current question index:', matchState.currentQuestionIndex);
-  console.log('Current question:', currentQuestion);
-  console.log('Question prompt:', currentQuestion?.prompt);
-  console.log('==================');
 
   // Results screen
   if (matchState.status === 'COMPLETED') {
