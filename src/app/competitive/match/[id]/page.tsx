@@ -446,7 +446,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
           {/* Center - Game Area */}
           <div className="space-y-6">
         {/* Question prompt */}
-        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 mb-6 text-center">
+        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 mb-6 text-center" key={matchState.currentQuestionIndex}>
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
             {renderPrompt(currentQuestion.prompt)}
           </h2>
