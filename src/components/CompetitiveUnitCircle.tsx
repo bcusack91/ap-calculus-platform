@@ -95,33 +95,30 @@ export default function CompetitiveUnitCircle({
         const isSelected = selectedPosition === index;
         const isCorrect = correctPosition === index;
         
-        // Determine if this is the correct answer being shown (after wrong attempt)
-        const isCorrectAnswer = showFeedback && isCorrect;
-        // Determine if this was selected AND is correct
-        const isCorrectSelection = isSelected && !isCorrect && showFeedback;
-        // Determine if this was selected AND is incorrect
-        const isIncorrectSelection = isSelected && !isCorrectAnswer && showFeedback;
-
         let fillColor = 'rgb(147, 51, 234)'; // purple-600
         let strokeColor = 'rgb(126, 34, 206)'; // purple-700
         let opacity = 0.3;
 
-        if (isCorrectAnswer) {
-          // Show correct answer in green (after wrong attempt)
-          fillColor = 'rgb(22, 163, 74)'; // green-600
-          strokeColor = 'rgb(21, 128, 61)'; // green-700
-          opacity = 1;
-        } else if (isIncorrectSelection) {
-          // Show incorrect selection in red
-          fillColor = 'rgb(220, 38, 38)'; // red-600
-          strokeColor = 'rgb(185, 28, 28)'; // red-700
-          opacity = 1;
+        if (showFeedback) {
+          // When feedback is showing
+          if (isCorrect) {
+            // Show correct answer in green (after wrong attempt)
+            fillColor = 'rgb(22, 163, 74)'; // green-600
+            strokeColor = 'rgb(21, 128, 61)'; // green-700
+            opacity = 1;
+          } else if (isSelected) {
+            // Show incorrect selection in red
+            fillColor = 'rgb(220, 38, 38)'; // red-600
+            strokeColor = 'rgb(185, 28, 28)'; // red-700
+            opacity = 1;
+          }
         } else if (isSelected) {
-          // Just selected, no feedback yet - show as highlighted purple
-          fillColor = 'rgb(22, 163, 74)'; // green-600 - show green when clicked
+          // Just selected, no feedback yet - show as green
+          fillColor = 'rgb(22, 163, 74)'; // green-600
           strokeColor = 'rgb(21, 128, 61)'; // green-700
           opacity = 0.7;
         }
+        // Otherwise keep default purple with low opacity
 
         return (
           <g key={index}>
