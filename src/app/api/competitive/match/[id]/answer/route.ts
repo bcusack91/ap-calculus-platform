@@ -253,9 +253,17 @@ export async function POST(
       if (bothAnswered) {
         newQuestionIndex = currentQuestionIndex + 1;
         
+        console.log('🔄 Both answered - advancing question:', {
+          currentIndex: currentQuestionIndex,
+          newIndex: newQuestionIndex,
+          totalQuestions: questions.length,
+          willWrap: newQuestionIndex >= questions.length
+        });
+        
         // If we've reached the end of questions, cycle back to start
         if (newQuestionIndex >= questions.length) {
           newQuestionIndex = 0;
+          console.log('♻️ Wrapping back to question 0');
         }
         
         // Reset answered flags for the new question
