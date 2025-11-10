@@ -81,6 +81,16 @@ export async function POST(
     // Check if player already answered this specific question in this round
     // Only block if they've already submitted an answer for the current question
     const playerAnswers = isPlayer1 ? player1Answers : player2Answers;
+    
+    // Ensure the answers array is large enough
+    while (playerAnswers.length <= questionIndex) {
+      playerAnswers.push(null);
+    }
+    while (player1Attempts.length <= questionIndex) {
+      player1Attempts.push(0);
+      player2Attempts.push(0);
+    }
+    
     const alreadyAnsweredThisQuestion = playerAnswers[questionIndex] !== null && playerAnswers[questionIndex] !== undefined;
     
     if (alreadyAnsweredThisQuestion) {
@@ -271,6 +281,14 @@ export async function POST(
         // If we've reached the end of questions, cycle back to start
         if (newQuestionIndex >= questions.length) {
           newQuestionIndex = 0;
+        }
+        
+        // Ensure arrays are large enough
+        while (player1Answers.length <= newQuestionIndex) {
+          player1Answers.push(null);
+          player2Answers.push(null);
+          player1Attempts.push(0);
+          player2Attempts.push(0);
         }
         
         // Clear answers for the new question to allow re-answering
