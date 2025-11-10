@@ -1,5 +1,7 @@
 // Avatar customization types
 
+export type AvatarEmotion = 'neutral' | 'happy' | 'sad';
+
 export interface AvatarData {
   skinTone: string;
   hairStyle: string;
@@ -7,6 +9,9 @@ export interface AvatarData {
   eyeColor: string;
   faceShape: string;
   accessory?: string;
+  // Preset avatars use emojis
+  isPreset?: boolean;
+  preset?: string;
 }
 
 export const AVATAR_OPTIONS = {

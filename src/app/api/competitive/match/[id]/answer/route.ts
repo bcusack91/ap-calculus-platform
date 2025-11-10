@@ -105,7 +105,7 @@ export async function POST(
       player2Answers[questionIndex] = answerIndex;
     }
 
-    // Award points - 1 point for correct, 0 for incorrect (no partial credit)
+    // Award/deduct points - 1 point for correct, -1 for incorrect
     if (isCorrect) {
       if (isPlayer1) {
         player1Score += 1;
@@ -113,6 +113,13 @@ export async function POST(
         player2Score += 1;
       }
       console.log('Points awarded: 1');
+    } else {
+      if (isPlayer1) {
+        player1Score = Math.max(0, player1Score - 1); // Don't go below 0
+      } else {
+        player2Score = Math.max(0, player2Score - 1); // Don't go below 0
+      }
+      console.log('Points deducted: -1');
     }
 
     // Check if both players have answered - if so, move to next question

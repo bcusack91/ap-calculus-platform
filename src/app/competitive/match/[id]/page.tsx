@@ -78,6 +78,8 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
   const [feedback, setFeedback] = useState<'correct' | 'incorrect' | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [correctAnswerIndex, setCorrectAnswerIndex] = useState<number | null>(null);
+  const [player1Emotion, setPlayer1Emotion] = useState<'neutral' | 'happy' | 'sad'>('neutral');
+  const [player2Emotion, setPlayer2Emotion] = useState<'neutral' | 'happy' | 'sad'>('neutral');
 
   // Render math in prompt
   const renderPrompt = (prompt: string) => {
@@ -130,6 +132,8 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
         setSelectedPosition(null);
         setCorrectAnswerIndex(null);
         setIsSubmitting(false);
+        setPlayer1Emotion('neutral');
+        setPlayer2Emotion('neutral');
       }
       
       setMatchState(data.match);
@@ -207,22 +211,44 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
       const data = await response.json();
       console.log('Answer response:', data);
       
+      const isPlayer1 = currentUserId === matchState.player1Id;
+      
       if (data.correct) {
         console.log('Answer was CORRECT!');
         setFeedback('correct');
+        
+        // Set happy emotion for the player who answered
+        if (isPlayer1) {
+          setPlayer1Emotion('happy');
+        } else {
+          setPlayer2Emotion('happy');
+        }
+        
         setIsSubmitting(false);
         
         // Refresh state to get updated scores
         await fetchMatchState();
         
-        // Show green for 1 second, then clear
+        // Show green and happy face for 1 second, then clear
         setTimeout(() => {
           setFeedback(null);
           setSelectedPosition(null);
+          if (isPlayer1) {
+            setPlayer1Emotion('neutral');
+          } else {
+            setPlayer2Emotion('neutral');
+          }
         }, 1000);
       } else {
         console.log('Answer was INCORRECT');
         setFeedback('incorrect');
+        
+        // Set sad emotion for the player who answered
+        if (isPlayer1) {
+          setPlayer1Emotion('sad');
+        } else {
+          setPlayer2Emotion('sad');
+        }
         
         // Show correct answer in green for 1 second
         setCorrectAnswerIndex(currentQuestion.answerIndex);
@@ -236,6 +262,11 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
           setFeedback(null);
           setSelectedPosition(null);
           setCorrectAnswerIndex(null);
+          if (isPlayer1) {
+            setPlayer1Emotion('neutral');
+          } else {
+            setPlayer2Emotion('neutral');
+          }
         }, 1000);
       }
     } catch (error) {
@@ -376,6 +407,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
                 avatarData={matchState.player1Avatar as any}
                 size={120}
                 className="mx-auto mb-3"
+                emotion={player1Emotion}
               />
               <p className="font-bold text-gray-900 dark:text-white mb-1">
                 {matchState.player1Name}
@@ -467,6 +499,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
                 avatarData={matchState.player2Avatar as any}
                 size={120}
                 className="mx-auto mb-3"
+                emotion={player2Emotion}
               />
               <p className="font-bold text-gray-900 dark:text-white mb-1">
                 {matchState.player2Name}

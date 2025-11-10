@@ -1,18 +1,43 @@
 import React from 'react';
-import { AvatarData, DEFAULT_AVATAR, AVATAR_OPTIONS } from '@/types/avatar';
+import { AvatarData, DEFAULT_AVATAR, AVATAR_OPTIONS, AvatarEmotion } from '@/types/avatar';
 
 interface AvatarDisplayProps {
   avatarData?: AvatarData | null;
   size?: number;
   className?: string;
+  emotion?: AvatarEmotion;
 }
+
+// Emoji mappings for preset avatars with different emotions
+const PRESET_EMOTIONS: Record<string, Record<AvatarEmotion, string>> = {
+  cat: { neutral: '🐱', happy: '😸', sad: '😿' },
+  dog: { neutral: '🐶', happy: '😃', sad: '😢' },
+  panda: { neutral: '🐼', happy: '😊', sad: '😔' },
+  fox: { neutral: '🦊', happy: '😁', sad: '😞' },
+  koala: { neutral: '🐨', happy: '😄', sad: '😥' },
+  owl: { neutral: '🦉', happy: '🤓', sad: '😪' },
+};
 
 export default function AvatarDisplay({ 
   avatarData, 
   size = 80,
-  className = ''
+  className = '',
+  emotion = 'neutral'
 }: AvatarDisplayProps) {
   const avatar = avatarData || DEFAULT_AVATAR;
+  
+  // If it's a preset avatar, show emoji with emotion
+  if (avatar.isPreset && avatar.preset) {
+    const emoji = PRESET_EMOTIONS[avatar.preset]?.[emotion] || PRESET_EMOTIONS[avatar.preset]?.neutral || '🙂';
+    return (
+      <div 
+        className={`flex items-center justify-center ${className}`}
+        style={{ width: size, height: size, fontSize: size * 0.8 }}
+      >
+        {emoji}
+      </div>
+    );
+  }
   
   // Get colors from options
   const skinColor = AVATAR_OPTIONS.skinTones.find(t => t.id === avatar.skinTone)?.color || AVATAR_OPTIONS.skinTones[1].color;
@@ -77,14 +102,34 @@ export default function AvatarDisplay({
       {/* Nose */}
       <line x1="50" y1="55" x2="50" y2="62" stroke="#000" strokeWidth="1" opacity="0.2" />
       
-      {/* Mouth */}
-      <path 
-        d="M 40 68 Q 50 72, 60 68" 
-        stroke="#000" 
-        strokeWidth="2" 
-        fill="none" 
-        opacity="0.3"
-      />
+      {/* Mouth - changes based on emotion */}
+      {emotion === 'happy' && (
+        <path 
+          d="M 38 68 Q 50 76, 62 68" 
+          stroke="#000" 
+          strokeWidth="2" 
+          fill="none" 
+          opacity="0.4"
+        />
+      )}
+      {emotion === 'sad' && (
+        <path 
+          d="M 38 72 Q 50 66, 62 72" 
+          stroke="#000" 
+          strokeWidth="2" 
+          fill="none" 
+          opacity="0.4"
+        />
+      )}
+      {emotion === 'neutral' && (
+        <path 
+          d="M 40 68 Q 50 72, 60 68" 
+          stroke="#000" 
+          strokeWidth="2" 
+          fill="none" 
+          opacity="0.3"
+        />
+      )}
       
       {/* Accessories */}
       {avatar.accessory === 'glasses' && (

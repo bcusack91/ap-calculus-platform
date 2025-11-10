@@ -191,14 +191,14 @@ export default function SignUpPage() {
                   <button
                     key={preset.id}
                     type="button"
-                    onClick={() => setSelectedAvatar(preset.data)}
+                    onClick={() => setSelectedAvatar({ ...preset.data, isPreset: true, preset: preset.id })}
                     className={`p-4 rounded-xl border-4 transition-all hover:scale-105 ${
-                      selectedAvatar === preset.data
+                      selectedAvatar?.preset === preset.id
                         ? 'border-purple-600 bg-purple-50 dark:bg-purple-900/30'
                         : 'border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800'
                     }`}
                   >
-                    <AvatarDisplay avatarData={preset.data} size={80} className="mx-auto mb-2" />
+                    <AvatarDisplay avatarData={{ ...preset.data, isPreset: true, preset: preset.id }} size={80} className="mx-auto mb-2" />
                     <p className="text-2xl text-center mb-1">{preset.emoji}</p>
                     <p className="text-sm font-semibold text-gray-900 dark:text-white text-center">
                       {preset.name}
