@@ -1,0 +1,110 @@
+'use client';
+
+import { useState, useEffect } from 'react';
+import { useSession } from 'next-auth/react';
+import { useRouter } from 'next/navigation';
+import AvatarBuilder from '@/components/AvatarBuilder';
+import { AvatarData } from '@/types/avatar';
+
+export default function ProfilePage() {
+  const { data: session, status } = useSession();
+  const router = useRouter();
+  const [avatarData, setAvatarData] = useState<AvatarData | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [saveMessage, setSaveMessage] = useState('');
+
+  useEffect(() => {
+    if (status === 'unauthenticated') {
+      router.push('/auth/signin');
+      return;
+    }
+
+    if (status === 'authenticated') {
+      fetchAvatar();
+    }
+  }, [status, router]);
+
+  const fetchAvatar = async () => {
+    try {
+      const response = await fetch('/api/user/avatar');
+      const data = await response.json();
+      setAvatarData(data.avatarData);
+    } catch (error) {
+      console.error('Error fetching avatar:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleSaveAvatar = async (newAvatarData: AvatarData) => {
+    try {
+      const response = await fetch('/api/user/avatar', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(newAvatarData),
+      });
+
+      if (response.ok) {
+        setAvatarData(newAvatarData);
+        setSaveMessage('Avatar saved successfully! ✓');
+        setTimeout(() => setSaveMessage(''), 3000);
+      } else {
+        setSaveMessage('Failed to save avatar. Please try again.');
+      }
+    } catch (error) {
+      console.error('Error saving avatar:', error);
+      setSaveMessage('Failed to save avatar. Please try again.');
+    }
+  };
+
+  if (loading || status === 'loading') {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-purple-600 mx-auto mb-4"></div>
+          <p className="text-gray-600 dark:text-gray-400">Loading...</p>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-12 px-4">
+      <div className="max-w-6xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-8">
+          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">
+            Profile Settings
+          </h1>
+          <p className="text-gray-600 dark:text-gray-400">
+            Customize your avatar for competitive mode
+          </p>
+        </div>
+
+        {/* Success Message */}
+        {saveMessage && (
+          <div className={`max-w-md mx-auto mb-6 p-4 rounded-lg text-center ${
+            saveMessage.includes('successfully') 
+              ? 'bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200'
+              : 'bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-200'
+          }`}>
+            {saveMessage}
+          </div>
+        )}
+
+        {/* Avatar Builder */}
+        <AvatarBuilder initialAvatar={avatarData} onSave={handleSaveAvatar} />
+
+        {/* Back Button */}
+        <div className="text-center mt-8">
+          <button
+            onClick={() => router.push('/dashboard')}
+            className="text-purple-600 dark:text-purple-400 hover:underline"
+          >
+            ← Back to Dashboard
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}

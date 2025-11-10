@@ -20,6 +20,7 @@ model User {
   stripeSubscriptionId   String?             @unique
   stripePriceId          String?
   stripeCurrentPeriodEnd DateTime?
+  avatarData             Json?               // Custom avatar configuration
   createdAt              DateTime            @default(now())
   updatedAt              DateTime            @updatedAt
   schoolId               String?

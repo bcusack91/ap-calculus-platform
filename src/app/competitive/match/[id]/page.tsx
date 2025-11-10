@@ -3,6 +3,7 @@
 import { useEffect, useState, use } from 'react';
 import { useRouter } from 'next/navigation';
 import CompetitiveUnitCircle from '@/components/CompetitiveUnitCircle';
+import AvatarDisplay from '@/components/AvatarDisplay';
 import katex from 'katex';
 
 interface UnitCirclePosition {
@@ -26,6 +27,8 @@ interface MatchState {
   player2Id: string;
   player1Name: string;
   player2Name: string;
+  player1Avatar?: any;
+  player2Avatar?: any;
   currentQuestionIndex: number;
   questions: Question[];
   player1Score: number;
@@ -383,49 +386,54 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-8 px-4">
-      <div className="max-w-6xl mx-auto">
-        {/* Header with scores */}
-        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 mb-6">
-          <div className="grid grid-cols-3 gap-4 items-center">
-            {/* Player 1 */}
-            <div className={`text-center p-4 rounded-lg ${
-              isPlayer1 ? 'bg-purple-100 dark:bg-purple-900/30' : 'bg-gray-100 dark:bg-gray-700'
-            }`}>
-              <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">
-                {isPlayer1 ? 'You' : 'Opponent'}
-              </p>
-              <p className="font-bold text-gray-900 dark:text-white mb-2">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-[200px_1fr_200px] gap-6">
+          {/* Left Panel - Player 1 */}
+          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-4 h-fit sticky top-8">
+            <div className="text-center">
+              <AvatarDisplay 
+                avatarData={matchState.player1Avatar as any}
+                size={120}
+                className="mx-auto mb-3"
+              />
+              <p className="font-bold text-gray-900 dark:text-white mb-1">
                 {matchState.player1Name}
               </p>
-              <p className="text-3xl font-bold text-purple-600 dark:text-purple-400">
-                {matchState.player1Score}
-              </p>
+              {isPlayer1 && (
+                <span className="text-xs bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 px-2 py-1 rounded">
+                  You
+                </span>
+              )}
+              <div className="mt-4 mb-2">
+                <p className="text-2xl font-bold text-purple-600 dark:text-purple-400">
+                  {matchState.player1Score}
+                </p>
+                <p className="text-xs text-gray-500">points</p>
+              </div>
             </div>
+            
+            {/* Vertical Progress Bar */}
+            <div className="mt-6 flex flex-col items-center">
+              <p className="text-xs text-gray-600 dark:text-gray-400 mb-2">Progress</p>
+              <div className="w-8 h-64 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden relative">
+                <div 
+                  className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-purple-600 to-purple-400 transition-all duration-500 rounded-full"
+                  style={{ height: `${(matchState.player1Score / 10) * 100}%` }}
+                />
+              </div>
+              <p className="text-xs text-gray-500 mt-2">{matchState.player1Score}/10</p>
+            </div>
+          </div>
 
-            {/* Question progress */}
+          {/* Center - Game Area */}
+          <div className="space-y-6">
+            {/* Question progress indicator */}
             <div className="text-center">
               <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">Question</p>
               <p className="text-2xl font-bold text-gray-900 dark:text-white">
                 {matchState.currentQuestionIndex + 1} / {matchState.questions.length}
               </p>
             </div>
-
-            {/* Player 2 */}
-            <div className={`text-center p-4 rounded-lg ${
-              !isPlayer1 ? 'bg-purple-100 dark:bg-purple-900/30' : 'bg-gray-100 dark:bg-gray-700'
-            }`}>
-              <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">
-                {!isPlayer1 ? 'You' : 'Opponent'}
-              </p>
-              <p className="font-bold text-gray-900 dark:text-white mb-2">
-                {matchState.player2Name}
-              </p>
-              <p className="text-3xl font-bold text-purple-600 dark:text-purple-400">
-                {matchState.player2Score}
-              </p>
-            </div>
-          </div>
-        </div>
 
         {/* Question prompt */}
         <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 mb-6 text-center">
@@ -474,6 +482,45 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
               showFeedback={feedback !== null || wrongAttempt}
               disabled={isSubmitting || (hasAnswered && !wrongAttempt)}
             />
+          </div>
+        </div>
+      </div>
+
+          {/* Right Panel - Player 2 */}
+          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-4 h-fit sticky top-8">
+            <div className="text-center">
+              <AvatarDisplay 
+                avatarData={matchState.player2Avatar as any}
+                size={120}
+                className="mx-auto mb-3"
+              />
+              <p className="font-bold text-gray-900 dark:text-white mb-1">
+                {matchState.player2Name}
+              </p>
+              {!isPlayer1 && (
+                <span className="text-xs bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 px-2 py-1 rounded">
+                  You
+                </span>
+              )}
+              <div className="mt-4 mb-2">
+                <p className="text-2xl font-bold text-purple-600 dark:text-purple-400">
+                  {matchState.player2Score}
+                </p>
+                <p className="text-xs text-gray-500">points</p>
+              </div>
+            </div>
+            
+            {/* Vertical Progress Bar */}
+            <div className="mt-6 flex flex-col items-center">
+              <p className="text-xs text-gray-600 dark:text-gray-400 mb-2">Progress</p>
+              <div className="w-8 h-64 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden relative">
+                <div 
+                  className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-blue-600 to-blue-400 transition-all duration-500 rounded-full"
+                  style={{ height: `${(matchState.player2Score / 10) * 100}%` }}
+                />
+              </div>
+              <p className="text-xs text-gray-500 mt-2">{matchState.player2Score}/10</p>
+            </div>
           </div>
         </div>
       </div>

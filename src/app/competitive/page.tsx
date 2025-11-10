@@ -247,10 +247,19 @@ export default function CompetitivePage() {
     <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 p-6">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-            Competitive Mode
-          </h1>
+        <div className="text-center mb-8">
+          <div className="flex justify-between items-center mb-4">
+            <div></div> {/* Spacer for centering */}
+            <h1 className="text-5xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+              Competitive Mode
+            </h1>
+            <button
+              onClick={() => router.push('/profile')}
+              className="px-4 py-2 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 rounded-lg hover:bg-purple-200 dark:hover:bg-purple-900/50 transition-colors text-sm font-semibold"
+            >
+              ✏️ Customize Avatar
+            </button>
+          </div>
           <p className="text-xl text-gray-600 dark:text-gray-400">
             Challenge other students and climb the ranks!
           </p>

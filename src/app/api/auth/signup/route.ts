@@ -4,7 +4,7 @@ import bcrypt from 'bcryptjs'
 
 export async function POST(request: Request) {
   try {
-    const { email, password, name } = await request.json()
+    const { email, password, name, avatarData } = await request.json()
 
     // Validate input
     if (!email || !password) {
@@ -43,6 +43,7 @@ export async function POST(request: Request) {
         password: hashedPassword,
         name: name || email.split('@')[0], // Use email username as default name
         role: 'FREE',
+        avatarData: avatarData || null,
       }
     })
 

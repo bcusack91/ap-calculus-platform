@@ -22,12 +22,14 @@ export async function GET(
           select: {
             id: true,
             name: true,
+            avatarData: true,
           },
         },
         player2: {
           select: {
             id: true,
             name: true,
+            avatarData: true,
           },
         },
       },
@@ -53,6 +55,8 @@ export async function GET(
         player2Id: match.player2Id,
         player1Name: match.player1.name || 'Player 1',
         player2Name: match.player2.name || 'Player 2',
+        player1Avatar: match.player1.avatarData,
+        player2Avatar: match.player2.avatarData,
         currentQuestionIndex: gameData?.currentQuestionIndex || 0,
         questions: gameData?.questions || [],
         player1Score: match.player1Score,

@@ -2,13 +2,28 @@
 
 import Link from 'next/link'
 import { useSession, signIn, signOut } from 'next-auth/react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import AvatarDisplay from './AvatarDisplay'
+import { AvatarData } from '@/types/avatar'
 
 export function Navbar() {
   const { data: session } = useSession()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [avatarData, setAvatarData] = useState<AvatarData | null>(null)
 
   const isPremium = session?.user?.role === 'PREMIUM'
+
+  // Fetch user's avatar when logged in
+  useEffect(() => {
+    if (session) {
+      fetch('/api/user/avatar')
+        .then(res => res.json())
+        .then(data => setAvatarData(data.avatarData))
+        .catch(err => console.error('Error fetching avatar:', err))
+    } else {
+      setAvatarData(null)
+    }
+  }, [session])
 
   return (
     <nav className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -67,6 +82,16 @@ export function Navbar() {
                   </span>
                 )}
                 <span className="text-sm text-gray-700 dark:text-gray-300">{session.user?.name || session.user?.email}</span>
+                
+                {/* Avatar - clickable to go to profile */}
+                <Link 
+                  href="/profile"
+                  className="flex items-center hover:opacity-80 transition-opacity"
+                  title="Edit Profile"
+                >
+                  <AvatarDisplay avatarData={avatarData} size={40} className="ring-2 ring-purple-500 dark:ring-purple-400 rounded-full" />
+                </Link>
+                
                 <button
                   onClick={() => signOut()}
                   className="rounded-md px-4 py-2 text-sm font-medium hover:bg-accent bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
@@ -128,9 +153,12 @@ export function Navbar() {
             <div className="pt-4 border-t mt-2">
               {session ? (
                 <div className="space-y-2">
-                  <div className="px-3 py-2 text-sm text-gray-700 dark:text-gray-300">
-                    {session.user?.name || session.user?.email}
-                  </div>
+                  <Link href="/profile" className="flex items-center gap-3 px-3 py-2 hover:bg-accent rounded-md">
+                    <AvatarDisplay avatarData={avatarData} size={40} className="ring-2 ring-purple-500 dark:ring-purple-400 rounded-full" />
+                    <div className="text-sm text-gray-700 dark:text-gray-300">
+                      {session.user?.name || session.user?.email}
+                    </div>
+                  </Link>
                   <button
                     onClick={() => signOut()}
                     className="block w-full text-left px-3 py-2 text-base font-medium hover:bg-accent rounded-md"
