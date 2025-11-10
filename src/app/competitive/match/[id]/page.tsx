@@ -28,6 +28,8 @@ interface MatchState {
   player2Id: string;
   player1Name: string;
   player2Name: string;
+  player1Email?: string;
+  player2Email?: string;
   player1Avatar?: any;
   player2Avatar?: any;
   currentQuestionIndex: number;
@@ -117,6 +119,77 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
     const interval = setInterval(fetchMatchState, 500);
     return () => clearInterval(interval);
   }, [matchId]);
+
+  // Auto-schedule AI answers when question changes
+  useEffect(() => {
+    if (!matchState || matchState.status !== 'IN_PROGRESS') return;
+
+    const isPlayer1 = currentUserId === matchState.player1Id;
+    const opponentEmail = isPlayer1 ? matchState.player2Email : matchState.player1Email;
+    
+    // Check if opponent is AI
+    const isOpponentAI = opponentEmail === 'ai-opponent@studyai.com';
+    if (!isOpponentAI) return;
+
+    // Check if AI has already answered this question
+    const aiAnsweredCurrent = isPlayer1 
+      ? (matchState.gameData as any)?.player2AnsweredCurrent 
+      : (matchState.gameData as any)?.player1AnsweredCurrent;
+    
+    if (aiAnsweredCurrent) return; // AI already answered
+
+    // Get AI difficulty and calculate delay
+    const aiDifficulty = (matchState.gameData as any)?.aiDifficulty || 'medium';
+    const difficultySettings = {
+      easy: { min: 4000, max: 6000, accuracy: 0.70 },
+      medium: { min: 2500, max: 4500, accuracy: 0.83 },
+      hard: { min: 1000, max: 2000, accuracy: 0.95 },
+    };
+    
+    const settings = difficultySettings[aiDifficulty as keyof typeof difficultySettings];
+    const delay = settings.min + Math.random() * (settings.max - settings.min);
+    
+    console.log(`🤖 Scheduling AI answer in ${Math.round(delay)}ms for question ${matchState.currentQuestionIndex}`);
+    
+    // Schedule AI answer
+    const timeoutId = setTimeout(async () => {
+      try {
+        // Determine if AI answers correctly
+        const willAnswerCorrectly = Math.random() < settings.accuracy;
+        const currentQuestion = matchState.questions[matchState.currentQuestionIndex];
+        
+        let answerIndex: number;
+        if (willAnswerCorrectly) {
+          answerIndex = currentQuestion.answerIndex;
+        } else {
+          // Choose random wrong answer
+          do {
+            answerIndex = Math.floor(Math.random() * UNIT_CIRCLE_POSITIONS.length);
+          } while (answerIndex === currentQuestion.answerIndex);
+        }
+        
+        console.log(`🤖 AI submitting answer: ${answerIndex} (correct: ${currentQuestion.answerIndex}, will be correct: ${willAnswerCorrectly})`);
+        
+        // Submit AI answer
+        await fetch(`/api/competitive/match/${matchId}/answer`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            questionIndex: matchState.currentQuestionIndex,
+            answerIndex,
+          }),
+        });
+        
+        // Match state will update via polling
+      } catch (error) {
+        console.error('Error submitting AI answer:', error);
+      }
+    }, delay);
+    
+    // Cleanup timeout if question changes or component unmounts
+    return () => clearTimeout(timeoutId);
+  }, [matchState?.currentQuestionIndex, matchState?.status, currentUserId, matchId]);
+
 
   const fetchMatchState = async () => {
     try {

@@ -22,6 +22,7 @@ export async function GET(
           select: {
             id: true,
             name: true,
+            email: true,
             avatarData: true,
           },
         },
@@ -29,6 +30,7 @@ export async function GET(
           select: {
             id: true,
             name: true,
+            email: true,
             avatarData: true,
           },
         },
@@ -55,6 +57,8 @@ export async function GET(
         player2Id: match.player2Id,
         player1Name: match.player1.name || 'Player 1',
         player2Name: match.player2.name || 'Player 2',
+        player1Email: match.player1.email,
+        player2Email: match.player2.email,
         player1Avatar: match.player1.avatarData,
         player2Avatar: match.player2.avatarData,
         currentQuestionIndex: gameData?.currentQuestionIndex || 0,
@@ -63,6 +67,7 @@ export async function GET(
         player2Score: match.player2Score,
         player1Answers: gameData?.player1Answers || [],
         player2Answers: gameData?.player2Answers || [],
+        gameData: gameData, // Include full gameData for flags
         status: match.status,
         winnerId: match.winnerId,
         startedAt: match.startedAt?.toISOString(),
