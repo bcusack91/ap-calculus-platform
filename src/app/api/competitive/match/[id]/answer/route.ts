@@ -58,8 +58,8 @@ export async function POST(
     const gameData = match.gameData as any;
     const questions = gameData?.questions || [];
     const currentQuestionIndex = gameData?.currentQuestionIndex || 0;
-    const player1AnsweredCurrent = gameData?.player1AnsweredCurrent || false;
-    const player2AnsweredCurrent = gameData?.player2AnsweredCurrent || false;
+    let player1AnsweredCurrent = gameData?.player1AnsweredCurrent || false;
+    let player2AnsweredCurrent = gameData?.player2AnsweredCurrent || false;
     let player1Score = match.player1Score;
     let player2Score = match.player2Score;
 
@@ -87,9 +87,9 @@ export async function POST(
 
     // Mark that this player has answered the current question
     if (isPlayer1) {
-      gameData.player1AnsweredCurrent = true;
+      player1AnsweredCurrent = true;
     } else {
-      gameData.player2AnsweredCurrent = true;
+      player2AnsweredCurrent = true;
     }
 
     // Award/deduct points - 1 point for correct, -1 for incorrect
@@ -154,8 +154,8 @@ export async function POST(
           gameData: {
             questions,
             currentQuestionIndex,
-            player1AnsweredCurrent: gameData.player1AnsweredCurrent,
-            player2AnsweredCurrent: gameData.player2AnsweredCurrent,
+            player1AnsweredCurrent,
+            player2AnsweredCurrent,
             ...(gameData?.aiDifficulty && { aiDifficulty: gameData.aiDifficulty }),
             ...(gameData?.isPracticeMatch && { isPracticeMatch: gameData.isPracticeMatch }),
           },
@@ -255,8 +255,8 @@ export async function POST(
         }
         
         // Reset answered flags for the new question
-        gameData.player1AnsweredCurrent = false;
-        gameData.player2AnsweredCurrent = false;
+        player1AnsweredCurrent = false;
+        player2AnsweredCurrent = false;
       }
       
       // Just update the match with new scores and possibly new question index
@@ -268,8 +268,8 @@ export async function POST(
           gameData: {
             questions,
             currentQuestionIndex: newQuestionIndex,
-            player1AnsweredCurrent: gameData.player1AnsweredCurrent,
-            player2AnsweredCurrent: gameData.player2AnsweredCurrent,
+            player1AnsweredCurrent,
+            player2AnsweredCurrent,
             ...(gameData?.aiDifficulty && { aiDifficulty: gameData.aiDifficulty }),
             ...(gameData?.isPracticeMatch && { isPracticeMatch: gameData.isPracticeMatch }),
           },
