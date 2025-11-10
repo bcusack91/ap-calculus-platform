@@ -304,7 +304,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
         
         setIsSubmitting(false);
         
-        // Wait 500ms to show feedback, then refresh state for next question
+        // Wait 800ms to show feedback, then refresh state for next question
         setTimeout(async () => {
           setFeedback(null);
           setSelectedPosition(null);
@@ -315,7 +315,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
           }
           // Refresh state to get updated question
           await fetchMatchState();
-        }, 500);
+        }, 800);
       } else {
         console.log('Answer was INCORRECT');
         setFeedback('incorrect');
@@ -327,11 +327,11 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
           setPlayer2Emotion('sad');
         }
         
-        // Show correct answer in green for 500ms
+        // Show correct answer in green for 800ms
         setCorrectAnswerIndex(currentQuestion.answerIndex);
         setIsSubmitting(false);
         
-        // Wait 500ms to show feedback, then clear and refresh
+        // Wait 800ms to show feedback, then clear and refresh
         setTimeout(async () => {
           setFeedback(null);
           setSelectedPosition(null);
@@ -343,7 +343,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
           }
           // Refresh match state for next question
           await fetchMatchState();
-        }, 500);
+        }, 800);
       }
     } catch (error) {
       console.error('ERROR submitting answer:', error);
