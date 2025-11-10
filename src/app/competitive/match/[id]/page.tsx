@@ -131,6 +131,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
     if (!isOpponentAI) return;
 
     const opponentQuestionIndex = isPlayer1 ? matchState.player2QuestionIndex : matchState.player1QuestionIndex;
+    const opponentPlayerId = isPlayer1 ? matchState.player2Id : matchState.player1Id;
     
     // Get AI difficulty and calculate delay
     const aiDifficulty = (matchState.gameData as any)?.aiDifficulty || 'medium';
@@ -164,13 +165,14 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
         
         console.log(`🤖 AI submitting answer for question ${opponentQuestionIndex}: ${answerIndex} (correct: ${aiCurrentQuestion.answerIndex})`);
         
-        // Submit AI answer
+        // Submit AI answer with AI's playerId
         await fetch(`/api/competitive/match/${matchId}/answer`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             questionIndex: opponentQuestionIndex,
             answerIndex,
+            playerId: opponentPlayerId, // Specify AI player ID
           }),
         });
         

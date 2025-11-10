@@ -15,9 +15,9 @@ export async function POST(
 
     const { id: matchId } = await params;
     const body = await request.json();
-    const { questionIndex, answerIndex, isSecondAttempt = false } = body;
+    const { questionIndex, answerIndex, isSecondAttempt = false, playerId } = body;
 
-    console.log('Answer submission:', { matchId, questionIndex, answerIndex, isSecondAttempt });
+    console.log('Answer submission:', { matchId, questionIndex, answerIndex, isSecondAttempt, playerId });
 
     // Fetch match
     const match = await prisma.competitiveMatch.findUnique({
@@ -41,8 +41,9 @@ export async function POST(
     }
 
     // Verify user is a participant
-    const isPlayer1 = match.player1Id === session.user.id;
-    const isPlayer2 = match.player2Id === session.user.id;
+    const actualPlayerId = playerId || session.user.id; // Use provided playerId or session user
+    const isPlayer1 = match.player1Id === actualPlayerId;
+    const isPlayer2 = match.player2Id === actualPlayerId;
     
     if (!isPlayer1 && !isPlayer2) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 403 });
