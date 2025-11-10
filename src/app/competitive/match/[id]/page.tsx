@@ -313,6 +313,12 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
     (matchState.gameData as any)?.player1AnsweredCurrent : 
     (matchState.gameData as any)?.player2AnsweredCurrent;
 
+  console.log('=== RENDER STATE ===');
+  console.log('Current question index:', matchState.currentQuestionIndex);
+  console.log('Current question:', currentQuestion);
+  console.log('Question prompt:', currentQuestion?.prompt);
+  console.log('==================');
+
   // Results screen
   if (matchState.status === 'COMPLETED') {
     const isWinner = matchState.winnerId === currentUserId;
@@ -446,8 +452,8 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
           {/* Center - Game Area */}
           <div className="space-y-6">
         {/* Question prompt */}
-        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 mb-6 text-center" key={matchState.currentQuestionIndex}>
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 mb-6 text-center" key={`q-${matchState.currentQuestionIndex}-${currentQuestion.prompt}`}>
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4" key={currentQuestion.prompt}>
             {renderPrompt(currentQuestion.prompt)}
           </h2>
           
