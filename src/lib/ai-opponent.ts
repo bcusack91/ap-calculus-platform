@@ -26,19 +26,19 @@ export function simulateAIAnswer(
   // Difficulty settings
   const difficultySettings = {
     easy: {
-      accuracy: 0.60, // 60% chance to answer correctly
-      avgResponseTime: 4000, // 4 seconds average
-      responseVariation: 2000, // +/- 2 seconds
+      accuracy: 0.70, // 70% chance to answer correctly
+      minResponseTime: 4000, // 4 seconds minimum
+      maxResponseTime: 6000, // 6 seconds maximum
     },
     medium: {
-      accuracy: 0.80, // 80% chance to answer correctly
-      avgResponseTime: 2500, // 2.5 seconds average
-      responseVariation: 1500, // +/- 1.5 seconds
+      accuracy: 0.83, // 83% chance to answer correctly
+      minResponseTime: 2500, // 2.5 seconds minimum
+      maxResponseTime: 4500, // 4.5 seconds maximum
     },
     hard: {
       accuracy: 0.95, // 95% chance to answer correctly
-      avgResponseTime: 1500, // 1.5 seconds average
-      responseVariation: 1000, // +/- 1 second
+      minResponseTime: 1000, // 1 second minimum
+      maxResponseTime: 2000, // 2 seconds maximum
     },
   }
 
@@ -47,11 +47,9 @@ export function simulateAIAnswer(
   // Determine if AI answers correctly (based on accuracy)
   const willAnswerCorrectly = Math.random() < settings.accuracy
 
-  // Calculate response delay (random variation around average)
-  const delay = Math.max(
-    500, // Minimum 0.5 second
-    settings.avgResponseTime + (Math.random() - 0.5) * settings.responseVariation
-  )
+  // Calculate response delay (random time between min and max)
+  const delay = settings.minResponseTime + 
+    Math.random() * (settings.maxResponseTime - settings.minResponseTime)
 
   let answerIndex: number
   if (willAnswerCorrectly) {
