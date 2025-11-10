@@ -440,14 +440,6 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
 
           {/* Center - Game Area */}
           <div className="space-y-6">
-            {/* Question progress indicator */}
-            <div className="text-center">
-              <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">Question</p>
-              <p className="text-2xl font-bold text-gray-900 dark:text-white">
-                {matchState.currentQuestionIndex + 1} / {matchState.questions.length}
-              </p>
-            </div>
-
         {/* Question prompt */}
         <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 mb-6 text-center">
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">

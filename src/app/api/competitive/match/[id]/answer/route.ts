@@ -122,29 +122,22 @@ export async function POST(
       console.log('Points deducted: -1');
     }
 
-    // Check if both players have answered - if so, move to next question
-    const bothAnswered = player1Answers[questionIndex] !== null && player2Answers[questionIndex] !== null;
-    let newQuestionIndex = currentQuestionIndex;
-    if (bothAnswered && currentQuestionIndex < questions.length - 1) {
-      newQuestionIndex = currentQuestionIndex + 1;
-    }
-
-    // Check if match is complete (all questions answered)
-    const allQuestionsAnswered = newQuestionIndex === questions.length - 1 && bothAnswered;
+    // Check if either player has reached 10 points (winner!)
+    const matchComplete = player1Score >= 10 || player2Score >= 10;
     let winnerId = match.winnerId;
     let completedAt = match.completedAt;
 
-    if (allQuestionsAnswered) {
+    if (matchComplete) {
       const newStatus = 'COMPLETED' as const;
       completedAt = new Date();
       
-      // Determine winner
-      if (player1Score > player2Score) {
+      // Determine winner based on who reached 10 first
+      if (player1Score >= 10) {
         winnerId = match.player1Id;
-      } else if (player2Score > player1Score) {
+      } else if (player2Score >= 10) {
         winnerId = match.player2Id;
       }
-      // else it's a tie (winnerId remains null)
+      // Note: Both can't reach 10 in same turn due to turn-based nature
 
       // Calculate MMR changes
       const player1MMR = match.player1MMRBefore || match.player1.competitiveProfile?.unitCircleMMR || 1000;
@@ -173,7 +166,7 @@ export async function POST(
           player2Score,
           gameData: {
             questions,
-            currentQuestionIndex: newQuestionIndex,
+            currentQuestionIndex,
             player1Answers,
             player2Answers,
             player1Attempts,
@@ -263,6 +256,15 @@ export async function POST(
         newMMR: isPlayer1 ? player1MMRAfter : player2MMRAfter,
       });
     } else {
+      // Match continues - check if both players answered and move to next question
+      const bothAnswered = player1Answers[questionIndex] !== null && player2Answers[questionIndex] !== null;
+      let newQuestionIndex = currentQuestionIndex;
+      
+      // Move to next question if both answered and we have more questions
+      if (bothAnswered && currentQuestionIndex < questions.length - 1) {
+        newQuestionIndex = currentQuestionIndex + 1;
+      }
+      
       // Just update the match with new answers and possibly new question index
       await prisma.competitiveMatch.update({
         where: { id: matchId },
