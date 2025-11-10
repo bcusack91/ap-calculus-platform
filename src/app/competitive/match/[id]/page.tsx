@@ -216,38 +216,42 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
         // Refresh state to get updated scores
         await fetchMatchState();
         
-        // Show green for 1 second, then clear everything for next question
+        // If this was a second attempt (half credit), show green for 0.5s
+        // If first attempt (full credit), show green for 1s
+        const displayTime = wrongAttempt ? 500 : 1000;
         setTimeout(() => {
           setFeedback(null);
           setSelectedPosition(null);
-        }, 1000);
+        }, displayTime);
       } else {
         console.log('Answer was INCORRECT');
         setFeedback('incorrect');
         
         if (!wrongAttempt) {
-          console.log('First wrong attempt - showing correct answer');
-          // First wrong attempt - show correct answer and allow retry
+          console.log('First wrong attempt - allowing retry');
+          // First wrong attempt - just show red, don't reveal answer yet
           setWrongAttempt(true);
-          setCorrectAnswerIndex(currentQuestion.answerIndex);
           
-          // Clear the red feedback after 1 second but keep the question active
-          setTimeout(() => {
-            setFeedback(null);
-            setIsSubmitting(false);
-          }, 1000);
-        } else {
-          console.log('Second wrong attempt - moving on');
-          // Second wrong attempt - move on without points
-          setWrongAttempt(false);
-          setCorrectAnswerIndex(null);
-          await fetchMatchState();
-          
+          // Clear the red feedback after 1 second, let them try again
           setTimeout(() => {
             setFeedback(null);
             setSelectedPosition(null);
             setIsSubmitting(false);
-          }, 1500);
+          }, 1000);
+        } else {
+          console.log('Second wrong attempt - showing correct answer then moving on');
+          // Second wrong attempt - show correct answer for 1 second
+          setCorrectAnswerIndex(currentQuestion.answerIndex);
+          setIsSubmitting(false);
+          await fetchMatchState();
+          
+          // Show correct answer in green for 1 second, then clear and advance
+          setTimeout(() => {
+            setFeedback(null);
+            setSelectedPosition(null);
+            setWrongAttempt(false);
+            setCorrectAnswerIndex(null);
+          }, 1000);
         }
       }
     } catch (error) {
@@ -451,10 +455,10 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
 
         {/* Unit Circle */}
         <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8">
-          {wrongAttempt && correctAnswerIndex !== null && (
+          {wrongAttempt && (
             <div className="text-center mb-4 p-4 bg-yellow-100 dark:bg-yellow-900/30 rounded-lg">
               <p className="text-yellow-800 dark:text-yellow-200 font-semibold">
-                Try again for half credit! The correct answer is highlighted in green.
+                Try again for half credit!
               </p>
             </div>
           )}
