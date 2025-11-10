@@ -72,9 +72,8 @@ export async function POST(req: NextRequest) {
           startedAt: new Date(),
           gameData: {
             questions,
-            currentQuestionIndex: 0,
-            player1Answers: Array(questions.length).fill(null),
-            player2Answers: Array(questions.length).fill(null),
+            player1QuestionIndex: 0,
+            player2QuestionIndex: 0,
           },
         }
       })
