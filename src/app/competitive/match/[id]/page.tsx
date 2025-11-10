@@ -77,8 +77,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
   const [selectedPosition, setSelectedPosition] = useState<number | null>(null);
   const [feedback, setFeedback] = useState<'correct' | 'incorrect' | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [wrongAttempt, setWrongAttempt] = useState(false); // Track if student made a wrong attempt
-  const [correctAnswerIndex, setCorrectAnswerIndex] = useState<number | null>(null); // Store correct answer after wrong attempt
+  const [correctAnswerIndex, setCorrectAnswerIndex] = useState<number | null>(null);
 
   // Render math in prompt
   const renderPrompt = (prompt: string) => {
@@ -129,7 +128,6 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
         console.log('🔄 Question changed! Clearing all states. Old:', matchState.currentQuestionIndex, 'New:', data.match.currentQuestionIndex);
         setFeedback(null);
         setSelectedPosition(null);
-        setWrongAttempt(false);
         setCorrectAnswerIndex(null);
         setIsSubmitting(false);
       }
@@ -181,9 +179,9 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
     
     // Check if this player already answered this question
     const playerAnswers = isPlayer1 ? matchState.player1Answers : matchState.player2Answers;
-    if (playerAnswers[matchState.currentQuestionIndex] !== null && !wrongAttempt) {
+    if (playerAnswers[matchState.currentQuestionIndex] !== null) {
       console.log('Already answered this question');
-      return; // Already answered
+      return;
     }
 
     console.log('Setting selected position and submitting...');
@@ -200,7 +198,6 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
         body: JSON.stringify({
           questionIndex: matchState.currentQuestionIndex,
           answerIndex: positionIndex,
-          isSecondAttempt: wrongAttempt, // Tell server this is a retry for half credit
         }),
       });
 
@@ -213,50 +210,33 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
       if (data.correct) {
         console.log('Answer was CORRECT!');
         setFeedback('correct');
-        setWrongAttempt(false);
-        setCorrectAnswerIndex(null);
         setIsSubmitting(false);
         
         // Refresh state to get updated scores
         await fetchMatchState();
         
-        // If this was a second attempt (half credit), show green for 0.5s
-        // If first attempt (full credit), show green for 1s
-        const displayTime = wrongAttempt ? 500 : 1000;
+        // Show green for 1 second, then clear
         setTimeout(() => {
           setFeedback(null);
           setSelectedPosition(null);
-        }, displayTime);
+        }, 1000);
       } else {
         console.log('Answer was INCORRECT');
         setFeedback('incorrect');
         
-        if (!wrongAttempt) {
-          console.log('First wrong attempt - allowing retry');
-          // First wrong attempt - just show red, don't reveal answer yet
-          setWrongAttempt(true);
-          
-          // Clear the red feedback after 1 second, let them try again
-          setTimeout(() => {
-            setFeedback(null);
-            setSelectedPosition(null);
-            setIsSubmitting(false);
-          }, 1000);
-        } else {
-          console.log('Second wrong attempt - showing correct answer then moving on');
-          // Second wrong attempt - show correct answer for 1 second
-          setCorrectAnswerIndex(currentQuestion.answerIndex);
-          setIsSubmitting(false);
-          await fetchMatchState();
-          
-          // Show correct answer in green for 1 second, then clear and advance
-          setTimeout(() => {
-            setFeedback(null);
-            setSelectedPosition(null);
-            setWrongAttempt(false);
-            setCorrectAnswerIndex(null);
-          }, 1000);
-        }
+        // Show correct answer in green for 1 second
+        setCorrectAnswerIndex(currentQuestion.answerIndex);
+        setIsSubmitting(false);
+        
+        // Refresh match state
+        await fetchMatchState();
+        
+        // Clear after 1 second
+        setTimeout(() => {
+          setFeedback(null);
+          setSelectedPosition(null);
+          setCorrectAnswerIndex(null);
+        }, 1000);
       }
     } catch (error) {
       console.error('ERROR submitting answer:', error);
@@ -448,7 +428,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
               <p className="font-semibold">Submitting answer...</p>
             </div>
           )}
-          {!isSubmitting && hasAnswered && !wrongAttempt && (
+          {!isSubmitting && hasAnswered && (
             <p className="text-gray-600 dark:text-gray-400">
               Waiting for opponent...
             </p>
@@ -464,24 +444,17 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
 
         {/* Unit Circle */}
         <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8">
-          {wrongAttempt && (
-            <div className="text-center mb-4 p-4 bg-yellow-100 dark:bg-yellow-900/30 rounded-lg">
-              <p className="text-yellow-800 dark:text-yellow-200 font-semibold">
-                Try again for half credit!
-              </p>
-            </div>
-          )}
           <div className="flex justify-center">
             <CompetitiveUnitCircle
               positions={UNIT_CIRCLE_POSITIONS}
               onPositionClick={handlePositionClick}
               selectedPosition={selectedPosition}
               correctPosition={
-                wrongAttempt ? correctAnswerIndex : 
+                correctAnswerIndex !== null ? correctAnswerIndex :
                 (feedback === 'correct' ? selectedPosition : null)
               }
-              showFeedback={feedback !== null || wrongAttempt}
-              disabled={isSubmitting || (hasAnswered && !wrongAttempt)}
+              showFeedback={feedback !== null}
+              disabled={isSubmitting || hasAnswered}
             />
           </div>
         </div>

@@ -98,30 +98,21 @@ export async function POST(
 
     console.log('Answer is correct:', isCorrect);
 
-    // Record answer (only if correct, otherwise allow retry)
-    if (isCorrect) {
-      if (isPlayer1) {
-        player1Answers[questionIndex] = answerIndex;
-      } else {
-        player2Answers[questionIndex] = answerIndex;
-      }
+    // Record answer - no second attempts, every submission counts
+    if (isPlayer1) {
+      player1Answers[questionIndex] = answerIndex;
+    } else {
+      player2Answers[questionIndex] = answerIndex;
     }
 
-    // Award points based on attempts
-    const opponentAnswers = isPlayer1 ? player2Answers : player1Answers;
-    const opponentAnsweredCorrectly = opponentAnswers[questionIndex] !== null;
-
-    if (isCorrect && !opponentAnsweredCorrectly) {
-      // Award full point for first attempt, half point for second attempt
-      const pointValue = currentAttempts === 1 ? 1 : 0.5;
-      
+    // Award points - 1 point for correct, 0 for incorrect (no partial credit)
+    if (isCorrect) {
       if (isPlayer1) {
-        player1Score += pointValue;
+        player1Score += 1;
       } else {
-        player2Score += pointValue;
+        player2Score += 1;
       }
-      
-      console.log('Points awarded:', pointValue);
+      console.log('Points awarded: 1');
     }
 
     // Check if both players have answered - if so, move to next question
@@ -285,6 +276,7 @@ export async function POST(
       });
 
       // If opponent is AI and hasn't answered this question yet, simulate AI answer
+      const opponentAnswers = isPlayer1 ? player2Answers : player1Answers;
       const isOpponentAI = isAIOpponent(
         isPlayer1 ? match.player2Id : match.player1Id,
         isPlayer1 ? match.player2.email : match.player1.email
