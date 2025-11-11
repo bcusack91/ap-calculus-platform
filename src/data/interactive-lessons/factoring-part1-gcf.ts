@@ -23,32 +23,83 @@ Because factoring out the GCF first makes everything else easier! It's like simp
       `
     },
     {
-      id: 'gcf-explanation',
+      id: 'gcf-technique',
       type: 'text' as const,
       content: `
-**How to Find the GCF** 🎯
+**How to Find and Factor Out the GCF** 🎯
 
-**Step 1: Look at the coefficients**
-What's the largest number that divides all of them?
+**Step 1: Identify the GCF**
+- Look at the **coefficients** - What's the largest number that divides all of them?
+- Look at the **variables** - Take the lowest power of each variable that appears in **all** terms
 
-**Step 2: Look at the variables**
-Take the lowest power of each variable that appears in **all** terms.
+**Step 2: Factor Out the GCF**
+This means you're doing two things simultaneously:
+1. **Divide each term by the GCF**
+2. **Write the GCF outside parentheses** with the divided terms inside
 
-**Examples:**
+**The Process:**
+$$\\text{Original} \\rightarrow \\text{GCF}(\\text{each term} \\div \\text{GCF})$$
 
-**Example 1:** $6x^3 + 9x^2$
+Let's see this in action with examples...
+      `
+    },
+    {
+      id: 'gcf-example1',
+      type: 'text' as const,
+      content: `
+**Example 1: Factoring Out the GCF** 📝
+
+**Problem:** $6x^3 + 9x^2$
+
+**Step 1: Find the GCF**
 - Coefficients: GCF of 6 and 9 is **3**
-- Variables: Both have $x$, lowest power is $x^2$
+- Variables: Both terms have $x$, lowest power is $x^2$
 - **GCF = $3x^2$**
-- Factor out: $3x^2(2x + 3)$ ✅
 
-**Example 2:** $10x^4y^2 - 15x^2y^3 + 5xy$
+**Step 2: Factor Out the GCF**
+
+Divide each term by $3x^2$ and write $3x^2$ outside:
+
+$$6x^3 + 9x^2 = 3x^2(\\text{?} + \\text{?})$$
+
+**Divide each term:**
+- $6x^3 \\div 3x^2 = 2x$ ← First term inside parentheses
+- $9x^2 \\div 3x^2 = 3$ ← Second term inside parentheses
+
+**Final Answer:**
+$$6x^3 + 9x^2 = 3x^2(2x + 3)$$ ✅
+
+**Check your work:** Multiply back out: $3x^2 \\cdot 2x + 3x^2 \\cdot 3 = 6x^3 + 9x^2$ ✓
+      `
+    },
+    {
+      id: 'gcf-example2',
+      type: 'text' as const,
+      content: `
+**Example 2: More Complex GCF** 📝
+
+**Problem:** $10x^4y^2 - 15x^2y^3 + 5xy$
+
+**Step 1: Find the GCF**
 - Coefficients: GCF of 10, 15, and 5 is **5**
 - Variables: All have $x$ (lowest: $x$) and $y$ (lowest: $y$)
 - **GCF = $5xy$**
-- Factor out: $5xy(2x^3y - 3xy^2 + 1)$ ✅
 
-**Pro Tip:** Even if the GCF is just a number or just a variable, always factor it out first!
+**Step 2: Factor Out the GCF**
+
+Divide each term by $5xy$ and write $5xy$ outside:
+
+$$10x^4y^2 - 15x^2y^3 + 5xy = 5xy(\\text{?} - \\text{?} + \\text{?})$$
+
+**Divide each term:**
+- $10x^4y^2 \\div 5xy = 2x^3y$ ← First term
+- $15x^2y^3 \\div 5xy = 3xy^2$ ← Second term  
+- $5xy \\div 5xy = 1$ ← Third term
+
+**Final Answer:**
+$$10x^4y^2 - 15x^2y^3 + 5xy = 5xy(2x^3y - 3xy^2 + 1)$$ ✅
+
+**Important:** Don't forget the "+ 1" at the end! When a term equals the GCF exactly, dividing gives you 1.
       `
     },
     {
@@ -57,7 +108,10 @@ Take the lowest power of each variable that appears in **all** terms.
       content: `
 **Practice: Factor Out the GCF** 🎯
 
-Now it's your turn! Factor each polynomial completely by identifying and factoring out the GCF.
+Now it's your turn! Factor each polynomial completely by:
+1. Finding the GCF
+2. Dividing each term by the GCF
+3. Writing the GCF outside with the divided terms inside
 
 You need to answer **3 questions correctly in a row** to complete Part 1.
       `,
