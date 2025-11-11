@@ -2003,6 +2003,19 @@ function FactoringPractice({
     }
   }, [])
 
+  // Reset state when section changes (different problemType means new section)
+  useEffect(() => {
+    setCorrectStreak(0)
+    setUserAnswer('')
+    setAttemptCount(0)
+    setFeedback('')
+    setFeedbackType('')
+    setShowHint(false)
+    setShowAnswer(false)
+    setCurrentProblem(null)
+    getRandomProblem()
+  }, [section.id, section.problemType])
+
   const handleSubmit = async () => {
     if (!userAnswer.trim() || !currentProblem) return
 
