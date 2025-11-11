@@ -2068,7 +2068,14 @@ function MiniBossBattle({
     // Dynamically import questions
     import('@/data/mini-boss-questions/factoring-part2-boss').then(module => {
       const question = module.getRandomMiniBossQuestion(questionType, usedQuestionIds)
-      setCurrentQuestion(question)
+      
+      // Shuffle the options so correct answer isn't always first
+      const shuffledOptions = [...question.options].sort(() => Math.random() - 0.5)
+      
+      setCurrentQuestion({
+        ...question,
+        options: shuffledOptions
+      })
       setUsedQuestionIds(prev => [...prev, question.id])
       setAiTimerActive(false) // Reset AI timer for new question
     })
