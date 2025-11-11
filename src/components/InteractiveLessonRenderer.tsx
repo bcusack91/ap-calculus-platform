@@ -3,7 +3,12 @@
 import { useState, useRef, useEffect } from 'react'
 import { unitCircleLessonData, unitCircleAnglesLessonData, unitCircleConceptLessonData } from '@/data/interactive-lessons/unit-circle'
 import { fullUnitCircleLessonData } from '@/data/interactive-lessons/full-unit-circle'
-import { factoringPolynomialsLessonData } from '@/data/interactive-lessons/factoring-polynomials'
+import { factoringPart1GCFData } from '@/data/interactive-lessons/factoring-part1-gcf'
+import { factoringPart2DifferenceOfSquaresData } from '@/data/interactive-lessons/factoring-part2-difference-of-squares'
+import { factoringPart3SimpleTrinomialsData } from '@/data/interactive-lessons/factoring-part3-simple-trinomials'
+import { factoringPart4ComplexTrinomialsData } from '@/data/interactive-lessons/factoring-part4-complex-trinomials'
+import { factoringPart5SpecialPatternsData } from '@/data/interactive-lessons/factoring-part5-special-patterns'
+import { factoringPart6MixedPracticeData } from '@/data/interactive-lessons/factoring-part6-mixed-practice'
 import ReactMarkdown from 'react-markdown'
 import remarkMath from 'remark-math'
 import remarkGfm from 'remark-gfm'
@@ -31,17 +36,17 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
   
   // Get initial part from URL parameter (e.g., ?part=2)
   const urlPart = searchParams.get('part')
-  const initialPart = urlPart ? parseInt(urlPart) as 1 | 2 | 3 | 4 : 1
+  const initialPart = urlPart ? parseInt(urlPart) as 1 | 2 | 3 | 4 | 5 | 6 : 1
   
-  const [lessonPart, setLessonPart] = useState<1 | 2 | 3 | 4>(initialPart)
+  const [lessonPart, setLessonPart] = useState<1 | 2 | 3 | 4 | 5 | 6>(initialPart)
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0)
   const [completedSections, setCompletedSections] = useState<Set<number>>(new Set())
   const [showPracticeMode, setShowPracticeMode] = useState(false)
   const [progressLoaded, setProgressLoaded] = useState(false)
-  const [unlockedParts, setUnlockedParts] = useState<Set<1 | 2 | 3 | 4>>(new Set([1])) // Part 1 always unlocked
+  const [unlockedParts, setUnlockedParts] = useState<Set<1 | 2 | 3 | 4 | 5 | 6>>(new Set([1])) // Part 1 always unlocked
 
   // Update URL when lesson part changes
-  const updateLessonPart = (newPart: 1 | 2 | 3 | 4) => {
+  const updateLessonPart = (newPart: 1 | 2 | 3 | 4 | 5 | 6) => {
     setLessonPart(newPart)
     setCurrentSectionIndex(0)
     setCompletedSections(new Set())
@@ -59,30 +64,32 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
       // Calculate mastery level based on overall progress
       let masteryLevel = 0
       
-      if (lessonPart === 4 && completedSections.size === sections.length) {
-        // Completed all of Part 4 = full mastery
-        masteryLevel = 1.0
-      } else if (lessonPart === 4) {
-        // In Part 4 but not complete
-        masteryLevel = 0.75 + (completedSections.size / sections.length) * 0.25
-      } else if (lessonPart === 3 && completedSections.size === sections.length) {
-        // Completed all of Part 3
-        masteryLevel = 0.75
-      } else if (lessonPart === 3) {
-        // In Part 3 but not complete
-        masteryLevel = 0.5 + (completedSections.size / sections.length) * 0.25
-      } else if (lessonPart === 2 && completedSections.size === sections.length) {
-        // Completed all of Part 2
-        masteryLevel = 0.5
-      } else if (lessonPart === 2) {
-        // In Part 2 but not complete
-        masteryLevel = 0.25 + (completedSections.size / sections.length) * 0.25
-      } else if (lessonPart === 1 && completedSections.size === sections.length) {
-        // Completed all of Part 1
-        masteryLevel = 0.25
+      // Different mastery calculations for different lesson types
+      if (topicSlug === 'factoring-algebra1') {
+        // Factoring has 6 parts
+        const partWeight = 1.0 / 6
+        const baseLevel = (lessonPart - 1) * partWeight
+        const progressInPart = (completedSections.size / sections.length) * partWeight
+        masteryLevel = baseLevel + progressInPart
       } else {
-        // In Part 1 but not complete
-        masteryLevel = (completedSections.size / sections.length) * 0.25
+        // Unit circle has 4 parts (original logic)
+        if (lessonPart === 4 && completedSections.size === sections.length) {
+          masteryLevel = 1.0
+        } else if (lessonPart === 4) {
+          masteryLevel = 0.75 + (completedSections.size / sections.length) * 0.25
+        } else if (lessonPart === 3 && completedSections.size === sections.length) {
+          masteryLevel = 0.75
+        } else if (lessonPart === 3) {
+          masteryLevel = 0.5 + (completedSections.size / sections.length) * 0.25
+        } else if (lessonPart === 2 && completedSections.size === sections.length) {
+          masteryLevel = 0.5
+        } else if (lessonPart === 2) {
+          masteryLevel = 0.25 + (completedSections.size / sections.length) * 0.25
+        } else if (lessonPart === 1 && completedSections.size === sections.length) {
+          masteryLevel = 0.25
+        } else {
+          masteryLevel = (completedSections.size / sections.length) * 0.25
+        }
       }
       
       await fetch('/api/progress/save', {
@@ -113,21 +120,33 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
         if (data.exists && data.progress) {
           // Determine lesson part from mastery level
           const mastery = data.progress.masteryLevel
-          let part: 1 | 2 | 3 | 4 = 1
-          const unlocked: Set<1 | 2 | 3 | 4> = new Set([1]) // Part 1 always unlocked
+          let part: 1 | 2 | 3 | 4 | 5 | 6 = 1
+          const unlocked: Set<1 | 2 | 3 | 4 | 5 | 6> = new Set([1]) // Part 1 always unlocked
           
-          if (mastery >= 0.75) {
-            part = 4
-            unlocked.add(2)
-            unlocked.add(3)
-            unlocked.add(4)
-          } else if (mastery >= 0.5) {
-            part = 3
-            unlocked.add(2)
-            unlocked.add(3)
-          } else if (mastery >= 0.25) {
-            part = 2
-            unlocked.add(2)
+          if (topicSlug === 'factoring-algebra1') {
+            // Factoring has 6 parts
+            const partWeight = 1.0 / 6
+            part = Math.min(6, Math.floor(mastery / partWeight) + 1) as 1 | 2 | 3 | 4 | 5 | 6
+            
+            // Unlock all parts up to current progress
+            for (let i = 1; i <= part; i++) {
+              unlocked.add(i as 1 | 2 | 3 | 4 | 5 | 6)
+            }
+          } else {
+            // Unit circle has 4 parts (original logic)
+            if (mastery >= 0.75) {
+              part = 4
+              unlocked.add(2)
+              unlocked.add(3)
+              unlocked.add(4)
+            } else if (mastery >= 0.5) {
+              part = 3
+              unlocked.add(2)
+              unlocked.add(3)
+            } else if (mastery >= 0.25) {
+              part = 2
+              unlocked.add(2)
+            }
           }
           
           setUnlockedParts(unlocked)
@@ -162,7 +181,12 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
        lessonPart === 3 ? unitCircleConceptLessonData :
        fullUnitCircleLessonData)
     : topicSlug === 'factoring-algebra1'
-    ? factoringPolynomialsLessonData
+    ? (lessonPart === 1 ? factoringPart1GCFData :
+       lessonPart === 2 ? factoringPart2DifferenceOfSquaresData :
+       lessonPart === 3 ? factoringPart3SimpleTrinomialsData :
+       lessonPart === 4 ? factoringPart4ComplexTrinomialsData :
+       lessonPart === 5 ? factoringPart5SpecialPatternsData :
+       factoringPart6MixedPracticeData)
     : null
 
   if (!lessonData) {
@@ -298,64 +322,150 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
 
   return (
     <div className="space-y-6">
-      {/* Part Navigation Menu */}
-      <div className="bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-indigo-950/50 dark:to-purple-950/50 rounded-lg p-4 border-2 border-indigo-200 dark:border-indigo-800">
-        <div className="flex items-center justify-between flex-wrap gap-4">
-          <div className="flex items-center gap-2">
-            <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">Jump to:</span>
-            <div className="flex gap-2 flex-wrap">
-              <button
-                onClick={() => updateLessonPart(1)}
-                disabled={!unlockedParts.has(1)}
-                className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
-                  lessonPart === 1
-                    ? 'bg-purple-600 text-white shadow-lg'
-                    : unlockedParts.has(1)
-                    ? 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30'
-                    : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500 cursor-not-allowed opacity-50'
-                }`}
-              >
-                Part 1: Counting Method
-              </button>
-              <button
-                onClick={() => unlockedParts.has(2) && updateLessonPart(2)}
-                disabled={!unlockedParts.has(2)}
-                className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
-                  lessonPart === 2
-                    ? 'bg-purple-600 text-white shadow-lg'
-                    : unlockedParts.has(2)
-                    ? 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30'
-                    : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500 cursor-not-allowed opacity-50'
-                }`}
-              >
-                {!unlockedParts.has(2) && '🔒 '}Part 2: Angles & Tables
-              </button>
-              <button
-                onClick={() => unlockedParts.has(3) && updateLessonPart(3)}
-                disabled={!unlockedParts.has(3)}
-                className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
-                  lessonPart === 3
-                    ? 'bg-purple-600 text-white shadow-lg'
-                    : unlockedParts.has(3)
-                    ? 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30'
-                    : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500 cursor-not-allowed opacity-50'
-                }`}
-              >
-                {!unlockedParts.has(3) && '🔒 '}Part 3: What Is the Unit Circle?
-              </button>
-              <button
-                onClick={() => unlockedParts.has(4) && updateLessonPart(4)}
-                disabled={!unlockedParts.has(4)}
-                className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
-                  lessonPart === 4
-                    ? 'bg-purple-600 text-white shadow-lg'
-                    : unlockedParts.has(4)
-                    ? 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30'
-                    : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500 cursor-not-allowed opacity-50'
-                }`}
-              >
-                {!unlockedParts.has(4) && '🔒 '}Part 4: Complete Unit Circle
-              </button>
+      {/* Part Navigation Menu - Show for multi-part lessons */}
+      {(topicSlug === 'the-unit-circle' || topicSlug === 'factoring-algebra1') && (
+        <div className="bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-indigo-950/50 dark:to-purple-950/50 rounded-lg p-4 border-2 border-indigo-200 dark:border-indigo-800">
+          <div className="flex items-center justify-between flex-wrap gap-4">
+            <div className="flex items-center gap-2">
+              <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">Jump to:</span>
+              <div className="flex gap-2 flex-wrap">
+                {topicSlug === 'the-unit-circle' ? (
+                  <>
+                    <button
+                      onClick={() => updateLessonPart(1)}
+                      disabled={!unlockedParts.has(1)}
+                      className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
+                        lessonPart === 1
+                          ? 'bg-purple-600 text-white shadow-lg'
+                          : unlockedParts.has(1)
+                          ? 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30'
+                          : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500 cursor-not-allowed opacity-50'
+                      }`}
+                    >
+                      Part 1: Counting Method
+                    </button>
+                    <button
+                      onClick={() => unlockedParts.has(2) && updateLessonPart(2)}
+                      disabled={!unlockedParts.has(2)}
+                      className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
+                        lessonPart === 2
+                          ? 'bg-purple-600 text-white shadow-lg'
+                          : unlockedParts.has(2)
+                          ? 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30'
+                          : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500 cursor-not-allowed opacity-50'
+                      }`}
+                    >
+                      {!unlockedParts.has(2) && '🔒 '}Part 2: Angles & Tables
+                    </button>
+                    <button
+                      onClick={() => unlockedParts.has(3) && updateLessonPart(3)}
+                      disabled={!unlockedParts.has(3)}
+                      className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
+                        lessonPart === 3
+                          ? 'bg-purple-600 text-white shadow-lg'
+                          : unlockedParts.has(3)
+                          ? 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30'
+                          : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500 cursor-not-allowed opacity-50'
+                      }`}
+                    >
+                      {!unlockedParts.has(3) && '🔒 '}Part 3: What Is the Unit Circle?
+                    </button>
+                    <button
+                      onClick={() => unlockedParts.has(4) && updateLessonPart(4)}
+                      disabled={!unlockedParts.has(4)}
+                      className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
+                        lessonPart === 4
+                        ? 'bg-purple-600 text-white shadow-lg'
+                        : unlockedParts.has(4)
+                        ? 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30'
+                        : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500 cursor-not-allowed opacity-50'
+                    }`}
+                    >
+                      {!unlockedParts.has(4) && '🔒 '}Part 4: Complete Unit Circle
+                    </button>
+                  </>
+                ) : (
+                  <>
+                    <button
+                      onClick={() => updateLessonPart(1)}
+                      disabled={!unlockedParts.has(1)}
+                      className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
+                        lessonPart === 1
+                          ? 'bg-purple-600 text-white shadow-lg'
+                          : unlockedParts.has(1)
+                          ? 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30'
+                          : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500 cursor-not-allowed opacity-50'
+                      }`}
+                    >
+                      Part 1: GCF
+                    </button>
+                    <button
+                      onClick={() => unlockedParts.has(2) && updateLessonPart(2)}
+                      disabled={!unlockedParts.has(2)}
+                      className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
+                        lessonPart === 2
+                          ? 'bg-purple-600 text-white shadow-lg'
+                          : unlockedParts.has(2)
+                          ? 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30'
+                          : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500 cursor-not-allowed opacity-50'
+                      }`}
+                    >
+                      {!unlockedParts.has(2) && '🔒 '}Part 2: Difference of Squares
+                    </button>
+                    <button
+                      onClick={() => unlockedParts.has(3) && updateLessonPart(3)}
+                      disabled={!unlockedParts.has(3)}
+                      className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
+                        lessonPart === 3
+                          ? 'bg-purple-600 text-white shadow-lg'
+                          : unlockedParts.has(3)
+                          ? 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30'
+                          : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500 cursor-not-allowed opacity-50'
+                      }`}
+                    >
+                      {!unlockedParts.has(3) && '🔒 '}Part 3: Simple Trinomials
+                    </button>
+                    <button
+                      onClick={() => unlockedParts.has(4) && updateLessonPart(4)}
+                      disabled={!unlockedParts.has(4)}
+                      className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
+                        lessonPart === 4
+                        ? 'bg-purple-600 text-white shadow-lg'
+                        : unlockedParts.has(4)
+                        ? 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30'
+                        : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500 cursor-not-allowed opacity-50'
+                    }`}
+                    >
+                      {!unlockedParts.has(4) && '🔒 '}Part 4: Complex Trinomials
+                    </button>
+                    <button
+                      onClick={() => unlockedParts.has(5) && updateLessonPart(5)}
+                      disabled={!unlockedParts.has(5)}
+                      className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
+                        lessonPart === 5
+                        ? 'bg-purple-600 text-white shadow-lg'
+                        : unlockedParts.has(5)
+                        ? 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30'
+                        : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500 cursor-not-allowed opacity-50'
+                    }`}
+                    >
+                      {!unlockedParts.has(5) && '🔒 '}Part 5: Special Patterns
+                    </button>
+                    <button
+                      onClick={() => unlockedParts.has(6) && updateLessonPart(6)}
+                      disabled={!unlockedParts.has(6)}
+                      className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
+                        lessonPart === 6
+                        ? 'bg-purple-600 text-white shadow-lg'
+                        : unlockedParts.has(6)
+                        ? 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30'
+                        : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500 cursor-not-allowed opacity-50'
+                    }`}
+                    >
+                      {!unlockedParts.has(6) && '🔒 '}Part 6: Mixed Practice
+                    </button>
+                  </>
+                )}
             </div>
           </div>
           <div className="text-xs text-gray-600 dark:text-gray-400">
@@ -364,7 +474,8 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
             </span>
           </div>
         </div>
-      </div>
+        </div>
+      )}
       
       {/* Progress Bar */}
       <div className="bg-gray-200 rounded-full h-3 overflow-hidden">
