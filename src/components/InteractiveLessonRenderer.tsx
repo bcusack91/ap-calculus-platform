@@ -22,7 +22,7 @@ interface Section {
   type: 'text' | 'input-boxes' | 'dropdown-select' | 'multiple-choice' | 'reference-angle-quiz' | 'factoring-practice'
   content: string
   exercise?: any
-  problemType?: 'gcf' | 'difference-of-squares' | 'simple-trinomials' | 'complex-trinomials' | 'mixed'
+  problemType?: 'gcf' | 'gcf-identify' | 'difference-of-squares' | 'simple-trinomials' | 'complex-trinomials' | 'mixed'
 }
 
 interface InteractiveLessonRendererProps {
@@ -1969,8 +1969,22 @@ function FactoringPractice({
   const [showHint, setShowHint] = useState<boolean>(false)
   const [showAnswer, setShowAnswer] = useState<boolean>(false)
 
-  const requiredStreak = section.problemType === 'gcf' || section.problemType === 'difference-of-squares' ? 3 :
+  const requiredStreak = section.problemType === 'gcf' || section.problemType === 'gcf-identify' || section.problemType === 'difference-of-squares' ? 3 :
                          section.problemType === 'simple-trinomials' || section.problemType === 'complex-trinomials' ? 4 : 5
+
+  // Helper function to convert plain text to LaTeX format
+  const convertToLatex = (input: string): string => {
+    if (!input.trim()) return ''
+    
+    // Replace ^ with proper LaTeX exponents
+    let latex = input.replace(/\^(\d+)/g, '^{$1}')
+    
+    // Handle parentheses - they stay as is in LaTeX
+    // Handle multiplication sign - space it out
+    latex = latex.replace(/\*/g, ' \\cdot ')
+    
+    return latex
+  }
 
   // Import the problem generators
   const getRandomProblem = () => {
@@ -2090,7 +2104,7 @@ function FactoringPractice({
         {/* Problem */}
         <div className="text-center mb-8">
           <p className="text-xl mb-4 text-gray-700 dark:text-gray-300">
-            Factor completely:
+            {section.problemType === 'gcf-identify' ? 'Identify the GCF (Greatest Common Factor):' : 'Factor completely:'}
           </p>
           <div 
             className="text-4xl font-bold text-purple-700 dark:text-purple-400 mb-6"
@@ -2110,11 +2124,30 @@ function FactoringPractice({
               onChange={(e) => setUserAnswer(e.target.value)}
               onKeyPress={(e) => e.key === 'Enter' && handleSubmit()}
               className="w-full max-w-md h-16 text-center text-xl font-mono border-2 border-purple-500 rounded-lg focus:ring-2 focus:ring-purple-500 focus:outline-none px-4"
-              placeholder="Enter factored form"
+              placeholder={section.problemType === 'gcf-identify' ? 'Enter GCF (e.g., 3x^2)' : 'Enter factored form'}
               disabled={feedbackType === 'correct'}
             />
+            
+            {/* Live Preview with KaTeX */}
+            {userAnswer.trim() && (
+              <div className="w-full max-w-md">
+                <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">Your answer:</p>
+                <div 
+                  className="text-2xl p-3 bg-purple-50 dark:bg-purple-900/20 rounded-lg border border-purple-300 dark:border-purple-700"
+                  dangerouslySetInnerHTML={{
+                    __html: katex.renderToString(convertToLatex(userAnswer), {
+                      throwOnError: false,
+                      displayMode: false
+                    })
+                  }}
+                />
+              </div>
+            )}
+            
             <p className="text-sm text-gray-500">
-              Example format: (x + 2)(x + 3) or 2x(x + 1)
+              {section.problemType === 'gcf-identify' 
+                ? 'Example format: 3x or 5x^2y' 
+                : 'Example format: (x + 2)(x + 3) or 2x(x + 1)'}
             </p>
           </div>
 

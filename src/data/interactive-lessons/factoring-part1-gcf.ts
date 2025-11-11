@@ -103,15 +103,31 @@ $$10x^4y^2 - 15x^2y^3 + 5xy = 5xy(2x^3y - 3xy^2 + 1)$$ ✅
       `
     },
     {
-      id: 'gcf-practice',
+      id: 'gcf-practice-identify',
+      type: 'factoring-practice' as const,
+      content: `
+**Practice: Identify the GCF** 🎯
+
+First, let's practice just identifying the GCF (you don't need to factor it out yet).
+
+For each polynomial, determine what the Greatest Common Factor is.
+
+You need to answer **3 questions correctly in a row** to continue.
+      `,
+      problemType: 'gcf-identify'
+    },
+    {
+      id: 'gcf-practice-complete',
       type: 'factoring-practice' as const,
       content: `
 **Practice: Factor Out the GCF** 🎯
 
-Now it's your turn! Factor each polynomial completely by:
-1. Finding the GCF
-2. Dividing each term by the GCF
-3. Writing the GCF outside with the divided terms inside
+Now it's your turn to factor completely! 
+
+For each polynomial:
+1. Find the GCF
+2. Divide each term by the GCF
+3. Write the GCF outside with the divided terms inside
 
 You need to answer **3 questions correctly in a row** to complete Part 1.
       `,

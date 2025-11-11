@@ -3,9 +3,70 @@
 export interface FactoringProblem {
   problem: string // LaTeX format
   answer: string // Factored form in LaTeX
-  type: 'gcf' | 'difference-of-squares' | 'simple-trinomials' | 'complex-trinomials' | 'mixed'
+  type: 'gcf' | 'gcf-identify' | 'difference-of-squares' | 'simple-trinomials' | 'complex-trinomials' | 'mixed'
   hint?: string
+  gcfOnly?: string // For gcf-identify problems, just the GCF
 }
+
+// GCF Identification Problems (just identify the GCF, don't factor)
+const gcfIdentifyProblems: FactoringProblem[] = [
+  {
+    problem: '6x^2 + 9x',
+    answer: '3x',
+    gcfOnly: '3x',
+    type: 'gcf-identify',
+    hint: 'Look at both coefficients (6 and 9) and variables (x² and x)'
+  },
+  {
+    problem: '12x^3 - 8x^2',
+    answer: '4x^2',
+    gcfOnly: '4x^2',
+    type: 'gcf-identify',
+    hint: 'GCF of 12 and 8 is 4, lowest power of x is x²'
+  },
+  {
+    problem: '15y^4 + 10y^2',
+    answer: '5y^2',
+    gcfOnly: '5y^2',
+    type: 'gcf-identify',
+    hint: 'GCF of 15 and 10 is 5, lowest power of y is y²'
+  },
+  {
+    problem: '18a^3b - 12a^2b^2',
+    answer: '6a^2b',
+    gcfOnly: '6a^2b',
+    type: 'gcf-identify',
+    hint: 'GCF of 18 and 12 is 6, lowest powers: a² and b'
+  },
+  {
+    problem: '20x^4 - 15x^3 + 10x^2',
+    answer: '5x^2',
+    gcfOnly: '5x^2',
+    type: 'gcf-identify',
+    hint: 'GCF of 20, 15, and 10 is 5, lowest power of x is x²'
+  },
+  {
+    problem: '8m^3n^2 + 12m^2n^3',
+    answer: '4m^2n^2',
+    gcfOnly: '4m^2n^2',
+    type: 'gcf-identify',
+    hint: 'GCF of 8 and 12 is 4, lowest powers: m² and n²'
+  },
+  {
+    problem: '21x^5 - 14x^3 + 7x',
+    answer: '7x',
+    gcfOnly: '7x',
+    type: 'gcf-identify',
+    hint: 'GCF of 21, 14, and 7 is 7, lowest power of x is x'
+  },
+  {
+    problem: '16p^4q^2 - 24p^2q^3',
+    answer: '8p^2q^2',
+    gcfOnly: '8p^2q^2',
+    type: 'gcf-identify',
+    hint: 'GCF of 16 and 24 is 8, lowest powers: p² and q²'
+  }
+]
 
 // GCF Problems
 const gcfProblems: FactoringProblem[] = [
@@ -285,12 +346,15 @@ const mixedProblems: FactoringProblem[] = [
 ]
 
 // Get random problem by type
-export function getRandomFactoringProblem(type: 'gcf' | 'difference-of-squares' | 'simple-trinomials' | 'complex-trinomials' | 'mixed'): FactoringProblem {
+export function getRandomFactoringProblem(type: 'gcf' | 'gcf-identify' | 'difference-of-squares' | 'simple-trinomials' | 'complex-trinomials' | 'mixed'): FactoringProblem {
   let problems: FactoringProblem[]
   
   switch (type) {
     case 'gcf':
       problems = gcfProblems
+      break
+    case 'gcf-identify':
+      problems = gcfIdentifyProblems
       break
     case 'difference-of-squares':
       problems = differenceOfSquaresProblems
