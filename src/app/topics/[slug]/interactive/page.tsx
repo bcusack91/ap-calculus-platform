@@ -67,11 +67,10 @@ export default async function InteractivePage(props: InteractivePageProps) {
     notFound()
   }
 
-  // For now, we'll hardcode the unit circle interactive lesson
-  // Later we'll store this in the database
-  const isUnitCircle = topic.slug === 'the-unit-circle'
+  // Check if we have an interactive lesson for this topic
+  const hasInteractiveLesson = topic.slug === 'the-unit-circle' || topic.slug === 'factoring-algebra1'
 
-  if (!isUnitCircle) {
+  if (!hasInteractiveLesson) {
     // Redirect to regular topic page if no interactive lesson exists
     return (
       <div className="container py-10">

@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from 'react'
 import { unitCircleLessonData, unitCircleAnglesLessonData, unitCircleConceptLessonData } from '@/data/interactive-lessons/unit-circle'
 import { fullUnitCircleLessonData } from '@/data/interactive-lessons/full-unit-circle'
+import { factoringPolynomialsLessonData } from '@/data/interactive-lessons/factoring-polynomials'
 import ReactMarkdown from 'react-markdown'
 import remarkMath from 'remark-math'
 import remarkGfm from 'remark-gfm'
@@ -13,9 +14,10 @@ import katex from 'katex'
 
 interface Section {
   id: string
-  type: 'text' | 'input-boxes' | 'dropdown-select' | 'multiple-choice' | 'reference-angle-quiz'
+  type: 'text' | 'input-boxes' | 'dropdown-select' | 'multiple-choice' | 'reference-angle-quiz' | 'factoring-practice'
   content: string
   exercise?: any
+  problemType?: 'gcf' | 'difference-of-squares' | 'simple-trinomials' | 'complex-trinomials' | 'mixed'
 }
 
 interface InteractiveLessonRendererProps {
@@ -159,6 +161,8 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
        lessonPart === 2 ? unitCircleAnglesLessonData : 
        lessonPart === 3 ? unitCircleConceptLessonData :
        fullUnitCircleLessonData)
+    : topicSlug === 'factoring-algebra1'
+    ? factoringPolynomialsLessonData
     : null
 
   if (!lessonData) {
@@ -285,6 +289,7 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
     currentSection.type === 'input-boxes' || 
     currentSection.type === 'dropdown-select' ||
     currentSection.type === 'reference-angle-quiz' ||
+    currentSection.type === 'factoring-practice' ||
     (currentSection.type === 'text' && currentSection.content.includes('[UNIT_CIRCLE_GAME]')) ||
     (currentSection.type === 'text' && currentSection.content.includes('[FULL_UNIT_CIRCLE_GAME]'))
   
@@ -483,6 +488,16 @@ function SectionRenderer({
   if (section.type === 'reference-angle-quiz') {
     return (
       <ReferenceAngleQuiz 
+        section={section} 
+        onComplete={onComplete}
+        isComplete={isComplete}
+      />
+    )
+  }
+
+  if (section.type === 'factoring-practice') {
+    return (
+      <FactoringPractice 
         section={section} 
         onComplete={onComplete}
         isComplete={isComplete}
@@ -1820,6 +1835,242 @@ function FadeInText({ content, onComplete }: { content: string; onComplete?: () 
       >
         {content}
       </ReactMarkdown>
+    </div>
+  )
+}
+
+// Factoring Practice Component
+function FactoringPractice({ 
+  section, 
+  onComplete, 
+  isComplete 
+}: { 
+  section: Section
+  onComplete: () => void
+  isComplete: boolean
+}) {
+  const [currentProblem, setCurrentProblem] = useState<any>(null)
+  const [userAnswer, setUserAnswer] = useState<string>('')
+  const [correctStreak, setCorrectStreak] = useState<number>(0)
+  const [attemptCount, setAttemptCount] = useState<number>(0)
+  const [feedback, setFeedback] = useState<string>('')
+  const [feedbackType, setFeedbackType] = useState<'correct' | 'incorrect' | 'hint' | ''>('')
+  const [showHint, setShowHint] = useState<boolean>(false)
+  const [showAnswer, setShowAnswer] = useState<boolean>(false)
+
+  const requiredStreak = section.problemType === 'gcf' || section.problemType === 'difference-of-squares' ? 3 :
+                         section.problemType === 'simple-trinomials' || section.problemType === 'complex-trinomials' ? 4 : 5
+
+  // Import the problem generators
+  const getRandomProblem = () => {
+    if (!section.problemType) return null
+    
+    // Dynamically import and get problem
+    import('@/utils/factoring-problems').then(module => {
+      const problem = module.getRandomFactoringProblem(section.problemType!)
+      setCurrentProblem(problem)
+    })
+  }
+
+  useEffect(() => {
+    if (!currentProblem) {
+      getRandomProblem()
+    }
+  }, [])
+
+  const handleSubmit = async () => {
+    if (!userAnswer.trim() || !currentProblem) return
+
+    setAttemptCount(prev => prev + 1)
+    
+    // Check answer
+    const { checkFactoringAnswer } = await import('@/utils/factoring-problems')
+    const isCorrect = checkFactoringAnswer(userAnswer, currentProblem.answer)
+
+    if (isCorrect) {
+      setFeedbackType('correct')
+      setFeedback('✅ Correct!')
+      const newStreak = correctStreak + 1
+      setCorrectStreak(newStreak)
+      
+      if (newStreak >= requiredStreak) {
+        onComplete()
+      } else {
+        // Move to next problem after brief delay
+        setTimeout(() => {
+          setUserAnswer('')
+          setFeedback('')
+          setFeedbackType('')
+          setShowHint(false)
+          setShowAnswer(false)
+          setAttemptCount(0)
+          getRandomProblem()
+        }, 1500)
+      }
+    } else {
+      setFeedbackType('incorrect')
+      setFeedback('❌ Not quite. Try again!')
+      
+      // Reset streak on incorrect answer
+      if (correctStreak > 0) {
+        setCorrectStreak(0)
+      }
+    }
+  }
+
+  const handleShowHint = () => {
+    setShowHint(true)
+    setFeedbackType('hint')
+    setFeedback(currentProblem?.hint || 'Try factoring step by step')
+  }
+
+  const handleShowAnswer = () => {
+    setShowAnswer(true)
+    setUserAnswer(currentProblem?.answer || '')
+    setFeedbackType('hint')
+    setFeedback('Study this answer, then click Next Problem to continue')
+    setCorrectStreak(0) // Reset streak when showing answer
+  }
+
+  const handleNextProblem = () => {
+    setUserAnswer('')
+    setFeedback('')
+    setFeedbackType('')
+    setShowHint(false)
+    setShowAnswer(false)
+    setAttemptCount(0)
+    getRandomProblem()
+  }
+
+  if (!currentProblem) {
+    return <div className="text-center py-4">Loading problem...</div>
+  }
+
+  if (isComplete || correctStreak >= requiredStreak) {
+    return (
+      <div className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-xl p-8 border-2 border-green-500">
+        <div className="text-center">
+          <div className="text-6xl mb-4">🎉</div>
+          <h3 className="text-3xl font-bold text-green-700 dark:text-green-400 mb-4">
+            Excellent! {requiredStreak} Correct in a Row!
+          </h3>
+          <p className="text-xl text-gray-700 dark:text-gray-300">
+            You've mastered this factoring technique!
+          </p>
+        </div>
+      </div>
+    )
+  }
+
+  return (
+    <div className="space-y-6">
+      <FadeInText content={section.content} onComplete={() => {}} />
+      
+      <div className="bg-white dark:bg-gray-800 rounded-xl shadow-xl p-8 border-2 border-purple-300 dark:border-purple-700">
+        {/* Progress */}
+        <div className="mb-6 text-center">
+          <div className="inline-block bg-purple-100 dark:bg-purple-900/40 rounded-full px-6 py-3">
+            <span className="text-2xl font-bold text-purple-700 dark:text-purple-400">
+              Correct Streak: {correctStreak}/{requiredStreak}
+            </span>
+          </div>
+        </div>
+
+        {/* Problem */}
+        <div className="text-center mb-8">
+          <p className="text-xl mb-4 text-gray-700 dark:text-gray-300">
+            Factor completely:
+          </p>
+          <div 
+            className="text-4xl font-bold text-purple-700 dark:text-purple-400 mb-6"
+            dangerouslySetInnerHTML={{
+              __html: katex.renderToString(currentProblem.problem, {
+                throwOnError: false,
+                displayMode: true
+              })
+            }}
+          />
+
+          {/* Answer Input */}
+          <div className="flex flex-col items-center gap-4 mb-6">
+            <input
+              type="text"
+              value={userAnswer}
+              onChange={(e) => setUserAnswer(e.target.value)}
+              onKeyPress={(e) => e.key === 'Enter' && handleSubmit()}
+              className="w-full max-w-md h-16 text-center text-xl font-mono border-2 border-purple-500 rounded-lg focus:ring-2 focus:ring-purple-500 focus:outline-none px-4"
+              placeholder="Enter factored form"
+              disabled={feedbackType === 'correct'}
+            />
+            <p className="text-sm text-gray-500">
+              Example format: (x + 2)(x + 3) or 2x(x + 1)
+            </p>
+          </div>
+
+          {/* Submit Button */}
+          {!showAnswer && (
+            <button
+              onClick={handleSubmit}
+              disabled={!userAnswer.trim() || feedbackType === 'correct'}
+              className="px-8 py-3 bg-purple-600 hover:bg-purple-700 disabled:bg-gray-400 text-white font-bold rounded-lg transition-colors text-lg"
+            >
+              Check Answer
+            </button>
+          )}
+
+          {showAnswer && (
+            <button
+              onClick={handleNextProblem}
+              className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg transition-colors text-lg"
+            >
+              Next Problem
+            </button>
+          )}
+        </div>
+
+        {/* Feedback */}
+        {feedback && (
+          <div className={`text-center text-xl font-bold p-4 rounded-lg mb-4 ${
+            feedbackType === 'correct' ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400' :
+            feedbackType === 'incorrect' ? 'bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400' :
+            'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400'
+          }`}>
+            {feedback}
+          </div>
+        )}
+
+        {/* Hint and Show Answer buttons */}
+        {!showAnswer && feedbackType !== 'correct' && (
+          <div className="flex justify-center gap-4 mt-6">
+            {!showHint && attemptCount >= 1 && (
+              <button
+                onClick={handleShowHint}
+                className="px-6 py-2 bg-yellow-500 hover:bg-yellow-600 text-white font-semibold rounded-lg transition-colors"
+              >
+                💡 Show Hint
+              </button>
+            )}
+            
+            {attemptCount >= 2 && (
+              <button
+                onClick={handleShowAnswer}
+                className="px-6 py-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg transition-colors"
+              >
+                👁️ Show Answer
+              </button>
+            )}
+          </div>
+        )}
+
+        {/* Display hint if shown */}
+        {showHint && currentProblem.hint && !showAnswer && (
+          <div className="mt-6 p-4 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg border-2 border-yellow-400">
+            <p className="text-lg text-gray-800 dark:text-gray-200">
+              <strong>Hint:</strong> {currentProblem.hint}
+            </p>
+          </div>
+        )}
+      </div>
     </div>
   )
 }
