@@ -2203,130 +2203,129 @@ function MiniBossBattle({
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-purple-900 to-indigo-900 p-8">
-      {/* Score Display */}
-      <div className="max-w-4xl mx-auto mb-8">
-        <div className="grid grid-cols-2 gap-8">
+    <div className="min-h-screen bg-gradient-to-b from-purple-900 to-indigo-900 py-4 px-4">
+      <div className="max-w-5xl mx-auto">
+        {/* Score Display - More Compact */}
+        <div className="grid grid-cols-2 gap-4 mb-4">
           {/* Player Score */}
-          <div className="bg-blue-600 rounded-lg p-6 text-center border-4 border-blue-400 shadow-xl">
-            <div className="text-2xl font-bold text-white mb-2">YOU</div>
-            <div className="text-6xl font-bold text-white">{playerScore}</div>
-            <div className="text-sm text-blue-200 mt-2">/ {WIN_SCORE} points</div>
+          <div className="bg-blue-600 rounded-lg p-4 text-center border-2 border-blue-400 shadow-lg">
+            <div className="text-lg font-bold text-white mb-1">YOU</div>
+            <div className="text-4xl font-bold text-white">{playerScore}</div>
+            <div className="text-xs text-blue-200 mt-1">/ {WIN_SCORE} points</div>
           </div>
 
           {/* AI Score */}
-          <div className={`bg-red-600 rounded-lg p-6 text-center border-4 border-red-400 shadow-xl ${aiThinking ? 'animate-pulse' : ''}`}>
-            <div className="text-2xl font-bold text-white mb-2">{config.bossName}</div>
-            <div className="text-6xl font-bold text-white">{aiScore}</div>
-            <div className="text-sm text-red-200 mt-2">
+          <div className={`bg-red-600 rounded-lg p-4 text-center border-2 border-red-400 shadow-lg ${aiThinking ? 'animate-pulse' : ''}`}>
+            <div className="text-lg font-bold text-white mb-1">{config.bossName}</div>
+            <div className="text-4xl font-bold text-white">{aiScore}</div>
+            <div className="text-xs text-red-200 mt-1">
               {aiThinking ? '🤔 Thinking...' : `/ ${WIN_SCORE} points`}
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Question */}
-      <div className="max-w-4xl mx-auto bg-white dark:bg-gray-800 rounded-xl shadow-2xl p-8 border-4 border-yellow-500">
-        <div className="mb-6">
-          <div className="inline-block bg-purple-100 dark:bg-purple-900/40 rounded-full px-6 py-2 mb-4">
-            <span className="text-lg font-bold text-purple-700 dark:text-purple-400">
-              Question {(currentQuestionIndex % questionTypes.length) + 1}
-            </span>
+        {/* Question - More Compact */}
+        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-xl p-6 border-2 border-yellow-500">
+          {/* Question Header */}
+          <div className="flex items-center justify-between mb-4">
+            <div className="inline-block bg-purple-100 dark:bg-purple-900/40 rounded-full px-4 py-1">
+              <span className="text-sm font-bold text-purple-700 dark:text-purple-400">
+                Question {(currentQuestionIndex % questionTypes.length) + 1}
+              </span>
+            </div>
+            {aiThinking && (
+              <span className="text-sm text-yellow-400 animate-pulse">
+                {config.bossName} is answering...
+              </span>
+            )}
           </div>
-        </div>
 
-        {/* Problem */}
-        <div className="text-center mb-8">
-          <p className="text-2xl mb-4 text-gray-700 dark:text-gray-300 font-semibold">
-            {currentQuestion.type === 'gcf-identify' && 'Identify the GCF:'}
-            {currentQuestion.type === 'gcf-factor' && 'Factor out the GCF:'}
-            {currentQuestion.type === 'simple-diff-squares' && 'Factor using difference of squares:'}
-            {currentQuestion.type === 'complex-diff-squares' && 'Factor using difference of squares:'}
-            {currentQuestion.type === 'combined' && 'Factor COMPLETELY:'}
-          </p>
-          <div 
-            className="text-5xl font-bold text-purple-700 dark:text-purple-400 mb-8 py-4"
-            dangerouslySetInnerHTML={{
-              __html: katex.renderToString(currentQuestion.question, {
-                throwOnError: false,
-                displayMode: true
-              })
-            }}
-          />
-        </div>
+          {/* Problem */}
+          <div className="text-center mb-4">
+            <p className="text-lg mb-2 text-gray-700 dark:text-gray-300 font-semibold">
+              {currentQuestion.type === 'gcf-identify' && 'Identify the GCF:'}
+              {currentQuestion.type === 'gcf-factor' && 'Factor out the GCF:'}
+              {currentQuestion.type === 'simple-diff-squares' && 'Factor using difference of squares:'}
+              {currentQuestion.type === 'complex-diff-squares' && 'Factor using difference of squares:'}
+              {currentQuestion.type === 'combined' && 'Factor COMPLETELY:'}
+            </p>
+            <div 
+              className="text-3xl font-bold text-purple-700 dark:text-purple-400 mb-4 py-2"
+              dangerouslySetInnerHTML={{
+                __html: katex.renderToString(currentQuestion.question, {
+                  throwOnError: false,
+                  displayMode: true
+                })
+              }}
+            />
+          </div>
 
-        {/* Multiple Choice Options */}
-        <div className="grid grid-cols-1 gap-4 mb-8">
-          {currentQuestion.options.map((option: any) => (
-            <button
-              key={option.label}
-              onClick={() => handleAnswerSelect(option.label)}
-              disabled={showFeedback}
-              className={`p-6 rounded-lg border-4 text-left transition-all transform hover:scale-102 ${
-                selectedAnswer === option.label
-                  ? showFeedback
-                    ? option.isCorrect
-                      ? 'border-green-500 bg-green-100 dark:bg-green-900/30'
-                      : 'border-red-500 bg-red-100 dark:bg-red-900/30'
-                    : 'border-purple-500 bg-purple-100 dark:bg-purple-900/30'
-                  : showFeedback && option.isCorrect
-                    ? 'border-green-500 bg-green-50 dark:bg-green-900/20'
-                    : 'border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 hover:border-purple-400'
-              } ${showFeedback ? 'cursor-not-allowed' : 'cursor-pointer'}`}
-            >
-              <div className="flex items-center gap-4">
-                <span className="text-3xl font-bold text-purple-700 dark:text-purple-400">
-                  {option.label}
-                </span>
-                <div 
-                  className="text-2xl flex-1"
-                  dangerouslySetInnerHTML={{
-                    __html: katex.renderToString(option.value, {
-                      throwOnError: false,
-                      displayMode: false
-                    })
-                  }}
-                />
-                {showFeedback && selectedAnswer === option.label && !option.isCorrect && option.explanation && (
-                  <span className="text-sm text-red-600 dark:text-red-400 italic">
-                    {option.explanation}
+          {/* Multiple Choice Options - More Compact */}
+          <div className="grid grid-cols-1 gap-3 mb-4">
+            {currentQuestion.options.map((option: any) => (
+              <button
+                key={option.label}
+                onClick={() => handleAnswerSelect(option.label)}
+                disabled={showFeedback}
+                className={`p-4 rounded-lg border-2 text-left transition-all transform hover:scale-102 ${
+                  selectedAnswer === option.label
+                    ? showFeedback
+                      ? option.isCorrect
+                        ? 'border-green-500 bg-green-100 dark:bg-green-900/30'
+                        : 'border-red-500 bg-red-100 dark:bg-red-900/30'
+                      : 'border-purple-500 bg-purple-100 dark:bg-purple-900/30'
+                    : showFeedback && option.isCorrect
+                      ? 'border-green-500 bg-green-50 dark:bg-green-900/20'
+                      : 'border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 hover:border-purple-400'
+                } ${showFeedback ? 'cursor-not-allowed' : 'cursor-pointer'}`}
+              >
+                <div className="flex items-center gap-3">
+                  <span className="text-2xl font-bold text-purple-700 dark:text-purple-400">
+                    {option.label}
                   </span>
-                )}
-              </div>
-            </button>
-          ))}
+                  <div 
+                    className="text-xl flex-1"
+                    dangerouslySetInnerHTML={{
+                      __html: katex.renderToString(option.value, {
+                        throwOnError: false,
+                        displayMode: false
+                      })
+                    }}
+                  />
+                  {showFeedback && selectedAnswer === option.label && !option.isCorrect && option.explanation && (
+                    <span className="text-xs text-red-600 dark:text-red-400 italic">
+                      {option.explanation}
+                    </span>
+                  )}
+                </div>
+              </button>
+            ))}
+          </div>
+
+          {/* Submit Button */}
+          {!showFeedback && (
+            <div className="text-center">
+              <button
+                onClick={handleSubmit}
+                disabled={!selectedAnswer}
+                className="px-8 py-3 bg-purple-600 hover:bg-purple-700 disabled:bg-gray-400 text-white font-bold text-lg rounded-lg transition-all transform hover:scale-105 shadow-lg"
+              >
+                Submit Answer
+              </button>
+            </div>
+          )}
+
+          {/* Feedback */}
+          {showFeedback && (
+            <div className={`text-center text-xl font-bold p-4 rounded-lg ${
+              feedbackType === 'correct' 
+                ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400' 
+                : 'bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400'
+            }`}>
+              {feedbackType === 'correct' ? '✅ Correct! +1 Point' : '❌ Incorrect! -1 Point'}
+            </div>
+          )}
         </div>
-
-        {/* Submit Button */}
-        {!showFeedback && (
-          <div className="text-center">
-            <button
-              onClick={handleSubmit}
-              disabled={!selectedAnswer}
-              className="px-12 py-4 bg-purple-600 hover:bg-purple-700 disabled:bg-gray-400 text-white font-bold text-xl rounded-lg transition-all transform hover:scale-105 shadow-lg"
-            >
-              Submit Answer
-            </button>
-          </div>
-        )}
-
-        {/* Feedback */}
-        {showFeedback && (
-          <div className={`text-center text-2xl font-bold p-6 rounded-lg ${
-            feedbackType === 'correct' 
-              ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400' 
-              : 'bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400'
-          }`}>
-            {feedbackType === 'correct' ? '✅ Correct! +1 Point' : '❌ Incorrect! -1 Point'}
-          </div>
-        )}
-
-        {/* AI Thinking Indicator */}
-        {aiThinking && (
-          <div className="text-center mt-6 text-xl text-yellow-400 animate-pulse">
-            {config.bossName} is answering...
-          </div>
-        )}
       </div>
     </div>
   )
