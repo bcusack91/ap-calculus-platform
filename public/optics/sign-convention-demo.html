@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartesian Sign Convention - Ray Diagram</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 900px;
+            width: 100%;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+        
+        canvas {
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            display: block;
+            margin: 0 auto;
+            background: #fafafa;
+            cursor: pointer;
+        }
+        
+        .controls {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 16px;
+            border-radius: 25px;
+            cursor: pointer;
+            margin: 0 10px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            font-weight: 600;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+        
+        button:active {
+            transform: translateY(0);
+        }
+        
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        .legend {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: #444;
+        }
+        
+        .legend-box {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+        }
+        
+        .info-box {
+            background: #f0f4ff;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 4px;
+        }
+        
+        .info-box h3 {
+            margin: 0 0 10px 0;
+            color: #667eea;
+            font-size: 18px;
+        }
+        
+        .info-box p {
+            margin: 5px 0;
+            color: #555;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔆 Cartesian Sign Convention</h1>
+        <p class="subtitle">Understanding Positive and Negative Directions in Optics</p>
+        
+        <canvas id="rayDiagram" width="800" height="500"></canvas>
+        
+        <div class="controls">
+            <button id="playBtn">▶ Play Animation</button>
+            <button id="resetBtn">↻ Reset</button>
+        </div>
+        
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-box" style="background: #22c55e;"></div>
+                <span>Positive Direction (→)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box" style="background: #ef4444;"></div>
+                <span>Negative Direction (←)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box" style="background: #3b82f6;"></div>
+                <span>Light Ray</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box" style="background: #8b5cf6;"></div>
+                <span>Object</span>
+            </div>
+        </div>
+        
+        <div class="info-box">
+            <h3>Key Principle:</h3>
+            <p><strong>The direction the light ray travels defines the POSITIVE direction.</strong></p>
+            <p>• Distances measured in the direction of light propagation → <strong style="color: #22c55e;">Positive (+)</strong></p>
+            <p>• Distances measured opposite to light propagation → <strong style="color: #ef4444;">Negative (−)</strong></p>
+        </div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('rayDiagram');
+        const ctx = canvas.getContext('2d');
+        const playBtn = document.getElementById('playBtn');
+        const resetBtn = document.getElementById('resetBtn');
+        
+        let animationProgress = 0;
+        let isAnimating = false;
+        let animationId = null;
+        
+        // Animation stages
+        const STAGES = {
+            AXIS: 1,
+            MIRROR: 2,
+            OBJECT: 3,
+            RAY: 4,
+            ARROW: 5,
+            LABELS: 6,
+            COMPLETE: 7
+        };
+        
+        function drawAxis(progress) {
+            const startX = 50;
+            const endX = 750;
+            const y = 250;
+            const currentX = startX + (endX - startX) * Math.min(progress, 1);
+            
+            ctx.strokeStyle = '#333';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.moveTo(startX, y);
+            ctx.lineTo(currentX, y);
+            ctx.stroke();
+            
+            // Add tick marks
+            if (progress >= 1) {
+                ctx.lineWidth = 1;
+                for (let x = 100; x <= 700; x += 100) {
+                    ctx.beginPath();
+                    ctx.moveTo(x, y - 5);
+                    ctx.lineTo(x, y + 5);
+                    ctx.stroke();
+                }
+            }
+        }
+        
+        function drawMirror(progress) {
+            const x = 500;
+            const startY = 250;
+            const height = 200;
+            const currentHeight = height * Math.min(progress, 1);
+            
+            // Mirror line (vertical)
+            ctx.strokeStyle = '#1e293b';
+            ctx.lineWidth = 8;
+            ctx.beginPath();
+            ctx.moveTo(x, startY - currentHeight/2);
+            ctx.lineTo(x, startY + currentHeight/2);
+            ctx.stroke();
+            
+            // Reflective surface (gray shade on left side)
+            if (progress >= 0.5) {
+                ctx.fillStyle = 'rgba(100, 116, 139, 0.3)';
+                ctx.fillRect(x - 20, startY - currentHeight/2, 20, currentHeight);
+            }
+        }
+        
+        function drawObject(progress) {
+            const x = 200;
+            const baseY = 250;
+            const height = 120;
+            const currentHeight = height * Math.min(progress, 1);
+            
+            // Object (vertical arrow)
+            ctx.strokeStyle = '#8b5cf6';
+            ctx.lineWidth = 4;
+            ctx.beginPath();
+            ctx.moveTo(x, baseY);
+            ctx.lineTo(x, baseY - currentHeight);
+            ctx.stroke();
+            
+            // Arrow head at top
+            if (progress >= 0.7) {
+                ctx.fillStyle = '#8b5cf6';
+                ctx.beginPath();
+                ctx.moveTo(x, baseY - currentHeight);
+                ctx.lineTo(x - 8, baseY - currentHeight + 15);
+                ctx.lineTo(x + 8, baseY - currentHeight + 15);
+                ctx.closePath();
+                ctx.fill();
+            }
+            
+            // Base of object
+            if (progress >= 0.9) {
+                ctx.lineWidth = 2;
+                ctx.beginPath();
+                ctx.moveTo(x - 15, baseY);
+                ctx.lineTo(x + 15, baseY);
+                ctx.stroke();
+            }
+        }
+        
+        function drawRay(progress) {
+            const startX = 200;
+            const startY = 130; // Top of object
+            const endX = 500;
+            const endY = 250; // Center of mirror
+            
+            const currentX = startX + (endX - startX) * Math.min(progress, 1);
+            const currentY = startY + (endY - startY) * Math.min(progress, 1);
+            
+            // Ray line
+            ctx.strokeStyle = '#3b82f6';
+            ctx.lineWidth = 3;
+            ctx.setLineDash([]);
+            ctx.beginPath();
+            ctx.moveTo(startX, startY);
+            ctx.lineTo(currentX, currentY);
+            ctx.stroke();
+        }
+        
+        function drawArrowHead(progress) {
+            const x = 500;
+            const y = 250;
+            const scale = Math.min(progress, 1);
+            
+            // Arrow head pointing right (direction of travel)
+            ctx.fillStyle = '#3b82f6';
+            ctx.strokeStyle = '#3b82f6';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.moveTo(x, y);
+            ctx.lineTo(x - 20 * scale, y - 12 * scale);
+            ctx.lineTo(x - 20 * scale, y + 12 * scale);
+            ctx.closePath();
+            ctx.fill();
+            ctx.stroke();
+        }
+        
+        function drawLabels(progress) {
+            const alpha = Math.min(progress, 1);
+            
+            // Positive side label (right side)
+            ctx.globalAlpha = alpha;
+            ctx.fillStyle = '#22c55e';
+            ctx.font = 'bold 24px sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText('POSITIVE (+)', 625, 250);
+            
+            // Positive direction arrow
+            ctx.strokeStyle = '#22c55e';
+            ctx.fillStyle = '#22c55e';
+            ctx.lineWidth = 3;
+            ctx.beginPath();
+            ctx.moveTo(550, 270);
+            ctx.lineTo(700, 270);
+            ctx.stroke();
+            
+            // Arrow head
+            ctx.beginPath();
+            ctx.moveTo(700, 270);
+            ctx.lineTo(690, 265);
+            ctx.lineTo(690, 275);
+            ctx.closePath();
+            ctx.fill();
+            
+            // Negative side label (left side)
+            ctx.fillStyle = '#ef4444';
+            ctx.fillText('NEGATIVE (−)', 300, 250);
+            
+            // Negative direction arrow
+            ctx.strokeStyle = '#ef4444';
+            ctx.fillStyle = '#ef4444';
+            ctx.beginPath();
+            ctx.moveTo(450, 270);
+            ctx.lineTo(150, 270);
+            ctx.stroke();
+            
+            // Arrow head
+            ctx.beginPath();
+            ctx.moveTo(150, 270);
+            ctx.lineTo(160, 265);
+            ctx.lineTo(160, 275);
+            ctx.closePath();
+            ctx.fill();
+            
+            // Labels for components
+            ctx.font = '16px sans-serif';
+            ctx.fillStyle = '#666';
+            ctx.textAlign = 'center';
+            ctx.fillText('Object', 200, 410);
+            ctx.fillText('Mirror/Lens', 500, 410);
+            ctx.fillText('Optical Axis', 400, 230);
+            
+            // Light ray label
+            ctx.fillStyle = '#3b82f6';
+            ctx.fillText('Light Ray →', 320, 160);
+            
+            ctx.globalAlpha = 1;
+        }
+        
+        function drawFrame(t) {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            // Stage 1: Draw axis (0-1s)
+            if (t >= 0) {
+                const progress = Math.min((t - 0) / 1.0, 1);
+                drawAxis(progress);
+            }
+            
+            // Stage 2: Draw mirror (1-2s)
+            if (t >= 1) {
+                drawAxis(1);
+                const progress = Math.min((t - 1) / 1.0, 1);
+                drawMirror(progress);
+            }
+            
+            // Stage 3: Draw object (2-3s)
+            if (t >= 2) {
+                drawAxis(1);
+                drawMirror(1);
+                const progress = Math.min((t - 2) / 1.0, 1);
+                drawObject(progress);
+            }
+            
+            // Stage 4: Draw ray (3-4.5s)
+            if (t >= 3) {
+                drawAxis(1);
+                drawMirror(1);
+                drawObject(1);
+                const progress = Math.min((t - 3) / 1.5, 1);
+                drawRay(progress);
+            }
+            
+            // Stage 5: Draw arrow head (4.5-5s)
+            if (t >= 4.5) {
+                drawAxis(1);
+                drawMirror(1);
+                drawObject(1);
+                drawRay(1);
+                const progress = Math.min((t - 4.5) / 0.5, 1);
+                drawArrowHead(progress);
+            }
+            
+            // Stage 6: Draw labels (5-6.5s)
+            if (t >= 5) {
+                drawAxis(1);
+                drawMirror(1);
+                drawObject(1);
+                drawRay(1);
+                drawArrowHead(1);
+                const progress = Math.min((t - 5) / 1.5, 1);
+                drawLabels(progress);
+            }
+            
+            // Keep everything visible after animation
+            if (t >= 6.5) {
+                drawAxis(1);
+                drawMirror(1);
+                drawObject(1);
+                drawRay(1);
+                drawArrowHead(1);
+                drawLabels(1);
+            }
+        }
+        
+        function animate() {
+            if (!isAnimating) return;
+            
+            const deltaTime = 0.016; // ~60fps
+            animationProgress += deltaTime;
+            
+            drawFrame(animationProgress);
+            
+            if (animationProgress < 6.5) {
+                animationId = requestAnimationFrame(animate);
+            } else {
+                isAnimating = false;
+                playBtn.textContent = '↻ Replay';
+                playBtn.disabled = false;
+            }
+        }
+        
+        function startAnimation() {
+            if (isAnimating) return;
+            
+            animationProgress = 0;
+            isAnimating = true;
+            playBtn.disabled = true;
+            playBtn.textContent = '▶ Playing...';
+            animate();
+        }
+        
+        function reset() {
+            if (animationId) {
+                cancelAnimationFrame(animationId);
+            }
+            isAnimating = false;
+            animationProgress = 0;
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            playBtn.textContent = '▶ Play Animation';
+            playBtn.disabled = false;
+        }
+        
+        playBtn.addEventListener('click', startAnimation);
+        resetBtn.addEventListener('click', reset);
+        canvas.addEventListener('click', () => {
+            if (!isAnimating) {
+                startAnimation();
+            }
+        });
+        
+        // Draw initial state
+        reset();
+    </script>
+</body>
+</html>

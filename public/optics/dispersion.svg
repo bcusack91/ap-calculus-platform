@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" style="max-width: 100%; height: auto;">
+  <!-- Title -->
+  <text x="300" y="30" font-size="20" font-weight="bold" text-anchor="middle" fill="#667eea">Dispersion - White Light into Colors</text>
+  
+  <!-- Prism -->
+  <defs>
+    <linearGradient id="prismGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e0e7ff;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#c7d2fe;stop-opacity:0.6" />
+    </linearGradient>
+  </defs>
+  <polygon points="250,150 350,250 250,350" fill="url(#prismGradient)" stroke="#667eea" stroke-width="3"/>
+  
+  <!-- Incident white light -->
+  <defs>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#ffffff" stroke="#333" stroke-width="0.5"/>
+    </marker>
+  </defs>
+  <line x1="100" y1="250" x2="250" y2="250" stroke="#ffffff" stroke-width="6" marker-end="url(#arrow-white)" stroke-linecap="round"/>
+  <line x1="100" y1="250" x2="250" y2="250" stroke="#333" stroke-width="1" stroke-dasharray="none"/>
+  <text x="175" y="240" font-size="14" font-weight="bold" fill="#333" text-anchor="middle">White Light</text>
+  
+  <!-- Refracted colors - Red (least bent) -->
+  <defs>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#ef4444"/>
+    </marker>
+  </defs>
+  <line x1="350" y1="250" x2="520" y2="280" stroke="#ef4444" stroke-width="4" marker-end="url(#arrow-red)"/>
+  <text x="530" y="285" font-size="13" font-weight="bold" fill="#ef4444">Red</text>
+  
+  <!-- Orange -->
+  <defs>
+    <marker id="arrow-orange" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#f97316"/>
+    </marker>
+  </defs>
+  <line x1="350" y1="250" x2="510" y2="300" stroke="#f97316" stroke-width="4" marker-end="url(#arrow-orange)"/>
+  <text x="520" y="305" font-size="13" font-weight="bold" fill="#f97316">Orange</text>
+  
+  <!-- Yellow -->
+  <defs>
+    <marker id="arrow-yellow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#eab308"/>
+    </marker>
+  </defs>
+  <line x1="350" y1="250" x2="500" y2="320" stroke="#eab308" stroke-width="4" marker-end="url(#arrow-yellow)"/>
+  <text x="510" y="325" font-size="13" font-weight="bold" fill="#eab308">Yellow</text>
+  
+  <!-- Green -->
+  <defs>
+    <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#22c55e"/>
+    </marker>
+  </defs>
+  <line x1="350" y1="250" x2="490" y2="340" stroke="#22c55e" stroke-width="4" marker-end="url(#arrow-green)"/>
+  <text x="500" y="345" font-size="13" font-weight="bold" fill="#22c55e">Green</text>
+  
+  <!-- Blue -->
+  <defs>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <line x1="350" y1="250" x2="480" y2="360" stroke="#3b82f6" stroke-width="4" marker-end="url(#arrow-blue)"/>
+  <text x="490" y="365" font-size="13" font-weight="bold" fill="#3b82f6">Blue</text>
+  
+  <!-- Violet (most bent) -->
+  <defs>
+    <marker id="arrow-violet" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#8b5cf6"/>
+    </marker>
+  </defs>
+  <line x1="350" y1="250" x2="470" y2="380" stroke="#8b5cf6" stroke-width="4" marker-end="url(#arrow-violet)"/>
+  <text x="480" y="385" font-size="13" font-weight="bold" fill="#8b5cf6">Violet</text>
+  
+  <!-- Info box -->
+  <rect x="50" y="60" width="260" height="80" fill="#f0f4ff" stroke="#667eea" stroke-width="2" rx="8"/>
+  <text x="180" y="85" font-size="14" font-weight="bold" text-anchor="middle" fill="#667eea">Why does this happen?</text>
+  <text x="180" y="105" font-size="12" text-anchor="middle" fill="#555">Each color has a different</text>
+  <text x="180" y="122" font-size="12" text-anchor="middle" fill="#555">refractive index in glass:</text>
+  
+  <!-- Refractive indices -->
+  <text x="70" y="95" font-size="11" fill="#ef4444">n(red) ≈ 1.513</text>
+  <text x="70" y="110" font-size="11" fill="#8b5cf6">n(violet) ≈ 1.532</text>
+</svg>

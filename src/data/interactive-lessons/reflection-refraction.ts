@@ -25,12 +25,20 @@ In this lesson, we'll cover:
 ✅ **Positive direction** = Direction light is traveling (front of arrow →)
 ✅ **Negative direction** = Opposite to light travel (back of arrow ←)
 
+<div style="margin: 20px 0; text-align: center;">
+  <img src="/optics/sign-convention-diagram.svg" alt="Sign Convention Diagram" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
+</div>
+
 **Key Points:**
 - Object distance is usually **positive** (light travels toward the optical element)
 - Real images form where light actually goes (**positive** image distance)
 - Virtual images form where light appears to come from (**negative** image distance)
 
 We'll use this convention throughout the lesson!
+
+<div style="margin: 20px 0; padding: 15px; background: #f0f4ff; border-left: 4px solid #667eea; border-radius: 4px;">
+  <strong>💡 Interactive Demo:</strong> <a href="/optics/sign-convention-demo.html" target="_blank" style="color: #667eea; text-decoration: underline;">Click here to see an animated demonstration</a> of how we build a ray diagram with the sign convention!
+</div>
       `
     },
     {
@@ -96,6 +104,10 @@ $$\\theta_i = \\theta_r$$
 
 **Angle of incidence = Angle of reflection**
 
+<div style="margin: 20px 0; text-align: center;">
+  <img src="/optics/law-of-reflection.svg" alt="Law of Reflection Diagram" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
+</div>
+
 ## Important Details:
 
 **1. Angles measured from the NORMAL**
@@ -106,16 +118,6 @@ $$\\theta_i = \\theta_r$$
 - Incident ray, reflected ray, and normal are coplanar
 
 **3. Direction matters for sign convention**
-\`\`\`
-     Incident ray         Reflected ray
-          ↓                     ↗
-           \\    θᵢ   θᵣ    /
-            \\   |   |   /
-             \\  |   |  /
-              \\ | N | /
-    ___________\\|___|/___________
-              Surface
-\`\`\`
 
 ## Types of Reflection:
 
@@ -268,19 +270,13 @@ where:
 - $n_2$ = index of refraction of second medium
 - $\\theta_2$ = angle from normal in second medium
 
+<div style="margin: 20px 0; text-align: center;">
+  <img src="/optics/snells-law.svg" alt="Snell's Law Diagram" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
+</div>
+
 ## Critical Points:
 
 **1. Angles from the NORMAL (not the surface!)**
-
-\`\`\`
-        n₁
-    ────┼────  ← incident ray
-     θ₁ │
-────────┴────────  ← boundary
-        │ θ₂
-        ┼────  ← refracted ray
-        n₂
-\`\`\`
 
 **2. Light direction matters for sign convention**
 - Light travels from medium 1 → medium 2
@@ -457,6 +453,10 @@ There's a maximum incident angle called the **critical angle** ($\\theta_c$)
 
 **Beyond $\\theta_c$** ($\\theta_1 > \\theta_c$): Light **completely reflects** back!
 
+<div style="margin: 20px 0; text-align: center;">
+  <img src="/optics/total-internal-reflection.svg" alt="Total Internal Reflection Diagram" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
+</div>
+
 ## Finding the Critical Angle
 
 Start with Snell's Law at the critical condition:
@@ -485,15 +485,6 @@ When total internal reflection occurs:
 $$\\theta_c = \\sin^{-1}\\left(\\frac{1.0}{1.33}\\right) = \\sin^{-1}(0.752) = 48.8°$$
 
 **If light in water hits surface at > 48.8°**: 100% reflection!
-
-\`\`\`
-     Water (n = 1.33)
-        ↓  │  ↖  
-       48.8°│    (reflects back)
-────────────┴────────
-         Air (n = 1.0)
-      (no light escapes!)
-\`\`\`
       `
     },
     {
@@ -585,16 +576,11 @@ For most materials:
 
 $$n_{violet} > n_{blue} > n_{green} > n_{yellow} > n_{orange} > n_{red}$$
 
-## White Light Through a Prism
+<div style="margin: 20px 0; text-align: center;">
+  <img src="/optics/dispersion.svg" alt="Dispersion Diagram" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
+</div>
 
-\`\`\`
-                    │ Violet (most bent)
-                    │ Blue
-White light ──→ [Prism] │ Green
-                    │ Yellow
-                    │ Orange
-                    │ Red (least bent)
-\`\`\`
+## White Light Through a Prism
 
 The spectrum: **ROYGBIV**
 (Red, Orange, Yellow, Green, Blue, Indigo, Violet)

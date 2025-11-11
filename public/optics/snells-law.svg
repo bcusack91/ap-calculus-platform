@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" style="max-width: 100%; height: auto;">
+  <!-- Title -->
+  <text x="300" y="30" font-size="20" font-weight="bold" text-anchor="middle" fill="#667eea">Snell's Law - Refraction</text>
+  
+  <!-- Media labels -->
+  <text x="150" y="60" font-size="16" font-weight="bold" fill="#3b82f6">Air (n₁ = 1.0)</text>
+  <text x="150" y="350" font-size="16" font-weight="bold" fill="#06b6d4">Water (n₂ = 1.33)</text>
+  
+  <!-- Interface between media -->
+  <line x1="50" y1="200" x2="550" y2="200" stroke="#1e293b" stroke-width="4"/>
+  <rect x="50" y="200" width="500" height="150" fill="#06b6d4" opacity="0.2"/>
+  
+  <!-- Normal line (dashed) -->
+  <line x1="300" y1="50" x2="300" y2="370" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5,5"/>
+  <text x="310" y="220" font-size="14" fill="#64748b">Normal</text>
+  
+  <!-- Incident ray -->
+  <defs>
+    <marker id="arrowhead-incident-snell" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <line x1="180" y1="80" x2="300" y2="200" stroke="#3b82f6" stroke-width="3" marker-end="url(#arrowhead-incident-snell)"/>
+  <text x="220" y="130" font-size="14" fill="#3b82f6" font-weight="bold">Incident</text>
+  
+  <!-- Refracted ray -->
+  <defs>
+    <marker id="arrowhead-refracted" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#10b981"/>
+    </marker>
+  </defs>
+  <line x1="300" y1="200" x2="350" y2="330" stroke="#10b981" stroke-width="3" marker-end="url(#arrowhead-refracted)"/>
+  <text x="360" y="270" font-size="14" fill="#10b981" font-weight="bold">Refracted</text>
+  
+  <!-- Angle arcs -->
+  <path d="M 300 200 Q 280 160, 260 130" fill="none" stroke="#3b82f6" stroke-width="2"/>
+  <text x="250" y="160" font-size="16" fill="#3b82f6" font-weight="bold">θ₁</text>
+  
+  <path d="M 300 200 Q 310 240, 320 280" fill="none" stroke="#10b981" stroke-width="2"/>
+  <text x="325" y="250" font-size="16" fill="#10b981" font-weight="bold">θ₂</text>
+  
+  <!-- Snell's Law formula -->
+  <rect x="100" y="15" width="400" height="30" fill="#f0f4ff" stroke="#667eea" stroke-width="2" rx="8"/>
+  <text x="300" y="35" font-size="16" font-weight="bold" text-anchor="middle" fill="#667eea">n₁ sin(θ₁) = n₂ sin(θ₂)</text>
+  
+  <!-- Note about bending -->
+  <text x="430" y="130" font-size="12" fill="#555" font-style="italic">Light bends</text>
+  <text x="430" y="145" font-size="12" fill="#555" font-style="italic">toward normal</text>
+  <text x="430" y="160" font-size="12" fill="#555" font-style="italic">in denser medium</text>
+</svg>
