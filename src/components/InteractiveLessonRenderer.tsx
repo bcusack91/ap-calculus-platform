@@ -25,7 +25,8 @@ interface Section {
   problemType?: 'gcf' | 'gcf-identify' | 'difference-of-squares' | 'simple-trinomials' | 'complex-trinomials' | 'mixed'
   miniBossConfig?: {
     bossName: string
-    questionSequence: ('gcf-identify' | 'gcf-factor' | 'simple-diff-squares' | 'complex-diff-squares' | 'combined')[]
+    questionSequence: ('gcf-identify' | 'gcf-factor' | 'simple-diff-squares' | 'complex-diff-squares' | 'simple-trinomials' | 'complex-trinomials' | 'combined')[]
+    questionBankModule: 'factoring-part2-boss' | 'factoring-part3-boss' | 'factoring-part4-boss' | 'factoring-part5-boss' | 'factoring-part6-boss' // Which question bank to use
     aiAccuracy: number // 0-1
     aiResponseTime: number // milliseconds
   }
@@ -2000,8 +2001,10 @@ function MiniBossBattle({
       case 'gcf-factor':
         return 10000 // 10 seconds for GCF questions
       case 'simple-diff-squares':
-        return 15000 // 15 seconds for simple diff squares
+      case 'simple-trinomials':
+        return 15000 // 15 seconds for simple questions
       case 'complex-diff-squares':
+      case 'complex-trinomials':
       case 'combined':
         return 20000 // 20 seconds for complex questions
       default:
@@ -2065,8 +2068,9 @@ function MiniBossBattle({
     
     const questionType = questionTypes[currentQuestionIndex]
     
-    // Dynamically import questions
-    import('@/data/mini-boss-questions/factoring-part2-boss').then(module => {
+    // Dynamically import questions from the correct module
+    const modulePath = `@/data/mini-boss-questions/${config.questionBankModule}`
+    import(modulePath).then(module => {
       const question = module.getRandomMiniBossQuestion(questionType, usedQuestionIds)
       
       // Shuffle the options so correct answer isn't always first
@@ -2155,6 +2159,8 @@ function MiniBossBattle({
 
   // Victory Animation
   if (gameState === 'victory') {
+    const isUltimateBoss = config.bossName === 'The Factoring Grandmaster'
+    
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-yellow-400 via-orange-500 to-red-600">
         <div className="text-center animate-bounce-in">
@@ -2163,14 +2169,44 @@ function MiniBossBattle({
             VICTORY!
           </h1>
           <p className="text-4xl text-white mb-4">You defeated {config.bossName}!</p>
-          <p className="text-2xl text-yellow-200 mb-8">Part 3 Unlocked!</p>
-          <div className="text-6xl mb-8">⭐ ⭐ ⭐</div>
-          <button
-            onClick={onComplete}
-            className="px-12 py-4 bg-white hover:bg-gray-100 text-purple-700 font-bold text-2xl rounded-lg transform hover:scale-105 transition-all shadow-2xl"
-          >
-            Continue to Part 3
-          </button>
+          {isUltimateBoss ? (
+            <>
+              <p className="text-2xl text-yellow-200 mb-4">🎉 You've mastered factoring! 🎉</p>
+              <p className="text-xl text-yellow-100 mb-8">✨ Competitive Mode Unlocked! ✨</p>
+              <div className="text-6xl mb-8">⭐ ⭐ ⭐</div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <button
+                  onClick={onComplete}
+                  className="px-12 py-4 bg-white hover:bg-gray-100 text-purple-700 font-bold text-2xl rounded-lg transform hover:scale-105 transition-all shadow-2xl"
+                >
+                  Continue
+                </button>
+                <button
+                  onClick={() => {
+                    // Save completion and redirect to competitive mode
+                    onComplete()
+                    setTimeout(() => {
+                      window.location.href = '/competitive'
+                    }, 100)
+                  }}
+                  className="px-12 py-4 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold text-2xl rounded-lg transform hover:scale-105 transition-all shadow-2xl flex items-center gap-2"
+                >
+                  🎮 Enter Competitive Mode
+                </button>
+              </div>
+            </>
+          ) : (
+            <>
+              <p className="text-2xl text-yellow-200 mb-8">Next Part Unlocked!</p>
+              <div className="text-6xl mb-8">⭐ ⭐ ⭐</div>
+              <button
+                onClick={onComplete}
+                className="px-12 py-4 bg-white hover:bg-gray-100 text-purple-700 font-bold text-2xl rounded-lg transform hover:scale-105 transition-all shadow-2xl"
+              >
+                Continue
+              </button>
+            </>
+          )}
         </div>
       </div>
     )

@@ -178,6 +178,7 @@ Test your skills against the Factoring Guardian!
           'complex-diff-squares',
           'combined'
         ],
+        questionBankModule: 'factoring-part2-boss',
         aiAccuracy: 0.8,
         aiResponseTime: 20000 // 20 seconds
       }

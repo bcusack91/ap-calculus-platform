@@ -1,9 +1,9 @@
 // Mini-Boss Questions for Factoring Part 2
-// Question types: gcf-identify, gcf-factor, simple-diff-squares, complex-diff-squares, combined
+// Question types: gcf-identify, gcf-factor, simple-diff-squares, complex-diff-squares, simple-trinomials, complex-trinomials, combined
 
 export interface MiniBossQuestion {
   id: string
-  type: 'gcf-identify' | 'gcf-factor' | 'simple-diff-squares' | 'complex-diff-squares' | 'combined'
+  type: 'gcf-identify' | 'gcf-factor' | 'simple-diff-squares' | 'complex-diff-squares' | 'simple-trinomials' | 'complex-trinomials' | 'combined'
   question: string // LaTeX format
   correctAnswer: string
   options: {
