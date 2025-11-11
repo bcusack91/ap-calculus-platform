@@ -19,10 +19,16 @@ import katex from 'katex'
 
 interface Section {
   id: string
-  type: 'text' | 'input-boxes' | 'dropdown-select' | 'multiple-choice' | 'reference-angle-quiz' | 'factoring-practice'
+  type: 'text' | 'input-boxes' | 'dropdown-select' | 'multiple-choice' | 'reference-angle-quiz' | 'factoring-practice' | 'mini-boss'
   content: string
   exercise?: any
   problemType?: 'gcf' | 'gcf-identify' | 'difference-of-squares' | 'simple-trinomials' | 'complex-trinomials' | 'mixed'
+  miniBossConfig?: {
+    bossName: string
+    questionSequence: ('gcf-identify' | 'gcf-factor' | 'simple-diff-squares' | 'complex-diff-squares' | 'combined')[]
+    aiAccuracy: number // 0-1
+    aiResponseTime: number // milliseconds
+  }
 }
 
 interface InteractiveLessonRendererProps {
@@ -609,6 +615,16 @@ function SectionRenderer({
   if (section.type === 'factoring-practice') {
     return (
       <FactoringPractice 
+        section={section} 
+        onComplete={onComplete}
+        isComplete={isComplete}
+      />
+    )
+  }
+
+  if (section.type === 'mini-boss') {
+    return (
+      <MiniBossBattle 
         section={section} 
         onComplete={onComplete}
         isComplete={isComplete}
@@ -1946,6 +1962,346 @@ function FadeInText({ content, onComplete }: { content: string; onComplete?: () 
       >
         {content}
       </ReactMarkdown>
+    </div>
+  )
+}
+
+// Mini-Boss Battle Component
+function MiniBossBattle({ 
+  section, 
+  onComplete, 
+  isComplete 
+}: { 
+  section: Section
+  onComplete: () => void
+  isComplete: boolean
+}) {
+  const [gameState, setGameState] = useState<'entrance' | 'battle' | 'victory' | 'defeat'>('entrance')
+  const [playerScore, setPlayerScore] = useState<number>(0)
+  const [aiScore, setAiScore] = useState<number>(0)
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState<number>(0)
+  const [currentQuestion, setCurrentQuestion] = useState<any>(null)
+  const [selectedAnswer, setSelectedAnswer] = useState<string>('')
+  const [showFeedback, setShowFeedback] = useState<boolean>(false)
+  const [feedbackType, setFeedbackType] = useState<'correct' | 'incorrect'>('correct')
+  const [usedQuestionIds, setUsedQuestionIds] = useState<string[]>([])
+  const [aiThinking, setAiThinking] = useState<boolean>(false)
+  const [entranceAnimComplete, setEntranceAnimComplete] = useState<boolean>(false)
+
+  const config = section.miniBossConfig!
+  const questionTypes = config.questionSequence
+  const WIN_SCORE = 5
+
+  // Load first question after entrance animation
+  useEffect(() => {
+    if (gameState === 'battle' && !currentQuestion) {
+      loadNextQuestion()
+    }
+  }, [gameState])
+
+  // Start entrance animation
+  useEffect(() => {
+    if (gameState === 'entrance') {
+      const timer = setTimeout(() => {
+        setEntranceAnimComplete(true)
+      }, 3000) // 3 second entrance animation
+      return () => clearTimeout(timer)
+    }
+  }, [gameState])
+
+  const loadNextQuestion = () => {
+    if (currentQuestionIndex >= questionTypes.length) {
+      // Restart question sequence if needed
+      setCurrentQuestionIndex(0)
+    }
+    
+    const questionType = questionTypes[currentQuestionIndex]
+    
+    // Dynamically import questions
+    import('@/data/mini-boss-questions/factoring-part2-boss').then(module => {
+      const question = module.getRandomMiniBossQuestion(questionType, usedQuestionIds)
+      setCurrentQuestion(question)
+      setUsedQuestionIds(prev => [...prev, question.id])
+    })
+    
+    setSelectedAnswer('')
+    setShowFeedback(false)
+  }
+
+  const handleAnswerSelect = (optionLabel: string) => {
+    if (showFeedback || aiThinking) return
+    setSelectedAnswer(optionLabel)
+  }
+
+  const handleSubmit = () => {
+    if (!selectedAnswer || !currentQuestion || showFeedback) return
+
+    const selectedOption = currentQuestion.options.find((opt: any) => opt.label === selectedAnswer)
+    const isCorrect = selectedOption?.isCorrect
+
+    setShowFeedback(true)
+    setFeedbackType(isCorrect ? 'correct' : 'incorrect')
+
+    if (isCorrect) {
+      const newPlayerScore = playerScore + 1
+      setPlayerScore(newPlayerScore)
+
+      if (newPlayerScore >= WIN_SCORE) {
+        setTimeout(() => setGameState('victory'), 1500)
+        return
+      }
+    } else {
+      // Wrong answer - lose a point
+      setPlayerScore(Math.max(0, playerScore - 1))
+    }
+
+    // AI opponent's turn
+    setTimeout(() => {
+      setAiThinking(true)
+      
+      // AI responds after ~20 seconds
+      setTimeout(() => {
+        // AI has 80% accuracy
+        const aiCorrect = Math.random() < config.aiAccuracy
+        
+        if (aiCorrect) {
+          const newAiScore = aiScore + 1
+          setAiScore(newAiScore)
+          
+          if (newAiScore >= WIN_SCORE) {
+            setTimeout(() => setGameState('defeat'), 1500)
+            return
+          }
+        }
+        
+        setAiThinking(false)
+        
+        // Move to next question after brief delay
+        setTimeout(() => {
+          setCurrentQuestionIndex(prev => prev + 1)
+          loadNextQuestion()
+        }, 1500)
+      }, config.aiResponseTime)
+    }, 1500)
+  }
+
+  const startBattle = () => {
+    setGameState('battle')
+  }
+
+  // Entrance Animation
+  if (gameState === 'entrance') {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-purple-900 via-red-900 to-black">
+        <div className="text-center">
+          <div className={`text-9xl mb-8 transition-all duration-1000 ${entranceAnimComplete ? 'scale-100 opacity-100' : 'scale-0 opacity-0'}`}>
+            ⚔️
+          </div>
+          <h1 className={`text-6xl font-bold text-red-500 mb-4 transition-all duration-1000 delay-500 ${entranceAnimComplete ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+            MINI-BOSS CHALLENGE
+          </h1>
+          <h2 className={`text-4xl font-bold text-yellow-400 mb-8 transition-all duration-1000 delay-700 ${entranceAnimComplete ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+            {config.bossName}
+          </h2>
+          <div className={`text-2xl text-white mb-8 transition-all duration-1000 delay-1000 ${entranceAnimComplete ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+            <p className="mb-2">Race to 5 points!</p>
+            <p className="text-xl text-gray-300">Wrong answers cost you a point!</p>
+          </div>
+          {entranceAnimComplete && (
+            <button
+              onClick={startBattle}
+              className="px-12 py-4 bg-red-600 hover:bg-red-700 text-white font-bold text-2xl rounded-lg transform hover:scale-105 transition-all shadow-lg animate-pulse"
+            >
+              BEGIN BATTLE!
+            </button>
+          )}
+        </div>
+      </div>
+    )
+  }
+
+  // Victory Animation
+  if (gameState === 'victory') {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-yellow-400 via-orange-500 to-red-600">
+        <div className="text-center animate-bounce-in">
+          <div className="text-9xl mb-8 animate-spin-slow">🏆</div>
+          <h1 className="text-7xl font-bold text-white mb-6 drop-shadow-lg">
+            VICTORY!
+          </h1>
+          <p className="text-4xl text-white mb-4">You defeated {config.bossName}!</p>
+          <p className="text-2xl text-yellow-200 mb-8">Part 3 Unlocked!</p>
+          <div className="text-6xl mb-8">⭐ ⭐ ⭐</div>
+          <button
+            onClick={onComplete}
+            className="px-12 py-4 bg-white hover:bg-gray-100 text-purple-700 font-bold text-2xl rounded-lg transform hover:scale-105 transition-all shadow-2xl"
+          >
+            Continue to Part 3
+          </button>
+        </div>
+      </div>
+    )
+  }
+
+  // Defeat Screen (optional - player can retry)
+  if (gameState === 'defeat') {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-800 via-gray-900 to-black">
+        <div className="text-center">
+          <div className="text-9xl mb-8">💀</div>
+          <h1 className="text-6xl font-bold text-red-500 mb-6">
+            DEFEATED...
+          </h1>
+          <p className="text-3xl text-gray-300 mb-8">{config.bossName} wins!</p>
+          <button
+            onClick={() => {
+              setPlayerScore(0)
+              setAiScore(0)
+              setCurrentQuestionIndex(0)
+              setUsedQuestionIds([])
+              setGameState('entrance')
+              setEntranceAnimComplete(false)
+            }}
+            className="px-12 py-4 bg-red-600 hover:bg-red-700 text-white font-bold text-2xl rounded-lg transform hover:scale-105 transition-all"
+          >
+            Try Again
+          </button>
+        </div>
+      </div>
+    )
+  }
+
+  // Battle Screen
+  if (!currentQuestion) {
+    return <div className="text-center py-8">Loading question...</div>
+  }
+
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-purple-900 to-indigo-900 p-8">
+      {/* Score Display */}
+      <div className="max-w-4xl mx-auto mb-8">
+        <div className="grid grid-cols-2 gap-8">
+          {/* Player Score */}
+          <div className="bg-blue-600 rounded-lg p-6 text-center border-4 border-blue-400 shadow-xl">
+            <div className="text-2xl font-bold text-white mb-2">YOU</div>
+            <div className="text-6xl font-bold text-white">{playerScore}</div>
+            <div className="text-sm text-blue-200 mt-2">/ {WIN_SCORE} points</div>
+          </div>
+
+          {/* AI Score */}
+          <div className={`bg-red-600 rounded-lg p-6 text-center border-4 border-red-400 shadow-xl ${aiThinking ? 'animate-pulse' : ''}`}>
+            <div className="text-2xl font-bold text-white mb-2">{config.bossName}</div>
+            <div className="text-6xl font-bold text-white">{aiScore}</div>
+            <div className="text-sm text-red-200 mt-2">
+              {aiThinking ? '🤔 Thinking...' : `/ ${WIN_SCORE} points`}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Question */}
+      <div className="max-w-4xl mx-auto bg-white dark:bg-gray-800 rounded-xl shadow-2xl p-8 border-4 border-yellow-500">
+        <div className="mb-6">
+          <div className="inline-block bg-purple-100 dark:bg-purple-900/40 rounded-full px-6 py-2 mb-4">
+            <span className="text-lg font-bold text-purple-700 dark:text-purple-400">
+              Question {(currentQuestionIndex % questionTypes.length) + 1}
+            </span>
+          </div>
+        </div>
+
+        {/* Problem */}
+        <div className="text-center mb-8">
+          <p className="text-2xl mb-4 text-gray-700 dark:text-gray-300 font-semibold">
+            {currentQuestion.type === 'gcf-identify' && 'Identify the GCF:'}
+            {currentQuestion.type === 'gcf-factor' && 'Factor out the GCF:'}
+            {currentQuestion.type === 'simple-diff-squares' && 'Factor using difference of squares:'}
+            {currentQuestion.type === 'complex-diff-squares' && 'Factor using difference of squares:'}
+            {currentQuestion.type === 'combined' && 'Factor COMPLETELY:'}
+          </p>
+          <div 
+            className="text-5xl font-bold text-purple-700 dark:text-purple-400 mb-8 py-4"
+            dangerouslySetInnerHTML={{
+              __html: katex.renderToString(currentQuestion.question, {
+                throwOnError: false,
+                displayMode: true
+              })
+            }}
+          />
+        </div>
+
+        {/* Multiple Choice Options */}
+        <div className="grid grid-cols-1 gap-4 mb-8">
+          {currentQuestion.options.map((option: any) => (
+            <button
+              key={option.label}
+              onClick={() => handleAnswerSelect(option.label)}
+              disabled={showFeedback || aiThinking}
+              className={`p-6 rounded-lg border-4 text-left transition-all transform hover:scale-102 ${
+                selectedAnswer === option.label
+                  ? showFeedback
+                    ? option.isCorrect
+                      ? 'border-green-500 bg-green-100 dark:bg-green-900/30'
+                      : 'border-red-500 bg-red-100 dark:bg-red-900/30'
+                    : 'border-purple-500 bg-purple-100 dark:bg-purple-900/30'
+                  : showFeedback && option.isCorrect
+                    ? 'border-green-500 bg-green-50 dark:bg-green-900/20'
+                    : 'border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 hover:border-purple-400'
+              } ${showFeedback || aiThinking ? 'cursor-not-allowed' : 'cursor-pointer'}`}
+            >
+              <div className="flex items-center gap-4">
+                <span className="text-3xl font-bold text-purple-700 dark:text-purple-400">
+                  {option.label}
+                </span>
+                <div 
+                  className="text-2xl flex-1"
+                  dangerouslySetInnerHTML={{
+                    __html: katex.renderToString(option.value, {
+                      throwOnError: false,
+                      displayMode: false
+                    })
+                  }}
+                />
+                {showFeedback && selectedAnswer === option.label && !option.isCorrect && option.explanation && (
+                  <span className="text-sm text-red-600 dark:text-red-400 italic">
+                    {option.explanation}
+                  </span>
+                )}
+              </div>
+            </button>
+          ))}
+        </div>
+
+        {/* Submit Button */}
+        {!showFeedback && (
+          <div className="text-center">
+            <button
+              onClick={handleSubmit}
+              disabled={!selectedAnswer || aiThinking}
+              className="px-12 py-4 bg-purple-600 hover:bg-purple-700 disabled:bg-gray-400 text-white font-bold text-xl rounded-lg transition-all transform hover:scale-105 shadow-lg"
+            >
+              Submit Answer
+            </button>
+          </div>
+        )}
+
+        {/* Feedback */}
+        {showFeedback && (
+          <div className={`text-center text-2xl font-bold p-6 rounded-lg ${
+            feedbackType === 'correct' 
+              ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400' 
+              : 'bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400'
+          }`}>
+            {feedbackType === 'correct' ? '✅ Correct! +1 Point' : '❌ Incorrect! -1 Point'}
+          </div>
+        )}
+
+        {/* AI Thinking Indicator */}
+        {aiThinking && (
+          <div className="text-center mt-6 text-xl text-yellow-400 animate-pulse">
+            {config.bossName} is answering...
+          </div>
+        )}
+      </div>
     </div>
   )
 }

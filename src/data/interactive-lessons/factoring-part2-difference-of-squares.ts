@@ -157,9 +157,30 @@ Factor each expression using the difference of squares pattern.
 
 Remember: $a^2 - b^2 = (a + b)(a - b)$
 
-You need to answer **3 questions correctly in a row** to complete Part 2.
+You need to answer **3 questions correctly in a row** to proceed to the Mini-Boss Challenge!
       `,
       problemType: 'difference-of-squares'
+    },
+    {
+      id: 'mini-boss-battle',
+      type: 'mini-boss' as const,
+      content: `
+**Mini-Boss Challenge** ⚔️
+
+Test your skills against the Factoring Guardian!
+      `,
+      miniBossConfig: {
+        bossName: 'The Factoring Guardian',
+        questionSequence: [
+          'gcf-identify',
+          'gcf-factor',
+          'simple-diff-squares',
+          'complex-diff-squares',
+          'combined'
+        ],
+        aiAccuracy: 0.8,
+        aiResponseTime: 20000 // 20 seconds
+      }
     },
     {
       id: 'part2-complete',
@@ -167,7 +188,7 @@ You need to answer **3 questions correctly in a row** to complete Part 2.
       content: `
 **Part 2 Complete! Excellent Work!** 🎉
 
-You've mastered the difference of squares pattern!
+You've mastered the difference of squares pattern AND defeated the Factoring Guardian!
 
 **Remember:**
 - ✅ $a^2 - b^2 = (a + b)(a - b)$
