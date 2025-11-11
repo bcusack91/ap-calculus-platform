@@ -23,7 +23,7 @@ $$a^2 - b^2 = (a + b)(a - b)$$
       `
     },
     {
-      id: 'difference-of-squares-explanation',
+      id: 'difference-of-squares-technique',
       type: 'text' as const,
       content: `
 **How to Recognize the Difference of Squares** 🎯
@@ -36,27 +36,115 @@ $$a^2 - b^2 = (a + b)(a - b)$$
 **The Pattern:**
 $$a^2 - b^2 = (a + b)(a - b)$$
 
-**Examples:**
+**The Method:**
+1. Identify what's being squared in the first term → this is "$a$"
+2. Identify what's being squared in the second term → this is "$b$"
+3. Write two factors: $(a + b)(a - b)$
 
-**Example 1:** $x^2 - 25$
-- $x^2$ is a perfect square (square of $x$)
-- $25$ is a perfect square (square of $5$)
-- Factors: $(x + 5)(x - 5)$ ✅
+**Key Insight:** One factor has **addition**, one has **subtraction**!
 
-**Example 2:** $9x^2 - 16$
-- $9x^2$ is a perfect square (square of $3x$)
-- $16$ is a perfect square (square of $4$)
-- Factors: $(3x + 4)(3x - 4)$ ✅
+Let's see this in action with some examples...
+      `
+    },
+    {
+      id: 'difference-of-squares-example1',
+      type: 'text' as const,
+      content: `
+**Example 1: Basic Difference of Squares** 📝
 
-**Example 3:** $49x^4 - 64y^2$
-- $49x^4$ is a perfect square (square of $7x^2$)
-- $64y^2$ is a perfect square (square of $8y$)
-- Factors: $(7x^2 + 8y)(7x^2 - 8y)$ ✅
+**Problem:** Factor $x^2 - 25$
 
-**Common Mistake:** $x^2 + 25$ does **NOT** factor with real numbers (sum of squares doesn't factor!)
+**Step 1:** Check the three requirements
+- ✅ Two terms only: $x^2$ and $25$
+- ✅ Both are perfect squares: $x^2 = (x)^2$ and $25 = (5)^2$
+- ✅ Subtraction sign between them
+
+**Step 2:** Identify $a$ and $b$
+- $a = x$ (because $x^2 = (x)^2$)
+- $b = 5$ (because $25 = (5)^2$)
+
+**Step 3:** Apply the pattern $a^2 - b^2 = (a + b)(a - b)$
+$$x^2 - 25 = (x + 5)(x - 5)$$
+
+**Verification:** Let's check by expanding
+$$(x + 5)(x - 5) = x^2 - 5x + 5x - 25 = x^2 - 25$$ ✅
+      `
+    },
+    {
+      id: 'difference-of-squares-example2',
+      type: 'text' as const,
+      content: `
+**Example 2: Coefficients on Variables** 📝
+
+**Problem:** Factor $9x^2 - 16$
+
+**Step 1:** Check the three requirements
+- ✅ Two terms only: $9x^2$ and $16$
+- ✅ Both are perfect squares: $9x^2 = (3x)^2$ and $16 = (4)^2$
+- ✅ Subtraction sign between them
+
+**Step 2:** Identify $a$ and $b$
+- $a = 3x$ (because $9x^2 = (3x)^2$)
+- $b = 4$ (because $16 = (4)^2$)
+
+**Step 3:** Apply the pattern $a^2 - b^2 = (a + b)(a - b)$
+$$9x^2 - 16 = (3x + 4)(3x - 4)$$
+
+**Verification:** Let's check by expanding
+$$(3x + 4)(3x - 4) = 9x^2 - 12x + 12x - 16 = 9x^2 - 16$$ ✅
+      `
+    },
+    {
+      id: 'difference-of-squares-example3',
+      type: 'text' as const,
+      content: `
+**Example 3: Higher Powers and Multiple Variables** 📝
+
+**Problem:** Factor $49x^4 - 64y^2$
+
+**Step 1:** Check the three requirements
+- ✅ Two terms only: $49x^4$ and $64y^2$
+- ✅ Both are perfect squares: $49x^4 = (7x^2)^2$ and $64y^2 = (8y)^2$
+- ✅ Subtraction sign between them
+
+**Step 2:** Identify $a$ and $b$
+- $a = 7x^2$ (because $49x^4 = (7x^2)^2$)
+- $b = 8y$ (because $64y^2 = (8y)^2$)
+
+**Step 3:** Apply the pattern $a^2 - b^2 = (a + b)(a - b)$
+$$49x^4 - 64y^2 = (7x^2 + 8y)(7x^2 - 8y)$$
+
+**Verification:** Let's check by expanding
+$$(7x^2 + 8y)(7x^2 - 8y) = 49x^4 - 56x^2y + 56x^2y - 64y^2 = 49x^4 - 64y^2$$ ✅
+      `
+    },
+    {
+      id: 'difference-of-squares-common-mistake',
+      type: 'text' as const,
+      content: `
+**Common Mistake to Avoid!** ⚠️
+
+**IMPORTANT:** The difference of squares pattern **ONLY** works with **subtraction**!
+
+**Does NOT Factor (with real numbers):**
+$$x^2 + 25$$
+
+This is a **sum of squares**, not a difference. It cannot be factored using real numbers.
+
+**Why?** If we try to use a similar pattern:
+- $(x + 5)(x + 5) = x^2 + 10x + 25$ ❌ (has a middle term)
+- $(x - 5)(x - 5) = x^2 - 10x + 25$ ❌ (has a middle term)
+- $(x + 5)(x - 5) = x^2 - 25$ ❌ (this is difference, not sum!)
+
+**Rule:** $a^2 + b^2$ is **prime** (cannot be factored with real numbers)
 
 **Pro Tip:** Sometimes you need to factor out a GCF first to reveal a difference of squares!
-Example: $2x^2 - 50 = 2(x^2 - 25) = 2(x + 5)(x - 5)$
+
+**Example:** Factor $2x^2 - 50$
+1. Factor out the GCF first: $2(x^2 - 25)$
+2. Now apply difference of squares: $2(x + 5)(x - 5)$ ✅
+
+**Always check for a GCF before applying any factoring pattern!**
       `
     },
     {
