@@ -68,7 +68,7 @@ export default async function InteractivePage(props: InteractivePageProps) {
   }
 
   // Check if we have an interactive lesson for this topic
-  const hasInteractiveLesson = topic.slug === 'the-unit-circle' || topic.slug === 'factoring-algebra1'
+  const hasInteractiveLesson = topic.slug === 'the-unit-circle' || topic.slug === 'factoring-algebra1' || topic.slug === 'reflection-refraction'
 
   if (!hasInteractiveLesson) {
     // Redirect to regular topic page if no interactive lesson exists

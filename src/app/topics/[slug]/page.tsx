@@ -193,7 +193,7 @@ export default async function TopicPage(props: TopicPageProps) {
             </div>
 
             {/* Interactive Lesson Banner - Show only for topics that have it */}
-            {(topic.slug === 'the-unit-circle' || topic.slug === 'factoring-algebra1') && (
+            {(topic.slug === 'the-unit-circle' || topic.slug === 'factoring-algebra1' || topic.slug === 'reflection-refraction') && (
               <div className="mb-8 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-white p-6 rounded-lg shadow-lg border-2 border-yellow-400">
                 <div className="flex items-center justify-between">
                   <div>

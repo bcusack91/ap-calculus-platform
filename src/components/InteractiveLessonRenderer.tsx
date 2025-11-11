@@ -9,6 +9,7 @@ import { factoringPart3SimpleTrinomialsData } from '@/data/interactive-lessons/f
 import { factoringPart4ComplexTrinomialsData } from '@/data/interactive-lessons/factoring-part4-complex-trinomials'
 import { factoringPart5SpecialPatternsData } from '@/data/interactive-lessons/factoring-part5-special-patterns'
 import { factoringPart6MixedPracticeData } from '@/data/interactive-lessons/factoring-part6-mixed-practice'
+import { reflectionRefractionData } from '@/data/interactive-lessons/reflection-refraction'
 import ReactMarkdown from 'react-markdown'
 import remarkMath from 'remark-math'
 import remarkGfm from 'remark-gfm'
@@ -78,6 +79,9 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
         const baseLevel = (lessonPart - 1) * partWeight
         const progressInPart = (completedSections.size / sections.length) * partWeight
         masteryLevel = baseLevel + progressInPart
+      } else if (topicSlug === 'reflection-refraction') {
+        // Single-part lesson - mastery based on section completion
+        masteryLevel = completedSections.size / sections.length
       } else {
         // Unit circle has 4 parts (original logic)
         if (lessonPart === 4 && completedSections.size === sections.length) {
@@ -194,6 +198,8 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
        lessonPart === 4 ? factoringPart4ComplexTrinomialsData :
        lessonPart === 5 ? factoringPart5SpecialPatternsData :
        factoringPart6MixedPracticeData)
+    : topicSlug === 'reflection-refraction'
+    ? reflectionRefractionData
     : null
 
   if (!lessonData) {
