@@ -1987,10 +1987,58 @@ function MiniBossBattle({
   const [usedQuestionIds, setUsedQuestionIds] = useState<string[]>([])
   const [aiThinking, setAiThinking] = useState<boolean>(false)
   const [entranceAnimComplete, setEntranceAnimComplete] = useState<boolean>(false)
+  const [aiTimerActive, setAiTimerActive] = useState<boolean>(false)
 
   const config = section.miniBossConfig!
   const questionTypes = config.questionSequence
   const WIN_SCORE = 5
+
+  // Get AI response time based on question type
+  const getAiResponseTime = (questionType: string): number => {
+    switch (questionType) {
+      case 'gcf-identify':
+      case 'gcf-factor':
+        return 10000 // 10 seconds for GCF questions
+      case 'simple-diff-squares':
+        return 15000 // 15 seconds for simple diff squares
+      case 'complex-diff-squares':
+      case 'combined':
+        return 20000 // 20 seconds for complex questions
+      default:
+        return 15000
+    }
+  }
+
+  // AI answers independently on a timer
+  useEffect(() => {
+    if (gameState === 'battle' && currentQuestion && !aiTimerActive) {
+      setAiTimerActive(true)
+      setAiThinking(true)
+      
+      const questionType = questionTypes[currentQuestionIndex % questionTypes.length]
+      const aiTime = getAiResponseTime(questionType)
+      
+      const timer = setTimeout(() => {
+        // AI has 80% accuracy
+        const aiCorrect = Math.random() < config.aiAccuracy
+        
+        if (aiCorrect) {
+          setAiScore(prev => {
+            const newScore = prev + 1
+            if (newScore >= WIN_SCORE) {
+              setTimeout(() => setGameState('defeat'), 1500)
+            }
+            return newScore
+          })
+        }
+        
+        setAiThinking(false)
+        setAiTimerActive(false)
+      }, aiTime)
+      
+      return () => clearTimeout(timer)
+    }
+  }, [gameState, currentQuestion, aiTimerActive, currentQuestionIndex])
 
   // Load first question after entrance animation
   useEffect(() => {
@@ -2022,6 +2070,7 @@ function MiniBossBattle({
       const question = module.getRandomMiniBossQuestion(questionType, usedQuestionIds)
       setCurrentQuestion(question)
       setUsedQuestionIds(prev => [...prev, question.id])
+      setAiTimerActive(false) // Reset AI timer for new question
     })
     
     setSelectedAnswer('')
@@ -2029,7 +2078,7 @@ function MiniBossBattle({
   }
 
   const handleAnswerSelect = (optionLabel: string) => {
-    if (showFeedback || aiThinking) return
+    if (showFeedback) return
     setSelectedAnswer(optionLabel)
   }
 
@@ -2043,46 +2092,23 @@ function MiniBossBattle({
     setFeedbackType(isCorrect ? 'correct' : 'incorrect')
 
     if (isCorrect) {
-      const newPlayerScore = playerScore + 1
-      setPlayerScore(newPlayerScore)
-
-      if (newPlayerScore >= WIN_SCORE) {
-        setTimeout(() => setGameState('victory'), 1500)
-        return
-      }
+      setPlayerScore(prev => {
+        const newScore = prev + 1
+        if (newScore >= WIN_SCORE) {
+          setTimeout(() => setGameState('victory'), 1500)
+        }
+        return newScore
+      })
     } else {
       // Wrong answer - lose a point
-      setPlayerScore(Math.max(0, playerScore - 1))
+      setPlayerScore(prev => Math.max(0, prev - 1))
     }
 
-    // AI opponent's turn
+    // Move to next question after brief delay
     setTimeout(() => {
-      setAiThinking(true)
-      
-      // AI responds after ~20 seconds
-      setTimeout(() => {
-        // AI has 80% accuracy
-        const aiCorrect = Math.random() < config.aiAccuracy
-        
-        if (aiCorrect) {
-          const newAiScore = aiScore + 1
-          setAiScore(newAiScore)
-          
-          if (newAiScore >= WIN_SCORE) {
-            setTimeout(() => setGameState('defeat'), 1500)
-            return
-          }
-        }
-        
-        setAiThinking(false)
-        
-        // Move to next question after brief delay
-        setTimeout(() => {
-          setCurrentQuestionIndex(prev => prev + 1)
-          loadNextQuestion()
-        }, 1500)
-      }, config.aiResponseTime)
-    }, 1500)
+      setCurrentQuestionIndex(prev => prev + 1)
+      loadNextQuestion()
+    }, 2000)
   }
 
   const startBattle = () => {
@@ -2235,7 +2261,7 @@ function MiniBossBattle({
             <button
               key={option.label}
               onClick={() => handleAnswerSelect(option.label)}
-              disabled={showFeedback || aiThinking}
+              disabled={showFeedback}
               className={`p-6 rounded-lg border-4 text-left transition-all transform hover:scale-102 ${
                 selectedAnswer === option.label
                   ? showFeedback
@@ -2246,7 +2272,7 @@ function MiniBossBattle({
                   : showFeedback && option.isCorrect
                     ? 'border-green-500 bg-green-50 dark:bg-green-900/20'
                     : 'border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 hover:border-purple-400'
-              } ${showFeedback || aiThinking ? 'cursor-not-allowed' : 'cursor-pointer'}`}
+              } ${showFeedback ? 'cursor-not-allowed' : 'cursor-pointer'}`}
             >
               <div className="flex items-center gap-4">
                 <span className="text-3xl font-bold text-purple-700 dark:text-purple-400">
@@ -2276,7 +2302,7 @@ function MiniBossBattle({
           <div className="text-center">
             <button
               onClick={handleSubmit}
-              disabled={!selectedAnswer || aiThinking}
+              disabled={!selectedAnswer}
               className="px-12 py-4 bg-purple-600 hover:bg-purple-700 disabled:bg-gray-400 text-white font-bold text-xl rounded-lg transition-all transform hover:scale-105 shadow-lg"
             >
               Submit Answer
