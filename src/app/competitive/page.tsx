@@ -121,6 +121,10 @@ export default function CompetitivePage() {
       if (data.status === 'not_in_queue') {
         setInQueue(false)
         setQueueStatus(null)
+      } else if (data.status === 'matched') {
+        // Match found! Redirect to the match
+        setInQueue(false)
+        router.push(`/competitive/match/${data.matchId}`)
       } else {
         setQueueStatus(data)
       }

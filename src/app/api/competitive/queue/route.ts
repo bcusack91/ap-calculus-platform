@@ -11,6 +11,9 @@ const matchmakingQueue: Map<string, {
   joinedAt: number
 }> = new Map()
 
+// Store matches that have been created but players haven't been notified yet
+const pendingMatches: Map<string, string> = new Map() // userId -> matchId
+
 /**
  * Join the matchmaking queue
  * POST /api/competitive/queue
@@ -81,6 +84,10 @@ export async function POST(req: NextRequest) {
       // Remove both players from queue
       matchmakingQueue.delete(match.player1Id)
       matchmakingQueue.delete(match.player2Id)
+
+      // Store match for both players so they can retrieve it
+      pendingMatches.set(match.player1Id, competitiveMatch.id)
+      pendingMatches.set(match.player2Id, competitiveMatch.id)
 
       return NextResponse.json({
         status: 'matched',
@@ -159,6 +166,17 @@ export async function GET(req: NextRequest) {
 
     if (!user) {
       return NextResponse.json({ error: 'User not found' }, { status: 404 })
+    }
+
+    // Check if user has a pending match
+    const pendingMatchId = pendingMatches.get(user.id)
+    if (pendingMatchId) {
+      // Clear the pending match and return it
+      pendingMatches.delete(user.id)
+      return NextResponse.json({
+        status: 'matched',
+        matchId: pendingMatchId
+      })
     }
 
     const queueEntry = matchmakingQueue.get(user.id)
