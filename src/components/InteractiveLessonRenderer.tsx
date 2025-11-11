@@ -250,7 +250,7 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
     }
     
     // Special case: Part 2 Section 6 (last section) - enter practice mode instead of advancing
-    if (lessonPart === 2 && currentSectionIndex === sections.length - 1) {
+    if (topicSlug === 'the-unit-circle' && lessonPart === 2 && currentSectionIndex === sections.length - 1) {
       setShowPracticeMode(true)
       return
     }
@@ -259,7 +259,40 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
       setCurrentSectionIndex(currentSectionIndex + 1)
       window.scrollTo({ top: 0, behavior: 'smooth' })
     } else {
-      // On final section, advance to next part or complete
+      // On final section, behavior depends on lesson type
+      
+      // Single-part lessons (like reflection-refraction)
+      if (topicSlug === 'reflection-refraction') {
+        // Mark all sections complete and save progress
+        const finalSave = async () => {
+          if (session?.user) {
+            try {
+              const allSections = new Set(sections.map((_, i) => i))
+              setCompletedSections(allSections)
+              
+              await fetch('/api/progress/save', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                  topicSlug,
+                  lessonPart: 1,
+                  completedSections: Array.from(allSections),
+                  masteryLevel: 1.0,
+                  timeSpent: 0,
+                }),
+              })
+            } catch (error) {
+              console.error('Failed to save final progress:', error)
+            }
+          }
+        }
+        finalSave()
+        // Just mark as complete, don't navigate anywhere
+        setCompletedSections(new Set(sections.map((_, i) => i)))
+        return
+      }
+      
+      // Multi-part lesson navigation (unit-circle, factoring-algebra1)
       if (lessonPart === 1) {
         // Move to part 2 after completing part 1
         setUnlockedParts(prev => new Set([...prev, 2])) // Unlock Part 2
@@ -274,7 +307,7 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
         setCurrentSectionIndex(0)
         setCompletedSections(new Set())
         window.scrollTo({ top: 0, behavior: 'smooth' })
-      } else if (lessonPart === 4) {
+      } else if (lessonPart === 4 && topicSlug === 'the-unit-circle') {
         // On final section of part 4, save progress then go to competitive mode
         const finalSave = async () => {
           if (session?.user) {
@@ -540,19 +573,28 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
         <button
           onClick={handleNext}
           disabled={
-            (currentSectionIndex === sections.length - 1 && lessonPart !== 1 && lessonPart !== 2 && lessonPart !== 3 && lessonPart !== 4) || 
+            (currentSectionIndex === sections.length - 1 && topicSlug === 'reflection-refraction') || 
+            (currentSectionIndex === sections.length - 1 && lessonPart !== 1 && lessonPart !== 2 && lessonPart !== 3 && lessonPart !== 4 && topicSlug !== 'reflection-refraction') || 
             !canProceedToNext
           }
           className="px-6 py-3 rounded-lg font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700"
         >
-          {currentSectionIndex === sections.length - 1 && lessonPart === 1
+          {topicSlug === 'reflection-refraction' && currentSectionIndex === sections.length - 1
+            ? '✅ Lesson Complete!'
+            : currentSectionIndex === sections.length - 1 && lessonPart === 1 && topicSlug === 'the-unit-circle'
             ? 'On to Part 2 →'
-            : currentSectionIndex === sections.length - 1 && lessonPart === 2
+            : currentSectionIndex === sections.length - 1 && lessonPart === 2 && topicSlug === 'the-unit-circle'
             ? '🎯 Practice Independently →'
-            : currentSectionIndex === sections.length - 1 && lessonPart === 3 
+            : currentSectionIndex === sections.length - 1 && lessonPart === 3 && topicSlug === 'the-unit-circle'
             ? 'Continue to Part 4 →' 
-            : currentSectionIndex === sections.length - 1 && lessonPart === 4
+            : currentSectionIndex === sections.length - 1 && lessonPart === 4 && topicSlug === 'the-unit-circle'
             ? '🎮 Enter Competitive Mode →'
+            : currentSectionIndex === sections.length - 1 && lessonPart === 1 && topicSlug === 'factoring-algebra1'
+            ? 'On to Part 2 →'
+            : currentSectionIndex === sections.length - 1 && lessonPart === 6 && topicSlug === 'factoring-algebra1'
+            ? '✅ Lesson Complete!'
+            : currentSectionIndex === sections.length - 1 && topicSlug === 'factoring-algebra1'
+            ? 'Continue to Next Part →'
             : 'Next →'}
         </button>
       </div>
