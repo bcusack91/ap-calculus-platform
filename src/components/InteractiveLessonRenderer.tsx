@@ -19,6 +19,7 @@ import ReactMarkdown from 'react-markdown'
 import remarkMath from 'remark-math'
 import remarkGfm from 'remark-gfm'
 import rehypeKatex from 'rehype-katex'
+import rehypeRaw from 'rehype-raw'
 import { useSearchParams, useRouter } from 'next/navigation'
 import { useSession } from 'next-auth/react'
 import katex from 'katex'
@@ -2026,7 +2027,7 @@ function FadeInText({ content, onComplete }: { content: string; onComplete?: () 
               <ReactMarkdown
                 key={index}
                 remarkPlugins={[remarkMath, remarkGfm]}
-                rehypePlugins={[rehypeKatex]}
+                rehypePlugins={[rehypeKatex, rehypeRaw]}
                 components={{
                   p: ({ children }) => <p className="text-xl leading-relaxed mb-4">{children}</p>,
                   strong: ({ children }) => <strong className="text-2xl font-bold text-purple-700 dark:text-purple-400">{children}</strong>,
@@ -2055,7 +2056,7 @@ function FadeInText({ content, onComplete }: { content: string; onComplete?: () 
       <div className="animate-fade-in prose prose-lg max-w-none">
         <ReactMarkdown
           remarkPlugins={[remarkMath, remarkGfm]}
-          rehypePlugins={[rehypeKatex]}
+          rehypePlugins={[rehypeKatex, rehypeRaw]}
           components={{
             p: ({ children }) => <p className="text-xl leading-relaxed mb-4">{children}</p>,
             strong: ({ children }) => <strong className="text-2xl font-bold text-purple-700 dark:text-purple-400">{children}</strong>,
