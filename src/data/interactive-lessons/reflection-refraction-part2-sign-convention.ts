@@ -2,12 +2,33 @@ export const reflectionRefractionPart2Data = {
   topicSlug: 'reflection-refraction',
   sections: [
     {
-      id: 'sign-convention-explained',
+      id: 'sign-convention-visual',
       type: 'text' as const,
       content: `
 **Understanding the Sign Convention** 📐
 
-Let's establish our coordinate system clearly:
+Let's establish our coordinate system with a visual demonstration!
+
+## Interactive Animation
+
+<iframe src="/optics/sign-convention-animation.html" width="100%" height="800" frameborder="0" style="border-radius: 10px; margin: 20px 0;"></iframe>
+
+## The Core Concept
+
+![Sign Convention Diagram](/optics/sign-convention-comprehensive.svg)
+
+The Cartesian sign convention is simple once you understand the key principle:
+
+**The direction light travels DEFINES the positive direction** →
+      `
+    },
+    {
+      id: 'sign-convention-explained',
+      type: 'text' as const,
+      content: `
+**Sign Convention Rules** 📏
+
+Now that you've seen it in action, let's formalize the rules:
 
 ## The Cartesian Sign Convention
 
@@ -17,18 +38,6 @@ In optics, we use a coordinate system where:
 
 ✅ **Positive direction** = Direction light is traveling (front of arrow →)
 ✅ **Negative direction** = Opposite to light travel (back of arrow ←)
-
-## The Light Ray Defines Our Axes
-
-Imagine light traveling from an object toward a mirror or lens:
-
-\`\`\`
-Object ----→ [Optical Element] ----→
-         light direction (POSITIVE)
-\`\`\`
-
-**Positive (+) direction**: The way light is traveling (→)
-**Negative (−) direction**: Opposite to light travel (←)
 
 ## What This Means for Measurements:
 
@@ -45,7 +54,7 @@ Object ----→ [Optical Element] ----→
 - **Positive**: Converging element (concave mirror, convex lens)
 - **Negative**: Diverging element (convex mirror, concave lens)
 
-## Visual Guide:
+## Visual Summary:
 
 \`\`\`
         Negative ← | → Positive

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Convention Animation</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 900px;
+        }
+        h1 {
+            text-align: center;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        canvas {
+            display: block;
+            margin: 0 auto;
+            border: 2px solid #667eea;
+            border-radius: 10px;
+            background: #f8f9fa;
+        }
+        .controls {
+            margin-top: 30px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        button {
+            padding: 12px 24px;
+            font-size: 16px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+        button:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+        button:active {
+            transform: translateY(0);
+        }
+        .info-box {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f0f4ff;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+        .info-box h3 {
+            margin-top: 0;
+            color: #667eea;
+        }
+        .legend {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .color-box {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔆 Sign Convention Animation</h1>
+        <p class="subtitle">Watch how light direction defines positive and negative!</p>
+        
+        <canvas id="canvas" width="800" height="500"></canvas>
+        
+        <div class="controls">
+            <button onclick="showRealImage()">📍 Real Image</button>
+            <button onclick="showVirtualImage()">👻 Virtual Image</button>
+            <button onclick="showObjectMoving()">🎯 Moving Object</button>
+            <button onclick="reset()">🔄 Reset</button>
+        </div>
+        
+        <div class="info-box">
+            <h3>Current Scenario</h3>
+            <p id="description">Click a button above to see different scenarios!</p>
+            <div class="legend">
+                <div class="legend-item">
+                    <div class="color-box" style="background: #ff6b6b;"></div>
+                    <span>Light Ray (defines + direction)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="color-box" style="background: #4ecdc4;"></div>
+                    <span>Positive Region</span>
+                </div>
+                <div class="legend-item">
+                    <div class="color-box" style="background: #ffbe0b;"></div>
+                    <span>Negative Region</span>
+                </div>
+                <div class="legend-item">
+                    <div class="color-box" style="background: #a8dadc;"></div>
+                    <span>Mirror/Lens</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        let animationFrame;
+        let currentAnimation = null;
+
+        // Animation state
+        let lightPos = 0;
+        let objectPos = -200;
+        let imagePos = 200;
+        let showObject = true;
+        let showImage = false;
+        let imageType = 'real';
+
+        function clearCanvas() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+
+        function drawBackground() {
+            // Draw negative region (left)
+            ctx.fillStyle = '#fff3cd';
+            ctx.fillRect(0, 0, 400, canvas.height);
+            
+            // Draw positive region (right)
+            ctx.fillStyle = '#d1ecf1';
+            ctx.fillRect(400, 0, 400, canvas.height);
+            
+            // Draw mirror/lens at center
+            ctx.fillStyle = '#a8dadc';
+            ctx.fillRect(395, 0, 10, canvas.height);
+            
+            // Draw axis
+            ctx.strokeStyle = '#333';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.moveTo(0, canvas.height / 2);
+            ctx.lineTo(canvas.width, canvas.height / 2);
+            ctx.stroke();
+            
+            // Draw labels
+            ctx.fillStyle = '#333';
+            ctx.font = 'bold 18px Arial';
+            ctx.textAlign = 'center';
+            ctx.fillText('NEGATIVE (−)', 200, 30);
+            ctx.fillText('POSITIVE (+)', 600, 30);
+            
+            ctx.fillText('Virtual Images', 200, canvas.height - 20);
+            ctx.fillText('Real Images', 600, canvas.height - 20);
+            
+            // Draw mirror label
+            ctx.save();
+            ctx.translate(400, canvas.height / 2);
+            ctx.rotate(-Math.PI / 2);
+            ctx.fillText('Mirror/Lens', 0, -15);
+            ctx.restore();
+        }
+
+        function drawArrow(fromX, fromY, toX, toY, color, label) {
+            ctx.strokeStyle = color;
+            ctx.fillStyle = color;
+            ctx.lineWidth = 3;
+            
+            // Draw line
+            ctx.beginPath();
+            ctx.moveTo(fromX, fromY);
+            ctx.lineTo(toX, toY);
+            ctx.stroke();
+            
+            // Draw arrowhead
+            const angle = Math.atan2(toY - fromY, toX - fromX);
+            const arrowSize = 15;
+            ctx.beginPath();
+            ctx.moveTo(toX, toY);
+            ctx.lineTo(
+                toX - arrowSize * Math.cos(angle - Math.PI / 6),
+                toY - arrowSize * Math.sin(angle - Math.PI / 6)
+            );
+            ctx.lineTo(
+                toX - arrowSize * Math.cos(angle + Math.PI / 6),
+                toY - arrowSize * Math.sin(angle + Math.PI / 6)
+            );
+            ctx.closePath();
+            ctx.fill();
+            
+            // Draw label
+            if (label) {
+                ctx.font = 'bold 14px Arial';
+                ctx.fillText(label, (fromX + toX) / 2, fromY - 10);
+            }
+        }
+
+        function drawObject(x, distance) {
+            const centerY = canvas.height / 2;
+            const screenX = 400 + x;
+            
+            // Draw object (candle)
+            ctx.fillStyle = '#ff6b6b';
+            ctx.fillRect(screenX - 10, centerY - 50, 20, 50);
+            
+            // Draw flame
+            ctx.fillStyle = '#ffd93d';
+            ctx.beginPath();
+            ctx.arc(screenX, centerY - 55, 8, 0, Math.PI * 2);
+            ctx.fill();
+            
+            // Draw label
+            ctx.fillStyle = '#333';
+            ctx.font = 'bold 14px Arial';
+            ctx.textAlign = 'center';
+            ctx.fillText('Object', screenX, centerY + 80);
+            ctx.fillText(`d₀ = ${distance > 0 ? '+' : ''}${distance.toFixed(0)} cm`, screenX, centerY + 100);
+        }
+
+        function drawImage(x, distance, type) {
+            const centerY = canvas.height / 2;
+            const screenX = 400 + x;
+            
+            if (type === 'virtual') {
+                // Draw virtual image (dashed)
+                ctx.setLineDash([5, 5]);
+                ctx.strokeStyle = '#95a5a6';
+                ctx.lineWidth = 2;
+                ctx.strokeRect(screenX - 10, centerY - 50, 20, 50);
+                ctx.setLineDash([]);
+                
+                ctx.fillStyle = '#95a5a6';
+            } else {
+                // Draw real image (solid)
+                ctx.fillStyle = '#4ecdc4';
+                ctx.fillRect(screenX - 10, centerY - 50, 20, 50);
+            }
+            
+            // Draw top
+            ctx.beginPath();
+            ctx.arc(screenX, centerY - 55, 8, 0, Math.PI * 2);
+            ctx.fill();
+            
+            // Draw label
+            ctx.fillStyle = '#333';
+            ctx.font = 'bold 14px Arial';
+            ctx.textAlign = 'center';
+            ctx.fillText(type === 'virtual' ? 'Virtual Image' : 'Real Image', screenX, centerY + 80);
+            ctx.fillText(`dᵢ = ${distance > 0 ? '+' : ''}${distance.toFixed(0)} cm`, screenX, centerY + 100);
+        }
+
+        function drawLightRay(animated = false) {
+            const centerY = canvas.height / 2;
+            const startX = 400 + objectPos;
+            const endX = animated ? 400 + lightPos : 400;
+            
+            drawArrow(startX, centerY, endX, centerY, '#ff6b6b', '→ Light Direction (+)');
+        }
+
+        function showRealImage() {
+            if (animationFrame) cancelAnimationFrame(animationFrame);
+            currentAnimation = 'real';
+            objectPos = -200;
+            imagePos = 200;
+            imageType = 'real';
+            showObject = true;
+            showImage = false;
+            lightPos = objectPos;
+            
+            document.getElementById('description').innerHTML = `
+                <strong>Real Image Example:</strong><br>
+                • Object at d₀ = -200 cm (negative, left of mirror)<br>
+                • Light travels LEFT → RIGHT (defines + direction)<br>
+                • Real image forms at dᵢ = +200 cm (positive, where light converges)<br>
+                • Positive image distance means light ACTUALLY reaches there!
+            `;
+            
+            animate();
+        }
+
+        function showVirtualImage() {
+            if (animationFrame) cancelAnimationFrame(animationFrame);
+            currentAnimation = 'virtual';
+            objectPos = -150;
+            imagePos = -150;
+            imageType = 'virtual';
+            showObject = true;
+            showImage = false;
+            lightPos = objectPos;
+            
+            document.getElementById('description').innerHTML = `
+                <strong>Virtual Image Example (Plane Mirror):</strong><br>
+                • Object at d₀ = -150 cm (in front of mirror)<br>
+                • Light travels LEFT → RIGHT (defines + direction)<br>
+                • Virtual image at dᵢ = -150 cm (NEGATIVE - behind mirror)<br>
+                • Negative image distance means light APPEARS to come from there!
+            `;
+            
+            animate();
+        }
+
+        function showObjectMoving() {
+            if (animationFrame) cancelAnimationFrame(animationFrame);
+            currentAnimation = 'moving';
+            objectPos = -300;
+            imagePos = -300;
+            imageType = 'virtual';
+            showObject = true;
+            showImage = true;
+            lightPos = objectPos;
+            
+            document.getElementById('description').innerHTML = `
+                <strong>Moving Object (Plane Mirror):</strong><br>
+                • Watch how the object and virtual image stay synchronized<br>
+                • Both have same magnitude but image is negative (behind mirror)<br>
+                • Light always travels in the POSITIVE direction →
+            `;
+            
+            animateMoving();
+        }
+
+        function animate() {
+            clearCanvas();
+            drawBackground();
+            
+            if (showObject) {
+                drawObject(objectPos, objectPos);
+            }
+            
+            drawLightRay(true);
+            
+            // Animate light ray
+            if (lightPos < 0) {
+                lightPos += 3;
+                animationFrame = requestAnimationFrame(animate);
+            } else {
+                // Light reached mirror, show image
+                showImage = true;
+                clearCanvas();
+                drawBackground();
+                drawObject(objectPos, objectPos);
+                drawLightRay(false);
+                
+                if (imageType === 'real') {
+                    // Continue animation to show convergence
+                    if (lightPos < imagePos) {
+                        drawArrow(400, canvas.height / 2, 400 + lightPos, canvas.height / 2, '#ff6b6b', null);
+                        lightPos += 3;
+                        animationFrame = requestAnimationFrame(animate);
+                    } else {
+                        drawImage(imagePos, imagePos, imageType);
+                    }
+                } else {
+                    drawImage(imagePos, imagePos, imageType);
+                    
+                    // Draw virtual rays (dashed lines going backward)
+                    ctx.setLineDash([5, 5]);
+                    ctx.strokeStyle = '#95a5a6';
+                    ctx.lineWidth = 2;
+                    drawArrow(400, canvas.height / 2 - 30, 400 + imagePos, canvas.height / 2 - 30, '#95a5a6', null);
+                    drawArrow(400, canvas.height / 2 + 30, 400 + imagePos, canvas.height / 2 + 30, '#95a5a6', null);
+                    ctx.setLineDash([]);
+                }
+            }
+        }
+
+        function animateMoving() {
+            clearCanvas();
+            drawBackground();
+            
+            drawObject(objectPos, objectPos);
+            drawImage(imagePos, imagePos, 'virtual');
+            drawLightRay(false);
+            
+            // Draw virtual rays
+            ctx.setLineDash([5, 5]);
+            ctx.strokeStyle = '#95a5a6';
+            ctx.lineWidth = 2;
+            drawArrow(400, canvas.height / 2 - 30, 400 + imagePos, canvas.height / 2 - 30, '#95a5a6', null);
+            drawArrow(400, canvas.height / 2 + 30, 400 + imagePos, canvas.height / 2 + 30, '#95a5a6', null);
+            ctx.setLineDash([]);
+            
+            // Move object
+            objectPos += 2;
+            imagePos = objectPos;
+            
+            if (objectPos < -100) {
+                animationFrame = requestAnimationFrame(animateMoving);
+            } else {
+                objectPos = -300;
+                imagePos = -300;
+                animationFrame = requestAnimationFrame(animateMoving);
+            }
+        }
+
+        function reset() {
+            if (animationFrame) cancelAnimationFrame(animationFrame);
+            clearCanvas();
+            drawBackground();
+            document.getElementById('description').innerHTML = 'Click a button above to see different scenarios!';
+        }
+
+        // Initial state
+        reset();
+    </script>
+</body>
+</html>
