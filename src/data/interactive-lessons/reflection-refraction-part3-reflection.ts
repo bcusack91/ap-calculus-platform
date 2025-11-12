@@ -113,6 +113,52 @@ $$d_i = -30 \\text{ cm}$$
 
 **Key Insight**: The negative sign tells us the image is virtual!
       `
+    },
+    {
+      id: 'reflection-quiz',
+      type: 'multiple-choice' as const,
+      content: `
+**Quick Check: Reflection** ✓
+
+Apply what you've learned!
+      `,
+      exercise: {
+        questions: [
+          {
+            question: "A light ray hits a mirror at 25° from the normal. What is the angle of the reflected ray from the normal?",
+            options: [
+              "25°",
+              "65°",
+              "50°",
+              "90°"
+            ],
+            correctAnswer: 0,
+            explanation: "By the law of reflection, θᵢ = θᵣ. The angle of reflection equals the angle of incidence, both measured from the normal. So the reflected ray is also 25° from the normal."
+          },
+          {
+            question: "An object is 15 cm in front of a plane mirror. Where is the image located?",
+            options: [
+              "15 cm in front of the mirror",
+              "15 cm behind the mirror",
+              "30 cm behind the mirror",
+              "7.5 cm behind the mirror"
+            ],
+            correctAnswer: 1,
+            explanation: "For a plane mirror, the image appears the same distance behind the mirror as the object is in front. Since dₒ = +15 cm, then dᵢ = -15 cm (negative because it's behind the mirror, making it virtual)."
+          },
+          {
+            question: "In which type of reflection do parallel incident rays produce parallel reflected rays?",
+            options: [
+              "Diffuse reflection",
+              "Specular reflection",
+              "Total internal reflection",
+              "Both specular and diffuse"
+            ],
+            correctAnswer: 1,
+            explanation: "Specular reflection occurs on smooth surfaces where parallel incident rays remain parallel after reflection. Diffuse reflection scatters light in many directions."
+          }
+        ]
+      }
     }
   ]
 }

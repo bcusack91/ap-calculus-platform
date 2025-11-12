@@ -57,6 +57,63 @@ $$\\frac{c}{n} = \\frac{\\lambda_0}{n} \\cdot f$$
 
 This confirms $v$ and $\\lambda$ both decrease by factor $n$!
       `
+    },
+    {
+      id: 'index-quiz',
+      type: 'multiple-choice' as const,
+      content: `
+**Practice: Index of Refraction** ✓
+
+Calculate and apply!
+      `,
+      exercise: {
+        questions: [
+          {
+            question: "Light travels at 2.0 × 10⁸ m/s in a material. What is the index of refraction? (c = 3.0 × 10⁸ m/s)",
+            options: [
+              "n = 1.5",
+              "n = 0.67",
+              "n = 2.0",
+              "n = 6.0"
+            ],
+            correctAnswer: 0,
+            explanation: "Using n = c/v: n = (3.0 × 10⁸)/(2.0 × 10⁸) = 1.5. This is typical for glass!"
+          },
+          {
+            question: "When light enters water (n = 1.33) from air, what happens to its speed?",
+            options: [
+              "Speed increases by 33%",
+              "Speed decreases by about 25%",
+              "Speed stays the same",
+              "Speed doubles"
+            ],
+            correctAnswer: 1,
+            explanation: "Speed in water: v = c/n = c/1.33 ≈ 0.75c. The speed decreases to about 75% of its original value, meaning it slows down by about 25%."
+          },
+          {
+            question: "Which property of light does NOT change when it enters a new medium?",
+            options: [
+              "Speed",
+              "Wavelength",
+              "Frequency",
+              "Direction"
+            ],
+            correctAnswer: 2,
+            explanation: "Frequency remains constant when light enters a new medium. This is why color (determined by frequency) stays the same. Speed, wavelength, and direction all change."
+          },
+          {
+            question: "Diamond has n = 2.42. Compared to air, light in diamond travels:",
+            options: [
+              "2.42 times faster",
+              "2.42 times slower",
+              "At the same speed",
+              "Slightly faster"
+            ],
+            correctAnswer: 1,
+            explanation: "Since v = c/n, and n = 2.42, light travels at c/2.42 ≈ 0.41c in diamond. It's 2.42 times slower than in air!"
+          }
+        ]
+      }
     }
   ]
 }

@@ -332,6 +332,74 @@ On hot days, light from sky bends gradually in air layers:
 - Eventually reaches critical angle → TIR!
 - We see sky reflected, looks like water!
       `
+    },
+    {
+      id: 'snell-tir-quiz',
+      type: 'multiple-choice' as const,
+      content: `
+**Master Check: Snell's Law & TIR** ✓
+
+Challenge yourself with these problems!
+      `,
+      exercise: {
+        questions: [
+          {
+            question: "Light travels from air (n=1.0) into glass (n=1.5) at 60° from the normal. Does the light bend toward or away from the normal?",
+            options: [
+              "Toward the normal (angle decreases)",
+              "Away from the normal (angle increases)",
+              "It doesn't bend at all",
+              "It reflects completely"
+            ],
+            correctAnswer: 0,
+            explanation: "Light bends TOWARD the normal when entering a denser medium (higher n). Since glass has n=1.5 > air's n=1.0, the angle from the normal will be smaller than 60°."
+          },
+          {
+            question: "Light in water (n=1.33) hits the water-air boundary at 50° from normal. The critical angle is 48.8°. What happens?",
+            options: [
+              "Normal refraction into air",
+              "Total internal reflection",
+              "Light is absorbed",
+              "Light splits into two beams"
+            ],
+            correctAnswer: 1,
+            explanation: "Since 50° > 48.8° (critical angle), total internal reflection occurs! All the light reflects back into the water. No light escapes to air."
+          },
+          {
+            question: "Using Snell's Law: n₁sin(θ₁) = n₂sin(θ₂). Light goes from air (n=1.0) to water (n=1.33) at 45°. What is sin(θ₂)?",
+            options: [
+              "sin(θ₂) = 0.53",
+              "sin(θ₂) = 0.94",
+              "sin(θ₂) = 1.33",
+              "sin(θ₂) = 0.71"
+            ],
+            correctAnswer: 0,
+            explanation: "n₁sin(θ₁) = n₂sin(θ₂) → (1.0)(sin45°) = (1.33)sin(θ₂) → (1.0)(0.707) = (1.33)sin(θ₂) → sin(θ₂) = 0.707/1.33 ≈ 0.53"
+          },
+          {
+            question: "Why can fiber optic cables transmit light over long distances without much loss?",
+            options: [
+              "The glass absorbs very little light",
+              "Total internal reflection keeps light trapped inside",
+              "The cables are perfectly straight",
+              "Light amplifiers are placed every meter"
+            ],
+            correctAnswer: 1,
+            explanation: "Total internal reflection! Light hits the cable walls at angles greater than the critical angle, so it reflects with 100% efficiency. This keeps light bouncing inside the fiber."
+          },
+          {
+            question: "The critical angle for diamond-air is 24.4°. What does this small angle tell us?",
+            options: [
+              "Diamond is very soft",
+              "Light easily escapes diamond",
+              "Diamond has a very high index of refraction",
+              "Diamond doesn't refract light"
+            ],
+            correctAnswer: 2,
+            explanation: "A small critical angle (θc = sin⁻¹(n₂/n₁)) means n₁ (diamond) is much larger than n₂ (air). Diamond's n=2.42 is very high, causing the small critical angle and making light bounce around inside—creating sparkle!"
+          }
+        ]
+      }
     }
   ]
 }
