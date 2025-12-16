@@ -18,6 +18,9 @@ export const metadata: Metadata = {
   title: "Study Mondo — Free AP Study Platform",
   description:
     "Study Mondo offers free notes, flashcards, and practice problems for AP Calculus, Physics, Chemistry, and Biology — created by educators to help you ace your exams.",
+  alternates: {
+    canonical: "https://studymondo.com",
+  },
   other: {
     "google-adsense-account": "ca-pub-8403501245603262",
   },
