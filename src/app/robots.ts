@@ -9,8 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: [
           '/api/',
           '/admin/',
-          '/flashcards/', // Flashcard study pages are duplicates of topic pages
-          '/topics?*', // Block query parameter URLs
         ],
       },
     ],
