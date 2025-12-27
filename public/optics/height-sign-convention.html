@@ -316,6 +316,13 @@
             // Draw arrow at bottom
             ctx.beginPath();
             ctx.moveTo(x1, y1);
+            ctx.lineTo(x1 - 5, y1 + arrowSize);
+            ctx.lineTo(x1 + 5, y1 + arrowSize);
+            ctx.closePath();
+            ctx.fill();
+        }
+        
+        function drawMeasurementArrowDown(x1, y1, x2, y2) {
             const arrowSize = 10;
             
             // Draw arrow at bottom
