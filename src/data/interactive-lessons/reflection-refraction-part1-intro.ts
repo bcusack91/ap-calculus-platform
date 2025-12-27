@@ -5,59 +5,26 @@ export const reflectionRefractionPart1Data = {
       id: 'why-optics-matters',
       type: 'text' as const,
       content: `
-# Welcome to Optics! 🔆
+# Reflection and Refraction
 
-Light is everywhere — from the rainbow in the sky to the fiber optic cable powering your Wi-Fi.
+Learn how light bends and bounces — from rainbows to fiber optics.
 
-## Why Study Light?
+This lesson covers the fundamental laws that explain mirrors, lenses, and how light changes direction when moving between different materials.
 
-Understanding reflection and refraction explains the technology you use every day and the natural wonders around you.
-
-**Your smartphone camera.** The internet through fiber optics. Eyeglasses. Telescopes. Microscopes. Rainbows and blue skies. Diamond sparkle.
-
-All of these depend on how light bends and bounces.
-
----
-
-**Ready to discover how light behaves?** Let's begin! ✨
+**Let's begin.**
       `
     },
     {
       id: 'lesson-overview',
       type: 'text' as const,
       content: `
-# What We'll Learn 📚
+## What You'll Learn
 
-Master the fundamental laws of light in 6 focused parts.
+This interactive lesson has 6 parts. Complete each part to unlock the next.
 
----
+You'll master sign conventions, reflection, refraction, Snell's Law, total internal reflection, and dispersion.
 
-## 📏 Part 2: Sign Conventions
-Set up problems correctly using the Cartesian coordinate system
-
-## 🪞 Part 3: Law of Reflection  
-Understand how light bounces • Work with mirrors • Analyze virtual images
-
-## 🌊 Part 4: Index of Refraction
-Discover why light slows in materials • Learn the physics behind bending
-
-## 🎯 Part 5: Snell's Law & TIR
-Master refraction mathematics • Explore fiber optics • Understand diamond sparkle
-
-## 🌈 Part 6: Dispersion & Practice
-See how prisms create rainbows • Apply what you've learned
-
----
-
-### How This Works
-
-✅ **6 bite-sized parts** — not overwhelming  
-✅ **Progressive unlocking** — master each to advance  
-✅ **Clear examples** — real physics, real applications  
-
-<br/>
-
-**Ready to begin?** Let's go! 🚀
+Ready? Click next to continue.
       `
     }
   ]
