@@ -2,6 +2,23 @@ export const reflectionRefractionPart2Data = {
   topicSlug: 'reflection-refraction',
   sections: [
     {
+      id: 'sign-convention-intro',
+      type: 'text' as const,
+      content: `
+# Sign Convention
+
+In optics, we define positive and negative directions based on how light travels.
+
+**Step 1** → Place the object
+
+**Step 2** → Draw light direction arrow from object to mirror/lens
+
+**Step 3** → The arrow defines positive (+)
+
+The interactive demonstration is next.
+      `
+    },
+    {
       id: 'sign-convention-visual',
       type: 'text' as const,
       content: `
@@ -13,108 +30,38 @@ Let's establish our coordinate system with a visual demonstration!
 
 <iframe src="/optics/sign-convention-animation.html" width="100%" height="800" frameborder="0" style="border-radius: 10px; margin: 20px 0;"></iframe>
 
-## The Core Concept
-
-![Sign Convention Diagram](/optics/sign-convention-comprehensive.svg)
-
 The Cartesian sign convention is simple once you understand the key principle:
 
 **The direction light travels DEFINES the positive direction** →
       `
     },
     {
-      id: 'sign-convention-explained',
+      id: 'height-intro',
       type: 'text' as const,
       content: `
-**Sign Convention Rules** 📏
+# Height Sign Convention
 
-Now that you've seen it in action, let's formalize the rules:
+Height is measured from the optical axis.
 
-## The Cartesian Sign Convention
+**Above the axis** → Positive height (+)
 
-**This is THE MOST IMPORTANT concept in optics!**
+**Below the axis** → Negative height (−)
 
-In optics, we use a coordinate system where:
-
-✅ **Positive direction** = Direction light is traveling (front of arrow →)
-✅ **Negative direction** = Opposite to light travel (back of arrow ←)
-
-## What This Means for Measurements:
-
-**Object Distance ($d_o$ or $s_o$):**
-- Light travels FROM object TO optical element
-- Object is "behind" the light (in negative direction)
-- We measure it as **positive** (by convention, we use absolute value)
-
-**Image Distance ($d_i$ or $s_i$):**
-- **Positive**: Image forms where light actually converges (real image)
-- **Negative**: Image forms where light *appears* to come from (virtual image)
-
-**Focal Length ($f$):**
-- **Positive**: Converging element (concave mirror, convex lens)
-- **Negative**: Diverging element (convex mirror, concave lens)
-
-## Visual Summary:
-
-\`\`\`
-        Negative ← | → Positive
-                   |
-        ←──────────0──────────→
-                   |
-         Virtual   |   Real
-         images    |   images
-\`\`\`
-
-**Key Principle**: The arrow on the light ray defines the positive direction!
-
-**Remember**: The positive direction is always where light is heading!
+Let's see it in action.
       `
     },
     {
-      id: 'sign-convention-quiz',
-      type: 'multiple-choice' as const,
+      id: 'height-interactive',
+      type: 'text' as const,
       content: `
-**Check Your Understanding: Sign Convention** ✓
+**Interactive Height Tutorial** 📏
 
-Test your knowledge before moving forward!
-      `,
-      exercise: {
-        questions: [
-          {
-            question: "Light travels from left to right (→). An image forms to the RIGHT of a mirror (in the direction light is traveling). What is the sign of the image distance?",
-            options: [
-              "Positive, because the image is on the right side",
-              "Negative, because images are always negative",
-              "Positive, because light doesn't actually reach there",
-              "It depends on the type of mirror"
-            ],
-            correctAnswer: 0,
-            explanation: "The image distance is POSITIVE because the image forms in the positive direction (where light is traveling). This is a real image."
-          },
-          {
-            question: "Light travels from left to right. A virtual image appears BEHIND a mirror (opposite to where light is traveling). What is the sign of the image distance?",
-            options: [
-              "Positive, because it's an image",
-              "Negative, because it's in the opposite direction of light travel",
-              "Positive, because virtual images are always positive",
-              "Zero, because virtual images don't exist"
-            ],
-            correctAnswer: 1,
-            explanation: "The image distance is NEGATIVE because the image appears in the negative direction (opposite to light travel). Virtual images always have negative distances."
-          },
-          {
-            question: "In the Cartesian sign convention for optics, what defines the positive direction?",
-            options: [
-              "Always to the right",
-              "Always upward",
-              "The direction light is traveling",
-              "Away from the observer"
-            ],
-            correctAnswer: 2,
-            explanation: "The DIRECTION LIGHT IS TRAVELING always defines the positive direction. This is the fundamental principle of the Cartesian sign convention!"
-          }
-        ]
-      }
+## Interactive Animation
+
+<iframe src="/optics/height-sign-convention.html" width="100%" height="850" frameborder="0" style="border-radius: 10px; margin: 20px 0;"></iframe>
+
+The optical axis is your reference line. Everything above it is positive, everything below is negative.
+      `
     }
   ]
 }
