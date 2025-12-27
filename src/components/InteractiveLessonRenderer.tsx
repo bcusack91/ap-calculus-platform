@@ -2002,6 +2002,7 @@ function FadeInText({ content, onComplete }: { content: string; onComplete?: () 
   const hasUnitCircleAnimation = content.includes('[UNIT_CIRCLE_ANIMATION]')
   const hasUnitCircleGame = content.includes('[UNIT_CIRCLE_GAME]')
   const hasFullUnitCircleGame = content.includes('[FULL_UNIT_CIRCLE_GAME]')
+  const hasIframe = content.includes('<iframe')
   
   // If content has tables, unit circle, animation, or game, split and render
   if (hasSineTable || hasCosineTable || hasUnitCircle || hasUnitCircleAnimation || hasUnitCircleGame || hasFullUnitCircleGame) {
@@ -2039,6 +2040,8 @@ function FadeInText({ content, onComplete }: { content: string; onComplete?: () 
                   tr: ({ children }) => <tr className="border-b border-purple-200 dark:border-purple-800">{children}</tr>,
                   th: ({ children }) => <th className="px-6 py-3 text-left text-lg font-bold text-purple-900 dark:text-purple-100 border border-purple-300 dark:border-purple-700">{children}</th>,
                   td: ({ children }) => <td className="px-6 py-4 text-lg border border-purple-200 dark:border-purple-800">{children}</td>,
+                  img: ({ src, alt }) => <img src={src} alt={alt || ''} className="max-w-full h-auto my-6 rounded-lg" />,
+                  iframe: ({ src, width, height, ...props }) => <iframe src={src} width={width || '100%'} height={height || '600'} className="w-full rounded-lg my-6" {...props} />,
                 }}
               >
                 {part}
@@ -2047,6 +2050,38 @@ function FadeInText({ content, onComplete }: { content: string; onComplete?: () 
           }
           return null
         })}
+      </div>
+    )
+  }
+  
+  // If content has iframe or img tags, render with dangerouslySetInnerHTML for HTML while keeping markdown processing
+  if (hasIframe || content.includes('<img')) {
+    // Process markdown to HTML first, then render
+    return (
+      <div className="animate-fade-in prose prose-lg max-w-none">
+        <ReactMarkdown
+          remarkPlugins={[remarkMath, remarkGfm]}
+          rehypePlugins={[rehypeKatex, rehypeRaw]}
+          components={{
+            p: ({ children }) => <p className="text-xl leading-relaxed mb-4">{children}</p>,
+            strong: ({ children }) => <strong className="text-2xl font-bold text-purple-700 dark:text-purple-400">{children}</strong>,
+            ul: ({ children }) => <ul className="space-y-3 text-lg ml-6">{children}</ul>,
+            li: ({ children }) => <li className="text-lg">{children}</li>,
+            blockquote: ({ children }) => (
+              <blockquote className="border-l-4 border-purple-500 pl-6 py-3 bg-purple-50 dark:bg-purple-900/20 rounded-r-lg text-xl font-semibold">
+                {children}
+              </blockquote>
+            ),
+            table: ({ children }) => <table className="min-w-full border-collapse border-2 border-purple-300 dark:border-purple-700 my-6">{children}</table>,
+            thead: ({ children }) => <thead className="bg-purple-100 dark:bg-purple-900/40">{children}</thead>,
+            tbody: ({ children }) => <tbody>{children}</tbody>,
+            tr: ({ children }) => <tr className="border-b border-purple-200 dark:border-purple-800">{children}</tr>,
+            th: ({ children }) => <th className="px-6 py-3 text-left text-lg font-bold text-purple-900 dark:text-purple-100 border border-purple-300 dark:border-purple-700">{children}</th>,
+            td: ({ children }) => <td className="px-6 py-4 text-lg border border-purple-200 dark:border-purple-800">{children}</td>,
+          }}
+        >
+          {content}
+        </ReactMarkdown>
       </div>
     )
   }
@@ -2073,6 +2108,8 @@ function FadeInText({ content, onComplete }: { content: string; onComplete?: () 
             tr: ({ children }) => <tr className="border-b border-purple-200 dark:border-purple-800">{children}</tr>,
             th: ({ children }) => <th className="px-6 py-3 text-left text-lg font-bold text-purple-900 dark:text-purple-100 border border-purple-300 dark:border-purple-700">{children}</th>,
             td: ({ children }) => <td className="px-6 py-4 text-lg border border-purple-200 dark:border-purple-800">{children}</td>,
+            img: ({ src, alt }) => <img src={src} alt={alt || ''} className="max-w-full h-auto my-6 rounded-lg" />,
+            iframe: ({ src, width, height, ...props }) => <iframe src={src} width={width || '100%'} height={height || '600'} className="w-full rounded-lg my-6" {...props} />,
           }}
         >
           {content}
