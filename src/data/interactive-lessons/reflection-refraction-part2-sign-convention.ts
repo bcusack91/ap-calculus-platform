@@ -62,6 +62,19 @@ Let's see it in action.
 
 The optical axis is your reference line. Everything above it is positive, everything below is negative.
       `
+    },
+    {
+      id: 'sign-convention-quiz',
+      type: 'text' as const,
+      content: `
+# 🎯 Quiz Time!
+
+Test your understanding of the sign convention by identifying which directions are positive and negative.
+
+<iframe src="/optics/sign-convention-quiz.html" width="100%" height="850" frameborder="0" style="border-radius: 10px; margin: 20px 0;"></iframe>
+
+Once you ace this quiz, you'll be ready to move on to the Law of Reflection!
+      `
     }
   ]
 }
