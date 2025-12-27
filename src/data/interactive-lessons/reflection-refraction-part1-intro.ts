@@ -7,31 +7,19 @@ export const reflectionRefractionPart1Data = {
       content: `
 # Welcome to Optics! 🔆
 
-Understanding light unlocks the science behind everyday technology and natural wonders.
+Light is everywhere — from the rainbow in the sky to the fiber optic cable powering your Wi-Fi.
+
+## Why Study Light?
+
+Understanding reflection and refraction explains the technology you use every day and the natural wonders around you.
+
+**Your smartphone camera.** The internet through fiber optics. Eyeglasses. Telescopes. Microscopes. Rainbows and blue skies. Diamond sparkle.
+
+All of these depend on how light bends and bounces.
 
 ---
 
-## Why Optics Matters
-
-<br/>
-
-### 📱 **Technology You Use Daily**
-Your smartphone camera • Internet through fiber optics • Eyeglasses & contacts
-
-### 🔬 **Tools of Discovery**  
-Telescopes revealing distant galaxies • Microscopes exploring cells • Medical imaging
-
-### 🌈 **Nature's Beauty**
-Rainbows after rain • Blue skies at noon • Sparkling diamonds • Desert mirages
-
-### 💡 **Innovation & Careers**
-Photography & film • Laser technology • Optical engineering • Medical devices
-
----
-
-**Optics connects physics to real life** — from the rainbow in the sky to the fiber optic cable powering your Wi-Fi.
-
-Let's explore how light behaves! ✨
+**Ready to discover how light behaves?** Let's begin! ✨
       `
     },
     {
