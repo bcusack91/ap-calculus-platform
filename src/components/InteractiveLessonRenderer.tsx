@@ -751,6 +751,16 @@ function SectionRenderer({
     )
   }
 
+  if (section.type === 'multiple-choice') {
+    return (
+      <MultipleChoiceQuiz 
+        section={section} 
+        onComplete={onComplete}
+        isComplete={isComplete}
+      />
+    )
+  }
+
   if (section.type === 'mini-boss') {
     return (
       <MiniBossBattle 
@@ -2128,6 +2138,164 @@ function FadeInText({ content, onComplete }: { content: string; onComplete?: () 
       >
         {content}
       </ReactMarkdown>
+    </div>
+  )
+}
+
+// Multiple Choice Quiz Component
+function MultipleChoiceQuiz({ 
+  section, 
+  onComplete, 
+  isComplete 
+}: { 
+  section: Section
+  onComplete: () => void
+  isComplete: boolean
+}) {
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState<number>(0)
+  const [selectedAnswers, setSelectedAnswers] = useState<(number | null)[]>(
+    Array(section.exercise?.questions?.length || 0).fill(null)
+  )
+  const [showFeedback, setShowFeedback] = useState<boolean[]>(
+    Array(section.exercise?.questions?.length || 0).fill(false)
+  )
+  const [quizComplete, setQuizComplete] = useState<boolean>(false)
+
+  const questions = section.exercise?.questions || []
+  const currentQuestion = questions[currentQuestionIndex]
+
+  const handleAnswerSelect = (questionIndex: number, answerIndex: number) => {
+    const newSelectedAnswers = [...selectedAnswers]
+    newSelectedAnswers[questionIndex] = answerIndex
+    setSelectedAnswers(newSelectedAnswers)
+
+    const newShowFeedback = [...showFeedback]
+    newShowFeedback[questionIndex] = true
+    setShowFeedback(newShowFeedback)
+  }
+
+  const handleNext = () => {
+    if (currentQuestionIndex < questions.length - 1) {
+      setCurrentQuestionIndex(currentQuestionIndex + 1)
+    } else {
+      // All questions answered, complete the quiz
+      setQuizComplete(true)
+      onComplete()
+    }
+  }
+
+  const score = selectedAnswers.filter(
+    (answer, index) => answer === questions[index]?.correctAnswer
+  ).length
+
+  if (!questions || questions.length === 0) {
+    return (
+      <div className="bg-red-50 border border-red-200 rounded-lg p-6">
+        <p className="text-red-800">No questions available for this quiz.</p>
+      </div>
+    )
+  }
+
+  if (quizComplete) {
+    return (
+      <div className="bg-gradient-to-br from-green-50 to-emerald-50 border-2 border-green-300 rounded-lg p-8 text-center">
+        <div className="text-6xl mb-4">🎉</div>
+        <h3 className="text-2xl font-bold text-gray-800 mb-2">Quiz Complete!</h3>
+        <p className="text-lg text-gray-700 mb-4">
+          You scored {score} out of {questions.length}
+        </p>
+        {score === questions.length && (
+          <p className="text-green-600 font-semibold">Perfect score! Excellent work!</p>
+        )}
+      </div>
+    )
+  }
+
+  return (
+    <div className="space-y-6">
+      {/* Progress indicator */}
+      <div className="flex items-center justify-between text-sm text-gray-600 mb-4">
+        <span>Question {currentQuestionIndex + 1} of {questions.length}</span>
+        <span>{score} correct so far</span>
+      </div>
+
+      {/* Current Question */}
+      <div className="bg-white border border-gray-200 rounded-lg p-6">
+        <h3 className="text-lg font-semibold text-gray-800 mb-4">
+          {currentQuestion.question}
+        </h3>
+
+        <div className="space-y-3">
+          {currentQuestion.options.map((option: string, optionIndex: number) => {
+            const isSelected = selectedAnswers[currentQuestionIndex] === optionIndex
+            const isCorrect = optionIndex === currentQuestion.correctAnswer
+            const showingFeedback = showFeedback[currentQuestionIndex]
+
+            let buttonStyle = "w-full text-left p-4 rounded-lg border-2 transition-all "
+            
+            if (!showingFeedback) {
+              buttonStyle += isSelected 
+                ? "border-blue-500 bg-blue-50" 
+                : "border-gray-300 hover:border-blue-300 hover:bg-gray-50"
+            } else {
+              if (isCorrect) {
+                buttonStyle += "border-green-500 bg-green-50"
+              } else if (isSelected && !isCorrect) {
+                buttonStyle += "border-red-500 bg-red-50"
+              } else {
+                buttonStyle += "border-gray-300 bg-gray-50"
+              }
+            }
+
+            return (
+              <button
+                key={optionIndex}
+                onClick={() => !showingFeedback && handleAnswerSelect(currentQuestionIndex, optionIndex)}
+                disabled={showingFeedback}
+                className={buttonStyle}
+              >
+                <div className="flex items-center justify-between">
+                  <span className="text-gray-800">{option}</span>
+                  {showingFeedback && isCorrect && <span className="text-green-600">✓</span>}
+                  {showingFeedback && isSelected && !isCorrect && <span className="text-red-600">✗</span>}
+                </div>
+              </button>
+            )
+          })}
+        </div>
+
+        {/* Feedback */}
+        {showFeedback[currentQuestionIndex] && (
+          <div className={`mt-4 p-4 rounded-lg ${
+            selectedAnswers[currentQuestionIndex] === currentQuestion.correctAnswer
+              ? 'bg-green-50 border border-green-200'
+              : 'bg-red-50 border border-red-200'
+          }`}>
+            <p className={`font-semibold mb-2 ${
+              selectedAnswers[currentQuestionIndex] === currentQuestion.correctAnswer
+                ? 'text-green-800'
+                : 'text-red-800'
+            }`}>
+              {selectedAnswers[currentQuestionIndex] === currentQuestion.correctAnswer
+                ? '✓ Correct!'
+                : '✗ Incorrect'}
+            </p>
+            <p className="text-gray-700">{currentQuestion.explanation}</p>
+          </div>
+        )}
+
+        {/* Next button */}
+        {showFeedback[currentQuestionIndex] && (
+          <div className="mt-6 flex justify-end">
+            <button
+              onClick={handleNext}
+              className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              {currentQuestionIndex < questions.length - 1 ? 'Next Question' : 'Finish Quiz'}
+            </button>
+          </div>
+        )}
+      </div>
     </div>
   )
 }
