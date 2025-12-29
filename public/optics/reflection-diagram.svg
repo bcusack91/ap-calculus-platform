@@ -36,12 +36,12 @@
   <text x="380" y="120" font-family="Arial" font-size="16" fill="#667eea" font-weight="bold">Reflected Ray</text>
   
   <!-- Angle of incidence arc -->
-  <path d="M 300 200 A 50 50 0 0 1 270 225" fill="none" stroke="#e74c3c" stroke-width="2"/>
-  <text x="255" y="210" font-family="Arial" font-size="20" fill="#e74c3c" font-weight="bold">θᵢ</text>
+  <path d="M 300 200 A 50 50 0 0 0 265 230" fill="none" stroke="#e74c3c" stroke-width="2"/>
+  <text x="250" y="210" font-family="Arial" font-size="20" fill="#e74c3c" font-weight="bold">θᵢ</text>
   
   <!-- Angle of reflection arc -->
-  <path d="M 330 225 A 50 50 0 0 1 300 200" fill="none" stroke="#e74c3c" stroke-width="2"/>
-  <text x="335" y="210" font-family="Arial" font-size="20" fill="#e74c3c" font-weight="bold">θᵣ</text>
+  <path d="M 335 230 A 50 50 0 0 0 300 200" fill="none" stroke="#e74c3c" stroke-width="2"/>
+  <text x="340" y="210" font-family="Arial" font-size="20" fill="#e74c3c" font-weight="bold">θᵣ</text>
   
   <!-- Labels -->
   <text x="300" y="290" font-family="Arial" font-size="18" fill="#333" font-weight="bold" text-anchor="middle">Surface (Mirror)</text>
