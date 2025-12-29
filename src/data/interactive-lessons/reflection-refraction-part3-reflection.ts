@@ -110,6 +110,12 @@ The difference is just whether the surface is smooth (specular) or rough (diffus
 
 Let's apply the **Cartesian sign convention** to **plane mirrors** (flat mirrors with specular reflection).
 
+## Ray Tracing Animation
+
+Watch how we locate the virtual image using ray tracing:
+
+<iframe src="/optics/plane-mirror-animation.html" width="100%" height="700" frameborder="0" style="border-radius: 10px; margin: 20px 0;"></iframe>
+
 ## Applying the Sign Convention:
 
 Remember from Part 2: Light travels from left to right, making **right positive (+)** and **left negative (−)**.
