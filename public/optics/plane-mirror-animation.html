@@ -254,7 +254,10 @@
         }
         
         function drawExtrapolation() {
-            const virtualImageX = 950 - objectX;
+            // Virtual image is same distance behind mirror as object is in front
+            // Object at objectX (250), mirror at mirrorX (600)
+            // Virtual image at mirrorX + (mirrorX - objectX) = 600 + 350 = 950
+            const virtualImageX = mirrorX + (mirrorX - objectX);
             
             // Extrapolate horizontal ray backwards
             ctx.strokeStyle = '#667eea';
@@ -267,11 +270,13 @@
             
             // Extrapolate angled ray backwards from mirror intersection point
             // The reflected ray goes from (mirrorX, centerY) to (objectX, centerY + 65)
-            // We need to extend it backwards from (mirrorX, centerY)
-            const dx = objectX - mirrorX;
-            const dy = (centerY + 65) - centerY;
+            // Slope: dy/dx = 65 / (objectX - mirrorX) = 65 / -350
+            // To extrapolate backwards with same slope:
+            const reflectedDx = objectX - mirrorX; // -350
+            const reflectedDy = (centerY + 65) - centerY; // 65
             
-            // Extend in opposite direction to meet at virtual image
+            // Continue with same slope in opposite direction
+            // From (mirrorX, centerY), we need to reach (virtualImageX, centerY - 65)
             ctx.beginPath();
             ctx.moveTo(mirrorX, centerY);
             ctx.lineTo(virtualImageX, centerY - 65);
@@ -279,7 +284,7 @@
         }
         
         function drawVirtualImage() {
-            const virtualImageX = 950 - objectX;
+            const virtualImageX = mirrorX + (mirrorX - objectX);
             
             // Draw virtual candle (lighter/transparent)
             ctx.globalAlpha = 0.5;
