@@ -36,6 +36,8 @@ $$\\theta_i = \\theta_r$$
 
 When light hits a smooth, polished surface, we get **specular reflection**.
 
+<img src="/optics/specular-reflection.svg" alt="Specular Reflection Diagram" style="max-width: 600px; margin: 20px auto; display: block;" />
+
 ## Characteristics:
 
 **Smooth Surface** ✨
@@ -68,6 +70,8 @@ The smoothness means every point on the surface has the same orientation. All th
 **Scattered reflection from rough surfaces**
 
 When light hits a rough surface, we get **diffuse reflection**.
+
+<img src="/optics/diffuse-reflection.svg" alt="Diffuse Reflection Diagram" style="max-width: 600px; margin: 20px auto; display: block;" />
 
 ## Characteristics:
 
