@@ -2,12 +2,37 @@ export const reflectionRefractionPart3Data = {
   topicSlug: 'reflection-refraction',
   sections: [
     {
-      id: 'law-of-reflection',
+      id: 'law-of-reflection-basics',
+      type: 'text' as const,
+      content: `
+# Law of Reflection
+
+When light hits a smooth surface, it follows a simple rule:
+
+$$\\theta_i = \\theta_r$$
+
+**Angle of incidence = Angle of reflection**
+
+## Key Points:
+
+**1. Angles measured from the NORMAL** ⊥
+- The normal is perpendicular to the surface
+- NOT from the surface itself!
+
+**2. The rays are COPLANAR** 📐
+- Incident ray, reflected ray, and normal all lie in the same plane
+- Think of it as everything happening on a flat sheet of paper
+
+<img src="/optics/reflection-diagram.svg" alt="Reflection Diagram" style="max-width: 600px; margin: 20px auto; display: block;" />
+      `
+    },
+    {
+      id: 'law-of-reflection-details',
       type: 'text' as const,
       content: `
 **Law of Reflection** 🪞
 
-When light hits a smooth surface, it follows a simple rule:
+Now let's understand the full picture.
 
 ## The Law
 
