@@ -301,7 +301,7 @@
             ctx.fillStyle = '#2ecc71';
             ctx.font = 'bold 16px Arial';
             ctx.textAlign = 'center';
-            ctx.fillText('Virtual Image', virtualImageX, centerY + 90);
+            ctx.fillText('Virtual Image', virtualImageX - 20, centerY + 90);
             
             // Distance labels
             ctx.fillStyle = '#e74c3c';
@@ -309,7 +309,7 @@
             ctx.fillText('dₒ (−)', objectX, centerY + 120);
             
             ctx.fillStyle = '#2ecc71';
-            ctx.fillText('dᵢ (+)', virtualImageX, centerY + 120);
+            ctx.fillText('dᵢ (+)', virtualImageX - 20, centerY + 120);
         }
         
         function render() {
