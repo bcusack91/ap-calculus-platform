@@ -108,21 +108,32 @@ The difference is just whether the surface is smooth (specular) or rough (diffus
       content: `
 # Plane Mirror Sign Convention
 
-Let's apply what we learned to **plane mirrors** (flat mirrors with specular reflection).
+Let's apply the **Cartesian sign convention** to **plane mirrors** (flat mirrors with specular reflection).
 
-## Sign Convention Rules:
+## Applying the Sign Convention:
 
-For a plane mirror:
-- **Object distance**: $d_o$ = positive (in front of mirror)
-- **Image distance**: $d_i$ = negative (behind mirror, virtual)
-- Image is same distance behind mirror as object is in front
-- $|d_i| = d_o$ but $d_i = -d_o$ (negative!)
+Remember from Part 2: Light travels from left to right, making **right positive (+)** and **left negative (−)**.
 
-## Why Negative?
+For a plane mirror positioned vertically:
 
-The image forms *behind* the mirror where light doesn't actually go. This makes it a **virtual image**, indicated by the negative sign.
+**Object on the left** (where light comes from):
+- Object distance: $d_o$ = **negative** (−) because it's on the left side
+- The object is in the negative region of our coordinate system
 
-Remember our sign convention from Part 2: the direction light travels is positive. Since light doesn't actually travel behind the mirror, that region is negative!
+**Image on the right** (behind the mirror):
+- Image distance: $d_i$ = **positive** (+) because it's on the right side  
+- Virtual image forms in the positive direction, behind the mirror
+
+## The Relationship:
+
+For a plane mirror, the magnitudes are equal but signs follow our Cartesian convention:
+$$|d_o| = |d_i|$$
+
+Since the object and image are equidistant from the mirror but on opposite sides, and considering our coordinate system where light travels left-to-right (negative to positive):
+
+$$d_i = -d_o$$
+
+**Key Point**: The signs follow the Cartesian convention we established in Part 2. Left side = negative, right side = positive. The image appears behind the mirror in the positive direction!
       `
     },
     {
