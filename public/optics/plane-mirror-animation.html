@@ -254,19 +254,26 @@
         }
         
         function drawExtrapolation() {
+            const virtualImageX = 950 - objectX;
+            
             // Extrapolate horizontal ray backwards
             ctx.strokeStyle = '#667eea';
             ctx.lineWidth = 2;
             ctx.setLineDash([5, 5]);
             ctx.beginPath();
-            ctx.moveTo(objectX, centerY - 65);
-            ctx.lineTo(950 - objectX, centerY - 65);
+            ctx.moveTo(mirrorX, centerY - 65);
+            ctx.lineTo(virtualImageX, centerY - 65);
             ctx.stroke();
             
-            // Extrapolate angled ray backwards
-            const virtualImageX = 950 - objectX;
+            // Extrapolate angled ray backwards from mirror intersection point
+            // The reflected ray goes from (mirrorX, centerY) to (objectX, centerY + 65)
+            // We need to extend it backwards from (mirrorX, centerY)
+            const dx = objectX - mirrorX;
+            const dy = (centerY + 65) - centerY;
+            
+            // Extend in opposite direction to meet at virtual image
             ctx.beginPath();
-            ctx.moveTo(objectX, centerY + 65);
+            ctx.moveTo(mirrorX, centerY);
             ctx.lineTo(virtualImageX, centerY - 65);
             ctx.stroke();
         }
