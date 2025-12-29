@@ -152,6 +152,16 @@
             border: 2px solid #e74c3c;
             display: block;
         }
+        .hidden {
+            display: none;
+        }
+        .question-title {
+            text-align: center;
+            color: #667eea;
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
@@ -159,14 +169,16 @@
         <h1>🎯 Sign Convention Quiz</h1>
         <p class="subtitle">Test your understanding of the sign convention!</p>
         
+        <div class="question-title" id="questionTitle">Question 1: Object on Left of Mirror</div>
+        
         <canvas id="canvas" width="800" height="400"></canvas>
         
-        <div class="quiz-section">
+        <div class="quiz-section" id="question1" style="display: block;">
             <div class="question-group">
                 <h3>Horizontal Directions (Left/Right)</h3>
                 <div class="question-row">
                     <span class="question-label">Left side is:</span>
-                    <select id="leftSelect">
+                    <select id="leftSelect1">
                         <option value="">Select...</option>
                         <option value="positive">Positive (+)</option>
                         <option value="negative">Negative (−)</option>
@@ -174,7 +186,7 @@
                 </div>
                 <div class="question-row">
                     <span class="question-label">Right side is:</span>
-                    <select id="rightSelect">
+                    <select id="rightSelect1">
                         <option value="">Select...</option>
                         <option value="positive">Positive (+)</option>
                         <option value="negative">Negative (−)</option>
@@ -186,7 +198,7 @@
                 <h3>Vertical Directions (Top/Bottom)</h3>
                 <div class="question-row">
                     <span class="question-label">Top (above axis) is:</span>
-                    <select id="topSelect">
+                    <select id="topSelect1">
                         <option value="">Select...</option>
                         <option value="positive">Positive (+)</option>
                         <option value="negative">Negative (−)</option>
@@ -194,7 +206,7 @@
                 </div>
                 <div class="question-row">
                     <span class="question-label">Bottom (below axis) is:</span>
-                    <select id="bottomSelect">
+                    <select id="bottomSelect1">
                         <option value="">Select...</option>
                         <option value="positive">Positive (+)</option>
                         <option value="negative">Negative (−)</option>
@@ -203,11 +215,60 @@
             </div>
 
             <div class="button-group">
-                <button id="btnCheck" onclick="checkAnswers()">Check Answers</button>
-                <button id="btnReset" onclick="reset()">🔄 Try Again</button>
+                <button id="btnCheck1" onclick="checkAnswers(1)">Check Answers</button>
+                <button id="btnReset" onclick="reset()">🔄 Reset</button>
             </div>
 
-            <div class="feedback" id="feedback"></div>
+            <div class="feedback" id="feedback1"></div>
+        </div>
+
+        <div class="quiz-section" id="question2" style="display: none;">
+            <div class="question-group">
+                <h3>Horizontal Directions (Left/Right)</h3>
+                <div class="question-row">
+                    <span class="question-label">Left side is:</span>
+                    <select id="leftSelect2">
+                        <option value="">Select...</option>
+                        <option value="positive">Positive (+)</option>
+                        <option value="negative">Negative (−)</option>
+                    </select>
+                </div>
+                <div class="question-row">
+                    <span class="question-label">Right side is:</span>
+                    <select id="rightSelect2">
+                        <option value="">Select...</option>
+                        <option value="positive">Positive (+)</option>
+                        <option value="negative">Negative (−)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="question-group">
+                <h3>Vertical Directions (Top/Bottom)</h3>
+                <div class="question-row">
+                    <span class="question-label">Top (above axis) is:</span>
+                    <select id="topSelect2">
+                        <option value="">Select...</option>
+                        <option value="positive">Positive (+)</option>
+                        <option value="negative">Negative (−)</option>
+                    </select>
+                </div>
+                <div class="question-row">
+                    <span class="question-label">Bottom (below axis) is:</span>
+                    <select id="bottomSelect2">
+                        <option value="">Select...</option>
+                        <option value="positive">Positive (+)</option>
+                        <option value="negative">Negative (−)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button id="btnCheck2" onclick="checkAnswers(2)">Check Answers</button>
+                <button id="btnReset2" onclick="reset()">🔄 Reset</button>
+            </div>
+
+            <div class="feedback" id="feedback2"></div>
         </div>
     </div>
 
@@ -215,15 +276,24 @@
         const canvas = document.getElementById('canvas');
         const ctx = canvas.getContext('2d');
         
-        // Correct answers
-        const correctAnswers = {
+        let currentQuestion = 1;
+        
+        // Correct answers for both questions
+        const correctAnswers1 = {
             left: 'negative',
             right: 'positive',
             top: 'positive',
             bottom: 'negative'
         };
         
-        function drawScene() {
+        const correctAnswers2 = {
+            left: 'positive',
+            right: 'negative',
+            top: 'positive',
+            bottom: 'negative'
+        };
+        
+        function drawScene(questionNum) {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             
             const centerX = 400;
@@ -244,60 +314,110 @@
             ctx.textAlign = 'center';
             ctx.fillText('Optical Axis', 400, centerY - 15);
             
-            // Draw mirror (vertical line at center-right)
-            const mirrorX = 600;
-            ctx.strokeStyle = '#333';
-            ctx.lineWidth = 6;
-            ctx.beginPath();
-            ctx.moveTo(mirrorX, 50);
-            ctx.lineTo(mirrorX, 350);
-            ctx.stroke();
-            
-            // Add diagonal shading to indicate mirror
-            ctx.strokeStyle = '#999';
-            ctx.lineWidth = 2;
-            for (let i = 0; i < 15; i++) {
-                const y = 50 + i * 20;
+            if (questionNum === 1) {
+                // Question 1: Object on left of mirror
+                const mirrorX = 600;
+                ctx.strokeStyle = '#333';
+                ctx.lineWidth = 6;
                 ctx.beginPath();
-                ctx.moveTo(mirrorX, y);
-                ctx.lineTo(mirrorX + 15, y + 15);
+                ctx.moveTo(mirrorX, 50);
+                ctx.lineTo(mirrorX, 350);
                 ctx.stroke();
+                
+                // Add diagonal shading to indicate mirror
+                ctx.strokeStyle = '#999';
+                ctx.lineWidth = 2;
+                for (let i = 0; i < 15; i++) {
+                    const y = 50 + i * 20;
+                    ctx.beginPath();
+                    ctx.moveTo(mirrorX, y);
+                    ctx.lineTo(mirrorX + 15, y + 15);
+                    ctx.stroke();
+                }
+                
+                // Label mirror
+                ctx.fillStyle = '#333';
+                ctx.font = 'bold 16px Arial';
+                ctx.textAlign = 'center';
+                ctx.fillText('Mirror', mirrorX, 380);
+                
+                // Draw object (candle) on the left
+                const objectX = 250;
+                ctx.fillStyle = '#ff6b6b';
+                ctx.fillRect(objectX - 15, centerY - 60, 30, 60);
+                
+                // Draw flame
+                ctx.fillStyle = '#ffd93d';
+                ctx.beginPath();
+                ctx.arc(objectX, centerY - 65, 10, 0, Math.PI * 2);
+                ctx.fill();
+                
+                // Label object
+                ctx.fillStyle = '#333';
+                ctx.font = 'bold 16px Arial';
+                ctx.textAlign = 'center';
+                ctx.fillText('Object', objectX, centerY + 100);
+                
+                // Draw light ray from object to mirror (horizontal line)
+                ctx.strokeStyle = '#ff9800';
+                ctx.lineWidth = 3;
+                ctx.setLineDash([]);
+                ctx.beginPath();
+                ctx.moveTo(objectX, centerY - 65);
+                ctx.lineTo(mirrorX, centerY - 65);
+                ctx.stroke();
+                
+                // Draw arrow on ray (pointing right, horizontally)
+                drawArrow(mirrorX, centerY - 65, 0);
+            } else {
+                // Question 2: Object on right of lens
+                const lensX = 250;
+                
+                // Draw lens (convex lens shape)
+                ctx.strokeStyle = '#333';
+                ctx.lineWidth = 6;
+                ctx.beginPath();
+                ctx.arc(lensX - 50, centerY, 100, -Math.PI/3, Math.PI/3);
+                ctx.stroke();
+                ctx.beginPath();
+                ctx.arc(lensX + 50, centerY, 100, 2*Math.PI/3, 4*Math.PI/3);
+                ctx.stroke();
+                
+                // Label lens
+                ctx.fillStyle = '#333';
+                ctx.font = 'bold 16px Arial';
+                ctx.textAlign = 'center';
+                ctx.fillText('Lens', lensX, 380);
+                
+                // Draw object (candle) on the right
+                const objectX = 550;
+                ctx.fillStyle = '#ff6b6b';
+                ctx.fillRect(objectX - 15, centerY - 60, 30, 60);
+                
+                // Draw flame
+                ctx.fillStyle = '#ffd93d';
+                ctx.beginPath();
+                ctx.arc(objectX, centerY - 65, 10, 0, Math.PI * 2);
+                ctx.fill();
+                
+                // Label object
+                ctx.fillStyle = '#333';
+                ctx.font = 'bold 16px Arial';
+                ctx.textAlign = 'center';
+                ctx.fillText('Object', objectX, centerY + 100);
+                
+                // Draw light ray from object to lens (horizontal line)
+                ctx.strokeStyle = '#ff9800';
+                ctx.lineWidth = 3;
+                ctx.setLineDash([]);
+                ctx.beginPath();
+                ctx.moveTo(objectX, centerY - 65);
+                ctx.lineTo(lensX, centerY - 65);
+                ctx.stroke();
+                
+                // Draw arrow on ray (pointing left, horizontally)
+                drawArrow(lensX, centerY - 65, Math.PI);
             }
-            
-            // Label mirror
-            ctx.fillStyle = '#333';
-            ctx.font = 'bold 16px Arial';
-            ctx.textAlign = 'center';
-            ctx.fillText('Mirror', mirrorX, 380);
-            
-            // Draw object (candle) on the left
-            const objectX = 250;
-            ctx.fillStyle = '#ff6b6b';
-            ctx.fillRect(objectX - 15, centerY - 60, 30, 60);
-            
-            // Draw flame
-            ctx.fillStyle = '#ffd93d';
-            ctx.beginPath();
-            ctx.arc(objectX, centerY - 65, 10, 0, Math.PI * 2);
-            ctx.fill();
-            
-            // Label object
-            ctx.fillStyle = '#333';
-            ctx.font = 'bold 16px Arial';
-            ctx.textAlign = 'center';
-            ctx.fillText('Object', objectX, centerY + 100);
-            
-            // Draw light ray from object to mirror (horizontal line)
-            ctx.strokeStyle = '#ff9800';
-            ctx.lineWidth = 3;
-            ctx.setLineDash([]);
-            ctx.beginPath();
-            ctx.moveTo(objectX, centerY - 65);
-            ctx.lineTo(mirrorX, centerY - 65);
-            ctx.stroke();
-            
-            // Draw arrow on ray (pointing right, horizontally)
-            drawArrow(mirrorX, centerY - 65, 0);
             
             // Draw direction labels with question marks
             ctx.fillStyle = '#666';
@@ -324,12 +444,12 @@
             ctx.fill();
         }
         
-        function checkAnswers() {
-            const leftSelect = document.getElementById('leftSelect');
-            const rightSelect = document.getElementById('rightSelect');
-            const topSelect = document.getElementById('topSelect');
-            const bottomSelect = document.getElementById('bottomSelect');
-            const feedback = document.getElementById('feedback');
+        function checkAnswers(questionNum) {
+            const leftSelect = document.getElementById(`leftSelect${questionNum}`);
+            const rightSelect = document.getElementById(`rightSelect${questionNum}`);
+            const topSelect = document.getElementById(`topSelect${questionNum}`);
+            const bottomSelect = document.getElementById(`bottomSelect${questionNum}`);
+            const feedback = document.getElementById(`feedback${questionNum}`);
             
             // Check if all questions are answered
             if (!leftSelect.value || !rightSelect.value || !topSelect.value || !bottomSelect.value) {
@@ -337,6 +457,8 @@
                 feedback.textContent = '⚠️ Please answer all questions before checking!';
                 return;
             }
+            
+            const correctAnswers = questionNum === 1 ? correctAnswers1 : correctAnswers2;
             
             // Check each answer
             const leftCorrect = leftSelect.value === correctAnswers.left;
@@ -355,11 +477,28 @@
             
             // Show feedback
             if (correctCount === 4) {
-                feedback.className = 'feedback success';
-                feedback.innerHTML = '🎉 Perfect! You understand the sign convention!<br><br><strong>Remember:</strong> Light travels from left to right → Right is positive (+)<br>Above optical axis → Positive (+)';
-                document.getElementById('btnCheck').textContent = '✅ Correct!';
-                document.getElementById('btnCheck').className = 'success';
-                document.getElementById('btnCheck').disabled = true;
+                if (questionNum === 1) {
+                    feedback.className = 'feedback success';
+                    feedback.innerHTML = '🎉 Correct! Now try Question 2 with a lens...';
+                    document.getElementById('btnCheck1').textContent = '✅ Correct!';
+                    document.getElementById('btnCheck1').className = 'success';
+                    document.getElementById('btnCheck1').disabled = true;
+                    
+                    // Show question 2 after a short delay
+                    setTimeout(() => {
+                        document.getElementById('question1').style.display = 'none';
+                        document.getElementById('question2').style.display = 'block';
+                        document.getElementById('questionTitle').textContent = 'Question 2: Object on Right of Lens';
+                        currentQuestion = 2;
+                        drawScene(2);
+                    }, 2000);
+                } else {
+                    feedback.className = 'feedback success';
+                    feedback.innerHTML = '🎉 Perfect! You\'ve mastered the sign convention!<br><br><strong>Key Rules:</strong><br>• Light direction defines positive (+)<br>• Above optical axis = positive (+)';
+                    document.getElementById('btnCheck2').textContent = '✅ Complete!';
+                    document.getElementById('btnCheck2').className = 'success';
+                    document.getElementById('btnCheck2').disabled = true;
+                }
             } else {
                 feedback.className = 'feedback error';
                 feedback.innerHTML = `❌ ${correctCount}/4 correct. Try again!<br><br><strong>Hint:</strong> The light ray shows the positive direction →`;
@@ -367,30 +506,52 @@
         }
         
         function reset() {
-            // Reset all selects
-            document.getElementById('leftSelect').value = '';
-            document.getElementById('rightSelect').value = '';
-            document.getElementById('topSelect').value = '';
-            document.getElementById('bottomSelect').value = '';
+            // Reset question 1
+            document.getElementById('leftSelect1').value = '';
+            document.getElementById('rightSelect1').value = '';
+            document.getElementById('topSelect1').value = '';
+            document.getElementById('bottomSelect1').value = '';
             
-            // Remove classes
-            document.getElementById('leftSelect').className = '';
-            document.getElementById('rightSelect').className = '';
-            document.getElementById('topSelect').className = '';
-            document.getElementById('bottomSelect').className = '';
+            document.getElementById('leftSelect1').className = '';
+            document.getElementById('rightSelect1').className = '';
+            document.getElementById('topSelect1').className = '';
+            document.getElementById('bottomSelect1').className = '';
             
-            // Reset button
-            document.getElementById('btnCheck').textContent = 'Check Answers';
-            document.getElementById('btnCheck').className = '';
-            document.getElementById('btnCheck').disabled = false;
+            document.getElementById('btnCheck1').textContent = 'Check Answers';
+            document.getElementById('btnCheck1').className = '';
+            document.getElementById('btnCheck1').disabled = false;
             
-            // Hide feedback
-            document.getElementById('feedback').className = 'feedback';
-            document.getElementById('feedback').textContent = '';
+            document.getElementById('feedback1').className = 'feedback';
+            document.getElementById('feedback1').textContent = '';
+            
+            // Reset question 2
+            document.getElementById('leftSelect2').value = '';
+            document.getElementById('rightSelect2').value = '';
+            document.getElementById('topSelect2').value = '';
+            document.getElementById('bottomSelect2').value = '';
+            
+            document.getElementById('leftSelect2').className = '';
+            document.getElementById('rightSelect2').className = '';
+            document.getElementById('topSelect2').className = '';
+            document.getElementById('bottomSelect2').className = '';
+            
+            document.getElementById('btnCheck2').textContent = 'Check Answers';
+            document.getElementById('btnCheck2').className = '';
+            document.getElementById('btnCheck2').disabled = false;
+            
+            document.getElementById('feedback2').className = 'feedback';
+            document.getElementById('feedback2').textContent = '';
+            
+            // Show question 1
+            document.getElementById('question1').style.display = 'block';
+            document.getElementById('question2').style.display = 'none';
+            document.getElementById('questionTitle').textContent = 'Question 1: Object on Left of Mirror';
+            currentQuestion = 1;
+            drawScene(1);
         }
         
         // Initial draw
-        drawScene();
+        drawScene(1);
     </script>
 </body>
 </html>
