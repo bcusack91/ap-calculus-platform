@@ -287,17 +287,17 @@
             ctx.textAlign = 'center';
             ctx.fillText('Object', objectX, centerY + 100);
             
-            // Draw light ray from object to mirror
+            // Draw light ray from object to mirror (horizontal line)
             ctx.strokeStyle = '#ff9800';
             ctx.lineWidth = 3;
             ctx.setLineDash([]);
             ctx.beginPath();
             ctx.moveTo(objectX, centerY - 65);
-            ctx.lineTo(mirrorX, centerY);
+            ctx.lineTo(mirrorX, centerY - 65);
             ctx.stroke();
             
-            // Draw arrow on ray
-            drawArrow(mirrorX, centerY, Math.atan2(centerY - (centerY - 65), mirrorX - objectX));
+            // Draw arrow on ray (pointing right, horizontally)
+            drawArrow(mirrorX, centerY - 65, 0);
             
             // Draw direction labels with question marks
             ctx.fillStyle = '#666';
