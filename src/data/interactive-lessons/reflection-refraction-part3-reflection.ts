@@ -30,58 +30,95 @@ $$\\theta_i = \\theta_r$$
       id: 'law-of-reflection-details',
       type: 'text' as const,
       content: `
-**Law of Reflection** 🪞
+# Specular Reflection 🪞
 
-Now let's understand the full picture.
+**Mirror-like reflection from smooth surfaces**
 
-## The Law
+When light hits a smooth, polished surface, we get **specular reflection**.
 
-$$\\theta_i = \\theta_r$$
+## Characteristics:
 
-**Angle of incidence = Angle of reflection**
+**Smooth Surface** ✨
+- The surface is flat at a microscopic level
+- Examples: mirrors, calm water, polished metal, glass
 
-## Important Details:
+**Parallel Rays Stay Parallel** →→→
+- When parallel incident rays hit the surface...
+- They reflect as parallel rays
+- Each ray follows the law: $\\theta_i = \\theta_r$
 
-**1. Angles measured from the NORMAL**
-- The normal is perpendicular (⊥) to the surface
-- NOT from the surface itself!
+**Clear Images Form** 🖼️
+- Because rays stay organized and parallel
+- We can see clear reflections
+- This is why mirrors work!
 
-**2. Both angles on same side of normal**
-- Incident ray, reflected ray, and normal are coplanar
+## Why It Works:
 
-**3. Reflection Diagram:**
+The smoothness means every point on the surface has the same orientation. All the normals (perpendiculars) point in the same direction, so parallel incident rays all reflect at the same angle, maintaining their parallel arrangement.
 
-\`\`\`
-     Incident ray         Reflected ray
-          ↓                     ↗
-           \\    θᵢ   θᵣ    /
-            \\   |   |   /
-             \\  |   |  /
-              \\ | N | /
-    ___________\\|___|/___________
-              Surface
-               (N = Normal)
-\`\`\`
+**Result**: You see a clear, sharp image - like looking in a mirror!
+      `
+    },
+    {
+      id: 'diffuse-reflection',
+      type: 'text' as const,
+      content: `
+# Diffuse Reflection 🌫️
 
-## Types of Reflection:
+**Scattered reflection from rough surfaces**
 
-**Specular Reflection** (Mirror-like):
-- Smooth surface
-- Parallel incident rays → parallel reflected rays
-- Forms clear images
+When light hits a rough surface, we get **diffuse reflection**.
 
-**Diffuse Reflection** (Matte):
-- Rough surface
-- Parallel incident rays → scattered reflected rays
-- No clear image formed
+## Characteristics:
 
-## Plane Mirror Sign Convention:
+**Rough Surface** 🏔️
+- The surface is bumpy at a microscopic level
+- Examples: paper, walls, unpolished wood, fabric, your skin
+
+**Parallel Rays Scatter** →↗→↖→
+- When parallel incident rays hit the surface...
+- They reflect in many different directions
+- Each ray STILL follows $\\theta_i = \\theta_r$ at its local surface!
+
+**No Clear Images** 🌁
+- Rays scatter in all directions
+- Information about the original scene gets scrambled
+- You can see the surface, but not a reflection in it
+
+## Why It Happens:
+
+The roughness means each point on the surface faces a different direction. The normals point in many different directions, so even parallel incident rays reflect at different angles because they're measured from different normals.
+
+**Result**: You can see the object itself (because light scatters to your eyes), but you don't see mirror-like reflections!
+
+## Key Insight:
+
+Both specular and diffuse reflection follow the **same law**: $\\theta_i = \\theta_r$
+
+The difference is just whether the surface is smooth (specular) or rough (diffuse) at the microscopic scale!
+      `
+    },
+    {
+      id: 'plane-mirror-sign-convention',
+      type: 'text' as const,
+      content: `
+# Plane Mirror Sign Convention
+
+Let's apply what we learned to **plane mirrors** (flat mirrors with specular reflection).
+
+## Sign Convention Rules:
 
 For a plane mirror:
-- Object distance: $d_o$ = positive (in front of mirror)
-- Image distance: $d_i$ = negative (behind mirror, virtual)
+- **Object distance**: $d_o$ = positive (in front of mirror)
+- **Image distance**: $d_i$ = negative (behind mirror, virtual)
 - Image is same distance behind mirror as object is in front
 - $|d_i| = d_o$ but $d_i = -d_o$ (negative!)
+
+## Why Negative?
+
+The image forms *behind* the mirror where light doesn't actually go. This makes it a **virtual image**, indicated by the negative sign.
+
+Remember our sign convention from Part 2: the direction light travels is positive. Since light doesn't actually travel behind the mirror, that region is negative!
       `
     },
     {
