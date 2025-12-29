@@ -143,102 +143,47 @@ $$d_i = -d_o$$
       `
     },
     {
-      id: 'plane-mirror-example',
-      type: 'text' as const,
-      content: `
-**Plane Mirror Example** 🔍
-
-Let's work through a complete example with sign conventions:
-
-## Problem:
-A candle is placed 30 cm in front of a plane mirror. Where is the image located?
-
-## Solution:
-
-**Step 1: Establish the coordinate system**
-- Light travels from candle → mirror
-- Positive direction: toward and past the mirror (→)
-- Negative direction: away from mirror, behind it (←)
-
-**Step 2: Identify given values**
-- Object distance: $d_o = +30$ cm (in front of mirror, positive)
-- Mirror type: plane (flat)
-
-**Step 3: Apply plane mirror properties**
-
-For a plane mirror:
-$$d_i = -d_o$$
-
-Why negative? The image forms *behind* the mirror (in the negative direction), where light doesn't actually go!
-
-$$d_i = -30 \\text{ cm}$$
-
-**Step 4: Interpret the result**
-
-- **Magnitude**: Image is 30 cm from mirror
-- **Sign**: Negative means it's behind the mirror
-- **Type**: Virtual image (light doesn't actually reach there)
-- **Orientation**: Upright (plane mirrors don't invert)
-- **Size**: Same as object (magnification = 1)
-
-## Visual Representation:
-
-\`\`\`
-         ←  |  →
-    Virtual |  Real
-            |
-    Image   |   Object
-      🕯️    |    🕯️
-      -30cm |   +30cm
-            |
-        [Mirror]
-\`\`\`
-
-**Key Insight**: The negative sign tells us the image is virtual!
-      `
-    },
-    {
       id: 'reflection-quiz',
       type: 'multiple-choice' as const,
       content: `
 **Quick Check: Reflection** ✓
 
-Apply what you've learned!
+Test your understanding of reflection concepts!
       `,
       exercise: {
         questions: [
           {
-            question: "A light ray hits a mirror at 25° from the normal. What is the angle of the reflected ray from the normal?",
+            question: "Where are angles measured from in the law of reflection?",
             options: [
-              "25°",
-              "65°",
-              "50°",
-              "90°"
-            ],
-            correctAnswer: 0,
-            explanation: "By the law of reflection, θᵢ = θᵣ. The angle of reflection equals the angle of incidence, both measured from the normal. So the reflected ray is also 25° from the normal."
-          },
-          {
-            question: "An object is 15 cm in front of a plane mirror. Where is the image located?",
-            options: [
-              "15 cm in front of the mirror",
-              "15 cm behind the mirror",
-              "30 cm behind the mirror",
-              "7.5 cm behind the mirror"
+              "From the surface of the mirror",
+              "From the normal (perpendicular to the surface)",
+              "From the optical axis",
+              "From the incident ray"
             ],
             correctAnswer: 1,
-            explanation: "For a plane mirror, the image appears the same distance behind the mirror as the object is in front. Since dₒ = +15 cm, then dᵢ = -15 cm (negative because it's behind the mirror, making it virtual)."
+            explanation: "Angles in reflection are always measured from the normal, which is perpendicular to the surface. This is a key principle: θᵢ and θᵣ are both measured from the normal, not from the surface itself."
           },
           {
-            question: "In which type of reflection do parallel incident rays produce parallel reflected rays?",
+            question: "What happens to parallel incident rays in specular reflection?",
             options: [
-              "Diffuse reflection",
-              "Specular reflection",
-              "Total internal reflection",
-              "Both specular and diffuse"
+              "They scatter in all directions",
+              "They remain parallel after reflection",
+              "They converge to a single point",
+              "They are absorbed by the surface"
             ],
             correctAnswer: 1,
-            explanation: "Specular reflection occurs on smooth surfaces where parallel incident rays remain parallel after reflection. Diffuse reflection scatters light in many directions."
+            explanation: "In specular reflection (smooth surface), parallel incident rays stay parallel after reflection. This is because all points on the smooth surface have the same orientation, so all normals point in the same direction."
+          },
+          {
+            question: "For a plane mirror with an object on the left side, using Cartesian sign convention where light travels left to right, what are the correct signs?",
+            options: [
+              "Object distance is positive, image distance is negative",
+              "Object distance is negative, image distance is positive",
+              "Both distances are positive",
+              "Both distances are negative"
+            ],
+            correctAnswer: 1,
+            explanation: "With Cartesian convention where light travels left-to-right (negative to positive), the object on the left has negative distance (dₒ < 0) and the virtual image behind the mirror on the right has positive distance (dᵢ > 0). Remember: dᵢ = -dₒ"
           }
         ]
       }
