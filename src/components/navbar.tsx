@@ -13,15 +13,34 @@ export function Navbar() {
 
   const isPremium = session?.user?.role === 'PREMIUM'
 
-  // Fetch user's avatar when logged in
+  // Fetch user's avatar when logged in (cached in sessionStorage)
   useEffect(() => {
     if (session) {
+      // Try to get from cache first
+      const cached = sessionStorage.getItem('userAvatar')
+      if (cached) {
+        try {
+          setAvatarData(JSON.parse(cached))
+          return
+        } catch (e) {
+          // Invalid cache, fetch fresh
+        }
+      }
+      
+      // Fetch only if not cached
       fetch('/api/user/avatar')
         .then(res => res.json())
-        .then(data => setAvatarData(data.avatarData))
+        .then(data => {
+          setAvatarData(data.avatarData)
+          // Cache for this session
+          if (data.avatarData) {
+            sessionStorage.setItem('userAvatar', JSON.stringify(data.avatarData))
+          }
+        })
         .catch(err => console.error('Error fetching avatar:', err))
     } else {
       setAvatarData(null)
+      sessionStorage.removeItem('userAvatar')
     }
   }, [session])
 
