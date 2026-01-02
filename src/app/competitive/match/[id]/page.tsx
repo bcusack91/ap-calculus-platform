@@ -150,6 +150,10 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
     
     // Get AI difficulty and calculate delay
     const aiDifficulty = (matchState.gameData as any)?.aiDifficulty || 'medium';
+    const currentQuestion = matchState.questions[opponentQuestionIndex];
+    const isMultipleChoice = currentQuestion?.type === 'multiple-choice';
+    
+    // Base timings for unit circle questions
     const difficultySettings = {
       easy: { min: 4000, max: 6000, accuracy: 0.70 },
       medium: { min: 2500, max: 4500, accuracy: 0.83 },
@@ -157,9 +161,13 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
     };
     
     const settings = difficultySettings[aiDifficulty as keyof typeof difficultySettings];
-    const delay = settings.min + Math.random() * (settings.max - settings.min);
     
-    console.log(`🤖 Scheduling AI answer in ${Math.round(delay)}ms for AI question ${opponentQuestionIndex}`);
+    // For multiple-choice physics questions, increase timing by 50%
+    const minTime = isMultipleChoice ? settings.min * 1.5 : settings.min;
+    const maxTime = isMultipleChoice ? settings.max * 1.5 : settings.max;
+    const delay = minTime + Math.random() * (maxTime - minTime);
+    
+    console.log(`🤖 Scheduling AI answer in ${Math.round(delay)}ms for AI question ${opponentQuestionIndex} (${isMultipleChoice ? 'multiple-choice' : 'unit-circle'})`);
     
     // Schedule AI answer
     const timeoutId = setTimeout(async () => {
