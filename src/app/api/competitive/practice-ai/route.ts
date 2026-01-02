@@ -68,8 +68,8 @@ export async function POST(req: NextRequest) {
         break
     }
 
-    // Generate questions for the match
-    const questions = generateMatchQuestions(10)
+    // Generate questions for the match based on selected topic
+    const questions = generateMatchQuestions(10, topicSlug)
     
     // Create practice match in database
     const competitiveMatch = await prisma.competitiveMatch.create({
