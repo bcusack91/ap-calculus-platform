@@ -761,8 +761,10 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
           }
           className="px-6 py-3 rounded-lg font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700"
         >
-          {currentSectionIndex === sections.length - 1 && lessonPart === 6
+          {currentSectionIndex === sections.length - 1 && lessonPart === 7 && topicSlug === 'reflection-refraction'
             ? '✅ Lesson Complete!'
+            : currentSectionIndex === sections.length - 1 && lessonPart === 6 && (topicSlug === 'factoring-algebra1' || topicSlug === 'reflection-refraction')
+            ? 'Continue to Next Part →'
             : currentSectionIndex === sections.length - 1 && lessonPart === 1 && topicSlug === 'the-unit-circle'
             ? 'On to Part 2 →'
             : currentSectionIndex === sections.length - 1 && lessonPart === 2 && topicSlug === 'the-unit-circle'
@@ -771,7 +773,7 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
             ? 'Continue to Part 4 →' 
             : currentSectionIndex === sections.length - 1 && lessonPart === 4 && topicSlug === 'the-unit-circle'
             ? '🎮 Enter Competitive Mode →'
-            : currentSectionIndex === sections.length - 1 && lessonPart < 6
+            : currentSectionIndex === sections.length - 1 && lessonPart < 7
             ? 'Continue to Next Part →'
             : 'Next →'}
         </button>
