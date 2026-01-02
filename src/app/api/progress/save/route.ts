@@ -14,6 +14,12 @@ export async function POST(request: Request) {
     }
 
     const { topicSlug, topicId, lessonPart, completedSections, masteryLevel, timeSpent } = await request.json()
+    
+    console.log('📊 [DB QUERY] Progress save:', {
+      method: topicId ? 'CACHED_ID' : 'SLUG_LOOKUP',
+      topicId: topicId || 'N/A',
+      topicSlug: topicSlug || 'N/A'
+    })
 
     if (!topicSlug && !topicId) {
       return NextResponse.json(

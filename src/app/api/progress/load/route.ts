@@ -22,6 +22,8 @@ export async function GET(request: Request) {
         { status: 400 }
       )
     }
+    
+    console.log('📊 [DB QUERY] Progress load: Looking up topic by slug:', topicSlug)
 
     // Get topic ID from slug
     const topic = await prisma.topic.findUnique({

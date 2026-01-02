@@ -61,6 +61,7 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
   const [unlockedParts, setUnlockedParts] = useState<Set<1 | 2 | 3 | 4 | 5 | 6 | 7>>(new Set([1])) // Part 1 always unlocked
   const [cachedTopicId, setCachedTopicId] = useState<string | null>(null)
   const [pendingSaveCount, setPendingSaveCount] = useState(0)
+  const queryCountRef = useRef(0) // Track API calls
 
   // Update URL when lesson part changes
   const updateLessonPart = (newPart: 1 | 2 | 3 | 4 | 5 | 6 | 7) => {
@@ -76,6 +77,10 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
   // Save progress to database
   const saveProgress = async (forceTopicId?: string) => {
     if (!session?.user) return // Only save if user is logged in
+    
+    queryCountRef.current++
+    const usingCache = !!(forceTopicId || cachedTopicId)
+    console.log(`🔍 [Query #${queryCountRef.current}] Saving progress - ${usingCache ? '✅ Using cached ID' : '⚠️ Looking up by slug'}`)
     
     try {
       // Calculate mastery level based on overall progress
@@ -132,12 +137,15 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
       if (!session?.user || progressLoaded) return
       
       try {
+        queryCountRef.current++
+        console.log(`🔍 [Query #${queryCountRef.current}] Loading progress`)
         const response = await fetch(`/api/progress/load?topicSlug=${topicSlug}`)
         const data = await response.json()
         
         // Cache topicId to avoid future lookups
         if (data.topicId) {
           setCachedTopicId(data.topicId)
+          console.log('✅ Topic ID cached:', data.topicId)
         }
         
         if (data.exists && data.progress) {
