@@ -420,6 +420,33 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
         setCurrentSectionIndex(0)
         setCompletedSections(new Set())
         window.scrollTo({ top: 0, behavior: 'smooth' })
+      } else if (lessonPart === 7 && topicSlug === 'reflection-refraction') {
+        // On final page of part 7 for reflection-refraction, save progress then go to competitive mode
+        const finalSave = async () => {
+          if (session?.user) {
+            try {
+              // Mark all sections as complete and save with mastery 1.0
+              const allSections = new Set(sections.map((_, i) => i))
+              setCompletedSections(allSections)
+              
+              await fetch('/api/progress/save', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                  topicSlug,
+                  lessonPart: 7,
+                  completedSections: Array.from(allSections),
+                  masteryLevel: 1.0, // Full mastery
+                  timeSpent: 0,
+                }),
+              })
+            } catch (error) {
+              console.error('Failed to save final progress:', error)
+            }
+          }
+          router.push('/competitive')
+        }
+        finalSave()
       } else if (lessonPart === 7) {
         // On final page of part 7, mark as 100% complete
         setCompletedSections(new Set(sections.map((_, i) => i)))
@@ -770,6 +797,8 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
           className="px-6 py-3 rounded-lg font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700"
         >
           {currentSectionIndex === sections.length - 1 && lessonPart === 7 && topicSlug === 'reflection-refraction'
+            ? '🎮 Enter Competitive Mode →'
+            : currentSectionIndex === sections.length - 1 && lessonPart === 7 && topicSlug !== 'reflection-refraction'
             ? '✅ Lesson Complete!'
             : currentSectionIndex === sections.length - 1 && lessonPart === 6 && (topicSlug === 'factoring-algebra1' || topicSlug === 'reflection-refraction')
             ? 'Continue to Next Part →'
