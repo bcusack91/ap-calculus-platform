@@ -766,10 +766,7 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
 
         <button
           onClick={handleNext}
-          disabled={
-            (currentSectionIndex === sections.length - 1 && lessonPart === 6) || 
-            !canProceedToNext
-          }
+          disabled={!canProceedToNext}
           className="px-6 py-3 rounded-lg font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700"
         >
           {currentSectionIndex === sections.length - 1 && lessonPart === 7 && topicSlug === 'reflection-refraction'
