@@ -33,23 +33,9 @@ Notice: $n$ increases as wavelength **decreases**!
 
 ## White Light Through a Prism
 
-\`\`\`
-        White light
-            ↓
-       ┌────╱
-       │   ╱  ← prism
-       └──╱
-         ╱ ← red (bends least)
-        ╱
-       ╱ ← orange
-      ╱
-     ╱ ← yellow
-    ╱
-   ╱ ← green
-  ╱
- ╱ ← blue
-╱ ← violet (bends most)
-\`\`\`
+<div style="text-align: center; margin: 20px 0;">
+  <img src="/optics/prism-dispersion.svg" alt="White light dispersing through a prism" style="max-width: 100%; height: auto;" />
+</div>
 
 **Each color refracts at a slightly different angle!**
 
