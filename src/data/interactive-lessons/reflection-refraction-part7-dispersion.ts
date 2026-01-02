@@ -67,19 +67,9 @@ Rainbows combine refraction, dispersion, and total internal reflection!
 
 ## How Rainbows Form
 
-**Step-by-Step Process in a Raindrop:**
-
-\`\`\`
-   Sunlight (white)
-        ↓
-    ┌───┴───┐
-    │   ●   │  ← raindrop
-    │  ╱ ╲  │
-    └─╱───╲─┘
-     ╱     ╲
-   Red    Violet
-(to your eye)
-\`\`\`
+<div style="text-align: center; margin: 20px 0;">
+  <img src="/optics/rainbow-raindrop.svg" alt="Light path through a raindrop creating a rainbow" style="max-width: 100%; height: auto;" />
+</div>
 
 **1. Refraction (entering drop)**
 - White sunlight enters raindrop
@@ -114,19 +104,9 @@ You see a rainbow when:
 
 All raindrops at 42° from the sun-you line form a circle!
 
-\`\`\`
-        You
-         ●
-        ╱│╲
-      ╱  │  ╲  42°
-    ╱    │    ╲
-   ●     ↓     ●  ← drops at 42°
-    ╲    Sun  ╱
-      ╲  │  ╱
-        ╲│╱
-         ●
-   [Forms a cone → we see as arc]
-\`\`\`
+<div style="text-align: center; margin: 20px 0;">
+  <img src="/optics/rainbow-geometry.svg" alt="Why rainbows form circular arcs" style="max-width: 100%; height: auto;" />
+</div>
 
 ## Double Rainbows 🌈🌈
 
@@ -153,71 +133,102 @@ For rainbow analysis:
       `
     },
     {
-      id: 'practice-and-summary',
+      id: 'dispersion-quiz',
+      type: 'multiple-choice' as const,
+      content: `
+**Master Check: Reflection & Refraction Complete** ✓
+
+Final quiz covering the entire topic!
+      `,
+      exercise: {
+        questions: [
+          {
+            question: "Light travels at 2.25 × 10⁸ m/s in a material. What is the material's index of refraction?",
+            options: [
+              "n = 0.75",
+              "n = 1.33",
+              "n = 1.50",
+              "n = 2.25"
+            ],
+            correctAnswer: 1,
+            explanation: "n = c/v = (3.0 × 10⁸)/(2.25 × 10⁸) = 1.33. This is water! Remember: higher n means light travels slower in the material."
+          },
+          {
+            question: "Light in glass (n=1.5) hits a glass-air boundary at 25° from normal. What is the refraction angle in air (n=1.0)?",
+            options: [
+              "16.6°",
+              "25.0°",
+              "39.3°",
+              "50.0°"
+            ],
+            correctAnswer: 2,
+            explanation: "Using Snell's Law: (1.5)sin(25°) = (1.0)sin(θ₂). Solving: sin(θ₂) = 0.634, so θ₂ = 39.3°. Light bends AWAY from normal when entering a less dense medium."
+          },
+          {
+            question: "What is the critical angle for light going from diamond (n=2.42) to air (n=1.0)?",
+            options: [
+              "24.4°",
+              "41.8°",
+              "48.8°",
+              "Cannot be calculated"
+            ],
+            correctAnswer: 0,
+            explanation: "θc = sin⁻¹(n₂/n₁) = sin⁻¹(1.0/2.42) = 24.4°. This small critical angle is why diamonds sparkle so much - light easily undergoes total internal reflection!"
+          },
+          {
+            question: "Light in water (n=1.33) hits the water-air surface at 55° from normal. The critical angle is 48.8°. What happens?",
+            options: [
+              "Normal refraction into air at 55°",
+              "Total internal reflection occurs",
+              "Light is absorbed by the water",
+              "Light refracts at 90° along the surface"
+            ],
+            correctAnswer: 1,
+            explanation: "Since 55° > 48.8° (critical angle), total internal reflection occurs! ALL the light reflects back into the water. No light escapes to air."
+          },
+          {
+            question: "Why does blue light bend more than red light when passing through a prism?",
+            options: [
+              "Blue light has more energy",
+              "Blue light has higher index of refraction (n)",
+              "Blue light travels faster",
+              "Blue light has longer wavelength"
+            ],
+            correctAnswer: 1,
+            explanation: "Blue light (shorter wavelength ≈470nm) has a higher index of refraction than red light (longer wavelength ≈700nm). From Snell's Law, higher n means smaller refraction angle (bends more toward normal)."
+          },
+          {
+            question: "In a primary rainbow, why is red on the outside and violet on the inside of the arc?",
+            options: [
+              "Red light travels faster than violet",
+              "Red exits raindrops at 42° while violet exits at 39.5°",
+              "Red undergoes more reflections",
+              "Violet light is absorbed more"
+            ],
+            correctAnswer: 1,
+            explanation: "Red light exits at a larger angle (42°) from the sun-observer line, placing it on the outer arc. Violet exits at 39.5° (smaller angle), placing it on the inner arc. Each color forms its own cone!"
+          },
+          {
+            question: "A light ray hits a mirror 3 cm to the right of the optical axis and reflects to cross the axis 6 cm to the right. Using Cartesian sign convention with rightward as positive, what is x₂?",
+            options: [
+              "x₂ = -6 cm",
+              "x₂ = -3 cm",
+              "x₂ = +3 cm",
+              "x₂ = +6 cm"
+            ],
+            correctAnswer: 3,
+            explanation: "x₂ = +6 cm. Using Cartesian convention: the crossing point is 6 cm to the right of the mirror, and light is traveling right (positive direction), so x₂ is positive."
+          }
+        ]
+      }
+    },
+    {
+      id: 'summary',
       type: 'text' as const,
       content: `
-**Practice Problems & Summary** 📝
+**Summary of Key Concepts** 📚
 
-## Quick Practice Problems
-
-**Problem 1: Sign Convention**
-
-A light ray hits a mirror 2 cm to the right of the optical axis. The reflected ray crosses the axis 5 cm to the right of the mirror. Using our sign convention:
-
-(a) What is $x_1$ (position where ray hits)?
-(b) What is $x_2$ (position where it crosses axis)?
-
-**Problem 2: Index of Refraction**
-
-Light travels at $2.25 \\times 10^8$ m/s in a material. What is the material's index of refraction?
-
-**Problem 3: Snell's Law**
-
-Light in glass ($n = 1.5$) hits a glass-air boundary at 25° from normal. Find the refraction angle in air.
-
-**Problem 4: Critical Angle**
-
-Find the critical angle for light going from diamond ($n = 2.42$) to air ($n = 1.0$).
-
-**Problem 5: Total Internal Reflection**
-
-Light in water ($n = 1.33$) hits the water-air surface at 55°. Does TIR occur?
-
----
-
-## Solutions
-
-**Solution 1:**
-- (a) $x_1 = +2$ cm (right of axis is positive)
-- (b) $x_2 = +5$ cm (right of mirror, light going right)
-
-**Solution 2:**
-$$n = \\frac{c}{v} = \\frac{3.0 \\times 10^8}{2.25 \\times 10^8} = 1.33$$
-
-The material is water!
-
-**Solution 3:**
-$$n_1 \\sin\\theta_1 = n_2 \\sin\\theta_2$$
-$$(1.5)\\sin(25°) = (1.0)\\sin\\theta_2$$
-$$\\sin\\theta_2 = 0.634$$
-$$\\theta_2 = 39.3°$$
-
-Light bends away from normal (less dense medium).
-
-**Solution 4:**
-$$\\theta_c = \\sin^{-1}\\left(\\frac{n_2}{n_1}\\right) = \\sin^{-1}\\left(\\frac{1.0}{2.42}\\right) = 24.4°$$
-
-This is why diamonds sparkle so much!
-
-**Solution 5:**
-First find critical angle:
-$$\\theta_c = \\sin^{-1}\\left(\\frac{1.0}{1.33}\\right) = 48.8°$$
-
-Since $55° > 48.8°$: **YES, TIR occurs!** Light reflects back into water.
-
----
-
-## Summary of Key Concepts
+You've completed the full Reflection & Refraction topic! Here's what you've mastered:
 
 ### Sign Convention (Cartesian)
 - **Positive direction**: Direction light travels
