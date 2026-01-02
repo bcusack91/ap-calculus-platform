@@ -447,6 +447,7 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
   const currentSectionRequiresCompletion = 
     currentSection.type === 'input-boxes' || 
     currentSection.type === 'dropdown-select' ||
+    currentSection.type === 'multiple-choice' ||
     currentSection.type === 'reference-angle-quiz' ||
     currentSection.type === 'factoring-practice' ||
     (currentSection.type === 'text' && currentSection.content.includes('[UNIT_CIRCLE_GAME]')) ||
