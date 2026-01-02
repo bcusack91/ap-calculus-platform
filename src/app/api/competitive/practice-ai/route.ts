@@ -69,7 +69,9 @@ export async function POST(req: NextRequest) {
     }
 
     // Generate questions for the match based on selected topic
+    console.log('Generating questions for topic:', topicSlug)
     const questions = generateMatchQuestions(10, topicSlug)
+    console.log('Generated questions:', questions.length, 'First question type:', questions[0]?.type)
     
     // Create practice match in database
     const competitiveMatch = await prisma.competitiveMatch.create({
@@ -109,6 +111,10 @@ export async function POST(req: NextRequest) {
 
   } catch (error) {
     console.error('Error creating AI practice match:', error)
-    return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
+    console.error('Error details:', JSON.stringify(error, null, 2))
+    return NextResponse.json({ 
+      error: 'Internal server error', 
+      details: error instanceof Error ? error.message : 'Unknown error' 
+    }, { status: 500 })
   }
 }

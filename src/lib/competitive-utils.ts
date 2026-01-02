@@ -69,13 +69,16 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
   // If topic is reflection-refraction, use that question bank
   if (topicSlug === 'reflection-refraction') {
     const questions = getQuestionSet(totalQuestions)
-    // Map to consistent format with answerIndex
-    return questions.map((q, i) => ({
-      ...q,
-      id: i,
-      answerIndex: q.correctAnswer, // Map correctAnswer to answerIndex for consistency
-      type: 'multiple-choice'
-    }))
+    // Map to consistent format with answerIndex and remove non-serializable fields
+    return questions.map((q, i) => {
+      const { generateQuestion, ...serializableQuestion } = q as any
+      return {
+        ...serializableQuestion,
+        id: i,
+        answerIndex: q.correctAnswer, // Map correctAnswer to answerIndex for consistency
+        type: 'multiple-choice'
+      }
+    })
   }
   
   // If cumulative, get mixed questions from both topics
@@ -146,12 +149,15 @@ function generateCumulativeQuestions(totalQuestions: number): any[] {
   
   // Get questions from reflection-refraction
   const reflectionCount = totalQuestions - unitCircleCount
-  const reflectionQuestions = getQuestionSet(reflectionCount).map((q, i) => ({
-    ...q,
-    id: unitCircleCount + i,
-    answerIndex: q.correctAnswer,
-    type: 'multiple-choice'
-  }))
+  const reflectionQuestions = getQuestionSet(reflectionCount).map((q, i) => {
+    const { generateQuestion, ...serializableQuestion } = q as any
+    return {
+      ...serializableQuestion,
+      id: unitCircleCount + i,
+      answerIndex: q.correctAnswer,
+      type: 'multiple-choice'
+    }
+  })
   
   // Merge and shuffle
   questions.push(...unitCircleQuestions, ...reflectionQuestions)
