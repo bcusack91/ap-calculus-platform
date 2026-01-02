@@ -55,8 +55,8 @@ export async function POST(req: NextRequest) {
     const match = findMatch(user.id, mmr, topicSlug)
 
     if (match) {
-      // Generate questions for the match
-      const questions = generateMatchQuestions(10);
+      // Generate questions for the match with topic-specific content
+      const questions = generateMatchQuestions(10, topicSlug);
       
       // Create match in database
       const competitiveMatch = await prisma.competitiveMatch.create({

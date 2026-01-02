@@ -44,9 +44,24 @@ export async function GET(req: NextRequest) {
 
     // Check if already unlocked
     if (user.competitiveProfile?.competitiveModeUnlocked) {
+      // Get all completed topics for the user
+      const completedTopics = await prisma.topicProgress.findMany({
+        where: {
+          userId: user.id,
+          status: { in: ['COMPLETED', 'MASTERED'] },
+          masteryLevel: { gte: 0.8 }
+        },
+        include: {
+          topic: { select: { slug: true } }
+        }
+      })
+      
+      const completedTopicSlugs = completedTopics.map(tp => tp.topic.slug)
+      
       return NextResponse.json({
         unlocked: true,
-        profile: user.competitiveProfile
+        profile: user.competitiveProfile,
+        completedTopics: completedTopicSlugs
       })
     }
 
@@ -73,7 +88,8 @@ export async function GET(req: NextRequest) {
       return NextResponse.json({
         unlocked: true,
         justUnlocked: true,
-        profile
+        profile,
+        completedTopics: ['the-unit-circle']
       })
     }
 

@@ -16,10 +16,17 @@ interface UnitCirclePosition {
 
 interface Question {
   id: number;
-  type: 'find-angle' | 'find-coordinate';
-  target: UnitCirclePosition;
-  prompt: string;
-  answerIndex: number; // Index in UNIT_CIRCLE_POSITIONS array
+  type?: 'find-angle' | 'find-coordinate' | 'multiple-choice';
+  target?: UnitCirclePosition;
+  prompt?: string;
+  answerIndex?: number; // Index in UNIT_CIRCLE_POSITIONS array for unit circle, or correct option for multiple-choice
+  // Multiple-choice specific fields
+  question?: string;
+  options?: string[];
+  correctAnswer?: string;
+  explanation?: string;
+  difficulty?: 'easy' | 'medium' | 'hard';
+  category?: string;
 }
 
 interface MatchState {
@@ -83,18 +90,19 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
   const [player1Emotion, setPlayer1Emotion] = useState<'neutral' | 'happy' | 'sad'>('neutral');
   const [player2Emotion, setPlayer2Emotion] = useState<'neutral' | 'happy' | 'sad'>('neutral');
 
-  // Render math in prompt
-  const renderPrompt = (prompt: string) => {
+  // Render math in prompt (for both unit circle and multiple-choice)
+  const renderPrompt = (text: string) => {
     // Check if prompt contains LaTeX (backslashes or \left, \right, \frac, etc.)
-    if (prompt.includes('\\')) {
+    if (text.includes('\\')) {
       try {
-        // Extract the coordinate part - everything between "coordinate " and end
-        const match = prompt.match(/coordinate\s+(.+)$/);
+        // Try to render the LaTeX content
+        // First check if it's the unit circle coordinate format
+        const match = text.match(/coordinate\s+(.+)$/);
         if (match) {
           const coordLatex = match[1].trim();
           const rendered = katex.renderToString(coordLatex, {
             throwOnError: false,
-            displayMode: true, // Use display mode for better fraction rendering
+            displayMode: true,
           });
           return (
             <div className="flex items-center justify-center gap-2">
@@ -103,12 +111,19 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
             </div>
           );
         }
+        
+        // For multiple-choice questions, render inline LaTeX
+        const rendered = katex.renderToString(text, {
+          throwOnError: false,
+          displayMode: false,
+        });
+        return <span dangerouslySetInnerHTML={{ __html: rendered }} />;
       } catch (e) {
         console.error('KaTeX render error:', e);
-        console.error('Prompt:', prompt);
+        console.error('Text:', text);
       }
     }
-    return <span>{prompt}</span>;
+    return <span>{text}</span>;
   };
 
   // Fetch initial match state
@@ -227,8 +242,16 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
   };
 
   const handlePositionClick = async (positionIndex: number) => {
-    console.log('=== CLICK HANDLER TRIGGERED ===');
-    console.log('Position clicked:', positionIndex);
+    await handleAnswer(positionIndex);
+  };
+
+  const handleOptionSelect = async (optionIndex: number) => {
+    await handleAnswer(optionIndex);
+  };
+
+  const handleAnswer = async (answerIndex: number) => {
+    console.log('=== ANSWER HANDLER TRIGGERED ===');
+    console.log('Answer index:', answerIndex);
     console.log('Match state exists:', !!matchState);
     console.log('Is submitting:', isSubmitting);
     console.log('Match status:', matchState?.status);
@@ -253,8 +276,8 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
     const currentQuestion = matchState.questions[playerQuestionIndex];
     
     console.log('Current question:', currentQuestion);
-    console.log('Clicked position index:', positionIndex);
-    console.log('Correct answer index:', currentQuestion.answerIndex);
+    console.log('Answered with index:', answerIndex);
+    console.log('Correct answer:', currentQuestion.answerIndex || currentQuestion.correctAnswer);
     
     // Check if this player already answered the current question
     const alreadyAnswered = isPlayer1 ? 
@@ -267,7 +290,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
     }
 
     console.log('Setting selected position and submitting...');
-    setSelectedPosition(positionIndex);
+    setSelectedPosition(answerIndex);
     setIsSubmitting(true);
 
     try {
@@ -279,7 +302,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           questionIndex: playerQuestionIndex,
-          answerIndex: positionIndex,
+          answerIndex: answerIndex,
         }),
       });
 
@@ -517,9 +540,9 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
           {/* Center - Game Area */}
           <div className="space-y-6">
         {/* Question prompt */}
-        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 mb-6 text-center" key={`q-${playerQuestionIndex}-${currentQuestion.prompt}`}>
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4" key={currentQuestion.prompt}>
-            {renderPrompt(currentQuestion.prompt)}
+        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 mb-6 text-center" key={`q-${playerQuestionIndex}-${currentQuestion.prompt || currentQuestion.question}`}>
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4" key={currentQuestion.prompt || currentQuestion.question}>
+            {renderPrompt(currentQuestion.prompt || currentQuestion.question || '')}
           </h2>
           
           {isSubmitting && (
@@ -537,22 +560,90 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
           )}
         </div>
 
-        {/* Unit Circle */}
-        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8">
-          <div className="flex justify-center">
-            <CompetitiveUnitCircle
-              positions={UNIT_CIRCLE_POSITIONS}
-              onPositionClick={handlePositionClick}
-              selectedPosition={selectedPosition}
-              correctPosition={
-                correctAnswerIndex !== null ? correctAnswerIndex :
-                (feedback === 'correct' ? selectedPosition : null)
-              }
-              showFeedback={feedback !== null}
-              disabled={isSubmitting}
-            />
+        {/* Unit Circle or Multiple Choice */}
+        {currentQuestion.type === 'multiple-choice' ? (
+          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8">
+            <div className="space-y-3 max-w-2xl mx-auto">
+              {currentQuestion.options?.map((option, index) => {
+                const isSelected = selectedPosition === index;
+                const isCorrect = index === currentQuestion.answerIndex;
+                const showCorrect = feedback !== null && isCorrect;
+                const showIncorrect = feedback !== null && isSelected && !isCorrect;
+                
+                return (
+                  <button
+                    key={index}
+                    onClick={() => handleOptionSelect(index)}
+                    disabled={isSubmitting || feedback !== null}
+                    className={`w-full p-4 rounded-lg border-2 text-left transition-all ${
+                      showCorrect
+                        ? 'border-green-500 bg-green-50 dark:bg-green-900/20'
+                        : showIncorrect
+                        ? 'border-red-500 bg-red-50 dark:bg-red-900/20'
+                        : isSelected
+                        ? 'border-purple-500 bg-purple-50 dark:bg-purple-900/20'
+                        : 'border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-600'
+                    } ${
+                      isSubmitting || feedback !== null
+                        ? 'cursor-not-allowed opacity-75'
+                        : 'cursor-pointer hover:shadow-md'
+                    }`}
+                  >
+                    <div className="flex items-center gap-3">
+                      <div className={`w-8 h-8 rounded-full border-2 flex items-center justify-center font-bold ${
+                        showCorrect
+                          ? 'border-green-500 text-green-600 dark:text-green-400'
+                          : showIncorrect
+                          ? 'border-red-500 text-red-600 dark:text-red-400'
+                          : isSelected
+                          ? 'border-purple-500 text-purple-600 dark:text-purple-400'
+                          : 'border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-400'
+                      }`}>
+                        {String.fromCharCode(65 + index)}
+                      </div>
+                      <div className="flex-1 text-gray-900 dark:text-white">
+                        {renderPrompt(option)}
+                      </div>
+                      {showCorrect && (
+                        <div className="text-green-600 dark:text-green-400 text-xl">✓</div>
+                      )}
+                      {showIncorrect && (
+                        <div className="text-red-600 dark:text-red-400 text-xl">✗</div>
+                      )}
+                    </div>
+                  </button>
+                );
+              })}
+            </div>
+            
+            {feedback && currentQuestion.explanation && (
+              <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
+                <p className="text-sm font-semibold text-blue-900 dark:text-blue-300 mb-2">
+                  Explanation:
+                </p>
+                <p className="text-sm text-blue-800 dark:text-blue-400">
+                  {currentQuestion.explanation}
+                </p>
+              </div>
+            )}
           </div>
-        </div>
+        ) : (
+          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8">
+            <div className="flex justify-center">
+              <CompetitiveUnitCircle
+                positions={UNIT_CIRCLE_POSITIONS}
+                onPositionClick={handlePositionClick}
+                selectedPosition={selectedPosition}
+                correctPosition={
+                  correctAnswerIndex !== null ? correctAnswerIndex :
+                  (feedback === 'correct' ? selectedPosition : null)
+                }
+                showFeedback={feedback !== null}
+                disabled={isSubmitting}
+              />
+            </div>
+          </div>
+        )}
       </div>
 
           {/* Right Panel - Player 2 */}

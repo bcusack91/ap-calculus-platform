@@ -1,5 +1,7 @@
 // Utility functions for competitive match gameplay
 
+import { getQuestionSet, type CompetitiveQuestion } from '@/data/competitive-questions/reflection-refraction-bank'
+
 interface UnitCirclePosition {
   angle: number;
   x: number;
@@ -59,7 +61,29 @@ function formatCoordinate(x: number, y: number): string {
  * Generate 10 random questions for a match
  * Ensures variety by mixing angle and coordinate questions
  */
-export function generateMatchQuestions(totalQuestions: number = 10): Question[] {
+/**
+ * Generate 10 random questions for a match
+ * Ensures variety by mixing angle and coordinate questions
+ */
+export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: string): any[] {
+  // If topic is reflection-refraction, use that question bank
+  if (topicSlug === 'reflection-refraction') {
+    const questions = getQuestionSet(totalQuestions)
+    // Map to consistent format with answerIndex
+    return questions.map((q, i) => ({
+      ...q,
+      id: i,
+      answerIndex: q.correctAnswer, // Map correctAnswer to answerIndex for consistency
+      type: 'multiple-choice'
+    }))
+  }
+  
+  // If cumulative, get mixed questions from both topics
+  if (topicSlug === 'cumulative') {
+    return generateCumulativeQuestions(totalQuestions)
+  }
+  
+  // Default: unit circle questions
   const questions: Question[] = [];
   const usedIndices = new Set<number>();
 
@@ -107,6 +131,41 @@ export function generateMatchQuestions(totalQuestions: number = 10): Question[] 
   }
 
   return questions;
+}
+
+/**
+ * Generate cumulative questions from multiple topics
+ */
+function generateCumulativeQuestions(totalQuestions: number): any[] {
+  const questions: any[] = []
+  const questionsPerTopic = Math.floor(totalQuestions / 2)
+  
+  // Get questions from unit circle
+  const unitCircleCount = questionsPerTopic
+  const unitCircleQuestions = generateMatchQuestions(unitCircleCount, 'the-unit-circle')
+  
+  // Get questions from reflection-refraction
+  const reflectionCount = totalQuestions - unitCircleCount
+  const reflectionQuestions = getQuestionSet(reflectionCount).map((q, i) => ({
+    ...q,
+    id: unitCircleCount + i,
+    answerIndex: q.correctAnswer,
+    type: 'multiple-choice'
+  }))
+  
+  // Merge and shuffle
+  questions.push(...unitCircleQuestions, ...reflectionQuestions)
+  
+  // Shuffle the combined questions
+  for (let i = questions.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [questions[i], questions[j]] = [questions[j], questions[i]]
+  }
+  
+  // Re-index
+  questions.forEach((q, i) => q.id = i)
+  
+  return questions
 }
 
 /**

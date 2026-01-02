@@ -13,6 +13,8 @@ export default function CompetitivePage() {
   const [inQueue, setInQueue] = useState(false)
   const [queueStatus, setQueueStatus] = useState<any>(null)
   const [selectedMode, setSelectedMode] = useState('SPEED_RACE')
+  const [selectedTopic, setSelectedTopic] = useState<'the-unit-circle' | 'reflection-refraction' | 'cumulative'>('the-unit-circle')
+  const [completedTopics, setCompletedTopics] = useState<string[]>([])
   const [requirements, setRequirements] = useState<any>(null)
   const [showAIOptions, setShowAIOptions] = useState(false)
   const [aiDifficulty, setAiDifficulty] = useState<'easy' | 'medium' | 'hard'>('medium')
@@ -45,6 +47,7 @@ export default function CompetitivePage() {
       setUnlocked(data.unlocked)
       setProfile(data.profile)
       setRequirements(data.requirements)
+      setCompletedTopics(data.completedTopics || [])
       setLoading(false)
 
       if (data.justUnlocked) {
@@ -63,7 +66,7 @@ export default function CompetitivePage() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          topicSlug: 'the-unit-circle',
+          topicSlug: selectedTopic,
           gameMode: selectedMode
         })
       })
@@ -97,7 +100,7 @@ export default function CompetitivePage() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          topicSlug: 'the-unit-circle',
+          topicSlug: selectedTopic,
           gameMode: selectedMode,
           aiDifficulty: difficulty
         })
@@ -294,6 +297,81 @@ export default function CompetitivePage() {
             </div>
           </div>
         )}
+
+        {/* Topic Selection */}
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold mb-4 text-center">Select Topic</h2>
+          <div className="grid md:grid-cols-3 gap-4">
+            <button
+              onClick={() => setSelectedTopic('the-unit-circle')}
+              disabled={!completedTopics.includes('the-unit-circle')}
+              className={`p-6 rounded-xl transition-all ${
+                selectedTopic === 'the-unit-circle'
+                  ? 'ring-4 ring-purple-500 bg-white dark:bg-gray-800 shadow-xl'
+                  : 'bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl'
+              } ${
+                !completedTopics.includes('the-unit-circle')
+                  ? 'opacity-50 cursor-not-allowed'
+                  : 'cursor-pointer'
+              }`}
+            >
+              <div className="text-4xl mb-2">🔵</div>
+              <h3 className="text-xl font-bold mb-1">Unit Circle</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                Angles & Coordinates
+              </p>
+              {!completedTopics.includes('the-unit-circle') && (
+                <span className="text-xs text-red-500 mt-2 block">Not Completed</span>
+              )}
+            </button>
+
+            <button
+              onClick={() => setSelectedTopic('reflection-refraction')}
+              disabled={!completedTopics.includes('reflection-refraction')}
+              className={`p-6 rounded-xl transition-all ${
+                selectedTopic === 'reflection-refraction'
+                  ? 'ring-4 ring-purple-500 bg-white dark:bg-gray-800 shadow-xl'
+                  : 'bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl'
+              } ${
+                !completedTopics.includes('reflection-refraction')
+                  ? 'opacity-50 cursor-not-allowed'
+                  : 'cursor-pointer'
+              }`}
+            >
+              <div className="text-4xl mb-2">🌈</div>
+              <h3 className="text-xl font-bold mb-1">Reflection & Refraction</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                Optics & Light
+              </p>
+              {!completedTopics.includes('reflection-refraction') && (
+                <span className="text-xs text-red-500 mt-2 block">Not Completed</span>
+              )}
+            </button>
+
+            <button
+              onClick={() => setSelectedTopic('cumulative')}
+              disabled={completedTopics.length < 2}
+              className={`p-6 rounded-xl transition-all ${
+                selectedTopic === 'cumulative'
+                  ? 'ring-4 ring-purple-500 bg-gradient-to-br from-purple-500 to-blue-500 text-white shadow-xl'
+                  : 'bg-gradient-to-br from-purple-400 to-blue-400 text-white shadow-lg hover:shadow-xl'
+              } ${
+                completedTopics.length < 2
+                  ? 'opacity-50 cursor-not-allowed'
+                  : 'cursor-pointer'
+              }`}
+            >
+              <div className="text-4xl mb-2">🎯</div>
+              <h3 className="text-xl font-bold mb-1">Cumulative</h3>
+              <p className="text-sm text-white/90">
+                All Completed Topics
+              </p>
+              {completedTopics.length < 2 && (
+                <span className="text-xs text-red-200 mt-2 block">Complete 2+ Topics</span>
+              )}
+            </button>
+          </div>
+        </div>
 
         {/* Game Modes */}
         <div className="grid md:grid-cols-2 gap-6 mb-8">
