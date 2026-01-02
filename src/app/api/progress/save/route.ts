@@ -13,19 +13,25 @@ export async function POST(request: Request) {
       )
     }
 
-    const { topicSlug, lessonPart, completedSections, masteryLevel, timeSpent } = await request.json()
+    const { topicSlug, topicId, lessonPart, completedSections, masteryLevel, timeSpent } = await request.json()
 
-    if (!topicSlug) {
+    if (!topicSlug && !topicId) {
       return NextResponse.json(
-        { error: 'Topic slug is required' },
+        { error: 'Topic slug or ID is required' },
         { status: 400 }
       )
     }
 
-    // Get topic ID from slug
-    const topic = await prisma.topic.findUnique({
-      where: { slug: topicSlug }
-    })
+    let topic
+    // Use topicId if provided (cached), otherwise lookup by slug
+    if (topicId) {
+      topic = { id: topicId } // Skip DB query if we have the ID
+    } else {
+      // Get topic ID from slug (fallback)
+      topic = await prisma.topic.findUnique({
+        where: { slug: topicSlug }
+        })
+    }
 
     if (!topic) {
       return NextResponse.json(

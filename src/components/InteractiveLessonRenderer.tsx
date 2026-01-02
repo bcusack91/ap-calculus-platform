@@ -59,6 +59,8 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
   const [showPracticeMode, setShowPracticeMode] = useState(false)
   const [progressLoaded, setProgressLoaded] = useState(false)
   const [unlockedParts, setUnlockedParts] = useState<Set<1 | 2 | 3 | 4 | 5 | 6 | 7>>(new Set([1])) // Part 1 always unlocked
+  const [cachedTopicId, setCachedTopicId] = useState<string | null>(null)
+  const [pendingSaveCount, setPendingSaveCount] = useState(0)
 
   // Update URL when lesson part changes
   const updateLessonPart = (newPart: 1 | 2 | 3 | 4 | 5 | 6 | 7) => {
@@ -72,7 +74,7 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
   }
 
   // Save progress to database
-  const saveProgress = async () => {
+  const saveProgress = async (forceTopicId?: string) => {
     if (!session?.user) return // Only save if user is logged in
     
     try {
@@ -111,7 +113,8 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          topicSlug,
+          topicId: forceTopicId || cachedTopicId,
+          topicSlug: !forceTopicId && !cachedTopicId ? topicSlug : undefined, // Fallback to slug if no ID cached
           lessonPart,
           completedSections: Array.from(completedSections),
           masteryLevel,
@@ -131,6 +134,11 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
       try {
         const response = await fetch(`/api/progress/load?topicSlug=${topicSlug}`)
         const data = await response.json()
+        
+        // Cache topicId to avoid future lookups
+        if (data.topicId) {
+          setCachedTopicId(data.topicId)
+        }
         
         if (data.exists && data.progress) {
           // Determine lesson part from mastery level
@@ -181,13 +189,43 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
     
     loadProgress()
   }, [session, topicSlug, progressLoaded, urlPart])
+  
+  // Save progress when user leaves page
+  useEffect(() => {
+    const handleBeforeUnload = () => {
+      if (session?.user && completedSections.size > 0 && cachedTopicId) {
+        // Use sendBeacon for reliable save on page unload
+        const masteryLevel = calculateMasteryLevel()
+        navigator.sendBeacon('/api/progress/save', JSON.stringify({
+          topicId: cachedTopicId,
+          lessonPart,
+          completedSections: Array.from(completedSections),
+          masteryLevel,
+          timeSpent: 0,
+        }))
+      }
+    }
+    
+    window.addEventListener('beforeunload', handleBeforeUnload)
+    return () => window.removeEventListener('beforeunload', handleBeforeUnload)
+  }, [session, completedSections, cachedTopicId, lessonPart])
 
-  // Save progress whenever it changes
+  // Smart batched saves: Save every 3 sections or on part change
+  useEffect(() => {
+    if (progressLoaded && completedSections.size > 0) {
+      const shouldSave = completedSections.size % 3 === 0 // Every 3 sections
+      if (shouldSave) {
+        saveProgress()
+      }
+    }
+  }, [completedSections, progressLoaded])
+  
+  // Save on part transition
   useEffect(() => {
     if (progressLoaded && completedSections.size > 0) {
       saveProgress()
     }
-  }, [lessonPart, completedSections, progressLoaded])
+  }, [lessonPart, progressLoaded])
 
   // Get lesson data based on topic and part
   const lessonData = topicSlug === 'the-unit-circle' 
@@ -252,6 +290,36 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
   const { sections } = lessonData
   const currentSection = sections[currentSectionIndex]
   const progress = ((completedSections.size) / sections.length) * 100
+  
+  // Helper to calculate mastery level (needs sections defined)
+  const calculateMasteryLevel = () => {
+    let masteryLevel = 0
+    if (topicSlug === 'factoring-algebra1' || topicSlug === 'reflection-refraction') {
+      const partWeight = 1.0 / 7
+      const baseLevel = (lessonPart - 1) * partWeight
+      const progressInPart = (completedSections.size / sections.length) * partWeight
+      masteryLevel = baseLevel + progressInPart
+    } else {
+      if (lessonPart === 4 && completedSections.size === sections.length) {
+        masteryLevel = 1.0
+      } else if (lessonPart === 4) {
+        masteryLevel = 0.75 + (completedSections.size / sections.length) * 0.25
+      } else if (lessonPart === 3 && completedSections.size === sections.length) {
+        masteryLevel = 0.75
+      } else if (lessonPart === 3) {
+        masteryLevel = 0.5 + (completedSections.size / sections.length) * 0.25
+      } else if (lessonPart === 2 && completedSections.size === sections.length) {
+        masteryLevel = 0.5
+      } else if (lessonPart === 2) {
+        masteryLevel = 0.25 + (completedSections.size / sections.length) * 0.25
+      } else if (lessonPart === 1 && completedSections.size === sections.length) {
+        masteryLevel = 0.25
+      } else {
+        masteryLevel = (completedSections.size / sections.length) * 0.25
+      }
+    }
+    return masteryLevel
+  }
 
   const handleNext = () => {
     // Mark current section as complete when moving to next

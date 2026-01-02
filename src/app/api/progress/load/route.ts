@@ -25,7 +25,8 @@ export async function GET(request: Request) {
 
     // Get topic ID from slug
     const topic = await prisma.topic.findUnique({
-      where: { slug: topicSlug }
+      where: { slug: topicSlug },
+      select: { id: true } // Only select ID for efficiency
     })
 
     if (!topic) {
@@ -48,12 +49,14 @@ export async function GET(request: Request) {
     if (!progress) {
       return NextResponse.json({
         exists: false,
+        topicId: topic.id, // Return topicId for caching
         progress: null
       })
     }
 
     return NextResponse.json({
       exists: true,
+      topicId: topic.id, // Return topicId for caching
       progress: {
         status: progress.status,
         masteryLevel: progress.masteryLevel,
