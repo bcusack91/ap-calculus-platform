@@ -150,7 +150,8 @@ export default function CompetitivePage() {
 
   if (!unlocked) {
     const masteryPercent = Math.round((requirements?.masteryLevel || 0) * 100)
-    const partsCompleted = requirements?.partsCompleted || {}
+    const currentTopic = requirements?.currentTopic || 'the-unit-circle'
+    const topicName = currentTopic === 'the-unit-circle' ? 'Unit Circle' : 'Reflection & Refraction'
     
     return (
       <div className="min-h-screen flex items-center justify-center p-6">
@@ -158,14 +159,19 @@ export default function CompetitivePage() {
           <div className="text-center">
             <div className="text-6xl mb-6">🔒</div>
             <h1 className="text-4xl font-bold mb-4">Competitive Mode Locked</h1>
-            <p className="text-xl text-gray-600 dark:text-gray-400 mb-8">
-              Complete the Unit Circle module with 80%+ mastery to unlock competitive challenges!
+            <p className="text-xl text-gray-600 dark:text-gray-400 mb-4">
+              Complete any topic with 80%+ mastery to unlock competitive challenges!
+            </p>
+            <p className="text-md text-gray-500 dark:text-gray-500 mb-8">
+              Available topics: <strong>Unit Circle</strong> or <strong>Reflection & Refraction</strong>
             </p>
             
             {/* Progress Display */}
             <div className="mb-8">
               <div className="flex justify-between items-center mb-2">
-                <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">Overall Progress</span>
+                <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">
+                  {topicName} Progress
+                </span>
                 <span className="text-sm font-semibold text-purple-600">{masteryPercent}%</span>
               </div>
               <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-4 mb-6">
@@ -175,74 +181,42 @@ export default function CompetitivePage() {
                 ></div>
               </div>
 
-              {/* Part Completion Checklist */}
+              {/* Requirements */}
               <div className="text-left bg-gray-50 dark:bg-gray-900 rounded-lg p-6 mb-6">
-                <h3 className="text-lg font-bold mb-4 text-center">Module Progress</h3>
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                      <div className={`w-8 h-8 rounded-full flex items-center justify-center ${
-                        partsCompleted.part1 
-                          ? 'bg-green-500 text-white' 
-                          : 'bg-gray-300 dark:bg-gray-700 text-gray-500'
-                      }`}>
-                        {partsCompleted.part1 ? '✓' : '1'}
-                      </div>
-                      <span className="font-medium">Part 1: The Unit Circle</span>
+                <h3 className="text-lg font-bold mb-4 text-center">Unlock Requirements</h3>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full bg-purple-100 dark:bg-purple-900 text-purple-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      ✓
                     </div>
-                    {partsCompleted.part1 && <span className="text-green-500 font-semibold">Complete</span>}
+                    <div>
+                      <p className="font-medium">Complete any topic</p>
+                      <p className="text-sm text-gray-500 dark:text-gray-400">
+                        Finish all parts of Unit Circle OR Reflection & Refraction
+                      </p>
+                    </div>
                   </div>
                   
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                      <div className={`w-8 h-8 rounded-full flex items-center justify-center ${
-                        partsCompleted.part2 
-                          ? 'bg-green-500 text-white' 
-                          : 'bg-gray-300 dark:bg-gray-700 text-gray-500'
-                      }`}>
-                        {partsCompleted.part2 ? '✓' : '2'}
-                      </div>
-                      <span className="font-medium">Part 2: Angles & Tables</span>
+                  <div className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full bg-purple-100 dark:bg-purple-900 text-purple-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      ✓
                     </div>
-                    {partsCompleted.part2 && <span className="text-green-500 font-semibold">Complete</span>}
-                  </div>
-                  
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                      <div className={`w-8 h-8 rounded-full flex items-center justify-center ${
-                        partsCompleted.part3 
-                          ? 'bg-green-500 text-white' 
-                          : 'bg-gray-300 dark:bg-gray-700 text-gray-500'
-                      }`}>
-                        {partsCompleted.part3 ? '✓' : '3'}
-                      </div>
-                      <span className="font-medium">Part 3: Reference Angles</span>
+                    <div>
+                      <p className="font-medium">Achieve 80%+ mastery</p>
+                      <p className="text-sm text-gray-500 dark:text-gray-400">
+                        Your current progress: {masteryPercent}%
+                      </p>
                     </div>
-                    {partsCompleted.part3 && <span className="text-green-500 font-semibold">Complete</span>}
-                  </div>
-                  
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                      <div className={`w-8 h-8 rounded-full flex items-center justify-center ${
-                        partsCompleted.part4 
-                          ? 'bg-green-500 text-white' 
-                          : 'bg-gray-300 dark:bg-gray-700 text-gray-500'
-                      }`}>
-                        {partsCompleted.part4 ? '✓' : '4'}
-                      </div>
-                      <span className="font-medium">Part 4: Practice & Mastery</span>
-                    </div>
-                    {partsCompleted.part4 && <span className="text-green-500 font-semibold">Complete</span>}
                   </div>
                 </div>
               </div>
             </div>
 
             <button
-              onClick={() => router.push('/topics/the-unit-circle')}
-              className="px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white font-bold rounded-lg text-xl transition-all"
+              onClick={() => router.push(currentTopic === 'the-unit-circle' ? '/topics/the-unit-circle' : '/topics/reflection-refraction')}
+              className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold py-4 rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all shadow-lg"
             >
-              {masteryPercent > 0 ? 'Continue Unit Circle' : 'Start Unit Circle'}
+              Continue Learning {topicName}
             </button>
           </div>
         </div>

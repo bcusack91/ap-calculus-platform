@@ -5,9 +5,8 @@ import { prisma } from '@/lib/prisma'
 /**
  * Check if user has unlocked competitive mode
  * Requirements:
- * 1. Completed all 4 parts of Unit Circle module
- * 2. Achieved mastery level > 0.8
- * 3. No existing competitive profile OR profile exists and is unlocked
+ * User must have completed ANY competitive-enabled topic with 80%+ mastery
+ * Currently: the-unit-circle OR reflection-refraction
  */
 export async function GET(req: NextRequest) {
   try {
@@ -17,21 +16,12 @@ export async function GET(req: NextRequest) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
-    // First, get the Unit Circle topic
-    const unitCircleTopic = await prisma.topic.findUnique({
-      where: { slug: 'the-unit-circle' }
-    })
-
-    if (!unitCircleTopic) {
-      return NextResponse.json({ error: 'Unit Circle topic not found' }, { status: 404 })
-    }
-
     const user = await prisma.user.findUnique({
       where: { email: session.user.email },
       include: {
         topicProgress: {
-          where: {
-            topicId: unitCircleTopic.id
+          include: {
+            topic: { select: { slug: true } }
           }
         },
         competitiveProfile: true
@@ -42,22 +32,20 @@ export async function GET(req: NextRequest) {
       return NextResponse.json({ error: 'User not found' }, { status: 404 })
     }
 
+    // Check for ANY completed topic with competitive mode support
+    const competitiveTopics = ['the-unit-circle', 'reflection-refraction']
+    
+    const completedCompetitiveTopics = user.topicProgress.filter(tp => 
+      competitiveTopics.includes(tp.topic.slug) &&
+      (tp.status === 'COMPLETED' || tp.status === 'MASTERED') &&
+      (tp.masteryLevel || 0) >= 0.8
+    )
+    
+    const completedTopicSlugs = completedCompetitiveTopics.map(tp => tp.topic.slug)
+    const hasCompletedAnyTopic = completedTopicSlugs.length > 0
+
     // Check if already unlocked
     if (user.competitiveProfile?.competitiveModeUnlocked) {
-      // Get all completed topics for the user
-      const completedTopics = await prisma.topicProgress.findMany({
-        where: {
-          userId: user.id,
-          status: { in: ['COMPLETED', 'MASTERED'] },
-          masteryLevel: { gte: 0.8 }
-        },
-        include: {
-          topic: { select: { slug: true } }
-        }
-      })
-      
-      const completedTopicSlugs = completedTopics.map(tp => tp.topic.slug)
-      
       return NextResponse.json({
         unlocked: true,
         profile: user.competitiveProfile,
@@ -65,17 +53,8 @@ export async function GET(req: NextRequest) {
       })
     }
 
-    // Check Unit Circle completion
-    const unitCircleProgress = user.topicProgress[0] // Should only be one since we filtered by topicId
-
-    const hasCompletedUnitCircle = unitCircleProgress?.status === 'COMPLETED' || 
-                                    unitCircleProgress?.status === 'MASTERED'
-    const hasMastery = (unitCircleProgress?.masteryLevel || 0) >= 0.8
-
-    const meetsRequirements = hasCompletedUnitCircle && hasMastery
-
-    if (meetsRequirements && !user.competitiveProfile) {
-      // Auto-unlock and create profile
+    // Auto-unlock if user has completed any competitive topic
+    if (hasCompletedAnyTopic && !user.competitiveProfile) {
       const profile = await prisma.competitiveProfile.create({
         data: {
           userId: user.id,
@@ -89,26 +68,32 @@ export async function GET(req: NextRequest) {
         unlocked: true,
         justUnlocked: true,
         profile,
-        completedTopics: ['the-unit-circle']
+        completedTopics: completedTopicSlugs
       })
     }
 
-    // Calculate part completion based on mastery level
-    const masteryLevel = unitCircleProgress?.masteryLevel || 0
-    const partsCompleted = {
-      part1: masteryLevel >= 0.25,
-      part2: masteryLevel >= 0.5,
-      part3: masteryLevel >= 0.75,
-      part4: masteryLevel >= 1.0
-    }
+    // Not unlocked - provide requirements info
+    // Show progress on first available competitive topic
+    const unitCircleProgress = user.topicProgress.find(tp => tp.topic.slug === 'the-unit-circle')
+    const reflectionProgress = user.topicProgress.find(tp => tp.topic.slug === 'reflection-refraction')
+    
+    // Use whichever topic has higher progress
+    const bestProgress = [unitCircleProgress, reflectionProgress]
+      .filter(p => p)
+      .sort((a, b) => (b?.masteryLevel || 0) - (a?.masteryLevel || 0))[0]
+    
+    const masteryLevel = bestProgress?.masteryLevel || 0
+    const topicSlug = bestProgress?.topic.slug || 'the-unit-circle'
 
     return NextResponse.json({
-      unlocked: meetsRequirements,
+      unlocked: false,
+      completedTopics: [],
       requirements: {
-        unitCircleCompleted: hasCompletedUnitCircle,
+        message: 'Complete any topic (Unit Circle or Reflection & Refraction) with 80%+ mastery',
+        currentTopic: topicSlug,
         masteryLevel: masteryLevel,
         masteryRequired: 0.8,
-        partsCompleted
+        topicsAvailable: competitiveTopics
       }
     })
 

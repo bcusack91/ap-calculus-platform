@@ -170,12 +170,13 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
         
         let answerIndex: number;
         if (willAnswerCorrectly) {
-          answerIndex = aiCurrentQuestion.answerIndex;
+          answerIndex = aiCurrentQuestion.answerIndex || 0;
         } else {
-          // Choose random wrong answer
+          // Choose random wrong answer (for multiple choice, choose different option)
+          const totalOptions = aiCurrentQuestion.options?.length || UNIT_CIRCLE_POSITIONS.length;
           do {
-            answerIndex = Math.floor(Math.random() * UNIT_CIRCLE_POSITIONS.length);
-          } while (answerIndex === aiCurrentQuestion.answerIndex);
+            answerIndex = Math.floor(Math.random() * totalOptions);
+          } while (answerIndex === (aiCurrentQuestion.answerIndex || 0));
         }
         
         console.log(`🤖 AI submitting answer for question ${opponentQuestionIndex}: ${answerIndex} (correct: ${aiCurrentQuestion.answerIndex})`);
@@ -351,7 +352,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
         }
         
         // Show correct answer in green for 800ms
-        setCorrectAnswerIndex(currentQuestion.answerIndex);
+        setCorrectAnswerIndex(currentQuestion.answerIndex || 0);
         setIsSubmitting(false);
         
         // Wait 800ms to show feedback, then clear and refresh
