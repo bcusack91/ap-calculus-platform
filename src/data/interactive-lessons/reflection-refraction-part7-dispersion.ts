@@ -1,4 +1,4 @@
-export const reflectionRefractionPart6Data = {
+export const reflectionRefractionPart7Data = {
   topicSlug: 'reflection-refraction',
   sections: [
     {
