@@ -53,38 +53,82 @@ $$n_1 \\sin\\theta_1 = n_2 \\sin\\theta_2$$
       `
     },
     {
-      id: 'bending-rules',
+      id: 'bending-rules-overview',
       type: 'text' as const,
       content: `
 ## Bending Rules: Which Way Does Light Bend?
 
 The direction light bends depends on the **relative density** of the two media.
 
-### Entering Denser Medium ($n_2 > n_1$) 📉
+### The Pattern 🎯
 
-**Light bends TOWARD the normal**
-- $\\theta_2 < \\theta_1$ (angle gets smaller)
-- Example: Air → Water, Air → Glass
-- Light slows down in denser medium
+When light crosses a boundary:
+- **Entering denser medium** ($n_2 > n_1$): Bends **TOWARD** normal
+- **Entering less dense medium** ($n_2 < n_1$): Bends **AWAY FROM** normal
+- **Same medium** ($n_1 = n_2$): No bending (continues straight)
 
-### Entering Less Dense Medium ($n_2 < n_1$) 📈
-
-**Light bends AWAY FROM the normal**
-- $\\theta_2 > \\theta_1$ (angle gets larger)
-- Example: Water → Air, Glass → Air
-- Light speeds up in less dense medium
-
-### Special Case: No Bending ($n_1 = n_2$)
-
-- $\\theta_1 = \\theta_2$ (no change)
-- Light continues straight through
-
-## Mnemonic 💡
+## Memory Aid 💡
 
 **"Fast → Slow: bend toward"**  
 **"Slow → Fast: bend away"**
 
-Think of it like a car going from pavement to sand at an angle—one wheel hits the sand first and slows down, causing the car to turn!
+Think of it like a car going from pavement to sand at an angle—one wheel hits the sand first and slows down, causing the car to turn toward the normal!
+
+Let's see this in action with visual examples...
+      `
+    },
+    {
+      id: 'bending-toward-normal',
+      type: 'text' as const,
+      content: `
+## Light Bending TOWARD Normal 📉
+
+### Entering Denser Medium ($n_2 > n_1$)
+
+When light enters a **denser medium** (higher index of refraction), it slows down and bends **toward the normal**.
+
+<img src="/optics/bending-toward-normal.svg" alt="Light bending toward normal" style="max-width: 500px; margin: 20px auto; display: block;" />
+
+### Key Observations:
+
+✓ **Angle decreases**: $\\theta_2 < \\theta_1$ (50° → 30°)  
+✓ **Light slows down**: Moves from faster medium to slower medium  
+✓ **Bends toward normal**: Gets closer to perpendicular
+
+### Examples:
+- Air → Water
+- Air → Glass  
+- Water → Diamond
+
+**Why it happens:** Light slows down in denser materials, causing the wavefront to pivot toward the normal—like a marching band turning when one side slows down!
+      `
+    },
+    {
+      id: 'bending-away-normal',
+      type: 'text' as const,
+      content: `
+## Light Bending AWAY FROM Normal 📈
+
+### Entering Less Dense Medium ($n_2 < n_1$)
+
+When light enters a **less dense medium** (lower index of refraction), it speeds up and bends **away from the normal**.
+
+<img src="/optics/bending-away-normal.svg" alt="Light bending away from normal" style="max-width: 500px; margin: 20px auto; display: block;" />
+
+### Key Observations:
+
+✓ **Angle increases**: $\\theta_2 > \\theta_1$ (30° → 42°)  
+✓ **Light speeds up**: Moves from slower medium to faster medium  
+✓ **Bends away from normal**: Gets farther from perpendicular
+
+### Examples:
+- Water → Air
+- Glass → Air
+- Diamond → Air
+
+**Why it happens:** Light speeds up in less dense materials, causing the wavefront to pivot away from the normal—like a marching band spreading out when one side speeds up!
+
+**Important:** This is where Total Internal Reflection can occur if the angle is too large!
       `
     },
     {
