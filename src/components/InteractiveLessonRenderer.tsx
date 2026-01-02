@@ -438,6 +438,7 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
   }
 
   const handleSectionComplete = () => {
+    console.log('🎯 Section completed:', currentSectionIndex)
     setCompletedSections(prev => new Set([...prev, currentSectionIndex]))
   }
 
@@ -455,6 +456,15 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
   
   // Disable Next button if it's an exercise that hasn't been completed
   const canProceedToNext = !currentSectionRequiresCompletion || isCurrentSectionComplete
+  
+  console.log('🔍 Button State Debug:', {
+    sectionIndex: currentSectionIndex,
+    sectionType: currentSection.type,
+    requiresCompletion: currentSectionRequiresCompletion,
+    isComplete: isCurrentSectionComplete,
+    canProceed: canProceedToNext,
+    completedSections: Array.from(completedSections)
+  })
 
   return (
     <div className="space-y-6">
@@ -2280,6 +2290,7 @@ function MultipleChoiceQuiz({
       setCurrentQuestionIndex(currentQuestionIndex + 1)
     } else {
       // All questions answered, complete the quiz
+      console.log('✅ Quiz completed! Calling onComplete()')
       setQuizComplete(true)
       onComplete()
     }
