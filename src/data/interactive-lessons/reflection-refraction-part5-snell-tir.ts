@@ -183,16 +183,7 @@ $$\\theta_2 = \\sin^{-1}(0.531) = 32.1°$$
 
 ## Visual Result:
 
-\`\`\`
-        Air
-    ────┼────  45°
-     ╲  │
-      ╲ │
-────────┴────────
-        │╲32.1°
-        │ ╲
-      Water
-\`\`\`
+<img src="/optics/snell-example1-air-water.svg" alt="Snell's Law Example: Air to Water" style="max-width: 500px; margin: 20px auto; display: block;" />
 
 The light ray bends toward the normal when entering water!
       `
