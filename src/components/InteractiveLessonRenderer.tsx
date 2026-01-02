@@ -14,7 +14,8 @@ import { reflectionRefractionPart2Data } from '@/data/interactive-lessons/reflec
 import { reflectionRefractionPart3Data } from '@/data/interactive-lessons/reflection-refraction-part3-reflection'
 import { reflectionRefractionPart4Data } from '@/data/interactive-lessons/reflection-refraction-part4-index'
 import { reflectionRefractionPart5Data } from '@/data/interactive-lessons/reflection-refraction-part5-snell-tir'
-import { reflectionRefractionPart6Data } from '@/data/interactive-lessons/reflection-refraction-part6-dispersion'
+import { reflectionRefractionPart6Data } from '@/data/interactive-lessons/reflection-refraction-part6-tir'
+import { reflectionRefractionPart7Data } from '@/data/interactive-lessons/reflection-refraction-part7-dispersion'
 import ReactMarkdown from 'react-markdown'
 import remarkMath from 'remark-math'
 import remarkGfm from 'remark-gfm'
@@ -50,17 +51,17 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
   
   // Get initial part from URL parameter (e.g., ?part=2)
   const urlPart = searchParams.get('part')
-  const initialPart = urlPart ? parseInt(urlPart) as 1 | 2 | 3 | 4 | 5 | 6 : 1
+  const initialPart = urlPart ? parseInt(urlPart) as 1 | 2 | 3 | 4 | 5 | 6 | 7 : 1
   
-  const [lessonPart, setLessonPart] = useState<1 | 2 | 3 | 4 | 5 | 6>(initialPart)
+  const [lessonPart, setLessonPart] = useState<1 | 2 | 3 | 4 | 5 | 6 | 7>(initialPart)
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0)
   const [completedSections, setCompletedSections] = useState<Set<number>>(new Set())
   const [showPracticeMode, setShowPracticeMode] = useState(false)
   const [progressLoaded, setProgressLoaded] = useState(false)
-  const [unlockedParts, setUnlockedParts] = useState<Set<1 | 2 | 3 | 4 | 5 | 6>>(new Set([1])) // Part 1 always unlocked
+  const [unlockedParts, setUnlockedParts] = useState<Set<1 | 2 | 3 | 4 | 5 | 6 | 7>>(new Set([1])) // Part 1 always unlocked
 
   // Update URL when lesson part changes
-  const updateLessonPart = (newPart: 1 | 2 | 3 | 4 | 5 | 6) => {
+  const updateLessonPart = (newPart: 1 | 2 | 3 | 4 | 5 | 6 | 7) => {
     setLessonPart(newPart)
     setCurrentSectionIndex(0)
     setCompletedSections(new Set())
@@ -207,7 +208,8 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
        lessonPart === 3 ? reflectionRefractionPart3Data :
        lessonPart === 4 ? reflectionRefractionPart4Data :
        lessonPart === 5 ? reflectionRefractionPart5Data :
-       reflectionRefractionPart6Data)
+       lessonPart === 6 ? reflectionRefractionPart6Data :
+       reflectionRefractionPart7Data)
     : null
 
   if (!lessonData) {
@@ -336,7 +338,14 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
         setCompletedSections(new Set())
         window.scrollTo({ top: 0, behavior: 'smooth' })
       } else if (lessonPart === 6) {
-        // On final page of part 6, mark as 100% complete
+        // Move to part 7 after completing part 6
+        setUnlockedParts(prev => new Set([...prev, 7]))
+        updateLessonPart(7)
+        setCurrentSectionIndex(0)
+        setCompletedSections(new Set())
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+      } else if (lessonPart === 7) {
+        // On final page of part 7, mark as 100% complete
         setCompletedSections(new Set(sections.map((_, i) => i)))
       } else {
         // Fallback: mark as complete
@@ -580,7 +589,7 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
                         : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500 cursor-not-allowed opacity-50'
                     }`}
                     >
-                      {!unlockedParts.has(5) && '🔒 '}Part 5: Snell's Law & TIR
+                      {!unlockedParts.has(5) && '🔒 '}Part 5: Snell's Law
                     </button>
                     <button
                       onClick={() => unlockedParts.has(6) && updateLessonPart(6)}
@@ -593,7 +602,20 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
                         : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500 cursor-not-allowed opacity-50'
                     }`}
                     >
-                      {!unlockedParts.has(6) && '🔒 '}Part 6: Dispersion & Practice
+                      {!unlockedParts.has(6) && '🔒 '}Part 6: Total Internal Reflection
+                    </button>
+                    <button
+                      onClick={() => unlockedParts.has(7) && updateLessonPart(7)}
+                      disabled={!unlockedParts.has(7)}
+                      className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
+                        lessonPart === 7
+                        ? 'bg-purple-600 text-white shadow-lg'
+                        : unlockedParts.has(7)
+                        ? 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30'
+                        : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500 cursor-not-allowed opacity-50'
+                    }`}
+                    >
+                      {!unlockedParts.has(7) && '🔒 '}Part 7: Dispersion
                     </button>
                   </>
                 )}
