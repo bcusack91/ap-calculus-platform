@@ -5,57 +5,86 @@ export const reflectionRefractionPart5Data = {
       id: 'snells-law-introduction',
       type: 'text' as const,
       content: `
-**Snell's Law** 🎯
+# Snell's Law & Total Internal Reflection
 
-When light crosses a boundary between two materials, it changes direction!
+When light crosses a boundary between two materials, it changes direction! This phenomenon is called **refraction**.
 
-## The Law
+## Snell's Law
 
 $$n_1 \\sin\\theta_1 = n_2 \\sin\\theta_2$$
 
-where:
-- $n_1$ = index of refraction of first medium
-- $\\theta_1$ = angle from normal in first medium
-- $n_2$ = index of refraction of second medium
-- $\\theta_2$ = angle from normal in second medium
+This powerful equation predicts exactly how much light will bend at any interface.
 
-## Refraction Diagram:
+<img src="/optics/snells-law-diagram.svg" alt="Snell's Law Refraction Diagram" style="max-width: 600px; margin: 20px auto; display: block;" />
 
-\`\`\`
-        Air (n₁)
-    ────┼────  ← incident ray
-     θ₁ │
-────────┴────────  ← boundary
-        │ θ₂
-        ┼────  ← refracted ray
-      Water (n₂)
-\`\`\`
+**What you see:**
+- Light traveling from air (less dense) into water (more dense)
+- The ray **bends toward the normal** when entering the denser medium
+- Angle decreases: 45° → 32°
+      `
+    },
+    {
+      id: 'snells-law-parameters',
+      type: 'text' as const,
+      content: `
+## Understanding the Parameters
+
+$$n_1 \\sin\\theta_1 = n_2 \\sin\\theta_2$$
+
+**Where:**
+- $n_1$ = index of refraction of **first medium** (where light is coming from)
+- $\\theta_1$ = angle from normal in **first medium**
+- $n_2$ = index of refraction of **second medium** (where light is going)
+- $\\theta_2$ = angle from normal in **second medium**
 
 ## Critical Points:
 
-**1. Angles from the NORMAL (not the surface!)**
+**1. Angles measured from the NORMAL** ⊥
+- The normal is perpendicular to the surface
+- NOT from the surface itself!
 
-**2. Light direction matters for sign convention**
+**2. Light direction matters**
 - Light travels from medium 1 → medium 2
-- Positive direction: into and through medium 2
+- We follow the light ray's path
 
 **3. Both angles always positive**
 - We measure angles as magnitudes (0° to 90°)
-- Direction of bending tells us if entering denser/less dense medium
+- Direction of bending tells us the physics
+      `
+    },
+    {
+      id: 'bending-rules',
+      type: 'text' as const,
+      content: `
+## Bending Rules: Which Way Does Light Bend?
 
-## Bending Rules:
+The direction light bends depends on the **relative density** of the two media.
 
-**Entering Denser Medium** ($n_2 > n_1$):
-- Light bends **toward** the normal
-- $\\theta_2 < \\theta_1$
-- Example: Air → Water
+### Entering Denser Medium ($n_2 > n_1$) 📉
 
-**Entering Less Dense Medium** ($n_2 < n_1$):
-- Light bends **away from** the normal
-- $\\theta_2 > \\theta_1$
-- Example: Water → Air
+**Light bends TOWARD the normal**
+- $\\theta_2 < \\theta_1$ (angle gets smaller)
+- Example: Air → Water, Air → Glass
+- Light slows down in denser medium
 
-**Mnemonic**: **"Fast → Slow: toward. Slow → Fast: away."**
+### Entering Less Dense Medium ($n_2 < n_1$) 📈
+
+**Light bends AWAY FROM the normal**
+- $\\theta_2 > \\theta_1$ (angle gets larger)
+- Example: Water → Air, Glass → Air
+- Light speeds up in less dense medium
+
+### Special Case: No Bending ($n_1 = n_2$)
+
+- $\\theta_1 = \\theta_2$ (no change)
+- Light continues straight through
+
+## Mnemonic 💡
+
+**"Fast → Slow: bend toward"**  
+**"Slow → Fast: bend away"**
+
+Think of it like a car going from pavement to sand at an angle—one wheel hits the sand first and slows down, causing the car to turn!
       `
     },
     {
