@@ -21,6 +21,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://studymondo.com",
   },
+  manifest: "/site.webmanifest",
   other: {
     "google-adsense-account": "ca-pub-8403501245603262",
   },
@@ -53,7 +54,11 @@ export const metadata: Metadata = {
       "Free notes, flashcards, and practice problems for AP Calculus, Physics, Chemistry, and Biology.",
   },
   icons: {
-    icon: "/favicon.svg",
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "any" }
+    ],
+    apple: "/apple-touch-icon.png",
   },
 };
 
