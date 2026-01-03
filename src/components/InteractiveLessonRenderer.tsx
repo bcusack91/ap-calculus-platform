@@ -10,12 +10,13 @@ import { factoringPart4ComplexTrinomialsData } from '@/data/interactive-lessons/
 import { factoringPart5SpecialPatternsData } from '@/data/interactive-lessons/factoring-part5-special-patterns'
 import { factoringPart6MixedPracticeData } from '@/data/interactive-lessons/factoring-part6-mixed-practice'
 import { reflectionRefractionPart1Data } from '@/data/interactive-lessons/reflection-refraction-part1-intro'
-import { reflectionRefractionPart2Data } from '@/data/interactive-lessons/reflection-refraction-part2-sign-convention'
-import { reflectionRefractionPart3Data } from '@/data/interactive-lessons/reflection-refraction-part3-reflection'
-import { reflectionRefractionPart4Data } from '@/data/interactive-lessons/reflection-refraction-part4-index'
-import { reflectionRefractionPart5Data } from '@/data/interactive-lessons/reflection-refraction-part5-snell-tir'
-import { reflectionRefractionPart6Data } from '@/data/interactive-lessons/reflection-refraction-part6-tir'
-import { reflectionRefractionPart7Data } from '@/data/interactive-lessons/reflection-refraction-part7-dispersion'
+import { reflectionRefractionPart2LearningJourneyData } from '@/data/interactive-lessons/reflection-refraction-part2-learning-journey'
+import { reflectionRefractionPart2Data as reflectionRefractionPart3Data } from '@/data/interactive-lessons/reflection-refraction-part2-sign-convention'
+import { reflectionRefractionPart3Data as reflectionRefractionPart4Data } from '@/data/interactive-lessons/reflection-refraction-part3-reflection'
+import { reflectionRefractionPart4Data as reflectionRefractionPart5Data } from '@/data/interactive-lessons/reflection-refraction-part4-index'
+import { reflectionRefractionPart5Data as reflectionRefractionPart6Data } from '@/data/interactive-lessons/reflection-refraction-part5-snell-tir'
+import { reflectionRefractionPart6Data as reflectionRefractionPart7Data } from '@/data/interactive-lessons/reflection-refraction-part6-tir'
+import { reflectionRefractionPart7Data as reflectionRefractionPart8Data } from '@/data/interactive-lessons/reflection-refraction-part7-dispersion'
 import ReactMarkdown from 'react-markdown'
 import remarkMath from 'remark-math'
 import remarkGfm from 'remark-gfm'
@@ -51,20 +52,20 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
   
   // Get initial part from URL parameter (e.g., ?part=2)
   const urlPart = searchParams.get('part')
-  const initialPart = urlPart ? parseInt(urlPart) as 1 | 2 | 3 | 4 | 5 | 6 | 7 : 1
+  const initialPart = urlPart ? parseInt(urlPart) as 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 : 1
   
-  const [lessonPart, setLessonPart] = useState<1 | 2 | 3 | 4 | 5 | 6 | 7>(initialPart)
+  const [lessonPart, setLessonPart] = useState<1 | 2 | 3 | 4 | 5 | 6 | 7 | 8>(initialPart)
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0)
   const [completedSections, setCompletedSections] = useState<Set<number>>(new Set())
   const [showPracticeMode, setShowPracticeMode] = useState(false)
   const [progressLoaded, setProgressLoaded] = useState(false)
-  const [unlockedParts, setUnlockedParts] = useState<Set<1 | 2 | 3 | 4 | 5 | 6 | 7>>(new Set([1])) // Part 1 always unlocked
+  const [unlockedParts, setUnlockedParts] = useState<Set<1 | 2 | 3 | 4 | 5 | 6 | 7 | 8>>(new Set([1])) // Part 1 always unlocked
   const [cachedTopicId, setCachedTopicId] = useState<string | null>(null)
   const [pendingSaveCount, setPendingSaveCount] = useState(0)
   const queryCountRef = useRef(0) // Track API calls
 
   // Update URL when lesson part changes
-  const updateLessonPart = (newPart: 1 | 2 | 3 | 4 | 5 | 6 | 7) => {
+  const updateLessonPart = (newPart: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8) => {
     setLessonPart(newPart)
     setCurrentSectionIndex(0)
     setCompletedSections(new Set())
@@ -250,12 +251,13 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
        factoringPart6MixedPracticeData)
     : topicSlug === 'reflection-refraction'
     ? (lessonPart === 1 ? reflectionRefractionPart1Data :
-       lessonPart === 2 ? reflectionRefractionPart2Data :
+       lessonPart === 2 ? reflectionRefractionPart2LearningJourneyData :
        lessonPart === 3 ? reflectionRefractionPart3Data :
        lessonPart === 4 ? reflectionRefractionPart4Data :
        lessonPart === 5 ? reflectionRefractionPart5Data :
        lessonPart === 6 ? reflectionRefractionPart6Data :
-       reflectionRefractionPart7Data)
+       lessonPart === 7 ? reflectionRefractionPart7Data :
+       reflectionRefractionPart8Data)
     : null
 
   if (!lessonData) {
@@ -421,7 +423,14 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
         setCompletedSections(new Set())
         window.scrollTo({ top: 0, behavior: 'smooth' })
       } else if (lessonPart === 7 && topicSlug === 'reflection-refraction') {
-        // On final page of part 7 for reflection-refraction, save progress then go to competitive mode
+        // Move to part 8 after completing part 7 for reflection-refraction
+        setUnlockedParts(prev => new Set([...prev, 8]))
+        updateLessonPart(8)
+        setCurrentSectionIndex(0)
+        setCompletedSections(new Set())
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+      } else if (lessonPart === 8 && topicSlug === 'reflection-refraction') {
+        // On final page of part 8 for reflection-refraction, save progress then go to competitive mode
         const finalSave = async () => {
           if (session?.user) {
             try {
@@ -497,7 +506,7 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
     <div className="space-y-6">
       {/* Part Navigation Menu - Show for multi-part lessons */}
       {(topicSlug === 'the-unit-circle' || topicSlug === 'factoring-algebra1' || topicSlug === 'reflection-refraction') && (
-        <div className="bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-indigo-950/50 dark:to-purple-950/50 rounded-lg p-4 border-2 border-indigo-200 dark:border-indigo-800">
+        <div className="bg-gradient-to-r from-indigo-100/80 via-purple-100/80 to-pink-100/80 dark:from-indigo-900/40 dark:via-purple-900/40 dark:to-pink-900/40 backdrop-blur-sm rounded-2xl p-5 border-2 border-indigo-200/70 dark:border-indigo-700/50 shadow-lg">
           <div className="flex items-center justify-between flex-wrap gap-4">
             <div className="flex items-center gap-2">
               <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">Jump to:</span>
@@ -664,7 +673,7 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
                           : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500 cursor-not-allowed opacity-50'
                       }`}
                     >
-                      {!unlockedParts.has(2) && '🔒 '}Part 2: Sign Convention
+                      {!unlockedParts.has(2) && '🔒 '}Part 2: Learning Journey
                     </button>
                     <button
                       onClick={() => unlockedParts.has(3) && updateLessonPart(3)}
@@ -677,7 +686,7 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
                           : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500 cursor-not-allowed opacity-50'
                       }`}
                     >
-                      {!unlockedParts.has(3) && '🔒 '}Part 3: Law of Reflection
+                      {!unlockedParts.has(3) && '🔒 '}Part 3: Sign Convention
                     </button>
                     <button
                       onClick={() => unlockedParts.has(4) && updateLessonPart(4)}
@@ -690,7 +699,7 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
                         : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500 cursor-not-allowed opacity-50'
                     }`}
                     >
-                      {!unlockedParts.has(4) && '🔒 '}Part 4: Index of Refraction
+                      {!unlockedParts.has(4) && '🔒 '}Part 4: Law of Reflection
                     </button>
                     <button
                       onClick={() => unlockedParts.has(5) && updateLessonPart(5)}
@@ -703,7 +712,7 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
                         : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500 cursor-not-allowed opacity-50'
                     }`}
                     >
-                      {!unlockedParts.has(5) && '🔒 '}Part 5: Snell's Law
+                      {!unlockedParts.has(5) && '🔒 '}Part 5: Index of Refraction
                     </button>
                     <button
                       onClick={() => unlockedParts.has(6) && updateLessonPart(6)}
@@ -716,7 +725,7 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
                         : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500 cursor-not-allowed opacity-50'
                     }`}
                     >
-                      {!unlockedParts.has(6) && '🔒 '}Part 6: Total Internal Reflection
+                      {!unlockedParts.has(6) && '🔒 '}Part 6: Snell's Law
                     </button>
                     <button
                       onClick={() => unlockedParts.has(7) && updateLessonPart(7)}
@@ -729,7 +738,20 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
                         : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500 cursor-not-allowed opacity-50'
                     }`}
                     >
-                      {!unlockedParts.has(7) && '🔒 '}Part 7: Dispersion
+                      {!unlockedParts.has(7) && '🔒 '}Part 7: Total Internal Reflection
+                    </button>
+                    <button
+                      onClick={() => unlockedParts.has(8) && updateLessonPart(8)}
+                      disabled={!unlockedParts.has(8)}
+                      className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
+                        lessonPart === 8
+                        ? 'bg-purple-600 text-white shadow-lg'
+                        : unlockedParts.has(8)
+                        ? 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30'
+                        : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500 cursor-not-allowed opacity-50'
+                    }`}
+                    >
+                      {!unlockedParts.has(8) && '🔒 '}Part 8: Dispersion
                     </button>
                   </>
                 )}
@@ -745,18 +767,29 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
       )}
       
       {/* Progress Bar */}
-      <div className="bg-gray-200 rounded-full h-3 overflow-hidden">
-        <div 
-          className="bg-gradient-to-r from-purple-600 to-pink-600 h-full transition-all duration-500 ease-out"
-          style={{ width: `${progress}%` }}
-        />
-      </div>
-      <div className="text-sm text-gray-600 text-center">
-        Section {currentSectionIndex + 1} of {sections.length} • {Math.round(progress)}% Complete
+      <div className="space-y-3 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-xl p-4 border border-purple-100/50 dark:border-purple-500/20 shadow-md">
+        <div className="bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 dark:from-gray-700 dark:via-gray-600 dark:to-gray-700 rounded-full h-4 overflow-hidden shadow-inner">
+          <div 
+            className="h-full transition-all duration-500 ease-out shadow-md animate-gradient"
+            style={{ 
+              width: `${progress}%`,
+              background: 'linear-gradient(90deg, #9333ea 0%, #ec4899 25%, #a855f7 50%, #ec4899 75%, #9333ea 100%)',
+              backgroundSize: '200% 100%'
+            }}
+          />
+        </div>
+        <div className="flex justify-between items-center text-sm">
+          <span className="text-gray-600 dark:text-gray-400 font-medium">
+            Section {currentSectionIndex + 1} of {sections.length}
+          </span>
+          <span className="text-purple-700 dark:text-purple-400 font-bold">
+            {Math.round(progress)}% Complete
+          </span>
+        </div>
       </div>
 
       {/* Current Section Content */}
-      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 border-2 border-purple-200 dark:border-purple-700 min-h-[400px]">
+      <div className="bg-white/95 dark:bg-gray-800/95 backdrop-blur-sm rounded-2xl shadow-2xl p-10 border-2 border-purple-100/50 dark:border-purple-500/20 min-h-[500px] transition-all duration-300 hover:shadow-3xl hover:border-purple-200/70 dark:hover:border-purple-400/30">
         <SectionRenderer 
           section={currentSection} 
           onComplete={handleSectionComplete}
@@ -767,25 +800,28 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
       </div>
 
       {/* Navigation Buttons */}
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center pt-4">
         <button
           onClick={handlePrevious}
           disabled={currentSectionIndex === 0}
-          className="px-6 py-3 rounded-lg font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed bg-gray-200 text-gray-700 hover:bg-gray-300"
+          className="group px-8 py-4 rounded-xl font-semibold transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 border-2 border-gray-300 dark:border-gray-600 hover:border-gray-400 dark:hover:border-gray-500 hover:shadow-lg disabled:hover:shadow-none disabled:hover:bg-white dark:disabled:hover:bg-gray-800"
         >
-          ← Previous
+          <span className="flex items-center gap-2">
+            <span className="transform transition-transform group-hover:-translate-x-1">←</span>
+            <span>Previous</span>
+          </span>
         </button>
 
         <div className="flex gap-2">
           {sections.map((_, index) => (
             <div
               key={index}
-              className={`w-2 h-2 rounded-full transition-all ${
+              className={`h-2.5 rounded-full transition-all duration-300 ${
                 index === currentSectionIndex 
-                  ? 'bg-purple-600 w-8' 
+                  ? 'bg-gradient-to-r from-purple-600 to-pink-600 w-10 shadow-md' 
                   : completedSections.has(index)
-                  ? 'bg-green-500'
-                  : 'bg-gray-300'
+                  ? 'bg-green-500 w-2.5 shadow-sm'
+                  : 'bg-gray-300 dark:bg-gray-600 w-2.5'
               }`}
             />
           ))}
@@ -794,9 +830,9 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
         <button
           onClick={handleNext}
           disabled={!canProceedToNext}
-          className="px-6 py-3 rounded-lg font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700"
+          className="group px-8 py-4 rounded-xl font-semibold transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 shadow-lg hover:shadow-xl disabled:hover:shadow-lg border-2 border-transparent hover:scale-[1.02] disabled:hover:scale-100"
         >
-          {currentSectionIndex === sections.length - 1 && lessonPart === 7 && topicSlug === 'reflection-refraction'
+          {currentSectionIndex === sections.length - 1 && lessonPart === 8 && topicSlug === 'reflection-refraction'
             ? '🎮 Enter Competitive Mode →'
             : currentSectionIndex === sections.length - 1 && lessonPart === 7 && topicSlug !== 'reflection-refraction'
             ? '✅ Lesson Complete!'
@@ -842,7 +878,28 @@ function SectionRenderer({
 }) {
   if (section.type === 'text') {
     return (
-      <div className="prose prose-lg max-w-none">
+      <div className="prose prose-lg max-w-none dark:prose-invert prose-headings:font-bold prose-h1:text-5xl prose-h1:mb-8 prose-h1:mt-0 prose-h1:leading-tight prose-h1:text-gray-900 dark:prose-h1:text-white prose-h2:text-3xl prose-h2:mt-10 prose-h2:mb-5 prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4 prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-relaxed prose-p:mb-5 prose-p:text-lg prose-strong:text-purple-700 dark:prose-strong:text-purple-400 prose-strong:font-semibold prose-a:text-purple-600 dark:prose-a:text-purple-400 prose-a:no-underline hover:prose-a:underline prose-code:text-purple-600 dark:prose-code:text-purple-400 prose-code:bg-purple-50 dark:prose-code:bg-purple-900/20 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:font-mono prose-code:text-sm prose-ul:my-6 prose-ul:space-y-2 prose-li:my-2 prose-li:text-gray-700 dark:prose-li:text-gray-300 prose-li:text-lg">
+        <style jsx>{`
+          :global(.prose h1) {
+            font-size: 3rem !important;
+            margin-bottom: 2rem !important;
+            line-height: 1.2 !important;
+            font-weight: 800 !important;
+          }
+          :global(.prose ul) {
+            margin-top: 1.5rem !important;
+            margin-bottom: 2rem !important;
+          }
+          :global(.prose li) {
+            font-size: 1.125rem !important;
+            margin-top: 0.5rem !important;
+            margin-bottom: 0.5rem !important;
+          }
+          :global(.prose p) {
+            font-size: 1.125rem !important;
+            margin-bottom: 1.25rem !important;
+          }
+        `}</style>
         <FadeInText content={section.content} onComplete={onComplete} />
       </div>
     )
