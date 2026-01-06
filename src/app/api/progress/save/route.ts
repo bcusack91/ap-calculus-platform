@@ -192,14 +192,12 @@ export async function POST(request: Request) {
             flashcardsToConsider = fullTopic.flashcards
             console.log(`✅ Topic completed/mastered - considering all ${fullTopic.flashcards.length} flashcards`)
           } else if (lessonPart) {
-            // During progress: only initialize flashcards for completed parts
-            // Include cards with matching lessonPart OR cards with no lessonPart tag (legacy cards)
+            // During progress: ONLY initialize flashcards tagged for completed parts
+            // Cards without lessonPart tags will NOT be initialized during progress
             flashcardsToConsider = fullTopic.flashcards.filter(fc => 
-              fc.lessonPart === null || // Legacy cards without tags (initialize proportionally)
-              fc.lessonPart === undefined ||
-              (fc.lessonPart !== null && fc.lessonPart <= lessonPart) // Cards for this part or earlier parts
+              fc.lessonPart !== null && fc.lessonPart !== undefined && fc.lessonPart <= lessonPart
             )
-            console.log(`📚 Lesson part ${lessonPart} - considering ${flashcardsToConsider.length}/${fullTopic.flashcards.length} flashcards (tagged for parts 1-${lessonPart} or untagged)`)
+            console.log(`📚 Lesson part ${lessonPart} - considering ${flashcardsToConsider.length}/${fullTopic.flashcards.length} flashcards (tagged for parts 1-${lessonPart})`)
           } else {
             // No lesson part specified, use all flashcards
             flashcardsToConsider = fullTopic.flashcards
