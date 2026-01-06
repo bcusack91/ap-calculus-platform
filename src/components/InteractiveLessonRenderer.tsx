@@ -345,7 +345,7 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
     return masteryLevel
   }
 
-  const handleNext = async () => {
+  const handleNext = () => {
     // Mark current section as complete when moving to next
     if (!completedSections.has(currentSectionIndex)) {
       setCompletedSections(prev => new Set([...prev, currentSectionIndex]))
@@ -363,7 +363,7 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
     } else {
       // On final section of a part, save progress and initialize flashcards
       // This triggers flashcard notification BEFORE transitioning to next part
-      await saveProgress(undefined, true) // Part completion - trigger flashcards
+      saveProgress(undefined, true) // Part completion - trigger flashcards
       
       // Multi-part lesson navigation
       if (lessonPart === 1) {
