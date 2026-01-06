@@ -7,6 +7,7 @@ import ReactMarkdown from 'react-markdown'
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
 import 'katex/dist/katex.min.css'
+import { formatFlashcardContent } from '@/lib/format-flashcard-content'
 
 interface Flashcard {
   id: string
@@ -171,7 +172,7 @@ export default function FlashcardStudyPage() {
                       <div className="text-sm text-purple-900 font-semibold mb-4">QUESTION</div>
                       <div className="text-lg prose prose-purple max-w-none text-gray-900">
                         <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
-                          {currentCard.front}
+                          {formatFlashcardContent(currentCard.front)}
                         </ReactMarkdown>
                       </div>
                       <div className="mt-6 text-sm text-gray-700 text-center">
@@ -194,7 +195,7 @@ export default function FlashcardStudyPage() {
                       <div className="text-sm text-green-900 font-semibold mb-4">ANSWER</div>
                       <div className="text-lg prose prose-green max-w-none text-gray-900">
                         <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
-                          {currentCard.back}
+                          {formatFlashcardContent(currentCard.back)}
                         </ReactMarkdown>
                       </div>
                       <div className="mt-6 text-sm text-gray-700 text-center">

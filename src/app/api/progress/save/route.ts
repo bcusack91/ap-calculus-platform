@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
+import { generateFlashcardsFromContent, getTopFlashcards } from '@/lib/flashcard-generation'
 
 export async function POST(request: Request) {
   try {
@@ -13,12 +14,13 @@ export async function POST(request: Request) {
       )
     }
 
-    const { topicSlug, topicId, lessonPart, completedSections, masteryLevel, timeSpent } = await request.json()
+    const { topicSlug, topicId, lessonPart, completedSections, masteryLevel, timeSpent, isPartCompletion } = await request.json()
     
     console.log('📊 [DB QUERY] Progress save:', {
       method: topicId ? 'CACHED_ID' : 'SLUG_LOOKUP',
       topicId: topicId || 'N/A',
-      topicSlug: topicSlug || 'N/A'
+      topicSlug: topicSlug || 'N/A',
+      isPartCompletion: isPartCompletion || false
     })
 
     if (!topicSlug && !topicId) {
@@ -59,6 +61,18 @@ export async function POST(request: Request) {
       status = 'NOT_STARTED'
     }
 
+    // Check if this is the first completion BEFORE updating
+    const existingProgress = await prisma.topicProgress.findUnique({
+      where: {
+        userId_topicId: {
+          userId: session.user.id,
+          topicId: topic.id,
+        }
+      }
+    })
+    
+    const isFirstCompletion = (status === 'COMPLETED' || status === 'MASTERED') && !existingProgress?.completedAt
+
     // Upsert topic progress
     const progress = await prisma.topicProgress.upsert({
       where: {
@@ -84,6 +98,173 @@ export async function POST(request: Request) {
       }
     })
 
+    // 🎴 AUTO-GENERATE/INITIALIZE FLASHCARDS as user progresses through topic
+    let flashcardsCreated = false
+    let flashcardCount = 0
+    let flashcardTopicTitle = ''
+    let totalActiveFlashcards = 0
+    let totalFlashcards = 0
+    
+    // Initialize flashcards ONLY when completing a part, not during progress checkpoints
+    // This prevents flashcards from appearing when navigating between sections
+    const shouldInitializeFlashcards = (
+      isPartCompletion && (
+        status === 'COMPLETED' || 
+        status === 'MASTERED' || 
+        (status === 'IN_PROGRESS' && lessonPart && lessonPart >= 1)
+      )
+    )
+    
+    if (shouldInitializeFlashcards) {
+      try {
+        
+        // Get the full topic with content
+        const fullTopic = await prisma.topic.findUnique({
+          where: { id: topic.id },
+          include: {
+            flashcards: true,
+            exampleProblems: true,
+          }
+        })
+
+        if (fullTopic && fullTopic.flashcards.length === 0) {
+          // Generate flashcards from content
+          const candidates = generateFlashcardsFromContent(fullTopic.textContent)
+          
+          // Also analyze example problems
+          const problemText = fullTopic.exampleProblems
+            .map(p => `${p.question}\n${p.solution}`)
+            .join('\n\n')
+          
+          if (problemText) {
+            const problemCandidates = generateFlashcardsFromContent(problemText)
+            candidates.push(...problemCandidates)
+          }
+
+          // Get top flashcards
+          const topFlashcards = getTopFlashcards(candidates, 8)
+
+          if (topFlashcards.length > 0) {
+            // Create flashcards in database
+            await Promise.all(
+              topFlashcards.map(async (card) => {
+                const flashcard = await prisma.flashcard.create({
+                  data: {
+                    topicId: fullTopic.id,
+                    front: card.front,
+                    back: card.back,
+                    hint: card.hint,
+                    isPremium: false
+                  }
+                })
+
+                // Initialize progress for the user
+                await prisma.flashcardProgress.create({
+                  data: {
+                    userId: session.user.id,
+                    flashcardId: flashcard.id,
+                    easeFactor: 2.5,
+                    interval: 0,
+                    repetitions: 0,
+                    nextReview: new Date(),
+                    lastReviewed: new Date(),
+                    reviewCount: 0
+                  }
+                })
+              })
+            )
+
+            flashcardsCreated = true
+            flashcardCount = topFlashcards.length
+            flashcardTopicTitle = fullTopic.title
+            console.log(`✅ Auto-generated ${topFlashcards.length} flashcards for "${fullTopic.title}"`)
+          }
+        } else if (fullTopic && fullTopic.flashcards.length > 0) {
+          // LESSON PART-BASED INITIALIZATION: Only initialize flashcards tagged for completed parts
+          // This ensures flashcards match the actual content covered
+          console.log(`🎴 Checking flashcard initialization for "${fullTopic.title}" (lesson part: ${lessonPart})`)
+          
+          // Determine which flashcards to initialize based on lesson part and MASTERED/COMPLETED status
+          let flashcardsToConsider: typeof fullTopic.flashcards = []
+          
+          if (status === 'MASTERED' || status === 'COMPLETED') {
+            // When topic is completed/mastered, initialize ALL flashcards (regardless of lessonPart tag)
+            flashcardsToConsider = fullTopic.flashcards
+            console.log(`✅ Topic completed/mastered - considering all ${fullTopic.flashcards.length} flashcards`)
+          } else if (lessonPart) {
+            // During progress: only initialize flashcards for completed parts
+            // Include cards with matching lessonPart OR cards with no lessonPart tag (legacy cards)
+            flashcardsToConsider = fullTopic.flashcards.filter(fc => 
+              fc.lessonPart === null || // Legacy cards without tags (initialize proportionally)
+              fc.lessonPart === undefined ||
+              (fc.lessonPart !== null && fc.lessonPart <= lessonPart) // Cards for this part or earlier parts
+            )
+            console.log(`📚 Lesson part ${lessonPart} - considering ${flashcardsToConsider.length}/${fullTopic.flashcards.length} flashcards (tagged for parts 1-${lessonPart} or untagged)`)
+          } else {
+            // No lesson part specified, use all flashcards
+            flashcardsToConsider = fullTopic.flashcards
+          }
+          
+          // Check how many are already initialized
+          const existingProgress = await prisma.flashcardProgress.findMany({
+            where: {
+              userId: session.user.id,
+              flashcard: {
+                topicId: fullTopic.id
+              }
+            },
+            select: {
+              flashcardId: true
+            }
+          })
+          
+          const initializedIds = new Set(existingProgress.map(p => p.flashcardId))
+          
+          // Find flashcards that should be active but aren't yet initialized
+          const uninitializedCards = flashcardsToConsider.filter(fc => !initializedIds.has(fc.id))
+          
+          // Store total counts for notification
+          totalActiveFlashcards = initializedIds.size
+          totalFlashcards = fullTopic.flashcards.length
+          
+          if (uninitializedCards.length > 0) {
+            // Initialize all cards that should be available for completed parts
+            console.log(`🆕 Initializing ${uninitializedCards.length} new flashcards for completed content`)
+            
+            for (const flashcard of uninitializedCards) {
+              await prisma.flashcardProgress.create({
+                data: {
+                  userId: session.user.id,
+                  flashcardId: flashcard.id,
+                  easeFactor: 2.5,
+                  interval: 0,
+                  repetitions: 0,
+                  nextReview: new Date(),
+                  lastReviewed: new Date(),
+                  reviewCount: 0
+                }
+              })
+            }
+            
+            flashcardsCreated = true
+            flashcardCount = uninitializedCards.length
+            flashcardTopicTitle = fullTopic.title
+            totalActiveFlashcards = initializedIds.size + uninitializedCards.length
+            console.log(`✅ Initialized ${uninitializedCards.length} new flashcards for "${fullTopic.title}" (${totalActiveFlashcards}/${fullTopic.flashcards.length} total)`)
+          } else if (initializedIds.size > 0) {
+            // Even if no new cards added, show notification about existing cards
+            flashcardsCreated = true
+            flashcardCount = 0 // No new cards
+            flashcardTopicTitle = fullTopic.title
+            console.log(`⏭️  No new flashcards to initialize for "${fullTopic.title}" (${initializedIds.size}/${fullTopic.flashcards.length} already active)`)
+          }
+        }
+      } catch (error) {
+        // Don't fail the whole request if flashcard generation fails
+        console.error('Failed to auto-generate flashcards:', error)
+      }
+    }
+
     // Store lesson part and completed sections in a separate storage
     // (Could add a JSON field to TopicProgress or use localStorage as cache)
     
@@ -92,7 +273,14 @@ export async function POST(request: Request) {
       progress: {
         status: progress.status,
         masteryLevel: progress.masteryLevel,
-      }
+      },
+      flashcards: flashcardsCreated ? {
+        created: true,
+        newCards: flashcardCount, // Number of NEW cards just added
+        totalActive: totalActiveFlashcards, // Total cards now available
+        totalPossible: totalFlashcards, // Total cards in topic
+        topicTitle: flashcardTopicTitle
+      } : undefined
     })
   } catch (error) {
     console.error('Progress save error:', error)

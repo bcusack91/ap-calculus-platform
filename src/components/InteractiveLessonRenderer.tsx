@@ -25,6 +25,7 @@ import rehypeRaw from 'rehype-raw'
 import { useSearchParams, useRouter } from 'next/navigation'
 import { useSession } from 'next-auth/react'
 import katex from 'katex'
+import { FlashcardNotification } from '@/components/flashcard-notification'
 
 interface Section {
   id: string
@@ -63,6 +64,14 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
   const [cachedTopicId, setCachedTopicId] = useState<string | null>(null)
   const [pendingSaveCount, setPendingSaveCount] = useState(0)
   const queryCountRef = useRef(0) // Track API calls
+  
+  // Flashcard notification state
+  const [showFlashcardNotification, setShowFlashcardNotification] = useState(false)
+  const [flashcardNotificationData, setFlashcardNotificationData] = useState<{
+    newCards: number
+    totalActive: number
+    topicTitle: string
+  } | null>(null)
 
   // Update URL when lesson part changes
   const updateLessonPart = (newPart: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8) => {
@@ -76,7 +85,7 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
   }
 
   // Save progress to database
-  const saveProgress = async (forceTopicId?: string) => {
+  const saveProgress = async (forceTopicId?: string, isPartCompletion: boolean = false) => {
     if (!session?.user) return // Only save if user is logged in
     
     queryCountRef.current++
@@ -115,7 +124,7 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
         }
       }
       
-      await fetch('/api/progress/save', {
+      const response = await fetch('/api/progress/save', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -125,8 +134,20 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
           completedSections: Array.from(completedSections),
           masteryLevel,
           timeSpent: 0, // Could track actual time if needed
+          isPartCompletion, // Flag to indicate this is a part completion, not just progress save
         }),
       })
+      
+      // Check if flashcards were created (only show notification on part completion)
+      const result = await response.json()
+      if (isPartCompletion && result.flashcards?.created) {
+        setFlashcardNotificationData({
+          newCards: result.flashcards.newCards || 0,
+          totalActive: result.flashcards.totalActive || 0,
+          topicTitle: result.flashcards.topicTitle
+        })
+        setShowFlashcardNotification(true)
+      }
     } catch (error) {
       console.error('Failed to save progress:', error)
     }
@@ -219,22 +240,15 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
     return () => window.removeEventListener('beforeunload', handleBeforeUnload)
   }, [session, completedSections, cachedTopicId, lessonPart])
 
-  // Smart batched saves: Save every 3 sections or on part change
+  // Smart batched saves: Save every 3 sections for progress tracking
   useEffect(() => {
     if (progressLoaded && completedSections.size > 0) {
       const shouldSave = completedSections.size % 3 === 0 // Every 3 sections
       if (shouldSave) {
-        saveProgress()
+        saveProgress(undefined, false) // Progress checkpoint, not part completion
       }
     }
   }, [completedSections, progressLoaded])
-  
-  // Save on part transition
-  useEffect(() => {
-    if (progressLoaded && completedSections.size > 0) {
-      saveProgress()
-    }
-  }, [lessonPart, progressLoaded])
 
   // Get lesson data based on topic and part
   const lessonData = topicSlug === 'the-unit-circle' 
@@ -331,7 +345,7 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
     return masteryLevel
   }
 
-  const handleNext = () => {
+  const handleNext = async () => {
     // Mark current section as complete when moving to next
     if (!completedSections.has(currentSectionIndex)) {
       setCompletedSections(prev => new Set([...prev, currentSectionIndex]))
@@ -347,7 +361,9 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
       setCurrentSectionIndex(currentSectionIndex + 1)
       window.scrollTo({ top: 0, behavior: 'smooth' })
     } else {
-      // On final section, behavior depends on lesson type
+      // On final section of a part, save progress and initialize flashcards
+      // This triggers flashcard notification BEFORE transitioning to next part
+      await saveProgress(undefined, true) // Part completion - trigger flashcards
       
       // Multi-part lesson navigation
       if (lessonPart === 1) {
@@ -503,7 +519,8 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
   })
 
   return (
-    <div className="space-y-6">
+    <>
+      <div className="space-y-6">
       {/* Part Navigation Menu - Show for multi-part lessons */}
       {(topicSlug === 'the-unit-circle' || topicSlug === 'factoring-algebra1' || topicSlug === 'reflection-refraction') && (
         <div className="bg-gradient-to-r from-indigo-100/80 via-purple-100/80 to-pink-100/80 dark:from-indigo-900/40 dark:via-purple-900/40 dark:to-pink-900/40 backdrop-blur-sm rounded-2xl p-5 border-2 border-indigo-200/70 dark:border-indigo-700/50 shadow-lg">
@@ -859,6 +876,21 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
         </div>
       )}
     </div>
+    
+    {/* Flashcard Notification */}
+    {flashcardNotificationData && (
+      <FlashcardNotification
+        show={showFlashcardNotification}
+        newCards={flashcardNotificationData.newCards}
+        totalActive={flashcardNotificationData.totalActive}
+        topicTitle={flashcardNotificationData.topicTitle}
+        onDismiss={() => {
+          setShowFlashcardNotification(false)
+          setFlashcardNotificationData(null)
+        }}
+      />
+    )}
+    </>
   )
 }
 

@@ -24,9 +24,19 @@ export default async function FlashcardsPage() {
     <div className="container py-10">
       <div className="mx-auto max-w-4xl">
         <h1 className="text-4xl font-bold tracking-tight mb-4">Flashcards</h1>
-        <p className="text-lg text-muted-foreground mb-8">
-          Review calculus concepts with our flashcard system!
+        <p className="text-lg text-muted-foreground mb-4">
+          Review concepts with our Anki-style spaced repetition system!
         </p>
+
+        {/* Quick Action Button */}
+        <div className="mb-8">
+          <Link
+            href="/flashcards/review-dashboard"
+            className="inline-block px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg shadow-lg transition-all"
+          >
+            🎯 Start Review Session
+          </Link>
+        </div>
 
         <AdBanner slot="flashcards-top" />
 
