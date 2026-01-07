@@ -138,7 +138,7 @@ export function ClozeFlashcard({ front, back, hint, topicTitle, onRate, reviewin
             className="px-4 py-6 rounded-lg bg-red-100 hover:bg-red-200 border-2 border-red-300 text-red-900 font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <div className="text-sm mb-1">Again</div>
-            <div className="text-xs opacity-75">&lt;1 min</div>
+            <div className="text-xs opacity-75">1 min</div>
           </button>
           <button
             onClick={() => onRate('hard')}
@@ -146,7 +146,7 @@ export function ClozeFlashcard({ front, back, hint, topicTitle, onRate, reviewin
             className="px-4 py-6 rounded-lg bg-orange-100 hover:bg-orange-200 border-2 border-orange-300 text-orange-900 font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <div className="text-sm mb-1">Hard</div>
-            <div className="text-xs opacity-75">1 day</div>
+            <div className="text-xs opacity-75">3 min</div>
           </button>
           <button
             onClick={() => onRate('good')}
@@ -154,7 +154,7 @@ export function ClozeFlashcard({ front, back, hint, topicTitle, onRate, reviewin
             className="px-4 py-6 rounded-lg bg-green-100 hover:bg-green-200 border-2 border-green-300 text-green-900 font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <div className="text-sm mb-1">Good</div>
-            <div className="text-xs opacity-75">2-4 days</div>
+            <div className="text-xs opacity-75">5 min</div>
           </button>
           <button
             onClick={() => onRate('easy')}
@@ -162,7 +162,7 @@ export function ClozeFlashcard({ front, back, hint, topicTitle, onRate, reviewin
             className="px-4 py-6 rounded-lg bg-blue-100 hover:bg-blue-200 border-2 border-blue-300 text-blue-900 font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <div className="text-sm mb-1">Easy</div>
-            <div className="text-xs opacity-75">5+ days</div>
+            <div className="text-xs opacity-75">1 day</div>
           </button>
         </div>
       )}

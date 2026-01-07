@@ -53,7 +53,8 @@ export async function POST(req: NextRequest) {
       quality,
       progress.easeFactor,
       progress.interval,
-      progress.repetitions
+      progress.repetitions,
+      progress.isMinuteInterval || false
     )
 
     // Update progress in database
@@ -67,6 +68,7 @@ export async function POST(req: NextRequest) {
       data: {
         easeFactor: result.easeFactor,
         interval: result.interval,
+        isMinuteInterval: result.isMinuteInterval,
         repetitions: result.repetitions,
         nextReview: result.nextReview,
         lastReviewed: new Date(),

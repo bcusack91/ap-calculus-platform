@@ -153,17 +153,18 @@ model Flashcard {
 }
 
 model FlashcardProgress {
-  id           String    @id @default(cuid())
-  userId       String
-  flashcardId  String
-  easeFactor   Float     @default(2.5)
-  interval     Int       @default(0)
-  repetitions  Int       @default(0)
-  nextReview   DateTime  @default(now())
-  lastReviewed DateTime  @default(now())
-  reviewCount  Int       @default(0)
-  flashcard    Flashcard @relation(fields: [flashcardId], references: [id], onDelete: Cascade)
-  user         User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  id              String    @id @default(cuid())
+  userId          String
+  flashcardId     String
+  easeFactor      Float     @default(2.5)
+  interval        Int       @default(0)
+  isMinuteInterval Boolean  @default(false) // True if interval is in minutes, false if in days
+  repetitions     Int       @default(0)
+  nextReview      DateTime  @default(now())
+  lastReviewed    DateTime  @default(now())
+  reviewCount     Int       @default(0)
+  flashcard       Flashcard @relation(fields: [flashcardId], references: [id], onDelete: Cascade)
+  user            User      @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([userId, flashcardId])
 }

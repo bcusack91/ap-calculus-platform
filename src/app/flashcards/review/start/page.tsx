@@ -311,7 +311,7 @@ export default function FlashcardReviewPage() {
               className="px-4 py-6 rounded-lg bg-red-100 hover:bg-red-200 border-2 border-red-300 text-red-900 font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed"
             >
               <div className="text-sm mb-1">Again</div>
-              <div className="text-xs opacity-75">&lt;1 min</div>
+              <div className="text-xs opacity-75">1 min</div>
             </button>
             
             <button
@@ -320,9 +320,7 @@ export default function FlashcardReviewPage() {
               className="px-4 py-6 rounded-lg bg-orange-100 hover:bg-orange-200 border-2 border-orange-300 text-orange-900 font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed"
             >
               <div className="text-sm mb-1">Hard</div>
-              <div className="text-xs opacity-75">
-                {currentCard.repetitions === 0 ? '1 day' : `${Math.max(1, Math.round(currentCard.interval * 1.2))}d`}
-              </div>
+              <div className="text-xs opacity-75">3 min</div>
             </button>
             
             <button
@@ -331,9 +329,7 @@ export default function FlashcardReviewPage() {
               className="px-4 py-6 rounded-lg bg-green-100 hover:bg-green-200 border-2 border-green-300 text-green-900 font-semibold transition-all disabled:opacity-50 disabled:cursor-not-answered"
             >
               <div className="text-sm mb-1">Good</div>
-              <div className="text-xs opacity-75">
-                {currentCard.repetitions === 0 ? '1 day' : currentCard.repetitions === 1 ? '6 days' : `${Math.round(currentCard.interval * currentCard.easeFactor)}d`}
-              </div>
+              <div className="text-xs opacity-75">5 min</div>
             </button>
             
             <button
@@ -342,9 +338,7 @@ export default function FlashcardReviewPage() {
               className="px-4 py-6 rounded-lg bg-blue-100 hover:bg-blue-200 border-2 border-blue-300 text-blue-900 font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed"
             >
               <div className="text-sm mb-1">Easy</div>
-              <div className="text-xs opacity-75">
-                {currentCard.repetitions === 0 ? '4 days' : `${Math.round(currentCard.interval * currentCard.easeFactor * 1.3)}d`}
-              </div>
+              <div className="text-xs opacity-75">1 day</div>
             </button>
           </div>
         )}
