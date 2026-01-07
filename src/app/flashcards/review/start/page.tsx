@@ -8,6 +8,8 @@ import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
 import 'katex/dist/katex.min.css'
 import { formatFlashcardContent } from '@/lib/format-flashcard-content'
+import { detectCloze } from '@/lib/cloze-utils'
+import { ClozeFlashcard } from '@/components/cloze-flashcard'
 
 interface Flashcard {
   id: string
@@ -183,6 +185,7 @@ export default function FlashcardReviewPage() {
 
   const currentCard = cards[currentIndex]
   const progress = Math.round(((currentIndex) / cards.length) * 100)
+  const isClozeCard = detectCloze(currentCard.flashcard.front).isCloze
 
   return (
     <div className="container py-10">
@@ -208,38 +211,50 @@ export default function FlashcardReviewPage() {
           </div>
         </div>
 
-        {/* Flashcard */}
-        <div className="mb-8">
-          <div
-            onClick={() => !isFlipped && setIsFlipped(true)}
-            className={`relative min-h-[350px] cursor-pointer perspective-1000 ${!isFlipped ? 'hover:scale-105' : ''} transition-transform duration-200`}
-          >
-            <div
-              className={`relative w-full min-h-[350px] transition-all duration-500 preserve-3d`}
-              style={{
-                transformStyle: 'preserve-3d',
-                transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0)',
-              }}
-            >
-              {/* Front */}
+        {/* Render Cloze or Regular Flashcard */}
+        {isClozeCard ? (
+          <ClozeFlashcard
+            front={currentCard.flashcard.front}
+            back={currentCard.flashcard.back}
+            hint={currentCard.flashcard.hint}
+            topicTitle={currentCard.flashcard.topic.title}
+            onRate={handleRating}
+            reviewing={reviewing}
+          />
+        ) : (
+          <>
+            {/* Regular Flashcard */}
+            <div className="mb-8">
               <div
-                className={`absolute w-full backface-hidden ${
-                  isFlipped ? 'opacity-0' : 'opacity-100'
-                }`}
-                style={{ backfaceVisibility: 'hidden' }}
+                onClick={() => !isFlipped && setIsFlipped(true)}
+                className={`relative min-h-[350px] cursor-pointer perspective-1000 ${!isFlipped ? 'hover:scale-105' : ''} transition-transform duration-200`}
               >
-                <div className="border-2 border-purple-300 rounded-xl p-10 bg-gradient-to-br from-purple-50 to-blue-50 min-h-[350px] flex flex-col justify-center">
-                  <div className="text-sm text-purple-900 font-semibold mb-4">QUESTION</div>
-                  <div className="text-xl prose prose-purple max-w-none text-gray-900">
-                    <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
-                      {formatFlashcardContent(currentCard.flashcard.front)}
-                    </ReactMarkdown>
+                <div
+                  className={`relative w-full min-h-[350px] transition-all duration-500 preserve-3d`}
+                  style={{
+                    transformStyle: 'preserve-3d',
+                    transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0)',
+                  }}
+                >
+                  {/* Front */}
+                  <div
+                    className={`absolute w-full backface-hidden ${
+                      isFlipped ? 'opacity-0' : 'opacity-100'
+                    }`}
+                    style={{ backfaceVisibility: 'hidden' }}
+                  >
+                    <div className="border-2 border-purple-300 rounded-xl p-10 bg-gradient-to-br from-purple-50 to-blue-50 min-h-[350px] flex flex-col justify-center">
+                      <div className="text-sm text-purple-900 font-semibold mb-4">QUESTION</div>
+                      <div className="text-xl prose prose-purple max-w-none text-gray-900">
+                        <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
+                          {formatFlashcardContent(currentCard.flashcard.front)}
+                        </ReactMarkdown>
+                      </div>
+                      <div className="mt-8 text-sm text-gray-600 text-center italic">
+                        Click to reveal answer
+                      </div>
+                    </div>
                   </div>
-                  <div className="mt-8 text-sm text-gray-600 text-center italic">
-                    Click to reveal answer
-                  </div>
-                </div>
-              </div>
 
               {/* Back */}
               <div
@@ -313,7 +328,7 @@ export default function FlashcardReviewPage() {
             <button
               onClick={() => handleRating('good')}
               disabled={reviewing}
-              className="px-4 py-6 rounded-lg bg-green-100 hover:bg-green-200 border-2 border-green-300 text-green-900 font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+              className="px-4 py-6 rounded-lg bg-green-100 hover:bg-green-200 border-2 border-green-300 text-green-900 font-semibold transition-all disabled:opacity-50 disabled:cursor-not-answered"
             >
               <div className="text-sm mb-1">Good</div>
               <div className="text-xs opacity-75">
@@ -332,6 +347,8 @@ export default function FlashcardReviewPage() {
               </div>
             </button>
           </div>
+        )}
+          </>
         )}
 
         {/* Instructions */}

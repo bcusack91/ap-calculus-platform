@@ -32,7 +32,7 @@ export async function seedPart01Flashcards() {
       {
         topicId: topic.id,
         lessonPart: 1,
-        front: 'Fill in the blank: Light rays travel in _______ _______ until they encounter an obstacle or different medium.',
+        front: 'Light rays travel in {{c1::straight lines}} until they encounter an obstacle or different medium.',
         back: 'straight lines. Light travels in straight lines (called rays) until it hits something. This is why shadows have sharp edges and why we can aim flashlights in specific directions.',
       },
       {
