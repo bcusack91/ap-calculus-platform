@@ -7,9 +7,9 @@ export const reflectionRefractionPart2LearningJourneyData = {
       content: `
 # Your Learning Journey 🗺️
 
-This interactive lesson has **7 parts**, each building on the previous one.
+This interactive lesson has **8 parts**, each building on the previous one.
 
-## The Path Ahead:
+## The Complete Path:
 
 **Part 1:** Introduction ✓
 
@@ -23,17 +23,6 @@ How light bounces off surfaces
 
 **Part 5:** Index of Refraction 🌊  
 Why light slows down in materials
-
-**Continue to learn about Snell's Law, total internal reflection, and dispersion!**
-      `
-    },
-    {
-      id: 'more-parts',
-      type: 'text' as const,
-      content: `
-# The Complete Journey (Continued)
-
-## Parts 6-8:
 
 **Part 6:** Snell's Law ⚡  
 The master equation for predicting how light bends
