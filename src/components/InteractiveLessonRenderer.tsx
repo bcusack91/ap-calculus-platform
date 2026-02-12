@@ -425,6 +425,7 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
       {/* Current Section Content */}
       <div className="bg-white/95 dark:bg-gray-800/95 backdrop-blur-sm rounded-2xl shadow-2xl p-10 border-2 border-purple-100/50 dark:border-purple-500/20 min-h-[500px] transition-all duration-300 hover:shadow-3xl hover:border-purple-200/70 dark:hover:border-purple-400/30">
         <SectionRenderer 
+          key={currentSection.id}
           section={currentSection} 
           onComplete={handleSectionComplete}
           isComplete={isCurrentSectionComplete}
