@@ -5,25 +5,18 @@ export const reflectionRefractionPart1Data = {
       id: 'part1-roadmap',
       type: 'text' as const,
       content: `
-# Part 1 Roadmap: Foundations First 🧭
+# 🧭 Welcome — Let's Build Your Foundation
 
-## You are here
-**Part 1 of 8 — Foundations**
+**Part 1 of 8**
 
-## In this part, you will:
-1. Define what light is
-2. Identify reflection vs refraction
-3. Connect optics to real-world systems
-4. Complete quick checks after each concept block
+Before we dive into equations, we need to understand *what light actually does* when it meets different materials.
 
-## Success target
-By the end of this part, you should be able to explain (in one sentence each):
+By the end of this part you'll be able to explain, in plain language:
 - Why light bends at boundaries
-- Why fiber optics work
-- Why rainbows form
+- How fiber optics carry the internet
+- What makes rainbows form
 
-## Problem workflow you will reuse all course long
-$$\text{Given} \rightarrow \text{Find} \rightarrow \text{Formula} \rightarrow \text{Substitute} \rightarrow \text{Interpret}$$
+No math yet — just the big picture. Ready?
       `
     },
     {
@@ -382,91 +375,61 @@ Great progress! Let's verify you understand these real-world applications.
       id: 'part1-step-template',
       type: 'text' as const,
       content: `
-# Your 5-Step Optics Template (Use This Every Time) 🧩
+# 🧩 A Problem-Solving Habit Worth Building
 
-When solving optics problems, write these headers explicitly:
+Starting in Part 3, you'll solve real optics problems. Here's the workflow top students use — write these five headers every time:
 
-## 1) Given
-List known values and context (media, angle type, direction)
+> **Given → Find → Formula → Substitute → Interpret**
 
-## 2) Find
-State exactly what unknown you need
+1. **Given** — list the known values and context
+2. **Find** — state exactly what you need
+3. **Formula** — pick the right equation
+4. **Substitute** — plug in values with correct signs and units
+5. **Interpret** — does the answer make physical sense?
 
-## 3) Formula
-Pick one governing relation (e.g., Snell, index, reflection)
-
-## 4) Substitute
-Plug values with units and signs carefully
-
-## 5) Interpret
-Check if answer makes physical sense (toward/away normal, larger/smaller angle, etc.)
-
-This structure will keep the next parts clear and fast.
+This single habit will prevent most mistakes in the parts ahead.
       `
     },
     {
-      id: 'part1-common-mistakes',
+      id: 'part1-final-check',
       type: 'multiple-choice' as const,
       content: `
-**Common Mistakes Check: Part 1**
+**Before You Move On** — let's make sure the foundations are solid.
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement is a common misconception?',
+            question: 'Which of these statements about white light is FALSE?',
             options: [
-              'Light can both reflect and refract at one boundary',
+              'White light is a mixture of many colors',
               'All colors in white light have exactly the same wavelength',
-              'Fiber optics rely on guided light paths',
-              'Refraction can change apparent depth'
+              'Different colors refract by different amounts',
+              'A prism can separate white light into its colors'
             ],
             correctAnswer: 1,
-            explanation: 'White light contains multiple wavelengths. Different wavelengths refract differently.'
+            explanation: 'White light contains many wavelengths — that\'s why a prism can split it into a rainbow of colors.'
           },
           {
-            question: 'A student says: "If light bends, it must have reflected." Best correction?',
+            question: 'What is the difference between reflection and refraction?',
             options: [
-              'Correct—bending always means reflection',
-              'Bending is refraction; reflection is bouncing back',
-              'Bending only happens in vacuum',
-              'Reflection and refraction are the same term'
+              'They are the same thing',
+              'Reflection is bouncing back; refraction is bending into a new medium',
+              'Reflection only happens in water',
+              'Refraction only happens with mirrors'
             ],
             correctAnswer: 1,
-            explanation: 'Refraction is bending through a new medium; reflection is return into the original medium.'
+            explanation: 'Reflection sends light back into the original medium, while refraction bends it as it enters a new one.'
           },
           {
-            question: 'Best reasoning habit for this course:',
+            question: 'An underwater camera image shows a diver shifted from their actual position. Which concept explains this?',
             options: [
-              'Memorize only final formulas',
-              'Skip diagrams to save time',
-              'Use the 5-step structure every problem',
-              'Assume every boundary causes only one effect'
-            ],
-            correctAnswer: 2,
-            explanation: 'A fixed structure reduces sign and interpretation errors in later parts.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'part1-transfer-challenge',
-      type: 'multiple-choice' as const,
-      content: `
-**Transfer Challenge (Real World)**
-You are troubleshooting an underwater camera image that looks shifted from the diver's actual position. Which concept should you apply first?
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Best first concept to apply:',
-            options: [
-              'Only mirror reflection law',
-              'Refraction at water-air boundary',
+              'The mirror\'s law of reflection',
+              'Refraction at the water–air boundary',
               'Nuclear decay equations',
-              'Momentum conservation only'
+              'Magnetic field deflection'
             ],
             correctAnswer: 1,
-            explanation: 'Underwater apparent-position errors are primarily refractive effects at medium boundaries.'
+            explanation: 'Light bends (refracts) when crossing the water–air boundary, making objects appear shifted from where they really are.'
           }
         ]
       }

@@ -5,19 +5,15 @@ export const reflectionRefractionPart3Data = {
       id: 'part4-roadmap-reflection',
       type: 'text' as const,
       content: `
-# Part 4 Roadmap: Law of Reflection 🪞
+# 🪞 Law of Reflection
 
-## You are here
-**Part 4 of 8 — Reflection**
+**Part 4 of 8**
 
-## What you will do
-1. Lock in angle measurement from normal
-2. Distinguish specular vs diffuse reflection
-3. Apply sign convention to plane mirrors
-4. Solve and interpret reflection setups quickly
+Time to apply what you know! In this part you'll learn the simplest but most fundamental law in optics:
 
-## Reflection solve template
-$$\text{Given} \rightarrow \text{Find} \rightarrow \text{Formula }(\theta_i = \theta_r) \rightarrow \text{Substitute} \rightarrow \text{Interpret with diagram}$$
+> **Angle of incidence = Angle of reflection**
+
+We'll also see why mirrors create clear images while paper doesn't, and apply our sign convention to plane mirrors.
       `
     },
     {
@@ -211,31 +207,31 @@ Test your understanding of reflection concepts!
       id: 'reflection-mistakes-check',
       type: 'multiple-choice' as const,
       content: `
-**Common Mistakes: Reflection**
+**Before You Move On** — Two common traps with reflection.
       `,
       exercise: {
         questions: [
           {
-            question: 'A student measures both angles from the mirror surface instead of the normal. What is the issue?',
+            question: 'A student measures both angles from the mirror surface instead of the normal. What goes wrong?',
             options: [
-              'No issue; both methods are always equivalent in formulas',
-              'This can produce wrong use of θᵢ = θᵣ unless converted correctly',
+              'No issue — both methods always give the same result',
+              'The formula expects angles from the normal, so surface angles give wrong result θᵢ = θᵣ unless converted correctly',
               'Only reflected angle needs normal reference',
               'Angles should be measured from optical axis only'
             ],
             correctAnswer: 1,
-            explanation: 'The law is defined with angles from the normal. Surface-based angles require conversion first.'
+            explanation: 'The law of reflection uses angles from the normal. Measuring from the surface instead gives complementary angles — use them in the formula and you get the wrong answer.'
           },
           {
-            question: 'Best correction for “rough surfaces break the law of reflection.”',
+            question: 'True or false: "Rough surfaces break the law of reflection."',
             options: [
-              'True always',
+              'True — rough surfaces scatter light randomly',
               'False: each local micro-surface still obeys θᵢ = θᵣ',
-              'Only true for mirrors',
-              'Depends on color only'
+              'Only true above a certain roughness',
+              'Depends on wavelength only'
             ],
             correctAnswer: 1,
-            explanation: 'Diffuse reflection still follows the law locally; normals vary across microfacets.'
+            explanation: 'False! Each tiny facet of a rough surface still obeys the law — the normals just point in different directions, scattering the reflected rays.'
           }
         ]
       }
@@ -244,21 +240,20 @@ Test your understanding of reflection concepts!
       id: 'reflection-transfer',
       type: 'multiple-choice' as const,
       content: `
-**Transfer Challenge: Car Headlight Glare**
-A driver sees broad glare from a wet rough road but a sharp image from a mirror sign. Which explanation is best?
+**Real-World Check** — A driver sees broad glare from a wet rough road but a crisp reflection from a mirror road sign. Why?
       `,
       exercise: {
         questions: [
           {
-            question: 'Best explanation:',
+            question: 'Which explanation is correct?',
             options: [
               'Both surfaces produce only diffuse reflection',
-              'Road gives mostly diffuse scatter; mirror sign gives specular reflection',
-              'Mirror sign absorbs more light',
-              'Wet road eliminates reflection'
+              'The rough road scatters light (diffuse), while the smooth sign reflects it cleanly (specular)',
+              'The sign absorbs more light than the road',
+              'Wet roads don\'t reflect light'
             ],
             correctAnswer: 1,
-            explanation: 'Surface smoothness controls whether reflected rays stay organized (specular) or scatter (diffuse).'
+            explanation: 'Surface smoothness determines the type of reflection. The rough road has varied normals → diffuse scatter. The mirror sign is smooth → specular reflection with a clean image.'
           }
         ]
       }

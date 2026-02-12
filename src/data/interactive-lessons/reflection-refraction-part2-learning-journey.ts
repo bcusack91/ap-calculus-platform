@@ -5,20 +5,18 @@ export const reflectionRefractionPart2LearningJourneyData = {
       id: 'part2-roadmap',
       type: 'text' as const,
       content: `
-# Part 2 Roadmap: How to Win This Course 🧭
+# 🗺️ Your Game Plan
 
-## You are here
-**Part 2 of 8 — Learning Strategy + Setup**
+**Part 2 of 8**
 
-## In this part:
-1. Build a clear plan for the next 6 technical parts
-2. Lock in the one workflow used on every problem
-3. Avoid the top errors before they happen
+Now that you know *what* light does, let's talk about *how* to tackle optics problems like a pro.
 
-## Mastery target
-After this part, you should be able to state exactly **what to write first** when you see any optics question.
+This short part covers:
+- The structure of the 8-part journey ahead
+- Three success tips that top students swear by
+- A simple problem-solving workflow you'll use everywhere
 
-$$\text{Given} \rightarrow \text{Find} \rightarrow \text{Formula} \rightarrow \text{Substitute} \rightarrow \text{Interpret}$$
+After this, the real physics starts in Part 3.
       `
     },
     {
@@ -147,49 +145,32 @@ This is where the real magic begins. You're about to learn the coordinate system
       id: 'part2-checkpoint',
       type: 'multiple-choice' as const,
       content: `
-**Checkpoint: Learning Flow**
+**Quick Check** — Make sure you're set before Part 3.
       `,
       exercise: {
         questions: [
           {
-            question: 'Which part should receive extra attention because it controls many later sign/direction decisions?',
-            options: ['Part 1', 'Part 3', 'Part 6', 'Part 8'],
+            question: 'Which part of this course deserves the most careful attention?',
+            options: ['Part 1 (Introduction)', 'Part 3 (Sign Convention)', 'Part 6 (Snell\'s Law)', 'Part 8 (Dispersion)'],
             correctAnswer: 1,
-            explanation: 'Part 3 (Sign Convention) is foundational for the rest of the sequence.'
+            explanation: 'Part 3 (Sign Convention) is the foundation for every calculation that follows. Take your time with it!'
           },
           {
-            question: 'Best first line to write after reading a problem statement?',
-            options: ['Final answer estimate', 'Given values and context', 'Random formula list', 'Graph only'],
+            question: 'When you see a new optics problem, what should you write first?',
+            options: ['Your final answer estimate', 'The given values and context', 'A list of every formula you know', 'A graph of the solution'],
             correctAnswer: 1,
-            explanation: 'Starting with “Given” prevents skipping constraints and angle references.'
+            explanation: 'Start with "Given" — listing what you know prevents you from skipping key constraints.'
           },
           {
-            question: 'Why is the 5-step method useful?',
-            options: ['It makes problems longer', 'It replaces understanding', 'It reduces avoidable sign/setup mistakes', 'It works only for reflection'],
-            correctAnswer: 2,
-            explanation: 'A fixed sequence reduces cognitive load and keeps reasoning consistent.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'part2-misconception-fix',
-      type: 'multiple-choice' as const,
-      content: `
-**Misconception Fix (Before Part 3)**
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Student claim: “I can skip sign convention and just use magnitudes.” Best response?',
+            question: 'A classmate says they will skip sign convention and just use positive numbers everywhere. What\'s the risk?',
             options: [
-              'Correct for all optics problems',
-              'Works only in prism dispersion',
-              'Usually causes wrong direction/image-side conclusions',
-              'Only wrong for reflection'
+              'No risk — signs don\'t matter in optics',
+              'They\'ll often get wrong conclusions about image side or bending direction',
+              'It only matters for prism problems',
+              'Sign convention is optional for AP exams'
             ],
-            correctAnswer: 2,
-            explanation: 'Without convention, side/direction interpretations often fail even if magnitudes look reasonable.'
+            correctAnswer: 1,
+            explanation: 'Without the sign convention, your numbers might look right but your interpretation (which side? real or virtual?) will often be wrong.'
           }
         ]
       }

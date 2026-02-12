@@ -5,20 +5,13 @@ export const reflectionRefractionPart7Data = {
       id: 'part8-roadmap-dispersion',
       type: 'text' as const,
       content: `
-# Part 8 Roadmap: Dispersion and Rainbows 🌈
+# 🌈 Dispersion — Why Rainbows Exist
 
-## You are here
-**Part 8 of 8 — Dispersion + Synthesis**
+**Part 8 of 8 — The Grand Finale**
 
-## Final goals
-1. Explain why different wavelengths bend differently
-2. Connect Snell + TIR + dispersion into one rainbow model
-3. Apply whole-course reasoning to real scenarios
+You've learned reflection, refraction, and TIR. Now we put it all together to explain one of nature's most beautiful phenomena: the rainbow.
 
-## Final problem workflow
-$$\text{Given media + wavelength trend} \rightarrow \text{Find direction/ordering} \rightarrow \text{Use Snell/TIR logic} \rightarrow \text{Interpret geometry}$$
-
-By end of this part, you should be able to narrate rainbow formation step-by-step without guessing.
+The key insight: the index of refraction isn't the same for every color. Blue light bends more than red. That tiny difference creates prisms, rainbows, and the "fire" in a diamond.
       `
     },
     {
@@ -299,31 +292,31 @@ Keep practicing, and remember: **light always takes the path that minimizes trav
       id: 'dispersion-common-mistakes',
       type: 'multiple-choice' as const,
       content: `
-**Common Mistakes: Dispersion and Rainbow Geometry**
+**Before You Move On** — Two things to get right about dispersion.
       `,
       exercise: {
         questions: [
           {
-            question: 'Student claim: “All colors have same n in glass.” Best correction?',
+            question: 'True or false: "All colors of light have the same index of refraction in glass."',
             options: [
-              'Correct for visible light',
-              'False: n varies with wavelength, causing dispersion',
-              'Only red has index',
-              'Index applies only to mirrors'
+              'True — all visible light has the same n',
+              'False — n varies with wavelength, which is exactly what causes dispersion',
+              'Only red light has a refractive index',
+              'Index of refraction only applies to mirrors'
             ],
             correctAnswer: 1,
-            explanation: 'Dispersion exists precisely because refractive index is wavelength-dependent.'
+            explanation: 'The whole reason dispersion exists is that n depends on wavelength. Blue light has a slightly higher n than red, so it bends more — spreading white light into a spectrum.'
           },
           {
-            question: 'Student says “rainbows are straight bands in the sky.” Best fix?',
+            question: 'Why do rainbows appear as arcs rather than straight bands?',
             options: [
-              'True, always linear',
-              'False: constant-viewing-angle geometry creates circular arcs',
-              'Only true at noon',
-              'Depends only on humidity'
+              'They actually are straight lines — the curve is an illusion',
+              'All drops at the same angle from the sun–observer line form a circle',
+              'Arcs only appear at noon',
+              'The shape depends on humidity'
             ],
             correctAnswer: 1,
-            explanation: 'Drops at a fixed angle relative to the observer-sun line form a cone/circle, seen as an arc.'
+            explanation: 'Every raindrop at exactly 42° from the sun–observer line sends red light to your eye. Those drops form a cone, which you see as a circular arc. Different colors come from slightly different angles, creating the full rainbow.'
           }
         ]
       }
@@ -332,21 +325,20 @@ Keep practicing, and remember: **light always takes the path that minimizes trav
       id: 'final-transfer-case',
       type: 'multiple-choice' as const,
       content: `
-**Capstone Transfer: Multi-Concept Scenario**
-A lab beam enters a prism, separates into colors, and then one color is guided through a fiber. Which ordered concept chain is most accurate?
+**Final Real-World Check** — A lab beam enters a prism, separates into colors, and one color is guided through a fiber optic cable.
       `,
       exercise: {
         questions: [
           {
-            question: 'Best ordered chain:',
+            question: 'Which sequence of concepts explains this setup?',
             options: [
               'Reflection only → absorption only',
-              'Dispersion by wavelength-dependent refraction → TIR guidance in fiber',
+              'Wavelength-dependent refraction (dispersion) in the prism, then TIR in the fibe → TIR guidance in fiber',
               'Diffraction only → nuclear scattering',
               'Potential energy only → no boundary effects'
             ],
             correctAnswer: 1,
-            explanation: 'Prism separation is dispersive refraction; fiber confinement is achieved through total internal reflection.'
+            explanation: 'The prism separates colors because n depends on wavelength (dispersion via refraction). The fiber keeps the selected color trapped inside via total internal reflection. This is the whole course in one setup!'
           }
         ]
       }

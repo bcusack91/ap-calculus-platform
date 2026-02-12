@@ -5,19 +5,13 @@ export const reflectionRefractionPart6Data = {
       id: 'part7-roadmap-tir',
       type: 'text' as const,
       content: `
-# Part 7 Roadmap: Total Internal Reflection 💎
+# 💎 Total Internal Reflection
 
-## You are here
-**Part 7 of 8 — TIR**
+**Part 7 of 8**
 
-## Step sequence
-1. Verify medium order: must be high n → low n
-2. Compute critical angle $\theta_c = \sin^{-1}(n_2/n_1)$
-3. Compare incident angle to $\theta_c$
-4. Decide: refraction, grazing, or total internal reflection
+What happens when light tries to leave a dense material and the angle is too steep? It can't escape — it reflects completely back inside. This is **total internal reflection** (TIR).
 
-## Success target
-Given any boundary pair and incident angle, you can classify the outcome in one line.
+TIR powers fiber optic internet, makes diamonds sparkle, and explains mirages on hot roads. Let's see how it works.
       `
     },
     {
@@ -233,20 +227,20 @@ Test your understanding of TIR!
       id: 'tir-common-mistakes',
       type: 'multiple-choice' as const,
       content: `
-**Common Mistakes: TIR**
+**Before You Move On** — Two things students get wrong about TIR.
       `,
       exercise: {
         questions: [
           {
-            question: 'Student computes critical angle for air→water and expects TIR from air side. Best correction?',
+            question: 'A student computes the critical angle for air→water and expects TIR from the air side. What\'s wrong?',
             options: [
-              'Correct, TIR occurs in either direction',
+              'Nothing — TIR works in either direction',
               'TIR requires high n to low n travel',
-              'Critical angle only for mirrors',
+              'The critical angle only applies to mirrors',
               'TIR does not involve Snell\'s law'
             ],
             correctAnswer: 1,
-            explanation: 'TIR only occurs when light attempts to leave a denser medium into a less dense one.'
+            explanation: 'TIR only happens when light goes from high n to low n (dense → less dense). Light in air hitting water can\'t undergo TIR because air has the lower n.'
           },
           {
             question: 'At θ = θc exactly, what happens?',
@@ -266,21 +260,20 @@ Test your understanding of TIR!
       id: 'tir-transfer',
       type: 'multiple-choice' as const,
       content: `
-**Transfer Challenge: Fiber Design**
-An engineer wants stronger light confinement in fiber. Which design choice helps most?
+**Real-World Check** — An engineer wants stronger light confinement in a fiber optic cable.
       `,
       exercise: {
         questions: [
           {
-            question: 'Best design choice:',
+            question: 'Which design change would help most?',
             options: [
-              'Make core index lower than cladding',
-              'Use core index higher than cladding',
-              'Remove index contrast',
-              'Force all rays to be normal incidence only'
+              'Lower the core\'s index below the cladding',
+              'Make the core\'s index higher than the cladding',
+              'Remove the difference in index between core and cladding',
+              'Only allow rays that hit at exactly 90°'
             ],
             correctAnswer: 1,
-            explanation: 'A higher-index core with lower-index cladding supports repeated TIR and guidance.'
+            explanation: 'TIR requires going from high n to low n. A higher-index core surrounded by lower-index cladding creates the conditions for repeated TIR, keeping light trapped inside the fiber.'
           }
         ]
       }

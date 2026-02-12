@@ -5,18 +5,16 @@ export const reflectionRefractionPart4Data = {
       id: 'part5-roadmap-index',
       type: 'text' as const,
       content: `
-# Part 5 Roadmap: Index of Refraction 🌊
+# 🌊 Index of Refraction
 
-## You are here
-**Part 5 of 8 — Index and Speed**
+**Part 5 of 8**
 
-## Objectives
-1. Compute index using $n = c/v$
-2. Predict what changes across media (speed, wavelength) and what stays fixed (frequency)
-3. Use interpretation checks to avoid sign and concept errors
+Why does light slow down in water? Why do diamonds sparkle? The answer is a single number: the **index of refraction**.
 
-## 5-step compute template
-$$\text{Given} \rightarrow \text{Find} \rightarrow \text{Formula} \rightarrow \text{Substitute} \rightarrow \text{Interpret }(n\ge 1,\ v<c)$$
+In this part you'll learn to:
+- Calculate $n$ from the speed of light in a material
+- Predict what changes (speed, wavelength) and what stays the same (frequency)
+- Use $n$ as a sanity check — if you ever get $n < 1$, something's wrong!
       `
     },
     {
@@ -137,28 +135,28 @@ Calculate and apply!
       id: 'index-common-mistakes',
       type: 'multiple-choice' as const,
       content: `
-**Common Mistakes: Index and Speed**
+**Before You Move On** — Two traps with index of refraction.
       `,
       exercise: {
         questions: [
           {
-            question: 'Student says “frequency changes when entering water.” Best correction:',
+            question: 'True or false: "Frequency changes when light enters water."',
             options: [
-              'Correct always',
-              'Frequency stays constant; speed and wavelength change',
-              'Only color changes but not frequency',
-              'Everything stays constant'
+              'True — everything changes at a boundary',
+              'False — frequency stays constant; only speed and wavelength change',
+              'Partially true — color shifts but frequency doesn\'t',
+              'Nothing changes when entering a new medium'
             ],
             correctAnswer: 1,
-            explanation: 'Boundary conditions preserve frequency; speed and wavelength adjust in the new medium.'
+            explanation: 'Frequency is locked in by the source and doesn\'t change at a boundary. Speed and wavelength both decrease by the factor n.'
           },
           {
-            question: 'A computed value gives n = 0.82 for ordinary material. Most likely issue?',
+            question: 'You calculate n = 0.82 for a piece of glass. What probably happened?',
             options: [
-              'Always physically valid',
-              'Swapped c and v or arithmetic error',
-              'Indicates superluminal propagation in glass',
-              'Means no refraction'
+              'That\'s a valid result',
+              'You swapped c and v, or made an arithmetic error',
+              'The glass allows light to travel faster than c',
+              'This means the glass doesn\'t refract'
             ],
             correctAnswer: 1,
             explanation: 'For standard media, n ≥ 1. A value below 1 usually signals setup/algebra mistake in this context.'
@@ -170,21 +168,20 @@ Calculate and apply!
       id: 'index-transfer-check',
       type: 'multiple-choice' as const,
       content: `
-**Transfer Check: Camera Lens Materials**
-An engineer compares two lens materials: A has n=1.40 and B has n=1.70. Which statement is best for the same incident setup?
+**Real-World Check** — An engineer compares two lens materials: A has n = 1.40 and B has n = 1.70.
       `,
       exercise: {
         questions: [
           {
-            question: 'Best prediction:',
+            question: 'For the same incident angle, which material bends light more?',
             options: [
-              'Material A always bends light more',
-              'Material B generally bends light more strongly',
-              'Both bend identically regardless of medium change',
-              'Index does not affect bending'
+              'Material A (n = 1.40) bends light more',
+              'Material B (n = 1.70) bends light more',
+              'Both bend light by the same amount',
+              'Index of refraction doesn\'t affect bending'
             ],
             correctAnswer: 1,
-            explanation: 'Higher index corresponds to lower speed and typically stronger refraction relative to neighboring media.'
+            explanation: 'Higher n means light slows down more, which causes greater bending. Material B (n = 1.70) will refract light more strongly than A (n = 1.40).'
           }
         ]
       }

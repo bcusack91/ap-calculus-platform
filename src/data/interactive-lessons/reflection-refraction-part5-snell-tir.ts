@@ -5,22 +5,15 @@ export const reflectionRefractionPart5Data = {
       id: 'part6-roadmap-snell',
       type: 'text' as const,
       content: `
-# Part 6 Roadmap: Snell's Law ⚡
+# ⚡ Snell's Law — The Master Equation
 
-## You are here
-**Part 6 of 8 — Snell's Law**
+**Part 6 of 8**
 
-## Step sequence
-1. Identify medium 1 and medium 2 from light path
-2. Mark angles from the normal only
-3. Use $n_1\sin\theta_1 = n_2\sin\theta_2$
-4. Solve and interpret bending direction
+This is the equation you'll use more than any other in optics:
 
-## Success target
-You can solve a two-medium refraction angle problem in 5 clean lines.
+$$n_1 \sin\theta_1 = n_2 \sin\theta_2$$
 
-Solver template:
-$$\text{Given} \rightarrow \text{Find} \rightarrow \text{Formula} \rightarrow \text{Substitute} \rightarrow \text{Interpret }(\text{toward/away normal})$$
+It tells you exactly how much light bends at any boundary. By the end of this part, you'll solve refraction problems in a few clean lines.
       `
     },
     {
@@ -277,7 +270,7 @@ The light ray bends away from the normal when exiting water!
       id: 'snell-direction-check',
       type: 'dropdown-select' as const,
       content: `
-**Checkpoint: Bending Direction Rules**
+**Check Your Understanding** — Predict which way light bends.
       `,
       exercise: {
         dropdowns: [
@@ -327,31 +320,31 @@ Enter in order (rounded reasonably):
       id: 'snell-misconception-check',
       type: 'multiple-choice' as const,
       content: `
-**Common Mistakes: Snell's Law**
+**Before You Move On** — Two common Snell's Law mistakes.
       `,
       exercise: {
         questions: [
           {
-            question: 'Most frequent setup mistake in Snell problems:',
+            question: 'What is the most frequent setup mistake in Snell\'s Law problems?',
             options: [
-              'Using degrees',
-              'Swapping n-values compared to ray direction',
+              'Using degrees instead of radians',
+              'Swapping which n goes with which medium',
               'Writing c = 3.0×10⁸ m/s',
-              'Drawing a boundary'
+              'Drawing the boundary line'
             ],
             correctAnswer: 1,
-            explanation: 'Always assign medium 1 from where the light starts, medium 2 where it goes.'
+            explanation: 'Always label medium 1 as where the light starts and medium 2 as where it\'s going. Swapping them flips your answer.'
           },
           {
-            question: 'Student says: “My answer gives θ₂ > 90°, that\'s fine.” Best correction?',
+            question: 'Your calculation gives θ₂ > 90°. Is that physically reasonable?',
             options: [
-              'Always acceptable',
-              'Likely setup error unless solving critical-angle condition context',
-              'Means total internal reflection in any direction',
-              'Only valid in vacuum'
+              'Yes — any angle is valid',
+              'No — this usually means a setup error (or it\'s a TIR situation)',
+              'Only if light is going from high n to low n',
+              'Only possible in a vacuum'
             ],
             correctAnswer: 1,
-            explanation: 'A refracted angle beyond 90° usually flags invalid setup or a TIR condition check.'
+            explanation: 'A refraction angle beyond 90° usually flags invalid setup or a TIR condition check.'
           }
         ]
       }
