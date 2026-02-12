@@ -14,8 +14,20 @@ import { reflectionRefractionPart4Data as reflectionRefractionPart5Data } from '
 import { reflectionRefractionPart5Data as reflectionRefractionPart6Data } from '@/data/interactive-lessons/reflection-refraction-part5-snell-tir'
 import { reflectionRefractionPart6Data as reflectionRefractionPart7Data } from '@/data/interactive-lessons/reflection-refraction-part6-tir'
 import { reflectionRefractionPart7Data as reflectionRefractionPart8Data } from '@/data/interactive-lessons/reflection-refraction-part7-dispersion'
-import { physics2ElectrostaticsPart1Data, physics2ElectrostaticsPart2Data } from '@/data/interactive-lessons/physics2-electrostatics'
-import { physics2ElectricFieldsPart1Data, physics2ElectricFieldsPart2Data } from '@/data/interactive-lessons/physics2-electric-fields-potential'
+import { physics2ElectrostaticsPart1Data } from '@/data/interactive-lessons/physics2-electrostatics-part1'
+import { physics2ElectrostaticsPart2Data } from '@/data/interactive-lessons/physics2-electrostatics-part2'
+import { physics2ElectrostaticsPart3Data } from '@/data/interactive-lessons/physics2-electrostatics-part3'
+import { physics2ElectrostaticsPart4Data } from '@/data/interactive-lessons/physics2-electrostatics-part4'
+import { physics2ElectrostaticsPart5Data } from '@/data/interactive-lessons/physics2-electrostatics-part5'
+import { physics2ElectrostaticsPart6Data } from '@/data/interactive-lessons/physics2-electrostatics-part6'
+import { physics2ElectrostaticsPart7Data } from '@/data/interactive-lessons/physics2-electrostatics-part7'
+import { physics2ElectricFieldsPart1Data } from '@/data/interactive-lessons/physics2-electric-fields-part1'
+import { physics2ElectricFieldsPart2Data } from '@/data/interactive-lessons/physics2-electric-fields-part2'
+import { physics2ElectricFieldsPart3Data } from '@/data/interactive-lessons/physics2-electric-fields-part3'
+import { physics2ElectricFieldsPart4Data } from '@/data/interactive-lessons/physics2-electric-fields-part4'
+import { physics2ElectricFieldsPart5Data } from '@/data/interactive-lessons/physics2-electric-fields-part5'
+import { physics2ElectricFieldsPart6Data } from '@/data/interactive-lessons/physics2-electric-fields-part6'
+import { physics2ElectricFieldsPart7Data } from '@/data/interactive-lessons/physics2-electric-fields-part7'
 
 type LessonData = {
   topicSlug: string
@@ -69,17 +81,27 @@ export const interactiveLessonRegistry: Record<string, InteractiveTopicConfig> =
     ],
   },
   'electric-charge-coulombs-law': {
-    completionDestination: 'complete',
+    completionDestination: 'competitive',
     parts: [
-      { title: 'Charge & Coulomb Basics', data: physics2ElectrostaticsPart1Data },
-      { title: 'Fields & Superposition', data: physics2ElectrostaticsPart2Data },
+      { title: 'Introduction & Charge', data: physics2ElectrostaticsPart1Data },
+      { title: "Coulomb's Law", data: physics2ElectrostaticsPart2Data },
+      { title: 'Problem Solving', data: physics2ElectrostaticsPart3Data },
+      { title: 'Conductors & Charging', data: physics2ElectrostaticsPart4Data },
+      { title: 'Conservation & Quantization', data: physics2ElectrostaticsPart5Data },
+      { title: 'Superposition', data: physics2ElectrostaticsPart6Data },
+      { title: 'Synthesis & AP Strategies', data: physics2ElectrostaticsPart7Data },
     ],
   },
   'electric-fields-potential': {
-    completionDestination: 'complete',
+    completionDestination: 'competitive',
     parts: [
-      { title: 'Electric Field Fundamentals', data: physics2ElectricFieldsPart1Data },
-      { title: 'Potential and Voltage', data: physics2ElectricFieldsPart2Data },
+      { title: 'What Is an Electric Field?', data: physics2ElectricFieldsPart1Data },
+      { title: 'Field Superposition', data: physics2ElectricFieldsPart2Data },
+      { title: 'Field Lines & Visualization', data: physics2ElectricFieldsPart3Data },
+      { title: 'Electric Potential (Voltage)', data: physics2ElectricFieldsPart4Data },
+      { title: 'Potential Energy & Work', data: physics2ElectricFieldsPart5Data },
+      { title: 'Equipotentials & E–V Relationship', data: physics2ElectricFieldsPart6Data },
+      { title: 'Capacitors & Synthesis', data: physics2ElectricFieldsPart7Data },
     ],
   },
 }
