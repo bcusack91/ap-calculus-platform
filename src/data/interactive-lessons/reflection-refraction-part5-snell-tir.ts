@@ -2,6 +2,28 @@ export const reflectionRefractionPart5Data = {
   topicSlug: 'reflection-refraction',
   sections: [
     {
+      id: 'part6-roadmap-snell',
+      type: 'text' as const,
+      content: `
+# Part 6 Roadmap: Snell's Law ⚡
+
+## You are here
+**Part 6 of 8 — Snell's Law**
+
+## Step sequence
+1. Identify medium 1 and medium 2 from light path
+2. Mark angles from the normal only
+3. Use $n_1\sin\theta_1 = n_2\sin\theta_2$
+4. Solve and interpret bending direction
+
+## Success target
+You can solve a two-medium refraction angle problem in 5 clean lines.
+
+Solver template:
+$$\text{Given} \rightarrow \text{Find} \rightarrow \text{Formula} \rightarrow \text{Substitute} \rightarrow \text{Interpret }(\text{toward/away normal})$$
+      `
+    },
+    {
       id: 'snells-law-introduction',
       type: 'text' as const,
       content: `
@@ -250,6 +272,89 @@ The light ray bends away from the normal when exiting water!
 
 **Key Difference**: Same angle in water (30°), but now we're going the opposite direction → larger angle in air!
       `
+    },
+    {
+      id: 'snell-direction-check',
+      type: 'dropdown-select' as const,
+      content: `
+**Checkpoint: Bending Direction Rules**
+      `,
+      exercise: {
+        dropdowns: [
+          {
+            label: 'If light goes to higher n, it bends',
+            options: ['away from normal', 'toward normal', 'not at all', 'randomly']
+          },
+          {
+            label: 'If light goes to lower n, refracted angle is typically',
+            options: ['smaller', 'larger', 'always zero', 'always 90°']
+          },
+          {
+            label: 'Angles in Snell\'s law are measured from the',
+            options: ['surface', 'normal', 'horizontal axis', 'light source']
+          }
+        ],
+        correctAnswers: ['toward normal', 'larger', 'normal'],
+        hint1: 'Think fast→slow and slow→fast.',
+        hint2: 'Higher n means slower medium.',
+        hint3: 'Always reference the perpendicular line at the interface.',
+        explanation: 'Great—direction predictions now match the equation and geometry.'
+      }
+    },
+    {
+      id: 'snell-computation-drill',
+      type: 'input-boxes' as const,
+      content: `
+**Computation Drill (5-Step Style)**
+
+Light goes from air ($n_1=1.00$) into glass ($n_2=1.50$) at $\theta_1=30^\circ$.
+
+Enter in order (rounded reasonably):
+1) $\sin\theta_2$
+2) $\theta_2$ in degrees
+3) Direction phrase: \`toward\` or \`away\`
+      `,
+      exercise: {
+        boxes: 3,
+        correctAnswers: ['0.333', '19.5', 'toward'],
+        hint1: 'Rearrange to $\sin\theta_2 = (n_1/n_2)\sin\theta_1$.',
+        hint2: 'Use $\sin 30^\circ = 0.5$ and multiply by $1/1.5$.',
+        hint3: 'Take inverse sine, then compare n-values for direction.',
+        explanation: 'Correct: $\sin\theta_2 \approx 0.333$, $\theta_2\approx 19.5^\circ$, and the ray bends toward normal.'
+      }
+    },
+    {
+      id: 'snell-misconception-check',
+      type: 'multiple-choice' as const,
+      content: `
+**Common Mistakes: Snell's Law**
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'Most frequent setup mistake in Snell problems:',
+            options: [
+              'Using degrees',
+              'Swapping n-values compared to ray direction',
+              'Writing c = 3.0×10⁸ m/s',
+              'Drawing a boundary'
+            ],
+            correctAnswer: 1,
+            explanation: 'Always assign medium 1 from where the light starts, medium 2 where it goes.'
+          },
+          {
+            question: 'Student says: “My answer gives θ₂ > 90°, that\'s fine.” Best correction?',
+            options: [
+              'Always acceptable',
+              'Likely setup error unless solving critical-angle condition context',
+              'Means total internal reflection in any direction',
+              'Only valid in vacuum'
+            ],
+            correctAnswer: 1,
+            explanation: 'A refracted angle beyond 90° usually flags invalid setup or a TIR condition check.'
+          }
+        ]
+      }
     }
   ]
 }

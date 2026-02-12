@@ -2,6 +2,31 @@ export const reflectionRefractionPart1Data = {
   topicSlug: 'reflection-refraction',
   sections: [
     {
+      id: 'part1-roadmap',
+      type: 'text' as const,
+      content: `
+# Part 1 Roadmap: Foundations First 🧭
+
+## You are here
+**Part 1 of 8 — Foundations**
+
+## In this part, you will:
+1. Define what light is
+2. Identify reflection vs refraction
+3. Connect optics to real-world systems
+4. Complete quick checks after each concept block
+
+## Success target
+By the end of this part, you should be able to explain (in one sentence each):
+- Why light bends at boundaries
+- Why fiber optics work
+- Why rainbows form
+
+## Problem workflow you will reuse all course long
+$$\text{Given} \rightarrow \text{Find} \rightarrow \text{Formula} \rightarrow \text{Substitute} \rightarrow \text{Interpret}$$
+      `
+    },
+    {
       id: 'welcome-hook',
       type: 'text' as const,
       content: `
@@ -349,6 +374,99 @@ Great progress! Let's verify you understand these real-world applications.
             ],
             correctAnswer: 1,
             explanation: "Rainbows form through: (1) refraction entering the raindrop that disperses colors, (2) reflection at the back of the drop, and (3) refraction exiting that further separates the colors - creating the perfect arc!"
+          }
+        ]
+      }
+    },
+    {
+      id: 'part1-step-template',
+      type: 'text' as const,
+      content: `
+# Your 5-Step Optics Template (Use This Every Time) 🧩
+
+When solving optics problems, write these headers explicitly:
+
+## 1) Given
+List known values and context (media, angle type, direction)
+
+## 2) Find
+State exactly what unknown you need
+
+## 3) Formula
+Pick one governing relation (e.g., Snell, index, reflection)
+
+## 4) Substitute
+Plug values with units and signs carefully
+
+## 5) Interpret
+Check if answer makes physical sense (toward/away normal, larger/smaller angle, etc.)
+
+This structure will keep the next parts clear and fast.
+      `
+    },
+    {
+      id: 'part1-common-mistakes',
+      type: 'multiple-choice' as const,
+      content: `
+**Common Mistakes Check: Part 1**
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'Which statement is a common misconception?',
+            options: [
+              'Light can both reflect and refract at one boundary',
+              'All colors in white light have exactly the same wavelength',
+              'Fiber optics rely on guided light paths',
+              'Refraction can change apparent depth'
+            ],
+            correctAnswer: 1,
+            explanation: 'White light contains multiple wavelengths. Different wavelengths refract differently.'
+          },
+          {
+            question: 'A student says: "If light bends, it must have reflected." Best correction?',
+            options: [
+              'Correct—bending always means reflection',
+              'Bending is refraction; reflection is bouncing back',
+              'Bending only happens in vacuum',
+              'Reflection and refraction are the same term'
+            ],
+            correctAnswer: 1,
+            explanation: 'Refraction is bending through a new medium; reflection is return into the original medium.'
+          },
+          {
+            question: 'Best reasoning habit for this course:',
+            options: [
+              'Memorize only final formulas',
+              'Skip diagrams to save time',
+              'Use the 5-step structure every problem',
+              'Assume every boundary causes only one effect'
+            ],
+            correctAnswer: 2,
+            explanation: 'A fixed structure reduces sign and interpretation errors in later parts.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'part1-transfer-challenge',
+      type: 'multiple-choice' as const,
+      content: `
+**Transfer Challenge (Real World)**
+You are troubleshooting an underwater camera image that looks shifted from the diver's actual position. Which concept should you apply first?
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'Best first concept to apply:',
+            options: [
+              'Only mirror reflection law',
+              'Refraction at water-air boundary',
+              'Nuclear decay equations',
+              'Momentum conservation only'
+            ],
+            correctAnswer: 1,
+            explanation: 'Underwater apparent-position errors are primarily refractive effects at medium boundaries.'
           }
         ]
       }

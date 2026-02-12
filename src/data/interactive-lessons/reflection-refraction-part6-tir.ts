@@ -2,6 +2,25 @@ export const reflectionRefractionPart6Data = {
   topicSlug: 'reflection-refraction',
   sections: [
     {
+      id: 'part7-roadmap-tir',
+      type: 'text' as const,
+      content: `
+# Part 7 Roadmap: Total Internal Reflection 💎
+
+## You are here
+**Part 7 of 8 — TIR**
+
+## Step sequence
+1. Verify medium order: must be high n → low n
+2. Compute critical angle $\theta_c = \sin^{-1}(n_2/n_1)$
+3. Compare incident angle to $\theta_c$
+4. Decide: refraction, grazing, or total internal reflection
+
+## Success target
+Given any boundary pair and incident angle, you can classify the outcome in one line.
+      `
+    },
+    {
       id: 'total-internal-reflection',
       type: 'text' as const,
       content: `
@@ -206,6 +225,62 @@ Test your understanding of TIR!
             ],
             correctAnswer: 0,
             explanation: "Since the incident angle (45°) is greater than the critical angle (41.8°), total internal reflection occurs. There is no refracted ray - all the light reflects back into the glass!"
+          }
+        ]
+      }
+    },
+    {
+      id: 'tir-common-mistakes',
+      type: 'multiple-choice' as const,
+      content: `
+**Common Mistakes: TIR**
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'Student computes critical angle for air→water and expects TIR from air side. Best correction?',
+            options: [
+              'Correct, TIR occurs in either direction',
+              'TIR requires high n to low n travel',
+              'Critical angle only for mirrors',
+              'TIR does not involve Snell\'s law'
+            ],
+            correctAnswer: 1,
+            explanation: 'TIR only occurs when light attempts to leave a denser medium into a less dense one.'
+          },
+          {
+            question: 'At θ = θc exactly, what happens?',
+            options: [
+              'Full reflection only',
+              'Refraction straight through normal',
+              'Refracted ray runs along the boundary',
+              'No interaction'
+            ],
+            correctAnswer: 2,
+            explanation: 'Critical condition corresponds to refracted angle of 90°, i.e., grazing the boundary.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'tir-transfer',
+      type: 'multiple-choice' as const,
+      content: `
+**Transfer Challenge: Fiber Design**
+An engineer wants stronger light confinement in fiber. Which design choice helps most?
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'Best design choice:',
+            options: [
+              'Make core index lower than cladding',
+              'Use core index higher than cladding',
+              'Remove index contrast',
+              'Force all rays to be normal incidence only'
+            ],
+            correctAnswer: 1,
+            explanation: 'A higher-index core with lower-index cladding supports repeated TIR and guidance.'
           }
         ]
       }

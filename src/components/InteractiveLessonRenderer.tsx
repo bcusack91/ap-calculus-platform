@@ -2857,9 +2857,9 @@ function InputBoxExercise({
       setAttempts(newAttempts)
       setShowHint(true)
       
-      if (newAttempts >= 3) {
+      if (newAttempts >= 4) {
         setShowAnswer(true)
-        // Mark as complete after showing answer (3 attempts)
+        // Mark as complete after showing answer
         setTimeout(() => {
           onComplete()
         }, 500)
@@ -2925,6 +2925,14 @@ function InputBoxExercise({
         </div>
       )}
 
+      {showHint && attempts === 3 && !isCorrect && !showAnswer && (
+        <div className="bg-orange-100 dark:bg-orange-900/30 border-l-4 border-orange-500 p-6 rounded-r-lg">
+          <p className="text-lg font-semibold text-orange-900 dark:text-orange-200">
+            💡 Hint: {section.exercise.hint3 || 'Last hint: write the setup carefully, then compute step by step.'}
+          </p>
+        </div>
+      )}
+
       {showAnswer && (
         <div className="bg-green-100 dark:bg-green-900/30 border-l-4 border-green-500 p-6 rounded-r-lg">
           <p className="text-lg font-semibold text-green-900 dark:text-green-200 mb-3">
@@ -2981,9 +2989,9 @@ function DropdownExercise({
       setAttempts(newAttempts)
       setShowHint(true)
       
-      if (newAttempts >= 3) {
+      if (newAttempts >= 4) {
         setShowAnswer(true)
-        // Mark as complete after showing answer (3 attempts)
+        // Mark as complete after showing answer
         setTimeout(() => {
           onComplete()
         }, 500)
@@ -3051,7 +3059,7 @@ function DropdownExercise({
       {showHint && attempts === 1 && !isFullyCorrect && (
         <div className="bg-blue-100 dark:bg-blue-900/30 border-l-4 border-blue-500 p-6 rounded-r-lg">
           <p className="text-lg font-semibold text-blue-900 dark:text-blue-200">
-            💡 Hint: Remember, only √0, √1, and √4 are perfect squares. The others (√2 and √3) stay under the radical!
+            💡 Hint: {section.exercise.hint1 || 'Try matching each statement to its core rule before choosing.'}
           </p>
         </div>
       )}
@@ -3059,7 +3067,15 @@ function DropdownExercise({
       {showHint && attempts === 2 && !isFullyCorrect && (
         <div className="bg-yellow-100 dark:bg-yellow-900/30 border-l-4 border-yellow-500 p-6 rounded-r-lg">
           <p className="text-lg font-semibold text-yellow-900 dark:text-yellow-200">
-            💡 Hint: √4 = 2 because 2² = 4. But √2 and √3 cannot be simplified further!
+            💡 Hint: {section.exercise.hint2 || 'Eliminate obviously wrong options first, then compare the remaining two carefully.'}
+          </p>
+        </div>
+      )}
+
+      {showHint && attempts === 3 && !isFullyCorrect && !showAnswer && (
+        <div className="bg-orange-100 dark:bg-orange-900/30 border-l-4 border-orange-500 p-6 rounded-r-lg">
+          <p className="text-lg font-semibold text-orange-900 dark:text-orange-200">
+            💡 Hint: {section.exercise.hint3 || 'Final hint: look for keywords in each prompt (direction, sign, relation) and match exactly.'}
           </p>
         </div>
       )}

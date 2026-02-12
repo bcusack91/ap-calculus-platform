@@ -2,6 +2,26 @@ export const reflectionRefractionPart2LearningJourneyData = {
   topicSlug: 'reflection-refraction',
   sections: [
     {
+      id: 'part2-roadmap',
+      type: 'text' as const,
+      content: `
+# Part 2 Roadmap: How to Win This Course 🧭
+
+## You are here
+**Part 2 of 8 — Learning Strategy + Setup**
+
+## In this part:
+1. Build a clear plan for the next 6 technical parts
+2. Lock in the one workflow used on every problem
+3. Avoid the top errors before they happen
+
+## Mastery target
+After this part, you should be able to state exactly **what to write first** when you see any optics question.
+
+$$\text{Given} \rightarrow \text{Find} \rightarrow \text{Formula} \rightarrow \text{Substitute} \rightarrow \text{Interpret}$$
+      `
+    },
+    {
       id: 'lesson-overview',
       type: 'text' as const,
       content: `
@@ -122,6 +142,57 @@ This is where the real magic begins. You're about to learn the coordinate system
 
 *The foundation you build in Part 3 will make everything else smooth sailing.*
       `
+    },
+    {
+      id: 'part2-checkpoint',
+      type: 'multiple-choice' as const,
+      content: `
+**Checkpoint: Learning Flow**
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'Which part should receive extra attention because it controls many later sign/direction decisions?',
+            options: ['Part 1', 'Part 3', 'Part 6', 'Part 8'],
+            correctAnswer: 1,
+            explanation: 'Part 3 (Sign Convention) is foundational for the rest of the sequence.'
+          },
+          {
+            question: 'Best first line to write after reading a problem statement?',
+            options: ['Final answer estimate', 'Given values and context', 'Random formula list', 'Graph only'],
+            correctAnswer: 1,
+            explanation: 'Starting with “Given” prevents skipping constraints and angle references.'
+          },
+          {
+            question: 'Why is the 5-step method useful?',
+            options: ['It makes problems longer', 'It replaces understanding', 'It reduces avoidable sign/setup mistakes', 'It works only for reflection'],
+            correctAnswer: 2,
+            explanation: 'A fixed sequence reduces cognitive load and keeps reasoning consistent.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'part2-misconception-fix',
+      type: 'multiple-choice' as const,
+      content: `
+**Misconception Fix (Before Part 3)**
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'Student claim: “I can skip sign convention and just use magnitudes.” Best response?',
+            options: [
+              'Correct for all optics problems',
+              'Works only in prism dispersion',
+              'Usually causes wrong direction/image-side conclusions',
+              'Only wrong for reflection'
+            ],
+            correctAnswer: 2,
+            explanation: 'Without convention, side/direction interpretations often fail even if magnitudes look reasonable.'
+          }
+        ]
+      }
     }
   ]
 }

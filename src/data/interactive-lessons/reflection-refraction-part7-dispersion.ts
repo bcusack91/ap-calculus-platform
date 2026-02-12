@@ -2,6 +2,26 @@ export const reflectionRefractionPart7Data = {
   topicSlug: 'reflection-refraction',
   sections: [
     {
+      id: 'part8-roadmap-dispersion',
+      type: 'text' as const,
+      content: `
+# Part 8 Roadmap: Dispersion and Rainbows 🌈
+
+## You are here
+**Part 8 of 8 — Dispersion + Synthesis**
+
+## Final goals
+1. Explain why different wavelengths bend differently
+2. Connect Snell + TIR + dispersion into one rainbow model
+3. Apply whole-course reasoning to real scenarios
+
+## Final problem workflow
+$$\text{Given media + wavelength trend} \rightarrow \text{Find direction/ordering} \rightarrow \text{Use Snell/TIR logic} \rightarrow \text{Interpret geometry}$$
+
+By end of this part, you should be able to narrate rainbow formation step-by-step without guessing.
+      `
+    },
+    {
       id: 'dispersion',
       type: 'text' as const,
       content: `
@@ -274,6 +294,62 @@ Now that you understand reflection and refraction, you're ready for:
 
 Keep practicing, and remember: **light always takes the path that minimizes travel time** (Fermat's Principle)! 🎯
       `
+    },
+    {
+      id: 'dispersion-common-mistakes',
+      type: 'multiple-choice' as const,
+      content: `
+**Common Mistakes: Dispersion and Rainbow Geometry**
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'Student claim: “All colors have same n in glass.” Best correction?',
+            options: [
+              'Correct for visible light',
+              'False: n varies with wavelength, causing dispersion',
+              'Only red has index',
+              'Index applies only to mirrors'
+            ],
+            correctAnswer: 1,
+            explanation: 'Dispersion exists precisely because refractive index is wavelength-dependent.'
+          },
+          {
+            question: 'Student says “rainbows are straight bands in the sky.” Best fix?',
+            options: [
+              'True, always linear',
+              'False: constant-viewing-angle geometry creates circular arcs',
+              'Only true at noon',
+              'Depends only on humidity'
+            ],
+            correctAnswer: 1,
+            explanation: 'Drops at a fixed angle relative to the observer-sun line form a cone/circle, seen as an arc.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'final-transfer-case',
+      type: 'multiple-choice' as const,
+      content: `
+**Capstone Transfer: Multi-Concept Scenario**
+A lab beam enters a prism, separates into colors, and then one color is guided through a fiber. Which ordered concept chain is most accurate?
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'Best ordered chain:',
+            options: [
+              'Reflection only → absorption only',
+              'Dispersion by wavelength-dependent refraction → TIR guidance in fiber',
+              'Diffraction only → nuclear scattering',
+              'Potential energy only → no boundary effects'
+            ],
+            correctAnswer: 1,
+            explanation: 'Prism separation is dispersive refraction; fiber confinement is achieved through total internal reflection.'
+          }
+        ]
+      }
     }
   ]
 }
