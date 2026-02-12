@@ -1,22 +1,7 @@
 'use client'
 
 import { useState, useRef, useEffect } from 'react'
-import { unitCircleLessonData, unitCircleAnglesLessonData, unitCircleConceptLessonData } from '@/data/interactive-lessons/unit-circle'
-import { fullUnitCircleLessonData } from '@/data/interactive-lessons/full-unit-circle'
-import { factoringPart1GCFData } from '@/data/interactive-lessons/factoring-part1-gcf'
-import { factoringPart2DifferenceOfSquaresData } from '@/data/interactive-lessons/factoring-part2-difference-of-squares'
-import { factoringPart3SimpleTrinomialsData } from '@/data/interactive-lessons/factoring-part3-simple-trinomials'
-import { factoringPart4ComplexTrinomialsData } from '@/data/interactive-lessons/factoring-part4-complex-trinomials'
-import { factoringPart5SpecialPatternsData } from '@/data/interactive-lessons/factoring-part5-special-patterns'
-import { factoringPart6MixedPracticeData } from '@/data/interactive-lessons/factoring-part6-mixed-practice'
-import { reflectionRefractionPart1Data } from '@/data/interactive-lessons/reflection-refraction-part1-intro'
-import { reflectionRefractionPart2LearningJourneyData } from '@/data/interactive-lessons/reflection-refraction-part2-learning-journey'
-import { reflectionRefractionPart2Data as reflectionRefractionPart3Data } from '@/data/interactive-lessons/reflection-refraction-part2-sign-convention'
-import { reflectionRefractionPart3Data as reflectionRefractionPart4Data } from '@/data/interactive-lessons/reflection-refraction-part3-reflection'
-import { reflectionRefractionPart4Data as reflectionRefractionPart5Data } from '@/data/interactive-lessons/reflection-refraction-part4-index'
-import { reflectionRefractionPart5Data as reflectionRefractionPart6Data } from '@/data/interactive-lessons/reflection-refraction-part5-snell-tir'
-import { reflectionRefractionPart6Data as reflectionRefractionPart7Data } from '@/data/interactive-lessons/reflection-refraction-part6-tir'
-import { reflectionRefractionPart7Data as reflectionRefractionPart8Data } from '@/data/interactive-lessons/reflection-refraction-part7-dispersion'
+import { getInteractiveLessonData, getInteractiveTopicConfig } from '@/data/interactive-lessons/registry'
 import ReactMarkdown from 'react-markdown'
 import remarkMath from 'remark-math'
 import remarkGfm from 'remark-gfm'
@@ -46,21 +31,36 @@ interface InteractiveLessonRendererProps {
   topicSlug: string
 }
 
+type LessonPart = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8
+
+function calculatePartMastery(lessonPart: number, completedSectionsCount: number, totalSections: number, totalParts: number) {
+  const safeSections = Math.max(totalSections, 1)
+  const progressInPart = completedSectionsCount / safeSections
+  const partWeight = 1.0 / Math.max(totalParts, 1)
+  const baseLevel = (lessonPart - 1) * partWeight
+  return Math.min(1, baseLevel + progressInPart * partWeight)
+}
+
 export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLessonRendererProps) {
   const searchParams = useSearchParams()
   const router = useRouter()
   const { data: session } = useSession()
+  const topicConfig = getInteractiveTopicConfig(topicSlug)
+  const totalParts = topicConfig?.parts.length ?? 1
+  const entersCompetitiveModeOnComplete = topicConfig?.completionDestination === 'competitive'
+  const practiceModeParts = topicConfig?.practiceModeParts ?? []
   
   // Get initial part from URL parameter (e.g., ?part=2)
   const urlPart = searchParams.get('part')
-  const initialPart = urlPart ? parseInt(urlPart) as 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 : 1
+  const requestedPart = urlPart ? parseInt(urlPart, 10) : 1
+  const initialPart = Math.min(Math.max(Number.isFinite(requestedPart) ? requestedPart : 1, 1), Math.min(totalParts, 8)) as LessonPart
   
-  const [lessonPart, setLessonPart] = useState<1 | 2 | 3 | 4 | 5 | 6 | 7 | 8>(initialPart)
+  const [lessonPart, setLessonPart] = useState<LessonPart>(initialPart)
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0)
   const [completedSections, setCompletedSections] = useState<Set<number>>(new Set())
   const [showPracticeMode, setShowPracticeMode] = useState(false)
   const [progressLoaded, setProgressLoaded] = useState(false)
-  const [unlockedParts, setUnlockedParts] = useState<Set<1 | 2 | 3 | 4 | 5 | 6 | 7 | 8>>(new Set([1])) // Part 1 always unlocked
+  const [unlockedParts, setUnlockedParts] = useState<Set<LessonPart>>(new Set([1])) // Part 1 always unlocked
   const [cachedTopicId, setCachedTopicId] = useState<string | null>(null)
   const [pendingSaveCount, setPendingSaveCount] = useState(0)
   const queryCountRef = useRef(0) // Track API calls
@@ -74,7 +74,7 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
   } | null>(null)
 
   // Update URL when lesson part changes
-  const updateLessonPart = (newPart: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8) => {
+  const updateLessonPart = (newPart: LessonPart) => {
     setLessonPart(newPart)
     setCurrentSectionIndex(0)
     setCompletedSections(new Set())
@@ -94,35 +94,7 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
     
     try {
       // Calculate mastery level based on overall progress
-      let masteryLevel = 0
-      
-      // Different mastery calculations for different lesson types
-      if (topicSlug === 'factoring-algebra1' || topicSlug === 'reflection-refraction') {
-        // 6-part lessons
-        const partWeight = 1.0 / 6
-        const baseLevel = (lessonPart - 1) * partWeight
-        const progressInPart = (completedSections.size / sections.length) * partWeight
-        masteryLevel = baseLevel + progressInPart
-      } else {
-        // Unit circle has 4 parts (original logic)
-        if (lessonPart === 4 && completedSections.size === sections.length) {
-          masteryLevel = 1.0
-        } else if (lessonPart === 4) {
-          masteryLevel = 0.75 + (completedSections.size / sections.length) * 0.25
-        } else if (lessonPart === 3 && completedSections.size === sections.length) {
-          masteryLevel = 0.75
-        } else if (lessonPart === 3) {
-          masteryLevel = 0.5 + (completedSections.size / sections.length) * 0.25
-        } else if (lessonPart === 2 && completedSections.size === sections.length) {
-          masteryLevel = 0.5
-        } else if (lessonPart === 2) {
-          masteryLevel = 0.25 + (completedSections.size / sections.length) * 0.25
-        } else if (lessonPart === 1 && completedSections.size === sections.length) {
-          masteryLevel = 0.25
-        } else {
-          masteryLevel = (completedSections.size / sections.length) * 0.25
-        }
-      }
+      const masteryLevel = calculatePartMastery(lessonPart, completedSections.size, sections.length, totalParts)
       
       const response = await fetch('/api/progress/save', {
         method: 'POST',
@@ -172,41 +144,21 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
         
         if (data.exists && data.progress) {
           // Determine lesson part from mastery level
-          const mastery = data.progress.masteryLevel
-          let part: 1 | 2 | 3 | 4 | 5 | 6 = 1
-          const unlocked: Set<1 | 2 | 3 | 4 | 5 | 6> = new Set([1]) // Part 1 always unlocked
-          
-          if (topicSlug === 'factoring-algebra1') {
-            // Factoring has 6 parts
-            const partWeight = 1.0 / 6
-            part = Math.min(6, Math.floor(mastery / partWeight) + 1) as 1 | 2 | 3 | 4 | 5 | 6
-            
-            // Unlock all parts up to current progress
-            for (let i = 1; i <= part; i++) {
-              unlocked.add(i as 1 | 2 | 3 | 4 | 5 | 6)
-            }
-          } else {
-            // Unit circle has 4 parts (original logic)
-            if (mastery >= 0.75) {
-              part = 4
-              unlocked.add(2)
-              unlocked.add(3)
-              unlocked.add(4)
-            } else if (mastery >= 0.5) {
-              part = 3
-              unlocked.add(2)
-              unlocked.add(3)
-            } else if (mastery >= 0.25) {
-              part = 2
-              unlocked.add(2)
-            }
+          const mastery = Number(data.progress.masteryLevel ?? 0)
+          const boundedMastery = Math.min(Math.max(mastery, 0), 0.999999)
+          const partWeight = 1.0 / Math.max(totalParts, 1)
+          const resolvedPart = Math.min(totalParts, Math.max(1, Math.floor(boundedMastery / partWeight) + 1)) as LessonPart
+          const unlocked: Set<LessonPart> = new Set([1]) // Part 1 always unlocked
+
+          for (let i = 1; i <= resolvedPart; i++) {
+            unlocked.add(i as LessonPart)
           }
           
           setUnlockedParts(unlocked)
           
           // Only update if not overridden by URL parameter
           if (!urlPart) {
-            setLessonPart(part)
+            setLessonPart(resolvedPart)
           }
         }
         
@@ -218,7 +170,7 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
     }
     
     loadProgress()
-  }, [session, topicSlug, progressLoaded, urlPart])
+  }, [session, topicSlug, progressLoaded, urlPart, totalParts])
   
   // Save progress when user leaves page
   useEffect(() => {
@@ -250,36 +202,15 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
     }
   }, [completedSections, progressLoaded])
 
-  // Get lesson data based on topic and part
-  const lessonData = topicSlug === 'the-unit-circle' 
-    ? (lessonPart === 1 ? unitCircleLessonData : 
-       lessonPart === 2 ? unitCircleAnglesLessonData : 
-       lessonPart === 3 ? unitCircleConceptLessonData :
-       fullUnitCircleLessonData)
-    : topicSlug === 'factoring-algebra1'
-    ? (lessonPart === 1 ? factoringPart1GCFData :
-       lessonPart === 2 ? factoringPart2DifferenceOfSquaresData :
-       lessonPart === 3 ? factoringPart3SimpleTrinomialsData :
-       lessonPart === 4 ? factoringPart4ComplexTrinomialsData :
-       lessonPart === 5 ? factoringPart5SpecialPatternsData :
-       factoringPart6MixedPracticeData)
-    : topicSlug === 'reflection-refraction'
-    ? (lessonPart === 1 ? reflectionRefractionPart1Data :
-       lessonPart === 2 ? reflectionRefractionPart2LearningJourneyData :
-       lessonPart === 3 ? reflectionRefractionPart3Data :
-       lessonPart === 4 ? reflectionRefractionPart4Data :
-       lessonPart === 5 ? reflectionRefractionPart5Data :
-       lessonPart === 6 ? reflectionRefractionPart6Data :
-       lessonPart === 7 ? reflectionRefractionPart7Data :
-       reflectionRefractionPart8Data)
-    : null
+    // Get lesson data based on topic and part
+    const lessonData = getInteractiveLessonData(topicSlug, lessonPart)
 
   if (!lessonData) {
     return <div>No interactive lesson available</div>
   }
 
   // Show practice mode if requested
-  if (showPracticeMode) {
+  if (showPracticeMode && topicSlug === 'the-unit-circle') {
     // Use different practice mode for Part 2
     if (lessonPart === 2) {
       return (
@@ -287,8 +218,10 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
           onBack={() => setShowPracticeMode(false)} 
           onComplete={() => {
             setShowPracticeMode(false)
-            setUnlockedParts(prev => new Set([...prev, 3])) // Unlock Part 3
-            updateLessonPart(3) // Move to part 3 after completing Part 2 practice
+            if (totalParts >= 3) {
+              setUnlockedParts(prev => new Set([...prev, 3 as LessonPart])) // Unlock Part 3
+              updateLessonPart(3 as LessonPart) // Move to part 3 after completing Part 2 practice
+            }
           }}
         />
       )
@@ -301,7 +234,10 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
           onBack={() => setShowPracticeMode(false)} 
           onComplete={() => {
             setShowPracticeMode(false)
-            updateLessonPart(2) // Move to part 2 after completing practice
+            if (totalParts >= 2) {
+              setUnlockedParts(prev => new Set([...prev, 2 as LessonPart]))
+              updateLessonPart(2 as LessonPart) // Move to part 2 after completing practice
+            }
           }}
         />
       )
@@ -317,32 +253,7 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
   
   // Helper to calculate mastery level (needs sections defined)
   const calculateMasteryLevel = () => {
-    let masteryLevel = 0
-    if (topicSlug === 'factoring-algebra1' || topicSlug === 'reflection-refraction') {
-      const partWeight = 1.0 / 7
-      const baseLevel = (lessonPart - 1) * partWeight
-      const progressInPart = (completedSections.size / sections.length) * partWeight
-      masteryLevel = baseLevel + progressInPart
-    } else {
-      if (lessonPart === 4 && completedSections.size === sections.length) {
-        masteryLevel = 1.0
-      } else if (lessonPart === 4) {
-        masteryLevel = 0.75 + (completedSections.size / sections.length) * 0.25
-      } else if (lessonPart === 3 && completedSections.size === sections.length) {
-        masteryLevel = 0.75
-      } else if (lessonPart === 3) {
-        masteryLevel = 0.5 + (completedSections.size / sections.length) * 0.25
-      } else if (lessonPart === 2 && completedSections.size === sections.length) {
-        masteryLevel = 0.5
-      } else if (lessonPart === 2) {
-        masteryLevel = 0.25 + (completedSections.size / sections.length) * 0.25
-      } else if (lessonPart === 1 && completedSections.size === sections.length) {
-        masteryLevel = 0.25
-      } else {
-        masteryLevel = (completedSections.size / sections.length) * 0.25
-      }
-    }
-    return masteryLevel
+    return calculatePartMastery(lessonPart, completedSections.size, sections.length, totalParts)
   }
 
   const handleNext = () => {
@@ -366,32 +277,19 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
       saveProgress(undefined, true) // Part completion - trigger flashcards
       
       // Multi-part lesson navigation
-      if (lessonPart === 1) {
-        // Move to part 2 after completing part 1
-        setUnlockedParts(prev => new Set([...prev, 2])) // Unlock Part 2
-        updateLessonPart(2)
-        setCurrentSectionIndex(0)
-        setCompletedSections(new Set())
-        window.scrollTo({ top: 0, behavior: 'smooth' })
-      } else if (lessonPart === 2 && topicSlug === 'the-unit-circle') {
+      if (lessonPart === 2 && topicSlug === 'the-unit-circle') {
         // Unit circle: Part 2 → Practice Mode
         setShowPracticeMode(true)
-      } else if (lessonPart === 2 && topicSlug !== 'the-unit-circle') {
-        // Other multi-part lessons: Part 2 → Part 3
-        setUnlockedParts(prev => new Set([...prev, 3]))
-        updateLessonPart(3)
+      } else if (lessonPart < totalParts) {
+        // Generic next part flow for multi-part lessons
+        const nextPart = (lessonPart + 1) as LessonPart
+        setUnlockedParts(prev => new Set([...prev, nextPart]))
+        updateLessonPart(nextPart)
         setCurrentSectionIndex(0)
         setCompletedSections(new Set())
         window.scrollTo({ top: 0, behavior: 'smooth' })
-      } else if (lessonPart === 3) {
-        // Move to part 4 after completing part 3
-        setUnlockedParts(prev => new Set([...prev, 4])) // Unlock Part 4
-        updateLessonPart(4)
-        setCurrentSectionIndex(0)
-        setCompletedSections(new Set())
-        window.scrollTo({ top: 0, behavior: 'smooth' })
-      } else if (lessonPart === 4 && topicSlug === 'the-unit-circle') {
-        // On final section of part 4, save progress then go to competitive mode
+      } else if (entersCompetitiveModeOnComplete) {
+        // On final section, save full mastery then move to competitive mode
         const finalSave = async () => {
           if (session?.user) {
             try {
@@ -404,7 +302,7 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                   topicSlug,
-                  lessonPart: 4,
+                  lessonPart: totalParts,
                   completedSections: Array.from(allSections),
                   masteryLevel: 1.0, // Full mastery
                   timeSpent: 0,
@@ -417,64 +315,6 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
           router.push('/competitive')
         }
         finalSave()
-      } else if (lessonPart === 4 && topicSlug !== 'the-unit-circle') {
-        // Other multi-part lessons: Part 4 → Part 5
-        setUnlockedParts(prev => new Set([...prev, 5]))
-        updateLessonPart(5)
-        setCurrentSectionIndex(0)
-        setCompletedSections(new Set())
-        window.scrollTo({ top: 0, behavior: 'smooth' })
-      } else if (lessonPart === 5) {
-        // Move to part 6 after completing part 5
-        setUnlockedParts(prev => new Set([...prev, 6]))
-        updateLessonPart(6)
-        setCurrentSectionIndex(0)
-        setCompletedSections(new Set())
-        window.scrollTo({ top: 0, behavior: 'smooth' })
-      } else if (lessonPart === 6) {
-        // Move to part 7 after completing part 6
-        setUnlockedParts(prev => new Set([...prev, 7]))
-        updateLessonPart(7)
-        setCurrentSectionIndex(0)
-        setCompletedSections(new Set())
-        window.scrollTo({ top: 0, behavior: 'smooth' })
-      } else if (lessonPart === 7 && topicSlug === 'reflection-refraction') {
-        // Move to part 8 after completing part 7 for reflection-refraction
-        setUnlockedParts(prev => new Set([...prev, 8]))
-        updateLessonPart(8)
-        setCurrentSectionIndex(0)
-        setCompletedSections(new Set())
-        window.scrollTo({ top: 0, behavior: 'smooth' })
-      } else if (lessonPart === 8 && topicSlug === 'reflection-refraction') {
-        // On final page of part 8 for reflection-refraction, save progress then go to competitive mode
-        const finalSave = async () => {
-          if (session?.user) {
-            try {
-              // Mark all sections as complete and save with mastery 1.0
-              const allSections = new Set(sections.map((_, i) => i))
-              setCompletedSections(allSections)
-              
-              await fetch('/api/progress/save', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                  topicSlug,
-                  lessonPart: 7,
-                  completedSections: Array.from(allSections),
-                  masteryLevel: 1.0, // Full mastery
-                  timeSpent: 0,
-                }),
-              })
-            } catch (error) {
-              console.error('Failed to save final progress:', error)
-            }
-          }
-          router.push('/competitive')
-        }
-        finalSave()
-      } else if (lessonPart === 7) {
-        // On final page of part 7, mark as 100% complete
-        setCompletedSections(new Set(sections.map((_, i) => i)))
       } else {
         // Fallback: mark as complete
         setCompletedSections(new Set(sections.map((_, i) => i)))
@@ -522,256 +362,33 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
     <>
       <div className="space-y-6">
       {/* Part Navigation Menu - Show for multi-part lessons */}
-      {(topicSlug === 'the-unit-circle' || topicSlug === 'factoring-algebra1' || topicSlug === 'reflection-refraction') && (
+      {topicConfig && totalParts > 1 && (
         <div className="bg-gradient-to-r from-indigo-100/80 via-purple-100/80 to-pink-100/80 dark:from-indigo-900/40 dark:via-purple-900/40 dark:to-pink-900/40 backdrop-blur-sm rounded-2xl p-5 border-2 border-indigo-200/70 dark:border-indigo-700/50 shadow-lg">
           <div className="flex items-center justify-between flex-wrap gap-4">
             <div className="flex items-center gap-2">
               <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">Jump to:</span>
               <div className="flex gap-2 flex-wrap">
-                {topicSlug === 'the-unit-circle' ? (
-                  <>
+                {topicConfig.parts.map((partConfig, index) => {
+                  const partNumber = (index + 1) as LessonPart
+                  const isUnlocked = unlockedParts.has(partNumber)
+
+                  return (
                     <button
-                      onClick={() => updateLessonPart(1)}
-                      disabled={!unlockedParts.has(1)}
+                      key={`${topicSlug}-part-${partNumber}`}
+                      onClick={() => isUnlocked && updateLessonPart(partNumber)}
+                      disabled={!isUnlocked}
                       className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
-                        lessonPart === 1
+                        lessonPart === partNumber
                           ? 'bg-purple-600 text-white shadow-lg'
-                          : unlockedParts.has(1)
+                          : isUnlocked
                           ? 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30'
                           : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500 cursor-not-allowed opacity-50'
                       }`}
                     >
-                      Part 1: Counting Method
+                      {!isUnlocked && '🔒 '}Part {partNumber}: {partConfig.title}
                     </button>
-                    <button
-                      onClick={() => unlockedParts.has(2) && updateLessonPart(2)}
-                      disabled={!unlockedParts.has(2)}
-                      className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
-                        lessonPart === 2
-                          ? 'bg-purple-600 text-white shadow-lg'
-                          : unlockedParts.has(2)
-                          ? 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30'
-                          : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500 cursor-not-allowed opacity-50'
-                      }`}
-                    >
-                      {!unlockedParts.has(2) && '🔒 '}Part 2: Angles & Tables
-                    </button>
-                    <button
-                      onClick={() => unlockedParts.has(3) && updateLessonPart(3)}
-                      disabled={!unlockedParts.has(3)}
-                      className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
-                        lessonPart === 3
-                          ? 'bg-purple-600 text-white shadow-lg'
-                          : unlockedParts.has(3)
-                          ? 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30'
-                          : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500 cursor-not-allowed opacity-50'
-                      }`}
-                    >
-                      {!unlockedParts.has(3) && '🔒 '}Part 3: What Is the Unit Circle?
-                    </button>
-                    <button
-                      onClick={() => unlockedParts.has(4) && updateLessonPart(4)}
-                      disabled={!unlockedParts.has(4)}
-                      className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
-                        lessonPart === 4
-                        ? 'bg-purple-600 text-white shadow-lg'
-                        : unlockedParts.has(4)
-                        ? 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30'
-                        : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500 cursor-not-allowed opacity-50'
-                    }`}
-                    >
-                      {!unlockedParts.has(4) && '🔒 '}Part 4: Complete Unit Circle
-                    </button>
-                  </>
-                ) : topicSlug === 'factoring-algebra1' ? (
-                  <>
-                    <button
-                      onClick={() => updateLessonPart(1)}
-                      disabled={!unlockedParts.has(1)}
-                      className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
-                        lessonPart === 1
-                          ? 'bg-purple-600 text-white shadow-lg'
-                          : unlockedParts.has(1)
-                          ? 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30'
-                          : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500 cursor-not-allowed opacity-50'
-                      }`}
-                    >
-                      Part 1: GCF
-                    </button>
-                    <button
-                      onClick={() => unlockedParts.has(2) && updateLessonPart(2)}
-                      disabled={!unlockedParts.has(2)}
-                      className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
-                        lessonPart === 2
-                          ? 'bg-purple-600 text-white shadow-lg'
-                          : unlockedParts.has(2)
-                          ? 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30'
-                          : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500 cursor-not-allowed opacity-50'
-                      }`}
-                    >
-                      {!unlockedParts.has(2) && '🔒 '}Part 2: Difference of Squares
-                    </button>
-                    <button
-                      onClick={() => unlockedParts.has(3) && updateLessonPart(3)}
-                      disabled={!unlockedParts.has(3)}
-                      className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
-                        lessonPart === 3
-                          ? 'bg-purple-600 text-white shadow-lg'
-                          : unlockedParts.has(3)
-                          ? 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30'
-                          : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500 cursor-not-allowed opacity-50'
-                      }`}
-                    >
-                      {!unlockedParts.has(3) && '🔒 '}Part 3: Simple Trinomials
-                    </button>
-                    <button
-                      onClick={() => unlockedParts.has(4) && updateLessonPart(4)}
-                      disabled={!unlockedParts.has(4)}
-                      className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
-                        lessonPart === 4
-                        ? 'bg-purple-600 text-white shadow-lg'
-                        : unlockedParts.has(4)
-                        ? 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30'
-                        : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500 cursor-not-allowed opacity-50'
-                    }`}
-                    >
-                      {!unlockedParts.has(4) && '🔒 '}Part 4: Complex Trinomials
-                    </button>
-                    <button
-                      onClick={() => unlockedParts.has(5) && updateLessonPart(5)}
-                      disabled={!unlockedParts.has(5)}
-                      className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
-                        lessonPart === 5
-                        ? 'bg-purple-600 text-white shadow-lg'
-                        : unlockedParts.has(5)
-                        ? 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30'
-                        : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500 cursor-not-allowed opacity-50'
-                    }`}
-                    >
-                      {!unlockedParts.has(5) && '🔒 '}Part 5: Special Patterns
-                    </button>
-                    <button
-                      onClick={() => unlockedParts.has(6) && updateLessonPart(6)}
-                      disabled={!unlockedParts.has(6)}
-                      className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
-                        lessonPart === 6
-                        ? 'bg-purple-600 text-white shadow-lg'
-                        : unlockedParts.has(6)
-                        ? 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30'
-                        : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500 cursor-not-allowed opacity-50'
-                    }`}
-                    >
-                      {!unlockedParts.has(6) && '🔒 '}Part 6: Mixed Practice
-                    </button>
-                  </>
-                ) : (
-                  <>
-                    <button
-                      onClick={() => updateLessonPart(1)}
-                      disabled={!unlockedParts.has(1)}
-                      className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
-                        lessonPart === 1
-                          ? 'bg-purple-600 text-white shadow-lg'
-                          : unlockedParts.has(1)
-                          ? 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30'
-                          : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500 cursor-not-allowed opacity-50'
-                      }`}
-                    >
-                      Part 1: Introduction
-                    </button>
-                    <button
-                      onClick={() => unlockedParts.has(2) && updateLessonPart(2)}
-                      disabled={!unlockedParts.has(2)}
-                      className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
-                        lessonPart === 2
-                          ? 'bg-purple-600 text-white shadow-lg'
-                          : unlockedParts.has(2)
-                          ? 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30'
-                          : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500 cursor-not-allowed opacity-50'
-                      }`}
-                    >
-                      {!unlockedParts.has(2) && '🔒 '}Part 2: Learning Journey
-                    </button>
-                    <button
-                      onClick={() => unlockedParts.has(3) && updateLessonPart(3)}
-                      disabled={!unlockedParts.has(3)}
-                      className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
-                        lessonPart === 3
-                          ? 'bg-purple-600 text-white shadow-lg'
-                          : unlockedParts.has(3)
-                          ? 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30'
-                          : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500 cursor-not-allowed opacity-50'
-                      }`}
-                    >
-                      {!unlockedParts.has(3) && '🔒 '}Part 3: Sign Convention
-                    </button>
-                    <button
-                      onClick={() => unlockedParts.has(4) && updateLessonPart(4)}
-                      disabled={!unlockedParts.has(4)}
-                      className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
-                        lessonPart === 4
-                        ? 'bg-purple-600 text-white shadow-lg'
-                        : unlockedParts.has(4)
-                        ? 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30'
-                        : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500 cursor-not-allowed opacity-50'
-                    }`}
-                    >
-                      {!unlockedParts.has(4) && '🔒 '}Part 4: Law of Reflection
-                    </button>
-                    <button
-                      onClick={() => unlockedParts.has(5) && updateLessonPart(5)}
-                      disabled={!unlockedParts.has(5)}
-                      className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
-                        lessonPart === 5
-                        ? 'bg-purple-600 text-white shadow-lg'
-                        : unlockedParts.has(5)
-                        ? 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30'
-                        : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500 cursor-not-allowed opacity-50'
-                    }`}
-                    >
-                      {!unlockedParts.has(5) && '🔒 '}Part 5: Index of Refraction
-                    </button>
-                    <button
-                      onClick={() => unlockedParts.has(6) && updateLessonPart(6)}
-                      disabled={!unlockedParts.has(6)}
-                      className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
-                        lessonPart === 6
-                        ? 'bg-purple-600 text-white shadow-lg'
-                        : unlockedParts.has(6)
-                        ? 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30'
-                        : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500 cursor-not-allowed opacity-50'
-                    }`}
-                    >
-                      {!unlockedParts.has(6) && '🔒 '}Part 6: Snell's Law
-                    </button>
-                    <button
-                      onClick={() => unlockedParts.has(7) && updateLessonPart(7)}
-                      disabled={!unlockedParts.has(7)}
-                      className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
-                        lessonPart === 7
-                        ? 'bg-purple-600 text-white shadow-lg'
-                        : unlockedParts.has(7)
-                        ? 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30'
-                        : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500 cursor-not-allowed opacity-50'
-                    }`}
-                    >
-                      {!unlockedParts.has(7) && '🔒 '}Part 7: Total Internal Reflection
-                    </button>
-                    <button
-                      onClick={() => unlockedParts.has(8) && updateLessonPart(8)}
-                      disabled={!unlockedParts.has(8)}
-                      className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
-                        lessonPart === 8
-                        ? 'bg-purple-600 text-white shadow-lg'
-                        : unlockedParts.has(8)
-                        ? 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30'
-                        : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500 cursor-not-allowed opacity-50'
-                    }`}
-                    >
-                      {!unlockedParts.has(8) && '🔒 '}Part 8: Dispersion
-                    </button>
-                  </>
-                )}
+                  )
+                })}
             </div>
           </div>
           <div className="text-xs text-gray-600 dark:text-gray-400">
@@ -812,7 +429,7 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
           onComplete={handleSectionComplete}
           isComplete={isCurrentSectionComplete}
           isLastSection={currentSectionIndex === sections.length - 1}
-          onStartPractice={lessonPart <= 2 ? () => setShowPracticeMode(true) : undefined}
+          onStartPractice={practiceModeParts.includes(lessonPart) ? () => setShowPracticeMode(true) : undefined}
         />
       </div>
 
@@ -849,23 +466,17 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
           disabled={!canProceedToNext}
           className="group px-8 py-4 rounded-xl font-semibold transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 shadow-lg hover:shadow-xl disabled:hover:shadow-lg border-2 border-transparent hover:scale-[1.02] disabled:hover:scale-100"
         >
-          {currentSectionIndex === sections.length - 1 && lessonPart === 8 && topicSlug === 'reflection-refraction'
-            ? '🎮 Enter Competitive Mode →'
-            : currentSectionIndex === sections.length - 1 && lessonPart === 7 && topicSlug !== 'reflection-refraction'
-            ? '✅ Lesson Complete!'
-            : currentSectionIndex === sections.length - 1 && lessonPart === 6 && (topicSlug === 'factoring-algebra1' || topicSlug === 'reflection-refraction')
-            ? 'Continue to Next Part →'
-            : currentSectionIndex === sections.length - 1 && lessonPart === 1 && topicSlug === 'the-unit-circle'
-            ? 'On to Part 2 →'
-            : currentSectionIndex === sections.length - 1 && lessonPart === 2 && topicSlug === 'the-unit-circle'
+          {currentSectionIndex !== sections.length - 1
+            ? 'Next →'
+            : topicSlug === 'the-unit-circle' && lessonPart === 2
             ? '🎯 Practice Independently →'
-            : currentSectionIndex === sections.length - 1 && lessonPart === 3 && topicSlug === 'the-unit-circle'
-            ? 'Continue to Part 4 →' 
-            : currentSectionIndex === sections.length - 1 && lessonPart === 4 && topicSlug === 'the-unit-circle'
+            : lessonPart < totalParts
+            ? lessonPart === 1 && topicSlug === 'the-unit-circle'
+              ? 'On to Part 2 →'
+              : 'Continue to Next Part →'
+            : entersCompetitiveModeOnComplete
             ? '🎮 Enter Competitive Mode →'
-            : currentSectionIndex === sections.length - 1 && lessonPart < 7
-            ? 'Continue to Next Part →'
-            : 'Next →'}
+            : '✅ Lesson Complete!'}
         </button>
       </div>
       
