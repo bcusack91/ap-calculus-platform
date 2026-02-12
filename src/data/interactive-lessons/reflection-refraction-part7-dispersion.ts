@@ -333,7 +333,7 @@ Keep practicing, and remember: **light always takes the path that minimizes trav
             question: 'Which sequence of concepts explains this setup?',
             options: [
               'Reflection only → absorption only',
-              'Wavelength-dependent refraction (dispersion) in the prism, then TIR in the fibe → TIR guidance in fiber',
+              'Wavelength-dependent refraction (dispersion) in the prism → TIR guidance in the fiber',
               'Diffraction only → nuclear scattering',
               'Potential energy only → no boundary effects'
             ],

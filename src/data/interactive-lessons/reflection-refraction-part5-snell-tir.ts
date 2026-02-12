@@ -11,7 +11,7 @@ export const reflectionRefractionPart5Data = {
 
 This is the equation you'll use more than any other in optics:
 
-$$n_1 \sin\theta_1 = n_2 \sin\theta_2$$
+$$n_1 \\sin\\theta_1 = n_2 \\sin\\theta_2$$
 
 It tells you exactly how much light bends at any boundary. By the end of this part, you'll solve refraction problems in a few clean lines.
       `
@@ -258,10 +258,6 @@ $$\\theta_2 = \\sin^{-1}(0.665) = 41.7°$$
 <img src="/optics/snell-example2-water-air.svg" alt="Snell's Law Example: Water to Air" style="max-width: 500px; margin: 20px auto; display: block;" />
 
 The light ray bends away from the normal when exiting water!
-        Air
-\`\`\`
-
-The light ray bends away from the normal when exiting water!
 
 **Key Difference**: Same angle in water (30°), but now we're going the opposite direction → larger angle in air!
       `
@@ -300,20 +296,20 @@ The light ray bends away from the normal when exiting water!
       content: `
 **Computation Drill (5-Step Style)**
 
-Light goes from air ($n_1=1.00$) into glass ($n_2=1.50$) at $\theta_1=30^\circ$.
+Light goes from air ($n_1=1.00$) into glass ($n_2=1.50$) at $\\theta_1=30^\\circ$.
 
 Enter in order (rounded reasonably):
-1) $\sin\theta_2$
-2) $\theta_2$ in degrees
+1) $\\sin\\theta_2$
+2) $\\theta_2$ in degrees
 3) Direction phrase: \`toward\` or \`away\`
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['0.333', '19.5', 'toward'],
-        hint1: 'Rearrange to $\sin\theta_2 = (n_1/n_2)\sin\theta_1$.',
-        hint2: 'Use $\sin 30^\circ = 0.5$ and multiply by $1/1.5$.',
+        hint1: 'Rearrange to $\\sin\\theta_2 = (n_1/n_2)\\sin\\theta_1$.',
+        hint2: 'Use $\\sin 30^\\circ = 0.5$ and multiply by $1/1.5$.',
         hint3: 'Take inverse sine, then compare n-values for direction.',
-        explanation: 'Correct: $\sin\theta_2 \approx 0.333$, $\theta_2\approx 19.5^\circ$, and the ray bends toward normal.'
+        explanation: 'Correct: $\\sin\\theta_2 \\approx 0.333$, $\\theta_2\\approx 19.5^\\circ$, and the ray bends toward normal.'
       }
     },
     {
