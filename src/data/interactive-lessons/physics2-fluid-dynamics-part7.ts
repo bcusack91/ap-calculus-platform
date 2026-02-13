@@ -160,7 +160,7 @@ The pressure at point 2 is **lower**. By Bernoulli's equation (energy conservati
             explanation: 'Streamlines NEVER cross in steady flow. If they did, a fluid particle at the crossing would have two different velocities — which is impossible for steady flow. All other statements are true.'
           },
           {
-            question: 'A garden hose has a nozzle that reduces the exit area to 1/10 of the hose area. If the water pressure at the faucet stays the same, the exit speed from the nozzle is approximately:',
+            question: 'A garden hose has a nozzle that reduces the exit area to 1/10 of the hose area. Assuming the flow rate stays the same, the exit speed from the nozzle is approximately:',
             options: [
               '10× the hose speed',
               '5× the hose speed',

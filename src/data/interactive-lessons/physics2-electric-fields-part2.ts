@@ -77,9 +77,7 @@ For the field to be zero, two field contributions must be **equal and opposite**
 
 ### Example: $q_1 = +4Q$ at $x = 0$ and $q_2 = +Q$ at $x = d$
 
-At the null point (distance $x$ from $q_2$, so $(d + x)$ from $q_1$... wait, the null is between them):
-
-Let null point be at distance $a$ from $q_2$ (between them), so distance $(d - a)$ from $q_1$:
+Let the null point be at distance $a$ from $q_2$ (between them), so distance $(d - a)$ from $q_1$:
 
 $$\\frac{k(4Q)}{(d-a)^2} = \\frac{kQ}{a^2}$$
 
@@ -203,8 +201,8 @@ $q_1 = +5\\ \\mu\\text{C}$ at $x = 0$, $q_2 = +5\\ \\mu\\text{C}$ at $x = 1.0$ m
               'To the left',
               'It\'s still zero'
             ],
-            correctAnswer: 1,
-            explanation: 'Removing the top charge removes the field that pointed downward (away from the top charge). The remaining two bottom charges create upward-pointing fields that add to give a net field pointing *toward* where the top charge was.'
+            correctAnswer: 0,
+            explanation: 'Removing the top charge removes the field component that pointed away from it (downward at the center). The remaining two bottom charges create field components that partially pointed upward. Their net gives a field pointing toward where the removed charge was (upward).'
           }
         ]
       }

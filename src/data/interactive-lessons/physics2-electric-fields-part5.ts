@@ -94,7 +94,7 @@ It's tiny in everyday terms, but perfectly sized for atomic/nuclear physics.
               'Increases by 200 eV'
             ],
             correctAnswer: 1,
-            explanation: '$\\Delta V = 0 - 100 = -100$ V. $W = q\\Delta V = (-e)(-100) = +100$ eV. Positive work → KE increases. The electron naturally moves from low V toward high V (opposite to positive charges).'
+            explanation: '$\Delta V = 0 - 100 = -100$ V. $\Delta U = q\Delta V = (-e)(-100) = +100$ eV (PE increases). By energy conservation, $\Delta KE = -\Delta U = -100$ eV. The electron loses 100 eV of kinetic energy — moving from high V to low V is against the electric force for a negative charge.'
           },
           {
             question: 'The PE of a proton-electron pair at distance $r$ is:',
@@ -151,9 +151,9 @@ $$v = \\sqrt{\\frac{2(9 \\times 10^9)(5)(1.6 \\times 10^{-19})^2}{(1.67 \\times 
 
 $$v = \\sqrt{\\frac{2(9 \\times 10^9)(5)(2.56 \\times 10^{-38})}{1.67 \\times 10^{-37}}}$$
 
-$$v = \\sqrt{\\frac{2.304 \\times 10^{-18}}{1.67 \\times 10^{-37}}} = \\sqrt{1.38 \\times 10^{19}} \\approx 3.7 \\times 10^{9}\\ \\text{... wait, that's faster than light!}$$
+$$v = \sqrt{\frac{2.304 \times 10^{-27}}{1.67 \times 10^{-37}}} = \sqrt{1.38 \times 10^{10}} \approx 1.2 \times 10^{5}\ \text{m/s}$$
 
-This tells us that at nuclear distances, we need **relativistic mechanics**. The classical formula breaks down. But the energy approach is still correct — you'd just use $KE = (\\gamma - 1)m_p c^2$ instead.
+This is about 120 km/s — fast, but well below the speed of light, so classical mechanics works fine here. Note: at even smaller distances ($\sim 10^{-15}$ m), classical calculations can yield speeds exceeding $c$, signaling that relativistic mechanics is needed ($KE = (\gamma - 1)m_p c^2$).
 
 For AP Physics 2, if the answer exceeds $\\sim 10^7$ m/s, note that relativity is needed.
       `
@@ -180,7 +180,7 @@ For AP Physics 2, if the answer exceeds $\\sim 10^7$ m/s, note that relativity i
           {
             question: 'A 2 μC charge is moved through a potential difference of +500 V. The work done by an external force is:',
             options: [
-              '0.001 J',
+              '0.01 J',
               '1 mJ (the external force did positive work)',
               '−1 mJ',
               '250 J'

@@ -49,7 +49,7 @@ A main water pipe (radius 5.0 cm, speed 2.0 m/s) splits into two branches. Branc
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['15.7', '3.33', '1.57'],
+        correctAnswers: ['15.7', '3.33', '1.25'],
         hint1: '$Q = \\pi r^2 v = \\pi(0.05)^2(2.0)$. Convert to L/s by multiplying by 1000.',
         hint2: '$Q_A = 0.60 \\times Q$. $v_A = Q_A/(\\pi r_A^2)$.',
         hint3: '$Q_B = 0.40 \\times Q$. $v_B = Q_B/(\\pi r_B^2)$.',

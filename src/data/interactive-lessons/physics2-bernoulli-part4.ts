@@ -79,7 +79,7 @@ AP Physics 2 focuses on the Bernoulli explanation: faster air on top → lower p
             question: 'An airplane flies upside down during an air show. This is possible because:',
             options: [
               'Bernoulli\'s equation reverses when upside down',
-              'The pilot adjusts the angle of attack to deflect air upward, generating downward lift on the wing — wait, that gives upward reaction force',
+              'The pilot increases the angle of attack to deflect air downward, generating an upward reaction force by Newton\'s 3rd law',
               'Gravity reverses at altitude',
               'It\'s impossible — the plane must be falling'
             ],
@@ -99,8 +99,8 @@ AP Physics 2 focuses on the Bernoulli explanation: faster air on top → lower p
 
 A spinning baseball creates faster air on one side (spin adds to airflow) and slower air on the other (spin opposes airflow). The pressure difference curves the ball's path — this is the **Magnus effect**.
 
-- **Topspin:** Ball curves downward (faster air on top → low pressure above)
-- **Backspin:** Ball curves upward (faster air below → low pressure below)
+- **Topspin:** Ball curves downward (faster air below → low pressure below → net force downward)
+- **Backspin:** Ball curves upward (faster air above → low pressure above → net force upward)
 - **Sidespin:** Ball curves left or right
 
 ### 🏠 Wind and Roofs
@@ -165,7 +165,7 @@ A hurricane with wind speed 50 m/s blows over a flat roof. The air inside the ho
               'Straight (spin has no effect)'
             ],
             correctAnswer: 1,
-            explanation: 'Backspin creates faster air below the ball (spin adds to airflow direction) → low pressure below. Higher pressure above pushes down less than expected. The ball drops less than gravity alone would cause — batters perceive this as the ball "rising."'
+            explanation: 'Backspin creates faster air above the ball (the top surface moves with the airflow, speeding it up) → low pressure above. Higher pressure below partially offsets gravity. The ball drops less than gravity alone would cause — batters perceive this as the ball "rising."'
           }
         ]
       }

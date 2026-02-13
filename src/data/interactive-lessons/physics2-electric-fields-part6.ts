@@ -182,8 +182,8 @@ Two parallel plates are separated by $d = 5.0$ mm. The top plate is at $+600$ V 
               'Stay in place',
               'Oscillate between the plates'
             ],
-            correctAnswer: 1,
-            explanation: 'The electric field points from + to − plate. The electron (negative charge) feels a force *opposite* to E → toward the positive plate. It accelerates uniformly (like gravity for a dropped ball).'
+            correctAnswer: 0,
+            explanation: 'The electric field points from + to − plate. The electron (negative charge) feels a force *opposite* to $\vec{E}$ → toward the positive plate. It accelerates uniformly, like a ball dropped in a gravitational field.'
           }
         ]
       }

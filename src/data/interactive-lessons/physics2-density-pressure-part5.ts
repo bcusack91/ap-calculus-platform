@@ -93,9 +93,9 @@ Because pressure increases with depth. The lower part of the wall experiences mo
       content: `
 **Force Calculation Drill** (use $g = 10$ m/s²)
 
-A rectangular tank (2.0 m wide, 1.5 m deep) is filled completely with water.
+A rectangular tank (2.0 m wide × 1.0 m long × 1.5 m deep) is filled completely with water.
 
-1) Force on the horizontal bottom (gauge, in N). The bottom is 2.0 m × 1.0 m long.
+1) Force on the horizontal bottom (gauge, in N)
 2) Average gauge pressure on one of the 2.0 m wide vertical walls (in Pa)
 3) Total force on that vertical wall (in N)
       `,
@@ -150,7 +150,7 @@ Fish at great depths have no gas-filled cavities that would collapse under press
           {
             question: 'A tank is sealed and pressurized to 3 atm (absolute) with no fluid inside. Then it\'s filled with water to 5 m depth. The absolute pressure at the bottom is:',
             options: [
-              '3.5 atm',
+              '1.5 atm',
               '3 atm + ρgh',
               '1 atm + ρgh',
               '4 atm'

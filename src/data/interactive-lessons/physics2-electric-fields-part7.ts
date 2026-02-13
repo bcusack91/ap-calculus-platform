@@ -153,11 +153,11 @@ A parallel-plate capacitor: plate area $A = 0.01\\ \\text{m}^2$, separation $d =
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['88.5', '17.7', '1770'],
-        hint1: '$C = \\epsilon_0 A/d = (8.85 \\times 10^{-12})(0.01)/(0.001)$.',
-        hint2: '$Q = CV = (88.5 \\times 10^{-12})(200)$. Convert to nC.',
-        hint3: '$U = \\frac{1}{2}CV^2 = \\frac{1}{2}(88.5 \\times 10^{-12})(200)^2$. Convert to μJ.',
-        explanation: '$C = 8.85 \\times 10^{-11}$ F = 88.5 pF. $Q = 88.5 \\times 10^{-12} \\times 200 = 17.7 \\times 10^{-9}$ C = 17.7 nC. $U = 0.5 \\times 88.5 \\times 10^{-12} \\times 40000 = 1.77 \\times 10^{-6}$ J = 1.77 μJ ≈ 1770 nJ. Accept 1770 or 1.77 μJ.'
+        correctAnswers: ['88.5', '17.7', '1.77'],
+        hint1: '$C = \epsilon_0 A/d = (8.85 \times 10^{-12})(0.01)/(0.001)$.',
+        hint2: '$Q = CV = (88.5 \times 10^{-12})(200)$. Convert to nC.',
+        hint3: '$U = \frac{1}{2}CV^2 = \frac{1}{2}(88.5 \times 10^{-12})(200)^2$. Convert to μJ.',
+        explanation: '$C = 8.85 \times 10^{-11}$ F = 88.5 pF. $Q = 88.5 \times 10^{-12} \times 200 = 17.7 \times 10^{-9}$ C = 17.7 nC. $U = 0.5 \times 88.5 \times 10^{-12} \times 40000 = 1.77 \times 10^{-6}$ J = 1.77 μJ.'
       }
     },
     {

@@ -170,7 +170,7 @@ Two identical spheres, each with charge $+6\\ \\mu\\text{C}$, are 0.20 m apart.
             explanation: 'Total charge = +9 + (−3) + 0 = +6 μC. Shared equally among 3 identical spheres: +6/3 = +2 μC each.'
           },
           {
-            question: 'Which combination of changes would increase the Coulomb force by exactly 12×?',
+            question: 'Which combination of changes would increase the Coulomb force by exactly 6×?',
             options: [
               'Triple one charge, double the distance',
               'Double both charges, keep distance same',
@@ -178,7 +178,7 @@ Two identical spheres, each with charge $+6\\ \\mu\\text{C}$, are 0.20 m apart.
               'Quadruple one charge, halve the distance'
             ],
             correctAnswer: 2,
-            explanation: 'Triple one charge (×3), double the other (×2), distance unchanged: net factor = 3 × 2 = 6. Wait — that\'s 6, not 12. Let me re-check: triple × double = 6×. The correct answer for 12× would be different... Actually (c) gives 6×. For 12×: quadruple one charge (×4), halve distance (×4 from inverse square) = 16×. None give exactly 12×, but (c) = 6× is closest labeled as correct. The answer is (c) because 3 × 2 × (1/1)² = 6×.'
+            explanation: 'Triple one charge (×3) × double the other (×2) × distance unchanged = 6×. Check the others: (a) 3/(2²) = 3/4. (b) 2×2 = 4×. (d) 4/(0.5²) = 4/0.25 = 16×. Only (c) gives exactly 6×.'
           },
           {
             question: 'A conducting sphere has excess charge +Q. A cavity is carved inside (no charge in the cavity). What is the electric field inside the cavity?',

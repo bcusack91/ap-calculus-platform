@@ -29,7 +29,7 @@ This final part ties together everything from all four fluid mechanics topics: d
 
 ### Decision Tree: Which Equation(s) to Use
 
-1. **Fluid at rest?** → Hydrostatic pressure ($P = P_0 + \\rho g h$), buoyancy ($F_B = \\rho V g$)
+1. **Fluid at rest?** → Hydrostatic pressure ($P = P_0 + \rho g h$), buoyancy ($F_B = \rho_f V_d g$)
 2. **Fluid moving, area changes?** → Continuity ($A_1 v_1 = A_2 v_2$) first, then Bernoulli
 3. **Fluid moving, same area?** → Bernoulli only (speed is the same by continuity)
 4. **Open surface or hole in tank?** → Torricelli ($v = \\sqrt{2gh}$)
@@ -104,11 +104,11 @@ A fire hose (diameter 6.0 cm) is connected to a hydrant at ground level with pre
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['9', '2.45', '22'],
+        correctAnswers: ['9', '2.24', '20'],
         hint1: '$v_2/v_1 = A_1/A_2 = (d_1/d_2)^2 = (6/2)^2$.',
         hint2: '$P_1 + \\frac{1}{2}\\rho v_1^2 = P_2 + \\frac{1}{2}\\rho(9v_1)^2 + \\rho g h$. $400000 + \\frac{1}{2}(1000)v_1^2 = 100000 + \\frac{1}{2}(1000)(81v_1^2) + 100000$.',
         hint3: '$v_2 = 9 v_1$.',
-        explanation: 'Ratio = 9. Bernoulli: $400000 + 500v_1^2 = 100000 + 40500v_1^2 + 100000$. $200000 = 40000 v_1^2$. $v_1^2 = 5$. $v_1 = 2.24$ m/s ≈ 2.45 m/s. $v_2 = 9(2.45) = 22$ m/s.'
+        explanation: 'Ratio = 9. Bernoulli: $400000 + 500v_1^2 = 100000 + 40500v_1^2 + 100000$. $200000 = 40000 v_1^2$. $v_1^2 = 5$. $v_1 = \sqrt{5} = 2.24$ m/s. $v_2 = 9(2.24) \approx 20$ m/s.'
       }
     },
     {
@@ -127,15 +127,18 @@ $$v = \\sqrt{2gH} = \\sqrt{2(10)(5)} = 10 \\text{ m/s}$$
 **(b)** Find the volume flow rate.
 $$Q = \\pi r^2 v = \\pi(0.005)^2(10) = 7.85 \\times 10^{-4} \\text{ m}^3\\text{/s} \\approx 0.79 \\text{ L/s}$$
 
-**(c)** The stream exits horizontally, and the hole is 1.0 m above the ground. How far from the tank does the water land?
+**(c)** The tank sits on the ground. A hole is made at height $h = 1.0$ m on the side (not at the very bottom). The stream exits horizontally. How far from the tank does the water land?
+
+Water depth above hole: $H - h = 5.0 - 1.0 = 4.0$ m.
+$$v = \\sqrt{2g(H-h)} = \\sqrt{2(10)(4)} = 8.94 \\text{ m/s}$$
 $$t = \\sqrt{2h/g} = \\sqrt{2(1)/10} = 0.447 \\text{ s}$$
-$$x = v \\cdot t = 10(0.447) = 4.47 \\text{ m}$$
+$$x = v \\cdot t = 8.94(0.447) = 4.0 \\text{ m}$$
 
-**(d)** If the hole is now at height 2.5 m (middle of tank) instead of the bottom, will the range be greater or less? Explain.
+**(d)** If the hole is moved to height $h = 2.5$ m (middle of tank), will the range be greater or less?
 
-The range depends on $v \\times t = \\sqrt{2g(H-h_{\\text{hole}})} \\times \\sqrt{2h_{\\text{hole}}/g} = 2\\sqrt{h_{\\text{hole}}(H-h_{\\text{hole}})}$.
+The range is $x = v \\times t = \\sqrt{2g(H-h)} \\times \\sqrt{2h/g} = 2\\sqrt{h(H-h)}$.
 
-At the middle ($h_{\\text{hole}} = H/2$), this product is maximized! Range = $2\\sqrt{2.5 \\times 2.5} = 5.0$ m — **greater** than from the bottom (4.47 m).
+At the middle ($h = H/2 = 2.5$ m), this product is maximized! Range = $2\\sqrt{2.5 \\times 2.5} = 5.0$ m — **greater** than from the 1.0 m hole (4.0 m).
       `
     },
     {

@@ -20,7 +20,7 @@ The continuity equation isn't just a textbook formula — it governs blood flow 
 
 Your circulatory system is a masterpiece of fluid dynamics:
 
-### The Numbers
+### The Numbers (Moderate Activity)
 
 | Vessel | Radius | Total Area | Speed |
 |:---:|:---:|:---:|:---:|
@@ -36,7 +36,7 @@ Your circulatory system is a masterpiece of fluid dynamics:
 
 $Q = A_{\\text{aorta}} v_{\\text{aorta}} = A_{\\text{capillaries}} v_{\\text{capillaries}}$
 
-$(4.5)(40) = (4000)(0.05) → 180 ≈ 200$ ✓ (approximately equal)
+$(4.5)(40) = 180$ and $(4000)(0.05) = 200$ — approximately equal ✓
 
 Blood slows down dramatically in capillaries because the total cross-sectional area is ~1000× larger than the aorta. This slow speed allows time for gas exchange!
       `
@@ -69,7 +69,7 @@ Blood slows down dramatically in capillaries because the total cross-sectional a
               '1800 cm/s'
             ],
             correctAnswer: 0,
-            explanation: '$Q = 5$ L/min = $8.33 \\times 10^{-5}$ m³/s. $A = \\pi(0.012)^2 = 4.52 \\times 10^{-4}$ m². $v = Q/A = 0.184$ m/s ≈ 18 cm/s.'
+            explanation: '$Q = 5$ L/min = $8.33 \times 10^{-5}$ m³/s. $A = \pi(0.012)^2 = 4.52 \times 10^{-4}$ m². $v = Q/A = 0.184$ m/s ≈ 18 cm/s. (This is the average resting value; speed is higher during exercise.)'
           }
         ]
       }
@@ -120,7 +120,7 @@ A sprinkler system has one main pipe (radius 2.0 cm, speed 3.0 m/s) that feeds 8
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['3.77', '0.47', '16.7'],
+        correctAnswers: ['3.77', '0.471', '16.7'],
         hint1: '$Q = \\pi r^2 v = \\pi(0.02)^2(3.0)$. Convert to L/s.',
         hint2: '$Q_{\\text{each}} = Q_{\\text{total}}/8$.',
         hint3: '$v = Q_{\\text{each}} / (\\pi r_{\\text{head}}^2)$. Watch units!',

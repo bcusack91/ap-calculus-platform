@@ -107,7 +107,7 @@ Divers use a BCD (buoyancy control device):
 
 Ships have markings showing the safe waterline in different conditions:
 - **Freshwater:** Ship sits lower (less dense → displaces more volume)
-- **Saltwater (tropical):** Ship sits higher (denser + warmer water)
+- **Saltwater (tropical):** Ship sits higher (saltwater is denser than freshwater)
 - **Saltwater (winter):** Ship sits highest (densest water)
 
 ### ⚗️ Hydrometers

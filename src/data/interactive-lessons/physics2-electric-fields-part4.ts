@@ -198,7 +198,7 @@ But consider **two equal positive charges** $+Q$ at $x = -d/2$ and $x = +d/2$:
             explanation: 'V = 0 just means the scalar sum of potentials is zero. The field (a vector) can still be nonzero. Example: the midpoint of a dipole has V = 0 but E ≠ 0.'
           },
           {
-            question: 'An electron is released from rest at a point where $V = -100$ V and moves to a point where $V = -300$ V. Its kinetic energy:',
+            question: 'An electron is released from rest at a point where $V = -300$ V and moves to a point where $V = -100$ V. Its kinetic energy:',
             options: [
               'Increases by 200 eV',
               'Decreases by 200 eV',
@@ -206,7 +206,7 @@ But consider **two equal positive charges** $+Q$ at $x = -d/2$ and $x = +d/2$:
               'Stays the same'
             ],
             correctAnswer: 0,
-            explanation: '$\\Delta V = -300 - (-100) = -200$ V. For the electron ($q = -e$): $\\Delta KE = -q\\Delta V = -(-e)(-200) = -200e$... Actually: $W = q\\Delta V = (-e)(-200) = +200$ eV. The electron gains 200 eV of kinetic energy (it moves toward more negative potential, which is "downhill" for negative charges).'
+            explanation: '$\Delta V = -100 - (-300) = +200$ V. The electron moves toward higher potential, which is its natural direction. $\Delta U = q\Delta V = (-e)(+200) = -200$ eV (PE decreases). By energy conservation, $\Delta KE = -\Delta U = +200$ eV. The electron gains 200 eV of kinetic energy.'
           }
         ]
       }

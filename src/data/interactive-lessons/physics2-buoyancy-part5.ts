@@ -71,7 +71,7 @@ Half the cube is in water, half in oil.
             explanation: '$920 = 800(1-f) + 1000f = 800 + 200f$. $f = 120/200 = 0.60 = 60\\%$. 60% of the block sits in the water layer.'
           },
           {
-            question: 'A sphere ($\\rho = 750$ kg/m³) is placed in a tank with oil ($\\rho = 700$) on top of water. The sphere will:',
+            question: 'A sphere ($\\rho = 750$ kg/m³) is placed in a tank with oil ($\\rho = 700$ kg/m³) on top of water. The sphere will:',
             options: [
               'Float on top of the oil',
               'Float at the oil-water interface',

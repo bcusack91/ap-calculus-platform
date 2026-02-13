@@ -217,7 +217,7 @@ Enter in order:
               'A factor of 10,000 (too big)'
             ],
             correctAnswer: 3,
-            explanation: 'Using r = 20 instead of r = 0.20 means r² = 400 instead of 0.04. That makes the denominator 10,000× too large, so the answer is 10,000× too small. Wait — actually the student gets F that\'s too big because 1/400 vs 1/0.04 means... Let me recalculate: 1/0.04 = 25, and 1/400 = 0.0025. So 25/0.0025 = 10,000. The correct answer is 10,000× too small.'
+            explanation: 'Using r = 20 instead of r = 0.20 means r² = 400 instead of 0.04. Since r² appears in the denominator, the denominator is 10,000× too large, making F 10,000× too small.'
           },
           {
             question: 'Which step in problem-solving is most often skipped, causing errors?',

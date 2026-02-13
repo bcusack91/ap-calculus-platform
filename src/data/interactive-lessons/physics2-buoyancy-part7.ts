@@ -33,7 +33,7 @@ $$F_B = \\rho_{\\text{fluid}} \\cdot V_{\\text{displaced}} \\cdot g$$
 3. **Are there other forces?**
    - String from above: $T + F_B = W$
    - String from below: $F_B = W + T$
-   - Normal force (sitting on bottom): $F_B + N = W$ ... wait, but does $N$ exist?
+   - Normal force (sitting on bottom): $N + F_B = W$ → only if $W > F_B$ (object denser than fluid)
 
 ### Top 5 AP Mistakes
 
@@ -85,7 +85,7 @@ $$F_B = \\rho_{\\text{fluid}} \\cdot V_{\\text{displaced}} \\cdot g$$
               'Cannot determine'
             ],
             correctAnswer: 0,
-            explanation: 'The beaker with wood has: water + wood. The other has: the same volume of water. Since the wood displaces some water, the water level is higher in the wood beaker only by the submerged portion. But the wood itself adds mass, and the water spills (or the beaker has more total mass). The beaker with the floating block is heavier.'
+            explanation: 'Both beakers start with the same volume of water, but the wood beaker also contains the wood block. The floating wood adds extra mass on top of the same amount of water, so the beaker with the floating block is heavier.'
           }
         ]
       }

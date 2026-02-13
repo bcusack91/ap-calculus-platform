@@ -174,7 +174,7 @@ The mercury on the right rises **2.0 cm** above the mercury on the left. The tot
             options: [
               '1.1 × 10⁵ Pa (about 1 atm)',
               '1.1 × 10⁷ Pa (about 100 atm)',
-              '1.1 × 10⁸ Pa (about 1000 atm)',
+              '1.1 × 10⁸ Pa (about 1100 atm)',
               '1.1 × 10¹⁰ Pa'
             ],
             correctAnswer: 2,
