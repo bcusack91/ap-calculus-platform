@@ -142,6 +142,20 @@ const coursesBySection: Record<string, Course[]> = {
       icon: '🧬',
       description: 'Cells, genetics, evolution, ecology',
       gradient: 'from-rose-600 to-pink-600'
+    },
+    {
+      slug: 'ap-psychology',
+      name: 'AP Psychology',
+      icon: '🧠',
+      description: 'Behavior, cognition, development, disorders',
+      gradient: 'from-amber-600 to-orange-600'
+    },
+    {
+      slug: 'organic-chemistry',
+      name: 'Organic Chemistry',
+      icon: '⚗️',
+      description: 'Structure, reactions, synthesis, spectroscopy',
+      gradient: 'from-lime-600 to-green-600'
     }
   ],
   'Test Prep': [
@@ -194,7 +208,7 @@ export default function Home() {
               From Grade 4 to AP. SAT to ACT.
             </p>
             <p className="mt-3 text-lg leading-8 text-gray-600">
-              20 courses · 534 topics
+              22 courses · 580 topics
             </p>
           </div>
         </div>

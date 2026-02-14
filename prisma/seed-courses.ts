@@ -96,6 +96,24 @@ async function seedCourses() {
       order: 9,
       color: 'rose',
     },
+    {
+      id: 'ap-psychology',
+      slug: 'ap-psychology',
+      name: 'AP Psychology',
+      icon: '🧠',
+      description: 'Explore the science of behavior and mental processes including cognition, development, personality, and disorders.',
+      order: 10,
+      color: 'amber',
+    },
+    {
+      id: 'organic-chemistry',
+      slug: 'organic-chemistry',
+      name: 'Organic Chemistry',
+      icon: '⚗️',
+      description: 'Master organic molecular structure, functional groups, reaction mechanisms, synthesis strategies, and spectroscopy.',
+      order: 11,
+      color: 'lime',
+    },
   ]
 
   for (const course of courses) {

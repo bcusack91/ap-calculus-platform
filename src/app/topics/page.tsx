@@ -7,7 +7,7 @@ export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
   title: 'All Topics | Study Mondo',
-  description: 'Browse all study topics across 20 AP courses and subjects',
+  description: 'Browse all study topics across 22 AP courses and subjects',
   alternates: {
     canonical: 'https://studymondo.com/topics',
   },
@@ -66,6 +66,16 @@ export default async function TopicsPage() {
       icon: '🧬',
       gradient: 'from-rose-600 to-pink-600',
       description: 'Cells, genetics, evolution, and ecology'
+    },
+    'ap-psychology': {
+      icon: '🧠',
+      gradient: 'from-amber-600 to-orange-600',
+      description: 'Behavior, cognition, development, and disorders'
+    },
+    'organic-chemistry': {
+      icon: '⚗️',
+      gradient: 'from-lime-600 to-green-600',
+      description: 'Structure, reactions, synthesis, and spectroscopy'
     }
   }
 
