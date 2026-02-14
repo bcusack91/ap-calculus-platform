@@ -3164,6 +3164,13 @@ function DropdownExercise({
   onComplete: () => void
   isComplete: boolean
 }) {
+  // Normalize between two data formats:
+  // Format A: top-level correctAnswers: ['answer1', 'answer2', ...]
+  // Format B: per-dropdown correctIndex: N (index into options array)
+  const correctAnswersList: string[] = section.exercise.correctAnswers
+    ? section.exercise.correctAnswers
+    : section.exercise.dropdowns.map((dd: any) => dd.options[dd.correctIndex])
+
   const [answers, setAnswers] = useState<string[]>(Array(section.exercise.dropdowns.length).fill(''))
   const [randomizedOptions] = useState(() => 
     section.exercise.dropdowns.map((dropdown: any) => 
@@ -3177,7 +3184,7 @@ function DropdownExercise({
 
   const handleSubmit = () => {
     setValidated(true)
-    const isCorrect = section.exercise.correctAnswers.every((correctAnswer: string, index: number) => 
+    const isCorrect = correctAnswersList.every((correctAnswer: string, index: number) => 
       answers[index] === correctAnswer
     )
     
@@ -3200,7 +3207,7 @@ function DropdownExercise({
     }
   }
 
-  const isFullyCorrect = validated && section.exercise.correctAnswers.every((correctAnswer: string, index: number) => 
+  const isFullyCorrect = validated && correctAnswersList.every((correctAnswer: string, index: number) => 
     answers[index] === correctAnswer
   )
 
@@ -3210,7 +3217,7 @@ function DropdownExercise({
       
       <div className="space-y-4">
         {section.exercise.dropdowns.map((dropdown: any, index: number) => {
-          const isCorrect = answers[index] === section.exercise.correctAnswers[index]
+          const isCorrect = answers[index] === correctAnswersList[index]
           const showFeedback = validated && answers[index]
           
           return (
@@ -3289,7 +3296,12 @@ function DropdownExercise({
           <ul className="space-y-2 text-lg text-green-800 dark:text-green-300">
             {section.exercise.dropdowns.map((dropdown: any, index: number) => (
               <li key={index}>
-                <InlineLatex text={dropdown.label} />: <strong><InlineLatex text={section.exercise.correctAnswers[index]} /></strong>
+                <InlineLatex text={dropdown.label} />: <strong><InlineLatex text={correctAnswersList[index]} /></strong>
+                {dropdown.explanation && (
+                  <p className="text-sm text-green-700 dark:text-green-400 mt-1 ml-4">
+                    <InlineLatex text={dropdown.explanation} />
+                  </p>
+                )}
               </li>
             ))}
           </ul>
