@@ -144,7 +144,7 @@ $$V = \\frac{nRT}{P} = \\frac{(0.600)(0.0821)(298.15)}{1.00} = 14.7 \\text{ L}$$
 
 1) A 5.00 L gas sample at 2.00 atm and 400 K is cooled to 200 K and compressed to 1.00 L. What is the new pressure? (in atm)
 
-2) At STP, how many grams of CO₂ ($M = 44.01$ g/mol) occupy 11.2 L? (in g, to 2 decimal places)
+2) At STP, how many grams of CO₂ ($M = 44.01$ g/mol) occupy 11.2 L? (in g, to 3 significant figures)
 
 3) A mixture of 0.30 mol He and 0.70 mol Ar has a total pressure of 5.00 atm. What is the partial pressure of Ar? (in atm)
       `,

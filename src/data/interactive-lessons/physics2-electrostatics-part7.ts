@@ -121,10 +121,12 @@ Two identical spheres, each with charge $+6\\ \\mu\\text{C}$, are 0.20 m apart.
 1) Force between them (in N, use $k = 9 \\times 10^9$)
 2) One sphere touches a neutral identical sphere, then is returned. Its new charge? (in μC)
 3) New force between the original pair (in N, round to 2 decimals)
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['8.1', '3', '4.05'],
+        correctAnswers: ['8.1', '3', '4.05', '8.10', '4.050'],
         hint1: '$F = (9 \\times 10^9)(6 \\times 10^{-6})^2/(0.2)^2 = (9 \\times 10^9)(36 \\times 10^{-12})/0.04$.',
         hint2: 'Touching neutral sphere: +6 shared equally → +3 μC each.',
         hint3: 'New force: $(9 \\times 10^9)(3 \\times 10^{-6})(6 \\times 10^{-6})/(0.2)^2$.',

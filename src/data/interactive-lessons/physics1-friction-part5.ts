@@ -163,13 +163,13 @@ Plot $a$ vs. $F/m$:
 
 1) A 3 kg block on a horizontal surface requires 12 N to just start sliding. What is $\\mu_s$? ($g = 10$ m/s²)
 
-2) A block slides at constant velocity down a ramp inclined at 20°. What is $\\mu_k$? ($\\tan 20° = 0.364$, round to 2 decimal places)
+2) A block slides at constant velocity down a ramp inclined at 20°. What is $\\mu_k$? ($\\tan 20° = 0.364$, round to 3 significant figures)
 
 3) In an experiment, doubling the mass of a block doubles the measured friction force. This confirms that friction is proportional to what variable?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.4', '0.36', 'normal force'],
+        correctAnswers: ['0.4', '0.36', 'normal force', '0.40', '0.360'],
         hint1: '$\\mu_s = f_{s,\\max}/N = 12/(3 \\times 10) = 12/30$.',
         hint2: '$\\mu_k = \\tan\\theta = \\tan 20°$.',
         hint3: 'Doubling mass doubles the normal force. Since friction doubled too, $f \\propto N$.',

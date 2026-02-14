@@ -159,7 +159,7 @@ Use $\\rho_{\\text{Cu}} = 1.68 \\times 10^{-8}$ $\\Omega\\cdot$m.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.084', '1.68e-7', '47'],
+        correctAnswers: ['0.084', '1.68e-7', '47', '0.0840', '0.000000'],
         hint1: '$R = \\rho L / A = (1.68 \\times 10^{-8})(10.0) / (2.0 \\times 10^{-6})$.',
         hint2: '$A = \\rho L / R = (1.68 \\times 10^{-8})(5.0) / 0.50$.',
         hint3: '$L = RA/\\rho$. Area = $\\pi(d/2)^2 = \\pi(0.0005)^2 = 7.85 \\times 10^{-7}$ m². $L = (1.0)(7.85 \\times 10^{-7}) / (1.68 \\times 10^{-8})$.',

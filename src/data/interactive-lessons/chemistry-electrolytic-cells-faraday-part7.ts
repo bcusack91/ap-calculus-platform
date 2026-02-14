@@ -105,10 +105,12 @@ $$q = It \\quad \\text{mol } e^- = \\frac{q}{F} \\quad \\text{mol substance} = \
 2) In the electrolysis of aqueous NaI, what gas forms at the cathode? (type "H2" or "O2" or "Na")
 
 3) In the electrolysis of aqueous NaI, what forms at the anode? (type "I2" or "O2" or "Na")
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['33.6', 'H2', 'I2'],
+        correctAnswers: ['33.6', 'H2', 'I2', '33.60'],
         hint1: '$m = (100)(3600)(26.98)/((3)(96485))$',
         hint2: 'Na⁺ is too reactive to deposit from water.',
         hint3: 'I⁻ is a simple halide.',

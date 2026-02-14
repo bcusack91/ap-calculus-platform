@@ -197,15 +197,15 @@ Consider the reaction: $2\\text{NO}_2 \\rightarrow 2\\text{NO} + \\text{O}_2$
 | 50 | 0.380 |
 | 100 | 0.300 |
 
-1) What is the average rate of disappearance of NO₂ over the first 50 s? (in M/s, 4 decimal places)
+1) What is the average rate of disappearance of NO₂ over the first 50 s? (in M/s, 3 significant figures)
 
-2) What is the average rate of the reaction over the first 50 s? (divide by stoichiometric coefficient, 4 decimal places)
+2) What is the average rate of the reaction over the first 50 s? (divide by stoichiometric coefficient, 3 significant figures)
 
-3) What is the average rate of appearance of O₂ over the interval 0–100 s? (in M/s, 4 decimal places)
+3) What is the average rate of appearance of O₂ over the interval 0–100 s? (in M/s, 3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.0024', '0.0012', '0.0010'],
+        correctAnswers: ['0.0024', '0.0012', '0.0010', '0.00240', '0.00120', '0.00100', '0.001'],
         hint1: 'Rate of disappearance = −Δ[NO₂]/Δt = −(0.380 − 0.500)/(50 − 0).',
         hint2: 'Rate of reaction = (1/2) × rate of disappearance of NO₂.',
         hint3: 'Rate of reaction = rate of appearance of O₂ (coefficient is 1). Use the 0–100 s interval.',

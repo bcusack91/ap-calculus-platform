@@ -129,10 +129,12 @@ Current state: $[\\text{N}_2\\text{O}_4] = 0.50$ M, $[\\text{NO}_2] = 0.20$ M
 2) Does the reaction shift right or left? (Enter "right" or "left")
 
 3) At equilibrium, will $[\\text{NO}_2]$ be higher or lower than 0.20 M? (Enter "higher" or "lower")
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.08', 'right', 'higher'],
+        correctAnswers: ['0.08', 'right', 'higher', '0.080'],
         hint1: '$Q_c = \\frac{[\\text{NO}_2]^2}{[\\text{N}_2\\text{O}_4]} = \\frac{(0.20)^2}{0.50}$',
         hint2: '$Q = 0.08 < K = 0.36$, so the reaction shifts right.',
         hint3: 'Shifting right means producing more NO₂.',

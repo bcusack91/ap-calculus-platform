@@ -136,7 +136,7 @@ Convert the following gas measurements:
 
 1) Convert 2.50 atm to mmHg.
 
-2) Convert 350 K to °C (to 2 decimal places).
+2) Convert 350 K to °C (to 3 significant figures).
 
 3) Convert 0.500 L to mL.
       `,

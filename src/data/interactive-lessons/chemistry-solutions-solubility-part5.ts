@@ -164,15 +164,15 @@ For 0.10 m solutions in water ($K_f = 1.86$ °C/m):
 
 Use: $R = 0.08206$ L·atm/(mol·K)
 
-1) Calculate the osmotic pressure (in atm) of a 0.200 M glucose ($i = 1$) solution at 37°C (body temperature). (to 1 decimal place)
+1) Calculate the osmotic pressure (in atm) of a 0.200 M glucose ($i = 1$) solution at 37°C (body temperature). (to 3 significant figures)
 
-2) A 0.150 M CaCl₂ ($i = 3$) solution at 25°C has what osmotic pressure? (in atm, to 1 decimal place)
+2) A 0.150 M CaCl₂ ($i = 3$) solution at 25°C has what osmotic pressure? (in atm, to 3 significant figures)
 
-3) A protein solution has an osmotic pressure of 0.0821 atm at 25°C. What is the molarity of the protein? ($i = 1$; answer in M to 4 decimal places)
+3) A protein solution has an osmotic pressure of 0.0821 atm at 25°C. What is the molarity of the protein? ($i = 1$; answer in M to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['5.1', '11.0', '0.0034'],
+        correctAnswers: ['5.1', '11.0', '0.0034', '5.10', '11.00', '0.00340'],
         hint1: '$T = 37 + 273 = 310$ K. $\\Pi = (1)(0.200)(0.08206)(310)$.',
         hint2: '$T = 298$ K. $\\Pi = (3)(0.150)(0.08206)(298)$.',
         hint3: '$M = \\Pi/(iRT) = 0.0821/((1)(0.08206)(298))$.',

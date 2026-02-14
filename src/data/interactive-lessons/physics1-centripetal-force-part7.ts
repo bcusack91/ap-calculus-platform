@@ -132,7 +132,7 @@ It wouldn't! Mass cancels from all equations. The minimum height is independent 
 
 Use $g = 10$ m/s².
 
-1) A car ($m = 1000$ kg) rounds a flat curve ($r = 50$ m, $\\mu_s = 0.6$). What is the maximum speed (in m/s, round to 1 decimal place)?
+1) A car ($m = 1000$ kg) rounds a flat curve ($r = 50$ m, $\\mu_s = 0.6$). What is the maximum speed (in m/s, round to 3 significant figures)?
 
 2) A block starts from height $h = 3R$ on a frictionless ramp and enters a loop of radius $R = 4$ m. What is the normal force at the top of the loop, expressed as a multiple of $mg$? (Just give the number, e.g., "2" for $2mg$)
 
@@ -140,7 +140,7 @@ Use $g = 10$ m/s².
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['17.3', '1', '11'],
+        correctAnswers: ['17.3', '1', '11', '17.30'],
         hint1: '$v_{max} = \\sqrt{\\mu_s gr}$.',
         hint2: 'Use $N = mg(2h/R - 5)$.',
         hint3: '$T = mg + mv^2/r$.',

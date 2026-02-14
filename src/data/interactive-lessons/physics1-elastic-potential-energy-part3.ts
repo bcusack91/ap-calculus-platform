@@ -143,10 +143,12 @@ Spring constant $k = 400$ N/m for all problems.
 2) How much work is needed to stretch it from $x = 0.1$ m to $x = 0.2$ m (in J)?
 
 3) The spring is compressed by 0.15 m and released. How much work does the spring do on the attached object as it returns to equilibrium (in J)?
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['2', '6', '4.5'],
+        correctAnswers: ['2', '6', '4.5', '4.50'],
         hint1: '$W = \\frac{1}{2}kx^2 = \\frac{1}{2}(400)(0.01)$.',
         hint2: '$W = \\frac{1}{2}k(x_f^2 - x_i^2) = \\frac{1}{2}(400)(0.04 - 0.01)$.',
         hint3: '$W_{\\text{spring}} = \\frac{1}{2}kx_i^2 - \\frac{1}{2}kx_f^2 = \\frac{1}{2}(400)(0.0225) - 0$.',

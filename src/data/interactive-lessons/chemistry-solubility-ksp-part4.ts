@@ -118,10 +118,12 @@ $K_{sp}(\\text{AgCl}) = 1.8 \\times 10^{-10}$
 2) What is $[\\text{Cl}^-]$ after mixing? (Enter in scientific notation, e.g. 1.5e-3)
 
 3) What is $Q_{sp}$? (Enter in scientific notation, e.g. 3.8e-7)
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['2.5e-4', '1.5e-3', '3.8e-7'],
+        correctAnswers: ['2.5e-4', '1.5e-3', '3.8e-7', '0.00025', '0.00150', '0.00000'],
         hint1: '$[\\text{Ag}^+] = (0.0010)(25.0)/(100.0)$',
         hint2: '$[\\text{Cl}^-] = (0.0020)(75.0)/(100.0)$',
         hint3: '$Q_{sp} = [\\text{Ag}^+][\\text{Cl}^-] = (2.5 \\times 10^{-4})(1.5 \\times 10^{-3})$',

@@ -139,7 +139,7 @@ Use $g = 10$ m/s².
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['32', '9', '4.5'],
+        correctAnswers: ['32', '9', '4.5', '4.50'],
         hint1: '$v = \\sqrt{2gh} = \\sqrt{2(10)(50)}$.',
         hint2: '$v_{\\min} = \\sqrt{gR} = \\sqrt{10 \\times 8}$.',
         hint3: '$v = \\sqrt{2gL(1 - \\cos\\theta)} = \\sqrt{2(10)(2)(1 - 0.5)}$.',

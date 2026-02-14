@@ -132,10 +132,12 @@ $$F = 66.4 \\text{ N}$$
 2) A block slides to a stop in 4 seconds from an initial speed of 12 m/s on a horizontal surface. What is $\\mu_k$? ($g = 10$ m/s²)
 
 3) What angle must a ramp be tilted to for a block to be on the verge of sliding if $\\mu_s = 0.577$? (in degrees, given $\\tan^{-1}(0.577) = 30°$)
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['5', '0.3', '30'],
+        correctAnswers: ['5', '0.3', '30', '0.30'],
         hint1: '$f_k = 0.25 \\times 80 = 20$ N. $a = (60 - 20)/8$.',
         hint2: '$a = \\Delta v/\\Delta t = 12/4 = 3$ m/s². $\\mu_k = a/g = 3/10$.',
         hint3: '$\\mu_s = \\tan\\theta_c$, so $\\theta_c = \\tan^{-1}(\\mu_s)$.',

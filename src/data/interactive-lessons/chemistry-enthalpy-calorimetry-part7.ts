@@ -116,13 +116,13 @@ This final part integrates everything: energy flow, calorimetry, Hess\'s Law, an
       content: `
 **Integration Problems** 🧮
 
-1) 150.0 mL of 2.00 M HCl reacts with excess NaOH in a coffee-cup calorimeter. The temperature rises by 13.4°C. Assume the solution\'s mass is 150.0 g and $c = 4.184$ J/(g·°C). What is $\\Delta H$ per mole of HCl? (in kJ/mol, to 1 decimal place, include sign)
+1) 150.0 mL of 2.00 M HCl reacts with excess NaOH in a coffee-cup calorimeter. The temperature rises by 13.4°C. Assume the solution\'s mass is 150.0 g and $c = 4.184$ J/(g·°C). What is $\\Delta H$ per mole of HCl? (in kJ/mol, to 3 significant figures, include sign)
 
 2) Using $\\Delta H°_f$ (kJ/mol): CO₂(g) = −393.5, H₂O(l) = −285.8, C₃H₈(g) = −103.8. Calculate $\\Delta H°_{\\text{rxn}}$ for $\\text{C}_3\\text{H}_8(g) + 5\\text{O}_2(g) \\rightarrow 3\\text{CO}_2(g) + 4\\text{H}_2\\text{O}(l)$. (in kJ)
       `,
       exercise: {
         boxes: 2,
-        correctAnswers: ['-28.0', '-2220.0'],
+        correctAnswers: ['-28.0', '-2220.0', '-28.00', '-2220.00'],
         hint1: '$q = mc\\Delta T$ (for solution), then $q_{\\text{rxn}} = -q_{\\text{sol}}$, then divide by moles of HCl.',
         hint2: '$[3(-393.5) + 4(-285.8)] - [(-103.8) + 5(0)]$',
         explanation: '1) $q_{\\text{sol}} = (150.0)(4.184)(13.4) = 8409.8$ J = 8.41 kJ. $q_{\\text{rxn}} = -8.41$ kJ. Moles HCl = $(0.1500)(2.00) = 0.300$ mol. $\\Delta H = -8.41/0.300 = -28.0$ kJ/mol. 2) $[3(-393.5) + 4(-285.8)] - [-103.8] = [-1180.5 - 1143.2] + 103.8 = -2323.7 + 103.8 = -2219.9 \\approx -2220.0$ kJ.'

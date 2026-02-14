@@ -134,10 +134,12 @@ A step-up transformer has 200 turns on the primary and 5000 turns on the seconda
 1) Secondary voltage $V_2$ (in V)
 2) Secondary current $I_2$ (in A)
 3) Power delivered to the load (in W)
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['3000', '0.4', '1200'],
+        correctAnswers: ['3000', '0.4', '1200', '0.40'],
         hint1: '$V_2 = V_1 \\times N_2/N_1 = 120 \\times 5000/200$.',
         hint2: '$I_2 = I_1 \\times N_1/N_2 = 10 \\times 200/5000$.',
         hint3: '$P = V_2 I_2$ or $P = V_1 I_1 = 120 \\times 10$. Both must be equal for an ideal transformer.',

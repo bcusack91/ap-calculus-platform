@@ -145,11 +145,11 @@ Use $g = 10$ m/s².
 
 2) A 2 kg block slides 5 m down a frictionless incline at $30°$ to the horizontal. What is the work done by gravity (in J)?
 
-3) In problem 2, starting from rest, what is the block\'s speed at the bottom (in m/s, to 1 decimal place)?
+3) In problem 2, starting from rest, what is the block\'s speed at the bottom (in m/s, to 3 significant figures)?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['80', '50', '7.1'],
+        correctAnswers: ['80', '50', '7.1', '7.10'],
         hint1: '$W_{\\text{net}} = W_{\\text{push}} + W_{\\text{friction}} = 30(4) + (-10)(4)$.',
         hint2: '$W_{\\text{gravity}} = mgd\\sin\\theta = 2(10)(5)\\sin(30°) = 100 \\times 0.5$.',
         hint3: '$W_{\\text{net}} = \\Delta KE \\Rightarrow 50 = \\frac{1}{2}(2)v^2 \\Rightarrow v = \\sqrt{50}$.',

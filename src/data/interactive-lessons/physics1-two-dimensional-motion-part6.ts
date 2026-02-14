@@ -193,10 +193,12 @@ A ball is launched from the ground at 40 m/s at 37° above horizontal. Use $g = 
 1) Maximum height (in meters)
 
 2) Total time of flight (in seconds)
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 2,
-        correctAnswers: ['28.8', '4.8'],
+        correctAnswers: ['28.8', '4.8', '28.80', '4.80'],
         hint1: '$v_{0y} = 40(0.6) = 24$ m/s. At max height, $v_y = 0$.',
         hint2: '$h = \\frac{v_{0y}^2}{2g} = \\frac{576}{20}$',
         hint3: 'Time up = $\\frac{v_{0y}}{g} = \\frac{24}{10}$. Total time = $2 \\times$ time up.',

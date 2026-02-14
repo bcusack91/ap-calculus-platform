@@ -136,10 +136,12 @@ Use $\\alpha_{\\text{steel}} = 12 \\times 10^{-6}$ /°C and $\\alpha_{\\text{Al}
 2) An aluminum rod is 3.0 m at 20°C. Find $\\Delta L$ in mm when it heats to 120°C.
 
 3) A steel rail is 25.0 m long at 15°C. What gap (in mm) must be left between rails to prevent buckling if temperature can reach 50°C?
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['7.2', '6.9', '10.5'],
+        correctAnswers: ['7.2', '6.9', '10.5', '7.20', '6.90', '10.50'],
         hint1: '$\\Delta L = \\alpha L_0 \\Delta T = (12 \\times 10^{-6})(200)(30)$. Convert m to cm.',
         hint2: '$\\Delta L = (23 \\times 10^{-6})(3.0)(100)$. Convert m to mm.',
         hint3: '$\\Delta L = (12 \\times 10^{-6})(25.0)(35)$. Convert m to mm.',

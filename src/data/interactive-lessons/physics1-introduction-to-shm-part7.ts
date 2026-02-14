@@ -113,7 +113,7 @@ $$a = -\\omega^2 x$$
       content: `
 **AP Calculation Practice** 🧮
 
-1) A block-spring system has $v_{\\text{max}} = 3.0$ m/s and $a_{\\text{max}} = 12$ m/s². What is the amplitude? (in m, round to 2 decimal places)
+1) A block-spring system has $v_{\\text{max}} = 3.0$ m/s and $a_{\\text{max}} = 12$ m/s². What is the amplitude? (in m, round to 3 significant figures)
 
 2) A pendulum has $L = 2.5$ m. How many complete oscillations does it make in 60 s? (round to the nearest whole number)
 
@@ -121,7 +121,7 @@ $$a = -\\omega^2 x$$
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.75', '19', '2.0'],
+        correctAnswers: ['0.75', '19', '2.0', '0.750', '2.00'],
         hint1: '$\\omega = a_{\\text{max}}/v_{\\text{max}} = 4.0$. Then $A = v_{\\text{max}}/\\omega$',
         hint2: '$T = 2\\pi\\sqrt{2.5/9.8}$. Number of cycles $= 60/T$',
         hint3: '$a = -(k/m)x = -(50/2.0)(0.08)$',

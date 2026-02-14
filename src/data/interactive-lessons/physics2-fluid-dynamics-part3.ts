@@ -125,10 +125,12 @@ A syringe barrel has diameter 2.0 cm. The needle has diameter 1.0 mm. The plunge
 1) Area of the barrel (in cm²)
 2) Area ratio $A_{\\text{barrel}}/A_{\\text{needle}}$
 3) Speed of fluid exiting the needle (in m/s)
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['3.14', '400', '4'],
+        correctAnswers: ['3.14', '400', '4', '3.140'],
         hint1: '$A = \\pi r^2 = \\pi(1.0)^2$ (radius = 1.0 cm).',
         hint2: 'Needle radius = 0.5 mm = 0.05 cm. $A_{\\text{needle}} = \\pi(0.05)^2 = 7.85 \\times 10^{-3}$ cm². Ratio = $3.14/0.00785$.',
         hint3: '$v_{\\text{needle}} = (A_{\\text{barrel}}/A_{\\text{needle}}) \\times v_{\\text{plunger}} = 400 \\times 0.01$ m/s.',

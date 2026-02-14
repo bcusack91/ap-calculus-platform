@@ -149,10 +149,12 @@ Use $g = 10$ m/s².
 2) A ball is thrown upward at 24 m/s. What maximum height does it reach (in m)?
 
 3) A 2 kg ball is thrown upward at 10 m/s from a 15 m tall building. What is its speed when it hits the ground (in m/s)?
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['25', '28.8', '20'],
+        correctAnswers: ['25', '28.8', '20', '28.80'],
         hint1: '$v = \\sqrt{2gh} = \\sqrt{2(10)(31.25)} = \\sqrt{625}$.',
         hint2: '$h = v_i^2/(2g) = (24)^2/(20) = 576/20$.',
         hint3: 'Use energy: $\\frac{1}{2}(2)(100) + 2(10)(15) = \\frac{1}{2}(2)v_f^2$. $100 + 300 = v_f^2$.',

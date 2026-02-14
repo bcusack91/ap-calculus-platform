@@ -152,10 +152,12 @@ A ball is launched from ground level and reaches a maximum height of 31.25 m. Th
 2) Total time of flight from $t = 2v_{0y}/g$ confirms what value? (in seconds)
 
 3) What was the launch speed if $\\theta = 53°$? ($\\sin 53° = 0.8$) (in m/s)
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['25', '5', '31.25'],
+        correctAnswers: ['25', '5', '31.25', '31.250'],
         hint1: '$v_{0y} = \\sqrt{2gh} = \\sqrt{2(10)(31.25)}$',
         hint2: '$v_{0y} = \\sqrt{625} = 25$ m/s. $t = 2(25)/10$',
         hint3: '$v_{0y} = v_0\\sin 53°$, so $v_0 = \\frac{v_{0y}}{\\sin 53°} = \\frac{25}{0.8}$',

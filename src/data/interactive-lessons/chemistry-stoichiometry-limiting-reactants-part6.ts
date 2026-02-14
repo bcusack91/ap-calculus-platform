@@ -130,13 +130,13 @@ A reaction starts with 28.02 g of N₂ and 8.064 g of H₂. Percent yield = 85%.
 
 1) Which is limiting? Type **N2** or **H2**. (Hint: calculate mol product from each)
 
-2) What is the theoretical yield of NH₃ in grams? (to 1 decimal place)
+2) What is the theoretical yield of NH₃ in grams? (to 3 significant figures)
 
-3) What is the actual yield of NH₃ in grams? (to 1 decimal place)
+3) What is the actual yield of NH₃ in grams? (to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['N2', '34.1', '29.0'],
+        correctAnswers: ['N2', '34.1', '29.0', '34.10', '29.00'],
         hint1: 'Mol N₂ = 28.02/28.02 = 1.000. Mol H₂ = 8.064/2.016 = 4.000. From N₂: 1.000 × 2 = 2.000 mol NH₃. From H₂: 4.000 × 2/3 = 2.667 mol NH₃. Which is less?',
         hint2: 'Theoretical yield = mol NH₃ (from limiting) × $M_{\\text{NH}_3}$ = 2.000 × 17.03.',
         hint3: 'Actual = theoretical × 0.85.',

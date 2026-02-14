@@ -124,10 +124,12 @@ Let\'s synthesize everything about conservation of momentum: isolated systems, 1
 2) The block+bullet slides along a surface with $\\mu_k = 0.40$. How far does it slide before stopping? (in m, use $g = 10$ m/s²)
 
 3) A 60 kg person standing on a 15 kg skateboard at rest throws a 5 kg ball at 12 m/s horizontally. What is the recoil speed of the person+skateboard? (in m/s)
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['4', '2', '0.8'],
+        correctAnswers: ['4', '2', '0.8', '0.80'],
         hint1: '$(0.050)(400) = (5.0)(v_f)$',
         hint2: 'Use $v^2 = 2\\mu g d$. $d = v^2/(2\\mu g) = 16/(2 \\times 0.40 \\times 10)$',
         hint3: '$0 = (75)(v) + (5)(12)$. $v = -60/75$',

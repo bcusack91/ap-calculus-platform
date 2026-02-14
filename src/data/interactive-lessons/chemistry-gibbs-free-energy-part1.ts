@@ -146,7 +146,7 @@ Above 273 K: melting is spontaneous ($\\Delta G < 0$). Below 273 K: freezing is 
       content: `
 **Gibbs Free Energy Calculations** 🧮
 
-1) $\\Delta H = -100$ kJ, $\\Delta S = +50$ J/K, $T = 298$ K. Calculate $\\Delta G$ in kJ. (to 1 decimal place)
+1) $\\Delta H = -100$ kJ, $\\Delta S = +50$ J/K, $T = 298$ K. Calculate $\\Delta G$ in kJ. (to 3 significant figures)
 
 2) $\\Delta H = +200$ kJ, $\\Delta S = +500$ J/K, $T = 500$ K. Calculate $\\Delta G$ in kJ.
 
@@ -154,7 +154,7 @@ Above 273 K: melting is spontaneous ($\\Delta G < 0$). Below 273 K: freezing is 
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['-114.9', '-50', '300'],
+        correctAnswers: ['-114.9', '-50', '300', '-114.90'],
         hint1: '$\\Delta G = -100 - (298)(0.050)$. Remember to convert $\\Delta S$ to kJ/K!',
         hint2: '$\\Delta G = 200 - (500)(0.500)$.',
         hint3: '$\\Delta G = 0 \\Rightarrow T = \\Delta H/\\Delta S = 30{,}000/100$.',

@@ -176,14 +176,14 @@ where 1 u = 1 atomic mass unit = $1.66 \\times 10^{-27}$ kg.
 
 The mass of $^{4}_{2}\\text{He}$ is 4.0026 u. Use $m_p = 1.0073$ u, $m_n = 1.0087$ u, and 1 u = 931.5 MeV/$c^2$.
 
-1) Total mass of 2 free protons + 2 free neutrons (in u, 4 decimal places)
-2) Mass defect $\\Delta m$ (in u, 4 decimal places)
-3) Binding energy of $^{4}_{2}\\text{He}$ (in MeV, 1 decimal place)
-4) Binding energy per nucleon (in MeV, 2 decimal places)
+1) Total mass of 2 free protons + 2 free neutrons (in u, 3 significant figures)
+2) Mass defect $\\Delta m$ (in u, 3 significant figures)
+3) Binding energy of $^{4}_{2}\\text{He}$ (in MeV, 3 significant figures)
+4) Binding energy per nucleon (in MeV, 3 significant figures)
       `,
       exercise: {
         boxes: 4,
-        correctAnswers: ['4.0320', '0.0294', '27.4', '6.85'],
+        correctAnswers: ['4.0320', '0.0294', '27.4', '6.85', '4.03200', '4.032', '0.02940', '27.40', '6.850'],
         hint1: 'Total mass $= 2(1.0073) + 2(1.0087)$.',
         hint2: '$\\Delta m = 4.0320 - 4.0026$.',
         hint3: '$E_b = \\Delta m \\times 931.5$ MeV. Per nucleon: divide by $A = 4$.',

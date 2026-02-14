@@ -168,10 +168,12 @@ Use $g = 10$ m/s² for all problems.
 2) A 10 kg block slides on a surface ($\\mu_k = 0.50$). What horizontal force is needed for the block to slide at constant velocity (in N)?
 
 3) A 25 kg box sits on a surface with $\\mu_s = 0.60$. What is the maximum horizontal push before it starts moving (in N)?
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1.33', '50', '150'],
+        correctAnswers: ['1.33', '50', '150', '1.330'],
         hint1: '$a = (F - \\mu_k mg)/m = (50 - 0.20 \\times 150)/15$.',
         hint2: 'Constant velocity: $F = f_k = \\mu_k mg = 0.50 \\times 100$.',
         hint3: '$F_{\\max} = \\mu_s mg = 0.60 \\times 250$.',

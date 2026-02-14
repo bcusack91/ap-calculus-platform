@@ -57,7 +57,7 @@ First, 0.08 mol $NaOH$ is added. Then, 0.05 mol $HCl$ is added.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.33', '5.01', '4.88'],
+        correctAnswers: ['0.33', '5.01', '4.88', '0.330', '5.010', '4.880'],
         hint1: '$CH_3COOH + OH^- \\rightarrow CH_3COO^-$. New $CH_3COO^- = 0.25 + 0.08$.',
         hint2: '$pH = 4.74 + \\log(0.33/0.17)$.',
         hint3: '$CH_3COO^- + H^+ \\rightarrow CH_3COOH$. New values: $A^- = 0.33 - 0.05$, $HA = 0.17 + 0.05$.',
@@ -140,7 +140,7 @@ Design a 500 mL phosphate buffer at pH 7.40 ($pK_a = 7.21$, total phosphate = 0.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1.55', '0.078', '0.061'],
+        correctAnswers: ['1.55', '0.078', '0.061', '1.550', '0.0780', '0.0610'],
         hint1: '$[A^-]/[HA] = 10^{(7.40 - 7.21)} = 10^{0.19}$.',
         hint2: 'Let $[H_2PO_4^-] = x$; then $[HPO_4^{2-}] = 1.55x$; $x + 1.55x = 0.20$.',
         hint3: 'Moles = concentration × volume in liters.',

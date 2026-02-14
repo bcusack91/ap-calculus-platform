@@ -132,15 +132,15 @@ All three quantities are interconnected:
 
 At 25°C:
 
-1) $E° = 0.46$ V, $n = 2$. Calculate $\\log K$. (to 1 decimal place)
+1) $E° = 0.46$ V, $n = 2$. Calculate $\\log K$. (to 3 significant figures)
 
-2) $K = 10^{20}$, $n = 4$. Calculate $E°$. (in V, to 3 decimal places)
+2) $K = 10^{20}$, $n = 4$. Calculate $E°$. (in V, to 3 significant figures)
 
 3) $E° = -0.10$ V, $n = 1$. Is $K$ greater or less than 1? (type "greater" or "less")
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['15.5', '0.296', 'less'],
+        correctAnswers: ['15.5', '0.296', 'less', '15.50', '0.2960'],
         hint1: '$\\log K = (2)(0.46)/0.0592$',
         hint2: '$E° = (0.0592/4)(20)$',
         hint3: 'Negative $E°$ → negative $\\log K$ → $K < 1$.',

@@ -181,13 +181,13 @@ Alternatively, plot the **first derivative** ($\\Delta pH/\\Delta V$ vs. $V$). T
 
 1) An indicator has $K_{In} = 1.0 \\times 10^{-7}$. What is its $pK_{In}$?
 
-2) What is the lower limit of its transition range? (1 decimal place)
+2) What is the lower limit of its transition range? (3 significant figures)
 
-3) What is the upper limit of its transition range? (1 decimal place)
+3) What is the upper limit of its transition range? (3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['7', '6.0', '8.0'],
+        correctAnswers: ['7', '6.0', '8.0', '6.00', '8.00'],
         hint1: '$pK_{In} = -\\log(K_{In})$.',
         hint2: 'Lower = $pK_{In} - 1$.',
         hint3: 'Upper = $pK_{In} + 1$.',

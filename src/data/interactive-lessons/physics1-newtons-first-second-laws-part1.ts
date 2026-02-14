@@ -158,10 +158,12 @@ In a non-inertial frame, objects appear to accelerate without any real force. Fo
 2) On the Moon, $g_{\\text{Moon}} = 1.6$ m/s². What is the weight (in N) of a 60 kg astronaut on the Moon?
 
 3) An object weighs 490 N on Earth ($g = 9.8$ m/s²). What is its mass in kg?
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.05', '96', '50'],
+        correctAnswers: ['0.05', '96', '50', '0.050'],
         hint1: 'If $F = ma$ and the same $F$ acts on both, then $a = F/m$. The ratio is $a_{\\text{car}}/a_{\\text{person}} = m_{\\text{person}}/m_{\\text{car}}$.',
         hint2: 'Weight $W = mg_{\\text{Moon}} = 60 \\times 1.6$.',
         hint3: '$W = mg$, so $m = W/g = 490/9.8$.',

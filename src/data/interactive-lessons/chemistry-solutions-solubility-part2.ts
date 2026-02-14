@@ -154,15 +154,15 @@ $$\\text{ppm} = \\frac{\\text{mass of solute}}{\\text{mass of solution}} \\times
 
 Use: Na = 22.99, Cl = 35.45, O = 16.00, H = 1.008, C = 12.01
 
-1) What is the molarity of a solution prepared by dissolving 11.7 g of NaCl ($M = 58.44$ g/mol) in water to make 250.0 mL of solution? (to 3 decimal places, in mol/L)
+1) What is the molarity of a solution prepared by dissolving 11.7 g of NaCl ($M = 58.44$ g/mol) in water to make 250.0 mL of solution? (to 3 significant figures, in mol/L)
 
-2) What is the molality of a solution made by dissolving 36.0 g of glucose ($M = 180.16$ g/mol) in 500.0 g of water? (to 3 decimal places, in mol/kg)
+2) What is the molality of a solution made by dissolving 36.0 g of glucose ($M = 180.16$ g/mol) in 500.0 g of water? (to 3 significant figures, in mol/kg)
 
-3) What is the mass percent of a solution containing 8.0 g of NaOH in 200.0 g of solution? (to 1 decimal place)
+3) What is the mass percent of a solution containing 8.0 g of NaOH in 200.0 g of solution? (to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.800', '0.400', '4.0'],
+        correctAnswers: ['0.800', '0.400', '4.0', '0.8000', '0.80', '0.4000', '0.40', '4.00'],
         hint1: '$M = n/V$. Find moles: $n = 11.7/58.44$. Volume in liters: $0.2500$ L.',
         hint2: '$m = n/\\text{kg solvent}$. Find moles: $n = 36.0/180.16$. Solvent mass in kg: $0.5000$ kg.',
         hint3: 'Mass % = (mass solute / mass solution) × 100 = $(8.0/200.0) \\times 100$.',
@@ -213,7 +213,7 @@ $$\\chi_{\\text{eth}} = \\frac{0.9985}{0.9985 + 3.996} = \\frac{0.9985}{4.995} =
             options: ['100 g solution', '100 g water', '1 L solution', '1 kg water']
           }
         ],
-        correctAnswers: ['ppm or ppb', '0.90', 'liter of solution', '100 g solution'],
+        correctAnswers: ['ppm or ppb', '0.90', 'liter of solution', '100 g solution', '0.900', '0.9'],
         hint1: 'Trace quantities like μg/L are in the parts-per-million or parts-per-billion range.',
         hint2: 'Mole fractions must sum to 1.',
         hint3: 'Molarity is defined as moles per liter of solution.',

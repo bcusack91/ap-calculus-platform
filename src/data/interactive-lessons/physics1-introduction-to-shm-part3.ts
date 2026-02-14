@@ -120,15 +120,15 @@ where $I$ is the rotational inertia about the pivot and $d$ is the distance from
       content: `
 **Pendulum Calculations** 🧮
 
-1) A pendulum is 1.0 m long. What is its period on Earth? (in seconds, round to 2 decimal places, use $g = 9.8$ m/s²)
+1) A pendulum is 1.0 m long. What is its period on Earth? (in seconds, round to 3 significant figures, use $g = 9.8$ m/s²)
 
-2) A pendulum has a period of 3.0 s on Earth. What is its length? (in m, round to 2 decimal places)
+2) A pendulum has a period of 3.0 s on Earth. What is its length? (in m, round to 3 significant figures)
 
 3) A pendulum has period 2.0 s on Earth. What would its period be on a planet where $g = 2.45$ m/s²? (in s)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['2.01', '2.24', '4.0'],
+        correctAnswers: ['2.01', '2.24', '4.0', '2.010', '2.240', '4.00'],
         hint1: '$T = 2\\pi\\sqrt{1.0/9.8}$',
         hint2: '$T = 2\\pi\\sqrt{L/g} \\Rightarrow L = gT^2/(4\\pi^2) = 9.8(9)/(4\\pi^2)$',
         hint3: '$T_2/T_1 = \\sqrt{g_1/g_2} = \\sqrt{9.8/2.45} = \\sqrt{4} = 2$. $T_2 = 2 \\times 2.0$',

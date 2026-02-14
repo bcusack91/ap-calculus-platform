@@ -87,15 +87,15 @@ A 0.30 kg block attached to a spring ($k = 120$ N/m) is pulled 0.15 m from equil
 
 A pendulum bob ($m = 0.50$ kg) swings through its lowest point with a speed of 1.2 m/s.
 
-1) What is the kinetic energy at the lowest point? (in J, round to 2 decimal places)
+1) What is the kinetic energy at the lowest point? (in J, round to 3 significant figures)
 
-2) What is the maximum height above the lowest point? (in m, round to 3 decimal places, use $g = 9.8$ m/s²)
+2) What is the maximum height above the lowest point? (in m, round to 3 significant figures, use $g = 9.8$ m/s²)
 
-3) What is the total mechanical energy of the system? (in J, round to 2 decimal places)
+3) What is the total mechanical energy of the system? (in J, round to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.36', '0.073', '0.36'],
+        correctAnswers: ['0.36', '0.073', '0.36', '0.360', '0.0730'],
         hint1: '$KE = \\frac{1}{2}mv^2 = \\frac{1}{2}(0.50)(1.2)^2$',
         hint2: 'At max height: all KE converts to PE. $mgh = \\frac{1}{2}mv^2 \\Rightarrow h = v^2/(2g)$',
         hint3: 'At the lowest point, $PE = 0$, so $E = KE$',
@@ -178,13 +178,13 @@ A 1.0 kg mass on a spring ($k = 400$ N/m) has total energy $E = 8.0$ J.
 
 1) What is the amplitude? (in m)
 
-2) At what position is the speed 3.0 m/s? (in m, round to 2 decimal places)
+2) At what position is the speed 3.0 m/s? (in m, round to 3 significant figures)
 
-3) At what position is $KE = 2PE$? (in m, round to 3 decimal places)
+3) At what position is $KE = 2PE$? (in m, round to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.2', '0.13', '0.115'],
+        correctAnswers: ['0.2', '0.13', '0.115', '0.20', '0.130', '0.1150'],
         hint1: '$A = \\sqrt{2E/k} = \\sqrt{2(8.0)/400}$',
         hint2: '$KE = \\frac{1}{2}(1.0)(9.0) = 4.5$ J. $PE = 8.0 - 4.5 = 3.5$ J. $x = \\sqrt{2(3.5)/400}$',
         hint3: '$KE = 2PE$ and $KE + PE = E$, so $PE = E/3$. $\\frac{1}{2}kx^2 = E/3$. $x = \\sqrt{2E/(3k)}$',

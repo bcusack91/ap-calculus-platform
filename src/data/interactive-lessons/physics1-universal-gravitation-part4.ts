@@ -107,15 +107,15 @@ $T^2/r^3 = 4\\pi^2/(GM)$ depends on $M$ — the mass of the body being orbited. 
       content: `
 **Kepler's Third Law Calculations** 🧮
 
-1) Earth orbits the Sun at 1 AU with $T = 1$ year. What is the orbital period of an asteroid at 2.5 AU (in years, round to 1 decimal place)?
+1) Earth orbits the Sun at 1 AU with $T = 1$ year. What is the orbital period of an asteroid at 2.5 AU (in years, round to 3 significant figures)?
 
-2) A moon orbits a planet with period 10 days at radius $r$. Another moon orbits the same planet at radius $2r$. What is its period (in days, round to 1 decimal place)?
+2) A moon orbits a planet with period 10 days at radius $r$. Another moon orbits the same planet at radius $2r$. What is its period (in days, round to 3 significant figures)?
 
-3) Jupiter's moon Io orbits at $r_1 = 4.22 \\times 10^8$ m with $T_1 = 1.77$ days. Europa orbits at $r_2 = 6.71 \\times 10^8$ m. What is Europa's period (in days, round to 2 decimal places)?
+3) Jupiter's moon Io orbits at $r_1 = 4.22 \\times 10^8$ m with $T_1 = 1.77$ days. Europa orbits at $r_2 = 6.71 \\times 10^8$ m. What is Europa's period (in days, round to 3 significant figures)?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['4.0', '28.3', '3.55'],
+        correctAnswers: ['4.0', '28.3', '3.55', '4.00', '28.30', '3.550'],
         hint1: '$T^2 = r^3$ in AU/years. $T = (2.5)^{3/2}$.',
         hint2: '$T_2^2/T_1^2 = (2r/r)^3 = 8$. $T_2 = T_1\\sqrt{8}$.',
         hint3: '$T_2/T_1 = (r_2/r_1)^{3/2}$.',

@@ -212,10 +212,12 @@ $$E_a(\\text{catalyzed}) < E_a(\\text{uncatalyzed})$$
 2) If the concentration of a reactant is tripled, and the reaction is second-order in that reactant, by what factor does the rate increase? (whole number)
 
 3) A catalyzed reaction has $E_a = 50$ kJ/mol. The uncatalyzed reaction has $E_a = 120$ kJ/mol. By how many kJ/mol does the catalyst lower the activation energy?
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.080', '9', '70'],
+        correctAnswers: ['0.080', '9', '70', '0.0800', '0.08'],
         hint1: '45°C is 20°C above 25°C, so two doublings: rate × 2 × 2.',
         hint2: 'Rate ∝ [A]². If [A] → 3[A], rate → 3² = 9 times.',
         hint3: 'ΔEa = 120 − 50 = 70 kJ/mol.',

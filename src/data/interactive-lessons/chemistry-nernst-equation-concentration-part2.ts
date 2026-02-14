@@ -120,15 +120,15 @@ Remember: solids and pure liquids are excluded from Q!
 
 All at 25°C. Use $E = E° - (0.0592/n)\\log Q$.
 
-1) $E° = 0.46$ V, $n = 2$, $Q = 0.01$. Calculate $E$. (to 3 decimal places)
+1) $E° = 0.46$ V, $n = 2$, $Q = 0.01$. Calculate $E$. (to 3 significant figures)
 
-2) $E° = 1.10$ V, $n = 2$, $Q = 10^4$. Calculate $E$. (to 3 decimal places)
+2) $E° = 1.10$ V, $n = 2$, $Q = 10^4$. Calculate $E$. (to 3 significant figures)
 
-3) $E° = 0.80$ V, $n = 1$, $Q = 10^{-3}$. Calculate $E$. (to 3 decimal places)
+3) $E° = 0.80$ V, $n = 1$, $Q = 10^{-3}$. Calculate $E$. (to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.519', '0.982', '0.978'],
+        correctAnswers: ['0.519', '0.982', '0.978', '0.5190', '0.9820', '0.9780'],
         hint1: '$E = 0.46 - (0.0296)\\log(0.01) = 0.46 - (0.0296)(-2)$',
         hint2: '$E = 1.10 - (0.0296)(4)$',
         hint3: '$E = 0.80 - (0.0592)(-3)$',

@@ -98,13 +98,13 @@ Use: Zn²⁺/Zn = −0.76 V, Cu²⁺/Cu = +0.34 V, Ag⁺/Ag = +0.80 V, Fe²⁺/F
 
 1) A cell has $E° = +2.00$ V and $n = 3$. What is $\\Delta G°$ in kJ? (to nearest whole number)
 
-2) A cell has $\\Delta G° = -386$ kJ and $n = 4$. What is $E°$ in V? (to 2 decimal places)
+2) A cell has $\\Delta G° = -386$ kJ and $n = 4$. What is $E°$ in V? (to 3 significant figures)
 
 3) If $E° = +0.50$ V and $n = 2$ at 298 K, is $K$ greater or less than 1? (type "greater" or "less")
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['-579', '1.00', 'greater'],
+        correctAnswers: ['-579', '1.00', 'greater', '1.000', '1.0'],
         hint1: '$\\Delta G° = -(3)(96485)(2.00)$',
         hint2: '$E° = 386000/((4)(96485))$',
         hint3: 'Positive $E°$ → spontaneous → products favored.',

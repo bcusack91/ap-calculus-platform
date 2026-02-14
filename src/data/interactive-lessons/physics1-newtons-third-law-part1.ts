@@ -162,10 +162,12 @@ To find the reaction to any force:
 2) Earth exerts a gravitational force of 9.8 N on a 1 kg apple. What gravitational force does the apple exert on Earth (in N)?
 
 3) A 1000 kg car pushes backward on the road with 3000 N (via its tires). The road pushes the car forward with how many N?
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['150', '9.8', '3000'],
+        correctAnswers: ['150', '9.8', '3000', '9.80'],
         hint1: 'Newton\'s Third Law: the forces are always equal in magnitude.',
         hint2: 'The gravitational force is mutual — the apple pulls Earth just as much as Earth pulls the apple.',
         hint3: 'Action-reaction: the road pushes the car with the same magnitude the car pushes the road.',

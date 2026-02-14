@@ -128,10 +128,12 @@ A 2.0 kg block on a spring ($k = 200$ N/m) oscillates with amplitude $A = 0.20$ 
 2) What is the speed at $x = 0.12$ m? (in m/s)
 
 3) At what displacement is the speed 1.0 m/s? (in m)
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['4.0', '1.6', '0.17'],
+        correctAnswers: ['4.0', '1.6', '0.17', '4.00', '1.60', '0.170'],
         hint1: '$E = \\frac{1}{2}kA^2 = \\frac{1}{2}(200)(0.20)^2$',
         hint2: '$v = \\sqrt{(k/m)(A^2 - x^2)} = \\sqrt{(200/2.0)(0.04 - 0.0144)}$',
         hint3: '$KE = \\frac{1}{2}mv^2 = 1.0$ J. $PE = E - KE = 3.0$ J. $x = \\sqrt{2(3.0)/200}$',

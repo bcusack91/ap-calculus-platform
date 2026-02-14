@@ -134,15 +134,15 @@ A student analyzes a pure sample of hydrated copper(II) sulfate, CuSO₄·5H₂O
 
 Use: Cu = 63.55, S = 32.07, O = 16.00, H = 1.008
 
-1) Calculate the molar mass of CuSO₄·5H₂O in g/mol. (to 2 decimal places)
+1) Calculate the molar mass of CuSO₄·5H₂O in g/mol. (to 3 significant figures)
 
-2) What is the percent by mass of water in CuSO₄·5H₂O? (to 1 decimal place)
+2) What is the percent by mass of water in CuSO₄·5H₂O? (to 3 significant figures)
 
-3) If the student has 50.0 g of CuSO₄·5H₂O, how many moles of water molecules are present? (to 3 decimal places)
+3) If the student has 50.0 g of CuSO₄·5H₂O, how many moles of water molecules are present? (to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['249.70', '36.1', '1.001'],
+        correctAnswers: ['249.70', '36.1', '1.001', '249.700', '249.7', '36.10', '1.0010'],
         hint1: '$M = 63.55 + 32.07 + 4(16.00) + 5[2(1.008) + 16.00]$.',
         hint2: '$\\%\\text{H}_2\\text{O} = \\frac{5 \\times 18.02}{M_{\\text{total}}} \\times 100$.',
         hint3: 'Find moles of the hydrate first ($50.0/M$), then multiply by 5 since there are 5 H₂O per formula unit.',

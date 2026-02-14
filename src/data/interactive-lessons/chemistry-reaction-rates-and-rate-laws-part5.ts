@@ -185,13 +185,13 @@ $$\\text{Rate} = k[A]^2 \\quad \\text{or} \\quad \\text{Rate} = k[A][B]$$
 
 1) A third-order reaction has Rate = k[A][B][C]. What is the power of M in the units of k? (e.g., for M⁻¹, enter −1)
 
-2) A first-order reaction has k = 0.0250 s⁻¹. What is the half-life in seconds? (1 decimal place)
+2) A first-order reaction has k = 0.0250 s⁻¹. What is the half-life in seconds? (3 significant figures)
 
 3) A zero-order reaction has k = 0.0040 M/s and [A]₀ = 0.80 M. What is the half-life in seconds? (whole number)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['-2', '27.7', '100'],
+        correctAnswers: ['-2', '27.7', '100', '27.70'],
         hint1: 'Units of k = M^(1−n)s⁻¹. For n = 3: 1 − 3 = −2.',
         hint2: 't₁/₂ = 0.693/k = 0.693/0.0250.',
         hint3: 't₁/₂ = [A]₀/(2k) = 0.80/(2 × 0.0040).',

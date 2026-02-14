@@ -136,13 +136,13 @@ $$\\boxed{v = \\frac{E}{B}}$$
 
 A proton ($m = 1.67 \\times 10^{-27}$ kg, $q = 1.6 \\times 10^{-19}$ C) moves at $4.0 \\times 10^6$ m/s perpendicular to a 0.20 T magnetic field.
 
-1) Radius of the circular path (in m, to 2 decimal places)
+1) Radius of the circular path (in m, to 3 significant figures)
 2) Cyclotron period (in s, use scientific notation like 3.3e-7)
 3) Cyclotron frequency (in Hz, use scientific notation like 3.0e6)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.21', '3.3e-7', '3.0e6'],
+        correctAnswers: ['0.21', '3.3e-7', '3.0e6', '0.210', '0.00000', '3000000.0000', '3000000.00'],
         hint1: '$r = mv/(qB) = (1.67 \\times 10^{-27})(4.0 \\times 10^6)/((1.6 \\times 10^{-19})(0.20))$.',
         hint2: '$T = 2\\pi m/(qB)$. Note: the period is independent of speed!',
         hint3: '$f = 1/T = qB/(2\\pi m)$.',

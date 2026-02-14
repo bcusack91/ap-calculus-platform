@@ -129,10 +129,12 @@ A rectangular barge ($6.0 \\times 3.0 \\times 1.0$ m) has mass 12,000 kg. It flo
 1) Volume of the barge (in m³)
 2) Volume of water displaced (in m³)
 3) Depth the barge sinks to (draft, in m)
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['18', '12', '0.67'],
+        correctAnswers: ['18', '12', '0.67', '0.670'],
         hint1: '$V = 6.0 \\times 3.0 \\times 1.0$.',
         hint2: 'Floating: $F_B = W$. $\\rho_w V_{\\text{disp}} g = mg$. $V_{\\text{disp}} = m/\\rho_w = 12{,}000/1000$.',
         hint3: 'Draft = $V_{\\text{disp}} / (\\text{length} \\times \\text{width}) = 12/(6 \\times 3)$.',

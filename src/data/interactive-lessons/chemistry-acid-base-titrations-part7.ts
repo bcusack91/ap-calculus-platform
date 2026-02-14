@@ -101,7 +101,7 @@ Choose an indicator whose $pK_{In}$ is close to the equivalence point pH.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['30.0', '15.0', '5.00'],
+        correctAnswers: ['30.0', '15.0', '5.00', '30.00', '15.00', '5.000', '5.0'],
         hint1: 'Equal concentrations → equal volumes.',
         hint2: 'Half of the equivalence volume.',
         hint3: '$pH = pK_a$ at half-equivalence.',

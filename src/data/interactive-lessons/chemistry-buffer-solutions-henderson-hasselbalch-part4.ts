@@ -126,7 +126,7 @@ A buffer contains 0.40 mol $CH_3COOH$ and 0.60 mol $CH_3COO^-$ in 2.0 L. ($pK_a 
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.60', '0.40', '5.62'],
+        correctAnswers: ['0.60', '0.40', '5.62', '0.600', '0.6', '0.400', '0.4', '5.620'],
         hint1: 'Max acid = moles of $A^-$ available.',
         hint2: 'Max base = moles of $HA$ available.',
         hint3: 'After adding 0.30 mol $NaOH$: $HA = 0.40 - 0.30 = 0.10$; $A^- = 0.60 + 0.30 = 0.90$.',

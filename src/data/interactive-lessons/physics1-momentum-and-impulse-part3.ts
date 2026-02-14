@@ -147,13 +147,13 @@ This is exact for constant forces and a useful approximation for variable forces
 
 1) A 0.060 kg tennis ball is served at 50 m/s. If the racket contact time is 0.005 s, what is the average force exerted? (in N)
 
-2) A 75 kg skydiver in free fall at 55 m/s opens a parachute. If the average drag force is 1200 N and the skydiver weighs 735 N, how long until the skydiver slows to 5 m/s? (in seconds, to 1 decimal place)
+2) A 75 kg skydiver in free fall at 55 m/s opens a parachute. If the average drag force is 1200 N and the skydiver weighs 735 N, how long until the skydiver slows to 5 m/s? (in seconds, to 3 significant figures)
 
 3) A 2000 kg car traveling at 25 m/s brakes to a stop in 5 s. What is the average braking force? (magnitude, in N)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['600', '8.1', '10000'],
+        correctAnswers: ['600', '8.1', '10000', '8.10'],
         hint1: '$F = \\Delta p / \\Delta t = m(v_f - v_i)/\\Delta t = (0.060)(50)/0.005$',
         hint2: 'Net upward force = $1200 - 735 = 465$ N. $\\Delta t = m|\\Delta v| / F_{\\text{net}} = 75(50)/465$',
         hint3: '$F = m|\\Delta v|/\\Delta t = (2000)(25)/5$',

@@ -67,15 +67,15 @@ $$E_a = \\frac{21.0}{0.000500} = 42{,}000 \\; \\text{J/mol} = 42.0 \\; \\text{kJ
 
 A reaction has $k = 2.0 \\times 10^{-3}$ s⁻¹ at 300 K and $k = 6.0 \\times 10^{-2}$ s⁻¹ at 400 K.
 
-1) Calculate $\\ln(k_2/k_1)$. (to 2 decimal places)
+1) Calculate $\\ln(k_2/k_1)$. (to 3 significant figures)
 
 2) Calculate $1/T_1 - 1/T_2$. (in K⁻¹, give as decimal: e.g., 0.000833)
 
-3) Calculate $E_a$ in kJ/mol. (to 1 decimal place)
+3) Calculate $E_a$ in kJ/mol. (to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['3.40', '0.000833', '33.9'],
+        correctAnswers: ['3.40', '0.000833', '33.9', '3.400', '3.4', '0.0008330', '33.90'],
         hint1: 'ln(6.0e-2 / 2.0e-3) = ln(30) = 3.401 ≈ 3.40.',
         hint2: '1/300 − 1/400 = 0.003333 − 0.002500 = 0.000833 K⁻¹.',
         hint3: 'Ea = (8.314 × 3.40)/0.000833 = 28.27/0.000833 = 33,935 J/mol = 33.9 kJ/mol.',
@@ -90,15 +90,15 @@ A reaction has $k = 2.0 \\times 10^{-3}$ s⁻¹ at 300 K and $k = 6.0 \\times 10
 
 A reaction has $E_a = 50.0$ kJ/mol and $k = 0.010$ s⁻¹ at 350 K.
 
-1) Calculate $k$ at 400 K. First find $\\ln(k_2/k_1)$. (to 2 decimal places)
+1) Calculate $k$ at 400 K. First find $\\ln(k_2/k_1)$. (to 3 significant figures)
 
-2) Now find $k_2$. (in s⁻¹, to 3 decimal places)
+2) Now find $k_2$. (in s⁻¹, to 3 significant figures)
 
-3) By what factor did k increase from 350 K to 400 K? (to 1 decimal place)
+3) By what factor did k increase from 350 K to 400 K? (to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['2.16', '0.087', '8.7'],
+        correctAnswers: ['2.16', '0.087', '8.7', '2.160', '0.0870', '8.70'],
         hint1: 'ln(k₂/k₁) = (Ea/R)(1/T₁ − 1/T₂) = (50,000/8.314)(1/350 − 1/400) = 6,014 × (2.857e-3 − 2.500e-3) = 6,014 × 3.57e-4 = 2.147 ≈ 2.16.',
         hint2: 'k₂/k₁ = e^2.16 = 8.67. k₂ = 0.010 × 8.67 = 0.0867 ≈ 0.087.',
         hint3: 'Factor = k₂/k₁ = 0.087/0.010 = 8.7.',

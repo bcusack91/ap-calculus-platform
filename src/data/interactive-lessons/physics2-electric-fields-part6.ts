@@ -145,10 +145,12 @@ Two parallel plates are separated by $d = 5.0$ mm. The top plate is at $+600$ V 
 1) Electric field between the plates (in V/m)
 2) Potential at the exact midpoint between the plates (in V)
 3) Force on a proton ($q = 1.6 \\times 10^{-19}$ C) between the plates (in N, use scientific notation: e.g., 1.92e-14)
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['120000', '300', '1.92e-14'],
+        correctAnswers: ['120000', '300', '1.92e-14', '0.0000000', '0.00000'],
         hint1: '$E = \\Delta V / d = 600 / 0.005$.',
         hint2: 'In a uniform field, potential varies linearly. Midpoint = average: $(600 + 0)/2$.',
         hint3: '$F = qE = (1.6 \\times 10^{-19})(120{,}000)$.',

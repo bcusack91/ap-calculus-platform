@@ -117,10 +117,12 @@ $$v = \\omega\\sqrt{A^2 - x^2} \\qquad v_{\\text{max}} = A\\omega$$
 2) A 0.20 kg block oscillates with $k = 80$ N/m and $A = 0.05$ m. What is the speed at $x = 0.03$ m? (in m)
 
 3) A damped oscillator starts with $A_0 = 0.30$ m and amplitude decreases to $0.15$ m. What fraction of the original energy remains? (as a decimal)
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.1', '0.8', '0.25'],
+        correctAnswers: ['0.1', '0.8', '0.25', '0.10', '0.80', '0.250'],
         hint1: '$E = \\frac{1}{2}kx^2 \\Rightarrow x = \\sqrt{2E/k}$',
         hint2: '$\\omega = \\sqrt{k/m} = \\sqrt{80/0.20}$. $v = \\omega\\sqrt{A^2 - x^2}$',
         hint3: '$E \\propto A^2$. $E_{\\text{final}}/E_{\\text{initial}} = (0.15/0.30)^2$',

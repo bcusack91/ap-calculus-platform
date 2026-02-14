@@ -116,10 +116,12 @@ Combined with $mg - T = ma$, you can solve for both $a$ and $T$.
 2) A wheel ($I = 2$ kg·m²) starts from rest and a constant torque of 6 N·m is applied for 4 seconds. What is the final angular velocity? (in rad/s)
 
 3) A disk ($I = 0.5$ kg·m²) decelerates from 40 rad/s to rest in 8 seconds. What is the magnitude of the braking torque? (in N·m)
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['20', '12', '2.5'],
+        correctAnswers: ['20', '12', '2.5', '2.50'],
         hint1: '$I = \\frac{1}{2}MR^2 = \\frac{1}{2}(8)(0.0625) = 0.25$ kg·m². $\\alpha = \\tau/I$',
         hint2: '$\\alpha = \\tau/I = 6/2 = 3$ rad/s². $\\omega = \\alpha t$',
         hint3: '$\\alpha = \\Delta\\omega/\\Delta t = 40/8 = 5$ rad/s². $\\tau = I\\alpha$',

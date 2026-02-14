@@ -160,11 +160,11 @@ Note: This gives $\\Delta E$ (internal energy), not $\\Delta H$, because the bom
 
 2) When 0.500 g of sugar ($\\text{C}_{12}\\text{H}_{22}\\text{O}_{11}$, molar mass = 342.3 g/mol) is burned in a bomb calorimeter ($C_{\\text{cal}} = 9.20$ kJ/°C), the temperature rises by 1.23°C. What is the energy released per mole? (in kJ/mol, round to nearest whole number, report as positive)
 
-3) A calibration experiment burns 1.000 g of benzoic acid (heat of combustion = 26.38 kJ/g) and the temperature rises by 2.55°C. What is $C_{\\text{cal}}$? (in kJ/°C, to 2 decimal places)
+3) A calibration experiment burns 1.000 g of benzoic acid (heat of combustion = 26.38 kJ/g) and the temperature rises by 2.55°C. What is $C_{\\text{cal}}$? (in kJ/°C, to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['-35.70', '7743', '10.34'],
+        correctAnswers: ['-35.70', '7743', '10.34', '-35.700', '-35.7', '10.340'],
         hint1: '$q_{\\text{rxn}} = -C_{\\text{cal}} \\Delta T = -(8.50)(4.20)$.',
         hint2: '$q_{\\text{rxn}} = -C_{\\text{cal}} \\Delta T$, then divide by moles. Moles = 0.500/342.3.',
         hint3: '$C_{\\text{cal}} = q/\\Delta T = (1.000 \\times 26.38)/2.55$.',

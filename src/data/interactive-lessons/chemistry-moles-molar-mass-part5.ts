@@ -127,15 +127,15 @@ A compound is 40.0% C, 6.7% H, and 53.3% O by mass. Its molar mass is 180.2 g/mo
 
 Use: H = 1.008, C = 12.01, N = 14.01, O = 16.00, P = 30.97
 
-1) A compound is 43.6% P and 56.4% O by mass. What is the mole ratio of P to O? Give as the number of O per 1 P (to 1 decimal place).
+1) A compound is 43.6% P and 56.4% O by mass. What is the mole ratio of P to O? Give as the number of O per 1 P (to 3 significant figures).
 
-2) The empirical formula from question 1 is P₂O₅. Calculate $M_{\\text{emp}}$ in g/mol. (to 2 decimal places)
+2) The empirical formula from question 1 is P₂O₅. Calculate $M_{\\text{emp}}$ in g/mol. (to 3 significant figures)
 
 3) If the molar mass of the compound is 283.88 g/mol, what is $n$ (the multiplier to get the molecular formula)? (whole number)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['2.5', '141.94', '2'],
+        correctAnswers: ['2.5', '141.94', '2', '2.50', '141.940'],
         hint1: 'Assume 100 g: 43.6 g P and 56.4 g O. Convert to moles: P: $43.6/30.97$, O: $56.4/16.00$. Divide O moles by P moles.',
         hint2: '$M_{\\text{P}_2\\text{O}_5} = 2(30.97) + 5(16.00)$.',
         hint3: '$n = M_{\\text{mol}}/M_{\\text{emp}} = 283.88/141.94$.',

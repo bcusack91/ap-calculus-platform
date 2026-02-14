@@ -116,7 +116,7 @@ $$390 = \\frac{1}{2}(12)v_f^2 \\Rightarrow v_f = \\sqrt{\\frac{780}{12}} = \\sqr
 
 Use $g = 10$ m/s². Use $\\cos(37°) = 0.8$, $\\sin(37°) = 0.6$.
 
-1) A 3 kg object moving at 4 m/s has a 15 N net force applied in the direction of motion for 2 m. What is the final speed (in m/s, to 1 decimal place)?
+1) A 3 kg object moving at 4 m/s has a 15 N net force applied in the direction of motion for 2 m. What is the final speed (in m/s, to 3 significant figures)?
 
 2) A 50 kg skier starts from rest and descends a slope, dropping 20 m vertically. At the bottom, their speed is 15 m/s. How much energy was lost to friction (in J)?
 
@@ -124,7 +124,7 @@ Use $g = 10$ m/s². Use $\\cos(37°) = 0.8$, $\\sin(37°) = 0.6$.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['6.0', '4375', '30'],
+        correctAnswers: ['6.0', '4375', '30', '6.00'],
         hint1: '$W_{\\text{net}} = 15 \\times 2 = 30$ J. $30 = \\frac{1}{2}(3)v_f^2 - \\frac{1}{2}(3)(16) \\Rightarrow v_f^2 = (30+24)/1.5$.',
         hint2: '$mgh = KE_f + E_{\\text{lost}}$. $50(10)(20) = \\frac{1}{2}(50)(225) + E_{\\text{lost}}$.',
         hint3: 'At maximum speed: $P = Fv \\Rightarrow v = P/F = 45{,}000/1500$.',

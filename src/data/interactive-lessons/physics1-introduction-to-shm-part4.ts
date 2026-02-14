@@ -121,15 +121,15 @@ Notice: when $|x|$ is maximum, $|a|$ is maximum and $v = 0$. When $x = 0$, $|v|$
 
 A mass oscillates with amplitude $A = 0.20$ m and period $T = 4.0$ s.
 
-1) What is the angular frequency $\\omega$? (in rad/s, round to 2 decimal places)
+1) What is the angular frequency $\\omega$? (in rad/s, round to 3 significant figures)
 
-2) What is the maximum speed $v_{\\text{max}} = A\\omega$? (in m/s, round to 2 decimal places)
+2) What is the maximum speed $v_{\\text{max}} = A\\omega$? (in m/s, round to 3 significant figures)
 
-3) What is the maximum acceleration $a_{\\text{max}} = A\\omega^2$? (in m/s², round to 2 decimal places)
+3) What is the maximum acceleration $a_{\\text{max}} = A\\omega^2$? (in m/s², round to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1.57', '0.31', '0.49'],
+        correctAnswers: ['1.57', '0.31', '0.49', '1.570', '0.310', '0.490'],
         hint1: '$\\omega = 2\\pi/T = 2\\pi/4.0$',
         hint2: '$v_{\\text{max}} = A\\omega = 0.20 \\times 1.57$',
         hint3: '$a_{\\text{max}} = A\\omega^2 = 0.20 \\times (1.57)^2$',

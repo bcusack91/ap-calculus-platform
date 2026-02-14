@@ -138,10 +138,12 @@ A closed-end manometer has mercury ($\\rho = 13{,}600$ kg/m³) with a height of 
 1) Gas pressure in Pa
 2) Gas pressure in atm (round to 2 decimals)
 3) Gas pressure in mmHg
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['68000', '0.67', '500'],
+        correctAnswers: ['68000', '0.67', '500', '0.670'],
         hint1: '$P = \\rho g h = (13{,}600)(10)(0.50)$.',
         hint2: 'Convert Pa to atm: divide by 101,325.',
         hint3: '0.50 m = 500 mm.',

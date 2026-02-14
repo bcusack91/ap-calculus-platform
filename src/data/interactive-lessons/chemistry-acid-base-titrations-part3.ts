@@ -163,7 +163,7 @@ Titrating 40.0 mL of 0.150 M $HCOOH$ ($pK_a = 3.75$) with 0.150 M $NaOH$:
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['40.0', '20.0', '3.75'],
+        correctAnswers: ['40.0', '20.0', '3.75', '40.00', '20.00', '3.750'],
         hint1: 'Equal concentrations → equal volumes for equivalence.',
         hint2: 'Half of the equivalence volume.',
         hint3: 'At half-equivalence: $pH = pK_a$.',

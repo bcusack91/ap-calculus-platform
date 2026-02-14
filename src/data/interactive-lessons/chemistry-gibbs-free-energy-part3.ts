@@ -129,10 +129,12 @@ $\\text{CO}_2(g) = -394.4$, $\\text{H}_2\\text{O}(l) = -237.1$, $\\text{C}_2\\te
 1) Calculate $\\Delta G°$ for: $\\text{C}_2\\text{H}_6(g) + \\frac{7}{2}\\text{O}_2(g) \\rightarrow 2\\text{CO}_2(g) + 3\\text{H}_2\\text{O}(l)$ (in kJ, to 1 decimal)
 
 2) Is this reaction spontaneous under standard conditions? (type "yes" or "no")
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 2,
-        correctAnswers: ['-1468.1', 'yes'],
+        correctAnswers: ['-1468.1', 'yes', '-1468.10'],
         hint1: '$[2(-394.4) + 3(-237.1)] - [(-32.0) + 0]$',
         hint2: 'Is $\\Delta G° < 0$?',
         explanation: '1) $\\Delta G° = [2(-394.4) + 3(-237.1)] - [-32.0] = [-788.8 - 711.3] - [-32.0] = -1500.1 + 32.0 = -1468.1$ kJ. 2) Yes — $\\Delta G° < 0$, so the reaction is spontaneous under standard conditions.'

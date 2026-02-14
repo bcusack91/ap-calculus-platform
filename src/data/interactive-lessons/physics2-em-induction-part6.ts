@@ -174,10 +174,12 @@ An RL circuit has $L = 0.2$ H and $R = 10\\;\\Omega$, connected to a 20 V batter
 1) Time constant $\\tau$ (in s)
 2) Maximum (steady-state) current (in A)
 3) Energy stored in the inductor at steady state (in J)
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.02', '2', '0.4'],
+        correctAnswers: ['0.02', '2', '0.4', '0.020', '0.40'],
         hint1: '$\\tau = L/R = 0.2/10$.',
         hint2: '$I_{\\max} = \\varepsilon_0/R = 20/10$.',
         hint3: '$U = \\frac{1}{2}LI^2 = \\frac{1}{2}(0.2)(2)^2$.',

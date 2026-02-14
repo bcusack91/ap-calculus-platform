@@ -151,15 +151,15 @@ Initial: $[\\text{A}] = 1.00$ M, $[\\text{B}] = [\\text{C}] = 0$
 
 $$0.25 = \\frac{x \\cdot x}{1.00 - x} = \\frac{x^2}{1.00 - x}$$
 
-1) Rearrange to standard quadratic form: $x^2 + 0.25x - 0.25 = 0$. Using the quadratic formula, $x = ?$ (Round to 2 decimal places)
+1) Rearrange to standard quadratic form: $x^2 + 0.25x - 0.25 = 0$. Using the quadratic formula, $x = ?$ (Round to 3 significant figures)
 
-2) What is $[\\text{A}]$ at equilibrium? (Round to 2 decimal places)
+2) What is $[\\text{A}]$ at equilibrium? (Round to 3 significant figures)
 
-3) What is $[\\text{B}]$ at equilibrium? (Round to 2 decimal places)
+3) What is $[\\text{B}]$ at equilibrium? (Round to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.39', '0.61', '0.39'],
+        correctAnswers: ['0.39', '0.61', '0.39', '0.390', '0.610'],
         hint1: '$x = \\frac{-0.25 + \\sqrt{0.0625 + 1.00}}{2} = \\frac{-0.25 + \\sqrt{1.0625}}{2} = \\frac{-0.25 + 1.031}{2}$',
         hint2: '$[\\text{A}] = 1.00 - x = 1.00 - 0.39 = 0.61$',
         hint3: '$[\\text{B}] = x = 0.39$',

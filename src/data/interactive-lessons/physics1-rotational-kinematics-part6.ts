@@ -81,15 +81,15 @@ Let's apply all the rotational kinematics tools to solve challenging problems sy
       content: `
 **Comprehensive Calculations** 🧮
 
-1) A CD player accelerates a disc from rest to $50$ rad/s in $2$ seconds. How many revolutions does it make? (Round to 1 decimal place)
+1) A CD player accelerates a disc from rest to $50$ rad/s in $2$ seconds. How many revolutions does it make? (Round to 3 significant figures)
 
 2) A solid cylinder (mass 5 kg, radius 0.2 m) rolls without slipping at 4 m/s. What is its angular velocity? (in rad/s)
 
-3) A fan blade decelerates from $\\omega_0 = 80$ rad/s to $\\omega = 20$ rad/s while making 50 revolutions. What is the angular acceleration? (in rad/s², round to 1 decimal place. Include the negative sign)
+3) A fan blade decelerates from $\\omega_0 = 80$ rad/s to $\\omega = 20$ rad/s while making 50 revolutions. What is the angular acceleration? (in rad/s², round to 3 significant figures. Include the negative sign)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['8.0', '20', '-9.5'],
+        correctAnswers: ['8.0', '20', '-9.5', '8.00', '-9.50'],
         hint1: '$\\theta = \\frac{1}{2}(\\omega_0 + \\omega)t = \\frac{1}{2}(0 + 50)(2) = 50$ rad. Rev $= 50/(2\\pi)$',
         hint2: '$\\omega = v/R = 4/0.2$',
         hint3: '$\\omega^2 = \\omega_0^2 + 2\\alpha\\theta$. $\\theta = 50 \\times 2\\pi = 100\\pi$ rad.',

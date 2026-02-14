@@ -108,10 +108,12 @@ You've learned about current, resistance, resistivity, Ohm's Law, power, and rea
 3) What is the terminal voltage of the battery in #2? (in V)
 
 4) A 1200 W hair dryer runs on 120 V for 15 minutes. How much energy does it use? (in kJ)
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 4,
-        correctAnswers: ['11.2', '2.0', '11.2', '1080'],
+        correctAnswers: ['11.2', '2.0', '11.2', '1080', '11.20', '2.00'],
         hint1: '$A = \\pi(d/2)^2 = \\pi(2.5 \\times 10^{-4})^2 = 1.96 \\times 10^{-7}$ m². $R = \\rho L/A$.',
         hint2: '$I = \\varepsilon/(R + r) = 12/(5.6 + 0.4)$.',
         hint3: '$V = \\varepsilon - Ir = 12 - (2.0)(0.40)$.',

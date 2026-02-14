@@ -92,10 +92,12 @@ Use: $c_w = 4{,}186$ J/(kg·°C), $c_{\\text{ice}} = 2{,}090$ J/(kg·°C), $L_f 
 2) 0.050 kg of ice at $-10$°C is placed in 0.200 kg of water at 30°C. Find the final temperature (in °C, round to 1 decimal).
 
 3) What mass of steam at 100°C must be condensed to provide enough energy to melt 2.00 kg of ice at 0°C? (in kg, round to 2 decimals)
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1256', '7.0', '0.30'],
+        correctAnswers: ['1256', '7.0', '0.30', '7.00', '0.300', '0.3'],
         hint1: 'Condensation: $Q_1 = mL_v$. Cooling: $Q_2 = mc_w\\Delta T$. Sum and convert to kJ.',
         hint2: 'Check if all ice melts: compare energy available $= (0.200)(4186)(30)$ with energy needed $= (0.050)(2090)(10) + (0.050)(334{,}000)$. Then set $\\sum Q = 0$.',
         hint3: 'Steam condensing releases $mL_v$. Set equal to $(2.00)(334{,}000)$ and solve for $m$.',

@@ -152,15 +152,15 @@ above the $x$-axis.
 
 A 5 kg ball at 6 m/s ($+x$) and a 3 kg ball at 4 m/s ($+y$) collide and stick together.
 
-1) What is $v_{fx}$? (in m/s, to 2 decimal places)
+1) What is $v_{fx}$? (in m/s, to 3 significant figures)
 
 2) What is $v_{fy}$? (in m/s)
 
-3) What is the final speed? (in m/s, to 2 decimal places)
+3) What is the final speed? (in m/s, to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['3.75', '1.5', '4.04'],
+        correctAnswers: ['3.75', '1.5', '4.04', '3.750', '1.50', '4.040'],
         hint1: '$v_{fx} = (5 \\times 6 + 3 \\times 0)/(5+3) = 30/8$',
         hint2: '$v_{fy} = (5 \\times 0 + 3 \\times 4)/(5+3) = 12/8$',
         hint3: '$v_f = \\sqrt{3.75^2 + 1.5^2}$',

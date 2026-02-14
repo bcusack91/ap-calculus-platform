@@ -115,15 +115,15 @@ Note: KE is NOT conserved (this is an inelastic rotational "collision").
       content: `
 **Conservation Calculations** 🧮
 
-1) A turntable ($I = 0.5$ kg·m²) spins at 8 rad/s. A 2 kg block of clay ($I = mr^2$, $r = 0.3$ m) is dropped on it. What is the final $\\omega$? (in rad/s, round to 2 decimal places)
+1) A turntable ($I = 0.5$ kg·m²) spins at 8 rad/s. A 2 kg block of clay ($I = mr^2$, $r = 0.3$ m) is dropped on it. What is the final $\\omega$? (in rad/s, round to 3 significant figures)
 
 2) A skater with $I = 4$ kg·m² and $\\omega = 6$ rad/s pulls in her arms to $I = 1.5$ kg·m². What is her new $\\omega$? (in rad/s)
 
-3) In problem 2, by what factor does her KE increase? (round to 1 decimal place)
+3) In problem 2, by what factor does her KE increase? (round to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['5.97', '16', '2.7'],
+        correctAnswers: ['5.97', '16', '2.7', '5.970', '2.70'],
         hint1: '$I_{\\text{clay}} = mr^2 = 2(0.09) = 0.18$ kg·m². $(0.5)(8) = (0.5 + 0.18)\\omega_f$',
         hint2: '$(4)(6) = (1.5)\\omega_f$',
         hint3: '$KE_f/KE_i = I_i/I_f = 4/1.5$',

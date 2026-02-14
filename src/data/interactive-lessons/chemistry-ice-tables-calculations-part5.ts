@@ -139,15 +139,15 @@ The equation is: $4x^2 + 0.36x - 0.18 = 0$
 
 Using the quadratic formula:
 
-1) What is the discriminant $b^2 - 4ac$? (Enter to 4 decimal places)
+1) What is the discriminant $b^2 - 4ac$? (Enter to 3 significant figures)
 
-2) What is $x$? (Round to 2 decimal places)
+2) What is $x$? (Round to 3 significant figures)
 
-3) What is $[\\text{NO}_2]$ at equilibrium? (Round to 2 decimal places)
+3) What is $[\\text{NO}_2]$ at equilibrium? (Round to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['3.0096', '0.19', '0.38'],
+        correctAnswers: ['3.0096', '0.19', '0.38', '3.00960', '0.190', '0.380'],
         hint1: '$b^2 - 4ac = (0.36)^2 - 4(4)(-0.18) = 0.1296 + 2.88$',
         hint2: '$x = \\frac{-0.36 + \\sqrt{3.0096}}{8} = \\frac{-0.36 + 1.735}{8}$',
         hint3: '$[\\text{NO}_2] = 2x$',

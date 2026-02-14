@@ -118,11 +118,11 @@ Notice: H₂O has a large $a$ (strong H-bonds) but small $b$ (small molecule). H
       content: `
 **AP-Style Calculation Practice** 🧮
 
-1) 0.500 mol of an ideal gas at 1.00 atm and 273 K occupies what volume? (in L, to 1 decimal place)
+1) 0.500 mol of an ideal gas at 1.00 atm and 273 K occupies what volume? (in L, to 3 significant figures)
 
-2) A real gas has $a = 3.59$ L²·atm/mol² and $b = 0.043$ L/mol. For 1.00 mol in a 0.500 L container at 500 K, calculate the ideal gas pressure first: $P_{\\text{ideal}} = nRT/V$. (in atm, to 1 decimal place)
+2) A real gas has $a = 3.59$ L²·atm/mol² and $b = 0.043$ L/mol. For 1.00 mol in a 0.500 L container at 500 K, calculate the ideal gas pressure first: $P_{\\text{ideal}} = nRT/V$. (in atm, to 3 significant figures)
 
-3) What is the corrected van der Waals pressure for the same gas? Use $P = nRT/(V-nb) - an^2/V^2$. (in atm, to 1 decimal place)
+3) What is the corrected van der Waals pressure for the same gas? Use $P = nRT/(V-nb) - an^2/V^2$. (in atm, to 3 significant figures)
       `,
       exercise: {
         inputs: [

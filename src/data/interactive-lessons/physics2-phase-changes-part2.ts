@@ -127,10 +127,12 @@ Use: $L_f = 334{,}000$ J/kg, $L_v = 2{,}260{,}000$ J/kg for water.
 1) Energy needed to melt 0.50 kg of ice at 0°C (in kJ)
 2) Energy released when 3.0 kg of steam at 100°C condenses to water at 100°C (in MJ)
 3) Mass of ice at 0°C that can be melted by 1.00 MJ of energy (in kg)
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['167', '6.78', '2.99'],
+        correctAnswers: ['167', '6.78', '2.99', '6.780', '2.990'],
         hint1: '$Q = mL_f = (0.50)(334{,}000)$. Convert J to kJ by dividing by 1000.',
         hint2: '$Q = mL_v = (3.0)(2{,}260{,}000)$. Convert J to MJ by dividing by $10^6$.',
         hint3: '$m = Q/L_f = 1{,}000{,}000 / 334{,}000$.',

@@ -129,10 +129,12 @@ $K_{sp} = (s)(0.050 + s) \\approx (s)(0.050)$
 2) What is the molar solubility in pure water? (Enter in scientific notation, e.g. 1.0e-5)
 
 3) By what factor did the common ion reduce solubility? (Enter as a whole number, approximately)
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['2.2e-9', '1.0e-5', '5000'],
+        correctAnswers: ['2.2e-9', '1.0e-5', '5000', '0.00000', '0.00001'],
         hint1: '$s = K_{sp}/0.050 = 1.1 \\times 10^{-10}/0.050$',
         hint2: 'In pure water: $s = \\sqrt{K_{sp}} = \\sqrt{1.1 \\times 10^{-10}}$',
         hint3: 'Factor = $s_{\\text{pure}}/s_{\\text{common ion}}$',

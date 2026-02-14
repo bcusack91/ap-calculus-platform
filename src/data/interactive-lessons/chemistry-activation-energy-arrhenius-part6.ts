@@ -193,7 +193,7 @@ If a substance binds strongly to active sites and cannot be removed, the catalys
 
 An uncatalyzed reaction has $E_a = 120$ kJ/mol and $k = 1.0 \\times 10^{-10}$ s⁻¹ at 300 K.
 
-1) A catalyst lowers $E_a$ to 80 kJ/mol. What is the ratio $k_{\\text{cat}}/k_{\\text{uncat}}$ at 300 K? Use $\\ln(k_{\\text{cat}}/k_{\\text{uncat}}) = (E_{a,\\text{uncat}} - E_{a,\\text{cat}})/(RT)$. Calculate this exponent first. (to 1 decimal place)
+1) A catalyst lowers $E_a$ to 80 kJ/mol. What is the ratio $k_{\\text{cat}}/k_{\\text{uncat}}$ at 300 K? Use $\\ln(k_{\\text{cat}}/k_{\\text{uncat}}) = (E_{a,\\text{uncat}} - E_{a,\\text{cat}})/(RT)$. Calculate this exponent first. (to 3 significant figures)
 
 2) The catalyzed $k$ is approximately how many times larger? Express as a power of 10. (integer)
 
@@ -201,7 +201,7 @@ An uncatalyzed reaction has $E_a = 120$ kJ/mol and $k = 1.0 \\times 10^{-10}$ s�
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['16.1', '7', '693'],
+        correctAnswers: ['16.1', '7', '693', '16.10'],
         hint1: '(120,000 − 80,000)/(8.314 × 300) = 40,000/2494 = 16.04 ≈ 16.1.',
         hint2: 'e^16.1 ≈ 9.7 × 10⁶ ≈ 10⁷. Power of 10 = 7.',
         hint3: 't₁/₂ = 0.693/(1.0 × 10⁻³) = 693 s.',

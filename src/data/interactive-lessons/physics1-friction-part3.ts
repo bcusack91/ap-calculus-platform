@@ -169,10 +169,12 @@ $$\\Delta x = 144/5.88 = 24.5 \\text{ m}$$
 2) The block from #1 has an initial speed of 10 m/s. How far does it slide before stopping (in m)?
 
 3) A 12 kg box is pushed with 80 N across a rough floor ($\\mu_k = 0.30$). What is the acceleration (in m/s²)?
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['4', '12.5', '3.67'],
+        correctAnswers: ['4', '12.5', '3.67', '12.50', '3.670'],
         hint1: '$a = \\mu_k g = 0.40 \\times 10$.',
         hint2: '$v^2 = v_0^2 + 2a\\Delta x$. $0 = 100 + 2(-4)\\Delta x$.',
         hint3: '$a = (F - \\mu_k mg)/m = (80 - 0.30 \\times 120)/12$.',

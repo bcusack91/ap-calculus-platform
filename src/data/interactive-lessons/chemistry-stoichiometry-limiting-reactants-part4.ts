@@ -147,15 +147,15 @@ This means 75% of the theoretical product was actually recovered. The remaining 
       content: `
 **Percent Yield Calculations** 🧮
 
-1) Theoretical yield = 80.0 g, actual yield = 68.0 g. Percent yield = ? (to 1 decimal place)
+1) Theoretical yield = 80.0 g, actual yield = 68.0 g. Percent yield = ? (to 3 significant figures)
 
-2) A student calculates a theoretical yield of 120.0 g and achieves 92% yield. What mass of product was obtained? (to 1 decimal place)
+2) A student calculates a theoretical yield of 120.0 g and achieves 92% yield. What mass of product was obtained? (to 3 significant figures)
 
-3) A reaction produces 35.0 g of product. If the percent yield is 70.0%, what was the theoretical yield? (to 1 decimal place)
+3) A reaction produces 35.0 g of product. If the percent yield is 70.0%, what was the theoretical yield? (to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['85.0', '110.4', '50.0'],
+        correctAnswers: ['85.0', '110.4', '50.0', '85.00', '110.40', '50.00'],
         hint1: '$\\% \\text{ yield} = (68.0/80.0) \\times 100$.',
         hint2: 'Actual = theoretical × (% yield / 100) = 120.0 × 0.92.',
         hint3: 'Theoretical = actual / (% yield / 100) = 35.0 / 0.70.',

@@ -103,10 +103,12 @@ A U-tube has water ($\\rho = 1000$ kg/m³) in the left arm and oil (SG = 0.80) i
 1) Density of the oil (in kg/m³)
 2) Height of oil above the interface (in m)
 3) Difference in surface levels — which is higher and by how much? (oil surface height − water surface height, in m)
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['800', '0.25', '0.05'],
+        correctAnswers: ['800', '0.25', '0.05', '0.250', '0.050'],
         hint1: '$\\rho_{\\text{oil}} = \\text{SG} \\times 1000 = 0.80 \\times 1000$.',
         hint2: 'At the interface, pressures must be equal: $\\rho_w g h_w = \\rho_{\\text{oil}} g h_{\\text{oil}}$. Solve for $h_{\\text{oil}}$.',
         hint3: 'Oil column is 0.25 m, water column is 0.20 m. Oil surface is $0.25 - 0.20 = 0.05$ m higher.',

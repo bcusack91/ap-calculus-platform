@@ -138,11 +138,11 @@ A 0.25 kg iron block ($c = 450$ J/(kg·°C)) at 350°C is dropped into 0.80 kg o
 
 2) Heat capacity (thermal mass) of the water, $mc$, in J/°C (round to nearest whole number)
 
-3) Final equilibrium temperature in °C (round to 1 decimal place)
+3) Final equilibrium temperature in °C (round to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['113', '3349', '25.9'],
+        correctAnswers: ['113', '3349', '25.9', '25.90'],
         hint1: '$mc_{\\text{Fe}} = (0.25)(450)$.',
         hint2: '$mc_w = (0.80)(4{,}186)$.',
         hint3: '$113(T_f - 350) + 3{,}349(T_f - 15) = 0$. Expand and solve for $T_f$.',

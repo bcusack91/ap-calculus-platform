@@ -191,15 +191,15 @@ For AP calculations, use the **theoretical** (ideal) $i$ unless told otherwise.
 
 Use: $K_b = 0.512$ °C/m, $K_f = 1.86$ °C/m for water.
 
-1) Calculate the boiling point (in °C) of a solution containing 0.300 mol of KBr ($i = 2$) in 500.0 g of water. (to 2 decimal places)
+1) Calculate the boiling point (in °C) of a solution containing 0.300 mol of KBr ($i = 2$) in 500.0 g of water. (to 3 significant figures)
 
-2) Calculate the freezing point (in °C) of a solution of 58.44 g of NaCl ($M = 58.44$ g/mol, $i = 2$) in 2.00 kg of water. (to 2 decimal places)
+2) Calculate the freezing point (in °C) of a solution of 58.44 g of NaCl ($M = 58.44$ g/mol, $i = 2$) in 2.00 kg of water. (to 3 significant figures)
 
-3) An antifreeze solution is 2.50 m ethylene glycol ($i = 1$). What is its freezing point in °C? (to 2 decimal places)
+3) An antifreeze solution is 2.50 m ethylene glycol ($i = 1$). What is its freezing point in °C? (to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['100.61', '-1.86', '-4.65'],
+        correctAnswers: ['100.61', '-1.86', '-4.65', '100.610', '-1.860', '-4.650'],
         hint1: '$m = 0.300/0.500 = 0.600$ m. $\\Delta T_b = iK_bm = 2(0.512)(0.600)$. Add to 100.00.',
         hint2: '$n = 58.44/58.44 = 1.00$ mol. $m = 1.00/2.00 = 0.500$ m. $\\Delta T_f = 2(1.86)(0.500)$. Subtract from 0.00.',
         hint3: '$\\Delta T_f = 1(1.86)(2.50) = 4.65$ °C. $T_f = 0.00 - 4.65$.',

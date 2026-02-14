@@ -117,10 +117,12 @@ A sprinkler system has one main pipe (radius 2.0 cm, speed 3.0 m/s) that feeds 8
 1) Total flow rate in the main pipe (in L/s)
 2) Flow rate per sprinkler (in L/s)
 3) If each sprinkler head has radius 0.30 cm, the exit speed at each head (in m/s)
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['3.77', '0.471', '16.7'],
+        correctAnswers: ['3.77', '0.471', '16.7', '3.770', '0.4710', '16.70'],
         hint1: '$Q = \\pi r^2 v = \\pi(0.02)^2(3.0)$. Convert to L/s.',
         hint2: '$Q_{\\text{each}} = Q_{\\text{total}}/8$.',
         hint3: '$v = Q_{\\text{each}} / (\\pi r_{\\text{head}}^2)$. Watch units!',

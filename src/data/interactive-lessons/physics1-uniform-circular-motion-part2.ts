@@ -106,13 +106,13 @@ $$a_c = 4\\pi^2 r f^2$$
 
 1) A car rounds a curve of radius 50 m at 20 m/s. What is the centripetal acceleration (in m/s²)?
 
-2) A record player rotates at 45 RPM. A coin is placed 10 cm from the center. What is the centripetal acceleration of the coin (in m/s², round to 1 decimal place)?
+2) A record player rotates at 45 RPM. A coin is placed 10 cm from the center. What is the centripetal acceleration of the coin (in m/s², round to 3 significant figures)?
 
 3) A ball on a string moves in a circle at $v = 6$ m/s with $a_c = 18$ m/s². What is the radius of the circle (in m)?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['8', '22.2', '2'],
+        correctAnswers: ['8', '22.2', '2', '22.20'],
         hint1: '$a_c = v^2/r = 400/50$.',
         hint2: 'Convert 45 RPM to Hz: $f = 45/60 = 0.75$ Hz. Then $a_c = 4\\pi^2 rf^2$.',
         hint3: '$r = v^2/a_c$.',

@@ -143,10 +143,12 @@ Two converging lenses are 55 cm apart. Lens 1: $f_1 = 15$ cm. Lens 2: $f_2 = 10$
 2) Object distance for lens 2: $d_{o2}$ (in cm)
 3) Image distance from lens 2: $d_{i2}$ (in cm, round to 1 decimal)
 4) Total magnification $m_{\\text{total}}$ (round to 2 decimals)
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 4,
-        correctAnswers: ['30', '25', '16.7', '0.67'],
+        correctAnswers: ['30', '25', '16.7', '0.67', '16.70', '0.670'],
         hint1: '$\\frac{1}{d_{i1}} = \\frac{1}{15} - \\frac{1}{30} = \\frac{2-1}{30} = \\frac{1}{30}$, so $d_{i1} = 30$ cm.',
         hint2: '$d_{o2} = L - d_{i1} = 55 - 30 = 25$ cm.',
         hint3: '$\\frac{1}{d_{i2}} = \\frac{1}{10} - \\frac{1}{25} = \\frac{5-2}{50} = \\frac{3}{50}$, so $d_{i2} = 50/3 \\approx 16.7$ cm. $m_1 = -30/30 = -1$, $m_2 = -16.7/25 \\approx -0.67$, $m_{\\text{total}} = (-1)(-0.67) = +0.67$.',

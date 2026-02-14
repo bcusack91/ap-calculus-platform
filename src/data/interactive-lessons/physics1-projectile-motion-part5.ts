@@ -119,10 +119,12 @@ A ball is launched from the ground at 20 m/s at 30° above horizontal. Use $g = 
 3) Speed at maximum height (in m/s, round to 1 decimal)
 
 4) $v_y$ at landing (in m/s, include sign)
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 4,
-        correctAnswers: ['1', '5', '17.3', '-10'],
+        correctAnswers: ['1', '5', '17.3', '-10', '17.30'],
         hint1: '$v_{0y} = 20(0.5) = 10$ m/s. $t_{up} = v_{0y}/g = 10/10$',
         hint2: '$h = v_{0y}^2/(2g) = 100/20$',
         hint3: 'At max height, $v = v_{0x} = 20\\cos 30° = 20(0.866)$. At landing, $v_y = -v_{0y}$.',

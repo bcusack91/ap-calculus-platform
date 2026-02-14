@@ -109,15 +109,15 @@ Sometimes **two or more forces** combine to provide centripetal force:
 
 Use $g = 10$ m/s².
 
-1) A 1200 kg car rounds a flat curve of radius 80 m. If $\\mu_s = 0.6$, what is the maximum speed before the car skids (in m/s, round to 1 decimal place)?
+1) A 1200 kg car rounds a flat curve of radius 80 m. If $\\mu_s = 0.6$, what is the maximum speed before the car skids (in m/s, round to 3 significant figures)?
 
 2) A 0.2 kg ball on a 0.5 m string moves in a horizontal circle. If the tension in the string is 10 N, what is the ball's speed (in m/s)?
 
-3) A coin on a turntable sits 0.15 m from the center. If $\\mu_s = 0.4$, what is the maximum rotation frequency before the coin slides (in Hz, round to 2 decimal places)?
+3) A coin on a turntable sits 0.15 m from the center. If $\\mu_s = 0.4$, what is the maximum rotation frequency before the coin slides (in Hz, round to 3 significant figures)?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['21.9', '5', '0.82'],
+        correctAnswers: ['21.9', '5', '0.82', '21.90', '0.820'],
         hint1: '$\\mu_s mg = mv^2/r \\Rightarrow v = \\sqrt{\\mu_s g r}$.',
         hint2: '$T = mv^2/r \\Rightarrow v = \\sqrt{Tr/m}$.',
         hint3: '$\\mu_s mg = m(4\\pi^2 rf^2) \\Rightarrow f = \\sqrt{\\mu_s g/(4\\pi^2 r)}$.',

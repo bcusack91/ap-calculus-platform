@@ -144,15 +144,15 @@ Where $n$ = moles of electrons transferred, $F$ = Faraday\'s constant (96,485 C/
 
 Use the reduction potentials: Ag⁺/Ag = +0.80 V, Fe²⁺/Fe = −0.45 V, Cu²⁺/Cu = +0.34 V
 
-1) Calculate $E^\\circ_{\\text{cell}}$ for Fe | Fe²⁺ || Ag⁺ | Ag (in V, to 2 decimal places)
+1) Calculate $E^\\circ_{\\text{cell}}$ for Fe | Fe²⁺ || Ag⁺ | Ag (in V, to 3 significant figures)
 
-2) Calculate $E^\\circ_{\\text{cell}}$ for Fe | Fe²⁺ || Cu²⁺ | Cu (in V, to 2 decimal places)
+2) Calculate $E^\\circ_{\\text{cell}}$ for Fe | Fe²⁺ || Cu²⁺ | Cu (in V, to 3 significant figures)
 
 3) Is the cell Cu | Cu²⁺ || Fe²⁺ | Fe spontaneous? Type **yes** or **no**.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1.25', '0.79', 'no'],
+        correctAnswers: ['1.25', '0.79', 'no', '1.250', '0.790'],
         hint1: '$E^\\circ_{\\text{cell}} = E^\\circ_{\\text{cathode}} - E^\\circ_{\\text{anode}} = 0.80 - (-0.45)$',
         hint2: '$E^\\circ_{\\text{cell}} = 0.34 - (-0.45)$',
         hint3: 'Cu is the anode, Fe is the cathode. $E^\\circ = (-0.45) - (0.34) = ?$ Is it positive?',

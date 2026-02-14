@@ -139,13 +139,13 @@ If water behaved like a "normal" liquid (contracting all the way to freezing), l
 
 1) A steel container holds 50.0 L of gasoline at 10°C. How much gasoline (in mL) overflows when heated to 35°C? Use $\\beta_{\\text{gas}} = 950 \\times 10^{-6}$ /°C and $\\beta_{\\text{steel}} = 36 \\times 10^{-6}$ /°C. (Answer = ΔV_gas − ΔV_tank)
 
-2) A glass flask ($\\beta = 27 \\times 10^{-6}$ /°C) has a volume of 200.0 cm³ at 20°C. Find its volume increase $\\Delta V$ (in cm³) when heated to 120°C. Round to 2 decimal places.
+2) A glass flask ($\\beta = 27 \\times 10^{-6}$ /°C) has a volume of 200.0 cm³ at 20°C. Find its volume increase $\\Delta V$ (in cm³) when heated to 120°C. Round to 3 significant figures.
 
-3) An aluminum cube ($\\alpha = 23 \\times 10^{-6}$ /°C) has a side of 10.0 cm at 20°C. Find the increase in its volume $\\Delta V$ (in cm³) when heated to 220°C. Use $\\beta = 3\\alpha$. Round to 1 decimal place.
+3) An aluminum cube ($\\alpha = 23 \\times 10^{-6}$ /°C) has a side of 10.0 cm at 20°C. Find the increase in its volume $\\Delta V$ (in cm³) when heated to 220°C. Use $\\beta = 3\\alpha$. Round to 3 significant figures.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1143', '0.54', '13.8'],
+        correctAnswers: ['1143', '0.54', '13.8', '0.540', '13.80'],
         hint1: '$\\Delta V_{\\text{overflow}} = (\\beta_{\\text{gas}} - \\beta_{\\text{steel}}) V_0 \\Delta T = (950 - 36) \\times 10^{-6} \\times 50.0 \\times 25$. Convert L to mL.',
         hint2: '$\\Delta V = \\beta V_0 \\Delta T = (27 \\times 10^{-6})(200.0)(100)$.',
         hint3: '$V_0 = (10.0)^3 = 1000$ cm³. $\\beta = 3(23 \\times 10^{-6}) = 69 \\times 10^{-6}$. $\\Delta V = (69 \\times 10^{-6})(1000)(200)$.',

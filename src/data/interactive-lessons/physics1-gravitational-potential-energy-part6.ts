@@ -116,11 +116,11 @@ Use $g = 10$ m/s².
 
 2) A 0.5 kg ball is thrown upward at 12 m/s from a 10 m tall building. What is its speed when it reaches a height of 17.2 m above the ground (in m/s)?
 
-3) A ball is released from rest on a frictionless track at height $h$. It passes through a valley and up to height $0.6h$. What is its speed at $0.6h$ in terms of $h$? Compute the numerical coefficient: $v = \\sqrt{? \\cdot h}$ (answer the coefficient to 1 decimal place, using $g = 10$ m/s²)
+3) A ball is released from rest on a frictionless track at height $h$. It passes through a valley and up to height $0.6h$. What is its speed at $0.6h$ in terms of $h$? Compute the numerical coefficient: $v = \\sqrt{? \\cdot h}$ (answer the coefficient to 3 significant figures, using $g = 10$ m/s²)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['200', '4', '8.0'],
+        correctAnswers: ['200', '4', '8.0', '8.00'],
         hint1: '$E_{\\text{lost}}/m = g(h_i - h_f) - \\frac{1}{2}v_f^2 = 10(50-10) - \\frac{1}{2}(400)$.',
         hint2: '$\\frac{1}{2}(0.5)(144) + 0.5(10)(10) = \\frac{1}{2}(0.5)v^2 + 0.5(10)(17.2)$.',
         hint3: '$mgh = \\frac{1}{2}mv^2 + mg(0.6h) \\Rightarrow g(0.4h) = \\frac{1}{2}v^2 \\Rightarrow v^2 = 2g(0.4h) = 0.8gh$.',

@@ -119,15 +119,15 @@ Or using percent composition: $\\%\\text{Ca} = 40.08/100.09 \\times 100 = 40.04\
 
 Use: H = 1.008, C = 12.01, N = 14.01, O = 16.00, Na = 22.99, Cl = 35.45, Fe = 55.85
 
-1) How many grams of iron (Fe) contain the same number of atoms as 12.01 g of carbon (C)? (to 2 decimal places)
+1) How many grams of iron (Fe) contain the same number of atoms as 12.01 g of carbon (C)? (to 3 significant figures)
 
-2) A chemist has 25.0 g of NaCl ($M = 58.44$). How many chloride ions ($\\text{Cl}^-$) are present? Express as $a \\times 10^{23}$ — enter $a$ (to 2 decimal places).
+2) A chemist has 25.0 g of NaCl ($M = 58.44$). How many chloride ions ($\\text{Cl}^-$) are present? Express as $a \\times 10^{23}$ — enter $a$ (to 3 significant figures).
 
-3) How many hydrogen atoms are in 36.04 g of water ($M_{\\text{H}_2\\text{O}} = 18.02$)? Express as $a \\times 10^{24}$ — enter $a$ (to 3 decimal places).
+3) How many hydrogen atoms are in 36.04 g of water ($M_{\\text{H}_2\\text{O}} = 18.02$)? Express as $a \\times 10^{24}$ — enter $a$ (to 3 significant figures).
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['55.85', '2.57', '2.409'],
+        correctAnswers: ['55.85', '2.57', '2.409', '55.850', '2.570', '2.4090'],
         hint1: '12.01 g of C = 1.000 mol of C. You need 1.000 mol of Fe.',
         hint2: 'Moles of NaCl = $25.0/58.44$. Each formula unit has 1 Cl⁻, so multiply moles by $N_A$.',
         hint3: 'Moles of H₂O = $36.04/18.02 = 2.00$ mol. Each molecule has 2 H atoms.',

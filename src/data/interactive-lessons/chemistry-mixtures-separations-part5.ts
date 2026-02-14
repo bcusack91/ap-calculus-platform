@@ -153,11 +153,11 @@ Sometimes the analyte reacts slowly or doesn\'t have a clear endpoint. In a **ba
       content: `
 **Analytical Calculations** 🧮
 
-1) In a gravimetric analysis, 1.000 g of a sample produces 0.466 g of BaSO₄ ($M = 233.43$ g/mol). How many moles of SO₄²⁻ were in the sample? (to 4 decimal places)
+1) In a gravimetric analysis, 1.000 g of a sample produces 0.466 g of BaSO₄ ($M = 233.43$ g/mol). How many moles of SO₄²⁻ were in the sample? (to 3 significant figures)
 
-2) 20.0 mL of unknown H₂SO₄ is titrated with 0.150 M NaOH. It takes 40.0 mL to reach equivalence. The reaction is H₂SO₄ + 2NaOH → Na₂SO₄ + 2H₂O. What is the molarity of H₂SO₄? (to 3 decimal places)
+2) 20.0 mL of unknown H₂SO₄ is titrated with 0.150 M NaOH. It takes 40.0 mL to reach equivalence. The reaction is H₂SO₄ + 2NaOH → Na₂SO₄ + 2H₂O. What is the molarity of H₂SO₄? (to 3 significant figures)
 
-3) What is the mass percent of SO₄²⁻ ($M = 96.06$ g/mol) in the sample from problem 1? (to 1 decimal place, as a percentage)
+3) What is the mass percent of SO₄²⁻ ($M = 96.06$ g/mol) in the sample from problem 1? (to 3 significant figures, as a percentage)
       `,
       exercise: {
         inputs: [

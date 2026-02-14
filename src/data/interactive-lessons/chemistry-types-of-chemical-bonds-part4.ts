@@ -195,11 +195,11 @@ Even bonds classified as "ionic" have some covalent character, and vice versa. T
       type: 'input-box' as const,
       content: `### Part 4 Practice — Electronegativity and Polarity
 
-1. Calculate $\\Delta\\chi$ for an O—H bond. (O: $\\chi = 3.5$, H: $\\chi = 2.1$. Enter to 1 decimal place.)
+1. Calculate $\\Delta\\chi$ for an O—H bond. (O: $\\chi = 3.5$, H: $\\chi = 2.1$. Enter to 3 significant figures.)
 
 2. In the bond H—F, which atom carries the partial negative charge ($\\delta^-$)? (Enter "H" or "F")
 
-3. Calculate $\\Delta\\chi$ for a Na—Cl bond. (Na: $\\chi = 0.9$, Cl: $\\chi = 3.0$. Enter to 1 decimal place.)`,
+3. Calculate $\\Delta\\chi$ for a Na—Cl bond. (Na: $\\chi = 0.9$, Cl: $\\chi = 3.0$. Enter to 3 significant figures.)`,
       exercise: {
         inputs: [
           {

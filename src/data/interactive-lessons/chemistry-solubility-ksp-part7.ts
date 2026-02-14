@@ -109,7 +109,7 @@ $\\text{Mg(OH)}_2(s) \\rightleftharpoons \\text{Mg}^{2+}(aq) + 2\\,\\text{OH}^-(
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1.1e-4', '5.6e-8', '0.05'],
+        correctAnswers: ['1.1e-4', '5.6e-8', '0.05', '0.00011', '0.00000', '0.050'],
         hint1: '$s = \\sqrt[3]{K_{sp}/4} = \\sqrt[3]{5.6 \\times 10^{-12}/4}$',
         hint2: '$K_{sp} = (s)(0.010)^2 \\implies s = 5.6 \\times 10^{-12}/(1.0 \\times 10^{-4})$',
         hint3: 'Fraction = $s_{\\text{pH 12}}/s_{\\text{pure}} \\times 100\\%$',

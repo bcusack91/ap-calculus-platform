@@ -131,15 +131,15 @@ $$\\chi_{\\text{sucrose}} = \\frac{0.0999}{0.0999 + 11.10} = 0.00893$$
 
 Use: $K_f = 1.86$ °C/m, $K_b = 0.512$ °C/m, $R = 0.08206$ L·atm/(mol·K)
 
-1) A solution of 9.00 g of glucose ($M = 180.16$ g/mol, $i = 1$) in 250.0 g of water has what freezing point? (in °C, to 2 decimal places)
+1) A solution of 9.00 g of glucose ($M = 180.16$ g/mol, $i = 1$) in 250.0 g of water has what freezing point? (in °C, to 3 significant figures)
 
-2) What is the boiling point (°C) of a solution made by dissolving 14.6 g of NaCl ($M = 58.44$ g/mol, $i = 2$) in 500.0 g of water? (to 2 decimal places)
+2) What is the boiling point (°C) of a solution made by dissolving 14.6 g of NaCl ($M = 58.44$ g/mol, $i = 2$) in 500.0 g of water? (to 3 significant figures)
 
-3) What is the osmotic pressure (atm) of a 0.0500 M KBr ($i = 2$) solution at 25°C? (to 2 decimal places)
+3) What is the osmotic pressure (atm) of a 0.0500 M KBr ($i = 2$) solution at 25°C? (to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['-0.37', '100.51', '2.45'],
+        correctAnswers: ['-0.37', '100.51', '2.45', '-0.370', '100.510', '2.450'],
         hint1: '$n = 9.00/180.16 = 0.04996$ mol. $m = 0.04996/0.250 = 0.200$ m. $\\Delta T_f = (1)(1.86)(0.200)$.',
         hint2: '$n = 14.6/58.44 = 0.2498$ mol. $m = 0.2498/0.500 = 0.500$ m. $\\Delta T_b = (2)(0.512)(0.500)$.',
         hint3: '$\\Pi = iMRT = (2)(0.0500)(0.08206)(298)$.',
@@ -177,15 +177,15 @@ This technique is used in the lab to identify unknown compounds — a classic AP
       content: `
 **Mixed Calculations — Set 2** 🧮
 
-1) An unknown nonelectrolyte ($i = 1$) dissolves: 3.50 g in 50.0 g of water, and the solution freezes at $-1.86$ °C. What is the molar mass (g/mol) of the unknown? (to 1 decimal place)
+1) An unknown nonelectrolyte ($i = 1$) dissolves: 3.50 g in 50.0 g of water, and the solution freezes at $-1.86$ °C. What is the molar mass (g/mol) of the unknown? (to 3 significant figures)
 
 2) What mass (in grams) of ethylene glycol ($M = 62.07$ g/mol, $i = 1$) must be added to 4.00 kg of water to lower the freezing point to $-10.0$ °C? (to nearest whole number)
 
-3) A 0.200 M solution of an electrolyte at 25°C has an osmotic pressure of 14.6 atm. What is the van\'t Hoff factor $i$? (to 1 decimal place)
+3) A 0.200 M solution of an electrolyte at 25°C has an osmotic pressure of 14.6 atm. What is the van\'t Hoff factor $i$? (to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['70.0', '1335', '3.0'],
+        correctAnswers: ['70.0', '1335', '3.0', '70.00', '3.00'],
         hint1: '$\\Delta T_f = 1.86$ °C. $m = \\Delta T_f/(iK_f) = 1.86/(1 \\times 1.86) = 1.00$ m. Then $n = m \\times \\text{kg solvent}$.',
         hint2: '$\\Delta T_f = 10.0$ °C. $m = 10.0/(1 \\times 1.86) = 5.376$ m. Moles = $m \\times 4.00$. Mass = moles $\\times 62.07$.',
         hint3: '$i = \\Pi/(MRT) = 14.6/((0.200)(0.08206)(298))$.',

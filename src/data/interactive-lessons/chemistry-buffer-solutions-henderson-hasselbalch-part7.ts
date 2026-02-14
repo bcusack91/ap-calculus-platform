@@ -97,7 +97,7 @@ This comprehensive review covers all buffer concepts: composition, mechanism, He
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['2.0', '5.01', '8.25'],
+        correctAnswers: ['2.0', '5.01', '8.25', '2.00', '5.010', '8.250'],
         hint1: '$\\log(r) = 4.05 - 3.75 = 0.30$; $r = 10^{0.30}$.',
         hint2: 'Moles: $HA = 0.075 - 0.020 = 0.055$; $A^- = 0.075 + 0.020 = 0.095$.',
         hint3: 'Lower limit = $pK_a - 1$.',

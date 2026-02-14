@@ -116,11 +116,11 @@ A grinding wheel starts from rest and reaches $50$ rad/s in $10$ s.
 
 2) A wheel spinning at $40$ rad/s decelerates at $-5$ rad/s². How long (in seconds) until it stops?
 
-3) A turbine accelerates from $10$ rad/s to $50$ rad/s over $8$ seconds. How many revolutions does it make? (Round to 1 decimal place)
+3) A turbine accelerates from $10$ rad/s to $50$ rad/s over $8$ seconds. How many revolutions does it make? (Round to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['24', '8', '38.2'],
+        correctAnswers: ['24', '8', '38.2', '38.20'],
         hint1: '$\\theta = \\omega_0 t + \\frac{1}{2}\\alpha t^2 = 0 + \\frac{1}{2}(3)(16)$',
         hint2: '$\\omega = \\omega_0 + \\alpha t$: $0 = 40 + (-5)t$',
         hint3: '$\\theta = \\frac{1}{2}(\\omega_0 + \\omega)t = \\frac{1}{2}(10 + 50)(8) = 240$ rad. Revolutions $= 240/(2\\pi)$',

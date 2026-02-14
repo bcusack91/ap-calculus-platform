@@ -132,10 +132,12 @@ So $\\omega = a_{\\text{max}}/v_{\\text{max}}$ — a useful relationship for AP 
 2) An oscillator has $v_{\\text{max}} = 5.0$ m/s and $\\omega = 10$ rad/s. Find the amplitude. (in m)
 
 3) A mass has $v_{\\text{max}} = 2.0$ m/s and $m = 0.50$ kg. Find the total energy. (in J)
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1.6', '0.5', '1.0'],
+        correctAnswers: ['1.6', '0.5', '1.0', '1.60', '0.50', '1.00'],
         hint1: '$v_{\\text{max}} = A\\sqrt{k/m} = 0.08\\sqrt{100/0.25}$',
         hint2: '$A = v_{\\text{max}}/\\omega = 5.0/10$',
         hint3: '$E = \\frac{1}{2}mv_{\\text{max}}^2 = \\frac{1}{2}(0.50)(2.0)^2$',

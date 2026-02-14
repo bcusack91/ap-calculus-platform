@@ -130,13 +130,13 @@ Use these $\\Delta H°_f$ values (kJ/mol):
 - $\\text{CO}_2(g) = -393.5$, $\\text{H}_2\\text{O}(l) = -285.8$, $\\text{C}_2\\text{H}_6(g) = -84.7$
 - $\\text{NH}_3(g) = -45.9$, $\\text{NO}(g) = +90.3$, $\\text{O}_2, \\text{N}_2, \\text{H}_2 = 0$
 
-1) Calculate $\\Delta H°_{\\text{rxn}}$ for: $\\text{C}_2\\text{H}_6(g) + \\frac{7}{2}\\text{O}_2(g) \\rightarrow 2\\text{CO}_2(g) + 3\\text{H}_2\\text{O}(l)$ (in kJ, to 1 decimal place)
+1) Calculate $\\Delta H°_{\\text{rxn}}$ for: $\\text{C}_2\\text{H}_6(g) + \\frac{7}{2}\\text{O}_2(g) \\rightarrow 2\\text{CO}_2(g) + 3\\text{H}_2\\text{O}(l)$ (in kJ, to 3 significant figures)
 
-2) Calculate $\\Delta H°_{\\text{rxn}}$ for: $4\\text{NH}_3(g) + 5\\text{O}_2(g) \\rightarrow 4\\text{NO}(g) + 6\\text{H}_2\\text{O}(l)$ (in kJ, to 1 decimal place)
+2) Calculate $\\Delta H°_{\\text{rxn}}$ for: $4\\text{NH}_3(g) + 5\\text{O}_2(g) \\rightarrow 4\\text{NO}(g) + 6\\text{H}_2\\text{O}(l)$ (in kJ, to 3 significant figures)
       `,
       exercise: {
         boxes: 2,
-        correctAnswers: ['-1559.7', '-1170.0'],
+        correctAnswers: ['-1559.7', '-1170.0', '-1559.70', '-1170.00'],
         hint1: '$[2(-393.5) + 3(-285.8)] - [(-84.7) + 0]$',
         hint2: '$[4(90.3) + 6(-285.8)] - [4(-45.9) + 0]$',
         explanation: '1) $[2(-393.5) + 3(-285.8)] - [-84.7] = [-787.0 - 857.4] - [-84.7] = -1644.4 + 84.7 = -1559.7$ kJ. 2) $[4(90.3) + 6(-285.8)] - [4(-45.9)] = [361.2 - 1714.8] - [-183.6] = -1353.6 + 183.6 = -1170.0$ kJ.'

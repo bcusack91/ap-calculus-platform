@@ -131,10 +131,12 @@ Use $g = 10$ m/s².
 2) A ball is thrown upward at 15 m/s. What maximum height does it reach (in m)?
 
 3) A roller coaster car starts from rest at 45 m. What is its speed at a height of 20 m (in m/s)?
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['20', '11.25', '22.4'],
+        correctAnswers: ['20', '11.25', '22.4', '11.250', '22.40'],
         hint1: '$v = \\sqrt{2gh} = \\sqrt{2(10)(20)}$.',
         hint2: '$\\frac{1}{2}mv^2 = mgh \\Rightarrow h = v^2/(2g)$.',
         hint3: '$mg(45) = \\frac{1}{2}mv^2 + mg(20) \\Rightarrow v = \\sqrt{2g(45-20)}$.',

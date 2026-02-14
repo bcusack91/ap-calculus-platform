@@ -131,7 +131,7 @@ Use $R = 8.314$ J/(mol·K), $T = 298$ K
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1000', '-28.5', 'less'],
+        correctAnswers: ['1000', '-28.5', 'less', '-28.50'],
         hint1: '$K = e^{17100/(8.314 \\times 298)} = e^{6.91}$',
         hint2: '$\\Delta G° = -(8.314)(298)\\ln(10^5) = -(2477.6)(11.51)$. Convert to kJ.',
         hint3: 'Positive ΔG° means $\\ln K < 0$, so $K < 1$.',

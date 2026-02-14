@@ -131,10 +131,12 @@ A double-slit experiment uses $\\lambda = 550$ nm, slit separation $d = 0.25$ mm
 1) Fringe spacing $\\Delta y$ (in mm)
 2) Position of the 3rd bright fringe from center (in mm)
 3) Position of the 1st dark fringe from center (in mm)
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['4.4', '13.2', '2.2'],
+        correctAnswers: ['4.4', '13.2', '2.2', '4.40', '13.20', '2.20'],
         hint1: '$\\Delta y = \\lambda L / d = (550 \\times 10^{-9})(2.0)/(0.25 \\times 10^{-3})$.',
         hint2: '$y_3 = 3\\lambda L / d = 3 \\times \\Delta y$.',
         hint3: 'First dark fringe: $y = (0 + \\frac{1}{2})\\lambda L / d = \\frac{1}{2} \\Delta y$.',
@@ -150,10 +152,12 @@ A double-slit experiment uses $\\lambda = 550$ nm, slit separation $d = 0.25$ mm
 1) Light of wavelength 480 nm passes through two slits 0.20 mm apart. A screen is 1.5 m away. What is the distance from the central maximum to the 2nd dark fringe? (in mm)
 
 2) In a double-slit experiment, the 5th bright fringe is located 15 mm from the central maximum. The screen is 2.0 m away and $\\lambda = 600$ nm. What is the slit separation $d$? (in mm)
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 2,
-        correctAnswers: ['5.4', '0.40'],
+        correctAnswers: ['5.4', '0.40', '5.40', '0.400', '0.4'],
         hint1: '2nd dark fringe: $m = 1$, so $y = (1 + \\frac{1}{2})\\lambda L / d = 1.5 \\lambda L / d$.',
         hint2: '$y_5 = 5\\lambda L / d \\implies d = 5\\lambda L / y_5$.',
         explanation: '1) $y = 1.5(480 \\times 10^{-9})(1.5)/(0.20 \\times 10^{-3}) = 5.4 \\times 10^{-3}$ m = 5.4 mm. 2) $d = 5(600 \\times 10^{-9})(2.0)/(15 \\times 10^{-3}) = 4.0 \\times 10^{-4}$ m = 0.40 mm.'

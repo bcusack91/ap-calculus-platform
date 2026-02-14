@@ -119,7 +119,7 @@ This lets you find $I$ about any axis that is parallel to one through the center
       content: `
 **Rotational Inertia Calculations** 🧮
 
-1) Three masses (2 kg each) are arranged on a light rod at distances 0.1 m, 0.3 m, and 0.5 m from the rotation axis. What is the total rotational inertia? (in kg·m², round to 2 decimal places)
+1) Three masses (2 kg each) are arranged on a light rod at distances 0.1 m, 0.3 m, and 0.5 m from the rotation axis. What is the total rotational inertia? (in kg·m², round to 3 significant figures)
 
 2) A solid disk has mass 4 kg and radius 0.3 m. What is its rotational inertia about its central axis? (in kg·m²)
 
@@ -127,7 +127,7 @@ This lets you find $I$ about any axis that is parallel to one through the center
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.70', '0.18', '50'],
+        correctAnswers: ['0.70', '0.18', '50', '0.700', '0.7', '0.180'],
         hint1: '$I = 2(0.1)^2 + 2(0.3)^2 + 2(0.5)^2$',
         hint2: '$I = \\frac{1}{2}MR^2 = \\frac{1}{2}(4)(0.09)$',
         hint3: '$I = \\frac{2}{5}MR^2 \\Rightarrow M = 5I/(2R^2)$',

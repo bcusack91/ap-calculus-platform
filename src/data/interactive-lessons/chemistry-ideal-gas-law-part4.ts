@@ -128,11 +128,11 @@ $$\\frac{d_1}{d_2} = \\frac{M_1}{M_2}$$
 
 Use $R = 0.0821$ L·atm/(mol·K).
 
-1) A 1.56 g sample of gas occupies 1.00 L at 27°C and 1.00 atm. What is the molar mass? (in g/mol, to 1 decimal place)
+1) A 1.56 g sample of gas occupies 1.00 L at 27°C and 1.00 atm. What is the molar mass? (in g/mol, to 3 significant figures)
 
-2) What is the density of N₂ ($M = 28.02$ g/mol) at 25°C and 1.00 atm? (in g/L, to 2 decimal places)
+2) What is the density of N₂ ($M = 28.02$ g/mol) at 25°C and 1.00 atm? (in g/L, to 3 significant figures)
 
-3) A gas has a density of 3.17 g/L at STP. What is its molar mass? (in g/mol, to 1 decimal place)
+3) A gas has a density of 3.17 g/L at STP. What is its molar mass? (in g/mol, to 3 significant figures)
       `,
       exercise: {
         inputs: [

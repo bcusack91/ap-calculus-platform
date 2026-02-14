@@ -126,10 +126,12 @@ A 10 kg block slides down a 53° incline with $\\mu_k = 0.30$ ($g = 10$ m/s², $
 2) What is the kinetic friction force (in N)?
 
 3) What is the acceleration down the slope (in m/s²)?
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['60', '18', '6.2'],
+        correctAnswers: ['60', '18', '6.2', '6.20'],
         hint1: '$N = mg\\cos 53° = 100 \\times 0.60$.',
         hint2: '$f_k = \\mu_k N = 0.30 \\times 60$.',
         hint3: '$a = (mg\\sin 53° - f_k)/m = (80 - 18)/10$.',

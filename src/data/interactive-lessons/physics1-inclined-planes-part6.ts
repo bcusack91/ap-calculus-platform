@@ -104,10 +104,12 @@ $$a = 1.6 \\text{ m/s}^2$$
 2) A 10 kg block on a frictionless 30° incline is connected to a 4 kg hanging mass. What is the acceleration (in m/s²)? ($\\sin 30° = 0.50$)
 
 3) What minimum $\\mu_s$ is needed to keep a block stationary on a 60° incline? ($\\tan 60° = 1.73$)
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['12.4', '0.71', '1.73'],
+        correctAnswers: ['12.4', '0.71', '1.73', '12.40', '0.710', '1.730'],
         hint1: '$a = 10(0.80 - 0.30 \\times 0.60) = 10(0.62) = 6.2$ m/s². $v = at = 6.2 \\times 2$.',
         hint2: 'Net force $= m_1 g\\sin 30° - m_2 g = 50 - 40 = 10$ N. $a = 10/14$.',
         hint3: '$\\mu_s \\geq \\tan\\theta$.',

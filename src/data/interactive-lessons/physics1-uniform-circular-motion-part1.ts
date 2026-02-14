@@ -100,15 +100,15 @@ In uniform circular motion, **speed is constant** but **velocity is not** (becau
       content: `
 **Speed and Period Calculations** 🧮
 
-1) A merry-go-round has radius 4 m and completes one revolution in 8 s. What is the speed of a rider on the edge (in m/s, use $\\pi \\approx 3.14$, round to 1 decimal place)?
+1) A merry-go-round has radius 4 m and completes one revolution in 8 s. What is the speed of a rider on the edge (in m/s, use $\\pi \\approx 3.14$, round to 3 significant figures)?
 
 2) A satellite orbits Earth at $v = 7800$ m/s in a circular orbit of radius $6.7 \\times 10^6$ m. What is its orbital period (in seconds, round to nearest 100)?
 
-3) A fan blade tip is 0.3 m from the center and spins at 20 Hz. What is its speed (in m/s, round to 1 decimal place)?
+3) A fan blade tip is 0.3 m from the center and spins at 20 Hz. What is its speed (in m/s, round to 3 significant figures)?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['3.1', '5400', '37.7'],
+        correctAnswers: ['3.1', '5400', '37.7', '3.10', '37.70'],
         hint1: '$v = 2\\pi r/T = 2\\pi(4)/8$.',
         hint2: '$T = 2\\pi r/v = 2\\pi(6.7 \\times 10^6)/7800$.',
         hint3: '$v = 2\\pi rf = 2\\pi(0.3)(20)$.',

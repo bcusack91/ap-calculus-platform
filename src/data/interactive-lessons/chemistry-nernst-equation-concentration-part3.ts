@@ -132,15 +132,15 @@ The cell produces 59.2 mV. Small but measurable!
 
 At 25°C:
 
-1) An Ag concentration cell has $[\\text{Ag}^+]_{\\text{dilute}} = 0.0010$ M and $[\\text{Ag}^+]_{\\text{conc}} = 1.0$ M. $n = 1$. Calculate $E$. (in V, to 4 decimal places)
+1) An Ag concentration cell has $[\\text{Ag}^+]_{\\text{dilute}} = 0.0010$ M and $[\\text{Ag}^+]_{\\text{conc}} = 1.0$ M. $n = 1$. Calculate $E$. (in V, to 3 significant figures)
 
-2) A Zn concentration cell has $[\\text{Zn}^{2+}] = 0.10$ M and $1.0$ M. $n = 2$. Calculate $E$. (in V, to 4 decimal places)
+2) A Zn concentration cell has $[\\text{Zn}^{2+}] = 0.10$ M and $1.0$ M. $n = 2$. Calculate $E$. (in V, to 3 significant figures)
 
 3) If both compartments have the same concentration, $E = ?$ (in V)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.1776', '0.0296', '0'],
+        correctAnswers: ['0.1776', '0.0296', '0', '0.17760', '0.02960'],
         hint1: '$E = (0.0592/1)\\log(1.0/0.0010) = 0.0592 \\times 3$',
         hint2: '$E = (0.0592/2)\\log(1.0/0.10) = 0.0296 \\times 1$',
         hint3: 'Equal concentrations → $Q = 1$ → $\\log(1) = 0$.',

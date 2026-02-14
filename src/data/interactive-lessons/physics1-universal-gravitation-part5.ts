@@ -104,13 +104,13 @@ Use $g = 10$ m/s², $R_E = 6.4 \\times 10^6$ m, $M_E = 6.0 \\times 10^{24}$ kg, 
 
 1) What is the orbital velocity for a satellite at altitude $h = 200$ km above Earth (in m/s, round to nearest 100)?
 
-2) What is the escape velocity from Earth's surface (in km/s, round to 1 decimal place)?
+2) What is the escape velocity from Earth's surface (in km/s, round to 3 significant figures)?
 
 3) The Moon orbits at $r = 3.84 \\times 10^8$ m. What is the Moon's orbital speed (in m/s, round to nearest 10)?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['7800', '11.2', '1020'],
+        correctAnswers: ['7800', '11.2', '1020', '11.20'],
         hint1: '$r = R_E + h = 6.6 \\times 10^6$ m. $v = \\sqrt{GM/r}$.',
         hint2: '$v_{esc} = \\sqrt{2gR_E}$. Convert to km/s.',
         hint3: '$v = \\sqrt{GM_E/r}$.',

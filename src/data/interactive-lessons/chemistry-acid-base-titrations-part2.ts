@@ -120,7 +120,7 @@ Titrating 25.0 mL of 0.200 M $HCl$ with 0.200 M $NaOH$:
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.70', '25.0', '12.76'],
+        correctAnswers: ['0.70', '25.0', '12.76', '0.700', '0.7', '25.00', '12.760'],
         hint1: '$pH = -\\log(0.200)$.',
         hint2: 'Equal concentrations, so equal volumes needed.',
         hint3: 'Excess $NaOH$: $0.006 - 0.005 = 0.001$ mol in 55.0 mL total.',

@@ -120,13 +120,13 @@ This is analogous to $P = Fv$ in linear motion.
 
 1) A wheel ($I = 4$ kg·m²) spins at 10 rad/s. What is its rotational KE? (in J)
 
-2) A solid sphere (mass 3 kg, radius 0.1 m) spins at 20 rad/s (not translating). What is its rotational KE? (in J, round to 2 decimal places)
+2) A solid sphere (mass 3 kg, radius 0.1 m) spins at 20 rad/s (not translating). What is its rotational KE? (in J, round to 3 significant figures)
 
 3) A torque of 8 N·m acts through an angle of 25 rad on a wheel. How much work is done? (in J)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['200', '0.48', '200'],
+        correctAnswers: ['200', '0.48', '200', '0.480'],
         hint1: '$KE = \\frac{1}{2}I\\omega^2 = \\frac{1}{2}(4)(100)$',
         hint2: '$I = \\frac{2}{5}MR^2 = \\frac{2}{5}(3)(0.01) = 0.012$ kg·m². $KE = \\frac{1}{2}(0.012)(400)$',
         hint3: '$W = \\tau\\theta = (8)(25)$',

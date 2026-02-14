@@ -134,15 +134,15 @@ $$m = 2.50 \\times 55.85 = 139.6 \\text{ g}$$
 
 Use: H = 1.008, C = 12.01, O = 16.00, Na = 22.99, Cl = 35.45, Ca = 40.08
 
-1) How many moles are in 25.0 g of CaCO₃ ($M = 100.09$ g/mol)? (to 3 decimal places)
+1) How many moles are in 25.0 g of CaCO₃ ($M = 100.09$ g/mol)? (to 3 significant figures)
 
-2) What is the mass (in grams) of 0.400 mol of NaCl ($M = 58.44$ g/mol)? (to 2 decimal places)
+2) What is the mass (in grams) of 0.400 mol of NaCl ($M = 58.44$ g/mol)? (to 3 significant figures)
 
-3) How many molecules are in 5.00 g of CO₂ ($M = 44.01$ g/mol)? Express as $a \\times 10^{22}$ — enter $a$ (to 2 decimal places).
+3) How many molecules are in 5.00 g of CO₂ ($M = 44.01$ g/mol)? Express as $a \\times 10^{22}$ — enter $a$ (to 3 significant figures).
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.250', '23.38', '6.84'],
+        correctAnswers: ['0.250', '23.38', '6.84', '0.2500', '0.25', '23.380', '6.840'],
         hint1: '$n = m/M = 25.0/100.09$.',
         hint2: '$m = n \\times M = 0.400 \\times 58.44$.',
         hint3: 'First find moles: $5.00/44.01$. Then multiply by $6.022 \\times 10^{23}$.',

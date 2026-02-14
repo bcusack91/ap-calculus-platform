@@ -55,15 +55,15 @@ Time to put it all together! In this workshop, we'll tackle a variety of circula
       content: `
 **Warm-Up Calculations** 🧮
 
-1) A 0.5 m radius wheel makes 120 RPM. What is the speed of a point on the rim (in m/s, round to 1 decimal place)?
+1) A 0.5 m radius wheel makes 120 RPM. What is the speed of a point on the rim (in m/s, round to 3 significant figures)?
 
 2) A satellite in low Earth orbit has period $T = 90$ min and orbital radius $r = 6.6 \\times 10^6$ m. What is its orbital speed (in m/s, round to nearest 100)?
 
-3) Earth orbits the Sun at $v \\approx 30{,}000$ m/s in a roughly circular orbit of radius $1.5 \\times 10^{11}$ m. What is Earth's centripetal acceleration (in m/s², to 3 decimal places)?
+3) Earth orbits the Sun at $v \\approx 30{,}000$ m/s in a roughly circular orbit of radius $1.5 \\times 10^{11}$ m. What is Earth's centripetal acceleration (in m/s², to 3 significant figures)?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['6.3', '7700', '0.006'],
+        correctAnswers: ['6.3', '7700', '0.006', '6.30', '0.0060'],
         hint1: 'Convert 120 RPM to Hz ($f = 2$ Hz), then $v = 2\\pi rf$.',
         hint2: 'Convert 90 min to seconds. $v = 2\\pi r/T$.',
         hint3: '$a_c = v^2/r$.',
@@ -120,15 +120,15 @@ Time to put it all together! In this workshop, we'll tackle a variety of circula
       content: `
 **Challenge Problems** 🧮
 
-1) A vinyl record (radius 15 cm) plays at 33.3 RPM. How much farther does a point on the outer edge travel in 1 minute compared to a point 5 cm from the center? (in meters, round to 1 decimal place)
+1) A vinyl record (radius 15 cm) plays at 33.3 RPM. How much farther does a point on the outer edge travel in 1 minute compared to a point 5 cm from the center? (in meters, round to 3 significant figures)
 
-2) An amusement park ride spins riders in a circle of radius 8 m. If the maximum safe centripetal acceleration is $3g$ ($g = 10$ m/s²), what is the maximum allowed speed (in m/s, round to 1 decimal place)?
+2) An amusement park ride spins riders in a circle of radius 8 m. If the maximum safe centripetal acceleration is $3g$ ($g = 10$ m/s²), what is the maximum allowed speed (in m/s, round to 3 significant figures)?
 
 3) A wheel of radius 0.4 m accelerates from rest to 10 rad/s in 5 s. What is the tangential acceleration of a point on the rim (in m/s²)?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['20.9', '15.5', '0.8'],
+        correctAnswers: ['20.9', '15.5', '0.8', '20.90', '15.50', '0.80'],
         hint1: 'In 1 min at 33.3 RPM, both points complete 33.3 revolutions. Distance = circumference × revolutions. Find the difference.',
         hint2: '$a_c = v^2/r \\Rightarrow v = \\sqrt{a_c \\cdot r}$.',
         hint3: '$a_t = r\\alpha$ where $\\alpha = \\Delta\\omega/\\Delta t$.',

@@ -93,10 +93,12 @@ Use $g = 10$ m/s².
 2) A 3 kg ball is thrown upward at 16 m/s from a 5 m balcony. What is its maximum height above the ground (in m)?
 
 3) A pendulum bob ($m = 0.5$ kg) is released from a height 0.45 m above its lowest point. What is its speed at the lowest point (in m/s)?
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['17.3', '17.8', '3'],
+        correctAnswers: ['17.3', '17.8', '3', '17.30', '17.80'],
         hint1: '$v = \\sqrt{2g(h_i - h_f)} = \\sqrt{2(10)(25-10)} = \\sqrt{300}$.',
         hint2: '$h_{\\text{above launch}} = v^2/(2g) = 256/20 = 12.8$ m. Total: $12.8 + 5$.',
         hint3: '$v = \\sqrt{2gh} = \\sqrt{2(10)(0.45)} = \\sqrt{9}$.',

@@ -131,10 +131,12 @@ At equilibrium: $[\\text{H}_2] = 0.10$ M, $[\\text{I}_2] = 0.20$ M, $[\\text{HI}
 2) What is $\\Delta n$ for this reaction?
 
 3) If $K_c = 8.0$ at this temperature, what is $K_p$? (Enter as a number)
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['8', '0', '8.0'],
+        correctAnswers: ['8', '0', '8.0', '8.00'],
         hint1: '$K_c = \\frac{[\\text{HI}]^2}{[\\text{H}_2][\\text{I}_2]} = \\frac{(0.40)^2}{(0.10)(0.20)}$',
         hint2: '$\\Delta n = 2 - (1 + 1) = 0$',
         hint3: 'When $\\Delta n = 0$, $K_p = K_c(RT)^0 = K_c$.',

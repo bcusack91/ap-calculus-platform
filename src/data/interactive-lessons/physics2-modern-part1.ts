@@ -173,14 +173,14 @@ Use $h = 6.63 \\times 10^{-34}$ J·s, $c = 3.00 \\times 10^{8}$ m/s, $1 \\text{ 
 
 A sodium surface has work function $\\phi = 2.28$ eV. Ultraviolet light of wavelength 250 nm shines on it.
 
-1) Photon energy in joules ($\\times 10^{-19}$ J, 2 decimal places)
-2) Photon energy in eV (2 decimal places)
-3) Maximum KE of ejected electrons in eV (2 decimal places)
-4) Stopping voltage in V (2 decimal places)
+1) Photon energy in joules ($\\times 10^{-19}$ J, 3 significant figures)
+2) Photon energy in eV (3 significant figures)
+3) Maximum KE of ejected electrons in eV (3 significant figures)
+4) Stopping voltage in V (3 significant figures)
       `,
       exercise: {
         boxes: 4,
-        correctAnswers: ['7.96', '4.97', '2.69', '2.69'],
+        correctAnswers: ['7.96', '4.97', '2.69', '2.69', '7.960', '4.970', '2.690'],
         hint1: '$E = hc/\\lambda = (6.63 \\times 10^{-34})(3.00 \\times 10^{8})/(250 \\times 10^{-9})$.',
         hint2: 'Convert to eV: divide J by $1.60 \\times 10^{-19}$. Then $KE_{\\max} = E - \\phi$.',
         hint3: '$eV_s = KE_{\\max}$, so $V_s = KE_{\\max}/e$. Since KE is already in eV, $V_s$ equals the same number in volts.',

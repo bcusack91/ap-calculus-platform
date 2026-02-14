@@ -53,15 +53,15 @@ Time to tackle complex gravitation problems that combine multiple concepts: Newt
 
 Use $G = 6.67 \\times 10^{-11}$, $M_E = 6.0 \\times 10^{24}$ kg, $R_E = 6.4 \\times 10^6$ m.
 
-1) A satellite orbits Earth at twice Earth's radius from Earth's center. What is the gravitational field strength at that location (in m/s², round to 1 decimal place)?
+1) A satellite orbits Earth at twice Earth's radius from Earth's center. What is the gravitational field strength at that location (in m/s², round to 3 significant figures)?
 
 2) What is the orbital speed at that altitude (in m/s, round to nearest 100)?
 
-3) What is the orbital period (in hours, round to 1 decimal place)?
+3) What is the orbital period (in hours, round to 3 significant figures)?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['2.5', '5600', '5.7'],
+        correctAnswers: ['2.5', '5600', '5.7', '2.50', '5.70'],
         hint1: '$g = GM/(2R_E)^2 = GM/(4R_E^2) = g_0/4$.',
         hint2: '$v = \\sqrt{GM/r} = \\sqrt{GM/(2R_E)}$.',
         hint3: '$T = 2\\pi r/v$. Convert to hours.',
@@ -120,15 +120,15 @@ Use $G = 6.67 \\times 10^{-11}$, $M_E = 6.0 \\times 10^{24}$ kg, $R_E = 6.4 \\ti
 
 Use $G = 6.67 \\times 10^{-11}$.
 
-1) A planet has surface gravity $g = 20$ m/s² and radius $R = 8 \\times 10^6$ m. What is the planet's mass (in kg, express as $X \\times 10^{25}$ — give $X$ to 2 decimal places)?
+1) A planet has surface gravity $g = 20$ m/s² and radius $R = 8 \\times 10^6$ m. What is the planet's mass (in kg, express as $X \\times 10^{25}$ — give $X$ to 3 significant figures)?
 
-2) Using the planet from problem 1, what is the escape velocity from its surface (in km/s, round to 1 decimal place)?
+2) Using the planet from problem 1, what is the escape velocity from its surface (in km/s, round to 3 significant figures)?
 
-3) A satellite orbits this planet at altitude $h = R$ (i.e., at $r = 2R$ from center). What is its orbital period (in hours, round to 1 decimal place)?
+3) A satellite orbits this planet at altitude $h = R$ (i.e., at $r = 2R$ from center). What is its orbital period (in hours, round to 3 significant figures)?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1.92', '17.9', '4.0'],
+        correctAnswers: ['1.92', '17.9', '4.0', '1.920', '17.90', '4.00'],
         hint1: '$M = gR^2/G$.',
         hint2: '$v_{esc} = \\sqrt{2gR}$.',
         hint3: '$T = 2\\pi\\sqrt{(2R)^3/(GM)}$.',

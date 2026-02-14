@@ -121,13 +121,13 @@ This final lesson brings together all circular motion concepts for AP exam prepa
 
 1) Mars orbits the Sun at $r = 2.28 \\times 10^{11}$ m with period $T = 687$ days. What is Mars\'s orbital speed (in m/s, round to nearest 100)?
 
-2) A coin sits on a turntable 12 cm from the center, spinning at 78 RPM. What is the centripetal acceleration of the coin (in m/s², round to 1 decimal place)?
+2) A coin sits on a turntable 12 cm from the center, spinning at 78 RPM. What is the centripetal acceleration of the coin (in m/s², round to 3 significant figures)?
 
-3) A space station creates artificial gravity by spinning. If the station has radius 50 m, what angular velocity $\\omega$ is needed to produce $g = 10$ m/s² at the rim (in rad/s, round to 2 decimal places)?
+3) A space station creates artificial gravity by spinning. If the station has radius 50 m, what angular velocity $\\omega$ is needed to produce $g = 10$ m/s² at the rim (in rad/s, round to 3 significant figures)?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['24100', '80.1', '0.45'],
+        correctAnswers: ['24100', '80.1', '0.45', '80.10', '0.450'],
         hint1: 'Convert days to seconds: $T = 687 \\times 24 \\times 3600$. Then $v = 2\\pi r/T$.',
         hint2: 'Convert 78 RPM to Hz. Then $a_c = 4\\pi^2 rf^2$.',
         hint3: '$a_c = r\\omega^2 \\Rightarrow \\omega = \\sqrt{a_c/r}$.',

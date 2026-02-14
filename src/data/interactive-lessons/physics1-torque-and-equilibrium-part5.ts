@@ -117,7 +117,7 @@ $$600 - 120 - 4F = 0 \\Rightarrow F = 120 \\text{ N}$$
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['3.5', '186', '0'],
+        correctAnswers: ['3.5', '186', '0', '3.50'],
         hint1: '$(70)(4) = (80)(d)$',
         hint2: 'Torques about fulcrum: $500(3) = 200(2) + F(7)$. Beam center is 5 m from left = 2 m right of fulcrum.',
         hint3: 'Left: $(30)(10)(2) = 600$ N·m CCW. Right: $(20)(10)(3) = 600$ N·m CW.',

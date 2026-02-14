@@ -118,15 +118,15 @@ The equilibrium point just shifts downward by $x_0$. The oscillation about this 
       content: `
 **Mass-Spring Calculations** 🧮
 
-1) A 0.5 kg mass on a spring ($k = 200$ N/m) oscillates. What is the period? (in seconds, round to 2 decimal places)
+1) A 0.5 kg mass on a spring ($k = 200$ N/m) oscillates. What is the period? (in seconds, round to 3 significant figures)
 
-2) A mass-spring system has $T = 0.8$ s and $k = 50$ N/m. What is the mass? (in kg, round to 2 decimal places)
+2) A mass-spring system has $T = 0.8$ s and $k = 50$ N/m. What is the mass? (in kg, round to 3 significant figures)
 
-3) Two springs ($k_1 = 100$ N/m, $k_2 = 300$ N/m) are connected in parallel to a 2 kg mass. What is the period? (in seconds, round to 2 decimal places)
+3) Two springs ($k_1 = 100$ N/m, $k_2 = 300$ N/m) are connected in parallel to a 2 kg mass. What is the period? (in seconds, round to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.31', '0.81', '0.44'],
+        correctAnswers: ['0.31', '0.81', '0.44', '0.310', '0.810', '0.440'],
         hint1: '$T = 2\\pi\\sqrt{m/k} = 2\\pi\\sqrt{0.5/200}$',
         hint2: '$T = 2\\pi\\sqrt{m/k} \\Rightarrow m = kT^2/(4\\pi^2)$',
         hint3: '$k_{\\text{eff}} = k_1 + k_2 = 400$ N/m. $T = 2\\pi\\sqrt{2/400}$',

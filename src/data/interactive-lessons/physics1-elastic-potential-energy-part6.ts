@@ -112,10 +112,12 @@ Use $g = 10$ m/s².
 2) A 4 kg block moving at 5 m/s on a frictionless surface hits a spring ($k = 2500$ N/m). What is the maximum compression (in m)?
 
 3) A spring ($k = 500$ N/m, compressed 0.2 m) launches a 1 kg block across a rough surface ($\\mu_k = 0.25$). How far does the block slide before stopping (in m)?
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['2', '0.2', '4'],
+        correctAnswers: ['2', '0.2', '4', '0.20'],
         hint1: '$\\frac{1}{2}kx^2 = \\frac{1}{2}mv^2$. $v = x\\sqrt{k/m}$.',
         hint2: '$\\frac{1}{2}mv^2 = \\frac{1}{2}kx^2$. $x = v\\sqrt{m/k}$.',
         hint3: '$\\frac{1}{2}kx^2 = \\mu_k mg d$. Solve for $d$.',

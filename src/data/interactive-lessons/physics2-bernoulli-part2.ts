@@ -113,10 +113,12 @@ A horizontal Venturi tube has wide diameter 8.0 cm and narrow diameter 4.0 cm. T
 1) Area ratio $A_1/A_2$
 2) Express $v_1$ in terms of the pressure difference (solve for $v_1$, in m/s)
 3) Flow rate through the tube (in L/s)
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['4', '1.1', '5.5'],
+        correctAnswers: ['4', '1.1', '5.5', '1.10', '5.50'],
         hint1: '$A_1/A_2 = (d_1/d_2)^2 = (8/4)^2$.',
         hint2: '$v_2 = 4v_1$. $\\Delta P = \\frac{1}{2}\\rho(v_2^2 - v_1^2) = \\frac{1}{2}\\rho(16v_1^2 - v_1^2) = \\frac{15}{2}\\rho v_1^2$. Solve: $v_1 = \\sqrt{2\\Delta P/(15\\rho)}$.',
         hint3: '$Q = A_1 v_1 = \\pi(0.04)^2(1.1)$. Convert to L/s.',

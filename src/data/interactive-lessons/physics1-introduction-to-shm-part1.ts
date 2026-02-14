@@ -126,10 +126,12 @@ The acceleration is **proportional to displacement** and always directed toward 
 2) A 2 kg mass on a spring ($k = 50$ N/m) is displaced 0.3 m. What is the magnitude of its acceleration? (in m/s²)
 
 3) For a mass-spring system, $\\omega = \\sqrt{k/m}$. If $k = 80$ N/m and $m = 5$ kg, what is $\\omega$? (in rad/s)
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['20', '7.5', '4'],
+        correctAnswers: ['20', '7.5', '4', '7.50'],
         hint1: '$|F| = kx = 200(0.1)$',
         hint2: '$|a| = kx/m = 50(0.3)/2$',
         hint3: '$\\omega = \\sqrt{80/5} = \\sqrt{16}$',

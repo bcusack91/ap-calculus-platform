@@ -138,13 +138,13 @@ $\\text{Ag}^+ + e^- \\rightarrow \\text{Ag}$, $n = 1$, $M_{\\text{Ag}} = 107.87$
 
 1) Total charge in coulombs?
 
-2) Moles of Ag deposited? (to 4 decimal places)
+2) Moles of Ag deposited? (to 3 significant figures)
 
-3) Mass of Ag deposited in grams? (to 2 decimal places)
+3) Mass of Ag deposited in grams? (to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['2400', '0.0249', '2.68'],
+        correctAnswers: ['2400', '0.0249', '2.68', '0.02490', '2.680'],
         hint1: '$q = It = (2.0)(20 \\times 60)$',
         hint2: '$\\text{mol } e^- = 2400/96485$. Since $n = 1$, mol Ag = mol $e^-$.',
         hint3: '$m = 0.0249 \\times 107.87$',

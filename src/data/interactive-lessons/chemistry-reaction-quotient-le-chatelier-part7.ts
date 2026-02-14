@@ -135,10 +135,12 @@ Current concentrations: $[\\text{PCl}_5] = 0.50$, $[\\text{PCl}_3] = 0.10$, $[\\
 2) Which direction does the reaction shift? (Enter "right" or "left")
 
 3) If the temperature is raised to 300°C, does K increase or decrease? (Enter "increase" or "decrease")
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.02', 'right', 'increase'],
+        correctAnswers: ['0.02', 'right', 'increase', '0.020'],
         hint1: '$Q = \\frac{(0.10)(0.10)}{0.50} = 0.02$',
         hint2: '$Q = 0.02 < K = 0.040$, so shift right.',
         hint3: 'Endothermic ($\\Delta H > 0$): increasing T increases K.',

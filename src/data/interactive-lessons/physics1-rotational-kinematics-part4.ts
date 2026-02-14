@@ -119,13 +119,13 @@ This is why the contact point has zero velocity — it's the condition for no sl
 
 1) A tire of radius 0.4 m rolls without slipping. If the car travels at 20 m/s, what is the tire's angular velocity? (in rad/s)
 
-2) A ball of radius 0.1 m rolls without slipping through 5 complete revolutions. How far does its center travel? (in m, round to 2 decimal places)
+2) A ball of radius 0.1 m rolls without slipping through 5 complete revolutions. How far does its center travel? (in m, round to 3 significant figures)
 
 3) A cylinder rolls without slipping with $\\omega = 15$ rad/s and $R = 0.2$ m. What is the speed of the top of the cylinder? (in m/s)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['50', '3.14', '6'],
+        correctAnswers: ['50', '3.14', '6', '3.140'],
         hint1: '$\\omega = v/R = 20/0.4$',
         hint2: '$d = R\\theta = R(5 \\times 2\\pi) = 0.1 \\times 10\\pi$',
         hint3: '$v_{\\text{top}} = 2v_{\\text{cm}} = 2R\\omega$',

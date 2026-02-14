@@ -158,7 +158,7 @@ $$NH_3 + H^+ \\rightarrow NH_4^+$$
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.18', '0.15', '0.133'],
+        correctAnswers: ['0.18', '0.15', '0.133', '0.180', '0.150', '0.1330'],
         hint1: '$[A^-]/[HA] = 10^{(4.00 - 4.74)} = 10^{-0.74}$.',
         hint2: 'For $pH = pK_a$, you need equal moles of $HA$ and $A^-$. Add enough $NaOH$ to convert half the acid.',
         hint3: 'Ratio $= 10^{(9.55-9.25)} = 10^{0.30} = 2.00$. $[NH_3] = 2[NH_4^+]$. Total = $3[NH_4^+] = 0.40$ M.',

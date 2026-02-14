@@ -157,15 +157,15 @@ No. The moon\'s mass cancels in the derivation (Step 2 above). Orbital propertie
       content: `
 **AP-Style Calculations** 🧮
 
-1) Saturn\'s moon Titan orbits at $r = 1.22 \\times 10^9$ m with $T = 15.95$ days. Calculate Saturn\'s mass (in kg, express as $X \\times 10^{26}$ — give $X$ to 1 decimal place). Use $G = 6.67 \\times 10^{-11}$.
+1) Saturn\'s moon Titan orbits at $r = 1.22 \\times 10^9$ m with $T = 15.95$ days. Calculate Saturn\'s mass (in kg, express as $X \\times 10^{26}$ — give $X$ to 3 significant figures). Use $G = 6.67 \\times 10^{-11}$.
 
-2) A planet has mass $5M_E$ and radius $2R_E$. What is the escape velocity from this planet's surface as a multiple of Earth\'s escape velocity? (round to 2 decimal places)
+2) A planet has mass $5M_E$ and radius $2R_E$. What is the escape velocity from this planet's surface as a multiple of Earth\'s escape velocity? (round to 3 significant figures)
 
-3) Two satellites orbit Earth. Satellite A has period 6 hours and Satellite B has period 24 hours. What is the ratio $r_B/r_A$ (round to 2 decimal places)?
+3) Two satellites orbit Earth. Satellite A has period 6 hours and Satellite B has period 24 hours. What is the ratio $r_B/r_A$ (round to 3 significant figures)?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['5.7', '1.58', '2.52'],
+        correctAnswers: ['5.7', '1.58', '2.52', '5.70', '1.580', '2.520'],
         hint1: '$M = 4\\pi^2 r^3/(GT^2)$. Convert $T$ to seconds.',
         hint2: '$v_{esc} \\propto \\sqrt{M/R}$.',
         hint3: '$r_B/r_A = (T_B/T_A)^{2/3}$.',

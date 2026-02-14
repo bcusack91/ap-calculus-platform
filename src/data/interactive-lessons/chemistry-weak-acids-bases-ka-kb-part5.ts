@@ -134,7 +134,7 @@ For pH calculations, **only the first dissociation matters** (in most cases). Th
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['11.4', '1.62', '4.7e-11'],
+        correctAnswers: ['11.4', '1.62', '4.7e-11', '11.40', '1.620', '0.000000', '0.0000'],
         hint1: '$[H^+] = \\sqrt{K_a \\cdot C}$, then divide by $C$ and multiply by 100.',
         hint2: '$[H^+] = \\sqrt{(7.5 \\times 10^{-3})(0.10)}$. Check 5% rule — may need quadratic.',
         hint3: 'For diprotic acids, $[\\text{second anion}] \\approx K_{a2}$ regardless of initial concentration!',

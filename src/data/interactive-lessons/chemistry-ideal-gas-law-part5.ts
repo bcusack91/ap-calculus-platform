@@ -145,7 +145,7 @@ This corrected pressure is then used in $PV = nRT$ to find the moles of dry gas 
 
 1) A flask contains 0.50 mol Ar and 1.50 mol Ne. The total pressure is 4.00 atm. What is the partial pressure of Ar? (in atm)
 
-2) Hydrogen gas is collected over water at 22°C ($P_{H_2O}$ = 19.8 mmHg). The total pressure is 745 mmHg. What is the pressure of the dry hydrogen? (in mmHg, to 1 decimal place)
+2) Hydrogen gas is collected over water at 22°C ($P_{H_2O}$ = 19.8 mmHg). The total pressure is 745 mmHg. What is the pressure of the dry hydrogen? (in mmHg, to 3 significant figures)
 
 3) A mixture has $\\chi_{CO_2} = 0.30$ and the total pressure is 2.50 atm. What is $P_{CO_2}$? (in atm)
       `,

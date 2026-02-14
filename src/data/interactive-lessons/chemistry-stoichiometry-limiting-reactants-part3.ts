@@ -146,15 +146,15 @@ Given: $\\text{N}_2 + 3\\text{H}_2 \\rightarrow 2\\text{NH}_3$
 
 You start with **2.0 mol N₂** and **5.0 mol H₂**.
 
-1) How many moles of NH₃ could N₂ produce? (to 1 decimal place)
+1) How many moles of NH₃ could N₂ produce? (to 3 significant figures)
 
-2) How many moles of NH₃ could H₂ produce? (to 1 decimal place)
+2) How many moles of NH₃ could H₂ produce? (to 3 significant figures)
 
 3) Which is limiting? Type **N2** or **H2**.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['4.0', '3.3', 'H2'],
+        correctAnswers: ['4.0', '3.3', 'H2', '4.00', '3.30'],
         hint1: '2.0 mol N₂ × (2 mol NH₃ / 1 mol N₂).',
         hint2: '5.0 mol H₂ × (2 mol NH₃ / 3 mol H₂).',
         hint3: 'Which reactant produces less NH₃?',

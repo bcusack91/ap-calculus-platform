@@ -121,15 +121,15 @@ Only a 30% increase — much less sensitive.
       content: `
 **Arrhenius Calculations** 🧮
 
-1) Calculate $E_a/(RT)$ for $E_a = 75.0$ kJ/mol at $T = 500$ K. ($R = 8.314$ J/(mol·K); to 1 decimal place)
+1) Calculate $E_a/(RT)$ for $E_a = 75.0$ kJ/mol at $T = 500$ K. ($R = 8.314$ J/(mol·K); to 3 significant figures)
 
 2) A reaction has $A = 1.0 \\times 10^{13}$ s⁻¹ and $E_a = 100$ kJ/mol. Calculate $k$ at 300 K. (in s⁻¹, to 1 significant figure in scientific notation: e.g., 3e-5)
 
-3) If $k = 0.010$ s⁻¹ at 300 K and $k = 0.040$ s⁻¹ at 310 K, by what factor does k increase? (to 1 decimal place)
+3) If $k = 0.010$ s⁻¹ at 300 K and $k = 0.040$ s⁻¹ at 310 K, by what factor does k increase? (to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['18.0', '2e-9', '4.0'],
+        correctAnswers: ['18.0', '2e-9', '4.0', '18.00', '4.00'],
         hint1: 'Ea/(RT) = 75,000/(8.314 × 500) = 75,000/4157 = 18.04 ≈ 18.0.',
         hint2: 'k = 1.0e13 × e^(−100,000/(8.314×300)) = 1.0e13 × e^(−40.1) = 1.0e13 × 3.7e-18... Hmm: e^(−40.1) ≈ 3.7 × 10⁻¹⁸. k = 1.0e13 × 3.7e-18 = 3.7e-5. Wait, let me recalculate: Ea/RT = 100,000/(8.314×300) = 100,000/2494 = 40.1. e^(−40.1) ≈ 3.7 × 10⁻¹⁸. k = 1.0e13 × 3.7e-18 = 3.7e-5.',
         hint3: '0.040/0.010 = 4.0.',

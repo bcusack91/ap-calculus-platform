@@ -151,10 +151,12 @@ A square coil has 80 turns, each with side length 10 cm. The coil sits in a unif
 1) Area of each turn (in m²)
 2) Change in flux per turn $|\\Delta\\Phi|$ (in Wb)
 3) Magnitude of the induced EMF (in V)
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.01', '0.004', '6.4'],
+        correctAnswers: ['0.01', '0.004', '6.4', '0.010', '0.0040', '6.40'],
         hint1: '$A = (0.10)^2 = 0.01$ m².',
         hint2: '$|\\Delta\\Phi| = |\\Delta B| \\cdot A = |0.2 - 0.6| \\times 0.01 = 0.004$ Wb.',
         hint3: '$|\\varepsilon| = N \\frac{|\\Delta\\Phi|}{\\Delta t} = 80 \\times \\frac{0.004}{0.05} = 6.4$ V.',

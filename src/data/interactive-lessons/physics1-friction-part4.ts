@@ -169,10 +169,12 @@ A 10 kg block on a rough surface ($\\mu_k = 0.40$) is pulled with 50 N. Use $g =
 2) If pulled at 37° above horizontal ($\\sin 37° = 0.60$, $\\cos 37° = 0.80$), what is the normal force (in N)?
 
 3) For the 37° pull, what is the acceleration (in m/s²)?
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['40', '70', '1.2'],
+        correctAnswers: ['40', '70', '1.2', '1.20'],
         hint1: '$f_k = \\mu_k mg = 0.40 \\times 100$.',
         hint2: '$N = mg - F\\sin 37° = 100 - 50(0.60)$.',
         hint3: '$f_k = \\mu_k N = 0.40 \\times 70 = 28$ N. $F_x = 50(0.80) = 40$ N. $a = (40 - 28)/10$.',

@@ -130,13 +130,13 @@ Use $F = 96{,}485$ C/mol, $M_{\\text{Ag}} = 107.87$ g/mol
 
 1) A current of $5.00$ A flows for $1000$ s. Total charge = ? (in C)
 
-2) Using the charge from (1), how many moles of electrons? (to 4 decimal places)
+2) Using the charge from (1), how many moles of electrons? (to 3 significant figures)
 
-3) How many grams of Ag are deposited? ($\\text{Ag}^+ + e^- \\rightarrow \\text{Ag}$, $n = 1$) (to 2 decimal places)
+3) How many grams of Ag are deposited? ($\\text{Ag}^+ + e^- \\rightarrow \\text{Ag}$, $n = 1$) (to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['5000', '0.0518', '5.59'],
+        correctAnswers: ['5000', '0.0518', '5.59', '0.05180', '5.590'],
         hint1: '$q = It = (5.00)(1000)$',
         hint2: '$\\text{mol } e^- = 5000/96485$',
         hint3: '$m = (0.0518)(107.87)$',

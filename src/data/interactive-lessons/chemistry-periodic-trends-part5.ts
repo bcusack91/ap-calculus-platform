@@ -141,11 +141,11 @@ The dipole arrow points **toward** the more electronegative atom.`
 
 Calculate the electronegativity difference ($\\Delta EN$) for each bond and classify it. Use the values: H = 2.1, C = 2.5, O = 3.5, F = 4.0, Na = 0.9, Cl = 3.0.
 
-1. $\\text{C-O}$ bond: What is $\\Delta EN$? (Give your answer to 1 decimal place.)
+1. $\\text{C-O}$ bond: What is $\\Delta EN$? (Give your answer to 3 significant figures.)
 
-2. $\\text{Na-Cl}$ bond: What is $\\Delta EN$? (Give your answer to 1 decimal place.)
+2. $\\text{Na-Cl}$ bond: What is $\\Delta EN$? (Give your answer to 3 significant figures.)
 
-3. $\\text{C-H}$ bond: What is $\\Delta EN$? (Give your answer to 1 decimal place.)`,
+3. $\\text{C-H}$ bond: What is $\\Delta EN$? (Give your answer to 3 significant figures.)`,
       exercise: {
         inputs: [
           {

@@ -107,10 +107,12 @@ A 1.00 L flask is charged with 0.400 mol CO and 0.400 mol Cl₂. No COCl₂ is i
 2) The K expression becomes $255 = \\frac{x}{(0.400-x)^2}$. Using the approximation ($0.400/255$ is small... actually $0.400/255 = 0.00157 < 100$). Should you use the quadratic? (Enter "yes" or "no")
 
 3) Actually, $[\\text{init}]/K = 0.400/255 = 0.00157$, which is much LESS than 100. This means K is LARGE relative to the initial concentration, meaning the reaction goes nearly to completion. The limiting approach here is to assume the reaction goes to completion, then back-calculate. If the reaction goes to completion, what is the limiting reagent amount of COCl₂ formed? (Enter in mol)
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['x', 'yes', '0.400'],
+        correctAnswers: ['x', 'yes', '0.400', '0.4000', '0.40'],
         hint1: 'COCl₂ starts at 0 and gains $+x$.',
         hint2: 'The ratio $[\\text{init}]/K < 100$ means the approximation fails (but for large K, not small K).',
         hint3: 'CO and Cl₂ are in a 1:1 ratio, both at 0.400 mol. They are equally limiting → 0.400 mol COCl₂.',

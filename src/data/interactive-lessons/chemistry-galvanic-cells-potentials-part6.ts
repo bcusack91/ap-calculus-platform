@@ -93,7 +93,7 @@ Use: $\\text{Cu}^{2+}/\\text{Cu} = +0.34$ V, $\\text{Fe}^{2+}/\\text{Fe} = -0.44
 
 For the cell: Fe(s) | Fe²⁺(aq) || Cu²⁺(aq) | Cu(s)
 
-1) $E°_{\\text{cell}} = ?$ (in V, to 2 decimal places)
+1) $E°_{\\text{cell}} = ?$ (in V, to 3 significant figures)
 
 2) $n = ?$ (electrons transferred)
 
@@ -101,7 +101,7 @@ For the cell: Fe(s) | Fe²⁺(aq) || Cu²⁺(aq) | Cu(s)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.78', '2', '-150'],
+        correctAnswers: ['0.78', '2', '-150', '0.780'],
         hint1: '$E°_{\\text{cell}} = 0.34 - (-0.44)$',
         hint2: 'Both Fe → Fe²⁺ and Cu²⁺ → Cu involve 2 electrons.',
         hint3: '$\\Delta G° = -(2)(96485)(0.78)$. Convert to kJ.',

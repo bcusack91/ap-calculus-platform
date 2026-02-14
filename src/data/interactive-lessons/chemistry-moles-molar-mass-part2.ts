@@ -124,15 +124,15 @@ $$M = 40.08 + 2(16.00 + 1.008) = 40.08 + 2(17.008) = 40.08 + 34.02 = 74.10 \\tex
 
 Use these atomic masses: H = 1.008, C = 12.01, N = 14.01, O = 16.00, Na = 22.99, S = 32.07, Cl = 35.45, K = 39.10, Ca = 40.08, Fe = 55.85
 
-1) Calculate the molar mass of ammonia (NH₃) in g/mol. (to 2 decimal places)
+1) Calculate the molar mass of ammonia (NH₃) in g/mol. (to 3 significant figures)
 
-2) Calculate the molar mass of potassium permanganate (KMnO₄) in g/mol. (Mn = 54.94; to 2 decimal places)
+2) Calculate the molar mass of potassium permanganate (KMnO₄) in g/mol. (Mn = 54.94; to 3 significant figures)
 
-3) Calculate the molar mass of iron(III) oxide (Fe₂O₃) in g/mol. (to 2 decimal places)
+3) Calculate the molar mass of iron(III) oxide (Fe₂O₃) in g/mol. (to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['17.03', '158.04', '159.70'],
+        correctAnswers: ['17.03', '158.04', '159.70', '17.030', '158.040', '159.700', '159.7'],
         hint1: '$M_{\\text{NH}_3} = 14.01 + 3(1.008)$.',
         hint2: '$M_{\\text{KMnO}_4} = 39.10 + 54.94 + 4(16.00)$.',
         hint3: '$M_{\\text{Fe}_2\\text{O}_3} = 2(55.85) + 3(16.00)$.',

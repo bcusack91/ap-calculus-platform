@@ -122,15 +122,15 @@ This is why:
       content: `
 **Resolution Calculation Drill** 🧮
 
-1) A telescope has a mirror diameter of $D = 2.4$ m. What is the minimum resolvable angle for light of $\\lambda = 550$ nm? (in arcseconds, 1 rad = 206,265 arcsec; round to 2 decimal places)
+1) A telescope has a mirror diameter of $D = 2.4$ m. What is the minimum resolvable angle for light of $\\lambda = 550$ nm? (in arcseconds, 1 rad = 206,265 arcsec; round to 3 significant figures)
 
-2) Two stars are separated by an angle of $0.10$ arcseconds. What minimum telescope diameter is needed to resolve them at $\\lambda = 500$ nm? (in meters, to 1 decimal place)
+2) Two stars are separated by an angle of $0.10$ arcseconds. What minimum telescope diameter is needed to resolve them at $\\lambda = 500$ nm? (in meters, to 3 significant figures)
 
-3) The pupil of the human eye has diameter $D \\approx 5.0$ mm. What is the angular resolution limit at $\\lambda = 550$ nm? (in arcminutes, to 1 decimal place; 1 rad = 3438 arcmin)
+3) The pupil of the human eye has diameter $D \\approx 5.0$ mm. What is the angular resolution limit at $\\lambda = 550$ nm? (in arcminutes, to 3 significant figures; 1 rad = 3438 arcmin)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.06', '1.3', '0.5'],
+        correctAnswers: ['0.06', '1.3', '0.5', '0.060', '1.30', '0.50'],
         hint1: '$\\theta = 1.22\\lambda/D$ in radians, then multiply by 206,265 to convert to arcseconds.',
         hint2: '$D = 1.22\\lambda/\\theta$. Convert 0.10 arcsec to radians first: divide by 206,265.',
         hint3: '$\\theta = 1.22(550 \\times 10^{-9})/(5.0 \\times 10^{-3})$ in radians, then multiply by 3438.',

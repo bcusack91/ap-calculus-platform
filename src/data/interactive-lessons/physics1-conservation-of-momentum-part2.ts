@@ -136,13 +136,13 @@ In a perfectly inelastic collision, kinetic energy is **always** lost (converted
 
 1) A 4 kg cart at +5 m/s collides with a 6 kg cart at −2 m/s. They stick together. What is the final velocity? (in m/s, to 1 decimal)
 
-2) A 0.010 kg bullet at +400 m/s embeds in a 2.0 kg block at rest. What is the final speed of the block+bullet? (in m/s, to 1 decimal place)
+2) A 0.010 kg bullet at +400 m/s embeds in a 2.0 kg block at rest. What is the final speed of the block+bullet? (in m/s, to 3 significant figures)
 
 3) A 8 kg ball at +3 m/s hits a 2 kg ball at +1 m/s. The 8 kg ball slows to +2 m/s. What is the final velocity of the 2 kg ball? (in m/s)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.8', '2.0', '5'],
+        correctAnswers: ['0.8', '2.0', '5', '0.80', '2.00'],
         hint1: '$(4)(5) + (6)(-2) = (10)v_f$. $20 - 12 = 10v_f$.',
         hint2: '$(0.010)(400) + (2.0)(0) = (2.010)v_f$.',
         hint3: '$(8)(3) + (2)(1) = (8)(2) + (2)(v_2)$. $26 = 16 + 2v_2$.',

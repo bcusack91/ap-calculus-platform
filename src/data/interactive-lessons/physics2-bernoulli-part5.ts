@@ -66,10 +66,12 @@ A Pitot tube on an airplane measures the stagnation pressure (air brought to res
 1) Pressure difference (in Pa)
 2) Air speed of the airplane (in m/s)
 3) This speed in km/h (multiply m/s by 3.6)
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['2000', '57.7', '208'],
+        correctAnswers: ['2000', '57.7', '208', '57.70'],
         hint1: '$\\Delta P = P_{\\text{stag}} - P_{\\text{static}}$.',
         hint2: 'At stagnation: $v = 0$. Bernoulli: $P_{\\text{static}} + \\frac{1}{2}\\rho v^2 = P_{\\text{stag}}$. $v = \\sqrt{2\\Delta P/\\rho}$.',
         hint3: '$v_{\\text{km/h}} = v_{\\text{m/s}} \\times 3.6$.',
@@ -122,7 +124,7 @@ A large open tank has water 10 m deep. A pipe at the bottom carries water horizo
       `,
       exercise: {
         boxes: 2,
-        correctAnswers: ['11.8', '1.18'],
+        correctAnswers: ['11.8', '1.18', '11.80', '1.180'],
         hint1: 'Height of water above nozzle = $10 - 3 = 7$ m. Use Torricelli: $v = \\sqrt{2gh}$.',
         hint2: '$Q = Av$. Convert m³/s to L/s.',
         explanation: 'The nozzle is 7 m below the water surface (10 m tank, nozzle at 3 m height → 7 m of water above). $v = \\sqrt{2(10)(7)} = \\sqrt{140} = 11.83$ m/s. $Q = (10^{-4})(11.83) = 1.18 \\times 10^{-3}$ m³/s = 1.18 L/s.'

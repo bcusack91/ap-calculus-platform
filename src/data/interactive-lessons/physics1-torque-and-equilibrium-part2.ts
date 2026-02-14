@@ -122,7 +122,7 @@ Choose whichever is easiest for the given problem!
       content: `
 **Lever Arm Calculations** 🧮
 
-1) A force of 80 N acts at the end of a 0.5 m beam at $30°$ to the beam. What is the lever arm? (in m, to 2 decimal places)
+1) A force of 80 N acts at the end of a 0.5 m beam at $30°$ to the beam. What is the lever arm? (in m, to 3 significant figures)
 
 2) Using the lever arm from problem 1, what is the torque? (in N·m)
 
@@ -130,7 +130,7 @@ Choose whichever is easiest for the given problem!
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.25', '20', '180'],
+        correctAnswers: ['0.25', '20', '180', '0.250'],
         hint1: '$r_{\\perp} = r\\sin\\theta = 0.5 \\sin 30°$',
         hint2: '$\\tau = r_{\\perp} \\times F = 0.25 \\times 80$',
         hint3: 'The force is horizontal, the pole is vertical → they are perpendicular. $\\tau = rF\\sin 90° = (3)(60)$',

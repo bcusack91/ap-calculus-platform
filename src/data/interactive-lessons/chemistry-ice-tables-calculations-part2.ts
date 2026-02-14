@@ -129,11 +129,11 @@ At equilibrium: $[\\text{NO}_2] = 0.40$ M
 
 2) What is $[\\text{N}_2\\text{O}_4]$ at equilibrium? (Enter as a decimal)
 
-3) Calculate $K_c$. (Enter to 2 decimal places)
+3) Calculate $K_c$. (Enter to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.20', '0.60', '0.27'],
+        correctAnswers: ['0.20', '0.60', '0.27', '0.200', '0.2', '0.600', '0.6', '0.270'],
         hint1: '$[\\text{NO}_2]_{eq} = 2x = 0.40 \\implies x = 0.20$',
         hint2: '$[\\text{N}_2\\text{O}_4]_{eq} = 0.80 - x = 0.80 - 0.20 = 0.60$',
         hint3: '$K_c = \\frac{(0.40)^2}{0.60} = \\frac{0.16}{0.60}$',
@@ -161,11 +161,7 @@ At equilibrium: $[\\text{NO}_2] = 0.40$ M
             options: ['0.70', '0.30', '1.70', '1.00']
           }
         ],
-        correctAnswers: [
-          'directly plug into the K expression',
-          'the relationship E = I + C',
-          '0.30'
-        ],
+        correctAnswers: ['directly plug into the K expression', 'the relationship E = I + C', '0.30', '0.300', '0.3'],
         hint1: 'All equilibrium values known → just substitute.',
         hint2: 'E = I + C allows you to find x from one known equilibrium value.',
         hint3: '$x = [\\text{A}]_0 - [\\text{A}]_{eq} = 1.00 - 0.70 = 0.30$.',

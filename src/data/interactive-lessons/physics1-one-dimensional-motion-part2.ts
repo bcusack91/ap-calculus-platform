@@ -119,13 +119,13 @@ A runner goes 100 m east in 10 s, then 60 m west in 6 s:
 
 1) A bus travels 240 m east in 30 s. What is the average velocity? (in m/s)
 
-2) A delivery truck drives 80 km in 2 hours, then returns 80 km in 3 hours. What is the average speed for the entire trip? (in km/h, round to 1 decimal place)
+2) A delivery truck drives 80 km in 2 hours, then returns 80 km in 3 hours. What is the average speed for the entire trip? (in km/h, round to 3 significant figures)
 
 3) For the same delivery truck, what is the magnitude of the average velocity for the entire trip? (in km/h)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['8', '32.0', '0'],
+        correctAnswers: ['8', '32.0', '0', '32.00'],
         hint1: '$v_{\\text{avg}} = \\Delta x / \\Delta t = 240 / 30$',
         hint2: 'Average speed = total distance / total time = $(80 + 80) / (2 + 3)$',
         hint3: 'The truck returns to its starting point, so displacement = 0.',

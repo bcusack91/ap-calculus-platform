@@ -124,12 +124,12 @@ $$m_{\\max} = \\left\\lfloor \\frac{d}{\\lambda} \\right\\rfloor$$
 A diffraction grating has 800 lines/mm. Monochromatic light of $\\lambda = 550$ nm is incident on it.
 
 1) Slit spacing $d$ (in μm)
-2) Angle of the 1st-order maximum (in degrees, to 1 decimal place)
+2) Angle of the 1st-order maximum (in degrees, to 3 significant figures)
 3) Maximum observable order $m_{\\max}$
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1.25', '26.1', '2'],
+        correctAnswers: ['1.25', '26.1', '2', '1.250', '26.10'],
         hint1: '$d = 1/(800\\text{ lines/mm}) = 1/800$ mm.',
         hint2: '$\\sin\\theta = m\\lambda / d = (1)(550 \\times 10^{-9})/(1.25 \\times 10^{-6})$.',
         hint3: '$m_{\\max} = \\lfloor d / \\lambda \\rfloor = \\lfloor 1250/550 \\rfloor$.',
@@ -145,11 +145,11 @@ A diffraction grating has 800 lines/mm. Monochromatic light of $\\lambda = 550$ 
 A grating has 5000 total slits.
 
 1) What is the resolving power in the 2nd order?
-2) In the 2nd order, what is the minimum wavelength difference $\\Delta\\lambda$ that can be resolved near $\\lambda = 589$ nm? (in nm, to 2 decimal places)
+2) In the 2nd order, what is the minimum wavelength difference $\\Delta\\lambda$ that can be resolved near $\\lambda = 589$ nm? (in nm, to 3 significant figures)
       `,
       exercise: {
         boxes: 2,
-        correctAnswers: ['10000', '0.06'],
+        correctAnswers: ['10000', '0.06', '0.060'],
         hint1: '$R = mN = (2)(5000)$.',
         hint2: '$\\Delta\\lambda = \\lambda / R = 589 / 10000$.',
         explanation: '$R = mN = 2 \\times 5000 = 10{,}000$. $\\Delta\\lambda = 589/10{,}000 = 0.0589 \\approx 0.06$ nm. This grating can resolve the sodium doublet (589.0 nm and 589.6 nm) in 2nd order.'

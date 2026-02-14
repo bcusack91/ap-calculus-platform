@@ -130,13 +130,13 @@ That's about 10 N per cm² — roughly the weight of a 1 kg mass on your fingert
 
 A solid sphere has radius $r = 0.05$ m and mass $m = 1.5$ kg. (Volume of sphere: $V = \\frac{4}{3}\\pi r^3$)
 
-1) Volume of the sphere (in m³, round to 5 decimal places)
+1) Volume of the sphere (in m³, round to 3 significant figures)
 2) Density of the sphere (in kg/m³, round to nearest integer)
 3) Will it sink or float in water? (type "sink" or "float")
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.00052', '2885', 'sink'],
+        correctAnswers: ['0.00052', '2885', 'sink', '0.000520'],
         hint1: '$V = \\frac{4}{3}\\pi (0.05)^3 = \\frac{4}{3}\\pi (1.25 \\times 10^{-4})$.',
         hint2: '$V \approx 5.24 \times 10^{-4}\ \text{m}^3 \approx 0.00052\ \text{m}^3$. Then $\rho = 1.5 / 0.00052$.',
         hint3: '$\rho \approx 2885$ kg/m³. Since $2885 > 1000$, it sinks.',

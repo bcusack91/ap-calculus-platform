@@ -139,11 +139,11 @@ Always check:
 
 Use $R = 0.0821$ L·atm/(mol·K). Round to appropriate significant figures.
 
-1) What volume (in L) does 1.00 mol of ideal gas occupy at STP (0°C, 1.00 atm)? (to 1 decimal place)
+1) What volume (in L) does 1.00 mol of ideal gas occupy at STP (0°C, 1.00 atm)? (to 3 significant figures)
 
-2) What pressure (in atm) is exerted by 3.50 mol of gas in a 20.0 L container at 400 K? (to 2 decimal places)
+2) What pressure (in atm) is exerted by 3.50 mol of gas in a 20.0 L container at 400 K? (to 3 significant figures)
 
-3) How many moles of gas are in a 10.0 L container at 2.00 atm and 27°C? (to 3 decimal places)
+3) How many moles of gas are in a 10.0 L container at 2.00 atm and 27°C? (to 3 significant figures)
       `,
       exercise: {
         inputs: [

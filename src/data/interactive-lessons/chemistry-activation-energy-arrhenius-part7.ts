@@ -93,7 +93,7 @@ A reaction energy diagram shows:
 
 The rate constant for the decomposition of N₂O₅ is $k = 3.46 \\times 10^{-5}$ s⁻¹ at 298 K and $k = 4.87 \\times 10^{-3}$ s⁻¹ at 338 K.
 
-1) Calculate $E_a$ in kJ/mol. (to 1 decimal place)
+1) Calculate $E_a$ in kJ/mol. (to 3 significant figures)
 
 2) Calculate the frequency factor $A$. (order of magnitude: enter the exponent, e.g., for 10¹³ enter 13)
 
@@ -101,7 +101,7 @@ The rate constant for the decomposition of N₂O₅ is $k = 3.46 \\times 10^{-5}
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['103.5', '13', '2e-4'],
+        correctAnswers: ['103.5', '13', '2e-4', '103.50'],
         hint1: 'ln(4.87e-3/3.46e-5) = ln(140.8) = 4.948. 1/298 − 1/338 = 3.356e-3 − 2.959e-3 = 3.97e-4. Ea = 8.314 × 4.948/3.97e-4 = 41.14/3.97e-4 = 103,600 J/mol = 103.6 kJ/mol.',
         hint2: 'ln A = ln k + Ea/(RT) = ln(3.46e-5) + 103,600/(8.314 × 298) = −10.27 + 41.77 = 31.50. A = e^31.5 ≈ 4.8 × 10¹³. Exponent = 13.',
         hint3: 'ln(k/3.46e-5) = (103,600/8.314)(1/298 − 1/310) = 12,462 × (3.356e-3 − 3.226e-3) = 12,462 × 1.30e-4 = 1.62. k = 3.46e-5 × e^1.62 = 3.46e-5 × 5.05 = 1.75e-4 ≈ 2e-4.',
@@ -197,15 +197,15 @@ A catalyzed reaction has the following data:
 | 300 | 0.050 |
 | 350 | 0.85 |
 
-1) Calculate Ea for the catalyzed reaction. (in kJ/mol, to 1 decimal place)
+1) Calculate Ea for the catalyzed reaction. (in kJ/mol, to 3 significant figures)
 
-2) The uncatalyzed reaction has Ea = 100 kJ/mol. By how many kJ/mol does the catalyst lower Ea? (to 1 decimal place)
+2) The uncatalyzed reaction has Ea = 100 kJ/mol. By how many kJ/mol does the catalyst lower Ea? (to 3 significant figures)
 
 3) At 300 K, what is the ratio k(cat)/k(uncat)? (to 1 significant figure, scientific notation: e.g., 3e5)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['50.2', '49.8', '5e8'],
+        correctAnswers: ['50.2', '49.8', '5e8', '50.20', '49.80'],
         hint1: 'ln(0.85/0.050) = ln(17) = 2.833. 1/300 − 1/350 = 3.333e-3 − 2.857e-3 = 4.76e-4. Ea = 8.314 × 2.833/4.76e-4 = 23.55/4.76e-4 = 49,500 J/mol ≈ 50.2 kJ/mol.',
         hint2: 'ΔEa = 100 − 50.2 = 49.8 kJ/mol.',
         hint3: 'k(cat)/k(uncat) = e^((100,000−50,200)/(8.314×300)) = e^(49,800/2494) = e^(19.97) ≈ 4.7 × 10⁸ ≈ 5 × 10⁸.',

@@ -120,13 +120,13 @@ $$a_{\\text{max}} = A\\omega^2 = 4\\pi^2 f^2 A = \\frac{4\\pi^2 A}{T^2}$$
 
 1) An oscillator has $f = 5.0$ Hz. What is its period? (in seconds)
 
-2) An oscillator has $T = 0.25$ s. What is its angular frequency? (in rad/s, round to 2 decimal places)
+2) An oscillator has $T = 0.25$ s. What is its angular frequency? (in rad/s, round to 3 significant figures)
 
 3) A spring system has $k = 200$ N/m and $m = 0.50$ kg with amplitude $A = 0.10$ m. What is the maximum speed? (in m/s)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.2', '25.13', '2.0'],
+        correctAnswers: ['0.2', '25.13', '2.0', '0.20', '25.130', '2.00'],
         hint1: '$T = 1/f = 1/5.0$',
         hint2: '$\\omega = 2\\pi/T = 2\\pi/0.25$',
         hint3: '$v_{\\text{max}} = A\\omega = A\\sqrt{k/m} = 0.10\\sqrt{200/0.50}$',

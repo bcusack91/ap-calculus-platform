@@ -96,10 +96,12 @@ $$\\Delta G° \\xleftrightarrow{-nF} E° \\xleftrightarrow{0.0592/n} \\log K \\x
 2) E° = 0.40 V, n = 2. What is $\\log K$? (to 1 decimal)
 
 3) A dead battery has E = ___ V and Q = ___ (type "0" and "K" separated by a comma)
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['-154.4', '13.5', '0, K'],
+        correctAnswers: ['-154.4', '13.5', '0, K', '-154.40', '13.50'],
         hint1: '$\\Delta G° = -(2)(96485)(0.80)$. Convert to kJ.',
         hint2: '$\\log K = (2)(0.40)/0.0592$',
         hint3: 'At equilibrium: E = 0 and Q = K.',

@@ -143,15 +143,15 @@ Use the equation: $\\text{Fe}_2\\text{O}_3 + 3\\text{CO} \\rightarrow 2\\text{Fe
 
 Molar masses: Fe₂O₃ = 159.7 g/mol, CO = 28.01 g/mol, Fe = 55.85 g/mol, CO₂ = 44.01 g/mol
 
-1) How many grams of Fe are produced from 159.7 g of Fe₂O₃? (to 1 decimal place)
+1) How many grams of Fe are produced from 159.7 g of Fe₂O₃? (to 3 significant figures)
 
-2) How many grams of CO are needed to react with 79.85 g of Fe₂O₃? (to 1 decimal place)
+2) How many grams of CO are needed to react with 79.85 g of Fe₂O₃? (to 3 significant figures)
 
-3) How many grams of CO₂ are produced from 84.03 g of CO? (to 1 decimal place)
+3) How many grams of CO₂ are produced from 84.03 g of CO? (to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['111.7', '42.0', '132.0'],
+        correctAnswers: ['111.7', '42.0', '132.0', '111.70', '42.00', '132.00'],
         hint1: '159.7 g Fe₂O₃ = 1.000 mol → 2.000 mol Fe → ? g Fe.',
         hint2: '79.85 g Fe₂O₃ = 0.500 mol → 1.500 mol CO → ? g CO.',
         hint3: '84.03 g CO = 3.000 mol → 3.000 mol CO₂ → ? g CO₂.',

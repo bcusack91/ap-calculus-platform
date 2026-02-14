@@ -161,7 +161,7 @@ Compare: 0.10 M $HCl$ has $pH = 1.00$. Same concentration, but the weak acid has
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1.88', '5.6e-6', '1.3'],
+        correctAnswers: ['1.88', '5.6e-6', '1.3', '1.880', '0.00001', '1.30'],
         hint1: '$[H^+] = \\sqrt{(6.8 \\times 10^{-4})(0.25)}$, then $pH = -\\log[H^+]$.',
         hint2: '$[H^+] = \\sqrt{(6.2 \\times 10^{-10})(0.050)}$.',
         hint3: 'Percent ionization = $([H^+]/C) \\times 100\\%$.',

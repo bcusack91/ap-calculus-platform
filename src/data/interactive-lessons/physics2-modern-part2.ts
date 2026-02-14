@@ -151,13 +151,13 @@ Use $h = 6.63 \\times 10^{-34}$ J·s, $m_e = 9.11 \\times 10^{-31}$ kg, $1 \\tex
 
 An electron is accelerated from rest through a potential difference of 100 V.
 
-1) Kinetic energy gained by the electron ($\\times 10^{-17}$ J, 2 decimal places)
-2) Speed of the electron ($\\times 10^{6}$ m/s, 2 decimal places)
-3) de Broglie wavelength ($\\times 10^{-10}$ m, 2 decimal places)
+1) Kinetic energy gained by the electron ($\\times 10^{-17}$ J, 3 significant figures)
+2) Speed of the electron ($\\times 10^{6}$ m/s, 3 significant figures)
+3) de Broglie wavelength ($\\times 10^{-10}$ m, 3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1.60', '5.93', '1.23'],
+        correctAnswers: ['1.60', '5.93', '1.23', '1.600', '1.6', '5.930', '1.230'],
         hint1: '$KE = eV = (1.60 \\times 10^{-19})(100) = 1.60 \\times 10^{-17}$ J.',
         hint2: '$KE = \\frac{1}{2}mv^2 \\Rightarrow v = \\sqrt{2KE/m} = \\sqrt{2(1.60 \\times 10^{-17})/(9.11 \\times 10^{-31})}$.',
         hint3: '$\\lambda = h/(mv) = 6.63 \\times 10^{-34}/[(9.11 \\times 10^{-31})(5.93 \\times 10^6)]$.',

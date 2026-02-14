@@ -118,11 +118,11 @@ Use $G = 6.67 \\times 10^{-11}$ N·m²/kg², $M_E = 5.97 \\times 10^{24}$ kg, $R
 
 2) What is the orbital period of the ISS (in minutes, round to nearest whole number)?
 
-3) What orbital radius gives a period of exactly 24 hours (geosynchronous orbit)? Express as a multiple of $R_E$ (round to 1 decimal place).
+3) What orbital radius gives a period of exactly 24 hours (geosynchronous orbit)? Express as a multiple of $R_E$ (round to 3 significant figures).
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['7700', '92', '6.6'],
+        correctAnswers: ['7700', '92', '6.6', '6.60'],
         hint1: '$r = 6.37 \\times 10^6 + 0.4 \\times 10^6 = 6.77 \\times 10^6$ m. $v = \\sqrt{GM/r}$.',
         hint2: '$T = 2\\pi r/v$. Convert to minutes.',
         hint3: 'From $T = 2\\pi\\sqrt{r^3/(GM)}$, solve for $r$. $T = 86400$ s.',

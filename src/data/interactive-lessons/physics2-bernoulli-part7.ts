@@ -101,10 +101,12 @@ A fire hose (diameter 6.0 cm) is connected to a hydrant at ground level with pre
 1) If the speed in the hose at ground level is $v_1$, find $v_2$ in terms of $v_1$ (ratio $v_2/v_1$)
 2) Using Bernoulli (with continuity), find $v_1$ (in m/s) [Hint: $v_2 = 9v_1$]
 3) Speed of water exiting the nozzle (in m/s)
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['9', '2.24', '20'],
+        correctAnswers: ['9', '2.24', '20', '2.240'],
         hint1: '$v_2/v_1 = A_1/A_2 = (d_1/d_2)^2 = (6/2)^2$.',
         hint2: '$P_1 + \\frac{1}{2}\\rho v_1^2 = P_2 + \\frac{1}{2}\\rho(9v_1)^2 + \\rho g h$. $400000 + \\frac{1}{2}(1000)v_1^2 = 100000 + \\frac{1}{2}(1000)(81v_1^2) + 100000$.',
         hint3: '$v_2 = 9 v_1$.',

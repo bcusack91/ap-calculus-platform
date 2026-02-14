@@ -159,10 +159,12 @@ A 100 W light bulb converts 100 joules of electrical energy per second — mostl
 3) What power does the toaster in #2 dissipate? (in W)
 
 4) A 500 $\\Omega$ resistor has 25 V across it. What power does it dissipate? (in W)
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 4,
-        correctAnswers: ['30', '12', '1200', '1.25'],
+        correctAnswers: ['30', '12', '1200', '1.25', '1.250'],
         hint1: '$V = IR = (0.30)(100)$.',
         hint2: '$R = V/I = 120/10$.',
         hint3: '$P = IV = (10)(120)$ or $P = I^2 R = (10)^2(12)$.',

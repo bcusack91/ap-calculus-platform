@@ -127,10 +127,12 @@ You must heat the brass ring to about **152°C** for it to slip over the steel r
 2) A concrete sidewalk slab is 5.00 m long at 5°C. What gap (in mm) is needed between slabs if the maximum temperature is 45°C? ($\\alpha_{\\text{concrete}} = 12 \\times 10^{-6}$ /°C)
 
 3) A glass flask ($\\beta = 27 \\times 10^{-6}$ /°C) holds exactly 500.0 mL of mercury ($\\beta = 182 \\times 10^{-6}$ /°C) at 20°C. How many mL of mercury overflow when heated to 100°C?
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['321', '2.4', '6.2'],
+        correctAnswers: ['321', '2.4', '6.2', '2.40', '6.20'],
         hint1: '$d_{\\text{Cu}}(1 + \\alpha_{\\text{Cu}} \\Delta T) = d_{\\text{rod}}$. Solve for $\\Delta T$, then add to 25°C.',
         hint2: '$\\Delta L = \\alpha L_0 \\Delta T = (12 \\times 10^{-6})(5.00)(40)$. Convert to mm.',
         hint3: '$\\Delta V_{\\text{overflow}} = (\\beta_{\\text{Hg}} - \\beta_{\\text{glass}}) V_0 \\Delta T$.',

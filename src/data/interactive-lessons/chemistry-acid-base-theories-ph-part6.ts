@@ -114,7 +114,7 @@ A student mixes 25.0 mL of 0.080 M $HNO_3$ with 15.0 mL of 0.080 M $KOH$.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['8.0e-4', '0.040', '1.30'],
+        correctAnswers: ['8.0e-4', '0.040', '1.30', '0.00080', '0.0400', '0.04', '1.300', '1.3'],
         hint1: 'Moles $H^+$ = $(0.025)(0.080)$; Moles $OH^-$ = $(0.015)(0.080)$; subtract.',
         hint2: 'Total volume = $25.0 + 15.0 = 40.0$ mL = 0.040 L.',
         hint3: '$[H^+] = \\frac{\\text{excess mol}}{\\text{total vol}}$, then $pH = -\\log[H^+]$.',

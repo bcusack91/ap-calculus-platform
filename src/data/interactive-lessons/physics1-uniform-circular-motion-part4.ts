@@ -134,15 +134,15 @@ For a rotating solid object (like a wheel):
       content: `
 **Angular Velocity Calculations** 🧮
 
-1) A bicycle wheel has radius 0.35 m and rotates at 3 rev/s. What is the angular velocity $\\omega$ (in rad/s, round to 1 decimal place)?
+1) A bicycle wheel has radius 0.35 m and rotates at 3 rev/s. What is the angular velocity $\\omega$ (in rad/s, round to 3 significant figures)?
 
-2) A point on the rim of the wheel in problem 1 has what linear speed (in m/s, round to 1 decimal place)?
+2) A point on the rim of the wheel in problem 1 has what linear speed (in m/s, round to 3 significant figures)?
 
 3) What is the centripetal acceleration of that point (in m/s², round to nearest whole number)?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['18.8', '6.6', '124'],
+        correctAnswers: ['18.8', '6.6', '124', '18.80', '6.60'],
         hint1: '$\\omega = 2\\pi f = 2\\pi(3)$.',
         hint2: '$v = r\\omega$.',
         hint3: '$a_c = r\\omega^2$ or $v^2/r$.',

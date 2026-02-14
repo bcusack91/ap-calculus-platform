@@ -142,10 +142,12 @@ The impulse from gravity: $J_y = mg\\Delta t = (2)(10)(3) = 60$ kg·m/s — exac
 2) Two 3 kg blocks collide on a surface with friction $\\mu_k = 0.2$. If the collision lasts 0.005 s, what is the impulse from friction on the system during the collision? (in N·s, use $g = 10$ m/s²)
 
 3) For the same system in problem 2, if the blocks slide together for 2 s after colliding, what impulse does friction deliver during this time? (in N·s)
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['200', '0.06', '24'],
+        correctAnswers: ['200', '0.06', '24', '0.060'],
         hint1: '$J = mg\\Delta t = (5)(10)(4)$',
         hint2: '$f = \\mu_k m_{\\text{total}} g = (0.2)(6)(10) = 12$ N. $J = f \\times 0.005$',
         hint3: '$J = f \\times \\Delta t = (12)(2)$',

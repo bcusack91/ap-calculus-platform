@@ -86,15 +86,15 @@ This workshop provides practice with the Nernst equation, concentration cells, t
       content: `
 **Calculation Workshop** 🧮
 
-1) $E° = 0.80$ V, $n = 1$, $Q = 0.001$ at 25°C. Calculate $E$. (to 3 decimal places)
+1) $E° = 0.80$ V, $n = 1$, $Q = 0.001$ at 25°C. Calculate $E$. (to 3 significant figures)
 
-2) A concentration cell: $[\\text{Cu}^{2+}] = 0.01$ M and $1.0$ M, $n = 2$. Calculate $E$. (to 4 decimal places)
+2) A concentration cell: $[\\text{Cu}^{2+}] = 0.01$ M and $1.0$ M, $n = 2$. Calculate $E$. (to 3 significant figures)
 
-3) $E° = 1.50$ V, $n = 3$. Calculate $\\log K$. (to 1 decimal place)
+3) $E° = 1.50$ V, $n = 3$. Calculate $\\log K$. (to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.978', '0.0592', '76.0'],
+        correctAnswers: ['0.978', '0.0592', '76.0', '0.9780', '0.05920', '76.00'],
         hint1: '$E = 0.80 - (0.0592)\\log(0.001) = 0.80 - (0.0592)(-3)$',
         hint2: '$E = (0.0592/2)\\log(1.0/0.01) = (0.0296)(2)$',
         hint3: '$\\log K = (3)(1.50)/0.0592$',

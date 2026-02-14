@@ -149,15 +149,15 @@ Examples: tuning fork (high Q), pendulum in honey (low Q)
 
 A damped oscillator starts with amplitude $A_0 = 0.20$ m and loses 10% of its energy each cycle.
 
-1) What fraction of the original energy remains after 3 cycles? (as a decimal, round to 3 decimal places)
+1) What fraction of the original energy remains after 3 cycles? (as a decimal, round to 3 significant figures)
 
-2) What is the amplitude after 3 cycles? (in m, round to 3 decimal places)
+2) What is the amplitude after 3 cycles? (in m, round to 3 significant figures)
 
 3) After how many complete cycles is the energy reduced to less than half? (give the smallest integer)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.729', '0.171', '7'],
+        correctAnswers: ['0.729', '0.171', '7', '0.7290', '0.1710'],
         hint1: '$E_3 = (0.90)^3 E_0$',
         hint2: '$A_3 = A_0 \\sqrt{E_3/E_0} = 0.20\\sqrt{0.729}$',
         hint3: '$(0.90)^n < 0.50$. Try $n = 6$: $(0.90)^6 = 0.531$. Try $n = 7$: $(0.90)^7 = 0.478$',

@@ -147,10 +147,12 @@ Use $g = 10$ m/s².
 2) What is the tension in the same string at the top, if the speed at the top is 3 m/s (in N)?
 
 3) A roller coaster loop has radius 15 m. What minimum height must the car start from (released from rest) to safely complete the loop? Assume frictionless. Hint: use energy conservation. (in m)
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['17.5', '0.5', '37.5'],
+        correctAnswers: ['17.5', '0.5', '37.5', '17.50', '0.50', '37.50'],
         hint1: '$T = mg + mv^2/r$ at the bottom.',
         hint2: '$T = mv^2/r - mg$ at the top.',
         hint3: 'At top of loop: $v_{min} = \\sqrt{gr}$. Height of top of loop = $2r$. Energy: $mgh = \\frac{1}{2}mv_{top}^2 + mg(2r)$.',

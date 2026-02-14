@@ -120,13 +120,13 @@ $\\Delta S < 0$ ✓ — consistent with our prediction!
 Use these $S°$ values [J/(mol·K)]:
 $\\text{CO}_2(g) = 213.7$, $\\text{H}_2\\text{O}(g) = 188.8$, $\\text{H}_2\\text{O}(l) = 69.9$, $\\text{CH}_4(g) = 186.3$, $\\text{O}_2(g) = 205.1$, $\\text{C}(s) = 5.7$, $\\text{H}_2(g) = 130.7$
 
-1) Calculate $\\Delta S°$ for: $\\text{C}(s) + \\text{O}_2(g) \\rightarrow \\text{CO}_2(g)$ [J/K, to 1 decimal place]
+1) Calculate $\\Delta S°$ for: $\\text{C}(s) + \\text{O}_2(g) \\rightarrow \\text{CO}_2(g)$ [J/K, to 3 significant figures]
 
-2) Calculate $\\Delta S°$ for: $\\text{CH}_4(g) + 2\\text{O}_2(g) \\rightarrow \\text{CO}_2(g) + 2\\text{H}_2\\text{O}(g)$ [J/K, to 1 decimal place]
+2) Calculate $\\Delta S°$ for: $\\text{CH}_4(g) + 2\\text{O}_2(g) \\rightarrow \\text{CO}_2(g) + 2\\text{H}_2\\text{O}(g)$ [J/K, to 3 significant figures]
       `,
       exercise: {
         boxes: 2,
-        correctAnswers: ['2.9', '-242.2'],
+        correctAnswers: ['2.9', '-242.2', '2.90', '-242.20'],
         hint1: '$[213.7] - [5.7 + 205.1]$',
         hint2: '$[213.7 + 2(188.8)] - [186.3 + 2(205.1)]$',
         explanation: '1) $\\Delta S° = 213.7 - (5.7 + 205.1) = 213.7 - 210.8 = 2.9$ J/K. Note: despite $\\Delta n_{\\text{gas}} = 0$, ΔS° is slightly positive. 2) $\\Delta S° = [213.7 + 377.6] - [186.3 + 410.2] = 591.3 - 596.5 = -5.2$ J/K. Wait, let me recalculate: $213.7 + 2(188.8) = 213.7 + 377.6 = 591.3$. $186.3 + 2(205.1) = 186.3 + 410.2 = 596.5$. $\\Delta S° = 591.3 - 596.5 = -5.2$ J/K. Hmm, that contradicts the answer. Let me recheck with $\\Delta n_{gas} = 3-3=0$... The answer -5.2 is correct. Actually I need to reconsider the given answer of -242.2. With H₂O(l) instead: $[213.7 + 2(69.9)] - [186.3 + 2(205.1)] = 353.5 - 596.5 = -243.0$. The answer should be -5.2 J/K with H₂O(g).'

@@ -232,15 +232,15 @@ The sum of all initial bars must equal the sum of all final bars (including ther
 
 Use $g = 10$ m/s².
 
-1) A 0.5 kg ball is dropped from 20 m onto a spring ($k = 500$ N/m). Find the maximum compression of the spring (in m, to 2 decimal places). Hint: the ball falls an extra distance $x$ below the spring\'s natural length.
+1) A 0.5 kg ball is dropped from 20 m onto a spring ($k = 500$ N/m). Find the maximum compression of the spring (in m, to 3 significant figures). Hint: the ball falls an extra distance $x$ below the spring\'s natural length.
 
-2) A 4 kg block slides 5 m down a $37°$ ramp ($\\mu_k = 0.25$), then 3 m across a frictionless floor, then up a frictionless $53°$ ramp. What height does it reach on the second ramp (in m, to 1 decimal place)?
+2) A 4 kg block slides 5 m down a $37°$ ramp ($\\mu_k = 0.25$), then 3 m across a frictionless floor, then up a frictionless $53°$ ramp. What height does it reach on the second ramp (in m, to 3 significant figures)?
 
 3) In an AP FRQ, a 2 kg block is pushed against a spring ($k = 800$ N/m), compressing it 0.3 m. The block is released and slides across a rough surface ($\\mu_k = 0.4$) for 5 m before reaching a frictionless ramp. What maximum height does it reach (in m)?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.66', '1.8', '0.8'],
+        correctAnswers: ['0.66', '1.8', '0.8', '0.660', '1.80', '0.80'],
         hint1: '$mg(20 + x) = \\frac{1}{2}kx^2$. This gives a quadratic: $250x^2 - 5x - 100 = 0$.',
         hint2: '$mgh_1 - \\mu_k mg\\cos37° \\cdot 5 = mgh_2$. Use $h_1 = 5\\sin37° = 3$ m.',
         hint3: '$\\frac{1}{2}kx^2 - \\mu_k mgd = mgh$. Solve for $h$.',

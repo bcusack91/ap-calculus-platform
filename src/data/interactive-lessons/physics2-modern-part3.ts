@@ -153,14 +153,14 @@ Use $E_n = -13.6/n^2$ eV and $\\lambda = 1240/\\Delta E$ (nm).
 
 A hydrogen atom transitions from the $n = 5$ level to the $n = 2$ level.
 
-1) Energy of $n = 5$ level (in eV, 3 decimal places)
-2) Energy of $n = 2$ level (in eV, 2 decimal places)
-3) Energy of emitted photon (in eV, 2 decimal places)
+1) Energy of $n = 5$ level (in eV, 3 significant figures)
+2) Energy of $n = 2$ level (in eV, 3 significant figures)
+3) Energy of emitted photon (in eV, 3 significant figures)
 4) Wavelength of emitted photon (in nm, round to nearest whole number)
       `,
       exercise: {
         boxes: 4,
-        correctAnswers: ['-0.544', '-3.40', '2.86', '434'],
+        correctAnswers: ['-0.544', '-3.40', '2.86', '434', '-0.5440', '-3.400', '-3.4', '2.860'],
         hint1: '$E_5 = -13.6/25 = -0.544$ eV.',
         hint2: '$E_2 = -13.6/4 = -3.40$ eV. $\\Delta E = E_5 - E_2$.',
         hint3: '$\\lambda = 1240/\\Delta E$.',

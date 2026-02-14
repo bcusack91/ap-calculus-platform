@@ -76,15 +76,15 @@ A 0.50 kg block on a spring oscillates with a period of 0.40 s and an amplitude 
 
 A pendulum clock keeps perfect time on Earth ($g = 9.8$ m/s²). It is taken to a planet where $g = 4.9$ m/s².
 
-1) By what factor does the period change? (give as a decimal, round to 2 decimal places)
+1) By what factor does the period change? (give as a decimal, round to 3 significant figures)
 
-2) If the Earth period was 1.00 s, what is the new period? (in seconds, round to 2 decimal places)
+2) If the Earth period was 1.00 s, what is the new period? (in seconds, round to 3 significant figures)
 
 3) Will the clock run fast or slow on the new planet? (type "fast" or "slow")
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1.41', '1.41', 'slow'],
+        correctAnswers: ['1.41', '1.41', 'slow', '1.410'],
         hint1: '$T \\propto 1/\\sqrt{g}$. Factor $= \\sqrt{g_{\\text{Earth}}/g_{\\text{planet}}} = \\sqrt{9.8/4.9}$',
         hint2: '$T_{\\text{new}} = 1.00 \\times \\sqrt{2}$',
         hint3: 'If each swing takes longer, does the clock run fast or slow?',
@@ -178,13 +178,13 @@ A 2.0 kg mass hangs from a vertical spring and stretches it 0.10 m to a new equi
 
 1) What is the spring constant $k$? (in N/m, use $g = 9.8$ m/s²)
 
-2) What is the period of oscillation? (in seconds, round to 2 decimal places)
+2) What is the period of oscillation? (in seconds, round to 3 significant figures)
 
-3) What is the maximum speed? (in m/s, round to 2 decimal places)
+3) What is the maximum speed? (in m/s, round to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['196', '0.63', '0.50'],
+        correctAnswers: ['196', '0.63', '0.50', '0.630', '0.500', '0.5'],
         hint1: 'At equilibrium: $kx = mg \\Rightarrow k = mg/x = 2.0(9.8)/0.10$',
         hint2: '$T = 2\\pi\\sqrt{m/k} = 2\\pi\\sqrt{2.0/196}$',
         hint3: '$v_{\\text{max}} = A\\omega$ where $A = 0.05$ m and $\\omega = 2\\pi/T$',

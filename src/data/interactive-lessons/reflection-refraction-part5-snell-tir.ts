@@ -298,14 +298,14 @@ The light ray bends away from the normal when exiting water!
 
 Light goes from air ($n_1=1.00$) into glass ($n_2=1.50$) at $\\theta_1=30^\\circ$.
 
-Enter in order (rounded reasonably):
+Enter in order (to 3 significant figures where applicable):
 1) $\\sin\\theta_2$
 2) $\\theta_2$ in degrees
 3) Direction phrase: \`toward\` or \`away\`
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.333', '19.5', 'toward'],
+        correctAnswers: ['0.333', '19.5', 'toward', '0.3330', '19.50'],
         hint1: 'Rearrange to $\\sin\\theta_2 = (n_1/n_2)\\sin\\theta_1$.',
         hint2: 'Use $\\sin 30^\\circ = 0.5$ and multiply by $1/1.5$.',
         hint3: 'Take inverse sine, then compare n-values for direction.',

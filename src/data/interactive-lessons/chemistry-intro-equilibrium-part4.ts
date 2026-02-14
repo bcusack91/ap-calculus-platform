@@ -150,10 +150,12 @@ Given: $\\text{A}(g) \\rightleftharpoons 2\\,\\text{B}(g)$, $K_c = 25$
 2) What is $K_c$ for $\\frac{1}{2}\\text{A}(g) \\rightleftharpoons \\text{B}(g)$? (Enter as a whole number)
 
 3) Given also: $\\text{B}(g) \\rightleftharpoons \\text{C}(g)$, $K_c = 2.0$. What is $K_c$ for $\\text{A}(g) \\rightleftharpoons 2\\,\\text{C}(g)$? (Enter as a whole number)
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.04', '5', '100'],
+        correctAnswers: ['0.04', '5', '100', '0.040'],
         hint1: 'Reversing the reaction: $K_{\\text{rev}} = 1/K = 1/25 = 0.04$.',
         hint2: 'Multiplying by 1/2: $K\' = K^{1/2} = \\sqrt{25} = 5$.',
         hint3: 'A ⇌ 2B has $K_1 = 25$. B ⇌ C has $K_2 = 2.0$. For 2B ⇌ 2C, $K = K_2^2 = 4$. Overall: $K = K_1 \\times K_2^2 = 25 \\times 4 = 100$.',

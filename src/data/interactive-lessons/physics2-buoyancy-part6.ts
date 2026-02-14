@@ -130,10 +130,12 @@ $\\rho_{\\text{air}} = 1.2$ kg/m³, $\\rho_{\\text{He}} = 0.16$ kg/m³.
 1) Buoyant force on the balloon (in N)
 2) Total weight (helium + envelope) (in N)
 3) Maximum payload mass it can lift (in kg)
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['6', '0.9', '0.51'],
+        correctAnswers: ['6', '0.9', '0.51', '0.90', '0.510'],
         hint1: '$F_B = \\rho_{\\text{air}} V g = (1.2)(0.50)(10)$.',
         hint2: '$W = (m_{\\text{He}} + m_{\\text{envelope}})g = (\\rho_{\\text{He}} V + 0.010)(10)$.',
         hint3: 'Net lift = $F_B - W_{\\text{total}}$. Max payload mass = net lift / $g$.',

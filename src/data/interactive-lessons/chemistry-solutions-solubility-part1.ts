@@ -271,10 +271,12 @@ For the AP exam, you need to know which ionic compounds are soluble in water:
 2) At 25°C, the solubility of NaCl is 36.0 g per 100 g of water. If 30.0 g of NaCl is added to 100 g of water at 25°C, how many grams of NaCl dissolve?
 
 3) Using the same conditions as problem 2, how many grams of NaCl remain undissolved at the bottom?
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['100.0', '30.0', '0.0'],
+        correctAnswers: ['100.0', '30.0', '0.0', '100.00', '30.00', '0.00'],
         hint1: 'Total mass = mass of solute + mass of solvent.',
         hint2: 'The solubility limit is 36.0 g per 100 g water. Is 30.0 g less than or greater than this limit?',
         hint3: 'Since 30.0 g < 36.0 g solubility limit, all of the NaCl dissolves.',

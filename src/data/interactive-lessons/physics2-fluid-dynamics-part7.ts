@@ -105,10 +105,12 @@ A water tower supplies water through a pipe of diameter 10 cm at 2.0 m/s. The pi
 1) Total flow rate from the tower (in L/s)
 2) Speed in Branch A (in m/s)
 3) Speed in Branch B (in m/s)
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['15.7', '2.78', '1.56'],
+        correctAnswers: ['15.7', '2.78', '1.56', '15.70', '2.780', '1.560'],
         hint1: '$Q = \\pi(0.05)^2(2.0)$. Convert to L/s.',
         hint2: 'Equal flow: $Q_A = Q/2$. $v_A = Q_A/(\\pi r_A^2) = Q_A/(\\pi(0.03)^2)$.',
         hint3: '$Q_B = Q/2$. $v_B = Q_B/(\\pi(0.04)^2)$.',

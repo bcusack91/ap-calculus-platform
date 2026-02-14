@@ -150,15 +150,15 @@ $$v_{min} = \\sqrt{rg\\frac{\\tan\\theta - \\mu_s}{1 + \\mu_s\\tan\\theta}}$$
 
 Use $g = 10$ m/s².
 
-1) A highway curve has radius 200 m. What banking angle is needed for a design speed of 30 m/s (in degrees, round to 1 decimal place)?
+1) A highway curve has radius 200 m. What banking angle is needed for a design speed of 30 m/s (in degrees, round to 3 significant figures)?
 
-2) A track is banked at $30°$ with radius 100 m. What is the design speed — the speed requiring no friction (in m/s, round to 1 decimal place)?
+2) A track is banked at $30°$ with radius 100 m. What is the design speed — the speed requiring no friction (in m/s, round to 3 significant figures)?
 
 3) A curve is banked at $20°$ with radius 150 m. What is the maximum speed if $\\mu_s = 0.3$ (in m/s, round to nearest whole number)? Use $v_{max} = \\sqrt{rg(\\tan\\theta + \\mu_s)/(1 - \\mu_s\\tan\\theta)}$.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['24.2', '24.0', '33'],
+        correctAnswers: ['24.2', '24.0', '33', '24.20', '24.00'],
         hint1: '$\\theta = \\tan^{-1}(v^2/(rg))$.',
         hint2: '$v = \\sqrt{rg\\tan\\theta}$.',
         hint3: 'Plug in: $\\theta = 20°$, $r = 150$, $\\mu_s = 0.3$, $g = 10$.',

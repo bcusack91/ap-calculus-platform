@@ -149,10 +149,12 @@ Given:
 2) What is the order with respect to Y? (integer)
 
 3) What is the value of k? (in appropriate units, give the number only — e.g., if k = 2.0, enter 2.0)
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['2', '1', '2.0'],
+        correctAnswers: ['2', '1', '2.0', '2.00'],
         hint1: 'Compare Exp 1 & 2: Rate ratio = 0.018/0.0020 = 9. [X] ratio = 0.30/0.10 = 3. So 3^m = 9.',
         hint2: 'Compare Exp 1 & 3: Rate ratio = 0.0060/0.0020 = 3. [Y] ratio = 3. So 3^n = 3.',
         hint3: 'Rate = k[X]²[Y]. Use Exp 1: 0.0020 = k(0.10)²(0.10) = k(0.001). k = 2.0 M⁻²s⁻¹.',

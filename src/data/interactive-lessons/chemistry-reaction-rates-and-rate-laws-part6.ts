@@ -153,15 +153,15 @@ For the reaction $2\\text{A} + \\text{B} \\rightarrow \\text{C} + 3\\text{D}$:
 
 Given Rate = k[M]²[N] and the following data point: when [M] = 0.25 M and [N] = 0.40 M, the rate is 0.050 M/s.
 
-1) Calculate k (number only, to 1 decimal place)
+1) Calculate k (number only, to 3 significant figures)
 
-2) What is the rate when [M] = 0.50 M and [N] = 0.20 M? (in M/s, to 3 decimal places)
+2) What is the rate when [M] = 0.50 M and [N] = 0.20 M? (in M/s, to 3 significant figures)
 
 3) By what factor does the rate change if [M] is halved and [N] is doubled? (give the number)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['2.0', '0.100', '0.5'],
+        correctAnswers: ['2.0', '0.100', '0.5', '2.00', '0.1000', '0.10', '0.50'],
         hint1: 'k = Rate/([M]²[N]) = 0.050/((0.25)²(0.40)) = 0.050/(0.0625 × 0.40) = 0.050/0.025 = 2.0.',
         hint2: 'Rate = 2.0(0.50)²(0.20) = 2.0(0.25)(0.20) = 2.0(0.050) = 0.100 M/s.',
         hint3: 'Factor = (1/2)²(2) = (1/4)(2) = 1/2 = 0.5.',

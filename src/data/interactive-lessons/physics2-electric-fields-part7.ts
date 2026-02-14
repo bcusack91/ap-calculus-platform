@@ -150,10 +150,12 @@ A parallel-plate capacitor: plate area $A = 0.01\\ \\text{m}^2$, separation $d =
 1) Capacitance (in pF, where 1 pF = $10^{-12}$ F)
 2) If charged to $V = 200$ V, charge stored $Q$ (in nC, where 1 nC = $10^{-9}$ C)
 3) Energy stored (in μJ, where 1 μJ = $10^{-6}$ J)
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['88.5', '17.7', '1.77'],
+        correctAnswers: ['88.5', '17.7', '1.77', '88.50', '17.70', '1.770'],
         hint1: '$C = \epsilon_0 A/d = (8.85 \times 10^{-12})(0.01)/(0.001)$.',
         hint2: '$Q = CV = (88.5 \times 10^{-12})(200)$. Convert to nC.',
         hint3: '$U = \frac{1}{2}CV^2 = \frac{1}{2}(88.5 \times 10^{-12})(200)^2$. Convert to μJ.',

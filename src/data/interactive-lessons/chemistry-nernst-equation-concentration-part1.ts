@@ -154,10 +154,12 @@ For a cell with $E° = +0.80$ V and $n = 2$ at 298 K:
 2) If $Q = 100$, is $E$ greater than or less than $E°$? (type "greater" or "less")
 
 3) If $Q = K$, what is $E$? (in V)
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.80', 'less', '0'],
+        correctAnswers: ['0.80', 'less', '0', '0.800', '0.8'],
         hint1: '$\\ln(1) = 0$, so the correction term vanishes.',
         hint2: '$Q > 1$ means $\\ln Q > 0$, which subtracts from $E°$.',
         hint3: 'At equilibrium, no driving force remains.',

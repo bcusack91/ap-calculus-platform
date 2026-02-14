@@ -144,7 +144,10 @@ Use the following PES data for an unknown element:
 | B | 23.4 | 2 |
 | C | 18.7 | 6 |
 | D | 2.45 | 2 |
-| E | 1.09 | 2 |`,
+| E | 1.09 | 2 |
+
+*Round all answers to 3 significant figures.*
+      `,
       exercise: {
         inputs: [
           {

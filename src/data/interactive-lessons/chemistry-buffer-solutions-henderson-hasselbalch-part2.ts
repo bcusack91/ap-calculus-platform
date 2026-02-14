@@ -146,7 +146,7 @@ A buffer has 0.20 mol $HF$ and 0.20 mol $NaF$ in 1.0 L. ($pK_a = 3.17$)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['3.17', '0.15', '3.05'],
+        correctAnswers: ['3.17', '0.15', '3.05', '3.170', '0.150', '3.050'],
         hint1: '$pH = pK_a + \\log(0.20/0.20) = pK_a + 0$.',
         hint2: '$F^- + H^+ \\rightarrow HF$: 0.20 - 0.050 = 0.15 mol $F^-$.',
         hint3: '$pH = 3.17 + \\log(0.15/0.25)$.',

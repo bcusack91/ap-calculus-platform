@@ -139,7 +139,7 @@ At standard temperature and pressure (STP: 0°C, 1 atm), **1 mole of any ideal g
 
 2) A gas occupies 500 mL at 27°C. What volume will it occupy at 127°C at constant pressure? (in mL, round to nearest whole number)
 
-3) 4.00 mol of gas occupies 10.0 L at a given T and P. How many moles would occupy 25.0 L? (in mol, to 2 decimal places)
+3) 4.00 mol of gas occupies 10.0 L at a given T and P. How many moles would occupy 25.0 L? (in mol, to 3 significant figures)
       `,
       exercise: {
         inputs: [

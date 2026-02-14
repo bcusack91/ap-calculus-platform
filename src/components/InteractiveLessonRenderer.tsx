@@ -91,6 +91,37 @@ function InlineLatex({ text, className }: { text: string; className?: string }) 
   )
 }
 
+// Smart numeric answer comparison for sig fig tolerance
+// Handles trailing zeros, scientific notation, and minor rounding differences
+function isAnswerMatch(studentAnswer: string, correctAnswer: string): boolean {
+  const sa = studentAnswer.trim().toLowerCase().replace(/\s+/g, '')
+  const ca = correctAnswer.trim().toLowerCase().replace(/\s+/g, '')
+
+  // Exact string match
+  if (sa === ca) return true
+  if (sa === '' || ca === '') return false
+
+  // Try numeric comparison (handles 2.5 vs 2.50, 3.0e-5 vs 0.00003, etc.)
+  const sNum = Number(sa)
+  const cNum = Number(ca)
+
+  if (!isNaN(sNum) && !isNaN(cNum)) {
+    if (cNum === 0) return Math.abs(sNum) < 0.001
+    // 0.5% relative tolerance — catches sig fig/rounding differences
+    // but NOT wrong calculations (e.g., 2.5 vs 2.6 = 4% → rejected)
+    const relativeDiff = Math.abs(sNum - cNum) / Math.abs(cNum)
+    return relativeDiff < 0.005
+  }
+
+  return false
+}
+
+// Compare arrays of answers using smart numeric matching
+function areAllAnswersCorrect(studentAnswers: string[], correctAnswers: string[]): boolean {
+  if (studentAnswers.length !== correctAnswers.length) return false
+  return studentAnswers.every((sa, i) => isAnswerMatch(sa, correctAnswers[i]))
+}
+
 interface Section {
   id: string
   type: 'text' | 'input-boxes' | 'dropdown-select' | 'multiple-choice' | 'reference-angle-quiz' | 'factoring-practice' | 'mini-boss'
@@ -2941,7 +2972,22 @@ function InputBoxExercise({
   onComplete: () => void
   isComplete: boolean
 }) {
-  const [answers, setAnswers] = useState<string[]>(Array(section.exercise.boxes).fill(''))
+  // Normalize between two exercise formats:
+  // Format A: { boxes, correctAnswers, hint1, hint2, hint3, explanation }
+  // Format B: { inputs: [{ label, correctAnswer, explanation }] }
+  const hasInputsFormat = !!section.exercise.inputs
+  const numBoxes = hasInputsFormat ? section.exercise.inputs.length : (section.exercise.boxes || 1)
+  const correctAnswersList: string[] = hasInputsFormat 
+    ? section.exercise.inputs.map((input: any) => input.correctAnswer) 
+    : (section.exercise.correctAnswers || [])
+  const inputLabels: string[] | null = hasInputsFormat 
+    ? section.exercise.inputs.map((input: any) => input.label) 
+    : null
+  const inputExplanations: string[] | null = hasInputsFormat 
+    ? section.exercise.inputs.map((input: any) => input.explanation || '') 
+    : null
+
+  const [answers, setAnswers] = useState<string[]>(Array(numBoxes).fill(''))
   const [attempts, setAttempts] = useState(0)
   const [showHint, setShowHint] = useState(false)
   const [showAnswer, setShowAnswer] = useState(false)
@@ -2950,7 +2996,7 @@ function InputBoxExercise({
 
   const handleSubmit = () => {
     setHasSubmitted(true)
-    const isCorrect = JSON.stringify(answers) === JSON.stringify(section.exercise.correctAnswers)
+    const isCorrect = areAllAnswersCorrect(answers, correctAnswersList)
     
     if (isCorrect && !isComplete) {
       setTimeout(() => {
@@ -2977,32 +3023,61 @@ function InputBoxExercise({
     setAnswers(newAnswers)
     
     // Auto-advance to next input only if all correct answers are single-digit
-    const hasMultiDigitAnswers = section.exercise.correctAnswers.some((ans: string) => ans.length > 1)
-    if (value && index < section.exercise.boxes - 1 && !hasMultiDigitAnswers) {
+    const hasMultiDigitAnswers = correctAnswersList.some((ans: string) => ans.length > 1)
+    if (value && index < numBoxes - 1 && !hasMultiDigitAnswers) {
       inputRefs.current[index + 1]?.focus()
     }
   }
 
-  const isCorrect = JSON.stringify(answers) === JSON.stringify(section.exercise.correctAnswers)
+  const isCorrect = areAllAnswersCorrect(answers, correctAnswersList)
 
   return (
     <div className="space-y-6">
       <FadeInText content={section.content} />
       
-      <div className="flex gap-4 justify-center flex-wrap">
-        {Array.from({ length: section.exercise.boxes }).map((_, index) => (
-          <input
-            key={index}
-            ref={(el) => { inputRefs.current[index] = el }}
-            type="text"
-            value={answers[index]}
-            onChange={(e) => handleInputChange(index, e.target.value)}
-            className="w-20 h-20 text-3xl text-center border-2 border-gray-300 rounded-lg focus:border-purple-500 focus:ring-2 focus:ring-purple-200"
-            disabled={isComplete || showAnswer}
-            placeholder="?"
-          />
-        ))}
-      </div>
+      {/* Inputs format: labeled input fields with descriptions */}
+      {hasInputsFormat ? (
+        <div className="space-y-4">
+          {section.exercise.inputs.map((input: any, index: number) => (
+            <div key={index} className="flex items-center gap-4 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">
+              <label className="flex-1 text-base font-medium text-gray-700 dark:text-gray-300">
+                <InlineLatex text={input.label} />
+              </label>
+              <input
+                ref={(el) => { inputRefs.current[index] = el }}
+                type="text"
+                value={answers[index]}
+                onChange={(e) => handleInputChange(index, e.target.value)}
+                className="w-32 px-3 py-2 text-lg text-center border-2 border-gray-300 dark:border-gray-600 rounded-lg focus:border-purple-500 focus:ring-2 focus:ring-purple-200 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                disabled={isComplete || showAnswer}
+                placeholder="?"
+              />
+              {/* Per-input feedback */}
+              {hasSubmitted && (
+                <span className="text-xl">
+                  {isAnswerMatch(answers[index], correctAnswersList[index]) ? '✅' : '❌'}
+                </span>
+              )}
+            </div>
+          ))}
+        </div>
+      ) : (
+        /* Original boxes format: simple grid of input squares */
+        <div className="flex gap-4 justify-center flex-wrap">
+          {Array.from({ length: numBoxes }).map((_, index) => (
+            <input
+              key={index}
+              ref={(el) => { inputRefs.current[index] = el }}
+              type="text"
+              value={answers[index]}
+              onChange={(e) => handleInputChange(index, e.target.value)}
+              className="w-20 h-20 text-3xl text-center border-2 border-gray-300 rounded-lg focus:border-purple-500 focus:ring-2 focus:ring-purple-200"
+              disabled={isComplete || showAnswer}
+              placeholder="?"
+            />
+          ))}
+        </div>
+      )}
 
       {!isComplete && !showAnswer && (
         <button
@@ -3016,7 +3091,7 @@ function InputBoxExercise({
       {showHint && attempts === 1 && !isCorrect && (
         <div className="bg-blue-100 dark:bg-blue-900/30 border-l-4 border-blue-500 p-6 rounded-r-lg">
           <p className="text-lg font-semibold text-blue-900 dark:text-blue-200">
-            💡 Hint: <InlineLatex text={section.exercise.hint1 || 'Try again!'} />
+            💡 Hint: <InlineLatex text={section.exercise.hint1 || 'Try again! Check your calculation step by step.'} />
           </p>
         </div>
       )}
@@ -3039,12 +3114,34 @@ function InputBoxExercise({
 
       {showAnswer && (
         <div className="bg-green-100 dark:bg-green-900/30 border-l-4 border-green-500 p-6 rounded-r-lg">
-          <p className="text-lg font-semibold text-green-900 dark:text-green-200 mb-3">
-            ✓ Answer: {section.exercise.correctAnswers.join(', ')}
-          </p>
-          <p className="text-lg text-green-800 dark:text-green-300">
-            <InlineLatex text={section.exercise.explanation || ''} />
-          </p>
+          {/* Inputs format: show each answer with its explanation */}
+          {hasInputsFormat && inputExplanations ? (
+            <div className="space-y-3">
+              <p className="text-lg font-semibold text-green-900 dark:text-green-200 mb-2">✓ Answers:</p>
+              {section.exercise.inputs.map((input: any, index: number) => (
+                <div key={index} className="pl-4 border-l-2 border-green-400">
+                  <p className="font-medium text-green-900 dark:text-green-200">
+                    <InlineLatex text={input.label} />: <strong>{input.correctAnswer}</strong>
+                  </p>
+                  {input.explanation && (
+                    <p className="text-sm text-green-800 dark:text-green-300 mt-1">
+                      <InlineLatex text={input.explanation} />
+                    </p>
+                  )}
+                </div>
+              ))}
+            </div>
+          ) : (
+            /* Original format: show combined answer and explanation */
+            <>
+              <p className="text-lg font-semibold text-green-900 dark:text-green-200 mb-3">
+                ✓ Answer: {correctAnswersList.join(', ')}
+              </p>
+              <p className="text-lg text-green-800 dark:text-green-300">
+                <InlineLatex text={section.exercise.explanation || ''} />
+              </p>
+            </>
+          )}
         </div>
       )}
 

@@ -159,11 +159,11 @@ A 0.5 kg block oscillates on a horizontal spring ($k = 200$ N/m) with amplitude 
 
 2) What is the speed of the block at $x = 0.06$ m (in m/s)?
 
-3) At what displacement is the speed half of $v_{\\max}$ (in m, to 3 decimal places)?
+3) At what displacement is the speed half of $v_{\\max}$ (in m, to 3 significant figures)?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1', '1.6', '0.087'],
+        correctAnswers: ['1', '1.6', '0.087', '1.60', '0.0870'],
         hint1: '$E = \\frac{1}{2}kA^2 = \\frac{1}{2}(200)(0.01)$.',
         hint2: '$\\frac{1}{2}mv^2 = E - \\frac{1}{2}kx^2 = 1 - \\frac{1}{2}(200)(0.0036) = 1 - 0.36$.',
         hint3: '$v = v_{\\max}/2 \\Rightarrow KE = \\frac{1}{4}mv_{\\max}^2 = E/4$. So $PE = 3E/4 \\Rightarrow \\frac{1}{2}kx^2 = \\frac{3}{4}E$.',

@@ -102,15 +102,15 @@ $$\\vec{F}_{\\text{net}} = m\\vec{a}$$
 
 A 3 kg block sits on a frictionless table. A string runs horizontally from the block, over a frictionless pulley at the table\'s edge, and down to a hanging 2 kg block.
 
-1) What is the acceleration of the system (in m/s²)? Round to 1 decimal place. Use $g = 9.8$ m/s².
+1) What is the acceleration of the system (in m/s²)? Round to 3 significant figures. Use $g = 9.8$ m/s².
 
-2) What is the tension in the string (in N)? Round to 1 decimal place.
+2) What is the tension in the string (in N)? Round to 3 significant figures.
 
-3) How far does the 2 kg block fall from rest in 2 seconds (in m)? Round to 1 decimal place.
+3) How far does the 2 kg block fall from rest in 2 seconds (in m)? Round to 3 significant figures.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['3.9', '11.8', '7.8'],
+        correctAnswers: ['3.9', '11.8', '7.8', '3.90', '11.80', '7.80'],
         hint1: 'System: $F_{\\text{net}} = m_2 g$, total mass $= m_1 + m_2 = 5$ kg.',
         hint2: 'For the hanging block: $m_2 g - T = m_2 a$, so $T = m_2(g - a)$.',
         hint3: '$d = \\frac{1}{2}at^2 = \\frac{1}{2}(3.92)(4)$.',

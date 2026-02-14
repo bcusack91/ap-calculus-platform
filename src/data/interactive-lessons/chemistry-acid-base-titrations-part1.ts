@@ -150,7 +150,7 @@ $$[HCl] = \\frac{2.775 \\times 10^{-3}}{0.0250} = 0.111 \\text{ M}$$
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['60.0', '1.48', '12.80'],
+        correctAnswers: ['60.0', '1.48', '12.80', '60.00', '1.480', '12.800', '12.8'],
         hint1: '$M_a V_a = M_b V_b$: $0.100 \\times V = 0.200 \\times 30.0$.',
         hint2: 'Excess $H^+$: mol $H^+ = 0.004 - 0.002 = 0.002$. Total volume = 60.0 mL.',
         hint3: 'Excess $OH^-$: $0.0005$ mol in 80.0 mL. Find $pOH$, then $pH = 14 - pOH$.',

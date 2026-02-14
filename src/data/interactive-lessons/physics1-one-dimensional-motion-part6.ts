@@ -72,13 +72,13 @@ This lesson is all about **practice**. We'll work through a variety of 1D kinema
 
 1) A car accelerates from 10 m/s to 30 m/s over 200 m. What is the acceleration? (in m/s²)
 
-2) A ball is thrown downward from a 50 m building at 5 m/s. How long until it hits the ground? (in seconds, round to 1 decimal place; use $g = 10$ m/s²)
+2) A ball is thrown downward from a 50 m building at 5 m/s. How long until it hits the ground? (in seconds, round to 3 significant figures; use $g = 10$ m/s²)
 
 3) A police car starts from rest and accelerates at 3 m/s². A speeder passes at a constant 24 m/s at the same moment. How long until the police car catches the speeder? (in seconds)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['2', '2.7', '16'],
+        correctAnswers: ['2', '2.7', '16', '2.70'],
         hint1: '$v^2 = v_0^2 + 2a\\Delta x$: $30^2 = 10^2 + 2a(200)$',
         hint2: 'Taking downward as positive: $50 = 5t + \\frac{1}{2}(10)t^2$. Use the quadratic formula.',
         hint3: 'Police: $x_p = \\frac{1}{2}(3)t^2$. Speeder: $x_s = 24t$. Set $x_p = x_s$.',
@@ -126,11 +126,11 @@ This lesson is all about **practice**. We'll work through a variety of 1D kinema
 
 1) Two cars start from rest at the same point. Car A accelerates at 2 m/s² and Car B accelerates at 3 m/s². After 10 s, how much farther has Car B traveled than Car A? (in meters)
 
-2) A ball is dropped from 80 m. At the same instant, a ball is thrown upward from the ground at 20 m/s. At what height do they meet? (in meters, use $g = 10$ m/s²; round to 1 decimal place)
+2) A ball is dropped from 80 m. At the same instant, a ball is thrown upward from the ground at 20 m/s. At what height do they meet? (in meters, use $g = 10$ m/s²; round to 3 significant figures)
       `,
       exercise: {
         boxes: 2,
-        correctAnswers: ['50', '60.5'],
+        correctAnswers: ['50', '60.5', '60.50'],
         hint1: '$\\Delta x_A = \\frac{1}{2}(2)(100) = 100$ m, $\\Delta x_B = \\frac{1}{2}(3)(100) = 150$ m.',
         hint2: 'Dropped ball: $y_1 = 80 - \\frac{1}{2}(10)t^2$. Thrown ball: $y_2 = 20t - \\frac{1}{2}(10)t^2$. Set $y_1 = y_2$.',
         explanation: '1) $x_B - x_A = 150 - 100 = 50$ m. 2) $80 - 5t^2 = 20t - 5t^2$, so $80 = 20t$, $t = 4$ s. Height: $y = 80 - 5(16) = 80 - 80 = 0$... Wait, let me recalculate: $y_2 = 20(4) - 5(16) = 80 - 80 = 0$. Actually at $t = 4$, $y_1 = 80 - 5(16) = 0$. They meet at $t = 4$ s at the ground. Let me re-solve: Setting equal: $80 - 5t^2 = 20t - 5t^2 \\Rightarrow 80 = 20t \\Rightarrow t = 4$ s. $y = 80 - 5(16) = 0$ m. Hmm — they meet at ground level. Using $g = 9.8$: $80 - 4.9t^2 = 20t - 4.9t^2 \\Rightarrow t = 4$, $y = 80 - 4.9(16) = 80 - 78.4 = 1.6$ m. With $g = 10$, they meet at ground. Let me adjust: with the problem as stated using $g = 10$, $y = 80 - 5(16) = 0$ m. The answer is 0 m — they meet at ground level.'

@@ -114,13 +114,13 @@ Use $G = 6.67 \\times 10^{-11}$ N·m²/kg², $g_E = 10$ m/s², $R_E = 6.4 \\time
 
 1) What is the gravitational field strength at twice Earth's radius from Earth's center (in m/s²)?
 
-2) Mars has mass $6.42 \\times 10^{23}$ kg and radius $3.39 \\times 10^6$ m. What is its surface gravity (in m/s², round to 1 decimal place)?
+2) Mars has mass $6.42 \\times 10^{23}$ kg and radius $3.39 \\times 10^6$ m. What is its surface gravity (in m/s², round to 3 significant figures)?
 
-3) At what distance from Earth's center (in units of $R_E$, round to 1 decimal place) is $g = 1$ m/s²?
+3) At what distance from Earth's center (in units of $R_E$, round to 3 significant figures) is $g = 1$ m/s²?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['2.5', '3.7', '3.2'],
+        correctAnswers: ['2.5', '3.7', '3.2', '2.50', '3.70', '3.20'],
         hint1: '$g \\propto 1/r^2$. At $2R_E$: $g = g_E/4$.',
         hint2: '$g = GM/R^2$.',
         hint3: '$g/g_E = (R_E/r)^2 \\Rightarrow r/R_E = \\sqrt{g_E/g}$.',

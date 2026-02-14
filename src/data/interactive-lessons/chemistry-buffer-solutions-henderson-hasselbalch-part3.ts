@@ -133,7 +133,7 @@ This is a critically important result: **the pH of a buffer with equal concentra
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['3.35', '8.95', '5.8'],
+        correctAnswers: ['3.35', '8.95', '5.8', '3.350', '8.950', '5.80'],
         hint1: '$pH = 3.17 + \\log(0.60/0.40)$.',
         hint2: 'For $NH_3/NH_4^+$ buffer: $pH = pK_a(NH_4^+) + \\log([NH_3]/[NH_4^+])$.',
         hint3: '$5.50 = 4.74 + \\log(x)$; solve for $x = 10^{0.76}$.',

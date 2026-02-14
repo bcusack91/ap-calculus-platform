@@ -119,11 +119,11 @@ The period goes from ~30 days to **milliseconds**! This explains why pulsars (ro
 
 2) What is the ratio of her tucked KE to her extended KE?
 
-3) A merry-go-round ($I = 800$ kg·m², $\\omega = 2$ rad/s) has a 40 kg child ($r = 2$ m from center) jump off tangentially. What is the new $\\omega$? (in rad/s, round to 2 decimal places)
+3) A merry-go-round ($I = 800$ kg·m², $\\omega = 2$ rad/s) has a 40 kg child ($r = 2$ m from center) jump off tangentially. What is the new $\\omega$? (in rad/s, round to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['8', '4', '2.44'],
+        correctAnswers: ['8', '4', '2.44', '2.440'],
         hint1: '$I_i\\omega_i = I_f\\omega_f$: $(14)(2) = (3.5)\\omega_f$',
         hint2: '$KE_f/KE_i = I_i/I_f$',
         hint3: 'Child\'s $I = mr^2 = 40(4) = 160$ kg·m². Before: $L = (800 + 160)(2) = 1920$. After (child gone): $L_{\\text{MGR}} = 800\\omega_f$. But wait — angular momentum includes the child\'s $L$ after jumping. If child jumps off tangentially at the current tangential velocity $v = r\\omega = 2(2) = 4$ m/s, the child keeps $L_{\\text{child}} = mvr = 40(4)(2) = 320$. So $1920 - 320 = 800\\omega_f$.',

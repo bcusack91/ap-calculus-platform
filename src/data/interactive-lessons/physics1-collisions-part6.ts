@@ -75,15 +75,15 @@ Is this collision elastic?
 
 A 0.015 kg bullet at 600 m/s embeds in a 3.0 kg block at rest.
 
-1) What is the velocity of the block+bullet right after impact? (in m/s, to 1 decimal place)
+1) What is the velocity of the block+bullet right after impact? (in m/s, to 3 significant figures)
 
-2) What fraction of the bullet\'s kinetic energy is lost? (as a percentage, round to 1 decimal place)
+2) What fraction of the bullet\'s kinetic energy is lost? (as a percentage, round to 3 significant figures)
 
-3) If the block+bullet slides on a surface with $\\mu_k = 0.30$, how far does it slide? (in m, to 2 decimal places, use $g = 10$ m/s²)
+3) If the block+bullet slides on a surface with $\\mu_k = 0.30$, how far does it slide? (in m, to 3 significant figures, use $g = 10$ m/s²)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['3.0', '99.5', '1.50'],
+        correctAnswers: ['3.0', '99.5', '1.50', '3.00', '99.50', '1.500', '1.5'],
         hint1: '$v_f = (0.015)(600)/(3.015) \\approx 9/3.015$',
         hint2: '$KE_i = \\frac{1}{2}(0.015)(360000) = 2700$ J. $KE_f = \\frac{1}{2}(3.015)(9)$. Fraction lost = $(KE_i - KE_f)/KE_i$.',
         hint3: 'Use $v^2 = 2\\mu g d$. $d = v^2/(2 \\times 0.30 \\times 10)$.',

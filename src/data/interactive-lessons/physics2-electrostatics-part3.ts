@@ -117,11 +117,11 @@ Use $k = 9.0 \\times 10^9$ N·m²/C² (rounded for cleaner math).
 Enter in order:
 1) $|q_1 q_2|$ in C² (use scientific notation like \`16e-12\`)
 2) $r^2$ in m²
-3) Force magnitude in N (round to 1 decimal)
+3) Force magnitude in N (to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['16e-12', '0.16', '0.9'],
+        correctAnswers: ['16e-12', '0.16', '0.9', '0.160', '0.90'],
         hint1: '$|q_1 q_2| = (2.0 \\times 10^{-6})(8.0 \\times 10^{-6})$.',
         hint2: '$r^2 = (0.40)^2 = 0.16$ m².',
         hint3: '$F = (9.0 \\times 10^9)(16 \\times 10^{-12}/0.16) = (9.0 \\times 10^9)(10^{-10}) = 0.9$ N.',

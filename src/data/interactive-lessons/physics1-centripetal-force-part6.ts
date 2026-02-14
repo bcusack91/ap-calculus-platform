@@ -88,15 +88,15 @@ $N = 6mg$ — the rider feels **6g** at the bottom!
 
 Use $g = 10$ m/s².
 
-1) A 2 kg block slides from rest down a frictionless ramp of height 8 m and enters a circular loop of radius 2 m. What is the block's speed at the top of the loop (in m/s, round to 1 decimal place)?
+1) A 2 kg block slides from rest down a frictionless ramp of height 8 m and enters a circular loop of radius 2 m. What is the block's speed at the top of the loop (in m/s, round to 3 significant figures)?
 
 2) In problem 1, what is the normal force on the block at the top of the loop (in N)?
 
-3) A spring ($k = 500$ N/m) compressed 0.6 m launches a 0.5 kg ball into a vertical loop of radius 1 m (loop bottom is at spring level). What is the ball's speed at the top of the loop (in m/s, round to 1 decimal place)?
+3) A spring ($k = 500$ N/m) compressed 0.6 m launches a 0.5 kg ball into a vertical loop of radius 1 m (loop bottom is at spring level). What is the ball's speed at the top of the loop (in m/s, round to 3 significant figures)?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['8.9', '60', '14.1'],
+        correctAnswers: ['8.9', '60', '14.1', '8.90', '14.10'],
         hint1: 'Energy: $mgh = \\frac{1}{2}mv_{top}^2 + mg(2r)$. Solve for $v_{top}$.',
         hint2: 'At the top: $mg + N = mv_{top}^2/r$. Solve for $N$.',
         hint3: 'Energy: $\\frac{1}{2}kx^2 = \\frac{1}{2}mv_{top}^2 + mg(2r)$. Solve for $v_{top}$.',
@@ -157,13 +157,13 @@ Use $g = 10$ m/s².
 
 1) A 1500 kg car travels at 20 m/s over a circular dip in the road (radius 80 m). What is the normal force at the bottom of the dip (in N)?
 
-2) A conical pendulum has string length 2 m and the ball moves at 4 m/s in a horizontal circle. What is the radius of the circle (in m, round to 2 decimal places)?
+2) A conical pendulum has string length 2 m and the ball moves at 4 m/s in a horizontal circle. What is the radius of the circle (in m, round to 3 significant figures)?
 
-3) A banked frictionless curve has radius 100 m and banking angle $15°$. What is the design speed (in m/s, round to 1 decimal place)?
+3) A banked frictionless curve has radius 100 m and banking angle $15°$. What is the design speed (in m/s, round to 3 significant figures)?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['22500', '1.24', '16.4'],
+        correctAnswers: ['22500', '1.24', '16.4', '1.240', '16.40'],
         hint1: 'At bottom of dip: $N - mg = mv^2/r$.',
         hint2: '$T\\sin\\theta = mv^2/r$ and $T\\cos\\theta = mg$. Also $r = L\\sin\\theta$. Combine these.',
         hint3: '$v = \\sqrt{rg\\tan\\theta}$.',

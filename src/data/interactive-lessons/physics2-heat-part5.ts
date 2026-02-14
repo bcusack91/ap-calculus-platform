@@ -120,15 +120,15 @@ The air gap provides about **98%** of the total thermal resistance, despite bein
 
 A Styrofoam cooler wall ($k = 0.033$ W/(m·K)) is 3.0 cm thick and has a total surface area of 0.80 m². The inside is at 2°C and the outside is at 32°C.
 
-1) What is the thermal resistance $R = L/k$ of the wall? (m²·K/W, round to 2 decimal places)
+1) What is the thermal resistance $R = L/k$ of the wall? (m²·K/W, round to 3 significant figures)
 
-2) What is the rate of heat flow into the cooler? (in watts, round to 1 decimal place)
+2) What is the rate of heat flow into the cooler? (in watts, round to 3 significant figures)
 
 3) How much heat enters the cooler in 6 hours? (in kJ, round to nearest whole number)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.91', '26.4', '570'],
+        correctAnswers: ['0.91', '26.4', '570', '0.910', '26.40'],
         hint1: '$R = L/k = 0.030 / 0.033$.',
         hint2: '$Q/t = A \\Delta T / R = (0.80)(30) / 0.91$.',
         hint3: 'Total heat = power × time. Convert 6 hours to seconds: $6 \\times 3{,}600 = 21{,}600$ s. Then convert J to kJ.',
@@ -143,15 +143,15 @@ A Styrofoam cooler wall ($k = 0.033$ W/(m·K)) is 3.0 cm thick and has a total s
 
 A wall consists of 10 cm of brick ($k = 0.60$ W/(m·K)) and 5 cm of insulation ($k = 0.040$ W/(m·K)) in series. The wall area is 12 m². The inside temperature is 22°C and the outside is $-8$°C.
 
-1) $R_{\\text{brick}}$ in m²·K/W (round to 2 decimal places)
+1) $R_{\\text{brick}}$ in m²·K/W (round to 3 significant figures)
 
-2) $R_{\\text{insulation}}$ in m²·K/W (round to 2 decimal places)
+2) $R_{\\text{insulation}}$ in m²·K/W (round to 3 significant figures)
 
 3) Total rate of heat loss through the wall in watts (round to nearest whole number)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.17', '1.25', '254'],
+        correctAnswers: ['0.17', '1.25', '254', '0.170', '1.250'],
         hint1: '$R_{\\text{brick}} = L/k = 0.10/0.60$.',
         hint2: '$R_{\\text{insulation}} = L/k = 0.05/0.040$.',
         hint3: '$R_{\\text{total}} = R_{\\text{brick}} + R_{\\text{insulation}}$. Then $Q/t = A \\Delta T / R_{\\text{total}} = (12)(30)/R_{\\text{total}}$.',

@@ -120,10 +120,12 @@ Both salts are 1:1 type: $K_{sp} = [\\text{M}^{2+}][\\text{SO}_4^{2-}]$
 2) $[\\text{SO}_4^{2-}]$ needed to start precipitating CaSO₄? (Enter in scientific notation, e.g. 2.5e-3)
 
 3) Which precipitates first? (Enter "BaSO4" or "CaSO4")
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['5.5e-9', '2.5e-3', 'BaSO4'],
+        correctAnswers: ['5.5e-9', '2.5e-3', 'BaSO4', '0.00000', '0.00250'],
         hint1: '$[\\text{SO}_4^{2-}] = K_{sp}/[\\text{Ba}^{2+}] = 1.1 \\times 10^{-10}/0.020$',
         hint2: '$[\\text{SO}_4^{2-}] = K_{sp}/[\\text{Ca}^{2+}] = 4.9 \\times 10^{-5}/0.020$',
         hint3: 'The one requiring less SO₄²⁻ precipitates first.',

@@ -141,7 +141,7 @@ At higher temperatures, the distribution **flattens and shifts right** — more 
 
 Use $k_B = 1.38 \\times 10^{-23}$ J/K and $R = 8.314$ J/(mol·K).
 
-1) Find the average translational KE (in units of $10^{-21}$ J) of a gas molecule at $T = 400$ K. Round to 2 decimal places.
+1) Find the average translational KE (in units of $10^{-21}$ J) of a gas molecule at $T = 400$ K. Round to 3 significant figures.
 
 2) Find the rms speed (in m/s) of oxygen molecules ($M = 32 \\times 10^{-3}$ kg/mol) at $T = 300$ K. Round to the nearest whole number.
 
@@ -149,7 +149,7 @@ Use $k_B = 1.38 \\times 10^{-23}$ J/K and $R = 8.314$ J/(mol·K).
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['8.28', '484', '501'],
+        correctAnswers: ['8.28', '484', '501', '8.280'],
         hint1: '$KE_{\\text{avg}} = \\frac{3}{2}k_BT = \\frac{3}{2}(1.38 \\times 10^{-23})(400)$.',
         hint2: '$v_{\\text{rms}} = \\sqrt{\\frac{3RT}{M}} = \\sqrt{\\frac{3(8.314)(300)}{0.032}}$.',
         hint3: '$v_{\\text{rms}} = \\sqrt{\\frac{3RT}{M}}$. Solve for $T$: $T = \\frac{Mv_{\\text{rms}}^2}{3R}$.',

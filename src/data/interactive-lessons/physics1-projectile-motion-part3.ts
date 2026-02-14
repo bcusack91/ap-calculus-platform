@@ -121,10 +121,12 @@ A ball is launched from ground level at 30 m/s at 53° above horizontal. Use $g 
 3) $v_{0x}$ (in m/s)
 
 4) Range (in meters)
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 4,
-        correctAnswers: ['24', '4.8', '18', '86.4'],
+        correctAnswers: ['24', '4.8', '18', '86.4', '4.80', '86.40'],
         hint1: '$v_{0y} = 30(0.8) = 24$ m/s',
         hint2: '$t = \\frac{2(24)}{10} = 4.8$ s',
         hint3: '$v_{0x} = 30(0.6) = 18$ m/s. $R = 18(4.8)$',
@@ -171,10 +173,12 @@ A projectile is launched at 20 m/s at 45° from ground level. Use $g = 10$ m/s²
 1) Time of flight (in seconds, round to 1 decimal)
 
 2) Range using $R = \\frac{v_0^2\\sin 2\\theta}{g}$ (in meters)
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 2,
-        correctAnswers: ['2.8', '40'],
+        correctAnswers: ['2.8', '40', '2.80'],
         hint1: '$v_{0y} = 20\\sin 45° \\approx 14.14$. $t = \\frac{2(14.14)}{10}$',
         hint2: 'At 45°, $\\sin 2\\theta = \\sin 90° = 1$. $R = \\frac{v_0^2}{g}$.',
         hint3: '$R = \\frac{20^2}{10} = \\frac{400}{10}$',

@@ -143,10 +143,12 @@ A car (mass 1500 kg, weight 15,000 N) sits on a hydraulic lift piston with area 
 1) Pressure under the car piston (in Pa)
 2) Area of small input piston needed if you can push with 300 N (in m²)
 3) How far must the small piston move to raise the car 0.10 m? (in m)
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['60000', '0.005', '5'],
+        correctAnswers: ['60000', '0.005', '5', '0.0050'],
         hint1: '$P = F/A = 15{,}000 / 0.25$.',
         hint2: '$A_1 = F_1/P = 300/60{,}000$.',
         hint3: 'Work in = work out: $F_1 d_1 = F_2 d_2$. So $d_1 = F_2 d_2 / F_1 = 15{,}000 \\times 0.10 / 300$.',

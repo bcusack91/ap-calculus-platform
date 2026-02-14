@@ -117,15 +117,15 @@ The positive $E°_{\\text{cell}}$ confirms the reaction is spontaneous.
 
 Use: Ag⁺/Ag = +0.80 V, Fe²⁺/Fe = −0.44 V, Ni²⁺/Ni = −0.26 V, Cu²⁺/Cu = +0.34 V
 
-1) $E°_{\\text{cell}}$ for a cell with Ag cathode and Fe anode: (in V, to 2 decimal places)
+1) $E°_{\\text{cell}}$ for a cell with Ag cathode and Fe anode: (in V, to 3 significant figures)
 
-2) $E°_{\\text{cell}}$ for a cell with Cu cathode and Ni anode: (in V, to 2 decimal places)
+2) $E°_{\\text{cell}}$ for a cell with Cu cathode and Ni anode: (in V, to 3 significant figures)
 
-3) $E°_{\\text{cell}}$ for a cell with Ni cathode and Fe anode: (in V, to 2 decimal places)
+3) $E°_{\\text{cell}}$ for a cell with Ni cathode and Fe anode: (in V, to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1.24', '0.60', '0.18'],
+        correctAnswers: ['1.24', '0.60', '0.18', '1.240', '0.600', '0.6', '0.180'],
         hint1: '$E°_{\\text{cell}} = 0.80 - (-0.44)$',
         hint2: '$E°_{\\text{cell}} = 0.34 - (-0.26)$',
         hint3: '$E°_{\\text{cell}} = -0.26 - (-0.44)$',

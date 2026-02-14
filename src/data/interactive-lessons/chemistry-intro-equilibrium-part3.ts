@@ -169,11 +169,11 @@ For each species, determine whether it appears in the equilibrium expression.
 
 2) How many species appear in the $K_c$ expression for $\\text{C}(s) + \\text{H}_2\\text{O}(g) \\rightleftharpoons \\text{CO}(g) + \\text{H}_2(g)$? (Enter a number)
 
-3) For $\\text{NH}_4\\text{Cl}(s) \\rightleftharpoons \\text{NH}_3(g) + \\text{HCl}(g)$, if $P_{\\text{NH}_3} = P_{\\text{HCl}} = 0.30$ atm at equilibrium, what is $K_p$? (Enter to 2 decimal places)
+3) For $\\text{NH}_4\\text{Cl}(s) \\rightleftharpoons \\text{NH}_3(g) + \\text{HCl}(g)$, if $P_{\\text{NH}_3} = P_{\\text{HCl}} = 0.30$ atm at equilibrium, what is $K_p$? (Enter to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.040', '3', '0.09'],
+        correctAnswers: ['0.040', '3', '0.09', '0.0400', '0.04', '0.090'],
         hint1: 'Since both solids are excluded, $K_p = P_{\\text{CO}_2}$.',
         hint2: 'C(s) is excluded. The remaining species are H₂O(g), CO(g), and H₂(g).',
         hint3: '$K_p = P_{\\text{NH}_3} \\times P_{\\text{HCl}} = 0.30 \\times 0.30$',

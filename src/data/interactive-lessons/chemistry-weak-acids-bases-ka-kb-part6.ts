@@ -57,7 +57,7 @@ Perform the same analysis for 0.15 M $HNO_2$ ($K_a = 4.5 \\times 10^{-4}$):
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['8.2e-3', '2.09', '5.5'],
+        correctAnswers: ['8.2e-3', '2.09', '5.5', '0.00820', '2.090', '5.50'],
         hint1: '$[H^+] = \\sqrt{(4.5 \\times 10^{-4})(0.15)}$.',
         hint2: '$pH = -\\log[H^+]$.',
         hint3: 'Percent = $[H^+]/C \\times 100$. Note: this may be close to 5%!',
@@ -140,7 +140,7 @@ A 0.25 M solution of an unknown weak acid has a pH of 2.72.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1.9e-3', '1.5e-5', '4.83'],
+        correctAnswers: ['1.9e-3', '1.5e-5', '4.83', '0.00190', '0.00002', '4.830'],
         hint1: '$[H^+] = 10^{-pH} = 10^{-2.72}$.',
         hint2: '$K_a = [H^+]^2/C$ (using the approximation).',
         hint3: '$pK_a = -\\log K_a$.',

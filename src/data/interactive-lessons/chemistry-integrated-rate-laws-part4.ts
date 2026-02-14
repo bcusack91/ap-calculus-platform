@@ -134,13 +134,13 @@ Given this data:
 
 1) What is the order? (enter 0, 1, or 2)
 
-2) What is k? (number only, to 1 decimal place)
+2) What is k? (number only, to 3 significant figures)
 
-3) What is [C] at t = 25 min? (in M, to 2 decimal places)
+3) What is [C] at t = 25 min? (in M, to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['2', '0.2', '0.13'],
+        correctAnswers: ['2', '0.2', '0.13', '0.20', '0.130'],
         hint1: 'Check Δ(1/[C]): 1.00, 1.00, 1.00 → constant → second-order.',
         hint2: 'Slope = k = 1.00/5 = 0.20 M⁻¹min⁻¹.',
         hint3: '1/[C] = 0.20(25) + 2.00 = 5.00 + 2.00 = 7.00. [C] = 1/7.00 = 0.143 ≈ 0.14. Hmm let me recalc: 0.20 × 25 = 5.0; 5.0 + 2.0 = 7.0; 1/7.0 = 0.1429 ≈ 0.14.',

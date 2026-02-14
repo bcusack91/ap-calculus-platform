@@ -120,13 +120,13 @@ Use $\\mu_0 = 4\\pi \\times 10^{-7}$ T·m/A.
 
 1) A long wire carries 15 A. What is $B$ at a distance of 3.0 cm from the wire? (in T, use scientific notation like 1.0e-4)
 
-2) A solenoid is 0.40 m long, has 800 turns, and carries 2.0 A. What is $B$ inside? (in T, to 4 decimal places)
+2) A solenoid is 0.40 m long, has 800 turns, and carries 2.0 A. What is $B$ inside? (in T, to 3 significant figures)
 
-3) How far from a 20 A wire is the field equal to $1.0 \\times 10^{-4}$ T? (in m, to 2 decimal places)
+3) How far from a 20 A wire is the field equal to $1.0 \\times 10^{-4}$ T? (in m, to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1.0e-4', '0.0050', '0.04'],
+        correctAnswers: ['1.0e-4', '0.0050', '0.04', '0.00010', '0.00500', '0.005', '0.040'],
         hint1: '$B = \\mu_0 I/(2\\pi r) = (4\\pi \\times 10^{-7})(15)/(2\\pi \\times 0.03)$.',
         hint2: '$n = 800/0.40 = 2000$ turns/m. $B = \\mu_0 n I = (4\\pi \\times 10^{-7})(2000)(2.0)$.',
         hint3: 'Rearrange: $r = \\mu_0 I/(2\\pi B) = (4\\pi \\times 10^{-7})(20)/(2\\pi \\times 10^{-4})$.',

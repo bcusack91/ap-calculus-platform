@@ -142,7 +142,10 @@ Calculate the electronegativity difference and classify each bond.
 
 2. Classify the C—Cl bond as "nonpolar covalent", "polar covalent", or "ionic".
 
-3. $\\Delta\\chi$ for Na—F (Na: 0.9, F: 4.0). Enter the value.`,
+3. $\\Delta\\chi$ for Na—F (Na: 0.9, F: 4.0). Enter the value.
+
+*Round all answers to 3 significant figures.*
+      `,
       exercise: {
         inputs: [
           {

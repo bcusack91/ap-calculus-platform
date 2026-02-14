@@ -135,13 +135,13 @@ On the AP exam, most circular motion problems assume **uniform** circular motion
 
 1) A car moves at 15 m/s around a curve of radius 50 m while accelerating at $a_t = 2$ m/s². What is the centripetal acceleration (in m/s²)?
 
-2) For the same car, what is the magnitude of the total acceleration (in m/s², round to 1 decimal place)?
+2) For the same car, what is the magnitude of the total acceleration (in m/s², round to 3 significant figures)?
 
-3) A ball moves in a vertical circle of radius 2 m. At the side of the circle, its speed is 5 m/s and its tangential acceleration is $g = 10$ m/s² (due to gravity). What is the total acceleration (in m/s², round to 1 decimal place)?
+3) A ball moves in a vertical circle of radius 2 m. At the side of the circle, its speed is 5 m/s and its tangential acceleration is $g = 10$ m/s² (due to gravity). What is the total acceleration (in m/s², round to 3 significant figures)?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['4.5', '4.9', '16.0'],
+        correctAnswers: ['4.5', '4.9', '16.0', '4.50', '4.90', '16.00'],
         hint1: '$a_c = v^2/r = 15^2/50$.',
         hint2: '$a_{total} = \\sqrt{a_c^2 + a_t^2}$.',
         hint3: 'Find $a_c = v^2/r$ first, then $a_{total} = \\sqrt{a_c^2 + g^2}$.',

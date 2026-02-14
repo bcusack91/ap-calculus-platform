@@ -95,10 +95,12 @@ $$\\text{Force} \\rightarrow \\text{FBD} \\rightarrow F_{\\text{net}} = ma$$
 2) A block on a flat surface requires 24 N to start moving and 18 N to keep it moving at constant velocity. The block weighs 60 N. What is $\\mu_s$?
 
 3) A 50 N horizontal force pushes a 10 kg block at constant velocity. What is $\\mu_k$? ($g = 10$ m/s²)
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['3', '0.4', '0.5'],
+        correctAnswers: ['3', '0.4', '0.5', '0.40', '0.50'],
         hint1: '$a = \\mu_k g$.',
         hint2: '$\\mu_s = F_{\\text{start}}/N = 24/60$.',
         hint3: 'Constant velocity means $F = f_k = \\mu_k mg$. So $\\mu_k = F/(mg) = 50/100$.',

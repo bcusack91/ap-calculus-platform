@@ -153,10 +153,12 @@ Use $g = 10$ m/s².
 2) A spring with $k = 800$ N/m is compressed by 0.03 m. What force is needed to hold it compressed (in N)?
 
 3) A spring with $k = 250$ N/m has a 5 kg mass resting on it vertically. By how much is the spring compressed (in m)?
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['400', '24', '0.2'],
+        correctAnswers: ['400', '24', '0.2', '0.20'],
         hint1: '$k = mg/x = 2(10)/0.05$.',
         hint2: '$F = kx = 800 \\times 0.03$.',
         hint3: '$x = mg/k = 5(10)/250$.',

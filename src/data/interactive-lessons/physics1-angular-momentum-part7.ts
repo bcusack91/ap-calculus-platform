@@ -90,11 +90,11 @@ $$\\text{If } \\tau_{\\text{net, ext}} = 0: \\quad I_i\\omega_i = I_f\\omega_f$$
 
 2) A hoop (mass 2 kg, radius 0.5 m) rolls without slipping at 3 m/s. What is its total kinetic energy? (in J)
 
-3) A child ($m = 30$ kg) runs at 4 m/s tangent to the edge of a stationary merry-go-round (uniform disk, $M = 100$ kg, $R = 2$ m) and jumps on. What is the final angular velocity? (in rad/s, round to 2 decimal places)
+3) A child ($m = 30$ kg) runs at 4 m/s tangent to the edge of a stationary merry-go-round (uniform disk, $M = 100$ kg, $R = 2$ m) and jumps on. What is the final angular velocity? (in rad/s, round to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['20', '18', '0.86'],
+        correctAnswers: ['20', '18', '0.86', '0.860'],
         hint1: '$\\tau = \\Delta L/\\Delta t \\Rightarrow \\Delta L = \\tau \\cdot t = 4(5)$',
         hint2: 'For a hoop rolling: $KE = mv^2$ (translational + rotational both equal $\\frac{1}{2}mv^2$)',
         hint3: '$L_i = mvR = 30(4)(2) = 240$. $I_f = \\frac{1}{2}(100)(4) + 30(4) = 200 + 120 = 320$. $\\omega_f = L/I_f$.',

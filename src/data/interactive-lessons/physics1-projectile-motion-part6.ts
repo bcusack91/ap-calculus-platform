@@ -79,10 +79,12 @@ A soccer ball is kicked from ground level at 40 m/s at 53° above horizontal. Us
 3) Range (in meters)
 
 4) Speed at maximum height (in m/s)
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 4,
-        correctAnswers: ['51.2', '6.4', '153.6', '24'],
+        correctAnswers: ['51.2', '6.4', '153.6', '24', '51.20', '6.40', '153.60'],
         hint1: '$v_{0y} = 40(0.8) = 32$ m/s. $h = v_{0y}^2/(2g) = 1024/20$',
         hint2: '$t = 2v_{0y}/g = 64/10$',
         hint3: '$v_{0x} = 40(0.6) = 24$ m/s. Range $= v_{0x} \\cdot t$. Speed at max height $= v_{0x}$.',

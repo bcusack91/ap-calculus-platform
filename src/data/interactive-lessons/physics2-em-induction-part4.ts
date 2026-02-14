@@ -158,10 +158,12 @@ A conducting rod of length 0.8 m slides at 5 m/s along rails connected to a 4 Ω
 1) Induced EMF (in V)
 2) Current in the circuit (in A)
 3) Force needed to maintain constant velocity (in N)
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['2', '0.5', '0.2'],
+        correctAnswers: ['2', '0.5', '0.2', '0.50', '0.20'],
         hint1: '$\\varepsilon = BLv = (0.5)(0.8)(5)$.',
         hint2: '$I = \\varepsilon / R = 2/4 = 0.5$ A.',
         hint3: '$F = BIL = (0.5)(0.5)(0.8) = 0.2$ N. Or: $F = B^2L^2v/R$.',

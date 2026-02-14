@@ -130,13 +130,13 @@ The narrower the slit, the **wider** the diffraction pattern — this is an inve
 
 Light of wavelength 600 nm passes through a single slit of width $a = 0.15$ mm. A screen is placed $L = 2.0$ m away.
 
-1) Angular position of the 1st minimum $\\theta_1$ (in degrees, to 2 decimal places)
+1) Angular position of the 1st minimum $\\theta_1$ (in degrees, to 3 significant figures)
 2) Width of the central maximum on the screen (in mm)
 3) Position of the 2nd minimum from the center (in mm)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.23', '16', '16'],
+        correctAnswers: ['0.23', '16', '16', '0.230'],
         hint1: '$\\sin\\theta_1 = \\lambda / a = (600 \\times 10^{-9})/(0.15 \\times 10^{-3})$. Convert radians to degrees.',
         hint2: 'Width $= 2\\lambda L / a$.',
         hint3: '$y_2 = 2\\lambda L / a = $ central max width.',

@@ -165,7 +165,7 @@ The digits **before** the decimal in pH only indicate the order of magnitude —
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['8.30', '5.0e-5', '10.30'],
+        correctAnswers: ['8.30', '5.0e-5', '10.30', '8.300', '8.3', '0.00005', '10.300', '10.3'],
         hint1: '$pH = -\\log(5.0 \\times 10^{-9})$',
         hint2: '$[H^+] = 10^{-4.30}$',
         hint3: 'First find $pOH = -\\log(2.0 \\times 10^{-4})$, then $pH = 14 - pOH$.',

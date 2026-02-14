@@ -140,13 +140,13 @@ A student reacts 13.49 g of Al with 109.4 g of HCl. Percent yield = 90%.
 
 1) The limiting reactant is which? Type **Al** or **HCl**.
 
-2) What is the theoretical yield of AlCl₃ in grams? (to 1 decimal place)
+2) What is the theoretical yield of AlCl₃ in grams? (to 3 significant figures)
 
-3) What is the actual yield of AlCl₃ in grams? (to 1 decimal place)
+3) What is the actual yield of AlCl₃ in grams? (to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Al', '66.7', '60.0'],
+        correctAnswers: ['Al', '66.7', '60.0', '66.70', '60.00'],
         hint1: 'Mol Al = 13.49/26.98 = 0.500. Mol HCl = 109.4/36.46 = 3.000. From Al: 0.500 × 2/2 = 0.500 mol AlCl₃. From HCl: 3.000 × 2/6 = 1.000 mol AlCl₃. Which produces less?',
         hint2: 'Theoretical = 0.500 × 133.34.',
         hint3: 'Actual = theoretical × 0.90.',

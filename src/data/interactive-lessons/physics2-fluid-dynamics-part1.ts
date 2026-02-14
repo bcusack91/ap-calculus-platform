@@ -126,10 +126,12 @@ Water flows through a circular pipe of diameter 4.0 cm at a speed of 3.0 m/s.
 1) Cross-sectional area of the pipe (in m², scientific notation: e.g., "1.26e-3")
 2) Volume flow rate (in m³/s, use same format)
 3) How many seconds to fill a 50-liter (0.050 m³) bucket?
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1.26e-3', '3.77e-3', '13.3'],
+        correctAnswers: ['1.26e-3', '3.77e-3', '13.3', '0.001260', '0.003770', '13.30'],
         hint1: '$A = \\pi r^2 = \\pi (0.02)^2$.',
         hint2: '$Q = Av = (1.26 \\times 10^{-3})(3.0)$.',
         hint3: '$t = V/Q = 0.050/Q$.',

@@ -141,15 +141,15 @@ The period depends on $\\cos\\theta$ and $L$, but NOT on the mass. Faster spinni
 
 Use $g = 10$ m/s².
 
-1) A car rounds a flat curve of radius 40 m. If $\\mu_s = 0.5$, what is the maximum speed (in m/s, round to 1 decimal place)?
+1) A car rounds a flat curve of radius 40 m. If $\\mu_s = 0.5$, what is the maximum speed (in m/s, round to 3 significant figures)?
 
-2) A conical pendulum has string length $L = 0.8$ m and makes angle $\\theta = 30°$ with the vertical. What is the period of revolution (in s, round to 2 decimal places)?
+2) A conical pendulum has string length $L = 0.8$ m and makes angle $\\theta = 30°$ with the vertical. What is the period of revolution (in s, round to 3 significant figures)?
 
-3) A 0.3 kg ball on a 1.2 m string swings as a conical pendulum at $\\theta = 45°$. What is the tension in the string (in N, round to 1 decimal place)?
+3) A 0.3 kg ball on a 1.2 m string swings as a conical pendulum at $\\theta = 45°$. What is the tension in the string (in N, round to 3 significant figures)?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['14.1', '1.66', '4.2'],
+        correctAnswers: ['14.1', '1.66', '4.2', '14.10', '1.660', '4.20'],
         hint1: '$v_{max} = \\sqrt{\\mu_s gr}$.',
         hint2: '$T_{period} = 2\\pi\\sqrt{L\\cos\\theta/g}$.',
         hint3: '$T = mg/\\cos\\theta$.',

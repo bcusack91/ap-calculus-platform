@@ -154,10 +154,12 @@ A single loop contains:
 1) Net EMF with clockwise positive (in V):
 2) Current magnitude (in A):
 3) Voltage across $R_3$ (in V):
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['12', '1.2', '6'],
+        correctAnswers: ['12', '1.2', '6', '1.20'],
         hint1: 'Net EMF = $\\varepsilon_1 - \\varepsilon_2 + \\varepsilon_3 = 16 - 10 + 6$.',
         hint2: '$I = \\text{Net EMF} / (R_1 + R_2 + R_3) = 12 / 10$.',
         hint3: '$V_{R_3} = IR_3 = (1.2)(5)$.',

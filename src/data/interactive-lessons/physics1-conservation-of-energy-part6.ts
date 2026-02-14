@@ -75,7 +75,7 @@ The block travels **2.5 m** along the ramp (reaching height $h = 2.5\\sin 30° =
 
 Use $g = 10$ m/s².
 
-1) Same spring ($k = 800$ N/m), compressed $0.25$ m, launches a 2 kg block up a ramp with friction ($\\mu_k = 0.2$, angle $30°$). Find the distance along the ramp (in m, to 2 decimal places). Hint: $N = mg\\cos\\theta$.
+1) Same spring ($k = 800$ N/m), compressed $0.25$ m, launches a 2 kg block up a ramp with friction ($\\mu_k = 0.2$, angle $30°$). Find the distance along the ramp (in m, to 3 significant figures). Hint: $N = mg\\cos\\theta$.
 
 2) A spring ($k = 500$ N/m) compressed $0.30$ m launches a 1 kg block vertically. What maximum height does it reach (in m)?
 
@@ -83,7 +83,7 @@ Use $g = 10$ m/s².
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1.79', '2.25', '16'],
+        correctAnswers: ['1.79', '2.25', '16', '1.790', '2.250'],
         hint1: '$\\frac{1}{2}kx^2 = mgd\\sin\\theta + \\mu_k mg\\cos\\theta \\cdot d$. Factor out $d$ and solve.',
         hint2: '$\\frac{1}{2}kx^2 = mgh \\Rightarrow h = kx^2/(2mg)$.',
         hint3: '$\\frac{1}{2}kx^2 = \\mu_k mg d \\Rightarrow d = kx^2/(2\\mu_k mg)$.',
@@ -167,15 +167,15 @@ Note: friction acts over 3 m **plus** the compression distance $x$! This gives a
 
 Use $g = 10$ m/s².
 
-1) A 3 kg block starts at rest at height 8 m, slides down a frictionless ramp, across 2 m of rough floor ($\\mu_k = 0.4$), and compresses a spring ($k = 600$ N/m). What is the maximum spring compression (in m, to 2 decimal places)?
+1) A 3 kg block starts at rest at height 8 m, slides down a frictionless ramp, across 2 m of rough floor ($\\mu_k = 0.4$), and compresses a spring ($k = 600$ N/m). What is the maximum spring compression (in m, to 3 significant figures)?
 
-2) A spring ($k = 1000$ N/m) compressed 0.50 m launches a 2 kg block up a rough ramp ($\\mu_k = 0.15$, angle $45°$). How far along the ramp does it travel (in m, to 2 decimal places)?
+2) A spring ($k = 1000$ N/m) compressed 0.50 m launches a 2 kg block up a rough ramp ($\\mu_k = 0.15$, angle $45°$). How far along the ramp does it travel (in m, to 3 significant figures)?
 
-3) A 5 kg block moving at 12 m/s on a rough surface ($\\mu_k = 0.3$) hits a spring ($k = 2000$ N/m). Find the maximum compression (in m, to 2 decimal places). Hint: friction acts during compression too.
+3) A 5 kg block moving at 12 m/s on a rough surface ($\\mu_k = 0.3$) hits a spring ($k = 2000$ N/m). Find the maximum compression (in m, to 3 significant figures). Hint: friction acts during compression too.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.82', '1.55', '0.39'],
+        correctAnswers: ['0.82', '1.55', '0.39', '0.820', '1.550', '0.390'],
         hint1: '$mgh = \\frac{1}{2}kx^2 + \\mu_k mg(2 + x)$. Rearrange as a quadratic in $x$.',
         hint2: '$\\frac{1}{2}kx^2 = mgd\\sin45° + \\mu_k mgd\\cos45°$. Solve for $d$.',
         hint3: '$\\frac{1}{2}mv^2 = \\frac{1}{2}kx^2 + \\mu_k mg \\cdot x$. Quadratic in $x$.',

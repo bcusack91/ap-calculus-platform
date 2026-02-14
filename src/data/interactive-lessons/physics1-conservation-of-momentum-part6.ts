@@ -70,13 +70,13 @@ Car A (1500 kg) travels east at 20 m/s. Car B (2000 kg) travels west at 15 m/s. 
 
 1) What is the total initial momentum of the system? (in kg·m/s, take east as positive)
 
-2) What is the final velocity of the wreckage? (in m/s, to 2 decimal places, include sign)
+2) What is the final velocity of the wreckage? (in m/s, to 3 significant figures, include sign)
 
 3) In which direction does the wreckage move? (type "east" or "west")
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0', '0.00', 'east'],
+        correctAnswers: ['0', '0.00', 'east', '0.000', '0.0'],
         hint1: '$p_i = (1500)(20) + (2000)(-15) = 30000 - 30000$',
         hint2: '$v_f = p_i / (m_1 + m_2) = 0/3500$',
         hint3: 'If $v_f = 0$, the wreckage doesn\'t move in either direction.',

@@ -101,10 +101,12 @@ Let's bring together everything from this unit: position, displacement, velocity
 2) A ball is thrown upward at 24.5 m/s. How high above the launch point is it after 2 s? (in meters; use $g = 9.8$ m/s²)
 
 3) A train brakes from 36 m/s to 16 m/s over 8 s. What distance does it cover while braking? (in meters)
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['10', '29.4', '208'],
+        correctAnswers: ['10', '29.4', '208', '29.40'],
         hint1: 'First find $a$ from $v^2 = v_0^2 + 2a\\Delta x$, then use $v = v_0 + at$ to find $t$.',
         hint2: '$y = v_0t - \\frac{1}{2}gt^2 = 24.5(2) - \\frac{1}{2}(9.8)(4)$',
         hint3: 'Use $\\Delta x = \\frac{v_0 + v_f}{2} \\cdot t = \\frac{36 + 16}{2}(8)$',

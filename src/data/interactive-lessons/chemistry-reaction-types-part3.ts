@@ -167,10 +167,12 @@ Find the coefficient of O₂ needed for complete combustion. Enter just the numb
 2) $2\\text{C}_4\\text{H}_{10} + \\text{__O}_2 \\rightarrow 8\\text{CO}_2 + 10\\text{H}_2\\text{O}$ → coefficient of O₂ = ?
 
 3) $\\text{C}_2\\text{H}_5\\text{OH} + \\text{__O}_2 \\rightarrow 2\\text{CO}_2 + 3\\text{H}_2\\text{O}$ → coefficient of O₂ = ?
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['2.5', '13', '3'],
+        correctAnswers: ['2.5', '13', '3', '2.50'],
         hint1: 'Count O atoms on the right: 2(2) + 1 = 5 oxygen atoms. Each O₂ provides 2, so 5/2 = 2.5.',
         hint2: 'Right side: 8(2) + 10(1) = 26 oxygen atoms. Divide by 2: 26/2 = 13.',
         hint3: 'Right side: 2(2) + 3(1) = 7 oxygen atoms. The OH in ethanol provides 1, so need 6 more from O₂: 6/2 = 3.',

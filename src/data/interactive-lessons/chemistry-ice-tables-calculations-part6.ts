@@ -58,11 +58,11 @@ At equilibrium: $[\\text{HI}] = 0.80$ M
 
 2) What is $[\\text{H}_2]$ at equilibrium?
 
-3) What is $K_c$? (Enter to 3 decimal places)
+3) What is $K_c$? (Enter to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.10', '0.10', '0.016'],
+        correctAnswers: ['0.10', '0.10', '0.016', '0.100', '0.1', '0.0160'],
         hint1: '$[\\text{HI}]_{eq} = 1.00 - 2x = 0.80 \\implies 2x = 0.20 \\implies x = 0.10$',
         hint2: '$[\\text{H}_2] = x = 0.10$ M',
         hint3: '$K_c = \\frac{[\\text{H}_2][\\text{I}_2]}{[\\text{HI}]^2} = \\frac{(0.10)(0.10)}{(0.80)^2}$',
@@ -86,10 +86,12 @@ Using the approximation $0.50 - x \\approx 0.50$:
 2) Does the 5% test pass? (Enter "yes" or "no")
 
 3) What is $[\\text{CO}]$ at equilibrium? (Enter in scientific notation, same as x)
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1.0e-5', 'yes', '1.0e-5'],
+        correctAnswers: ['1.0e-5', 'yes', '1.0e-5', '0.00001'],
         hint1: '$x = \\sqrt{(2.2 \\times 10^{-10})(0.50)} = \\sqrt{1.1 \\times 10^{-10}}$',
         hint2: '$\\frac{x}{0.50} \\times 100\\% \\ll 5\\%$',
         hint3: '$[\\text{CO}] = x$',
@@ -143,13 +145,13 @@ First check: $Q = \\frac{(0.20)^2}{(0.50)(0.50)} = \\frac{0.04}{0.25} = 0.16$. S
 
 1) Using the ICE table with shift right, what is $[\\text{HI}]$ at equilibrium expressed in terms of $x$? (Enter, e.g., "0.20 + 2x")
 
-2) This is a perfect-square case. Taking the square root: $8 = \\frac{0.20 + 2x}{0.50 - x}$. Solve for x. (Round to 2 decimal places)
+2) This is a perfect-square case. Taking the square root: $8 = \\frac{0.20 + 2x}{0.50 - x}$. Solve for x. (Round to 3 significant figures)
 
-3) What is $[\\text{HI}]$ at equilibrium? (Round to 2 decimal places)
+3) What is $[\\text{HI}]$ at equilibrium? (Round to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.20 + 2x', '0.38', '0.96'],
+        correctAnswers: ['0.20 + 2x', '0.38', '0.96', '0.380', '0.960'],
         hint1: 'HI starts at 0.20 and gains $+2x$.',
         hint2: '$8(0.50 - x) = 0.20 + 2x \\implies 4.0 - 8x = 0.20 + 2x \\implies 3.80 = 10x$',
         hint3: '$[\\text{HI}] = 0.20 + 2(0.38) = 0.20 + 0.76$',

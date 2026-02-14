@@ -147,15 +147,15 @@ If you have 1 mol of H₂O, you have:
       content: `
 **Mole-Particle Conversion Drill** 🧮
 
-1) How many atoms are in 0.750 mol of aluminum (Al)? Express your answer in scientific notation as $a \\times 10^{23}$ — enter only the value of $a$ (to 2 decimal places).
+1) How many atoms are in 0.750 mol of aluminum (Al)? Express your answer in scientific notation as $a \\times 10^{23}$ — enter only the value of $a$ (to 3 significant figures).
 
-2) A sample contains $1.806 \\times 10^{24}$ molecules of CO₂. How many moles is this? (to 2 decimal places)
+2) A sample contains $1.806 \\times 10^{24}$ molecules of CO₂. How many moles is this? (to 3 significant figures)
 
-3) How many individual oxygen atoms are in 2.00 mol of O₂? Express as $a \\times 10^{24}$ — enter only $a$ (to 3 decimal places).
+3) How many individual oxygen atoms are in 2.00 mol of O₂? Express as $a \\times 10^{24}$ — enter only $a$ (to 3 significant figures).
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['4.52', '3.00', '2.409'],
+        correctAnswers: ['4.52', '3.00', '2.409', '4.520', '3.000', '3.0', '2.4090'],
         hint1: 'Multiply moles by Avogadro\'s number: $0.750 \\times 6.022 \\times 10^{23} = 4.517 \\times 10^{23}$.',
         hint2: 'Divide particles by Avogadro\'s number: $1.806 \\times 10^{24} \\div 6.022 \\times 10^{23}$.',
         hint3: 'Each O₂ molecule has 2 oxygen atoms, so multiply moles of O₂ by $N_A$ and then by 2.',

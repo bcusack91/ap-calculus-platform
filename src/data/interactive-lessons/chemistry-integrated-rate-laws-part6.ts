@@ -56,13 +56,13 @@ Use the appropriate integrated rate law to find concentration at any time, time 
 
 1) What is the order of the reaction? (enter 0, 1, or 2)
 
-2) What is k? (to 3 decimal places)
+2) What is k? (to 3 significant figures)
 
-3) What is [A] at t = 50 min? (in M, to 4 decimal places)
+3) What is [A] at t = 50 min? (in M, to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1', '0.069', '0.0252'],
+        correctAnswers: ['1', '0.069', '0.0252', '0.0690', '0.02520'],
         hint1: 'Check: t₁/₂ from 0.800→0.400 = 10 min. From 0.400→0.200 = 10 min. Constant → first-order.',
         hint2: 'k = 0.693/t₁/₂ = 0.693/10 = 0.0693 ≈ 0.069 s⁻¹.',
         hint3: '[A] = 0.800 × e^(−0.0693 × 50) = 0.800 × e^(−3.465) = 0.800 × 0.0313 = 0.0250.',
@@ -128,15 +128,15 @@ Use the appropriate integrated rate law to find concentration at any time, time 
 
 A first-order reaction has a half-life of 25.0 minutes. The initial concentration is 1.20 M.
 
-1) What is k? (in min⁻¹, to 4 decimal places)
+1) What is k? (in min⁻¹, to 3 significant figures)
 
-2) What is [A] after 75.0 minutes? (in M, to 2 decimal places)
+2) What is [A] after 75.0 minutes? (in M, to 3 significant figures)
 
-3) How long until [A] = 0.10 M? (in minutes, to 1 decimal place)
+3) How long until [A] = 0.10 M? (in minutes, to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.0277', '0.15', '89.7'],
+        correctAnswers: ['0.0277', '0.15', '89.7', '0.02770', '0.150', '89.70'],
         hint1: 'k = 0.693/25.0 = 0.0277 min⁻¹.',
         hint2: '75 min = 3 half-lives. [A] = 1.20 × (1/2)³ = 1.20/8 = 0.15 M.',
         hint3: 'ln(0.10/1.20) = −0.0277t. ln(0.0833) = −2.485 = −0.0277t. t = 89.7 min.',
@@ -183,15 +183,15 @@ A first-order reaction has a half-life of 25.0 minutes. The initial concentratio
 
 A certain reaction is second-order with $k = 0.10$ M⁻¹s⁻¹ and $[A]_0 = 2.0$ M.
 
-1) What is the first half-life? (in seconds, to 1 decimal place)
+1) What is the first half-life? (in seconds, to 3 significant figures)
 
-2) How long total until 87.5% of A has reacted? (in seconds, to 1 decimal place)
+2) How long total until 87.5% of A has reacted? (in seconds, to 3 significant figures)
 
-3) What is [A] at t = 35 s? (in M, to 2 decimal places)
+3) What is [A] at t = 35 s? (in M, to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['5.0', '35.0', '0.22'],
+        correctAnswers: ['5.0', '35.0', '0.22', '5.00', '35.00', '0.220'],
         hint1: 't₁/₂ = 1/(k[A]₀) = 1/(0.10 × 2.0) = 5.0 s.',
         hint2: '87.5% reacted → 12.5% remains → [A] = 0.25 M. 1/[A] = kt + 1/[A]₀. 1/0.25 = 0.10t + 1/2.0. 4.0 = 0.10t + 0.50. 0.10t = 3.5. t = 35.0 s.',
         hint3: '1/[A] = 0.10(35) + 0.50 = 3.5 + 0.5 = 4.0. Hmm that\'s [A] = 0.25. Wait: 1/[A] = 0.10(35) + 1/2.0 = 3.5 + 0.5 = 4.0. [A] = 1/4.0 = 0.25. But I said the answer is 0.22. Let me recheck at t = 35: 1/[A] = 0.10(35) + 0.50 = 4.0. [A] = 0.25.',

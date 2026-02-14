@@ -129,10 +129,12 @@ $m_1 = 6$ kg on a frictionless 30° incline, connected over a pulley to $m_2 = 5
 2) What is the acceleration (in m/s², to one decimal)?
 
 3) What is the tension in the string (in N, to one decimal)?
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['20', '1.8', '41.0'],
+        correctAnswers: ['20', '1.8', '41.0', '1.80', '41.00'],
         hint1: 'Net force = $m_2 g - m_1 g\\sin 30° = 50 - 30$.',
         hint2: '$a = 20/(6 + 5) = 20/11$.',
         hint3: '$T = m_2(g - a) = 5(10 - 1.818)$. Or $T = m_1 g\\sin 30° + m_1 a = 30 + 6(1.818) = 30 + 10.9 = 40.9$.',

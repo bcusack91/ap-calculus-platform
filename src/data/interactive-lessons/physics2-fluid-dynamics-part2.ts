@@ -100,10 +100,12 @@ Water flows through a circular pipe of radius 3.0 cm at 2.0 m/s. The pipe narrow
 1) Area of the wide section (in cm²)
 2) Area of the narrow section (in cm²)
 3) Speed in the narrow section (in m/s)
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['28.3', '3.14', '18'],
+        correctAnswers: ['28.3', '3.14', '18', '28.30', '3.140'],
         hint1: '$A = \\pi r^2 = \\pi (3.0)^2$ (keep in cm²).',
         hint2: '$A = \\pi (1.0)^2$.',
         hint3: '$v_2 = (A_1/A_2) v_1 = (28.3/3.14)(2.0)$.',

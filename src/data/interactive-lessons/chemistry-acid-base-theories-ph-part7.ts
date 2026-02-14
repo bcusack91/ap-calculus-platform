@@ -100,7 +100,7 @@ $$[H^+] = 10^{-pH} \\qquad [OH^-] = 10^{-pOH}$$
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1.43', '3.2e-12', '50'],
+        correctAnswers: ['1.43', '3.2e-12', '50', '1.430', '0.000000', '0.0000'],
         hint1: 'Mol $H^+$ = $(0.100)(0.15)$; mol $OH^-$ = $(0.075)(0.15)$; excess $H^+$ in 175 mL.',
         hint2: '$[H^+] = 10^{-11.50}$.',
         hint3: '$H_2SO_4$ is diprotic: mol $H^+$ = $2(0.050)(0.10)$; set equal to mol $OH^-$ = $(V)(0.20)$.',

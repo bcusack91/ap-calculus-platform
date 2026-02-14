@@ -141,10 +141,12 @@ Use an electricity rate of $0.12/kWh.
 4) You replace ten 60 W incandescent bulbs with ten 9 W LED bulbs. How many kWh do you save per day if they run 6 hours/day?
 
 5) At $0.12/kWh, how much do you save per year (365 days) from that LED swap? (in $, round to nearest dollar)
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 5,
-        correctAnswers: ['72', '8.64', '3.75', '3.06', '134'],
+        correctAnswers: ['72', '8.64', '3.75', '3.06', '134', '8.640', '3.750', '3.060'],
         hint1: '$E = Pt = 0.1 \\text{ kW} \\times 24 \\times 30$.',
         hint2: 'Cost = $72 \\times 0.12$.',
         hint3: '$E = 5.0 \\text{ kW} \\times 0.75 \\text{ h}$.',

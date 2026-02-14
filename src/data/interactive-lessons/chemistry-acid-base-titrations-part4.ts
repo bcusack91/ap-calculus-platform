@@ -150,7 +150,7 @@ Three equivalence points (three protons):
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['50.0', '9.26', '9.26'],
+        correctAnswers: ['50.0', '9.26', '9.26', '50.00', '9.260'],
         hint1: 'Equal concentrations → equal volumes.',
         hint2: 'At half-equivalence: $pH = pK_a(NH_4^+) = 14 - pK_b$.',
         hint3: '$pK_a + pK_b = 14$.',

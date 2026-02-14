@@ -130,7 +130,7 @@ Use $E_n = -13.6/n^2$ eV and $\\lambda = 1240/\\Delta E$ (nm).
       `,
       exercise: {
         boxes: 5,
-        correctAnswers: ['1.89', '656', '12.75', '97.3', 'UV'],
+        correctAnswers: ['1.89', '656', '12.75', '97.3', 'UV', '1.890', '12.750', '97.30'],
         hint1: '$E_3 = -1.51$ eV, $E_2 = -3.40$ eV. $\\Delta E = -1.51 - (-3.40)$.',
         hint2: '$\\lambda = 1240/1.89$. For $4 \\to 1$: $E_4 = -0.85$ eV, $E_1 = -13.6$ eV.',
         hint3: '$\\Delta E = -0.85 - (-13.6) = 12.75$ eV. $\\lambda = 1240/12.75$. Visible range: 380–700 nm.',

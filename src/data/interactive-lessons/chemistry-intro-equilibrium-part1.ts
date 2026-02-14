@@ -198,10 +198,12 @@ At a certain temperature, the following data are collected at equilibrium:
 2) If the forward reaction rate is $2.0 \\times 10^{-3}$ M/s, what is the reverse reaction rate in M/s? (Enter as a decimal, e.g. 0.002)
 
 3) Is the concentration of HI changing at equilibrium? (Enter "no")
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['equal', '0.002', 'no'],
+        correctAnswers: ['equal', '0.002', 'no', '0.0020'],
         hint1: 'At equilibrium, the forward and reverse rates are always...',
         hint2: 'If the forward rate equals the reverse rate, what must the reverse rate be?',
         hint3: 'At equilibrium, all concentrations are constant.',

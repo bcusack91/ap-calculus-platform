@@ -134,11 +134,11 @@ Find $\\Delta H$ for: $2\\text{S}(s) + 3\\text{O}_2(g) \\rightarrow 2\\text{SO}_
 
 2) What must you multiply reaction (2) by? (enter the number)
 
-3) What is $\\Delta H$ for the target reaction? (in kJ, to 1 decimal place)
+3) What is $\\Delta H$ for the target reaction? (in kJ, to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['2', '1', '-791.4'],
+        correctAnswers: ['2', '1', '-791.4', '-791.40'],
         hint1: 'The target has 2S, but reaction (1) has only 1S. How do you fix that?',
         hint2: 'Reaction (2) already has 2SO₃ as products — matches the target.',
         hint3: '$\\Delta H = 2(-296.8) + 1(-197.8)$.',

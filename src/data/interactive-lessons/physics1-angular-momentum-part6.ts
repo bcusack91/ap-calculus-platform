@@ -70,15 +70,15 @@ Time to work through challenging problems involving angular momentum, rotational
       content: `
 **Workshop Calculations** 🧮
 
-1) A turntable ($I = 1.2$ kg·m², $\\omega = 6$ rad/s) has a ring ($I = 0.8$ kg·m²) dropped on it from rest. Find the final $\\omega$. (in rad/s, round to 1 decimal place)
+1) A turntable ($I = 1.2$ kg·m², $\\omega = 6$ rad/s) has a ring ($I = 0.8$ kg·m²) dropped on it from rest. Find the final $\\omega$. (in rad/s, round to 3 significant figures)
 
-2) How much kinetic energy is lost in the collision above? (in J, round to 1 decimal place)
+2) How much kinetic energy is lost in the collision above? (in J, round to 3 significant figures)
 
-3) A 60 kg person stands on the edge of a 200 kg, 3 m radius turntable (uniform disk) initially at rest. The person begins walking at 1.5 m/s tangentially (relative to the ground). What is the turntable's angular velocity? (in rad/s, round to 2 decimal places)
+3) A 60 kg person stands on the edge of a 200 kg, 3 m radius turntable (uniform disk) initially at rest. The person begins walking at 1.5 m/s tangentially (relative to the ground). What is the turntable's angular velocity? (in rad/s, round to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['3.6', '8.6', '0.20'],
+        correctAnswers: ['3.6', '8.6', '0.20', '3.60', '8.60', '0.200', '0.2'],
         hint1: '$(1.2)(6) = (1.2 + 0.8)\\omega_f$',
         hint2: '$KE_i = \\frac{1}{2}(1.2)(36) = 21.6$ J. $KE_f = \\frac{1}{2}(2.0)(\\omega_f^2)$. Loss $= KE_i - KE_f$.',
         hint3: '$L_i = 0$. Person: $L = mvr = 60(1.5)(3) = 270$. Turntable: $L = I\\omega_t = \\frac{1}{2}(200)(9)\\omega_t = 900\\omega_t$. $0 = 270 - 900\\omega_t$.',

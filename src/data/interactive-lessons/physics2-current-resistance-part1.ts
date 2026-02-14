@@ -148,10 +148,12 @@ For copper: $n \\approx 8.5 \\times 10^{28}$ electrons/m³
 2) A lightning bolt transfers 5.0 C of charge in $2.0 \\times 10^{-3}$ s. What is the average current? (in A)
 
 3) A copper wire (cross-section $1.0 \\times 10^{-6}$ m², $n = 8.5 \\times 10^{28}$ m⁻³) carries 2.0 A. What is the drift velocity? (in m/s, use scientific notation like 1.5e-4)
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['7200', '2500', '1.5e-4'],
+        correctAnswers: ['7200', '2500', '1.5e-4', '0.00015'],
         hint1: '$Q = I \\cdot t$. Convert 1 hour to seconds: $1 \\times 3600 = 3600$ s.',
         hint2: '$I = Q / t = 5.0 / (2.0 \\times 10^{-3})$.',
         hint3: '$v_d = I / (nAe) = 2.0 / (8.5 \\times 10^{28} \\times 1.0 \\times 10^{-6} \\times 1.6 \\times 10^{-19})$.',

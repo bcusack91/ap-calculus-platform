@@ -125,10 +125,12 @@ $$\\text{Floating } (\\text{fraction} = \\rho_{\\text{obj}}/\\rho_{\\text{fluid}
 1) Pressure at 25 m depth in a lake (absolute, in Pa)
 2) A 0.004 m³ block of wood (density 600 kg/m³) floats. Volume above water (in m³)
 3) Force needed on a 0.002 m² piston to hold back water at 15 m depth (gauge force, in N)
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['350000', '0.0016', '300'],
+        correctAnswers: ['350000', '0.0016', '300', '0.00160'],
         hint1: '$P = 10^5 + (1000)(10)(25) = 10^5 + 250{,}000$.',
         hint2: 'Fraction submerged = 600/1000 = 0.6. Above water = $0.004 \\times 0.4$.',
         hint3: '$P_{\\text{gauge}} = \\rho g h = (1000)(10)(15) = 150{,}000$ Pa. $F = P \\times A$.',

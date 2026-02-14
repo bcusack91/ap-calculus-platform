@@ -179,7 +179,7 @@ But 0.10 M $CH_3COOH$: $pH = 2.87$ (we\'ll calculate this in Part 2)
       content: `
 **$K_a$ and $pK_a$ Conversions** 🧮
 
-1) Convert $K_a = 1.8 \\times 10^{-5}$ to $pK_a$ (2 decimal places)
+1) Convert $K_a = 1.8 \\times 10^{-5}$ to $pK_a$ (3 significant figures)
 
 2) Convert $pK_a = 9.21$ to $K_a$ (Enter in scientific notation, e.g. 6.2e-10)
 
@@ -187,7 +187,7 @@ But 0.10 M $CH_3COOH$: $pH = 2.87$ (we\'ll calculate this in Part 2)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['4.74', '6.2e-10', 'A'],
+        correctAnswers: ['4.74', '6.2e-10', 'A', '4.740', '0.000000'],
         hint1: '$pK_a = -\\log(1.8 \\times 10^{-5})$.',
         hint2: '$K_a = 10^{-9.21}$.',
         hint3: 'Lowest $pK_a$ = strongest acid.',

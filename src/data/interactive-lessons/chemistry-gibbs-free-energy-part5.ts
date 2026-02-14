@@ -148,10 +148,12 @@ For a reaction with $\\Delta G° = -10.0$ kJ/mol at $T = 298$ K:
 2) What is $\\Delta G$ when $Q = K$ (at equilibrium)? (in kJ/mol)
 
 3) If $Q > K$, is $\\Delta G$ positive or negative? (type "positive" or "negative")
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['-10.0', '0', 'positive'],
+        correctAnswers: ['-10.0', '0', 'positive', '-10.00'],
         hint1: '$\\Delta G = \\Delta G° + RT\\ln(1) = \\Delta G° + 0$.',
         hint2: 'At equilibrium, $\\Delta G = 0$ always.',
         hint3: 'If $Q > K$, the reaction has "overshot" equilibrium.',

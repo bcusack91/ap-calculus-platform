@@ -154,15 +154,15 @@ Here: $M_A \\times V_A \\times 1 = M_B \\times V_B \\times \\frac{1}{2}$, or sim
       content: `
 **Solution Stoichiometry Calculations** 🧮
 
-1) How many moles of KOH are in 250 mL of 0.400 M KOH? (to 3 decimal places)
+1) How many moles of KOH are in 250 mL of 0.400 M KOH? (to 3 significant figures)
 
-2) In the reaction $\\text{HCl} + \\text{NaOH} \\rightarrow \\text{NaCl} + \\text{H}_2\\text{O}$, how many mL of 0.250 M NaOH are needed to neutralize 50.0 mL of 0.100 M HCl? (to 1 decimal place)
+2) In the reaction $\\text{HCl} + \\text{NaOH} \\rightarrow \\text{NaCl} + \\text{H}_2\\text{O}$, how many mL of 0.250 M NaOH are needed to neutralize 50.0 mL of 0.100 M HCl? (to 3 significant figures)
 
-3) A titration requires 28.5 mL of 0.200 M KOH to neutralize 25.0 mL of HNO₃ (1:1 ratio). What is the molarity of HNO₃? (to 3 decimal places)
+3) A titration requires 28.5 mL of 0.200 M KOH to neutralize 25.0 mL of HNO₃ (1:1 ratio). What is the molarity of HNO₃? (to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.100', '20.0', '0.228'],
+        correctAnswers: ['0.100', '20.0', '0.228', '0.1000', '0.10', '20.00', '0.2280'],
         hint1: '$n = 0.400 \\times 0.250$.',
         hint2: 'Moles HCl = $0.100 \\times 0.050 = 0.005$ mol. Need same moles NaOH. $V = n/M = 0.005/0.250$.',
         hint3: 'Moles KOH = $0.200 \\times 0.0285$. Since 1:1, moles HNO₃ = same. $M = n/V = n/0.0250$.',

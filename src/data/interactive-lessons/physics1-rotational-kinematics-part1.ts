@@ -153,13 +153,13 @@ $$\\alpha = \\frac{\\Delta\\omega}{\\Delta t}$$
 
 1) Convert 90° to radians. Express as a decimal rounded to 2 places.
 
-2) A merry-go-round completes one revolution in 8 seconds. What is its angular velocity? (in rad/s, round to 2 decimal places)
+2) A merry-go-round completes one revolution in 8 seconds. What is its angular velocity? (in rad/s, round to 3 significant figures)
 
-3) A fan blade accelerates from rest to 600 RPM in 10 seconds. What is the angular acceleration? (in rad/s², round to 1 decimal place, use $\\pi \\approx 3.14$)
+3) A fan blade accelerates from rest to 600 RPM in 10 seconds. What is the angular acceleration? (in rad/s², round to 3 significant figures, use $\\pi \\approx 3.14$)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1.57', '0.79', '6.3'],
+        correctAnswers: ['1.57', '0.79', '6.3', '1.570', '0.790', '6.30'],
         hint1: '$\\theta = 90 \\times \\pi/180 = \\pi/2$',
         hint2: '$\\omega = 2\\pi/T = 2\\pi/8$',
         hint3: '$\\omega_f = 600 \\times 2\\pi/60 = 20\\pi$ rad/s. $\\alpha = \\omega_f/t = 20\\pi/10$',

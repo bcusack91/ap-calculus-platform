@@ -96,13 +96,13 @@ This combines all steps into one equation.
 
 1) $I = 4.00$ A, $t = 50.0$ min. Total charge in coulombs?
 
-2) Using the charge from (1), how many grams of Ni deposit from Ni²⁺? ($n = 2$, $M_{\\text{Ni}} = 58.69$ g/mol) (to 2 decimal places)
+2) Using the charge from (1), how many grams of Ni deposit from Ni²⁺? ($n = 2$, $M_{\\text{Ni}} = 58.69$ g/mol) (to 3 significant figures)
 
 3) In the electrolysis of molten CaCl₂, what forms at the cathode? (type "Ca" or "Cl2")
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['12000', '3.65', 'Ca'],
+        correctAnswers: ['12000', '3.65', 'Ca', '3.650'],
         hint1: '$q = 4.00 \\times (50.0 \\times 60)$',
         hint2: '$m = 12000 \\times 58.69/(2 \\times 96485)$',
         hint3: 'In molten salts, the cation is reduced at the cathode.',

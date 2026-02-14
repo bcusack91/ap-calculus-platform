@@ -120,10 +120,12 @@ $$h_{\\text{max}} = L(1 - \\cos\\theta_{\\text{max}}) \\approx \\frac{L\\theta_{
 2) With the same system, what is $v_{\\text{max}}$? (in m/s)
 
 3) A different spring has $k = 80$ N/m and $A = 0.25$ m. What is the total energy? (in J)
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.1', '2.0', '2.5'],
+        correctAnswers: ['0.1', '2.0', '2.5', '0.10', '2.00', '2.50'],
         hint1: '$E = \\frac{1}{2}kA^2 \\Rightarrow A = \\sqrt{2E/k} = \\sqrt{2(1.0)/200}$',
         hint2: '$\\frac{1}{2}mv_{\\text{max}}^2 = E \\Rightarrow v_{\\text{max}} = \\sqrt{2E/m}$',
         hint3: '$E = \\frac{1}{2}(80)(0.25)^2$',

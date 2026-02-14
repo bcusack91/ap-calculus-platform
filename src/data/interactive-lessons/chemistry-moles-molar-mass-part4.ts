@@ -132,15 +132,15 @@ A compound is 40.0% C, 6.7% H, and 53.3% O by mass. Find the empirical formula.
 
 Use: H = 1.008, C = 12.01, N = 14.01, O = 16.00, S = 32.07
 
-1) What is the percent by mass of nitrogen in ammonia (NH₃, $M = 17.03$ g/mol)? (to 1 decimal place)
+1) What is the percent by mass of nitrogen in ammonia (NH₃, $M = 17.03$ g/mol)? (to 3 significant figures)
 
-2) What is the percent by mass of sulfur in SO₃ ($M = 80.07$ g/mol)? (to 1 decimal place)
+2) What is the percent by mass of sulfur in SO₃ ($M = 80.07$ g/mol)? (to 3 significant figures)
 
 3) A compound is 85.7% C and 14.3% H by mass. What is the ratio of C to H in the empirical formula? (Enter as a single number: if the ratio is C₁H₂, enter 2)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['82.2', '40.1', '2'],
+        correctAnswers: ['82.2', '40.1', '2', '82.20', '40.10'],
         hint1: '$\\%\\text{N} = \\frac{14.01}{17.03} \\times 100\\%$.',
         hint2: '$\\%\\text{S} = \\frac{32.07}{80.07} \\times 100\\%$.',
         hint3: 'Assume 100 g: 85.7 g C and 14.3 g H. Convert to moles and divide by the smallest value.',

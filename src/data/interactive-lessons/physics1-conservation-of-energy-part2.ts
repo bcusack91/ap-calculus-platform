@@ -141,7 +141,7 @@ Use $g = 10$ m/s².
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['8.9', '4.5', '4.6'],
+        correctAnswers: ['8.9', '4.5', '4.6', '8.90', '4.50', '4.60'],
         hint1: '$mgh = \\frac{1}{2}mv^2 + \\mu_k mgd$. Solve for $v$.',
         hint2: '$W_{\\text{app}} - f_k d = \\frac{1}{2}mv^2$. Find $f_k = \\mu_k mg$.',
         hint3: '$\\frac{1}{2}mv^2 + W_{\\text{air}} = mgh$. Solve for $h$.',

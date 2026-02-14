@@ -94,10 +94,12 @@ Use $g = 10$ m/s².
 2) A 2 kg block oscillates with $k = 800$ N/m and amplitude 0.05 m. What is the speed when $x = 0.03$ m (in m/s)?
 
 3) A block is attached to a spring ($k = 300$ N/m). The block oscillates with maximum speed 6 m/s and maximum acceleration 120 m/s². What is the mass (in kg)?
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['4', '0.8', '0.75'],
+        correctAnswers: ['4', '0.8', '0.75', '0.80', '0.750'],
         hint1: '$v = x\\sqrt{k/m} = 0.1\\sqrt{400/0.25} = 0.1\\sqrt{1600}$.',
         hint2: '$v = \\sqrt{\\frac{k}{m}(A^2 - x^2)} = \\sqrt{\\frac{800}{2}(0.0025 - 0.0009)}$.',
         hint3: '$v_{\\max} = A\\sqrt{k/m}$ and $a_{\\max} = kA/m$. Dividing: $a_{\\max}/v_{\\max} = \\sqrt{k/m}$.',

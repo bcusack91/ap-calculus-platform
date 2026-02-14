@@ -136,10 +136,12 @@ The reaction $2\\,\\text{SO}_3(g) \\rightleftharpoons 2\\,\\text{SO}_2(g) + \\te
 2) What is $K_c$ for $\\text{SO}_2(g) + \\frac{1}{2}\\text{O}_2(g) \\rightleftharpoons \\text{SO}_3(g)$? (Enter in scientific notation, e.g. 7.9e4)
 
 3) The decomposition of SO₃ is endothermic. If temperature increases, does $K_c$ for the decomposition increase or decrease? (Enter "increase")
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['reactant-favored', '7.9e4', 'increase'],
+        correctAnswers: ['reactant-favored', '7.9e4', 'increase', '79000.0000', '79000.00'],
         hint1: '$K_c = 1.6 \\times 10^{-10} \\ll 1$, so reactants (SO₃) dominate.',
         hint2: 'Reverse the reaction and divide by 2. $K\' = (1/K)^{1/2} = (1/(1.6 \\times 10^{-10}))^{1/2}$.',
         hint3: 'Endothermic reactions: increasing T shifts right, increasing K.',

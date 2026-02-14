@@ -156,10 +156,12 @@ $$2\\text{H}_2\\text{O}(l) \\rightarrow 2\\text{H}_2(g) + \\text{O}_2(g)$$
 2) If the overpotential is 0.5 V, what is the actual applied voltage needed? (in V)
 
 3) Is the ΔG for electrolysis positive or negative? (type "positive" or "negative")
+
+*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1.23', '1.73', 'positive'],
+        correctAnswers: ['1.23', '1.73', 'positive', '1.230', '1.730'],
         hint1: 'Take the absolute value of E°.',
         hint2: '$V_{\\text{applied}} = |E°| + \\text{overpotential}$',
         hint3: 'Electrolysis is non-spontaneous.',
