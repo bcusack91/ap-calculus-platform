@@ -12,6 +12,85 @@ import { useSession } from 'next-auth/react'
 import katex from 'katex'
 import { FlashcardNotification } from '@/components/flashcard-notification'
 
+// Helper component to render inline LaTeX within text strings
+// Parses $...$ and $$...$$ delimiters and renders via KaTeX
+function InlineLatex({ text, className }: { text: string; className?: string }) {
+  if (!text || !text.includes('$')) {
+    return <span className={className}>{text}</span>
+  }
+
+  // Split on LaTeX delimiters: $$...$$ (display) and $...$ (inline)
+  const parts: { type: 'text' | 'latex'; content: string; display: boolean }[] = []
+  let remaining = text
+  
+  while (remaining.length > 0) {
+    // Check for display math $$...$$ first
+    const displayMatch = remaining.match(/\$\$([^$]+?)\$\$/)
+    // Check for inline math $...$
+    const inlineMatch = remaining.match(/\$([^$]+?)\$/)
+    
+    // Find which comes first
+    const displayIndex = displayMatch ? remaining.indexOf(displayMatch[0]) : -1
+    const inlineIndex = inlineMatch ? remaining.indexOf(inlineMatch[0]) : -1
+    
+    let firstMatch: RegExpMatchArray | null = null
+    let firstIndex = -1
+    let isDisplay = false
+    
+    if (displayIndex >= 0 && (inlineIndex < 0 || displayIndex <= inlineIndex)) {
+      firstMatch = displayMatch
+      firstIndex = displayIndex
+      isDisplay = true
+    } else if (inlineIndex >= 0) {
+      firstMatch = inlineMatch
+      firstIndex = inlineIndex
+      isDisplay = false
+    }
+    
+    if (!firstMatch || firstIndex < 0) {
+      // No more LaTeX, push remaining text
+      if (remaining) parts.push({ type: 'text', content: remaining, display: false })
+      break
+    }
+    
+    // Push text before the match
+    if (firstIndex > 0) {
+      parts.push({ type: 'text', content: remaining.slice(0, firstIndex), display: false })
+    }
+    
+    // Push the LaTeX part
+    parts.push({ type: 'latex', content: firstMatch[1], display: isDisplay })
+    
+    // Move past the match
+    remaining = remaining.slice(firstIndex + firstMatch[0].length)
+  }
+
+  return (
+    <span className={className}>
+      {parts.map((part, i) => {
+        if (part.type === 'text') {
+          return <span key={i}>{part.content}</span>
+        }
+        try {
+          return (
+            <span
+              key={i}
+              dangerouslySetInnerHTML={{
+                __html: katex.renderToString(part.content, {
+                  throwOnError: false,
+                  displayMode: part.display,
+                })
+              }}
+            />
+          )
+        } catch {
+          return <span key={i}>{part.content}</span>
+        }
+      })}
+    </span>
+  )
+}
+
 interface Section {
   id: string
   type: 'text' | 'input-boxes' | 'dropdown-select' | 'multiple-choice' | 'reference-angle-quiz' | 'factoring-practice' | 'mini-boss'
@@ -202,8 +281,32 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
     }
   }, [completedSections, progressLoaded])
 
-    // Get lesson data based on topic and part
-    const lessonData = getInteractiveLessonData(topicSlug, lessonPart)
+  // Async lesson data loading
+  const [lessonData, setLessonData] = useState<any>(null)
+  const [lessonLoading, setLessonLoading] = useState(true)
+
+  useEffect(() => {
+    let cancelled = false
+    setLessonLoading(true)
+    getInteractiveLessonData(topicSlug, lessonPart).then(data => {
+      if (!cancelled) {
+        setLessonData(data)
+        setLessonLoading(false)
+      }
+    })
+    return () => { cancelled = true }
+  }, [topicSlug, lessonPart])
+
+  if (lessonLoading) {
+    return (
+      <div className="flex items-center justify-center min-h-[400px]">
+        <div className="text-center space-y-4">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600 mx-auto"></div>
+          <p className="text-lg text-gray-600 dark:text-gray-400">Loading lesson...</p>
+        </div>
+      </div>
+    )
+  }
 
   if (!lessonData) {
     return <div>No interactive lesson available</div>
@@ -2061,7 +2164,7 @@ function MultipleChoiceQuiz({
       {/* Current Question */}
       <div className="bg-white border border-gray-200 rounded-lg p-6">
         <h3 className="text-lg font-semibold text-gray-800 mb-4">
-          {currentQuestion.question}
+          <InlineLatex text={currentQuestion.question} />
         </h3>
 
         <div className="space-y-3">
@@ -2094,7 +2197,7 @@ function MultipleChoiceQuiz({
                 className={buttonStyle}
               >
                 <div className="flex items-center justify-between">
-                  <span className="text-gray-800">{option}</span>
+                  <span className="text-gray-800"><InlineLatex text={option} /></span>
                   {showingFeedback && isCorrect && <span className="text-green-600">✓</span>}
                   {showingFeedback && isSelected && !isCorrect && <span className="text-red-600">✗</span>}
                 </div>
@@ -2119,7 +2222,7 @@ function MultipleChoiceQuiz({
                 ? '✓ Correct!'
                 : '✗ Incorrect'}
             </p>
-            <p className="text-gray-700">{currentQuestion.explanation}</p>
+            <p className="text-gray-700"><InlineLatex text={currentQuestion.explanation} /></p>
           </div>
         )}
 
@@ -2913,7 +3016,7 @@ function InputBoxExercise({
       {showHint && attempts === 1 && !isCorrect && (
         <div className="bg-blue-100 dark:bg-blue-900/30 border-l-4 border-blue-500 p-6 rounded-r-lg">
           <p className="text-lg font-semibold text-blue-900 dark:text-blue-200">
-            💡 Hint: {section.exercise.hint1 || 'Try again!'}
+            💡 Hint: <InlineLatex text={section.exercise.hint1 || 'Try again!'} />
           </p>
         </div>
       )}
@@ -2921,7 +3024,7 @@ function InputBoxExercise({
       {showHint && attempts === 2 && !isCorrect && (
         <div className="bg-yellow-100 dark:bg-yellow-900/30 border-l-4 border-yellow-500 p-6 rounded-r-lg">
           <p className="text-lg font-semibold text-yellow-900 dark:text-yellow-200">
-            💡 Hint: {section.exercise.hint2 || 'One more try!'}
+            💡 Hint: <InlineLatex text={section.exercise.hint2 || 'One more try!'} />
           </p>
         </div>
       )}
@@ -2929,7 +3032,7 @@ function InputBoxExercise({
       {showHint && attempts === 3 && !isCorrect && !showAnswer && (
         <div className="bg-orange-100 dark:bg-orange-900/30 border-l-4 border-orange-500 p-6 rounded-r-lg">
           <p className="text-lg font-semibold text-orange-900 dark:text-orange-200">
-            💡 Hint: {section.exercise.hint3 || 'Last hint: write the setup carefully, then compute step by step.'}
+            💡 Hint: <InlineLatex text={section.exercise.hint3 || 'Last hint: write the setup carefully, then compute step by step.'} />
           </p>
         </div>
       )}
@@ -2940,7 +3043,7 @@ function InputBoxExercise({
             ✓ Answer: {section.exercise.correctAnswers.join(', ')}
           </p>
           <p className="text-lg text-green-800 dark:text-green-300">
-            {section.exercise.explanation || ''}
+            <InlineLatex text={section.exercise.explanation || ''} />
           </p>
         </div>
       )}
@@ -3015,7 +3118,7 @@ function DropdownExercise({
           
           return (
             <div key={index} className="flex items-center gap-4">
-              <span className="text-xl font-semibold">{dropdown.label}:</span>
+              <span className="text-xl font-semibold"><InlineLatex text={dropdown.label + ':'} /></span>
               <select
                 value={answers[index]}
                 onChange={(e) => {
@@ -3060,7 +3163,7 @@ function DropdownExercise({
       {showHint && attempts === 1 && !isFullyCorrect && (
         <div className="bg-blue-100 dark:bg-blue-900/30 border-l-4 border-blue-500 p-6 rounded-r-lg">
           <p className="text-lg font-semibold text-blue-900 dark:text-blue-200">
-            💡 Hint: {section.exercise.hint1 || 'Try matching each statement to its core rule before choosing.'}
+            💡 Hint: <InlineLatex text={section.exercise.hint1 || 'Try matching each statement to its core rule before choosing.'} />
           </p>
         </div>
       )}
@@ -3068,7 +3171,7 @@ function DropdownExercise({
       {showHint && attempts === 2 && !isFullyCorrect && (
         <div className="bg-yellow-100 dark:bg-yellow-900/30 border-l-4 border-yellow-500 p-6 rounded-r-lg">
           <p className="text-lg font-semibold text-yellow-900 dark:text-yellow-200">
-            💡 Hint: {section.exercise.hint2 || 'Eliminate obviously wrong options first, then compare the remaining two carefully.'}
+            💡 Hint: <InlineLatex text={section.exercise.hint2 || 'Eliminate obviously wrong options first, then compare the remaining two carefully.'} />
           </p>
         </div>
       )}
@@ -3076,7 +3179,7 @@ function DropdownExercise({
       {showHint && attempts === 3 && !isFullyCorrect && !showAnswer && (
         <div className="bg-orange-100 dark:bg-orange-900/30 border-l-4 border-orange-500 p-6 rounded-r-lg">
           <p className="text-lg font-semibold text-orange-900 dark:text-orange-200">
-            💡 Hint: {section.exercise.hint3 || 'Final hint: look for keywords in each prompt (direction, sign, relation) and match exactly.'}
+            💡 Hint: <InlineLatex text={section.exercise.hint3 || 'Final hint: look for keywords in each prompt (direction, sign, relation) and match exactly.'} />
           </p>
         </div>
       )}
@@ -3089,13 +3192,13 @@ function DropdownExercise({
           <ul className="space-y-2 text-lg text-green-800 dark:text-green-300">
             {section.exercise.dropdowns.map((dropdown: any, index: number) => (
               <li key={index}>
-                {dropdown.label}: <strong>{section.exercise.correctAnswers[index]}</strong>
+                <InlineLatex text={dropdown.label} />: <strong><InlineLatex text={section.exercise.correctAnswers[index]} /></strong>
               </li>
             ))}
           </ul>
           {section.exercise.explanation && (
             <p className="text-lg text-green-800 dark:text-green-300 mt-4">
-              {section.exercise.explanation}
+              <InlineLatex text={section.exercise.explanation} />
             </p>
           )}
         </div>
