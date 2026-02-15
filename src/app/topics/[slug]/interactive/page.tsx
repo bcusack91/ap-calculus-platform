@@ -4,6 +4,7 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import Script from 'next/script'
 import InteractiveLessonRenderer from '@/components/InteractiveLessonRenderer'
+import InteractiveLessonSEO from '@/components/InteractiveLessonSEO'
 import { hasInteractiveLesson } from '@/data/interactive-lessons/registry'
 import 'katex/dist/katex.min.css'
 
@@ -130,8 +131,14 @@ export default async function InteractivePage(props: InteractivePageProps) {
           </div>
         </div>
 
-        {/* Interactive Lesson Renderer */}
+        {/* Interactive Lesson Renderer (client-side stepper) */}
         <InteractiveLessonRenderer topicSlug={topic.slug} />
+
+        {/* SEO: Server-rendered lesson content for search engine crawling */}
+        {/* This renders all lesson text as HTML that Googlebot can index.
+            Visually hidden (sr-only) so users see the interactive stepper above. */}
+        {/* @ts-expect-error Async Server Component */}
+        <InteractiveLessonSEO topicSlug={topic.slug} topicTitle={topic.title} />
 
         {/* Link back to standard lesson */}
         <div className="mt-8 text-center">
