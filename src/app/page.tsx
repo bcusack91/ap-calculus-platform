@@ -86,11 +86,18 @@ const coursesBySection: Record<string, Course[]> = {
       gradient: 'from-blue-600 to-indigo-600'
     },
     {
-      slug: 'ap-calculus-ab-bc',
-      name: 'AP Calculus AB/BC',
+      slug: 'ap-calculus-ab',
+      name: 'AP Calculus AB',
       icon: '∫',
-      description: 'Limits, derivatives, integrals, series',
+      description: 'Limits, derivatives, integrals, applications',
       gradient: 'from-purple-600 to-violet-600'
+    },
+    {
+      slug: 'ap-calculus-bc',
+      name: 'AP Calculus BC',
+      icon: '∬',
+      description: 'Series, parametric, polar, advanced integration',
+      gradient: 'from-violet-600 to-purple-600'
     },
     {
       slug: 'ap-statistics',
@@ -208,7 +215,7 @@ export default function Home() {
               From Grade 4 to AP. SAT to ACT.
             </p>
             <p className="mt-3 text-lg leading-8 text-gray-600">
-              22 courses · 580 topics
+              23 courses · 642 topics
             </p>
           </div>
         </div>

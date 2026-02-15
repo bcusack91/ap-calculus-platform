@@ -1,0 +1,125 @@
+export const precalcParametricPart5Data = {
+  topicSlug: 'parametric-equations-precalc',
+  sections: [
+    {
+      id: 'param5-intro',
+      type: 'text' as const,
+      content: `
+# Projectile Motion
+
+**Part 5 of 7 — Projectile Motion**
+
+### 1. Horizontal
+
+x = v₀ cos(θ) · t
+
+### 2. Vertical
+
+y = v₀ sin(θ) · t - ½gt² + h₀
+
+### 3. Maximum height at t = v₀ sin(θ)/g
+
+Maximum height at t = v₀ sin(θ)/g
+
+### 4. Range (horizontal distance) = v₀² sin(2θ)/g
+
+Range (horizontal distance) = v₀² sin(2θ)/g
+      `
+    },
+    {
+      id: 'param5-quiz1',
+      type: 'multiple-choice' as const,
+      content: `
+**Concept Check** 🎯
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'Which best describes a key concept of projectile motion?',
+            options: [
+              'Horizontal',
+              'An unrelated concept',
+              'This is not covered in Precalculus',
+              'A concept from a different course'
+            ],
+            correctAnswer: 0,
+            explanation: 'Horizontal: x = v₀ cos(θ) · t'
+          },
+          {
+            question: 'In the context of projectile motion, which is accurate?',
+            options: [
+              'Maximum height at t = v₀ sin(θ)/g',
+              'The opposite is true',
+              'This concept is obsolete',
+              'None of these are correct'
+            ],
+            correctAnswer: 0,
+            explanation: 'Maximum height at t = v₀ sin(θ)/g'
+          }
+        ]
+      }
+    },
+    {
+      id: 'param5-detail',
+      type: 'text' as const,
+      content: `
+### Key Concepts Summary
+
+- **Horizontal**: x = v₀ cos(θ) · t
+- **Vertical**: y = v₀ sin(θ) · t - ½gt² + h₀
+- **Maximum height at t = v₀ sin(θ)/g**
+- **Range (horizontal distance) = v₀² sin(2θ)/g**
+      `
+    },
+    {
+      id: 'param5-quiz2',
+      type: 'multiple-choice' as const,
+      content: `
+**Concept Check** 🎯
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'Which concept relates directly to projectile motion?',
+            options: [
+              'Range (horizontal distance) = v₀² sin(2θ)/g',
+              'Only complex analysis',
+              'Exclusively abstract algebra',
+              'This applies only to statistics'
+            ],
+            correctAnswer: 0,
+            explanation: 'Range (horizontal distance) = v₀² sin(2θ)/g'
+          }
+        ]
+      }
+    },
+    {
+      id: 'param5-dropdown',
+      type: 'dropdown-select' as const,
+      content: `
+**Fill in the Blanks** 🔍
+      `,
+      exercise: {
+        dropdowns: [
+          {
+            label: 'Horizontal',
+            options: ['x = v₀ cos(θ) · t', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+          },
+          {
+            label: 'Vertical',
+            options: ['y = v₀ sin(θ) · t - ½gt² + h₀', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+          },
+          {
+            label: 'Maximum height at t = v₀ sin(θ)/g',
+            options: ['Maximum height at t = v₀ sin(θ)/g', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+          }
+        ],
+        correctAnswers: ['x = v₀ cos(θ) · t', 'y = v₀ sin(θ) · t - ½gt² + h₀', 'Maximum height at t = v₀ sin(θ)/g'],
+        hint1: 'Review key concept 1.',
+        hint2: 'Review key concept 2.',
+        hint3: 'Review key concept 3.',
+        explanation: 'These concepts are fundamental to understanding Projectile Motion.'
+      }
+    }
+  ]
+}

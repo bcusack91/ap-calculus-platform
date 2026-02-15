@@ -27,10 +27,15 @@ export default async function TopicsPage() {
 
   // Course metadata for display
   const courseInfo: Record<string, { icon: string; gradient: string; description: string }> = {
-    'ap-calculus-ab-bc': {
+    'ap-calculus-ab': {
       icon: '∫',
-      gradient: 'from-purple-600 to-blue-600',
-      description: 'Limits, derivatives, integrals, series, and more'
+      gradient: 'from-purple-600 to-violet-600',
+      description: 'Limits, derivatives, integrals, and applications'
+    },
+    'ap-calculus-bc': {
+      icon: '∬',
+      gradient: 'from-violet-600 to-purple-600',
+      description: 'Series, parametric, polar, and advanced integration'
     },
     'ap-precalculus': {
       icon: '📐',

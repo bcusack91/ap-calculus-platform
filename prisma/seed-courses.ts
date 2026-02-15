@@ -43,11 +43,29 @@ async function seedCourses() {
       color: 'blue',
     },
     {
+      id: 'ap-calculus-ab',
+      slug: 'ap-calculus-ab',
+      name: 'AP Calculus AB',
+      description: 'Master limits, derivatives, integrals, and their applications for the AP Calculus AB exam.',
+      order: 4,
+      icon: '∫',
+      color: 'purple',
+    },
+    {
+      id: 'ap-calculus-bc',
+      slug: 'ap-calculus-bc',
+      name: 'AP Calculus BC',
+      description: 'Extend your calculus knowledge with advanced integration, sequences, series, parametric/polar calculus, and vector-valued functions.',
+      order: 5,
+      icon: '∬',
+      color: 'violet',
+    },
+    {
       id: 'ap-physics-1',
       slug: 'ap-physics-1',
       name: 'AP Physics 1',
       description: 'Explore mechanics, waves, sound, and basic circuits in this algebra-based physics course.',
-      order: 4,
+      order: 6,
       icon: '⚛️',
       color: 'green',
     },
@@ -57,7 +75,7 @@ async function seedCourses() {
       name: 'AP Physics 2',
       icon: '🔬',
       description: 'Study fluids, thermodynamics, electricity, magnetism, optics, and modern physics using algebra-based approaches.',
-      order: 5,
+      order: 7,
       color: 'teal',
     },
     {
@@ -66,7 +84,7 @@ async function seedCourses() {
       name: 'AP Physics C: Mechanics',
       icon: '🎯',
       description: 'Master calculus-based mechanics including kinematics, energy, momentum, rotation, and oscillations.',
-      order: 6,
+      order: 8,
       color: 'indigo',
     },
     {
@@ -75,7 +93,7 @@ async function seedCourses() {
       name: 'AP Physics C: Electricity & Magnetism',
       icon: '⚡',
       description: 'Dive deep into electrostatics, conductors, capacitors, electric circuits, magnetic fields, and electromagnetic induction with calculus.',
-      order: 7,
+      order: 9,
       color: 'violet',
     },
     {
@@ -84,7 +102,7 @@ async function seedCourses() {
       name: 'AP Chemistry',
       icon: '🧪',
       description: 'Explore atomic structure, chemical bonding, states of matter, reactions, kinetics, thermodynamics, and equilibrium.',
-      order: 8,
+      order: 10,
       color: 'orange',
     },
     {
@@ -93,7 +111,7 @@ async function seedCourses() {
       name: 'AP Biology',
       icon: '🧬',
       description: 'Study the chemistry of life, cells, genetics, evolution, ecology, and the diversity of organisms.',
-      order: 9,
+      order: 11,
       color: 'rose',
     },
     {
@@ -102,7 +120,7 @@ async function seedCourses() {
       name: 'AP Psychology',
       icon: '🧠',
       description: 'Explore the science of behavior and mental processes including cognition, development, personality, and disorders.',
-      order: 10,
+      order: 12,
       color: 'amber',
     },
     {
@@ -111,7 +129,7 @@ async function seedCourses() {
       name: 'Organic Chemistry',
       icon: '⚗️',
       description: 'Master organic molecular structure, functional groups, reaction mechanisms, synthesis strategies, and spectroscopy.',
-      order: 11,
+      order: 13,
       color: 'lime',
     },
   ]
