@@ -29,7 +29,7 @@ export async function generateMetadata(props: InteractivePageProps): Promise<Met
     return {}
   }
 
-  const canonicalUrl = `https://studymondo.com/topics/${topic.slug}/interactive`
+  const canonicalUrl = `https://www.studymondo.com/topics/${topic.slug}/interactive`
 
   return {
     title: `${topic.title} - Interactive Lesson | Study Mondo`,

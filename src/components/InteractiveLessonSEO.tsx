@@ -53,7 +53,7 @@ export default async function InteractiveLessonSEO({ topicSlug, topicTitle }: In
     provider: {
       '@type': 'Organization',
       name: 'Study Mondo',
-      url: 'https://studymondo.com',
+      url: 'https://www.studymondo.com',
     },
     hasCourseInstance: seoContent.map((part) => ({
       '@type': 'CourseInstance',

@@ -14,12 +14,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://studymondo.com"),
+  metadataBase: new URL("https://www.studymondo.com"),
   title: "Study Mondo — Free AP Study Platform",
   description:
     "Study Mondo offers free notes, flashcards, and practice problems for AP Calculus, Physics, Chemistry, and Biology — created by educators to help you ace your exams.",
   alternates: {
-    canonical: "https://studymondo.com",
+    canonical: "https://www.studymondo.com",
   },
   manifest: "/site.webmanifest",
   other: {
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     title: "Study Mondo — Free AP Study Platform",
     description:
       "Study Mondo offers free notes, flashcards, and practice problems for AP Calculus, Physics, Chemistry, and Biology — created by educators to help you ace your exams.",
-    url: "https://studymondo.com",
+    url: "https://www.studymondo.com",
     siteName: "Study Mondo",
     type: "website",
   },

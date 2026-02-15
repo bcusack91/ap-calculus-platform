@@ -25,7 +25,7 @@ export async function generateMetadata(props: CategoryPageProps): Promise<Metada
     return {}
   }
 
-  const canonicalUrl = `https://studymondo.com/categories/${category.slug}`
+  const canonicalUrl = `https://www.studymondo.com/categories/${category.slug}`
 
   return {
     title: `${category.name} | Study Mondo`,

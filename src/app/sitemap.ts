@@ -6,7 +6,7 @@ export const dynamic = 'force-dynamic'
 export const revalidate = 3600 // Revalidate every hour
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = 'https://studymondo.com'
+  const baseUrl = 'https://www.studymondo.com'
   
   // Static pages
   const staticPages: MetadataRoute.Sitemap = [

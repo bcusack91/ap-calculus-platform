@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       follow: true,
     },
     alternates: {
-      canonical: topic ? `https://studymondo.com/topics/${topic.slug}` : undefined,
+      canonical: topic ? `https://www.studymondo.com/topics/${topic.slug}` : undefined,
     },
   }
 }

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: 'All Topics | Study Mondo',
   description: 'Browse all study topics across 22 AP courses and subjects',
   alternates: {
-    canonical: 'https://studymondo.com/topics',
+    canonical: 'https://www.studymondo.com/topics',
   },
 }
 

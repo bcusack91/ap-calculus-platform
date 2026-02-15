@@ -32,7 +32,7 @@ export async function generateMetadata(props: TopicPageProps): Promise<Metadata>
     return {}
   }
 
-  const canonicalUrl = `https://studymondo.com/topics/${topic.slug}`
+  const canonicalUrl = `https://www.studymondo.com/topics/${topic.slug}`
 
   return {
     title: `${topic.title} | Study Mondo`,
