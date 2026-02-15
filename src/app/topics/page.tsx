@@ -91,6 +91,11 @@ export default async function TopicsPage() {
       icon: '📋',
       gradient: 'from-red-600 to-rose-600',
       description: 'English, math, reading, science, and test strategies for the ACT'
+    },
+    'mcat-prep': {
+      icon: '🏥',
+      gradient: 'from-emerald-600 to-teal-600',
+      description: 'Chem/Phys, CARS, Bio/Biochem, and Psych/Soc for the MCAT'
     }
   }
 

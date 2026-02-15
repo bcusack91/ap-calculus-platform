@@ -3017,6 +3017,207 @@ const interactiveLessonRegistry: Record<string, InteractiveTopicConfig> = {
       { title: 'Review & Applications', loader: () => import('./act-act-test-day-strategy-act-part7').then(m => m.actTestDayPart7Data) },
     ],
   },
+  // ═══════════════════════════════════════════
+  // MCAT Prep — 18 Topics
+  // ═══════════════════════════════════════════
+  'mcat-general-chemistry-mcat': {
+    parts: [
+      { title: 'Atomic Structure & Periodic Trends', loader: () => import('./mcat-mcat-general-chemistry-mcat-part1').then(m => m.mcatGenChemPart1Data) },
+      { title: 'Chemical Bonding', loader: () => import('./mcat-mcat-general-chemistry-mcat-part2').then(m => m.mcatGenChemPart2Data) },
+      { title: 'Stoichiometry & Solutions', loader: () => import('./mcat-mcat-general-chemistry-mcat-part3').then(m => m.mcatGenChemPart3Data) },
+      { title: 'Acids, Bases & Buffers', loader: () => import('./mcat-mcat-general-chemistry-mcat-part4').then(m => m.mcatGenChemPart4Data) },
+      { title: 'Chemical Kinetics', loader: () => import('./mcat-mcat-general-chemistry-mcat-part5').then(m => m.mcatGenChemPart5Data) },
+      { title: 'Thermodynamics & Equilibrium', loader: () => import('./mcat-mcat-general-chemistry-mcat-part6').then(m => m.mcatGenChemPart6Data) },
+      { title: 'Review & MCAT Practice', loader: () => import('./mcat-mcat-general-chemistry-mcat-part7').then(m => m.mcatGenChemPart7Data) },
+    ],
+  },
+  'mcat-organic-chemistry-mcat': {
+    parts: [
+      { title: 'Functional Groups & Nomenclature', loader: () => import('./mcat-mcat-organic-chemistry-mcat-part1').then(m => m.mcatOrgChemPart1Data) },
+      { title: 'Stereochemistry', loader: () => import('./mcat-mcat-organic-chemistry-mcat-part2').then(m => m.mcatOrgChemPart2Data) },
+      { title: 'Substitution & Elimination', loader: () => import('./mcat-mcat-organic-chemistry-mcat-part3').then(m => m.mcatOrgChemPart3Data) },
+      { title: 'Carbonyl Chemistry', loader: () => import('./mcat-mcat-organic-chemistry-mcat-part4').then(m => m.mcatOrgChemPart4Data) },
+      { title: 'Carboxylic Acid Derivatives', loader: () => import('./mcat-mcat-organic-chemistry-mcat-part5').then(m => m.mcatOrgChemPart5Data) },
+      { title: 'Spectroscopy & Structure', loader: () => import('./mcat-mcat-organic-chemistry-mcat-part6').then(m => m.mcatOrgChemPart6Data) },
+      { title: 'Review & MCAT Practice', loader: () => import('./mcat-mcat-organic-chemistry-mcat-part7').then(m => m.mcatOrgChemPart7Data) },
+    ],
+  },
+  'mcat-physics-mechanics-mcat': {
+    parts: [
+      { title: 'Kinematics & Motion', loader: () => import('./mcat-mcat-physics-mechanics-mcat-part1').then(m => m.mcatPhysMechPart1Data) },
+      { title: 'Forces & Newtons Laws', loader: () => import('./mcat-mcat-physics-mechanics-mcat-part2').then(m => m.mcatPhysMechPart2Data) },
+      { title: 'Work, Energy & Power', loader: () => import('./mcat-mcat-physics-mechanics-mcat-part3').then(m => m.mcatPhysMechPart3Data) },
+      { title: 'Momentum & Collisions', loader: () => import('./mcat-mcat-physics-mechanics-mcat-part4').then(m => m.mcatPhysMechPart4Data) },
+      { title: 'Fluids & Pressure', loader: () => import('./mcat-mcat-physics-mechanics-mcat-part5').then(m => m.mcatPhysMechPart5Data) },
+      { title: 'Waves & Sound', loader: () => import('./mcat-mcat-physics-mechanics-mcat-part6').then(m => m.mcatPhysMechPart6Data) },
+      { title: 'Review & MCAT Practice', loader: () => import('./mcat-mcat-physics-mechanics-mcat-part7').then(m => m.mcatPhysMechPart7Data) },
+    ],
+  },
+  'mcat-physics-electricity-mcat': {
+    parts: [
+      { title: 'Electrostatics & Coulombs Law', loader: () => import('./mcat-mcat-physics-electricity-mcat-part1').then(m => m.mcatPhysElecPart1Data) },
+      { title: 'Electric Circuits', loader: () => import('./mcat-mcat-physics-electricity-mcat-part2').then(m => m.mcatPhysElecPart2Data) },
+      { title: 'Magnetism & EM Induction', loader: () => import('./mcat-mcat-physics-electricity-mcat-part3').then(m => m.mcatPhysElecPart3Data) },
+      { title: 'Optics & Light', loader: () => import('./mcat-mcat-physics-electricity-mcat-part4').then(m => m.mcatPhysElecPart4Data) },
+      { title: 'Nuclear Physics & Radioactivity', loader: () => import('./mcat-mcat-physics-electricity-mcat-part5').then(m => m.mcatPhysElecPart5Data) },
+      { title: 'Electrochemistry', loader: () => import('./mcat-mcat-physics-electricity-mcat-part6').then(m => m.mcatPhysElecPart6Data) },
+      { title: 'Review & MCAT Practice', loader: () => import('./mcat-mcat-physics-electricity-mcat-part7').then(m => m.mcatPhysElecPart7Data) },
+    ],
+  },
+  'mcat-biochemistry-foundations-mcat': {
+    parts: [
+      { title: 'Amino Acids & Protein Structure', loader: () => import('./mcat-mcat-biochemistry-foundations-mcat-part1').then(m => m.mcatBiochemPart1Data) },
+      { title: 'Enzyme Kinetics', loader: () => import('./mcat-mcat-biochemistry-foundations-mcat-part2').then(m => m.mcatBiochemPart2Data) },
+      { title: 'Carbohydrate Metabolism', loader: () => import('./mcat-mcat-biochemistry-foundations-mcat-part3').then(m => m.mcatBiochemPart3Data) },
+      { title: 'Lipids & Membranes', loader: () => import('./mcat-mcat-biochemistry-foundations-mcat-part4').then(m => m.mcatBiochemPart4Data) },
+      { title: 'Nucleic Acids & DNA', loader: () => import('./mcat-mcat-biochemistry-foundations-mcat-part5').then(m => m.mcatBiochemPart5Data) },
+      { title: 'Bioenergetics & ATP', loader: () => import('./mcat-mcat-biochemistry-foundations-mcat-part6').then(m => m.mcatBiochemPart6Data) },
+      { title: 'Review & MCAT Practice', loader: () => import('./mcat-mcat-biochemistry-foundations-mcat-part7').then(m => m.mcatBiochemPart7Data) },
+    ],
+  },
+  'mcat-cars-strategy-mcat': {
+    parts: [
+      { title: 'CARS Overview & Approach', loader: () => import('./mcat-mcat-cars-strategy-mcat-part1').then(m => m.mcatCarsStratPart1Data) },
+      { title: 'Active Reading Techniques', loader: () => import('./mcat-mcat-cars-strategy-mcat-part2').then(m => m.mcatCarsStratPart2Data) },
+      { title: 'Main Idea & Argument', loader: () => import('./mcat-mcat-cars-strategy-mcat-part3').then(m => m.mcatCarsStratPart3Data) },
+      { title: 'Inference & Application', loader: () => import('./mcat-mcat-cars-strategy-mcat-part4').then(m => m.mcatCarsStratPart4Data) },
+      { title: 'Tone & Author Perspective', loader: () => import('./mcat-mcat-cars-strategy-mcat-part5').then(m => m.mcatCarsStratPart5Data) },
+      { title: 'Question Types & Traps', loader: () => import('./mcat-mcat-cars-strategy-mcat-part6').then(m => m.mcatCarsStratPart6Data) },
+      { title: 'Review & MCAT Practice', loader: () => import('./mcat-mcat-cars-strategy-mcat-part7').then(m => m.mcatCarsStratPart7Data) },
+    ],
+  },
+  'mcat-cars-passages-mcat': {
+    parts: [
+      { title: 'Humanities Passages', loader: () => import('./mcat-mcat-cars-passages-mcat-part1').then(m => m.mcatCarsPsgPart1Data) },
+      { title: 'Social Science Passages', loader: () => import('./mcat-mcat-cars-passages-mcat-part2').then(m => m.mcatCarsPsgPart2Data) },
+      { title: 'Ethics & Philosophy', loader: () => import('./mcat-mcat-cars-passages-mcat-part3').then(m => m.mcatCarsPsgPart3Data) },
+      { title: 'Arts & Culture Passages', loader: () => import('./mcat-mcat-cars-passages-mcat-part4').then(m => m.mcatCarsPsgPart4Data) },
+      { title: 'Comparative & Contrasting', loader: () => import('./mcat-mcat-cars-passages-mcat-part5').then(m => m.mcatCarsPsgPart5Data) },
+      { title: 'Time Management', loader: () => import('./mcat-mcat-cars-passages-mcat-part6').then(m => m.mcatCarsPsgPart6Data) },
+      { title: 'Review & MCAT Practice', loader: () => import('./mcat-mcat-cars-passages-mcat-part7').then(m => m.mcatCarsPsgPart7Data) },
+    ],
+  },
+  'mcat-cars-reasoning-mcat': {
+    parts: [
+      { title: 'Logical Reasoning', loader: () => import('./mcat-mcat-cars-reasoning-mcat-part1').then(m => m.mcatCarsReasonPart1Data) },
+      { title: 'Strengthening & Weakening Arguments', loader: () => import('./mcat-mcat-cars-reasoning-mcat-part2').then(m => m.mcatCarsReasonPart2Data) },
+      { title: 'Assumption Identification', loader: () => import('./mcat-mcat-cars-reasoning-mcat-part3').then(m => m.mcatCarsReasonPart3Data) },
+      { title: 'Evaluating Evidence', loader: () => import('./mcat-mcat-cars-reasoning-mcat-part4').then(m => m.mcatCarsReasonPart4Data) },
+      { title: 'Analogical Reasoning', loader: () => import('./mcat-mcat-cars-reasoning-mcat-part5').then(m => m.mcatCarsReasonPart5Data) },
+      { title: 'Common Logical Fallacies', loader: () => import('./mcat-mcat-cars-reasoning-mcat-part6').then(m => m.mcatCarsReasonPart6Data) },
+      { title: 'Review & MCAT Practice', loader: () => import('./mcat-mcat-cars-reasoning-mcat-part7').then(m => m.mcatCarsReasonPart7Data) },
+    ],
+  },
+  'mcat-cell-biology-mcat': {
+    parts: [
+      { title: 'Cell Structure & Organelles', loader: () => import('./mcat-mcat-cell-biology-mcat-part1').then(m => m.mcatCellBioPart1Data) },
+      { title: 'Membrane Transport', loader: () => import('./mcat-mcat-cell-biology-mcat-part2').then(m => m.mcatCellBioPart2Data) },
+      { title: 'Cell Signaling', loader: () => import('./mcat-mcat-cell-biology-mcat-part3').then(m => m.mcatCellBioPart3Data) },
+      { title: 'Cell Cycle & Division', loader: () => import('./mcat-mcat-cell-biology-mcat-part4').then(m => m.mcatCellBioPart4Data) },
+      { title: 'Apoptosis & Regulation', loader: () => import('./mcat-mcat-cell-biology-mcat-part5').then(m => m.mcatCellBioPart5Data) },
+      { title: 'Stem Cells & Differentiation', loader: () => import('./mcat-mcat-cell-biology-mcat-part6').then(m => m.mcatCellBioPart6Data) },
+      { title: 'Review & MCAT Practice', loader: () => import('./mcat-mcat-cell-biology-mcat-part7').then(m => m.mcatCellBioPart7Data) },
+    ],
+  },
+  'mcat-molecular-biology-mcat': {
+    parts: [
+      { title: 'DNA Replication', loader: () => import('./mcat-mcat-molecular-biology-mcat-part1').then(m => m.mcatMolBioPart1Data) },
+      { title: 'Transcription & RNA Processing', loader: () => import('./mcat-mcat-molecular-biology-mcat-part2').then(m => m.mcatMolBioPart2Data) },
+      { title: 'Translation & Protein Synthesis', loader: () => import('./mcat-mcat-molecular-biology-mcat-part3').then(m => m.mcatMolBioPart3Data) },
+      { title: 'Gene Regulation', loader: () => import('./mcat-mcat-molecular-biology-mcat-part4').then(m => m.mcatMolBioPart4Data) },
+      { title: 'Mutations & Repair', loader: () => import('./mcat-mcat-molecular-biology-mcat-part5').then(m => m.mcatMolBioPart5Data) },
+      { title: 'Biotechnology & Lab Techniques', loader: () => import('./mcat-mcat-molecular-biology-mcat-part6').then(m => m.mcatMolBioPart6Data) },
+      { title: 'Review & MCAT Practice', loader: () => import('./mcat-mcat-molecular-biology-mcat-part7').then(m => m.mcatMolBioPart7Data) },
+    ],
+  },
+  'mcat-organ-systems-mcat': {
+    parts: [
+      { title: 'Cardiovascular System', loader: () => import('./mcat-mcat-organ-systems-mcat-part1').then(m => m.mcatOrganSysPart1Data) },
+      { title: 'Respiratory System', loader: () => import('./mcat-mcat-organ-systems-mcat-part2').then(m => m.mcatOrganSysPart2Data) },
+      { title: 'Renal & Excretory System', loader: () => import('./mcat-mcat-organ-systems-mcat-part3').then(m => m.mcatOrganSysPart3Data) },
+      { title: 'Digestive System', loader: () => import('./mcat-mcat-organ-systems-mcat-part4').then(m => m.mcatOrganSysPart4Data) },
+      { title: 'Endocrine System', loader: () => import('./mcat-mcat-organ-systems-mcat-part5').then(m => m.mcatOrganSysPart5Data) },
+      { title: 'Nervous System', loader: () => import('./mcat-mcat-organ-systems-mcat-part6').then(m => m.mcatOrganSysPart6Data) },
+      { title: 'Review & MCAT Practice', loader: () => import('./mcat-mcat-organ-systems-mcat-part7').then(m => m.mcatOrganSysPart7Data) },
+    ],
+  },
+  'mcat-genetics-evolution-mcat': {
+    parts: [
+      { title: 'Mendelian Genetics', loader: () => import('./mcat-mcat-genetics-evolution-mcat-part1').then(m => m.mcatGeneticsPart1Data) },
+      { title: 'Non-Mendelian Inheritance', loader: () => import('./mcat-mcat-genetics-evolution-mcat-part2').then(m => m.mcatGeneticsPart2Data) },
+      { title: 'Population Genetics', loader: () => import('./mcat-mcat-genetics-evolution-mcat-part3').then(m => m.mcatGeneticsPart3Data) },
+      { title: 'Natural Selection', loader: () => import('./mcat-mcat-genetics-evolution-mcat-part4').then(m => m.mcatGeneticsPart4Data) },
+      { title: 'Speciation & Phylogeny', loader: () => import('./mcat-mcat-genetics-evolution-mcat-part5').then(m => m.mcatGeneticsPart5Data) },
+      { title: 'Immune System', loader: () => import('./mcat-mcat-genetics-evolution-mcat-part6').then(m => m.mcatGeneticsPart6Data) },
+      { title: 'Review & MCAT Practice', loader: () => import('./mcat-mcat-genetics-evolution-mcat-part7').then(m => m.mcatGeneticsPart7Data) },
+    ],
+  },
+  'mcat-anatomy-physiology-mcat': {
+    parts: [
+      { title: 'Musculoskeletal System', loader: () => import('./mcat-mcat-anatomy-physiology-mcat-part1').then(m => m.mcatAnatPhysPart1Data) },
+      { title: 'Reproductive System', loader: () => import('./mcat-mcat-anatomy-physiology-mcat-part2').then(m => m.mcatAnatPhysPart2Data) },
+      { title: 'Integumentary System', loader: () => import('./mcat-mcat-anatomy-physiology-mcat-part3').then(m => m.mcatAnatPhysPart3Data) },
+      { title: 'Lymphatic & Immune', loader: () => import('./mcat-mcat-anatomy-physiology-mcat-part4').then(m => m.mcatAnatPhysPart4Data) },
+      { title: 'Sensory Systems', loader: () => import('./mcat-mcat-anatomy-physiology-mcat-part5').then(m => m.mcatAnatPhysPart5Data) },
+      { title: 'Embryology & Development', loader: () => import('./mcat-mcat-anatomy-physiology-mcat-part6').then(m => m.mcatAnatPhysPart6Data) },
+      { title: 'Review & MCAT Practice', loader: () => import('./mcat-mcat-anatomy-physiology-mcat-part7').then(m => m.mcatAnatPhysPart7Data) },
+    ],
+  },
+  'mcat-microbiology-mcat': {
+    parts: [
+      { title: 'Bacteria Structure & Function', loader: () => import('./mcat-mcat-microbiology-mcat-part1').then(m => m.mcatMicroPart1Data) },
+      { title: 'Viruses & Prions', loader: () => import('./mcat-mcat-microbiology-mcat-part2').then(m => m.mcatMicroPart2Data) },
+      { title: 'Fungi & Parasites', loader: () => import('./mcat-mcat-microbiology-mcat-part3').then(m => m.mcatMicroPart3Data) },
+      { title: 'Microbial Genetics', loader: () => import('./mcat-mcat-microbiology-mcat-part4').then(m => m.mcatMicroPart4Data) },
+      { title: 'Antimicrobial Agents', loader: () => import('./mcat-mcat-microbiology-mcat-part5').then(m => m.mcatMicroPart5Data) },
+      { title: 'Host-Pathogen Interactions', loader: () => import('./mcat-mcat-microbiology-mcat-part6').then(m => m.mcatMicroPart6Data) },
+      { title: 'Review & MCAT Practice', loader: () => import('./mcat-mcat-microbiology-mcat-part7').then(m => m.mcatMicroPart7Data) },
+    ],
+  },
+  'mcat-psychology-behavior-mcat': {
+    parts: [
+      { title: 'Sensation & Perception', loader: () => import('./mcat-mcat-psychology-behavior-mcat-part1').then(m => m.mcatPsychBehavPart1Data) },
+      { title: 'Learning & Memory', loader: () => import('./mcat-mcat-psychology-behavior-mcat-part2').then(m => m.mcatPsychBehavPart2Data) },
+      { title: 'Cognition & Language', loader: () => import('./mcat-mcat-psychology-behavior-mcat-part3').then(m => m.mcatPsychBehavPart3Data) },
+      { title: 'Motivation & Emotion', loader: () => import('./mcat-mcat-psychology-behavior-mcat-part4').then(m => m.mcatPsychBehavPart4Data) },
+      { title: 'Developmental Psychology', loader: () => import('./mcat-mcat-psychology-behavior-mcat-part5').then(m => m.mcatPsychBehavPart5Data) },
+      { title: 'Personality & Disorders', loader: () => import('./mcat-mcat-psychology-behavior-mcat-part6').then(m => m.mcatPsychBehavPart6Data) },
+      { title: 'Review & MCAT Practice', loader: () => import('./mcat-mcat-psychology-behavior-mcat-part7').then(m => m.mcatPsychBehavPart7Data) },
+    ],
+  },
+  'mcat-sociology-mcat': {
+    parts: [
+      { title: 'Social Structure & Stratification', loader: () => import('./mcat-mcat-sociology-mcat-part1').then(m => m.mcatSociologyPart1Data) },
+      { title: 'Culture & Socialization', loader: () => import('./mcat-mcat-sociology-mcat-part2').then(m => m.mcatSociologyPart2Data) },
+      { title: 'Social Interaction & Self', loader: () => import('./mcat-mcat-sociology-mcat-part3').then(m => m.mcatSociologyPart3Data) },
+      { title: 'Group Dynamics & Deviance', loader: () => import('./mcat-mcat-sociology-mcat-part4').then(m => m.mcatSociologyPart4Data) },
+      { title: 'Health Disparities', loader: () => import('./mcat-mcat-sociology-mcat-part5').then(m => m.mcatSociologyPart5Data) },
+      { title: 'Demographics & Population', loader: () => import('./mcat-mcat-sociology-mcat-part6').then(m => m.mcatSociologyPart6Data) },
+      { title: 'Review & MCAT Practice', loader: () => import('./mcat-mcat-sociology-mcat-part7').then(m => m.mcatSociologyPart7Data) },
+    ],
+  },
+  'mcat-science-passage-strategy-mcat': {
+    parts: [
+      { title: 'Reading Science Passages', loader: () => import('./mcat-mcat-science-passage-strategy-mcat-part1').then(m => m.mcatSciPassagePart1Data) },
+      { title: 'Data Interpretation', loader: () => import('./mcat-mcat-science-passage-strategy-mcat-part2').then(m => m.mcatSciPassagePart2Data) },
+      { title: 'Experimental Design', loader: () => import('./mcat-mcat-science-passage-strategy-mcat-part3').then(m => m.mcatSciPassagePart3Data) },
+      { title: 'Discrete Questions', loader: () => import('./mcat-mcat-science-passage-strategy-mcat-part4').then(m => m.mcatSciPassagePart4Data) },
+      { title: 'Integrating Content Knowledge', loader: () => import('./mcat-mcat-science-passage-strategy-mcat-part5').then(m => m.mcatSciPassagePart5Data) },
+      { title: 'Common Traps & Pitfalls', loader: () => import('./mcat-mcat-science-passage-strategy-mcat-part6').then(m => m.mcatSciPassagePart6Data) },
+      { title: 'Review & MCAT Practice', loader: () => import('./mcat-mcat-science-passage-strategy-mcat-part7').then(m => m.mcatSciPassagePart7Data) },
+    ],
+  },
+  'mcat-test-day-strategy-mcat': {
+    parts: [
+      { title: 'MCAT Format & Scoring', loader: () => import('./mcat-mcat-test-day-strategy-mcat-part1').then(m => m.mcatTestDayPart1Data) },
+      { title: 'Study Planning', loader: () => import('./mcat-mcat-test-day-strategy-mcat-part2').then(m => m.mcatTestDayPart2Data) },
+      { title: 'Section-by-Section Strategy', loader: () => import('./mcat-mcat-test-day-strategy-mcat-part3').then(m => m.mcatTestDayPart3Data) },
+      { title: 'Practice Test Analysis', loader: () => import('./mcat-mcat-test-day-strategy-mcat-part4').then(m => m.mcatTestDayPart4Data) },
+      { title: 'Test Day Preparation', loader: () => import('./mcat-mcat-test-day-strategy-mcat-part5').then(m => m.mcatTestDayPart5Data) },
+      { title: 'Score Goals & Applications', loader: () => import('./mcat-mcat-test-day-strategy-mcat-part6').then(m => m.mcatTestDayPart6Data) },
+      { title: 'Review & MCAT Practice', loader: () => import('./mcat-mcat-test-day-strategy-mcat-part7').then(m => m.mcatTestDayPart7Data) },
+    ],
+  },
 }
 
 export function getInteractiveTopicConfig(topicSlug: string): InteractiveTopicConfig | null {

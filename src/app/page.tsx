@@ -179,6 +179,13 @@ const coursesBySection: Record<string, Course[]> = {
       icon: '📋',
       description: 'Math, English, Reading, Science',
       gradient: 'from-purple-600 to-pink-600'
+    },
+    {
+      slug: 'mcat-prep',
+      name: 'MCAT Prep',
+      icon: '🏥',
+      description: 'Chem/Phys, CARS, Bio/Biochem, Psych/Soc',
+      gradient: 'from-emerald-600 to-teal-600'
     }
   ]
 };
@@ -215,7 +222,7 @@ export default function Home() {
               From Grade 4 to AP. SAT to ACT.
             </p>
             <p className="mt-3 text-lg leading-8 text-gray-600">
-              23 courses · 682 topics
+              24 courses · 700 topics
             </p>
           </div>
         </div>
