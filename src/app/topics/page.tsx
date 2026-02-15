@@ -81,6 +81,16 @@ export default async function TopicsPage() {
       icon: '⚗️',
       gradient: 'from-lime-600 to-green-600',
       description: 'Structure, reactions, synthesis, and spectroscopy'
+    },
+    'sat-prep': {
+      icon: '📝',
+      gradient: 'from-blue-600 to-indigo-600',
+      description: 'Math, reading, writing, and test strategies for the SAT'
+    },
+    'act-prep': {
+      icon: '📋',
+      gradient: 'from-red-600 to-rose-600',
+      description: 'English, math, reading, science, and test strategies for the ACT'
     }
   }
 

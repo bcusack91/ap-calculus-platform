@@ -215,7 +215,7 @@ export default function Home() {
               From Grade 4 to AP. SAT to ACT.
             </p>
             <p className="mt-3 text-lg leading-8 text-gray-600">
-              23 courses · 642 topics
+              23 courses · 682 topics
             </p>
           </div>
         </div>

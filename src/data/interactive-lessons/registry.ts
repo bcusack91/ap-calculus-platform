@@ -2571,6 +2571,452 @@ const interactiveLessonRegistry: Record<string, InteractiveTopicConfig> = {
       { title: 'Review & Applications', loader: () => import('./calcbc-review-connections-calcbc-part7').then(m => m.calcbcReviewPart7Data) },
     ],
   },
+  // ═══════════════════════════════════════════
+  // SAT Prep — 20 Topics
+  // ═══════════════════════════════════════════
+  'sat-linear-equations-sat': {
+    parts: [
+      { title: 'Linear Equations Basics', loader: () => import('./sat-sat-linear-equations-sat-part1').then(m => m.satLinearEquationsPart1Data) },
+      { title: 'Multi-Step Equations', loader: () => import('./sat-sat-linear-equations-sat-part2').then(m => m.satLinearEquationsPart2Data) },
+      { title: 'Variables on Both Sides', loader: () => import('./sat-sat-linear-equations-sat-part3').then(m => m.satLinearEquationsPart3Data) },
+      { title: 'Systems of Equations', loader: () => import('./sat-sat-linear-equations-sat-part4').then(m => m.satLinearEquationsPart4Data) },
+      { title: 'Modeling with Equations', loader: () => import('./sat-sat-linear-equations-sat-part5').then(m => m.satLinearEquationsPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./sat-sat-linear-equations-sat-part6').then(m => m.satLinearEquationsPart6Data) },
+      { title: 'Review & Applications', loader: () => import('./sat-sat-linear-equations-sat-part7').then(m => m.satLinearEquationsPart7Data) },
+    ],
+  },
+  'sat-quadratic-equations-sat': {
+    parts: [
+      { title: 'Quadratic Fundamentals', loader: () => import('./sat-sat-quadratic-equations-sat-part1').then(m => m.satQuadraticsPart1Data) },
+      { title: 'Factoring', loader: () => import('./sat-sat-quadratic-equations-sat-part2').then(m => m.satQuadraticsPart2Data) },
+      { title: 'Quadratic Formula', loader: () => import('./sat-sat-quadratic-equations-sat-part3').then(m => m.satQuadraticsPart3Data) },
+      { title: 'Vertex Form', loader: () => import('./sat-sat-quadratic-equations-sat-part4').then(m => m.satQuadraticsPart4Data) },
+      { title: 'Graphing Parabolas', loader: () => import('./sat-sat-quadratic-equations-sat-part5').then(m => m.satQuadraticsPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./sat-sat-quadratic-equations-sat-part6').then(m => m.satQuadraticsPart6Data) },
+      { title: 'Review & Applications', loader: () => import('./sat-sat-quadratic-equations-sat-part7').then(m => m.satQuadraticsPart7Data) },
+    ],
+  },
+  'sat-functions-graphs-sat': {
+    parts: [
+      { title: 'Function Notation', loader: () => import('./sat-sat-functions-graphs-sat-part1').then(m => m.satFunctionsPart1Data) },
+      { title: 'Interpreting Graphs', loader: () => import('./sat-sat-functions-graphs-sat-part2').then(m => m.satFunctionsPart2Data) },
+      { title: 'Domain & Range', loader: () => import('./sat-sat-functions-graphs-sat-part3').then(m => m.satFunctionsPart3Data) },
+      { title: 'Transformations', loader: () => import('./sat-sat-functions-graphs-sat-part4').then(m => m.satFunctionsPart4Data) },
+      { title: 'Function Composition', loader: () => import('./sat-sat-functions-graphs-sat-part5').then(m => m.satFunctionsPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./sat-sat-functions-graphs-sat-part6').then(m => m.satFunctionsPart6Data) },
+      { title: 'Review & Applications', loader: () => import('./sat-sat-functions-graphs-sat-part7').then(m => m.satFunctionsPart7Data) },
+    ],
+  },
+  'sat-exponents-radicals-sat': {
+    parts: [
+      { title: 'Laws of Exponents', loader: () => import('./sat-sat-exponents-radicals-sat-part1').then(m => m.satExponentsPart1Data) },
+      { title: 'Negative & Zero Exponents', loader: () => import('./sat-sat-exponents-radicals-sat-part2').then(m => m.satExponentsPart2Data) },
+      { title: 'Radicals & Roots', loader: () => import('./sat-sat-exponents-radicals-sat-part3').then(m => m.satExponentsPart3Data) },
+      { title: 'Rational Exponents', loader: () => import('./sat-sat-exponents-radicals-sat-part4').then(m => m.satExponentsPart4Data) },
+      { title: 'Simplifying Expressions', loader: () => import('./sat-sat-exponents-radicals-sat-part5').then(m => m.satExponentsPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./sat-sat-exponents-radicals-sat-part6').then(m => m.satExponentsPart6Data) },
+      { title: 'Review & Applications', loader: () => import('./sat-sat-exponents-radicals-sat-part7').then(m => m.satExponentsPart7Data) },
+    ],
+  },
+  'sat-polynomials-factoring-sat': {
+    parts: [
+      { title: 'Polynomial Basics', loader: () => import('./sat-sat-polynomials-factoring-sat-part1').then(m => m.satPolynomialsPart1Data) },
+      { title: 'Factoring Techniques', loader: () => import('./sat-sat-polynomials-factoring-sat-part2').then(m => m.satPolynomialsPart2Data) },
+      { title: 'Special Products', loader: () => import('./sat-sat-polynomials-factoring-sat-part3').then(m => m.satPolynomialsPart3Data) },
+      { title: 'Polynomial Division', loader: () => import('./sat-sat-polynomials-factoring-sat-part4').then(m => m.satPolynomialsPart4Data) },
+      { title: 'Zeros & Roots', loader: () => import('./sat-sat-polynomials-factoring-sat-part5').then(m => m.satPolynomialsPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./sat-sat-polynomials-factoring-sat-part6').then(m => m.satPolynomialsPart6Data) },
+      { title: 'Review & Applications', loader: () => import('./sat-sat-polynomials-factoring-sat-part7').then(m => m.satPolynomialsPart7Data) },
+    ],
+  },
+  'sat-ratios-proportions-sat': {
+    parts: [
+      { title: 'Ratios & Rates', loader: () => import('./sat-sat-ratios-proportions-sat-part1').then(m => m.satRatiosPart1Data) },
+      { title: 'Proportional Reasoning', loader: () => import('./sat-sat-ratios-proportions-sat-part2').then(m => m.satRatiosPart2Data) },
+      { title: 'Percentages', loader: () => import('./sat-sat-ratios-proportions-sat-part3').then(m => m.satRatiosPart3Data) },
+      { title: 'Unit Conversion', loader: () => import('./sat-sat-ratios-proportions-sat-part4').then(m => m.satRatiosPart4Data) },
+      { title: 'Scale & Modeling', loader: () => import('./sat-sat-ratios-proportions-sat-part5').then(m => m.satRatiosPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./sat-sat-ratios-proportions-sat-part6').then(m => m.satRatiosPart6Data) },
+      { title: 'Review & Applications', loader: () => import('./sat-sat-ratios-proportions-sat-part7').then(m => m.satRatiosPart7Data) },
+    ],
+  },
+  'sat-geometry-angles-sat': {
+    parts: [
+      { title: 'Lines & Angles', loader: () => import('./sat-sat-geometry-angles-sat-part1').then(m => m.satGeometryPart1Data) },
+      { title: 'Triangle Properties', loader: () => import('./sat-sat-geometry-angles-sat-part2').then(m => m.satGeometryPart2Data) },
+      { title: 'Circle Properties', loader: () => import('./sat-sat-geometry-angles-sat-part3').then(m => m.satGeometryPart3Data) },
+      { title: 'Area & Volume', loader: () => import('./sat-sat-geometry-angles-sat-part4').then(m => m.satGeometryPart4Data) },
+      { title: 'Coordinate Geometry', loader: () => import('./sat-sat-geometry-angles-sat-part5').then(m => m.satGeometryPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./sat-sat-geometry-angles-sat-part6').then(m => m.satGeometryPart6Data) },
+      { title: 'Review & Applications', loader: () => import('./sat-sat-geometry-angles-sat-part7').then(m => m.satGeometryPart7Data) },
+    ],
+  },
+  'sat-data-statistics-sat': {
+    parts: [
+      { title: 'Mean, Median, Mode', loader: () => import('./sat-sat-data-statistics-sat-part1').then(m => m.satDataStatsPart1Data) },
+      { title: 'Data Displays', loader: () => import('./sat-sat-data-statistics-sat-part2').then(m => m.satDataStatsPart2Data) },
+      { title: 'Interpreting Tables', loader: () => import('./sat-sat-data-statistics-sat-part3').then(m => m.satDataStatsPart3Data) },
+      { title: 'Standard Deviation', loader: () => import('./sat-sat-data-statistics-sat-part4').then(m => m.satDataStatsPart4Data) },
+      { title: 'Statistical Inference', loader: () => import('./sat-sat-data-statistics-sat-part5').then(m => m.satDataStatsPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./sat-sat-data-statistics-sat-part6').then(m => m.satDataStatsPart6Data) },
+      { title: 'Review & Applications', loader: () => import('./sat-sat-data-statistics-sat-part7').then(m => m.satDataStatsPart7Data) },
+    ],
+  },
+  'sat-exponential-functions-sat': {
+    parts: [
+      { title: 'Exponential Growth', loader: () => import('./sat-sat-exponential-functions-sat-part1').then(m => m.satExponentialFnPart1Data) },
+      { title: 'Exponential Decay', loader: () => import('./sat-sat-exponential-functions-sat-part2').then(m => m.satExponentialFnPart2Data) },
+      { title: 'Compound Interest', loader: () => import('./sat-sat-exponential-functions-sat-part3').then(m => m.satExponentialFnPart3Data) },
+      { title: 'Graphing Exponentials', loader: () => import('./sat-sat-exponential-functions-sat-part4').then(m => m.satExponentialFnPart4Data) },
+      { title: 'Exponential Equations', loader: () => import('./sat-sat-exponential-functions-sat-part5').then(m => m.satExponentialFnPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./sat-sat-exponential-functions-sat-part6').then(m => m.satExponentialFnPart6Data) },
+      { title: 'Review & Applications', loader: () => import('./sat-sat-exponential-functions-sat-part7').then(m => m.satExponentialFnPart7Data) },
+    ],
+  },
+  'sat-circles-trig-sat': {
+    parts: [
+      { title: 'Circle Equations', loader: () => import('./sat-sat-circles-trig-sat-part1').then(m => m.satCirclesTrigPart1Data) },
+      { title: 'Arc Length & Sectors', loader: () => import('./sat-sat-circles-trig-sat-part2').then(m => m.satCirclesTrigPart2Data) },
+      { title: 'Right Triangle Trig', loader: () => import('./sat-sat-circles-trig-sat-part3').then(m => m.satCirclesTrigPart3Data) },
+      { title: 'Unit Circle Basics', loader: () => import('./sat-sat-circles-trig-sat-part4').then(m => m.satCirclesTrigPart4Data) },
+      { title: 'Trig Applications', loader: () => import('./sat-sat-circles-trig-sat-part5').then(m => m.satCirclesTrigPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./sat-sat-circles-trig-sat-part6').then(m => m.satCirclesTrigPart6Data) },
+      { title: 'Review & Applications', loader: () => import('./sat-sat-circles-trig-sat-part7').then(m => m.satCirclesTrigPart7Data) },
+    ],
+  },
+  'sat-complex-numbers-sat': {
+    parts: [
+      { title: 'Imaginary Unit', loader: () => import('./sat-sat-complex-numbers-sat-part1').then(m => m.satComplexPart1Data) },
+      { title: 'Complex Arithmetic', loader: () => import('./sat-sat-complex-numbers-sat-part2').then(m => m.satComplexPart2Data) },
+      { title: 'Complex Conjugates', loader: () => import('./sat-sat-complex-numbers-sat-part3').then(m => m.satComplexPart3Data) },
+      { title: 'Quadratics & Complex Roots', loader: () => import('./sat-sat-complex-numbers-sat-part4').then(m => m.satComplexPart4Data) },
+      { title: 'Powers of i', loader: () => import('./sat-sat-complex-numbers-sat-part5').then(m => m.satComplexPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./sat-sat-complex-numbers-sat-part6').then(m => m.satComplexPart6Data) },
+      { title: 'Review & Applications', loader: () => import('./sat-sat-complex-numbers-sat-part7').then(m => m.satComplexPart7Data) },
+    ],
+  },
+  'sat-reading-evidence-sat': {
+    parts: [
+      { title: 'Evidence-Based Reading', loader: () => import('./sat-sat-reading-evidence-sat-part1').then(m => m.satReadingEvidencePart1Data) },
+      { title: 'Main Idea & Purpose', loader: () => import('./sat-sat-reading-evidence-sat-part2').then(m => m.satReadingEvidencePart2Data) },
+      { title: 'Inference Questions', loader: () => import('./sat-sat-reading-evidence-sat-part3').then(m => m.satReadingEvidencePart3Data) },
+      { title: 'Vocabulary in Context', loader: () => import('./sat-sat-reading-evidence-sat-part4').then(m => m.satReadingEvidencePart4Data) },
+      { title: 'Command of Evidence', loader: () => import('./sat-sat-reading-evidence-sat-part5').then(m => m.satReadingEvidencePart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./sat-sat-reading-evidence-sat-part6').then(m => m.satReadingEvidencePart6Data) },
+      { title: 'Review & Applications', loader: () => import('./sat-sat-reading-evidence-sat-part7').then(m => m.satReadingEvidencePart7Data) },
+    ],
+  },
+  'sat-grammar-conventions-sat': {
+    parts: [
+      { title: 'Subject-Verb Agreement', loader: () => import('./sat-sat-grammar-conventions-sat-part1').then(m => m.satGrammarPart1Data) },
+      { title: 'Pronoun Clarity', loader: () => import('./sat-sat-grammar-conventions-sat-part2').then(m => m.satGrammarPart2Data) },
+      { title: 'Punctuation Rules', loader: () => import('./sat-sat-grammar-conventions-sat-part3').then(m => m.satGrammarPart3Data) },
+      { title: 'Sentence Structure', loader: () => import('./sat-sat-grammar-conventions-sat-part4').then(m => m.satGrammarPart4Data) },
+      { title: 'Modifier Placement', loader: () => import('./sat-sat-grammar-conventions-sat-part5').then(m => m.satGrammarPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./sat-sat-grammar-conventions-sat-part6').then(m => m.satGrammarPart6Data) },
+      { title: 'Review & Applications', loader: () => import('./sat-sat-grammar-conventions-sat-part7').then(m => m.satGrammarPart7Data) },
+    ],
+  },
+  'sat-expression-ideas-sat': {
+    parts: [
+      { title: 'Effective Language Use', loader: () => import('./sat-sat-expression-ideas-sat-part1').then(m => m.satExpressionPart1Data) },
+      { title: 'Conciseness', loader: () => import('./sat-sat-expression-ideas-sat-part2').then(m => m.satExpressionPart2Data) },
+      { title: 'Tone & Style', loader: () => import('./sat-sat-expression-ideas-sat-part3').then(m => m.satExpressionPart3Data) },
+      { title: 'Transitions', loader: () => import('./sat-sat-expression-ideas-sat-part4').then(m => m.satExpressionPart4Data) },
+      { title: 'Sentence Combining', loader: () => import('./sat-sat-expression-ideas-sat-part5').then(m => m.satExpressionPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./sat-sat-expression-ideas-sat-part6').then(m => m.satExpressionPart6Data) },
+      { title: 'Review & Applications', loader: () => import('./sat-sat-expression-ideas-sat-part7').then(m => m.satExpressionPart7Data) },
+    ],
+  },
+  'sat-word-problems-sat': {
+    parts: [
+      { title: 'Translating Words to Math', loader: () => import('./sat-sat-word-problems-sat-part1').then(m => m.satWordProblemsPart1Data) },
+      { title: 'Rate Problems', loader: () => import('./sat-sat-word-problems-sat-part2').then(m => m.satWordProblemsPart2Data) },
+      { title: 'Mixture Problems', loader: () => import('./sat-sat-word-problems-sat-part3').then(m => m.satWordProblemsPart3Data) },
+      { title: 'Age & Number Problems', loader: () => import('./sat-sat-word-problems-sat-part4').then(m => m.satWordProblemsPart4Data) },
+      { title: 'Multi-Step Word Problems', loader: () => import('./sat-sat-word-problems-sat-part5').then(m => m.satWordProblemsPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./sat-sat-word-problems-sat-part6').then(m => m.satWordProblemsPart6Data) },
+      { title: 'Review & Applications', loader: () => import('./sat-sat-word-problems-sat-part7').then(m => m.satWordProblemsPart7Data) },
+    ],
+  },
+  'sat-passport-advanced-math-sat': {
+    parts: [
+      { title: 'Advanced Equations', loader: () => import('./sat-sat-passport-advanced-math-sat-part1').then(m => m.satPassportAdvPart1Data) },
+      { title: 'Function Analysis', loader: () => import('./sat-sat-passport-advanced-math-sat-part2').then(m => m.satPassportAdvPart2Data) },
+      { title: 'Nonlinear Systems', loader: () => import('./sat-sat-passport-advanced-math-sat-part3').then(m => m.satPassportAdvPart3Data) },
+      { title: 'Polynomial Manipulation', loader: () => import('./sat-sat-passport-advanced-math-sat-part4').then(m => m.satPassportAdvPart4Data) },
+      { title: 'Exponential & Radical Equations', loader: () => import('./sat-sat-passport-advanced-math-sat-part5').then(m => m.satPassportAdvPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./sat-sat-passport-advanced-math-sat-part6').then(m => m.satPassportAdvPart6Data) },
+      { title: 'Review & Applications', loader: () => import('./sat-sat-passport-advanced-math-sat-part7').then(m => m.satPassportAdvPart7Data) },
+    ],
+  },
+  'sat-problem-solving-data-sat': {
+    parts: [
+      { title: 'Data Analysis', loader: () => import('./sat-sat-problem-solving-data-sat-part1').then(m => m.satProbSolvDataPart1Data) },
+      { title: 'Scatterplots', loader: () => import('./sat-sat-problem-solving-data-sat-part2').then(m => m.satProbSolvDataPart2Data) },
+      { title: 'Probability', loader: () => import('./sat-sat-problem-solving-data-sat-part3').then(m => m.satProbSolvDataPart3Data) },
+      { title: 'Two-Way Tables', loader: () => import('./sat-sat-problem-solving-data-sat-part4').then(m => m.satProbSolvDataPart4Data) },
+      { title: 'Statistical Modeling', loader: () => import('./sat-sat-problem-solving-data-sat-part5').then(m => m.satProbSolvDataPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./sat-sat-problem-solving-data-sat-part6').then(m => m.satProbSolvDataPart6Data) },
+      { title: 'Review & Applications', loader: () => import('./sat-sat-problem-solving-data-sat-part7').then(m => m.satProbSolvDataPart7Data) },
+    ],
+  },
+  'sat-calculator-strategy-sat': {
+    parts: [
+      { title: 'Calculator Overview', loader: () => import('./sat-sat-calculator-strategy-sat-part1').then(m => m.satCalcStrategyPart1Data) },
+      { title: 'Graphing to Solve', loader: () => import('./sat-sat-calculator-strategy-sat-part2').then(m => m.satCalcStrategyPart2Data) },
+      { title: 'Using Tables', loader: () => import('./sat-sat-calculator-strategy-sat-part3').then(m => m.satCalcStrategyPart3Data) },
+      { title: 'Storing Values', loader: () => import('./sat-sat-calculator-strategy-sat-part4').then(m => m.satCalcStrategyPart4Data) },
+      { title: 'Calculator vs. Mental Math', loader: () => import('./sat-sat-calculator-strategy-sat-part5').then(m => m.satCalcStrategyPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./sat-sat-calculator-strategy-sat-part6').then(m => m.satCalcStrategyPart6Data) },
+      { title: 'Review & Applications', loader: () => import('./sat-sat-calculator-strategy-sat-part7').then(m => m.satCalcStrategyPart7Data) },
+    ],
+  },
+  'sat-reading-writing-strategy-sat': {
+    parts: [
+      { title: 'Section Overview', loader: () => import('./sat-sat-reading-writing-strategy-sat-part1').then(m => m.satRWStrategyPart1Data) },
+      { title: 'Time Management', loader: () => import('./sat-sat-reading-writing-strategy-sat-part2').then(m => m.satRWStrategyPart2Data) },
+      { title: 'Passage Strategy', loader: () => import('./sat-sat-reading-writing-strategy-sat-part3').then(m => m.satRWStrategyPart3Data) },
+      { title: 'Answer Elimination', loader: () => import('./sat-sat-reading-writing-strategy-sat-part4').then(m => m.satRWStrategyPart4Data) },
+      { title: 'Evidence Pairing', loader: () => import('./sat-sat-reading-writing-strategy-sat-part5').then(m => m.satRWStrategyPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./sat-sat-reading-writing-strategy-sat-part6').then(m => m.satRWStrategyPart6Data) },
+      { title: 'Review & Applications', loader: () => import('./sat-sat-reading-writing-strategy-sat-part7').then(m => m.satRWStrategyPart7Data) },
+    ],
+  },
+  'sat-test-day-strategy-sat': {
+    parts: [
+      { title: 'Test Format', loader: () => import('./sat-sat-test-day-strategy-sat-part1').then(m => m.satTestDayPart1Data) },
+      { title: 'What to Bring', loader: () => import('./sat-sat-test-day-strategy-sat-part2').then(m => m.satTestDayPart2Data) },
+      { title: 'Section Timing', loader: () => import('./sat-sat-test-day-strategy-sat-part3').then(m => m.satTestDayPart3Data) },
+      { title: 'Guessing Strategy', loader: () => import('./sat-sat-test-day-strategy-sat-part4').then(m => m.satTestDayPart4Data) },
+      { title: 'Mental Preparation', loader: () => import('./sat-sat-test-day-strategy-sat-part5').then(m => m.satTestDayPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./sat-sat-test-day-strategy-sat-part6').then(m => m.satTestDayPart6Data) },
+      { title: 'Review & Applications', loader: () => import('./sat-sat-test-day-strategy-sat-part7').then(m => m.satTestDayPart7Data) },
+    ],
+  },
+  // ═══════════════════════════════════════════
+  // ACT Prep — 20 Topics
+  // ═══════════════════════════════════════════
+  'act-pre-algebra-basics-act': {
+    parts: [
+      { title: 'Number Properties', loader: () => import('./act-act-pre-algebra-basics-act-part1').then(m => m.actPreAlgebraPart1Data) },
+      { title: 'Fractions & Decimals', loader: () => import('./act-act-pre-algebra-basics-act-part2').then(m => m.actPreAlgebraPart2Data) },
+      { title: 'Ratios & Proportions', loader: () => import('./act-act-pre-algebra-basics-act-part3').then(m => m.actPreAlgebraPart3Data) },
+      { title: 'Percentages', loader: () => import('./act-act-pre-algebra-basics-act-part4').then(m => m.actPreAlgebraPart4Data) },
+      { title: 'Order of Operations', loader: () => import('./act-act-pre-algebra-basics-act-part5').then(m => m.actPreAlgebraPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./act-act-pre-algebra-basics-act-part6').then(m => m.actPreAlgebraPart6Data) },
+      { title: 'Review & Applications', loader: () => import('./act-act-pre-algebra-basics-act-part7').then(m => m.actPreAlgebraPart7Data) },
+    ],
+  },
+  'act-algebra-equations-act': {
+    parts: [
+      { title: 'Linear Equations', loader: () => import('./act-act-algebra-equations-act-part1').then(m => m.actAlgebraPart1Data) },
+      { title: 'Inequalities', loader: () => import('./act-act-algebra-equations-act-part2').then(m => m.actAlgebraPart2Data) },
+      { title: 'Systems of Equations', loader: () => import('./act-act-algebra-equations-act-part3').then(m => m.actAlgebraPart3Data) },
+      { title: 'Absolute Value', loader: () => import('./act-act-algebra-equations-act-part4').then(m => m.actAlgebraPart4Data) },
+      { title: 'Word Problem Translation', loader: () => import('./act-act-algebra-equations-act-part5').then(m => m.actAlgebraPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./act-act-algebra-equations-act-part6').then(m => m.actAlgebraPart6Data) },
+      { title: 'Review & Applications', loader: () => import('./act-act-algebra-equations-act-part7').then(m => m.actAlgebraPart7Data) },
+    ],
+  },
+  'act-intermediate-algebra-act': {
+    parts: [
+      { title: 'Quadratic Equations', loader: () => import('./act-act-intermediate-algebra-act-part1').then(m => m.actIntermAlgPart1Data) },
+      { title: 'Polynomial Operations', loader: () => import('./act-act-intermediate-algebra-act-part2').then(m => m.actIntermAlgPart2Data) },
+      { title: 'Radical Expressions', loader: () => import('./act-act-intermediate-algebra-act-part3').then(m => m.actIntermAlgPart3Data) },
+      { title: 'Complex Numbers', loader: () => import('./act-act-intermediate-algebra-act-part4').then(m => m.actIntermAlgPart4Data) },
+      { title: 'Sequences & Patterns', loader: () => import('./act-act-intermediate-algebra-act-part5').then(m => m.actIntermAlgPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./act-act-intermediate-algebra-act-part6').then(m => m.actIntermAlgPart6Data) },
+      { title: 'Review & Applications', loader: () => import('./act-act-intermediate-algebra-act-part7').then(m => m.actIntermAlgPart7Data) },
+    ],
+  },
+  'act-coordinate-geometry-act': {
+    parts: [
+      { title: 'Graphing Lines', loader: () => import('./act-act-coordinate-geometry-act-part1').then(m => m.actCoordGeomPart1Data) },
+      { title: 'Distance & Midpoint', loader: () => import('./act-act-coordinate-geometry-act-part2').then(m => m.actCoordGeomPart2Data) },
+      { title: 'Slope Applications', loader: () => import('./act-act-coordinate-geometry-act-part3').then(m => m.actCoordGeomPart3Data) },
+      { title: 'Conic Sections Basics', loader: () => import('./act-act-coordinate-geometry-act-part4').then(m => m.actCoordGeomPart4Data) },
+      { title: 'Transformations', loader: () => import('./act-act-coordinate-geometry-act-part5').then(m => m.actCoordGeomPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./act-act-coordinate-geometry-act-part6').then(m => m.actCoordGeomPart6Data) },
+      { title: 'Review & Applications', loader: () => import('./act-act-coordinate-geometry-act-part7').then(m => m.actCoordGeomPart7Data) },
+    ],
+  },
+  'act-plane-geometry-act': {
+    parts: [
+      { title: 'Angles and Lines', loader: () => import('./act-act-plane-geometry-act-part1').then(m => m.actPlaneGeomPart1Data) },
+      { title: 'Triangle Properties', loader: () => import('./act-act-plane-geometry-act-part2').then(m => m.actPlaneGeomPart2Data) },
+      { title: 'Quadrilaterals & Polygons', loader: () => import('./act-act-plane-geometry-act-part3').then(m => m.actPlaneGeomPart3Data) },
+      { title: 'Circles', loader: () => import('./act-act-plane-geometry-act-part4').then(m => m.actPlaneGeomPart4Data) },
+      { title: 'Area & Perimeter', loader: () => import('./act-act-plane-geometry-act-part5').then(m => m.actPlaneGeomPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./act-act-plane-geometry-act-part6').then(m => m.actPlaneGeomPart6Data) },
+      { title: 'Review & Applications', loader: () => import('./act-act-plane-geometry-act-part7').then(m => m.actPlaneGeomPart7Data) },
+    ],
+  },
+  'act-trigonometry-act': {
+    parts: [
+      { title: 'Right Triangle Trig', loader: () => import('./act-act-trigonometry-act-part1').then(m => m.actTrigPart1Data) },
+      { title: 'Trig Ratios & Applications', loader: () => import('./act-act-trigonometry-act-part2').then(m => m.actTrigPart2Data) },
+      { title: 'Unit Circle', loader: () => import('./act-act-trigonometry-act-part3').then(m => m.actTrigPart3Data) },
+      { title: 'Trig Identities', loader: () => import('./act-act-trigonometry-act-part4').then(m => m.actTrigPart4Data) },
+      { title: 'Graphing Trig Functions', loader: () => import('./act-act-trigonometry-act-part5').then(m => m.actTrigPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./act-act-trigonometry-act-part6').then(m => m.actTrigPart6Data) },
+      { title: 'Review & Applications', loader: () => import('./act-act-trigonometry-act-part7').then(m => m.actTrigPart7Data) },
+    ],
+  },
+  'act-statistics-probability-act': {
+    parts: [
+      { title: 'Mean, Median, Mode', loader: () => import('./act-act-statistics-probability-act-part1').then(m => m.actStatProbPart1Data) },
+      { title: 'Data Displays', loader: () => import('./act-act-statistics-probability-act-part2').then(m => m.actStatProbPart2Data) },
+      { title: 'Counting Principles', loader: () => import('./act-act-statistics-probability-act-part3').then(m => m.actStatProbPart3Data) },
+      { title: 'Basic Probability', loader: () => import('./act-act-statistics-probability-act-part4').then(m => m.actStatProbPart4Data) },
+      { title: 'Combinations & Permutations', loader: () => import('./act-act-statistics-probability-act-part5').then(m => m.actStatProbPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./act-act-statistics-probability-act-part6').then(m => m.actStatProbPart6Data) },
+      { title: 'Review & Applications', loader: () => import('./act-act-statistics-probability-act-part7').then(m => m.actStatProbPart7Data) },
+    ],
+  },
+  'act-english-grammar-act': {
+    parts: [
+      { title: 'Subject-Verb Agreement', loader: () => import('./act-act-english-grammar-act-part1').then(m => m.actEnglishGrammarPart1Data) },
+      { title: 'Pronoun Rules', loader: () => import('./act-act-english-grammar-act-part2').then(m => m.actEnglishGrammarPart2Data) },
+      { title: 'Verb Tense', loader: () => import('./act-act-english-grammar-act-part3').then(m => m.actEnglishGrammarPart3Data) },
+      { title: 'Sentence Structure', loader: () => import('./act-act-english-grammar-act-part4').then(m => m.actEnglishGrammarPart4Data) },
+      { title: 'Modifiers & Parallelism', loader: () => import('./act-act-english-grammar-act-part5').then(m => m.actEnglishGrammarPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./act-act-english-grammar-act-part6').then(m => m.actEnglishGrammarPart6Data) },
+      { title: 'Review & Applications', loader: () => import('./act-act-english-grammar-act-part7').then(m => m.actEnglishGrammarPart7Data) },
+    ],
+  },
+  'act-english-rhetorical-act': {
+    parts: [
+      { title: 'Transitions & Organization', loader: () => import('./act-act-english-rhetorical-act-part1').then(m => m.actRhetoricalPart1Data) },
+      { title: 'Adding & Deleting Sentences', loader: () => import('./act-act-english-rhetorical-act-part2').then(m => m.actRhetoricalPart2Data) },
+      { title: 'Sentence Placement', loader: () => import('./act-act-english-rhetorical-act-part3').then(m => m.actRhetoricalPart3Data) },
+      { title: 'Conciseness', loader: () => import('./act-act-english-rhetorical-act-part4').then(m => m.actRhetoricalPart4Data) },
+      { title: 'Author Purpose & Style', loader: () => import('./act-act-english-rhetorical-act-part5').then(m => m.actRhetoricalPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./act-act-english-rhetorical-act-part6').then(m => m.actRhetoricalPart6Data) },
+      { title: 'Review & Applications', loader: () => import('./act-act-english-rhetorical-act-part7').then(m => m.actRhetoricalPart7Data) },
+    ],
+  },
+  'act-english-punctuation-act': {
+    parts: [
+      { title: 'Commas', loader: () => import('./act-act-english-punctuation-act-part1').then(m => m.actPunctuationPart1Data) },
+      { title: 'Semicolons & Colons', loader: () => import('./act-act-english-punctuation-act-part2').then(m => m.actPunctuationPart2Data) },
+      { title: 'Apostrophes', loader: () => import('./act-act-english-punctuation-act-part3').then(m => m.actPunctuationPart3Data) },
+      { title: 'Dashes & Parentheses', loader: () => import('./act-act-english-punctuation-act-part4').then(m => m.actPunctuationPart4Data) },
+      { title: 'Common Punctuation Errors', loader: () => import('./act-act-english-punctuation-act-part5').then(m => m.actPunctuationPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./act-act-english-punctuation-act-part6').then(m => m.actPunctuationPart6Data) },
+      { title: 'Review & Applications', loader: () => import('./act-act-english-punctuation-act-part7').then(m => m.actPunctuationPart7Data) },
+    ],
+  },
+  'act-reading-main-ideas-act': {
+    parts: [
+      { title: 'Finding the Main Idea', loader: () => import('./act-act-reading-main-ideas-act-part1').then(m => m.actReadingMainPart1Data) },
+      { title: 'Supporting Details', loader: () => import('./act-act-reading-main-ideas-act-part2').then(m => m.actReadingMainPart2Data) },
+      { title: 'Making Inferences', loader: () => import('./act-act-reading-main-ideas-act-part3').then(m => m.actReadingMainPart3Data) },
+      { title: 'Author Purpose', loader: () => import('./act-act-reading-main-ideas-act-part4').then(m => m.actReadingMainPart4Data) },
+      { title: 'Vocabulary in Context', loader: () => import('./act-act-reading-main-ideas-act-part5').then(m => m.actReadingMainPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./act-act-reading-main-ideas-act-part6').then(m => m.actReadingMainPart6Data) },
+      { title: 'Review & Applications', loader: () => import('./act-act-reading-main-ideas-act-part7').then(m => m.actReadingMainPart7Data) },
+    ],
+  },
+  'act-reading-passage-types-act': {
+    parts: [
+      { title: 'Prose Fiction / Literary Narrative', loader: () => import('./act-act-reading-passage-types-act-part1').then(m => m.actPassageTypesPart1Data) },
+      { title: 'Social Science', loader: () => import('./act-act-reading-passage-types-act-part2').then(m => m.actPassageTypesPart2Data) },
+      { title: 'Humanities', loader: () => import('./act-act-reading-passage-types-act-part3').then(m => m.actPassageTypesPart3Data) },
+      { title: 'Natural Science', loader: () => import('./act-act-reading-passage-types-act-part4').then(m => m.actPassageTypesPart4Data) },
+      { title: 'Paired Passages', loader: () => import('./act-act-reading-passage-types-act-part5').then(m => m.actPassageTypesPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./act-act-reading-passage-types-act-part6').then(m => m.actPassageTypesPart6Data) },
+      { title: 'Review & Applications', loader: () => import('./act-act-reading-passage-types-act-part7').then(m => m.actPassageTypesPart7Data) },
+    ],
+  },
+  'act-reading-strategy-act': {
+    parts: [
+      { title: 'Time Management', loader: () => import('./act-act-reading-strategy-act-part1').then(m => m.actReadingStratPart1Data) },
+      { title: 'Passage Order Strategy', loader: () => import('./act-act-reading-strategy-act-part2').then(m => m.actReadingStratPart2Data) },
+      { title: 'Active Reading', loader: () => import('./act-act-reading-strategy-act-part3').then(m => m.actReadingStratPart3Data) },
+      { title: 'Eliminating Wrong Answers', loader: () => import('./act-act-reading-strategy-act-part4').then(m => m.actReadingStratPart4Data) },
+      { title: 'Question Type Recognition', loader: () => import('./act-act-reading-strategy-act-part5').then(m => m.actReadingStratPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./act-act-reading-strategy-act-part6').then(m => m.actReadingStratPart6Data) },
+      { title: 'Review & Applications', loader: () => import('./act-act-reading-strategy-act-part7').then(m => m.actReadingStratPart7Data) },
+    ],
+  },
+  'act-science-data-act': {
+    parts: [
+      { title: 'Reading Data Tables', loader: () => import('./act-act-science-data-act-part1').then(m => m.actScienceDataPart1Data) },
+      { title: 'Interpreting Graphs', loader: () => import('./act-act-science-data-act-part2').then(m => m.actScienceDataPart2Data) },
+      { title: 'Identifying Trends', loader: () => import('./act-act-science-data-act-part3').then(m => m.actScienceDataPart3Data) },
+      { title: 'Comparing Data Sets', loader: () => import('./act-act-science-data-act-part4').then(m => m.actScienceDataPart4Data) },
+      { title: 'Making Predictions', loader: () => import('./act-act-science-data-act-part5').then(m => m.actScienceDataPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./act-act-science-data-act-part6').then(m => m.actScienceDataPart6Data) },
+      { title: 'Review & Applications', loader: () => import('./act-act-science-data-act-part7').then(m => m.actScienceDataPart7Data) },
+    ],
+  },
+  'act-science-experiments-act': {
+    parts: [
+      { title: 'Experimental Design', loader: () => import('./act-act-science-experiments-act-part1').then(m => m.actScienceExpPart1Data) },
+      { title: 'Variables & Controls', loader: () => import('./act-act-science-experiments-act-part2').then(m => m.actScienceExpPart2Data) },
+      { title: 'Research Summaries', loader: () => import('./act-act-science-experiments-act-part3').then(m => m.actScienceExpPart3Data) },
+      { title: 'Conflicting Viewpoints', loader: () => import('./act-act-science-experiments-act-part4').then(m => m.actScienceExpPart4Data) },
+      { title: 'Evaluating Conclusions', loader: () => import('./act-act-science-experiments-act-part5').then(m => m.actScienceExpPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./act-act-science-experiments-act-part6').then(m => m.actScienceExpPart6Data) },
+      { title: 'Review & Applications', loader: () => import('./act-act-science-experiments-act-part7').then(m => m.actScienceExpPart7Data) },
+    ],
+  },
+  'act-science-reasoning-act': {
+    parts: [
+      { title: 'Scientific Method', loader: () => import('./act-act-science-reasoning-act-part1').then(m => m.actScienceReasonPart1Data) },
+      { title: 'Hypothesis Testing', loader: () => import('./act-act-science-reasoning-act-part2').then(m => m.actScienceReasonPart2Data) },
+      { title: 'Drawing Conclusions', loader: () => import('./act-act-science-reasoning-act-part3').then(m => m.actScienceReasonPart3Data) },
+      { title: 'Applying Concepts', loader: () => import('./act-act-science-reasoning-act-part4').then(m => m.actScienceReasonPart4Data) },
+      { title: 'Science Passage Strategy', loader: () => import('./act-act-science-reasoning-act-part5').then(m => m.actScienceReasonPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./act-act-science-reasoning-act-part6').then(m => m.actScienceReasonPart6Data) },
+      { title: 'Review & Applications', loader: () => import('./act-act-science-reasoning-act-part7').then(m => m.actScienceReasonPart7Data) },
+    ],
+  },
+  'act-math-strategy-act': {
+    parts: [
+      { title: 'ACT Math Overview', loader: () => import('./act-act-math-strategy-act-part1').then(m => m.actMathStrategyPart1Data) },
+      { title: 'Calculator Tips', loader: () => import('./act-act-math-strategy-act-part2').then(m => m.actMathStrategyPart2Data) },
+      { title: 'Backsolving', loader: () => import('./act-act-math-strategy-act-part3').then(m => m.actMathStrategyPart3Data) },
+      { title: 'Plugging In Numbers', loader: () => import('./act-act-math-strategy-act-part4').then(m => m.actMathStrategyPart4Data) },
+      { title: 'Time Management', loader: () => import('./act-act-math-strategy-act-part5').then(m => m.actMathStrategyPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./act-act-math-strategy-act-part6').then(m => m.actMathStrategyPart6Data) },
+      { title: 'Review & Applications', loader: () => import('./act-act-math-strategy-act-part7').then(m => m.actMathStrategyPart7Data) },
+    ],
+  },
+  'act-english-strategy-act': {
+    parts: [
+      { title: 'ACT English Overview', loader: () => import('./act-act-english-strategy-act-part1').then(m => m.actEnglishStratPart1Data) },
+      { title: 'Grammar vs. Rhetoric', loader: () => import('./act-act-english-strategy-act-part2').then(m => m.actEnglishStratPart2Data) },
+      { title: 'Reading in Context', loader: () => import('./act-act-english-strategy-act-part3').then(m => m.actEnglishStratPart3Data) },
+      { title: 'Answer Elimination', loader: () => import('./act-act-english-strategy-act-part4').then(m => m.actEnglishStratPart4Data) },
+      { title: 'Pacing & Timing', loader: () => import('./act-act-english-strategy-act-part5').then(m => m.actEnglishStratPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./act-act-english-strategy-act-part6').then(m => m.actEnglishStratPart6Data) },
+      { title: 'Review & Applications', loader: () => import('./act-act-english-strategy-act-part7').then(m => m.actEnglishStratPart7Data) },
+    ],
+  },
+  'act-reading-science-tips-act': {
+    parts: [
+      { title: 'ACT Reading Overview', loader: () => import('./act-act-reading-science-tips-act-part1').then(m => m.actReadSciTipsPart1Data) },
+      { title: 'ACT Science Overview', loader: () => import('./act-act-reading-science-tips-act-part2').then(m => m.actReadSciTipsPart2Data) },
+      { title: 'Cross-Section Strategies', loader: () => import('./act-act-reading-science-tips-act-part3').then(m => m.actReadSciTipsPart3Data) },
+      { title: 'Managing Difficult Passages', loader: () => import('./act-act-reading-science-tips-act-part4').then(m => m.actReadSciTipsPart4Data) },
+      { title: 'Score Improvement Plan', loader: () => import('./act-act-reading-science-tips-act-part5').then(m => m.actReadSciTipsPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./act-act-reading-science-tips-act-part6').then(m => m.actReadSciTipsPart6Data) },
+      { title: 'Review & Applications', loader: () => import('./act-act-reading-science-tips-act-part7').then(m => m.actReadSciTipsPart7Data) },
+    ],
+  },
+  'act-test-day-strategy-act': {
+    parts: [
+      { title: 'Test Format & Registration', loader: () => import('./act-act-test-day-strategy-act-part1').then(m => m.actTestDayPart1Data) },
+      { title: 'What to Bring', loader: () => import('./act-act-test-day-strategy-act-part2').then(m => m.actTestDayPart2Data) },
+      { title: 'Section-by-Section Timing', loader: () => import('./act-act-test-day-strategy-act-part3').then(m => m.actTestDayPart3Data) },
+      { title: 'Guessing Strategy', loader: () => import('./act-act-test-day-strategy-act-part4').then(m => m.actTestDayPart4Data) },
+      { title: 'Mental Preparation', loader: () => import('./act-act-test-day-strategy-act-part5').then(m => m.actTestDayPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./act-act-test-day-strategy-act-part6').then(m => m.actTestDayPart6Data) },
+      { title: 'Review & Applications', loader: () => import('./act-act-test-day-strategy-act-part7').then(m => m.actTestDayPart7Data) },
+    ],
+  },
 }
 
 export function getInteractiveTopicConfig(topicSlug: string): InteractiveTopicConfig | null {
