@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next'
 import { prisma } from '@/lib/prisma'
+import { getAllInteractiveSlugs } from '@/data/interactive-lessons/registry'
 
 export const dynamic = 'force-dynamic'
 export const revalidate = 3600 // Revalidate every hour
@@ -80,5 +81,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }))
 
-  return [...staticPages, ...coursePages, ...topicPages, ...categoryPages]
+  // Interactive lesson pages (server-rendered with full SEO content)
+  const interactiveSlugs = getAllInteractiveSlugs()
+  const interactivePages: MetadataRoute.Sitemap = interactiveSlugs.map((slug) => ({
+    url: `${baseUrl}/topics/${slug}/interactive`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly',
+    priority: 0.85,
+  }))
+
+  return [...staticPages, ...coursePages, ...topicPages, ...interactivePages, ...categoryPages]
 }

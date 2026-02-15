@@ -3228,6 +3228,10 @@ export function hasInteractiveLesson(topicSlug: string): boolean {
   return topicSlug in interactiveLessonRegistry
 }
 
+export function getAllInteractiveSlugs(): string[] {
+  return Object.keys(interactiveLessonRegistry)
+}
+
 export async function getInteractiveLessonData(topicSlug: string, part: number): Promise<LessonData | null> {
   const config = interactiveLessonRegistry[topicSlug]
   if (!config) return null
