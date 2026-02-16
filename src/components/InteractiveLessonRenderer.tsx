@@ -2012,8 +2012,11 @@ function FadeInText({ content, onComplete }: { content: string; onComplete?: () 
                 remarkPlugins={[remarkMath, remarkGfm]}
                 rehypePlugins={[rehypeKatex, rehypeRaw]}
                 components={{
-                  p: ({ children }) => <p className="text-xl leading-relaxed mb-4">{children}</p>,
-                  strong: ({ children }) => <strong className="text-2xl font-bold text-purple-700 dark:text-purple-400">{children}</strong>,
+                  h1: ({ children }) => <h1 className="text-4xl font-extrabold mb-6 mt-2 text-gray-900 dark:text-white leading-tight">{children}</h1>,
+                  h2: ({ children }) => <h2 className="text-3xl font-bold mb-4 mt-8 text-gray-900 dark:text-white leading-snug">{children}</h2>,
+                  h3: ({ children }) => <h3 className="text-2xl font-bold mb-3 mt-6 text-gray-800 dark:text-gray-100">{children}</h3>,
+                  p: ({ children }) => <p className="text-lg leading-relaxed mb-4">{children}</p>,
+                  strong: ({ children }) => <strong className="font-bold text-purple-700 dark:text-purple-400">{children}</strong>,
                   ul: ({ children }) => <ul className="space-y-3 text-lg ml-6">{children}</ul>,
                   li: ({ children }) => <li className="text-lg">{children}</li>,
                   table: ({ children }) => <table className="min-w-full border-collapse border-2 border-purple-300 dark:border-purple-700 my-6">{children}</table>,
@@ -2045,12 +2048,15 @@ function FadeInText({ content, onComplete }: { content: string; onComplete?: () 
           remarkPlugins={[remarkMath, remarkGfm]}
           rehypePlugins={[rehypeKatex, rehypeRaw]}
           components={{
-            p: ({ children }) => <p className="text-xl leading-relaxed mb-4">{children}</p>,
-            strong: ({ children }) => <strong className="text-2xl font-bold text-purple-700 dark:text-purple-400">{children}</strong>,
+            h1: ({ children }) => <h1 className="text-4xl font-extrabold mb-6 mt-2 text-gray-900 dark:text-white leading-tight">{children}</h1>,
+            h2: ({ children }) => <h2 className="text-3xl font-bold mb-4 mt-8 text-gray-900 dark:text-white leading-snug">{children}</h2>,
+            h3: ({ children }) => <h3 className="text-2xl font-bold mb-3 mt-6 text-gray-800 dark:text-gray-100">{children}</h3>,
+            p: ({ children }) => <p className="text-lg leading-relaxed mb-4">{children}</p>,
+            strong: ({ children }) => <strong className="font-bold text-purple-700 dark:text-purple-400">{children}</strong>,
             ul: ({ children }) => <ul className="space-y-3 text-lg ml-6">{children}</ul>,
             li: ({ children }) => <li className="text-lg">{children}</li>,
             blockquote: ({ children }) => (
-              <blockquote className="border-l-4 border-purple-500 pl-6 py-3 bg-purple-50 dark:bg-purple-900/20 rounded-r-lg text-xl font-semibold">
+              <blockquote className="border-l-4 border-purple-500 pl-6 py-3 bg-purple-50 dark:bg-purple-900/20 rounded-r-lg text-lg font-semibold">
                 {children}
               </blockquote>
             ),
@@ -2075,12 +2081,15 @@ function FadeInText({ content, onComplete }: { content: string; onComplete?: () 
           remarkPlugins={[remarkMath, remarkGfm]}
           rehypePlugins={[rehypeKatex, rehypeRaw]}
           components={{
-            p: ({ children }) => <p className="text-xl leading-relaxed mb-4">{children}</p>,
-            strong: ({ children }) => <strong className="text-2xl font-bold text-purple-700 dark:text-purple-400">{children}</strong>,
+            h1: ({ children }) => <h1 className="text-4xl font-extrabold mb-6 mt-2 text-gray-900 dark:text-white leading-tight">{children}</h1>,
+            h2: ({ children }) => <h2 className="text-3xl font-bold mb-4 mt-8 text-gray-900 dark:text-white leading-snug">{children}</h2>,
+            h3: ({ children }) => <h3 className="text-2xl font-bold mb-3 mt-6 text-gray-800 dark:text-gray-100">{children}</h3>,
+            p: ({ children }) => <p className="text-lg leading-relaxed mb-4">{children}</p>,
+            strong: ({ children }) => <strong className="font-bold text-purple-700 dark:text-purple-400">{children}</strong>,
             ul: ({ children }) => <ul className="space-y-3 text-lg ml-6">{children}</ul>,
             li: ({ children }) => <li className="text-lg">{children}</li>,
             blockquote: ({ children }) => (
-              <blockquote className="border-l-4 border-purple-500 pl-6 py-3 bg-purple-50 dark:bg-purple-900/20 rounded-r-lg text-xl font-semibold">
+              <blockquote className="border-l-4 border-purple-500 pl-6 py-3 bg-purple-50 dark:bg-purple-900/20 rounded-r-lg text-lg font-semibold">
                 {children}
               </blockquote>
             ),
@@ -2104,8 +2113,11 @@ function FadeInText({ content, onComplete }: { content: string; onComplete?: () 
     <div className="animate-fade-in prose prose-lg max-w-none">
       <ReactMarkdown
         components={{
-          p: ({ children }) => <p className="text-xl leading-relaxed mb-4">{children}</p>,
-          strong: ({ children }) => <strong className="text-2xl font-bold text-purple-700 dark:text-purple-400">{children}</strong>,
+          h1: ({ children }) => <h1 className="text-4xl font-extrabold mb-6 mt-2 text-gray-900 dark:text-white leading-tight">{children}</h1>,
+          h2: ({ children }) => <h2 className="text-3xl font-bold mb-4 mt-8 text-gray-900 dark:text-white leading-snug">{children}</h2>,
+          h3: ({ children }) => <h3 className="text-2xl font-bold mb-3 mt-6 text-gray-800 dark:text-gray-100">{children}</h3>,
+          p: ({ children }) => <p className="text-lg leading-relaxed mb-4">{children}</p>,
+          strong: ({ children }) => <strong className="font-bold text-purple-700 dark:text-purple-400">{children}</strong>,
         }}
       >
         {content}
