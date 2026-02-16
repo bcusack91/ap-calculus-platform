@@ -3220,12 +3220,59 @@ const interactiveLessonRegistry: Record<string, InteractiveTopicConfig> = {
   },
 }
 
+// ---------------------------------------------------------------------------
+// Slug alias map: maps correct DB slugs → orphan registry slugs
+// This recovers hand-crafted interactive lessons that were registered
+// under a slightly different slug naming convention.
+// ---------------------------------------------------------------------------
+const slugAliases: Record<string, string> = {
+  // AP Biology
+  'cell-organelles': 'cell-structure-organelles',
+  'cell-membrane-transport': 'membrane-transport',
+  'cell-signaling': 'cell-communication-signaling',
+  'meiosis': 'meiosis-genetic-diversity',
+  'translation': 'transcription-translation',
+  'natural-selection': 'natural-selection-adaptation',
+  'community-ecology': 'population-community-ecology',
+  'water-properties': 'water-properties-biochemistry',
+  // SAT Prep
+  'sat-quadratic-equations': 'sat-quadratic-equations-sat',
+  'sat-exponents-radicals': 'sat-exponents-radicals-sat',
+  'sat-complex-numbers': 'sat-complex-numbers-sat',
+  'sat-grammar-conventions': 'sat-grammar-conventions-sat',
+  'sat-ratios-proportions-percents': 'sat-ratios-proportions-sat',
+  'sat-linear-equations-inequalities': 'sat-linear-equations-sat',
+  'sat-statistics-data-interpretation': 'sat-data-statistics-sat',
+  'sat-reading-comprehension': 'sat-reading-evidence-sat',
+  'sat-functions': 'sat-functions-graphs-sat',
+  'sat-geometry-trigonometry': 'sat-geometry-angles-sat',
+  // ACT Prep
+  'act-statistics-probability': 'act-statistics-probability-act',
+  'act-rhetorical-skills': 'act-english-rhetorical-act',
+  'act-data-representation': 'act-science-data-act',
+  'act-reading-strategies': 'act-reading-strategy-act',
+  'act-pre-algebra-elementary': 'act-pre-algebra-basics-act',
+  'act-algebra-functions': 'act-algebra-equations-act',
+  'act-geometry-trigonometry': 'act-plane-geometry-act',
+  // AP Precalculus
+  'polynomial-functions-end-behavior-precalc': 'polynomial-functions-precalc',
+  'logarithmic-functions-equations-precalc': 'logarithmic-functions-precalc',
+  'trigonometric-identities': 'trigonometric-identities-precalc',
+  'parametric-equations-vectors-precalc': 'parametric-equations-precalc',
+}
+
+function resolveSlug(topicSlug: string): string {
+  return slugAliases[topicSlug] ?? topicSlug
+}
+
 export function getInteractiveTopicConfig(topicSlug: string): InteractiveTopicConfig | null {
-  return interactiveLessonRegistry[topicSlug] ?? null
+  const resolved = resolveSlug(topicSlug)
+  return interactiveLessonRegistry[resolved] ?? null
 }
 
 export function hasInteractiveLesson(topicSlug: string): boolean {
-  return topicSlug in interactiveLessonRegistry
+  const resolved = resolveSlug(topicSlug)
+  return resolved in interactiveLessonRegistry
 }
 
 export function getAllInteractiveSlugs(): string[] {
@@ -3233,7 +3280,8 @@ export function getAllInteractiveSlugs(): string[] {
 }
 
 export async function getInteractiveLessonData(topicSlug: string, part: number): Promise<LessonData | null> {
-  const config = interactiveLessonRegistry[topicSlug]
+  const resolved = resolveSlug(topicSlug)
+  const config = interactiveLessonRegistry[resolved]
   if (!config) return null
   const partConfig = config.parts[part - 1]
   if (!partConfig) return null

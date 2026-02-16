@@ -9,7 +9,6 @@ import 'katex/dist/katex.min.css'
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import TopicContentRenderer from '@/components/TopicContentRenderer'
-import { hasInteractiveLesson } from '@/data/interactive-lessons/registry'
 
 // Force dynamic rendering
 export const dynamic = 'force-dynamic'
@@ -193,29 +192,27 @@ export default async function TopicPage(props: TopicPageProps) {
               */}
             </div>
 
-            {/* Interactive Lesson Banner - Show only for topics that have it */}
-            {hasInteractiveLesson(topic.slug) && (
-              <div className="mb-8 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-white p-6 rounded-lg shadow-lg border-2 border-yellow-400">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className="text-3xl">🎯</span>
-                      <span className="inline-flex items-center px-3 py-1 text-xs font-semibold rounded-full bg-yellow-400 text-purple-900">
-                        ⭐ NEW: INTERACTIVE LESSON
-                      </span>
-                    </div>
-                    <h3 className="text-xl font-bold mb-1">Try the Interactive Version!</h3>
-                    <p className="text-purple-100">Learn step-by-step with practice exercises built right in.</p>
+            {/* Interactive Lesson Banner - Show for all topics */}
+            <div className="mb-8 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-white p-6 rounded-lg shadow-lg border-2 border-yellow-400">
+              <div className="flex items-center justify-between">
+                <div>
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-3xl">🎯</span>
+                    <span className="inline-flex items-center px-3 py-1 text-xs font-semibold rounded-full bg-yellow-400 text-purple-900">
+                      ⭐ INTERACTIVE LESSON
+                    </span>
                   </div>
-                  <Link
-                    href={`/topics/${topic.slug}/interactive`}
-                    className="px-6 py-3 bg-white text-purple-700 rounded-lg font-bold hover:bg-yellow-100 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
-                  >
-                    Start Interactive Lesson →
-                  </Link>
+                  <h3 className="text-xl font-bold mb-1">Try the Interactive Version!</h3>
+                  <p className="text-purple-100">Learn step-by-step with practice exercises built right in.</p>
                 </div>
+                <Link
+                  href={`/topics/${topic.slug}/interactive`}
+                  className="px-6 py-3 bg-white text-purple-700 rounded-lg font-bold hover:bg-yellow-100 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
+                >
+                  Start Interactive Lesson →
+                </Link>
               </div>
-            )}
+            </div>
 
             {/* Video (Premium only) */}
             {isPremium && topic.videoUrl && (

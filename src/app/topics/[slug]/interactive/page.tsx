@@ -4,6 +4,7 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import Script from 'next/script'
 import InteractiveLessonRenderer from '@/components/InteractiveLessonRenderer'
+import DynamicInteractiveLessonRenderer from '@/components/DynamicInteractiveLessonRenderer'
 import InteractiveLessonSEO from '@/components/InteractiveLessonSEO'
 import { hasInteractiveLesson } from '@/data/interactive-lessons/registry'
 import 'katex/dist/katex.min.css'
@@ -56,6 +57,7 @@ export default async function InteractivePage(props: InteractivePageProps) {
       title: true,
       description: true,
       slug: true,
+      textContent: true,
       category: {
         select: {
           name: true,
@@ -69,17 +71,19 @@ export default async function InteractivePage(props: InteractivePageProps) {
     notFound()
   }
 
-  // Check if we have an interactive lesson for this topic
-  const hasInteractive = hasInteractiveLesson(topic.slug)
+  // Check if we have a hand-crafted interactive lesson for this topic
+  const hasHandCraftedLesson = hasInteractiveLesson(topic.slug)
+  // If no hand-crafted lesson, we'll use the dynamic renderer with textContent
+  const hasDynamicContent = !hasHandCraftedLesson && !!topic.textContent?.trim()
 
-  if (!hasInteractive) {
-    // Redirect to regular topic page if no interactive lesson exists
+  if (!hasHandCraftedLesson && !hasDynamicContent) {
+    // No hand-crafted lesson AND no textContent to generate from
     return (
       <div className="container py-10">
         <div className="max-w-2xl mx-auto text-center">
           <h1 className="text-3xl font-bold mb-4">Interactive Lesson Coming Soon!</h1>
           <p className="text-gray-600 mb-6">
-            We're working on creating an interactive version of this lesson.
+            We&apos;re working on creating an interactive version of this lesson.
           </p>
           <Link 
             href={`/topics/${topic.slug}`}
@@ -132,13 +136,19 @@ export default async function InteractivePage(props: InteractivePageProps) {
         </div>
 
         {/* Interactive Lesson Renderer (client-side stepper) */}
-        <InteractiveLessonRenderer topicSlug={topic.slug} />
+        {hasHandCraftedLesson ? (
+          <InteractiveLessonRenderer topicSlug={topic.slug} />
+        ) : (
+          <DynamicInteractiveLessonRenderer topicSlug={topic.slug} textContent={topic.textContent!} />
+        )}
 
         {/* SEO: Server-rendered lesson content for search engine crawling */}
         {/* This renders all lesson text as HTML that Googlebot can index.
             Visually hidden (sr-only) so users see the interactive stepper above. */}
-        {/* @ts-expect-error Async Server Component */}
-        <InteractiveLessonSEO topicSlug={topic.slug} topicTitle={topic.title} />
+        {hasHandCraftedLesson && (
+          /* @ts-expect-error Async Server Component */
+          <InteractiveLessonSEO topicSlug={topic.slug} topicTitle={topic.title} />
+        )}
 
         {/* Link back to standard lesson */}
         <div className="mt-8 text-center">
