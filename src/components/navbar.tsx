@@ -13,6 +13,7 @@ export function Navbar() {
 
   const isPremium = session?.user?.role === 'PREMIUM'
   const isTeacher = session?.user?.role === 'TEACHER' || session?.user?.role === 'ADMIN'
+  const isAdmin = session?.user?.role === 'ADMIN'
 
   // Fetch user's avatar when logged in (cached in sessionStorage)
   useEffect(() => {
@@ -109,6 +110,11 @@ export function Navbar() {
                     🏫 Teacher
                   </Link>
                 )}
+                {isAdmin && (
+                  <Link href="/admin" className="text-sm font-medium text-red-600 dark:text-red-400 hover:text-red-700 transition-colors">
+                    🛡️ Admin
+                  </Link>
+                )}
                 {isPremium && (
                   <span className="inline-flex items-center px-2 py-1 text-xs font-semibold rounded-full bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200">
                     Premium
@@ -195,6 +201,11 @@ export function Navbar() {
                   {isTeacher && (
                     <Link href="/teacher" className="block px-3 py-2 text-base font-medium text-blue-600 dark:text-blue-400 hover:bg-accent rounded-md">
                       🏫 Teacher Dashboard
+                    </Link>
+                  )}
+                  {isAdmin && (
+                    <Link href="/admin" className="block px-3 py-2 text-base font-medium text-red-600 dark:text-red-400 hover:bg-accent rounded-md">
+                      🛡️ Admin Panel
                     </Link>
                   )}
                   <Link href="/profile" className="flex items-center gap-3 px-3 py-2 hover:bg-accent rounded-md">

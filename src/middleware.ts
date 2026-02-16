@@ -18,9 +18,16 @@ export async function middleware(request: NextRequest) {
     }
   }
 
+  // Role-based protection for admin routes
+  if (request.nextUrl.pathname.startsWith('/admin')) {
+    if (token.role !== 'ADMIN') {
+      return NextResponse.redirect(new URL('/dashboard', request.url))
+    }
+  }
+
   return NextResponse.next()
 }
 
 export const config = {
-  matcher: ['/dashboard/:path*', '/profile/:path*', '/teacher/:path*'],
+  matcher: ['/dashboard/:path*', '/profile/:path*', '/teacher/:path*', '/admin/:path*'],
 }
