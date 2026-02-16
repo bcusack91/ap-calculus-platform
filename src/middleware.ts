@@ -11,9 +11,16 @@ export async function middleware(request: NextRequest) {
     return NextResponse.redirect(signInUrl)
   }
 
+  // Role-based protection for teacher routes
+  if (request.nextUrl.pathname.startsWith('/teacher')) {
+    if (token.role !== 'TEACHER' && token.role !== 'ADMIN') {
+      return NextResponse.redirect(new URL('/dashboard', request.url))
+    }
+  }
+
   return NextResponse.next()
 }
 
 export const config = {
-  matcher: ['/dashboard/:path*', '/profile/:path*'],
+  matcher: ['/dashboard/:path*', '/profile/:path*', '/teacher/:path*'],
 }

@@ -12,6 +12,7 @@ export function Navbar() {
   const [avatarData, setAvatarData] = useState<AvatarData | null>(null)
 
   const isPremium = session?.user?.role === 'PREMIUM'
+  const isTeacher = session?.user?.role === 'TEACHER' || session?.user?.role === 'ADMIN'
 
   // Fetch user's avatar when logged in (cached in sessionStorage)
   useEffect(() => {
@@ -103,6 +104,11 @@ export function Navbar() {
                 <Link href="/dashboard" className="text-sm font-medium text-purple-600 dark:text-purple-400 hover:text-purple-700 transition-colors">
                   Dashboard
                 </Link>
+                {isTeacher && (
+                  <Link href="/teacher" className="text-sm font-medium text-blue-600 dark:text-blue-400 hover:text-blue-700 transition-colors">
+                    🏫 Teacher
+                  </Link>
+                )}
                 {isPremium && (
                   <span className="inline-flex items-center px-2 py-1 text-xs font-semibold rounded-full bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200">
                     Premium
@@ -186,6 +192,11 @@ export function Navbar() {
                   <Link href="/dashboard" className="block px-3 py-2 text-base font-medium text-purple-600 dark:text-purple-400 hover:bg-accent rounded-md">
                     📊 Dashboard
                   </Link>
+                  {isTeacher && (
+                    <Link href="/teacher" className="block px-3 py-2 text-base font-medium text-blue-600 dark:text-blue-400 hover:bg-accent rounded-md">
+                      🏫 Teacher Dashboard
+                    </Link>
+                  )}
                   <Link href="/profile" className="flex items-center gap-3 px-3 py-2 hover:bg-accent rounded-md">
                     <AvatarDisplay avatarData={avatarData} size={40} className="ring-2 ring-purple-500 dark:ring-purple-400 rounded-full" />
                     <div className="text-sm text-gray-700 dark:text-gray-300">
