@@ -101,15 +101,11 @@ export async function GET(req: NextRequest) {
     const session = await auth()
     
     if (!session?.user?.id) {
-      console.log('❌ Unauthorized: No session')
       return NextResponse.json(
         { error: 'Unauthorized' },
         { status: 401 }
       )
     }
-
-    console.log('🎴 Fetching flashcards for user:', session.user.email || session.user.id)
-    console.log('🆔 User ID from session:', session.user.id)
 
     const { searchParams } = new URL(req.url)
     const topicId = searchParams.get('topicId')
@@ -122,9 +118,6 @@ export async function GET(req: NextRequest) {
         lte: now // Cards due now or in the past
       }
     }
-
-    console.log('🕐 Current time:', now.toISOString())
-    console.log('🔍 Query where:', JSON.stringify(where, null, 2))
 
     if (topicId) {
       where.flashcard = {
@@ -163,13 +156,6 @@ export async function GET(req: NextRequest) {
     const dueCount = dueCards.length
     const newCards = dueCards.filter(c => c.repetitions === 0).length
     const reviewCards = dueCards.filter(c => c.repetitions > 0).length
-
-    console.log('📊 Stats:', {
-      total: totalCards,
-      due: dueCount,
-      new: newCards,
-      review: reviewCards
-    })
 
     return NextResponse.json({
       cards: dueCards,

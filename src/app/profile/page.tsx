@@ -77,8 +77,23 @@ export default function ProfilePage() {
             Profile Settings
           </h1>
           <p className="text-gray-600 dark:text-gray-400">
-            Customize your avatar for competitive mode
+            Customize your avatar and manage your account
           </p>
+        </div>
+
+        {/* Account Info */}
+        <div className="max-w-md mx-auto mb-8 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6 shadow-sm">
+          <h2 className="font-semibold text-gray-900 dark:text-white mb-3">Account</h2>
+          <div className="space-y-2 text-sm">
+            <div className="flex justify-between">
+              <span className="text-gray-500">Name</span>
+              <span className="font-medium text-gray-900 dark:text-white">{session?.user?.name || '—'}</span>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-gray-500">Email</span>
+              <span className="font-medium text-gray-900 dark:text-white">{session?.user?.email || '—'}</span>
+            </div>
+          </div>
         </div>
 
         {/* Success Message */}

@@ -326,7 +326,7 @@ export default function FlashcardReviewPage() {
             <button
               onClick={() => handleRating('good')}
               disabled={reviewing}
-              className="px-4 py-6 rounded-lg bg-green-100 hover:bg-green-200 border-2 border-green-300 text-green-900 font-semibold transition-all disabled:opacity-50 disabled:cursor-not-answered"
+              className="px-4 py-6 rounded-lg bg-green-100 hover:bg-green-200 border-2 border-green-300 text-green-900 font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed"
             >
               <div className="text-sm mb-1">Good</div>
               <div className="text-xs opacity-75">5 min</div>

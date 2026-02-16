@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { prisma } from "@/lib/prisma";
 
 export async function POST(request: NextRequest) {
   try {
@@ -22,38 +23,33 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Log the submission (in production, you'd send this to email service or database)
-    console.log("Contact Form Submission:", {
-      name,
-      email,
-      subject,
-      category,
-      message,
-      timestamp: new Date().toISOString(),
+    // Rate limiting: max 3 submissions per email per hour
+    const oneHourAgo = new Date(Date.now() - 60 * 60 * 1000);
+    const recentSubmissions = await prisma.contactSubmission.count({
+      where: {
+        email,
+        createdAt: { gte: oneHourAgo },
+      },
     });
 
-    // TODO: In production, integrate with email service like:
-    // - SendGrid
-    // - Resend
-    // - AWS SES
-    // - Mailgun
-    // 
-    // Example with Resend:
-    // await resend.emails.send({
-    //   from: 'contact@yourdomain.com',
-    //   to: 'your-email@example.com',
-    //   subject: `[${category}] ${subject}`,
-    //   html: `
-    //     <h2>New Contact Form Submission</h2>
-    //     <p><strong>From:</strong> ${name} (${email})</p>
-    //     <p><strong>Category:</strong> ${category}</p>
-    //     <p><strong>Subject:</strong> ${subject}</p>
-    //     <p><strong>Message:</strong></p>
-    //     <p>${message}</p>
-    //   `
-    // });
+    if (recentSubmissions >= 3) {
+      return NextResponse.json(
+        { error: "Too many submissions. Please try again later." },
+        { status: 429 }
+      );
+    }
 
-    // For now, just return success
+    // Store in database
+    await prisma.contactSubmission.create({
+      data: {
+        name,
+        email,
+        subject,
+        category,
+        message,
+      },
+    });
+
     return NextResponse.json(
       {
         success: true,

@@ -16,13 +16,6 @@ export async function POST(request: Request) {
 
     const { topicSlug, topicId, lessonPart, completedSections, masteryLevel, timeSpent, isPartCompletion } = await request.json()
     
-    console.log('📊 [DB QUERY] Progress save:', {
-      method: topicId ? 'CACHED_ID' : 'SLUG_LOOKUP',
-      topicId: topicId || 'N/A',
-      topicSlug: topicSlug || 'N/A',
-      isPartCompletion: isPartCompletion || false
-    })
-
     if (!topicSlug && !topicId) {
       return NextResponse.json(
         { error: 'Topic slug or ID is required' },
@@ -177,12 +170,11 @@ export async function POST(request: Request) {
             flashcardsCreated = true
             flashcardCount = topFlashcards.length
             flashcardTopicTitle = fullTopic.title
-            console.log(`✅ Auto-generated ${topFlashcards.length} flashcards for "${fullTopic.title}"`)
           }
         } else if (fullTopic && fullTopic.flashcards.length > 0) {
           // LESSON PART-BASED INITIALIZATION: Only initialize flashcards tagged for completed parts
           // This ensures flashcards match the actual content covered
-          console.log(`🎴 Checking flashcard initialization for "${fullTopic.title}" (lesson part: ${lessonPart})`)
+
           
           // Determine which flashcards to initialize based on lesson part and MASTERED/COMPLETED status
           let flashcardsToConsider: typeof fullTopic.flashcards = []
@@ -190,14 +182,14 @@ export async function POST(request: Request) {
           if (status === 'MASTERED' || status === 'COMPLETED') {
             // When topic is completed/mastered, initialize ALL flashcards (regardless of lessonPart tag)
             flashcardsToConsider = fullTopic.flashcards
-            console.log(`✅ Topic completed/mastered - considering all ${fullTopic.flashcards.length} flashcards`)
+
           } else if (lessonPart) {
             // During progress: ONLY initialize flashcards tagged for completed parts
             // Cards without lessonPart tags will NOT be initialized during progress
             flashcardsToConsider = fullTopic.flashcards.filter(fc => 
               fc.lessonPart !== null && fc.lessonPart !== undefined && fc.lessonPart <= lessonPart
             )
-            console.log(`📚 Lesson part ${lessonPart} - considering ${flashcardsToConsider.length}/${fullTopic.flashcards.length} flashcards (tagged for parts 1-${lessonPart})`)
+
           } else {
             // No lesson part specified, use all flashcards
             flashcardsToConsider = fullTopic.flashcards
@@ -227,7 +219,7 @@ export async function POST(request: Request) {
           
           if (uninitializedCards.length > 0) {
             // Initialize all cards that should be available for completed parts
-            console.log(`🆕 Initializing ${uninitializedCards.length} new flashcards for completed content`)
+
             
             for (const flashcard of uninitializedCards) {
               await prisma.flashcardProgress.create({
@@ -248,13 +240,13 @@ export async function POST(request: Request) {
             flashcardCount = uninitializedCards.length
             flashcardTopicTitle = fullTopic.title
             totalActiveFlashcards = initializedIds.size + uninitializedCards.length
-            console.log(`✅ Initialized ${uninitializedCards.length} new flashcards for "${fullTopic.title}" (${totalActiveFlashcards}/${fullTopic.flashcards.length} total)`)
+
           } else if (initializedIds.size > 0) {
             // Even if no new cards added, show notification about existing cards
             flashcardsCreated = true
             flashcardCount = 0 // No new cards
             flashcardTopicTitle = fullTopic.title
-            console.log(`⏭️  No new flashcards to initialize for "${fullTopic.title}" (${initializedIds.size}/${fullTopic.flashcards.length} already active)`)
+
           }
         }
       } catch (error) {

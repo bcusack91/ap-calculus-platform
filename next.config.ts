@@ -9,7 +9,16 @@ const nextConfig: NextConfig = {
   typescript: {
     // Warning: This allows production builds to successfully complete even if
     // your project has type errors.
+    // TODO: Fix all type errors and remove this flag
     ignoreBuildErrors: true,
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'lh3.googleusercontent.com',
+      },
+    ],
   },
   async headers() {
     return [

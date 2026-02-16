@@ -1,11 +1,16 @@
 import { NextResponse } from 'next/server'
-import { PrismaClient } from '@prisma/client'
-
-const prisma = new PrismaClient()
+import { auth } from '@/lib/auth'
+import { prisma } from '@/lib/prisma'
 
 export async function POST() {
   try {
-    console.log('🏷️  Starting flashcard tagging for Part 1...')
+    const session = await auth()
+    if (!session?.user || session.user.role !== 'ADMIN') {
+      return NextResponse.json(
+        { error: 'Unauthorized — admin access required' },
+        { status: 403 }
+      )
+    }
 
     // Find the reflection-refraction topic
     const topic = await prisma.topic.findUnique({
@@ -19,9 +24,6 @@ export async function POST() {
         { status: 404 }
       )
     }
-
-    console.log(`Found topic: ${topic.title}`)
-    console.log(`Total flashcards: ${topic.flashcards.length}`)
 
     // Part 1 flashcards keywords
     const part1Keywords = [
@@ -85,7 +87,5 @@ export async function POST() {
       { error: 'Failed to tag flashcards', details: error instanceof Error ? error.message : 'Unknown error' },
       { status: 500 }
     )
-  } finally {
-    await prisma.$disconnect()
   }
 }

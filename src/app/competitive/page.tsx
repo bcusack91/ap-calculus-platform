@@ -13,7 +13,7 @@ export default function CompetitivePage() {
   const [inQueue, setInQueue] = useState(false)
   const [queueStatus, setQueueStatus] = useState<any>(null)
   const [selectedMode, setSelectedMode] = useState('SPEED_RACE')
-  const [selectedTopic, setSelectedTopic] = useState<'the-unit-circle' | 'reflection-refraction' | 'cumulative'>('the-unit-circle')
+  const [selectedTopic, setSelectedTopic] = useState<'the-unit-circle' | 'reflection-refraction' | 'derivatives' | 'limits' | 'integrals' | 'algebra' | 'cumulative'>('the-unit-circle')
   const [completedTopics, setCompletedTopics] = useState<string[]>([])
   const [requirements, setRequirements] = useState<any>(null)
   const [showAIOptions, setShowAIOptions] = useState(false)
@@ -162,8 +162,11 @@ export default function CompetitivePage() {
             <p className="text-xl text-gray-600 dark:text-gray-400 mb-4">
               Complete any topic with 80%+ mastery to unlock competitive challenges!
             </p>
-            <p className="text-md text-gray-500 dark:text-gray-500 mb-8">
-              Available topics: <strong>Unit Circle</strong> or <strong>Reflection & Refraction</strong>
+            <p className="text-md text-gray-500 dark:text-gray-500 mb-4">
+              Topics like <strong>Derivatives</strong>, <strong>Limits</strong>, <strong>Integrals</strong>, and <strong>Algebra</strong> are always available.
+            </p>
+            <p className="text-sm text-gray-400 dark:text-gray-500 mb-8">
+              Complete <strong>Unit Circle</strong> or <strong>Reflection & Refraction</strong> to unlock those competitive topics too.
             </p>
             
             {/* Progress Display */}
@@ -275,11 +278,11 @@ export default function CompetitivePage() {
         {/* Topic Selection */}
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-4 text-center">Select Topic</h2>
-          <div className="grid md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <button
               onClick={() => setSelectedTopic('the-unit-circle')}
               disabled={!completedTopics.includes('the-unit-circle')}
-              className={`p-6 rounded-xl transition-all ${
+              className={`p-5 rounded-xl transition-all ${
                 selectedTopic === 'the-unit-circle'
                   ? 'ring-4 ring-purple-500 bg-white dark:bg-gray-800 shadow-xl'
                   : 'bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl'
@@ -289,20 +292,20 @@ export default function CompetitivePage() {
                   : 'cursor-pointer'
               }`}
             >
-              <div className="text-4xl mb-2">🔵</div>
-              <h3 className="text-xl font-bold mb-1">Unit Circle</h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
+              <div className="text-3xl mb-2">🔵</div>
+              <h3 className="text-lg font-bold mb-1">Unit Circle</h3>
+              <p className="text-xs text-gray-600 dark:text-gray-400">
                 Angles & Coordinates
               </p>
               {!completedTopics.includes('the-unit-circle') && (
-                <span className="text-xs text-red-500 mt-2 block">Not Completed</span>
+                <span className="text-xs text-red-500 mt-1 block">Not Completed</span>
               )}
             </button>
 
             <button
               onClick={() => setSelectedTopic('reflection-refraction')}
               disabled={!completedTopics.includes('reflection-refraction')}
-              className={`p-6 rounded-xl transition-all ${
+              className={`p-5 rounded-xl transition-all ${
                 selectedTopic === 'reflection-refraction'
                   ? 'ring-4 ring-purple-500 bg-white dark:bg-gray-800 shadow-xl'
                   : 'bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl'
@@ -312,36 +315,96 @@ export default function CompetitivePage() {
                   : 'cursor-pointer'
               }`}
             >
-              <div className="text-4xl mb-2">🌈</div>
-              <h3 className="text-xl font-bold mb-1">Reflection & Refraction</h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
+              <div className="text-3xl mb-2">🌈</div>
+              <h3 className="text-lg font-bold mb-1">Reflection & Refraction</h3>
+              <p className="text-xs text-gray-600 dark:text-gray-400">
                 Optics & Light
               </p>
               {!completedTopics.includes('reflection-refraction') && (
-                <span className="text-xs text-red-500 mt-2 block">Not Completed</span>
+                <span className="text-xs text-red-500 mt-1 block">Not Completed</span>
               )}
             </button>
 
             <button
+              onClick={() => setSelectedTopic('derivatives')}
+              className={`p-5 rounded-xl transition-all cursor-pointer ${
+                selectedTopic === 'derivatives'
+                  ? 'ring-4 ring-purple-500 bg-white dark:bg-gray-800 shadow-xl'
+                  : 'bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl'
+              }`}
+            >
+              <div className="text-3xl mb-2">📐</div>
+              <h3 className="text-lg font-bold mb-1">Derivatives</h3>
+              <p className="text-xs text-gray-600 dark:text-gray-400">
+                Power, Chain, Product Rules
+              </p>
+            </button>
+
+            <button
+              onClick={() => setSelectedTopic('limits')}
+              className={`p-5 rounded-xl transition-all cursor-pointer ${
+                selectedTopic === 'limits'
+                  ? 'ring-4 ring-purple-500 bg-white dark:bg-gray-800 shadow-xl'
+                  : 'bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl'
+              }`}
+            >
+              <div className="text-3xl mb-2">♾️</div>
+              <h3 className="text-lg font-bold mb-1">Limits</h3>
+              <p className="text-xs text-gray-600 dark:text-gray-400">
+                L&apos;Hôpital, Squeeze Theorem
+              </p>
+            </button>
+
+            <button
+              onClick={() => setSelectedTopic('integrals')}
+              className={`p-5 rounded-xl transition-all cursor-pointer ${
+                selectedTopic === 'integrals'
+                  ? 'ring-4 ring-purple-500 bg-white dark:bg-gray-800 shadow-xl'
+                  : 'bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl'
+              }`}
+            >
+              <div className="text-3xl mb-2">∫</div>
+              <h3 className="text-lg font-bold mb-1">Integrals</h3>
+              <p className="text-xs text-gray-600 dark:text-gray-400">
+                Antiderivatives & FTC
+              </p>
+            </button>
+
+            <button
+              onClick={() => setSelectedTopic('algebra')}
+              className={`p-5 rounded-xl transition-all cursor-pointer ${
+                selectedTopic === 'algebra'
+                  ? 'ring-4 ring-purple-500 bg-white dark:bg-gray-800 shadow-xl'
+                  : 'bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl'
+              }`}
+            >
+              <div className="text-3xl mb-2">🔢</div>
+              <h3 className="text-lg font-bold mb-1">Algebra</h3>
+              <p className="text-xs text-gray-600 dark:text-gray-400">
+                Equations & Functions
+              </p>
+            </button>
+
+            <button
               onClick={() => setSelectedTopic('cumulative')}
-              disabled={completedTopics.length < 2}
-              className={`p-6 rounded-xl transition-all ${
+              disabled={completedTopics.length < 1}
+              className={`p-5 rounded-xl transition-all col-span-2 ${
                 selectedTopic === 'cumulative'
                   ? 'ring-4 ring-purple-500 bg-gradient-to-br from-purple-500 to-blue-500 text-white shadow-xl'
                   : 'bg-gradient-to-br from-purple-400 to-blue-400 text-white shadow-lg hover:shadow-xl'
               } ${
-                completedTopics.length < 2
+                completedTopics.length < 1
                   ? 'opacity-50 cursor-not-allowed'
                   : 'cursor-pointer'
               }`}
             >
-              <div className="text-4xl mb-2">🎯</div>
-              <h3 className="text-xl font-bold mb-1">Cumulative</h3>
-              <p className="text-sm text-white/90">
-                All Completed Topics
+              <div className="text-3xl mb-2">🎯</div>
+              <h3 className="text-lg font-bold mb-1">Cumulative</h3>
+              <p className="text-xs text-white/90">
+                Mixed Questions from All Topics
               </p>
-              {completedTopics.length < 2 && (
-                <span className="text-xs text-red-200 mt-2 block">Complete 2+ Topics</span>
+              {completedTopics.length < 1 && (
+                <span className="text-xs text-red-200 mt-1 block">Complete 1+ Topic</span>
               )}
             </button>
           </div>

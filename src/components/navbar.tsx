@@ -87,6 +87,11 @@ export function Navbar() {
             <Link href="/contact" className="transition-colors hover:text-foreground/80">
               Contact
             </Link>
+            <Link href="/search" className="transition-colors hover:text-foreground/80" title="Search">
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+            </Link>
           </nav>
         </div>
 
@@ -95,6 +100,9 @@ export function Navbar() {
           <div className="hidden md:flex items-center space-x-4">
             {session ? (
               <div className="flex items-center space-x-4">
+                <Link href="/dashboard" className="text-sm font-medium text-purple-600 dark:text-purple-400 hover:text-purple-700 transition-colors">
+                  Dashboard
+                </Link>
                 {isPremium && (
                   <span className="inline-flex items-center px-2 py-1 text-xs font-semibold rounded-full bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200">
                     Premium
@@ -167,11 +175,17 @@ export function Navbar() {
             <Link href="/contact" className="block px-3 py-2 text-base font-medium hover:bg-accent rounded-md">
               Contact
             </Link>
+            <Link href="/search" className="block px-3 py-2 text-base font-medium hover:bg-accent rounded-md">
+              🔍 Search
+            </Link>
             
             {/* Mobile Auth Section */}
             <div className="pt-4 border-t mt-2">
               {session ? (
                 <div className="space-y-2">
+                  <Link href="/dashboard" className="block px-3 py-2 text-base font-medium text-purple-600 dark:text-purple-400 hover:bg-accent rounded-md">
+                    📊 Dashboard
+                  </Link>
                   <Link href="/profile" className="flex items-center gap-3 px-3 py-2 hover:bg-accent rounded-md">
                     <AvatarDisplay avatarData={avatarData} size={40} className="ring-2 ring-purple-500 dark:ring-purple-400 rounded-full" />
                     <div className="text-sm text-gray-700 dark:text-gray-300">

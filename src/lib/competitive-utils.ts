@@ -1,6 +1,10 @@
 // Utility functions for competitive match gameplay
 
 import { getQuestionSet, type CompetitiveQuestion } from '@/data/competitive-questions/reflection-refraction-bank'
+import { getDerivativeQuestions } from '@/data/competitive-questions/derivatives-bank'
+import { getLimitQuestions } from '@/data/competitive-questions/limits-bank'
+import { getIntegralQuestions } from '@/data/competitive-questions/integrals-bank'
+import { getAlgebraQuestions } from '@/data/competitive-questions/algebra-bank'
 
 interface UnitCirclePosition {
   angle: number;
@@ -69,19 +73,40 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
   // If topic is reflection-refraction, use that question bank
   if (topicSlug === 'reflection-refraction') {
     const questions = getQuestionSet(totalQuestions)
-    // Map to consistent format with answerIndex and remove non-serializable fields
     return questions.map((q, i) => {
       const { generateQuestion, ...serializableQuestion } = q as any
       return {
         ...serializableQuestion,
         id: i,
-        answerIndex: q.correctAnswer, // Map correctAnswer to answerIndex for consistency
+        answerIndex: q.correctAnswer,
         type: 'multiple-choice'
       }
     })
   }
-  
-  // If cumulative, get mixed questions from both topics
+
+  // Multiple-choice question bank topics
+  const mcqBanks: Record<string, (count: number) => any[]> = {
+    'derivatives': getDerivativeQuestions,
+    'limits': getLimitQuestions,
+    'integrals': getIntegralQuestions,
+    'algebra': getAlgebraQuestions,
+  }
+
+  if (topicSlug && topicSlug in mcqBanks) {
+    const questions = mcqBanks[topicSlug](totalQuestions)
+    return questions.map((q: any, i: number) => ({
+      id: i,
+      question: q.question,
+      options: q.options,
+      correctAnswer: q.correctAnswer,
+      answerIndex: q.correctAnswer,
+      explanation: q.explanation,
+      difficulty: q.difficulty,
+      type: 'multiple-choice'
+    }))
+  }
+
+  // If cumulative, get mixed questions from all available topics
   if (topicSlug === 'cumulative') {
     return generateCumulativeQuestions(totalQuestions)
   }
@@ -141,37 +166,60 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
  */
 function generateCumulativeQuestions(totalQuestions: number): any[] {
   const questions: any[] = []
-  const questionsPerTopic = Math.floor(totalQuestions / 2)
-  
-  // Get questions from unit circle
-  const unitCircleCount = questionsPerTopic
-  const unitCircleQuestions = generateMatchQuestions(unitCircleCount, 'the-unit-circle')
-  
-  // Get questions from reflection-refraction
-  const reflectionCount = totalQuestions - unitCircleCount
-  const reflectionQuestions = getQuestionSet(reflectionCount).map((q, i) => {
+
+  // Gather questions from all MCQ banks
+  const allBankQuestions: any[] = []
+
+  // Unit circle questions
+  const ucQuestions = generateMatchQuestions(3, 'the-unit-circle')
+  allBankQuestions.push(...ucQuestions)
+
+  // Reflection-refraction questions
+  const rrQuestions = getQuestionSet(2).map((q, i) => {
     const { generateQuestion, ...serializableQuestion } = q as any
     return {
       ...serializableQuestion,
-      id: unitCircleCount + i,
+      id: i,
       answerIndex: q.correctAnswer,
       type: 'multiple-choice'
     }
   })
-  
-  // Merge and shuffle
-  questions.push(...unitCircleQuestions, ...reflectionQuestions)
-  
+  allBankQuestions.push(...rrQuestions)
+
+  // Derivatives
+  const dQuestions = getDerivativeQuestions(2).map((q, i) => ({
+    id: i, question: q.question, options: q.options, correctAnswer: q.correctAnswer,
+    answerIndex: q.correctAnswer, explanation: q.explanation, difficulty: q.difficulty, type: 'multiple-choice'
+  }))
+  allBankQuestions.push(...dQuestions)
+
+  // Limits
+  const lQuestions = getLimitQuestions(2).map((q, i) => ({
+    id: i, question: q.question, options: q.options, correctAnswer: q.correctAnswer,
+    answerIndex: q.correctAnswer, explanation: q.explanation, difficulty: q.difficulty, type: 'multiple-choice'
+  }))
+  allBankQuestions.push(...lQuestions)
+
+  // Integrals
+  const iQuestions = getIntegralQuestions(1).map((q, i) => ({
+    id: i, question: q.question, options: q.options, correctAnswer: q.correctAnswer,
+    answerIndex: q.correctAnswer, explanation: q.explanation, difficulty: q.difficulty, type: 'multiple-choice'
+  }))
+  allBankQuestions.push(...iQuestions)
+
+  questions.push(...allBankQuestions)
+
   // Shuffle the combined questions
   for (let i = questions.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [questions[i], questions[j]] = [questions[j], questions[i]]
   }
-  
-  // Re-index
-  questions.forEach((q, i) => q.id = i)
-  
-  return questions
+
+  // Take only what we need and re-index
+  const result = questions.slice(0, totalQuestions)
+  result.forEach((q, i) => q.id = i)
+
+  return result
 }
 
 /**

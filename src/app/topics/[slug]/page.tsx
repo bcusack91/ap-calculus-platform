@@ -354,7 +354,7 @@ export default async function TopicPage(props: TopicPageProps) {
                   <h3 className="font-semibold text-purple-900">Browse All Topics</h3>
                 </div>
                 <p className="text-sm text-purple-700">
-                  Explore other calculus topics
+                  Explore more {topic.category.course.name} topics
                 </p>
               </Link>
             </div>
