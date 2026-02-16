@@ -150,8 +150,8 @@ export default function CompetitivePage() {
 
   if (!unlocked) {
     const masteryPercent = Math.round((requirements?.masteryLevel || 0) * 100)
-    const currentTopic = requirements?.currentTopic || 'the-unit-circle'
-    const topicName = currentTopic === 'the-unit-circle' ? 'Unit Circle' : 'Reflection & Refraction'
+    const currentTopic = requirements?.currentTopic || ''
+    const topicTitle = requirements?.currentTopicTitle || 'a topic'
     
     return (
       <div className="min-h-screen flex items-center justify-center p-6">
@@ -160,54 +160,55 @@ export default function CompetitivePage() {
             <div className="text-6xl mb-6">🔒</div>
             <h1 className="text-4xl font-bold mb-4">Competitive Mode Locked</h1>
             <p className="text-xl text-gray-600 dark:text-gray-400 mb-4">
-              Complete any topic with 80%+ mastery to unlock competitive challenges!
+              Complete any topic&apos;s interactive lesson with 80%+ mastery to unlock competitive challenges!
             </p>
-            <p className="text-md text-gray-500 dark:text-gray-500 mb-4">
-              Topics like <strong>Derivatives</strong>, <strong>Limits</strong>, <strong>Integrals</strong>, and <strong>Algebra</strong> are always available.
-            </p>
-            <p className="text-sm text-gray-400 dark:text-gray-500 mb-8">
-              Complete <strong>Unit Circle</strong> or <strong>Reflection & Refraction</strong> to unlock those competitive topics too.
+            <p className="text-md text-gray-500 dark:text-gray-500 mb-8">
+              Finish an interactive lesson from any course to get started.
             </p>
             
             {/* Progress Display */}
             <div className="mb-8">
-              <div className="flex justify-between items-center mb-2">
-                <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">
-                  {topicName} Progress
-                </span>
-                <span className="text-sm font-semibold text-purple-600">{masteryPercent}%</span>
-              </div>
-              <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-4 mb-6">
-                <div 
-                  className="bg-gradient-to-r from-purple-500 to-blue-500 h-4 rounded-full transition-all duration-500"
-                  style={{ width: `${masteryPercent}%` }}
-                ></div>
-              </div>
+              {currentTopic && (
+                <>
+                  <div className="flex justify-between items-center mb-2">
+                    <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">
+                      Best Progress: {topicTitle}
+                    </span>
+                    <span className="text-sm font-semibold text-purple-600">{masteryPercent}%</span>
+                  </div>
+                  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-4 mb-6">
+                    <div 
+                      className="bg-gradient-to-r from-purple-500 to-blue-500 h-4 rounded-full transition-all duration-500"
+                      style={{ width: `${masteryPercent}%` }}
+                    ></div>
+                  </div>
+                </>
+              )}
 
               {/* Requirements */}
               <div className="text-left bg-gray-50 dark:bg-gray-900 rounded-lg p-6 mb-6">
                 <h3 className="text-lg font-bold mb-4 text-center">Unlock Requirements</h3>
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full bg-purple-100 dark:bg-purple-900 text-purple-600 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      ✓
+                    <div className={`w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 ${masteryPercent > 0 ? 'bg-green-100 dark:bg-green-900 text-green-600' : 'bg-gray-100 dark:bg-gray-700 text-gray-400'}`}>
+                      {masteryPercent > 0 ? '✓' : '○'}
                     </div>
                     <div>
-                      <p className="font-medium">Complete any topic</p>
+                      <p className="font-medium">Complete any topic&apos;s interactive lesson</p>
                       <p className="text-sm text-gray-500 dark:text-gray-400">
-                        Finish all parts of Unit Circle OR Reflection & Refraction
+                        Go through all sections including understanding checks
                       </p>
                     </div>
                   </div>
                   
                   <div className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full bg-purple-100 dark:bg-purple-900 text-purple-600 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      ✓
+                    <div className={`w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 ${masteryPercent >= 80 ? 'bg-green-100 dark:bg-green-900 text-green-600' : 'bg-gray-100 dark:bg-gray-700 text-gray-400'}`}>
+                      {masteryPercent >= 80 ? '✓' : '○'}
                     </div>
                     <div>
                       <p className="font-medium">Achieve 80%+ mastery</p>
                       <p className="text-sm text-gray-500 dark:text-gray-400">
-                        Your current progress: {masteryPercent}%
+                        Your best progress: {masteryPercent}%
                       </p>
                     </div>
                   </div>
@@ -215,12 +216,21 @@ export default function CompetitivePage() {
               </div>
             </div>
 
-            <button
-              onClick={() => router.push(currentTopic === 'the-unit-circle' ? '/topics/the-unit-circle' : '/topics/reflection-refraction')}
-              className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold py-4 rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all shadow-lg"
-            >
-              Continue Learning {topicName}
-            </button>
+            {currentTopic ? (
+              <button
+                onClick={() => router.push(`/topics/${currentTopic}/interactive`)}
+                className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold py-4 rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all shadow-lg"
+              >
+                Continue Learning: {topicTitle}
+              </button>
+            ) : (
+              <button
+                onClick={() => router.push('/topics')}
+                className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold py-4 rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all shadow-lg"
+              >
+                Browse Topics
+              </button>
+            )}
           </div>
         </div>
       </div>
