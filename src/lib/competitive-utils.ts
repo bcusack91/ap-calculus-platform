@@ -43,6 +43,23 @@ export const UNIT_CIRCLE_POSITIONS: UnitCirclePosition[] = [
 ];
 
 /**
+ * Shuffle the options array of an MCQ question so the correct answer
+ * doesn't always appear at the same index. Returns a new object with
+ * shuffled options and an updated correctAnswer / answerIndex.
+ */
+function shuffleOptions(q: { options: string[]; correctAnswer: number; [key: string]: any }) {
+  const correctOption = q.options[q.correctAnswer]
+  const shuffled = [...q.options]
+  // Fisher-Yates shuffle
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
+  }
+  const newCorrectIndex = shuffled.indexOf(correctOption)
+  return { options: shuffled, correctAnswer: newCorrectIndex, answerIndex: newCorrectIndex }
+}
+
+/**
  * Format coordinate for display with LaTeX
  */
 function formatCoordinate(x: number, y: number): string {
@@ -76,10 +93,13 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
     const questions = getQuestionSet(totalQuestions)
     return questions.map((q, i) => {
       const { generateQuestion, ...serializableQuestion } = q as any
+      const shuffled = shuffleOptions({ options: serializableQuestion.options, correctAnswer: q.correctAnswer })
       return {
         ...serializableQuestion,
         id: i,
-        answerIndex: q.correctAnswer,
+        options: shuffled.options,
+        correctAnswer: shuffled.correctAnswer,
+        answerIndex: shuffled.answerIndex,
         type: 'multiple-choice'
       }
     })
@@ -95,32 +115,38 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
 
   if (topicSlug && topicSlug in mcqBanks) {
     const questions = mcqBanks[topicSlug](totalQuestions)
-    return questions.map((q: any, i: number) => ({
-      id: i,
-      question: q.question,
-      options: q.options,
-      correctAnswer: q.correctAnswer,
-      answerIndex: q.correctAnswer,
-      explanation: q.explanation,
-      difficulty: q.difficulty,
-      type: 'multiple-choice'
-    }))
+    return questions.map((q: any, i: number) => {
+      const shuffled = shuffleOptions(q)
+      return {
+        id: i,
+        question: q.question,
+        options: shuffled.options,
+        correctAnswer: shuffled.correctAnswer,
+        answerIndex: shuffled.answerIndex,
+        explanation: q.explanation,
+        difficulty: q.difficulty,
+        type: 'multiple-choice'
+      }
+    })
   }
 
   // Algebra 2: filter questions to only subtopics the student has completed
   if (topicSlug === 'algebra2') {
     const allowedSubtopics = completedTopics ? getUnlockedAlgebra2Subtopics(completedTopics) : undefined
     const questions = getAlgebra2Questions(totalQuestions, allowedSubtopics)
-    return questions.map((q: any, i: number) => ({
-      id: i,
-      question: q.question,
-      options: q.options,
-      correctAnswer: q.correctAnswer,
-      answerIndex: q.correctAnswer,
-      explanation: q.explanation,
-      difficulty: q.difficulty,
-      type: 'multiple-choice'
-    }))
+    return questions.map((q: any, i: number) => {
+      const shuffled = shuffleOptions(q)
+      return {
+        id: i,
+        question: q.question,
+        options: shuffled.options,
+        correctAnswer: shuffled.correctAnswer,
+        answerIndex: shuffled.answerIndex,
+        explanation: q.explanation,
+        difficulty: q.difficulty,
+        type: 'multiple-choice'
+      }
+    })
   }
 
   // If cumulative, get mixed questions from all available topics
@@ -204,32 +230,32 @@ function generateCumulativeQuestions(totalQuestions: number, completedTopics?: s
   allBankQuestions.push(...rrQuestions)
 
   // Derivatives
-  const dQuestions = getDerivativeQuestions(2).map((q, i) => ({
-    id: i, question: q.question, options: q.options, correctAnswer: q.correctAnswer,
-    answerIndex: q.correctAnswer, explanation: q.explanation, difficulty: q.difficulty, type: 'multiple-choice'
-  }))
+  const dQuestions = getDerivativeQuestions(2).map((q, i) => {
+    const shuffled = shuffleOptions(q)
+    return { id: i, question: q.question, options: shuffled.options, correctAnswer: shuffled.correctAnswer, answerIndex: shuffled.answerIndex, explanation: q.explanation, difficulty: q.difficulty, type: 'multiple-choice' }
+  })
   allBankQuestions.push(...dQuestions)
 
   // Limits
-  const lQuestions = getLimitQuestions(2).map((q, i) => ({
-    id: i, question: q.question, options: q.options, correctAnswer: q.correctAnswer,
-    answerIndex: q.correctAnswer, explanation: q.explanation, difficulty: q.difficulty, type: 'multiple-choice'
-  }))
+  const lQuestions = getLimitQuestions(2).map((q, i) => {
+    const shuffled = shuffleOptions(q)
+    return { id: i, question: q.question, options: shuffled.options, correctAnswer: shuffled.correctAnswer, answerIndex: shuffled.answerIndex, explanation: q.explanation, difficulty: q.difficulty, type: 'multiple-choice' }
+  })
   allBankQuestions.push(...lQuestions)
 
   // Integrals
-  const iQuestions = getIntegralQuestions(1).map((q, i) => ({
-    id: i, question: q.question, options: q.options, correctAnswer: q.correctAnswer,
-    answerIndex: q.correctAnswer, explanation: q.explanation, difficulty: q.difficulty, type: 'multiple-choice'
-  }))
+  const iQuestions = getIntegralQuestions(1).map((q, i) => {
+    const shuffled = shuffleOptions(q)
+    return { id: i, question: q.question, options: shuffled.options, correctAnswer: shuffled.correctAnswer, answerIndex: shuffled.answerIndex, explanation: q.explanation, difficulty: q.difficulty, type: 'multiple-choice' }
+  })
   allBankQuestions.push(...iQuestions)
 
   // Algebra 2 — filtered to completed subtopics only
   const allowedSubtopics = completedTopics ? getUnlockedAlgebra2Subtopics(completedTopics) : undefined
-  const a2Questions = getAlgebra2Questions(1, allowedSubtopics).map((q, i) => ({
-    id: i, question: q.question, options: q.options, correctAnswer: q.correctAnswer,
-    answerIndex: q.correctAnswer, explanation: q.explanation, difficulty: q.difficulty, type: 'multiple-choice'
-  }))
+  const a2Questions = getAlgebra2Questions(1, allowedSubtopics).map((q, i) => {
+    const shuffled = shuffleOptions(q)
+    return { id: i, question: q.question, options: shuffled.options, correctAnswer: shuffled.correctAnswer, answerIndex: shuffled.answerIndex, explanation: q.explanation, difficulty: q.difficulty, type: 'multiple-choice' }
+  })
   allBankQuestions.push(...a2Questions)
 
   questions.push(...allBankQuestions)
