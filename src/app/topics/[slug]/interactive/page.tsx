@@ -1,3 +1,4 @@
+import { Suspense } from 'react'
 import { notFound } from 'next/navigation'
 import { prisma } from '@/lib/prisma'
 import Link from 'next/link'
@@ -136,11 +137,21 @@ export default async function InteractivePage(props: InteractivePageProps) {
         </div>
 
         {/* Interactive Lesson Renderer (client-side stepper) */}
-        {hasHandCraftedLesson ? (
-          <InteractiveLessonRenderer topicSlug={topic.slug} />
-        ) : (
-          <DynamicInteractiveLessonRenderer topicSlug={topic.slug} textContent={topic.textContent!} />
-        )}
+        {/* Suspense required because InteractiveLessonRenderer uses useSearchParams() */}
+        <Suspense fallback={
+          <div className="flex items-center justify-center min-h-[400px]">
+            <div className="text-center space-y-4">
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600 mx-auto"></div>
+              <p className="text-lg text-gray-600 dark:text-gray-400">Loading lesson...</p>
+            </div>
+          </div>
+        }>
+          {hasHandCraftedLesson ? (
+            <InteractiveLessonRenderer topicSlug={topic.slug} />
+          ) : (
+            <DynamicInteractiveLessonRenderer topicSlug={topic.slug} textContent={topic.textContent!} />
+          )}
+        </Suspense>
 
         {/* SEO: Server-rendered lesson content for search engine crawling */}
         {/* This renders all lesson text as HTML that Googlebot can index.
