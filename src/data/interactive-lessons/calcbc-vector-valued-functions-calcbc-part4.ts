@@ -30,31 +30,31 @@ Each component of motion is analyzed independently
       id: 'vecto4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of motion in the plane?',
+            question: 'Which statement accurately explains Position?',
             options: [
-              'Position',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
+              'v⃗(t) = r⃗\'(t) = ⟨x\'(t), y\'(t)⟩',
+              'Each component of motion is analyzed independently',
+              'r⃗(t) = ⟨x(t), y(t)⟩',
+              'a⃗(t) = v⃗\'(t) = ⟨x\'\'{t}, y\'\'{t}⟩'
             ],
-            correctAnswer: 0,
-            explanation: 'Position: r⃗(t) = ⟨x(t), y(t)⟩'
+            correctAnswer: 2,
+            explanation: 'Correct — Position: r⃗(t) = ⟨x(t), y(t)⟩. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of motion in the plane, which is accurate?',
+            question: 'Which of the following is true about Acceleration?',
             options: [
-              'a⃗(t) = v⃗\'(t) = ⟨x\'\'{t}, y\'\'{t}⟩',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'r⃗(t) = ⟨x(t), y(t)⟩',
+              'v⃗(t) = r⃗\'(t) = ⟨x\'(t), y\'(t)⟩',
+              'Each component of motion is analyzed independently',
+              'a⃗(t) = v⃗\'(t) = ⟨x\'\'{t}, y\'\'{t}⟩'
             ],
-            correctAnswer: 0,
-            explanation: 'Acceleration: a⃗(t) = v⃗\'(t) = ⟨x\'\'{t}, y\'\'{t}⟩'
+            correctAnswer: 3,
+            explanation: 'Correct — Acceleration: a⃗(t) = v⃗\'(t) = ⟨x\'\'{t}, y\'\'{t}⟩. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Each component of motion is analyzed independently
       id: 'vecto4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to motion in the plane?',
+            question: 'Which of these accurately represents Each component of motion is analyzed…?',
             options: [
+              'v⃗(t) = r⃗\'(t) = ⟨x\'(t), y\'(t)⟩',
               'Each component of motion is analyzed independently',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'a⃗(t) = v⃗\'(t) = ⟨x\'\'{t}, y\'\'{t}⟩',
+              'r⃗(t) = ⟨x(t), y(t)⟩'
             ],
-            correctAnswer: 0,
-            explanation: 'Each component of motion is analyzed independently'
+            correctAnswer: 1,
+            explanation: 'Correct — Each component of motion is analyzed independently. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Each component of motion is analyzed independently
       id: 'vecto4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Position',
-            options: ['r⃗(t) = ⟨x(t), y(t)⟩', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['a⃗(t) = v⃗\'(t) = ⟨x\'\'{t}, y\'\'{t}⟩', 'r⃗(t) = ⟨x(t), y(t)⟩', 'Each component of motion is analyzed independently', 'v⃗(t) = r⃗\'(t) = ⟨x\'(t), y\'(t)⟩']
           },
           {
             label: 'Velocity',
-            options: ['v⃗(t) = r⃗\'(t) = ⟨x\'(t), y\'(t)⟩', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['v⃗(t) = r⃗\'(t) = ⟨x\'(t), y\'(t)⟩', 'Each component of motion is analyzed independently', 'a⃗(t) = v⃗\'(t) = ⟨x\'\'{t}, y\'\'{t}⟩', 'r⃗(t) = ⟨x(t), y(t)⟩']
           },
           {
             label: 'Acceleration',
-            options: ['a⃗(t) = v⃗\'(t) = ⟨x\'\'{t}, y\'\'{t}⟩', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Each component of motion is analyzed independently', 'a⃗(t) = v⃗\'(t) = ⟨x\'\'{t}, y\'\'{t}⟩', 'r⃗(t) = ⟨x(t), y(t)⟩', 'v⃗(t) = r⃗\'(t) = ⟨x\'(t), y\'(t)⟩']
           }
         ],
         correctAnswers: ['r⃗(t) = ⟨x(t), y(t)⟩', 'v⃗(t) = r⃗\'(t) = ⟨x\'(t), y\'(t)⟩', 'a⃗(t) = v⃗\'(t) = ⟨x\'\'{t}, y\'\'{t}⟩'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Motion in the Plane.'
+        hint1: 'Think about what each concept specifically describes in Motion in the Plane.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Motion in the Plane describes a specific idea. Position: r⃗(t) = ⟨x(t), y(t)⟩. Velocity: v⃗(t) = r⃗\'(t) = ⟨x\'(t), y\'(t)⟩. Acceleration: a⃗(t) = v⃗\'(t) = ⟨x\'\'{t}, y\'\'{t}⟩.'
       }
     }
   ]

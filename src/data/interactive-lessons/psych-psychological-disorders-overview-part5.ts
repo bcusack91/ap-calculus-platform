@@ -30,31 +30,31 @@ CBT, exposure therapy, SSRIs
       id: 'psych5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of ocd & ptsd?',
+            question: 'What does "OCD" refer to in psychology?',
             options: [
-              'OCD',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'flashbacks, nightmares, hypervigilance after trauma',
+              'obsessions (unwanted thoughts) + compulsions (repetitive behaviors)',
+              'CBT, exposure therapy, SSRIs',
+              'Both involve anxiety but classified separately in DSM-5'
             ],
-            correctAnswer: 0,
-            explanation: 'OCD: obsessions (unwanted thoughts) + compulsions (repetitive behaviors)'
+            correctAnswer: 1,
+            explanation: 'Correct — OCD: obsessions (unwanted thoughts) + compulsions (repetitive behaviors). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of ocd & ptsd, which is accurate?',
+            question: 'In the context of OCD & PTSD, which explains Both involve anxiety but classified…?',
             options: [
               'Both involve anxiety but classified separately in DSM-5',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'CBT, exposure therapy, SSRIs',
+              'obsessions (unwanted thoughts) + compulsions (repetitive behaviors)',
+              'flashbacks, nightmares, hypervigilance after trauma'
             ],
             correctAnswer: 0,
-            explanation: 'Both involve anxiety but classified separately in DSM-5'
+            explanation: 'Correct — Both involve anxiety but classified separately in DSM-5. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ CBT, exposure therapy, SSRIs
       id: 'psych5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'OCD',
-            options: ['obsessions (unwanted thoughts) + compulsions (repe', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['obsessions (unwanted thoughts) + compulsions (repetitive behaviors)', 'flashbacks, nightmares, hypervigilance after trauma', 'CBT, exposure therapy, SSRIs', 'Both involve anxiety but classified separately in DSM-5']
           },
           {
             label: 'PTSD',
-            options: ['flashbacks, nightmares, hypervigilance after traum', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Both involve anxiety but classified separately in DSM-5', 'CBT, exposure therapy, SSRIs', 'obsessions (unwanted thoughts) + compulsions (repetitive behaviors)', 'flashbacks, nightmares, hypervigilance after trauma']
           },
           {
-            label: 'Both involve anxiety but classified separately in DSM-5',
-            options: ['Both involve anxiety but classified separately in ', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            label: 'Treatment',
+            options: ['CBT, exposure therapy, SSRIs', 'obsessions (unwanted thoughts) + compulsions (repetitive behaviors)', 'Both involve anxiety but classified separately in DSM-5', 'flashbacks, nightmares, hypervigilance after trauma']
           }
         ],
-        correctAnswers: ['obsessions (unwanted thoughts) + compulsions (repe', 'flashbacks, nightmares, hypervigilance after traum', 'Both involve anxiety but classified separately in '],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding OCD & PTSD.'
+        correctAnswers: ['obsessions (unwanted thoughts) + compulsions (repetitive behaviors)', 'flashbacks, nightmares, hypervigilance after trauma', 'CBT, exposure therapy, SSRIs'],
+        hint1: 'Think about what each concept specifically describes in OCD & PTSD.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in OCD & PTSD describes a specific idea. OCD: obsessions (unwanted thoughts) + compulsions (repetitive behaviors). PTSD: flashbacks, nightmares, hypervigilance after trauma. Treatment: CBT, exposure therapy, SSRIs.'
       }
     }
   ]

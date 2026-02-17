@@ -18,20 +18,31 @@ Fix with: period, semicolon, comma + FANBOYS conjunction, or subordination.
       id: 'sat-g4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes run-on sentences?',
+            question: 'Which statement accurately explains Run-on sentences?',
             options: [
-              'Run-on sentences is a fundamental concept in SAT Reading & Writing',
-              'Fix with: period, semicolon, comma + FANBOYS conjunction, or subordination',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'Fragment: missing subject or verb, or a dependent clause standing alone.',
+              'two independent clauses without proper punctuation.',
+              'Parallel structure: items in a list or comparison should have the same grammatical form.',
+              'period, semicolon, comma + FANBOYS conjunction, or subordination.'
             ],
-            correctAnswer: 0,
-            explanation: 'Run-on sentences: two independent clauses without proper punctuation'
+            correctAnswer: 1,
+            explanation: 'Correct — Run-on sentences: two independent clauses without proper punctuation. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Key Insight?',
+            options: [
+              'period, semicolon, comma + FANBOYS conjunction, or subordination.',
+              'two independent clauses without proper punctuation.',
+              'Parallel structure: items in a list or comparison should have the same grammatical form.',
+              'Fragment: missing subject or verb, or a dependent clause standing alone.'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Key Insight: Fragment: missing subject or verb, or a dependent clause standing alone. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Fix with: period, semicolon, comma + FANBOYS conjunction, or subordination.
       id: 'sat-g4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for sentence structure?',
+            question: 'Which statement about SAT Tip is correct?',
             options: [
-              'Fragment: missing subject or verb, or a dependent clause standing alone',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'period, semicolon, comma + FANBOYS conjunction, or subordination.',
+              'Parallel structure: items in a list or comparison should have the same grammatical form.',
+              'two independent clauses without proper punctuation.',
+              'Fragment: missing subject or verb, or a dependent clause standing alone.'
             ],
-            correctAnswer: 0,
-            explanation: 'Fragment: missing subject or verb, or a dependent clause standing alone'
+            correctAnswer: 1,
+            explanation: 'Correct — SAT Tip: Parallel structure: items in a list or comparison should have the same grammatical form. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Fix with: period, semicolon, comma + FANBOYS conjunction, or subordination.
       id: 'sat-g4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Sentence Structure:',
-            options: ['Run-on sentences: two independent clauses without ', 'Fix with: period, semicolon, comma + FANBOYS conju', 'Not applicable', 'None of these']
+            label: 'Run-on sentences',
+            options: ['two independent clauses without proper punctuation.', 'Fragment: missing subject or verb, or a dependent clause standing alone.', 'Parallel structure: items in a list or comparison should have the same grammatical form.', 'period, semicolon, comma + FANBOYS conjunction, or subordination.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Fragment: missing subject or verb, or a dependent ', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Fix with',
+            options: ['period, semicolon, comma + FANBOYS conjunction, or subordination.', 'Parallel structure: items in a list or comparison should have the same grammatical form.', 'two independent clauses without proper punctuation.', 'Fragment: missing subject or verb, or a dependent clause standing alone.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['two independent clauses without proper punctuation.', 'period, semicolon, comma + FANBOYS conjunction, or subordination.', 'Parallel structure: items in a list or comparison should have the same grammatical form.', 'Fragment: missing subject or verb, or a dependent clause standing alone.']
           }
         ],
-        correctAnswers: ['Run-on sentences: two independent clauses without ', 'Fragment: missing subject or verb, or a dependent '],
-        hint1: 'Think about sentence structure',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'Run-on sentences: two independent clauses without proper punctuation. Fragment: missing subject or verb, or a dependent clause standing alone.'
+        correctAnswers: ['two independent clauses without proper punctuation.', 'period, semicolon, comma + FANBOYS conjunction, or subordination.', 'Fragment: missing subject or verb, or a dependent clause standing alone.'],
+        hint1: 'Think about what each concept specifically describes in Sentence Structure.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Sentence Structure describes a specific idea. Run-on sentences: two independent clauses without proper punctuation. Fix with: period, semicolon, comma + FANBOYS conjunction, or subordination. Key Insight: Fragment: missing subject or verb, or a dependent clause standing alone.'
       }
     }
   ]

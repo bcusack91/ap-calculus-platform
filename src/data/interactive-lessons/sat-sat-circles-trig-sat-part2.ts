@@ -18,20 +18,31 @@ Sector area = (θ/360°) × πr² (degrees) or A = ½r²θ (radians).
       id: 'sat-c2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes arc length = (θ/360°) × 2πr (degrees) or s = rθ (radians)?',
+            question: 'Which statement accurately explains Arc length = (θ/360°) × 2πr (degrees)…?',
             options: [
-              'Arc length = (θ/360°) × 2πr (degrees) or s = rθ (radians) is a fundamental concept in SAT Math',
-              'Sector area = (θ/360°) × πr² (degrees) or A = ½r²θ (radians)',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'Convert: radians = degrees × π/180.',
+              'SAT gives formulas at the start — know when to use them.',
+              'Arc length = (θ/360°) × 2πr (degrees) or s = rθ (radians).',
+              'Sector area = (θ/360°) × πr² (degrees) or A = ½r²θ (radians).'
             ],
-            correctAnswer: 0,
-            explanation: 'Arc length = (θ/360°) × 2πr (degrees) or s = rθ (radians)'
+            correctAnswer: 2,
+            explanation: 'Correct — Arc length = (θ/360°) × 2πr (degrees) or s = rθ (radians). The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Arc Length & Sectors, which explains Key Insight?',
+            options: [
+              'Sector area = (θ/360°) × πr² (degrees) or A = ½r²θ (radians).',
+              'SAT gives formulas at the start — know when to use them.',
+              'Convert: radians = degrees × π/180.',
+              'Arc length = (θ/360°) × 2πr (degrees) or s = rθ (radians).'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Key Insight: Convert: radians = degrees × π/180. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Sector area = (θ/360°) × πr² (degrees) or A = ½r²θ (radians).
       id: 'sat-c2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for arc length & sectors?',
+            question: 'Regarding Arc Length & Sectors, which correctly describes SAT Tip?',
             options: [
-              'Convert: radians = degrees × π/180',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'SAT gives formulas at the start — know when to use them.',
+              'Arc length = (θ/360°) × 2πr (degrees) or s = rθ (radians).',
+              'Sector area = (θ/360°) × πr² (degrees) or A = ½r²θ (radians).',
+              'Convert: radians = degrees × π/180.'
             ],
             correctAnswer: 0,
-            explanation: 'Convert: radians = degrees × π/180'
+            explanation: 'Correct — SAT Tip: SAT gives formulas at the start — know when to use them. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ Sector area = (θ/360°) × πr² (degrees) or A = ½r²θ (radians).
       id: 'sat-c2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Arc Length & Sectors:',
-            options: ['Arc length = (θ/360°) × 2πr (degrees) or s = rθ (r', 'Sector area = (θ/360°) × πr² (degrees) or A = ½r²θ', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['Convert: radians = degrees × π/180.', 'Sector area = (θ/360°) × πr² (degrees) or A = ½r²θ (radians).', 'Arc length = (θ/360°) × 2πr (degrees) or s = rθ (radians).', 'SAT gives formulas at the start — know when to use them.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Convert: radians = degrees × π/180', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'SAT Tip',
+            options: ['Arc length = (θ/360°) × 2πr (degrees) or s = rθ (radians).', 'Sector area = (θ/360°) × πr² (degrees) or A = ½r²θ (radians).', 'SAT gives formulas at the start — know when to use them.', 'Convert: radians = degrees × π/180.']
           }
         ],
-        correctAnswers: ['Arc length = (θ/360°) × 2πr (degrees) or s = rθ (r', 'Convert: radians = degrees × π/180'],
-        hint1: 'Think about arc length & sectors',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'Arc length = (θ/360°) × 2πr (degrees) or s = rθ (radians). Convert: radians = degrees × π/180.'
+        correctAnswers: ['Convert: radians = degrees × π/180.', 'SAT gives formulas at the start — know when to use them.'],
+        hint1: 'Think about what each concept specifically describes in Arc Length & Sectors.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Arc Length & Sectors describes a specific idea. Key Insight: Convert: radians = degrees × π/180. SAT Tip: SAT gives formulas at the start — know when to use them.'
       }
     }
   ]

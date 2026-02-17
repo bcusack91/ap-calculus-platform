@@ -30,31 +30,31 @@ The sign of f' indicates whether f is rising or falling
       id: 'defin7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of review & applications?',
-            options: [
-              'The derivative at a point = slope of the tangent line at that point',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'The derivative at a point = slope of the tangent line at that point'
-          },
-          {
-            question: 'In the context of review & applications, which is accurate?',
+            question: 'Which of the following correctly describes The derivative at a point = slope of…?',
             options: [
               'Where f\' is zero, f has a horizontal tangent',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'The derivative at a point = slope of the tangent line at that point',
+              'y - f(a) = f\'(a)(x - a)',
+              'The sign of f\' indicates whether f is rising or falling'
             ],
-            correctAnswer: 0,
-            explanation: 'Where f\' is zero, f has a horizontal tangent'
+            correctAnswer: 1,
+            explanation: 'Correct — The derivative at a point = slope of the tangent line at that point. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Review & Applications, which explains Where f\' is zero, f has a horizontal…?',
+            options: [
+              'The derivative at a point = slope of the tangent line at that point',
+              'The sign of f\' indicates whether f is rising or falling',
+              'Where f\' is zero, f has a horizontal tangent',
+              'y - f(a) = f\'(a)(x - a)'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Where f\' is zero, f has a horizontal tangent. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ The sign of f' indicates whether f is rising or falling
       id: 'defin7-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to review & applications?',
+            question: 'Regarding Review & Applications, which correctly describes The sign of f\' indicates whether f is…?',
             options: [
               'The sign of f\' indicates whether f is rising or falling',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'Where f\' is zero, f has a horizontal tangent',
+              'y - f(a) = f\'(a)(x - a)',
+              'The derivative at a point = slope of the tangent line at that point'
             ],
             correctAnswer: 0,
-            explanation: 'The sign of f\' indicates whether f is rising or falling'
+            explanation: 'Correct — The sign of f\' indicates whether f is rising or falling. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ The sign of f' indicates whether f is rising or falling
       id: 'defin7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The derivative at a point = slope of the tangent line at that point',
-            options: ['The derivative at a point = slope of the tangent l', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'The derivative at a point = slope of…',
+            options: ['y - f(a) = f\'(a)(x - a)', 'The sign of f\' indicates whether f is rising or falling', 'The derivative at a point = slope of the tangent line at that point', 'Where f\' is zero, f has a horizontal tangent']
           },
           {
             label: 'Tangent line equation',
-            options: ['y - f(a) = f\'(a)(x - a)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['The derivative at a point = slope of the tangent line at that point', 'Where f\' is zero, f has a horizontal tangent', 'The sign of f\' indicates whether f is rising or falling', 'y - f(a) = f\'(a)(x - a)']
           },
           {
-            label: 'Where f\' is zero, f has a horizontal tangent',
-            options: ['Where f\' is zero, f has a horizontal tangent', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Where f\' is zero, f has a horizontal…',
+            options: ['Where f\' is zero, f has a horizontal tangent', 'y - f(a) = f\'(a)(x - a)', 'The sign of f\' indicates whether f is rising or falling', 'The derivative at a point = slope of the tangent line at that point']
           }
         ],
-        correctAnswers: ['The derivative at a point = slope of the tangent l', 'y - f(a) = f\'(a)(x - a)', 'Where f\' is zero, f has a horizontal tangent'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Review & Applications.'
+        correctAnswers: ['The derivative at a point = slope of the tangent line at that point', 'y - f(a) = f\'(a)(x - a)', 'Where f\' is zero, f has a horizontal tangent'],
+        hint1: 'Think about what each concept specifically describes in Review & Applications.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Review & Applications describes a specific idea. The derivative at a point = slope of the tangent line at that point. Tangent line equation: y - f(a) = f\'(a)(x - a). Where f\' is zero, f has a horizontal tangent.'
       }
     }
   ]

@@ -30,31 +30,31 @@ N-bromosuccinimide for allylic/benzylic bromination
       id: 'radic3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of selectivity in halogenation?',
+            question: 'What does "Chlorination" refer to in this topic?',
             options: [
-              'Chlorination',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'N-bromosuccinimide for allylic/benzylic bromination',
+              'Bromine is more selective because the H-abstraction step is endothermic',
+              'low selectivity (3°:2°:1° ≈ 5:4:1)',
+              'high selectivity (3°:2°:1° ≈ 1600:82:1)'
             ],
-            correctAnswer: 0,
-            explanation: 'Chlorination: low selectivity (3°:2°:1° ≈ 5:4:1)'
+            correctAnswer: 2,
+            explanation: 'Correct — Chlorination: low selectivity (3°:2°:1° ≈ 5:4:1). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of selectivity in halogenation, which is accurate?',
+            question: 'In the context of Selectivity in Halogenation, which explains Bromine is more selective because the…?',
             options: [
+              'low selectivity (3°:2°:1° ≈ 5:4:1)',
               'Bromine is more selective because the H-abstraction step is endothermic',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'high selectivity (3°:2°:1° ≈ 1600:82:1)',
+              'N-bromosuccinimide for allylic/benzylic bromination'
             ],
-            correctAnswer: 0,
-            explanation: 'Bromine is more selective because the H-abstraction step is endothermic'
+            correctAnswer: 1,
+            explanation: 'Correct — Bromine is more selective because the H-abstraction step is endothermic. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ N-bromosuccinimide for allylic/benzylic bromination
       id: 'radic3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Chlorination',
-            options: ['low selectivity (3°:2°:1° ≈ 5:4:1)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['N-bromosuccinimide for allylic/benzylic bromination', 'high selectivity (3°:2°:1° ≈ 1600:82:1)', 'low selectivity (3°:2°:1° ≈ 5:4:1)', 'Bromine is more selective because the H-abstraction step is endothermic']
           },
           {
             label: 'Bromination',
-            options: ['high selectivity (3°:2°:1° ≈ 1600:82:1)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Bromine is more selective because the H-abstraction step is endothermic', 'high selectivity (3°:2°:1° ≈ 1600:82:1)', 'N-bromosuccinimide for allylic/benzylic bromination', 'low selectivity (3°:2°:1° ≈ 5:4:1)']
           },
           {
-            label: 'Bromine is more selective because the H-abstraction step is endothermic',
-            options: ['Bromine is more selective because the H-abstractio', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'NBS',
+            options: ['N-bromosuccinimide for allylic/benzylic bromination', 'high selectivity (3°:2°:1° ≈ 1600:82:1)', 'Bromine is more selective because the H-abstraction step is endothermic', 'low selectivity (3°:2°:1° ≈ 5:4:1)']
           }
         ],
-        correctAnswers: ['low selectivity (3°:2°:1° ≈ 5:4:1)', 'high selectivity (3°:2°:1° ≈ 1600:82:1)', 'Bromine is more selective because the H-abstractio'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Selectivity in Halogenation.'
+        correctAnswers: ['low selectivity (3°:2°:1° ≈ 5:4:1)', 'high selectivity (3°:2°:1° ≈ 1600:82:1)', 'N-bromosuccinimide for allylic/benzylic bromination'],
+        hint1: 'Think about what each concept specifically describes in Selectivity in Halogenation.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Selectivity in Halogenation describes a specific idea. Chlorination: low selectivity (3°:2°:1° ≈ 5:4:1). Bromination: high selectivity (3°:2°:1° ≈ 1600:82:1). NBS: N-bromosuccinimide for allylic/benzylic bromination.'
       }
     }
   ]

@@ -30,31 +30,31 @@ Some therapies are more effective for specific disorders
       id: 'treat5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of evaluating treatments?',
+            question: 'What does "Meta-analysis" refer to in psychology?',
             options: [
-              'Meta-analysis',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'Some therapies are more effective for specific disorders',
+              'therapeutic alliance most important predictor',
+              'using research to guide treatment',
+              'combining results of many studies'
             ],
-            correctAnswer: 0,
-            explanation: 'Meta-analysis: combining results of many studies'
+            correctAnswer: 3,
+            explanation: 'Correct — Meta-analysis: combining results of many studies. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of evaluating treatments, which is accurate?',
+            question: 'In the context of Evaluating Treatments, which explains Evidence-based practice?',
             options: [
-              'using research to guide treatment',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'combining results of many studies',
+              'Some therapies are more effective for specific disorders',
+              'therapeutic alliance most important predictor',
+              'using research to guide treatment'
             ],
-            correctAnswer: 0,
-            explanation: 'Evidence-based practice: using research to guide treatment'
+            correctAnswer: 3,
+            explanation: 'Correct — Evidence-based practice: using research to guide treatment. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Some therapies are more effective for specific disorders
       id: 'treat5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Meta-analysis',
-            options: ['combining results of many studies', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['therapeutic alliance most important predictor', 'combining results of many studies', 'using research to guide treatment', 'Some therapies are more effective for specific disorders']
           },
           {
             label: 'Common factors',
-            options: ['therapeutic alliance most important predictor', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['using research to guide treatment', 'therapeutic alliance most important predictor', 'Some therapies are more effective for specific disorders', 'combining results of many studies']
           },
           {
             label: 'Evidence-based practice',
-            options: ['using research to guide treatment', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['therapeutic alliance most important predictor', 'combining results of many studies', 'Some therapies are more effective for specific disorders', 'using research to guide treatment']
           }
         ],
         correctAnswers: ['combining results of many studies', 'therapeutic alliance most important predictor', 'using research to guide treatment'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Evaluating Treatments.'
+        hint1: 'Think about what each concept specifically describes in Evaluating Treatments.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Evaluating Treatments describes a specific idea. Meta-analysis: combining results of many studies. Common factors: therapeutic alliance most important predictor. Evidence-based practice: using research to guide treatment.'
       }
     }
   ]

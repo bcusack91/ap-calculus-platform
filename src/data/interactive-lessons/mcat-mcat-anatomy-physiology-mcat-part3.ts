@@ -71,23 +71,28 @@ Functions: protection, thermoregulation, sensation, vitamin D synthesis, immune 
       id: 'mcat-3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Integumentary System:',
-            options: ['Skin layers: epidermis (keratinocytes, melanocytes), dermis ', 'Functions: protection, thermoregulation, sensation, vitamin ', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Skin layers',
+            options: ['Thermoregulation: vasodilation/vasoconstriction, sweating, shivering.', 'protection, thermoregulation, sensation, vitamin D synthesis, immune defense.', 'Wound healing: hemostasis, inflammation, proliferation, remodeling.', 'epidermis (keratinocytes, melanocytes), dermis (connective tissue), hypodermis (fat).']
           },
           {
-            label: 'MCAT application:',
-            options: ['Thermoregulation: vasodilation/vasoconstriction, sweating, s', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Functions',
+            options: ['Wound healing: hemostasis, inflammation, proliferation, remodeling.', 'protection, thermoregulation, sensation, vitamin D synthesis, immune defense.', 'epidermis (keratinocytes, melanocytes), dermis (connective tissue), hypodermis (fat).', 'Thermoregulation: vasodilation/vasoconstriction, sweating, shivering.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['Wound healing: hemostasis, inflammation, proliferation, remodeling.', 'epidermis (keratinocytes, melanocytes), dermis (connective tissue), hypodermis (fat).', 'Thermoregulation: vasodilation/vasoconstriction, sweating, shivering.', 'protection, thermoregulation, sensation, vitamin D synthesis, immune defense.']
           }
         ],
-        correctAnswers: ['Skin layers: epidermis (keratinocytes, melanocytes), dermis ', 'Thermoregulation: vasodilation/vasoconstriction, sweating, s'],
-        hint1: 'Think about integumentary system',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Skin layers: epidermis (keratinocytes, melanocytes), dermis (connective tissue), hypodermis (fat). Thermoregulation: vasodilation/vasoconstriction, sweating, shivering.'
+        correctAnswers: ['epidermis (keratinocytes, melanocytes), dermis (connective tissue), hypodermis (fat).', 'protection, thermoregulation, sensation, vitamin D synthesis, immune defense.', 'Thermoregulation: vasodilation/vasoconstriction, sweating, shivering.'],
+        hint1: 'Think about what each concept specifically describes in Integumentary System.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Integumentary System describes a specific idea. Skin layers: epidermis (keratinocytes, melanocytes), dermis (connective tissue), hypodermis (fat). Functions: protection, thermoregulation, sensation, vitamin D synthesis, immune defense. Key Insight: Thermoregulation: vasodilation/vasoconstriction, sweating, shivering.'
       }
     }
   ]

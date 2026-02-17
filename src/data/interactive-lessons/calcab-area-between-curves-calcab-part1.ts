@@ -30,31 +30,31 @@ Split the integral at zeros of f when the sign changes
       id: 'area-1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of area under a curve?',
-            options: [
-              'Area under f(x) from a to b',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'Area under f(x) from a to b: A = ∫ₐᵇ f(x)dx (when f(x) ≥ 0)'
-          },
-          {
-            question: 'In the context of area under a curve, which is accurate?',
+            question: 'What does "Area under f(x) from a to b" refer to in calculus?',
             options: [
               'Total area = ∫ₐᵇ |f(x)|dx = sum of areas of positive and negative regions',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'For f(x) < 0, the integral gives negative area; use |f(x)| for total area',
+              'Split the integral at zeros of f when the sign changes',
+              'A = ∫ₐᵇ f(x)dx (when f(x) ≥ 0)'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Area under f(x) from a to b: A = ∫ₐᵇ f(x)dx (when f(x) ≥ 0). The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Total area = ∫ₐᵇ |f(x)|dx = sum of…:',
+            options: [
+              'Total area = ∫ₐᵇ |f(x)|dx = sum of areas of positive and negative regions',
+              'A = ∫ₐᵇ f(x)dx (when f(x) ≥ 0)',
+              'Split the integral at zeros of f when the sign changes',
+              'For f(x) < 0, the integral gives negative area; use |f(x)| for total area'
             ],
             correctAnswer: 0,
-            explanation: 'Total area = ∫ₐᵇ |f(x)|dx = sum of areas of positive and negative regions'
+            explanation: 'Correct — Total area = ∫ₐᵇ |f(x)|dx = sum of areas of positive and negative regions. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Split the integral at zeros of f when the sign changes
       id: 'area-1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to area under a curve?',
+            question: 'Regarding Area Between Curves, which correctly describes Split the integral at zeros of f when…?',
             options: [
-              'Split the integral at zeros of f when the sign changes',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'Total area = ∫ₐᵇ |f(x)|dx = sum of areas of positive and negative regions',
+              'A = ∫ₐᵇ f(x)dx (when f(x) ≥ 0)',
+              'For f(x) < 0, the integral gives negative area; use |f(x)| for total area',
+              'Split the integral at zeros of f when the sign changes'
             ],
-            correctAnswer: 0,
-            explanation: 'Split the integral at zeros of f when the sign changes'
+            correctAnswer: 3,
+            explanation: 'Correct — Split the integral at zeros of f when the sign changes. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Split the integral at zeros of f when the sign changes
       id: 'area-1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Area under f(x) from a to b',
-            options: ['A = ∫ₐᵇ f(x)dx (when f(x) ≥ 0)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Split the integral at zeros of f when the sign changes', 'A = ∫ₐᵇ f(x)dx (when f(x) ≥ 0)', 'For f(x) < 0, the integral gives negative area; use |f(x)| for total area', 'Total area = ∫ₐᵇ |f(x)|dx = sum of areas of positive and negative regions']
           },
           {
-            label: 'For f(x) < 0, the integral gives negative area; use |f(x)| for total area',
-            options: ['For f(x) < 0, the integral gives negative area; us', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'For f(x) < 0, the integral gives…',
+            options: ['For f(x) < 0, the integral gives negative area; use |f(x)| for total area', 'Total area = ∫ₐᵇ |f(x)|dx = sum of areas of positive and negative regions', 'A = ∫ₐᵇ f(x)dx (when f(x) ≥ 0)', 'Split the integral at zeros of f when the sign changes']
           },
           {
-            label: 'Total area = ∫ₐᵇ |f(x)|dx = sum of areas of positive and negative regions',
-            options: ['Total area = ∫ₐᵇ |f(x)|dx = sum of areas of positi', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Total area = ∫ₐᵇ |f(x)|dx = sum of…',
+            options: ['Total area = ∫ₐᵇ |f(x)|dx = sum of areas of positive and negative regions', 'Split the integral at zeros of f when the sign changes', 'A = ∫ₐᵇ f(x)dx (when f(x) ≥ 0)', 'For f(x) < 0, the integral gives negative area; use |f(x)| for total area']
           }
         ],
-        correctAnswers: ['A = ∫ₐᵇ f(x)dx (when f(x) ≥ 0)', 'For f(x) < 0, the integral gives negative area; us', 'Total area = ∫ₐᵇ |f(x)|dx = sum of areas of positi'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Area Under a Curve.'
+        correctAnswers: ['A = ∫ₐᵇ f(x)dx (when f(x) ≥ 0)', 'For f(x) < 0, the integral gives negative area; use |f(x)| for total area', 'Total area = ∫ₐᵇ |f(x)|dx = sum of areas of positive and negative regions'],
+        hint1: 'Think about what each concept specifically describes in Area Between Curves.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Area Between Curves describes a specific idea. Area under f(x) from a to b: A = ∫ₐᵇ f(x)dx (when f(x) ≥ 0). For f(x) < 0, the integral gives negative area; use |f(x)| for total area. Total area = ∫ₐᵇ |f(x)|dx = sum of areas of positive and negative regions.'
       }
     }
   ]

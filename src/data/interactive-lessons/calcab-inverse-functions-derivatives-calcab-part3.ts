@@ -30,31 +30,31 @@ d/dx[arctan(g(x))] = g'(x)/(1+[g(x)]²)
       id: 'inver3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of derivatives of inverse trig functions?',
+            question: 'Which of the following correctly describes d/dx[arcsin(x)] = 1/√(1-x²)?',
             options: [
+              'd/dx[arccos(x)] = -1/√(1-x²)',
+              'd/dx[arctan(x)] = 1/(1+x²)',
               'd/dx[arcsin(x)] = 1/√(1-x²)',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'd/dx[arctan(g(x))] = g\'(x)/(1+[g(x)]²)'
             ],
-            correctAnswer: 0,
-            explanation: 'd/dx[arcsin(x)] = 1/√(1-x²)'
+            correctAnswer: 2,
+            explanation: 'Correct — d/dx[arcsin(x)] = 1/√(1-x²). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of derivatives of inverse trig functions, which is accurate?',
+            question: 'In the context of Derivatives of Inverse Trig Functions, which explains d/dx[arctan(x)] = 1/(1+x²)?',
             options: [
-              'd/dx[arctan(x)] = 1/(1+x²)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'd/dx[arccos(x)] = -1/√(1-x²)',
+              'd/dx[arctan(g(x))] = g\'(x)/(1+[g(x)]²)',
+              'd/dx[arcsin(x)] = 1/√(1-x²)',
+              'd/dx[arctan(x)] = 1/(1+x²)'
             ],
-            correctAnswer: 0,
-            explanation: 'd/dx[arctan(x)] = 1/(1+x²)'
+            correctAnswer: 3,
+            explanation: 'Correct — d/dx[arctan(x)] = 1/(1+x²). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ d/dx[arctan(g(x))] = g'(x)/(1+[g(x)]²)
       id: 'inver3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to derivatives of inverse trig functions?',
+            question: 'Which statement about With chain rule is correct?',
             options: [
-              'd/dx[arctan(g(x))] = g\'(x)/(1+[g(x)]²)',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'd/dx[arctan(x)] = 1/(1+x²)',
+              'd/dx[arccos(x)] = -1/√(1-x²)',
+              'd/dx[arcsin(x)] = 1/√(1-x²)',
+              'd/dx[arctan(g(x))] = g\'(x)/(1+[g(x)]²)'
             ],
-            correctAnswer: 0,
-            explanation: 'With chain rule: d/dx[arctan(g(x))] = g\'(x)/(1+[g(x)]²)'
+            correctAnswer: 3,
+            explanation: 'Correct — With chain rule: d/dx[arctan(g(x))] = g\'(x)/(1+[g(x)]²). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ d/dx[arctan(g(x))] = g'(x)/(1+[g(x)]²)
       id: 'inver3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'd/dx[arcsin(x)] = 1/√(1-x²)',
-            options: ['d/dx[arcsin(x)] = 1/√(1-x²)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['d/dx[arccos(x)] = -1/√(1-x²)', 'd/dx[arctan(x)] = 1/(1+x²)', 'd/dx[arcsin(x)] = 1/√(1-x²)', 'd/dx[arctan(g(x))] = g\'(x)/(1+[g(x)]²)']
           },
           {
             label: 'd/dx[arccos(x)] = -1/√(1-x²)',
-            options: ['d/dx[arccos(x)] = -1/√(1-x²)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['d/dx[arccos(x)] = -1/√(1-x²)', 'd/dx[arctan(g(x))] = g\'(x)/(1+[g(x)]²)', 'd/dx[arcsin(x)] = 1/√(1-x²)', 'd/dx[arctan(x)] = 1/(1+x²)']
           },
           {
             label: 'd/dx[arctan(x)] = 1/(1+x²)',
-            options: ['d/dx[arctan(x)] = 1/(1+x²)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['d/dx[arctan(x)] = 1/(1+x²)', 'd/dx[arctan(g(x))] = g\'(x)/(1+[g(x)]²)', 'd/dx[arccos(x)] = -1/√(1-x²)', 'd/dx[arcsin(x)] = 1/√(1-x²)']
           }
         ],
         correctAnswers: ['d/dx[arcsin(x)] = 1/√(1-x²)', 'd/dx[arccos(x)] = -1/√(1-x²)', 'd/dx[arctan(x)] = 1/(1+x²)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Derivatives of Inverse Trig Functions.'
+        hint1: 'Think about what each concept specifically describes in Derivatives of Inverse Trig Functions.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Derivatives of Inverse Trig Functions describes a specific idea. d/dx[arcsin(x)] = 1/√(1-x²). d/dx[arccos(x)] = -1/√(1-x²). d/dx[arctan(x)] = 1/(1+x²).'
       }
     }
   ]

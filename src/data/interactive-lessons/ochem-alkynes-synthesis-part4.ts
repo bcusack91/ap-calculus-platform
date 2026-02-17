@@ -30,31 +30,31 @@ Selective reduction is a powerful synthetic tool
       id: 'alkyn4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of reduction of alkynes?',
-            options: [
-              'H₂/Lindlar catalyst → cis-alkene (syn addition, partial reduction)',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
-            ],
-            correctAnswer: 0,
-            explanation: 'H₂/Lindlar catalyst → cis-alkene (syn addition, partial reduction)'
-          },
-          {
-            question: 'In the context of reduction of alkynes, which is accurate?',
+            question: 'Which statement accurately explains H₂/Lindlar catalyst → cis-alkene (syn…?',
             options: [
               'H₂/Pd → alkane (full reduction)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'H₂/Lindlar catalyst → cis-alkene (syn addition, partial reduction)',
+              'Na/NH₃(l) → trans-alkene (anti addition, dissolving metal)',
+              'Selective reduction is a powerful synthetic tool'
             ],
-            correctAnswer: 0,
-            explanation: 'H₂/Pd → alkane (full reduction)'
+            correctAnswer: 1,
+            explanation: 'Correct — H₂/Lindlar catalyst → cis-alkene (syn addition, partial reduction). The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes H₂/Pd → alkane (full reduction):',
+            options: [
+              'H₂/Lindlar catalyst → cis-alkene (syn addition, partial reduction)',
+              'Na/NH₃(l) → trans-alkene (anti addition, dissolving metal)',
+              'H₂/Pd → alkane (full reduction)',
+              'Selective reduction is a powerful synthetic tool'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — H₂/Pd → alkane (full reduction). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Selective reduction is a powerful synthetic tool
       id: 'alkyn4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'H₂/Lindlar catalyst → cis-alkene (syn addition, partial reduction)',
-            options: ['H₂/Lindlar catalyst → cis-alkene (syn addition, pa', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'H₂/Lindlar catalyst → cis-alkene (syn…',
+            options: ['H₂/Pd → alkane (full reduction)', 'H₂/Lindlar catalyst → cis-alkene (syn addition, partial reduction)', 'Selective reduction is a powerful synthetic tool', 'Na/NH₃(l) → trans-alkene (anti addition, dissolving metal)']
           },
           {
-            label: 'Na/NH₃(l) → trans-alkene (anti addition, dissolving metal)',
-            options: ['Na/NH₃(l) → trans-alkene (anti addition, dissolvin', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Na/NH₃(l) → trans-alkene (anti…',
+            options: ['H₂/Pd → alkane (full reduction)', 'H₂/Lindlar catalyst → cis-alkene (syn addition, partial reduction)', 'Selective reduction is a powerful synthetic tool', 'Na/NH₃(l) → trans-alkene (anti addition, dissolving metal)']
           },
           {
             label: 'H₂/Pd → alkane (full reduction)',
-            options: ['H₂/Pd → alkane (full reduction)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['H₂/Pd → alkane (full reduction)', 'Na/NH₃(l) → trans-alkene (anti addition, dissolving metal)', 'H₂/Lindlar catalyst → cis-alkene (syn addition, partial reduction)', 'Selective reduction is a powerful synthetic tool']
           }
         ],
-        correctAnswers: ['H₂/Lindlar catalyst → cis-alkene (syn addition, pa', 'Na/NH₃(l) → trans-alkene (anti addition, dissolvin', 'H₂/Pd → alkane (full reduction)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Reduction of Alkynes.'
+        correctAnswers: ['H₂/Lindlar catalyst → cis-alkene (syn addition, partial reduction)', 'Na/NH₃(l) → trans-alkene (anti addition, dissolving metal)', 'H₂/Pd → alkane (full reduction)'],
+        hint1: 'Think about what each concept specifically describes in Reduction of Alkynes.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Reduction of Alkynes describes a specific idea. H₂/Lindlar catalyst → cis-alkene (syn addition, partial reduction). Na/NH₃(l) → trans-alkene (anti addition, dissolving metal). H₂/Pd → alkane (full reduction).'
       }
     }
   ]

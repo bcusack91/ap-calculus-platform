@@ -30,31 +30,31 @@ Combine with constant multiple rule for terms like 5x⁴
       id: 'basic1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of power rule?',
-            options: [
-              'Power Rule',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'Power Rule: d/dx[xⁿ] = n·x^(n-1) for any real number n'
-          },
-          {
-            question: 'In the context of power rule, which is accurate?',
+            question: 'Which of the following correctly describes Power Rule?',
             options: [
               'Works for integer, fractional, and negative exponents',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'd/dx[x³] = 3x², d/dx[x⁻²] = -2x⁻³, d/dx[√x] = 1/(2√x)',
+              'd/dx[xⁿ] = n·x^(n-1) for any real number n',
+              'Combine with constant multiple rule for terms like 5x⁴'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Power Rule: d/dx[xⁿ] = n·x^(n-1) for any real number n. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Works for integer, fractional, and…:',
+            options: [
+              'Works for integer, fractional, and negative exponents',
+              'Combine with constant multiple rule for terms like 5x⁴',
+              'd/dx[x³] = 3x², d/dx[x⁻²] = -2x⁻³, d/dx[√x] = 1/(2√x)',
+              'd/dx[xⁿ] = n·x^(n-1) for any real number n'
             ],
             correctAnswer: 0,
-            explanation: 'Works for integer, fractional, and negative exponents'
+            explanation: 'Correct — Works for integer, fractional, and negative exponents. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Combine with constant multiple rule for terms like 5x⁴
       id: 'basic1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to power rule?',
+            question: 'Regarding Basic Differentiation Rules, which correctly describes Combine with constant multiple rule for…?',
             options: [
+              'd/dx[x³] = 3x², d/dx[x⁻²] = -2x⁻³, d/dx[√x] = 1/(2√x)',
+              'Works for integer, fractional, and negative exponents',
               'Combine with constant multiple rule for terms like 5x⁴',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'd/dx[xⁿ] = n·x^(n-1) for any real number n'
             ],
-            correctAnswer: 0,
-            explanation: 'Combine with constant multiple rule for terms like 5x⁴'
+            correctAnswer: 2,
+            explanation: 'Correct — Combine with constant multiple rule for terms like 5x⁴. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Combine with constant multiple rule for terms like 5x⁴
       id: 'basic1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Power Rule',
-            options: ['d/dx[xⁿ] = n·x^(n-1) for any real number n', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Combine with constant multiple rule for terms like 5x⁴', 'Works for integer, fractional, and negative exponents', 'd/dx[xⁿ] = n·x^(n-1) for any real number n', 'd/dx[x³] = 3x², d/dx[x⁻²] = -2x⁻³, d/dx[√x] = 1/(2√x)']
           },
           {
-            label: 'd/dx[x³] = 3x², d/dx[x⁻²] = -2x⁻³, d/dx[√x] = 1/(2√x)',
-            options: ['d/dx[x³] = 3x², d/dx[x⁻²] = -2x⁻³, d/dx[√x] = 1/(2', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'd/dx[x³] = 3x², d/dx[x⁻²] = -2x⁻³,…',
+            options: ['d/dx[xⁿ] = n·x^(n-1) for any real number n', 'Combine with constant multiple rule for terms like 5x⁴', 'd/dx[x³] = 3x², d/dx[x⁻²] = -2x⁻³, d/dx[√x] = 1/(2√x)', 'Works for integer, fractional, and negative exponents']
           },
           {
-            label: 'Works for integer, fractional, and negative exponents',
-            options: ['Works for integer, fractional, and negative expone', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Works for integer, fractional, and…',
+            options: ['Combine with constant multiple rule for terms like 5x⁴', 'd/dx[x³] = 3x², d/dx[x⁻²] = -2x⁻³, d/dx[√x] = 1/(2√x)', 'Works for integer, fractional, and negative exponents', 'd/dx[xⁿ] = n·x^(n-1) for any real number n']
           }
         ],
-        correctAnswers: ['d/dx[xⁿ] = n·x^(n-1) for any real number n', 'd/dx[x³] = 3x², d/dx[x⁻²] = -2x⁻³, d/dx[√x] = 1/(2', 'Works for integer, fractional, and negative expone'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Power Rule.'
+        correctAnswers: ['d/dx[xⁿ] = n·x^(n-1) for any real number n', 'd/dx[x³] = 3x², d/dx[x⁻²] = -2x⁻³, d/dx[√x] = 1/(2√x)', 'Works for integer, fractional, and negative exponents'],
+        hint1: 'Think about what each concept specifically describes in Basic Differentiation Rules.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Basic Differentiation Rules describes a specific idea. Power Rule: d/dx[xⁿ] = n·x^(n-1) for any real number n. d/dx[x³] = 3x², d/dx[x⁻²] = -2x⁻³, d/dx[√x] = 1/(2√x). Works for integer, fractional, and negative exponents.'
       }
     }
   ]

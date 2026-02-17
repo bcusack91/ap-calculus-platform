@@ -30,31 +30,31 @@ Particular solutions follow the flow of the slope field
       id: 'euler6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of problem-solving workshop?',
+            question: 'Which of the following correctly describes Slope fields show dy/dx at each (x,y)…?',
             options: [
-              'Slope fields show dy/dx at each (x,y) point',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
+              'Match slope field patterns to differential equations',
+              'curves where the slope is constant',
+              'Particular solutions follow the flow of the slope field',
+              'Slope fields show dy/dx at each (x,y) point'
             ],
-            correctAnswer: 0,
-            explanation: 'Slope fields show dy/dx at each (x,y) point'
+            correctAnswer: 3,
+            explanation: 'Correct — Slope fields show dy/dx at each (x,y) point. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of problem-solving workshop, which is accurate?',
+            question: 'Select the statement that correctly describes Isoclines:',
             options: [
               'curves where the slope is constant',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Particular solutions follow the flow of the slope field',
+              'Match slope field patterns to differential equations',
+              'Slope fields show dy/dx at each (x,y) point'
             ],
             correctAnswer: 0,
-            explanation: 'Isoclines: curves where the slope is constant'
+            explanation: 'Correct — Isoclines: curves where the slope is constant. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Particular solutions follow the flow of the slope field
       id: 'euler6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to problem-solving workshop?',
+            question: 'Which statement about Particular solutions follow the flow of… is correct?',
             options: [
+              'Slope fields show dy/dx at each (x,y) point',
+              'Match slope field patterns to differential equations',
               'Particular solutions follow the flow of the slope field',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'curves where the slope is constant'
             ],
-            correctAnswer: 0,
-            explanation: 'Particular solutions follow the flow of the slope field'
+            correctAnswer: 2,
+            explanation: 'Correct — Particular solutions follow the flow of the slope field. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Particular solutions follow the flow of the slope field
       id: 'euler6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Slope fields show dy/dx at each (x,y) point',
-            options: ['Slope fields show dy/dx at each (x,y) point', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Slope fields show dy/dx at each (x,y)…',
+            options: ['Match slope field patterns to differential equations', 'curves where the slope is constant', 'Slope fields show dy/dx at each (x,y) point', 'Particular solutions follow the flow of the slope field']
           },
           {
-            label: 'Match slope field patterns to differential equations',
-            options: ['Match slope field patterns to differential equatio', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Match slope field patterns to…',
+            options: ['curves where the slope is constant', 'Match slope field patterns to differential equations', 'Slope fields show dy/dx at each (x,y) point', 'Particular solutions follow the flow of the slope field']
           },
           {
             label: 'Isoclines',
-            options: ['curves where the slope is constant', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Match slope field patterns to differential equations', 'curves where the slope is constant', 'Particular solutions follow the flow of the slope field', 'Slope fields show dy/dx at each (x,y) point']
           }
         ],
-        correctAnswers: ['Slope fields show dy/dx at each (x,y) point', 'Match slope field patterns to differential equatio', 'curves where the slope is constant'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving Workshop.'
+        correctAnswers: ['Slope fields show dy/dx at each (x,y) point', 'Match slope field patterns to differential equations', 'curves where the slope is constant'],
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Slope fields show dy/dx at each (x,y) point. Match slope field patterns to differential equations. Isoclines: curves where the slope is constant.'
       }
     }
   ]

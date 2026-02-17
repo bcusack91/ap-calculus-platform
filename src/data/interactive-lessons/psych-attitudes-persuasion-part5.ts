@@ -30,31 +30,31 @@ help those who help you
       id: 'attit5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of prosocial behavior?',
+            question: 'What does "Bystander effect" refer to in psychology?',
             options: [
-              'Bystander effect',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'each person assumes others will help',
+              'less likely to help when others are present',
+              'selfless concern for others',
+              'help those who help you'
             ],
-            correctAnswer: 0,
-            explanation: 'Bystander effect: less likely to help when others are present'
+            correctAnswer: 1,
+            explanation: 'Correct — Bystander effect: less likely to help when others are present. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of prosocial behavior, which is accurate?',
+            question: 'In the context of Prosocial Behavior, which explains Altruism?',
             options: [
               'selfless concern for others',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'help those who help you',
+              'less likely to help when others are present',
+              'each person assumes others will help'
             ],
             correctAnswer: 0,
-            explanation: 'Altruism: selfless concern for others'
+            explanation: 'Correct — Altruism: selfless concern for others. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ help those who help you
       id: 'attit5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Bystander effect',
-            options: ['less likely to help when others are present', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['help those who help you', 'selfless concern for others', 'less likely to help when others are present', 'each person assumes others will help']
           },
           {
             label: 'Diffusion of responsibility',
-            options: ['each person assumes others will help', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['selfless concern for others', 'help those who help you', 'each person assumes others will help', 'less likely to help when others are present']
           },
           {
             label: 'Altruism',
-            options: ['selfless concern for others', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['less likely to help when others are present', 'help those who help you', 'each person assumes others will help', 'selfless concern for others']
           }
         ],
         correctAnswers: ['less likely to help when others are present', 'each person assumes others will help', 'selfless concern for others'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Prosocial Behavior.'
+        hint1: 'Think about what each concept specifically describes in Prosocial Behavior.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Prosocial Behavior describes a specific idea. Bystander effect: less likely to help when others are present. Diffusion of responsibility: each person assumes others will help. Altruism: selfless concern for others.'
       }
     }
   ]

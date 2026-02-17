@@ -30,31 +30,31 @@ C₆H₅- ; Benzyl group: C₆H₅CH₂-
       id: 'aroma3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of nomenclature of aromatics?',
-            options: [
-              'Monosubstituted',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
-            ],
-            correctAnswer: 0,
-            explanation: 'Monosubstituted: toluene (methylbenzene), aniline (aminobenzene)'
-          },
-          {
-            question: 'In the context of nomenclature of aromatics, which is accurate?',
+            question: 'What does "Monosubstituted" refer to in this topic?',
             options: [
               'phenol, anisole, benzaldehyde, benzoic acid',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'toluene (methylbenzene), aniline (aminobenzene)',
+              'C₆H₅- ; Benzyl group: C₆H₅CH₂-',
+              'ortho (1,2), meta (1,3), para (1,4)'
             ],
-            correctAnswer: 0,
-            explanation: 'Common names: phenol, anisole, benzaldehyde, benzoic acid'
+            correctAnswer: 1,
+            explanation: 'Correct — Monosubstituted: toluene (methylbenzene), aniline (aminobenzene). The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Common names?',
+            options: [
+              'ortho (1,2), meta (1,3), para (1,4)',
+              'C₆H₅- ; Benzyl group: C₆H₅CH₂-',
+              'phenol, anisole, benzaldehyde, benzoic acid',
+              'toluene (methylbenzene), aniline (aminobenzene)'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Common names: phenol, anisole, benzaldehyde, benzoic acid. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ C₆H₅- ; Benzyl group: C₆H₅CH₂-
       id: 'aroma3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Monosubstituted',
-            options: ['toluene (methylbenzene), aniline (aminobenzene)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['C₆H₅- ; Benzyl group: C₆H₅CH₂-', 'ortho (1,2), meta (1,3), para (1,4)', 'toluene (methylbenzene), aniline (aminobenzene)', 'phenol, anisole, benzaldehyde, benzoic acid']
           },
           {
             label: 'Disubstituted',
-            options: ['ortho (1,2), meta (1,3), para (1,4)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['C₆H₅- ; Benzyl group: C₆H₅CH₂-', 'phenol, anisole, benzaldehyde, benzoic acid', 'toluene (methylbenzene), aniline (aminobenzene)', 'ortho (1,2), meta (1,3), para (1,4)']
           },
           {
             label: 'Common names',
-            options: ['phenol, anisole, benzaldehyde, benzoic acid', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['toluene (methylbenzene), aniline (aminobenzene)', 'C₆H₅- ; Benzyl group: C₆H₅CH₂-', 'phenol, anisole, benzaldehyde, benzoic acid', 'ortho (1,2), meta (1,3), para (1,4)']
           }
         ],
         correctAnswers: ['toluene (methylbenzene), aniline (aminobenzene)', 'ortho (1,2), meta (1,3), para (1,4)', 'phenol, anisole, benzaldehyde, benzoic acid'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Nomenclature of Aromatics.'
+        hint1: 'Think about what each concept specifically describes in Nomenclature of Aromatics.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Nomenclature of Aromatics describes a specific idea. Monosubstituted: toluene (methylbenzene), aniline (aminobenzene). Disubstituted: ortho (1,2), meta (1,3), para (1,4). Common names: phenol, anisole, benzaldehyde, benzoic acid.'
       }
     }
   ]

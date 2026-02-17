@@ -30,31 +30,31 @@ universal ethical principles
       id: 'adole3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of moral development?',
+            question: 'Which statement accurately explains Kohlberg\'s stages of moral development?',
             options: [
-              'Kohlberg\'s stages of moral development',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'self-interest (punishment/reward)',
+              'social norms and rules',
+              'universal ethical principles',
+              'Kohlberg\'s stages of moral development'
             ],
-            correctAnswer: 0,
-            explanation: 'Kohlberg\'s stages of moral development'
+            correctAnswer: 3,
+            explanation: 'Correct — Kohlberg\'s stages of moral development. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of moral development, which is accurate?',
+            question: 'Select the statement that correctly describes Conventional:',
             options: [
+              'Kohlberg\'s stages of moral development',
               'social norms and rules',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'self-interest (punishment/reward)',
+              'universal ethical principles'
             ],
-            correctAnswer: 0,
-            explanation: 'Conventional: social norms and rules'
+            correctAnswer: 1,
+            explanation: 'Correct — Conventional: social norms and rules. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ universal ethical principles
       id: 'adole3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Kohlberg\'s stages of moral development',
-            options: ['Kohlberg\'s stages of moral development', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
-          },
-          {
             label: 'Preconventional',
-            options: ['self-interest (punishment/reward)', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Kohlberg\'s stages of moral development', 'universal ethical principles', 'social norms and rules', 'self-interest (punishment/reward)']
           },
           {
             label: 'Conventional',
-            options: ['social norms and rules', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['social norms and rules', 'Kohlberg\'s stages of moral development', 'universal ethical principles', 'self-interest (punishment/reward)']
+          },
+          {
+            label: 'Postconventional',
+            options: ['self-interest (punishment/reward)', 'universal ethical principles', 'social norms and rules', 'Kohlberg\'s stages of moral development']
           }
         ],
-        correctAnswers: ['Kohlberg\'s stages of moral development', 'self-interest (punishment/reward)', 'social norms and rules'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Moral Development.'
+        correctAnswers: ['self-interest (punishment/reward)', 'social norms and rules', 'universal ethical principles'],
+        hint1: 'Think about what each concept specifically describes in Moral Development.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Moral Development describes a specific idea. Preconventional: self-interest (punishment/reward). Conventional: social norms and rules. Postconventional: universal ethical principles.'
       }
     }
   ]

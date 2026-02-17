@@ -19,31 +19,31 @@ export const bioPopulationPart6Data = {
       id: 'popu6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes population growth calculations?',
-            options: [
-              'Population growth calculations',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
-            ],
-            correctAnswer: 0,
-            explanation: 'Population growth calculations'
-          },
-          {
-            question: 'In the context of problem-solving, which statement is accurate?',
+            question: 'Which statement accurately explains Population growth calculations?',
             options: [
               'Analyzing community interaction data',
-              'snoitaluclac htworg noitalupoP',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Interpreting survivorship curves',
+              'Population growth calculations',
+              'Predicting succession outcomes'
             ],
-            correctAnswer: 0,
-            explanation: 'Analyzing community interaction data'
+            correctAnswer: 2,
+            explanation: 'Correct — Population growth calculations. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Population Ecology: Problem-Solving Workshop, which explains Analyzing community interaction data?',
+            options: [
+              'Population growth calculations',
+              'Analyzing community interaction data',
+              'Interpreting survivorship curves',
+              'Predicting succession outcomes'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Analyzing community interaction data. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioPopulationPart6Data = {
       id: 'popu6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to problem-solving?',
+            question: 'Which statement about Predicting succession outcomes is correct?',
             options: [
+              'Population growth calculations',
+              'Interpreting survivorship curves',
               'Predicting succession outcomes',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Analyzing community interaction data'
             ],
-            correctAnswer: 0,
-            explanation: 'Predicting succession outcomes'
+            correctAnswer: 2,
+            explanation: 'Correct — Predicting succession outcomes. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioPopulationPart6Data = {
       id: 'popu6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Population growth calculations is important in problem-solving because',
-            options: ['Population growth calculations', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Population growth calculations',
+            options: ['Analyzing community interaction data', 'Population growth calculations', 'Predicting succession outcomes', 'Interpreting survivorship curves']
           },
           {
-            label: 'Interpreting survivorship curves is important in problem-solving because',
-            options: ['Interpreting survivorship curves', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Interpreting survivorship curves',
+            options: ['Population growth calculations', 'Analyzing community interaction data', 'Interpreting survivorship curves', 'Predicting succession outcomes']
           },
           {
-            label: 'Analyzing community interaction data is important in problem-solving because',
-            options: ['Analyzing community interaction data', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Analyzing community interaction data',
+            options: ['Population growth calculations', 'Interpreting survivorship curves', 'Analyzing community interaction data', 'Predicting succession outcomes']
           }
         ],
         correctAnswers: ['Population growth calculations', 'Interpreting survivorship curves', 'Analyzing community interaction data'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving.'
+        hint1: 'Think about what each concept specifically describes in Population Ecology: Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Population Ecology: Problem-Solving Workshop describes a specific idea. Population growth calculations. Interpreting survivorship curves. Analyzing community interaction data.'
       }
     }
   ]

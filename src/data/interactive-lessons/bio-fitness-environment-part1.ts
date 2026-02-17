@@ -19,31 +19,31 @@ export const bioFitnessPart1Data = {
       id: 'fitn1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes biological fitness?',
+            question: 'Which statement accurately explains Biological fitness?',
             options: [
+              'Fitness is relative (compared to other genotypes)',
               'reproductive success',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Natural selection acts on phenotypes',
+              'Genotype × environment interaction'
             ],
-            correctAnswer: 0,
-            explanation: 'Biological fitness: reproductive success'
+            correctAnswer: 1,
+            explanation: 'Correct — Biological fitness: reproductive success. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of introduction to fitness, which statement is accurate?',
+            question: 'Select the statement that correctly describes Natural selection acts on phenotypes:',
             options: [
+              'reproductive success',
+              'Fitness is relative (compared to other genotypes)',
               'Natural selection acts on phenotypes',
-              'sseccus evitcudorper :ssentif lacigoloiB',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Genotype × environment interaction'
             ],
-            correctAnswer: 0,
-            explanation: 'Natural selection acts on phenotypes'
+            correctAnswer: 2,
+            explanation: 'Correct — Natural selection acts on phenotypes. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioFitnessPart1Data = {
       id: 'fitn1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to introduction to fitness?',
+            question: 'Regarding Introduction to Fitness, which correctly describes Genotype × environment interaction?',
             options: [
+              'Natural selection acts on phenotypes',
               'Genotype × environment interaction',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'reproductive success',
+              'Fitness is relative (compared to other genotypes)'
             ],
-            correctAnswer: 0,
-            explanation: 'Genotype × environment interaction'
+            correctAnswer: 1,
+            explanation: 'Correct — Genotype × environment interaction. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioFitnessPart1Data = {
       id: 'fitn1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Biological fitness is important in introduction to fitness because',
-            options: ['reproductive success', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Biological fitness',
+            options: ['Natural selection acts on phenotypes', 'Genotype × environment interaction', 'reproductive success', 'Fitness is relative (compared to other genotypes)']
           },
           {
-            label: 'Fitness is relative (compared to other genotypes) is important in introduction to fitness because',
-            options: ['Fitness is relative (compared to other genotypes)', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Fitness is relative (compared to other…',
+            options: ['Fitness is relative (compared to other genotypes)', 'Natural selection acts on phenotypes', 'reproductive success', 'Genotype × environment interaction']
           },
           {
-            label: 'Natural selection acts on phenotypes is important in introduction to fitness because',
-            options: ['Natural selection acts on phenotypes', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Natural selection acts on phenotypes',
+            options: ['Fitness is relative (compared to other genotypes)', 'Natural selection acts on phenotypes', 'reproductive success', 'Genotype × environment interaction']
           }
         ],
         correctAnswers: ['reproductive success', 'Fitness is relative (compared to other genotypes)', 'Natural selection acts on phenotypes'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Introduction to Fitness.'
+        hint1: 'Think about what each concept specifically describes in Introduction to Fitness.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Introduction to Fitness describes a specific idea. Biological fitness: reproductive success. Fitness is relative (compared to other genotypes). Natural selection acts on phenotypes.'
       }
     }
   ]

@@ -71,23 +71,28 @@ Adaptive immunity: B cells (antibodies, humoral) and T cells (cell-mediated) —
       id: 'mcat-7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Review & MCAT Practice:',
-            options: ['Innate immunity: skin, mucous membranes, phagocytes, complem', 'Adaptive immunity: B cells (antibodies, humoral) and T cells', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Innate immunity',
+            options: ['MHC I: on all nucleated cells, presents to CD8+ cytotoxic T cells.', 'B cells (antibodies, humoral) and T cells (cell-mediated) — slow, specific, memory.', 'MHC II: on antigen-presenting cells (macrophages, dendritic cells, B cells), presents to CD4+ helper T cells.', 'skin, mucous membranes, phagocytes, complement, inflammation — fast, nonspecific.']
           },
           {
-            label: 'MCAT application:',
-            options: ['MHC I: on all nucleated cells, presents to CD8+ cytotoxic T ', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Adaptive immunity',
+            options: ['B cells (antibodies, humoral) and T cells (cell-mediated) — slow, specific, memory.', 'skin, mucous membranes, phagocytes, complement, inflammation — fast, nonspecific.', 'MHC II: on antigen-presenting cells (macrophages, dendritic cells, B cells), presents to CD4+ helper T cells.', 'MHC I: on all nucleated cells, presents to CD8+ cytotoxic T cells.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['MHC II: on antigen-presenting cells (macrophages, dendritic cells, B cells), presents to CD4+ helper T cells.', 'skin, mucous membranes, phagocytes, complement, inflammation — fast, nonspecific.', 'MHC I: on all nucleated cells, presents to CD8+ cytotoxic T cells.', 'B cells (antibodies, humoral) and T cells (cell-mediated) — slow, specific, memory.']
           }
         ],
-        correctAnswers: ['Innate immunity: skin, mucous membranes, phagocytes, complem', 'MHC I: on all nucleated cells, presents to CD8+ cytotoxic T '],
-        hint1: 'Think about review & mcat practice',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Innate immunity: skin, mucous membranes, phagocytes, complement, inflammation — fast, nonspecific. MHC I: on all nucleated cells, presents to CD8+ cytotoxic T cells.'
+        correctAnswers: ['skin, mucous membranes, phagocytes, complement, inflammation — fast, nonspecific.', 'B cells (antibodies, humoral) and T cells (cell-mediated) — slow, specific, memory.', 'MHC I: on all nucleated cells, presents to CD8+ cytotoxic T cells.'],
+        hint1: 'Think about what each concept specifically describes in Review & MCAT Practice.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Review & MCAT Practice describes a specific idea. Innate immunity: skin, mucous membranes, phagocytes, complement, inflammation — fast, nonspecific. Adaptive immunity: B cells (antibodies, humoral) and T cells (cell-mediated) — slow, specific, memory. Key Insight: MHC I: on all nucleated cells, presents to CD8+ cytotoxic T cells.'
       }
     }
   ]

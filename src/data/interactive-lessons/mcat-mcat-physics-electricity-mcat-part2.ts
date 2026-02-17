@@ -71,23 +71,28 @@ Series: resistances add (Rtotal = R1+R2+...); current is same through all.
       id: 'mcat-2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Electric Circuits:',
-            options: ['Ohms law: V = IR; Power P = IV = I2R = V2/R', 'Series: resistances add (Rtotal = R1+R2+...); current is sam', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Ohms law',
+            options: ['resistances add (Rtotal = R1+R2+...); current is same through all.', 'Parallel: 1/Rtotal = 1/R1 + 1/R2 + ...; voltage is same across all branches.', 'V = IR; Power P = IV = I2R = V2/R.', 'Kirchhoffs laws: junction rule (currents in = currents out); loop rule (voltage drops sum to zero).']
           },
           {
-            label: 'MCAT application:',
-            options: ['Parallel: 1/Rtotal = 1/R1 + 1/R2 + ...; voltage is same acro', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Series',
+            options: ['Parallel: 1/Rtotal = 1/R1 + 1/R2 + ...; voltage is same across all branches.', 'V = IR; Power P = IV = I2R = V2/R.', 'Kirchhoffs laws: junction rule (currents in = currents out); loop rule (voltage drops sum to zero).', 'resistances add (Rtotal = R1+R2+...); current is same through all.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['Kirchhoffs laws: junction rule (currents in = currents out); loop rule (voltage drops sum to zero).', 'V = IR; Power P = IV = I2R = V2/R.', 'Parallel: 1/Rtotal = 1/R1 + 1/R2 + ...; voltage is same across all branches.', 'resistances add (Rtotal = R1+R2+...); current is same through all.']
           }
         ],
-        correctAnswers: ['Ohms law: V = IR; Power P = IV = I2R = V2/R', 'Parallel: 1/Rtotal = 1/R1 + 1/R2 + ...; voltage is same acro'],
-        hint1: 'Think about electric circuits',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Ohms law: V = IR; Power P = IV = I2R = V2/R. Parallel: 1/Rtotal = 1/R1 + 1/R2 + ...; voltage is same across all branches.'
+        correctAnswers: ['V = IR; Power P = IV = I2R = V2/R.', 'resistances add (Rtotal = R1+R2+...); current is same through all.', 'Parallel: 1/Rtotal = 1/R1 + 1/R2 + ...; voltage is same across all branches.'],
+        hint1: 'Think about what each concept specifically describes in Electric Circuits.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Electric Circuits describes a specific idea. Ohms law: V = IR; Power P = IV = I2R = V2/R. Series: resistances add (Rtotal = R1+R2+...); current is same through all. Key Insight: Parallel: 1/Rtotal = 1/R1 + 1/R2 + ...; voltage is same across all branches.'
       }
     }
   ]

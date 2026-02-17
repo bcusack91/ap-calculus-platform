@@ -19,31 +19,31 @@ export const bioCellCommPart2Data = {
       id: 'cell2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes endocrine?',
+            question: 'Which of the following correctly describes Endocrine?',
             options: [
+              'gap junctions, plasmodesmata',
               'long-distance via bloodstream (hormones)',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'cell signals itself',
+              'local signaling to nearby cells'
             ],
-            correctAnswer: 0,
-            explanation: 'Endocrine: long-distance via bloodstream (hormones)'
+            correctAnswer: 1,
+            explanation: 'Correct — Endocrine: long-distance via bloodstream (hormones). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of types of signaling, which statement is accurate?',
+            question: 'Which of the following is true about Autocrine?',
             options: [
-              'Autocrine: cell signals itself',
-              ')senomroh( maertsdoolb aiv ecnatsid-gnol :enircodnE',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'gap junctions, plasmodesmata',
+              'long-distance via bloodstream (hormones)',
+              'cell signals itself',
+              'local signaling to nearby cells'
             ],
-            correctAnswer: 0,
-            explanation: 'Autocrine: cell signals itself'
+            correctAnswer: 2,
+            explanation: 'Correct — Autocrine: cell signals itself. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioCellCommPart2Data = {
       id: 'cell2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to types of signaling?',
+            question: 'Regarding Types of Signaling, which correctly describes Direct contact?',
             options: [
-              'Direct contact: gap junctions, plasmodesmata',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'local signaling to nearby cells',
+              'long-distance via bloodstream (hormones)',
+              'gap junctions, plasmodesmata',
+              'cell signals itself'
             ],
-            correctAnswer: 0,
-            explanation: 'Direct contact: gap junctions, plasmodesmata'
+            correctAnswer: 2,
+            explanation: 'Correct — Direct contact: gap junctions, plasmodesmata. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioCellCommPart2Data = {
       id: 'cell2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Endocrine is important in types of signaling because',
-            options: ['long-distance via bloodstream (hormones)', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Endocrine',
+            options: ['local signaling to nearby cells', 'long-distance via bloodstream (hormones)', 'cell signals itself', 'gap junctions, plasmodesmata']
           },
           {
-            label: 'Paracrine is important in types of signaling because',
-            options: ['local signaling to nearby cells', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Paracrine',
+            options: ['local signaling to nearby cells', 'gap junctions, plasmodesmata', 'long-distance via bloodstream (hormones)', 'cell signals itself']
           },
           {
-            label: 'Autocrine is important in types of signaling because',
-            options: ['cell signals itself', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Autocrine',
+            options: ['local signaling to nearby cells', 'long-distance via bloodstream (hormones)', 'gap junctions, plasmodesmata', 'cell signals itself']
           }
         ],
         correctAnswers: ['long-distance via bloodstream (hormones)', 'local signaling to nearby cells', 'cell signals itself'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Types of Signaling.'
+        hint1: 'Think about what each concept specifically describes in Types of Signaling.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Types of Signaling describes a specific idea. Endocrine: long-distance via bloodstream (hormones). Paracrine: local signaling to nearby cells. Autocrine: cell signals itself.'
       }
     }
   ]

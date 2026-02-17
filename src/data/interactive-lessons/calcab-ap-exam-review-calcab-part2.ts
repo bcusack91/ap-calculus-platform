@@ -30,31 +30,31 @@ Derivatives of trig, exponential, and logarithmic functions
       id: 'ap-ex2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of derivatives review?',
+            question: 'Which of the following correctly describes Power, product, quotient, chain rules?',
             options: [
-              'Power, product, quotient, chain rules',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              '(f⁻¹)\'(a) = 1/f\'(f⁻¹(a))',
+              'Derivatives of trig, exponential, and logarithmic functions',
+              'Implicit differentiation and related rates',
+              'Power, product, quotient, chain rules'
             ],
-            correctAnswer: 0,
-            explanation: 'Power, product, quotient, chain rules'
+            correctAnswer: 3,
+            explanation: 'Correct — Power, product, quotient, chain rules. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of derivatives review, which is accurate?',
+            question: 'Select the statement that correctly describes Derivatives of trig, exponential, and…:',
             options: [
               'Derivatives of trig, exponential, and logarithmic functions',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Implicit differentiation and related rates',
+              'Power, product, quotient, chain rules',
+              '(f⁻¹)\'(a) = 1/f\'(f⁻¹(a))'
             ],
             correctAnswer: 0,
-            explanation: 'Derivatives of trig, exponential, and logarithmic functions'
+            explanation: 'Correct — Derivatives of trig, exponential, and logarithmic functions. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Derivatives of trig, exponential, and logarithmic functions
       id: 'ap-ex2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to derivatives review?',
+            question: 'Which of these accurately represents Inverse function derivatives?',
             options: [
-              '(f⁻¹)\'(a) = 1/f\'(f⁻¹(a))',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'Implicit differentiation and related rates',
+              'Derivatives of trig, exponential, and logarithmic functions',
+              'Power, product, quotient, chain rules',
+              '(f⁻¹)\'(a) = 1/f\'(f⁻¹(a))'
             ],
-            correctAnswer: 0,
-            explanation: 'Inverse function derivatives: (f⁻¹)\'(a) = 1/f\'(f⁻¹(a))'
+            correctAnswer: 3,
+            explanation: 'Correct — Inverse function derivatives: (f⁻¹)\'(a) = 1/f\'(f⁻¹(a)). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Derivatives of trig, exponential, and logarithmic functions
       id: 'ap-ex2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Power, product, quotient, chain rules',
-            options: ['Power, product, quotient, chain rules', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Power, product, quotient, chain rules', '(f⁻¹)\'(a) = 1/f\'(f⁻¹(a))', 'Implicit differentiation and related rates', 'Derivatives of trig, exponential, and logarithmic functions']
           },
           {
-            label: 'Implicit differentiation and related rates',
-            options: ['Implicit differentiation and related rates', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Implicit differentiation and related…',
+            options: ['Power, product, quotient, chain rules', 'Derivatives of trig, exponential, and logarithmic functions', 'Implicit differentiation and related rates', '(f⁻¹)\'(a) = 1/f\'(f⁻¹(a))']
           },
           {
-            label: 'Derivatives of trig, exponential, and logarithmic functions',
-            options: ['Derivatives of trig, exponential, and logarithmic ', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Derivatives of trig, exponential, and…',
+            options: ['Power, product, quotient, chain rules', 'Implicit differentiation and related rates', 'Derivatives of trig, exponential, and logarithmic functions', '(f⁻¹)\'(a) = 1/f\'(f⁻¹(a))']
           }
         ],
-        correctAnswers: ['Power, product, quotient, chain rules', 'Implicit differentiation and related rates', 'Derivatives of trig, exponential, and logarithmic '],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Derivatives Review.'
+        correctAnswers: ['Power, product, quotient, chain rules', 'Implicit differentiation and related rates', 'Derivatives of trig, exponential, and logarithmic functions'],
+        hint1: 'Think about what each concept specifically describes in Derivatives Review.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Derivatives Review describes a specific idea. Power, product, quotient, chain rules. Implicit differentiation and related rates. Derivatives of trig, exponential, and logarithmic functions.'
       }
     }
   ]

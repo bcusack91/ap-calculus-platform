@@ -30,31 +30,31 @@ A power series defines a function f(x) within its interval of convergence
       id: 'power1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of introduction to power series?',
+            question: 'Which of the following correctly describes Power series?',
             options: [
-              'Power series',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
+              'A power series defines a function f(x) within its interval of convergence',
+              'Σ cₙ(x-a)ⁿ = c₀ + c₁(x-a) + c₂(x-a)² + ...',
+              'Centered at a (when a=0, it\'s a Maclaurin series form)',
+              'Each power series converges for some set of x-values'
             ],
-            correctAnswer: 0,
-            explanation: 'Power series: Σ cₙ(x-a)ⁿ = c₀ + c₁(x-a) + c₂(x-a)² + ...'
+            correctAnswer: 1,
+            explanation: 'Correct — Power series: Σ cₙ(x-a)ⁿ = c₀ + c₁(x-a) + c₂(x-a)² + ... The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of introduction to power series, which is accurate?',
+            question: 'Which of the following is true about Each power series converges for some…?',
             options: [
+              'Σ cₙ(x-a)ⁿ = c₀ + c₁(x-a) + c₂(x-a)² + ...',
+              'A power series defines a function f(x) within its interval of convergence',
               'Each power series converges for some set of x-values',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Centered at a (when a=0, it\'s a Maclaurin series form)'
             ],
-            correctAnswer: 0,
-            explanation: 'Each power series converges for some set of x-values'
+            correctAnswer: 2,
+            explanation: 'Correct — Each power series converges for some set of x-values. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ A power series defines a function f(x) within its interval of convergence
       id: 'power1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to introduction to power series?',
+            question: 'Which statement about A power series defines a function f(x)… is correct?',
             options: [
-              'A power series defines a function f(x) within its interval of convergence',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'Each power series converges for some set of x-values',
+              'Centered at a (when a=0, it\'s a Maclaurin series form)',
+              'Σ cₙ(x-a)ⁿ = c₀ + c₁(x-a) + c₂(x-a)² + ...',
+              'A power series defines a function f(x) within its interval of convergence'
             ],
-            correctAnswer: 0,
-            explanation: 'A power series defines a function f(x) within its interval of convergence'
+            correctAnswer: 3,
+            explanation: 'Correct — A power series defines a function f(x) within its interval of convergence. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ A power series defines a function f(x) within its interval of convergence
       id: 'power1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Power series',
-            options: ['Σ cₙ(x-a)ⁿ = c₀ + c₁(x-a) + c₂(x-a)² + ...', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Centered at a (when a=0, it\'s a Maclaurin series form)', 'Σ cₙ(x-a)ⁿ = c₀ + c₁(x-a) + c₂(x-a)² + ...', 'A power series defines a function f(x) within its interval of convergence', 'Each power series converges for some set of x-values']
           },
           {
-            label: 'Centered at a (when a=0, it\'s a Maclaurin series form)',
-            options: ['Centered at a (when a=0, it\'s a Maclaurin series f', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Centered at a (when a=0, it\'s a…',
+            options: ['Σ cₙ(x-a)ⁿ = c₀ + c₁(x-a) + c₂(x-a)² + ...', 'A power series defines a function f(x) within its interval of convergence', 'Centered at a (when a=0, it\'s a Maclaurin series form)', 'Each power series converges for some set of x-values']
           },
           {
-            label: 'Each power series converges for some set of x-values',
-            options: ['Each power series converges for some set of x-valu', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Each power series converges for some…',
+            options: ['Centered at a (when a=0, it\'s a Maclaurin series form)', 'A power series defines a function f(x) within its interval of convergence', 'Σ cₙ(x-a)ⁿ = c₀ + c₁(x-a) + c₂(x-a)² + ...', 'Each power series converges for some set of x-values']
           }
         ],
-        correctAnswers: ['Σ cₙ(x-a)ⁿ = c₀ + c₁(x-a) + c₂(x-a)² + ...', 'Centered at a (when a=0, it\'s a Maclaurin series f', 'Each power series converges for some set of x-valu'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Introduction to Power Series.'
+        correctAnswers: ['Σ cₙ(x-a)ⁿ = c₀ + c₁(x-a) + c₂(x-a)² + ...', 'Centered at a (when a=0, it\'s a Maclaurin series form)', 'Each power series converges for some set of x-values'],
+        hint1: 'Think about what each concept specifically describes in ∮ Power Series.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in ∮ Power Series describes a specific idea. Power series: Σ cₙ(x-a)ⁿ = c₀ + c₁(x-a) + c₂(x-a)² + ... Centered at a (when a=0, it\'s a Maclaurin series form). Each power series converges for some set of x-values.'
       }
     }
   ]

@@ -30,31 +30,31 @@ Aromaticity is preserved throughout
       id: 'elect1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of eas mechanism?',
+            question: 'Which statement accurately explains EAS?',
             options: [
-              'EAS',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'electrophile attacks aromatic ring → substitution product',
+              'Aromaticity is preserved throughout',
+              'deprotonation restores aromaticity',
+              'electrophilic attack → arenium ion (σ complex)'
             ],
             correctAnswer: 0,
-            explanation: 'EAS: electrophile attacks aromatic ring → substitution product'
+            explanation: 'Correct — EAS: electrophile attacks aromatic ring → substitution product. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of eas mechanism, which is accurate?',
+            question: 'Which of the following is true about Step 2?',
             options: [
-              'deprotonation restores aromaticity',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'electrophile attacks aromatic ring → substitution product',
+              'electrophilic attack → arenium ion (σ complex)',
+              'Aromaticity is preserved throughout',
+              'deprotonation restores aromaticity'
             ],
-            correctAnswer: 0,
-            explanation: 'Step 2: deprotonation restores aromaticity'
+            correctAnswer: 3,
+            explanation: 'Correct — Step 2: deprotonation restores aromaticity. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Aromaticity is preserved throughout
       id: 'elect1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'EAS',
-            options: ['electrophile attacks aromatic ring → substitution ', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['electrophile attacks aromatic ring → substitution product', 'electrophilic attack → arenium ion (σ complex)', 'Aromaticity is preserved throughout', 'deprotonation restores aromaticity']
           },
           {
             label: 'Step 1',
-            options: ['electrophilic attack → arenium ion (σ complex)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['deprotonation restores aromaticity', 'Aromaticity is preserved throughout', 'electrophilic attack → arenium ion (σ complex)', 'electrophile attacks aromatic ring → substitution product']
           },
           {
             label: 'Step 2',
-            options: ['deprotonation restores aromaticity', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['electrophile attacks aromatic ring → substitution product', 'deprotonation restores aromaticity', 'Aromaticity is preserved throughout', 'electrophilic attack → arenium ion (σ complex)']
           }
         ],
-        correctAnswers: ['electrophile attacks aromatic ring → substitution ', 'electrophilic attack → arenium ion (σ complex)', 'deprotonation restores aromaticity'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding EAS Mechanism.'
+        correctAnswers: ['electrophile attacks aromatic ring → substitution product', 'electrophilic attack → arenium ion (σ complex)', 'deprotonation restores aromaticity'],
+        hint1: 'Think about what each concept specifically describes in ️ Electrophilic Aromatic Substitution.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in ️ Electrophilic Aromatic Substitution describes a specific idea. EAS: electrophile attacks aromatic ring → substitution product. Step 1: electrophilic attack → arenium ion (σ complex). Step 2: deprotonation restores aromaticity.'
       }
     }
   ]

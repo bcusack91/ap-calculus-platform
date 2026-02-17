@@ -30,31 +30,31 @@ Analyzing real-world conditioning examples
       id: 'class6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of problem-solving workshop?',
+            question: 'Which of the following correctly describes Identifying UCS, UCR, CS, CR in…?',
             options: [
-              'Identifying UCS, UCR, CS, CR in scenarios',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'Designing classical conditioning experiments',
+              'Predicting generalization and discrimination',
+              'Analyzing real-world conditioning examples',
+              'Identifying UCS, UCR, CS, CR in scenarios'
             ],
-            correctAnswer: 0,
-            explanation: 'Identifying UCS, UCR, CS, CR in scenarios'
+            correctAnswer: 3,
+            explanation: 'Correct — Identifying UCS, UCR, CS, CR in scenarios. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of problem-solving workshop, which is accurate?',
+            question: 'Select the statement that correctly describes Predicting generalization and…:',
             options: [
+              'Designing classical conditioning experiments',
               'Predicting generalization and discrimination',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Identifying UCS, UCR, CS, CR in scenarios',
+              'Analyzing real-world conditioning examples'
             ],
-            correctAnswer: 0,
-            explanation: 'Predicting generalization and discrimination'
+            correctAnswer: 1,
+            explanation: 'Correct — Predicting generalization and discrimination. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Analyzing real-world conditioning examples
       id: 'class6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Identifying UCS, UCR, CS, CR in scenarios',
-            options: ['Identifying UCS, UCR, CS, CR in scenarios', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            label: 'Identifying UCS, UCR, CS, CR in…',
+            options: ['Predicting generalization and discrimination', 'Identifying UCS, UCR, CS, CR in scenarios', 'Designing classical conditioning experiments', 'Analyzing real-world conditioning examples']
           },
           {
-            label: 'Designing classical conditioning experiments',
-            options: ['Designing classical conditioning experiments', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            label: 'Designing classical conditioning…',
+            options: ['Analyzing real-world conditioning examples', 'Identifying UCS, UCR, CS, CR in scenarios', 'Predicting generalization and discrimination', 'Designing classical conditioning experiments']
           },
           {
-            label: 'Predicting generalization and discrimination',
-            options: ['Predicting generalization and discrimination', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            label: 'Predicting generalization and…',
+            options: ['Designing classical conditioning experiments', 'Identifying UCS, UCR, CS, CR in scenarios', 'Predicting generalization and discrimination', 'Analyzing real-world conditioning examples']
           }
         ],
         correctAnswers: ['Identifying UCS, UCR, CS, CR in scenarios', 'Designing classical conditioning experiments', 'Predicting generalization and discrimination'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving Workshop.'
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Identifying UCS, UCR, CS, CR in scenarios. Designing classical conditioning experiments. Predicting generalization and discrimination.'
       }
     }
   ]

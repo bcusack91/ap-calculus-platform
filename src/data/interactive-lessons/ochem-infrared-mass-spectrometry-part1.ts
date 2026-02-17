@@ -30,31 +30,31 @@ Combined data reveals complete molecular structure
       id: 'infra1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of introduction to spectroscopy?',
+            question: 'Which of the following correctly describes Spectroscopy?',
             options: [
-              'Spectroscopy',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'using electromagnetic radiation to determine structure',
+              'Each gives different structural information',
+              'Combined data reveals complete molecular structure',
+              'IR, MS, ¹H NMR, ¹³C NMR'
             ],
             correctAnswer: 0,
-            explanation: 'Spectroscopy: using electromagnetic radiation to determine structure'
+            explanation: 'Correct — Spectroscopy: using electromagnetic radiation to determine structure. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of introduction to spectroscopy, which is accurate?',
+            question: 'Which of the following is true about Each gives different structural…?',
             options: [
-              'Each gives different structural information',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'IR, MS, ¹H NMR, ¹³C NMR',
+              'Combined data reveals complete molecular structure',
+              'using electromagnetic radiation to determine structure',
+              'Each gives different structural information'
             ],
-            correctAnswer: 0,
-            explanation: 'Each gives different structural information'
+            correctAnswer: 3,
+            explanation: 'Correct — Each gives different structural information. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,24 @@ Combined data reveals complete molecular structure
       id: 'infra1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Spectroscopy',
-            options: ['using electromagnetic radiation to determine struc', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Each gives different structural information', 'IR, MS, ¹H NMR, ¹³C NMR', 'using electromagnetic radiation to determine structure', 'Combined data reveals complete molecular structure']
           },
           {
             label: 'Four main techniques',
-            options: ['IR, MS, ¹H NMR, ¹³C NMR', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
-          },
-          {
-            label: 'Each gives different structural information',
-            options: ['Each gives different structural information', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Combined data reveals complete molecular structure', 'Each gives different structural information', 'IR, MS, ¹H NMR, ¹³C NMR', 'using electromagnetic radiation to determine structure']
           }
         ],
-        correctAnswers: ['using electromagnetic radiation to determine struc', 'IR, MS, ¹H NMR, ¹³C NMR', 'Each gives different structural information'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Introduction to Spectroscopy.'
+        correctAnswers: ['using electromagnetic radiation to determine structure', 'IR, MS, ¹H NMR, ¹³C NMR'],
+        hint1: 'Think about what each concept specifically describes in ️ Infrared Mass Spectrometry.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in ️ Infrared Mass Spectrometry describes a specific idea. Spectroscopy: using electromagnetic radiation to determine structure. Four main techniques: IR, MS, ¹H NMR, ¹³C NMR.'
       }
     }
   ]

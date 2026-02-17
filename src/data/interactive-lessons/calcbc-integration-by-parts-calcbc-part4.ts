@@ -30,31 +30,31 @@ Efficient when u eventually differentiates to zero (polynomial × eˣ, polynomia
       id: 'integ4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of tabular integration?',
+            question: 'Which of the following correctly describes Tabular method?',
             options: [
-              'Tabular method',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
+              'Efficient when u eventually differentiates to zero (polynomial × eˣ, polynomial × sin x)',
+              'list derivatives of u and integrals of dv in columns',
+              'Multiply diagonally and sum',
+              '+, -, +, -, ...'
             ],
-            correctAnswer: 0,
-            explanation: 'Tabular method: list derivatives of u and integrals of dv in columns'
+            correctAnswer: 1,
+            explanation: 'Correct — Tabular method: list derivatives of u and integrals of dv in columns. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of tabular integration, which is accurate?',
+            question: 'In the context of Tabular Integration, which explains Multiply diagonally and sum?',
             options: [
               'Multiply diagonally and sum',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              '+, -, +, -, ...',
+              'Efficient when u eventually differentiates to zero (polynomial × eˣ, polynomial × sin x)',
+              'list derivatives of u and integrals of dv in columns'
             ],
             correctAnswer: 0,
-            explanation: 'Multiply diagonally and sum'
+            explanation: 'Correct — Multiply diagonally and sum. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Efficient when u eventually differentiates to zero (polynomial × eˣ, polynomia
       id: 'integ4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to tabular integration?',
+            question: 'Which of these accurately represents Efficient when u eventually…?',
             options: [
-              'Efficient when u eventually differentiates to zero (polynomial × eˣ, polynomial ',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              '+, -, +, -, ...',
+              'Multiply diagonally and sum',
+              'list derivatives of u and integrals of dv in columns',
+              'Efficient when u eventually differentiates to zero (polynomial × eˣ, polynomial × sin x)'
             ],
-            correctAnswer: 0,
-            explanation: 'Efficient when u eventually differentiates to zero (polynomial × eˣ, polynomial × sin x)'
+            correctAnswer: 3,
+            explanation: 'Correct — Efficient when u eventually differentiates to zero (polynomial × eˣ, polynomial × sin x). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,24 @@ Efficient when u eventually differentiates to zero (polynomial × eˣ, polynomia
       id: 'integ4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Tabular method',
-            options: ['list derivatives of u and integrals of dv in colum', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Efficient when u eventually differentiates to zero (polynomial × eˣ, polynomial × sin x)', '+, -, +, -, ...', 'Multiply diagonally and sum', 'list derivatives of u and integrals of dv in columns']
           },
           {
             label: 'Alternate signs',
-            options: ['+, -, +, -, ...', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
-          },
-          {
-            label: 'Multiply diagonally and sum',
-            options: ['Multiply diagonally and sum', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['+, -, +, -, ...', 'Multiply diagonally and sum', 'Efficient when u eventually differentiates to zero (polynomial × eˣ, polynomial × sin x)', 'list derivatives of u and integrals of dv in columns']
           }
         ],
-        correctAnswers: ['list derivatives of u and integrals of dv in colum', '+, -, +, -, ...', 'Multiply diagonally and sum'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Tabular Integration.'
+        correctAnswers: ['list derivatives of u and integrals of dv in columns', '+, -, +, -, ...'],
+        hint1: 'Think about what each concept specifically describes in Tabular Integration.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Tabular Integration describes a specific idea. Tabular method: list derivatives of u and integrals of dv in columns. Alternate signs: +, -, +, -, ...'
       }
     }
   ]

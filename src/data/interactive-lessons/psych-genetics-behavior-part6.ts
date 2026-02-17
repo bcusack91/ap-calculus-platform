@@ -30,31 +30,31 @@ Designing behavioral genetics studies
       id: 'genet6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of problem-solving workshop?',
+            question: 'Which statement accurately explains Interpreting heritability statistics?',
             options: [
+              'Designing behavioral genetics studies',
               'Interpreting heritability statistics',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'Evaluating nature vs nurture arguments',
+              'Analyzing twin study data'
             ],
-            correctAnswer: 0,
-            explanation: 'Interpreting heritability statistics'
+            correctAnswer: 1,
+            explanation: 'Correct — Interpreting heritability statistics. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of problem-solving workshop, which is accurate?',
+            question: 'Which of the following is true about Evaluating nature vs nurture arguments?',
             options: [
               'Evaluating nature vs nurture arguments',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Interpreting heritability statistics',
+              'Analyzing twin study data',
+              'Designing behavioral genetics studies'
             ],
             correctAnswer: 0,
-            explanation: 'Evaluating nature vs nurture arguments'
+            explanation: 'Correct — Evaluating nature vs nurture arguments. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Designing behavioral genetics studies
       id: 'genet6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Interpreting heritability statistics',
-            options: ['Interpreting heritability statistics', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Interpreting heritability statistics', 'Evaluating nature vs nurture arguments', 'Designing behavioral genetics studies', 'Analyzing twin study data']
           },
           {
             label: 'Analyzing twin study data',
-            options: ['Analyzing twin study data', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Interpreting heritability statistics', 'Designing behavioral genetics studies', 'Analyzing twin study data', 'Evaluating nature vs nurture arguments']
           },
           {
             label: 'Evaluating nature vs nurture arguments',
-            options: ['Evaluating nature vs nurture arguments', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Evaluating nature vs nurture arguments', 'Designing behavioral genetics studies', 'Analyzing twin study data', 'Interpreting heritability statistics']
           }
         ],
         correctAnswers: ['Interpreting heritability statistics', 'Analyzing twin study data', 'Evaluating nature vs nurture arguments'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving Workshop.'
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Interpreting heritability statistics. Analyzing twin study data. Evaluating nature vs nurture arguments.'
       }
     }
   ]

@@ -30,31 +30,31 @@ amino acid chemistry and protein structure
       id: 'amino7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of synthesis & review?',
-            options: [
-              'Amino acids are the building blocks of proteins',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
-            ],
-            correctAnswer: 0,
-            explanation: 'Amino acids are the building blocks of proteins'
-          },
-          {
-            question: 'In the context of synthesis & review, which is accurate?',
+            question: 'Which statement accurately explains Amino acids are the building blocks of…?',
             options: [
               'Protein structure determines function',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'amino acid chemistry and protein structure',
+              'Acid-base chemistry determines amino acid behavior',
+              'Amino acids are the building blocks of proteins'
             ],
-            correctAnswer: 0,
-            explanation: 'Protein structure determines function'
+            correctAnswer: 3,
+            explanation: 'Correct — Amino acids are the building blocks of proteins. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Synthesis & Review, which explains Protein structure determines function?',
+            options: [
+              'Acid-base chemistry determines amino acid behavior',
+              'Protein structure determines function',
+              'amino acid chemistry and protein structure',
+              'Amino acids are the building blocks of proteins'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Protein structure determines function. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ amino acid chemistry and protein structure
       id: 'amino7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Amino acids are the building blocks of proteins',
-            options: ['Amino acids are the building blocks of proteins', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Amino acids are the building blocks of…',
+            options: ['Acid-base chemistry determines amino acid behavior', 'amino acid chemistry and protein structure', 'Protein structure determines function', 'Amino acids are the building blocks of proteins']
           },
           {
-            label: 'Acid-base chemistry determines amino acid behavior',
-            options: ['Acid-base chemistry determines amino acid behavior', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Acid-base chemistry determines amino…',
+            options: ['Acid-base chemistry determines amino acid behavior', 'Protein structure determines function', 'Amino acids are the building blocks of proteins', 'amino acid chemistry and protein structure']
           },
           {
             label: 'Protein structure determines function',
-            options: ['Protein structure determines function', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['amino acid chemistry and protein structure', 'Protein structure determines function', 'Acid-base chemistry determines amino acid behavior', 'Amino acids are the building blocks of proteins']
           }
         ],
         correctAnswers: ['Amino acids are the building blocks of proteins', 'Acid-base chemistry determines amino acid behavior', 'Protein structure determines function'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Synthesis & Review.'
+        hint1: 'Think about what each concept specifically describes in Synthesis & Review.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Synthesis & Review describes a specific idea. Amino acids are the building blocks of proteins. Acid-base chemistry determines amino acid behavior. Protein structure determines function.'
       }
     }
   ]

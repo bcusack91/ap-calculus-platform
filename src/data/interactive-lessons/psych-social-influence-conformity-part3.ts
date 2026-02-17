@@ -30,31 +30,31 @@ power of roles
       id: 'socia3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of obedience?',
+            question: 'Which of the following correctly describes Milgram\'s obedience study?',
             options: [
-              'Milgram\'s obedience study',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'authority figure presence, proximity, legitimacy',
+              '65% delivered maximum shock',
+              'dissenting peers, personal responsibility',
+              'power of roles'
             ],
-            correctAnswer: 0,
-            explanation: 'Milgram\'s obedience study: 65% delivered maximum shock'
+            correctAnswer: 1,
+            explanation: 'Correct — Milgram\'s obedience study: 65% delivered maximum shock. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of obedience, which is accurate?',
+            question: 'Which of the following is true about Factors decreasing obedience?',
             options: [
-              'dissenting peers, personal responsibility',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'authority figure presence, proximity, legitimacy',
+              'power of roles',
+              '65% delivered maximum shock',
+              'dissenting peers, personal responsibility'
             ],
-            correctAnswer: 0,
-            explanation: 'Factors decreasing obedience: dissenting peers, personal responsibility'
+            correctAnswer: 3,
+            explanation: 'Correct — Factors decreasing obedience: dissenting peers, personal responsibility. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ power of roles
       id: 'socia3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Milgram\'s obedience study',
-            options: ['65% delivered maximum shock', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['power of roles', 'dissenting peers, personal responsibility', '65% delivered maximum shock', 'authority figure presence, proximity, legitimacy']
           },
           {
             label: 'Factors increasing obedience',
-            options: ['authority figure presence, proximity, legitimacy', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['power of roles', 'authority figure presence, proximity, legitimacy', '65% delivered maximum shock', 'dissenting peers, personal responsibility']
           },
           {
             label: 'Factors decreasing obedience',
-            options: ['dissenting peers, personal responsibility', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['power of roles', 'authority figure presence, proximity, legitimacy', 'dissenting peers, personal responsibility', '65% delivered maximum shock']
           }
         ],
         correctAnswers: ['65% delivered maximum shock', 'authority figure presence, proximity, legitimacy', 'dissenting peers, personal responsibility'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Obedience.'
+        hint1: 'Think about what each concept specifically describes in Obedience.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Obedience describes a specific idea. Milgram\'s obedience study: 65% delivered maximum shock. Factors increasing obedience: authority figure presence, proximity, legitimacy. Factors decreasing obedience: dissenting peers, personal responsibility.'
       }
     }
   ]

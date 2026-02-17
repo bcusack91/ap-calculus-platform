@@ -30,31 +30,31 @@ Logistic models capture S-shaped growth curves in biology and economics
       id: 'expon7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of review & applications?',
+            question: 'What does "Limited growth" refer to in calculus?',
             options: [
-              'Limited growth',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'Logistic models capture S-shaped growth curves in biology and economics',
+              'dT/dt = k(T - Tₛ) → T(t) = Tₛ + (T₀-Tₛ)e^(kt)',
+              'rate of change = rate in - rate out',
+              'rate proportional to remaining capacity'
             ],
-            correctAnswer: 0,
-            explanation: 'Limited growth: rate proportional to remaining capacity'
+            correctAnswer: 3,
+            explanation: 'Correct — Limited growth: rate proportional to remaining capacity. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of review & applications, which is accurate?',
+            question: 'In the context of Review & Applications, which explains Concentration mixing?',
             options: [
               'rate of change = rate in - rate out',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'dT/dt = k(T - Tₛ) → T(t) = Tₛ + (T₀-Tₛ)e^(kt)',
+              'rate proportional to remaining capacity',
+              'Logistic models capture S-shaped growth curves in biology and economics'
             ],
             correctAnswer: 0,
-            explanation: 'Concentration mixing: rate of change = rate in - rate out'
+            explanation: 'Correct — Concentration mixing: rate of change = rate in - rate out. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Logistic models capture S-shaped growth curves in biology and economics
       id: 'expon7-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to review & applications?',
+            question: 'Which statement about Logistic models capture S-shaped growth… is correct?',
             options: [
+              'rate of change = rate in - rate out',
+              'dT/dt = k(T - Tₛ) → T(t) = Tₛ + (T₀-Tₛ)e^(kt)',
               'Logistic models capture S-shaped growth curves in biology and economics',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'rate proportional to remaining capacity'
             ],
-            correctAnswer: 0,
-            explanation: 'Logistic models capture S-shaped growth curves in biology and economics'
+            correctAnswer: 2,
+            explanation: 'Correct — Logistic models capture S-shaped growth curves in biology and economics. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Logistic models capture S-shaped growth curves in biology and economics
       id: 'expon7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Limited growth',
-            options: ['rate proportional to remaining capacity', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Logistic models capture S-shaped growth curves in biology and economics', 'dT/dt = k(T - Tₛ) → T(t) = Tₛ + (T₀-Tₛ)e^(kt)', 'rate proportional to remaining capacity', 'rate of change = rate in - rate out']
           },
           {
             label: 'Newton\'s Law of Cooling',
-            options: ['dT/dt = k(T - Tₛ) → T(t) = Tₛ + (T₀-Tₛ)e^(kt)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['rate of change = rate in - rate out', 'Logistic models capture S-shaped growth curves in biology and economics', 'rate proportional to remaining capacity', 'dT/dt = k(T - Tₛ) → T(t) = Tₛ + (T₀-Tₛ)e^(kt)']
           },
           {
             label: 'Concentration mixing',
-            options: ['rate of change = rate in - rate out', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['rate proportional to remaining capacity', 'dT/dt = k(T - Tₛ) → T(t) = Tₛ + (T₀-Tₛ)e^(kt)', 'Logistic models capture S-shaped growth curves in biology and economics', 'rate of change = rate in - rate out']
           }
         ],
         correctAnswers: ['rate proportional to remaining capacity', 'dT/dt = k(T - Tₛ) → T(t) = Tₛ + (T₀-Tₛ)e^(kt)', 'rate of change = rate in - rate out'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Review & Applications.'
+        hint1: 'Think about what each concept specifically describes in Review & Applications.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Review & Applications describes a specific idea. Limited growth: rate proportional to remaining capacity. Newton\'s Law of Cooling: dT/dt = k(T - Tₛ) → T(t) = Tₛ + (T₀-Tₛ)e^(kt). Concentration mixing: rate of change = rate in - rate out.'
       }
     }
   ]

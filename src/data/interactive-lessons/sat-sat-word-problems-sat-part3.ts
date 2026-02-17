@@ -18,20 +18,31 @@ Mixture equation: c₁v₁ + c₂v₂ = c_final × v_total.
       id: 'sat-w3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes concentration problems?',
+            question: 'Which of the following correctly describes Concentration problems?',
             options: [
-              'Concentration problems is a fundamental concept in SAT Math',
-              'Mixture equation: c₁v₁ + c₂v₂ = c_final × v_total',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'c₁v₁ + c₂v₂ = c_final × v_total.',
+              'Track what stays constant (usually the amount of pure substance).',
+              'amount of substance = concentration × volume.',
+              'Table method: organize given info into a table before writing equations.'
             ],
-            correctAnswer: 0,
-            explanation: 'Concentration problems: amount of substance = concentration × volume'
+            correctAnswer: 2,
+            explanation: 'Correct — Concentration problems: amount of substance = concentration × volume. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              'c₁v₁ + c₂v₂ = c_final × v_total.',
+              'Track what stays constant (usually the amount of pure substance).',
+              'Table method: organize given info into a table before writing equations.',
+              'amount of substance = concentration × volume.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Key Insight: Track what stays constant (usually the amount of pure substance). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Mixture equation: c₁v₁ + c₂v₂ = c_final × v_total.
       id: 'sat-w3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for mixture problems?',
+            question: 'Which statement about SAT Tip is correct?',
             options: [
-              'Track what stays constant (usually the amount of pure substance)',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'c₁v₁ + c₂v₂ = c_final × v_total.',
+              'amount of substance = concentration × volume.',
+              'Table method: organize given info into a table before writing equations.',
+              'Track what stays constant (usually the amount of pure substance).'
             ],
-            correctAnswer: 0,
-            explanation: 'Track what stays constant (usually the amount of pure substance)'
+            correctAnswer: 2,
+            explanation: 'Correct — SAT Tip: Table method: organize given info into a table before writing equations. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Mixture equation: c₁v₁ + c₂v₂ = c_final × v_total.
       id: 'sat-w3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Mixture Problems:',
-            options: ['Concentration problems: amount of substance = conc', 'Mixture equation: c₁v₁ + c₂v₂ = c_final × v_total', 'Not applicable', 'None of these']
+            label: 'Concentration problems',
+            options: ['Table method: organize given info into a table before writing equations.', 'c₁v₁ + c₂v₂ = c_final × v_total.', 'Track what stays constant (usually the amount of pure substance).', 'amount of substance = concentration × volume.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Track what stays constant (usually the amount of p', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Mixture equation',
+            options: ['c₁v₁ + c₂v₂ = c_final × v_total.', 'Track what stays constant (usually the amount of pure substance).', 'Table method: organize given info into a table before writing equations.', 'amount of substance = concentration × volume.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['Table method: organize given info into a table before writing equations.', 'amount of substance = concentration × volume.', 'c₁v₁ + c₂v₂ = c_final × v_total.', 'Track what stays constant (usually the amount of pure substance).']
           }
         ],
-        correctAnswers: ['Concentration problems: amount of substance = conc', 'Track what stays constant (usually the amount of p'],
-        hint1: 'Think about mixture problems',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'Concentration problems: amount of substance = concentration × volume. Track what stays constant (usually the amount of pure substance).'
+        correctAnswers: ['amount of substance = concentration × volume.', 'c₁v₁ + c₂v₂ = c_final × v_total.', 'Track what stays constant (usually the amount of pure substance).'],
+        hint1: 'Think about what each concept specifically describes in Mixture Problems.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Mixture Problems describes a specific idea. Concentration problems: amount of substance = concentration × volume. Mixture equation: c₁v₁ + c₂v₂ = c_final × v_total. Key Insight: Track what stays constant (usually the amount of pure substance).'
       }
     }
   ]

@@ -30,31 +30,31 @@ Reciprocal functions have the same period as their base functions
       id: 'trigo7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of review & applications?',
+            question: 'Which of the following correctly describes y = a sin(b(x - c)) + d?',
             options: [
-              'y = a sin(b(x - c)) + d',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'Reciprocal functions have the same period as their base functions',
+              'amplitude |a|, period 2π/|b|, phase shift c, vertical shift d',
+              'y = a cos(b(x - c)) + d follows the same pattern',
+              'tan graph has vertical asymptotes at x = π/2 + nπ'
             ],
-            correctAnswer: 0,
-            explanation: 'y = a sin(b(x - c)) + d: amplitude |a|, period 2π/|b|, phase shift c, vertical shift d'
+            correctAnswer: 1,
+            explanation: 'Correct — y = a sin(b(x - c)) + d: amplitude |a|, period 2π/|b|, phase shift c, vertical shift d. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of review & applications, which is accurate?',
+            question: 'In the context of Review & Applications, which explains tan graph has vertical asymptotes at x…?',
             options: [
               'tan graph has vertical asymptotes at x = π/2 + nπ',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'amplitude |a|, period 2π/|b|, phase shift c, vertical shift d',
+              'Reciprocal functions have the same period as their base functions',
+              'y = a cos(b(x - c)) + d follows the same pattern'
             ],
             correctAnswer: 0,
-            explanation: 'tan graph has vertical asymptotes at x = π/2 + nπ'
+            explanation: 'Correct — tan graph has vertical asymptotes at x = π/2 + nπ. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Reciprocal functions have the same period as their base functions
       id: 'trigo7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'y = a sin(b(x - c)) + d',
-            options: ['amplitude |a|, period 2π/|b|, phase shift c, verti', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['amplitude |a|, period 2π/|b|, phase shift c, vertical shift d', 'Reciprocal functions have the same period as their base functions', 'tan graph has vertical asymptotes at x = π/2 + nπ', 'y = a cos(b(x - c)) + d follows the same pattern']
           },
           {
-            label: 'y = a cos(b(x - c)) + d follows the same pattern',
-            options: ['y = a cos(b(x - c)) + d follows the same pattern', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            label: 'y = a cos(b(x - c)) + d follows the…',
+            options: ['Reciprocal functions have the same period as their base functions', 'amplitude |a|, period 2π/|b|, phase shift c, vertical shift d', 'y = a cos(b(x - c)) + d follows the same pattern', 'tan graph has vertical asymptotes at x = π/2 + nπ']
           },
           {
-            label: 'tan graph has vertical asymptotes at x = π/2 + nπ',
-            options: ['tan graph has vertical asymptotes at x = π/2 + nπ', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            label: 'tan graph has vertical asymptotes at x…',
+            options: ['tan graph has vertical asymptotes at x = π/2 + nπ', 'Reciprocal functions have the same period as their base functions', 'amplitude |a|, period 2π/|b|, phase shift c, vertical shift d', 'y = a cos(b(x - c)) + d follows the same pattern']
           }
         ],
-        correctAnswers: ['amplitude |a|, period 2π/|b|, phase shift c, verti', 'y = a cos(b(x - c)) + d follows the same pattern', 'tan graph has vertical asymptotes at x = π/2 + nπ'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Review & Applications.'
+        correctAnswers: ['amplitude |a|, period 2π/|b|, phase shift c, vertical shift d', 'y = a cos(b(x - c)) + d follows the same pattern', 'tan graph has vertical asymptotes at x = π/2 + nπ'],
+        hint1: 'Think about what each concept specifically describes in Review & Applications.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Review & Applications describes a specific idea. y = a sin(b(x - c)) + d: amplitude |a|, period 2π/|b|, phase shift c, vertical shift d. y = a cos(b(x - c)) + d follows the same pattern. tan graph has vertical asymptotes at x = π/2 + nπ.'
       }
     }
   ]

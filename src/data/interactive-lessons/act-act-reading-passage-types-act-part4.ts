@@ -18,20 +18,31 @@ Focus on the process, findings, and conclusions.
       id: 'act-r4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes scientific topics?',
+            question: 'What does "Scientific topics" refer to in ACT prep?',
             options: [
-              'Scientific topics is a key concept for ACT English/Reading',
-              'Focus on the process, findings, and conclusions',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'Focus on the process, findings, and conclusions.',
+              'Understand the experiment: hypothesis, method, results, implications.',
+              'Questions test comprehension of scientific reasoning and data.',
+              'biology, chemistry, physics, earth science.'
             ],
-            correctAnswer: 0,
-            explanation: 'Scientific topics: biology, chemistry, physics, earth science'
+            correctAnswer: 3,
+            explanation: 'Correct — Scientific topics: biology, chemistry, physics, earth science. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Key Insight?',
+            options: [
+              'biology, chemistry, physics, earth science.',
+              'Understand the experiment: hypothesis, method, results, implications.',
+              'Questions test comprehension of scientific reasoning and data.',
+              'Focus on the process, findings, and conclusions.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Key Insight: Understand the experiment: hypothesis, method, results, implications. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Focus on the process, findings, and conclusions.
       id: 'act-r4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for natural science?',
+            question: 'Regarding Natural Science, which correctly describes ACT Tip?',
             options: [
-              'Understand the experiment: hypothesis, method, results, implications',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Questions test comprehension of scientific reasoning and data.',
+              'Understand the experiment: hypothesis, method, results, implications.',
+              'Focus on the process, findings, and conclusions.',
+              'biology, chemistry, physics, earth science.'
             ],
             correctAnswer: 0,
-            explanation: 'Understand the experiment: hypothesis, method, results, implications'
+            explanation: 'Correct — ACT Tip: Questions test comprehension of scientific reasoning and data. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Focus on the process, findings, and conclusions.
       id: 'act-r4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Natural Science:',
-            options: ['Scientific topics: biology, chemistry, physics, ea', 'Focus on the process, findings, and conclusions', 'Not applicable', 'None of these']
+            label: 'Scientific topics',
+            options: ['Understand the experiment: hypothesis, method, results, implications.', 'Focus on the process, findings, and conclusions.', 'biology, chemistry, physics, earth science.', 'Questions test comprehension of scientific reasoning and data.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Understand the experiment: hypothesis, method, res', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Key Insight',
+            options: ['biology, chemistry, physics, earth science.', 'Understand the experiment: hypothesis, method, results, implications.', 'Focus on the process, findings, and conclusions.', 'Questions test comprehension of scientific reasoning and data.']
+          },
+          {
+            label: 'ACT Tip',
+            options: ['Questions test comprehension of scientific reasoning and data.', 'Understand the experiment: hypothesis, method, results, implications.', 'biology, chemistry, physics, earth science.', 'Focus on the process, findings, and conclusions.']
           }
         ],
-        correctAnswers: ['Scientific topics: biology, chemistry, physics, ea', 'Understand the experiment: hypothesis, method, res'],
-        hint1: 'Think about natural science',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Scientific topics: biology, chemistry, physics, earth science. Understand the experiment: hypothesis, method, results, implications.'
+        correctAnswers: ['biology, chemistry, physics, earth science.', 'Understand the experiment: hypothesis, method, results, implications.', 'Questions test comprehension of scientific reasoning and data.'],
+        hint1: 'Think about what each concept specifically describes in Natural Science.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Natural Science describes a specific idea. Scientific topics: biology, chemistry, physics, earth science. Key Insight: Understand the experiment: hypothesis, method, results, implications. ACT Tip: Questions test comprehension of scientific reasoning and data.'
       }
     }
   ]

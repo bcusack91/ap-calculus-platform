@@ -18,20 +18,31 @@ Replace the word with each answer choice — which makes the most sense?.
       id: 'sat-r4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes context clues?',
+            question: 'Which of the following correctly describes Context clues?',
             options: [
-              'Context clues is a fundamental concept in SAT Reading & Writing',
-              'Replace the word with each answer choice — which makes the most sense?',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'SAT tests secondary meanings of common words (e.g., "address" = deal with, not a street address).',
+              'Read 3-5 words before and after the target word.',
+              'Replace the word with each answer choice — which makes the most sense?.',
+              'look at the surrounding sentence for meaning.'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Context clues: look at the surrounding sentence for meaning. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Vocabulary in Context, which explains Key Insight?',
+            options: [
+              'SAT tests secondary meanings of common words (e.g., "address" = deal with, not a street address).',
+              'look at the surrounding sentence for meaning.',
+              'Replace the word with each answer choice — which makes the most sense?.',
+              'Read 3-5 words before and after the target word.'
             ],
             correctAnswer: 0,
-            explanation: 'Context clues: look at the surrounding sentence for meaning'
+            explanation: 'Correct — Key Insight: SAT tests secondary meanings of common words (e.g., "address" = deal with, not a street address). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Replace the word with each answer choice — which makes the most sense?.
       id: 'sat-r4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for vocabulary in context?',
+            question: 'Which statement about SAT Tip is correct?',
             options: [
-              'SAT tests secondary meanings of common words (e.g., "address" = deal with, not a street address)',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'look at the surrounding sentence for meaning.',
+              'SAT tests secondary meanings of common words (e.g., "address" = deal with, not a street address).',
+              'Read 3-5 words before and after the target word.',
+              'Replace the word with each answer choice — which makes the most sense?.'
             ],
-            correctAnswer: 0,
-            explanation: 'SAT tests secondary meanings of common words (e.g., "address" = deal with, not a street address)'
+            correctAnswer: 2,
+            explanation: 'Correct — SAT Tip: Read 3-5 words before and after the target word. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Replace the word with each answer choice — which makes the most sense?.
       id: 'sat-r4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Vocabulary in Context:',
-            options: ['Context clues: look at the surrounding sentence fo', 'Replace the word with each answer choice — which m', 'Not applicable', 'None of these']
+            label: 'Context clues',
+            options: ['Read 3-5 words before and after the target word.', 'Replace the word with each answer choice — which makes the most sense?.', 'SAT tests secondary meanings of common words (e.g., "address" = deal with, not a street address).', 'look at the surrounding sentence for meaning.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['SAT tests secondary meanings of common words (e.g.', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Key Insight',
+            options: ['look at the surrounding sentence for meaning.', 'Replace the word with each answer choice — which makes the most sense?.', 'SAT tests secondary meanings of common words (e.g., "address" = deal with, not a street address).', 'Read 3-5 words before and after the target word.']
+          },
+          {
+            label: 'SAT Tip',
+            options: ['SAT tests secondary meanings of common words (e.g., "address" = deal with, not a street address).', 'look at the surrounding sentence for meaning.', 'Read 3-5 words before and after the target word.', 'Replace the word with each answer choice — which makes the most sense?.']
           }
         ],
-        correctAnswers: ['Context clues: look at the surrounding sentence fo', 'SAT tests secondary meanings of common words (e.g.'],
-        hint1: 'Think about vocabulary in context',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'Context clues: look at the surrounding sentence for meaning. SAT tests secondary meanings of common words (e.g., "address" = deal with, not a street address).'
+        correctAnswers: ['look at the surrounding sentence for meaning.', 'SAT tests secondary meanings of common words (e.g., "address" = deal with, not a street address).', 'Read 3-5 words before and after the target word.'],
+        hint1: 'Think about what each concept specifically describes in Vocabulary in Context.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Vocabulary in Context describes a specific idea. Context clues: look at the surrounding sentence for meaning. Key Insight: SAT tests secondary meanings of common words (e.g., "address" = deal with, not a street address). SAT Tip: Read 3-5 words before and after the target word.'
       }
     }
   ]

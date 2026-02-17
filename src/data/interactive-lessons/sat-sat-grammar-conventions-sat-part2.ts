@@ -18,20 +18,31 @@ Ambiguous pronoun reference: unclear which noun the pronoun refers to.
       id: 'sat-g2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes pronouns must agree with antecedents in number and gender?',
+            question: 'Which statement accurately explains Pronouns must agree with antecedents in…?',
             options: [
-              'Pronouns must agree with antecedents in number and gender is a fundamental concept in SAT Reading & Writing',
-              'Ambiguous pronoun reference: unclear which noun the pronoun refers to',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'Pronouns must agree with antecedents in number and gender.',
+              'Its vs. it\'s: its = possessive, it\'s = it is/it has.',
+              'Who/whom: who = subject, whom = object (try replacing with he/him).',
+              'unclear which noun the pronoun refers to.'
             ],
             correctAnswer: 0,
-            explanation: 'Pronouns must agree with antecedents in number and gender'
+            explanation: 'Correct — Pronouns must agree with antecedents in number and gender. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Key Insight?',
+            options: [
+              'Pronouns must agree with antecedents in number and gender.',
+              'Who/whom: who = subject, whom = object (try replacing with he/him).',
+              'Its vs. it\'s: its = possessive, it\'s = it is/it has.',
+              'unclear which noun the pronoun refers to.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Key Insight: Who/whom: who = subject, whom = object (try replacing with he/him). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Ambiguous pronoun reference: unclear which noun the pronoun refers to.
       id: 'sat-g2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for pronoun usage?',
+            question: 'Which of these accurately represents SAT Tip?',
             options: [
-              'Who/whom: who = subject, whom = object (try replacing with he/him)',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'Its vs. it\'s: its = possessive, it\'s = it is/it has.',
+              'Who/whom: who = subject, whom = object (try replacing with he/him).',
+              'unclear which noun the pronoun refers to.',
+              'Pronouns must agree with antecedents in number and gender.'
             ],
             correctAnswer: 0,
-            explanation: 'Who/whom: who = subject, whom = object (try replacing with he/him)'
+            explanation: 'Correct — SAT Tip: Its vs. it\'s: its = possessive, it\'s = it is/it has. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Ambiguous pronoun reference: unclear which noun the pronoun refers to.
       id: 'sat-g2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Pronoun Usage:',
-            options: ['Pronouns must agree with antecedents in number and', 'Ambiguous pronoun reference: unclear which noun th', 'Not applicable', 'None of these']
+            label: 'Ambiguous pronoun reference',
+            options: ['Who/whom: who = subject, whom = object (try replacing with he/him).', 'unclear which noun the pronoun refers to.', 'Its vs. it\'s: its = possessive, it\'s = it is/it has.', 'Pronouns must agree with antecedents in number and gender.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Who/whom: who = subject, whom = object (try replac', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Key Insight',
+            options: ['Who/whom: who = subject, whom = object (try replacing with he/him).', 'unclear which noun the pronoun refers to.', 'Its vs. it\'s: its = possessive, it\'s = it is/it has.', 'Pronouns must agree with antecedents in number and gender.']
+          },
+          {
+            label: 'SAT Tip',
+            options: ['Pronouns must agree with antecedents in number and gender.', 'Who/whom: who = subject, whom = object (try replacing with he/him).', 'Its vs. it\'s: its = possessive, it\'s = it is/it has.', 'unclear which noun the pronoun refers to.']
           }
         ],
-        correctAnswers: ['Pronouns must agree with antecedents in number and', 'Who/whom: who = subject, whom = object (try replac'],
-        hint1: 'Think about pronoun usage',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'Pronouns must agree with antecedents in number and gender. Who/whom: who = subject, whom = object (try replacing with he/him).'
+        correctAnswers: ['unclear which noun the pronoun refers to.', 'Who/whom: who = subject, whom = object (try replacing with he/him).', 'Its vs. it\'s: its = possessive, it\'s = it is/it has.'],
+        hint1: 'Think about what each concept specifically describes in Pronoun Usage.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Pronoun Usage describes a specific idea. Ambiguous pronoun reference: unclear which noun the pronoun refers to. Key Insight: Who/whom: who = subject, whom = object (try replacing with he/him). SAT Tip: Its vs. it\'s: its = possessive, it\'s = it is/it has.'
       }
     }
   ]

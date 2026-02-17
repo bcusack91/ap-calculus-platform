@@ -30,31 +30,31 @@ metabolic activity using radioactive glucose
       id: 'biolo5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of brain imaging techniques?',
+            question: 'Which of the following correctly describes fMRI?',
             options: [
-              'fMRI',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'measures electrical activity',
+              'metabolic activity using radioactive glucose',
+              'shows brain activity (blood flow)',
+              'structural images'
             ],
-            correctAnswer: 0,
-            explanation: 'fMRI: shows brain activity (blood flow)'
+            correctAnswer: 2,
+            explanation: 'Correct — fMRI: shows brain activity (blood flow). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of brain imaging techniques, which is accurate?',
+            question: 'Select the statement that correctly describes CT/MRI:',
             options: [
-              'structural images',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'measures electrical activity',
+              'metabolic activity using radioactive glucose',
+              'shows brain activity (blood flow)',
+              'structural images'
             ],
-            correctAnswer: 0,
-            explanation: 'CT/MRI: structural images'
+            correctAnswer: 3,
+            explanation: 'Correct — CT/MRI: structural images. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ metabolic activity using radioactive glucose
       id: 'biolo5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'fMRI',
-            options: ['shows brain activity (blood flow)', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['measures electrical activity', 'structural images', 'metabolic activity using radioactive glucose', 'shows brain activity (blood flow)']
           },
           {
             label: 'EEG',
-            options: ['measures electrical activity', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['metabolic activity using radioactive glucose', 'shows brain activity (blood flow)', 'measures electrical activity', 'structural images']
           },
           {
             label: 'CT/MRI',
-            options: ['structural images', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['measures electrical activity', 'shows brain activity (blood flow)', 'metabolic activity using radioactive glucose', 'structural images']
           }
         ],
         correctAnswers: ['shows brain activity (blood flow)', 'measures electrical activity', 'structural images'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Brain Imaging Techniques.'
+        hint1: 'Think about what each concept specifically describes in Brain Imaging Techniques.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Brain Imaging Techniques describes a specific idea. fMRI: shows brain activity (blood flow). EEG: measures electrical activity. CT/MRI: structural images.'
       }
     }
   ]

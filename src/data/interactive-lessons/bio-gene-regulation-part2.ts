@@ -19,31 +19,31 @@ export const bioGeneRegPart2Data = {
       id: 'gene2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes operon?',
+            question: 'What does "Operon" refer to in biology?',
             options: [
+              'inducible (lactose present → genes ON)',
               'promoter + operator + structural genes',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'repressible (tryptophan present → genes OFF)',
+              'Regulatory gene encodes repressor protein'
             ],
-            correctAnswer: 0,
-            explanation: 'Operon: promoter + operator + structural genes'
+            correctAnswer: 1,
+            explanation: 'Correct — Operon: promoter + operator + structural genes. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of prokaryotic regulation (operons), which statement is accurate?',
+            question: 'In the context of Prokaryotic Regulation (Operons), which explains trp operon?',
             options: [
-              'trp operon: repressible (tryptophan present → genes OFF)',
-              'seneg larutcurts + rotarepo + retomorp :norepO',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'inducible (lactose present → genes ON)',
+              'repressible (tryptophan present → genes OFF)',
+              'promoter + operator + structural genes',
+              'Regulatory gene encodes repressor protein'
             ],
-            correctAnswer: 0,
-            explanation: 'trp operon: repressible (tryptophan present → genes OFF)'
+            correctAnswer: 1,
+            explanation: 'Correct — trp operon: repressible (tryptophan present → genes OFF). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioGeneRegPart2Data = {
       id: 'gene2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to prokaryotic regulation (operons)?',
+            question: 'Which of these accurately represents Regulatory gene encodes repressor…?',
             options: [
+              'inducible (lactose present → genes ON)',
+              'promoter + operator + structural genes',
               'Regulatory gene encodes repressor protein',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'repressible (tryptophan present → genes OFF)'
             ],
-            correctAnswer: 0,
-            explanation: 'Regulatory gene encodes repressor protein'
+            correctAnswer: 2,
+            explanation: 'Correct — Regulatory gene encodes repressor protein. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioGeneRegPart2Data = {
       id: 'gene2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Operon is important in prokaryotic regulation (operons) because',
-            options: ['promoter + operator + structural genes', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Operon',
+            options: ['inducible (lactose present → genes ON)', 'repressible (tryptophan present → genes OFF)', 'Regulatory gene encodes repressor protein', 'promoter + operator + structural genes']
           },
           {
-            label: 'lac operon is important in prokaryotic regulation (operons) because',
-            options: ['inducible (lactose present → genes ON)', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'lac operon',
+            options: ['promoter + operator + structural genes', 'Regulatory gene encodes repressor protein', 'repressible (tryptophan present → genes OFF)', 'inducible (lactose present → genes ON)']
           },
           {
-            label: 'trp operon is important in prokaryotic regulation (operons) because',
-            options: ['repressible (tryptophan present → genes OFF)', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'trp operon',
+            options: ['Regulatory gene encodes repressor protein', 'promoter + operator + structural genes', 'inducible (lactose present → genes ON)', 'repressible (tryptophan present → genes OFF)']
           }
         ],
         correctAnswers: ['promoter + operator + structural genes', 'inducible (lactose present → genes ON)', 'repressible (tryptophan present → genes OFF)'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Prokaryotic Regulation (Operons).'
+        hint1: 'Think about what each concept specifically describes in Prokaryotic Regulation (Operons).',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Prokaryotic Regulation (Operons) describes a specific idea. Operon: promoter + operator + structural genes. lac operon: inducible (lactose present → genes ON). trp operon: repressible (tryptophan present → genes OFF).'
       }
     }
   ]

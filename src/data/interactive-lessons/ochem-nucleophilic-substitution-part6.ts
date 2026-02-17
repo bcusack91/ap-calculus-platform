@@ -30,31 +30,31 @@ Analyzing substrate, nucleophile, solvent, and leaving group effects
       id: 'nucle6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of problem-solving workshop?',
+            question: 'Which statement accurately explains Predicting SN1 vs SN2 from reaction…?',
             options: [
+              'Analyzing substrate, nucleophile, solvent, and leaving group effects',
+              'Predicting stereochemical outcomes',
               'Predicting SN1 vs SN2 from reaction conditions',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'Drawing mechanisms with curved arrows'
             ],
-            correctAnswer: 0,
-            explanation: 'Predicting SN1 vs SN2 from reaction conditions'
+            correctAnswer: 2,
+            explanation: 'Correct — Predicting SN1 vs SN2 from reaction conditions. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of problem-solving workshop, which is accurate?',
+            question: 'In the context of Problem-Solving Workshop, which explains Predicting stereochemical outcomes?',
             options: [
-              'Predicting stereochemical outcomes',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Analyzing substrate, nucleophile, solvent, and leaving group effects',
+              'Drawing mechanisms with curved arrows',
+              'Predicting SN1 vs SN2 from reaction conditions',
+              'Predicting stereochemical outcomes'
             ],
-            correctAnswer: 0,
-            explanation: 'Predicting stereochemical outcomes'
+            correctAnswer: 3,
+            explanation: 'Correct — Predicting stereochemical outcomes. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Analyzing substrate, nucleophile, solvent, and leaving group effects
       id: 'nucle6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Predicting SN1 vs SN2 from reaction conditions',
-            options: ['Predicting SN1 vs SN2 from reaction conditions', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Predicting SN1 vs SN2 from reaction…',
+            options: ['Drawing mechanisms with curved arrows', 'Predicting SN1 vs SN2 from reaction conditions', 'Predicting stereochemical outcomes', 'Analyzing substrate, nucleophile, solvent, and leaving group effects']
           },
           {
             label: 'Drawing mechanisms with curved arrows',
-            options: ['Drawing mechanisms with curved arrows', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Analyzing substrate, nucleophile, solvent, and leaving group effects', 'Predicting SN1 vs SN2 from reaction conditions', 'Drawing mechanisms with curved arrows', 'Predicting stereochemical outcomes']
           },
           {
             label: 'Predicting stereochemical outcomes',
-            options: ['Predicting stereochemical outcomes', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Drawing mechanisms with curved arrows', 'Predicting stereochemical outcomes', 'Analyzing substrate, nucleophile, solvent, and leaving group effects', 'Predicting SN1 vs SN2 from reaction conditions']
           }
         ],
         correctAnswers: ['Predicting SN1 vs SN2 from reaction conditions', 'Drawing mechanisms with curved arrows', 'Predicting stereochemical outcomes'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving Workshop.'
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Predicting SN1 vs SN2 from reaction conditions. Drawing mechanisms with curved arrows. Predicting stereochemical outcomes.'
       }
     }
   ]

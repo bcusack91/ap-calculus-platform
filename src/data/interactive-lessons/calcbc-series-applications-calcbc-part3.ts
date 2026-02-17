@@ -30,31 +30,31 @@ Yields a power series solution even when closed-form solution is unknown
       id: 'serie3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of solving des with series?',
+            question: 'Which of the following correctly describes For y\' = f(x,y), assume y = Σaₙxⁿ and…?',
             options: [
-              'For y\' = f(x,y), assume y = Σaₙxⁿ and match coefficients',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
+              'Yields a power series solution even when closed-form solution is unknown',
+              'This gives a recurrence relation for the coefficients aₙ',
+              'Substitute the series into the DE and equate coefficients of like powers',
+              'For y\' = f(x,y), assume y = Σaₙxⁿ and match coefficients'
             ],
-            correctAnswer: 0,
-            explanation: 'For y\' = f(x,y), assume y = Σaₙxⁿ and match coefficients'
+            correctAnswer: 3,
+            explanation: 'Correct — For y\' = f(x,y), assume y = Σaₙxⁿ and match coefficients. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of solving des with series, which is accurate?',
+            question: 'Select the statement that correctly describes This gives a recurrence relation for…:',
             options: [
               'This gives a recurrence relation for the coefficients aₙ',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Yields a power series solution even when closed-form solution is unknown',
+              'Substitute the series into the DE and equate coefficients of like powers',
+              'For y\' = f(x,y), assume y = Σaₙxⁿ and match coefficients'
             ],
             correctAnswer: 0,
-            explanation: 'This gives a recurrence relation for the coefficients aₙ'
+            explanation: 'Correct — This gives a recurrence relation for the coefficients aₙ. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Yields a power series solution even when closed-form solution is unknown
       id: 'serie3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to solving des with series?',
+            question: 'Regarding Solving DEs with Series, which correctly describes Yields a power series solution even…?',
             options: [
               'Yields a power series solution even when closed-form solution is unknown',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'For y\' = f(x,y), assume y = Σaₙxⁿ and match coefficients',
+              'This gives a recurrence relation for the coefficients aₙ',
+              'Substitute the series into the DE and equate coefficients of like powers'
             ],
             correctAnswer: 0,
-            explanation: 'Yields a power series solution even when closed-form solution is unknown'
+            explanation: 'Correct — Yields a power series solution even when closed-form solution is unknown. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Yields a power series solution even when closed-form solution is unknown
       id: 'serie3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'For y\' = f(x,y), assume y = Σaₙxⁿ and match coefficients',
-            options: ['For y\' = f(x,y), assume y = Σaₙxⁿ and match coeffi', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'For y\' = f(x,y), assume y = Σaₙxⁿ and…',
+            options: ['Yields a power series solution even when closed-form solution is unknown', 'For y\' = f(x,y), assume y = Σaₙxⁿ and match coefficients', 'Substitute the series into the DE and equate coefficients of like powers', 'This gives a recurrence relation for the coefficients aₙ']
           },
           {
-            label: 'Substitute the series into the DE and equate coefficients of like powers',
-            options: ['Substitute the series into the DE and equate coeff', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Substitute the series into the DE and…',
+            options: ['For y\' = f(x,y), assume y = Σaₙxⁿ and match coefficients', 'This gives a recurrence relation for the coefficients aₙ', 'Substitute the series into the DE and equate coefficients of like powers', 'Yields a power series solution even when closed-form solution is unknown']
           },
           {
-            label: 'This gives a recurrence relation for the coefficients aₙ',
-            options: ['This gives a recurrence relation for the coefficie', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'This gives a recurrence relation for…',
+            options: ['Yields a power series solution even when closed-form solution is unknown', 'For y\' = f(x,y), assume y = Σaₙxⁿ and match coefficients', 'Substitute the series into the DE and equate coefficients of like powers', 'This gives a recurrence relation for the coefficients aₙ']
           }
         ],
-        correctAnswers: ['For y\' = f(x,y), assume y = Σaₙxⁿ and match coeffi', 'Substitute the series into the DE and equate coeff', 'This gives a recurrence relation for the coefficie'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Solving DEs with Series.'
+        correctAnswers: ['For y\' = f(x,y), assume y = Σaₙxⁿ and match coefficients', 'Substitute the series into the DE and equate coefficients of like powers', 'This gives a recurrence relation for the coefficients aₙ'],
+        hint1: 'Think about what each concept specifically describes in Solving DEs with Series.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Solving DEs with Series describes a specific idea. For y\' = f(x,y), assume y = Σaₙxⁿ and match coefficients. Substitute the series into the DE and equate coefficients of like powers. This gives a recurrence relation for the coefficients aₙ.'
       }
     }
   ]

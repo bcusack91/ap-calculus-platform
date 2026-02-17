@@ -71,23 +71,28 @@ These passages may present competing historical or philosophical interpretations
       id: 'mcat-1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Humanities Passages:',
-            options: ['Humanities: history, literature, philosophy, religion — ofte', 'These passages may present competing historical or philosoph', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Humanities',
+            options: ['These passages may present competing historical or philosophical interpretations.', 'Cultural context clues help identify the time period and perspective.', 'Look for the authors thesis and the evidence used to support it.', 'history, literature, philosophy, religion — often argumentative or interpretive.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Look for the authors thesis and the evidence used to support', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Key Insight',
+            options: ['These passages may present competing historical or philosophical interpretations.', 'history, literature, philosophy, religion — often argumentative or interpretive.', 'Cultural context clues help identify the time period and perspective.', 'Look for the authors thesis and the evidence used to support it.']
+          },
+          {
+            label: 'MCAT Tip',
+            options: ['Cultural context clues help identify the time period and perspective.', 'history, literature, philosophy, religion — often argumentative or interpretive.', 'Look for the authors thesis and the evidence used to support it.', 'These passages may present competing historical or philosophical interpretations.']
           }
         ],
-        correctAnswers: ['Humanities: history, literature, philosophy, religion — ofte', 'Look for the authors thesis and the evidence used to support'],
-        hint1: 'Think about humanities passages',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Humanities: history, literature, philosophy, religion — often argumentative or interpretive. Look for the authors thesis and the evidence used to support it.'
+        correctAnswers: ['history, literature, philosophy, religion — often argumentative or interpretive.', 'Look for the authors thesis and the evidence used to support it.', 'Cultural context clues help identify the time period and perspective.'],
+        hint1: 'Think about what each concept specifically describes in Cars Passages.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Cars Passages describes a specific idea. Humanities: history, literature, philosophy, religion — often argumentative or interpretive. Key Insight: Look for the authors thesis and the evidence used to support it. MCAT Tip: Cultural context clues help identify the time period and perspective.'
       }
     }
   ]

@@ -71,23 +71,28 @@ Straw man: misrepresenting an opponents position to make it easier to attack.
       id: 'mcat-6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Common Logical Fallacies:',
-            options: ['Ad hominem: attacking the person instead of the argument', 'Straw man: misrepresenting an opponents position to make it ', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Ad hominem',
+            options: ['misrepresenting an opponents position to make it easier to attack.', 'attacking the person instead of the argument.', 'Appeal to authority: citing an authority figure rather than evidence (can be valid or fallacious).', 'False dichotomy: presenting only two options when more exist.']
           },
           {
-            label: 'MCAT application:',
-            options: ['False dichotomy: presenting only two options when more exist', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Straw man',
+            options: ['Appeal to authority: citing an authority figure rather than evidence (can be valid or fallacious).', 'misrepresenting an opponents position to make it easier to attack.', 'attacking the person instead of the argument.', 'False dichotomy: presenting only two options when more exist.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['False dichotomy: presenting only two options when more exist.', 'attacking the person instead of the argument.', 'Appeal to authority: citing an authority figure rather than evidence (can be valid or fallacious).', 'misrepresenting an opponents position to make it easier to attack.']
           }
         ],
-        correctAnswers: ['Ad hominem: attacking the person instead of the argument', 'False dichotomy: presenting only two options when more exist'],
-        hint1: 'Think about common logical fallacies',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Ad hominem: attacking the person instead of the argument. False dichotomy: presenting only two options when more exist.'
+        correctAnswers: ['attacking the person instead of the argument.', 'misrepresenting an opponents position to make it easier to attack.', 'False dichotomy: presenting only two options when more exist.'],
+        hint1: 'Think about what each concept specifically describes in Common Logical Fallacies.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Common Logical Fallacies describes a specific idea. Ad hominem: attacking the person instead of the argument. Straw man: misrepresenting an opponents position to make it easier to attack. Key Insight: False dichotomy: presenting only two options when more exist.'
       }
     }
   ]

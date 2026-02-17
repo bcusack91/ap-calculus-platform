@@ -30,31 +30,31 @@ Holes occur where common factors cancel
       id: 'ratio1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of rational function basics?',
+            question: 'What does "Rational function" refer to in precalculus?',
             options: [
-              'Rational function',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'all real numbers except where q(x) = 0',
+              'factor and cancel common factors',
+              'f(x) = p(x)/q(x) where p and q are polynomials',
+              'Holes occur where common factors cancel'
             ],
-            correctAnswer: 0,
-            explanation: 'Rational function: f(x) = p(x)/q(x) where p and q are polynomials'
+            correctAnswer: 2,
+            explanation: 'Correct — Rational function: f(x) = p(x)/q(x) where p and q are polynomials. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of rational function basics, which is accurate?',
+            question: 'In the context of Rational Functions, which explains Simplification?',
             options: [
-              'factor and cancel common factors',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'all real numbers except where q(x) = 0',
+              'f(x) = p(x)/q(x) where p and q are polynomials',
+              'Holes occur where common factors cancel',
+              'factor and cancel common factors'
             ],
-            correctAnswer: 0,
-            explanation: 'Simplification: factor and cancel common factors'
+            correctAnswer: 3,
+            explanation: 'Correct — Simplification: factor and cancel common factors. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Holes occur where common factors cancel
       id: 'ratio1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Rational function',
-            options: ['f(x) = p(x)/q(x) where p and q are polynomials', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['all real numbers except where q(x) = 0', 'Holes occur where common factors cancel', 'f(x) = p(x)/q(x) where p and q are polynomials', 'factor and cancel common factors']
           },
           {
             label: 'Domain',
-            options: ['all real numbers except where q(x) = 0', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['factor and cancel common factors', 'all real numbers except where q(x) = 0', 'Holes occur where common factors cancel', 'f(x) = p(x)/q(x) where p and q are polynomials']
           },
           {
             label: 'Simplification',
-            options: ['factor and cancel common factors', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['f(x) = p(x)/q(x) where p and q are polynomials', 'factor and cancel common factors', 'all real numbers except where q(x) = 0', 'Holes occur where common factors cancel']
           }
         ],
         correctAnswers: ['f(x) = p(x)/q(x) where p and q are polynomials', 'all real numbers except where q(x) = 0', 'factor and cancel common factors'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Rational Function Basics.'
+        hint1: 'Think about what each concept specifically describes in Rational Functions.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Rational Functions describes a specific idea. Rational function: f(x) = p(x)/q(x) where p and q are polynomials. Domain: all real numbers except where q(x) = 0. Simplification: factor and cancel common factors.'
       }
     }
   ]

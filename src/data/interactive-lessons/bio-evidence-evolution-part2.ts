@@ -19,31 +19,31 @@ export const bioEvidencePart2Data = {
       id: 'evid2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes homologous structures?',
+            question: 'What does "Homologous structures" refer to in biology?',
             options: [
-              'same origin, different function (arm, wing, flipper)',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'different origin, same function (bird wing vs insect wing)',
+              'Homology indicates common ancestry',
+              'reduced or nonfunctional (appendix, whale pelvis)',
+              'same origin, different function (arm, wing, flipper)'
             ],
-            correctAnswer: 0,
-            explanation: 'Homologous structures: same origin, different function (arm, wing, flipper)'
+            correctAnswer: 3,
+            explanation: 'Correct — Homologous structures: same origin, different function (arm, wing, flipper). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of comparative anatomy, which statement is accurate?',
+            question: 'Which of the following is true about Vestigial structures?',
             options: [
-              'Vestigial structures: reduced or nonfunctional (appendix, whale pelvis)',
-              ')reppilf ,gniw ,mra( noitcnuf tnereffid ,nigiro emas :serutcurts suogolomoH',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Homology indicates common ancestry',
+              'same origin, different function (arm, wing, flipper)',
+              'different origin, same function (bird wing vs insect wing)',
+              'reduced or nonfunctional (appendix, whale pelvis)'
             ],
-            correctAnswer: 0,
-            explanation: 'Vestigial structures: reduced or nonfunctional (appendix, whale pelvis)'
+            correctAnswer: 3,
+            explanation: 'Correct — Vestigial structures: reduced or nonfunctional (appendix, whale pelvis). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioEvidencePart2Data = {
       id: 'evid2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to comparative anatomy?',
+            question: 'Regarding Comparative Anatomy, which correctly describes Homology indicates common ancestry?',
             options: [
+              'reduced or nonfunctional (appendix, whale pelvis)',
               'Homology indicates common ancestry',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'same origin, different function (arm, wing, flipper)',
+              'different origin, same function (bird wing vs insect wing)'
             ],
-            correctAnswer: 0,
-            explanation: 'Homology indicates common ancestry'
+            correctAnswer: 1,
+            explanation: 'Correct — Homology indicates common ancestry. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioEvidencePart2Data = {
       id: 'evid2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Homologous structures is important in comparative anatomy because',
-            options: ['same origin, different function (arm, wing, flippe', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Homologous structures',
+            options: ['same origin, different function (arm, wing, flipper)', 'reduced or nonfunctional (appendix, whale pelvis)', 'different origin, same function (bird wing vs insect wing)', 'Homology indicates common ancestry']
           },
           {
-            label: 'Analogous structures is important in comparative anatomy because',
-            options: ['different origin, same function (bird wing vs inse', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Analogous structures',
+            options: ['reduced or nonfunctional (appendix, whale pelvis)', 'same origin, different function (arm, wing, flipper)', 'different origin, same function (bird wing vs insect wing)', 'Homology indicates common ancestry']
           },
           {
-            label: 'Vestigial structures is important in comparative anatomy because',
-            options: ['reduced or nonfunctional (appendix, whale pelvis)', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Vestigial structures',
+            options: ['different origin, same function (bird wing vs insect wing)', 'same origin, different function (arm, wing, flipper)', 'reduced or nonfunctional (appendix, whale pelvis)', 'Homology indicates common ancestry']
           }
         ],
-        correctAnswers: ['same origin, different function (arm, wing, flippe', 'different origin, same function (bird wing vs inse', 'reduced or nonfunctional (appendix, whale pelvis)'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Comparative Anatomy.'
+        correctAnswers: ['same origin, different function (arm, wing, flipper)', 'different origin, same function (bird wing vs insect wing)', 'reduced or nonfunctional (appendix, whale pelvis)'],
+        hint1: 'Think about what each concept specifically describes in Comparative Anatomy.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Comparative Anatomy describes a specific idea. Homologous structures: same origin, different function (arm, wing, flipper). Analogous structures: different origin, same function (bird wing vs insect wing). Vestigial structures: reduced or nonfunctional (appendix, whale pelvis).'
       }
     }
   ]

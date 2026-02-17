@@ -30,31 +30,31 @@ positive = increasing, negative = decreasing
       id: 'rates6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of problem-solving workshop?',
+            question: 'What does "Position → velocity" refer to in precalculus?',
             options: [
-              'Position → velocity',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'rate of change of total cost per unit',
+              'rate of change of position with respect to time',
+              'positive = increasing, negative = decreasing',
+              'how fast a population is changing'
             ],
-            correctAnswer: 0,
-            explanation: 'Position → velocity: rate of change of position with respect to time'
+            correctAnswer: 1,
+            explanation: 'Correct — Position → velocity: rate of change of position with respect to time. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of problem-solving workshop, which is accurate?',
+            question: 'Select the statement that correctly describes Population growth rate:',
             options: [
+              'rate of change of total cost per unit',
+              'positive = increasing, negative = decreasing',
               'how fast a population is changing',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'rate of change of position with respect to time'
             ],
-            correctAnswer: 0,
-            explanation: 'Population growth rate: how fast a population is changing'
+            correctAnswer: 2,
+            explanation: 'Correct — Population growth rate: how fast a population is changing. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ positive = increasing, negative = decreasing
       id: 'rates6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Position → velocity',
-            options: ['rate of change of position with respect to time', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['rate of change of total cost per unit', 'rate of change of position with respect to time', 'how fast a population is changing', 'positive = increasing, negative = decreasing']
           },
           {
             label: 'Cost → marginal cost',
-            options: ['rate of change of total cost per unit', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['rate of change of total cost per unit', 'how fast a population is changing', 'positive = increasing, negative = decreasing', 'rate of change of position with respect to time']
           },
           {
             label: 'Population growth rate',
-            options: ['how fast a population is changing', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['how fast a population is changing', 'positive = increasing, negative = decreasing', 'rate of change of total cost per unit', 'rate of change of position with respect to time']
           }
         ],
         correctAnswers: ['rate of change of position with respect to time', 'rate of change of total cost per unit', 'how fast a population is changing'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving Workshop.'
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Position → velocity: rate of change of position with respect to time. Cost → marginal cost: rate of change of total cost per unit. Population growth rate: how fast a population is changing.'
       }
     }
   ]

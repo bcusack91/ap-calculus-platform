@@ -71,23 +71,28 @@ Intrinsic pathway: mitochondrial stress releases cytochrome c, activating caspas
       id: 'mcat-5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Apoptosis & Regulation:',
-            options: ['Apoptosis: programmed cell death — caspase cascade leads to ', 'Intrinsic pathway: mitochondrial stress releases cytochrome ', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Apoptosis',
+            options: ['programmed cell death — caspase cascade leads to orderly cell dismantling.', 'mitochondrial stress releases cytochrome c, activating caspase-9.', 'Extrinsic pathway: death ligands (FasL, TNF) bind death receptors, activating caspase-8.', 'Cancer: loss of apoptosis regulation + gain of proliferation signals = uncontrolled growth.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Extrinsic pathway: death ligands (FasL, TNF) bind death rece', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Intrinsic pathway',
+            options: ['programmed cell death — caspase cascade leads to orderly cell dismantling.', 'Extrinsic pathway: death ligands (FasL, TNF) bind death receptors, activating caspase-8.', 'Cancer: loss of apoptosis regulation + gain of proliferation signals = uncontrolled growth.', 'mitochondrial stress releases cytochrome c, activating caspase-9.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['mitochondrial stress releases cytochrome c, activating caspase-9.', 'programmed cell death — caspase cascade leads to orderly cell dismantling.', 'Cancer: loss of apoptosis regulation + gain of proliferation signals = uncontrolled growth.', 'Extrinsic pathway: death ligands (FasL, TNF) bind death receptors, activating caspase-8.']
           }
         ],
-        correctAnswers: ['Apoptosis: programmed cell death — caspase cascade leads to ', 'Extrinsic pathway: death ligands (FasL, TNF) bind death rece'],
-        hint1: 'Think about apoptosis & regulation',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Apoptosis: programmed cell death — caspase cascade leads to orderly cell dismantling. Extrinsic pathway: death ligands (FasL, TNF) bind death receptors, activating caspase-8.'
+        correctAnswers: ['programmed cell death — caspase cascade leads to orderly cell dismantling.', 'mitochondrial stress releases cytochrome c, activating caspase-9.', 'Extrinsic pathway: death ligands (FasL, TNF) bind death receptors, activating caspase-8.'],
+        hint1: 'Think about what each concept specifically describes in Apoptosis & Regulation.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Apoptosis & Regulation describes a specific idea. Apoptosis: programmed cell death — caspase cascade leads to orderly cell dismantling. Intrinsic pathway: mitochondrial stress releases cytochrome c, activating caspase-9. Key Insight: Extrinsic pathway: death ligands (FasL, TNF) bind death receptors, activating caspase-8.'
       }
     }
   ]

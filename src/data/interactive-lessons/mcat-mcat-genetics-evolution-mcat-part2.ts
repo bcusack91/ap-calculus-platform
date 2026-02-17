@@ -71,23 +71,28 @@ Codominance: both alleles fully expressed (AB blood type).
       id: 'mcat-2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Non-Mendelian Inheritance:',
-            options: ['Incomplete dominance: heterozygote is intermediate (red x wh', 'Codominance: both alleles fully expressed (AB blood type)', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Incomplete dominance',
+            options: ['both alleles fully expressed (AB blood type).', 'heterozygote is intermediate (red x white = pink).', 'X-linked: gene on X chromosome; males are hemizygous (one copy determines phenotype).', 'Polygenic traits: multiple genes contribute (height, skin color); continuous distribution.']
           },
           {
-            label: 'MCAT application:',
-            options: ['X-linked: gene on X chromosome; males are hemizygous (one co', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Codominance',
+            options: ['both alleles fully expressed (AB blood type).', 'Polygenic traits: multiple genes contribute (height, skin color); continuous distribution.', 'heterozygote is intermediate (red x white = pink).', 'X-linked: gene on X chromosome; males are hemizygous (one copy determines phenotype).']
+          },
+          {
+            label: 'Key Insight',
+            options: ['Polygenic traits: multiple genes contribute (height, skin color); continuous distribution.', 'heterozygote is intermediate (red x white = pink).', 'both alleles fully expressed (AB blood type).', 'X-linked: gene on X chromosome; males are hemizygous (one copy determines phenotype).']
           }
         ],
-        correctAnswers: ['Incomplete dominance: heterozygote is intermediate (red x wh', 'X-linked: gene on X chromosome; males are hemizygous (one co'],
-        hint1: 'Think about non-mendelian inheritance',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Incomplete dominance: heterozygote is intermediate (red x white = pink). X-linked: gene on X chromosome; males are hemizygous (one copy determines phenotype).'
+        correctAnswers: ['heterozygote is intermediate (red x white = pink).', 'both alleles fully expressed (AB blood type).', 'X-linked: gene on X chromosome; males are hemizygous (one copy determines phenotype).'],
+        hint1: 'Think about what each concept specifically describes in Non-Mendelian Inheritance.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Non-Mendelian Inheritance describes a specific idea. Incomplete dominance: heterozygote is intermediate (red x white = pink). Codominance: both alleles fully expressed (AB blood type). Key Insight: X-linked: gene on X chromosome; males are hemizygous (one copy determines phenotype).'
       }
     }
   ]

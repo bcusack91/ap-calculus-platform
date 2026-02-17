@@ -30,31 +30,31 @@ ln(eˣ) = x and e^(ln(x)) = x for x > 0
       id: 'logar3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of common & natural logs?',
-            options: [
-              'Common log',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'Common log: log(x) = log₁₀(x), used for pH, decibels, Richter scale'
-          },
-          {
-            question: 'In the context of common & natural logs, which is accurate?',
+            question: 'Which statement accurately explains Common log?',
             options: [
               'ln(e) = 1 and log(10) = 1',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'ln(x) = logₑ(x), used in calculus and natural phenomena',
+              'ln(eˣ) = x and e^(ln(x)) = x for x > 0',
+              'log(x) = log₁₀(x), used for pH, decibels, Richter scale'
             ],
-            correctAnswer: 0,
-            explanation: 'ln(e) = 1 and log(10) = 1'
+            correctAnswer: 3,
+            explanation: 'Correct — Common log: log(x) = log₁₀(x), used for pH, decibels, Richter scale. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about ln(e) = 1 and log(10) = 1?',
+            options: [
+              'ln(x) = logₑ(x), used in calculus and natural phenomena',
+              'ln(eˣ) = x and e^(ln(x)) = x for x > 0',
+              'ln(e) = 1 and log(10) = 1',
+              'log(x) = log₁₀(x), used for pH, decibels, Richter scale'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — ln(e) = 1 and log(10) = 1. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,24 @@ ln(eˣ) = x and e^(ln(x)) = x for x > 0
       id: 'logar3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Common log',
-            options: ['log(x) = log₁₀(x), used for pH, decibels, Richter ', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['ln(eˣ) = x and e^(ln(x)) = x for x > 0', 'ln(e) = 1 and log(10) = 1', 'log(x) = log₁₀(x), used for pH, decibels, Richter scale', 'ln(x) = logₑ(x), used in calculus and natural phenomena']
           },
           {
             label: 'Natural log',
-            options: ['ln(x) = logₑ(x), used in calculus and natural phen', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
-          },
-          {
-            label: 'ln(e) = 1 and log(10) = 1',
-            options: ['ln(e) = 1 and log(10) = 1', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['ln(x) = logₑ(x), used in calculus and natural phenomena', 'ln(e) = 1 and log(10) = 1', 'log(x) = log₁₀(x), used for pH, decibels, Richter scale', 'ln(eˣ) = x and e^(ln(x)) = x for x > 0']
           }
         ],
-        correctAnswers: ['log(x) = log₁₀(x), used for pH, decibels, Richter ', 'ln(x) = logₑ(x), used in calculus and natural phen', 'ln(e) = 1 and log(10) = 1'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Common & Natural Logs.'
+        correctAnswers: ['log(x) = log₁₀(x), used for pH, decibels, Richter scale', 'ln(x) = logₑ(x), used in calculus and natural phenomena'],
+        hint1: 'Think about what each concept specifically describes in Common & Natural Logs.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Common & Natural Logs describes a specific idea. Common log: log(x) = log₁₀(x), used for pH, decibels, Richter scale. Natural log: ln(x) = logₑ(x), used in calculus and natural phenomena.'
       }
     }
   ]

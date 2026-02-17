@@ -18,20 +18,31 @@ Detail: asks about specific information stated in the passage.
       id: 'act-r6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes main idea?',
+            question: 'Which statement accurately explains Main idea?',
             options: [
-              'Main idea is a key concept for ACT English/Reading',
-              'Detail: asks about specific information stated in the passage',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'asks about specific information stated in the passage.',
+              'asks about the passage as a whole.',
+              'Vocabulary: asks about word meaning in context.',
+              'Inference: asks what can be concluded or implied.'
             ],
-            correctAnswer: 0,
-            explanation: 'Main idea: asks about the passage as a whole'
+            correctAnswer: 1,
+            explanation: 'Correct — Main idea: asks about the passage as a whole. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              'asks about the passage as a whole.',
+              'Inference: asks what can be concluded or implied.',
+              'asks about specific information stated in the passage.',
+              'Vocabulary: asks about word meaning in context.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Key Insight: Inference: asks what can be concluded or implied. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Detail: asks about specific information stated in the passage.
       id: 'act-r6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for problem-solving workshop?',
+            question: 'Which statement about ACT Tip is correct?',
             options: [
-              'Inference: asks what can be concluded or implied',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'asks about specific information stated in the passage.',
+              'asks about the passage as a whole.',
+              'Vocabulary: asks about word meaning in context.',
+              'Inference: asks what can be concluded or implied.'
             ],
-            correctAnswer: 0,
-            explanation: 'Inference: asks what can be concluded or implied'
+            correctAnswer: 2,
+            explanation: 'Correct — ACT Tip: Vocabulary: asks about word meaning in context. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Detail: asks about specific information stated in the passage.
       id: 'act-r6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Problem-Solving Workshop:',
-            options: ['Main idea: asks about the passage as a whole', 'Detail: asks about specific information stated in ', 'Not applicable', 'None of these']
+            label: 'Main idea',
+            options: ['Vocabulary: asks about word meaning in context.', 'asks about specific information stated in the passage.', 'Inference: asks what can be concluded or implied.', 'asks about the passage as a whole.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Inference: asks what can be concluded or implied', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Detail',
+            options: ['Vocabulary: asks about word meaning in context.', 'Inference: asks what can be concluded or implied.', 'asks about specific information stated in the passage.', 'asks about the passage as a whole.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['Inference: asks what can be concluded or implied.', 'Vocabulary: asks about word meaning in context.', 'asks about the passage as a whole.', 'asks about specific information stated in the passage.']
           }
         ],
-        correctAnswers: ['Main idea: asks about the passage as a whole', 'Inference: asks what can be concluded or implied'],
-        hint1: 'Think about problem-solving workshop',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Main idea: asks about the passage as a whole. Inference: asks what can be concluded or implied.'
+        correctAnswers: ['asks about the passage as a whole.', 'asks about specific information stated in the passage.', 'Inference: asks what can be concluded or implied.'],
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Main idea: asks about the passage as a whole. Detail: asks about specific information stated in the passage. Key Insight: Inference: asks what can be concluded or implied.'
       }
     }
   ]

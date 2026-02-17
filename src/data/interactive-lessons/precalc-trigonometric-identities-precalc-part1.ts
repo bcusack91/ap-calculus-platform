@@ -30,31 +30,31 @@ sin(π/2 - θ) = cos θ, tan(π/2 - θ) = cot θ
       id: 'trigo1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of fundamental identities?',
+            question: 'What does "Reciprocal" refer to in precalculus?',
             options: [
-              'Reciprocal',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'sin(π/2 - θ) = cos θ, tan(π/2 - θ) = cot θ',
+              'tan θ = sin θ/cos θ, cot θ = cos θ/sin θ',
+              'csc θ = 1/sin θ, sec θ = 1/cos θ, cot θ = 1/tan θ',
+              'cos(-θ) = cos θ (even); sin(-θ) = -sin θ (odd)'
             ],
-            correctAnswer: 0,
-            explanation: 'Reciprocal: csc θ = 1/sin θ, sec θ = 1/cos θ, cot θ = 1/tan θ'
+            correctAnswer: 2,
+            explanation: 'Correct — Reciprocal: csc θ = 1/sin θ, sec θ = 1/cos θ, cot θ = 1/tan θ. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of fundamental identities, which is accurate?',
+            question: 'In the context of Trigonometric Identities, which explains Even/odd?',
             options: [
+              'csc θ = 1/sin θ, sec θ = 1/cos θ, cot θ = 1/tan θ',
               'cos(-θ) = cos θ (even); sin(-θ) = -sin θ (odd)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'tan θ = sin θ/cos θ, cot θ = cos θ/sin θ',
+              'sin(π/2 - θ) = cos θ, tan(π/2 - θ) = cot θ'
             ],
-            correctAnswer: 0,
-            explanation: 'Even/odd: cos(-θ) = cos θ (even); sin(-θ) = -sin θ (odd)'
+            correctAnswer: 1,
+            explanation: 'Correct — Even/odd: cos(-θ) = cos θ (even); sin(-θ) = -sin θ (odd). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ sin(π/2 - θ) = cos θ, tan(π/2 - θ) = cot θ
       id: 'trigo1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Reciprocal',
-            options: ['csc θ = 1/sin θ, sec θ = 1/cos θ, cot θ = 1/tan θ', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['tan θ = sin θ/cos θ, cot θ = cos θ/sin θ', 'sin(π/2 - θ) = cos θ, tan(π/2 - θ) = cot θ', 'cos(-θ) = cos θ (even); sin(-θ) = -sin θ (odd)', 'csc θ = 1/sin θ, sec θ = 1/cos θ, cot θ = 1/tan θ']
           },
           {
             label: 'Quotient',
-            options: ['tan θ = sin θ/cos θ, cot θ = cos θ/sin θ', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['csc θ = 1/sin θ, sec θ = 1/cos θ, cot θ = 1/tan θ', 'sin(π/2 - θ) = cos θ, tan(π/2 - θ) = cot θ', 'cos(-θ) = cos θ (even); sin(-θ) = -sin θ (odd)', 'tan θ = sin θ/cos θ, cot θ = cos θ/sin θ']
           },
           {
             label: 'Even/odd',
-            options: ['cos(-θ) = cos θ (even); sin(-θ) = -sin θ (odd)', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['cos(-θ) = cos θ (even); sin(-θ) = -sin θ (odd)', 'tan θ = sin θ/cos θ, cot θ = cos θ/sin θ', 'sin(π/2 - θ) = cos θ, tan(π/2 - θ) = cot θ', 'csc θ = 1/sin θ, sec θ = 1/cos θ, cot θ = 1/tan θ']
           }
         ],
         correctAnswers: ['csc θ = 1/sin θ, sec θ = 1/cos θ, cot θ = 1/tan θ', 'tan θ = sin θ/cos θ, cot θ = cos θ/sin θ', 'cos(-θ) = cos θ (even); sin(-θ) = -sin θ (odd)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Fundamental Identities.'
+        hint1: 'Think about what each concept specifically describes in Trigonometric Identities.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Trigonometric Identities describes a specific idea. Reciprocal: csc θ = 1/sin θ, sec θ = 1/cos θ, cot θ = 1/tan θ. Quotient: tan θ = sin θ/cos θ, cot θ = cos θ/sin θ. Even/odd: cos(-θ) = cos θ (even); sin(-θ) = -sin θ (odd).'
       }
     }
   ]

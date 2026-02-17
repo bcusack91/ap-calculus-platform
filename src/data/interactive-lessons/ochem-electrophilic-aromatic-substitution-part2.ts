@@ -30,31 +30,31 @@ Lewis acid catalysts generate strong electrophiles
       id: 'elect2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of halogenation & nitration?',
+            question: 'Which statement accurately explains Halogenation?',
             options: [
-              'Halogenation',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'Ar-H + HNO₃/H₂SO₄ → Ar-NO₂ + H₂O',
+              'Ar-H + X₂/FeX₃ → Ar-X + HX',
+              'Lewis acid catalysts generate strong electrophiles',
+              'Ar-H + SO₃/H₂SO₄ → Ar-SO₃H'
             ],
-            correctAnswer: 0,
-            explanation: 'Halogenation: Ar-H + X₂/FeX₃ → Ar-X + HX'
+            correctAnswer: 1,
+            explanation: 'Correct — Halogenation: Ar-H + X₂/FeX₃ → Ar-X + HX. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of halogenation & nitration, which is accurate?',
+            question: 'Which of the following is true about Sulfonation?',
             options: [
+              'Lewis acid catalysts generate strong electrophiles',
+              'Ar-H + HNO₃/H₂SO₄ → Ar-NO₂ + H₂O',
               'Ar-H + SO₃/H₂SO₄ → Ar-SO₃H',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Ar-H + X₂/FeX₃ → Ar-X + HX'
             ],
-            correctAnswer: 0,
-            explanation: 'Sulfonation: Ar-H + SO₃/H₂SO₄ → Ar-SO₃H'
+            correctAnswer: 2,
+            explanation: 'Correct — Sulfonation: Ar-H + SO₃/H₂SO₄ → Ar-SO₃H. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Lewis acid catalysts generate strong electrophiles
       id: 'elect2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Halogenation',
-            options: ['Ar-H + X₂/FeX₃ → Ar-X + HX', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Lewis acid catalysts generate strong electrophiles', 'Ar-H + X₂/FeX₃ → Ar-X + HX', 'Ar-H + HNO₃/H₂SO₄ → Ar-NO₂ + H₂O', 'Ar-H + SO₃/H₂SO₄ → Ar-SO₃H']
           },
           {
             label: 'Nitration',
-            options: ['Ar-H + HNO₃/H₂SO₄ → Ar-NO₂ + H₂O', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Lewis acid catalysts generate strong electrophiles', 'Ar-H + HNO₃/H₂SO₄ → Ar-NO₂ + H₂O', 'Ar-H + X₂/FeX₃ → Ar-X + HX', 'Ar-H + SO₃/H₂SO₄ → Ar-SO₃H']
           },
           {
             label: 'Sulfonation',
-            options: ['Ar-H + SO₃/H₂SO₄ → Ar-SO₃H', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Ar-H + X₂/FeX₃ → Ar-X + HX', 'Ar-H + SO₃/H₂SO₄ → Ar-SO₃H', 'Lewis acid catalysts generate strong electrophiles', 'Ar-H + HNO₃/H₂SO₄ → Ar-NO₂ + H₂O']
           }
         ],
         correctAnswers: ['Ar-H + X₂/FeX₃ → Ar-X + HX', 'Ar-H + HNO₃/H₂SO₄ → Ar-NO₂ + H₂O', 'Ar-H + SO₃/H₂SO₄ → Ar-SO₃H'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Halogenation & Nitration.'
+        hint1: 'Think about what each concept specifically describes in Halogenation & Nitration.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Halogenation & Nitration describes a specific idea. Halogenation: Ar-H + X₂/FeX₃ → Ar-X + HX. Nitration: Ar-H + HNO₃/H₂SO₄ → Ar-NO₂ + H₂O. Sulfonation: Ar-H + SO₃/H₂SO₄ → Ar-SO₃H.'
       }
     }
   ]

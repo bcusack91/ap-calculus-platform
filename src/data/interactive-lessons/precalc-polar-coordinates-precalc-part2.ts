@@ -30,31 +30,31 @@ Convert equations by substituting x, y, r, θ relationships
       id: 'polar2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of converting between coordinate systems?',
+            question: 'Which of the following correctly describes Polar to rectangular?',
             options: [
-              'Polar to rectangular',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'x = r cos θ, y = r sin θ',
+              'Convert equations by substituting x, y, r, θ relationships',
+              'r² = x² + y²',
+              'r = √(x² + y²), θ = arctan(y/x) (adjust quadrant)'
             ],
             correctAnswer: 0,
-            explanation: 'Polar to rectangular: x = r cos θ, y = r sin θ'
+            explanation: 'Correct — Polar to rectangular: x = r cos θ, y = r sin θ. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of converting between coordinate systems, which is accurate?',
+            question: 'In the context of Converting Between Coordinate Systems, which explains r² = x² + y²?',
             options: [
-              'r² = x² + y²',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'x = r cos θ, y = r sin θ',
+              'r = √(x² + y²), θ = arctan(y/x) (adjust quadrant)',
+              'Convert equations by substituting x, y, r, θ relationships',
+              'r² = x² + y²'
             ],
-            correctAnswer: 0,
-            explanation: 'r² = x² + y²'
+            correctAnswer: 3,
+            explanation: 'Correct — r² = x² + y². Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,24 @@ Convert equations by substituting x, y, r, θ relationships
       id: 'polar2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Polar to rectangular',
-            options: ['x = r cos θ, y = r sin θ', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['r = √(x² + y²), θ = arctan(y/x) (adjust quadrant)', 'Convert equations by substituting x, y, r, θ relationships', 'r² = x² + y²', 'x = r cos θ, y = r sin θ']
           },
           {
             label: 'Rectangular to polar',
-            options: ['r = √(x² + y²), θ = arctan(y/x) (adjust quadrant)', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
-          },
-          {
-            label: 'r² = x² + y²',
-            options: ['r² = x² + y²', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['Convert equations by substituting x, y, r, θ relationships', 'r² = x² + y²', 'r = √(x² + y²), θ = arctan(y/x) (adjust quadrant)', 'x = r cos θ, y = r sin θ']
           }
         ],
-        correctAnswers: ['x = r cos θ, y = r sin θ', 'r = √(x² + y²), θ = arctan(y/x) (adjust quadrant)', 'r² = x² + y²'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Converting Between Coordinate Systems.'
+        correctAnswers: ['x = r cos θ, y = r sin θ', 'r = √(x² + y²), θ = arctan(y/x) (adjust quadrant)'],
+        hint1: 'Think about what each concept specifically describes in Converting Between Coordinate Systems.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Converting Between Coordinate Systems describes a specific idea. Polar to rectangular: x = r cos θ, y = r sin θ. Rectangular to polar: r = √(x² + y²), θ = arctan(y/x) (adjust quadrant).'
       }
     }
   ]

@@ -30,31 +30,31 @@ Inner radius = |closer boundary - axis|
       id: 'volum3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of revolving around other axes?',
+            question: 'What does "Revolving about y = k" refer to in calculus?',
             options: [
-              'Revolving about y = k',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'adjust radii by subtracting k',
+              'Inner radius = |closer boundary - axis|',
+              'integrate with respect to y, adjust radii',
+              'Outer radius = |farther boundary - axis|'
             ],
             correctAnswer: 0,
-            explanation: 'Revolving about y = k: adjust radii by subtracting k'
+            explanation: 'Correct — Revolving about y = k: adjust radii by subtracting k. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of revolving around other axes, which is accurate?',
+            question: 'In the context of Revolving Around Other Axes, which explains Outer radius = |farther boundary - axis|?',
             options: [
               'Outer radius = |farther boundary - axis|',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'adjust radii by subtracting k',
+              'Inner radius = |closer boundary - axis|',
+              'integrate with respect to y, adjust radii'
             ],
             correctAnswer: 0,
-            explanation: 'Outer radius = |farther boundary - axis|'
+            explanation: 'Correct — Outer radius = |farther boundary - axis|. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Inner radius = |closer boundary - axis|
       id: 'volum3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to revolving around other axes?',
+            question: 'Regarding Revolving Around Other Axes, which correctly describes Inner radius = |closer boundary - axis|?',
             options: [
+              'adjust radii by subtracting k',
+              'integrate with respect to y, adjust radii',
               'Inner radius = |closer boundary - axis|',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'Outer radius = |farther boundary - axis|'
             ],
-            correctAnswer: 0,
-            explanation: 'Inner radius = |closer boundary - axis|'
+            correctAnswer: 2,
+            explanation: 'Correct — Inner radius = |closer boundary - axis|. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,24 @@ Inner radius = |closer boundary - axis|
       id: 'volum3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Revolving about y = k',
-            options: ['adjust radii by subtracting k', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Outer radius = |farther boundary - axis|', 'adjust radii by subtracting k', 'Inner radius = |closer boundary - axis|', 'integrate with respect to y, adjust radii']
           },
           {
             label: 'Revolving about x = k',
-            options: ['integrate with respect to y, adjust radii', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
-          },
-          {
-            label: 'Outer radius = |farther boundary - axis|',
-            options: ['Outer radius = |farther boundary - axis|', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['integrate with respect to y, adjust radii', 'Inner radius = |closer boundary - axis|', 'adjust radii by subtracting k', 'Outer radius = |farther boundary - axis|']
           }
         ],
-        correctAnswers: ['adjust radii by subtracting k', 'integrate with respect to y, adjust radii', 'Outer radius = |farther boundary - axis|'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Revolving Around Other Axes.'
+        correctAnswers: ['adjust radii by subtracting k', 'integrate with respect to y, adjust radii'],
+        hint1: 'Think about what each concept specifically describes in Revolving Around Other Axes.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Revolving Around Other Axes describes a specific idea. Revolving about y = k: adjust radii by subtracting k. Revolving about x = k: integrate with respect to y, adjust radii.'
       }
     }
   ]

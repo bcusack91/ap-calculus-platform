@@ -18,20 +18,31 @@ Word choice reflects purpose: informative, persuasive, narrative.
       id: 'act-e5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes tone?',
+            question: 'What does "Tone" refer to in ACT prep?',
             options: [
-              'Tone is a key concept for ACT English/Reading',
-              'Word choice reflects purpose: informative, persuasive, narrative',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'Consider the audience and the overall tone of the passage.',
+              'informative, persuasive, narrative.',
+              '"Most effectively" questions: match the stated goal.',
+              'formal vs. informal, objective vs. subjective.'
             ],
-            correctAnswer: 0,
-            explanation: 'Tone: formal vs. informal, objective vs. subjective'
+            correctAnswer: 3,
+            explanation: 'Correct — Tone: formal vs. informal, objective vs. subjective. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Author Purpose & Style, which explains Key Insight?',
+            options: [
+              'informative, persuasive, narrative.',
+              'formal vs. informal, objective vs. subjective.',
+              'Consider the audience and the overall tone of the passage.',
+              '"Most effectively" questions: match the stated goal.'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Key Insight: "Most effectively" questions: match the stated goal. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Word choice reflects purpose: informative, persuasive, narrative.
       id: 'act-e5-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for author purpose & style?',
+            question: 'Which statement about ACT Tip is correct?',
             options: [
-              '"Most effectively" questions: match the stated goal',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'formal vs. informal, objective vs. subjective.',
+              'informative, persuasive, narrative.',
+              '"Most effectively" questions: match the stated goal.',
+              'Consider the audience and the overall tone of the passage.'
             ],
-            correctAnswer: 0,
-            explanation: '"Most effectively" questions: match the stated goal'
+            correctAnswer: 3,
+            explanation: 'Correct — ACT Tip: Consider the audience and the overall tone of the passage. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Word choice reflects purpose: informative, persuasive, narrative.
       id: 'act-e5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Author Purpose & Style:',
-            options: ['Tone: formal vs. informal, objective vs. subjectiv', 'Word choice reflects purpose: informative, persuas', 'Not applicable', 'None of these']
+            label: 'Tone',
+            options: ['formal vs. informal, objective vs. subjective.', '"Most effectively" questions: match the stated goal.', 'Consider the audience and the overall tone of the passage.', 'informative, persuasive, narrative.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['"Most effectively" questions: match the stated goa', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Word choice reflects purpose',
+            options: ['"Most effectively" questions: match the stated goal.', 'Consider the audience and the overall tone of the passage.', 'formal vs. informal, objective vs. subjective.', 'informative, persuasive, narrative.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['Consider the audience and the overall tone of the passage.', 'informative, persuasive, narrative.', '"Most effectively" questions: match the stated goal.', 'formal vs. informal, objective vs. subjective.']
           }
         ],
-        correctAnswers: ['Tone: formal vs. informal, objective vs. subjectiv', '"Most effectively" questions: match the stated goa'],
-        hint1: 'Think about author purpose & style',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Tone: formal vs. informal, objective vs. subjective. "Most effectively" questions: match the stated goal.'
+        correctAnswers: ['formal vs. informal, objective vs. subjective.', 'informative, persuasive, narrative.', '"Most effectively" questions: match the stated goal.'],
+        hint1: 'Think about what each concept specifically describes in Author Purpose & Style.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Author Purpose & Style describes a specific idea. Tone: formal vs. informal, objective vs. subjective. Word choice reflects purpose: informative, persuasive, narrative. Key Insight: "Most effectively" questions: match the stated goal.'
       }
     }
   ]

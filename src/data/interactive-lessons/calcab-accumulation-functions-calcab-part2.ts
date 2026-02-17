@@ -30,31 +30,31 @@ split into two integrals and apply chain rule to each
       id: 'accum2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of ftc with variable bounds?',
-            options: [
-              'd/dx[∫ₐˣ f(t)dt] = f(x) (FTC Part 1)',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'd/dx[∫ₐˣ f(t)dt] = f(x) (FTC Part 1)'
-          },
-          {
-            question: 'In the context of ftc with variable bounds, which is accurate?',
+            question: 'Which statement accurately explains d/dx[∫ₐˣ f(t)dt] = f(x) (FTC Part 1)?',
             options: [
               'd/dx[∫_(h(x))^b f(t)dt] = -f(h(x))·h\'(x)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'd/dx[∫ₐˣ f(t)dt] = f(x) (FTC Part 1)',
+              'd/dx[∫ₐ^(g(x)) f(t)dt] = f(g(x))·g\'(x)',
+              'split into two integrals and apply chain rule to each'
             ],
-            correctAnswer: 0,
-            explanation: 'With variable lower bound: d/dx[∫_(h(x))^b f(t)dt] = -f(h(x))·h\'(x)'
+            correctAnswer: 1,
+            explanation: 'Correct — d/dx[∫ₐˣ f(t)dt] = f(x) (FTC Part 1). The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of FTC with Variable Bounds, which explains With variable lower bound?',
+            options: [
+              'd/dx[∫ₐˣ f(t)dt] = f(x) (FTC Part 1)',
+              'd/dx[∫_(h(x))^b f(t)dt] = -f(h(x))·h\'(x)',
+              'd/dx[∫ₐ^(g(x)) f(t)dt] = f(g(x))·g\'(x)',
+              'split into two integrals and apply chain rule to each'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — With variable lower bound: d/dx[∫_(h(x))^b f(t)dt] = -f(h(x))·h\'(x). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ split into two integrals and apply chain rule to each
       id: 'accum2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to ftc with variable bounds?',
+            question: 'Regarding FTC with Variable Bounds, which correctly describes Both bounds variable?',
             options: [
               'split into two integrals and apply chain rule to each',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'd/dx[∫ₐˣ f(t)dt] = f(x) (FTC Part 1)',
+              'd/dx[∫_(h(x))^b f(t)dt] = -f(h(x))·h\'(x)',
+              'd/dx[∫ₐ^(g(x)) f(t)dt] = f(g(x))·g\'(x)'
             ],
             correctAnswer: 0,
-            explanation: 'Both bounds variable: split into two integrals and apply chain rule to each'
+            explanation: 'Correct — Both bounds variable: split into two integrals and apply chain rule to each. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ split into two integrals and apply chain rule to each
       id: 'accum2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'd/dx[∫ₐˣ f(t)dt] = f(x) (FTC Part 1)',
-            options: ['d/dx[∫ₐˣ f(t)dt] = f(x) (FTC Part 1)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
-          },
-          {
             label: 'With variable upper bound g(x)',
-            options: ['d/dx[∫ₐ^(g(x)) f(t)dt] = f(g(x))·g\'(x)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['d/dx[∫ₐ^(g(x)) f(t)dt] = f(g(x))·g\'(x)', 'd/dx[∫ₐˣ f(t)dt] = f(x) (FTC Part 1)', 'd/dx[∫_(h(x))^b f(t)dt] = -f(h(x))·h\'(x)', 'split into two integrals and apply chain rule to each']
           },
           {
             label: 'With variable lower bound',
-            options: ['d/dx[∫_(h(x))^b f(t)dt] = -f(h(x))·h\'(x)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['split into two integrals and apply chain rule to each', 'd/dx[∫_(h(x))^b f(t)dt] = -f(h(x))·h\'(x)', 'd/dx[∫ₐˣ f(t)dt] = f(x) (FTC Part 1)', 'd/dx[∫ₐ^(g(x)) f(t)dt] = f(g(x))·g\'(x)']
+          },
+          {
+            label: 'Both bounds variable',
+            options: ['d/dx[∫ₐˣ f(t)dt] = f(x) (FTC Part 1)', 'split into two integrals and apply chain rule to each', 'd/dx[∫_(h(x))^b f(t)dt] = -f(h(x))·h\'(x)', 'd/dx[∫ₐ^(g(x)) f(t)dt] = f(g(x))·g\'(x)']
           }
         ],
-        correctAnswers: ['d/dx[∫ₐˣ f(t)dt] = f(x) (FTC Part 1)', 'd/dx[∫ₐ^(g(x)) f(t)dt] = f(g(x))·g\'(x)', 'd/dx[∫_(h(x))^b f(t)dt] = -f(h(x))·h\'(x)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding FTC with Variable Bounds.'
+        correctAnswers: ['d/dx[∫ₐ^(g(x)) f(t)dt] = f(g(x))·g\'(x)', 'd/dx[∫_(h(x))^b f(t)dt] = -f(h(x))·h\'(x)', 'split into two integrals and apply chain rule to each'],
+        hint1: 'Think about what each concept specifically describes in FTC with Variable Bounds.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in FTC with Variable Bounds describes a specific idea. With variable upper bound g(x): d/dx[∫ₐ^(g(x)) f(t)dt] = f(g(x))·g\'(x). With variable lower bound: d/dx[∫_(h(x))^b f(t)dt] = -f(h(x))·h\'(x). Both bounds variable: split into two integrals and apply chain rule to each.'
       }
     }
   ]

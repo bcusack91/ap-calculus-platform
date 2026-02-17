@@ -30,31 +30,31 @@ sensory pathways and theories
       id: 'sensa7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of synthesis & ap review?',
+            question: 'Which statement accurately explains Sensation vs perception distinction?',
             options: [
-              'Sensation vs perception distinction',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'decreased sensitivity over time',
+              'Synesthesia and sensory processing',
+              'sensory pathways and theories',
+              'Sensation vs perception distinction'
             ],
-            correctAnswer: 0,
-            explanation: 'Sensation vs perception distinction'
+            correctAnswer: 3,
+            explanation: 'Correct — Sensation vs perception distinction. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of synthesis & ap review, which is accurate?',
+            question: 'Which of the following is true about Synesthesia and sensory processing?',
             options: [
+              'decreased sensitivity over time',
               'Synesthesia and sensory processing',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'sensory pathways and theories',
+              'Sensation vs perception distinction'
             ],
-            correctAnswer: 0,
-            explanation: 'Synesthesia and sensory processing'
+            correctAnswer: 1,
+            explanation: 'Correct — Synesthesia and sensory processing. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,24 @@ sensory pathways and theories
       id: 'sensa7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Sensation vs perception distinction',
-            options: ['Sensation vs perception distinction', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
-          },
-          {
             label: 'Sensory adaptation',
-            options: ['decreased sensitivity over time', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['decreased sensitivity over time', 'sensory pathways and theories', 'Synesthesia and sensory processing', 'Sensation vs perception distinction']
           },
           {
-            label: 'Synesthesia and sensory processing',
-            options: ['Synesthesia and sensory processing', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            label: 'AP exam',
+            options: ['Sensation vs perception distinction', 'sensory pathways and theories', 'Synesthesia and sensory processing', 'decreased sensitivity over time']
           }
         ],
-        correctAnswers: ['Sensation vs perception distinction', 'decreased sensitivity over time', 'Synesthesia and sensory processing'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Synthesis & AP Review.'
+        correctAnswers: ['decreased sensitivity over time', 'sensory pathways and theories'],
+        hint1: 'Think about what each concept specifically describes in Synthesis & AP Review.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Synthesis & AP Review describes a specific idea. Sensory adaptation: decreased sensitivity over time. AP exam: sensory pathways and theories.'
       }
     }
   ]

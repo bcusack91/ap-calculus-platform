@@ -30,31 +30,31 @@ Connect the theorem's conclusion to the specific quantities in the problem
       id: 'theor6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of problem-solving workshop?',
+            question: 'What does "Read what the question asks" refer to in calculus?',
             options: [
-              'Read what the question asks',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              '"must there exist," "is it possible," "show that"',
+              '"Must there exist" → use a theorem (IVT, MVT, EVT)',
+              'Connect the theorem\'s conclusion to the specific quantities in the problem',
+              '"Is it possible" → provide an example or counterexample'
             ],
             correctAnswer: 0,
-            explanation: 'Read what the question asks: "must there exist," "is it possible," "show that"'
+            explanation: 'Correct — Read what the question asks: "must there exist," "is it possible," "show that". The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of problem-solving workshop, which is accurate?',
+            question: 'Which of the following is true about "Is it possible" → provide an example…?',
             options: [
               '"Is it possible" → provide an example or counterexample',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              '"Must there exist" → use a theorem (IVT, MVT, EVT)',
+              '"must there exist," "is it possible," "show that"',
+              'Connect the theorem\'s conclusion to the specific quantities in the problem'
             ],
             correctAnswer: 0,
-            explanation: '"Is it possible" → provide an example or counterexample'
+            explanation: 'Correct — "Is it possible" → provide an example or counterexample. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Connect the theorem's conclusion to the specific quantities in the problem
       id: 'theor6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to problem-solving workshop?',
+            question: 'Regarding Problem-Solving Workshop, which correctly describes Connect the theorem\'s conclusion to the…?',
             options: [
+              '"Is it possible" → provide an example or counterexample',
+              '"Must there exist" → use a theorem (IVT, MVT, EVT)',
               'Connect the theorem\'s conclusion to the specific quantities in the problem',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              '"must there exist," "is it possible," "show that"'
             ],
-            correctAnswer: 0,
-            explanation: 'Connect the theorem\'s conclusion to the specific quantities in the problem'
+            correctAnswer: 2,
+            explanation: 'Correct — Connect the theorem\'s conclusion to the specific quantities in the problem. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Connect the theorem's conclusion to the specific quantities in the problem
       id: 'theor6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Read what the question asks',
-            options: ['"must there exist," "is it possible," "show that"', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['"must there exist," "is it possible," "show that"', '"Must there exist" → use a theorem (IVT, MVT, EVT)', '"Is it possible" → provide an example or counterexample', 'Connect the theorem\'s conclusion to the specific quantities in the problem']
           },
           {
-            label: '"Must there exist" → use a theorem (IVT, MVT, EVT)',
-            options: ['"Must there exist" → use a theorem (IVT, MVT, EVT)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: '"Must there exist" → use a theorem…',
+            options: ['"must there exist," "is it possible," "show that"', '"Is it possible" → provide an example or counterexample', '"Must there exist" → use a theorem (IVT, MVT, EVT)', 'Connect the theorem\'s conclusion to the specific quantities in the problem']
           },
           {
-            label: '"Is it possible" → provide an example or counterexample',
-            options: ['"Is it possible" → provide an example or counterex', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: '"Is it possible" → provide an example…',
+            options: ['"Is it possible" → provide an example or counterexample', '"Must there exist" → use a theorem (IVT, MVT, EVT)', '"must there exist," "is it possible," "show that"', 'Connect the theorem\'s conclusion to the specific quantities in the problem']
           }
         ],
-        correctAnswers: ['"must there exist," "is it possible," "show that"', '"Must there exist" → use a theorem (IVT, MVT, EVT)', '"Is it possible" → provide an example or counterex'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving Workshop.'
+        correctAnswers: ['"must there exist," "is it possible," "show that"', '"Must there exist" → use a theorem (IVT, MVT, EVT)', '"Is it possible" → provide an example or counterexample'],
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Read what the question asks: "must there exist," "is it possible," "show that". "Must there exist" → use a theorem (IVT, MVT, EVT). "Is it possible" → provide an example or counterexample.'
       }
     }
   ]

@@ -30,31 +30,31 @@ The sign of f' indicates whether f is rising or falling
       id: 'defin6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of problem-solving workshop?',
+            question: 'Which of the following correctly describes The derivative at a point = slope of…?',
             options: [
               'The derivative at a point = slope of the tangent line at that point',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'y - f(a) = f\'(a)(x - a)',
+              'The sign of f\' indicates whether f is rising or falling',
+              'Where f\' is zero, f has a horizontal tangent'
             ],
             correctAnswer: 0,
-            explanation: 'The derivative at a point = slope of the tangent line at that point'
+            explanation: 'Correct — The derivative at a point = slope of the tangent line at that point. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of problem-solving workshop, which is accurate?',
+            question: 'In the context of Problem-Solving Workshop, which explains Where f\' is zero, f has a horizontal…?',
             options: [
+              'The sign of f\' indicates whether f is rising or falling',
               'Where f\' is zero, f has a horizontal tangent',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'The derivative at a point = slope of the tangent line at that point',
+              'y - f(a) = f\'(a)(x - a)'
             ],
-            correctAnswer: 0,
-            explanation: 'Where f\' is zero, f has a horizontal tangent'
+            correctAnswer: 1,
+            explanation: 'Correct — Where f\' is zero, f has a horizontal tangent. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ The sign of f' indicates whether f is rising or falling
       id: 'defin6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to problem-solving workshop?',
+            question: 'Which statement about The sign of f\' indicates whether f is… is correct?',
             options: [
+              'Where f\' is zero, f has a horizontal tangent',
+              'The derivative at a point = slope of the tangent line at that point',
               'The sign of f\' indicates whether f is rising or falling',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'y - f(a) = f\'(a)(x - a)'
             ],
-            correctAnswer: 0,
-            explanation: 'The sign of f\' indicates whether f is rising or falling'
+            correctAnswer: 2,
+            explanation: 'Correct — The sign of f\' indicates whether f is rising or falling. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ The sign of f' indicates whether f is rising or falling
       id: 'defin6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The derivative at a point = slope of the tangent line at that point',
-            options: ['The derivative at a point = slope of the tangent l', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'The derivative at a point = slope of…',
+            options: ['Where f\' is zero, f has a horizontal tangent', 'The sign of f\' indicates whether f is rising or falling', 'y - f(a) = f\'(a)(x - a)', 'The derivative at a point = slope of the tangent line at that point']
           },
           {
             label: 'Tangent line equation',
-            options: ['y - f(a) = f\'(a)(x - a)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['The sign of f\' indicates whether f is rising or falling', 'y - f(a) = f\'(a)(x - a)', 'Where f\' is zero, f has a horizontal tangent', 'The derivative at a point = slope of the tangent line at that point']
           },
           {
-            label: 'Where f\' is zero, f has a horizontal tangent',
-            options: ['Where f\' is zero, f has a horizontal tangent', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Where f\' is zero, f has a horizontal…',
+            options: ['The sign of f\' indicates whether f is rising or falling', 'y - f(a) = f\'(a)(x - a)', 'Where f\' is zero, f has a horizontal tangent', 'The derivative at a point = slope of the tangent line at that point']
           }
         ],
-        correctAnswers: ['The derivative at a point = slope of the tangent l', 'y - f(a) = f\'(a)(x - a)', 'Where f\' is zero, f has a horizontal tangent'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving Workshop.'
+        correctAnswers: ['The derivative at a point = slope of the tangent line at that point', 'y - f(a) = f\'(a)(x - a)', 'Where f\' is zero, f has a horizontal tangent'],
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. The derivative at a point = slope of the tangent line at that point. Tangent line equation: y - f(a) = f\'(a)(x - a). Where f\' is zero, f has a horizontal tangent.'
       }
     }
   ]

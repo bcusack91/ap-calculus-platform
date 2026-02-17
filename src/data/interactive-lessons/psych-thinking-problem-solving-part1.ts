@@ -30,31 +30,31 @@ schemas for sequences of events (restaurant script)
       id: 'think1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of concepts & categories?',
+            question: 'Which of the following correctly describes Concepts?',
             options: [
-              'Concepts',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'best example of a concept (robin = bird)',
+              'mental categories for objects, events, ideas',
+              'schemas for sequences of events (restaurant script)',
+              'organized knowledge structures'
             ],
-            correctAnswer: 0,
-            explanation: 'Concepts: mental categories for objects, events, ideas'
+            correctAnswer: 1,
+            explanation: 'Correct — Concepts: mental categories for objects, events, ideas. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of concepts & categories, which is accurate?',
+            question: 'In the context of Thinking & Problem Solving, which explains Schemas?',
             options: [
+              'mental categories for objects, events, ideas',
+              'schemas for sequences of events (restaurant script)',
               'organized knowledge structures',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'best example of a concept (robin = bird)'
             ],
-            correctAnswer: 0,
-            explanation: 'Schemas: organized knowledge structures'
+            correctAnswer: 2,
+            explanation: 'Correct — Schemas: organized knowledge structures. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ schemas for sequences of events (restaurant script)
       id: 'think1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Concepts',
-            options: ['mental categories for objects, events, ideas', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['schemas for sequences of events (restaurant script)', 'organized knowledge structures', 'mental categories for objects, events, ideas', 'best example of a concept (robin = bird)']
           },
           {
             label: 'Prototypes',
-            options: ['best example of a concept (robin = bird)', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['mental categories for objects, events, ideas', 'schemas for sequences of events (restaurant script)', 'best example of a concept (robin = bird)', 'organized knowledge structures']
           },
           {
             label: 'Schemas',
-            options: ['organized knowledge structures', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['mental categories for objects, events, ideas', 'best example of a concept (robin = bird)', 'organized knowledge structures', 'schemas for sequences of events (restaurant script)']
           }
         ],
         correctAnswers: ['mental categories for objects, events, ideas', 'best example of a concept (robin = bird)', 'organized knowledge structures'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Concepts & Categories.'
+        hint1: 'Think about what each concept specifically describes in Thinking & Problem Solving.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Thinking & Problem Solving describes a specific idea. Concepts: mental categories for objects, events, ideas. Prototypes: best example of a concept (robin = bird). Schemas: organized knowledge structures.'
       }
     }
   ]

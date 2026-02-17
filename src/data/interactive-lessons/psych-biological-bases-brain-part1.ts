@@ -30,31 +30,31 @@ gap between neurons
       id: 'biolo1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of neurons & neural communication?',
+            question: 'Which statement accurately explains Neurons?',
             options: [
-              'Neurons',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'all-or-none electrical signal',
+              'cell body (soma), dendrites, axon, myelin sheath',
+              '-70mV inside the neuron',
+              'gap between neurons'
             ],
-            correctAnswer: 0,
-            explanation: 'Neurons: cell body (soma), dendrites, axon, myelin sheath'
+            correctAnswer: 1,
+            explanation: 'Correct — Neurons: cell body (soma), dendrites, axon, myelin sheath. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of neurons & neural communication, which is accurate?',
+            question: 'In the context of The Brain & Nervous System, which explains Synapse?',
             options: [
+              'all-or-none electrical signal',
               'gap between neurons',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              '-70mV inside the neuron',
+              'cell body (soma), dendrites, axon, myelin sheath'
             ],
-            correctAnswer: 0,
-            explanation: 'Synapse: gap between neurons'
+            correctAnswer: 1,
+            explanation: 'Correct — Synapse: gap between neurons. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ gap between neurons
       id: 'biolo1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Neurons',
-            options: ['cell body (soma), dendrites, axon, myelin sheath', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['gap between neurons', 'all-or-none electrical signal', 'cell body (soma), dendrites, axon, myelin sheath', '-70mV inside the neuron']
           },
           {
             label: 'Action potential',
-            options: ['all-or-none electrical signal', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['all-or-none electrical signal', '-70mV inside the neuron', 'cell body (soma), dendrites, axon, myelin sheath', 'gap between neurons']
           },
           {
             label: 'Synapse',
-            options: ['gap between neurons', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['gap between neurons', '-70mV inside the neuron', 'all-or-none electrical signal', 'cell body (soma), dendrites, axon, myelin sheath']
           }
         ],
         correctAnswers: ['cell body (soma), dendrites, axon, myelin sheath', 'all-or-none electrical signal', 'gap between neurons'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Neurons & Neural Communication.'
+        hint1: 'Think about what each concept specifically describes in The Brain & Nervous System.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in The Brain & Nervous System describes a specific idea. Neurons: cell body (soma), dendrites, axon, myelin sheath. Action potential: all-or-none electrical signal. Synapse: gap between neurons.'
       }
     }
   ]

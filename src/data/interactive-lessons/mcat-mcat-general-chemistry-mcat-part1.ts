@@ -71,23 +71,28 @@ Periodic trends: electronegativity, ionization energy, and atomic radius follow 
       id: 'mcat-1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Atomic Structure & Periodic Trends:',
-            options: ['Electron configuration determines chemical behavior: 1s2 2s2', 'Periodic trends: electronegativity, ionization energy, and a', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Electron configuration determines chemical behavior',
+            options: ['Quantum numbers (n, l, ml, ms) describe the state of each electron — no two electrons share all four (Pauli exclusion).', 'Effective nuclear charge (Zeff) increases across a period as electrons are added to the same shell.', '1s2 2s2 2p6 3s2 ....', 'electronegativity, ionization energy, and atomic radius follow predictable patterns across periods and groups.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Effective nuclear charge (Zeff) increases across a period as', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Periodic trends',
+            options: ['Effective nuclear charge (Zeff) increases across a period as electrons are added to the same shell.', 'electronegativity, ionization energy, and atomic radius follow predictable patterns across periods and groups.', '1s2 2s2 2p6 3s2 ....', 'Quantum numbers (n, l, ml, ms) describe the state of each electron — no two electrons share all four (Pauli exclusion).']
+          },
+          {
+            label: 'Key Insight',
+            options: ['Effective nuclear charge (Zeff) increases across a period as electrons are added to the same shell.', 'Quantum numbers (n, l, ml, ms) describe the state of each electron — no two electrons share all four (Pauli exclusion).', '1s2 2s2 2p6 3s2 ....', 'electronegativity, ionization energy, and atomic radius follow predictable patterns across periods and groups.']
           }
         ],
-        correctAnswers: ['Electron configuration determines chemical behavior: 1s2 2s2', 'Effective nuclear charge (Zeff) increases across a period as'],
-        hint1: 'Think about atomic structure & periodic trends',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Electron configuration determines chemical behavior: 1s2 2s2 2p6 3s2 .... Effective nuclear charge (Zeff) increases across a period as electrons are added to the same shell.'
+        correctAnswers: ['1s2 2s2 2p6 3s2 ....', 'electronegativity, ionization energy, and atomic radius follow predictable patterns across periods and groups.', 'Effective nuclear charge (Zeff) increases across a period as electrons are added to the same shell.'],
+        hint1: 'Think about what each concept specifically describes in General Chemistry.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in General Chemistry describes a specific idea. Electron configuration determines chemical behavior: 1s2 2s2 2p6 3s2 .... Periodic trends: electronegativity, ionization energy, and atomic radius follow predictable patterns across periods and groups. Key Insight: Effective nuclear charge (Zeff) increases across a period as electrons are added to the same shell.'
       }
     }
   ]

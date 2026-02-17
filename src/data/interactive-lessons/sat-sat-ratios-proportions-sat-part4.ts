@@ -18,20 +18,31 @@ Inverse variation: y = k/x (y decreases as x increases).
       id: 'sat-r4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes direct variation?',
+            question: 'Which statement accurately explains Direct variation?',
             options: [
-              'Direct variation is a fundamental concept in SAT Math',
-              'Inverse variation: y = k/x (y decreases as x increases)',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'y = kx (y increases as x increases proportionally).',
+              'k is the constant of variation.',
+              'Find k from one data point, then use it to find unknowns.',
+              'y = k/x (y decreases as x increases).'
             ],
             correctAnswer: 0,
-            explanation: 'Direct variation: y = kx (y increases as x increases proportionally)'
+            explanation: 'Correct — Direct variation: y = kx (y increases as x increases proportionally). The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              'k is the constant of variation.',
+              'Find k from one data point, then use it to find unknowns.',
+              'y = k/x (y decreases as x increases).',
+              'y = kx (y increases as x increases proportionally).'
+            ],
+            correctAnswer: 0,
+            explanation: 'Correct — Key Insight: k is the constant of variation. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Inverse variation: y = k/x (y decreases as x increases).
       id: 'sat-r4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for direct & inverse variation?',
+            question: 'Regarding Direct & Inverse Variation, which correctly describes SAT Tip?',
             options: [
-              'k is the constant of variation',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'Find k from one data point, then use it to find unknowns.',
+              'y = kx (y increases as x increases proportionally).',
+              'y = k/x (y decreases as x increases).',
+              'k is the constant of variation.'
             ],
             correctAnswer: 0,
-            explanation: 'k is the constant of variation'
+            explanation: 'Correct — SAT Tip: Find k from one data point, then use it to find unknowns. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Inverse variation: y = k/x (y decreases as x increases).
       id: 'sat-r4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Direct & Inverse Variation:',
-            options: ['Direct variation: y = kx (y increases as x increas', 'Inverse variation: y = k/x (y decreases as x incre', 'Not applicable', 'None of these']
+            label: 'Direct variation',
+            options: ['y = k/x (y decreases as x increases).', 'y = kx (y increases as x increases proportionally).', 'Find k from one data point, then use it to find unknowns.', 'k is the constant of variation.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['k is the constant of variation', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Inverse variation',
+            options: ['y = kx (y increases as x increases proportionally).', 'Find k from one data point, then use it to find unknowns.', 'y = k/x (y decreases as x increases).', 'k is the constant of variation.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['y = k/x (y decreases as x increases).', 'y = kx (y increases as x increases proportionally).', 'Find k from one data point, then use it to find unknowns.', 'k is the constant of variation.']
           }
         ],
-        correctAnswers: ['Direct variation: y = kx (y increases as x increas', 'k is the constant of variation'],
-        hint1: 'Think about direct & inverse variation',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'Direct variation: y = kx (y increases as x increases proportionally). k is the constant of variation.'
+        correctAnswers: ['y = kx (y increases as x increases proportionally).', 'y = k/x (y decreases as x increases).', 'k is the constant of variation.'],
+        hint1: 'Think about what each concept specifically describes in Direct & Inverse Variation.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Direct & Inverse Variation describes a specific idea. Direct variation: y = kx (y increases as x increases proportionally). Inverse variation: y = k/x (y decreases as x increases). Key Insight: k is the constant of variation.'
       }
     }
   ]

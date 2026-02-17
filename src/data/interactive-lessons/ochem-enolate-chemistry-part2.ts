@@ -30,31 +30,31 @@ Enolates are nucleophilic at carbon
       id: 'enola2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of enolate formation?',
-            options: [
-              'Base removes α-hydrogen → enolate (resonance-stabilized carbanion)',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
-            ],
-            correctAnswer: 0,
-            explanation: 'Base removes α-hydrogen → enolate (resonance-stabilized carbanion)'
-          },
-          {
-            question: 'In the context of enolate formation, which is accurate?',
+            question: 'Which statement accurately explains Base removes α-hydrogen → enolate…?',
             options: [
               'Kinetic vs thermodynamic enolate',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Base removes α-hydrogen → enolate (resonance-stabilized carbanion)',
+              'strong, non-nucleophilic base',
+              'Enolates are nucleophilic at carbon'
             ],
-            correctAnswer: 0,
-            explanation: 'Kinetic vs thermodynamic enolate'
+            correctAnswer: 1,
+            explanation: 'Correct — Base removes α-hydrogen → enolate (resonance-stabilized carbanion). The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Kinetic vs thermodynamic enolate:',
+            options: [
+              'strong, non-nucleophilic base',
+              'Base removes α-hydrogen → enolate (resonance-stabilized carbanion)',
+              'Enolates are nucleophilic at carbon',
+              'Kinetic vs thermodynamic enolate'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Kinetic vs thermodynamic enolate. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Enolates are nucleophilic at carbon
       id: 'enola2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Base removes α-hydrogen → enolate (resonance-stabilized carbanion)',
-            options: ['Base removes α-hydrogen → enolate (resonance-stabi', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Base removes α-hydrogen → enolate…',
+            options: ['strong, non-nucleophilic base', 'Enolates are nucleophilic at carbon', 'Base removes α-hydrogen → enolate (resonance-stabilized carbanion)', 'Kinetic vs thermodynamic enolate']
           },
           {
             label: 'LDA (lithium diisopropylamide)',
-            options: ['strong, non-nucleophilic base', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Enolates are nucleophilic at carbon', 'strong, non-nucleophilic base', 'Kinetic vs thermodynamic enolate', 'Base removes α-hydrogen → enolate (resonance-stabilized carbanion)']
           },
           {
             label: 'Kinetic vs thermodynamic enolate',
-            options: ['Kinetic vs thermodynamic enolate', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['strong, non-nucleophilic base', 'Kinetic vs thermodynamic enolate', 'Enolates are nucleophilic at carbon', 'Base removes α-hydrogen → enolate (resonance-stabilized carbanion)']
           }
         ],
-        correctAnswers: ['Base removes α-hydrogen → enolate (resonance-stabi', 'strong, non-nucleophilic base', 'Kinetic vs thermodynamic enolate'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Enolate Formation.'
+        correctAnswers: ['Base removes α-hydrogen → enolate (resonance-stabilized carbanion)', 'strong, non-nucleophilic base', 'Kinetic vs thermodynamic enolate'],
+        hint1: 'Think about what each concept specifically describes in Enolate Formation.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Enolate Formation describes a specific idea. Base removes α-hydrogen → enolate (resonance-stabilized carbanion). LDA (lithium diisopropylamide): strong, non-nucleophilic base. Kinetic vs thermodynamic enolate.'
       }
     }
   ]

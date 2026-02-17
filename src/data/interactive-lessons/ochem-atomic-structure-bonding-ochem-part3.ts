@@ -30,31 +30,31 @@ Hybridization determines molecular geometry
       id: 'atomi3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of hybridization?',
+            question: 'What does "sp³ hybridization" refer to in this topic?',
             options: [
-              'sp³ hybridization',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              '3 bonds, trigonal planar (120°)',
+              '4 bonds, tetrahedral (109.5°)',
+              'Hybridization determines molecular geometry',
+              '2 bonds, linear (180°)'
             ],
-            correctAnswer: 0,
-            explanation: 'sp³ hybridization: 4 bonds, tetrahedral (109.5°)'
+            correctAnswer: 1,
+            explanation: 'Correct — sp³ hybridization: 4 bonds, tetrahedral (109.5°). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of hybridization, which is accurate?',
+            question: 'Select the statement that correctly describes sp hybridization:',
             options: [
+              'Hybridization determines molecular geometry',
+              '4 bonds, tetrahedral (109.5°)',
               '2 bonds, linear (180°)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              '3 bonds, trigonal planar (120°)'
             ],
-            correctAnswer: 0,
-            explanation: 'sp hybridization: 2 bonds, linear (180°)'
+            correctAnswer: 2,
+            explanation: 'Correct — sp hybridization: 2 bonds, linear (180°). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Hybridization determines molecular geometry
       id: 'atomi3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'sp³ hybridization',
-            options: ['4 bonds, tetrahedral (109.5°)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['3 bonds, trigonal planar (120°)', '4 bonds, tetrahedral (109.5°)', '2 bonds, linear (180°)', 'Hybridization determines molecular geometry']
           },
           {
             label: 'sp² hybridization',
-            options: ['3 bonds, trigonal planar (120°)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['2 bonds, linear (180°)', '3 bonds, trigonal planar (120°)', 'Hybridization determines molecular geometry', '4 bonds, tetrahedral (109.5°)']
           },
           {
             label: 'sp hybridization',
-            options: ['2 bonds, linear (180°)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Hybridization determines molecular geometry', '4 bonds, tetrahedral (109.5°)', '2 bonds, linear (180°)', '3 bonds, trigonal planar (120°)']
           }
         ],
         correctAnswers: ['4 bonds, tetrahedral (109.5°)', '3 bonds, trigonal planar (120°)', '2 bonds, linear (180°)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Hybridization.'
+        hint1: 'Think about what each concept specifically describes in Hybridization.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Hybridization describes a specific idea. sp³ hybridization: 4 bonds, tetrahedral (109.5°). sp² hybridization: 3 bonds, trigonal planar (120°). sp hybridization: 2 bonds, linear (180°).'
       }
     }
   ]

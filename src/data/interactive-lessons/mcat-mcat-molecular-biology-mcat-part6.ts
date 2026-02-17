@@ -71,23 +71,28 @@ Gel electrophoresis: separates DNA/protein by size; smaller fragments migrate fa
       id: 'mcat-6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Biotechnology & Lab Techniques:',
-            options: ['PCR: amplifies specific DNA sequences using primers, Taq pol', 'Gel electrophoresis: separates DNA/protein by size; smaller ', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'PCR',
+            options: ['separates DNA/protein by size; smaller fragments migrate faster.', 'CRISPR-Cas9: gene editing using guide RNA to target specific sequences.', 'amplifies specific DNA sequences using primers, Taq polymerase, and thermal cycling.', 'Southern blot (DNA), Northern blot (RNA), Western blot (protein) — remember SNOWdrop.']
           },
           {
-            label: 'MCAT application:',
-            options: ['CRISPR-Cas9: gene editing using guide RNA to target specific', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Gel electrophoresis',
+            options: ['amplifies specific DNA sequences using primers, Taq polymerase, and thermal cycling.', 'Southern blot (DNA), Northern blot (RNA), Western blot (protein) — remember SNOWdrop.', 'CRISPR-Cas9: gene editing using guide RNA to target specific sequences.', 'separates DNA/protein by size; smaller fragments migrate faster.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['CRISPR-Cas9: gene editing using guide RNA to target specific sequences.', 'Southern blot (DNA), Northern blot (RNA), Western blot (protein) — remember SNOWdrop.', 'amplifies specific DNA sequences using primers, Taq polymerase, and thermal cycling.', 'separates DNA/protein by size; smaller fragments migrate faster.']
           }
         ],
-        correctAnswers: ['PCR: amplifies specific DNA sequences using primers, Taq pol', 'CRISPR-Cas9: gene editing using guide RNA to target specific'],
-        hint1: 'Think about biotechnology & lab techniques',
-        hint2: 'Consider the MCAT application',
-        explanation: 'PCR: amplifies specific DNA sequences using primers, Taq polymerase, and thermal cycling. CRISPR-Cas9: gene editing using guide RNA to target specific sequences.'
+        correctAnswers: ['amplifies specific DNA sequences using primers, Taq polymerase, and thermal cycling.', 'separates DNA/protein by size; smaller fragments migrate faster.', 'CRISPR-Cas9: gene editing using guide RNA to target specific sequences.'],
+        hint1: 'Think about what each concept specifically describes in Biotechnology & Lab Techniques.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Biotechnology & Lab Techniques describes a specific idea. PCR: amplifies specific DNA sequences using primers, Taq polymerase, and thermal cycling. Gel electrophoresis: separates DNA/protein by size; smaller fragments migrate faster. Key Insight: CRISPR-Cas9: gene editing using guide RNA to target specific sequences.'
       }
     }
   ]

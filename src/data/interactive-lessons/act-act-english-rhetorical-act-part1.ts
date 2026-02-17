@@ -18,20 +18,31 @@ Choose transitions based on the logical relationship between sentences.
       id: 'act-e1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes transitions connect ideas?',
+            question: 'What does "Transitions connect ideas" refer to in ACT prep?',
             options: [
-              'Transitions connect ideas is a key concept for ACT English/Reading',
-              'Choose transitions based on the logical relationship between sentences',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'Paragraph transitions: the first sentence should connect to the previous paragraph.',
+              'Choose transitions based on the logical relationship between sentences.',
+              'Sequence: first, then, finally, meanwhile, subsequently.',
+              'addition (furthermore), contrast (however), cause-effect (therefore).'
             ],
-            correctAnswer: 0,
-            explanation: 'Transitions connect ideas: addition (furthermore), contrast (however), cause-effect (therefore)'
+            correctAnswer: 3,
+            explanation: 'Correct — Transitions connect ideas: addition (furthermore), contrast (however), cause-effect (therefore). The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Key Insight?',
+            options: [
+              'Choose transitions based on the logical relationship between sentences.',
+              'addition (furthermore), contrast (however), cause-effect (therefore).',
+              'Paragraph transitions: the first sentence should connect to the previous paragraph.',
+              'Sequence: first, then, finally, meanwhile, subsequently.'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Key Insight: Paragraph transitions: the first sentence should connect to the previous paragraph. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Choose transitions based on the logical relationship between sentences.
       id: 'act-e1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for transitions & organization?',
+            question: 'Which of these accurately represents ACT Tip?',
             options: [
-              'Paragraph transitions: the first sentence should connect to the previous paragraph',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Sequence: first, then, finally, meanwhile, subsequently.',
+              'Paragraph transitions: the first sentence should connect to the previous paragraph.',
+              'addition (furthermore), contrast (however), cause-effect (therefore).',
+              'Choose transitions based on the logical relationship between sentences.'
             ],
             correctAnswer: 0,
-            explanation: 'Paragraph transitions: the first sentence should connect to the previous paragraph'
+            explanation: 'Correct — ACT Tip: Sequence: first, then, finally, meanwhile, subsequently. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Choose transitions based on the logical relationship between sentences.
       id: 'act-e1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Transitions & Organization:',
-            options: ['Transitions connect ideas: addition (furthermore),', 'Choose transitions based on the logical relationsh', 'Not applicable', 'None of these']
+            label: 'Transitions connect ideas',
+            options: ['Choose transitions based on the logical relationship between sentences.', 'Paragraph transitions: the first sentence should connect to the previous paragraph.', 'addition (furthermore), contrast (however), cause-effect (therefore).', 'Sequence: first, then, finally, meanwhile, subsequently.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Paragraph transitions: the first sentence should c', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Key Insight',
+            options: ['addition (furthermore), contrast (however), cause-effect (therefore).', 'Choose transitions based on the logical relationship between sentences.', 'Sequence: first, then, finally, meanwhile, subsequently.', 'Paragraph transitions: the first sentence should connect to the previous paragraph.']
+          },
+          {
+            label: 'ACT Tip',
+            options: ['addition (furthermore), contrast (however), cause-effect (therefore).', 'Sequence: first, then, finally, meanwhile, subsequently.', 'Paragraph transitions: the first sentence should connect to the previous paragraph.', 'Choose transitions based on the logical relationship between sentences.']
           }
         ],
-        correctAnswers: ['Transitions connect ideas: addition (furthermore),', 'Paragraph transitions: the first sentence should c'],
-        hint1: 'Think about transitions & organization',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Transitions connect ideas: addition (furthermore), contrast (however), cause-effect (therefore). Paragraph transitions: the first sentence should connect to the previous paragraph.'
+        correctAnswers: ['addition (furthermore), contrast (however), cause-effect (therefore).', 'Paragraph transitions: the first sentence should connect to the previous paragraph.', 'Sequence: first, then, finally, meanwhile, subsequently.'],
+        hint1: 'Think about what each concept specifically describes in English Rhetorical.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in English Rhetorical describes a specific idea. Transitions connect ideas: addition (furthermore), contrast (however), cause-effect (therefore). Key Insight: Paragraph transitions: the first sentence should connect to the previous paragraph. ACT Tip: Sequence: first, then, finally, meanwhile, subsequently.'
       }
     }
   ]

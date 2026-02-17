@@ -19,31 +19,31 @@ export const bioEvidencePart1Data = {
       id: 'evid1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes fossils show organisms changed over time?',
+            question: 'What does "Fossils show organisms changed over time" refer to in biology?',
             options: [
+              'Fossil record shows increasing complexity over time',
               'Fossils show organisms changed over time',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Radiometric dating determines fossil age',
+              'features of two groups (Tiktaalik, Archaeopteryx)'
             ],
-            correctAnswer: 0,
-            explanation: 'Fossils show organisms changed over time'
+            correctAnswer: 1,
+            explanation: 'Correct — Fossils show organisms changed over time. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of fossil record, which statement is accurate?',
+            question: 'In the context of Fossil Record, which explains Radiometric dating determines fossil age?',
             options: [
-              'Radiometric dating determines fossil age',
-              'emit revo degnahc smsinagro wohs slissoF',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'features of two groups (Tiktaalik, Archaeopteryx)',
+              'Fossil record shows increasing complexity over time',
+              'Fossils show organisms changed over time',
+              'Radiometric dating determines fossil age'
             ],
-            correctAnswer: 0,
-            explanation: 'Radiometric dating determines fossil age'
+            correctAnswer: 3,
+            explanation: 'Correct — Radiometric dating determines fossil age. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioEvidencePart1Data = {
       id: 'evid1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to fossil record?',
+            question: 'Which of these accurately represents Fossil record shows increasing…?',
             options: [
+              'Radiometric dating determines fossil age',
+              'features of two groups (Tiktaalik, Archaeopteryx)',
               'Fossil record shows increasing complexity over time',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Fossils show organisms changed over time'
             ],
-            correctAnswer: 0,
-            explanation: 'Fossil record shows increasing complexity over time'
+            correctAnswer: 2,
+            explanation: 'Correct — Fossil record shows increasing complexity over time. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioEvidencePart1Data = {
       id: 'evid1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Fossils show organisms changed over time is important in fossil record because',
-            options: ['Fossils show organisms changed over time', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Fossils show organisms changed over time',
+            options: ['features of two groups (Tiktaalik, Archaeopteryx)', 'Radiometric dating determines fossil age', 'Fossil record shows increasing complexity over time', 'Fossils show organisms changed over time']
           },
           {
-            label: 'Transitional fossils is important in fossil record because',
-            options: ['features of two groups (Tiktaalik, Archaeopteryx)', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Transitional fossils',
+            options: ['features of two groups (Tiktaalik, Archaeopteryx)', 'Fossils show organisms changed over time', 'Radiometric dating determines fossil age', 'Fossil record shows increasing complexity over time']
           },
           {
-            label: 'Radiometric dating determines fossil age is important in fossil record because',
-            options: ['Radiometric dating determines fossil age', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Radiometric dating determines fossil age',
+            options: ['Radiometric dating determines fossil age', 'Fossil record shows increasing complexity over time', 'features of two groups (Tiktaalik, Archaeopteryx)', 'Fossils show organisms changed over time']
           }
         ],
         correctAnswers: ['Fossils show organisms changed over time', 'features of two groups (Tiktaalik, Archaeopteryx)', 'Radiometric dating determines fossil age'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Fossil Record.'
+        hint1: 'Think about what each concept specifically describes in Fossil Record.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Fossil Record describes a specific idea. Fossils show organisms changed over time. Transitional fossils: features of two groups (Tiktaalik, Archaeopteryx). Radiometric dating determines fossil age.'
       }
     }
   ]

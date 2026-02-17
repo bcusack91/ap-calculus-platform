@@ -30,31 +30,31 @@ May need to complete the square or factor to reveal these forms
       id: 'inver4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of integrals leading to inverse trig?',
-            options: [
-              '∫1/√(a²-x²) dx = arcsin(x/a) + C',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: '∫1/√(a²-x²) dx = arcsin(x/a) + C'
-          },
-          {
-            question: 'In the context of integrals leading to inverse trig, which is accurate?',
+            question: 'Which of the following correctly describes ∫1/√(a²-x²) dx = arcsin(x/a) + C?',
             options: [
               'Recognize these forms in integrands',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              '∫1/√(a²-x²) dx = arcsin(x/a) + C',
+              '∫1/(a²+x²) dx = (1/a)arctan(x/a) + C',
+              'May need to complete the square or factor to reveal these forms'
             ],
-            correctAnswer: 0,
-            explanation: 'Recognize these forms in integrands'
+            correctAnswer: 1,
+            explanation: 'Correct — ∫1/√(a²-x²) dx = arcsin(x/a) + C. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Recognize these forms in integrands:',
+            options: [
+              '∫1/√(a²-x²) dx = arcsin(x/a) + C',
+              'May need to complete the square or factor to reveal these forms',
+              '∫1/(a²+x²) dx = (1/a)arctan(x/a) + C',
+              'Recognize these forms in integrands'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Recognize these forms in integrands. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ May need to complete the square or factor to reveal these forms
       id: 'inver4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to integrals leading to inverse trig?',
+            question: 'Regarding Integrals Leading to Inverse Trig, which correctly describes May need to complete the square or…?',
             options: [
+              '∫1/√(a²-x²) dx = arcsin(x/a) + C',
               'May need to complete the square or factor to reveal these forms',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              '∫1/(a²+x²) dx = (1/a)arctan(x/a) + C',
+              'Recognize these forms in integrands'
             ],
-            correctAnswer: 0,
-            explanation: 'May need to complete the square or factor to reveal these forms'
+            correctAnswer: 1,
+            explanation: 'Correct — May need to complete the square or factor to reveal these forms. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ May need to complete the square or factor to reveal these forms
       id: 'inver4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: '∫1/√(a²-x²) dx = arcsin(x/a) + C',
-            options: ['∫1/√(a²-x²) dx = arcsin(x/a) + C', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['∫1/(a²+x²) dx = (1/a)arctan(x/a) + C', 'May need to complete the square or factor to reveal these forms', 'Recognize these forms in integrands', '∫1/√(a²-x²) dx = arcsin(x/a) + C']
           },
           {
             label: '∫1/(a²+x²) dx = (1/a)arctan(x/a) + C',
-            options: ['∫1/(a²+x²) dx = (1/a)arctan(x/a) + C', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Recognize these forms in integrands', '∫1/√(a²-x²) dx = arcsin(x/a) + C', 'May need to complete the square or factor to reveal these forms', '∫1/(a²+x²) dx = (1/a)arctan(x/a) + C']
           },
           {
             label: 'Recognize these forms in integrands',
-            options: ['Recognize these forms in integrands', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['∫1/(a²+x²) dx = (1/a)arctan(x/a) + C', 'May need to complete the square or factor to reveal these forms', 'Recognize these forms in integrands', '∫1/√(a²-x²) dx = arcsin(x/a) + C']
           }
         ],
         correctAnswers: ['∫1/√(a²-x²) dx = arcsin(x/a) + C', '∫1/(a²+x²) dx = (1/a)arctan(x/a) + C', 'Recognize these forms in integrands'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Integrals Leading to Inverse Trig.'
+        hint1: 'Think about what each concept specifically describes in Integrals Leading to Inverse Trig.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Integrals Leading to Inverse Trig describes a specific idea. ∫1/√(a²-x²) dx = arcsin(x/a) + C. ∫1/(a²+x²) dx = (1/a)arctan(x/a) + C. Recognize these forms in integrands.'
       }
     }
   ]

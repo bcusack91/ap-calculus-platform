@@ -30,31 +30,31 @@ disorder identification
       id: 'psych7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of synthesis & ap review?',
+            question: 'What does "Disorders exist on a continuum" refer to in psychology?',
             options: [
               'Disorders exist on a continuum',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'Diagnosis requires clinical judgment',
+              'Multiple factors contribute to disorders',
+              'disorder identification'
             ],
             correctAnswer: 0,
-            explanation: 'Disorders exist on a continuum'
+            explanation: 'Correct — Disorders exist on a continuum. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of synthesis & ap review, which is accurate?',
+            question: 'In the context of Synthesis & AP Review, which explains Diagnosis requires clinical judgment?',
             options: [
-              'Diagnosis requires clinical judgment',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Multiple factors contribute to disorders',
+              'disorder identification',
+              'Disorders exist on a continuum',
+              'Diagnosis requires clinical judgment'
             ],
-            correctAnswer: 0,
-            explanation: 'Diagnosis requires clinical judgment'
+            correctAnswer: 3,
+            explanation: 'Correct — Diagnosis requires clinical judgment. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ disorder identification
       id: 'psych7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Disorders exist on a continuum',
-            options: ['Disorders exist on a continuum', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Disorders exist on a continuum', 'disorder identification', 'Diagnosis requires clinical judgment', 'Multiple factors contribute to disorders']
           },
           {
             label: 'Multiple factors contribute to disorders',
-            options: ['Multiple factors contribute to disorders', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Disorders exist on a continuum', 'Multiple factors contribute to disorders', 'disorder identification', 'Diagnosis requires clinical judgment']
           },
           {
             label: 'Diagnosis requires clinical judgment',
-            options: ['Diagnosis requires clinical judgment', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Disorders exist on a continuum', 'disorder identification', 'Multiple factors contribute to disorders', 'Diagnosis requires clinical judgment']
           }
         ],
         correctAnswers: ['Disorders exist on a continuum', 'Multiple factors contribute to disorders', 'Diagnosis requires clinical judgment'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Synthesis & AP Review.'
+        hint1: 'Think about what each concept specifically describes in Synthesis & AP Review.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Synthesis & AP Review describes a specific idea. Disorders exist on a continuum. Multiple factors contribute to disorders. Diagnosis requires clinical judgment.'
       }
     }
   ]

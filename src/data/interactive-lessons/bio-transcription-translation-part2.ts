@@ -19,31 +19,31 @@ export const bioTranscriptionPart2Data = {
       id: 'tran2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes rna polymerase reads template strand 3\'→5\'?',
+            question: 'Which of the following correctly describes RNA polymerase reads template strand…?',
             options: [
               'RNA polymerase reads template strand 3\'→5\'',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'signals end of transcription',
+              'TATA box, signals start of transcription',
+              'mRNA is synthesized 5\'→3\''
             ],
             correctAnswer: 0,
-            explanation: 'RNA polymerase reads template strand 3\'→5\''
+            explanation: 'Correct — RNA polymerase reads template strand 3\'→5\'. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of transcription, which statement is accurate?',
+            question: 'Which of the following is true about Promoter?',
             options: [
-              'Promoter: TATA box, signals start of transcription',
-              '\'5→\'3 dnarts etalpmet sdaer esaremylop ANR',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'signals end of transcription',
+              'RNA polymerase reads template strand 3\'→5\'',
+              'mRNA is synthesized 5\'→3\'',
+              'TATA box, signals start of transcription'
             ],
-            correctAnswer: 0,
-            explanation: 'Promoter: TATA box, signals start of transcription'
+            correctAnswer: 3,
+            explanation: 'Correct — Promoter: TATA box, signals start of transcription. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioTranscriptionPart2Data = {
       id: 'tran2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to transcription?',
+            question: 'Which statement about Terminator is correct?',
             options: [
-              'Terminator: signals end of transcription',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'mRNA is synthesized 5\'→3\'',
+              'TATA box, signals start of transcription',
+              'signals end of transcription',
+              'RNA polymerase reads template strand 3\'→5\''
             ],
-            correctAnswer: 0,
-            explanation: 'Terminator: signals end of transcription'
+            correctAnswer: 2,
+            explanation: 'Correct — Terminator: signals end of transcription. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,24 @@ export const bioTranscriptionPart2Data = {
       id: 'tran2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'RNA polymerase reads template strand 3\'→5\' is important in transcription because',
-            options: ['RNA polymerase reads template strand 3\'→5\'', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Promoter',
+            options: ['TATA box, signals start of transcription', 'RNA polymerase reads template strand 3\'→5\'', 'signals end of transcription', 'mRNA is synthesized 5\'→3\'']
           },
           {
-            label: 'mRNA is synthesized 5\'→3\' is important in transcription because',
-            options: ['mRNA is synthesized 5\'→3\'', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
-          },
-          {
-            label: 'Promoter is important in transcription because',
-            options: ['TATA box, signals start of transcription', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Terminator',
+            options: ['RNA polymerase reads template strand 3\'→5\'', 'TATA box, signals start of transcription', 'signals end of transcription', 'mRNA is synthesized 5\'→3\'']
           }
         ],
-        correctAnswers: ['RNA polymerase reads template strand 3\'→5\'', 'mRNA is synthesized 5\'→3\'', 'TATA box, signals start of transcription'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Transcription.'
+        correctAnswers: ['TATA box, signals start of transcription', 'signals end of transcription'],
+        hint1: 'Think about what each concept specifically describes in Transcription.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Transcription describes a specific idea. Promoter: TATA box, signals start of transcription. Terminator: signals end of transcription.'
       }
     }
   ]

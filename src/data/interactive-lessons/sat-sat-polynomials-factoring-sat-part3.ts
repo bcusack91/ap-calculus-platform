@@ -18,20 +18,31 @@ Synthetic division: shortcut when dividing by (x - c).
       id: 'sat-p3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes long division?',
+            question: 'Which of the following correctly describes Long division?',
             options: [
-              'Long division is a fundamental concept in SAT Math',
-              'Synthetic division: shortcut when dividing by (x - c)',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'The result: dividend = quotient × divisor + remainder.',
+              'divide polynomials like long division with numbers.',
+              'Useful for simplifying rational expressions.',
+              'shortcut when dividing by (x - c).'
             ],
-            correctAnswer: 0,
-            explanation: 'Long division: divide polynomials like long division with numbers'
+            correctAnswer: 1,
+            explanation: 'Correct — Long division: divide polynomials like long division with numbers. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Polynomial Division, which explains Key Insight?',
+            options: [
+              'shortcut when dividing by (x - c).',
+              'Useful for simplifying rational expressions.',
+              'The result: dividend = quotient × divisor + remainder.',
+              'divide polynomials like long division with numbers.'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Key Insight: The result: dividend = quotient × divisor + remainder. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Synthetic division: shortcut when dividing by (x - c).
       id: 'sat-p3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for polynomial division?',
+            question: 'Regarding Polynomial Division, which correctly describes SAT Tip?',
             options: [
-              'The result: dividend = quotient × divisor + remainder',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'Useful for simplifying rational expressions.',
+              'The result: dividend = quotient × divisor + remainder.',
+              'shortcut when dividing by (x - c).',
+              'divide polynomials like long division with numbers.'
             ],
             correctAnswer: 0,
-            explanation: 'The result: dividend = quotient × divisor + remainder'
+            explanation: 'Correct — SAT Tip: Useful for simplifying rational expressions. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Synthetic division: shortcut when dividing by (x - c).
       id: 'sat-p3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Polynomial Division:',
-            options: ['Long division: divide polynomials like long divisi', 'Synthetic division: shortcut when dividing by (x -', 'Not applicable', 'None of these']
+            label: 'Long division',
+            options: ['shortcut when dividing by (x - c).', 'The result: dividend = quotient × divisor + remainder.', 'Useful for simplifying rational expressions.', 'divide polynomials like long division with numbers.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['The result: dividend = quotient × divisor + remain', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Synthetic division',
+            options: ['shortcut when dividing by (x - c).', 'divide polynomials like long division with numbers.', 'Useful for simplifying rational expressions.', 'The result: dividend = quotient × divisor + remainder.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['Useful for simplifying rational expressions.', 'shortcut when dividing by (x - c).', 'The result: dividend = quotient × divisor + remainder.', 'divide polynomials like long division with numbers.']
           }
         ],
-        correctAnswers: ['Long division: divide polynomials like long divisi', 'The result: dividend = quotient × divisor + remain'],
-        hint1: 'Think about polynomial division',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'Long division: divide polynomials like long division with numbers. The result: dividend = quotient × divisor + remainder.'
+        correctAnswers: ['divide polynomials like long division with numbers.', 'shortcut when dividing by (x - c).', 'The result: dividend = quotient × divisor + remainder.'],
+        hint1: 'Think about what each concept specifically describes in Polynomial Division.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Polynomial Division describes a specific idea. Long division: divide polynomials like long division with numbers. Synthetic division: shortcut when dividing by (x - c). Key Insight: The result: dividend = quotient × divisor + remainder.'
       }
     }
   ]

@@ -18,20 +18,31 @@ Translate words to math: "is" = equals, "more than" = addition, "of" = multiplic
       id: 'sat-l5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes read the problem carefully — identify what x represents?',
+            question: 'Which of the following correctly describes Read the problem carefully — identify…?',
             options: [
-              'Read the problem carefully — identify what x represents is a fundamental concept in SAT Math',
-              'Translate words to math: "is" = equals, "more than" = addition, "of" = multiplication',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'Always check: does your answer make sense in context?.',
+              '"is" = equals, "more than" = addition, "of" = multiplication.',
+              'Set up the equation, then solve.',
+              'Read the problem carefully — identify what x represents.'
             ],
-            correctAnswer: 0,
-            explanation: 'Read the problem carefully — identify what x represents'
+            correctAnswer: 3,
+            explanation: 'Correct — Read the problem carefully — identify what x represents. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              'Read the problem carefully — identify what x represents.',
+              '"is" = equals, "more than" = addition, "of" = multiplication.',
+              'Always check: does your answer make sense in context?.',
+              'Set up the equation, then solve.'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Key Insight: Set up the equation, then solve. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Translate words to math: "is" = equals, "more than" = addition, "of" = multiplic
       id: 'sat-l5-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for word problem setup?',
+            question: 'Regarding Word Problem Setup, which correctly describes SAT Tip?',
             options: [
-              'Set up the equation, then solve',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'Read the problem carefully — identify what x represents.',
+              'Set up the equation, then solve.',
+              'Always check: does your answer make sense in context?.',
+              '"is" = equals, "more than" = addition, "of" = multiplication.'
             ],
-            correctAnswer: 0,
-            explanation: 'Set up the equation, then solve'
+            correctAnswer: 2,
+            explanation: 'Correct — SAT Tip: Always check: does your answer make sense in context?. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Translate words to math: "is" = equals, "more than" = addition, "of" = multiplic
       id: 'sat-l5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Word Problem Setup:',
-            options: ['Read the problem carefully — identify what x repre', 'Translate words to math: "is" = equals, "more than', 'Not applicable', 'None of these']
+            label: 'Translate words to math',
+            options: ['"is" = equals, "more than" = addition, "of" = multiplication.', 'Read the problem carefully — identify what x represents.', 'Always check: does your answer make sense in context?.', 'Set up the equation, then solve.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Set up the equation, then solve', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Key Insight',
+            options: ['Set up the equation, then solve.', '"is" = equals, "more than" = addition, "of" = multiplication.', 'Read the problem carefully — identify what x represents.', 'Always check: does your answer make sense in context?.']
+          },
+          {
+            label: 'SAT Tip',
+            options: ['Read the problem carefully — identify what x represents.', 'Set up the equation, then solve.', 'Always check: does your answer make sense in context?.', '"is" = equals, "more than" = addition, "of" = multiplication.']
           }
         ],
-        correctAnswers: ['Read the problem carefully — identify what x repre', 'Set up the equation, then solve'],
-        hint1: 'Think about word problem setup',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'Read the problem carefully — identify what x represents. Set up the equation, then solve.'
+        correctAnswers: ['"is" = equals, "more than" = addition, "of" = multiplication.', 'Set up the equation, then solve.', 'Always check: does your answer make sense in context?.'],
+        hint1: 'Think about what each concept specifically describes in Word Problem Setup.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Word Problem Setup describes a specific idea. Translate words to math: "is" = equals, "more than" = addition, "of" = multiplication. Key Insight: Set up the equation, then solve. SAT Tip: Always check: does your answer make sense in context?.'
       }
     }
   ]

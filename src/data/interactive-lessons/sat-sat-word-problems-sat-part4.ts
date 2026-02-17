@@ -18,20 +18,31 @@ Percent increase: new = original × (1 + r/100).
       id: 'sat-w4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes part = percent × whole → amount = (p/100) × total?',
+            question: 'Which of the following correctly describes Part = percent × whole → amount =…?',
             options: [
-              'Part = percent × whole → amount = (p/100) × total is a fundamental concept in SAT Math',
-              'Percent increase: new = original × (1 + r/100)',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'Finding percent change: ((new - original)/original) × 100.',
+              'new = original × (1 + r/100).',
+              'Percent decrease: new = original × (1 - r/100).',
+              'Part = percent × whole → amount = (p/100) × total.'
             ],
-            correctAnswer: 0,
-            explanation: 'Part = percent × whole → amount = (p/100) × total'
+            correctAnswer: 3,
+            explanation: 'Correct — Part = percent × whole → amount = (p/100) × total. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              'Finding percent change: ((new - original)/original) × 100.',
+              'Percent decrease: new = original × (1 - r/100).',
+              'Part = percent × whole → amount = (p/100) × total.',
+              'new = original × (1 + r/100).'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Key Insight: Percent decrease: new = original × (1 - r/100). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Percent increase: new = original × (1 + r/100).
       id: 'sat-w4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for percent problems?',
+            question: 'Regarding Percent Problems, which correctly describes SAT Tip?',
             options: [
-              'Percent decrease: new = original × (1 - r/100)',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'new = original × (1 + r/100).',
+              'Finding percent change: ((new - original)/original) × 100.',
+              'Part = percent × whole → amount = (p/100) × total.',
+              'Percent decrease: new = original × (1 - r/100).'
             ],
-            correctAnswer: 0,
-            explanation: 'Percent decrease: new = original × (1 - r/100)'
+            correctAnswer: 1,
+            explanation: 'Correct — SAT Tip: Finding percent change: ((new - original)/original) × 100. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Percent increase: new = original × (1 + r/100).
       id: 'sat-w4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Percent Problems:',
-            options: ['Part = percent × whole → amount = (p/100) × total', 'Percent increase: new = original × (1 + r/100)', 'Not applicable', 'None of these']
+            label: 'Percent increase',
+            options: ['Part = percent × whole → amount = (p/100) × total.', 'new = original × (1 + r/100).', 'Finding percent change: ((new - original)/original) × 100.', 'Percent decrease: new = original × (1 - r/100).']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Percent decrease: new = original × (1 - r/100)', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Key Insight',
+            options: ['Finding percent change: ((new - original)/original) × 100.', 'Part = percent × whole → amount = (p/100) × total.', 'Percent decrease: new = original × (1 - r/100).', 'new = original × (1 + r/100).']
+          },
+          {
+            label: 'SAT Tip',
+            options: ['Finding percent change: ((new - original)/original) × 100.', 'Part = percent × whole → amount = (p/100) × total.', 'new = original × (1 + r/100).', 'Percent decrease: new = original × (1 - r/100).']
           }
         ],
-        correctAnswers: ['Part = percent × whole → amount = (p/100) × total', 'Percent decrease: new = original × (1 - r/100)'],
-        hint1: 'Think about percent problems',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'Part = percent × whole → amount = (p/100) × total. Percent decrease: new = original × (1 - r/100).'
+        correctAnswers: ['new = original × (1 + r/100).', 'Percent decrease: new = original × (1 - r/100).', 'Finding percent change: ((new - original)/original) × 100.'],
+        hint1: 'Think about what each concept specifically describes in Percent Problems.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Percent Problems describes a specific idea. Percent increase: new = original × (1 + r/100). Key Insight: Percent decrease: new = original × (1 - r/100). SAT Tip: Finding percent change: ((new - original)/original) × 100.'
       }
     }
   ]

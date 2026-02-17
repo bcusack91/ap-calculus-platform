@@ -30,31 +30,31 @@ export const oChemIRMSPart3Data = {
       id: 'infra3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of key ir absorptions?',
+            question: 'Which of the following correctly describes O-H (alcohol)?',
             options: [
-              'O-H (alcohol)',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              '3300-3500 cm⁻¹',
+              '~2150 cm⁻¹; C≡N (nitrile): ~2250 cm⁻¹',
+              '1680-1750 cm⁻¹ (strong, sharp)',
+              '3200-3600 cm⁻¹ (broad)'
             ],
-            correctAnswer: 0,
-            explanation: 'O-H (alcohol): 3200-3600 cm⁻¹ (broad)'
+            correctAnswer: 3,
+            explanation: 'Correct — O-H (alcohol): 3200-3600 cm⁻¹ (broad). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of key ir absorptions, which is accurate?',
+            question: 'In the context of Key IR Absorptions, which explains C=O (carbonyl)?',
             options: [
-              '1680-1750 cm⁻¹ (strong, sharp)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              '~2150 cm⁻¹; C≡N (nitrile): ~2250 cm⁻¹',
+              '3300-3500 cm⁻¹',
+              '3200-3600 cm⁻¹ (broad)',
+              '1680-1750 cm⁻¹ (strong, sharp)'
             ],
-            correctAnswer: 0,
-            explanation: 'C=O (carbonyl): 1680-1750 cm⁻¹ (strong, sharp)'
+            correctAnswer: 3,
+            explanation: 'Correct — C=O (carbonyl): 1680-1750 cm⁻¹ (strong, sharp). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ export const oChemIRMSPart3Data = {
       id: 'infra3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'O-H (alcohol)',
-            options: ['3200-3600 cm⁻¹ (broad)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['3200-3600 cm⁻¹ (broad)', '3300-3500 cm⁻¹', '1680-1750 cm⁻¹ (strong, sharp)', '~2150 cm⁻¹; C≡N (nitrile): ~2250 cm⁻¹']
           },
           {
             label: 'N-H (amine)',
-            options: ['3300-3500 cm⁻¹', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['~2150 cm⁻¹; C≡N (nitrile): ~2250 cm⁻¹', '3200-3600 cm⁻¹ (broad)', '1680-1750 cm⁻¹ (strong, sharp)', '3300-3500 cm⁻¹']
           },
           {
             label: 'C=O (carbonyl)',
-            options: ['1680-1750 cm⁻¹ (strong, sharp)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['~2150 cm⁻¹; C≡N (nitrile): ~2250 cm⁻¹', '3200-3600 cm⁻¹ (broad)', '3300-3500 cm⁻¹', '1680-1750 cm⁻¹ (strong, sharp)']
           }
         ],
         correctAnswers: ['3200-3600 cm⁻¹ (broad)', '3300-3500 cm⁻¹', '1680-1750 cm⁻¹ (strong, sharp)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Key IR Absorptions.'
+        hint1: 'Think about what each concept specifically describes in Key IR Absorptions.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Key IR Absorptions describes a specific idea. O-H (alcohol): 3200-3600 cm⁻¹ (broad). N-H (amine): 3300-3500 cm⁻¹. C=O (carbonyl): 1680-1750 cm⁻¹ (strong, sharp).'
       }
     }
   ]

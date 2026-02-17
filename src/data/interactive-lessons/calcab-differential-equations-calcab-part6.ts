@@ -30,31 +30,31 @@ dT/dt = k(T - Tₛ) where Tₛ is ambient temperature
       id: 'diffe6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of problem-solving workshop?',
-            options: [
-              'Exponential growth/decay',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'Exponential growth/decay: dy/dt = ky → y = y₀·e^(kt)'
-          },
-          {
-            question: 'In the context of problem-solving workshop, which is accurate?',
+            question: 'Which statement accurately explains Exponential growth/decay?',
             options: [
               't₁/₂ = ln(2)/|k|',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'dT/dt = k(T - Tₛ) where Tₛ is ambient temperature',
+              'growth; k < 0: decay',
+              'dy/dt = ky → y = y₀·e^(kt)'
             ],
-            correctAnswer: 0,
-            explanation: 'Half-life: t₁/₂ = ln(2)/|k|'
+            correctAnswer: 3,
+            explanation: 'Correct — Exponential growth/decay: dy/dt = ky → y = y₀·e^(kt). The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Half-life?',
+            options: [
+              'dy/dt = ky → y = y₀·e^(kt)',
+              'dT/dt = k(T - Tₛ) where Tₛ is ambient temperature',
+              'growth; k < 0: decay',
+              't₁/₂ = ln(2)/|k|'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Half-life: t₁/₂ = ln(2)/|k|. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ dT/dt = k(T - Tₛ) where Tₛ is ambient temperature
       id: 'diffe6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to problem-solving workshop?',
+            question: 'Which of these accurately represents Newton\'s Law of Cooling?',
             options: [
-              'dT/dt = k(T - Tₛ) where Tₛ is ambient temperature',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'growth; k < 0: decay',
+              't₁/₂ = ln(2)/|k|',
+              'dy/dt = ky → y = y₀·e^(kt)',
+              'dT/dt = k(T - Tₛ) where Tₛ is ambient temperature'
             ],
-            correctAnswer: 0,
-            explanation: 'Newton\'s Law of Cooling: dT/dt = k(T - Tₛ) where Tₛ is ambient temperature'
+            correctAnswer: 3,
+            explanation: 'Correct — Newton\'s Law of Cooling: dT/dt = k(T - Tₛ) where Tₛ is ambient temperature. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ dT/dt = k(T - Tₛ) where Tₛ is ambient temperature
       id: 'diffe6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Exponential growth/decay',
-            options: ['dy/dt = ky → y = y₀·e^(kt)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['dy/dt = ky → y = y₀·e^(kt)', 't₁/₂ = ln(2)/|k|', 'dT/dt = k(T - Tₛ) where Tₛ is ambient temperature', 'growth; k < 0: decay']
           },
           {
             label: 'k > 0',
-            options: ['growth; k < 0: decay', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['t₁/₂ = ln(2)/|k|', 'growth; k < 0: decay', 'dy/dt = ky → y = y₀·e^(kt)', 'dT/dt = k(T - Tₛ) where Tₛ is ambient temperature']
           },
           {
             label: 'Half-life',
-            options: ['t₁/₂ = ln(2)/|k|', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['t₁/₂ = ln(2)/|k|', 'dy/dt = ky → y = y₀·e^(kt)', 'growth; k < 0: decay', 'dT/dt = k(T - Tₛ) where Tₛ is ambient temperature']
           }
         ],
         correctAnswers: ['dy/dt = ky → y = y₀·e^(kt)', 'growth; k < 0: decay', 't₁/₂ = ln(2)/|k|'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving Workshop.'
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Exponential growth/decay: dy/dt = ky → y = y₀·e^(kt). k > 0: growth; k < 0: decay. Half-life: t₁/₂ = ln(2)/|k|.'
       }
     }
   ]

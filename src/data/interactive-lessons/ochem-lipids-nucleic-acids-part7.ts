@@ -30,31 +30,31 @@ biochemistry through the organic lens
       id: 'lipid7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of synthesis & review?',
+            question: 'Which statement accurately explains Lipids and nucleic acids are essential…?',
             options: [
+              'Organic chemistry explains biological structure and function',
               'Lipids and nucleic acids are essential biomolecules',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'Spectroscopy can identify these molecules',
+              'biochemistry through the organic lens'
             ],
-            correctAnswer: 0,
-            explanation: 'Lipids and nucleic acids are essential biomolecules'
+            correctAnswer: 1,
+            explanation: 'Correct — Lipids and nucleic acids are essential biomolecules. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of synthesis & review, which is accurate?',
+            question: 'Which of the following is true about Spectroscopy can identify these…?',
             options: [
-              'Spectroscopy can identify these molecules',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'biochemistry through the organic lens',
+              'Organic chemistry explains biological structure and function',
+              'Lipids and nucleic acids are essential biomolecules',
+              'Spectroscopy can identify these molecules'
             ],
-            correctAnswer: 0,
-            explanation: 'Spectroscopy can identify these molecules'
+            correctAnswer: 3,
+            explanation: 'Correct — Spectroscopy can identify these molecules. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ biochemistry through the organic lens
       id: 'lipid7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Lipids and nucleic acids are essential biomolecules',
-            options: ['Lipids and nucleic acids are essential biomolecule', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Lipids and nucleic acids are essential…',
+            options: ['biochemistry through the organic lens', 'Organic chemistry explains biological structure and function', 'Spectroscopy can identify these molecules', 'Lipids and nucleic acids are essential biomolecules']
           },
           {
-            label: 'Organic chemistry explains biological structure and function',
-            options: ['Organic chemistry explains biological structure an', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Organic chemistry explains biological…',
+            options: ['Lipids and nucleic acids are essential biomolecules', 'biochemistry through the organic lens', 'Organic chemistry explains biological structure and function', 'Spectroscopy can identify these molecules']
           },
           {
-            label: 'Spectroscopy can identify these molecules',
-            options: ['Spectroscopy can identify these molecules', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Spectroscopy can identify these…',
+            options: ['Organic chemistry explains biological structure and function', 'Spectroscopy can identify these molecules', 'biochemistry through the organic lens', 'Lipids and nucleic acids are essential biomolecules']
           }
         ],
-        correctAnswers: ['Lipids and nucleic acids are essential biomolecule', 'Organic chemistry explains biological structure an', 'Spectroscopy can identify these molecules'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Synthesis & Review.'
+        correctAnswers: ['Lipids and nucleic acids are essential biomolecules', 'Organic chemistry explains biological structure and function', 'Spectroscopy can identify these molecules'],
+        hint1: 'Think about what each concept specifically describes in Synthesis & Review.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Synthesis & Review describes a specific idea. Lipids and nucleic acids are essential biomolecules. Organic chemistry explains biological structure and function. Spectroscopy can identify these molecules.'
       }
     }
   ]

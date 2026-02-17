@@ -30,31 +30,31 @@ displacement vs total distance
       id: 'ap-ex5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of applications of integrals review?',
+            question: 'Which of the following correctly describes Area between curves, volumes of…?',
             options: [
               'Area between curves, volumes of revolution (disk/washer)',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'Accumulation functions and net change',
+              'displacement vs total distance',
+              'Average value of a function'
             ],
             correctAnswer: 0,
-            explanation: 'Area between curves, volumes of revolution (disk/washer)'
+            explanation: 'Correct — Area between curves, volumes of revolution (disk/washer). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of applications of integrals review, which is accurate?',
+            question: 'In the context of Applications of Integrals Review, which explains Average value of a function?',
             options: [
+              'Accumulation functions and net change',
               'Average value of a function',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Area between curves, volumes of revolution (disk/washer)',
+              'displacement vs total distance'
             ],
-            correctAnswer: 0,
-            explanation: 'Average value of a function'
+            correctAnswer: 1,
+            explanation: 'Correct — Average value of a function. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ displacement vs total distance
       id: 'ap-ex5-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to applications of integrals review?',
+            question: 'Which of these accurately represents Particle motion?',
             options: [
-              'displacement vs total distance',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'Average value of a function',
+              'Accumulation functions and net change',
+              'Area between curves, volumes of revolution (disk/washer)',
+              'displacement vs total distance'
             ],
-            correctAnswer: 0,
-            explanation: 'Particle motion: displacement vs total distance'
+            correctAnswer: 3,
+            explanation: 'Correct — Particle motion: displacement vs total distance. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ displacement vs total distance
       id: 'ap-ex5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Area between curves, volumes of revolution (disk/washer)',
-            options: ['Area between curves, volumes of revolution (disk/w', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Area between curves, volumes of…',
+            options: ['Accumulation functions and net change', 'displacement vs total distance', 'Area between curves, volumes of revolution (disk/washer)', 'Average value of a function']
           },
           {
             label: 'Accumulation functions and net change',
-            options: ['Accumulation functions and net change', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Accumulation functions and net change', 'Area between curves, volumes of revolution (disk/washer)', 'Average value of a function', 'displacement vs total distance']
           },
           {
             label: 'Average value of a function',
-            options: ['Average value of a function', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['displacement vs total distance', 'Average value of a function', 'Accumulation functions and net change', 'Area between curves, volumes of revolution (disk/washer)']
           }
         ],
-        correctAnswers: ['Area between curves, volumes of revolution (disk/w', 'Accumulation functions and net change', 'Average value of a function'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Applications of Integrals Review.'
+        correctAnswers: ['Area between curves, volumes of revolution (disk/washer)', 'Accumulation functions and net change', 'Average value of a function'],
+        hint1: 'Think about what each concept specifically describes in Applications of Integrals Review.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Applications of Integrals Review describes a specific idea. Area between curves, volumes of revolution (disk/washer). Accumulation functions and net change. Average value of a function.'
       }
     }
   ]

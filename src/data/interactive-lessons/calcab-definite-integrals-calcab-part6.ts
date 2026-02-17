@@ -30,31 +30,31 @@ No need to take limits of Riemann sums — use antiderivatives instead
       id: 'defin6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of problem-solving workshop?',
+            question: 'What does "FTC Part 2" refer to in calculus?',
             options: [
-              'FTC Part 2',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'Find any antiderivative F of f, then evaluate at the bounds',
+              'No need to take limits of Riemann sums — use antiderivatives instead',
+              'This gives an exact method for computing definite integrals',
+              '∫ₐᵇ f(x)dx = F(b) - F(a) where F\' = f'
             ],
-            correctAnswer: 0,
-            explanation: 'FTC Part 2: ∫ₐᵇ f(x)dx = F(b) - F(a) where F\' = f'
+            correctAnswer: 3,
+            explanation: 'Correct — FTC Part 2: ∫ₐᵇ f(x)dx = F(b) - F(a) where F\' = f. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of problem-solving workshop, which is accurate?',
+            question: 'In the context of Problem-Solving Workshop, which explains This gives an exact method for…?',
             options: [
+              'No need to take limits of Riemann sums — use antiderivatives instead',
               'This gives an exact method for computing definite integrals',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              '∫ₐᵇ f(x)dx = F(b) - F(a) where F\' = f',
+              'Find any antiderivative F of f, then evaluate at the bounds'
             ],
-            correctAnswer: 0,
-            explanation: 'This gives an exact method for computing definite integrals'
+            correctAnswer: 1,
+            explanation: 'Correct — This gives an exact method for computing definite integrals. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ No need to take limits of Riemann sums — use antiderivatives instead
       id: 'defin6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to problem-solving workshop?',
+            question: 'Which of these accurately represents No need to take limits of Riemann sums…?',
             options: [
+              'This gives an exact method for computing definite integrals',
               'No need to take limits of Riemann sums — use antiderivatives instead',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              '∫ₐᵇ f(x)dx = F(b) - F(a) where F\' = f',
+              'Find any antiderivative F of f, then evaluate at the bounds'
             ],
-            correctAnswer: 0,
-            explanation: 'No need to take limits of Riemann sums — use antiderivatives instead'
+            correctAnswer: 1,
+            explanation: 'Correct — No need to take limits of Riemann sums — use antiderivatives instead. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ No need to take limits of Riemann sums — use antiderivatives instead
       id: 'defin6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'FTC Part 2',
-            options: ['∫ₐᵇ f(x)dx = F(b) - F(a) where F\' = f', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['∫ₐᵇ f(x)dx = F(b) - F(a) where F\' = f', 'Find any antiderivative F of f, then evaluate at the bounds', 'This gives an exact method for computing definite integrals', 'No need to take limits of Riemann sums — use antiderivatives instead']
           },
           {
-            label: 'Find any antiderivative F of f, then evaluate at the bounds',
-            options: ['Find any antiderivative F of f, then evaluate at t', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Find any antiderivative F of f, then…',
+            options: ['∫ₐᵇ f(x)dx = F(b) - F(a) where F\' = f', 'This gives an exact method for computing definite integrals', 'Find any antiderivative F of f, then evaluate at the bounds', 'No need to take limits of Riemann sums — use antiderivatives instead']
           },
           {
-            label: 'This gives an exact method for computing definite integrals',
-            options: ['This gives an exact method for computing definite ', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'This gives an exact method for…',
+            options: ['∫ₐᵇ f(x)dx = F(b) - F(a) where F\' = f', 'This gives an exact method for computing definite integrals', 'Find any antiderivative F of f, then evaluate at the bounds', 'No need to take limits of Riemann sums — use antiderivatives instead']
           }
         ],
-        correctAnswers: ['∫ₐᵇ f(x)dx = F(b) - F(a) where F\' = f', 'Find any antiderivative F of f, then evaluate at t', 'This gives an exact method for computing definite '],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving Workshop.'
+        correctAnswers: ['∫ₐᵇ f(x)dx = F(b) - F(a) where F\' = f', 'Find any antiderivative F of f, then evaluate at the bounds', 'This gives an exact method for computing definite integrals'],
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. FTC Part 2: ∫ₐᵇ f(x)dx = F(b) - F(a) where F\' = f. Find any antiderivative F of f, then evaluate at the bounds. This gives an exact method for computing definite integrals.'
       }
     }
   ]

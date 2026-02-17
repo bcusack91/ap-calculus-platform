@@ -71,23 +71,28 @@ Obedience (Milgram): people obey authority figures even when causing harm.
       id: 'mcat-4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Group Dynamics & Deviance:',
-            options: ['Conformity (Asch): people conform to group pressure even whe', 'Obedience (Milgram): people obey authority figures even when', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Conformity (Asch)',
+            options: ['Groupthink: desire for harmony leads to poor decision-making; bystander effect: diffusion of responsibility.', 'Deviance: violation of social norms; labeling theory: societal reaction creates deviant identity.', 'people conform to group pressure even when the group is wrong.', 'people obey authority figures even when causing harm.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Groupthink: desire for harmony leads to poor decision-making', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Obedience (Milgram)',
+            options: ['people conform to group pressure even when the group is wrong.', 'Groupthink: desire for harmony leads to poor decision-making; bystander effect: diffusion of responsibility.', 'people obey authority figures even when causing harm.', 'Deviance: violation of social norms; labeling theory: societal reaction creates deviant identity.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['people obey authority figures even when causing harm.', 'Deviance: violation of social norms; labeling theory: societal reaction creates deviant identity.', 'people conform to group pressure even when the group is wrong.', 'Groupthink: desire for harmony leads to poor decision-making; bystander effect: diffusion of responsibility.']
           }
         ],
-        correctAnswers: ['Conformity (Asch): people conform to group pressure even whe', 'Groupthink: desire for harmony leads to poor decision-making'],
-        hint1: 'Think about group dynamics & deviance',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Conformity (Asch): people conform to group pressure even when the group is wrong. Groupthink: desire for harmony leads to poor decision-making; bystander effect: diffusion of responsibility.'
+        correctAnswers: ['people conform to group pressure even when the group is wrong.', 'people obey authority figures even when causing harm.', 'Groupthink: desire for harmony leads to poor decision-making; bystander effect: diffusion of responsibility.'],
+        hint1: 'Think about what each concept specifically describes in Group Dynamics & Deviance.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Group Dynamics & Deviance describes a specific idea. Conformity (Asch): people conform to group pressure even when the group is wrong. Obedience (Milgram): people obey authority figures even when causing harm. Key Insight: Groupthink: desire for harmony leads to poor decision-making; bystander effect: diffusion of responsibility.'
       }
     }
   ]

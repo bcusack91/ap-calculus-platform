@@ -30,31 +30,31 @@ Cl (35/37) or Br (79/81) isotope pattern
       id: 'infra4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of mass spectrometry?',
+            question: 'Which of the following correctly describes Mass spectrometry?',
             options: [
-              'Mass spectrometry',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'measures mass-to-charge ratio (m/z)',
+              '¹³C isotope',
+              'gives molecular weight',
+              'Cl (35/37) or Br (79/81) isotope pattern'
             ],
             correctAnswer: 0,
-            explanation: 'Mass spectrometry: measures mass-to-charge ratio (m/z)'
+            explanation: 'Correct — Mass spectrometry: measures mass-to-charge ratio (m/z). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of mass spectrometry, which is accurate?',
+            question: 'In the context of Mass Spectrometry, which explains M+1 peak?',
             options: [
+              'gives molecular weight',
+              'measures mass-to-charge ratio (m/z)',
               '¹³C isotope',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Cl (35/37) or Br (79/81) isotope pattern'
             ],
-            correctAnswer: 0,
-            explanation: 'M+1 peak: ¹³C isotope'
+            correctAnswer: 2,
+            explanation: 'Correct — M+1 peak: ¹³C isotope. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Cl (35/37) or Br (79/81) isotope pattern
       id: 'infra4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Mass spectrometry',
-            options: ['measures mass-to-charge ratio (m/z)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Cl (35/37) or Br (79/81) isotope pattern', 'gives molecular weight', 'measures mass-to-charge ratio (m/z)', '¹³C isotope']
           },
           {
             label: 'Molecular ion peak (M⁺)',
-            options: ['gives molecular weight', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Cl (35/37) or Br (79/81) isotope pattern', '¹³C isotope', 'gives molecular weight', 'measures mass-to-charge ratio (m/z)']
           },
           {
             label: 'M+1 peak',
-            options: ['¹³C isotope', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Cl (35/37) or Br (79/81) isotope pattern', 'measures mass-to-charge ratio (m/z)', 'gives molecular weight', '¹³C isotope']
           }
         ],
         correctAnswers: ['measures mass-to-charge ratio (m/z)', 'gives molecular weight', '¹³C isotope'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Mass Spectrometry.'
+        hint1: 'Think about what each concept specifically describes in Mass Spectrometry.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Mass Spectrometry describes a specific idea. Mass spectrometry: measures mass-to-charge ratio (m/z). Molecular ion peak (M⁺): gives molecular weight. M+1 peak: ¹³C isotope.'
       }
     }
   ]

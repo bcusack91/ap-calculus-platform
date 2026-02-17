@@ -71,23 +71,28 @@ Nucleophilic acyl substitution: the leaving group departs as the nucleophile att
       id: 'mcat-5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Carboxylic Acid Derivatives:',
-            options: ['Order of reactivity: acid halide > anhydride > ester > amide', 'Nucleophilic acyl substitution: the leaving group departs as', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Order of reactivity',
+            options: ['acid halide > anhydride > ester > amide (most to least reactive).', 'Amide bond formation: condensation of carboxylic acid + amine — this is the peptide bond.', 'the leaving group departs as the nucleophile attacks.', 'Esters undergo hydrolysis (saponification with base) — critical for lipid metabolism.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Esters undergo hydrolysis (saponification with base) — criti', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Nucleophilic acyl substitution',
+            options: ['acid halide > anhydride > ester > amide (most to least reactive).', 'Amide bond formation: condensation of carboxylic acid + amine — this is the peptide bond.', 'the leaving group departs as the nucleophile attacks.', 'Esters undergo hydrolysis (saponification with base) — critical for lipid metabolism.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['Esters undergo hydrolysis (saponification with base) — critical for lipid metabolism.', 'acid halide > anhydride > ester > amide (most to least reactive).', 'Amide bond formation: condensation of carboxylic acid + amine — this is the peptide bond.', 'the leaving group departs as the nucleophile attacks.']
           }
         ],
-        correctAnswers: ['Order of reactivity: acid halide > anhydride > ester > amide', 'Esters undergo hydrolysis (saponification with base) — criti'],
-        hint1: 'Think about carboxylic acid derivatives',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Order of reactivity: acid halide > anhydride > ester > amide (most to least reactive). Esters undergo hydrolysis (saponification with base) — critical for lipid metabolism.'
+        correctAnswers: ['acid halide > anhydride > ester > amide (most to least reactive).', 'the leaving group departs as the nucleophile attacks.', 'Esters undergo hydrolysis (saponification with base) — critical for lipid metabolism.'],
+        hint1: 'Think about what each concept specifically describes in Carboxylic Acid Derivatives.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Carboxylic Acid Derivatives describes a specific idea. Order of reactivity: acid halide > anhydride > ester > amide (most to least reactive). Nucleophilic acyl substitution: the leaving group departs as the nucleophile attacks. Key Insight: Esters undergo hydrolysis (saponification with base) — critical for lipid metabolism.'
       }
     }
   ]

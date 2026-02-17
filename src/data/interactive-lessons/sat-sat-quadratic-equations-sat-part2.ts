@@ -18,20 +18,31 @@ Move the constant to the other side first.
       id: 'sat-q2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes completing the square?',
+            question: 'Which statement accurately explains Completing the square?',
             options: [
-              'Completing the square is a fundamental concept in SAT Math',
-              'Move the constant to the other side first',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'Move the constant to the other side first.',
+              'Add (b/2)² to both sides.',
+              'x² + bx + (b/2)² = (x + b/2)².',
+              'Vertex form: a(x - h)² + k where (h, k) is the vertex.'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Completing the square: x² + bx + (b/2)² = (x + b/2)². The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Key Insight?',
+            options: [
+              'Add (b/2)² to both sides.',
+              'x² + bx + (b/2)² = (x + b/2)².',
+              'Vertex form: a(x - h)² + k where (h, k) is the vertex.',
+              'Move the constant to the other side first.'
             ],
             correctAnswer: 0,
-            explanation: 'Completing the square: x² + bx + (b/2)² = (x + b/2)²'
+            explanation: 'Correct — Key Insight: Add (b/2)² to both sides. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Move the constant to the other side first.
       id: 'sat-q2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for completing the square?',
+            question: 'Regarding Completing the Square, which correctly describes SAT Tip?',
             options: [
-              'Add (b/2)² to both sides',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'x² + bx + (b/2)² = (x + b/2)².',
+              'Vertex form: a(x - h)² + k where (h, k) is the vertex.',
+              'Add (b/2)² to both sides.',
+              'Move the constant to the other side first.'
             ],
-            correctAnswer: 0,
-            explanation: 'Add (b/2)² to both sides'
+            correctAnswer: 1,
+            explanation: 'Correct — SAT Tip: Vertex form: a(x - h)² + k where (h, k) is the vertex. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Move the constant to the other side first.
       id: 'sat-q2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Completing the Square:',
-            options: ['Completing the square: x² + bx + (b/2)² = (x + b/2', 'Move the constant to the other side first', 'Not applicable', 'None of these']
+            label: 'Completing the square',
+            options: ['Move the constant to the other side first.', 'Add (b/2)² to both sides.', 'Vertex form: a(x - h)² + k where (h, k) is the vertex.', 'x² + bx + (b/2)² = (x + b/2)².']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Add (b/2)² to both sides', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Key Insight',
+            options: ['Vertex form: a(x - h)² + k where (h, k) is the vertex.', 'Move the constant to the other side first.', 'x² + bx + (b/2)² = (x + b/2)².', 'Add (b/2)² to both sides.']
+          },
+          {
+            label: 'SAT Tip',
+            options: ['Move the constant to the other side first.', 'x² + bx + (b/2)² = (x + b/2)².', 'Vertex form: a(x - h)² + k where (h, k) is the vertex.', 'Add (b/2)² to both sides.']
           }
         ],
-        correctAnswers: ['Completing the square: x² + bx + (b/2)² = (x + b/2', 'Add (b/2)² to both sides'],
-        hint1: 'Think about completing the square',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'Completing the square: x² + bx + (b/2)² = (x + b/2)². Add (b/2)² to both sides.'
+        correctAnswers: ['x² + bx + (b/2)² = (x + b/2)².', 'Add (b/2)² to both sides.', 'Vertex form: a(x - h)² + k where (h, k) is the vertex.'],
+        hint1: 'Think about what each concept specifically describes in Completing the Square.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Completing the Square describes a specific idea. Completing the square: x² + bx + (b/2)² = (x + b/2)². Key Insight: Add (b/2)² to both sides. SAT Tip: Vertex form: a(x - h)² + k where (h, k) is the vertex.'
       }
     }
   ]

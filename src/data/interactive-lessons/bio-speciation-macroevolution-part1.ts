@@ -19,31 +19,31 @@ export const bioSpeciationPart1Data = {
       id: 'spec1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes biological species concept?',
+            question: 'What does "Biological species concept" refer to in biology?',
             options: [
-              'can interbreed and produce fertile offspring',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'smallest monophyletic group',
+              'based on physical appearance',
+              'Reproductive isolation prevents gene flow between species',
+              'can interbreed and produce fertile offspring'
             ],
-            correctAnswer: 0,
-            explanation: 'Biological species concept: can interbreed and produce fertile offspring'
+            correctAnswer: 3,
+            explanation: 'Correct — Biological species concept: can interbreed and produce fertile offspring. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of species concepts, which statement is accurate?',
+            question: 'In the context of Species Concepts, which explains Phylogenetic species concept?',
             options: [
-              'Phylogenetic species concept: smallest monophyletic group',
-              'gnirpsffo elitref ecudorp dna deerbretni nac :tpecnoc seiceps lacigoloiB',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'can interbreed and produce fertile offspring',
+              'smallest monophyletic group',
+              'Reproductive isolation prevents gene flow between species',
+              'based on physical appearance'
             ],
-            correctAnswer: 0,
-            explanation: 'Phylogenetic species concept: smallest monophyletic group'
+            correctAnswer: 1,
+            explanation: 'Correct — Phylogenetic species concept: smallest monophyletic group. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioSpeciationPart1Data = {
       id: 'spec1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to species concepts?',
+            question: 'Regarding Species Concepts, which correctly describes Reproductive isolation prevents gene…?',
             options: [
+              'can interbreed and produce fertile offspring',
+              'based on physical appearance',
               'Reproductive isolation prevents gene flow between species',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'smallest monophyletic group'
             ],
-            correctAnswer: 0,
-            explanation: 'Reproductive isolation prevents gene flow between species'
+            correctAnswer: 2,
+            explanation: 'Correct — Reproductive isolation prevents gene flow between species. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioSpeciationPart1Data = {
       id: 'spec1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Biological species concept is important in species concepts because',
-            options: ['can interbreed and produce fertile offspring', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Biological species concept',
+            options: ['based on physical appearance', 'Reproductive isolation prevents gene flow between species', 'can interbreed and produce fertile offspring', 'smallest monophyletic group']
           },
           {
-            label: 'Morphological species concept is important in species concepts because',
-            options: ['based on physical appearance', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Morphological species concept',
+            options: ['can interbreed and produce fertile offspring', 'Reproductive isolation prevents gene flow between species', 'smallest monophyletic group', 'based on physical appearance']
           },
           {
-            label: 'Phylogenetic species concept is important in species concepts because',
-            options: ['smallest monophyletic group', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Phylogenetic species concept',
+            options: ['based on physical appearance', 'Reproductive isolation prevents gene flow between species', 'can interbreed and produce fertile offspring', 'smallest monophyletic group']
           }
         ],
         correctAnswers: ['can interbreed and produce fertile offspring', 'based on physical appearance', 'smallest monophyletic group'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Species Concepts.'
+        hint1: 'Think about what each concept specifically describes in Species Concepts.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Species Concepts describes a specific idea. Biological species concept: can interbreed and produce fertile offspring. Morphological species concept: based on physical appearance. Phylogenetic species concept: smallest monophyletic group.'
       }
     }
   ]

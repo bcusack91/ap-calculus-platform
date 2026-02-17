@@ -71,23 +71,24 @@ VSEPR theory predicts molecular geometry from electron pair repulsion around the
       id: 'mcat-2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Chemical Bonding:',
-            options: ['Ionic bonds form between metals and nonmetals via electron t', 'VSEPR theory predicts molecular geometry from electron pair ', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Key Insight',
+            options: ['Hybridization (sp, sp2, sp3) determines geometry: linear, trigonal planar, tetrahedral respectively.', 'Electronegativity differences determine bond polarity: <0.5 nonpolar, 0.5-1.7 polar covalent, >1.7 ionic.', 'VSEPR theory predicts molecular geometry from electron pair repulsion around the central atom.', 'Ionic bonds form between metals and nonmetals via electron transfer; covalent bonds share electrons.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Electronegativity differences determine bond polarity: <0.5 ', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'MCAT Tip',
+            options: ['Ionic bonds form between metals and nonmetals via electron transfer; covalent bonds share electrons.', 'VSEPR theory predicts molecular geometry from electron pair repulsion around the central atom.', 'Hybridization (sp, sp2, sp3) determines geometry: linear, trigonal planar, tetrahedral respectively.', 'Electronegativity differences determine bond polarity: <0.5 nonpolar, 0.5-1.7 polar covalent, >1.7 ionic.']
           }
         ],
-        correctAnswers: ['Ionic bonds form between metals and nonmetals via electron t', 'Electronegativity differences determine bond polarity: <0.5 '],
-        hint1: 'Think about chemical bonding',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Ionic bonds form between metals and nonmetals via electron transfer; covalent bonds share electrons. Electronegativity differences determine bond polarity: <0.5 nonpolar, 0.5-1.7 polar covalent, >1.7 ionic.'
+        correctAnswers: ['Electronegativity differences determine bond polarity: <0.5 nonpolar, 0.5-1.7 polar covalent, >1.7 ionic.', 'Hybridization (sp, sp2, sp3) determines geometry: linear, trigonal planar, tetrahedral respectively.'],
+        hint1: 'Think about what each concept specifically describes in Chemical Bonding.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Chemical Bonding describes a specific idea. Key Insight: Electronegativity differences determine bond polarity: <0.5 nonpolar, 0.5-1.7 polar covalent, >1.7 ionic. MCAT Tip: Hybridization (sp, sp2, sp3) determines geometry: linear, trigonal planar, tetrahedral respectively.'
       }
     }
   ]

@@ -30,31 +30,31 @@ Particular solutions follow the flow of the slope field
       id: 'euler5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of slope fields for bc?',
+            question: 'Which of the following correctly describes Slope fields show dy/dx at each (x,y)…?',
             options: [
               'Slope fields show dy/dx at each (x,y) point',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
+              'Match slope field patterns to differential equations',
+              'Particular solutions follow the flow of the slope field',
+              'curves where the slope is constant'
             ],
             correctAnswer: 0,
-            explanation: 'Slope fields show dy/dx at each (x,y) point'
+            explanation: 'Correct — Slope fields show dy/dx at each (x,y) point. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of slope fields for bc, which is accurate?',
+            question: 'Select the statement that correctly describes Isoclines:',
             options: [
               'curves where the slope is constant',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Match slope field patterns to differential equations',
+              'Particular solutions follow the flow of the slope field',
+              'Slope fields show dy/dx at each (x,y) point'
             ],
             correctAnswer: 0,
-            explanation: 'Isoclines: curves where the slope is constant'
+            explanation: 'Correct — Isoclines: curves where the slope is constant. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Particular solutions follow the flow of the slope field
       id: 'euler5-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to slope fields for bc?',
+            question: 'Regarding Slope Fields for BC, which correctly describes Particular solutions follow the flow of…?',
             options: [
               'Particular solutions follow the flow of the slope field',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'Slope fields show dy/dx at each (x,y) point',
+              'Match slope field patterns to differential equations',
+              'curves where the slope is constant'
             ],
             correctAnswer: 0,
-            explanation: 'Particular solutions follow the flow of the slope field'
+            explanation: 'Correct — Particular solutions follow the flow of the slope field. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Particular solutions follow the flow of the slope field
       id: 'euler5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Slope fields show dy/dx at each (x,y) point',
-            options: ['Slope fields show dy/dx at each (x,y) point', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Slope fields show dy/dx at each (x,y)…',
+            options: ['Slope fields show dy/dx at each (x,y) point', 'Particular solutions follow the flow of the slope field', 'Match slope field patterns to differential equations', 'curves where the slope is constant']
           },
           {
-            label: 'Match slope field patterns to differential equations',
-            options: ['Match slope field patterns to differential equatio', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Match slope field patterns to…',
+            options: ['Slope fields show dy/dx at each (x,y) point', 'Match slope field patterns to differential equations', 'Particular solutions follow the flow of the slope field', 'curves where the slope is constant']
           },
           {
             label: 'Isoclines',
-            options: ['curves where the slope is constant', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Slope fields show dy/dx at each (x,y) point', 'Particular solutions follow the flow of the slope field', 'Match slope field patterns to differential equations', 'curves where the slope is constant']
           }
         ],
-        correctAnswers: ['Slope fields show dy/dx at each (x,y) point', 'Match slope field patterns to differential equatio', 'curves where the slope is constant'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Slope Fields for BC.'
+        correctAnswers: ['Slope fields show dy/dx at each (x,y) point', 'Match slope field patterns to differential equations', 'curves where the slope is constant'],
+        hint1: 'Think about what each concept specifically describes in Slope Fields for BC.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Slope Fields for BC describes a specific idea. Slope fields show dy/dx at each (x,y) point. Match slope field patterns to differential equations. Isoclines: curves where the slope is constant.'
       }
     }
   ]

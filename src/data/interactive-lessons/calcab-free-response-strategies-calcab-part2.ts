@@ -30,31 +30,31 @@ State theorems by name and verify their hypotheses
       id: 'free-2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of justification & communication?',
-            options: [
-              'Use calculus-based justifications',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'Use calculus-based justifications: "Since f\' > 0 on (a,b), f is increasing"'
-          },
-          {
-            question: 'In the context of justification & communication, which is accurate?',
+            question: 'Which statement accurately explains Use calculus-based justifications?',
             options: [
               '"Since f is continuous on [a,b] and differentiable on (a,b), by MVT..."',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              '"Since f is continuous and f(a) < N < f(b), by IVT there exists c..."',
+              'State theorems by name and verify their hypotheses',
+              '"Since f\' > 0 on (a,b), f is increasing"'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Use calculus-based justifications: "Since f\' > 0 on (a,b), f is increasing". The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes MVT:',
+            options: [
+              '"Since f is continuous on [a,b] and differentiable on (a,b), by MVT..."',
+              'State theorems by name and verify their hypotheses',
+              '"Since f\' > 0 on (a,b), f is increasing"',
+              '"Since f is continuous and f(a) < N < f(b), by IVT there exists c..."'
             ],
             correctAnswer: 0,
-            explanation: 'MVT: "Since f is continuous on [a,b] and differentiable on (a,b), by MVT..."'
+            explanation: 'Correct — MVT: "Since f is continuous on [a,b] and differentiable on (a,b), by MVT...". Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ State theorems by name and verify their hypotheses
       id: 'free-2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to justification & communication?',
+            question: 'Which statement about State theorems by name and verify their… is correct?',
             options: [
+              '"Since f is continuous on [a,b] and differentiable on (a,b), by MVT..."',
+              '"Since f is continuous and f(a) < N < f(b), by IVT there exists c..."',
               'State theorems by name and verify their hypotheses',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              '"Since f\' > 0 on (a,b), f is increasing"'
             ],
-            correctAnswer: 0,
-            explanation: 'State theorems by name and verify their hypotheses'
+            correctAnswer: 2,
+            explanation: 'Correct — State theorems by name and verify their hypotheses. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ State theorems by name and verify their hypotheses
       id: 'free-2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Use calculus-based justifications',
-            options: ['"Since f\' > 0 on (a,b), f is increasing"', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['"Since f is continuous on [a,b] and differentiable on (a,b), by MVT..."', '"Since f is continuous and f(a) < N < f(b), by IVT there exists c..."', '"Since f\' > 0 on (a,b), f is increasing"', 'State theorems by name and verify their hypotheses']
           },
           {
             label: 'IVT',
-            options: ['"Since f is continuous and f(a) < N < f(b), by IVT', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['"Since f is continuous on [a,b] and differentiable on (a,b), by MVT..."', 'State theorems by name and verify their hypotheses', '"Since f is continuous and f(a) < N < f(b), by IVT there exists c..."', '"Since f\' > 0 on (a,b), f is increasing"']
           },
           {
             label: 'MVT',
-            options: ['"Since f is continuous on [a,b] and differentiable', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['State theorems by name and verify their hypotheses', '"Since f is continuous on [a,b] and differentiable on (a,b), by MVT..."', '"Since f\' > 0 on (a,b), f is increasing"', '"Since f is continuous and f(a) < N < f(b), by IVT there exists c..."']
           }
         ],
-        correctAnswers: ['"Since f\' > 0 on (a,b), f is increasing"', '"Since f is continuous and f(a) < N < f(b), by IVT', '"Since f is continuous on [a,b] and differentiable'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Justification & Communication.'
+        correctAnswers: ['"Since f\' > 0 on (a,b), f is increasing"', '"Since f is continuous and f(a) < N < f(b), by IVT there exists c..."', '"Since f is continuous on [a,b] and differentiable on (a,b), by MVT..."'],
+        hint1: 'Think about what each concept specifically describes in Justification & Communication.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Justification & Communication describes a specific idea. Use calculus-based justifications: "Since f\' > 0 on (a,b), f is increasing". IVT: "Since f is continuous and f(a) < N < f(b), by IVT there exists c...". MVT: "Since f is continuous on [a,b] and differentiable on (a,b), by MVT...".'
       }
     }
   ]

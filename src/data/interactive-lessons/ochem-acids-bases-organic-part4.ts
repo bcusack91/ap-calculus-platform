@@ -30,31 +30,31 @@ Nucleophiles are Lewis bases; electrophiles are Lewis acids
       id: 'acids4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of lewis acids & bases?',
+            question: 'What does "Lewis acid" refer to in this topic?',
             options: [
-              'Lewis acid',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'electron pair acceptor',
+              'electron pair donor',
+              'Nucleophiles are Lewis bases; electrophiles are Lewis acids',
+              'BF₃ is a Lewis acid (empty p orbital)'
             ],
             correctAnswer: 0,
-            explanation: 'Lewis acid: electron pair acceptor'
+            explanation: 'Correct — Lewis acid: electron pair acceptor. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of lewis acids & bases, which is accurate?',
+            question: 'In the context of Lewis Acids & Bases, which explains BF₃ is a Lewis acid (empty p orbital)?',
             options: [
-              'BF₃ is a Lewis acid (empty p orbital)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'electron pair donor',
+              'electron pair acceptor',
+              'Nucleophiles are Lewis bases; electrophiles are Lewis acids',
+              'BF₃ is a Lewis acid (empty p orbital)'
             ],
-            correctAnswer: 0,
-            explanation: 'BF₃ is a Lewis acid (empty p orbital)'
+            correctAnswer: 3,
+            explanation: 'Correct — BF₃ is a Lewis acid (empty p orbital). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,24 @@ Nucleophiles are Lewis bases; electrophiles are Lewis acids
       id: 'acids4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Lewis acid',
-            options: ['electron pair acceptor', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Nucleophiles are Lewis bases; electrophiles are Lewis acids', 'electron pair donor', 'BF₃ is a Lewis acid (empty p orbital)', 'electron pair acceptor']
           },
           {
             label: 'Lewis base',
-            options: ['electron pair donor', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
-          },
-          {
-            label: 'BF₃ is a Lewis acid (empty p orbital)',
-            options: ['BF₃ is a Lewis acid (empty p orbital)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Nucleophiles are Lewis bases; electrophiles are Lewis acids', 'BF₃ is a Lewis acid (empty p orbital)', 'electron pair donor', 'electron pair acceptor']
           }
         ],
-        correctAnswers: ['electron pair acceptor', 'electron pair donor', 'BF₃ is a Lewis acid (empty p orbital)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Lewis Acids & Bases.'
+        correctAnswers: ['electron pair acceptor', 'electron pair donor'],
+        hint1: 'Think about what each concept specifically describes in Lewis Acids & Bases.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Lewis Acids & Bases describes a specific idea. Lewis acid: electron pair acceptor. Lewis base: electron pair donor.'
       }
     }
   ]

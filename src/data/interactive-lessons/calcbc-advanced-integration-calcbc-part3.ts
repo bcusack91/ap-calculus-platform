@@ -30,31 +30,31 @@ Keep the overall strategy clear; don't get lost in algebra
       id: 'advan3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of combining techniques?',
+            question: 'What does "Some integrals require multiple…" refer to in calculus?',
             options: [
+              'Keep the overall strategy clear; don\'t get lost in algebra',
+              'partial fractions then u-substitution',
               'Some integrals require multiple techniques in sequence',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
+              'u-sub then integration by parts'
             ],
-            correctAnswer: 0,
-            explanation: 'Some integrals require multiple techniques in sequence'
+            correctAnswer: 2,
+            explanation: 'Correct — Some integrals require multiple techniques in sequence. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of combining techniques, which is accurate?',
+            question: 'Select the statement that correctly describes Example:',
             options: [
+              'This is a common misconception about the topic',
+              'Some integrals require multiple techniques in sequence',
               'u-sub then integration by parts',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Keep the overall strategy clear; don\'t get lost in algebra'
             ],
-            correctAnswer: 0,
-            explanation: 'Example: u-sub then integration by parts'
+            correctAnswer: 2,
+            explanation: 'Correct — Example: u-sub then integration by parts. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Keep the overall strategy clear; don't get lost in algebra
       id: 'advan3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to combining techniques?',
+            question: 'Regarding Combining Techniques, which correctly describes Keep the overall strategy clear; don\'t…?',
             options: [
+              'Some integrals require multiple techniques in sequence',
+              'partial fractions then u-substitution',
               'Keep the overall strategy clear; don\'t get lost in algebra',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'u-sub then integration by parts'
             ],
-            correctAnswer: 0,
-            explanation: 'Keep the overall strategy clear; don\'t get lost in algebra'
+            correctAnswer: 2,
+            explanation: 'Correct — Keep the overall strategy clear; don\'t get lost in algebra. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,24 @@ Keep the overall strategy clear; don't get lost in algebra
       id: 'advan3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Some integrals require multiple techniques in sequence',
-            options: ['Some integrals require multiple techniques in sequ', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Example',
+            options: ['partial fractions then u-substitution', 'Keep the overall strategy clear; don\'t get lost in algebra', 'Some integrals require multiple techniques in sequence', 'u-sub then integration by parts']
           },
           {
             label: 'Example',
-            options: ['partial fractions then u-substitution', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
-          },
-          {
-            label: 'Example',
-            options: ['u-sub then integration by parts', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Keep the overall strategy clear; don\'t get lost in algebra', 'u-sub then integration by parts', 'partial fractions then u-substitution', 'Some integrals require multiple techniques in sequence']
           }
         ],
-        correctAnswers: ['Some integrals require multiple techniques in sequ', 'partial fractions then u-substitution', 'u-sub then integration by parts'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Combining Techniques.'
+        correctAnswers: ['partial fractions then u-substitution', 'u-sub then integration by parts'],
+        hint1: 'Think about what each concept specifically describes in Combining Techniques.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Combining Techniques describes a specific idea. Example: partial fractions then u-substitution. Example: u-sub then integration by parts.'
       }
     }
   ]

@@ -71,23 +71,28 @@ Sarcomere: functional unit of muscle; actin (thin) + myosin (thick); sliding fil
       id: 'mcat-1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Musculoskeletal System:',
-            options: ['Skeletal muscle: voluntary, striated, multinucleated; Smooth', 'Sarcomere: functional unit of muscle; actin (thin) + myosin ', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Skeletal muscle',
+            options: ['voluntary, striated, multinucleated; Smooth muscle: involuntary, non-striated; Cardiac: involuntary, striated, intercalated discs.', 'Muscle contraction: Ca2+ released from SR, binds troponin, exposes binding sites, myosin pulls actin.', 'Bone: osteoblasts build, osteoclasts break down; regulated by PTH (resorption) and calcitonin (deposition).', 'functional unit of muscle; actin (thin) + myosin (thick); sliding filament theory.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Muscle contraction: Ca2+ released from SR, binds troponin, e', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Sarcomere',
+            options: ['Bone: osteoblasts build, osteoclasts break down; regulated by PTH (resorption) and calcitonin (deposition).', 'functional unit of muscle; actin (thin) + myosin (thick); sliding filament theory.', 'voluntary, striated, multinucleated; Smooth muscle: involuntary, non-striated; Cardiac: involuntary, striated, intercalated discs.', 'Muscle contraction: Ca2+ released from SR, binds troponin, exposes binding sites, myosin pulls actin.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['voluntary, striated, multinucleated; Smooth muscle: involuntary, non-striated; Cardiac: involuntary, striated, intercalated discs.', 'functional unit of muscle; actin (thin) + myosin (thick); sliding filament theory.', 'Bone: osteoblasts build, osteoclasts break down; regulated by PTH (resorption) and calcitonin (deposition).', 'Muscle contraction: Ca2+ released from SR, binds troponin, exposes binding sites, myosin pulls actin.']
           }
         ],
-        correctAnswers: ['Skeletal muscle: voluntary, striated, multinucleated; Smooth', 'Muscle contraction: Ca2+ released from SR, binds troponin, e'],
-        hint1: 'Think about musculoskeletal system',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Skeletal muscle: voluntary, striated, multinucleated; Smooth muscle: involuntary, non-striated; Cardiac: involuntary, striated, intercalated discs. Muscle contraction: Ca2+ released from SR, binds troponin, exposes binding sites, myosin pulls actin.'
+        correctAnswers: ['voluntary, striated, multinucleated; Smooth muscle: involuntary, non-striated; Cardiac: involuntary, striated, intercalated discs.', 'functional unit of muscle; actin (thin) + myosin (thick); sliding filament theory.', 'Muscle contraction: Ca2+ released from SR, binds troponin, exposes binding sites, myosin pulls actin.'],
+        hint1: 'Think about what each concept specifically describes in Anatomy Physiology.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Anatomy Physiology describes a specific idea. Skeletal muscle: voluntary, striated, multinucleated; Smooth muscle: involuntary, non-striated; Cardiac: involuntary, striated, intercalated discs. Sarcomere: functional unit of muscle; actin (thin) + myosin (thick); sliding filament theory. Key Insight: Muscle contraction: Ca2+ released from SR, binds troponin, exposes binding sites, myosin pulls actin.'
       }
     }
   ]

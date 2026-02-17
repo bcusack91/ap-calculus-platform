@@ -30,31 +30,31 @@ MVT requires both continuity on [a,b] and differentiability on (a,b)
       id: 'appli3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of mean value theorem?',
-            options: [
-              'MVT',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'MVT: if f is continuous on [a,b] and differentiable on (a,b), then f\'(c) = [f(b)-f(a)]/(b-a) for some c in (a,b)'
-          },
-          {
-            question: 'In the context of mean value theorem, which is accurate?',
+            question: 'Which of the following correctly describes MVT?',
             options: [
               'Rolle\'s Theorem is MVT with f(a) = f(b), giving f\'(c) = 0',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'There exists at least one point where the instantaneous rate equals the average rate',
+              'MVT requires both continuity on [a,b] and differentiability on (a,b)',
+              'if f is continuous on [a,b] and differentiable on (a,b), then f\'(c) = [f(b)-f(a)]/(b-a) for some c in (a,b)'
             ],
-            correctAnswer: 0,
-            explanation: 'Rolle\'s Theorem is MVT with f(a) = f(b), giving f\'(c) = 0'
+            correctAnswer: 3,
+            explanation: 'Correct — MVT: if f is continuous on [a,b] and differentiable on (a,b), then f\'(c) = [f(b)-f(a)]/(b-a) for some c in (a,b). The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Mean Value Theorem, which explains Rolle\'s Theorem is MVT with f(a) =…?',
+            options: [
+              'There exists at least one point where the instantaneous rate equals the average rate',
+              'if f is continuous on [a,b] and differentiable on (a,b), then f\'(c) = [f(b)-f(a)]/(b-a) for some c in (a,b)',
+              'MVT requires both continuity on [a,b] and differentiability on (a,b)',
+              'Rolle\'s Theorem is MVT with f(a) = f(b), giving f\'(c) = 0'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Rolle\'s Theorem is MVT with f(a) = f(b), giving f\'(c) = 0. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ MVT requires both continuity on [a,b] and differentiability on (a,b)
       id: 'appli3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to mean value theorem?',
+            question: 'Which of these accurately represents MVT requires both continuity on [a,b]…?',
             options: [
-              'MVT requires both continuity on [a,b] and differentiability on (a,b)',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'if f is continuous on [a,b] and differentiable on (a,b), then f\'(c) = [f(b)-f(a)]/(b-a) for some c in (a,b)',
+              'Rolle\'s Theorem is MVT with f(a) = f(b), giving f\'(c) = 0',
+              'There exists at least one point where the instantaneous rate equals the average rate',
+              'MVT requires both continuity on [a,b] and differentiability on (a,b)'
             ],
-            correctAnswer: 0,
-            explanation: 'MVT requires both continuity on [a,b] and differentiability on (a,b)'
+            correctAnswer: 3,
+            explanation: 'Correct — MVT requires both continuity on [a,b] and differentiability on (a,b). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ MVT requires both continuity on [a,b] and differentiability on (a,b)
       id: 'appli3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'MVT',
-            options: ['if f is continuous on [a,b] and differentiable on ', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['if f is continuous on [a,b] and differentiable on (a,b), then f\'(c) = [f(b)-f(a)]/(b-a) for some c in (a,b)', 'MVT requires both continuity on [a,b] and differentiability on (a,b)', 'There exists at least one point where the instantaneous rate equals the average rate', 'Rolle\'s Theorem is MVT with f(a) = f(b), giving f\'(c) = 0']
           },
           {
-            label: 'There exists at least one point where the instantaneous rate equals the average rate',
-            options: ['There exists at least one point where the instanta', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'There exists at least one point where…',
+            options: ['Rolle\'s Theorem is MVT with f(a) = f(b), giving f\'(c) = 0', 'if f is continuous on [a,b] and differentiable on (a,b), then f\'(c) = [f(b)-f(a)]/(b-a) for some c in (a,b)', 'There exists at least one point where the instantaneous rate equals the average rate', 'MVT requires both continuity on [a,b] and differentiability on (a,b)']
           },
           {
-            label: 'Rolle\'s Theorem is MVT with f(a) = f(b), giving f\'(c) = 0',
-            options: ['Rolle\'s Theorem is MVT with f(a) = f(b), giving f\'', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Rolle\'s Theorem is MVT with f(a) =…',
+            options: ['if f is continuous on [a,b] and differentiable on (a,b), then f\'(c) = [f(b)-f(a)]/(b-a) for some c in (a,b)', 'MVT requires both continuity on [a,b] and differentiability on (a,b)', 'There exists at least one point where the instantaneous rate equals the average rate', 'Rolle\'s Theorem is MVT with f(a) = f(b), giving f\'(c) = 0']
           }
         ],
-        correctAnswers: ['if f is continuous on [a,b] and differentiable on ', 'There exists at least one point where the instanta', 'Rolle\'s Theorem is MVT with f(a) = f(b), giving f\''],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Mean Value Theorem.'
+        correctAnswers: ['if f is continuous on [a,b] and differentiable on (a,b), then f\'(c) = [f(b)-f(a)]/(b-a) for some c in (a,b)', 'There exists at least one point where the instantaneous rate equals the average rate', 'Rolle\'s Theorem is MVT with f(a) = f(b), giving f\'(c) = 0'],
+        hint1: 'Think about what each concept specifically describes in Mean Value Theorem.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Mean Value Theorem describes a specific idea. MVT: if f is continuous on [a,b] and differentiable on (a,b), then f\'(c) = [f(b)-f(a)]/(b-a) for some c in (a,b). There exists at least one point where the instantaneous rate equals the average rate. Rolle\'s Theorem is MVT with f(a) = f(b), giving f\'(c) = 0.'
       }
     }
   ]

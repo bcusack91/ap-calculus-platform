@@ -30,31 +30,31 @@ Substitute known values AFTER differentiating, not before
       id: 'appli1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of related rates?',
+            question: 'Which of the following correctly describes Related rates?',
             options: [
-              'Related rates',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'draw a picture, identify variables, write an equation, differentiate with respect to t',
+              'quantities changing with respect to time, connected by an equation',
+              'Substitute known values AFTER differentiating, not before',
+              'd/dt[r²] = 2r · dr/dt'
             ],
-            correctAnswer: 0,
-            explanation: 'Related rates: quantities changing with respect to time, connected by an equation'
+            correctAnswer: 1,
+            explanation: 'Correct — Related rates: quantities changing with respect to time, connected by an equation. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of related rates, which is accurate?',
+            question: 'In the context of Applications Of Derivatives, which explains Use the chain rule?',
             options: [
+              'Substitute known values AFTER differentiating, not before',
               'd/dt[r²] = 2r · dr/dt',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'draw a picture, identify variables, write an equation, differentiate with respect to t',
+              'quantities changing with respect to time, connected by an equation'
             ],
-            correctAnswer: 0,
-            explanation: 'Use the chain rule: d/dt[r²] = 2r · dr/dt'
+            correctAnswer: 1,
+            explanation: 'Correct — Use the chain rule: d/dt[r²] = 2r · dr/dt. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Substitute known values AFTER differentiating, not before
       id: 'appli1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to related rates?',
+            question: 'Regarding Applications Of Derivatives, which correctly describes Substitute known values AFTER…?',
             options: [
+              'draw a picture, identify variables, write an equation, differentiate with respect to t',
+              'quantities changing with respect to time, connected by an equation',
               'Substitute known values AFTER differentiating, not before',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'd/dt[r²] = 2r · dr/dt'
             ],
-            correctAnswer: 0,
-            explanation: 'Substitute known values AFTER differentiating, not before'
+            correctAnswer: 2,
+            explanation: 'Correct — Substitute known values AFTER differentiating, not before. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Substitute known values AFTER differentiating, not before
       id: 'appli1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Related rates',
-            options: ['quantities changing with respect to time, connecte', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['d/dt[r²] = 2r · dr/dt', 'draw a picture, identify variables, write an equation, differentiate with respect to t', 'quantities changing with respect to time, connected by an equation', 'Substitute known values AFTER differentiating, not before']
           },
           {
             label: 'Steps',
-            options: ['draw a picture, identify variables, write an equat', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Substitute known values AFTER differentiating, not before', 'quantities changing with respect to time, connected by an equation', 'd/dt[r²] = 2r · dr/dt', 'draw a picture, identify variables, write an equation, differentiate with respect to t']
           },
           {
             label: 'Use the chain rule',
-            options: ['d/dt[r²] = 2r · dr/dt', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['d/dt[r²] = 2r · dr/dt', 'quantities changing with respect to time, connected by an equation', 'draw a picture, identify variables, write an equation, differentiate with respect to t', 'Substitute known values AFTER differentiating, not before']
           }
         ],
-        correctAnswers: ['quantities changing with respect to time, connecte', 'draw a picture, identify variables, write an equat', 'd/dt[r²] = 2r · dr/dt'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Related Rates.'
+        correctAnswers: ['quantities changing with respect to time, connected by an equation', 'draw a picture, identify variables, write an equation, differentiate with respect to t', 'd/dt[r²] = 2r · dr/dt'],
+        hint1: 'Think about what each concept specifically describes in Applications Of Derivatives.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Applications Of Derivatives describes a specific idea. Related rates: quantities changing with respect to time, connected by an equation. Steps: draw a picture, identify variables, write an equation, differentiate with respect to t. Use the chain rule: d/dt[r²] = 2r · dr/dt.'
       }
     }
   ]

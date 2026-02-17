@@ -30,31 +30,31 @@ If the limit of partial sums doesn't exist or is infinite, the series diverges
       id: 'infin1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of introduction to series?',
+            question: 'Which statement accurately explains Series?',
             options: [
-              'Series',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
+              'Σ aₙ = a₁ + a₂ + a₃ + ... (sum of a sequence)',
+              'If lim(n→∞) Sₙ = S (finite), the series converges to S',
+              'Sₙ = a₁ + a₂ + ... + aₙ',
+              'If the limit of partial sums doesn\'t exist or is infinite, the series diverges'
             ],
             correctAnswer: 0,
-            explanation: 'Series: Σ aₙ = a₁ + a₂ + a₃ + ... (sum of a sequence)'
+            explanation: 'Correct — Series: Σ aₙ = a₁ + a₂ + a₃ + ... (sum of a sequence). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of introduction to series, which is accurate?',
+            question: 'In the context of ∮ Infinite Series, which explains If lim(n→∞) Sₙ = S (finite), the series…?',
             options: [
+              'Sₙ = a₁ + a₂ + ... + aₙ',
+              'If the limit of partial sums doesn\'t exist or is infinite, the series diverges',
               'If lim(n→∞) Sₙ = S (finite), the series converges to S',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Σ aₙ = a₁ + a₂ + a₃ + ... (sum of a sequence)'
             ],
-            correctAnswer: 0,
-            explanation: 'If lim(n→∞) Sₙ = S (finite), the series converges to S'
+            correctAnswer: 2,
+            explanation: 'Correct — If lim(n→∞) Sₙ = S (finite), the series converges to S. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ If the limit of partial sums doesn't exist or is infinite, the series diverges
       id: 'infin1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to introduction to series?',
+            question: 'Which of these accurately represents If the limit of partial sums doesn\'t…?',
             options: [
               'If the limit of partial sums doesn\'t exist or is infinite, the series diverges',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'Σ aₙ = a₁ + a₂ + a₃ + ... (sum of a sequence)',
+              'If lim(n→∞) Sₙ = S (finite), the series converges to S',
+              'Sₙ = a₁ + a₂ + ... + aₙ'
             ],
             correctAnswer: 0,
-            explanation: 'If the limit of partial sums doesn\'t exist or is infinite, the series diverges'
+            explanation: 'Correct — If the limit of partial sums doesn\'t exist or is infinite, the series diverges. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,24 @@ If the limit of partial sums doesn't exist or is infinite, the series diverges
       id: 'infin1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Series',
-            options: ['Σ aₙ = a₁ + a₂ + a₃ + ... (sum of a sequence)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['If the limit of partial sums doesn\'t exist or is infinite, the series diverges', 'If lim(n→∞) Sₙ = S (finite), the series converges to S', 'Sₙ = a₁ + a₂ + ... + aₙ', 'Σ aₙ = a₁ + a₂ + a₃ + ... (sum of a sequence)']
           },
           {
             label: 'Partial sums',
-            options: ['Sₙ = a₁ + a₂ + ... + aₙ', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
-          },
-          {
-            label: 'If lim(n→∞) Sₙ = S (finite), the series converges to S',
-            options: ['If lim(n→∞) Sₙ = S (finite), the series converges ', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Σ aₙ = a₁ + a₂ + a₃ + ... (sum of a sequence)', 'If lim(n→∞) Sₙ = S (finite), the series converges to S', 'If the limit of partial sums doesn\'t exist or is infinite, the series diverges', 'Sₙ = a₁ + a₂ + ... + aₙ']
           }
         ],
-        correctAnswers: ['Σ aₙ = a₁ + a₂ + a₃ + ... (sum of a sequence)', 'Sₙ = a₁ + a₂ + ... + aₙ', 'If lim(n→∞) Sₙ = S (finite), the series converges '],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Introduction to Series.'
+        correctAnswers: ['Σ aₙ = a₁ + a₂ + a₃ + ... (sum of a sequence)', 'Sₙ = a₁ + a₂ + ... + aₙ'],
+        hint1: 'Think about what each concept specifically describes in ∮ Infinite Series.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in ∮ Infinite Series describes a specific idea. Series: Σ aₙ = a₁ + a₂ + a₃ + ... (sum of a sequence). Partial sums: Sₙ = a₁ + a₂ + ... + aₙ.'
       }
     }
   ]

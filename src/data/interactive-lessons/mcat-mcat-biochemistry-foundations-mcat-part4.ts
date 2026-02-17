@@ -71,23 +71,28 @@ Beta-oxidation: fatty acid to acetyl-CoA units, producing FADH2 and NADH per cyc
       id: 'mcat-4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Lipids & Membranes:',
-            options: ['Fatty acids: saturated (no double bonds, straight) vs unsatu', 'Beta-oxidation: fatty acid to acetyl-CoA units, producing FA', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Fatty acids',
+            options: ['Lipid-soluble signals (steroids) cross the membrane; water-soluble signals need receptors.', 'fatty acid to acetyl-CoA units, producing FADH2 and NADH per cycle.', 'Cell membrane: phospholipid bilayer with cholesterol for fluidity and integral/peripheral proteins.', 'saturated (no double bonds, straight) vs unsaturated (double bonds, kinked).']
           },
           {
-            label: 'MCAT application:',
-            options: ['Cell membrane: phospholipid bilayer with cholesterol for flu', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Beta-oxidation',
+            options: ['saturated (no double bonds, straight) vs unsaturated (double bonds, kinked).', 'fatty acid to acetyl-CoA units, producing FADH2 and NADH per cycle.', 'Lipid-soluble signals (steroids) cross the membrane; water-soluble signals need receptors.', 'Cell membrane: phospholipid bilayer with cholesterol for fluidity and integral/peripheral proteins.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['saturated (no double bonds, straight) vs unsaturated (double bonds, kinked).', 'fatty acid to acetyl-CoA units, producing FADH2 and NADH per cycle.', 'Lipid-soluble signals (steroids) cross the membrane; water-soluble signals need receptors.', 'Cell membrane: phospholipid bilayer with cholesterol for fluidity and integral/peripheral proteins.']
           }
         ],
-        correctAnswers: ['Fatty acids: saturated (no double bonds, straight) vs unsatu', 'Cell membrane: phospholipid bilayer with cholesterol for flu'],
-        hint1: 'Think about lipids & membranes',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Fatty acids: saturated (no double bonds, straight) vs unsaturated (double bonds, kinked). Cell membrane: phospholipid bilayer with cholesterol for fluidity and integral/peripheral proteins.'
+        correctAnswers: ['saturated (no double bonds, straight) vs unsaturated (double bonds, kinked).', 'fatty acid to acetyl-CoA units, producing FADH2 and NADH per cycle.', 'Cell membrane: phospholipid bilayer with cholesterol for fluidity and integral/peripheral proteins.'],
+        hint1: 'Think about what each concept specifically describes in Lipids & Membranes.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Lipids & Membranes describes a specific idea. Fatty acids: saturated (no double bonds, straight) vs unsaturated (double bonds, kinked). Beta-oxidation: fatty acid to acetyl-CoA units, producing FADH2 and NADH per cycle. Key Insight: Cell membrane: phospholipid bilayer with cholesterol for fluidity and integral/peripheral proteins.'
       }
     }
   ]

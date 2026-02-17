@@ -30,31 +30,31 @@ f(bx) where 0 < |b| < 1
       id: 'trans3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of stretches & compressions?',
+            question: 'What does "Vertical stretch by factor a" refer to in precalculus?',
             options: [
-              'Vertical stretch by factor a',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'a · f(x) where |a| > 1',
+              'a · f(x) where 0 < |a| < 1',
+              'f(bx) where 0 < |b| < 1',
+              'f(bx) where |b| > 1'
             ],
             correctAnswer: 0,
-            explanation: 'Vertical stretch by factor a: a · f(x) where |a| > 1'
+            explanation: 'Correct — Vertical stretch by factor a: a · f(x) where |a| > 1. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of stretches & compressions, which is accurate?',
+            question: 'Which of the following is true about Horizontal compression by factor b?',
             options: [
+              'a · f(x) where 0 < |a| < 1',
               'f(bx) where |b| > 1',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'a · f(x) where |a| > 1',
+              'f(bx) where 0 < |b| < 1'
             ],
-            correctAnswer: 0,
-            explanation: 'Horizontal compression by factor b: f(bx) where |b| > 1'
+            correctAnswer: 1,
+            explanation: 'Correct — Horizontal compression by factor b: f(bx) where |b| > 1. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ f(bx) where 0 < |b| < 1
       id: 'trans3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Vertical stretch by factor a',
-            options: ['a · f(x) where |a| > 1', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['f(bx) where 0 < |b| < 1', 'a · f(x) where |a| > 1', 'a · f(x) where 0 < |a| < 1', 'f(bx) where |b| > 1']
           },
           {
             label: 'Vertical compression by factor a',
-            options: ['a · f(x) where 0 < |a| < 1', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['f(bx) where |b| > 1', 'a · f(x) where |a| > 1', 'a · f(x) where 0 < |a| < 1', 'f(bx) where 0 < |b| < 1']
           },
           {
             label: 'Horizontal compression by factor b',
-            options: ['f(bx) where |b| > 1', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['a · f(x) where 0 < |a| < 1', 'f(bx) where |b| > 1', 'a · f(x) where |a| > 1', 'f(bx) where 0 < |b| < 1']
           }
         ],
         correctAnswers: ['a · f(x) where |a| > 1', 'a · f(x) where 0 < |a| < 1', 'f(bx) where |b| > 1'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Stretches & Compressions.'
+        hint1: 'Think about what each concept specifically describes in Stretches & Compressions.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Stretches & Compressions describes a specific idea. Vertical stretch by factor a: a · f(x) where |a| > 1. Vertical compression by factor a: a · f(x) where 0 < |a| < 1. Horizontal compression by factor b: f(bx) where |b| > 1.'
       }
     }
   ]

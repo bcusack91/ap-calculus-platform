@@ -18,20 +18,31 @@ Line of best fit: approximates the trend.
       id: 'sat-d4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes scatterplot?',
+            question: 'Which of the following correctly describes Scatterplot?',
             options: [
-              'Scatterplot is a fundamental concept in SAT Math',
-              'Line of best fit: approximates the trend',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'Positive correlation: both increase together; negative: one up, one down.',
+              'r (correlation coefficient): closer to ±1 = stronger linear relationship.',
+              'approximates the trend.',
+              'shows relationship between two variables.'
             ],
-            correctAnswer: 0,
-            explanation: 'Scatterplot: shows relationship between two variables'
+            correctAnswer: 3,
+            explanation: 'Correct — Scatterplot: shows relationship between two variables. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Key Insight?',
+            options: [
+              'approximates the trend.',
+              'Positive correlation: both increase together; negative: one up, one down.',
+              'shows relationship between two variables.',
+              'r (correlation coefficient): closer to ±1 = stronger linear relationship.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Key Insight: Positive correlation: both increase together; negative: one up, one down. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Line of best fit: approximates the trend.
       id: 'sat-d4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for scatterplots & line of best fit?',
+            question: 'Regarding Scatterplots & Line of Best Fit, which correctly describes SAT Tip?',
             options: [
-              'Positive correlation: both increase together; negative: one up, one down',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'approximates the trend.',
+              'Positive correlation: both increase together; negative: one up, one down.',
+              'shows relationship between two variables.',
+              'r (correlation coefficient): closer to ±1 = stronger linear relationship.'
             ],
-            correctAnswer: 0,
-            explanation: 'Positive correlation: both increase together; negative: one up, one down'
+            correctAnswer: 3,
+            explanation: 'Correct — SAT Tip: r (correlation coefficient): closer to ±1 = stronger linear relationship. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Line of best fit: approximates the trend.
       id: 'sat-d4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Scatterplots & Line of Best Fit:',
-            options: ['Scatterplot: shows relationship between two variab', 'Line of best fit: approximates the trend', 'Not applicable', 'None of these']
+            label: 'Scatterplot',
+            options: ['r (correlation coefficient): closer to ±1 = stronger linear relationship.', 'Positive correlation: both increase together; negative: one up, one down.', 'approximates the trend.', 'shows relationship between two variables.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Positive correlation: both increase together; nega', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Line of best fit',
+            options: ['r (correlation coefficient): closer to ±1 = stronger linear relationship.', 'Positive correlation: both increase together; negative: one up, one down.', 'approximates the trend.', 'shows relationship between two variables.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['r (correlation coefficient): closer to ±1 = stronger linear relationship.', 'shows relationship between two variables.', 'approximates the trend.', 'Positive correlation: both increase together; negative: one up, one down.']
           }
         ],
-        correctAnswers: ['Scatterplot: shows relationship between two variab', 'Positive correlation: both increase together; nega'],
-        hint1: 'Think about scatterplots & line of best fit',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'Scatterplot: shows relationship between two variables. Positive correlation: both increase together; negative: one up, one down.'
+        correctAnswers: ['shows relationship between two variables.', 'approximates the trend.', 'Positive correlation: both increase together; negative: one up, one down.'],
+        hint1: 'Think about what each concept specifically describes in Scatterplots & Line of Best Fit.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Scatterplots & Line of Best Fit describes a specific idea. Scatterplot: shows relationship between two variables. Line of best fit: approximates the trend. Key Insight: Positive correlation: both increase together; negative: one up, one down.'
       }
     }
   ]

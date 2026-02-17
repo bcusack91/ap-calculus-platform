@@ -18,20 +18,31 @@ Parallel lines cut by a transversal: corresponding angles equal, alternate inter
       id: 'sat-g1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes vertical angles are equal; linear pair = 180°?',
+            question: 'Which of the following correctly describes Vertical angles are equal; linear pair…?',
             options: [
-              'Vertical angles are equal; linear pair = 180° is a fundamental concept in SAT Math',
-              'Parallel lines cut by a transversal: corresponding angles equal, alternate interior angles equal',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'Exterior angle = sum of two remote interior angles.',
+              'corresponding angles equal, alternate interior angles equal.',
+              'Sum of angles in a triangle = 180°.',
+              'Vertical angles are equal; linear pair = 180°.'
             ],
-            correctAnswer: 0,
-            explanation: 'Vertical angles are equal; linear pair = 180°'
+            correctAnswer: 3,
+            explanation: 'Correct — Vertical angles are equal; linear pair = 180°. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              'corresponding angles equal, alternate interior angles equal.',
+              'Sum of angles in a triangle = 180°.',
+              'Exterior angle = sum of two remote interior angles.',
+              'Vertical angles are equal; linear pair = 180°.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Key Insight: Sum of angles in a triangle = 180°. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Parallel lines cut by a transversal: corresponding angles equal, alternate inter
       id: 'sat-g1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for lines and angles?',
+            question: 'Which statement about SAT Tip is correct?',
             options: [
-              'Sum of angles in a triangle = 180°',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'Vertical angles are equal; linear pair = 180°.',
+              'corresponding angles equal, alternate interior angles equal.',
+              'Sum of angles in a triangle = 180°.',
+              'Exterior angle = sum of two remote interior angles.'
             ],
-            correctAnswer: 0,
-            explanation: 'Sum of angles in a triangle = 180°'
+            correctAnswer: 3,
+            explanation: 'Correct — SAT Tip: Exterior angle = sum of two remote interior angles. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Parallel lines cut by a transversal: corresponding angles equal, alternate inter
       id: 'sat-g1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Lines and Angles:',
-            options: ['Vertical angles are equal; linear pair = 180°', 'Parallel lines cut by a transversal: corresponding', 'Not applicable', 'None of these']
+            label: 'Parallel lines cut by a transversal',
+            options: ['Exterior angle = sum of two remote interior angles.', 'Sum of angles in a triangle = 180°.', 'Vertical angles are equal; linear pair = 180°.', 'corresponding angles equal, alternate interior angles equal.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Sum of angles in a triangle = 180°', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Key Insight',
+            options: ['Vertical angles are equal; linear pair = 180°.', 'Sum of angles in a triangle = 180°.', 'corresponding angles equal, alternate interior angles equal.', 'Exterior angle = sum of two remote interior angles.']
+          },
+          {
+            label: 'SAT Tip',
+            options: ['Exterior angle = sum of two remote interior angles.', 'Vertical angles are equal; linear pair = 180°.', 'Sum of angles in a triangle = 180°.', 'corresponding angles equal, alternate interior angles equal.']
           }
         ],
-        correctAnswers: ['Vertical angles are equal; linear pair = 180°', 'Sum of angles in a triangle = 180°'],
-        hint1: 'Think about lines and angles',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'Vertical angles are equal; linear pair = 180°. Sum of angles in a triangle = 180°.'
+        correctAnswers: ['corresponding angles equal, alternate interior angles equal.', 'Sum of angles in a triangle = 180°.', 'Exterior angle = sum of two remote interior angles.'],
+        hint1: 'Think about what each concept specifically describes in Geometry Angles.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Geometry Angles describes a specific idea. Parallel lines cut by a transversal: corresponding angles equal, alternate interior angles equal. Key Insight: Sum of angles in a triangle = 180°. SAT Tip: Exterior angle = sum of two remote interior angles.'
       }
     }
   ]

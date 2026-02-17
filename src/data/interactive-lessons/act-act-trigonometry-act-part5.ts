@@ -18,20 +18,31 @@ Amplitude = |A|; Period = 2π/|B|.
       id: 'act-t5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes y = a sin(bx + c) + d?',
+            question: 'Which statement accurately explains y = A sin(Bx + C) + D.?',
             options: [
-              'y = A sin(Bx + C) + D is a key concept for ACT Math',
-              'Amplitude = |A|; Period = 2π/|B|',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'ACT tests basic graph reading: period, amplitude, max, min.',
+              'Phase shift = -C/B; Vertical shift = D.',
+              'y = A sin(Bx + C) + D.',
+              'Amplitude = |A|; Period = 2π/|B|.'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — y = A sin(Bx + C) + D. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              'Phase shift = -C/B; Vertical shift = D.',
+              'Amplitude = |A|; Period = 2π/|B|.',
+              'y = A sin(Bx + C) + D.',
+              'ACT tests basic graph reading: period, amplitude, max, min.'
             ],
             correctAnswer: 0,
-            explanation: 'y = A sin(Bx + C) + D'
+            explanation: 'Correct — Key Insight: Phase shift = -C/B; Vertical shift = D. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Amplitude = |A|; Period = 2π/|B|.
       id: 'act-t5-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for graphing trig functions?',
+            question: 'Which of these accurately represents ACT Tip?',
             options: [
-              'Phase shift = -C/B; Vertical shift = D',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Amplitude = |A|; Period = 2π/|B|.',
+              'y = A sin(Bx + C) + D.',
+              'Phase shift = -C/B; Vertical shift = D.',
+              'ACT tests basic graph reading: period, amplitude, max, min.'
             ],
-            correctAnswer: 0,
-            explanation: 'Phase shift = -C/B; Vertical shift = D'
+            correctAnswer: 3,
+            explanation: 'Correct — ACT Tip: ACT tests basic graph reading: period, amplitude, max, min. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ Amplitude = |A|; Period = 2π/|B|.
       id: 'act-t5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Graphing Trig Functions:',
-            options: ['y = A sin(Bx + C) + D', 'Amplitude = |A|; Period = 2π/|B|', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['ACT tests basic graph reading: period, amplitude, max, min.', 'Amplitude = |A|; Period = 2π/|B|.', 'y = A sin(Bx + C) + D.', 'Phase shift = -C/B; Vertical shift = D.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Phase shift = -C/B; Vertical shift = D', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'ACT Tip',
+            options: ['ACT tests basic graph reading: period, amplitude, max, min.', 'Amplitude = |A|; Period = 2π/|B|.', 'y = A sin(Bx + C) + D.', 'Phase shift = -C/B; Vertical shift = D.']
           }
         ],
-        correctAnswers: ['y = A sin(Bx + C) + D', 'Phase shift = -C/B; Vertical shift = D'],
-        hint1: 'Think about graphing trig functions',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'y = A sin(Bx + C) + D. Phase shift = -C/B; Vertical shift = D.'
+        correctAnswers: ['Phase shift = -C/B; Vertical shift = D.', 'ACT tests basic graph reading: period, amplitude, max, min.'],
+        hint1: 'Think about what each concept specifically describes in Graphing Trig Functions.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Graphing Trig Functions describes a specific idea. Key Insight: Phase shift = -C/B; Vertical shift = D. ACT Tip: ACT tests basic graph reading: period, amplitude, max, min.'
       }
     }
   ]

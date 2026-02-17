@@ -18,20 +18,31 @@ If completely stuck, pick one letter and use it consistently for all guesses.
       id: 'act-t4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes no penalty for wrong answers — never leave a question blank?',
+            question: 'What does "No penalty for wrong answers — NEVER…" refer to in ACT prep?',
             options: [
-              'No penalty for wrong answers — NEVER leave a question blank is a key concept for ACT Math',
-              'If completely stuck, pick one letter and use it consistently for all guesses',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'If completely stuck, pick one letter and use it consistently for all guesses.',
+              'No penalty for wrong answers — NEVER leave a question blank.',
+              'Last 2 minutes of each section: answer every remaining question.',
+              'Educated guessing: eliminate 1-2 wrong answers, then guess from the rest.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — No penalty for wrong answers — NEVER leave a question blank. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              'Educated guessing: eliminate 1-2 wrong answers, then guess from the rest.',
+              'Last 2 minutes of each section: answer every remaining question.',
+              'No penalty for wrong answers — NEVER leave a question blank.',
+              'If completely stuck, pick one letter and use it consistently for all guesses.'
             ],
             correctAnswer: 0,
-            explanation: 'No penalty for wrong answers — NEVER leave a question blank'
+            explanation: 'Correct — Key Insight: Educated guessing: eliminate 1-2 wrong answers, then guess from the rest. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ If completely stuck, pick one letter and use it consistently for all guesses.
       id: 'act-t4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for guessing strategy?',
+            question: 'Which of these accurately represents ACT Tip?',
             options: [
-              'Educated guessing: eliminate 1-2 wrong answers, then guess from the rest',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Educated guessing: eliminate 1-2 wrong answers, then guess from the rest.',
+              'If completely stuck, pick one letter and use it consistently for all guesses.',
+              'Last 2 minutes of each section: answer every remaining question.',
+              'No penalty for wrong answers — NEVER leave a question blank.'
             ],
-            correctAnswer: 0,
-            explanation: 'Educated guessing: eliminate 1-2 wrong answers, then guess from the rest'
+            correctAnswer: 2,
+            explanation: 'Correct — ACT Tip: Last 2 minutes of each section: answer every remaining question. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ If completely stuck, pick one letter and use it consistently for all guesses.
       id: 'act-t4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Guessing Strategy:',
-            options: ['No penalty for wrong answers — NEVER leave a quest', 'If completely stuck, pick one letter and use it co', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['Educated guessing: eliminate 1-2 wrong answers, then guess from the rest.', 'No penalty for wrong answers — NEVER leave a question blank.', 'If completely stuck, pick one letter and use it consistently for all guesses.', 'Last 2 minutes of each section: answer every remaining question.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Educated guessing: eliminate 1-2 wrong answers, th', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'ACT Tip',
+            options: ['If completely stuck, pick one letter and use it consistently for all guesses.', 'No penalty for wrong answers — NEVER leave a question blank.', 'Last 2 minutes of each section: answer every remaining question.', 'Educated guessing: eliminate 1-2 wrong answers, then guess from the rest.']
           }
         ],
-        correctAnswers: ['No penalty for wrong answers — NEVER leave a quest', 'Educated guessing: eliminate 1-2 wrong answers, th'],
-        hint1: 'Think about guessing strategy',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'No penalty for wrong answers — NEVER leave a question blank. Educated guessing: eliminate 1-2 wrong answers, then guess from the rest.'
+        correctAnswers: ['Educated guessing: eliminate 1-2 wrong answers, then guess from the rest.', 'Last 2 minutes of each section: answer every remaining question.'],
+        hint1: 'Think about what each concept specifically describes in Guessing Strategy.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Guessing Strategy describes a specific idea. Key Insight: Educated guessing: eliminate 1-2 wrong answers, then guess from the rest. ACT Tip: Last 2 minutes of each section: answer every remaining question.'
       }
     }
   ]

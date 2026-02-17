@@ -19,31 +19,31 @@ export const bioNatSelectionPart7Data = {
       id: 'natu7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes five agents of evolution?',
-            options: [
-              'Five agents of evolution',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
-            ],
-            correctAnswer: 0,
-            explanation: 'Five agents of evolution'
-          },
-          {
-            question: 'In the context of synthesis & ap review, which statement is accurate?',
+            question: 'Which statement accurately explains Five agents of evolution?',
             options: [
               'Hardy-Weinberg as null hypothesis',
-              'noitulove fo stnega eviF',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Natural selection vs genetic drift',
+              'Five agents of evolution',
+              'mathematical analysis of evolution'
             ],
-            correctAnswer: 0,
-            explanation: 'Hardy-Weinberg as null hypothesis'
+            correctAnswer: 2,
+            explanation: 'Correct — Five agents of evolution. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Hardy-Weinberg as null hypothesis:',
+            options: [
+              'Natural selection vs genetic drift',
+              'Five agents of evolution',
+              'Hardy-Weinberg as null hypothesis',
+              'mathematical analysis of evolution'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Hardy-Weinberg as null hypothesis. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioNatSelectionPart7Data = {
       id: 'natu7-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to synthesis & ap review?',
+            question: 'Which statement about AP exam is correct?',
             options: [
-              'AP exam: mathematical analysis of evolution',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Natural selection vs genetic drift',
+              'Five agents of evolution',
+              'Hardy-Weinberg as null hypothesis',
+              'mathematical analysis of evolution'
             ],
-            correctAnswer: 0,
-            explanation: 'AP exam: mathematical analysis of evolution'
+            correctAnswer: 3,
+            explanation: 'Correct — AP exam: mathematical analysis of evolution. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioNatSelectionPart7Data = {
       id: 'natu7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Five agents of evolution is important in synthesis & ap review because',
-            options: ['Five agents of evolution', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Five agents of evolution',
+            options: ['mathematical analysis of evolution', 'Natural selection vs genetic drift', 'Hardy-Weinberg as null hypothesis', 'Five agents of evolution']
           },
           {
-            label: 'Natural selection vs genetic drift is important in synthesis & ap review because',
-            options: ['Natural selection vs genetic drift', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Natural selection vs genetic drift',
+            options: ['Natural selection vs genetic drift', 'Hardy-Weinberg as null hypothesis', 'mathematical analysis of evolution', 'Five agents of evolution']
           },
           {
-            label: 'Hardy-Weinberg as null hypothesis is important in synthesis & ap review because',
-            options: ['Hardy-Weinberg as null hypothesis', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Hardy-Weinberg as null hypothesis',
+            options: ['Hardy-Weinberg as null hypothesis', 'Natural selection vs genetic drift', 'Five agents of evolution', 'mathematical analysis of evolution']
           }
         ],
         correctAnswers: ['Five agents of evolution', 'Natural selection vs genetic drift', 'Hardy-Weinberg as null hypothesis'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Synthesis & AP Review.'
+        hint1: 'Think about what each concept specifically describes in Natural Selection: Synthesis & AP Review.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Natural Selection: Synthesis & AP Review describes a specific idea. Five agents of evolution. Natural selection vs genetic drift. Hardy-Weinberg as null hypothesis.'
       }
     }
   ]

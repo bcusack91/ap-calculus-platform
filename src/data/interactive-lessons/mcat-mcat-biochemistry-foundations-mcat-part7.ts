@@ -71,23 +71,28 @@ NADH yields ~2.5 ATP; FADH2 yields ~1.5 ATP (via Complex I and II respectively).
       id: 'mcat-7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Review & MCAT Practice:',
-            options: ['Oxidative phosphorylation: ETC creates proton gradient; ATP ', 'NADH yields ~2.5 ATP; FADH2 yields ~1.5 ATP (via Complex I a', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Oxidative phosphorylation',
+            options: ['ETC creates proton gradient; ATP synthase uses it to make ATP.', 'Chemiosmotic theory (Peter Mitchell): proton motive force drives ATP synthesis across inner mitochondrial membrane.', 'NADH yields ~2.5 ATP; FADH2 yields ~1.5 ATP (via Complex I and II respectively).', 'Complete glucose oxidation: ~30-32 ATP total (glycolysis + Krebs + ETC).']
           },
           {
-            label: 'MCAT application:',
-            options: ['Complete glucose oxidation: ~30-32 ATP total (glycolysis + K', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Key Insight',
+            options: ['NADH yields ~2.5 ATP; FADH2 yields ~1.5 ATP (via Complex I and II respectively).', 'ETC creates proton gradient; ATP synthase uses it to make ATP.', 'Complete glucose oxidation: ~30-32 ATP total (glycolysis + Krebs + ETC).', 'Chemiosmotic theory (Peter Mitchell): proton motive force drives ATP synthesis across inner mitochondrial membrane.']
+          },
+          {
+            label: 'MCAT Tip',
+            options: ['Chemiosmotic theory (Peter Mitchell): proton motive force drives ATP synthesis across inner mitochondrial membrane.', 'ETC creates proton gradient; ATP synthase uses it to make ATP.', 'NADH yields ~2.5 ATP; FADH2 yields ~1.5 ATP (via Complex I and II respectively).', 'Complete glucose oxidation: ~30-32 ATP total (glycolysis + Krebs + ETC).']
           }
         ],
-        correctAnswers: ['Oxidative phosphorylation: ETC creates proton gradient; ATP ', 'Complete glucose oxidation: ~30-32 ATP total (glycolysis + K'],
-        hint1: 'Think about review & mcat practice',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Oxidative phosphorylation: ETC creates proton gradient; ATP synthase uses it to make ATP. Complete glucose oxidation: ~30-32 ATP total (glycolysis + Krebs + ETC).'
+        correctAnswers: ['ETC creates proton gradient; ATP synthase uses it to make ATP.', 'Complete glucose oxidation: ~30-32 ATP total (glycolysis + Krebs + ETC).', 'Chemiosmotic theory (Peter Mitchell): proton motive force drives ATP synthesis across inner mitochondrial membrane.'],
+        hint1: 'Think about what each concept specifically describes in Review & MCAT Practice.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Review & MCAT Practice describes a specific idea. Oxidative phosphorylation: ETC creates proton gradient; ATP synthase uses it to make ATP. Key Insight: Complete glucose oxidation: ~30-32 ATP total (glycolysis + Krebs + ETC). MCAT Tip: Chemiosmotic theory (Peter Mitchell): proton motive force drives ATP synthesis across inner mitochondrial membrane.'
       }
     }
   ]

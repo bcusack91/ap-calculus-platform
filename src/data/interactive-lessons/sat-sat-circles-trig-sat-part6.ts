@@ -18,20 +18,31 @@ Know radian/degree conversion.
       id: 'sat-c6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes sat trig is straightforward — mostly right triangle and basic identities?',
+            question: 'Which statement accurately explains SAT trig is straightforward — mostly…?',
             options: [
-              'SAT trig is straightforward — mostly right triangle and basic identities is a fundamental concept in SAT Math',
-              'Know radian/degree conversion',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'SAT trig is straightforward — mostly right triangle and basic identities.',
+              'Understand sin/cos graphs: period, amplitude.',
+              'Know radian/degree conversion.',
+              'Most SAT trig = setting up the right ratio from a diagram.'
             ],
             correctAnswer: 0,
-            explanation: 'SAT trig is straightforward — mostly right triangle and basic identities'
+            explanation: 'Correct — SAT trig is straightforward — mostly right triangle and basic identities. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Key Insight?',
+            options: [
+              'Understand sin/cos graphs: period, amplitude.',
+              'Know radian/degree conversion.',
+              'SAT trig is straightforward — mostly right triangle and basic identities.',
+              'Most SAT trig = setting up the right ratio from a diagram.'
+            ],
+            correctAnswer: 0,
+            explanation: 'Correct — Key Insight: Understand sin/cos graphs: period, amplitude. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Know radian/degree conversion.
       id: 'sat-c6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for problem-solving workshop?',
+            question: 'Which statement about SAT Tip is correct?',
             options: [
-              'Understand sin/cos graphs: period, amplitude',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'Understand sin/cos graphs: period, amplitude.',
+              'SAT trig is straightforward — mostly right triangle and basic identities.',
+              'Know radian/degree conversion.',
+              'Most SAT trig = setting up the right ratio from a diagram.'
             ],
-            correctAnswer: 0,
-            explanation: 'Understand sin/cos graphs: period, amplitude'
+            correctAnswer: 3,
+            explanation: 'Correct — SAT Tip: Most SAT trig = setting up the right ratio from a diagram. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ Know radian/degree conversion.
       id: 'sat-c6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Problem-Solving Workshop:',
-            options: ['SAT trig is straightforward — mostly right triangl', 'Know radian/degree conversion', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['Most SAT trig = setting up the right ratio from a diagram.', 'Know radian/degree conversion.', 'Understand sin/cos graphs: period, amplitude.', 'SAT trig is straightforward — mostly right triangle and basic identities.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Understand sin/cos graphs: period, amplitude', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'SAT Tip',
+            options: ['SAT trig is straightforward — mostly right triangle and basic identities.', 'Understand sin/cos graphs: period, amplitude.', 'Most SAT trig = setting up the right ratio from a diagram.', 'Know radian/degree conversion.']
           }
         ],
-        correctAnswers: ['SAT trig is straightforward — mostly right triangl', 'Understand sin/cos graphs: period, amplitude'],
-        hint1: 'Think about problem-solving workshop',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'SAT trig is straightforward — mostly right triangle and basic identities. Understand sin/cos graphs: period, amplitude.'
+        correctAnswers: ['Understand sin/cos graphs: period, amplitude.', 'Most SAT trig = setting up the right ratio from a diagram.'],
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Key Insight: Understand sin/cos graphs: period, amplitude. SAT Tip: Most SAT trig = setting up the right ratio from a diagram.'
       }
     }
   ]

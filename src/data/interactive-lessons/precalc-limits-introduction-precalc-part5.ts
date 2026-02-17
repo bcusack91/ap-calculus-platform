@@ -30,31 +30,31 @@ limit = 0; greater: limit = ±∞
       id: 'limit5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of limits at infinity?',
-            options: [
-              'lim(x→∞)',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'lim(x→∞): behavior as x grows without bound'
-          },
-          {
-            question: 'In the context of limits at infinity, which is accurate?',
+            question: 'Which of the following correctly describes lim(x→∞)?',
             options: [
               'limit = ratio of leading coefficients',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'compare degrees of numerator and denominator',
+              'limit = 0; greater: limit = ±∞',
+              'behavior as x grows without bound'
             ],
-            correctAnswer: 0,
-            explanation: 'Same degree: limit = ratio of leading coefficients'
+            correctAnswer: 3,
+            explanation: 'Correct — lim(x→∞): behavior as x grows without bound. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Limits at Infinity, which explains Same degree?',
+            options: [
+              'compare degrees of numerator and denominator',
+              'limit = 0; greater: limit = ±∞',
+              'limit = ratio of leading coefficients',
+              'behavior as x grows without bound'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Same degree: limit = ratio of leading coefficients. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ limit = 0; greater: limit = ±∞
       id: 'limit5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'lim(x→∞)',
-            options: ['behavior as x grows without bound', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['limit = 0; greater: limit = ±∞', 'compare degrees of numerator and denominator', 'limit = ratio of leading coefficients', 'behavior as x grows without bound']
           },
           {
             label: 'For rational functions',
-            options: ['compare degrees of numerator and denominator', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['limit = ratio of leading coefficients', 'compare degrees of numerator and denominator', 'behavior as x grows without bound', 'limit = 0; greater: limit = ±∞']
           },
           {
             label: 'Same degree',
-            options: ['limit = ratio of leading coefficients', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['behavior as x grows without bound', 'limit = ratio of leading coefficients', 'compare degrees of numerator and denominator', 'limit = 0; greater: limit = ±∞']
           }
         ],
         correctAnswers: ['behavior as x grows without bound', 'compare degrees of numerator and denominator', 'limit = ratio of leading coefficients'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Limits at Infinity.'
+        hint1: 'Think about what each concept specifically describes in Limits at Infinity.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Limits at Infinity describes a specific idea. lim(x→∞): behavior as x grows without bound. For rational functions: compare degrees of numerator and denominator. Same degree: limit = ratio of leading coefficients.'
       }
     }
   ]

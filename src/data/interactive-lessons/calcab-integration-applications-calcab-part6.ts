@@ -30,31 +30,31 @@ These applications extend the accumulation framework to physics
       id: 'integ6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of problem-solving workshop?',
-            options: [
-              'Work = ∫ₐᵇ F(x)dx where F(x) is force as a function of position',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'Work = ∫ₐᵇ F(x)dx where F(x) is force as a function of position'
-          },
-          {
-            question: 'In the context of problem-solving workshop, which is accurate?',
+            question: 'Which of the following correctly describes Work = ∫ₐᵇ F(x)dx where F(x) is force…?',
             options: [
               'W = ∫ρg · A(y) · (D-y) dy',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'These applications extend the accumulation framework to physics',
+              'Work = ∫ₐᵇ F(x)dx where F(x) is force as a function of position',
+              'F(x) = kx (Hooke\'s Law)'
             ],
-            correctAnswer: 0,
-            explanation: 'Pumping fluid: W = ∫ρg · A(y) · (D-y) dy'
+            correctAnswer: 2,
+            explanation: 'Correct — Work = ∫ₐᵇ F(x)dx where F(x) is force as a function of position. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Problem-Solving Workshop, which explains Pumping fluid?',
+            options: [
+              'These applications extend the accumulation framework to physics',
+              'W = ∫ρg · A(y) · (D-y) dy',
+              'Work = ∫ₐᵇ F(x)dx where F(x) is force as a function of position',
+              'F(x) = kx (Hooke\'s Law)'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Pumping fluid: W = ∫ρg · A(y) · (D-y) dy. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ These applications extend the accumulation framework to physics
       id: 'integ6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to problem-solving workshop?',
+            question: 'Regarding Problem-Solving Workshop, which correctly describes These applications extend the…?',
             options: [
+              'W = ∫ρg · A(y) · (D-y) dy',
+              'Work = ∫ₐᵇ F(x)dx where F(x) is force as a function of position',
               'These applications extend the accumulation framework to physics',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'F(x) = kx (Hooke\'s Law)'
             ],
-            correctAnswer: 0,
-            explanation: 'These applications extend the accumulation framework to physics'
+            correctAnswer: 2,
+            explanation: 'Correct — These applications extend the accumulation framework to physics. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,24 @@ These applications extend the accumulation framework to physics
       id: 'integ6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Work = ∫ₐᵇ F(x)dx where F(x) is force as a function of position',
-            options: ['Work = ∫ₐᵇ F(x)dx where F(x) is force as a functio', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
-          },
-          {
             label: 'Spring force',
-            options: ['F(x) = kx (Hooke\'s Law)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['W = ∫ρg · A(y) · (D-y) dy', 'F(x) = kx (Hooke\'s Law)', 'Work = ∫ₐᵇ F(x)dx where F(x) is force as a function of position', 'These applications extend the accumulation framework to physics']
           },
           {
             label: 'Pumping fluid',
-            options: ['W = ∫ρg · A(y) · (D-y) dy', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['F(x) = kx (Hooke\'s Law)', 'Work = ∫ₐᵇ F(x)dx where F(x) is force as a function of position', 'These applications extend the accumulation framework to physics', 'W = ∫ρg · A(y) · (D-y) dy']
           }
         ],
-        correctAnswers: ['Work = ∫ₐᵇ F(x)dx where F(x) is force as a functio', 'F(x) = kx (Hooke\'s Law)', 'W = ∫ρg · A(y) · (D-y) dy'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving Workshop.'
+        correctAnswers: ['F(x) = kx (Hooke\'s Law)', 'W = ∫ρg · A(y) · (D-y) dy'],
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Spring force: F(x) = kx (Hooke\'s Law). Pumping fluid: W = ∫ρg · A(y) · (D-y) dy.'
       }
     }
   ]

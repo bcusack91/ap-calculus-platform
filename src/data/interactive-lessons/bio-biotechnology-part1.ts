@@ -19,31 +19,31 @@ export const bioBiotechPart1Data = {
       id: 'biot1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes restriction enzymes cut dna at specific sequences?',
+            question: 'Which statement accurately explains Restriction enzymes cut DNA at specific…?',
             options: [
               'Restriction enzymes cut DNA at specific sequences',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Gel electrophoresis separates DNA by size',
+              'Smaller fragments migrate farther through the gel',
+              'Produces fragments with sticky or blunt ends'
             ],
             correctAnswer: 0,
-            explanation: 'Restriction enzymes cut DNA at specific sequences'
+            explanation: 'Correct — Restriction enzymes cut DNA at specific sequences. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of restriction enzymes & gel electrophoresis, which statement is accurate?',
+            question: 'Select the statement that correctly describes Gel electrophoresis separates DNA by…:',
             options: [
+              'Restriction enzymes cut DNA at specific sequences',
+              'Produces fragments with sticky or blunt ends',
               'Gel electrophoresis separates DNA by size',
-              'secneuqes cificeps ta AND tuc semyzne noitcirtseR',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Smaller fragments migrate farther through the gel'
             ],
-            correctAnswer: 0,
-            explanation: 'Gel electrophoresis separates DNA by size'
+            correctAnswer: 2,
+            explanation: 'Correct — Gel electrophoresis separates DNA by size. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioBiotechPart1Data = {
       id: 'biot1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to restriction enzymes & gel electrophoresis?',
+            question: 'Regarding Restriction Enzymes & Gel Electrophoresis, which correctly describes Smaller fragments migrate farther…?',
             options: [
               'Smaller fragments migrate farther through the gel',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Restriction enzymes cut DNA at specific sequences',
+              'Produces fragments with sticky or blunt ends',
+              'Gel electrophoresis separates DNA by size'
             ],
             correctAnswer: 0,
-            explanation: 'Smaller fragments migrate farther through the gel'
+            explanation: 'Correct — Smaller fragments migrate farther through the gel. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioBiotechPart1Data = {
       id: 'biot1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Restriction enzymes cut DNA at specific sequences is important in restriction enzymes & gel electrophoresis because',
-            options: ['Restriction enzymes cut DNA at specific sequences', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Restriction enzymes cut DNA at specific…',
+            options: ['Gel electrophoresis separates DNA by size', 'Smaller fragments migrate farther through the gel', 'Produces fragments with sticky or blunt ends', 'Restriction enzymes cut DNA at specific sequences']
           },
           {
-            label: 'Produces fragments with sticky or blunt ends is important in restriction enzymes & gel electrophoresis because',
-            options: ['Produces fragments with sticky or blunt ends', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Produces fragments with sticky or blunt…',
+            options: ['Smaller fragments migrate farther through the gel', 'Restriction enzymes cut DNA at specific sequences', 'Produces fragments with sticky or blunt ends', 'Gel electrophoresis separates DNA by size']
           },
           {
-            label: 'Gel electrophoresis separates DNA by size is important in restriction enzymes & gel electrophoresis because',
-            options: ['Gel electrophoresis separates DNA by size', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Gel electrophoresis separates DNA by…',
+            options: ['Smaller fragments migrate farther through the gel', 'Restriction enzymes cut DNA at specific sequences', 'Gel electrophoresis separates DNA by size', 'Produces fragments with sticky or blunt ends']
           }
         ],
         correctAnswers: ['Restriction enzymes cut DNA at specific sequences', 'Produces fragments with sticky or blunt ends', 'Gel electrophoresis separates DNA by size'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Restriction Enzymes & Gel Electrophoresis.'
+        hint1: 'Think about what each concept specifically describes in Restriction Enzymes & Gel Electrophoresis.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Restriction Enzymes & Gel Electrophoresis describes a specific idea. Restriction enzymes cut DNA at specific sequences. Produces fragments with sticky or blunt ends. Gel electrophoresis separates DNA by size.'
       }
     }
   ]

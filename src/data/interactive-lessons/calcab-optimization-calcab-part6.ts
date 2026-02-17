@@ -30,31 +30,31 @@ how quantity changes in response to price
       id: 'optim6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of problem-solving workshop?',
+            question: 'What does "Revenue R(x) = x · p(x) where p(x) is…" refer to in calculus?',
             options: [
-              'Revenue R(x) = x · p(x) where p(x) is the price function',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'Profit P(x) = R(x) - C(x) where C(x) is cost',
+              'set P\'(x) = 0 → marginal revenue = marginal cost',
+              'how quantity changes in response to price',
+              'Revenue R(x) = x · p(x) where p(x) is the price function'
             ],
-            correctAnswer: 0,
-            explanation: 'Revenue R(x) = x · p(x) where p(x) is the price function'
+            correctAnswer: 3,
+            explanation: 'Correct — Revenue R(x) = x · p(x) where p(x) is the price function. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of problem-solving workshop, which is accurate?',
+            question: 'Which of the following is true about Maximize profit?',
             options: [
+              'Revenue R(x) = x · p(x) where p(x) is the price function',
+              'how quantity changes in response to price',
               'set P\'(x) = 0 → marginal revenue = marginal cost',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Profit P(x) = R(x) - C(x) where C(x) is cost'
             ],
-            correctAnswer: 0,
-            explanation: 'Maximize profit: set P\'(x) = 0 → marginal revenue = marginal cost'
+            correctAnswer: 2,
+            explanation: 'Correct — Maximize profit: set P\'(x) = 0 → marginal revenue = marginal cost. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ how quantity changes in response to price
       id: 'optim6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to problem-solving workshop?',
+            question: 'Regarding Problem-Solving Workshop, which correctly describes Elasticity of demand?',
             options: [
+              'set P\'(x) = 0 → marginal revenue = marginal cost',
+              'Profit P(x) = R(x) - C(x) where C(x) is cost',
               'how quantity changes in response to price',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'Revenue R(x) = x · p(x) where p(x) is the price function'
             ],
-            correctAnswer: 0,
-            explanation: 'Elasticity of demand: how quantity changes in response to price'
+            correctAnswer: 2,
+            explanation: 'Correct — Elasticity of demand: how quantity changes in response to price. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,24 @@ how quantity changes in response to price
       id: 'optim6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Revenue R(x) = x · p(x) where p(x) is the price function',
-            options: ['Revenue R(x) = x · p(x) where p(x) is the price fu', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
-          },
-          {
-            label: 'Profit P(x) = R(x) - C(x) where C(x) is cost',
-            options: ['Profit P(x) = R(x) - C(x) where C(x) is cost', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
-          },
-          {
             label: 'Maximize profit',
-            options: ['set P\'(x) = 0 → marginal revenue = marginal cost', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['set P\'(x) = 0 → marginal revenue = marginal cost', 'how quantity changes in response to price', 'Profit P(x) = R(x) - C(x) where C(x) is cost', 'Revenue R(x) = x · p(x) where p(x) is the price function']
+          },
+          {
+            label: 'Elasticity of demand',
+            options: ['set P\'(x) = 0 → marginal revenue = marginal cost', 'Revenue R(x) = x · p(x) where p(x) is the price function', 'how quantity changes in response to price', 'Profit P(x) = R(x) - C(x) where C(x) is cost']
           }
         ],
-        correctAnswers: ['Revenue R(x) = x · p(x) where p(x) is the price fu', 'Profit P(x) = R(x) - C(x) where C(x) is cost', 'set P\'(x) = 0 → marginal revenue = marginal cost'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving Workshop.'
+        correctAnswers: ['set P\'(x) = 0 → marginal revenue = marginal cost', 'how quantity changes in response to price'],
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Maximize profit: set P\'(x) = 0 → marginal revenue = marginal cost. Elasticity of demand: how quantity changes in response to price.'
       }
     }
   ]

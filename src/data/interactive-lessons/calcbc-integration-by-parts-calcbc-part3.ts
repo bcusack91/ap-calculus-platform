@@ -30,31 +30,31 @@ Set I = ∫eˣ sin x dx, apply twice, get equation I = ... - I, solve for I
       id: 'integ3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of repeated integration by parts?',
+            question: 'Which of the following correctly describes Some integrals require integration by…?',
             options: [
+              'apply twice to reduce x² to x then to a constant',
+              'Set I = ∫eˣ sin x dx, apply twice, get equation I = ... - I, solve for I',
               'Some integrals require integration by parts multiple times',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
+              '∫eˣ sin x dx leads back to the original integral — solve algebraically'
             ],
-            correctAnswer: 0,
-            explanation: 'Some integrals require integration by parts multiple times'
+            correctAnswer: 2,
+            explanation: 'Correct — Some integrals require integration by parts multiple times. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of repeated integration by parts, which is accurate?',
+            question: 'In the context of Repeated Integration by Parts, which explains Cycling integrals?',
             options: [
+              'Set I = ∫eˣ sin x dx, apply twice, get equation I = ... - I, solve for I',
+              'Some integrals require integration by parts multiple times',
               '∫eˣ sin x dx leads back to the original integral — solve algebraically',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'apply twice to reduce x² to x then to a constant'
             ],
-            correctAnswer: 0,
-            explanation: 'Cycling integrals: ∫eˣ sin x dx leads back to the original integral — solve algebraically'
+            correctAnswer: 2,
+            explanation: 'Correct — Cycling integrals: ∫eˣ sin x dx leads back to the original integral — solve algebraically. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Set I = ∫eˣ sin x dx, apply twice, get equation I = ... - I, solve for I
       id: 'integ3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to repeated integration by parts?',
+            question: 'Regarding Repeated Integration by Parts, which correctly describes Set I = ∫eˣ sin x dx, apply twice, get…?',
             options: [
+              '∫eˣ sin x dx leads back to the original integral — solve algebraically',
               'Set I = ∫eˣ sin x dx, apply twice, get equation I = ... - I, solve for I',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'Some integrals require integration by parts multiple times',
+              'apply twice to reduce x² to x then to a constant'
             ],
-            correctAnswer: 0,
-            explanation: 'Set I = ∫eˣ sin x dx, apply twice, get equation I = ... - I, solve for I'
+            correctAnswer: 1,
+            explanation: 'Correct — Set I = ∫eˣ sin x dx, apply twice, get equation I = ... - I, solve for I. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,24 @@ Set I = ∫eˣ sin x dx, apply twice, get equation I = ... - I, solve for I
       id: 'integ3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Some integrals require integration by parts multiple times',
-            options: ['Some integrals require integration by parts multip', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
-          },
-          {
             label: '∫x²eˣ dx',
-            options: ['apply twice to reduce x² to x then to a constant', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Set I = ∫eˣ sin x dx, apply twice, get equation I = ... - I, solve for I', 'Some integrals require integration by parts multiple times', 'apply twice to reduce x² to x then to a constant', '∫eˣ sin x dx leads back to the original integral — solve algebraically']
           },
           {
             label: 'Cycling integrals',
-            options: ['∫eˣ sin x dx leads back to the original integral —', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Set I = ∫eˣ sin x dx, apply twice, get equation I = ... - I, solve for I', 'Some integrals require integration by parts multiple times', '∫eˣ sin x dx leads back to the original integral — solve algebraically', 'apply twice to reduce x² to x then to a constant']
           }
         ],
-        correctAnswers: ['Some integrals require integration by parts multip', 'apply twice to reduce x² to x then to a constant', '∫eˣ sin x dx leads back to the original integral —'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Repeated Integration by Parts.'
+        correctAnswers: ['apply twice to reduce x² to x then to a constant', '∫eˣ sin x dx leads back to the original integral — solve algebraically'],
+        hint1: 'Think about what each concept specifically describes in Repeated Integration by Parts.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Repeated Integration by Parts describes a specific idea. ∫x²eˣ dx: apply twice to reduce x² to x then to a constant. Cycling integrals: ∫eˣ sin x dx leads back to the original integral — solve algebraically.'
       }
     }
   ]

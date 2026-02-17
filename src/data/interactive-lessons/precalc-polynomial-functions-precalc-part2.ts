@@ -30,31 +30,31 @@ left end up, right end down
       id: 'polyn2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of end behavior?',
+            question: 'What does "Even-degree polynomials" refer to in precalculus?',
             options: [
-              'Even-degree polynomials',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'ends go in opposite directions',
+              'both ends up',
+              'both ends go the same direction',
+              'left end up, right end down'
             ],
-            correctAnswer: 0,
-            explanation: 'Even-degree polynomials: both ends go the same direction'
+            correctAnswer: 2,
+            explanation: 'Correct — Even-degree polynomials: both ends go the same direction. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of end behavior, which is accurate?',
+            question: 'Which of the following is true about Positive leading coefficient with even degree?',
             options: [
+              'ends go in opposite directions',
+              'both ends go the same direction',
               'both ends up',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'left end up, right end down'
             ],
-            correctAnswer: 0,
-            explanation: 'Positive leading coefficient with even degree: both ends up'
+            correctAnswer: 2,
+            explanation: 'Correct — Positive leading coefficient with even degree: both ends up. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ left end up, right end down
       id: 'polyn2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Even-degree polynomials',
-            options: ['both ends go the same direction', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['left end up, right end down', 'both ends go the same direction', 'both ends up', 'ends go in opposite directions']
           },
           {
             label: 'Odd-degree polynomials',
-            options: ['ends go in opposite directions', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['ends go in opposite directions', 'both ends up', 'left end up, right end down', 'both ends go the same direction']
           },
           {
             label: 'Positive leading coefficient with even degree',
-            options: ['both ends up', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['both ends up', 'left end up, right end down', 'ends go in opposite directions', 'both ends go the same direction']
           }
         ],
         correctAnswers: ['both ends go the same direction', 'ends go in opposite directions', 'both ends up'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding End Behavior.'
+        hint1: 'Think about what each concept specifically describes in End Behavior.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in End Behavior describes a specific idea. Even-degree polynomials: both ends go the same direction. Odd-degree polynomials: ends go in opposite directions. Positive leading coefficient with even degree: both ends up.'
       }
     }
   ]

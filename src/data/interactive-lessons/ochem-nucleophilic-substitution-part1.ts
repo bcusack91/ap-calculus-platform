@@ -30,31 +30,31 @@ Mechanism depends on substrate, nucleophile, solvent, leaving group
       id: 'nucle1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of introduction to substitution?',
+            question: 'What does "Nucleophilic substitution" refer to in this topic?',
             options: [
-              'Nucleophilic substitution',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'Mechanism depends on substrate, nucleophile, solvent, leaving group',
+              'SN1 and SN2',
+              'nucleophile replaces leaving group',
+              '⁻ + R-LG → R-Nu + LG:⁻'
             ],
-            correctAnswer: 0,
-            explanation: 'Nucleophilic substitution: nucleophile replaces leaving group'
+            correctAnswer: 2,
+            explanation: 'Correct — Nucleophilic substitution: nucleophile replaces leaving group. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of introduction to substitution, which is accurate?',
+            question: 'Which of the following is true about Two mechanisms?',
             options: [
+              'nucleophile replaces leaving group',
+              '⁻ + R-LG → R-Nu + LG:⁻',
               'SN1 and SN2',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Mechanism depends on substrate, nucleophile, solvent, leaving group'
             ],
-            correctAnswer: 0,
-            explanation: 'Two mechanisms: SN1 and SN2'
+            correctAnswer: 2,
+            explanation: 'Correct — Two mechanisms: SN1 and SN2. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Mechanism depends on substrate, nucleophile, solvent, leaving group
       id: 'nucle1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Nucleophilic substitution',
-            options: ['nucleophile replaces leaving group', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['SN1 and SN2', 'Mechanism depends on substrate, nucleophile, solvent, leaving group', 'nucleophile replaces leaving group', '⁻ + R-LG → R-Nu + LG:⁻']
           },
           {
             label: 'Nu',
-            options: ['⁻ + R-LG → R-Nu + LG:⁻', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['⁻ + R-LG → R-Nu + LG:⁻', 'nucleophile replaces leaving group', 'Mechanism depends on substrate, nucleophile, solvent, leaving group', 'SN1 and SN2']
           },
           {
             label: 'Two mechanisms',
-            options: ['SN1 and SN2', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['nucleophile replaces leaving group', 'Mechanism depends on substrate, nucleophile, solvent, leaving group', '⁻ + R-LG → R-Nu + LG:⁻', 'SN1 and SN2']
           }
         ],
         correctAnswers: ['nucleophile replaces leaving group', '⁻ + R-LG → R-Nu + LG:⁻', 'SN1 and SN2'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Introduction to Substitution.'
+        hint1: 'Think about what each concept specifically describes in ️ Nucleophilic Substitution.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in ️ Nucleophilic Substitution describes a specific idea. Nucleophilic substitution: nucleophile replaces leaving group. Nu: ⁻ + R-LG → R-Nu + LG:⁻. Two mechanisms: SN1 and SN2.'
       }
     }
   ]

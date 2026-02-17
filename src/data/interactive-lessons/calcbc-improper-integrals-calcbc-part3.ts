@@ -30,31 +30,31 @@ converges if p < 1, diverges if p ≥ 1
       id: 'impro3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of convergence & divergence?',
+            question: 'Which of the following correctly describes If the limit exists and is finite, the…?',
             options: [
               'If the limit exists and is finite, the integral converges',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
+              'converges if p < 1, diverges if p ≥ 1',
+              'converges if p > 1, diverges if p ≤ 1 (p-series test)',
+              'If the limit is ±∞ or doesn\'t exist, the integral diverges'
             ],
             correctAnswer: 0,
-            explanation: 'If the limit exists and is finite, the integral converges'
+            explanation: 'Correct — If the limit exists and is finite, the integral converges. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of convergence & divergence, which is accurate?',
+            question: 'In the context of Convergence & Divergence, which explains ∫₁^∞ 1/xᵖ dx?',
             options: [
-              'converges if p > 1, diverges if p ≤ 1 (p-series test)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'If the limit exists and is finite, the integral converges',
+              'If the limit is ±∞ or doesn\'t exist, the integral diverges',
+              'converges if p < 1, diverges if p ≥ 1',
+              'converges if p > 1, diverges if p ≤ 1 (p-series test)'
             ],
-            correctAnswer: 0,
-            explanation: '∫₁^∞ 1/xᵖ dx: converges if p > 1, diverges if p ≤ 1 (p-series test)'
+            correctAnswer: 3,
+            explanation: 'Correct — ∫₁^∞ 1/xᵖ dx: converges if p > 1, diverges if p ≤ 1 (p-series test). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ converges if p < 1, diverges if p ≥ 1
       id: 'impro3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to convergence & divergence?',
+            question: 'Which statement about ∫₀¹ 1/xᵖ dx is correct?',
             options: [
-              'converges if p < 1, diverges if p ≥ 1',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'If the limit is ±∞ or doesn\'t exist, the integral diverges',
+              'If the limit exists and is finite, the integral converges',
+              'converges if p > 1, diverges if p ≤ 1 (p-series test)',
+              'converges if p < 1, diverges if p ≥ 1'
             ],
-            correctAnswer: 0,
-            explanation: '∫₀¹ 1/xᵖ dx: converges if p < 1, diverges if p ≥ 1'
+            correctAnswer: 3,
+            explanation: 'Correct — ∫₀¹ 1/xᵖ dx: converges if p < 1, diverges if p ≥ 1. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,24 @@ converges if p < 1, diverges if p ≥ 1
       id: 'impro3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'If the limit exists and is finite, the integral converges',
-            options: ['If the limit exists and is finite, the integral co', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
-          },
-          {
-            label: 'If the limit is ±∞ or doesn\'t exist, the integral diverges',
-            options: ['If the limit is ±∞ or doesn\'t exist, the integral ', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
-          },
-          {
             label: '∫₁^∞ 1/xᵖ dx',
-            options: ['converges if p > 1, diverges if p ≤ 1 (p-series te', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['converges if p > 1, diverges if p ≤ 1 (p-series test)', 'If the limit is ±∞ or doesn\'t exist, the integral diverges', 'converges if p < 1, diverges if p ≥ 1', 'If the limit exists and is finite, the integral converges']
+          },
+          {
+            label: '∫₀¹ 1/xᵖ dx',
+            options: ['converges if p < 1, diverges if p ≥ 1', 'If the limit exists and is finite, the integral converges', 'converges if p > 1, diverges if p ≤ 1 (p-series test)', 'If the limit is ±∞ or doesn\'t exist, the integral diverges']
           }
         ],
-        correctAnswers: ['If the limit exists and is finite, the integral co', 'If the limit is ±∞ or doesn\'t exist, the integral ', 'converges if p > 1, diverges if p ≤ 1 (p-series te'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Convergence & Divergence.'
+        correctAnswers: ['converges if p > 1, diverges if p ≤ 1 (p-series test)', 'converges if p < 1, diverges if p ≥ 1'],
+        hint1: 'Think about what each concept specifically describes in Convergence & Divergence.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Convergence & Divergence describes a specific idea. ∫₁^∞ 1/xᵖ dx: converges if p > 1, diverges if p ≤ 1 (p-series test). ∫₀¹ 1/xᵖ dx: converges if p < 1, diverges if p ≥ 1.'
       }
     }
   ]

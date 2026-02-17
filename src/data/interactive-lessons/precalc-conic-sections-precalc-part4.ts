@@ -30,31 +30,31 @@ c² = a² + b²; eccentricity e = c/a, where e > 1
       id: 'conic4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of hyperbolas?',
+            question: 'Which statement accurately explains Hyperbola?',
             options: [
-              'Hyperbola',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'set of points where difference of distances to foci is constant',
+              'y - k = ±(b/a)(x - h)',
+              '(x-h)²/a² - (y-k)²/b² = 1 (opens left-right)',
+              'c² = a² + b²; eccentricity e = c/a, where e > 1'
             ],
             correctAnswer: 0,
-            explanation: 'Hyperbola: set of points where difference of distances to foci is constant'
+            explanation: 'Correct — Hyperbola: set of points where difference of distances to foci is constant. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of hyperbolas, which is accurate?',
+            question: 'In the context of Hyperbolas, which explains Asymptotes?',
             options: [
               'y - k = ±(b/a)(x - h)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'c² = a² + b²; eccentricity e = c/a, where e > 1',
+              'set of points where difference of distances to foci is constant',
+              '(x-h)²/a² - (y-k)²/b² = 1 (opens left-right)'
             ],
             correctAnswer: 0,
-            explanation: 'Asymptotes: y - k = ±(b/a)(x - h)'
+            explanation: 'Correct — Asymptotes: y - k = ±(b/a)(x - h). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ c² = a² + b²; eccentricity e = c/a, where e > 1
       id: 'conic4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Hyperbola',
-            options: ['set of points where difference of distances to foc', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['y - k = ±(b/a)(x - h)', 'set of points where difference of distances to foci is constant', 'c² = a² + b²; eccentricity e = c/a, where e > 1', '(x-h)²/a² - (y-k)²/b² = 1 (opens left-right)']
           },
           {
             label: 'Standard form',
-            options: ['(x-h)²/a² - (y-k)²/b² = 1 (opens left-right)', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['(x-h)²/a² - (y-k)²/b² = 1 (opens left-right)', 'c² = a² + b²; eccentricity e = c/a, where e > 1', 'y - k = ±(b/a)(x - h)', 'set of points where difference of distances to foci is constant']
           },
           {
             label: 'Asymptotes',
-            options: ['y - k = ±(b/a)(x - h)', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['y - k = ±(b/a)(x - h)', '(x-h)²/a² - (y-k)²/b² = 1 (opens left-right)', 'set of points where difference of distances to foci is constant', 'c² = a² + b²; eccentricity e = c/a, where e > 1']
           }
         ],
-        correctAnswers: ['set of points where difference of distances to foc', '(x-h)²/a² - (y-k)²/b² = 1 (opens left-right)', 'y - k = ±(b/a)(x - h)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Hyperbolas.'
+        correctAnswers: ['set of points where difference of distances to foci is constant', '(x-h)²/a² - (y-k)²/b² = 1 (opens left-right)', 'y - k = ±(b/a)(x - h)'],
+        hint1: 'Think about what each concept specifically describes in Hyperbolas.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Hyperbolas describes a specific idea. Hyperbola: set of points where difference of distances to foci is constant. Standard form: (x-h)²/a² - (y-k)²/b² = 1 (opens left-right). Asymptotes: y - k = ±(b/a)(x - h).'
       }
     }
   ]

@@ -30,31 +30,31 @@ lim(x→0) sin(x)/x = 1, lim(x→0) (1-cos(x))/x = 0
       id: 'limit3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of algebraic limit techniques?',
-            options: [
-              'Direct substitution',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'Direct substitution: plug in c if the function is continuous'
-          },
-          {
-            question: 'In the context of algebraic limit techniques, which is accurate?',
+            question: 'Which of the following correctly describes Direct substitution?',
             options: [
               'multiply by conjugate for radical expressions',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'for 0/0 indeterminate forms',
+              'plug in c if the function is continuous',
+              'lim(x→0) sin(x)/x = 1, lim(x→0) (1-cos(x))/x = 0'
             ],
-            correctAnswer: 0,
-            explanation: 'Rationalize: multiply by conjugate for radical expressions'
+            correctAnswer: 2,
+            explanation: 'Correct — Direct substitution: plug in c if the function is continuous. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Algebraic Limit Techniques, which explains Rationalize?',
+            options: [
+              'lim(x→0) sin(x)/x = 1, lim(x→0) (1-cos(x))/x = 0',
+              'for 0/0 indeterminate forms',
+              'multiply by conjugate for radical expressions',
+              'plug in c if the function is continuous'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Rationalize: multiply by conjugate for radical expressions. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ lim(x→0) sin(x)/x = 1, lim(x→0) (1-cos(x))/x = 0
       id: 'limit3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Direct substitution',
-            options: ['plug in c if the function is continuous', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['plug in c if the function is continuous', 'lim(x→0) sin(x)/x = 1, lim(x→0) (1-cos(x))/x = 0', 'multiply by conjugate for radical expressions', 'for 0/0 indeterminate forms']
           },
           {
             label: 'Factor and cancel',
-            options: ['for 0/0 indeterminate forms', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['for 0/0 indeterminate forms', 'plug in c if the function is continuous', 'multiply by conjugate for radical expressions', 'lim(x→0) sin(x)/x = 1, lim(x→0) (1-cos(x))/x = 0']
           },
           {
             label: 'Rationalize',
-            options: ['multiply by conjugate for radical expressions', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['multiply by conjugate for radical expressions', 'lim(x→0) sin(x)/x = 1, lim(x→0) (1-cos(x))/x = 0', 'plug in c if the function is continuous', 'for 0/0 indeterminate forms']
           }
         ],
         correctAnswers: ['plug in c if the function is continuous', 'for 0/0 indeterminate forms', 'multiply by conjugate for radical expressions'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Algebraic Limit Techniques.'
+        hint1: 'Think about what each concept specifically describes in Algebraic Limit Techniques.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Algebraic Limit Techniques describes a specific idea. Direct substitution: plug in c if the function is continuous. Factor and cancel: for 0/0 indeterminate forms. Rationalize: multiply by conjugate for radical expressions.'
       }
     }
   ]

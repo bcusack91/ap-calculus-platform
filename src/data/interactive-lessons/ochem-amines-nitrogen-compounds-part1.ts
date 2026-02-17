@@ -30,31 +30,31 @@ Amines are bases and nucleophiles
       id: 'amine1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of amine classification & properties?',
+            question: 'What does "Amines" refer to in this topic?',
             options: [
-              'Amines',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'Primary (RNH₂), secondary (R₂NH), tertiary (R₃N)',
+              'positively charged',
+              'Amines are bases and nucleophiles',
+              'nitrogen with lone pair and up to 3 R groups'
             ],
-            correctAnswer: 0,
-            explanation: 'Amines: nitrogen with lone pair and up to 3 R groups'
+            correctAnswer: 3,
+            explanation: 'Correct — Amines: nitrogen with lone pair and up to 3 R groups. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of amine classification & properties, which is accurate?',
+            question: 'In the context of ️ Amines Nitrogen Compounds, which explains Quaternary ammonium (R₄N⁺)?',
             options: [
               'positively charged',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Amines are bases and nucleophiles',
+              'Primary (RNH₂), secondary (R₂NH), tertiary (R₃N)',
+              'nitrogen with lone pair and up to 3 R groups'
             ],
             correctAnswer: 0,
-            explanation: 'Quaternary ammonium (R₄N⁺): positively charged'
+            explanation: 'Correct — Quaternary ammonium (R₄N⁺): positively charged. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,24 @@ Amines are bases and nucleophiles
       id: 'amine1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Amines',
-            options: ['nitrogen with lone pair and up to 3 R groups', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
-          },
-          {
-            label: 'Primary (RNH₂), secondary (R₂NH), tertiary (R₃N)',
-            options: ['Primary (RNH₂), secondary (R₂NH), tertiary (R₃N)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['positively charged', 'Amines are bases and nucleophiles', 'nitrogen with lone pair and up to 3 R groups', 'Primary (RNH₂), secondary (R₂NH), tertiary (R₃N)']
           },
           {
             label: 'Quaternary ammonium (R₄N⁺)',
-            options: ['positively charged', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Amines are bases and nucleophiles', 'nitrogen with lone pair and up to 3 R groups', 'Primary (RNH₂), secondary (R₂NH), tertiary (R₃N)', 'positively charged']
           }
         ],
-        correctAnswers: ['nitrogen with lone pair and up to 3 R groups', 'Primary (RNH₂), secondary (R₂NH), tertiary (R₃N)', 'positively charged'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Amine Classification & Properties.'
+        correctAnswers: ['nitrogen with lone pair and up to 3 R groups', 'positively charged'],
+        hint1: 'Think about what each concept specifically describes in ️ Amines Nitrogen Compounds.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in ️ Amines Nitrogen Compounds describes a specific idea. Amines: nitrogen with lone pair and up to 3 R groups. Quaternary ammonium (R₄N⁺): positively charged.'
       }
     }
   ]

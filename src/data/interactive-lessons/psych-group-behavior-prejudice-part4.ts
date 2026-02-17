@@ -30,31 +30,31 @@ we're attracted to people similar to us
       id: 'group4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of interpersonal attraction?',
+            question: 'Which statement accurately explains Proximity effect?',
             options: [
-              'Proximity effect',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'geographic closeness → attraction',
+              'repeated exposure increases liking',
+              'symmetry, averageness',
+              'we\'re attracted to people similar to us'
             ],
             correctAnswer: 0,
-            explanation: 'Proximity effect: geographic closeness → attraction'
+            explanation: 'Correct — Proximity effect: geographic closeness → attraction. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of interpersonal attraction, which is accurate?',
+            question: 'Which of the following is true about Physical attractiveness?',
             options: [
+              'geographic closeness → attraction',
+              'repeated exposure increases liking',
               'symmetry, averageness',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'we\'re attracted to people similar to us'
             ],
-            correctAnswer: 0,
-            explanation: 'Physical attractiveness: symmetry, averageness'
+            correctAnswer: 2,
+            explanation: 'Correct — Physical attractiveness: symmetry, averageness. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ we're attracted to people similar to us
       id: 'group4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Proximity effect',
-            options: ['geographic closeness → attraction', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['repeated exposure increases liking', 'symmetry, averageness', 'geographic closeness → attraction', 'we\'re attracted to people similar to us']
           },
           {
             label: 'Mere exposure effect',
-            options: ['repeated exposure increases liking', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['repeated exposure increases liking', 'we\'re attracted to people similar to us', 'geographic closeness → attraction', 'symmetry, averageness']
           },
           {
             label: 'Physical attractiveness',
-            options: ['symmetry, averageness', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['repeated exposure increases liking', 'geographic closeness → attraction', 'symmetry, averageness', 'we\'re attracted to people similar to us']
           }
         ],
         correctAnswers: ['geographic closeness → attraction', 'repeated exposure increases liking', 'symmetry, averageness'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Interpersonal Attraction.'
+        hint1: 'Think about what each concept specifically describes in Interpersonal Attraction.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Interpersonal Attraction describes a specific idea. Proximity effect: geographic closeness → attraction. Mere exposure effect: repeated exposure increases liking. Physical attractiveness: symmetry, averageness.'
       }
     }
   ]

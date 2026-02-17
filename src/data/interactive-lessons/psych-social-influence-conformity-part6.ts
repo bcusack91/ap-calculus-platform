@@ -30,31 +30,31 @@ Applying persuasion techniques
       id: 'socia6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of problem-solving workshop?',
+            question: 'Which of the following correctly describes Identifying social influence in…?',
             options: [
+              'Applying persuasion techniques',
+              'Analyzing conformity and obedience situations',
               'Identifying social influence in scenarios',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'Evaluating group decision-making'
             ],
-            correctAnswer: 0,
-            explanation: 'Identifying social influence in scenarios'
+            correctAnswer: 2,
+            explanation: 'Correct — Identifying social influence in scenarios. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of problem-solving workshop, which is accurate?',
+            question: 'Which of the following is true about Evaluating group decision-making?',
             options: [
-              'Evaluating group decision-making',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Identifying social influence in scenarios',
+              'Analyzing conformity and obedience situations',
+              'Applying persuasion techniques',
+              'Evaluating group decision-making'
             ],
-            correctAnswer: 0,
-            explanation: 'Evaluating group decision-making'
+            correctAnswer: 3,
+            explanation: 'Correct — Evaluating group decision-making. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Applying persuasion techniques
       id: 'socia6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Identifying social influence in scenarios',
-            options: ['Identifying social influence in scenarios', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            label: 'Identifying social influence in…',
+            options: ['Evaluating group decision-making', 'Applying persuasion techniques', 'Identifying social influence in scenarios', 'Analyzing conformity and obedience situations']
           },
           {
-            label: 'Analyzing conformity and obedience situations',
-            options: ['Analyzing conformity and obedience situations', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            label: 'Analyzing conformity and obedience…',
+            options: ['Applying persuasion techniques', 'Analyzing conformity and obedience situations', 'Identifying social influence in scenarios', 'Evaluating group decision-making']
           },
           {
             label: 'Evaluating group decision-making',
-            options: ['Evaluating group decision-making', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Applying persuasion techniques', 'Identifying social influence in scenarios', 'Evaluating group decision-making', 'Analyzing conformity and obedience situations']
           }
         ],
         correctAnswers: ['Identifying social influence in scenarios', 'Analyzing conformity and obedience situations', 'Evaluating group decision-making'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving Workshop.'
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Identifying social influence in scenarios. Analyzing conformity and obedience situations. Evaluating group decision-making.'
       }
     }
   ]

@@ -19,31 +19,31 @@ export const bioCellCommPart3Data = {
       id: 'cell3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes membrane receptors?',
+            question: 'Which of the following correctly describes Membrane receptors?',
             options: [
-              'G-protein coupled, receptor tyrosine kinases, ion channels',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'for lipid-soluble signals (steroids)',
+              'Ligand binding causes conformational change',
+              'Receptor specificity determines which cells respond',
+              'G-protein coupled, receptor tyrosine kinases, ion channels'
             ],
-            correctAnswer: 0,
-            explanation: 'Membrane receptors: G-protein coupled, receptor tyrosine kinases, ion channels'
+            correctAnswer: 3,
+            explanation: 'Correct — Membrane receptors: G-protein coupled, receptor tyrosine kinases, ion channels. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of signal reception, which statement is accurate?',
+            question: 'Select the statement that correctly describes Ligand binding causes conformational…:',
             options: [
+              'G-protein coupled, receptor tyrosine kinases, ion channels',
               'Ligand binding causes conformational change',
-              'slennahc noi ,sesanik enisoryt rotpecer ,delpuoc nietorp-G :srotpecer enarbmeM',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'for lipid-soluble signals (steroids)',
+              'Receptor specificity determines which cells respond'
             ],
-            correctAnswer: 0,
-            explanation: 'Ligand binding causes conformational change'
+            correctAnswer: 1,
+            explanation: 'Correct — Ligand binding causes conformational change. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioCellCommPart3Data = {
       id: 'cell3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to signal reception?',
+            question: 'Which statement about Receptor specificity determines which… is correct?',
             options: [
               'Receptor specificity determines which cells respond',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'G-protein coupled, receptor tyrosine kinases, ion channels',
+              'Ligand binding causes conformational change',
+              'for lipid-soluble signals (steroids)'
             ],
             correctAnswer: 0,
-            explanation: 'Receptor specificity determines which cells respond'
+            explanation: 'Correct — Receptor specificity determines which cells respond. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,24 @@ export const bioCellCommPart3Data = {
       id: 'cell3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Membrane receptors is important in signal reception because',
-            options: ['G-protein coupled, receptor tyrosine kinases, ion ', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Membrane receptors',
+            options: ['Receptor specificity determines which cells respond', 'G-protein coupled, receptor tyrosine kinases, ion channels', 'Ligand binding causes conformational change', 'for lipid-soluble signals (steroids)']
           },
           {
-            label: 'Intracellular receptors is important in signal reception because',
-            options: ['for lipid-soluble signals (steroids)', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
-          },
-          {
-            label: 'Ligand binding causes conformational change is important in signal reception because',
-            options: ['Ligand binding causes conformational change', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Intracellular receptors',
+            options: ['G-protein coupled, receptor tyrosine kinases, ion channels', 'Receptor specificity determines which cells respond', 'Ligand binding causes conformational change', 'for lipid-soluble signals (steroids)']
           }
         ],
-        correctAnswers: ['G-protein coupled, receptor tyrosine kinases, ion ', 'for lipid-soluble signals (steroids)', 'Ligand binding causes conformational change'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Signal Reception.'
+        correctAnswers: ['G-protein coupled, receptor tyrosine kinases, ion channels', 'for lipid-soluble signals (steroids)'],
+        hint1: 'Think about what each concept specifically describes in Signal Reception.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Signal Reception describes a specific idea. Membrane receptors: G-protein coupled, receptor tyrosine kinases, ion channels. Intracellular receptors: for lipid-soluble signals (steroids).'
       }
     }
   ]

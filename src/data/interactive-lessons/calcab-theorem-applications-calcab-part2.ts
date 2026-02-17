@@ -30,31 +30,31 @@ if f(a) = f(b), then f'(c) = 0 for some c in (a,b)
       id: 'theor2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of mean value theorem applications?',
+            question: 'Which of the following correctly describes MVT?',
             options: [
-              'MVT',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'at some point the instantaneous rate equals the average rate',
+              'If a car travels 60 miles in 1 hour, at some moment it was going exactly 60 mph',
+              'f\'(c) = [f(b)-f(a)]/(b-a) for some c in (a,b)',
+              'if f(a) = f(b), then f\'(c) = 0 for some c in (a,b)'
             ],
-            correctAnswer: 0,
-            explanation: 'MVT: f\'(c) = [f(b)-f(a)]/(b-a) for some c in (a,b)'
+            correctAnswer: 2,
+            explanation: 'Correct — MVT: f\'(c) = [f(b)-f(a)]/(b-a) for some c in (a,b). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of mean value theorem applications, which is accurate?',
+            question: 'Select the statement that correctly describes If a car travels 60 miles in 1 hour, at…:',
             options: [
+              'at some point the instantaneous rate equals the average rate',
               'If a car travels 60 miles in 1 hour, at some moment it was going exactly 60 mph',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'f\'(c) = [f(b)-f(a)]/(b-a) for some c in (a,b)',
+              'if f(a) = f(b), then f\'(c) = 0 for some c in (a,b)'
             ],
-            correctAnswer: 0,
-            explanation: 'If a car travels 60 miles in 1 hour, at some moment it was going exactly 60 mph'
+            correctAnswer: 1,
+            explanation: 'Correct — If a car travels 60 miles in 1 hour, at some moment it was going exactly 60 mph. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ if f(a) = f(b), then f'(c) = 0 for some c in (a,b)
       id: 'theor2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to mean value theorem applications?',
+            question: 'Which statement about Rolle\'s is correct?',
             options: [
-              'if f(a) = f(b), then f\'(c) = 0 for some c in (a,b)',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'at some point the instantaneous rate equals the average rate',
+              'If a car travels 60 miles in 1 hour, at some moment it was going exactly 60 mph',
+              'f\'(c) = [f(b)-f(a)]/(b-a) for some c in (a,b)',
+              'if f(a) = f(b), then f\'(c) = 0 for some c in (a,b)'
             ],
-            correctAnswer: 0,
-            explanation: 'Rolle\'s: if f(a) = f(b), then f\'(c) = 0 for some c in (a,b)'
+            correctAnswer: 3,
+            explanation: 'Correct — Rolle\'s: if f(a) = f(b), then f\'(c) = 0 for some c in (a,b). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ if f(a) = f(b), then f'(c) = 0 for some c in (a,b)
       id: 'theor2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'MVT',
-            options: ['f\'(c) = [f(b)-f(a)]/(b-a) for some c in (a,b)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['if f(a) = f(b), then f\'(c) = 0 for some c in (a,b)', 'If a car travels 60 miles in 1 hour, at some moment it was going exactly 60 mph', 'at some point the instantaneous rate equals the average rate', 'f\'(c) = [f(b)-f(a)]/(b-a) for some c in (a,b)']
           },
           {
             label: 'Interpretation',
-            options: ['at some point the instantaneous rate equals the av', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['at some point the instantaneous rate equals the average rate', 'If a car travels 60 miles in 1 hour, at some moment it was going exactly 60 mph', 'if f(a) = f(b), then f\'(c) = 0 for some c in (a,b)', 'f\'(c) = [f(b)-f(a)]/(b-a) for some c in (a,b)']
           },
           {
-            label: 'If a car travels 60 miles in 1 hour, at some moment it was going exactly 60 mph',
-            options: ['If a car travels 60 miles in 1 hour, at some momen', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Rolle\'s',
+            options: ['f\'(c) = [f(b)-f(a)]/(b-a) for some c in (a,b)', 'at some point the instantaneous rate equals the average rate', 'if f(a) = f(b), then f\'(c) = 0 for some c in (a,b)', 'If a car travels 60 miles in 1 hour, at some moment it was going exactly 60 mph']
           }
         ],
-        correctAnswers: ['f\'(c) = [f(b)-f(a)]/(b-a) for some c in (a,b)', 'at some point the instantaneous rate equals the av', 'If a car travels 60 miles in 1 hour, at some momen'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Mean Value Theorem Applications.'
+        correctAnswers: ['f\'(c) = [f(b)-f(a)]/(b-a) for some c in (a,b)', 'at some point the instantaneous rate equals the average rate', 'if f(a) = f(b), then f\'(c) = 0 for some c in (a,b)'],
+        hint1: 'Think about what each concept specifically describes in Mean Value Theorem Applications.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Mean Value Theorem Applications describes a specific idea. MVT: f\'(c) = [f(b)-f(a)]/(b-a) for some c in (a,b). Interpretation: at some point the instantaneous rate equals the average rate. Rolle\'s: if f(a) = f(b), then f\'(c) = 0 for some c in (a,b).'
       }
     }
   ]

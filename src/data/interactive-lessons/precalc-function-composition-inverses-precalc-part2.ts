@@ -30,31 +30,31 @@ Write domain in interval notation
       id: 'funct2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of domain of composed functions?',
-            options: [
-              'Domain of f ∘ g',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'Domain of f ∘ g: x must be in domain of g AND g(x) must be in domain of f'
-          },
-          {
-            question: 'In the context of domain of composed functions, which is accurate?',
+            question: 'Which of the following correctly describes Domain of f ∘ g?',
             options: [
               'Restrict domain when square roots or logarithms are involved',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'x must be in domain of g AND g(x) must be in domain of f',
+              'Write domain in interval notation',
+              'Always check inner function\'s range against outer function\'s domain'
             ],
-            correctAnswer: 0,
-            explanation: 'Restrict domain when square roots or logarithms are involved'
+            correctAnswer: 1,
+            explanation: 'Correct — Domain of f ∘ g: x must be in domain of g AND g(x) must be in domain of f. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Domain of Composed Functions, which explains Restrict domain when square roots or…?',
+            options: [
+              'Always check inner function\'s range against outer function\'s domain',
+              'Write domain in interval notation',
+              'Restrict domain when square roots or logarithms are involved',
+              'x must be in domain of g AND g(x) must be in domain of f'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Restrict domain when square roots or logarithms are involved. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Write domain in interval notation
       id: 'funct2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Domain of f ∘ g',
-            options: ['x must be in domain of g AND g(x) must be in domai', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['Restrict domain when square roots or logarithms are involved', 'x must be in domain of g AND g(x) must be in domain of f', 'Write domain in interval notation', 'Always check inner function\'s range against outer function\'s domain']
           },
           {
-            label: 'Always check inner function\'s range against outer function\'s domain',
-            options: ['Always check inner function\'s range against outer ', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            label: 'Always check inner function\'s range…',
+            options: ['Always check inner function\'s range against outer function\'s domain', 'Restrict domain when square roots or logarithms are involved', 'Write domain in interval notation', 'x must be in domain of g AND g(x) must be in domain of f']
           },
           {
-            label: 'Restrict domain when square roots or logarithms are involved',
-            options: ['Restrict domain when square roots or logarithms ar', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            label: 'Restrict domain when square roots or…',
+            options: ['Always check inner function\'s range against outer function\'s domain', 'Restrict domain when square roots or logarithms are involved', 'x must be in domain of g AND g(x) must be in domain of f', 'Write domain in interval notation']
           }
         ],
-        correctAnswers: ['x must be in domain of g AND g(x) must be in domai', 'Always check inner function\'s range against outer ', 'Restrict domain when square roots or logarithms ar'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Domain of Composed Functions.'
+        correctAnswers: ['x must be in domain of g AND g(x) must be in domain of f', 'Always check inner function\'s range against outer function\'s domain', 'Restrict domain when square roots or logarithms are involved'],
+        hint1: 'Think about what each concept specifically describes in Domain of Composed Functions.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Domain of Composed Functions describes a specific idea. Domain of f ∘ g: x must be in domain of g AND g(x) must be in domain of f. Always check inner function\'s range against outer function\'s domain. Restrict domain when square roots or logarithms are involved.'
       }
     }
   ]

@@ -30,31 +30,31 @@ total area uses |f(x)|
       id: 'defin2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of the definite integral?',
+            question: 'What does "∫ₐᵇ f(x)dx = lim(n→∞) Σ f(xᵢ*)Δx" refer to in calculus?',
             options: [
-              '∫ₐᵇ f(x)dx = lim(n→∞) Σ f(xᵢ*)Δx',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'total area uses |f(x)|',
+              'Area above x-axis is positive; area below is negative',
+              'signed area under the curve from a to b',
+              '∫ₐᵇ f(x)dx = lim(n→∞) Σ f(xᵢ*)Δx'
             ],
-            correctAnswer: 0,
-            explanation: '∫ₐᵇ f(x)dx = lim(n→∞) Σ f(xᵢ*)Δx'
+            correctAnswer: 3,
+            explanation: 'Correct — ∫ₐᵇ f(x)dx = lim(n→∞) Σ f(xᵢ*)Δx. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of the definite integral, which is accurate?',
+            question: 'Select the statement that correctly describes Area above x-axis is positive; area…:',
             options: [
               'Area above x-axis is positive; area below is negative',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'signed area under the curve from a to b',
+              '∫ₐᵇ f(x)dx = lim(n→∞) Σ f(xᵢ*)Δx',
+              'total area uses |f(x)|'
             ],
             correctAnswer: 0,
-            explanation: 'Area above x-axis is positive; area below is negative'
+            explanation: 'Correct — Area above x-axis is positive; area below is negative. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ total area uses |f(x)|
       id: 'defin2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to the definite integral?',
+            question: 'Which statement about Net area vs total area is correct?',
             options: [
               'total area uses |f(x)|',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'Area above x-axis is positive; area below is negative',
+              'signed area under the curve from a to b',
+              '∫ₐᵇ f(x)dx = lim(n→∞) Σ f(xᵢ*)Δx'
             ],
             correctAnswer: 0,
-            explanation: 'Net area vs total area: total area uses |f(x)|'
+            explanation: 'Correct — Net area vs total area: total area uses |f(x)|. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,24 @@ total area uses |f(x)|
       id: 'defin2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: '∫ₐᵇ f(x)dx = lim(n→∞) Σ f(xᵢ*)Δx',
-            options: ['∫ₐᵇ f(x)dx = lim(n→∞) Σ f(xᵢ*)Δx', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
-          },
-          {
             label: 'Geometric interpretation',
-            options: ['signed area under the curve from a to b', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Area above x-axis is positive; area below is negative', 'total area uses |f(x)|', '∫ₐᵇ f(x)dx = lim(n→∞) Σ f(xᵢ*)Δx', 'signed area under the curve from a to b']
           },
           {
-            label: 'Area above x-axis is positive; area below is negative',
-            options: ['Area above x-axis is positive; area below is negat', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Net area vs total area',
+            options: ['Area above x-axis is positive; area below is negative', '∫ₐᵇ f(x)dx = lim(n→∞) Σ f(xᵢ*)Δx', 'total area uses |f(x)|', 'signed area under the curve from a to b']
           }
         ],
-        correctAnswers: ['∫ₐᵇ f(x)dx = lim(n→∞) Σ f(xᵢ*)Δx', 'signed area under the curve from a to b', 'Area above x-axis is positive; area below is negat'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding The Definite Integral.'
+        correctAnswers: ['signed area under the curve from a to b', 'total area uses |f(x)|'],
+        hint1: 'Think about what each concept specifically describes in The Definite Integral.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in The Definite Integral describes a specific idea. Geometric interpretation: signed area under the curve from a to b. Net area vs total area: total area uses |f(x)|.'
       }
     }
   ]

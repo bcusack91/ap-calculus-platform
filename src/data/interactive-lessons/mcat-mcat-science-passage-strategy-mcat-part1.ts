@@ -71,23 +71,24 @@ Read the passage first, note the main experiment and hypothesis.
       id: 'mcat-1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Reading Science Passages:',
-            options: ['MCAT science passages are 4-7 paragraphs with figures, graph', 'Read the passage first, note the main experiment and hypothe', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Key Insight',
+            options: ['Read the passage first, note the main experiment and hypothesis.', 'Dont memorize every detail — focus on the experimental logic and refer back as needed.', 'Identify variables: independent (manipulated), dependent (measured), controlled (held constant).', 'MCAT science passages are 4-7 paragraphs with figures, graphs, and experimental data.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Identify variables: independent (manipulated), dependent (me', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'MCAT Tip',
+            options: ['Dont memorize every detail — focus on the experimental logic and refer back as needed.', 'MCAT science passages are 4-7 paragraphs with figures, graphs, and experimental data.', 'Identify variables: independent (manipulated), dependent (measured), controlled (held constant).', 'Read the passage first, note the main experiment and hypothesis.']
           }
         ],
-        correctAnswers: ['MCAT science passages are 4-7 paragraphs with figures, graph', 'Identify variables: independent (manipulated), dependent (me'],
-        hint1: 'Think about reading science passages',
-        hint2: 'Consider the MCAT application',
-        explanation: 'MCAT science passages are 4-7 paragraphs with figures, graphs, and experimental data. Identify variables: independent (manipulated), dependent (measured), controlled (held constant).'
+        correctAnswers: ['Identify variables: independent (manipulated), dependent (measured), controlled (held constant).', 'Dont memorize every detail — focus on the experimental logic and refer back as needed.'],
+        hint1: 'Think about what each concept specifically describes in Science Passage Strategy.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Science Passage Strategy describes a specific idea. Key Insight: Identify variables: independent (manipulated), dependent (measured), controlled (held constant). MCAT Tip: Dont memorize every detail — focus on the experimental logic and refer back as needed.'
       }
     }
   ]

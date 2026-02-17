@@ -19,31 +19,31 @@ export const bioMendelianPart1Data = {
       id: 'mend1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes law of segregation?',
+            question: 'What does "Law of Segregation" refer to in biology?',
             options: [
+              'genes on different chromosomes sort independently',
+              'Mendel\'s experimental approach with pea plants',
               'two alleles separate during gamete formation',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Dominant alleles mask recessive alleles'
             ],
-            correctAnswer: 0,
-            explanation: 'Law of Segregation: two alleles separate during gamete formation'
+            correctAnswer: 2,
+            explanation: 'Correct — Law of Segregation: two alleles separate during gamete formation. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of mendel\'s laws, which statement is accurate?',
+            question: 'Which of the following is true about Dominant alleles mask recessive alleles?',
             options: [
+              'two alleles separate during gamete formation',
+              'genes on different chromosomes sort independently',
               'Dominant alleles mask recessive alleles',
-              'noitamrof etemag gnirud etarapes selella owt :noitagergeS fo waL',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Mendel\'s experimental approach with pea plants'
             ],
-            correctAnswer: 0,
-            explanation: 'Dominant alleles mask recessive alleles'
+            correctAnswer: 2,
+            explanation: 'Correct — Dominant alleles mask recessive alleles. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioMendelianPart1Data = {
       id: 'mend1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to mendel\'s laws?',
+            question: 'Which statement about Mendel\'s experimental approach with pea… is correct?',
             options: [
               'Mendel\'s experimental approach with pea plants',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Dominant alleles mask recessive alleles',
+              'genes on different chromosomes sort independently',
+              'two alleles separate during gamete formation'
             ],
             correctAnswer: 0,
-            explanation: 'Mendel\'s experimental approach with pea plants'
+            explanation: 'Correct — Mendel\'s experimental approach with pea plants. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,24 @@ export const bioMendelianPart1Data = {
       id: 'mend1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Law of Segregation is important in mendel\'s laws because',
-            options: ['two alleles separate during gamete formation', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Law of Segregation',
+            options: ['genes on different chromosomes sort independently', 'two alleles separate during gamete formation', 'Mendel\'s experimental approach with pea plants', 'Dominant alleles mask recessive alleles']
           },
           {
-            label: 'Law of Independent Assortment is important in mendel\'s laws because',
-            options: ['genes on different chromosomes sort independently', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
-          },
-          {
-            label: 'Dominant alleles mask recessive alleles is important in mendel\'s laws because',
-            options: ['Dominant alleles mask recessive alleles', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Law of Independent Assortment',
+            options: ['two alleles separate during gamete formation', 'Dominant alleles mask recessive alleles', 'Mendel\'s experimental approach with pea plants', 'genes on different chromosomes sort independently']
           }
         ],
-        correctAnswers: ['two alleles separate during gamete formation', 'genes on different chromosomes sort independently', 'Dominant alleles mask recessive alleles'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Mendel\'s Laws.'
+        correctAnswers: ['two alleles separate during gamete formation', 'genes on different chromosomes sort independently'],
+        hint1: 'Think about what each concept specifically describes in Mendel\'s Laws.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Mendel\'s Laws describes a specific idea. Law of Segregation: two alleles separate during gamete formation. Law of Independent Assortment: genes on different chromosomes sort independently.'
       }
     }
   ]

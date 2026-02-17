@@ -19,31 +19,31 @@ export const bioEvidencePart7Data = {
       id: 'evid7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes multiple lines of evidence converge?',
+            question: 'What does "Multiple lines of evidence converge" refer to in biology?',
             options: [
+              'Evolution as the unifying theme of biology',
               'Multiple lines of evidence converge',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'evidence-based arguments',
+              'Common misconceptions about evolution'
             ],
-            correctAnswer: 0,
-            explanation: 'Multiple lines of evidence converge'
+            correctAnswer: 1,
+            explanation: 'Correct — Multiple lines of evidence converge. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of synthesis & ap review, which statement is accurate?',
+            question: 'Select the statement that correctly describes Common misconceptions about evolution:',
             options: [
+              'Evolution as the unifying theme of biology',
+              'evidence-based arguments',
               'Common misconceptions about evolution',
-              'egrevnoc ecnedive fo senil elpitluM',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Multiple lines of evidence converge'
             ],
-            correctAnswer: 0,
-            explanation: 'Common misconceptions about evolution'
+            correctAnswer: 2,
+            explanation: 'Correct — Common misconceptions about evolution. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioEvidencePart7Data = {
       id: 'evid7-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to synthesis & ap review?',
+            question: 'Which of these accurately represents AP exam?',
             options: [
-              'AP exam: evidence-based arguments',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Evolution as the unifying theme of biology',
+              'evidence-based arguments',
+              'Multiple lines of evidence converge',
+              'Common misconceptions about evolution'
             ],
-            correctAnswer: 0,
-            explanation: 'AP exam: evidence-based arguments'
+            correctAnswer: 1,
+            explanation: 'Correct — AP exam: evidence-based arguments. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioEvidencePart7Data = {
       id: 'evid7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Multiple lines of evidence converge is important in synthesis & ap review because',
-            options: ['Multiple lines of evidence converge', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Multiple lines of evidence converge',
+            options: ['evidence-based arguments', 'Evolution as the unifying theme of biology', 'Common misconceptions about evolution', 'Multiple lines of evidence converge']
           },
           {
-            label: 'Evolution as the unifying theme of biology is important in synthesis & ap review because',
-            options: ['Evolution as the unifying theme of biology', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Evolution as the unifying theme of…',
+            options: ['evidence-based arguments', 'Evolution as the unifying theme of biology', 'Common misconceptions about evolution', 'Multiple lines of evidence converge']
           },
           {
-            label: 'Common misconceptions about evolution is important in synthesis & ap review because',
-            options: ['Common misconceptions about evolution', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Common misconceptions about evolution',
+            options: ['Multiple lines of evidence converge', 'evidence-based arguments', 'Common misconceptions about evolution', 'Evolution as the unifying theme of biology']
           }
         ],
         correctAnswers: ['Multiple lines of evidence converge', 'Evolution as the unifying theme of biology', 'Common misconceptions about evolution'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Synthesis & AP Review.'
+        hint1: 'Think about what each concept specifically describes in Evidence for Evolution: Synthesis & AP Review.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Evidence for Evolution: Synthesis & AP Review describes a specific idea. Multiple lines of evidence converge. Evolution as the unifying theme of biology. Common misconceptions about evolution.'
       }
     }
   ]

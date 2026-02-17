@@ -19,31 +19,31 @@ export const bioFitnessPart4Data = {
       id: 'fitn4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes limited energy budget?',
+            question: 'Which of the following correctly describes Limited energy budget?',
             options: [
+              'many offspring, little parental care',
               'reproduction vs growth vs survival',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'few offspring, high parental investment',
+              'Life history trade-offs shaped by natural selection'
             ],
-            correctAnswer: 0,
-            explanation: 'Limited energy budget: reproduction vs growth vs survival'
+            correctAnswer: 1,
+            explanation: 'Correct — Limited energy budget: reproduction vs growth vs survival. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of trade-offs in energy use, which statement is accurate?',
+            question: 'Which of the following is true about K-selected?',
             options: [
-              'K-selected: few offspring, high parental investment',
-              'lavivrus sv htworg sv noitcudorper :tegdub ygrene detimiL',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Life history trade-offs shaped by natural selection',
+              'reproduction vs growth vs survival',
+              'many offspring, little parental care',
+              'few offspring, high parental investment'
             ],
-            correctAnswer: 0,
-            explanation: 'K-selected: few offspring, high parental investment'
+            correctAnswer: 3,
+            explanation: 'Correct — K-selected: few offspring, high parental investment. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioFitnessPart4Data = {
       id: 'fitn4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to trade-offs in energy use?',
+            question: 'Regarding Trade-offs in Energy Use, which correctly describes Life history trade-offs shaped by…?',
             options: [
               'Life history trade-offs shaped by natural selection',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'reproduction vs growth vs survival',
+              'few offspring, high parental investment',
+              'many offspring, little parental care'
             ],
             correctAnswer: 0,
-            explanation: 'Life history trade-offs shaped by natural selection'
+            explanation: 'Correct — Life history trade-offs shaped by natural selection. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioFitnessPart4Data = {
       id: 'fitn4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Limited energy budget is important in trade-offs in energy use because',
-            options: ['reproduction vs growth vs survival', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Limited energy budget',
+            options: ['few offspring, high parental investment', 'Life history trade-offs shaped by natural selection', 'reproduction vs growth vs survival', 'many offspring, little parental care']
           },
           {
-            label: 'r-selected is important in trade-offs in energy use because',
-            options: ['many offspring, little parental care', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'r-selected',
+            options: ['reproduction vs growth vs survival', 'few offspring, high parental investment', 'many offspring, little parental care', 'Life history trade-offs shaped by natural selection']
           },
           {
-            label: 'K-selected is important in trade-offs in energy use because',
-            options: ['few offspring, high parental investment', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'K-selected',
+            options: ['reproduction vs growth vs survival', 'few offspring, high parental investment', 'Life history trade-offs shaped by natural selection', 'many offspring, little parental care']
           }
         ],
         correctAnswers: ['reproduction vs growth vs survival', 'many offspring, little parental care', 'few offspring, high parental investment'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Trade-offs in Energy Use.'
+        hint1: 'Think about what each concept specifically describes in Trade-offs in Energy Use.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Trade-offs in Energy Use describes a specific idea. Limited energy budget: reproduction vs growth vs survival. r-selected: many offspring, little parental care. K-selected: few offspring, high parental investment.'
       }
     }
   ]

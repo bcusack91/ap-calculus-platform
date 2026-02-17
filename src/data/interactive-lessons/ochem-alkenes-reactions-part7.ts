@@ -30,31 +30,31 @@ alkene reaction summary table
       id: 'alken7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of synthesis & review?',
+            question: 'Which statement accurately explains Alkenes are versatile synthetic…?',
             options: [
               'Alkenes are versatile synthetic intermediates',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'Multiple reagents give different products from same alkene',
+              'Regiochemistry and stereochemistry are key considerations',
+              'alkene reaction summary table'
             ],
             correctAnswer: 0,
-            explanation: 'Alkenes are versatile synthetic intermediates'
+            explanation: 'Correct — Alkenes are versatile synthetic intermediates. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of synthesis & review, which is accurate?',
+            question: 'Which of the following is true about Multiple reagents give different…?',
             options: [
               'Multiple reagents give different products from same alkene',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Alkenes are versatile synthetic intermediates',
+              'alkene reaction summary table',
+              'Regiochemistry and stereochemistry are key considerations'
             ],
             correctAnswer: 0,
-            explanation: 'Multiple reagents give different products from same alkene'
+            explanation: 'Correct — Multiple reagents give different products from same alkene. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ alkene reaction summary table
       id: 'alken7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Alkenes are versatile synthetic intermediates',
-            options: ['Alkenes are versatile synthetic intermediates', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Alkenes are versatile synthetic…',
+            options: ['Multiple reagents give different products from same alkene', 'Alkenes are versatile synthetic intermediates', 'Regiochemistry and stereochemistry are key considerations', 'alkene reaction summary table']
           },
           {
-            label: 'Regiochemistry and stereochemistry are key considerations',
-            options: ['Regiochemistry and stereochemistry are key conside', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Regiochemistry and stereochemistry are…',
+            options: ['Alkenes are versatile synthetic intermediates', 'Regiochemistry and stereochemistry are key considerations', 'alkene reaction summary table', 'Multiple reagents give different products from same alkene']
           },
           {
-            label: 'Multiple reagents give different products from same alkene',
-            options: ['Multiple reagents give different products from sam', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Multiple reagents give different…',
+            options: ['Alkenes are versatile synthetic intermediates', 'Regiochemistry and stereochemistry are key considerations', 'Multiple reagents give different products from same alkene', 'alkene reaction summary table']
           }
         ],
-        correctAnswers: ['Alkenes are versatile synthetic intermediates', 'Regiochemistry and stereochemistry are key conside', 'Multiple reagents give different products from sam'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Synthesis & Review.'
+        correctAnswers: ['Alkenes are versatile synthetic intermediates', 'Regiochemistry and stereochemistry are key considerations', 'Multiple reagents give different products from same alkene'],
+        hint1: 'Think about what each concept specifically describes in Synthesis & Review.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Synthesis & Review describes a specific idea. Alkenes are versatile synthetic intermediates. Regiochemistry and stereochemistry are key considerations. Multiple reagents give different products from same alkene.'
       }
     }
   ]

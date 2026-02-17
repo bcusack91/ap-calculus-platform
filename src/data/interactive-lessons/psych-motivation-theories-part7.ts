@@ -30,31 +30,31 @@ motivation theory applications
       id: 'motiv7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of synthesis & ap review?',
+            question: 'What does "No single theory explains all motivation" refer to in psychology?',
             options: [
               'No single theory explains all motivation',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'Motivation connects to emotion and personality',
+              'Biology and psychology both contribute',
+              'motivation theory applications'
             ],
             correctAnswer: 0,
-            explanation: 'No single theory explains all motivation'
+            explanation: 'Correct — No single theory explains all motivation. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of synthesis & ap review, which is accurate?',
+            question: 'Select the statement that correctly describes Motivation connects to emotion and…:',
             options: [
+              'Biology and psychology both contribute',
               'Motivation connects to emotion and personality',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'No single theory explains all motivation',
+              'motivation theory applications'
             ],
-            correctAnswer: 0,
-            explanation: 'Motivation connects to emotion and personality'
+            correctAnswer: 1,
+            explanation: 'Correct — Motivation connects to emotion and personality. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ motivation theory applications
       id: 'motiv7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'No single theory explains all motivation',
-            options: ['No single theory explains all motivation', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Biology and psychology both contribute', 'Motivation connects to emotion and personality', 'motivation theory applications', 'No single theory explains all motivation']
           },
           {
             label: 'Biology and psychology both contribute',
-            options: ['Biology and psychology both contribute', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Motivation connects to emotion and personality', 'motivation theory applications', 'Biology and psychology both contribute', 'No single theory explains all motivation']
           },
           {
-            label: 'Motivation connects to emotion and personality',
-            options: ['Motivation connects to emotion and personality', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            label: 'Motivation connects to emotion and…',
+            options: ['Motivation connects to emotion and personality', 'motivation theory applications', 'Biology and psychology both contribute', 'No single theory explains all motivation']
           }
         ],
         correctAnswers: ['No single theory explains all motivation', 'Biology and psychology both contribute', 'Motivation connects to emotion and personality'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Synthesis & AP Review.'
+        hint1: 'Think about what each concept specifically describes in Synthesis & AP Review.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Synthesis & AP Review describes a specific idea. No single theory explains all motivation. Biology and psychology both contribute. Motivation connects to emotion and personality.'
       }
     }
   ]

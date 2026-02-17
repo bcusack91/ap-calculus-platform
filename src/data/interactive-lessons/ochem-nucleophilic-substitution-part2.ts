@@ -30,31 +30,31 @@ methyl/primary substrates, strong nucleophiles, polar aprotic solvents
       id: 'nucle2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of sn2 mechanism?',
+            question: 'What does "SN2" refer to in this topic?',
             options: [
-              'SN2',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'Rate = k[substrate][nucleophile] (bimolecular)',
+              'one-step, concerted mechanism',
+              'methyl/primary substrates, strong nucleophiles, polar aprotic solvents',
+              'Backside attack → inversion of configuration (Walden inversion)'
             ],
-            correctAnswer: 0,
-            explanation: 'SN2: one-step, concerted mechanism'
+            correctAnswer: 1,
+            explanation: 'Correct — SN2: one-step, concerted mechanism. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of sn2 mechanism, which is accurate?',
+            question: 'Which of the following is true about Backside attack → inversion of…?',
             options: [
               'Backside attack → inversion of configuration (Walden inversion)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'methyl/primary substrates, strong nucleophiles, polar aprotic solvents',
+              'one-step, concerted mechanism',
+              'Rate = k[substrate][nucleophile] (bimolecular)'
             ],
             correctAnswer: 0,
-            explanation: 'Backside attack → inversion of configuration (Walden inversion)'
+            explanation: 'Correct — Backside attack → inversion of configuration (Walden inversion). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,24 @@ methyl/primary substrates, strong nucleophiles, polar aprotic solvents
       id: 'nucle2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'SN2',
-            options: ['one-step, concerted mechanism', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Backside attack → inversion of configuration (Walden inversion)', 'Rate = k[substrate][nucleophile] (bimolecular)', 'methyl/primary substrates, strong nucleophiles, polar aprotic solvents', 'one-step, concerted mechanism']
           },
           {
-            label: 'Rate = k[substrate][nucleophile] (bimolecular)',
-            options: ['Rate = k[substrate][nucleophile] (bimolecular)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
-          },
-          {
-            label: 'Backside attack → inversion of configuration (Walden inversion)',
-            options: ['Backside attack → inversion of configuration (Wald', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Best with',
+            options: ['Backside attack → inversion of configuration (Walden inversion)', 'methyl/primary substrates, strong nucleophiles, polar aprotic solvents', 'Rate = k[substrate][nucleophile] (bimolecular)', 'one-step, concerted mechanism']
           }
         ],
-        correctAnswers: ['one-step, concerted mechanism', 'Rate = k[substrate][nucleophile] (bimolecular)', 'Backside attack → inversion of configuration (Wald'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding SN2 Mechanism.'
+        correctAnswers: ['one-step, concerted mechanism', 'methyl/primary substrates, strong nucleophiles, polar aprotic solvents'],
+        hint1: 'Think about what each concept specifically describes in SN2 Mechanism.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in SN2 Mechanism describes a specific idea. SN2: one-step, concerted mechanism. Best with: methyl/primary substrates, strong nucleophiles, polar aprotic solvents.'
       }
     }
   ]

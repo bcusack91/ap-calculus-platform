@@ -71,23 +71,28 @@ R/S configuration: assign priorities by atomic number (Cahn-Ingold-Prelog rules)
       id: 'mcat-2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Stereochemistry:',
-            options: ['Chirality: a carbon with 4 different substituents is a chira', 'R/S configuration: assign priorities by atomic number (Cahn-', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Chirality',
+            options: ['Diastereomers: stereoisomers that are NOT mirror images — different physical properties.', 'Enantiomers: nonsuperimposable mirror images with identical physical properties but opposite optical rotation.', 'assign priorities by atomic number (Cahn-Ingold-Prelog rules).', 'a carbon with 4 different substituents is a chiral center (stereocenter).']
           },
           {
-            label: 'MCAT application:',
-            options: ['Enantiomers: nonsuperimposable mirror images with identical ', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'R/S configuration',
+            options: ['assign priorities by atomic number (Cahn-Ingold-Prelog rules).', 'Enantiomers: nonsuperimposable mirror images with identical physical properties but opposite optical rotation.', 'Diastereomers: stereoisomers that are NOT mirror images — different physical properties.', 'a carbon with 4 different substituents is a chiral center (stereocenter).']
+          },
+          {
+            label: 'Key Insight',
+            options: ['Enantiomers: nonsuperimposable mirror images with identical physical properties but opposite optical rotation.', 'Diastereomers: stereoisomers that are NOT mirror images — different physical properties.', 'a carbon with 4 different substituents is a chiral center (stereocenter).', 'assign priorities by atomic number (Cahn-Ingold-Prelog rules).']
           }
         ],
-        correctAnswers: ['Chirality: a carbon with 4 different substituents is a chira', 'Enantiomers: nonsuperimposable mirror images with identical '],
-        hint1: 'Think about stereochemistry',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Chirality: a carbon with 4 different substituents is a chiral center (stereocenter). Enantiomers: nonsuperimposable mirror images with identical physical properties but opposite optical rotation.'
+        correctAnswers: ['a carbon with 4 different substituents is a chiral center (stereocenter).', 'assign priorities by atomic number (Cahn-Ingold-Prelog rules).', 'Enantiomers: nonsuperimposable mirror images with identical physical properties but opposite optical rotation.'],
+        hint1: 'Think about what each concept specifically describes in Stereochemistry.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Stereochemistry describes a specific idea. Chirality: a carbon with 4 different substituents is a chiral center (stereocenter). R/S configuration: assign priorities by atomic number (Cahn-Ingold-Prelog rules). Key Insight: Enantiomers: nonsuperimposable mirror images with identical physical properties but opposite optical rotation.'
       }
     }
   ]

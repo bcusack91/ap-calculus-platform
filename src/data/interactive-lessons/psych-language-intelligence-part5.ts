@@ -30,31 +30,31 @@ test items may favor certain groups
       id: 'langu5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of intelligence controversies?',
-            options: [
-              'Nature vs nurture in intelligence',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
-            ],
-            correctAnswer: 0,
-            explanation: 'Nature vs nurture in intelligence'
-          },
-          {
-            question: 'In the context of intelligence controversies, which is accurate?',
+            question: 'Which of the following correctly describes Nature vs nurture in intelligence?',
             options: [
               'awareness of stereotypes impairs performance',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'test items may favor certain groups',
+              'Nature vs nurture in intelligence',
+              'IQ scores rising over generations'
             ],
-            correctAnswer: 0,
-            explanation: 'Stereotype threat: awareness of stereotypes impairs performance'
+            correctAnswer: 2,
+            explanation: 'Correct — Nature vs nurture in intelligence. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Stereotype threat?',
+            options: [
+              'test items may favor certain groups',
+              'Nature vs nurture in intelligence',
+              'IQ scores rising over generations',
+              'awareness of stereotypes impairs performance'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Stereotype threat: awareness of stereotypes impairs performance. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ test items may favor certain groups
       id: 'langu5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Nature vs nurture in intelligence',
-            options: ['Nature vs nurture in intelligence', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
-          },
-          {
             label: 'Flynn effect',
-            options: ['IQ scores rising over generations', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['IQ scores rising over generations', 'Nature vs nurture in intelligence', 'test items may favor certain groups', 'awareness of stereotypes impairs performance']
           },
           {
             label: 'Stereotype threat',
-            options: ['awareness of stereotypes impairs performance', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Nature vs nurture in intelligence', 'IQ scores rising over generations', 'awareness of stereotypes impairs performance', 'test items may favor certain groups']
+          },
+          {
+            label: 'Cultural bias in testing',
+            options: ['test items may favor certain groups', 'awareness of stereotypes impairs performance', 'IQ scores rising over generations', 'Nature vs nurture in intelligence']
           }
         ],
-        correctAnswers: ['Nature vs nurture in intelligence', 'IQ scores rising over generations', 'awareness of stereotypes impairs performance'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Intelligence Controversies.'
+        correctAnswers: ['IQ scores rising over generations', 'awareness of stereotypes impairs performance', 'test items may favor certain groups'],
+        hint1: 'Think about what each concept specifically describes in Intelligence Controversies.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Intelligence Controversies describes a specific idea. Flynn effect: IQ scores rising over generations. Stereotype threat: awareness of stereotypes impairs performance. Cultural bias in testing: test items may favor certain groups.'
       }
     }
   ]

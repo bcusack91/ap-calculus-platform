@@ -71,23 +71,28 @@ GFR = glomerular filtration rate; filtered = all small molecules, not proteins/c
       id: 'mcat-3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Renal & Excretory System:',
-            options: ['Nephron: glomerulus (filtration), PCT (reabsorption), loop o', 'GFR = glomerular filtration rate; filtered = all small molec', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Nephron',
+            options: ['ADH (from posterior pituitary): increases water reabsorption in collecting duct.', 'glomerulus (filtration), PCT (reabsorption), loop of Henle (concentration), DCT/CD (fine-tuning).', 'GFR = glomerular filtration rate; filtered = all small molecules, not proteins/cells.', 'Aldosterone: increases Na+ reabsorption (and thus water) in DCT; RAAS regulates blood pressure.']
           },
           {
-            label: 'MCAT application:',
-            options: ['ADH (from posterior pituitary): increases water reabsorption', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Key Insight',
+            options: ['GFR = glomerular filtration rate; filtered = all small molecules, not proteins/cells.', 'ADH (from posterior pituitary): increases water reabsorption in collecting duct.', 'glomerulus (filtration), PCT (reabsorption), loop of Henle (concentration), DCT/CD (fine-tuning).', 'Aldosterone: increases Na+ reabsorption (and thus water) in DCT; RAAS regulates blood pressure.']
+          },
+          {
+            label: 'MCAT Tip',
+            options: ['GFR = glomerular filtration rate; filtered = all small molecules, not proteins/cells.', 'Aldosterone: increases Na+ reabsorption (and thus water) in DCT; RAAS regulates blood pressure.', 'ADH (from posterior pituitary): increases water reabsorption in collecting duct.', 'glomerulus (filtration), PCT (reabsorption), loop of Henle (concentration), DCT/CD (fine-tuning).']
           }
         ],
-        correctAnswers: ['Nephron: glomerulus (filtration), PCT (reabsorption), loop o', 'ADH (from posterior pituitary): increases water reabsorption'],
-        hint1: 'Think about renal & excretory system',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Nephron: glomerulus (filtration), PCT (reabsorption), loop of Henle (concentration), DCT/CD (fine-tuning). ADH (from posterior pituitary): increases water reabsorption in collecting duct.'
+        correctAnswers: ['glomerulus (filtration), PCT (reabsorption), loop of Henle (concentration), DCT/CD (fine-tuning).', 'ADH (from posterior pituitary): increases water reabsorption in collecting duct.', 'Aldosterone: increases Na+ reabsorption (and thus water) in DCT; RAAS regulates blood pressure.'],
+        hint1: 'Think about what each concept specifically describes in Renal & Excretory System.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Renal & Excretory System describes a specific idea. Nephron: glomerulus (filtration), PCT (reabsorption), loop of Henle (concentration), DCT/CD (fine-tuning). Key Insight: ADH (from posterior pituitary): increases water reabsorption in collecting duct. MCAT Tip: Aldosterone: increases Na+ reabsorption (and thus water) in DCT; RAAS regulates blood pressure.'
       }
     }
   ]

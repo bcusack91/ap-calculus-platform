@@ -19,31 +19,31 @@ export const bioCellStructurePart7Data = {
       id: 'cell7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes structure-function relationships in cells?',
-            options: [
-              'Structure-function relationships in cells',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
-            ],
-            correctAnswer: 0,
-            explanation: 'Structure-function relationships in cells'
-          },
-          {
-            question: 'In the context of synthesis & ap review, which statement is accurate?',
+            question: 'Which statement accurately explains Structure-function relationships in…?',
             options: [
               'Endosymbiotic theory evidence',
-              'sllec ni spihsnoitaler noitcnuf-erutcurtS',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Cell biology connects to all AP Bio units',
+              'Compartmentalization enables specialization',
+              'Structure-function relationships in cells'
             ],
-            correctAnswer: 0,
-            explanation: 'Endosymbiotic theory evidence'
+            correctAnswer: 3,
+            explanation: 'Correct — Structure-function relationships in cells. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Endosymbiotic theory evidence:',
+            options: [
+              'Compartmentalization enables specialization',
+              'Cell biology connects to all AP Bio units',
+              'Endosymbiotic theory evidence',
+              'Structure-function relationships in cells'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Endosymbiotic theory evidence. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioCellStructurePart7Data = {
       id: 'cell7-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to synthesis & ap review?',
+            question: 'Which statement about Cell biology connects to all AP Bio… is correct?',
             options: [
               'Cell biology connects to all AP Bio units',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Endosymbiotic theory evidence',
+              'Compartmentalization enables specialization',
+              'Structure-function relationships in cells'
             ],
             correctAnswer: 0,
-            explanation: 'Cell biology connects to all AP Bio units'
+            explanation: 'Correct — Cell biology connects to all AP Bio units. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioCellStructurePart7Data = {
       id: 'cell7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Structure-function relationships in cells is important in synthesis & ap review because',
-            options: ['Structure-function relationships in cells', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Structure-function relationships in…',
+            options: ['Structure-function relationships in cells', 'Endosymbiotic theory evidence', 'Compartmentalization enables specialization', 'Cell biology connects to all AP Bio units']
           },
           {
-            label: 'Compartmentalization enables specialization is important in synthesis & ap review because',
-            options: ['Compartmentalization enables specialization', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Compartmentalization enables…',
+            options: ['Endosymbiotic theory evidence', 'Compartmentalization enables specialization', 'Structure-function relationships in cells', 'Cell biology connects to all AP Bio units']
           },
           {
-            label: 'Endosymbiotic theory evidence is important in synthesis & ap review because',
-            options: ['Endosymbiotic theory evidence', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Endosymbiotic theory evidence',
+            options: ['Cell biology connects to all AP Bio units', 'Structure-function relationships in cells', 'Endosymbiotic theory evidence', 'Compartmentalization enables specialization']
           }
         ],
         correctAnswers: ['Structure-function relationships in cells', 'Compartmentalization enables specialization', 'Endosymbiotic theory evidence'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Synthesis & AP Review.'
+        hint1: 'Think about what each concept specifically describes in Cell Structure & Organelles: Synthesis & AP Review.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Cell Structure & Organelles: Synthesis & AP Review describes a specific idea. Structure-function relationships in cells. Compartmentalization enables specialization. Endosymbiotic theory evidence.'
       }
     }
   ]

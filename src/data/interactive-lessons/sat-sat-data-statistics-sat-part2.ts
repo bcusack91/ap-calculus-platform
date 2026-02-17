@@ -18,20 +18,31 @@ Standard deviation measures spread from the mean.
       id: 'sat-d2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes range = max - min?',
+            question: 'Which of the following correctly describes Range = max - min.?',
             options: [
-              'Range = max - min is a fundamental concept in SAT Math',
-              'Standard deviation measures spread from the mean',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'Range = max - min.',
+              'Larger SD = more spread out; smaller SD = more clustered.',
+              'Standard deviation measures spread from the mean.',
+              'SAT won\'t ask you to calculate SD, but you must compare or interpret it.'
             ],
             correctAnswer: 0,
-            explanation: 'Range = max - min'
+            explanation: 'Correct — Range = max - min. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Key Insight?',
+            options: [
+              'SAT won\'t ask you to calculate SD, but you must compare or interpret it.',
+              'Larger SD = more spread out; smaller SD = more clustered.',
+              'Range = max - min.',
+              'Standard deviation measures spread from the mean.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Key Insight: Larger SD = more spread out; smaller SD = more clustered. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Standard deviation measures spread from the mean.
       id: 'sat-d2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for standard deviation & spread?',
+            question: 'Which of these accurately represents SAT Tip?',
             options: [
-              'Larger SD = more spread out; smaller SD = more clustered',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'Range = max - min.',
+              'SAT won\'t ask you to calculate SD, but you must compare or interpret it.',
+              'Larger SD = more spread out; smaller SD = more clustered.',
+              'Standard deviation measures spread from the mean.'
             ],
-            correctAnswer: 0,
-            explanation: 'Larger SD = more spread out; smaller SD = more clustered'
+            correctAnswer: 1,
+            explanation: 'Correct — SAT Tip: SAT won\'t ask you to calculate SD, but you must compare or interpret it. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ Standard deviation measures spread from the mean.
       id: 'sat-d2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Standard Deviation & Spread:',
-            options: ['Range = max - min', 'Standard deviation measures spread from the mean', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['Range = max - min.', 'SAT won\'t ask you to calculate SD, but you must compare or interpret it.', 'Larger SD = more spread out; smaller SD = more clustered.', 'Standard deviation measures spread from the mean.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Larger SD = more spread out; smaller SD = more clu', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'SAT Tip',
+            options: ['Standard deviation measures spread from the mean.', 'Range = max - min.', 'Larger SD = more spread out; smaller SD = more clustered.', 'SAT won\'t ask you to calculate SD, but you must compare or interpret it.']
           }
         ],
-        correctAnswers: ['Range = max - min', 'Larger SD = more spread out; smaller SD = more clu'],
-        hint1: 'Think about standard deviation & spread',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'Range = max - min. Larger SD = more spread out; smaller SD = more clustered.'
+        correctAnswers: ['Larger SD = more spread out; smaller SD = more clustered.', 'SAT won\'t ask you to calculate SD, but you must compare or interpret it.'],
+        hint1: 'Think about what each concept specifically describes in Standard Deviation & Spread.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Standard Deviation & Spread describes a specific idea. Key Insight: Larger SD = more spread out; smaller SD = more clustered. SAT Tip: SAT won\'t ask you to calculate SD, but you must compare or interpret it.'
       }
     }
   ]

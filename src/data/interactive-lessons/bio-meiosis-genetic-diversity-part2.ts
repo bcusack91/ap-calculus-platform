@@ -19,31 +19,31 @@ export const bioMeiosisPart2Data = {
       id: 'meio2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes homologous chromosomes pair up (synapsis)?',
+            question: 'Which of the following correctly describes Homologous chromosomes pair up…?',
             options: [
+              'Crossing over occurs during prophase I',
+              'Homologous pairs separate in anaphase I (reductional division)',
               'Homologous chromosomes pair up (synapsis)',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Homologs align at metaphase plate (random orientation)'
             ],
-            correctAnswer: 0,
-            explanation: 'Homologous chromosomes pair up (synapsis)'
+            correctAnswer: 2,
+            explanation: 'Correct — Homologous chromosomes pair up (synapsis). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of meiosis i, which statement is accurate?',
+            question: 'In the context of Meiosis I, which explains Homologs align at metaphase plate…?',
             options: [
+              'Homologous chromosomes pair up (synapsis)',
               'Homologs align at metaphase plate (random orientation)',
-              ')sispanys( pu riap semosomorhc suogolomoH',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Crossing over occurs during prophase I',
+              'Homologous pairs separate in anaphase I (reductional division)'
             ],
-            correctAnswer: 0,
-            explanation: 'Homologs align at metaphase plate (random orientation)'
+            correctAnswer: 1,
+            explanation: 'Correct — Homologs align at metaphase plate (random orientation). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioMeiosisPart2Data = {
       id: 'meio2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to meiosis i?',
+            question: 'Which statement about Homologous pairs separate in anaphase I… is correct?',
             options: [
+              'Homologous chromosomes pair up (synapsis)',
               'Homologous pairs separate in anaphase I (reductional division)',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Homologs align at metaphase plate (random orientation)',
+              'Crossing over occurs during prophase I'
             ],
-            correctAnswer: 0,
-            explanation: 'Homologous pairs separate in anaphase I (reductional division)'
+            correctAnswer: 1,
+            explanation: 'Correct — Homologous pairs separate in anaphase I (reductional division). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioMeiosisPart2Data = {
       id: 'meio2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Homologous chromosomes pair up (synapsis) is important in meiosis i because',
-            options: ['Homologous chromosomes pair up (synapsis)', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Homologous chromosomes pair up…',
+            options: ['Crossing over occurs during prophase I', 'Homologous chromosomes pair up (synapsis)', 'Homologs align at metaphase plate (random orientation)', 'Homologous pairs separate in anaphase I (reductional division)']
           },
           {
-            label: 'Crossing over occurs during prophase I is important in meiosis i because',
-            options: ['Crossing over occurs during prophase I', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Crossing over occurs during prophase I',
+            options: ['Homologous pairs separate in anaphase I (reductional division)', 'Homologs align at metaphase plate (random orientation)', 'Crossing over occurs during prophase I', 'Homologous chromosomes pair up (synapsis)']
           },
           {
-            label: 'Homologs align at metaphase plate (random orientation) is important in meiosis i because',
-            options: ['Homologs align at metaphase plate (random orientat', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Homologs align at metaphase plate…',
+            options: ['Homologs align at metaphase plate (random orientation)', 'Crossing over occurs during prophase I', 'Homologous pairs separate in anaphase I (reductional division)', 'Homologous chromosomes pair up (synapsis)']
           }
         ],
-        correctAnswers: ['Homologous chromosomes pair up (synapsis)', 'Crossing over occurs during prophase I', 'Homologs align at metaphase plate (random orientat'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Meiosis I.'
+        correctAnswers: ['Homologous chromosomes pair up (synapsis)', 'Crossing over occurs during prophase I', 'Homologs align at metaphase plate (random orientation)'],
+        hint1: 'Think about what each concept specifically describes in Meiosis I.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Meiosis I describes a specific idea. Homologous chromosomes pair up (synapsis). Crossing over occurs during prophase I. Homologs align at metaphase plate (random orientation).'
       }
     }
   ]

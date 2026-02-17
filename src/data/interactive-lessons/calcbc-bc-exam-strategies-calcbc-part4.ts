@@ -30,31 +30,31 @@ always try this first if the integrand has a composite structure
       id: 'bc-ex4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of integration technique selection?',
+            question: 'Which statement accurately explains Polynomial × eˣ or trig?',
             options: [
-              'Polynomial × eˣ or trig',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
+              'partial fractions',
+              'always try this first if the integrand has a composite structure',
+              'integration by parts (tabular method)',
+              '1/(1+x²), 1/√(1-x²)'
             ],
-            correctAnswer: 0,
-            explanation: 'Polynomial × eˣ or trig: integration by parts (tabular method)'
+            correctAnswer: 2,
+            explanation: 'Correct — Polynomial × eˣ or trig: integration by parts (tabular method). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of integration technique selection, which is accurate?',
+            question: 'Select the statement that correctly describes Recognize inverse trig forms:',
             options: [
               '1/(1+x²), 1/√(1-x²)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'integration by parts (tabular method)',
+              'partial fractions',
+              'always try this first if the integrand has a composite structure'
             ],
             correctAnswer: 0,
-            explanation: 'Recognize inverse trig forms: 1/(1+x²), 1/√(1-x²)'
+            explanation: 'Correct — Recognize inverse trig forms: 1/(1+x²), 1/√(1-x²). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ always try this first if the integrand has a composite structure
       id: 'bc-ex4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to integration technique selection?',
+            question: 'Which of these accurately represents u-substitution?',
             options: [
               'always try this first if the integrand has a composite structure',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              '1/(1+x²), 1/√(1-x²)',
+              'partial fractions',
+              'integration by parts (tabular method)'
             ],
             correctAnswer: 0,
-            explanation: 'u-substitution: always try this first if the integrand has a composite structure'
+            explanation: 'Correct — u-substitution: always try this first if the integrand has a composite structure. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ always try this first if the integrand has a composite structure
       id: 'bc-ex4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Polynomial × eˣ or trig',
-            options: ['integration by parts (tabular method)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['always try this first if the integrand has a composite structure', 'integration by parts (tabular method)', '1/(1+x²), 1/√(1-x²)', 'partial fractions']
           },
           {
             label: 'Rational functions',
-            options: ['partial fractions', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['always try this first if the integrand has a composite structure', '1/(1+x²), 1/√(1-x²)', 'integration by parts (tabular method)', 'partial fractions']
           },
           {
             label: 'Recognize inverse trig forms',
-            options: ['1/(1+x²), 1/√(1-x²)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['partial fractions', '1/(1+x²), 1/√(1-x²)', 'integration by parts (tabular method)', 'always try this first if the integrand has a composite structure']
           }
         ],
         correctAnswers: ['integration by parts (tabular method)', 'partial fractions', '1/(1+x²), 1/√(1-x²)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Integration Technique Selection.'
+        hint1: 'Think about what each concept specifically describes in Integration Technique Selection.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Integration Technique Selection describes a specific idea. Polynomial × eˣ or trig: integration by parts (tabular method). Rational functions: partial fractions. Recognize inverse trig forms: 1/(1+x²), 1/√(1-x²).'
       }
     }
   ]

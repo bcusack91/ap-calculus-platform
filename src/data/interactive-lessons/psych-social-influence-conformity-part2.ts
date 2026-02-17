@@ -30,31 +30,31 @@ Normative social influence (be liked) vs informational (be right)
       id: 'socia2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of conformity?',
+            question: 'Which of the following correctly describes Asch\'s conformity experiments?',
             options: [
-              'Asch\'s conformity experiments',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'Normative social influence (be liked) vs informational (be right)',
+              'line judgment task',
+              'Conformity increases with group size (up to 4-5), unanimity',
+              '~75% conformed at least once'
             ],
-            correctAnswer: 0,
-            explanation: 'Asch\'s conformity experiments: line judgment task'
+            correctAnswer: 1,
+            explanation: 'Correct — Asch\'s conformity experiments: line judgment task. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of conformity, which is accurate?',
+            question: 'Which of the following is true about Conformity increases with group size…?',
             options: [
+              'line judgment task',
               'Conformity increases with group size (up to 4-5), unanimity',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              '~75% conformed at least once',
+              'Normative social influence (be liked) vs informational (be right)'
             ],
-            correctAnswer: 0,
-            explanation: 'Conformity increases with group size (up to 4-5), unanimity'
+            correctAnswer: 1,
+            explanation: 'Correct — Conformity increases with group size (up to 4-5), unanimity. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Normative social influence (be liked) vs informational (be right)
       id: 'socia2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Asch\'s conformity experiments',
-            options: ['line judgment task', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['~75% conformed at least once', 'Normative social influence (be liked) vs informational (be right)', 'line judgment task', 'Conformity increases with group size (up to 4-5), unanimity']
           },
           {
             label: '~75% conformed at least once',
-            options: ['~75% conformed at least once', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['~75% conformed at least once', 'line judgment task', 'Normative social influence (be liked) vs informational (be right)', 'Conformity increases with group size (up to 4-5), unanimity']
           },
           {
-            label: 'Conformity increases with group size (up to 4-5), unanimity',
-            options: ['Conformity increases with group size (up to 4-5), ', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            label: 'Conformity increases with group size…',
+            options: ['line judgment task', 'Normative social influence (be liked) vs informational (be right)', 'Conformity increases with group size (up to 4-5), unanimity', '~75% conformed at least once']
           }
         ],
-        correctAnswers: ['line judgment task', '~75% conformed at least once', 'Conformity increases with group size (up to 4-5), '],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Conformity.'
+        correctAnswers: ['line judgment task', '~75% conformed at least once', 'Conformity increases with group size (up to 4-5), unanimity'],
+        hint1: 'Think about what each concept specifically describes in Conformity.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Conformity describes a specific idea. Asch\'s conformity experiments: line judgment task. ~75% conformed at least once. Conformity increases with group size (up to 4-5), unanimity.'
       }
     }
   ]

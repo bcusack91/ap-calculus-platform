@@ -30,31 +30,31 @@ ester + NaOH → carboxylate + alcohol
       id: 'carbo4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of esters & amides?',
+            question: 'Which statement accurately explains Esters (RCOOR\')?',
             options: [
-              'Esters (RCOOR\')',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'moderate reactivity',
+              'RCOOH + R\'OH ⇌ RCOOR\' + H₂O (acid catalyzed)',
+              'least reactive (nitrogen lone pair resonance)',
+              'ester + NaOH → carboxylate + alcohol'
             ],
             correctAnswer: 0,
-            explanation: 'Esters (RCOOR\'): moderate reactivity'
+            explanation: 'Correct — Esters (RCOOR\'): moderate reactivity. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of esters & amides, which is accurate?',
+            question: 'Which of the following is true about Amides (RCONHR\')?',
             options: [
               'least reactive (nitrogen lone pair resonance)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'moderate reactivity',
+              'ester + NaOH → carboxylate + alcohol',
+              'RCOOH + R\'OH ⇌ RCOOR\' + H₂O (acid catalyzed)'
             ],
             correctAnswer: 0,
-            explanation: 'Amides (RCONHR\'): least reactive (nitrogen lone pair resonance)'
+            explanation: 'Correct — Amides (RCONHR\'): least reactive (nitrogen lone pair resonance). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ ester + NaOH → carboxylate + alcohol
       id: 'carbo4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Esters (RCOOR\')',
-            options: ['moderate reactivity', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['RCOOH + R\'OH ⇌ RCOOR\' + H₂O (acid catalyzed)', 'least reactive (nitrogen lone pair resonance)', 'ester + NaOH → carboxylate + alcohol', 'moderate reactivity']
           },
           {
             label: 'Fischer esterification',
-            options: ['RCOOH + R\'OH ⇌ RCOOR\' + H₂O (acid catalyzed)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['ester + NaOH → carboxylate + alcohol', 'least reactive (nitrogen lone pair resonance)', 'moderate reactivity', 'RCOOH + R\'OH ⇌ RCOOR\' + H₂O (acid catalyzed)']
           },
           {
             label: 'Amides (RCONHR\')',
-            options: ['least reactive (nitrogen lone pair resonance)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['moderate reactivity', 'least reactive (nitrogen lone pair resonance)', 'ester + NaOH → carboxylate + alcohol', 'RCOOH + R\'OH ⇌ RCOOR\' + H₂O (acid catalyzed)']
           }
         ],
         correctAnswers: ['moderate reactivity', 'RCOOH + R\'OH ⇌ RCOOR\' + H₂O (acid catalyzed)', 'least reactive (nitrogen lone pair resonance)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Esters & Amides.'
+        hint1: 'Think about what each concept specifically describes in Esters & Amides.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Esters & Amides describes a specific idea. Esters (RCOOR\'): moderate reactivity. Fischer esterification: RCOOH + R\'OH ⇌ RCOOR\' + H₂O (acid catalyzed). Amides (RCONHR\'): least reactive (nitrogen lone pair resonance).'
       }
     }
   ]

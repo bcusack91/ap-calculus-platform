@@ -30,31 +30,31 @@ empty nest, retirement
       id: 'adole4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of adulthood & aging?',
+            question: 'Which statement accurately explains Erikson\'s adult stages?',
             options: [
-              'Erikson\'s adult stages',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'menopause, declining sensory abilities',
+              'intimacy, generativity, integrity',
+              'empty nest, retirement',
+              'crystallized intelligence maintained, fluid declines'
             ],
-            correctAnswer: 0,
-            explanation: 'Erikson\'s adult stages: intimacy, generativity, integrity'
+            correctAnswer: 1,
+            explanation: 'Correct — Erikson\'s adult stages: intimacy, generativity, integrity. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of adulthood & aging, which is accurate?',
+            question: 'Select the statement that correctly describes Cognitive changes:',
             options: [
+              'empty nest, retirement',
+              'menopause, declining sensory abilities',
               'crystallized intelligence maintained, fluid declines',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'intimacy, generativity, integrity'
             ],
-            correctAnswer: 0,
-            explanation: 'Cognitive changes: crystallized intelligence maintained, fluid declines'
+            correctAnswer: 2,
+            explanation: 'Correct — Cognitive changes: crystallized intelligence maintained, fluid declines. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ empty nest, retirement
       id: 'adole4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Erikson\'s adult stages',
-            options: ['intimacy, generativity, integrity', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['empty nest, retirement', 'crystallized intelligence maintained, fluid declines', 'intimacy, generativity, integrity', 'menopause, declining sensory abilities']
           },
           {
             label: 'Physical changes',
-            options: ['menopause, declining sensory abilities', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['intimacy, generativity, integrity', 'empty nest, retirement', 'crystallized intelligence maintained, fluid declines', 'menopause, declining sensory abilities']
           },
           {
             label: 'Cognitive changes',
-            options: ['crystallized intelligence maintained, fluid declin', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['intimacy, generativity, integrity', 'empty nest, retirement', 'crystallized intelligence maintained, fluid declines', 'menopause, declining sensory abilities']
           }
         ],
-        correctAnswers: ['intimacy, generativity, integrity', 'menopause, declining sensory abilities', 'crystallized intelligence maintained, fluid declin'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Adulthood & Aging.'
+        correctAnswers: ['intimacy, generativity, integrity', 'menopause, declining sensory abilities', 'crystallized intelligence maintained, fluid declines'],
+        hint1: 'Think about what each concept specifically describes in Adulthood & Aging.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Adulthood & Aging describes a specific idea. Erikson\'s adult stages: intimacy, generativity, integrity. Physical changes: menopause, declining sensory abilities. Cognitive changes: crystallized intelligence maintained, fluid declines.'
       }
     }
   ]

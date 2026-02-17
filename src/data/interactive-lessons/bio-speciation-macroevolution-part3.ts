@@ -19,31 +19,31 @@ export const bioSpeciationPart3Data = {
       id: 'spec3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes speciation without geographic isolation?',
+            question: 'What does "Speciation without geographic isolation" refer to in biology?',
             options: [
               'Speciation without geographic isolation',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'different breeding seasons',
+              'Habitat differentiation within same area',
+              'Polyploidy in plants (most common mechanism)'
             ],
             correctAnswer: 0,
-            explanation: 'Speciation without geographic isolation'
+            explanation: 'Correct — Speciation without geographic isolation. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of sympatric speciation, which statement is accurate?',
+            question: 'Select the statement that correctly describes Habitat differentiation within same area:',
             options: [
-              'Habitat differentiation within same area',
-              'noitalosi cihpargoeg tuohtiw noitaicepS',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Speciation without geographic isolation',
+              'Polyploidy in plants (most common mechanism)',
+              'different breeding seasons',
+              'Habitat differentiation within same area'
             ],
-            correctAnswer: 0,
-            explanation: 'Habitat differentiation within same area'
+            correctAnswer: 3,
+            explanation: 'Correct — Habitat differentiation within same area. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioSpeciationPart3Data = {
       id: 'spec3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to sympatric speciation?',
+            question: 'Which statement about Temporal isolation is correct?',
             options: [
-              'Temporal isolation: different breeding seasons',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'different breeding seasons',
+              'Polyploidy in plants (most common mechanism)',
+              'Habitat differentiation within same area',
+              'Speciation without geographic isolation'
             ],
             correctAnswer: 0,
-            explanation: 'Temporal isolation: different breeding seasons'
+            explanation: 'Correct — Temporal isolation: different breeding seasons. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioSpeciationPart3Data = {
       id: 'spec3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Speciation without geographic isolation is important in sympatric speciation because',
-            options: ['Speciation without geographic isolation', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Speciation without geographic isolation',
+            options: ['Habitat differentiation within same area', 'Speciation without geographic isolation', 'Polyploidy in plants (most common mechanism)', 'different breeding seasons']
           },
           {
-            label: 'Polyploidy in plants (most common mechanism) is important in sympatric speciation because',
-            options: ['Polyploidy in plants (most common mechanism)', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Polyploidy in plants (most common…',
+            options: ['Polyploidy in plants (most common mechanism)', 'Speciation without geographic isolation', 'different breeding seasons', 'Habitat differentiation within same area']
           },
           {
-            label: 'Habitat differentiation within same area is important in sympatric speciation because',
-            options: ['Habitat differentiation within same area', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Habitat differentiation within same area',
+            options: ['Habitat differentiation within same area', 'Speciation without geographic isolation', 'Polyploidy in plants (most common mechanism)', 'different breeding seasons']
           }
         ],
         correctAnswers: ['Speciation without geographic isolation', 'Polyploidy in plants (most common mechanism)', 'Habitat differentiation within same area'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Sympatric Speciation.'
+        hint1: 'Think about what each concept specifically describes in Sympatric Speciation.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Sympatric Speciation describes a specific idea. Speciation without geographic isolation. Polyploidy in plants (most common mechanism). Habitat differentiation within same area.'
       }
     }
   ]

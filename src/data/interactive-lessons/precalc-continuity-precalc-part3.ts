@@ -30,31 +30,31 @@ Absolute value of a continuous function is continuous
       id: 'conti3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of continuity on an interval?',
+            question: 'What does "Continuous on [a,b]" refer to in precalculus?',
             options: [
-              'Continuous on [a,b]',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'continuous at every point in (a,b), and one-sided limits match at endpoints',
+              'Sums, products, quotients, and compositions of continuous functions are continuous (where defined)',
+              'Absolute value of a continuous function is continuous',
+              'continuous at every interior point'
             ],
             correctAnswer: 0,
-            explanation: 'Continuous on [a,b]: continuous at every point in (a,b), and one-sided limits match at endpoints'
+            explanation: 'Correct — Continuous on [a,b]: continuous at every point in (a,b), and one-sided limits match at endpoints. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of continuity on an interval, which is accurate?',
+            question: 'Which of the following is true about Sums, products, quotients, and…?',
             options: [
+              'Absolute value of a continuous function is continuous',
               'Sums, products, quotients, and compositions of continuous functions are continuous (where defined)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'continuous at every interior point',
+              'continuous at every point in (a,b), and one-sided limits match at endpoints'
             ],
-            correctAnswer: 0,
-            explanation: 'Sums, products, quotients, and compositions of continuous functions are continuous (where defined)'
+            correctAnswer: 1,
+            explanation: 'Correct — Sums, products, quotients, and compositions of continuous functions are continuous (where defined). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,24 @@ Absolute value of a continuous function is continuous
       id: 'conti3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Continuous on [a,b]',
-            options: ['continuous at every point in (a,b), and one-sided ', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['Sums, products, quotients, and compositions of continuous functions are continuous (where defined)', 'continuous at every interior point', 'Absolute value of a continuous function is continuous', 'continuous at every point in (a,b), and one-sided limits match at endpoints']
           },
           {
             label: 'Continuous on (a,b)',
-            options: ['continuous at every interior point', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
-          },
-          {
-            label: 'Sums, products, quotients, and compositions of continuous functions are continuous (where defined)',
-            options: ['Sums, products, quotients, and compositions of con', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['Absolute value of a continuous function is continuous', 'continuous at every interior point', 'Sums, products, quotients, and compositions of continuous functions are continuous (where defined)', 'continuous at every point in (a,b), and one-sided limits match at endpoints']
           }
         ],
-        correctAnswers: ['continuous at every point in (a,b), and one-sided ', 'continuous at every interior point', 'Sums, products, quotients, and compositions of con'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Continuity on an Interval.'
+        correctAnswers: ['continuous at every point in (a,b), and one-sided limits match at endpoints', 'continuous at every interior point'],
+        hint1: 'Think about what each concept specifically describes in Continuity on an Interval.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Continuity on an Interval describes a specific idea. Continuous on [a,b]: continuous at every point in (a,b), and one-sided limits match at endpoints. Continuous on (a,b): continuous at every interior point.'
       }
     }
   ]

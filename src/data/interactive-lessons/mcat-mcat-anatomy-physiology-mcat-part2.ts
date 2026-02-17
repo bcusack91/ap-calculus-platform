@@ -71,23 +71,28 @@ Female: ovaries produce eggs + estrogen/progesterone; follicle matures, ovulatio
       id: 'mcat-2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Reproductive System:',
-            options: ['Male: testes produce sperm + testosterone; pathway: seminife', 'Female: ovaries produce eggs + estrogen/progesterone; follic', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Male',
+            options: ['Menstrual cycle: follicular phase (FSH, estrogen), ovulation (LH surge), luteal phase (progesterone).', 'Fertilization: sperm capacitation, acrosome reaction, cortical reaction prevents polyspermy.', 'testes produce sperm + testosterone; pathway: seminiferous tubules, epididymis, vas deferens.', 'ovaries produce eggs + estrogen/progesterone; follicle matures, ovulation, corpus luteum.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Menstrual cycle: follicular phase (FSH, estrogen), ovulation', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Female',
+            options: ['ovaries produce eggs + estrogen/progesterone; follicle matures, ovulation, corpus luteum.', 'Fertilization: sperm capacitation, acrosome reaction, cortical reaction prevents polyspermy.', 'Menstrual cycle: follicular phase (FSH, estrogen), ovulation (LH surge), luteal phase (progesterone).', 'testes produce sperm + testosterone; pathway: seminiferous tubules, epididymis, vas deferens.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['ovaries produce eggs + estrogen/progesterone; follicle matures, ovulation, corpus luteum.', 'Fertilization: sperm capacitation, acrosome reaction, cortical reaction prevents polyspermy.', 'Menstrual cycle: follicular phase (FSH, estrogen), ovulation (LH surge), luteal phase (progesterone).', 'testes produce sperm + testosterone; pathway: seminiferous tubules, epididymis, vas deferens.']
           }
         ],
-        correctAnswers: ['Male: testes produce sperm + testosterone; pathway: seminife', 'Menstrual cycle: follicular phase (FSH, estrogen), ovulation'],
-        hint1: 'Think about reproductive system',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Male: testes produce sperm + testosterone; pathway: seminiferous tubules, epididymis, vas deferens. Menstrual cycle: follicular phase (FSH, estrogen), ovulation (LH surge), luteal phase (progesterone).'
+        correctAnswers: ['testes produce sperm + testosterone; pathway: seminiferous tubules, epididymis, vas deferens.', 'ovaries produce eggs + estrogen/progesterone; follicle matures, ovulation, corpus luteum.', 'Menstrual cycle: follicular phase (FSH, estrogen), ovulation (LH surge), luteal phase (progesterone).'],
+        hint1: 'Think about what each concept specifically describes in Reproductive System.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Reproductive System describes a specific idea. Male: testes produce sperm + testosterone; pathway: seminiferous tubules, epididymis, vas deferens. Female: ovaries produce eggs + estrogen/progesterone; follicle matures, ovulation, corpus luteum. Key Insight: Menstrual cycle: follicular phase (FSH, estrogen), ovulation (LH surge), luteal phase (progesterone).'
       }
     }
   ]

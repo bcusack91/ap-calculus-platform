@@ -30,31 +30,31 @@ babbling (4mo), first words (12mo), two-word stage (24mo)
       id: 'langu1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of language structure & development?',
+            question: 'Which of the following correctly describes Phonemes?',
             options: [
-              'Phonemes',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'smallest meaningful units (prefixes, suffixes, words)',
+              'basic sound units (~40 in English)',
+              'rules for combining words into sentences (grammar)',
+              'babbling (4mo), first words (12mo), two-word stage (24mo)'
             ],
-            correctAnswer: 0,
-            explanation: 'Phonemes: basic sound units (~40 in English)'
+            correctAnswer: 1,
+            explanation: 'Correct — Phonemes: basic sound units (~40 in English). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of language structure & development, which is accurate?',
+            question: 'Which of the following is true about Syntax?',
             options: [
               'rules for combining words into sentences (grammar)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'basic sound units (~40 in English)',
+              'smallest meaningful units (prefixes, suffixes, words)',
+              'babbling (4mo), first words (12mo), two-word stage (24mo)'
             ],
             correctAnswer: 0,
-            explanation: 'Syntax: rules for combining words into sentences (grammar)'
+            explanation: 'Correct — Syntax: rules for combining words into sentences (grammar). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ babbling (4mo), first words (12mo), two-word stage (24mo)
       id: 'langu1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Phonemes',
-            options: ['basic sound units (~40 in English)', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['rules for combining words into sentences (grammar)', 'babbling (4mo), first words (12mo), two-word stage (24mo)', 'basic sound units (~40 in English)', 'smallest meaningful units (prefixes, suffixes, words)']
           },
           {
             label: 'Morphemes',
-            options: ['smallest meaningful units (prefixes, suffixes, wor', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['basic sound units (~40 in English)', 'smallest meaningful units (prefixes, suffixes, words)', 'babbling (4mo), first words (12mo), two-word stage (24mo)', 'rules for combining words into sentences (grammar)']
           },
           {
             label: 'Syntax',
-            options: ['rules for combining words into sentences (grammar)', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['rules for combining words into sentences (grammar)', 'smallest meaningful units (prefixes, suffixes, words)', 'babbling (4mo), first words (12mo), two-word stage (24mo)', 'basic sound units (~40 in English)']
           }
         ],
-        correctAnswers: ['basic sound units (~40 in English)', 'smallest meaningful units (prefixes, suffixes, wor', 'rules for combining words into sentences (grammar)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Language Structure & Development.'
+        correctAnswers: ['basic sound units (~40 in English)', 'smallest meaningful units (prefixes, suffixes, words)', 'rules for combining words into sentences (grammar)'],
+        hint1: 'Think about what each concept specifically describes in Language & Intelligence.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Language & Intelligence describes a specific idea. Phonemes: basic sound units (~40 in English). Morphemes: smallest meaningful units (prefixes, suffixes, words). Syntax: rules for combining words into sentences (grammar).'
       }
     }
   ]

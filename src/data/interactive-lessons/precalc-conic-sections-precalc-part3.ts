@@ -30,31 +30,31 @@ Eccentricity e = c/a, where 0 < e < 1 (closer to 0 = more circular)
       id: 'conic3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of ellipses?',
+            question: 'Which statement accurately explains Ellipse?',
             options: [
-              'Ellipse',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              '(x-h)²/a² + (y-k)²/b² = 1 where a > b',
+              'Eccentricity e = c/a, where 0 < e < 1 (closer to 0 = more circular)',
+              'set of points where sum of distances to two foci is constant',
+              'c² = a² - b²; c = distance from center to each focus'
             ],
-            correctAnswer: 0,
-            explanation: 'Ellipse: set of points where sum of distances to two foci is constant'
+            correctAnswer: 2,
+            explanation: 'Correct — Ellipse: set of points where sum of distances to two foci is constant. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of ellipses, which is accurate?',
+            question: 'In the context of Ellipses, which explains c² = a² - b²; c = distance from center…?',
             options: [
+              '(x-h)²/a² + (y-k)²/b² = 1 where a > b',
+              'set of points where sum of distances to two foci is constant',
               'c² = a² - b²; c = distance from center to each focus',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Eccentricity e = c/a, where 0 < e < 1 (closer to 0 = more circular)'
             ],
-            correctAnswer: 0,
-            explanation: 'c² = a² - b²; c = distance from center to each focus'
+            correctAnswer: 2,
+            explanation: 'Correct — c² = a² - b²; c = distance from center to each focus. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,24 @@ Eccentricity e = c/a, where 0 < e < 1 (closer to 0 = more circular)
       id: 'conic3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Ellipse',
-            options: ['set of points where sum of distances to two foci i', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['c² = a² - b²; c = distance from center to each focus', '(x-h)²/a² + (y-k)²/b² = 1 where a > b', 'Eccentricity e = c/a, where 0 < e < 1 (closer to 0 = more circular)', 'set of points where sum of distances to two foci is constant']
           },
           {
             label: 'Standard form',
-            options: ['(x-h)²/a² + (y-k)²/b² = 1 where a > b', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
-          },
-          {
-            label: 'c² = a² - b²; c = distance from center to each focus',
-            options: ['c² = a² - b²; c = distance from center to each foc', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['set of points where sum of distances to two foci is constant', 'Eccentricity e = c/a, where 0 < e < 1 (closer to 0 = more circular)', '(x-h)²/a² + (y-k)²/b² = 1 where a > b', 'c² = a² - b²; c = distance from center to each focus']
           }
         ],
-        correctAnswers: ['set of points where sum of distances to two foci i', '(x-h)²/a² + (y-k)²/b² = 1 where a > b', 'c² = a² - b²; c = distance from center to each foc'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Ellipses.'
+        correctAnswers: ['set of points where sum of distances to two foci is constant', '(x-h)²/a² + (y-k)²/b² = 1 where a > b'],
+        hint1: 'Think about what each concept specifically describes in Ellipses.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Ellipses describes a specific idea. Ellipse: set of points where sum of distances to two foci is constant. Standard form: (x-h)²/a² + (y-k)²/b² = 1 where a > b.'
       }
     }
   ]

@@ -30,31 +30,31 @@ Multi-step synthesis problems
       id: 'alkyn6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of problem-solving workshop?',
+            question: 'Which statement accurately explains Predicting products of alkyne reactions?',
             options: [
+              'Designing syntheses using acetylide chemistry',
+              'Multi-step synthesis problems',
               'Predicting products of alkyne reactions',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'Choosing selective reduction conditions'
             ],
-            correctAnswer: 0,
-            explanation: 'Predicting products of alkyne reactions'
+            correctAnswer: 2,
+            explanation: 'Correct — Predicting products of alkyne reactions. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of problem-solving workshop, which is accurate?',
+            question: 'In the context of Problem-Solving Workshop, which explains Choosing selective reduction conditions?',
             options: [
+              'Designing syntheses using acetylide chemistry',
+              'Predicting products of alkyne reactions',
               'Choosing selective reduction conditions',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Multi-step synthesis problems'
             ],
-            correctAnswer: 0,
-            explanation: 'Choosing selective reduction conditions'
+            correctAnswer: 2,
+            explanation: 'Correct — Choosing selective reduction conditions. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Multi-step synthesis problems
       id: 'alkyn6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Predicting products of alkyne reactions',
-            options: ['Predicting products of alkyne reactions', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Predicting products of alkyne reactions', 'Multi-step synthesis problems', 'Choosing selective reduction conditions', 'Designing syntheses using acetylide chemistry']
           },
           {
-            label: 'Designing syntheses using acetylide chemistry',
-            options: ['Designing syntheses using acetylide chemistry', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Designing syntheses using acetylide…',
+            options: ['Multi-step synthesis problems', 'Predicting products of alkyne reactions', 'Designing syntheses using acetylide chemistry', 'Choosing selective reduction conditions']
           },
           {
             label: 'Choosing selective reduction conditions',
-            options: ['Choosing selective reduction conditions', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Designing syntheses using acetylide chemistry', 'Predicting products of alkyne reactions', 'Choosing selective reduction conditions', 'Multi-step synthesis problems']
           }
         ],
         correctAnswers: ['Predicting products of alkyne reactions', 'Designing syntheses using acetylide chemistry', 'Choosing selective reduction conditions'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving Workshop.'
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Predicting products of alkyne reactions. Designing syntheses using acetylide chemistry. Choosing selective reduction conditions.'
       }
     }
   ]

@@ -30,31 +30,31 @@ Systems may have 0, 1, or infinitely many solutions
       id: 'syste3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of systems of three variables?',
+            question: 'What does "Three equations in three unknowns" refer to in precalculus?',
             options: [
-              'Three equations in three unknowns',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'organized elimination using augmented matrices',
+              'use elimination or substitution iteratively',
+              'Solution is an ordered triple (x, y, z)',
+              'Systems may have 0, 1, or infinitely many solutions'
             ],
-            correctAnswer: 0,
-            explanation: 'Three equations in three unknowns: use elimination or substitution iteratively'
+            correctAnswer: 1,
+            explanation: 'Correct — Three equations in three unknowns: use elimination or substitution iteratively. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of systems of three variables, which is accurate?',
+            question: 'Which of the following is true about Solution is an ordered triple (x, y, z)?',
             options: [
               'Solution is an ordered triple (x, y, z)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Systems may have 0, 1, or infinitely many solutions',
+              'organized elimination using augmented matrices',
+              'use elimination or substitution iteratively'
             ],
             correctAnswer: 0,
-            explanation: 'Solution is an ordered triple (x, y, z)'
+            explanation: 'Correct — Solution is an ordered triple (x, y, z). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,24 @@ Systems may have 0, 1, or infinitely many solutions
       id: 'syste3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Three equations in three unknowns',
-            options: ['use elimination or substitution iteratively', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['use elimination or substitution iteratively', 'Systems may have 0, 1, or infinitely many solutions', 'organized elimination using augmented matrices', 'Solution is an ordered triple (x, y, z)']
           },
           {
             label: 'Row reduction',
-            options: ['organized elimination using augmented matrices', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
-          },
-          {
-            label: 'Solution is an ordered triple (x, y, z)',
-            options: ['Solution is an ordered triple (x, y, z)', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['use elimination or substitution iteratively', 'Systems may have 0, 1, or infinitely many solutions', 'organized elimination using augmented matrices', 'Solution is an ordered triple (x, y, z)']
           }
         ],
-        correctAnswers: ['use elimination or substitution iteratively', 'organized elimination using augmented matrices', 'Solution is an ordered triple (x, y, z)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Systems of Three Variables.'
+        correctAnswers: ['use elimination or substitution iteratively', 'organized elimination using augmented matrices'],
+        hint1: 'Think about what each concept specifically describes in Systems of Three Variables.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Systems of Three Variables describes a specific idea. Three equations in three unknowns: use elimination or substitution iteratively. Row reduction: organized elimination using augmented matrices.'
       }
     }
   ]

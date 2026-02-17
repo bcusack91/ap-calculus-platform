@@ -71,23 +71,28 @@ Positive control: expected to produce a result (validates the assay); Negative c
       id: 'mcat-3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Experimental Design:',
-            options: ['Control group: baseline for comparison; Experimental group: ', 'Positive control: expected to produce a result (validates th', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Control group',
+            options: ['Statistical significance (p < 0.05): the result is unlikely due to chance alone.', 'expected to produce a result (validates the assay); Negative control: expected to produce no result.', 'Randomization and blinding reduce bias in experiments.', 'baseline for comparison; Experimental group: receives the treatment.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Randomization and blinding reduce bias in experiments', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Positive control',
+            options: ['expected to produce a result (validates the assay); Negative control: expected to produce no result.', 'Statistical significance (p < 0.05): the result is unlikely due to chance alone.', 'baseline for comparison; Experimental group: receives the treatment.', 'Randomization and blinding reduce bias in experiments.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['Statistical significance (p < 0.05): the result is unlikely due to chance alone.', 'Randomization and blinding reduce bias in experiments.', 'baseline for comparison; Experimental group: receives the treatment.', 'expected to produce a result (validates the assay); Negative control: expected to produce no result.']
           }
         ],
-        correctAnswers: ['Control group: baseline for comparison; Experimental group: ', 'Randomization and blinding reduce bias in experiments'],
-        hint1: 'Think about experimental design',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Control group: baseline for comparison; Experimental group: receives the treatment. Randomization and blinding reduce bias in experiments.'
+        correctAnswers: ['baseline for comparison; Experimental group: receives the treatment.', 'expected to produce a result (validates the assay); Negative control: expected to produce no result.', 'Randomization and blinding reduce bias in experiments.'],
+        hint1: 'Think about what each concept specifically describes in Experimental Design.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Experimental Design describes a specific idea. Control group: baseline for comparison; Experimental group: receives the treatment. Positive control: expected to produce a result (validates the assay); Negative control: expected to produce no result. Key Insight: Randomization and blinding reduce bias in experiments.'
       }
     }
   ]

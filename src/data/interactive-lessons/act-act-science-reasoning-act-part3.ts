@@ -18,20 +18,31 @@ Correlation does not equal causation.
       id: 'act-s3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes conclusions must be based on the actual data, not assumptions?',
+            question: 'Which of the following correctly describes Conclusions must be based on the actual…?',
             options: [
-              'Conclusions must be based on the actual data, not assumptions is a key concept for ACT Science',
-              'Correlation does not equal causation',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'Correlation does not equal causation.',
+              'Conclusions must be based on the actual data, not assumptions.',
+              'Valid conclusions are limited to the scope of the experiment.',
+              'Look for alternative explanations before accepting a conclusion.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Conclusions must be based on the actual data, not assumptions. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Key Insight?',
+            options: [
+              'Look for alternative explanations before accepting a conclusion.',
+              'Correlation does not equal causation.',
+              'Conclusions must be based on the actual data, not assumptions.',
+              'Valid conclusions are limited to the scope of the experiment.'
             ],
             correctAnswer: 0,
-            explanation: 'Conclusions must be based on the actual data, not assumptions'
+            explanation: 'Correct — Key Insight: Look for alternative explanations before accepting a conclusion. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Correlation does not equal causation.
       id: 'act-s3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for drawing conclusions?',
+            question: 'Which of these accurately represents ACT Tip?',
             options: [
-              'Look for alternative explanations before accepting a conclusion',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Look for alternative explanations before accepting a conclusion.',
+              'Correlation does not equal causation.',
+              'Valid conclusions are limited to the scope of the experiment.',
+              'Conclusions must be based on the actual data, not assumptions.'
             ],
-            correctAnswer: 0,
-            explanation: 'Look for alternative explanations before accepting a conclusion'
+            correctAnswer: 2,
+            explanation: 'Correct — ACT Tip: Valid conclusions are limited to the scope of the experiment. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ Correlation does not equal causation.
       id: 'act-s3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Drawing Conclusions:',
-            options: ['Conclusions must be based on the actual data, not ', 'Correlation does not equal causation', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['Conclusions must be based on the actual data, not assumptions.', 'Look for alternative explanations before accepting a conclusion.', 'Correlation does not equal causation.', 'Valid conclusions are limited to the scope of the experiment.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Look for alternative explanations before accepting', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'ACT Tip',
+            options: ['Correlation does not equal causation.', 'Valid conclusions are limited to the scope of the experiment.', 'Look for alternative explanations before accepting a conclusion.', 'Conclusions must be based on the actual data, not assumptions.']
           }
         ],
-        correctAnswers: ['Conclusions must be based on the actual data, not ', 'Look for alternative explanations before accepting'],
-        hint1: 'Think about drawing conclusions',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Conclusions must be based on the actual data, not assumptions. Look for alternative explanations before accepting a conclusion.'
+        correctAnswers: ['Look for alternative explanations before accepting a conclusion.', 'Valid conclusions are limited to the scope of the experiment.'],
+        hint1: 'Think about what each concept specifically describes in Drawing Conclusions.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Drawing Conclusions describes a specific idea. Key Insight: Look for alternative explanations before accepting a conclusion. ACT Tip: Valid conclusions are limited to the scope of the experiment.'
       }
     }
   ]

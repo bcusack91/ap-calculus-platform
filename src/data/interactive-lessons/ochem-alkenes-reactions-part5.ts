@@ -30,31 +30,31 @@ mCPBA → epoxide
       id: 'alken5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of oxidation & reduction?',
+            question: 'Which statement accurately explains Catalytic hydrogenation?',
             options: [
-              'Catalytic hydrogenation',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'O₃ then Zn/H₂O cleaves C=C → carbonyl compounds',
+              'H₂/Pd → alkane (syn addition)',
+              'mCPBA → epoxide',
+              'OsO₄ → cis-diol (syn addition)'
             ],
-            correctAnswer: 0,
-            explanation: 'Catalytic hydrogenation: H₂/Pd → alkane (syn addition)'
+            correctAnswer: 1,
+            explanation: 'Correct — Catalytic hydrogenation: H₂/Pd → alkane (syn addition). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of oxidation & reduction, which is accurate?',
+            question: 'In the context of Oxidation & Reduction, which explains Dihydroxylation?',
             options: [
-              'OsO₄ → cis-diol (syn addition)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'H₂/Pd → alkane (syn addition)',
+              'O₃ then Zn/H₂O cleaves C=C → carbonyl compounds',
+              'mCPBA → epoxide',
+              'OsO₄ → cis-diol (syn addition)'
             ],
-            correctAnswer: 0,
-            explanation: 'Dihydroxylation: OsO₄ → cis-diol (syn addition)'
+            correctAnswer: 3,
+            explanation: 'Correct — Dihydroxylation: OsO₄ → cis-diol (syn addition). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ mCPBA → epoxide
       id: 'alken5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Catalytic hydrogenation',
-            options: ['H₂/Pd → alkane (syn addition)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['O₃ then Zn/H₂O cleaves C=C → carbonyl compounds', 'OsO₄ → cis-diol (syn addition)', 'H₂/Pd → alkane (syn addition)', 'mCPBA → epoxide']
           },
           {
             label: 'Ozonolysis',
-            options: ['O₃ then Zn/H₂O cleaves C=C → carbonyl compounds', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['H₂/Pd → alkane (syn addition)', 'OsO₄ → cis-diol (syn addition)', 'mCPBA → epoxide', 'O₃ then Zn/H₂O cleaves C=C → carbonyl compounds']
           },
           {
             label: 'Dihydroxylation',
-            options: ['OsO₄ → cis-diol (syn addition)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['H₂/Pd → alkane (syn addition)', 'mCPBA → epoxide', 'O₃ then Zn/H₂O cleaves C=C → carbonyl compounds', 'OsO₄ → cis-diol (syn addition)']
           }
         ],
         correctAnswers: ['H₂/Pd → alkane (syn addition)', 'O₃ then Zn/H₂O cleaves C=C → carbonyl compounds', 'OsO₄ → cis-diol (syn addition)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Oxidation & Reduction.'
+        hint1: 'Think about what each concept specifically describes in Oxidation & Reduction.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Oxidation & Reduction describes a specific idea. Catalytic hydrogenation: H₂/Pd → alkane (syn addition). Ozonolysis: O₃ then Zn/H₂O cleaves C=C → carbonyl compounds. Dihydroxylation: OsO₄ → cis-diol (syn addition).'
       }
     }
   ]

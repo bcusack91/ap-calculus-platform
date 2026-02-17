@@ -18,20 +18,31 @@ If stuck, eliminate what you can, then guess from remaining choices.
       id: 'sat-t3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes no penalty for wrong answers — always guess (never leave blank)?',
+            question: 'Which of the following correctly describes No penalty for wrong answers — ALWAYS…?',
             options: [
-              'No penalty for wrong answers — ALWAYS guess (never leave blank) is a fundamental concept in SAT Math',
-              'If stuck, eliminate what you can, then guess from remaining choices',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'Letter of the day: if completely stuck, consistently guess the same letter.',
+              'On grid-in: any correct form is accepted (1/2 = .5 = 0.5).',
+              'No penalty for wrong answers — ALWAYS guess (never leave blank).',
+              'If stuck, eliminate what you can, then guess from remaining choices.'
             ],
-            correctAnswer: 0,
-            explanation: 'No penalty for wrong answers — ALWAYS guess (never leave blank)'
+            correctAnswer: 2,
+            explanation: 'Correct — No penalty for wrong answers — ALWAYS guess (never leave blank). The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Guessing Strategy, which explains Key Insight?',
+            options: [
+              'No penalty for wrong answers — ALWAYS guess (never leave blank).',
+              'If stuck, eliminate what you can, then guess from remaining choices.',
+              'On grid-in: any correct form is accepted (1/2 = .5 = 0.5).',
+              'Letter of the day: if completely stuck, consistently guess the same letter.'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Key Insight: On grid-in: any correct form is accepted (1/2 = .5 = 0.5). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ If stuck, eliminate what you can, then guess from remaining choices.
       id: 'sat-t3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for guessing strategy?',
+            question: 'Which statement about SAT Tip is correct?',
             options: [
-              'On grid-in: any correct form is accepted (1/2 = .5 = 0.5)',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'Letter of the day: if completely stuck, consistently guess the same letter.',
+              'No penalty for wrong answers — ALWAYS guess (never leave blank).',
+              'On grid-in: any correct form is accepted (1/2 = .5 = 0.5).',
+              'If stuck, eliminate what you can, then guess from remaining choices.'
             ],
             correctAnswer: 0,
-            explanation: 'On grid-in: any correct form is accepted (1/2 = .5 = 0.5)'
+            explanation: 'Correct — SAT Tip: Letter of the day: if completely stuck, consistently guess the same letter. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ If stuck, eliminate what you can, then guess from remaining choices.
       id: 'sat-t3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Guessing Strategy:',
-            options: ['No penalty for wrong answers — ALWAYS guess (never', 'If stuck, eliminate what you can, then guess from ', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['On grid-in: any correct form is accepted (1/2 = .5 = 0.5).', 'If stuck, eliminate what you can, then guess from remaining choices.', 'No penalty for wrong answers — ALWAYS guess (never leave blank).', 'Letter of the day: if completely stuck, consistently guess the same letter.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['On grid-in: any correct form is accepted (1/2 = .5', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'SAT Tip',
+            options: ['No penalty for wrong answers — ALWAYS guess (never leave blank).', 'On grid-in: any correct form is accepted (1/2 = .5 = 0.5).', 'If stuck, eliminate what you can, then guess from remaining choices.', 'Letter of the day: if completely stuck, consistently guess the same letter.']
           }
         ],
-        correctAnswers: ['No penalty for wrong answers — ALWAYS guess (never', 'On grid-in: any correct form is accepted (1/2 = .5'],
-        hint1: 'Think about guessing strategy',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'No penalty for wrong answers — ALWAYS guess (never leave blank). On grid-in: any correct form is accepted (1/2 = .5 = 0.5).'
+        correctAnswers: ['On grid-in: any correct form is accepted (1/2 = .5 = 0.5).', 'Letter of the day: if completely stuck, consistently guess the same letter.'],
+        hint1: 'Think about what each concept specifically describes in Guessing Strategy.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Guessing Strategy describes a specific idea. Key Insight: On grid-in: any correct form is accepted (1/2 = .5 = 0.5). SAT Tip: Letter of the day: if completely stuck, consistently guess the same letter.'
       }
     }
   ]

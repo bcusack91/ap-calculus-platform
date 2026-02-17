@@ -30,31 +30,31 @@ social influence experiments
       id: 'socia7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of synthesis & ap review?',
+            question: 'Which of the following correctly describes Situations powerfully influence behavior?',
             options: [
               'Situations powerfully influence behavior',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'Obedience to authority can be dangerous',
+              'People conform more than they think they will',
+              'social influence experiments'
             ],
             correctAnswer: 0,
-            explanation: 'Situations powerfully influence behavior'
+            explanation: 'Correct — Situations powerfully influence behavior. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of synthesis & ap review, which is accurate?',
+            question: 'In the context of Synthesis & AP Review, which explains Obedience to authority can be dangerous?',
             options: [
+              'People conform more than they think they will',
+              'Situations powerfully influence behavior',
               'Obedience to authority can be dangerous',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'social influence experiments'
             ],
-            correctAnswer: 0,
-            explanation: 'Obedience to authority can be dangerous'
+            correctAnswer: 2,
+            explanation: 'Correct — Obedience to authority can be dangerous. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ social influence experiments
       id: 'socia7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Situations powerfully influence behavior',
-            options: ['Situations powerfully influence behavior', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['social influence experiments', 'People conform more than they think they will', 'Obedience to authority can be dangerous', 'Situations powerfully influence behavior']
           },
           {
-            label: 'People conform more than they think they will',
-            options: ['People conform more than they think they will', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            label: 'People conform more than they think…',
+            options: ['social influence experiments', 'Situations powerfully influence behavior', 'People conform more than they think they will', 'Obedience to authority can be dangerous']
           },
           {
             label: 'Obedience to authority can be dangerous',
-            options: ['Obedience to authority can be dangerous', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Obedience to authority can be dangerous', 'social influence experiments', 'Situations powerfully influence behavior', 'People conform more than they think they will']
           }
         ],
         correctAnswers: ['Situations powerfully influence behavior', 'People conform more than they think they will', 'Obedience to authority can be dangerous'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Synthesis & AP Review.'
+        hint1: 'Think about what each concept specifically describes in Synthesis & AP Review.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Synthesis & AP Review describes a specific idea. Situations powerfully influence behavior. People conform more than they think they will. Obedience to authority can be dangerous.'
       }
     }
   ]

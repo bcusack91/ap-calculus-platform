@@ -30,31 +30,31 @@ method of loci, acronyms, visual imagery
       id: 'retri5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of improving memory?',
+            question: 'Which statement accurately explains Spacing effect?',
             options: [
-              'Spacing effect',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'method of loci, acronyms, visual imagery',
+              'distributed practice > massed practice',
+              'connecting to existing knowledge',
+              'retrieval practice improves retention'
             ],
-            correctAnswer: 0,
-            explanation: 'Spacing effect: distributed practice > massed practice'
+            correctAnswer: 1,
+            explanation: 'Correct — Spacing effect: distributed practice > massed practice. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of improving memory, which is accurate?',
+            question: 'In the context of Improving Memory, which explains Elaborative rehearsal?',
             options: [
+              'method of loci, acronyms, visual imagery',
+              'retrieval practice improves retention',
               'connecting to existing knowledge',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'distributed practice > massed practice'
             ],
-            correctAnswer: 0,
-            explanation: 'Elaborative rehearsal: connecting to existing knowledge'
+            correctAnswer: 2,
+            explanation: 'Correct — Elaborative rehearsal: connecting to existing knowledge. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ method of loci, acronyms, visual imagery
       id: 'retri5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Spacing effect',
-            options: ['distributed practice > massed practice', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['distributed practice > massed practice', 'method of loci, acronyms, visual imagery', 'connecting to existing knowledge', 'retrieval practice improves retention']
           },
           {
             label: 'Testing effect',
-            options: ['retrieval practice improves retention', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['distributed practice > massed practice', 'connecting to existing knowledge', 'method of loci, acronyms, visual imagery', 'retrieval practice improves retention']
           },
           {
             label: 'Elaborative rehearsal',
-            options: ['connecting to existing knowledge', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['method of loci, acronyms, visual imagery', 'distributed practice > massed practice', 'connecting to existing knowledge', 'retrieval practice improves retention']
           }
         ],
         correctAnswers: ['distributed practice > massed practice', 'retrieval practice improves retention', 'connecting to existing knowledge'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Improving Memory.'
+        hint1: 'Think about what each concept specifically describes in Improving Memory.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Improving Memory describes a specific idea. Spacing effect: distributed practice > massed practice. Testing effect: retrieval practice improves retention. Elaborative rehearsal: connecting to existing knowledge.'
       }
     }
   ]

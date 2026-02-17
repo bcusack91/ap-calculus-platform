@@ -30,31 +30,31 @@ log_b(x) = ln(x)/ln(b) = log(x)/log(b)
       id: 'logar2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of properties of logarithms?',
-            options: [
-              'Product rule',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'Product rule: log_b(MN) = log_b(M) + log_b(N)'
-          },
-          {
-            question: 'In the context of properties of logarithms, which is accurate?',
+            question: 'Which statement accurately explains Product rule?',
             options: [
               'log_b(M^n) = n · log_b(M)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'log_b(M/N) = log_b(M) - log_b(N)',
+              'log_b(x) = ln(x)/ln(b) = log(x)/log(b)',
+              'log_b(MN) = log_b(M) + log_b(N)'
             ],
-            correctAnswer: 0,
-            explanation: 'Power rule: log_b(M^n) = n · log_b(M)'
+            correctAnswer: 3,
+            explanation: 'Correct — Product rule: log_b(MN) = log_b(M) + log_b(N). The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Power rule?',
+            options: [
+              'log_b(M/N) = log_b(M) - log_b(N)',
+              'log_b(M^n) = n · log_b(M)',
+              'log_b(x) = ln(x)/ln(b) = log(x)/log(b)',
+              'log_b(MN) = log_b(M) + log_b(N)'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Power rule: log_b(M^n) = n · log_b(M). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ log_b(x) = ln(x)/ln(b) = log(x)/log(b)
       id: 'logar2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Product rule',
-            options: ['log_b(MN) = log_b(M) + log_b(N)', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['log_b(M/N) = log_b(M) - log_b(N)', 'log_b(MN) = log_b(M) + log_b(N)', 'log_b(x) = ln(x)/ln(b) = log(x)/log(b)', 'log_b(M^n) = n · log_b(M)']
           },
           {
             label: 'Quotient rule',
-            options: ['log_b(M/N) = log_b(M) - log_b(N)', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['log_b(x) = ln(x)/ln(b) = log(x)/log(b)', 'log_b(M/N) = log_b(M) - log_b(N)', 'log_b(M^n) = n · log_b(M)', 'log_b(MN) = log_b(M) + log_b(N)']
           },
           {
             label: 'Power rule',
-            options: ['log_b(M^n) = n · log_b(M)', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['log_b(M/N) = log_b(M) - log_b(N)', 'log_b(x) = ln(x)/ln(b) = log(x)/log(b)', 'log_b(MN) = log_b(M) + log_b(N)', 'log_b(M^n) = n · log_b(M)']
           }
         ],
         correctAnswers: ['log_b(MN) = log_b(M) + log_b(N)', 'log_b(M/N) = log_b(M) - log_b(N)', 'log_b(M^n) = n · log_b(M)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Properties of Logarithms.'
+        hint1: 'Think about what each concept specifically describes in Properties of Logarithms.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Properties of Logarithms describes a specific idea. Product rule: log_b(MN) = log_b(M) + log_b(N). Quotient rule: log_b(M/N) = log_b(M) - log_b(N). Power rule: log_b(M^n) = n · log_b(M).'
       }
     }
   ]

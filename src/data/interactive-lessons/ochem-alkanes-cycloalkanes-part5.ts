@@ -30,31 +30,31 @@ London dispersion forces are primary IMF
       id: 'alkan5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of physical properties?',
-            options: [
-              'Boiling point increases with molecular weight',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
-            ],
-            correctAnswer: 0,
-            explanation: 'Boiling point increases with molecular weight'
-          },
-          {
-            question: 'In the context of physical properties, which is accurate?',
+            question: 'Which of the following correctly describes Boiling point increases with molecular…?',
             options: [
               'Alkanes are nonpolar → insoluble in water',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Boiling point increases with molecular weight',
+              'London dispersion forces are primary IMF',
+              'Branching decreases boiling point (less surface area)'
             ],
-            correctAnswer: 0,
-            explanation: 'Alkanes are nonpolar → insoluble in water'
+            correctAnswer: 1,
+            explanation: 'Correct — Boiling point increases with molecular weight. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Alkanes are nonpolar → insoluble in…?',
+            options: [
+              'Boiling point increases with molecular weight',
+              'Branching decreases boiling point (less surface area)',
+              'Alkanes are nonpolar → insoluble in water',
+              'London dispersion forces are primary IMF'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Alkanes are nonpolar → insoluble in water. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ London dispersion forces are primary IMF
       id: 'alkan5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Boiling point increases with molecular weight',
-            options: ['Boiling point increases with molecular weight', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Boiling point increases with molecular…',
+            options: ['Alkanes are nonpolar → insoluble in water', 'Branching decreases boiling point (less surface area)', 'London dispersion forces are primary IMF', 'Boiling point increases with molecular weight']
           },
           {
-            label: 'Branching decreases boiling point (less surface area)',
-            options: ['Branching decreases boiling point (less surface ar', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Branching decreases boiling point (less…',
+            options: ['Alkanes are nonpolar → insoluble in water', 'Boiling point increases with molecular weight', 'London dispersion forces are primary IMF', 'Branching decreases boiling point (less surface area)']
           },
           {
-            label: 'Alkanes are nonpolar → insoluble in water',
-            options: ['Alkanes are nonpolar → insoluble in water', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Alkanes are nonpolar → insoluble in…',
+            options: ['Branching decreases boiling point (less surface area)', 'London dispersion forces are primary IMF', 'Boiling point increases with molecular weight', 'Alkanes are nonpolar → insoluble in water']
           }
         ],
-        correctAnswers: ['Boiling point increases with molecular weight', 'Branching decreases boiling point (less surface ar', 'Alkanes are nonpolar → insoluble in water'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Physical Properties.'
+        correctAnswers: ['Boiling point increases with molecular weight', 'Branching decreases boiling point (less surface area)', 'Alkanes are nonpolar → insoluble in water'],
+        hint1: 'Think about what each concept specifically describes in Physical Properties.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Physical Properties describes a specific idea. Boiling point increases with molecular weight. Branching decreases boiling point (less surface area). Alkanes are nonpolar → insoluble in water.'
       }
     }
   ]

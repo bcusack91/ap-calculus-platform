@@ -71,23 +71,28 @@ CARS: practice daily — 1 passage per day minimum; focus on timing and accuracy
       id: 'mcat-3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Section-by-Section Strategy:',
-            options: ['Chem/Phys: strong on calculations — practice dimensional ana', 'CARS: practice daily — 1 passage per day minimum; focus on t', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Chem/Phys',
+            options: ['strong on calculations — practice dimensional analysis and unit conversion.', 'practice daily — 1 passage per day minimum; focus on timing and accuracy.', 'Bio/Biochem: most content-heavy section — amino acids, metabolism, and organ systems are highest yield.', 'Psych/Soc: often the easiest to improve — terminology-heavy, less application.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Bio/Biochem: most content-heavy section — amino acids, metab', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'CARS',
+            options: ['strong on calculations — practice dimensional analysis and unit conversion.', 'Bio/Biochem: most content-heavy section — amino acids, metabolism, and organ systems are highest yield.', 'Psych/Soc: often the easiest to improve — terminology-heavy, less application.', 'practice daily — 1 passage per day minimum; focus on timing and accuracy.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['Psych/Soc: often the easiest to improve — terminology-heavy, less application.', 'Bio/Biochem: most content-heavy section — amino acids, metabolism, and organ systems are highest yield.', 'strong on calculations — practice dimensional analysis and unit conversion.', 'practice daily — 1 passage per day minimum; focus on timing and accuracy.']
           }
         ],
-        correctAnswers: ['Chem/Phys: strong on calculations — practice dimensional ana', 'Bio/Biochem: most content-heavy section — amino acids, metab'],
-        hint1: 'Think about section-by-section strategy',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Chem/Phys: strong on calculations — practice dimensional analysis and unit conversion. Bio/Biochem: most content-heavy section — amino acids, metabolism, and organ systems are highest yield.'
+        correctAnswers: ['strong on calculations — practice dimensional analysis and unit conversion.', 'practice daily — 1 passage per day minimum; focus on timing and accuracy.', 'Bio/Biochem: most content-heavy section — amino acids, metabolism, and organ systems are highest yield.'],
+        hint1: 'Think about what each concept specifically describes in Section-by-Section Strategy.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Section-by-Section Strategy describes a specific idea. Chem/Phys: strong on calculations — practice dimensional analysis and unit conversion. CARS: practice daily — 1 passage per day minimum; focus on timing and accuracy. Key Insight: Bio/Biochem: most content-heavy section — amino acids, metabolism, and organ systems are highest yield.'
       }
     }
   ]

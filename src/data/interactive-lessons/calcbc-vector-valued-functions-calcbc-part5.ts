@@ -30,31 +30,31 @@ Displacement vector = r⃗(b) - r⃗(a) = ∫ₐᵇ v⃗(t)dt
       id: 'vecto5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of speed and arc length?',
+            question: 'Which statement accurately explains Speed = |v⃗(t)| = √[x\'(t)² + y\'(t)²]?',
             options: [
+              'Displacement vector = r⃗(b) - r⃗(a) = ∫ₐᵇ v⃗(t)dt',
               'Speed = |v⃗(t)| = √[x\'(t)² + y\'(t)²]',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
+              'This is the arc length formula',
+              'Total distance = ∫ₐᵇ |v⃗(t)| dt = ∫ₐᵇ √[x\'(t)² + y\'(t)²] dt'
             ],
-            correctAnswer: 0,
-            explanation: 'Speed = |v⃗(t)| = √[x\'(t)² + y\'(t)²]'
+            correctAnswer: 1,
+            explanation: 'Correct — Speed = |v⃗(t)| = √[x\'(t)² + y\'(t)²]. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of speed and arc length, which is accurate?',
+            question: 'Which of the following is true about This is the arc length formula?',
             options: [
-              'This is the arc length formula',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Speed = |v⃗(t)| = √[x\'(t)² + y\'(t)²]',
+              'Displacement vector = r⃗(b) - r⃗(a) = ∫ₐᵇ v⃗(t)dt',
+              'Total distance = ∫ₐᵇ |v⃗(t)| dt = ∫ₐᵇ √[x\'(t)² + y\'(t)²] dt',
+              'This is the arc length formula'
             ],
-            correctAnswer: 0,
-            explanation: 'This is the arc length formula'
+            correctAnswer: 3,
+            explanation: 'Correct — This is the arc length formula. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Displacement vector = r⃗(b) - r⃗(a) = ∫ₐᵇ v⃗(t)dt
       id: 'vecto5-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to speed and arc length?',
+            question: 'Which statement about Displacement vector = r⃗(b) - r⃗(a) =… is correct?',
             options: [
-              'Displacement vector = r⃗(b) - r⃗(a) = ∫ₐᵇ v⃗(t)dt',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'Speed = |v⃗(t)| = √[x\'(t)² + y\'(t)²]',
+              'Total distance = ∫ₐᵇ |v⃗(t)| dt = ∫ₐᵇ √[x\'(t)² + y\'(t)²] dt',
+              'This is the arc length formula',
+              'Displacement vector = r⃗(b) - r⃗(a) = ∫ₐᵇ v⃗(t)dt'
             ],
-            correctAnswer: 0,
-            explanation: 'Displacement vector = r⃗(b) - r⃗(a) = ∫ₐᵇ v⃗(t)dt'
+            correctAnswer: 3,
+            explanation: 'Correct — Displacement vector = r⃗(b) - r⃗(a) = ∫ₐᵇ v⃗(t)dt. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Displacement vector = r⃗(b) - r⃗(a) = ∫ₐᵇ v⃗(t)dt
       id: 'vecto5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Speed = |v⃗(t)| = √[x\'(t)² + y\'(t)²]',
-            options: ['Speed = |v⃗(t)| = √[x\'(t)² + y\'(t)²]', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Displacement vector = r⃗(b) - r⃗(a) = ∫ₐᵇ v⃗(t)dt', 'This is the arc length formula', 'Total distance = ∫ₐᵇ |v⃗(t)| dt = ∫ₐᵇ √[x\'(t)² + y\'(t)²] dt', 'Speed = |v⃗(t)| = √[x\'(t)² + y\'(t)²]']
           },
           {
-            label: 'Total distance = ∫ₐᵇ |v⃗(t)| dt = ∫ₐᵇ √[x\'(t)² + y\'(t)²] dt',
-            options: ['Total distance = ∫ₐᵇ |v⃗(t)| dt = ∫ₐᵇ √[x\'(t)² + y', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Total distance = ∫ₐᵇ |v⃗(t)| dt = ∫ₐᵇ…',
+            options: ['Speed = |v⃗(t)| = √[x\'(t)² + y\'(t)²]', 'Displacement vector = r⃗(b) - r⃗(a) = ∫ₐᵇ v⃗(t)dt', 'This is the arc length formula', 'Total distance = ∫ₐᵇ |v⃗(t)| dt = ∫ₐᵇ √[x\'(t)² + y\'(t)²] dt']
           },
           {
             label: 'This is the arc length formula',
-            options: ['This is the arc length formula', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Displacement vector = r⃗(b) - r⃗(a) = ∫ₐᵇ v⃗(t)dt', 'Speed = |v⃗(t)| = √[x\'(t)² + y\'(t)²]', 'Total distance = ∫ₐᵇ |v⃗(t)| dt = ∫ₐᵇ √[x\'(t)² + y\'(t)²] dt', 'This is the arc length formula']
           }
         ],
-        correctAnswers: ['Speed = |v⃗(t)| = √[x\'(t)² + y\'(t)²]', 'Total distance = ∫ₐᵇ |v⃗(t)| dt = ∫ₐᵇ √[x\'(t)² + y', 'This is the arc length formula'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Speed and Arc Length.'
+        correctAnswers: ['Speed = |v⃗(t)| = √[x\'(t)² + y\'(t)²]', 'Total distance = ∫ₐᵇ |v⃗(t)| dt = ∫ₐᵇ √[x\'(t)² + y\'(t)²] dt', 'This is the arc length formula'],
+        hint1: 'Think about what each concept specifically describes in Speed and Arc Length.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Speed and Arc Length describes a specific idea. Speed = |v⃗(t)| = √[x\'(t)² + y\'(t)²]. Total distance = ∫ₐᵇ |v⃗(t)| dt = ∫ₐᵇ √[x\'(t)² + y\'(t)²] dt. This is the arc length formula.'
       }
     }
   ]

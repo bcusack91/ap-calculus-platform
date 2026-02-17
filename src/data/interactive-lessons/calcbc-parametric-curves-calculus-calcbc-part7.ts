@@ -30,31 +30,31 @@ A = ½|∮(x dy - y dx)|
       id: 'param7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of review & applications?',
+            question: 'Which of the following correctly describes Area under parametric curve?',
             options: [
-              'Area under parametric curve',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
+              'A = ½|∮(x dy - y dx)|',
+              'A = ∫ₐᵇ g(t) · f\'(t) dt',
+              'A = ∫ₐᵇ y(t) · x\'(t) dt',
+              'Watch the direction of traversal (may need absolute value)'
             ],
-            correctAnswer: 0,
-            explanation: 'Area under parametric curve: A = ∫ₐᵇ y(t) · x\'(t) dt'
+            correctAnswer: 2,
+            explanation: 'Correct — Area under parametric curve: A = ∫ₐᵇ y(t) · x\'(t) dt. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of review & applications, which is accurate?',
+            question: 'Select the statement that correctly describes Watch the direction of traversal (may…:',
             options: [
+              'A = ∫ₐᵇ g(t) · f\'(t) dt',
               'Watch the direction of traversal (may need absolute value)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'A = ½|∮(x dy - y dx)|',
+              'A = ∫ₐᵇ y(t) · x\'(t) dt'
             ],
-            correctAnswer: 0,
-            explanation: 'Watch the direction of traversal (may need absolute value)'
+            correctAnswer: 1,
+            explanation: 'Correct — Watch the direction of traversal (may need absolute value). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ A = ½|∮(x dy - y dx)|
       id: 'param7-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to review & applications?',
+            question: 'Which statement about Closed curve area is correct?',
             options: [
+              'A = ∫ₐᵇ y(t) · x\'(t) dt',
+              'Watch the direction of traversal (may need absolute value)',
               'A = ½|∮(x dy - y dx)|',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'A = ∫ₐᵇ g(t) · f\'(t) dt'
             ],
-            correctAnswer: 0,
-            explanation: 'Closed curve area: A = ½|∮(x dy - y dx)|'
+            correctAnswer: 2,
+            explanation: 'Correct — Closed curve area: A = ½|∮(x dy - y dx)|. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ A = ½|∮(x dy - y dx)|
       id: 'param7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Area under parametric curve',
-            options: ['A = ∫ₐᵇ y(t) · x\'(t) dt', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['A = ∫ₐᵇ y(t) · x\'(t) dt', 'A = ½|∮(x dy - y dx)|', 'A = ∫ₐᵇ g(t) · f\'(t) dt', 'Watch the direction of traversal (may need absolute value)']
           },
           {
             label: 'Or equivalently',
-            options: ['A = ∫ₐᵇ g(t) · f\'(t) dt', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['A = ∫ₐᵇ y(t) · x\'(t) dt', 'A = ∫ₐᵇ g(t) · f\'(t) dt', 'Watch the direction of traversal (may need absolute value)', 'A = ½|∮(x dy - y dx)|']
           },
           {
-            label: 'Watch the direction of traversal (may need absolute value)',
-            options: ['Watch the direction of traversal (may need absolut', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Closed curve area',
+            options: ['A = ½|∮(x dy - y dx)|', 'A = ∫ₐᵇ g(t) · f\'(t) dt', 'Watch the direction of traversal (may need absolute value)', 'A = ∫ₐᵇ y(t) · x\'(t) dt']
           }
         ],
-        correctAnswers: ['A = ∫ₐᵇ y(t) · x\'(t) dt', 'A = ∫ₐᵇ g(t) · f\'(t) dt', 'Watch the direction of traversal (may need absolut'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Review & Applications.'
+        correctAnswers: ['A = ∫ₐᵇ y(t) · x\'(t) dt', 'A = ∫ₐᵇ g(t) · f\'(t) dt', 'A = ½|∮(x dy - y dx)|'],
+        hint1: 'Think about what each concept specifically describes in Review & Applications.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Review & Applications describes a specific idea. Area under parametric curve: A = ∫ₐᵇ y(t) · x\'(t) dt. Or equivalently: A = ∫ₐᵇ g(t) · f\'(t) dt. Closed curve area: A = ½|∮(x dy - y dx)|.'
       }
     }
   ]

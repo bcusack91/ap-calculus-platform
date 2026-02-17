@@ -19,31 +19,31 @@ export const bioFeedbackPart7Data = {
       id: 'feed7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes feedback in all body systems?',
+            question: 'Which statement accurately explains Feedback in all body systems?',
             options: [
-              'Feedback in all body systems',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'constructing feedback diagrams',
+              'Feedback at population and ecosystem levels',
+              'Disease as homeostatic failure',
+              'Feedback in all body systems'
             ],
-            correctAnswer: 0,
-            explanation: 'Feedback in all body systems'
+            correctAnswer: 3,
+            explanation: 'Correct — Feedback in all body systems. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of synthesis & ap review, which statement is accurate?',
+            question: 'Which of the following is true about Feedback at population and ecosystem…?',
             options: [
+              'Feedback in all body systems',
+              'Disease as homeostatic failure',
               'Feedback at population and ecosystem levels',
-              'smetsys ydob lla ni kcabdeeF',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'constructing feedback diagrams'
             ],
-            correctAnswer: 0,
-            explanation: 'Feedback at population and ecosystem levels'
+            correctAnswer: 2,
+            explanation: 'Correct — Feedback at population and ecosystem levels. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioFeedbackPart7Data = {
       id: 'feed7-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to synthesis & ap review?',
+            question: 'Which statement about AP exam is correct?',
             options: [
-              'AP exam: constructing feedback diagrams',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'constructing feedback diagrams',
+              'Feedback at population and ecosystem levels',
+              'Feedback in all body systems',
+              'Disease as homeostatic failure'
             ],
             correctAnswer: 0,
-            explanation: 'AP exam: constructing feedback diagrams'
+            explanation: 'Correct — AP exam: constructing feedback diagrams. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioFeedbackPart7Data = {
       id: 'feed7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Feedback in all body systems is important in synthesis & ap review because',
-            options: ['Feedback in all body systems', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Feedback in all body systems',
+            options: ['constructing feedback diagrams', 'Feedback in all body systems', 'Disease as homeostatic failure', 'Feedback at population and ecosystem levels']
           },
           {
-            label: 'Disease as homeostatic failure is important in synthesis & ap review because',
-            options: ['Disease as homeostatic failure', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Disease as homeostatic failure',
+            options: ['Feedback in all body systems', 'Feedback at population and ecosystem levels', 'Disease as homeostatic failure', 'constructing feedback diagrams']
           },
           {
-            label: 'Feedback at population and ecosystem levels is important in synthesis & ap review because',
-            options: ['Feedback at population and ecosystem levels', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Feedback at population and ecosystem…',
+            options: ['Disease as homeostatic failure', 'Feedback at population and ecosystem levels', 'Feedback in all body systems', 'constructing feedback diagrams']
           }
         ],
         correctAnswers: ['Feedback in all body systems', 'Disease as homeostatic failure', 'Feedback at population and ecosystem levels'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Synthesis & AP Review.'
+        hint1: 'Think about what each concept specifically describes in Feedback Mechanisms: Synthesis & AP Review.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Feedback Mechanisms: Synthesis & AP Review describes a specific idea. Feedback in all body systems. Disease as homeostatic failure. Feedback at population and ecosystem levels.'
       }
     }
   ]

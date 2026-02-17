@@ -18,20 +18,31 @@ Substitute each answer choice — which one makes the most sense?.
       id: 'act-r7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes context clues?',
+            question: 'Which of the following correctly describes Context clues?',
             options: [
-              'Context clues is a key concept for ACT English/Reading',
-              'Substitute each answer choice — which one makes the most sense?',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'the surrounding words reveal the meaning.',
+              'Read the full sentence, not just the phrase around the word.',
+              'ACT tests common words with uncommon meanings.',
+              'Substitute each answer choice — which one makes the most sense?.'
             ],
             correctAnswer: 0,
-            explanation: 'Context clues: the surrounding words reveal the meaning'
+            explanation: 'Correct — Context clues: the surrounding words reveal the meaning. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Key Insight?',
+            options: [
+              'ACT tests common words with uncommon meanings.',
+              'the surrounding words reveal the meaning.',
+              'Read the full sentence, not just the phrase around the word.',
+              'Substitute each answer choice — which one makes the most sense?.'
+            ],
+            correctAnswer: 0,
+            explanation: 'Correct — Key Insight: ACT tests common words with uncommon meanings. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Substitute each answer choice — which one makes the most sense?.
       id: 'act-r7-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for review & applications?',
+            question: 'Which statement about ACT Tip is correct?',
             options: [
-              'ACT tests common words with uncommon meanings',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Substitute each answer choice — which one makes the most sense?.',
+              'the surrounding words reveal the meaning.',
+              'Read the full sentence, not just the phrase around the word.',
+              'ACT tests common words with uncommon meanings.'
             ],
-            correctAnswer: 0,
-            explanation: 'ACT tests common words with uncommon meanings'
+            correctAnswer: 2,
+            explanation: 'Correct — ACT Tip: Read the full sentence, not just the phrase around the word. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Substitute each answer choice — which one makes the most sense?.
       id: 'act-r7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Review & Applications:',
-            options: ['Context clues: the surrounding words reveal the me', 'Substitute each answer choice — which one makes th', 'Not applicable', 'None of these']
+            label: 'Context clues',
+            options: ['the surrounding words reveal the meaning.', 'Read the full sentence, not just the phrase around the word.', 'Substitute each answer choice — which one makes the most sense?.', 'ACT tests common words with uncommon meanings.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['ACT tests common words with uncommon meanings', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Key Insight',
+            options: ['the surrounding words reveal the meaning.', 'Read the full sentence, not just the phrase around the word.', 'ACT tests common words with uncommon meanings.', 'Substitute each answer choice — which one makes the most sense?.']
+          },
+          {
+            label: 'ACT Tip',
+            options: ['Substitute each answer choice — which one makes the most sense?.', 'ACT tests common words with uncommon meanings.', 'Read the full sentence, not just the phrase around the word.', 'the surrounding words reveal the meaning.']
           }
         ],
-        correctAnswers: ['Context clues: the surrounding words reveal the me', 'ACT tests common words with uncommon meanings'],
-        hint1: 'Think about review & applications',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Context clues: the surrounding words reveal the meaning. ACT tests common words with uncommon meanings.'
+        correctAnswers: ['the surrounding words reveal the meaning.', 'ACT tests common words with uncommon meanings.', 'Read the full sentence, not just the phrase around the word.'],
+        hint1: 'Think about what each concept specifically describes in Review & Applications.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Review & Applications describes a specific idea. Context clues: the surrounding words reveal the meaning. Key Insight: ACT tests common words with uncommon meanings. ACT Tip: Read the full sentence, not just the phrase around the word.'
       }
     }
   ]

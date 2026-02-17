@@ -18,20 +18,31 @@ tan θ = sin θ / cos θ.
       id: 'act-t4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes pythagorean?',
+            question: 'Which statement accurately explains Pythagorean?',
             options: [
-              'Pythagorean is a key concept for ACT Math',
-              'tan θ = sin θ / cos θ',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'tan θ = sin θ / cos θ.',
+              'Reciprocal: csc = 1/sin, sec = 1/cos, cot = 1/tan.',
+              'Double angle: sin 2θ = 2 sin θ cos θ; cos 2θ = cos²θ - sin²θ.',
+              'sin²θ + cos²θ = 1.'
             ],
-            correctAnswer: 0,
-            explanation: 'Pythagorean: sin²θ + cos²θ = 1'
+            correctAnswer: 3,
+            explanation: 'Correct — Pythagorean: sin²θ + cos²θ = 1. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              'Double angle: sin 2θ = 2 sin θ cos θ; cos 2θ = cos²θ - sin²θ.',
+              'tan θ = sin θ / cos θ.',
+              'Reciprocal: csc = 1/sin, sec = 1/cos, cot = 1/tan.',
+              'sin²θ + cos²θ = 1.'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Key Insight: Reciprocal: csc = 1/sin, sec = 1/cos, cot = 1/tan. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ tan θ = sin θ / cos θ.
       id: 'act-t4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for trig identities?',
+            question: 'Which statement about ACT Tip is correct?',
             options: [
-              'Reciprocal: csc = 1/sin, sec = 1/cos, cot = 1/tan',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'sin²θ + cos²θ = 1.',
+              'Reciprocal: csc = 1/sin, sec = 1/cos, cot = 1/tan.',
+              'Double angle: sin 2θ = 2 sin θ cos θ; cos 2θ = cos²θ - sin²θ.',
+              'tan θ = sin θ / cos θ.'
             ],
-            correctAnswer: 0,
-            explanation: 'Reciprocal: csc = 1/sin, sec = 1/cos, cot = 1/tan'
+            correctAnswer: 2,
+            explanation: 'Correct — ACT Tip: Double angle: sin 2θ = 2 sin θ cos θ; cos 2θ = cos²θ - sin²θ. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ tan θ = sin θ / cos θ.
       id: 'act-t4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Trig Identities:',
-            options: ['Pythagorean: sin²θ + cos²θ = 1', 'tan θ = sin θ / cos θ', 'Not applicable', 'None of these']
+            label: 'Pythagorean',
+            options: ['sin²θ + cos²θ = 1.', 'Reciprocal: csc = 1/sin, sec = 1/cos, cot = 1/tan.', 'tan θ = sin θ / cos θ.', 'Double angle: sin 2θ = 2 sin θ cos θ; cos 2θ = cos²θ - sin²θ.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Reciprocal: csc = 1/sin, sec = 1/cos, cot = 1/tan', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Key Insight',
+            options: ['Reciprocal: csc = 1/sin, sec = 1/cos, cot = 1/tan.', 'Double angle: sin 2θ = 2 sin θ cos θ; cos 2θ = cos²θ - sin²θ.', 'sin²θ + cos²θ = 1.', 'tan θ = sin θ / cos θ.']
+          },
+          {
+            label: 'ACT Tip',
+            options: ['sin²θ + cos²θ = 1.', 'Double angle: sin 2θ = 2 sin θ cos θ; cos 2θ = cos²θ - sin²θ.', 'Reciprocal: csc = 1/sin, sec = 1/cos, cot = 1/tan.', 'tan θ = sin θ / cos θ.']
           }
         ],
-        correctAnswers: ['Pythagorean: sin²θ + cos²θ = 1', 'Reciprocal: csc = 1/sin, sec = 1/cos, cot = 1/tan'],
-        hint1: 'Think about trig identities',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Pythagorean: sin²θ + cos²θ = 1. Reciprocal: csc = 1/sin, sec = 1/cos, cot = 1/tan.'
+        correctAnswers: ['sin²θ + cos²θ = 1.', 'Reciprocal: csc = 1/sin, sec = 1/cos, cot = 1/tan.', 'Double angle: sin 2θ = 2 sin θ cos θ; cos 2θ = cos²θ - sin²θ.'],
+        hint1: 'Think about what each concept specifically describes in Trig Identities.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Trig Identities describes a specific idea. Pythagorean: sin²θ + cos²θ = 1. Key Insight: Reciprocal: csc = 1/sin, sec = 1/cos, cot = 1/tan. ACT Tip: Double angle: sin 2θ = 2 sin θ cos θ; cos 2θ = cos²θ - sin²θ.'
       }
     }
   ]

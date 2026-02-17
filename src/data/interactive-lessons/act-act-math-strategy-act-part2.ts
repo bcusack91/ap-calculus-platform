@@ -18,20 +18,31 @@ Graph equations to find intersections, zeros, and behavior.
       id: 'act-m2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes use a graphing calculator?',
+            question: 'Which of the following correctly describes Use a graphing calculator?',
             options: [
-              'Use a graphing calculator is a key concept for ACT Math',
-              'Graph equations to find intersections, zeros, and behavior',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'Store intermediate results in memory to avoid re-calculating.',
+              'Use TABLE to test values quickly.',
+              'Graph equations to find intersections, zeros, and behavior.',
+              'TI-84 or similar.'
             ],
-            correctAnswer: 0,
-            explanation: 'Use a graphing calculator: TI-84 or similar'
+            correctAnswer: 3,
+            explanation: 'Correct — Use a graphing calculator: TI-84 or similar. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              'Store intermediate results in memory to avoid re-calculating.',
+              'Use TABLE to test values quickly.',
+              'TI-84 or similar.',
+              'Graph equations to find intersections, zeros, and behavior.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Key Insight: Use TABLE to test values quickly. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Graph equations to find intersections, zeros, and behavior.
       id: 'act-m2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for calculator tips?',
+            question: 'Regarding Calculator Tips, which correctly describes ACT Tip?',
             options: [
-              'Use TABLE to test values quickly',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Store intermediate results in memory to avoid re-calculating.',
+              'TI-84 or similar.',
+              'Graph equations to find intersections, zeros, and behavior.',
+              'Use TABLE to test values quickly.'
             ],
             correctAnswer: 0,
-            explanation: 'Use TABLE to test values quickly'
+            explanation: 'Correct — ACT Tip: Store intermediate results in memory to avoid re-calculating. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Graph equations to find intersections, zeros, and behavior.
       id: 'act-m2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Calculator Tips:',
-            options: ['Use a graphing calculator: TI-84 or similar', 'Graph equations to find intersections, zeros, and ', 'Not applicable', 'None of these']
+            label: 'Use a graphing calculator',
+            options: ['Store intermediate results in memory to avoid re-calculating.', 'TI-84 or similar.', 'Use TABLE to test values quickly.', 'Graph equations to find intersections, zeros, and behavior.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Use TABLE to test values quickly', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Key Insight',
+            options: ['Use TABLE to test values quickly.', 'TI-84 or similar.', 'Graph equations to find intersections, zeros, and behavior.', 'Store intermediate results in memory to avoid re-calculating.']
+          },
+          {
+            label: 'ACT Tip',
+            options: ['Graph equations to find intersections, zeros, and behavior.', 'Use TABLE to test values quickly.', 'TI-84 or similar.', 'Store intermediate results in memory to avoid re-calculating.']
           }
         ],
-        correctAnswers: ['Use a graphing calculator: TI-84 or similar', 'Use TABLE to test values quickly'],
-        hint1: 'Think about calculator tips',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Use a graphing calculator: TI-84 or similar. Use TABLE to test values quickly.'
+        correctAnswers: ['TI-84 or similar.', 'Use TABLE to test values quickly.', 'Store intermediate results in memory to avoid re-calculating.'],
+        hint1: 'Think about what each concept specifically describes in Calculator Tips.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Calculator Tips describes a specific idea. Use a graphing calculator: TI-84 or similar. Key Insight: Use TABLE to test values quickly. ACT Tip: Store intermediate results in memory to avoid re-calculating.'
       }
     }
   ]

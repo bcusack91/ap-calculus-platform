@@ -30,31 +30,31 @@ each derivative → carboxylic acid + nucleophile
       id: 'carbo5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of interconversion of derivatives?',
+            question: 'What does "Can go "downhill" in reactivity" refer to in this topic?',
             options: [
-              'Can go "downhill" in reactivity',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'acid chloride → anhydride → ester → amide',
+              'each derivative → carboxylic acid + nucleophile',
+              'LiAlH₄ reduces esters → 2 alcohols, amides → amines',
+              'Cannot easily go "uphill" without special reagents'
             ],
             correctAnswer: 0,
-            explanation: 'Can go "downhill" in reactivity: acid chloride → anhydride → ester → amide'
+            explanation: 'Correct — Can go "downhill" in reactivity: acid chloride → anhydride → ester → amide. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of interconversion of derivatives, which is accurate?',
+            question: 'Which of the following is true about Reduction?',
             options: [
               'LiAlH₄ reduces esters → 2 alcohols, amides → amines',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'acid chloride → anhydride → ester → amide',
+              'each derivative → carboxylic acid + nucleophile',
+              'Cannot easily go "uphill" without special reagents'
             ],
             correctAnswer: 0,
-            explanation: 'Reduction: LiAlH₄ reduces esters → 2 alcohols, amides → amines'
+            explanation: 'Correct — Reduction: LiAlH₄ reduces esters → 2 alcohols, amides → amines. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ each derivative → carboxylic acid + nucleophile
       id: 'carbo5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Can go "downhill" in reactivity',
-            options: ['acid chloride → anhydride → ester → amide', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
-          },
-          {
-            label: 'Cannot easily go "uphill" without special reagents',
-            options: ['Cannot easily go "uphill" without special reagents', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['acid chloride → anhydride → ester → amide', 'Cannot easily go "uphill" without special reagents', 'each derivative → carboxylic acid + nucleophile', 'LiAlH₄ reduces esters → 2 alcohols, amides → amines']
           },
           {
             label: 'Reduction',
-            options: ['LiAlH₄ reduces esters → 2 alcohols, amides → amine', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Cannot easily go "uphill" without special reagents', 'LiAlH₄ reduces esters → 2 alcohols, amides → amines', 'each derivative → carboxylic acid + nucleophile', 'acid chloride → anhydride → ester → amide']
+          },
+          {
+            label: 'Hydrolysis',
+            options: ['acid chloride → anhydride → ester → amide', 'Cannot easily go "uphill" without special reagents', 'each derivative → carboxylic acid + nucleophile', 'LiAlH₄ reduces esters → 2 alcohols, amides → amines']
           }
         ],
-        correctAnswers: ['acid chloride → anhydride → ester → amide', 'Cannot easily go "uphill" without special reagents', 'LiAlH₄ reduces esters → 2 alcohols, amides → amine'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Interconversion of Derivatives.'
+        correctAnswers: ['acid chloride → anhydride → ester → amide', 'LiAlH₄ reduces esters → 2 alcohols, amides → amines', 'each derivative → carboxylic acid + nucleophile'],
+        hint1: 'Think about what each concept specifically describes in Interconversion of Derivatives.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Interconversion of Derivatives describes a specific idea. Can go "downhill" in reactivity: acid chloride → anhydride → ester → amide. Reduction: LiAlH₄ reduces esters → 2 alcohols, amides → amines. Hydrolysis: each derivative → carboxylic acid + nucleophile.'
       }
     }
   ]

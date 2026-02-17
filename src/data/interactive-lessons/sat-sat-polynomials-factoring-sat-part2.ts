@@ -18,20 +18,31 @@ Difference of squares: a² - b² = (a + b)(a - b).
       id: 'sat-p2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes gcf first?',
+            question: 'Which of the following correctly describes GCF first?',
             options: [
-              'GCF first is a fundamental concept in SAT Math',
-              'Difference of squares: a² - b² = (a + b)(a - b)',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'Grouping: for 4-term polynomials, group in pairs and factor each.',
+              'a² - b² = (a + b)(a - b).',
+              'always factor out the greatest common factor.',
+              'Trinomials: x² + bx + c = (x + p)(x + q) where pq = c and p + q = b.'
             ],
-            correctAnswer: 0,
-            explanation: 'GCF first: always factor out the greatest common factor'
+            correctAnswer: 2,
+            explanation: 'Correct — GCF first: always factor out the greatest common factor. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Factoring Techniques, which explains Key Insight?',
+            options: [
+              'always factor out the greatest common factor.',
+              'Trinomials: x² + bx + c = (x + p)(x + q) where pq = c and p + q = b.',
+              'a² - b² = (a + b)(a - b).',
+              'Grouping: for 4-term polynomials, group in pairs and factor each.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Key Insight: Trinomials: x² + bx + c = (x + p)(x + q) where pq = c and p + q = b. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Difference of squares: a² - b² = (a + b)(a - b).
       id: 'sat-p2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for factoring techniques?',
+            question: 'Which statement about SAT Tip is correct?',
             options: [
-              'Trinomials: x² + bx + c = (x + p)(x + q) where pq = c and p + q = b',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'always factor out the greatest common factor.',
+              'a² - b² = (a + b)(a - b).',
+              'Trinomials: x² + bx + c = (x + p)(x + q) where pq = c and p + q = b.',
+              'Grouping: for 4-term polynomials, group in pairs and factor each.'
             ],
-            correctAnswer: 0,
-            explanation: 'Trinomials: x² + bx + c = (x + p)(x + q) where pq = c and p + q = b'
+            correctAnswer: 3,
+            explanation: 'Correct — SAT Tip: Grouping: for 4-term polynomials, group in pairs and factor each. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Difference of squares: a² - b² = (a + b)(a - b).
       id: 'sat-p2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Factoring Techniques:',
-            options: ['GCF first: always factor out the greatest common f', 'Difference of squares: a² - b² = (a + b)(a - b)', 'Not applicable', 'None of these']
+            label: 'GCF first',
+            options: ['a² - b² = (a + b)(a - b).', 'Grouping: for 4-term polynomials, group in pairs and factor each.', 'always factor out the greatest common factor.', 'Trinomials: x² + bx + c = (x + p)(x + q) where pq = c and p + q = b.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Trinomials: x² + bx + c = (x + p)(x + q) where pq ', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Difference of squares',
+            options: ['Grouping: for 4-term polynomials, group in pairs and factor each.', 'Trinomials: x² + bx + c = (x + p)(x + q) where pq = c and p + q = b.', 'always factor out the greatest common factor.', 'a² - b² = (a + b)(a - b).']
+          },
+          {
+            label: 'Key Insight',
+            options: ['a² - b² = (a + b)(a - b).', 'Grouping: for 4-term polynomials, group in pairs and factor each.', 'always factor out the greatest common factor.', 'Trinomials: x² + bx + c = (x + p)(x + q) where pq = c and p + q = b.']
           }
         ],
-        correctAnswers: ['GCF first: always factor out the greatest common f', 'Trinomials: x² + bx + c = (x + p)(x + q) where pq '],
-        hint1: 'Think about factoring techniques',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'GCF first: always factor out the greatest common factor. Trinomials: x² + bx + c = (x + p)(x + q) where pq = c and p + q = b.'
+        correctAnswers: ['always factor out the greatest common factor.', 'a² - b² = (a + b)(a - b).', 'Trinomials: x² + bx + c = (x + p)(x + q) where pq = c and p + q = b.'],
+        hint1: 'Think about what each concept specifically describes in Factoring Techniques.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Factoring Techniques describes a specific idea. GCF first: always factor out the greatest common factor. Difference of squares: a² - b² = (a + b)(a - b). Key Insight: Trinomials: x² + bx + c = (x + p)(x + q) where pq = c and p + q = b.'
       }
     }
   ]

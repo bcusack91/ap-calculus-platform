@@ -19,31 +19,31 @@ export const bioNatSelectionPart1Data = {
       id: 'natu1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes variation exists within populations?',
+            question: 'Which statement accurately explains Variation exists within populations?',
             options: [
+              'More offspring produced than can survive',
               'Variation exists within populations',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Individuals with favorable traits survive and reproduce more',
+              'Favorable traits are inherited → population changes over time'
             ],
-            correctAnswer: 0,
-            explanation: 'Variation exists within populations'
+            correctAnswer: 1,
+            explanation: 'Correct — Variation exists within populations. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of darwin\'s theory, which statement is accurate?',
+            question: 'In the context of Darwin\'s Theory, which explains Individuals with favorable traits…?',
             options: [
               'Individuals with favorable traits survive and reproduce more',
-              'snoitalupop nihtiw stsixe noitairaV',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Favorable traits are inherited → population changes over time',
+              'More offspring produced than can survive',
+              'Variation exists within populations'
             ],
             correctAnswer: 0,
-            explanation: 'Individuals with favorable traits survive and reproduce more'
+            explanation: 'Correct — Individuals with favorable traits survive and reproduce more. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioNatSelectionPart1Data = {
       id: 'natu1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to darwin\'s theory?',
+            question: 'Which statement about Favorable traits are inherited →… is correct?',
             options: [
+              'More offspring produced than can survive',
               'Favorable traits are inherited → population changes over time',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Variation exists within populations',
+              'Individuals with favorable traits survive and reproduce more'
             ],
-            correctAnswer: 0,
-            explanation: 'Favorable traits are inherited → population changes over time'
+            correctAnswer: 1,
+            explanation: 'Correct — Favorable traits are inherited → population changes over time. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioNatSelectionPart1Data = {
       id: 'natu1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Variation exists within populations is important in darwin\'s theory because',
-            options: ['Variation exists within populations', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Variation exists within populations',
+            options: ['More offspring produced than can survive', 'Individuals with favorable traits survive and reproduce more', 'Favorable traits are inherited → population changes over time', 'Variation exists within populations']
           },
           {
-            label: 'More offspring produced than can survive is important in darwin\'s theory because',
-            options: ['More offspring produced than can survive', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'More offspring produced than can survive',
+            options: ['Individuals with favorable traits survive and reproduce more', 'Favorable traits are inherited → population changes over time', 'More offspring produced than can survive', 'Variation exists within populations']
           },
           {
-            label: 'Individuals with favorable traits survive and reproduce more is important in darwin\'s theory because',
-            options: ['Individuals with favorable traits survive and repr', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Individuals with favorable traits…',
+            options: ['More offspring produced than can survive', 'Individuals with favorable traits survive and reproduce more', 'Variation exists within populations', 'Favorable traits are inherited → population changes over time']
           }
         ],
-        correctAnswers: ['Variation exists within populations', 'More offspring produced than can survive', 'Individuals with favorable traits survive and repr'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Darwin\'s Theory.'
+        correctAnswers: ['Variation exists within populations', 'More offspring produced than can survive', 'Individuals with favorable traits survive and reproduce more'],
+        hint1: 'Think about what each concept specifically describes in Darwin\'s Theory.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Darwin\'s Theory describes a specific idea. Variation exists within populations. More offspring produced than can survive. Individuals with favorable traits survive and reproduce more.'
       }
     }
   ]

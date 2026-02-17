@@ -30,31 +30,31 @@ Only works when the DE can be written as g(y)dy = f(x)dx
       id: 'diffe4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of separation of variables?',
+            question: 'Which statement accurately explains Separate variables?',
             options: [
-              'Separate variables',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'Only works when the DE can be written as g(y)dy = f(x)dx',
+              'get all y-terms and dy on one side, all x-terms and dx on the other',
+              'Solve for y (if possible) and apply the initial condition',
+              '∫g(y)dy = ∫f(x)dx'
             ],
-            correctAnswer: 0,
-            explanation: 'Separate variables: get all y-terms and dy on one side, all x-terms and dx on the other'
+            correctAnswer: 1,
+            explanation: 'Correct — Separate variables: get all y-terms and dy on one side, all x-terms and dx on the other. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of separation of variables, which is accurate?',
+            question: 'Select the statement that correctly describes Solve for y (if possible) and apply the…:',
             options: [
               'Solve for y (if possible) and apply the initial condition',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'get all y-terms and dy on one side, all x-terms and dx on the other',
+              'Only works when the DE can be written as g(y)dy = f(x)dx',
+              '∫g(y)dy = ∫f(x)dx'
             ],
             correctAnswer: 0,
-            explanation: 'Solve for y (if possible) and apply the initial condition'
+            explanation: 'Correct — Solve for y (if possible) and apply the initial condition. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Only works when the DE can be written as g(y)dy = f(x)dx
       id: 'diffe4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to separation of variables?',
+            question: 'Which statement about Only works when the DE can be written… is correct?',
             options: [
+              'Solve for y (if possible) and apply the initial condition',
               'Only works when the DE can be written as g(y)dy = f(x)dx',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              '∫g(y)dy = ∫f(x)dx',
+              'get all y-terms and dy on one side, all x-terms and dx on the other'
             ],
-            correctAnswer: 0,
-            explanation: 'Only works when the DE can be written as g(y)dy = f(x)dx'
+            correctAnswer: 1,
+            explanation: 'Correct — Only works when the DE can be written as g(y)dy = f(x)dx. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,24 @@ Only works when the DE can be written as g(y)dy = f(x)dx
       id: 'diffe4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Separate variables',
-            options: ['get all y-terms and dy on one side, all x-terms an', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Solve for y (if possible) and apply the initial condition', 'get all y-terms and dy on one side, all x-terms and dx on the other', '∫g(y)dy = ∫f(x)dx', 'Only works when the DE can be written as g(y)dy = f(x)dx']
           },
           {
             label: 'Integrate both sides',
-            options: ['∫g(y)dy = ∫f(x)dx', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
-          },
-          {
-            label: 'Solve for y (if possible) and apply the initial condition',
-            options: ['Solve for y (if possible) and apply the initial co', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Only works when the DE can be written as g(y)dy = f(x)dx', 'Solve for y (if possible) and apply the initial condition', '∫g(y)dy = ∫f(x)dx', 'get all y-terms and dy on one side, all x-terms and dx on the other']
           }
         ],
-        correctAnswers: ['get all y-terms and dy on one side, all x-terms an', '∫g(y)dy = ∫f(x)dx', 'Solve for y (if possible) and apply the initial co'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Separation of Variables.'
+        correctAnswers: ['get all y-terms and dy on one side, all x-terms and dx on the other', '∫g(y)dy = ∫f(x)dx'],
+        hint1: 'Think about what each concept specifically describes in Separation of Variables.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Separation of Variables describes a specific idea. Separate variables: get all y-terms and dy on one side, all x-terms and dx on the other. Integrate both sides: ∫g(y)dy = ∫f(x)dx.'
       }
     }
   ]

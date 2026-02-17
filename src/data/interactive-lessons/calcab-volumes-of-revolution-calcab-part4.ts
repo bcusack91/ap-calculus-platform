@@ -30,31 +30,31 @@ The "base" of each cross-section is typically bounded by two curves
       id: 'volum4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of volumes by cross sections?',
-            options: [
-              'Known cross-sections perpendicular to the x-axis',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'Known cross-sections perpendicular to the x-axis: V = ∫ₐᵇ A(x)dx'
-          },
-          {
-            question: 'In the context of volumes by cross sections, which is accurate?',
+            question: 'What does "Known cross-sections perpendicular to the x-axis" refer to in calculus?',
             options: [
               'squares, semicircles, equilateral triangles, rectangles',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'The "base" of each cross-section is typically bounded by two curves',
+              'V = ∫ₐᵇ A(x)dx',
+              'A(x) is the area of the cross-section at position x'
             ],
-            correctAnswer: 0,
-            explanation: 'Common shapes: squares, semicircles, equilateral triangles, rectangles'
+            correctAnswer: 2,
+            explanation: 'Correct — Known cross-sections perpendicular to the x-axis: V = ∫ₐᵇ A(x)dx. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Common shapes:',
+            options: [
+              'The "base" of each cross-section is typically bounded by two curves',
+              'V = ∫ₐᵇ A(x)dx',
+              'squares, semicircles, equilateral triangles, rectangles',
+              'A(x) is the area of the cross-section at position x'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Common shapes: squares, semicircles, equilateral triangles, rectangles. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ The "base" of each cross-section is typically bounded by two curves
       id: 'volum4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to volumes by cross sections?',
+            question: 'Which of these accurately represents The "base" of each cross-section is…?',
             options: [
               'The "base" of each cross-section is typically bounded by two curves',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'V = ∫ₐᵇ A(x)dx',
+              'A(x) is the area of the cross-section at position x',
+              'squares, semicircles, equilateral triangles, rectangles'
             ],
             correctAnswer: 0,
-            explanation: 'The "base" of each cross-section is typically bounded by two curves'
+            explanation: 'Correct — The "base" of each cross-section is typically bounded by two curves. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,24 @@ The "base" of each cross-section is typically bounded by two curves
       id: 'volum4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Known cross-sections perpendicular to the x-axis',
-            options: ['V = ∫ₐᵇ A(x)dx', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
-          },
-          {
-            label: 'A(x) is the area of the cross-section at position x',
-            options: ['A(x) is the area of the cross-section at position ', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['A(x) is the area of the cross-section at position x', 'squares, semicircles, equilateral triangles, rectangles', 'V = ∫ₐᵇ A(x)dx', 'The "base" of each cross-section is typically bounded by two curves']
           },
           {
             label: 'Common shapes',
-            options: ['squares, semicircles, equilateral triangles, recta', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['V = ∫ₐᵇ A(x)dx', 'A(x) is the area of the cross-section at position x', 'The "base" of each cross-section is typically bounded by two curves', 'squares, semicircles, equilateral triangles, rectangles']
           }
         ],
-        correctAnswers: ['V = ∫ₐᵇ A(x)dx', 'A(x) is the area of the cross-section at position ', 'squares, semicircles, equilateral triangles, recta'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Volumes by Cross Sections.'
+        correctAnswers: ['V = ∫ₐᵇ A(x)dx', 'squares, semicircles, equilateral triangles, rectangles'],
+        hint1: 'Think about what each concept specifically describes in Volumes by Cross Sections.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Volumes by Cross Sections describes a specific idea. Known cross-sections perpendicular to the x-axis: V = ∫ₐᵇ A(x)dx. Common shapes: squares, semicircles, equilateral triangles, rectangles.'
       }
     }
   ]

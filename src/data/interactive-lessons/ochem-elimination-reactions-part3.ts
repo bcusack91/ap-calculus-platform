@@ -30,31 +30,31 @@ Rate = k[substrate]; favored by weak bases, polar protic solvents
       id: 'elimi3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of e1 mechanism?',
+            question: 'What does "E1" refer to in this topic?',
             options: [
-              'E1',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'leaving group departs → carbocation',
+              'base removes adjacent proton',
+              'Rate = k[substrate]; favored by weak bases, polar protic solvents',
+              'two-step via carbocation (unimolecular)'
             ],
-            correctAnswer: 0,
-            explanation: 'E1: two-step via carbocation (unimolecular)'
+            correctAnswer: 3,
+            explanation: 'Correct — E1: two-step via carbocation (unimolecular). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of e1 mechanism, which is accurate?',
+            question: 'In the context of E1 Mechanism, which explains Step 2?',
             options: [
+              'Rate = k[substrate]; favored by weak bases, polar protic solvents',
               'base removes adjacent proton',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'two-step via carbocation (unimolecular)',
+              'leaving group departs → carbocation'
             ],
-            correctAnswer: 0,
-            explanation: 'Step 2: base removes adjacent proton'
+            correctAnswer: 1,
+            explanation: 'Correct — Step 2: base removes adjacent proton. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Rate = k[substrate]; favored by weak bases, polar protic solvents
       id: 'elimi3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'E1',
-            options: ['two-step via carbocation (unimolecular)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Rate = k[substrate]; favored by weak bases, polar protic solvents', 'two-step via carbocation (unimolecular)', 'leaving group departs → carbocation', 'base removes adjacent proton']
           },
           {
             label: 'Step 1',
-            options: ['leaving group departs → carbocation', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['base removes adjacent proton', 'two-step via carbocation (unimolecular)', 'Rate = k[substrate]; favored by weak bases, polar protic solvents', 'leaving group departs → carbocation']
           },
           {
             label: 'Step 2',
-            options: ['base removes adjacent proton', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['leaving group departs → carbocation', 'Rate = k[substrate]; favored by weak bases, polar protic solvents', 'base removes adjacent proton', 'two-step via carbocation (unimolecular)']
           }
         ],
         correctAnswers: ['two-step via carbocation (unimolecular)', 'leaving group departs → carbocation', 'base removes adjacent proton'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding E1 Mechanism.'
+        hint1: 'Think about what each concept specifically describes in E1 Mechanism.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in E1 Mechanism describes a specific idea. E1: two-step via carbocation (unimolecular). Step 1: leaving group departs → carbocation. Step 2: base removes adjacent proton.'
       }
     }
   ]

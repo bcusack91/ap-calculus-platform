@@ -71,23 +71,28 @@ Parasites: organisms that live on/in hosts; protozoa (single-celled) and helmint
       id: 'mcat-3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Fungi & Parasites:',
-            options: ['Fungi: eukaryotic, cell walls of chitin, heterotrophic, repr', 'Parasites: organisms that live on/in hosts; protozoa (single', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Fungi',
+            options: ['Opportunistic infections: normally harmless microbes cause disease in immunocompromised hosts.', 'organisms that live on/in hosts; protozoa (single-celled) and helminths (worms).', 'eukaryotic, cell walls of chitin, heterotrophic, reproduce by spores.', 'Symbiosis: mutualism (both benefit), commensalism (one benefits, other neutral), parasitism (one benefits, other harmed).']
           },
           {
-            label: 'MCAT application:',
-            options: ['Opportunistic infections: normally harmless microbes cause d', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Parasites',
+            options: ['Opportunistic infections: normally harmless microbes cause disease in immunocompromised hosts.', 'eukaryotic, cell walls of chitin, heterotrophic, reproduce by spores.', 'Symbiosis: mutualism (both benefit), commensalism (one benefits, other neutral), parasitism (one benefits, other harmed).', 'organisms that live on/in hosts; protozoa (single-celled) and helminths (worms).']
+          },
+          {
+            label: 'Key Insight',
+            options: ['eukaryotic, cell walls of chitin, heterotrophic, reproduce by spores.', 'Opportunistic infections: normally harmless microbes cause disease in immunocompromised hosts.', 'Symbiosis: mutualism (both benefit), commensalism (one benefits, other neutral), parasitism (one benefits, other harmed).', 'organisms that live on/in hosts; protozoa (single-celled) and helminths (worms).']
           }
         ],
-        correctAnswers: ['Fungi: eukaryotic, cell walls of chitin, heterotrophic, repr', 'Opportunistic infections: normally harmless microbes cause d'],
-        hint1: 'Think about fungi & parasites',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Fungi: eukaryotic, cell walls of chitin, heterotrophic, reproduce by spores. Opportunistic infections: normally harmless microbes cause disease in immunocompromised hosts.'
+        correctAnswers: ['eukaryotic, cell walls of chitin, heterotrophic, reproduce by spores.', 'organisms that live on/in hosts; protozoa (single-celled) and helminths (worms).', 'Opportunistic infections: normally harmless microbes cause disease in immunocompromised hosts.'],
+        hint1: 'Think about what each concept specifically describes in Fungi & Parasites.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Fungi & Parasites describes a specific idea. Fungi: eukaryotic, cell walls of chitin, heterotrophic, reproduce by spores. Parasites: organisms that live on/in hosts; protozoa (single-celled) and helminths (worms). Key Insight: Opportunistic infections: normally harmless microbes cause disease in immunocompromised hosts.'
       }
     }
   ]

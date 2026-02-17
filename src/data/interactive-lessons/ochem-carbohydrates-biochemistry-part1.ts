@@ -30,31 +30,31 @@ glucose (aldohexose), fructose (ketohexose), ribose (aldopentose)
       id: 'carbo1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of monosaccharide structure?',
+            question: 'What does "Monosaccharides" refer to in this topic?',
             options: [
-              'Monosaccharides',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'based on highest-numbered stereocenter',
+              'polyhydroxy aldehydes (aldoses) or ketones (ketoses)',
+              'Most natural sugars are D-sugars',
+              'glucose (aldohexose), fructose (ketohexose), ribose (aldopentose)'
             ],
-            correctAnswer: 0,
-            explanation: 'Monosaccharides: polyhydroxy aldehydes (aldoses) or ketones (ketoses)'
+            correctAnswer: 1,
+            explanation: 'Correct — Monosaccharides: polyhydroxy aldehydes (aldoses) or ketones (ketoses). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of monosaccharide structure, which is accurate?',
+            question: 'In the context of ️ Carbohydrates Biochemistry, which explains Most natural sugars are D-sugars?',
             options: [
+              'glucose (aldohexose), fructose (ketohexose), ribose (aldopentose)',
               'Most natural sugars are D-sugars',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'polyhydroxy aldehydes (aldoses) or ketones (ketoses)',
+              'based on highest-numbered stereocenter'
             ],
-            correctAnswer: 0,
-            explanation: 'Most natural sugars are D-sugars'
+            correctAnswer: 1,
+            explanation: 'Correct — Most natural sugars are D-sugars. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ glucose (aldohexose), fructose (ketohexose), ribose (aldopentose)
       id: 'carbo1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Monosaccharides',
-            options: ['polyhydroxy aldehydes (aldoses) or ketones (ketose', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Most natural sugars are D-sugars', 'glucose (aldohexose), fructose (ketohexose), ribose (aldopentose)', 'polyhydroxy aldehydes (aldoses) or ketones (ketoses)', 'based on highest-numbered stereocenter']
           },
           {
             label: 'D/L configuration',
-            options: ['based on highest-numbered stereocenter', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['glucose (aldohexose), fructose (ketohexose), ribose (aldopentose)', 'based on highest-numbered stereocenter', 'polyhydroxy aldehydes (aldoses) or ketones (ketoses)', 'Most natural sugars are D-sugars']
           },
           {
-            label: 'Most natural sugars are D-sugars',
-            options: ['Most natural sugars are D-sugars', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Common',
+            options: ['glucose (aldohexose), fructose (ketohexose), ribose (aldopentose)', 'polyhydroxy aldehydes (aldoses) or ketones (ketoses)', 'based on highest-numbered stereocenter', 'Most natural sugars are D-sugars']
           }
         ],
-        correctAnswers: ['polyhydroxy aldehydes (aldoses) or ketones (ketose', 'based on highest-numbered stereocenter', 'Most natural sugars are D-sugars'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Monosaccharide Structure.'
+        correctAnswers: ['polyhydroxy aldehydes (aldoses) or ketones (ketoses)', 'based on highest-numbered stereocenter', 'glucose (aldohexose), fructose (ketohexose), ribose (aldopentose)'],
+        hint1: 'Think about what each concept specifically describes in ️ Carbohydrates Biochemistry.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in ️ Carbohydrates Biochemistry describes a specific idea. Monosaccharides: polyhydroxy aldehydes (aldoses) or ketones (ketoses). D/L configuration: based on highest-numbered stereocenter. Common: glucose (aldohexose), fructose (ketohexose), ribose (aldopentose).'
       }
     }
   ]

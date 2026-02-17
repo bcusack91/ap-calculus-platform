@@ -30,31 +30,31 @@ shows cyclic hemiacetal form
       id: 'carbo2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of fischer & haworth projections?',
+            question: 'What does "Fischer projection" refer to in this topic?',
             options: [
-              'Fischer projection',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              '-OH on anomeric carbon is equatorial (up in Haworth)',
+              'vertical = going back, horizontal = coming forward',
+              'shows cyclic hemiacetal form',
+              '-OH on anomeric carbon is axial (down in Haworth)'
             ],
-            correctAnswer: 0,
-            explanation: 'Fischer projection: vertical = going back, horizontal = coming forward'
+            correctAnswer: 1,
+            explanation: 'Correct — Fischer projection: vertical = going back, horizontal = coming forward. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of fischer & haworth projections, which is accurate?',
+            question: 'In the context of Fischer & Haworth Projections, which explains α anomer?',
             options: [
+              '-OH on anomeric carbon is equatorial (up in Haworth)',
               '-OH on anomeric carbon is axial (down in Haworth)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'vertical = going back, horizontal = coming forward',
+              'shows cyclic hemiacetal form'
             ],
-            correctAnswer: 0,
-            explanation: 'α anomer: -OH on anomeric carbon is axial (down in Haworth)'
+            correctAnswer: 1,
+            explanation: 'Correct — α anomer: -OH on anomeric carbon is axial (down in Haworth). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ shows cyclic hemiacetal form
       id: 'carbo2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Fischer projection',
-            options: ['vertical = going back, horizontal = coming forward', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['-OH on anomeric carbon is axial (down in Haworth)', '-OH on anomeric carbon is equatorial (up in Haworth)', 'shows cyclic hemiacetal form', 'vertical = going back, horizontal = coming forward']
           },
           {
             label: 'Haworth projection',
-            options: ['shows cyclic hemiacetal form', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['-OH on anomeric carbon is axial (down in Haworth)', 'vertical = going back, horizontal = coming forward', 'shows cyclic hemiacetal form', '-OH on anomeric carbon is equatorial (up in Haworth)']
           },
           {
             label: 'α anomer',
-            options: ['-OH on anomeric carbon is axial (down in Haworth)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['vertical = going back, horizontal = coming forward', 'shows cyclic hemiacetal form', '-OH on anomeric carbon is axial (down in Haworth)', '-OH on anomeric carbon is equatorial (up in Haworth)']
           }
         ],
         correctAnswers: ['vertical = going back, horizontal = coming forward', 'shows cyclic hemiacetal form', '-OH on anomeric carbon is axial (down in Haworth)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Fischer & Haworth Projections.'
+        hint1: 'Think about what each concept specifically describes in Fischer & Haworth Projections.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Fischer & Haworth Projections describes a specific idea. Fischer projection: vertical = going back, horizontal = coming forward. Haworth projection: shows cyclic hemiacetal form. α anomer: -OH on anomeric carbon is axial (down in Haworth).'
       }
     }
   ]

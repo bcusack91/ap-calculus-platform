@@ -30,31 +30,31 @@ The polynomial "wraps around" the function near the center
       id: 'taylo4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of taylor polynomials?',
-            options: [
-              'Taylor polynomial Pₙ(x)',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'Taylor polynomial Pₙ(x): the first n+1 terms of the Taylor series'
-          },
-          {
-            question: 'In the context of taylor polynomials, which is accurate?',
+            question: 'Which of the following correctly describes Taylor polynomial Pₙ(x)?',
             options: [
               'Higher-degree polynomials give better approximations near a',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'the first n+1 terms of the Taylor series',
+              'The polynomial "wraps around" the function near the center',
+              'P₁(x) = f(a) + f\'(a)(x-a) is the linearization'
             ],
-            correctAnswer: 0,
-            explanation: 'Higher-degree polynomials give better approximations near a'
+            correctAnswer: 1,
+            explanation: 'Correct — Taylor polynomial Pₙ(x): the first n+1 terms of the Taylor series. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Higher-degree polynomials give better…?',
+            options: [
+              'The polynomial "wraps around" the function near the center',
+              'the first n+1 terms of the Taylor series',
+              'Higher-degree polynomials give better approximations near a',
+              'P₁(x) = f(a) + f\'(a)(x-a) is the linearization'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Higher-degree polynomials give better approximations near a. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ The polynomial "wraps around" the function near the center
       id: 'taylo4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to taylor polynomials?',
+            question: 'Which statement about The polynomial "wraps around" the… is correct?',
             options: [
+              'the first n+1 terms of the Taylor series',
               'The polynomial "wraps around" the function near the center',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'P₁(x) = f(a) + f\'(a)(x-a) is the linearization',
+              'Higher-degree polynomials give better approximations near a'
             ],
-            correctAnswer: 0,
-            explanation: 'The polynomial "wraps around" the function near the center'
+            correctAnswer: 1,
+            explanation: 'Correct — The polynomial "wraps around" the function near the center. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ The polynomial "wraps around" the function near the center
       id: 'taylo4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Taylor polynomial Pₙ(x)',
-            options: ['the first n+1 terms of the Taylor series', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['The polynomial "wraps around" the function near the center', 'Higher-degree polynomials give better approximations near a', 'P₁(x) = f(a) + f\'(a)(x-a) is the linearization', 'the first n+1 terms of the Taylor series']
           },
           {
-            label: 'P₁(x) = f(a) + f\'(a)(x-a) is the linearization',
-            options: ['P₁(x) = f(a) + f\'(a)(x-a) is the linearization', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'P₁(x) = f(a) + f\'(a)(x-a) is the…',
+            options: ['the first n+1 terms of the Taylor series', 'Higher-degree polynomials give better approximations near a', 'P₁(x) = f(a) + f\'(a)(x-a) is the linearization', 'The polynomial "wraps around" the function near the center']
           },
           {
-            label: 'Higher-degree polynomials give better approximations near a',
-            options: ['Higher-degree polynomials give better approximatio', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Higher-degree polynomials give better…',
+            options: ['Higher-degree polynomials give better approximations near a', 'P₁(x) = f(a) + f\'(a)(x-a) is the linearization', 'The polynomial "wraps around" the function near the center', 'the first n+1 terms of the Taylor series']
           }
         ],
-        correctAnswers: ['the first n+1 terms of the Taylor series', 'P₁(x) = f(a) + f\'(a)(x-a) is the linearization', 'Higher-degree polynomials give better approximatio'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Taylor Polynomials.'
+        correctAnswers: ['the first n+1 terms of the Taylor series', 'P₁(x) = f(a) + f\'(a)(x-a) is the linearization', 'Higher-degree polynomials give better approximations near a'],
+        hint1: 'Think about what each concept specifically describes in Taylor Polynomials.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Taylor Polynomials describes a specific idea. Taylor polynomial Pₙ(x): the first n+1 terms of the Taylor series. P₁(x) = f(a) + f\'(a)(x-a) is the linearization. Higher-degree polynomials give better approximations near a.'
       }
     }
   ]

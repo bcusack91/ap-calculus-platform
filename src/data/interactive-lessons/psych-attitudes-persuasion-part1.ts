@@ -30,31 +30,31 @@ Attitudes formed through experience, conditioning, observation
       id: 'attit1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of attitude formation?',
+            question: 'What does "Attitudes" refer to in psychology?',
             options: [
-              'Attitudes',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'Attitudes formed through experience, conditioning, observation',
+              'affective (feelings), behavioral (actions), cognitive (beliefs)',
+              'evaluations of people, objects, ideas',
+              'Attitudes predict behavior when specific and strong'
             ],
-            correctAnswer: 0,
-            explanation: 'Attitudes: evaluations of people, objects, ideas'
+            correctAnswer: 2,
+            explanation: 'Correct — Attitudes: evaluations of people, objects, ideas. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of attitude formation, which is accurate?',
+            question: 'In the context of Attitudes & Persuasion, which explains Attitudes predict behavior when…?',
             options: [
-              'Attitudes predict behavior when specific and strong',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'evaluations of people, objects, ideas',
+              'affective (feelings), behavioral (actions), cognitive (beliefs)',
+              'Attitudes formed through experience, conditioning, observation',
+              'Attitudes predict behavior when specific and strong'
             ],
-            correctAnswer: 0,
-            explanation: 'Attitudes predict behavior when specific and strong'
+            correctAnswer: 3,
+            explanation: 'Correct — Attitudes predict behavior when specific and strong. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,24 @@ Attitudes formed through experience, conditioning, observation
       id: 'attit1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Attitudes',
-            options: ['evaluations of people, objects, ideas', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['evaluations of people, objects, ideas', 'affective (feelings), behavioral (actions), cognitive (beliefs)', 'Attitudes formed through experience, conditioning, observation', 'Attitudes predict behavior when specific and strong']
           },
           {
             label: 'Components',
-            options: ['affective (feelings), behavioral (actions), cognit', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
-          },
-          {
-            label: 'Attitudes predict behavior when specific and strong',
-            options: ['Attitudes predict behavior when specific and stron', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Attitudes formed through experience, conditioning, observation', 'Attitudes predict behavior when specific and strong', 'evaluations of people, objects, ideas', 'affective (feelings), behavioral (actions), cognitive (beliefs)']
           }
         ],
-        correctAnswers: ['evaluations of people, objects, ideas', 'affective (feelings), behavioral (actions), cognit', 'Attitudes predict behavior when specific and stron'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Attitude Formation.'
+        correctAnswers: ['evaluations of people, objects, ideas', 'affective (feelings), behavioral (actions), cognitive (beliefs)'],
+        hint1: 'Think about what each concept specifically describes in Attitudes & Persuasion.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Attitudes & Persuasion describes a specific idea. Attitudes: evaluations of people, objects, ideas. Components: affective (feelings), behavioral (actions), cognitive (beliefs).'
       }
     }
   ]

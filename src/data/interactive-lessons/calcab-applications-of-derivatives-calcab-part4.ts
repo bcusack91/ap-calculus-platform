@@ -30,31 +30,31 @@ Create a sign chart for f' to determine increasing/decreasing intervals
       id: 'appli4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of first & second derivative tests?',
+            question: 'Which of the following correctly describes First Derivative Test?',
             options: [
-              'First Derivative Test',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'Create a sign chart for f\' to determine increasing/decreasing intervals',
+              'f\' changes sign from + to - at c → local max; - to + → local min',
+              'if f\'(c)=0 and f\'\'{c} < 0 → local max; f\'\'{c} > 0 → local min',
+              'If f\'\'{c} = 0, the second derivative test is inconclusive'
             ],
-            correctAnswer: 0,
-            explanation: 'First Derivative Test: f\' changes sign from + to - at c → local max; - to + → local min'
+            correctAnswer: 1,
+            explanation: 'Correct — First Derivative Test: f\' changes sign from + to - at c → local max; - to + → local min. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of first & second derivative tests, which is accurate?',
+            question: 'In the context of First & Second Derivative Tests, which explains If f\'\'{c} = 0, the second derivative…?',
             options: [
-              'If f\'\'{c} = 0, the second derivative test is inconclusive',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'if f\'(c)=0 and f\'\'{c} < 0 → local max; f\'\'{c} > 0 → local min',
+              'f\' changes sign from + to - at c → local max; - to + → local min',
+              'Create a sign chart for f\' to determine increasing/decreasing intervals',
+              'If f\'\'{c} = 0, the second derivative test is inconclusive'
             ],
-            correctAnswer: 0,
-            explanation: 'If f\'\'{c} = 0, the second derivative test is inconclusive'
+            correctAnswer: 3,
+            explanation: 'Correct — If f\'\'{c} = 0, the second derivative test is inconclusive. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Create a sign chart for f' to determine increasing/decreasing intervals
       id: 'appli4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to first & second derivative tests?',
+            question: 'Regarding First & Second Derivative Tests, which correctly describes Create a sign chart for f\' to determine…?',
             options: [
+              'f\' changes sign from + to - at c → local max; - to + → local min',
+              'If f\'\'{c} = 0, the second derivative test is inconclusive',
               'Create a sign chart for f\' to determine increasing/decreasing intervals',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'if f\'(c)=0 and f\'\'{c} < 0 → local max; f\'\'{c} > 0 → local min'
             ],
-            correctAnswer: 0,
-            explanation: 'Create a sign chart for f\' to determine increasing/decreasing intervals'
+            correctAnswer: 2,
+            explanation: 'Correct — Create a sign chart for f\' to determine increasing/decreasing intervals. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,24 @@ Create a sign chart for f' to determine increasing/decreasing intervals
       id: 'appli4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'First Derivative Test',
-            options: ['f\' changes sign from + to - at c → local max; - to', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['if f\'(c)=0 and f\'\'{c} < 0 → local max; f\'\'{c} > 0 → local min', 'If f\'\'{c} = 0, the second derivative test is inconclusive', 'f\' changes sign from + to - at c → local max; - to + → local min', 'Create a sign chart for f\' to determine increasing/decreasing intervals']
           },
           {
             label: 'Second Derivative Test',
-            options: ['if f\'(c)=0 and f\'\'{c} < 0 → local max; f\'\'{c} > 0 ', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
-          },
-          {
-            label: 'If f\'\'{c} = 0, the second derivative test is inconclusive',
-            options: ['If f\'\'{c} = 0, the second derivative test is incon', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['f\' changes sign from + to - at c → local max; - to + → local min', 'If f\'\'{c} = 0, the second derivative test is inconclusive', 'Create a sign chart for f\' to determine increasing/decreasing intervals', 'if f\'(c)=0 and f\'\'{c} < 0 → local max; f\'\'{c} > 0 → local min']
           }
         ],
-        correctAnswers: ['f\' changes sign from + to - at c → local max; - to', 'if f\'(c)=0 and f\'\'{c} < 0 → local max; f\'\'{c} > 0 ', 'If f\'\'{c} = 0, the second derivative test is incon'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding First & Second Derivative Tests.'
+        correctAnswers: ['f\' changes sign from + to - at c → local max; - to + → local min', 'if f\'(c)=0 and f\'\'{c} < 0 → local max; f\'\'{c} > 0 → local min'],
+        hint1: 'Think about what each concept specifically describes in First & Second Derivative Tests.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in First & Second Derivative Tests describes a specific idea. First Derivative Test: f\' changes sign from + to - at c → local max; - to + → local min. Second Derivative Test: if f\'(c)=0 and f\'\'{c} < 0 → local max; f\'\'{c} > 0 → local min.'
       }
     }
   ]

@@ -30,31 +30,31 @@ social support, treatment, sense of purpose
       id: 'mood-3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of suicide prevention?',
+            question: 'What does "Warning signs" refer to in psychology?',
             options: [
-              'Warning signs',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'depression, substance abuse, previous attempts',
+              'social support, treatment, sense of purpose',
+              '988 Suicide & Crisis Lifeline',
+              'talking about death, giving away possessions, withdrawal'
             ],
-            correctAnswer: 0,
-            explanation: 'Warning signs: talking about death, giving away possessions, withdrawal'
+            correctAnswer: 3,
+            explanation: 'Correct — Warning signs: talking about death, giving away possessions, withdrawal. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of suicide prevention, which is accurate?',
+            question: 'Select the statement that correctly describes Protective factors:',
             options: [
-              'social support, treatment, sense of purpose',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              '988 Suicide & Crisis Lifeline',
+              'depression, substance abuse, previous attempts',
+              'talking about death, giving away possessions, withdrawal',
+              'social support, treatment, sense of purpose'
             ],
-            correctAnswer: 0,
-            explanation: 'Protective factors: social support, treatment, sense of purpose'
+            correctAnswer: 3,
+            explanation: 'Correct — Protective factors: social support, treatment, sense of purpose. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ social support, treatment, sense of purpose
       id: 'mood-3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Warning signs',
-            options: ['talking about death, giving away possessions, with', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['talking about death, giving away possessions, withdrawal', 'social support, treatment, sense of purpose', 'depression, substance abuse, previous attempts', '988 Suicide & Crisis Lifeline']
           },
           {
             label: 'Risk factors',
-            options: ['depression, substance abuse, previous attempts', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['talking about death, giving away possessions, withdrawal', 'social support, treatment, sense of purpose', '988 Suicide & Crisis Lifeline', 'depression, substance abuse, previous attempts']
           },
           {
             label: 'Protective factors',
-            options: ['social support, treatment, sense of purpose', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['988 Suicide & Crisis Lifeline', 'depression, substance abuse, previous attempts', 'social support, treatment, sense of purpose', 'talking about death, giving away possessions, withdrawal']
           }
         ],
-        correctAnswers: ['talking about death, giving away possessions, with', 'depression, substance abuse, previous attempts', 'social support, treatment, sense of purpose'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Suicide Prevention.'
+        correctAnswers: ['talking about death, giving away possessions, withdrawal', 'depression, substance abuse, previous attempts', 'social support, treatment, sense of purpose'],
+        hint1: 'Think about what each concept specifically describes in Suicide Prevention.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Suicide Prevention describes a specific idea. Warning signs: talking about death, giving away possessions, withdrawal. Risk factors: depression, substance abuse, previous attempts. Protective factors: social support, treatment, sense of purpose.'
       }
     }
   ]

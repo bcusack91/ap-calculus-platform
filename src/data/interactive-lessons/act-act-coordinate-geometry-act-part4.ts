@@ -18,20 +18,31 @@ Parabola: y = ax² + bx + c or y = a(x-h)² + k.
       id: 'act-c4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes circle?',
+            question: 'What does "Circle" refer to in ACT prep?',
             options: [
-              'Circle is a key concept for ACT Math',
-              'Parabola: y = ax² + bx + c or y = a(x-h)² + k',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'Ellipse: (x-h)²/a² + (y-k)²/b² = 1.',
+              '(x-h)² + (y-k)² = r², center (h,k), radius r.',
+              'ACT rarely tests ellipses/hyperbolas in depth — focus on circles and parabolas.',
+              'y = ax² + bx + c or y = a(x-h)² + k.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Circle: (x-h)² + (y-k)² = r², center (h,k), radius r. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Key Insight?',
+            options: [
+              'Ellipse: (x-h)²/a² + (y-k)²/b² = 1.',
+              'y = ax² + bx + c or y = a(x-h)² + k.',
+              'ACT rarely tests ellipses/hyperbolas in depth — focus on circles and parabolas.',
+              '(x-h)² + (y-k)² = r², center (h,k), radius r.'
             ],
             correctAnswer: 0,
-            explanation: 'Circle: (x-h)² + (y-k)² = r², center (h,k), radius r'
+            explanation: 'Correct — Key Insight: Ellipse: (x-h)²/a² + (y-k)²/b² = 1. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Parabola: y = ax² + bx + c or y = a(x-h)² + k.
       id: 'act-c4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for conic sections basics?',
+            question: 'Regarding Conic Sections Basics, which correctly describes ACT Tip?',
             options: [
-              'Ellipse: (x-h)²/a² + (y-k)²/b² = 1',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'y = ax² + bx + c or y = a(x-h)² + k.',
+              'ACT rarely tests ellipses/hyperbolas in depth — focus on circles and parabolas.',
+              '(x-h)² + (y-k)² = r², center (h,k), radius r.',
+              'Ellipse: (x-h)²/a² + (y-k)²/b² = 1.'
             ],
-            correctAnswer: 0,
-            explanation: 'Ellipse: (x-h)²/a² + (y-k)²/b² = 1'
+            correctAnswer: 1,
+            explanation: 'Correct — ACT Tip: ACT rarely tests ellipses/hyperbolas in depth — focus on circles and parabolas. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Parabola: y = ax² + bx + c or y = a(x-h)² + k.
       id: 'act-c4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Conic Sections Basics:',
-            options: ['Circle: (x-h)² + (y-k)² = r², center (h,k), radius', 'Parabola: y = ax² + bx + c or y = a(x-h)² + k', 'Not applicable', 'None of these']
+            label: 'Circle',
+            options: ['(x-h)² + (y-k)² = r², center (h,k), radius r.', 'y = ax² + bx + c or y = a(x-h)² + k.', 'ACT rarely tests ellipses/hyperbolas in depth — focus on circles and parabolas.', 'Ellipse: (x-h)²/a² + (y-k)²/b² = 1.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Ellipse: (x-h)²/a² + (y-k)²/b² = 1', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Parabola',
+            options: ['(x-h)² + (y-k)² = r², center (h,k), radius r.', 'Ellipse: (x-h)²/a² + (y-k)²/b² = 1.', 'y = ax² + bx + c or y = a(x-h)² + k.', 'ACT rarely tests ellipses/hyperbolas in depth — focus on circles and parabolas.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['Ellipse: (x-h)²/a² + (y-k)²/b² = 1.', 'y = ax² + bx + c or y = a(x-h)² + k.', 'ACT rarely tests ellipses/hyperbolas in depth — focus on circles and parabolas.', '(x-h)² + (y-k)² = r², center (h,k), radius r.']
           }
         ],
-        correctAnswers: ['Circle: (x-h)² + (y-k)² = r², center (h,k), radius', 'Ellipse: (x-h)²/a² + (y-k)²/b² = 1'],
-        hint1: 'Think about conic sections basics',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Circle: (x-h)² + (y-k)² = r², center (h,k), radius r. Ellipse: (x-h)²/a² + (y-k)²/b² = 1.'
+        correctAnswers: ['(x-h)² + (y-k)² = r², center (h,k), radius r.', 'y = ax² + bx + c or y = a(x-h)² + k.', 'Ellipse: (x-h)²/a² + (y-k)²/b² = 1.'],
+        hint1: 'Think about what each concept specifically describes in Conic Sections Basics.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Conic Sections Basics describes a specific idea. Circle: (x-h)² + (y-k)² = r², center (h,k), radius r. Parabola: y = ax² + bx + c or y = a(x-h)² + k. Key Insight: Ellipse: (x-h)²/a² + (y-k)²/b² = 1.'
       }
     }
   ]

@@ -18,20 +18,31 @@ Track character motivations and how they change.
       id: 'act-r1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes focus on characters, relationships, emotions, and themes?',
+            question: 'Which of the following correctly describes Focus on characters, relationships,…?',
             options: [
-              'Focus on characters, relationships, emotions, and themes is a key concept for ACT English/Reading',
-              'Track character motivations and how they change',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'Track character motivations and how they change.',
+              'Pay attention to tone and mood.',
+              'Focus on characters, relationships, emotions, and themes.',
+              'Questions ask about character traits, relationships, and the narrator\'s perspective.'
             ],
-            correctAnswer: 0,
-            explanation: 'Focus on characters, relationships, emotions, and themes'
+            correctAnswer: 2,
+            explanation: 'Correct — Focus on characters, relationships, emotions, and themes. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              'Questions ask about character traits, relationships, and the narrator\'s perspective.',
+              'Focus on characters, relationships, emotions, and themes.',
+              'Track character motivations and how they change.',
+              'Pay attention to tone and mood.'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Key Insight: Pay attention to tone and mood. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Track character motivations and how they change.
       id: 'act-r1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for prose fiction / literary narrative?',
+            question: 'Regarding Reading Passage Types, which correctly describes ACT Tip?',
             options: [
-              'Pay attention to tone and mood',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Pay attention to tone and mood.',
+              'Questions ask about character traits, relationships, and the narrator\'s perspective.',
+              'Track character motivations and how they change.',
+              'Focus on characters, relationships, emotions, and themes.'
             ],
-            correctAnswer: 0,
-            explanation: 'Pay attention to tone and mood'
+            correctAnswer: 1,
+            explanation: 'Correct — ACT Tip: Questions ask about character traits, relationships, and the narrator\'s perspective. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ Track character motivations and how they change.
       id: 'act-r1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Prose Fiction / Literary Narrative:',
-            options: ['Focus on characters, relationships, emotions, and ', 'Track character motivations and how they change', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['Focus on characters, relationships, emotions, and themes.', 'Track character motivations and how they change.', 'Pay attention to tone and mood.', 'Questions ask about character traits, relationships, and the narrator\'s perspective.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Pay attention to tone and mood', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'ACT Tip',
+            options: ['Questions ask about character traits, relationships, and the narrator\'s perspective.', 'Focus on characters, relationships, emotions, and themes.', 'Track character motivations and how they change.', 'Pay attention to tone and mood.']
           }
         ],
-        correctAnswers: ['Focus on characters, relationships, emotions, and ', 'Pay attention to tone and mood'],
-        hint1: 'Think about prose fiction / literary narrative',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Focus on characters, relationships, emotions, and themes. Pay attention to tone and mood.'
+        correctAnswers: ['Pay attention to tone and mood.', 'Questions ask about character traits, relationships, and the narrator\'s perspective.'],
+        hint1: 'Think about what each concept specifically describes in Reading Passage Types.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Reading Passage Types describes a specific idea. Key Insight: Pay attention to tone and mood. ACT Tip: Questions ask about character traits, relationships, and the narrator\'s perspective.'
       }
     }
   ]

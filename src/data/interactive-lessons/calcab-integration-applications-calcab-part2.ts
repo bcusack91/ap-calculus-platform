@@ -30,31 +30,31 @@ A(x) = (√3/4)[f(x) - g(x)]²
       id: 'integ2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of volumes of known cross-sections?',
+            question: 'Which statement accurately explains Volume = ∫ₐᵇ A(x)dx where A(x) is the…?',
             options: [
+              'A(x) = [f(x) - g(x)]²',
               'Volume = ∫ₐᵇ A(x)dx where A(x) is the cross-sectional area',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'A(x) = (√3/4)[f(x) - g(x)]²',
+              'A(x) = π/8 · [f(x) - g(x)]²'
             ],
-            correctAnswer: 0,
-            explanation: 'Volume = ∫ₐᵇ A(x)dx where A(x) is the cross-sectional area'
+            correctAnswer: 1,
+            explanation: 'Correct — Volume = ∫ₐᵇ A(x)dx where A(x) is the cross-sectional area. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of volumes of known cross-sections, which is accurate?',
+            question: 'Which of the following is true about Semicircular cross-sections?',
             options: [
               'A(x) = π/8 · [f(x) - g(x)]²',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'A(x) = [f(x) - g(x)]²',
+              'Volume = ∫ₐᵇ A(x)dx where A(x) is the cross-sectional area',
+              'A(x) = (√3/4)[f(x) - g(x)]²'
             ],
             correctAnswer: 0,
-            explanation: 'Semicircular cross-sections: A(x) = π/8 · [f(x) - g(x)]²'
+            explanation: 'Correct — Semicircular cross-sections: A(x) = π/8 · [f(x) - g(x)]². Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ A(x) = (√3/4)[f(x) - g(x)]²
       id: 'integ2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to volumes of known cross-sections?',
+            question: 'Which statement about Equilateral triangle cross-sections is correct?',
             options: [
-              'A(x) = (√3/4)[f(x) - g(x)]²',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'A(x) = π/8 · [f(x) - g(x)]²',
+              'A(x) = [f(x) - g(x)]²',
+              'Volume = ∫ₐᵇ A(x)dx where A(x) is the cross-sectional area',
+              'A(x) = (√3/4)[f(x) - g(x)]²'
             ],
-            correctAnswer: 0,
-            explanation: 'Equilateral triangle cross-sections: A(x) = (√3/4)[f(x) - g(x)]²'
+            correctAnswer: 3,
+            explanation: 'Correct — Equilateral triangle cross-sections: A(x) = (√3/4)[f(x) - g(x)]². Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ A(x) = (√3/4)[f(x) - g(x)]²
       id: 'integ2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Volume = ∫ₐᵇ A(x)dx where A(x) is the cross-sectional area',
-            options: ['Volume = ∫ₐᵇ A(x)dx where A(x) is the cross-sectio', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
-          },
-          {
             label: 'Square cross-sections',
-            options: ['A(x) = [f(x) - g(x)]²', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Volume = ∫ₐᵇ A(x)dx where A(x) is the cross-sectional area', 'A(x) = [f(x) - g(x)]²', 'A(x) = π/8 · [f(x) - g(x)]²', 'A(x) = (√3/4)[f(x) - g(x)]²']
           },
           {
             label: 'Semicircular cross-sections',
-            options: ['A(x) = π/8 · [f(x) - g(x)]²', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['A(x) = [f(x) - g(x)]²', 'A(x) = (√3/4)[f(x) - g(x)]²', 'Volume = ∫ₐᵇ A(x)dx where A(x) is the cross-sectional area', 'A(x) = π/8 · [f(x) - g(x)]²']
+          },
+          {
+            label: 'Equilateral triangle cross-sections',
+            options: ['A(x) = (√3/4)[f(x) - g(x)]²', 'A(x) = [f(x) - g(x)]²', 'Volume = ∫ₐᵇ A(x)dx where A(x) is the cross-sectional area', 'A(x) = π/8 · [f(x) - g(x)]²']
           }
         ],
-        correctAnswers: ['Volume = ∫ₐᵇ A(x)dx where A(x) is the cross-sectio', 'A(x) = [f(x) - g(x)]²', 'A(x) = π/8 · [f(x) - g(x)]²'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Volumes of Known Cross-Sections.'
+        correctAnswers: ['A(x) = [f(x) - g(x)]²', 'A(x) = π/8 · [f(x) - g(x)]²', 'A(x) = (√3/4)[f(x) - g(x)]²'],
+        hint1: 'Think about what each concept specifically describes in Volumes of Known Cross-Sections.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Volumes of Known Cross-Sections describes a specific idea. Square cross-sections: A(x) = [f(x) - g(x)]². Semicircular cross-sections: A(x) = π/8 · [f(x) - g(x)]². Equilateral triangle cross-sections: A(x) = (√3/4)[f(x) - g(x)]².'
       }
     }
   ]

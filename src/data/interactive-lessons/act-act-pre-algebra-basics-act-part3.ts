@@ -18,20 +18,31 @@ Proportion: a/b = c/d — cross multiply to solve.
       id: 'act-p3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes ratio a?',
+            question: 'Which statement accurately explains Ratio a?',
             options: [
-              'Ratio a is a key concept for ACT Math',
-              'Proportion: a/b = c/d — cross multiply to solve',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'Scale factors: if a model is 1:50, multiply model measurements by 50.',
+              'b means for every a of one thing, there are b of another.',
+              'a/b = c/d — cross multiply to solve.',
+              'Unit rates: simplify to "per one" (e.g., miles per hour, cost per item).'
             ],
-            correctAnswer: 0,
-            explanation: 'Ratio a:b means for every a of one thing, there are b of another'
+            correctAnswer: 1,
+            explanation: 'Correct — Ratio a: b means for every a of one thing, there are b of another. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Ratios & Proportions, which explains Key Insight?',
+            options: [
+              'a/b = c/d — cross multiply to solve.',
+              'b means for every a of one thing, there are b of another.',
+              'Unit rates: simplify to "per one" (e.g., miles per hour, cost per item).',
+              'Scale factors: if a model is 1:50, multiply model measurements by 50.'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Key Insight: Scale factors: if a model is 1:50, multiply model measurements by 50. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Proportion: a/b = c/d — cross multiply to solve.
       id: 'act-p3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for ratios & proportions?',
+            question: 'Which statement about ACT Tip is correct?',
             options: [
-              'Scale factors: if a model is 1:50, multiply model measurements by 50',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Unit rates: simplify to "per one" (e.g., miles per hour, cost per item).',
+              'b means for every a of one thing, there are b of another.',
+              'a/b = c/d — cross multiply to solve.',
+              'Scale factors: if a model is 1:50, multiply model measurements by 50.'
             ],
             correctAnswer: 0,
-            explanation: 'Scale factors: if a model is 1:50, multiply model measurements by 50'
+            explanation: 'Correct — ACT Tip: Unit rates: simplify to "per one" (e.g., miles per hour, cost per item). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Proportion: a/b = c/d — cross multiply to solve.
       id: 'act-p3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Ratios & Proportions:',
-            options: ['Ratio a:b means for every a of one thing, there ar', 'Proportion: a/b = c/d — cross multiply to solve', 'Not applicable', 'None of these']
+            label: 'Ratio a',
+            options: ['Scale factors: if a model is 1:50, multiply model measurements by 50.', 'Unit rates: simplify to "per one" (e.g., miles per hour, cost per item).', 'b means for every a of one thing, there are b of another.', 'a/b = c/d — cross multiply to solve.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Scale factors: if a model is 1:50, multiply model ', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Proportion',
+            options: ['Scale factors: if a model is 1:50, multiply model measurements by 50.', 'a/b = c/d — cross multiply to solve.', 'Unit rates: simplify to "per one" (e.g., miles per hour, cost per item).', 'b means for every a of one thing, there are b of another.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['a/b = c/d — cross multiply to solve.', 'Scale factors: if a model is 1:50, multiply model measurements by 50.', 'b means for every a of one thing, there are b of another.', 'Unit rates: simplify to "per one" (e.g., miles per hour, cost per item).']
           }
         ],
-        correctAnswers: ['Ratio a:b means for every a of one thing, there ar', 'Scale factors: if a model is 1:50, multiply model '],
-        hint1: 'Think about ratios & proportions',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Ratio a:b means for every a of one thing, there are b of another. Scale factors: if a model is 1:50, multiply model measurements by 50.'
+        correctAnswers: ['b means for every a of one thing, there are b of another.', 'a/b = c/d — cross multiply to solve.', 'Scale factors: if a model is 1:50, multiply model measurements by 50.'],
+        hint1: 'Think about what each concept specifically describes in Ratios & Proportions.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Ratios & Proportions describes a specific idea. Ratio a: b means for every a of one thing, there are b of another. Proportion: a/b = c/d — cross multiply to solve. Key Insight: Scale factors: if a model is 1:50, multiply model measurements by 50.'
       }
     }
   ]

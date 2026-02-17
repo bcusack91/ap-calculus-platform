@@ -30,31 +30,31 @@ body position; Vestibular: balance
       id: 'sensa4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of chemical & body senses?',
-            options: [
-              'Taste',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
-            ],
-            correctAnswer: 0,
-            explanation: 'Taste: sweet, sour, salty, bitter, umami'
-          },
-          {
-            question: 'In the context of chemical & body senses, which is accurate?',
+            question: 'Which statement accurately explains Taste?',
             options: [
               'pressure, temperature, pain (gate-control theory)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'body position; Vestibular: balance',
+              'sweet, sour, salty, bitter, umami',
+              'olfactory receptors → olfactory bulb → limbic system'
             ],
-            correctAnswer: 0,
-            explanation: 'Touch: pressure, temperature, pain (gate-control theory)'
+            correctAnswer: 2,
+            explanation: 'Correct — Taste: sweet, sour, salty, bitter, umami. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Touch?',
+            options: [
+              'body position; Vestibular: balance',
+              'olfactory receptors → olfactory bulb → limbic system',
+              'sweet, sour, salty, bitter, umami',
+              'pressure, temperature, pain (gate-control theory)'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Touch: pressure, temperature, pain (gate-control theory). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ body position; Vestibular: balance
       id: 'sensa4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Taste',
-            options: ['sweet, sour, salty, bitter, umami', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['pressure, temperature, pain (gate-control theory)', 'sweet, sour, salty, bitter, umami', 'body position; Vestibular: balance', 'olfactory receptors → olfactory bulb → limbic system']
           },
           {
             label: 'Smell',
-            options: ['olfactory receptors → olfactory bulb → limbic syst', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['pressure, temperature, pain (gate-control theory)', 'sweet, sour, salty, bitter, umami', 'body position; Vestibular: balance', 'olfactory receptors → olfactory bulb → limbic system']
           },
           {
             label: 'Touch',
-            options: ['pressure, temperature, pain (gate-control theory)', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['pressure, temperature, pain (gate-control theory)', 'sweet, sour, salty, bitter, umami', 'body position; Vestibular: balance', 'olfactory receptors → olfactory bulb → limbic system']
           }
         ],
-        correctAnswers: ['sweet, sour, salty, bitter, umami', 'olfactory receptors → olfactory bulb → limbic syst', 'pressure, temperature, pain (gate-control theory)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Chemical & Body Senses.'
+        correctAnswers: ['sweet, sour, salty, bitter, umami', 'olfactory receptors → olfactory bulb → limbic system', 'pressure, temperature, pain (gate-control theory)'],
+        hint1: 'Think about what each concept specifically describes in Chemical & Body Senses.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Chemical & Body Senses describes a specific idea. Taste: sweet, sour, salty, bitter, umami. Smell: olfactory receptors → olfactory bulb → limbic system. Touch: pressure, temperature, pain (gate-control theory).'
       }
     }
   ]

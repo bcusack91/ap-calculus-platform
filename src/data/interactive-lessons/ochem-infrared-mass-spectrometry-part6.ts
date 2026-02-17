@@ -30,31 +30,31 @@ Practice with unknown identification
       id: 'infra6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of problem-solving workshop?',
+            question: 'Which of the following correctly describes Interpreting IR spectra to identify…?',
             options: [
+              'Practice with unknown identification',
               'Interpreting IR spectra to identify functional groups',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'Combining IR and MS data',
+              'Analyzing mass spectra for molecular weight and fragments'
             ],
-            correctAnswer: 0,
-            explanation: 'Interpreting IR spectra to identify functional groups'
+            correctAnswer: 1,
+            explanation: 'Correct — Interpreting IR spectra to identify functional groups. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of problem-solving workshop, which is accurate?',
+            question: 'In the context of Problem-Solving Workshop, which explains Combining IR and MS data?',
             options: [
+              'Analyzing mass spectra for molecular weight and fragments',
               'Combining IR and MS data',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Interpreting IR spectra to identify functional groups',
+              'Practice with unknown identification'
             ],
-            correctAnswer: 0,
-            explanation: 'Combining IR and MS data'
+            correctAnswer: 1,
+            explanation: 'Correct — Combining IR and MS data. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Practice with unknown identification
       id: 'infra6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Interpreting IR spectra to identify functional groups',
-            options: ['Interpreting IR spectra to identify functional gro', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Interpreting IR spectra to identify…',
+            options: ['Interpreting IR spectra to identify functional groups', 'Analyzing mass spectra for molecular weight and fragments', 'Practice with unknown identification', 'Combining IR and MS data']
           },
           {
-            label: 'Analyzing mass spectra for molecular weight and fragments',
-            options: ['Analyzing mass spectra for molecular weight and fr', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Analyzing mass spectra for molecular…',
+            options: ['Practice with unknown identification', 'Interpreting IR spectra to identify functional groups', 'Combining IR and MS data', 'Analyzing mass spectra for molecular weight and fragments']
           },
           {
             label: 'Combining IR and MS data',
-            options: ['Combining IR and MS data', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Practice with unknown identification', 'Combining IR and MS data', 'Analyzing mass spectra for molecular weight and fragments', 'Interpreting IR spectra to identify functional groups']
           }
         ],
-        correctAnswers: ['Interpreting IR spectra to identify functional gro', 'Analyzing mass spectra for molecular weight and fr', 'Combining IR and MS data'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving Workshop.'
+        correctAnswers: ['Interpreting IR spectra to identify functional groups', 'Analyzing mass spectra for molecular weight and fragments', 'Combining IR and MS data'],
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Interpreting IR spectra to identify functional groups. Analyzing mass spectra for molecular weight and fragments. Combining IR and MS data.'
       }
     }
   ]

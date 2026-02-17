@@ -30,31 +30,31 @@ Generally more accurate than left or right Riemann sums
       id: 'table2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of trapezoidal rule?',
-            options: [
-              'Trapezoidal Rule',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'Trapezoidal Rule: ∫ₐᵇ f(x)dx ≈ (Δx/2)[f(x₀) + 2f(x₁) + 2f(x₂) + ... + 2f(xₙ₋₁) + f(xₙ)]'
-          },
-          {
-            question: 'In the context of trapezoidal rule, which is accurate?',
+            question: 'What does "Trapezoidal Rule" refer to in calculus?',
             options: [
               'Each trapezoid area = ½(f(xᵢ) + f(xᵢ₊₁))(xᵢ₊₁ - xᵢ)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              '∫ₐᵇ f(x)dx ≈ (Δx/2)[f(x₀) + 2f(x₁) + 2f(x₂) + ... + 2f(xₙ₋₁) + f(xₙ)]',
+              'Generally more accurate than left or right Riemann sums',
+              'sum individual trapezoid areas'
             ],
-            correctAnswer: 0,
-            explanation: 'Each trapezoid area = ½(f(xᵢ) + f(xᵢ₊₁))(xᵢ₊₁ - xᵢ)'
+            correctAnswer: 1,
+            explanation: 'Correct — Trapezoidal Rule: ∫ₐᵇ f(x)dx ≈ (Δx/2)[f(x₀) + 2f(x₁) + 2f(x₂) + ... + 2f(xₙ₋₁) + f(xₙ)]. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Each trapezoid area = ½(f(xᵢ) +…:',
+            options: [
+              'sum individual trapezoid areas',
+              'Generally more accurate than left or right Riemann sums',
+              'Each trapezoid area = ½(f(xᵢ) + f(xᵢ₊₁))(xᵢ₊₁ - xᵢ)',
+              '∫ₐᵇ f(x)dx ≈ (Δx/2)[f(x₀) + 2f(x₁) + 2f(x₂) + ... + 2f(xₙ₋₁) + f(xₙ)]'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Each trapezoid area = ½(f(xᵢ) + f(xᵢ₊₁))(xᵢ₊₁ - xᵢ). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Generally more accurate than left or right Riemann sums
       id: 'table2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to trapezoidal rule?',
+            question: 'Which statement about Generally more accurate than left or… is correct?',
             options: [
+              'sum individual trapezoid areas',
               'Generally more accurate than left or right Riemann sums',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'Each trapezoid area = ½(f(xᵢ) + f(xᵢ₊₁))(xᵢ₊₁ - xᵢ)',
+              '∫ₐᵇ f(x)dx ≈ (Δx/2)[f(x₀) + 2f(x₁) + 2f(x₂) + ... + 2f(xₙ₋₁) + f(xₙ)]'
             ],
-            correctAnswer: 0,
-            explanation: 'Generally more accurate than left or right Riemann sums'
+            correctAnswer: 1,
+            explanation: 'Correct — Generally more accurate than left or right Riemann sums. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,24 @@ Generally more accurate than left or right Riemann sums
       id: 'table2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Trapezoidal Rule',
-            options: ['∫ₐᵇ f(x)dx ≈ (Δx/2)[f(x₀) + 2f(x₁) + 2f(x₂) + ... ', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Generally more accurate than left or right Riemann sums', 'sum individual trapezoid areas', 'Each trapezoid area = ½(f(xᵢ) + f(xᵢ₊₁))(xᵢ₊₁ - xᵢ)', '∫ₐᵇ f(x)dx ≈ (Δx/2)[f(x₀) + 2f(x₁) + 2f(x₂) + ... + 2f(xₙ₋₁) + f(xₙ)]']
           },
           {
             label: 'Works with unequal subintervals',
-            options: ['sum individual trapezoid areas', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
-          },
-          {
-            label: 'Each trapezoid area = ½(f(xᵢ) + f(xᵢ₊₁))(xᵢ₊₁ - xᵢ)',
-            options: ['Each trapezoid area = ½(f(xᵢ) + f(xᵢ₊₁))(xᵢ₊₁ - xᵢ', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Generally more accurate than left or right Riemann sums', '∫ₐᵇ f(x)dx ≈ (Δx/2)[f(x₀) + 2f(x₁) + 2f(x₂) + ... + 2f(xₙ₋₁) + f(xₙ)]', 'Each trapezoid area = ½(f(xᵢ) + f(xᵢ₊₁))(xᵢ₊₁ - xᵢ)', 'sum individual trapezoid areas']
           }
         ],
-        correctAnswers: ['∫ₐᵇ f(x)dx ≈ (Δx/2)[f(x₀) + 2f(x₁) + 2f(x₂) + ... ', 'sum individual trapezoid areas', 'Each trapezoid area = ½(f(xᵢ) + f(xᵢ₊₁))(xᵢ₊₁ - xᵢ'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Trapezoidal Rule.'
+        correctAnswers: ['∫ₐᵇ f(x)dx ≈ (Δx/2)[f(x₀) + 2f(x₁) + 2f(x₂) + ... + 2f(xₙ₋₁) + f(xₙ)]', 'sum individual trapezoid areas'],
+        hint1: 'Think about what each concept specifically describes in Trapezoidal Rule.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Trapezoidal Rule describes a specific idea. Trapezoidal Rule: ∫ₐᵇ f(x)dx ≈ (Δx/2)[f(x₀) + 2f(x₁) + 2f(x₂) + ... + 2f(xₙ₋₁) + f(xₙ)]. Works with unequal subintervals: sum individual trapezoid areas.'
       }
     }
   ]

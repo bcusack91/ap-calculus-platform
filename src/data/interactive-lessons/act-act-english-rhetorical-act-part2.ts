@@ -18,20 +18,31 @@ Delete a sentence if it: is off-topic, redundant, or disrupts the argument.
       id: 'act-e2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes add a sentence if it?',
+            question: 'What does "Add a sentence if it" refer to in ACT prep?',
             options: [
-              'Add a sentence if it is a key concept for ACT English/Reading',
-              'Delete a sentence if it: is off-topic, redundant, or disrupts the argument',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'is off-topic, redundant, or disrupts the argument.',
+              'supports the main idea, provides relevant detail, improves flow.',
+              'Read the paragraph with and without the sentence to decide.',
+              'The question will state the purpose — match the answer to that specific goal.'
             ],
-            correctAnswer: 0,
-            explanation: 'Add a sentence if it: supports the main idea, provides relevant detail, improves flow'
+            correctAnswer: 1,
+            explanation: 'Correct — Add a sentence if it: supports the main idea, provides relevant detail, improves flow. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Adding & Deleting Sentences, which explains Key Insight?',
+            options: [
+              'Read the paragraph with and without the sentence to decide.',
+              'The question will state the purpose — match the answer to that specific goal.',
+              'is off-topic, redundant, or disrupts the argument.',
+              'supports the main idea, provides relevant detail, improves flow.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Key Insight: The question will state the purpose — match the answer to that specific goal. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Delete a sentence if it: is off-topic, redundant, or disrupts the argument.
       id: 'act-e2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for adding & deleting sentences?',
+            question: 'Which statement about ACT Tip is correct?',
             options: [
-              'The question will state the purpose — match the answer to that specific goal',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'is off-topic, redundant, or disrupts the argument.',
+              'supports the main idea, provides relevant detail, improves flow.',
+              'The question will state the purpose — match the answer to that specific goal.',
+              'Read the paragraph with and without the sentence to decide.'
             ],
-            correctAnswer: 0,
-            explanation: 'The question will state the purpose — match the answer to that specific goal'
+            correctAnswer: 3,
+            explanation: 'Correct — ACT Tip: Read the paragraph with and without the sentence to decide. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Delete a sentence if it: is off-topic, redundant, or disrupts the argument.
       id: 'act-e2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Adding & Deleting Sentences:',
-            options: ['Add a sentence if it: supports the main idea, prov', 'Delete a sentence if it: is off-topic, redundant, ', 'Not applicable', 'None of these']
+            label: 'Add a sentence if it',
+            options: ['The question will state the purpose — match the answer to that specific goal.', 'supports the main idea, provides relevant detail, improves flow.', 'Read the paragraph with and without the sentence to decide.', 'is off-topic, redundant, or disrupts the argument.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['The question will state the purpose — match the an', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Delete a sentence if it',
+            options: ['is off-topic, redundant, or disrupts the argument.', 'supports the main idea, provides relevant detail, improves flow.', 'The question will state the purpose — match the answer to that specific goal.', 'Read the paragraph with and without the sentence to decide.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['Read the paragraph with and without the sentence to decide.', 'supports the main idea, provides relevant detail, improves flow.', 'is off-topic, redundant, or disrupts the argument.', 'The question will state the purpose — match the answer to that specific goal.']
           }
         ],
-        correctAnswers: ['Add a sentence if it: supports the main idea, prov', 'The question will state the purpose — match the an'],
-        hint1: 'Think about adding & deleting sentences',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Add a sentence if it: supports the main idea, provides relevant detail, improves flow. The question will state the purpose — match the answer to that specific goal.'
+        correctAnswers: ['supports the main idea, provides relevant detail, improves flow.', 'is off-topic, redundant, or disrupts the argument.', 'The question will state the purpose — match the answer to that specific goal.'],
+        hint1: 'Think about what each concept specifically describes in Adding & Deleting Sentences.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Adding & Deleting Sentences describes a specific idea. Add a sentence if it: supports the main idea, provides relevant detail, improves flow. Delete a sentence if it: is off-topic, redundant, or disrupts the argument. Key Insight: The question will state the purpose — match the answer to that specific goal.'
       }
     }
   ]

@@ -30,31 +30,31 @@ Domain of f = Range of f⁻¹ and vice versa
       id: 'funct6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of problem-solving workshop?',
+            question: 'Which of the following correctly describes Verify?',
             options: [
-              'Verify',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'Domain of f = Range of f⁻¹ and vice versa',
+              'This is a common misconception about the topic',
+              'reflection over y = x',
+              'f(f⁻¹(x)) = x for all x in domain of f⁻¹'
             ],
-            correctAnswer: 0,
-            explanation: 'Verify: f(f⁻¹(x)) = x for all x in domain of f⁻¹'
+            correctAnswer: 3,
+            explanation: 'Correct — Verify: f(f⁻¹(x)) = x for all x in domain of f⁻¹. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of problem-solving workshop, which is accurate?',
+            question: 'Which of the following is true about Graphical verification?',
             options: [
+              'f(f⁻¹(x)) = x for all x in domain of f⁻¹',
               'reflection over y = x',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'f⁻¹(f(x)) = x for all x in domain of f',
+              'Domain of f = Range of f⁻¹ and vice versa'
             ],
-            correctAnswer: 0,
-            explanation: 'Graphical verification: reflection over y = x'
+            correctAnswer: 1,
+            explanation: 'Correct — Graphical verification: reflection over y = x. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Domain of f = Range of f⁻¹ and vice versa
       id: 'funct6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Verify',
-            options: ['f(f⁻¹(x)) = x for all x in domain of f⁻¹', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['Domain of f = Range of f⁻¹ and vice versa', 'f(f⁻¹(x)) = x for all x in domain of f⁻¹', 'f⁻¹(f(x)) = x for all x in domain of f', 'reflection over y = x']
           },
           {
             label: 'Verify',
-            options: ['f⁻¹(f(x)) = x for all x in domain of f', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['f⁻¹(f(x)) = x for all x in domain of f', 'Domain of f = Range of f⁻¹ and vice versa', 'f(f⁻¹(x)) = x for all x in domain of f⁻¹', 'reflection over y = x']
           },
           {
             label: 'Graphical verification',
-            options: ['reflection over y = x', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['f⁻¹(f(x)) = x for all x in domain of f', 'Domain of f = Range of f⁻¹ and vice versa', 'f(f⁻¹(x)) = x for all x in domain of f⁻¹', 'reflection over y = x']
           }
         ],
         correctAnswers: ['f(f⁻¹(x)) = x for all x in domain of f⁻¹', 'f⁻¹(f(x)) = x for all x in domain of f', 'reflection over y = x'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving Workshop.'
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Verify: f(f⁻¹(x)) = x for all x in domain of f⁻¹. Verify: f⁻¹(f(x)) = x for all x in domain of f. Graphical verification: reflection over y = x.'
       }
     }
   ]

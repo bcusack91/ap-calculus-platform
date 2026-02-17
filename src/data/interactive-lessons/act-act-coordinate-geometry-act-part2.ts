@@ -18,20 +18,31 @@ Midpoint: ((x₁+x₂)/2, (y₁+y₂)/2).
       id: 'act-c2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes distance?',
+            question: 'Which statement accurately explains Distance?',
             options: [
-              'Distance is a key concept for ACT Math',
-              'Midpoint: ((x₁+x₂)/2, (y₁+y₂)/2)',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'Distance formula is the Pythagorean theorem in disguise.',
+              '((x₁+x₂)/2, (y₁+y₂)/2).',
+              'd = √((x₂-x₁)² + (y₂-y₁)²).',
+              'These formulas are NOT provided on the ACT — memorize them.'
             ],
-            correctAnswer: 0,
-            explanation: 'Distance: d = √((x₂-x₁)² + (y₂-y₁)²)'
+            correctAnswer: 2,
+            explanation: 'Correct — Distance: d = √((x₂-x₁)² + (y₂-y₁)²). The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Key Insight?',
+            options: [
+              'These formulas are NOT provided on the ACT — memorize them.',
+              '((x₁+x₂)/2, (y₁+y₂)/2).',
+              'd = √((x₂-x₁)² + (y₂-y₁)²).',
+              'Distance formula is the Pythagorean theorem in disguise.'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Key Insight: Distance formula is the Pythagorean theorem in disguise. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Midpoint: ((x₁+x₂)/2, (y₁+y₂)/2).
       id: 'act-c2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for distance & midpoint?',
+            question: 'Which statement about ACT Tip is correct?',
             options: [
-              'Distance formula is the Pythagorean theorem in disguise',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'd = √((x₂-x₁)² + (y₂-y₁)²).',
+              'Distance formula is the Pythagorean theorem in disguise.',
+              '((x₁+x₂)/2, (y₁+y₂)/2).',
+              'These formulas are NOT provided on the ACT — memorize them.'
             ],
-            correctAnswer: 0,
-            explanation: 'Distance formula is the Pythagorean theorem in disguise'
+            correctAnswer: 3,
+            explanation: 'Correct — ACT Tip: These formulas are NOT provided on the ACT — memorize them. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Midpoint: ((x₁+x₂)/2, (y₁+y₂)/2).
       id: 'act-c2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Distance & Midpoint:',
-            options: ['Distance: d = √((x₂-x₁)² + (y₂-y₁)²)', 'Midpoint: ((x₁+x₂)/2, (y₁+y₂)/2)', 'Not applicable', 'None of these']
+            label: 'Distance',
+            options: ['Distance formula is the Pythagorean theorem in disguise.', '((x₁+x₂)/2, (y₁+y₂)/2).', 'd = √((x₂-x₁)² + (y₂-y₁)²).', 'These formulas are NOT provided on the ACT — memorize them.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Distance formula is the Pythagorean theorem in dis', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Midpoint',
+            options: ['d = √((x₂-x₁)² + (y₂-y₁)²).', '((x₁+x₂)/2, (y₁+y₂)/2).', 'These formulas are NOT provided on the ACT — memorize them.', 'Distance formula is the Pythagorean theorem in disguise.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['d = √((x₂-x₁)² + (y₂-y₁)²).', '((x₁+x₂)/2, (y₁+y₂)/2).', 'Distance formula is the Pythagorean theorem in disguise.', 'These formulas are NOT provided on the ACT — memorize them.']
           }
         ],
-        correctAnswers: ['Distance: d = √((x₂-x₁)² + (y₂-y₁)²)', 'Distance formula is the Pythagorean theorem in dis'],
-        hint1: 'Think about distance & midpoint',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Distance: d = √((x₂-x₁)² + (y₂-y₁)²). Distance formula is the Pythagorean theorem in disguise.'
+        correctAnswers: ['d = √((x₂-x₁)² + (y₂-y₁)²).', '((x₁+x₂)/2, (y₁+y₂)/2).', 'Distance formula is the Pythagorean theorem in disguise.'],
+        hint1: 'Think about what each concept specifically describes in Distance & Midpoint.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Distance & Midpoint describes a specific idea. Distance: d = √((x₂-x₁)² + (y₂-y₁)²). Midpoint: ((x₁+x₂)/2, (y₁+y₂)/2). Key Insight: Distance formula is the Pythagorean theorem in disguise.'
       }
     }
   ]

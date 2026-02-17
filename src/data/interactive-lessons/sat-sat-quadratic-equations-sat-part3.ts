@@ -18,20 +18,31 @@ Discriminant b² - 4ac determines the number of real solutions.
       id: 'sat-q3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes x = (-b ± √(b² - 4ac)) / (2a)?',
+            question: 'Which statement accurately explains x = (-b ± √(b² - 4ac)) / (2a).?',
             options: [
-              'x = (-b ± √(b² - 4ac)) / (2a) is a fundamental concept in SAT Math',
-              'Discriminant b² - 4ac determines the number of real solutions',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'x = (-b ± √(b² - 4ac)) / (2a).',
+              'Discriminant b² - 4ac determines the number of real solutions.',
+              'b² - 4ac > 0: two real solutions; = 0: one (repeated); < 0: no real solutions.',
+              'SAT Tip: the discriminant alone can answer "how many solutions?" questions.'
             ],
             correctAnswer: 0,
-            explanation: 'x = (-b ± √(b² - 4ac)) / (2a)'
+            explanation: 'Correct — x = (-b ± √(b² - 4ac)) / (2a). The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Key Insight?',
+            options: [
+              'b² - 4ac > 0: two real solutions; = 0: one (repeated); < 0: no real solutions.',
+              'x = (-b ± √(b² - 4ac)) / (2a).',
+              'Discriminant b² - 4ac determines the number of real solutions.',
+              'SAT Tip: the discriminant alone can answer "how many solutions?" questions.'
+            ],
+            correctAnswer: 0,
+            explanation: 'Correct — Key Insight: b² - 4ac > 0: two real solutions; = 0: one (repeated); < 0: no real solutions. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Discriminant b² - 4ac determines the number of real solutions.
       id: 'sat-q3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for the quadratic formula?',
+            question: 'Which statement about SAT Tip is correct?',
             options: [
-              'b² - 4ac > 0: two real solutions; = 0: one (repeated); < 0: no real solutions',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'b² - 4ac > 0: two real solutions; = 0: one (repeated); < 0: no real solutions.',
+              'Discriminant b² - 4ac determines the number of real solutions.',
+              'x = (-b ± √(b² - 4ac)) / (2a).',
+              'SAT Tip: the discriminant alone can answer "how many solutions?" questions.'
             ],
-            correctAnswer: 0,
-            explanation: 'b² - 4ac > 0: two real solutions; = 0: one (repeated); < 0: no real solutions'
+            correctAnswer: 3,
+            explanation: 'Correct — SAT Tip: SAT Tip: the discriminant alone can answer "how many solutions?" questions. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ Discriminant b² - 4ac determines the number of real solutions.
       id: 'sat-q3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for The Quadratic Formula:',
-            options: ['x = (-b ± √(b² - 4ac)) / (2a)', 'Discriminant b² - 4ac determines the number of rea', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['Discriminant b² - 4ac determines the number of real solutions.', 'b² - 4ac > 0: two real solutions; = 0: one (repeated); < 0: no real solutions.', 'SAT Tip: the discriminant alone can answer "how many solutions?" questions.', 'x = (-b ± √(b² - 4ac)) / (2a).']
           },
           {
-            label: 'Strategy tip:',
-            options: ['b² - 4ac > 0: two real solutions; = 0: one (repeat', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'SAT Tip',
+            options: ['b² - 4ac > 0: two real solutions; = 0: one (repeated); < 0: no real solutions.', 'x = (-b ± √(b² - 4ac)) / (2a).', 'SAT Tip: the discriminant alone can answer "how many solutions?" questions.', 'Discriminant b² - 4ac determines the number of real solutions.']
           }
         ],
-        correctAnswers: ['x = (-b ± √(b² - 4ac)) / (2a)', 'b² - 4ac > 0: two real solutions; = 0: one (repeat'],
-        hint1: 'Think about the quadratic formula',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'x = (-b ± √(b² - 4ac)) / (2a). b² - 4ac > 0: two real solutions; = 0: one (repeated); < 0: no real solutions.'
+        correctAnswers: ['b² - 4ac > 0: two real solutions; = 0: one (repeated); < 0: no real solutions.', 'SAT Tip: the discriminant alone can answer "how many solutions?" questions.'],
+        hint1: 'Think about what each concept specifically describes in The Quadratic Formula.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in The Quadratic Formula describes a specific idea. Key Insight: b² - 4ac > 0: two real solutions; = 0: one (repeated); < 0: no real solutions. SAT Tip: SAT Tip: the discriminant alone can answer "how many solutions?" questions.'
       }
     }
   ]

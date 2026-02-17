@@ -30,31 +30,31 @@ Radicals are highly reactive and short-lived
       id: 'radic1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of introduction to radicals?',
+            question: 'What does "Radicals" refer to in this topic?',
             options: [
-              'Radicals',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'species with unpaired electrons',
+              'Radicals are highly reactive and short-lived',
+              'initiation, propagation, termination',
+              'bond breaks evenly → two radicals'
             ],
             correctAnswer: 0,
-            explanation: 'Radicals: species with unpaired electrons'
+            explanation: 'Correct — Radicals: species with unpaired electrons. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of introduction to radicals, which is accurate?',
+            question: 'In the context of ️ Radical Reactions, which explains Radical reactions have three stages?',
             options: [
               'initiation, propagation, termination',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Radicals are highly reactive and short-lived',
+              'bond breaks evenly → two radicals',
+              'species with unpaired electrons'
             ],
             correctAnswer: 0,
-            explanation: 'Radical reactions have three stages: initiation, propagation, termination'
+            explanation: 'Correct — Radical reactions have three stages: initiation, propagation, termination. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Radicals are highly reactive and short-lived
       id: 'radic1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Radicals',
-            options: ['species with unpaired electrons', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['bond breaks evenly → two radicals', 'species with unpaired electrons', 'Radicals are highly reactive and short-lived', 'initiation, propagation, termination']
           },
           {
             label: 'Homolytic cleavage',
-            options: ['bond breaks evenly → two radicals', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Radicals are highly reactive and short-lived', 'initiation, propagation, termination', 'species with unpaired electrons', 'bond breaks evenly → two radicals']
           },
           {
             label: 'Radical reactions have three stages',
-            options: ['initiation, propagation, termination', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Radicals are highly reactive and short-lived', 'bond breaks evenly → two radicals', 'species with unpaired electrons', 'initiation, propagation, termination']
           }
         ],
         correctAnswers: ['species with unpaired electrons', 'bond breaks evenly → two radicals', 'initiation, propagation, termination'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Introduction to Radicals.'
+        hint1: 'Think about what each concept specifically describes in ️ Radical Reactions.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in ️ Radical Reactions describes a specific idea. Radicals: species with unpaired electrons. Homolytic cleavage: bond breaks evenly → two radicals. Radical reactions have three stages: initiation, propagation, termination.'
       }
     }
   ]

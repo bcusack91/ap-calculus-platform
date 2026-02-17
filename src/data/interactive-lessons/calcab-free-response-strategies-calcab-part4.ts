@@ -30,31 +30,31 @@ Average value = (1/(b-a))∫ₐᵇ f(t)dt
       id: 'free-4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of rate & accumulation problems?',
-            options: [
-              'Total amount = ∫ₐᵇ rate(t)dt',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'Total amount = ∫ₐᵇ rate(t)dt'
-          },
-          {
-            question: 'In the context of rate & accumulation problems, which is accurate?',
+            question: 'Which statement accurately explains Total amount = ∫ₐᵇ rate(t)dt?',
             options: [
               '"At time t = c, the rate is..." vs "The total from a to b is..."',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Interpret ∫ₐᵇ r(t)dt in context with units',
+              'Total amount = ∫ₐᵇ rate(t)dt',
+              'Average value = (1/(b-a))∫ₐᵇ f(t)dt'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Total amount = ∫ₐᵇ rate(t)dt. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Rate & Accumulation Problems, which explains "At time t = c, the rate is..." vs "The…?',
+            options: [
+              '"At time t = c, the rate is..." vs "The total from a to b is..."',
+              'Interpret ∫ₐᵇ r(t)dt in context with units',
+              'Average value = (1/(b-a))∫ₐᵇ f(t)dt',
+              'Total amount = ∫ₐᵇ rate(t)dt'
             ],
             correctAnswer: 0,
-            explanation: '"At time t = c, the rate is..." vs "The total from a to b is..."'
+            explanation: 'Correct — "At time t = c, the rate is..." vs "The total from a to b is...". Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Average value = (1/(b-a))∫ₐᵇ f(t)dt
       id: 'free-4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to rate & accumulation problems?',
+            question: 'Regarding Rate & Accumulation Problems, which correctly describes Average value = (1/(b-a))∫ₐᵇ f(t)dt?',
             options: [
+              '"At time t = c, the rate is..." vs "The total from a to b is..."',
               'Average value = (1/(b-a))∫ₐᵇ f(t)dt',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'Interpret ∫ₐᵇ r(t)dt in context with units',
+              'Total amount = ∫ₐᵇ rate(t)dt'
             ],
-            correctAnswer: 0,
-            explanation: 'Average value = (1/(b-a))∫ₐᵇ f(t)dt'
+            correctAnswer: 1,
+            explanation: 'Correct — Average value = (1/(b-a))∫ₐᵇ f(t)dt. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Average value = (1/(b-a))∫ₐᵇ f(t)dt
       id: 'free-4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Total amount = ∫ₐᵇ rate(t)dt',
-            options: ['Total amount = ∫ₐᵇ rate(t)dt', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Total amount = ∫ₐᵇ rate(t)dt', 'Interpret ∫ₐᵇ r(t)dt in context with units', 'Average value = (1/(b-a))∫ₐᵇ f(t)dt', '"At time t = c, the rate is..." vs "The total from a to b is..."']
           },
           {
-            label: 'Interpret ∫ₐᵇ r(t)dt in context with units',
-            options: ['Interpret ∫ₐᵇ r(t)dt in context with units', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Interpret ∫ₐᵇ r(t)dt in context with…',
+            options: ['Total amount = ∫ₐᵇ rate(t)dt', 'Interpret ∫ₐᵇ r(t)dt in context with units', '"At time t = c, the rate is..." vs "The total from a to b is..."', 'Average value = (1/(b-a))∫ₐᵇ f(t)dt']
           },
           {
-            label: '"At time t = c, the rate is..." vs "The total from a to b is..."',
-            options: ['"At time t = c, the rate is..." vs "The total from', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: '"At time t = c, the rate is..." vs "The…',
+            options: ['Interpret ∫ₐᵇ r(t)dt in context with units', 'Total amount = ∫ₐᵇ rate(t)dt', 'Average value = (1/(b-a))∫ₐᵇ f(t)dt', '"At time t = c, the rate is..." vs "The total from a to b is..."']
           }
         ],
-        correctAnswers: ['Total amount = ∫ₐᵇ rate(t)dt', 'Interpret ∫ₐᵇ r(t)dt in context with units', '"At time t = c, the rate is..." vs "The total from'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Rate & Accumulation Problems.'
+        correctAnswers: ['Total amount = ∫ₐᵇ rate(t)dt', 'Interpret ∫ₐᵇ r(t)dt in context with units', '"At time t = c, the rate is..." vs "The total from a to b is..."'],
+        hint1: 'Think about what each concept specifically describes in Rate & Accumulation Problems.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Rate & Accumulation Problems describes a specific idea. Total amount = ∫ₐᵇ rate(t)dt. Interpret ∫ₐᵇ r(t)dt in context with units. "At time t = c, the rate is..." vs "The total from a to b is...".'
       }
     }
   ]

@@ -19,31 +19,31 @@ export const bioGeneRegPart5Data = {
       id: 'gene5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes small rna molecules (mirna, sirna) silence genes?',
+            question: 'What does "Small RNA molecules (miRNA, siRNA)…" refer to in biology?',
             options: [
+              'miRNA binds complementary mRNA → blocks translation',
               'Small RNA molecules (miRNA, siRNA) silence genes',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Post-transcriptional regulation',
+              'siRNA triggers mRNA degradation'
             ],
-            correctAnswer: 0,
-            explanation: 'Small RNA molecules (miRNA, siRNA) silence genes'
+            correctAnswer: 1,
+            explanation: 'Correct — Small RNA molecules (miRNA, siRNA) silence genes. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of rna interference, which statement is accurate?',
+            question: 'In the context of RNA Interference, which explains siRNA triggers mRNA degradation?',
             options: [
               'siRNA triggers mRNA degradation',
-              'seneg ecnelis )ANRis ,ANRim( selucelom ANR llamS',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Small RNA molecules (miRNA, siRNA) silence genes',
+              'miRNA binds complementary mRNA → blocks translation',
+              'Post-transcriptional regulation'
             ],
             correctAnswer: 0,
-            explanation: 'siRNA triggers mRNA degradation'
+            explanation: 'Correct — siRNA triggers mRNA degradation. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioGeneRegPart5Data = {
       id: 'gene5-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to rna interference?',
+            question: 'Which of these accurately represents Post-transcriptional regulation?',
             options: [
               'Post-transcriptional regulation',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'siRNA triggers mRNA degradation',
+              'Small RNA molecules (miRNA, siRNA) silence genes',
+              'miRNA binds complementary mRNA → blocks translation'
             ],
             correctAnswer: 0,
-            explanation: 'Post-transcriptional regulation'
+            explanation: 'Correct — Post-transcriptional regulation. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioGeneRegPart5Data = {
       id: 'gene5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Small RNA molecules (miRNA, siRNA) silence genes is important in rna interference because',
-            options: ['Small RNA molecules (miRNA, siRNA) silence genes', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Small RNA molecules (miRNA, siRNA)…',
+            options: ['siRNA triggers mRNA degradation', 'miRNA binds complementary mRNA → blocks translation', 'Post-transcriptional regulation', 'Small RNA molecules (miRNA, siRNA) silence genes']
           },
           {
-            label: 'miRNA binds complementary mRNA → blocks translation is important in rna interference because',
-            options: ['miRNA binds complementary mRNA → blocks translatio', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'miRNA binds complementary mRNA → blocks…',
+            options: ['miRNA binds complementary mRNA → blocks translation', 'Small RNA molecules (miRNA, siRNA) silence genes', 'Post-transcriptional regulation', 'siRNA triggers mRNA degradation']
           },
           {
-            label: 'siRNA triggers mRNA degradation is important in rna interference because',
-            options: ['siRNA triggers mRNA degradation', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'siRNA triggers mRNA degradation',
+            options: ['miRNA binds complementary mRNA → blocks translation', 'Post-transcriptional regulation', 'Small RNA molecules (miRNA, siRNA) silence genes', 'siRNA triggers mRNA degradation']
           }
         ],
-        correctAnswers: ['Small RNA molecules (miRNA, siRNA) silence genes', 'miRNA binds complementary mRNA → blocks translatio', 'siRNA triggers mRNA degradation'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding RNA Interference.'
+        correctAnswers: ['Small RNA molecules (miRNA, siRNA) silence genes', 'miRNA binds complementary mRNA → blocks translation', 'siRNA triggers mRNA degradation'],
+        hint1: 'Think about what each concept specifically describes in RNA Interference.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in RNA Interference describes a specific idea. Small RNA molecules (miRNA, siRNA) silence genes. miRNA binds complementary mRNA → blocks translation. siRNA triggers mRNA degradation.'
       }
     }
   ]

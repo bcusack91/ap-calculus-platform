@@ -30,31 +30,31 @@ Minimum surface area for a given volume
       id: 'optim4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of applied optimization?',
+            question: 'What does "Maximum area enclosed by a fixed…" refer to in calculus?',
             options: [
               'Maximum area enclosed by a fixed perimeter',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'Minimum surface area for a given volume',
+              'Maximizing volume of a box given material constraints',
+              'Minimum distance between a point and a curve'
             ],
             correctAnswer: 0,
-            explanation: 'Maximum area enclosed by a fixed perimeter'
+            explanation: 'Correct — Maximum area enclosed by a fixed perimeter. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of applied optimization, which is accurate?',
+            question: 'Which of the following is true about Maximizing volume of a box given…?',
             options: [
+              'Minimum surface area for a given volume',
+              'Maximum area enclosed by a fixed perimeter',
               'Maximizing volume of a box given material constraints',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Minimum distance between a point and a curve'
             ],
-            correctAnswer: 0,
-            explanation: 'Maximizing volume of a box given material constraints'
+            correctAnswer: 2,
+            explanation: 'Correct — Maximizing volume of a box given material constraints. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Minimum surface area for a given volume
       id: 'optim4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to applied optimization?',
+            question: 'Which of these accurately represents Minimum surface area for a given volume?',
             options: [
+              'Maximum area enclosed by a fixed perimeter',
               'Minimum surface area for a given volume',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'Minimum distance between a point and a curve',
+              'Maximizing volume of a box given material constraints'
             ],
-            correctAnswer: 0,
-            explanation: 'Minimum surface area for a given volume'
+            correctAnswer: 1,
+            explanation: 'Correct — Minimum surface area for a given volume. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Minimum surface area for a given volume
       id: 'optim4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Maximum area enclosed by a fixed perimeter',
-            options: ['Maximum area enclosed by a fixed perimeter', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Maximum area enclosed by a fixed…',
+            options: ['Minimum distance between a point and a curve', 'Minimum surface area for a given volume', 'Maximizing volume of a box given material constraints', 'Maximum area enclosed by a fixed perimeter']
           },
           {
-            label: 'Minimum distance between a point and a curve',
-            options: ['Minimum distance between a point and a curve', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Minimum distance between a point and a…',
+            options: ['Minimum distance between a point and a curve', 'Maximum area enclosed by a fixed perimeter', 'Maximizing volume of a box given material constraints', 'Minimum surface area for a given volume']
           },
           {
-            label: 'Maximizing volume of a box given material constraints',
-            options: ['Maximizing volume of a box given material constrai', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Maximizing volume of a box given…',
+            options: ['Minimum surface area for a given volume', 'Maximizing volume of a box given material constraints', 'Minimum distance between a point and a curve', 'Maximum area enclosed by a fixed perimeter']
           }
         ],
-        correctAnswers: ['Maximum area enclosed by a fixed perimeter', 'Minimum distance between a point and a curve', 'Maximizing volume of a box given material constrai'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Applied Optimization.'
+        correctAnswers: ['Maximum area enclosed by a fixed perimeter', 'Minimum distance between a point and a curve', 'Maximizing volume of a box given material constraints'],
+        hint1: 'Think about what each concept specifically describes in Applied Optimization.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Applied Optimization describes a specific idea. Maximum area enclosed by a fixed perimeter. Minimum distance between a point and a curve. Maximizing volume of a box given material constraints.'
       }
     }
   ]

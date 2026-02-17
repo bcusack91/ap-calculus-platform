@@ -30,31 +30,31 @@ Sₙ = a₁(1 - rⁿ)/(1 - r), r ≠ 1
       id: 'seque3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of geometric sequences?',
+            question: 'Which of the following correctly describes Geometric sequence?',
             options: [
-              'Geometric sequence',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'common ratio r between consecutive terms',
+              'aₙ = a₁ · r^(n-1)',
+              '√(a · b) for terms a and b',
+              'Sₙ = a₁(1 - rⁿ)/(1 - r), r ≠ 1'
             ],
             correctAnswer: 0,
-            explanation: 'Geometric sequence: common ratio r between consecutive terms'
+            explanation: 'Correct — Geometric sequence: common ratio r between consecutive terms. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of geometric sequences, which is accurate?',
+            question: 'Which of the following is true about Geometric mean?',
             options: [
+              'aₙ = a₁ · r^(n-1)',
+              'common ratio r between consecutive terms',
               '√(a · b) for terms a and b',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Sₙ = a₁(1 - rⁿ)/(1 - r), r ≠ 1'
             ],
-            correctAnswer: 0,
-            explanation: 'Geometric mean: √(a · b) for terms a and b'
+            correctAnswer: 2,
+            explanation: 'Correct — Geometric mean: √(a · b) for terms a and b. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Sₙ = a₁(1 - rⁿ)/(1 - r), r ≠ 1
       id: 'seque3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Geometric sequence',
-            options: ['common ratio r between consecutive terms', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['Sₙ = a₁(1 - rⁿ)/(1 - r), r ≠ 1', '√(a · b) for terms a and b', 'common ratio r between consecutive terms', 'aₙ = a₁ · r^(n-1)']
           },
           {
             label: 'Explicit formula',
-            options: ['aₙ = a₁ · r^(n-1)', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['aₙ = a₁ · r^(n-1)', '√(a · b) for terms a and b', 'Sₙ = a₁(1 - rⁿ)/(1 - r), r ≠ 1', 'common ratio r between consecutive terms']
           },
           {
             label: 'Geometric mean',
-            options: ['√(a · b) for terms a and b', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['√(a · b) for terms a and b', 'common ratio r between consecutive terms', 'aₙ = a₁ · r^(n-1)', 'Sₙ = a₁(1 - rⁿ)/(1 - r), r ≠ 1']
           }
         ],
         correctAnswers: ['common ratio r between consecutive terms', 'aₙ = a₁ · r^(n-1)', '√(a · b) for terms a and b'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Geometric Sequences.'
+        hint1: 'Think about what each concept specifically describes in Geometric Sequences.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Geometric Sequences describes a specific idea. Geometric sequence: common ratio r between consecutive terms. Explicit formula: aₙ = a₁ · r^(n-1). Geometric mean: √(a · b) for terms a and b.'
       }
     }
   ]

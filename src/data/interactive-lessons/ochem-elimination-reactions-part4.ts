@@ -30,31 +30,31 @@ E2 with bulky base (t-BuOK) → Hofmann product
       id: 'elimi4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of zaitsev vs hofmann?',
+            question: 'What does "Zaitsev\'s rule" refer to in this topic?',
             options: [
-              'Zaitsev\'s rule',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'less substituted alkene (with bulky base)',
+              'more substituted alkene is major product (more stable)',
+              'E2 with small base → Zaitsev product',
+              'E2 with bulky base (t-BuOK) → Hofmann product'
             ],
-            correctAnswer: 0,
-            explanation: 'Zaitsev\'s rule: more substituted alkene is major product (more stable)'
+            correctAnswer: 1,
+            explanation: 'Correct — Zaitsev\'s rule: more substituted alkene is major product (more stable). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of zaitsev vs hofmann, which is accurate?',
+            question: 'Select the statement that correctly describes E2 with small base → Zaitsev product:',
             options: [
+              'more substituted alkene is major product (more stable)',
+              'less substituted alkene (with bulky base)',
               'E2 with small base → Zaitsev product',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'E2 with bulky base (t-BuOK) → Hofmann product'
             ],
-            correctAnswer: 0,
-            explanation: 'E2 with small base → Zaitsev product'
+            correctAnswer: 2,
+            explanation: 'Correct — E2 with small base → Zaitsev product. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,24 @@ E2 with bulky base (t-BuOK) → Hofmann product
       id: 'elimi4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Zaitsev\'s rule',
-            options: ['more substituted alkene is major product (more sta', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['less substituted alkene (with bulky base)', 'E2 with bulky base (t-BuOK) → Hofmann product', 'E2 with small base → Zaitsev product', 'more substituted alkene is major product (more stable)']
           },
           {
             label: 'Hofmann product',
-            options: ['less substituted alkene (with bulky base)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
-          },
-          {
-            label: 'E2 with small base → Zaitsev product',
-            options: ['E2 with small base → Zaitsev product', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['E2 with bulky base (t-BuOK) → Hofmann product', 'E2 with small base → Zaitsev product', 'less substituted alkene (with bulky base)', 'more substituted alkene is major product (more stable)']
           }
         ],
-        correctAnswers: ['more substituted alkene is major product (more sta', 'less substituted alkene (with bulky base)', 'E2 with small base → Zaitsev product'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Zaitsev vs Hofmann.'
+        correctAnswers: ['more substituted alkene is major product (more stable)', 'less substituted alkene (with bulky base)'],
+        hint1: 'Think about what each concept specifically describes in Zaitsev vs Hofmann.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Zaitsev vs Hofmann describes a specific idea. Zaitsev\'s rule: more substituted alkene is major product (more stable). Hofmann product: less substituted alkene (with bulky base).'
       }
     }
   ]

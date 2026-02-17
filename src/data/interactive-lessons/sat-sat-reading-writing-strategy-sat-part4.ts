@@ -18,20 +18,31 @@ Standard English Conventions: grammar, punctuation, sentence structure.
       id: 'sat-r4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes 35 minutes, 44 questions across 4 passages?',
+            question: 'Which of the following correctly describes 35 minutes, 44 questions across 4…?',
             options: [
-              '35 minutes, 44 questions across 4 passages is a fundamental concept in SAT Reading & Writing',
-              'Standard English Conventions: grammar, punctuation, sentence structure',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'Expression of Ideas: development, organization, effective language use.',
+              'grammar, punctuation, sentence structure.',
+              '35 minutes, 44 questions across 4 passages.',
+              'Read the full sentence (and surrounding sentences) before answering.'
             ],
-            correctAnswer: 0,
-            explanation: '35 minutes, 44 questions across 4 passages'
+            correctAnswer: 2,
+            explanation: 'Correct — 35 minutes, 44 questions across 4 passages. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              '35 minutes, 44 questions across 4 passages.',
+              'Read the full sentence (and surrounding sentences) before answering.',
+              'Expression of Ideas: development, organization, effective language use.',
+              'grammar, punctuation, sentence structure.'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Key Insight: Expression of Ideas: development, organization, effective language use. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Standard English Conventions: grammar, punctuation, sentence structure.
       id: 'sat-r4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for writing section overview?',
+            question: 'Which of these accurately represents SAT Tip?',
             options: [
-              'Expression of Ideas: development, organization, effective language use',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              '35 minutes, 44 questions across 4 passages.',
+              'grammar, punctuation, sentence structure.',
+              'Read the full sentence (and surrounding sentences) before answering.',
+              'Expression of Ideas: development, organization, effective language use.'
             ],
-            correctAnswer: 0,
-            explanation: 'Expression of Ideas: development, organization, effective language use'
+            correctAnswer: 2,
+            explanation: 'Correct — SAT Tip: Read the full sentence (and surrounding sentences) before answering. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Standard English Conventions: grammar, punctuation, sentence structure.
       id: 'sat-r4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Writing Section Overview:',
-            options: ['35 minutes, 44 questions across 4 passages', 'Standard English Conventions: grammar, punctuation', 'Not applicable', 'None of these']
+            label: 'Standard English Conventions',
+            options: ['Expression of Ideas: development, organization, effective language use.', 'Read the full sentence (and surrounding sentences) before answering.', 'grammar, punctuation, sentence structure.', '35 minutes, 44 questions across 4 passages.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Expression of Ideas: development, organization, ef', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Key Insight',
+            options: ['Expression of Ideas: development, organization, effective language use.', '35 minutes, 44 questions across 4 passages.', 'grammar, punctuation, sentence structure.', 'Read the full sentence (and surrounding sentences) before answering.']
+          },
+          {
+            label: 'SAT Tip',
+            options: ['Read the full sentence (and surrounding sentences) before answering.', 'grammar, punctuation, sentence structure.', '35 minutes, 44 questions across 4 passages.', 'Expression of Ideas: development, organization, effective language use.']
           }
         ],
-        correctAnswers: ['35 minutes, 44 questions across 4 passages', 'Expression of Ideas: development, organization, ef'],
-        hint1: 'Think about writing section overview',
-        hint2: 'Consider the best SAT strategy',
-        explanation: '35 minutes, 44 questions across 4 passages. Expression of Ideas: development, organization, effective language use.'
+        correctAnswers: ['grammar, punctuation, sentence structure.', 'Expression of Ideas: development, organization, effective language use.', 'Read the full sentence (and surrounding sentences) before answering.'],
+        hint1: 'Think about what each concept specifically describes in Writing Section Overview.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Writing Section Overview describes a specific idea. Standard English Conventions: grammar, punctuation, sentence structure. Key Insight: Expression of Ideas: development, organization, effective language use. SAT Tip: Read the full sentence (and surrounding sentences) before answering.'
       }
     }
   ]

@@ -30,31 +30,31 @@ therapy identification and comparison
       id: 'treat7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of synthesis & ap review?',
+            question: 'What does "No single therapy is best for all…" refer to in psychology?',
             options: [
+              'therapy identification and comparison',
               'No single therapy is best for all disorders',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'Therapeutic relationship is crucial',
+              'Combination treatment often most effective'
             ],
-            correctAnswer: 0,
-            explanation: 'No single therapy is best for all disorders'
+            correctAnswer: 1,
+            explanation: 'Correct — No single therapy is best for all disorders. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of synthesis & ap review, which is accurate?',
+            question: 'In the context of Synthesis & AP Review, which explains Combination treatment often most…?',
             options: [
+              'Therapeutic relationship is crucial',
+              'therapy identification and comparison',
               'Combination treatment often most effective',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'No single therapy is best for all disorders'
             ],
-            correctAnswer: 0,
-            explanation: 'Combination treatment often most effective'
+            correctAnswer: 2,
+            explanation: 'Correct — Combination treatment often most effective. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ therapy identification and comparison
       id: 'treat7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'No single therapy is best for all disorders',
-            options: ['No single therapy is best for all disorders', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            label: 'No single therapy is best for all…',
+            options: ['therapy identification and comparison', 'Combination treatment often most effective', 'No single therapy is best for all disorders', 'Therapeutic relationship is crucial']
           },
           {
             label: 'Therapeutic relationship is crucial',
-            options: ['Therapeutic relationship is crucial', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Combination treatment often most effective', 'therapy identification and comparison', 'No single therapy is best for all disorders', 'Therapeutic relationship is crucial']
           },
           {
-            label: 'Combination treatment often most effective',
-            options: ['Combination treatment often most effective', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            label: 'Combination treatment often most…',
+            options: ['Therapeutic relationship is crucial', 'No single therapy is best for all disorders', 'Combination treatment often most effective', 'therapy identification and comparison']
           }
         ],
         correctAnswers: ['No single therapy is best for all disorders', 'Therapeutic relationship is crucial', 'Combination treatment often most effective'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Synthesis & AP Review.'
+        hint1: 'Think about what each concept specifically describes in Synthesis & AP Review.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Synthesis & AP Review describes a specific idea. No single therapy is best for all disorders. Therapeutic relationship is crucial. Combination treatment often most effective.'
       }
     }
   ]

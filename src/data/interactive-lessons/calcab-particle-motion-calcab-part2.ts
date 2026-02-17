@@ -30,31 +30,31 @@ Particle slows down when v and a have opposite signs
       id: 'parti2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of analyzing motion?',
-            options: [
-              'Particle at rest when v(t) = 0',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'Particle at rest when v(t) = 0'
-          },
-          {
-            question: 'In the context of analyzing motion, which is accurate?',
+            question: 'What does "Particle at rest when v(t) = 0" refer to in calculus?',
             options: [
               'Particle speeds up when v and a have the same sign',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Particle changes direction when v(t) changes sign',
+              'Particle at rest when v(t) = 0',
+              'Particle slows down when v and a have opposite signs'
             ],
-            correctAnswer: 0,
-            explanation: 'Particle speeds up when v and a have the same sign'
+            correctAnswer: 2,
+            explanation: 'Correct — Particle at rest when v(t) = 0. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Particle speeds up when v and a have…:',
+            options: [
+              'Particle at rest when v(t) = 0',
+              'Particle slows down when v and a have opposite signs',
+              'Particle speeds up when v and a have the same sign',
+              'Particle changes direction when v(t) changes sign'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Particle speeds up when v and a have the same sign. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Particle slows down when v and a have opposite signs
       id: 'parti2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to analyzing motion?',
+            question: 'Which of these accurately represents Particle slows down when v and a have…?',
             options: [
+              'Particle speeds up when v and a have the same sign',
+              'Particle changes direction when v(t) changes sign',
               'Particle slows down when v and a have opposite signs',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'Particle at rest when v(t) = 0'
             ],
-            correctAnswer: 0,
-            explanation: 'Particle slows down when v and a have opposite signs'
+            correctAnswer: 2,
+            explanation: 'Correct — Particle slows down when v and a have opposite signs. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Particle slows down when v and a have opposite signs
       id: 'parti2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Particle at rest when v(t) = 0',
-            options: ['Particle at rest when v(t) = 0', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Particle at rest when v(t) = 0', 'Particle changes direction when v(t) changes sign', 'Particle slows down when v and a have opposite signs', 'Particle speeds up when v and a have the same sign']
           },
           {
-            label: 'Particle changes direction when v(t) changes sign',
-            options: ['Particle changes direction when v(t) changes sign', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Particle changes direction when v(t)…',
+            options: ['Particle changes direction when v(t) changes sign', 'Particle slows down when v and a have opposite signs', 'Particle speeds up when v and a have the same sign', 'Particle at rest when v(t) = 0']
           },
           {
-            label: 'Particle speeds up when v and a have the same sign',
-            options: ['Particle speeds up when v and a have the same sign', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Particle speeds up when v and a have…',
+            options: ['Particle changes direction when v(t) changes sign', 'Particle slows down when v and a have opposite signs', 'Particle at rest when v(t) = 0', 'Particle speeds up when v and a have the same sign']
           }
         ],
         correctAnswers: ['Particle at rest when v(t) = 0', 'Particle changes direction when v(t) changes sign', 'Particle speeds up when v and a have the same sign'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Analyzing Motion.'
+        hint1: 'Think about what each concept specifically describes in Analyzing Motion.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Analyzing Motion describes a specific idea. Particle at rest when v(t) = 0. Particle changes direction when v(t) changes sign. Particle speeds up when v and a have the same sign.'
       }
     }
   ]

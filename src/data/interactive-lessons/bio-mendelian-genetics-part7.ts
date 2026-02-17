@@ -19,31 +19,31 @@ export const bioMendelianPart7Data = {
       id: 'mend7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes mendel\'s laws and chromosome behavior?',
-            options: [
-              'Mendel\'s laws and chromosome behavior',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
-            ],
-            correctAnswer: 0,
-            explanation: 'Mendel\'s laws and chromosome behavior'
-          },
-          {
-            question: 'In the context of synthesis & ap review, which statement is accurate?',
+            question: 'What does "Mendel\'s laws and chromosome behavior" refer to in biology?',
             options: [
               'Chi-square on the AP exam',
-              'roivaheb emosomorhc dna swal s\'ledneM',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Connecting genetics to evolution',
+              'Mendel\'s laws and chromosome behavior',
+              'Probability in genetics'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Mendel\'s laws and chromosome behavior. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Chi-square on the AP exam:',
+            options: [
+              'Chi-square on the AP exam',
+              'Connecting genetics to evolution',
+              'Probability in genetics',
+              'Mendel\'s laws and chromosome behavior'
             ],
             correctAnswer: 0,
-            explanation: 'Chi-square on the AP exam'
+            explanation: 'Correct — Chi-square on the AP exam. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioMendelianPart7Data = {
       id: 'mend7-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to synthesis & ap review?',
+            question: 'Which statement about Connecting genetics to evolution is correct?',
             options: [
+              'Chi-square on the AP exam',
               'Connecting genetics to evolution',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Mendel\'s laws and chromosome behavior',
+              'Probability in genetics'
             ],
-            correctAnswer: 0,
-            explanation: 'Connecting genetics to evolution'
+            correctAnswer: 1,
+            explanation: 'Correct — Connecting genetics to evolution. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioMendelianPart7Data = {
       id: 'mend7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Mendel\'s laws and chromosome behavior is important in synthesis & ap review because',
-            options: ['Mendel\'s laws and chromosome behavior', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Mendel\'s laws and chromosome behavior',
+            options: ['Chi-square on the AP exam', 'Connecting genetics to evolution', 'Mendel\'s laws and chromosome behavior', 'Probability in genetics']
           },
           {
-            label: 'Probability in genetics is important in synthesis & ap review because',
-            options: ['Probability in genetics', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Probability in genetics',
+            options: ['Chi-square on the AP exam', 'Probability in genetics', 'Connecting genetics to evolution', 'Mendel\'s laws and chromosome behavior']
           },
           {
-            label: 'Chi-square on the AP exam is important in synthesis & ap review because',
-            options: ['Chi-square on the AP exam', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Chi-square on the AP exam',
+            options: ['Connecting genetics to evolution', 'Chi-square on the AP exam', 'Probability in genetics', 'Mendel\'s laws and chromosome behavior']
           }
         ],
         correctAnswers: ['Mendel\'s laws and chromosome behavior', 'Probability in genetics', 'Chi-square on the AP exam'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Synthesis & AP Review.'
+        hint1: 'Think about what each concept specifically describes in Mendelian Genetics: Synthesis & AP Review.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Mendelian Genetics: Synthesis & AP Review describes a specific idea. Mendel\'s laws and chromosome behavior. Probability in genetics. Chi-square on the AP exam.'
       }
     }
   ]

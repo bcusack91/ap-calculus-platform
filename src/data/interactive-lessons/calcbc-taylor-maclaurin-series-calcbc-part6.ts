@@ -30,31 +30,31 @@ multiply series together for products of functions
       id: 'taylo6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of problem-solving workshop?',
-            options: [
-              'Substitution',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'Substitution: replace x in a known series (e.g., e^(-x²) from eˣ)'
-          },
-          {
-            question: 'In the context of problem-solving workshop, which is accurate?',
+            question: 'Which of the following correctly describes Substitution?',
             options: [
               'integrate a known series term by term',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'multiply series together for products of functions',
+              'differentiate a known series term by term',
+              'replace x in a known series (e.g., e^(-x²) from eˣ)'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Substitution: replace x in a known series (e.g., e^(-x²) from eˣ). The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Integration?',
+            options: [
+              'integrate a known series term by term',
+              'multiply series together for products of functions',
+              'replace x in a known series (e.g., e^(-x²) from eˣ)',
+              'differentiate a known series term by term'
             ],
             correctAnswer: 0,
-            explanation: 'Integration: integrate a known series term by term'
+            explanation: 'Correct — Integration: integrate a known series term by term. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ multiply series together for products of functions
       id: 'taylo6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to problem-solving workshop?',
+            question: 'Which of these accurately represents Multiplication?',
             options: [
-              'multiply series together for products of functions',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'integrate a known series term by term',
+              'replace x in a known series (e.g., e^(-x²) from eˣ)',
+              'differentiate a known series term by term',
+              'multiply series together for products of functions'
             ],
-            correctAnswer: 0,
-            explanation: 'Multiplication: multiply series together for products of functions'
+            correctAnswer: 3,
+            explanation: 'Correct — Multiplication: multiply series together for products of functions. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ multiply series together for products of functions
       id: 'taylo6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Substitution',
-            options: ['replace x in a known series (e.g., e^(-x²) from eˣ', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['differentiate a known series term by term', 'multiply series together for products of functions', 'replace x in a known series (e.g., e^(-x²) from eˣ)', 'integrate a known series term by term']
           },
           {
             label: 'Differentiation',
-            options: ['differentiate a known series term by term', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['differentiate a known series term by term', 'integrate a known series term by term', 'replace x in a known series (e.g., e^(-x²) from eˣ)', 'multiply series together for products of functions']
           },
           {
             label: 'Integration',
-            options: ['integrate a known series term by term', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['differentiate a known series term by term', 'integrate a known series term by term', 'replace x in a known series (e.g., e^(-x²) from eˣ)', 'multiply series together for products of functions']
           }
         ],
-        correctAnswers: ['replace x in a known series (e.g., e^(-x²) from eˣ', 'differentiate a known series term by term', 'integrate a known series term by term'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving Workshop.'
+        correctAnswers: ['replace x in a known series (e.g., e^(-x²) from eˣ)', 'differentiate a known series term by term', 'integrate a known series term by term'],
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Substitution: replace x in a known series (e.g., e^(-x²) from eˣ). Differentiation: differentiate a known series term by term. Integration: integrate a known series term by term.'
       }
     }
   ]

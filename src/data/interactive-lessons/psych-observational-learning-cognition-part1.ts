@@ -30,31 +30,31 @@ No direct reinforcement needed
       id: 'obser1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of bandura & social learning?',
-            options: [
-              'Albert Bandura',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
-            ],
-            correctAnswer: 0,
-            explanation: 'Albert Bandura: social learning theory'
-          },
-          {
-            question: 'In the context of bandura & social learning, which is accurate?',
+            question: 'Which of the following correctly describes Albert Bandura?',
             options: [
               'learning by watching others',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'social learning theory',
+              'children imitated aggressive model',
+              'No direct reinforcement needed'
             ],
-            correctAnswer: 0,
-            explanation: 'Observational learning: learning by watching others'
+            correctAnswer: 1,
+            explanation: 'Correct — Albert Bandura: social learning theory. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Observational learning:',
+            options: [
+              'No direct reinforcement needed',
+              'children imitated aggressive model',
+              'social learning theory',
+              'learning by watching others'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Observational learning: learning by watching others. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ No direct reinforcement needed
       id: 'obser1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Albert Bandura',
-            options: ['social learning theory', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['learning by watching others', 'social learning theory', 'No direct reinforcement needed', 'children imitated aggressive model']
           },
           {
             label: 'Bobo doll experiment',
-            options: ['children imitated aggressive model', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['social learning theory', 'learning by watching others', 'No direct reinforcement needed', 'children imitated aggressive model']
           },
           {
             label: 'Observational learning',
-            options: ['learning by watching others', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['social learning theory', 'learning by watching others', 'children imitated aggressive model', 'No direct reinforcement needed']
           }
         ],
         correctAnswers: ['social learning theory', 'children imitated aggressive model', 'learning by watching others'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Bandura & Social Learning.'
+        hint1: 'Think about what each concept specifically describes in Observational & Cognitive Learning.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Observational & Cognitive Learning describes a specific idea. Albert Bandura: social learning theory. Bobo doll experiment: children imitated aggressive model. Observational learning: learning by watching others.'
       }
     }
   ]

@@ -30,31 +30,31 @@ two possible triangles (ambiguous)
       id: 'law-o2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of ambiguous case (ssa)?',
+            question: 'What does "SSA (Side-Side-Angle) can give 0, 1, or…" refer to in precalculus?',
             options: [
-              'SSA (Side-Side-Angle) can give 0, 1, or 2 solutions',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'Compare the given side opposite the known angle with the other known side',
+              'two possible triangles (ambiguous)',
+              'no solution',
+              'SSA (Side-Side-Angle) can give 0, 1, or 2 solutions'
             ],
-            correctAnswer: 0,
-            explanation: 'SSA (Side-Side-Angle) can give 0, 1, or 2 solutions'
+            correctAnswer: 3,
+            explanation: 'Correct — SSA (Side-Side-Angle) can give 0, 1, or 2 solutions. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of ambiguous case (ssa), which is accurate?',
+            question: 'Which of the following is true about If a < b sin A?',
             options: [
+              'Compare the given side opposite the known angle with the other known side',
+              'SSA (Side-Side-Angle) can give 0, 1, or 2 solutions',
               'no solution',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'two possible triangles (ambiguous)'
             ],
-            correctAnswer: 0,
-            explanation: 'If a < b sin A: no solution'
+            correctAnswer: 2,
+            explanation: 'Correct — If a < b sin A: no solution. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,24 @@ two possible triangles (ambiguous)
       id: 'law-o2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'SSA (Side-Side-Angle) can give 0, 1, or 2 solutions',
-            options: ['SSA (Side-Side-Angle) can give 0, 1, or 2 solution', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
-          },
-          {
-            label: 'Compare the given side opposite the known angle with the other known side',
-            options: ['Compare the given side opposite the known angle wi', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
-          },
-          {
             label: 'If a < b sin A',
-            options: ['no solution', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['two possible triangles (ambiguous)', 'no solution', 'SSA (Side-Side-Angle) can give 0, 1, or 2 solutions', 'Compare the given side opposite the known angle with the other known side']
+          },
+          {
+            label: 'If b sin A < a < b',
+            options: ['two possible triangles (ambiguous)', 'Compare the given side opposite the known angle with the other known side', 'SSA (Side-Side-Angle) can give 0, 1, or 2 solutions', 'no solution']
           }
         ],
-        correctAnswers: ['SSA (Side-Side-Angle) can give 0, 1, or 2 solution', 'Compare the given side opposite the known angle wi', 'no solution'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Ambiguous Case (SSA).'
+        correctAnswers: ['no solution', 'two possible triangles (ambiguous)'],
+        hint1: 'Think about what each concept specifically describes in Ambiguous Case (SSA).',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Ambiguous Case (SSA) describes a specific idea. If a < b sin A: no solution. If b sin A < a < b: two possible triangles (ambiguous).'
       }
     }
   ]

@@ -71,23 +71,28 @@ Cardiac cycle: SA node pacemaker, atrial contraction, AV node delay, ventricular
       id: 'mcat-1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Cardiovascular System:',
-            options: ['Heart: 4 chambers; right side pumps to lungs (pulmonary), le', 'Cardiac cycle: SA node pacemaker, atrial contraction, AV nod', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Heart',
+            options: ['Blood pressure: systolic/diastolic; regulated by baroreceptors, RAAS, and ANP.', 'SA node pacemaker, atrial contraction, AV node delay, ventricular contraction.', 'Blood components: RBCs (O2 transport), WBCs (immunity), platelets (clotting), plasma (fluid).', '4 chambers; right side pumps to lungs (pulmonary), left side pumps to body (systemic).']
           },
           {
-            label: 'MCAT application:',
-            options: ['Blood pressure: systolic/diastolic; regulated by barorecepto', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Cardiac cycle',
+            options: ['Blood pressure: systolic/diastolic; regulated by baroreceptors, RAAS, and ANP.', '4 chambers; right side pumps to lungs (pulmonary), left side pumps to body (systemic).', 'SA node pacemaker, atrial contraction, AV node delay, ventricular contraction.', 'Blood components: RBCs (O2 transport), WBCs (immunity), platelets (clotting), plasma (fluid).']
+          },
+          {
+            label: 'Key Insight',
+            options: ['Blood pressure: systolic/diastolic; regulated by baroreceptors, RAAS, and ANP.', '4 chambers; right side pumps to lungs (pulmonary), left side pumps to body (systemic).', 'SA node pacemaker, atrial contraction, AV node delay, ventricular contraction.', 'Blood components: RBCs (O2 transport), WBCs (immunity), platelets (clotting), plasma (fluid).']
           }
         ],
-        correctAnswers: ['Heart: 4 chambers; right side pumps to lungs (pulmonary), le', 'Blood pressure: systolic/diastolic; regulated by barorecepto'],
-        hint1: 'Think about cardiovascular system',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Heart: 4 chambers; right side pumps to lungs (pulmonary), left side pumps to body (systemic). Blood pressure: systolic/diastolic; regulated by baroreceptors, RAAS, and ANP.'
+        correctAnswers: ['4 chambers; right side pumps to lungs (pulmonary), left side pumps to body (systemic).', 'SA node pacemaker, atrial contraction, AV node delay, ventricular contraction.', 'Blood pressure: systolic/diastolic; regulated by baroreceptors, RAAS, and ANP.'],
+        hint1: 'Think about what each concept specifically describes in Organ Systems.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Organ Systems describes a specific idea. Heart: 4 chambers; right side pumps to lungs (pulmonary), left side pumps to body (systemic). Cardiac cycle: SA node pacemaker, atrial contraction, AV node delay, ventricular contraction. Key Insight: Blood pressure: systolic/diastolic; regulated by baroreceptors, RAAS, and ANP.'
       }
     }
   ]

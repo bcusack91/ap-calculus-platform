@@ -30,31 +30,31 @@ v⃗ = |v⃗|cos θ i + |v⃗|sin θ j
       id: 'vecto3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of unit vectors & components?',
+            question: 'Which statement accurately explains Unit vector?',
             options: [
-              'Unit vector',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'magnitude 1; û = v⃗/|v⃗|',
+              'i = ⟨1,0⟩, j = ⟨0,1⟩',
+              'v⃗ = |v⃗|cos θ i + |v⃗|sin θ j',
+              'Any vector v⃗ = ⟨a,b⟩ = ai + bj'
             ],
             correctAnswer: 0,
-            explanation: 'Unit vector: magnitude 1; û = v⃗/|v⃗|'
+            explanation: 'Correct — Unit vector: magnitude 1; û = v⃗/|v⃗|. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of unit vectors & components, which is accurate?',
+            question: 'Select the statement that correctly describes Any vector v⃗ = ⟨a,b⟩ = ai + bj:',
             options: [
+              'v⃗ = |v⃗|cos θ i + |v⃗|sin θ j',
+              'magnitude 1; û = v⃗/|v⃗|',
               'Any vector v⃗ = ⟨a,b⟩ = ai + bj',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'i = ⟨1,0⟩, j = ⟨0,1⟩'
             ],
-            correctAnswer: 0,
-            explanation: 'Any vector v⃗ = ⟨a,b⟩ = ai + bj'
+            correctAnswer: 2,
+            explanation: 'Correct — Any vector v⃗ = ⟨a,b⟩ = ai + bj. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ v⃗ = |v⃗|cos θ i + |v⃗|sin θ j
       id: 'vecto3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Unit vector',
-            options: ['magnitude 1; û = v⃗/|v⃗|', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['Any vector v⃗ = ⟨a,b⟩ = ai + bj', 'i = ⟨1,0⟩, j = ⟨0,1⟩', 'v⃗ = |v⃗|cos θ i + |v⃗|sin θ j', 'magnitude 1; û = v⃗/|v⃗|']
           },
           {
             label: 'Standard unit vectors',
-            options: ['i = ⟨1,0⟩, j = ⟨0,1⟩', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['v⃗ = |v⃗|cos θ i + |v⃗|sin θ j', 'i = ⟨1,0⟩, j = ⟨0,1⟩', 'Any vector v⃗ = ⟨a,b⟩ = ai + bj', 'magnitude 1; û = v⃗/|v⃗|']
           },
           {
-            label: 'Any vector v⃗ = ⟨a,b⟩ = ai + bj',
-            options: ['Any vector v⃗ = ⟨a,b⟩ = ai + bj', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            label: 'Component form from magnitude and angle',
+            options: ['v⃗ = |v⃗|cos θ i + |v⃗|sin θ j', 'Any vector v⃗ = ⟨a,b⟩ = ai + bj', 'magnitude 1; û = v⃗/|v⃗|', 'i = ⟨1,0⟩, j = ⟨0,1⟩']
           }
         ],
-        correctAnswers: ['magnitude 1; û = v⃗/|v⃗|', 'i = ⟨1,0⟩, j = ⟨0,1⟩', 'Any vector v⃗ = ⟨a,b⟩ = ai + bj'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Unit Vectors & Components.'
+        correctAnswers: ['magnitude 1; û = v⃗/|v⃗|', 'i = ⟨1,0⟩, j = ⟨0,1⟩', 'v⃗ = |v⃗|cos θ i + |v⃗|sin θ j'],
+        hint1: 'Think about what each concept specifically describes in Unit Vectors & Components.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Unit Vectors & Components describes a specific idea. Unit vector: magnitude 1; û = v⃗/|v⃗|. Standard unit vectors: i = ⟨1,0⟩, j = ⟨0,1⟩. Component form from magnitude and angle: v⃗ = |v⃗|cos θ i + |v⃗|sin θ j.'
       }
     }
   ]

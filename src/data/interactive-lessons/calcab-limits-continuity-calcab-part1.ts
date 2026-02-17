@@ -30,31 +30,31 @@ Limits are the foundation of all calculus concepts
       id: 'limit1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of understanding limits?',
-            options: [
-              'A limit describes the value a function approaches as x approaches a specific value',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'A limit describes the value a function approaches as x approaches a specific value'
-          },
-          {
-            question: 'In the context of understanding limits, which is accurate?',
+            question: 'Which statement accurately explains A limit describes the value a function…?',
             options: [
               'A limit can exist even when f(c) is undefined or different from L',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'A limit describes the value a function approaches as x approaches a specific value',
+              'lim(x→c) f(x) = L means f(x) gets arbitrarily close to L as x → c',
+              'Limits are the foundation of all calculus concepts'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — A limit describes the value a function approaches as x approaches a specific value. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about A limit can exist even when f(c) is…?',
+            options: [
+              'A limit can exist even when f(c) is undefined or different from L',
+              'A limit describes the value a function approaches as x approaches a specific value',
+              'Limits are the foundation of all calculus concepts',
+              'lim(x→c) f(x) = L means f(x) gets arbitrarily close to L as x → c'
             ],
             correctAnswer: 0,
-            explanation: 'A limit can exist even when f(c) is undefined or different from L'
+            explanation: 'Correct — A limit can exist even when f(c) is undefined or different from L. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Limits are the foundation of all calculus concepts
       id: 'limit1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to understanding limits?',
+            question: 'Which statement about Limits are the foundation of all… is correct?',
             options: [
-              'Limits are the foundation of all calculus concepts',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'A limit describes the value a function approaches as x approaches a specific value',
+              'A limit can exist even when f(c) is undefined or different from L',
+              'lim(x→c) f(x) = L means f(x) gets arbitrarily close to L as x → c',
+              'Limits are the foundation of all calculus concepts'
             ],
-            correctAnswer: 0,
-            explanation: 'Limits are the foundation of all calculus concepts'
+            correctAnswer: 3,
+            explanation: 'Correct — Limits are the foundation of all calculus concepts. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Limits are the foundation of all calculus concepts
       id: 'limit1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'A limit describes the value a function approaches as x approaches a specific value',
-            options: ['A limit describes the value a function approaches ', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'A limit describes the value a function…',
+            options: ['Limits are the foundation of all calculus concepts', 'A limit can exist even when f(c) is undefined or different from L', 'lim(x→c) f(x) = L means f(x) gets arbitrarily close to L as x → c', 'A limit describes the value a function approaches as x approaches a specific value']
           },
           {
-            label: 'lim(x→c) f(x) = L means f(x) gets arbitrarily close to L as x → c',
-            options: ['lim(x→c) f(x) = L means f(x) gets arbitrarily clos', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'lim(x→c) f(x) = L means f(x) gets…',
+            options: ['Limits are the foundation of all calculus concepts', 'A limit can exist even when f(c) is undefined or different from L', 'lim(x→c) f(x) = L means f(x) gets arbitrarily close to L as x → c', 'A limit describes the value a function approaches as x approaches a specific value']
           },
           {
-            label: 'A limit can exist even when f(c) is undefined or different from L',
-            options: ['A limit can exist even when f(c) is undefined or d', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'A limit can exist even when f(c) is…',
+            options: ['lim(x→c) f(x) = L means f(x) gets arbitrarily close to L as x → c', 'A limit can exist even when f(c) is undefined or different from L', 'A limit describes the value a function approaches as x approaches a specific value', 'Limits are the foundation of all calculus concepts']
           }
         ],
-        correctAnswers: ['A limit describes the value a function approaches ', 'lim(x→c) f(x) = L means f(x) gets arbitrarily clos', 'A limit can exist even when f(c) is undefined or d'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Understanding Limits.'
+        correctAnswers: ['A limit describes the value a function approaches as x approaches a specific value', 'lim(x→c) f(x) = L means f(x) gets arbitrarily close to L as x → c', 'A limit can exist even when f(c) is undefined or different from L'],
+        hint1: 'Think about what each concept specifically describes in Limits Continuity.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Limits Continuity describes a specific idea. A limit describes the value a function approaches as x approaches a specific value. lim(x→c) f(x) = L means f(x) gets arbitrarily close to L as x → c. A limit can exist even when f(c) is undefined or different from L.'
       }
     }
   ]

@@ -19,31 +19,31 @@ export const bioEvidencePart3Data = {
       id: 'evid3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes dna sequence similarities indicate relatedness?',
+            question: 'What does "DNA sequence similarities indicate…" refer to in biology?',
             options: [
               'DNA sequence similarities indicate relatedness',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'mutation rate estimates divergence time',
+              'all life uses same codons',
+              'More similar sequences = more recent common ancestor'
             ],
             correctAnswer: 0,
-            explanation: 'DNA sequence similarities indicate relatedness'
+            explanation: 'Correct — DNA sequence similarities indicate relatedness. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of molecular evidence, which statement is accurate?',
+            question: 'Which of the following is true about Universal genetic code?',
             options: [
-              'Universal genetic code: all life uses same codons',
-              'ssendetaler etacidni seitiralimis ecneuqes AND',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'More similar sequences = more recent common ancestor',
+              'all life uses same codons',
+              'DNA sequence similarities indicate relatedness',
+              'mutation rate estimates divergence time'
             ],
-            correctAnswer: 0,
-            explanation: 'Universal genetic code: all life uses same codons'
+            correctAnswer: 1,
+            explanation: 'Correct — Universal genetic code: all life uses same codons. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioEvidencePart3Data = {
       id: 'evid3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to molecular evidence?',
+            question: 'Which statement about Molecular clocks is correct?',
             options: [
-              'Molecular clocks: mutation rate estimates divergence time',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'all life uses same codons',
+              'DNA sequence similarities indicate relatedness',
+              'More similar sequences = more recent common ancestor',
+              'mutation rate estimates divergence time'
             ],
-            correctAnswer: 0,
-            explanation: 'Molecular clocks: mutation rate estimates divergence time'
+            correctAnswer: 3,
+            explanation: 'Correct — Molecular clocks: mutation rate estimates divergence time. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,24 @@ export const bioEvidencePart3Data = {
       id: 'evid3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'DNA sequence similarities indicate relatedness is important in molecular evidence because',
-            options: ['DNA sequence similarities indicate relatedness', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Universal genetic code',
+            options: ['all life uses same codons', 'DNA sequence similarities indicate relatedness', 'More similar sequences = more recent common ancestor', 'mutation rate estimates divergence time']
           },
           {
-            label: 'More similar sequences = more recent common ancestor is important in molecular evidence because',
-            options: ['More similar sequences = more recent common ancest', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
-          },
-          {
-            label: 'Universal genetic code is important in molecular evidence because',
-            options: ['all life uses same codons', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Molecular clocks',
+            options: ['all life uses same codons', 'DNA sequence similarities indicate relatedness', 'mutation rate estimates divergence time', 'More similar sequences = more recent common ancestor']
           }
         ],
-        correctAnswers: ['DNA sequence similarities indicate relatedness', 'More similar sequences = more recent common ancest', 'all life uses same codons'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Molecular Evidence.'
+        correctAnswers: ['all life uses same codons', 'mutation rate estimates divergence time'],
+        hint1: 'Think about what each concept specifically describes in Molecular Evidence.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Molecular Evidence describes a specific idea. Universal genetic code: all life uses same codons. Molecular clocks: mutation rate estimates divergence time.'
       }
     }
   ]

@@ -30,31 +30,31 @@ forms 5- or 6-membered rings
       id: 'enola3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of aldol reaction?',
-            options: [
-              'Aldol reaction',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
-            ],
-            correctAnswer: 0,
-            explanation: 'Aldol reaction: enolate + carbonyl → β-hydroxy carbonyl'
-          },
-          {
-            question: 'In the context of aldol reaction, which is accurate?',
+            question: 'Which statement accurately explains Aldol reaction?',
             options: [
               'two different carbonyls (use LDA for control)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'heat eliminates water → α,β-unsaturated carbonyl',
+              'forms 5- or 6-membered rings',
+              'enolate + carbonyl → β-hydroxy carbonyl'
             ],
-            correctAnswer: 0,
-            explanation: 'Crossed aldol: two different carbonyls (use LDA for control)'
+            correctAnswer: 3,
+            explanation: 'Correct — Aldol reaction: enolate + carbonyl → β-hydroxy carbonyl. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Crossed aldol:',
+            options: [
+              'heat eliminates water → α,β-unsaturated carbonyl',
+              'enolate + carbonyl → β-hydroxy carbonyl',
+              'forms 5- or 6-membered rings',
+              'two different carbonyls (use LDA for control)'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Crossed aldol: two different carbonyls (use LDA for control). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ forms 5- or 6-membered rings
       id: 'enola3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Aldol reaction',
-            options: ['enolate + carbonyl → β-hydroxy carbonyl', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['two different carbonyls (use LDA for control)', 'enolate + carbonyl → β-hydroxy carbonyl', 'heat eliminates water → α,β-unsaturated carbonyl', 'forms 5- or 6-membered rings']
           },
           {
             label: 'Aldol condensation',
-            options: ['heat eliminates water → α,β-unsaturated carbonyl', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['forms 5- or 6-membered rings', 'enolate + carbonyl → β-hydroxy carbonyl', 'two different carbonyls (use LDA for control)', 'heat eliminates water → α,β-unsaturated carbonyl']
           },
           {
             label: 'Crossed aldol',
-            options: ['two different carbonyls (use LDA for control)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['heat eliminates water → α,β-unsaturated carbonyl', 'two different carbonyls (use LDA for control)', 'enolate + carbonyl → β-hydroxy carbonyl', 'forms 5- or 6-membered rings']
           }
         ],
         correctAnswers: ['enolate + carbonyl → β-hydroxy carbonyl', 'heat eliminates water → α,β-unsaturated carbonyl', 'two different carbonyls (use LDA for control)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Aldol Reaction.'
+        hint1: 'Think about what each concept specifically describes in Aldol Reaction.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Aldol Reaction describes a specific idea. Aldol reaction: enolate + carbonyl → β-hydroxy carbonyl. Aldol condensation: heat eliminates water → α,β-unsaturated carbonyl. Crossed aldol: two different carbonyls (use LDA for control).'
       }
     }
   ]

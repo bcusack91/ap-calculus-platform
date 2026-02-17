@@ -30,31 +30,31 @@ Polar axis is the positive x-axis direction
       id: 'polar1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of polar coordinate system?',
+            question: 'Which of the following correctly describes Polar coordinates?',
             options: [
-              'Polar coordinates',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              '(r, θ) = (r, θ + 2πn) = (-r, θ + π)',
+              '(r, θ) where r is distance from origin and θ is angle from positive x-axis',
+              'Pole is the origin (r = 0)',
+              'Polar axis is the positive x-axis direction'
             ],
-            correctAnswer: 0,
-            explanation: 'Polar coordinates: (r, θ) where r is distance from origin and θ is angle from positive x-axis'
+            correctAnswer: 1,
+            explanation: 'Correct — Polar coordinates: (r, θ) where r is distance from origin and θ is angle from positive x-axis. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of polar coordinate system, which is accurate?',
+            question: 'In the context of Polar Coordinates, which explains Pole is the origin (r = 0)?',
             options: [
-              'Pole is the origin (r = 0)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Polar axis is the positive x-axis direction',
+              '(r, θ) = (r, θ + 2πn) = (-r, θ + π)',
+              '(r, θ) where r is distance from origin and θ is angle from positive x-axis',
+              'Pole is the origin (r = 0)'
             ],
-            correctAnswer: 0,
-            explanation: 'Pole is the origin (r = 0)'
+            correctAnswer: 3,
+            explanation: 'Correct — Pole is the origin (r = 0). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,24 @@ Polar axis is the positive x-axis direction
       id: 'polar1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Polar coordinates',
-            options: ['(r, θ) where r is distance from origin and θ is an', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['(r, θ) where r is distance from origin and θ is angle from positive x-axis', 'Polar axis is the positive x-axis direction', 'Pole is the origin (r = 0)', '(r, θ) = (r, θ + 2πn) = (-r, θ + π)']
           },
           {
             label: 'Multiple representations',
-            options: ['(r, θ) = (r, θ + 2πn) = (-r, θ + π)', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
-          },
-          {
-            label: 'Pole is the origin (r = 0)',
-            options: ['Pole is the origin (r = 0)', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['(r, θ) = (r, θ + 2πn) = (-r, θ + π)', 'Pole is the origin (r = 0)', '(r, θ) where r is distance from origin and θ is angle from positive x-axis', 'Polar axis is the positive x-axis direction']
           }
         ],
-        correctAnswers: ['(r, θ) where r is distance from origin and θ is an', '(r, θ) = (r, θ + 2πn) = (-r, θ + π)', 'Pole is the origin (r = 0)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Polar Coordinate System.'
+        correctAnswers: ['(r, θ) where r is distance from origin and θ is angle from positive x-axis', '(r, θ) = (r, θ + 2πn) = (-r, θ + π)'],
+        hint1: 'Think about what each concept specifically describes in Polar Coordinates.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Polar Coordinates describes a specific idea. Polar coordinates: (r, θ) where r is distance from origin and θ is angle from positive x-axis. Multiple representations: (r, θ) = (r, θ + 2πn) = (-r, θ + π).'
       }
     }
   ]

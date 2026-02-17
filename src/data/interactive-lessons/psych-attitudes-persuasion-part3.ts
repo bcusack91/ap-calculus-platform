@@ -30,31 +30,31 @@ social learning, us vs them (ingroup bias), scapegoating
       id: 'attit3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of prejudice & discrimination?',
+            question: 'What does "Prejudice" refer to in psychology?',
             options: [
-              'Prejudice',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'unjustified negative behavior toward a group',
+              'generalized belief about a group',
+              'social learning, us vs them (ingroup bias), scapegoating',
+              'unjustified negative attitude toward a group'
             ],
-            correctAnswer: 0,
-            explanation: 'Prejudice: unjustified negative attitude toward a group'
+            correctAnswer: 3,
+            explanation: 'Correct — Prejudice: unjustified negative attitude toward a group. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of prejudice & discrimination, which is accurate?',
+            question: 'In the context of Prejudice & Discrimination, which explains Stereotype?',
             options: [
               'generalized belief about a group',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'unjustified negative attitude toward a group',
+              'unjustified negative behavior toward a group',
+              'social learning, us vs them (ingroup bias), scapegoating'
             ],
             correctAnswer: 0,
-            explanation: 'Stereotype: generalized belief about a group'
+            explanation: 'Correct — Stereotype: generalized belief about a group. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ social learning, us vs them (ingroup bias), scapegoating
       id: 'attit3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Prejudice',
-            options: ['unjustified negative attitude toward a group', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['social learning, us vs them (ingroup bias), scapegoating', 'generalized belief about a group', 'unjustified negative behavior toward a group', 'unjustified negative attitude toward a group']
           },
           {
             label: 'Discrimination',
-            options: ['unjustified negative behavior toward a group', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['unjustified negative behavior toward a group', 'social learning, us vs them (ingroup bias), scapegoating', 'unjustified negative attitude toward a group', 'generalized belief about a group']
           },
           {
             label: 'Stereotype',
-            options: ['generalized belief about a group', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['unjustified negative attitude toward a group', 'social learning, us vs them (ingroup bias), scapegoating', 'generalized belief about a group', 'unjustified negative behavior toward a group']
           }
         ],
         correctAnswers: ['unjustified negative attitude toward a group', 'unjustified negative behavior toward a group', 'generalized belief about a group'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Prejudice & Discrimination.'
+        hint1: 'Think about what each concept specifically describes in Prejudice & Discrimination.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Prejudice & Discrimination describes a specific idea. Prejudice: unjustified negative attitude toward a group. Discrimination: unjustified negative behavior toward a group. Stereotype: generalized belief about a group.'
       }
     }
   ]

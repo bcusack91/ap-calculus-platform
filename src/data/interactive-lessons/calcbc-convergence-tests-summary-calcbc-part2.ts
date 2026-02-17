@@ -30,31 +30,31 @@ These are the simplest tests — try them first
       id: 'conve2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of nth term & geometric tests?',
+            question: 'Which statement accurately explains nth Term (Divergence) Test?',
             options: [
-              'nth Term (Divergence) Test',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
+              'if lim aₙ ≠ 0 → diverges (but lim = 0 proves nothing)',
+              'These are the simplest tests — try them first',
+              'write Sₙ, cancel terms, take the limit',
+              'converges if |r| < 1, sum = a/(1-r)'
             ],
             correctAnswer: 0,
-            explanation: 'nth Term (Divergence) Test: if lim aₙ ≠ 0 → diverges (but lim = 0 proves nothing)'
+            explanation: 'Correct — nth Term (Divergence) Test: if lim aₙ ≠ 0 → diverges (but lim = 0 proves nothing). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of nth term & geometric tests, which is accurate?',
+            question: 'Which of the following is true about Telescoping?',
             options: [
               'write Sₙ, cancel terms, take the limit',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'These are the simplest tests — try them first',
+              'if lim aₙ ≠ 0 → diverges (but lim = 0 proves nothing)',
+              'converges if |r| < 1, sum = a/(1-r)'
             ],
             correctAnswer: 0,
-            explanation: 'Telescoping: write Sₙ, cancel terms, take the limit'
+            explanation: 'Correct — Telescoping: write Sₙ, cancel terms, take the limit. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ These are the simplest tests — try them first
       id: 'conve2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to nth term & geometric tests?',
+            question: 'Which of these accurately represents These are the simplest tests — try them…?',
             options: [
+              'converges if |r| < 1, sum = a/(1-r)',
               'These are the simplest tests — try them first',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'if lim aₙ ≠ 0 → diverges (but lim = 0 proves nothing)',
+              'write Sₙ, cancel terms, take the limit'
             ],
-            correctAnswer: 0,
-            explanation: 'These are the simplest tests — try them first'
+            correctAnswer: 1,
+            explanation: 'Correct — These are the simplest tests — try them first. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ These are the simplest tests — try them first
       id: 'conve2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'nth Term (Divergence) Test',
-            options: ['if lim aₙ ≠ 0 → diverges (but lim = 0 proves nothi', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['These are the simplest tests — try them first', 'converges if |r| < 1, sum = a/(1-r)', 'if lim aₙ ≠ 0 → diverges (but lim = 0 proves nothing)', 'write Sₙ, cancel terms, take the limit']
           },
           {
             label: 'Geometric series',
-            options: ['converges if |r| < 1, sum = a/(1-r)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['These are the simplest tests — try them first', 'converges if |r| < 1, sum = a/(1-r)', 'write Sₙ, cancel terms, take the limit', 'if lim aₙ ≠ 0 → diverges (but lim = 0 proves nothing)']
           },
           {
             label: 'Telescoping',
-            options: ['write Sₙ, cancel terms, take the limit', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['converges if |r| < 1, sum = a/(1-r)', 'if lim aₙ ≠ 0 → diverges (but lim = 0 proves nothing)', 'These are the simplest tests — try them first', 'write Sₙ, cancel terms, take the limit']
           }
         ],
-        correctAnswers: ['if lim aₙ ≠ 0 → diverges (but lim = 0 proves nothi', 'converges if |r| < 1, sum = a/(1-r)', 'write Sₙ, cancel terms, take the limit'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding nth Term & Geometric Tests.'
+        correctAnswers: ['if lim aₙ ≠ 0 → diverges (but lim = 0 proves nothing)', 'converges if |r| < 1, sum = a/(1-r)', 'write Sₙ, cancel terms, take the limit'],
+        hint1: 'Think about what each concept specifically describes in nth Term & Geometric Tests.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in nth Term & Geometric Tests describes a specific idea. nth Term (Divergence) Test: if lim aₙ ≠ 0 → diverges (but lim = 0 proves nothing). Geometric series: converges if |r| < 1, sum = a/(1-r). Telescoping: write Sₙ, cancel terms, take the limit.'
       }
     }
   ]

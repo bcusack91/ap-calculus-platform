@@ -30,31 +30,31 @@ check if Σ|aₙ| converges or just Σaₙ
       id: 'conve6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of problem-solving workshop?',
-            options: [
-              'Ratio Test',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'Ratio Test: L = lim|aₙ₊₁/aₙ|; L<1 converges, L>1 diverges, L=1 inconclusive'
-          },
-          {
-            question: 'In the context of problem-solving workshop, which is accurate?',
+            question: 'What does "Ratio Test" refer to in calculus?',
             options: [
               'Σ(-1)ⁿbₙ converges if bₙ decreasing → 0',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'L = lim|aₙ₊₁/aₙ|; L<1 converges, L>1 diverges, L=1 inconclusive',
+              'L = lim|aₙ|^(1/n); same rules',
+              'check if Σ|aₙ| converges or just Σaₙ'
             ],
-            correctAnswer: 0,
-            explanation: 'AST: Σ(-1)ⁿbₙ converges if bₙ decreasing → 0'
+            correctAnswer: 1,
+            explanation: 'Correct — Ratio Test: L = lim|aₙ₊₁/aₙ|; L<1 converges, L>1 diverges, L=1 inconclusive. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes AST:',
+            options: [
+              'L = lim|aₙ₊₁/aₙ|; L<1 converges, L>1 diverges, L=1 inconclusive',
+              'check if Σ|aₙ| converges or just Σaₙ',
+              'Σ(-1)ⁿbₙ converges if bₙ decreasing → 0',
+              'L = lim|aₙ|^(1/n); same rules'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — AST: Σ(-1)ⁿbₙ converges if bₙ decreasing → 0. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ check if Σ|aₙ| converges or just Σaₙ
       id: 'conve6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to problem-solving workshop?',
+            question: 'Regarding Problem-Solving Workshop, which correctly describes Absolute vs conditional?',
             options: [
+              'L = lim|aₙ₊₁/aₙ|; L<1 converges, L>1 diverges, L=1 inconclusive',
               'check if Σ|aₙ| converges or just Σaₙ',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'Σ(-1)ⁿbₙ converges if bₙ decreasing → 0',
+              'L = lim|aₙ|^(1/n); same rules'
             ],
-            correctAnswer: 0,
-            explanation: 'Absolute vs conditional: check if Σ|aₙ| converges or just Σaₙ'
+            correctAnswer: 1,
+            explanation: 'Correct — Absolute vs conditional: check if Σ|aₙ| converges or just Σaₙ. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ check if Σ|aₙ| converges or just Σaₙ
       id: 'conve6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Ratio Test',
-            options: ['L = lim|aₙ₊₁/aₙ|; L<1 converges, L>1 diverges, L=1', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['check if Σ|aₙ| converges or just Σaₙ', 'Σ(-1)ⁿbₙ converges if bₙ decreasing → 0', 'L = lim|aₙ|^(1/n); same rules', 'L = lim|aₙ₊₁/aₙ|; L<1 converges, L>1 diverges, L=1 inconclusive']
           },
           {
             label: 'Root Test',
-            options: ['L = lim|aₙ|^(1/n); same rules', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['L = lim|aₙ₊₁/aₙ|; L<1 converges, L>1 diverges, L=1 inconclusive', 'check if Σ|aₙ| converges or just Σaₙ', 'L = lim|aₙ|^(1/n); same rules', 'Σ(-1)ⁿbₙ converges if bₙ decreasing → 0']
           },
           {
             label: 'AST',
-            options: ['Σ(-1)ⁿbₙ converges if bₙ decreasing → 0', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['check if Σ|aₙ| converges or just Σaₙ', 'Σ(-1)ⁿbₙ converges if bₙ decreasing → 0', 'L = lim|aₙ|^(1/n); same rules', 'L = lim|aₙ₊₁/aₙ|; L<1 converges, L>1 diverges, L=1 inconclusive']
           }
         ],
-        correctAnswers: ['L = lim|aₙ₊₁/aₙ|; L<1 converges, L>1 diverges, L=1', 'L = lim|aₙ|^(1/n); same rules', 'Σ(-1)ⁿbₙ converges if bₙ decreasing → 0'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving Workshop.'
+        correctAnswers: ['L = lim|aₙ₊₁/aₙ|; L<1 converges, L>1 diverges, L=1 inconclusive', 'L = lim|aₙ|^(1/n); same rules', 'Σ(-1)ⁿbₙ converges if bₙ decreasing → 0'],
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Ratio Test: L = lim|aₙ₊₁/aₙ|; L<1 converges, L>1 diverges, L=1 inconclusive. Root Test: L = lim|aₙ|^(1/n); same rules. AST: Σ(-1)ⁿbₙ converges if bₙ decreasing → 0.'
       }
     }
   ]

@@ -30,31 +30,31 @@ evaluate dy/dx at that t
       id: 'param2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of derivatives of parametric curves?',
+            question: 'Which of the following correctly describes dy/dx = (dy/dt)/(dx/dt) — ratio of…?',
             options: [
+              'evaluate dy/dx at that t',
               'dy/dx = (dy/dt)/(dx/dt) — ratio of derivatives with respect to t',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
+              'dx/dt = 0 (and dy/dt ≠ 0)',
+              'dy/dt = 0 (and dx/dt ≠ 0)'
             ],
-            correctAnswer: 0,
-            explanation: 'dy/dx = (dy/dt)/(dx/dt) — ratio of derivatives with respect to t'
+            correctAnswer: 1,
+            explanation: 'Correct — dy/dx = (dy/dt)/(dx/dt) — ratio of derivatives with respect to t. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of derivatives of parametric curves, which is accurate?',
+            question: 'In the context of Derivatives of Parametric Curves, which explains Vertical tangent?',
             options: [
               'dx/dt = 0 (and dy/dt ≠ 0)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'dy/dx = (dy/dt)/(dx/dt) — ratio of derivatives with respect to t',
+              'evaluate dy/dx at that t',
+              'dy/dt = 0 (and dx/dt ≠ 0)'
             ],
             correctAnswer: 0,
-            explanation: 'Vertical tangent: dx/dt = 0 (and dy/dt ≠ 0)'
+            explanation: 'Correct — Vertical tangent: dx/dt = 0 (and dy/dt ≠ 0). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ evaluate dy/dx at that t
       id: 'param2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to derivatives of parametric curves?',
+            question: 'Regarding Derivatives of Parametric Curves, which correctly describes Slope of tangent at a specific t?',
             options: [
-              'evaluate dy/dx at that t',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'dy/dt = 0 (and dx/dt ≠ 0)',
+              'dy/dx = (dy/dt)/(dx/dt) — ratio of derivatives with respect to t',
+              'dx/dt = 0 (and dy/dt ≠ 0)',
+              'evaluate dy/dx at that t'
             ],
-            correctAnswer: 0,
-            explanation: 'Slope of tangent at a specific t: evaluate dy/dx at that t'
+            correctAnswer: 3,
+            explanation: 'Correct — Slope of tangent at a specific t: evaluate dy/dx at that t. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ evaluate dy/dx at that t
       id: 'param2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'dy/dx = (dy/dt)/(dx/dt) — ratio of derivatives with respect to t',
-            options: ['dy/dx = (dy/dt)/(dx/dt) — ratio of derivatives wit', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
-          },
-          {
             label: 'Horizontal tangent',
-            options: ['dy/dt = 0 (and dx/dt ≠ 0)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['dx/dt = 0 (and dy/dt ≠ 0)', 'evaluate dy/dx at that t', 'dy/dx = (dy/dt)/(dx/dt) — ratio of derivatives with respect to t', 'dy/dt = 0 (and dx/dt ≠ 0)']
           },
           {
             label: 'Vertical tangent',
-            options: ['dx/dt = 0 (and dy/dt ≠ 0)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['dy/dt = 0 (and dx/dt ≠ 0)', 'evaluate dy/dx at that t', 'dx/dt = 0 (and dy/dt ≠ 0)', 'dy/dx = (dy/dt)/(dx/dt) — ratio of derivatives with respect to t']
+          },
+          {
+            label: 'Slope of tangent at a specific t',
+            options: ['dy/dt = 0 (and dx/dt ≠ 0)', 'dy/dx = (dy/dt)/(dx/dt) — ratio of derivatives with respect to t', 'evaluate dy/dx at that t', 'dx/dt = 0 (and dy/dt ≠ 0)']
           }
         ],
-        correctAnswers: ['dy/dx = (dy/dt)/(dx/dt) — ratio of derivatives wit', 'dy/dt = 0 (and dx/dt ≠ 0)', 'dx/dt = 0 (and dy/dt ≠ 0)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Derivatives of Parametric Curves.'
+        correctAnswers: ['dy/dt = 0 (and dx/dt ≠ 0)', 'dx/dt = 0 (and dy/dt ≠ 0)', 'evaluate dy/dx at that t'],
+        hint1: 'Think about what each concept specifically describes in Derivatives of Parametric Curves.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Derivatives of Parametric Curves describes a specific idea. Horizontal tangent: dy/dt = 0 (and dx/dt ≠ 0). Vertical tangent: dx/dt = 0 (and dy/dt ≠ 0). Slope of tangent at a specific t: evaluate dy/dx at that t.'
       }
     }
   ]

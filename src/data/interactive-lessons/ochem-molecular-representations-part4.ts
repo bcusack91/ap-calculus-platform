@@ -30,31 +30,31 @@ Benzene ring = 4 DoU
       id: 'molec4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of degrees of unsaturation?',
+            question: 'Which of the following correctly describes Degrees of unsaturation (DoU) = (2C + 2…?',
             options: [
-              'Degrees of unsaturation (DoU) = (2C + 2 + N - H - X) / 2',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              '1 DoU = one ring OR one double bond',
+              '2 DoU = two double bonds, one triple bond, or ring + double bond',
+              'Benzene ring = 4 DoU',
+              'Degrees of unsaturation (DoU) = (2C + 2 + N - H - X) / 2'
             ],
-            correctAnswer: 0,
-            explanation: 'Degrees of unsaturation (DoU) = (2C + 2 + N - H - X) / 2'
+            correctAnswer: 3,
+            explanation: 'Correct — Degrees of unsaturation (DoU) = (2C + 2 + N - H - X) / 2. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of degrees of unsaturation, which is accurate?',
+            question: 'Select the statement that correctly describes 2 DoU = two double bonds, one triple…:',
             options: [
-              '2 DoU = two double bonds, one triple bond, or ring + double bond',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Degrees of unsaturation (DoU) = (2C + 2 + N - H - X) / 2',
+              '1 DoU = one ring OR one double bond',
+              'Benzene ring = 4 DoU',
+              '2 DoU = two double bonds, one triple bond, or ring + double bond'
             ],
-            correctAnswer: 0,
-            explanation: '2 DoU = two double bonds, one triple bond, or ring + double bond'
+            correctAnswer: 3,
+            explanation: 'Correct — 2 DoU = two double bonds, one triple bond, or ring + double bond. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Benzene ring = 4 DoU
       id: 'molec4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Degrees of unsaturation (DoU) = (2C + 2 + N - H - X) / 2',
-            options: ['Degrees of unsaturation (DoU) = (2C + 2 + N - H - ', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Degrees of unsaturation (DoU) = (2C + 2…',
+            options: ['1 DoU = one ring OR one double bond', 'Degrees of unsaturation (DoU) = (2C + 2 + N - H - X) / 2', 'Benzene ring = 4 DoU', '2 DoU = two double bonds, one triple bond, or ring + double bond']
           },
           {
             label: '1 DoU = one ring OR one double bond',
-            options: ['1 DoU = one ring OR one double bond', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['2 DoU = two double bonds, one triple bond, or ring + double bond', '1 DoU = one ring OR one double bond', 'Benzene ring = 4 DoU', 'Degrees of unsaturation (DoU) = (2C + 2 + N - H - X) / 2']
           },
           {
-            label: '2 DoU = two double bonds, one triple bond, or ring + double bond',
-            options: ['2 DoU = two double bonds, one triple bond, or ring', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: '2 DoU = two double bonds, one triple…',
+            options: ['2 DoU = two double bonds, one triple bond, or ring + double bond', 'Benzene ring = 4 DoU', '1 DoU = one ring OR one double bond', 'Degrees of unsaturation (DoU) = (2C + 2 + N - H - X) / 2']
           }
         ],
-        correctAnswers: ['Degrees of unsaturation (DoU) = (2C + 2 + N - H - ', '1 DoU = one ring OR one double bond', '2 DoU = two double bonds, one triple bond, or ring'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Degrees of Unsaturation.'
+        correctAnswers: ['Degrees of unsaturation (DoU) = (2C + 2 + N - H - X) / 2', '1 DoU = one ring OR one double bond', '2 DoU = two double bonds, one triple bond, or ring + double bond'],
+        hint1: 'Think about what each concept specifically describes in Degrees of Unsaturation.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Degrees of Unsaturation describes a specific idea. Degrees of unsaturation (DoU) = (2C + 2 + N - H - X) / 2. 1 DoU = one ring OR one double bond. 2 DoU = two double bonds, one triple bond, or ring + double bond.'
       }
     }
   ]

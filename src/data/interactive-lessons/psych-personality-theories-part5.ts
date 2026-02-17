@@ -30,31 +30,31 @@ vulnerable to social desirability bias
       id: 'perso5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of personality assessment?',
+            question: 'Which of the following correctly describes Projective tests?',
             options: [
-              'Projective tests',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'MMPI, Big Five questionnaire (objective)',
+              'This is a common misconception about the topic',
+              'Rorschach inkblot, TAT (reveal unconscious)',
+              'vulnerable to social desirability bias'
             ],
-            correctAnswer: 0,
-            explanation: 'Projective tests: Rorschach inkblot, TAT (reveal unconscious)'
+            correctAnswer: 2,
+            explanation: 'Correct — Projective tests: Rorschach inkblot, TAT (reveal unconscious). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of personality assessment, which is accurate?',
+            question: 'Which of the following is true about Projective tests?',
             options: [
               'low reliability and validity',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'vulnerable to social desirability bias',
+              'This is a common misconception about the topic',
+              'MMPI, Big Five questionnaire (objective)'
             ],
             correctAnswer: 0,
-            explanation: 'Projective tests: low reliability and validity'
+            explanation: 'Correct — Projective tests: low reliability and validity. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ vulnerable to social desirability bias
       id: 'perso5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Projective tests',
-            options: ['Rorschach inkblot, TAT (reveal unconscious)', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['vulnerable to social desirability bias', 'low reliability and validity', 'MMPI, Big Five questionnaire (objective)', 'Rorschach inkblot, TAT (reveal unconscious)']
           },
           {
             label: 'Self-report inventories',
-            options: ['MMPI, Big Five questionnaire (objective)', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Rorschach inkblot, TAT (reveal unconscious)', 'low reliability and validity', 'MMPI, Big Five questionnaire (objective)', 'vulnerable to social desirability bias']
           },
           {
             label: 'Projective tests',
-            options: ['low reliability and validity', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['vulnerable to social desirability bias', 'Rorschach inkblot, TAT (reveal unconscious)', 'MMPI, Big Five questionnaire (objective)', 'low reliability and validity']
           }
         ],
         correctAnswers: ['Rorschach inkblot, TAT (reveal unconscious)', 'MMPI, Big Five questionnaire (objective)', 'low reliability and validity'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Personality Assessment.'
+        hint1: 'Think about what each concept specifically describes in Personality Assessment.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Personality Assessment describes a specific idea. Projective tests: Rorschach inkblot, TAT (reveal unconscious). Self-report inventories: MMPI, Big Five questionnaire (objective). Projective tests: low reliability and validity.'
       }
     }
   ]

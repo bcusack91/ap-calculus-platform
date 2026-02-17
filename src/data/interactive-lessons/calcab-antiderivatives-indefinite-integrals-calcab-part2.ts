@@ -30,31 +30,31 @@ export const calcABAntiderivativesPart2Data = {
       id: 'antid2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of basic integration rules?',
-            options: [
-              'Power Rule for integration',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'Power Rule for integration: ∫xⁿ dx = x^(n+1)/(n+1) + C, n ≠ -1'
-          },
-          {
-            question: 'In the context of basic integration rules, which is accurate?',
+            question: 'Which statement accurately explains Power Rule for integration?',
             options: [
               '∫dx = x + C; ∫k dx = kx + C',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              '∫xⁿ dx = x^(n+1)/(n+1) + C, n ≠ -1',
+              '∫[f(x) ± g(x)]dx = ∫f(x)dx ± ∫g(x)dx',
+              '∫1/x dx = ln|x| + C (the case n = -1)'
             ],
-            correctAnswer: 0,
-            explanation: '∫dx = x + C; ∫k dx = kx + C'
+            correctAnswer: 1,
+            explanation: 'Correct — Power Rule for integration: ∫xⁿ dx = x^(n+1)/(n+1) + C, n ≠ -1. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Basic Integration Rules, which explains ∫dx = x + C; ∫k dx = kx + C?',
+            options: [
+              '∫1/x dx = ln|x| + C (the case n = -1)',
+              '∫xⁿ dx = x^(n+1)/(n+1) + C, n ≠ -1',
+              '∫[f(x) ± g(x)]dx = ∫f(x)dx ± ∫g(x)dx',
+              '∫dx = x + C; ∫k dx = kx + C'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — ∫dx = x + C; ∫k dx = kx + C. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ export const calcABAntiderivativesPart2Data = {
       id: 'antid2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to basic integration rules?',
+            question: 'Regarding Basic Integration Rules, which correctly describes Sum/Difference rule?',
             options: [
+              '∫1/x dx = ln|x| + C (the case n = -1)',
               '∫[f(x) ± g(x)]dx = ∫f(x)dx ± ∫g(x)dx',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              '∫dx = x + C; ∫k dx = kx + C',
+              '∫xⁿ dx = x^(n+1)/(n+1) + C, n ≠ -1'
             ],
-            correctAnswer: 0,
-            explanation: 'Sum/Difference rule: ∫[f(x) ± g(x)]dx = ∫f(x)dx ± ∫g(x)dx'
+            correctAnswer: 1,
+            explanation: 'Correct — Sum/Difference rule: ∫[f(x) ± g(x)]dx = ∫f(x)dx ± ∫g(x)dx. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,24 @@ export const calcABAntiderivativesPart2Data = {
       id: 'antid2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Power Rule for integration',
-            options: ['∫xⁿ dx = x^(n+1)/(n+1) + C, n ≠ -1', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['∫xⁿ dx = x^(n+1)/(n+1) + C, n ≠ -1', '∫[f(x) ± g(x)]dx = ∫f(x)dx ± ∫g(x)dx', '∫1/x dx = ln|x| + C (the case n = -1)', '∫dx = x + C; ∫k dx = kx + C']
           },
           {
-            label: '∫1/x dx = ln|x| + C (the case n = -1)',
-            options: ['∫1/x dx = ln|x| + C (the case n = -1)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
-          },
-          {
-            label: '∫dx = x + C; ∫k dx = kx + C',
-            options: ['∫dx = x + C; ∫k dx = kx + C', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Sum/Difference rule',
+            options: ['∫dx = x + C; ∫k dx = kx + C', '∫[f(x) ± g(x)]dx = ∫f(x)dx ± ∫g(x)dx', '∫xⁿ dx = x^(n+1)/(n+1) + C, n ≠ -1', '∫1/x dx = ln|x| + C (the case n = -1)']
           }
         ],
-        correctAnswers: ['∫xⁿ dx = x^(n+1)/(n+1) + C, n ≠ -1', '∫1/x dx = ln|x| + C (the case n = -1)', '∫dx = x + C; ∫k dx = kx + C'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Basic Integration Rules.'
+        correctAnswers: ['∫xⁿ dx = x^(n+1)/(n+1) + C, n ≠ -1', '∫[f(x) ± g(x)]dx = ∫f(x)dx ± ∫g(x)dx'],
+        hint1: 'Think about what each concept specifically describes in Basic Integration Rules.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Basic Integration Rules describes a specific idea. Power Rule for integration: ∫xⁿ dx = x^(n+1)/(n+1) + C, n ≠ -1. Sum/Difference rule: ∫[f(x) ± g(x)]dx = ∫f(x)dx ± ∫g(x)dx.'
       }
     }
   ]

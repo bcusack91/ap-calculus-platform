@@ -30,31 +30,31 @@ Equilibrium favors the weaker acid/base side
       id: 'acids2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of pka & acid strength?',
+            question: 'What does "Ka = [H⁺][A⁻]/[HA]; pKa = -log(Ka)" refer to in this topic?',
             options: [
+              'Equilibrium favors the weaker acid/base side',
               'Ka = [H⁺][A⁻]/[HA]; pKa = -log(Ka)',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'HI (~-10) to CH₄ (~50)',
+              'Lower pKa = stronger acid'
             ],
-            correctAnswer: 0,
-            explanation: 'Ka = [H⁺][A⁻]/[HA]; pKa = -log(Ka)'
+            correctAnswer: 1,
+            explanation: 'Correct — Ka = [H⁺][A⁻]/[HA]; pKa = -log(Ka). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of pka & acid strength, which is accurate?',
+            question: 'In the context of pKa & Acid Strength, which explains pKa scale?',
             options: [
               'HI (~-10) to CH₄ (~50)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Ka = [H⁺][A⁻]/[HA]; pKa = -log(Ka)',
+              'Equilibrium favors the weaker acid/base side',
+              'Lower pKa = stronger acid'
             ],
             correctAnswer: 0,
-            explanation: 'pKa scale: HI (~-10) to CH₄ (~50)'
+            explanation: 'Correct — pKa scale: HI (~-10) to CH₄ (~50). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Equilibrium favors the weaker acid/base side
       id: 'acids2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Ka = [H⁺][A⁻]/[HA]; pKa = -log(Ka)',
-            options: ['Ka = [H⁺][A⁻]/[HA]; pKa = -log(Ka)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Equilibrium favors the weaker acid/base side', 'HI (~-10) to CH₄ (~50)', 'Ka = [H⁺][A⁻]/[HA]; pKa = -log(Ka)', 'Lower pKa = stronger acid']
           },
           {
             label: 'Lower pKa = stronger acid',
-            options: ['Lower pKa = stronger acid', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['HI (~-10) to CH₄ (~50)', 'Equilibrium favors the weaker acid/base side', 'Ka = [H⁺][A⁻]/[HA]; pKa = -log(Ka)', 'Lower pKa = stronger acid']
           },
           {
             label: 'pKa scale',
-            options: ['HI (~-10) to CH₄ (~50)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Ka = [H⁺][A⁻]/[HA]; pKa = -log(Ka)', 'Equilibrium favors the weaker acid/base side', 'Lower pKa = stronger acid', 'HI (~-10) to CH₄ (~50)']
           }
         ],
         correctAnswers: ['Ka = [H⁺][A⁻]/[HA]; pKa = -log(Ka)', 'Lower pKa = stronger acid', 'HI (~-10) to CH₄ (~50)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding pKa & Acid Strength.'
+        hint1: 'Think about what each concept specifically describes in pKa & Acid Strength.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in pKa & Acid Strength describes a specific idea. Ka = [H⁺][A⁻]/[HA]; pKa = -log(Ka). Lower pKa = stronger acid. pKa scale: HI (~-10) to CH₄ (~50).'
       }
     }
   ]

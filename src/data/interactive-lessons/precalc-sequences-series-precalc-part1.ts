@@ -30,31 +30,31 @@ Sequences can be finite or infinite
       id: 'seque1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of sequences & notation?',
+            question: 'Which of the following correctly describes Sequence?',
             options: [
-              'Sequence',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'an ordered list of numbers following a pattern',
+              'Sequences can be finite or infinite',
+              'aₙ = f(aₙ₋₁) defines each term from the previous',
+              'aₙ = f(n) gives the nth term directly'
             ],
             correctAnswer: 0,
-            explanation: 'Sequence: an ordered list of numbers following a pattern'
+            explanation: 'Correct — Sequence: an ordered list of numbers following a pattern. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of sequences & notation, which is accurate?',
+            question: 'Which of the following is true about Recursive formula?',
             options: [
-              'aₙ = f(aₙ₋₁) defines each term from the previous',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'an ordered list of numbers following a pattern',
+              'Sequences can be finite or infinite',
+              'aₙ = f(n) gives the nth term directly',
+              'aₙ = f(aₙ₋₁) defines each term from the previous'
             ],
-            correctAnswer: 0,
-            explanation: 'Recursive formula: aₙ = f(aₙ₋₁) defines each term from the previous'
+            correctAnswer: 3,
+            explanation: 'Correct — Recursive formula: aₙ = f(aₙ₋₁) defines each term from the previous. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Sequences can be finite or infinite
       id: 'seque1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Sequence',
-            options: ['an ordered list of numbers following a pattern', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['Sequences can be finite or infinite', 'aₙ = f(n) gives the nth term directly', 'aₙ = f(aₙ₋₁) defines each term from the previous', 'an ordered list of numbers following a pattern']
           },
           {
             label: 'Explicit formula',
-            options: ['aₙ = f(n) gives the nth term directly', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['an ordered list of numbers following a pattern', 'Sequences can be finite or infinite', 'aₙ = f(n) gives the nth term directly', 'aₙ = f(aₙ₋₁) defines each term from the previous']
           },
           {
             label: 'Recursive formula',
-            options: ['aₙ = f(aₙ₋₁) defines each term from the previous', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['an ordered list of numbers following a pattern', 'aₙ = f(n) gives the nth term directly', 'aₙ = f(aₙ₋₁) defines each term from the previous', 'Sequences can be finite or infinite']
           }
         ],
         correctAnswers: ['an ordered list of numbers following a pattern', 'aₙ = f(n) gives the nth term directly', 'aₙ = f(aₙ₋₁) defines each term from the previous'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Sequences & Notation.'
+        hint1: 'Think about what each concept specifically describes in Sequences Series.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Sequences Series describes a specific idea. Sequence: an ordered list of numbers following a pattern. Explicit formula: aₙ = f(n) gives the nth term directly. Recursive formula: aₙ = f(aₙ₋₁) defines each term from the previous.'
       }
     }
   ]

@@ -30,31 +30,31 @@ r⃗(t) = r⃗(t₀) + ∫_(t₀)^t v⃗(s)ds
       id: 'vecto3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of integrals of vector functions?',
+            question: 'Which statement accurately explains ∫r⃗(t)dt = ⟨∫f(t)dt, ∫g(t)dt⟩ —…?',
             options: [
+              '∫ₐᵇ r⃗(t)dt = ⟨∫ₐᵇ f(t)dt, ∫ₐᵇ g(t)dt⟩',
               '∫r⃗(t)dt = ⟨∫f(t)dt, ∫g(t)dt⟩ — integrate component by component',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
+              'r⃗(t) = r⃗(t₀) + ∫_(t₀)^t v⃗(s)ds',
+              'The result is a vector'
             ],
-            correctAnswer: 0,
-            explanation: '∫r⃗(t)dt = ⟨∫f(t)dt, ∫g(t)dt⟩ — integrate component by component'
+            correctAnswer: 1,
+            explanation: 'Correct — ∫r⃗(t)dt = ⟨∫f(t)dt, ∫g(t)dt⟩ — integrate component by component. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of integrals of vector functions, which is accurate?',
+            question: 'Which of the following is true about The result is a vector?',
             options: [
-              'The result is a vector',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'r⃗(t) = r⃗(t₀) + ∫_(t₀)^t v⃗(s)ds',
+              '∫r⃗(t)dt = ⟨∫f(t)dt, ∫g(t)dt⟩ — integrate component by component',
+              '∫ₐᵇ r⃗(t)dt = ⟨∫ₐᵇ f(t)dt, ∫ₐᵇ g(t)dt⟩',
+              'The result is a vector'
             ],
-            correctAnswer: 0,
-            explanation: 'The result is a vector'
+            correctAnswer: 3,
+            explanation: 'Correct — The result is a vector. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ r⃗(t) = r⃗(t₀) + ∫_(t₀)^t v⃗(s)ds
       id: 'vecto3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to integrals of vector functions?',
+            question: 'Regarding Integrals of Vector Functions, which correctly describes Position from velocity?',
             options: [
               'r⃗(t) = r⃗(t₀) + ∫_(t₀)^t v⃗(s)ds',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              '∫r⃗(t)dt = ⟨∫f(t)dt, ∫g(t)dt⟩ — integrate component by component',
+              '∫ₐᵇ r⃗(t)dt = ⟨∫ₐᵇ f(t)dt, ∫ₐᵇ g(t)dt⟩',
+              'The result is a vector'
             ],
             correctAnswer: 0,
-            explanation: 'Position from velocity: r⃗(t) = r⃗(t₀) + ∫_(t₀)^t v⃗(s)ds'
+            explanation: 'Correct — Position from velocity: r⃗(t) = r⃗(t₀) + ∫_(t₀)^t v⃗(s)ds. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,24 @@ r⃗(t) = r⃗(t₀) + ∫_(t₀)^t v⃗(s)ds
       id: 'vecto3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: '∫r⃗(t)dt = ⟨∫f(t)dt, ∫g(t)dt⟩ — integrate component by component',
-            options: ['∫r⃗(t)dt = ⟨∫f(t)dt, ∫g(t)dt⟩ — integrate componen', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
-          },
-          {
             label: 'Definite integral',
-            options: ['∫ₐᵇ r⃗(t)dt = ⟨∫ₐᵇ f(t)dt, ∫ₐᵇ g(t)dt⟩', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['The result is a vector', 'r⃗(t) = r⃗(t₀) + ∫_(t₀)^t v⃗(s)ds', '∫ₐᵇ r⃗(t)dt = ⟨∫ₐᵇ f(t)dt, ∫ₐᵇ g(t)dt⟩', '∫r⃗(t)dt = ⟨∫f(t)dt, ∫g(t)dt⟩ — integrate component by component']
           },
           {
-            label: 'The result is a vector',
-            options: ['The result is a vector', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Position from velocity',
+            options: ['∫r⃗(t)dt = ⟨∫f(t)dt, ∫g(t)dt⟩ — integrate component by component', '∫ₐᵇ r⃗(t)dt = ⟨∫ₐᵇ f(t)dt, ∫ₐᵇ g(t)dt⟩', 'r⃗(t) = r⃗(t₀) + ∫_(t₀)^t v⃗(s)ds', 'The result is a vector']
           }
         ],
-        correctAnswers: ['∫r⃗(t)dt = ⟨∫f(t)dt, ∫g(t)dt⟩ — integrate componen', '∫ₐᵇ r⃗(t)dt = ⟨∫ₐᵇ f(t)dt, ∫ₐᵇ g(t)dt⟩', 'The result is a vector'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Integrals of Vector Functions.'
+        correctAnswers: ['∫ₐᵇ r⃗(t)dt = ⟨∫ₐᵇ f(t)dt, ∫ₐᵇ g(t)dt⟩', 'r⃗(t) = r⃗(t₀) + ∫_(t₀)^t v⃗(s)ds'],
+        hint1: 'Think about what each concept specifically describes in Integrals of Vector Functions.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Integrals of Vector Functions describes a specific idea. Definite integral: ∫ₐᵇ r⃗(t)dt = ⟨∫ₐᵇ f(t)dt, ∫ₐᵇ g(t)dt⟩. Position from velocity: r⃗(t) = r⃗(t₀) + ∫_(t₀)^t v⃗(s)ds.'
       }
     }
   ]

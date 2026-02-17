@@ -30,31 +30,31 @@ SN1/SN2/E1/E2 decision flowchart
       id: 'elimi7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of synthesis & review?',
+            question: 'What does "Elimination competes with substitution" refer to in this topic?',
             options: [
-              'Elimination competes with substitution',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'SN1/SN2/E1/E2 decision flowchart',
+              'Reaction conditions determine which pathway dominates',
+              'E2 requires specific geometry',
+              'Elimination competes with substitution'
             ],
-            correctAnswer: 0,
-            explanation: 'Elimination competes with substitution'
+            correctAnswer: 3,
+            explanation: 'Correct — Elimination competes with substitution. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of synthesis & review, which is accurate?',
+            question: 'Select the statement that correctly describes E2 requires specific geometry:',
             options: [
+              'Reaction conditions determine which pathway dominates',
               'E2 requires specific geometry',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'SN1/SN2/E1/E2 decision flowchart',
+              'Elimination competes with substitution'
             ],
-            correctAnswer: 0,
-            explanation: 'E2 requires specific geometry'
+            correctAnswer: 1,
+            explanation: 'Correct — E2 requires specific geometry. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ SN1/SN2/E1/E2 decision flowchart
       id: 'elimi7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Elimination competes with substitution',
-            options: ['Elimination competes with substitution', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Reaction conditions determine which pathway dominates', 'SN1/SN2/E1/E2 decision flowchart', 'E2 requires specific geometry', 'Elimination competes with substitution']
           },
           {
-            label: 'Reaction conditions determine which pathway dominates',
-            options: ['Reaction conditions determine which pathway domina', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Reaction conditions determine which…',
+            options: ['SN1/SN2/E1/E2 decision flowchart', 'Elimination competes with substitution', 'E2 requires specific geometry', 'Reaction conditions determine which pathway dominates']
           },
           {
             label: 'E2 requires specific geometry',
-            options: ['E2 requires specific geometry', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Elimination competes with substitution', 'Reaction conditions determine which pathway dominates', 'SN1/SN2/E1/E2 decision flowchart', 'E2 requires specific geometry']
           }
         ],
-        correctAnswers: ['Elimination competes with substitution', 'Reaction conditions determine which pathway domina', 'E2 requires specific geometry'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Synthesis & Review.'
+        correctAnswers: ['Elimination competes with substitution', 'Reaction conditions determine which pathway dominates', 'E2 requires specific geometry'],
+        hint1: 'Think about what each concept specifically describes in Synthesis & Review.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Synthesis & Review describes a specific idea. Elimination competes with substitution. Reaction conditions determine which pathway dominates. E2 requires specific geometry.'
       }
     }
   ]

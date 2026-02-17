@@ -18,20 +18,31 @@ Always simplify each side first: distribute and combine like terms.
       id: 'sat-l2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes multi-step equations require multiple operations to isolate x?',
+            question: 'Which of the following correctly describes Multi-step equations require multiple…?',
             options: [
-              'Multi-step equations require multiple operations to isolate x is a fundamental concept in SAT Math',
-              'Always simplify each side first: distribute and combine like terms',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'Multi-step equations require multiple operations to isolate x.',
+              'Example: 3(2x - 4) + 5 = 23 → 6x - 12 + 5 = 23 → 6x = 30 → x = 5.',
+              'distribute and combine like terms.',
+              'Apply inverse operations in reverse order of operations.'
             ],
             correctAnswer: 0,
-            explanation: 'Multi-step equations require multiple operations to isolate x'
+            explanation: 'Correct — Multi-step equations require multiple operations to isolate x. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Solving Multi-Step Equations, which explains Key Insight?',
+            options: [
+              'Multi-step equations require multiple operations to isolate x.',
+              'Apply inverse operations in reverse order of operations.',
+              'distribute and combine like terms.',
+              'Example: 3(2x - 4) + 5 = 23 → 6x - 12 + 5 = 23 → 6x = 30 → x = 5.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Key Insight: Apply inverse operations in reverse order of operations. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Always simplify each side first: distribute and combine like terms.
       id: 'sat-l2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for solving multi-step equations?',
+            question: 'Regarding Solving Multi-Step Equations, which correctly describes SAT Tip?',
             options: [
-              'Apply inverse operations in reverse order of operations',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'distribute and combine like terms.',
+              'Example: 3(2x - 4) + 5 = 23 → 6x - 12 + 5 = 23 → 6x = 30 → x = 5.',
+              'Multi-step equations require multiple operations to isolate x.',
+              'Apply inverse operations in reverse order of operations.'
             ],
-            correctAnswer: 0,
-            explanation: 'Apply inverse operations in reverse order of operations'
+            correctAnswer: 1,
+            explanation: 'Correct — SAT Tip: Example: 3(2x - 4) + 5 = 23 → 6x - 12 + 5 = 23 → 6x = 30 → x = 5. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Always simplify each side first: distribute and combine like terms.
       id: 'sat-l2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Solving Multi-Step Equations:',
-            options: ['Multi-step equations require multiple operations t', 'Always simplify each side first: distribute and co', 'Not applicable', 'None of these']
+            label: 'Always simplify each side first',
+            options: ['distribute and combine like terms.', 'Multi-step equations require multiple operations to isolate x.', 'Example: 3(2x - 4) + 5 = 23 → 6x - 12 + 5 = 23 → 6x = 30 → x = 5.', 'Apply inverse operations in reverse order of operations.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Apply inverse operations in reverse order of opera', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Key Insight',
+            options: ['Example: 3(2x - 4) + 5 = 23 → 6x - 12 + 5 = 23 → 6x = 30 → x = 5.', 'Apply inverse operations in reverse order of operations.', 'distribute and combine like terms.', 'Multi-step equations require multiple operations to isolate x.']
+          },
+          {
+            label: 'SAT Tip',
+            options: ['Example: 3(2x - 4) + 5 = 23 → 6x - 12 + 5 = 23 → 6x = 30 → x = 5.', 'Apply inverse operations in reverse order of operations.', 'Multi-step equations require multiple operations to isolate x.', 'distribute and combine like terms.']
           }
         ],
-        correctAnswers: ['Multi-step equations require multiple operations t', 'Apply inverse operations in reverse order of opera'],
-        hint1: 'Think about solving multi-step equations',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'Multi-step equations require multiple operations to isolate x. Apply inverse operations in reverse order of operations.'
+        correctAnswers: ['distribute and combine like terms.', 'Apply inverse operations in reverse order of operations.', 'Example: 3(2x - 4) + 5 = 23 → 6x - 12 + 5 = 23 → 6x = 30 → x = 5.'],
+        hint1: 'Think about what each concept specifically describes in Solving Multi-Step Equations.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Solving Multi-Step Equations describes a specific idea. Always simplify each side first: distribute and combine like terms. Key Insight: Apply inverse operations in reverse order of operations. SAT Tip: Example: 3(2x - 4) + 5 = 23 → 6x - 12 + 5 = 23 → 6x = 30 → x = 5.'
       }
     }
   ]

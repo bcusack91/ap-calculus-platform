@@ -30,31 +30,31 @@ suppresses but doesn't eliminate, can cause aggression
       id: 'opera3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of punishment?',
-            options: [
-              'Positive punishment',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
-            ],
-            correctAnswer: 0,
-            explanation: 'Positive punishment: adding aversive stimulus (+P)'
-          },
-          {
-            question: 'In the context of punishment, which is accurate?',
+            question: 'Which of the following correctly describes Positive punishment?',
             options: [
               'Both punishment types DECREASE behavior',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'adding aversive stimulus (+P)',
+              'removing pleasant stimulus (-P)',
+              'suppresses but doesn\'t eliminate, can cause aggression'
             ],
-            correctAnswer: 0,
-            explanation: 'Both punishment types DECREASE behavior'
+            correctAnswer: 1,
+            explanation: 'Correct — Positive punishment: adding aversive stimulus (+P). The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Punishment, which explains Both punishment types DECREASE behavior?',
+            options: [
+              'removing pleasant stimulus (-P)',
+              'Both punishment types DECREASE behavior',
+              'suppresses but doesn\'t eliminate, can cause aggression',
+              'adding aversive stimulus (+P)'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Both punishment types DECREASE behavior. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ suppresses but doesn't eliminate, can cause aggression
       id: 'opera3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Positive punishment',
-            options: ['adding aversive stimulus (+P)', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['removing pleasant stimulus (-P)', 'adding aversive stimulus (+P)', 'suppresses but doesn\'t eliminate, can cause aggression', 'Both punishment types DECREASE behavior']
           },
           {
             label: 'Negative punishment',
-            options: ['removing pleasant stimulus (-P)', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['adding aversive stimulus (+P)', 'suppresses but doesn\'t eliminate, can cause aggression', 'Both punishment types DECREASE behavior', 'removing pleasant stimulus (-P)']
           },
           {
-            label: 'Both punishment types DECREASE behavior',
-            options: ['Both punishment types DECREASE behavior', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            label: 'Punishment has limitations',
+            options: ['suppresses but doesn\'t eliminate, can cause aggression', 'removing pleasant stimulus (-P)', 'adding aversive stimulus (+P)', 'Both punishment types DECREASE behavior']
           }
         ],
-        correctAnswers: ['adding aversive stimulus (+P)', 'removing pleasant stimulus (-P)', 'Both punishment types DECREASE behavior'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Punishment.'
+        correctAnswers: ['adding aversive stimulus (+P)', 'removing pleasant stimulus (-P)', 'suppresses but doesn\'t eliminate, can cause aggression'],
+        hint1: 'Think about what each concept specifically describes in Punishment.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Punishment describes a specific idea. Positive punishment: adding aversive stimulus (+P). Negative punishment: removing pleasant stimulus (-P). Punishment has limitations: suppresses but doesn\'t eliminate, can cause aggression.'
       }
     }
   ]

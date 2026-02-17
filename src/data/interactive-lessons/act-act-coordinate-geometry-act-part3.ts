@@ -18,20 +18,31 @@ Parallel lines: same slope.
       id: 'act-c3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes slope = rise/run = (y₂-y₁)/(x₂-x₁)?',
+            question: 'What does "Slope = rise/run = (y₂-y₁)/(x₂-x₁)." refer to in ACT prep?',
             options: [
-              'Slope = rise/run = (y₂-y₁)/(x₂-x₁) is a key concept for ACT Math',
-              'Parallel lines: same slope',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'Slope = rise/run = (y₂-y₁)/(x₂-x₁).',
+              'Perpendicular lines: slopes are negative reciprocals (m₁ · m₂ = -1).',
+              'Zero slope = horizontal line; undefined slope = vertical line.',
+              'same slope.'
             ],
             correctAnswer: 0,
-            explanation: 'Slope = rise/run = (y₂-y₁)/(x₂-x₁)'
+            explanation: 'Correct — Slope = rise/run = (y₂-y₁)/(x₂-x₁). The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Key Insight?',
+            options: [
+              'same slope.',
+              'Zero slope = horizontal line; undefined slope = vertical line.',
+              'Slope = rise/run = (y₂-y₁)/(x₂-x₁).',
+              'Perpendicular lines: slopes are negative reciprocals (m₁ · m₂ = -1).'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Key Insight: Perpendicular lines: slopes are negative reciprocals (m₁ · m₂ = -1). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Parallel lines: same slope.
       id: 'act-c3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for slope applications?',
+            question: 'Which of these accurately represents ACT Tip?',
             options: [
-              'Perpendicular lines: slopes are negative reciprocals (m₁ · m₂ = -1)',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Zero slope = horizontal line; undefined slope = vertical line.',
+              'Perpendicular lines: slopes are negative reciprocals (m₁ · m₂ = -1).',
+              'same slope.',
+              'Slope = rise/run = (y₂-y₁)/(x₂-x₁).'
             ],
             correctAnswer: 0,
-            explanation: 'Perpendicular lines: slopes are negative reciprocals (m₁ · m₂ = -1)'
+            explanation: 'Correct — ACT Tip: Zero slope = horizontal line; undefined slope = vertical line. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Parallel lines: same slope.
       id: 'act-c3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Slope Applications:',
-            options: ['Slope = rise/run = (y₂-y₁)/(x₂-x₁)', 'Parallel lines: same slope', 'Not applicable', 'None of these']
+            label: 'Parallel lines',
+            options: ['Zero slope = horizontal line; undefined slope = vertical line.', 'Slope = rise/run = (y₂-y₁)/(x₂-x₁).', 'Perpendicular lines: slopes are negative reciprocals (m₁ · m₂ = -1).', 'same slope.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Perpendicular lines: slopes are negative reciproca', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Key Insight',
+            options: ['Slope = rise/run = (y₂-y₁)/(x₂-x₁).', 'same slope.', 'Zero slope = horizontal line; undefined slope = vertical line.', 'Perpendicular lines: slopes are negative reciprocals (m₁ · m₂ = -1).']
+          },
+          {
+            label: 'ACT Tip',
+            options: ['Perpendicular lines: slopes are negative reciprocals (m₁ · m₂ = -1).', 'same slope.', 'Slope = rise/run = (y₂-y₁)/(x₂-x₁).', 'Zero slope = horizontal line; undefined slope = vertical line.']
           }
         ],
-        correctAnswers: ['Slope = rise/run = (y₂-y₁)/(x₂-x₁)', 'Perpendicular lines: slopes are negative reciproca'],
-        hint1: 'Think about slope applications',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Slope = rise/run = (y₂-y₁)/(x₂-x₁). Perpendicular lines: slopes are negative reciprocals (m₁ · m₂ = -1).'
+        correctAnswers: ['same slope.', 'Perpendicular lines: slopes are negative reciprocals (m₁ · m₂ = -1).', 'Zero slope = horizontal line; undefined slope = vertical line.'],
+        hint1: 'Think about what each concept specifically describes in Slope Applications.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Slope Applications describes a specific idea. Parallel lines: same slope. Key Insight: Perpendicular lines: slopes are negative reciprocals (m₁ · m₂ = -1). ACT Tip: Zero slope = horizontal line; undefined slope = vertical line.'
       }
     }
   ]

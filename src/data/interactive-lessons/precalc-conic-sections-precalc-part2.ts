@@ -30,31 +30,31 @@ x² + y² + Dx + Ey + F = 0; complete the square to convert
       id: 'conic2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of circles?',
+            question: 'Which statement accurately explains Circle?',
             options: [
-              'Circle',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'set of points equidistant from center',
+              'x² + y² + Dx + Ey + F = 0; complete the square to convert',
+              'Center (h,k) and radius r',
+              '(x-h)² + (y-k)² = r²'
             ],
             correctAnswer: 0,
-            explanation: 'Circle: set of points equidistant from center'
+            explanation: 'Correct — Circle: set of points equidistant from center. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of circles, which is accurate?',
+            question: 'In the context of Circles, which explains Center (h,k) and radius r?',
             options: [
-              'Center (h,k) and radius r',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              '(x-h)² + (y-k)² = r²',
+              'set of points equidistant from center',
+              'x² + y² + Dx + Ey + F = 0; complete the square to convert',
+              'Center (h,k) and radius r'
             ],
-            correctAnswer: 0,
-            explanation: 'Center (h,k) and radius r'
+            correctAnswer: 3,
+            explanation: 'Correct — Center (h,k) and radius r. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ x² + y² + Dx + Ey + F = 0; complete the square to convert
       id: 'conic2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Circle',
-            options: ['set of points equidistant from center', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['set of points equidistant from center', '(x-h)² + (y-k)² = r²', 'Center (h,k) and radius r', 'x² + y² + Dx + Ey + F = 0; complete the square to convert']
           },
           {
             label: 'Standard form',
-            options: ['(x-h)² + (y-k)² = r²', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['(x-h)² + (y-k)² = r²', 'Center (h,k) and radius r', 'x² + y² + Dx + Ey + F = 0; complete the square to convert', 'set of points equidistant from center']
           },
           {
-            label: 'Center (h,k) and radius r',
-            options: ['Center (h,k) and radius r', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            label: 'General form',
+            options: ['set of points equidistant from center', 'x² + y² + Dx + Ey + F = 0; complete the square to convert', 'Center (h,k) and radius r', '(x-h)² + (y-k)² = r²']
           }
         ],
-        correctAnswers: ['set of points equidistant from center', '(x-h)² + (y-k)² = r²', 'Center (h,k) and radius r'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Circles.'
+        correctAnswers: ['set of points equidistant from center', '(x-h)² + (y-k)² = r²', 'x² + y² + Dx + Ey + F = 0; complete the square to convert'],
+        hint1: 'Think about what each concept specifically describes in Circles.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Circles describes a specific idea. Circle: set of points equidistant from center. Standard form: (x-h)² + (y-k)² = r². General form: x² + y² + Dx + Ey + F = 0; complete the square to convert.'
       }
     }
   ]

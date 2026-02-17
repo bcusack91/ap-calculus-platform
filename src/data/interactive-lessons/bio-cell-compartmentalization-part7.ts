@@ -19,31 +19,31 @@ export const bioCellCompartmentPart7Data = {
       id: 'cell7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes compartmentalization as an evolutionary advantage?',
+            question: 'Which of the following correctly describes Compartmentalization as an evolutionary…?',
             options: [
+              'Connection to energy and metabolism',
+              'AP exam strategies for cell biology questions',
               'Compartmentalization as an evolutionary advantage',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Surface area adaptations in different cell types'
             ],
-            correctAnswer: 0,
-            explanation: 'Compartmentalization as an evolutionary advantage'
+            correctAnswer: 2,
+            explanation: 'Correct — Compartmentalization as an evolutionary advantage. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of synthesis & ap review, which statement is accurate?',
+            question: 'Select the statement that correctly describes Surface area adaptations in different…:',
             options: [
               'Surface area adaptations in different cell types',
-              'egatnavda yranoitulove na sa noitazilatnemtrapmoC',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Connection to energy and metabolism',
+              'Compartmentalization as an evolutionary advantage',
+              'AP exam strategies for cell biology questions'
             ],
             correctAnswer: 0,
-            explanation: 'Surface area adaptations in different cell types'
+            explanation: 'Correct — Surface area adaptations in different cell types. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioCellCompartmentPart7Data = {
       id: 'cell7-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to synthesis & ap review?',
+            question: 'Regarding Cell Compartmentalization: Synthesis & AP Review, which correctly describes AP exam strategies for cell biology…?',
             options: [
+              'Surface area adaptations in different cell types',
               'AP exam strategies for cell biology questions',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Compartmentalization as an evolutionary advantage',
+              'Connection to energy and metabolism'
             ],
-            correctAnswer: 0,
-            explanation: 'AP exam strategies for cell biology questions'
+            correctAnswer: 1,
+            explanation: 'Correct — AP exam strategies for cell biology questions. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioCellCompartmentPart7Data = {
       id: 'cell7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Compartmentalization as an evolutionary advantage is important in synthesis & ap review because',
-            options: ['Compartmentalization as an evolutionary advantage', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Compartmentalization as an evolutionary…',
+            options: ['Connection to energy and metabolism', 'AP exam strategies for cell biology questions', 'Compartmentalization as an evolutionary advantage', 'Surface area adaptations in different cell types']
           },
           {
-            label: 'Connection to energy and metabolism is important in synthesis & ap review because',
-            options: ['Connection to energy and metabolism', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Connection to energy and metabolism',
+            options: ['Compartmentalization as an evolutionary advantage', 'Surface area adaptations in different cell types', 'Connection to energy and metabolism', 'AP exam strategies for cell biology questions']
           },
           {
-            label: 'Surface area adaptations in different cell types is important in synthesis & ap review because',
-            options: ['Surface area adaptations in different cell types', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Surface area adaptations in different…',
+            options: ['Connection to energy and metabolism', 'AP exam strategies for cell biology questions', 'Surface area adaptations in different cell types', 'Compartmentalization as an evolutionary advantage']
           }
         ],
         correctAnswers: ['Compartmentalization as an evolutionary advantage', 'Connection to energy and metabolism', 'Surface area adaptations in different cell types'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Synthesis & AP Review.'
+        hint1: 'Think about what each concept specifically describes in Cell Compartmentalization: Synthesis & AP Review.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Cell Compartmentalization: Synthesis & AP Review describes a specific idea. Compartmentalization as an evolutionary advantage. Connection to energy and metabolism. Surface area adaptations in different cell types.'
       }
     }
   ]

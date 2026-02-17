@@ -30,31 +30,31 @@ Behavior followed by reinforcement increases; by punishment decreases
       id: 'opera1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of thorndike & skinner?',
+            question: 'Which of the following correctly describes Thorndike\'s Law of Effect?',
             options: [
-              'Thorndike\'s Law of Effect',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'rewarded behaviors are repeated',
+              'learning through consequences',
+              'operant conditioning chamber (Skinner box)',
+              'Behavior followed by reinforcement increases; by punishment decreases'
             ],
             correctAnswer: 0,
-            explanation: 'Thorndike\'s Law of Effect: rewarded behaviors are repeated'
+            explanation: 'Correct — Thorndike\'s Law of Effect: rewarded behaviors are repeated. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of thorndike & skinner, which is accurate?',
+            question: 'Which of the following is true about Operant conditioning?',
             options: [
+              'rewarded behaviors are repeated',
               'learning through consequences',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'operant conditioning chamber (Skinner box)',
+              'Behavior followed by reinforcement increases; by punishment decreases'
             ],
-            correctAnswer: 0,
-            explanation: 'Operant conditioning: learning through consequences'
+            correctAnswer: 1,
+            explanation: 'Correct — Operant conditioning: learning through consequences. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Behavior followed by reinforcement increases; by punishment decreases
       id: 'opera1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Thorndike\'s Law of Effect',
-            options: ['rewarded behaviors are repeated', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['learning through consequences', 'operant conditioning chamber (Skinner box)', 'rewarded behaviors are repeated', 'Behavior followed by reinforcement increases; by punishment decreases']
           },
           {
             label: 'B.F. Skinner',
-            options: ['operant conditioning chamber (Skinner box)', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['operant conditioning chamber (Skinner box)', 'Behavior followed by reinforcement increases; by punishment decreases', 'rewarded behaviors are repeated', 'learning through consequences']
           },
           {
             label: 'Operant conditioning',
-            options: ['learning through consequences', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['operant conditioning chamber (Skinner box)', 'learning through consequences', 'rewarded behaviors are repeated', 'Behavior followed by reinforcement increases; by punishment decreases']
           }
         ],
         correctAnswers: ['rewarded behaviors are repeated', 'operant conditioning chamber (Skinner box)', 'learning through consequences'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Thorndike & Skinner.'
+        hint1: 'Think about what each concept specifically describes in Operant Conditioning.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Operant Conditioning describes a specific idea. Thorndike\'s Law of Effect: rewarded behaviors are repeated. B.F. Skinner: operant conditioning chamber (Skinner box). Operant conditioning: learning through consequences.'
       }
     }
   ]

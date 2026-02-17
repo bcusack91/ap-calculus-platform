@@ -30,31 +30,31 @@ H on carbon adjacent to carbonyl
       id: 'enola1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of keto-enol tautomerism?',
-            options: [
-              'Tautomers',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
-            ],
-            correctAnswer: 0,
-            explanation: 'Tautomers: keto and enol forms in equilibrium'
-          },
-          {
-            question: 'In the context of keto-enol tautomerism, which is accurate?',
+            question: 'Which statement accurately explains Tautomers?',
             options: [
               'Enolization catalyzed by acid or base',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'H on carbon adjacent to carbonyl',
+              'keto and enol forms in equilibrium',
+              'Keto form is usually more stable'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Tautomers: keto and enol forms in equilibrium. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Enolization catalyzed by acid or base:',
+            options: [
+              'Enolization catalyzed by acid or base',
+              'Keto form is usually more stable',
+              'H on carbon adjacent to carbonyl',
+              'keto and enol forms in equilibrium'
             ],
             correctAnswer: 0,
-            explanation: 'Enolization catalyzed by acid or base'
+            explanation: 'Correct — Enolization catalyzed by acid or base. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,24 @@ H on carbon adjacent to carbonyl
       id: 'enola1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Tautomers',
-            options: ['keto and enol forms in equilibrium', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Enolization catalyzed by acid or base', 'Keto form is usually more stable', 'H on carbon adjacent to carbonyl', 'keto and enol forms in equilibrium']
           },
           {
-            label: 'Keto form is usually more stable',
-            options: ['Keto form is usually more stable', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
-          },
-          {
-            label: 'Enolization catalyzed by acid or base',
-            options: ['Enolization catalyzed by acid or base', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'α-hydrogens',
+            options: ['H on carbon adjacent to carbonyl', 'keto and enol forms in equilibrium', 'Enolization catalyzed by acid or base', 'Keto form is usually more stable']
           }
         ],
-        correctAnswers: ['keto and enol forms in equilibrium', 'Keto form is usually more stable', 'Enolization catalyzed by acid or base'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Keto-Enol Tautomerism.'
+        correctAnswers: ['keto and enol forms in equilibrium', 'H on carbon adjacent to carbonyl'],
+        hint1: 'Think about what each concept specifically describes in ️ Enolate Chemistry.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in ️ Enolate Chemistry describes a specific idea. Tautomers: keto and enol forms in equilibrium. α-hydrogens: H on carbon adjacent to carbonyl.'
       }
     }
   ]

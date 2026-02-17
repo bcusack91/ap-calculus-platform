@@ -30,31 +30,31 @@ Divide by dx/dt to get the second derivative
       id: 'param3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of second derivatives (parametric)?',
+            question: 'Which of the following correctly describes d²y/dx² = (d/dt[dy/dx])/(dx/dt)?',
             options: [
               'd²y/dx² = (d/dt[dy/dx])/(dx/dt)',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
+              'First find dy/dx as a function of t',
+              'Then differentiate dy/dx with respect to t',
+              'Divide by dx/dt to get the second derivative'
             ],
             correctAnswer: 0,
-            explanation: 'd²y/dx² = (d/dt[dy/dx])/(dx/dt)'
+            explanation: 'Correct — d²y/dx² = (d/dt[dy/dx])/(dx/dt). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of second derivatives (parametric), which is accurate?',
+            question: 'Select the statement that correctly describes Then differentiate dy/dx with respect…:',
             options: [
+              'd²y/dx² = (d/dt[dy/dx])/(dx/dt)',
+              'First find dy/dx as a function of t',
               'Then differentiate dy/dx with respect to t',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Divide by dx/dt to get the second derivative'
             ],
-            correctAnswer: 0,
-            explanation: 'Then differentiate dy/dx with respect to t'
+            correctAnswer: 2,
+            explanation: 'Correct — Then differentiate dy/dx with respect to t. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Divide by dx/dt to get the second derivative
       id: 'param3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to second derivatives (parametric)?',
+            question: 'Which of these accurately represents Divide by dx/dt to get the second…?',
             options: [
+              'd²y/dx² = (d/dt[dy/dx])/(dx/dt)',
               'Divide by dx/dt to get the second derivative',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'Then differentiate dy/dx with respect to t',
+              'First find dy/dx as a function of t'
             ],
-            correctAnswer: 0,
-            explanation: 'Divide by dx/dt to get the second derivative'
+            correctAnswer: 1,
+            explanation: 'Correct — Divide by dx/dt to get the second derivative. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Divide by dx/dt to get the second derivative
       id: 'param3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'd²y/dx² = (d/dt[dy/dx])/(dx/dt)',
-            options: ['d²y/dx² = (d/dt[dy/dx])/(dx/dt)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['d²y/dx² = (d/dt[dy/dx])/(dx/dt)', 'Then differentiate dy/dx with respect to t', 'Divide by dx/dt to get the second derivative', 'First find dy/dx as a function of t']
           },
           {
             label: 'First find dy/dx as a function of t',
-            options: ['First find dy/dx as a function of t', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['First find dy/dx as a function of t', 'Divide by dx/dt to get the second derivative', 'Then differentiate dy/dx with respect to t', 'd²y/dx² = (d/dt[dy/dx])/(dx/dt)']
           },
           {
-            label: 'Then differentiate dy/dx with respect to t',
-            options: ['Then differentiate dy/dx with respect to t', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Then differentiate dy/dx with respect…',
+            options: ['d²y/dx² = (d/dt[dy/dx])/(dx/dt)', 'First find dy/dx as a function of t', 'Divide by dx/dt to get the second derivative', 'Then differentiate dy/dx with respect to t']
           }
         ],
         correctAnswers: ['d²y/dx² = (d/dt[dy/dx])/(dx/dt)', 'First find dy/dx as a function of t', 'Then differentiate dy/dx with respect to t'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Second Derivatives (Parametric).'
+        hint1: 'Think about what each concept specifically describes in Second Derivatives (Parametric).',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Second Derivatives (Parametric) describes a specific idea. d²y/dx² = (d/dt[dy/dx])/(dx/dt). First find dy/dx as a function of t. Then differentiate dy/dx with respect to t.'
       }
     }
   ]

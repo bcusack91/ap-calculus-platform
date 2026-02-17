@@ -19,31 +19,31 @@ export const bioCellCyclePart4Data = {
       id: 'cell4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes division of cytoplasm after mitosis?',
+            question: 'What does "Division of cytoplasm after mitosis" refer to in biology?',
             options: [
+              'cell plate forms from Golgi vesicles',
+              'cleavage furrow (actin ring)',
               'Division of cytoplasm after mitosis',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'two identical daughter cells'
             ],
-            correctAnswer: 0,
-            explanation: 'Division of cytoplasm after mitosis'
+            correctAnswer: 2,
+            explanation: 'Correct — Division of cytoplasm after mitosis. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of cytokinesis, which statement is accurate?',
+            question: 'Which of the following is true about Plant cells?',
             options: [
-              'Plant cells: cell plate forms from Golgi vesicles',
-              'sisotim retfa msalpotyc fo noisiviD',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Division of cytoplasm after mitosis',
+              'cell plate forms from Golgi vesicles',
+              'cleavage furrow (actin ring)',
+              'two identical daughter cells'
             ],
-            correctAnswer: 0,
-            explanation: 'Plant cells: cell plate forms from Golgi vesicles'
+            correctAnswer: 1,
+            explanation: 'Correct — Plant cells: cell plate forms from Golgi vesicles. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioCellCyclePart4Data = {
       id: 'cell4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to cytokinesis?',
+            question: 'Regarding Cytokinesis, which correctly describes Result?',
             options: [
-              'Result: two identical daughter cells',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'cleavage furrow (actin ring)',
+              'two identical daughter cells',
+              'cell plate forms from Golgi vesicles',
+              'Division of cytoplasm after mitosis'
             ],
-            correctAnswer: 0,
-            explanation: 'Result: two identical daughter cells'
+            correctAnswer: 1,
+            explanation: 'Correct — Result: two identical daughter cells. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioCellCyclePart4Data = {
       id: 'cell4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Division of cytoplasm after mitosis is important in cytokinesis because',
-            options: ['Division of cytoplasm after mitosis', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Animal cells',
+            options: ['cleavage furrow (actin ring)', 'two identical daughter cells', 'cell plate forms from Golgi vesicles', 'Division of cytoplasm after mitosis']
           },
           {
-            label: 'Animal cells is important in cytokinesis because',
-            options: ['cleavage furrow (actin ring)', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Plant cells',
+            options: ['cell plate forms from Golgi vesicles', 'cleavage furrow (actin ring)', 'two identical daughter cells', 'Division of cytoplasm after mitosis']
           },
           {
-            label: 'Plant cells is important in cytokinesis because',
-            options: ['cell plate forms from Golgi vesicles', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Result',
+            options: ['two identical daughter cells', 'cell plate forms from Golgi vesicles', 'cleavage furrow (actin ring)', 'Division of cytoplasm after mitosis']
           }
         ],
-        correctAnswers: ['Division of cytoplasm after mitosis', 'cleavage furrow (actin ring)', 'cell plate forms from Golgi vesicles'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Cytokinesis.'
+        correctAnswers: ['cleavage furrow (actin ring)', 'cell plate forms from Golgi vesicles', 'two identical daughter cells'],
+        hint1: 'Think about what each concept specifically describes in Cytokinesis.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Cytokinesis describes a specific idea. Animal cells: cleavage furrow (actin ring). Plant cells: cell plate forms from Golgi vesicles. Result: two identical daughter cells.'
       }
     }
   ]

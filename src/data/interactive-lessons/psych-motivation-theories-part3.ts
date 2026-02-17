@@ -30,31 +30,31 @@ order not rigid, cultural differences
       id: 'motiv3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of maslow\'s hierarchy?',
+            question: 'What does "Hierarchy of needs" refer to in psychology?',
             options: [
-              'Hierarchy of needs',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'physiological → safety → belonging → esteem → self-actualization',
+              'achieving full potential',
+              'Lower needs must be met before higher needs',
+              'order not rigid, cultural differences'
             ],
             correctAnswer: 0,
-            explanation: 'Hierarchy of needs: physiological → safety → belonging → esteem → self-actualization'
+            explanation: 'Correct — Hierarchy of needs: physiological → safety → belonging → esteem → self-actualization. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of maslow\'s hierarchy, which is accurate?',
+            question: 'In the context of Maslow\'s Hierarchy, which explains Self-actualization?',
             options: [
-              'achieving full potential',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Lower needs must be met before higher needs',
+              'physiological → safety → belonging → esteem → self-actualization',
+              'order not rigid, cultural differences',
+              'achieving full potential'
             ],
-            correctAnswer: 0,
-            explanation: 'Self-actualization: achieving full potential'
+            correctAnswer: 3,
+            explanation: 'Correct — Self-actualization: achieving full potential. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ order not rigid, cultural differences
       id: 'motiv3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Hierarchy of needs',
-            options: ['physiological → safety → belonging → esteem → self', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
-          },
-          {
-            label: 'Lower needs must be met before higher needs',
-            options: ['Lower needs must be met before higher needs', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['achieving full potential', 'Lower needs must be met before higher needs', 'physiological → safety → belonging → esteem → self-actualization', 'order not rigid, cultural differences']
           },
           {
             label: 'Self-actualization',
-            options: ['achieving full potential', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['physiological → safety → belonging → esteem → self-actualization', 'Lower needs must be met before higher needs', 'order not rigid, cultural differences', 'achieving full potential']
+          },
+          {
+            label: 'Criticisms',
+            options: ['order not rigid, cultural differences', 'physiological → safety → belonging → esteem → self-actualization', 'Lower needs must be met before higher needs', 'achieving full potential']
           }
         ],
-        correctAnswers: ['physiological → safety → belonging → esteem → self', 'Lower needs must be met before higher needs', 'achieving full potential'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Maslow\'s Hierarchy.'
+        correctAnswers: ['physiological → safety → belonging → esteem → self-actualization', 'achieving full potential', 'order not rigid, cultural differences'],
+        hint1: 'Think about what each concept specifically describes in Maslow\'s Hierarchy.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Maslow\'s Hierarchy describes a specific idea. Hierarchy of needs: physiological → safety → belonging → esteem → self-actualization. Self-actualization: achieving full potential. Criticisms: order not rigid, cultural differences.'
       }
     }
   ]

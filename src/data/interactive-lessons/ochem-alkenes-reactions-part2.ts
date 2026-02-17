@@ -30,31 +30,31 @@ HX, H₂O/H⁺, X₂
       id: 'alken2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of electrophilic addition?',
+            question: 'Which statement accurately explains Electrophilic addition?',
             options: [
-              'Electrophilic addition',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'HX, H₂O/H⁺, X₂',
+              'π electrons attack electrophile',
+              'electrophile adds to less substituted carbon → carbocation',
+              'nucleophile attacks carbocation'
             ],
-            correctAnswer: 0,
-            explanation: 'Electrophilic addition: π electrons attack electrophile'
+            correctAnswer: 1,
+            explanation: 'Correct — Electrophilic addition: π electrons attack electrophile. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of electrophilic addition, which is accurate?',
+            question: 'In the context of Electrophilic Addition, which explains Step 2?',
             options: [
+              'π electrons attack electrophile',
+              'HX, H₂O/H⁺, X₂',
               'nucleophile attacks carbocation',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'electrophile adds to less substituted carbon → carbocation'
             ],
-            correctAnswer: 0,
-            explanation: 'Step 2: nucleophile attacks carbocation'
+            correctAnswer: 2,
+            explanation: 'Correct — Step 2: nucleophile attacks carbocation. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ HX, H₂O/H⁺, X₂
       id: 'alken2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Electrophilic addition',
-            options: ['π electrons attack electrophile', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['electrophile adds to less substituted carbon → carbocation', 'nucleophile attacks carbocation', 'π electrons attack electrophile', 'HX, H₂O/H⁺, X₂']
           },
           {
             label: 'Step 1',
-            options: ['electrophile adds to less substituted carbon → car', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['π electrons attack electrophile', 'nucleophile attacks carbocation', 'HX, H₂O/H⁺, X₂', 'electrophile adds to less substituted carbon → carbocation']
           },
           {
             label: 'Step 2',
-            options: ['nucleophile attacks carbocation', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['nucleophile attacks carbocation', 'electrophile adds to less substituted carbon → carbocation', 'HX, H₂O/H⁺, X₂', 'π electrons attack electrophile']
           }
         ],
-        correctAnswers: ['π electrons attack electrophile', 'electrophile adds to less substituted carbon → car', 'nucleophile attacks carbocation'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Electrophilic Addition.'
+        correctAnswers: ['π electrons attack electrophile', 'electrophile adds to less substituted carbon → carbocation', 'nucleophile attacks carbocation'],
+        hint1: 'Think about what each concept specifically describes in Electrophilic Addition.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Electrophilic Addition describes a specific idea. Electrophilic addition: π electrons attack electrophile. Step 1: electrophile adds to less substituted carbon → carbocation. Step 2: nucleophile attacks carbocation.'
       }
     }
   ]

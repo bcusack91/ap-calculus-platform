@@ -30,31 +30,31 @@ pairing products with pleasant stimuli
       id: 'class5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of applications?',
+            question: 'Which of the following correctly describes Phobias?',
             options: [
-              'Phobias',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'pairing products with pleasant stimuli',
+              'treating phobias',
+              'learned through classical conditioning',
+              'one-trial learning (Garcia effect)'
             ],
-            correctAnswer: 0,
-            explanation: 'Phobias: learned through classical conditioning'
+            correctAnswer: 2,
+            explanation: 'Correct — Phobias: learned through classical conditioning. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of applications, which is accurate?',
+            question: 'Select the statement that correctly describes Systematic desensitization:',
             options: [
+              'one-trial learning (Garcia effect)',
+              'learned through classical conditioning',
               'treating phobias',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'pairing products with pleasant stimuli'
             ],
-            correctAnswer: 0,
-            explanation: 'Systematic desensitization: treating phobias'
+            correctAnswer: 2,
+            explanation: 'Correct — Systematic desensitization: treating phobias. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ pairing products with pleasant stimuli
       id: 'class5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Phobias',
-            options: ['learned through classical conditioning', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['one-trial learning (Garcia effect)', 'learned through classical conditioning', 'treating phobias', 'pairing products with pleasant stimuli']
           },
           {
             label: 'Taste aversion',
-            options: ['one-trial learning (Garcia effect)', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['one-trial learning (Garcia effect)', 'learned through classical conditioning', 'treating phobias', 'pairing products with pleasant stimuli']
           },
           {
             label: 'Systematic desensitization',
-            options: ['treating phobias', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['treating phobias', 'pairing products with pleasant stimuli', 'learned through classical conditioning', 'one-trial learning (Garcia effect)']
           }
         ],
         correctAnswers: ['learned through classical conditioning', 'one-trial learning (Garcia effect)', 'treating phobias'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Applications.'
+        hint1: 'Think about what each concept specifically describes in Applications.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Applications describes a specific idea. Phobias: learned through classical conditioning. Taste aversion: one-trial learning (Garcia effect). Systematic desensitization: treating phobias.'
       }
     }
   ]

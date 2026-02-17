@@ -30,31 +30,31 @@ just determine absolute vs conditional convergence
       id: 'alter6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of problem-solving workshop?',
+            question: 'Which of the following correctly describes An absolutely convergent series can be…?',
             options: [
               'An absolutely convergent series can be rearranged without changing the sum',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
+              'This is why absolute convergence is "better" than conditional',
+              'A conditionally convergent series can be rearranged to converge to any value (Riemann)',
+              'just determine absolute vs conditional convergence'
             ],
             correctAnswer: 0,
-            explanation: 'An absolutely convergent series can be rearranged without changing the sum'
+            explanation: 'Correct — An absolutely convergent series can be rearranged without changing the sum. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of problem-solving workshop, which is accurate?',
+            question: 'Select the statement that correctly describes This is why absolute convergence is…:',
             options: [
               'This is why absolute convergence is "better" than conditional',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'A conditionally convergent series can be rearranged to converge to any value (Riemann)',
+              'An absolutely convergent series can be rearranged without changing the sum',
+              'just determine absolute vs conditional convergence'
             ],
             correctAnswer: 0,
-            explanation: 'This is why absolute convergence is "better" than conditional'
+            explanation: 'Correct — This is why absolute convergence is "better" than conditional. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ just determine absolute vs conditional convergence
       id: 'alter6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to problem-solving workshop?',
+            question: 'Which of these accurately represents On the AP exam?',
             options: [
-              'just determine absolute vs conditional convergence',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'This is why absolute convergence is "better" than conditional',
+              'An absolutely convergent series can be rearranged without changing the sum',
+              'A conditionally convergent series can be rearranged to converge to any value (Riemann)',
+              'just determine absolute vs conditional convergence'
             ],
-            correctAnswer: 0,
-            explanation: 'On the AP exam: just determine absolute vs conditional convergence'
+            correctAnswer: 3,
+            explanation: 'Correct — On the AP exam: just determine absolute vs conditional convergence. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ just determine absolute vs conditional convergence
       id: 'alter6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'An absolutely convergent series can be rearranged without changing the sum',
-            options: ['An absolutely convergent series can be rearranged ', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'An absolutely convergent series can be…',
+            options: ['An absolutely convergent series can be rearranged without changing the sum', 'A conditionally convergent series can be rearranged to converge to any value (Riemann)', 'just determine absolute vs conditional convergence', 'This is why absolute convergence is "better" than conditional']
           },
           {
-            label: 'A conditionally convergent series can be rearranged to converge to any value (Riemann)',
-            options: ['A conditionally convergent series can be rearrange', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'A conditionally convergent series can…',
+            options: ['This is why absolute convergence is "better" than conditional', 'A conditionally convergent series can be rearranged to converge to any value (Riemann)', 'An absolutely convergent series can be rearranged without changing the sum', 'just determine absolute vs conditional convergence']
           },
           {
-            label: 'This is why absolute convergence is "better" than conditional',
-            options: ['This is why absolute convergence is "better" than ', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'This is why absolute convergence is…',
+            options: ['An absolutely convergent series can be rearranged without changing the sum', 'just determine absolute vs conditional convergence', 'A conditionally convergent series can be rearranged to converge to any value (Riemann)', 'This is why absolute convergence is "better" than conditional']
           }
         ],
-        correctAnswers: ['An absolutely convergent series can be rearranged ', 'A conditionally convergent series can be rearrange', 'This is why absolute convergence is "better" than '],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving Workshop.'
+        correctAnswers: ['An absolutely convergent series can be rearranged without changing the sum', 'A conditionally convergent series can be rearranged to converge to any value (Riemann)', 'This is why absolute convergence is "better" than conditional'],
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. An absolutely convergent series can be rearranged without changing the sum. A conditionally convergent series can be rearranged to converge to any value (Riemann). This is why absolute convergence is "better" than conditional.'
       }
     }
   ]

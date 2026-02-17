@@ -30,31 +30,31 @@ Squeeze theorem is especially useful for oscillating sequences
       id: 'infin6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of problem-solving workshop?',
-            options: [
-              'If aₙ ≤ bₙ ≤ cₙ and lim aₙ = lim cₙ = L, then lim bₙ = L',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'If aₙ ≤ bₙ ≤ cₙ and lim aₙ = lim cₙ = L, then lim bₙ = L'
-          },
-          {
-            question: 'In the context of problem-solving workshop, which is accurate?',
+            question: 'Which statement accurately explains If aₙ ≤ bₙ ≤ cₙ and lim aₙ = lim cₙ =…?',
             options: [
               '(-1)ⁿ/n → 0 because |(-1)ⁿ/n| = 1/n → 0',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              '|aₙ| ≤ cₙ → 0 implies aₙ → 0',
+              'If aₙ ≤ bₙ ≤ cₙ and lim aₙ = lim cₙ = L, then lim bₙ = L',
+              'Squeeze theorem is especially useful for oscillating sequences'
             ],
-            correctAnswer: 0,
-            explanation: 'Example: (-1)ⁿ/n → 0 because |(-1)ⁿ/n| = 1/n → 0'
+            correctAnswer: 2,
+            explanation: 'Correct — If aₙ ≤ bₙ ≤ cₙ and lim aₙ = lim cₙ = L, then lim bₙ = L. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Example?',
+            options: [
+              '|aₙ| ≤ cₙ → 0 implies aₙ → 0',
+              'Squeeze theorem is especially useful for oscillating sequences',
+              '(-1)ⁿ/n → 0 because |(-1)ⁿ/n| = 1/n → 0',
+              'If aₙ ≤ bₙ ≤ cₙ and lim aₙ = lim cₙ = L, then lim bₙ = L'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Example: (-1)ⁿ/n → 0 because |(-1)ⁿ/n| = 1/n → 0. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Squeeze theorem is especially useful for oscillating sequences
       id: 'infin6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to problem-solving workshop?',
+            question: 'Which of these accurately represents Squeeze theorem is especially useful…?',
             options: [
               'Squeeze theorem is especially useful for oscillating sequences',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              '(-1)ⁿ/n → 0 because |(-1)ⁿ/n| = 1/n → 0',
+              '|aₙ| ≤ cₙ → 0 implies aₙ → 0',
+              'If aₙ ≤ bₙ ≤ cₙ and lim aₙ = lim cₙ = L, then lim bₙ = L'
             ],
             correctAnswer: 0,
-            explanation: 'Squeeze theorem is especially useful for oscillating sequences'
+            explanation: 'Correct — Squeeze theorem is especially useful for oscillating sequences. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,24 @@ Squeeze theorem is especially useful for oscillating sequences
       id: 'infin6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'If aₙ ≤ bₙ ≤ cₙ and lim aₙ = lim cₙ = L, then lim bₙ = L',
-            options: ['If aₙ ≤ bₙ ≤ cₙ and lim aₙ = lim cₙ = L, then lim ', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
-          },
-          {
             label: 'Common use',
-            options: ['|aₙ| ≤ cₙ → 0 implies aₙ → 0', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['If aₙ ≤ bₙ ≤ cₙ and lim aₙ = lim cₙ = L, then lim bₙ = L', 'Squeeze theorem is especially useful for oscillating sequences', '(-1)ⁿ/n → 0 because |(-1)ⁿ/n| = 1/n → 0', '|aₙ| ≤ cₙ → 0 implies aₙ → 0']
           },
           {
             label: 'Example',
-            options: ['(-1)ⁿ/n → 0 because |(-1)ⁿ/n| = 1/n → 0', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['If aₙ ≤ bₙ ≤ cₙ and lim aₙ = lim cₙ = L, then lim bₙ = L', '(-1)ⁿ/n → 0 because |(-1)ⁿ/n| = 1/n → 0', 'Squeeze theorem is especially useful for oscillating sequences', '|aₙ| ≤ cₙ → 0 implies aₙ → 0']
           }
         ],
-        correctAnswers: ['If aₙ ≤ bₙ ≤ cₙ and lim aₙ = lim cₙ = L, then lim ', '|aₙ| ≤ cₙ → 0 implies aₙ → 0', '(-1)ⁿ/n → 0 because |(-1)ⁿ/n| = 1/n → 0'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving Workshop.'
+        correctAnswers: ['|aₙ| ≤ cₙ → 0 implies aₙ → 0', '(-1)ⁿ/n → 0 because |(-1)ⁿ/n| = 1/n → 0'],
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Common use: |aₙ| ≤ cₙ → 0 implies aₙ → 0. Example: (-1)ⁿ/n → 0 because |(-1)ⁿ/n| = 1/n → 0.'
       }
     }
   ]

@@ -71,23 +71,28 @@ Conditions: no mutation, no selection, no migration, random mating, large popula
       id: 'mcat-3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Population Genetics:',
-            options: ['Hardy-Weinberg equilibrium: p2 + 2pq + q2 = 1; p + q = 1 (al', 'Conditions: no mutation, no selection, no migration, random ', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Hardy-Weinberg equilibrium',
+            options: ['Bottleneck effect and founder effect: reduce genetic diversity.', 'no mutation, no selection, no migration, random mating, large population.', 'Genetic drift: random changes in allele frequency, stronger in small populations.', 'p2 + 2pq + q2 = 1; p + q = 1 (allele frequencies).']
           },
           {
-            label: 'MCAT application:',
-            options: ['Genetic drift: random changes in allele frequency, stronger ', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Conditions',
+            options: ['Genetic drift: random changes in allele frequency, stronger in small populations.', 'no mutation, no selection, no migration, random mating, large population.', 'p2 + 2pq + q2 = 1; p + q = 1 (allele frequencies).', 'Bottleneck effect and founder effect: reduce genetic diversity.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['Bottleneck effect and founder effect: reduce genetic diversity.', 'Genetic drift: random changes in allele frequency, stronger in small populations.', 'p2 + 2pq + q2 = 1; p + q = 1 (allele frequencies).', 'no mutation, no selection, no migration, random mating, large population.']
           }
         ],
-        correctAnswers: ['Hardy-Weinberg equilibrium: p2 + 2pq + q2 = 1; p + q = 1 (al', 'Genetic drift: random changes in allele frequency, stronger '],
-        hint1: 'Think about population genetics',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Hardy-Weinberg equilibrium: p2 + 2pq + q2 = 1; p + q = 1 (allele frequencies). Genetic drift: random changes in allele frequency, stronger in small populations.'
+        correctAnswers: ['p2 + 2pq + q2 = 1; p + q = 1 (allele frequencies).', 'no mutation, no selection, no migration, random mating, large population.', 'Genetic drift: random changes in allele frequency, stronger in small populations.'],
+        hint1: 'Think about what each concept specifically describes in Population Genetics.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Population Genetics describes a specific idea. Hardy-Weinberg equilibrium: p2 + 2pq + q2 = 1; p + q = 1 (allele frequencies). Conditions: no mutation, no selection, no migration, random mating, large population. Key Insight: Genetic drift: random changes in allele frequency, stronger in small populations.'
       }
     }
   ]

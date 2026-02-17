@@ -30,31 +30,31 @@ large request → smaller request
       id: 'socia5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of persuasion?',
+            question: 'Which of the following correctly describes Central route?',
             options: [
-              'Central route',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'large request → smaller request',
+              'small request → large request',
+              'influenced by superficial cues (low involvement)',
+              'careful evaluation of arguments (high involvement)'
             ],
-            correctAnswer: 0,
-            explanation: 'Central route: careful evaluation of arguments (high involvement)'
+            correctAnswer: 3,
+            explanation: 'Correct — Central route: careful evaluation of arguments (high involvement). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of persuasion, which is accurate?',
+            question: 'Which of the following is true about Foot-in-the-door?',
             options: [
-              'small request → large request',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'influenced by superficial cues (low involvement)',
+              'careful evaluation of arguments (high involvement)',
+              'large request → smaller request',
+              'small request → large request'
             ],
-            correctAnswer: 0,
-            explanation: 'Foot-in-the-door: small request → large request'
+            correctAnswer: 3,
+            explanation: 'Correct — Foot-in-the-door: small request → large request. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ large request → smaller request
       id: 'socia5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Central route',
-            options: ['careful evaluation of arguments (high involvement)', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['careful evaluation of arguments (high involvement)', 'influenced by superficial cues (low involvement)', 'large request → smaller request', 'small request → large request']
           },
           {
             label: 'Peripheral route',
-            options: ['influenced by superficial cues (low involvement)', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['large request → smaller request', 'careful evaluation of arguments (high involvement)', 'small request → large request', 'influenced by superficial cues (low involvement)']
           },
           {
             label: 'Foot-in-the-door',
-            options: ['small request → large request', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['influenced by superficial cues (low involvement)', 'large request → smaller request', 'careful evaluation of arguments (high involvement)', 'small request → large request']
           }
         ],
         correctAnswers: ['careful evaluation of arguments (high involvement)', 'influenced by superficial cues (low involvement)', 'small request → large request'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Persuasion.'
+        hint1: 'Think about what each concept specifically describes in Persuasion.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Persuasion describes a specific idea. Central route: careful evaluation of arguments (high involvement). Peripheral route: influenced by superficial cues (low involvement). Foot-in-the-door: small request → large request.'
       }
     }
   ]

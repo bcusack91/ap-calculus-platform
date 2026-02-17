@@ -30,31 +30,31 @@ Tosylates (OTs) and mesylates (OMs) are excellent leaving groups
       id: 'nucle5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of solvent & leaving group effects?',
+            question: 'Which statement accurately explains Polar aprotic solvents favor SN2 (DMSO,…?',
             options: [
+              'Polar protic solvents favor SN1 (water, alcohols)',
               'Polar aprotic solvents favor SN2 (DMSO, DMF, acetone)',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'weak bases (I⁻ > Br⁻ > Cl⁻)',
+              'Tosylates (OTs) and mesylates (OMs) are excellent leaving groups'
             ],
-            correctAnswer: 0,
-            explanation: 'Polar aprotic solvents favor SN2 (DMSO, DMF, acetone)'
+            correctAnswer: 1,
+            explanation: 'Correct — Polar aprotic solvents favor SN2 (DMSO, DMF, acetone). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of solvent & leaving group effects, which is accurate?',
+            question: 'In the context of Solvent & Leaving Group Effects, which explains Good leaving groups?',
             options: [
               'weak bases (I⁻ > Br⁻ > Cl⁻)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Polar protic solvents favor SN1 (water, alcohols)',
+              'Tosylates (OTs) and mesylates (OMs) are excellent leaving groups',
+              'Polar aprotic solvents favor SN2 (DMSO, DMF, acetone)'
             ],
             correctAnswer: 0,
-            explanation: 'Good leaving groups: weak bases (I⁻ > Br⁻ > Cl⁻)'
+            explanation: 'Correct — Good leaving groups: weak bases (I⁻ > Br⁻ > Cl⁻). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Tosylates (OTs) and mesylates (OMs) are excellent leaving groups
       id: 'nucle5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Polar aprotic solvents favor SN2 (DMSO, DMF, acetone)',
-            options: ['Polar aprotic solvents favor SN2 (DMSO, DMF, aceto', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Polar aprotic solvents favor SN2 (DMSO,…',
+            options: ['Polar protic solvents favor SN1 (water, alcohols)', 'weak bases (I⁻ > Br⁻ > Cl⁻)', 'Tosylates (OTs) and mesylates (OMs) are excellent leaving groups', 'Polar aprotic solvents favor SN2 (DMSO, DMF, acetone)']
           },
           {
-            label: 'Polar protic solvents favor SN1 (water, alcohols)',
-            options: ['Polar protic solvents favor SN1 (water, alcohols)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Polar protic solvents favor SN1 (water,…',
+            options: ['Tosylates (OTs) and mesylates (OMs) are excellent leaving groups', 'Polar protic solvents favor SN1 (water, alcohols)', 'Polar aprotic solvents favor SN2 (DMSO, DMF, acetone)', 'weak bases (I⁻ > Br⁻ > Cl⁻)']
           },
           {
             label: 'Good leaving groups',
-            options: ['weak bases (I⁻ > Br⁻ > Cl⁻)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['weak bases (I⁻ > Br⁻ > Cl⁻)', 'Polar protic solvents favor SN1 (water, alcohols)', 'Tosylates (OTs) and mesylates (OMs) are excellent leaving groups', 'Polar aprotic solvents favor SN2 (DMSO, DMF, acetone)']
           }
         ],
-        correctAnswers: ['Polar aprotic solvents favor SN2 (DMSO, DMF, aceto', 'Polar protic solvents favor SN1 (water, alcohols)', 'weak bases (I⁻ > Br⁻ > Cl⁻)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Solvent & Leaving Group Effects.'
+        correctAnswers: ['Polar aprotic solvents favor SN2 (DMSO, DMF, acetone)', 'Polar protic solvents favor SN1 (water, alcohols)', 'weak bases (I⁻ > Br⁻ > Cl⁻)'],
+        hint1: 'Think about what each concept specifically describes in Solvent & Leaving Group Effects.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Solvent & Leaving Group Effects describes a specific idea. Polar aprotic solvents favor SN2 (DMSO, DMF, acetone). Polar protic solvents favor SN1 (water, alcohols). Good leaving groups: weak bases (I⁻ > Br⁻ > Cl⁻).'
       }
     }
   ]

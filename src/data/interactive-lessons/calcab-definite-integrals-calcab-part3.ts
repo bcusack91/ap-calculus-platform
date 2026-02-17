@@ -30,31 +30,31 @@ export const calcABDefiniteIntegralsPart3Data = {
       id: 'defin3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of properties of definite integrals?',
+            question: 'What does "∫ₐᵃ f(x)dx = 0 (zero-width interval)" refer to in calculus?',
             options: [
+              '∫ₐᵇ cf(x)dx = c∫ₐᵇ f(x)dx (constant multiple)',
+              '∫ₐᵇ [f(x) + g(x)]dx = ∫ₐᵇ f(x)dx + ∫ₐᵇ g(x)dx',
               '∫ₐᵃ f(x)dx = 0 (zero-width interval)',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              '∫ₐᵇ f(x)dx = -∫ᵇₐ f(x)dx (reversing limits negates the integral)'
             ],
-            correctAnswer: 0,
-            explanation: '∫ₐᵃ f(x)dx = 0 (zero-width interval)'
+            correctAnswer: 2,
+            explanation: 'Correct — ∫ₐᵃ f(x)dx = 0 (zero-width interval). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of properties of definite integrals, which is accurate?',
+            question: 'Select the statement that correctly describes ∫ₐᵇ [f(x) + g(x)]dx = ∫ₐᵇ f(x)dx + ∫ₐᵇ…:',
             options: [
+              '∫ₐᵇ f(x)dx = -∫ᵇₐ f(x)dx (reversing limits negates the integral)',
+              '∫ₐᵇ cf(x)dx = c∫ₐᵇ f(x)dx (constant multiple)',
               '∫ₐᵇ [f(x) + g(x)]dx = ∫ₐᵇ f(x)dx + ∫ₐᵇ g(x)dx',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              '∫ₐᵃ f(x)dx = 0 (zero-width interval)'
             ],
-            correctAnswer: 0,
-            explanation: '∫ₐᵇ [f(x) + g(x)]dx = ∫ₐᵇ f(x)dx + ∫ₐᵇ g(x)dx'
+            correctAnswer: 2,
+            explanation: 'Correct — ∫ₐᵇ [f(x) + g(x)]dx = ∫ₐᵇ f(x)dx + ∫ₐᵇ g(x)dx. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ export const calcABDefiniteIntegralsPart3Data = {
       id: 'defin3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to properties of definite integrals?',
+            question: 'Which of these accurately represents ∫ₐᵇ cf(x)dx = c∫ₐᵇ f(x)dx (constant…?',
             options: [
               '∫ₐᵇ cf(x)dx = c∫ₐᵇ f(x)dx (constant multiple)',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              '∫ₐᵇ [f(x) + g(x)]dx = ∫ₐᵇ f(x)dx + ∫ₐᵇ g(x)dx',
+              '∫ₐᵃ f(x)dx = 0 (zero-width interval)',
+              '∫ₐᵇ f(x)dx = -∫ᵇₐ f(x)dx (reversing limits negates the integral)'
             ],
             correctAnswer: 0,
-            explanation: '∫ₐᵇ cf(x)dx = c∫ₐᵇ f(x)dx (constant multiple)'
+            explanation: 'Correct — ∫ₐᵇ cf(x)dx = c∫ₐᵇ f(x)dx (constant multiple). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ export const calcABDefiniteIntegralsPart3Data = {
       id: 'defin3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: '∫ₐᵃ f(x)dx = 0 (zero-width interval)',
-            options: ['∫ₐᵃ f(x)dx = 0 (zero-width interval)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['∫ₐᵃ f(x)dx = 0 (zero-width interval)', '∫ₐᵇ f(x)dx = -∫ᵇₐ f(x)dx (reversing limits negates the integral)', '∫ₐᵇ [f(x) + g(x)]dx = ∫ₐᵇ f(x)dx + ∫ₐᵇ g(x)dx', '∫ₐᵇ cf(x)dx = c∫ₐᵇ f(x)dx (constant multiple)']
           },
           {
-            label: '∫ₐᵇ f(x)dx = -∫ᵇₐ f(x)dx (reversing limits negates the integral)',
-            options: ['∫ₐᵇ f(x)dx = -∫ᵇₐ f(x)dx (reversing limits negates', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: '∫ₐᵇ f(x)dx = -∫ᵇₐ f(x)dx (reversing…',
+            options: ['∫ₐᵇ cf(x)dx = c∫ₐᵇ f(x)dx (constant multiple)', '∫ₐᵇ f(x)dx = -∫ᵇₐ f(x)dx (reversing limits negates the integral)', '∫ₐᵃ f(x)dx = 0 (zero-width interval)', '∫ₐᵇ [f(x) + g(x)]dx = ∫ₐᵇ f(x)dx + ∫ₐᵇ g(x)dx']
           },
           {
-            label: '∫ₐᵇ [f(x) + g(x)]dx = ∫ₐᵇ f(x)dx + ∫ₐᵇ g(x)dx',
-            options: ['∫ₐᵇ [f(x) + g(x)]dx = ∫ₐᵇ f(x)dx + ∫ₐᵇ g(x)dx', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: '∫ₐᵇ [f(x) + g(x)]dx = ∫ₐᵇ f(x)dx + ∫ₐᵇ…',
+            options: ['∫ₐᵃ f(x)dx = 0 (zero-width interval)', '∫ₐᵇ cf(x)dx = c∫ₐᵇ f(x)dx (constant multiple)', '∫ₐᵇ f(x)dx = -∫ᵇₐ f(x)dx (reversing limits negates the integral)', '∫ₐᵇ [f(x) + g(x)]dx = ∫ₐᵇ f(x)dx + ∫ₐᵇ g(x)dx']
           }
         ],
-        correctAnswers: ['∫ₐᵃ f(x)dx = 0 (zero-width interval)', '∫ₐᵇ f(x)dx = -∫ᵇₐ f(x)dx (reversing limits negates', '∫ₐᵇ [f(x) + g(x)]dx = ∫ₐᵇ f(x)dx + ∫ₐᵇ g(x)dx'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Properties of Definite Integrals.'
+        correctAnswers: ['∫ₐᵃ f(x)dx = 0 (zero-width interval)', '∫ₐᵇ f(x)dx = -∫ᵇₐ f(x)dx (reversing limits negates the integral)', '∫ₐᵇ [f(x) + g(x)]dx = ∫ₐᵇ f(x)dx + ∫ₐᵇ g(x)dx'],
+        hint1: 'Think about what each concept specifically describes in Properties of Definite Integrals.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Properties of Definite Integrals describes a specific idea. ∫ₐᵃ f(x)dx = 0 (zero-width interval). ∫ₐᵇ f(x)dx = -∫ᵇₐ f(x)dx (reversing limits negates the integral). ∫ₐᵇ [f(x) + g(x)]dx = ∫ₐᵇ f(x)dx + ∫ₐᵇ g(x)dx.'
       }
     }
   ]

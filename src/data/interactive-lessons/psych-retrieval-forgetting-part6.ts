@@ -30,31 +30,31 @@ Designing memory improvement strategies
       id: 'retri6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of problem-solving workshop?',
+            question: 'Which statement accurately explains Identifying forgetting mechanisms?',
             options: [
-              'Identifying forgetting mechanisms',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'Designing memory improvement strategies',
+              'Analyzing misinformation scenarios',
+              'Evaluating eyewitness testimony reliability',
+              'Identifying forgetting mechanisms'
             ],
-            correctAnswer: 0,
-            explanation: 'Identifying forgetting mechanisms'
+            correctAnswer: 3,
+            explanation: 'Correct — Identifying forgetting mechanisms. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of problem-solving workshop, which is accurate?',
+            question: 'In the context of Problem-Solving Workshop, which explains Evaluating eyewitness testimony…?',
             options: [
               'Evaluating eyewitness testimony reliability',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Designing memory improvement strategies',
+              'Identifying forgetting mechanisms',
+              'Analyzing misinformation scenarios'
             ],
             correctAnswer: 0,
-            explanation: 'Evaluating eyewitness testimony reliability'
+            explanation: 'Correct — Evaluating eyewitness testimony reliability. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Designing memory improvement strategies
       id: 'retri6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Identifying forgetting mechanisms',
-            options: ['Identifying forgetting mechanisms', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Analyzing misinformation scenarios', 'Evaluating eyewitness testimony reliability', 'Designing memory improvement strategies', 'Identifying forgetting mechanisms']
           },
           {
             label: 'Analyzing misinformation scenarios',
-            options: ['Analyzing misinformation scenarios', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Designing memory improvement strategies', 'Analyzing misinformation scenarios', 'Evaluating eyewitness testimony reliability', 'Identifying forgetting mechanisms']
           },
           {
-            label: 'Evaluating eyewitness testimony reliability',
-            options: ['Evaluating eyewitness testimony reliability', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            label: 'Evaluating eyewitness testimony…',
+            options: ['Designing memory improvement strategies', 'Analyzing misinformation scenarios', 'Identifying forgetting mechanisms', 'Evaluating eyewitness testimony reliability']
           }
         ],
         correctAnswers: ['Identifying forgetting mechanisms', 'Analyzing misinformation scenarios', 'Evaluating eyewitness testimony reliability'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving Workshop.'
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Identifying forgetting mechanisms. Analyzing misinformation scenarios. Evaluating eyewitness testimony reliability.'
       }
     }
   ]

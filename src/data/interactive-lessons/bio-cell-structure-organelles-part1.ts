@@ -19,31 +19,31 @@ export const bioCellStructurePart1Data = {
       id: 'cell1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes cell theory?',
+            question: 'What does "Cell theory" refer to in biology?',
             options: [
               'all living things are made of cells',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Cell size ranges from 1-100 μm',
+              'light vs. electron microscopes',
+              'Prokaryotic vs. eukaryotic cells'
             ],
             correctAnswer: 0,
-            explanation: 'Cell theory: all living things are made of cells'
+            explanation: 'Correct — Cell theory: all living things are made of cells. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of introduction to cells, which statement is accurate?',
+            question: 'In the context of Introduction to Cells, which explains Prokaryotic vs. eukaryotic cells?',
             options: [
               'Prokaryotic vs. eukaryotic cells',
-              'sllec fo edam era sgniht gnivil lla :yroeht lleC',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'light vs. electron microscopes',
+              'all living things are made of cells',
+              'Cell size ranges from 1-100 μm'
             ],
             correctAnswer: 0,
-            explanation: 'Prokaryotic vs. eukaryotic cells'
+            explanation: 'Correct — Prokaryotic vs. eukaryotic cells. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioCellStructurePart1Data = {
       id: 'cell1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to introduction to cells?',
+            question: 'Which statement about Cell size ranges from 1-100 μm is correct?',
             options: [
               'Cell size ranges from 1-100 μm',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Prokaryotic vs. eukaryotic cells',
+              'all living things are made of cells',
+              'light vs. electron microscopes'
             ],
             correctAnswer: 0,
-            explanation: 'Cell size ranges from 1-100 μm'
+            explanation: 'Correct — Cell size ranges from 1-100 μm. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,24 @@ export const bioCellStructurePart1Data = {
       id: 'cell1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Cell theory is important in introduction to cells because',
-            options: ['all living things are made of cells', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Cell theory',
+            options: ['light vs. electron microscopes', 'Cell size ranges from 1-100 μm', 'Prokaryotic vs. eukaryotic cells', 'all living things are made of cells']
           },
           {
-            label: 'Microscopy is important in introduction to cells because',
-            options: ['light vs. electron microscopes', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
-          },
-          {
-            label: 'Prokaryotic vs. eukaryotic cells is important in introduction to cells because',
-            options: ['Prokaryotic vs. eukaryotic cells', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Microscopy',
+            options: ['Cell size ranges from 1-100 μm', 'all living things are made of cells', 'light vs. electron microscopes', 'Prokaryotic vs. eukaryotic cells']
           }
         ],
-        correctAnswers: ['all living things are made of cells', 'light vs. electron microscopes', 'Prokaryotic vs. eukaryotic cells'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Introduction to Cells.'
+        correctAnswers: ['all living things are made of cells', 'light vs. electron microscopes'],
+        hint1: 'Think about what each concept specifically describes in Introduction to Cells.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Introduction to Cells describes a specific idea. Cell theory: all living things are made of cells. Microscopy: light vs. electron microscopes.'
       }
     }
   ]

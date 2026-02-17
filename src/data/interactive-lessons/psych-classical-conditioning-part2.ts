@@ -30,31 +30,31 @@ learned response to CS (salivation to bell)
       id: 'class2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of key concepts?',
+            question: 'Which of the following correctly describes UCS (unconditioned stimulus)?',
             options: [
-              'UCS (unconditioned stimulus)',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'natural response to UCS (salivation)',
+              'learned response to CS (salivation to bell)',
+              'neutral stimulus paired with UCS (bell)',
+              'naturally triggers response (food)'
             ],
-            correctAnswer: 0,
-            explanation: 'UCS (unconditioned stimulus): naturally triggers response (food)'
+            correctAnswer: 3,
+            explanation: 'Correct — UCS (unconditioned stimulus): naturally triggers response (food). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of key concepts, which is accurate?',
+            question: 'In the context of Key Concepts, which explains CS (conditioned stimulus)?',
             options: [
+              'learned response to CS (salivation to bell)',
               'neutral stimulus paired with UCS (bell)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'naturally triggers response (food)',
+              'natural response to UCS (salivation)'
             ],
-            correctAnswer: 0,
-            explanation: 'CS (conditioned stimulus): neutral stimulus paired with UCS (bell)'
+            correctAnswer: 1,
+            explanation: 'Correct — CS (conditioned stimulus): neutral stimulus paired with UCS (bell). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ learned response to CS (salivation to bell)
       id: 'class2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'UCS (unconditioned stimulus)',
-            options: ['naturally triggers response (food)', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['naturally triggers response (food)', 'natural response to UCS (salivation)', 'learned response to CS (salivation to bell)', 'neutral stimulus paired with UCS (bell)']
           },
           {
             label: 'UCR (unconditioned response)',
-            options: ['natural response to UCS (salivation)', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['natural response to UCS (salivation)', 'naturally triggers response (food)', 'neutral stimulus paired with UCS (bell)', 'learned response to CS (salivation to bell)']
           },
           {
             label: 'CS (conditioned stimulus)',
-            options: ['neutral stimulus paired with UCS (bell)', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['naturally triggers response (food)', 'learned response to CS (salivation to bell)', 'neutral stimulus paired with UCS (bell)', 'natural response to UCS (salivation)']
           }
         ],
         correctAnswers: ['naturally triggers response (food)', 'natural response to UCS (salivation)', 'neutral stimulus paired with UCS (bell)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Key Concepts.'
+        hint1: 'Think about what each concept specifically describes in Key Concepts.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Key Concepts describes a specific idea. UCS (unconditioned stimulus): naturally triggers response (food). UCR (unconditioned response): natural response to UCS (salivation). CS (conditioned stimulus): neutral stimulus paired with UCS (bell).'
       }
     }
   ]

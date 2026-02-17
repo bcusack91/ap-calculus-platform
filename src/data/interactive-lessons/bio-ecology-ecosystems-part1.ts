@@ -19,31 +19,31 @@ export const bioEcologyPart1Data = {
       id: 'ecol1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes ecology?',
+            question: 'What does "Ecology" refer to in biology?',
             options: [
               'study of interactions between organisms and their environment',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'organism → population → community → ecosystem → biosphere',
+              'living components',
+              'nonliving components (temperature, water, light)'
             ],
             correctAnswer: 0,
-            explanation: 'Ecology: study of interactions between organisms and their environment'
+            explanation: 'Correct — Ecology: study of interactions between organisms and their environment. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of introduction to ecology, which statement is accurate?',
+            question: 'In the context of Introduction to Ecology, which explains Biotic factors?',
             options: [
-              'Biotic factors: living components',
-              'tnemnorivne rieht dna smsinagro neewteb snoitcaretni fo yduts :ygolocE',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'study of interactions between organisms and their environment',
+              'nonliving components (temperature, water, light)',
+              'organism → population → community → ecosystem → biosphere',
+              'living components'
             ],
-            correctAnswer: 0,
-            explanation: 'Biotic factors: living components'
+            correctAnswer: 3,
+            explanation: 'Correct — Biotic factors: living components. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioEcologyPart1Data = {
       id: 'ecol1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to introduction to ecology?',
+            question: 'Regarding Introduction to Ecology, which correctly describes Abiotic factors?',
             options: [
-              'Abiotic factors: nonliving components (temperature, water, light)',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'organism → population → community → ecosystem → biosphere',
+              'living components',
+              'nonliving components (temperature, water, light)',
+              'study of interactions between organisms and their environment'
             ],
-            correctAnswer: 0,
-            explanation: 'Abiotic factors: nonliving components (temperature, water, light)'
+            correctAnswer: 2,
+            explanation: 'Correct — Abiotic factors: nonliving components (temperature, water, light). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioEcologyPart1Data = {
       id: 'ecol1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Ecology is important in introduction to ecology because',
-            options: ['study of interactions between organisms and their ', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Ecology',
+            options: ['nonliving components (temperature, water, light)', 'study of interactions between organisms and their environment', 'living components', 'organism → population → community → ecosystem → biosphere']
           },
           {
-            label: 'Levels is important in introduction to ecology because',
-            options: ['organism → population → community → ecosystem → bi', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Levels',
+            options: ['study of interactions between organisms and their environment', 'nonliving components (temperature, water, light)', 'organism → population → community → ecosystem → biosphere', 'living components']
           },
           {
-            label: 'Biotic factors is important in introduction to ecology because',
-            options: ['living components', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Biotic factors',
+            options: ['study of interactions between organisms and their environment', 'living components', 'nonliving components (temperature, water, light)', 'organism → population → community → ecosystem → biosphere']
           }
         ],
-        correctAnswers: ['study of interactions between organisms and their ', 'organism → population → community → ecosystem → bi', 'living components'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Introduction to Ecology.'
+        correctAnswers: ['study of interactions between organisms and their environment', 'organism → population → community → ecosystem → biosphere', 'living components'],
+        hint1: 'Think about what each concept specifically describes in Introduction to Ecology.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Introduction to Ecology describes a specific idea. Ecology: study of interactions between organisms and their environment. Levels: organism → population → community → ecosystem → biosphere. Biotic factors: living components.'
       }
     }
   ]

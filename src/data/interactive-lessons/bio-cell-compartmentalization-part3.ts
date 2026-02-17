@@ -19,31 +19,31 @@ export const bioCellCompartmentPart3Data = {
       id: 'cell3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes as cells grow, volume increases faster than surface area?',
+            question: 'What does "As cells grow, volume increases faster…" refer to in biology?',
             options: [
+              'V ratio limits cell size',
               'As cells grow, volume increases faster than surface area',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'microvilli, folded membranes',
+              'V → more efficient exchange'
             ],
-            correctAnswer: 0,
-            explanation: 'As cells grow, volume increases faster than surface area'
+            correctAnswer: 1,
+            explanation: 'Correct — As cells grow, volume increases faster than surface area. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of surface area to volume, which statement is accurate?',
+            question: 'Which of the following is true about Small cells have higher SA?',
             options: [
-              'Small cells have higher SA:V → more efficient exchange',
-              'aera ecafrus naht retsaf sesaercni emulov ,worg sllec sA',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'V ratio limits cell size',
+              'microvilli, folded membranes',
+              'V → more efficient exchange',
+              'As cells grow, volume increases faster than surface area'
             ],
-            correctAnswer: 0,
-            explanation: 'Small cells have higher SA:V → more efficient exchange'
+            correctAnswer: 2,
+            explanation: 'Correct — Small cells have higher SA: V → more efficient exchange. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioCellCompartmentPart3Data = {
       id: 'cell3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to surface area to volume?',
+            question: 'Which of these accurately represents Adaptations?',
             options: [
-              'Adaptations: microvilli, folded membranes',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'V ratio limits cell size',
+              'As cells grow, volume increases faster than surface area',
+              'V → more efficient exchange',
+              'microvilli, folded membranes'
             ],
-            correctAnswer: 0,
-            explanation: 'Adaptations: microvilli, folded membranes'
+            correctAnswer: 3,
+            explanation: 'Correct — Adaptations: microvilli, folded membranes. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioCellCompartmentPart3Data = {
       id: 'cell3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'As cells grow, volume increases faster than surface area is important in surface area to volume because',
-            options: ['As cells grow, volume increases faster than surfac', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'SA',
+            options: ['V ratio limits cell size', 'microvilli, folded membranes', 'As cells grow, volume increases faster than surface area', 'V → more efficient exchange']
           },
           {
-            label: 'SA is important in surface area to volume because',
-            options: ['V ratio limits cell size', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Small cells have higher SA',
+            options: ['As cells grow, volume increases faster than surface area', 'microvilli, folded membranes', 'V → more efficient exchange', 'V ratio limits cell size']
           },
           {
-            label: 'Small cells have higher SA is important in surface area to volume because',
-            options: ['V → more efficient exchange', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Adaptations',
+            options: ['V ratio limits cell size', 'microvilli, folded membranes', 'V → more efficient exchange', 'As cells grow, volume increases faster than surface area']
           }
         ],
-        correctAnswers: ['As cells grow, volume increases faster than surfac', 'V ratio limits cell size', 'V → more efficient exchange'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Surface Area to Volume.'
+        correctAnswers: ['V ratio limits cell size', 'V → more efficient exchange', 'microvilli, folded membranes'],
+        hint1: 'Think about what each concept specifically describes in Surface Area to Volume.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Surface Area to Volume describes a specific idea. SA: V ratio limits cell size. Small cells have higher SA: V → more efficient exchange. Adaptations: microvilli, folded membranes.'
       }
     }
   ]

@@ -30,31 +30,31 @@ infinitely many solutions (same line or plane)
       id: 'syste1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of systems of linear equations?',
+            question: 'What does "A system" refer to in precalculus?',
             options: [
-              'A system',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'values that satisfy ALL equations simultaneously',
+              'at least one solution; Inconsistent: no solution',
+              'infinitely many solutions (same line or plane)',
+              'two or more equations with the same variables'
             ],
-            correctAnswer: 0,
-            explanation: 'A system: two or more equations with the same variables'
+            correctAnswer: 3,
+            explanation: 'Correct — A system: two or more equations with the same variables. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of systems of linear equations, which is accurate?',
+            question: 'Which of the following is true about Consistent system?',
             options: [
               'at least one solution; Inconsistent: no solution',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'two or more equations with the same variables',
+              'values that satisfy ALL equations simultaneously',
+              'infinitely many solutions (same line or plane)'
             ],
             correctAnswer: 0,
-            explanation: 'Consistent system: at least one solution; Inconsistent: no solution'
+            explanation: 'Correct — Consistent system: at least one solution; Inconsistent: no solution. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ infinitely many solutions (same line or plane)
       id: 'syste1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'A system',
-            options: ['two or more equations with the same variables', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['infinitely many solutions (same line or plane)', 'two or more equations with the same variables', 'values that satisfy ALL equations simultaneously', 'at least one solution; Inconsistent: no solution']
           },
           {
             label: 'Solution',
-            options: ['values that satisfy ALL equations simultaneously', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['infinitely many solutions (same line or plane)', 'two or more equations with the same variables', 'at least one solution; Inconsistent: no solution', 'values that satisfy ALL equations simultaneously']
           },
           {
             label: 'Consistent system',
-            options: ['at least one solution; Inconsistent: no solution', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['infinitely many solutions (same line or plane)', 'two or more equations with the same variables', 'at least one solution; Inconsistent: no solution', 'values that satisfy ALL equations simultaneously']
           }
         ],
         correctAnswers: ['two or more equations with the same variables', 'values that satisfy ALL equations simultaneously', 'at least one solution; Inconsistent: no solution'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Systems of Linear Equations.'
+        hint1: 'Think about what each concept specifically describes in Systems Of Equations.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Systems Of Equations describes a specific idea. A system: two or more equations with the same variables. Solution: values that satisfy ALL equations simultaneously. Consistent system: at least one solution; Inconsistent: no solution.'
       }
     }
   ]

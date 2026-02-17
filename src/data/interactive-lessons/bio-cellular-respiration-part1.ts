@@ -19,31 +19,31 @@ export const bioCellRespirationPart1Data = {
       id: 'cell1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes overall equation?',
+            question: 'Which statement accurately explains Overall equation?',
             options: [
               'C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + ATP',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Glucose → 2 pyruvate + 2 ATP + 2 NADH',
+              'Glycolysis occurs in cytoplasm, no O₂ required',
+              'First step of both aerobic and anaerobic respiration'
             ],
             correctAnswer: 0,
-            explanation: 'Overall equation: C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + ATP'
+            explanation: 'Correct — Overall equation: C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + ATP. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of overview & glycolysis, which statement is accurate?',
+            question: 'Which of the following is true about Glucose → 2 pyruvate + 2 ATP + 2 NADH?',
             options: [
               'Glucose → 2 pyruvate + 2 ATP + 2 NADH',
-              'PTA + O₂H6 + ₂OC6 → ₂O6 + ₆O₂₁H₆C :noitauqe llarevO',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + ATP',
+              'First step of both aerobic and anaerobic respiration',
+              'Glycolysis occurs in cytoplasm, no O₂ required'
             ],
             correctAnswer: 0,
-            explanation: 'Glucose → 2 pyruvate + 2 ATP + 2 NADH'
+            explanation: 'Correct — Glucose → 2 pyruvate + 2 ATP + 2 NADH. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioCellRespirationPart1Data = {
       id: 'cell1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to overview & glycolysis?',
+            question: 'Which statement about First step of both aerobic and… is correct?',
             options: [
               'First step of both aerobic and anaerobic respiration',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Glycolysis occurs in cytoplasm, no O₂ required',
+              'C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + ATP',
+              'Glucose → 2 pyruvate + 2 ATP + 2 NADH'
             ],
             correctAnswer: 0,
-            explanation: 'First step of both aerobic and anaerobic respiration'
+            explanation: 'Correct — First step of both aerobic and anaerobic respiration. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioCellRespirationPart1Data = {
       id: 'cell1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Overall equation is important in overview & glycolysis because',
-            options: ['C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + ATP', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Overall equation',
+            options: ['Glycolysis occurs in cytoplasm, no O₂ required', 'First step of both aerobic and anaerobic respiration', 'C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + ATP', 'Glucose → 2 pyruvate + 2 ATP + 2 NADH']
           },
           {
-            label: 'Glycolysis occurs in cytoplasm, no O₂ required is important in overview & glycolysis because',
-            options: ['Glycolysis occurs in cytoplasm, no O₂ required', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Glycolysis occurs in cytoplasm, no O₂…',
+            options: ['Glycolysis occurs in cytoplasm, no O₂ required', 'C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + ATP', 'First step of both aerobic and anaerobic respiration', 'Glucose → 2 pyruvate + 2 ATP + 2 NADH']
           },
           {
-            label: 'Glucose → 2 pyruvate + 2 ATP + 2 NADH is important in overview & glycolysis because',
-            options: ['Glucose → 2 pyruvate + 2 ATP + 2 NADH', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Glucose → 2 pyruvate + 2 ATP + 2 NADH',
+            options: ['First step of both aerobic and anaerobic respiration', 'Glycolysis occurs in cytoplasm, no O₂ required', 'Glucose → 2 pyruvate + 2 ATP + 2 NADH', 'C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + ATP']
           }
         ],
         correctAnswers: ['C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + ATP', 'Glycolysis occurs in cytoplasm, no O₂ required', 'Glucose → 2 pyruvate + 2 ATP + 2 NADH'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Overview & Glycolysis.'
+        hint1: 'Think about what each concept specifically describes in Overview & Glycolysis.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Overview & Glycolysis describes a specific idea. Overall equation: C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + ATP. Glycolysis occurs in cytoplasm, no O₂ required. Glucose → 2 pyruvate + 2 ATP + 2 NADH.'
       }
     }
   ]

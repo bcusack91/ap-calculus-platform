@@ -71,23 +71,28 @@ Stomach: HCl activates pepsinogen to pepsin (protein digestion), pH ~2.
       id: 'mcat-4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Digestive System:',
-            options: ['Mechanical digestion (mouth, stomach) + chemical digestion (', 'Stomach: HCl activates pepsinogen to pepsin (protein digesti', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Stomach',
+            options: ['HCl activates pepsinogen to pepsin (protein digestion), pH ~2.', 'Absorption: amino acids and sugars via villi in small intestine; water absorbed in large intestine.', 'Small intestine: pancreatic enzymes (trypsin, lipase, amylase) + bile salts emulsify fats.', 'Mechanical digestion (mouth, stomach) + chemical digestion (enzymes, bile).']
           },
           {
-            label: 'MCAT application:',
-            options: ['Small intestine: pancreatic enzymes (trypsin, lipase, amylas', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Key Insight',
+            options: ['Small intestine: pancreatic enzymes (trypsin, lipase, amylase) + bile salts emulsify fats.', 'Absorption: amino acids and sugars via villi in small intestine; water absorbed in large intestine.', 'HCl activates pepsinogen to pepsin (protein digestion), pH ~2.', 'Mechanical digestion (mouth, stomach) + chemical digestion (enzymes, bile).']
+          },
+          {
+            label: 'MCAT Tip',
+            options: ['Absorption: amino acids and sugars via villi in small intestine; water absorbed in large intestine.', 'Mechanical digestion (mouth, stomach) + chemical digestion (enzymes, bile).', 'Small intestine: pancreatic enzymes (trypsin, lipase, amylase) + bile salts emulsify fats.', 'HCl activates pepsinogen to pepsin (protein digestion), pH ~2.']
           }
         ],
-        correctAnswers: ['Mechanical digestion (mouth, stomach) + chemical digestion (', 'Small intestine: pancreatic enzymes (trypsin, lipase, amylas'],
-        hint1: 'Think about digestive system',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Mechanical digestion (mouth, stomach) + chemical digestion (enzymes, bile). Small intestine: pancreatic enzymes (trypsin, lipase, amylase) + bile salts emulsify fats.'
+        correctAnswers: ['HCl activates pepsinogen to pepsin (protein digestion), pH ~2.', 'Small intestine: pancreatic enzymes (trypsin, lipase, amylase) + bile salts emulsify fats.', 'Absorption: amino acids and sugars via villi in small intestine; water absorbed in large intestine.'],
+        hint1: 'Think about what each concept specifically describes in Digestive System.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Digestive System describes a specific idea. Stomach: HCl activates pepsinogen to pepsin (protein digestion), pH ~2. Key Insight: Small intestine: pancreatic enzymes (trypsin, lipase, amylase) + bile salts emulsify fats. MCAT Tip: Absorption: amino acids and sugars via villi in small intestine; water absorbed in large intestine.'
       }
     }
   ]

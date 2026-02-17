@@ -71,23 +71,28 @@ Identify trends: direct relationship, inverse relationship, no correlation.
       id: 'mcat-2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Data Interpretation:',
-            options: ['Read axis labels, units, and scales on all graphs before int', 'Identify trends: direct relationship, inverse relationship, ', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Identify trends',
+            options: ['direct relationship, inverse relationship, no correlation.', 'Read axis labels, units, and scales on all graphs before interpreting data.', 'Extrapolation vs interpolation: extending beyond data vs estimating between known points.', 'Tables: cross-reference rows and columns to find specific values.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Extrapolation vs interpolation: extending beyond data vs est', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Key Insight',
+            options: ['Read axis labels, units, and scales on all graphs before interpreting data.', 'Extrapolation vs interpolation: extending beyond data vs estimating between known points.', 'Tables: cross-reference rows and columns to find specific values.', 'direct relationship, inverse relationship, no correlation.']
+          },
+          {
+            label: 'MCAT Tip',
+            options: ['Tables: cross-reference rows and columns to find specific values.', 'Extrapolation vs interpolation: extending beyond data vs estimating between known points.', 'direct relationship, inverse relationship, no correlation.', 'Read axis labels, units, and scales on all graphs before interpreting data.']
           }
         ],
-        correctAnswers: ['Read axis labels, units, and scales on all graphs before int', 'Extrapolation vs interpolation: extending beyond data vs est'],
-        hint1: 'Think about data interpretation',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Read axis labels, units, and scales on all graphs before interpreting data. Extrapolation vs interpolation: extending beyond data vs estimating between known points.'
+        correctAnswers: ['direct relationship, inverse relationship, no correlation.', 'Extrapolation vs interpolation: extending beyond data vs estimating between known points.', 'Tables: cross-reference rows and columns to find specific values.'],
+        hint1: 'Think about what each concept specifically describes in Data Interpretation.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Data Interpretation describes a specific idea. Identify trends: direct relationship, inverse relationship, no correlation. Key Insight: Extrapolation vs interpolation: extending beyond data vs estimating between known points. MCAT Tip: Tables: cross-reference rows and columns to find specific values.'
       }
     }
   ]

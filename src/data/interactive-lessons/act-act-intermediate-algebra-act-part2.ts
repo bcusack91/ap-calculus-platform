@@ -18,20 +18,31 @@ Multiply: distribute (FOIL for binomials).
       id: 'act-i2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes add/subtract?',
+            question: 'What does "Add/subtract" refer to in ACT prep?',
             options: [
-              'Add/subtract is a key concept for ACT Math',
-              'Multiply: distribute (FOIL for binomials)',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'Factor: GCF, difference of squares, trinomial factoring, grouping.',
+              'distribute (FOIL for binomials).',
+              'combine like terms.',
+              'Divide: long division or synthetic division.'
             ],
-            correctAnswer: 0,
-            explanation: 'Add/subtract: combine like terms'
+            correctAnswer: 2,
+            explanation: 'Correct — Add/subtract: combine like terms. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Polynomial Operations, which explains Key Insight?',
+            options: [
+              'distribute (FOIL for binomials).',
+              'combine like terms.',
+              'Factor: GCF, difference of squares, trinomial factoring, grouping.',
+              'Divide: long division or synthetic division.'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Key Insight: Factor: GCF, difference of squares, trinomial factoring, grouping. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Multiply: distribute (FOIL for binomials).
       id: 'act-i2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for polynomial operations?',
+            question: 'Regarding Polynomial Operations, which correctly describes ACT Tip?',
             options: [
-              'Factor: GCF, difference of squares, trinomial factoring, grouping',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Divide: long division or synthetic division.',
+              'combine like terms.',
+              'distribute (FOIL for binomials).',
+              'Factor: GCF, difference of squares, trinomial factoring, grouping.'
             ],
             correctAnswer: 0,
-            explanation: 'Factor: GCF, difference of squares, trinomial factoring, grouping'
+            explanation: 'Correct — ACT Tip: Divide: long division or synthetic division. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Multiply: distribute (FOIL for binomials).
       id: 'act-i2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Polynomial Operations:',
-            options: ['Add/subtract: combine like terms', 'Multiply: distribute (FOIL for binomials)', 'Not applicable', 'None of these']
+            label: 'Add/subtract',
+            options: ['Divide: long division or synthetic division.', 'Factor: GCF, difference of squares, trinomial factoring, grouping.', 'combine like terms.', 'distribute (FOIL for binomials).']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Factor: GCF, difference of squares, trinomial fact', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Multiply',
+            options: ['distribute (FOIL for binomials).', 'Divide: long division or synthetic division.', 'Factor: GCF, difference of squares, trinomial factoring, grouping.', 'combine like terms.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['Divide: long division or synthetic division.', 'Factor: GCF, difference of squares, trinomial factoring, grouping.', 'distribute (FOIL for binomials).', 'combine like terms.']
           }
         ],
-        correctAnswers: ['Add/subtract: combine like terms', 'Factor: GCF, difference of squares, trinomial fact'],
-        hint1: 'Think about polynomial operations',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Add/subtract: combine like terms. Factor: GCF, difference of squares, trinomial factoring, grouping.'
+        correctAnswers: ['combine like terms.', 'distribute (FOIL for binomials).', 'Factor: GCF, difference of squares, trinomial factoring, grouping.'],
+        hint1: 'Think about what each concept specifically describes in Polynomial Operations.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Polynomial Operations describes a specific idea. Add/subtract: combine like terms. Multiply: distribute (FOIL for binomials). Key Insight: Factor: GCF, difference of squares, trinomial factoring, grouping.'
       }
     }
   ]

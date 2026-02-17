@@ -30,31 +30,31 @@ Depth perception develops around 6 months (visual cliff)
       id: 'perce2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of depth perception?',
+            question: 'Which of the following correctly describes Binocular cues?',
             options: [
-              'Binocular cues',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'relative size, overlap, linear perspective, texture gradient',
+              'retinal disparity, convergence (need both eyes)',
+              'closer objects appear to move faster',
+              'Depth perception develops around 6 months (visual cliff)'
             ],
-            correctAnswer: 0,
-            explanation: 'Binocular cues: retinal disparity, convergence (need both eyes)'
+            correctAnswer: 1,
+            explanation: 'Correct — Binocular cues: retinal disparity, convergence (need both eyes). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of depth perception, which is accurate?',
+            question: 'In the context of Depth Perception, which explains Motion parallax?',
             options: [
-              'closer objects appear to move faster',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'relative size, overlap, linear perspective, texture gradient',
+              'retinal disparity, convergence (need both eyes)',
+              'Depth perception develops around 6 months (visual cliff)',
+              'closer objects appear to move faster'
             ],
-            correctAnswer: 0,
-            explanation: 'Motion parallax: closer objects appear to move faster'
+            correctAnswer: 3,
+            explanation: 'Correct — Motion parallax: closer objects appear to move faster. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Depth perception develops around 6 months (visual cliff)
       id: 'perce2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Binocular cues',
-            options: ['retinal disparity, convergence (need both eyes)', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Depth perception develops around 6 months (visual cliff)', 'relative size, overlap, linear perspective, texture gradient', 'closer objects appear to move faster', 'retinal disparity, convergence (need both eyes)']
           },
           {
             label: 'Monocular cues',
-            options: ['relative size, overlap, linear perspective, textur', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Depth perception develops around 6 months (visual cliff)', 'closer objects appear to move faster', 'retinal disparity, convergence (need both eyes)', 'relative size, overlap, linear perspective, texture gradient']
           },
           {
             label: 'Motion parallax',
-            options: ['closer objects appear to move faster', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['retinal disparity, convergence (need both eyes)', 'Depth perception develops around 6 months (visual cliff)', 'relative size, overlap, linear perspective, texture gradient', 'closer objects appear to move faster']
           }
         ],
-        correctAnswers: ['retinal disparity, convergence (need both eyes)', 'relative size, overlap, linear perspective, textur', 'closer objects appear to move faster'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Depth Perception.'
+        correctAnswers: ['retinal disparity, convergence (need both eyes)', 'relative size, overlap, linear perspective, texture gradient', 'closer objects appear to move faster'],
+        hint1: 'Think about what each concept specifically describes in Depth Perception.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Depth Perception describes a specific idea. Binocular cues: retinal disparity, convergence (need both eyes). Monocular cues: relative size, overlap, linear perspective, texture gradient. Motion parallax: closer objects appear to move faster.'
       }
     }
   ]

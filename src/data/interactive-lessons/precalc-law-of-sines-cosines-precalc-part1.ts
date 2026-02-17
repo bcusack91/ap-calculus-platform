@@ -30,31 +30,31 @@ Can solve for unknown sides or angles
       id: 'law-o1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of law of sines?',
+            question: 'What does "Law of Sines" refer to in precalculus?',
             options: [
-              'Law of Sines',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'Can solve for unknown sides or angles',
+              'AAS, ASA, or SSA',
+              'a/sin A = b/sin B = c/sin C',
+              'Relates sides to opposite angles'
             ],
-            correctAnswer: 0,
-            explanation: 'Law of Sines: a/sin A = b/sin B = c/sin C'
+            correctAnswer: 2,
+            explanation: 'Correct — Law of Sines: a/sin A = b/sin B = c/sin C. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of law of sines, which is accurate?',
+            question: 'Which of the following is true about Relates sides to opposite angles?',
             options: [
+              'Can solve for unknown sides or angles',
               'Relates sides to opposite angles',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'AAS, ASA, or SSA',
+              'a/sin A = b/sin B = c/sin C'
             ],
-            correctAnswer: 0,
-            explanation: 'Relates sides to opposite angles'
+            correctAnswer: 1,
+            explanation: 'Correct — Relates sides to opposite angles. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,24 @@ Can solve for unknown sides or angles
       id: 'law-o1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Law of Sines',
-            options: ['a/sin A = b/sin B = c/sin C', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['a/sin A = b/sin B = c/sin C', 'Relates sides to opposite angles', 'Can solve for unknown sides or angles', 'AAS, ASA, or SSA']
           },
           {
             label: 'Use when you know',
-            options: ['AAS, ASA, or SSA', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
-          },
-          {
-            label: 'Relates sides to opposite angles',
-            options: ['Relates sides to opposite angles', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['a/sin A = b/sin B = c/sin C', 'Relates sides to opposite angles', 'AAS, ASA, or SSA', 'Can solve for unknown sides or angles']
           }
         ],
-        correctAnswers: ['a/sin A = b/sin B = c/sin C', 'AAS, ASA, or SSA', 'Relates sides to opposite angles'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Law of Sines.'
+        correctAnswers: ['a/sin A = b/sin B = c/sin C', 'AAS, ASA, or SSA'],
+        hint1: 'Think about what each concept specifically describes in Law Of Sines Cosines.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Law Of Sines Cosines describes a specific idea. Law of Sines: a/sin A = b/sin B = c/sin C. Use when you know: AAS, ASA, or SSA.'
       }
     }
   ]

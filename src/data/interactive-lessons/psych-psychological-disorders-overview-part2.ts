@@ -30,31 +30,31 @@ labeling effects, cultural bias, comorbidity
       id: 'psych2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of classification (dsm-5)?',
+            question: 'What does "DSM-5" refer to in psychology?',
             options: [
-              'DSM-5',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'labeling effects, cultural bias, comorbidity',
+              'Diagnostic and Statistical Manual of Mental Disorders',
+              'Provides diagnostic criteria for each disorder',
+              'you either have the disorder or don\'t'
             ],
-            correctAnswer: 0,
-            explanation: 'DSM-5: Diagnostic and Statistical Manual of Mental Disorders'
+            correctAnswer: 1,
+            explanation: 'Correct — DSM-5: Diagnostic and Statistical Manual of Mental Disorders. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of classification (dsm-5), which is accurate?',
+            question: 'Select the statement that correctly describes Categorical system:',
             options: [
+              'labeling effects, cultural bias, comorbidity',
+              'Provides diagnostic criteria for each disorder',
               'you either have the disorder or don\'t',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Diagnostic and Statistical Manual of Mental Disorders'
             ],
-            correctAnswer: 0,
-            explanation: 'Categorical system: you either have the disorder or don\'t'
+            correctAnswer: 2,
+            explanation: 'Correct — Categorical system: you either have the disorder or don\'t. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ labeling effects, cultural bias, comorbidity
       id: 'psych2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'DSM-5',
-            options: ['Diagnostic and Statistical Manual of Mental Disord', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
-          },
-          {
-            label: 'Provides diagnostic criteria for each disorder',
-            options: ['Provides diagnostic criteria for each disorder', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Diagnostic and Statistical Manual of Mental Disorders', 'Provides diagnostic criteria for each disorder', 'labeling effects, cultural bias, comorbidity', 'you either have the disorder or don\'t']
           },
           {
             label: 'Categorical system',
-            options: ['you either have the disorder or don\'t', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Provides diagnostic criteria for each disorder', 'labeling effects, cultural bias, comorbidity', 'Diagnostic and Statistical Manual of Mental Disorders', 'you either have the disorder or don\'t']
+          },
+          {
+            label: 'Criticisms',
+            options: ['Diagnostic and Statistical Manual of Mental Disorders', 'Provides diagnostic criteria for each disorder', 'labeling effects, cultural bias, comorbidity', 'you either have the disorder or don\'t']
           }
         ],
-        correctAnswers: ['Diagnostic and Statistical Manual of Mental Disord', 'Provides diagnostic criteria for each disorder', 'you either have the disorder or don\'t'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Classification (DSM-5).'
+        correctAnswers: ['Diagnostic and Statistical Manual of Mental Disorders', 'you either have the disorder or don\'t', 'labeling effects, cultural bias, comorbidity'],
+        hint1: 'Think about what each concept specifically describes in Classification (DSM-5).',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Classification (DSM-5) describes a specific idea. DSM-5: Diagnostic and Statistical Manual of Mental Disorders. Categorical system: you either have the disorder or don\'t. Criticisms: labeling effects, cultural bias, comorbidity.'
       }
     }
   ]

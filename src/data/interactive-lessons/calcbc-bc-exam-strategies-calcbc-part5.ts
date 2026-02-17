@@ -30,31 +30,31 @@ don't spend too long on any one problem
       id: 'bc-ex5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of full exam review?',
+            question: 'Which statement accurately explains Practice with released AP exams under…?',
             options: [
               'Practice with released AP exams under timed conditions',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
+              'store functions, use numerical integration',
+              'don\'t spend too long on any one problem',
+              'Show all work on free-response — communication matters'
             ],
             correctAnswer: 0,
-            explanation: 'Practice with released AP exams under timed conditions'
+            explanation: 'Correct — Practice with released AP exams under timed conditions. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of full exam review, which is accurate?',
+            question: 'Select the statement that correctly describes Show all work on free-response —…:',
             options: [
               'Show all work on free-response — communication matters',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'don\'t spend too long on any one problem',
+              'store functions, use numerical integration',
+              'Practice with released AP exams under timed conditions'
             ],
             correctAnswer: 0,
-            explanation: 'Show all work on free-response — communication matters'
+            explanation: 'Correct — Show all work on free-response — communication matters. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ don't spend too long on any one problem
       id: 'bc-ex5-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to full exam review?',
+            question: 'Regarding Full Exam Review, which correctly describes Time management?',
             options: [
+              'store functions, use numerical integration',
+              'Show all work on free-response — communication matters',
               'don\'t spend too long on any one problem',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'Practice with released AP exams under timed conditions'
             ],
-            correctAnswer: 0,
-            explanation: 'Time management: don\'t spend too long on any one problem'
+            correctAnswer: 2,
+            explanation: 'Correct — Time management: don\'t spend too long on any one problem. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,24 @@ don't spend too long on any one problem
       id: 'bc-ex5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Practice with released AP exams under timed conditions',
-            options: ['Practice with released AP exams under timed condit', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
-          },
-          {
             label: 'Master the calculator',
-            options: ['store functions, use numerical integration', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Practice with released AP exams under timed conditions', 'don\'t spend too long on any one problem', 'Show all work on free-response — communication matters', 'store functions, use numerical integration']
           },
           {
-            label: 'Show all work on free-response — communication matters',
-            options: ['Show all work on free-response — communication mat', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Time management',
+            options: ['Practice with released AP exams under timed conditions', 'don\'t spend too long on any one problem', 'store functions, use numerical integration', 'Show all work on free-response — communication matters']
           }
         ],
-        correctAnswers: ['Practice with released AP exams under timed condit', 'store functions, use numerical integration', 'Show all work on free-response — communication mat'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Full Exam Review.'
+        correctAnswers: ['store functions, use numerical integration', 'don\'t spend too long on any one problem'],
+        hint1: 'Think about what each concept specifically describes in Full Exam Review.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Full Exam Review describes a specific idea. Master the calculator: store functions, use numerical integration. Time management: don\'t spend too long on any one problem.'
       }
     }
   ]

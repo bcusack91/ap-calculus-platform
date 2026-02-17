@@ -30,31 +30,31 @@ n stereocenters → max 2ⁿ stereoisomers
       id: 'stere4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of stereoisomer types?',
+            question: 'What does "Enantiomers" refer to in this topic?',
             options: [
-              'Enantiomers',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'mirror images, not superimposable',
+              'stereoisomers that are NOT mirror images',
+              'n stereocenters → max 2ⁿ stereoisomers',
+              'contain stereocenters but have internal plane of symmetry'
             ],
             correctAnswer: 0,
-            explanation: 'Enantiomers: mirror images, not superimposable'
+            explanation: 'Correct — Enantiomers: mirror images, not superimposable. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of stereoisomer types, which is accurate?',
+            question: 'Select the statement that correctly describes Meso compounds:',
             options: [
+              'stereoisomers that are NOT mirror images',
               'contain stereocenters but have internal plane of symmetry',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'mirror images, not superimposable',
+              'n stereocenters → max 2ⁿ stereoisomers'
             ],
-            correctAnswer: 0,
-            explanation: 'Meso compounds: contain stereocenters but have internal plane of symmetry'
+            correctAnswer: 1,
+            explanation: 'Correct — Meso compounds: contain stereocenters but have internal plane of symmetry. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ n stereocenters → max 2ⁿ stereoisomers
       id: 'stere4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Enantiomers',
-            options: ['mirror images, not superimposable', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['n stereocenters → max 2ⁿ stereoisomers', 'mirror images, not superimposable', 'stereoisomers that are NOT mirror images', 'contain stereocenters but have internal plane of symmetry']
           },
           {
             label: 'Diastereomers',
-            options: ['stereoisomers that are NOT mirror images', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['stereoisomers that are NOT mirror images', 'n stereocenters → max 2ⁿ stereoisomers', 'contain stereocenters but have internal plane of symmetry', 'mirror images, not superimposable']
           },
           {
             label: 'Meso compounds',
-            options: ['contain stereocenters but have internal plane of s', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['mirror images, not superimposable', 'stereoisomers that are NOT mirror images', 'contain stereocenters but have internal plane of symmetry', 'n stereocenters → max 2ⁿ stereoisomers']
           }
         ],
-        correctAnswers: ['mirror images, not superimposable', 'stereoisomers that are NOT mirror images', 'contain stereocenters but have internal plane of s'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Stereoisomer Types.'
+        correctAnswers: ['mirror images, not superimposable', 'stereoisomers that are NOT mirror images', 'contain stereocenters but have internal plane of symmetry'],
+        hint1: 'Think about what each concept specifically describes in Stereoisomer Types.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Stereoisomer Types describes a specific idea. Enantiomers: mirror images, not superimposable. Diastereomers: stereoisomers that are NOT mirror images. Meso compounds: contain stereocenters but have internal plane of symmetry.'
       }
     }
   ]

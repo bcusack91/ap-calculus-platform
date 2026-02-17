@@ -30,31 +30,31 @@ Many aromatic compounds have distinctive odors
       id: 'aroma4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of properties of aromatic compounds?',
+            question: 'What does "Aromatic compounds undergo…" refer to in this topic?',
             options: [
+              'Many aromatic compounds have distinctive odors',
+              'Higher melting/boiling points due to planarity',
               'Aromatic compounds undergo substitution, not addition',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'Preserves aromaticity (stable π system)'
             ],
-            correctAnswer: 0,
-            explanation: 'Aromatic compounds undergo substitution, not addition'
+            correctAnswer: 2,
+            explanation: 'Correct — Aromatic compounds undergo substitution, not addition. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of properties of aromatic compounds, which is accurate?',
+            question: 'Which of the following is true about Higher melting/boiling points due to…?',
             options: [
               'Higher melting/boiling points due to planarity',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Aromatic compounds undergo substitution, not addition',
+              'Many aromatic compounds have distinctive odors',
+              'Preserves aromaticity (stable π system)'
             ],
             correctAnswer: 0,
-            explanation: 'Higher melting/boiling points due to planarity'
+            explanation: 'Correct — Higher melting/boiling points due to planarity. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Many aromatic compounds have distinctive odors
       id: 'aroma4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Aromatic compounds undergo substitution, not addition',
-            options: ['Aromatic compounds undergo substitution, not addit', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Aromatic compounds undergo…',
+            options: ['Preserves aromaticity (stable π system)', 'Higher melting/boiling points due to planarity', 'Many aromatic compounds have distinctive odors', 'Aromatic compounds undergo substitution, not addition']
           },
           {
             label: 'Preserves aromaticity (stable π system)',
-            options: ['Preserves aromaticity (stable π system)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Higher melting/boiling points due to planarity', 'Preserves aromaticity (stable π system)', 'Many aromatic compounds have distinctive odors', 'Aromatic compounds undergo substitution, not addition']
           },
           {
-            label: 'Higher melting/boiling points due to planarity',
-            options: ['Higher melting/boiling points due to planarity', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Higher melting/boiling points due to…',
+            options: ['Higher melting/boiling points due to planarity', 'Many aromatic compounds have distinctive odors', 'Preserves aromaticity (stable π system)', 'Aromatic compounds undergo substitution, not addition']
           }
         ],
-        correctAnswers: ['Aromatic compounds undergo substitution, not addit', 'Preserves aromaticity (stable π system)', 'Higher melting/boiling points due to planarity'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Properties of Aromatic Compounds.'
+        correctAnswers: ['Aromatic compounds undergo substitution, not addition', 'Preserves aromaticity (stable π system)', 'Higher melting/boiling points due to planarity'],
+        hint1: 'Think about what each concept specifically describes in Properties of Aromatic Compounds.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Properties of Aromatic Compounds describes a specific idea. Aromatic compounds undergo substitution, not addition. Preserves aromaticity (stable π system). Higher melting/boiling points due to planarity.'
       }
     }
   ]

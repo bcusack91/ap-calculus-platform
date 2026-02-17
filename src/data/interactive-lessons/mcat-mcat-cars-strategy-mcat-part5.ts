@@ -71,23 +71,28 @@ Word choice reveals tone: clinical vs. passionate, dismissive vs. respectful.
       id: 'mcat-5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Tone & Author Perspective:',
-            options: ['Author attitude: positive, negative, neutral, mixed, or iron', 'Word choice reveals tone: clinical vs. passionate, dismissiv', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Author attitude',
+            options: ['Distinguish the authors view from views they are describing or critiquing.', 'clinical vs. passionate, dismissive vs. respectful.', 'positive, negative, neutral, mixed, or ironic.', 'Rhetorical purpose: why did the author include this example or argument?.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Distinguish the authors view from views they are describing ', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Word choice reveals tone',
+            options: ['Rhetorical purpose: why did the author include this example or argument?.', 'Distinguish the authors view from views they are describing or critiquing.', 'clinical vs. passionate, dismissive vs. respectful.', 'positive, negative, neutral, mixed, or ironic.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['Rhetorical purpose: why did the author include this example or argument?.', 'positive, negative, neutral, mixed, or ironic.', 'Distinguish the authors view from views they are describing or critiquing.', 'clinical vs. passionate, dismissive vs. respectful.']
           }
         ],
-        correctAnswers: ['Author attitude: positive, negative, neutral, mixed, or iron', 'Distinguish the authors view from views they are describing '],
-        hint1: 'Think about tone & author perspective',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Author attitude: positive, negative, neutral, mixed, or ironic. Distinguish the authors view from views they are describing or critiquing.'
+        correctAnswers: ['positive, negative, neutral, mixed, or ironic.', 'clinical vs. passionate, dismissive vs. respectful.', 'Distinguish the authors view from views they are describing or critiquing.'],
+        hint1: 'Think about what each concept specifically describes in Tone & Author Perspective.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Tone & Author Perspective describes a specific idea. Author attitude: positive, negative, neutral, mixed, or ironic. Word choice reveals tone: clinical vs. passionate, dismissive vs. respectful. Key Insight: Distinguish the authors view from views they are describing or critiquing.'
       }
     }
   ]

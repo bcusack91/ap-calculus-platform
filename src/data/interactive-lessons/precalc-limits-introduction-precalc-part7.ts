@@ -30,31 +30,31 @@ limit = 0; greater: limit = ±∞
       id: 'limit7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of review & applications?',
+            question: 'Which of the following correctly describes lim(x→∞)?',
             options: [
-              'lim(x→∞)',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'behavior as x grows without bound',
+              'limit = ratio of leading coefficients',
+              'limit = 0; greater: limit = ±∞',
+              'compare degrees of numerator and denominator'
             ],
             correctAnswer: 0,
-            explanation: 'lim(x→∞): behavior as x grows without bound'
+            explanation: 'Correct — lim(x→∞): behavior as x grows without bound. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of review & applications, which is accurate?',
+            question: 'In the context of Review & Applications, which explains Same degree?',
             options: [
+              'limit = 0; greater: limit = ±∞',
+              'compare degrees of numerator and denominator',
               'limit = ratio of leading coefficients',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'behavior as x grows without bound'
             ],
-            correctAnswer: 0,
-            explanation: 'Same degree: limit = ratio of leading coefficients'
+            correctAnswer: 2,
+            explanation: 'Correct — Same degree: limit = ratio of leading coefficients. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ limit = 0; greater: limit = ±∞
       id: 'limit7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'lim(x→∞)',
-            options: ['behavior as x grows without bound', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['behavior as x grows without bound', 'compare degrees of numerator and denominator', 'limit = ratio of leading coefficients', 'limit = 0; greater: limit = ±∞']
           },
           {
             label: 'For rational functions',
-            options: ['compare degrees of numerator and denominator', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['behavior as x grows without bound', 'limit = ratio of leading coefficients', 'compare degrees of numerator and denominator', 'limit = 0; greater: limit = ±∞']
           },
           {
             label: 'Same degree',
-            options: ['limit = ratio of leading coefficients', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['behavior as x grows without bound', 'compare degrees of numerator and denominator', 'limit = 0; greater: limit = ±∞', 'limit = ratio of leading coefficients']
           }
         ],
         correctAnswers: ['behavior as x grows without bound', 'compare degrees of numerator and denominator', 'limit = ratio of leading coefficients'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Review & Applications.'
+        hint1: 'Think about what each concept specifically describes in Review & Applications.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Review & Applications describes a specific idea. lim(x→∞): behavior as x grows without bound. For rational functions: compare degrees of numerator and denominator. Same degree: limit = ratio of leading coefficients.'
       }
     }
   ]

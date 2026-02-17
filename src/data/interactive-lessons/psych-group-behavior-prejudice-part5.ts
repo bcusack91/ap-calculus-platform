@@ -30,31 +30,31 @@ studying behavior across cultures
       id: 'group5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of cultural influences?',
-            options: [
-              'Individualist cultures',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
-            ],
-            correctAnswer: 0,
-            explanation: 'Individualist cultures: emphasis on personal goals and independence'
-          },
-          {
-            question: 'In the context of cultural influences, which is accurate?',
+            question: 'Which statement accurately explains Individualist cultures?',
             options: [
               'Cultural differences in conformity, attribution, self-concept',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'emphasis on group goals and interdependence',
+              'studying behavior across cultures',
+              'emphasis on personal goals and independence'
             ],
-            correctAnswer: 0,
-            explanation: 'Cultural differences in conformity, attribution, self-concept'
+            correctAnswer: 3,
+            explanation: 'Correct — Individualist cultures: emphasis on personal goals and independence. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Cultural differences in conformity,…?',
+            options: [
+              'emphasis on personal goals and independence',
+              'Cultural differences in conformity, attribution, self-concept',
+              'studying behavior across cultures',
+              'emphasis on group goals and interdependence'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Cultural differences in conformity, attribution, self-concept. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ studying behavior across cultures
       id: 'group5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Individualist cultures',
-            options: ['emphasis on personal goals and independence', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['studying behavior across cultures', 'emphasis on personal goals and independence', 'emphasis on group goals and interdependence', 'Cultural differences in conformity, attribution, self-concept']
           },
           {
             label: 'Collectivist cultures',
-            options: ['emphasis on group goals and interdependence', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['studying behavior across cultures', 'emphasis on personal goals and independence', 'Cultural differences in conformity, attribution, self-concept', 'emphasis on group goals and interdependence']
           },
           {
-            label: 'Cultural differences in conformity, attribution, self-concept',
-            options: ['Cultural differences in conformity, attribution, s', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            label: 'Cross-cultural psychology',
+            options: ['Cultural differences in conformity, attribution, self-concept', 'studying behavior across cultures', 'emphasis on group goals and interdependence', 'emphasis on personal goals and independence']
           }
         ],
-        correctAnswers: ['emphasis on personal goals and independence', 'emphasis on group goals and interdependence', 'Cultural differences in conformity, attribution, s'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Cultural Influences.'
+        correctAnswers: ['emphasis on personal goals and independence', 'emphasis on group goals and interdependence', 'studying behavior across cultures'],
+        hint1: 'Think about what each concept specifically describes in Cultural Influences.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Cultural Influences describes a specific idea. Individualist cultures: emphasis on personal goals and independence. Collectivist cultures: emphasis on group goals and interdependence. Cross-cultural psychology: studying behavior across cultures.'
       }
     }
   ]

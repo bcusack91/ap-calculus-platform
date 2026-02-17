@@ -71,23 +71,28 @@ Night before: prepare materials, set alarms, get 8+ hours of sleep.
       id: 'mcat-5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Test Day Preparation:',
-            options: ['Week before: light review, no new material, focus on rest an', 'Night before: prepare materials, set alarms, get 8+ hours of', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Week before',
+            options: ['During breaks: eat, hydrate, stretch, use the restroom — do NOT review material.', 'light review, no new material, focus on rest and confidence.', 'prepare materials, set alarms, get 8+ hours of sleep.', 'Bring: valid ID, confirmation email, snacks/drinks for breaks, layers for temperature.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Bring: valid ID, confirmation email, snacks/drinks for break', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Night before',
+            options: ['Bring: valid ID, confirmation email, snacks/drinks for breaks, layers for temperature.', 'light review, no new material, focus on rest and confidence.', 'During breaks: eat, hydrate, stretch, use the restroom — do NOT review material.', 'prepare materials, set alarms, get 8+ hours of sleep.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['light review, no new material, focus on rest and confidence.', 'During breaks: eat, hydrate, stretch, use the restroom — do NOT review material.', 'prepare materials, set alarms, get 8+ hours of sleep.', 'Bring: valid ID, confirmation email, snacks/drinks for breaks, layers for temperature.']
           }
         ],
-        correctAnswers: ['Week before: light review, no new material, focus on rest an', 'Bring: valid ID, confirmation email, snacks/drinks for break'],
-        hint1: 'Think about test day preparation',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Week before: light review, no new material, focus on rest and confidence. Bring: valid ID, confirmation email, snacks/drinks for breaks, layers for temperature.'
+        correctAnswers: ['light review, no new material, focus on rest and confidence.', 'prepare materials, set alarms, get 8+ hours of sleep.', 'Bring: valid ID, confirmation email, snacks/drinks for breaks, layers for temperature.'],
+        hint1: 'Think about what each concept specifically describes in Test Day Preparation.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Test Day Preparation describes a specific idea. Week before: light review, no new material, focus on rest and confidence. Night before: prepare materials, set alarms, get 8+ hours of sleep. Key Insight: Bring: valid ID, confirmation email, snacks/drinks for breaks, layers for temperature.'
       }
     }
   ]

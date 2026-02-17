@@ -30,31 +30,31 @@ differentiate position → velocity → acceleration; integrate in reverse
       id: 'parti1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of position, velocity, acceleration?',
-            options: [
-              'Position s(t) describes location at time t',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'Position s(t) describes location at time t'
-          },
-          {
-            question: 'In the context of position, velocity, acceleration, which is accurate?',
+            question: 'What does "Position s(t) describes location at…" refer to in calculus?',
             options: [
               'Acceleration a(t) = v\'(t) = s\'\'{t} — rate of change of velocity',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Velocity v(t) = s\'(t) — rate of change of position',
+              'differentiate position → velocity → acceleration; integrate in reverse',
+              'Position s(t) describes location at time t'
             ],
-            correctAnswer: 0,
-            explanation: 'Acceleration a(t) = v\'(t) = s\'\'{t} — rate of change of velocity'
+            correctAnswer: 3,
+            explanation: 'Correct — Position s(t) describes location at time t. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Particle Motion, which explains Acceleration a(t) = v\'(t) = s\'\'{t} —…?',
+            options: [
+              'differentiate position → velocity → acceleration; integrate in reverse',
+              'Acceleration a(t) = v\'(t) = s\'\'{t} — rate of change of velocity',
+              'Velocity v(t) = s\'(t) — rate of change of position',
+              'Position s(t) describes location at time t'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Acceleration a(t) = v\'(t) = s\'\'{t} — rate of change of velocity. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ differentiate position → velocity → acceleration; integrate in reverse
       id: 'parti1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to position, velocity, acceleration?',
+            question: 'Regarding Particle Motion, which correctly describes Relationships?',
             options: [
               'differentiate position → velocity → acceleration; integrate in reverse',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'Position s(t) describes location at time t',
+              'Acceleration a(t) = v\'(t) = s\'\'{t} — rate of change of velocity',
+              'Velocity v(t) = s\'(t) — rate of change of position'
             ],
             correctAnswer: 0,
-            explanation: 'Relationships: differentiate position → velocity → acceleration; integrate in reverse'
+            explanation: 'Correct — Relationships: differentiate position → velocity → acceleration; integrate in reverse. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ differentiate position → velocity → acceleration; integrate in reverse
       id: 'parti1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Position s(t) describes location at time t',
-            options: ['Position s(t) describes location at time t', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Position s(t) describes location at…',
+            options: ['differentiate position → velocity → acceleration; integrate in reverse', 'Acceleration a(t) = v\'(t) = s\'\'{t} — rate of change of velocity', 'Velocity v(t) = s\'(t) — rate of change of position', 'Position s(t) describes location at time t']
           },
           {
-            label: 'Velocity v(t) = s\'(t) — rate of change of position',
-            options: ['Velocity v(t) = s\'(t) — rate of change of position', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Velocity v(t) = s\'(t) — rate of change…',
+            options: ['Velocity v(t) = s\'(t) — rate of change of position', 'Acceleration a(t) = v\'(t) = s\'\'{t} — rate of change of velocity', 'differentiate position → velocity → acceleration; integrate in reverse', 'Position s(t) describes location at time t']
           },
           {
-            label: 'Acceleration a(t) = v\'(t) = s\'\'{t} — rate of change of velocity',
-            options: ['Acceleration a(t) = v\'(t) = s\'\'{t} — rate of chang', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Acceleration a(t) = v\'(t) = s\'\'{t} —…',
+            options: ['differentiate position → velocity → acceleration; integrate in reverse', 'Position s(t) describes location at time t', 'Acceleration a(t) = v\'(t) = s\'\'{t} — rate of change of velocity', 'Velocity v(t) = s\'(t) — rate of change of position']
           }
         ],
-        correctAnswers: ['Position s(t) describes location at time t', 'Velocity v(t) = s\'(t) — rate of change of position', 'Acceleration a(t) = v\'(t) = s\'\'{t} — rate of chang'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Position, Velocity, Acceleration.'
+        correctAnswers: ['Position s(t) describes location at time t', 'Velocity v(t) = s\'(t) — rate of change of position', 'Acceleration a(t) = v\'(t) = s\'\'{t} — rate of change of velocity'],
+        hint1: 'Think about what each concept specifically describes in Particle Motion.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Particle Motion describes a specific idea. Position s(t) describes location at time t. Velocity v(t) = s\'(t) — rate of change of position. Acceleration a(t) = v\'(t) = s\'\'{t} — rate of change of velocity.'
       }
     }
   ]

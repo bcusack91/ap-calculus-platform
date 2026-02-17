@@ -18,20 +18,31 @@ Look at the first and last paragraphs for the thesis.
       id: 'sat-r1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes main idea = what the passage is mostly about?',
+            question: 'Which of the following correctly describes Main idea = what the passage is mostly…?',
             options: [
-              'Main idea = what the passage is mostly about is a fundamental concept in SAT Reading & Writing',
-              'Look at the first and last paragraphs for the thesis',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'Main idea = what the passage is mostly about.',
+              'Eliminate answers that are too broad, too narrow, or not supported.',
+              'The main idea is supported by the details in the passage — not the other way around.',
+              'Look at the first and last paragraphs for the thesis.'
             ],
             correctAnswer: 0,
-            explanation: 'Main idea = what the passage is mostly about'
+            explanation: 'Correct — Main idea = what the passage is mostly about. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Key Insight?',
+            options: [
+              'Look at the first and last paragraphs for the thesis.',
+              'Main idea = what the passage is mostly about.',
+              'The main idea is supported by the details in the passage — not the other way around.',
+              'Eliminate answers that are too broad, too narrow, or not supported.'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Key Insight: Eliminate answers that are too broad, too narrow, or not supported. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Look at the first and last paragraphs for the thesis.
       id: 'sat-r1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for finding main ideas?',
+            question: 'Which statement about SAT Tip is correct?',
             options: [
-              'Eliminate answers that are too broad, too narrow, or not supported',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'Main idea = what the passage is mostly about.',
+              'The main idea is supported by the details in the passage — not the other way around.',
+              'Eliminate answers that are too broad, too narrow, or not supported.',
+              'Look at the first and last paragraphs for the thesis.'
             ],
-            correctAnswer: 0,
-            explanation: 'Eliminate answers that are too broad, too narrow, or not supported'
+            correctAnswer: 1,
+            explanation: 'Correct — SAT Tip: The main idea is supported by the details in the passage — not the other way around. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ Look at the first and last paragraphs for the thesis.
       id: 'sat-r1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Finding Main Ideas:',
-            options: ['Main idea = what the passage is mostly about', 'Look at the first and last paragraphs for the thes', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['Main idea = what the passage is mostly about.', 'The main idea is supported by the details in the passage — not the other way around.', 'Look at the first and last paragraphs for the thesis.', 'Eliminate answers that are too broad, too narrow, or not supported.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Eliminate answers that are too broad, too narrow, ', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'SAT Tip',
+            options: ['The main idea is supported by the details in the passage — not the other way around.', 'Look at the first and last paragraphs for the thesis.', 'Eliminate answers that are too broad, too narrow, or not supported.', 'Main idea = what the passage is mostly about.']
           }
         ],
-        correctAnswers: ['Main idea = what the passage is mostly about', 'Eliminate answers that are too broad, too narrow, '],
-        hint1: 'Think about finding main ideas',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'Main idea = what the passage is mostly about. Eliminate answers that are too broad, too narrow, or not supported.'
+        correctAnswers: ['Eliminate answers that are too broad, too narrow, or not supported.', 'The main idea is supported by the details in the passage — not the other way around.'],
+        hint1: 'Think about what each concept specifically describes in Reading Evidence.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Reading Evidence describes a specific idea. Key Insight: Eliminate answers that are too broad, too narrow, or not supported. SAT Tip: The main idea is supported by the details in the passage — not the other way around.'
       }
     }
   ]

@@ -30,31 +30,31 @@ personality theory comparisons
       id: 'perso7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of synthesis & ap review?',
+            question: 'What does "Multiple perspectives offer different…" refer to in psychology?',
             options: [
               'Multiple perspectives offer different insights',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'Personality is shaped by biology, cognition, and environment',
+              'Assessment methods have strengths and limitations',
+              'personality theory comparisons'
             ],
             correctAnswer: 0,
-            explanation: 'Multiple perspectives offer different insights'
+            explanation: 'Correct — Multiple perspectives offer different insights. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of synthesis & ap review, which is accurate?',
+            question: 'Which of the following is true about Assessment methods have strengths and…?',
             options: [
-              'Assessment methods have strengths and limitations',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'personality theory comparisons',
+              'Multiple perspectives offer different insights',
+              'Personality is shaped by biology, cognition, and environment',
+              'Assessment methods have strengths and limitations'
             ],
-            correctAnswer: 0,
-            explanation: 'Assessment methods have strengths and limitations'
+            correctAnswer: 3,
+            explanation: 'Correct — Assessment methods have strengths and limitations. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ personality theory comparisons
       id: 'perso7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Multiple perspectives offer different insights',
-            options: ['Multiple perspectives offer different insights', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            label: 'Multiple perspectives offer different…',
+            options: ['Assessment methods have strengths and limitations', 'Personality is shaped by biology, cognition, and environment', 'personality theory comparisons', 'Multiple perspectives offer different insights']
           },
           {
-            label: 'Personality is shaped by biology, cognition, and environment',
-            options: ['Personality is shaped by biology, cognition, and e', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            label: 'Personality is shaped by biology,…',
+            options: ['personality theory comparisons', 'Personality is shaped by biology, cognition, and environment', 'Assessment methods have strengths and limitations', 'Multiple perspectives offer different insights']
           },
           {
-            label: 'Assessment methods have strengths and limitations',
-            options: ['Assessment methods have strengths and limitations', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            label: 'Assessment methods have strengths and…',
+            options: ['Personality is shaped by biology, cognition, and environment', 'personality theory comparisons', 'Multiple perspectives offer different insights', 'Assessment methods have strengths and limitations']
           }
         ],
-        correctAnswers: ['Multiple perspectives offer different insights', 'Personality is shaped by biology, cognition, and e', 'Assessment methods have strengths and limitations'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Synthesis & AP Review.'
+        correctAnswers: ['Multiple perspectives offer different insights', 'Personality is shaped by biology, cognition, and environment', 'Assessment methods have strengths and limitations'],
+        hint1: 'Think about what each concept specifically describes in Synthesis & AP Review.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Synthesis & AP Review describes a specific idea. Multiple perspectives offer different insights. Personality is shaped by biology, cognition, and environment. Assessment methods have strengths and limitations.'
       }
     }
   ]

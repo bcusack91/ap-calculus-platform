@@ -30,31 +30,31 @@ cos(θ/2) = ±√((1 + cos θ)/2)
       id: 'trigo4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of double & half angle formulas?',
+            question: 'What does "sin(2θ) = 2 sin θ cos θ" refer to in precalculus?',
             options: [
-              'sin(2θ) = 2 sin θ cos θ',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'cos(θ/2) = ±√((1 + cos θ)/2)',
+              'cos(2θ) = cos²θ - sin²θ = 2cos²θ - 1 = 1 - 2sin²θ',
+              'sin(θ/2) = ±√((1 - cos θ)/2)',
+              'sin(2θ) = 2 sin θ cos θ'
             ],
-            correctAnswer: 0,
-            explanation: 'sin(2θ) = 2 sin θ cos θ'
+            correctAnswer: 3,
+            explanation: 'Correct — sin(2θ) = 2 sin θ cos θ. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of double & half angle formulas, which is accurate?',
+            question: 'Select the statement that correctly describes sin(θ/2) = ±√((1 - cos θ)/2):',
             options: [
-              'sin(θ/2) = ±√((1 - cos θ)/2)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'cos(θ/2) = ±√((1 + cos θ)/2)',
+              'cos(2θ) = cos²θ - sin²θ = 2cos²θ - 1 = 1 - 2sin²θ',
+              'sin(2θ) = 2 sin θ cos θ',
+              'sin(θ/2) = ±√((1 - cos θ)/2)'
             ],
-            correctAnswer: 0,
-            explanation: 'sin(θ/2) = ±√((1 - cos θ)/2)'
+            correctAnswer: 3,
+            explanation: 'Correct — sin(θ/2) = ±√((1 - cos θ)/2). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ cos(θ/2) = ±√((1 + cos θ)/2)
       id: 'trigo4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'sin(2θ) = 2 sin θ cos θ',
-            options: ['sin(2θ) = 2 sin θ cos θ', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['cos(2θ) = cos²θ - sin²θ = 2cos²θ - 1 = 1 - 2sin²θ', 'sin(2θ) = 2 sin θ cos θ', 'cos(θ/2) = ±√((1 + cos θ)/2)', 'sin(θ/2) = ±√((1 - cos θ)/2)']
           },
           {
-            label: 'cos(2θ) = cos²θ - sin²θ = 2cos²θ - 1 = 1 - 2sin²θ',
-            options: ['cos(2θ) = cos²θ - sin²θ = 2cos²θ - 1 = 1 - 2sin²θ', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            label: 'cos(2θ) = cos²θ - sin²θ = 2cos²θ - 1 =…',
+            options: ['sin(2θ) = 2 sin θ cos θ', 'cos(θ/2) = ±√((1 + cos θ)/2)', 'cos(2θ) = cos²θ - sin²θ = 2cos²θ - 1 = 1 - 2sin²θ', 'sin(θ/2) = ±√((1 - cos θ)/2)']
           },
           {
             label: 'sin(θ/2) = ±√((1 - cos θ)/2)',
-            options: ['sin(θ/2) = ±√((1 - cos θ)/2)', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['cos(θ/2) = ±√((1 + cos θ)/2)', 'sin(θ/2) = ±√((1 - cos θ)/2)', 'cos(2θ) = cos²θ - sin²θ = 2cos²θ - 1 = 1 - 2sin²θ', 'sin(2θ) = 2 sin θ cos θ']
           }
         ],
         correctAnswers: ['sin(2θ) = 2 sin θ cos θ', 'cos(2θ) = cos²θ - sin²θ = 2cos²θ - 1 = 1 - 2sin²θ', 'sin(θ/2) = ±√((1 - cos θ)/2)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Double & Half Angle Formulas.'
+        hint1: 'Think about what each concept specifically describes in Double & Half Angle Formulas.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Double & Half Angle Formulas describes a specific idea. sin(2θ) = 2 sin θ cos θ. cos(2θ) = cos²θ - sin²θ = 2cos²θ - 1 = 1 - 2sin²θ. sin(θ/2) = ±√((1 - cos θ)/2).'
       }
     }
   ]

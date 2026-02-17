@@ -18,20 +18,31 @@ Command of evidence: cite specific text to support a conclusion.
       id: 'sat-r3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes best evidence questions?',
+            question: 'Which of the following correctly describes Best evidence questions?',
             options: [
-              'Best evidence questions is a fundamental concept in SAT Reading & Writing',
-              'Command of evidence: cite specific text to support a conclusion',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'cite specific text to support a conclusion.',
+              'which lines support your previous answer?.',
+              'Work these in pairs with the preceding question.',
+              'Eliminate choices where the evidence doesn\'t match the claim.'
             ],
-            correctAnswer: 0,
-            explanation: 'Best evidence questions: which lines support your previous answer?'
+            correctAnswer: 1,
+            explanation: 'Correct — Best evidence questions: which lines support your previous answer?. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              'which lines support your previous answer?.',
+              'Work these in pairs with the preceding question.',
+              'Eliminate choices where the evidence doesn\'t match the claim.',
+              'cite specific text to support a conclusion.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Key Insight: Work these in pairs with the preceding question. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Command of evidence: cite specific text to support a conclusion.
       id: 'sat-r3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for evidence-based questions?',
+            question: 'Which statement about SAT Tip is correct?',
             options: [
-              'Work these in pairs with the preceding question',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'Eliminate choices where the evidence doesn\'t match the claim.',
+              'Work these in pairs with the preceding question.',
+              'which lines support your previous answer?.',
+              'cite specific text to support a conclusion.'
             ],
             correctAnswer: 0,
-            explanation: 'Work these in pairs with the preceding question'
+            explanation: 'Correct — SAT Tip: Eliminate choices where the evidence doesn\'t match the claim. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Command of evidence: cite specific text to support a conclusion.
       id: 'sat-r3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Evidence-Based Questions:',
-            options: ['Best evidence questions: which lines support your ', 'Command of evidence: cite specific text to support', 'Not applicable', 'None of these']
+            label: 'Best evidence questions',
+            options: ['cite specific text to support a conclusion.', 'Eliminate choices where the evidence doesn\'t match the claim.', 'Work these in pairs with the preceding question.', 'which lines support your previous answer?.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Work these in pairs with the preceding question', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Command of evidence',
+            options: ['Eliminate choices where the evidence doesn\'t match the claim.', 'Work these in pairs with the preceding question.', 'cite specific text to support a conclusion.', 'which lines support your previous answer?.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['cite specific text to support a conclusion.', 'which lines support your previous answer?.', 'Work these in pairs with the preceding question.', 'Eliminate choices where the evidence doesn\'t match the claim.']
           }
         ],
-        correctAnswers: ['Best evidence questions: which lines support your ', 'Work these in pairs with the preceding question'],
-        hint1: 'Think about evidence-based questions',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'Best evidence questions: which lines support your previous answer?. Work these in pairs with the preceding question.'
+        correctAnswers: ['which lines support your previous answer?.', 'cite specific text to support a conclusion.', 'Work these in pairs with the preceding question.'],
+        hint1: 'Think about what each concept specifically describes in Evidence-Based Questions.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Evidence-Based Questions describes a specific idea. Best evidence questions: which lines support your previous answer?. Command of evidence: cite specific text to support a conclusion. Key Insight: Work these in pairs with the preceding question.'
       }
     }
   ]

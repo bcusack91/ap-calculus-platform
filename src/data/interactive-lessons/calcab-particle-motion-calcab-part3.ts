@@ -30,31 +30,31 @@ Maximum speed occurs at the largest |v(t)| value
       id: 'parti3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of speed & direction?',
+            question: 'What does "Speed = |v(t)| — always non-negative" refer to in calculus?',
             options: [
+              'Maximum speed occurs at the largest |v(t)| value',
               'Speed = |v(t)| — always non-negative',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'moving in negative direction (left/down)',
+              'moving in positive direction (right/up)'
             ],
-            correctAnswer: 0,
-            explanation: 'Speed = |v(t)| — always non-negative'
+            correctAnswer: 1,
+            explanation: 'Correct — Speed = |v(t)| — always non-negative. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of speed & direction, which is accurate?',
+            question: 'Select the statement that correctly describes If v(t) < 0:',
             options: [
+              'moving in positive direction (right/up)',
               'moving in negative direction (left/down)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Maximum speed occurs at the largest |v(t)| value',
+              'Speed = |v(t)| — always non-negative'
             ],
-            correctAnswer: 0,
-            explanation: 'If v(t) < 0: moving in negative direction (left/down)'
+            correctAnswer: 1,
+            explanation: 'Correct — If v(t) < 0: moving in negative direction (left/down). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Maximum speed occurs at the largest |v(t)| value
       id: 'parti3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to speed & direction?',
+            question: 'Which statement about Maximum speed occurs at the largest… is correct?',
             options: [
-              'Maximum speed occurs at the largest |v(t)| value',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'moving in positive direction (right/up)',
+              'moving in negative direction (left/down)',
+              'Speed = |v(t)| — always non-negative',
+              'Maximum speed occurs at the largest |v(t)| value'
             ],
-            correctAnswer: 0,
-            explanation: 'Maximum speed occurs at the largest |v(t)| value'
+            correctAnswer: 3,
+            explanation: 'Correct — Maximum speed occurs at the largest |v(t)| value. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,24 @@ Maximum speed occurs at the largest |v(t)| value
       id: 'parti3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Speed = |v(t)| — always non-negative',
-            options: ['Speed = |v(t)| — always non-negative', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
-          },
-          {
             label: 'If v(t) > 0',
-            options: ['moving in positive direction (right/up)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Speed = |v(t)| — always non-negative', 'Maximum speed occurs at the largest |v(t)| value', 'moving in positive direction (right/up)', 'moving in negative direction (left/down)']
           },
           {
             label: 'If v(t) < 0',
-            options: ['moving in negative direction (left/down)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['moving in positive direction (right/up)', 'Maximum speed occurs at the largest |v(t)| value', 'Speed = |v(t)| — always non-negative', 'moving in negative direction (left/down)']
           }
         ],
-        correctAnswers: ['Speed = |v(t)| — always non-negative', 'moving in positive direction (right/up)', 'moving in negative direction (left/down)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Speed & Direction.'
+        correctAnswers: ['moving in positive direction (right/up)', 'moving in negative direction (left/down)'],
+        hint1: 'Think about what each concept specifically describes in Speed & Direction.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Speed & Direction describes a specific idea. If v(t) > 0: moving in positive direction (right/up). If v(t) < 0: moving in negative direction (left/down).'
       }
     }
   ]

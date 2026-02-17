@@ -30,31 +30,31 @@ individual, group, couples, family
       id: 'treat1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of history of treatment?',
+            question: 'What does "Historical" refer to in psychology?',
             options: [
-              'Historical',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'outpatient therapy, community mental health',
+              'combining techniques from different perspectives',
+              'individual, group, couples, family',
+              'asylums, moral treatment, deinstitutionalization'
             ],
-            correctAnswer: 0,
-            explanation: 'Historical: asylums, moral treatment, deinstitutionalization'
+            correctAnswer: 3,
+            explanation: 'Correct — Historical: asylums, moral treatment, deinstitutionalization. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of history of treatment, which is accurate?',
+            question: 'Select the statement that correctly describes Eclectic approach:',
             options: [
+              'individual, group, couples, family',
               'combining techniques from different perspectives',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'asylums, moral treatment, deinstitutionalization',
+              'outpatient therapy, community mental health'
             ],
-            correctAnswer: 0,
-            explanation: 'Eclectic approach: combining techniques from different perspectives'
+            correctAnswer: 1,
+            explanation: 'Correct — Eclectic approach: combining techniques from different perspectives. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ individual, group, couples, family
       id: 'treat1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Historical',
-            options: ['asylums, moral treatment, deinstitutionalization', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['combining techniques from different perspectives', 'individual, group, couples, family', 'asylums, moral treatment, deinstitutionalization', 'outpatient therapy, community mental health']
           },
           {
             label: 'Modern',
-            options: ['outpatient therapy, community mental health', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['combining techniques from different perspectives', 'individual, group, couples, family', 'outpatient therapy, community mental health', 'asylums, moral treatment, deinstitutionalization']
           },
           {
             label: 'Eclectic approach',
-            options: ['combining techniques from different perspectives', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['combining techniques from different perspectives', 'asylums, moral treatment, deinstitutionalization', 'outpatient therapy, community mental health', 'individual, group, couples, family']
           }
         ],
         correctAnswers: ['asylums, moral treatment, deinstitutionalization', 'outpatient therapy, community mental health', 'combining techniques from different perspectives'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding History of Treatment.'
+        hint1: 'Think about what each concept specifically describes in Treatment & Therapy.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Treatment & Therapy describes a specific idea. Historical: asylums, moral treatment, deinstitutionalization. Modern: outpatient therapy, community mental health. Eclectic approach: combining techniques from different perspectives.'
       }
     }
   ]

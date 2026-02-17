@@ -30,31 +30,31 @@ square, identity (I), zero matrix
       id: 'matri1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of matrix basics?',
+            question: 'What does "Matrix" refer to in precalculus?',
             options: [
-              'Matrix',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'm × n (m rows, n columns)',
+              'square, identity (I), zero matrix',
+              'a rectangular array of numbers arranged in rows and columns',
+              'a_ij (row i, column j)'
             ],
-            correctAnswer: 0,
-            explanation: 'Matrix: a rectangular array of numbers arranged in rows and columns'
+            correctAnswer: 2,
+            explanation: 'Correct — Matrix: a rectangular array of numbers arranged in rows and columns. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of matrix basics, which is accurate?',
+            question: 'Which of the following is true about Elements identified by position?',
             options: [
               'a_ij (row i, column j)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'a rectangular array of numbers arranged in rows and columns',
+              'square, identity (I), zero matrix',
+              'm × n (m rows, n columns)'
             ],
             correctAnswer: 0,
-            explanation: 'Elements identified by position: a_ij (row i, column j)'
+            explanation: 'Correct — Elements identified by position: a_ij (row i, column j). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ square, identity (I), zero matrix
       id: 'matri1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Matrix',
-            options: ['a rectangular array of numbers arranged in rows an', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['a_ij (row i, column j)', 'square, identity (I), zero matrix', 'm × n (m rows, n columns)', 'a rectangular array of numbers arranged in rows and columns']
           },
           {
             label: 'Dimension',
-            options: ['m × n (m rows, n columns)', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['square, identity (I), zero matrix', 'm × n (m rows, n columns)', 'a rectangular array of numbers arranged in rows and columns', 'a_ij (row i, column j)']
           },
           {
             label: 'Elements identified by position',
-            options: ['a_ij (row i, column j)', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['a rectangular array of numbers arranged in rows and columns', 'm × n (m rows, n columns)', 'a_ij (row i, column j)', 'square, identity (I), zero matrix']
           }
         ],
-        correctAnswers: ['a rectangular array of numbers arranged in rows an', 'm × n (m rows, n columns)', 'a_ij (row i, column j)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Matrix Basics.'
+        correctAnswers: ['a rectangular array of numbers arranged in rows and columns', 'm × n (m rows, n columns)', 'a_ij (row i, column j)'],
+        hint1: 'Think about what each concept specifically describes in Matrices.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Matrices describes a specific idea. Matrix: a rectangular array of numbers arranged in rows and columns. Dimension: m × n (m rows, n columns). Elements identified by position: a_ij (row i, column j).'
       }
     }
   ]

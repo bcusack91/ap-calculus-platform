@@ -71,23 +71,28 @@ Focus on the authors evaluation: what makes this work significant?.
       id: 'mcat-4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Arts & Culture Passages:',
-            options: ['Art, music, architecture, and literary criticism passages ap', 'Focus on the authors evaluation: what makes this work signif', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Focus on the authors evaluation',
+            options: ['what makes this work significant?.', 'Aesthetic arguments may be subjective — track the authors reasoning, not your own opinion.', 'Art, music, architecture, and literary criticism passages appear on CARS.', 'These passages often explore cultural significance and historical context.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Aesthetic arguments may be subjective — track the authors re', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Key Insight',
+            options: ['These passages often explore cultural significance and historical context.', 'Art, music, architecture, and literary criticism passages appear on CARS.', 'Aesthetic arguments may be subjective — track the authors reasoning, not your own opinion.', 'what makes this work significant?.']
+          },
+          {
+            label: 'MCAT Tip',
+            options: ['These passages often explore cultural significance and historical context.', 'what makes this work significant?.', 'Art, music, architecture, and literary criticism passages appear on CARS.', 'Aesthetic arguments may be subjective — track the authors reasoning, not your own opinion.']
           }
         ],
-        correctAnswers: ['Art, music, architecture, and literary criticism passages ap', 'Aesthetic arguments may be subjective — track the authors re'],
-        hint1: 'Think about arts & culture passages',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Art, music, architecture, and literary criticism passages appear on CARS. Aesthetic arguments may be subjective — track the authors reasoning, not your own opinion.'
+        correctAnswers: ['what makes this work significant?.', 'Aesthetic arguments may be subjective — track the authors reasoning, not your own opinion.', 'These passages often explore cultural significance and historical context.'],
+        hint1: 'Think about what each concept specifically describes in Arts & Culture Passages.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Arts & Culture Passages describes a specific idea. Focus on the authors evaluation: what makes this work significant?. Key Insight: Aesthetic arguments may be subjective — track the authors reasoning, not your own opinion. MCAT Tip: These passages often explore cultural significance and historical context.'
       }
     }
   ]

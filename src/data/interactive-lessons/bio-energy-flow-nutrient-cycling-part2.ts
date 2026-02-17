@@ -19,31 +19,31 @@ export const bioEnergyFlowPart2Data = {
       id: 'ener2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes producers?',
+            question: 'What does "Producers" refer to in biology?',
             options: [
+              'trophic level 2',
+              'trophic level 3',
               'trophic level 1',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'trophic level 4'
             ],
-            correctAnswer: 0,
-            explanation: 'Producers: trophic level 1'
+            correctAnswer: 2,
+            explanation: 'Correct — Producers: trophic level 1. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of trophic levels, which statement is accurate?',
+            question: 'In the context of Trophic Levels, which explains Secondary consumers?',
             options: [
-              'Secondary consumers: trophic level 3',
-              '1 level cihport :srecudorP',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'trophic level 4',
+              'trophic level 1',
+              'trophic level 2',
+              'trophic level 3'
             ],
-            correctAnswer: 0,
-            explanation: 'Secondary consumers: trophic level 3'
+            correctAnswer: 3,
+            explanation: 'Correct — Secondary consumers: trophic level 3. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioEnergyFlowPart2Data = {
       id: 'ener2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to trophic levels?',
+            question: 'Which of these accurately represents Tertiary consumers (top predators)?',
             options: [
-              'Tertiary consumers (top predators): trophic level 4',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'trophic level 2',
+              'trophic level 3',
+              'trophic level 1',
+              'trophic level 4'
             ],
-            correctAnswer: 0,
-            explanation: 'Tertiary consumers (top predators): trophic level 4'
+            correctAnswer: 3,
+            explanation: 'Correct — Tertiary consumers (top predators): trophic level 4. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioEnergyFlowPart2Data = {
       id: 'ener2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Producers is important in trophic levels because',
-            options: ['trophic level 1', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Producers',
+            options: ['trophic level 4', 'trophic level 1', 'trophic level 3', 'trophic level 2']
           },
           {
-            label: 'Primary consumers (herbivores) is important in trophic levels because',
-            options: ['trophic level 2', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Primary consumers (herbivores)',
+            options: ['trophic level 1', 'trophic level 2', 'trophic level 4', 'trophic level 3']
           },
           {
-            label: 'Secondary consumers is important in trophic levels because',
-            options: ['trophic level 3', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Secondary consumers',
+            options: ['trophic level 2', 'trophic level 4', 'trophic level 3', 'trophic level 1']
           }
         ],
         correctAnswers: ['trophic level 1', 'trophic level 2', 'trophic level 3'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Trophic Levels.'
+        hint1: 'Think about what each concept specifically describes in Trophic Levels.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Trophic Levels describes a specific idea. Producers: trophic level 1. Primary consumers (herbivores): trophic level 2. Secondary consumers: trophic level 3.'
       }
     }
   ]

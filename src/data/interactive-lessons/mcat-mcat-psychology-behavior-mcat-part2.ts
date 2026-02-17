@@ -71,23 +71,28 @@ Operant conditioning (Skinner): reinforcement increases behavior, punishment dec
       id: 'mcat-2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Learning & Memory:',
-            options: ['Classical conditioning (Pavlov): CS + UCS = CR; extinction, ', 'Operant conditioning (Skinner): reinforcement increases beha', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Classical conditioning (Pavlov)',
+            options: ['Memory encoding: elaborative rehearsal > rote memorization; levels of processing theory.', 'CS + UCS = CR; extinction, spontaneous recovery, generalization.', 'reinforcement increases behavior, punishment decreases it.', 'Memory types: sensory (brief), short-term/working (7 +/- 2 items), long-term (unlimited capacity).']
           },
           {
-            label: 'MCAT application:',
-            options: ['Memory encoding: elaborative rehearsal > rote memorization; ', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Operant conditioning (Skinner)',
+            options: ['Memory types: sensory (brief), short-term/working (7 +/- 2 items), long-term (unlimited capacity).', 'reinforcement increases behavior, punishment decreases it.', 'CS + UCS = CR; extinction, spontaneous recovery, generalization.', 'Memory encoding: elaborative rehearsal > rote memorization; levels of processing theory.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['Memory encoding: elaborative rehearsal > rote memorization; levels of processing theory.', 'Memory types: sensory (brief), short-term/working (7 +/- 2 items), long-term (unlimited capacity).', 'CS + UCS = CR; extinction, spontaneous recovery, generalization.', 'reinforcement increases behavior, punishment decreases it.']
           }
         ],
-        correctAnswers: ['Classical conditioning (Pavlov): CS + UCS = CR; extinction, ', 'Memory encoding: elaborative rehearsal > rote memorization; '],
-        hint1: 'Think about learning & memory',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Classical conditioning (Pavlov): CS + UCS = CR; extinction, spontaneous recovery, generalization. Memory encoding: elaborative rehearsal > rote memorization; levels of processing theory.'
+        correctAnswers: ['CS + UCS = CR; extinction, spontaneous recovery, generalization.', 'reinforcement increases behavior, punishment decreases it.', 'Memory encoding: elaborative rehearsal > rote memorization; levels of processing theory.'],
+        hint1: 'Think about what each concept specifically describes in Learning & Memory.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Learning & Memory describes a specific idea. Classical conditioning (Pavlov): CS + UCS = CR; extinction, spontaneous recovery, generalization. Operant conditioning (Skinner): reinforcement increases behavior, punishment decreases it. Key Insight: Memory encoding: elaborative rehearsal > rote memorization; levels of processing theory.'
       }
     }
   ]

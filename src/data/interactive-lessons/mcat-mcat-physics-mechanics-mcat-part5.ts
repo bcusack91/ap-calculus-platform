@@ -71,23 +71,28 @@ Hydrostatic pressure: P = P0 + rho*g*h — pressure increases with depth.
       id: 'mcat-5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Fluids & Pressure:',
-            options: ['Pressure P = F/A; units: Pascal (Pa) = N/m2; 1 atm = 101,325', 'Hydrostatic pressure: P = P0 + rho*g*h — pressure increases ', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Pressure P = F/A; units',
+            options: ['Bernoulli equation: P + (1/2)rho*v2 + rho*g*h = constant along a streamline.', 'Pascal (Pa) = N/m2; 1 atm = 101,325 Pa.', 'Buoyancy (Archimedes): Fb = rho_fluid * V_displaced * g — object floats if Fb >= weight.', 'P = P0 + rho*g*h — pressure increases with depth.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Buoyancy (Archimedes): Fb = rho_fluid * V_displaced * g — ob', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Hydrostatic pressure',
+            options: ['Pascal (Pa) = N/m2; 1 atm = 101,325 Pa.', 'P = P0 + rho*g*h — pressure increases with depth.', 'Buoyancy (Archimedes): Fb = rho_fluid * V_displaced * g — object floats if Fb >= weight.', 'Bernoulli equation: P + (1/2)rho*v2 + rho*g*h = constant along a streamline.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['Pascal (Pa) = N/m2; 1 atm = 101,325 Pa.', 'P = P0 + rho*g*h — pressure increases with depth.', 'Buoyancy (Archimedes): Fb = rho_fluid * V_displaced * g — object floats if Fb >= weight.', 'Bernoulli equation: P + (1/2)rho*v2 + rho*g*h = constant along a streamline.']
           }
         ],
-        correctAnswers: ['Pressure P = F/A; units: Pascal (Pa) = N/m2; 1 atm = 101,325', 'Buoyancy (Archimedes): Fb = rho_fluid * V_displaced * g — ob'],
-        hint1: 'Think about fluids & pressure',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Pressure P = F/A; units: Pascal (Pa) = N/m2; 1 atm = 101,325 Pa. Buoyancy (Archimedes): Fb = rho_fluid * V_displaced * g — object floats if Fb >= weight.'
+        correctAnswers: ['Pascal (Pa) = N/m2; 1 atm = 101,325 Pa.', 'P = P0 + rho*g*h — pressure increases with depth.', 'Buoyancy (Archimedes): Fb = rho_fluid * V_displaced * g — object floats if Fb >= weight.'],
+        hint1: 'Think about what each concept specifically describes in Fluids & Pressure.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Fluids & Pressure describes a specific idea. Pressure P = F/A; units: Pascal (Pa) = N/m2; 1 atm = 101,325 Pa. Hydrostatic pressure: P = P0 + rho*g*h — pressure increases with depth. Key Insight: Buoyancy (Archimedes): Fb = rho_fluid * V_displaced * g — object floats if Fb >= weight.'
       }
     }
   ]

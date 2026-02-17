@@ -30,31 +30,31 @@ solve r₁(θ) = r₂(θ) AND check origin separately
       id: 'polar5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of polar curve analysis?',
-            options: [
-              'Find zeros',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'Find zeros: where r = 0 (curve passes through origin)'
-          },
-          {
-            question: 'In the context of polar curve analysis, which is accurate?',
+            question: 'What does "Find zeros" refer to in calculus?',
             options: [
               'test r(θ) = r(-θ), r(π-θ), r(θ+π)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'solve r₁(θ) = r₂(θ) AND check origin separately',
+              'set dr/dθ = 0 (farthest from origin)',
+              'where r = 0 (curve passes through origin)'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Find zeros: where r = 0 (curve passes through origin). The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Polar Curve Analysis, which explains Symmetry?',
+            options: [
+              'test r(θ) = r(-θ), r(π-θ), r(θ+π)',
+              'where r = 0 (curve passes through origin)',
+              'set dr/dθ = 0 (farthest from origin)',
+              'solve r₁(θ) = r₂(θ) AND check origin separately'
             ],
             correctAnswer: 0,
-            explanation: 'Symmetry: test r(θ) = r(-θ), r(π-θ), r(θ+π)'
+            explanation: 'Correct — Symmetry: test r(θ) = r(-θ), r(π-θ), r(θ+π). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ solve r₁(θ) = r₂(θ) AND check origin separately
       id: 'polar5-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to polar curve analysis?',
+            question: 'Regarding Polar Curve Analysis, which correctly describes Intersections?',
             options: [
               'solve r₁(θ) = r₂(θ) AND check origin separately',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'where r = 0 (curve passes through origin)',
+              'test r(θ) = r(-θ), r(π-θ), r(θ+π)',
+              'set dr/dθ = 0 (farthest from origin)'
             ],
             correctAnswer: 0,
-            explanation: 'Intersections: solve r₁(θ) = r₂(θ) AND check origin separately'
+            explanation: 'Correct — Intersections: solve r₁(θ) = r₂(θ) AND check origin separately. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ solve r₁(θ) = r₂(θ) AND check origin separately
       id: 'polar5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Find zeros',
-            options: ['where r = 0 (curve passes through origin)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['solve r₁(θ) = r₂(θ) AND check origin separately', 'set dr/dθ = 0 (farthest from origin)', 'where r = 0 (curve passes through origin)', 'test r(θ) = r(-θ), r(π-θ), r(θ+π)']
           },
           {
             label: 'Maximum r',
-            options: ['set dr/dθ = 0 (farthest from origin)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['solve r₁(θ) = r₂(θ) AND check origin separately', 'set dr/dθ = 0 (farthest from origin)', 'test r(θ) = r(-θ), r(π-θ), r(θ+π)', 'where r = 0 (curve passes through origin)']
           },
           {
             label: 'Symmetry',
-            options: ['test r(θ) = r(-θ), r(π-θ), r(θ+π)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['set dr/dθ = 0 (farthest from origin)', 'solve r₁(θ) = r₂(θ) AND check origin separately', 'where r = 0 (curve passes through origin)', 'test r(θ) = r(-θ), r(π-θ), r(θ+π)']
           }
         ],
         correctAnswers: ['where r = 0 (curve passes through origin)', 'set dr/dθ = 0 (farthest from origin)', 'test r(θ) = r(-θ), r(π-θ), r(θ+π)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Polar Curve Analysis.'
+        hint1: 'Think about what each concept specifically describes in Polar Curve Analysis.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Polar Curve Analysis describes a specific idea. Find zeros: where r = 0 (curve passes through origin). Maximum r: set dr/dθ = 0 (farthest from origin). Symmetry: test r(θ) = r(-θ), r(π-θ), r(θ+π).'
       }
     }
   ]

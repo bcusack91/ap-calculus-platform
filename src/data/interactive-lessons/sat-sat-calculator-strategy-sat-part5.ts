@@ -18,20 +18,31 @@ Do easy questions first — every question is worth the same.
       id: 'sat-c5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes average time per question?',
+            question: 'What does "Average time per question" refer to in SAT prep?',
             options: [
-              'Average time per question is a fundamental concept in SAT Math',
-              'Do easy questions first — every question is worth the same',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'Do easy questions first — every question is worth the same.',
+              'Mark and skip questions that seem time-consuming, return later.',
+              'Last 5 minutes: answer every remaining question (no penalty for guessing).',
+              '~75 seconds (no-calc), ~87 seconds (calc).'
             ],
-            correctAnswer: 0,
-            explanation: 'Average time per question: ~75 seconds (no-calc), ~87 seconds (calc)'
+            correctAnswer: 3,
+            explanation: 'Correct — Average time per question: ~75 seconds (no-calc), ~87 seconds (calc). The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              '~75 seconds (no-calc), ~87 seconds (calc).',
+              'Mark and skip questions that seem time-consuming, return later.',
+              'Do easy questions first — every question is worth the same.',
+              'Last 5 minutes: answer every remaining question (no penalty for guessing).'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Key Insight: Mark and skip questions that seem time-consuming, return later. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Do easy questions first — every question is worth the same.
       id: 'sat-c5-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for time management?',
+            question: 'Which statement about SAT Tip is correct?',
             options: [
-              'Mark and skip questions that seem time-consuming, return later',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'Do easy questions first — every question is worth the same.',
+              'Mark and skip questions that seem time-consuming, return later.',
+              '~75 seconds (no-calc), ~87 seconds (calc).',
+              'Last 5 minutes: answer every remaining question (no penalty for guessing).'
             ],
-            correctAnswer: 0,
-            explanation: 'Mark and skip questions that seem time-consuming, return later'
+            correctAnswer: 3,
+            explanation: 'Correct — SAT Tip: Last 5 minutes: answer every remaining question (no penalty for guessing). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Do easy questions first — every question is worth the same.
       id: 'sat-c5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Time Management:',
-            options: ['Average time per question: ~75 seconds (no-calc), ', 'Do easy questions first — every question is worth ', 'Not applicable', 'None of these']
+            label: 'Average time per question',
+            options: ['Mark and skip questions that seem time-consuming, return later.', '~75 seconds (no-calc), ~87 seconds (calc).', 'Last 5 minutes: answer every remaining question (no penalty for guessing).', 'Do easy questions first — every question is worth the same.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Mark and skip questions that seem time-consuming, ', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Key Insight',
+            options: ['Last 5 minutes: answer every remaining question (no penalty for guessing).', 'Mark and skip questions that seem time-consuming, return later.', '~75 seconds (no-calc), ~87 seconds (calc).', 'Do easy questions first — every question is worth the same.']
+          },
+          {
+            label: 'SAT Tip',
+            options: ['~75 seconds (no-calc), ~87 seconds (calc).', 'Mark and skip questions that seem time-consuming, return later.', 'Do easy questions first — every question is worth the same.', 'Last 5 minutes: answer every remaining question (no penalty for guessing).']
           }
         ],
-        correctAnswers: ['Average time per question: ~75 seconds (no-calc), ', 'Mark and skip questions that seem time-consuming, '],
-        hint1: 'Think about time management',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'Average time per question: ~75 seconds (no-calc), ~87 seconds (calc). Mark and skip questions that seem time-consuming, return later.'
+        correctAnswers: ['~75 seconds (no-calc), ~87 seconds (calc).', 'Mark and skip questions that seem time-consuming, return later.', 'Last 5 minutes: answer every remaining question (no penalty for guessing).'],
+        hint1: 'Think about what each concept specifically describes in Time Management.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Time Management describes a specific idea. Average time per question: ~75 seconds (no-calc), ~87 seconds (calc). Key Insight: Mark and skip questions that seem time-consuming, return later. SAT Tip: Last 5 minutes: answer every remaining question (no penalty for guessing).'
       }
     }
   ]

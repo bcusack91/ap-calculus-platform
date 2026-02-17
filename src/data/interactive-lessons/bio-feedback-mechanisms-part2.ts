@@ -19,31 +19,31 @@ export const bioFeedbackPart2Data = {
       id: 'feed2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes output opposes the change that triggered it?',
+            question: 'Which statement accurately explains Output opposes the change that…?',
             options: [
-              'Output opposes the change that triggered it',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Most common feedback in biology',
+              'thermostat — heating turns off when temperature reached',
+              'blood glucose regulation by insulin/glucagon',
+              'Output opposes the change that triggered it'
             ],
-            correctAnswer: 0,
-            explanation: 'Output opposes the change that triggered it'
+            correctAnswer: 3,
+            explanation: 'Correct — Output opposes the change that triggered it. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of negative feedback, which statement is accurate?',
+            question: 'Which of the following is true about Example?',
             options: [
-              'Example: thermostat — heating turns off when temperature reached',
-              'ti dereggirt taht egnahc eht sesoppo tuptuO',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Output opposes the change that triggered it',
+              'thermostat — heating turns off when temperature reached',
+              'Most common feedback in biology',
+              'This is a common misconception about the topic'
             ],
-            correctAnswer: 0,
-            explanation: 'Example: thermostat — heating turns off when temperature reached'
+            correctAnswer: 1,
+            explanation: 'Correct — Example: thermostat — heating turns off when temperature reached. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioFeedbackPart2Data = {
       id: 'feed2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to negative feedback?',
+            question: 'Which of these accurately represents Example?',
             options: [
-              'Example: blood glucose regulation by insulin/glucagon',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Output opposes the change that triggered it',
+              'Most common feedback in biology',
+              'blood glucose regulation by insulin/glucagon',
+              'This is a common misconception about the topic'
             ],
-            correctAnswer: 0,
-            explanation: 'Example: blood glucose regulation by insulin/glucagon'
+            correctAnswer: 2,
+            explanation: 'Correct — Example: blood glucose regulation by insulin/glucagon. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,24 @@ export const bioFeedbackPart2Data = {
       id: 'feed2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Output opposes the change that triggered it is important in negative feedback because',
-            options: ['Output opposes the change that triggered it', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Example',
+            options: ['Output opposes the change that triggered it', 'Most common feedback in biology', 'thermostat — heating turns off when temperature reached', 'blood glucose regulation by insulin/glucagon']
           },
           {
-            label: 'Most common feedback in biology is important in negative feedback because',
-            options: ['Most common feedback in biology', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
-          },
-          {
-            label: 'Example is important in negative feedback because',
-            options: ['thermostat — heating turns off when temperature re', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Example',
+            options: ['Most common feedback in biology', 'blood glucose regulation by insulin/glucagon', 'thermostat — heating turns off when temperature reached', 'Output opposes the change that triggered it']
           }
         ],
-        correctAnswers: ['Output opposes the change that triggered it', 'Most common feedback in biology', 'thermostat — heating turns off when temperature re'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Negative Feedback.'
+        correctAnswers: ['thermostat — heating turns off when temperature reached', 'blood glucose regulation by insulin/glucagon'],
+        hint1: 'Think about what each concept specifically describes in Negative Feedback.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Negative Feedback describes a specific idea. Example: thermostat — heating turns off when temperature reached. Example: blood glucose regulation by insulin/glucagon.'
       }
     }
   ]

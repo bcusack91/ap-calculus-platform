@@ -30,31 +30,31 @@ Sₙ = n(a₁ + aₙ)/2 = n(2a₁ + (n-1)d)/2
       id: 'seque2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of arithmetic sequences?',
-            options: [
-              'Arithmetic sequence',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'Arithmetic sequence: common difference d between consecutive terms'
-          },
-          {
-            question: 'In the context of arithmetic sequences, which is accurate?',
+            question: 'Which of the following correctly describes Arithmetic sequence?',
             options: [
               'the average of two terms equals the term between them',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Sₙ = n(a₁ + aₙ)/2 = n(2a₁ + (n-1)d)/2',
+              'common difference d between consecutive terms',
+              'aₙ = a₁ + (n-1)d'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Arithmetic sequence: common difference d between consecutive terms. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Arithmetic mean?',
+            options: [
+              'the average of two terms equals the term between them',
+              'aₙ = a₁ + (n-1)d',
+              'Sₙ = n(a₁ + aₙ)/2 = n(2a₁ + (n-1)d)/2',
+              'common difference d between consecutive terms'
             ],
             correctAnswer: 0,
-            explanation: 'Arithmetic mean: the average of two terms equals the term between them'
+            explanation: 'Correct — Arithmetic mean: the average of two terms equals the term between them. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Sₙ = n(a₁ + aₙ)/2 = n(2a₁ + (n-1)d)/2
       id: 'seque2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Arithmetic sequence',
-            options: ['common difference d between consecutive terms', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['Sₙ = n(a₁ + aₙ)/2 = n(2a₁ + (n-1)d)/2', 'common difference d between consecutive terms', 'the average of two terms equals the term between them', 'aₙ = a₁ + (n-1)d']
           },
           {
             label: 'Explicit formula',
-            options: ['aₙ = a₁ + (n-1)d', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['Sₙ = n(a₁ + aₙ)/2 = n(2a₁ + (n-1)d)/2', 'aₙ = a₁ + (n-1)d', 'common difference d between consecutive terms', 'the average of two terms equals the term between them']
           },
           {
             label: 'Arithmetic mean',
-            options: ['the average of two terms equals the term between t', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['aₙ = a₁ + (n-1)d', 'the average of two terms equals the term between them', 'Sₙ = n(a₁ + aₙ)/2 = n(2a₁ + (n-1)d)/2', 'common difference d between consecutive terms']
           }
         ],
-        correctAnswers: ['common difference d between consecutive terms', 'aₙ = a₁ + (n-1)d', 'the average of two terms equals the term between t'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Arithmetic Sequences.'
+        correctAnswers: ['common difference d between consecutive terms', 'aₙ = a₁ + (n-1)d', 'the average of two terms equals the term between them'],
+        hint1: 'Think about what each concept specifically describes in Arithmetic Sequences.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Arithmetic Sequences describes a specific idea. Arithmetic sequence: common difference d between consecutive terms. Explicit formula: aₙ = a₁ + (n-1)d. Arithmetic mean: the average of two terms equals the term between them.'
       }
     }
   ]

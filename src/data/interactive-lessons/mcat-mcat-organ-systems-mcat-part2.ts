@@ -71,23 +71,28 @@ Gas exchange: O2 diffuses into blood in alveoli; CO2 diffuses out — driven by 
       id: 'mcat-2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Respiratory System:',
-            options: ['Ventilation: diaphragm contracts (inhalation), relaxes (exha', 'Gas exchange: O2 diffuses into blood in alveoli; CO2 diffuse', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Ventilation',
+            options: ['Hemoglobin: cooperative binding, sigmoid curve; Bohr effect: low pH/high CO2 shifts curve right (releases O2).', 'O2 diffuses into blood in alveoli; CO2 diffuses out — driven by partial pressure gradients.', 'Lung volumes: tidal volume, vital capacity, residual volume, total lung capacity.', 'diaphragm contracts (inhalation), relaxes (exhalation); negative pressure breathing.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Hemoglobin: cooperative binding, sigmoid curve; Bohr effect:', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Gas exchange',
+            options: ['Hemoglobin: cooperative binding, sigmoid curve; Bohr effect: low pH/high CO2 shifts curve right (releases O2).', 'diaphragm contracts (inhalation), relaxes (exhalation); negative pressure breathing.', 'O2 diffuses into blood in alveoli; CO2 diffuses out — driven by partial pressure gradients.', 'Lung volumes: tidal volume, vital capacity, residual volume, total lung capacity.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['Lung volumes: tidal volume, vital capacity, residual volume, total lung capacity.', 'diaphragm contracts (inhalation), relaxes (exhalation); negative pressure breathing.', 'O2 diffuses into blood in alveoli; CO2 diffuses out — driven by partial pressure gradients.', 'Hemoglobin: cooperative binding, sigmoid curve; Bohr effect: low pH/high CO2 shifts curve right (releases O2).']
           }
         ],
-        correctAnswers: ['Ventilation: diaphragm contracts (inhalation), relaxes (exha', 'Hemoglobin: cooperative binding, sigmoid curve; Bohr effect:'],
-        hint1: 'Think about respiratory system',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Ventilation: diaphragm contracts (inhalation), relaxes (exhalation); negative pressure breathing. Hemoglobin: cooperative binding, sigmoid curve; Bohr effect: low pH/high CO2 shifts curve right (releases O2).'
+        correctAnswers: ['diaphragm contracts (inhalation), relaxes (exhalation); negative pressure breathing.', 'O2 diffuses into blood in alveoli; CO2 diffuses out — driven by partial pressure gradients.', 'Hemoglobin: cooperative binding, sigmoid curve; Bohr effect: low pH/high CO2 shifts curve right (releases O2).'],
+        hint1: 'Think about what each concept specifically describes in Respiratory System.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Respiratory System describes a specific idea. Ventilation: diaphragm contracts (inhalation), relaxes (exhalation); negative pressure breathing. Gas exchange: O2 diffuses into blood in alveoli; CO2 diffuses out — driven by partial pressure gradients. Key Insight: Hemoglobin: cooperative binding, sigmoid curve; Bohr effect: low pH/high CO2 shifts curve right (releases O2).'
       }
     }
   ]

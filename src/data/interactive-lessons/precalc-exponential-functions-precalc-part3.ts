@@ -30,31 +30,31 @@ e = lim(n→∞) (1 + 1/n)ⁿ
       id: 'expon3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of the number e?',
+            question: 'Which statement accurately explains e ≈ 2.71828..., the base of natural…?',
             options: [
               'e ≈ 2.71828..., the base of natural exponential functions',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'The function f(x) = eˣ has a slope equal to its value at every point',
+              'e = lim(n→∞) (1 + 1/n)ⁿ',
+              'A = Pe^(rt)'
             ],
             correctAnswer: 0,
-            explanation: 'e ≈ 2.71828..., the base of natural exponential functions'
+            explanation: 'Correct — e ≈ 2.71828..., the base of natural exponential functions. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of the number e, which is accurate?',
+            question: 'Select the statement that correctly describes The function f(x) = eˣ has a slope…:',
             options: [
               'The function f(x) = eˣ has a slope equal to its value at every point',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'e = lim(n→∞) (1 + 1/n)ⁿ',
+              'e ≈ 2.71828..., the base of natural exponential functions',
+              'A = Pe^(rt)'
             ],
             correctAnswer: 0,
-            explanation: 'The function f(x) = eˣ has a slope equal to its value at every point'
+            explanation: 'Correct — The function f(x) = eˣ has a slope equal to its value at every point. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ e = lim(n→∞) (1 + 1/n)ⁿ
       id: 'expon3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'e ≈ 2.71828..., the base of natural exponential functions',
-            options: ['e ≈ 2.71828..., the base of natural exponential fu', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            label: 'e ≈ 2.71828..., the base of natural…',
+            options: ['A = Pe^(rt)', 'e ≈ 2.71828..., the base of natural exponential functions', 'The function f(x) = eˣ has a slope equal to its value at every point', 'e = lim(n→∞) (1 + 1/n)ⁿ']
           },
           {
             label: 'Continuous compounding',
-            options: ['A = Pe^(rt)', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['A = Pe^(rt)', 'e ≈ 2.71828..., the base of natural exponential functions', 'e = lim(n→∞) (1 + 1/n)ⁿ', 'The function f(x) = eˣ has a slope equal to its value at every point']
           },
           {
-            label: 'The function f(x) = eˣ has a slope equal to its value at every point',
-            options: ['The function f(x) = eˣ has a slope equal to its va', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            label: 'The function f(x) = eˣ has a slope…',
+            options: ['e = lim(n→∞) (1 + 1/n)ⁿ', 'e ≈ 2.71828..., the base of natural exponential functions', 'A = Pe^(rt)', 'The function f(x) = eˣ has a slope equal to its value at every point']
           }
         ],
-        correctAnswers: ['e ≈ 2.71828..., the base of natural exponential fu', 'A = Pe^(rt)', 'The function f(x) = eˣ has a slope equal to its va'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding The Number e.'
+        correctAnswers: ['e ≈ 2.71828..., the base of natural exponential functions', 'A = Pe^(rt)', 'The function f(x) = eˣ has a slope equal to its value at every point'],
+        hint1: 'Think about what each concept specifically describes in The Number e.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in The Number e describes a specific idea. e ≈ 2.71828..., the base of natural exponential functions. Continuous compounding: A = Pe^(rt). The function f(x) = eˣ has a slope equal to its value at every point.'
       }
     }
   ]

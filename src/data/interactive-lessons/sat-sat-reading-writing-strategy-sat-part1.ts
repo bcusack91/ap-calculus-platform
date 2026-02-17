@@ -18,20 +18,31 @@ Passage types: literature, history/social studies (2), science (2).
       id: 'sat-r1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes 65 minutes, 52 questions across 5 passages (or 4 passages + 1 paired set)?',
+            question: 'Which of the following correctly describes 65 minutes, 52 questions across 5…?',
             options: [
-              '65 minutes, 52 questions across 5 passages (or 4 passages + 1 paired set) is a fundamental concept in SAT Reading & Writing',
-              'Passage types: literature, history/social studies (2), science (2)',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'Questions roughly follow passage order — use this to your advantage.',
+              'Skim-then-answer or read-carefully approaches — find what works for you.',
+              '65 minutes, 52 questions across 5 passages (or 4 passages + 1 paired set).',
+              'literature, history/social studies (2), science (2).'
             ],
-            correctAnswer: 0,
-            explanation: '65 minutes, 52 questions across 5 passages (or 4 passages + 1 paired set)'
+            correctAnswer: 2,
+            explanation: 'Correct — 65 minutes, 52 questions across 5 passages (or 4 passages + 1 paired set). The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Key Insight?',
+            options: [
+              '65 minutes, 52 questions across 5 passages (or 4 passages + 1 paired set).',
+              'Skim-then-answer or read-carefully approaches — find what works for you.',
+              'literature, history/social studies (2), science (2).',
+              'Questions roughly follow passage order — use this to your advantage.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Key Insight: Skim-then-answer or read-carefully approaches — find what works for you. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Passage types: literature, history/social studies (2), science (2).
       id: 'sat-r1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for reading section overview?',
+            question: 'Which of these accurately represents SAT Tip?',
             options: [
-              'Skim-then-answer or read-carefully approaches — find what works for you',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'literature, history/social studies (2), science (2).',
+              '65 minutes, 52 questions across 5 passages (or 4 passages + 1 paired set).',
+              'Questions roughly follow passage order — use this to your advantage.',
+              'Skim-then-answer or read-carefully approaches — find what works for you.'
             ],
-            correctAnswer: 0,
-            explanation: 'Skim-then-answer or read-carefully approaches — find what works for you'
+            correctAnswer: 2,
+            explanation: 'Correct — SAT Tip: Questions roughly follow passage order — use this to your advantage. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Passage types: literature, history/social studies (2), science (2).
       id: 'sat-r1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Reading Section Overview:',
-            options: ['65 minutes, 52 questions across 5 passages (or 4 p', 'Passage types: literature, history/social studies ', 'Not applicable', 'None of these']
+            label: 'Passage types',
+            options: ['Skim-then-answer or read-carefully approaches — find what works for you.', 'Questions roughly follow passage order — use this to your advantage.', 'literature, history/social studies (2), science (2).', '65 minutes, 52 questions across 5 passages (or 4 passages + 1 paired set).']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Skim-then-answer or read-carefully approaches — fi', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Key Insight',
+            options: ['Questions roughly follow passage order — use this to your advantage.', 'literature, history/social studies (2), science (2).', '65 minutes, 52 questions across 5 passages (or 4 passages + 1 paired set).', 'Skim-then-answer or read-carefully approaches — find what works for you.']
+          },
+          {
+            label: 'SAT Tip',
+            options: ['Skim-then-answer or read-carefully approaches — find what works for you.', '65 minutes, 52 questions across 5 passages (or 4 passages + 1 paired set).', 'Questions roughly follow passage order — use this to your advantage.', 'literature, history/social studies (2), science (2).']
           }
         ],
-        correctAnswers: ['65 minutes, 52 questions across 5 passages (or 4 p', 'Skim-then-answer or read-carefully approaches — fi'],
-        hint1: 'Think about reading section overview',
-        hint2: 'Consider the best SAT strategy',
-        explanation: '65 minutes, 52 questions across 5 passages (or 4 passages + 1 paired set). Skim-then-answer or read-carefully approaches — find what works for you.'
+        correctAnswers: ['literature, history/social studies (2), science (2).', 'Skim-then-answer or read-carefully approaches — find what works for you.', 'Questions roughly follow passage order — use this to your advantage.'],
+        hint1: 'Think about what each concept specifically describes in Reading Writing Strategy.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Reading Writing Strategy describes a specific idea. Passage types: literature, history/social studies (2), science (2). Key Insight: Skim-then-answer or read-carefully approaches — find what works for you. SAT Tip: Questions roughly follow passage order — use this to your advantage.'
       }
     }
   ]

@@ -30,31 +30,31 @@ Memory is constructive, not like a video recording
       id: 'memor1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of memory models?',
-            options: [
-              'Atkinson-Shiffrin model',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
-            ],
-            correctAnswer: 0,
-            explanation: 'Atkinson-Shiffrin model: sensory → short-term → long-term'
-          },
-          {
-            question: 'In the context of memory models, which is accurate?',
+            question: 'What does "Atkinson-Shiffrin model" refer to in psychology?',
             options: [
               'Encoding → Storage → Retrieval',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'sensory → short-term → long-term',
+              'Memory is constructive, not like a video recording',
+              'central executive + subsystems'
             ],
-            correctAnswer: 0,
-            explanation: 'Encoding → Storage → Retrieval'
+            correctAnswer: 1,
+            explanation: 'Correct — Atkinson-Shiffrin model: sensory → short-term → long-term. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Encoding → Storage → Retrieval?',
+            options: [
+              'Memory is constructive, not like a video recording',
+              'central executive + subsystems',
+              'Encoding → Storage → Retrieval',
+              'sensory → short-term → long-term'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Encoding → Storage → Retrieval. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,24 @@ Memory is constructive, not like a video recording
       id: 'memor1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Atkinson-Shiffrin model',
-            options: ['sensory → short-term → long-term', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Encoding → Storage → Retrieval', 'Memory is constructive, not like a video recording', 'sensory → short-term → long-term', 'central executive + subsystems']
           },
           {
             label: 'Working memory model (Baddeley)',
-            options: ['central executive + subsystems', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
-          },
-          {
-            label: 'Encoding → Storage → Retrieval',
-            options: ['Encoding → Storage → Retrieval', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['sensory → short-term → long-term', 'central executive + subsystems', 'Encoding → Storage → Retrieval', 'Memory is constructive, not like a video recording']
           }
         ],
-        correctAnswers: ['sensory → short-term → long-term', 'central executive + subsystems', 'Encoding → Storage → Retrieval'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Memory Models.'
+        correctAnswers: ['sensory → short-term → long-term', 'central executive + subsystems'],
+        hint1: 'Think about what each concept specifically describes in Memory: Encoding & Storage.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Memory: Encoding & Storage describes a specific idea. Atkinson-Shiffrin model: sensory → short-term → long-term. Working memory model (Baddeley): central executive + subsystems.'
       }
     }
   ]

@@ -30,31 +30,31 @@ scenario analysis
       id: 'class7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of synthesis & ap review?',
+            question: 'Which of the following correctly describes Classical conditioning = involuntary…?',
             options: [
               'Classical conditioning = involuntary responses',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'Conditioning in everyday life',
+              'scenario analysis',
+              'some associations learned easier'
             ],
             correctAnswer: 0,
-            explanation: 'Classical conditioning = involuntary responses'
+            explanation: 'Correct — Classical conditioning = involuntary responses. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of synthesis & ap review, which is accurate?',
+            question: 'Select the statement that correctly describes Conditioning in everyday life:',
             options: [
+              'Classical conditioning = involuntary responses',
+              'scenario analysis',
               'Conditioning in everyday life',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'some associations learned easier'
             ],
-            correctAnswer: 0,
-            explanation: 'Conditioning in everyday life'
+            correctAnswer: 2,
+            explanation: 'Correct — Conditioning in everyday life. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,24 @@ scenario analysis
       id: 'class7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Classical conditioning = involuntary responses',
-            options: ['Classical conditioning = involuntary responses', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
-          },
-          {
             label: 'Biological preparedness',
-            options: ['some associations learned easier', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Classical conditioning = involuntary responses', 'scenario analysis', 'Conditioning in everyday life', 'some associations learned easier']
           },
           {
-            label: 'Conditioning in everyday life',
-            options: ['Conditioning in everyday life', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            label: 'AP exam',
+            options: ['Conditioning in everyday life', 'some associations learned easier', 'scenario analysis', 'Classical conditioning = involuntary responses']
           }
         ],
-        correctAnswers: ['Classical conditioning = involuntary responses', 'some associations learned easier', 'Conditioning in everyday life'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Synthesis & AP Review.'
+        correctAnswers: ['some associations learned easier', 'scenario analysis'],
+        hint1: 'Think about what each concept specifically describes in Synthesis & AP Review.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Synthesis & AP Review describes a specific idea. Biological preparedness: some associations learned easier. AP exam: scenario analysis.'
       }
     }
   ]

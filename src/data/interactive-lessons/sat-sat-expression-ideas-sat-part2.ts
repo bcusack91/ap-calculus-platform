@@ -18,20 +18,31 @@ Use relative clauses (who, which, that), appositives, or participial phrases.
       id: 'sat-e2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes combine sentences to improve flow and eliminate repetition?',
+            question: 'Which of the following correctly describes Combine sentences to improve flow and…?',
             options: [
-              'Combine sentences to improve flow and eliminate repetition is a fundamental concept in SAT Reading & Writing',
-              'Use relative clauses (who, which, that), appositives, or participial phrases',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'Use relative clauses (who, which, that), appositives, or participial phrases.',
+              'Combine sentences to improve flow and eliminate repetition.',
+              'Shorter combined version is usually preferred.',
+              'Maintain the meaning and emphasis of the original sentences.'
             ],
-            correctAnswer: 0,
-            explanation: 'Combine sentences to improve flow and eliminate repetition'
+            correctAnswer: 1,
+            explanation: 'Correct — Combine sentences to improve flow and eliminate repetition. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Combining Sentences, which explains Key Insight?',
+            options: [
+              'Combine sentences to improve flow and eliminate repetition.',
+              'Maintain the meaning and emphasis of the original sentences.',
+              'Shorter combined version is usually preferred.',
+              'Use relative clauses (who, which, that), appositives, or participial phrases.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Key Insight: Maintain the meaning and emphasis of the original sentences. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Use relative clauses (who, which, that), appositives, or participial phrases.
       id: 'sat-e2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for combining sentences?',
+            question: 'Regarding Combining Sentences, which correctly describes SAT Tip?',
             options: [
-              'Maintain the meaning and emphasis of the original sentences',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'Shorter combined version is usually preferred.',
+              'Combine sentences to improve flow and eliminate repetition.',
+              'Use relative clauses (who, which, that), appositives, or participial phrases.',
+              'Maintain the meaning and emphasis of the original sentences.'
             ],
             correctAnswer: 0,
-            explanation: 'Maintain the meaning and emphasis of the original sentences'
+            explanation: 'Correct — SAT Tip: Shorter combined version is usually preferred. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ Use relative clauses (who, which, that), appositives, or participial phrases.
       id: 'sat-e2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Combining Sentences:',
-            options: ['Combine sentences to improve flow and eliminate re', 'Use relative clauses (who, which, that), appositiv', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['Maintain the meaning and emphasis of the original sentences.', 'Use relative clauses (who, which, that), appositives, or participial phrases.', 'Combine sentences to improve flow and eliminate repetition.', 'Shorter combined version is usually preferred.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Maintain the meaning and emphasis of the original ', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'SAT Tip',
+            options: ['Maintain the meaning and emphasis of the original sentences.', 'Use relative clauses (who, which, that), appositives, or participial phrases.', 'Combine sentences to improve flow and eliminate repetition.', 'Shorter combined version is usually preferred.']
           }
         ],
-        correctAnswers: ['Combine sentences to improve flow and eliminate re', 'Maintain the meaning and emphasis of the original '],
-        hint1: 'Think about combining sentences',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'Combine sentences to improve flow and eliminate repetition. Maintain the meaning and emphasis of the original sentences.'
+        correctAnswers: ['Maintain the meaning and emphasis of the original sentences.', 'Shorter combined version is usually preferred.'],
+        hint1: 'Think about what each concept specifically describes in Combining Sentences.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Combining Sentences describes a specific idea. Key Insight: Maintain the meaning and emphasis of the original sentences. SAT Tip: Shorter combined version is usually preferred.'
       }
     }
   ]

@@ -71,23 +71,28 @@ Protein structure: primary (sequence), secondary (alpha-helix, beta-sheet), tert
       id: 'mcat-1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Amino Acids & Protein Structure:',
-            options: ['20 standard amino acids: nonpolar (G,A,V,L,I,P,F,W,M), polar', 'Protein structure: primary (sequence), secondary (alpha-heli', 'Not MCAT-relevant', 'Cannot be determined']
+            label: '20 standard amino acids',
+            options: ['nonpolar (G,A,V,L,I,P,F,W,M), polar (S,T,C,Y,N,Q), charged (D,E,K,R,H).', 'pI = isoelectric point — pH where net charge = 0; average of flanking pKa values.', 'primary (sequence), secondary (alpha-helix, beta-sheet), tertiary (3D fold), quaternary (subunits).', 'Peptide bond: planar, partial double-bond character, trans configuration preferred.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Peptide bond: planar, partial double-bond character, trans c', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Protein structure',
+            options: ['pI = isoelectric point — pH where net charge = 0; average of flanking pKa values.', 'primary (sequence), secondary (alpha-helix, beta-sheet), tertiary (3D fold), quaternary (subunits).', 'nonpolar (G,A,V,L,I,P,F,W,M), polar (S,T,C,Y,N,Q), charged (D,E,K,R,H).', 'Peptide bond: planar, partial double-bond character, trans configuration preferred.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['primary (sequence), secondary (alpha-helix, beta-sheet), tertiary (3D fold), quaternary (subunits).', 'nonpolar (G,A,V,L,I,P,F,W,M), polar (S,T,C,Y,N,Q), charged (D,E,K,R,H).', 'pI = isoelectric point — pH where net charge = 0; average of flanking pKa values.', 'Peptide bond: planar, partial double-bond character, trans configuration preferred.']
           }
         ],
-        correctAnswers: ['20 standard amino acids: nonpolar (G,A,V,L,I,P,F,W,M), polar', 'Peptide bond: planar, partial double-bond character, trans c'],
-        hint1: 'Think about amino acids & protein structure',
-        hint2: 'Consider the MCAT application',
-        explanation: '20 standard amino acids: nonpolar (G,A,V,L,I,P,F,W,M), polar (S,T,C,Y,N,Q), charged (D,E,K,R,H). Peptide bond: planar, partial double-bond character, trans configuration preferred.'
+        correctAnswers: ['nonpolar (G,A,V,L,I,P,F,W,M), polar (S,T,C,Y,N,Q), charged (D,E,K,R,H).', 'primary (sequence), secondary (alpha-helix, beta-sheet), tertiary (3D fold), quaternary (subunits).', 'Peptide bond: planar, partial double-bond character, trans configuration preferred.'],
+        hint1: 'Think about what each concept specifically describes in Biochemistry Foundations.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Biochemistry Foundations describes a specific idea. 20 standard amino acids: nonpolar (G,A,V,L,I,P,F,W,M), polar (S,T,C,Y,N,Q), charged (D,E,K,R,H). Protein structure: primary (sequence), secondary (alpha-helix, beta-sheet), tertiary (3D fold), quaternary (subunits). Key Insight: Peptide bond: planar, partial double-bond character, trans configuration preferred.'
       }
     }
   ]

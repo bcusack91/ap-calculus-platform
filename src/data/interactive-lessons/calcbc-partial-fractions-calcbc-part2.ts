@@ -30,31 +30,31 @@ set each factor to zero to find constants
       id: 'parti2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of distinct linear factors?',
+            question: 'What does "For distinct linear factors…" refer to in calculus?',
             options: [
+              'set each factor to zero to find constants',
+              'A/(ax+b) + B/(cx+d) + ...',
               'For distinct linear factors (ax+b)(cx+d)...',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
+              'Multiply both sides by Q(x) and solve for A, B, ...'
             ],
-            correctAnswer: 0,
-            explanation: 'For distinct linear factors (ax+b)(cx+d)...'
+            correctAnswer: 2,
+            explanation: 'Correct — For distinct linear factors (ax+b)(cx+d)... The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of distinct linear factors, which is accurate?',
+            question: 'In the context of Distinct Linear Factors, which explains Multiply both sides by Q(x) and solve…?',
             options: [
               'Multiply both sides by Q(x) and solve for A, B, ...',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'For distinct linear factors (ax+b)(cx+d)...',
+              'A/(ax+b) + B/(cx+d) + ...',
+              'set each factor to zero to find constants'
             ],
             correctAnswer: 0,
-            explanation: 'Multiply both sides by Q(x) and solve for A, B, ...'
+            explanation: 'Correct — Multiply both sides by Q(x) and solve for A, B, ... Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ set each factor to zero to find constants
       id: 'parti2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to distinct linear factors?',
+            question: 'Which of these accurately represents Use strategic substitution?',
             options: [
               'set each factor to zero to find constants',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'A/(ax+b) + B/(cx+d) + ...',
+              'Multiply both sides by Q(x) and solve for A, B, ...',
+              'For distinct linear factors (ax+b)(cx+d)...'
             ],
             correctAnswer: 0,
-            explanation: 'Use strategic substitution: set each factor to zero to find constants'
+            explanation: 'Correct — Use strategic substitution: set each factor to zero to find constants. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ set each factor to zero to find constants
       id: 'parti2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'For distinct linear factors (ax+b)(cx+d)...',
-            options: ['For distinct linear factors (ax+b)(cx+d)...', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'For distinct linear factors…',
+            options: ['set each factor to zero to find constants', 'Multiply both sides by Q(x) and solve for A, B, ...', 'A/(ax+b) + B/(cx+d) + ...', 'For distinct linear factors (ax+b)(cx+d)...']
           },
           {
             label: 'A/(ax+b) + B/(cx+d) + ...',
-            options: ['A/(ax+b) + B/(cx+d) + ...', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['For distinct linear factors (ax+b)(cx+d)...', 'set each factor to zero to find constants', 'Multiply both sides by Q(x) and solve for A, B, ...', 'A/(ax+b) + B/(cx+d) + ...']
           },
           {
-            label: 'Multiply both sides by Q(x) and solve for A, B, ...',
-            options: ['Multiply both sides by Q(x) and solve for A, B, ..', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Multiply both sides by Q(x) and solve…',
+            options: ['A/(ax+b) + B/(cx+d) + ...', 'For distinct linear factors (ax+b)(cx+d)...', 'Multiply both sides by Q(x) and solve for A, B, ...', 'set each factor to zero to find constants']
           }
         ],
-        correctAnswers: ['For distinct linear factors (ax+b)(cx+d)...', 'A/(ax+b) + B/(cx+d) + ...', 'Multiply both sides by Q(x) and solve for A, B, ..'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Distinct Linear Factors.'
+        correctAnswers: ['For distinct linear factors (ax+b)(cx+d)...', 'A/(ax+b) + B/(cx+d) + ...', 'Multiply both sides by Q(x) and solve for A, B, ...'],
+        hint1: 'Think about what each concept specifically describes in Distinct Linear Factors.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Distinct Linear Factors describes a specific idea. For distinct linear factors (ax+b)(cx+d)... A/(ax+b) + B/(cx+d) + ... Multiply both sides by Q(x) and solve for A, B, ...'
       }
     }
   ]

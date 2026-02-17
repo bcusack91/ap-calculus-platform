@@ -30,31 +30,31 @@ Initial condition P(0) = P₀ determines A
       id: 'logis2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of solving the logistic equation?',
+            question: 'What does "Separate variables" refer to in calculus?',
             options: [
-              'Separate variables',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
+              '1/[P(1-P/L)] = (1/P + 1/(L-P)) · (1/L)',
+              'Initial condition P(0) = P₀ determines A',
+              'P(t) = L/(1 + Ae^(-kt)) where A = (L - P₀)/P₀',
+              '∫dP/[P(1-P/L)] = ∫k dt'
             ],
-            correctAnswer: 0,
-            explanation: 'Separate variables: ∫dP/[P(1-P/L)] = ∫k dt'
+            correctAnswer: 3,
+            explanation: 'Correct — Separate variables: ∫dP/[P(1-P/L)] = ∫k dt. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of solving the logistic equation, which is accurate?',
+            question: 'Select the statement that correctly describes Solution:',
             options: [
-              'P(t) = L/(1 + Ae^(-kt)) where A = (L - P₀)/P₀',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              '∫dP/[P(1-P/L)] = ∫k dt',
+              '1/[P(1-P/L)] = (1/P + 1/(L-P)) · (1/L)',
+              'Initial condition P(0) = P₀ determines A',
+              'P(t) = L/(1 + Ae^(-kt)) where A = (L - P₀)/P₀'
             ],
-            correctAnswer: 0,
-            explanation: 'Solution: P(t) = L/(1 + Ae^(-kt)) where A = (L - P₀)/P₀'
+            correctAnswer: 3,
+            explanation: 'Correct — Solution: P(t) = L/(1 + Ae^(-kt)) where A = (L - P₀)/P₀. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Initial condition P(0) = P₀ determines A
       id: 'logis2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to solving the logistic equation?',
+            question: 'Which statement about Initial condition P(0) = P₀ determines A is correct?',
             options: [
+              '1/[P(1-P/L)] = (1/P + 1/(L-P)) · (1/L)',
               'Initial condition P(0) = P₀ determines A',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              '∫dP/[P(1-P/L)] = ∫k dt',
+              'P(t) = L/(1 + Ae^(-kt)) where A = (L - P₀)/P₀'
             ],
-            correctAnswer: 0,
-            explanation: 'Initial condition P(0) = P₀ determines A'
+            correctAnswer: 1,
+            explanation: 'Correct — Initial condition P(0) = P₀ determines A. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Initial condition P(0) = P₀ determines A
       id: 'logis2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Separate variables',
-            options: ['∫dP/[P(1-P/L)] = ∫k dt', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['P(t) = L/(1 + Ae^(-kt)) where A = (L - P₀)/P₀', '1/[P(1-P/L)] = (1/P + 1/(L-P)) · (1/L)', '∫dP/[P(1-P/L)] = ∫k dt', 'Initial condition P(0) = P₀ determines A']
           },
           {
             label: 'Use partial fractions',
-            options: ['1/[P(1-P/L)] = (1/P + 1/(L-P)) · (1/L)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['P(t) = L/(1 + Ae^(-kt)) where A = (L - P₀)/P₀', 'Initial condition P(0) = P₀ determines A', '∫dP/[P(1-P/L)] = ∫k dt', '1/[P(1-P/L)] = (1/P + 1/(L-P)) · (1/L)']
           },
           {
             label: 'Solution',
-            options: ['P(t) = L/(1 + Ae^(-kt)) where A = (L - P₀)/P₀', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['1/[P(1-P/L)] = (1/P + 1/(L-P)) · (1/L)', 'Initial condition P(0) = P₀ determines A', 'P(t) = L/(1 + Ae^(-kt)) where A = (L - P₀)/P₀', '∫dP/[P(1-P/L)] = ∫k dt']
           }
         ],
         correctAnswers: ['∫dP/[P(1-P/L)] = ∫k dt', '1/[P(1-P/L)] = (1/P + 1/(L-P)) · (1/L)', 'P(t) = L/(1 + Ae^(-kt)) where A = (L - P₀)/P₀'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Solving the Logistic Equation.'
+        hint1: 'Think about what each concept specifically describes in Solving the Logistic Equation.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Solving the Logistic Equation describes a specific idea. Separate variables: ∫dP/[P(1-P/L)] = ∫k dt. Use partial fractions: 1/[P(1-P/L)] = (1/P + 1/(L-P)) · (1/L). Solution: P(t) = L/(1 + Ae^(-kt)) where A = (L - P₀)/P₀.'
       }
     }
   ]

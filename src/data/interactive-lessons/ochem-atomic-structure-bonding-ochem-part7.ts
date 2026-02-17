@@ -30,31 +30,31 @@ structure determines properties
       id: 'atomi7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of synthesis & review?',
+            question: 'What does "Bonding fundamentals underpin all…" refer to in this topic?',
             options: [
+              'structure determines properties',
+              'Polarity influences intermolecular forces',
               'Bonding fundamentals underpin all organic chemistry',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'Hybridization determines geometry and reactivity'
             ],
-            correctAnswer: 0,
-            explanation: 'Bonding fundamentals underpin all organic chemistry'
+            correctAnswer: 2,
+            explanation: 'Correct — Bonding fundamentals underpin all organic chemistry. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of synthesis & review, which is accurate?',
+            question: 'Which of the following is true about Polarity influences intermolecular…?',
             options: [
-              'Polarity influences intermolecular forces',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Bonding fundamentals underpin all organic chemistry',
+              'structure determines properties',
+              'Hybridization determines geometry and reactivity',
+              'Polarity influences intermolecular forces'
             ],
-            correctAnswer: 0,
-            explanation: 'Polarity influences intermolecular forces'
+            correctAnswer: 3,
+            explanation: 'Correct — Polarity influences intermolecular forces. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ structure determines properties
       id: 'atomi7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Bonding fundamentals underpin all organic chemistry',
-            options: ['Bonding fundamentals underpin all organic chemistr', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Bonding fundamentals underpin all…',
+            options: ['Hybridization determines geometry and reactivity', 'structure determines properties', 'Bonding fundamentals underpin all organic chemistry', 'Polarity influences intermolecular forces']
           },
           {
-            label: 'Hybridization determines geometry and reactivity',
-            options: ['Hybridization determines geometry and reactivity', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Hybridization determines geometry and…',
+            options: ['structure determines properties', 'Bonding fundamentals underpin all organic chemistry', 'Polarity influences intermolecular forces', 'Hybridization determines geometry and reactivity']
           },
           {
-            label: 'Polarity influences intermolecular forces',
-            options: ['Polarity influences intermolecular forces', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Polarity influences intermolecular…',
+            options: ['Bonding fundamentals underpin all organic chemistry', 'Hybridization determines geometry and reactivity', 'Polarity influences intermolecular forces', 'structure determines properties']
           }
         ],
-        correctAnswers: ['Bonding fundamentals underpin all organic chemistr', 'Hybridization determines geometry and reactivity', 'Polarity influences intermolecular forces'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Synthesis & Review.'
+        correctAnswers: ['Bonding fundamentals underpin all organic chemistry', 'Hybridization determines geometry and reactivity', 'Polarity influences intermolecular forces'],
+        hint1: 'Think about what each concept specifically describes in Synthesis & Review.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Synthesis & Review describes a specific idea. Bonding fundamentals underpin all organic chemistry. Hybridization determines geometry and reactivity. Polarity influences intermolecular forces.'
       }
     }
   ]

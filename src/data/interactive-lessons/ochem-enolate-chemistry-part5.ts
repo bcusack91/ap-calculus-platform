@@ -30,31 +30,31 @@ Powerful method for building six-membered rings
       id: 'enola5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of michael & robinson reactions?',
-            options: [
-              'Michael reaction',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
-            ],
-            correctAnswer: 0,
-            explanation: 'Michael reaction: conjugate (1,4-) addition to enone'
-          },
-          {
-            question: 'In the context of michael & robinson reactions, which is accurate?',
+            question: 'Which statement accurately explains Michael reaction?',
             options: [
               'Michael + aldol cyclization → cyclohexenone',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'conjugate (1,4-) addition to enone',
+              'Powerful method for building six-membered rings',
+              'Michael donor (nucleophile) + Michael acceptor (enone)'
             ],
-            correctAnswer: 0,
-            explanation: 'Robinson annulation: Michael + aldol cyclization → cyclohexenone'
+            correctAnswer: 1,
+            explanation: 'Correct — Michael reaction: conjugate (1,4-) addition to enone. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Robinson annulation:',
+            options: [
+              'Powerful method for building six-membered rings',
+              'Michael donor (nucleophile) + Michael acceptor (enone)',
+              'Michael + aldol cyclization → cyclohexenone',
+              'conjugate (1,4-) addition to enone'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Robinson annulation: Michael + aldol cyclization → cyclohexenone. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,24 @@ Powerful method for building six-membered rings
       id: 'enola5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Michael reaction',
-            options: ['conjugate (1,4-) addition to enone', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
-          },
-          {
-            label: 'Michael donor (nucleophile) + Michael acceptor (enone)',
-            options: ['Michael donor (nucleophile) + Michael acceptor (en', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Michael + aldol cyclization → cyclohexenone', 'Powerful method for building six-membered rings', 'conjugate (1,4-) addition to enone', 'Michael donor (nucleophile) + Michael acceptor (enone)']
           },
           {
             label: 'Robinson annulation',
-            options: ['Michael + aldol cyclization → cyclohexenone', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Powerful method for building six-membered rings', 'Michael + aldol cyclization → cyclohexenone', 'conjugate (1,4-) addition to enone', 'Michael donor (nucleophile) + Michael acceptor (enone)']
           }
         ],
-        correctAnswers: ['conjugate (1,4-) addition to enone', 'Michael donor (nucleophile) + Michael acceptor (en', 'Michael + aldol cyclization → cyclohexenone'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Michael & Robinson Reactions.'
+        correctAnswers: ['conjugate (1,4-) addition to enone', 'Michael + aldol cyclization → cyclohexenone'],
+        hint1: 'Think about what each concept specifically describes in Michael & Robinson Reactions.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Michael & Robinson Reactions describes a specific idea. Michael reaction: conjugate (1,4-) addition to enone. Robinson annulation: Michael + aldol cyclization → cyclohexenone.'
       }
     }
   ]

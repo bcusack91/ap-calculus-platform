@@ -19,31 +19,31 @@ export const bioEcologyPart6Data = {
       id: 'ecol6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes identifying biotic vs abiotic factors?',
+            question: 'What does "Identifying biotic vs abiotic factors" refer to in biology?',
             options: [
+              'Evaluating niche overlap',
+              'Analyzing food webs',
               'Identifying biotic vs abiotic factors',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Predicting effects of species removal'
             ],
-            correctAnswer: 0,
-            explanation: 'Identifying biotic vs abiotic factors'
+            correctAnswer: 2,
+            explanation: 'Correct — Identifying biotic vs abiotic factors. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of problem-solving, which statement is accurate?',
+            question: 'Select the statement that correctly describes Predicting effects of species removal:',
             options: [
+              'Analyzing food webs',
               'Predicting effects of species removal',
-              'srotcaf citoiba sv citoib gniyfitnedI',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Identifying biotic vs abiotic factors',
+              'Evaluating niche overlap'
             ],
-            correctAnswer: 0,
-            explanation: 'Predicting effects of species removal'
+            correctAnswer: 1,
+            explanation: 'Correct — Predicting effects of species removal. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioEcologyPart6Data = {
       id: 'ecol6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to problem-solving?',
+            question: 'Which statement about Evaluating niche overlap is correct?',
             options: [
-              'Evaluating niche overlap',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Analyzing food webs',
+              'Identifying biotic vs abiotic factors',
+              'Predicting effects of species removal',
+              'Evaluating niche overlap'
             ],
-            correctAnswer: 0,
-            explanation: 'Evaluating niche overlap'
+            correctAnswer: 3,
+            explanation: 'Correct — Evaluating niche overlap. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioEcologyPart6Data = {
       id: 'ecol6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Identifying biotic vs abiotic factors is important in problem-solving because',
-            options: ['Identifying biotic vs abiotic factors', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Identifying biotic vs abiotic factors',
+            options: ['Evaluating niche overlap', 'Predicting effects of species removal', 'Analyzing food webs', 'Identifying biotic vs abiotic factors']
           },
           {
-            label: 'Analyzing food webs is important in problem-solving because',
-            options: ['Analyzing food webs', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Analyzing food webs',
+            options: ['Identifying biotic vs abiotic factors', 'Analyzing food webs', 'Evaluating niche overlap', 'Predicting effects of species removal']
           },
           {
-            label: 'Predicting effects of species removal is important in problem-solving because',
-            options: ['Predicting effects of species removal', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Predicting effects of species removal',
+            options: ['Predicting effects of species removal', 'Analyzing food webs', 'Evaluating niche overlap', 'Identifying biotic vs abiotic factors']
           }
         ],
         correctAnswers: ['Identifying biotic vs abiotic factors', 'Analyzing food webs', 'Predicting effects of species removal'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving.'
+        hint1: 'Think about what each concept specifically describes in Ecology: Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Ecology: Problem-Solving Workshop describes a specific idea. Identifying biotic vs abiotic factors. Analyzing food webs. Predicting effects of species removal.'
       }
     }
   ]

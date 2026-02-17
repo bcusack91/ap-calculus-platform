@@ -30,31 +30,31 @@ Explain whether an approximation is an over- or underestimate
       id: 'table5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of interpreting results in context?',
+            question: 'What does "Always include units in your answer" refer to in calculus?',
             options: [
-              'Always include units in your answer',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              '"Since f is decreasing, the right Riemann sum is an underestimate"',
+              'Explain whether an approximation is an over- or underestimate',
+              'State what the computed quantity represents in context',
+              'Always include units in your answer'
             ],
-            correctAnswer: 0,
-            explanation: 'Always include units in your answer'
+            correctAnswer: 3,
+            explanation: 'Correct — Always include units in your answer. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of interpreting results in context, which is accurate?',
+            question: 'Select the statement that correctly describes Explain whether an approximation is an…:',
             options: [
+              'Always include units in your answer',
               'Explain whether an approximation is an over- or underestimate',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'State what the computed quantity represents in context',
+              '"Since f is decreasing, the right Riemann sum is an underestimate"'
             ],
-            correctAnswer: 0,
-            explanation: 'Explain whether an approximation is an over- or underestimate'
+            correctAnswer: 1,
+            explanation: 'Correct — Explain whether an approximation is an over- or underestimate. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Explain whether an approximation is an over- or underestimate
       id: 'table5-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to interpreting results in context?',
+            question: 'Which statement about "Since f is decreasing, the right… is correct?',
             options: [
               '"Since f is decreasing, the right Riemann sum is an underestimate"',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'State what the computed quantity represents in context',
+              'Explain whether an approximation is an over- or underestimate',
+              'Always include units in your answer'
             ],
             correctAnswer: 0,
-            explanation: '"Since f is decreasing, the right Riemann sum is an underestimate"'
+            explanation: 'Correct — "Since f is decreasing, the right Riemann sum is an underestimate". Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Explain whether an approximation is an over- or underestimate
       id: 'table5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Always include units in your answer',
-            options: ['Always include units in your answer', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['"Since f is decreasing, the right Riemann sum is an underestimate"', 'Always include units in your answer', 'Explain whether an approximation is an over- or underestimate', 'State what the computed quantity represents in context']
           },
           {
-            label: 'State what the computed quantity represents in context',
-            options: ['State what the computed quantity represents in con', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'State what the computed quantity…',
+            options: ['State what the computed quantity represents in context', 'Always include units in your answer', 'Explain whether an approximation is an over- or underestimate', '"Since f is decreasing, the right Riemann sum is an underestimate"']
           },
           {
-            label: 'Explain whether an approximation is an over- or underestimate',
-            options: ['Explain whether an approximation is an over- or un', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Explain whether an approximation is an…',
+            options: ['"Since f is decreasing, the right Riemann sum is an underestimate"', 'Explain whether an approximation is an over- or underestimate', 'State what the computed quantity represents in context', 'Always include units in your answer']
           }
         ],
-        correctAnswers: ['Always include units in your answer', 'State what the computed quantity represents in con', 'Explain whether an approximation is an over- or un'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Interpreting Results in Context.'
+        correctAnswers: ['Always include units in your answer', 'State what the computed quantity represents in context', 'Explain whether an approximation is an over- or underestimate'],
+        hint1: 'Think about what each concept specifically describes in Interpreting Results in Context.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Interpreting Results in Context describes a specific idea. Always include units in your answer. State what the computed quantity represents in context. Explain whether an approximation is an over- or underestimate.'
       }
     }
   ]

@@ -18,20 +18,31 @@ Graph solutions on a number line: open circle for < or >, closed for ≤ or ≥.
       id: 'act-a2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes solve like equations, but flip the inequality sign when multiplying/dividing by a negative?',
+            question: 'What does "Solve like equations, but flip the…" refer to in ACT prep?',
             options: [
-              'Solve like equations, but flip the inequality sign when multiplying/dividing by a negative is a key concept for ACT Math',
-              'Graph solutions on a number line: open circle for < or >, closed for ≤ or ≥',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'open circle for < or >, closed for ≤ or ≥.',
+              'ACT may present inequalities in word problem form.',
+              'Solve like equations, but flip the inequality sign when multiplying/dividing by a negative.',
+              'Compound inequalities: AND (intersection) vs. OR (union).'
             ],
-            correctAnswer: 0,
-            explanation: 'Solve like equations, but flip the inequality sign when multiplying/dividing by a negative'
+            correctAnswer: 2,
+            explanation: 'Correct — Solve like equations, but flip the inequality sign when multiplying/dividing by a negative. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Inequalities, which explains Key Insight?',
+            options: [
+              'ACT may present inequalities in word problem form.',
+              'open circle for < or >, closed for ≤ or ≥.',
+              'Solve like equations, but flip the inequality sign when multiplying/dividing by a negative.',
+              'Compound inequalities: AND (intersection) vs. OR (union).'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Key Insight: Compound inequalities: AND (intersection) vs. OR (union). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Graph solutions on a number line: open circle for < or >, closed for ≤ or ≥.
       id: 'act-a2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for inequalities?',
+            question: 'Which statement about ACT Tip is correct?',
             options: [
-              'Compound inequalities: AND (intersection) vs. OR (union)',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'open circle for < or >, closed for ≤ or ≥.',
+              'Compound inequalities: AND (intersection) vs. OR (union).',
+              'ACT may present inequalities in word problem form.',
+              'Solve like equations, but flip the inequality sign when multiplying/dividing by a negative.'
             ],
-            correctAnswer: 0,
-            explanation: 'Compound inequalities: AND (intersection) vs. OR (union)'
+            correctAnswer: 2,
+            explanation: 'Correct — ACT Tip: ACT may present inequalities in word problem form. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Graph solutions on a number line: open circle for < or >, closed for ≤ or ≥.
       id: 'act-a2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Inequalities:',
-            options: ['Solve like equations, but flip the inequality sign', 'Graph solutions on a number line: open circle for ', 'Not applicable', 'None of these']
+            label: 'Graph solutions on a number line',
+            options: ['ACT may present inequalities in word problem form.', 'Compound inequalities: AND (intersection) vs. OR (union).', 'open circle for < or >, closed for ≤ or ≥.', 'Solve like equations, but flip the inequality sign when multiplying/dividing by a negative.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Compound inequalities: AND (intersection) vs. OR (', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Key Insight',
+            options: ['Compound inequalities: AND (intersection) vs. OR (union).', 'ACT may present inequalities in word problem form.', 'Solve like equations, but flip the inequality sign when multiplying/dividing by a negative.', 'open circle for < or >, closed for ≤ or ≥.']
+          },
+          {
+            label: 'ACT Tip',
+            options: ['Solve like equations, but flip the inequality sign when multiplying/dividing by a negative.', 'open circle for < or >, closed for ≤ or ≥.', 'Compound inequalities: AND (intersection) vs. OR (union).', 'ACT may present inequalities in word problem form.']
           }
         ],
-        correctAnswers: ['Solve like equations, but flip the inequality sign', 'Compound inequalities: AND (intersection) vs. OR ('],
-        hint1: 'Think about inequalities',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Solve like equations, but flip the inequality sign when multiplying/dividing by a negative. Compound inequalities: AND (intersection) vs. OR (union).'
+        correctAnswers: ['open circle for < or >, closed for ≤ or ≥.', 'Compound inequalities: AND (intersection) vs. OR (union).', 'ACT may present inequalities in word problem form.'],
+        hint1: 'Think about what each concept specifically describes in Inequalities.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Inequalities describes a specific idea. Graph solutions on a number line: open circle for < or >, closed for ≤ or ≥. Key Insight: Compound inequalities: AND (intersection) vs. OR (union). ACT Tip: ACT may present inequalities in word problem form.'
       }
     }
   ]

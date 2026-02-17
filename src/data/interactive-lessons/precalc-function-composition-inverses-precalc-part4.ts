@@ -30,31 +30,31 @@ Replace y with f⁻¹(x) and state the domain
       id: 'funct4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of finding inverses algebraically?',
+            question: 'Which of the following correctly describes Replace f(x) with y?',
             options: [
               'Replace f(x) with y',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'Replace y with f⁻¹(x) and state the domain',
+              'Solve the new equation for y',
+              'Swap x and y in the equation'
             ],
             correctAnswer: 0,
-            explanation: 'Replace f(x) with y'
+            explanation: 'Correct — Replace f(x) with y. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of finding inverses algebraically, which is accurate?',
+            question: 'In the context of Finding Inverses Algebraically, which explains Solve the new equation for y?',
             options: [
+              'Replace y with f⁻¹(x) and state the domain',
+              'Replace f(x) with y',
               'Solve the new equation for y',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Swap x and y in the equation'
             ],
-            correctAnswer: 0,
-            explanation: 'Solve the new equation for y'
+            correctAnswer: 2,
+            explanation: 'Correct — Solve the new equation for y. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Replace y with f⁻¹(x) and state the domain
       id: 'funct4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Replace f(x) with y',
-            options: ['Replace f(x) with y', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['Swap x and y in the equation', 'Solve the new equation for y', 'Replace y with f⁻¹(x) and state the domain', 'Replace f(x) with y']
           },
           {
             label: 'Swap x and y in the equation',
-            options: ['Swap x and y in the equation', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['Replace y with f⁻¹(x) and state the domain', 'Solve the new equation for y', 'Replace f(x) with y', 'Swap x and y in the equation']
           },
           {
             label: 'Solve the new equation for y',
-            options: ['Solve the new equation for y', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['Replace y with f⁻¹(x) and state the domain', 'Replace f(x) with y', 'Solve the new equation for y', 'Swap x and y in the equation']
           }
         ],
         correctAnswers: ['Replace f(x) with y', 'Swap x and y in the equation', 'Solve the new equation for y'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Finding Inverses Algebraically.'
+        hint1: 'Think about what each concept specifically describes in Finding Inverses Algebraically.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Finding Inverses Algebraically describes a specific idea. Replace f(x) with y. Swap x and y in the equation. Solve the new equation for y.'
       }
     }
   ]

@@ -18,20 +18,31 @@ Percent change = ((new - old)/old) × 100.
       id: 'sat-r2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes percent = (part/whole) × 100?',
+            question: 'Which statement accurately explains Percent = (part/whole) × 100.?',
             options: [
-              'Percent = (part/whole) × 100 is a fundamental concept in SAT Math',
-              'Percent change = ((new - old)/old) × 100',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'Common SAT trap: 20% increase then 20% decrease ≠ original (it is 96% of original).',
+              'Percent = (part/whole) × 100.',
+              'Successive percent changes: multiply the multipliers (1 + r₁)(1 + r₂)....',
+              'Percent change = ((new - old)/old) × 100.'
             ],
-            correctAnswer: 0,
-            explanation: 'Percent = (part/whole) × 100'
+            correctAnswer: 1,
+            explanation: 'Correct — Percent = (part/whole) × 100. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              'Percent change = ((new - old)/old) × 100.',
+              'Common SAT trap: 20% increase then 20% decrease ≠ original (it is 96% of original).',
+              'Percent = (part/whole) × 100.',
+              'Successive percent changes: multiply the multipliers (1 + r₁)(1 + r₂)....'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Key Insight: Successive percent changes: multiply the multipliers (1 + r₁)(1 + r₂).... Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Percent change = ((new - old)/old) × 100.
       id: 'sat-r2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for percentages?',
+            question: 'Which statement about SAT Tip is correct?',
             options: [
-              'Successive percent changes: multiply the multipliers (1 + r₁)(1 + r₂)...',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'Percent change = ((new - old)/old) × 100.',
+              'Common SAT trap: 20% increase then 20% decrease ≠ original (it is 96% of original).',
+              'Successive percent changes: multiply the multipliers (1 + r₁)(1 + r₂)....',
+              'Percent = (part/whole) × 100.'
             ],
-            correctAnswer: 0,
-            explanation: 'Successive percent changes: multiply the multipliers (1 + r₁)(1 + r₂)...'
+            correctAnswer: 1,
+            explanation: 'Correct — SAT Tip: Common SAT trap: 20% increase then 20% decrease ≠ original (it is 96% of original). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ Percent change = ((new - old)/old) × 100.
       id: 'sat-r2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Percentages:',
-            options: ['Percent = (part/whole) × 100', 'Percent change = ((new - old)/old) × 100', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['Successive percent changes: multiply the multipliers (1 + r₁)(1 + r₂)....', 'Percent = (part/whole) × 100.', 'Percent change = ((new - old)/old) × 100.', 'Common SAT trap: 20% increase then 20% decrease ≠ original (it is 96% of original).']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Successive percent changes: multiply the multiplie', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'SAT Tip',
+            options: ['Common SAT trap: 20% increase then 20% decrease ≠ original (it is 96% of original).', 'Percent = (part/whole) × 100.', 'Successive percent changes: multiply the multipliers (1 + r₁)(1 + r₂)....', 'Percent change = ((new - old)/old) × 100.']
           }
         ],
-        correctAnswers: ['Percent = (part/whole) × 100', 'Successive percent changes: multiply the multiplie'],
-        hint1: 'Think about percentages',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'Percent = (part/whole) × 100. Successive percent changes: multiply the multipliers (1 + r₁)(1 + r₂)....'
+        correctAnswers: ['Successive percent changes: multiply the multipliers (1 + r₁)(1 + r₂)....', 'Common SAT trap: 20% increase then 20% decrease ≠ original (it is 96% of original).'],
+        hint1: 'Think about what each concept specifically describes in Percentages.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Percentages describes a specific idea. Key Insight: Successive percent changes: multiply the multipliers (1 + r₁)(1 + r₂).... SAT Tip: Common SAT trap: 20% increase then 20% decrease ≠ original (it is 96% of original).'
       }
     }
   ]

@@ -30,31 +30,31 @@ Retrosynthetic analysis of ring systems
       id: 'enola6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of problem-solving workshop?',
+            question: 'Which statement accurately explains Predicting aldol and Claisen products?',
             options: [
+              'Designing enolate-based syntheses',
+              'Analyzing crossed reactions for selectivity',
               'Predicting aldol and Claisen products',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'Retrosynthetic analysis of ring systems'
             ],
-            correctAnswer: 0,
-            explanation: 'Predicting aldol and Claisen products'
+            correctAnswer: 2,
+            explanation: 'Correct — Predicting aldol and Claisen products. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of problem-solving workshop, which is accurate?',
+            question: 'Which of the following is true about Analyzing crossed reactions for…?',
             options: [
+              'Predicting aldol and Claisen products',
               'Analyzing crossed reactions for selectivity',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Retrosynthetic analysis of ring systems',
+              'Designing enolate-based syntheses'
             ],
-            correctAnswer: 0,
-            explanation: 'Analyzing crossed reactions for selectivity'
+            correctAnswer: 1,
+            explanation: 'Correct — Analyzing crossed reactions for selectivity. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Retrosynthetic analysis of ring systems
       id: 'enola6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Predicting aldol and Claisen products',
-            options: ['Predicting aldol and Claisen products', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Predicting aldol and Claisen products', 'Designing enolate-based syntheses', 'Retrosynthetic analysis of ring systems', 'Analyzing crossed reactions for selectivity']
           },
           {
             label: 'Designing enolate-based syntheses',
-            options: ['Designing enolate-based syntheses', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Retrosynthetic analysis of ring systems', 'Predicting aldol and Claisen products', 'Designing enolate-based syntheses', 'Analyzing crossed reactions for selectivity']
           },
           {
-            label: 'Analyzing crossed reactions for selectivity',
-            options: ['Analyzing crossed reactions for selectivity', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Analyzing crossed reactions for…',
+            options: ['Retrosynthetic analysis of ring systems', 'Analyzing crossed reactions for selectivity', 'Designing enolate-based syntheses', 'Predicting aldol and Claisen products']
           }
         ],
         correctAnswers: ['Predicting aldol and Claisen products', 'Designing enolate-based syntheses', 'Analyzing crossed reactions for selectivity'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving Workshop.'
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Predicting aldol and Claisen products. Designing enolate-based syntheses. Analyzing crossed reactions for selectivity.'
       }
     }
   ]

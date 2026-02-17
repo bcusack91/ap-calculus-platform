@@ -30,31 +30,31 @@ finite volume but infinite surface area
       id: 'impro6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of problem-solving workshop?',
+            question: 'Which of the following correctly describes Probability?',
             options: [
-              'Probability',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
+              'finite volume but infinite surface area',
+              '∫₋∞^∞ f(x)dx = 1 for probability density functions',
+              'Laplace transforms use improper integrals',
+              'Area under curves that extend to infinity'
             ],
-            correctAnswer: 0,
-            explanation: 'Probability: ∫₋∞^∞ f(x)dx = 1 for probability density functions'
+            correctAnswer: 1,
+            explanation: 'Correct — Probability: ∫₋∞^∞ f(x)dx = 1 for probability density functions. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of problem-solving workshop, which is accurate?',
+            question: 'In the context of Problem-Solving Workshop, which explains Area under curves that extend to…?',
             options: [
               'Area under curves that extend to infinity',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Laplace transforms use improper integrals',
+              'finite volume but infinite surface area',
+              '∫₋∞^∞ f(x)dx = 1 for probability density functions'
             ],
             correctAnswer: 0,
-            explanation: 'Area under curves that extend to infinity'
+            explanation: 'Correct — Area under curves that extend to infinity. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ finite volume but infinite surface area
       id: 'impro6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to problem-solving workshop?',
+            question: 'Which statement about Gabriel\'s Horn is correct?',
             options: [
-              'finite volume but infinite surface area',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'Laplace transforms use improper integrals',
+              '∫₋∞^∞ f(x)dx = 1 for probability density functions',
+              'Area under curves that extend to infinity',
+              'finite volume but infinite surface area'
             ],
-            correctAnswer: 0,
-            explanation: 'Gabriel\'s Horn: finite volume but infinite surface area'
+            correctAnswer: 3,
+            explanation: 'Correct — Gabriel\'s Horn: finite volume but infinite surface area. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,24 @@ finite volume but infinite surface area
       id: 'impro6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Probability',
-            options: ['∫₋∞^∞ f(x)dx = 1 for probability density functions', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Area under curves that extend to infinity', '∫₋∞^∞ f(x)dx = 1 for probability density functions', 'finite volume but infinite surface area', 'Laplace transforms use improper integrals']
           },
           {
-            label: 'Laplace transforms use improper integrals',
-            options: ['Laplace transforms use improper integrals', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
-          },
-          {
-            label: 'Area under curves that extend to infinity',
-            options: ['Area under curves that extend to infinity', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Gabriel\'s Horn',
+            options: ['Laplace transforms use improper integrals', 'Area under curves that extend to infinity', '∫₋∞^∞ f(x)dx = 1 for probability density functions', 'finite volume but infinite surface area']
           }
         ],
-        correctAnswers: ['∫₋∞^∞ f(x)dx = 1 for probability density functions', 'Laplace transforms use improper integrals', 'Area under curves that extend to infinity'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving Workshop.'
+        correctAnswers: ['∫₋∞^∞ f(x)dx = 1 for probability density functions', 'finite volume but infinite surface area'],
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Probability: ∫₋∞^∞ f(x)dx = 1 for probability density functions. Gabriel\'s Horn: finite volume but infinite surface area.'
       }
     }
   ]

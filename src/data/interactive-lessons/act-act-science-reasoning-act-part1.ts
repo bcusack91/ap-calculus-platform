@@ -18,20 +18,31 @@ A hypothesis is testable and falsifiable.
       id: 'act-s1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes observation → question → hypothesis → experiment → analysis → conclusion?',
+            question: 'Which of the following correctly describes Observation → Question → Hypothesis →…?',
             options: [
-              'Observation → Question → Hypothesis → Experiment → Analysis → Conclusion is a key concept for ACT Science',
-              'A hypothesis is testable and falsifiable',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'Observation → Question → Hypothesis → Experiment → Analysis → Conclusion.',
+              'Scientific method is iterative — new questions arise from conclusions.',
+              'Theory: well-supported explanation; Law: describes a consistent pattern.',
+              'A hypothesis is testable and falsifiable.'
             ],
             correctAnswer: 0,
-            explanation: 'Observation → Question → Hypothesis → Experiment → Analysis → Conclusion'
+            explanation: 'Correct — Observation → Question → Hypothesis → Experiment → Analysis → Conclusion. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Science Reasoning, which explains Key Insight?',
+            options: [
+              'Theory: well-supported explanation; Law: describes a consistent pattern.',
+              'A hypothesis is testable and falsifiable.',
+              'Observation → Question → Hypothesis → Experiment → Analysis → Conclusion.',
+              'Scientific method is iterative — new questions arise from conclusions.'
+            ],
+            correctAnswer: 0,
+            explanation: 'Correct — Key Insight: Theory: well-supported explanation; Law: describes a consistent pattern. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ A hypothesis is testable and falsifiable.
       id: 'act-s1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for scientific method?',
+            question: 'Regarding Science Reasoning, which correctly describes ACT Tip?',
             options: [
-              'Theory: well-supported explanation; Law: describes a consistent pattern',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Observation → Question → Hypothesis → Experiment → Analysis → Conclusion.',
+              'Scientific method is iterative — new questions arise from conclusions.',
+              'Theory: well-supported explanation; Law: describes a consistent pattern.',
+              'A hypothesis is testable and falsifiable.'
             ],
-            correctAnswer: 0,
-            explanation: 'Theory: well-supported explanation; Law: describes a consistent pattern'
+            correctAnswer: 1,
+            explanation: 'Correct — ACT Tip: Scientific method is iterative — new questions arise from conclusions. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ A hypothesis is testable and falsifiable.
       id: 'act-s1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Scientific Method:',
-            options: ['Observation → Question → Hypothesis → Experiment →', 'A hypothesis is testable and falsifiable', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['A hypothesis is testable and falsifiable.', 'Theory: well-supported explanation; Law: describes a consistent pattern.', 'Scientific method is iterative — new questions arise from conclusions.', 'Observation → Question → Hypothesis → Experiment → Analysis → Conclusion.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Theory: well-supported explanation; Law: describes', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'ACT Tip',
+            options: ['Theory: well-supported explanation; Law: describes a consistent pattern.', 'Observation → Question → Hypothesis → Experiment → Analysis → Conclusion.', 'A hypothesis is testable and falsifiable.', 'Scientific method is iterative — new questions arise from conclusions.']
           }
         ],
-        correctAnswers: ['Observation → Question → Hypothesis → Experiment →', 'Theory: well-supported explanation; Law: describes'],
-        hint1: 'Think about scientific method',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Observation → Question → Hypothesis → Experiment → Analysis → Conclusion. Theory: well-supported explanation; Law: describes a consistent pattern.'
+        correctAnswers: ['Theory: well-supported explanation; Law: describes a consistent pattern.', 'Scientific method is iterative — new questions arise from conclusions.'],
+        hint1: 'Think about what each concept specifically describes in Science Reasoning.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Science Reasoning describes a specific idea. Key Insight: Theory: well-supported explanation; Law: describes a consistent pattern. ACT Tip: Scientific method is iterative — new questions arise from conclusions.'
       }
     }
   ]

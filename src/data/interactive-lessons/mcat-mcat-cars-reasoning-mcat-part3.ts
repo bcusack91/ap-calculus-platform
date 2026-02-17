@@ -71,23 +71,28 @@ Necessary assumption: without it, the argument falls apart.
       id: 'mcat-3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Assumption Identification:',
-            options: ['An assumption is an unstated premise the argument relies on', 'Necessary assumption: without it, the argument falls apart', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Necessary assumption',
+            options: ['Sufficient assumption: with it, the conclusion definitely follows.', 'without it, the argument falls apart.', 'An assumption is an unstated premise the argument relies on.', 'Test by negation: if negating the answer choice destroys the argument, it is a necessary assumption.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Sufficient assumption: with it, the conclusion definitely fo', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Key Insight',
+            options: ['Sufficient assumption: with it, the conclusion definitely follows.', 'Test by negation: if negating the answer choice destroys the argument, it is a necessary assumption.', 'without it, the argument falls apart.', 'An assumption is an unstated premise the argument relies on.']
+          },
+          {
+            label: 'MCAT Tip',
+            options: ['Test by negation: if negating the answer choice destroys the argument, it is a necessary assumption.', 'without it, the argument falls apart.', 'Sufficient assumption: with it, the conclusion definitely follows.', 'An assumption is an unstated premise the argument relies on.']
           }
         ],
-        correctAnswers: ['An assumption is an unstated premise the argument relies on', 'Sufficient assumption: with it, the conclusion definitely fo'],
-        hint1: 'Think about assumption identification',
-        hint2: 'Consider the MCAT application',
-        explanation: 'An assumption is an unstated premise the argument relies on. Sufficient assumption: with it, the conclusion definitely follows.'
+        correctAnswers: ['without it, the argument falls apart.', 'Sufficient assumption: with it, the conclusion definitely follows.', 'Test by negation: if negating the answer choice destroys the argument, it is a necessary assumption.'],
+        hint1: 'Think about what each concept specifically describes in Assumption Identification.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Assumption Identification describes a specific idea. Necessary assumption: without it, the argument falls apart. Key Insight: Sufficient assumption: with it, the conclusion definitely follows. MCAT Tip: Test by negation: if negating the answer choice destroys the argument, it is a necessary assumption.'
       }
     }
   ]

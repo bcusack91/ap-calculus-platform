@@ -18,20 +18,31 @@ Difficulty increases: questions 1-20 easy, 21-40 medium, 41-60 hard.
       id: 'act-m1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes 60 questions in 60 minutes = 1 minute per question?',
+            question: 'Which of the following correctly describes 60 questions in 60 minutes = 1 minute…?',
             options: [
-              '60 questions in 60 minutes = 1 minute per question is a key concept for ACT Math',
-              'Difficulty increases: questions 1-20 easy, 21-40 medium, 41-60 hard',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'Content: pre-algebra, algebra, geometry, intermediate algebra, coordinate geometry, trigonometry.',
+              'questions 1-20 easy, 21-40 medium, 41-60 hard.',
+              '60 questions in 60 minutes = 1 minute per question.',
+              'Calculator allowed for ALL math questions (unlike SAT).'
             ],
-            correctAnswer: 0,
-            explanation: '60 questions in 60 minutes = 1 minute per question'
+            correctAnswer: 2,
+            explanation: 'Correct — 60 questions in 60 minutes = 1 minute per question. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              'Calculator allowed for ALL math questions (unlike SAT).',
+              'questions 1-20 easy, 21-40 medium, 41-60 hard.',
+              'Content: pre-algebra, algebra, geometry, intermediate algebra, coordinate geometry, trigonometry.',
+              '60 questions in 60 minutes = 1 minute per question.'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Key Insight: Content: pre-algebra, algebra, geometry, intermediate algebra, coordinate geometry, trigonometry. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Difficulty increases: questions 1-20 easy, 21-40 medium, 41-60 hard.
       id: 'act-m1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for act math overview?',
+            question: 'Which statement about ACT Tip is correct?',
             options: [
-              'Content: pre-algebra, algebra, geometry, intermediate algebra, coordinate geometry, trigonometry',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Calculator allowed for ALL math questions (unlike SAT).',
+              'Content: pre-algebra, algebra, geometry, intermediate algebra, coordinate geometry, trigonometry.',
+              '60 questions in 60 minutes = 1 minute per question.',
+              'questions 1-20 easy, 21-40 medium, 41-60 hard.'
             ],
             correctAnswer: 0,
-            explanation: 'Content: pre-algebra, algebra, geometry, intermediate algebra, coordinate geometry, trigonometry'
+            explanation: 'Correct — ACT Tip: Calculator allowed for ALL math questions (unlike SAT). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Difficulty increases: questions 1-20 easy, 21-40 medium, 41-60 hard.
       id: 'act-m1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for ACT Math Overview:',
-            options: ['60 questions in 60 minutes = 1 minute per question', 'Difficulty increases: questions 1-20 easy, 21-40 m', 'Not applicable', 'None of these']
+            label: 'Difficulty increases',
+            options: ['questions 1-20 easy, 21-40 medium, 41-60 hard.', '60 questions in 60 minutes = 1 minute per question.', 'Calculator allowed for ALL math questions (unlike SAT).', 'Content: pre-algebra, algebra, geometry, intermediate algebra, coordinate geometry, trigonometry.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Content: pre-algebra, algebra, geometry, intermedi', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Key Insight',
+            options: ['Content: pre-algebra, algebra, geometry, intermediate algebra, coordinate geometry, trigonometry.', 'Calculator allowed for ALL math questions (unlike SAT).', 'questions 1-20 easy, 21-40 medium, 41-60 hard.', '60 questions in 60 minutes = 1 minute per question.']
+          },
+          {
+            label: 'ACT Tip',
+            options: ['60 questions in 60 minutes = 1 minute per question.', 'Calculator allowed for ALL math questions (unlike SAT).', 'Content: pre-algebra, algebra, geometry, intermediate algebra, coordinate geometry, trigonometry.', 'questions 1-20 easy, 21-40 medium, 41-60 hard.']
           }
         ],
-        correctAnswers: ['60 questions in 60 minutes = 1 minute per question', 'Content: pre-algebra, algebra, geometry, intermedi'],
-        hint1: 'Think about act math overview',
-        hint2: 'Consider the best ACT strategy',
-        explanation: '60 questions in 60 minutes = 1 minute per question. Content: pre-algebra, algebra, geometry, intermediate algebra, coordinate geometry, trigonometry.'
+        correctAnswers: ['questions 1-20 easy, 21-40 medium, 41-60 hard.', 'Content: pre-algebra, algebra, geometry, intermediate algebra, coordinate geometry, trigonometry.', 'Calculator allowed for ALL math questions (unlike SAT).'],
+        hint1: 'Think about what each concept specifically describes in Math Strategy.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Math Strategy describes a specific idea. Difficulty increases: questions 1-20 easy, 21-40 medium, 41-60 hard. Key Insight: Content: pre-algebra, algebra, geometry, intermediate algebra, coordinate geometry, trigonometry. ACT Tip: Calculator allowed for ALL math questions (unlike SAT).'
       }
     }
   ]

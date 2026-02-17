@@ -18,20 +18,31 @@ Focus on the argument or thesis.
       id: 'act-r2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes factual, objective passages about psychology, sociology, economics, etc.?',
+            question: 'What does "Factual, objective passages about…" refer to in ACT prep?',
             options: [
-              'Factual, objective passages about psychology, sociology, economics, etc. is a key concept for ACT English/Reading',
-              'Focus on the argument or thesis',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'Questions test comprehension of the author\'s claims and supporting data.',
+              'Factual, objective passages about psychology, sociology, economics, etc..',
+              'Focus on the argument or thesis.',
+              'Look for cause-effect relationships and evidence.'
             ],
-            correctAnswer: 0,
-            explanation: 'Factual, objective passages about psychology, sociology, economics, etc.'
+            correctAnswer: 1,
+            explanation: 'Correct — Factual, objective passages about psychology, sociology, economics, etc.. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              'Focus on the argument or thesis.',
+              'Questions test comprehension of the author\'s claims and supporting data.',
+              'Factual, objective passages about psychology, sociology, economics, etc..',
+              'Look for cause-effect relationships and evidence.'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Key Insight: Look for cause-effect relationships and evidence. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Focus on the argument or thesis.
       id: 'act-r2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for social science?',
+            question: 'Which of these accurately represents ACT Tip?',
             options: [
-              'Look for cause-effect relationships and evidence',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Focus on the argument or thesis.',
+              'Questions test comprehension of the author\'s claims and supporting data.',
+              'Look for cause-effect relationships and evidence.',
+              'Factual, objective passages about psychology, sociology, economics, etc..'
             ],
-            correctAnswer: 0,
-            explanation: 'Look for cause-effect relationships and evidence'
+            correctAnswer: 1,
+            explanation: 'Correct — ACT Tip: Questions test comprehension of the author\'s claims and supporting data. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ Focus on the argument or thesis.
       id: 'act-r2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Social Science:',
-            options: ['Factual, objective passages about psychology, soci', 'Focus on the argument or thesis', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['Look for cause-effect relationships and evidence.', 'Factual, objective passages about psychology, sociology, economics, etc..', 'Questions test comprehension of the author\'s claims and supporting data.', 'Focus on the argument or thesis.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Look for cause-effect relationships and evidence', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'ACT Tip',
+            options: ['Factual, objective passages about psychology, sociology, economics, etc..', 'Focus on the argument or thesis.', 'Look for cause-effect relationships and evidence.', 'Questions test comprehension of the author\'s claims and supporting data.']
           }
         ],
-        correctAnswers: ['Factual, objective passages about psychology, soci', 'Look for cause-effect relationships and evidence'],
-        hint1: 'Think about social science',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Factual, objective passages about psychology, sociology, economics, etc.. Look for cause-effect relationships and evidence.'
+        correctAnswers: ['Look for cause-effect relationships and evidence.', 'Questions test comprehension of the author\'s claims and supporting data.'],
+        hint1: 'Think about what each concept specifically describes in Social Science.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Social Science describes a specific idea. Key Insight: Look for cause-effect relationships and evidence. ACT Tip: Questions test comprehension of the author\'s claims and supporting data.'
       }
     }
   ]

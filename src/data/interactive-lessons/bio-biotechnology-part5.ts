@@ -19,31 +19,31 @@ export const bioBiotechPart5Data = {
       id: 'biot5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes gmo safety and environmental concerns?',
-            options: [
-              'GMO safety and environmental concerns',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
-            ],
-            correctAnswer: 0,
-            explanation: 'GMO safety and environmental concerns'
-          },
-          {
-            question: 'In the context of bioethics, which statement is accurate?',
+            question: 'Which of the following correctly describes GMO safety and environmental concerns?',
             options: [
               'Genetic privacy and discrimination',
-              'snrecnoc latnemnorivne dna ytefas OMG',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'somatic vs germline editing',
+              'Designer babies and enhancement ethics',
+              'GMO safety and environmental concerns'
             ],
-            correctAnswer: 0,
-            explanation: 'Genetic privacy and discrimination'
+            correctAnswer: 3,
+            explanation: 'Correct — GMO safety and environmental concerns. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Genetic privacy and discrimination?',
+            options: [
+              'Designer babies and enhancement ethics',
+              'somatic vs germline editing',
+              'Genetic privacy and discrimination',
+              'GMO safety and environmental concerns'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Genetic privacy and discrimination. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioBiotechPart5Data = {
       id: 'biot5-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to bioethics?',
+            question: 'Which of these accurately represents Designer babies and enhancement ethics?',
             options: [
-              'Designer babies and enhancement ethics',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'somatic vs germline editing',
+              'Genetic privacy and discrimination',
+              'GMO safety and environmental concerns',
+              'Designer babies and enhancement ethics'
             ],
-            correctAnswer: 0,
-            explanation: 'Designer babies and enhancement ethics'
+            correctAnswer: 3,
+            explanation: 'Correct — Designer babies and enhancement ethics. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioBiotechPart5Data = {
       id: 'biot5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'GMO safety and environmental concerns is important in bioethics because',
-            options: ['GMO safety and environmental concerns', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'GMO safety and environmental concerns',
+            options: ['Genetic privacy and discrimination', 'GMO safety and environmental concerns', 'Designer babies and enhancement ethics', 'somatic vs germline editing']
           },
           {
-            label: 'Gene therapy is important in bioethics because',
-            options: ['somatic vs germline editing', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Gene therapy',
+            options: ['Genetic privacy and discrimination', 'somatic vs germline editing', 'Designer babies and enhancement ethics', 'GMO safety and environmental concerns']
           },
           {
-            label: 'Genetic privacy and discrimination is important in bioethics because',
-            options: ['Genetic privacy and discrimination', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Genetic privacy and discrimination',
+            options: ['Genetic privacy and discrimination', 'Designer babies and enhancement ethics', 'GMO safety and environmental concerns', 'somatic vs germline editing']
           }
         ],
         correctAnswers: ['GMO safety and environmental concerns', 'somatic vs germline editing', 'Genetic privacy and discrimination'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Bioethics.'
+        hint1: 'Think about what each concept specifically describes in Bioethics.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Bioethics describes a specific idea. GMO safety and environmental concerns. Gene therapy: somatic vs germline editing. Genetic privacy and discrimination.'
       }
     }
   ]

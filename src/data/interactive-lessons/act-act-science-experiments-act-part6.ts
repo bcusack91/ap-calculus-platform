@@ -18,20 +18,31 @@ Look for overgeneralizations or claims beyond the evidence.
       id: 'act-s6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes does the conclusion logically follow from the data??',
+            question: 'Which of the following correctly describes Does the conclusion logically follow…?',
             options: [
-              'Does the conclusion logically follow from the data? is a key concept for ACT Science',
-              'Look for overgeneralizations or claims beyond the evidence',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'Sample bias: is the sample representative of the population?.',
+              'Alternative explanations: could something else explain the results?.',
+              'Does the conclusion logically follow from the data?.',
+              'Look for overgeneralizations or claims beyond the evidence.'
             ],
-            correctAnswer: 0,
-            explanation: 'Does the conclusion logically follow from the data?'
+            correctAnswer: 2,
+            explanation: 'Correct — Does the conclusion logically follow from the data?. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Key Insight?',
+            options: [
+              'Look for overgeneralizations or claims beyond the evidence.',
+              'Does the conclusion logically follow from the data?.',
+              'Alternative explanations: could something else explain the results?.',
+              'Sample bias: is the sample representative of the population?.'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Key Insight: Alternative explanations: could something else explain the results?. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Look for overgeneralizations or claims beyond the evidence.
       id: 'act-s6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for problem-solving workshop?',
+            question: 'Which statement about ACT Tip is correct?',
             options: [
-              'Alternative explanations: could something else explain the results?',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Does the conclusion logically follow from the data?.',
+              'Sample bias: is the sample representative of the population?.',
+              'Alternative explanations: could something else explain the results?.',
+              'Look for overgeneralizations or claims beyond the evidence.'
             ],
-            correctAnswer: 0,
-            explanation: 'Alternative explanations: could something else explain the results?'
+            correctAnswer: 1,
+            explanation: 'Correct — ACT Tip: Sample bias: is the sample representative of the population?. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ Look for overgeneralizations or claims beyond the evidence.
       id: 'act-s6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Problem-Solving Workshop:',
-            options: ['Does the conclusion logically follow from the data', 'Look for overgeneralizations or claims beyond the ', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['Alternative explanations: could something else explain the results?.', 'Does the conclusion logically follow from the data?.', 'Look for overgeneralizations or claims beyond the evidence.', 'Sample bias: is the sample representative of the population?.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Alternative explanations: could something else exp', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'ACT Tip',
+            options: ['Alternative explanations: could something else explain the results?.', 'Does the conclusion logically follow from the data?.', 'Look for overgeneralizations or claims beyond the evidence.', 'Sample bias: is the sample representative of the population?.']
           }
         ],
-        correctAnswers: ['Does the conclusion logically follow from the data', 'Alternative explanations: could something else exp'],
-        hint1: 'Think about problem-solving workshop',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Does the conclusion logically follow from the data?. Alternative explanations: could something else explain the results?.'
+        correctAnswers: ['Alternative explanations: could something else explain the results?.', 'Sample bias: is the sample representative of the population?.'],
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Key Insight: Alternative explanations: could something else explain the results?. ACT Tip: Sample bias: is the sample representative of the population?.'
       }
     }
   ]

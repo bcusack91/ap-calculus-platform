@@ -18,20 +18,31 @@ Arc length = (θ/360) × 2πr; Sector area = (θ/360) × πr².
       id: 'sat-g3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes area = πr²; circumference = 2πr?',
+            question: 'Which of the following correctly describes Area = πr²; Circumference = 2πr.?',
             options: [
-              'Area = πr²; Circumference = 2πr is a fundamental concept in SAT Math',
-              'Arc length = (θ/360) × 2πr; Sector area = (θ/360) × πr²',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'Arc length = (θ/360) × 2πr; Sector area = (θ/360) × πr².',
+              'Inscribed angle = half the intercepted arc.',
+              'Area = πr²; Circumference = 2πr.',
+              'Central angle = arc measure.'
             ],
-            correctAnswer: 0,
-            explanation: 'Area = πr²; Circumference = 2πr'
+            correctAnswer: 2,
+            explanation: 'Correct — Area = πr²; Circumference = 2πr. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Circles, which explains Key Insight?',
+            options: [
+              'Area = πr²; Circumference = 2πr.',
+              'Central angle = arc measure.',
+              'Inscribed angle = half the intercepted arc.',
+              'Arc length = (θ/360) × 2πr; Sector area = (θ/360) × πr².'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Key Insight: Central angle = arc measure. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Arc length = (θ/360) × 2πr; Sector area = (θ/360) × πr².
       id: 'sat-g3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for circles?',
+            question: 'Regarding Circles, which correctly describes SAT Tip?',
             options: [
-              'Central angle = arc measure',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'Inscribed angle = half the intercepted arc.',
+              'Area = πr²; Circumference = 2πr.',
+              'Central angle = arc measure.',
+              'Arc length = (θ/360) × 2πr; Sector area = (θ/360) × πr².'
             ],
             correctAnswer: 0,
-            explanation: 'Central angle = arc measure'
+            explanation: 'Correct — SAT Tip: Inscribed angle = half the intercepted arc. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ Arc length = (θ/360) × 2πr; Sector area = (θ/360) × πr².
       id: 'sat-g3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Circles:',
-            options: ['Area = πr²; Circumference = 2πr', 'Arc length = (θ/360) × 2πr; Sector area = (θ/360) ', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['Central angle = arc measure.', 'Arc length = (θ/360) × 2πr; Sector area = (θ/360) × πr².', 'Inscribed angle = half the intercepted arc.', 'Area = πr²; Circumference = 2πr.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Central angle = arc measure', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'SAT Tip',
+            options: ['Inscribed angle = half the intercepted arc.', 'Central angle = arc measure.', 'Arc length = (θ/360) × 2πr; Sector area = (θ/360) × πr².', 'Area = πr²; Circumference = 2πr.']
           }
         ],
-        correctAnswers: ['Area = πr²; Circumference = 2πr', 'Central angle = arc measure'],
-        hint1: 'Think about circles',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'Area = πr²; Circumference = 2πr. Central angle = arc measure.'
+        correctAnswers: ['Central angle = arc measure.', 'Inscribed angle = half the intercepted arc.'],
+        hint1: 'Think about what each concept specifically describes in Circles.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Circles describes a specific idea. Key Insight: Central angle = arc measure. SAT Tip: Inscribed angle = half the intercepted arc.'
       }
     }
   ]

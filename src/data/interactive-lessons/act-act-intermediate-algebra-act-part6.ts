@@ -18,20 +18,31 @@ Geometric sequence: constant ratio r; aₙ = a₁ · r^(n-1).
       id: 'act-i6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes arithmetic sequence?',
+            question: 'What does "Arithmetic sequence" refer to in ACT prep?',
             options: [
-              'Arithmetic sequence is a key concept for ACT Math',
-              'Geometric sequence: constant ratio r; aₙ = a₁ · r^(n-1)',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'constant difference d; aₙ = a₁ + (n-1)d.',
+              'Sum formulas: arithmetic Sₙ = n(a₁ + aₙ)/2; geometric Sₙ = a₁(1-rⁿ)/(1-r).',
+              'Find the pattern: look at differences or ratios between terms.',
+              'constant ratio r; aₙ = a₁ · r^(n-1).'
             ],
             correctAnswer: 0,
-            explanation: 'Arithmetic sequence: constant difference d; aₙ = a₁ + (n-1)d'
+            explanation: 'Correct — Arithmetic sequence: constant difference d; aₙ = a₁ + (n-1)d. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Problem-Solving Workshop, which explains Key Insight?',
+            options: [
+              'constant difference d; aₙ = a₁ + (n-1)d.',
+              'Find the pattern: look at differences or ratios between terms.',
+              'Sum formulas: arithmetic Sₙ = n(a₁ + aₙ)/2; geometric Sₙ = a₁(1-rⁿ)/(1-r).',
+              'constant ratio r; aₙ = a₁ · r^(n-1).'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Key Insight: Find the pattern: look at differences or ratios between terms. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Geometric sequence: constant ratio r; aₙ = a₁ · r^(n-1).
       id: 'act-i6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for problem-solving workshop?',
+            question: 'Which statement about ACT Tip is correct?',
             options: [
-              'Find the pattern: look at differences or ratios between terms',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'constant difference d; aₙ = a₁ + (n-1)d.',
+              'constant ratio r; aₙ = a₁ · r^(n-1).',
+              'Find the pattern: look at differences or ratios between terms.',
+              'Sum formulas: arithmetic Sₙ = n(a₁ + aₙ)/2; geometric Sₙ = a₁(1-rⁿ)/(1-r).'
             ],
-            correctAnswer: 0,
-            explanation: 'Find the pattern: look at differences or ratios between terms'
+            correctAnswer: 3,
+            explanation: 'Correct — ACT Tip: Sum formulas: arithmetic Sₙ = n(a₁ + aₙ)/2; geometric Sₙ = a₁(1-rⁿ)/(1-r). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Geometric sequence: constant ratio r; aₙ = a₁ · r^(n-1).
       id: 'act-i6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Problem-Solving Workshop:',
-            options: ['Arithmetic sequence: constant difference d; aₙ = a', 'Geometric sequence: constant ratio r; aₙ = a₁ · r^', 'Not applicable', 'None of these']
+            label: 'Arithmetic sequence',
+            options: ['constant difference d; aₙ = a₁ + (n-1)d.', 'Find the pattern: look at differences or ratios between terms.', 'Sum formulas: arithmetic Sₙ = n(a₁ + aₙ)/2; geometric Sₙ = a₁(1-rⁿ)/(1-r).', 'constant ratio r; aₙ = a₁ · r^(n-1).']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Find the pattern: look at differences or ratios be', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Geometric sequence',
+            options: ['constant difference d; aₙ = a₁ + (n-1)d.', 'constant ratio r; aₙ = a₁ · r^(n-1).', 'Find the pattern: look at differences or ratios between terms.', 'Sum formulas: arithmetic Sₙ = n(a₁ + aₙ)/2; geometric Sₙ = a₁(1-rⁿ)/(1-r).']
+          },
+          {
+            label: 'Key Insight',
+            options: ['constant difference d; aₙ = a₁ + (n-1)d.', 'Find the pattern: look at differences or ratios between terms.', 'constant ratio r; aₙ = a₁ · r^(n-1).', 'Sum formulas: arithmetic Sₙ = n(a₁ + aₙ)/2; geometric Sₙ = a₁(1-rⁿ)/(1-r).']
           }
         ],
-        correctAnswers: ['Arithmetic sequence: constant difference d; aₙ = a', 'Find the pattern: look at differences or ratios be'],
-        hint1: 'Think about problem-solving workshop',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Arithmetic sequence: constant difference d; aₙ = a₁ + (n-1)d. Find the pattern: look at differences or ratios between terms.'
+        correctAnswers: ['constant difference d; aₙ = a₁ + (n-1)d.', 'constant ratio r; aₙ = a₁ · r^(n-1).', 'Find the pattern: look at differences or ratios between terms.'],
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Arithmetic sequence: constant difference d; aₙ = a₁ + (n-1)d. Geometric sequence: constant ratio r; aₙ = a₁ · r^(n-1). Key Insight: Find the pattern: look at differences or ratios between terms.'
       }
     }
   ]

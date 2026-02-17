@@ -19,31 +19,31 @@ export const bioCellCyclePart2Data = {
       id: 'cell2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes g1?',
+            question: 'What does "G1" refer to in biology?',
             options: [
               'cell growth, organelle duplication',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'cells that have exited the cell cycle',
+              'DNA replication (each chromosome → sister chromatids)',
+              'preparation for mitosis, error checking'
             ],
             correctAnswer: 0,
-            explanation: 'G1: cell growth, organelle duplication'
+            explanation: 'Correct — G1: cell growth, organelle duplication. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of interphase, which statement is accurate?',
+            question: 'Which of the following is true about G2?',
             options: [
-              'G2: preparation for mitosis, error checking',
-              'noitacilpud ellenagro ,htworg llec :1G',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'cell growth, organelle duplication',
+              'DNA replication (each chromosome → sister chromatids)',
+              'cells that have exited the cell cycle',
+              'preparation for mitosis, error checking'
             ],
-            correctAnswer: 0,
-            explanation: 'G2: preparation for mitosis, error checking'
+            correctAnswer: 3,
+            explanation: 'Correct — G2: preparation for mitosis, error checking. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioCellCyclePart2Data = {
       id: 'cell2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to interphase?',
+            question: 'Which statement about G0 is correct?',
             options: [
-              'G0: cells that have exited the cell cycle',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'cells that have exited the cell cycle',
+              'preparation for mitosis, error checking',
+              'cell growth, organelle duplication',
+              'DNA replication (each chromosome → sister chromatids)'
             ],
             correctAnswer: 0,
-            explanation: 'G0: cells that have exited the cell cycle'
+            explanation: 'Correct — G0: cells that have exited the cell cycle. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioCellCyclePart2Data = {
       id: 'cell2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'G1 is important in interphase because',
-            options: ['cell growth, organelle duplication', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'G1',
+            options: ['DNA replication (each chromosome → sister chromatids)', 'preparation for mitosis, error checking', 'cells that have exited the cell cycle', 'cell growth, organelle duplication']
           },
           {
-            label: 'S phase is important in interphase because',
-            options: ['DNA replication (each chromosome → sister chromati', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'S phase',
+            options: ['preparation for mitosis, error checking', 'cell growth, organelle duplication', 'DNA replication (each chromosome → sister chromatids)', 'cells that have exited the cell cycle']
           },
           {
-            label: 'G2 is important in interphase because',
-            options: ['preparation for mitosis, error checking', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'G2',
+            options: ['DNA replication (each chromosome → sister chromatids)', 'cells that have exited the cell cycle', 'cell growth, organelle duplication', 'preparation for mitosis, error checking']
           }
         ],
-        correctAnswers: ['cell growth, organelle duplication', 'DNA replication (each chromosome → sister chromati', 'preparation for mitosis, error checking'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Interphase.'
+        correctAnswers: ['cell growth, organelle duplication', 'DNA replication (each chromosome → sister chromatids)', 'preparation for mitosis, error checking'],
+        hint1: 'Think about what each concept specifically describes in Interphase.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Interphase describes a specific idea. G1: cell growth, organelle duplication. S phase: DNA replication (each chromosome → sister chromatids). G2: preparation for mitosis, error checking.'
       }
     }
   ]

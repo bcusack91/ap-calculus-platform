@@ -18,20 +18,31 @@ No comma before "that" in essential clauses.
       id: 'act-e5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes no comma between subject and verb?',
+            question: 'Which statement accurately explains No comma between subject and verb.?',
             options: [
-              'No comma between subject and verb is a key concept for ACT English/Reading',
-              'No comma before "that" in essential clauses',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'Comma splice: two independent clauses joined by only a comma (fix with semicolon or conjunction).',
+              'No comma between subject and verb.',
+              'Don\'t use a semicolon before FANBOYS — use a comma instead.',
+              'No comma before "that" in essential clauses.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — No comma between subject and verb. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              'Comma splice: two independent clauses joined by only a comma (fix with semicolon or conjunction).',
+              'No comma between subject and verb.',
+              'Don\'t use a semicolon before FANBOYS — use a comma instead.',
+              'No comma before "that" in essential clauses.'
             ],
             correctAnswer: 0,
-            explanation: 'No comma between subject and verb'
+            explanation: 'Correct — Key Insight: Comma splice: two independent clauses joined by only a comma (fix with semicolon or conjunction). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ No comma before "that" in essential clauses.
       id: 'act-e5-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for common punctuation errors?',
+            question: 'Which of these accurately represents ACT Tip?',
             options: [
-              'Comma splice: two independent clauses joined by only a comma (fix with semicolon or conjunction)',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'No comma before "that" in essential clauses.',
+              'Don\'t use a semicolon before FANBOYS — use a comma instead.',
+              'Comma splice: two independent clauses joined by only a comma (fix with semicolon or conjunction).',
+              'No comma between subject and verb.'
             ],
-            correctAnswer: 0,
-            explanation: 'Comma splice: two independent clauses joined by only a comma (fix with semicolon or conjunction)'
+            correctAnswer: 1,
+            explanation: 'Correct — ACT Tip: Don\'t use a semicolon before FANBOYS — use a comma instead. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ No comma before "that" in essential clauses.
       id: 'act-e5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Common Punctuation Errors:',
-            options: ['No comma between subject and verb', 'No comma before "that" in essential clauses', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['No comma between subject and verb.', 'No comma before "that" in essential clauses.', 'Comma splice: two independent clauses joined by only a comma (fix with semicolon or conjunction).', 'Don\'t use a semicolon before FANBOYS — use a comma instead.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Comma splice: two independent clauses joined by on', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'ACT Tip',
+            options: ['No comma between subject and verb.', 'No comma before "that" in essential clauses.', 'Comma splice: two independent clauses joined by only a comma (fix with semicolon or conjunction).', 'Don\'t use a semicolon before FANBOYS — use a comma instead.']
           }
         ],
-        correctAnswers: ['No comma between subject and verb', 'Comma splice: two independent clauses joined by on'],
-        hint1: 'Think about common punctuation errors',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'No comma between subject and verb. Comma splice: two independent clauses joined by only a comma (fix with semicolon or conjunction).'
+        correctAnswers: ['Comma splice: two independent clauses joined by only a comma (fix with semicolon or conjunction).', 'Don\'t use a semicolon before FANBOYS — use a comma instead.'],
+        hint1: 'Think about what each concept specifically describes in Common Punctuation Errors.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Common Punctuation Errors describes a specific idea. Key Insight: Comma splice: two independent clauses joined by only a comma (fix with semicolon or conjunction). ACT Tip: Don\'t use a semicolon before FANBOYS — use a comma instead.'
       }
     }
   ]

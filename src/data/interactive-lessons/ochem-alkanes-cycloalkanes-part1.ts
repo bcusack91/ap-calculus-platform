@@ -30,31 +30,31 @@ prefix "cyclo-" before alkane name
       id: 'alkan1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of nomenclature?',
+            question: 'Which of the following correctly describes IUPAC naming?',
             options: [
-              'IUPAC naming',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'find longest chain, number from end nearest substituent',
+              'prefix "cyclo-" before alkane name',
+              'meth-, eth-, prop-, but-, pent-, hex-',
+              'Substituents listed alphabetically'
             ],
             correctAnswer: 0,
-            explanation: 'IUPAC naming: find longest chain, number from end nearest substituent'
+            explanation: 'Correct — IUPAC naming: find longest chain, number from end nearest substituent. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of nomenclature, which is accurate?',
+            question: 'Which of the following is true about Substituents listed alphabetically?',
             options: [
-              'Substituents listed alphabetically',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'find longest chain, number from end nearest substituent',
+              'prefix "cyclo-" before alkane name',
+              'meth-, eth-, prop-, but-, pent-, hex-',
+              'Substituents listed alphabetically'
             ],
-            correctAnswer: 0,
-            explanation: 'Substituents listed alphabetically'
+            correctAnswer: 3,
+            explanation: 'Correct — Substituents listed alphabetically. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ prefix "cyclo-" before alkane name
       id: 'alkan1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'IUPAC naming',
-            options: ['find longest chain, number from end nearest substi', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['meth-, eth-, prop-, but-, pent-, hex-', 'find longest chain, number from end nearest substituent', 'prefix "cyclo-" before alkane name', 'Substituents listed alphabetically']
           },
           {
             label: 'Prefixes',
-            options: ['meth-, eth-, prop-, but-, pent-, hex-', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['find longest chain, number from end nearest substituent', 'meth-, eth-, prop-, but-, pent-, hex-', 'Substituents listed alphabetically', 'prefix "cyclo-" before alkane name']
           },
           {
-            label: 'Substituents listed alphabetically',
-            options: ['Substituents listed alphabetically', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Cycloalkanes',
+            options: ['Substituents listed alphabetically', 'find longest chain, number from end nearest substituent', 'prefix "cyclo-" before alkane name', 'meth-, eth-, prop-, but-, pent-, hex-']
           }
         ],
-        correctAnswers: ['find longest chain, number from end nearest substi', 'meth-, eth-, prop-, but-, pent-, hex-', 'Substituents listed alphabetically'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Nomenclature.'
+        correctAnswers: ['find longest chain, number from end nearest substituent', 'meth-, eth-, prop-, but-, pent-, hex-', 'prefix "cyclo-" before alkane name'],
+        hint1: 'Think about what each concept specifically describes in ️ Alkanes Cycloalkanes.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in ️ Alkanes Cycloalkanes describes a specific idea. IUPAC naming: find longest chain, number from end nearest substituent. Prefixes: meth-, eth-, prop-, but-, pent-, hex-. Cycloalkanes: prefix "cyclo-" before alkane name.'
       }
     }
   ]

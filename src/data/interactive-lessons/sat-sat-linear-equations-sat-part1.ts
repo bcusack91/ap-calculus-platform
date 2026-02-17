@@ -18,20 +18,31 @@ To solve, isolate x by performing inverse operations on both sides.
       id: 'sat-l1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes a linear equation has the form ax + b = c, where x is the variable?',
+            question: 'Which of the following correctly describes A linear equation has the form ax + b =…?',
             options: [
-              'A linear equation has the form ax + b = c, where x is the variable is a fundamental concept in SAT Math',
-              'To solve, isolate x by performing inverse operations on both sides',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'Check your answer by substituting back into the original equation.',
+              'To solve, isolate x by performing inverse operations on both sides.',
+              'The solution is the value that makes the equation true.',
+              'A linear equation has the form ax + b = c, where x is the variable.'
             ],
-            correctAnswer: 0,
-            explanation: 'A linear equation has the form ax + b = c, where x is the variable'
+            correctAnswer: 3,
+            explanation: 'Correct — A linear equation has the form ax + b = c, where x is the variable. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Linear Equations, which explains Key Insight?',
+            options: [
+              'Check your answer by substituting back into the original equation.',
+              'The solution is the value that makes the equation true.',
+              'To solve, isolate x by performing inverse operations on both sides.',
+              'A linear equation has the form ax + b = c, where x is the variable.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Key Insight: The solution is the value that makes the equation true. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ To solve, isolate x by performing inverse operations on both sides.
       id: 'sat-l1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for linear equations basics?',
+            question: 'Which statement about SAT Tip is correct?',
             options: [
-              'The solution is the value that makes the equation true',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'To solve, isolate x by performing inverse operations on both sides.',
+              'A linear equation has the form ax + b = c, where x is the variable.',
+              'Check your answer by substituting back into the original equation.',
+              'The solution is the value that makes the equation true.'
             ],
-            correctAnswer: 0,
-            explanation: 'The solution is the value that makes the equation true'
+            correctAnswer: 2,
+            explanation: 'Correct — SAT Tip: Check your answer by substituting back into the original equation. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ To solve, isolate x by performing inverse operations on both sides.
       id: 'sat-l1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Linear Equations Basics:',
-            options: ['A linear equation has the form ax + b = c, where x', 'To solve, isolate x by performing inverse operatio', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['To solve, isolate x by performing inverse operations on both sides.', 'A linear equation has the form ax + b = c, where x is the variable.', 'Check your answer by substituting back into the original equation.', 'The solution is the value that makes the equation true.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['The solution is the value that makes the equation ', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'SAT Tip',
+            options: ['To solve, isolate x by performing inverse operations on both sides.', 'Check your answer by substituting back into the original equation.', 'The solution is the value that makes the equation true.', 'A linear equation has the form ax + b = c, where x is the variable.']
           }
         ],
-        correctAnswers: ['A linear equation has the form ax + b = c, where x', 'The solution is the value that makes the equation '],
-        hint1: 'Think about linear equations basics',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'A linear equation has the form ax + b = c, where x is the variable. The solution is the value that makes the equation true.'
+        correctAnswers: ['The solution is the value that makes the equation true.', 'Check your answer by substituting back into the original equation.'],
+        hint1: 'Think about what each concept specifically describes in Linear Equations.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Linear Equations describes a specific idea. Key Insight: The solution is the value that makes the equation true. SAT Tip: Check your answer by substituting back into the original equation.'
       }
     }
   ]

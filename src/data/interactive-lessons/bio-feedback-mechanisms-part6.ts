@@ -19,31 +19,31 @@ export const bioFeedbackPart6Data = {
       id: 'feed6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes diagramming feedback loops?',
+            question: 'Which statement accurately explains Diagramming feedback loops?',
             options: [
               'Diagramming feedback loops',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Distinguishing positive from negative feedback',
+              'Analyzing homeostatic responses',
+              'Predicting effects of disrupted feedback'
             ],
             correctAnswer: 0,
-            explanation: 'Diagramming feedback loops'
+            explanation: 'Correct — Diagramming feedback loops. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of problem-solving, which statement is accurate?',
+            question: 'Which of the following is true about Distinguishing positive from negative…?',
             options: [
-              'Distinguishing positive from negative feedback',
-              'spool kcabdeef gnimmargaiD',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Predicting effects of disrupted feedback',
+              'Analyzing homeostatic responses',
+              'Diagramming feedback loops',
+              'Distinguishing positive from negative feedback'
             ],
-            correctAnswer: 0,
-            explanation: 'Distinguishing positive from negative feedback'
+            correctAnswer: 3,
+            explanation: 'Correct — Distinguishing positive from negative feedback. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioFeedbackPart6Data = {
       id: 'feed6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to problem-solving?',
+            question: 'Regarding Feedback Mechanisms: Problem-Solving Workshop, which correctly describes Analyzing homeostatic responses?',
             options: [
+              'Distinguishing positive from negative feedback',
               'Analyzing homeostatic responses',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Diagramming feedback loops',
+              'Predicting effects of disrupted feedback'
             ],
-            correctAnswer: 0,
-            explanation: 'Analyzing homeostatic responses'
+            correctAnswer: 1,
+            explanation: 'Correct — Analyzing homeostatic responses. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioFeedbackPart6Data = {
       id: 'feed6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Diagramming feedback loops is important in problem-solving because',
-            options: ['Diagramming feedback loops', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Diagramming feedback loops',
+            options: ['Distinguishing positive from negative feedback', 'Analyzing homeostatic responses', 'Predicting effects of disrupted feedback', 'Diagramming feedback loops']
           },
           {
-            label: 'Predicting effects of disrupted feedback is important in problem-solving because',
-            options: ['Predicting effects of disrupted feedback', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Predicting effects of disrupted feedback',
+            options: ['Diagramming feedback loops', 'Predicting effects of disrupted feedback', 'Analyzing homeostatic responses', 'Distinguishing positive from negative feedback']
           },
           {
-            label: 'Distinguishing positive from negative feedback is important in problem-solving because',
-            options: ['Distinguishing positive from negative feedback', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Distinguishing positive from negative…',
+            options: ['Predicting effects of disrupted feedback', 'Analyzing homeostatic responses', 'Distinguishing positive from negative feedback', 'Diagramming feedback loops']
           }
         ],
         correctAnswers: ['Diagramming feedback loops', 'Predicting effects of disrupted feedback', 'Distinguishing positive from negative feedback'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving.'
+        hint1: 'Think about what each concept specifically describes in Feedback Mechanisms: Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Feedback Mechanisms: Problem-Solving Workshop describes a specific idea. Diagramming feedback loops. Predicting effects of disrupted feedback. Distinguishing positive from negative feedback.'
       }
     }
   ]

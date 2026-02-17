@@ -18,20 +18,31 @@ Conjugate of a + bi is a - bi.
       id: 'sat-c6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes conjugate of a + bi is a - bi?',
+            question: 'What does "Conjugate of a + bi is a - bi." refer to in SAT prep?',
             options: [
-              'Conjugate of a + bi is a - bi is a fundamental concept in SAT Math',
-              '(a + bi)(a - bi) = a² + b² (always real and positive)',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'Use conjugates to divide complex numbers: multiply numerator and denominator by the conjugate of the denominator.',
+              'Conjugate of a + bi is a - bi.',
+              '(a + bi)(a - bi) = a² + b² (always real and positive).',
+              'Rationalizing: (3 + 2i)/(1 - i) × (1 + i)/(1 + i).'
             ],
-            correctAnswer: 0,
-            explanation: 'Conjugate of a + bi is a - bi'
+            correctAnswer: 1,
+            explanation: 'Correct — Conjugate of a + bi is a - bi. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              '(a + bi)(a - bi) = a² + b² (always real and positive).',
+              'Rationalizing: (3 + 2i)/(1 - i) × (1 + i)/(1 + i).',
+              'Conjugate of a + bi is a - bi.',
+              'Use conjugates to divide complex numbers: multiply numerator and denominator by the conjugate of the denominator.'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Key Insight: Use conjugates to divide complex numbers: multiply numerator and denominator by the conjugate of the denominator. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Conjugate of a + bi is a - bi.
       id: 'sat-c6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for problem-solving workshop?',
+            question: 'Regarding Problem-Solving Workshop, which correctly describes SAT Tip?',
             options: [
-              'Use conjugates to divide complex numbers: multiply numerator and denominator by the conjugate of the denominator',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'Rationalizing: (3 + 2i)/(1 - i) × (1 + i)/(1 + i).',
+              '(a + bi)(a - bi) = a² + b² (always real and positive).',
+              'Use conjugates to divide complex numbers: multiply numerator and denominator by the conjugate of the denominator.',
+              'Conjugate of a + bi is a - bi.'
             ],
             correctAnswer: 0,
-            explanation: 'Use conjugates to divide complex numbers: multiply numerator and denominator by the conjugate of the denominator'
+            explanation: 'Correct — SAT Tip: Rationalizing: (3 + 2i)/(1 - i) × (1 + i)/(1 + i). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ Conjugate of a + bi is a - bi.
       id: 'sat-c6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Problem-Solving Workshop:',
-            options: ['Conjugate of a + bi is a - bi', '(a + bi)(a - bi) = a² + b² (always real and positi', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['Use conjugates to divide complex numbers: multiply numerator and denominator by the conjugate of the denominator.', 'Rationalizing: (3 + 2i)/(1 - i) × (1 + i)/(1 + i).', 'Conjugate of a + bi is a - bi.', '(a + bi)(a - bi) = a² + b² (always real and positive).']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Use conjugates to divide complex numbers: multiply', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'SAT Tip',
+            options: ['Rationalizing: (3 + 2i)/(1 - i) × (1 + i)/(1 + i).', 'Use conjugates to divide complex numbers: multiply numerator and denominator by the conjugate of the denominator.', '(a + bi)(a - bi) = a² + b² (always real and positive).', 'Conjugate of a + bi is a - bi.']
           }
         ],
-        correctAnswers: ['Conjugate of a + bi is a - bi', 'Use conjugates to divide complex numbers: multiply'],
-        hint1: 'Think about problem-solving workshop',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'Conjugate of a + bi is a - bi. Use conjugates to divide complex numbers: multiply numerator and denominator by the conjugate of the denominator.'
+        correctAnswers: ['Use conjugates to divide complex numbers: multiply numerator and denominator by the conjugate of the denominator.', 'Rationalizing: (3 + 2i)/(1 - i) × (1 + i)/(1 + i).'],
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Key Insight: Use conjugates to divide complex numbers: multiply numerator and denominator by the conjugate of the denominator. SAT Tip: Rationalizing: (3 + 2i)/(1 - i) × (1 + i)/(1 + i).'
       }
     }
   ]

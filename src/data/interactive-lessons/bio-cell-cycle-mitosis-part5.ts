@@ -19,31 +19,31 @@ export const bioCellCyclePart5Data = {
       id: 'cell5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes checkpoints?',
+            question: 'What does "Checkpoints" refer to in biology?',
             options: [
-              'G1, G2, and M checkpoints',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'loss of cell cycle control',
+              'Cyclins and CDKs control progression',
+              'Tumor suppressors (p53, Rb) and proto-oncogenes',
+              'G1, G2, and M checkpoints'
             ],
-            correctAnswer: 0,
-            explanation: 'Checkpoints: G1, G2, and M checkpoints'
+            correctAnswer: 3,
+            explanation: 'Correct — Checkpoints: G1, G2, and M checkpoints. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of cell cycle regulation, which statement is accurate?',
+            question: 'Select the statement that correctly describes Tumor suppressors (p53, Rb) and…:',
             options: [
+              'Cyclins and CDKs control progression',
               'Tumor suppressors (p53, Rb) and proto-oncogenes',
-              'stniopkcehc M dna ,2G ,1G :stniopkcehC',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'loss of cell cycle control',
+              'G1, G2, and M checkpoints'
             ],
-            correctAnswer: 0,
-            explanation: 'Tumor suppressors (p53, Rb) and proto-oncogenes'
+            correctAnswer: 1,
+            explanation: 'Correct — Tumor suppressors (p53, Rb) and proto-oncogenes. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioCellCyclePart5Data = {
       id: 'cell5-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to cell cycle regulation?',
+            question: 'Which statement about Cancer is correct?',
             options: [
-              'Cancer: loss of cell cycle control',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'G1, G2, and M checkpoints',
+              'loss of cell cycle control',
+              'Tumor suppressors (p53, Rb) and proto-oncogenes',
+              'Cyclins and CDKs control progression'
             ],
-            correctAnswer: 0,
-            explanation: 'Cancer: loss of cell cycle control'
+            correctAnswer: 1,
+            explanation: 'Correct — Cancer: loss of cell cycle control. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,24 @@ export const bioCellCyclePart5Data = {
       id: 'cell5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Checkpoints is important in cell cycle regulation because',
-            options: ['G1, G2, and M checkpoints', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Checkpoints',
+            options: ['loss of cell cycle control', 'Cyclins and CDKs control progression', 'Tumor suppressors (p53, Rb) and proto-oncogenes', 'G1, G2, and M checkpoints']
           },
           {
-            label: 'Cyclins and CDKs control progression is important in cell cycle regulation because',
-            options: ['Cyclins and CDKs control progression', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
-          },
-          {
-            label: 'Tumor suppressors (p53, Rb) and proto-oncogenes is important in cell cycle regulation because',
-            options: ['Tumor suppressors (p53, Rb) and proto-oncogenes', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Cancer',
+            options: ['Cyclins and CDKs control progression', 'Tumor suppressors (p53, Rb) and proto-oncogenes', 'G1, G2, and M checkpoints', 'loss of cell cycle control']
           }
         ],
-        correctAnswers: ['G1, G2, and M checkpoints', 'Cyclins and CDKs control progression', 'Tumor suppressors (p53, Rb) and proto-oncogenes'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Cell Cycle Regulation.'
+        correctAnswers: ['G1, G2, and M checkpoints', 'loss of cell cycle control'],
+        hint1: 'Think about what each concept specifically describes in Cell Cycle Regulation.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Cell Cycle Regulation describes a specific idea. Checkpoints: G1, G2, and M checkpoints. Cancer: loss of cell cycle control.'
       }
     }
   ]

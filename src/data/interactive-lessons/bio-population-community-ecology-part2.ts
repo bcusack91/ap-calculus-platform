@@ -19,31 +19,31 @@ export const bioPopulationPart2Data = {
       id: 'popu2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes k = maximum population size the environment can sustain?',
+            question: 'What does "K = maximum population size the…" refer to in biology?',
             options: [
               'K = maximum population size the environment can sustain',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Population oscillates around K',
+              'competition, predation, disease',
+              'natural disasters, climate'
             ],
             correctAnswer: 0,
-            explanation: 'K = maximum population size the environment can sustain'
+            explanation: 'Correct — K = maximum population size the environment can sustain. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of carrying capacity, which statement is accurate?',
+            question: 'Which of the following is true about Density-independent factors?',
             options: [
-              'Density-independent factors: natural disasters, climate',
-              'niatsus nac tnemnorivne eht ezis noitalupop mumixam = K',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'K = maximum population size the environment can sustain',
+              'Population oscillates around K',
+              'competition, predation, disease',
+              'natural disasters, climate'
             ],
-            correctAnswer: 0,
-            explanation: 'Density-independent factors: natural disasters, climate'
+            correctAnswer: 3,
+            explanation: 'Correct — Density-independent factors: natural disasters, climate. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioPopulationPart2Data = {
       id: 'popu2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to carrying capacity?',
+            question: 'Which of these accurately represents Population oscillates around K?',
             options: [
-              'Population oscillates around K',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'natural disasters, climate',
+              'competition, predation, disease',
+              'K = maximum population size the environment can sustain',
+              'Population oscillates around K'
             ],
-            correctAnswer: 0,
-            explanation: 'Population oscillates around K'
+            correctAnswer: 3,
+            explanation: 'Correct — Population oscillates around K. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,24 @@ export const bioPopulationPart2Data = {
       id: 'popu2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'K = maximum population size the environment can sustain is important in carrying capacity because',
-            options: ['K = maximum population size the environment can su', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Density-dependent factors',
+            options: ['competition, predation, disease', 'K = maximum population size the environment can sustain', 'Population oscillates around K', 'natural disasters, climate']
           },
           {
-            label: 'Density-dependent factors is important in carrying capacity because',
-            options: ['competition, predation, disease', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
-          },
-          {
-            label: 'Density-independent factors is important in carrying capacity because',
-            options: ['natural disasters, climate', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Density-independent factors',
+            options: ['competition, predation, disease', 'Population oscillates around K', 'natural disasters, climate', 'K = maximum population size the environment can sustain']
           }
         ],
-        correctAnswers: ['K = maximum population size the environment can su', 'competition, predation, disease', 'natural disasters, climate'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Carrying Capacity.'
+        correctAnswers: ['competition, predation, disease', 'natural disasters, climate'],
+        hint1: 'Think about what each concept specifically describes in Carrying Capacity.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Carrying Capacity describes a specific idea. Density-dependent factors: competition, predation, disease. Density-independent factors: natural disasters, climate.'
       }
     }
   ]

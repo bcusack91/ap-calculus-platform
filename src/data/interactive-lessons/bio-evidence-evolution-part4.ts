@@ -19,31 +19,31 @@ export const bioEvidencePart4Data = {
       id: 'evid4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes geographic distribution of species supports evolution?',
+            question: 'What does "Geographic distribution of species…" refer to in biology?',
             options: [
+              'found only in one location',
               'Geographic distribution of species supports evolution',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Island species resemble nearby mainland species',
+              'Continental drift explains distribution patterns'
             ],
-            correctAnswer: 0,
-            explanation: 'Geographic distribution of species supports evolution'
+            correctAnswer: 1,
+            explanation: 'Correct — Geographic distribution of species supports evolution. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of biogeography, which statement is accurate?',
+            question: 'Which of the following is true about Continental drift explains distribution…?',
             options: [
+              'found only in one location',
               'Continental drift explains distribution patterns',
-              'noitulove stroppus seiceps fo noitubirtsid cihpargoeG',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Geographic distribution of species supports evolution',
+              'Island species resemble nearby mainland species'
             ],
-            correctAnswer: 0,
-            explanation: 'Continental drift explains distribution patterns'
+            correctAnswer: 1,
+            explanation: 'Correct — Continental drift explains distribution patterns. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioEvidencePart4Data = {
       id: 'evid4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to biogeography?',
+            question: 'Which of these accurately represents Endemic species?',
             options: [
-              'Endemic species: found only in one location',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Geographic distribution of species supports evolution',
+              'Continental drift explains distribution patterns',
+              'found only in one location',
+              'Island species resemble nearby mainland species'
             ],
-            correctAnswer: 0,
-            explanation: 'Endemic species: found only in one location'
+            correctAnswer: 2,
+            explanation: 'Correct — Endemic species: found only in one location. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioEvidencePart4Data = {
       id: 'evid4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Geographic distribution of species supports evolution is important in biogeography because',
-            options: ['Geographic distribution of species supports evolut', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Geographic distribution of species…',
+            options: ['Continental drift explains distribution patterns', 'Island species resemble nearby mainland species', 'found only in one location', 'Geographic distribution of species supports evolution']
           },
           {
-            label: 'Island species resemble nearby mainland species is important in biogeography because',
-            options: ['Island species resemble nearby mainland species', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Island species resemble nearby mainland…',
+            options: ['Continental drift explains distribution patterns', 'Island species resemble nearby mainland species', 'found only in one location', 'Geographic distribution of species supports evolution']
           },
           {
-            label: 'Continental drift explains distribution patterns is important in biogeography because',
-            options: ['Continental drift explains distribution patterns', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Continental drift explains distribution…',
+            options: ['Island species resemble nearby mainland species', 'Geographic distribution of species supports evolution', 'Continental drift explains distribution patterns', 'found only in one location']
           }
         ],
-        correctAnswers: ['Geographic distribution of species supports evolut', 'Island species resemble nearby mainland species', 'Continental drift explains distribution patterns'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Biogeography.'
+        correctAnswers: ['Geographic distribution of species supports evolution', 'Island species resemble nearby mainland species', 'Continental drift explains distribution patterns'],
+        hint1: 'Think about what each concept specifically describes in Biogeography.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Biogeography describes a specific idea. Geographic distribution of species supports evolution. Island species resemble nearby mainland species. Continental drift explains distribution patterns.'
       }
     }
   ]

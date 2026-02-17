@@ -30,31 +30,31 @@ pKa ~16-18 (weaker than water, stronger than alkanes)
       id: 'alcoh1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of alcohol nomenclature & properties?',
+            question: 'Which of the following correctly describes Alcohols?',
             options: [
-              'Alcohols',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'R-OH; named with -ol suffix',
+              'primary (1°), secondary (2°), tertiary (3°)',
+              'Hydrogen bonding → higher boiling points than alkanes',
+              'pKa ~16-18 (weaker than water, stronger than alkanes)'
             ],
             correctAnswer: 0,
-            explanation: 'Alcohols: R-OH; named with -ol suffix'
+            explanation: 'Correct — Alcohols: R-OH; named with -ol suffix. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of alcohol nomenclature & properties, which is accurate?',
+            question: 'Which of the following is true about Hydrogen bonding → higher boiling…?',
             options: [
               'Hydrogen bonding → higher boiling points than alkanes',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'R-OH; named with -ol suffix',
+              'pKa ~16-18 (weaker than water, stronger than alkanes)',
+              'primary (1°), secondary (2°), tertiary (3°)'
             ],
             correctAnswer: 0,
-            explanation: 'Hydrogen bonding → higher boiling points than alkanes'
+            explanation: 'Correct — Hydrogen bonding → higher boiling points than alkanes. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ pKa ~16-18 (weaker than water, stronger than alkanes)
       id: 'alcoh1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Alcohols',
-            options: ['R-OH; named with -ol suffix', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['pKa ~16-18 (weaker than water, stronger than alkanes)', 'primary (1°), secondary (2°), tertiary (3°)', 'R-OH; named with -ol suffix', 'Hydrogen bonding → higher boiling points than alkanes']
           },
           {
             label: 'Classification',
-            options: ['primary (1°), secondary (2°), tertiary (3°)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['pKa ~16-18 (weaker than water, stronger than alkanes)', 'primary (1°), secondary (2°), tertiary (3°)', 'Hydrogen bonding → higher boiling points than alkanes', 'R-OH; named with -ol suffix']
           },
           {
-            label: 'Hydrogen bonding → higher boiling points than alkanes',
-            options: ['Hydrogen bonding → higher boiling points than alka', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Acidity',
+            options: ['primary (1°), secondary (2°), tertiary (3°)', 'R-OH; named with -ol suffix', 'pKa ~16-18 (weaker than water, stronger than alkanes)', 'Hydrogen bonding → higher boiling points than alkanes']
           }
         ],
-        correctAnswers: ['R-OH; named with -ol suffix', 'primary (1°), secondary (2°), tertiary (3°)', 'Hydrogen bonding → higher boiling points than alka'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Alcohol Nomenclature & Properties.'
+        correctAnswers: ['R-OH; named with -ol suffix', 'primary (1°), secondary (2°), tertiary (3°)', 'pKa ~16-18 (weaker than water, stronger than alkanes)'],
+        hint1: 'Think about what each concept specifically describes in ️ Alcohols Ethers.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in ️ Alcohols Ethers describes a specific idea. Alcohols: R-OH; named with -ol suffix. Classification: primary (1°), secondary (2°), tertiary (3°). Acidity: pKa ~16-18 (weaker than water, stronger than alkanes).'
       }
     }
   ]

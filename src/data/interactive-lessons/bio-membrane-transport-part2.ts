@@ -19,31 +19,31 @@ export const bioMembraneTransportPart2Data = {
       id: 'memb2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes diffusion?',
-            options: [
-              'high to low concentration',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
-            ],
-            correctAnswer: 0,
-            explanation: 'Diffusion: high to low concentration'
-          },
-          {
-            question: 'In the context of passive transport, which statement is accurate?',
+            question: 'Which statement accurately explains Diffusion?',
             options: [
               'No ATP required',
-              'noitartnecnoc wol ot hgih :noisuffiD',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'high to low concentration',
+              'channel and carrier proteins',
+              'Rate depends on concentration gradient and temperature'
             ],
-            correctAnswer: 0,
-            explanation: 'No ATP required'
+            correctAnswer: 1,
+            explanation: 'Correct — Diffusion: high to low concentration. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Passive Transport, which explains No ATP required?',
+            options: [
+              'channel and carrier proteins',
+              'No ATP required',
+              'high to low concentration',
+              'Rate depends on concentration gradient and temperature'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — No ATP required. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioMembraneTransportPart2Data = {
       id: 'memb2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to passive transport?',
+            question: 'Regarding Passive Transport, which correctly describes Rate depends on concentration gradient…?',
             options: [
-              'Rate depends on concentration gradient and temperature',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'high to low concentration',
+              'channel and carrier proteins',
+              'No ATP required',
+              'Rate depends on concentration gradient and temperature'
             ],
-            correctAnswer: 0,
-            explanation: 'Rate depends on concentration gradient and temperature'
+            correctAnswer: 3,
+            explanation: 'Correct — Rate depends on concentration gradient and temperature. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,24 @@ export const bioMembraneTransportPart2Data = {
       id: 'memb2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Diffusion is important in passive transport because',
-            options: ['high to low concentration', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Diffusion',
+            options: ['channel and carrier proteins', 'Rate depends on concentration gradient and temperature', 'high to low concentration', 'No ATP required']
           },
           {
-            label: 'Facilitated diffusion is important in passive transport because',
-            options: ['channel and carrier proteins', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
-          },
-          {
-            label: 'No ATP required is important in passive transport because',
-            options: ['No ATP required', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Facilitated diffusion',
+            options: ['high to low concentration', 'channel and carrier proteins', 'No ATP required', 'Rate depends on concentration gradient and temperature']
           }
         ],
-        correctAnswers: ['high to low concentration', 'channel and carrier proteins', 'No ATP required'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Passive Transport.'
+        correctAnswers: ['high to low concentration', 'channel and carrier proteins'],
+        hint1: 'Think about what each concept specifically describes in Passive Transport.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Passive Transport describes a specific idea. Diffusion: high to low concentration. Facilitated diffusion: channel and carrier proteins.'
       }
     }
   ]

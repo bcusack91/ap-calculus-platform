@@ -30,31 +30,31 @@ u⃗ - v⃗ = u⃗ + (-v⃗)
       id: 'vecto2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of vector operations?',
+            question: 'Which statement accurately explains Addition?',
             options: [
-              'Addition',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              '⟨a₁,b₁⟩ + ⟨a₂,b₂⟩ = ⟨a₁+a₂, b₁+b₂⟩ (head-to-tail method)',
+              '⟨0,0⟩ is the additive identity',
+              'u⃗ - v⃗ = u⃗ + (-v⃗)',
+              'k⟨a,b⟩ = ⟨ka, kb⟩'
             ],
             correctAnswer: 0,
-            explanation: 'Addition: ⟨a₁,b₁⟩ + ⟨a₂,b₂⟩ = ⟨a₁+a₂, b₁+b₂⟩ (head-to-tail method)'
+            explanation: 'Correct — Addition: ⟨a₁,b₁⟩ + ⟨a₂,b₂⟩ = ⟨a₁+a₂, b₁+b₂⟩ (head-to-tail method). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of vector operations, which is accurate?',
+            question: 'Select the statement that correctly describes Subtraction:',
             options: [
               'u⃗ - v⃗ = u⃗ + (-v⃗)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'k⟨a,b⟩ = ⟨ka, kb⟩',
+              '⟨a₁,b₁⟩ + ⟨a₂,b₂⟩ = ⟨a₁+a₂, b₁+b₂⟩ (head-to-tail method)',
+              '⟨0,0⟩ is the additive identity'
             ],
             correctAnswer: 0,
-            explanation: 'Subtraction: u⃗ - v⃗ = u⃗ + (-v⃗)'
+            explanation: 'Correct — Subtraction: u⃗ - v⃗ = u⃗ + (-v⃗). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ u⃗ - v⃗ = u⃗ + (-v⃗)
       id: 'vecto2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Addition',
-            options: ['⟨a₁,b₁⟩ + ⟨a₂,b₂⟩ = ⟨a₁+a₂, b₁+b₂⟩ (head-to-tail m', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['⟨a₁,b₁⟩ + ⟨a₂,b₂⟩ = ⟨a₁+a₂, b₁+b₂⟩ (head-to-tail method)', 'k⟨a,b⟩ = ⟨ka, kb⟩', '⟨0,0⟩ is the additive identity', 'u⃗ - v⃗ = u⃗ + (-v⃗)']
           },
           {
             label: 'Scalar multiplication',
-            options: ['k⟨a,b⟩ = ⟨ka, kb⟩', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['⟨a₁,b₁⟩ + ⟨a₂,b₂⟩ = ⟨a₁+a₂, b₁+b₂⟩ (head-to-tail method)', 'u⃗ - v⃗ = u⃗ + (-v⃗)', 'k⟨a,b⟩ = ⟨ka, kb⟩', '⟨0,0⟩ is the additive identity']
           },
           {
             label: 'Subtraction',
-            options: ['u⃗ - v⃗ = u⃗ + (-v⃗)', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['⟨a₁,b₁⟩ + ⟨a₂,b₂⟩ = ⟨a₁+a₂, b₁+b₂⟩ (head-to-tail method)', '⟨0,0⟩ is the additive identity', 'u⃗ - v⃗ = u⃗ + (-v⃗)', 'k⟨a,b⟩ = ⟨ka, kb⟩']
           }
         ],
-        correctAnswers: ['⟨a₁,b₁⟩ + ⟨a₂,b₂⟩ = ⟨a₁+a₂, b₁+b₂⟩ (head-to-tail m', 'k⟨a,b⟩ = ⟨ka, kb⟩', 'u⃗ - v⃗ = u⃗ + (-v⃗)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Vector Operations.'
+        correctAnswers: ['⟨a₁,b₁⟩ + ⟨a₂,b₂⟩ = ⟨a₁+a₂, b₁+b₂⟩ (head-to-tail method)', 'k⟨a,b⟩ = ⟨ka, kb⟩', 'u⃗ - v⃗ = u⃗ + (-v⃗)'],
+        hint1: 'Think about what each concept specifically describes in Vector Operations.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Vector Operations describes a specific idea. Addition: ⟨a₁,b₁⟩ + ⟨a₂,b₂⟩ = ⟨a₁+a₂, b₁+b₂⟩ (head-to-tail method). Scalar multiplication: k⟨a,b⟩ = ⟨ka, kb⟩. Subtraction: u⃗ - v⃗ = u⃗ + (-v⃗).'
       }
     }
   ]

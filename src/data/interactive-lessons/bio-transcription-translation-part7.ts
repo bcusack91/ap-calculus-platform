@@ -19,31 +19,31 @@ export const bioTranscriptionPart7Data = {
       id: 'tran7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes central dogma applications?',
-            options: [
-              'Central dogma applications',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
-            ],
-            correctAnswer: 0,
-            explanation: 'Central dogma applications'
-          },
-          {
-            question: 'In the context of synthesis & ap review, which statement is accurate?',
+            question: 'Which of the following correctly describes Central dogma applications?',
             options: [
               'Gene expression regulation points',
-              'snoitacilppa amgod lartneC',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'codon table practice',
+              'Mutation types and consequences',
+              'Central dogma applications'
             ],
-            correctAnswer: 0,
-            explanation: 'Gene expression regulation points'
+            correctAnswer: 3,
+            explanation: 'Correct — Central dogma applications. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Transcription & Translation: Synthesis & AP Review, which explains Gene expression regulation points?',
+            options: [
+              'codon table practice',
+              'Mutation types and consequences',
+              'Gene expression regulation points',
+              'Central dogma applications'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Gene expression regulation points. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioTranscriptionPart7Data = {
       id: 'tran7-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to synthesis & ap review?',
+            question: 'Which of these accurately represents AP exam?',
             options: [
-              'AP exam: codon table practice',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'codon table practice',
+              'Gene expression regulation points',
+              'Central dogma applications',
+              'Mutation types and consequences'
             ],
             correctAnswer: 0,
-            explanation: 'AP exam: codon table practice'
+            explanation: 'Correct — AP exam: codon table practice. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioTranscriptionPart7Data = {
       id: 'tran7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Central dogma applications is important in synthesis & ap review because',
-            options: ['Central dogma applications', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Central dogma applications',
+            options: ['codon table practice', 'Mutation types and consequences', 'Gene expression regulation points', 'Central dogma applications']
           },
           {
-            label: 'Mutation types and consequences is important in synthesis & ap review because',
-            options: ['Mutation types and consequences', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Mutation types and consequences',
+            options: ['Mutation types and consequences', 'Gene expression regulation points', 'codon table practice', 'Central dogma applications']
           },
           {
-            label: 'Gene expression regulation points is important in synthesis & ap review because',
-            options: ['Gene expression regulation points', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Gene expression regulation points',
+            options: ['Gene expression regulation points', 'Central dogma applications', 'codon table practice', 'Mutation types and consequences']
           }
         ],
         correctAnswers: ['Central dogma applications', 'Mutation types and consequences', 'Gene expression regulation points'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Synthesis & AP Review.'
+        hint1: 'Think about what each concept specifically describes in Transcription & Translation: Synthesis & AP Review.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Transcription & Translation: Synthesis & AP Review describes a specific idea. Central dogma applications. Mutation types and consequences. Gene expression regulation points.'
       }
     }
   ]

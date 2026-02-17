@@ -30,31 +30,31 @@ stress weakens immune system
       id: 'emoti4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of stress responses?',
+            question: 'Which statement accurately explains General Adaptation Syndrome (Selye)?',
             options: [
-              'General Adaptation Syndrome (Selye)',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'sympathetic nervous system activation',
+              'stress weakens immune system',
+              'stress hormone (chronic elevation harmful)',
+              'alarm → resistance → exhaustion'
             ],
-            correctAnswer: 0,
-            explanation: 'General Adaptation Syndrome (Selye): alarm → resistance → exhaustion'
+            correctAnswer: 3,
+            explanation: 'Correct — General Adaptation Syndrome (Selye): alarm → resistance → exhaustion. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of stress responses, which is accurate?',
+            question: 'Select the statement that correctly describes Cortisol:',
             options: [
+              'alarm → resistance → exhaustion',
               'stress hormone (chronic elevation harmful)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'stress weakens immune system',
+              'sympathetic nervous system activation'
             ],
-            correctAnswer: 0,
-            explanation: 'Cortisol: stress hormone (chronic elevation harmful)'
+            correctAnswer: 1,
+            explanation: 'Correct — Cortisol: stress hormone (chronic elevation harmful). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ stress weakens immune system
       id: 'emoti4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'General Adaptation Syndrome (Selye)',
-            options: ['alarm → resistance → exhaustion', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['alarm → resistance → exhaustion', 'stress weakens immune system', 'stress hormone (chronic elevation harmful)', 'sympathetic nervous system activation']
           },
           {
             label: 'Fight-or-flight response',
-            options: ['sympathetic nervous system activation', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['stress weakens immune system', 'stress hormone (chronic elevation harmful)', 'alarm → resistance → exhaustion', 'sympathetic nervous system activation']
           },
           {
             label: 'Cortisol',
-            options: ['stress hormone (chronic elevation harmful)', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['alarm → resistance → exhaustion', 'sympathetic nervous system activation', 'stress hormone (chronic elevation harmful)', 'stress weakens immune system']
           }
         ],
         correctAnswers: ['alarm → resistance → exhaustion', 'sympathetic nervous system activation', 'stress hormone (chronic elevation harmful)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Stress Responses.'
+        hint1: 'Think about what each concept specifically describes in Stress Responses.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Stress Responses describes a specific idea. General Adaptation Syndrome (Selye): alarm → resistance → exhaustion. Fight-or-flight response: sympathetic nervous system activation. Cortisol: stress hormone (chronic elevation harmful).'
       }
     }
   ]

@@ -18,20 +18,31 @@ Avoid ambiguous pronoun references — the reader should know exactly what "it" 
       id: 'act-e2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes pronouns must agree with antecedents in number, person, and gender?',
+            question: 'What does "Pronouns must agree with antecedents in…" refer to in ACT prep?',
             options: [
-              'Pronouns must agree with antecedents in number, person, and gender is a key concept for ACT English/Reading',
-              'Avoid ambiguous pronoun references — the reader should know exactly what "it" or "they" refers to',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'Its (possessive) vs. it\'s (it is).',
+              'Pronouns must agree with antecedents in number, person, and gender.',
+              'Avoid ambiguous pronoun references — the reader should know exactly what "it" or "they" refers to.',
+              'Who = subject (he/she); Whom = object (him/her).'
             ],
-            correctAnswer: 0,
-            explanation: 'Pronouns must agree with antecedents in number, person, and gender'
+            correctAnswer: 1,
+            explanation: 'Correct — Pronouns must agree with antecedents in number, person, and gender. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              'Its (possessive) vs. it\'s (it is).',
+              'Pronouns must agree with antecedents in number, person, and gender.',
+              'Avoid ambiguous pronoun references — the reader should know exactly what "it" or "they" refers to.',
+              'Who = subject (he/she); Whom = object (him/her).'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Key Insight: Who = subject (he/she); Whom = object (him/her). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Avoid ambiguous pronoun references — the reader should know exactly what "it" 
       id: 'act-e2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for pronoun rules?',
+            question: 'Regarding Pronoun Rules, which correctly describes ACT Tip?',
             options: [
-              'Who = subject (he/she); Whom = object (him/her)',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Who = subject (he/she); Whom = object (him/her).',
+              'Its (possessive) vs. it\'s (it is).',
+              'Pronouns must agree with antecedents in number, person, and gender.',
+              'Avoid ambiguous pronoun references — the reader should know exactly what "it" or "they" refers to.'
             ],
-            correctAnswer: 0,
-            explanation: 'Who = subject (he/she); Whom = object (him/her)'
+            correctAnswer: 1,
+            explanation: 'Correct — ACT Tip: Its (possessive) vs. it\'s (it is). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ Avoid ambiguous pronoun references — the reader should know exactly what "it" 
       id: 'act-e2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Pronoun Rules:',
-            options: ['Pronouns must agree with antecedents in number, pe', 'Avoid ambiguous pronoun references — the reader sh', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['Its (possessive) vs. it\'s (it is).', 'Pronouns must agree with antecedents in number, person, and gender.', 'Avoid ambiguous pronoun references — the reader should know exactly what "it" or "they" refers to.', 'Who = subject (he/she); Whom = object (him/her).']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Who = subject (he/she); Whom = object (him/her)', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'ACT Tip',
+            options: ['Pronouns must agree with antecedents in number, person, and gender.', 'Who = subject (he/she); Whom = object (him/her).', 'Its (possessive) vs. it\'s (it is).', 'Avoid ambiguous pronoun references — the reader should know exactly what "it" or "they" refers to.']
           }
         ],
-        correctAnswers: ['Pronouns must agree with antecedents in number, pe', 'Who = subject (he/she); Whom = object (him/her)'],
-        hint1: 'Think about pronoun rules',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Pronouns must agree with antecedents in number, person, and gender. Who = subject (he/she); Whom = object (him/her).'
+        correctAnswers: ['Who = subject (he/she); Whom = object (him/her).', 'Its (possessive) vs. it\'s (it is).'],
+        hint1: 'Think about what each concept specifically describes in Pronoun Rules.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Pronoun Rules describes a specific idea. Key Insight: Who = subject (he/she); Whom = object (him/her). ACT Tip: Its (possessive) vs. it\'s (it is).'
       }
     }
   ]

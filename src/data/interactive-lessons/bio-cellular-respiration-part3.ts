@@ -19,31 +19,31 @@ export const bioCellRespirationPart3Data = {
       id: 'cell3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes located in inner mitochondrial membrane?',
+            question: 'Which statement accurately explains Located in inner mitochondrial membrane?',
             options: [
+              'NADH and FADH₂ donate electrons',
+              'O₂ is the final electron acceptor → H₂O',
               'Located in inner mitochondrial membrane',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Electrons pass through complexes I-IV'
             ],
-            correctAnswer: 0,
-            explanation: 'Located in inner mitochondrial membrane'
+            correctAnswer: 2,
+            explanation: 'Correct — Located in inner mitochondrial membrane. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of electron transport chain, which statement is accurate?',
+            question: 'Which of the following is true about Electrons pass through complexes I-IV?',
             options: [
-              'Electrons pass through complexes I-IV',
-              'enarbmem lairdnohcotim renni ni detacoL',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'NADH and FADH₂ donate electrons',
+              'Located in inner mitochondrial membrane',
+              'O₂ is the final electron acceptor → H₂O',
+              'Electrons pass through complexes I-IV'
             ],
-            correctAnswer: 0,
-            explanation: 'Electrons pass through complexes I-IV'
+            correctAnswer: 3,
+            explanation: 'Correct — Electrons pass through complexes I-IV. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioCellRespirationPart3Data = {
       id: 'cell3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to electron transport chain?',
+            question: 'Which of these accurately represents O₂ is the final electron acceptor → H₂O?',
             options: [
-              'O₂ is the final electron acceptor → H₂O',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Electrons pass through complexes I-IV',
+              'NADH and FADH₂ donate electrons',
+              'Located in inner mitochondrial membrane',
+              'O₂ is the final electron acceptor → H₂O'
             ],
-            correctAnswer: 0,
-            explanation: 'O₂ is the final electron acceptor → H₂O'
+            correctAnswer: 3,
+            explanation: 'Correct — O₂ is the final electron acceptor → H₂O. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioCellRespirationPart3Data = {
       id: 'cell3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Located in inner mitochondrial membrane is important in electron transport chain because',
-            options: ['Located in inner mitochondrial membrane', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Located in inner mitochondrial membrane',
+            options: ['NADH and FADH₂ donate electrons', 'Located in inner mitochondrial membrane', 'O₂ is the final electron acceptor → H₂O', 'Electrons pass through complexes I-IV']
           },
           {
-            label: 'NADH and FADH₂ donate electrons is important in electron transport chain because',
-            options: ['NADH and FADH₂ donate electrons', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'NADH and FADH₂ donate electrons',
+            options: ['NADH and FADH₂ donate electrons', 'Located in inner mitochondrial membrane', 'Electrons pass through complexes I-IV', 'O₂ is the final electron acceptor → H₂O']
           },
           {
-            label: 'Electrons pass through complexes I-IV is important in electron transport chain because',
-            options: ['Electrons pass through complexes I-IV', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Electrons pass through complexes I-IV',
+            options: ['Electrons pass through complexes I-IV', 'Located in inner mitochondrial membrane', 'NADH and FADH₂ donate electrons', 'O₂ is the final electron acceptor → H₂O']
           }
         ],
         correctAnswers: ['Located in inner mitochondrial membrane', 'NADH and FADH₂ donate electrons', 'Electrons pass through complexes I-IV'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Electron Transport Chain.'
+        hint1: 'Think about what each concept specifically describes in Electron Transport Chain.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Electron Transport Chain describes a specific idea. Located in inner mitochondrial membrane. NADH and FADH₂ donate electrons. Electrons pass through complexes I-IV.'
       }
     }
   ]

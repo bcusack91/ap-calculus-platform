@@ -30,31 +30,31 @@ perceiving, using, managing emotions
       id: 'langu3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of intelligence theories?',
+            question: 'Which of the following correctly describes Spearman\'s g?',
             options: [
-              'Spearman\'s g',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'general intelligence factor',
+              '8 types (linguistic, musical, spatial, etc.)',
+              'analytical, creative, practical',
+              'perceiving, using, managing emotions'
             ],
             correctAnswer: 0,
-            explanation: 'Spearman\'s g: general intelligence factor'
+            explanation: 'Correct — Spearman\'s g: general intelligence factor. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of intelligence theories, which is accurate?',
+            question: 'Which of the following is true about Sternberg\'s triarchic?',
             options: [
-              'analytical, creative, practical',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              '8 types (linguistic, musical, spatial, etc.)',
+              'general intelligence factor',
+              'perceiving, using, managing emotions',
+              'analytical, creative, practical'
             ],
-            correctAnswer: 0,
-            explanation: 'Sternberg\'s triarchic: analytical, creative, practical'
+            correctAnswer: 3,
+            explanation: 'Correct — Sternberg\'s triarchic: analytical, creative, practical. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ perceiving, using, managing emotions
       id: 'langu3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Spearman\'s g',
-            options: ['general intelligence factor', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['analytical, creative, practical', 'general intelligence factor', 'perceiving, using, managing emotions', '8 types (linguistic, musical, spatial, etc.)']
           },
           {
             label: 'Gardner\'s multiple intelligences',
-            options: ['8 types (linguistic, musical, spatial, etc.)', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['analytical, creative, practical', '8 types (linguistic, musical, spatial, etc.)', 'general intelligence factor', 'perceiving, using, managing emotions']
           },
           {
             label: 'Sternberg\'s triarchic',
-            options: ['analytical, creative, practical', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['perceiving, using, managing emotions', 'analytical, creative, practical', 'general intelligence factor', '8 types (linguistic, musical, spatial, etc.)']
           }
         ],
         correctAnswers: ['general intelligence factor', '8 types (linguistic, musical, spatial, etc.)', 'analytical, creative, practical'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Intelligence Theories.'
+        hint1: 'Think about what each concept specifically describes in Intelligence Theories.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Intelligence Theories describes a specific idea. Spearman\'s g: general intelligence factor. Gardner\'s multiple intelligences: 8 types (linguistic, musical, spatial, etc.). Sternberg\'s triarchic: analytical, creative, practical.'
       }
     }
   ]

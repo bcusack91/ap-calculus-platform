@@ -30,31 +30,31 @@ systematic structure determination
       id: 'nmr-s7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of synthesis & review?',
+            question: 'Which of the following correctly describes NMR is the most powerful structural tool?',
             options: [
               'NMR is the most powerful structural tool',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'systematic structure determination',
+              'Splitting pattern reveals connectivity',
+              'Chemical shift indicates electronic environment'
             ],
             correctAnswer: 0,
-            explanation: 'NMR is the most powerful structural tool'
+            explanation: 'Correct — NMR is the most powerful structural tool. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of synthesis & review, which is accurate?',
+            question: 'Which of the following is true about Splitting pattern reveals connectivity?',
             options: [
-              'Splitting pattern reveals connectivity',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'NMR is the most powerful structural tool',
+              'systematic structure determination',
+              'Chemical shift indicates electronic environment',
+              'Splitting pattern reveals connectivity'
             ],
-            correctAnswer: 0,
-            explanation: 'Splitting pattern reveals connectivity'
+            correctAnswer: 3,
+            explanation: 'Correct — Splitting pattern reveals connectivity. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ systematic structure determination
       id: 'nmr-s7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'NMR is the most powerful structural tool',
-            options: ['NMR is the most powerful structural tool', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Splitting pattern reveals connectivity', 'systematic structure determination', 'NMR is the most powerful structural tool', 'Chemical shift indicates electronic environment']
           },
           {
-            label: 'Chemical shift indicates electronic environment',
-            options: ['Chemical shift indicates electronic environment', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Chemical shift indicates electronic…',
+            options: ['Chemical shift indicates electronic environment', 'Splitting pattern reveals connectivity', 'systematic structure determination', 'NMR is the most powerful structural tool']
           },
           {
             label: 'Splitting pattern reveals connectivity',
-            options: ['Splitting pattern reveals connectivity', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Splitting pattern reveals connectivity', 'Chemical shift indicates electronic environment', 'NMR is the most powerful structural tool', 'systematic structure determination']
           }
         ],
         correctAnswers: ['NMR is the most powerful structural tool', 'Chemical shift indicates electronic environment', 'Splitting pattern reveals connectivity'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Synthesis & Review.'
+        hint1: 'Think about what each concept specifically describes in Synthesis & Review.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Synthesis & Review describes a specific idea. NMR is the most powerful structural tool. Chemical shift indicates electronic environment. Splitting pattern reveals connectivity.'
       }
     }
   ]

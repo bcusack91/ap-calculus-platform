@@ -19,31 +19,31 @@ export const bioTranscriptionPart5Data = {
       id: 'tran5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes protein folding (chaperones assist)?',
+            question: 'Which of the following correctly describes Protein folding (chaperones assist)?',
             options: [
               'Protein folding (chaperones assist)',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'phosphorylation, glycosylation',
+              'Protein targeting and sorting',
+              'Proteolytic cleavage (e.g., insulin from proinsulin)'
             ],
             correctAnswer: 0,
-            explanation: 'Protein folding (chaperones assist)'
+            explanation: 'Correct — Protein folding (chaperones assist). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of post-translational modification, which statement is accurate?',
+            question: 'Which of the following is true about Proteolytic cleavage (e.g., insulin…?',
             options: [
+              'Protein targeting and sorting',
+              'Protein folding (chaperones assist)',
               'Proteolytic cleavage (e.g., insulin from proinsulin)',
-              ')tsissa senorepahc( gnidlof nietorP',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'phosphorylation, glycosylation'
             ],
-            correctAnswer: 0,
-            explanation: 'Proteolytic cleavage (e.g., insulin from proinsulin)'
+            correctAnswer: 2,
+            explanation: 'Correct — Proteolytic cleavage (e.g., insulin from proinsulin). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioTranscriptionPart5Data = {
       id: 'tran5-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to post-translational modification?',
+            question: 'Which statement about Protein targeting and sorting is correct?',
             options: [
+              'Proteolytic cleavage (e.g., insulin from proinsulin)',
               'Protein targeting and sorting',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'phosphorylation, glycosylation',
+              'Protein folding (chaperones assist)'
             ],
-            correctAnswer: 0,
-            explanation: 'Protein targeting and sorting'
+            correctAnswer: 1,
+            explanation: 'Correct — Protein targeting and sorting. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioTranscriptionPart5Data = {
       id: 'tran5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Protein folding (chaperones assist) is important in post-translational modification because',
-            options: ['Protein folding (chaperones assist)', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Protein folding (chaperones assist)',
+            options: ['Protein targeting and sorting', 'phosphorylation, glycosylation', 'Protein folding (chaperones assist)', 'Proteolytic cleavage (e.g., insulin from proinsulin)']
           },
           {
-            label: 'Chemical modifications is important in post-translational modification because',
-            options: ['phosphorylation, glycosylation', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Chemical modifications',
+            options: ['Protein targeting and sorting', 'Protein folding (chaperones assist)', 'phosphorylation, glycosylation', 'Proteolytic cleavage (e.g., insulin from proinsulin)']
           },
           {
-            label: 'Proteolytic cleavage (e.g., insulin from proinsulin) is important in post-translational modification because',
-            options: ['Proteolytic cleavage (e.g., insulin from proinsuli', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Proteolytic cleavage (e.g., insulin…',
+            options: ['Protein folding (chaperones assist)', 'phosphorylation, glycosylation', 'Protein targeting and sorting', 'Proteolytic cleavage (e.g., insulin from proinsulin)']
           }
         ],
-        correctAnswers: ['Protein folding (chaperones assist)', 'phosphorylation, glycosylation', 'Proteolytic cleavage (e.g., insulin from proinsuli'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Post-Translational Modification.'
+        correctAnswers: ['Protein folding (chaperones assist)', 'phosphorylation, glycosylation', 'Proteolytic cleavage (e.g., insulin from proinsulin)'],
+        hint1: 'Think about what each concept specifically describes in Post-Translational Modification.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Post-Translational Modification describes a specific idea. Protein folding (chaperones assist). Chemical modifications: phosphorylation, glycosylation. Proteolytic cleavage (e.g., insulin from proinsulin).'
       }
     }
   ]

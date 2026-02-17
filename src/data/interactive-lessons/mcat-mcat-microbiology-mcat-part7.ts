@@ -71,23 +71,28 @@ Exotoxins: secreted proteins (botulism, cholera, diphtheria); Endotoxins: lipid 
       id: 'mcat-7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Review & MCAT Practice:',
-            options: ['Virulence factors: toxins (exotoxins, endotoxins), adhesins,', 'Exotoxins: secreted proteins (botulism, cholera, diphtheria)', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Virulence factors',
+            options: ['secreted proteins (botulism, cholera, diphtheria); Endotoxins: lipid A of Gram-negative outer membrane.', 'toxins (exotoxins, endotoxins), adhesins, capsule, biofilm.', 'Immune evasion: antigenic variation, intracellular hiding, capsule to resist phagocytosis.', 'Koch postulates: criteria to establish a microorganism as the cause of a disease.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Koch postulates: criteria to establish a microorganism as th', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Exotoxins',
+            options: ['toxins (exotoxins, endotoxins), adhesins, capsule, biofilm.', 'secreted proteins (botulism, cholera, diphtheria); Endotoxins: lipid A of Gram-negative outer membrane.', 'Koch postulates: criteria to establish a microorganism as the cause of a disease.', 'Immune evasion: antigenic variation, intracellular hiding, capsule to resist phagocytosis.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['Koch postulates: criteria to establish a microorganism as the cause of a disease.', 'Immune evasion: antigenic variation, intracellular hiding, capsule to resist phagocytosis.', 'toxins (exotoxins, endotoxins), adhesins, capsule, biofilm.', 'secreted proteins (botulism, cholera, diphtheria); Endotoxins: lipid A of Gram-negative outer membrane.']
           }
         ],
-        correctAnswers: ['Virulence factors: toxins (exotoxins, endotoxins), adhesins,', 'Koch postulates: criteria to establish a microorganism as th'],
-        hint1: 'Think about review & mcat practice',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Virulence factors: toxins (exotoxins, endotoxins), adhesins, capsule, biofilm. Koch postulates: criteria to establish a microorganism as the cause of a disease.'
+        correctAnswers: ['toxins (exotoxins, endotoxins), adhesins, capsule, biofilm.', 'secreted proteins (botulism, cholera, diphtheria); Endotoxins: lipid A of Gram-negative outer membrane.', 'Koch postulates: criteria to establish a microorganism as the cause of a disease.'],
+        hint1: 'Think about what each concept specifically describes in Review & MCAT Practice.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Review & MCAT Practice describes a specific idea. Virulence factors: toxins (exotoxins, endotoxins), adhesins, capsule, biofilm. Exotoxins: secreted proteins (botulism, cholera, diphtheria); Endotoxins: lipid A of Gram-negative outer membrane. Key Insight: Koch postulates: criteria to establish a microorganism as the cause of a disease.'
       }
     }
   ]

@@ -18,20 +18,31 @@ Some students do science or social science first (more straightforward).
       id: 'act-r2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes start with your strongest passage type for confidence?',
+            question: 'Which statement accurately explains Start with your strongest passage type…?',
             options: [
-              'Start with your strongest passage type for confidence is a key concept for ACT English/Reading',
-              'Some students do science or social science first (more straightforward)',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'Start with your strongest passage type for confidence.',
+              'Literary narrative can be time-consuming — save it if it is your weakest.',
+              'Some students do science or social science first (more straightforward).',
+              'Order doesn\'t affect scoring — play to your strengths.'
             ],
             correctAnswer: 0,
-            explanation: 'Start with your strongest passage type for confidence'
+            explanation: 'Correct — Start with your strongest passage type for confidence. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              'Order doesn\'t affect scoring — play to your strengths.',
+              'Start with your strongest passage type for confidence.',
+              'Literary narrative can be time-consuming — save it if it is your weakest.',
+              'Some students do science or social science first (more straightforward).'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Key Insight: Literary narrative can be time-consuming — save it if it is your weakest. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Some students do science or social science first (more straightforward).
       id: 'act-r2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for passage order strategy?',
+            question: 'Which of these accurately represents ACT Tip?',
             options: [
-              'Literary narrative can be time-consuming — save it if it is your weakest',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Order doesn\'t affect scoring — play to your strengths.',
+              'Literary narrative can be time-consuming — save it if it is your weakest.',
+              'Some students do science or social science first (more straightforward).',
+              'Start with your strongest passage type for confidence.'
             ],
             correctAnswer: 0,
-            explanation: 'Literary narrative can be time-consuming — save it if it is your weakest'
+            explanation: 'Correct — ACT Tip: Order doesn\'t affect scoring — play to your strengths. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ Some students do science or social science first (more straightforward).
       id: 'act-r2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Passage Order Strategy:',
-            options: ['Start with your strongest passage type for confide', 'Some students do science or social science first (', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['Some students do science or social science first (more straightforward).', 'Start with your strongest passage type for confidence.', 'Literary narrative can be time-consuming — save it if it is your weakest.', 'Order doesn\'t affect scoring — play to your strengths.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Literary narrative can be time-consuming — save it', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'ACT Tip',
+            options: ['Literary narrative can be time-consuming — save it if it is your weakest.', 'Start with your strongest passage type for confidence.', 'Order doesn\'t affect scoring — play to your strengths.', 'Some students do science or social science first (more straightforward).']
           }
         ],
-        correctAnswers: ['Start with your strongest passage type for confide', 'Literary narrative can be time-consuming — save it'],
-        hint1: 'Think about passage order strategy',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Start with your strongest passage type for confidence. Literary narrative can be time-consuming — save it if it is your weakest.'
+        correctAnswers: ['Literary narrative can be time-consuming — save it if it is your weakest.', 'Order doesn\'t affect scoring — play to your strengths.'],
+        hint1: 'Think about what each concept specifically describes in Passage Order Strategy.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Passage Order Strategy describes a specific idea. Key Insight: Literary narrative can be time-consuming — save it if it is your weakest. ACT Tip: Order doesn\'t affect scoring — play to your strengths.'
       }
     }
   ]

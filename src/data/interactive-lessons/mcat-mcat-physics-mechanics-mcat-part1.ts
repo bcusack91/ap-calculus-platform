@@ -71,23 +71,28 @@ Projectile motion: horizontal velocity is constant; vertical acceleration = g = 
       id: 'mcat-1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Kinematics & Motion:',
-            options: ['v = v0 + at; x = x0 + v0t + (1/2)at2; v2 = v02 + 2a(x-x0) — ', 'Projectile motion: horizontal velocity is constant; vertical', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Projectile motion',
+            options: ['horizontal velocity is constant; vertical acceleration = g = 9.8 m/s2.', 'Vectors: break into components using sin and cos; add components separately.', 'v = v0 + at; x = x0 + v0t + (1/2)at2; v2 = v02 + 2a(x-x0) — the Big 3 kinematic equations.', 'Displacement is a vector (direction matters); distance is a scalar (total path length).']
           },
           {
-            label: 'MCAT application:',
-            options: ['Vectors: break into components using sin and cos; add compon', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Key Insight',
+            options: ['Displacement is a vector (direction matters); distance is a scalar (total path length).', 'horizontal velocity is constant; vertical acceleration = g = 9.8 m/s2.', 'Vectors: break into components using sin and cos; add components separately.', 'v = v0 + at; x = x0 + v0t + (1/2)at2; v2 = v02 + 2a(x-x0) — the Big 3 kinematic equations.']
+          },
+          {
+            label: 'MCAT Tip',
+            options: ['horizontal velocity is constant; vertical acceleration = g = 9.8 m/s2.', 'Vectors: break into components using sin and cos; add components separately.', 'Displacement is a vector (direction matters); distance is a scalar (total path length).', 'v = v0 + at; x = x0 + v0t + (1/2)at2; v2 = v02 + 2a(x-x0) — the Big 3 kinematic equations.']
           }
         ],
-        correctAnswers: ['v = v0 + at; x = x0 + v0t + (1/2)at2; v2 = v02 + 2a(x-x0) — ', 'Vectors: break into components using sin and cos; add compon'],
-        hint1: 'Think about kinematics & motion',
-        hint2: 'Consider the MCAT application',
-        explanation: 'v = v0 + at; x = x0 + v0t + (1/2)at2; v2 = v02 + 2a(x-x0) — the Big 3 kinematic equations. Vectors: break into components using sin and cos; add components separately.'
+        correctAnswers: ['horizontal velocity is constant; vertical acceleration = g = 9.8 m/s2.', 'Vectors: break into components using sin and cos; add components separately.', 'Displacement is a vector (direction matters); distance is a scalar (total path length).'],
+        hint1: 'Think about what each concept specifically describes in Physics Mechanics.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Physics Mechanics describes a specific idea. Projectile motion: horizontal velocity is constant; vertical acceleration = g = 9.8 m/s2. Key Insight: Vectors: break into components using sin and cos; add components separately. MCAT Tip: Displacement is a vector (direction matters); distance is a scalar (total path length).'
       }
     }
   ]

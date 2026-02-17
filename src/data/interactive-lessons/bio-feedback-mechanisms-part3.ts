@@ -19,31 +19,31 @@ export const bioFeedbackPart3Data = {
       id: 'feed3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes output amplifies the change?',
+            question: 'Which statement accurately explains Output amplifies the change?',
             options: [
-              'Output amplifies the change',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Less common, used for rapid processes',
+              'oxytocin during childbirth (labor contractions)',
+              'blood clotting cascade',
+              'Output amplifies the change'
             ],
-            correctAnswer: 0,
-            explanation: 'Output amplifies the change'
+            correctAnswer: 3,
+            explanation: 'Correct — Output amplifies the change. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of positive feedback, which statement is accurate?',
+            question: 'Which of the following is true about Example?',
             options: [
-              'Example: blood clotting cascade',
-              'egnahc eht seifilpma tuptuO',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'blood clotting cascade',
+              'Less common, used for rapid processes',
+              'Output amplifies the change',
+              'This is a common misconception about the topic'
             ],
             correctAnswer: 0,
-            explanation: 'Example: blood clotting cascade'
+            explanation: 'Correct — Example: blood clotting cascade. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioFeedbackPart3Data = {
       id: 'feed3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to positive feedback?',
+            question: 'Regarding Positive Feedback, which correctly describes Example?',
             options: [
-              'Example: oxytocin during childbirth (labor contractions)',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'oxytocin during childbirth (labor contractions)',
+              'This is a common misconception about the topic',
+              'Output amplifies the change',
+              'Less common, used for rapid processes'
             ],
             correctAnswer: 0,
-            explanation: 'Example: oxytocin during childbirth (labor contractions)'
+            explanation: 'Correct — Example: oxytocin during childbirth (labor contractions). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,24 @@ export const bioFeedbackPart3Data = {
       id: 'feed3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Output amplifies the change is important in positive feedback because',
-            options: ['Output amplifies the change', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Example',
+            options: ['Output amplifies the change', 'oxytocin during childbirth (labor contractions)', 'Less common, used for rapid processes', 'blood clotting cascade']
           },
           {
-            label: 'Less common, used for rapid processes is important in positive feedback because',
-            options: ['Less common, used for rapid processes', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
-          },
-          {
-            label: 'Example is important in positive feedback because',
-            options: ['blood clotting cascade', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Example',
+            options: ['blood clotting cascade', 'Output amplifies the change', 'Less common, used for rapid processes', 'oxytocin during childbirth (labor contractions)']
           }
         ],
-        correctAnswers: ['Output amplifies the change', 'Less common, used for rapid processes', 'blood clotting cascade'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Positive Feedback.'
+        correctAnswers: ['blood clotting cascade', 'oxytocin during childbirth (labor contractions)'],
+        hint1: 'Think about what each concept specifically describes in Positive Feedback.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Positive Feedback describes a specific idea. Example: blood clotting cascade. Example: oxytocin during childbirth (labor contractions).'
       }
     }
   ]

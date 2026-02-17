@@ -18,20 +18,31 @@ Use a pair of dashes like parentheses — or a single dash for emphasis.
       id: 'act-e4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes dashes set off emphatic or explanatory information?',
+            question: 'Which statement accurately explains Dashes set off emphatic or explanatory…?',
             options: [
-              'Dashes set off emphatic or explanatory information is a key concept for ACT English/Reading',
-              'Use a pair of dashes like parentheses — or a single dash for emphasis',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'Parentheses for supplementary information (less emphasis than dashes).',
+              'Use a pair of dashes like parentheses — or a single dash for emphasis.',
+              'Dashes set off emphatic or explanatory information.',
+              'Be consistent: if you open with a dash, close with a dash (not a comma).'
             ],
-            correctAnswer: 0,
-            explanation: 'Dashes set off emphatic or explanatory information'
+            correctAnswer: 2,
+            explanation: 'Correct — Dashes set off emphatic or explanatory information. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              'Use a pair of dashes like parentheses — or a single dash for emphasis.',
+              'Dashes set off emphatic or explanatory information.',
+              'Be consistent: if you open with a dash, close with a dash (not a comma).',
+              'Parentheses for supplementary information (less emphasis than dashes).'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Key Insight: Parentheses for supplementary information (less emphasis than dashes). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Use a pair of dashes like parentheses — or a single dash for emphasis.
       id: 'act-e4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for dashes & parentheses?',
+            question: 'Which statement about ACT Tip is correct?',
             options: [
-              'Parentheses for supplementary information (less emphasis than dashes)',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Use a pair of dashes like parentheses — or a single dash for emphasis.',
+              'Dashes set off emphatic or explanatory information.',
+              'Parentheses for supplementary information (less emphasis than dashes).',
+              'Be consistent: if you open with a dash, close with a dash (not a comma).'
             ],
-            correctAnswer: 0,
-            explanation: 'Parentheses for supplementary information (less emphasis than dashes)'
+            correctAnswer: 3,
+            explanation: 'Correct — ACT Tip: Be consistent: if you open with a dash, close with a dash (not a comma). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ Use a pair of dashes like parentheses — or a single dash for emphasis.
       id: 'act-e4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Dashes & Parentheses:',
-            options: ['Dashes set off emphatic or explanatory information', 'Use a pair of dashes like parentheses — or a singl', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['Be consistent: if you open with a dash, close with a dash (not a comma).', 'Dashes set off emphatic or explanatory information.', 'Use a pair of dashes like parentheses — or a single dash for emphasis.', 'Parentheses for supplementary information (less emphasis than dashes).']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Parentheses for supplementary information (less em', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'ACT Tip',
+            options: ['Use a pair of dashes like parentheses — or a single dash for emphasis.', 'Dashes set off emphatic or explanatory information.', 'Be consistent: if you open with a dash, close with a dash (not a comma).', 'Parentheses for supplementary information (less emphasis than dashes).']
           }
         ],
-        correctAnswers: ['Dashes set off emphatic or explanatory information', 'Parentheses for supplementary information (less em'],
-        hint1: 'Think about dashes & parentheses',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Dashes set off emphatic or explanatory information. Parentheses for supplementary information (less emphasis than dashes).'
+        correctAnswers: ['Parentheses for supplementary information (less emphasis than dashes).', 'Be consistent: if you open with a dash, close with a dash (not a comma).'],
+        hint1: 'Think about what each concept specifically describes in Dashes & Parentheses.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Dashes & Parentheses describes a specific idea. Key Insight: Parentheses for supplementary information (less emphasis than dashes). ACT Tip: Be consistent: if you open with a dash, close with a dash (not a comma).'
       }
     }
   ]

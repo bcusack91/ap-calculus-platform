@@ -18,20 +18,31 @@ Some questions ask about Passage A only, some about Passage B, some about both.
       id: 'act-r6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes compare and contrast two shorter passages on a related topic?',
+            question: 'What does "Compare and contrast two shorter…" refer to in ACT prep?',
             options: [
-              'Compare and contrast two shorter passages on a related topic is a key concept for ACT English/Reading',
-              'Some questions ask about Passage A only, some about Passage B, some about both',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'Compare and contrast two shorter passages on a related topic.',
+              'Identify each author\'s position and how they agree or disagree.',
+              'Some questions ask about Passage A only, some about Passage B, some about both.',
+              'Relationship questions: how would Author A respond to Author B?.'
             ],
             correctAnswer: 0,
-            explanation: 'Compare and contrast two shorter passages on a related topic'
+            explanation: 'Correct — Compare and contrast two shorter passages on a related topic. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Key Insight?',
+            options: [
+              'Some questions ask about Passage A only, some about Passage B, some about both.',
+              'Identify each author\'s position and how they agree or disagree.',
+              'Compare and contrast two shorter passages on a related topic.',
+              'Relationship questions: how would Author A respond to Author B?.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Key Insight: Identify each author\'s position and how they agree or disagree. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Some questions ask about Passage A only, some about Passage B, some about both.
       id: 'act-r6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for problem-solving workshop?',
+            question: 'Which statement about ACT Tip is correct?',
             options: [
-              'Identify each author\'s position and how they agree or disagree',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Identify each author\'s position and how they agree or disagree.',
+              'Compare and contrast two shorter passages on a related topic.',
+              'Some questions ask about Passage A only, some about Passage B, some about both.',
+              'Relationship questions: how would Author A respond to Author B?.'
             ],
-            correctAnswer: 0,
-            explanation: 'Identify each author\'s position and how they agree or disagree'
+            correctAnswer: 3,
+            explanation: 'Correct — ACT Tip: Relationship questions: how would Author A respond to Author B?. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ Some questions ask about Passage A only, some about Passage B, some about both.
       id: 'act-r6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Problem-Solving Workshop:',
-            options: ['Compare and contrast two shorter passages on a rel', 'Some questions ask about Passage A only, some abou', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['Identify each author\'s position and how they agree or disagree.', 'Some questions ask about Passage A only, some about Passage B, some about both.', 'Relationship questions: how would Author A respond to Author B?.', 'Compare and contrast two shorter passages on a related topic.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Identify each author\'s position and how they agree', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'ACT Tip',
+            options: ['Some questions ask about Passage A only, some about Passage B, some about both.', 'Compare and contrast two shorter passages on a related topic.', 'Relationship questions: how would Author A respond to Author B?.', 'Identify each author\'s position and how they agree or disagree.']
           }
         ],
-        correctAnswers: ['Compare and contrast two shorter passages on a rel', 'Identify each author\'s position and how they agree'],
-        hint1: 'Think about problem-solving workshop',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Compare and contrast two shorter passages on a related topic. Identify each author\'s position and how they agree or disagree.'
+        correctAnswers: ['Identify each author\'s position and how they agree or disagree.', 'Relationship questions: how would Author A respond to Author B?.'],
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Key Insight: Identify each author\'s position and how they agree or disagree. ACT Tip: Relationship questions: how would Author A respond to Author B?.'
       }
     }
   ]

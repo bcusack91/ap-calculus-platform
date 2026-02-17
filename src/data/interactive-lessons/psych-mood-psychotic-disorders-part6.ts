@@ -30,31 +30,31 @@ Evaluating diagnostic criteria
       id: 'mood-6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of problem-solving workshop?',
+            question: 'What does "Differentiating mood disorders" refer to in psychology?',
             options: [
+              'Evaluating diagnostic criteria',
               'Differentiating mood disorders',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'Analyzing neurotransmitter involvement',
+              'Identifying schizophrenia symptoms'
             ],
-            correctAnswer: 0,
-            explanation: 'Differentiating mood disorders'
+            correctAnswer: 1,
+            explanation: 'Correct — Differentiating mood disorders. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of problem-solving workshop, which is accurate?',
+            question: 'Select the statement that correctly describes Analyzing neurotransmitter involvement:',
             options: [
+              'Differentiating mood disorders',
+              'Identifying schizophrenia symptoms',
               'Analyzing neurotransmitter involvement',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Evaluating diagnostic criteria'
             ],
-            correctAnswer: 0,
-            explanation: 'Analyzing neurotransmitter involvement'
+            correctAnswer: 2,
+            explanation: 'Correct — Analyzing neurotransmitter involvement. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Evaluating diagnostic criteria
       id: 'mood-6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Differentiating mood disorders',
-            options: ['Differentiating mood disorders', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Differentiating mood disorders', 'Identifying schizophrenia symptoms', 'Analyzing neurotransmitter involvement', 'Evaluating diagnostic criteria']
           },
           {
             label: 'Identifying schizophrenia symptoms',
-            options: ['Identifying schizophrenia symptoms', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Analyzing neurotransmitter involvement', 'Differentiating mood disorders', 'Evaluating diagnostic criteria', 'Identifying schizophrenia symptoms']
           },
           {
             label: 'Analyzing neurotransmitter involvement',
-            options: ['Analyzing neurotransmitter involvement', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Differentiating mood disorders', 'Evaluating diagnostic criteria', 'Analyzing neurotransmitter involvement', 'Identifying schizophrenia symptoms']
           }
         ],
         correctAnswers: ['Differentiating mood disorders', 'Identifying schizophrenia symptoms', 'Analyzing neurotransmitter involvement'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving Workshop.'
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Differentiating mood disorders. Identifying schizophrenia symptoms. Analyzing neurotransmitter involvement.'
       }
     }
   ]

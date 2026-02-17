@@ -18,20 +18,31 @@ Discriminant b² - 4ac: positive → 2 real roots, zero → 1, negative → comp
       id: 'act-i1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes solve by factoring, completing the square, or the quadratic formula?',
+            question: 'What does "Solve by factoring, completing the…" refer to in ACT prep?',
             options: [
-              'Solve by factoring, completing the square, or the quadratic formula is a key concept for ACT Math',
-              'Discriminant b² - 4ac: positive → 2 real roots, zero → 1, negative → complex',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'positive → 2 real roots, zero → 1, negative → complex.',
+              'Solve by factoring, completing the square, or the quadratic formula.',
+              'Sum of roots = -b/a; Product of roots = c/a.',
+              'Vertex form y = a(x - h)² + k reveals the vertex (h, k).'
             ],
-            correctAnswer: 0,
-            explanation: 'Solve by factoring, completing the square, or the quadratic formula'
+            correctAnswer: 1,
+            explanation: 'Correct — Solve by factoring, completing the square, or the quadratic formula. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              'Sum of roots = -b/a; Product of roots = c/a.',
+              'Solve by factoring, completing the square, or the quadratic formula.',
+              'positive → 2 real roots, zero → 1, negative → complex.',
+              'Vertex form y = a(x - h)² + k reveals the vertex (h, k).'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Key Insight: Vertex form y = a(x - h)² + k reveals the vertex (h, k). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Discriminant b² - 4ac: positive → 2 real roots, zero → 1, negative → comp
       id: 'act-i1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for quadratic equations?',
+            question: 'Which of these accurately represents ACT Tip?',
             options: [
-              'Vertex form y = a(x - h)² + k reveals the vertex (h, k)',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Sum of roots = -b/a; Product of roots = c/a.',
+              'positive → 2 real roots, zero → 1, negative → complex.',
+              'Solve by factoring, completing the square, or the quadratic formula.',
+              'Vertex form y = a(x - h)² + k reveals the vertex (h, k).'
             ],
             correctAnswer: 0,
-            explanation: 'Vertex form y = a(x - h)² + k reveals the vertex (h, k)'
+            explanation: 'Correct — ACT Tip: Sum of roots = -b/a; Product of roots = c/a. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Discriminant b² - 4ac: positive → 2 real roots, zero → 1, negative → comp
       id: 'act-i1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Quadratic Equations:',
-            options: ['Solve by factoring, completing the square, or the ', 'Discriminant b² - 4ac: positive → 2 real roots, ze', 'Not applicable', 'None of these']
+            label: 'Discriminant b² - 4ac',
+            options: ['Vertex form y = a(x - h)² + k reveals the vertex (h, k).', 'Sum of roots = -b/a; Product of roots = c/a.', 'Solve by factoring, completing the square, or the quadratic formula.', 'positive → 2 real roots, zero → 1, negative → complex.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Vertex form y = a(x - h)² + k reveals the vertex (', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Key Insight',
+            options: ['Vertex form y = a(x - h)² + k reveals the vertex (h, k).', 'Sum of roots = -b/a; Product of roots = c/a.', 'Solve by factoring, completing the square, or the quadratic formula.', 'positive → 2 real roots, zero → 1, negative → complex.']
+          },
+          {
+            label: 'ACT Tip',
+            options: ['Vertex form y = a(x - h)² + k reveals the vertex (h, k).', 'positive → 2 real roots, zero → 1, negative → complex.', 'Solve by factoring, completing the square, or the quadratic formula.', 'Sum of roots = -b/a; Product of roots = c/a.']
           }
         ],
-        correctAnswers: ['Solve by factoring, completing the square, or the ', 'Vertex form y = a(x - h)² + k reveals the vertex ('],
-        hint1: 'Think about quadratic equations',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Solve by factoring, completing the square, or the quadratic formula. Vertex form y = a(x - h)² + k reveals the vertex (h, k).'
+        correctAnswers: ['positive → 2 real roots, zero → 1, negative → complex.', 'Vertex form y = a(x - h)² + k reveals the vertex (h, k).', 'Sum of roots = -b/a; Product of roots = c/a.'],
+        hint1: 'Think about what each concept specifically describes in Intermediate Algebra.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Intermediate Algebra describes a specific idea. Discriminant b² - 4ac: positive → 2 real roots, zero → 1, negative → complex. Key Insight: Vertex form y = a(x - h)² + k reveals the vertex (h, k). ACT Tip: Sum of roots = -b/a; Product of roots = c/a.'
       }
     }
   ]

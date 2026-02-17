@@ -30,31 +30,31 @@ rest-and-digest
       id: 'biolo3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of the nervous system?',
+            question: 'Which of the following correctly describes Central NS?',
             options: [
-              'Central NS',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'somatic (voluntary) + autonomic (involuntary)',
+              'brain + spinal cord',
+              'rest-and-digest',
+              'fight-or-flight'
             ],
-            correctAnswer: 0,
-            explanation: 'Central NS: brain + spinal cord'
+            correctAnswer: 1,
+            explanation: 'Correct — Central NS: brain + spinal cord. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of the nervous system, which is accurate?',
+            question: 'In the context of The Nervous System, which explains Sympathetic?',
             options: [
-              'fight-or-flight',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'somatic (voluntary) + autonomic (involuntary)',
+              'rest-and-digest',
+              'brain + spinal cord',
+              'fight-or-flight'
             ],
-            correctAnswer: 0,
-            explanation: 'Sympathetic: fight-or-flight'
+            correctAnswer: 3,
+            explanation: 'Correct — Sympathetic: fight-or-flight. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ rest-and-digest
       id: 'biolo3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Central NS',
-            options: ['brain + spinal cord', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['brain + spinal cord', 'somatic (voluntary) + autonomic (involuntary)', 'rest-and-digest', 'fight-or-flight']
           },
           {
             label: 'Peripheral NS',
-            options: ['somatic (voluntary) + autonomic (involuntary)', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['rest-and-digest', 'fight-or-flight', 'brain + spinal cord', 'somatic (voluntary) + autonomic (involuntary)']
           },
           {
             label: 'Sympathetic',
-            options: ['fight-or-flight', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['rest-and-digest', 'fight-or-flight', 'brain + spinal cord', 'somatic (voluntary) + autonomic (involuntary)']
           }
         ],
         correctAnswers: ['brain + spinal cord', 'somatic (voluntary) + autonomic (involuntary)', 'fight-or-flight'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding The Nervous System.'
+        hint1: 'Think about what each concept specifically describes in The Nervous System.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in The Nervous System describes a specific idea. Central NS: brain + spinal cord. Peripheral NS: somatic (voluntary) + autonomic (involuntary). Sympathetic: fight-or-flight.'
       }
     }
   ]

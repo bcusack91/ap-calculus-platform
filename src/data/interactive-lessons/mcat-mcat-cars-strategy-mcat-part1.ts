@@ -71,23 +71,24 @@ Passages come from humanities, social sciences, ethics, philosophy, and cultural
       id: 'mcat-1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for CARS Overview & Approach:',
-            options: ['CARS = 53 questions in 90 minutes across 9 passages — NO out', 'Passages come from humanities, social sciences, ethics, phil', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Key Insight',
+            options: ['Passages come from humanities, social sciences, ethics, philosophy, and cultural studies.', 'Read the passage FIRST, then answer questions — do not skim.', 'CARS = 53 questions in 90 minutes across 9 passages — NO outside knowledge needed.', 'Build a mental outline: what is each paragraphs purpose?.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Read the passage FIRST, then answer questions — do not skim', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'MCAT Tip',
+            options: ['Build a mental outline: what is each paragraphs purpose?.', 'CARS = 53 questions in 90 minutes across 9 passages — NO outside knowledge needed.', 'Read the passage FIRST, then answer questions — do not skim.', 'Passages come from humanities, social sciences, ethics, philosophy, and cultural studies.']
           }
         ],
-        correctAnswers: ['CARS = 53 questions in 90 minutes across 9 passages — NO out', 'Read the passage FIRST, then answer questions — do not skim'],
-        hint1: 'Think about cars overview & approach',
-        hint2: 'Consider the MCAT application',
-        explanation: 'CARS = 53 questions in 90 minutes across 9 passages — NO outside knowledge needed. Read the passage FIRST, then answer questions — do not skim.'
+        correctAnswers: ['Read the passage FIRST, then answer questions — do not skim.', 'Build a mental outline: what is each paragraphs purpose?.'],
+        hint1: 'Think about what each concept specifically describes in Cars Strategy.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Cars Strategy describes a specific idea. Key Insight: Read the passage FIRST, then answer questions — do not skim. MCAT Tip: Build a mental outline: what is each paragraphs purpose?.'
       }
     }
   ]

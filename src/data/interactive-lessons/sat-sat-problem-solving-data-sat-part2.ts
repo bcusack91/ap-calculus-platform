@@ -18,20 +18,31 @@ Joint frequency: a specific cell value.
       id: 'sat-p2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes two-way tables organize data by two categorical variables?',
+            question: 'Which of the following correctly describes Two-way tables organize data by two…?',
             options: [
-              'Two-way tables organize data by two categorical variables is a fundamental concept in SAT Math',
-              'Joint frequency: a specific cell value',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'Two-way tables organize data by two categorical variables.',
+              'a specific cell value.',
+              'Conditional probability: focus on one row or column only.',
+              'Marginal frequency: row or column totals.'
             ],
             correctAnswer: 0,
-            explanation: 'Two-way tables organize data by two categorical variables'
+            explanation: 'Correct — Two-way tables organize data by two categorical variables. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              'a specific cell value.',
+              'Conditional probability: focus on one row or column only.',
+              'Two-way tables organize data by two categorical variables.',
+              'Marginal frequency: row or column totals.'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Key Insight: Marginal frequency: row or column totals. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Joint frequency: a specific cell value.
       id: 'sat-p2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for two-way tables?',
+            question: 'Which of these accurately represents SAT Tip?',
             options: [
-              'Marginal frequency: row or column totals',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'Marginal frequency: row or column totals.',
+              'Conditional probability: focus on one row or column only.',
+              'Two-way tables organize data by two categorical variables.',
+              'a specific cell value.'
             ],
-            correctAnswer: 0,
-            explanation: 'Marginal frequency: row or column totals'
+            correctAnswer: 1,
+            explanation: 'Correct — SAT Tip: Conditional probability: focus on one row or column only. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Joint frequency: a specific cell value.
       id: 'sat-p2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Two-Way Tables:',
-            options: ['Two-way tables organize data by two categorical va', 'Joint frequency: a specific cell value', 'Not applicable', 'None of these']
+            label: 'Joint frequency',
+            options: ['a specific cell value.', 'Marginal frequency: row or column totals.', 'Two-way tables organize data by two categorical variables.', 'Conditional probability: focus on one row or column only.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Marginal frequency: row or column totals', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Key Insight',
+            options: ['a specific cell value.', 'Two-way tables organize data by two categorical variables.', 'Marginal frequency: row or column totals.', 'Conditional probability: focus on one row or column only.']
+          },
+          {
+            label: 'SAT Tip',
+            options: ['a specific cell value.', 'Marginal frequency: row or column totals.', 'Conditional probability: focus on one row or column only.', 'Two-way tables organize data by two categorical variables.']
           }
         ],
-        correctAnswers: ['Two-way tables organize data by two categorical va', 'Marginal frequency: row or column totals'],
-        hint1: 'Think about two-way tables',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'Two-way tables organize data by two categorical variables. Marginal frequency: row or column totals.'
+        correctAnswers: ['a specific cell value.', 'Marginal frequency: row or column totals.', 'Conditional probability: focus on one row or column only.'],
+        hint1: 'Think about what each concept specifically describes in Two-Way Tables.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Two-Way Tables describes a specific idea. Joint frequency: a specific cell value. Key Insight: Marginal frequency: row or column totals. SAT Tip: Conditional probability: focus on one row or column only.'
       }
     }
   ]

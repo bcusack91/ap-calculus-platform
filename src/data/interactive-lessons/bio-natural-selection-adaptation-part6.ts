@@ -19,31 +19,31 @@ export const bioNatSelectionPart6Data = {
       id: 'natu6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes hardy-weinberg calculations?',
+            question: 'Which statement accurately explains Hardy-Weinberg calculations?',
             options: [
-              'Hardy-Weinberg calculations',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Identifying types of selection from data',
+              'Analyzing allele frequency changes',
+              'Predicting evolutionary outcomes',
+              'Hardy-Weinberg calculations'
             ],
-            correctAnswer: 0,
-            explanation: 'Hardy-Weinberg calculations'
+            correctAnswer: 3,
+            explanation: 'Correct — Hardy-Weinberg calculations. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of problem-solving, which statement is accurate?',
+            question: 'Select the statement that correctly describes Analyzing allele frequency changes:',
             options: [
+              'Identifying types of selection from data',
               'Analyzing allele frequency changes',
-              'snoitaluclac grebnieW-ydraH',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Predicting evolutionary outcomes',
+              'Hardy-Weinberg calculations'
             ],
-            correctAnswer: 0,
-            explanation: 'Analyzing allele frequency changes'
+            correctAnswer: 1,
+            explanation: 'Correct — Analyzing allele frequency changes. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioNatSelectionPart6Data = {
       id: 'natu6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to problem-solving?',
+            question: 'Which of these accurately represents Predicting evolutionary outcomes?',
             options: [
+              'Analyzing allele frequency changes',
+              'Hardy-Weinberg calculations',
               'Predicting evolutionary outcomes',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Identifying types of selection from data'
             ],
-            correctAnswer: 0,
-            explanation: 'Predicting evolutionary outcomes'
+            correctAnswer: 2,
+            explanation: 'Correct — Predicting evolutionary outcomes. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioNatSelectionPart6Data = {
       id: 'natu6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Hardy-Weinberg calculations is important in problem-solving because',
-            options: ['Hardy-Weinberg calculations', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Hardy-Weinberg calculations',
+            options: ['Analyzing allele frequency changes', 'Hardy-Weinberg calculations', 'Predicting evolutionary outcomes', 'Identifying types of selection from data']
           },
           {
-            label: 'Identifying types of selection from data is important in problem-solving because',
-            options: ['Identifying types of selection from data', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Identifying types of selection from data',
+            options: ['Analyzing allele frequency changes', 'Hardy-Weinberg calculations', 'Predicting evolutionary outcomes', 'Identifying types of selection from data']
           },
           {
-            label: 'Analyzing allele frequency changes is important in problem-solving because',
-            options: ['Analyzing allele frequency changes', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Analyzing allele frequency changes',
+            options: ['Hardy-Weinberg calculations', 'Predicting evolutionary outcomes', 'Identifying types of selection from data', 'Analyzing allele frequency changes']
           }
         ],
         correctAnswers: ['Hardy-Weinberg calculations', 'Identifying types of selection from data', 'Analyzing allele frequency changes'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving.'
+        hint1: 'Think about what each concept specifically describes in Natural Selection: Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Natural Selection: Problem-Solving Workshop describes a specific idea. Hardy-Weinberg calculations. Identifying types of selection from data. Analyzing allele frequency changes.'
       }
     }
   ]

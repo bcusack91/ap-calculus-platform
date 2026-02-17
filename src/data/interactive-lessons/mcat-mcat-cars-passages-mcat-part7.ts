@@ -71,23 +71,24 @@ Spend ~4 minutes reading, ~6 minutes answering the ~6 questions.
       id: 'mcat-7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Review & MCAT Practice:',
-            options: ['10 minutes per passage (9 passages x 10 min = 90 min total)', 'Spend ~4 minutes reading, ~6 minutes answering the ~6 questi', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Key Insight',
+            options: ['If stuck on a question for >90 seconds, flag it and move on.', 'Spend ~4 minutes reading, ~6 minutes answering the ~6 questions.', '10 minutes per passage (9 passages x 10 min = 90 min total).', 'Do all passages — there is no penalty for wrong answers, never leave blanks.']
           },
           {
-            label: 'MCAT application:',
-            options: ['If stuck on a question for >90 seconds, flag it and move on', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'MCAT Tip',
+            options: ['Do all passages — there is no penalty for wrong answers, never leave blanks.', '10 minutes per passage (9 passages x 10 min = 90 min total).', 'If stuck on a question for >90 seconds, flag it and move on.', 'Spend ~4 minutes reading, ~6 minutes answering the ~6 questions.']
           }
         ],
-        correctAnswers: ['10 minutes per passage (9 passages x 10 min = 90 min total)', 'If stuck on a question for >90 seconds, flag it and move on'],
-        hint1: 'Think about review & mcat practice',
-        hint2: 'Consider the MCAT application',
-        explanation: '10 minutes per passage (9 passages x 10 min = 90 min total). If stuck on a question for >90 seconds, flag it and move on.'
+        correctAnswers: ['If stuck on a question for >90 seconds, flag it and move on.', 'Do all passages — there is no penalty for wrong answers, never leave blanks.'],
+        hint1: 'Think about what each concept specifically describes in Review & MCAT Practice.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Review & MCAT Practice describes a specific idea. Key Insight: If stuck on a question for >90 seconds, flag it and move on. MCAT Tip: Do all passages — there is no penalty for wrong answers, never leave blanks.'
       }
     }
   ]

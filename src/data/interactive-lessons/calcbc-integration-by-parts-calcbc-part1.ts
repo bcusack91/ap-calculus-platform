@@ -30,31 +30,31 @@ Transforms a hard integral into a simpler one
       id: 'integ1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of integration by parts formula?',
+            question: 'Which of the following correctly describes Integration by parts?',
             options: [
-              'Integration by parts',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
+              'Derived from the product rule in reverse',
+              'Choose u (to differentiate) and dv (to integrate)',
+              'Transforms a hard integral into a simpler one',
+              '∫u dv = uv - ∫v du'
             ],
-            correctAnswer: 0,
-            explanation: 'Integration by parts: ∫u dv = uv - ∫v du'
+            correctAnswer: 3,
+            explanation: 'Correct — Integration by parts: ∫u dv = uv - ∫v du. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of integration by parts formula, which is accurate?',
+            question: 'In the context of ∮ Integration By Parts, which explains Choose u (to differentiate) and dv (to…?',
             options: [
+              '∫u dv = uv - ∫v du',
               'Choose u (to differentiate) and dv (to integrate)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Transforms a hard integral into a simpler one',
+              'Derived from the product rule in reverse'
             ],
-            correctAnswer: 0,
-            explanation: 'Choose u (to differentiate) and dv (to integrate)'
+            correctAnswer: 1,
+            explanation: 'Correct — Choose u (to differentiate) and dv (to integrate). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Transforms a hard integral into a simpler one
       id: 'integ1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to integration by parts formula?',
+            question: 'Which of these accurately represents Transforms a hard integral into a…?',
             options: [
-              'Transforms a hard integral into a simpler one',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'Choose u (to differentiate) and dv (to integrate)',
+              'Derived from the product rule in reverse',
+              '∫u dv = uv - ∫v du',
+              'Transforms a hard integral into a simpler one'
             ],
-            correctAnswer: 0,
-            explanation: 'Transforms a hard integral into a simpler one'
+            correctAnswer: 3,
+            explanation: 'Correct — Transforms a hard integral into a simpler one. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Transforms a hard integral into a simpler one
       id: 'integ1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Integration by parts',
-            options: ['∫u dv = uv - ∫v du', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Choose u (to differentiate) and dv (to integrate)', 'Derived from the product rule in reverse', 'Transforms a hard integral into a simpler one', '∫u dv = uv - ∫v du']
           },
           {
             label: 'Derived from the product rule in reverse',
-            options: ['Derived from the product rule in reverse', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Derived from the product rule in reverse', '∫u dv = uv - ∫v du', 'Choose u (to differentiate) and dv (to integrate)', 'Transforms a hard integral into a simpler one']
           },
           {
-            label: 'Choose u (to differentiate) and dv (to integrate)',
-            options: ['Choose u (to differentiate) and dv (to integrate)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Choose u (to differentiate) and dv (to…',
+            options: ['Choose u (to differentiate) and dv (to integrate)', 'Derived from the product rule in reverse', 'Transforms a hard integral into a simpler one', '∫u dv = uv - ∫v du']
           }
         ],
         correctAnswers: ['∫u dv = uv - ∫v du', 'Derived from the product rule in reverse', 'Choose u (to differentiate) and dv (to integrate)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Integration by Parts Formula.'
+        hint1: 'Think about what each concept specifically describes in ∮ Integration By Parts.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in ∮ Integration By Parts describes a specific idea. Integration by parts: ∫u dv = uv - ∫v du. Derived from the product rule in reverse. Choose u (to differentiate) and dv (to integrate).'
       }
     }
   ]

@@ -71,23 +71,28 @@ Straw man: misrepresenting an opponents position to make it easier to attack.
       id: 'mcat-7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Review & MCAT Practice:',
-            options: ['Ad hominem: attacking the person instead of the argument', 'Straw man: misrepresenting an opponents position to make it ', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Ad hominem',
+            options: ['False dichotomy: presenting only two options when more exist.', 'misrepresenting an opponents position to make it easier to attack.', 'attacking the person instead of the argument.', 'Appeal to authority: citing an authority figure rather than evidence (can be valid or fallacious).']
           },
           {
-            label: 'MCAT application:',
-            options: ['False dichotomy: presenting only two options when more exist', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Straw man',
+            options: ['misrepresenting an opponents position to make it easier to attack.', 'False dichotomy: presenting only two options when more exist.', 'attacking the person instead of the argument.', 'Appeal to authority: citing an authority figure rather than evidence (can be valid or fallacious).']
+          },
+          {
+            label: 'Key Insight',
+            options: ['misrepresenting an opponents position to make it easier to attack.', 'attacking the person instead of the argument.', 'Appeal to authority: citing an authority figure rather than evidence (can be valid or fallacious).', 'False dichotomy: presenting only two options when more exist.']
           }
         ],
-        correctAnswers: ['Ad hominem: attacking the person instead of the argument', 'False dichotomy: presenting only two options when more exist'],
-        hint1: 'Think about review & mcat practice',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Ad hominem: attacking the person instead of the argument. False dichotomy: presenting only two options when more exist.'
+        correctAnswers: ['attacking the person instead of the argument.', 'misrepresenting an opponents position to make it easier to attack.', 'False dichotomy: presenting only two options when more exist.'],
+        hint1: 'Think about what each concept specifically describes in Review & MCAT Practice.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Review & MCAT Practice describes a specific idea. Ad hominem: attacking the person instead of the argument. Straw man: misrepresenting an opponents position to make it easier to attack. Key Insight: False dichotomy: presenting only two options when more exist.'
       }
     }
   ]

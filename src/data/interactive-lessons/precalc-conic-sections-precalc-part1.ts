@@ -30,31 +30,31 @@ Vertex at (h,k); focus at distance |p| from vertex; directrix at distance |p| op
       id: 'conic1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of parabolas?',
+            question: 'Which statement accurately explains Parabola?',
             options: [
-              'Parabola',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              '(x-h)² = 4p(y-k); opens up if p > 0',
+              '(y-k)² = 4p(x-h); opens right if p > 0',
+              'Vertex at (h,k); focus at distance |p| from vertex; directrix at distance |p| opposite',
+              'set of points equidistant from focus and directrix'
             ],
-            correctAnswer: 0,
-            explanation: 'Parabola: set of points equidistant from focus and directrix'
+            correctAnswer: 3,
+            explanation: 'Correct — Parabola: set of points equidistant from focus and directrix. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of parabolas, which is accurate?',
+            question: 'Which of the following is true about Standard form (horizontal)?',
             options: [
-              '(y-k)² = 4p(x-h); opens right if p > 0',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              '(x-h)² = 4p(y-k); opens up if p > 0',
+              'Vertex at (h,k); focus at distance |p| from vertex; directrix at distance |p| opposite',
+              'set of points equidistant from focus and directrix',
+              '(y-k)² = 4p(x-h); opens right if p > 0'
             ],
-            correctAnswer: 0,
-            explanation: 'Standard form (horizontal): (y-k)² = 4p(x-h); opens right if p > 0'
+            correctAnswer: 3,
+            explanation: 'Correct — Standard form (horizontal): (y-k)² = 4p(x-h); opens right if p > 0. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Vertex at (h,k); focus at distance |p| from vertex; directrix at distance |p| op
       id: 'conic1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Parabola',
-            options: ['set of points equidistant from focus and directrix', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['Vertex at (h,k); focus at distance |p| from vertex; directrix at distance |p| opposite', 'set of points equidistant from focus and directrix', '(x-h)² = 4p(y-k); opens up if p > 0', '(y-k)² = 4p(x-h); opens right if p > 0']
           },
           {
             label: 'Standard form (vertical)',
-            options: ['(x-h)² = 4p(y-k); opens up if p > 0', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['set of points equidistant from focus and directrix', 'Vertex at (h,k); focus at distance |p| from vertex; directrix at distance |p| opposite', '(y-k)² = 4p(x-h); opens right if p > 0', '(x-h)² = 4p(y-k); opens up if p > 0']
           },
           {
             label: 'Standard form (horizontal)',
-            options: ['(y-k)² = 4p(x-h); opens right if p > 0', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['(x-h)² = 4p(y-k); opens up if p > 0', 'set of points equidistant from focus and directrix', 'Vertex at (h,k); focus at distance |p| from vertex; directrix at distance |p| opposite', '(y-k)² = 4p(x-h); opens right if p > 0']
           }
         ],
         correctAnswers: ['set of points equidistant from focus and directrix', '(x-h)² = 4p(y-k); opens up if p > 0', '(y-k)² = 4p(x-h); opens right if p > 0'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Parabolas.'
+        hint1: 'Think about what each concept specifically describes in Conic Sections.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Conic Sections describes a specific idea. Parabola: set of points equidistant from focus and directrix. Standard form (vertical): (x-h)² = 4p(y-k); opens up if p > 0. Standard form (horizontal): (y-k)² = 4p(x-h); opens right if p > 0.'
       }
     }
   ]

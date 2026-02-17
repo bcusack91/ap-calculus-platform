@@ -30,31 +30,31 @@ Integral test gives convergence/divergence but not the sum
       id: 'infin3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of divergence test & integral test?',
+            question: 'Which statement accurately explains Divergence Test?',
             options: [
-              'Divergence Test',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
+              'But lim aₙ = 0 does NOT guarantee convergence (harmonic series!)',
+              'Σ f(n) converges iff ∫₁^∞ f(x)dx converges (f positive, decreasing)',
+              'Integral test gives convergence/divergence but not the sum',
+              'if lim aₙ ≠ 0, then Σ aₙ diverges'
             ],
-            correctAnswer: 0,
-            explanation: 'Divergence Test: if lim aₙ ≠ 0, then Σ aₙ diverges'
+            correctAnswer: 3,
+            explanation: 'Correct — Divergence Test: if lim aₙ ≠ 0, then Σ aₙ diverges. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of divergence test & integral test, which is accurate?',
+            question: 'In the context of Divergence Test & Integral Test, which explains Integral Test?',
             options: [
-              'Σ f(n) converges iff ∫₁^∞ f(x)dx converges (f positive, decreasing)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'if lim aₙ ≠ 0, then Σ aₙ diverges',
+              'But lim aₙ = 0 does NOT guarantee convergence (harmonic series!)',
+              'Integral test gives convergence/divergence but not the sum',
+              'Σ f(n) converges iff ∫₁^∞ f(x)dx converges (f positive, decreasing)'
             ],
-            correctAnswer: 0,
-            explanation: 'Integral Test: Σ f(n) converges iff ∫₁^∞ f(x)dx converges (f positive, decreasing)'
+            correctAnswer: 3,
+            explanation: 'Correct — Integral Test: Σ f(n) converges iff ∫₁^∞ f(x)dx converges (f positive, decreasing). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Integral test gives convergence/divergence but not the sum
       id: 'infin3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to divergence test & integral test?',
+            question: 'Which statement about Integral test gives… is correct?',
             options: [
+              'But lim aₙ = 0 does NOT guarantee convergence (harmonic series!)',
+              'Σ f(n) converges iff ∫₁^∞ f(x)dx converges (f positive, decreasing)',
               'Integral test gives convergence/divergence but not the sum',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'if lim aₙ ≠ 0, then Σ aₙ diverges'
             ],
-            correctAnswer: 0,
-            explanation: 'Integral test gives convergence/divergence but not the sum'
+            correctAnswer: 2,
+            explanation: 'Correct — Integral test gives convergence/divergence but not the sum. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,24 @@ Integral test gives convergence/divergence but not the sum
       id: 'infin3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Divergence Test',
-            options: ['if lim aₙ ≠ 0, then Σ aₙ diverges', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
-          },
-          {
-            label: 'But lim aₙ = 0 does NOT guarantee convergence (harmonic series!)',
-            options: ['But lim aₙ = 0 does NOT guarantee convergence (har', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['if lim aₙ ≠ 0, then Σ aₙ diverges', 'Σ f(n) converges iff ∫₁^∞ f(x)dx converges (f positive, decreasing)', 'But lim aₙ = 0 does NOT guarantee convergence (harmonic series!)', 'Integral test gives convergence/divergence but not the sum']
           },
           {
             label: 'Integral Test',
-            options: ['Σ f(n) converges iff ∫₁^∞ f(x)dx converges (f posi', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Integral test gives convergence/divergence but not the sum', 'if lim aₙ ≠ 0, then Σ aₙ diverges', 'Σ f(n) converges iff ∫₁^∞ f(x)dx converges (f positive, decreasing)', 'But lim aₙ = 0 does NOT guarantee convergence (harmonic series!)']
           }
         ],
-        correctAnswers: ['if lim aₙ ≠ 0, then Σ aₙ diverges', 'But lim aₙ = 0 does NOT guarantee convergence (har', 'Σ f(n) converges iff ∫₁^∞ f(x)dx converges (f posi'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Divergence Test & Integral Test.'
+        correctAnswers: ['if lim aₙ ≠ 0, then Σ aₙ diverges', 'Σ f(n) converges iff ∫₁^∞ f(x)dx converges (f positive, decreasing)'],
+        hint1: 'Think about what each concept specifically describes in Divergence Test & Integral Test.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Divergence Test & Integral Test describes a specific idea. Divergence Test: if lim aₙ ≠ 0, then Σ aₙ diverges. Integral Test: Σ f(n) converges iff ∫₁^∞ f(x)dx converges (f positive, decreasing).'
       }
     }
   ]

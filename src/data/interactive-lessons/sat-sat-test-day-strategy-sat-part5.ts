@@ -18,20 +18,31 @@ Focus on your weakest areas for the biggest score gains.
       id: 'sat-t5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes take a diagnostic test first — know your baseline?',
+            question: 'Which of the following correctly describes Take a diagnostic test first — know…?',
             options: [
-              'Take a diagnostic test first — know your baseline is a fundamental concept in SAT Math',
-              'Focus on your weakest areas for the biggest score gains',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'Simulate test conditions: timed, quiet, full-length practice tests.',
+              'Take a diagnostic test first — know your baseline.',
+              'Focus on your weakest areas for the biggest score gains.',
+              'Practice with official College Board materials.'
             ],
-            correctAnswer: 0,
-            explanation: 'Take a diagnostic test first — know your baseline'
+            correctAnswer: 1,
+            explanation: 'Correct — Take a diagnostic test first — know your baseline. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Score Improvement Plan, which explains Key Insight?',
+            options: [
+              'Focus on your weakest areas for the biggest score gains.',
+              'Practice with official College Board materials.',
+              'Simulate test conditions: timed, quiet, full-length practice tests.',
+              'Take a diagnostic test first — know your baseline.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Key Insight: Practice with official College Board materials. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Focus on your weakest areas for the biggest score gains.
       id: 'sat-t5-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for score improvement plan?',
+            question: 'Which of these accurately represents SAT Tip?',
             options: [
-              'Practice with official College Board materials',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'Practice with official College Board materials.',
+              'Simulate test conditions: timed, quiet, full-length practice tests.',
+              'Focus on your weakest areas for the biggest score gains.',
+              'Take a diagnostic test first — know your baseline.'
             ],
-            correctAnswer: 0,
-            explanation: 'Practice with official College Board materials'
+            correctAnswer: 1,
+            explanation: 'Correct — SAT Tip: Simulate test conditions: timed, quiet, full-length practice tests. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ Focus on your weakest areas for the biggest score gains.
       id: 'sat-t5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Score Improvement Plan:',
-            options: ['Take a diagnostic test first — know your baseline', 'Focus on your weakest areas for the biggest score ', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['Simulate test conditions: timed, quiet, full-length practice tests.', 'Take a diagnostic test first — know your baseline.', 'Focus on your weakest areas for the biggest score gains.', 'Practice with official College Board materials.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Practice with official College Board materials', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'SAT Tip',
+            options: ['Practice with official College Board materials.', 'Simulate test conditions: timed, quiet, full-length practice tests.', 'Focus on your weakest areas for the biggest score gains.', 'Take a diagnostic test first — know your baseline.']
           }
         ],
-        correctAnswers: ['Take a diagnostic test first — know your baseline', 'Practice with official College Board materials'],
-        hint1: 'Think about score improvement plan',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'Take a diagnostic test first — know your baseline. Practice with official College Board materials.'
+        correctAnswers: ['Practice with official College Board materials.', 'Simulate test conditions: timed, quiet, full-length practice tests.'],
+        hint1: 'Think about what each concept specifically describes in Score Improvement Plan.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Score Improvement Plan describes a specific idea. Key Insight: Practice with official College Board materials. SAT Tip: Simulate test conditions: timed, quiet, full-length practice tests.'
       }
     }
   ]

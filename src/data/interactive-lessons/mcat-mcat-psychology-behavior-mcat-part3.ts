@@ -71,23 +71,28 @@ Language development: Chomsky (innate LAD) vs Skinner (operant conditioning).
       id: 'mcat-3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Cognition & Language:',
-            options: ['Problem solving: algorithms (systematic) vs heuristics (shor', 'Language development: Chomsky (innate LAD) vs Skinner (opera', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Problem solving',
+            options: ['algorithms (systematic) vs heuristics (shortcuts — availability, representativeness).', 'Cognitive biases: confirmation bias, anchoring, framing effect, hindsight bias.', 'Brocas area: speech production (damage = nonfluent aphasia); Wernickes area: comprehension (damage = fluent aphasia).', 'Chomsky (innate LAD) vs Skinner (operant conditioning).']
           },
           {
-            label: 'MCAT application:',
-            options: ['Brocas area: speech production (damage = nonfluent aphasia);', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Language development',
+            options: ['Chomsky (innate LAD) vs Skinner (operant conditioning).', 'Brocas area: speech production (damage = nonfluent aphasia); Wernickes area: comprehension (damage = fluent aphasia).', 'algorithms (systematic) vs heuristics (shortcuts — availability, representativeness).', 'Cognitive biases: confirmation bias, anchoring, framing effect, hindsight bias.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['Brocas area: speech production (damage = nonfluent aphasia); Wernickes area: comprehension (damage = fluent aphasia).', 'Cognitive biases: confirmation bias, anchoring, framing effect, hindsight bias.', 'Chomsky (innate LAD) vs Skinner (operant conditioning).', 'algorithms (systematic) vs heuristics (shortcuts — availability, representativeness).']
           }
         ],
-        correctAnswers: ['Problem solving: algorithms (systematic) vs heuristics (shor', 'Brocas area: speech production (damage = nonfluent aphasia);'],
-        hint1: 'Think about cognition & language',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Problem solving: algorithms (systematic) vs heuristics (shortcuts — availability, representativeness). Brocas area: speech production (damage = nonfluent aphasia); Wernickes area: comprehension (damage = fluent aphasia).'
+        correctAnswers: ['algorithms (systematic) vs heuristics (shortcuts — availability, representativeness).', 'Chomsky (innate LAD) vs Skinner (operant conditioning).', 'Brocas area: speech production (damage = nonfluent aphasia); Wernickes area: comprehension (damage = fluent aphasia).'],
+        hint1: 'Think about what each concept specifically describes in Cognition & Language.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Cognition & Language describes a specific idea. Problem solving: algorithms (systematic) vs heuristics (shortcuts — availability, representativeness). Language development: Chomsky (innate LAD) vs Skinner (operant conditioning). Key Insight: Brocas area: speech production (damage = nonfluent aphasia); Wernickes area: comprehension (damage = fluent aphasia).'
       }
     }
   ]

@@ -18,20 +18,31 @@ After introductory phrases/clauses.
       id: 'act-e1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes comma before fanboys (for, and, nor, but, or, yet, so) in compound sentences?',
+            question: 'Which statement accurately explains Comma before FANBOYS (for, and, nor,…?',
             options: [
-              'Comma before FANBOYS (for, and, nor, but, or, yet, so) in compound sentences is a key concept for ACT English/Reading',
-              'After introductory phrases/clauses',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'Between items in a list of three or more (serial/Oxford comma).',
+              'After introductory phrases/clauses.',
+              'Comma before FANBOYS (for, and, nor, but, or, yet, so) in compound sentences.',
+              'Around nonessential (nonrestrictive) information.'
             ],
-            correctAnswer: 0,
-            explanation: 'Comma before FANBOYS (for, and, nor, but, or, yet, so) in compound sentences'
+            correctAnswer: 2,
+            explanation: 'Correct — Comma before FANBOYS (for, and, nor, but, or, yet, so) in compound sentences. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Key Insight?',
+            options: [
+              'After introductory phrases/clauses.',
+              'Around nonessential (nonrestrictive) information.',
+              'Between items in a list of three or more (serial/Oxford comma).',
+              'Comma before FANBOYS (for, and, nor, but, or, yet, so) in compound sentences.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Key Insight: Around nonessential (nonrestrictive) information. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ After introductory phrases/clauses.
       id: 'act-e1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for commas?',
+            question: 'Which statement about ACT Tip is correct?',
             options: [
-              'Around nonessential (nonrestrictive) information',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Around nonessential (nonrestrictive) information.',
+              'Comma before FANBOYS (for, and, nor, but, or, yet, so) in compound sentences.',
+              'After introductory phrases/clauses.',
+              'Between items in a list of three or more (serial/Oxford comma).'
             ],
-            correctAnswer: 0,
-            explanation: 'Around nonessential (nonrestrictive) information'
+            correctAnswer: 3,
+            explanation: 'Correct — ACT Tip: Between items in a list of three or more (serial/Oxford comma). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ After introductory phrases/clauses.
       id: 'act-e1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Commas:',
-            options: ['Comma before FANBOYS (for, and, nor, but, or, yet,', 'After introductory phrases/clauses', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['Comma before FANBOYS (for, and, nor, but, or, yet, so) in compound sentences.', 'Between items in a list of three or more (serial/Oxford comma).', 'After introductory phrases/clauses.', 'Around nonessential (nonrestrictive) information.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Around nonessential (nonrestrictive) information', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'ACT Tip',
+            options: ['Comma before FANBOYS (for, and, nor, but, or, yet, so) in compound sentences.', 'Around nonessential (nonrestrictive) information.', 'After introductory phrases/clauses.', 'Between items in a list of three or more (serial/Oxford comma).']
           }
         ],
-        correctAnswers: ['Comma before FANBOYS (for, and, nor, but, or, yet,', 'Around nonessential (nonrestrictive) information'],
-        hint1: 'Think about commas',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Comma before FANBOYS (for, and, nor, but, or, yet, so) in compound sentences. Around nonessential (nonrestrictive) information.'
+        correctAnswers: ['Around nonessential (nonrestrictive) information.', 'Between items in a list of three or more (serial/Oxford comma).'],
+        hint1: 'Think about what each concept specifically describes in English Punctuation.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in English Punctuation describes a specific idea. Key Insight: Around nonessential (nonrestrictive) information. ACT Tip: Between items in a list of three or more (serial/Oxford comma).'
       }
     }
   ]

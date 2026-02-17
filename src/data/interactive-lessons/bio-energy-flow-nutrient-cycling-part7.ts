@@ -19,31 +19,31 @@ export const bioEnergyFlowPart7Data = {
       id: 'ener7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes energy flow vs matter cycling?',
+            question: 'What does "Energy flow vs matter cycling" refer to in biology?',
             options: [
+              '10% rule and its implications',
               'Energy flow vs matter cycling',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Human impacts on global cycles',
+              'quantitative ecology problems'
             ],
-            correctAnswer: 0,
-            explanation: 'Energy flow vs matter cycling'
+            correctAnswer: 1,
+            explanation: 'Correct — Energy flow vs matter cycling. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of synthesis & ap review, which statement is accurate?',
+            question: 'Select the statement that correctly describes Human impacts on global cycles:',
             options: [
               'Human impacts on global cycles',
-              'gnilcyc rettam sv wolf ygrenE',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Energy flow vs matter cycling',
+              '10% rule and its implications',
+              'quantitative ecology problems'
             ],
             correctAnswer: 0,
-            explanation: 'Human impacts on global cycles'
+            explanation: 'Correct — Human impacts on global cycles. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioEnergyFlowPart7Data = {
       id: 'ener7-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to synthesis & ap review?',
+            question: 'Regarding Energy Flow: Synthesis & AP Review, which correctly describes AP exam?',
             options: [
-              'AP exam: quantitative ecology problems',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Human impacts on global cycles',
+              'Energy flow vs matter cycling',
+              'quantitative ecology problems',
+              '10% rule and its implications'
             ],
-            correctAnswer: 0,
-            explanation: 'AP exam: quantitative ecology problems'
+            correctAnswer: 2,
+            explanation: 'Correct — AP exam: quantitative ecology problems. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioEnergyFlowPart7Data = {
       id: 'ener7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Energy flow vs matter cycling is important in synthesis & ap review because',
-            options: ['Energy flow vs matter cycling', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Energy flow vs matter cycling',
+            options: ['Human impacts on global cycles', '10% rule and its implications', 'quantitative ecology problems', 'Energy flow vs matter cycling']
           },
           {
-            label: '10% rule and its implications is important in synthesis & ap review because',
-            options: ['10% rule and its implications', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: '10% rule and its implications',
+            options: ['quantitative ecology problems', 'Human impacts on global cycles', '10% rule and its implications', 'Energy flow vs matter cycling']
           },
           {
-            label: 'Human impacts on global cycles is important in synthesis & ap review because',
-            options: ['Human impacts on global cycles', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Human impacts on global cycles',
+            options: ['Energy flow vs matter cycling', '10% rule and its implications', 'Human impacts on global cycles', 'quantitative ecology problems']
           }
         ],
         correctAnswers: ['Energy flow vs matter cycling', '10% rule and its implications', 'Human impacts on global cycles'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Synthesis & AP Review.'
+        hint1: 'Think about what each concept specifically describes in Energy Flow: Synthesis & AP Review.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Energy Flow: Synthesis & AP Review describes a specific idea. Energy flow vs matter cycling. 10% rule and its implications. Human impacts on global cycles.'
       }
     }
   ]

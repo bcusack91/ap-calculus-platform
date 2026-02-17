@@ -18,20 +18,31 @@ Read axes labels and scales carefully.
       id: 'act-s2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes bar graphs, histograms, line graphs, pie charts, stem-and-leaf plots?',
+            question: 'What does "Bar graphs, histograms, line graphs,…" refer to in ACT prep?',
             options: [
-              'Bar graphs, histograms, line graphs, pie charts, stem-and-leaf plots is a key concept for ACT Math',
-              'Read axes labels and scales carefully',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'Read axes labels and scales carefully.',
+              'Box plots: min, Q1, median, Q3, max.',
+              'Histograms show frequency distribution — bars touch (no gaps).',
+              'Bar graphs, histograms, line graphs, pie charts, stem-and-leaf plots.'
             ],
-            correctAnswer: 0,
-            explanation: 'Bar graphs, histograms, line graphs, pie charts, stem-and-leaf plots'
+            correctAnswer: 3,
+            explanation: 'Correct — Bar graphs, histograms, line graphs, pie charts, stem-and-leaf plots. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Key Insight?',
+            options: [
+              'Bar graphs, histograms, line graphs, pie charts, stem-and-leaf plots.',
+              'Box plots: min, Q1, median, Q3, max.',
+              'Histograms show frequency distribution — bars touch (no gaps).',
+              'Read axes labels and scales carefully.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Key Insight: Box plots: min, Q1, median, Q3, max. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Read axes labels and scales carefully.
       id: 'act-s2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for data displays?',
+            question: 'Regarding Data Displays, which correctly describes ACT Tip?',
             options: [
-              'Box plots: min, Q1, median, Q3, max',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Box plots: min, Q1, median, Q3, max.',
+              'Read axes labels and scales carefully.',
+              'Histograms show frequency distribution — bars touch (no gaps).',
+              'Bar graphs, histograms, line graphs, pie charts, stem-and-leaf plots.'
             ],
-            correctAnswer: 0,
-            explanation: 'Box plots: min, Q1, median, Q3, max'
+            correctAnswer: 2,
+            explanation: 'Correct — ACT Tip: Histograms show frequency distribution — bars touch (no gaps). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ Read axes labels and scales carefully.
       id: 'act-s2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Data Displays:',
-            options: ['Bar graphs, histograms, line graphs, pie charts, s', 'Read axes labels and scales carefully', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['Box plots: min, Q1, median, Q3, max.', 'Read axes labels and scales carefully.', 'Bar graphs, histograms, line graphs, pie charts, stem-and-leaf plots.', 'Histograms show frequency distribution — bars touch (no gaps).']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Box plots: min, Q1, median, Q3, max', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'ACT Tip',
+            options: ['Bar graphs, histograms, line graphs, pie charts, stem-and-leaf plots.', 'Box plots: min, Q1, median, Q3, max.', 'Read axes labels and scales carefully.', 'Histograms show frequency distribution — bars touch (no gaps).']
           }
         ],
-        correctAnswers: ['Bar graphs, histograms, line graphs, pie charts, s', 'Box plots: min, Q1, median, Q3, max'],
-        hint1: 'Think about data displays',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Bar graphs, histograms, line graphs, pie charts, stem-and-leaf plots. Box plots: min, Q1, median, Q3, max.'
+        correctAnswers: ['Box plots: min, Q1, median, Q3, max.', 'Histograms show frequency distribution — bars touch (no gaps).'],
+        hint1: 'Think about what each concept specifically describes in Data Displays.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Data Displays describes a specific idea. Key Insight: Box plots: min, Q1, median, Q3, max. ACT Tip: Histograms show frequency distribution — bars touch (no gaps).'
       }
     }
   ]

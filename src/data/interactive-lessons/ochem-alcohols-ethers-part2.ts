@@ -30,31 +30,31 @@ Hydrolysis of esters gives alcohols
       id: 'alcoh2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of alcohol synthesis?',
-            options: [
-              'Grignard reaction',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
-            ],
-            correctAnswer: 0,
-            explanation: 'Grignard reaction: RMgBr + carbonyl → alcohol'
-          },
-          {
-            question: 'In the context of alcohol synthesis, which is accurate?',
+            question: 'Which of the following correctly describes Grignard reaction?',
             options: [
               'NaBH₄ or LiAlH₄',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'RMgBr + carbonyl → alcohol',
+              'Hydrolysis of esters gives alcohols',
+              'Markovnikov (H₃O⁺) or anti-Markovnikov (BH₃)'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Grignard reaction: RMgBr + carbonyl → alcohol. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Reduction of carbonyls?',
+            options: [
+              'NaBH₄ or LiAlH₄',
+              'Markovnikov (H₃O⁺) or anti-Markovnikov (BH₃)',
+              'RMgBr + carbonyl → alcohol',
+              'Hydrolysis of esters gives alcohols'
             ],
             correctAnswer: 0,
-            explanation: 'Reduction of carbonyls: NaBH₄ or LiAlH₄'
+            explanation: 'Correct — Reduction of carbonyls: NaBH₄ or LiAlH₄. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Hydrolysis of esters gives alcohols
       id: 'alcoh2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Grignard reaction',
-            options: ['RMgBr + carbonyl → alcohol', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['RMgBr + carbonyl → alcohol', 'Hydrolysis of esters gives alcohols', 'Markovnikov (H₃O⁺) or anti-Markovnikov (BH₃)', 'NaBH₄ or LiAlH₄']
           },
           {
             label: 'Hydration of alkenes',
-            options: ['Markovnikov (H₃O⁺) or anti-Markovnikov (BH₃)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['RMgBr + carbonyl → alcohol', 'Hydrolysis of esters gives alcohols', 'NaBH₄ or LiAlH₄', 'Markovnikov (H₃O⁺) or anti-Markovnikov (BH₃)']
           },
           {
             label: 'Reduction of carbonyls',
-            options: ['NaBH₄ or LiAlH₄', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Hydrolysis of esters gives alcohols', 'NaBH₄ or LiAlH₄', 'Markovnikov (H₃O⁺) or anti-Markovnikov (BH₃)', 'RMgBr + carbonyl → alcohol']
           }
         ],
         correctAnswers: ['RMgBr + carbonyl → alcohol', 'Markovnikov (H₃O⁺) or anti-Markovnikov (BH₃)', 'NaBH₄ or LiAlH₄'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Alcohol Synthesis.'
+        hint1: 'Think about what each concept specifically describes in Alcohol Synthesis.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Alcohol Synthesis describes a specific idea. Grignard reaction: RMgBr + carbonyl → alcohol. Hydration of alkenes: Markovnikov (H₃O⁺) or anti-Markovnikov (BH₃). Reduction of carbonyls: NaBH₄ or LiAlH₄.'
       }
     }
   ]

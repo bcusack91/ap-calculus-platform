@@ -71,23 +71,28 @@ Fitness: reproductive success, not physical strength.
       id: 'mcat-4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Natural Selection:',
-            options: ['Natural selection: differential reproductive success based o', 'Fitness: reproductive success, not physical strength', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Natural selection',
+            options: ['Directional, stabilizing, and disruptive selection — different effects on trait distribution.', 'reproductive success, not physical strength.', 'differential reproductive success based on heritable traits.', 'Sexual selection: traits favored in mate choice (peacock tail) vs survival.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Directional, stabilizing, and disruptive selection — differe', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Fitness',
+            options: ['reproductive success, not physical strength.', 'Sexual selection: traits favored in mate choice (peacock tail) vs survival.', 'differential reproductive success based on heritable traits.', 'Directional, stabilizing, and disruptive selection — different effects on trait distribution.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['Directional, stabilizing, and disruptive selection — different effects on trait distribution.', 'Sexual selection: traits favored in mate choice (peacock tail) vs survival.', 'reproductive success, not physical strength.', 'differential reproductive success based on heritable traits.']
           }
         ],
-        correctAnswers: ['Natural selection: differential reproductive success based o', 'Directional, stabilizing, and disruptive selection — differe'],
-        hint1: 'Think about natural selection',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Natural selection: differential reproductive success based on heritable traits. Directional, stabilizing, and disruptive selection — different effects on trait distribution.'
+        correctAnswers: ['differential reproductive success based on heritable traits.', 'reproductive success, not physical strength.', 'Directional, stabilizing, and disruptive selection — different effects on trait distribution.'],
+        hint1: 'Think about what each concept specifically describes in Natural Selection.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Natural Selection describes a specific idea. Natural selection: differential reproductive success based on heritable traits. Fitness: reproductive success, not physical strength. Key Insight: Directional, stabilizing, and disruptive selection — different effects on trait distribution.'
       }
     }
   ]

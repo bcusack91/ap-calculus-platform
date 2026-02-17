@@ -18,20 +18,31 @@ Note the main idea of each paragraph in the margin.
       id: 'act-r3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes underline topic sentences and key transitions while reading?',
+            question: 'Which statement accurately explains Underline topic sentences and key…?',
             options: [
-              'Underline topic sentences and key transitions while reading is a key concept for ACT English/Reading',
-              'Note the main idea of each paragraph in the margin',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'Note the main idea of each paragraph in the margin.',
+              'Star or mark confusing sections to revisit if needed.',
+              'Underline topic sentences and key transitions while reading.',
+              'Pay attention to "however," "although," "in contrast" — they signal shifts.'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Underline topic sentences and key transitions while reading. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              'Star or mark confusing sections to revisit if needed.',
+              'Underline topic sentences and key transitions while reading.',
+              'Pay attention to "however," "although," "in contrast" — they signal shifts.',
+              'Note the main idea of each paragraph in the margin.'
             ],
             correctAnswer: 0,
-            explanation: 'Underline topic sentences and key transitions while reading'
+            explanation: 'Correct — Key Insight: Star or mark confusing sections to revisit if needed. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Note the main idea of each paragraph in the margin.
       id: 'act-r3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for active reading?',
+            question: 'Which statement about ACT Tip is correct?',
             options: [
-              'Star or mark confusing sections to revisit if needed',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Note the main idea of each paragraph in the margin.',
+              'Underline topic sentences and key transitions while reading.',
+              'Pay attention to "however," "although," "in contrast" — they signal shifts.',
+              'Star or mark confusing sections to revisit if needed.'
             ],
-            correctAnswer: 0,
-            explanation: 'Star or mark confusing sections to revisit if needed'
+            correctAnswer: 2,
+            explanation: 'Correct — ACT Tip: Pay attention to "however," "although," "in contrast" — they signal shifts. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ Note the main idea of each paragraph in the margin.
       id: 'act-r3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Active Reading:',
-            options: ['Underline topic sentences and key transitions whil', 'Note the main idea of each paragraph in the margin', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['Star or mark confusing sections to revisit if needed.', 'Underline topic sentences and key transitions while reading.', 'Pay attention to "however," "although," "in contrast" — they signal shifts.', 'Note the main idea of each paragraph in the margin.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Star or mark confusing sections to revisit if need', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'ACT Tip',
+            options: ['Pay attention to "however," "although," "in contrast" — they signal shifts.', 'Note the main idea of each paragraph in the margin.', 'Underline topic sentences and key transitions while reading.', 'Star or mark confusing sections to revisit if needed.']
           }
         ],
-        correctAnswers: ['Underline topic sentences and key transitions whil', 'Star or mark confusing sections to revisit if need'],
-        hint1: 'Think about active reading',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Underline topic sentences and key transitions while reading. Star or mark confusing sections to revisit if needed.'
+        correctAnswers: ['Star or mark confusing sections to revisit if needed.', 'Pay attention to "however," "although," "in contrast" — they signal shifts.'],
+        hint1: 'Think about what each concept specifically describes in Active Reading.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Active Reading describes a specific idea. Key Insight: Star or mark confusing sections to revisit if needed. ACT Tip: Pay attention to "however," "although," "in contrast" — they signal shifts.'
       }
     }
   ]

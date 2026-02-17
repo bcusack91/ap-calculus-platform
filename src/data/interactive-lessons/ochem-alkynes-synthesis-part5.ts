@@ -30,31 +30,31 @@ Retrosynthetic analysis for alkyne targets
       id: 'alkyn5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of alkyne synthesis?',
+            question: 'Which statement accurately explains Dehydrohalogenation?',
             options: [
-              'Dehydrohalogenation',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'Retrosynthetic analysis for alkyne targets',
+              'Acetylide alkylation builds carbon-carbon bonds',
+              'geminal or vicinal dihalide → alkyne',
+              '2 equivalents of base from dihalide → alkyne'
             ],
-            correctAnswer: 0,
-            explanation: 'Dehydrohalogenation: 2 equivalents of base from dihalide → alkyne'
+            correctAnswer: 3,
+            explanation: 'Correct — Dehydrohalogenation: 2 equivalents of base from dihalide → alkyne. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of alkyne synthesis, which is accurate?',
+            question: 'In the context of Alkyne Synthesis, which explains Acetylide alkylation builds…?',
             options: [
+              '2 equivalents of base from dihalide → alkyne',
               'Acetylide alkylation builds carbon-carbon bonds',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'geminal or vicinal dihalide → alkyne',
+              'Retrosynthetic analysis for alkyne targets'
             ],
-            correctAnswer: 0,
-            explanation: 'Acetylide alkylation builds carbon-carbon bonds'
+            correctAnswer: 1,
+            explanation: 'Correct — Acetylide alkylation builds carbon-carbon bonds. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,24 @@ Retrosynthetic analysis for alkyne targets
       id: 'alkyn5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Dehydrohalogenation',
-            options: ['2 equivalents of base from dihalide → alkyne', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Acetylide alkylation builds carbon-carbon bonds', 'Retrosynthetic analysis for alkyne targets', '2 equivalents of base from dihalide → alkyne', 'geminal or vicinal dihalide → alkyne']
           },
           {
             label: 'Double elimination',
-            options: ['geminal or vicinal dihalide → alkyne', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
-          },
-          {
-            label: 'Acetylide alkylation builds carbon-carbon bonds',
-            options: ['Acetylide alkylation builds carbon-carbon bonds', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['geminal or vicinal dihalide → alkyne', 'Acetylide alkylation builds carbon-carbon bonds', 'Retrosynthetic analysis for alkyne targets', '2 equivalents of base from dihalide → alkyne']
           }
         ],
-        correctAnswers: ['2 equivalents of base from dihalide → alkyne', 'geminal or vicinal dihalide → alkyne', 'Acetylide alkylation builds carbon-carbon bonds'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Alkyne Synthesis.'
+        correctAnswers: ['2 equivalents of base from dihalide → alkyne', 'geminal or vicinal dihalide → alkyne'],
+        hint1: 'Think about what each concept specifically describes in Alkyne Synthesis.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Alkyne Synthesis describes a specific idea. Dehydrohalogenation: 2 equivalents of base from dihalide → alkyne. Double elimination: geminal or vicinal dihalide → alkyne.'
       }
     }
   ]

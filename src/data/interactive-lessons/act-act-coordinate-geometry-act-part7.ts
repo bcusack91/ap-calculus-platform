@@ -18,20 +18,31 @@ Reflection: flip over x-axis (negate y) or y-axis (negate x).
       id: 'act-c7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes translation?',
+            question: 'What does "Translation" refer to in ACT prep?',
             options: [
-              'Translation is a key concept for ACT Math',
-              'Reflection: flip over x-axis (negate y) or y-axis (negate x)',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'flip over x-axis (negate y) or y-axis (negate x).',
+              '|f(x)|: reflects negative y-values above x-axis.',
+              'shift graph horizontally or vertically.',
+              'f(x) + k: up k; f(x-h): right h.'
             ],
-            correctAnswer: 0,
-            explanation: 'Translation: shift graph horizontally or vertically'
+            correctAnswer: 2,
+            explanation: 'Correct — Translation: shift graph horizontally or vertically. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              'flip over x-axis (negate y) or y-axis (negate x).',
+              'shift graph horizontally or vertically.',
+              'f(x) + k: up k; f(x-h): right h.',
+              '|f(x)|: reflects negative y-values above x-axis.'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Key Insight: f(x) + k: up k; f(x-h): right h. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Reflection: flip over x-axis (negate y) or y-axis (negate x).
       id: 'act-c7-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for review & applications?',
+            question: 'Regarding Review & Applications, which correctly describes ACT Tip?',
             options: [
-              'f(x) + k: up k; f(x-h): right h',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              '|f(x)|: reflects negative y-values above x-axis.',
+              'f(x) + k: up k; f(x-h): right h.',
+              'flip over x-axis (negate y) or y-axis (negate x).',
+              'shift graph horizontally or vertically.'
             ],
             correctAnswer: 0,
-            explanation: 'f(x) + k: up k; f(x-h): right h'
+            explanation: 'Correct — ACT Tip: |f(x)|: reflects negative y-values above x-axis. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Reflection: flip over x-axis (negate y) or y-axis (negate x).
       id: 'act-c7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Review & Applications:',
-            options: ['Translation: shift graph horizontally or verticall', 'Reflection: flip over x-axis (negate y) or y-axis ', 'Not applicable', 'None of these']
+            label: 'Translation',
+            options: ['flip over x-axis (negate y) or y-axis (negate x).', '|f(x)|: reflects negative y-values above x-axis.', 'shift graph horizontally or vertically.', 'f(x) + k: up k; f(x-h): right h.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['f(x) + k: up k; f(x-h): right h', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Reflection',
+            options: ['|f(x)|: reflects negative y-values above x-axis.', 'f(x) + k: up k; f(x-h): right h.', 'shift graph horizontally or vertically.', 'flip over x-axis (negate y) or y-axis (negate x).']
+          },
+          {
+            label: 'Key Insight',
+            options: ['|f(x)|: reflects negative y-values above x-axis.', 'f(x) + k: up k; f(x-h): right h.', 'flip over x-axis (negate y) or y-axis (negate x).', 'shift graph horizontally or vertically.']
           }
         ],
-        correctAnswers: ['Translation: shift graph horizontally or verticall', 'f(x) + k: up k; f(x-h): right h'],
-        hint1: 'Think about review & applications',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Translation: shift graph horizontally or vertically. f(x) + k: up k; f(x-h): right h.'
+        correctAnswers: ['shift graph horizontally or vertically.', 'flip over x-axis (negate y) or y-axis (negate x).', 'f(x) + k: up k; f(x-h): right h.'],
+        hint1: 'Think about what each concept specifically describes in Review & Applications.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Review & Applications describes a specific idea. Translation: shift graph horizontally or vertically. Reflection: flip over x-axis (negate y) or y-axis (negate x). Key Insight: f(x) + k: up k; f(x-h): right h.'
       }
     }
   ]

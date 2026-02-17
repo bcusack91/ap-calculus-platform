@@ -30,31 +30,31 @@ d/dx[log_a(u)] = u'/(u · ln(a))
       id: 'chain4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of chain rule with exponentials & logs?',
+            question: 'What does "d/dx[eᵘ] = eᵘ · u\' — the exponential…" refer to in calculus?',
             options: [
-              'd/dx[eᵘ] = eᵘ · u\' — the exponential function times the derivative of the exponent',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'd/dx[ln(u)] = u\'/u = (1/u) · u\'',
+              'd/dx[log_a(u)] = u\'/(u · ln(a))',
+              'd/dx[aᵘ] = aᵘ · ln(a) · u\' for any base a > 0',
+              'd/dx[eᵘ] = eᵘ · u\' — the exponential function times the derivative of the exponent'
             ],
-            correctAnswer: 0,
-            explanation: 'd/dx[eᵘ] = eᵘ · u\' — the exponential function times the derivative of the exponent'
+            correctAnswer: 3,
+            explanation: 'Correct — d/dx[eᵘ] = eᵘ · u\' — the exponential function times the derivative of the exponent. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of chain rule with exponentials & logs, which is accurate?',
+            question: 'Which of the following is true about d/dx[aᵘ] = aᵘ · ln(a) · u\' for any base…?',
             options: [
-              'd/dx[aᵘ] = aᵘ · ln(a) · u\' for any base a > 0',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'd/dx[log_a(u)] = u\'/(u · ln(a))',
+              'd/dx[ln(u)] = u\'/u = (1/u) · u\'',
+              'd/dx[eᵘ] = eᵘ · u\' — the exponential function times the derivative of the exponent',
+              'd/dx[aᵘ] = aᵘ · ln(a) · u\' for any base a > 0'
             ],
-            correctAnswer: 0,
-            explanation: 'd/dx[aᵘ] = aᵘ · ln(a) · u\' for any base a > 0'
+            correctAnswer: 3,
+            explanation: 'Correct — d/dx[aᵘ] = aᵘ · ln(a) · u\' for any base a > 0. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ d/dx[log_a(u)] = u'/(u · ln(a))
       id: 'chain4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to chain rule with exponentials & logs?',
+            question: 'Which of these accurately represents d/dx[log_a(u)] = u\'/(u · ln(a))?',
             options: [
-              'd/dx[log_a(u)] = u\'/(u · ln(a))',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'd/dx[aᵘ] = aᵘ · ln(a) · u\' for any base a > 0',
+              'd/dx[eᵘ] = eᵘ · u\' — the exponential function times the derivative of the exponent',
+              'd/dx[ln(u)] = u\'/u = (1/u) · u\'',
+              'd/dx[log_a(u)] = u\'/(u · ln(a))'
             ],
-            correctAnswer: 0,
-            explanation: 'd/dx[log_a(u)] = u\'/(u · ln(a))'
+            correctAnswer: 3,
+            explanation: 'Correct — d/dx[log_a(u)] = u\'/(u · ln(a)). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ d/dx[log_a(u)] = u'/(u · ln(a))
       id: 'chain4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'd/dx[eᵘ] = eᵘ · u\' — the exponential function times the derivative of the exponent',
-            options: ['d/dx[eᵘ] = eᵘ · u\' — the exponential function time', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'd/dx[eᵘ] = eᵘ · u\' — the exponential…',
+            options: ['d/dx[log_a(u)] = u\'/(u · ln(a))', 'd/dx[eᵘ] = eᵘ · u\' — the exponential function times the derivative of the exponent', 'd/dx[ln(u)] = u\'/u = (1/u) · u\'', 'd/dx[aᵘ] = aᵘ · ln(a) · u\' for any base a > 0']
           },
           {
             label: 'd/dx[ln(u)] = u\'/u = (1/u) · u\'',
-            options: ['d/dx[ln(u)] = u\'/u = (1/u) · u\'', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['d/dx[log_a(u)] = u\'/(u · ln(a))', 'd/dx[aᵘ] = aᵘ · ln(a) · u\' for any base a > 0', 'd/dx[eᵘ] = eᵘ · u\' — the exponential function times the derivative of the exponent', 'd/dx[ln(u)] = u\'/u = (1/u) · u\'']
           },
           {
-            label: 'd/dx[aᵘ] = aᵘ · ln(a) · u\' for any base a > 0',
-            options: ['d/dx[aᵘ] = aᵘ · ln(a) · u\' for any base a > 0', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'd/dx[aᵘ] = aᵘ · ln(a) · u\' for any base…',
+            options: ['d/dx[eᵘ] = eᵘ · u\' — the exponential function times the derivative of the exponent', 'd/dx[aᵘ] = aᵘ · ln(a) · u\' for any base a > 0', 'd/dx[log_a(u)] = u\'/(u · ln(a))', 'd/dx[ln(u)] = u\'/u = (1/u) · u\'']
           }
         ],
-        correctAnswers: ['d/dx[eᵘ] = eᵘ · u\' — the exponential function time', 'd/dx[ln(u)] = u\'/u = (1/u) · u\'', 'd/dx[aᵘ] = aᵘ · ln(a) · u\' for any base a > 0'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Chain Rule with Exponentials & Logs.'
+        correctAnswers: ['d/dx[eᵘ] = eᵘ · u\' — the exponential function times the derivative of the exponent', 'd/dx[ln(u)] = u\'/u = (1/u) · u\'', 'd/dx[aᵘ] = aᵘ · ln(a) · u\' for any base a > 0'],
+        hint1: 'Think about what each concept specifically describes in Chain Rule with Exponentials & Logs.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Chain Rule with Exponentials & Logs describes a specific idea. d/dx[eᵘ] = eᵘ · u\' — the exponential function times the derivative of the exponent. d/dx[ln(u)] = u\'/u = (1/u) · u\'. d/dx[aᵘ] = aᵘ · ln(a) · u\' for any base a > 0.'
       }
     }
   ]

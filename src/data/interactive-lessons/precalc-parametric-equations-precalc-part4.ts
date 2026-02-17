@@ -30,31 +30,31 @@ x = t, y = at² + bt + c (or other parameterizations)
       id: 'param4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of parametric equations for conics?',
+            question: 'Which of the following correctly describes Circle?',
             options: [
-              'Circle',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'x = h + a cos t, y = k + b sin t',
+              'x = t, y = at² + bt + c (or other parameterizations)',
+              'x = x₁ + at, y = y₁ + bt',
+              'x = h + r cos t, y = k + r sin t'
             ],
-            correctAnswer: 0,
-            explanation: 'Circle: x = h + r cos t, y = k + r sin t'
+            correctAnswer: 3,
+            explanation: 'Correct — Circle: x = h + r cos t, y = k + r sin t. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of parametric equations for conics, which is accurate?',
+            question: 'In the context of Parametric Equations for Conics, which explains Line?',
             options: [
+              'x = h + r cos t, y = k + r sin t',
               'x = x₁ + at, y = y₁ + bt',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'x = h + a cos t, y = k + b sin t',
+              'x = t, y = at² + bt + c (or other parameterizations)'
             ],
-            correctAnswer: 0,
-            explanation: 'Line: x = x₁ + at, y = y₁ + bt'
+            correctAnswer: 1,
+            explanation: 'Correct — Line: x = x₁ + at, y = y₁ + bt. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ x = t, y = at² + bt + c (or other parameterizations)
       id: 'param4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Circle',
-            options: ['x = h + r cos t, y = k + r sin t', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['x = h + r cos t, y = k + r sin t', 'x = h + a cos t, y = k + b sin t', 'x = x₁ + at, y = y₁ + bt', 'x = t, y = at² + bt + c (or other parameterizations)']
           },
           {
             label: 'Ellipse',
-            options: ['x = h + a cos t, y = k + b sin t', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['x = h + a cos t, y = k + b sin t', 'x = x₁ + at, y = y₁ + bt', 'x = t, y = at² + bt + c (or other parameterizations)', 'x = h + r cos t, y = k + r sin t']
           },
           {
             label: 'Line',
-            options: ['x = x₁ + at, y = y₁ + bt', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['x = t, y = at² + bt + c (or other parameterizations)', 'x = h + r cos t, y = k + r sin t', 'x = h + a cos t, y = k + b sin t', 'x = x₁ + at, y = y₁ + bt']
           }
         ],
         correctAnswers: ['x = h + r cos t, y = k + r sin t', 'x = h + a cos t, y = k + b sin t', 'x = x₁ + at, y = y₁ + bt'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Parametric Equations for Conics.'
+        hint1: 'Think about what each concept specifically describes in Parametric Equations for Conics.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Parametric Equations for Conics describes a specific idea. Circle: x = h + r cos t, y = k + r sin t. Ellipse: x = h + a cos t, y = k + b sin t. Line: x = x₁ + at, y = y₁ + bt.'
       }
     }
   ]

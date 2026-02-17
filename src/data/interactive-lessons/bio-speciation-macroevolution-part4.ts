@@ -19,31 +19,31 @@ export const bioSpeciationPart4Data = {
       id: 'spec4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes one ancestor diversifies into many species?',
+            question: 'What does "One ancestor diversifies into many…" refer to in biology?',
             options: [
+              'Darwin\'s finches, Hawaiian honeycreepers',
+              'Triggered by mass extinctions or new environments',
               'One ancestor diversifies into many species',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Occurs when new niches become available'
             ],
-            correctAnswer: 0,
-            explanation: 'One ancestor diversifies into many species'
+            correctAnswer: 2,
+            explanation: 'Correct — One ancestor diversifies into many species. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of adaptive radiation, which statement is accurate?',
+            question: 'Select the statement that correctly describes Examples:',
             options: [
-              'Examples: Darwin\'s finches, Hawaiian honeycreepers',
-              'seiceps ynam otni seifisrevid rotsecna enO',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Triggered by mass extinctions or new environments',
+              'One ancestor diversifies into many species',
+              'Occurs when new niches become available',
+              'Darwin\'s finches, Hawaiian honeycreepers'
             ],
-            correctAnswer: 0,
-            explanation: 'Examples: Darwin\'s finches, Hawaiian honeycreepers'
+            correctAnswer: 3,
+            explanation: 'Correct — Examples: Darwin\'s finches, Hawaiian honeycreepers. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioSpeciationPart4Data = {
       id: 'spec4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to adaptive radiation?',
+            question: 'Regarding Adaptive Radiation, which correctly describes Triggered by mass extinctions or new…?',
             options: [
-              'Triggered by mass extinctions or new environments',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'One ancestor diversifies into many species',
+              'Occurs when new niches become available',
+              'Darwin\'s finches, Hawaiian honeycreepers',
+              'Triggered by mass extinctions or new environments'
             ],
-            correctAnswer: 0,
-            explanation: 'Triggered by mass extinctions or new environments'
+            correctAnswer: 3,
+            explanation: 'Correct — Triggered by mass extinctions or new environments. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioSpeciationPart4Data = {
       id: 'spec4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'One ancestor diversifies into many species is important in adaptive radiation because',
-            options: ['One ancestor diversifies into many species', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'One ancestor diversifies into many…',
+            options: ['Occurs when new niches become available', 'Triggered by mass extinctions or new environments', 'One ancestor diversifies into many species', 'Darwin\'s finches, Hawaiian honeycreepers']
           },
           {
-            label: 'Occurs when new niches become available is important in adaptive radiation because',
-            options: ['Occurs when new niches become available', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Occurs when new niches become available',
+            options: ['Occurs when new niches become available', 'Darwin\'s finches, Hawaiian honeycreepers', 'One ancestor diversifies into many species', 'Triggered by mass extinctions or new environments']
           },
           {
-            label: 'Examples is important in adaptive radiation because',
-            options: ['Darwin\'s finches, Hawaiian honeycreepers', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Examples',
+            options: ['Triggered by mass extinctions or new environments', 'Darwin\'s finches, Hawaiian honeycreepers', 'One ancestor diversifies into many species', 'Occurs when new niches become available']
           }
         ],
         correctAnswers: ['One ancestor diversifies into many species', 'Occurs when new niches become available', 'Darwin\'s finches, Hawaiian honeycreepers'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Adaptive Radiation.'
+        hint1: 'Think about what each concept specifically describes in Adaptive Radiation.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Adaptive Radiation describes a specific idea. One ancestor diversifies into many species. Occurs when new niches become available. Examples: Darwin\'s finches, Hawaiian honeycreepers.'
       }
     }
   ]

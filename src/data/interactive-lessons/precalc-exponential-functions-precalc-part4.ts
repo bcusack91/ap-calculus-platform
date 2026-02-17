@@ -30,31 +30,31 @@ Check solutions in the original equation
       id: 'expon4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of exponential equations?',
-            options: [
-              'If bˣ = bʸ, then x = y (one-to-one property)',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'If bˣ = bʸ, then x = y (one-to-one property)'
-          },
-          {
-            question: 'In the context of exponential equations, which is accurate?',
+            question: 'Which statement accurately explains If bˣ = bʸ, then x = y (one-to-one…?',
             options: [
               'Use logarithms when bases cannot be matched',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Check solutions in the original equation',
+              'If bˣ = bʸ, then x = y (one-to-one property)',
+              'Rewrite both sides with the same base when possible'
             ],
-            correctAnswer: 0,
-            explanation: 'Use logarithms when bases cannot be matched'
+            correctAnswer: 2,
+            explanation: 'Correct — If bˣ = bʸ, then x = y (one-to-one property). The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Use logarithms when bases cannot be…:',
+            options: [
+              'Check solutions in the original equation',
+              'Rewrite both sides with the same base when possible',
+              'Use logarithms when bases cannot be matched',
+              'If bˣ = bʸ, then x = y (one-to-one property)'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Use logarithms when bases cannot be matched. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Check solutions in the original equation
       id: 'expon4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'If bˣ = bʸ, then x = y (one-to-one property)',
-            options: ['If bˣ = bʸ, then x = y (one-to-one property)', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            label: 'If bˣ = bʸ, then x = y (one-to-one…',
+            options: ['Check solutions in the original equation', 'Rewrite both sides with the same base when possible', 'Use logarithms when bases cannot be matched', 'If bˣ = bʸ, then x = y (one-to-one property)']
           },
           {
-            label: 'Rewrite both sides with the same base when possible',
-            options: ['Rewrite both sides with the same base when possibl', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            label: 'Rewrite both sides with the same base…',
+            options: ['Use logarithms when bases cannot be matched', 'Check solutions in the original equation', 'Rewrite both sides with the same base when possible', 'If bˣ = bʸ, then x = y (one-to-one property)']
           },
           {
-            label: 'Use logarithms when bases cannot be matched',
-            options: ['Use logarithms when bases cannot be matched', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            label: 'Use logarithms when bases cannot be…',
+            options: ['Rewrite both sides with the same base when possible', 'If bˣ = bʸ, then x = y (one-to-one property)', 'Use logarithms when bases cannot be matched', 'Check solutions in the original equation']
           }
         ],
-        correctAnswers: ['If bˣ = bʸ, then x = y (one-to-one property)', 'Rewrite both sides with the same base when possibl', 'Use logarithms when bases cannot be matched'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Exponential Equations.'
+        correctAnswers: ['If bˣ = bʸ, then x = y (one-to-one property)', 'Rewrite both sides with the same base when possible', 'Use logarithms when bases cannot be matched'],
+        hint1: 'Think about what each concept specifically describes in Exponential Equations.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Exponential Equations describes a specific idea. If bˣ = bʸ, then x = y (one-to-one property). Rewrite both sides with the same base when possible. Use logarithms when bases cannot be matched.'
       }
     }
   ]

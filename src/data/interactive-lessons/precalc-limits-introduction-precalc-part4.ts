@@ -30,31 +30,31 @@ one-sided limits exist but are not equal
       id: 'limit4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of one-sided limits?',
+            question: 'Which of the following correctly describes Left-hand limit?',
             options: [
-              'Left-hand limit',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'lim(x→c⁻) f(x) — approaching from the left',
+              'one-sided limits exist but are not equal',
+              'lim(x→c⁺) f(x) — approaching from the right',
+              'The two-sided limit exists iff both one-sided limits exist and are equal'
             ],
             correctAnswer: 0,
-            explanation: 'Left-hand limit: lim(x→c⁻) f(x) — approaching from the left'
+            explanation: 'Correct — Left-hand limit: lim(x→c⁻) f(x) — approaching from the left. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of one-sided limits, which is accurate?',
+            question: 'In the context of One-Sided Limits, which explains The two-sided limit exists iff both…?',
             options: [
               'The two-sided limit exists iff both one-sided limits exist and are equal',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'lim(x→c⁺) f(x) — approaching from the right',
+              'lim(x→c⁻) f(x) — approaching from the left',
+              'one-sided limits exist but are not equal'
             ],
             correctAnswer: 0,
-            explanation: 'The two-sided limit exists iff both one-sided limits exist and are equal'
+            explanation: 'Correct — The two-sided limit exists iff both one-sided limits exist and are equal. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ one-sided limits exist but are not equal
       id: 'limit4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Left-hand limit',
-            options: ['lim(x→c⁻) f(x) — approaching from the left', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['lim(x→c⁺) f(x) — approaching from the right', 'The two-sided limit exists iff both one-sided limits exist and are equal', 'lim(x→c⁻) f(x) — approaching from the left', 'one-sided limits exist but are not equal']
           },
           {
             label: 'Right-hand limit',
-            options: ['lim(x→c⁺) f(x) — approaching from the right', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['one-sided limits exist but are not equal', 'The two-sided limit exists iff both one-sided limits exist and are equal', 'lim(x→c⁻) f(x) — approaching from the left', 'lim(x→c⁺) f(x) — approaching from the right']
           },
           {
-            label: 'The two-sided limit exists iff both one-sided limits exist and are equal',
-            options: ['The two-sided limit exists iff both one-sided limi', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            label: 'Jump discontinuity',
+            options: ['lim(x→c⁻) f(x) — approaching from the left', 'The two-sided limit exists iff both one-sided limits exist and are equal', 'one-sided limits exist but are not equal', 'lim(x→c⁺) f(x) — approaching from the right']
           }
         ],
-        correctAnswers: ['lim(x→c⁻) f(x) — approaching from the left', 'lim(x→c⁺) f(x) — approaching from the right', 'The two-sided limit exists iff both one-sided limi'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding One-Sided Limits.'
+        correctAnswers: ['lim(x→c⁻) f(x) — approaching from the left', 'lim(x→c⁺) f(x) — approaching from the right', 'one-sided limits exist but are not equal'],
+        hint1: 'Think about what each concept specifically describes in One-Sided Limits.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in One-Sided Limits describes a specific idea. Left-hand limit: lim(x→c⁻) f(x) — approaching from the left. Right-hand limit: lim(x→c⁺) f(x) — approaching from the right. Jump discontinuity: one-sided limits exist but are not equal.'
       }
     }
   ]

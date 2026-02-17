@@ -30,31 +30,31 @@ Designing memory improvement experiments
       id: 'memor6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of problem-solving workshop?',
-            options: [
-              'Identifying memory types from scenarios',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
-            ],
-            correctAnswer: 0,
-            explanation: 'Identifying memory types from scenarios'
-          },
-          {
-            question: 'In the context of problem-solving workshop, which is accurate?',
+            question: 'What does "Identifying memory types from scenarios" refer to in psychology?',
             options: [
               'Analyzing amnesia cases',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Applying encoding strategies',
+              'Designing memory improvement experiments',
+              'Identifying memory types from scenarios'
             ],
-            correctAnswer: 0,
-            explanation: 'Analyzing amnesia cases'
+            correctAnswer: 3,
+            explanation: 'Correct — Identifying memory types from scenarios. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Analyzing amnesia cases:',
+            options: [
+              'Identifying memory types from scenarios',
+              'Analyzing amnesia cases',
+              'Applying encoding strategies',
+              'Designing memory improvement experiments'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Analyzing amnesia cases. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Designing memory improvement experiments
       id: 'memor6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Identifying memory types from scenarios',
-            options: ['Identifying memory types from scenarios', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Applying encoding strategies', 'Identifying memory types from scenarios', 'Designing memory improvement experiments', 'Analyzing amnesia cases']
           },
           {
             label: 'Applying encoding strategies',
-            options: ['Applying encoding strategies', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Identifying memory types from scenarios', 'Analyzing amnesia cases', 'Designing memory improvement experiments', 'Applying encoding strategies']
           },
           {
             label: 'Analyzing amnesia cases',
-            options: ['Analyzing amnesia cases', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Identifying memory types from scenarios', 'Applying encoding strategies', 'Analyzing amnesia cases', 'Designing memory improvement experiments']
           }
         ],
         correctAnswers: ['Identifying memory types from scenarios', 'Applying encoding strategies', 'Analyzing amnesia cases'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving Workshop.'
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Identifying memory types from scenarios. Applying encoding strategies. Analyzing amnesia cases.'
       }
     }
   ]

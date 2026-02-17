@@ -30,31 +30,31 @@ EAS reactions and directing groups
       id: 'elect7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of synthesis & review?',
+            question: 'Which statement accurately explains EAS is the primary reaction of aromatic…?',
             options: [
               'EAS is the primary reaction of aromatic compounds',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'EAS reactions and directing groups',
+              'Multi-step synthesis requires planning',
+              'Directing effects control regiochemistry'
             ],
             correctAnswer: 0,
-            explanation: 'EAS is the primary reaction of aromatic compounds'
+            explanation: 'Correct — EAS is the primary reaction of aromatic compounds. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of synthesis & review, which is accurate?',
+            question: 'Select the statement that correctly describes Multi-step synthesis requires planning:',
             options: [
+              'Directing effects control regiochemistry',
+              'EAS reactions and directing groups',
               'Multi-step synthesis requires planning',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'EAS is the primary reaction of aromatic compounds'
             ],
-            correctAnswer: 0,
-            explanation: 'Multi-step synthesis requires planning'
+            correctAnswer: 2,
+            explanation: 'Correct — Multi-step synthesis requires planning. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ EAS reactions and directing groups
       id: 'elect7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'EAS is the primary reaction of aromatic compounds',
-            options: ['EAS is the primary reaction of aromatic compounds', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'EAS is the primary reaction of aromatic…',
+            options: ['Multi-step synthesis requires planning', 'EAS is the primary reaction of aromatic compounds', 'Directing effects control regiochemistry', 'EAS reactions and directing groups']
           },
           {
             label: 'Directing effects control regiochemistry',
-            options: ['Directing effects control regiochemistry', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['EAS reactions and directing groups', 'Multi-step synthesis requires planning', 'Directing effects control regiochemistry', 'EAS is the primary reaction of aromatic compounds']
           },
           {
             label: 'Multi-step synthesis requires planning',
-            options: ['Multi-step synthesis requires planning', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['EAS is the primary reaction of aromatic compounds', 'Directing effects control regiochemistry', 'Multi-step synthesis requires planning', 'EAS reactions and directing groups']
           }
         ],
         correctAnswers: ['EAS is the primary reaction of aromatic compounds', 'Directing effects control regiochemistry', 'Multi-step synthesis requires planning'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Synthesis & Review.'
+        hint1: 'Think about what each concept specifically describes in Synthesis & Review.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Synthesis & Review describes a specific idea. EAS is the primary reaction of aromatic compounds. Directing effects control regiochemistry. Multi-step synthesis requires planning.'
       }
     }
   ]

@@ -18,20 +18,31 @@ Assign variables to unknowns.
       id: 'act-a5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes assign variables to unknowns?',
+            question: 'Which of the following correctly describes Assign variables to unknowns.?',
             options: [
-              'Assign variables to unknowns is a key concept for ACT Math',
-              '"Is" = equals, "more than" = addition, "less than" = subtraction',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              '"Of" = multiplication, "per" = division.',
+              'Assign variables to unknowns.',
+              'Set up the equation, solve, then verify your answer makes sense in context.',
+              '"Is" = equals, "more than" = addition, "less than" = subtraction.'
             ],
-            correctAnswer: 0,
-            explanation: 'Assign variables to unknowns'
+            correctAnswer: 1,
+            explanation: 'Correct — Assign variables to unknowns. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Word Problem Translation, which explains Key Insight?',
+            options: [
+              'Set up the equation, solve, then verify your answer makes sense in context.',
+              '"Of" = multiplication, "per" = division.',
+              'Assign variables to unknowns.',
+              '"Is" = equals, "more than" = addition, "less than" = subtraction.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Key Insight: "Of" = multiplication, "per" = division. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Assign variables to unknowns.
       id: 'act-a5-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for word problem translation?',
+            question: 'Which statement about ACT Tip is correct?',
             options: [
-              '"Of" = multiplication, "per" = division',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              '"Is" = equals, "more than" = addition, "less than" = subtraction.',
+              'Assign variables to unknowns.',
+              'Set up the equation, solve, then verify your answer makes sense in context.',
+              '"Of" = multiplication, "per" = division.'
             ],
-            correctAnswer: 0,
-            explanation: '"Of" = multiplication, "per" = division'
+            correctAnswer: 2,
+            explanation: 'Correct — ACT Tip: Set up the equation, solve, then verify your answer makes sense in context. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ Assign variables to unknowns.
       id: 'act-a5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Word Problem Translation:',
-            options: ['Assign variables to unknowns', '"Is" = equals, "more than" = addition, "less than"', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['"Is" = equals, "more than" = addition, "less than" = subtraction.', 'Set up the equation, solve, then verify your answer makes sense in context.', '"Of" = multiplication, "per" = division.', 'Assign variables to unknowns.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['"Of" = multiplication, "per" = division', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'ACT Tip',
+            options: ['"Of" = multiplication, "per" = division.', 'Set up the equation, solve, then verify your answer makes sense in context.', 'Assign variables to unknowns.', '"Is" = equals, "more than" = addition, "less than" = subtraction.']
           }
         ],
-        correctAnswers: ['Assign variables to unknowns', '"Of" = multiplication, "per" = division'],
-        hint1: 'Think about word problem translation',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Assign variables to unknowns. "Of" = multiplication, "per" = division.'
+        correctAnswers: ['"Of" = multiplication, "per" = division.', 'Set up the equation, solve, then verify your answer makes sense in context.'],
+        hint1: 'Think about what each concept specifically describes in Word Problem Translation.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Word Problem Translation describes a specific idea. Key Insight: "Of" = multiplication, "per" = division. ACT Tip: Set up the equation, solve, then verify your answer makes sense in context.'
       }
     }
   ]

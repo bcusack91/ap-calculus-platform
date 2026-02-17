@@ -30,31 +30,31 @@ lim[c · f(x)] = c · lim f(x)
       id: 'limit2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of limit laws?',
+            question: 'Which statement accurately explains Sum rule?',
             options: [
-              'Sum rule',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'lim[f(x) · g(x)] = lim f(x) · lim g(x)',
+              'lim[f(x)/g(x)] = lim f(x) / lim g(x), provided denominator ≠ 0',
+              'lim[f(x) + g(x)] = lim f(x) + lim g(x)',
+              'lim[c · f(x)] = c · lim f(x)'
             ],
-            correctAnswer: 0,
-            explanation: 'Sum rule: lim[f(x) + g(x)] = lim f(x) + lim g(x)'
+            correctAnswer: 2,
+            explanation: 'Correct — Sum rule: lim[f(x) + g(x)] = lim f(x) + lim g(x). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of limit laws, which is accurate?',
+            question: 'Which of the following is true about Quotient rule?',
             options: [
+              'lim[f(x) · g(x)] = lim f(x) · lim g(x)',
+              'lim[f(x) + g(x)] = lim f(x) + lim g(x)',
               'lim[f(x)/g(x)] = lim f(x) / lim g(x), provided denominator ≠ 0',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'lim[c · f(x)] = c · lim f(x)'
             ],
-            correctAnswer: 0,
-            explanation: 'Quotient rule: lim[f(x)/g(x)] = lim f(x) / lim g(x), provided denominator ≠ 0'
+            correctAnswer: 2,
+            explanation: 'Correct — Quotient rule: lim[f(x)/g(x)] = lim f(x) / lim g(x), provided denominator ≠ 0. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ lim[c · f(x)] = c · lim f(x)
       id: 'limit2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to limit laws?',
+            question: 'Which of these accurately represents Constant multiple?',
             options: [
               'lim[c · f(x)] = c · lim f(x)',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'lim[f(x) + g(x)] = lim f(x) + lim g(x)',
+              'lim[f(x)/g(x)] = lim f(x) / lim g(x), provided denominator ≠ 0',
+              'lim[f(x) · g(x)] = lim f(x) · lim g(x)'
             ],
             correctAnswer: 0,
-            explanation: 'Constant multiple: lim[c · f(x)] = c · lim f(x)'
+            explanation: 'Correct — Constant multiple: lim[c · f(x)] = c · lim f(x). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ lim[c · f(x)] = c · lim f(x)
       id: 'limit2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Sum rule',
-            options: ['lim[f(x) + g(x)] = lim f(x) + lim g(x)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['lim[f(x)/g(x)] = lim f(x) / lim g(x), provided denominator ≠ 0', 'lim[c · f(x)] = c · lim f(x)', 'lim[f(x) + g(x)] = lim f(x) + lim g(x)', 'lim[f(x) · g(x)] = lim f(x) · lim g(x)']
           },
           {
             label: 'Product rule',
-            options: ['lim[f(x) · g(x)] = lim f(x) · lim g(x)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['lim[f(x)/g(x)] = lim f(x) / lim g(x), provided denominator ≠ 0', 'lim[c · f(x)] = c · lim f(x)', 'lim[f(x) · g(x)] = lim f(x) · lim g(x)', 'lim[f(x) + g(x)] = lim f(x) + lim g(x)']
           },
           {
             label: 'Quotient rule',
-            options: ['lim[f(x)/g(x)] = lim f(x) / lim g(x), provided den', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['lim[c · f(x)] = c · lim f(x)', 'lim[f(x) + g(x)] = lim f(x) + lim g(x)', 'lim[f(x)/g(x)] = lim f(x) / lim g(x), provided denominator ≠ 0', 'lim[f(x) · g(x)] = lim f(x) · lim g(x)']
           }
         ],
-        correctAnswers: ['lim[f(x) + g(x)] = lim f(x) + lim g(x)', 'lim[f(x) · g(x)] = lim f(x) · lim g(x)', 'lim[f(x)/g(x)] = lim f(x) / lim g(x), provided den'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Limit Laws.'
+        correctAnswers: ['lim[f(x) + g(x)] = lim f(x) + lim g(x)', 'lim[f(x) · g(x)] = lim f(x) · lim g(x)', 'lim[f(x)/g(x)] = lim f(x) / lim g(x), provided denominator ≠ 0'],
+        hint1: 'Think about what each concept specifically describes in Limit Laws.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Limit Laws describes a specific idea. Sum rule: lim[f(x) + g(x)] = lim f(x) + lim g(x). Product rule: lim[f(x) · g(x)] = lim f(x) · lim g(x). Quotient rule: lim[f(x)/g(x)] = lim f(x) / lim g(x), provided denominator ≠ 0.'
       }
     }
   ]

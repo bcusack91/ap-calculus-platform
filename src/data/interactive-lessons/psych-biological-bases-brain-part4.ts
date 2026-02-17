@@ -30,31 +30,31 @@ frontal, parietal, temporal, occipital lobes
       id: 'biolo4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of brain structure & function?',
+            question: 'Which of the following correctly describes Brainstem?',
             options: [
-              'Brainstem',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'coordination and balance',
+              'amygdala (fear), hippocampus (memory), hypothalamus (homeostasis)',
+              'frontal, parietal, temporal, occipital lobes',
+              'medulla (breathing), pons, reticular formation'
             ],
-            correctAnswer: 0,
-            explanation: 'Brainstem: medulla (breathing), pons, reticular formation'
+            correctAnswer: 3,
+            explanation: 'Correct — Brainstem: medulla (breathing), pons, reticular formation. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of brain structure & function, which is accurate?',
+            question: 'Select the statement that correctly describes Limbic system:',
             options: [
-              'amygdala (fear), hippocampus (memory), hypothalamus (homeostasis)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'coordination and balance',
+              'frontal, parietal, temporal, occipital lobes',
+              'medulla (breathing), pons, reticular formation',
+              'amygdala (fear), hippocampus (memory), hypothalamus (homeostasis)'
             ],
-            correctAnswer: 0,
-            explanation: 'Limbic system: amygdala (fear), hippocampus (memory), hypothalamus (homeostasis)'
+            correctAnswer: 3,
+            explanation: 'Correct — Limbic system: amygdala (fear), hippocampus (memory), hypothalamus (homeostasis). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ frontal, parietal, temporal, occipital lobes
       id: 'biolo4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Brainstem',
-            options: ['medulla (breathing), pons, reticular formation', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['medulla (breathing), pons, reticular formation', 'amygdala (fear), hippocampus (memory), hypothalamus (homeostasis)', 'frontal, parietal, temporal, occipital lobes', 'coordination and balance']
           },
           {
             label: 'Cerebellum',
-            options: ['coordination and balance', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['medulla (breathing), pons, reticular formation', 'coordination and balance', 'amygdala (fear), hippocampus (memory), hypothalamus (homeostasis)', 'frontal, parietal, temporal, occipital lobes']
           },
           {
             label: 'Limbic system',
-            options: ['amygdala (fear), hippocampus (memory), hypothalamu', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['amygdala (fear), hippocampus (memory), hypothalamus (homeostasis)', 'frontal, parietal, temporal, occipital lobes', 'medulla (breathing), pons, reticular formation', 'coordination and balance']
           }
         ],
-        correctAnswers: ['medulla (breathing), pons, reticular formation', 'coordination and balance', 'amygdala (fear), hippocampus (memory), hypothalamu'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Brain Structure & Function.'
+        correctAnswers: ['medulla (breathing), pons, reticular formation', 'coordination and balance', 'amygdala (fear), hippocampus (memory), hypothalamus (homeostasis)'],
+        hint1: 'Think about what each concept specifically describes in Brain Structure & Function.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Brain Structure & Function describes a specific idea. Brainstem: medulla (breathing), pons, reticular formation. Cerebellum: coordination and balance. Limbic system: amygdala (fear), hippocampus (memory), hypothalamus (homeostasis).'
       }
     }
   ]

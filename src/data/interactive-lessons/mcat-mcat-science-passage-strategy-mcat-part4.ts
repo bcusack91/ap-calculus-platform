@@ -71,23 +71,28 @@ These are often the quickest points — do them if you have solid content master
       id: 'mcat-4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Discrete Questions:',
-            options: ['Discrete questions: standalone, not linked to a passage — te', 'These are often the quickest points — do them if you have so', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Discrete questions',
+            options: ['These are often the quickest points — do them if you have solid content mastery.', 'Educated guessing: if you can eliminate 2 options, you have a 50% chance.', 'Use process of elimination: cross out answers that are clearly wrong.', 'standalone, not linked to a passage — test pure content knowledge.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Use process of elimination: cross out answers that are clear', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Key Insight',
+            options: ['standalone, not linked to a passage — test pure content knowledge.', 'Use process of elimination: cross out answers that are clearly wrong.', 'Educated guessing: if you can eliminate 2 options, you have a 50% chance.', 'These are often the quickest points — do them if you have solid content mastery.']
+          },
+          {
+            label: 'MCAT Tip',
+            options: ['These are often the quickest points — do them if you have solid content mastery.', 'Use process of elimination: cross out answers that are clearly wrong.', 'standalone, not linked to a passage — test pure content knowledge.', 'Educated guessing: if you can eliminate 2 options, you have a 50% chance.']
           }
         ],
-        correctAnswers: ['Discrete questions: standalone, not linked to a passage — te', 'Use process of elimination: cross out answers that are clear'],
-        hint1: 'Think about discrete questions',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Discrete questions: standalone, not linked to a passage — test pure content knowledge. Use process of elimination: cross out answers that are clearly wrong.'
+        correctAnswers: ['standalone, not linked to a passage — test pure content knowledge.', 'Use process of elimination: cross out answers that are clearly wrong.', 'Educated guessing: if you can eliminate 2 options, you have a 50% chance.'],
+        hint1: 'Think about what each concept specifically describes in Discrete Questions.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Discrete Questions describes a specific idea. Discrete questions: standalone, not linked to a passage — test pure content knowledge. Key Insight: Use process of elimination: cross out answers that are clearly wrong. MCAT Tip: Educated guessing: if you can eliminate 2 options, you have a 50% chance.'
       }
     }
   ]

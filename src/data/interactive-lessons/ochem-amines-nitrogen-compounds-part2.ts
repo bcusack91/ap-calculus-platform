@@ -30,31 +30,31 @@ Electron-withdrawing groups decrease basicity
       id: 'amine2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of amine basicity?',
+            question: 'What does "Amine basicity" refer to in this topic?',
             options: [
-              'Amine basicity',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'Electron-withdrawing groups decrease basicity',
+              'Alkylamines more basic than aniline (aromatic amine)',
+              'pKb depends on electron density on nitrogen',
+              'Electron-donating groups increase basicity'
             ],
-            correctAnswer: 0,
-            explanation: 'Amine basicity: pKb depends on electron density on nitrogen'
+            correctAnswer: 2,
+            explanation: 'Correct — Amine basicity: pKb depends on electron density on nitrogen. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of amine basicity, which is accurate?',
+            question: 'Select the statement that correctly describes Electron-donating groups increase…:',
             options: [
-              'Electron-donating groups increase basicity',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Alkylamines more basic than aniline (aromatic amine)',
+              'Electron-withdrawing groups decrease basicity',
+              'pKb depends on electron density on nitrogen',
+              'Electron-donating groups increase basicity'
             ],
-            correctAnswer: 0,
-            explanation: 'Electron-donating groups increase basicity'
+            correctAnswer: 3,
+            explanation: 'Correct — Electron-donating groups increase basicity. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Electron-withdrawing groups decrease basicity
       id: 'amine2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Amine basicity',
-            options: ['pKb depends on electron density on nitrogen', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Electron-donating groups increase basicity', 'Electron-withdrawing groups decrease basicity', 'Alkylamines more basic than aniline (aromatic amine)', 'pKb depends on electron density on nitrogen']
           },
           {
-            label: 'Alkylamines more basic than aniline (aromatic amine)',
-            options: ['Alkylamines more basic than aniline (aromatic amin', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Alkylamines more basic than aniline…',
+            options: ['pKb depends on electron density on nitrogen', 'Alkylamines more basic than aniline (aromatic amine)', 'Electron-donating groups increase basicity', 'Electron-withdrawing groups decrease basicity']
           },
           {
-            label: 'Electron-donating groups increase basicity',
-            options: ['Electron-donating groups increase basicity', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Electron-donating groups increase…',
+            options: ['Electron-donating groups increase basicity', 'pKb depends on electron density on nitrogen', 'Alkylamines more basic than aniline (aromatic amine)', 'Electron-withdrawing groups decrease basicity']
           }
         ],
-        correctAnswers: ['pKb depends on electron density on nitrogen', 'Alkylamines more basic than aniline (aromatic amin', 'Electron-donating groups increase basicity'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Amine Basicity.'
+        correctAnswers: ['pKb depends on electron density on nitrogen', 'Alkylamines more basic than aniline (aromatic amine)', 'Electron-donating groups increase basicity'],
+        hint1: 'Think about what each concept specifically describes in Amine Basicity.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Amine Basicity describes a specific idea. Amine basicity: pKb depends on electron density on nitrogen. Alkylamines more basic than aniline (aromatic amine). Electron-donating groups increase basicity.'
       }
     }
   ]

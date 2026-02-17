@@ -30,31 +30,31 @@ approximate ln 2 to within 0.01 — need bₙ₊₁ < 0.01
       id: 'alter4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of alternating series error bound?',
+            question: 'What does "Error bound" refer to in calculus?',
             options: [
-              'Error bound',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
+              'approximate ln 2 to within 0.01 — need bₙ₊₁ < 0.01',
+              'The error is at most the absolute value of the next term',
+              'This gives a quick estimate of how many terms are needed for desired accuracy',
+              '|S - Sₙ| ≤ bₙ₊₁ (the first omitted term)'
             ],
-            correctAnswer: 0,
-            explanation: 'Error bound: |S - Sₙ| ≤ bₙ₊₁ (the first omitted term)'
+            correctAnswer: 3,
+            explanation: 'Correct — Error bound: |S - Sₙ| ≤ bₙ₊₁ (the first omitted term). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of alternating series error bound, which is accurate?',
+            question: 'Which of the following is true about This gives a quick estimate of how many…?',
             options: [
+              'The error is at most the absolute value of the next term',
               'This gives a quick estimate of how many terms are needed for desired accuracy',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              '|S - Sₙ| ≤ bₙ₊₁ (the first omitted term)',
+              'approximate ln 2 to within 0.01 — need bₙ₊₁ < 0.01'
             ],
-            correctAnswer: 0,
-            explanation: 'This gives a quick estimate of how many terms are needed for desired accuracy'
+            correctAnswer: 1,
+            explanation: 'Correct — This gives a quick estimate of how many terms are needed for desired accuracy. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ approximate ln 2 to within 0.01 — need bₙ₊₁ < 0.01
       id: 'alter4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to alternating series error bound?',
+            question: 'Regarding Alternating Series Error Bound, which correctly describes Example?',
             options: [
               'approximate ln 2 to within 0.01 — need bₙ₊₁ < 0.01',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'This gives a quick estimate of how many terms are needed for desired accuracy',
+              '|S - Sₙ| ≤ bₙ₊₁ (the first omitted term)',
+              'The error is at most the absolute value of the next term'
             ],
             correctAnswer: 0,
-            explanation: 'Example: approximate ln 2 to within 0.01 — need bₙ₊₁ < 0.01'
+            explanation: 'Correct — Example: approximate ln 2 to within 0.01 — need bₙ₊₁ < 0.01. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,24 @@ approximate ln 2 to within 0.01 — need bₙ₊₁ < 0.01
       id: 'alter4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Error bound',
-            options: ['|S - Sₙ| ≤ bₙ₊₁ (the first omitted term)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['The error is at most the absolute value of the next term', 'approximate ln 2 to within 0.01 — need bₙ₊₁ < 0.01', '|S - Sₙ| ≤ bₙ₊₁ (the first omitted term)', 'This gives a quick estimate of how many terms are needed for desired accuracy']
           },
           {
-            label: 'The error is at most the absolute value of the next term',
-            options: ['The error is at most the absolute value of the nex', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
-          },
-          {
-            label: 'This gives a quick estimate of how many terms are needed for desired accuracy',
-            options: ['This gives a quick estimate of how many terms are ', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Example',
+            options: ['|S - Sₙ| ≤ bₙ₊₁ (the first omitted term)', 'This gives a quick estimate of how many terms are needed for desired accuracy', 'The error is at most the absolute value of the next term', 'approximate ln 2 to within 0.01 — need bₙ₊₁ < 0.01']
           }
         ],
-        correctAnswers: ['|S - Sₙ| ≤ bₙ₊₁ (the first omitted term)', 'The error is at most the absolute value of the nex', 'This gives a quick estimate of how many terms are '],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Alternating Series Error Bound.'
+        correctAnswers: ['|S - Sₙ| ≤ bₙ₊₁ (the first omitted term)', 'approximate ln 2 to within 0.01 — need bₙ₊₁ < 0.01'],
+        hint1: 'Think about what each concept specifically describes in Alternating Series Error Bound.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Alternating Series Error Bound describes a specific idea. Error bound: |S - Sₙ| ≤ bₙ₊₁ (the first omitted term). Example: approximate ln 2 to within 0.01 — need bₙ₊₁ < 0.01.'
       }
     }
   ]

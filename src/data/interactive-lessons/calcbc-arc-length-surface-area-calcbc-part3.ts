@@ -30,31 +30,31 @@ L = rΔθ)
       id: 'arc-l3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of arc length for polar curves?',
-            options: [
-              'Polar arc length',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'Polar arc length: L = ∫_α^β √[r² + (dr/dθ)²] dθ'
-          },
-          {
-            question: 'In the context of arc length for polar curves, which is accurate?',
+            question: 'What does "Polar arc length" refer to in calculus?',
             options: [
               'Often used for cardioids, roses, spirals',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Derived from parametric formula with x = r cos θ, y = r sin θ',
+              'L = rΔθ)',
+              'L = ∫_α^β √[r² + (dr/dθ)²] dθ'
             ],
-            correctAnswer: 0,
-            explanation: 'Often used for cardioids, roses, spirals'
+            correctAnswer: 3,
+            explanation: 'Correct — Polar arc length: L = ∫_α^β √[r² + (dr/dθ)²] dθ. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Often used for cardioids, roses, spirals:',
+            options: [
+              'Derived from parametric formula with x = r cos θ, y = r sin θ',
+              'L = ∫_α^β √[r² + (dr/dθ)²] dθ',
+              'Often used for cardioids, roses, spirals',
+              'L = rΔθ)'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Often used for cardioids, roses, spirals. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ L = rΔθ)
       id: 'arc-l3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to arc length for polar curves?',
+            question: 'Which statement about Simplifies when r = constant (circle is correct?',
             options: [
+              'Often used for cardioids, roses, spirals',
               'L = rΔθ)',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'L = ∫_α^β √[r² + (dr/dθ)²] dθ',
+              'Derived from parametric formula with x = r cos θ, y = r sin θ'
             ],
-            correctAnswer: 0,
-            explanation: 'Simplifies when r = constant (circle: L = rΔθ)'
+            correctAnswer: 1,
+            explanation: 'Correct — Simplifies when r = constant (circle: L = rΔθ). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,24 @@ L = rΔθ)
       id: 'arc-l3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Polar arc length',
-            options: ['L = ∫_α^β √[r² + (dr/dθ)²] dθ', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Often used for cardioids, roses, spirals', 'Derived from parametric formula with x = r cos θ, y = r sin θ', 'L = rΔθ)', 'L = ∫_α^β √[r² + (dr/dθ)²] dθ']
           },
           {
-            label: 'Derived from parametric formula with x = r cos θ, y = r sin θ',
-            options: ['Derived from parametric formula with x = r cos θ, ', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
-          },
-          {
-            label: 'Often used for cardioids, roses, spirals',
-            options: ['Often used for cardioids, roses, spirals', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Simplifies when r = constant (circle',
+            options: ['L = rΔθ)', 'L = ∫_α^β √[r² + (dr/dθ)²] dθ', 'Derived from parametric formula with x = r cos θ, y = r sin θ', 'Often used for cardioids, roses, spirals']
           }
         ],
-        correctAnswers: ['L = ∫_α^β √[r² + (dr/dθ)²] dθ', 'Derived from parametric formula with x = r cos θ, ', 'Often used for cardioids, roses, spirals'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Arc Length for Polar Curves.'
+        correctAnswers: ['L = ∫_α^β √[r² + (dr/dθ)²] dθ', 'L = rΔθ)'],
+        hint1: 'Think about what each concept specifically describes in Arc Length for Polar Curves.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Arc Length for Polar Curves describes a specific idea. Polar arc length: L = ∫_α^β √[r² + (dr/dθ)²] dθ. Simplifies when r = constant (circle: L = rΔθ).'
       }
     }
   ]

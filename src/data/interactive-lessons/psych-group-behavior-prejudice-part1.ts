@@ -30,31 +30,31 @@ favoring our own group members
       id: 'group1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of social identity theory?',
+            question: 'Which statement accurately explains Social identity theory?',
             options: [
-              'Social identity theory',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'groups we belong to',
+              'favoring our own group members',
+              'groups we don\'t belong to',
+              'we define ourselves by group memberships'
             ],
-            correctAnswer: 0,
-            explanation: 'Social identity theory: we define ourselves by group memberships'
+            correctAnswer: 3,
+            explanation: 'Correct — Social identity theory: we define ourselves by group memberships. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of social identity theory, which is accurate?',
+            question: 'Select the statement that correctly describes Outgroup:',
             options: [
-              'groups we don\'t belong to',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'favoring our own group members',
+              'we define ourselves by group memberships',
+              'groups we belong to',
+              'groups we don\'t belong to'
             ],
-            correctAnswer: 0,
-            explanation: 'Outgroup: groups we don\'t belong to'
+            correctAnswer: 3,
+            explanation: 'Correct — Outgroup: groups we don\'t belong to. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ favoring our own group members
       id: 'group1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Social identity theory',
-            options: ['we define ourselves by group memberships', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['favoring our own group members', 'we define ourselves by group memberships', 'groups we don\'t belong to', 'groups we belong to']
           },
           {
             label: 'Ingroup',
-            options: ['groups we belong to', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['groups we belong to', 'favoring our own group members', 'groups we don\'t belong to', 'we define ourselves by group memberships']
           },
           {
             label: 'Outgroup',
-            options: ['groups we don\'t belong to', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['we define ourselves by group memberships', 'groups we belong to', 'favoring our own group members', 'groups we don\'t belong to']
           }
         ],
         correctAnswers: ['we define ourselves by group memberships', 'groups we belong to', 'groups we don\'t belong to'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Social Identity Theory.'
+        hint1: 'Think about what each concept specifically describes in Group Behavior & Social Identity.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Group Behavior & Social Identity describes a specific idea. Social identity theory: we define ourselves by group memberships. Ingroup: groups we belong to. Outgroup: groups we don\'t belong to.'
       }
     }
   ]

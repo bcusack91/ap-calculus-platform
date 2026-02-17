@@ -30,31 +30,31 @@ learning by association
       id: 'class1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of pavlov\'s discovery?',
+            question: 'Which of the following correctly describes Ivan Pavlov?',
             options: [
-              'Ivan Pavlov',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'Russian physiologist studying digestion',
+              'relatively permanent change in behavior due to experience',
+              'learning by association',
+              'Dogs salivated to bell after pairing with food'
             ],
             correctAnswer: 0,
-            explanation: 'Ivan Pavlov: Russian physiologist studying digestion'
+            explanation: 'Correct — Ivan Pavlov: Russian physiologist studying digestion. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of pavlov\'s discovery, which is accurate?',
+            question: 'In the context of Classical Conditioning, which explains Learning?',
             options: [
               'relatively permanent change in behavior due to experience',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'learning by association',
+              'Dogs salivated to bell after pairing with food',
+              'Russian physiologist studying digestion'
             ],
             correctAnswer: 0,
-            explanation: 'Learning: relatively permanent change in behavior due to experience'
+            explanation: 'Correct — Learning: relatively permanent change in behavior due to experience. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ learning by association
       id: 'class1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Ivan Pavlov',
-            options: ['Russian physiologist studying digestion', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
-          },
-          {
-            label: 'Dogs salivated to bell after pairing with food',
-            options: ['Dogs salivated to bell after pairing with food', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Dogs salivated to bell after pairing with food', 'relatively permanent change in behavior due to experience', 'learning by association', 'Russian physiologist studying digestion']
           },
           {
             label: 'Learning',
-            options: ['relatively permanent change in behavior due to exp', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Russian physiologist studying digestion', 'Dogs salivated to bell after pairing with food', 'relatively permanent change in behavior due to experience', 'learning by association']
+          },
+          {
+            label: 'Classical conditioning',
+            options: ['learning by association', 'Russian physiologist studying digestion', 'Dogs salivated to bell after pairing with food', 'relatively permanent change in behavior due to experience']
           }
         ],
-        correctAnswers: ['Russian physiologist studying digestion', 'Dogs salivated to bell after pairing with food', 'relatively permanent change in behavior due to exp'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Pavlov\'s Discovery.'
+        correctAnswers: ['Russian physiologist studying digestion', 'relatively permanent change in behavior due to experience', 'learning by association'],
+        hint1: 'Think about what each concept specifically describes in Classical Conditioning.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Classical Conditioning describes a specific idea. Ivan Pavlov: Russian physiologist studying digestion. Learning: relatively permanent change in behavior due to experience. Classical conditioning: learning by association.'
       }
     }
   ]

@@ -18,20 +18,31 @@ Rhetoric questions: "most effectively" — subjective but still have a best answ
       id: 'sat-r6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes grammar questions?',
+            question: 'Which of the following correctly describes Grammar questions?',
             options: [
-              'Grammar questions is a fundamental concept in SAT Reading & Writing',
-              'Rhetoric questions: "most effectively" — subjective but still have a best answer',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'If the question asks "which best accomplishes [goal]," match the goal precisely.',
+              '"most effectively" — subjective but still have a best answer.',
+              'For rhetoric: consider purpose, audience, and what the question is asking.',
+              'one answer is objectively correct (rules-based).'
             ],
-            correctAnswer: 0,
-            explanation: 'Grammar questions: one answer is objectively correct (rules-based)'
+            correctAnswer: 3,
+            explanation: 'Correct — Grammar questions: one answer is objectively correct (rules-based). The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              'If the question asks "which best accomplishes [goal]," match the goal precisely.',
+              'one answer is objectively correct (rules-based).',
+              'For rhetoric: consider purpose, audience, and what the question is asking.',
+              '"most effectively" — subjective but still have a best answer.'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Key Insight: For rhetoric: consider purpose, audience, and what the question is asking. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Rhetoric questions: "most effectively" — subjective but still have a best answ
       id: 'sat-r6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for problem-solving workshop?',
+            question: 'Which statement about SAT Tip is correct?',
             options: [
-              'For rhetoric: consider purpose, audience, and what the question is asking',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'one answer is objectively correct (rules-based).',
+              'If the question asks "which best accomplishes [goal]," match the goal precisely.',
+              'For rhetoric: consider purpose, audience, and what the question is asking.',
+              '"most effectively" — subjective but still have a best answer.'
             ],
-            correctAnswer: 0,
-            explanation: 'For rhetoric: consider purpose, audience, and what the question is asking'
+            correctAnswer: 1,
+            explanation: 'Correct — SAT Tip: If the question asks "which best accomplishes [goal]," match the goal precisely. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Rhetoric questions: "most effectively" — subjective but still have a best answ
       id: 'sat-r6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Problem-Solving Workshop:',
-            options: ['Grammar questions: one answer is objectively corre', 'Rhetoric questions: "most effectively" — subjectiv', 'Not applicable', 'None of these']
+            label: 'Grammar questions',
+            options: ['If the question asks "which best accomplishes [goal]," match the goal precisely.', '"most effectively" — subjective but still have a best answer.', 'For rhetoric: consider purpose, audience, and what the question is asking.', 'one answer is objectively correct (rules-based).']
           },
           {
-            label: 'Strategy tip:',
-            options: ['For rhetoric: consider purpose, audience, and what', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Rhetoric questions',
+            options: ['If the question asks "which best accomplishes [goal]," match the goal precisely.', 'For rhetoric: consider purpose, audience, and what the question is asking.', '"most effectively" — subjective but still have a best answer.', 'one answer is objectively correct (rules-based).']
+          },
+          {
+            label: 'Key Insight',
+            options: ['If the question asks "which best accomplishes [goal]," match the goal precisely.', 'one answer is objectively correct (rules-based).', 'For rhetoric: consider purpose, audience, and what the question is asking.', '"most effectively" — subjective but still have a best answer.']
           }
         ],
-        correctAnswers: ['Grammar questions: one answer is objectively corre', 'For rhetoric: consider purpose, audience, and what'],
-        hint1: 'Think about problem-solving workshop',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'Grammar questions: one answer is objectively correct (rules-based). For rhetoric: consider purpose, audience, and what the question is asking.'
+        correctAnswers: ['one answer is objectively correct (rules-based).', '"most effectively" — subjective but still have a best answer.', 'For rhetoric: consider purpose, audience, and what the question is asking.'],
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Grammar questions: one answer is objectively correct (rules-based). Rhetoric questions: "most effectively" — subjective but still have a best answer. Key Insight: For rhetoric: consider purpose, audience, and what the question is asking.'
       }
     }
   ]

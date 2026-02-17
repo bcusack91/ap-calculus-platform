@@ -18,20 +18,31 @@ Weighted average: multiply each value by its weight, then divide by total weight
       id: 'act-s1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes mean = sum/count; median = middle value (sorted); mode = most frequent?',
+            question: 'What does "Mean = sum/count; Median = middle value…" refer to in ACT prep?',
             options: [
-              'Mean = sum/count; Median = middle value (sorted); Mode = most frequent is a key concept for ACT Math',
-              'Weighted average: multiply each value by its weight, then divide by total weight',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'Range = max - min.',
+              'Mean = sum/count; Median = middle value (sorted); Mode = most frequent.',
+              'Effect of adding/removing values: track the sum.',
+              'multiply each value by its weight, then divide by total weight.'
             ],
-            correctAnswer: 0,
-            explanation: 'Mean = sum/count; Median = middle value (sorted); Mode = most frequent'
+            correctAnswer: 1,
+            explanation: 'Correct — Mean = sum/count; Median = middle value (sorted); Mode = most frequent. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Key Insight?',
+            options: [
+              'Range = max - min.',
+              'Effect of adding/removing values: track the sum.',
+              'multiply each value by its weight, then divide by total weight.',
+              'Mean = sum/count; Median = middle value (sorted); Mode = most frequent.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Key Insight: Effect of adding/removing values: track the sum. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Weighted average: multiply each value by its weight, then divide by total weight
       id: 'act-s1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for mean, median, mode?',
+            question: 'Which of these accurately represents ACT Tip?',
             options: [
-              'Effect of adding/removing values: track the sum',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Range = max - min.',
+              'Mean = sum/count; Median = middle value (sorted); Mode = most frequent.',
+              'Effect of adding/removing values: track the sum.',
+              'multiply each value by its weight, then divide by total weight.'
             ],
             correctAnswer: 0,
-            explanation: 'Effect of adding/removing values: track the sum'
+            explanation: 'Correct — ACT Tip: Range = max - min. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Weighted average: multiply each value by its weight, then divide by total weight
       id: 'act-s1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Mean, Median, Mode:',
-            options: ['Mean = sum/count; Median = middle value (sorted); ', 'Weighted average: multiply each value by its weigh', 'Not applicable', 'None of these']
+            label: 'Weighted average',
+            options: ['Range = max - min.', 'Effect of adding/removing values: track the sum.', 'multiply each value by its weight, then divide by total weight.', 'Mean = sum/count; Median = middle value (sorted); Mode = most frequent.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Effect of adding/removing values: track the sum', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Key Insight',
+            options: ['Effect of adding/removing values: track the sum.', 'Mean = sum/count; Median = middle value (sorted); Mode = most frequent.', 'multiply each value by its weight, then divide by total weight.', 'Range = max - min.']
+          },
+          {
+            label: 'ACT Tip',
+            options: ['Range = max - min.', 'Mean = sum/count; Median = middle value (sorted); Mode = most frequent.', 'multiply each value by its weight, then divide by total weight.', 'Effect of adding/removing values: track the sum.']
           }
         ],
-        correctAnswers: ['Mean = sum/count; Median = middle value (sorted); ', 'Effect of adding/removing values: track the sum'],
-        hint1: 'Think about mean, median, mode',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Mean = sum/count; Median = middle value (sorted); Mode = most frequent. Effect of adding/removing values: track the sum.'
+        correctAnswers: ['multiply each value by its weight, then divide by total weight.', 'Effect of adding/removing values: track the sum.', 'Range = max - min.'],
+        hint1: 'Think about what each concept specifically describes in Statistics Probability.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Statistics Probability describes a specific idea. Weighted average: multiply each value by its weight, then divide by total weight. Key Insight: Effect of adding/removing values: track the sum. ACT Tip: Range = max - min.'
       }
     }
   ]

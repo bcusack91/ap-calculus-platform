@@ -30,31 +30,31 @@ Evaluating diagnostic approaches
       id: 'psych6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of problem-solving workshop?',
-            options: [
-              'Identifying disorders from case descriptions',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
-            ],
-            correctAnswer: 0,
-            explanation: 'Identifying disorders from case descriptions'
-          },
-          {
-            question: 'In the context of problem-solving workshop, which is accurate?',
+            question: 'What does "Identifying disorders from case…" refer to in psychology?',
             options: [
               'Applying the biopsychosocial model',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Evaluating diagnostic approaches',
+              'Identifying disorders from case descriptions',
+              'Distinguishing normal anxiety from disorders'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Identifying disorders from case descriptions. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Problem-Solving Workshop, which explains Applying the biopsychosocial model?',
+            options: [
+              'Applying the biopsychosocial model',
+              'Identifying disorders from case descriptions',
+              'Distinguishing normal anxiety from disorders',
+              'Evaluating diagnostic approaches'
             ],
             correctAnswer: 0,
-            explanation: 'Applying the biopsychosocial model'
+            explanation: 'Correct — Applying the biopsychosocial model. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Evaluating diagnostic approaches
       id: 'psych6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Identifying disorders from case descriptions',
-            options: ['Identifying disorders from case descriptions', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            label: 'Identifying disorders from case…',
+            options: ['Applying the biopsychosocial model', 'Evaluating diagnostic approaches', 'Distinguishing normal anxiety from disorders', 'Identifying disorders from case descriptions']
           },
           {
-            label: 'Distinguishing normal anxiety from disorders',
-            options: ['Distinguishing normal anxiety from disorders', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            label: 'Distinguishing normal anxiety from…',
+            options: ['Evaluating diagnostic approaches', 'Applying the biopsychosocial model', 'Distinguishing normal anxiety from disorders', 'Identifying disorders from case descriptions']
           },
           {
             label: 'Applying the biopsychosocial model',
-            options: ['Applying the biopsychosocial model', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Distinguishing normal anxiety from disorders', 'Identifying disorders from case descriptions', 'Applying the biopsychosocial model', 'Evaluating diagnostic approaches']
           }
         ],
         correctAnswers: ['Identifying disorders from case descriptions', 'Distinguishing normal anxiety from disorders', 'Applying the biopsychosocial model'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving Workshop.'
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Identifying disorders from case descriptions. Distinguishing normal anxiety from disorders. Applying the biopsychosocial model.'
       }
     }
   ]

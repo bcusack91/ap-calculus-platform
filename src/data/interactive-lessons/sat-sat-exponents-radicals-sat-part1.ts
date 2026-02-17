@@ -18,20 +18,31 @@ Quotient rule: aᵐ / aⁿ = aᵐ⁻ⁿ.
       id: 'sat-e1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes product rule?',
+            question: 'Which statement accurately explains Product rule?',
             options: [
-              'Product rule is a fundamental concept in SAT Math',
-              'Quotient rule: aᵐ / aⁿ = aᵐ⁻ⁿ',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'aᵐ · aⁿ = aᵐ⁺ⁿ.',
+              'aᵐ / aⁿ = aᵐ⁻ⁿ.',
+              'Power rule: (aᵐ)ⁿ = aᵐⁿ.',
+              'Power of a product: (ab)ⁿ = aⁿbⁿ.'
             ],
             correctAnswer: 0,
-            explanation: 'Product rule: aᵐ · aⁿ = aᵐ⁺ⁿ'
+            explanation: 'Correct — Product rule: aᵐ · aⁿ = aᵐ⁺ⁿ. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              'aᵐ / aⁿ = aᵐ⁻ⁿ.',
+              'aᵐ · aⁿ = aᵐ⁺ⁿ.',
+              'Power rule: (aᵐ)ⁿ = aᵐⁿ.',
+              'Power of a product: (ab)ⁿ = aⁿbⁿ.'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Key Insight: Power rule: (aᵐ)ⁿ = aᵐⁿ. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Quotient rule: aᵐ / aⁿ = aᵐ⁻ⁿ.
       id: 'sat-e1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for exponent rules?',
+            question: 'Which statement about SAT Tip is correct?',
             options: [
-              'Power rule: (aᵐ)ⁿ = aᵐⁿ',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'aᵐ / aⁿ = aᵐ⁻ⁿ.',
+              'aᵐ · aⁿ = aᵐ⁺ⁿ.',
+              'Power of a product: (ab)ⁿ = aⁿbⁿ.',
+              'Power rule: (aᵐ)ⁿ = aᵐⁿ.'
             ],
-            correctAnswer: 0,
-            explanation: 'Power rule: (aᵐ)ⁿ = aᵐⁿ'
+            correctAnswer: 2,
+            explanation: 'Correct — SAT Tip: Power of a product: (ab)ⁿ = aⁿbⁿ. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Quotient rule: aᵐ / aⁿ = aᵐ⁻ⁿ.
       id: 'sat-e1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Exponent Rules:',
-            options: ['Product rule: aᵐ · aⁿ = aᵐ⁺ⁿ', 'Quotient rule: aᵐ / aⁿ = aᵐ⁻ⁿ', 'Not applicable', 'None of these']
+            label: 'Product rule',
+            options: ['aᵐ / aⁿ = aᵐ⁻ⁿ.', 'Power rule: (aᵐ)ⁿ = aᵐⁿ.', 'Power of a product: (ab)ⁿ = aⁿbⁿ.', 'aᵐ · aⁿ = aᵐ⁺ⁿ.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Power rule: (aᵐ)ⁿ = aᵐⁿ', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Quotient rule',
+            options: ['aᵐ · aⁿ = aᵐ⁺ⁿ.', 'aᵐ / aⁿ = aᵐ⁻ⁿ.', 'Power rule: (aᵐ)ⁿ = aᵐⁿ.', 'Power of a product: (ab)ⁿ = aⁿbⁿ.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['aᵐ · aⁿ = aᵐ⁺ⁿ.', 'aᵐ / aⁿ = aᵐ⁻ⁿ.', 'Power of a product: (ab)ⁿ = aⁿbⁿ.', 'Power rule: (aᵐ)ⁿ = aᵐⁿ.']
           }
         ],
-        correctAnswers: ['Product rule: aᵐ · aⁿ = aᵐ⁺ⁿ', 'Power rule: (aᵐ)ⁿ = aᵐⁿ'],
-        hint1: 'Think about exponent rules',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'Product rule: aᵐ · aⁿ = aᵐ⁺ⁿ. Power rule: (aᵐ)ⁿ = aᵐⁿ.'
+        correctAnswers: ['aᵐ · aⁿ = aᵐ⁺ⁿ.', 'aᵐ / aⁿ = aᵐ⁻ⁿ.', 'Power rule: (aᵐ)ⁿ = aᵐⁿ.'],
+        hint1: 'Think about what each concept specifically describes in Exponents Radicals.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Exponents Radicals describes a specific idea. Product rule: aᵐ · aⁿ = aᵐ⁺ⁿ. Quotient rule: aᵐ / aⁿ = aᵐ⁻ⁿ. Key Insight: Power rule: (aᵐ)ⁿ = aᵐⁿ.'
       }
     }
   ]

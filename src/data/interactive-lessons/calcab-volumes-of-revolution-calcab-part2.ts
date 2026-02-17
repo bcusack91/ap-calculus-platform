@@ -30,31 +30,31 @@ Cross-sections are washers (disks with holes)
       id: 'volum2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of washer method?',
+            question: 'What does "Washer method" refer to in calculus?',
             options: [
-              'Washer method',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'Cross-sections are washers (disks with holes)',
+              'Use when there is a gap between the region and the axis of revolution',
+              'V = π∫ₐᵇ ([R(x)]² - [r(x)]²) dx',
+              'R(x) = outer radius, r(x) = inner radius'
             ],
-            correctAnswer: 0,
-            explanation: 'Washer method: V = π∫ₐᵇ ([R(x)]² - [r(x)]²) dx'
+            correctAnswer: 2,
+            explanation: 'Correct — Washer method: V = π∫ₐᵇ ([R(x)]² - [r(x)]²) dx. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of washer method, which is accurate?',
+            question: 'In the context of Washer Method, which explains Use when there is a gap between the…?',
             options: [
               'Use when there is a gap between the region and the axis of revolution',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'R(x) = outer radius, r(x) = inner radius',
+              'V = π∫ₐᵇ ([R(x)]² - [r(x)]²) dx',
+              'Cross-sections are washers (disks with holes)'
             ],
             correctAnswer: 0,
-            explanation: 'Use when there is a gap between the region and the axis of revolution'
+            explanation: 'Correct — Use when there is a gap between the region and the axis of revolution. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Cross-sections are washers (disks with holes)
       id: 'volum2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to washer method?',
+            question: 'Which statement about Cross-sections are washers (disks with… is correct?',
             options: [
-              'Cross-sections are washers (disks with holes)',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'Use when there is a gap between the region and the axis of revolution',
+              'R(x) = outer radius, r(x) = inner radius',
+              'V = π∫ₐᵇ ([R(x)]² - [r(x)]²) dx',
+              'Cross-sections are washers (disks with holes)'
             ],
-            correctAnswer: 0,
-            explanation: 'Cross-sections are washers (disks with holes)'
+            correctAnswer: 3,
+            explanation: 'Correct — Cross-sections are washers (disks with holes). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Cross-sections are washers (disks with holes)
       id: 'volum2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Washer method',
-            options: ['V = π∫ₐᵇ ([R(x)]² - [r(x)]²) dx', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['R(x) = outer radius, r(x) = inner radius', 'Use when there is a gap between the region and the axis of revolution', 'Cross-sections are washers (disks with holes)', 'V = π∫ₐᵇ ([R(x)]² - [r(x)]²) dx']
           },
           {
             label: 'R(x) = outer radius, r(x) = inner radius',
-            options: ['R(x) = outer radius, r(x) = inner radius', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['R(x) = outer radius, r(x) = inner radius', 'V = π∫ₐᵇ ([R(x)]² - [r(x)]²) dx', 'Use when there is a gap between the region and the axis of revolution', 'Cross-sections are washers (disks with holes)']
           },
           {
-            label: 'Use when there is a gap between the region and the axis of revolution',
-            options: ['Use when there is a gap between the region and the', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Use when there is a gap between the…',
+            options: ['Use when there is a gap between the region and the axis of revolution', 'V = π∫ₐᵇ ([R(x)]² - [r(x)]²) dx', 'Cross-sections are washers (disks with holes)', 'R(x) = outer radius, r(x) = inner radius']
           }
         ],
-        correctAnswers: ['V = π∫ₐᵇ ([R(x)]² - [r(x)]²) dx', 'R(x) = outer radius, r(x) = inner radius', 'Use when there is a gap between the region and the'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Washer Method.'
+        correctAnswers: ['V = π∫ₐᵇ ([R(x)]² - [r(x)]²) dx', 'R(x) = outer radius, r(x) = inner radius', 'Use when there is a gap between the region and the axis of revolution'],
+        hint1: 'Think about what each concept specifically describes in Washer Method.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Washer Method describes a specific idea. Washer method: V = π∫ₐᵇ ([R(x)]² - [r(x)]²) dx. R(x) = outer radius, r(x) = inner radius. Use when there is a gap between the region and the axis of revolution.'
       }
     }
   ]

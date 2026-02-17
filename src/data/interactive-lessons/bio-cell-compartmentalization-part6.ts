@@ -19,31 +19,31 @@ export const bioCellCompartmentPart6Data = {
       id: 'cell6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes sa?',
-            options: [
-              'V ratio calculations',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
-            ],
-            correctAnswer: 0,
-            explanation: 'SA:V ratio calculations'
-          },
-          {
-            question: 'In the context of problem-solving, which statement is accurate?',
+            question: 'Which of the following correctly describes SA?',
             options: [
               'Comparing prokaryotic and eukaryotic strategies',
-              'snoitaluclac oitar V:AS',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'V ratio calculations',
+              'Experimental design questions',
+              'Predicting effects of compartment disruption'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — SA: V ratio calculations. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Comparing prokaryotic and eukaryotic…?',
+            options: [
+              'Comparing prokaryotic and eukaryotic strategies',
+              'V ratio calculations',
+              'Experimental design questions',
+              'Predicting effects of compartment disruption'
             ],
             correctAnswer: 0,
-            explanation: 'Comparing prokaryotic and eukaryotic strategies'
+            explanation: 'Correct — Comparing prokaryotic and eukaryotic strategies. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioCellCompartmentPart6Data = {
       id: 'cell6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to problem-solving?',
+            question: 'Which of these accurately represents Experimental design questions?',
             options: [
-              'Experimental design questions',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Predicting effects of compartment disruption',
+              'Comparing prokaryotic and eukaryotic strategies',
+              'V ratio calculations',
+              'Experimental design questions'
             ],
-            correctAnswer: 0,
-            explanation: 'Experimental design questions'
+            correctAnswer: 3,
+            explanation: 'Correct — Experimental design questions. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioCellCompartmentPart6Data = {
       id: 'cell6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'SA is important in problem-solving because',
-            options: ['V ratio calculations', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'SA',
+            options: ['Experimental design questions', 'V ratio calculations', 'Predicting effects of compartment disruption', 'Comparing prokaryotic and eukaryotic strategies']
           },
           {
-            label: 'Predicting effects of compartment disruption is important in problem-solving because',
-            options: ['Predicting effects of compartment disruption', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Predicting effects of compartment…',
+            options: ['Predicting effects of compartment disruption', 'Experimental design questions', 'Comparing prokaryotic and eukaryotic strategies', 'V ratio calculations']
           },
           {
-            label: 'Comparing prokaryotic and eukaryotic strategies is important in problem-solving because',
-            options: ['Comparing prokaryotic and eukaryotic strategies', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Comparing prokaryotic and eukaryotic…',
+            options: ['Comparing prokaryotic and eukaryotic strategies', 'V ratio calculations', 'Predicting effects of compartment disruption', 'Experimental design questions']
           }
         ],
         correctAnswers: ['V ratio calculations', 'Predicting effects of compartment disruption', 'Comparing prokaryotic and eukaryotic strategies'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving.'
+        hint1: 'Think about what each concept specifically describes in Cell Compartmentalization: Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Cell Compartmentalization: Problem-Solving Workshop describes a specific idea. SA: V ratio calculations. Predicting effects of compartment disruption. Comparing prokaryotic and eukaryotic strategies.'
       }
     }
   ]

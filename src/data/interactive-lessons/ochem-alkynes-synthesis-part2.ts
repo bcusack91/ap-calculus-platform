@@ -30,31 +30,31 @@ R-C≡C⁻ + R'-X → R-C≡C-R' (SN2)
       id: 'alkyn2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of alkyne acidity?',
+            question: 'Which statement accurately explains Terminal alkynes are weakly acidic (pKa…?',
             options: [
               'Terminal alkynes are weakly acidic (pKa ~25)',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'R-C≡C⁻ + R\'-X → R-C≡C-R\' (SN2)',
+              'NaNH₂ deprotonates terminal alkynes → acetylide anion',
+              'Acetylide is a good nucleophile and base'
             ],
             correctAnswer: 0,
-            explanation: 'Terminal alkynes are weakly acidic (pKa ~25)'
+            explanation: 'Correct — Terminal alkynes are weakly acidic (pKa ~25). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of alkyne acidity, which is accurate?',
+            question: 'Select the statement that correctly describes Acetylide is a good nucleophile and base:',
             options: [
+              'Terminal alkynes are weakly acidic (pKa ~25)',
               'Acetylide is a good nucleophile and base',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'NaNH₂ deprotonates terminal alkynes → acetylide anion',
+              'R-C≡C⁻ + R\'-X → R-C≡C-R\' (SN2)'
             ],
-            correctAnswer: 0,
-            explanation: 'Acetylide is a good nucleophile and base'
+            correctAnswer: 1,
+            explanation: 'Correct — Acetylide is a good nucleophile and base. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ R-C≡C⁻ + R'-X → R-C≡C-R' (SN2)
       id: 'alkyn2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Terminal alkynes are weakly acidic (pKa ~25)',
-            options: ['Terminal alkynes are weakly acidic (pKa ~25)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Terminal alkynes are weakly acidic (pKa…',
+            options: ['R-C≡C⁻ + R\'-X → R-C≡C-R\' (SN2)', 'Acetylide is a good nucleophile and base', 'Terminal alkynes are weakly acidic (pKa ~25)', 'NaNH₂ deprotonates terminal alkynes → acetylide anion']
           },
           {
-            label: 'NaNH₂ deprotonates terminal alkynes → acetylide anion',
-            options: ['NaNH₂ deprotonates terminal alkynes → acetylide an', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'NaNH₂ deprotonates terminal alkynes →…',
+            options: ['NaNH₂ deprotonates terminal alkynes → acetylide anion', 'Terminal alkynes are weakly acidic (pKa ~25)', 'R-C≡C⁻ + R\'-X → R-C≡C-R\' (SN2)', 'Acetylide is a good nucleophile and base']
           },
           {
             label: 'Acetylide is a good nucleophile and base',
-            options: ['Acetylide is a good nucleophile and base', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['NaNH₂ deprotonates terminal alkynes → acetylide anion', 'R-C≡C⁻ + R\'-X → R-C≡C-R\' (SN2)', 'Terminal alkynes are weakly acidic (pKa ~25)', 'Acetylide is a good nucleophile and base']
           }
         ],
-        correctAnswers: ['Terminal alkynes are weakly acidic (pKa ~25)', 'NaNH₂ deprotonates terminal alkynes → acetylide an', 'Acetylide is a good nucleophile and base'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Alkyne Acidity.'
+        correctAnswers: ['Terminal alkynes are weakly acidic (pKa ~25)', 'NaNH₂ deprotonates terminal alkynes → acetylide anion', 'Acetylide is a good nucleophile and base'],
+        hint1: 'Think about what each concept specifically describes in Alkyne Acidity.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Alkyne Acidity describes a specific idea. Terminal alkynes are weakly acidic (pKa ~25). NaNH₂ deprotonates terminal alkynes → acetylide anion. Acetylide is a good nucleophile and base.'
       }
     }
   ]

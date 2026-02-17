@@ -18,20 +18,31 @@ export const actEnglishStratPart1Data = {
       id: 'act-e1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes 75 questions in 45 minutes = 36 seconds per question?',
+            question: 'Which statement accurately explains 75 questions in 45 minutes = 36 seconds…?',
             options: [
-              '75 questions in 45 minutes = 36 seconds per question is a key concept for ACT English/Reading',
-              '5 passages with 15 questions each',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              '5 passages with 15 questions each.',
+              '75 questions in 45 minutes = 36 seconds per question.',
+              'Two main types: conventions of standard English (grammar) and production of writing (rhetoric).',
+              'Questions are embedded in the passage — read the full context.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — 75 questions in 45 minutes = 36 seconds per question. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              'Two main types: conventions of standard English (grammar) and production of writing (rhetoric).',
+              '75 questions in 45 minutes = 36 seconds per question.',
+              '5 passages with 15 questions each.',
+              'Questions are embedded in the passage — read the full context.'
             ],
             correctAnswer: 0,
-            explanation: '75 questions in 45 minutes = 36 seconds per question'
+            explanation: 'Correct — Key Insight: Two main types: conventions of standard English (grammar) and production of writing (rhetoric). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ export const actEnglishStratPart1Data = {
       id: 'act-e1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for act english overview?',
+            question: 'Which statement about ACT Tip is correct?',
             options: [
-              'Two main types: conventions of standard English (grammar) and production of writing (rhetoric)',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Questions are embedded in the passage — read the full context.',
+              'Two main types: conventions of standard English (grammar) and production of writing (rhetoric).',
+              '75 questions in 45 minutes = 36 seconds per question.',
+              '5 passages with 15 questions each.'
             ],
             correctAnswer: 0,
-            explanation: 'Two main types: conventions of standard English (grammar) and production of writing (rhetoric)'
+            explanation: 'Correct — ACT Tip: Questions are embedded in the passage — read the full context. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ export const actEnglishStratPart1Data = {
       id: 'act-e1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for ACT English Overview:',
-            options: ['75 questions in 45 minutes = 36 seconds per questi', '5 passages with 15 questions each', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['Questions are embedded in the passage — read the full context.', '75 questions in 45 minutes = 36 seconds per question.', '5 passages with 15 questions each.', 'Two main types: conventions of standard English (grammar) and production of writing (rhetoric).']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Two main types: conventions of standard English (g', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'ACT Tip',
+            options: ['Two main types: conventions of standard English (grammar) and production of writing (rhetoric).', '5 passages with 15 questions each.', 'Questions are embedded in the passage — read the full context.', '75 questions in 45 minutes = 36 seconds per question.']
           }
         ],
-        correctAnswers: ['75 questions in 45 minutes = 36 seconds per questi', 'Two main types: conventions of standard English (g'],
-        hint1: 'Think about act english overview',
-        hint2: 'Consider the best ACT strategy',
-        explanation: '75 questions in 45 minutes = 36 seconds per question. Two main types: conventions of standard English (grammar) and production of writing (rhetoric).'
+        correctAnswers: ['Two main types: conventions of standard English (grammar) and production of writing (rhetoric).', 'Questions are embedded in the passage — read the full context.'],
+        hint1: 'Think about what each concept specifically describes in English Strategy.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in English Strategy describes a specific idea. Key Insight: Two main types: conventions of standard English (grammar) and production of writing (rhetoric). ACT Tip: Questions are embedded in the passage — read the full context.'
       }
     }
   ]

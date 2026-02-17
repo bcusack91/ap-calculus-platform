@@ -30,31 +30,31 @@ parabola; B² - 4AC > 0: hyperbola
       id: 'conic7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of review & applications?',
+            question: 'Which statement accurately explains General form?',
             options: [
-              'General form',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'Ax² + Bxy + Cy² + Dx + Ey + F = 0',
+              'parabola; B² - 4AC > 0: hyperbola',
+              'ellipse (or circle if A = C and B = 0)',
+              'Discriminant B² - 4AC determines the conic type'
             ],
             correctAnswer: 0,
-            explanation: 'General form: Ax² + Bxy + Cy² + Dx + Ey + F = 0'
+            explanation: 'Correct — General form: Ax² + Bxy + Cy² + Dx + Ey + F = 0. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of review & applications, which is accurate?',
+            question: 'Select the statement that correctly describes B² - 4AC < 0:',
             options: [
+              'Ax² + Bxy + Cy² + Dx + Ey + F = 0',
               'ellipse (or circle if A = C and B = 0)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'parabola; B² - 4AC > 0: hyperbola',
+              'Discriminant B² - 4AC determines the conic type'
             ],
-            correctAnswer: 0,
-            explanation: 'B² - 4AC < 0: ellipse (or circle if A = C and B = 0)'
+            correctAnswer: 1,
+            explanation: 'Correct — B² - 4AC < 0: ellipse (or circle if A = C and B = 0). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ parabola; B² - 4AC > 0: hyperbola
       id: 'conic7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'General form',
-            options: ['Ax² + Bxy + Cy² + Dx + Ey + F = 0', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
-          },
-          {
-            label: 'Discriminant B² - 4AC determines the conic type',
-            options: ['Discriminant B² - 4AC determines the conic type', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['Ax² + Bxy + Cy² + Dx + Ey + F = 0', 'ellipse (or circle if A = C and B = 0)', 'parabola; B² - 4AC > 0: hyperbola', 'Discriminant B² - 4AC determines the conic type']
           },
           {
             label: 'B² - 4AC < 0',
-            options: ['ellipse (or circle if A = C and B = 0)', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['ellipse (or circle if A = C and B = 0)', 'Ax² + Bxy + Cy² + Dx + Ey + F = 0', 'parabola; B² - 4AC > 0: hyperbola', 'Discriminant B² - 4AC determines the conic type']
+          },
+          {
+            label: 'B² - 4AC = 0',
+            options: ['Ax² + Bxy + Cy² + Dx + Ey + F = 0', 'ellipse (or circle if A = C and B = 0)', 'Discriminant B² - 4AC determines the conic type', 'parabola; B² - 4AC > 0: hyperbola']
           }
         ],
-        correctAnswers: ['Ax² + Bxy + Cy² + Dx + Ey + F = 0', 'Discriminant B² - 4AC determines the conic type', 'ellipse (or circle if A = C and B = 0)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Review & Applications.'
+        correctAnswers: ['Ax² + Bxy + Cy² + Dx + Ey + F = 0', 'ellipse (or circle if A = C and B = 0)', 'parabola; B² - 4AC > 0: hyperbola'],
+        hint1: 'Think about what each concept specifically describes in Review & Applications.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Review & Applications describes a specific idea. General form: Ax² + Bxy + Cy² + Dx + Ey + F = 0. B² - 4AC < 0: ellipse (or circle if A = C and B = 0). B² - 4AC = 0: parabola; B² - 4AC > 0: hyperbola.'
       }
     }
   ]

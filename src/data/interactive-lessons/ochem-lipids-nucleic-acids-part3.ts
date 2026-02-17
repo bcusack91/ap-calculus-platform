@@ -30,31 +30,31 @@ Cholesterol → steroid hormones (testosterone, estradiol, cortisol)
       id: 'lipid3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of terpenes & steroids?',
+            question: 'Which statement accurately explains Terpenes?',
             options: [
-              'Terpenes',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'built from isoprene units (C₅H₈)',
+              'Cholesterol → steroid hormones (testosterone, estradiol, cortisol)',
+              'Monoterpenes (C₁₀), sesquiterpenes (C₁₅), diterpenes (C₂₀)',
+              'four fused rings (A, B, C, D)'
             ],
             correctAnswer: 0,
-            explanation: 'Terpenes: built from isoprene units (C₅H₈)'
+            explanation: 'Correct — Terpenes: built from isoprene units (C₅H₈). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of terpenes & steroids, which is accurate?',
+            question: 'In the context of Terpenes & Steroids, which explains Steroids?',
             options: [
+              'built from isoprene units (C₅H₈)',
               'four fused rings (A, B, C, D)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Monoterpenes (C₁₀), sesquiterpenes (C₁₅), diterpenes (C₂₀)',
+              'Cholesterol → steroid hormones (testosterone, estradiol, cortisol)'
             ],
-            correctAnswer: 0,
-            explanation: 'Steroids: four fused rings (A, B, C, D)'
+            correctAnswer: 1,
+            explanation: 'Correct — Steroids: four fused rings (A, B, C, D). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,24 @@ Cholesterol → steroid hormones (testosterone, estradiol, cortisol)
       id: 'lipid3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Terpenes',
-            options: ['built from isoprene units (C₅H₈)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
-          },
-          {
-            label: 'Monoterpenes (C₁₀), sesquiterpenes (C₁₅), diterpenes (C₂₀)',
-            options: ['Monoterpenes (C₁₀), sesquiterpenes (C₁₅), diterpen', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Monoterpenes (C₁₀), sesquiterpenes (C₁₅), diterpenes (C₂₀)', 'Cholesterol → steroid hormones (testosterone, estradiol, cortisol)', 'built from isoprene units (C₅H₈)', 'four fused rings (A, B, C, D)']
           },
           {
             label: 'Steroids',
-            options: ['four fused rings (A, B, C, D)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Monoterpenes (C₁₀), sesquiterpenes (C₁₅), diterpenes (C₂₀)', 'four fused rings (A, B, C, D)', 'Cholesterol → steroid hormones (testosterone, estradiol, cortisol)', 'built from isoprene units (C₅H₈)']
           }
         ],
-        correctAnswers: ['built from isoprene units (C₅H₈)', 'Monoterpenes (C₁₀), sesquiterpenes (C₁₅), diterpen', 'four fused rings (A, B, C, D)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Terpenes & Steroids.'
+        correctAnswers: ['built from isoprene units (C₅H₈)', 'four fused rings (A, B, C, D)'],
+        hint1: 'Think about what each concept specifically describes in Terpenes & Steroids.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Terpenes & Steroids describes a specific idea. Terpenes: built from isoprene units (C₅H₈). Steroids: four fused rings (A, B, C, D).'
       }
     }
   ]

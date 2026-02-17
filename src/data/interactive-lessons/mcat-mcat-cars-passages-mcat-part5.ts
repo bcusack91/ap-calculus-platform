@@ -71,23 +71,24 @@ Track each authors main claim and supporting evidence separately.
       id: 'mcat-5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Comparative & Contrasting:',
-            options: ['Some passages present two perspectives — identify areas of a', 'Track each authors main claim and supporting evidence separa', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Key Insight',
+            options: ['Some passages present two perspectives — identify areas of agreement and disagreement.', 'Questions may ask how one author would respond to the others argument.', 'Track each authors main claim and supporting evidence separately.', 'Create a brief mental comparison chart: Author A says X because...; Author B says Y because....']
           },
           {
-            label: 'MCAT application:',
-            options: ['Questions may ask how one author would respond to the others', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'MCAT Tip',
+            options: ['Create a brief mental comparison chart: Author A says X because...; Author B says Y because....', 'Some passages present two perspectives — identify areas of agreement and disagreement.', 'Questions may ask how one author would respond to the others argument.', 'Track each authors main claim and supporting evidence separately.']
           }
         ],
-        correctAnswers: ['Some passages present two perspectives — identify areas of a', 'Questions may ask how one author would respond to the others'],
-        hint1: 'Think about comparative & contrasting',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Some passages present two perspectives — identify areas of agreement and disagreement. Questions may ask how one author would respond to the others argument.'
+        correctAnswers: ['Questions may ask how one author would respond to the others argument.', 'Create a brief mental comparison chart: Author A says X because...; Author B says Y because....'],
+        hint1: 'Think about what each concept specifically describes in Comparative & Contrasting.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Comparative & Contrasting describes a specific idea. Key Insight: Questions may ask how one author would respond to the others argument. MCAT Tip: Create a brief mental comparison chart: Author A says X because...; Author B says Y because....'
       }
     }
   ]

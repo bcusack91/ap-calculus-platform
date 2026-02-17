@@ -30,31 +30,31 @@ statistical method for identifying traits
       id: 'perso3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of trait theories?',
+            question: 'What does "Big Five (OCEAN)" refer to in psychology?',
             options: [
-              'Big Five (OCEAN)',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'Traits are relatively stable across time and situations',
+              'Openness, Conscientiousness, Extraversion, Agreeableness, Neuroticism',
+              'statistical method for identifying traits',
+              'extraversion-introversion, neuroticism-stability'
             ],
-            correctAnswer: 0,
-            explanation: 'Big Five (OCEAN): Openness, Conscientiousness, Extraversion, Agreeableness, Neuroticism'
+            correctAnswer: 1,
+            explanation: 'Correct — Big Five (OCEAN): Openness, Conscientiousness, Extraversion, Agreeableness, Neuroticism. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of trait theories, which is accurate?',
+            question: 'In the context of Trait Theories, which explains Eysenck?',
             options: [
+              'statistical method for identifying traits',
+              'Traits are relatively stable across time and situations',
               'extraversion-introversion, neuroticism-stability',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Openness, Conscientiousness, Extraversion, Agreeableness, Neuroticism'
             ],
-            correctAnswer: 0,
-            explanation: 'Eysenck: extraversion-introversion, neuroticism-stability'
+            correctAnswer: 2,
+            explanation: 'Correct — Eysenck: extraversion-introversion, neuroticism-stability. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ statistical method for identifying traits
       id: 'perso3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Big Five (OCEAN)',
-            options: ['Openness, Conscientiousness, Extraversion, Agreeab', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
-          },
-          {
-            label: 'Traits are relatively stable across time and situations',
-            options: ['Traits are relatively stable across time and situa', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['statistical method for identifying traits', 'Traits are relatively stable across time and situations', 'Openness, Conscientiousness, Extraversion, Agreeableness, Neuroticism', 'extraversion-introversion, neuroticism-stability']
           },
           {
             label: 'Eysenck',
-            options: ['extraversion-introversion, neuroticism-stability', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Openness, Conscientiousness, Extraversion, Agreeableness, Neuroticism', 'statistical method for identifying traits', 'extraversion-introversion, neuroticism-stability', 'Traits are relatively stable across time and situations']
+          },
+          {
+            label: 'Factor analysis',
+            options: ['Traits are relatively stable across time and situations', 'statistical method for identifying traits', 'Openness, Conscientiousness, Extraversion, Agreeableness, Neuroticism', 'extraversion-introversion, neuroticism-stability']
           }
         ],
-        correctAnswers: ['Openness, Conscientiousness, Extraversion, Agreeab', 'Traits are relatively stable across time and situa', 'extraversion-introversion, neuroticism-stability'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Trait Theories.'
+        correctAnswers: ['Openness, Conscientiousness, Extraversion, Agreeableness, Neuroticism', 'extraversion-introversion, neuroticism-stability', 'statistical method for identifying traits'],
+        hint1: 'Think about what each concept specifically describes in Trait Theories.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Trait Theories describes a specific idea. Big Five (OCEAN): Openness, Conscientiousness, Extraversion, Agreeableness, Neuroticism. Eysenck: extraversion-introversion, neuroticism-stability. Factor analysis: statistical method for identifying traits.'
       }
     }
   ]

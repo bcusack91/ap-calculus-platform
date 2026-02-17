@@ -18,20 +18,31 @@ Convert between radical and exponent form.
       id: 'sat-e4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes a^(m/n) = ⁿ√(aᵐ) = (ⁿ√a)ᵐ?',
+            question: 'Which statement accurately explains a^(m/n) = ⁿ√(aᵐ) = (ⁿ√a)ᵐ.?',
             options: [
-              'a^(m/n) = ⁿ√(aᵐ) = (ⁿ√a)ᵐ is a fundamental concept in SAT Math',
-              'Convert between radical and exponent form',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'Example: 8^(2/3) = (∛8)² = 2² = 4.',
+              'Apply exponent rules to rational exponents.',
+              'a^(m/n) = ⁿ√(aᵐ) = (ⁿ√a)ᵐ.',
+              'Convert between radical and exponent form.'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — a^(m/n) = ⁿ√(aᵐ) = (ⁿ√a)ᵐ. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Key Insight?',
+            options: [
+              'Apply exponent rules to rational exponents.',
+              'Convert between radical and exponent form.',
+              'Example: 8^(2/3) = (∛8)² = 2² = 4.',
+              'a^(m/n) = ⁿ√(aᵐ) = (ⁿ√a)ᵐ.'
             ],
             correctAnswer: 0,
-            explanation: 'a^(m/n) = ⁿ√(aᵐ) = (ⁿ√a)ᵐ'
+            explanation: 'Correct — Key Insight: Apply exponent rules to rational exponents. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Convert between radical and exponent form.
       id: 'sat-e4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for rational exponents?',
+            question: 'Which statement about SAT Tip is correct?',
             options: [
-              'Apply exponent rules to rational exponents',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'Convert between radical and exponent form.',
+              'a^(m/n) = ⁿ√(aᵐ) = (ⁿ√a)ᵐ.',
+              'Example: 8^(2/3) = (∛8)² = 2² = 4.',
+              'Apply exponent rules to rational exponents.'
             ],
-            correctAnswer: 0,
-            explanation: 'Apply exponent rules to rational exponents'
+            correctAnswer: 2,
+            explanation: 'Correct — SAT Tip: Example: 8^(2/3) = (∛8)² = 2² = 4. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ Convert between radical and exponent form.
       id: 'sat-e4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Rational Exponents:',
-            options: ['a^(m/n) = ⁿ√(aᵐ) = (ⁿ√a)ᵐ', 'Convert between radical and exponent form', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['Convert between radical and exponent form.', 'Apply exponent rules to rational exponents.', 'Example: 8^(2/3) = (∛8)² = 2² = 4.', 'a^(m/n) = ⁿ√(aᵐ) = (ⁿ√a)ᵐ.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Apply exponent rules to rational exponents', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'SAT Tip',
+            options: ['Example: 8^(2/3) = (∛8)² = 2² = 4.', 'a^(m/n) = ⁿ√(aᵐ) = (ⁿ√a)ᵐ.', 'Convert between radical and exponent form.', 'Apply exponent rules to rational exponents.']
           }
         ],
-        correctAnswers: ['a^(m/n) = ⁿ√(aᵐ) = (ⁿ√a)ᵐ', 'Apply exponent rules to rational exponents'],
-        hint1: 'Think about rational exponents',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'a^(m/n) = ⁿ√(aᵐ) = (ⁿ√a)ᵐ. Apply exponent rules to rational exponents.'
+        correctAnswers: ['Apply exponent rules to rational exponents.', 'Example: 8^(2/3) = (∛8)² = 2² = 4.'],
+        hint1: 'Think about what each concept specifically describes in Rational Exponents.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Rational Exponents describes a specific idea. Key Insight: Apply exponent rules to rational exponents. SAT Tip: Example: 8^(2/3) = (∛8)² = 2² = 4.'
       }
     }
   ]

@@ -30,31 +30,31 @@ Extrema only occur at critical points (within the domain)
       id: 'appli2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of local extrema?',
+            question: 'Which of the following correctly describes Local maximum?',
             options: [
-              'Local maximum',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'Extrema only occur at critical points (within the domain)',
+              'f(c) ≥ f(x) for all x near c',
+              'f(c) ≤ f(x) for all x near c',
+              'where f\'(c) = 0 or f\'(c) is undefined'
             ],
-            correctAnswer: 0,
-            explanation: 'Local maximum: f(c) ≥ f(x) for all x near c'
+            correctAnswer: 1,
+            explanation: 'Correct — Local maximum: f(c) ≥ f(x) for all x near c. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of local extrema, which is accurate?',
+            question: 'In the context of Local Extrema, which explains Critical points?',
             options: [
+              'f(c) ≥ f(x) for all x near c',
               'where f\'(c) = 0 or f\'(c) is undefined',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'f(c) ≤ f(x) for all x near c',
+              'Extrema only occur at critical points (within the domain)'
             ],
-            correctAnswer: 0,
-            explanation: 'Critical points: where f\'(c) = 0 or f\'(c) is undefined'
+            correctAnswer: 1,
+            explanation: 'Correct — Critical points: where f\'(c) = 0 or f\'(c) is undefined. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Extrema only occur at critical points (within the domain)
       id: 'appli2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to local extrema?',
+            question: 'Which statement about Extrema only occur at critical points… is correct?',
             options: [
               'Extrema only occur at critical points (within the domain)',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'f(c) ≤ f(x) for all x near c',
+              'f(c) ≥ f(x) for all x near c',
+              'where f\'(c) = 0 or f\'(c) is undefined'
             ],
             correctAnswer: 0,
-            explanation: 'Extrema only occur at critical points (within the domain)'
+            explanation: 'Correct — Extrema only occur at critical points (within the domain). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Extrema only occur at critical points (within the domain)
       id: 'appli2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Local maximum',
-            options: ['f(c) ≥ f(x) for all x near c', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Extrema only occur at critical points (within the domain)', 'f(c) ≤ f(x) for all x near c', 'where f\'(c) = 0 or f\'(c) is undefined', 'f(c) ≥ f(x) for all x near c']
           },
           {
             label: 'Local minimum',
-            options: ['f(c) ≤ f(x) for all x near c', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['f(c) ≤ f(x) for all x near c', 'where f\'(c) = 0 or f\'(c) is undefined', 'f(c) ≥ f(x) for all x near c', 'Extrema only occur at critical points (within the domain)']
           },
           {
             label: 'Critical points',
-            options: ['where f\'(c) = 0 or f\'(c) is undefined', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Extrema only occur at critical points (within the domain)', 'f(c) ≤ f(x) for all x near c', 'where f\'(c) = 0 or f\'(c) is undefined', 'f(c) ≥ f(x) for all x near c']
           }
         ],
         correctAnswers: ['f(c) ≥ f(x) for all x near c', 'f(c) ≤ f(x) for all x near c', 'where f\'(c) = 0 or f\'(c) is undefined'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Local Extrema.'
+        hint1: 'Think about what each concept specifically describes in Local Extrema.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Local Extrema describes a specific idea. Local maximum: f(c) ≥ f(x) for all x near c. Local minimum: f(c) ≤ f(x) for all x near c. Critical points: where f\'(c) = 0 or f\'(c) is undefined.'
       }
     }
   ]

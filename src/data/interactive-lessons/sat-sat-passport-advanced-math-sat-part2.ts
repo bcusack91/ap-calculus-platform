@@ -18,20 +18,31 @@ Extraneous solutions: always check answers in the original equation.
       id: 'sat-p2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes quadratic, polynomial, radical, rational, and absolute value equations?',
+            question: 'Which statement accurately explains Quadratic, polynomial, radical,…?',
             options: [
-              'Quadratic, polynomial, radical, rational, and absolute value equations is a fundamental concept in SAT Math',
-              'Extraneous solutions: always check answers in the original equation',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'Rational equations: multiply by LCD, solve, exclude values that make denominator 0.',
+              'Radical equations: isolate the radical, square both sides, check.',
+              'Quadratic, polynomial, radical, rational, and absolute value equations.',
+              'always check answers in the original equation.'
             ],
-            correctAnswer: 0,
-            explanation: 'Quadratic, polynomial, radical, rational, and absolute value equations'
+            correctAnswer: 2,
+            explanation: 'Correct — Quadratic, polynomial, radical, rational, and absolute value equations. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Nonlinear Equations, which explains Key Insight?',
+            options: [
+              'Rational equations: multiply by LCD, solve, exclude values that make denominator 0.',
+              'always check answers in the original equation.',
+              'Radical equations: isolate the radical, square both sides, check.',
+              'Quadratic, polynomial, radical, rational, and absolute value equations.'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Key Insight: Radical equations: isolate the radical, square both sides, check. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Extraneous solutions: always check answers in the original equation.
       id: 'sat-p2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for nonlinear equations?',
+            question: 'Which statement about SAT Tip is correct?',
             options: [
-              'Radical equations: isolate the radical, square both sides, check',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'Rational equations: multiply by LCD, solve, exclude values that make denominator 0.',
+              'Quadratic, polynomial, radical, rational, and absolute value equations.',
+              'Radical equations: isolate the radical, square both sides, check.',
+              'always check answers in the original equation.'
             ],
             correctAnswer: 0,
-            explanation: 'Radical equations: isolate the radical, square both sides, check'
+            explanation: 'Correct — SAT Tip: Rational equations: multiply by LCD, solve, exclude values that make denominator 0. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Extraneous solutions: always check answers in the original equation.
       id: 'sat-p2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Nonlinear Equations:',
-            options: ['Quadratic, polynomial, radical, rational, and abso', 'Extraneous solutions: always check answers in the ', 'Not applicable', 'None of these']
+            label: 'Extraneous solutions',
+            options: ['always check answers in the original equation.', 'Rational equations: multiply by LCD, solve, exclude values that make denominator 0.', 'Quadratic, polynomial, radical, rational, and absolute value equations.', 'Radical equations: isolate the radical, square both sides, check.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Radical equations: isolate the radical, square bot', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Key Insight',
+            options: ['always check answers in the original equation.', 'Rational equations: multiply by LCD, solve, exclude values that make denominator 0.', 'Radical equations: isolate the radical, square both sides, check.', 'Quadratic, polynomial, radical, rational, and absolute value equations.']
+          },
+          {
+            label: 'SAT Tip',
+            options: ['always check answers in the original equation.', 'Radical equations: isolate the radical, square both sides, check.', 'Quadratic, polynomial, radical, rational, and absolute value equations.', 'Rational equations: multiply by LCD, solve, exclude values that make denominator 0.']
           }
         ],
-        correctAnswers: ['Quadratic, polynomial, radical, rational, and abso', 'Radical equations: isolate the radical, square bot'],
-        hint1: 'Think about nonlinear equations',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'Quadratic, polynomial, radical, rational, and absolute value equations. Radical equations: isolate the radical, square both sides, check.'
+        correctAnswers: ['always check answers in the original equation.', 'Radical equations: isolate the radical, square both sides, check.', 'Rational equations: multiply by LCD, solve, exclude values that make denominator 0.'],
+        hint1: 'Think about what each concept specifically describes in Nonlinear Equations.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Nonlinear Equations describes a specific idea. Extraneous solutions: always check answers in the original equation. Key Insight: Radical equations: isolate the radical, square both sides, check. SAT Tip: Rational equations: multiply by LCD, solve, exclude values that make denominator 0.'
       }
     }
   ]

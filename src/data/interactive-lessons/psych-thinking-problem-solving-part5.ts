@@ -30,31 +30,31 @@ Brainstorming and creative problem-solving
       id: 'think5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of creativity?',
-            options: [
-              'Convergent thinking',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
-            ],
-            correctAnswer: 0,
-            explanation: 'Convergent thinking: one correct answer'
-          },
-          {
-            question: 'In the context of creativity, which is accurate?',
+            question: 'Which of the following correctly describes Convergent thinking?',
             options: [
               'expertise, imaginative thinking, motivation',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'one correct answer',
+              'generating many possible solutions',
+              'Brainstorming and creative problem-solving'
             ],
-            correctAnswer: 0,
-            explanation: 'Components of creativity: expertise, imaginative thinking, motivation'
+            correctAnswer: 1,
+            explanation: 'Correct — Convergent thinking: one correct answer. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Components of creativity?',
+            options: [
+              'one correct answer',
+              'generating many possible solutions',
+              'Brainstorming and creative problem-solving',
+              'expertise, imaginative thinking, motivation'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Components of creativity: expertise, imaginative thinking, motivation. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Brainstorming and creative problem-solving
       id: 'think5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Convergent thinking',
-            options: ['one correct answer', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['one correct answer', 'expertise, imaginative thinking, motivation', 'generating many possible solutions', 'Brainstorming and creative problem-solving']
           },
           {
             label: 'Divergent thinking',
-            options: ['generating many possible solutions', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['expertise, imaginative thinking, motivation', 'generating many possible solutions', 'one correct answer', 'Brainstorming and creative problem-solving']
           },
           {
             label: 'Components of creativity',
-            options: ['expertise, imaginative thinking, motivation', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['generating many possible solutions', 'one correct answer', 'expertise, imaginative thinking, motivation', 'Brainstorming and creative problem-solving']
           }
         ],
         correctAnswers: ['one correct answer', 'generating many possible solutions', 'expertise, imaginative thinking, motivation'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Creativity.'
+        hint1: 'Think about what each concept specifically describes in Creativity.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Creativity describes a specific idea. Convergent thinking: one correct answer. Divergent thinking: generating many possible solutions. Components of creativity: expertise, imaginative thinking, motivation.'
       }
     }
   ]

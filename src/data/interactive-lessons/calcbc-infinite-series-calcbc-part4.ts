@@ -30,31 +30,31 @@ if lim(aₙ/bₙ) = c > 0, both series behave the same
       id: 'infin4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of p-series & comparison tests?',
+            question: 'Which statement accurately explains p-series?',
             options: [
-              'p-series',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
+              'Σ 1/nᵖ converges if p > 1, diverges if p ≤ 1',
+              'if 0 ≤ aₙ ≤ bₙ and Σbₙ converges, then Σaₙ converges',
+              'Σ 1/n diverges',
+              'if lim(aₙ/bₙ) = c > 0, both series behave the same'
             ],
             correctAnswer: 0,
-            explanation: 'p-series: Σ 1/nᵖ converges if p > 1, diverges if p ≤ 1'
+            explanation: 'Correct — p-series: Σ 1/nᵖ converges if p > 1, diverges if p ≤ 1. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of p-series & comparison tests, which is accurate?',
+            question: 'In the context of p-Series & Comparison Tests, which explains Direct Comparison?',
             options: [
-              'if 0 ≤ aₙ ≤ bₙ and Σbₙ converges, then Σaₙ converges',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'if lim(aₙ/bₙ) = c > 0, both series behave the same',
+              'Σ 1/nᵖ converges if p > 1, diverges if p ≤ 1',
+              'Σ 1/n diverges',
+              'if 0 ≤ aₙ ≤ bₙ and Σbₙ converges, then Σaₙ converges'
             ],
-            correctAnswer: 0,
-            explanation: 'Direct Comparison: if 0 ≤ aₙ ≤ bₙ and Σbₙ converges, then Σaₙ converges'
+            correctAnswer: 3,
+            explanation: 'Correct — Direct Comparison: if 0 ≤ aₙ ≤ bₙ and Σbₙ converges, then Σaₙ converges. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ if lim(aₙ/bₙ) = c > 0, both series behave the same
       id: 'infin4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to p-series & comparison tests?',
+            question: 'Which of these accurately represents Limit Comparison?',
             options: [
+              'if 0 ≤ aₙ ≤ bₙ and Σbₙ converges, then Σaₙ converges',
+              'Σ 1/nᵖ converges if p > 1, diverges if p ≤ 1',
               'if lim(aₙ/bₙ) = c > 0, both series behave the same',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'Σ 1/n diverges'
             ],
-            correctAnswer: 0,
-            explanation: 'Limit Comparison: if lim(aₙ/bₙ) = c > 0, both series behave the same'
+            correctAnswer: 2,
+            explanation: 'Correct — Limit Comparison: if lim(aₙ/bₙ) = c > 0, both series behave the same. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ if lim(aₙ/bₙ) = c > 0, both series behave the same
       id: 'infin4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'p-series',
-            options: ['Σ 1/nᵖ converges if p > 1, diverges if p ≤ 1', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['if 0 ≤ aₙ ≤ bₙ and Σbₙ converges, then Σaₙ converges', 'if lim(aₙ/bₙ) = c > 0, both series behave the same', 'Σ 1/n diverges', 'Σ 1/nᵖ converges if p > 1, diverges if p ≤ 1']
           },
           {
             label: 'Harmonic series (p=1)',
-            options: ['Σ 1/n diverges', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['if 0 ≤ aₙ ≤ bₙ and Σbₙ converges, then Σaₙ converges', 'Σ 1/n diverges', 'Σ 1/nᵖ converges if p > 1, diverges if p ≤ 1', 'if lim(aₙ/bₙ) = c > 0, both series behave the same']
           },
           {
             label: 'Direct Comparison',
-            options: ['if 0 ≤ aₙ ≤ bₙ and Σbₙ converges, then Σaₙ converg', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Σ 1/n diverges', 'Σ 1/nᵖ converges if p > 1, diverges if p ≤ 1', 'if lim(aₙ/bₙ) = c > 0, both series behave the same', 'if 0 ≤ aₙ ≤ bₙ and Σbₙ converges, then Σaₙ converges']
           }
         ],
-        correctAnswers: ['Σ 1/nᵖ converges if p > 1, diverges if p ≤ 1', 'Σ 1/n diverges', 'if 0 ≤ aₙ ≤ bₙ and Σbₙ converges, then Σaₙ converg'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding p-Series & Comparison Tests.'
+        correctAnswers: ['Σ 1/nᵖ converges if p > 1, diverges if p ≤ 1', 'Σ 1/n diverges', 'if 0 ≤ aₙ ≤ bₙ and Σbₙ converges, then Σaₙ converges'],
+        hint1: 'Think about what each concept specifically describes in p-Series & Comparison Tests.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in p-Series & Comparison Tests describes a specific idea. p-series: Σ 1/nᵖ converges if p > 1, diverges if p ≤ 1. Harmonic series (p=1): Σ 1/n diverges. Direct Comparison: if 0 ≤ aₙ ≤ bₙ and Σbₙ converges, then Σaₙ converges.'
       }
     }
   ]

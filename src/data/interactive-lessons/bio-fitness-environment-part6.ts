@@ -19,31 +19,31 @@ export const bioFitnessPart6Data = {
       id: 'fitn6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes analyzing fitness data in different environments?',
+            question: 'Which of the following correctly describes Analyzing fitness data in different…?',
             options: [
-              'Analyzing fitness data in different environments',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Predicting phenotypic responses',
+              'Evaluating trade-off scenarios',
+              'Designing experiments to measure fitness',
+              'Analyzing fitness data in different environments'
             ],
-            correctAnswer: 0,
-            explanation: 'Analyzing fitness data in different environments'
+            correctAnswer: 3,
+            explanation: 'Correct — Analyzing fitness data in different environments. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of problem-solving, which statement is accurate?',
+            question: 'Which of the following is true about Evaluating trade-off scenarios?',
             options: [
+              'Designing experiments to measure fitness',
               'Evaluating trade-off scenarios',
-              'stnemnorivne tnereffid ni atad ssentif gnizylanA',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Predicting phenotypic responses',
+              'Analyzing fitness data in different environments'
             ],
-            correctAnswer: 0,
-            explanation: 'Evaluating trade-off scenarios'
+            correctAnswer: 1,
+            explanation: 'Correct — Evaluating trade-off scenarios. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioFitnessPart6Data = {
       id: 'fitn6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to problem-solving?',
+            question: 'Which statement about Designing experiments to measure fitness is correct?',
             options: [
-              'Designing experiments to measure fitness',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Predicting phenotypic responses',
+              'Evaluating trade-off scenarios',
+              'Analyzing fitness data in different environments',
+              'Designing experiments to measure fitness'
             ],
-            correctAnswer: 0,
-            explanation: 'Designing experiments to measure fitness'
+            correctAnswer: 3,
+            explanation: 'Correct — Designing experiments to measure fitness. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioFitnessPart6Data = {
       id: 'fitn6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Analyzing fitness data in different environments is important in problem-solving because',
-            options: ['Analyzing fitness data in different environments', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Analyzing fitness data in different…',
+            options: ['Analyzing fitness data in different environments', 'Evaluating trade-off scenarios', 'Designing experiments to measure fitness', 'Predicting phenotypic responses']
           },
           {
-            label: 'Predicting phenotypic responses is important in problem-solving because',
-            options: ['Predicting phenotypic responses', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Predicting phenotypic responses',
+            options: ['Analyzing fitness data in different environments', 'Predicting phenotypic responses', 'Designing experiments to measure fitness', 'Evaluating trade-off scenarios']
           },
           {
-            label: 'Evaluating trade-off scenarios is important in problem-solving because',
-            options: ['Evaluating trade-off scenarios', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Evaluating trade-off scenarios',
+            options: ['Evaluating trade-off scenarios', 'Analyzing fitness data in different environments', 'Predicting phenotypic responses', 'Designing experiments to measure fitness']
           }
         ],
         correctAnswers: ['Analyzing fitness data in different environments', 'Predicting phenotypic responses', 'Evaluating trade-off scenarios'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving.'
+        hint1: 'Think about what each concept specifically describes in Fitness & Environment: Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Fitness & Environment: Problem-Solving Workshop describes a specific idea. Analyzing fitness data in different environments. Predicting phenotypic responses. Evaluating trade-off scenarios.'
       }
     }
   ]

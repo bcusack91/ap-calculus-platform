@@ -30,31 +30,31 @@ If the first choice doesn't work, try a different u
       id: 'u-sub2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of choosing u?',
+            question: 'Which statement accurately explains Choose u as the "inside" function (the…?',
             options: [
+              'If the first choice doesn\'t work, try a different u',
+              'du should match (or be a constant multiple of) the remaining factors',
               'Choose u as the "inside" function (the argument of a composite function)',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'u = expression inside a power, inside a trig function, exponent, denominator'
             ],
-            correctAnswer: 0,
-            explanation: 'Choose u as the "inside" function (the argument of a composite function)'
+            correctAnswer: 2,
+            explanation: 'Correct — Choose u as the "inside" function (the argument of a composite function). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of choosing u, which is accurate?',
+            question: 'In the context of Choosing u, which explains Common choices?',
             options: [
+              'du should match (or be a constant multiple of) the remaining factors',
+              'Choose u as the "inside" function (the argument of a composite function)',
               'u = expression inside a power, inside a trig function, exponent, denominator',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'If the first choice doesn\'t work, try a different u'
             ],
-            correctAnswer: 0,
-            explanation: 'Common choices: u = expression inside a power, inside a trig function, exponent, denominator'
+            correctAnswer: 2,
+            explanation: 'Correct — Common choices: u = expression inside a power, inside a trig function, exponent, denominator. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ If the first choice doesn't work, try a different u
       id: 'u-sub2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to choosing u?',
+            question: 'Which of these accurately represents If the first choice doesn\'t work, try a…?',
             options: [
+              'u = expression inside a power, inside a trig function, exponent, denominator',
               'If the first choice doesn\'t work, try a different u',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'Choose u as the "inside" function (the argument of a composite function)',
+              'du should match (or be a constant multiple of) the remaining factors'
             ],
-            correctAnswer: 0,
-            explanation: 'If the first choice doesn\'t work, try a different u'
+            correctAnswer: 1,
+            explanation: 'Correct — If the first choice doesn\'t work, try a different u. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ If the first choice doesn't work, try a different u
       id: 'u-sub2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Choose u as the "inside" function (the argument of a composite function)',
-            options: ['Choose u as the "inside" function (the argument of', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Choose u as the "inside" function (the…',
+            options: ['Choose u as the "inside" function (the argument of a composite function)', 'du should match (or be a constant multiple of) the remaining factors', 'u = expression inside a power, inside a trig function, exponent, denominator', 'If the first choice doesn\'t work, try a different u']
           },
           {
-            label: 'du should match (or be a constant multiple of) the remaining factors',
-            options: ['du should match (or be a constant multiple of) the', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'du should match (or be a constant…',
+            options: ['du should match (or be a constant multiple of) the remaining factors', 'If the first choice doesn\'t work, try a different u', 'Choose u as the "inside" function (the argument of a composite function)', 'u = expression inside a power, inside a trig function, exponent, denominator']
           },
           {
             label: 'Common choices',
-            options: ['u = expression inside a power, inside a trig funct', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Choose u as the "inside" function (the argument of a composite function)', 'du should match (or be a constant multiple of) the remaining factors', 'If the first choice doesn\'t work, try a different u', 'u = expression inside a power, inside a trig function, exponent, denominator']
           }
         ],
-        correctAnswers: ['Choose u as the "inside" function (the argument of', 'du should match (or be a constant multiple of) the', 'u = expression inside a power, inside a trig funct'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Choosing u.'
+        correctAnswers: ['Choose u as the "inside" function (the argument of a composite function)', 'du should match (or be a constant multiple of) the remaining factors', 'u = expression inside a power, inside a trig function, exponent, denominator'],
+        hint1: 'Think about what each concept specifically describes in Choosing u.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Choosing u describes a specific idea. Choose u as the "inside" function (the argument of a composite function). du should match (or be a constant multiple of) the remaining factors. Common choices: u = expression inside a power, inside a trig function, exponent, denominator.'
       }
     }
   ]

@@ -30,31 +30,31 @@ Range (horizontal distance) = v₀² sin(2θ)/g
       id: 'param6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of problem-solving workshop?',
+            question: 'Which of the following correctly describes Horizontal?',
             options: [
-              'Horizontal',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'x = v₀ cos(θ) · t',
+              'Range (horizontal distance) = v₀² sin(2θ)/g',
+              'Maximum height at t = v₀ sin(θ)/g',
+              'y = v₀ sin(θ) · t - ½gt² + h₀'
             ],
             correctAnswer: 0,
-            explanation: 'Horizontal: x = v₀ cos(θ) · t'
+            explanation: 'Correct — Horizontal: x = v₀ cos(θ) · t. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of problem-solving workshop, which is accurate?',
+            question: 'In the context of Problem-Solving Workshop, which explains Maximum height at t = v₀ sin(θ)/g?',
             options: [
               'Maximum height at t = v₀ sin(θ)/g',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'y = v₀ sin(θ) · t - ½gt² + h₀',
+              'Range (horizontal distance) = v₀² sin(2θ)/g',
+              'x = v₀ cos(θ) · t'
             ],
             correctAnswer: 0,
-            explanation: 'Maximum height at t = v₀ sin(θ)/g'
+            explanation: 'Correct — Maximum height at t = v₀ sin(θ)/g. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,24 @@ Range (horizontal distance) = v₀² sin(2θ)/g
       id: 'param6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Horizontal',
-            options: ['x = v₀ cos(θ) · t', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['y = v₀ sin(θ) · t - ½gt² + h₀', 'Range (horizontal distance) = v₀² sin(2θ)/g', 'Maximum height at t = v₀ sin(θ)/g', 'x = v₀ cos(θ) · t']
           },
           {
             label: 'Vertical',
-            options: ['y = v₀ sin(θ) · t - ½gt² + h₀', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
-          },
-          {
-            label: 'Maximum height at t = v₀ sin(θ)/g',
-            options: ['Maximum height at t = v₀ sin(θ)/g', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['x = v₀ cos(θ) · t', 'Maximum height at t = v₀ sin(θ)/g', 'y = v₀ sin(θ) · t - ½gt² + h₀', 'Range (horizontal distance) = v₀² sin(2θ)/g']
           }
         ],
-        correctAnswers: ['x = v₀ cos(θ) · t', 'y = v₀ sin(θ) · t - ½gt² + h₀', 'Maximum height at t = v₀ sin(θ)/g'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving Workshop.'
+        correctAnswers: ['x = v₀ cos(θ) · t', 'y = v₀ sin(θ) · t - ½gt² + h₀'],
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Horizontal: x = v₀ cos(θ) · t. Vertical: y = v₀ sin(θ) · t - ½gt² + h₀.'
       }
     }
   ]

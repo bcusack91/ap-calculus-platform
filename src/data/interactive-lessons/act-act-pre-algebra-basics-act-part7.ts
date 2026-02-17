@@ -18,20 +18,31 @@ Multiplication and division have equal priority — go left to right.
       id: 'act-p7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes pemdas?',
+            question: 'Which statement accurately explains PEMDAS?',
             options: [
-              'PEMDAS is a key concept for ACT Math',
-              'Multiplication and division have equal priority — go left to right',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'Parentheses, Exponents, Multiplication/Division (left to right), Addition/Subtraction (left to right).',
+              'Nested parentheses: work from the innermost out.',
+              'Same for addition and subtraction — left to right.',
+              'Multiplication and division have equal priority — go left to right.'
             ],
             correctAnswer: 0,
-            explanation: 'PEMDAS: Parentheses, Exponents, Multiplication/Division (left to right), Addition/Subtraction (left to right)'
+            explanation: 'Correct — PEMDAS: Parentheses, Exponents, Multiplication/Division (left to right), Addition/Subtraction (left to right). The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              'Same for addition and subtraction — left to right.',
+              'Multiplication and division have equal priority — go left to right.',
+              'Nested parentheses: work from the innermost out.',
+              'Parentheses, Exponents, Multiplication/Division (left to right), Addition/Subtraction (left to right).'
+            ],
+            correctAnswer: 0,
+            explanation: 'Correct — Key Insight: Same for addition and subtraction — left to right. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Multiplication and division have equal priority — go left to right.
       id: 'act-p7-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for review & applications?',
+            question: 'Regarding Review & Applications, which correctly describes ACT Tip?',
             options: [
-              'Same for addition and subtraction — left to right',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Nested parentheses: work from the innermost out.',
+              'Same for addition and subtraction — left to right.',
+              'Multiplication and division have equal priority — go left to right.',
+              'Parentheses, Exponents, Multiplication/Division (left to right), Addition/Subtraction (left to right).'
             ],
             correctAnswer: 0,
-            explanation: 'Same for addition and subtraction — left to right'
+            explanation: 'Correct — ACT Tip: Nested parentheses: work from the innermost out. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Multiplication and division have equal priority — go left to right.
       id: 'act-p7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Review & Applications:',
-            options: ['PEMDAS: Parentheses, Exponents, Multiplication/Div', 'Multiplication and division have equal priority — ', 'Not applicable', 'None of these']
+            label: 'PEMDAS',
+            options: ['Multiplication and division have equal priority — go left to right.', 'Parentheses, Exponents, Multiplication/Division (left to right), Addition/Subtraction (left to right).', 'Same for addition and subtraction — left to right.', 'Nested parentheses: work from the innermost out.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Same for addition and subtraction — left to right', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Key Insight',
+            options: ['Nested parentheses: work from the innermost out.', 'Same for addition and subtraction — left to right.', 'Multiplication and division have equal priority — go left to right.', 'Parentheses, Exponents, Multiplication/Division (left to right), Addition/Subtraction (left to right).']
+          },
+          {
+            label: 'ACT Tip',
+            options: ['Multiplication and division have equal priority — go left to right.', 'Nested parentheses: work from the innermost out.', 'Same for addition and subtraction — left to right.', 'Parentheses, Exponents, Multiplication/Division (left to right), Addition/Subtraction (left to right).']
           }
         ],
-        correctAnswers: ['PEMDAS: Parentheses, Exponents, Multiplication/Div', 'Same for addition and subtraction — left to right'],
-        hint1: 'Think about review & applications',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'PEMDAS: Parentheses, Exponents, Multiplication/Division (left to right), Addition/Subtraction (left to right). Same for addition and subtraction — left to right.'
+        correctAnswers: ['Parentheses, Exponents, Multiplication/Division (left to right), Addition/Subtraction (left to right).', 'Same for addition and subtraction — left to right.', 'Nested parentheses: work from the innermost out.'],
+        hint1: 'Think about what each concept specifically describes in Review & Applications.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Review & Applications describes a specific idea. PEMDAS: Parentheses, Exponents, Multiplication/Division (left to right), Addition/Subtraction (left to right). Key Insight: Same for addition and subtraction — left to right. ACT Tip: Nested parentheses: work from the innermost out.'
       }
     }
   ]

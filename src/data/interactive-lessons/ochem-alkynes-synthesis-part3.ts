@@ -30,31 +30,31 @@ H₂O/H⁺/HgSO₄ → ketone (Markovnikov)
       id: 'alkyn3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of addition to alkynes?',
+            question: 'Which statement accurately explains HX addition?',
             options: [
-              'HX addition',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'H₂O/H⁺/HgSO₄ → ketone (Markovnikov)',
+              '2 equivalents HX → geminal dihalide',
+              'follows Markovnikov\'s rule',
+              '1 equivalent HX → vinyl halide'
             ],
-            correctAnswer: 0,
-            explanation: 'HX addition: follows Markovnikov\'s rule'
+            correctAnswer: 2,
+            explanation: 'Correct — HX addition: follows Markovnikov\'s rule. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of addition to alkynes, which is accurate?',
+            question: 'Select the statement that correctly describes 2 equivalents HX → geminal dihalide:',
             options: [
+              'H₂O/H⁺/HgSO₄ → ketone (Markovnikov)',
               '2 equivalents HX → geminal dihalide',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              '1 equivalent HX → vinyl halide',
+              'follows Markovnikov\'s rule'
             ],
-            correctAnswer: 0,
-            explanation: '2 equivalents HX → geminal dihalide'
+            correctAnswer: 1,
+            explanation: 'Correct — 2 equivalents HX → geminal dihalide. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,24 @@ H₂O/H⁺/HgSO₄ → ketone (Markovnikov)
       id: 'alkyn3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'HX addition',
-            options: ['follows Markovnikov\'s rule', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['1 equivalent HX → vinyl halide', 'follows Markovnikov\'s rule', '2 equivalents HX → geminal dihalide', 'H₂O/H⁺/HgSO₄ → ketone (Markovnikov)']
           },
           {
-            label: '1 equivalent HX → vinyl halide',
-            options: ['1 equivalent HX → vinyl halide', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
-          },
-          {
-            label: '2 equivalents HX → geminal dihalide',
-            options: ['2 equivalents HX → geminal dihalide', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Hydration',
+            options: ['2 equivalents HX → geminal dihalide', 'follows Markovnikov\'s rule', 'H₂O/H⁺/HgSO₄ → ketone (Markovnikov)', '1 equivalent HX → vinyl halide']
           }
         ],
-        correctAnswers: ['follows Markovnikov\'s rule', '1 equivalent HX → vinyl halide', '2 equivalents HX → geminal dihalide'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Addition to Alkynes.'
+        correctAnswers: ['follows Markovnikov\'s rule', 'H₂O/H⁺/HgSO₄ → ketone (Markovnikov)'],
+        hint1: 'Think about what each concept specifically describes in Addition to Alkynes.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Addition to Alkynes describes a specific idea. HX addition: follows Markovnikov\'s rule. Hydration: H₂O/H⁺/HgSO₄ → ketone (Markovnikov).'
       }
     }
   ]

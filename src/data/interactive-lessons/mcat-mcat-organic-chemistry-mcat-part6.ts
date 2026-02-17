@@ -71,23 +71,28 @@ IR spectroscopy: O-H broad ~3300, N-H sharp ~3300, C=O sharp ~1700, C-H ~2900 cm
       id: 'mcat-6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Spectroscopy & Structure:',
-            options: ['IR spectroscopy: O-H broad ~3300, N-H sharp ~3300, C=O sharp', '1H NMR: chemical shift indicates electronic environment; spl', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'IR spectroscopy',
+            options: ['Mass spectrometry: molecular ion peak gives molecular weight; fragmentation reveals structure.', 'UV-Vis: conjugated systems absorb longer wavelengths — more conjugation = lower energy transition.', 'chemical shift indicates electronic environment; splitting follows n+1 rule.', 'O-H broad ~3300, N-H sharp ~3300, C=O sharp ~1700, C-H ~2900 cm-1.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Mass spectrometry: molecular ion peak gives molecular weight', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: '1H NMR',
+            options: ['O-H broad ~3300, N-H sharp ~3300, C=O sharp ~1700, C-H ~2900 cm-1.', 'UV-Vis: conjugated systems absorb longer wavelengths — more conjugation = lower energy transition.', 'chemical shift indicates electronic environment; splitting follows n+1 rule.', 'Mass spectrometry: molecular ion peak gives molecular weight; fragmentation reveals structure.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['chemical shift indicates electronic environment; splitting follows n+1 rule.', 'Mass spectrometry: molecular ion peak gives molecular weight; fragmentation reveals structure.', 'UV-Vis: conjugated systems absorb longer wavelengths — more conjugation = lower energy transition.', 'O-H broad ~3300, N-H sharp ~3300, C=O sharp ~1700, C-H ~2900 cm-1.']
           }
         ],
-        correctAnswers: ['IR spectroscopy: O-H broad ~3300, N-H sharp ~3300, C=O sharp', 'Mass spectrometry: molecular ion peak gives molecular weight'],
-        hint1: 'Think about spectroscopy & structure',
-        hint2: 'Consider the MCAT application',
-        explanation: 'IR spectroscopy: O-H broad ~3300, N-H sharp ~3300, C=O sharp ~1700, C-H ~2900 cm-1. Mass spectrometry: molecular ion peak gives molecular weight; fragmentation reveals structure.'
+        correctAnswers: ['O-H broad ~3300, N-H sharp ~3300, C=O sharp ~1700, C-H ~2900 cm-1.', 'chemical shift indicates electronic environment; splitting follows n+1 rule.', 'Mass spectrometry: molecular ion peak gives molecular weight; fragmentation reveals structure.'],
+        hint1: 'Think about what each concept specifically describes in Spectroscopy & Structure.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Spectroscopy & Structure describes a specific idea. IR spectroscopy: O-H broad ~3300, N-H sharp ~3300, C=O sharp ~1700, C-H ~2900 cm-1. 1H NMR: chemical shift indicates electronic environment; splitting follows n+1 rule. Key Insight: Mass spectrometry: molecular ion peak gives molecular weight; fragmentation reveals structure.'
       }
     }
   ]

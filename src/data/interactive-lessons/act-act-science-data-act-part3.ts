@@ -18,20 +18,31 @@ Inverse relationship: one increases as the other decreases.
       id: 'act-s3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes direct relationship?',
+            question: 'Which statement accurately explains Direct relationship?',
             options: [
-              'Direct relationship is a key concept for ACT Science',
-              'Inverse relationship: one increases as the other decreases',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'both variables increase together.',
+              'Look for patterns: linear, exponential, cyclical.',
+              'Describe trends using "as X increases, Y...".',
+              'one increases as the other decreases.'
             ],
             correctAnswer: 0,
-            explanation: 'Direct relationship: both variables increase together'
+            explanation: 'Correct — Direct relationship: both variables increase together. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Key Insight?',
+            options: [
+              'one increases as the other decreases.',
+              'both variables increase together.',
+              'Look for patterns: linear, exponential, cyclical.',
+              'Describe trends using "as X increases, Y...".'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Key Insight: Look for patterns: linear, exponential, cyclical. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Inverse relationship: one increases as the other decreases.
       id: 'act-s3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for identifying trends?',
+            question: 'Which of these accurately represents ACT Tip?',
             options: [
-              'Look for patterns: linear, exponential, cyclical',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Describe trends using "as X increases, Y...".',
+              'one increases as the other decreases.',
+              'Look for patterns: linear, exponential, cyclical.',
+              'both variables increase together.'
             ],
             correctAnswer: 0,
-            explanation: 'Look for patterns: linear, exponential, cyclical'
+            explanation: 'Correct — ACT Tip: Describe trends using "as X increases, Y...". Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Inverse relationship: one increases as the other decreases.
       id: 'act-s3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Identifying Trends:',
-            options: ['Direct relationship: both variables increase toget', 'Inverse relationship: one increases as the other d', 'Not applicable', 'None of these']
+            label: 'Direct relationship',
+            options: ['Look for patterns: linear, exponential, cyclical.', 'Describe trends using "as X increases, Y...".', 'both variables increase together.', 'one increases as the other decreases.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Look for patterns: linear, exponential, cyclical', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Inverse relationship',
+            options: ['one increases as the other decreases.', 'Describe trends using "as X increases, Y...".', 'Look for patterns: linear, exponential, cyclical.', 'both variables increase together.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['Look for patterns: linear, exponential, cyclical.', 'one increases as the other decreases.', 'both variables increase together.', 'Describe trends using "as X increases, Y...".']
           }
         ],
-        correctAnswers: ['Direct relationship: both variables increase toget', 'Look for patterns: linear, exponential, cyclical'],
-        hint1: 'Think about identifying trends',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Direct relationship: both variables increase together. Look for patterns: linear, exponential, cyclical.'
+        correctAnswers: ['both variables increase together.', 'one increases as the other decreases.', 'Look for patterns: linear, exponential, cyclical.'],
+        hint1: 'Think about what each concept specifically describes in Identifying Trends.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Identifying Trends describes a specific idea. Direct relationship: both variables increase together. Inverse relationship: one increases as the other decreases. Key Insight: Look for patterns: linear, exponential, cyclical.'
       }
     }
   ]

@@ -19,31 +19,31 @@ export const bioPhotosynthesisPart2Data = {
       id: 'phot2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes ps ii (p680)?',
+            question: 'What does "PS II (P680)" refer to in biology?',
             options: [
+              'PS I only, produces ATP only',
               'splits water, passes electrons to ETC',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'H₂O → PS II → ETC → PS I → NADPH',
+              'reduces NADP⁺ to NADPH'
             ],
-            correctAnswer: 0,
-            explanation: 'PS II (P680): splits water, passes electrons to ETC'
+            correctAnswer: 1,
+            explanation: 'Correct — PS II (P680): splits water, passes electrons to ETC. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of photosystems i & ii, which statement is accurate?',
+            question: 'Select the statement that correctly describes Non-cyclic electron flow:',
             options: [
-              'Non-cyclic electron flow: H₂O → PS II → ETC → PS I → NADPH',
-              'CTE ot snortcele sessap ,retaw stilps :)086P( II SP',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'reduces NADP⁺ to NADPH',
+              'splits water, passes electrons to ETC',
+              'H₂O → PS II → ETC → PS I → NADPH',
+              'PS I only, produces ATP only'
             ],
-            correctAnswer: 0,
-            explanation: 'Non-cyclic electron flow: H₂O → PS II → ETC → PS I → NADPH'
+            correctAnswer: 2,
+            explanation: 'Correct — Non-cyclic electron flow: H₂O → PS II → ETC → PS I → NADPH. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioPhotosynthesisPart2Data = {
       id: 'phot2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to photosystems i & ii?',
+            question: 'Which statement about Cyclic electron flow is correct?',
             options: [
-              'Cyclic electron flow: PS I only, produces ATP only',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'splits water, passes electrons to ETC',
+              'H₂O → PS II → ETC → PS I → NADPH',
+              'PS I only, produces ATP only',
+              'reduces NADP⁺ to NADPH'
             ],
-            correctAnswer: 0,
-            explanation: 'Cyclic electron flow: PS I only, produces ATP only'
+            correctAnswer: 2,
+            explanation: 'Correct — Cyclic electron flow: PS I only, produces ATP only. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioPhotosynthesisPart2Data = {
       id: 'phot2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'PS II (P680) is important in photosystems i & ii because',
-            options: ['splits water, passes electrons to ETC', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'PS II (P680)',
+            options: ['H₂O → PS II → ETC → PS I → NADPH', 'reduces NADP⁺ to NADPH', 'splits water, passes electrons to ETC', 'PS I only, produces ATP only']
           },
           {
-            label: 'PS I (P700) is important in photosystems i & ii because',
-            options: ['reduces NADP⁺ to NADPH', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'PS I (P700)',
+            options: ['reduces NADP⁺ to NADPH', 'splits water, passes electrons to ETC', 'H₂O → PS II → ETC → PS I → NADPH', 'PS I only, produces ATP only']
           },
           {
-            label: 'Non-cyclic electron flow is important in photosystems i & ii because',
-            options: ['H₂O → PS II → ETC → PS I → NADPH', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Non-cyclic electron flow',
+            options: ['H₂O → PS II → ETC → PS I → NADPH', 'reduces NADP⁺ to NADPH', 'splits water, passes electrons to ETC', 'PS I only, produces ATP only']
           }
         ],
         correctAnswers: ['splits water, passes electrons to ETC', 'reduces NADP⁺ to NADPH', 'H₂O → PS II → ETC → PS I → NADPH'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Photosystems I & II.'
+        hint1: 'Think about what each concept specifically describes in Photosystems I & II.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Photosystems I & II describes a specific idea. PS II (P680): splits water, passes electrons to ETC. PS I (P700): reduces NADP⁺ to NADPH. Non-cyclic electron flow: H₂O → PS II → ETC → PS I → NADPH.'
       }
     }
   ]

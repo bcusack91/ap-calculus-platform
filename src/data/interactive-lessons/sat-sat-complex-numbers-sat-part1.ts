@@ -18,20 +18,31 @@ i = √(-1), so i² = -1.
       id: 'sat-c1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes i = √(-1), so i² = -1?',
+            question: 'What does "i = √(-1), so i² = -1." refer to in SAT prep?',
             options: [
-              'i = √(-1), so i² = -1 is a fundamental concept in SAT Math',
-              '√(-a) = i√a for a > 0',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'i = √(-1), so i² = -1.',
+              'Pure imaginary: bi (when a = 0); real: a (when b = 0).',
+              'Complex number: a + bi where a is real part, b is imaginary part.',
+              '√(-a) = i√a for a > 0.'
             ],
             correctAnswer: 0,
-            explanation: 'i = √(-1), so i² = -1'
+            explanation: 'Correct — i = √(-1), so i² = -1. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Key Insight?',
+            options: [
+              'Pure imaginary: bi (when a = 0); real: a (when b = 0).',
+              'Complex number: a + bi where a is real part, b is imaginary part.',
+              '√(-a) = i√a for a > 0.',
+              'i = √(-1), so i² = -1.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Key Insight: Complex number: a + bi where a is real part, b is imaginary part. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ i = √(-1), so i² = -1.
       id: 'sat-c1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for imaginary numbers?',
+            question: 'Which statement about SAT Tip is correct?',
             options: [
-              'Complex number: a + bi where a is real part, b is imaginary part',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'Pure imaginary: bi (when a = 0); real: a (when b = 0).',
+              'Complex number: a + bi where a is real part, b is imaginary part.',
+              '√(-a) = i√a for a > 0.',
+              'i = √(-1), so i² = -1.'
             ],
             correctAnswer: 0,
-            explanation: 'Complex number: a + bi where a is real part, b is imaginary part'
+            explanation: 'Correct — SAT Tip: Pure imaginary: bi (when a = 0); real: a (when b = 0). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ i = √(-1), so i² = -1.
       id: 'sat-c1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Imaginary Numbers:',
-            options: ['i = √(-1), so i² = -1', '√(-a) = i√a for a > 0', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['Complex number: a + bi where a is real part, b is imaginary part.', 'i = √(-1), so i² = -1.', 'Pure imaginary: bi (when a = 0); real: a (when b = 0).', '√(-a) = i√a for a > 0.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Complex number: a + bi where a is real part, b is ', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'SAT Tip',
+            options: ['√(-a) = i√a for a > 0.', 'i = √(-1), so i² = -1.', 'Complex number: a + bi where a is real part, b is imaginary part.', 'Pure imaginary: bi (when a = 0); real: a (when b = 0).']
           }
         ],
-        correctAnswers: ['i = √(-1), so i² = -1', 'Complex number: a + bi where a is real part, b is '],
-        hint1: 'Think about imaginary numbers',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'i = √(-1), so i² = -1. Complex number: a + bi where a is real part, b is imaginary part.'
+        correctAnswers: ['Complex number: a + bi where a is real part, b is imaginary part.', 'Pure imaginary: bi (when a = 0); real: a (when b = 0).'],
+        hint1: 'Think about what each concept specifically describes in Complex Numbers.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Complex Numbers describes a specific idea. Key Insight: Complex number: a + bi where a is real part, b is imaginary part. SAT Tip: Pure imaginary: bi (when a = 0); real: a (when b = 0).'
       }
     }
   ]

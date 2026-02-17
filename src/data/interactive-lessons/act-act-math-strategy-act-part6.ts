@@ -18,20 +18,31 @@ Second pass: tackle medium questions (31-50).
       id: 'act-m6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes first pass?',
+            question: 'Which of the following correctly describes First pass?',
             options: [
-              'First pass is a key concept for ACT Math',
-              'Second pass: tackle medium questions (31-50)',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'Final pass: attempt hard questions (51-60) with remaining time.',
+              'Never leave a question blank — guess if needed (no penalty).',
+              'tackle medium questions (31-50).',
+              'do all easy questions (1-30) quickly.'
             ],
-            correctAnswer: 0,
-            explanation: 'First pass: do all easy questions (1-30) quickly'
+            correctAnswer: 3,
+            explanation: 'Correct — First pass: do all easy questions (1-30) quickly. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Key Insight?',
+            options: [
+              'Never leave a question blank — guess if needed (no penalty).',
+              'do all easy questions (1-30) quickly.',
+              'Final pass: attempt hard questions (51-60) with remaining time.',
+              'tackle medium questions (31-50).'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Key Insight: Final pass: attempt hard questions (51-60) with remaining time. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Second pass: tackle medium questions (31-50).
       id: 'act-m6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for problem-solving workshop?',
+            question: 'Which of these accurately represents ACT Tip?',
             options: [
-              'Final pass: attempt hard questions (51-60) with remaining time',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Final pass: attempt hard questions (51-60) with remaining time.',
+              'tackle medium questions (31-50).',
+              'do all easy questions (1-30) quickly.',
+              'Never leave a question blank — guess if needed (no penalty).'
             ],
-            correctAnswer: 0,
-            explanation: 'Final pass: attempt hard questions (51-60) with remaining time'
+            correctAnswer: 3,
+            explanation: 'Correct — ACT Tip: Never leave a question blank — guess if needed (no penalty). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Second pass: tackle medium questions (31-50).
       id: 'act-m6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Problem-Solving Workshop:',
-            options: ['First pass: do all easy questions (1-30) quickly', 'Second pass: tackle medium questions (31-50)', 'Not applicable', 'None of these']
+            label: 'First pass',
+            options: ['tackle medium questions (31-50).', 'Never leave a question blank — guess if needed (no penalty).', 'Final pass: attempt hard questions (51-60) with remaining time.', 'do all easy questions (1-30) quickly.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Final pass: attempt hard questions (51-60) with re', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Second pass',
+            options: ['do all easy questions (1-30) quickly.', 'Final pass: attempt hard questions (51-60) with remaining time.', 'tackle medium questions (31-50).', 'Never leave a question blank — guess if needed (no penalty).']
+          },
+          {
+            label: 'Key Insight',
+            options: ['Final pass: attempt hard questions (51-60) with remaining time.', 'tackle medium questions (31-50).', 'Never leave a question blank — guess if needed (no penalty).', 'do all easy questions (1-30) quickly.']
           }
         ],
-        correctAnswers: ['First pass: do all easy questions (1-30) quickly', 'Final pass: attempt hard questions (51-60) with re'],
-        hint1: 'Think about problem-solving workshop',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'First pass: do all easy questions (1-30) quickly. Final pass: attempt hard questions (51-60) with remaining time.'
+        correctAnswers: ['do all easy questions (1-30) quickly.', 'tackle medium questions (31-50).', 'Final pass: attempt hard questions (51-60) with remaining time.'],
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. First pass: do all easy questions (1-30) quickly. Second pass: tackle medium questions (31-50). Key Insight: Final pass: attempt hard questions (51-60) with remaining time.'
       }
     }
   ]

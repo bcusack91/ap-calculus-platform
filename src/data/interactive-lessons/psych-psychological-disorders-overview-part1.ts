@@ -30,31 +30,31 @@ negative attitudes toward people with mental illness
       id: 'psych1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of defining disorders?',
+            question: 'What does "Psychological disorder" refer to in psychology?',
             options: [
-              'Psychological disorder',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'dysfunctional, distressing, deviant, dangerous (4 D\'s)',
+              'disorders are illnesses with biological causes',
+              'negative attitudes toward people with mental illness',
+              'biological + psychological + social factors'
             ],
             correctAnswer: 0,
-            explanation: 'Psychological disorder: dysfunctional, distressing, deviant, dangerous (4 D\'s)'
+            explanation: 'Correct — Psychological disorder: dysfunctional, distressing, deviant, dangerous (4 D\'s). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of defining disorders, which is accurate?',
+            question: 'Select the statement that correctly describes Biopsychosocial model:',
             options: [
+              'disorders are illnesses with biological causes',
               'biological + psychological + social factors',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'dysfunctional, distressing, deviant, dangerous (4 D\'s)',
+              'negative attitudes toward people with mental illness'
             ],
-            correctAnswer: 0,
-            explanation: 'Biopsychosocial model: biological + psychological + social factors'
+            correctAnswer: 1,
+            explanation: 'Correct — Biopsychosocial model: biological + psychological + social factors. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ negative attitudes toward people with mental illness
       id: 'psych1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Psychological disorder',
-            options: ['dysfunctional, distressing, deviant, dangerous (4 ', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['dysfunctional, distressing, deviant, dangerous (4 D\'s)', 'disorders are illnesses with biological causes', 'biological + psychological + social factors', 'negative attitudes toward people with mental illness']
           },
           {
             label: 'Medical model',
-            options: ['disorders are illnesses with biological causes', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['negative attitudes toward people with mental illness', 'disorders are illnesses with biological causes', 'biological + psychological + social factors', 'dysfunctional, distressing, deviant, dangerous (4 D\'s)']
           },
           {
             label: 'Biopsychosocial model',
-            options: ['biological + psychological + social factors', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['negative attitudes toward people with mental illness', 'dysfunctional, distressing, deviant, dangerous (4 D\'s)', 'disorders are illnesses with biological causes', 'biological + psychological + social factors']
           }
         ],
-        correctAnswers: ['dysfunctional, distressing, deviant, dangerous (4 ', 'disorders are illnesses with biological causes', 'biological + psychological + social factors'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Defining Disorders.'
+        correctAnswers: ['dysfunctional, distressing, deviant, dangerous (4 D\'s)', 'disorders are illnesses with biological causes', 'biological + psychological + social factors'],
+        hint1: 'Think about what each concept specifically describes in Psychological Disorders Overview.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Psychological Disorders Overview describes a specific idea. Psychological disorder: dysfunctional, distressing, deviant, dangerous (4 D\'s). Medical model: disorders are illnesses with biological causes. Biopsychosocial model: biological + psychological + social factors.'
       }
     }
   ]

@@ -30,31 +30,31 @@ Reflections preserve the shape but change orientation
       id: 'trans2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of reflections?',
+            question: 'What does "Reflection over x-axis" refer to in precalculus?',
             options: [
-              'Reflection over x-axis',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              '-f(x) flips the graph vertically',
+              'Reflections preserve the shape but change orientation',
+              'Reflection over y = x gives the inverse function graph',
+              'f(-x) flips the graph horizontally'
             ],
             correctAnswer: 0,
-            explanation: 'Reflection over x-axis: -f(x) flips the graph vertically'
+            explanation: 'Correct — Reflection over x-axis: -f(x) flips the graph vertically. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of reflections, which is accurate?',
+            question: 'Which of the following is true about Reflection over y = x gives the inverse…?',
             options: [
+              'f(-x) flips the graph horizontally',
+              'Reflections preserve the shape but change orientation',
               'Reflection over y = x gives the inverse function graph',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              '-f(x) flips the graph vertically'
             ],
-            correctAnswer: 0,
-            explanation: 'Reflection over y = x gives the inverse function graph'
+            correctAnswer: 2,
+            explanation: 'Correct — Reflection over y = x gives the inverse function graph. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,24 @@ Reflections preserve the shape but change orientation
       id: 'trans2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Reflection over x-axis',
-            options: ['-f(x) flips the graph vertically', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['Reflections preserve the shape but change orientation', 'f(-x) flips the graph horizontally', '-f(x) flips the graph vertically', 'Reflection over y = x gives the inverse function graph']
           },
           {
             label: 'Reflection over y-axis',
-            options: ['f(-x) flips the graph horizontally', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
-          },
-          {
-            label: 'Reflection over y = x gives the inverse function graph',
-            options: ['Reflection over y = x gives the inverse function g', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['f(-x) flips the graph horizontally', '-f(x) flips the graph vertically', 'Reflections preserve the shape but change orientation', 'Reflection over y = x gives the inverse function graph']
           }
         ],
-        correctAnswers: ['-f(x) flips the graph vertically', 'f(-x) flips the graph horizontally', 'Reflection over y = x gives the inverse function g'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Reflections.'
+        correctAnswers: ['-f(x) flips the graph vertically', 'f(-x) flips the graph horizontally'],
+        hint1: 'Think about what each concept specifically describes in Reflections.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Reflections describes a specific idea. Reflection over x-axis: -f(x) flips the graph vertically. Reflection over y-axis: f(-x) flips the graph horizontally.'
       }
     }
   ]

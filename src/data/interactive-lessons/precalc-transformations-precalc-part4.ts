@@ -30,31 +30,31 @@ h controls horizontal shift; k controls vertical shift
       id: 'trans4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of combining transformations?',
-            options: [
-              'Order of transformations',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'Order of transformations: horizontal shifts/stretches first, then vertical'
-          },
-          {
-            question: 'In the context of combining transformations, which is accurate?',
+            question: 'What does "Order of transformations" refer to in precalculus?',
             options: [
               'a controls vertical stretch/reflection; b controls horizontal stretch/reflection',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'a · f(b(x - h)) + k',
+              'horizontal shifts/stretches first, then vertical',
+              'h controls horizontal shift; k controls vertical shift'
             ],
-            correctAnswer: 0,
-            explanation: 'a controls vertical stretch/reflection; b controls horizontal stretch/reflection'
+            correctAnswer: 2,
+            explanation: 'Correct — Order of transformations: horizontal shifts/stretches first, then vertical. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about a controls vertical stretch/reflection;…?',
+            options: [
+              'h controls horizontal shift; k controls vertical shift',
+              'horizontal shifts/stretches first, then vertical',
+              'a controls vertical stretch/reflection; b controls horizontal stretch/reflection',
+              'a · f(b(x - h)) + k'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — a controls vertical stretch/reflection; b controls horizontal stretch/reflection. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,24 @@ h controls horizontal shift; k controls vertical shift
       id: 'trans4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Order of transformations',
-            options: ['horizontal shifts/stretches first, then vertical', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['h controls horizontal shift; k controls vertical shift', 'a · f(b(x - h)) + k', 'a controls vertical stretch/reflection; b controls horizontal stretch/reflection', 'horizontal shifts/stretches first, then vertical']
           },
           {
             label: 'General form',
-            options: ['a · f(b(x - h)) + k', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
-          },
-          {
-            label: 'a controls vertical stretch/reflection; b controls horizontal stretch/reflection',
-            options: ['a controls vertical stretch/reflection; b controls', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['horizontal shifts/stretches first, then vertical', 'h controls horizontal shift; k controls vertical shift', 'a controls vertical stretch/reflection; b controls horizontal stretch/reflection', 'a · f(b(x - h)) + k']
           }
         ],
-        correctAnswers: ['horizontal shifts/stretches first, then vertical', 'a · f(b(x - h)) + k', 'a controls vertical stretch/reflection; b controls'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Combining Transformations.'
+        correctAnswers: ['horizontal shifts/stretches first, then vertical', 'a · f(b(x - h)) + k'],
+        hint1: 'Think about what each concept specifically describes in Combining Transformations.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Combining Transformations describes a specific idea. Order of transformations: horizontal shifts/stretches first, then vertical. General form: a · f(b(x - h)) + k.'
       }
     }
   ]

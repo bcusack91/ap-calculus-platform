@@ -30,31 +30,31 @@ This definition connects the slope concept to limits
       id: 'defin2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of limit definition of the derivative?',
+            question: 'Which of the following correctly describes f\'(x) = lim(h→0) [f(x+h) - f(x)]/h?',
             options: [
+              'f\'(a) = lim(x→a) [f(x) - f(a)]/(x - a)',
+              'The limit must exist for the derivative to exist',
               'f\'(x) = lim(h→0) [f(x+h) - f(x)]/h',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'This definition connects the slope concept to limits'
             ],
-            correctAnswer: 0,
-            explanation: 'f\'(x) = lim(h→0) [f(x+h) - f(x)]/h'
+            correctAnswer: 2,
+            explanation: 'Correct — f\'(x) = lim(h→0) [f(x+h) - f(x)]/h. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of limit definition of the derivative, which is accurate?',
+            question: 'Which of the following is true about The limit must exist for the derivative…?',
             options: [
+              'f\'(a) = lim(x→a) [f(x) - f(a)]/(x - a)',
+              'This definition connects the slope concept to limits',
               'The limit must exist for the derivative to exist',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'f\'(x) = lim(h→0) [f(x+h) - f(x)]/h'
             ],
-            correctAnswer: 0,
-            explanation: 'The limit must exist for the derivative to exist'
+            correctAnswer: 2,
+            explanation: 'Correct — The limit must exist for the derivative to exist. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ This definition connects the slope concept to limits
       id: 'defin2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to limit definition of the derivative?',
+            question: 'Which of these accurately represents This definition connects the slope…?',
             options: [
-              'This definition connects the slope concept to limits',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'f\'(x) = lim(h→0) [f(x+h) - f(x)]/h',
+              'The limit must exist for the derivative to exist',
+              'f\'(a) = lim(x→a) [f(x) - f(a)]/(x - a)',
+              'This definition connects the slope concept to limits'
             ],
-            correctAnswer: 0,
-            explanation: 'This definition connects the slope concept to limits'
+            correctAnswer: 3,
+            explanation: 'Correct — This definition connects the slope concept to limits. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ This definition connects the slope concept to limits
       id: 'defin2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'f\'(x) = lim(h→0) [f(x+h) - f(x)]/h',
-            options: ['f\'(x) = lim(h→0) [f(x+h) - f(x)]/h', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['f\'(a) = lim(x→a) [f(x) - f(a)]/(x - a)', 'This definition connects the slope concept to limits', 'f\'(x) = lim(h→0) [f(x+h) - f(x)]/h', 'The limit must exist for the derivative to exist']
           },
           {
             label: 'Alternative form',
-            options: ['f\'(a) = lim(x→a) [f(x) - f(a)]/(x - a)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['f\'(a) = lim(x→a) [f(x) - f(a)]/(x - a)', 'f\'(x) = lim(h→0) [f(x+h) - f(x)]/h', 'This definition connects the slope concept to limits', 'The limit must exist for the derivative to exist']
           },
           {
-            label: 'The limit must exist for the derivative to exist',
-            options: ['The limit must exist for the derivative to exist', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'The limit must exist for the derivative…',
+            options: ['This definition connects the slope concept to limits', 'The limit must exist for the derivative to exist', 'f\'(x) = lim(h→0) [f(x+h) - f(x)]/h', 'f\'(a) = lim(x→a) [f(x) - f(a)]/(x - a)']
           }
         ],
         correctAnswers: ['f\'(x) = lim(h→0) [f(x+h) - f(x)]/h', 'f\'(a) = lim(x→a) [f(x) - f(a)]/(x - a)', 'The limit must exist for the derivative to exist'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Limit Definition of the Derivative.'
+        hint1: 'Think about what each concept specifically describes in Limit Definition of the Derivative.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Limit Definition of the Derivative describes a specific idea. f\'(x) = lim(h→0) [f(x+h) - f(x)]/h. Alternative form: f\'(a) = lim(x→a) [f(x) - f(a)]/(x - a). The limit must exist for the derivative to exist.'
       }
     }
   ]

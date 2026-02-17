@@ -30,31 +30,31 @@ Evaluating aging stereotypes
       id: 'adole6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of problem-solving workshop?',
+            question: 'Which statement accurately explains Applying Kohlberg\'s stages to moral…?',
             options: [
+              'Identifying Erikson\'s stages throughout lifespan',
               'Applying Kohlberg\'s stages to moral dilemmas',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'Evaluating aging stereotypes',
+              'Analyzing adolescent behavior through developmental lens'
             ],
-            correctAnswer: 0,
-            explanation: 'Applying Kohlberg\'s stages to moral dilemmas'
+            correctAnswer: 1,
+            explanation: 'Correct — Applying Kohlberg\'s stages to moral dilemmas. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of problem-solving workshop, which is accurate?',
+            question: 'In the context of Problem-Solving Workshop, which explains Analyzing adolescent behavior through…?',
             options: [
               'Analyzing adolescent behavior through developmental lens',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Applying Kohlberg\'s stages to moral dilemmas',
+              'Identifying Erikson\'s stages throughout lifespan',
+              'Evaluating aging stereotypes'
             ],
             correctAnswer: 0,
-            explanation: 'Analyzing adolescent behavior through developmental lens'
+            explanation: 'Correct — Analyzing adolescent behavior through developmental lens. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Evaluating aging stereotypes
       id: 'adole6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Applying Kohlberg\'s stages to moral dilemmas',
-            options: ['Applying Kohlberg\'s stages to moral dilemmas', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            label: 'Applying Kohlberg\'s stages to moral…',
+            options: ['Evaluating aging stereotypes', 'Identifying Erikson\'s stages throughout lifespan', 'Analyzing adolescent behavior through developmental lens', 'Applying Kohlberg\'s stages to moral dilemmas']
           },
           {
-            label: 'Identifying Erikson\'s stages throughout lifespan',
-            options: ['Identifying Erikson\'s stages throughout lifespan', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            label: 'Identifying Erikson\'s stages throughout…',
+            options: ['Evaluating aging stereotypes', 'Applying Kohlberg\'s stages to moral dilemmas', 'Identifying Erikson\'s stages throughout lifespan', 'Analyzing adolescent behavior through developmental lens']
           },
           {
-            label: 'Analyzing adolescent behavior through developmental lens',
-            options: ['Analyzing adolescent behavior through developmenta', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            label: 'Analyzing adolescent behavior through…',
+            options: ['Evaluating aging stereotypes', 'Analyzing adolescent behavior through developmental lens', 'Identifying Erikson\'s stages throughout lifespan', 'Applying Kohlberg\'s stages to moral dilemmas']
           }
         ],
-        correctAnswers: ['Applying Kohlberg\'s stages to moral dilemmas', 'Identifying Erikson\'s stages throughout lifespan', 'Analyzing adolescent behavior through developmenta'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving Workshop.'
+        correctAnswers: ['Applying Kohlberg\'s stages to moral dilemmas', 'Identifying Erikson\'s stages throughout lifespan', 'Analyzing adolescent behavior through developmental lens'],
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Applying Kohlberg\'s stages to moral dilemmas. Identifying Erikson\'s stages throughout lifespan. Analyzing adolescent behavior through developmental lens.'
       }
     }
   ]

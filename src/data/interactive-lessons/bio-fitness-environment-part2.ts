@@ -19,31 +19,31 @@ export const bioFitnessPart2Data = {
       id: 'fitn2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes phenotype = genotype + environment?',
+            question: 'Which of the following correctly describes Phenotype = genotype + environment?',
             options: [
-              'Phenotype = genotype + environment',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'skin tanning, muscle growth, plant growth toward light',
+              'ability to change phenotype',
+              'range of phenotypes from one genotype',
+              'Phenotype = genotype + environment'
             ],
-            correctAnswer: 0,
-            explanation: 'Phenotype = genotype + environment'
+            correctAnswer: 3,
+            explanation: 'Correct — Phenotype = genotype + environment. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of phenotype & environment, which statement is accurate?',
+            question: 'Select the statement that correctly describes Phenotypic plasticity:',
             options: [
-              'Phenotypic plasticity: ability to change phenotype',
-              'tnemnorivne + epytoneg = epytonehP',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Phenotype = genotype + environment',
+              'range of phenotypes from one genotype',
+              'skin tanning, muscle growth, plant growth toward light',
+              'ability to change phenotype'
             ],
-            correctAnswer: 0,
-            explanation: 'Phenotypic plasticity: ability to change phenotype'
+            correctAnswer: 3,
+            explanation: 'Correct — Phenotypic plasticity: ability to change phenotype. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioFitnessPart2Data = {
       id: 'fitn2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to phenotype & environment?',
+            question: 'Which of these accurately represents Examples?',
             options: [
-              'Examples: skin tanning, muscle growth, plant growth toward light',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Phenotype = genotype + environment',
+              'ability to change phenotype',
+              'skin tanning, muscle growth, plant growth toward light',
+              'range of phenotypes from one genotype'
             ],
-            correctAnswer: 0,
-            explanation: 'Examples: skin tanning, muscle growth, plant growth toward light'
+            correctAnswer: 2,
+            explanation: 'Correct — Examples: skin tanning, muscle growth, plant growth toward light. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioFitnessPart2Data = {
       id: 'fitn2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Phenotype = genotype + environment is important in phenotype & environment because',
-            options: ['Phenotype = genotype + environment', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Norm of reaction',
+            options: ['ability to change phenotype', 'Phenotype = genotype + environment', 'skin tanning, muscle growth, plant growth toward light', 'range of phenotypes from one genotype']
           },
           {
-            label: 'Norm of reaction is important in phenotype & environment because',
-            options: ['range of phenotypes from one genotype', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Phenotypic plasticity',
+            options: ['range of phenotypes from one genotype', 'Phenotype = genotype + environment', 'skin tanning, muscle growth, plant growth toward light', 'ability to change phenotype']
           },
           {
-            label: 'Phenotypic plasticity is important in phenotype & environment because',
-            options: ['ability to change phenotype', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Examples',
+            options: ['ability to change phenotype', 'Phenotype = genotype + environment', 'range of phenotypes from one genotype', 'skin tanning, muscle growth, plant growth toward light']
           }
         ],
-        correctAnswers: ['Phenotype = genotype + environment', 'range of phenotypes from one genotype', 'ability to change phenotype'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Phenotype & Environment.'
+        correctAnswers: ['range of phenotypes from one genotype', 'ability to change phenotype', 'skin tanning, muscle growth, plant growth toward light'],
+        hint1: 'Think about what each concept specifically describes in Phenotype & Environment.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Phenotype & Environment describes a specific idea. Norm of reaction: range of phenotypes from one genotype. Phenotypic plasticity: ability to change phenotype. Examples: skin tanning, muscle growth, plant growth toward light.'
       }
     }
   ]

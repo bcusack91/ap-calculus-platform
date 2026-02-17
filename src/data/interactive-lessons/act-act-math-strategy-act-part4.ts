@@ -18,20 +18,31 @@ Solve with those numbers, then check which answer choice gives the same result.
       id: 'act-m4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes replace variables with easy numbers (2, 3, 5, 10)?',
+            question: 'Which of the following correctly describes Replace variables with easy numbers (2,…?',
             options: [
-              'Replace variables with easy numbers (2, 3, 5, 10) is a key concept for ACT Math',
-              'Solve with those numbers, then check which answer choice gives the same result',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'Avoid 0 and 1 — they can make multiple answers appear correct.',
+              'Use for percent problems, fraction problems, and abstract algebra.',
+              'Replace variables with easy numbers (2, 3, 5, 10).',
+              'Solve with those numbers, then check which answer choice gives the same result.'
             ],
-            correctAnswer: 0,
-            explanation: 'Replace variables with easy numbers (2, 3, 5, 10)'
+            correctAnswer: 2,
+            explanation: 'Correct — Replace variables with easy numbers (2, 3, 5, 10). The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Key Insight?',
+            options: [
+              'Replace variables with easy numbers (2, 3, 5, 10).',
+              'Solve with those numbers, then check which answer choice gives the same result.',
+              'Use for percent problems, fraction problems, and abstract algebra.',
+              'Avoid 0 and 1 — they can make multiple answers appear correct.'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Key Insight: Use for percent problems, fraction problems, and abstract algebra. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Solve with those numbers, then check which answer choice gives the same result.
       id: 'act-m4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for plugging in numbers?',
+            question: 'Which statement about ACT Tip is correct?',
             options: [
-              'Use for percent problems, fraction problems, and abstract algebra',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Solve with those numbers, then check which answer choice gives the same result.',
+              'Avoid 0 and 1 — they can make multiple answers appear correct.',
+              'Replace variables with easy numbers (2, 3, 5, 10).',
+              'Use for percent problems, fraction problems, and abstract algebra.'
             ],
-            correctAnswer: 0,
-            explanation: 'Use for percent problems, fraction problems, and abstract algebra'
+            correctAnswer: 1,
+            explanation: 'Correct — ACT Tip: Avoid 0 and 1 — they can make multiple answers appear correct. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ Solve with those numbers, then check which answer choice gives the same result.
       id: 'act-m4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Plugging In Numbers:',
-            options: ['Replace variables with easy numbers (2, 3, 5, 10)', 'Solve with those numbers, then check which answer ', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['Replace variables with easy numbers (2, 3, 5, 10).', 'Use for percent problems, fraction problems, and abstract algebra.', 'Avoid 0 and 1 — they can make multiple answers appear correct.', 'Solve with those numbers, then check which answer choice gives the same result.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Use for percent problems, fraction problems, and a', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'ACT Tip',
+            options: ['Avoid 0 and 1 — they can make multiple answers appear correct.', 'Replace variables with easy numbers (2, 3, 5, 10).', 'Solve with those numbers, then check which answer choice gives the same result.', 'Use for percent problems, fraction problems, and abstract algebra.']
           }
         ],
-        correctAnswers: ['Replace variables with easy numbers (2, 3, 5, 10)', 'Use for percent problems, fraction problems, and a'],
-        hint1: 'Think about plugging in numbers',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Replace variables with easy numbers (2, 3, 5, 10). Use for percent problems, fraction problems, and abstract algebra.'
+        correctAnswers: ['Use for percent problems, fraction problems, and abstract algebra.', 'Avoid 0 and 1 — they can make multiple answers appear correct.'],
+        hint1: 'Think about what each concept specifically describes in Plugging In Numbers.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Plugging In Numbers describes a specific idea. Key Insight: Use for percent problems, fraction problems, and abstract algebra. ACT Tip: Avoid 0 and 1 — they can make multiple answers appear correct.'
       }
     }
   ]

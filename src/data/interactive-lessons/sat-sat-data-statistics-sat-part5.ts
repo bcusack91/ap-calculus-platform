@@ -18,20 +18,31 @@ P(A or B) = P(A) + P(B) - P(A and B).
       id: 'sat-d5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes probability = favorable outcomes / total outcomes?',
+            question: 'Which of the following correctly describes Probability = favorable outcomes /…?',
             options: [
-              'Probability = favorable outcomes / total outcomes is a fundamental concept in SAT Math',
-              'P(A or B) = P(A) + P(B) - P(A and B)',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'Probability = favorable outcomes / total outcomes.',
+              'P(A and B) = P(A) × P(B) if independent.',
+              'Conditional probability: P(A|B) = P(A and B) / P(B).',
+              'P(A or B) = P(A) + P(B) - P(A and B).'
             ],
             correctAnswer: 0,
-            explanation: 'Probability = favorable outcomes / total outcomes'
+            explanation: 'Correct — Probability = favorable outcomes / total outcomes. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Probability Basics, which explains Key Insight?',
+            options: [
+              'Conditional probability: P(A|B) = P(A and B) / P(B).',
+              'Probability = favorable outcomes / total outcomes.',
+              'P(A and B) = P(A) × P(B) if independent.',
+              'P(A or B) = P(A) + P(B) - P(A and B).'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Key Insight: P(A and B) = P(A) × P(B) if independent. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ P(A or B) = P(A) + P(B) - P(A and B).
       id: 'sat-d5-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for probability basics?',
+            question: 'Which of these accurately represents SAT Tip?',
             options: [
-              'P(A and B) = P(A) × P(B) if independent',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'Probability = favorable outcomes / total outcomes.',
+              'Conditional probability: P(A|B) = P(A and B) / P(B).',
+              'P(A and B) = P(A) × P(B) if independent.',
+              'P(A or B) = P(A) + P(B) - P(A and B).'
             ],
-            correctAnswer: 0,
-            explanation: 'P(A and B) = P(A) × P(B) if independent'
+            correctAnswer: 1,
+            explanation: 'Correct — SAT Tip: Conditional probability: P(A|B) = P(A and B) / P(B). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ P(A or B) = P(A) + P(B) - P(A and B).
       id: 'sat-d5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Probability Basics:',
-            options: ['Probability = favorable outcomes / total outcomes', 'P(A or B) = P(A) + P(B) - P(A and B)', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['Conditional probability: P(A|B) = P(A and B) / P(B).', 'Probability = favorable outcomes / total outcomes.', 'P(A and B) = P(A) × P(B) if independent.', 'P(A or B) = P(A) + P(B) - P(A and B).']
           },
           {
-            label: 'Strategy tip:',
-            options: ['P(A and B) = P(A) × P(B) if independent', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'SAT Tip',
+            options: ['Probability = favorable outcomes / total outcomes.', 'P(A and B) = P(A) × P(B) if independent.', 'P(A or B) = P(A) + P(B) - P(A and B).', 'Conditional probability: P(A|B) = P(A and B) / P(B).']
           }
         ],
-        correctAnswers: ['Probability = favorable outcomes / total outcomes', 'P(A and B) = P(A) × P(B) if independent'],
-        hint1: 'Think about probability basics',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'Probability = favorable outcomes / total outcomes. P(A and B) = P(A) × P(B) if independent.'
+        correctAnswers: ['P(A and B) = P(A) × P(B) if independent.', 'Conditional probability: P(A|B) = P(A and B) / P(B).'],
+        hint1: 'Think about what each concept specifically describes in Probability Basics.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Probability Basics describes a specific idea. Key Insight: P(A and B) = P(A) × P(B) if independent. SAT Tip: Conditional probability: P(A|B) = P(A and B) / P(B).'
       }
     }
   ]

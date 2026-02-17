@@ -30,31 +30,31 @@ These can be rearranged to isolate any single function
       id: 'trigo2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of pythagorean identities?',
+            question: 'What does "sin²θ + cos²θ = 1" refer to in precalculus?',
             options: [
               'sin²θ + cos²θ = 1',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              '1 + cot²θ = csc²θ',
+              '1 + tan²θ = sec²θ',
+              'These can be rearranged to isolate any single function'
             ],
             correctAnswer: 0,
-            explanation: 'sin²θ + cos²θ = 1'
+            explanation: 'Correct — sin²θ + cos²θ = 1. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of pythagorean identities, which is accurate?',
+            question: 'In the context of Pythagorean Identities, which explains 1 + cot²θ = csc²θ?',
             options: [
               '1 + cot²θ = csc²θ',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'These can be rearranged to isolate any single function',
+              'sin²θ + cos²θ = 1',
+              '1 + tan²θ = sec²θ'
             ],
             correctAnswer: 0,
-            explanation: '1 + cot²θ = csc²θ'
+            explanation: 'Correct — 1 + cot²θ = csc²θ. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ These can be rearranged to isolate any single function
       id: 'trigo2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'sin²θ + cos²θ = 1',
-            options: ['sin²θ + cos²θ = 1', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['sin²θ + cos²θ = 1', '1 + cot²θ = csc²θ', 'These can be rearranged to isolate any single function', '1 + tan²θ = sec²θ']
           },
           {
             label: '1 + tan²θ = sec²θ',
-            options: ['1 + tan²θ = sec²θ', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['sin²θ + cos²θ = 1', '1 + tan²θ = sec²θ', 'These can be rearranged to isolate any single function', '1 + cot²θ = csc²θ']
           },
           {
             label: '1 + cot²θ = csc²θ',
-            options: ['1 + cot²θ = csc²θ', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['1 + cot²θ = csc²θ', '1 + tan²θ = sec²θ', 'These can be rearranged to isolate any single function', 'sin²θ + cos²θ = 1']
           }
         ],
         correctAnswers: ['sin²θ + cos²θ = 1', '1 + tan²θ = sec²θ', '1 + cot²θ = csc²θ'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Pythagorean Identities.'
+        hint1: 'Think about what each concept specifically describes in Pythagorean Identities.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Pythagorean Identities describes a specific idea. sin²θ + cos²θ = 1. 1 + tan²θ = sec²θ. 1 + cot²θ = csc²θ.'
       }
     }
   ]

@@ -30,31 +30,31 @@ Use row reduction (Gauss-Jordan) for larger matrices
       id: 'matri4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of inverse matrices?',
+            question: 'What does "A⁻¹ exists only if det(A) ≠ 0" refer to in precalculus?',
             options: [
+              'A⁻¹ = (1/det(A))[[d,-b],[-c,a]]',
+              'Use row reduction (Gauss-Jordan) for larger matrices',
               'A⁻¹ exists only if det(A) ≠ 0',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'AA⁻¹ = A⁻¹A = I (identity matrix)'
             ],
-            correctAnswer: 0,
-            explanation: 'A⁻¹ exists only if det(A) ≠ 0'
+            correctAnswer: 2,
+            explanation: 'Correct — A⁻¹ exists only if det(A) ≠ 0. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of inverse matrices, which is accurate?',
+            question: 'In the context of Inverse Matrices, which explains AA⁻¹ = A⁻¹A = I (identity matrix)?',
             options: [
+              'A⁻¹ = (1/det(A))[[d,-b],[-c,a]]',
               'AA⁻¹ = A⁻¹A = I (identity matrix)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'A⁻¹ exists only if det(A) ≠ 0',
+              'Use row reduction (Gauss-Jordan) for larger matrices'
             ],
-            correctAnswer: 0,
-            explanation: 'AA⁻¹ = A⁻¹A = I (identity matrix)'
+            correctAnswer: 1,
+            explanation: 'Correct — AA⁻¹ = A⁻¹A = I (identity matrix). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Use row reduction (Gauss-Jordan) for larger matrices
       id: 'matri4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'A⁻¹ exists only if det(A) ≠ 0',
-            options: ['A⁻¹ exists only if det(A) ≠ 0', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['AA⁻¹ = A⁻¹A = I (identity matrix)', 'A⁻¹ exists only if det(A) ≠ 0', 'A⁻¹ = (1/det(A))[[d,-b],[-c,a]]', 'Use row reduction (Gauss-Jordan) for larger matrices']
           },
           {
             label: 'For 2×2',
-            options: ['A⁻¹ = (1/det(A))[[d,-b],[-c,a]]', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['Use row reduction (Gauss-Jordan) for larger matrices', 'A⁻¹ = (1/det(A))[[d,-b],[-c,a]]', 'A⁻¹ exists only if det(A) ≠ 0', 'AA⁻¹ = A⁻¹A = I (identity matrix)']
           },
           {
             label: 'AA⁻¹ = A⁻¹A = I (identity matrix)',
-            options: ['AA⁻¹ = A⁻¹A = I (identity matrix)', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['Use row reduction (Gauss-Jordan) for larger matrices', 'AA⁻¹ = A⁻¹A = I (identity matrix)', 'A⁻¹ exists only if det(A) ≠ 0', 'A⁻¹ = (1/det(A))[[d,-b],[-c,a]]']
           }
         ],
         correctAnswers: ['A⁻¹ exists only if det(A) ≠ 0', 'A⁻¹ = (1/det(A))[[d,-b],[-c,a]]', 'AA⁻¹ = A⁻¹A = I (identity matrix)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Inverse Matrices.'
+        hint1: 'Think about what each concept specifically describes in Inverse Matrices.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Inverse Matrices describes a specific idea. A⁻¹ exists only if det(A) ≠ 0. For 2×2: A⁻¹ = (1/det(A))[[d,-b],[-c,a]]. AA⁻¹ = A⁻¹A = I (identity matrix).'
       }
     }
   ]

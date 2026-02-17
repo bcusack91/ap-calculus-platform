@@ -19,31 +19,31 @@ export const bioCellRespirationPart4Data = {
       id: 'cell4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes chemiosmosis?',
+            question: 'Which statement accurately explains Chemiosmosis?',
             options: [
               'H⁺ gradient drives ATP synthase',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              '~30-32 ATP per glucose from oxidative phosphorylation',
+              'molecular turbine',
+              'ETC creates proton gradient across inner membrane'
             ],
             correctAnswer: 0,
-            explanation: 'Chemiosmosis: H⁺ gradient drives ATP synthase'
+            explanation: 'Correct — Chemiosmosis: H⁺ gradient drives ATP synthase. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of oxidative phosphorylation, which statement is accurate?',
+            question: 'Which of the following is true about ATP synthase?',
             options: [
-              'ATP synthase: molecular turbine',
-              'esahtnys PTA sevird tneidarg ⁺H :sisomsoimehC',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'ETC creates proton gradient across inner membrane',
+              'H⁺ gradient drives ATP synthase',
+              '~30-32 ATP per glucose from oxidative phosphorylation',
+              'molecular turbine'
             ],
-            correctAnswer: 0,
-            explanation: 'ATP synthase: molecular turbine'
+            correctAnswer: 3,
+            explanation: 'Correct — ATP synthase: molecular turbine. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioCellRespirationPart4Data = {
       id: 'cell4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to oxidative phosphorylation?',
+            question: 'Which statement about ~30-32 ATP per glucose from oxidative… is correct?',
             options: [
+              'ETC creates proton gradient across inner membrane',
               '~30-32 ATP per glucose from oxidative phosphorylation',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'H⁺ gradient drives ATP synthase',
+              'molecular turbine'
             ],
-            correctAnswer: 0,
-            explanation: '~30-32 ATP per glucose from oxidative phosphorylation'
+            correctAnswer: 1,
+            explanation: 'Correct — ~30-32 ATP per glucose from oxidative phosphorylation. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,24 @@ export const bioCellRespirationPart4Data = {
       id: 'cell4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Chemiosmosis is important in oxidative phosphorylation because',
-            options: ['H⁺ gradient drives ATP synthase', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Chemiosmosis',
+            options: ['ETC creates proton gradient across inner membrane', 'molecular turbine', 'H⁺ gradient drives ATP synthase', '~30-32 ATP per glucose from oxidative phosphorylation']
           },
           {
-            label: 'ETC creates proton gradient across inner membrane is important in oxidative phosphorylation because',
-            options: ['ETC creates proton gradient across inner membrane', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
-          },
-          {
-            label: 'ATP synthase is important in oxidative phosphorylation because',
-            options: ['molecular turbine', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'ATP synthase',
+            options: ['molecular turbine', 'H⁺ gradient drives ATP synthase', 'ETC creates proton gradient across inner membrane', '~30-32 ATP per glucose from oxidative phosphorylation']
           }
         ],
-        correctAnswers: ['H⁺ gradient drives ATP synthase', 'ETC creates proton gradient across inner membrane', 'molecular turbine'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Oxidative Phosphorylation.'
+        correctAnswers: ['H⁺ gradient drives ATP synthase', 'molecular turbine'],
+        hint1: 'Think about what each concept specifically describes in Oxidative Phosphorylation.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Oxidative Phosphorylation describes a specific idea. Chemiosmosis: H⁺ gradient drives ATP synthase. ATP synthase: molecular turbine.'
       }
     }
   ]

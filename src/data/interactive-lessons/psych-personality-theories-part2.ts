@@ -30,31 +30,31 @@ too optimistic, hard to test scientifically
       id: 'perso2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of humanistic perspective?',
+            question: 'What does "Rogers" refer to in psychology?',
             options: [
-              'Rogers',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'self-actualization',
+              'self-concept, unconditional positive regard',
+              'Emphasis on free will and personal growth',
+              'too optimistic, hard to test scientifically'
             ],
-            correctAnswer: 0,
-            explanation: 'Rogers: self-concept, unconditional positive regard'
+            correctAnswer: 1,
+            explanation: 'Correct — Rogers: self-concept, unconditional positive regard. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of humanistic perspective, which is accurate?',
+            question: 'In the context of Humanistic Perspective, which explains Emphasis on free will and personal…?',
             options: [
+              'self-concept, unconditional positive regard',
               'Emphasis on free will and personal growth',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'self-actualization',
+              'too optimistic, hard to test scientifically'
             ],
-            correctAnswer: 0,
-            explanation: 'Emphasis on free will and personal growth'
+            correctAnswer: 1,
+            explanation: 'Correct — Emphasis on free will and personal growth. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ too optimistic, hard to test scientifically
       id: 'perso2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Rogers',
-            options: ['self-concept, unconditional positive regard', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['too optimistic, hard to test scientifically', 'self-concept, unconditional positive regard', 'self-actualization', 'Emphasis on free will and personal growth']
           },
           {
             label: 'Maslow',
-            options: ['self-actualization', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['too optimistic, hard to test scientifically', 'self-concept, unconditional positive regard', 'self-actualization', 'Emphasis on free will and personal growth']
           },
           {
-            label: 'Emphasis on free will and personal growth',
-            options: ['Emphasis on free will and personal growth', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            label: 'Criticism',
+            options: ['self-concept, unconditional positive regard', 'self-actualization', 'too optimistic, hard to test scientifically', 'Emphasis on free will and personal growth']
           }
         ],
-        correctAnswers: ['self-concept, unconditional positive regard', 'self-actualization', 'Emphasis on free will and personal growth'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Humanistic Perspective.'
+        correctAnswers: ['self-concept, unconditional positive regard', 'self-actualization', 'too optimistic, hard to test scientifically'],
+        hint1: 'Think about what each concept specifically describes in Humanistic Perspective.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Humanistic Perspective describes a specific idea. Rogers: self-concept, unconditional positive regard. Maslow: self-actualization. Criticism: too optimistic, hard to test scientifically.'
       }
     }
   ]

@@ -30,31 +30,31 @@ dx is an independent variable; dy depends on both x and dx
       id: 'linea2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of differentials?',
+            question: 'Which of the following correctly describes Differential?',
             options: [
-              'Differential',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'Δy is the actual change in f; dy is the approximate change',
+              'dy ≈ Δy for small dx',
+              'dx is an independent variable; dy depends on both x and dx',
+              'dy = f\'(x)dx represents the change along the tangent line'
             ],
-            correctAnswer: 0,
-            explanation: 'Differential: dy = f\'(x)dx represents the change along the tangent line'
+            correctAnswer: 3,
+            explanation: 'Correct — Differential: dy = f\'(x)dx represents the change along the tangent line. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of differentials, which is accurate?',
+            question: 'In the context of Differentials, which explains dy ≈ Δy for small dx?',
             options: [
               'dy ≈ Δy for small dx',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'dy = f\'(x)dx represents the change along the tangent line',
+              'Δy is the actual change in f; dy is the approximate change',
+              'dx is an independent variable; dy depends on both x and dx'
             ],
             correctAnswer: 0,
-            explanation: 'dy ≈ Δy for small dx'
+            explanation: 'Correct — dy ≈ Δy for small dx. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ dx is an independent variable; dy depends on both x and dx
       id: 'linea2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to differentials?',
+            question: 'Regarding Differentials, which correctly describes dx is an independent variable; dy…?',
             options: [
               'dx is an independent variable; dy depends on both x and dx',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'dy = f\'(x)dx represents the change along the tangent line',
+              'Δy is the actual change in f; dy is the approximate change',
+              'dy ≈ Δy for small dx'
             ],
             correctAnswer: 0,
-            explanation: 'dx is an independent variable; dy depends on both x and dx'
+            explanation: 'Correct — dx is an independent variable; dy depends on both x and dx. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ dx is an independent variable; dy depends on both x and dx
       id: 'linea2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Differential',
-            options: ['dy = f\'(x)dx represents the change along the tange', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['dy ≈ Δy for small dx', 'dy = f\'(x)dx represents the change along the tangent line', 'Δy is the actual change in f; dy is the approximate change', 'dx is an independent variable; dy depends on both x and dx']
           },
           {
-            label: 'Δy is the actual change in f; dy is the approximate change',
-            options: ['Δy is the actual change in f; dy is the approximat', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Δy is the actual change in f; dy is the…',
+            options: ['dy = f\'(x)dx represents the change along the tangent line', 'Δy is the actual change in f; dy is the approximate change', 'dy ≈ Δy for small dx', 'dx is an independent variable; dy depends on both x and dx']
           },
           {
             label: 'dy ≈ Δy for small dx',
-            options: ['dy ≈ Δy for small dx', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['dy ≈ Δy for small dx', 'Δy is the actual change in f; dy is the approximate change', 'dx is an independent variable; dy depends on both x and dx', 'dy = f\'(x)dx represents the change along the tangent line']
           }
         ],
-        correctAnswers: ['dy = f\'(x)dx represents the change along the tange', 'Δy is the actual change in f; dy is the approximat', 'dy ≈ Δy for small dx'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Differentials.'
+        correctAnswers: ['dy = f\'(x)dx represents the change along the tangent line', 'Δy is the actual change in f; dy is the approximate change', 'dy ≈ Δy for small dx'],
+        hint1: 'Think about what each concept specifically describes in Differentials.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Differentials describes a specific idea. Differential: dy = f\'(x)dx represents the change along the tangent line. Δy is the actual change in f; dy is the approximate change. dy ≈ Δy for small dx.'
       }
     }
   ]

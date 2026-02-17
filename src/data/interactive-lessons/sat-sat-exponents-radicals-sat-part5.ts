@@ -18,20 +18,31 @@ Large numbers: move decimal left, positive exponent.
       id: 'sat-e5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes scientific notation?',
+            question: 'Which statement accurately explains Scientific notation?',
             options: [
-              'Scientific notation is a fundamental concept in SAT Math',
-              'Large numbers: move decimal left, positive exponent',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'move decimal left, positive exponent.',
+              'a × 10ⁿ where 1 ≤ a < 10.',
+              'Small numbers: move decimal right, negative exponent.',
+              'Multiply/divide: handle coefficients and powers of 10 separately.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Scientific notation: a × 10ⁿ where 1 ≤ a < 10. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Key Insight?',
+            options: [
+              'Small numbers: move decimal right, negative exponent.',
+              'Multiply/divide: handle coefficients and powers of 10 separately.',
+              'a × 10ⁿ where 1 ≤ a < 10.',
+              'move decimal left, positive exponent.'
             ],
             correctAnswer: 0,
-            explanation: 'Scientific notation: a × 10ⁿ where 1 ≤ a < 10'
+            explanation: 'Correct — Key Insight: Small numbers: move decimal right, negative exponent. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Large numbers: move decimal left, positive exponent.
       id: 'sat-e5-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for scientific notation?',
+            question: 'Regarding Scientific Notation, which correctly describes SAT Tip?',
             options: [
-              'Small numbers: move decimal right, negative exponent',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'Multiply/divide: handle coefficients and powers of 10 separately.',
+              'a × 10ⁿ where 1 ≤ a < 10.',
+              'move decimal left, positive exponent.',
+              'Small numbers: move decimal right, negative exponent.'
             ],
             correctAnswer: 0,
-            explanation: 'Small numbers: move decimal right, negative exponent'
+            explanation: 'Correct — SAT Tip: Multiply/divide: handle coefficients and powers of 10 separately. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Large numbers: move decimal left, positive exponent.
       id: 'sat-e5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Scientific Notation:',
-            options: ['Scientific notation: a × 10ⁿ where 1 ≤ a < 10', 'Large numbers: move decimal left, positive exponen', 'Not applicable', 'None of these']
+            label: 'Scientific notation',
+            options: ['a × 10ⁿ where 1 ≤ a < 10.', 'Multiply/divide: handle coefficients and powers of 10 separately.', 'Small numbers: move decimal right, negative exponent.', 'move decimal left, positive exponent.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Small numbers: move decimal right, negative expone', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Large numbers',
+            options: ['move decimal left, positive exponent.', 'Small numbers: move decimal right, negative exponent.', 'a × 10ⁿ where 1 ≤ a < 10.', 'Multiply/divide: handle coefficients and powers of 10 separately.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['Small numbers: move decimal right, negative exponent.', 'a × 10ⁿ where 1 ≤ a < 10.', 'move decimal left, positive exponent.', 'Multiply/divide: handle coefficients and powers of 10 separately.']
           }
         ],
-        correctAnswers: ['Scientific notation: a × 10ⁿ where 1 ≤ a < 10', 'Small numbers: move decimal right, negative expone'],
-        hint1: 'Think about scientific notation',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'Scientific notation: a × 10ⁿ where 1 ≤ a < 10. Small numbers: move decimal right, negative exponent.'
+        correctAnswers: ['a × 10ⁿ where 1 ≤ a < 10.', 'move decimal left, positive exponent.', 'Small numbers: move decimal right, negative exponent.'],
+        hint1: 'Think about what each concept specifically describes in Scientific Notation.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Scientific Notation describes a specific idea. Scientific notation: a × 10ⁿ where 1 ≤ a < 10. Large numbers: move decimal left, positive exponent. Key Insight: Small numbers: move decimal right, negative exponent.'
       }
     }
   ]

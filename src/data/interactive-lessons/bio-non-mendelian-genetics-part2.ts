@@ -19,31 +19,31 @@ export const bioNonMendelianPart2Data = {
       id: 'non-2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes multiple alleles?',
+            question: 'Which of the following correctly describes Multiple alleles?',
             options: [
+              'Polygenic traits show continuous variation (bell curve)',
+              'skin color, height, eye color',
               'more than 2 alleles in population (ABO blood type: Iᴬ, Iᴮ, i)',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'multiple genes affect one trait'
             ],
-            correctAnswer: 0,
-            explanation: 'Multiple alleles: more than 2 alleles in population (ABO blood type: Iᴬ, Iᴮ, i)'
+            correctAnswer: 2,
+            explanation: 'Correct — Multiple alleles: more than 2 alleles in population (ABO blood type: Iᴬ, Iᴮ, i). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of multiple alleles & polygenic, which statement is accurate?',
+            question: 'Select the statement that correctly describes Examples:',
             options: [
-              'Examples: skin color, height, eye color',
-              ')i ,ᴮI ,ᴬI :epyt doolb OBA( noitalupop ni selella 2 naht erom :selella elpitluM',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Polygenic traits show continuous variation (bell curve)',
+              'skin color, height, eye color',
+              'multiple genes affect one trait',
+              'more than 2 alleles in population (ABO blood type: Iᴬ, Iᴮ, i)'
             ],
-            correctAnswer: 0,
-            explanation: 'Examples: skin color, height, eye color'
+            correctAnswer: 1,
+            explanation: 'Correct — Examples: skin color, height, eye color. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioNonMendelianPart2Data = {
       id: 'non-2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to multiple alleles & polygenic?',
+            question: 'Which of these accurately represents Polygenic traits show continuous…?',
             options: [
+              'more than 2 alleles in population (ABO blood type: Iᴬ, Iᴮ, i)',
               'Polygenic traits show continuous variation (bell curve)',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'multiple genes affect one trait',
+              'skin color, height, eye color'
             ],
-            correctAnswer: 0,
-            explanation: 'Polygenic traits show continuous variation (bell curve)'
+            correctAnswer: 1,
+            explanation: 'Correct — Polygenic traits show continuous variation (bell curve). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioNonMendelianPart2Data = {
       id: 'non-2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Multiple alleles is important in multiple alleles & polygenic because',
-            options: ['more than 2 alleles in population (ABO blood type:', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Multiple alleles',
+            options: ['skin color, height, eye color', 'more than 2 alleles in population (ABO blood type: Iᴬ, Iᴮ, i)', 'multiple genes affect one trait', 'Polygenic traits show continuous variation (bell curve)']
           },
           {
-            label: 'Polygenic traits is important in multiple alleles & polygenic because',
-            options: ['multiple genes affect one trait', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Polygenic traits',
+            options: ['multiple genes affect one trait', 'Polygenic traits show continuous variation (bell curve)', 'skin color, height, eye color', 'more than 2 alleles in population (ABO blood type: Iᴬ, Iᴮ, i)']
           },
           {
-            label: 'Examples is important in multiple alleles & polygenic because',
-            options: ['skin color, height, eye color', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Examples',
+            options: ['more than 2 alleles in population (ABO blood type: Iᴬ, Iᴮ, i)', 'multiple genes affect one trait', 'Polygenic traits show continuous variation (bell curve)', 'skin color, height, eye color']
           }
         ],
-        correctAnswers: ['more than 2 alleles in population (ABO blood type:', 'multiple genes affect one trait', 'skin color, height, eye color'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Multiple Alleles & Polygenic.'
+        correctAnswers: ['more than 2 alleles in population (ABO blood type: Iᴬ, Iᴮ, i)', 'multiple genes affect one trait', 'skin color, height, eye color'],
+        hint1: 'Think about what each concept specifically describes in Multiple Alleles & Polygenic.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Multiple Alleles & Polygenic describes a specific idea. Multiple alleles: more than 2 alleles in population (ABO blood type: Iᴬ, Iᴮ, i). Polygenic traits: multiple genes affect one trait. Examples: skin color, height, eye color.'
       }
     }
   ]

@@ -18,20 +18,31 @@ Assign variables to unknowns.
       id: 'act-a7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes assign variables to unknowns?',
+            question: 'Which of the following correctly describes Assign variables to unknowns.?',
             options: [
-              'Assign variables to unknowns is a key concept for ACT Math',
-              '"Is" = equals, "more than" = addition, "less than" = subtraction',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'Set up the equation, solve, then verify your answer makes sense in context.',
+              '"Of" = multiplication, "per" = division.',
+              'Assign variables to unknowns.',
+              '"Is" = equals, "more than" = addition, "less than" = subtraction.'
             ],
-            correctAnswer: 0,
-            explanation: 'Assign variables to unknowns'
+            correctAnswer: 2,
+            explanation: 'Correct — Assign variables to unknowns. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Key Insight?',
+            options: [
+              '"Is" = equals, "more than" = addition, "less than" = subtraction.',
+              '"Of" = multiplication, "per" = division.',
+              'Assign variables to unknowns.',
+              'Set up the equation, solve, then verify your answer makes sense in context.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Key Insight: "Of" = multiplication, "per" = division. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Assign variables to unknowns.
       id: 'act-a7-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for review & applications?',
+            question: 'Regarding Review & Applications, which correctly describes ACT Tip?',
             options: [
-              '"Of" = multiplication, "per" = division',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              '"Is" = equals, "more than" = addition, "less than" = subtraction.',
+              'Assign variables to unknowns.',
+              '"Of" = multiplication, "per" = division.',
+              'Set up the equation, solve, then verify your answer makes sense in context.'
             ],
-            correctAnswer: 0,
-            explanation: '"Of" = multiplication, "per" = division'
+            correctAnswer: 3,
+            explanation: 'Correct — ACT Tip: Set up the equation, solve, then verify your answer makes sense in context. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ Assign variables to unknowns.
       id: 'act-a7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Review & Applications:',
-            options: ['Assign variables to unknowns', '"Is" = equals, "more than" = addition, "less than"', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['Set up the equation, solve, then verify your answer makes sense in context.', '"Is" = equals, "more than" = addition, "less than" = subtraction.', 'Assign variables to unknowns.', '"Of" = multiplication, "per" = division.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['"Of" = multiplication, "per" = division', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'ACT Tip',
+            options: ['"Is" = equals, "more than" = addition, "less than" = subtraction.', 'Assign variables to unknowns.', 'Set up the equation, solve, then verify your answer makes sense in context.', '"Of" = multiplication, "per" = division.']
           }
         ],
-        correctAnswers: ['Assign variables to unknowns', '"Of" = multiplication, "per" = division'],
-        hint1: 'Think about review & applications',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Assign variables to unknowns. "Of" = multiplication, "per" = division.'
+        correctAnswers: ['"Of" = multiplication, "per" = division.', 'Set up the equation, solve, then verify your answer makes sense in context.'],
+        hint1: 'Think about what each concept specifically describes in Review & Applications.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Review & Applications describes a specific idea. Key Insight: "Of" = multiplication, "per" = division. ACT Tip: Set up the equation, solve, then verify your answer makes sense in context.'
       }
     }
   ]

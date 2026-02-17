@@ -18,20 +18,31 @@ Read each viewpoint carefully and identify the key claims.
       id: 'act-s4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes two or more scientists/students disagree about an explanation?',
+            question: 'Which of the following correctly describes Two or more scientists/students…?',
             options: [
-              'Two or more scientists/students disagree about an explanation is a key concept for ACT Science',
-              'Read each viewpoint carefully and identify the key claims',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'Read each viewpoint carefully and identify the key claims.',
+              'Two or more scientists/students disagree about an explanation.',
+              'Find where they agree and where they differ.',
+              'Questions ask: which data supports/contradicts which viewpoint?.'
             ],
-            correctAnswer: 0,
-            explanation: 'Two or more scientists/students disagree about an explanation'
+            correctAnswer: 1,
+            explanation: 'Correct — Two or more scientists/students disagree about an explanation. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Key Insight?',
+            options: [
+              'Two or more scientists/students disagree about an explanation.',
+              'Read each viewpoint carefully and identify the key claims.',
+              'Find where they agree and where they differ.',
+              'Questions ask: which data supports/contradicts which viewpoint?.'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Key Insight: Find where they agree and where they differ. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Read each viewpoint carefully and identify the key claims.
       id: 'act-s4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for conflicting viewpoints?',
+            question: 'Which of these accurately represents ACT Tip?',
             options: [
-              'Find where they agree and where they differ',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Questions ask: which data supports/contradicts which viewpoint?.',
+              'Find where they agree and where they differ.',
+              'Two or more scientists/students disagree about an explanation.',
+              'Read each viewpoint carefully and identify the key claims.'
             ],
             correctAnswer: 0,
-            explanation: 'Find where they agree and where they differ'
+            explanation: 'Correct — ACT Tip: Questions ask: which data supports/contradicts which viewpoint?. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ Read each viewpoint carefully and identify the key claims.
       id: 'act-s4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Conflicting Viewpoints:',
-            options: ['Two or more scientists/students disagree about an ', 'Read each viewpoint carefully and identify the key', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['Two or more scientists/students disagree about an explanation.', 'Find where they agree and where they differ.', 'Read each viewpoint carefully and identify the key claims.', 'Questions ask: which data supports/contradicts which viewpoint?.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Find where they agree and where they differ', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'ACT Tip',
+            options: ['Questions ask: which data supports/contradicts which viewpoint?.', 'Find where they agree and where they differ.', 'Read each viewpoint carefully and identify the key claims.', 'Two or more scientists/students disagree about an explanation.']
           }
         ],
-        correctAnswers: ['Two or more scientists/students disagree about an ', 'Find where they agree and where they differ'],
-        hint1: 'Think about conflicting viewpoints',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Two or more scientists/students disagree about an explanation. Find where they agree and where they differ.'
+        correctAnswers: ['Find where they agree and where they differ.', 'Questions ask: which data supports/contradicts which viewpoint?.'],
+        hint1: 'Think about what each concept specifically describes in Conflicting Viewpoints.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Conflicting Viewpoints describes a specific idea. Key Insight: Find where they agree and where they differ. ACT Tip: Questions ask: which data supports/contradicts which viewpoint?.'
       }
     }
   ]

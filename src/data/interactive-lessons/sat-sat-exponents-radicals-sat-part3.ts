@@ -18,20 +18,31 @@ Simplify radicals by factoring out perfect squares/cubes.
       id: 'sat-e3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes √a = a^(1/2); ∛a = a^(1/3); ⁿ√a = a^(1/n)?',
+            question: 'Which statement accurately explains √a = a^(1/2); ∛a = a^(1/3); ⁿ√a =…?',
             options: [
-              '√a = a^(1/2); ∛a = a^(1/3); ⁿ√a = a^(1/n) is a fundamental concept in SAT Math',
-              'Simplify radicals by factoring out perfect squares/cubes',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'Rationalize denominators: multiply by √a/√a.',
+              '√a = a^(1/2); ∛a = a^(1/3); ⁿ√a = a^(1/n).',
+              'Add/subtract radicals: only combine like radicals (same radicand).',
+              'Simplify radicals by factoring out perfect squares/cubes.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — √a = a^(1/2); ∛a = a^(1/3); ⁿ√a = a^(1/n). The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              'Rationalize denominators: multiply by √a/√a.',
+              'Simplify radicals by factoring out perfect squares/cubes.',
+              'Add/subtract radicals: only combine like radicals (same radicand).',
+              '√a = a^(1/2); ∛a = a^(1/3); ⁿ√a = a^(1/n).'
             ],
             correctAnswer: 0,
-            explanation: '√a = a^(1/2); ∛a = a^(1/3); ⁿ√a = a^(1/n)'
+            explanation: 'Correct — Key Insight: Rationalize denominators: multiply by √a/√a. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Simplify radicals by factoring out perfect squares/cubes.
       id: 'sat-e3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for radical expressions?',
+            question: 'Which of these accurately represents SAT Tip?',
             options: [
-              'Rationalize denominators: multiply by √a/√a',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'Simplify radicals by factoring out perfect squares/cubes.',
+              'Add/subtract radicals: only combine like radicals (same radicand).',
+              '√a = a^(1/2); ∛a = a^(1/3); ⁿ√a = a^(1/n).',
+              'Rationalize denominators: multiply by √a/√a.'
             ],
-            correctAnswer: 0,
-            explanation: 'Rationalize denominators: multiply by √a/√a'
+            correctAnswer: 1,
+            explanation: 'Correct — SAT Tip: Add/subtract radicals: only combine like radicals (same radicand). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ Simplify radicals by factoring out perfect squares/cubes.
       id: 'sat-e3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Radical Expressions:',
-            options: ['√a = a^(1/2); ∛a = a^(1/3); ⁿ√a = a^(1/n)', 'Simplify radicals by factoring out perfect squares', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['Simplify radicals by factoring out perfect squares/cubes.', 'Add/subtract radicals: only combine like radicals (same radicand).', 'Rationalize denominators: multiply by √a/√a.', '√a = a^(1/2); ∛a = a^(1/3); ⁿ√a = a^(1/n).']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Rationalize denominators: multiply by √a/√a', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'SAT Tip',
+            options: ['Rationalize denominators: multiply by √a/√a.', '√a = a^(1/2); ∛a = a^(1/3); ⁿ√a = a^(1/n).', 'Simplify radicals by factoring out perfect squares/cubes.', 'Add/subtract radicals: only combine like radicals (same radicand).']
           }
         ],
-        correctAnswers: ['√a = a^(1/2); ∛a = a^(1/3); ⁿ√a = a^(1/n)', 'Rationalize denominators: multiply by √a/√a'],
-        hint1: 'Think about radical expressions',
-        hint2: 'Consider the best SAT strategy',
-        explanation: '√a = a^(1/2); ∛a = a^(1/3); ⁿ√a = a^(1/n). Rationalize denominators: multiply by √a/√a.'
+        correctAnswers: ['Rationalize denominators: multiply by √a/√a.', 'Add/subtract radicals: only combine like radicals (same radicand).'],
+        hint1: 'Think about what each concept specifically describes in Radical Expressions.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Radical Expressions describes a specific idea. Key Insight: Rationalize denominators: multiply by √a/√a. SAT Tip: Add/subtract radicals: only combine like radicals (same radicand).'
       }
     }
   ]

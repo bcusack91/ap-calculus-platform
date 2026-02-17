@@ -71,23 +71,28 @@ Lineweaver-Burk plot: 1/v vs 1/[S] — y-intercept = 1/Vmax, x-intercept = -1/Km
       id: 'mcat-2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Enzyme Kinetics:',
-            options: ['Michaelis-Menten: v = Vmax[S]/(Km+[S]); Km = substrate conce', 'Lineweaver-Burk plot: 1/v vs 1/[S] — y-intercept = 1/Vmax, x', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Michaelis-Menten',
+            options: ['Non-competitive inhibitor: binds allosteric site, decreases Vmax, Km unchanged.', 'v = Vmax[S]/(Km+[S]); Km = substrate concentration at half-Vmax.', 'Competitive inhibitor: binds active site, increases apparent Km, Vmax unchanged.', '1/v vs 1/[S] — y-intercept = 1/Vmax, x-intercept = -1/Km.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Competitive inhibitor: binds active site, increases apparent', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Lineweaver-Burk plot',
+            options: ['1/v vs 1/[S] — y-intercept = 1/Vmax, x-intercept = -1/Km.', 'Competitive inhibitor: binds active site, increases apparent Km, Vmax unchanged.', 'v = Vmax[S]/(Km+[S]); Km = substrate concentration at half-Vmax.', 'Non-competitive inhibitor: binds allosteric site, decreases Vmax, Km unchanged.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['1/v vs 1/[S] — y-intercept = 1/Vmax, x-intercept = -1/Km.', 'v = Vmax[S]/(Km+[S]); Km = substrate concentration at half-Vmax.', 'Competitive inhibitor: binds active site, increases apparent Km, Vmax unchanged.', 'Non-competitive inhibitor: binds allosteric site, decreases Vmax, Km unchanged.']
           }
         ],
-        correctAnswers: ['Michaelis-Menten: v = Vmax[S]/(Km+[S]); Km = substrate conce', 'Competitive inhibitor: binds active site, increases apparent'],
-        hint1: 'Think about enzyme kinetics',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Michaelis-Menten: v = Vmax[S]/(Km+[S]); Km = substrate concentration at half-Vmax. Competitive inhibitor: binds active site, increases apparent Km, Vmax unchanged.'
+        correctAnswers: ['v = Vmax[S]/(Km+[S]); Km = substrate concentration at half-Vmax.', '1/v vs 1/[S] — y-intercept = 1/Vmax, x-intercept = -1/Km.', 'Competitive inhibitor: binds active site, increases apparent Km, Vmax unchanged.'],
+        hint1: 'Think about what each concept specifically describes in Enzyme Kinetics.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Enzyme Kinetics describes a specific idea. Michaelis-Menten: v = Vmax[S]/(Km+[S]); Km = substrate concentration at half-Vmax. Lineweaver-Burk plot: 1/v vs 1/[S] — y-intercept = 1/Vmax, x-intercept = -1/Km. Key Insight: Competitive inhibitor: binds active site, increases apparent Km, Vmax unchanged.'
       }
     }
   ]

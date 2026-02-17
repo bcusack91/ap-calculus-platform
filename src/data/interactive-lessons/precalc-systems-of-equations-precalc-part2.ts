@@ -30,31 +30,31 @@ intersection point(s) of lines
       id: 'syste2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of substitution & elimination?',
+            question: 'What does "Substitution" refer to in precalculus?',
             options: [
-              'Substitution',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'solve one equation for a variable, plug into the other',
+              'add or subtract equations to eliminate a variable',
+              'Choose the method that makes the algebra simplest',
+              'intersection point(s) of lines'
             ],
             correctAnswer: 0,
-            explanation: 'Substitution: solve one equation for a variable, plug into the other'
+            explanation: 'Correct — Substitution: solve one equation for a variable, plug into the other. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of substitution & elimination, which is accurate?',
+            question: 'Which of the following is true about Choose the method that makes the…?',
             options: [
+              'solve one equation for a variable, plug into the other',
+              'add or subtract equations to eliminate a variable',
               'Choose the method that makes the algebra simplest',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'intersection point(s) of lines'
             ],
-            correctAnswer: 0,
-            explanation: 'Choose the method that makes the algebra simplest'
+            correctAnswer: 2,
+            explanation: 'Correct — Choose the method that makes the algebra simplest. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ intersection point(s) of lines
       id: 'syste2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Substitution',
-            options: ['solve one equation for a variable, plug into the o', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['Choose the method that makes the algebra simplest', 'intersection point(s) of lines', 'solve one equation for a variable, plug into the other', 'add or subtract equations to eliminate a variable']
           },
           {
             label: 'Elimination',
-            options: ['add or subtract equations to eliminate a variable', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['solve one equation for a variable, plug into the other', 'add or subtract equations to eliminate a variable', 'intersection point(s) of lines', 'Choose the method that makes the algebra simplest']
           },
           {
-            label: 'Choose the method that makes the algebra simplest',
-            options: ['Choose the method that makes the algebra simplest', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            label: 'Graphical interpretation',
+            options: ['add or subtract equations to eliminate a variable', 'intersection point(s) of lines', 'solve one equation for a variable, plug into the other', 'Choose the method that makes the algebra simplest']
           }
         ],
-        correctAnswers: ['solve one equation for a variable, plug into the o', 'add or subtract equations to eliminate a variable', 'Choose the method that makes the algebra simplest'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Substitution & Elimination.'
+        correctAnswers: ['solve one equation for a variable, plug into the other', 'add or subtract equations to eliminate a variable', 'intersection point(s) of lines'],
+        hint1: 'Think about what each concept specifically describes in Substitution & Elimination.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Substitution & Elimination describes a specific idea. Substitution: solve one equation for a variable, plug into the other. Elimination: add or subtract equations to eliminate a variable. Graphical interpretation: intersection point(s) of lines.'
       }
     }
   ]

@@ -30,31 +30,31 @@ Ph₃P=CHR → alkene
       id: 'aldeh2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of nucleophilic addition?',
+            question: 'Which of the following correctly describes Nucleophilic addition mechanism?',
             options: [
-              'Nucleophilic addition mechanism',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'Ph₃P=CHR → alkene',
+              'Nu⁻ attacks C=O → alkoxide → protonate',
+              'NaBH₄ (mild) or LiAlH₄ (strong)',
+              'NaCN → cyanohydrin'
             ],
-            correctAnswer: 0,
-            explanation: 'Nucleophilic addition mechanism: Nu⁻ attacks C=O → alkoxide → protonate'
+            correctAnswer: 1,
+            explanation: 'Correct — Nucleophilic addition mechanism: Nu⁻ attacks C=O → alkoxide → protonate. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of nucleophilic addition, which is accurate?',
+            question: 'Select the statement that correctly describes Cyanide addition:',
             options: [
+              'Nu⁻ attacks C=O → alkoxide → protonate',
+              'Ph₃P=CHR → alkene',
               'NaCN → cyanohydrin',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'NaBH₄ (mild) or LiAlH₄ (strong)'
             ],
-            correctAnswer: 0,
-            explanation: 'Cyanide addition: NaCN → cyanohydrin'
+            correctAnswer: 2,
+            explanation: 'Correct — Cyanide addition: NaCN → cyanohydrin. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Ph₃P=CHR → alkene
       id: 'aldeh2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Nucleophilic addition mechanism',
-            options: ['Nu⁻ attacks C=O → alkoxide → protonate', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Ph₃P=CHR → alkene', 'NaBH₄ (mild) or LiAlH₄ (strong)', 'Nu⁻ attacks C=O → alkoxide → protonate', 'NaCN → cyanohydrin']
           },
           {
             label: 'Hydride reduction',
-            options: ['NaBH₄ (mild) or LiAlH₄ (strong)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Nu⁻ attacks C=O → alkoxide → protonate', 'Ph₃P=CHR → alkene', 'NaCN → cyanohydrin', 'NaBH₄ (mild) or LiAlH₄ (strong)']
           },
           {
             label: 'Cyanide addition',
-            options: ['NaCN → cyanohydrin', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Ph₃P=CHR → alkene', 'NaCN → cyanohydrin', 'NaBH₄ (mild) or LiAlH₄ (strong)', 'Nu⁻ attacks C=O → alkoxide → protonate']
           }
         ],
         correctAnswers: ['Nu⁻ attacks C=O → alkoxide → protonate', 'NaBH₄ (mild) or LiAlH₄ (strong)', 'NaCN → cyanohydrin'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Nucleophilic Addition.'
+        hint1: 'Think about what each concept specifically describes in Nucleophilic Addition.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Nucleophilic Addition describes a specific idea. Nucleophilic addition mechanism: Nu⁻ attacks C=O → alkoxide → protonate. Hydride reduction: NaBH₄ (mild) or LiAlH₄ (strong). Cyanide addition: NaCN → cyanohydrin.'
       }
     }
   ]

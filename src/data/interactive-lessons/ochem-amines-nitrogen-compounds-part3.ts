@@ -30,31 +30,31 @@ amide → amine with one fewer carbon
       id: 'amine3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of amine synthesis?',
+            question: 'What does "Gabriel synthesis" refer to in this topic?',
             options: [
-              'Gabriel synthesis',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'phthalimide + alkyl halide → primary amine',
+              'amide → amine with one fewer carbon',
+              'carbonyl + amine + NaBH₃CN → amine',
+              'catalytic hydrogenation or Sn/HCl'
             ],
             correctAnswer: 0,
-            explanation: 'Gabriel synthesis: phthalimide + alkyl halide → primary amine'
+            explanation: 'Correct — Gabriel synthesis: phthalimide + alkyl halide → primary amine. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of amine synthesis, which is accurate?',
+            question: 'Select the statement that correctly describes Reduction of nitro groups:',
             options: [
-              'catalytic hydrogenation or Sn/HCl',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'phthalimide + alkyl halide → primary amine',
+              'amide → amine with one fewer carbon',
+              'carbonyl + amine + NaBH₃CN → amine',
+              'catalytic hydrogenation or Sn/HCl'
             ],
-            correctAnswer: 0,
-            explanation: 'Reduction of nitro groups: catalytic hydrogenation or Sn/HCl'
+            correctAnswer: 3,
+            explanation: 'Correct — Reduction of nitro groups: catalytic hydrogenation or Sn/HCl. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ amide → amine with one fewer carbon
       id: 'amine3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Gabriel synthesis',
-            options: ['phthalimide + alkyl halide → primary amine', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['carbonyl + amine + NaBH₃CN → amine', 'phthalimide + alkyl halide → primary amine', 'catalytic hydrogenation or Sn/HCl', 'amide → amine with one fewer carbon']
           },
           {
             label: 'Reductive amination',
-            options: ['carbonyl + amine + NaBH₃CN → amine', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['catalytic hydrogenation or Sn/HCl', 'phthalimide + alkyl halide → primary amine', 'carbonyl + amine + NaBH₃CN → amine', 'amide → amine with one fewer carbon']
           },
           {
             label: 'Reduction of nitro groups',
-            options: ['catalytic hydrogenation or Sn/HCl', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['amide → amine with one fewer carbon', 'catalytic hydrogenation or Sn/HCl', 'phthalimide + alkyl halide → primary amine', 'carbonyl + amine + NaBH₃CN → amine']
           }
         ],
         correctAnswers: ['phthalimide + alkyl halide → primary amine', 'carbonyl + amine + NaBH₃CN → amine', 'catalytic hydrogenation or Sn/HCl'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Amine Synthesis.'
+        hint1: 'Think about what each concept specifically describes in Amine Synthesis.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Amine Synthesis describes a specific idea. Gabriel synthesis: phthalimide + alkyl halide → primary amine. Reductive amination: carbonyl + amine + NaBH₃CN → amine. Reduction of nitro groups: catalytic hydrogenation or Sn/HCl.'
       }
     }
   ]

@@ -30,31 +30,31 @@ Two conics can intersect in up to 4 points
       id: 'syste4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of nonlinear systems?',
+            question: 'What does "At least one equation is non-linear…" refer to in precalculus?',
             options: [
+              'Substitution is often the best method',
+              'A line and a conic can intersect in 0, 1, or 2 points',
               'At least one equation is non-linear (quadratic, exponential, etc.)',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'Two conics can intersect in up to 4 points'
             ],
-            correctAnswer: 0,
-            explanation: 'At least one equation is non-linear (quadratic, exponential, etc.)'
+            correctAnswer: 2,
+            explanation: 'Correct — At least one equation is non-linear (quadratic, exponential, etc.). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of nonlinear systems, which is accurate?',
+            question: 'Which of the following is true about A line and a conic can intersect in 0,…?',
             options: [
+              'Substitution is often the best method',
+              'At least one equation is non-linear (quadratic, exponential, etc.)',
               'A line and a conic can intersect in 0, 1, or 2 points',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Two conics can intersect in up to 4 points'
             ],
-            correctAnswer: 0,
-            explanation: 'A line and a conic can intersect in 0, 1, or 2 points'
+            correctAnswer: 2,
+            explanation: 'Correct — A line and a conic can intersect in 0, 1, or 2 points. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Two conics can intersect in up to 4 points
       id: 'syste4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'At least one equation is non-linear (quadratic, exponential, etc.)',
-            options: ['At least one equation is non-linear (quadratic, ex', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            label: 'At least one equation is non-linear…',
+            options: ['Substitution is often the best method', 'Two conics can intersect in up to 4 points', 'A line and a conic can intersect in 0, 1, or 2 points', 'At least one equation is non-linear (quadratic, exponential, etc.)']
           },
           {
             label: 'Substitution is often the best method',
-            options: ['Substitution is often the best method', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['Substitution is often the best method', 'Two conics can intersect in up to 4 points', 'A line and a conic can intersect in 0, 1, or 2 points', 'At least one equation is non-linear (quadratic, exponential, etc.)']
           },
           {
-            label: 'A line and a conic can intersect in 0, 1, or 2 points',
-            options: ['A line and a conic can intersect in 0, 1, or 2 poi', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            label: 'A line and a conic can intersect in 0,…',
+            options: ['Substitution is often the best method', 'At least one equation is non-linear (quadratic, exponential, etc.)', 'A line and a conic can intersect in 0, 1, or 2 points', 'Two conics can intersect in up to 4 points']
           }
         ],
-        correctAnswers: ['At least one equation is non-linear (quadratic, ex', 'Substitution is often the best method', 'A line and a conic can intersect in 0, 1, or 2 poi'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Nonlinear Systems.'
+        correctAnswers: ['At least one equation is non-linear (quadratic, exponential, etc.)', 'Substitution is often the best method', 'A line and a conic can intersect in 0, 1, or 2 points'],
+        hint1: 'Think about what each concept specifically describes in Nonlinear Systems.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Nonlinear Systems describes a specific idea. At least one equation is non-linear (quadratic, exponential, etc.). Substitution is often the best method. A line and a conic can intersect in 0, 1, or 2 points.'
       }
     }
   ]

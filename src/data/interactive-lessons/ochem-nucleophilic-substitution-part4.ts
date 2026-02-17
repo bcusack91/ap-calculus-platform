@@ -30,31 +30,31 @@ I⁻ > Br⁻ > Cl⁻ > F⁻ (in polar aprotic)
       id: 'nucle4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of substrate & nucleophile effects?',
+            question: 'What does "SN2 favored" refer to in this topic?',
             options: [
-              'SN2 favored',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'tertiary > secondary >> primary (carbocation stability)',
+              'I⁻ > Br⁻ > Cl⁻ > F⁻ (in polar aprotic)',
+              'Strong nucleophiles favor SN2; weak nucleophiles favor SN1',
+              'methyl > primary > secondary >> tertiary (steric hindrance)'
             ],
-            correctAnswer: 0,
-            explanation: 'SN2 favored: methyl > primary > secondary >> tertiary (steric hindrance)'
+            correctAnswer: 3,
+            explanation: 'Correct — SN2 favored: methyl > primary > secondary >> tertiary (steric hindrance). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of substrate & nucleophile effects, which is accurate?',
+            question: 'In the context of Substrate & Nucleophile Effects, which explains Strong nucleophiles favor SN2; weak…?',
             options: [
               'Strong nucleophiles favor SN2; weak nucleophiles favor SN1',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'tertiary > secondary >> primary (carbocation stability)',
+              'I⁻ > Br⁻ > Cl⁻ > F⁻ (in polar aprotic)',
+              'methyl > primary > secondary >> tertiary (steric hindrance)'
             ],
             correctAnswer: 0,
-            explanation: 'Strong nucleophiles favor SN2; weak nucleophiles favor SN1'
+            explanation: 'Correct — Strong nucleophiles favor SN2; weak nucleophiles favor SN1. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ I⁻ > Br⁻ > Cl⁻ > F⁻ (in polar aprotic)
       id: 'nucle4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'SN2 favored',
-            options: ['methyl > primary > secondary >> tertiary (steric h', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['tertiary > secondary >> primary (carbocation stability)', 'I⁻ > Br⁻ > Cl⁻ > F⁻ (in polar aprotic)', 'methyl > primary > secondary >> tertiary (steric hindrance)', 'Strong nucleophiles favor SN2; weak nucleophiles favor SN1']
           },
           {
             label: 'SN1 favored',
-            options: ['tertiary > secondary >> primary (carbocation stabi', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['tertiary > secondary >> primary (carbocation stability)', 'methyl > primary > secondary >> tertiary (steric hindrance)', 'I⁻ > Br⁻ > Cl⁻ > F⁻ (in polar aprotic)', 'Strong nucleophiles favor SN2; weak nucleophiles favor SN1']
           },
           {
-            label: 'Strong nucleophiles favor SN2; weak nucleophiles favor SN1',
-            options: ['Strong nucleophiles favor SN2; weak nucleophiles f', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Nucleophilicity',
+            options: ['methyl > primary > secondary >> tertiary (steric hindrance)', 'I⁻ > Br⁻ > Cl⁻ > F⁻ (in polar aprotic)', 'tertiary > secondary >> primary (carbocation stability)', 'Strong nucleophiles favor SN2; weak nucleophiles favor SN1']
           }
         ],
-        correctAnswers: ['methyl > primary > secondary >> tertiary (steric h', 'tertiary > secondary >> primary (carbocation stabi', 'Strong nucleophiles favor SN2; weak nucleophiles f'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Substrate & Nucleophile Effects.'
+        correctAnswers: ['methyl > primary > secondary >> tertiary (steric hindrance)', 'tertiary > secondary >> primary (carbocation stability)', 'I⁻ > Br⁻ > Cl⁻ > F⁻ (in polar aprotic)'],
+        hint1: 'Think about what each concept specifically describes in Substrate & Nucleophile Effects.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Substrate & Nucleophile Effects describes a specific idea. SN2 favored: methyl > primary > secondary >> tertiary (steric hindrance). SN1 favored: tertiary > secondary >> primary (carbocation stability). Nucleophilicity: I⁻ > Br⁻ > Cl⁻ > F⁻ (in polar aprotic).'
       }
     }
   ]

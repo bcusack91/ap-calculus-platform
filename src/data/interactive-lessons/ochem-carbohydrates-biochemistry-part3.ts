@@ -30,31 +30,31 @@ acetal from hemiacetal + alcohol
       id: 'carbo3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of reactions of monosaccharides?',
-            options: [
-              'Mutarotation',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
-            ],
-            correctAnswer: 0,
-            explanation: 'Mutarotation: equilibrium between α and β anomers through open-chain form'
-          },
-          {
-            question: 'In the context of reactions of monosaccharides, which is accurate?',
+            question: 'What does "Mutarotation" refer to in this topic?',
             options: [
               'Tollens/Benedict\'s → aldonic acid (reducing sugars)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'NaBH₄ → alditol (sugar alcohol)',
+              'acetal from hemiacetal + alcohol',
+              'equilibrium between α and β anomers through open-chain form'
             ],
-            correctAnswer: 0,
-            explanation: 'Oxidation: Tollens/Benedict\'s → aldonic acid (reducing sugars)'
+            correctAnswer: 3,
+            explanation: 'Correct — Mutarotation: equilibrium between α and β anomers through open-chain form. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Reactions of Monosaccharides, which explains Oxidation?',
+            options: [
+              'acetal from hemiacetal + alcohol',
+              'NaBH₄ → alditol (sugar alcohol)',
+              'Tollens/Benedict\'s → aldonic acid (reducing sugars)',
+              'equilibrium between α and β anomers through open-chain form'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Oxidation: Tollens/Benedict\'s → aldonic acid (reducing sugars). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ acetal from hemiacetal + alcohol
       id: 'carbo3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Mutarotation',
-            options: ['equilibrium between α and β anomers through open-c', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['NaBH₄ → alditol (sugar alcohol)', 'equilibrium between α and β anomers through open-chain form', 'Tollens/Benedict\'s → aldonic acid (reducing sugars)', 'acetal from hemiacetal + alcohol']
           },
           {
             label: 'Reduction',
-            options: ['NaBH₄ → alditol (sugar alcohol)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['NaBH₄ → alditol (sugar alcohol)', 'equilibrium between α and β anomers through open-chain form', 'Tollens/Benedict\'s → aldonic acid (reducing sugars)', 'acetal from hemiacetal + alcohol']
           },
           {
             label: 'Oxidation',
-            options: ['Tollens/Benedict\'s → aldonic acid (reducing sugars', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['NaBH₄ → alditol (sugar alcohol)', 'Tollens/Benedict\'s → aldonic acid (reducing sugars)', 'equilibrium between α and β anomers through open-chain form', 'acetal from hemiacetal + alcohol']
           }
         ],
-        correctAnswers: ['equilibrium between α and β anomers through open-c', 'NaBH₄ → alditol (sugar alcohol)', 'Tollens/Benedict\'s → aldonic acid (reducing sugars'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Reactions of Monosaccharides.'
+        correctAnswers: ['equilibrium between α and β anomers through open-chain form', 'NaBH₄ → alditol (sugar alcohol)', 'Tollens/Benedict\'s → aldonic acid (reducing sugars)'],
+        hint1: 'Think about what each concept specifically describes in Reactions of Monosaccharides.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Reactions of Monosaccharides describes a specific idea. Mutarotation: equilibrium between α and β anomers through open-chain form. Reduction: NaBH₄ → alditol (sugar alcohol). Oxidation: Tollens/Benedict\'s → aldonic acid (reducing sugars).'
       }
     }
   ]

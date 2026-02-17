@@ -30,31 +30,31 @@ just-so stories, difficult to test
       id: 'genet4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of evolutionary psychology?',
+            question: 'What does "Natural selection shaped behavioral…" refer to in psychology?',
             options: [
-              'Natural selection shaped behavioral tendencies',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'just-so stories, difficult to test',
+              'Parental investment theory',
+              'Mate selection preferences (universal patterns)',
+              'Natural selection shaped behavioral tendencies'
             ],
-            correctAnswer: 0,
-            explanation: 'Natural selection shaped behavioral tendencies'
+            correctAnswer: 3,
+            explanation: 'Correct — Natural selection shaped behavioral tendencies. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of evolutionary psychology, which is accurate?',
+            question: 'Which of the following is true about Parental investment theory?',
             options: [
               'Parental investment theory',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'just-so stories, difficult to test',
+              'Mate selection preferences (universal patterns)',
+              'Natural selection shaped behavioral tendencies'
             ],
             correctAnswer: 0,
-            explanation: 'Parental investment theory'
+            explanation: 'Correct — Parental investment theory. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ just-so stories, difficult to test
       id: 'genet4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Natural selection shaped behavioral tendencies',
-            options: ['Natural selection shaped behavioral tendencies', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            label: 'Natural selection shaped behavioral…',
+            options: ['Parental investment theory', 'just-so stories, difficult to test', 'Mate selection preferences (universal patterns)', 'Natural selection shaped behavioral tendencies']
           },
           {
-            label: 'Mate selection preferences (universal patterns)',
-            options: ['Mate selection preferences (universal patterns)', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            label: 'Mate selection preferences (universal…',
+            options: ['Parental investment theory', 'Mate selection preferences (universal patterns)', 'just-so stories, difficult to test', 'Natural selection shaped behavioral tendencies']
           },
           {
             label: 'Parental investment theory',
-            options: ['Parental investment theory', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Mate selection preferences (universal patterns)', 'Natural selection shaped behavioral tendencies', 'just-so stories, difficult to test', 'Parental investment theory']
           }
         ],
         correctAnswers: ['Natural selection shaped behavioral tendencies', 'Mate selection preferences (universal patterns)', 'Parental investment theory'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Evolutionary Psychology.'
+        hint1: 'Think about what each concept specifically describes in Evolutionary Psychology.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Evolutionary Psychology describes a specific idea. Natural selection shaped behavioral tendencies. Mate selection preferences (universal patterns). Parental investment theory.'
       }
     }
   ]

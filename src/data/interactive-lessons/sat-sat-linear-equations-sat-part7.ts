@@ -18,20 +18,31 @@ Translate words to math: "is" = equals, "more than" = addition, "of" = multiplic
       id: 'sat-l7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes read the problem carefully — identify what x represents?',
+            question: 'Which of the following correctly describes Read the problem carefully — identify…?',
             options: [
-              'Read the problem carefully — identify what x represents is a fundamental concept in SAT Math',
-              'Translate words to math: "is" = equals, "more than" = addition, "of" = multiplication',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'Read the problem carefully — identify what x represents.',
+              'Set up the equation, then solve.',
+              '"is" = equals, "more than" = addition, "of" = multiplication.',
+              'Always check: does your answer make sense in context?.'
             ],
             correctAnswer: 0,
-            explanation: 'Read the problem carefully — identify what x represents'
+            explanation: 'Correct — Read the problem carefully — identify what x represents. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              'Read the problem carefully — identify what x represents.',
+              '"is" = equals, "more than" = addition, "of" = multiplication.',
+              'Set up the equation, then solve.',
+              'Always check: does your answer make sense in context?.'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Key Insight: Set up the equation, then solve. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Translate words to math: "is" = equals, "more than" = addition, "of" = multiplic
       id: 'sat-l7-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for review & applications?',
+            question: 'Which statement about SAT Tip is correct?',
             options: [
-              'Set up the equation, then solve',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              '"is" = equals, "more than" = addition, "of" = multiplication.',
+              'Always check: does your answer make sense in context?.',
+              'Read the problem carefully — identify what x represents.',
+              'Set up the equation, then solve.'
             ],
-            correctAnswer: 0,
-            explanation: 'Set up the equation, then solve'
+            correctAnswer: 1,
+            explanation: 'Correct — SAT Tip: Always check: does your answer make sense in context?. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Translate words to math: "is" = equals, "more than" = addition, "of" = multiplic
       id: 'sat-l7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Review & Applications:',
-            options: ['Read the problem carefully — identify what x repre', 'Translate words to math: "is" = equals, "more than', 'Not applicable', 'None of these']
+            label: 'Translate words to math',
+            options: ['Set up the equation, then solve.', 'Read the problem carefully — identify what x represents.', '"is" = equals, "more than" = addition, "of" = multiplication.', 'Always check: does your answer make sense in context?.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Set up the equation, then solve', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Key Insight',
+            options: ['Read the problem carefully — identify what x represents.', '"is" = equals, "more than" = addition, "of" = multiplication.', 'Set up the equation, then solve.', 'Always check: does your answer make sense in context?.']
+          },
+          {
+            label: 'SAT Tip',
+            options: ['Set up the equation, then solve.', 'Always check: does your answer make sense in context?.', 'Read the problem carefully — identify what x represents.', '"is" = equals, "more than" = addition, "of" = multiplication.']
           }
         ],
-        correctAnswers: ['Read the problem carefully — identify what x repre', 'Set up the equation, then solve'],
-        hint1: 'Think about review & applications',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'Read the problem carefully — identify what x represents. Set up the equation, then solve.'
+        correctAnswers: ['"is" = equals, "more than" = addition, "of" = multiplication.', 'Set up the equation, then solve.', 'Always check: does your answer make sense in context?.'],
+        hint1: 'Think about what each concept specifically describes in Review & Applications.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Review & Applications describes a specific idea. Translate words to math: "is" = equals, "more than" = addition, "of" = multiplication. Key Insight: Set up the equation, then solve. SAT Tip: Always check: does your answer make sense in context?.'
       }
     }
   ]

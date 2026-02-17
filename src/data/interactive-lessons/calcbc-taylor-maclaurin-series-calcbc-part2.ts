@@ -30,31 +30,31 @@ Easier to compute since all derivatives are evaluated at 0
       id: 'taylo2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of maclaurin series?',
+            question: 'Which statement accurately explains Maclaurin series?',
             options: [
-              'Maclaurin series',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
+              'Taylor series centered at a = 0',
+              'Many common functions have well-known Maclaurin series',
+              'Easier to compute since all derivatives are evaluated at 0',
+              'Σ f⁽ⁿ⁾(0)/n! · xⁿ'
             ],
             correctAnswer: 0,
-            explanation: 'Maclaurin series: Taylor series centered at a = 0'
+            explanation: 'Correct — Maclaurin series: Taylor series centered at a = 0. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of maclaurin series, which is accurate?',
+            question: 'Select the statement that correctly describes Many common functions have well-known…:',
             options: [
+              'Σ f⁽ⁿ⁾(0)/n! · xⁿ',
+              'Taylor series centered at a = 0',
               'Many common functions have well-known Maclaurin series',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Easier to compute since all derivatives are evaluated at 0'
             ],
-            correctAnswer: 0,
-            explanation: 'Many common functions have well-known Maclaurin series'
+            correctAnswer: 2,
+            explanation: 'Correct — Many common functions have well-known Maclaurin series. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Easier to compute since all derivatives are evaluated at 0
       id: 'taylo2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to maclaurin series?',
+            question: 'Regarding Maclaurin Series, which correctly describes Easier to compute since all derivatives…?',
             options: [
+              'Many common functions have well-known Maclaurin series',
+              'Taylor series centered at a = 0',
               'Easier to compute since all derivatives are evaluated at 0',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'Σ f⁽ⁿ⁾(0)/n! · xⁿ'
             ],
-            correctAnswer: 0,
-            explanation: 'Easier to compute since all derivatives are evaluated at 0'
+            correctAnswer: 2,
+            explanation: 'Correct — Easier to compute since all derivatives are evaluated at 0. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Easier to compute since all derivatives are evaluated at 0
       id: 'taylo2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Maclaurin series',
-            options: ['Taylor series centered at a = 0', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Σ f⁽ⁿ⁾(0)/n! · xⁿ', 'Taylor series centered at a = 0', 'Many common functions have well-known Maclaurin series', 'Easier to compute since all derivatives are evaluated at 0']
           },
           {
             label: 'Σ f⁽ⁿ⁾(0)/n! · xⁿ',
-            options: ['Σ f⁽ⁿ⁾(0)/n! · xⁿ', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Σ f⁽ⁿ⁾(0)/n! · xⁿ', 'Easier to compute since all derivatives are evaluated at 0', 'Many common functions have well-known Maclaurin series', 'Taylor series centered at a = 0']
           },
           {
-            label: 'Many common functions have well-known Maclaurin series',
-            options: ['Many common functions have well-known Maclaurin se', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Many common functions have well-known…',
+            options: ['Σ f⁽ⁿ⁾(0)/n! · xⁿ', 'Many common functions have well-known Maclaurin series', 'Easier to compute since all derivatives are evaluated at 0', 'Taylor series centered at a = 0']
           }
         ],
-        correctAnswers: ['Taylor series centered at a = 0', 'Σ f⁽ⁿ⁾(0)/n! · xⁿ', 'Many common functions have well-known Maclaurin se'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Maclaurin Series.'
+        correctAnswers: ['Taylor series centered at a = 0', 'Σ f⁽ⁿ⁾(0)/n! · xⁿ', 'Many common functions have well-known Maclaurin series'],
+        hint1: 'Think about what each concept specifically describes in Maclaurin Series.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Maclaurin Series describes a specific idea. Maclaurin series: Taylor series centered at a = 0. Σ f⁽ⁿ⁾(0)/n! · xⁿ. Many common functions have well-known Maclaurin series.'
       }
     }
   ]

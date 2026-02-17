@@ -30,31 +30,31 @@ velocity in m/s, time in s → displacement in meters
       id: 'integ3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of distance from velocity?',
+            question: 'Which statement accurately explains Displacement = ∫ₐᵇ v(t)dt; Total…?',
             options: [
+              's(t) = s(0) + ∫₀ᵗ v(u)du',
+              'velocity in m/s, time in s → displacement in meters',
               'Displacement = ∫ₐᵇ v(t)dt; Total distance = ∫ₐᵇ |v(t)|dt',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'If velocity is given as data, use trapezoidal approximation'
             ],
-            correctAnswer: 0,
-            explanation: 'Displacement = ∫ₐᵇ v(t)dt; Total distance = ∫ₐᵇ |v(t)|dt'
+            correctAnswer: 2,
+            explanation: 'Correct — Displacement = ∫ₐᵇ v(t)dt; Total distance = ∫ₐᵇ |v(t)|dt. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of distance from velocity, which is accurate?',
+            question: 'In the context of Distance from Velocity, which explains If velocity is given as data, use…?',
             options: [
+              'velocity in m/s, time in s → displacement in meters',
+              's(t) = s(0) + ∫₀ᵗ v(u)du',
               'If velocity is given as data, use trapezoidal approximation',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Displacement = ∫ₐᵇ v(t)dt; Total distance = ∫ₐᵇ |v(t)|dt'
             ],
-            correctAnswer: 0,
-            explanation: 'If velocity is given as data, use trapezoidal approximation'
+            correctAnswer: 2,
+            explanation: 'Correct — If velocity is given as data, use trapezoidal approximation. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ velocity in m/s, time in s → displacement in meters
       id: 'integ3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to distance from velocity?',
+            question: 'Regarding Distance from Velocity, which correctly describes Units?',
             options: [
+              's(t) = s(0) + ∫₀ᵗ v(u)du',
+              'If velocity is given as data, use trapezoidal approximation',
               'velocity in m/s, time in s → displacement in meters',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'Displacement = ∫ₐᵇ v(t)dt; Total distance = ∫ₐᵇ |v(t)|dt'
             ],
-            correctAnswer: 0,
-            explanation: 'Units: velocity in m/s, time in s → displacement in meters'
+            correctAnswer: 2,
+            explanation: 'Correct — Units: velocity in m/s, time in s → displacement in meters. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,24 @@ velocity in m/s, time in s → displacement in meters
       id: 'integ3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Displacement = ∫ₐᵇ v(t)dt; Total distance = ∫ₐᵇ |v(t)|dt',
-            options: ['Displacement = ∫ₐᵇ v(t)dt; Total distance = ∫ₐᵇ |v', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
-          },
-          {
             label: 'Position function',
-            options: ['s(t) = s(0) + ∫₀ᵗ v(u)du', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['If velocity is given as data, use trapezoidal approximation', 's(t) = s(0) + ∫₀ᵗ v(u)du', 'Displacement = ∫ₐᵇ v(t)dt; Total distance = ∫ₐᵇ |v(t)|dt', 'velocity in m/s, time in s → displacement in meters']
           },
           {
-            label: 'If velocity is given as data, use trapezoidal approximation',
-            options: ['If velocity is given as data, use trapezoidal appr', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Units',
+            options: ['If velocity is given as data, use trapezoidal approximation', 's(t) = s(0) + ∫₀ᵗ v(u)du', 'velocity in m/s, time in s → displacement in meters', 'Displacement = ∫ₐᵇ v(t)dt; Total distance = ∫ₐᵇ |v(t)|dt']
           }
         ],
-        correctAnswers: ['Displacement = ∫ₐᵇ v(t)dt; Total distance = ∫ₐᵇ |v', 's(t) = s(0) + ∫₀ᵗ v(u)du', 'If velocity is given as data, use trapezoidal appr'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Distance from Velocity.'
+        correctAnswers: ['s(t) = s(0) + ∫₀ᵗ v(u)du', 'velocity in m/s, time in s → displacement in meters'],
+        hint1: 'Think about what each concept specifically describes in Distance from Velocity.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Distance from Velocity describes a specific idea. Position function: s(t) = s(0) + ∫₀ᵗ v(u)du. Units: velocity in m/s, time in s → displacement in meters.'
       }
     }
   ]

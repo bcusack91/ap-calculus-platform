@@ -71,23 +71,28 @@ Thyroid: T3/T4 increase metabolic rate; Parathyroid: PTH increases blood Ca2+.
       id: 'mcat-5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Endocrine System:',
-            options: ['Hypothalamus controls pituitary; anterior pituitary releases', 'Thyroid: T3/T4 increase metabolic rate; Parathyroid: PTH inc', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Thyroid',
+            options: ['Adrenal cortex: cortisol (stress), aldosterone (Na+ retention); Adrenal medulla: epinephrine.', 'Pancreas: insulin (lowers glucose, promotes storage) vs glucagon (raises glucose, promotes breakdown).', 'T3/T4 increase metabolic rate; Parathyroid: PTH increases blood Ca2+.', 'Hypothalamus controls pituitary; anterior pituitary releases FSH, LH, TSH, ACTH, GH, prolactin.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Adrenal cortex: cortisol (stress), aldosterone (Na+ retentio', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Key Insight',
+            options: ['Pancreas: insulin (lowers glucose, promotes storage) vs glucagon (raises glucose, promotes breakdown).', 'Adrenal cortex: cortisol (stress), aldosterone (Na+ retention); Adrenal medulla: epinephrine.', 'Hypothalamus controls pituitary; anterior pituitary releases FSH, LH, TSH, ACTH, GH, prolactin.', 'T3/T4 increase metabolic rate; Parathyroid: PTH increases blood Ca2+.']
+          },
+          {
+            label: 'MCAT Tip',
+            options: ['Adrenal cortex: cortisol (stress), aldosterone (Na+ retention); Adrenal medulla: epinephrine.', 'T3/T4 increase metabolic rate; Parathyroid: PTH increases blood Ca2+.', 'Hypothalamus controls pituitary; anterior pituitary releases FSH, LH, TSH, ACTH, GH, prolactin.', 'Pancreas: insulin (lowers glucose, promotes storage) vs glucagon (raises glucose, promotes breakdown).']
           }
         ],
-        correctAnswers: ['Hypothalamus controls pituitary; anterior pituitary releases', 'Adrenal cortex: cortisol (stress), aldosterone (Na+ retentio'],
-        hint1: 'Think about endocrine system',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Hypothalamus controls pituitary; anterior pituitary releases FSH, LH, TSH, ACTH, GH, prolactin. Adrenal cortex: cortisol (stress), aldosterone (Na+ retention); Adrenal medulla: epinephrine.'
+        correctAnswers: ['T3/T4 increase metabolic rate; Parathyroid: PTH increases blood Ca2+.', 'Adrenal cortex: cortisol (stress), aldosterone (Na+ retention); Adrenal medulla: epinephrine.', 'Pancreas: insulin (lowers glucose, promotes storage) vs glucagon (raises glucose, promotes breakdown).'],
+        hint1: 'Think about what each concept specifically describes in Endocrine System.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Endocrine System describes a specific idea. Thyroid: T3/T4 increase metabolic rate; Parathyroid: PTH increases blood Ca2+. Key Insight: Adrenal cortex: cortisol (stress), aldosterone (Na+ retention); Adrenal medulla: epinephrine. MCAT Tip: Pancreas: insulin (lowers glucose, promotes storage) vs glucagon (raises glucose, promotes breakdown).'
       }
     }
   ]

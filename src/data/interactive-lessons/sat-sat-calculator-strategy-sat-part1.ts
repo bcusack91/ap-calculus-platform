@@ -18,20 +18,31 @@ No-calculator section tests mental math and algebraic fluency.
       id: 'sat-c1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes sat math?',
+            question: 'Which of the following correctly describes SAT Math?',
             options: [
-              'SAT Math is a fundamental concept in SAT Math',
-              'No-calculator section tests mental math and algebraic fluency',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'Know your calculator: practice with the same one you\'ll use on test day.',
+              'Calculator section: more complex, multi-step, and data problems.',
+              'No-calculator section tests mental math and algebraic fluency.',
+              'Section 3 (no calculator, 25 min, 20 questions) and Section 4 (calculator, 55 min, 38 questions).'
             ],
-            correctAnswer: 0,
-            explanation: 'SAT Math: Section 3 (no calculator, 25 min, 20 questions) and Section 4 (calculator, 55 min, 38 questions)'
+            correctAnswer: 3,
+            explanation: 'Correct — SAT Math: Section 3 (no calculator, 25 min, 20 questions) and Section 4 (calculator, 55 min, 38 questions). The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              'Know your calculator: practice with the same one you\'ll use on test day.',
+              'Section 3 (no calculator, 25 min, 20 questions) and Section 4 (calculator, 55 min, 38 questions).',
+              'Calculator section: more complex, multi-step, and data problems.',
+              'No-calculator section tests mental math and algebraic fluency.'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Key Insight: Calculator section: more complex, multi-step, and data problems. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ No-calculator section tests mental math and algebraic fluency.
       id: 'sat-c1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for calculator section overview?',
+            question: 'Which of these accurately represents SAT Tip?',
             options: [
-              'Calculator section: more complex, multi-step, and data problems',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'Know your calculator: practice with the same one you\'ll use on test day.',
+              'Calculator section: more complex, multi-step, and data problems.',
+              'Section 3 (no calculator, 25 min, 20 questions) and Section 4 (calculator, 55 min, 38 questions).',
+              'No-calculator section tests mental math and algebraic fluency.'
             ],
             correctAnswer: 0,
-            explanation: 'Calculator section: more complex, multi-step, and data problems'
+            explanation: 'Correct — SAT Tip: Know your calculator: practice with the same one you\'ll use on test day. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ No-calculator section tests mental math and algebraic fluency.
       id: 'sat-c1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Calculator Section Overview:',
-            options: ['SAT Math: Section 3 (no calculator, 25 min, 20 que', 'No-calculator section tests mental math and algebr', 'Not applicable', 'None of these']
+            label: 'SAT Math',
+            options: ['Know your calculator: practice with the same one you\'ll use on test day.', 'Calculator section: more complex, multi-step, and data problems.', 'No-calculator section tests mental math and algebraic fluency.', 'Section 3 (no calculator, 25 min, 20 questions) and Section 4 (calculator, 55 min, 38 questions).']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Calculator section: more complex, multi-step, and ', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Key Insight',
+            options: ['No-calculator section tests mental math and algebraic fluency.', 'Know your calculator: practice with the same one you\'ll use on test day.', 'Calculator section: more complex, multi-step, and data problems.', 'Section 3 (no calculator, 25 min, 20 questions) and Section 4 (calculator, 55 min, 38 questions).']
+          },
+          {
+            label: 'SAT Tip',
+            options: ['No-calculator section tests mental math and algebraic fluency.', 'Calculator section: more complex, multi-step, and data problems.', 'Know your calculator: practice with the same one you\'ll use on test day.', 'Section 3 (no calculator, 25 min, 20 questions) and Section 4 (calculator, 55 min, 38 questions).']
           }
         ],
-        correctAnswers: ['SAT Math: Section 3 (no calculator, 25 min, 20 que', 'Calculator section: more complex, multi-step, and '],
-        hint1: 'Think about calculator section overview',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'SAT Math: Section 3 (no calculator, 25 min, 20 questions) and Section 4 (calculator, 55 min, 38 questions). Calculator section: more complex, multi-step, and data problems.'
+        correctAnswers: ['Section 3 (no calculator, 25 min, 20 questions) and Section 4 (calculator, 55 min, 38 questions).', 'Calculator section: more complex, multi-step, and data problems.', 'Know your calculator: practice with the same one you\'ll use on test day.'],
+        hint1: 'Think about what each concept specifically describes in Calculator Strategy.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Calculator Strategy describes a specific idea. SAT Math: Section 3 (no calculator, 25 min, 20 questions) and Section 4 (calculator, 55 min, 38 questions). Key Insight: Calculator section: more complex, multi-step, and data problems. SAT Tip: Know your calculator: practice with the same one you\'ll use on test day.'
       }
     }
   ]

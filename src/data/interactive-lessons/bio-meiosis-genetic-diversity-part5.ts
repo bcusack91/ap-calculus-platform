@@ -19,31 +19,31 @@ export const bioMeiosisPart5Data = {
       id: 'meio5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes independent assortment?',
+            question: 'Which of the following correctly describes Independent assortment?',
             options: [
+              '2²³ × 2²³ = ~70 trillion possible combinations (without crossing over)',
+              'creates new allele combinations',
               '2ⁿ possible combinations (n = # of chromosome pairs)',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'any sperm + any egg'
             ],
-            correctAnswer: 0,
-            explanation: 'Independent assortment: 2ⁿ possible combinations (n = # of chromosome pairs)'
+            correctAnswer: 2,
+            explanation: 'Correct — Independent assortment: 2ⁿ possible combinations (n = # of chromosome pairs). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of sources of genetic variation, which statement is accurate?',
+            question: 'Which of the following is true about Random fertilization?',
             options: [
-              'Random fertilization: any sperm + any egg',
-              ')sriap emosomorhc fo # = n( snoitanibmoc elbissop ⁿ2 :tnemtrossa tnednepednI',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              '2ⁿ possible combinations (n = # of chromosome pairs)',
+              'creates new allele combinations',
+              '2²³ × 2²³ = ~70 trillion possible combinations (without crossing over)',
+              'any sperm + any egg'
             ],
-            correctAnswer: 0,
-            explanation: 'Random fertilization: any sperm + any egg'
+            correctAnswer: 3,
+            explanation: 'Correct — Random fertilization: any sperm + any egg. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioMeiosisPart5Data = {
       id: 'meio5-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to sources of genetic variation?',
+            question: 'Which statement about Humans is correct?',
             options: [
-              'Humans: 2²³ × 2²³ = ~70 trillion possible combinations (without crossing over)',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              '2²³ × 2²³ = ~70 trillion possible combinations (without crossing over)',
+              '2ⁿ possible combinations (n = # of chromosome pairs)',
+              'creates new allele combinations',
+              'any sperm + any egg'
             ],
             correctAnswer: 0,
-            explanation: 'Humans: 2²³ × 2²³ = ~70 trillion possible combinations (without crossing over)'
+            explanation: 'Correct — Humans: 2²³ × 2²³ = ~70 trillion possible combinations (without crossing over). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioMeiosisPart5Data = {
       id: 'meio5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Independent assortment is important in sources of genetic variation because',
-            options: ['2ⁿ possible combinations (n = # of chromosome pair', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Independent assortment',
+            options: ['2ⁿ possible combinations (n = # of chromosome pairs)', 'creates new allele combinations', 'any sperm + any egg', '2²³ × 2²³ = ~70 trillion possible combinations (without crossing over)']
           },
           {
-            label: 'Crossing over is important in sources of genetic variation because',
-            options: ['creates new allele combinations', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Crossing over',
+            options: ['2²³ × 2²³ = ~70 trillion possible combinations (without crossing over)', 'any sperm + any egg', 'creates new allele combinations', '2ⁿ possible combinations (n = # of chromosome pairs)']
           },
           {
-            label: 'Random fertilization is important in sources of genetic variation because',
-            options: ['any sperm + any egg', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Random fertilization',
+            options: ['any sperm + any egg', '2ⁿ possible combinations (n = # of chromosome pairs)', 'creates new allele combinations', '2²³ × 2²³ = ~70 trillion possible combinations (without crossing over)']
           }
         ],
-        correctAnswers: ['2ⁿ possible combinations (n = # of chromosome pair', 'creates new allele combinations', 'any sperm + any egg'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Sources of Genetic Variation.'
+        correctAnswers: ['2ⁿ possible combinations (n = # of chromosome pairs)', 'creates new allele combinations', 'any sperm + any egg'],
+        hint1: 'Think about what each concept specifically describes in Sources of Genetic Variation.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Sources of Genetic Variation describes a specific idea. Independent assortment: 2ⁿ possible combinations (n = # of chromosome pairs). Crossing over: creates new allele combinations. Random fertilization: any sperm + any egg.'
       }
     }
   ]

@@ -19,31 +19,31 @@ export const bioEvidencePart6Data = {
       id: 'evid6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes analyzing phylogenetic trees?',
-            options: [
-              'Analyzing phylogenetic trees',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
-            ],
-            correctAnswer: 0,
-            explanation: 'Analyzing phylogenetic trees'
-          },
-          {
-            question: 'In the context of problem-solving, which statement is accurate?',
+            question: 'What does "Analyzing phylogenetic trees" refer to in biology?',
             options: [
               'Evaluating evidence for common descent',
-              'seert citenegolyhp gnizylanA',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Distinguishing homology from analogy',
+              'Interpreting molecular data for relatedness',
+              'Analyzing phylogenetic trees'
             ],
-            correctAnswer: 0,
-            explanation: 'Evaluating evidence for common descent'
+            correctAnswer: 3,
+            explanation: 'Correct — Analyzing phylogenetic trees. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Evaluating evidence for common descent?',
+            options: [
+              'Analyzing phylogenetic trees',
+              'Evaluating evidence for common descent',
+              'Interpreting molecular data for relatedness',
+              'Distinguishing homology from analogy'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Evaluating evidence for common descent. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioEvidencePart6Data = {
       id: 'evid6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to problem-solving?',
+            question: 'Which statement about Distinguishing homology from analogy is correct?',
             options: [
-              'Distinguishing homology from analogy',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Analyzing phylogenetic trees',
+              'Evaluating evidence for common descent',
+              'Interpreting molecular data for relatedness',
+              'Distinguishing homology from analogy'
             ],
-            correctAnswer: 0,
-            explanation: 'Distinguishing homology from analogy'
+            correctAnswer: 3,
+            explanation: 'Correct — Distinguishing homology from analogy. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioEvidencePart6Data = {
       id: 'evid6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Analyzing phylogenetic trees is important in problem-solving because',
-            options: ['Analyzing phylogenetic trees', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Analyzing phylogenetic trees',
+            options: ['Evaluating evidence for common descent', 'Interpreting molecular data for relatedness', 'Analyzing phylogenetic trees', 'Distinguishing homology from analogy']
           },
           {
-            label: 'Interpreting molecular data for relatedness is important in problem-solving because',
-            options: ['Interpreting molecular data for relatedness', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Interpreting molecular data for…',
+            options: ['Evaluating evidence for common descent', 'Distinguishing homology from analogy', 'Analyzing phylogenetic trees', 'Interpreting molecular data for relatedness']
           },
           {
-            label: 'Evaluating evidence for common descent is important in problem-solving because',
-            options: ['Evaluating evidence for common descent', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Evaluating evidence for common descent',
+            options: ['Evaluating evidence for common descent', 'Analyzing phylogenetic trees', 'Interpreting molecular data for relatedness', 'Distinguishing homology from analogy']
           }
         ],
         correctAnswers: ['Analyzing phylogenetic trees', 'Interpreting molecular data for relatedness', 'Evaluating evidence for common descent'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving.'
+        hint1: 'Think about what each concept specifically describes in Evidence for Evolution: Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Evidence for Evolution: Problem-Solving Workshop describes a specific idea. Analyzing phylogenetic trees. Interpreting molecular data for relatedness. Evaluating evidence for common descent.'
       }
     }
   ]

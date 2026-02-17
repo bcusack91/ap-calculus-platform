@@ -18,20 +18,31 @@ Interpolate: estimate between known data points.
       id: 'act-s7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes extrapolate?',
+            question: 'Which statement accurately explains Extrapolate?',
             options: [
-              'Extrapolate is a key concept for ACT Science',
-              'Interpolate: estimate between known data points',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'estimate between known data points.',
+              'Predictions based on trends should follow the established pattern.',
+              'extend the trend beyond the data.',
+              'State limitations: extrapolation is less reliable than interpolation.'
             ],
-            correctAnswer: 0,
-            explanation: 'Extrapolate: extend the trend beyond the data'
+            correctAnswer: 2,
+            explanation: 'Correct — Extrapolate: extend the trend beyond the data. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              'extend the trend beyond the data.',
+              'State limitations: extrapolation is less reliable than interpolation.',
+              'estimate between known data points.',
+              'Predictions based on trends should follow the established pattern.'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Key Insight: Predictions based on trends should follow the established pattern. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Interpolate: estimate between known data points.
       id: 'act-s7-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for review & applications?',
+            question: 'Regarding Review & Applications, which correctly describes ACT Tip?',
             options: [
-              'Predictions based on trends should follow the established pattern',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Predictions based on trends should follow the established pattern.',
+              'estimate between known data points.',
+              'State limitations: extrapolation is less reliable than interpolation.',
+              'extend the trend beyond the data.'
             ],
-            correctAnswer: 0,
-            explanation: 'Predictions based on trends should follow the established pattern'
+            correctAnswer: 2,
+            explanation: 'Correct — ACT Tip: State limitations: extrapolation is less reliable than interpolation. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Interpolate: estimate between known data points.
       id: 'act-s7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Review & Applications:',
-            options: ['Extrapolate: extend the trend beyond the data', 'Interpolate: estimate between known data points', 'Not applicable', 'None of these']
+            label: 'Extrapolate',
+            options: ['State limitations: extrapolation is less reliable than interpolation.', 'Predictions based on trends should follow the established pattern.', 'estimate between known data points.', 'extend the trend beyond the data.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Predictions based on trends should follow the esta', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Interpolate',
+            options: ['extend the trend beyond the data.', 'Predictions based on trends should follow the established pattern.', 'estimate between known data points.', 'State limitations: extrapolation is less reliable than interpolation.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['State limitations: extrapolation is less reliable than interpolation.', 'extend the trend beyond the data.', 'Predictions based on trends should follow the established pattern.', 'estimate between known data points.']
           }
         ],
-        correctAnswers: ['Extrapolate: extend the trend beyond the data', 'Predictions based on trends should follow the esta'],
-        hint1: 'Think about review & applications',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Extrapolate: extend the trend beyond the data. Predictions based on trends should follow the established pattern.'
+        correctAnswers: ['extend the trend beyond the data.', 'estimate between known data points.', 'Predictions based on trends should follow the established pattern.'],
+        hint1: 'Think about what each concept specifically describes in Review & Applications.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Review & Applications describes a specific idea. Extrapolate: extend the trend beyond the data. Interpolate: estimate between known data points. Key Insight: Predictions based on trends should follow the established pattern.'
       }
     }
   ]

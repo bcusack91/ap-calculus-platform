@@ -19,31 +19,31 @@ export const bioTranscriptionPart6Data = {
       id: 'tran6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes using the genetic code table?',
+            question: 'Which of the following correctly describes Using the genetic code table?',
             options: [
+              'Predicting effects of mutations on proteins',
               'Using the genetic code table',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Tracing from DNA to mRNA to protein',
+              'Identifying frameshift vs point mutations'
             ],
-            correctAnswer: 0,
-            explanation: 'Using the genetic code table'
+            correctAnswer: 1,
+            explanation: 'Correct — Using the genetic code table. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of problem-solving, which statement is accurate?',
+            question: 'In the context of Transcription & Translation: Problem-Solving Workshop, which explains Tracing from DNA to mRNA to protein?',
             options: [
               'Tracing from DNA to mRNA to protein',
-              'elbat edoc citeneg eht gnisU',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Predicting effects of mutations on proteins',
+              'Identifying frameshift vs point mutations',
+              'Using the genetic code table'
             ],
             correctAnswer: 0,
-            explanation: 'Tracing from DNA to mRNA to protein'
+            explanation: 'Correct — Tracing from DNA to mRNA to protein. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioTranscriptionPart6Data = {
       id: 'tran6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to problem-solving?',
+            question: 'Regarding Transcription & Translation: Problem-Solving Workshop, which correctly describes Identifying frameshift vs point…?',
             options: [
-              'Identifying frameshift vs point mutations',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Predicting effects of mutations on proteins',
+              'Tracing from DNA to mRNA to protein',
+              'Using the genetic code table',
+              'Identifying frameshift vs point mutations'
             ],
-            correctAnswer: 0,
-            explanation: 'Identifying frameshift vs point mutations'
+            correctAnswer: 3,
+            explanation: 'Correct — Identifying frameshift vs point mutations. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioTranscriptionPart6Data = {
       id: 'tran6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Using the genetic code table is important in problem-solving because',
-            options: ['Using the genetic code table', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Using the genetic code table',
+            options: ['Using the genetic code table', 'Predicting effects of mutations on proteins', 'Identifying frameshift vs point mutations', 'Tracing from DNA to mRNA to protein']
           },
           {
-            label: 'Predicting effects of mutations on proteins is important in problem-solving because',
-            options: ['Predicting effects of mutations on proteins', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Predicting effects of mutations on…',
+            options: ['Tracing from DNA to mRNA to protein', 'Identifying frameshift vs point mutations', 'Predicting effects of mutations on proteins', 'Using the genetic code table']
           },
           {
-            label: 'Tracing from DNA to mRNA to protein is important in problem-solving because',
-            options: ['Tracing from DNA to mRNA to protein', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Tracing from DNA to mRNA to protein',
+            options: ['Predicting effects of mutations on proteins', 'Using the genetic code table', 'Tracing from DNA to mRNA to protein', 'Identifying frameshift vs point mutations']
           }
         ],
         correctAnswers: ['Using the genetic code table', 'Predicting effects of mutations on proteins', 'Tracing from DNA to mRNA to protein'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving.'
+        hint1: 'Think about what each concept specifically describes in Transcription & Translation: Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Transcription & Translation: Problem-Solving Workshop describes a specific idea. Using the genetic code table. Predicting effects of mutations on proteins. Tracing from DNA to mRNA to protein.'
       }
     }
   ]

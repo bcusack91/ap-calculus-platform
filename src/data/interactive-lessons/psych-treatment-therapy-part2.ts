@@ -30,31 +30,31 @@ accepting the client without judgment
       id: 'treat2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of psychodynamic & humanistic therapy?',
+            question: 'What does "Psychoanalysis (Freud)" refer to in psychology?',
             options: [
-              'Psychoanalysis (Freud)',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'accepting the client without judgment',
+              'client-centered, active listening, empathy',
+              'free association, dream analysis, transference',
+              'less intensive, focus on current relationships'
             ],
-            correctAnswer: 0,
-            explanation: 'Psychoanalysis (Freud): free association, dream analysis, transference'
+            correctAnswer: 2,
+            explanation: 'Correct — Psychoanalysis (Freud): free association, dream analysis, transference. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of psychodynamic & humanistic therapy, which is accurate?',
+            question: 'Select the statement that correctly describes Humanistic (Rogers):',
             options: [
               'client-centered, active listening, empathy',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'accepting the client without judgment',
+              'less intensive, focus on current relationships',
+              'free association, dream analysis, transference'
             ],
             correctAnswer: 0,
-            explanation: 'Humanistic (Rogers): client-centered, active listening, empathy'
+            explanation: 'Correct — Humanistic (Rogers): client-centered, active listening, empathy. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ accepting the client without judgment
       id: 'treat2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Psychoanalysis (Freud)',
-            options: ['free association, dream analysis, transference', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['accepting the client without judgment', 'free association, dream analysis, transference', 'less intensive, focus on current relationships', 'client-centered, active listening, empathy']
           },
           {
             label: 'Psychodynamic',
-            options: ['less intensive, focus on current relationships', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['less intensive, focus on current relationships', 'client-centered, active listening, empathy', 'accepting the client without judgment', 'free association, dream analysis, transference']
           },
           {
             label: 'Humanistic (Rogers)',
-            options: ['client-centered, active listening, empathy', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['free association, dream analysis, transference', 'client-centered, active listening, empathy', 'accepting the client without judgment', 'less intensive, focus on current relationships']
           }
         ],
         correctAnswers: ['free association, dream analysis, transference', 'less intensive, focus on current relationships', 'client-centered, active listening, empathy'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Psychodynamic & Humanistic Therapy.'
+        hint1: 'Think about what each concept specifically describes in Psychodynamic & Humanistic Therapy.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Psychodynamic & Humanistic Therapy describes a specific idea. Psychoanalysis (Freud): free association, dream analysis, transference. Psychodynamic: less intensive, focus on current relationships. Humanistic (Rogers): client-centered, active listening, empathy.'
       }
     }
   ]

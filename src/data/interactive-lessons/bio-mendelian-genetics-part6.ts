@@ -19,31 +19,31 @@ export const bioMendelianPart6Data = {
       id: 'mend6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes solving punnett square problems?',
+            question: 'What does "Solving Punnett square problems" refer to in biology?',
             options: [
               'Solving Punnett square problems',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Predicting offspring ratios',
+              'Performing chi-square calculations',
+              'Determining inheritance patterns from pedigrees'
             ],
             correctAnswer: 0,
-            explanation: 'Solving Punnett square problems'
+            explanation: 'Correct — Solving Punnett square problems. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of problem-solving, which statement is accurate?',
+            question: 'Select the statement that correctly describes Performing chi-square calculations:',
             options: [
+              'Determining inheritance patterns from pedigrees',
+              'Predicting offspring ratios',
               'Performing chi-square calculations',
-              'smelborp erauqs ttennuP gnivloS',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Solving Punnett square problems'
             ],
-            correctAnswer: 0,
-            explanation: 'Performing chi-square calculations'
+            correctAnswer: 2,
+            explanation: 'Correct — Performing chi-square calculations. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioMendelianPart6Data = {
       id: 'mend6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to problem-solving?',
+            question: 'Regarding Mendelian Genetics: Problem-Solving Workshop, which correctly describes Predicting offspring ratios?',
             options: [
-              'Predicting offspring ratios',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Performing chi-square calculations',
+              'Determining inheritance patterns from pedigrees',
+              'Solving Punnett square problems',
+              'Predicting offspring ratios'
             ],
-            correctAnswer: 0,
-            explanation: 'Predicting offspring ratios'
+            correctAnswer: 3,
+            explanation: 'Correct — Predicting offspring ratios. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioMendelianPart6Data = {
       id: 'mend6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Solving Punnett square problems is important in problem-solving because',
-            options: ['Solving Punnett square problems', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Solving Punnett square problems',
+            options: ['Performing chi-square calculations', 'Determining inheritance patterns from pedigrees', 'Predicting offspring ratios', 'Solving Punnett square problems']
           },
           {
-            label: 'Determining inheritance patterns from pedigrees is important in problem-solving because',
-            options: ['Determining inheritance patterns from pedigrees', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Determining inheritance patterns from…',
+            options: ['Solving Punnett square problems', 'Performing chi-square calculations', 'Determining inheritance patterns from pedigrees', 'Predicting offspring ratios']
           },
           {
-            label: 'Performing chi-square calculations is important in problem-solving because',
-            options: ['Performing chi-square calculations', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Performing chi-square calculations',
+            options: ['Performing chi-square calculations', 'Solving Punnett square problems', 'Predicting offspring ratios', 'Determining inheritance patterns from pedigrees']
           }
         ],
         correctAnswers: ['Solving Punnett square problems', 'Determining inheritance patterns from pedigrees', 'Performing chi-square calculations'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving.'
+        hint1: 'Think about what each concept specifically describes in Mendelian Genetics: Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Mendelian Genetics: Problem-Solving Workshop describes a specific idea. Solving Punnett square problems. Determining inheritance patterns from pedigrees. Performing chi-square calculations.'
       }
     }
   ]

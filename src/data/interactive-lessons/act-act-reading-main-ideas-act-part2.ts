@@ -18,20 +18,31 @@ Look for specific examples, statistics, quotes, or descriptions.
       id: 'act-r2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes supporting details provide evidence for the main idea?',
+            question: 'Which of the following correctly describes Supporting details provide evidence for…?',
             options: [
-              'Supporting details provide evidence for the main idea is a key concept for ACT English/Reading',
-              'Look for specific examples, statistics, quotes, or descriptions',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'Look for specific examples, statistics, quotes, or descriptions.',
+              'Detail questions often point to specific lines or paragraphs.',
+              'Supporting details provide evidence for the main idea.',
+              'The answer is stated in the passage — don\'t infer when the question asks for details.'
             ],
-            correctAnswer: 0,
-            explanation: 'Supporting details provide evidence for the main idea'
+            correctAnswer: 2,
+            explanation: 'Correct — Supporting details provide evidence for the main idea. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              'Supporting details provide evidence for the main idea.',
+              'Detail questions often point to specific lines or paragraphs.',
+              'The answer is stated in the passage — don\'t infer when the question asks for details.',
+              'Look for specific examples, statistics, quotes, or descriptions.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Key Insight: Detail questions often point to specific lines or paragraphs. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Look for specific examples, statistics, quotes, or descriptions.
       id: 'act-r2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for supporting details?',
+            question: 'Regarding Supporting Details, which correctly describes ACT Tip?',
             options: [
-              'Detail questions often point to specific lines or paragraphs',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Look for specific examples, statistics, quotes, or descriptions.',
+              'The answer is stated in the passage — don\'t infer when the question asks for details.',
+              'Detail questions often point to specific lines or paragraphs.',
+              'Supporting details provide evidence for the main idea.'
             ],
-            correctAnswer: 0,
-            explanation: 'Detail questions often point to specific lines or paragraphs'
+            correctAnswer: 1,
+            explanation: 'Correct — ACT Tip: The answer is stated in the passage — don\'t infer when the question asks for details. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ Look for specific examples, statistics, quotes, or descriptions.
       id: 'act-r2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Supporting Details:',
-            options: ['Supporting details provide evidence for the main i', 'Look for specific examples, statistics, quotes, or', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['Detail questions often point to specific lines or paragraphs.', 'Supporting details provide evidence for the main idea.', 'The answer is stated in the passage — don\'t infer when the question asks for details.', 'Look for specific examples, statistics, quotes, or descriptions.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Detail questions often point to specific lines or ', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'ACT Tip',
+            options: ['Supporting details provide evidence for the main idea.', 'Detail questions often point to specific lines or paragraphs.', 'Look for specific examples, statistics, quotes, or descriptions.', 'The answer is stated in the passage — don\'t infer when the question asks for details.']
           }
         ],
-        correctAnswers: ['Supporting details provide evidence for the main i', 'Detail questions often point to specific lines or '],
-        hint1: 'Think about supporting details',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Supporting details provide evidence for the main idea. Detail questions often point to specific lines or paragraphs.'
+        correctAnswers: ['Detail questions often point to specific lines or paragraphs.', 'The answer is stated in the passage — don\'t infer when the question asks for details.'],
+        hint1: 'Think about what each concept specifically describes in Supporting Details.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Supporting Details describes a specific idea. Key Insight: Detail questions often point to specific lines or paragraphs. ACT Tip: The answer is stated in the passage — don\'t infer when the question asks for details.'
       }
     }
   ]

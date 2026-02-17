@@ -30,31 +30,31 @@ Differentiate each term independently, then combine
       id: 'basic2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of constant & sum rules?',
+            question: 'Which of the following correctly describes Constant rule?',
             options: [
-              'Constant rule',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'd/dx[c] = 0 for any constant c',
+              'd/dx[c·f(x)] = c·f\'(x)',
+              'd/dx[f ± g] = f\' ± g\'',
+              'Differentiate each term independently, then combine'
             ],
             correctAnswer: 0,
-            explanation: 'Constant rule: d/dx[c] = 0 for any constant c'
+            explanation: 'Correct — Constant rule: d/dx[c] = 0 for any constant c. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of constant & sum rules, which is accurate?',
+            question: 'Select the statement that correctly describes Constant multiple rule:',
             options: [
+              'd/dx[c] = 0 for any constant c',
+              'Differentiate each term independently, then combine',
               'd/dx[c·f(x)] = c·f\'(x)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'd/dx[f ± g] = f\' ± g\''
             ],
-            correctAnswer: 0,
-            explanation: 'Constant multiple rule: d/dx[c·f(x)] = c·f\'(x)'
+            correctAnswer: 2,
+            explanation: 'Correct — Constant multiple rule: d/dx[c·f(x)] = c·f\'(x). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Differentiate each term independently, then combine
       id: 'basic2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to constant & sum rules?',
+            question: 'Which statement about Differentiate each term independently,… is correct?',
             options: [
               'Differentiate each term independently, then combine',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'd/dx[c·f(x)] = c·f\'(x)',
+              'd/dx[c] = 0 for any constant c',
+              'd/dx[f ± g] = f\' ± g\''
             ],
             correctAnswer: 0,
-            explanation: 'Differentiate each term independently, then combine'
+            explanation: 'Correct — Differentiate each term independently, then combine. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Differentiate each term independently, then combine
       id: 'basic2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Constant rule',
-            options: ['d/dx[c] = 0 for any constant c', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['d/dx[c·f(x)] = c·f\'(x)', 'd/dx[f ± g] = f\' ± g\'', 'Differentiate each term independently, then combine', 'd/dx[c] = 0 for any constant c']
           },
           {
             label: 'Sum/Difference rule',
-            options: ['d/dx[f ± g] = f\' ± g\'', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['d/dx[c] = 0 for any constant c', 'd/dx[c·f(x)] = c·f\'(x)', 'd/dx[f ± g] = f\' ± g\'', 'Differentiate each term independently, then combine']
           },
           {
             label: 'Constant multiple rule',
-            options: ['d/dx[c·f(x)] = c·f\'(x)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Differentiate each term independently, then combine', 'd/dx[c·f(x)] = c·f\'(x)', 'd/dx[c] = 0 for any constant c', 'd/dx[f ± g] = f\' ± g\'']
           }
         ],
         correctAnswers: ['d/dx[c] = 0 for any constant c', 'd/dx[f ± g] = f\' ± g\'', 'd/dx[c·f(x)] = c·f\'(x)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Constant & Sum Rules.'
+        hint1: 'Think about what each concept specifically describes in Constant & Sum Rules.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Constant & Sum Rules describes a specific idea. Constant rule: d/dx[c] = 0 for any constant c. Sum/Difference rule: d/dx[f ± g] = f\' ± g\'. Constant multiple rule: d/dx[c·f(x)] = c·f\'(x).'
       }
     }
   ]

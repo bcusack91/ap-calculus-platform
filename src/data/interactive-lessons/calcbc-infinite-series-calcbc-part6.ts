@@ -30,31 +30,31 @@ L = lim|aₙ|^(1/n); same conclusion rules as ratio test
       id: 'infin6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of problem-solving workshop?',
-            options: [
-              'Ratio Test',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'Ratio Test: L = lim|aₙ₊₁/aₙ|; converges if L < 1, diverges if L > 1'
-          },
-          {
-            question: 'In the context of problem-solving workshop, which is accurate?',
+            question: 'Which statement accurately explains Ratio Test?',
             options: [
               'Best for series with factorials and exponentials',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'L = lim|aₙ₊₁/aₙ|; converges if L < 1, diverges if L > 1',
+              'If L = 1, the ratio test is inconclusive',
+              'L = lim|aₙ|^(1/n); same conclusion rules as ratio test'
             ],
-            correctAnswer: 0,
-            explanation: 'Best for series with factorials and exponentials'
+            correctAnswer: 1,
+            explanation: 'Correct — Ratio Test: L = lim|aₙ₊₁/aₙ|; converges if L < 1, diverges if L > 1. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Best for series with factorials and…?',
+            options: [
+              'L = lim|aₙ|^(1/n); same conclusion rules as ratio test',
+              'If L = 1, the ratio test is inconclusive',
+              'Best for series with factorials and exponentials',
+              'L = lim|aₙ₊₁/aₙ|; converges if L < 1, diverges if L > 1'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Best for series with factorials and exponentials. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ L = lim|aₙ|^(1/n); same conclusion rules as ratio test
       id: 'infin6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to problem-solving workshop?',
+            question: 'Which statement about Root Test is correct?',
             options: [
               'L = lim|aₙ|^(1/n); same conclusion rules as ratio test',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'L = lim|aₙ₊₁/aₙ|; converges if L < 1, diverges if L > 1',
+              'If L = 1, the ratio test is inconclusive',
+              'Best for series with factorials and exponentials'
             ],
             correctAnswer: 0,
-            explanation: 'Root Test: L = lim|aₙ|^(1/n); same conclusion rules as ratio test'
+            explanation: 'Correct — Root Test: L = lim|aₙ|^(1/n); same conclusion rules as ratio test. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,24 @@ L = lim|aₙ|^(1/n); same conclusion rules as ratio test
       id: 'infin6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Ratio Test',
-            options: ['L = lim|aₙ₊₁/aₙ|; converges if L < 1, diverges if ', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['L = lim|aₙ₊₁/aₙ|; converges if L < 1, diverges if L > 1', 'Best for series with factorials and exponentials', 'L = lim|aₙ|^(1/n); same conclusion rules as ratio test', 'If L = 1, the ratio test is inconclusive']
           },
           {
-            label: 'If L = 1, the ratio test is inconclusive',
-            options: ['If L = 1, the ratio test is inconclusive', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
-          },
-          {
-            label: 'Best for series with factorials and exponentials',
-            options: ['Best for series with factorials and exponentials', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Root Test',
+            options: ['L = lim|aₙ|^(1/n); same conclusion rules as ratio test', 'If L = 1, the ratio test is inconclusive', 'Best for series with factorials and exponentials', 'L = lim|aₙ₊₁/aₙ|; converges if L < 1, diverges if L > 1']
           }
         ],
-        correctAnswers: ['L = lim|aₙ₊₁/aₙ|; converges if L < 1, diverges if ', 'If L = 1, the ratio test is inconclusive', 'Best for series with factorials and exponentials'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving Workshop.'
+        correctAnswers: ['L = lim|aₙ₊₁/aₙ|; converges if L < 1, diverges if L > 1', 'L = lim|aₙ|^(1/n); same conclusion rules as ratio test'],
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Ratio Test: L = lim|aₙ₊₁/aₙ|; converges if L < 1, diverges if L > 1. Root Test: L = lim|aₙ|^(1/n); same conclusion rules as ratio test.'
       }
     }
   ]

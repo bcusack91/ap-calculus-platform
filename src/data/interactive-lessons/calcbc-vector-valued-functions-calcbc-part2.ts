@@ -30,31 +30,31 @@ R⃗(s) = r⃗(t₀) + s·r⃗'(t₀)
       id: 'vecto2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of derivatives of vector functions?',
+            question: 'What does "r⃗\'(t) = ⟨f\'(t), g\'(t)⟩ — differentiate…" refer to in calculus?',
             options: [
-              'r⃗\'(t) = ⟨f\'(t), g\'(t)⟩ — differentiate component by component',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
+              'r⃗\'(t) is the velocity vector, tangent to the curve',
+              'Direction of r⃗\'(t) gives the direction of motion',
+              'R⃗(s) = r⃗(t₀) + s·r⃗\'(t₀)',
+              'r⃗\'(t) = ⟨f\'(t), g\'(t)⟩ — differentiate component by component'
             ],
-            correctAnswer: 0,
-            explanation: 'r⃗\'(t) = ⟨f\'(t), g\'(t)⟩ — differentiate component by component'
+            correctAnswer: 3,
+            explanation: 'Correct — r⃗\'(t) = ⟨f\'(t), g\'(t)⟩ — differentiate component by component. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of derivatives of vector functions, which is accurate?',
+            question: 'Select the statement that correctly describes Direction of r⃗\'(t) gives the direction…:',
             options: [
+              'R⃗(s) = r⃗(t₀) + s·r⃗\'(t₀)',
+              'r⃗\'(t) = ⟨f\'(t), g\'(t)⟩ — differentiate component by component',
               'Direction of r⃗\'(t) gives the direction of motion',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'r⃗\'(t) is the velocity vector, tangent to the curve'
             ],
-            correctAnswer: 0,
-            explanation: 'Direction of r⃗\'(t) gives the direction of motion'
+            correctAnswer: 2,
+            explanation: 'Correct — Direction of r⃗\'(t) gives the direction of motion. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ R⃗(s) = r⃗(t₀) + s·r⃗'(t₀)
       id: 'vecto2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to derivatives of vector functions?',
+            question: 'Which statement about Tangent line is correct?',
             options: [
-              'R⃗(s) = r⃗(t₀) + s·r⃗\'(t₀)',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'Direction of r⃗\'(t) gives the direction of motion',
+              'r⃗\'(t) is the velocity vector, tangent to the curve',
+              'r⃗\'(t) = ⟨f\'(t), g\'(t)⟩ — differentiate component by component',
+              'R⃗(s) = r⃗(t₀) + s·r⃗\'(t₀)'
             ],
-            correctAnswer: 0,
-            explanation: 'Tangent line: R⃗(s) = r⃗(t₀) + s·r⃗\'(t₀)'
+            correctAnswer: 3,
+            explanation: 'Correct — Tangent line: R⃗(s) = r⃗(t₀) + s·r⃗\'(t₀). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ R⃗(s) = r⃗(t₀) + s·r⃗'(t₀)
       id: 'vecto2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'r⃗\'(t) = ⟨f\'(t), g\'(t)⟩ — differentiate component by component',
-            options: ['r⃗\'(t) = ⟨f\'(t), g\'(t)⟩ — differentiate component ', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'r⃗\'(t) = ⟨f\'(t), g\'(t)⟩ — differentiate…',
+            options: ['Direction of r⃗\'(t) gives the direction of motion', 'R⃗(s) = r⃗(t₀) + s·r⃗\'(t₀)', 'r⃗\'(t) is the velocity vector, tangent to the curve', 'r⃗\'(t) = ⟨f\'(t), g\'(t)⟩ — differentiate component by component']
           },
           {
-            label: 'r⃗\'(t) is the velocity vector, tangent to the curve',
-            options: ['r⃗\'(t) is the velocity vector, tangent to the curv', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'r⃗\'(t) is the velocity vector, tangent…',
+            options: ['R⃗(s) = r⃗(t₀) + s·r⃗\'(t₀)', 'Direction of r⃗\'(t) gives the direction of motion', 'r⃗\'(t) = ⟨f\'(t), g\'(t)⟩ — differentiate component by component', 'r⃗\'(t) is the velocity vector, tangent to the curve']
           },
           {
-            label: 'Direction of r⃗\'(t) gives the direction of motion',
-            options: ['Direction of r⃗\'(t) gives the direction of motion', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Direction of r⃗\'(t) gives the direction…',
+            options: ['r⃗\'(t) = ⟨f\'(t), g\'(t)⟩ — differentiate component by component', 'r⃗\'(t) is the velocity vector, tangent to the curve', 'Direction of r⃗\'(t) gives the direction of motion', 'R⃗(s) = r⃗(t₀) + s·r⃗\'(t₀)']
           }
         ],
-        correctAnswers: ['r⃗\'(t) = ⟨f\'(t), g\'(t)⟩ — differentiate component ', 'r⃗\'(t) is the velocity vector, tangent to the curv', 'Direction of r⃗\'(t) gives the direction of motion'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Derivatives of Vector Functions.'
+        correctAnswers: ['r⃗\'(t) = ⟨f\'(t), g\'(t)⟩ — differentiate component by component', 'r⃗\'(t) is the velocity vector, tangent to the curve', 'Direction of r⃗\'(t) gives the direction of motion'],
+        hint1: 'Think about what each concept specifically describes in Derivatives of Vector Functions.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Derivatives of Vector Functions describes a specific idea. r⃗\'(t) = ⟨f\'(t), g\'(t)⟩ — differentiate component by component. r⃗\'(t) is the velocity vector, tangent to the curve. Direction of r⃗\'(t) gives the direction of motion.'
       }
     }
   ]

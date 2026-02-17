@@ -30,31 +30,31 @@ Comparing amine reactivity patterns
       id: 'amine6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of problem-solving workshop?',
+            question: 'Which statement accurately explains Predicting amine basicity from structure?',
             options: [
-              'Predicting amine basicity from structure',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'Comparing amine reactivity patterns',
+              'Drawing diazonium reaction mechanisms',
+              'Designing amine synthesis strategies',
+              'Predicting amine basicity from structure'
             ],
-            correctAnswer: 0,
-            explanation: 'Predicting amine basicity from structure'
+            correctAnswer: 3,
+            explanation: 'Correct — Predicting amine basicity from structure. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of problem-solving workshop, which is accurate?',
+            question: 'Select the statement that correctly describes Drawing diazonium reaction mechanisms:',
             options: [
+              'Predicting amine basicity from structure',
+              'Comparing amine reactivity patterns',
               'Drawing diazonium reaction mechanisms',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Designing amine synthesis strategies'
             ],
-            correctAnswer: 0,
-            explanation: 'Drawing diazonium reaction mechanisms'
+            correctAnswer: 2,
+            explanation: 'Correct — Drawing diazonium reaction mechanisms. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Comparing amine reactivity patterns
       id: 'amine6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Predicting amine basicity from structure',
-            options: ['Predicting amine basicity from structure', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Designing amine synthesis strategies', 'Predicting amine basicity from structure', 'Drawing diazonium reaction mechanisms', 'Comparing amine reactivity patterns']
           },
           {
             label: 'Designing amine synthesis strategies',
-            options: ['Designing amine synthesis strategies', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Drawing diazonium reaction mechanisms', 'Predicting amine basicity from structure', 'Designing amine synthesis strategies', 'Comparing amine reactivity patterns']
           },
           {
             label: 'Drawing diazonium reaction mechanisms',
-            options: ['Drawing diazonium reaction mechanisms', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Drawing diazonium reaction mechanisms', 'Designing amine synthesis strategies', 'Predicting amine basicity from structure', 'Comparing amine reactivity patterns']
           }
         ],
         correctAnswers: ['Predicting amine basicity from structure', 'Designing amine synthesis strategies', 'Drawing diazonium reaction mechanisms'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving Workshop.'
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Predicting amine basicity from structure. Designing amine synthesis strategies. Drawing diazonium reaction mechanisms.'
       }
     }
   ]

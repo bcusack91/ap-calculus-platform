@@ -19,31 +19,31 @@ export const bioEcologyPart2Data = {
       id: 'ecol2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes terrestrial biomes?',
+            question: 'What does "Terrestrial biomes" refer to in biology?',
             options: [
+              'freshwater and marine',
               'tropical rainforest, desert, tundra, etc.',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Climate vs weather',
+              'Biomes determined by temperature and precipitation'
             ],
-            correctAnswer: 0,
-            explanation: 'Terrestrial biomes: tropical rainforest, desert, tundra, etc.'
+            correctAnswer: 1,
+            explanation: 'Correct — Terrestrial biomes: tropical rainforest, desert, tundra, etc. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of biomes & biosphere, which statement is accurate?',
+            question: 'In the context of Biomes & Biosphere, which explains Biomes determined by temperature and…?',
             options: [
-              'Biomes determined by temperature and precipitation',
-              '.cte ,ardnut ,tresed ,tserofniar laciport :semoib lairtserreT',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'freshwater and marine',
+              'Climate vs weather',
+              'tropical rainforest, desert, tundra, etc.',
+              'Biomes determined by temperature and precipitation'
             ],
-            correctAnswer: 0,
-            explanation: 'Biomes determined by temperature and precipitation'
+            correctAnswer: 3,
+            explanation: 'Correct — Biomes determined by temperature and precipitation. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioEcologyPart2Data = {
       id: 'ecol2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to biomes & biosphere?',
+            question: 'Which of these accurately represents Climate vs weather?',
             options: [
+              'tropical rainforest, desert, tundra, etc.',
+              'freshwater and marine',
               'Climate vs weather',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Biomes determined by temperature and precipitation'
             ],
-            correctAnswer: 0,
-            explanation: 'Climate vs weather'
+            correctAnswer: 2,
+            explanation: 'Correct — Climate vs weather. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,24 @@ export const bioEcologyPart2Data = {
       id: 'ecol2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Terrestrial biomes is important in biomes & biosphere because',
-            options: ['tropical rainforest, desert, tundra, etc.', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Terrestrial biomes',
+            options: ['Biomes determined by temperature and precipitation', 'Climate vs weather', 'tropical rainforest, desert, tundra, etc.', 'freshwater and marine']
           },
           {
-            label: 'Aquatic biomes is important in biomes & biosphere because',
-            options: ['freshwater and marine', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
-          },
-          {
-            label: 'Biomes determined by temperature and precipitation is important in biomes & biosphere because',
-            options: ['Biomes determined by temperature and precipitation', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Aquatic biomes',
+            options: ['freshwater and marine', 'Biomes determined by temperature and precipitation', 'tropical rainforest, desert, tundra, etc.', 'Climate vs weather']
           }
         ],
-        correctAnswers: ['tropical rainforest, desert, tundra, etc.', 'freshwater and marine', 'Biomes determined by temperature and precipitation'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Biomes & Biosphere.'
+        correctAnswers: ['tropical rainforest, desert, tundra, etc.', 'freshwater and marine'],
+        hint1: 'Think about what each concept specifically describes in Biomes & Biosphere.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Biomes & Biosphere describes a specific idea. Terrestrial biomes: tropical rainforest, desert, tundra, etc. Aquatic biomes: freshwater and marine.'
       }
     }
   ]

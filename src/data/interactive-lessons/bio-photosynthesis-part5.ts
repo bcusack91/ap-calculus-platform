@@ -19,31 +19,31 @@ export const bioPhotosynthesisPart5Data = {
       id: 'phot5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes photosynthesis?',
+            question: 'What does "Photosynthesis" refer to in biology?',
             options: [
+              'Both use chemiosmosis and electron transport',
               'light energy → chemical energy (glucose)',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'chemical energy → ATP',
+              'products of one feed the other'
             ],
-            correctAnswer: 0,
-            explanation: 'Photosynthesis: light energy → chemical energy (glucose)'
+            correctAnswer: 1,
+            explanation: 'Correct — Photosynthesis: light energy → chemical energy (glucose). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of photosynthesis vs respiration, which statement is accurate?',
+            question: 'Select the statement that correctly describes Complementary processes:',
             options: [
-              'Complementary processes: products of one feed the other',
-              ')esoculg( ygrene lacimehc → ygrene thgil :sisehtnysotohP',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Both use chemiosmosis and electron transport',
+              'light energy → chemical energy (glucose)',
+              'products of one feed the other',
+              'chemical energy → ATP'
             ],
-            correctAnswer: 0,
-            explanation: 'Complementary processes: products of one feed the other'
+            correctAnswer: 2,
+            explanation: 'Correct — Complementary processes: products of one feed the other. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioPhotosynthesisPart5Data = {
       id: 'phot5-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to photosynthesis vs respiration?',
+            question: 'Which statement about Both use chemiosmosis and electron… is correct?',
             options: [
+              'products of one feed the other',
+              'light energy → chemical energy (glucose)',
               'Both use chemiosmosis and electron transport',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'chemical energy → ATP'
             ],
-            correctAnswer: 0,
-            explanation: 'Both use chemiosmosis and electron transport'
+            correctAnswer: 2,
+            explanation: 'Correct — Both use chemiosmosis and electron transport. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioPhotosynthesisPart5Data = {
       id: 'phot5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Photosynthesis is important in photosynthesis vs respiration because',
-            options: ['light energy → chemical energy (glucose)', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Photosynthesis',
+            options: ['light energy → chemical energy (glucose)', 'chemical energy → ATP', 'products of one feed the other', 'Both use chemiosmosis and electron transport']
           },
           {
-            label: 'Respiration is important in photosynthesis vs respiration because',
-            options: ['chemical energy → ATP', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Respiration',
+            options: ['Both use chemiosmosis and electron transport', 'light energy → chemical energy (glucose)', 'chemical energy → ATP', 'products of one feed the other']
           },
           {
-            label: 'Complementary processes is important in photosynthesis vs respiration because',
-            options: ['products of one feed the other', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Complementary processes',
+            options: ['products of one feed the other', 'chemical energy → ATP', 'Both use chemiosmosis and electron transport', 'light energy → chemical energy (glucose)']
           }
         ],
         correctAnswers: ['light energy → chemical energy (glucose)', 'chemical energy → ATP', 'products of one feed the other'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Photosynthesis vs Respiration.'
+        hint1: 'Think about what each concept specifically describes in Photosynthesis vs Respiration.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Photosynthesis vs Respiration describes a specific idea. Photosynthesis: light energy → chemical energy (glucose). Respiration: chemical energy → ATP. Complementary processes: products of one feed the other.'
       }
     }
   ]

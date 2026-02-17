@@ -30,31 +30,31 @@ displacement vs total distance
       id: 'ap-ex6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of problem-solving workshop?',
+            question: 'Which of the following correctly describes Area between curves, volumes of…?',
             options: [
-              'Area between curves, volumes of revolution (disk/washer)',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'Accumulation functions and net change',
+              'Average value of a function',
+              'displacement vs total distance',
+              'Area between curves, volumes of revolution (disk/washer)'
             ],
-            correctAnswer: 0,
-            explanation: 'Area between curves, volumes of revolution (disk/washer)'
+            correctAnswer: 3,
+            explanation: 'Correct — Area between curves, volumes of revolution (disk/washer). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of problem-solving workshop, which is accurate?',
+            question: 'In the context of Problem-Solving Workshop, which explains Average value of a function?',
             options: [
+              'displacement vs total distance',
+              'Accumulation functions and net change',
               'Average value of a function',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Area between curves, volumes of revolution (disk/washer)'
             ],
-            correctAnswer: 0,
-            explanation: 'Average value of a function'
+            correctAnswer: 2,
+            explanation: 'Correct — Average value of a function. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ displacement vs total distance
       id: 'ap-ex6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to problem-solving workshop?',
+            question: 'Regarding Problem-Solving Workshop, which correctly describes Particle motion?',
             options: [
+              'Average value of a function',
               'displacement vs total distance',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'Accumulation functions and net change',
+              'Area between curves, volumes of revolution (disk/washer)'
             ],
-            correctAnswer: 0,
-            explanation: 'Particle motion: displacement vs total distance'
+            correctAnswer: 1,
+            explanation: 'Correct — Particle motion: displacement vs total distance. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ displacement vs total distance
       id: 'ap-ex6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Area between curves, volumes of revolution (disk/washer)',
-            options: ['Area between curves, volumes of revolution (disk/w', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Area between curves, volumes of…',
+            options: ['Area between curves, volumes of revolution (disk/washer)', 'Accumulation functions and net change', 'Average value of a function', 'displacement vs total distance']
           },
           {
             label: 'Accumulation functions and net change',
-            options: ['Accumulation functions and net change', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Average value of a function', 'displacement vs total distance', 'Accumulation functions and net change', 'Area between curves, volumes of revolution (disk/washer)']
           },
           {
             label: 'Average value of a function',
-            options: ['Average value of a function', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Average value of a function', 'displacement vs total distance', 'Area between curves, volumes of revolution (disk/washer)', 'Accumulation functions and net change']
           }
         ],
-        correctAnswers: ['Area between curves, volumes of revolution (disk/w', 'Accumulation functions and net change', 'Average value of a function'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving Workshop.'
+        correctAnswers: ['Area between curves, volumes of revolution (disk/washer)', 'Accumulation functions and net change', 'Average value of a function'],
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Area between curves, volumes of revolution (disk/washer). Accumulation functions and net change. Average value of a function.'
       }
     }
   ]

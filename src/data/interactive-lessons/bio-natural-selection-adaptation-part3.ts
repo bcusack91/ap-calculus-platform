@@ -19,31 +19,31 @@ export const bioNatSelectionPart3Data = {
       id: 'natu3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes directional?',
+            question: 'Which statement accurately explains Directional?',
             options: [
               'favors one extreme phenotype',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'favors both extremes',
+              'traits that increase mating success',
+              'favors intermediate phenotype'
             ],
             correctAnswer: 0,
-            explanation: 'Directional: favors one extreme phenotype'
+            explanation: 'Correct — Directional: favors one extreme phenotype. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of types of selection, which statement is accurate?',
+            question: 'Select the statement that correctly describes Disruptive:',
             options: [
-              'Disruptive: favors both extremes',
-              'epytonehp emertxe eno srovaf :lanoitceriD',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'favors both extremes',
+              'traits that increase mating success',
+              'favors intermediate phenotype',
+              'favors one extreme phenotype'
             ],
             correctAnswer: 0,
-            explanation: 'Disruptive: favors both extremes'
+            explanation: 'Correct — Disruptive: favors both extremes. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioNatSelectionPart3Data = {
       id: 'natu3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to types of selection?',
+            question: 'Which of these accurately represents Sexual selection?',
             options: [
-              'Sexual selection: traits that increase mating success',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'favors both extremes',
+              'favors one extreme phenotype',
+              'traits that increase mating success',
+              'favors intermediate phenotype'
             ],
-            correctAnswer: 0,
-            explanation: 'Sexual selection: traits that increase mating success'
+            correctAnswer: 2,
+            explanation: 'Correct — Sexual selection: traits that increase mating success. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioNatSelectionPart3Data = {
       id: 'natu3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Directional is important in types of selection because',
-            options: ['favors one extreme phenotype', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Directional',
+            options: ['favors one extreme phenotype', 'traits that increase mating success', 'favors both extremes', 'favors intermediate phenotype']
           },
           {
-            label: 'Stabilizing is important in types of selection because',
-            options: ['favors intermediate phenotype', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Stabilizing',
+            options: ['favors both extremes', 'favors intermediate phenotype', 'favors one extreme phenotype', 'traits that increase mating success']
           },
           {
-            label: 'Disruptive is important in types of selection because',
-            options: ['favors both extremes', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Disruptive',
+            options: ['traits that increase mating success', 'favors one extreme phenotype', 'favors both extremes', 'favors intermediate phenotype']
           }
         ],
         correctAnswers: ['favors one extreme phenotype', 'favors intermediate phenotype', 'favors both extremes'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Types of Selection.'
+        hint1: 'Think about what each concept specifically describes in Types of Selection.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Types of Selection describes a specific idea. Directional: favors one extreme phenotype. Stabilizing: favors intermediate phenotype. Disruptive: favors both extremes.'
       }
     }
   ]

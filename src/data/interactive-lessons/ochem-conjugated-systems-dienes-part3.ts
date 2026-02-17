@@ -30,31 +30,31 @@ Electron-rich diene + electron-poor dienophile → fastest reaction
       id: 'conju3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of diels-alder reaction?',
+            question: 'Which statement accurately explains Diels-Alder?',
             options: [
-              'Diels-Alder',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'Electron-rich diene + electron-poor dienophile → fastest reaction',
+              'Diene must be in s-cis conformation',
+              'diene + dienophile → cyclohexene (pericyclic)',
+              'Concerted, one-step, stereospecific'
             ],
-            correctAnswer: 0,
-            explanation: 'Diels-Alder: diene + dienophile → cyclohexene (pericyclic)'
+            correctAnswer: 2,
+            explanation: 'Correct — Diels-Alder: diene + dienophile → cyclohexene (pericyclic). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of diels-alder reaction, which is accurate?',
+            question: 'In the context of Diels-Alder Reaction, which explains Diene must be in s-cis conformation?',
             options: [
+              'Concerted, one-step, stereospecific',
               'Diene must be in s-cis conformation',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Electron-rich diene + electron-poor dienophile → fastest reaction',
+              'diene + dienophile → cyclohexene (pericyclic)'
             ],
-            correctAnswer: 0,
-            explanation: 'Diene must be in s-cis conformation'
+            correctAnswer: 1,
+            explanation: 'Correct — Diene must be in s-cis conformation. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Electron-rich diene + electron-poor dienophile → fastest reaction
       id: 'conju3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Diels-Alder',
-            options: ['diene + dienophile → cyclohexene (pericyclic)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Diene must be in s-cis conformation', 'Concerted, one-step, stereospecific', 'diene + dienophile → cyclohexene (pericyclic)', 'Electron-rich diene + electron-poor dienophile → fastest reaction']
           },
           {
             label: 'Concerted, one-step, stereospecific',
-            options: ['Concerted, one-step, stereospecific', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Diene must be in s-cis conformation', 'Concerted, one-step, stereospecific', 'Electron-rich diene + electron-poor dienophile → fastest reaction', 'diene + dienophile → cyclohexene (pericyclic)']
           },
           {
             label: 'Diene must be in s-cis conformation',
-            options: ['Diene must be in s-cis conformation', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Diene must be in s-cis conformation', 'diene + dienophile → cyclohexene (pericyclic)', 'Electron-rich diene + electron-poor dienophile → fastest reaction', 'Concerted, one-step, stereospecific']
           }
         ],
         correctAnswers: ['diene + dienophile → cyclohexene (pericyclic)', 'Concerted, one-step, stereospecific', 'Diene must be in s-cis conformation'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Diels-Alder Reaction.'
+        hint1: 'Think about what each concept specifically describes in Diels-Alder Reaction.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Diels-Alder Reaction describes a specific idea. Diels-Alder: diene + dienophile → cyclohexene (pericyclic). Concerted, one-step, stereospecific. Diene must be in s-cis conformation.'
       }
     }
   ]

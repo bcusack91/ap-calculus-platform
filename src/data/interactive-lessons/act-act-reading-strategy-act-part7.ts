@@ -18,20 +18,31 @@ Detail: asks about specific information stated in the passage.
       id: 'act-r7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes main idea?',
+            question: 'Which statement accurately explains Main idea?',
             options: [
-              'Main idea is a key concept for ACT English/Reading',
-              'Detail: asks about specific information stated in the passage',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'asks about the passage as a whole.',
+              'Inference: asks what can be concluded or implied.',
+              'Vocabulary: asks about word meaning in context.',
+              'asks about specific information stated in the passage.'
             ],
             correctAnswer: 0,
-            explanation: 'Main idea: asks about the passage as a whole'
+            explanation: 'Correct — Main idea: asks about the passage as a whole. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Key Insight?',
+            options: [
+              'asks about the passage as a whole.',
+              'Vocabulary: asks about word meaning in context.',
+              'Inference: asks what can be concluded or implied.',
+              'asks about specific information stated in the passage.'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Key Insight: Inference: asks what can be concluded or implied. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Detail: asks about specific information stated in the passage.
       id: 'act-r7-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for review & applications?',
+            question: 'Regarding Review & Applications, which correctly describes ACT Tip?',
             options: [
-              'Inference: asks what can be concluded or implied',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Vocabulary: asks about word meaning in context.',
+              'asks about specific information stated in the passage.',
+              'Inference: asks what can be concluded or implied.',
+              'asks about the passage as a whole.'
             ],
             correctAnswer: 0,
-            explanation: 'Inference: asks what can be concluded or implied'
+            explanation: 'Correct — ACT Tip: Vocabulary: asks about word meaning in context. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Detail: asks about specific information stated in the passage.
       id: 'act-r7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Review & Applications:',
-            options: ['Main idea: asks about the passage as a whole', 'Detail: asks about specific information stated in ', 'Not applicable', 'None of these']
+            label: 'Main idea',
+            options: ['asks about the passage as a whole.', 'Inference: asks what can be concluded or implied.', 'Vocabulary: asks about word meaning in context.', 'asks about specific information stated in the passage.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Inference: asks what can be concluded or implied', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Detail',
+            options: ['asks about the passage as a whole.', 'asks about specific information stated in the passage.', 'Vocabulary: asks about word meaning in context.', 'Inference: asks what can be concluded or implied.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['Vocabulary: asks about word meaning in context.', 'asks about specific information stated in the passage.', 'Inference: asks what can be concluded or implied.', 'asks about the passage as a whole.']
           }
         ],
-        correctAnswers: ['Main idea: asks about the passage as a whole', 'Inference: asks what can be concluded or implied'],
-        hint1: 'Think about review & applications',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Main idea: asks about the passage as a whole. Inference: asks what can be concluded or implied.'
+        correctAnswers: ['asks about the passage as a whole.', 'asks about specific information stated in the passage.', 'Inference: asks what can be concluded or implied.'],
+        hint1: 'Think about what each concept specifically describes in Review & Applications.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Review & Applications describes a specific idea. Main idea: asks about the passage as a whole. Detail: asks about specific information stated in the passage. Key Insight: Inference: asks what can be concluded or implied.'
       }
     }
   ]

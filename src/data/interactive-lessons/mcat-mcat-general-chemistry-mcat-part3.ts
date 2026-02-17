@@ -71,23 +71,28 @@ Dilution: M1V1 = M2V2 — moles of solute remain constant.
       id: 'mcat-3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Stoichiometry & Solutions:',
-            options: ['Molarity (M) = moles of solute / liters of solution — the mo', 'Dilution: M1V1 = M2V2 — moles of solute remain constant', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Dilution',
+            options: ['M1V1 = M2V2 — moles of solute remain constant.', 'Molarity (M) = moles of solute / liters of solution — the most common concentration unit on the MCAT.', 'Limiting reagent: the reactant that runs out first determines the maximum product.', 'Percent yield = (actual yield / theoretical yield) x 100.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Limiting reagent: the reactant that runs out first determine', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Key Insight',
+            options: ['Percent yield = (actual yield / theoretical yield) x 100.', 'Molarity (M) = moles of solute / liters of solution — the most common concentration unit on the MCAT.', 'Limiting reagent: the reactant that runs out first determines the maximum product.', 'M1V1 = M2V2 — moles of solute remain constant.']
+          },
+          {
+            label: 'MCAT Tip',
+            options: ['Molarity (M) = moles of solute / liters of solution — the most common concentration unit on the MCAT.', 'Percent yield = (actual yield / theoretical yield) x 100.', 'M1V1 = M2V2 — moles of solute remain constant.', 'Limiting reagent: the reactant that runs out first determines the maximum product.']
           }
         ],
-        correctAnswers: ['Molarity (M) = moles of solute / liters of solution — the mo', 'Limiting reagent: the reactant that runs out first determine'],
-        hint1: 'Think about stoichiometry & solutions',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Molarity (M) = moles of solute / liters of solution — the most common concentration unit on the MCAT. Limiting reagent: the reactant that runs out first determines the maximum product.'
+        correctAnswers: ['M1V1 = M2V2 — moles of solute remain constant.', 'Limiting reagent: the reactant that runs out first determines the maximum product.', 'Percent yield = (actual yield / theoretical yield) x 100.'],
+        hint1: 'Think about what each concept specifically describes in Stoichiometry & Solutions.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Stoichiometry & Solutions describes a specific idea. Dilution: M1V1 = M2V2 — moles of solute remain constant. Key Insight: Limiting reagent: the reactant that runs out first determines the maximum product. MCAT Tip: Percent yield = (actual yield / theoretical yield) x 100.'
       }
     }
   ]

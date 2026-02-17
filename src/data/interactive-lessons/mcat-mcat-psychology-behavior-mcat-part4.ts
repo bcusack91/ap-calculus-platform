@@ -71,23 +71,28 @@ Maslows hierarchy: physiological, safety, belonging, esteem, self-actualization.
       id: 'mcat-4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Motivation & Emotion:',
-            options: ['Drive reduction theory: biological needs create drives that ', 'Maslows hierarchy: physiological, safety, belonging, esteem,', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Drive reduction theory',
+            options: ['physiological, safety, belonging, esteem, self-actualization.', 'James-Lange theory: event causes physiological arousal, then emotion; Cannon-Bard: simultaneous.', 'biological needs create drives that motivate behavior.', 'Schachter-Singer (two-factor): arousal + cognitive label = emotion.']
           },
           {
-            label: 'MCAT application:',
-            options: ['James-Lange theory: event causes physiological arousal, then', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Maslows hierarchy',
+            options: ['Schachter-Singer (two-factor): arousal + cognitive label = emotion.', 'biological needs create drives that motivate behavior.', 'James-Lange theory: event causes physiological arousal, then emotion; Cannon-Bard: simultaneous.', 'physiological, safety, belonging, esteem, self-actualization.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['physiological, safety, belonging, esteem, self-actualization.', 'James-Lange theory: event causes physiological arousal, then emotion; Cannon-Bard: simultaneous.', 'biological needs create drives that motivate behavior.', 'Schachter-Singer (two-factor): arousal + cognitive label = emotion.']
           }
         ],
-        correctAnswers: ['Drive reduction theory: biological needs create drives that ', 'James-Lange theory: event causes physiological arousal, then'],
-        hint1: 'Think about motivation & emotion',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Drive reduction theory: biological needs create drives that motivate behavior. James-Lange theory: event causes physiological arousal, then emotion; Cannon-Bard: simultaneous.'
+        correctAnswers: ['biological needs create drives that motivate behavior.', 'physiological, safety, belonging, esteem, self-actualization.', 'James-Lange theory: event causes physiological arousal, then emotion; Cannon-Bard: simultaneous.'],
+        hint1: 'Think about what each concept specifically describes in Motivation & Emotion.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Motivation & Emotion describes a specific idea. Drive reduction theory: biological needs create drives that motivate behavior. Maslows hierarchy: physiological, safety, belonging, esteem, self-actualization. Key Insight: James-Lange theory: event causes physiological arousal, then emotion; Cannon-Bard: simultaneous.'
       }
     }
   ]

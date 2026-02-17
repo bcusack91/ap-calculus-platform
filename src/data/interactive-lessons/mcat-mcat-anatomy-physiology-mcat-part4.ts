@@ -71,23 +71,28 @@ Spleen: filters blood, recycles old RBCs, reservoir of monocytes and platelets.
       id: 'mcat-4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Lymphatic & Immune:',
-            options: ['Lymphatic system: returns interstitial fluid to blood; lymph', 'Spleen: filters blood, recycles old RBCs, reservoir of monoc', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Lymphatic system',
+            options: ['Vaccines: expose immune system to antigen, generating memory cells without disease.', 'Thymus: T cell maturation; Bone marrow: B cell maturation.', 'returns interstitial fluid to blood; lymph nodes filter pathogens.', 'filters blood, recycles old RBCs, reservoir of monocytes and platelets.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Thymus: T cell maturation; Bone marrow: B cell maturation', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Spleen',
+            options: ['Vaccines: expose immune system to antigen, generating memory cells without disease.', 'filters blood, recycles old RBCs, reservoir of monocytes and platelets.', 'Thymus: T cell maturation; Bone marrow: B cell maturation.', 'returns interstitial fluid to blood; lymph nodes filter pathogens.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['filters blood, recycles old RBCs, reservoir of monocytes and platelets.', 'Thymus: T cell maturation; Bone marrow: B cell maturation.', 'returns interstitial fluid to blood; lymph nodes filter pathogens.', 'Vaccines: expose immune system to antigen, generating memory cells without disease.']
           }
         ],
-        correctAnswers: ['Lymphatic system: returns interstitial fluid to blood; lymph', 'Thymus: T cell maturation; Bone marrow: B cell maturation'],
-        hint1: 'Think about lymphatic & immune',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Lymphatic system: returns interstitial fluid to blood; lymph nodes filter pathogens. Thymus: T cell maturation; Bone marrow: B cell maturation.'
+        correctAnswers: ['returns interstitial fluid to blood; lymph nodes filter pathogens.', 'filters blood, recycles old RBCs, reservoir of monocytes and platelets.', 'Thymus: T cell maturation; Bone marrow: B cell maturation.'],
+        hint1: 'Think about what each concept specifically describes in Lymphatic & Immune.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Lymphatic & Immune describes a specific idea. Lymphatic system: returns interstitial fluid to blood; lymph nodes filter pathogens. Spleen: filters blood, recycles old RBCs, reservoir of monocytes and platelets. Key Insight: Thymus: T cell maturation; Bone marrow: B cell maturation.'
       }
     }
   ]

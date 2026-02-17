@@ -71,23 +71,28 @@ Start codon AUG (methionine) initiates translation; 3 stop codons: UAA, UAG, UGA
       id: 'mcat-3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Translation & Protein Synthesis:',
-            options: ['Ribosome: small subunit reads mRNA; large subunit catalyzes ', 'Start codon AUG (methionine) initiates translation; 3 stop c', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Ribosome',
+            options: ['Post-translational modifications: phosphorylation, glycosylation, ubiquitination, proteolytic cleavage.', 'tRNA anticodon pairs with mRNA codon; aminoacyl-tRNA synthetase charges tRNA with correct amino acid.', 'UAA, UAG, UGA.', 'small subunit reads mRNA; large subunit catalyzes peptide bond formation.']
           },
           {
-            label: 'MCAT application:',
-            options: ['tRNA anticodon pairs with mRNA codon; aminoacyl-tRNA synthet', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Start codon AUG (methionine) initiates translation; 3 stop codons',
+            options: ['tRNA anticodon pairs with mRNA codon; aminoacyl-tRNA synthetase charges tRNA with correct amino acid.', 'Post-translational modifications: phosphorylation, glycosylation, ubiquitination, proteolytic cleavage.', 'small subunit reads mRNA; large subunit catalyzes peptide bond formation.', 'UAA, UAG, UGA.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['tRNA anticodon pairs with mRNA codon; aminoacyl-tRNA synthetase charges tRNA with correct amino acid.', 'UAA, UAG, UGA.', 'Post-translational modifications: phosphorylation, glycosylation, ubiquitination, proteolytic cleavage.', 'small subunit reads mRNA; large subunit catalyzes peptide bond formation.']
           }
         ],
-        correctAnswers: ['Ribosome: small subunit reads mRNA; large subunit catalyzes ', 'tRNA anticodon pairs with mRNA codon; aminoacyl-tRNA synthet'],
-        hint1: 'Think about translation & protein synthesis',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Ribosome: small subunit reads mRNA; large subunit catalyzes peptide bond formation. tRNA anticodon pairs with mRNA codon; aminoacyl-tRNA synthetase charges tRNA with correct amino acid.'
+        correctAnswers: ['small subunit reads mRNA; large subunit catalyzes peptide bond formation.', 'UAA, UAG, UGA.', 'tRNA anticodon pairs with mRNA codon; aminoacyl-tRNA synthetase charges tRNA with correct amino acid.'],
+        hint1: 'Think about what each concept specifically describes in Translation & Protein Synthesis.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Translation & Protein Synthesis describes a specific idea. Ribosome: small subunit reads mRNA; large subunit catalyzes peptide bond formation. Start codon AUG (methionine) initiates translation; 3 stop codons: UAA, UAG, UGA. Key Insight: tRNA anticodon pairs with mRNA codon; aminoacyl-tRNA synthetase charges tRNA with correct amino acid.'
       }
     }
   ]

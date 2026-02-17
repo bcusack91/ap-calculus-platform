@@ -30,31 +30,31 @@ Solve resulting polynomial equation after clearing fractions
       id: 'ratio5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of solving rational equations?',
+            question: 'Which of the following correctly describes Multiply both sides by the LCD to…?',
             options: [
+              'Check all solutions against the original domain',
               'Multiply both sides by the LCD to eliminate fractions',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'Solve resulting polynomial equation after clearing fractions',
+              'solutions that make a denominator zero'
             ],
-            correctAnswer: 0,
-            explanation: 'Multiply both sides by the LCD to eliminate fractions'
+            correctAnswer: 1,
+            explanation: 'Correct — Multiply both sides by the LCD to eliminate fractions. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of solving rational equations, which is accurate?',
+            question: 'Which of the following is true about Extraneous solutions?',
             options: [
+              'Multiply both sides by the LCD to eliminate fractions',
+              'Check all solutions against the original domain',
               'solutions that make a denominator zero',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Solve resulting polynomial equation after clearing fractions'
             ],
-            correctAnswer: 0,
-            explanation: 'Extraneous solutions: solutions that make a denominator zero'
+            correctAnswer: 2,
+            explanation: 'Correct — Extraneous solutions: solutions that make a denominator zero. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Solve resulting polynomial equation after clearing fractions
       id: 'ratio5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Multiply both sides by the LCD to eliminate fractions',
-            options: ['Multiply both sides by the LCD to eliminate fracti', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            label: 'Multiply both sides by the LCD to…',
+            options: ['Multiply both sides by the LCD to eliminate fractions', 'solutions that make a denominator zero', 'Check all solutions against the original domain', 'Solve resulting polynomial equation after clearing fractions']
           },
           {
-            label: 'Check all solutions against the original domain',
-            options: ['Check all solutions against the original domain', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            label: 'Check all solutions against the…',
+            options: ['Multiply both sides by the LCD to eliminate fractions', 'Solve resulting polynomial equation after clearing fractions', 'solutions that make a denominator zero', 'Check all solutions against the original domain']
           },
           {
             label: 'Extraneous solutions',
-            options: ['solutions that make a denominator zero', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['Check all solutions against the original domain', 'solutions that make a denominator zero', 'Multiply both sides by the LCD to eliminate fractions', 'Solve resulting polynomial equation after clearing fractions']
           }
         ],
-        correctAnswers: ['Multiply both sides by the LCD to eliminate fracti', 'Check all solutions against the original domain', 'solutions that make a denominator zero'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Solving Rational Equations.'
+        correctAnswers: ['Multiply both sides by the LCD to eliminate fractions', 'Check all solutions against the original domain', 'solutions that make a denominator zero'],
+        hint1: 'Think about what each concept specifically describes in Solving Rational Equations.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Solving Rational Equations describes a specific idea. Multiply both sides by the LCD to eliminate fractions. Check all solutions against the original domain. Extraneous solutions: solutions that make a denominator zero.'
       }
     }
   ]

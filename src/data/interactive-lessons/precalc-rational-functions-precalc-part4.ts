@@ -30,31 +30,31 @@ Connect with smooth curves approaching asymptotes
       id: 'ratio4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of graphing rational functions?',
+            question: 'Which of the following correctly describes Find domain, intercepts, asymptotes,…?',
             options: [
-              'Find domain, intercepts, asymptotes, and holes',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'Plot key points and asymptotes on the coordinate plane',
+              'Determine sign of function in each interval between critical points',
+              'Connect with smooth curves approaching asymptotes',
+              'Find domain, intercepts, asymptotes, and holes'
             ],
-            correctAnswer: 0,
-            explanation: 'Find domain, intercepts, asymptotes, and holes'
+            correctAnswer: 3,
+            explanation: 'Correct — Find domain, intercepts, asymptotes, and holes. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of graphing rational functions, which is accurate?',
+            question: 'Which of the following is true about Determine sign of function in each…?',
             options: [
+              'Plot key points and asymptotes on the coordinate plane',
               'Determine sign of function in each interval between critical points',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Connect with smooth curves approaching asymptotes',
+              'Find domain, intercepts, asymptotes, and holes'
             ],
-            correctAnswer: 0,
-            explanation: 'Determine sign of function in each interval between critical points'
+            correctAnswer: 1,
+            explanation: 'Correct — Determine sign of function in each interval between critical points. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Connect with smooth curves approaching asymptotes
       id: 'ratio4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Find domain, intercepts, asymptotes, and holes',
-            options: ['Find domain, intercepts, asymptotes, and holes', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            label: 'Find domain, intercepts, asymptotes,…',
+            options: ['Plot key points and asymptotes on the coordinate plane', 'Determine sign of function in each interval between critical points', 'Find domain, intercepts, asymptotes, and holes', 'Connect with smooth curves approaching asymptotes']
           },
           {
-            label: 'Plot key points and asymptotes on the coordinate plane',
-            options: ['Plot key points and asymptotes on the coordinate p', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            label: 'Plot key points and asymptotes on the…',
+            options: ['Determine sign of function in each interval between critical points', 'Plot key points and asymptotes on the coordinate plane', 'Connect with smooth curves approaching asymptotes', 'Find domain, intercepts, asymptotes, and holes']
           },
           {
-            label: 'Determine sign of function in each interval between critical points',
-            options: ['Determine sign of function in each interval betwee', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            label: 'Determine sign of function in each…',
+            options: ['Plot key points and asymptotes on the coordinate plane', 'Find domain, intercepts, asymptotes, and holes', 'Determine sign of function in each interval between critical points', 'Connect with smooth curves approaching asymptotes']
           }
         ],
-        correctAnswers: ['Find domain, intercepts, asymptotes, and holes', 'Plot key points and asymptotes on the coordinate p', 'Determine sign of function in each interval betwee'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Graphing Rational Functions.'
+        correctAnswers: ['Find domain, intercepts, asymptotes, and holes', 'Plot key points and asymptotes on the coordinate plane', 'Determine sign of function in each interval between critical points'],
+        hint1: 'Think about what each concept specifically describes in Graphing Rational Functions.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Graphing Rational Functions describes a specific idea. Find domain, intercepts, asymptotes, and holes. Plot key points and asymptotes on the coordinate plane. Determine sign of function in each interval between critical points.'
       }
     }
   ]

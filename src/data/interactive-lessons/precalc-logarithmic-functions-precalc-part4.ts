@@ -30,31 +30,31 @@ Use properties to combine or expand log expressions before solving
       id: 'logar4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of solving logarithmic equations?',
-            options: [
-              'Isolate the logarithmic expression',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'Isolate the logarithmic expression'
-          },
-          {
-            question: 'In the context of solving logarithmic equations, which is accurate?',
+            question: 'Which statement accurately explains Isolate the logarithmic expression?',
             options: [
               'Check for extraneous solutions (argument must be positive)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Isolate the logarithmic expression',
+              'Use properties to combine or expand log expressions before solving',
+              'log_b(x) = y → b^y = x'
             ],
-            correctAnswer: 0,
-            explanation: 'Check for extraneous solutions (argument must be positive)'
+            correctAnswer: 1,
+            explanation: 'Correct — Isolate the logarithmic expression. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Check for extraneous solutions…:',
+            options: [
+              'Use properties to combine or expand log expressions before solving',
+              'Check for extraneous solutions (argument must be positive)',
+              'log_b(x) = y → b^y = x',
+              'Isolate the logarithmic expression'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Check for extraneous solutions (argument must be positive). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Use properties to combine or expand log expressions before solving
       id: 'logar4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Isolate the logarithmic expression',
-            options: ['Isolate the logarithmic expression', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['Use properties to combine or expand log expressions before solving', 'Isolate the logarithmic expression', 'Check for extraneous solutions (argument must be positive)', 'log_b(x) = y → b^y = x']
           },
           {
             label: 'Convert to exponential form',
-            options: ['log_b(x) = y → b^y = x', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['Check for extraneous solutions (argument must be positive)', 'Isolate the logarithmic expression', 'log_b(x) = y → b^y = x', 'Use properties to combine or expand log expressions before solving']
           },
           {
-            label: 'Check for extraneous solutions (argument must be positive)',
-            options: ['Check for extraneous solutions (argument must be p', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            label: 'Check for extraneous solutions…',
+            options: ['log_b(x) = y → b^y = x', 'Check for extraneous solutions (argument must be positive)', 'Use properties to combine or expand log expressions before solving', 'Isolate the logarithmic expression']
           }
         ],
-        correctAnswers: ['Isolate the logarithmic expression', 'log_b(x) = y → b^y = x', 'Check for extraneous solutions (argument must be p'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Solving Logarithmic Equations.'
+        correctAnswers: ['Isolate the logarithmic expression', 'log_b(x) = y → b^y = x', 'Check for extraneous solutions (argument must be positive)'],
+        hint1: 'Think about what each concept specifically describes in Solving Logarithmic Equations.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Solving Logarithmic Equations describes a specific idea. Isolate the logarithmic expression. Convert to exponential form: log_b(x) = y → b^y = x. Check for extraneous solutions (argument must be positive).'
       }
     }
   ]

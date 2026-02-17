@@ -19,31 +19,31 @@ export const bioBiotechPart7Data = {
       id: 'biot7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes biotechnology on the ap exam?',
+            question: 'Which of the following correctly describes Biotechnology on the AP exam?',
             options: [
+              'Connecting techniques to biological concepts',
+              'Ethical reasoning in biology',
               'Biotechnology on the AP exam',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Experimental design with biotech tools'
             ],
-            correctAnswer: 0,
-            explanation: 'Biotechnology on the AP exam'
+            correctAnswer: 2,
+            explanation: 'Correct — Biotechnology on the AP exam. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of synthesis & ap review, which statement is accurate?',
+            question: 'Which of the following is true about Ethical reasoning in biology?',
             options: [
-              'Ethical reasoning in biology',
-              'maxe PA eht no ygolonhcetoiB',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Connecting techniques to biological concepts',
+              'Biotechnology on the AP exam',
+              'Experimental design with biotech tools',
+              'Ethical reasoning in biology'
             ],
-            correctAnswer: 0,
-            explanation: 'Ethical reasoning in biology'
+            correctAnswer: 3,
+            explanation: 'Correct — Ethical reasoning in biology. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioBiotechPart7Data = {
       id: 'biot7-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to synthesis & ap review?',
+            question: 'Regarding Biotechnology: Synthesis & AP Review, which correctly describes Experimental design with biotech tools?',
             options: [
               'Experimental design with biotech tools',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Biotechnology on the AP exam',
+              'Connecting techniques to biological concepts',
+              'Ethical reasoning in biology'
             ],
             correctAnswer: 0,
-            explanation: 'Experimental design with biotech tools'
+            explanation: 'Correct — Experimental design with biotech tools. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioBiotechPart7Data = {
       id: 'biot7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Biotechnology on the AP exam is important in synthesis & ap review because',
-            options: ['Biotechnology on the AP exam', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Biotechnology on the AP exam',
+            options: ['Experimental design with biotech tools', 'Ethical reasoning in biology', 'Biotechnology on the AP exam', 'Connecting techniques to biological concepts']
           },
           {
-            label: 'Connecting techniques to biological concepts is important in synthesis & ap review because',
-            options: ['Connecting techniques to biological concepts', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Connecting techniques to biological…',
+            options: ['Connecting techniques to biological concepts', 'Experimental design with biotech tools', 'Ethical reasoning in biology', 'Biotechnology on the AP exam']
           },
           {
-            label: 'Ethical reasoning in biology is important in synthesis & ap review because',
-            options: ['Ethical reasoning in biology', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Ethical reasoning in biology',
+            options: ['Experimental design with biotech tools', 'Ethical reasoning in biology', 'Connecting techniques to biological concepts', 'Biotechnology on the AP exam']
           }
         ],
         correctAnswers: ['Biotechnology on the AP exam', 'Connecting techniques to biological concepts', 'Ethical reasoning in biology'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Synthesis & AP Review.'
+        hint1: 'Think about what each concept specifically describes in Biotechnology: Synthesis & AP Review.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Biotechnology: Synthesis & AP Review describes a specific idea. Biotechnology on the AP exam. Connecting techniques to biological concepts. Ethical reasoning in biology.'
       }
     }
   ]

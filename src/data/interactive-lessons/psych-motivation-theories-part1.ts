@@ -30,31 +30,31 @@ Multiple theories explain different aspects of motivation
       id: 'motiv1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of introduction to motivation?',
+            question: 'What does "Motivation" refer to in psychology?',
             options: [
-              'Motivation',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'need or desire that energizes and directs behavior',
+              'external stimuli pull behavior',
+              'innate behavioral patterns (limited in humans)',
+              'Multiple theories explain different aspects of motivation'
             ],
             correctAnswer: 0,
-            explanation: 'Motivation: need or desire that energizes and directs behavior'
+            explanation: 'Correct — Motivation: need or desire that energizes and directs behavior. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of introduction to motivation, which is accurate?',
+            question: 'In the context of Motivation Theories, which explains Incentive theory?',
             options: [
               'external stimuli pull behavior',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'innate behavioral patterns (limited in humans)',
+              'Multiple theories explain different aspects of motivation',
+              'need or desire that energizes and directs behavior'
             ],
             correctAnswer: 0,
-            explanation: 'Incentive theory: external stimuli pull behavior'
+            explanation: 'Correct — Incentive theory: external stimuli pull behavior. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Multiple theories explain different aspects of motivation
       id: 'motiv1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Motivation',
-            options: ['need or desire that energizes and directs behavior', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Multiple theories explain different aspects of motivation', 'external stimuli pull behavior', 'innate behavioral patterns (limited in humans)', 'need or desire that energizes and directs behavior']
           },
           {
             label: 'Instinct theory',
-            options: ['innate behavioral patterns (limited in humans)', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['innate behavioral patterns (limited in humans)', 'Multiple theories explain different aspects of motivation', 'need or desire that energizes and directs behavior', 'external stimuli pull behavior']
           },
           {
             label: 'Incentive theory',
-            options: ['external stimuli pull behavior', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['external stimuli pull behavior', 'innate behavioral patterns (limited in humans)', 'Multiple theories explain different aspects of motivation', 'need or desire that energizes and directs behavior']
           }
         ],
         correctAnswers: ['need or desire that energizes and directs behavior', 'innate behavioral patterns (limited in humans)', 'external stimuli pull behavior'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Introduction to Motivation.'
+        hint1: 'Think about what each concept specifically describes in Motivation Theories.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Motivation Theories describes a specific idea. Motivation: need or desire that energizes and directs behavior. Instinct theory: innate behavioral patterns (limited in humans). Incentive theory: external stimuli pull behavior.'
       }
     }
   ]

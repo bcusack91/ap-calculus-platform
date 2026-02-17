@@ -30,31 +30,31 @@ approach to equilibrium concentration
       id: 'logis7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of review & applications?',
+            question: 'What does "Ecology" refer to in calculus?',
             options: [
-              'Ecology',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
+              'spread of disease through a population',
+              'population growth with limited resources',
+              'S-curve of market penetration',
+              'approach to equilibrium concentration'
             ],
-            correctAnswer: 0,
-            explanation: 'Ecology: population growth with limited resources'
+            correctAnswer: 1,
+            explanation: 'Correct — Ecology: population growth with limited resources. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of review & applications, which is accurate?',
+            question: 'In the context of Review & Applications, which explains Technology adoption?',
             options: [
               'S-curve of market penetration',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'population growth with limited resources',
+              'approach to equilibrium concentration',
+              'spread of disease through a population'
             ],
             correctAnswer: 0,
-            explanation: 'Technology adoption: S-curve of market penetration'
+            explanation: 'Correct — Technology adoption: S-curve of market penetration. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ approach to equilibrium concentration
       id: 'logis7-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to review & applications?',
+            question: 'Regarding Review & Applications, which correctly describes Chemical reactions?',
             options: [
+              'S-curve of market penetration',
+              'spread of disease through a population',
               'approach to equilibrium concentration',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'population growth with limited resources'
             ],
-            correctAnswer: 0,
-            explanation: 'Chemical reactions: approach to equilibrium concentration'
+            correctAnswer: 2,
+            explanation: 'Correct — Chemical reactions: approach to equilibrium concentration. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ approach to equilibrium concentration
       id: 'logis7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Ecology',
-            options: ['population growth with limited resources', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['population growth with limited resources', 'S-curve of market penetration', 'spread of disease through a population', 'approach to equilibrium concentration']
           },
           {
             label: 'Epidemiology',
-            options: ['spread of disease through a population', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['S-curve of market penetration', 'spread of disease through a population', 'approach to equilibrium concentration', 'population growth with limited resources']
           },
           {
             label: 'Technology adoption',
-            options: ['S-curve of market penetration', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['spread of disease through a population', 'population growth with limited resources', 'approach to equilibrium concentration', 'S-curve of market penetration']
           }
         ],
         correctAnswers: ['population growth with limited resources', 'spread of disease through a population', 'S-curve of market penetration'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Review & Applications.'
+        hint1: 'Think about what each concept specifically describes in Review & Applications.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Review & Applications describes a specific idea. Ecology: population growth with limited resources. Epidemiology: spread of disease through a population. Technology adoption: S-curve of market penetration.'
       }
     }
   ]

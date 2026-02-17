@@ -30,31 +30,31 @@ The y-intercept of f(x) = a · bˣ is the point (0, a)
       id: 'expon1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of exponential growth & decay?',
+            question: 'Which statement accurately explains Exponential function?',
             options: [
-              'Exponential function',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'The y-intercept of f(x) = a · bˣ is the point (0, a)',
+              'f(x) = a · bˣ where b > 0, b ≠ 1',
+              'Growth factor b = 1 + rate for growth, b = 1 - rate for decay',
+              'exponential growth; 0 < b < 1: exponential decay'
             ],
-            correctAnswer: 0,
-            explanation: 'Exponential function: f(x) = a · bˣ where b > 0, b ≠ 1'
+            correctAnswer: 1,
+            explanation: 'Correct — Exponential function: f(x) = a · bˣ where b > 0, b ≠ 1. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of exponential growth & decay, which is accurate?',
+            question: 'In the context of Exponential Functions, which explains Growth factor b = 1 + rate for growth,…?',
             options: [
               'Growth factor b = 1 + rate for growth, b = 1 - rate for decay',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'The y-intercept of f(x) = a · bˣ is the point (0, a)',
+              'f(x) = a · bˣ where b > 0, b ≠ 1',
+              'exponential growth; 0 < b < 1: exponential decay'
             ],
             correctAnswer: 0,
-            explanation: 'Growth factor b = 1 + rate for growth, b = 1 - rate for decay'
+            explanation: 'Correct — Growth factor b = 1 + rate for growth, b = 1 - rate for decay. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,24 @@ The y-intercept of f(x) = a · bˣ is the point (0, a)
       id: 'expon1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Exponential function',
-            options: ['f(x) = a · bˣ where b > 0, b ≠ 1', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['The y-intercept of f(x) = a · bˣ is the point (0, a)', 'Growth factor b = 1 + rate for growth, b = 1 - rate for decay', 'exponential growth; 0 < b < 1: exponential decay', 'f(x) = a · bˣ where b > 0, b ≠ 1']
           },
           {
             label: 'b > 1',
-            options: ['exponential growth; 0 < b < 1: exponential decay', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
-          },
-          {
-            label: 'Growth factor b = 1 + rate for growth, b = 1 - rate for decay',
-            options: ['Growth factor b = 1 + rate for growth, b = 1 - rat', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['Growth factor b = 1 + rate for growth, b = 1 - rate for decay', 'The y-intercept of f(x) = a · bˣ is the point (0, a)', 'exponential growth; 0 < b < 1: exponential decay', 'f(x) = a · bˣ where b > 0, b ≠ 1']
           }
         ],
-        correctAnswers: ['f(x) = a · bˣ where b > 0, b ≠ 1', 'exponential growth; 0 < b < 1: exponential decay', 'Growth factor b = 1 + rate for growth, b = 1 - rat'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Exponential Growth & Decay.'
+        correctAnswers: ['f(x) = a · bˣ where b > 0, b ≠ 1', 'exponential growth; 0 < b < 1: exponential decay'],
+        hint1: 'Think about what each concept specifically describes in Exponential Functions.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Exponential Functions describes a specific idea. Exponential function: f(x) = a · bˣ where b > 0, b ≠ 1. b > 1: exponential growth; 0 < b < 1: exponential decay.'
       }
     }
   ]

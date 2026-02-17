@@ -30,31 +30,31 @@ abstract thinking, hypothetical reasoning
       id: 'prena3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of cognitive development (piaget)?',
+            question: 'Which statement accurately explains Sensorimotor (0-2)?',
             options: [
-              'Sensorimotor (0-2)',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'object permanence',
+              'egocentrism, symbolic thinking',
+              'abstract thinking, hypothetical reasoning',
+              'conservation, logical thought'
             ],
             correctAnswer: 0,
-            explanation: 'Sensorimotor (0-2): object permanence'
+            explanation: 'Correct — Sensorimotor (0-2): object permanence. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of cognitive development (piaget), which is accurate?',
+            question: 'In the context of Cognitive Development (Piaget), which explains Concrete operational (7-11)?',
             options: [
+              'abstract thinking, hypothetical reasoning',
+              'object permanence',
               'conservation, logical thought',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'egocentrism, symbolic thinking'
             ],
-            correctAnswer: 0,
-            explanation: 'Concrete operational (7-11): conservation, logical thought'
+            correctAnswer: 2,
+            explanation: 'Correct — Concrete operational (7-11): conservation, logical thought. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ abstract thinking, hypothetical reasoning
       id: 'prena3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Sensorimotor (0-2)',
-            options: ['object permanence', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['abstract thinking, hypothetical reasoning', 'object permanence', 'egocentrism, symbolic thinking', 'conservation, logical thought']
           },
           {
             label: 'Preoperational (2-7)',
-            options: ['egocentrism, symbolic thinking', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['conservation, logical thought', 'object permanence', 'abstract thinking, hypothetical reasoning', 'egocentrism, symbolic thinking']
           },
           {
             label: 'Concrete operational (7-11)',
-            options: ['conservation, logical thought', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['egocentrism, symbolic thinking', 'object permanence', 'conservation, logical thought', 'abstract thinking, hypothetical reasoning']
           }
         ],
         correctAnswers: ['object permanence', 'egocentrism, symbolic thinking', 'conservation, logical thought'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Cognitive Development (Piaget).'
+        hint1: 'Think about what each concept specifically describes in Cognitive Development (Piaget).',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Cognitive Development (Piaget) describes a specific idea. Sensorimotor (0-2): object permanence. Preoperational (2-7): egocentrism, symbolic thinking. Concrete operational (7-11): conservation, logical thought.'
       }
     }
   ]

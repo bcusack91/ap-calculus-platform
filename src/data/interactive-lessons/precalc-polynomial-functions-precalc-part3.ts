@@ -30,31 +30,31 @@ graph touches and bounces off the x-axis
       id: 'polyn3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of zeros & multiplicity?',
+            question: 'What does "Zeros (roots)" refer to in precalculus?',
             options: [
-              'Zeros (roots)',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'the number of times a factor repeats',
+              'graph crosses the x-axis at that zero',
+              'graph touches and bounces off the x-axis',
+              'values of x where f(x) = 0'
             ],
-            correctAnswer: 0,
-            explanation: 'Zeros (roots): values of x where f(x) = 0'
+            correctAnswer: 3,
+            explanation: 'Correct — Zeros (roots): values of x where f(x) = 0. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of zeros & multiplicity, which is accurate?',
+            question: 'Which of the following is true about Odd multiplicity?',
             options: [
-              'graph crosses the x-axis at that zero',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'values of x where f(x) = 0',
+              'the number of times a factor repeats',
+              'graph touches and bounces off the x-axis',
+              'graph crosses the x-axis at that zero'
             ],
-            correctAnswer: 0,
-            explanation: 'Odd multiplicity: graph crosses the x-axis at that zero'
+            correctAnswer: 3,
+            explanation: 'Correct — Odd multiplicity: graph crosses the x-axis at that zero. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ graph touches and bounces off the x-axis
       id: 'polyn3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Zeros (roots)',
-            options: ['values of x where f(x) = 0', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['the number of times a factor repeats', 'graph crosses the x-axis at that zero', 'graph touches and bounces off the x-axis', 'values of x where f(x) = 0']
           },
           {
             label: 'Multiplicity',
-            options: ['the number of times a factor repeats', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['the number of times a factor repeats', 'graph touches and bounces off the x-axis', 'graph crosses the x-axis at that zero', 'values of x where f(x) = 0']
           },
           {
             label: 'Odd multiplicity',
-            options: ['graph crosses the x-axis at that zero', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['values of x where f(x) = 0', 'graph touches and bounces off the x-axis', 'the number of times a factor repeats', 'graph crosses the x-axis at that zero']
           }
         ],
         correctAnswers: ['values of x where f(x) = 0', 'the number of times a factor repeats', 'graph crosses the x-axis at that zero'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Zeros & Multiplicity.'
+        hint1: 'Think about what each concept specifically describes in Zeros & Multiplicity.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Zeros & Multiplicity describes a specific idea. Zeros (roots): values of x where f(x) = 0. Multiplicity: the number of times a factor repeats. Odd multiplicity: graph crosses the x-axis at that zero.'
       }
     }
   ]

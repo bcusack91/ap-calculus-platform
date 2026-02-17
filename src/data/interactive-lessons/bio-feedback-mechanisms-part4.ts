@@ -19,31 +19,31 @@ export const bioFeedbackPart4Data = {
       id: 'feed4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes endotherms?',
+            question: 'Which statement accurately explains Endotherms?',
             options: [
+              'thermostat of the body',
+              'body temperature follows environment',
               'internal heat production (mammals, birds)',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'shivering, sweating, vasodilation/constriction'
             ],
-            correctAnswer: 0,
-            explanation: 'Endotherms: internal heat production (mammals, birds)'
+            correctAnswer: 2,
+            explanation: 'Correct — Endotherms: internal heat production (mammals, birds). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of thermoregulation, which statement is accurate?',
+            question: 'In the context of Thermoregulation, which explains Hypothalamus?',
             options: [
-              'Hypothalamus: thermostat of the body',
-              ')sdrib ,slammam( noitcudorp taeh lanretni :smrehtodnE',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'internal heat production (mammals, birds)',
+              'body temperature follows environment',
+              'shivering, sweating, vasodilation/constriction',
+              'thermostat of the body'
             ],
-            correctAnswer: 0,
-            explanation: 'Hypothalamus: thermostat of the body'
+            correctAnswer: 3,
+            explanation: 'Correct — Hypothalamus: thermostat of the body. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioFeedbackPart4Data = {
       id: 'feed4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to thermoregulation?',
+            question: 'Which statement about Responses is correct?',
             options: [
-              'Responses: shivering, sweating, vasodilation/constriction',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'internal heat production (mammals, birds)',
+              'thermostat of the body',
+              'shivering, sweating, vasodilation/constriction',
+              'body temperature follows environment'
             ],
-            correctAnswer: 0,
-            explanation: 'Responses: shivering, sweating, vasodilation/constriction'
+            correctAnswer: 2,
+            explanation: 'Correct — Responses: shivering, sweating, vasodilation/constriction. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioFeedbackPart4Data = {
       id: 'feed4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Endotherms is important in thermoregulation because',
-            options: ['internal heat production (mammals, birds)', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Endotherms',
+            options: ['shivering, sweating, vasodilation/constriction', 'body temperature follows environment', 'internal heat production (mammals, birds)', 'thermostat of the body']
           },
           {
-            label: 'Ectotherms is important in thermoregulation because',
-            options: ['body temperature follows environment', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Ectotherms',
+            options: ['internal heat production (mammals, birds)', 'body temperature follows environment', 'shivering, sweating, vasodilation/constriction', 'thermostat of the body']
           },
           {
-            label: 'Hypothalamus is important in thermoregulation because',
-            options: ['thermostat of the body', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Hypothalamus',
+            options: ['thermostat of the body', 'internal heat production (mammals, birds)', 'body temperature follows environment', 'shivering, sweating, vasodilation/constriction']
           }
         ],
         correctAnswers: ['internal heat production (mammals, birds)', 'body temperature follows environment', 'thermostat of the body'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Thermoregulation.'
+        hint1: 'Think about what each concept specifically describes in Thermoregulation.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Thermoregulation describes a specific idea. Endotherms: internal heat production (mammals, birds). Ectotherms: body temperature follows environment. Hypothalamus: thermostat of the body.'
       }
     }
   ]

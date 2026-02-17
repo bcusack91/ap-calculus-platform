@@ -30,31 +30,31 @@ rectangular, polar (½∫r²dθ), parametric
       id: 'revie3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of parametric, polar & vector unity?',
-            options: [
-              'Parametric, polar, and vector functions all describe curves in the plane',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'Parametric, polar, and vector functions all describe curves in the plane'
-          },
-          {
-            question: 'In the context of parametric, polar & vector unity, which is accurate?',
+            question: 'Which of the following correctly describes Parametric, polar, and vector functions…?',
             options: [
               '∫√[(dx)² + (dy)²]',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'rectangular, polar (½∫r²dθ), parametric',
+              'Each uses different coordinates but shares calculus operations (derivatives, integrals)',
+              'Parametric, polar, and vector functions all describe curves in the plane'
             ],
-            correctAnswer: 0,
-            explanation: 'Arc length formula unifies all three: ∫√[(dx)² + (dy)²]'
+            correctAnswer: 3,
+            explanation: 'Correct — Parametric, polar, and vector functions all describe curves in the plane. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Arc length formula unifies all three:',
+            options: [
+              'Each uses different coordinates but shares calculus operations (derivatives, integrals)',
+              'Parametric, polar, and vector functions all describe curves in the plane',
+              'rectangular, polar (½∫r²dθ), parametric',
+              '∫√[(dx)² + (dy)²]'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Arc length formula unifies all three: ∫√[(dx)² + (dy)²]. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ rectangular, polar (½∫r²dθ), parametric
       id: 'revie3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to parametric, polar & vector unity?',
+            question: 'Regarding Parametric, Polar & Vector Unity, which correctly describes Area formulas differ?',
             options: [
+              'Each uses different coordinates but shares calculus operations (derivatives, integrals)',
+              'Parametric, polar, and vector functions all describe curves in the plane',
               'rectangular, polar (½∫r²dθ), parametric',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              '∫√[(dx)² + (dy)²]'
             ],
-            correctAnswer: 0,
-            explanation: 'Area formulas differ: rectangular, polar (½∫r²dθ), parametric'
+            correctAnswer: 2,
+            explanation: 'Correct — Area formulas differ: rectangular, polar (½∫r²dθ), parametric. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,24 @@ rectangular, polar (½∫r²dθ), parametric
       id: 'revie3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Parametric, polar, and vector functions all describe curves in the plane',
-            options: ['Parametric, polar, and vector functions all descri', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
-          },
-          {
-            label: 'Each uses different coordinates but shares calculus operations (derivatives, integrals)',
-            options: ['Each uses different coordinates but shares calculu', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
-          },
-          {
             label: 'Arc length formula unifies all three',
-            options: ['∫√[(dx)² + (dy)²]', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Parametric, polar, and vector functions all describe curves in the plane', 'Each uses different coordinates but shares calculus operations (derivatives, integrals)', '∫√[(dx)² + (dy)²]', 'rectangular, polar (½∫r²dθ), parametric']
+          },
+          {
+            label: 'Area formulas differ',
+            options: ['rectangular, polar (½∫r²dθ), parametric', 'Parametric, polar, and vector functions all describe curves in the plane', '∫√[(dx)² + (dy)²]', 'Each uses different coordinates but shares calculus operations (derivatives, integrals)']
           }
         ],
-        correctAnswers: ['Parametric, polar, and vector functions all descri', 'Each uses different coordinates but shares calculu', '∫√[(dx)² + (dy)²]'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Parametric, Polar & Vector Unity.'
+        correctAnswers: ['∫√[(dx)² + (dy)²]', 'rectangular, polar (½∫r²dθ), parametric'],
+        hint1: 'Think about what each concept specifically describes in Parametric, Polar & Vector Unity.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Parametric, Polar & Vector Unity describes a specific idea. Arc length formula unifies all three: ∫√[(dx)² + (dy)²]. Area formulas differ: rectangular, polar (½∫r²dθ), parametric.'
       }
     }
   ]

@@ -19,31 +19,31 @@ export const bioCellRespirationPart7Data = {
       id: 'cell7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes total atp yield?',
+            question: 'Which statement accurately explains Total ATP yield?',
             options: [
               '~36-38 per glucose',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Energy coupling and chemiosmosis',
+              'Connection to photosynthesis',
+              'Evolution of aerobic respiration'
             ],
             correctAnswer: 0,
-            explanation: 'Total ATP yield: ~36-38 per glucose'
+            explanation: 'Correct — Total ATP yield: ~36-38 per glucose. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of synthesis & ap review, which statement is accurate?',
+            question: 'In the context of Cellular Respiration: Synthesis & AP Review, which explains Evolution of aerobic respiration?',
             options: [
+              'Energy coupling and chemiosmosis',
               'Evolution of aerobic respiration',
-              'esoculg rep 83-63~ :dleiy PTA latoT',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Connection to photosynthesis',
+              '~36-38 per glucose'
             ],
-            correctAnswer: 0,
-            explanation: 'Evolution of aerobic respiration'
+            correctAnswer: 1,
+            explanation: 'Correct — Evolution of aerobic respiration. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioCellRespirationPart7Data = {
       id: 'cell7-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to synthesis & ap review?',
+            question: 'Which statement about Connection to photosynthesis is correct?',
             options: [
+              'Evolution of aerobic respiration',
+              'Energy coupling and chemiosmosis',
               'Connection to photosynthesis',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              '~36-38 per glucose'
             ],
-            correctAnswer: 0,
-            explanation: 'Connection to photosynthesis'
+            correctAnswer: 2,
+            explanation: 'Correct — Connection to photosynthesis. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioCellRespirationPart7Data = {
       id: 'cell7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Total ATP yield is important in synthesis & ap review because',
-            options: ['~36-38 per glucose', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Total ATP yield',
+            options: ['Evolution of aerobic respiration', 'Energy coupling and chemiosmosis', '~36-38 per glucose', 'Connection to photosynthesis']
           },
           {
-            label: 'Energy coupling and chemiosmosis is important in synthesis & ap review because',
-            options: ['Energy coupling and chemiosmosis', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Energy coupling and chemiosmosis',
+            options: ['Connection to photosynthesis', 'Energy coupling and chemiosmosis', '~36-38 per glucose', 'Evolution of aerobic respiration']
           },
           {
-            label: 'Evolution of aerobic respiration is important in synthesis & ap review because',
-            options: ['Evolution of aerobic respiration', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Evolution of aerobic respiration',
+            options: ['Evolution of aerobic respiration', 'Connection to photosynthesis', '~36-38 per glucose', 'Energy coupling and chemiosmosis']
           }
         ],
         correctAnswers: ['~36-38 per glucose', 'Energy coupling and chemiosmosis', 'Evolution of aerobic respiration'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Synthesis & AP Review.'
+        hint1: 'Think about what each concept specifically describes in Cellular Respiration: Synthesis & AP Review.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Cellular Respiration: Synthesis & AP Review describes a specific idea. Total ATP yield: ~36-38 per glucose. Energy coupling and chemiosmosis. Evolution of aerobic respiration.'
       }
     }
   ]

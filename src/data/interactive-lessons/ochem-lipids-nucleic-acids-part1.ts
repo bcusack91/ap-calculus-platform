@@ -30,31 +30,31 @@ fat + NaOH → glycerol + soap (sodium carboxylate)
       id: 'lipid1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of fatty acids & triglycerides?',
+            question: 'Which statement accurately explains Fatty acids?',
             options: [
-              'Fatty acids',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'fat + NaOH → glycerol + soap (sodium carboxylate)',
+              'long-chain carboxylic acids (12-20 carbons)',
+              'no double bonds; Unsaturated: cis double bonds',
+              'glycerol + 3 fatty acids (ester bonds)'
             ],
-            correctAnswer: 0,
-            explanation: 'Fatty acids: long-chain carboxylic acids (12-20 carbons)'
+            correctAnswer: 1,
+            explanation: 'Correct — Fatty acids: long-chain carboxylic acids (12-20 carbons). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of fatty acids & triglycerides, which is accurate?',
+            question: 'Select the statement that correctly describes Triglycerides:',
             options: [
+              'fat + NaOH → glycerol + soap (sodium carboxylate)',
               'glycerol + 3 fatty acids (ester bonds)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'long-chain carboxylic acids (12-20 carbons)',
+              'no double bonds; Unsaturated: cis double bonds'
             ],
-            correctAnswer: 0,
-            explanation: 'Triglycerides: glycerol + 3 fatty acids (ester bonds)'
+            correctAnswer: 1,
+            explanation: 'Correct — Triglycerides: glycerol + 3 fatty acids (ester bonds). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ fat + NaOH → glycerol + soap (sodium carboxylate)
       id: 'lipid1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Fatty acids',
-            options: ['long-chain carboxylic acids (12-20 carbons)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['no double bonds; Unsaturated: cis double bonds', 'long-chain carboxylic acids (12-20 carbons)', 'fat + NaOH → glycerol + soap (sodium carboxylate)', 'glycerol + 3 fatty acids (ester bonds)']
           },
           {
             label: 'Saturated',
-            options: ['no double bonds; Unsaturated: cis double bonds', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['long-chain carboxylic acids (12-20 carbons)', 'glycerol + 3 fatty acids (ester bonds)', 'no double bonds; Unsaturated: cis double bonds', 'fat + NaOH → glycerol + soap (sodium carboxylate)']
           },
           {
             label: 'Triglycerides',
-            options: ['glycerol + 3 fatty acids (ester bonds)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['long-chain carboxylic acids (12-20 carbons)', 'no double bonds; Unsaturated: cis double bonds', 'glycerol + 3 fatty acids (ester bonds)', 'fat + NaOH → glycerol + soap (sodium carboxylate)']
           }
         ],
         correctAnswers: ['long-chain carboxylic acids (12-20 carbons)', 'no double bonds; Unsaturated: cis double bonds', 'glycerol + 3 fatty acids (ester bonds)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Fatty Acids & Triglycerides.'
+        hint1: 'Think about what each concept specifically describes in ️ Lipids Nucleic Acids.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in ️ Lipids Nucleic Acids describes a specific idea. Fatty acids: long-chain carboxylic acids (12-20 carbons). Saturated: no double bonds; Unsaturated: cis double bonds. Triglycerides: glycerol + 3 fatty acids (ester bonds).'
       }
     }
   ]

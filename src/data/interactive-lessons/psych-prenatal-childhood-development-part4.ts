@@ -30,31 +30,31 @@ trust vs mistrust, autonomy vs shame, initiative vs guilt
       id: 'prena4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of social & emotional development?',
+            question: 'Which statement accurately explains Attachment theory (Bowlby)?',
             options: [
-              'Attachment theory (Bowlby)',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'trust vs mistrust, autonomy vs shame, initiative vs guilt',
+              'contact comfort > food',
+              'secure, avoidant, anxious-ambivalent',
+              'innate need for attachment'
             ],
-            correctAnswer: 0,
-            explanation: 'Attachment theory (Bowlby): innate need for attachment'
+            correctAnswer: 3,
+            explanation: 'Correct — Attachment theory (Bowlby): innate need for attachment. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of social & emotional development, which is accurate?',
+            question: 'In the context of Social & Emotional Development, which explains Harlow\'s monkeys?',
             options: [
               'contact comfort > food',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'secure, avoidant, anxious-ambivalent',
+              'innate need for attachment',
+              'trust vs mistrust, autonomy vs shame, initiative vs guilt'
             ],
             correctAnswer: 0,
-            explanation: 'Harlow\'s monkeys: contact comfort > food'
+            explanation: 'Correct — Harlow\'s monkeys: contact comfort > food. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ trust vs mistrust, autonomy vs shame, initiative vs guilt
       id: 'prena4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Attachment theory (Bowlby)',
-            options: ['innate need for attachment', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['trust vs mistrust, autonomy vs shame, initiative vs guilt', 'contact comfort > food', 'secure, avoidant, anxious-ambivalent', 'innate need for attachment']
           },
           {
             label: 'Ainsworth\'s Strange Situation',
-            options: ['secure, avoidant, anxious-ambivalent', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['secure, avoidant, anxious-ambivalent', 'innate need for attachment', 'contact comfort > food', 'trust vs mistrust, autonomy vs shame, initiative vs guilt']
           },
           {
             label: 'Harlow\'s monkeys',
-            options: ['contact comfort > food', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['trust vs mistrust, autonomy vs shame, initiative vs guilt', 'secure, avoidant, anxious-ambivalent', 'innate need for attachment', 'contact comfort > food']
           }
         ],
         correctAnswers: ['innate need for attachment', 'secure, avoidant, anxious-ambivalent', 'contact comfort > food'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Social & Emotional Development.'
+        hint1: 'Think about what each concept specifically describes in Social & Emotional Development.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Social & Emotional Development describes a specific idea. Attachment theory (Bowlby): innate need for attachment. Ainsworth\'s Strange Situation: secure, avoidant, anxious-ambivalent. Harlow\'s monkeys: contact comfort > food.'
       }
     }
   ]

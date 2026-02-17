@@ -30,31 +30,31 @@ Carbon has 4 valence electrons → forms 4 bonds
       id: 'atomi1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of atomic orbitals & electron configuration?',
+            question: 'Which of the following correctly describes Electron configuration determines…?',
             options: [
-              'Electron configuration determines bonding',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'outermost shell electrons',
+              'Carbon has 4 valence electrons → forms 4 bonds',
+              'atoms tend to have 8 valence electrons',
+              'Electron configuration determines bonding'
             ],
-            correctAnswer: 0,
-            explanation: 'Electron configuration determines bonding'
+            correctAnswer: 3,
+            explanation: 'Correct — Electron configuration determines bonding. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of atomic orbitals & electron configuration, which is accurate?',
+            question: 'Select the statement that correctly describes Octet rule:',
             options: [
+              'Electron configuration determines bonding',
               'atoms tend to have 8 valence electrons',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Carbon has 4 valence electrons → forms 4 bonds',
+              'outermost shell electrons'
             ],
-            correctAnswer: 0,
-            explanation: 'Octet rule: atoms tend to have 8 valence electrons'
+            correctAnswer: 1,
+            explanation: 'Correct — Octet rule: atoms tend to have 8 valence electrons. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,24 @@ Carbon has 4 valence electrons → forms 4 bonds
       id: 'atomi1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Electron configuration determines bonding',
-            options: ['Electron configuration determines bonding', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
-          },
-          {
             label: 'Valence electrons',
-            options: ['outermost shell electrons', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['atoms tend to have 8 valence electrons', 'Electron configuration determines bonding', 'outermost shell electrons', 'Carbon has 4 valence electrons → forms 4 bonds']
           },
           {
             label: 'Octet rule',
-            options: ['atoms tend to have 8 valence electrons', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Carbon has 4 valence electrons → forms 4 bonds', 'Electron configuration determines bonding', 'outermost shell electrons', 'atoms tend to have 8 valence electrons']
           }
         ],
-        correctAnswers: ['Electron configuration determines bonding', 'outermost shell electrons', 'atoms tend to have 8 valence electrons'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Atomic Orbitals & Electron Configuration.'
+        correctAnswers: ['outermost shell electrons', 'atoms tend to have 8 valence electrons'],
+        hint1: 'Think about what each concept specifically describes in ️ Atomic Structure Bonding.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in ️ Atomic Structure Bonding describes a specific idea. Valence electrons: outermost shell electrons. Octet rule: atoms tend to have 8 valence electrons.'
       }
     }
   ]

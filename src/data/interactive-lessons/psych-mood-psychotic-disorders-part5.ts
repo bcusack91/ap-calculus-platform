@@ -30,31 +30,31 @@ fear of having serious illness
       id: 'mood-5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of dissociative & somatic disorders?',
+            question: 'What does "Dissociative identity disorder (DID)" refer to in psychology?',
             options: [
-              'Dissociative identity disorder (DID)',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'fear of having serious illness',
+              'excessive focus on physical symptoms',
+              'multiple distinct identities',
+              'memory gaps for personal information'
             ],
-            correctAnswer: 0,
-            explanation: 'Dissociative identity disorder (DID): multiple distinct identities'
+            correctAnswer: 2,
+            explanation: 'Correct — Dissociative identity disorder (DID): multiple distinct identities. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of dissociative & somatic disorders, which is accurate?',
+            question: 'Select the statement that correctly describes Somatic symptom disorder:',
             options: [
-              'excessive focus on physical symptoms',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'multiple distinct identities',
+              'memory gaps for personal information',
+              'fear of having serious illness',
+              'excessive focus on physical symptoms'
             ],
-            correctAnswer: 0,
-            explanation: 'Somatic symptom disorder: excessive focus on physical symptoms'
+            correctAnswer: 3,
+            explanation: 'Correct — Somatic symptom disorder: excessive focus on physical symptoms. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ fear of having serious illness
       id: 'mood-5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Dissociative identity disorder (DID)',
-            options: ['multiple distinct identities', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['excessive focus on physical symptoms', 'memory gaps for personal information', 'multiple distinct identities', 'fear of having serious illness']
           },
           {
             label: 'Dissociative amnesia',
-            options: ['memory gaps for personal information', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['fear of having serious illness', 'excessive focus on physical symptoms', 'memory gaps for personal information', 'multiple distinct identities']
           },
           {
             label: 'Somatic symptom disorder',
-            options: ['excessive focus on physical symptoms', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['multiple distinct identities', 'excessive focus on physical symptoms', 'memory gaps for personal information', 'fear of having serious illness']
           }
         ],
         correctAnswers: ['multiple distinct identities', 'memory gaps for personal information', 'excessive focus on physical symptoms'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Dissociative & Somatic Disorders.'
+        hint1: 'Think about what each concept specifically describes in Dissociative & Somatic Disorders.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Dissociative & Somatic Disorders describes a specific idea. Dissociative identity disorder (DID): multiple distinct identities. Dissociative amnesia: memory gaps for personal information. Somatic symptom disorder: excessive focus on physical symptoms.'
       }
     }
   ]

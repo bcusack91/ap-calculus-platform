@@ -30,31 +30,31 @@ carbonyl reactions summary
       id: 'aldeh7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of synthesis & review?',
+            question: 'Which of the following correctly describes Carbonyl chemistry is central to…?',
             options: [
+              'carbonyl reactions summary',
+              'Grignard reactions form C-C bonds',
               'Carbonyl chemistry is central to organic synthesis',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'Nucleophilic addition is the key reaction'
             ],
-            correctAnswer: 0,
-            explanation: 'Carbonyl chemistry is central to organic synthesis'
+            correctAnswer: 2,
+            explanation: 'Correct — Carbonyl chemistry is central to organic synthesis. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of synthesis & review, which is accurate?',
+            question: 'In the context of Synthesis & Review, which explains Grignard reactions form C-C bonds?',
             options: [
+              'Carbonyl chemistry is central to organic synthesis',
+              'carbonyl reactions summary',
               'Grignard reactions form C-C bonds',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Nucleophilic addition is the key reaction'
             ],
-            correctAnswer: 0,
-            explanation: 'Grignard reactions form C-C bonds'
+            correctAnswer: 2,
+            explanation: 'Correct — Grignard reactions form C-C bonds. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ carbonyl reactions summary
       id: 'aldeh7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Carbonyl chemistry is central to organic synthesis',
-            options: ['Carbonyl chemistry is central to organic synthesis', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Carbonyl chemistry is central to…',
+            options: ['Nucleophilic addition is the key reaction', 'Grignard reactions form C-C bonds', 'carbonyl reactions summary', 'Carbonyl chemistry is central to organic synthesis']
           },
           {
-            label: 'Nucleophilic addition is the key reaction',
-            options: ['Nucleophilic addition is the key reaction', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Nucleophilic addition is the key…',
+            options: ['Carbonyl chemistry is central to organic synthesis', 'Nucleophilic addition is the key reaction', 'carbonyl reactions summary', 'Grignard reactions form C-C bonds']
           },
           {
             label: 'Grignard reactions form C-C bonds',
-            options: ['Grignard reactions form C-C bonds', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Grignard reactions form C-C bonds', 'Nucleophilic addition is the key reaction', 'Carbonyl chemistry is central to organic synthesis', 'carbonyl reactions summary']
           }
         ],
         correctAnswers: ['Carbonyl chemistry is central to organic synthesis', 'Nucleophilic addition is the key reaction', 'Grignard reactions form C-C bonds'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Synthesis & Review.'
+        hint1: 'Think about what each concept specifically describes in Synthesis & Review.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Synthesis & Review describes a specific idea. Carbonyl chemistry is central to organic synthesis. Nucleophilic addition is the key reaction. Grignard reactions form C-C bonds.'
       }
     }
   ]

@@ -30,31 +30,31 @@ Jump and infinite discontinuities are non-removable
       id: 'limit4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of continuity?',
-            options: [
-              'f is continuous at c if',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'f is continuous at c if: f(c) is defined, lim(x→c) f(x) exists, and lim(x→c) f(x) = f(c)'
-          },
-          {
-            question: 'In the context of continuity, which is accurate?',
+            question: 'Which statement accurately explains f is continuous at c if?',
             options: [
               'the limit exists but doesn\'t equal f(c)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Polynomials are continuous everywhere',
+              'Jump and infinite discontinuities are non-removable',
+              'f(c) is defined, lim(x→c) f(x) exists, and lim(x→c) f(x) = f(c)'
             ],
-            correctAnswer: 0,
-            explanation: 'Removable discontinuity: the limit exists but doesn\'t equal f(c)'
+            correctAnswer: 3,
+            explanation: 'Correct — f is continuous at c if: f(c) is defined, lim(x→c) f(x) exists, and lim(x→c) f(x) = f(c). The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Removable discontinuity?',
+            options: [
+              'Polynomials are continuous everywhere',
+              'Jump and infinite discontinuities are non-removable',
+              'f(c) is defined, lim(x→c) f(x) exists, and lim(x→c) f(x) = f(c)',
+              'the limit exists but doesn\'t equal f(c)'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Removable discontinuity: the limit exists but doesn\'t equal f(c). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Jump and infinite discontinuities are non-removable
       id: 'limit4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to continuity?',
+            question: 'Which statement about Jump and infinite discontinuities are… is correct?',
             options: [
-              'Jump and infinite discontinuities are non-removable',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'f(c) is defined, lim(x→c) f(x) exists, and lim(x→c) f(x) = f(c)',
+              'Polynomials are continuous everywhere',
+              'the limit exists but doesn\'t equal f(c)',
+              'Jump and infinite discontinuities are non-removable'
             ],
-            correctAnswer: 0,
-            explanation: 'Jump and infinite discontinuities are non-removable'
+            correctAnswer: 3,
+            explanation: 'Correct — Jump and infinite discontinuities are non-removable. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,24 @@ Jump and infinite discontinuities are non-removable
       id: 'limit4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'f is continuous at c if',
-            options: ['f(c) is defined, lim(x→c) f(x) exists, and lim(x→c', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
-          },
-          {
-            label: 'Polynomials are continuous everywhere',
-            options: ['Polynomials are continuous everywhere', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['the limit exists but doesn\'t equal f(c)', 'Jump and infinite discontinuities are non-removable', 'Polynomials are continuous everywhere', 'f(c) is defined, lim(x→c) f(x) exists, and lim(x→c) f(x) = f(c)']
           },
           {
             label: 'Removable discontinuity',
-            options: ['the limit exists but doesn\'t equal f(c)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Jump and infinite discontinuities are non-removable', 'the limit exists but doesn\'t equal f(c)', 'Polynomials are continuous everywhere', 'f(c) is defined, lim(x→c) f(x) exists, and lim(x→c) f(x) = f(c)']
           }
         ],
-        correctAnswers: ['f(c) is defined, lim(x→c) f(x) exists, and lim(x→c', 'Polynomials are continuous everywhere', 'the limit exists but doesn\'t equal f(c)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Continuity.'
+        correctAnswers: ['f(c) is defined, lim(x→c) f(x) exists, and lim(x→c) f(x) = f(c)', 'the limit exists but doesn\'t equal f(c)'],
+        hint1: 'Think about what each concept specifically describes in Continuity.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Continuity describes a specific idea. f is continuous at c if: f(c) is defined, lim(x→c) f(x) exists, and lim(x→c) f(x) = f(c). Removable discontinuity: the limit exists but doesn\'t equal f(c).'
       }
     }
   ]

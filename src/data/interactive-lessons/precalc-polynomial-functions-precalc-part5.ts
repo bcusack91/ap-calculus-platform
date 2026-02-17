@@ -30,31 +30,31 @@ f(c) = remainder when dividing by (x - c)
       id: 'polyn5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of polynomial division?',
-            options: [
-              'Long division of polynomials',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'Long division of polynomials: divide step by step'
-          },
-          {
-            question: 'In the context of polynomial division, which is accurate?',
+            question: 'What does "Long division of polynomials" refer to in precalculus?',
             options: [
               'f(c) = remainder when dividing by (x - c)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'shortcut when dividing by (x - c)',
+              'divide step by step',
+              '(x - c) is a factor if and only if f(c) = 0'
             ],
-            correctAnswer: 0,
-            explanation: 'Remainder Theorem: f(c) = remainder when dividing by (x - c)'
+            correctAnswer: 2,
+            explanation: 'Correct — Long division of polynomials: divide step by step. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Remainder Theorem:',
+            options: [
+              'divide step by step',
+              '(x - c) is a factor if and only if f(c) = 0',
+              'shortcut when dividing by (x - c)',
+              'f(c) = remainder when dividing by (x - c)'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Remainder Theorem: f(c) = remainder when dividing by (x - c). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ f(c) = remainder when dividing by (x - c)
       id: 'polyn5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Long division of polynomials',
-            options: ['divide step by step', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['shortcut when dividing by (x - c)', 'divide step by step', 'f(c) = remainder when dividing by (x - c)', '(x - c) is a factor if and only if f(c) = 0']
           },
           {
             label: 'Synthetic division',
-            options: ['shortcut when dividing by (x - c)', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['shortcut when dividing by (x - c)', 'f(c) = remainder when dividing by (x - c)', 'divide step by step', '(x - c) is a factor if and only if f(c) = 0']
           },
           {
             label: 'Remainder Theorem',
-            options: ['f(c) = remainder when dividing by (x - c)', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['f(c) = remainder when dividing by (x - c)', '(x - c) is a factor if and only if f(c) = 0', 'shortcut when dividing by (x - c)', 'divide step by step']
           }
         ],
         correctAnswers: ['divide step by step', 'shortcut when dividing by (x - c)', 'f(c) = remainder when dividing by (x - c)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Polynomial Division.'
+        hint1: 'Think about what each concept specifically describes in Polynomial Division.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Polynomial Division describes a specific idea. Long division of polynomials: divide step by step. Synthetic division: shortcut when dividing by (x - c). Remainder Theorem: f(c) = remainder when dividing by (x - c).'
       }
     }
   ]

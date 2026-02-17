@@ -18,20 +18,31 @@ Law of Sines: a/sin A = b/sin B = c/sin C.
       id: 'act-t2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes elevation/depression angles?',
+            question: 'Which of the following correctly describes Elevation/depression angles?',
             options: [
-              'Elevation/depression angles is a key concept for ACT Math',
-              'Law of Sines: a/sin A = b/sin B = c/sin C',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'Use Law of Sines for AAS/ASA; Law of Cosines for SAS/SSS.',
+              'a/sin A = b/sin B = c/sin C.',
+              'draw a right triangle from the scenario.',
+              'Law of Cosines: c² = a² + b² - 2ab cos C.'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Elevation/depression angles: draw a right triangle from the scenario. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              'Law of Cosines: c² = a² + b² - 2ab cos C.',
+              'draw a right triangle from the scenario.',
+              'Use Law of Sines for AAS/ASA; Law of Cosines for SAS/SSS.',
+              'a/sin A = b/sin B = c/sin C.'
             ],
             correctAnswer: 0,
-            explanation: 'Elevation/depression angles: draw a right triangle from the scenario'
+            explanation: 'Correct — Key Insight: Law of Cosines: c² = a² + b² - 2ab cos C. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Law of Sines: a/sin A = b/sin B = c/sin C.
       id: 'act-t2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for trig ratios & applications?',
+            question: 'Which of these accurately represents ACT Tip?',
             options: [
-              'Law of Cosines: c² = a² + b² - 2ab cos C',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'draw a right triangle from the scenario.',
+              'a/sin A = b/sin B = c/sin C.',
+              'Law of Cosines: c² = a² + b² - 2ab cos C.',
+              'Use Law of Sines for AAS/ASA; Law of Cosines for SAS/SSS.'
             ],
-            correctAnswer: 0,
-            explanation: 'Law of Cosines: c² = a² + b² - 2ab cos C'
+            correctAnswer: 3,
+            explanation: 'Correct — ACT Tip: Use Law of Sines for AAS/ASA; Law of Cosines for SAS/SSS. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Law of Sines: a/sin A = b/sin B = c/sin C.
       id: 'act-t2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Trig Ratios & Applications:',
-            options: ['Elevation/depression angles: draw a right triangle', 'Law of Sines: a/sin A = b/sin B = c/sin C', 'Not applicable', 'None of these']
+            label: 'Elevation/depression angles',
+            options: ['Use Law of Sines for AAS/ASA; Law of Cosines for SAS/SSS.', 'Law of Cosines: c² = a² + b² - 2ab cos C.', 'draw a right triangle from the scenario.', 'a/sin A = b/sin B = c/sin C.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Law of Cosines: c² = a² + b² - 2ab cos C', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Law of Sines',
+            options: ['Law of Cosines: c² = a² + b² - 2ab cos C.', 'a/sin A = b/sin B = c/sin C.', 'Use Law of Sines for AAS/ASA; Law of Cosines for SAS/SSS.', 'draw a right triangle from the scenario.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['Use Law of Sines for AAS/ASA; Law of Cosines for SAS/SSS.', 'draw a right triangle from the scenario.', 'a/sin A = b/sin B = c/sin C.', 'Law of Cosines: c² = a² + b² - 2ab cos C.']
           }
         ],
-        correctAnswers: ['Elevation/depression angles: draw a right triangle', 'Law of Cosines: c² = a² + b² - 2ab cos C'],
-        hint1: 'Think about trig ratios & applications',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Elevation/depression angles: draw a right triangle from the scenario. Law of Cosines: c² = a² + b² - 2ab cos C.'
+        correctAnswers: ['draw a right triangle from the scenario.', 'a/sin A = b/sin B = c/sin C.', 'Law of Cosines: c² = a² + b² - 2ab cos C.'],
+        hint1: 'Think about what each concept specifically describes in Trig Ratios & Applications.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Trig Ratios & Applications describes a specific idea. Elevation/depression angles: draw a right triangle from the scenario. Law of Sines: a/sin A = b/sin B = c/sin C. Key Insight: Law of Cosines: c² = a² + b² - 2ab cos C.'
       }
     }
   ]

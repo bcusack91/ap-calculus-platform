@@ -18,20 +18,31 @@ Eat a balanced breakfast with protein and complex carbs.
       id: 'act-t5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes get a good night\'s sleep — at least 8 hours?',
+            question: 'What does "Get a good night\'s sleep — at least 8…" refer to in ACT prep?',
             options: [
-              'Get a good night\'s sleep — at least 8 hours is a key concept for ACT Math',
-              'Eat a balanced breakfast with protein and complex carbs',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'Eat a balanced breakfast with protein and complex carbs.',
+              'Get a good night\'s sleep — at least 8 hours.',
+              'Deep breaths between sections to reset your focus.',
+              'Arrive early — rushing increases anxiety.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Get a good night\'s sleep — at least 8 hours. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Mental Preparation, which explains Key Insight?',
+            options: [
+              'Arrive early — rushing increases anxiety.',
+              'Eat a balanced breakfast with protein and complex carbs.',
+              'Get a good night\'s sleep — at least 8 hours.',
+              'Deep breaths between sections to reset your focus.'
             ],
             correctAnswer: 0,
-            explanation: 'Get a good night\'s sleep — at least 8 hours'
+            explanation: 'Correct — Key Insight: Arrive early — rushing increases anxiety. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Eat a balanced breakfast with protein and complex carbs.
       id: 'act-t5-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for mental preparation?',
+            question: 'Regarding Mental Preparation, which correctly describes ACT Tip?',
             options: [
-              'Arrive early — rushing increases anxiety',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Arrive early — rushing increases anxiety.',
+              'Deep breaths between sections to reset your focus.',
+              'Get a good night\'s sleep — at least 8 hours.',
+              'Eat a balanced breakfast with protein and complex carbs.'
             ],
-            correctAnswer: 0,
-            explanation: 'Arrive early — rushing increases anxiety'
+            correctAnswer: 1,
+            explanation: 'Correct — ACT Tip: Deep breaths between sections to reset your focus. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ Eat a balanced breakfast with protein and complex carbs.
       id: 'act-t5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Mental Preparation:',
-            options: ['Get a good night\'s sleep — at least 8 hours', 'Eat a balanced breakfast with protein and complex ', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['Get a good night\'s sleep — at least 8 hours.', 'Eat a balanced breakfast with protein and complex carbs.', 'Arrive early — rushing increases anxiety.', 'Deep breaths between sections to reset your focus.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Arrive early — rushing increases anxiety', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'ACT Tip',
+            options: ['Get a good night\'s sleep — at least 8 hours.', 'Deep breaths between sections to reset your focus.', 'Arrive early — rushing increases anxiety.', 'Eat a balanced breakfast with protein and complex carbs.']
           }
         ],
-        correctAnswers: ['Get a good night\'s sleep — at least 8 hours', 'Arrive early — rushing increases anxiety'],
-        hint1: 'Think about mental preparation',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Get a good night\'s sleep — at least 8 hours. Arrive early — rushing increases anxiety.'
+        correctAnswers: ['Arrive early — rushing increases anxiety.', 'Deep breaths between sections to reset your focus.'],
+        hint1: 'Think about what each concept specifically describes in Mental Preparation.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Mental Preparation describes a specific idea. Key Insight: Arrive early — rushing increases anxiety. ACT Tip: Deep breaths between sections to reset your focus.'
       }
     }
   ]

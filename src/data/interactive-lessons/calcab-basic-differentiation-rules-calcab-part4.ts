@@ -30,31 +30,31 @@ rewrite f/g = f·g⁻¹ and use product rule with power rule
       id: 'basic4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of quotient rule?',
+            question: 'Which statement accurately explains Quotient Rule?',
             options: [
-              'Quotient Rule',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'rewrite f/g = f·g⁻¹ and use product rule with power rule',
+              'Low d-high minus high d-low, over the square of what\'s below',
+              'd/dx[f/g] = (gf\' - fg\')/g²',
+              'd/dx[f/g] = (f\'g - fg\')/g²'
             ],
-            correctAnswer: 0,
-            explanation: 'Quotient Rule: d/dx[f/g] = (f\'g - fg\')/g²'
+            correctAnswer: 3,
+            explanation: 'Correct — Quotient Rule: d/dx[f/g] = (f\'g - fg\')/g². The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of quotient rule, which is accurate?',
+            question: 'In the context of Quotient Rule, which explains Can also write as?',
             options: [
-              'd/dx[f/g] = (gf\' - fg\')/g²',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'd/dx[f/g] = (f\'g - fg\')/g²',
+              'rewrite f/g = f·g⁻¹ and use product rule with power rule',
+              'Low d-high minus high d-low, over the square of what\'s below',
+              'd/dx[f/g] = (gf\' - fg\')/g²'
             ],
-            correctAnswer: 0,
-            explanation: 'Can also write as: d/dx[f/g] = (gf\' - fg\')/g²'
+            correctAnswer: 3,
+            explanation: 'Correct — Can also write as: d/dx[f/g] = (gf\' - fg\')/g². Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ rewrite f/g = f·g⁻¹ and use product rule with power rule
       id: 'basic4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to quotient rule?',
+            question: 'Regarding Quotient Rule, which correctly describes Alternative?',
             options: [
+              'Low d-high minus high d-low, over the square of what\'s below',
+              'd/dx[f/g] = (gf\' - fg\')/g²',
               'rewrite f/g = f·g⁻¹ and use product rule with power rule',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'd/dx[f/g] = (f\'g - fg\')/g²'
             ],
-            correctAnswer: 0,
-            explanation: 'Alternative: rewrite f/g = f·g⁻¹ and use product rule with power rule'
+            correctAnswer: 2,
+            explanation: 'Correct — Alternative: rewrite f/g = f·g⁻¹ and use product rule with power rule. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ rewrite f/g = f·g⁻¹ and use product rule with power rule
       id: 'basic4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Quotient Rule',
-            options: ['d/dx[f/g] = (f\'g - fg\')/g²', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
-          },
-          {
-            label: 'Low d-high minus high d-low, over the square of what\'s below',
-            options: ['Low d-high minus high d-low, over the square of wh', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['d/dx[f/g] = (f\'g - fg\')/g²', 'Low d-high minus high d-low, over the square of what\'s below', 'd/dx[f/g] = (gf\' - fg\')/g²', 'rewrite f/g = f·g⁻¹ and use product rule with power rule']
           },
           {
             label: 'Can also write as',
-            options: ['d/dx[f/g] = (gf\' - fg\')/g²', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['d/dx[f/g] = (f\'g - fg\')/g²', 'rewrite f/g = f·g⁻¹ and use product rule with power rule', 'Low d-high minus high d-low, over the square of what\'s below', 'd/dx[f/g] = (gf\' - fg\')/g²']
+          },
+          {
+            label: 'Alternative',
+            options: ['d/dx[f/g] = (f\'g - fg\')/g²', 'd/dx[f/g] = (gf\' - fg\')/g²', 'rewrite f/g = f·g⁻¹ and use product rule with power rule', 'Low d-high minus high d-low, over the square of what\'s below']
           }
         ],
-        correctAnswers: ['d/dx[f/g] = (f\'g - fg\')/g²', 'Low d-high minus high d-low, over the square of wh', 'd/dx[f/g] = (gf\' - fg\')/g²'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Quotient Rule.'
+        correctAnswers: ['d/dx[f/g] = (f\'g - fg\')/g²', 'd/dx[f/g] = (gf\' - fg\')/g²', 'rewrite f/g = f·g⁻¹ and use product rule with power rule'],
+        hint1: 'Think about what each concept specifically describes in Quotient Rule.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Quotient Rule describes a specific idea. Quotient Rule: d/dx[f/g] = (f\'g - fg\')/g². Can also write as: d/dx[f/g] = (gf\' - fg\')/g². Alternative: rewrite f/g = f·g⁻¹ and use product rule with power rule.'
       }
     }
   ]

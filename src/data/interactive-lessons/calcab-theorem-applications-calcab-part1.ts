@@ -30,31 +30,31 @@ EVT guarantees existence; finding extrema requires calculation
       id: 'theor1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of extreme value theorem?',
+            question: 'Which of the following correctly describes EVT?',
             options: [
-              'EVT',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'Global max and min occur at critical points or endpoints',
+              'EVT guarantees existence; finding extrema requires calculation',
+              'Check f\' = 0, f\' undefined, and endpoints',
+              'a continuous function on [a,b] attains both a global max and a global min'
             ],
-            correctAnswer: 0,
-            explanation: 'EVT: a continuous function on [a,b] attains both a global max and a global min'
+            correctAnswer: 3,
+            explanation: 'Correct — EVT: a continuous function on [a,b] attains both a global max and a global min. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of extreme value theorem, which is accurate?',
+            question: 'Select the statement that correctly describes Check f\' = 0, f\' undefined, and…:',
             options: [
+              'a continuous function on [a,b] attains both a global max and a global min',
               'Check f\' = 0, f\' undefined, and endpoints',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Global max and min occur at critical points or endpoints',
+              'EVT guarantees existence; finding extrema requires calculation'
             ],
-            correctAnswer: 0,
-            explanation: 'Check f\' = 0, f\' undefined, and endpoints'
+            correctAnswer: 1,
+            explanation: 'Correct — Check f\' = 0, f\' undefined, and endpoints. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ EVT guarantees existence; finding extrema requires calculation
       id: 'theor1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to extreme value theorem?',
+            question: 'Which of these accurately represents EVT guarantees existence; finding…?',
             options: [
+              'Check f\' = 0, f\' undefined, and endpoints',
               'EVT guarantees existence; finding extrema requires calculation',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'Global max and min occur at critical points or endpoints',
+              'a continuous function on [a,b] attains both a global max and a global min'
             ],
-            correctAnswer: 0,
-            explanation: 'EVT guarantees existence; finding extrema requires calculation'
+            correctAnswer: 1,
+            explanation: 'Correct — EVT guarantees existence; finding extrema requires calculation. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ EVT guarantees existence; finding extrema requires calculation
       id: 'theor1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'EVT',
-            options: ['a continuous function on [a,b] attains both a glob', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['a continuous function on [a,b] attains both a global max and a global min', 'Check f\' = 0, f\' undefined, and endpoints', 'Global max and min occur at critical points or endpoints', 'EVT guarantees existence; finding extrema requires calculation']
           },
           {
-            label: 'Global max and min occur at critical points or endpoints',
-            options: ['Global max and min occur at critical points or end', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Global max and min occur at critical…',
+            options: ['Check f\' = 0, f\' undefined, and endpoints', 'a continuous function on [a,b] attains both a global max and a global min', 'EVT guarantees existence; finding extrema requires calculation', 'Global max and min occur at critical points or endpoints']
           },
           {
-            label: 'Check f\' = 0, f\' undefined, and endpoints',
-            options: ['Check f\' = 0, f\' undefined, and endpoints', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Check f\' = 0, f\' undefined, and…',
+            options: ['Global max and min occur at critical points or endpoints', 'a continuous function on [a,b] attains both a global max and a global min', 'EVT guarantees existence; finding extrema requires calculation', 'Check f\' = 0, f\' undefined, and endpoints']
           }
         ],
-        correctAnswers: ['a continuous function on [a,b] attains both a glob', 'Global max and min occur at critical points or end', 'Check f\' = 0, f\' undefined, and endpoints'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Extreme Value Theorem.'
+        correctAnswers: ['a continuous function on [a,b] attains both a global max and a global min', 'Global max and min occur at critical points or endpoints', 'Check f\' = 0, f\' undefined, and endpoints'],
+        hint1: 'Think about what each concept specifically describes in Theorem Applications.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Theorem Applications describes a specific idea. EVT: a continuous function on [a,b] attains both a global max and a global min. Global max and min occur at critical points or endpoints. Check f\' = 0, f\' undefined, and endpoints.'
       }
     }
   ]

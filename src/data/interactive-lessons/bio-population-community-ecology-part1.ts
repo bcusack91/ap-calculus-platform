@@ -19,31 +19,31 @@ export const bioPopulationPart1Data = {
       id: 'popu1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes exponential growth?',
+            question: 'What does "Exponential growth" refer to in biology?',
             options: [
-              'J-shaped curve, unlimited resources',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'S-shaped curve, limited resources',
+              'dN/dt = rN(K-N)/K (logistic growth equation)',
+              'dN/dt = rN (exponential growth equation)',
+              'J-shaped curve, unlimited resources'
             ],
-            correctAnswer: 0,
-            explanation: 'Exponential growth: J-shaped curve, unlimited resources'
+            correctAnswer: 3,
+            explanation: 'Correct — Exponential growth: J-shaped curve, unlimited resources. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of population growth models, which statement is accurate?',
+            question: 'Which of the following is true about Logistic growth?',
             options: [
-              'Logistic growth: S-shaped curve, limited resources',
-              'secruoser detimilnu ,evruc depahs-J :htworg laitnenopxE',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'S-shaped curve, limited resources',
+              'dN/dt = rN(K-N)/K (logistic growth equation)',
+              'J-shaped curve, unlimited resources',
+              'dN/dt = rN (exponential growth equation)'
             ],
             correctAnswer: 0,
-            explanation: 'Logistic growth: S-shaped curve, limited resources'
+            explanation: 'Correct — Logistic growth: S-shaped curve, limited resources. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioPopulationPart1Data = {
       id: 'popu1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to population growth models?',
+            question: 'Regarding Population Growth Models, which correctly describes dN/dt = rN(K-N)/K (logistic growth…?',
             options: [
               'dN/dt = rN(K-N)/K (logistic growth equation)',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'S-shaped curve, limited resources',
+              'dN/dt = rN (exponential growth equation)',
+              'J-shaped curve, unlimited resources'
             ],
             correctAnswer: 0,
-            explanation: 'dN/dt = rN(K-N)/K (logistic growth equation)'
+            explanation: 'Correct — dN/dt = rN(K-N)/K (logistic growth equation). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,24 @@ export const bioPopulationPart1Data = {
       id: 'popu1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Exponential growth is important in population growth models because',
-            options: ['J-shaped curve, unlimited resources', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Exponential growth',
+            options: ['S-shaped curve, limited resources', 'dN/dt = rN (exponential growth equation)', 'J-shaped curve, unlimited resources', 'dN/dt = rN(K-N)/K (logistic growth equation)']
           },
           {
-            label: 'dN/dt = rN (exponential growth equation) is important in population growth models because',
-            options: ['dN/dt = rN (exponential growth equation)', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
-          },
-          {
-            label: 'Logistic growth is important in population growth models because',
-            options: ['S-shaped curve, limited resources', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Logistic growth',
+            options: ['dN/dt = rN (exponential growth equation)', 'dN/dt = rN(K-N)/K (logistic growth equation)', 'J-shaped curve, unlimited resources', 'S-shaped curve, limited resources']
           }
         ],
-        correctAnswers: ['J-shaped curve, unlimited resources', 'dN/dt = rN (exponential growth equation)', 'S-shaped curve, limited resources'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Population Growth Models.'
+        correctAnswers: ['J-shaped curve, unlimited resources', 'S-shaped curve, limited resources'],
+        hint1: 'Think about what each concept specifically describes in Population Growth Models.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Population Growth Models describes a specific idea. Exponential growth: J-shaped curve, unlimited resources. Logistic growth: S-shaped curve, limited resources.'
       }
     }
   ]

@@ -30,31 +30,31 @@ Müller-Lyer, Ponzo, Ames room
       id: 'perce3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of perceptual constancies & illusions?',
+            question: 'Which statement accurately explains Size constancy?',
             options: [
-              'Size constancy',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'objects appear same shape despite viewing angle',
+              'colors appear same despite lighting changes',
+              'Müller-Lyer, Ponzo, Ames room',
+              'objects appear same size despite distance'
             ],
-            correctAnswer: 0,
-            explanation: 'Size constancy: objects appear same size despite distance'
+            correctAnswer: 3,
+            explanation: 'Correct — Size constancy: objects appear same size despite distance. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of perceptual constancies & illusions, which is accurate?',
+            question: 'In the context of Perceptual Constancies & Illusions, which explains Color constancy?',
             options: [
-              'colors appear same despite lighting changes',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'objects appear same size despite distance',
+              'objects appear same shape despite viewing angle',
+              'Müller-Lyer, Ponzo, Ames room',
+              'colors appear same despite lighting changes'
             ],
-            correctAnswer: 0,
-            explanation: 'Color constancy: colors appear same despite lighting changes'
+            correctAnswer: 3,
+            explanation: 'Correct — Color constancy: colors appear same despite lighting changes. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Müller-Lyer, Ponzo, Ames room
       id: 'perce3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Size constancy',
-            options: ['objects appear same size despite distance', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['colors appear same despite lighting changes', 'objects appear same size despite distance', 'objects appear same shape despite viewing angle', 'Müller-Lyer, Ponzo, Ames room']
           },
           {
             label: 'Shape constancy',
-            options: ['objects appear same shape despite viewing angle', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Müller-Lyer, Ponzo, Ames room', 'objects appear same shape despite viewing angle', 'objects appear same size despite distance', 'colors appear same despite lighting changes']
           },
           {
             label: 'Color constancy',
-            options: ['colors appear same despite lighting changes', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['colors appear same despite lighting changes', 'Müller-Lyer, Ponzo, Ames room', 'objects appear same shape despite viewing angle', 'objects appear same size despite distance']
           }
         ],
         correctAnswers: ['objects appear same size despite distance', 'objects appear same shape despite viewing angle', 'colors appear same despite lighting changes'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Perceptual Constancies & Illusions.'
+        hint1: 'Think about what each concept specifically describes in Perceptual Constancies & Illusions.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Perceptual Constancies & Illusions describes a specific idea. Size constancy: objects appear same size despite distance. Shape constancy: objects appear same shape despite viewing angle. Color constancy: colors appear same despite lighting changes.'
       }
     }
   ]

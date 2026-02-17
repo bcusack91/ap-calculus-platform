@@ -19,31 +19,31 @@ export const bioGeneRegPart1Data = {
       id: 'gene1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes all cells have same dna but different functions?',
+            question: 'What does "All cells have same DNA but different…" refer to in biology?',
             options: [
               'All cells have same DNA but different functions',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Responds to environmental signals',
+              'Gene regulation determines cell specialization',
+              'Saves energy by producing only needed proteins'
             ],
             correctAnswer: 0,
-            explanation: 'All cells have same DNA but different functions'
+            explanation: 'Correct — All cells have same DNA but different functions. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of why regulate genes?, which statement is accurate?',
+            question: 'In the context of Why Regulate Genes?, which explains Saves energy by producing only needed…?',
             options: [
+              'All cells have same DNA but different functions',
+              'Responds to environmental signals',
               'Saves energy by producing only needed proteins',
-              'snoitcnuf tnereffid tub AND emas evah sllec llA',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Gene regulation determines cell specialization'
             ],
-            correctAnswer: 0,
-            explanation: 'Saves energy by producing only needed proteins'
+            correctAnswer: 2,
+            explanation: 'Correct — Saves energy by producing only needed proteins. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioGeneRegPart1Data = {
       id: 'gene1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to why regulate genes??',
+            question: 'Regarding Why Regulate Genes?, which correctly describes Responds to environmental signals?',
             options: [
+              'Gene regulation determines cell specialization',
               'Responds to environmental signals',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'All cells have same DNA but different functions',
+              'Saves energy by producing only needed proteins'
             ],
-            correctAnswer: 0,
-            explanation: 'Responds to environmental signals'
+            correctAnswer: 1,
+            explanation: 'Correct — Responds to environmental signals. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioGeneRegPart1Data = {
       id: 'gene1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'All cells have same DNA but different functions is important in why regulate genes? because',
-            options: ['All cells have same DNA but different functions', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'All cells have same DNA but different…',
+            options: ['Saves energy by producing only needed proteins', 'All cells have same DNA but different functions', 'Gene regulation determines cell specialization', 'Responds to environmental signals']
           },
           {
-            label: 'Gene regulation determines cell specialization is important in why regulate genes? because',
-            options: ['Gene regulation determines cell specialization', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Gene regulation determines cell…',
+            options: ['Gene regulation determines cell specialization', 'Saves energy by producing only needed proteins', 'Responds to environmental signals', 'All cells have same DNA but different functions']
           },
           {
-            label: 'Saves energy by producing only needed proteins is important in why regulate genes? because',
-            options: ['Saves energy by producing only needed proteins', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Saves energy by producing only needed…',
+            options: ['Gene regulation determines cell specialization', 'All cells have same DNA but different functions', 'Saves energy by producing only needed proteins', 'Responds to environmental signals']
           }
         ],
         correctAnswers: ['All cells have same DNA but different functions', 'Gene regulation determines cell specialization', 'Saves energy by producing only needed proteins'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Why Regulate Genes?.'
+        hint1: 'Think about what each concept specifically describes in Why Regulate Genes?.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Why Regulate Genes? describes a specific idea. All cells have same DNA but different functions. Gene regulation determines cell specialization. Saves energy by producing only needed proteins.'
       }
     }
   ]

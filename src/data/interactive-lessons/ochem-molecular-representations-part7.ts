@@ -30,31 +30,31 @@ reading and drawing organic structures
       id: 'molec7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of synthesis & review?',
+            question: 'Which of the following correctly describes Molecular representation is the…?',
             options: [
+              'Functional groups predict reactivity patterns',
               'Molecular representation is the language of organic chemistry',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'reading and drawing organic structures',
+              'Isomers demonstrate structure-property relationships'
             ],
-            correctAnswer: 0,
-            explanation: 'Molecular representation is the language of organic chemistry'
+            correctAnswer: 1,
+            explanation: 'Correct — Molecular representation is the language of organic chemistry. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of synthesis & review, which is accurate?',
+            question: 'Select the statement that correctly describes Isomers demonstrate structure-property…:',
             options: [
+              'Molecular representation is the language of organic chemistry',
+              'reading and drawing organic structures',
               'Isomers demonstrate structure-property relationships',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Functional groups predict reactivity patterns'
             ],
-            correctAnswer: 0,
-            explanation: 'Isomers demonstrate structure-property relationships'
+            correctAnswer: 2,
+            explanation: 'Correct — Isomers demonstrate structure-property relationships. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ reading and drawing organic structures
       id: 'molec7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Molecular representation is the language of organic chemistry',
-            options: ['Molecular representation is the language of organi', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Molecular representation is the…',
+            options: ['Molecular representation is the language of organic chemistry', 'reading and drawing organic structures', 'Functional groups predict reactivity patterns', 'Isomers demonstrate structure-property relationships']
           },
           {
-            label: 'Functional groups predict reactivity patterns',
-            options: ['Functional groups predict reactivity patterns', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Functional groups predict reactivity…',
+            options: ['Isomers demonstrate structure-property relationships', 'Functional groups predict reactivity patterns', 'reading and drawing organic structures', 'Molecular representation is the language of organic chemistry']
           },
           {
-            label: 'Isomers demonstrate structure-property relationships',
-            options: ['Isomers demonstrate structure-property relationshi', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Isomers demonstrate structure-property…',
+            options: ['Molecular representation is the language of organic chemistry', 'Functional groups predict reactivity patterns', 'reading and drawing organic structures', 'Isomers demonstrate structure-property relationships']
           }
         ],
-        correctAnswers: ['Molecular representation is the language of organi', 'Functional groups predict reactivity patterns', 'Isomers demonstrate structure-property relationshi'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Synthesis & Review.'
+        correctAnswers: ['Molecular representation is the language of organic chemistry', 'Functional groups predict reactivity patterns', 'Isomers demonstrate structure-property relationships'],
+        hint1: 'Think about what each concept specifically describes in Synthesis & Review.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Synthesis & Review describes a specific idea. Molecular representation is the language of organic chemistry. Functional groups predict reactivity patterns. Isomers demonstrate structure-property relationships.'
       }
     }
   ]

@@ -30,31 +30,31 @@ procedural memory, conditioning
       id: 'memor4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of long-term memory types?',
+            question: 'What does "Explicit (declarative)" refer to in psychology?',
             options: [
-              'Explicit (declarative)',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'procedural memory, conditioning',
+              'conscious recall',
+              'personal events (what you had for breakfast)',
+              'general knowledge (the capital of France)'
             ],
-            correctAnswer: 0,
-            explanation: 'Explicit (declarative): conscious recall'
+            correctAnswer: 1,
+            explanation: 'Correct — Explicit (declarative): conscious recall. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of long-term memory types, which is accurate?',
+            question: 'Select the statement that correctly describes Semantic:',
             options: [
               'general knowledge (the capital of France)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'conscious recall',
+              'procedural memory, conditioning',
+              'personal events (what you had for breakfast)'
             ],
             correctAnswer: 0,
-            explanation: 'Semantic: general knowledge (the capital of France)'
+            explanation: 'Correct — Semantic: general knowledge (the capital of France). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ procedural memory, conditioning
       id: 'memor4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Explicit (declarative)',
-            options: ['conscious recall', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['general knowledge (the capital of France)', 'personal events (what you had for breakfast)', 'procedural memory, conditioning', 'conscious recall']
           },
           {
             label: 'Episodic',
-            options: ['personal events (what you had for breakfast)', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['conscious recall', 'personal events (what you had for breakfast)', 'general knowledge (the capital of France)', 'procedural memory, conditioning']
           },
           {
             label: 'Semantic',
-            options: ['general knowledge (the capital of France)', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['conscious recall', 'general knowledge (the capital of France)', 'procedural memory, conditioning', 'personal events (what you had for breakfast)']
           }
         ],
         correctAnswers: ['conscious recall', 'personal events (what you had for breakfast)', 'general knowledge (the capital of France)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Long-Term Memory Types.'
+        hint1: 'Think about what each concept specifically describes in Long-Term Memory Types.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Long-Term Memory Types describes a specific idea. Explicit (declarative): conscious recall. Episodic: personal events (what you had for breakfast). Semantic: general knowledge (the capital of France).'
       }
     }
   ]

@@ -30,31 +30,31 @@ grouping items to expand capacity
       id: 'memor3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of sensory & short-term memory?',
+            question: 'What does "Sensory memory" refer to in psychology?',
             options: [
-              'Sensory memory',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'brief (~0.5s visual, ~3-4s auditory)',
+              'grouping items to expand capacity',
+              '7±2 items, ~20 seconds without rehearsal',
+              'Iconic memory (visual) and echoic memory (auditory)'
             ],
             correctAnswer: 0,
-            explanation: 'Sensory memory: brief (~0.5s visual, ~3-4s auditory)'
+            explanation: 'Correct — Sensory memory: brief (~0.5s visual, ~3-4s auditory). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of sensory & short-term memory, which is accurate?',
+            question: 'Which of the following is true about Short-term memory?',
             options: [
+              'Iconic memory (visual) and echoic memory (auditory)',
+              'brief (~0.5s visual, ~3-4s auditory)',
               '7±2 items, ~20 seconds without rehearsal',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'grouping items to expand capacity'
             ],
-            correctAnswer: 0,
-            explanation: 'Short-term memory: 7±2 items, ~20 seconds without rehearsal'
+            correctAnswer: 2,
+            explanation: 'Correct — Short-term memory: 7±2 items, ~20 seconds without rehearsal. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ grouping items to expand capacity
       id: 'memor3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Sensory memory',
-            options: ['brief (~0.5s visual, ~3-4s auditory)', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
-          },
-          {
-            label: 'Iconic memory (visual) and echoic memory (auditory)',
-            options: ['Iconic memory (visual) and echoic memory (auditory', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['7±2 items, ~20 seconds without rehearsal', 'brief (~0.5s visual, ~3-4s auditory)', 'grouping items to expand capacity', 'Iconic memory (visual) and echoic memory (auditory)']
           },
           {
             label: 'Short-term memory',
-            options: ['7±2 items, ~20 seconds without rehearsal', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['brief (~0.5s visual, ~3-4s auditory)', '7±2 items, ~20 seconds without rehearsal', 'grouping items to expand capacity', 'Iconic memory (visual) and echoic memory (auditory)']
+          },
+          {
+            label: 'Chunking',
+            options: ['Iconic memory (visual) and echoic memory (auditory)', '7±2 items, ~20 seconds without rehearsal', 'brief (~0.5s visual, ~3-4s auditory)', 'grouping items to expand capacity']
           }
         ],
-        correctAnswers: ['brief (~0.5s visual, ~3-4s auditory)', 'Iconic memory (visual) and echoic memory (auditory', '7±2 items, ~20 seconds without rehearsal'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Sensory & Short-Term Memory.'
+        correctAnswers: ['brief (~0.5s visual, ~3-4s auditory)', '7±2 items, ~20 seconds without rehearsal', 'grouping items to expand capacity'],
+        hint1: 'Think about what each concept specifically describes in Sensory & Short-Term Memory.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Sensory & Short-Term Memory describes a specific idea. Sensory memory: brief (~0.5s visual, ~3-4s auditory). Short-term memory: 7±2 items, ~20 seconds without rehearsal. Chunking: grouping items to expand capacity.'
       }
     }
   ]

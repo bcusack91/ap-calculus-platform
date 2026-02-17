@@ -19,31 +19,31 @@ export const bioGeneRegPart6Data = {
       id: 'gene6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes predicting gene expression in different conditions?',
+            question: 'Which statement accurately explains Predicting gene expression in different…?',
             options: [
+              'Evaluating epigenetic effects',
+              'Analyzing operon diagrams',
               'Predicting gene expression in different conditions',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Connecting regulation to differentiation'
             ],
-            correctAnswer: 0,
-            explanation: 'Predicting gene expression in different conditions'
+            correctAnswer: 2,
+            explanation: 'Correct — Predicting gene expression in different conditions. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of problem-solving, which statement is accurate?',
+            question: 'Select the statement that correctly describes Connecting regulation to differentiation:',
             options: [
+              'Evaluating epigenetic effects',
+              'Predicting gene expression in different conditions',
               'Connecting regulation to differentiation',
-              'snoitidnoc tnereffid ni noisserpxe eneg gnitciderP',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Analyzing operon diagrams'
             ],
-            correctAnswer: 0,
-            explanation: 'Connecting regulation to differentiation'
+            correctAnswer: 2,
+            explanation: 'Correct — Connecting regulation to differentiation. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioGeneRegPart6Data = {
       id: 'gene6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to problem-solving?',
+            question: 'Which statement about Evaluating epigenetic effects is correct?',
             options: [
+              'Analyzing operon diagrams',
+              'Connecting regulation to differentiation',
               'Evaluating epigenetic effects',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Predicting gene expression in different conditions'
             ],
-            correctAnswer: 0,
-            explanation: 'Evaluating epigenetic effects'
+            correctAnswer: 2,
+            explanation: 'Correct — Evaluating epigenetic effects. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioGeneRegPart6Data = {
       id: 'gene6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Predicting gene expression in different conditions is important in problem-solving because',
-            options: ['Predicting gene expression in different conditions', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Predicting gene expression in different…',
+            options: ['Connecting regulation to differentiation', 'Evaluating epigenetic effects', 'Predicting gene expression in different conditions', 'Analyzing operon diagrams']
           },
           {
-            label: 'Analyzing operon diagrams is important in problem-solving because',
-            options: ['Analyzing operon diagrams', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Analyzing operon diagrams',
+            options: ['Connecting regulation to differentiation', 'Evaluating epigenetic effects', 'Predicting gene expression in different conditions', 'Analyzing operon diagrams']
           },
           {
-            label: 'Connecting regulation to differentiation is important in problem-solving because',
-            options: ['Connecting regulation to differentiation', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Connecting regulation to differentiation',
+            options: ['Connecting regulation to differentiation', 'Evaluating epigenetic effects', 'Analyzing operon diagrams', 'Predicting gene expression in different conditions']
           }
         ],
         correctAnswers: ['Predicting gene expression in different conditions', 'Analyzing operon diagrams', 'Connecting regulation to differentiation'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving.'
+        hint1: 'Think about what each concept specifically describes in Gene Regulation: Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Gene Regulation: Problem-Solving Workshop describes a specific idea. Predicting gene expression in different conditions. Analyzing operon diagrams. Connecting regulation to differentiation.'
       }
     }
   ]

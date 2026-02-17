@@ -19,31 +19,31 @@ export const bioBiotechPart3Data = {
       id: 'biot3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes recombinant dna?',
+            question: 'Which of the following correctly describes Recombinant DNA?',
             options: [
               'combining DNA from different sources',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'insulin production, Bt crops, gene therapy',
+              'Transgenic organisms express foreign genes',
+              'Plasmid vectors carry foreign genes into bacteria'
             ],
             correctAnswer: 0,
-            explanation: 'Recombinant DNA: combining DNA from different sources'
+            explanation: 'Correct — Recombinant DNA: combining DNA from different sources. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of genetic engineering & gmos, which statement is accurate?',
+            question: 'Select the statement that correctly describes Transgenic organisms express foreign…:',
             options: [
+              'Plasmid vectors carry foreign genes into bacteria',
+              'insulin production, Bt crops, gene therapy',
               'Transgenic organisms express foreign genes',
-              'secruos tnereffid morf AND gninibmoc :AND tnanibmoceR',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'combining DNA from different sources'
             ],
-            correctAnswer: 0,
-            explanation: 'Transgenic organisms express foreign genes'
+            correctAnswer: 2,
+            explanation: 'Correct — Transgenic organisms express foreign genes. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioBiotechPart3Data = {
       id: 'biot3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to genetic engineering & gmos?',
+            question: 'Which statement about Applications is correct?',
             options: [
-              'Applications: insulin production, Bt crops, gene therapy',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Plasmid vectors carry foreign genes into bacteria',
+              'insulin production, Bt crops, gene therapy',
+              'combining DNA from different sources',
+              'Transgenic organisms express foreign genes'
             ],
-            correctAnswer: 0,
-            explanation: 'Applications: insulin production, Bt crops, gene therapy'
+            correctAnswer: 1,
+            explanation: 'Correct — Applications: insulin production, Bt crops, gene therapy. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,24 @@ export const bioBiotechPart3Data = {
       id: 'biot3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Recombinant DNA is important in genetic engineering & gmos because',
-            options: ['combining DNA from different sources', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Recombinant DNA',
+            options: ['combining DNA from different sources', 'insulin production, Bt crops, gene therapy', 'Transgenic organisms express foreign genes', 'Plasmid vectors carry foreign genes into bacteria']
           },
           {
-            label: 'Plasmid vectors carry foreign genes into bacteria is important in genetic engineering & gmos because',
-            options: ['Plasmid vectors carry foreign genes into bacteria', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
-          },
-          {
-            label: 'Transgenic organisms express foreign genes is important in genetic engineering & gmos because',
-            options: ['Transgenic organisms express foreign genes', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Applications',
+            options: ['Transgenic organisms express foreign genes', 'insulin production, Bt crops, gene therapy', 'Plasmid vectors carry foreign genes into bacteria', 'combining DNA from different sources']
           }
         ],
-        correctAnswers: ['combining DNA from different sources', 'Plasmid vectors carry foreign genes into bacteria', 'Transgenic organisms express foreign genes'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Genetic Engineering & GMOs.'
+        correctAnswers: ['combining DNA from different sources', 'insulin production, Bt crops, gene therapy'],
+        hint1: 'Think about what each concept specifically describes in Genetic Engineering & GMOs.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Genetic Engineering & GMOs describes a specific idea. Recombinant DNA: combining DNA from different sources. Applications: insulin production, Bt crops, gene therapy.'
       }
     }
   ]

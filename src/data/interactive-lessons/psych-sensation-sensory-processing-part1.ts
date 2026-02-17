@@ -30,31 +30,31 @@ Bottom-up vs top-down processing
       id: 'sensa1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of introduction to sensation?',
+            question: 'Which statement accurately explains Sensation?',
             options: [
-              'Sensation',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'Bottom-up vs top-down processing',
+              'interpreting stimuli',
+              'detecting stimuli',
+              'converting physical energy to neural signals'
             ],
-            correctAnswer: 0,
-            explanation: 'Sensation: detecting stimuli'
+            correctAnswer: 2,
+            explanation: 'Correct — Sensation: detecting stimuli. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of introduction to sensation, which is accurate?',
+            question: 'In the context of Sensation & Sensory Processing, which explains Transduction?',
             options: [
               'converting physical energy to neural signals',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Bottom-up vs top-down processing',
+              'detecting stimuli',
+              'interpreting stimuli'
             ],
             correctAnswer: 0,
-            explanation: 'Transduction: converting physical energy to neural signals'
+            explanation: 'Correct — Transduction: converting physical energy to neural signals. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Bottom-up vs top-down processing
       id: 'sensa1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Sensation',
-            options: ['detecting stimuli', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Bottom-up vs top-down processing', 'converting physical energy to neural signals', 'interpreting stimuli', 'detecting stimuli']
           },
           {
             label: 'Perception',
-            options: ['interpreting stimuli', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['converting physical energy to neural signals', 'detecting stimuli', 'Bottom-up vs top-down processing', 'interpreting stimuli']
           },
           {
             label: 'Transduction',
-            options: ['converting physical energy to neural signals', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['converting physical energy to neural signals', 'detecting stimuli', 'interpreting stimuli', 'Bottom-up vs top-down processing']
           }
         ],
         correctAnswers: ['detecting stimuli', 'interpreting stimuli', 'converting physical energy to neural signals'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Introduction to Sensation.'
+        hint1: 'Think about what each concept specifically describes in Sensation & Sensory Processing.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Sensation & Sensory Processing describes a specific idea. Sensation: detecting stimuli. Perception: interpreting stimuli. Transduction: converting physical energy to neural signals.'
       }
     }
   ]

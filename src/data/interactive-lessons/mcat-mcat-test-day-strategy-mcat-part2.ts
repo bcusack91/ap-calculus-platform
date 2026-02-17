@@ -71,23 +71,28 @@ Content review: 1-2 months; Practice passages: 2-3 months; Full-length tests: fi
       id: 'mcat-2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Study Planning:',
-            options: ['3-6 month study timeline is typical for most students', 'Content review: 1-2 months; Practice passages: 2-3 months; F', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Content review',
+            options: ['Track your performance by topic to identify and target weak areas.', '1-2 months; Practice passages: 2-3 months; Full-length tests: final month.', '3-6 month study timeline is typical for most students.', 'Use spaced repetition (Anki) for high-yield facts and formulas.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Use spaced repetition (Anki) for high-yield facts and formul', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Key Insight',
+            options: ['3-6 month study timeline is typical for most students.', 'Track your performance by topic to identify and target weak areas.', '1-2 months; Practice passages: 2-3 months; Full-length tests: final month.', 'Use spaced repetition (Anki) for high-yield facts and formulas.']
+          },
+          {
+            label: 'MCAT Tip',
+            options: ['Use spaced repetition (Anki) for high-yield facts and formulas.', '1-2 months; Practice passages: 2-3 months; Full-length tests: final month.', 'Track your performance by topic to identify and target weak areas.', '3-6 month study timeline is typical for most students.']
           }
         ],
-        correctAnswers: ['3-6 month study timeline is typical for most students', 'Use spaced repetition (Anki) for high-yield facts and formul'],
-        hint1: 'Think about study planning',
-        hint2: 'Consider the MCAT application',
-        explanation: '3-6 month study timeline is typical for most students. Use spaced repetition (Anki) for high-yield facts and formulas.'
+        correctAnswers: ['1-2 months; Practice passages: 2-3 months; Full-length tests: final month.', 'Use spaced repetition (Anki) for high-yield facts and formulas.', 'Track your performance by topic to identify and target weak areas.'],
+        hint1: 'Think about what each concept specifically describes in Study Planning.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Study Planning describes a specific idea. Content review: 1-2 months; Practice passages: 2-3 months; Full-length tests: final month. Key Insight: Use spaced repetition (Anki) for high-yield facts and formulas. MCAT Tip: Track your performance by topic to identify and target weak areas.'
       }
     }
   ]

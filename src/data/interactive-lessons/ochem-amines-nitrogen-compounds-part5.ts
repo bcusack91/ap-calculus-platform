@@ -30,31 +30,31 @@ Diazonium salts are versatile synthetic intermediates
       id: 'amine5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of diazonium chemistry?',
+            question: 'What does "Diazotization" refer to in this topic?',
             options: [
-              'Diazotization',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'ArN₂⁺ + CuX → ArX (X = Cl, Br, CN)',
+              'ArN₂⁺ + ArOH → azo dye',
+              'Diazonium salts are versatile synthetic intermediates',
+              'primary aromatic amine + HNO₂ → diazonium salt (ArN₂⁺)'
             ],
-            correctAnswer: 0,
-            explanation: 'Diazotization: primary aromatic amine + HNO₂ → diazonium salt (ArN₂⁺)'
+            correctAnswer: 3,
+            explanation: 'Correct — Diazotization: primary aromatic amine + HNO₂ → diazonium salt (ArN₂⁺). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of diazonium chemistry, which is accurate?',
+            question: 'Select the statement that correctly describes Diazo coupling:',
             options: [
-              'ArN₂⁺ + ArOH → azo dye',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'primary aromatic amine + HNO₂ → diazonium salt (ArN₂⁺)',
+              'Diazonium salts are versatile synthetic intermediates',
+              'ArN₂⁺ + CuX → ArX (X = Cl, Br, CN)',
+              'ArN₂⁺ + ArOH → azo dye'
             ],
-            correctAnswer: 0,
-            explanation: 'Diazo coupling: ArN₂⁺ + ArOH → azo dye'
+            correctAnswer: 3,
+            explanation: 'Correct — Diazo coupling: ArN₂⁺ + ArOH → azo dye. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Diazonium salts are versatile synthetic intermediates
       id: 'amine5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Diazotization',
-            options: ['primary aromatic amine + HNO₂ → diazonium salt (Ar', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['ArN₂⁺ + CuX → ArX (X = Cl, Br, CN)', 'Diazonium salts are versatile synthetic intermediates', 'ArN₂⁺ + ArOH → azo dye', 'primary aromatic amine + HNO₂ → diazonium salt (ArN₂⁺)']
           },
           {
             label: 'Sandmeyer reaction',
-            options: ['ArN₂⁺ + CuX → ArX (X = Cl, Br, CN)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Diazonium salts are versatile synthetic intermediates', 'primary aromatic amine + HNO₂ → diazonium salt (ArN₂⁺)', 'ArN₂⁺ + ArOH → azo dye', 'ArN₂⁺ + CuX → ArX (X = Cl, Br, CN)']
           },
           {
             label: 'Diazo coupling',
-            options: ['ArN₂⁺ + ArOH → azo dye', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['ArN₂⁺ + ArOH → azo dye', 'primary aromatic amine + HNO₂ → diazonium salt (ArN₂⁺)', 'ArN₂⁺ + CuX → ArX (X = Cl, Br, CN)', 'Diazonium salts are versatile synthetic intermediates']
           }
         ],
-        correctAnswers: ['primary aromatic amine + HNO₂ → diazonium salt (Ar', 'ArN₂⁺ + CuX → ArX (X = Cl, Br, CN)', 'ArN₂⁺ + ArOH → azo dye'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Diazonium Chemistry.'
+        correctAnswers: ['primary aromatic amine + HNO₂ → diazonium salt (ArN₂⁺)', 'ArN₂⁺ + CuX → ArX (X = Cl, Br, CN)', 'ArN₂⁺ + ArOH → azo dye'],
+        hint1: 'Think about what each concept specifically describes in Diazonium Chemistry.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Diazonium Chemistry describes a specific idea. Diazotization: primary aromatic amine + HNO₂ → diazonium salt (ArN₂⁺). Sandmeyer reaction: ArN₂⁺ + CuX → ArX (X = Cl, Br, CN). Diazo coupling: ArN₂⁺ + ArOH → azo dye.'
       }
     }
   ]

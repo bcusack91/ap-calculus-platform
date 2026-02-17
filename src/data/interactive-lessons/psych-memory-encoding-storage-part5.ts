@@ -30,31 +30,31 @@ neural basis of memory
       id: 'memor5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of memory storage?',
-            options: [
-              'Hippocampus',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
-            ],
-            correctAnswer: 0,
-            explanation: 'Hippocampus: converts short-term to long-term memory'
-          },
-          {
-            question: 'In the context of memory storage, which is accurate?',
+            question: 'What does "Hippocampus" refer to in psychology?',
             options: [
               'procedural/motor memory',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'neural basis of memory',
+              'converts short-term to long-term memory',
+              'emotional memories'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Hippocampus: converts short-term to long-term memory. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Cerebellum:',
+            options: [
+              'procedural/motor memory',
+              'neural basis of memory',
+              'converts short-term to long-term memory',
+              'emotional memories'
             ],
             correctAnswer: 0,
-            explanation: 'Cerebellum: procedural/motor memory'
+            explanation: 'Correct — Cerebellum: procedural/motor memory. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ neural basis of memory
       id: 'memor5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Hippocampus',
-            options: ['converts short-term to long-term memory', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['converts short-term to long-term memory', 'neural basis of memory', 'procedural/motor memory', 'emotional memories']
           },
           {
             label: 'Amygdala',
-            options: ['emotional memories', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['procedural/motor memory', 'neural basis of memory', 'emotional memories', 'converts short-term to long-term memory']
           },
           {
             label: 'Cerebellum',
-            options: ['procedural/motor memory', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['procedural/motor memory', 'converts short-term to long-term memory', 'neural basis of memory', 'emotional memories']
           }
         ],
         correctAnswers: ['converts short-term to long-term memory', 'emotional memories', 'procedural/motor memory'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Memory Storage.'
+        hint1: 'Think about what each concept specifically describes in Memory Storage.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Memory Storage describes a specific idea. Hippocampus: converts short-term to long-term memory. Amygdala: emotional memories. Cerebellum: procedural/motor memory.'
       }
     }
   ]

@@ -30,31 +30,31 @@ Calculating bond order from MO diagrams
       id: 'atomi6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of problem-solving workshop?',
+            question: 'What does "Drawing Lewis structures and assigning…" refer to in this topic?',
             options: [
-              'Drawing Lewis structures and assigning formal charges',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'Determining hybridization from structure',
+              'Calculating bond order from MO diagrams',
+              'Predicting molecular geometry',
+              'Drawing Lewis structures and assigning formal charges'
             ],
-            correctAnswer: 0,
-            explanation: 'Drawing Lewis structures and assigning formal charges'
+            correctAnswer: 3,
+            explanation: 'Correct — Drawing Lewis structures and assigning formal charges. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of problem-solving workshop, which is accurate?',
+            question: 'Which of the following is true about Predicting molecular geometry?',
             options: [
               'Predicting molecular geometry',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Determining hybridization from structure',
+              'Calculating bond order from MO diagrams',
+              'Drawing Lewis structures and assigning formal charges'
             ],
             correctAnswer: 0,
-            explanation: 'Predicting molecular geometry'
+            explanation: 'Correct — Predicting molecular geometry. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Calculating bond order from MO diagrams
       id: 'atomi6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Drawing Lewis structures and assigning formal charges',
-            options: ['Drawing Lewis structures and assigning formal char', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Drawing Lewis structures and assigning…',
+            options: ['Drawing Lewis structures and assigning formal charges', 'Determining hybridization from structure', 'Predicting molecular geometry', 'Calculating bond order from MO diagrams']
           },
           {
             label: 'Determining hybridization from structure',
-            options: ['Determining hybridization from structure', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Predicting molecular geometry', 'Determining hybridization from structure', 'Drawing Lewis structures and assigning formal charges', 'Calculating bond order from MO diagrams']
           },
           {
             label: 'Predicting molecular geometry',
-            options: ['Predicting molecular geometry', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Calculating bond order from MO diagrams', 'Drawing Lewis structures and assigning formal charges', 'Predicting molecular geometry', 'Determining hybridization from structure']
           }
         ],
-        correctAnswers: ['Drawing Lewis structures and assigning formal char', 'Determining hybridization from structure', 'Predicting molecular geometry'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving Workshop.'
+        correctAnswers: ['Drawing Lewis structures and assigning formal charges', 'Determining hybridization from structure', 'Predicting molecular geometry'],
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Drawing Lewis structures and assigning formal charges. Determining hybridization from structure. Predicting molecular geometry.'
       }
     }
   ]

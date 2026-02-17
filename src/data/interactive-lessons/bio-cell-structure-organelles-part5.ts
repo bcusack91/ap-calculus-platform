@@ -19,31 +19,31 @@ export const bioCellStructurePart5Data = {
       id: 'cell5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes microfilaments (actin)?',
+            question: 'Which statement accurately explains Microfilaments (actin)?',
             options: [
               'cell movement, 7nm',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'structural support',
+              'cell division, transport, 25nm',
+              'collagen, fibronectin, proteoglycans'
             ],
             correctAnswer: 0,
-            explanation: 'Microfilaments (actin): cell movement, 7nm'
+            explanation: 'Correct — Microfilaments (actin): cell movement, 7nm. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of cytoskeleton & extracellular matrix, which statement is accurate?',
+            question: 'In the context of Cytoskeleton & Extracellular Matrix, which explains Microtubules (tubulin)?',
             options: [
-              'Microtubules (tubulin): cell division, transport, 25nm',
-              'mn7 ,tnemevom llec :)nitca( stnemaliforciM',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'structural support',
+              'cell movement, 7nm',
+              'collagen, fibronectin, proteoglycans',
+              'cell division, transport, 25nm'
             ],
-            correctAnswer: 0,
-            explanation: 'Microtubules (tubulin): cell division, transport, 25nm'
+            correctAnswer: 3,
+            explanation: 'Correct — Microtubules (tubulin): cell division, transport, 25nm. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioCellStructurePart5Data = {
       id: 'cell5-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to cytoskeleton & extracellular matrix?',
+            question: 'Regarding Cytoskeleton & Extracellular Matrix, which correctly describes ECM?',
             options: [
-              'ECM: collagen, fibronectin, proteoglycans',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'cell movement, 7nm',
+              'collagen, fibronectin, proteoglycans',
+              'structural support',
+              'cell division, transport, 25nm'
             ],
-            correctAnswer: 0,
-            explanation: 'ECM: collagen, fibronectin, proteoglycans'
+            correctAnswer: 1,
+            explanation: 'Correct — ECM: collagen, fibronectin, proteoglycans. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioCellStructurePart5Data = {
       id: 'cell5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Microfilaments (actin) is important in cytoskeleton & extracellular matrix because',
-            options: ['cell movement, 7nm', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Microfilaments (actin)',
+            options: ['cell division, transport, 25nm', 'cell movement, 7nm', 'structural support', 'collagen, fibronectin, proteoglycans']
           },
           {
-            label: 'Intermediate filaments is important in cytoskeleton & extracellular matrix because',
-            options: ['structural support', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Intermediate filaments',
+            options: ['collagen, fibronectin, proteoglycans', 'cell division, transport, 25nm', 'structural support', 'cell movement, 7nm']
           },
           {
-            label: 'Microtubules (tubulin) is important in cytoskeleton & extracellular matrix because',
-            options: ['cell division, transport, 25nm', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Microtubules (tubulin)',
+            options: ['cell division, transport, 25nm', 'structural support', 'collagen, fibronectin, proteoglycans', 'cell movement, 7nm']
           }
         ],
         correctAnswers: ['cell movement, 7nm', 'structural support', 'cell division, transport, 25nm'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Cytoskeleton & Extracellular Matrix.'
+        hint1: 'Think about what each concept specifically describes in Cytoskeleton & Extracellular Matrix.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Cytoskeleton & Extracellular Matrix describes a specific idea. Microfilaments (actin): cell movement, 7nm. Intermediate filaments: structural support. Microtubules (tubulin): cell division, transport, 25nm.'
       }
     }
   ]

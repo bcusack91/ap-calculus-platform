@@ -30,31 +30,31 @@ Unconscious mind influences behavior
       id: 'perso1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of psychodynamic perspective?',
-            options: [
-              'Freud',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
-            ],
-            correctAnswer: 0,
-            explanation: 'Freud: id (pleasure), ego (reality), superego (morality)'
-          },
-          {
-            question: 'In the context of psychodynamic perspective, which is accurate?',
+            question: 'What does "Freud" refer to in psychology?',
             options: [
               'oral, anal, phallic, latency, genital',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Unconscious mind influences behavior',
+              'repression, projection, rationalization, displacement',
+              'id (pleasure), ego (reality), superego (morality)'
             ],
-            correctAnswer: 0,
-            explanation: 'Psychosexual stages: oral, anal, phallic, latency, genital'
+            correctAnswer: 3,
+            explanation: 'Correct — Freud: id (pleasure), ego (reality), superego (morality). The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Psychosexual stages:',
+            options: [
+              'Unconscious mind influences behavior',
+              'oral, anal, phallic, latency, genital',
+              'repression, projection, rationalization, displacement',
+              'id (pleasure), ego (reality), superego (morality)'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Psychosexual stages: oral, anal, phallic, latency, genital. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Unconscious mind influences behavior
       id: 'perso1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Freud',
-            options: ['id (pleasure), ego (reality), superego (morality)', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['oral, anal, phallic, latency, genital', 'repression, projection, rationalization, displacement', 'Unconscious mind influences behavior', 'id (pleasure), ego (reality), superego (morality)']
           },
           {
             label: 'Defense mechanisms',
-            options: ['repression, projection, rationalization, displacem', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Unconscious mind influences behavior', 'oral, anal, phallic, latency, genital', 'id (pleasure), ego (reality), superego (morality)', 'repression, projection, rationalization, displacement']
           },
           {
             label: 'Psychosexual stages',
-            options: ['oral, anal, phallic, latency, genital', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['oral, anal, phallic, latency, genital', 'id (pleasure), ego (reality), superego (morality)', 'repression, projection, rationalization, displacement', 'Unconscious mind influences behavior']
           }
         ],
-        correctAnswers: ['id (pleasure), ego (reality), superego (morality)', 'repression, projection, rationalization, displacem', 'oral, anal, phallic, latency, genital'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Psychodynamic Perspective.'
+        correctAnswers: ['id (pleasure), ego (reality), superego (morality)', 'repression, projection, rationalization, displacement', 'oral, anal, phallic, latency, genital'],
+        hint1: 'Think about what each concept specifically describes in Personality Theories.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Personality Theories describes a specific idea. Freud: id (pleasure), ego (reality), superego (morality). Defense mechanisms: repression, projection, rationalization, displacement. Psychosexual stages: oral, anal, phallic, latency, genital.'
       }
     }
   ]

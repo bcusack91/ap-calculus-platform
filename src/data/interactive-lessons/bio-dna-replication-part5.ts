@@ -19,31 +19,31 @@ export const bioDnaReplicationPart5Data = {
       id: 'dna-5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes telomeres?',
+            question: 'What does "Telomeres" refer to in biology?',
             options: [
+              'Shorten with each replication (end replication problem)',
               'repetitive sequences at chromosome ends (TTAGGG)',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Active in stem cells and cancer cells; inactive in most somatic cells',
+              'enzyme that extends telomeres'
             ],
-            correctAnswer: 0,
-            explanation: 'Telomeres: repetitive sequences at chromosome ends (TTAGGG)'
+            correctAnswer: 1,
+            explanation: 'Correct — Telomeres: repetitive sequences at chromosome ends (TTAGGG). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of telomeres & telomerase, which statement is accurate?',
+            question: 'Which of the following is true about Telomerase?',
             options: [
-              'Telomerase: enzyme that extends telomeres',
-              ')GGGATT( sdne emosomorhc ta secneuqes evititeper :seremoleT',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'enzyme that extends telomeres',
+              'Shorten with each replication (end replication problem)',
+              'Active in stem cells and cancer cells; inactive in most somatic cells',
+              'repetitive sequences at chromosome ends (TTAGGG)'
             ],
             correctAnswer: 0,
-            explanation: 'Telomerase: enzyme that extends telomeres'
+            explanation: 'Correct — Telomerase: enzyme that extends telomeres. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioDnaReplicationPart5Data = {
       id: 'dna-5-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to telomeres & telomerase?',
+            question: 'Which of these accurately represents Active in stem cells and cancer cells;…?',
             options: [
+              'Shorten with each replication (end replication problem)',
               'Active in stem cells and cancer cells; inactive in most somatic cells',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'repetitive sequences at chromosome ends (TTAGGG)',
+              'enzyme that extends telomeres'
             ],
-            correctAnswer: 0,
-            explanation: 'Active in stem cells and cancer cells; inactive in most somatic cells'
+            correctAnswer: 1,
+            explanation: 'Correct — Active in stem cells and cancer cells; inactive in most somatic cells. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,24 @@ export const bioDnaReplicationPart5Data = {
       id: 'dna-5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Telomeres is important in telomeres & telomerase because',
-            options: ['repetitive sequences at chromosome ends (TTAGGG)', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Telomeres',
+            options: ['Shorten with each replication (end replication problem)', 'enzyme that extends telomeres', 'Active in stem cells and cancer cells; inactive in most somatic cells', 'repetitive sequences at chromosome ends (TTAGGG)']
           },
           {
-            label: 'Shorten with each replication (end replication problem) is important in telomeres & telomerase because',
-            options: ['Shorten with each replication (end replication pro', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
-          },
-          {
-            label: 'Telomerase is important in telomeres & telomerase because',
-            options: ['enzyme that extends telomeres', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Telomerase',
+            options: ['Shorten with each replication (end replication problem)', 'repetitive sequences at chromosome ends (TTAGGG)', 'enzyme that extends telomeres', 'Active in stem cells and cancer cells; inactive in most somatic cells']
           }
         ],
-        correctAnswers: ['repetitive sequences at chromosome ends (TTAGGG)', 'Shorten with each replication (end replication pro', 'enzyme that extends telomeres'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Telomeres & Telomerase.'
+        correctAnswers: ['repetitive sequences at chromosome ends (TTAGGG)', 'enzyme that extends telomeres'],
+        hint1: 'Think about what each concept specifically describes in Telomeres & Telomerase.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Telomeres & Telomerase describes a specific idea. Telomeres: repetitive sequences at chromosome ends (TTAGGG). Telomerase: enzyme that extends telomeres.'
       }
     }
   ]

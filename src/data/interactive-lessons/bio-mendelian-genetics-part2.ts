@@ -19,31 +19,31 @@ export const bioMendelianPart2Data = {
       id: 'mend2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes punnett squares for single-gene crosses?',
+            question: 'What does "Punnett squares for single-gene crosses" refer to in biology?',
             options: [
               'Punnett squares for single-gene crosses',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              '3 dominant : 1 recessive',
+              'cross with homozygous recessive to determine genotype',
+              '1 AA : 2 Aa : 1 aa'
             ],
             correctAnswer: 0,
-            explanation: 'Punnett squares for single-gene crosses'
+            explanation: 'Correct — Punnett squares for single-gene crosses. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of monohybrid crosses, which statement is accurate?',
+            question: 'Which of the following is true about Phenotypic ratio?',
             options: [
-              'Phenotypic ratio: 3 dominant : 1 recessive',
-              'sessorc eneg-elgnis rof serauqs ttennuP',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'cross with homozygous recessive to determine genotype',
+              '3 dominant : 1 recessive',
+              '1 AA : 2 Aa : 1 aa',
+              'Punnett squares for single-gene crosses'
             ],
-            correctAnswer: 0,
-            explanation: 'Phenotypic ratio: 3 dominant : 1 recessive'
+            correctAnswer: 1,
+            explanation: 'Correct — Phenotypic ratio: 3 dominant : 1 recessive. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioMendelianPart2Data = {
       id: 'mend2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to monohybrid crosses?',
+            question: 'Which of these accurately represents Test cross?',
             options: [
-              'Test cross: cross with homozygous recessive to determine genotype',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Punnett squares for single-gene crosses',
+              '3 dominant : 1 recessive',
+              'cross with homozygous recessive to determine genotype',
+              '1 AA : 2 Aa : 1 aa'
             ],
-            correctAnswer: 0,
-            explanation: 'Test cross: cross with homozygous recessive to determine genotype'
+            correctAnswer: 2,
+            explanation: 'Correct — Test cross: cross with homozygous recessive to determine genotype. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioMendelianPart2Data = {
       id: 'mend2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Punnett squares for single-gene crosses is important in monohybrid crosses because',
-            options: ['Punnett squares for single-gene crosses', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Genotypic ratio',
+            options: ['cross with homozygous recessive to determine genotype', '1 AA : 2 Aa : 1 aa', '3 dominant : 1 recessive', 'Punnett squares for single-gene crosses']
           },
           {
-            label: 'Genotypic ratio is important in monohybrid crosses because',
-            options: ['1 AA : 2 Aa : 1 aa', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Phenotypic ratio',
+            options: ['Punnett squares for single-gene crosses', '1 AA : 2 Aa : 1 aa', '3 dominant : 1 recessive', 'cross with homozygous recessive to determine genotype']
           },
           {
-            label: 'Phenotypic ratio is important in monohybrid crosses because',
-            options: ['3 dominant : 1 recessive', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Test cross',
+            options: ['3 dominant : 1 recessive', '1 AA : 2 Aa : 1 aa', 'cross with homozygous recessive to determine genotype', 'Punnett squares for single-gene crosses']
           }
         ],
-        correctAnswers: ['Punnett squares for single-gene crosses', '1 AA : 2 Aa : 1 aa', '3 dominant : 1 recessive'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Monohybrid Crosses.'
+        correctAnswers: ['1 AA : 2 Aa : 1 aa', '3 dominant : 1 recessive', 'cross with homozygous recessive to determine genotype'],
+        hint1: 'Think about what each concept specifically describes in Monohybrid Crosses.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Monohybrid Crosses describes a specific idea. Genotypic ratio: 1 AA : 2 Aa : 1 aa. Phenotypic ratio: 3 dominant : 1 recessive. Test cross: cross with homozygous recessive to determine genotype.'
       }
     }
   ]

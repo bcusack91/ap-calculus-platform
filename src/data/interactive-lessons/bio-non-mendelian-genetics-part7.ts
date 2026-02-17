@@ -19,31 +19,31 @@ export const bioNonMendelianPart7Data = {
       id: 'non-7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes non-mendelian patterns expand mendel\'s laws?',
+            question: 'Which of the following correctly describes Non-Mendelian patterns expand Mendel\'s…?',
             options: [
+              'Multiple genes and environment create phenotypic diversity',
               'Non-Mendelian patterns expand Mendel\'s laws',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Sex-linked traits on the AP exam',
+              'Connecting to evolution and natural selection'
             ],
-            correctAnswer: 0,
-            explanation: 'Non-Mendelian patterns expand Mendel\'s laws'
+            correctAnswer: 1,
+            explanation: 'Correct — Non-Mendelian patterns expand Mendel\'s laws. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of synthesis & ap review, which statement is accurate?',
+            question: 'In the context of Non-Mendelian Genetics: Synthesis & AP Review, which explains Sex-linked traits on the AP exam?',
             options: [
-              'Sex-linked traits on the AP exam',
-              'swal s\'ledneM dnapxe snrettap nailedneM-noN',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Connecting to evolution and natural selection',
+              'Multiple genes and environment create phenotypic diversity',
+              'Non-Mendelian patterns expand Mendel\'s laws',
+              'Sex-linked traits on the AP exam'
             ],
-            correctAnswer: 0,
-            explanation: 'Sex-linked traits on the AP exam'
+            correctAnswer: 3,
+            explanation: 'Correct — Sex-linked traits on the AP exam. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioNonMendelianPart7Data = {
       id: 'non-7-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to synthesis & ap review?',
+            question: 'Which statement about Connecting to evolution and natural… is correct?',
             options: [
+              'Multiple genes and environment create phenotypic diversity',
+              'Non-Mendelian patterns expand Mendel\'s laws',
               'Connecting to evolution and natural selection',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Sex-linked traits on the AP exam'
             ],
-            correctAnswer: 0,
-            explanation: 'Connecting to evolution and natural selection'
+            correctAnswer: 2,
+            explanation: 'Correct — Connecting to evolution and natural selection. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioNonMendelianPart7Data = {
       id: 'non-7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Non-Mendelian patterns expand Mendel\'s laws is important in synthesis & ap review because',
-            options: ['Non-Mendelian patterns expand Mendel\'s laws', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Non-Mendelian patterns expand Mendel\'s…',
+            options: ['Multiple genes and environment create phenotypic diversity', 'Sex-linked traits on the AP exam', 'Non-Mendelian patterns expand Mendel\'s laws', 'Connecting to evolution and natural selection']
           },
           {
-            label: 'Multiple genes and environment create phenotypic diversity is important in synthesis & ap review because',
-            options: ['Multiple genes and environment create phenotypic d', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Multiple genes and environment create…',
+            options: ['Sex-linked traits on the AP exam', 'Non-Mendelian patterns expand Mendel\'s laws', 'Connecting to evolution and natural selection', 'Multiple genes and environment create phenotypic diversity']
           },
           {
-            label: 'Sex-linked traits on the AP exam is important in synthesis & ap review because',
-            options: ['Sex-linked traits on the AP exam', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Sex-linked traits on the AP exam',
+            options: ['Multiple genes and environment create phenotypic diversity', 'Connecting to evolution and natural selection', 'Non-Mendelian patterns expand Mendel\'s laws', 'Sex-linked traits on the AP exam']
           }
         ],
-        correctAnswers: ['Non-Mendelian patterns expand Mendel\'s laws', 'Multiple genes and environment create phenotypic d', 'Sex-linked traits on the AP exam'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Synthesis & AP Review.'
+        correctAnswers: ['Non-Mendelian patterns expand Mendel\'s laws', 'Multiple genes and environment create phenotypic diversity', 'Sex-linked traits on the AP exam'],
+        hint1: 'Think about what each concept specifically describes in Non-Mendelian Genetics: Synthesis & AP Review.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Non-Mendelian Genetics: Synthesis & AP Review describes a specific idea. Non-Mendelian patterns expand Mendel\'s laws. Multiple genes and environment create phenotypic diversity. Sex-linked traits on the AP exam.'
       }
     }
   ]

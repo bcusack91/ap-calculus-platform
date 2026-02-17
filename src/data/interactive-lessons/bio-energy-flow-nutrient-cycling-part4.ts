@@ -19,31 +19,31 @@ export const bioEnergyFlowPart4Data = {
       id: 'ener4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes carbon cycle?',
+            question: 'What does "Carbon cycle" refer to in biology?',
             options: [
+              'fixation, nitrification, denitrification',
               'photosynthesis, respiration, combustion, decomposition',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'evaporation, transpiration, precipitation',
+              'weathering of rocks, no atmospheric phase'
             ],
-            correctAnswer: 0,
-            explanation: 'Carbon cycle: photosynthesis, respiration, combustion, decomposition'
+            correctAnswer: 1,
+            explanation: 'Correct — Carbon cycle: photosynthesis, respiration, combustion, decomposition. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of biogeochemical cycles, which statement is accurate?',
+            question: 'In the context of Biogeochemical Cycles, which explains Water cycle?',
             options: [
-              'Water cycle: evaporation, transpiration, precipitation',
-              'noitisopmoced ,noitsubmoc ,noitaripser ,sisehtnysotohp :elcyc nobraC',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'weathering of rocks, no atmospheric phase',
+              'photosynthesis, respiration, combustion, decomposition',
+              'evaporation, transpiration, precipitation',
+              'fixation, nitrification, denitrification'
             ],
-            correctAnswer: 0,
-            explanation: 'Water cycle: evaporation, transpiration, precipitation'
+            correctAnswer: 2,
+            explanation: 'Correct — Water cycle: evaporation, transpiration, precipitation. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioEnergyFlowPart4Data = {
       id: 'ener4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to biogeochemical cycles?',
+            question: 'Regarding Biogeochemical Cycles, which correctly describes Phosphorus cycle?',
             options: [
-              'Phosphorus cycle: weathering of rocks, no atmospheric phase',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'photosynthesis, respiration, combustion, decomposition',
+              'weathering of rocks, no atmospheric phase',
+              'evaporation, transpiration, precipitation',
+              'fixation, nitrification, denitrification'
             ],
-            correctAnswer: 0,
-            explanation: 'Phosphorus cycle: weathering of rocks, no atmospheric phase'
+            correctAnswer: 1,
+            explanation: 'Correct — Phosphorus cycle: weathering of rocks, no atmospheric phase. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioEnergyFlowPart4Data = {
       id: 'ener4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Carbon cycle is important in biogeochemical cycles because',
-            options: ['photosynthesis, respiration, combustion, decomposi', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Carbon cycle',
+            options: ['fixation, nitrification, denitrification', 'weathering of rocks, no atmospheric phase', 'evaporation, transpiration, precipitation', 'photosynthesis, respiration, combustion, decomposition']
           },
           {
-            label: 'Nitrogen cycle is important in biogeochemical cycles because',
-            options: ['fixation, nitrification, denitrification', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Nitrogen cycle',
+            options: ['weathering of rocks, no atmospheric phase', 'evaporation, transpiration, precipitation', 'photosynthesis, respiration, combustion, decomposition', 'fixation, nitrification, denitrification']
           },
           {
-            label: 'Water cycle is important in biogeochemical cycles because',
-            options: ['evaporation, transpiration, precipitation', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Water cycle',
+            options: ['photosynthesis, respiration, combustion, decomposition', 'fixation, nitrification, denitrification', 'weathering of rocks, no atmospheric phase', 'evaporation, transpiration, precipitation']
           }
         ],
-        correctAnswers: ['photosynthesis, respiration, combustion, decomposi', 'fixation, nitrification, denitrification', 'evaporation, transpiration, precipitation'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Biogeochemical Cycles.'
+        correctAnswers: ['photosynthesis, respiration, combustion, decomposition', 'fixation, nitrification, denitrification', 'evaporation, transpiration, precipitation'],
+        hint1: 'Think about what each concept specifically describes in Biogeochemical Cycles.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Biogeochemical Cycles describes a specific idea. Carbon cycle: photosynthesis, respiration, combustion, decomposition. Nitrogen cycle: fixation, nitrification, denitrification. Water cycle: evaporation, transpiration, precipitation.'
       }
     }
   ]

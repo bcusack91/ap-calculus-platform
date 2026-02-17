@@ -30,31 +30,31 @@ Use alternating series error bound to determine how many terms suffice
       id: 'serie2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of computing integrals with series?',
+            question: 'Which of the following correctly describes If f(x) has no elementary…?',
             options: [
+              'integrate Σ(-1)ⁿx²ⁿ/n! → Σ(-1)ⁿx²ⁿ⁺¹/[n!(2n+1)] + C',
+              'Evaluate ∫₀^1 e^(-x²)dx by summing enough terms for desired accuracy',
               'If f(x) has no elementary antiderivative, integrate its Taylor series term by term',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
+              'Use alternating series error bound to determine how many terms suffice'
             ],
-            correctAnswer: 0,
-            explanation: 'If f(x) has no elementary antiderivative, integrate its Taylor series term by term'
+            correctAnswer: 2,
+            explanation: 'Correct — If f(x) has no elementary antiderivative, integrate its Taylor series term by term. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of computing integrals with series, which is accurate?',
+            question: 'Which of the following is true about Evaluate ∫₀^1 e^(-x²)dx by summing…?',
             options: [
+              'integrate Σ(-1)ⁿx²ⁿ/n! → Σ(-1)ⁿx²ⁿ⁺¹/[n!(2n+1)] + C',
               'Evaluate ∫₀^1 e^(-x²)dx by summing enough terms for desired accuracy',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'If f(x) has no elementary antiderivative, integrate its Taylor series term by term',
+              'Use alternating series error bound to determine how many terms suffice'
             ],
-            correctAnswer: 0,
-            explanation: 'Evaluate ∫₀^1 e^(-x²)dx by summing enough terms for desired accuracy'
+            correctAnswer: 1,
+            explanation: 'Correct — Evaluate ∫₀^1 e^(-x²)dx by summing enough terms for desired accuracy. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Use alternating series error bound to determine how many terms suffice
       id: 'serie2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to computing integrals with series?',
+            question: 'Which of these accurately represents Use alternating series error bound to…?',
             options: [
               'Use alternating series error bound to determine how many terms suffice',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'integrate Σ(-1)ⁿx²ⁿ/n! → Σ(-1)ⁿx²ⁿ⁺¹/[n!(2n+1)] + C',
+              'Evaluate ∫₀^1 e^(-x²)dx by summing enough terms for desired accuracy',
+              'If f(x) has no elementary antiderivative, integrate its Taylor series term by term'
             ],
             correctAnswer: 0,
-            explanation: 'Use alternating series error bound to determine how many terms suffice'
+            explanation: 'Correct — Use alternating series error bound to determine how many terms suffice. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Use alternating series error bound to determine how many terms suffice
       id: 'serie2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'If f(x) has no elementary antiderivative, integrate its Taylor series term by term',
-            options: ['If f(x) has no elementary antiderivative, integrat', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'If f(x) has no elementary…',
+            options: ['Use alternating series error bound to determine how many terms suffice', 'integrate Σ(-1)ⁿx²ⁿ/n! → Σ(-1)ⁿx²ⁿ⁺¹/[n!(2n+1)] + C', 'If f(x) has no elementary antiderivative, integrate its Taylor series term by term', 'Evaluate ∫₀^1 e^(-x²)dx by summing enough terms for desired accuracy']
           },
           {
             label: '∫e^(-x²)dx',
-            options: ['integrate Σ(-1)ⁿx²ⁿ/n! → Σ(-1)ⁿx²ⁿ⁺¹/[n!(2n+1)] + ', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['integrate Σ(-1)ⁿx²ⁿ/n! → Σ(-1)ⁿx²ⁿ⁺¹/[n!(2n+1)] + C', 'Use alternating series error bound to determine how many terms suffice', 'If f(x) has no elementary antiderivative, integrate its Taylor series term by term', 'Evaluate ∫₀^1 e^(-x²)dx by summing enough terms for desired accuracy']
           },
           {
-            label: 'Evaluate ∫₀^1 e^(-x²)dx by summing enough terms for desired accuracy',
-            options: ['Evaluate ∫₀^1 e^(-x²)dx by summing enough terms fo', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Evaluate ∫₀^1 e^(-x²)dx by summing…',
+            options: ['Use alternating series error bound to determine how many terms suffice', 'If f(x) has no elementary antiderivative, integrate its Taylor series term by term', 'Evaluate ∫₀^1 e^(-x²)dx by summing enough terms for desired accuracy', 'integrate Σ(-1)ⁿx²ⁿ/n! → Σ(-1)ⁿx²ⁿ⁺¹/[n!(2n+1)] + C']
           }
         ],
-        correctAnswers: ['If f(x) has no elementary antiderivative, integrat', 'integrate Σ(-1)ⁿx²ⁿ/n! → Σ(-1)ⁿx²ⁿ⁺¹/[n!(2n+1)] + ', 'Evaluate ∫₀^1 e^(-x²)dx by summing enough terms fo'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Computing Integrals with Series.'
+        correctAnswers: ['If f(x) has no elementary antiderivative, integrate its Taylor series term by term', 'integrate Σ(-1)ⁿx²ⁿ/n! → Σ(-1)ⁿx²ⁿ⁺¹/[n!(2n+1)] + C', 'Evaluate ∫₀^1 e^(-x²)dx by summing enough terms for desired accuracy'],
+        hint1: 'Think about what each concept specifically describes in Computing Integrals with Series.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Computing Integrals with Series describes a specific idea. If f(x) has no elementary antiderivative, integrate its Taylor series term by term. ∫e^(-x²)dx: integrate Σ(-1)ⁿx²ⁿ/n! → Σ(-1)ⁿx²ⁿ⁺¹/[n!(2n+1)] + C. Evaluate ∫₀^1 e^(-x²)dx by summing enough terms for desired accuracy.'
       }
     }
   ]

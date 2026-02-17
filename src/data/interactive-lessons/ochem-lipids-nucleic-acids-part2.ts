@@ -30,31 +30,31 @@ phospholipid bilayer + proteins + cholesterol
       id: 'lipid2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of phospholipids & membranes?',
+            question: 'Which statement accurately explains Phospholipids?',
             options: [
-              'Phospholipids',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'phospholipid bilayer + proteins + cholesterol',
+              'hydrophilic head + hydrophobic tails',
+              'glycerol + 2 fatty acids + phosphate head group',
+              'Form bilayers spontaneously in water'
             ],
-            correctAnswer: 0,
-            explanation: 'Phospholipids: glycerol + 2 fatty acids + phosphate head group'
+            correctAnswer: 2,
+            explanation: 'Correct — Phospholipids: glycerol + 2 fatty acids + phosphate head group. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of phospholipids & membranes, which is accurate?',
+            question: 'In the context of Phospholipids & Membranes, which explains Form bilayers spontaneously in water?',
             options: [
+              'phospholipid bilayer + proteins + cholesterol',
+              'glycerol + 2 fatty acids + phosphate head group',
               'Form bilayers spontaneously in water',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'hydrophilic head + hydrophobic tails'
             ],
-            correctAnswer: 0,
-            explanation: 'Form bilayers spontaneously in water'
+            correctAnswer: 2,
+            explanation: 'Correct — Form bilayers spontaneously in water. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ phospholipid bilayer + proteins + cholesterol
       id: 'lipid2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Phospholipids',
-            options: ['glycerol + 2 fatty acids + phosphate head group', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['phospholipid bilayer + proteins + cholesterol', 'glycerol + 2 fatty acids + phosphate head group', 'Form bilayers spontaneously in water', 'hydrophilic head + hydrophobic tails']
           },
           {
             label: 'Amphipathic',
-            options: ['hydrophilic head + hydrophobic tails', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['phospholipid bilayer + proteins + cholesterol', 'glycerol + 2 fatty acids + phosphate head group', 'Form bilayers spontaneously in water', 'hydrophilic head + hydrophobic tails']
           },
           {
-            label: 'Form bilayers spontaneously in water',
-            options: ['Form bilayers spontaneously in water', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Cell membrane',
+            options: ['phospholipid bilayer + proteins + cholesterol', 'glycerol + 2 fatty acids + phosphate head group', 'Form bilayers spontaneously in water', 'hydrophilic head + hydrophobic tails']
           }
         ],
-        correctAnswers: ['glycerol + 2 fatty acids + phosphate head group', 'hydrophilic head + hydrophobic tails', 'Form bilayers spontaneously in water'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Phospholipids & Membranes.'
+        correctAnswers: ['glycerol + 2 fatty acids + phosphate head group', 'hydrophilic head + hydrophobic tails', 'phospholipid bilayer + proteins + cholesterol'],
+        hint1: 'Think about what each concept specifically describes in Phospholipids & Membranes.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Phospholipids & Membranes describes a specific idea. Phospholipids: glycerol + 2 fatty acids + phosphate head group. Amphipathic: hydrophilic head + hydrophobic tails. Cell membrane: phospholipid bilayer + proteins + cholesterol.'
       }
     }
   ]

@@ -18,20 +18,31 @@ Math: 60 sec/question — do easy ones first, skip and return for hard ones.
       id: 'act-t3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes english?',
+            question: 'What does "English" refer to in ACT prep?',
             options: [
-              'English is a key concept for ACT Math',
-              'Math: 60 sec/question — do easy ones first, skip and return for hard ones',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              '60 sec/question — do easy ones first, skip and return for hard ones.',
+              'Science: 52 sec/question — focus on data, not background info.',
+              '36 sec/question — move fast, trust your instincts on grammar.',
+              'Reading: 52 sec/question — read efficiently, don\'t over-analyze.'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — English: 36 sec/question — move fast, trust your instincts on grammar. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              'Reading: 52 sec/question — read efficiently, don\'t over-analyze.',
+              '60 sec/question — do easy ones first, skip and return for hard ones.',
+              '36 sec/question — move fast, trust your instincts on grammar.',
+              'Science: 52 sec/question — focus on data, not background info.'
             ],
             correctAnswer: 0,
-            explanation: 'English: 36 sec/question — move fast, trust your instincts on grammar'
+            explanation: 'Correct — Key Insight: Reading: 52 sec/question — read efficiently, don\'t over-analyze. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Math: 60 sec/question — do easy ones first, skip and return for hard ones.
       id: 'act-t3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for section-by-section timing?',
+            question: 'Which statement about ACT Tip is correct?',
             options: [
-              'Reading: 52 sec/question — read efficiently, don\'t over-analyze',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Science: 52 sec/question — focus on data, not background info.',
+              '60 sec/question — do easy ones first, skip and return for hard ones.',
+              '36 sec/question — move fast, trust your instincts on grammar.',
+              'Reading: 52 sec/question — read efficiently, don\'t over-analyze.'
             ],
             correctAnswer: 0,
-            explanation: 'Reading: 52 sec/question — read efficiently, don\'t over-analyze'
+            explanation: 'Correct — ACT Tip: Science: 52 sec/question — focus on data, not background info. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Math: 60 sec/question — do easy ones first, skip and return for hard ones.
       id: 'act-t3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Section-by-Section Timing:',
-            options: ['English: 36 sec/question — move fast, trust your i', 'Math: 60 sec/question — do easy ones first, skip a', 'Not applicable', 'None of these']
+            label: 'English',
+            options: ['36 sec/question — move fast, trust your instincts on grammar.', 'Reading: 52 sec/question — read efficiently, don\'t over-analyze.', '60 sec/question — do easy ones first, skip and return for hard ones.', 'Science: 52 sec/question — focus on data, not background info.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Reading: 52 sec/question — read efficiently, don\'t', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Math',
+            options: ['Science: 52 sec/question — focus on data, not background info.', '60 sec/question — do easy ones first, skip and return for hard ones.', 'Reading: 52 sec/question — read efficiently, don\'t over-analyze.', '36 sec/question — move fast, trust your instincts on grammar.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['36 sec/question — move fast, trust your instincts on grammar.', '60 sec/question — do easy ones first, skip and return for hard ones.', 'Science: 52 sec/question — focus on data, not background info.', 'Reading: 52 sec/question — read efficiently, don\'t over-analyze.']
           }
         ],
-        correctAnswers: ['English: 36 sec/question — move fast, trust your i', 'Reading: 52 sec/question — read efficiently, don\'t'],
-        hint1: 'Think about section-by-section timing',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'English: 36 sec/question — move fast, trust your instincts on grammar. Reading: 52 sec/question — read efficiently, don\'t over-analyze.'
+        correctAnswers: ['36 sec/question — move fast, trust your instincts on grammar.', '60 sec/question — do easy ones first, skip and return for hard ones.', 'Reading: 52 sec/question — read efficiently, don\'t over-analyze.'],
+        hint1: 'Think about what each concept specifically describes in Section-by-Section Timing.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Section-by-Section Timing describes a specific idea. English: 36 sec/question — move fast, trust your instincts on grammar. Math: 60 sec/question — do easy ones first, skip and return for hard ones. Key Insight: Reading: 52 sec/question — read efficiently, don\'t over-analyze.'
       }
     }
   ]

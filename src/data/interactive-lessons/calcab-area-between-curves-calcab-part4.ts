@@ -30,31 +30,31 @@ Always subtract the lower function from the upper function in each sub-interval
       id: 'area-4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of determining top & bottom functions?',
+            question: 'What does "Graph the functions or evaluate at test…" refer to in calculus?',
             options: [
               'Graph the functions or evaluate at test points to determine which is on top',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'Always subtract the lower function from the upper function in each sub-interval',
+              'Split the integral at each intersection where functions cross',
+              'The "top" and "bottom" functions can switch at intersection points'
             ],
             correctAnswer: 0,
-            explanation: 'Graph the functions or evaluate at test points to determine which is on top'
+            explanation: 'Correct — Graph the functions or evaluate at test points to determine which is on top. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of determining top & bottom functions, which is accurate?',
+            question: 'Select the statement that correctly describes Split the integral at each intersection…:',
             options: [
+              'Always subtract the lower function from the upper function in each sub-interval',
+              'The "top" and "bottom" functions can switch at intersection points',
               'Split the integral at each intersection where functions cross',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Graph the functions or evaluate at test points to determine which is on top'
             ],
-            correctAnswer: 0,
-            explanation: 'Split the integral at each intersection where functions cross'
+            correctAnswer: 2,
+            explanation: 'Correct — Split the integral at each intersection where functions cross. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Always subtract the lower function from the upper function in each sub-interval
       id: 'area-4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to determining top & bottom functions?',
+            question: 'Regarding Determining Top & Bottom Functions, which correctly describes Always subtract the lower function from…?',
             options: [
-              'Always subtract the lower function from the upper function in each sub-interval',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'Split the integral at each intersection where functions cross',
+              'Graph the functions or evaluate at test points to determine which is on top',
+              'The "top" and "bottom" functions can switch at intersection points',
+              'Always subtract the lower function from the upper function in each sub-interval'
             ],
-            correctAnswer: 0,
-            explanation: 'Always subtract the lower function from the upper function in each sub-interval'
+            correctAnswer: 3,
+            explanation: 'Correct — Always subtract the lower function from the upper function in each sub-interval. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Always subtract the lower function from the upper function in each sub-interval
       id: 'area-4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Graph the functions or evaluate at test points to determine which is on top',
-            options: ['Graph the functions or evaluate at test points to ', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Graph the functions or evaluate at test…',
+            options: ['Graph the functions or evaluate at test points to determine which is on top', 'Always subtract the lower function from the upper function in each sub-interval', 'Split the integral at each intersection where functions cross', 'The "top" and "bottom" functions can switch at intersection points']
           },
           {
-            label: 'The "top" and "bottom" functions can switch at intersection points',
-            options: ['The "top" and "bottom" functions can switch at int', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'The "top" and "bottom" functions can…',
+            options: ['Graph the functions or evaluate at test points to determine which is on top', 'Split the integral at each intersection where functions cross', 'The "top" and "bottom" functions can switch at intersection points', 'Always subtract the lower function from the upper function in each sub-interval']
           },
           {
-            label: 'Split the integral at each intersection where functions cross',
-            options: ['Split the integral at each intersection where func', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Split the integral at each intersection…',
+            options: ['The "top" and "bottom" functions can switch at intersection points', 'Graph the functions or evaluate at test points to determine which is on top', 'Split the integral at each intersection where functions cross', 'Always subtract the lower function from the upper function in each sub-interval']
           }
         ],
-        correctAnswers: ['Graph the functions or evaluate at test points to ', 'The "top" and "bottom" functions can switch at int', 'Split the integral at each intersection where func'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Determining Top & Bottom Functions.'
+        correctAnswers: ['Graph the functions or evaluate at test points to determine which is on top', 'The "top" and "bottom" functions can switch at intersection points', 'Split the integral at each intersection where functions cross'],
+        hint1: 'Think about what each concept specifically describes in Determining Top & Bottom Functions.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Determining Top & Bottom Functions describes a specific idea. Graph the functions or evaluate at test points to determine which is on top. The "top" and "bottom" functions can switch at intersection points. Split the integral at each intersection where functions cross.'
       }
     }
   ]

@@ -30,31 +30,31 @@ Relates to parametric and vector motion problems
       id: 'euler4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of second-order des (preview)?',
+            question: 'Which of the following correctly describes Second-order DE?',
             options: [
-              'Second-order DE',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
+              'y\'\' + y = 0 → y = A cos t + B sin t (simple harmonic motion)',
+              'Relates to parametric and vector motion problems',
+              'involves y\'\' — Preview/enrichment for BC',
+              'Not heavily tested on AP BC, but useful conceptual understanding'
             ],
-            correctAnswer: 0,
-            explanation: 'Second-order DE: involves y\'\' — Preview/enrichment for BC'
+            correctAnswer: 2,
+            explanation: 'Correct — Second-order DE: involves y\'\' — Preview/enrichment for BC. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of second-order des (preview), which is accurate?',
+            question: 'Select the statement that correctly describes Not heavily tested on AP BC, but useful…:',
             options: [
               'Not heavily tested on AP BC, but useful conceptual understanding',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'involves y\'\' — Preview/enrichment for BC',
+              'y\'\' + y = 0 → y = A cos t + B sin t (simple harmonic motion)',
+              'Relates to parametric and vector motion problems'
             ],
             correctAnswer: 0,
-            explanation: 'Not heavily tested on AP BC, but useful conceptual understanding'
+            explanation: 'Correct — Not heavily tested on AP BC, but useful conceptual understanding. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Relates to parametric and vector motion problems
       id: 'euler4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to second-order des (preview)?',
+            question: 'Which of these accurately represents Relates to parametric and vector motion…?',
             options: [
+              'y\'\' + y = 0 → y = A cos t + B sin t (simple harmonic motion)',
               'Relates to parametric and vector motion problems',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'Not heavily tested on AP BC, but useful conceptual understanding',
+              'involves y\'\' — Preview/enrichment for BC'
             ],
-            correctAnswer: 0,
-            explanation: 'Relates to parametric and vector motion problems'
+            correctAnswer: 1,
+            explanation: 'Correct — Relates to parametric and vector motion problems. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Relates to parametric and vector motion problems
       id: 'euler4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Second-order DE',
-            options: ['involves y\'\' — Preview/enrichment for BC', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['y\'\' + y = 0 → y = A cos t + B sin t (simple harmonic motion)', 'Not heavily tested on AP BC, but useful conceptual understanding', 'Relates to parametric and vector motion problems', 'involves y\'\' — Preview/enrichment for BC']
           },
           {
-            label: 'y\'\' + y = 0 → y = A cos t + B sin t (simple harmonic motion)',
-            options: ['y\'\' + y = 0 → y = A cos t + B sin t (simple harmon', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'y\'\' + y = 0 → y = A cos t + B sin t…',
+            options: ['y\'\' + y = 0 → y = A cos t + B sin t (simple harmonic motion)', 'Relates to parametric and vector motion problems', 'involves y\'\' — Preview/enrichment for BC', 'Not heavily tested on AP BC, but useful conceptual understanding']
           },
           {
-            label: 'Not heavily tested on AP BC, but useful conceptual understanding',
-            options: ['Not heavily tested on AP BC, but useful conceptual', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Not heavily tested on AP BC, but useful…',
+            options: ['y\'\' + y = 0 → y = A cos t + B sin t (simple harmonic motion)', 'Not heavily tested on AP BC, but useful conceptual understanding', 'involves y\'\' — Preview/enrichment for BC', 'Relates to parametric and vector motion problems']
           }
         ],
-        correctAnswers: ['involves y\'\' — Preview/enrichment for BC', 'y\'\' + y = 0 → y = A cos t + B sin t (simple harmon', 'Not heavily tested on AP BC, but useful conceptual'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Second-Order DEs (Preview).'
+        correctAnswers: ['involves y\'\' — Preview/enrichment for BC', 'y\'\' + y = 0 → y = A cos t + B sin t (simple harmonic motion)', 'Not heavily tested on AP BC, but useful conceptual understanding'],
+        hint1: 'Think about what each concept specifically describes in Second-Order DEs (Preview).',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Second-Order DEs (Preview) describes a specific idea. Second-order DE: involves y\'\' — Preview/enrichment for BC. y\'\' + y = 0 → y = A cos t + B sin t (simple harmonic motion). Not heavily tested on AP BC, but useful conceptual understanding.'
       }
     }
   ]

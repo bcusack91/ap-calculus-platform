@@ -30,31 +30,31 @@ Designing motivation interventions
       id: 'motiv6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of problem-solving workshop?',
+            question: 'What does "Applying motivation theories to…" refer to in psychology?',
             options: [
               'Applying motivation theories to scenarios',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'Designing motivation interventions',
+              'Evaluating hunger regulation mechanisms',
+              'Analyzing intrinsic vs extrinsic motivation'
             ],
             correctAnswer: 0,
-            explanation: 'Applying motivation theories to scenarios'
+            explanation: 'Correct — Applying motivation theories to scenarios. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of problem-solving workshop, which is accurate?',
+            question: 'Select the statement that correctly describes Evaluating hunger regulation mechanisms:',
             options: [
               'Evaluating hunger regulation mechanisms',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Designing motivation interventions',
+              'Analyzing intrinsic vs extrinsic motivation',
+              'Applying motivation theories to scenarios'
             ],
             correctAnswer: 0,
-            explanation: 'Evaluating hunger regulation mechanisms'
+            explanation: 'Correct — Evaluating hunger regulation mechanisms. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Designing motivation interventions
       id: 'motiv6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Applying motivation theories to scenarios',
-            options: ['Applying motivation theories to scenarios', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            label: 'Applying motivation theories to…',
+            options: ['Evaluating hunger regulation mechanisms', 'Designing motivation interventions', 'Applying motivation theories to scenarios', 'Analyzing intrinsic vs extrinsic motivation']
           },
           {
-            label: 'Analyzing intrinsic vs extrinsic motivation',
-            options: ['Analyzing intrinsic vs extrinsic motivation', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            label: 'Analyzing intrinsic vs extrinsic…',
+            options: ['Applying motivation theories to scenarios', 'Evaluating hunger regulation mechanisms', 'Designing motivation interventions', 'Analyzing intrinsic vs extrinsic motivation']
           },
           {
             label: 'Evaluating hunger regulation mechanisms',
-            options: ['Evaluating hunger regulation mechanisms', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Analyzing intrinsic vs extrinsic motivation', 'Applying motivation theories to scenarios', 'Evaluating hunger regulation mechanisms', 'Designing motivation interventions']
           }
         ],
         correctAnswers: ['Applying motivation theories to scenarios', 'Analyzing intrinsic vs extrinsic motivation', 'Evaluating hunger regulation mechanisms'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving Workshop.'
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Applying motivation theories to scenarios. Analyzing intrinsic vs extrinsic motivation. Evaluating hunger regulation mechanisms.'
       }
     }
   ]

@@ -18,20 +18,31 @@ Focus on creating, solving, and interpreting nonlinear expressions.
       id: 'sat-p7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes passport to advanced math = ~28% of sat math?',
+            question: 'Which statement accurately explains Passport to Advanced Math = ~28% of SAT…?',
             options: [
-              'Passport to Advanced Math = ~28% of SAT Math is a fundamental concept in SAT Math',
-              'Focus on creating, solving, and interpreting nonlinear expressions',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'Passport to Advanced Math = ~28% of SAT Math.',
+              'Read graphs carefully — the SAT tests interpretation more than computation.',
+              'Know how to move between forms of quadratics.',
+              'Focus on creating, solving, and interpreting nonlinear expressions.'
             ],
             correctAnswer: 0,
-            explanation: 'Passport to Advanced Math = ~28% of SAT Math'
+            explanation: 'Correct — Passport to Advanced Math = ~28% of SAT Math. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Key Insight?',
+            options: [
+              'Focus on creating, solving, and interpreting nonlinear expressions.',
+              'Passport to Advanced Math = ~28% of SAT Math.',
+              'Know how to move between forms of quadratics.',
+              'Read graphs carefully — the SAT tests interpretation more than computation.'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Key Insight: Know how to move between forms of quadratics. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Focus on creating, solving, and interpreting nonlinear expressions.
       id: 'sat-p7-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for review & applications?',
+            question: 'Regarding Review & Applications, which correctly describes SAT Tip?',
             options: [
-              'Know how to move between forms of quadratics',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'Read graphs carefully — the SAT tests interpretation more than computation.',
+              'Know how to move between forms of quadratics.',
+              'Passport to Advanced Math = ~28% of SAT Math.',
+              'Focus on creating, solving, and interpreting nonlinear expressions.'
             ],
             correctAnswer: 0,
-            explanation: 'Know how to move between forms of quadratics'
+            explanation: 'Correct — SAT Tip: Read graphs carefully — the SAT tests interpretation more than computation. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ Focus on creating, solving, and interpreting nonlinear expressions.
       id: 'sat-p7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Review & Applications:',
-            options: ['Passport to Advanced Math = ~28% of SAT Math', 'Focus on creating, solving, and interpreting nonli', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['Know how to move between forms of quadratics.', 'Passport to Advanced Math = ~28% of SAT Math.', 'Read graphs carefully — the SAT tests interpretation more than computation.', 'Focus on creating, solving, and interpreting nonlinear expressions.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Know how to move between forms of quadratics', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'SAT Tip',
+            options: ['Know how to move between forms of quadratics.', 'Read graphs carefully — the SAT tests interpretation more than computation.', 'Focus on creating, solving, and interpreting nonlinear expressions.', 'Passport to Advanced Math = ~28% of SAT Math.']
           }
         ],
-        correctAnswers: ['Passport to Advanced Math = ~28% of SAT Math', 'Know how to move between forms of quadratics'],
-        hint1: 'Think about review & applications',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'Passport to Advanced Math = ~28% of SAT Math. Know how to move between forms of quadratics.'
+        correctAnswers: ['Know how to move between forms of quadratics.', 'Read graphs carefully — the SAT tests interpretation more than computation.'],
+        hint1: 'Think about what each concept specifically describes in Review & Applications.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Review & Applications describes a specific idea. Key Insight: Know how to move between forms of quadratics. SAT Tip: Read graphs carefully — the SAT tests interpretation more than computation.'
       }
     }
   ]

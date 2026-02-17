@@ -71,23 +71,28 @@ Nucleophilic addition: nucleophile attacks electrophilic carbonyl carbon.
       id: 'mcat-4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Carbonyl Chemistry:',
-            options: ['Aldehydes (RCHO) are more reactive than ketones (RCOR) due t', 'Nucleophilic addition: nucleophile attacks electrophilic car', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Nucleophilic addition',
+            options: ['Aldol condensation: alpha-carbon of one aldehyde attacks another to form beta-hydroxy carbonyl.', 'Hemiacetal/acetal formation: important for cyclic sugar chemistry on the MCAT.', 'nucleophile attacks electrophilic carbonyl carbon.', 'Aldehydes (RCHO) are more reactive than ketones (RCOR) due to less steric hindrance.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Aldol condensation: alpha-carbon of one aldehyde attacks ano', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Key Insight',
+            options: ['nucleophile attacks electrophilic carbonyl carbon.', 'Aldol condensation: alpha-carbon of one aldehyde attacks another to form beta-hydroxy carbonyl.', 'Hemiacetal/acetal formation: important for cyclic sugar chemistry on the MCAT.', 'Aldehydes (RCHO) are more reactive than ketones (RCOR) due to less steric hindrance.']
+          },
+          {
+            label: 'MCAT Tip',
+            options: ['Aldehydes (RCHO) are more reactive than ketones (RCOR) due to less steric hindrance.', 'Hemiacetal/acetal formation: important for cyclic sugar chemistry on the MCAT.', 'nucleophile attacks electrophilic carbonyl carbon.', 'Aldol condensation: alpha-carbon of one aldehyde attacks another to form beta-hydroxy carbonyl.']
           }
         ],
-        correctAnswers: ['Aldehydes (RCHO) are more reactive than ketones (RCOR) due t', 'Aldol condensation: alpha-carbon of one aldehyde attacks ano'],
-        hint1: 'Think about carbonyl chemistry',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Aldehydes (RCHO) are more reactive than ketones (RCOR) due to less steric hindrance. Aldol condensation: alpha-carbon of one aldehyde attacks another to form beta-hydroxy carbonyl.'
+        correctAnswers: ['nucleophile attacks electrophilic carbonyl carbon.', 'Aldol condensation: alpha-carbon of one aldehyde attacks another to form beta-hydroxy carbonyl.', 'Hemiacetal/acetal formation: important for cyclic sugar chemistry on the MCAT.'],
+        hint1: 'Think about what each concept specifically describes in Carbonyl Chemistry.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Carbonyl Chemistry describes a specific idea. Nucleophilic addition: nucleophile attacks electrophilic carbonyl carbon. Key Insight: Aldol condensation: alpha-carbon of one aldehyde attacks another to form beta-hydroxy carbonyl. MCAT Tip: Hemiacetal/acetal formation: important for cyclic sugar chemistry on the MCAT.'
       }
     }
   ]

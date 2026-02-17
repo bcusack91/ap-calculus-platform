@@ -30,31 +30,31 @@ Rate = k[substrate] (unimolecular); racemization at stereocenter
       id: 'nucle3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of sn1 mechanism?',
-            options: [
-              'SN1',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
-            ],
-            correctAnswer: 0,
-            explanation: 'SN1: two-step mechanism via carbocation intermediate'
-          },
-          {
-            question: 'In the context of sn1 mechanism, which is accurate?',
+            question: 'What does "SN1" refer to in this topic?',
             options: [
               'nucleophile attacks carbocation',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'leaving group departs (rate-determining)',
+              'two-step mechanism via carbocation intermediate',
+              'Rate = k[substrate] (unimolecular); racemization at stereocenter'
             ],
-            correctAnswer: 0,
-            explanation: 'Step 2: nucleophile attacks carbocation'
+            correctAnswer: 2,
+            explanation: 'Correct — SN1: two-step mechanism via carbocation intermediate. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Step 2?',
+            options: [
+              'Rate = k[substrate] (unimolecular); racemization at stereocenter',
+              'leaving group departs (rate-determining)',
+              'nucleophile attacks carbocation',
+              'two-step mechanism via carbocation intermediate'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Step 2: nucleophile attacks carbocation. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Rate = k[substrate] (unimolecular); racemization at stereocenter
       id: 'nucle3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'SN1',
-            options: ['two-step mechanism via carbocation intermediate', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['leaving group departs (rate-determining)', 'two-step mechanism via carbocation intermediate', 'nucleophile attacks carbocation', 'Rate = k[substrate] (unimolecular); racemization at stereocenter']
           },
           {
             label: 'Step 1',
-            options: ['leaving group departs (rate-determining)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Rate = k[substrate] (unimolecular); racemization at stereocenter', 'two-step mechanism via carbocation intermediate', 'nucleophile attacks carbocation', 'leaving group departs (rate-determining)']
           },
           {
             label: 'Step 2',
-            options: ['nucleophile attacks carbocation', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['leaving group departs (rate-determining)', 'two-step mechanism via carbocation intermediate', 'nucleophile attacks carbocation', 'Rate = k[substrate] (unimolecular); racemization at stereocenter']
           }
         ],
         correctAnswers: ['two-step mechanism via carbocation intermediate', 'leaving group departs (rate-determining)', 'nucleophile attacks carbocation'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding SN1 Mechanism.'
+        hint1: 'Think about what each concept specifically describes in SN1 Mechanism.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in SN1 Mechanism describes a specific idea. SN1: two-step mechanism via carbocation intermediate. Step 1: leaving group departs (rate-determining). Step 2: nucleophile attacks carbocation.'
       }
     }
   ]

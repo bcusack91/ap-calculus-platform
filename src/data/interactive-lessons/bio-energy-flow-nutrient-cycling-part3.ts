@@ -19,31 +19,31 @@ export const bioEnergyFlowPart3Data = {
       id: 'ener3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes pyramid of energy?',
+            question: 'What does "Pyramid of energy" refer to in biology?',
             options: [
+              'Only ~10% of energy transfers between trophic levels',
               'always upright (10% rule)',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              '90% lost as heat through cellular respiration',
+              'usually upright (exception: open ocean)'
             ],
-            correctAnswer: 0,
-            explanation: 'Pyramid of energy: always upright (10% rule)'
+            correctAnswer: 1,
+            explanation: 'Correct — Pyramid of energy: always upright (10% rule). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of ecological pyramids, which statement is accurate?',
+            question: 'In the context of Ecological Pyramids, which explains 90% lost as heat through cellular…?',
             options: [
               '90% lost as heat through cellular respiration',
-              ')elur %01( thgirpu syawla :ygrene fo dimaryP',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'usually upright (exception: open ocean)',
+              'Only ~10% of energy transfers between trophic levels',
+              'always upright (10% rule)'
             ],
             correctAnswer: 0,
-            explanation: '90% lost as heat through cellular respiration'
+            explanation: 'Correct — 90% lost as heat through cellular respiration. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioEnergyFlowPart3Data = {
       id: 'ener3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to ecological pyramids?',
+            question: 'Which statement about Pyramid of biomass is correct?',
             options: [
-              'Pyramid of biomass: usually upright (exception: open ocean)',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Only ~10% of energy transfers between trophic levels',
+              'always upright (10% rule)',
+              'usually upright (exception: open ocean)',
+              '90% lost as heat through cellular respiration'
             ],
-            correctAnswer: 0,
-            explanation: 'Pyramid of biomass: usually upright (exception: open ocean)'
+            correctAnswer: 2,
+            explanation: 'Correct — Pyramid of biomass: usually upright (exception: open ocean). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,24 @@ export const bioEnergyFlowPart3Data = {
       id: 'ener3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Pyramid of energy is important in ecological pyramids because',
-            options: ['always upright (10% rule)', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Pyramid of energy',
+            options: ['90% lost as heat through cellular respiration', 'Only ~10% of energy transfers between trophic levels', 'always upright (10% rule)', 'usually upright (exception: open ocean)']
           },
           {
-            label: 'Only ~10% of energy transfers between trophic levels is important in ecological pyramids because',
-            options: ['Only ~10% of energy transfers between trophic leve', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
-          },
-          {
-            label: '90% lost as heat through cellular respiration is important in ecological pyramids because',
-            options: ['90% lost as heat through cellular respiration', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Pyramid of biomass',
+            options: ['always upright (10% rule)', '90% lost as heat through cellular respiration', 'usually upright (exception: open ocean)', 'Only ~10% of energy transfers between trophic levels']
           }
         ],
-        correctAnswers: ['always upright (10% rule)', 'Only ~10% of energy transfers between trophic leve', '90% lost as heat through cellular respiration'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Ecological Pyramids.'
+        correctAnswers: ['always upright (10% rule)', 'usually upright (exception: open ocean)'],
+        hint1: 'Think about what each concept specifically describes in Ecological Pyramids.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Ecological Pyramids describes a specific idea. Pyramid of energy: always upright (10% rule). Pyramid of biomass: usually upright (exception: open ocean).'
       }
     }
   ]

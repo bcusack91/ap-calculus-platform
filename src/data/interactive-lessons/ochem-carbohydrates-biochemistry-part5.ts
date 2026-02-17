@@ -30,31 +30,31 @@ highly branched α-1,4 + α-1,6 (animal storage)
       id: 'carbo5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of polysaccharides?',
+            question: 'What does "Starch" refer to in this topic?',
             options: [
-              'Starch',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'β-1,4 N-acetylglucosamine (arthropod exoskeletons)',
+              'amylose (linear α-1,4) and amylopectin (branched α-1,4 + α-1,6)',
+              'highly branched α-1,4 + α-1,6 (animal storage)',
+              'β-1,4 glucose (structural, not digestible)'
             ],
-            correctAnswer: 0,
-            explanation: 'Starch: amylose (linear α-1,4) and amylopectin (branched α-1,4 + α-1,6)'
+            correctAnswer: 1,
+            explanation: 'Correct — Starch: amylose (linear α-1,4) and amylopectin (branched α-1,4 + α-1,6). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of polysaccharides, which is accurate?',
+            question: 'Which of the following is true about Cellulose?',
             options: [
-              'β-1,4 glucose (structural, not digestible)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'β-1,4 N-acetylglucosamine (arthropod exoskeletons)',
+              'highly branched α-1,4 + α-1,6 (animal storage)',
+              'amylose (linear α-1,4) and amylopectin (branched α-1,4 + α-1,6)',
+              'β-1,4 glucose (structural, not digestible)'
             ],
-            correctAnswer: 0,
-            explanation: 'Cellulose: β-1,4 glucose (structural, not digestible)'
+            correctAnswer: 3,
+            explanation: 'Correct — Cellulose: β-1,4 glucose (structural, not digestible). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ highly branched α-1,4 + α-1,6 (animal storage)
       id: 'carbo5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Starch',
-            options: ['amylose (linear α-1,4) and amylopectin (branched α', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['β-1,4 glucose (structural, not digestible)', 'highly branched α-1,4 + α-1,6 (animal storage)', 'β-1,4 N-acetylglucosamine (arthropod exoskeletons)', 'amylose (linear α-1,4) and amylopectin (branched α-1,4 + α-1,6)']
           },
           {
             label: 'Glycogen',
-            options: ['highly branched α-1,4 + α-1,6 (animal storage)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['β-1,4 glucose (structural, not digestible)', 'amylose (linear α-1,4) and amylopectin (branched α-1,4 + α-1,6)', 'β-1,4 N-acetylglucosamine (arthropod exoskeletons)', 'highly branched α-1,4 + α-1,6 (animal storage)']
           },
           {
             label: 'Cellulose',
-            options: ['β-1,4 glucose (structural, not digestible)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['β-1,4 glucose (structural, not digestible)', 'highly branched α-1,4 + α-1,6 (animal storage)', 'amylose (linear α-1,4) and amylopectin (branched α-1,4 + α-1,6)', 'β-1,4 N-acetylglucosamine (arthropod exoskeletons)']
           }
         ],
-        correctAnswers: ['amylose (linear α-1,4) and amylopectin (branched α', 'highly branched α-1,4 + α-1,6 (animal storage)', 'β-1,4 glucose (structural, not digestible)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Polysaccharides.'
+        correctAnswers: ['amylose (linear α-1,4) and amylopectin (branched α-1,4 + α-1,6)', 'highly branched α-1,4 + α-1,6 (animal storage)', 'β-1,4 glucose (structural, not digestible)'],
+        hint1: 'Think about what each concept specifically describes in Polysaccharides.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Polysaccharides describes a specific idea. Starch: amylose (linear α-1,4) and amylopectin (branched α-1,4 + α-1,6). Glycogen: highly branched α-1,4 + α-1,6 (animal storage). Cellulose: β-1,4 glucose (structural, not digestible).'
       }
     }
   ]

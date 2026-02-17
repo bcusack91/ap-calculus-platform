@@ -30,31 +30,31 @@ attributing success to self, failure to situation
       id: 'socia1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of social psychology introduction?',
+            question: 'Which of the following correctly describes Social psychology?',
             options: [
-              'Social psychology',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'explaining others\' behavior',
+              'attributing success to self, failure to situation',
+              'overestimating personality, underestimating situation',
+              'how people think about, influence, and relate to others'
             ],
-            correctAnswer: 0,
-            explanation: 'Social psychology: how people think about, influence, and relate to others'
+            correctAnswer: 3,
+            explanation: 'Correct — Social psychology: how people think about, influence, and relate to others. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of social psychology introduction, which is accurate?',
+            question: 'Select the statement that correctly describes Fundamental attribution error:',
             options: [
+              'how people think about, influence, and relate to others',
               'overestimating personality, underestimating situation',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'attributing success to self, failure to situation',
+              'explaining others\' behavior'
             ],
-            correctAnswer: 0,
-            explanation: 'Fundamental attribution error: overestimating personality, underestimating situation'
+            correctAnswer: 1,
+            explanation: 'Correct — Fundamental attribution error: overestimating personality, underestimating situation. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ attributing success to self, failure to situation
       id: 'socia1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Social psychology',
-            options: ['how people think about, influence, and relate to o', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['overestimating personality, underestimating situation', 'explaining others\' behavior', 'attributing success to self, failure to situation', 'how people think about, influence, and relate to others']
           },
           {
             label: 'Attribution theory',
-            options: ['explaining others\' behavior', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['attributing success to self, failure to situation', 'how people think about, influence, and relate to others', 'overestimating personality, underestimating situation', 'explaining others\' behavior']
           },
           {
             label: 'Fundamental attribution error',
-            options: ['overestimating personality, underestimating situat', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['overestimating personality, underestimating situation', 'attributing success to self, failure to situation', 'explaining others\' behavior', 'how people think about, influence, and relate to others']
           }
         ],
-        correctAnswers: ['how people think about, influence, and relate to o', 'explaining others\' behavior', 'overestimating personality, underestimating situat'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Social Psychology Introduction.'
+        correctAnswers: ['how people think about, influence, and relate to others', 'explaining others\' behavior', 'overestimating personality, underestimating situation'],
+        hint1: 'Think about what each concept specifically describes in Social Influence & Conformity.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Social Influence & Conformity describes a specific idea. Social psychology: how people think about, influence, and relate to others. Attribution theory: explaining others\' behavior. Fundamental attribution error: overestimating personality, underestimating situation.'
       }
     }
   ]

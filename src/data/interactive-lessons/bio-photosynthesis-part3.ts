@@ -19,31 +19,31 @@ export const bioPhotosynthesisPart3Data = {
       id: 'phot3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes occurs in stroma of chloroplast?',
+            question: 'What does "Occurs in stroma of chloroplast" refer to in biology?',
             options: [
-              'Occurs in stroma of chloroplast',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'CO₂ + RuBP → 2 G3P (by RuBisCO)',
+              '3 CO₂ → 1 G3P → glucose',
+              'Uses 9 ATP and 6 NADPH per G3P',
+              'Occurs in stroma of chloroplast'
             ],
-            correctAnswer: 0,
-            explanation: 'Occurs in stroma of chloroplast'
+            correctAnswer: 3,
+            explanation: 'Correct — Occurs in stroma of chloroplast. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of calvin cycle, which statement is accurate?',
+            question: 'Select the statement that correctly describes 3 CO₂ → 1 G3P → glucose:',
             options: [
+              'CO₂ + RuBP → 2 G3P (by RuBisCO)',
               '3 CO₂ → 1 G3P → glucose',
-              'tsalporolhc fo amorts ni sruccO',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Uses 9 ATP and 6 NADPH per G3P',
+              'Occurs in stroma of chloroplast'
             ],
-            correctAnswer: 0,
-            explanation: '3 CO₂ → 1 G3P → glucose'
+            correctAnswer: 1,
+            explanation: 'Correct — 3 CO₂ → 1 G3P → glucose. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioPhotosynthesisPart3Data = {
       id: 'phot3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to calvin cycle?',
+            question: 'Which of these accurately represents Uses 9 ATP and 6 NADPH per G3P?',
             options: [
               'Uses 9 ATP and 6 NADPH per G3P',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Occurs in stroma of chloroplast',
+              'CO₂ + RuBP → 2 G3P (by RuBisCO)',
+              '3 CO₂ → 1 G3P → glucose'
             ],
             correctAnswer: 0,
-            explanation: 'Uses 9 ATP and 6 NADPH per G3P'
+            explanation: 'Correct — Uses 9 ATP and 6 NADPH per G3P. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioPhotosynthesisPart3Data = {
       id: 'phot3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Occurs in stroma of chloroplast is important in calvin cycle because',
-            options: ['Occurs in stroma of chloroplast', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Occurs in stroma of chloroplast',
+            options: ['3 CO₂ → 1 G3P → glucose', 'CO₂ + RuBP → 2 G3P (by RuBisCO)', 'Uses 9 ATP and 6 NADPH per G3P', 'Occurs in stroma of chloroplast']
           },
           {
-            label: 'Carbon fixation is important in calvin cycle because',
-            options: ['CO₂ + RuBP → 2 G3P (by RuBisCO)', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Carbon fixation',
+            options: ['Occurs in stroma of chloroplast', '3 CO₂ → 1 G3P → glucose', 'Uses 9 ATP and 6 NADPH per G3P', 'CO₂ + RuBP → 2 G3P (by RuBisCO)']
           },
           {
-            label: '3 CO₂ → 1 G3P → glucose is important in calvin cycle because',
-            options: ['3 CO₂ → 1 G3P → glucose', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: '3 CO₂ → 1 G3P → glucose',
+            options: ['CO₂ + RuBP → 2 G3P (by RuBisCO)', 'Occurs in stroma of chloroplast', 'Uses 9 ATP and 6 NADPH per G3P', '3 CO₂ → 1 G3P → glucose']
           }
         ],
         correctAnswers: ['Occurs in stroma of chloroplast', 'CO₂ + RuBP → 2 G3P (by RuBisCO)', '3 CO₂ → 1 G3P → glucose'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Calvin Cycle.'
+        hint1: 'Think about what each concept specifically describes in Calvin Cycle.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Calvin Cycle describes a specific idea. Occurs in stroma of chloroplast. Carbon fixation: CO₂ + RuBP → 2 G3P (by RuBisCO). 3 CO₂ → 1 G3P → glucose.'
       }
     }
   ]

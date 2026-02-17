@@ -18,20 +18,31 @@ Identify units of measurement.
       id: 'act-s1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes read column headers and row labels first?',
+            question: 'Which statement accurately explains Read column headers and row labels…?',
             options: [
-              'Read column headers and row labels first is a key concept for ACT Science',
-              'Identify units of measurement',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'Watch for footnotes or special notations.',
+              'Find specific values by cross-referencing rows and columns.',
+              'Identify units of measurement.',
+              'Read column headers and row labels first.'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Read column headers and row labels first. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Key Insight?',
+            options: [
+              'Find specific values by cross-referencing rows and columns.',
+              'Read column headers and row labels first.',
+              'Identify units of measurement.',
+              'Watch for footnotes or special notations.'
             ],
             correctAnswer: 0,
-            explanation: 'Read column headers and row labels first'
+            explanation: 'Correct — Key Insight: Find specific values by cross-referencing rows and columns. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Identify units of measurement.
       id: 'act-s1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for reading data tables?',
+            question: 'Regarding Science Data, which correctly describes ACT Tip?',
             options: [
-              'Find specific values by cross-referencing rows and columns',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Identify units of measurement.',
+              'Read column headers and row labels first.',
+              'Watch for footnotes or special notations.',
+              'Find specific values by cross-referencing rows and columns.'
             ],
-            correctAnswer: 0,
-            explanation: 'Find specific values by cross-referencing rows and columns'
+            correctAnswer: 2,
+            explanation: 'Correct — ACT Tip: Watch for footnotes or special notations. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ Identify units of measurement.
       id: 'act-s1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Reading Data Tables:',
-            options: ['Read column headers and row labels first', 'Identify units of measurement', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['Read column headers and row labels first.', 'Identify units of measurement.', 'Watch for footnotes or special notations.', 'Find specific values by cross-referencing rows and columns.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Find specific values by cross-referencing rows and', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'ACT Tip',
+            options: ['Find specific values by cross-referencing rows and columns.', 'Watch for footnotes or special notations.', 'Identify units of measurement.', 'Read column headers and row labels first.']
           }
         ],
-        correctAnswers: ['Read column headers and row labels first', 'Find specific values by cross-referencing rows and'],
-        hint1: 'Think about reading data tables',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Read column headers and row labels first. Find specific values by cross-referencing rows and columns.'
+        correctAnswers: ['Find specific values by cross-referencing rows and columns.', 'Watch for footnotes or special notations.'],
+        hint1: 'Think about what each concept specifically describes in Science Data.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Science Data describes a specific idea. Key Insight: Find specific values by cross-referencing rows and columns. ACT Tip: Watch for footnotes or special notations.'
       }
     }
   ]

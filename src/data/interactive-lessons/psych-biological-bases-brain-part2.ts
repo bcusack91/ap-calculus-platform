@@ -30,31 +30,31 @@ inhibitory; Glutamate: excitatory
       id: 'biolo2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of neurotransmitters?',
+            question: 'Which of the following correctly describes Acetylcholine?',
             options: [
-              'Acetylcholine',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'pleasure, reward, movement (deficiency → Parkinson\'s)',
+              'mood, sleep, appetite (deficiency → depression)',
+              'muscle movement, memory',
+              'inhibitory; Glutamate: excitatory'
             ],
-            correctAnswer: 0,
-            explanation: 'Acetylcholine: muscle movement, memory'
+            correctAnswer: 2,
+            explanation: 'Correct — Acetylcholine: muscle movement, memory. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of neurotransmitters, which is accurate?',
+            question: 'In the context of Neurotransmitters, which explains Serotonin?',
             options: [
-              'mood, sleep, appetite (deficiency → depression)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'pleasure, reward, movement (deficiency → Parkinson\'s)',
+              'muscle movement, memory',
+              'inhibitory; Glutamate: excitatory',
+              'mood, sleep, appetite (deficiency → depression)'
             ],
-            correctAnswer: 0,
-            explanation: 'Serotonin: mood, sleep, appetite (deficiency → depression)'
+            correctAnswer: 3,
+            explanation: 'Correct — Serotonin: mood, sleep, appetite (deficiency → depression). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ inhibitory; Glutamate: excitatory
       id: 'biolo2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Acetylcholine',
-            options: ['muscle movement, memory', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['mood, sleep, appetite (deficiency → depression)', 'pleasure, reward, movement (deficiency → Parkinson\'s)', 'muscle movement, memory', 'inhibitory; Glutamate: excitatory']
           },
           {
             label: 'Dopamine',
-            options: ['pleasure, reward, movement (deficiency → Parkinson', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['inhibitory; Glutamate: excitatory', 'muscle movement, memory', 'pleasure, reward, movement (deficiency → Parkinson\'s)', 'mood, sleep, appetite (deficiency → depression)']
           },
           {
             label: 'Serotonin',
-            options: ['mood, sleep, appetite (deficiency → depression)', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['inhibitory; Glutamate: excitatory', 'muscle movement, memory', 'mood, sleep, appetite (deficiency → depression)', 'pleasure, reward, movement (deficiency → Parkinson\'s)']
           }
         ],
-        correctAnswers: ['muscle movement, memory', 'pleasure, reward, movement (deficiency → Parkinson', 'mood, sleep, appetite (deficiency → depression)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Neurotransmitters.'
+        correctAnswers: ['muscle movement, memory', 'pleasure, reward, movement (deficiency → Parkinson\'s)', 'mood, sleep, appetite (deficiency → depression)'],
+        hint1: 'Think about what each concept specifically describes in Neurotransmitters.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Neurotransmitters describes a specific idea. Acetylcholine: muscle movement, memory. Dopamine: pleasure, reward, movement (deficiency → Parkinson\'s). Serotonin: mood, sleep, appetite (deficiency → depression).'
       }
     }
   ]

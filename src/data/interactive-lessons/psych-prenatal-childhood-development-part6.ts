@@ -30,31 +30,31 @@ Evaluating developmental milestones
       id: 'prena6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of problem-solving workshop?',
+            question: 'Which statement accurately explains Identifying Piaget\'s stages from child…?',
             options: [
               'Identifying Piaget\'s stages from child behavior',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'Evaluating developmental milestones',
+              'Analyzing parenting scenarios',
+              'Classifying attachment styles'
             ],
             correctAnswer: 0,
-            explanation: 'Identifying Piaget\'s stages from child behavior'
+            explanation: 'Correct — Identifying Piaget\'s stages from child behavior. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of problem-solving workshop, which is accurate?',
+            question: 'In the context of Problem-Solving Workshop, which explains Analyzing parenting scenarios?',
             options: [
               'Analyzing parenting scenarios',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Classifying attachment styles',
+              'Identifying Piaget\'s stages from child behavior',
+              'Evaluating developmental milestones'
             ],
             correctAnswer: 0,
-            explanation: 'Analyzing parenting scenarios'
+            explanation: 'Correct — Analyzing parenting scenarios. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Evaluating developmental milestones
       id: 'prena6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Identifying Piaget\'s stages from child behavior',
-            options: ['Identifying Piaget\'s stages from child behavior', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            label: 'Identifying Piaget\'s stages from child…',
+            options: ['Identifying Piaget\'s stages from child behavior', 'Analyzing parenting scenarios', 'Classifying attachment styles', 'Evaluating developmental milestones']
           },
           {
             label: 'Classifying attachment styles',
-            options: ['Classifying attachment styles', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Analyzing parenting scenarios', 'Identifying Piaget\'s stages from child behavior', 'Evaluating developmental milestones', 'Classifying attachment styles']
           },
           {
             label: 'Analyzing parenting scenarios',
-            options: ['Analyzing parenting scenarios', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Analyzing parenting scenarios', 'Classifying attachment styles', 'Evaluating developmental milestones', 'Identifying Piaget\'s stages from child behavior']
           }
         ],
         correctAnswers: ['Identifying Piaget\'s stages from child behavior', 'Classifying attachment styles', 'Analyzing parenting scenarios'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving Workshop.'
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Identifying Piaget\'s stages from child behavior. Classifying attachment styles. Analyzing parenting scenarios.'
       }
     }
   ]

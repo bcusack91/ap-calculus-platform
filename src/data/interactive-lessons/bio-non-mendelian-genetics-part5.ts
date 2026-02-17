@@ -19,31 +19,31 @@ export const bioNonMendelianPart5Data = {
       id: 'non-5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes phenotype = genotype + environment?',
-            options: [
-              'Phenotype = genotype + environment',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
-            ],
-            correctAnswer: 0,
-            explanation: 'Phenotype = genotype + environment'
-          },
-          {
-            question: 'In the context of environmental effects on phenotype, which statement is accurate?',
+            question: 'Which of the following correctly describes Phenotype = genotype + environment?',
             options: [
               'Nutrition affects height (polygenic)',
-              'tnemnorivne + epytoneg = epytonehP',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Siamese cats',
+              'environmental factors affect gene expression',
+              'Phenotype = genotype + environment'
             ],
-            correctAnswer: 0,
-            explanation: 'Nutrition affects height (polygenic)'
+            correctAnswer: 3,
+            explanation: 'Correct — Phenotype = genotype + environment. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Environmental Effects on Phenotype, which explains Nutrition affects height (polygenic)?',
+            options: [
+              'environmental factors affect gene expression',
+              'Siamese cats',
+              'Nutrition affects height (polygenic)',
+              'Phenotype = genotype + environment'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Nutrition affects height (polygenic). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioNonMendelianPart5Data = {
       id: 'non-5-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to environmental effects on phenotype?',
+            question: 'Which of these accurately represents Epigenetics?',
             options: [
-              'Epigenetics: environmental factors affect gene expression',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'environmental factors affect gene expression',
+              'Phenotype = genotype + environment',
+              'Siamese cats',
+              'Nutrition affects height (polygenic)'
             ],
             correctAnswer: 0,
-            explanation: 'Epigenetics: environmental factors affect gene expression'
+            explanation: 'Correct — Epigenetics: environmental factors affect gene expression. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,24 @@ export const bioNonMendelianPart5Data = {
       id: 'non-5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Phenotype = genotype + environment is important in environmental effects on phenotype because',
-            options: ['Phenotype = genotype + environment', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Temperature-sensitive alleles',
+            options: ['Siamese cats', 'environmental factors affect gene expression', 'Phenotype = genotype + environment', 'Nutrition affects height (polygenic)']
           },
           {
-            label: 'Temperature-sensitive alleles is important in environmental effects on phenotype because',
-            options: ['Siamese cats', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
-          },
-          {
-            label: 'Nutrition affects height (polygenic) is important in environmental effects on phenotype because',
-            options: ['Nutrition affects height (polygenic)', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Epigenetics',
+            options: ['environmental factors affect gene expression', 'Phenotype = genotype + environment', 'Nutrition affects height (polygenic)', 'Siamese cats']
           }
         ],
-        correctAnswers: ['Phenotype = genotype + environment', 'Siamese cats', 'Nutrition affects height (polygenic)'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Environmental Effects on Phenotype.'
+        correctAnswers: ['Siamese cats', 'environmental factors affect gene expression'],
+        hint1: 'Think about what each concept specifically describes in Environmental Effects on Phenotype.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Environmental Effects on Phenotype describes a specific idea. Temperature-sensitive alleles: Siamese cats. Epigenetics: environmental factors affect gene expression.'
       }
     }
   ]

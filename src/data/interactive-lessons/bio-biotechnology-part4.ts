@@ -19,31 +19,31 @@ export const bioBiotechPart4Data = {
       id: 'biot4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes gene editing tool from bacterial immune system?',
+            question: 'Which of the following correctly describes Gene editing tool from bacterial immune…?',
             options: [
               'Gene editing tool from bacterial immune system',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Can knock out genes, insert new sequences, or make precise edits',
+              'Guide RNA directs Cas9 to target DNA sequence',
+              'Cas9 cuts both DNA strands at target site'
             ],
             correctAnswer: 0,
-            explanation: 'Gene editing tool from bacterial immune system'
+            explanation: 'Correct — Gene editing tool from bacterial immune system. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of crispr-cas9, which statement is accurate?',
+            question: 'Which of the following is true about Cas9 cuts both DNA strands at target…?',
             options: [
               'Cas9 cuts both DNA strands at target site',
-              'metsys enummi lairetcab morf loot gnitide eneG',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Guide RNA directs Cas9 to target DNA sequence',
+              'Gene editing tool from bacterial immune system',
+              'Can knock out genes, insert new sequences, or make precise edits'
             ],
             correctAnswer: 0,
-            explanation: 'Cas9 cuts both DNA strands at target site'
+            explanation: 'Correct — Cas9 cuts both DNA strands at target site. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioBiotechPart4Data = {
       id: 'biot4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to crispr-cas9?',
+            question: 'Regarding CRISPR-Cas9, which correctly describes Can knock out genes, insert new…?',
             options: [
+              'Cas9 cuts both DNA strands at target site',
               'Can knock out genes, insert new sequences, or make precise edits',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Gene editing tool from bacterial immune system',
+              'Guide RNA directs Cas9 to target DNA sequence'
             ],
-            correctAnswer: 0,
-            explanation: 'Can knock out genes, insert new sequences, or make precise edits'
+            correctAnswer: 1,
+            explanation: 'Correct — Can knock out genes, insert new sequences, or make precise edits. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioBiotechPart4Data = {
       id: 'biot4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Gene editing tool from bacterial immune system is important in crispr-cas9 because',
-            options: ['Gene editing tool from bacterial immune system', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Gene editing tool from bacterial immune…',
+            options: ['Cas9 cuts both DNA strands at target site', 'Can knock out genes, insert new sequences, or make precise edits', 'Guide RNA directs Cas9 to target DNA sequence', 'Gene editing tool from bacterial immune system']
           },
           {
-            label: 'Guide RNA directs Cas9 to target DNA sequence is important in crispr-cas9 because',
-            options: ['Guide RNA directs Cas9 to target DNA sequence', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Guide RNA directs Cas9 to target DNA…',
+            options: ['Gene editing tool from bacterial immune system', 'Can knock out genes, insert new sequences, or make precise edits', 'Guide RNA directs Cas9 to target DNA sequence', 'Cas9 cuts both DNA strands at target site']
           },
           {
-            label: 'Cas9 cuts both DNA strands at target site is important in crispr-cas9 because',
-            options: ['Cas9 cuts both DNA strands at target site', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Cas9 cuts both DNA strands at target…',
+            options: ['Can knock out genes, insert new sequences, or make precise edits', 'Guide RNA directs Cas9 to target DNA sequence', 'Cas9 cuts both DNA strands at target site', 'Gene editing tool from bacterial immune system']
           }
         ],
         correctAnswers: ['Gene editing tool from bacterial immune system', 'Guide RNA directs Cas9 to target DNA sequence', 'Cas9 cuts both DNA strands at target site'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding CRISPR-Cas9.'
+        hint1: 'Think about what each concept specifically describes in CRISPR-Cas9.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in CRISPR-Cas9 describes a specific idea. Gene editing tool from bacterial immune system. Guide RNA directs Cas9 to target DNA sequence. Cas9 cuts both DNA strands at target site.'
       }
     }
   ]

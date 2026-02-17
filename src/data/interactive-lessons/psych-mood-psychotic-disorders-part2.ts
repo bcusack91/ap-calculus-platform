@@ -30,31 +30,31 @@ mood stabilizers (lithium), psychotherapy
       id: 'mood-2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of bipolar disorder?',
+            question: 'What does "Bipolar I" refer to in psychology?',
             options: [
-              'Bipolar I',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'mood stabilizers (lithium), psychotherapy',
+              'decreased need for sleep, grandiosity, pressured speech',
+              'manic episodes (elevated mood, energy, risky behavior)',
+              'hypomanic episodes + major depressive episodes'
             ],
-            correctAnswer: 0,
-            explanation: 'Bipolar I: manic episodes (elevated mood, energy, risky behavior)'
+            correctAnswer: 2,
+            explanation: 'Correct — Bipolar I: manic episodes (elevated mood, energy, risky behavior). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of bipolar disorder, which is accurate?',
+            question: 'In the context of Bipolar Disorder, which explains Mania?',
             options: [
+              'manic episodes (elevated mood, energy, risky behavior)',
+              'mood stabilizers (lithium), psychotherapy',
               'decreased need for sleep, grandiosity, pressured speech',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'hypomanic episodes + major depressive episodes'
             ],
-            correctAnswer: 0,
-            explanation: 'Mania: decreased need for sleep, grandiosity, pressured speech'
+            correctAnswer: 2,
+            explanation: 'Correct — Mania: decreased need for sleep, grandiosity, pressured speech. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ mood stabilizers (lithium), psychotherapy
       id: 'mood-2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Bipolar I',
-            options: ['manic episodes (elevated mood, energy, risky behav', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['manic episodes (elevated mood, energy, risky behavior)', 'hypomanic episodes + major depressive episodes', 'decreased need for sleep, grandiosity, pressured speech', 'mood stabilizers (lithium), psychotherapy']
           },
           {
             label: 'Bipolar II',
-            options: ['hypomanic episodes + major depressive episodes', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['manic episodes (elevated mood, energy, risky behavior)', 'decreased need for sleep, grandiosity, pressured speech', 'hypomanic episodes + major depressive episodes', 'mood stabilizers (lithium), psychotherapy']
           },
           {
             label: 'Mania',
-            options: ['decreased need for sleep, grandiosity, pressured s', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['mood stabilizers (lithium), psychotherapy', 'manic episodes (elevated mood, energy, risky behavior)', 'hypomanic episodes + major depressive episodes', 'decreased need for sleep, grandiosity, pressured speech']
           }
         ],
-        correctAnswers: ['manic episodes (elevated mood, energy, risky behav', 'hypomanic episodes + major depressive episodes', 'decreased need for sleep, grandiosity, pressured s'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Bipolar Disorder.'
+        correctAnswers: ['manic episodes (elevated mood, energy, risky behavior)', 'hypomanic episodes + major depressive episodes', 'decreased need for sleep, grandiosity, pressured speech'],
+        hint1: 'Think about what each concept specifically describes in Bipolar Disorder.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Bipolar Disorder describes a specific idea. Bipolar I: manic episodes (elevated mood, energy, risky behavior). Bipolar II: hypomanic episodes + major depressive episodes. Mania: decreased need for sleep, grandiosity, pressured speech.'
       }
     }
   ]

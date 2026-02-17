@@ -30,31 +30,31 @@ s = rθ where θ is in radians
       id: 'trigo1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of angles & radian measure?',
-            options: [
-              'Degree to radian',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'Degree to radian: multiply by π/180'
-          },
-          {
-            question: 'In the context of angles & radian measure, which is accurate?',
+            question: 'Which of the following correctly describes Degree to radian?',
             options: [
               'One full rotation = 2π radians = 360°',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'multiply by π/180',
+              's = rθ where θ is in radians',
+              'multiply by 180/π'
             ],
-            correctAnswer: 0,
-            explanation: 'One full rotation = 2π radians = 360°'
+            correctAnswer: 1,
+            explanation: 'Correct — Degree to radian: multiply by π/180. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about One full rotation = 2π radians = 360°?',
+            options: [
+              's = rθ where θ is in radians',
+              'multiply by π/180',
+              'multiply by 180/π',
+              'One full rotation = 2π radians = 360°'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — One full rotation = 2π radians = 360°. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ s = rθ where θ is in radians
       id: 'trigo1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Degree to radian',
-            options: ['multiply by π/180', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['multiply by 180/π', 'multiply by π/180', 'One full rotation = 2π radians = 360°', 's = rθ where θ is in radians']
           },
           {
             label: 'Radian to degree',
-            options: ['multiply by 180/π', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['multiply by π/180', 's = rθ where θ is in radians', 'multiply by 180/π', 'One full rotation = 2π radians = 360°']
           },
           {
-            label: 'One full rotation = 2π radians = 360°',
-            options: ['One full rotation = 2π radians = 360°', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            label: 'Arc length',
+            options: ['multiply by 180/π', 'multiply by π/180', 'One full rotation = 2π radians = 360°', 's = rθ where θ is in radians']
           }
         ],
-        correctAnswers: ['multiply by π/180', 'multiply by 180/π', 'One full rotation = 2π radians = 360°'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Angles & Radian Measure.'
+        correctAnswers: ['multiply by π/180', 'multiply by 180/π', 's = rθ where θ is in radians'],
+        hint1: 'Think about what each concept specifically describes in Trigonometric Functions.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Trigonometric Functions describes a specific idea. Degree to radian: multiply by π/180. Radian to degree: multiply by 180/π. Arc length: s = rθ where θ is in radians.'
       }
     }
   ]

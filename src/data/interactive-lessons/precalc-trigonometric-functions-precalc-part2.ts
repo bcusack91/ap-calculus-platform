@@ -30,31 +30,31 @@ acute angle formed with the x-axis
       id: 'trigo2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of unit circle?',
-            options: [
-              'Unit circle',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'Unit circle: radius 1 centered at the origin'
-          },
-          {
-            question: 'In the context of unit circle, which is accurate?',
+            question: 'Which of the following correctly describes Unit circle?',
             options: [
               '0, π/6, π/4, π/3, π/2 and their multiples',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'radius 1 centered at the origin',
+              'acute angle formed with the x-axis',
+              '(cos θ, sin θ)'
             ],
-            correctAnswer: 0,
-            explanation: 'Key angles: 0, π/6, π/4, π/3, π/2 and their multiples'
+            correctAnswer: 1,
+            explanation: 'Correct — Unit circle: radius 1 centered at the origin. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key angles:',
+            options: [
+              '(cos θ, sin θ)',
+              'radius 1 centered at the origin',
+              '0, π/6, π/4, π/3, π/2 and their multiples',
+              'acute angle formed with the x-axis'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Key angles: 0, π/6, π/4, π/3, π/2 and their multiples. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ acute angle formed with the x-axis
       id: 'trigo2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Unit circle',
-            options: ['radius 1 centered at the origin', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['acute angle formed with the x-axis', '(cos θ, sin θ)', '0, π/6, π/4, π/3, π/2 and their multiples', 'radius 1 centered at the origin']
           },
           {
             label: 'Point on unit circle',
-            options: ['(cos θ, sin θ)', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['radius 1 centered at the origin', '(cos θ, sin θ)', '0, π/6, π/4, π/3, π/2 and their multiples', 'acute angle formed with the x-axis']
           },
           {
             label: 'Key angles',
-            options: ['0, π/6, π/4, π/3, π/2 and their multiples', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['radius 1 centered at the origin', 'acute angle formed with the x-axis', '(cos θ, sin θ)', '0, π/6, π/4, π/3, π/2 and their multiples']
           }
         ],
         correctAnswers: ['radius 1 centered at the origin', '(cos θ, sin θ)', '0, π/6, π/4, π/3, π/2 and their multiples'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Unit Circle.'
+        hint1: 'Think about what each concept specifically describes in Unit Circle.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Unit Circle describes a specific idea. Unit circle: radius 1 centered at the origin. Point on unit circle: (cos θ, sin θ). Key angles: 0, π/6, π/4, π/3, π/2 and their multiples.'
       }
     }
   ]

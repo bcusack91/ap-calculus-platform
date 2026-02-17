@@ -30,31 +30,31 @@ IMFs determine boiling point, solubility, viscosity
       id: 'molec5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of intermolecular forces?',
-            options: [
-              'London dispersion forces',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
-            ],
-            correctAnswer: 0,
-            explanation: 'London dispersion forces: all molecules, increases with size'
-          },
-          {
-            question: 'In the context of intermolecular forces, which is accurate?',
+            question: 'Which of the following correctly describes London dispersion forces?',
             options: [
               'N-H, O-H, F-H (strongest IMF)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'IMFs determine boiling point, solubility, viscosity',
+              'polar molecules',
+              'all molecules, increases with size'
             ],
-            correctAnswer: 0,
-            explanation: 'Hydrogen bonding: N-H, O-H, F-H (strongest IMF)'
+            correctAnswer: 3,
+            explanation: 'Correct — London dispersion forces: all molecules, increases with size. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Hydrogen bonding:',
+            options: [
+              'all molecules, increases with size',
+              'IMFs determine boiling point, solubility, viscosity',
+              'N-H, O-H, F-H (strongest IMF)',
+              'polar molecules'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Hydrogen bonding: N-H, O-H, F-H (strongest IMF). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ IMFs determine boiling point, solubility, viscosity
       id: 'molec5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'London dispersion forces',
-            options: ['all molecules, increases with size', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['N-H, O-H, F-H (strongest IMF)', 'IMFs determine boiling point, solubility, viscosity', 'polar molecules', 'all molecules, increases with size']
           },
           {
             label: 'Dipole-dipole',
-            options: ['polar molecules', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['IMFs determine boiling point, solubility, viscosity', 'all molecules, increases with size', 'N-H, O-H, F-H (strongest IMF)', 'polar molecules']
           },
           {
             label: 'Hydrogen bonding',
-            options: ['N-H, O-H, F-H (strongest IMF)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['N-H, O-H, F-H (strongest IMF)', 'all molecules, increases with size', 'IMFs determine boiling point, solubility, viscosity', 'polar molecules']
           }
         ],
         correctAnswers: ['all molecules, increases with size', 'polar molecules', 'N-H, O-H, F-H (strongest IMF)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Intermolecular Forces.'
+        hint1: 'Think about what each concept specifically describes in Intermolecular Forces.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Intermolecular Forces describes a specific idea. London dispersion forces: all molecules, increases with size. Dipole-dipole: polar molecules. Hydrogen bonding: N-H, O-H, F-H (strongest IMF).'
       }
     }
   ]

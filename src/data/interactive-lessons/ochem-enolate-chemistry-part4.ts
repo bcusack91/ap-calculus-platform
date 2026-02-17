@@ -30,31 +30,31 @@ Decarboxylation of β-keto acids → ketones
       id: 'enola4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of claisen condensation?',
+            question: 'Which statement accurately explains Claisen condensation?',
             options: [
-              'Claisen condensation',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'ester enolate + ester → β-keto ester',
+              'Requires at least 2 α-hydrogens on starting ester',
+              'Decarboxylation of β-keto acids → ketones',
+              'intramolecular Claisen'
             ],
             correctAnswer: 0,
-            explanation: 'Claisen condensation: ester enolate + ester → β-keto ester'
+            explanation: 'Correct — Claisen condensation: ester enolate + ester → β-keto ester. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of claisen condensation, which is accurate?',
+            question: 'Select the statement that correctly describes Dieckmann cyclization:',
             options: [
-              'intramolecular Claisen',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Requires at least 2 α-hydrogens on starting ester',
+              'Decarboxylation of β-keto acids → ketones',
+              'ester enolate + ester → β-keto ester',
+              'intramolecular Claisen'
             ],
-            correctAnswer: 0,
-            explanation: 'Dieckmann cyclization: intramolecular Claisen'
+            correctAnswer: 3,
+            explanation: 'Correct — Dieckmann cyclization: intramolecular Claisen. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,24 @@ Decarboxylation of β-keto acids → ketones
       id: 'enola4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Claisen condensation',
-            options: ['ester enolate + ester → β-keto ester', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
-          },
-          {
-            label: 'Requires at least 2 α-hydrogens on starting ester',
-            options: ['Requires at least 2 α-hydrogens on starting ester', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Requires at least 2 α-hydrogens on starting ester', 'intramolecular Claisen', 'Decarboxylation of β-keto acids → ketones', 'ester enolate + ester → β-keto ester']
           },
           {
             label: 'Dieckmann cyclization',
-            options: ['intramolecular Claisen', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['ester enolate + ester → β-keto ester', 'intramolecular Claisen', 'Decarboxylation of β-keto acids → ketones', 'Requires at least 2 α-hydrogens on starting ester']
           }
         ],
-        correctAnswers: ['ester enolate + ester → β-keto ester', 'Requires at least 2 α-hydrogens on starting ester', 'intramolecular Claisen'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Claisen Condensation.'
+        correctAnswers: ['ester enolate + ester → β-keto ester', 'intramolecular Claisen'],
+        hint1: 'Think about what each concept specifically describes in Claisen Condensation.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Claisen Condensation describes a specific idea. Claisen condensation: ester enolate + ester → β-keto ester. Dieckmann cyclization: intramolecular Claisen.'
       }
     }
   ]

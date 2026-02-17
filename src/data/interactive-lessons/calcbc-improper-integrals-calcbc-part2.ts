@@ -30,31 +30,31 @@ split into two integrals at d
       id: 'impro2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of type ii: discontinuous integrands?',
+            question: 'Which of the following correctly describes Type II?',
             options: [
-              'Type II',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
+              'lim(c→a⁺) ∫_c^b f(x)dx',
+              'lim(c→b⁻) ∫ₐ^c f(x)dx',
+              'integrand has a discontinuity in [a,b]',
+              'split into two integrals at d'
             ],
-            correctAnswer: 0,
-            explanation: 'Type II: integrand has a discontinuity in [a,b]'
+            correctAnswer: 2,
+            explanation: 'Correct — Type II: integrand has a discontinuity in [a,b]. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of type ii: discontinuous integrands, which is accurate?',
+            question: 'In the context of Type II: Discontinuous Integrands, which explains Discontinuity at b?',
             options: [
-              'lim(c→b⁻) ∫ₐ^c f(x)dx',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'lim(c→a⁺) ∫_c^b f(x)dx',
+              'integrand has a discontinuity in [a,b]',
+              'split into two integrals at d',
+              'lim(c→b⁻) ∫ₐ^c f(x)dx'
             ],
-            correctAnswer: 0,
-            explanation: 'Discontinuity at b: lim(c→b⁻) ∫ₐ^c f(x)dx'
+            correctAnswer: 3,
+            explanation: 'Correct — Discontinuity at b: lim(c→b⁻) ∫ₐ^c f(x)dx. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ split into two integrals at d
       id: 'impro2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to type ii: discontinuous integrands?',
+            question: 'Which of these accurately represents Interior discontinuity at d?',
             options: [
+              'lim(c→a⁺) ∫_c^b f(x)dx',
               'split into two integrals at d',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'integrand has a discontinuity in [a,b]',
+              'lim(c→b⁻) ∫ₐ^c f(x)dx'
             ],
-            correctAnswer: 0,
-            explanation: 'Interior discontinuity at d: split into two integrals at d'
+            correctAnswer: 1,
+            explanation: 'Correct — Interior discontinuity at d: split into two integrals at d. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ split into two integrals at d
       id: 'impro2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Type II',
-            options: ['integrand has a discontinuity in [a,b]', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['lim(c→b⁻) ∫ₐ^c f(x)dx', 'split into two integrals at d', 'integrand has a discontinuity in [a,b]', 'lim(c→a⁺) ∫_c^b f(x)dx']
           },
           {
             label: 'Discontinuity at a',
-            options: ['lim(c→a⁺) ∫_c^b f(x)dx', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['integrand has a discontinuity in [a,b]', 'split into two integrals at d', 'lim(c→b⁻) ∫ₐ^c f(x)dx', 'lim(c→a⁺) ∫_c^b f(x)dx']
           },
           {
             label: 'Discontinuity at b',
-            options: ['lim(c→b⁻) ∫ₐ^c f(x)dx', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['lim(c→b⁻) ∫ₐ^c f(x)dx', 'integrand has a discontinuity in [a,b]', 'split into two integrals at d', 'lim(c→a⁺) ∫_c^b f(x)dx']
           }
         ],
         correctAnswers: ['integrand has a discontinuity in [a,b]', 'lim(c→a⁺) ∫_c^b f(x)dx', 'lim(c→b⁻) ∫ₐ^c f(x)dx'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Type II: Discontinuous Integrands.'
+        hint1: 'Think about what each concept specifically describes in Type II: Discontinuous Integrands.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Type II: Discontinuous Integrands describes a specific idea. Type II: integrand has a discontinuity in [a,b]. Discontinuity at a: lim(c→a⁺) ∫_c^b f(x)dx. Discontinuity at b: lim(c→b⁻) ∫ₐ^c f(x)dx.'
       }
     }
   ]

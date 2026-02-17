@@ -19,31 +19,31 @@ export const bioCellCompartmentPart1Data = {
       id: 'cell1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes prokaryotes?',
+            question: 'What does "Prokaryotes" refer to in biology?',
             options: [
+              'prokaryotes 1-10 μm, eukaryotes 10-100 μm',
+              'nucleus and compartmentalized organelles',
               'no nucleus, no membrane-bound organelles',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Both have ribosomes, DNA, plasma membrane'
             ],
-            correctAnswer: 0,
-            explanation: 'Prokaryotes: no nucleus, no membrane-bound organelles'
+            correctAnswer: 2,
+            explanation: 'Correct — Prokaryotes: no nucleus, no membrane-bound organelles. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of prokaryotes vs eukaryotes, which statement is accurate?',
+            question: 'In the context of Prokaryotes vs Eukaryotes, which explains Both have ribosomes, DNA, plasma…?',
             options: [
+              'prokaryotes 1-10 μm, eukaryotes 10-100 μm',
+              'no nucleus, no membrane-bound organelles',
               'Both have ribosomes, DNA, plasma membrane',
-              'sellenagro dnuob-enarbmem on ,suelcun on :setoyrakorP',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'nucleus and compartmentalized organelles'
             ],
-            correctAnswer: 0,
-            explanation: 'Both have ribosomes, DNA, plasma membrane'
+            correctAnswer: 2,
+            explanation: 'Correct — Both have ribosomes, DNA, plasma membrane. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioCellCompartmentPart1Data = {
       id: 'cell1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to prokaryotes vs eukaryotes?',
+            question: 'Regarding Prokaryotes vs Eukaryotes, which correctly describes Size difference?',
             options: [
-              'Size difference: prokaryotes 1-10 μm, eukaryotes 10-100 μm',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'prokaryotes 1-10 μm, eukaryotes 10-100 μm',
+              'Both have ribosomes, DNA, plasma membrane',
+              'nucleus and compartmentalized organelles',
+              'no nucleus, no membrane-bound organelles'
             ],
             correctAnswer: 0,
-            explanation: 'Size difference: prokaryotes 1-10 μm, eukaryotes 10-100 μm'
+            explanation: 'Correct — Size difference: prokaryotes 1-10 μm, eukaryotes 10-100 μm. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioCellCompartmentPart1Data = {
       id: 'cell1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Prokaryotes is important in prokaryotes vs eukaryotes because',
-            options: ['no nucleus, no membrane-bound organelles', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Prokaryotes',
+            options: ['nucleus and compartmentalized organelles', 'no nucleus, no membrane-bound organelles', 'prokaryotes 1-10 μm, eukaryotes 10-100 μm', 'Both have ribosomes, DNA, plasma membrane']
           },
           {
-            label: 'Eukaryotes is important in prokaryotes vs eukaryotes because',
-            options: ['nucleus and compartmentalized organelles', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Eukaryotes',
+            options: ['no nucleus, no membrane-bound organelles', 'nucleus and compartmentalized organelles', 'prokaryotes 1-10 μm, eukaryotes 10-100 μm', 'Both have ribosomes, DNA, plasma membrane']
           },
           {
-            label: 'Both have ribosomes, DNA, plasma membrane is important in prokaryotes vs eukaryotes because',
-            options: ['Both have ribosomes, DNA, plasma membrane', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Size difference',
+            options: ['nucleus and compartmentalized organelles', 'Both have ribosomes, DNA, plasma membrane', 'prokaryotes 1-10 μm, eukaryotes 10-100 μm', 'no nucleus, no membrane-bound organelles']
           }
         ],
-        correctAnswers: ['no nucleus, no membrane-bound organelles', 'nucleus and compartmentalized organelles', 'Both have ribosomes, DNA, plasma membrane'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Prokaryotes vs Eukaryotes.'
+        correctAnswers: ['no nucleus, no membrane-bound organelles', 'nucleus and compartmentalized organelles', 'prokaryotes 1-10 μm, eukaryotes 10-100 μm'],
+        hint1: 'Think about what each concept specifically describes in Prokaryotes vs Eukaryotes.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Prokaryotes vs Eukaryotes describes a specific idea. Prokaryotes: no nucleus, no membrane-bound organelles. Eukaryotes: nucleus and compartmentalized organelles. Size difference: prokaryotes 1-10 μm, eukaryotes 10-100 μm.'
       }
     }
   ]

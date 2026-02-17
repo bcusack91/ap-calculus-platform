@@ -30,31 +30,31 @@ cyclopentadienyl anion (6 π e⁻)
       id: 'aroma5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of aromatic vs antiaromatic?',
+            question: 'What does "Antiaromatic" refer to in this topic?',
             options: [
-              'Antiaromatic',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'planar, cyclic, conjugated, 4n π electrons → destabilized',
+              'not fully conjugated, not planar',
+              'cyclopentadienyl anion (6 π e⁻)',
+              'antiaromatic, very unstable'
             ],
             correctAnswer: 0,
-            explanation: 'Antiaromatic: planar, cyclic, conjugated, 4n π electrons → destabilized'
+            explanation: 'Correct — Antiaromatic: planar, cyclic, conjugated, 4n π electrons → destabilized. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of aromatic vs antiaromatic, which is accurate?',
+            question: 'Which of the following is true about Nonaromatic?',
             options: [
+              'planar, cyclic, conjugated, 4n π electrons → destabilized',
+              'antiaromatic, very unstable',
               'not fully conjugated, not planar',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'cyclopentadienyl anion (6 π e⁻)'
             ],
-            correctAnswer: 0,
-            explanation: 'Nonaromatic: not fully conjugated, not planar'
+            correctAnswer: 2,
+            explanation: 'Correct — Nonaromatic: not fully conjugated, not planar. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ cyclopentadienyl anion (6 π e⁻)
       id: 'aroma5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Antiaromatic',
-            options: ['planar, cyclic, conjugated, 4n π electrons → desta', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['antiaromatic, very unstable', 'planar, cyclic, conjugated, 4n π electrons → destabilized', 'cyclopentadienyl anion (6 π e⁻)', 'not fully conjugated, not planar']
           },
           {
             label: 'Cyclobutadiene (4 π electrons)',
-            options: ['antiaromatic, very unstable', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['antiaromatic, very unstable', 'planar, cyclic, conjugated, 4n π electrons → destabilized', 'not fully conjugated, not planar', 'cyclopentadienyl anion (6 π e⁻)']
           },
           {
             label: 'Nonaromatic',
-            options: ['not fully conjugated, not planar', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['not fully conjugated, not planar', 'cyclopentadienyl anion (6 π e⁻)', 'planar, cyclic, conjugated, 4n π electrons → destabilized', 'antiaromatic, very unstable']
           }
         ],
-        correctAnswers: ['planar, cyclic, conjugated, 4n π electrons → desta', 'antiaromatic, very unstable', 'not fully conjugated, not planar'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Aromatic vs Antiaromatic.'
+        correctAnswers: ['planar, cyclic, conjugated, 4n π electrons → destabilized', 'antiaromatic, very unstable', 'not fully conjugated, not planar'],
+        hint1: 'Think about what each concept specifically describes in Aromatic vs Antiaromatic.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Aromatic vs Antiaromatic describes a specific idea. Antiaromatic: planar, cyclic, conjugated, 4n π electrons → destabilized. Cyclobutadiene (4 π electrons): antiaromatic, very unstable. Nonaromatic: not fully conjugated, not planar.'
       }
     }
   ]

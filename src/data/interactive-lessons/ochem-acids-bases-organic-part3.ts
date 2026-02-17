@@ -30,31 +30,31 @@ electron-withdrawing groups increase acidity
       id: 'acids3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of factors affecting acidity?',
+            question: 'What does "Electronegativity" refer to in this topic?',
             options: [
-              'Electronegativity',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'larger atoms stabilize charge → stronger acid (HI > HF)',
+              'delocalization stabilizes conjugate base → stronger acid',
+              'more EN atom stabilizes negative charge → stronger acid',
+              'electron-withdrawing groups increase acidity'
             ],
-            correctAnswer: 0,
-            explanation: 'Electronegativity: more EN atom stabilizes negative charge → stronger acid'
+            correctAnswer: 2,
+            explanation: 'Correct — Electronegativity: more EN atom stabilizes negative charge → stronger acid. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of factors affecting acidity, which is accurate?',
+            question: 'In the context of Factors Affecting Acidity, which explains Resonance?',
             options: [
+              'larger atoms stabilize charge → stronger acid (HI > HF)',
+              'electron-withdrawing groups increase acidity',
               'delocalization stabilizes conjugate base → stronger acid',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'more EN atom stabilizes negative charge → stronger acid'
             ],
-            correctAnswer: 0,
-            explanation: 'Resonance: delocalization stabilizes conjugate base → stronger acid'
+            correctAnswer: 2,
+            explanation: 'Correct — Resonance: delocalization stabilizes conjugate base → stronger acid. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ electron-withdrawing groups increase acidity
       id: 'acids3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Electronegativity',
-            options: ['more EN atom stabilizes negative charge → stronger', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['more EN atom stabilizes negative charge → stronger acid', 'electron-withdrawing groups increase acidity', 'larger atoms stabilize charge → stronger acid (HI > HF)', 'delocalization stabilizes conjugate base → stronger acid']
           },
           {
             label: 'Atom size',
-            options: ['larger atoms stabilize charge → stronger acid (HI ', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['delocalization stabilizes conjugate base → stronger acid', 'larger atoms stabilize charge → stronger acid (HI > HF)', 'electron-withdrawing groups increase acidity', 'more EN atom stabilizes negative charge → stronger acid']
           },
           {
             label: 'Resonance',
-            options: ['delocalization stabilizes conjugate base → stronge', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['larger atoms stabilize charge → stronger acid (HI > HF)', 'more EN atom stabilizes negative charge → stronger acid', 'electron-withdrawing groups increase acidity', 'delocalization stabilizes conjugate base → stronger acid']
           }
         ],
-        correctAnswers: ['more EN atom stabilizes negative charge → stronger', 'larger atoms stabilize charge → stronger acid (HI ', 'delocalization stabilizes conjugate base → stronge'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Factors Affecting Acidity.'
+        correctAnswers: ['more EN atom stabilizes negative charge → stronger acid', 'larger atoms stabilize charge → stronger acid (HI > HF)', 'delocalization stabilizes conjugate base → stronger acid'],
+        hint1: 'Think about what each concept specifically describes in Factors Affecting Acidity.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Factors Affecting Acidity describes a specific idea. Electronegativity: more EN atom stabilizes negative charge → stronger acid. Atom size: larger atoms stabilize charge → stronger acid (HI > HF). Resonance: delocalization stabilizes conjugate base → stronger acid.'
       }
     }
   ]

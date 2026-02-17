@@ -71,23 +71,24 @@ Amino acid chemistry appears in biochem, organic, and biology passages.
       id: 'mcat-5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Integrating Content Knowledge:',
-            options: ['Connect passage info to your content knowledge — the MCAT te', 'Amino acid chemistry appears in biochem, organic, and biolog', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Key Insight',
+            options: ['Physics concepts (pressure, flow, electrical signals) apply to organ system passages.', 'General chemistry (acids, bases, equilibrium) appears throughout all science sections.', 'Amino acid chemistry appears in biochem, organic, and biology passages.', 'Connect passage info to your content knowledge — the MCAT tests integration.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Physics concepts (pressure, flow, electrical signals) apply ', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'MCAT Tip',
+            options: ['Physics concepts (pressure, flow, electrical signals) apply to organ system passages.', 'Amino acid chemistry appears in biochem, organic, and biology passages.', 'Connect passage info to your content knowledge — the MCAT tests integration.', 'General chemistry (acids, bases, equilibrium) appears throughout all science sections.']
           }
         ],
-        correctAnswers: ['Connect passage info to your content knowledge — the MCAT te', 'Physics concepts (pressure, flow, electrical signals) apply '],
-        hint1: 'Think about integrating content knowledge',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Connect passage info to your content knowledge — the MCAT tests integration. Physics concepts (pressure, flow, electrical signals) apply to organ system passages.'
+        correctAnswers: ['Physics concepts (pressure, flow, electrical signals) apply to organ system passages.', 'General chemistry (acids, bases, equilibrium) appears throughout all science sections.'],
+        hint1: 'Think about what each concept specifically describes in Integrating Content Knowledge.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Integrating Content Knowledge describes a specific idea. Key Insight: Physics concepts (pressure, flow, electrical signals) apply to organ system passages. MCAT Tip: General chemistry (acids, bases, equilibrium) appears throughout all science sections.'
       }
     }
   ]

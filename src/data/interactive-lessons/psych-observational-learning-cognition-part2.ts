@@ -30,31 +30,31 @@ must want to imitate (vicarious reinforcement)
       id: 'obser2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of modeling processes?',
-            options: [
-              'Attention',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
-            ],
-            correctAnswer: 0,
-            explanation: 'Attention: must observe the model'
-          },
-          {
-            question: 'In the context of modeling processes, which is accurate?',
+            question: 'Which of the following correctly describes Attention?',
             options: [
               'must be able to perform the behavior',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'must want to imitate (vicarious reinforcement)',
+              'must remember the behavior',
+              'must observe the model'
             ],
-            correctAnswer: 0,
-            explanation: 'Reproduction: must be able to perform the behavior'
+            correctAnswer: 3,
+            explanation: 'Correct — Attention: must observe the model. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Reproduction:',
+            options: [
+              'must remember the behavior',
+              'must observe the model',
+              'must be able to perform the behavior',
+              'must want to imitate (vicarious reinforcement)'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Reproduction: must be able to perform the behavior. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ must want to imitate (vicarious reinforcement)
       id: 'obser2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Attention',
-            options: ['must observe the model', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['must remember the behavior', 'must be able to perform the behavior', 'must want to imitate (vicarious reinforcement)', 'must observe the model']
           },
           {
             label: 'Retention',
-            options: ['must remember the behavior', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['must want to imitate (vicarious reinforcement)', 'must remember the behavior', 'must be able to perform the behavior', 'must observe the model']
           },
           {
             label: 'Reproduction',
-            options: ['must be able to perform the behavior', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['must be able to perform the behavior', 'must remember the behavior', 'must want to imitate (vicarious reinforcement)', 'must observe the model']
           }
         ],
         correctAnswers: ['must observe the model', 'must remember the behavior', 'must be able to perform the behavior'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Modeling Processes.'
+        hint1: 'Think about what each concept specifically describes in Modeling Processes.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Modeling Processes describes a specific idea. Attention: must observe the model. Retention: must remember the behavior. Reproduction: must be able to perform the behavior.'
       }
     }
   ]

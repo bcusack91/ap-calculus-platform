@@ -71,23 +71,28 @@ Electrolytic cells: non-spontaneous, require external voltage, used for plating/
       id: 'mcat-7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Review & MCAT Practice:',
-            options: ['Galvanic (voltaic) cells: spontaneous redox, positive Ecell,', 'Electrolytic cells: non-spontaneous, require external voltag', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Galvanic (voltaic) cells',
+            options: ['Nernst equation: E = E0 - (RT/nF)*ln(Q) — adjusts cell potential for non-standard conditions.', 'spontaneous redox, positive Ecell, negative delta-G.', 'Standard reduction potentials: more positive = stronger oxidizing agent (wants to be reduced).', 'non-spontaneous, require external voltage, used for plating/purification.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Nernst equation: E = E0 - (RT/nF)*ln(Q) — adjusts cell poten', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Electrolytic cells',
+            options: ['non-spontaneous, require external voltage, used for plating/purification.', 'Nernst equation: E = E0 - (RT/nF)*ln(Q) — adjusts cell potential for non-standard conditions.', 'spontaneous redox, positive Ecell, negative delta-G.', 'Standard reduction potentials: more positive = stronger oxidizing agent (wants to be reduced).']
+          },
+          {
+            label: 'Key Insight',
+            options: ['spontaneous redox, positive Ecell, negative delta-G.', 'Nernst equation: E = E0 - (RT/nF)*ln(Q) — adjusts cell potential for non-standard conditions.', 'non-spontaneous, require external voltage, used for plating/purification.', 'Standard reduction potentials: more positive = stronger oxidizing agent (wants to be reduced).']
           }
         ],
-        correctAnswers: ['Galvanic (voltaic) cells: spontaneous redox, positive Ecell,', 'Nernst equation: E = E0 - (RT/nF)*ln(Q) — adjusts cell poten'],
-        hint1: 'Think about review & mcat practice',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Galvanic (voltaic) cells: spontaneous redox, positive Ecell, negative delta-G. Nernst equation: E = E0 - (RT/nF)*ln(Q) — adjusts cell potential for non-standard conditions.'
+        correctAnswers: ['spontaneous redox, positive Ecell, negative delta-G.', 'non-spontaneous, require external voltage, used for plating/purification.', 'Nernst equation: E = E0 - (RT/nF)*ln(Q) — adjusts cell potential for non-standard conditions.'],
+        hint1: 'Think about what each concept specifically describes in Review & MCAT Practice.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Review & MCAT Practice describes a specific idea. Galvanic (voltaic) cells: spontaneous redox, positive Ecell, negative delta-G. Electrolytic cells: non-spontaneous, require external voltage, used for plating/purification. Key Insight: Nernst equation: E = E0 - (RT/nF)*ln(Q) — adjusts cell potential for non-standard conditions.'
       }
     }
   ]

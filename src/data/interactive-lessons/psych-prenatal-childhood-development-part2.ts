@@ -30,31 +30,31 @@ decreased response to repeated stimuli
       id: 'prena2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of infant development?',
-            options: [
-              'Reflexes',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
-            ],
-            correctAnswer: 0,
-            explanation: 'Reflexes: rooting, sucking, grasping, Moro'
-          },
-          {
-            question: 'In the context of infant development, which is accurate?',
+            question: 'Which statement accurately explains Reflexes?',
             options: [
               'easy, difficult, slow-to-warm-up',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'rooting, sucking, grasping, Moro',
+              'head-to-toe (cephalocaudal), center-out (proximodistal)',
+              'decreased response to repeated stimuli'
             ],
-            correctAnswer: 0,
-            explanation: 'Temperament: easy, difficult, slow-to-warm-up'
+            correctAnswer: 1,
+            explanation: 'Correct — Reflexes: rooting, sucking, grasping, Moro. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Temperament:',
+            options: [
+              'head-to-toe (cephalocaudal), center-out (proximodistal)',
+              'easy, difficult, slow-to-warm-up',
+              'rooting, sucking, grasping, Moro',
+              'decreased response to repeated stimuli'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Temperament: easy, difficult, slow-to-warm-up. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ decreased response to repeated stimuli
       id: 'prena2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Reflexes',
-            options: ['rooting, sucking, grasping, Moro', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['head-to-toe (cephalocaudal), center-out (proximodistal)', 'rooting, sucking, grasping, Moro', 'decreased response to repeated stimuli', 'easy, difficult, slow-to-warm-up']
           },
           {
             label: 'Motor development',
-            options: ['head-to-toe (cephalocaudal), center-out (proximodi', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['easy, difficult, slow-to-warm-up', 'decreased response to repeated stimuli', 'head-to-toe (cephalocaudal), center-out (proximodistal)', 'rooting, sucking, grasping, Moro']
           },
           {
             label: 'Temperament',
-            options: ['easy, difficult, slow-to-warm-up', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['easy, difficult, slow-to-warm-up', 'decreased response to repeated stimuli', 'head-to-toe (cephalocaudal), center-out (proximodistal)', 'rooting, sucking, grasping, Moro']
           }
         ],
-        correctAnswers: ['rooting, sucking, grasping, Moro', 'head-to-toe (cephalocaudal), center-out (proximodi', 'easy, difficult, slow-to-warm-up'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Infant Development.'
+        correctAnswers: ['rooting, sucking, grasping, Moro', 'head-to-toe (cephalocaudal), center-out (proximodistal)', 'easy, difficult, slow-to-warm-up'],
+        hint1: 'Think about what each concept specifically describes in Infant Development.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Infant Development describes a specific idea. Reflexes: rooting, sucking, grasping, Moro. Motor development: head-to-toe (cephalocaudal), center-out (proximodistal). Temperament: easy, difficult, slow-to-warm-up.'
       }
     }
   ]

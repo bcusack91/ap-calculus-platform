@@ -30,31 +30,31 @@ Both react with alcohols → esters, amines → amides
       id: 'carbo3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of acid chlorides & anhydrides?',
+            question: 'Which statement accurately explains Acid chloride (RCOCl)?',
             options: [
-              'Acid chloride (RCOCl)',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'Made from RCOOH + SOCl₂ or (COCl)₂',
+              'Both react with alcohols → esters, amines → amides',
+              'most reactive acyl derivative',
+              'moderately reactive'
             ],
-            correctAnswer: 0,
-            explanation: 'Acid chloride (RCOCl): most reactive acyl derivative'
+            correctAnswer: 2,
+            explanation: 'Correct — Acid chloride (RCOCl): most reactive acyl derivative. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of acid chlorides & anhydrides, which is accurate?',
+            question: 'Which of the following is true about Anhydride (RCO-O-COR)?',
             options: [
+              'Made from RCOOH + SOCl₂ or (COCl)₂',
               'moderately reactive',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'most reactive acyl derivative',
+              'Both react with alcohols → esters, amines → amides'
             ],
-            correctAnswer: 0,
-            explanation: 'Anhydride (RCO-O-COR): moderately reactive'
+            correctAnswer: 1,
+            explanation: 'Correct — Anhydride (RCO-O-COR): moderately reactive. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,24 @@ Both react with alcohols → esters, amines → amides
       id: 'carbo3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Acid chloride (RCOCl)',
-            options: ['most reactive acyl derivative', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
-          },
-          {
-            label: 'Made from RCOOH + SOCl₂ or (COCl)₂',
-            options: ['Made from RCOOH + SOCl₂ or (COCl)₂', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Both react with alcohols → esters, amines → amides', 'Made from RCOOH + SOCl₂ or (COCl)₂', 'most reactive acyl derivative', 'moderately reactive']
           },
           {
             label: 'Anhydride (RCO-O-COR)',
-            options: ['moderately reactive', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['moderately reactive', 'Both react with alcohols → esters, amines → amides', 'Made from RCOOH + SOCl₂ or (COCl)₂', 'most reactive acyl derivative']
           }
         ],
-        correctAnswers: ['most reactive acyl derivative', 'Made from RCOOH + SOCl₂ or (COCl)₂', 'moderately reactive'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Acid Chlorides & Anhydrides.'
+        correctAnswers: ['most reactive acyl derivative', 'moderately reactive'],
+        hint1: 'Think about what each concept specifically describes in Acid Chlorides & Anhydrides.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Acid Chlorides & Anhydrides describes a specific idea. Acid chloride (RCOCl): most reactive acyl derivative. Anhydride (RCO-O-COR): moderately reactive.'
       }
     }
   ]

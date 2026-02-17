@@ -71,23 +71,28 @@ Socialization: process of learning norms and values; agents: family, peers, medi
       id: 'mcat-2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Culture & Socialization:',
-            options: ['Culture: shared beliefs, values, norms, and material objects', 'Socialization: process of learning norms and values; agents:', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Culture',
+            options: ['process of learning norms and values; agents: family, peers, media, school, religion.', 'Ethnocentrism: judging other cultures by your own standards; Cultural relativism: understanding in context.', 'Material culture: physical objects (technology, buildings); Non-material: ideas, beliefs, values.', 'shared beliefs, values, norms, and material objects of a group.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Ethnocentrism: judging other cultures by your own standards;', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Socialization',
+            options: ['shared beliefs, values, norms, and material objects of a group.', 'Ethnocentrism: judging other cultures by your own standards; Cultural relativism: understanding in context.', 'process of learning norms and values; agents: family, peers, media, school, religion.', 'Material culture: physical objects (technology, buildings); Non-material: ideas, beliefs, values.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['process of learning norms and values; agents: family, peers, media, school, religion.', 'shared beliefs, values, norms, and material objects of a group.', 'Ethnocentrism: judging other cultures by your own standards; Cultural relativism: understanding in context.', 'Material culture: physical objects (technology, buildings); Non-material: ideas, beliefs, values.']
           }
         ],
-        correctAnswers: ['Culture: shared beliefs, values, norms, and material objects', 'Ethnocentrism: judging other cultures by your own standards;'],
-        hint1: 'Think about culture & socialization',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Culture: shared beliefs, values, norms, and material objects of a group. Ethnocentrism: judging other cultures by your own standards; Cultural relativism: understanding in context.'
+        correctAnswers: ['shared beliefs, values, norms, and material objects of a group.', 'process of learning norms and values; agents: family, peers, media, school, religion.', 'Ethnocentrism: judging other cultures by your own standards; Cultural relativism: understanding in context.'],
+        hint1: 'Think about what each concept specifically describes in Culture & Socialization.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Culture & Socialization describes a specific idea. Culture: shared beliefs, values, norms, and material objects of a group. Socialization: process of learning norms and values; agents: family, peers, media, school, religion. Key Insight: Ethnocentrism: judging other cultures by your own standards; Cultural relativism: understanding in context.'
       }
     }
   ]

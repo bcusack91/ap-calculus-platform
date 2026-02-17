@@ -30,31 +30,31 @@ Row reduction (augmented matrix) works for any size system
       id: 'matri5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of solving systems with matrices?',
+            question: 'What does "Write system as AX = B where A is…" refer to in precalculus?',
             options: [
+              'X = A⁻¹B (if A is invertible)',
               'Write system as AX = B where A is coefficient matrix',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'Row reduction (augmented matrix) works for any size system',
+              'x_i = det(A_i)/det(A)'
             ],
-            correctAnswer: 0,
-            explanation: 'Write system as AX = B where A is coefficient matrix'
+            correctAnswer: 1,
+            explanation: 'Correct — Write system as AX = B where A is coefficient matrix. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of solving systems with matrices, which is accurate?',
+            question: 'In the context of Solving Systems with Matrices, which explains Cramer\'s rule?',
             options: [
+              'Row reduction (augmented matrix) works for any size system',
+              'X = A⁻¹B (if A is invertible)',
               'x_i = det(A_i)/det(A)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Write system as AX = B where A is coefficient matrix'
             ],
-            correctAnswer: 0,
-            explanation: 'Cramer\'s rule: x_i = det(A_i)/det(A)'
+            correctAnswer: 2,
+            explanation: 'Correct — Cramer\'s rule: x_i = det(A_i)/det(A). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,24 @@ Row reduction (augmented matrix) works for any size system
       id: 'matri5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Write system as AX = B where A is coefficient matrix',
-            options: ['Write system as AX = B where A is coefficient matr', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
-          },
-          {
             label: 'Solution',
-            options: ['X = A⁻¹B (if A is invertible)', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['Write system as AX = B where A is coefficient matrix', 'Row reduction (augmented matrix) works for any size system', 'X = A⁻¹B (if A is invertible)', 'x_i = det(A_i)/det(A)']
           },
           {
             label: 'Cramer\'s rule',
-            options: ['x_i = det(A_i)/det(A)', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['Write system as AX = B where A is coefficient matrix', 'X = A⁻¹B (if A is invertible)', 'x_i = det(A_i)/det(A)', 'Row reduction (augmented matrix) works for any size system']
           }
         ],
-        correctAnswers: ['Write system as AX = B where A is coefficient matr', 'X = A⁻¹B (if A is invertible)', 'x_i = det(A_i)/det(A)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Solving Systems with Matrices.'
+        correctAnswers: ['X = A⁻¹B (if A is invertible)', 'x_i = det(A_i)/det(A)'],
+        hint1: 'Think about what each concept specifically describes in Solving Systems with Matrices.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Solving Systems with Matrices describes a specific idea. Solution: X = A⁻¹B (if A is invertible). Cramer\'s rule: x_i = det(A_i)/det(A).'
       }
     }
   ]

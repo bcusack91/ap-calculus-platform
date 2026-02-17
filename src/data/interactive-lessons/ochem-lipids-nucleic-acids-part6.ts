@@ -30,31 +30,31 @@ Analyzing saponification reactions
       id: 'lipid6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of problem-solving workshop?',
+            question: 'Which statement accurately explains Identifying lipid types from structure?',
             options: [
               'Identifying lipid types from structure',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'Drawing nucleotide structures',
+              'Predicting membrane behavior',
+              'Analyzing saponification reactions'
             ],
             correctAnswer: 0,
-            explanation: 'Identifying lipid types from structure'
+            explanation: 'Correct — Identifying lipid types from structure. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of problem-solving workshop, which is accurate?',
+            question: 'In the context of Problem-Solving Workshop, which explains Predicting membrane behavior?',
             options: [
-              'Predicting membrane behavior',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Identifying lipid types from structure',
+              'Drawing nucleotide structures',
+              'Analyzing saponification reactions',
+              'Predicting membrane behavior'
             ],
-            correctAnswer: 0,
-            explanation: 'Predicting membrane behavior'
+            correctAnswer: 3,
+            explanation: 'Correct — Predicting membrane behavior. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Analyzing saponification reactions
       id: 'lipid6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Identifying lipid types from structure',
-            options: ['Identifying lipid types from structure', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Predicting membrane behavior', 'Identifying lipid types from structure', 'Drawing nucleotide structures', 'Analyzing saponification reactions']
           },
           {
             label: 'Drawing nucleotide structures',
-            options: ['Drawing nucleotide structures', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Identifying lipid types from structure', 'Drawing nucleotide structures', 'Analyzing saponification reactions', 'Predicting membrane behavior']
           },
           {
             label: 'Predicting membrane behavior',
-            options: ['Predicting membrane behavior', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Predicting membrane behavior', 'Drawing nucleotide structures', 'Analyzing saponification reactions', 'Identifying lipid types from structure']
           }
         ],
         correctAnswers: ['Identifying lipid types from structure', 'Drawing nucleotide structures', 'Predicting membrane behavior'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving Workshop.'
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Identifying lipid types from structure. Drawing nucleotide structures. Predicting membrane behavior.'
       }
     }
   ]

@@ -30,31 +30,31 @@ imagining events makes them feel real
       id: 'retri3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of memory distortion?',
+            question: 'Which statement accurately explains Misinformation effect (Loftus)?',
             options: [
-              'Misinformation effect (Loftus)',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'forgetting where we learned something',
+              'imagining events makes them feel real',
+              'post-event info alters memory',
+              'confident but inaccurate recollections'
             ],
-            correctAnswer: 0,
-            explanation: 'Misinformation effect (Loftus): post-event info alters memory'
+            correctAnswer: 2,
+            explanation: 'Correct — Misinformation effect (Loftus): post-event info alters memory. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of memory distortion, which is accurate?',
+            question: 'In the context of Memory Distortion, which explains False memories?',
             options: [
+              'imagining events makes them feel real',
+              'forgetting where we learned something',
               'confident but inaccurate recollections',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'post-event info alters memory'
             ],
-            correctAnswer: 0,
-            explanation: 'False memories: confident but inaccurate recollections'
+            correctAnswer: 2,
+            explanation: 'Correct — False memories: confident but inaccurate recollections. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ imagining events makes them feel real
       id: 'retri3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Misinformation effect (Loftus)',
-            options: ['post-event info alters memory', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['confident but inaccurate recollections', 'forgetting where we learned something', 'imagining events makes them feel real', 'post-event info alters memory']
           },
           {
             label: 'Source monitoring',
-            options: ['forgetting where we learned something', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['imagining events makes them feel real', 'forgetting where we learned something', 'confident but inaccurate recollections', 'post-event info alters memory']
           },
           {
             label: 'False memories',
-            options: ['confident but inaccurate recollections', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['forgetting where we learned something', 'confident but inaccurate recollections', 'post-event info alters memory', 'imagining events makes them feel real']
           }
         ],
         correctAnswers: ['post-event info alters memory', 'forgetting where we learned something', 'confident but inaccurate recollections'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Memory Distortion.'
+        hint1: 'Think about what each concept specifically describes in Memory Distortion.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Memory Distortion describes a specific idea. Misinformation effect (Loftus): post-event info alters memory. Source monitoring: forgetting where we learned something. False memories: confident but inaccurate recollections.'
       }
     }
   ]

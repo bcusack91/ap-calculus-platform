@@ -30,31 +30,31 @@ May fail if f'(xₙ) = 0 or if the initial guess is too far from the root
       id: 'linea4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of newton\'s method (preview)?',
+            question: 'Which of the following correctly describes Newton\'s Method?',
             options: [
-              'Newton\'s Method',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'xₙ₊₁ = xₙ - f(xₙ)/f\'(xₙ)',
+              'Iteratively approximates roots of f(x) = 0',
+              'May fail if f\'(xₙ) = 0 or if the initial guess is too far from the root',
+              'Converges quickly when starting near a root'
             ],
             correctAnswer: 0,
-            explanation: 'Newton\'s Method: xₙ₊₁ = xₙ - f(xₙ)/f\'(xₙ)'
+            explanation: 'Correct — Newton\'s Method: xₙ₊₁ = xₙ - f(xₙ)/f\'(xₙ). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of newton\'s method (preview), which is accurate?',
+            question: 'Select the statement that correctly describes Converges quickly when starting near a…:',
             options: [
+              'xₙ₊₁ = xₙ - f(xₙ)/f\'(xₙ)',
               'Converges quickly when starting near a root',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'May fail if f\'(xₙ) = 0 or if the initial guess is too far from the root',
+              'Iteratively approximates roots of f(x) = 0'
             ],
-            correctAnswer: 0,
-            explanation: 'Converges quickly when starting near a root'
+            correctAnswer: 1,
+            explanation: 'Correct — Converges quickly when starting near a root. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ May fail if f'(xₙ) = 0 or if the initial guess is too far from the root
       id: 'linea4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to newton\'s method (preview)?',
+            question: 'Regarding Newton\'s Method (Preview), which correctly describes May fail if f\'(xₙ) = 0 or if the…?',
             options: [
+              'Iteratively approximates roots of f(x) = 0',
               'May fail if f\'(xₙ) = 0 or if the initial guess is too far from the root',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'Converges quickly when starting near a root',
+              'xₙ₊₁ = xₙ - f(xₙ)/f\'(xₙ)'
             ],
-            correctAnswer: 0,
-            explanation: 'May fail if f\'(xₙ) = 0 or if the initial guess is too far from the root'
+            correctAnswer: 1,
+            explanation: 'Correct — May fail if f\'(xₙ) = 0 or if the initial guess is too far from the root. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ May fail if f'(xₙ) = 0 or if the initial guess is too far from the root
       id: 'linea4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Newton\'s Method',
-            options: ['xₙ₊₁ = xₙ - f(xₙ)/f\'(xₙ)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['May fail if f\'(xₙ) = 0 or if the initial guess is too far from the root', 'Iteratively approximates roots of f(x) = 0', 'Converges quickly when starting near a root', 'xₙ₊₁ = xₙ - f(xₙ)/f\'(xₙ)']
           },
           {
-            label: 'Iteratively approximates roots of f(x) = 0',
-            options: ['Iteratively approximates roots of f(x) = 0', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Iteratively approximates roots of f(x)…',
+            options: ['Iteratively approximates roots of f(x) = 0', 'Converges quickly when starting near a root', 'May fail if f\'(xₙ) = 0 or if the initial guess is too far from the root', 'xₙ₊₁ = xₙ - f(xₙ)/f\'(xₙ)']
           },
           {
-            label: 'Converges quickly when starting near a root',
-            options: ['Converges quickly when starting near a root', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Converges quickly when starting near a…',
+            options: ['Iteratively approximates roots of f(x) = 0', 'Converges quickly when starting near a root', 'May fail if f\'(xₙ) = 0 or if the initial guess is too far from the root', 'xₙ₊₁ = xₙ - f(xₙ)/f\'(xₙ)']
           }
         ],
         correctAnswers: ['xₙ₊₁ = xₙ - f(xₙ)/f\'(xₙ)', 'Iteratively approximates roots of f(x) = 0', 'Converges quickly when starting near a root'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Newton\'s Method (Preview).'
+        hint1: 'Think about what each concept specifically describes in Newton\'s Method (Preview).',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Newton\'s Method (Preview) describes a specific idea. Newton\'s Method: xₙ₊₁ = xₙ - f(xₙ)/f\'(xₙ). Iteratively approximates roots of f(x) = 0. Converges quickly when starting near a root.'
       }
     }
   ]

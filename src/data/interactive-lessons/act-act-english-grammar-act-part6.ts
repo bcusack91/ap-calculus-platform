@@ -18,20 +18,31 @@ Dangling modifier: the subject being modified is missing from the sentence.
       id: 'act-e6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes modifiers should be next to what they modify?',
+            question: 'What does "Modifiers should be next to what they…" refer to in ACT prep?',
             options: [
-              'Modifiers should be next to what they modify is a key concept for ACT English/Reading',
-              'Dangling modifier: the subject being modified is missing from the sentence',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'Parallel structure: items in a list should have the same grammatical form.',
+              'Not only... but also; either... or; neither... nor — keep both parts parallel.',
+              'Modifiers should be next to what they modify.',
+              'the subject being modified is missing from the sentence.'
             ],
-            correctAnswer: 0,
-            explanation: 'Modifiers should be next to what they modify'
+            correctAnswer: 2,
+            explanation: 'Correct — Modifiers should be next to what they modify. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Key Insight?',
+            options: [
+              'the subject being modified is missing from the sentence.',
+              'Parallel structure: items in a list should have the same grammatical form.',
+              'Not only... but also; either... or; neither... nor — keep both parts parallel.',
+              'Modifiers should be next to what they modify.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Key Insight: Parallel structure: items in a list should have the same grammatical form. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Dangling modifier: the subject being modified is missing from the sentence.
       id: 'act-e6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for problem-solving workshop?',
+            question: 'Which of these accurately represents ACT Tip?',
             options: [
-              'Parallel structure: items in a list should have the same grammatical form',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Modifiers should be next to what they modify.',
+              'Not only... but also; either... or; neither... nor — keep both parts parallel.',
+              'Parallel structure: items in a list should have the same grammatical form.',
+              'the subject being modified is missing from the sentence.'
             ],
-            correctAnswer: 0,
-            explanation: 'Parallel structure: items in a list should have the same grammatical form'
+            correctAnswer: 1,
+            explanation: 'Correct — ACT Tip: Not only... but also; either... or; neither... nor — keep both parts parallel. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Dangling modifier: the subject being modified is missing from the sentence.
       id: 'act-e6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Problem-Solving Workshop:',
-            options: ['Modifiers should be next to what they modify', 'Dangling modifier: the subject being modified is m', 'Not applicable', 'None of these']
+            label: 'Dangling modifier',
+            options: ['Not only... but also; either... or; neither... nor — keep both parts parallel.', 'the subject being modified is missing from the sentence.', 'Modifiers should be next to what they modify.', 'Parallel structure: items in a list should have the same grammatical form.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Parallel structure: items in a list should have th', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Key Insight',
+            options: ['Parallel structure: items in a list should have the same grammatical form.', 'Not only... but also; either... or; neither... nor — keep both parts parallel.', 'Modifiers should be next to what they modify.', 'the subject being modified is missing from the sentence.']
+          },
+          {
+            label: 'ACT Tip',
+            options: ['Parallel structure: items in a list should have the same grammatical form.', 'the subject being modified is missing from the sentence.', 'Not only... but also; either... or; neither... nor — keep both parts parallel.', 'Modifiers should be next to what they modify.']
           }
         ],
-        correctAnswers: ['Modifiers should be next to what they modify', 'Parallel structure: items in a list should have th'],
-        hint1: 'Think about problem-solving workshop',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Modifiers should be next to what they modify. Parallel structure: items in a list should have the same grammatical form.'
+        correctAnswers: ['the subject being modified is missing from the sentence.', 'Parallel structure: items in a list should have the same grammatical form.', 'Not only... but also; either... or; neither... nor — keep both parts parallel.'],
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Dangling modifier: the subject being modified is missing from the sentence. Key Insight: Parallel structure: items in a list should have the same grammatical form. ACT Tip: Not only... but also; either... or; neither... nor — keep both parts parallel.'
       }
     }
   ]

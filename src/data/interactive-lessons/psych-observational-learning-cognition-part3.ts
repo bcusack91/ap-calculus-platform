@@ -30,31 +30,31 @@ belief in one's ability to succeed (Bandura)
       id: 'obser3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of cognitive factors in learning?',
+            question: 'Which of the following correctly describes Cognitive maps?',
             options: [
-              'Cognitive maps',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'mental representations of space (Tolman)',
+              'Seligman — giving up after uncontrollable events',
+              'learning occurs but isn\'t demonstrated until motivated',
+              'belief in one\'s ability to succeed (Bandura)'
             ],
             correctAnswer: 0,
-            explanation: 'Cognitive maps: mental representations of space (Tolman)'
+            explanation: 'Correct — Cognitive maps: mental representations of space (Tolman). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of cognitive factors in learning, which is accurate?',
+            question: 'Select the statement that correctly describes Learned helplessness:',
             options: [
               'Seligman — giving up after uncontrollable events',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'belief in one\'s ability to succeed (Bandura)',
+              'mental representations of space (Tolman)',
+              'learning occurs but isn\'t demonstrated until motivated'
             ],
             correctAnswer: 0,
-            explanation: 'Learned helplessness: Seligman — giving up after uncontrollable events'
+            explanation: 'Correct — Learned helplessness: Seligman — giving up after uncontrollable events. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ belief in one's ability to succeed (Bandura)
       id: 'obser3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Cognitive maps',
-            options: ['mental representations of space (Tolman)', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['mental representations of space (Tolman)', 'Seligman — giving up after uncontrollable events', 'belief in one\'s ability to succeed (Bandura)', 'learning occurs but isn\'t demonstrated until motivated']
           },
           {
             label: 'Latent learning',
-            options: ['learning occurs but isn\'t demonstrated until motiv', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['mental representations of space (Tolman)', 'Seligman — giving up after uncontrollable events', 'learning occurs but isn\'t demonstrated until motivated', 'belief in one\'s ability to succeed (Bandura)']
           },
           {
             label: 'Learned helplessness',
-            options: ['Seligman — giving up after uncontrollable events', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['belief in one\'s ability to succeed (Bandura)', 'mental representations of space (Tolman)', 'Seligman — giving up after uncontrollable events', 'learning occurs but isn\'t demonstrated until motivated']
           }
         ],
-        correctAnswers: ['mental representations of space (Tolman)', 'learning occurs but isn\'t demonstrated until motiv', 'Seligman — giving up after uncontrollable events'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Cognitive Factors in Learning.'
+        correctAnswers: ['mental representations of space (Tolman)', 'learning occurs but isn\'t demonstrated until motivated', 'Seligman — giving up after uncontrollable events'],
+        hint1: 'Think about what each concept specifically describes in Cognitive Factors in Learning.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Cognitive Factors in Learning describes a specific idea. Cognitive maps: mental representations of space (Tolman). Latent learning: learning occurs but isn\'t demonstrated until motivated. Learned helplessness: Seligman — giving up after uncontrollable events.'
       }
     }
   ]

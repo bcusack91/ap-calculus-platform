@@ -18,20 +18,31 @@ Do easy questions first — every question is worth the same.
       id: 'sat-c6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes average time per question?',
+            question: 'What does "Average time per question" refer to in SAT prep?',
             options: [
-              'Average time per question is a fundamental concept in SAT Math',
-              'Do easy questions first — every question is worth the same',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'Last 5 minutes: answer every remaining question (no penalty for guessing).',
+              '~75 seconds (no-calc), ~87 seconds (calc).',
+              'Mark and skip questions that seem time-consuming, return later.',
+              'Do easy questions first — every question is worth the same.'
             ],
-            correctAnswer: 0,
-            explanation: 'Average time per question: ~75 seconds (no-calc), ~87 seconds (calc)'
+            correctAnswer: 1,
+            explanation: 'Correct — Average time per question: ~75 seconds (no-calc), ~87 seconds (calc). The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Key Insight?',
+            options: [
+              'Do easy questions first — every question is worth the same.',
+              'Mark and skip questions that seem time-consuming, return later.',
+              'Last 5 minutes: answer every remaining question (no penalty for guessing).',
+              '~75 seconds (no-calc), ~87 seconds (calc).'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Key Insight: Mark and skip questions that seem time-consuming, return later. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Do easy questions first — every question is worth the same.
       id: 'sat-c6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for problem-solving workshop?',
+            question: 'Regarding Problem-Solving Workshop, which correctly describes SAT Tip?',
             options: [
-              'Mark and skip questions that seem time-consuming, return later',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'Mark and skip questions that seem time-consuming, return later.',
+              '~75 seconds (no-calc), ~87 seconds (calc).',
+              'Last 5 minutes: answer every remaining question (no penalty for guessing).',
+              'Do easy questions first — every question is worth the same.'
             ],
-            correctAnswer: 0,
-            explanation: 'Mark and skip questions that seem time-consuming, return later'
+            correctAnswer: 2,
+            explanation: 'Correct — SAT Tip: Last 5 minutes: answer every remaining question (no penalty for guessing). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Do easy questions first — every question is worth the same.
       id: 'sat-c6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Problem-Solving Workshop:',
-            options: ['Average time per question: ~75 seconds (no-calc), ', 'Do easy questions first — every question is worth ', 'Not applicable', 'None of these']
+            label: 'Average time per question',
+            options: ['Mark and skip questions that seem time-consuming, return later.', 'Do easy questions first — every question is worth the same.', '~75 seconds (no-calc), ~87 seconds (calc).', 'Last 5 minutes: answer every remaining question (no penalty for guessing).']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Mark and skip questions that seem time-consuming, ', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Key Insight',
+            options: ['Do easy questions first — every question is worth the same.', 'Last 5 minutes: answer every remaining question (no penalty for guessing).', '~75 seconds (no-calc), ~87 seconds (calc).', 'Mark and skip questions that seem time-consuming, return later.']
+          },
+          {
+            label: 'SAT Tip',
+            options: ['Last 5 minutes: answer every remaining question (no penalty for guessing).', 'Do easy questions first — every question is worth the same.', 'Mark and skip questions that seem time-consuming, return later.', '~75 seconds (no-calc), ~87 seconds (calc).']
           }
         ],
-        correctAnswers: ['Average time per question: ~75 seconds (no-calc), ', 'Mark and skip questions that seem time-consuming, '],
-        hint1: 'Think about problem-solving workshop',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'Average time per question: ~75 seconds (no-calc), ~87 seconds (calc). Mark and skip questions that seem time-consuming, return later.'
+        correctAnswers: ['~75 seconds (no-calc), ~87 seconds (calc).', 'Mark and skip questions that seem time-consuming, return later.', 'Last 5 minutes: answer every remaining question (no penalty for guessing).'],
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Average time per question: ~75 seconds (no-calc), ~87 seconds (calc). Key Insight: Mark and skip questions that seem time-consuming, return later. SAT Tip: Last 5 minutes: answer every remaining question (no penalty for guessing).'
       }
     }
   ]

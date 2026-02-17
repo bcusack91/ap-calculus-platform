@@ -19,31 +19,31 @@ export const bioCellStructurePart3Data = {
       id: 'cell3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes er → golgi → plasma membrane pathway?',
+            question: 'Which statement accurately explains ER → Golgi → plasma membrane pathway?',
             options: [
-              'ER → Golgi → plasma membrane pathway',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Vesicle transport between compartments',
+              'Autophagy and cellular recycling',
+              'Signal sequences direct protein trafficking',
+              'ER → Golgi → plasma membrane pathway'
             ],
-            correctAnswer: 0,
-            explanation: 'ER → Golgi → plasma membrane pathway'
+            correctAnswer: 3,
+            explanation: 'Correct — ER → Golgi → plasma membrane pathway. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of endomembrane system, which statement is accurate?',
+            question: 'In the context of Endomembrane System, which explains Signal sequences direct protein…?',
             options: [
               'Signal sequences direct protein trafficking',
-              'yawhtap enarbmem amsalp → igloG → RE',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Vesicle transport between compartments',
+              'ER → Golgi → plasma membrane pathway',
+              'Autophagy and cellular recycling'
             ],
             correctAnswer: 0,
-            explanation: 'Signal sequences direct protein trafficking'
+            explanation: 'Correct — Signal sequences direct protein trafficking. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioCellStructurePart3Data = {
       id: 'cell3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to endomembrane system?',
+            question: 'Which of these accurately represents Autophagy and cellular recycling?',
             options: [
+              'ER → Golgi → plasma membrane pathway',
+              'Signal sequences direct protein trafficking',
               'Autophagy and cellular recycling',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Vesicle transport between compartments'
             ],
-            correctAnswer: 0,
-            explanation: 'Autophagy and cellular recycling'
+            correctAnswer: 2,
+            explanation: 'Correct — Autophagy and cellular recycling. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioCellStructurePart3Data = {
       id: 'cell3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'ER → Golgi → plasma membrane pathway is important in endomembrane system because',
-            options: ['ER → Golgi → plasma membrane pathway', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'ER → Golgi → plasma membrane pathway',
+            options: ['Signal sequences direct protein trafficking', 'Autophagy and cellular recycling', 'ER → Golgi → plasma membrane pathway', 'Vesicle transport between compartments']
           },
           {
-            label: 'Vesicle transport between compartments is important in endomembrane system because',
-            options: ['Vesicle transport between compartments', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Vesicle transport between compartments',
+            options: ['ER → Golgi → plasma membrane pathway', 'Signal sequences direct protein trafficking', 'Autophagy and cellular recycling', 'Vesicle transport between compartments']
           },
           {
-            label: 'Signal sequences direct protein trafficking is important in endomembrane system because',
-            options: ['Signal sequences direct protein trafficking', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Signal sequences direct protein…',
+            options: ['Autophagy and cellular recycling', 'ER → Golgi → plasma membrane pathway', 'Vesicle transport between compartments', 'Signal sequences direct protein trafficking']
           }
         ],
         correctAnswers: ['ER → Golgi → plasma membrane pathway', 'Vesicle transport between compartments', 'Signal sequences direct protein trafficking'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Endomembrane System.'
+        hint1: 'Think about what each concept specifically describes in Endomembrane System.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Endomembrane System describes a specific idea. ER → Golgi → plasma membrane pathway. Vesicle transport between compartments. Signal sequences direct protein trafficking.'
       }
     }
   ]

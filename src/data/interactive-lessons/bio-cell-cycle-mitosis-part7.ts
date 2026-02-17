@@ -19,31 +19,31 @@ export const bioCellCyclePart7Data = {
       id: 'cell7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes mitosis vs meiosis comparison?',
+            question: 'What does "Mitosis vs meiosis comparison" refer to in biology?',
             options: [
+              'Cell cycle regulation and cancer',
+              'Chromosome behavior during division',
               'Mitosis vs meiosis comparison',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'diagram interpretation'
             ],
-            correctAnswer: 0,
-            explanation: 'Mitosis vs meiosis comparison'
+            correctAnswer: 2,
+            explanation: 'Correct — Mitosis vs meiosis comparison. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of synthesis & ap review, which statement is accurate?',
+            question: 'Select the statement that correctly describes Chromosome behavior during division:',
             options: [
+              'Mitosis vs meiosis comparison',
               'Chromosome behavior during division',
-              'nosirapmoc sisoiem sv sisotiM',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'diagram interpretation',
+              'Cell cycle regulation and cancer'
             ],
-            correctAnswer: 0,
-            explanation: 'Chromosome behavior during division'
+            correctAnswer: 1,
+            explanation: 'Correct — Chromosome behavior during division. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioCellCyclePart7Data = {
       id: 'cell7-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to synthesis & ap review?',
+            question: 'Regarding Cell Cycle & Mitosis: Synthesis & AP Review, which correctly describes AP exam?',
             options: [
-              'AP exam: diagram interpretation',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'diagram interpretation',
+              'Cell cycle regulation and cancer',
+              'Chromosome behavior during division',
+              'Mitosis vs meiosis comparison'
             ],
             correctAnswer: 0,
-            explanation: 'AP exam: diagram interpretation'
+            explanation: 'Correct — AP exam: diagram interpretation. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioCellCyclePart7Data = {
       id: 'cell7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Mitosis vs meiosis comparison is important in synthesis & ap review because',
-            options: ['Mitosis vs meiosis comparison', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Mitosis vs meiosis comparison',
+            options: ['Chromosome behavior during division', 'Mitosis vs meiosis comparison', 'diagram interpretation', 'Cell cycle regulation and cancer']
           },
           {
-            label: 'Cell cycle regulation and cancer is important in synthesis & ap review because',
-            options: ['Cell cycle regulation and cancer', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Cell cycle regulation and cancer',
+            options: ['Mitosis vs meiosis comparison', 'Cell cycle regulation and cancer', 'diagram interpretation', 'Chromosome behavior during division']
           },
           {
-            label: 'Chromosome behavior during division is important in synthesis & ap review because',
-            options: ['Chromosome behavior during division', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Chromosome behavior during division',
+            options: ['Mitosis vs meiosis comparison', 'Chromosome behavior during division', 'Cell cycle regulation and cancer', 'diagram interpretation']
           }
         ],
         correctAnswers: ['Mitosis vs meiosis comparison', 'Cell cycle regulation and cancer', 'Chromosome behavior during division'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Synthesis & AP Review.'
+        hint1: 'Think about what each concept specifically describes in Cell Cycle & Mitosis: Synthesis & AP Review.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Cell Cycle & Mitosis: Synthesis & AP Review describes a specific idea. Mitosis vs meiosis comparison. Cell cycle regulation and cancer. Chromosome behavior during division.'
       }
     }
   ]

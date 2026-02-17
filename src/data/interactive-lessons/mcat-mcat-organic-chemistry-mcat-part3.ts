@@ -71,23 +71,28 @@ SN2: one step, backside attack, inversion of configuration, favored by 1-degree 
       id: 'mcat-3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Substitution & Elimination:',
-            options: ['SN1: two steps, carbocation intermediate, racemization, favo', 'SN2: one step, backside attack, inversion of configuration, ', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'SN1',
+            options: ['E1: two steps, carbocation, Zaitsev product (more substituted alkene), competes with SN1.', 'two steps, carbocation intermediate, racemization, favored by 3-degree substrate and polar protic solvent.', 'one step, backside attack, inversion of configuration, favored by 1-degree substrate and strong nucleophile.', 'E2: one step, anti-periplanar geometry required, strong base needed, Zaitsev product preferred.']
           },
           {
-            label: 'MCAT application:',
-            options: ['E1: two steps, carbocation, Zaitsev product (more substitute', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'SN2',
+            options: ['one step, backside attack, inversion of configuration, favored by 1-degree substrate and strong nucleophile.', 'two steps, carbocation intermediate, racemization, favored by 3-degree substrate and polar protic solvent.', 'E2: one step, anti-periplanar geometry required, strong base needed, Zaitsev product preferred.', 'E1: two steps, carbocation, Zaitsev product (more substituted alkene), competes with SN1.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['one step, backside attack, inversion of configuration, favored by 1-degree substrate and strong nucleophile.', 'E1: two steps, carbocation, Zaitsev product (more substituted alkene), competes with SN1.', 'E2: one step, anti-periplanar geometry required, strong base needed, Zaitsev product preferred.', 'two steps, carbocation intermediate, racemization, favored by 3-degree substrate and polar protic solvent.']
           }
         ],
-        correctAnswers: ['SN1: two steps, carbocation intermediate, racemization, favo', 'E1: two steps, carbocation, Zaitsev product (more substitute'],
-        hint1: 'Think about substitution & elimination',
-        hint2: 'Consider the MCAT application',
-        explanation: 'SN1: two steps, carbocation intermediate, racemization, favored by 3-degree substrate and polar protic solvent. E1: two steps, carbocation, Zaitsev product (more substituted alkene), competes with SN1.'
+        correctAnswers: ['two steps, carbocation intermediate, racemization, favored by 3-degree substrate and polar protic solvent.', 'one step, backside attack, inversion of configuration, favored by 1-degree substrate and strong nucleophile.', 'E1: two steps, carbocation, Zaitsev product (more substituted alkene), competes with SN1.'],
+        hint1: 'Think about what each concept specifically describes in Substitution & Elimination.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Substitution & Elimination describes a specific idea. SN1: two steps, carbocation intermediate, racemization, favored by 3-degree substrate and polar protic solvent. SN2: one step, backside attack, inversion of configuration, favored by 1-degree substrate and strong nucleophile. Key Insight: E1: two steps, carbocation, Zaitsev product (more substituted alkene), competes with SN1.'
       }
     }
   ]

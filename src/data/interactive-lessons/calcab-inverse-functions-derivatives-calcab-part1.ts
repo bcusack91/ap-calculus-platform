@@ -30,31 +30,31 @@ Only one-to-one functions have inverses
       id: 'inver1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of review of inverse functions?',
+            question: 'Which of the following correctly describes f and f⁻¹ are reflections across y = x?',
             options: [
+              'f(f⁻¹(x)) = x and f⁻¹(f(x)) = x',
               'f and f⁻¹ are reflections across y = x',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'Only one-to-one functions have inverses',
+              'Domain of f = Range of f⁻¹ and vice versa'
             ],
-            correctAnswer: 0,
-            explanation: 'f and f⁻¹ are reflections across y = x'
+            correctAnswer: 1,
+            explanation: 'Correct — f and f⁻¹ are reflections across y = x. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of review of inverse functions, which is accurate?',
+            question: 'In the context of Inverse Functions Derivatives, which explains Domain of f = Range of f⁻¹ and vice…?',
             options: [
+              'f(f⁻¹(x)) = x and f⁻¹(f(x)) = x',
+              'f and f⁻¹ are reflections across y = x',
               'Domain of f = Range of f⁻¹ and vice versa',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Only one-to-one functions have inverses'
             ],
-            correctAnswer: 0,
-            explanation: 'Domain of f = Range of f⁻¹ and vice versa'
+            correctAnswer: 2,
+            explanation: 'Correct — Domain of f = Range of f⁻¹ and vice versa. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Only one-to-one functions have inverses
       id: 'inver1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to review of inverse functions?',
+            question: 'Regarding Inverse Functions Derivatives, which correctly describes Only one-to-one functions have inverses?',
             options: [
               'Only one-to-one functions have inverses',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'f and f⁻¹ are reflections across y = x',
+              'f(f⁻¹(x)) = x and f⁻¹(f(x)) = x',
+              'Domain of f = Range of f⁻¹ and vice versa'
             ],
             correctAnswer: 0,
-            explanation: 'Only one-to-one functions have inverses'
+            explanation: 'Correct — Only one-to-one functions have inverses. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Only one-to-one functions have inverses
       id: 'inver1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'f and f⁻¹ are reflections across y = x',
-            options: ['f and f⁻¹ are reflections across y = x', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['f(f⁻¹(x)) = x and f⁻¹(f(x)) = x', 'Domain of f = Range of f⁻¹ and vice versa', 'Only one-to-one functions have inverses', 'f and f⁻¹ are reflections across y = x']
           },
           {
             label: 'f(f⁻¹(x)) = x and f⁻¹(f(x)) = x',
-            options: ['f(f⁻¹(x)) = x and f⁻¹(f(x)) = x', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['f(f⁻¹(x)) = x and f⁻¹(f(x)) = x', 'f and f⁻¹ are reflections across y = x', 'Domain of f = Range of f⁻¹ and vice versa', 'Only one-to-one functions have inverses']
           },
           {
-            label: 'Domain of f = Range of f⁻¹ and vice versa',
-            options: ['Domain of f = Range of f⁻¹ and vice versa', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Domain of f = Range of f⁻¹ and vice…',
+            options: ['f and f⁻¹ are reflections across y = x', 'f(f⁻¹(x)) = x and f⁻¹(f(x)) = x', 'Domain of f = Range of f⁻¹ and vice versa', 'Only one-to-one functions have inverses']
           }
         ],
         correctAnswers: ['f and f⁻¹ are reflections across y = x', 'f(f⁻¹(x)) = x and f⁻¹(f(x)) = x', 'Domain of f = Range of f⁻¹ and vice versa'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Review of Inverse Functions.'
+        hint1: 'Think about what each concept specifically describes in Inverse Functions Derivatives.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Inverse Functions Derivatives describes a specific idea. f and f⁻¹ are reflections across y = x. f(f⁻¹(x)) = x and f⁻¹(f(x)) = x. Domain of f = Range of f⁻¹ and vice versa.'
       }
     }
   ]

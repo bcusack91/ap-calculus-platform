@@ -19,31 +19,31 @@ export const bioMembraneTransportPart7Data = {
       id: 'memb7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes water potential equation?',
-            options: [
-              'Ψ = Ψs + Ψp',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
-            ],
-            correctAnswer: 0,
-            explanation: 'Water potential equation: Ψ = Ψs + Ψp'
-          },
-          {
-            question: 'In the context of synthesis & ap review, which statement is accurate?',
+            question: 'Which statement accurately explains Water potential equation?',
             options: [
               'Transport defects cause diseases',
-              'pΨ + sΨ = Ψ :noitauqe laitnetop retaW',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Free-response practice',
+              'Membrane transport in homeostasis',
+              'Ψ = Ψs + Ψp'
             ],
-            correctAnswer: 0,
-            explanation: 'Transport defects cause diseases'
+            correctAnswer: 3,
+            explanation: 'Correct — Water potential equation: Ψ = Ψs + Ψp. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Transport defects cause diseases?',
+            options: [
+              'Free-response practice',
+              'Ψ = Ψs + Ψp',
+              'Membrane transport in homeostasis',
+              'Transport defects cause diseases'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Transport defects cause diseases. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioMembraneTransportPart7Data = {
       id: 'memb7-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to synthesis & ap review?',
+            question: 'Which of these accurately represents Free-response practice?',
             options: [
+              'Transport defects cause diseases',
               'Free-response practice',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Membrane transport in homeostasis',
+              'Ψ = Ψs + Ψp'
             ],
-            correctAnswer: 0,
-            explanation: 'Free-response practice'
+            correctAnswer: 1,
+            explanation: 'Correct — Free-response practice. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioMembraneTransportPart7Data = {
       id: 'memb7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Water potential equation is important in synthesis & ap review because',
-            options: ['Ψ = Ψs + Ψp', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Water potential equation',
+            options: ['Ψ = Ψs + Ψp', 'Free-response practice', 'Membrane transport in homeostasis', 'Transport defects cause diseases']
           },
           {
-            label: 'Membrane transport in homeostasis is important in synthesis & ap review because',
-            options: ['Membrane transport in homeostasis', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Membrane transport in homeostasis',
+            options: ['Transport defects cause diseases', 'Ψ = Ψs + Ψp', 'Free-response practice', 'Membrane transport in homeostasis']
           },
           {
-            label: 'Transport defects cause diseases is important in synthesis & ap review because',
-            options: ['Transport defects cause diseases', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Transport defects cause diseases',
+            options: ['Membrane transport in homeostasis', 'Free-response practice', 'Transport defects cause diseases', 'Ψ = Ψs + Ψp']
           }
         ],
         correctAnswers: ['Ψ = Ψs + Ψp', 'Membrane transport in homeostasis', 'Transport defects cause diseases'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Synthesis & AP Review.'
+        hint1: 'Think about what each concept specifically describes in Membrane Transport: Synthesis & AP Review.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Membrane Transport: Synthesis & AP Review describes a specific idea. Water potential equation: Ψ = Ψs + Ψp. Membrane transport in homeostasis. Transport defects cause diseases.'
       }
     }
   ]

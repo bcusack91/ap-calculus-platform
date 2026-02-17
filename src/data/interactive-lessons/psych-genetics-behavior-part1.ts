@@ -30,31 +30,31 @@ environment affects gene expression
       id: 'genet1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of nature vs nurture?',
+            question: 'What does "Nature" refer to in psychology?',
             options: [
-              'Nature',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'genetic/biological influences',
+              'environmental influences',
+              'environment affects gene expression',
+              'genes AND environment shape behavior'
             ],
             correctAnswer: 0,
-            explanation: 'Nature: genetic/biological influences'
+            explanation: 'Correct — Nature: genetic/biological influences. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of nature vs nurture, which is accurate?',
+            question: 'Select the statement that correctly describes Interaction:',
             options: [
-              'genes AND environment shape behavior',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'environmental influences',
+              'environment affects gene expression',
+              'genetic/biological influences',
+              'genes AND environment shape behavior'
             ],
-            correctAnswer: 0,
-            explanation: 'Interaction: genes AND environment shape behavior'
+            correctAnswer: 3,
+            explanation: 'Correct — Interaction: genes AND environment shape behavior. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ environment affects gene expression
       id: 'genet1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Nature',
-            options: ['genetic/biological influences', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['environment affects gene expression', 'environmental influences', 'genes AND environment shape behavior', 'genetic/biological influences']
           },
           {
             label: 'Nurture',
-            options: ['environmental influences', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['environment affects gene expression', 'environmental influences', 'genes AND environment shape behavior', 'genetic/biological influences']
           },
           {
             label: 'Interaction',
-            options: ['genes AND environment shape behavior', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['genes AND environment shape behavior', 'environment affects gene expression', 'environmental influences', 'genetic/biological influences']
           }
         ],
         correctAnswers: ['genetic/biological influences', 'environmental influences', 'genes AND environment shape behavior'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Nature vs Nurture.'
+        hint1: 'Think about what each concept specifically describes in Genetics & Behavior.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Genetics & Behavior describes a specific idea. Nature: genetic/biological influences. Nurture: environmental influences. Interaction: genes AND environment shape behavior.'
       }
     }
   ]

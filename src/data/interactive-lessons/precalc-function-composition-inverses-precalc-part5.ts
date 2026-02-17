@@ -30,31 +30,31 @@ Domain of f = Range of f⁻¹ and vice versa
       id: 'funct5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of verifying inverses?',
+            question: 'What does "Verify" refer to in precalculus?',
             options: [
-              'Verify',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'f(f⁻¹(x)) = x for all x in domain of f⁻¹',
+              'This is a common misconception about the topic',
+              'reflection over y = x',
+              'Domain of f = Range of f⁻¹ and vice versa'
             ],
             correctAnswer: 0,
-            explanation: 'Verify: f(f⁻¹(x)) = x for all x in domain of f⁻¹'
+            explanation: 'Correct — Verify: f(f⁻¹(x)) = x for all x in domain of f⁻¹. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of verifying inverses, which is accurate?',
+            question: 'Which of the following is true about Graphical verification?',
             options: [
               'reflection over y = x',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'f(f⁻¹(x)) = x for all x in domain of f⁻¹',
+              'Domain of f = Range of f⁻¹ and vice versa',
+              'f⁻¹(f(x)) = x for all x in domain of f'
             ],
             correctAnswer: 0,
-            explanation: 'Graphical verification: reflection over y = x'
+            explanation: 'Correct — Graphical verification: reflection over y = x. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Domain of f = Range of f⁻¹ and vice versa
       id: 'funct5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Verify',
-            options: ['f(f⁻¹(x)) = x for all x in domain of f⁻¹', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['f(f⁻¹(x)) = x for all x in domain of f⁻¹', 'f⁻¹(f(x)) = x for all x in domain of f', 'reflection over y = x', 'Domain of f = Range of f⁻¹ and vice versa']
           },
           {
             label: 'Verify',
-            options: ['f⁻¹(f(x)) = x for all x in domain of f', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['f⁻¹(f(x)) = x for all x in domain of f', 'reflection over y = x', 'f(f⁻¹(x)) = x for all x in domain of f⁻¹', 'Domain of f = Range of f⁻¹ and vice versa']
           },
           {
             label: 'Graphical verification',
-            options: ['reflection over y = x', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['reflection over y = x', 'f(f⁻¹(x)) = x for all x in domain of f⁻¹', 'f⁻¹(f(x)) = x for all x in domain of f', 'Domain of f = Range of f⁻¹ and vice versa']
           }
         ],
         correctAnswers: ['f(f⁻¹(x)) = x for all x in domain of f⁻¹', 'f⁻¹(f(x)) = x for all x in domain of f', 'reflection over y = x'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Verifying Inverses.'
+        hint1: 'Think about what each concept specifically describes in Verifying Inverses.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Verifying Inverses describes a specific idea. Verify: f(f⁻¹(x)) = x for all x in domain of f⁻¹. Verify: f⁻¹(f(x)) = x for all x in domain of f. Graphical verification: reflection over y = x.'
       }
     }
   ]

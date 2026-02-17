@@ -18,20 +18,31 @@ Identify what each experiment tests and how they differ.
       id: 'act-s3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes multiple experiments on the same topic — each with a different approach?',
+            question: 'Which of the following correctly describes Multiple experiments on the same topic…?',
             options: [
-              'Multiple experiments on the same topic — each with a different approach is a key concept for ACT Science',
-              'Identify what each experiment tests and how they differ',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'Synthesize findings across experiments to draw broader conclusions.',
+              'Results from one experiment may support or contradict another.',
+              'Multiple experiments on the same topic — each with a different approach.',
+              'Identify what each experiment tests and how they differ.'
             ],
-            correctAnswer: 0,
-            explanation: 'Multiple experiments on the same topic — each with a different approach'
+            correctAnswer: 2,
+            explanation: 'Correct — Multiple experiments on the same topic — each with a different approach. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Research Summaries, which explains Key Insight?',
+            options: [
+              'Identify what each experiment tests and how they differ.',
+              'Results from one experiment may support or contradict another.',
+              'Synthesize findings across experiments to draw broader conclusions.',
+              'Multiple experiments on the same topic — each with a different approach.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Key Insight: Results from one experiment may support or contradict another. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Identify what each experiment tests and how they differ.
       id: 'act-s3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for research summaries?',
+            question: 'Which statement about ACT Tip is correct?',
             options: [
-              'Results from one experiment may support or contradict another',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Multiple experiments on the same topic — each with a different approach.',
+              'Results from one experiment may support or contradict another.',
+              'Synthesize findings across experiments to draw broader conclusions.',
+              'Identify what each experiment tests and how they differ.'
             ],
-            correctAnswer: 0,
-            explanation: 'Results from one experiment may support or contradict another'
+            correctAnswer: 2,
+            explanation: 'Correct — ACT Tip: Synthesize findings across experiments to draw broader conclusions. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ Identify what each experiment tests and how they differ.
       id: 'act-s3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Research Summaries:',
-            options: ['Multiple experiments on the same topic — each with', 'Identify what each experiment tests and how they d', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['Multiple experiments on the same topic — each with a different approach.', 'Results from one experiment may support or contradict another.', 'Identify what each experiment tests and how they differ.', 'Synthesize findings across experiments to draw broader conclusions.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Results from one experiment may support or contrad', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'ACT Tip',
+            options: ['Multiple experiments on the same topic — each with a different approach.', 'Identify what each experiment tests and how they differ.', 'Synthesize findings across experiments to draw broader conclusions.', 'Results from one experiment may support or contradict another.']
           }
         ],
-        correctAnswers: ['Multiple experiments on the same topic — each with', 'Results from one experiment may support or contrad'],
-        hint1: 'Think about research summaries',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Multiple experiments on the same topic — each with a different approach. Results from one experiment may support or contradict another.'
+        correctAnswers: ['Results from one experiment may support or contradict another.', 'Synthesize findings across experiments to draw broader conclusions.'],
+        hint1: 'Think about what each concept specifically describes in Research Summaries.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Research Summaries describes a specific idea. Key Insight: Results from one experiment may support or contradict another. ACT Tip: Synthesize findings across experiments to draw broader conclusions.'
       }
     }
   ]

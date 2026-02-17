@@ -18,20 +18,31 @@ Wrong answers often: are too extreme, use passage words out of context, or are p
       id: 'act-r4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes wrong answers often?',
+            question: 'Which statement accurately explains Wrong answers often?',
             options: [
-              'Wrong answers often is a key concept for ACT English/Reading',
-              '"Always" and "never" are usually wrong unless strongly supported',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'are too extreme, use passage words out of context, or are partially true.',
+              '"Always" and "never" are usually wrong unless strongly supported.',
+              'If two answers seem similar, one is likely a trap — find the key difference.',
+              'The correct answer is always supported by specific text.'
             ],
             correctAnswer: 0,
-            explanation: 'Wrong answers often: are too extreme, use passage words out of context, or are partially true'
+            explanation: 'Correct — Wrong answers often: are too extreme, use passage words out of context, or are partially true. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              'are too extreme, use passage words out of context, or are partially true.',
+              'If two answers seem similar, one is likely a trap — find the key difference.',
+              '"Always" and "never" are usually wrong unless strongly supported.',
+              'The correct answer is always supported by specific text.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Key Insight: If two answers seem similar, one is likely a trap — find the key difference. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Wrong answers often: are too extreme, use passage words out of context, or are p
       id: 'act-r4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for eliminating wrong answers?',
+            question: 'Regarding Eliminating Wrong Answers, which correctly describes ACT Tip?',
             options: [
-              'If two answers seem similar, one is likely a trap — find the key difference',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              '"Always" and "never" are usually wrong unless strongly supported.',
+              'The correct answer is always supported by specific text.',
+              'If two answers seem similar, one is likely a trap — find the key difference.',
+              'are too extreme, use passage words out of context, or are partially true.'
             ],
-            correctAnswer: 0,
-            explanation: 'If two answers seem similar, one is likely a trap — find the key difference'
+            correctAnswer: 1,
+            explanation: 'Correct — ACT Tip: The correct answer is always supported by specific text. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Wrong answers often: are too extreme, use passage words out of context, or are p
       id: 'act-r4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Eliminating Wrong Answers:',
-            options: ['Wrong answers often: are too extreme, use passage ', '"Always" and "never" are usually wrong unless stro', 'Not applicable', 'None of these']
+            label: 'Wrong answers often',
+            options: ['If two answers seem similar, one is likely a trap — find the key difference.', 'are too extreme, use passage words out of context, or are partially true.', 'The correct answer is always supported by specific text.', '"Always" and "never" are usually wrong unless strongly supported.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['If two answers seem similar, one is likely a trap ', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Key Insight',
+            options: ['If two answers seem similar, one is likely a trap — find the key difference.', 'are too extreme, use passage words out of context, or are partially true.', 'The correct answer is always supported by specific text.', '"Always" and "never" are usually wrong unless strongly supported.']
+          },
+          {
+            label: 'ACT Tip',
+            options: ['If two answers seem similar, one is likely a trap — find the key difference.', 'are too extreme, use passage words out of context, or are partially true.', '"Always" and "never" are usually wrong unless strongly supported.', 'The correct answer is always supported by specific text.']
           }
         ],
-        correctAnswers: ['Wrong answers often: are too extreme, use passage ', 'If two answers seem similar, one is likely a trap '],
-        hint1: 'Think about eliminating wrong answers',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Wrong answers often: are too extreme, use passage words out of context, or are partially true. If two answers seem similar, one is likely a trap — find the key difference.'
+        correctAnswers: ['are too extreme, use passage words out of context, or are partially true.', 'If two answers seem similar, one is likely a trap — find the key difference.', 'The correct answer is always supported by specific text.'],
+        hint1: 'Think about what each concept specifically describes in Eliminating Wrong Answers.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Eliminating Wrong Answers describes a specific idea. Wrong answers often: are too extreme, use passage words out of context, or are partially true. Key Insight: If two answers seem similar, one is likely a trap — find the key difference. ACT Tip: The correct answer is always supported by specific text.'
       }
     }
   ]

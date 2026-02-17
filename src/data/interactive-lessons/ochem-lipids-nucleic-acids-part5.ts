@@ -30,31 +30,31 @@ Denaturation and renaturation of DNA
       id: 'lipid5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of nucleic acid chemistry?',
+            question: 'Which statement accurately explains Phosphodiester bonds link nucleotides…?',
             options: [
+              'A=T (2 H-bonds), G≡C (3 H-bonds)',
+              'Denaturation and renaturation of DNA',
               'Phosphodiester bonds link nucleotides 3\' → 5\'',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'antiparallel strands'
             ],
-            correctAnswer: 0,
-            explanation: 'Phosphodiester bonds link nucleotides 3\' → 5\''
+            correctAnswer: 2,
+            explanation: 'Correct — Phosphodiester bonds link nucleotides 3\' → 5\'. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of nucleic acid chemistry, which is accurate?',
+            question: 'In the context of Nucleic Acid Chemistry, which explains Double helix?',
             options: [
               'antiparallel strands',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Phosphodiester bonds link nucleotides 3\' → 5\'',
+              'A=T (2 H-bonds), G≡C (3 H-bonds)',
+              'Denaturation and renaturation of DNA'
             ],
             correctAnswer: 0,
-            explanation: 'Double helix: antiparallel strands'
+            explanation: 'Correct — Double helix: antiparallel strands. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,24 @@ Denaturation and renaturation of DNA
       id: 'lipid5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Phosphodiester bonds link nucleotides 3\' → 5\'',
-            options: ['Phosphodiester bonds link nucleotides 3\' → 5\'', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
-          },
-          {
             label: 'Base pairing',
-            options: ['A=T (2 H-bonds), G≡C (3 H-bonds)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Phosphodiester bonds link nucleotides 3\' → 5\'', 'A=T (2 H-bonds), G≡C (3 H-bonds)', 'Denaturation and renaturation of DNA', 'antiparallel strands']
           },
           {
             label: 'Double helix',
-            options: ['antiparallel strands', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Denaturation and renaturation of DNA', 'Phosphodiester bonds link nucleotides 3\' → 5\'', 'A=T (2 H-bonds), G≡C (3 H-bonds)', 'antiparallel strands']
           }
         ],
-        correctAnswers: ['Phosphodiester bonds link nucleotides 3\' → 5\'', 'A=T (2 H-bonds), G≡C (3 H-bonds)', 'antiparallel strands'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Nucleic Acid Chemistry.'
+        correctAnswers: ['A=T (2 H-bonds), G≡C (3 H-bonds)', 'antiparallel strands'],
+        hint1: 'Think about what each concept specifically describes in Nucleic Acid Chemistry.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Nucleic Acid Chemistry describes a specific idea. Base pairing: A=T (2 H-bonds), G≡C (3 H-bonds). Double helix: antiparallel strands.'
       }
     }
   ]

@@ -71,23 +71,28 @@ Lenses: converging (convex) focuses light; diverging (concave) spreads light.
       id: 'mcat-4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Optics & Light:',
-            options: ['Refraction: Snells law n1*sin(theta1) = n2*sin(theta2) — lig', 'Lenses: converging (convex) focuses light; diverging (concav', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Refraction',
+            options: ['Total internal reflection occurs when angle of incidence > critical angle (only going from dense to less dense).', 'Thin lens equation: 1/f = 1/do + 1/di; magnification m = -di/do.', 'converging (convex) focuses light; diverging (concave) spreads light.', 'Snells law n1*sin(theta1) = n2*sin(theta2) — light bends toward normal in denser medium.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Thin lens equation: 1/f = 1/do + 1/di; magnification m = -di', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Lenses',
+            options: ['Snells law n1*sin(theta1) = n2*sin(theta2) — light bends toward normal in denser medium.', 'converging (convex) focuses light; diverging (concave) spreads light.', 'Total internal reflection occurs when angle of incidence > critical angle (only going from dense to less dense).', 'Thin lens equation: 1/f = 1/do + 1/di; magnification m = -di/do.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['Snells law n1*sin(theta1) = n2*sin(theta2) — light bends toward normal in denser medium.', 'converging (convex) focuses light; diverging (concave) spreads light.', 'Thin lens equation: 1/f = 1/do + 1/di; magnification m = -di/do.', 'Total internal reflection occurs when angle of incidence > critical angle (only going from dense to less dense).']
           }
         ],
-        correctAnswers: ['Refraction: Snells law n1*sin(theta1) = n2*sin(theta2) — lig', 'Thin lens equation: 1/f = 1/do + 1/di; magnification m = -di'],
-        hint1: 'Think about optics & light',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Refraction: Snells law n1*sin(theta1) = n2*sin(theta2) — light bends toward normal in denser medium. Thin lens equation: 1/f = 1/do + 1/di; magnification m = -di/do.'
+        correctAnswers: ['Snells law n1*sin(theta1) = n2*sin(theta2) — light bends toward normal in denser medium.', 'converging (convex) focuses light; diverging (concave) spreads light.', 'Thin lens equation: 1/f = 1/do + 1/di; magnification m = -di/do.'],
+        hint1: 'Think about what each concept specifically describes in Optics & Light.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Optics & Light describes a specific idea. Refraction: Snells law n1*sin(theta1) = n2*sin(theta2) — light bends toward normal in denser medium. Lenses: converging (convex) focuses light; diverging (concave) spreads light. Key Insight: Thin lens equation: 1/f = 1/do + 1/di; magnification m = -di/do.'
       }
     }
   ]

@@ -30,31 +30,31 @@ Decompose complex functions into simpler compositions
       id: 'funct1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of function composition?',
+            question: 'Which of the following correctly describes Composition?',
             options: [
-              'Composition',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'f(g(x)) ≠ g(f(x)) in general',
+              'Read "f composed with g" or "f of g of x"',
+              '(f ∘ g)(x) = f(g(x)) — apply g first, then f',
+              'Decompose complex functions into simpler compositions'
             ],
-            correctAnswer: 0,
-            explanation: 'Composition: (f ∘ g)(x) = f(g(x)) — apply g first, then f'
+            correctAnswer: 2,
+            explanation: 'Correct — Composition: (f ∘ g)(x) = f(g(x)) — apply g first, then f. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of function composition, which is accurate?',
+            question: 'In the context of Function Composition Inverses, which explains Read "f composed with g" or "f of g of…?',
             options: [
+              'Decompose complex functions into simpler compositions',
               'Read "f composed with g" or "f of g of x"',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              '(f ∘ g)(x) = f(g(x)) — apply g first, then f',
+              'f(g(x)) ≠ g(f(x)) in general'
             ],
-            correctAnswer: 0,
-            explanation: 'Read "f composed with g" or "f of g of x"'
+            correctAnswer: 1,
+            explanation: 'Correct — Read "f composed with g" or "f of g of x". Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,24 @@ Decompose complex functions into simpler compositions
       id: 'funct1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Composition',
-            options: ['(f ∘ g)(x) = f(g(x)) — apply g first, then f', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['f(g(x)) ≠ g(f(x)) in general', '(f ∘ g)(x) = f(g(x)) — apply g first, then f', 'Decompose complex functions into simpler compositions', 'Read "f composed with g" or "f of g of x"']
           },
           {
             label: 'Order matters',
-            options: ['f(g(x)) ≠ g(f(x)) in general', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
-          },
-          {
-            label: 'Read "f composed with g" or "f of g of x"',
-            options: ['Read "f composed with g" or "f of g of x"', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['Decompose complex functions into simpler compositions', '(f ∘ g)(x) = f(g(x)) — apply g first, then f', 'f(g(x)) ≠ g(f(x)) in general', 'Read "f composed with g" or "f of g of x"']
           }
         ],
-        correctAnswers: ['(f ∘ g)(x) = f(g(x)) — apply g first, then f', 'f(g(x)) ≠ g(f(x)) in general', 'Read "f composed with g" or "f of g of x"'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Function Composition.'
+        correctAnswers: ['(f ∘ g)(x) = f(g(x)) — apply g first, then f', 'f(g(x)) ≠ g(f(x)) in general'],
+        hint1: 'Think about what each concept specifically describes in Function Composition Inverses.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Function Composition Inverses describes a specific idea. Composition: (f ∘ g)(x) = f(g(x)) — apply g first, then f. Order matters: f(g(x)) ≠ g(f(x)) in general.'
       }
     }
   ]

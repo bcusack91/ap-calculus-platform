@@ -30,31 +30,31 @@ series, parametric/polar, integration techniques
       id: 'bc-ex1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of bc vs ab content overview?',
-            options: [
-              'BC includes all AB content plus',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'BC includes all AB content plus: series, parametric/polar/vector calculus, advanced integration'
-          },
-          {
-            question: 'In the context of bc vs ab content overview, which is accurate?',
+            question: 'Which statement accurately explains BC includes all AB content plus?',
             options: [
               'BC sub-score (the AB portion) is reported separately',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'series, parametric/polar, integration techniques',
+              'series, parametric/polar/vector calculus, advanced integration',
+              'About 60% of BC exam is AB content'
             ],
-            correctAnswer: 0,
-            explanation: 'BC sub-score (the AB portion) is reported separately'
+            correctAnswer: 2,
+            explanation: 'Correct — BC includes all AB content plus: series, parametric/polar/vector calculus, advanced integration. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about BC sub-score (the AB portion) is…?',
+            options: [
+              'series, parametric/polar/vector calculus, advanced integration',
+              'BC sub-score (the AB portion) is reported separately',
+              'About 60% of BC exam is AB content',
+              'series, parametric/polar, integration techniques'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — BC sub-score (the AB portion) is reported separately. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ series, parametric/polar, integration techniques
       id: 'bc-ex1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to bc vs ab content overview?',
+            question: 'Which of these accurately represents Focus extra study time on BC-only topics?',
             options: [
+              'About 60% of BC exam is AB content',
               'series, parametric/polar, integration techniques',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'series, parametric/polar/vector calculus, advanced integration',
+              'BC sub-score (the AB portion) is reported separately'
             ],
-            correctAnswer: 0,
-            explanation: 'Focus extra study time on BC-only topics: series, parametric/polar, integration techniques'
+            correctAnswer: 1,
+            explanation: 'Correct — Focus extra study time on BC-only topics: series, parametric/polar, integration techniques. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,24 @@ series, parametric/polar, integration techniques
       id: 'bc-ex1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'BC includes all AB content plus',
-            options: ['series, parametric/polar/vector calculus, advanced', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['series, parametric/polar, integration techniques', 'series, parametric/polar/vector calculus, advanced integration', 'BC sub-score (the AB portion) is reported separately', 'About 60% of BC exam is AB content']
           },
           {
-            label: 'About 60% of BC exam is AB content',
-            options: ['About 60% of BC exam is AB content', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
-          },
-          {
-            label: 'BC sub-score (the AB portion) is reported separately',
-            options: ['BC sub-score (the AB portion) is reported separate', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Focus extra study time on BC-only topics',
+            options: ['series, parametric/polar, integration techniques', 'About 60% of BC exam is AB content', 'series, parametric/polar/vector calculus, advanced integration', 'BC sub-score (the AB portion) is reported separately']
           }
         ],
-        correctAnswers: ['series, parametric/polar/vector calculus, advanced', 'About 60% of BC exam is AB content', 'BC sub-score (the AB portion) is reported separate'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding BC vs AB Content Overview.'
+        correctAnswers: ['series, parametric/polar/vector calculus, advanced integration', 'series, parametric/polar, integration techniques'],
+        hint1: 'Think about what each concept specifically describes in ∮ Bc Exam Strategies.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in ∮ Bc Exam Strategies describes a specific idea. BC includes all AB content plus: series, parametric/polar/vector calculus, advanced integration. Focus extra study time on BC-only topics: series, parametric/polar, integration techniques.'
       }
     }
   ]

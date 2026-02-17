@@ -18,20 +18,31 @@ Contractions: apostrophe replaces missing letters (don't = do not).
       id: 'act-e3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes possessive nouns?',
+            question: 'Which statement accurately explains Possessive nouns?',
             options: [
-              'Possessive nouns is a key concept for ACT English/Reading',
-              'Contractions: apostrophe replaces missing letters (dont = do not)',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'singular add \'s (dog\'s); plural ending in s add \' (dogs\').',
+              'No apostrophe for plural nouns: "The dogs ran" (not "The dog\'s ran").',
+              'apostrophe replaces missing letters (don\'t = do not).',
+              'Its vs. it\'s: its = possessive, it\'s = it is.'
             ],
             correctAnswer: 0,
-            explanation: 'Possessive nouns: singular add \'s (dog\'s); plural ending in s add \' (dogs\')'
+            explanation: 'Correct — Possessive nouns: singular add \'s (dog\'s); plural ending in s add \' (dogs\'). The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              'apostrophe replaces missing letters (don\'t = do not).',
+              'singular add \'s (dog\'s); plural ending in s add \' (dogs\').',
+              'No apostrophe for plural nouns: "The dogs ran" (not "The dog\'s ran").',
+              'Its vs. it\'s: its = possessive, it\'s = it is.'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Key Insight: Its vs. it\'s: its = possessive, it\'s = it is. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Contractions: apostrophe replaces missing letters (don't = do not).
       id: 'act-e3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for apostrophes?',
+            question: 'Regarding Apostrophes, which correctly describes ACT Tip?',
             options: [
-              'Its vs. it\'s: its = possessive, it\'s = it is',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'No apostrophe for plural nouns: "The dogs ran" (not "The dog\'s ran").',
+              'singular add \'s (dog\'s); plural ending in s add \' (dogs\').',
+              'Its vs. it\'s: its = possessive, it\'s = it is.',
+              'apostrophe replaces missing letters (don\'t = do not).'
             ],
             correctAnswer: 0,
-            explanation: 'Its vs. it\'s: its = possessive, it\'s = it is'
+            explanation: 'Correct — ACT Tip: No apostrophe for plural nouns: "The dogs ran" (not "The dog\'s ran"). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Contractions: apostrophe replaces missing letters (don't = do not).
       id: 'act-e3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Apostrophes:',
-            options: ['Possessive nouns: singular add \'s (dog\'s); plural ', 'Contractions: apostrophe replaces missing letters ', 'Not applicable', 'None of these']
+            label: 'Possessive nouns',
+            options: ['singular add \'s (dog\'s); plural ending in s add \' (dogs\').', 'No apostrophe for plural nouns: "The dogs ran" (not "The dog\'s ran").', 'apostrophe replaces missing letters (don\'t = do not).', 'Its vs. it\'s: its = possessive, it\'s = it is.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Its vs. it\'s: its = possessive, it\'s = it is', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Contractions',
+            options: ['apostrophe replaces missing letters (don\'t = do not).', 'No apostrophe for plural nouns: "The dogs ran" (not "The dog\'s ran").', 'Its vs. it\'s: its = possessive, it\'s = it is.', 'singular add \'s (dog\'s); plural ending in s add \' (dogs\').']
+          },
+          {
+            label: 'Key Insight',
+            options: ['singular add \'s (dog\'s); plural ending in s add \' (dogs\').', 'Its vs. it\'s: its = possessive, it\'s = it is.', 'apostrophe replaces missing letters (don\'t = do not).', 'No apostrophe for plural nouns: "The dogs ran" (not "The dog\'s ran").']
           }
         ],
-        correctAnswers: ['Possessive nouns: singular add \'s (dog\'s); plural ', 'Its vs. it\'s: its = possessive, it\'s = it is'],
-        hint1: 'Think about apostrophes',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Possessive nouns: singular add \'s (dog\'s); plural ending in s add \' (dogs\'). Its vs. it\'s: its = possessive, it\'s = it is.'
+        correctAnswers: ['singular add \'s (dog\'s); plural ending in s add \' (dogs\').', 'apostrophe replaces missing letters (don\'t = do not).', 'Its vs. it\'s: its = possessive, it\'s = it is.'],
+        hint1: 'Think about what each concept specifically describes in Apostrophes.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Apostrophes describes a specific idea. Possessive nouns: singular add \'s (dog\'s); plural ending in s add \' (dogs\'). Contractions: apostrophe replaces missing letters (don\'t = do not). Key Insight: Its vs. it\'s: its = possessive, it\'s = it is.'
       }
     }
   ]

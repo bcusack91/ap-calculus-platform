@@ -30,31 +30,31 @@ Velocity → position and acceleration → velocity are common applications
       id: 'antid6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of problem-solving workshop?',
+            question: 'Which statement accurately explains Given f\'(x) and an initial condition…?',
             options: [
               'Given f\'(x) and an initial condition f(a) = b, find f(x)',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'Velocity → position and acceleration → velocity are common applications',
+              'Integrate f\'(x) to get f(x) + C',
+              'Use the initial condition to solve for C'
             ],
             correctAnswer: 0,
-            explanation: 'Given f\'(x) and an initial condition f(a) = b, find f(x)'
+            explanation: 'Correct — Given f\'(x) and an initial condition f(a) = b, find f(x). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of problem-solving workshop, which is accurate?',
+            question: 'Which of the following is true about Use the initial condition to solve for C?',
             options: [
               'Use the initial condition to solve for C',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Given f\'(x) and an initial condition f(a) = b, find f(x)',
+              'Integrate f\'(x) to get f(x) + C',
+              'Velocity → position and acceleration → velocity are common applications'
             ],
             correctAnswer: 0,
-            explanation: 'Use the initial condition to solve for C'
+            explanation: 'Correct — Use the initial condition to solve for C. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Velocity → position and acceleration → velocity are common applications
       id: 'antid6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to problem-solving workshop?',
+            question: 'Which statement about Velocity → position and acceleration →… is correct?',
             options: [
               'Velocity → position and acceleration → velocity are common applications',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'Given f\'(x) and an initial condition f(a) = b, find f(x)',
+              'Integrate f\'(x) to get f(x) + C',
+              'Use the initial condition to solve for C'
             ],
             correctAnswer: 0,
-            explanation: 'Velocity → position and acceleration → velocity are common applications'
+            explanation: 'Correct — Velocity → position and acceleration → velocity are common applications. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Velocity → position and acceleration → velocity are common applications
       id: 'antid6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Given f\'(x) and an initial condition f(a) = b, find f(x)',
-            options: ['Given f\'(x) and an initial condition f(a) = b, fin', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Given f\'(x) and an initial condition…',
+            options: ['Velocity → position and acceleration → velocity are common applications', 'Use the initial condition to solve for C', 'Given f\'(x) and an initial condition f(a) = b, find f(x)', 'Integrate f\'(x) to get f(x) + C']
           },
           {
             label: 'Integrate f\'(x) to get f(x) + C',
-            options: ['Integrate f\'(x) to get f(x) + C', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Given f\'(x) and an initial condition f(a) = b, find f(x)', 'Integrate f\'(x) to get f(x) + C', 'Use the initial condition to solve for C', 'Velocity → position and acceleration → velocity are common applications']
           },
           {
             label: 'Use the initial condition to solve for C',
-            options: ['Use the initial condition to solve for C', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Use the initial condition to solve for C', 'Velocity → position and acceleration → velocity are common applications', 'Given f\'(x) and an initial condition f(a) = b, find f(x)', 'Integrate f\'(x) to get f(x) + C']
           }
         ],
-        correctAnswers: ['Given f\'(x) and an initial condition f(a) = b, fin', 'Integrate f\'(x) to get f(x) + C', 'Use the initial condition to solve for C'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving Workshop.'
+        correctAnswers: ['Given f\'(x) and an initial condition f(a) = b, find f(x)', 'Integrate f\'(x) to get f(x) + C', 'Use the initial condition to solve for C'],
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Given f\'(x) and an initial condition f(a) = b, find f(x). Integrate f\'(x) to get f(x) + C. Use the initial condition to solve for C.'
       }
     }
   ]

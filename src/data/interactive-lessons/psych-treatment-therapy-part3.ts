@@ -30,31 +30,31 @@ identifying and correcting distorted thinking
       id: 'treat3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of behavioral & cognitive therapy?',
+            question: 'What does "Systematic desensitization" refer to in psychology?',
             options: [
-              'Systematic desensitization',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'gradually exposing to feared stimulus',
+              'pairing unwanted behavior with unpleasant stimulus',
+              'challenging and changing negative thought patterns',
+              'identifying and correcting distorted thinking'
             ],
             correctAnswer: 0,
-            explanation: 'Systematic desensitization: gradually exposing to feared stimulus'
+            explanation: 'Correct — Systematic desensitization: gradually exposing to feared stimulus. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of behavioral & cognitive therapy, which is accurate?',
+            question: 'In the context of Behavioral & Cognitive Therapy, which explains CBT?',
             options: [
               'challenging and changing negative thought patterns',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'identifying and correcting distorted thinking',
+              'gradually exposing to feared stimulus',
+              'pairing unwanted behavior with unpleasant stimulus'
             ],
             correctAnswer: 0,
-            explanation: 'CBT: challenging and changing negative thought patterns'
+            explanation: 'Correct — CBT: challenging and changing negative thought patterns. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ identifying and correcting distorted thinking
       id: 'treat3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Systematic desensitization',
-            options: ['gradually exposing to feared stimulus', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['gradually exposing to feared stimulus', 'challenging and changing negative thought patterns', 'pairing unwanted behavior with unpleasant stimulus', 'identifying and correcting distorted thinking']
           },
           {
             label: 'Aversion therapy',
-            options: ['pairing unwanted behavior with unpleasant stimulus', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['identifying and correcting distorted thinking', 'pairing unwanted behavior with unpleasant stimulus', 'challenging and changing negative thought patterns', 'gradually exposing to feared stimulus']
           },
           {
             label: 'CBT',
-            options: ['challenging and changing negative thought patterns', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['pairing unwanted behavior with unpleasant stimulus', 'challenging and changing negative thought patterns', 'gradually exposing to feared stimulus', 'identifying and correcting distorted thinking']
           }
         ],
         correctAnswers: ['gradually exposing to feared stimulus', 'pairing unwanted behavior with unpleasant stimulus', 'challenging and changing negative thought patterns'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Behavioral & Cognitive Therapy.'
+        hint1: 'Think about what each concept specifically describes in Behavioral & Cognitive Therapy.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Behavioral & Cognitive Therapy describes a specific idea. Systematic desensitization: gradually exposing to feared stimulus. Aversion therapy: pairing unwanted behavior with unpleasant stimulus. CBT: challenging and changing negative thought patterns.'
       }
     }
   ]

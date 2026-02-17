@@ -30,31 +30,31 @@ Competes with substitution (SN1/SN2)
       id: 'elimi1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of introduction to elimination?',
+            question: 'Which of the following correctly describes Elimination?',
             options: [
-              'Elimination',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'Competes with substitution (SN1/SN2)',
+              'removal of H and leaving group → alkene',
+              'E1 and E2',
+              'Base removes a proton; leaving group departs'
             ],
-            correctAnswer: 0,
-            explanation: 'Elimination: removal of H and leaving group → alkene'
+            correctAnswer: 1,
+            explanation: 'Correct — Elimination: removal of H and leaving group → alkene. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of introduction to elimination, which is accurate?',
+            question: 'In the context of ️ Elimination Reactions, which explains Two mechanisms?',
             options: [
-              'E1 and E2',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Base removes a proton; leaving group departs',
+              'removal of H and leaving group → alkene',
+              'Competes with substitution (SN1/SN2)',
+              'E1 and E2'
             ],
-            correctAnswer: 0,
-            explanation: 'Two mechanisms: E1 and E2'
+            correctAnswer: 3,
+            explanation: 'Correct — Two mechanisms: E1 and E2. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,24 @@ Competes with substitution (SN1/SN2)
       id: 'elimi1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Elimination',
-            options: ['removal of H and leaving group → alkene', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
-          },
-          {
-            label: 'Base removes a proton; leaving group departs',
-            options: ['Base removes a proton; leaving group departs', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Competes with substitution (SN1/SN2)', 'Base removes a proton; leaving group departs', 'E1 and E2', 'removal of H and leaving group → alkene']
           },
           {
             label: 'Two mechanisms',
-            options: ['E1 and E2', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Competes with substitution (SN1/SN2)', 'Base removes a proton; leaving group departs', 'E1 and E2', 'removal of H and leaving group → alkene']
           }
         ],
-        correctAnswers: ['removal of H and leaving group → alkene', 'Base removes a proton; leaving group departs', 'E1 and E2'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Introduction to Elimination.'
+        correctAnswers: ['removal of H and leaving group → alkene', 'E1 and E2'],
+        hint1: 'Think about what each concept specifically describes in ️ Elimination Reactions.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in ️ Elimination Reactions describes a specific idea. Elimination: removal of H and leaving group → alkene. Two mechanisms: E1 and E2.'
       }
     }
   ]

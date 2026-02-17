@@ -30,31 +30,31 @@ radical halogenation and addition
       id: 'radic7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of synthesis & review?',
+            question: 'What does "Radical reactions follow distinct…" refer to in this topic?',
             options: [
               'Radical reactions follow distinct mechanistic patterns',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'Selectivity depends on halogen choice',
+              'radical halogenation and addition',
+              'Radical stability parallels carbocation stability'
             ],
             correctAnswer: 0,
-            explanation: 'Radical reactions follow distinct mechanistic patterns'
+            explanation: 'Correct — Radical reactions follow distinct mechanistic patterns. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of synthesis & review, which is accurate?',
+            question: 'Which of the following is true about Radical stability parallels carbocation…?',
             options: [
-              'Radical stability parallels carbocation stability',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Selectivity depends on halogen choice',
+              'Radical reactions follow distinct mechanistic patterns',
+              'radical halogenation and addition',
+              'Radical stability parallels carbocation stability'
             ],
-            correctAnswer: 0,
-            explanation: 'Radical stability parallels carbocation stability'
+            correctAnswer: 3,
+            explanation: 'Correct — Radical stability parallels carbocation stability. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ radical halogenation and addition
       id: 'radic7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Radical reactions follow distinct mechanistic patterns',
-            options: ['Radical reactions follow distinct mechanistic patt', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Radical reactions follow distinct…',
+            options: ['radical halogenation and addition', 'Radical stability parallels carbocation stability', 'Selectivity depends on halogen choice', 'Radical reactions follow distinct mechanistic patterns']
           },
           {
             label: 'Selectivity depends on halogen choice',
-            options: ['Selectivity depends on halogen choice', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['radical halogenation and addition', 'Radical reactions follow distinct mechanistic patterns', 'Selectivity depends on halogen choice', 'Radical stability parallels carbocation stability']
           },
           {
-            label: 'Radical stability parallels carbocation stability',
-            options: ['Radical stability parallels carbocation stability', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Radical stability parallels carbocation…',
+            options: ['Selectivity depends on halogen choice', 'Radical reactions follow distinct mechanistic patterns', 'radical halogenation and addition', 'Radical stability parallels carbocation stability']
           }
         ],
-        correctAnswers: ['Radical reactions follow distinct mechanistic patt', 'Selectivity depends on halogen choice', 'Radical stability parallels carbocation stability'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Synthesis & Review.'
+        correctAnswers: ['Radical reactions follow distinct mechanistic patterns', 'Selectivity depends on halogen choice', 'Radical stability parallels carbocation stability'],
+        hint1: 'Think about what each concept specifically describes in Synthesis & Review.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Synthesis & Review describes a specific idea. Radical reactions follow distinct mechanistic patterns. Selectivity depends on halogen choice. Radical stability parallels carbocation stability.'
       }
     }
   ]

@@ -30,31 +30,31 @@ low-pitched sounds
       id: 'sensa3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of hearing?',
-            options: [
-              'Sound waves → outer ear → eardrum → ossicles → cochlea → hair cells',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
-            ],
-            correctAnswer: 0,
-            explanation: 'Sound waves → outer ear → eardrum → ossicles → cochlea → hair cells'
-          },
-          {
-            question: 'In the context of hearing, which is accurate?',
+            question: 'Which statement accurately explains Sound waves → outer ear → eardrum →…?',
             options: [
               'high-pitched sounds',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Sound waves → outer ear → eardrum → ossicles → cochlea → hair cells',
+              'Frequency = pitch; amplitude = loudness',
+              'low-pitched sounds'
             ],
-            correctAnswer: 0,
-            explanation: 'Place theory: high-pitched sounds'
+            correctAnswer: 1,
+            explanation: 'Correct — Sound waves → outer ear → eardrum → ossicles → cochlea → hair cells. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Place theory?',
+            options: [
+              'Frequency = pitch; amplitude = loudness',
+              'Sound waves → outer ear → eardrum → ossicles → cochlea → hair cells',
+              'low-pitched sounds',
+              'high-pitched sounds'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Place theory: high-pitched sounds. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,24 @@ low-pitched sounds
       id: 'sensa3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Sound waves → outer ear → eardrum → ossicles → cochlea → hair cells',
-            options: ['Sound waves → outer ear → eardrum → ossicles → coc', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
-          },
-          {
-            label: 'Frequency = pitch; amplitude = loudness',
-            options: ['Frequency = pitch; amplitude = loudness', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
-          },
-          {
             label: 'Place theory',
-            options: ['high-pitched sounds', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['high-pitched sounds', 'Frequency = pitch; amplitude = loudness', 'Sound waves → outer ear → eardrum → ossicles → cochlea → hair cells', 'low-pitched sounds']
+          },
+          {
+            label: 'Frequency theory',
+            options: ['Frequency = pitch; amplitude = loudness', 'Sound waves → outer ear → eardrum → ossicles → cochlea → hair cells', 'low-pitched sounds', 'high-pitched sounds']
           }
         ],
-        correctAnswers: ['Sound waves → outer ear → eardrum → ossicles → coc', 'Frequency = pitch; amplitude = loudness', 'high-pitched sounds'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Hearing.'
+        correctAnswers: ['high-pitched sounds', 'low-pitched sounds'],
+        hint1: 'Think about what each concept specifically describes in Hearing.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Hearing describes a specific idea. Place theory: high-pitched sounds. Frequency theory: low-pitched sounds.'
       }
     }
   ]

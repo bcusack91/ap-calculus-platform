@@ -19,31 +19,31 @@ export const bioNonMendelianPart6Data = {
       id: 'non-6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes identifying inheritance patterns from crosses?',
+            question: 'Which of the following correctly describes Identifying inheritance patterns from…?',
             options: [
               'Identifying inheritance patterns from crosses',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Distinguishing codominance from incomplete dominance',
+              'Solving X-linked inheritance problems',
+              'Analyzing polygenic trait distributions'
             ],
             correctAnswer: 0,
-            explanation: 'Identifying inheritance patterns from crosses'
+            explanation: 'Correct — Identifying inheritance patterns from crosses. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of problem-solving, which statement is accurate?',
+            question: 'In the context of Non-Mendelian Genetics: Problem-Solving Workshop, which explains Distinguishing codominance from…?',
             options: [
-              'Distinguishing codominance from incomplete dominance',
-              'sessorc morf snrettap ecnatirehni gniyfitnedI',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Analyzing polygenic trait distributions',
+              'Solving X-linked inheritance problems',
+              'Identifying inheritance patterns from crosses',
+              'Distinguishing codominance from incomplete dominance'
             ],
-            correctAnswer: 0,
-            explanation: 'Distinguishing codominance from incomplete dominance'
+            correctAnswer: 3,
+            explanation: 'Correct — Distinguishing codominance from incomplete dominance. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioNonMendelianPart6Data = {
       id: 'non-6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to problem-solving?',
+            question: 'Regarding Non-Mendelian Genetics: Problem-Solving Workshop, which correctly describes Analyzing polygenic trait distributions?',
             options: [
+              'Distinguishing codominance from incomplete dominance',
               'Analyzing polygenic trait distributions',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Solving X-linked inheritance problems',
+              'Identifying inheritance patterns from crosses'
             ],
-            correctAnswer: 0,
-            explanation: 'Analyzing polygenic trait distributions'
+            correctAnswer: 1,
+            explanation: 'Correct — Analyzing polygenic trait distributions. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioNonMendelianPart6Data = {
       id: 'non-6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Identifying inheritance patterns from crosses is important in problem-solving because',
-            options: ['Identifying inheritance patterns from crosses', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Identifying inheritance patterns from…',
+            options: ['Solving X-linked inheritance problems', 'Analyzing polygenic trait distributions', 'Distinguishing codominance from incomplete dominance', 'Identifying inheritance patterns from crosses']
           },
           {
-            label: 'Solving X-linked inheritance problems is important in problem-solving because',
-            options: ['Solving X-linked inheritance problems', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Solving X-linked inheritance problems',
+            options: ['Analyzing polygenic trait distributions', 'Solving X-linked inheritance problems', 'Identifying inheritance patterns from crosses', 'Distinguishing codominance from incomplete dominance']
           },
           {
-            label: 'Distinguishing codominance from incomplete dominance is important in problem-solving because',
-            options: ['Distinguishing codominance from incomplete dominan', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Distinguishing codominance from…',
+            options: ['Distinguishing codominance from incomplete dominance', 'Analyzing polygenic trait distributions', 'Solving X-linked inheritance problems', 'Identifying inheritance patterns from crosses']
           }
         ],
-        correctAnswers: ['Identifying inheritance patterns from crosses', 'Solving X-linked inheritance problems', 'Distinguishing codominance from incomplete dominan'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving.'
+        correctAnswers: ['Identifying inheritance patterns from crosses', 'Solving X-linked inheritance problems', 'Distinguishing codominance from incomplete dominance'],
+        hint1: 'Think about what each concept specifically describes in Non-Mendelian Genetics: Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Non-Mendelian Genetics: Problem-Solving Workshop describes a specific idea. Identifying inheritance patterns from crosses. Solving X-linked inheritance problems. Distinguishing codominance from incomplete dominance.'
       }
     }
   ]

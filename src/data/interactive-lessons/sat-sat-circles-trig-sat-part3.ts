@@ -18,20 +18,31 @@ SOH-CAH-TOA.
       id: 'sat-c3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes sin θ = opposite/hypotenuse; cos θ = adjacent/hypotenuse; tan θ = opposite/adjacent?',
+            question: 'Which statement accurately explains sin θ = opposite/hypotenuse; cos θ =…?',
             options: [
-              'sin θ = opposite/hypotenuse; cos θ = adjacent/hypotenuse; tan θ = opposite/adjacent is a fundamental concept in SAT Math',
-              'SOH-CAH-TOA',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'sin θ = opposite/hypotenuse; cos θ = adjacent/hypotenuse; tan θ = opposite/adjacent.',
+              'Complementary angles: sin(x) = cos(90° - x).',
+              'SOH-CAH-TOA.',
+              'Pythagorean identity: sin²θ + cos²θ = 1.'
             ],
             correctAnswer: 0,
-            explanation: 'sin θ = opposite/hypotenuse; cos θ = adjacent/hypotenuse; tan θ = opposite/adjacent'
+            explanation: 'Correct — sin θ = opposite/hypotenuse; cos θ = adjacent/hypotenuse; tan θ = opposite/adjacent. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Right Triangle Trig, which explains Key Insight?',
+            options: [
+              'Complementary angles: sin(x) = cos(90° - x).',
+              'sin θ = opposite/hypotenuse; cos θ = adjacent/hypotenuse; tan θ = opposite/adjacent.',
+              'SOH-CAH-TOA.',
+              'Pythagorean identity: sin²θ + cos²θ = 1.'
+            ],
+            correctAnswer: 0,
+            explanation: 'Correct — Key Insight: Complementary angles: sin(x) = cos(90° - x). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ SOH-CAH-TOA.
       id: 'sat-c3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for right triangle trig?',
+            question: 'Which statement about SAT Tip is correct?',
             options: [
-              'Complementary angles: sin(x) = cos(90° - x)',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'Complementary angles: sin(x) = cos(90° - x).',
+              'SOH-CAH-TOA.',
+              'sin θ = opposite/hypotenuse; cos θ = adjacent/hypotenuse; tan θ = opposite/adjacent.',
+              'Pythagorean identity: sin²θ + cos²θ = 1.'
             ],
-            correctAnswer: 0,
-            explanation: 'Complementary angles: sin(x) = cos(90° - x)'
+            correctAnswer: 3,
+            explanation: 'Correct — SAT Tip: Pythagorean identity: sin²θ + cos²θ = 1. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ SOH-CAH-TOA.
       id: 'sat-c3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Right Triangle Trig:',
-            options: ['sin θ = opposite/hypotenuse; cos θ = adjacent/hypo', 'SOH-CAH-TOA', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['SOH-CAH-TOA.', 'Pythagorean identity: sin²θ + cos²θ = 1.', 'Complementary angles: sin(x) = cos(90° - x).', 'sin θ = opposite/hypotenuse; cos θ = adjacent/hypotenuse; tan θ = opposite/adjacent.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Complementary angles: sin(x) = cos(90° - x)', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'SAT Tip',
+            options: ['sin θ = opposite/hypotenuse; cos θ = adjacent/hypotenuse; tan θ = opposite/adjacent.', 'SOH-CAH-TOA.', 'Pythagorean identity: sin²θ + cos²θ = 1.', 'Complementary angles: sin(x) = cos(90° - x).']
           }
         ],
-        correctAnswers: ['sin θ = opposite/hypotenuse; cos θ = adjacent/hypo', 'Complementary angles: sin(x) = cos(90° - x)'],
-        hint1: 'Think about right triangle trig',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'sin θ = opposite/hypotenuse; cos θ = adjacent/hypotenuse; tan θ = opposite/adjacent. Complementary angles: sin(x) = cos(90° - x).'
+        correctAnswers: ['Complementary angles: sin(x) = cos(90° - x).', 'Pythagorean identity: sin²θ + cos²θ = 1.'],
+        hint1: 'Think about what each concept specifically describes in Right Triangle Trig.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Right Triangle Trig describes a specific idea. Key Insight: Complementary angles: sin(x) = cos(90° - x). SAT Tip: Pythagorean identity: sin²θ + cos²θ = 1.'
       }
     }
   ]

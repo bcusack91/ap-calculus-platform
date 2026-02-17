@@ -18,20 +18,31 @@ Start with choice C (middle value) — if too big, try A/B; if too small, try D/
       id: 'act-m3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes plug answer choices into the question to see which works?',
+            question: 'Which of the following correctly describes Plug answer choices into the question…?',
             options: [
-              'Plug answer choices into the question to see which works is a key concept for ACT Math',
-              'Start with choice C (middle value) — if too big, try A/B; if too small, try D/E',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'Works great for "what value of x" questions.',
+              'Plug answer choices into the question to see which works.',
+              'Start with choice C (middle value) — if too big, try A/B; if too small, try D/E.',
+              'Saves time on complex algebra.'
             ],
-            correctAnswer: 0,
-            explanation: 'Plug answer choices into the question to see which works'
+            correctAnswer: 1,
+            explanation: 'Correct — Plug answer choices into the question to see which works. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Key Insight?',
+            options: [
+              'Saves time on complex algebra.',
+              'Works great for "what value of x" questions.',
+              'Start with choice C (middle value) — if too big, try A/B; if too small, try D/E.',
+              'Plug answer choices into the question to see which works.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Key Insight: Works great for "what value of x" questions. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Start with choice C (middle value) — if too big, try A/B; if too small, try D/
       id: 'act-m3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for backsolving?',
+            question: 'Which of these accurately represents ACT Tip?',
             options: [
-              'Works great for "what value of x" questions',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Works great for "what value of x" questions.',
+              'Plug answer choices into the question to see which works.',
+              'Start with choice C (middle value) — if too big, try A/B; if too small, try D/E.',
+              'Saves time on complex algebra.'
             ],
-            correctAnswer: 0,
-            explanation: 'Works great for "what value of x" questions'
+            correctAnswer: 3,
+            explanation: 'Correct — ACT Tip: Saves time on complex algebra. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ Start with choice C (middle value) — if too big, try A/B; if too small, try D/
       id: 'act-m3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Backsolving:',
-            options: ['Plug answer choices into the question to see which', 'Start with choice C (middle value) — if too big, t', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['Start with choice C (middle value) — if too big, try A/B; if too small, try D/E.', 'Saves time on complex algebra.', 'Works great for "what value of x" questions.', 'Plug answer choices into the question to see which works.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Works great for "what value of x" questions', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'ACT Tip',
+            options: ['Works great for "what value of x" questions.', 'Start with choice C (middle value) — if too big, try A/B; if too small, try D/E.', 'Plug answer choices into the question to see which works.', 'Saves time on complex algebra.']
           }
         ],
-        correctAnswers: ['Plug answer choices into the question to see which', 'Works great for "what value of x" questions'],
-        hint1: 'Think about backsolving',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Plug answer choices into the question to see which works. Works great for "what value of x" questions.'
+        correctAnswers: ['Works great for "what value of x" questions.', 'Saves time on complex algebra.'],
+        hint1: 'Think about what each concept specifically describes in Backsolving.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Backsolving describes a specific idea. Key Insight: Works great for "what value of x" questions. ACT Tip: Saves time on complex algebra.'
       }
     }
   ]

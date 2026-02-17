@@ -30,31 +30,31 @@ Secant lines approximate instantaneous behavior over small intervals
       id: 'rates2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of secant lines?',
+            question: 'What does "Secant line" refer to in precalculus?',
             options: [
-              'Secant line',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'a line passing through two points on a curve',
+              'As the two points get closer, the secant approaches the tangent',
+              'y - f(a) = m(x - a) where m = (f(b) - f(a))/(b - a)',
+              'Secant lines approximate instantaneous behavior over small intervals'
             ],
             correctAnswer: 0,
-            explanation: 'Secant line: a line passing through two points on a curve'
+            explanation: 'Correct — Secant line: a line passing through two points on a curve. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of secant lines, which is accurate?',
+            question: 'Which of the following is true about As the two points get closer, the…?',
             options: [
-              'As the two points get closer, the secant approaches the tangent',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'y - f(a) = m(x - a) where m = (f(b) - f(a))/(b - a)',
+              'a line passing through two points on a curve',
+              'Secant lines approximate instantaneous behavior over small intervals',
+              'As the two points get closer, the secant approaches the tangent'
             ],
-            correctAnswer: 0,
-            explanation: 'As the two points get closer, the secant approaches the tangent'
+            correctAnswer: 3,
+            explanation: 'Correct — As the two points get closer, the secant approaches the tangent. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,24 @@ Secant lines approximate instantaneous behavior over small intervals
       id: 'rates2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Secant line',
-            options: ['a line passing through two points on a curve', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['y - f(a) = m(x - a) where m = (f(b) - f(a))/(b - a)', 'a line passing through two points on a curve', 'Secant lines approximate instantaneous behavior over small intervals', 'As the two points get closer, the secant approaches the tangent']
           },
           {
             label: 'Equation',
-            options: ['y - f(a) = m(x - a) where m = (f(b) - f(a))/(b - a', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
-          },
-          {
-            label: 'As the two points get closer, the secant approaches the tangent',
-            options: ['As the two points get closer, the secant approache', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['Secant lines approximate instantaneous behavior over small intervals', 'y - f(a) = m(x - a) where m = (f(b) - f(a))/(b - a)', 'a line passing through two points on a curve', 'As the two points get closer, the secant approaches the tangent']
           }
         ],
-        correctAnswers: ['a line passing through two points on a curve', 'y - f(a) = m(x - a) where m = (f(b) - f(a))/(b - a', 'As the two points get closer, the secant approache'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Secant Lines.'
+        correctAnswers: ['a line passing through two points on a curve', 'y - f(a) = m(x - a) where m = (f(b) - f(a))/(b - a)'],
+        hint1: 'Think about what each concept specifically describes in Secant Lines.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Secant Lines describes a specific idea. Secant line: a line passing through two points on a curve. Equation: y - f(a) = m(x - a) where m = (f(b) - f(a))/(b - a).'
       }
     }
   ]

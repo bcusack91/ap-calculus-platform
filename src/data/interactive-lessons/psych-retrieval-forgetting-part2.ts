@@ -30,31 +30,31 @@ information is stored but inaccessible (tip-of-tongue)
       id: 'retri2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of forgetting theories?',
+            question: 'Which statement accurately explains Ebbinghaus forgetting curve?',
             options: [
-              'Ebbinghaus forgetting curve',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'information never encoded properly',
+              'memory traces fade over time',
+              'information is stored but inaccessible (tip-of-tongue)',
+              'rapid initial forgetting'
             ],
-            correctAnswer: 0,
-            explanation: 'Ebbinghaus forgetting curve: rapid initial forgetting'
+            correctAnswer: 3,
+            explanation: 'Correct — Ebbinghaus forgetting curve: rapid initial forgetting. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of forgetting theories, which is accurate?',
+            question: 'Select the statement that correctly describes Storage decay:',
             options: [
-              'memory traces fade over time',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'information is stored but inaccessible (tip-of-tongue)',
+              'information never encoded properly',
+              'rapid initial forgetting',
+              'memory traces fade over time'
             ],
-            correctAnswer: 0,
-            explanation: 'Storage decay: memory traces fade over time'
+            correctAnswer: 3,
+            explanation: 'Correct — Storage decay: memory traces fade over time. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ information is stored but inaccessible (tip-of-tongue)
       id: 'retri2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Ebbinghaus forgetting curve',
-            options: ['rapid initial forgetting', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['information is stored but inaccessible (tip-of-tongue)', 'rapid initial forgetting', 'memory traces fade over time', 'information never encoded properly']
           },
           {
             label: 'Encoding failure',
-            options: ['information never encoded properly', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['information never encoded properly', 'information is stored but inaccessible (tip-of-tongue)', 'memory traces fade over time', 'rapid initial forgetting']
           },
           {
             label: 'Storage decay',
-            options: ['memory traces fade over time', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['memory traces fade over time', 'rapid initial forgetting', 'information is stored but inaccessible (tip-of-tongue)', 'information never encoded properly']
           }
         ],
         correctAnswers: ['rapid initial forgetting', 'information never encoded properly', 'memory traces fade over time'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Forgetting Theories.'
+        hint1: 'Think about what each concept specifically describes in Forgetting Theories.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Forgetting Theories describes a specific idea. Ebbinghaus forgetting curve: rapid initial forgetting. Encoding failure: information never encoded properly. Storage decay: memory traces fade over time.'
       }
     }
   ]

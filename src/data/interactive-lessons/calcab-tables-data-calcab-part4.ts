@@ -30,31 +30,31 @@ Approximate ∫ₐᵇ f(x)dx using Riemann sums or trapezoidal rule
       id: 'table4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of applying ftc with tabular data?',
+            question: 'What does "Use FTC Part 2" refer to in calculus?',
             options: [
-              'Use FTC Part 2',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              '(1/(b-a)) × approximate integral',
+              '"total change in f from a to b"',
+              '∫ₐᵇ f\'(x)dx = f(b) - f(a) with tabular rate data',
+              'Approximate ∫ₐᵇ f(x)dx using Riemann sums or trapezoidal rule'
             ],
-            correctAnswer: 0,
-            explanation: 'Use FTC Part 2: ∫ₐᵇ f\'(x)dx = f(b) - f(a) with tabular rate data'
+            correctAnswer: 2,
+            explanation: 'Correct — Use FTC Part 2: ∫ₐᵇ f\'(x)dx = f(b) - f(a) with tabular rate data. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of applying ftc with tabular data, which is accurate?',
+            question: 'Select the statement that correctly describes Interpret the integral:',
             options: [
+              '(1/(b-a)) × approximate integral',
+              '∫ₐᵇ f\'(x)dx = f(b) - f(a) with tabular rate data',
               '"total change in f from a to b"',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Approximate ∫ₐᵇ f(x)dx using Riemann sums or trapezoidal rule'
             ],
-            correctAnswer: 0,
-            explanation: 'Interpret the integral: "total change in f from a to b"'
+            correctAnswer: 2,
+            explanation: 'Correct — Interpret the integral: "total change in f from a to b". Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Approximate ∫ₐᵇ f(x)dx using Riemann sums or trapezoidal rule
       id: 'table4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to applying ftc with tabular data?',
+            question: 'Regarding Applying FTC with Tabular Data, which correctly describes Average value from table?',
             options: [
-              '(1/(b-a)) × approximate integral',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              '"total change in f from a to b"',
+              '∫ₐᵇ f\'(x)dx = f(b) - f(a) with tabular rate data',
+              'Approximate ∫ₐᵇ f(x)dx using Riemann sums or trapezoidal rule',
+              '(1/(b-a)) × approximate integral'
             ],
-            correctAnswer: 0,
-            explanation: 'Average value from table: (1/(b-a)) × approximate integral'
+            correctAnswer: 3,
+            explanation: 'Correct — Average value from table: (1/(b-a)) × approximate integral. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Approximate ∫ₐᵇ f(x)dx using Riemann sums or trapezoidal rule
       id: 'table4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Use FTC Part 2',
-            options: ['∫ₐᵇ f\'(x)dx = f(b) - f(a) with tabular rate data', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
-          },
-          {
-            label: 'Approximate ∫ₐᵇ f(x)dx using Riemann sums or trapezoidal rule',
-            options: ['Approximate ∫ₐᵇ f(x)dx using Riemann sums or trape', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Approximate ∫ₐᵇ f(x)dx using Riemann sums or trapezoidal rule', '(1/(b-a)) × approximate integral', '∫ₐᵇ f\'(x)dx = f(b) - f(a) with tabular rate data', '"total change in f from a to b"']
           },
           {
             label: 'Interpret the integral',
-            options: ['"total change in f from a to b"', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Approximate ∫ₐᵇ f(x)dx using Riemann sums or trapezoidal rule', '∫ₐᵇ f\'(x)dx = f(b) - f(a) with tabular rate data', '"total change in f from a to b"', '(1/(b-a)) × approximate integral']
+          },
+          {
+            label: 'Average value from table',
+            options: ['∫ₐᵇ f\'(x)dx = f(b) - f(a) with tabular rate data', 'Approximate ∫ₐᵇ f(x)dx using Riemann sums or trapezoidal rule', '"total change in f from a to b"', '(1/(b-a)) × approximate integral']
           }
         ],
-        correctAnswers: ['∫ₐᵇ f\'(x)dx = f(b) - f(a) with tabular rate data', 'Approximate ∫ₐᵇ f(x)dx using Riemann sums or trape', '"total change in f from a to b"'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Applying FTC with Tabular Data.'
+        correctAnswers: ['∫ₐᵇ f\'(x)dx = f(b) - f(a) with tabular rate data', '"total change in f from a to b"', '(1/(b-a)) × approximate integral'],
+        hint1: 'Think about what each concept specifically describes in Applying FTC with Tabular Data.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Applying FTC with Tabular Data describes a specific idea. Use FTC Part 2: ∫ₐᵇ f\'(x)dx = f(b) - f(a) with tabular rate data. Interpret the integral: "total change in f from a to b". Average value from table: (1/(b-a)) × approximate integral.'
       }
     }
   ]

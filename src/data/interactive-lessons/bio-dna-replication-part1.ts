@@ -19,31 +19,31 @@ export const bioDnaReplicationPart1Data = {
       id: 'dna-1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes semiconservative replication?',
-            options: [
-              'each new DNA has one old + one new strand',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
-            ],
-            correctAnswer: 0,
-            explanation: 'Semiconservative replication: each new DNA has one old + one new strand'
-          },
-          {
-            question: 'In the context of replication overview, which statement is accurate?',
+            question: 'What does "Semiconservative replication" refer to in biology?',
             options: [
               'Occurs during S phase of cell cycle',
-              'dnarts wen eno + dlo eno sah AND wen hcae :noitacilper evitavresnocimeS',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'each new DNA has one old + one new strand',
+              'Bidirectional from origins of replication',
+              'Meselson-Stahl experiment proved semiconservative model'
             ],
-            correctAnswer: 0,
-            explanation: 'Occurs during S phase of cell cycle'
+            correctAnswer: 1,
+            explanation: 'Correct — Semiconservative replication: each new DNA has one old + one new strand. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Replication Overview, which explains Occurs during S phase of cell cycle?',
+            options: [
+              'Bidirectional from origins of replication',
+              'Occurs during S phase of cell cycle',
+              'each new DNA has one old + one new strand',
+              'Meselson-Stahl experiment proved semiconservative model'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Occurs during S phase of cell cycle. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioDnaReplicationPart1Data = {
       id: 'dna-1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to replication overview?',
+            question: 'Which statement about Bidirectional from origins of… is correct?',
             options: [
+              'Occurs during S phase of cell cycle',
               'Bidirectional from origins of replication',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'each new DNA has one old + one new strand',
+              'Meselson-Stahl experiment proved semiconservative model'
             ],
-            correctAnswer: 0,
-            explanation: 'Bidirectional from origins of replication'
+            correctAnswer: 1,
+            explanation: 'Correct — Bidirectional from origins of replication. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioDnaReplicationPart1Data = {
       id: 'dna-1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Semiconservative replication is important in replication overview because',
-            options: ['each new DNA has one old + one new strand', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Semiconservative replication',
+            options: ['Occurs during S phase of cell cycle', 'each new DNA has one old + one new strand', 'Meselson-Stahl experiment proved semiconservative model', 'Bidirectional from origins of replication']
           },
           {
-            label: 'Meselson-Stahl experiment proved semiconservative model is important in replication overview because',
-            options: ['Meselson-Stahl experiment proved semiconservative ', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Meselson-Stahl experiment proved…',
+            options: ['Occurs during S phase of cell cycle', 'each new DNA has one old + one new strand', 'Meselson-Stahl experiment proved semiconservative model', 'Bidirectional from origins of replication']
           },
           {
-            label: 'Occurs during S phase of cell cycle is important in replication overview because',
-            options: ['Occurs during S phase of cell cycle', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Occurs during S phase of cell cycle',
+            options: ['Occurs during S phase of cell cycle', 'Bidirectional from origins of replication', 'Meselson-Stahl experiment proved semiconservative model', 'each new DNA has one old + one new strand']
           }
         ],
-        correctAnswers: ['each new DNA has one old + one new strand', 'Meselson-Stahl experiment proved semiconservative ', 'Occurs during S phase of cell cycle'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Replication Overview.'
+        correctAnswers: ['each new DNA has one old + one new strand', 'Meselson-Stahl experiment proved semiconservative model', 'Occurs during S phase of cell cycle'],
+        hint1: 'Think about what each concept specifically describes in Replication Overview.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Replication Overview describes a specific idea. Semiconservative replication: each new DNA has one old + one new strand. Meselson-Stahl experiment proved semiconservative model. Occurs during S phase of cell cycle.'
       }
     }
   ]

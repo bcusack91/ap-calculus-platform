@@ -18,20 +18,31 @@ End behavior: what happens as x → ∞ or x → -∞.
       id: 'sat-p3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes increasing/decreasing behavior from graphs?',
+            question: 'Which statement accurately explains Increasing/decreasing behavior from…?',
             options: [
-              'Increasing/decreasing behavior from graphs is a fundamental concept in SAT Math',
-              'End behavior: what happens as x → ∞ or x → -∞',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'what happens as x → ∞ or x → -∞.',
+              'Increasing/decreasing behavior from graphs.',
+              'Zeros: where f(x) = 0 (x-intercepts).',
+              'Maximum and minimum values from graphs or vertex form.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Increasing/decreasing behavior from graphs. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Key Insight?',
+            options: [
+              'Zeros: where f(x) = 0 (x-intercepts).',
+              'Increasing/decreasing behavior from graphs.',
+              'Maximum and minimum values from graphs or vertex form.',
+              'what happens as x → ∞ or x → -∞.'
             ],
             correctAnswer: 0,
-            explanation: 'Increasing/decreasing behavior from graphs'
+            explanation: 'Correct — Key Insight: Zeros: where f(x) = 0 (x-intercepts). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ End behavior: what happens as x → ∞ or x → -∞.
       id: 'sat-p3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for function behavior?',
+            question: 'Which of these accurately represents SAT Tip?',
             options: [
-              'Zeros: where f(x) = 0 (x-intercepts)',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'Zeros: where f(x) = 0 (x-intercepts).',
+              'Increasing/decreasing behavior from graphs.',
+              'Maximum and minimum values from graphs or vertex form.',
+              'what happens as x → ∞ or x → -∞.'
             ],
-            correctAnswer: 0,
-            explanation: 'Zeros: where f(x) = 0 (x-intercepts)'
+            correctAnswer: 2,
+            explanation: 'Correct — SAT Tip: Maximum and minimum values from graphs or vertex form. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ End behavior: what happens as x → ∞ or x → -∞.
       id: 'sat-p3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Function Behavior:',
-            options: ['Increasing/decreasing behavior from graphs', 'End behavior: what happens as x → ∞ or x → -∞', 'Not applicable', 'None of these']
+            label: 'End behavior',
+            options: ['Zeros: where f(x) = 0 (x-intercepts).', 'what happens as x → ∞ or x → -∞.', 'Increasing/decreasing behavior from graphs.', 'Maximum and minimum values from graphs or vertex form.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Zeros: where f(x) = 0 (x-intercepts)', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Key Insight',
+            options: ['Zeros: where f(x) = 0 (x-intercepts).', 'Increasing/decreasing behavior from graphs.', 'what happens as x → ∞ or x → -∞.', 'Maximum and minimum values from graphs or vertex form.']
+          },
+          {
+            label: 'SAT Tip',
+            options: ['Increasing/decreasing behavior from graphs.', 'Maximum and minimum values from graphs or vertex form.', 'what happens as x → ∞ or x → -∞.', 'Zeros: where f(x) = 0 (x-intercepts).']
           }
         ],
-        correctAnswers: ['Increasing/decreasing behavior from graphs', 'Zeros: where f(x) = 0 (x-intercepts)'],
-        hint1: 'Think about function behavior',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'Increasing/decreasing behavior from graphs. Zeros: where f(x) = 0 (x-intercepts).'
+        correctAnswers: ['what happens as x → ∞ or x → -∞.', 'Zeros: where f(x) = 0 (x-intercepts).', 'Maximum and minimum values from graphs or vertex form.'],
+        hint1: 'Think about what each concept specifically describes in Function Behavior.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Function Behavior describes a specific idea. End behavior: what happens as x → ∞ or x → -∞. Key Insight: Zeros: where f(x) = 0 (x-intercepts). SAT Tip: Maximum and minimum values from graphs or vertex form.'
       }
     }
   ]

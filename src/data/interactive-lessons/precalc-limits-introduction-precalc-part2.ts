@@ -30,31 +30,31 @@ If they disagree or go to ±∞, the limit does not exist (or is infinite)
       id: 'limit2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of evaluating limits numerically & graphically?',
-            options: [
-              'Numerical',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'Numerical: make a table with x-values approaching c from both sides'
-          },
-          {
-            question: 'In the context of evaluating limits numerically & graphically, which is accurate?',
+            question: 'Which of the following correctly describes Numerical?',
             options: [
               'If left and right approaches agree, the limit exists',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'make a table with x-values approaching c from both sides',
+              'follow the curve from both sides toward x = c',
+              'If they disagree or go to ±∞, the limit does not exist (or is infinite)'
             ],
-            correctAnswer: 0,
-            explanation: 'If left and right approaches agree, the limit exists'
+            correctAnswer: 1,
+            explanation: 'Correct — Numerical: make a table with x-values approaching c from both sides. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes If left and right approaches agree, the…:',
+            options: [
+              'follow the curve from both sides toward x = c',
+              'make a table with x-values approaching c from both sides',
+              'If they disagree or go to ±∞, the limit does not exist (or is infinite)',
+              'If left and right approaches agree, the limit exists'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — If left and right approaches agree, the limit exists. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,24 @@ If they disagree or go to ±∞, the limit does not exist (or is infinite)
       id: 'limit2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Numerical',
-            options: ['make a table with x-values approaching c from both', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['follow the curve from both sides toward x = c', 'If left and right approaches agree, the limit exists', 'If they disagree or go to ±∞, the limit does not exist (or is infinite)', 'make a table with x-values approaching c from both sides']
           },
           {
             label: 'Graphical',
-            options: ['follow the curve from both sides toward x = c', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
-          },
-          {
-            label: 'If left and right approaches agree, the limit exists',
-            options: ['If left and right approaches agree, the limit exis', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['If left and right approaches agree, the limit exists', 'follow the curve from both sides toward x = c', 'make a table with x-values approaching c from both sides', 'If they disagree or go to ±∞, the limit does not exist (or is infinite)']
           }
         ],
-        correctAnswers: ['make a table with x-values approaching c from both', 'follow the curve from both sides toward x = c', 'If left and right approaches agree, the limit exis'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Evaluating Limits Numerically & Graphically.'
+        correctAnswers: ['make a table with x-values approaching c from both sides', 'follow the curve from both sides toward x = c'],
+        hint1: 'Think about what each concept specifically describes in Evaluating Limits Numerically & Graphically.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Evaluating Limits Numerically & Graphically describes a specific idea. Numerical: make a table with x-values approaching c from both sides. Graphical: follow the curve from both sides toward x = c.'
       }
     }
   ]

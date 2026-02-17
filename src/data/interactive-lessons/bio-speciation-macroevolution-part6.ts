@@ -19,31 +19,31 @@ export const bioSpeciationPart6Data = {
       id: 'spec6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes interpreting phylogenetic trees?',
+            question: 'What does "Interpreting phylogenetic trees" refer to in biology?',
             options: [
               'Interpreting phylogenetic trees',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Identifying reproductive isolation mechanisms',
+              'Predicting speciation outcomes',
+              'Analyzing adaptive radiation patterns'
             ],
             correctAnswer: 0,
-            explanation: 'Interpreting phylogenetic trees'
+            explanation: 'Correct — Interpreting phylogenetic trees. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of problem-solving, which statement is accurate?',
+            question: 'Select the statement that correctly describes Predicting speciation outcomes:',
             options: [
+              'Analyzing adaptive radiation patterns',
+              'Interpreting phylogenetic trees',
               'Predicting speciation outcomes',
-              'seert citenegolyhp gniterpretnI',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Identifying reproductive isolation mechanisms'
             ],
-            correctAnswer: 0,
-            explanation: 'Predicting speciation outcomes'
+            correctAnswer: 2,
+            explanation: 'Correct — Predicting speciation outcomes. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioSpeciationPart6Data = {
       id: 'spec6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to problem-solving?',
+            question: 'Which statement about Analyzing adaptive radiation patterns is correct?',
             options: [
+              'Interpreting phylogenetic trees',
               'Analyzing adaptive radiation patterns',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Identifying reproductive isolation mechanisms',
+              'Predicting speciation outcomes'
             ],
-            correctAnswer: 0,
-            explanation: 'Analyzing adaptive radiation patterns'
+            correctAnswer: 1,
+            explanation: 'Correct — Analyzing adaptive radiation patterns. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioSpeciationPart6Data = {
       id: 'spec6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Interpreting phylogenetic trees is important in problem-solving because',
-            options: ['Interpreting phylogenetic trees', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Interpreting phylogenetic trees',
+            options: ['Interpreting phylogenetic trees', 'Predicting speciation outcomes', 'Identifying reproductive isolation mechanisms', 'Analyzing adaptive radiation patterns']
           },
           {
-            label: 'Identifying reproductive isolation mechanisms is important in problem-solving because',
-            options: ['Identifying reproductive isolation mechanisms', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Identifying reproductive isolation…',
+            options: ['Analyzing adaptive radiation patterns', 'Identifying reproductive isolation mechanisms', 'Interpreting phylogenetic trees', 'Predicting speciation outcomes']
           },
           {
-            label: 'Predicting speciation outcomes is important in problem-solving because',
-            options: ['Predicting speciation outcomes', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Predicting speciation outcomes',
+            options: ['Interpreting phylogenetic trees', 'Identifying reproductive isolation mechanisms', 'Analyzing adaptive radiation patterns', 'Predicting speciation outcomes']
           }
         ],
         correctAnswers: ['Interpreting phylogenetic trees', 'Identifying reproductive isolation mechanisms', 'Predicting speciation outcomes'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving.'
+        hint1: 'Think about what each concept specifically describes in Speciation: Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Speciation: Problem-Solving Workshop describes a specific idea. Interpreting phylogenetic trees. Identifying reproductive isolation mechanisms. Predicting speciation outcomes.'
       }
     }
   ]

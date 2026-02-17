@@ -18,20 +18,31 @@ Add/subtract: combine real parts and imaginary parts separately.
       id: 'sat-c2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes add/subtract?',
+            question: 'What does "Add/subtract" refer to in SAT prep?',
             options: [
-              'Add/subtract is a fundamental concept in SAT Math',
-              '(a + bi) + (c + di) = (a+c) + (b+d)i',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              '(a + bi) + (c + di) = (a+c) + (b+d)i.',
+              'Remember: i² = -1, so replace i² with -1.',
+              'combine real parts and imaginary parts separately.',
+              'Multiply using FOIL: (a + bi)(c + di) = ac + adi + bci + bdi² = (ac - bd) + (ad + bc)i.'
             ],
-            correctAnswer: 0,
-            explanation: 'Add/subtract: combine real parts and imaginary parts separately'
+            correctAnswer: 2,
+            explanation: 'Correct — Add/subtract: combine real parts and imaginary parts separately. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Key Insight?',
+            options: [
+              'Remember: i² = -1, so replace i² with -1.',
+              'combine real parts and imaginary parts separately.',
+              'Multiply using FOIL: (a + bi)(c + di) = ac + adi + bci + bdi² = (ac - bd) + (ad + bc)i.',
+              '(a + bi) + (c + di) = (a+c) + (b+d)i.'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Key Insight: Multiply using FOIL: (a + bi)(c + di) = ac + adi + bci + bdi² = (ac - bd) + (ad + bc)i. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Add/subtract: combine real parts and imaginary parts separately.
       id: 'sat-c2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for complex number operations?',
+            question: 'Which of these accurately represents SAT Tip?',
             options: [
-              'Multiply using FOIL: (a + bi)(c + di) = ac + adi + bci + bdi² = (ac - bd) + (ad + bc)i',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'combine real parts and imaginary parts separately.',
+              'Multiply using FOIL: (a + bi)(c + di) = ac + adi + bci + bdi² = (ac - bd) + (ad + bc)i.',
+              'Remember: i² = -1, so replace i² with -1.',
+              '(a + bi) + (c + di) = (a+c) + (b+d)i.'
             ],
-            correctAnswer: 0,
-            explanation: 'Multiply using FOIL: (a + bi)(c + di) = ac + adi + bci + bdi² = (ac - bd) + (ad + bc)i'
+            correctAnswer: 2,
+            explanation: 'Correct — SAT Tip: Remember: i² = -1, so replace i² with -1. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Add/subtract: combine real parts and imaginary parts separately.
       id: 'sat-c2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Complex Number Operations:',
-            options: ['Add/subtract: combine real parts and imaginary par', '(a + bi) + (c + di) = (a+c) + (b+d)i', 'Not applicable', 'None of these']
+            label: 'Add/subtract',
+            options: ['Multiply using FOIL: (a + bi)(c + di) = ac + adi + bci + bdi² = (ac - bd) + (ad + bc)i.', '(a + bi) + (c + di) = (a+c) + (b+d)i.', 'Remember: i² = -1, so replace i² with -1.', 'combine real parts and imaginary parts separately.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Multiply using FOIL: (a + bi)(c + di) = ac + adi +', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Key Insight',
+            options: ['Remember: i² = -1, so replace i² with -1.', 'Multiply using FOIL: (a + bi)(c + di) = ac + adi + bci + bdi² = (ac - bd) + (ad + bc)i.', 'combine real parts and imaginary parts separately.', '(a + bi) + (c + di) = (a+c) + (b+d)i.']
+          },
+          {
+            label: 'SAT Tip',
+            options: ['Multiply using FOIL: (a + bi)(c + di) = ac + adi + bci + bdi² = (ac - bd) + (ad + bc)i.', 'Remember: i² = -1, so replace i² with -1.', 'combine real parts and imaginary parts separately.', '(a + bi) + (c + di) = (a+c) + (b+d)i.']
           }
         ],
-        correctAnswers: ['Add/subtract: combine real parts and imaginary par', 'Multiply using FOIL: (a + bi)(c + di) = ac + adi +'],
-        hint1: 'Think about complex number operations',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'Add/subtract: combine real parts and imaginary parts separately. Multiply using FOIL: (a + bi)(c + di) = ac + adi + bci + bdi² = (ac - bd) + (ad + bc)i.'
+        correctAnswers: ['combine real parts and imaginary parts separately.', 'Multiply using FOIL: (a + bi)(c + di) = ac + adi + bci + bdi² = (ac - bd) + (ad + bc)i.', 'Remember: i² = -1, so replace i² with -1.'],
+        hint1: 'Think about what each concept specifically describes in Complex Number Operations.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Complex Number Operations describes a specific idea. Add/subtract: combine real parts and imaginary parts separately. Key Insight: Multiply using FOIL: (a + bi)(c + di) = ac + adi + bci + bdi² = (ac - bd) + (ad + bc)i. SAT Tip: Remember: i² = -1, so replace i² with -1.'
       }
     }
   ]

@@ -30,31 +30,31 @@ shared goals that require cooperation
       id: 'group3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of reducing prejudice?',
+            question: 'Which statement accurately explains Contact hypothesis?',
             options: [
-              'Contact hypothesis',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'shared goals that require cooperation',
+              'cooperative learning technique',
+              'positive intergroup contact reduces prejudice',
+              'equal status, common goals, cooperation, institutional support'
             ],
-            correctAnswer: 0,
-            explanation: 'Contact hypothesis: positive intergroup contact reduces prejudice'
+            correctAnswer: 2,
+            explanation: 'Correct — Contact hypothesis: positive intergroup contact reduces prejudice. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of reducing prejudice, which is accurate?',
+            question: 'Which of the following is true about Jigsaw classroom?',
             options: [
+              'shared goals that require cooperation',
               'cooperative learning technique',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'equal status, common goals, cooperation, institutional support',
+              'positive intergroup contact reduces prejudice'
             ],
-            correctAnswer: 0,
-            explanation: 'Jigsaw classroom: cooperative learning technique'
+            correctAnswer: 1,
+            explanation: 'Correct — Jigsaw classroom: cooperative learning technique. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ shared goals that require cooperation
       id: 'group3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Contact hypothesis',
-            options: ['positive intergroup contact reduces prejudice', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['positive intergroup contact reduces prejudice', 'equal status, common goals, cooperation, institutional support', 'shared goals that require cooperation', 'cooperative learning technique']
           },
           {
             label: 'Conditions',
-            options: ['equal status, common goals, cooperation, instituti', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['positive intergroup contact reduces prejudice', 'equal status, common goals, cooperation, institutional support', 'shared goals that require cooperation', 'cooperative learning technique']
           },
           {
             label: 'Jigsaw classroom',
-            options: ['cooperative learning technique', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['cooperative learning technique', 'shared goals that require cooperation', 'positive intergroup contact reduces prejudice', 'equal status, common goals, cooperation, institutional support']
           }
         ],
-        correctAnswers: ['positive intergroup contact reduces prejudice', 'equal status, common goals, cooperation, instituti', 'cooperative learning technique'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Reducing Prejudice.'
+        correctAnswers: ['positive intergroup contact reduces prejudice', 'equal status, common goals, cooperation, institutional support', 'cooperative learning technique'],
+        hint1: 'Think about what each concept specifically describes in Reducing Prejudice.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Reducing Prejudice describes a specific idea. Contact hypothesis: positive intergroup contact reduces prejudice. Conditions: equal status, common goals, cooperation, institutional support. Jigsaw classroom: cooperative learning technique.'
       }
     }
   ]

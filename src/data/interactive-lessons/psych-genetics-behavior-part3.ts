@@ -30,31 +30,31 @@ Adoption studies separate genetic and environmental effects
       id: 'genet3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of twin & adoption studies?',
-            options: [
-              'Identical (MZ) twins',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
-            ],
-            correctAnswer: 0,
-            explanation: 'Identical (MZ) twins: 100% shared genes'
-          },
-          {
-            question: 'In the context of twin & adoption studies, which is accurate?',
+            question: 'What does "Identical (MZ) twins" refer to in psychology?',
             options: [
               'Higher concordance in MZ twins → genetic influence',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Adoption studies separate genetic and environmental effects',
+              '~50% shared genes',
+              '100% shared genes'
             ],
-            correctAnswer: 0,
-            explanation: 'Higher concordance in MZ twins → genetic influence'
+            correctAnswer: 3,
+            explanation: 'Correct — Identical (MZ) twins: 100% shared genes. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Higher concordance in MZ twins →…:',
+            options: [
+              'Adoption studies separate genetic and environmental effects',
+              '100% shared genes',
+              'Higher concordance in MZ twins → genetic influence',
+              '~50% shared genes'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Higher concordance in MZ twins → genetic influence. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,24 @@ Adoption studies separate genetic and environmental effects
       id: 'genet3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Identical (MZ) twins',
-            options: ['100% shared genes', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['100% shared genes', 'Higher concordance in MZ twins → genetic influence', 'Adoption studies separate genetic and environmental effects', '~50% shared genes']
           },
           {
             label: 'Fraternal (DZ) twins',
-            options: ['~50% shared genes', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
-          },
-          {
-            label: 'Higher concordance in MZ twins → genetic influence',
-            options: ['Higher concordance in MZ twins → genetic influence', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['100% shared genes', 'Adoption studies separate genetic and environmental effects', '~50% shared genes', 'Higher concordance in MZ twins → genetic influence']
           }
         ],
-        correctAnswers: ['100% shared genes', '~50% shared genes', 'Higher concordance in MZ twins → genetic influence'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Twin & Adoption Studies.'
+        correctAnswers: ['100% shared genes', '~50% shared genes'],
+        hint1: 'Think about what each concept specifically describes in Twin & Adoption Studies.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Twin & Adoption Studies describes a specific idea. Identical (MZ) twins: 100% shared genes. Fraternal (DZ) twins: ~50% shared genes.'
       }
     }
   ]

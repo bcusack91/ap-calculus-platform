@@ -19,31 +19,31 @@ export const bioBiotechPart6Data = {
       id: 'biot6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes designing pcr experiments?',
+            question: 'Which of the following correctly describes Designing PCR experiments?',
             options: [
               'Designing PCR experiments',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Evaluating biotechnology applications',
+              'Analyzing restriction enzyme maps',
+              'Interpreting gel electrophoresis results'
             ],
             correctAnswer: 0,
-            explanation: 'Designing PCR experiments'
+            explanation: 'Correct — Designing PCR experiments. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of problem-solving, which statement is accurate?',
+            question: 'Which of the following is true about Analyzing restriction enzyme maps?',
             options: [
-              'Analyzing restriction enzyme maps',
-              'stnemirepxe RCP gningiseD',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Designing PCR experiments',
+              'Interpreting gel electrophoresis results',
+              'Evaluating biotechnology applications',
+              'Analyzing restriction enzyme maps'
             ],
-            correctAnswer: 0,
-            explanation: 'Analyzing restriction enzyme maps'
+            correctAnswer: 3,
+            explanation: 'Correct — Analyzing restriction enzyme maps. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioBiotechPart6Data = {
       id: 'biot6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to problem-solving?',
+            question: 'Which statement about Evaluating biotechnology applications is correct?',
             options: [
+              'Designing PCR experiments',
+              'Interpreting gel electrophoresis results',
               'Evaluating biotechnology applications',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Analyzing restriction enzyme maps'
             ],
-            correctAnswer: 0,
-            explanation: 'Evaluating biotechnology applications'
+            correctAnswer: 2,
+            explanation: 'Correct — Evaluating biotechnology applications. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioBiotechPart6Data = {
       id: 'biot6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Designing PCR experiments is important in problem-solving because',
-            options: ['Designing PCR experiments', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Designing PCR experiments',
+            options: ['Designing PCR experiments', 'Evaluating biotechnology applications', 'Analyzing restriction enzyme maps', 'Interpreting gel electrophoresis results']
           },
           {
-            label: 'Interpreting gel electrophoresis results is important in problem-solving because',
-            options: ['Interpreting gel electrophoresis results', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Interpreting gel electrophoresis results',
+            options: ['Interpreting gel electrophoresis results', 'Evaluating biotechnology applications', 'Analyzing restriction enzyme maps', 'Designing PCR experiments']
           },
           {
-            label: 'Analyzing restriction enzyme maps is important in problem-solving because',
-            options: ['Analyzing restriction enzyme maps', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Analyzing restriction enzyme maps',
+            options: ['Evaluating biotechnology applications', 'Designing PCR experiments', 'Interpreting gel electrophoresis results', 'Analyzing restriction enzyme maps']
           }
         ],
         correctAnswers: ['Designing PCR experiments', 'Interpreting gel electrophoresis results', 'Analyzing restriction enzyme maps'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving.'
+        hint1: 'Think about what each concept specifically describes in Biotechnology: Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Biotechnology: Problem-Solving Workshop describes a specific idea. Designing PCR experiments. Interpreting gel electrophoresis results. Analyzing restriction enzyme maps.'
       }
     }
   ]

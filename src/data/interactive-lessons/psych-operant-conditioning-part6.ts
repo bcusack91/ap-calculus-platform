@@ -30,31 +30,31 @@ Designing behavior modification plans
       id: 'opera6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of problem-solving workshop?',
+            question: 'Which of the following correctly describes Classifying reinforcement and…?',
             options: [
+              'Designing behavior modification plans',
               'Classifying reinforcement and punishment scenarios',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'Comparing classical and operant conditioning',
+              'Identifying schedules of reinforcement'
             ],
-            correctAnswer: 0,
-            explanation: 'Classifying reinforcement and punishment scenarios'
+            correctAnswer: 1,
+            explanation: 'Correct — Classifying reinforcement and punishment scenarios. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of problem-solving workshop, which is accurate?',
+            question: 'In the context of Problem-Solving Workshop, which explains Comparing classical and operant…?',
             options: [
               'Comparing classical and operant conditioning',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Designing behavior modification plans',
+              'Classifying reinforcement and punishment scenarios',
+              'Identifying schedules of reinforcement'
             ],
             correctAnswer: 0,
-            explanation: 'Comparing classical and operant conditioning'
+            explanation: 'Correct — Comparing classical and operant conditioning. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Designing behavior modification plans
       id: 'opera6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Classifying reinforcement and punishment scenarios',
-            options: ['Classifying reinforcement and punishment scenarios', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            label: 'Classifying reinforcement and…',
+            options: ['Classifying reinforcement and punishment scenarios', 'Identifying schedules of reinforcement', 'Comparing classical and operant conditioning', 'Designing behavior modification plans']
           },
           {
             label: 'Identifying schedules of reinforcement',
-            options: ['Identifying schedules of reinforcement', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Designing behavior modification plans', 'Classifying reinforcement and punishment scenarios', 'Comparing classical and operant conditioning', 'Identifying schedules of reinforcement']
           },
           {
-            label: 'Comparing classical and operant conditioning',
-            options: ['Comparing classical and operant conditioning', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            label: 'Comparing classical and operant…',
+            options: ['Comparing classical and operant conditioning', 'Identifying schedules of reinforcement', 'Classifying reinforcement and punishment scenarios', 'Designing behavior modification plans']
           }
         ],
         correctAnswers: ['Classifying reinforcement and punishment scenarios', 'Identifying schedules of reinforcement', 'Comparing classical and operant conditioning'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving Workshop.'
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Classifying reinforcement and punishment scenarios. Identifying schedules of reinforcement. Comparing classical and operant conditioning.'
       }
     }
   ]

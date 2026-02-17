@@ -30,31 +30,31 @@ Integrate with respect to the variable parallel to the axis of revolution
       id: 'volum7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of review & applications?',
-            options: [
-              'Sketch the region and axis of revolution',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'Sketch the region and axis of revolution'
-          },
-          {
-            question: 'In the context of review & applications, which is accurate?',
+            question: 'What does "Sketch the region and axis of revolution" refer to in calculus?',
             options: [
               'Identify the correct radii and bounds of integration',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Integrate with respect to the variable parallel to the axis of revolution',
+              'Sketch the region and axis of revolution',
+              'Determine if you need disks, washers, or known cross-sections'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Sketch the region and axis of revolution. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Identify the correct radii and bounds…:',
+            options: [
+              'Identify the correct radii and bounds of integration',
+              'Integrate with respect to the variable parallel to the axis of revolution',
+              'Determine if you need disks, washers, or known cross-sections',
+              'Sketch the region and axis of revolution'
             ],
             correctAnswer: 0,
-            explanation: 'Identify the correct radii and bounds of integration'
+            explanation: 'Correct — Identify the correct radii and bounds of integration. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Integrate with respect to the variable parallel to the axis of revolution
       id: 'volum7-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to review & applications?',
+            question: 'Which of these accurately represents Integrate with respect to the variable…?',
             options: [
+              'Sketch the region and axis of revolution',
               'Integrate with respect to the variable parallel to the axis of revolution',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'Determine if you need disks, washers, or known cross-sections',
+              'Identify the correct radii and bounds of integration'
             ],
-            correctAnswer: 0,
-            explanation: 'Integrate with respect to the variable parallel to the axis of revolution'
+            correctAnswer: 1,
+            explanation: 'Correct — Integrate with respect to the variable parallel to the axis of revolution. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Integrate with respect to the variable parallel to the axis of revolution
       id: 'volum7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Sketch the region and axis of revolution',
-            options: ['Sketch the region and axis of revolution', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Identify the correct radii and bounds of integration', 'Determine if you need disks, washers, or known cross-sections', 'Sketch the region and axis of revolution', 'Integrate with respect to the variable parallel to the axis of revolution']
           },
           {
-            label: 'Determine if you need disks, washers, or known cross-sections',
-            options: ['Determine if you need disks, washers, or known cro', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Determine if you need disks, washers,…',
+            options: ['Integrate with respect to the variable parallel to the axis of revolution', 'Determine if you need disks, washers, or known cross-sections', 'Identify the correct radii and bounds of integration', 'Sketch the region and axis of revolution']
           },
           {
-            label: 'Identify the correct radii and bounds of integration',
-            options: ['Identify the correct radii and bounds of integrati', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Identify the correct radii and bounds…',
+            options: ['Identify the correct radii and bounds of integration', 'Sketch the region and axis of revolution', 'Determine if you need disks, washers, or known cross-sections', 'Integrate with respect to the variable parallel to the axis of revolution']
           }
         ],
-        correctAnswers: ['Sketch the region and axis of revolution', 'Determine if you need disks, washers, or known cro', 'Identify the correct radii and bounds of integrati'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Review & Applications.'
+        correctAnswers: ['Sketch the region and axis of revolution', 'Determine if you need disks, washers, or known cross-sections', 'Identify the correct radii and bounds of integration'],
+        hint1: 'Think about what each concept specifically describes in Review & Applications.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Review & Applications describes a specific idea. Sketch the region and axis of revolution. Determine if you need disks, washers, or known cross-sections. Identify the correct radii and bounds of integration.'
       }
     }
   ]

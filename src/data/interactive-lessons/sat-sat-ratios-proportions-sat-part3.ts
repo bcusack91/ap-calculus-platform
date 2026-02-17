@@ -18,20 +18,31 @@ Units should cancel: (mi/hr) × (hr/min) → mi/min.
       id: 'sat-r3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes multiply by conversion factors as fractions?',
+            question: 'Which statement accurately explains Multiply by conversion factors as…?',
             options: [
-              'Multiply by conversion factors as fractions is a fundamental concept in SAT Math',
-              'Units should cancel: (mi/hr) × (hr/min) → mi/min',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'Dimensional analysis: track units through the calculation.',
+              '(mi/hr) × (hr/min) → mi/min.',
+              'Multiply by conversion factors as fractions.',
+              'SAT often uses unit conversion in multi-step problems.'
             ],
-            correctAnswer: 0,
-            explanation: 'Multiply by conversion factors as fractions'
+            correctAnswer: 2,
+            explanation: 'Correct — Multiply by conversion factors as fractions. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              'Multiply by conversion factors as fractions.',
+              'SAT often uses unit conversion in multi-step problems.',
+              '(mi/hr) × (hr/min) → mi/min.',
+              'Dimensional analysis: track units through the calculation.'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Key Insight: Dimensional analysis: track units through the calculation. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Units should cancel: (mi/hr) × (hr/min) → mi/min.
       id: 'sat-r3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for unit conversion?',
+            question: 'Which of these accurately represents SAT Tip?',
             options: [
-              'Dimensional analysis: track units through the calculation',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              '(mi/hr) × (hr/min) → mi/min.',
+              'Multiply by conversion factors as fractions.',
+              'Dimensional analysis: track units through the calculation.',
+              'SAT often uses unit conversion in multi-step problems.'
             ],
-            correctAnswer: 0,
-            explanation: 'Dimensional analysis: track units through the calculation'
+            correctAnswer: 3,
+            explanation: 'Correct — SAT Tip: SAT often uses unit conversion in multi-step problems. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Units should cancel: (mi/hr) × (hr/min) → mi/min.
       id: 'sat-r3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Unit Conversion:',
-            options: ['Multiply by conversion factors as fractions', 'Units should cancel: (mi/hr) × (hr/min) → mi/min', 'Not applicable', 'None of these']
+            label: 'Units should cancel',
+            options: ['Multiply by conversion factors as fractions.', 'Dimensional analysis: track units through the calculation.', '(mi/hr) × (hr/min) → mi/min.', 'SAT often uses unit conversion in multi-step problems.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Dimensional analysis: track units through the calc', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Key Insight',
+            options: ['SAT often uses unit conversion in multi-step problems.', 'Dimensional analysis: track units through the calculation.', 'Multiply by conversion factors as fractions.', '(mi/hr) × (hr/min) → mi/min.']
+          },
+          {
+            label: 'SAT Tip',
+            options: ['Multiply by conversion factors as fractions.', 'SAT often uses unit conversion in multi-step problems.', '(mi/hr) × (hr/min) → mi/min.', 'Dimensional analysis: track units through the calculation.']
           }
         ],
-        correctAnswers: ['Multiply by conversion factors as fractions', 'Dimensional analysis: track units through the calc'],
-        hint1: 'Think about unit conversion',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'Multiply by conversion factors as fractions. Dimensional analysis: track units through the calculation.'
+        correctAnswers: ['(mi/hr) × (hr/min) → mi/min.', 'Dimensional analysis: track units through the calculation.', 'SAT often uses unit conversion in multi-step problems.'],
+        hint1: 'Think about what each concept specifically describes in Unit Conversion.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Unit Conversion describes a specific idea. Units should cancel: (mi/hr) × (hr/min) → mi/min. Key Insight: Dimensional analysis: track units through the calculation. SAT Tip: SAT often uses unit conversion in multi-step problems.'
       }
     }
   ]

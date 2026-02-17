@@ -18,20 +18,31 @@ Three types: data representation (~30%), research summaries (~45%), conflicting 
       id: 'act-r2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes 40 questions in 35 minutes across 7 passages?',
+            question: 'Which statement accurately explains 40 questions in 35 minutes across 7…?',
             options: [
-              '40 questions in 35 minutes across 7 passages is a key concept for ACT English/Reading',
-              'Three types: data representation (~30%), research summaries (~45%), conflicting viewpoints (~25%)',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'data representation (~30%), research summaries (~45%), conflicting viewpoints (~25%).',
+              'Focus on trends and relationships, not memorizing data.',
+              'You do NOT need advanced science knowledge — it is a reading comprehension test.',
+              '40 questions in 35 minutes across 7 passages.'
             ],
-            correctAnswer: 0,
-            explanation: '40 questions in 35 minutes across 7 passages'
+            correctAnswer: 3,
+            explanation: 'Correct — 40 questions in 35 minutes across 7 passages. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Key Insight?',
+            options: [
+              'data representation (~30%), research summaries (~45%), conflicting viewpoints (~25%).',
+              'Focus on trends and relationships, not memorizing data.',
+              '40 questions in 35 minutes across 7 passages.',
+              'You do NOT need advanced science knowledge — it is a reading comprehension test.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Key Insight: Focus on trends and relationships, not memorizing data. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Three types: data representation (~30%), research summaries (~45%), conflicting 
       id: 'act-r2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for act science overview?',
+            question: 'Regarding ACT Science Overview, which correctly describes ACT Tip?',
             options: [
-              'Focus on trends and relationships, not memorizing data',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              '40 questions in 35 minutes across 7 passages.',
+              'You do NOT need advanced science knowledge — it is a reading comprehension test.',
+              'Focus on trends and relationships, not memorizing data.',
+              'data representation (~30%), research summaries (~45%), conflicting viewpoints (~25%).'
             ],
-            correctAnswer: 0,
-            explanation: 'Focus on trends and relationships, not memorizing data'
+            correctAnswer: 1,
+            explanation: 'Correct — ACT Tip: You do NOT need advanced science knowledge — it is a reading comprehension test. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Three types: data representation (~30%), research summaries (~45%), conflicting 
       id: 'act-r2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for ACT Science Overview:',
-            options: ['40 questions in 35 minutes across 7 passages', 'Three types: data representation (~30%), research ', 'Not applicable', 'None of these']
+            label: 'Three types',
+            options: ['data representation (~30%), research summaries (~45%), conflicting viewpoints (~25%).', '40 questions in 35 minutes across 7 passages.', 'Focus on trends and relationships, not memorizing data.', 'You do NOT need advanced science knowledge — it is a reading comprehension test.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Focus on trends and relationships, not memorizing ', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Key Insight',
+            options: ['Focus on trends and relationships, not memorizing data.', 'data representation (~30%), research summaries (~45%), conflicting viewpoints (~25%).', 'You do NOT need advanced science knowledge — it is a reading comprehension test.', '40 questions in 35 minutes across 7 passages.']
+          },
+          {
+            label: 'ACT Tip',
+            options: ['You do NOT need advanced science knowledge — it is a reading comprehension test.', 'Focus on trends and relationships, not memorizing data.', 'data representation (~30%), research summaries (~45%), conflicting viewpoints (~25%).', '40 questions in 35 minutes across 7 passages.']
           }
         ],
-        correctAnswers: ['40 questions in 35 minutes across 7 passages', 'Focus on trends and relationships, not memorizing '],
-        hint1: 'Think about act science overview',
-        hint2: 'Consider the best ACT strategy',
-        explanation: '40 questions in 35 minutes across 7 passages. Focus on trends and relationships, not memorizing data.'
+        correctAnswers: ['data representation (~30%), research summaries (~45%), conflicting viewpoints (~25%).', 'Focus on trends and relationships, not memorizing data.', 'You do NOT need advanced science knowledge — it is a reading comprehension test.'],
+        hint1: 'Think about what each concept specifically describes in ACT Science Overview.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in ACT Science Overview describes a specific idea. Three types: data representation (~30%), research summaries (~45%), conflicting viewpoints (~25%). Key Insight: Focus on trends and relationships, not memorizing data. ACT Tip: You do NOT need advanced science knowledge — it is a reading comprehension test.'
       }
     }
   ]

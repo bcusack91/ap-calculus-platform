@@ -30,31 +30,31 @@ Inductive effects of substituents affect acidity
       id: 'carbo1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of carboxylic acid properties?',
+            question: 'Which statement accurately explains Carboxylic acids?',
             options: [
-              'Carboxylic acids',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'RCOOH (pKa ~4-5)',
+              'Acidity due to resonance stabilization of carboxylate anion',
+              'Inductive effects of substituents affect acidity',
+              'Hydrogen bonding → high boiling points, dimer formation'
             ],
             correctAnswer: 0,
-            explanation: 'Carboxylic acids: RCOOH (pKa ~4-5)'
+            explanation: 'Correct — Carboxylic acids: RCOOH (pKa ~4-5). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of carboxylic acid properties, which is accurate?',
+            question: 'In the context of ️ Carboxylic Acids Derivatives, which explains Hydrogen bonding → high boiling points,…?',
             options: [
+              'RCOOH (pKa ~4-5)',
+              'Acidity due to resonance stabilization of carboxylate anion',
               'Hydrogen bonding → high boiling points, dimer formation',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Inductive effects of substituents affect acidity'
             ],
-            correctAnswer: 0,
-            explanation: 'Hydrogen bonding → high boiling points, dimer formation'
+            correctAnswer: 2,
+            explanation: 'Correct — Hydrogen bonding → high boiling points, dimer formation. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Inductive effects of substituents affect acidity
       id: 'carbo1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Carboxylic acids',
-            options: ['RCOOH (pKa ~4-5)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Acidity due to resonance stabilization of carboxylate anion', 'Inductive effects of substituents affect acidity', 'Hydrogen bonding → high boiling points, dimer formation', 'RCOOH (pKa ~4-5)']
           },
           {
-            label: 'Acidity due to resonance stabilization of carboxylate anion',
-            options: ['Acidity due to resonance stabilization of carboxyl', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Acidity due to resonance stabilization…',
+            options: ['Inductive effects of substituents affect acidity', 'Hydrogen bonding → high boiling points, dimer formation', 'Acidity due to resonance stabilization of carboxylate anion', 'RCOOH (pKa ~4-5)']
           },
           {
-            label: 'Hydrogen bonding → high boiling points, dimer formation',
-            options: ['Hydrogen bonding → high boiling points, dimer form', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Hydrogen bonding → high boiling points,…',
+            options: ['Acidity due to resonance stabilization of carboxylate anion', 'RCOOH (pKa ~4-5)', 'Hydrogen bonding → high boiling points, dimer formation', 'Inductive effects of substituents affect acidity']
           }
         ],
-        correctAnswers: ['RCOOH (pKa ~4-5)', 'Acidity due to resonance stabilization of carboxyl', 'Hydrogen bonding → high boiling points, dimer form'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Carboxylic Acid Properties.'
+        correctAnswers: ['RCOOH (pKa ~4-5)', 'Acidity due to resonance stabilization of carboxylate anion', 'Hydrogen bonding → high boiling points, dimer formation'],
+        hint1: 'Think about what each concept specifically describes in ️ Carboxylic Acids Derivatives.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in ️ Carboxylic Acids Derivatives describes a specific idea. Carboxylic acids: RCOOH (pKa ~4-5). Acidity due to resonance stabilization of carboxylate anion. Hydrogen bonding → high boiling points, dimer formation.'
       }
     }
   ]

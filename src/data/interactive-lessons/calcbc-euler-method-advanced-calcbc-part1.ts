@@ -30,31 +30,31 @@ More steps (smaller Δx) → more accurate, but more computation
       id: 'euler1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of euler\'s method review?',
-            options: [
-              'Euler\'s Method',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'Euler\'s Method: yₙ₊₁ = yₙ + f(xₙ, yₙ)·Δx'
-          },
-          {
-            question: 'In the context of euler\'s method review, which is accurate?',
+            question: 'Which of the following correctly describes Euler\'s Method?',
             options: [
               'Start with initial condition (x₀, y₀)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'More steps (smaller Δx) → more accurate, but more computation',
+              'yₙ₊₁ = yₙ + f(xₙ, yₙ)·Δx',
+              'follow the tangent line'
             ],
-            correctAnswer: 0,
-            explanation: 'Start with initial condition (x₀, y₀)'
+            correctAnswer: 2,
+            explanation: 'Correct — Euler\'s Method: yₙ₊₁ = yₙ + f(xₙ, yₙ)·Δx. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Start with initial condition (x₀, y₀)?',
+            options: [
+              'More steps (smaller Δx) → more accurate, but more computation',
+              'Start with initial condition (x₀, y₀)',
+              'follow the tangent line',
+              'yₙ₊₁ = yₙ + f(xₙ, yₙ)·Δx'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Start with initial condition (x₀, y₀). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ More steps (smaller Δx) → more accurate, but more computation
       id: 'euler1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to euler\'s method review?',
+            question: 'Which of these accurately represents More steps (smaller Δx) → more…?',
             options: [
               'More steps (smaller Δx) → more accurate, but more computation',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'yₙ₊₁ = yₙ + f(xₙ, yₙ)·Δx',
+              'follow the tangent line',
+              'Start with initial condition (x₀, y₀)'
             ],
             correctAnswer: 0,
-            explanation: 'More steps (smaller Δx) → more accurate, but more computation'
+            explanation: 'Correct — More steps (smaller Δx) → more accurate, but more computation. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,24 @@ More steps (smaller Δx) → more accurate, but more computation
       id: 'euler1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Euler\'s Method',
-            options: ['yₙ₊₁ = yₙ + f(xₙ, yₙ)·Δx', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Start with initial condition (x₀, y₀)', 'follow the tangent line', 'More steps (smaller Δx) → more accurate, but more computation', 'yₙ₊₁ = yₙ + f(xₙ, yₙ)·Δx']
           },
           {
             label: 'Linear approximation at each step',
-            options: ['follow the tangent line', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
-          },
-          {
-            label: 'Start with initial condition (x₀, y₀)',
-            options: ['Start with initial condition (x₀, y₀)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Start with initial condition (x₀, y₀)', 'yₙ₊₁ = yₙ + f(xₙ, yₙ)·Δx', 'More steps (smaller Δx) → more accurate, but more computation', 'follow the tangent line']
           }
         ],
-        correctAnswers: ['yₙ₊₁ = yₙ + f(xₙ, yₙ)·Δx', 'follow the tangent line', 'Start with initial condition (x₀, y₀)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Euler\'s Method Review.'
+        correctAnswers: ['yₙ₊₁ = yₙ + f(xₙ, yₙ)·Δx', 'follow the tangent line'],
+        hint1: 'Think about what each concept specifically describes in ∮ Euler Method Advanced.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in ∮ Euler Method Advanced describes a specific idea. Euler\'s Method: yₙ₊₁ = yₙ + f(xₙ, yₙ)·Δx. Linear approximation at each step: follow the tangent line.'
       }
     }
   ]

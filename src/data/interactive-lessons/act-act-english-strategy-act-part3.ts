@@ -18,20 +18,31 @@ Read the sentence before and after for context.
       id: 'act-e3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes always read the full sentence, not just the underlined portion?',
+            question: 'Which of the following correctly describes Always read the full sentence, not just…?',
             options: [
-              'Always read the full sentence, not just the underlined portion is a key concept for ACT English/Reading',
-              'Read the sentence before and after for context',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'Some questions test transitions between paragraphs — read both.',
+              'Read the sentence before and after for context.',
+              'Always read the full sentence, not just the underlined portion.',
+              'The correct answer must fit the tone and style of the surrounding text.'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Always read the full sentence, not just the underlined portion. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              'Some questions test transitions between paragraphs — read both.',
+              'The correct answer must fit the tone and style of the surrounding text.',
+              'Read the sentence before and after for context.',
+              'Always read the full sentence, not just the underlined portion.'
             ],
             correctAnswer: 0,
-            explanation: 'Always read the full sentence, not just the underlined portion'
+            explanation: 'Correct — Key Insight: Some questions test transitions between paragraphs — read both. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Read the sentence before and after for context.
       id: 'act-e3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for reading in context?',
+            question: 'Which of these accurately represents ACT Tip?',
             options: [
-              'Some questions test transitions between paragraphs — read both',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Some questions test transitions between paragraphs — read both.',
+              'The correct answer must fit the tone and style of the surrounding text.',
+              'Read the sentence before and after for context.',
+              'Always read the full sentence, not just the underlined portion.'
             ],
-            correctAnswer: 0,
-            explanation: 'Some questions test transitions between paragraphs — read both'
+            correctAnswer: 1,
+            explanation: 'Correct — ACT Tip: The correct answer must fit the tone and style of the surrounding text. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ Read the sentence before and after for context.
       id: 'act-e3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Reading in Context:',
-            options: ['Always read the full sentence, not just the underl', 'Read the sentence before and after for context', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['The correct answer must fit the tone and style of the surrounding text.', 'Read the sentence before and after for context.', 'Some questions test transitions between paragraphs — read both.', 'Always read the full sentence, not just the underlined portion.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Some questions test transitions between paragraphs', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'ACT Tip',
+            options: ['Some questions test transitions between paragraphs — read both.', 'The correct answer must fit the tone and style of the surrounding text.', 'Read the sentence before and after for context.', 'Always read the full sentence, not just the underlined portion.']
           }
         ],
-        correctAnswers: ['Always read the full sentence, not just the underl', 'Some questions test transitions between paragraphs'],
-        hint1: 'Think about reading in context',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Always read the full sentence, not just the underlined portion. Some questions test transitions between paragraphs — read both.'
+        correctAnswers: ['Some questions test transitions between paragraphs — read both.', 'The correct answer must fit the tone and style of the surrounding text.'],
+        hint1: 'Think about what each concept specifically describes in Reading in Context.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Reading in Context describes a specific idea. Key Insight: Some questions test transitions between paragraphs — read both. ACT Tip: The correct answer must fit the tone and style of the surrounding text.'
       }
     }
   ]

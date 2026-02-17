@@ -30,31 +30,31 @@ odd molecular weight suggests nitrogen
       id: 'infra5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of fragmentation patterns?',
-            options: [
-              'Base peak',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
-            ],
-            correctAnswer: 0,
-            explanation: 'Base peak: most abundant fragment'
-          },
-          {
-            question: 'In the context of fragmentation patterns, which is accurate?',
+            question: 'Which of the following correctly describes Base peak?',
             options: [
               'γ-hydrogen transfer',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'odd molecular weight suggests nitrogen',
+              'most abundant fragment',
+              '-15 (CH₃), -18 (H₂O), -28 (CO), -29 (CHO)'
             ],
-            correctAnswer: 0,
-            explanation: 'McLafferty rearrangement: γ-hydrogen transfer'
+            correctAnswer: 2,
+            explanation: 'Correct — Base peak: most abundant fragment. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Fragmentation Patterns, which explains McLafferty rearrangement?',
+            options: [
+              'most abundant fragment',
+              'γ-hydrogen transfer',
+              'odd molecular weight suggests nitrogen',
+              '-15 (CH₃), -18 (H₂O), -28 (CO), -29 (CHO)'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — McLafferty rearrangement: γ-hydrogen transfer. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ odd molecular weight suggests nitrogen
       id: 'infra5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Base peak',
-            options: ['most abundant fragment', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['γ-hydrogen transfer', '-15 (CH₃), -18 (H₂O), -28 (CO), -29 (CHO)', 'odd molecular weight suggests nitrogen', 'most abundant fragment']
           },
           {
             label: 'Common losses',
-            options: ['-15 (CH₃), -18 (H₂O), -28 (CO), -29 (CHO)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['-15 (CH₃), -18 (H₂O), -28 (CO), -29 (CHO)', 'most abundant fragment', 'γ-hydrogen transfer', 'odd molecular weight suggests nitrogen']
           },
           {
             label: 'McLafferty rearrangement',
-            options: ['γ-hydrogen transfer', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['γ-hydrogen transfer', '-15 (CH₃), -18 (H₂O), -28 (CO), -29 (CHO)', 'most abundant fragment', 'odd molecular weight suggests nitrogen']
           }
         ],
         correctAnswers: ['most abundant fragment', '-15 (CH₃), -18 (H₂O), -28 (CO), -29 (CHO)', 'γ-hydrogen transfer'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Fragmentation Patterns.'
+        hint1: 'Think about what each concept specifically describes in Fragmentation Patterns.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Fragmentation Patterns describes a specific idea. Base peak: most abundant fragment. Common losses: -15 (CH₃), -18 (H₂O), -28 (CO), -29 (CHO). McLafferty rearrangement: γ-hydrogen transfer.'
       }
     }
   ]

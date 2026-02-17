@@ -30,31 +30,31 @@ Diverges when |r| ≥ 1 (no finite sum)
       id: 'seque4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of series & summation?',
+            question: 'Which of the following correctly describes Series?',
             options: [
-              'Series',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'Σ represents summation from lower to upper bound',
+              'Diverges when |r| ≥ 1 (no finite sum)',
+              'S = a₁/(1 - r) when |r| < 1',
+              'the sum of terms in a sequence'
             ],
-            correctAnswer: 0,
-            explanation: 'Series: the sum of terms in a sequence'
+            correctAnswer: 3,
+            explanation: 'Correct — Series: the sum of terms in a sequence. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of series & summation, which is accurate?',
+            question: 'Which of the following is true about Infinite geometric series?',
             options: [
+              'Σ represents summation from lower to upper bound',
               'S = a₁/(1 - r) when |r| < 1',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Diverges when |r| ≥ 1 (no finite sum)',
+              'the sum of terms in a sequence'
             ],
-            correctAnswer: 0,
-            explanation: 'Infinite geometric series: S = a₁/(1 - r) when |r| < 1'
+            correctAnswer: 1,
+            explanation: 'Correct — Infinite geometric series: S = a₁/(1 - r) when |r| < 1. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Diverges when |r| ≥ 1 (no finite sum)
       id: 'seque4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Series',
-            options: ['the sum of terms in a sequence', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['Diverges when |r| ≥ 1 (no finite sum)', 'S = a₁/(1 - r) when |r| < 1', 'Σ represents summation from lower to upper bound', 'the sum of terms in a sequence']
           },
           {
             label: 'Sigma notation',
-            options: ['Σ represents summation from lower to upper bound', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['Diverges when |r| ≥ 1 (no finite sum)', 'the sum of terms in a sequence', 'Σ represents summation from lower to upper bound', 'S = a₁/(1 - r) when |r| < 1']
           },
           {
             label: 'Infinite geometric series',
-            options: ['S = a₁/(1 - r) when |r| < 1', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['S = a₁/(1 - r) when |r| < 1', 'the sum of terms in a sequence', 'Diverges when |r| ≥ 1 (no finite sum)', 'Σ represents summation from lower to upper bound']
           }
         ],
         correctAnswers: ['the sum of terms in a sequence', 'Σ represents summation from lower to upper bound', 'S = a₁/(1 - r) when |r| < 1'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Series & Summation.'
+        hint1: 'Think about what each concept specifically describes in Series & Summation.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Series & Summation describes a specific idea. Series: the sum of terms in a sequence. Sigma notation: Σ represents summation from lower to upper bound. Infinite geometric series: S = a₁/(1 - r) when |r| < 1.'
       }
     }
   ]

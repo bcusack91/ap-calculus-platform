@@ -30,31 +30,31 @@ if f is continuous and aₙ → L, then f(aₙ) → f(L)
       id: 'infin3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of limits of sequences?',
+            question: 'Which statement accurately explains Direct computation?',
             options: [
-              'Direct computation',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
+              'plug in and simplify',
+              'if lim f(x) helps find lim aₙ',
+              'if f is continuous and aₙ → L, then f(aₙ) → f(L)',
+              'If lim(n→∞) |aₙ| = 0, then lim(n→∞) aₙ = 0'
             ],
             correctAnswer: 0,
-            explanation: 'Direct computation: plug in and simplify'
+            explanation: 'Correct — Direct computation: plug in and simplify. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of limits of sequences, which is accurate?',
+            question: 'Which of the following is true about If lim(n→∞) |aₙ| = 0, then lim(n→∞) aₙ…?',
             options: [
+              'if lim f(x) helps find lim aₙ',
+              'plug in and simplify',
               'If lim(n→∞) |aₙ| = 0, then lim(n→∞) aₙ = 0',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'if f is continuous and aₙ → L, then f(aₙ) → f(L)'
             ],
-            correctAnswer: 0,
-            explanation: 'If lim(n→∞) |aₙ| = 0, then lim(n→∞) aₙ = 0'
+            correctAnswer: 2,
+            explanation: 'Correct — If lim(n→∞) |aₙ| = 0, then lim(n→∞) aₙ = 0. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ if f is continuous and aₙ → L, then f(aₙ) → f(L)
       id: 'infin3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to limits of sequences?',
+            question: 'Which of these accurately represents Continuous function theorem?',
             options: [
               'if f is continuous and aₙ → L, then f(aₙ) → f(L)',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'plug in and simplify',
+              'if lim f(x) helps find lim aₙ',
+              'If lim(n→∞) |aₙ| = 0, then lim(n→∞) aₙ = 0'
             ],
             correctAnswer: 0,
-            explanation: 'Continuous function theorem: if f is continuous and aₙ → L, then f(aₙ) → f(L)'
+            explanation: 'Correct — Continuous function theorem: if f is continuous and aₙ → L, then f(aₙ) → f(L). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ if f is continuous and aₙ → L, then f(aₙ) → f(L)
       id: 'infin3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Direct computation',
-            options: ['plug in and simplify', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['if f is continuous and aₙ → L, then f(aₙ) → f(L)', 'if lim f(x) helps find lim aₙ', 'If lim(n→∞) |aₙ| = 0, then lim(n→∞) aₙ = 0', 'plug in and simplify']
           },
           {
             label: 'L\'Hôpital\'s Rule (applied to a related function)',
-            options: ['if lim f(x) helps find lim aₙ', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['If lim(n→∞) |aₙ| = 0, then lim(n→∞) aₙ = 0', 'if lim f(x) helps find lim aₙ', 'plug in and simplify', 'if f is continuous and aₙ → L, then f(aₙ) → f(L)']
           },
           {
-            label: 'If lim(n→∞) |aₙ| = 0, then lim(n→∞) aₙ = 0',
-            options: ['If lim(n→∞) |aₙ| = 0, then lim(n→∞) aₙ = 0', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Continuous function theorem',
+            options: ['if lim f(x) helps find lim aₙ', 'plug in and simplify', 'If lim(n→∞) |aₙ| = 0, then lim(n→∞) aₙ = 0', 'if f is continuous and aₙ → L, then f(aₙ) → f(L)']
           }
         ],
-        correctAnswers: ['plug in and simplify', 'if lim f(x) helps find lim aₙ', 'If lim(n→∞) |aₙ| = 0, then lim(n→∞) aₙ = 0'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Limits of Sequences.'
+        correctAnswers: ['plug in and simplify', 'if lim f(x) helps find lim aₙ', 'if f is continuous and aₙ → L, then f(aₙ) → f(L)'],
+        hint1: 'Think about what each concept specifically describes in Limits of Sequences.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Limits of Sequences describes a specific idea. Direct computation: plug in and simplify. L\'Hôpital\'s Rule (applied to a related function): if lim f(x) helps find lim aₙ. Continuous function theorem: if f is continuous and aₙ → L, then f(aₙ) → f(L).'
       }
     }
   ]

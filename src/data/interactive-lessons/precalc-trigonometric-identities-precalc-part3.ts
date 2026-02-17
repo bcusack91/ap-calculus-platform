@@ -30,31 +30,31 @@ cos(A - B) = cos A cos B + sin A sin B
       id: 'trigo3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of sum & difference formulas?',
+            question: 'What does "sin(A + B) = sin A cos B + cos A sin B" refer to in precalculus?',
             options: [
+              'cos(A - B) = cos A cos B + sin A sin B',
               'sin(A + B) = sin A cos B + cos A sin B',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'sin(A - B) = sin A cos B - cos A sin B',
+              'cos(A + B) = cos A cos B - sin A sin B'
             ],
-            correctAnswer: 0,
-            explanation: 'sin(A + B) = sin A cos B + cos A sin B'
+            correctAnswer: 1,
+            explanation: 'Correct — sin(A + B) = sin A cos B + cos A sin B. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of sum & difference formulas, which is accurate?',
+            question: 'Select the statement that correctly describes cos(A + B) = cos A cos B - sin A sin B:',
             options: [
-              'cos(A + B) = cos A cos B - sin A sin B',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'sin(A - B) = sin A cos B - cos A sin B',
+              'sin(A + B) = sin A cos B + cos A sin B',
+              'cos(A - B) = cos A cos B + sin A sin B',
+              'cos(A + B) = cos A cos B - sin A sin B'
             ],
-            correctAnswer: 0,
-            explanation: 'cos(A + B) = cos A cos B - sin A sin B'
+            correctAnswer: 3,
+            explanation: 'Correct — cos(A + B) = cos A cos B - sin A sin B. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ cos(A - B) = cos A cos B + sin A sin B
       id: 'trigo3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'sin(A + B) = sin A cos B + cos A sin B',
-            options: ['sin(A + B) = sin A cos B + cos A sin B', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['cos(A - B) = cos A cos B + sin A sin B', 'cos(A + B) = cos A cos B - sin A sin B', 'sin(A + B) = sin A cos B + cos A sin B', 'sin(A - B) = sin A cos B - cos A sin B']
           },
           {
             label: 'sin(A - B) = sin A cos B - cos A sin B',
-            options: ['sin(A - B) = sin A cos B - cos A sin B', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['sin(A - B) = sin A cos B - cos A sin B', 'cos(A - B) = cos A cos B + sin A sin B', 'sin(A + B) = sin A cos B + cos A sin B', 'cos(A + B) = cos A cos B - sin A sin B']
           },
           {
             label: 'cos(A + B) = cos A cos B - sin A sin B',
-            options: ['cos(A + B) = cos A cos B - sin A sin B', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['sin(A - B) = sin A cos B - cos A sin B', 'cos(A - B) = cos A cos B + sin A sin B', 'cos(A + B) = cos A cos B - sin A sin B', 'sin(A + B) = sin A cos B + cos A sin B']
           }
         ],
         correctAnswers: ['sin(A + B) = sin A cos B + cos A sin B', 'sin(A - B) = sin A cos B - cos A sin B', 'cos(A + B) = cos A cos B - sin A sin B'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Sum & Difference Formulas.'
+        hint1: 'Think about what each concept specifically describes in Sum & Difference Formulas.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Sum & Difference Formulas describes a specific idea. sin(A + B) = sin A cos B + cos A sin B. sin(A - B) = sin A cos B - cos A sin B. cos(A + B) = cos A cos B - sin A sin B.'
       }
     }
   ]

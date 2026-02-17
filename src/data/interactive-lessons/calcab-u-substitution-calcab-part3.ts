@@ -30,31 +30,31 @@ Don't mix x-bounds with u-integrand (or vice versa)
       id: 'u-sub3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of definite integrals with u-sub?',
+            question: 'Which statement accurately explains Option 1?',
             options: [
-              'Option 1',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'change bounds to u-values: when x = a, u = g(a)',
+              'integrate in u, back-substitute, then use original x-bounds',
+              'Changing bounds is often cleaner — no need to back-substitute',
+              'Don\'t mix x-bounds with u-integrand (or vice versa)'
             ],
             correctAnswer: 0,
-            explanation: 'Option 1: change bounds to u-values: when x = a, u = g(a)'
+            explanation: 'Correct — Option 1: change bounds to u-values: when x = a, u = g(a). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of definite integrals with u-sub, which is accurate?',
+            question: 'In the context of Definite Integrals with u-Sub, which explains Changing bounds is often cleaner — no…?',
             options: [
               'Changing bounds is often cleaner — no need to back-substitute',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Don\'t mix x-bounds with u-integrand (or vice versa)',
+              'integrate in u, back-substitute, then use original x-bounds',
+              'change bounds to u-values: when x = a, u = g(a)'
             ],
             correctAnswer: 0,
-            explanation: 'Changing bounds is often cleaner — no need to back-substitute'
+            explanation: 'Correct — Changing bounds is often cleaner — no need to back-substitute. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Don't mix x-bounds with u-integrand (or vice versa)
       id: 'u-sub3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to definite integrals with u-sub?',
+            question: 'Regarding Definite Integrals with u-Sub, which correctly describes Don\'t mix x-bounds with u-integrand (or…?',
             options: [
-              'Don\'t mix x-bounds with u-integrand (or vice versa)',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'Changing bounds is often cleaner — no need to back-substitute',
+              'integrate in u, back-substitute, then use original x-bounds',
+              'change bounds to u-values: when x = a, u = g(a)',
+              'Don\'t mix x-bounds with u-integrand (or vice versa)'
             ],
-            correctAnswer: 0,
-            explanation: 'Don\'t mix x-bounds with u-integrand (or vice versa)'
+            correctAnswer: 3,
+            explanation: 'Correct — Don\'t mix x-bounds with u-integrand (or vice versa). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,24 @@ Don't mix x-bounds with u-integrand (or vice versa)
       id: 'u-sub3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Option 1',
-            options: ['change bounds to u-values: when x = a, u = g(a)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['change bounds to u-values: when x = a, u = g(a)', 'Changing bounds is often cleaner — no need to back-substitute', 'Don\'t mix x-bounds with u-integrand (or vice versa)', 'integrate in u, back-substitute, then use original x-bounds']
           },
           {
             label: 'Option 2',
-            options: ['integrate in u, back-substitute, then use original', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
-          },
-          {
-            label: 'Changing bounds is often cleaner — no need to back-substitute',
-            options: ['Changing bounds is often cleaner — no need to back', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Don\'t mix x-bounds with u-integrand (or vice versa)', 'change bounds to u-values: when x = a, u = g(a)', 'integrate in u, back-substitute, then use original x-bounds', 'Changing bounds is often cleaner — no need to back-substitute']
           }
         ],
-        correctAnswers: ['change bounds to u-values: when x = a, u = g(a)', 'integrate in u, back-substitute, then use original', 'Changing bounds is often cleaner — no need to back'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Definite Integrals with u-Sub.'
+        correctAnswers: ['change bounds to u-values: when x = a, u = g(a)', 'integrate in u, back-substitute, then use original x-bounds'],
+        hint1: 'Think about what each concept specifically describes in Definite Integrals with u-Sub.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Definite Integrals with u-Sub describes a specific idea. Option 1: change bounds to u-values: when x = a, u = g(a). Option 2: integrate in u, back-substitute, then use original x-bounds.'
       }
     }
   ]

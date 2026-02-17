@@ -30,31 +30,31 @@ Switching two groups inverts R/S
       id: 'stere5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of fischer projections?',
+            question: 'What does "Fischer projections" refer to in this topic?',
             options: [
-              'Fischer projections',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'Used especially for sugars and amino acids',
+              'Rotating 90° inverts configuration',
+              'Switching two groups inverts R/S',
+              'horizontal = coming toward you, vertical = going away'
             ],
-            correctAnswer: 0,
-            explanation: 'Fischer projections: horizontal = coming toward you, vertical = going away'
+            correctAnswer: 3,
+            explanation: 'Correct — Fischer projections: horizontal = coming toward you, vertical = going away. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of fischer projections, which is accurate?',
+            question: 'Select the statement that correctly describes Rotating 90° inverts configuration:',
             options: [
+              'Switching two groups inverts R/S',
               'Rotating 90° inverts configuration',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'horizontal = coming toward you, vertical = going away',
+              'Used especially for sugars and amino acids'
             ],
-            correctAnswer: 0,
-            explanation: 'Rotating 90° inverts configuration'
+            correctAnswer: 1,
+            explanation: 'Correct — Rotating 90° inverts configuration. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Switching two groups inverts R/S
       id: 'stere5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Fischer projections',
-            options: ['horizontal = coming toward you, vertical = going a', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Used especially for sugars and amino acids', 'horizontal = coming toward you, vertical = going away', 'Rotating 90° inverts configuration', 'Switching two groups inverts R/S']
           },
           {
-            label: 'Used especially for sugars and amino acids',
-            options: ['Used especially for sugars and amino acids', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Used especially for sugars and amino…',
+            options: ['Switching two groups inverts R/S', 'horizontal = coming toward you, vertical = going away', 'Rotating 90° inverts configuration', 'Used especially for sugars and amino acids']
           },
           {
             label: 'Rotating 90° inverts configuration',
-            options: ['Rotating 90° inverts configuration', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Used especially for sugars and amino acids', 'Switching two groups inverts R/S', 'horizontal = coming toward you, vertical = going away', 'Rotating 90° inverts configuration']
           }
         ],
-        correctAnswers: ['horizontal = coming toward you, vertical = going a', 'Used especially for sugars and amino acids', 'Rotating 90° inverts configuration'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Fischer Projections.'
+        correctAnswers: ['horizontal = coming toward you, vertical = going away', 'Used especially for sugars and amino acids', 'Rotating 90° inverts configuration'],
+        hint1: 'Think about what each concept specifically describes in Fischer Projections.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Fischer Projections describes a specific idea. Fischer projections: horizontal = coming toward you, vertical = going away. Used especially for sugars and amino acids. Rotating 90° inverts configuration.'
       }
     }
   ]

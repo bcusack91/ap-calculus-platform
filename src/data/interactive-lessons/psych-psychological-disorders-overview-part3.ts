@@ -30,31 +30,31 @@ vulnerability + stress → disorder
       id: 'psych3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of perspectives on disorders?',
+            question: 'What does "Biological" refer to in psychology?',
             options: [
-              'Biological',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'vulnerability + stress → disorder',
+              'learning, cognition, personality',
+              'genetics, neurotransmitters, brain structure',
+              'culture, poverty, discrimination'
             ],
-            correctAnswer: 0,
-            explanation: 'Biological: genetics, neurotransmitters, brain structure'
+            correctAnswer: 2,
+            explanation: 'Correct — Biological: genetics, neurotransmitters, brain structure. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of perspectives on disorders, which is accurate?',
+            question: 'Select the statement that correctly describes Sociocultural:',
             options: [
               'culture, poverty, discrimination',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'vulnerability + stress → disorder',
+              'genetics, neurotransmitters, brain structure',
+              'learning, cognition, personality'
             ],
             correctAnswer: 0,
-            explanation: 'Sociocultural: culture, poverty, discrimination'
+            explanation: 'Correct — Sociocultural: culture, poverty, discrimination. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ vulnerability + stress → disorder
       id: 'psych3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Biological',
-            options: ['genetics, neurotransmitters, brain structure', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['culture, poverty, discrimination', 'vulnerability + stress → disorder', 'learning, cognition, personality', 'genetics, neurotransmitters, brain structure']
           },
           {
             label: 'Psychological',
-            options: ['learning, cognition, personality', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['vulnerability + stress → disorder', 'culture, poverty, discrimination', 'learning, cognition, personality', 'genetics, neurotransmitters, brain structure']
           },
           {
             label: 'Sociocultural',
-            options: ['culture, poverty, discrimination', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['culture, poverty, discrimination', 'vulnerability + stress → disorder', 'genetics, neurotransmitters, brain structure', 'learning, cognition, personality']
           }
         ],
         correctAnswers: ['genetics, neurotransmitters, brain structure', 'learning, cognition, personality', 'culture, poverty, discrimination'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Perspectives on Disorders.'
+        hint1: 'Think about what each concept specifically describes in Perspectives on Disorders.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Perspectives on Disorders describes a specific idea. Biological: genetics, neurotransmitters, brain structure. Psychological: learning, cognition, personality. Sociocultural: culture, poverty, discrimination.'
       }
     }
   ]

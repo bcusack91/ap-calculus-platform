@@ -30,31 +30,31 @@ The derivative of a polynomial of degree n has degree n-1
       id: 'defin3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of derivative as a function?',
+            question: 'Which of the following correctly describes f\'(x) is itself a function — it has its…?',
             options: [
               'f\'(x) is itself a function — it has its own domain, range, and graph',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'The derivative of a polynomial of degree n has degree n-1',
+              'f\'(x) = 0 at horizontal tangent lines (potential extrema)',
+              'f\'(x) > 0 means f is increasing; f\'(x) < 0 means f is decreasing'
             ],
             correctAnswer: 0,
-            explanation: 'f\'(x) is itself a function — it has its own domain, range, and graph'
+            explanation: 'Correct — f\'(x) is itself a function — it has its own domain, range, and graph. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of derivative as a function, which is accurate?',
+            question: 'Which of the following is true about f\'(x) = 0 at horizontal tangent lines…?',
             options: [
               'f\'(x) = 0 at horizontal tangent lines (potential extrema)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'f\'(x) > 0 means f is increasing; f\'(x) < 0 means f is decreasing',
+              'f\'(x) is itself a function — it has its own domain, range, and graph',
+              'The derivative of a polynomial of degree n has degree n-1'
             ],
             correctAnswer: 0,
-            explanation: 'f\'(x) = 0 at horizontal tangent lines (potential extrema)'
+            explanation: 'Correct — f\'(x) = 0 at horizontal tangent lines (potential extrema). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ The derivative of a polynomial of degree n has degree n-1
       id: 'defin3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to derivative as a function?',
+            question: 'Which statement about The derivative of a polynomial of… is correct?',
             options: [
               'The derivative of a polynomial of degree n has degree n-1',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'f\'(x) = 0 at horizontal tangent lines (potential extrema)',
+              'f\'(x) is itself a function — it has its own domain, range, and graph',
+              'f\'(x) > 0 means f is increasing; f\'(x) < 0 means f is decreasing'
             ],
             correctAnswer: 0,
-            explanation: 'The derivative of a polynomial of degree n has degree n-1'
+            explanation: 'Correct — The derivative of a polynomial of degree n has degree n-1. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ The derivative of a polynomial of degree n has degree n-1
       id: 'defin3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'f\'(x) is itself a function — it has its own domain, range, and graph',
-            options: ['f\'(x) is itself a function — it has its own domain', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'f\'(x) is itself a function — it has its…',
+            options: ['The derivative of a polynomial of degree n has degree n-1', 'f\'(x) = 0 at horizontal tangent lines (potential extrema)', 'f\'(x) > 0 means f is increasing; f\'(x) < 0 means f is decreasing', 'f\'(x) is itself a function — it has its own domain, range, and graph']
           },
           {
-            label: 'f\'(x) > 0 means f is increasing; f\'(x) < 0 means f is decreasing',
-            options: ['f\'(x) > 0 means f is increasing; f\'(x) < 0 means f', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'f\'(x) > 0 means f is increasing; f\'(x)…',
+            options: ['f\'(x) is itself a function — it has its own domain, range, and graph', 'The derivative of a polynomial of degree n has degree n-1', 'f\'(x) = 0 at horizontal tangent lines (potential extrema)', 'f\'(x) > 0 means f is increasing; f\'(x) < 0 means f is decreasing']
           },
           {
-            label: 'f\'(x) = 0 at horizontal tangent lines (potential extrema)',
-            options: ['f\'(x) = 0 at horizontal tangent lines (potential e', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'f\'(x) = 0 at horizontal tangent lines…',
+            options: ['f\'(x) is itself a function — it has its own domain, range, and graph', 'f\'(x) > 0 means f is increasing; f\'(x) < 0 means f is decreasing', 'f\'(x) = 0 at horizontal tangent lines (potential extrema)', 'The derivative of a polynomial of degree n has degree n-1']
           }
         ],
-        correctAnswers: ['f\'(x) is itself a function — it has its own domain', 'f\'(x) > 0 means f is increasing; f\'(x) < 0 means f', 'f\'(x) = 0 at horizontal tangent lines (potential e'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Derivative as a Function.'
+        correctAnswers: ['f\'(x) is itself a function — it has its own domain, range, and graph', 'f\'(x) > 0 means f is increasing; f\'(x) < 0 means f is decreasing', 'f\'(x) = 0 at horizontal tangent lines (potential extrema)'],
+        hint1: 'Think about what each concept specifically describes in Derivative as a Function.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Derivative as a Function describes a specific idea. f\'(x) is itself a function — it has its own domain, range, and graph. f\'(x) > 0 means f is increasing; f\'(x) < 0 means f is decreasing. f\'(x) = 0 at horizontal tangent lines (potential extrema).'
       }
     }
   ]

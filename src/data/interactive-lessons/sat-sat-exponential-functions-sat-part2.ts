@@ -18,20 +18,31 @@ Take log of both sides when bases differ.
       id: 'sat-e2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes if bases are equal?',
+            question: 'Which statement accurately explains If bases are equal?',
             options: [
-              'If bases are equal is a fundamental concept in SAT Math',
-              'Take log of both sides when bases differ',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'Take log of both sides when bases differ.',
+              'Solve: 2ˣ = 32 → 2ˣ = 2⁵ → x = 5.',
+              'aˣ = aʸ implies x = y.',
+              'ln(aˣ) = x · ln(a).'
             ],
-            correctAnswer: 0,
-            explanation: 'If bases are equal: aˣ = aʸ implies x = y'
+            correctAnswer: 2,
+            explanation: 'Correct — If bases are equal: aˣ = aʸ implies x = y. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Exponential Equations, which explains Key Insight?',
+            options: [
+              'Solve: 2ˣ = 32 → 2ˣ = 2⁵ → x = 5.',
+              'Take log of both sides when bases differ.',
+              'ln(aˣ) = x · ln(a).',
+              'aˣ = aʸ implies x = y.'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Key Insight: ln(aˣ) = x · ln(a). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Take log of both sides when bases differ.
       id: 'sat-e2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for exponential equations?',
+            question: 'Which of these accurately represents SAT Tip?',
             options: [
-              'ln(aˣ) = x · ln(a)',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'ln(aˣ) = x · ln(a).',
+              'aˣ = aʸ implies x = y.',
+              'Take log of both sides when bases differ.',
+              'Solve: 2ˣ = 32 → 2ˣ = 2⁵ → x = 5.'
             ],
-            correctAnswer: 0,
-            explanation: 'ln(aˣ) = x · ln(a)'
+            correctAnswer: 3,
+            explanation: 'Correct — SAT Tip: Solve: 2ˣ = 32 → 2ˣ = 2⁵ → x = 5. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Take log of both sides when bases differ.
       id: 'sat-e2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Exponential Equations:',
-            options: ['If bases are equal: aˣ = aʸ implies x = y', 'Take log of both sides when bases differ', 'Not applicable', 'None of these']
+            label: 'If bases are equal',
+            options: ['Solve: 2ˣ = 32 → 2ˣ = 2⁵ → x = 5.', 'ln(aˣ) = x · ln(a).', 'Take log of both sides when bases differ.', 'aˣ = aʸ implies x = y.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['ln(aˣ) = x · ln(a)', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Key Insight',
+            options: ['Take log of both sides when bases differ.', 'ln(aˣ) = x · ln(a).', 'Solve: 2ˣ = 32 → 2ˣ = 2⁵ → x = 5.', 'aˣ = aʸ implies x = y.']
+          },
+          {
+            label: 'SAT Tip',
+            options: ['aˣ = aʸ implies x = y.', 'Solve: 2ˣ = 32 → 2ˣ = 2⁵ → x = 5.', 'Take log of both sides when bases differ.', 'ln(aˣ) = x · ln(a).']
           }
         ],
-        correctAnswers: ['If bases are equal: aˣ = aʸ implies x = y', 'ln(aˣ) = x · ln(a)'],
-        hint1: 'Think about exponential equations',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'If bases are equal: aˣ = aʸ implies x = y. ln(aˣ) = x · ln(a).'
+        correctAnswers: ['aˣ = aʸ implies x = y.', 'ln(aˣ) = x · ln(a).', 'Solve: 2ˣ = 32 → 2ˣ = 2⁵ → x = 5.'],
+        hint1: 'Think about what each concept specifically describes in Exponential Equations.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Exponential Equations describes a specific idea. If bases are equal: aˣ = aʸ implies x = y. Key Insight: ln(aˣ) = x · ln(a). SAT Tip: Solve: 2ˣ = 32 → 2ˣ = 2⁵ → x = 5.'
       }
     }
   ]

@@ -19,31 +19,31 @@ export const bioNonMendelianPart4Data = {
       id: 'non-4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes x-linked traits?',
+            question: 'Which of the following correctly describes X-linked traits?',
             options: [
+              'Males (XY) express all X-linked alleles (hemizygous)',
               'genes on X chromosome',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Females (XX) can be carriers of recessive X-linked traits',
+              'color blindness, hemophilia, Duchenne muscular dystrophy'
             ],
-            correctAnswer: 0,
-            explanation: 'X-linked traits: genes on X chromosome'
+            correctAnswer: 1,
+            explanation: 'Correct — X-linked traits: genes on X chromosome. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of sex-linked traits, which statement is accurate?',
+            question: 'In the context of Sex-Linked Traits, which explains Females (XX) can be carriers of…?',
             options: [
               'Females (XX) can be carriers of recessive X-linked traits',
-              'emosomorhc X no seneg :stiart deknil-X',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'genes on X chromosome',
+              'Males (XY) express all X-linked alleles (hemizygous)',
+              'color blindness, hemophilia, Duchenne muscular dystrophy'
             ],
             correctAnswer: 0,
-            explanation: 'Females (XX) can be carriers of recessive X-linked traits'
+            explanation: 'Correct — Females (XX) can be carriers of recessive X-linked traits. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioNonMendelianPart4Data = {
       id: 'non-4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to sex-linked traits?',
+            question: 'Which statement about Examples is correct?',
             options: [
-              'Examples: color blindness, hemophilia, Duchenne muscular dystrophy',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Females (XX) can be carriers of recessive X-linked traits',
+              'genes on X chromosome',
+              'Males (XY) express all X-linked alleles (hemizygous)',
+              'color blindness, hemophilia, Duchenne muscular dystrophy'
             ],
-            correctAnswer: 0,
-            explanation: 'Examples: color blindness, hemophilia, Duchenne muscular dystrophy'
+            correctAnswer: 3,
+            explanation: 'Correct — Examples: color blindness, hemophilia, Duchenne muscular dystrophy. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,24 @@ export const bioNonMendelianPart4Data = {
       id: 'non-4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'X-linked traits is important in sex-linked traits because',
-            options: ['genes on X chromosome', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'X-linked traits',
+            options: ['Females (XX) can be carriers of recessive X-linked traits', 'color blindness, hemophilia, Duchenne muscular dystrophy', 'genes on X chromosome', 'Males (XY) express all X-linked alleles (hemizygous)']
           },
           {
-            label: 'Males (XY) express all X-linked alleles (hemizygous) is important in sex-linked traits because',
-            options: ['Males (XY) express all X-linked alleles (hemizygou', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
-          },
-          {
-            label: 'Females (XX) can be carriers of recessive X-linked traits is important in sex-linked traits because',
-            options: ['Females (XX) can be carriers of recessive X-linked', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Examples',
+            options: ['Males (XY) express all X-linked alleles (hemizygous)', 'Females (XX) can be carriers of recessive X-linked traits', 'color blindness, hemophilia, Duchenne muscular dystrophy', 'genes on X chromosome']
           }
         ],
-        correctAnswers: ['genes on X chromosome', 'Males (XY) express all X-linked alleles (hemizygou', 'Females (XX) can be carriers of recessive X-linked'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Sex-Linked Traits.'
+        correctAnswers: ['genes on X chromosome', 'color blindness, hemophilia, Duchenne muscular dystrophy'],
+        hint1: 'Think about what each concept specifically describes in Sex-Linked Traits.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Sex-Linked Traits describes a specific idea. X-linked traits: genes on X chromosome. Examples: color blindness, hemophilia, Duchenne muscular dystrophy.'
       }
     }
   ]

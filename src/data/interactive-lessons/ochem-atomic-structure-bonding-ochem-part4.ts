@@ -30,31 +30,31 @@ MO theory explains paramagnetism of O₂
       id: 'atomi4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of molecular orbital theory?',
+            question: 'What does "Bonding MOs" refer to in this topic?',
             options: [
-              'Bonding MOs',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'higher energy, destructive overlap',
+              'MO theory explains paramagnetism of O₂',
+              'lower energy, constructive overlap',
+              'Bond order = (bonding e⁻ - antibonding e⁻) / 2'
             ],
-            correctAnswer: 0,
-            explanation: 'Bonding MOs: lower energy, constructive overlap'
+            correctAnswer: 2,
+            explanation: 'Correct — Bonding MOs: lower energy, constructive overlap. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of molecular orbital theory, which is accurate?',
+            question: 'Select the statement that correctly describes Bond order = (bonding e⁻ - antibonding…:',
             options: [
               'Bond order = (bonding e⁻ - antibonding e⁻) / 2',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'MO theory explains paramagnetism of O₂',
+              'higher energy, destructive overlap',
+              'lower energy, constructive overlap'
             ],
             correctAnswer: 0,
-            explanation: 'Bond order = (bonding e⁻ - antibonding e⁻) / 2'
+            explanation: 'Correct — Bond order = (bonding e⁻ - antibonding e⁻) / 2. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,24 @@ MO theory explains paramagnetism of O₂
       id: 'atomi4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Bonding MOs',
-            options: ['lower energy, constructive overlap', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Bond order = (bonding e⁻ - antibonding e⁻) / 2', 'higher energy, destructive overlap', 'lower energy, constructive overlap', 'MO theory explains paramagnetism of O₂']
           },
           {
             label: 'Antibonding MOs',
-            options: ['higher energy, destructive overlap', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
-          },
-          {
-            label: 'Bond order = (bonding e⁻ - antibonding e⁻) / 2',
-            options: ['Bond order = (bonding e⁻ - antibonding e⁻) / 2', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['MO theory explains paramagnetism of O₂', 'lower energy, constructive overlap', 'Bond order = (bonding e⁻ - antibonding e⁻) / 2', 'higher energy, destructive overlap']
           }
         ],
-        correctAnswers: ['lower energy, constructive overlap', 'higher energy, destructive overlap', 'Bond order = (bonding e⁻ - antibonding e⁻) / 2'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Molecular Orbital Theory.'
+        correctAnswers: ['lower energy, constructive overlap', 'higher energy, destructive overlap'],
+        hint1: 'Think about what each concept specifically describes in Molecular Orbital Theory.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Molecular Orbital Theory describes a specific idea. Bonding MOs: lower energy, constructive overlap. Antibonding MOs: higher energy, destructive overlap.'
       }
     }
   ]

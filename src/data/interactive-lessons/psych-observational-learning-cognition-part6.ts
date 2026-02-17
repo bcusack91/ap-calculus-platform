@@ -30,31 +30,31 @@ Predicting learning outcomes
       id: 'obser6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of problem-solving workshop?',
+            question: 'Which of the following correctly describes Applying learning theories to real…?',
             options: [
-              'Applying learning theories to real scenarios',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'Comparing classical, operant, and observational learning',
+              'Analyzing Bandura\'s research',
+              'Predicting learning outcomes',
+              'Applying learning theories to real scenarios'
             ],
-            correctAnswer: 0,
-            explanation: 'Applying learning theories to real scenarios'
+            correctAnswer: 3,
+            explanation: 'Correct — Applying learning theories to real scenarios. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of problem-solving workshop, which is accurate?',
+            question: 'Which of the following is true about Analyzing Bandura\'s research?',
             options: [
               'Analyzing Bandura\'s research',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Applying learning theories to real scenarios',
+              'Predicting learning outcomes',
+              'Comparing classical, operant, and observational learning'
             ],
             correctAnswer: 0,
-            explanation: 'Analyzing Bandura\'s research'
+            explanation: 'Correct — Analyzing Bandura\'s research. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Predicting learning outcomes
       id: 'obser6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Applying learning theories to real scenarios',
-            options: ['Applying learning theories to real scenarios', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            label: 'Applying learning theories to real…',
+            options: ['Predicting learning outcomes', 'Applying learning theories to real scenarios', 'Analyzing Bandura\'s research', 'Comparing classical, operant, and observational learning']
           },
           {
-            label: 'Comparing classical, operant, and observational learning',
-            options: ['Comparing classical, operant, and observational le', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            label: 'Comparing classical, operant, and…',
+            options: ['Comparing classical, operant, and observational learning', 'Analyzing Bandura\'s research', 'Applying learning theories to real scenarios', 'Predicting learning outcomes']
           },
           {
             label: 'Analyzing Bandura\'s research',
-            options: ['Analyzing Bandura\'s research', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Comparing classical, operant, and observational learning', 'Predicting learning outcomes', 'Applying learning theories to real scenarios', 'Analyzing Bandura\'s research']
           }
         ],
-        correctAnswers: ['Applying learning theories to real scenarios', 'Comparing classical, operant, and observational le', 'Analyzing Bandura\'s research'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving Workshop.'
+        correctAnswers: ['Applying learning theories to real scenarios', 'Comparing classical, operant, and observational learning', 'Analyzing Bandura\'s research'],
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Applying learning theories to real scenarios. Comparing classical, operant, and observational learning. Analyzing Bandura\'s research.'
       }
     }
   ]

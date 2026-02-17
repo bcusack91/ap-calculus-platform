@@ -30,31 +30,31 @@ Preview of the derivative from calculus
       id: 'rates3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of instantaneous rate of change?',
+            question: 'What does "Instantaneous rate of change" refer to in precalculus?',
             options: [
-              'Instantaneous rate of change',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'lim(h→0) [f(a+h) - f(a)]/h gives the instantaneous rate at x = a',
+              'Preview of the derivative from calculus',
+              'This is the slope of the tangent line at x = a',
+              'limit of average rate as interval shrinks to zero'
             ],
-            correctAnswer: 0,
-            explanation: 'Instantaneous rate of change: limit of average rate as interval shrinks to zero'
+            correctAnswer: 3,
+            explanation: 'Correct — Instantaneous rate of change: limit of average rate as interval shrinks to zero. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of instantaneous rate of change, which is accurate?',
+            question: 'Select the statement that correctly describes This is the slope of the tangent line…:',
             options: [
-              'This is the slope of the tangent line at x = a',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'limit of average rate as interval shrinks to zero',
+              'lim(h→0) [f(a+h) - f(a)]/h gives the instantaneous rate at x = a',
+              'Preview of the derivative from calculus',
+              'This is the slope of the tangent line at x = a'
             ],
-            correctAnswer: 0,
-            explanation: 'This is the slope of the tangent line at x = a'
+            correctAnswer: 3,
+            explanation: 'Correct — This is the slope of the tangent line at x = a. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Preview of the derivative from calculus
       id: 'rates3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Instantaneous rate of change',
-            options: ['limit of average rate as interval shrinks to zero', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['lim(h→0) [f(a+h) - f(a)]/h gives the instantaneous rate at x = a', 'limit of average rate as interval shrinks to zero', 'This is the slope of the tangent line at x = a', 'Preview of the derivative from calculus']
           },
           {
-            label: 'lim(h→0) [f(a+h) - f(a)]/h gives the instantaneous rate at x = a',
-            options: ['lim(h→0) [f(a+h) - f(a)]/h gives the instantaneous', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            label: 'lim(h→0) [f(a+h) - f(a)]/h gives the…',
+            options: ['lim(h→0) [f(a+h) - f(a)]/h gives the instantaneous rate at x = a', 'limit of average rate as interval shrinks to zero', 'Preview of the derivative from calculus', 'This is the slope of the tangent line at x = a']
           },
           {
-            label: 'This is the slope of the tangent line at x = a',
-            options: ['This is the slope of the tangent line at x = a', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            label: 'This is the slope of the tangent line…',
+            options: ['lim(h→0) [f(a+h) - f(a)]/h gives the instantaneous rate at x = a', 'Preview of the derivative from calculus', 'limit of average rate as interval shrinks to zero', 'This is the slope of the tangent line at x = a']
           }
         ],
-        correctAnswers: ['limit of average rate as interval shrinks to zero', 'lim(h→0) [f(a+h) - f(a)]/h gives the instantaneous', 'This is the slope of the tangent line at x = a'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Instantaneous Rate of Change.'
+        correctAnswers: ['limit of average rate as interval shrinks to zero', 'lim(h→0) [f(a+h) - f(a)]/h gives the instantaneous rate at x = a', 'This is the slope of the tangent line at x = a'],
+        hint1: 'Think about what each concept specifically describes in Instantaneous Rate of Change.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Instantaneous Rate of Change describes a specific idea. Instantaneous rate of change: limit of average rate as interval shrinks to zero. lim(h→0) [f(a+h) - f(a)]/h gives the instantaneous rate at x = a. This is the slope of the tangent line at x = a.'
       }
     }
   ]

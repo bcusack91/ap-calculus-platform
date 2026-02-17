@@ -30,31 +30,31 @@ Both halves must converge for the integral to converge
       id: 'impro1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of type i: infinite limits?',
+            question: 'Which of the following correctly describes Type I?',
             options: [
-              'Type I',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
+              'Both halves must converge for the integral to converge',
+              '∫ₐ^∞ f(x)dx = lim(b→∞) ∫ₐᵇ f(x)dx',
+              'split at any point c and evaluate both halves',
+              'one or both limits of integration are ±∞'
             ],
-            correctAnswer: 0,
-            explanation: 'Type I: one or both limits of integration are ±∞'
+            correctAnswer: 3,
+            explanation: 'Correct — Type I: one or both limits of integration are ±∞. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of type i: infinite limits, which is accurate?',
+            question: 'Which of the following is true about ∫₋∞^∞ f(x)dx?',
             options: [
+              'Both halves must converge for the integral to converge',
+              'one or both limits of integration are ±∞',
               'split at any point c and evaluate both halves',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              '∫ₐ^∞ f(x)dx = lim(b→∞) ∫ₐᵇ f(x)dx'
             ],
-            correctAnswer: 0,
-            explanation: '∫₋∞^∞ f(x)dx: split at any point c and evaluate both halves'
+            correctAnswer: 2,
+            explanation: 'Correct — ∫₋∞^∞ f(x)dx: split at any point c and evaluate both halves. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Both halves must converge for the integral to converge
       id: 'impro1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to type i: infinite limits?',
+            question: 'Regarding ∮ Improper Integrals, which correctly describes Both halves must converge for the…?',
             options: [
               'Both halves must converge for the integral to converge',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'one or both limits of integration are ±∞',
+              '∫ₐ^∞ f(x)dx = lim(b→∞) ∫ₐᵇ f(x)dx',
+              'split at any point c and evaluate both halves'
             ],
             correctAnswer: 0,
-            explanation: 'Both halves must converge for the integral to converge'
+            explanation: 'Correct — Both halves must converge for the integral to converge. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,24 @@ Both halves must converge for the integral to converge
       id: 'impro1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Type I',
-            options: ['one or both limits of integration are ±∞', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
-          },
-          {
-            label: '∫ₐ^∞ f(x)dx = lim(b→∞) ∫ₐᵇ f(x)dx',
-            options: ['∫ₐ^∞ f(x)dx = lim(b→∞) ∫ₐᵇ f(x)dx', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['∫ₐ^∞ f(x)dx = lim(b→∞) ∫ₐᵇ f(x)dx', 'one or both limits of integration are ±∞', 'split at any point c and evaluate both halves', 'Both halves must converge for the integral to converge']
           },
           {
             label: '∫₋∞^∞ f(x)dx',
-            options: ['split at any point c and evaluate both halves', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['one or both limits of integration are ±∞', 'Both halves must converge for the integral to converge', 'split at any point c and evaluate both halves', '∫ₐ^∞ f(x)dx = lim(b→∞) ∫ₐᵇ f(x)dx']
           }
         ],
-        correctAnswers: ['one or both limits of integration are ±∞', '∫ₐ^∞ f(x)dx = lim(b→∞) ∫ₐᵇ f(x)dx', 'split at any point c and evaluate both halves'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Type I: Infinite Limits.'
+        correctAnswers: ['one or both limits of integration are ±∞', 'split at any point c and evaluate both halves'],
+        hint1: 'Think about what each concept specifically describes in ∮ Improper Integrals.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in ∮ Improper Integrals describes a specific idea. Type I: one or both limits of integration are ±∞. ∫₋∞^∞ f(x)dx: split at any point c and evaluate both halves.'
       }
     }
   ]

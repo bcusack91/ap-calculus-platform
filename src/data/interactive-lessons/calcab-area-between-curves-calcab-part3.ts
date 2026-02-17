@@ -30,31 +30,31 @@ Sometimes integrating with respect to y is simpler than with respect to x
       id: 'area-3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of area between two curves (horizontal)?',
+            question: 'What does "Integrate with respect to y when…" refer to in calculus?',
             options: [
               'Integrate with respect to y when boundaries are horizontal',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'Right function minus left function, integrated from bottom to top',
+              'Sometimes integrating with respect to y is simpler than with respect to x',
+              'A = ∫_c^d [right(y) - left(y)]dy'
             ],
             correctAnswer: 0,
-            explanation: 'Integrate with respect to y when boundaries are horizontal'
+            explanation: 'Correct — Integrate with respect to y when boundaries are horizontal. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of area between two curves (horizontal), which is accurate?',
+            question: 'Select the statement that correctly describes Right function minus left function,…:',
             options: [
               'Right function minus left function, integrated from bottom to top',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Sometimes integrating with respect to y is simpler than with respect to x',
+              'A = ∫_c^d [right(y) - left(y)]dy',
+              'Integrate with respect to y when boundaries are horizontal'
             ],
             correctAnswer: 0,
-            explanation: 'Right function minus left function, integrated from bottom to top'
+            explanation: 'Correct — Right function minus left function, integrated from bottom to top. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Sometimes integrating with respect to y is simpler than with respect to x
       id: 'area-3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to area between two curves (horizontal)?',
+            question: 'Which statement about Sometimes integrating with respect to y… is correct?',
             options: [
               'Sometimes integrating with respect to y is simpler than with respect to x',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'Right function minus left function, integrated from bottom to top',
+              'A = ∫_c^d [right(y) - left(y)]dy',
+              'Integrate with respect to y when boundaries are horizontal'
             ],
             correctAnswer: 0,
-            explanation: 'Sometimes integrating with respect to y is simpler than with respect to x'
+            explanation: 'Correct — Sometimes integrating with respect to y is simpler than with respect to x. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Sometimes integrating with respect to y is simpler than with respect to x
       id: 'area-3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Integrate with respect to y when boundaries are horizontal',
-            options: ['Integrate with respect to y when boundaries are ho', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Integrate with respect to y when…',
+            options: ['Sometimes integrating with respect to y is simpler than with respect to x', 'A = ∫_c^d [right(y) - left(y)]dy', 'Integrate with respect to y when boundaries are horizontal', 'Right function minus left function, integrated from bottom to top']
           },
           {
             label: 'A = ∫_c^d [right(y) - left(y)]dy',
-            options: ['A = ∫_c^d [right(y) - left(y)]dy', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Right function minus left function, integrated from bottom to top', 'Integrate with respect to y when boundaries are horizontal', 'A = ∫_c^d [right(y) - left(y)]dy', 'Sometimes integrating with respect to y is simpler than with respect to x']
           },
           {
-            label: 'Right function minus left function, integrated from bottom to top',
-            options: ['Right function minus left function, integrated fro', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Right function minus left function,…',
+            options: ['Sometimes integrating with respect to y is simpler than with respect to x', 'Integrate with respect to y when boundaries are horizontal', 'A = ∫_c^d [right(y) - left(y)]dy', 'Right function minus left function, integrated from bottom to top']
           }
         ],
-        correctAnswers: ['Integrate with respect to y when boundaries are ho', 'A = ∫_c^d [right(y) - left(y)]dy', 'Right function minus left function, integrated fro'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Area Between Two Curves (Horizontal).'
+        correctAnswers: ['Integrate with respect to y when boundaries are horizontal', 'A = ∫_c^d [right(y) - left(y)]dy', 'Right function minus left function, integrated from bottom to top'],
+        hint1: 'Think about what each concept specifically describes in Area Between Two Curves (Horizontal).',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Area Between Two Curves (Horizontal) describes a specific idea. Integrate with respect to y when boundaries are horizontal. A = ∫_c^d [right(y) - left(y)]dy. Right function minus left function, integrated from bottom to top.'
       }
     }
   ]

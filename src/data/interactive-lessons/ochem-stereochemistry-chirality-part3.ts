@@ -30,31 +30,31 @@ equal R and S → no net rotation
       id: 'stere3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of optical activity?',
+            question: 'What does "Optical activity" refer to in this topic?',
             options: [
-              'Optical activity',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'Enantiomers rotate light equal amounts but opposite directions',
+              'rotating plane-polarized light',
+              '(+) dextrorotatory (clockwise); (-) levorotatory (counterclockwise)',
+              'equal R and S → no net rotation'
             ],
-            correctAnswer: 0,
-            explanation: 'Optical activity: rotating plane-polarized light'
+            correctAnswer: 1,
+            explanation: 'Correct — Optical activity: rotating plane-polarized light. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of optical activity, which is accurate?',
+            question: 'Select the statement that correctly describes (+) dextrorotatory (clockwise); (-)…:',
             options: [
+              'rotating plane-polarized light',
               '(+) dextrorotatory (clockwise); (-) levorotatory (counterclockwise)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Enantiomers rotate light equal amounts but opposite directions',
+              'equal R and S → no net rotation'
             ],
-            correctAnswer: 0,
-            explanation: '(+) dextrorotatory (clockwise); (-) levorotatory (counterclockwise)'
+            correctAnswer: 1,
+            explanation: 'Correct — (+) dextrorotatory (clockwise); (-) levorotatory (counterclockwise). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,24 @@ equal R and S → no net rotation
       id: 'stere3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Optical activity',
-            options: ['rotating plane-polarized light', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['equal R and S → no net rotation', 'Enantiomers rotate light equal amounts but opposite directions', 'rotating plane-polarized light', '(+) dextrorotatory (clockwise); (-) levorotatory (counterclockwise)']
           },
           {
-            label: 'Enantiomers rotate light equal amounts but opposite directions',
-            options: ['Enantiomers rotate light equal amounts but opposit', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
-          },
-          {
-            label: '(+) dextrorotatory (clockwise); (-) levorotatory (counterclockwise)',
-            options: ['(+) dextrorotatory (clockwise); (-) levorotatory (', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Racemic mixture',
+            options: ['(+) dextrorotatory (clockwise); (-) levorotatory (counterclockwise)', 'equal R and S → no net rotation', 'Enantiomers rotate light equal amounts but opposite directions', 'rotating plane-polarized light']
           }
         ],
-        correctAnswers: ['rotating plane-polarized light', 'Enantiomers rotate light equal amounts but opposit', '(+) dextrorotatory (clockwise); (-) levorotatory ('],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Optical Activity.'
+        correctAnswers: ['rotating plane-polarized light', 'equal R and S → no net rotation'],
+        hint1: 'Think about what each concept specifically describes in Optical Activity.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Optical Activity describes a specific idea. Optical activity: rotating plane-polarized light. Racemic mixture: equal R and S → no net rotation.'
       }
     }
   ]

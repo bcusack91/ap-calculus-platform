@@ -30,31 +30,31 @@ alkyne reactions and synthesis
       id: 'alkyn7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of synthesis & review?',
-            options: [
-              'Alkynes are versatile functional groups',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
-            ],
-            correctAnswer: 0,
-            explanation: 'Alkynes are versatile functional groups'
-          },
-          {
-            question: 'In the context of synthesis & review, which is accurate?',
+            question: 'Which statement accurately explains Alkynes are versatile functional groups?',
             options: [
               'Selective reduction gives either cis or trans alkene',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Alkynes are versatile functional groups',
+              'Acetylide alkylation forms C-C bonds',
+              'alkyne reactions and synthesis'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Alkynes are versatile functional groups. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Synthesis & Review, which explains Selective reduction gives either cis or…?',
+            options: [
+              'Selective reduction gives either cis or trans alkene',
+              'alkyne reactions and synthesis',
+              'Acetylide alkylation forms C-C bonds',
+              'Alkynes are versatile functional groups'
             ],
             correctAnswer: 0,
-            explanation: 'Selective reduction gives either cis or trans alkene'
+            explanation: 'Correct — Selective reduction gives either cis or trans alkene. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ alkyne reactions and synthesis
       id: 'alkyn7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Alkynes are versatile functional groups',
-            options: ['Alkynes are versatile functional groups', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Acetylide alkylation forms C-C bonds', 'Alkynes are versatile functional groups', 'alkyne reactions and synthesis', 'Selective reduction gives either cis or trans alkene']
           },
           {
             label: 'Acetylide alkylation forms C-C bonds',
-            options: ['Acetylide alkylation forms C-C bonds', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Selective reduction gives either cis or trans alkene', 'Alkynes are versatile functional groups', 'alkyne reactions and synthesis', 'Acetylide alkylation forms C-C bonds']
           },
           {
-            label: 'Selective reduction gives either cis or trans alkene',
-            options: ['Selective reduction gives either cis or trans alke', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Selective reduction gives either cis or…',
+            options: ['Selective reduction gives either cis or trans alkene', 'alkyne reactions and synthesis', 'Alkynes are versatile functional groups', 'Acetylide alkylation forms C-C bonds']
           }
         ],
-        correctAnswers: ['Alkynes are versatile functional groups', 'Acetylide alkylation forms C-C bonds', 'Selective reduction gives either cis or trans alke'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Synthesis & Review.'
+        correctAnswers: ['Alkynes are versatile functional groups', 'Acetylide alkylation forms C-C bonds', 'Selective reduction gives either cis or trans alkene'],
+        hint1: 'Think about what each concept specifically describes in Synthesis & Review.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Synthesis & Review describes a specific idea. Alkynes are versatile functional groups. Acetylide alkylation forms C-C bonds. Selective reduction gives either cis or trans alkene.'
       }
     }
   ]

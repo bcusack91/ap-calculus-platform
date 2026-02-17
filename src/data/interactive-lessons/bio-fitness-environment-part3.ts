@@ -19,31 +19,31 @@ export const bioFitnessPart3Data = {
       id: 'fitn3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes acclimation?',
+            question: 'Which of the following correctly describes Acclimation?',
             options: [
+              'altitude acclimation, arctic fur color change',
+              'genetic change over generations',
               'short-term physiological adjustment (not genetic)',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Acclimatization vs adaptation timescales'
             ],
-            correctAnswer: 0,
-            explanation: 'Acclimation: short-term physiological adjustment (not genetic)'
+            correctAnswer: 2,
+            explanation: 'Correct — Acclimation: short-term physiological adjustment (not genetic). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of acclimation & adaptation, which statement is accurate?',
+            question: 'Select the statement that correctly describes Acclimatization vs adaptation timescales:',
             options: [
-              'Acclimatization vs adaptation timescales',
-              ')citeneg ton( tnemtsujda lacigoloisyhp mret-trohs :noitamilccA',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'short-term physiological adjustment (not genetic)',
+              'altitude acclimation, arctic fur color change',
+              'genetic change over generations',
+              'Acclimatization vs adaptation timescales'
             ],
-            correctAnswer: 0,
-            explanation: 'Acclimatization vs adaptation timescales'
+            correctAnswer: 3,
+            explanation: 'Correct — Acclimatization vs adaptation timescales. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioFitnessPart3Data = {
       id: 'fitn3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to acclimation & adaptation?',
+            question: 'Which statement about Examples is correct?',
             options: [
-              'Examples: altitude acclimation, arctic fur color change',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Acclimatization vs adaptation timescales',
+              'genetic change over generations',
+              'short-term physiological adjustment (not genetic)',
+              'altitude acclimation, arctic fur color change'
             ],
-            correctAnswer: 0,
-            explanation: 'Examples: altitude acclimation, arctic fur color change'
+            correctAnswer: 3,
+            explanation: 'Correct — Examples: altitude acclimation, arctic fur color change. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioFitnessPart3Data = {
       id: 'fitn3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Acclimation is important in acclimation & adaptation because',
-            options: ['short-term physiological adjustment (not genetic)', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Acclimation',
+            options: ['short-term physiological adjustment (not genetic)', 'altitude acclimation, arctic fur color change', 'Acclimatization vs adaptation timescales', 'genetic change over generations']
           },
           {
-            label: 'Adaptation is important in acclimation & adaptation because',
-            options: ['genetic change over generations', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Adaptation',
+            options: ['short-term physiological adjustment (not genetic)', 'Acclimatization vs adaptation timescales', 'genetic change over generations', 'altitude acclimation, arctic fur color change']
           },
           {
-            label: 'Acclimatization vs adaptation timescales is important in acclimation & adaptation because',
-            options: ['Acclimatization vs adaptation timescales', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Examples',
+            options: ['altitude acclimation, arctic fur color change', 'genetic change over generations', 'short-term physiological adjustment (not genetic)', 'Acclimatization vs adaptation timescales']
           }
         ],
-        correctAnswers: ['short-term physiological adjustment (not genetic)', 'genetic change over generations', 'Acclimatization vs adaptation timescales'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Acclimation & Adaptation.'
+        correctAnswers: ['short-term physiological adjustment (not genetic)', 'genetic change over generations', 'altitude acclimation, arctic fur color change'],
+        hint1: 'Think about what each concept specifically describes in Acclimation & Adaptation.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Acclimation & Adaptation describes a specific idea. Acclimation: short-term physiological adjustment (not genetic). Adaptation: genetic change over generations. Examples: altitude acclimation, arctic fur color change.'
       }
     }
   ]

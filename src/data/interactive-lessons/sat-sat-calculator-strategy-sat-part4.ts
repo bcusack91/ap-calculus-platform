@@ -18,20 +18,31 @@ Start with choice B or C (middle values) to narrow down.
       id: 'sat-c4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes backsolving?',
+            question: 'What does "Backsolving" refer to in SAT prep?',
             options: [
-              'Backsolving is a fundamental concept in SAT Math',
-              'Start with choice B or C (middle values) to narrow down',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'plug answer choices into the question to see which works.',
+              'Pick numbers that are easy to work with: 2, 3, 5, 10, 100.',
+              'Start with choice B or C (middle values) to narrow down.',
+              'Plugging in: replace variables with simple numbers to test.'
             ],
             correctAnswer: 0,
-            explanation: 'Backsolving: plug answer choices into the question to see which works'
+            explanation: 'Correct — Backsolving: plug answer choices into the question to see which works. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              'Pick numbers that are easy to work with: 2, 3, 5, 10, 100.',
+              'Plugging in: replace variables with simple numbers to test.',
+              'plug answer choices into the question to see which works.',
+              'Start with choice B or C (middle values) to narrow down.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Key Insight: Plugging in: replace variables with simple numbers to test. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Start with choice B or C (middle values) to narrow down.
       id: 'sat-c4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for backsolving & plugging in?',
+            question: 'Which of these accurately represents SAT Tip?',
             options: [
-              'Plugging in: replace variables with simple numbers to test',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'Plugging in: replace variables with simple numbers to test.',
+              'Pick numbers that are easy to work with: 2, 3, 5, 10, 100.',
+              'plug answer choices into the question to see which works.',
+              'Start with choice B or C (middle values) to narrow down.'
             ],
-            correctAnswer: 0,
-            explanation: 'Plugging in: replace variables with simple numbers to test'
+            correctAnswer: 1,
+            explanation: 'Correct — SAT Tip: Pick numbers that are easy to work with: 2, 3, 5, 10, 100. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Start with choice B or C (middle values) to narrow down.
       id: 'sat-c4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Backsolving & Plugging In:',
-            options: ['Backsolving: plug answer choices into the question', 'Start with choice B or C (middle values) to narrow', 'Not applicable', 'None of these']
+            label: 'Backsolving',
+            options: ['Plugging in: replace variables with simple numbers to test.', 'Pick numbers that are easy to work with: 2, 3, 5, 10, 100.', 'Start with choice B or C (middle values) to narrow down.', 'plug answer choices into the question to see which works.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Plugging in: replace variables with simple numbers', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Key Insight',
+            options: ['Pick numbers that are easy to work with: 2, 3, 5, 10, 100.', 'plug answer choices into the question to see which works.', 'Plugging in: replace variables with simple numbers to test.', 'Start with choice B or C (middle values) to narrow down.']
+          },
+          {
+            label: 'SAT Tip',
+            options: ['Start with choice B or C (middle values) to narrow down.', 'plug answer choices into the question to see which works.', 'Pick numbers that are easy to work with: 2, 3, 5, 10, 100.', 'Plugging in: replace variables with simple numbers to test.']
           }
         ],
-        correctAnswers: ['Backsolving: plug answer choices into the question', 'Plugging in: replace variables with simple numbers'],
-        hint1: 'Think about backsolving & plugging in',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'Backsolving: plug answer choices into the question to see which works. Plugging in: replace variables with simple numbers to test.'
+        correctAnswers: ['plug answer choices into the question to see which works.', 'Plugging in: replace variables with simple numbers to test.', 'Pick numbers that are easy to work with: 2, 3, 5, 10, 100.'],
+        hint1: 'Think about what each concept specifically describes in Backsolving & Plugging In.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Backsolving & Plugging In describes a specific idea. Backsolving: plug answer choices into the question to see which works. Key Insight: Plugging in: replace variables with simple numbers to test. SAT Tip: Pick numbers that are easy to work with: 2, 3, 5, 10, 100.'
       }
     }
   ]

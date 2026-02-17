@@ -30,31 +30,31 @@ the function oscillates (e.g., sin(1/x) near 0)
       id: 'conti2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of types of discontinuities?',
+            question: 'What does "Removable discontinuity (hole)" refer to in precalculus?',
             options: [
-              'Removable discontinuity (hole)',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'the function oscillates (e.g., sin(1/x) near 0)',
+              'limit exists but f(c) ≠ limit or f(c) undefined',
+              'limit is ±∞',
+              'left and right limits exist but are not equal'
             ],
-            correctAnswer: 0,
-            explanation: 'Removable discontinuity (hole): limit exists but f(c) ≠ limit or f(c) undefined'
+            correctAnswer: 1,
+            explanation: 'Correct — Removable discontinuity (hole): limit exists but f(c) ≠ limit or f(c) undefined. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of types of discontinuities, which is accurate?',
+            question: 'Which of the following is true about Infinite discontinuity (vertical asymptote)?',
             options: [
-              'limit is ±∞',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'limit exists but f(c) ≠ limit or f(c) undefined',
+              'the function oscillates (e.g., sin(1/x) near 0)',
+              'left and right limits exist but are not equal',
+              'limit is ±∞'
             ],
-            correctAnswer: 0,
-            explanation: 'Infinite discontinuity (vertical asymptote): limit is ±∞'
+            correctAnswer: 3,
+            explanation: 'Correct — Infinite discontinuity (vertical asymptote): limit is ±∞. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ the function oscillates (e.g., sin(1/x) near 0)
       id: 'conti2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Removable discontinuity (hole)',
-            options: ['limit exists but f(c) ≠ limit or f(c) undefined', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['the function oscillates (e.g., sin(1/x) near 0)', 'limit exists but f(c) ≠ limit or f(c) undefined', 'left and right limits exist but are not equal', 'limit is ±∞']
           },
           {
             label: 'Jump discontinuity',
-            options: ['left and right limits exist but are not equal', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['left and right limits exist but are not equal', 'the function oscillates (e.g., sin(1/x) near 0)', 'limit is ±∞', 'limit exists but f(c) ≠ limit or f(c) undefined']
           },
           {
             label: 'Infinite discontinuity (vertical asymptote)',
-            options: ['limit is ±∞', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['left and right limits exist but are not equal', 'the function oscillates (e.g., sin(1/x) near 0)', 'limit exists but f(c) ≠ limit or f(c) undefined', 'limit is ±∞']
           }
         ],
         correctAnswers: ['limit exists but f(c) ≠ limit or f(c) undefined', 'left and right limits exist but are not equal', 'limit is ±∞'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Types of Discontinuities.'
+        hint1: 'Think about what each concept specifically describes in Types of Discontinuities.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Types of Discontinuities describes a specific idea. Removable discontinuity (hole): limit exists but f(c) ≠ limit or f(c) undefined. Jump discontinuity: left and right limits exist but are not equal. Infinite discontinuity (vertical asymptote): limit is ±∞.'
       }
     }
   ]

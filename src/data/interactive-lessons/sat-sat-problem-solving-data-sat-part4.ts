@@ -18,20 +18,31 @@ Larger sample → smaller margin of error.
       id: 'sat-p4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes margin of error?',
+            question: 'Which of the following correctly describes Margin of error?',
             options: [
-              'Margin of error is a fundamental concept in SAT Math',
-              'Larger sample → smaller margin of error',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'Larger sample → smaller margin of error.',
+              '95% confidence: if we repeated the survey, ~95% of intervals would contain the true value.',
+              '± value around a sample statistic.',
+              'Confidence interval: sample statistic ± margin of error.'
             ],
-            correctAnswer: 0,
-            explanation: 'Margin of error: ± value around a sample statistic'
+            correctAnswer: 2,
+            explanation: 'Correct — Margin of error: ± value around a sample statistic. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              '± value around a sample statistic.',
+              'Larger sample → smaller margin of error.',
+              'Confidence interval: sample statistic ± margin of error.',
+              '95% confidence: if we repeated the survey, ~95% of intervals would contain the true value.'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Key Insight: Confidence interval: sample statistic ± margin of error. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Larger sample → smaller margin of error.
       id: 'sat-p4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for margin of error?',
+            question: 'Which statement about SAT Tip is correct?',
             options: [
-              'Confidence interval: sample statistic ± margin of error',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              '± value around a sample statistic.',
+              'Confidence interval: sample statistic ± margin of error.',
+              '95% confidence: if we repeated the survey, ~95% of intervals would contain the true value.',
+              'Larger sample → smaller margin of error.'
             ],
-            correctAnswer: 0,
-            explanation: 'Confidence interval: sample statistic ± margin of error'
+            correctAnswer: 2,
+            explanation: 'Correct — SAT Tip: 95% confidence: if we repeated the survey, ~95% of intervals would contain the true value. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Larger sample → smaller margin of error.
       id: 'sat-p4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Margin of Error:',
-            options: ['Margin of error: ± value around a sample statistic', 'Larger sample → smaller margin of error', 'Not applicable', 'None of these']
+            label: 'Margin of error',
+            options: ['Confidence interval: sample statistic ± margin of error.', '± value around a sample statistic.', 'Larger sample → smaller margin of error.', '95% confidence: if we repeated the survey, ~95% of intervals would contain the true value.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Confidence interval: sample statistic ± margin of ', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Key Insight',
+            options: ['± value around a sample statistic.', 'Larger sample → smaller margin of error.', '95% confidence: if we repeated the survey, ~95% of intervals would contain the true value.', 'Confidence interval: sample statistic ± margin of error.']
+          },
+          {
+            label: 'SAT Tip',
+            options: ['95% confidence: if we repeated the survey, ~95% of intervals would contain the true value.', '± value around a sample statistic.', 'Confidence interval: sample statistic ± margin of error.', 'Larger sample → smaller margin of error.']
           }
         ],
-        correctAnswers: ['Margin of error: ± value around a sample statistic', 'Confidence interval: sample statistic ± margin of '],
-        hint1: 'Think about margin of error',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'Margin of error: ± value around a sample statistic. Confidence interval: sample statistic ± margin of error.'
+        correctAnswers: ['± value around a sample statistic.', 'Confidence interval: sample statistic ± margin of error.', '95% confidence: if we repeated the survey, ~95% of intervals would contain the true value.'],
+        hint1: 'Think about what each concept specifically describes in Margin of Error.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Margin of Error describes a specific idea. Margin of error: ± value around a sample statistic. Key Insight: Confidence interval: sample statistic ± margin of error. SAT Tip: 95% confidence: if we repeated the survey, ~95% of intervals would contain the true value.'
       }
     }
   ]

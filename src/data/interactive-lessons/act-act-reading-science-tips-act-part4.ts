@@ -18,20 +18,31 @@ Focus on what you DO understand.
       id: 'act-r4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes don\'t panic — difficult passages still have straightforward questions?',
+            question: 'Which statement accurately explains Don\'t panic — difficult passages still…?',
             options: [
-              'Don\'t panic — difficult passages still have straightforward questions is a key concept for ACT English/Reading',
-              'Focus on what you DO understand',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'Focus on what you DO understand.',
+              'Don\'t panic — difficult passages still have straightforward questions.',
+              'Eliminate clearly wrong answers even if you are unsure of the right one.',
+              'Look at the questions first for very dense passages.'
             ],
-            correctAnswer: 0,
-            explanation: 'Don\'t panic — difficult passages still have straightforward questions'
+            correctAnswer: 1,
+            explanation: 'Correct — Don\'t panic — difficult passages still have straightforward questions. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              'Don\'t panic — difficult passages still have straightforward questions.',
+              'Focus on what you DO understand.',
+              'Look at the questions first for very dense passages.',
+              'Eliminate clearly wrong answers even if you are unsure of the right one.'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Key Insight: Look at the questions first for very dense passages. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Focus on what you DO understand.
       id: 'act-r4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for managing difficult passages?',
+            question: 'Which of these accurately represents ACT Tip?',
             options: [
-              'Look at the questions first for very dense passages',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Focus on what you DO understand.',
+              'Don\'t panic — difficult passages still have straightforward questions.',
+              'Look at the questions first for very dense passages.',
+              'Eliminate clearly wrong answers even if you are unsure of the right one.'
             ],
-            correctAnswer: 0,
-            explanation: 'Look at the questions first for very dense passages'
+            correctAnswer: 3,
+            explanation: 'Correct — ACT Tip: Eliminate clearly wrong answers even if you are unsure of the right one. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ Focus on what you DO understand.
       id: 'act-r4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Managing Difficult Passages:',
-            options: ['Don\'t panic — difficult passages still have straig', 'Focus on what you DO understand', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['Look at the questions first for very dense passages.', 'Focus on what you DO understand.', 'Eliminate clearly wrong answers even if you are unsure of the right one.', 'Don\'t panic — difficult passages still have straightforward questions.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Look at the questions first for very dense passage', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'ACT Tip',
+            options: ['Eliminate clearly wrong answers even if you are unsure of the right one.', 'Don\'t panic — difficult passages still have straightforward questions.', 'Look at the questions first for very dense passages.', 'Focus on what you DO understand.']
           }
         ],
-        correctAnswers: ['Don\'t panic — difficult passages still have straig', 'Look at the questions first for very dense passage'],
-        hint1: 'Think about managing difficult passages',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Don\'t panic — difficult passages still have straightforward questions. Look at the questions first for very dense passages.'
+        correctAnswers: ['Look at the questions first for very dense passages.', 'Eliminate clearly wrong answers even if you are unsure of the right one.'],
+        hint1: 'Think about what each concept specifically describes in Managing Difficult Passages.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Managing Difficult Passages describes a specific idea. Key Insight: Look at the questions first for very dense passages. ACT Tip: Eliminate clearly wrong answers even if you are unsure of the right one.'
       }
     }
   ]

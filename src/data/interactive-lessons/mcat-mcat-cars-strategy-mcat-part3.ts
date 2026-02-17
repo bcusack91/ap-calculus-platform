@@ -71,23 +71,24 @@ Distinguish main idea from supporting details — details support the main idea.
       id: 'mcat-3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Main Idea & Argument:',
-            options: ['The main idea is the central claim the author is making — no', 'Distinguish main idea from supporting details — details supp', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Key Insight',
+            options: ['The thesis is usually in the first or last paragraph — but not always.', 'The main idea is the central claim the author is making — not just the topic.', 'Distinguish main idea from supporting details — details support the main idea.', 'Wrong answers are often too narrow (one detail) or too broad (beyond the passage).']
           },
           {
-            label: 'MCAT application:',
-            options: ['Wrong answers are often too narrow (one detail) or too broad', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'MCAT Tip',
+            options: ['The main idea is the central claim the author is making — not just the topic.', 'Wrong answers are often too narrow (one detail) or too broad (beyond the passage).', 'The thesis is usually in the first or last paragraph — but not always.', 'Distinguish main idea from supporting details — details support the main idea.']
           }
         ],
-        correctAnswers: ['The main idea is the central claim the author is making — no', 'Wrong answers are often too narrow (one detail) or too broad'],
-        hint1: 'Think about main idea & argument',
-        hint2: 'Consider the MCAT application',
-        explanation: 'The main idea is the central claim the author is making — not just the topic. Wrong answers are often too narrow (one detail) or too broad (beyond the passage).'
+        correctAnswers: ['Wrong answers are often too narrow (one detail) or too broad (beyond the passage).', 'The thesis is usually in the first or last paragraph — but not always.'],
+        hint1: 'Think about what each concept specifically describes in Main Idea & Argument.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Main Idea & Argument describes a specific idea. Key Insight: Wrong answers are often too narrow (one detail) or too broad (beyond the passage). MCAT Tip: The thesis is usually in the first or last paragraph — but not always.'
       }
     }
   ]

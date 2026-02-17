@@ -30,31 +30,31 @@ t_d = ln(2)/k for growth
       id: 'expon7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of review & applications?',
-            options: [
-              'Population growth',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'Population growth: P(t) = P₀ · e^(kt) where k > 0'
-          },
-          {
-            question: 'In the context of review & applications, which is accurate?',
+            question: 'Which statement accurately explains Population growth?',
             options: [
               'time for quantity to reduce to half; t₁/₂ = ln(2)/|k|',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'A(t) = A₀ · e^(kt) where k < 0',
+              'P(t) = P₀ · e^(kt) where k > 0',
+              't_d = ln(2)/k for growth'
             ],
-            correctAnswer: 0,
-            explanation: 'Half-life: time for quantity to reduce to half; t₁/₂ = ln(2)/|k|'
+            correctAnswer: 2,
+            explanation: 'Correct — Population growth: P(t) = P₀ · e^(kt) where k > 0. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Half-life:',
+            options: [
+              'A(t) = A₀ · e^(kt) where k < 0',
+              'time for quantity to reduce to half; t₁/₂ = ln(2)/|k|',
+              't_d = ln(2)/k for growth',
+              'P(t) = P₀ · e^(kt) where k > 0'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Half-life: time for quantity to reduce to half; t₁/₂ = ln(2)/|k|. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ t_d = ln(2)/k for growth
       id: 'expon7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Population growth',
-            options: ['P(t) = P₀ · e^(kt) where k > 0', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['A(t) = A₀ · e^(kt) where k < 0', 't_d = ln(2)/k for growth', 'time for quantity to reduce to half; t₁/₂ = ln(2)/|k|', 'P(t) = P₀ · e^(kt) where k > 0']
           },
           {
             label: 'Radioactive decay',
-            options: ['A(t) = A₀ · e^(kt) where k < 0', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['time for quantity to reduce to half; t₁/₂ = ln(2)/|k|', 'P(t) = P₀ · e^(kt) where k > 0', 'A(t) = A₀ · e^(kt) where k < 0', 't_d = ln(2)/k for growth']
           },
           {
             label: 'Half-life',
-            options: ['time for quantity to reduce to half; t₁/₂ = ln(2)/', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['time for quantity to reduce to half; t₁/₂ = ln(2)/|k|', 'A(t) = A₀ · e^(kt) where k < 0', 'P(t) = P₀ · e^(kt) where k > 0', 't_d = ln(2)/k for growth']
           }
         ],
-        correctAnswers: ['P(t) = P₀ · e^(kt) where k > 0', 'A(t) = A₀ · e^(kt) where k < 0', 'time for quantity to reduce to half; t₁/₂ = ln(2)/'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Review & Applications.'
+        correctAnswers: ['P(t) = P₀ · e^(kt) where k > 0', 'A(t) = A₀ · e^(kt) where k < 0', 'time for quantity to reduce to half; t₁/₂ = ln(2)/|k|'],
+        hint1: 'Think about what each concept specifically describes in Review & Applications.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Review & Applications describes a specific idea. Population growth: P(t) = P₀ · e^(kt) where k > 0. Radioactive decay: A(t) = A₀ · e^(kt) where k < 0. Half-life: time for quantity to reduce to half; t₁/₂ = ln(2)/|k|.'
       }
     }
   ]

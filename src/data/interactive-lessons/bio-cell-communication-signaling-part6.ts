@@ -19,31 +19,31 @@ export const bioCellCommPart6Data = {
       id: 'cell6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes tracing a signal from reception to response?',
+            question: 'Which of the following correctly describes Tracing a signal from reception to…?',
             options: [
               'Tracing a signal from reception to response',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Analyzing signal amplification',
+              'Predicting effects of pathway mutations',
+              'Connecting signaling to disease (cancer)'
             ],
             correctAnswer: 0,
-            explanation: 'Tracing a signal from reception to response'
+            explanation: 'Correct — Tracing a signal from reception to response. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of problem-solving, which statement is accurate?',
+            question: 'Select the statement that correctly describes Analyzing signal amplification:',
             options: [
-              'Analyzing signal amplification',
-              'esnopser ot noitpecer morf langis a gnicarT',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Tracing a signal from reception to response',
+              'Predicting effects of pathway mutations',
+              'Connecting signaling to disease (cancer)',
+              'Analyzing signal amplification'
             ],
-            correctAnswer: 0,
-            explanation: 'Analyzing signal amplification'
+            correctAnswer: 3,
+            explanation: 'Correct — Analyzing signal amplification. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioCellCommPart6Data = {
       id: 'cell6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to problem-solving?',
+            question: 'Which statement about Connecting signaling to disease (cancer) is correct?',
             options: [
               'Connecting signaling to disease (cancer)',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Predicting effects of pathway mutations',
+              'Tracing a signal from reception to response',
+              'Analyzing signal amplification'
             ],
             correctAnswer: 0,
-            explanation: 'Connecting signaling to disease (cancer)'
+            explanation: 'Correct — Connecting signaling to disease (cancer). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioCellCommPart6Data = {
       id: 'cell6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Tracing a signal from reception to response is important in problem-solving because',
-            options: ['Tracing a signal from reception to response', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Tracing a signal from reception to…',
+            options: ['Tracing a signal from reception to response', 'Connecting signaling to disease (cancer)', 'Analyzing signal amplification', 'Predicting effects of pathway mutations']
           },
           {
-            label: 'Predicting effects of pathway mutations is important in problem-solving because',
-            options: ['Predicting effects of pathway mutations', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Predicting effects of pathway mutations',
+            options: ['Predicting effects of pathway mutations', 'Tracing a signal from reception to response', 'Connecting signaling to disease (cancer)', 'Analyzing signal amplification']
           },
           {
-            label: 'Analyzing signal amplification is important in problem-solving because',
-            options: ['Analyzing signal amplification', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Analyzing signal amplification',
+            options: ['Predicting effects of pathway mutations', 'Tracing a signal from reception to response', 'Analyzing signal amplification', 'Connecting signaling to disease (cancer)']
           }
         ],
         correctAnswers: ['Tracing a signal from reception to response', 'Predicting effects of pathway mutations', 'Analyzing signal amplification'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving.'
+        hint1: 'Think about what each concept specifically describes in Cell Communication: Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Cell Communication: Problem-Solving Workshop describes a specific idea. Tracing a signal from reception to response. Predicting effects of pathway mutations. Analyzing signal amplification.'
       }
     }
   ]

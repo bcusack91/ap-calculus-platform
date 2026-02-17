@@ -30,31 +30,31 @@ TMS (tetramethylsilane) = 0 ppm reference
       id: 'nmr-s2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of chemical shift?',
+            question: 'Which of the following correctly describes TMS (tetramethylsilane) = 0 ppm…?',
             options: [
+              '0.8-1.5 ppm',
               'TMS (tetramethylsilane) = 0 ppm reference',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              '2.0-2.5 ppm',
+              '6.5-8.0 ppm; Aldehyde H: 9-10 ppm; Carboxylic acid: 10-12 ppm'
             ],
-            correctAnswer: 0,
-            explanation: 'TMS (tetramethylsilane) = 0 ppm reference'
+            correctAnswer: 1,
+            explanation: 'Correct — TMS (tetramethylsilane) = 0 ppm reference. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of chemical shift, which is accurate?',
+            question: 'In the context of Chemical Shift, which explains Allylic/adjacent to C=O?',
             options: [
+              'TMS (tetramethylsilane) = 0 ppm reference',
               '2.0-2.5 ppm',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              '0.8-1.5 ppm',
+              '6.5-8.0 ppm; Aldehyde H: 9-10 ppm; Carboxylic acid: 10-12 ppm'
             ],
-            correctAnswer: 0,
-            explanation: 'Allylic/adjacent to C=O: 2.0-2.5 ppm'
+            correctAnswer: 1,
+            explanation: 'Correct — Allylic/adjacent to C=O: 2.0-2.5 ppm. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ TMS (tetramethylsilane) = 0 ppm reference
       id: 'nmr-s2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'TMS (tetramethylsilane) = 0 ppm reference',
-            options: ['TMS (tetramethylsilane) = 0 ppm reference', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
-          },
-          {
             label: 'Alkyl H',
-            options: ['0.8-1.5 ppm', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['6.5-8.0 ppm; Aldehyde H: 9-10 ppm; Carboxylic acid: 10-12 ppm', '0.8-1.5 ppm', '2.0-2.5 ppm', 'TMS (tetramethylsilane) = 0 ppm reference']
           },
           {
             label: 'Allylic/adjacent to C=O',
-            options: ['2.0-2.5 ppm', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['TMS (tetramethylsilane) = 0 ppm reference', '6.5-8.0 ppm; Aldehyde H: 9-10 ppm; Carboxylic acid: 10-12 ppm', '2.0-2.5 ppm', '0.8-1.5 ppm']
+          },
+          {
+            label: 'Aromatic H',
+            options: ['TMS (tetramethylsilane) = 0 ppm reference', '0.8-1.5 ppm', '6.5-8.0 ppm; Aldehyde H: 9-10 ppm; Carboxylic acid: 10-12 ppm', '2.0-2.5 ppm']
           }
         ],
-        correctAnswers: ['TMS (tetramethylsilane) = 0 ppm reference', '0.8-1.5 ppm', '2.0-2.5 ppm'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Chemical Shift.'
+        correctAnswers: ['0.8-1.5 ppm', '2.0-2.5 ppm', '6.5-8.0 ppm; Aldehyde H: 9-10 ppm; Carboxylic acid: 10-12 ppm'],
+        hint1: 'Think about what each concept specifically describes in Chemical Shift.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Chemical Shift describes a specific idea. Alkyl H: 0.8-1.5 ppm. Allylic/adjacent to C=O: 2.0-2.5 ppm. Aromatic H: 6.5-8.0 ppm; Aldehyde H: 9-10 ppm; Carboxylic acid: 10-12 ppm.'
       }
     }
   ]

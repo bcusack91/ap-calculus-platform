@@ -18,20 +18,31 @@ Ignore words between the subject and verb (prepositional phrases, appositives).
       id: 'sat-g1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes the subject and verb must agree in number (singular/plural)?',
+            question: 'Which statement accurately explains The subject and verb must agree in…?',
             options: [
-              'The subject and verb must agree in number (singular/plural) is a fundamental concept in SAT Reading & Writing',
-              'Ignore words between the subject and verb (prepositional phrases, appositives)',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'Collective nouns (team, group) are typically singular.',
+              'Compound subjects with "and" take plural verbs.',
+              'Ignore words between the subject and verb (prepositional phrases, appositives).',
+              'The subject and verb must agree in number (singular/plural).'
             ],
-            correctAnswer: 0,
-            explanation: 'The subject and verb must agree in number (singular/plural)'
+            correctAnswer: 3,
+            explanation: 'Correct — The subject and verb must agree in number (singular/plural). The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Grammar Conventions, which explains Key Insight?',
+            options: [
+              'Collective nouns (team, group) are typically singular.',
+              'Ignore words between the subject and verb (prepositional phrases, appositives).',
+              'Compound subjects with "and" take plural verbs.',
+              'The subject and verb must agree in number (singular/plural).'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Key Insight: Compound subjects with "and" take plural verbs. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Ignore words between the subject and verb (prepositional phrases, appositives).
       id: 'sat-g1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for subject-verb agreement?',
+            question: 'Which statement about SAT Tip is correct?',
             options: [
-              'Compound subjects with "and" take plural verbs',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'The subject and verb must agree in number (singular/plural).',
+              'Ignore words between the subject and verb (prepositional phrases, appositives).',
+              'Collective nouns (team, group) are typically singular.',
+              'Compound subjects with "and" take plural verbs.'
             ],
-            correctAnswer: 0,
-            explanation: 'Compound subjects with "and" take plural verbs'
+            correctAnswer: 2,
+            explanation: 'Correct — SAT Tip: Collective nouns (team, group) are typically singular. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ Ignore words between the subject and verb (prepositional phrases, appositives).
       id: 'sat-g1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Subject-Verb Agreement:',
-            options: ['The subject and verb must agree in number (singula', 'Ignore words between the subject and verb (preposi', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['Collective nouns (team, group) are typically singular.', 'Compound subjects with "and" take plural verbs.', 'Ignore words between the subject and verb (prepositional phrases, appositives).', 'The subject and verb must agree in number (singular/plural).']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Compound subjects with "and" take plural verbs', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'SAT Tip',
+            options: ['Collective nouns (team, group) are typically singular.', 'Compound subjects with "and" take plural verbs.', 'The subject and verb must agree in number (singular/plural).', 'Ignore words between the subject and verb (prepositional phrases, appositives).']
           }
         ],
-        correctAnswers: ['The subject and verb must agree in number (singula', 'Compound subjects with "and" take plural verbs'],
-        hint1: 'Think about subject-verb agreement',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'The subject and verb must agree in number (singular/plural). Compound subjects with "and" take plural verbs.'
+        correctAnswers: ['Compound subjects with "and" take plural verbs.', 'Collective nouns (team, group) are typically singular.'],
+        hint1: 'Think about what each concept specifically describes in Grammar Conventions.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Grammar Conventions describes a specific idea. Key Insight: Compound subjects with "and" take plural verbs. SAT Tip: Collective nouns (team, group) are typically singular.'
       }
     }
   ]

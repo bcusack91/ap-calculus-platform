@@ -30,31 +30,31 @@ all reals; Range: [-1, 1]
       id: 'trigo3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of sine & cosine functions?',
-            options: [
-              'sin θ = y-coordinate on unit circle; cos θ = x-coordinate',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'sin θ = y-coordinate on unit circle; cos θ = x-coordinate'
-          },
-          {
-            question: 'In the context of sine & cosine functions, which is accurate?',
+            question: 'Which of the following correctly describes sin θ = y-coordinate on unit circle;…?',
             options: [
               '|a| in y = a sin(bx) or y = a cos(bx)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'all reals; Range: [-1, 1]',
+              'sin θ = y-coordinate on unit circle; cos θ = x-coordinate',
+              '2π'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — sin θ = y-coordinate on unit circle; cos θ = x-coordinate. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Amplitude:',
+            options: [
+              '|a| in y = a sin(bx) or y = a cos(bx)',
+              '2π',
+              'all reals; Range: [-1, 1]',
+              'sin θ = y-coordinate on unit circle; cos θ = x-coordinate'
             ],
             correctAnswer: 0,
-            explanation: 'Amplitude: |a| in y = a sin(bx) or y = a cos(bx)'
+            explanation: 'Correct — Amplitude: |a| in y = a sin(bx) or y = a cos(bx). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ all reals; Range: [-1, 1]
       id: 'trigo3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'sin θ = y-coordinate on unit circle; cos θ = x-coordinate',
-            options: ['sin θ = y-coordinate on unit circle; cos θ = x-coo', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
-          },
-          {
             label: 'Period of sin and cos',
-            options: ['2π', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['all reals; Range: [-1, 1]', 'sin θ = y-coordinate on unit circle; cos θ = x-coordinate', '2π', '|a| in y = a sin(bx) or y = a cos(bx)']
           },
           {
             label: 'Amplitude',
-            options: ['|a| in y = a sin(bx) or y = a cos(bx)', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['all reals; Range: [-1, 1]', '2π', 'sin θ = y-coordinate on unit circle; cos θ = x-coordinate', '|a| in y = a sin(bx) or y = a cos(bx)']
+          },
+          {
+            label: 'Domain',
+            options: ['all reals; Range: [-1, 1]', 'sin θ = y-coordinate on unit circle; cos θ = x-coordinate', '2π', '|a| in y = a sin(bx) or y = a cos(bx)']
           }
         ],
-        correctAnswers: ['sin θ = y-coordinate on unit circle; cos θ = x-coo', '2π', '|a| in y = a sin(bx) or y = a cos(bx)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Sine & Cosine Functions.'
+        correctAnswers: ['2π', '|a| in y = a sin(bx) or y = a cos(bx)', 'all reals; Range: [-1, 1]'],
+        hint1: 'Think about what each concept specifically describes in Sine & Cosine Functions.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Sine & Cosine Functions describes a specific idea. Period of sin and cos: 2π. Amplitude: |a| in y = a sin(bx) or y = a cos(bx). Domain: all reals; Range: [-1, 1].'
       }
     }
   ]

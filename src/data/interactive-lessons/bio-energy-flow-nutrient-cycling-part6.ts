@@ -19,31 +19,31 @@ export const bioEnergyFlowPart6Data = {
       id: 'ener6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes calculating energy transfer between trophic levels?',
+            question: 'What does "Calculating energy transfer between…" refer to in biology?',
             options: [
-              'Calculating energy transfer between trophic levels',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Predicting effects of human disruption',
+              'Analyzing ecosystem productivity',
+              'Tracing nutrients through cycles',
+              'Calculating energy transfer between trophic levels'
             ],
-            correctAnswer: 0,
-            explanation: 'Calculating energy transfer between trophic levels'
+            correctAnswer: 3,
+            explanation: 'Correct — Calculating energy transfer between trophic levels. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of problem-solving, which statement is accurate?',
+            question: 'Select the statement that correctly describes Tracing nutrients through cycles:',
             options: [
+              'Analyzing ecosystem productivity',
+              'Predicting effects of human disruption',
               'Tracing nutrients through cycles',
-              'slevel cihport neewteb refsnart ygrene gnitaluclaC',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Calculating energy transfer between trophic levels'
             ],
-            correctAnswer: 0,
-            explanation: 'Tracing nutrients through cycles'
+            correctAnswer: 2,
+            explanation: 'Correct — Tracing nutrients through cycles. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioEnergyFlowPart6Data = {
       id: 'ener6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to problem-solving?',
+            question: 'Which statement about Predicting effects of human disruption is correct?',
             options: [
+              'Calculating energy transfer between trophic levels',
+              'Tracing nutrients through cycles',
               'Predicting effects of human disruption',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Analyzing ecosystem productivity'
             ],
-            correctAnswer: 0,
-            explanation: 'Predicting effects of human disruption'
+            correctAnswer: 2,
+            explanation: 'Correct — Predicting effects of human disruption. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioEnergyFlowPart6Data = {
       id: 'ener6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Calculating energy transfer between trophic levels is important in problem-solving because',
-            options: ['Calculating energy transfer between trophic levels', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Calculating energy transfer between…',
+            options: ['Tracing nutrients through cycles', 'Predicting effects of human disruption', 'Calculating energy transfer between trophic levels', 'Analyzing ecosystem productivity']
           },
           {
-            label: 'Analyzing ecosystem productivity is important in problem-solving because',
-            options: ['Analyzing ecosystem productivity', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Analyzing ecosystem productivity',
+            options: ['Calculating energy transfer between trophic levels', 'Predicting effects of human disruption', 'Analyzing ecosystem productivity', 'Tracing nutrients through cycles']
           },
           {
-            label: 'Tracing nutrients through cycles is important in problem-solving because',
-            options: ['Tracing nutrients through cycles', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Tracing nutrients through cycles',
+            options: ['Analyzing ecosystem productivity', 'Tracing nutrients through cycles', 'Calculating energy transfer between trophic levels', 'Predicting effects of human disruption']
           }
         ],
         correctAnswers: ['Calculating energy transfer between trophic levels', 'Analyzing ecosystem productivity', 'Tracing nutrients through cycles'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving.'
+        hint1: 'Think about what each concept specifically describes in Energy Flow: Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Energy Flow: Problem-Solving Workshop describes a specific idea. Calculating energy transfer between trophic levels. Analyzing ecosystem productivity. Tracing nutrients through cycles.'
       }
     }
   ]

@@ -30,31 +30,31 @@ Use Pythagorean identities to simplify
       id: 'trigo5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of verifying identities?',
+            question: 'What does "Work with one side at a time to…" refer to in precalculus?',
             options: [
               'Work with one side at a time to transform it into the other',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'Use Pythagorean identities to simplify',
+              'Factor, combine fractions, or multiply by conjugates',
+              'Convert everything to sine and cosine as a strategy'
             ],
             correctAnswer: 0,
-            explanation: 'Work with one side at a time to transform it into the other'
+            explanation: 'Correct — Work with one side at a time to transform it into the other. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of verifying identities, which is accurate?',
+            question: 'Select the statement that correctly describes Factor, combine fractions, or multiply…:',
             options: [
-              'Factor, combine fractions, or multiply by conjugates',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Work with one side at a time to transform it into the other',
+              'Use Pythagorean identities to simplify',
+              'Convert everything to sine and cosine as a strategy',
+              'Factor, combine fractions, or multiply by conjugates'
             ],
-            correctAnswer: 0,
-            explanation: 'Factor, combine fractions, or multiply by conjugates'
+            correctAnswer: 3,
+            explanation: 'Correct — Factor, combine fractions, or multiply by conjugates. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Use Pythagorean identities to simplify
       id: 'trigo5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Work with one side at a time to transform it into the other',
-            options: ['Work with one side at a time to transform it into ', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            label: 'Work with one side at a time to…',
+            options: ['Work with one side at a time to transform it into the other', 'Factor, combine fractions, or multiply by conjugates', 'Use Pythagorean identities to simplify', 'Convert everything to sine and cosine as a strategy']
           },
           {
-            label: 'Convert everything to sine and cosine as a strategy',
-            options: ['Convert everything to sine and cosine as a strateg', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            label: 'Convert everything to sine and cosine…',
+            options: ['Work with one side at a time to transform it into the other', 'Convert everything to sine and cosine as a strategy', 'Use Pythagorean identities to simplify', 'Factor, combine fractions, or multiply by conjugates']
           },
           {
-            label: 'Factor, combine fractions, or multiply by conjugates',
-            options: ['Factor, combine fractions, or multiply by conjugat', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            label: 'Factor, combine fractions, or multiply…',
+            options: ['Factor, combine fractions, or multiply by conjugates', 'Work with one side at a time to transform it into the other', 'Use Pythagorean identities to simplify', 'Convert everything to sine and cosine as a strategy']
           }
         ],
-        correctAnswers: ['Work with one side at a time to transform it into ', 'Convert everything to sine and cosine as a strateg', 'Factor, combine fractions, or multiply by conjugat'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Verifying Identities.'
+        correctAnswers: ['Work with one side at a time to transform it into the other', 'Convert everything to sine and cosine as a strategy', 'Factor, combine fractions, or multiply by conjugates'],
+        hint1: 'Think about what each concept specifically describes in Verifying Identities.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Verifying Identities describes a specific idea. Work with one side at a time to transform it into the other. Convert everything to sine and cosine as a strategy. Factor, combine fractions, or multiply by conjugates.'
       }
     }
   ]

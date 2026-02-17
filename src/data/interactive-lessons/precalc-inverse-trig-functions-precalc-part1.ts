@@ -30,31 +30,31 @@ sin⁻¹(sin(x)) = x only for x in [-π/2, π/2]
       id: 'inver1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of inverse sine (arcsin)?',
+            question: 'What does "arcsin(x) = sin⁻¹(x)" refer to in precalculus?',
             options: [
-              'arcsin(x) = sin⁻¹(x)',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'sin⁻¹(sin(x)) = x only for x in [-π/2, π/2]',
+              'sin(sin⁻¹(x)) = x for x in [-1, 1]',
+              'finds the angle whose sine is x',
+              '[-1, 1]; Range: [-π/2, π/2]'
             ],
-            correctAnswer: 0,
-            explanation: 'arcsin(x) = sin⁻¹(x): finds the angle whose sine is x'
+            correctAnswer: 2,
+            explanation: 'Correct — arcsin(x) = sin⁻¹(x): finds the angle whose sine is x. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of inverse sine (arcsin), which is accurate?',
+            question: 'In the context of Inverse Trig Functions, which explains sin(sin⁻¹(x)) = x for x in [-1, 1]?',
             options: [
               'sin(sin⁻¹(x)) = x for x in [-1, 1]',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'sin⁻¹(sin(x)) = x only for x in [-π/2, π/2]',
+              '[-1, 1]; Range: [-π/2, π/2]',
+              'finds the angle whose sine is x'
             ],
             correctAnswer: 0,
-            explanation: 'sin(sin⁻¹(x)) = x for x in [-1, 1]'
+            explanation: 'Correct — sin(sin⁻¹(x)) = x for x in [-1, 1]. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,24 @@ sin⁻¹(sin(x)) = x only for x in [-π/2, π/2]
       id: 'inver1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'arcsin(x) = sin⁻¹(x)',
-            options: ['finds the angle whose sine is x', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['sin(sin⁻¹(x)) = x for x in [-1, 1]', 'finds the angle whose sine is x', 'sin⁻¹(sin(x)) = x only for x in [-π/2, π/2]', '[-1, 1]; Range: [-π/2, π/2]']
           },
           {
             label: 'Domain',
-            options: ['[-1, 1]; Range: [-π/2, π/2]', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
-          },
-          {
-            label: 'sin(sin⁻¹(x)) = x for x in [-1, 1]',
-            options: ['sin(sin⁻¹(x)) = x for x in [-1, 1]', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['sin(sin⁻¹(x)) = x for x in [-1, 1]', '[-1, 1]; Range: [-π/2, π/2]', 'sin⁻¹(sin(x)) = x only for x in [-π/2, π/2]', 'finds the angle whose sine is x']
           }
         ],
-        correctAnswers: ['finds the angle whose sine is x', '[-1, 1]; Range: [-π/2, π/2]', 'sin(sin⁻¹(x)) = x for x in [-1, 1]'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Inverse Sine (arcsin).'
+        correctAnswers: ['finds the angle whose sine is x', '[-1, 1]; Range: [-π/2, π/2]'],
+        hint1: 'Think about what each concept specifically describes in Inverse Trig Functions.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Inverse Trig Functions describes a specific idea. arcsin(x) = sin⁻¹(x): finds the angle whose sine is x. Domain: [-1, 1]; Range: [-π/2, π/2].'
       }
     }
   ]

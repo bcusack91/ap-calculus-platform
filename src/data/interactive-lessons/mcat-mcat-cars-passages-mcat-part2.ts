@@ -71,23 +71,28 @@ Data or studies may be described — evaluate the methodology and conclusions.
       id: 'mcat-2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Social Science Passages:',
-            options: ['Social science: psychology, sociology, anthropology, economi', 'Data or studies may be described — evaluate the methodology ', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Social science',
+            options: ['Data or studies may be described — evaluate the methodology and conclusions.', 'psychology, sociology, anthropology, economics, political science.', 'Correlation vs. causation: does the author conflate the two?.', 'Identify assumptions: what does the author take for granted?.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Correlation vs. causation: does the author conflate the two?', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Key Insight',
+            options: ['Data or studies may be described — evaluate the methodology and conclusions.', 'psychology, sociology, anthropology, economics, political science.', 'Identify assumptions: what does the author take for granted?.', 'Correlation vs. causation: does the author conflate the two?.']
+          },
+          {
+            label: 'MCAT Tip',
+            options: ['Data or studies may be described — evaluate the methodology and conclusions.', 'Identify assumptions: what does the author take for granted?.', 'Correlation vs. causation: does the author conflate the two?.', 'psychology, sociology, anthropology, economics, political science.']
           }
         ],
-        correctAnswers: ['Social science: psychology, sociology, anthropology, economi', 'Correlation vs. causation: does the author conflate the two?'],
-        hint1: 'Think about social science passages',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Social science: psychology, sociology, anthropology, economics, political science. Correlation vs. causation: does the author conflate the two?.'
+        correctAnswers: ['psychology, sociology, anthropology, economics, political science.', 'Correlation vs. causation: does the author conflate the two?.', 'Identify assumptions: what does the author take for granted?.'],
+        hint1: 'Think about what each concept specifically describes in Social Science Passages.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Social Science Passages describes a specific idea. Social science: psychology, sociology, anthropology, economics, political science. Key Insight: Correlation vs. causation: does the author conflate the two?. MCAT Tip: Identify assumptions: what does the author take for granted?.'
       }
     }
   ]

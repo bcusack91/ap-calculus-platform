@@ -19,31 +19,31 @@ export const bioMeiosisPart7Data = {
       id: 'meio7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes meiosis as the basis for mendel\'s laws?',
+            question: 'Which of the following correctly describes Meiosis as the basis for Mendel\'s laws?',
             options: [
+              'nondisjunction, trisomy',
               'Meiosis as the basis for Mendel\'s laws',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'comparing mitosis and meiosis',
+              'Connection to evolution (genetic variation)'
             ],
-            correctAnswer: 0,
-            explanation: 'Meiosis as the basis for Mendel\'s laws'
+            correctAnswer: 1,
+            explanation: 'Correct — Meiosis as the basis for Mendel\'s laws. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of synthesis & ap review, which statement is accurate?',
+            question: 'Which of the following is true about Errors in meiosis?',
             options: [
-              'Errors in meiosis: nondisjunction, trisomy',
-              'swal s\'ledneM rof sisab eht sa sisoieM',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'nondisjunction, trisomy',
+              'Meiosis as the basis for Mendel\'s laws',
+              'Connection to evolution (genetic variation)',
+              'comparing mitosis and meiosis'
             ],
             correctAnswer: 0,
-            explanation: 'Errors in meiosis: nondisjunction, trisomy'
+            explanation: 'Correct — Errors in meiosis: nondisjunction, trisomy. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioMeiosisPart7Data = {
       id: 'meio7-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to synthesis & ap review?',
+            question: 'Regarding Meiosis: Synthesis & AP Review, which correctly describes AP exam?',
             options: [
-              'AP exam: comparing mitosis and meiosis',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Meiosis as the basis for Mendel\'s laws',
+              'nondisjunction, trisomy',
+              'comparing mitosis and meiosis',
+              'Connection to evolution (genetic variation)'
             ],
-            correctAnswer: 0,
-            explanation: 'AP exam: comparing mitosis and meiosis'
+            correctAnswer: 2,
+            explanation: 'Correct — AP exam: comparing mitosis and meiosis. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,24 @@ export const bioMeiosisPart7Data = {
       id: 'meio7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Meiosis as the basis for Mendel\'s laws is important in synthesis & ap review because',
-            options: ['Meiosis as the basis for Mendel\'s laws', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Errors in meiosis',
+            options: ['Meiosis as the basis for Mendel\'s laws', 'Connection to evolution (genetic variation)', 'nondisjunction, trisomy', 'comparing mitosis and meiosis']
           },
           {
-            label: 'Connection to evolution (genetic variation) is important in synthesis & ap review because',
-            options: ['Connection to evolution (genetic variation)', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
-          },
-          {
-            label: 'Errors in meiosis is important in synthesis & ap review because',
-            options: ['nondisjunction, trisomy', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'AP exam',
+            options: ['nondisjunction, trisomy', 'comparing mitosis and meiosis', 'Meiosis as the basis for Mendel\'s laws', 'Connection to evolution (genetic variation)']
           }
         ],
-        correctAnswers: ['Meiosis as the basis for Mendel\'s laws', 'Connection to evolution (genetic variation)', 'nondisjunction, trisomy'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Synthesis & AP Review.'
+        correctAnswers: ['nondisjunction, trisomy', 'comparing mitosis and meiosis'],
+        hint1: 'Think about what each concept specifically describes in Meiosis: Synthesis & AP Review.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Meiosis: Synthesis & AP Review describes a specific idea. Errors in meiosis: nondisjunction, trisomy. AP exam: comparing mitosis and meiosis.'
       }
     }
   ]

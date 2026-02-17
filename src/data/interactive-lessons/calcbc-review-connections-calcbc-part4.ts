@@ -30,31 +30,31 @@ All techniques transform hard integrals into known forms
       id: 'revie4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of integration techniques connected?',
+            question: 'Which of the following correctly describes u-substitution reverses the chain rule?',
             options: [
+              'Integration by parts reverses the product rule',
               'u-substitution reverses the chain rule',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
+              'Partial fractions decomposes rational functions',
+              'All techniques transform hard integrals into known forms'
             ],
-            correctAnswer: 0,
-            explanation: 'u-substitution reverses the chain rule'
+            correctAnswer: 1,
+            explanation: 'Correct — u-substitution reverses the chain rule. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of integration techniques connected, which is accurate?',
+            question: 'Select the statement that correctly describes Partial fractions decomposes rational…:',
             options: [
-              'Partial fractions decomposes rational functions',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'All techniques transform hard integrals into known forms',
+              'Integration by parts reverses the product rule',
+              'u-substitution reverses the chain rule',
+              'Partial fractions decomposes rational functions'
             ],
-            correctAnswer: 0,
-            explanation: 'Partial fractions decomposes rational functions'
+            correctAnswer: 3,
+            explanation: 'Correct — Partial fractions decomposes rational functions. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ All techniques transform hard integrals into known forms
       id: 'revie4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to integration techniques connected?',
+            question: 'Which statement about All techniques transform hard integrals… is correct?',
             options: [
+              'Integration by parts reverses the product rule',
               'All techniques transform hard integrals into known forms',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'u-substitution reverses the chain rule',
+              'Partial fractions decomposes rational functions'
             ],
-            correctAnswer: 0,
-            explanation: 'All techniques transform hard integrals into known forms'
+            correctAnswer: 1,
+            explanation: 'Correct — All techniques transform hard integrals into known forms. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ All techniques transform hard integrals into known forms
       id: 'revie4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'u-substitution reverses the chain rule',
-            options: ['u-substitution reverses the chain rule', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['u-substitution reverses the chain rule', 'Partial fractions decomposes rational functions', 'All techniques transform hard integrals into known forms', 'Integration by parts reverses the product rule']
           },
           {
-            label: 'Integration by parts reverses the product rule',
-            options: ['Integration by parts reverses the product rule', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Integration by parts reverses the…',
+            options: ['Integration by parts reverses the product rule', 'Partial fractions decomposes rational functions', 'u-substitution reverses the chain rule', 'All techniques transform hard integrals into known forms']
           },
           {
-            label: 'Partial fractions decomposes rational functions',
-            options: ['Partial fractions decomposes rational functions', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Partial fractions decomposes rational…',
+            options: ['Integration by parts reverses the product rule', 'u-substitution reverses the chain rule', 'Partial fractions decomposes rational functions', 'All techniques transform hard integrals into known forms']
           }
         ],
         correctAnswers: ['u-substitution reverses the chain rule', 'Integration by parts reverses the product rule', 'Partial fractions decomposes rational functions'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Integration Techniques Connected.'
+        hint1: 'Think about what each concept specifically describes in Integration Techniques Connected.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Integration Techniques Connected describes a specific idea. u-substitution reverses the chain rule. Integration by parts reverses the product rule. Partial fractions decomposes rational functions.'
       }
     }
   ]

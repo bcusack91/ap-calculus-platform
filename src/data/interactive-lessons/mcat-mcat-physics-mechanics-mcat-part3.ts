@@ -71,23 +71,28 @@ Kinetic energy KE = (1/2)mv2; Work-energy theorem: Wnet = delta KE.
       id: 'mcat-3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Work, Energy & Power:',
-            options: ['Work = Fd cos(theta) — only the component of force along dis', 'Kinetic energy KE = (1/2)mv2; Work-energy theorem: Wnet = de', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Kinetic energy KE = (1/2)mv2; Work-energy theorem',
+            options: ['Potential energy: gravitational PE = mgh; elastic PE = (1/2)kx2.', 'Work = Fd cos(theta) — only the component of force along displacement does work.', 'Wnet = delta KE.', 'Conservation of energy: KE1 + PE1 = KE2 + PE2 (when no non-conservative forces).']
           },
           {
-            label: 'MCAT application:',
-            options: ['Potential energy: gravitational PE = mgh; elastic PE = (1/2)', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Key Insight',
+            options: ['Conservation of energy: KE1 + PE1 = KE2 + PE2 (when no non-conservative forces).', 'Wnet = delta KE.', 'Potential energy: gravitational PE = mgh; elastic PE = (1/2)kx2.', 'Work = Fd cos(theta) — only the component of force along displacement does work.']
+          },
+          {
+            label: 'MCAT Tip',
+            options: ['Wnet = delta KE.', 'Potential energy: gravitational PE = mgh; elastic PE = (1/2)kx2.', 'Conservation of energy: KE1 + PE1 = KE2 + PE2 (when no non-conservative forces).', 'Work = Fd cos(theta) — only the component of force along displacement does work.']
           }
         ],
-        correctAnswers: ['Work = Fd cos(theta) — only the component of force along dis', 'Potential energy: gravitational PE = mgh; elastic PE = (1/2)'],
-        hint1: 'Think about work, energy & power',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Work = Fd cos(theta) — only the component of force along displacement does work. Potential energy: gravitational PE = mgh; elastic PE = (1/2)kx2.'
+        correctAnswers: ['Wnet = delta KE.', 'Potential energy: gravitational PE = mgh; elastic PE = (1/2)kx2.', 'Conservation of energy: KE1 + PE1 = KE2 + PE2 (when no non-conservative forces).'],
+        hint1: 'Think about what each concept specifically describes in Work, Energy & Power.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Work, Energy & Power describes a specific idea. Kinetic energy KE = (1/2)mv2; Work-energy theorem: Wnet = delta KE. Key Insight: Potential energy: gravitational PE = mgh; elastic PE = (1/2)kx2. MCAT Tip: Conservation of energy: KE1 + PE1 = KE2 + PE2 (when no non-conservative forces).'
       }
     }
   ]

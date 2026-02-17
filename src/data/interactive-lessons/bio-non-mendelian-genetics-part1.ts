@@ -19,31 +19,31 @@ export const bioNonMendelianPart1Data = {
       id: 'non-1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes incomplete dominance?',
+            question: 'Which of the following correctly describes Incomplete dominance?',
             options: [
+              'both alleles fully expressed (AB blood type)',
               'heterozygote is intermediate (red × white = pink)',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Neither follows simple dominant/recessive pattern',
+              '1:2:1 instead of 3:1'
             ],
-            correctAnswer: 0,
-            explanation: 'Incomplete dominance: heterozygote is intermediate (red × white = pink)'
+            correctAnswer: 1,
+            explanation: 'Correct — Incomplete dominance: heterozygote is intermediate (red × white = pink). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of incomplete & codominance, which statement is accurate?',
+            question: 'Select the statement that correctly describes Neither follows simple…:',
             options: [
+              '1:2:1 instead of 3:1',
               'Neither follows simple dominant/recessive pattern',
-              ')knip = etihw × der( etaidemretni si etogyzoreteh :ecnanimod etelpmocnI',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'heterozygote is intermediate (red × white = pink)',
+              'both alleles fully expressed (AB blood type)'
             ],
-            correctAnswer: 0,
-            explanation: 'Neither follows simple dominant/recessive pattern'
+            correctAnswer: 1,
+            explanation: 'Correct — Neither follows simple dominant/recessive pattern. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioNonMendelianPart1Data = {
       id: 'non-1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to incomplete & codominance?',
+            question: 'Which statement about Modified phenotypic ratios is correct?',
             options: [
-              'Modified phenotypic ratios: 1:2:1 instead of 3:1',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Neither follows simple dominant/recessive pattern',
+              'heterozygote is intermediate (red × white = pink)',
+              'both alleles fully expressed (AB blood type)',
+              '1:2:1 instead of 3:1'
             ],
-            correctAnswer: 0,
-            explanation: 'Modified phenotypic ratios: 1:2:1 instead of 3:1'
+            correctAnswer: 3,
+            explanation: 'Correct — Modified phenotypic ratios: 1:2:1 instead of 3:1. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioNonMendelianPart1Data = {
       id: 'non-1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Incomplete dominance is important in incomplete & codominance because',
-            options: ['heterozygote is intermediate (red × white = pink)', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Incomplete dominance',
+            options: ['1:2:1 instead of 3:1', 'Neither follows simple dominant/recessive pattern', 'heterozygote is intermediate (red × white = pink)', 'both alleles fully expressed (AB blood type)']
           },
           {
-            label: 'Codominance is important in incomplete & codominance because',
-            options: ['both alleles fully expressed (AB blood type)', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Codominance',
+            options: ['heterozygote is intermediate (red × white = pink)', '1:2:1 instead of 3:1', 'both alleles fully expressed (AB blood type)', 'Neither follows simple dominant/recessive pattern']
           },
           {
-            label: 'Neither follows simple dominant/recessive pattern is important in incomplete & codominance because',
-            options: ['Neither follows simple dominant/recessive pattern', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Modified phenotypic ratios',
+            options: ['1:2:1 instead of 3:1', 'Neither follows simple dominant/recessive pattern', 'heterozygote is intermediate (red × white = pink)', 'both alleles fully expressed (AB blood type)']
           }
         ],
-        correctAnswers: ['heterozygote is intermediate (red × white = pink)', 'both alleles fully expressed (AB blood type)', 'Neither follows simple dominant/recessive pattern'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Incomplete & Codominance.'
+        correctAnswers: ['heterozygote is intermediate (red × white = pink)', 'both alleles fully expressed (AB blood type)', '1:2:1 instead of 3:1'],
+        hint1: 'Think about what each concept specifically describes in Incomplete & Codominance.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Incomplete & Codominance describes a specific idea. Incomplete dominance: heterozygote is intermediate (red × white = pink). Codominance: both alleles fully expressed (AB blood type). Modified phenotypic ratios: 1:2:1 instead of 3:1.'
       }
     }
   ]

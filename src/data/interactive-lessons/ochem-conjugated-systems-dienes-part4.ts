@@ -30,31 +30,31 @@ Frontier molecular orbital theory explains selectivity
       id: 'conju4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of molecular orbital theory of dienes?',
+            question: 'Which statement accurately explains Conjugation extends π system across…?',
             options: [
-              'Conjugation extends π system across multiple atoms',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'HOMO of diene interacts with LUMO of dienophile',
+              'Frontier molecular orbital theory explains selectivity',
+              'Symmetry-allowed thermal [4+2] cycloaddition',
+              'Conjugation extends π system across multiple atoms'
             ],
-            correctAnswer: 0,
-            explanation: 'Conjugation extends π system across multiple atoms'
+            correctAnswer: 3,
+            explanation: 'Correct — Conjugation extends π system across multiple atoms. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of molecular orbital theory of dienes, which is accurate?',
+            question: 'Which of the following is true about Symmetry-allowed thermal [4+2]…?',
             options: [
+              'Conjugation extends π system across multiple atoms',
               'Symmetry-allowed thermal [4+2] cycloaddition',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'HOMO of diene interacts with LUMO of dienophile',
+              'Frontier molecular orbital theory explains selectivity'
             ],
-            correctAnswer: 0,
-            explanation: 'Symmetry-allowed thermal [4+2] cycloaddition'
+            correctAnswer: 1,
+            explanation: 'Correct — Symmetry-allowed thermal [4+2] cycloaddition. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Frontier molecular orbital theory explains selectivity
       id: 'conju4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Conjugation extends π system across multiple atoms',
-            options: ['Conjugation extends π system across multiple atoms', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Conjugation extends π system across…',
+            options: ['Symmetry-allowed thermal [4+2] cycloaddition', 'Conjugation extends π system across multiple atoms', 'HOMO of diene interacts with LUMO of dienophile', 'Frontier molecular orbital theory explains selectivity']
           },
           {
-            label: 'HOMO of diene interacts with LUMO of dienophile',
-            options: ['HOMO of diene interacts with LUMO of dienophile', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'HOMO of diene interacts with LUMO of…',
+            options: ['HOMO of diene interacts with LUMO of dienophile', 'Frontier molecular orbital theory explains selectivity', 'Conjugation extends π system across multiple atoms', 'Symmetry-allowed thermal [4+2] cycloaddition']
           },
           {
-            label: 'Symmetry-allowed thermal [4+2] cycloaddition',
-            options: ['Symmetry-allowed thermal [4+2] cycloaddition', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Symmetry-allowed thermal [4+2]…',
+            options: ['HOMO of diene interacts with LUMO of dienophile', 'Conjugation extends π system across multiple atoms', 'Frontier molecular orbital theory explains selectivity', 'Symmetry-allowed thermal [4+2] cycloaddition']
           }
         ],
         correctAnswers: ['Conjugation extends π system across multiple atoms', 'HOMO of diene interacts with LUMO of dienophile', 'Symmetry-allowed thermal [4+2] cycloaddition'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Molecular Orbital Theory of Dienes.'
+        hint1: 'Think about what each concept specifically describes in Molecular Orbital Theory of Dienes.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Molecular Orbital Theory of Dienes describes a specific idea. Conjugation extends π system across multiple atoms. HOMO of diene interacts with LUMO of dienophile. Symmetry-allowed thermal [4+2] cycloaddition.'
       }
     }
   ]

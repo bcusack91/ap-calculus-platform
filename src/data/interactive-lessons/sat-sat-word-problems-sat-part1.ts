@@ -18,20 +18,31 @@ export const satWordProblemsPart1Data = {
       id: 'sat-w1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes "is" or "equals" → =; "more than" or "added to" → +; "less than" → −?',
+            question: 'Which of the following correctly describes "Is" or "equals" → =; "more than" or…?',
             options: [
-              '"Is" or "equals" → =; "more than" or "added to" → +; "less than" → − is a fundamental concept in SAT Math',
-              '"Times" or "of" → ×; "per" → ÷',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'Let x = the unknown; write an equation, then solve.',
+              '"Is" or "equals" → =; "more than" or "added to" → +; "less than" → −.',
+              'Always define your variable clearly and check units.',
+              '"Times" or "of" → ×; "per" → ÷.'
             ],
-            correctAnswer: 0,
-            explanation: '"Is" or "equals" → =; "more than" or "added to" → +; "less than" → −'
+            correctAnswer: 1,
+            explanation: 'Correct — "Is" or "equals" → =; "more than" or "added to" → +; "less than" → −. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              '"Times" or "of" → ×; "per" → ÷.',
+              '"Is" or "equals" → =; "more than" or "added to" → +; "less than" → −.',
+              'Always define your variable clearly and check units.',
+              'Let x = the unknown; write an equation, then solve.'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Key Insight: Let x = the unknown; write an equation, then solve. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ export const satWordProblemsPart1Data = {
       id: 'sat-w1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for translating words to math?',
+            question: 'Regarding Word Problems, which correctly describes SAT Tip?',
             options: [
-              'Let x = the unknown; write an equation, then solve',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'Always define your variable clearly and check units.',
+              '"Is" or "equals" → =; "more than" or "added to" → +; "less than" → −.',
+              'Let x = the unknown; write an equation, then solve.',
+              '"Times" or "of" → ×; "per" → ÷.'
             ],
             correctAnswer: 0,
-            explanation: 'Let x = the unknown; write an equation, then solve'
+            explanation: 'Correct — SAT Tip: Always define your variable clearly and check units. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ export const satWordProblemsPart1Data = {
       id: 'sat-w1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Translating Words to Math:',
-            options: ['"Is" or "equals" → =; "more than" or "added to" → ', '"Times" or "of" → ×; "per" → ÷', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['Always define your variable clearly and check units.', '"Times" or "of" → ×; "per" → ÷.', 'Let x = the unknown; write an equation, then solve.', '"Is" or "equals" → =; "more than" or "added to" → +; "less than" → −.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Let x = the unknown; write an equation, then solve', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'SAT Tip',
+            options: ['Let x = the unknown; write an equation, then solve.', '"Times" or "of" → ×; "per" → ÷.', 'Always define your variable clearly and check units.', '"Is" or "equals" → =; "more than" or "added to" → +; "less than" → −.']
           }
         ],
-        correctAnswers: ['"Is" or "equals" → =; "more than" or "added to" → ', 'Let x = the unknown; write an equation, then solve'],
-        hint1: 'Think about translating words to math',
-        hint2: 'Consider the best SAT strategy',
-        explanation: '"Is" or "equals" → =; "more than" or "added to" → +; "less than" → −. Let x = the unknown; write an equation, then solve.'
+        correctAnswers: ['Let x = the unknown; write an equation, then solve.', 'Always define your variable clearly and check units.'],
+        hint1: 'Think about what each concept specifically describes in Word Problems.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Word Problems describes a specific idea. Key Insight: Let x = the unknown; write an equation, then solve. SAT Tip: Always define your variable clearly and check units.'
       }
     }
   ]

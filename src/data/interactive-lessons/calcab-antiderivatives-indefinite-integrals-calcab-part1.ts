@@ -30,31 +30,31 @@ Integration is the reverse of differentiation
       id: 'antid1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of antiderivatives?',
-            options: [
-              'An antiderivative of f is a function F such that F\' = f',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'An antiderivative of f is a function F such that F\' = f'
-          },
-          {
-            question: 'In the context of antiderivatives, which is accurate?',
+            question: 'Which statement accurately explains An antiderivative of f is a function F…?',
             options: [
               'The indefinite integral ∫f(x)dx represents the family of all antiderivatives',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'F(x) + C (always include the constant of integration)',
+              'An antiderivative of f is a function F such that F\' = f',
+              'Integration is the reverse of differentiation'
             ],
-            correctAnswer: 0,
-            explanation: 'The indefinite integral ∫f(x)dx represents the family of all antiderivatives'
+            correctAnswer: 2,
+            explanation: 'Correct — An antiderivative of f is a function F such that F\' = f. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Antiderivatives Indefinite Integrals, which explains The indefinite integral ∫f(x)dx…?',
+            options: [
+              'An antiderivative of f is a function F such that F\' = f',
+              'The indefinite integral ∫f(x)dx represents the family of all antiderivatives',
+              'Integration is the reverse of differentiation',
+              'F(x) + C (always include the constant of integration)'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — The indefinite integral ∫f(x)dx represents the family of all antiderivatives. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Integration is the reverse of differentiation
       id: 'antid1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to antiderivatives?',
+            question: 'Which of these accurately represents Integration is the reverse of…?',
             options: [
+              'The indefinite integral ∫f(x)dx represents the family of all antiderivatives',
+              'An antiderivative of f is a function F such that F\' = f',
               'Integration is the reverse of differentiation',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'F(x) + C (always include the constant of integration)'
             ],
-            correctAnswer: 0,
-            explanation: 'Integration is the reverse of differentiation'
+            correctAnswer: 2,
+            explanation: 'Correct — Integration is the reverse of differentiation. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Integration is the reverse of differentiation
       id: 'antid1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'An antiderivative of f is a function F such that F\' = f',
-            options: ['An antiderivative of f is a function F such that F', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'An antiderivative of f is a function F…',
+            options: ['Integration is the reverse of differentiation', 'The indefinite integral ∫f(x)dx represents the family of all antiderivatives', 'F(x) + C (always include the constant of integration)', 'An antiderivative of f is a function F such that F\' = f']
           },
           {
             label: 'General antiderivative',
-            options: ['F(x) + C (always include the constant of integrati', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['An antiderivative of f is a function F such that F\' = f', 'The indefinite integral ∫f(x)dx represents the family of all antiderivatives', 'F(x) + C (always include the constant of integration)', 'Integration is the reverse of differentiation']
           },
           {
-            label: 'The indefinite integral ∫f(x)dx represents the family of all antiderivatives',
-            options: ['The indefinite integral ∫f(x)dx represents the fam', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'The indefinite integral ∫f(x)dx…',
+            options: ['An antiderivative of f is a function F such that F\' = f', 'Integration is the reverse of differentiation', 'The indefinite integral ∫f(x)dx represents the family of all antiderivatives', 'F(x) + C (always include the constant of integration)']
           }
         ],
-        correctAnswers: ['An antiderivative of f is a function F such that F', 'F(x) + C (always include the constant of integrati', 'The indefinite integral ∫f(x)dx represents the fam'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Antiderivatives.'
+        correctAnswers: ['An antiderivative of f is a function F such that F\' = f', 'F(x) + C (always include the constant of integration)', 'The indefinite integral ∫f(x)dx represents the family of all antiderivatives'],
+        hint1: 'Think about what each concept specifically describes in Antiderivatives Indefinite Integrals.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Antiderivatives Indefinite Integrals describes a specific idea. An antiderivative of f is a function F such that F\' = f. General antiderivative: F(x) + C (always include the constant of integration). The indefinite integral ∫f(x)dx represents the family of all antiderivatives.'
       }
     }
   ]

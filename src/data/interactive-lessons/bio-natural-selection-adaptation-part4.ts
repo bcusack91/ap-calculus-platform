@@ -19,31 +19,31 @@ export const bioNatSelectionPart4Data = {
       id: 'natu4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes conditions?',
+            question: 'Which statement accurately explains Conditions?',
             options: [
+              'Violations indicate evolution is occurring',
               'large population, no migration, no mutation, random mating, no selection',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'p² + 2pq + q² = 1',
+              'p + q = 1'
             ],
-            correctAnswer: 0,
-            explanation: 'Conditions: large population, no migration, no mutation, random mating, no selection'
+            correctAnswer: 1,
+            explanation: 'Correct — Conditions: large population, no migration, no mutation, random mating, no selection. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of hardy-weinberg equilibrium, which statement is accurate?',
+            question: 'Select the statement that correctly describes Genotype frequencies:',
             options: [
-              'Genotype frequencies: p² + 2pq + q² = 1',
-              'noitceles on ,gnitam modnar ,noitatum on ,noitargim on ,noitalupop egral :snoitidnoC',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'p² + 2pq + q² = 1',
+              'p + q = 1',
+              'large population, no migration, no mutation, random mating, no selection',
+              'Violations indicate evolution is occurring'
             ],
             correctAnswer: 0,
-            explanation: 'Genotype frequencies: p² + 2pq + q² = 1'
+            explanation: 'Correct — Genotype frequencies: p² + 2pq + q² = 1. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioNatSelectionPart4Data = {
       id: 'natu4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to hardy-weinberg equilibrium?',
+            question: 'Which statement about Violations indicate evolution is… is correct?',
             options: [
+              'large population, no migration, no mutation, random mating, no selection',
               'Violations indicate evolution is occurring',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'p² + 2pq + q² = 1',
+              'p + q = 1'
             ],
-            correctAnswer: 0,
-            explanation: 'Violations indicate evolution is occurring'
+            correctAnswer: 1,
+            explanation: 'Correct — Violations indicate evolution is occurring. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioNatSelectionPart4Data = {
       id: 'natu4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Conditions is important in hardy-weinberg equilibrium because',
-            options: ['large population, no migration, no mutation, rando', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Conditions',
+            options: ['p² + 2pq + q² = 1', 'p + q = 1', 'Violations indicate evolution is occurring', 'large population, no migration, no mutation, random mating, no selection']
           },
           {
-            label: 'Allele frequencies is important in hardy-weinberg equilibrium because',
-            options: ['p + q = 1', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Allele frequencies',
+            options: ['p² + 2pq + q² = 1', 'p + q = 1', 'Violations indicate evolution is occurring', 'large population, no migration, no mutation, random mating, no selection']
           },
           {
-            label: 'Genotype frequencies is important in hardy-weinberg equilibrium because',
-            options: ['p² + 2pq + q² = 1', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Genotype frequencies',
+            options: ['p + q = 1', 'p² + 2pq + q² = 1', 'Violations indicate evolution is occurring', 'large population, no migration, no mutation, random mating, no selection']
           }
         ],
-        correctAnswers: ['large population, no migration, no mutation, rando', 'p + q = 1', 'p² + 2pq + q² = 1'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Hardy-Weinberg Equilibrium.'
+        correctAnswers: ['large population, no migration, no mutation, random mating, no selection', 'p + q = 1', 'p² + 2pq + q² = 1'],
+        hint1: 'Think about what each concept specifically describes in Hardy-Weinberg Equilibrium.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Hardy-Weinberg Equilibrium describes a specific idea. Conditions: large population, no migration, no mutation, random mating, no selection. Allele frequencies: p + q = 1. Genotype frequencies: p² + 2pq + q² = 1.'
       }
     }
   ]

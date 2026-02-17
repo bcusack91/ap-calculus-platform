@@ -30,31 +30,31 @@ detection depends on sensitivity AND decision criteria
       id: 'sensa5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of sensory thresholds?',
+            question: 'Which statement accurately explains Absolute threshold?',
             options: [
-              'Absolute threshold',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'minimum stimulus detected 50% of the time',
+              'detection depends on sensitivity AND decision criteria',
+              'JND is proportional to stimulus magnitude',
+              'smallest detectable difference'
             ],
             correctAnswer: 0,
-            explanation: 'Absolute threshold: minimum stimulus detected 50% of the time'
+            explanation: 'Correct — Absolute threshold: minimum stimulus detected 50% of the time. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of sensory thresholds, which is accurate?',
+            question: 'Which of the following is true about Weber\'s Law?',
             options: [
+              'smallest detectable difference',
               'JND is proportional to stimulus magnitude',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'detection depends on sensitivity AND decision criteria',
+              'minimum stimulus detected 50% of the time'
             ],
-            correctAnswer: 0,
-            explanation: 'Weber\'s Law: JND is proportional to stimulus magnitude'
+            correctAnswer: 1,
+            explanation: 'Correct — Weber\'s Law: JND is proportional to stimulus magnitude. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ detection depends on sensitivity AND decision criteria
       id: 'sensa5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Absolute threshold',
-            options: ['minimum stimulus detected 50% of the time', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['detection depends on sensitivity AND decision criteria', 'JND is proportional to stimulus magnitude', 'minimum stimulus detected 50% of the time', 'smallest detectable difference']
           },
           {
             label: 'Difference threshold (JND)',
-            options: ['smallest detectable difference', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['smallest detectable difference', 'JND is proportional to stimulus magnitude', 'minimum stimulus detected 50% of the time', 'detection depends on sensitivity AND decision criteria']
           },
           {
             label: 'Weber\'s Law',
-            options: ['JND is proportional to stimulus magnitude', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['minimum stimulus detected 50% of the time', 'smallest detectable difference', 'detection depends on sensitivity AND decision criteria', 'JND is proportional to stimulus magnitude']
           }
         ],
         correctAnswers: ['minimum stimulus detected 50% of the time', 'smallest detectable difference', 'JND is proportional to stimulus magnitude'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Sensory Thresholds.'
+        hint1: 'Think about what each concept specifically describes in Sensory Thresholds.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Sensory Thresholds describes a specific idea. Absolute threshold: minimum stimulus detected 50% of the time. Difference threshold (JND): smallest detectable difference. Weber\'s Law: JND is proportional to stimulus magnitude.'
       }
     }
   ]

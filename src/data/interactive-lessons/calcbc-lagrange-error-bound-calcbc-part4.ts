@@ -30,31 +30,31 @@ The factorial in the denominator grows very fast, so large n usually works
       id: 'lagra4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of finding sufficient degree?',
-            options: [
-              'Given a desired accuracy ε, find n such that M|x-a|ⁿ⁺¹/(n+1)! < ε',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'Given a desired accuracy ε, find n such that M|x-a|ⁿ⁺¹/(n+1)! < ε'
-          },
-          {
-            question: 'In the context of finding sufficient degree, which is accurate?',
+            question: 'Which statement accurately explains Given a desired accuracy ε, find n such…?',
             options: [
               'M is often 1 or eˣ (easy to bound)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Try increasing values of n until the bound is small enough',
+              'The factorial in the denominator grows very fast, so large n usually works',
+              'Given a desired accuracy ε, find n such that M|x-a|ⁿ⁺¹/(n+1)! < ε'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Given a desired accuracy ε, find n such that M|x-a|ⁿ⁺¹/(n+1)! < ε. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Finding Sufficient Degree, which explains For eˣ, sin x, cos x?',
+            options: [
+              'M is often 1 or eˣ (easy to bound)',
+              'Try increasing values of n until the bound is small enough',
+              'The factorial in the denominator grows very fast, so large n usually works',
+              'Given a desired accuracy ε, find n such that M|x-a|ⁿ⁺¹/(n+1)! < ε'
             ],
             correctAnswer: 0,
-            explanation: 'For eˣ, sin x, cos x: M is often 1 or eˣ (easy to bound)'
+            explanation: 'Correct — For eˣ, sin x, cos x: M is often 1 or eˣ (easy to bound). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ The factorial in the denominator grows very fast, so large n usually works
       id: 'lagra4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to finding sufficient degree?',
+            question: 'Which statement about The factorial in the denominator grows… is correct?',
             options: [
               'The factorial in the denominator grows very fast, so large n usually works',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'Given a desired accuracy ε, find n such that M|x-a|ⁿ⁺¹/(n+1)! < ε',
+              'M is often 1 or eˣ (easy to bound)',
+              'Try increasing values of n until the bound is small enough'
             ],
             correctAnswer: 0,
-            explanation: 'The factorial in the denominator grows very fast, so large n usually works'
+            explanation: 'Correct — The factorial in the denominator grows very fast, so large n usually works. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ The factorial in the denominator grows very fast, so large n usually works
       id: 'lagra4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Given a desired accuracy ε, find n such that M|x-a|ⁿ⁺¹/(n+1)! < ε',
-            options: ['Given a desired accuracy ε, find n such that M|x-a', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Given a desired accuracy ε, find n such…',
+            options: ['Try increasing values of n until the bound is small enough', 'The factorial in the denominator grows very fast, so large n usually works', 'Given a desired accuracy ε, find n such that M|x-a|ⁿ⁺¹/(n+1)! < ε', 'M is often 1 or eˣ (easy to bound)']
           },
           {
-            label: 'Try increasing values of n until the bound is small enough',
-            options: ['Try increasing values of n until the bound is smal', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Try increasing values of n until the…',
+            options: ['Try increasing values of n until the bound is small enough', 'M is often 1 or eˣ (easy to bound)', 'Given a desired accuracy ε, find n such that M|x-a|ⁿ⁺¹/(n+1)! < ε', 'The factorial in the denominator grows very fast, so large n usually works']
           },
           {
             label: 'For eˣ, sin x, cos x',
-            options: ['M is often 1 or eˣ (easy to bound)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['The factorial in the denominator grows very fast, so large n usually works', 'Try increasing values of n until the bound is small enough', 'Given a desired accuracy ε, find n such that M|x-a|ⁿ⁺¹/(n+1)! < ε', 'M is often 1 or eˣ (easy to bound)']
           }
         ],
-        correctAnswers: ['Given a desired accuracy ε, find n such that M|x-a', 'Try increasing values of n until the bound is smal', 'M is often 1 or eˣ (easy to bound)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Finding Sufficient Degree.'
+        correctAnswers: ['Given a desired accuracy ε, find n such that M|x-a|ⁿ⁺¹/(n+1)! < ε', 'Try increasing values of n until the bound is small enough', 'M is often 1 or eˣ (easy to bound)'],
+        hint1: 'Think about what each concept specifically describes in Finding Sufficient Degree.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Finding Sufficient Degree describes a specific idea. Given a desired accuracy ε, find n such that M|x-a|ⁿ⁺¹/(n+1)! < ε. Try increasing values of n until the bound is small enough. For eˣ, sin x, cos x: M is often 1 or eˣ (easy to bound).'
       }
     }
   ]

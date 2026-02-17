@@ -30,31 +30,31 @@ e^(-x²) = Σ(-1)ⁿx²ⁿ/n! (substitute -x² into eˣ series)
       id: 'power4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of operations on power series?',
-            options: [
-              'Addition',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'Addition: Σaₙxⁿ + Σbₙxⁿ = Σ(aₙ+bₙ)xⁿ (within shared interval)'
-          },
-          {
-            question: 'In the context of operations on power series, which is accurate?',
+            question: 'Which of the following correctly describes Addition?',
             options: [
               'replace x with a function of x in a known series',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'e^(-x²) = Σ(-1)ⁿx²ⁿ/n! (substitute -x² into eˣ series)',
+              'Cauchy product (not tested explicitly on AP exam)',
+              'Σaₙxⁿ + Σbₙxⁿ = Σ(aₙ+bₙ)xⁿ (within shared interval)'
             ],
-            correctAnswer: 0,
-            explanation: 'Substitution: replace x with a function of x in a known series'
+            correctAnswer: 3,
+            explanation: 'Correct — Addition: Σaₙxⁿ + Σbₙxⁿ = Σ(aₙ+bₙ)xⁿ (within shared interval). The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Substitution?',
+            options: [
+              'e^(-x²) = Σ(-1)ⁿx²ⁿ/n! (substitute -x² into eˣ series)',
+              'Σaₙxⁿ + Σbₙxⁿ = Σ(aₙ+bₙ)xⁿ (within shared interval)',
+              'Cauchy product (not tested explicitly on AP exam)',
+              'replace x with a function of x in a known series'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Substitution: replace x with a function of x in a known series. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ e^(-x²) = Σ(-1)ⁿx²ⁿ/n! (substitute -x² into eˣ series)
       id: 'power4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to operations on power series?',
+            question: 'Which statement about Example is correct?',
             options: [
-              'e^(-x²) = Σ(-1)ⁿx²ⁿ/n! (substitute -x² into eˣ series)',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'Σaₙxⁿ + Σbₙxⁿ = Σ(aₙ+bₙ)xⁿ (within shared interval)',
+              'replace x with a function of x in a known series',
+              'Cauchy product (not tested explicitly on AP exam)',
+              'e^(-x²) = Σ(-1)ⁿx²ⁿ/n! (substitute -x² into eˣ series)'
             ],
-            correctAnswer: 0,
-            explanation: 'Example: e^(-x²) = Σ(-1)ⁿx²ⁿ/n! (substitute -x² into eˣ series)'
+            correctAnswer: 3,
+            explanation: 'Correct — Example: e^(-x²) = Σ(-1)ⁿx²ⁿ/n! (substitute -x² into eˣ series). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ e^(-x²) = Σ(-1)ⁿx²ⁿ/n! (substitute -x² into eˣ series)
       id: 'power4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Addition',
-            options: ['Σaₙxⁿ + Σbₙxⁿ = Σ(aₙ+bₙ)xⁿ (within shared interval', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Σaₙxⁿ + Σbₙxⁿ = Σ(aₙ+bₙ)xⁿ (within shared interval)', 'Cauchy product (not tested explicitly on AP exam)', 'e^(-x²) = Σ(-1)ⁿx²ⁿ/n! (substitute -x² into eˣ series)', 'replace x with a function of x in a known series']
           },
           {
             label: 'Multiplication',
-            options: ['Cauchy product (not tested explicitly on AP exam)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['e^(-x²) = Σ(-1)ⁿx²ⁿ/n! (substitute -x² into eˣ series)', 'Σaₙxⁿ + Σbₙxⁿ = Σ(aₙ+bₙ)xⁿ (within shared interval)', 'Cauchy product (not tested explicitly on AP exam)', 'replace x with a function of x in a known series']
           },
           {
             label: 'Substitution',
-            options: ['replace x with a function of x in a known series', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['e^(-x²) = Σ(-1)ⁿx²ⁿ/n! (substitute -x² into eˣ series)', 'Cauchy product (not tested explicitly on AP exam)', 'Σaₙxⁿ + Σbₙxⁿ = Σ(aₙ+bₙ)xⁿ (within shared interval)', 'replace x with a function of x in a known series']
           }
         ],
-        correctAnswers: ['Σaₙxⁿ + Σbₙxⁿ = Σ(aₙ+bₙ)xⁿ (within shared interval', 'Cauchy product (not tested explicitly on AP exam)', 'replace x with a function of x in a known series'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Operations on Power Series.'
+        correctAnswers: ['Σaₙxⁿ + Σbₙxⁿ = Σ(aₙ+bₙ)xⁿ (within shared interval)', 'Cauchy product (not tested explicitly on AP exam)', 'replace x with a function of x in a known series'],
+        hint1: 'Think about what each concept specifically describes in Operations on Power Series.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Operations on Power Series describes a specific idea. Addition: Σaₙxⁿ + Σbₙxⁿ = Σ(aₙ+bₙ)xⁿ (within shared interval). Multiplication: Cauchy product (not tested explicitly on AP exam). Substitution: replace x with a function of x in a known series.'
       }
     }
   ]

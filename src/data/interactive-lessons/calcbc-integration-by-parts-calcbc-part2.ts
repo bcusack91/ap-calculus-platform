@@ -30,31 +30,31 @@ dv must be something you can integrate
       id: 'integ2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of choosing u and dv (liate)?',
+            question: 'Which of the following correctly describes LIATE priority for choosing u?',
             options: [
-              'LIATE priority for choosing u',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
+              'u should get simpler when differentiated',
+              'Logarithmic, Inverse trig, Algebraic, Trig, Exponential',
+              '∫x·eˣ dx → u = x, dv = eˣ dx',
+              'dv must be something you can integrate'
             ],
-            correctAnswer: 0,
-            explanation: 'LIATE priority for choosing u: Logarithmic, Inverse trig, Algebraic, Trig, Exponential'
+            correctAnswer: 1,
+            explanation: 'Correct — LIATE priority for choosing u: Logarithmic, Inverse trig, Algebraic, Trig, Exponential. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of choosing u and dv (liate), which is accurate?',
+            question: 'In the context of Choosing u and dv (LIATE), which explains dv must be something you can integrate?',
             options: [
+              'u should get simpler when differentiated',
               'dv must be something you can integrate',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Logarithmic, Inverse trig, Algebraic, Trig, Exponential',
+              '∫x·eˣ dx → u = x, dv = eˣ dx'
             ],
-            correctAnswer: 0,
-            explanation: 'dv must be something you can integrate'
+            correctAnswer: 1,
+            explanation: 'Correct — dv must be something you can integrate. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ dv must be something you can integrate
       id: 'integ2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to choosing u and dv (liate)?',
+            question: 'Which statement about Example is correct?',
             options: [
               '∫x·eˣ dx → u = x, dv = eˣ dx',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'Logarithmic, Inverse trig, Algebraic, Trig, Exponential',
+              'dv must be something you can integrate',
+              'u should get simpler when differentiated'
             ],
             correctAnswer: 0,
-            explanation: 'Example: ∫x·eˣ dx → u = x, dv = eˣ dx'
+            explanation: 'Correct — Example: ∫x·eˣ dx → u = x, dv = eˣ dx. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,24 @@ dv must be something you can integrate
       id: 'integ2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'LIATE priority for choosing u',
-            options: ['Logarithmic, Inverse trig, Algebraic, Trig, Expone', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['∫x·eˣ dx → u = x, dv = eˣ dx', 'Logarithmic, Inverse trig, Algebraic, Trig, Exponential', 'u should get simpler when differentiated', 'dv must be something you can integrate']
           },
           {
-            label: 'u should get simpler when differentiated',
-            options: ['u should get simpler when differentiated', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
-          },
-          {
-            label: 'dv must be something you can integrate',
-            options: ['dv must be something you can integrate', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Example',
+            options: ['∫x·eˣ dx → u = x, dv = eˣ dx', 'u should get simpler when differentiated', 'dv must be something you can integrate', 'Logarithmic, Inverse trig, Algebraic, Trig, Exponential']
           }
         ],
-        correctAnswers: ['Logarithmic, Inverse trig, Algebraic, Trig, Expone', 'u should get simpler when differentiated', 'dv must be something you can integrate'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Choosing u and dv (LIATE).'
+        correctAnswers: ['Logarithmic, Inverse trig, Algebraic, Trig, Exponential', '∫x·eˣ dx → u = x, dv = eˣ dx'],
+        hint1: 'Think about what each concept specifically describes in Choosing u and dv (LIATE).',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Choosing u and dv (LIATE) describes a specific idea. LIATE priority for choosing u: Logarithmic, Inverse trig, Algebraic, Trig, Exponential. Example: ∫x·eˣ dx → u = x, dv = eˣ dx.'
       }
     }
   ]

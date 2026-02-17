@@ -18,20 +18,31 @@ Shorter answers are often correct when content is the same.
       id: 'act-e4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes "no change" is correct about 25% of the time — don\'t avoid it?',
+            question: 'Which of the following correctly describes "NO CHANGE" is correct about 25% of the…?',
             options: [
-              '"NO CHANGE" is correct about 25% of the time — don\'t avoid it is a key concept for ACT English/Reading',
-              'Shorter answers are often correct when content is the same',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'Shorter answers are often correct when content is the same.',
+              '"NO CHANGE" is correct about 25% of the time — don\'t avoid it.',
+              'Eliminate obviously wrong choices first.',
+              'If two answers are grammatically correct, choose the one that fits the context better.'
             ],
-            correctAnswer: 0,
-            explanation: '"NO CHANGE" is correct about 25% of the time — don\'t avoid it'
+            correctAnswer: 1,
+            explanation: 'Correct — "NO CHANGE" is correct about 25% of the time — don\'t avoid it. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Key Insight?',
+            options: [
+              'Shorter answers are often correct when content is the same.',
+              'If two answers are grammatically correct, choose the one that fits the context better.',
+              'Eliminate obviously wrong choices first.',
+              '"NO CHANGE" is correct about 25% of the time — don\'t avoid it.'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Key Insight: Eliminate obviously wrong choices first. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Shorter answers are often correct when content is the same.
       id: 'act-e4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for answer elimination?',
+            question: 'Which statement about ACT Tip is correct?',
             options: [
-              'Eliminate obviously wrong choices first',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Eliminate obviously wrong choices first.',
+              'Shorter answers are often correct when content is the same.',
+              '"NO CHANGE" is correct about 25% of the time — don\'t avoid it.',
+              'If two answers are grammatically correct, choose the one that fits the context better.'
             ],
-            correctAnswer: 0,
-            explanation: 'Eliminate obviously wrong choices first'
+            correctAnswer: 3,
+            explanation: 'Correct — ACT Tip: If two answers are grammatically correct, choose the one that fits the context better. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ Shorter answers are often correct when content is the same.
       id: 'act-e4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Answer Elimination:',
-            options: ['"NO CHANGE" is correct about 25% of the time — don', 'Shorter answers are often correct when content is ', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['"NO CHANGE" is correct about 25% of the time — don\'t avoid it.', 'If two answers are grammatically correct, choose the one that fits the context better.', 'Shorter answers are often correct when content is the same.', 'Eliminate obviously wrong choices first.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Eliminate obviously wrong choices first', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'ACT Tip',
+            options: ['If two answers are grammatically correct, choose the one that fits the context better.', 'Eliminate obviously wrong choices first.', 'Shorter answers are often correct when content is the same.', '"NO CHANGE" is correct about 25% of the time — don\'t avoid it.']
           }
         ],
-        correctAnswers: ['"NO CHANGE" is correct about 25% of the time — don', 'Eliminate obviously wrong choices first'],
-        hint1: 'Think about answer elimination',
-        hint2: 'Consider the best ACT strategy',
-        explanation: '"NO CHANGE" is correct about 25% of the time — don\'t avoid it. Eliminate obviously wrong choices first.'
+        correctAnswers: ['Eliminate obviously wrong choices first.', 'If two answers are grammatically correct, choose the one that fits the context better.'],
+        hint1: 'Think about what each concept specifically describes in Answer Elimination.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Answer Elimination describes a specific idea. Key Insight: Eliminate obviously wrong choices first. ACT Tip: If two answers are grammatically correct, choose the one that fits the context better.'
       }
     }
   ]

@@ -30,31 +30,31 @@ multiple polypeptide chains together
       id: 'amino4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of protein structure levels?',
+            question: 'Which statement accurately explains Primary?',
             options: [
-              'Primary',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'amino acid sequence',
+              'multiple polypeptide chains together',
+              'α-helix and β-pleated sheet (H-bonds)',
+              '3D folding (R-group interactions)'
             ],
             correctAnswer: 0,
-            explanation: 'Primary: amino acid sequence'
+            explanation: 'Correct — Primary: amino acid sequence. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of protein structure levels, which is accurate?',
+            question: 'Which of the following is true about Tertiary?',
             options: [
+              'multiple polypeptide chains together',
+              'α-helix and β-pleated sheet (H-bonds)',
               '3D folding (R-group interactions)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'amino acid sequence'
             ],
-            correctAnswer: 0,
-            explanation: 'Tertiary: 3D folding (R-group interactions)'
+            correctAnswer: 2,
+            explanation: 'Correct — Tertiary: 3D folding (R-group interactions). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ multiple polypeptide chains together
       id: 'amino4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Primary',
-            options: ['amino acid sequence', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['multiple polypeptide chains together', 'α-helix and β-pleated sheet (H-bonds)', '3D folding (R-group interactions)', 'amino acid sequence']
           },
           {
             label: 'Secondary',
-            options: ['α-helix and β-pleated sheet (H-bonds)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['α-helix and β-pleated sheet (H-bonds)', '3D folding (R-group interactions)', 'amino acid sequence', 'multiple polypeptide chains together']
           },
           {
             label: 'Tertiary',
-            options: ['3D folding (R-group interactions)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['amino acid sequence', 'multiple polypeptide chains together', 'α-helix and β-pleated sheet (H-bonds)', '3D folding (R-group interactions)']
           }
         ],
         correctAnswers: ['amino acid sequence', 'α-helix and β-pleated sheet (H-bonds)', '3D folding (R-group interactions)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Protein Structure Levels.'
+        hint1: 'Think about what each concept specifically describes in Protein Structure Levels.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Protein Structure Levels describes a specific idea. Primary: amino acid sequence. Secondary: α-helix and β-pleated sheet (H-bonds). Tertiary: 3D folding (R-group interactions).'
       }
     }
   ]

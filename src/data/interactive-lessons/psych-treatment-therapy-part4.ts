@@ -30,31 +30,31 @@ last resort (lobotomy is historical)
       id: 'treat4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of biomedical treatments?',
+            question: 'What does "Drug therapy" refer to in psychology?',
             options: [
-              'Drug therapy',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'last resort (lobotomy is historical)',
+              'antidepressants (SSRIs), antipsychotics, anxiolytics, mood stabilizers',
+              'magnetic pulses to brain',
+              'for severe depression'
             ],
-            correctAnswer: 0,
-            explanation: 'Drug therapy: antidepressants (SSRIs), antipsychotics, anxiolytics, mood stabilizers'
+            correctAnswer: 1,
+            explanation: 'Correct — Drug therapy: antidepressants (SSRIs), antipsychotics, anxiolytics, mood stabilizers. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of biomedical treatments, which is accurate?',
+            question: 'In the context of Biomedical Treatments, which explains TMS (transcranial magnetic stimulation)?',
             options: [
-              'magnetic pulses to brain',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'antidepressants (SSRIs), antipsychotics, anxiolytics, mood stabilizers',
+              'last resort (lobotomy is historical)',
+              'for severe depression',
+              'magnetic pulses to brain'
             ],
-            correctAnswer: 0,
-            explanation: 'TMS (transcranial magnetic stimulation): magnetic pulses to brain'
+            correctAnswer: 3,
+            explanation: 'Correct — TMS (transcranial magnetic stimulation): magnetic pulses to brain. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ last resort (lobotomy is historical)
       id: 'treat4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Drug therapy',
-            options: ['antidepressants (SSRIs), antipsychotics, anxiolyti', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['last resort (lobotomy is historical)', 'magnetic pulses to brain', 'antidepressants (SSRIs), antipsychotics, anxiolytics, mood stabilizers', 'for severe depression']
           },
           {
             label: 'ECT (electroconvulsive therapy)',
-            options: ['for severe depression', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['magnetic pulses to brain', 'last resort (lobotomy is historical)', 'antidepressants (SSRIs), antipsychotics, anxiolytics, mood stabilizers', 'for severe depression']
           },
           {
             label: 'TMS (transcranial magnetic stimulation)',
-            options: ['magnetic pulses to brain', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['antidepressants (SSRIs), antipsychotics, anxiolytics, mood stabilizers', 'for severe depression', 'magnetic pulses to brain', 'last resort (lobotomy is historical)']
           }
         ],
-        correctAnswers: ['antidepressants (SSRIs), antipsychotics, anxiolyti', 'for severe depression', 'magnetic pulses to brain'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Biomedical Treatments.'
+        correctAnswers: ['antidepressants (SSRIs), antipsychotics, anxiolytics, mood stabilizers', 'for severe depression', 'magnetic pulses to brain'],
+        hint1: 'Think about what each concept specifically describes in Biomedical Treatments.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Biomedical Treatments describes a specific idea. Drug therapy: antidepressants (SSRIs), antipsychotics, anxiolytics, mood stabilizers. ECT (electroconvulsive therapy): for severe depression. TMS (transcranial magnetic stimulation): magnetic pulses to brain.'
       }
     }
   ]

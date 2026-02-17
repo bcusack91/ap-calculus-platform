@@ -30,31 +30,31 @@ Wedge-dash notation for 3D representation
       id: 'molec1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of condensed & skeletal structures?',
+            question: 'Which of the following correctly describes Condensed formulas?',
             options: [
-              'Condensed formulas',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'Wedge-dash notation for 3D representation',
+              'CH₃CH₂OH',
+              'Each vertex = carbon, hydrogens are implied',
+              'zigzag lines'
             ],
-            correctAnswer: 0,
-            explanation: 'Condensed formulas: CH₃CH₂OH'
+            correctAnswer: 1,
+            explanation: 'Correct — Condensed formulas: CH₃CH₂OH. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of condensed & skeletal structures, which is accurate?',
+            question: 'Which of the following is true about Each vertex = carbon, hydrogens are…?',
             options: [
               'Each vertex = carbon, hydrogens are implied',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'zigzag lines',
+              'Wedge-dash notation for 3D representation',
+              'CH₃CH₂OH'
             ],
             correctAnswer: 0,
-            explanation: 'Each vertex = carbon, hydrogens are implied'
+            explanation: 'Correct — Each vertex = carbon, hydrogens are implied. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,24 @@ Wedge-dash notation for 3D representation
       id: 'molec1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Condensed formulas',
-            options: ['CH₃CH₂OH', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Each vertex = carbon, hydrogens are implied', 'CH₃CH₂OH', 'Wedge-dash notation for 3D representation', 'zigzag lines']
           },
           {
             label: 'Skeletal (line-angle) structures',
-            options: ['zigzag lines', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
-          },
-          {
-            label: 'Each vertex = carbon, hydrogens are implied',
-            options: ['Each vertex = carbon, hydrogens are implied', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Each vertex = carbon, hydrogens are implied', 'zigzag lines', 'Wedge-dash notation for 3D representation', 'CH₃CH₂OH']
           }
         ],
-        correctAnswers: ['CH₃CH₂OH', 'zigzag lines', 'Each vertex = carbon, hydrogens are implied'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Condensed & Skeletal Structures.'
+        correctAnswers: ['CH₃CH₂OH', 'zigzag lines'],
+        hint1: 'Think about what each concept specifically describes in ️ Molecular Representations.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in ️ Molecular Representations describes a specific idea. Condensed formulas: CH₃CH₂OH. Skeletal (line-angle) structures: zigzag lines.'
       }
     }
   ]

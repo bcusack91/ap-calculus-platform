@@ -30,31 +30,31 @@ Trichromatic theory (Young-Helmholtz) vs opponent-process theory
       id: 'sensa2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of vision?',
+            question: 'Which statement accurately explains Light enters eye?',
             options: [
-              'Light enters eye',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'dim light, peripheral vision',
+              'color, detail, fovea (3 types: RGB)',
+              'Trichromatic theory (Young-Helmholtz) vs opponent-process theory',
+              'cornea → pupil → lens → retina'
             ],
-            correctAnswer: 0,
-            explanation: 'Light enters eye: cornea → pupil → lens → retina'
+            correctAnswer: 3,
+            explanation: 'Correct — Light enters eye: cornea → pupil → lens → retina. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of vision, which is accurate?',
+            question: 'In the context of Vision, which explains Cones?',
             options: [
-              'color, detail, fovea (3 types: RGB)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'dim light, peripheral vision',
+              'Trichromatic theory (Young-Helmholtz) vs opponent-process theory',
+              'cornea → pupil → lens → retina',
+              'color, detail, fovea (3 types: RGB)'
             ],
-            correctAnswer: 0,
-            explanation: 'Cones: color, detail, fovea (3 types: RGB)'
+            correctAnswer: 3,
+            explanation: 'Correct — Cones: color, detail, fovea (3 types: RGB). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Trichromatic theory (Young-Helmholtz) vs opponent-process theory
       id: 'sensa2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Light enters eye',
-            options: ['cornea → pupil → lens → retina', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['cornea → pupil → lens → retina', 'Trichromatic theory (Young-Helmholtz) vs opponent-process theory', 'color, detail, fovea (3 types: RGB)', 'dim light, peripheral vision']
           },
           {
             label: 'Rods',
-            options: ['dim light, peripheral vision', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['dim light, peripheral vision', 'color, detail, fovea (3 types: RGB)', 'cornea → pupil → lens → retina', 'Trichromatic theory (Young-Helmholtz) vs opponent-process theory']
           },
           {
             label: 'Cones',
-            options: ['color, detail, fovea (3 types: RGB)', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Trichromatic theory (Young-Helmholtz) vs opponent-process theory', 'dim light, peripheral vision', 'color, detail, fovea (3 types: RGB)', 'cornea → pupil → lens → retina']
           }
         ],
         correctAnswers: ['cornea → pupil → lens → retina', 'dim light, peripheral vision', 'color, detail, fovea (3 types: RGB)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Vision.'
+        hint1: 'Think about what each concept specifically describes in Vision.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Vision describes a specific idea. Light enters eye: cornea → pupil → lens → retina. Rods: dim light, peripheral vision. Cones: color, detail, fovea (3 types: RGB).'
       }
     }
   ]

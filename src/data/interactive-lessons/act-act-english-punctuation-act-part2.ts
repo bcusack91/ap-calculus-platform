@@ -18,20 +18,31 @@ Semicolon + transitional word: "She studied hard; therefore, she passed.".
       id: 'act-e2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes semicolon?',
+            question: 'Which statement accurately explains Semicolon?',
             options: [
-              'Semicolon is a key concept for ACT English/Reading',
-              'Semicolon + transitional word: "She studied hard; therefore, she passed."',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'Before a colon: must be an independent clause.',
+              'Colon: introduces a list, explanation, or elaboration.',
+              '"She studied hard; therefore, she passed.".',
+              'connects two related independent clauses (no conjunction).'
             ],
-            correctAnswer: 0,
-            explanation: 'Semicolon: connects two related independent clauses (no conjunction)'
+            correctAnswer: 3,
+            explanation: 'Correct — Semicolon: connects two related independent clauses (no conjunction). The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              'connects two related independent clauses (no conjunction).',
+              '"She studied hard; therefore, she passed.".',
+              'Before a colon: must be an independent clause.',
+              'Colon: introduces a list, explanation, or elaboration.'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Key Insight: Colon: introduces a list, explanation, or elaboration. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Semicolon + transitional word: "She studied hard; therefore, she passed.".
       id: 'act-e2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for semicolons & colons?',
+            question: 'Which of these accurately represents ACT Tip?',
             options: [
-              'Colon: introduces a list, explanation, or elaboration',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'connects two related independent clauses (no conjunction).',
+              'Before a colon: must be an independent clause.',
+              'Colon: introduces a list, explanation, or elaboration.',
+              '"She studied hard; therefore, she passed.".'
             ],
-            correctAnswer: 0,
-            explanation: 'Colon: introduces a list, explanation, or elaboration'
+            correctAnswer: 1,
+            explanation: 'Correct — ACT Tip: Before a colon: must be an independent clause. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Semicolon + transitional word: "She studied hard; therefore, she passed.".
       id: 'act-e2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Semicolons & Colons:',
-            options: ['Semicolon: connects two related independent clause', 'Semicolon + transitional word: "She studied hard; ', 'Not applicable', 'None of these']
+            label: 'Semicolon',
+            options: ['Before a colon: must be an independent clause.', 'Colon: introduces a list, explanation, or elaboration.', 'connects two related independent clauses (no conjunction).', '"She studied hard; therefore, she passed.".']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Colon: introduces a list, explanation, or elaborat', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Semicolon + transitional word',
+            options: ['"She studied hard; therefore, she passed.".', 'Before a colon: must be an independent clause.', 'connects two related independent clauses (no conjunction).', 'Colon: introduces a list, explanation, or elaboration.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['Colon: introduces a list, explanation, or elaboration.', 'Before a colon: must be an independent clause.', 'connects two related independent clauses (no conjunction).', '"She studied hard; therefore, she passed.".']
           }
         ],
-        correctAnswers: ['Semicolon: connects two related independent clause', 'Colon: introduces a list, explanation, or elaborat'],
-        hint1: 'Think about semicolons & colons',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Semicolon: connects two related independent clauses (no conjunction). Colon: introduces a list, explanation, or elaboration.'
+        correctAnswers: ['connects two related independent clauses (no conjunction).', '"She studied hard; therefore, she passed.".', 'Colon: introduces a list, explanation, or elaboration.'],
+        hint1: 'Think about what each concept specifically describes in Semicolons & Colons.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Semicolons & Colons describes a specific idea. Semicolon: connects two related independent clauses (no conjunction). Semicolon + transitional word: "She studied hard; therefore, she passed.". Key Insight: Colon: introduces a list, explanation, or elaboration.'
       }
     }
   ]

@@ -30,31 +30,31 @@ Often leads to integrals that are difficult to evaluate by hand
       id: 'arc-l1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of arc length for y = f(x)?',
+            question: 'What does "Arc length" refer to in calculus?',
             options: [
-              'Arc length',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
+              'L = ∫ₐᵇ √(1 + [f\'(x)]²) dx',
+              'Derived from the Pythagorean theorem on infinitesimal segments',
+              'The integrand √(1 + [f\'(x)]²) gives the "speed" along the curve',
+              'Often leads to integrals that are difficult to evaluate by hand'
             ],
             correctAnswer: 0,
-            explanation: 'Arc length: L = ∫ₐᵇ √(1 + [f\'(x)]²) dx'
+            explanation: 'Correct — Arc length: L = ∫ₐᵇ √(1 + [f\'(x)]²) dx. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of arc length for y = f(x), which is accurate?',
+            question: 'Select the statement that correctly describes The integrand √(1 + [f\'(x)]²) gives the…:',
             options: [
               'The integrand √(1 + [f\'(x)]²) gives the "speed" along the curve',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'L = ∫ₐᵇ √(1 + [f\'(x)]²) dx',
+              'Derived from the Pythagorean theorem on infinitesimal segments',
+              'Often leads to integrals that are difficult to evaluate by hand'
             ],
             correctAnswer: 0,
-            explanation: 'The integrand √(1 + [f\'(x)]²) gives the "speed" along the curve'
+            explanation: 'Correct — The integrand √(1 + [f\'(x)]²) gives the "speed" along the curve. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Often leads to integrals that are difficult to evaluate by hand
       id: 'arc-l1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to arc length for y = f(x)?',
+            question: 'Which statement about Often leads to integrals that are… is correct?',
             options: [
               'Often leads to integrals that are difficult to evaluate by hand',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'L = ∫ₐᵇ √(1 + [f\'(x)]²) dx',
+              'The integrand √(1 + [f\'(x)]²) gives the "speed" along the curve',
+              'Derived from the Pythagorean theorem on infinitesimal segments'
             ],
             correctAnswer: 0,
-            explanation: 'Often leads to integrals that are difficult to evaluate by hand'
+            explanation: 'Correct — Often leads to integrals that are difficult to evaluate by hand. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Often leads to integrals that are difficult to evaluate by hand
       id: 'arc-l1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Arc length',
-            options: ['L = ∫ₐᵇ √(1 + [f\'(x)]²) dx', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['L = ∫ₐᵇ √(1 + [f\'(x)]²) dx', 'Derived from the Pythagorean theorem on infinitesimal segments', 'The integrand √(1 + [f\'(x)]²) gives the "speed" along the curve', 'Often leads to integrals that are difficult to evaluate by hand']
           },
           {
-            label: 'Derived from the Pythagorean theorem on infinitesimal segments',
-            options: ['Derived from the Pythagorean theorem on infinitesi', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Derived from the Pythagorean theorem on…',
+            options: ['L = ∫ₐᵇ √(1 + [f\'(x)]²) dx', 'The integrand √(1 + [f\'(x)]²) gives the "speed" along the curve', 'Derived from the Pythagorean theorem on infinitesimal segments', 'Often leads to integrals that are difficult to evaluate by hand']
           },
           {
-            label: 'The integrand √(1 + [f\'(x)]²) gives the "speed" along the curve',
-            options: ['The integrand √(1 + [f\'(x)]²) gives the "speed" al', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'The integrand √(1 + [f\'(x)]²) gives the…',
+            options: ['The integrand √(1 + [f\'(x)]²) gives the "speed" along the curve', 'Derived from the Pythagorean theorem on infinitesimal segments', 'L = ∫ₐᵇ √(1 + [f\'(x)]²) dx', 'Often leads to integrals that are difficult to evaluate by hand']
           }
         ],
-        correctAnswers: ['L = ∫ₐᵇ √(1 + [f\'(x)]²) dx', 'Derived from the Pythagorean theorem on infinitesi', 'The integrand √(1 + [f\'(x)]²) gives the "speed" al'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Arc Length for y = f(x).'
+        correctAnswers: ['L = ∫ₐᵇ √(1 + [f\'(x)]²) dx', 'Derived from the Pythagorean theorem on infinitesimal segments', 'The integrand √(1 + [f\'(x)]²) gives the "speed" along the curve'],
+        hint1: 'Think about what each concept specifically describes in ∮ Arc Length Surface Area.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in ∮ Arc Length Surface Area describes a specific idea. Arc length: L = ∫ₐᵇ √(1 + [f\'(x)]²) dx. Derived from the Pythagorean theorem on infinitesimal segments. The integrand √(1 + [f\'(x)]²) gives the "speed" along the curve.'
       }
     }
   ]

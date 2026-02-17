@@ -71,23 +71,28 @@ Distinguish facts from opinions — the MCAT will test whether you can tell the 
       id: 'mcat-4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Evaluating Evidence:',
-            options: ['Evaluate the quality of evidence: anecdotal vs. empirical, s', 'Distinguish facts from opinions — the MCAT will test whether', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Evaluate the quality of evidence',
+            options: ['Look for cherry-picking: does the author ignore contradictory evidence?.', 'Distinguish facts from opinions — the MCAT will test whether you can tell the difference.', 'anecdotal vs. empirical, sample size, controls.', 'Consider alternative explanations for the data presented.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Look for cherry-picking: does the author ignore contradictor', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Key Insight',
+            options: ['Distinguish facts from opinions — the MCAT will test whether you can tell the difference.', 'Look for cherry-picking: does the author ignore contradictory evidence?.', 'Consider alternative explanations for the data presented.', 'anecdotal vs. empirical, sample size, controls.']
+          },
+          {
+            label: 'MCAT Tip',
+            options: ['Distinguish facts from opinions — the MCAT will test whether you can tell the difference.', 'anecdotal vs. empirical, sample size, controls.', 'Look for cherry-picking: does the author ignore contradictory evidence?.', 'Consider alternative explanations for the data presented.']
           }
         ],
-        correctAnswers: ['Evaluate the quality of evidence: anecdotal vs. empirical, s', 'Look for cherry-picking: does the author ignore contradictor'],
-        hint1: 'Think about evaluating evidence',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Evaluate the quality of evidence: anecdotal vs. empirical, sample size, controls. Look for cherry-picking: does the author ignore contradictory evidence?.'
+        correctAnswers: ['anecdotal vs. empirical, sample size, controls.', 'Look for cherry-picking: does the author ignore contradictory evidence?.', 'Consider alternative explanations for the data presented.'],
+        hint1: 'Think about what each concept specifically describes in Evaluating Evidence.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Evaluating Evidence describes a specific idea. Evaluate the quality of evidence: anecdotal vs. empirical, sample size, controls. Key Insight: Look for cherry-picking: does the author ignore contradictory evidence?. MCAT Tip: Consider alternative explanations for the data presented.'
       }
     }
   ]

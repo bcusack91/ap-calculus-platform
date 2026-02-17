@@ -19,31 +19,31 @@ export const bioCellCompartmentPart2Data = {
       id: 'cell2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes organelles create separate chemical environments?',
+            question: 'What does "Organelles create separate chemical…" refer to in biology?',
             options: [
+              'Different pH in different compartments',
               'Organelles create separate chemical environments',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Concentrated enzymes increase efficiency',
+              'Prevents incompatible reactions from interfering'
             ],
-            correctAnswer: 0,
-            explanation: 'Organelles create separate chemical environments'
+            correctAnswer: 1,
+            explanation: 'Correct — Organelles create separate chemical environments. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of compartment functions, which statement is accurate?',
+            question: 'Which of the following is true about Concentrated enzymes increase efficiency?',
             options: [
+              'Prevents incompatible reactions from interfering',
               'Concentrated enzymes increase efficiency',
-              'stnemnorivne lacimehc etarapes etaerc sellenagrO',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Different pH in different compartments',
+              'Organelles create separate chemical environments'
             ],
-            correctAnswer: 0,
-            explanation: 'Concentrated enzymes increase efficiency'
+            correctAnswer: 1,
+            explanation: 'Correct — Concentrated enzymes increase efficiency. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioCellCompartmentPart2Data = {
       id: 'cell2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to compartment functions?',
+            question: 'Which statement about Prevents incompatible reactions from… is correct?',
             options: [
+              'Concentrated enzymes increase efficiency',
+              'Organelles create separate chemical environments',
               'Prevents incompatible reactions from interfering',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Different pH in different compartments'
             ],
-            correctAnswer: 0,
-            explanation: 'Prevents incompatible reactions from interfering'
+            correctAnswer: 2,
+            explanation: 'Correct — Prevents incompatible reactions from interfering. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioCellCompartmentPart2Data = {
       id: 'cell2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Organelles create separate chemical environments is important in compartment functions because',
-            options: ['Organelles create separate chemical environments', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Organelles create separate chemical…',
+            options: ['Different pH in different compartments', 'Prevents incompatible reactions from interfering', 'Organelles create separate chemical environments', 'Concentrated enzymes increase efficiency']
           },
           {
-            label: 'Different pH in different compartments is important in compartment functions because',
-            options: ['Different pH in different compartments', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Different pH in different compartments',
+            options: ['Prevents incompatible reactions from interfering', 'Different pH in different compartments', 'Organelles create separate chemical environments', 'Concentrated enzymes increase efficiency']
           },
           {
-            label: 'Concentrated enzymes increase efficiency is important in compartment functions because',
-            options: ['Concentrated enzymes increase efficiency', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Concentrated enzymes increase efficiency',
+            options: ['Prevents incompatible reactions from interfering', 'Different pH in different compartments', 'Organelles create separate chemical environments', 'Concentrated enzymes increase efficiency']
           }
         ],
         correctAnswers: ['Organelles create separate chemical environments', 'Different pH in different compartments', 'Concentrated enzymes increase efficiency'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Compartment Functions.'
+        hint1: 'Think about what each concept specifically describes in Compartment Functions.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Compartment Functions describes a specific idea. Organelles create separate chemical environments. Different pH in different compartments. Concentrated enzymes increase efficiency.'
       }
     }
   ]

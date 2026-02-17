@@ -18,20 +18,31 @@ Past perfect (had + past participle) for events before another past event.
       id: 'act-e3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes keep tenses consistent unless there is a clear time shift?',
+            question: 'What does "Keep tenses consistent unless there is…" refer to in ACT prep?',
             options: [
-              'Keep tenses consistent unless there is a clear time shift is a key concept for ACT English/Reading',
-              'Past perfect (had + past participle) for events before another past event',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'Past perfect (had + past participle) for events before another past event.',
+              'Context clues: time words like "yesterday," "since," "by next year".',
+              'Keep tenses consistent unless there is a clear time shift.',
+              'Present perfect (has/have + past participle) for actions continuing to the present.'
             ],
-            correctAnswer: 0,
-            explanation: 'Keep tenses consistent unless there is a clear time shift'
+            correctAnswer: 2,
+            explanation: 'Correct — Keep tenses consistent unless there is a clear time shift. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Key Insight?',
+            options: [
+              'Past perfect (had + past participle) for events before another past event.',
+              'Context clues: time words like "yesterday," "since," "by next year".',
+              'Keep tenses consistent unless there is a clear time shift.',
+              'Present perfect (has/have + past participle) for actions continuing to the present.'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Key Insight: Present perfect (has/have + past participle) for actions continuing to the present. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Past perfect (had + past participle) for events before another past event.
       id: 'act-e3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for verb tense?',
+            question: 'Which of these accurately represents ACT Tip?',
             options: [
-              'Present perfect (has/have + past participle) for actions continuing to the present',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Keep tenses consistent unless there is a clear time shift.',
+              'Context clues: time words like "yesterday," "since," "by next year".',
+              'Past perfect (had + past participle) for events before another past event.',
+              'Present perfect (has/have + past participle) for actions continuing to the present.'
             ],
-            correctAnswer: 0,
-            explanation: 'Present perfect (has/have + past participle) for actions continuing to the present'
+            correctAnswer: 1,
+            explanation: 'Correct — ACT Tip: Context clues: time words like "yesterday," "since," "by next year". Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ Past perfect (had + past participle) for events before another past event.
       id: 'act-e3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Verb Tense:',
-            options: ['Keep tenses consistent unless there is a clear tim', 'Past perfect (had + past participle) for events be', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['Present perfect (has/have + past participle) for actions continuing to the present.', 'Context clues: time words like "yesterday," "since," "by next year".', 'Past perfect (had + past participle) for events before another past event.', 'Keep tenses consistent unless there is a clear time shift.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Present perfect (has/have + past participle) for a', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'ACT Tip',
+            options: ['Past perfect (had + past participle) for events before another past event.', 'Context clues: time words like "yesterday," "since," "by next year".', 'Keep tenses consistent unless there is a clear time shift.', 'Present perfect (has/have + past participle) for actions continuing to the present.']
           }
         ],
-        correctAnswers: ['Keep tenses consistent unless there is a clear tim', 'Present perfect (has/have + past participle) for a'],
-        hint1: 'Think about verb tense',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Keep tenses consistent unless there is a clear time shift. Present perfect (has/have + past participle) for actions continuing to the present.'
+        correctAnswers: ['Present perfect (has/have + past participle) for actions continuing to the present.', 'Context clues: time words like "yesterday," "since," "by next year".'],
+        hint1: 'Think about what each concept specifically describes in Verb Tense.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Verb Tense describes a specific idea. Key Insight: Present perfect (has/have + past participle) for actions continuing to the present. ACT Tip: Context clues: time words like "yesterday," "since," "by next year".'
       }
     }
   ]

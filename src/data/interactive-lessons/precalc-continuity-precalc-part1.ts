@@ -30,31 +30,31 @@ Rational functions are continuous except where the denominator is zero
       id: 'conti1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of definition of continuity?',
-            options: [
-              'f is continuous at x = c if',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'f is continuous at x = c if: (1) f(c) is defined, (2) lim(x→c) f(x) exists, (3) lim(x→c) f(x) = f(c)'
-          },
-          {
-            question: 'In the context of definition of continuity, which is accurate?',
+            question: 'What does "f is continuous at x = c if" refer to in precalculus?',
             options: [
               'Polynomials are continuous everywhere',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Rational functions are continuous except where the denominator is zero',
+              '(1) f(c) is defined, (2) lim(x→c) f(x) exists, (3) lim(x→c) f(x) = f(c)',
+              'you can draw the graph without lifting your pencil'
             ],
-            correctAnswer: 0,
-            explanation: 'Polynomials are continuous everywhere'
+            correctAnswer: 2,
+            explanation: 'Correct — f is continuous at x = c if: (1) f(c) is defined, (2) lim(x→c) f(x) exists, (3) lim(x→c) f(x) = f(c). The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Polynomials are continuous everywhere?',
+            options: [
+              'Rational functions are continuous except where the denominator is zero',
+              'you can draw the graph without lifting your pencil',
+              '(1) f(c) is defined, (2) lim(x→c) f(x) exists, (3) lim(x→c) f(x) = f(c)',
+              'Polynomials are continuous everywhere'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Polynomials are continuous everywhere. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,24 @@ Rational functions are continuous except where the denominator is zero
       id: 'conti1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'f is continuous at x = c if',
-            options: ['(1) f(c) is defined, (2) lim(x→c) f(x) exists, (3)', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['Rational functions are continuous except where the denominator is zero', 'you can draw the graph without lifting your pencil', '(1) f(c) is defined, (2) lim(x→c) f(x) exists, (3) lim(x→c) f(x) = f(c)', 'Polynomials are continuous everywhere']
           },
           {
             label: 'Intuition',
-            options: ['you can draw the graph without lifting your pencil', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
-          },
-          {
-            label: 'Polynomials are continuous everywhere',
-            options: ['Polynomials are continuous everywhere', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['(1) f(c) is defined, (2) lim(x→c) f(x) exists, (3) lim(x→c) f(x) = f(c)', 'Polynomials are continuous everywhere', 'Rational functions are continuous except where the denominator is zero', 'you can draw the graph without lifting your pencil']
           }
         ],
-        correctAnswers: ['(1) f(c) is defined, (2) lim(x→c) f(x) exists, (3)', 'you can draw the graph without lifting your pencil', 'Polynomials are continuous everywhere'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Definition of Continuity.'
+        correctAnswers: ['(1) f(c) is defined, (2) lim(x→c) f(x) exists, (3) lim(x→c) f(x) = f(c)', 'you can draw the graph without lifting your pencil'],
+        hint1: 'Think about what each concept specifically describes in Continuity.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Continuity describes a specific idea. f is continuous at x = c if: (1) f(c) is defined, (2) lim(x→c) f(x) exists, (3) lim(x→c) f(x) = f(c). Intuition: you can draw the graph without lifting your pencil.'
       }
     }
   ]

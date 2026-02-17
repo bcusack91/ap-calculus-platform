@@ -30,31 +30,31 @@ Use for equations like x² + y² = 25 where y isn't isolated
       id: 'chain5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of implicit differentiation?',
+            question: 'What does "Implicit differentiation" refer to in calculus?',
             options: [
-              'Implicit differentiation',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'differentiate both sides with respect to x',
+              'Use for equations like x² + y² = 25 where y isn\'t isolated',
+              'Treat y as a function of x; apply chain rule when differentiating y-terms',
+              'Collect dy/dx terms on one side, factor, and solve'
             ],
             correctAnswer: 0,
-            explanation: 'Implicit differentiation: differentiate both sides with respect to x'
+            explanation: 'Correct — Implicit differentiation: differentiate both sides with respect to x. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of implicit differentiation, which is accurate?',
+            question: 'Which of the following is true about Collect dy/dx terms on one side,…?',
             options: [
-              'Collect dy/dx terms on one side, factor, and solve',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Use for equations like x² + y² = 25 where y isn\'t isolated',
+              'differentiate both sides with respect to x',
+              'Treat y as a function of x; apply chain rule when differentiating y-terms',
+              'Collect dy/dx terms on one side, factor, and solve'
             ],
-            correctAnswer: 0,
-            explanation: 'Collect dy/dx terms on one side, factor, and solve'
+            correctAnswer: 3,
+            explanation: 'Correct — Collect dy/dx terms on one side, factor, and solve. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Use for equations like x² + y² = 25 where y isn't isolated
       id: 'chain5-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to implicit differentiation?',
+            question: 'Which statement about Use for equations like x² + y² = 25… is correct?',
             options: [
+              'Treat y as a function of x; apply chain rule when differentiating y-terms',
               'Use for equations like x² + y² = 25 where y isn\'t isolated',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'Collect dy/dx terms on one side, factor, and solve',
+              'differentiate both sides with respect to x'
             ],
-            correctAnswer: 0,
-            explanation: 'Use for equations like x² + y² = 25 where y isn\'t isolated'
+            correctAnswer: 1,
+            explanation: 'Correct — Use for equations like x² + y² = 25 where y isn\'t isolated. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Use for equations like x² + y² = 25 where y isn't isolated
       id: 'chain5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Implicit differentiation',
-            options: ['differentiate both sides with respect to x', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Collect dy/dx terms on one side, factor, and solve', 'Use for equations like x² + y² = 25 where y isn\'t isolated', 'Treat y as a function of x; apply chain rule when differentiating y-terms', 'differentiate both sides with respect to x']
           },
           {
-            label: 'Treat y as a function of x; apply chain rule when differentiating y-terms',
-            options: ['Treat y as a function of x; apply chain rule when ', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Treat y as a function of x; apply chain…',
+            options: ['differentiate both sides with respect to x', 'Use for equations like x² + y² = 25 where y isn\'t isolated', 'Treat y as a function of x; apply chain rule when differentiating y-terms', 'Collect dy/dx terms on one side, factor, and solve']
           },
           {
-            label: 'Collect dy/dx terms on one side, factor, and solve',
-            options: ['Collect dy/dx terms on one side, factor, and solve', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Collect dy/dx terms on one side,…',
+            options: ['Treat y as a function of x; apply chain rule when differentiating y-terms', 'Collect dy/dx terms on one side, factor, and solve', 'Use for equations like x² + y² = 25 where y isn\'t isolated', 'differentiate both sides with respect to x']
           }
         ],
-        correctAnswers: ['differentiate both sides with respect to x', 'Treat y as a function of x; apply chain rule when ', 'Collect dy/dx terms on one side, factor, and solve'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Implicit Differentiation.'
+        correctAnswers: ['differentiate both sides with respect to x', 'Treat y as a function of x; apply chain rule when differentiating y-terms', 'Collect dy/dx terms on one side, factor, and solve'],
+        hint1: 'Think about what each concept specifically describes in Implicit Differentiation.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Implicit Differentiation describes a specific idea. Implicit differentiation: differentiate both sides with respect to x. Treat y as a function of x; apply chain rule when differentiating y-terms. Collect dy/dx terms on one side, factor, and solve.'
       }
     }
   ]

@@ -30,31 +30,31 @@ reinforcement scenarios
       id: 'opera7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of synthesis & ap review?',
+            question: 'Which of the following correctly describes Operant = voluntary behavior?',
             options: [
               'Operant = voluntary behavior',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'Cognitive maps (Tolman) and latent learning',
+              'Classical = involuntary responses',
+              'reinforcement scenarios'
             ],
             correctAnswer: 0,
-            explanation: 'Operant = voluntary behavior'
+            explanation: 'Correct — Operant = voluntary behavior. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of synthesis & ap review, which is accurate?',
+            question: 'Select the statement that correctly describes Cognitive maps (Tolman) and latent…:',
             options: [
-              'Cognitive maps (Tolman) and latent learning',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Classical = involuntary responses',
+              'Operant = voluntary behavior',
+              'reinforcement scenarios',
+              'Cognitive maps (Tolman) and latent learning'
             ],
-            correctAnswer: 0,
-            explanation: 'Cognitive maps (Tolman) and latent learning'
+            correctAnswer: 3,
+            explanation: 'Correct — Cognitive maps (Tolman) and latent learning. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ reinforcement scenarios
       id: 'opera7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Operant = voluntary behavior',
-            options: ['Operant = voluntary behavior', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Classical = involuntary responses', 'Operant = voluntary behavior', 'reinforcement scenarios', 'Cognitive maps (Tolman) and latent learning']
           },
           {
             label: 'Classical = involuntary responses',
-            options: ['Classical = involuntary responses', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Cognitive maps (Tolman) and latent learning', 'reinforcement scenarios', 'Classical = involuntary responses', 'Operant = voluntary behavior']
           },
           {
-            label: 'Cognitive maps (Tolman) and latent learning',
-            options: ['Cognitive maps (Tolman) and latent learning', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            label: 'Cognitive maps (Tolman) and latent…',
+            options: ['Cognitive maps (Tolman) and latent learning', 'reinforcement scenarios', 'Classical = involuntary responses', 'Operant = voluntary behavior']
           }
         ],
         correctAnswers: ['Operant = voluntary behavior', 'Classical = involuntary responses', 'Cognitive maps (Tolman) and latent learning'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Synthesis & AP Review.'
+        hint1: 'Think about what each concept specifically describes in Synthesis & AP Review.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Synthesis & AP Review describes a specific idea. Operant = voluntary behavior. Classical = involuntary responses. Cognitive maps (Tolman) and latent learning.'
       }
     }
   ]

@@ -30,31 +30,31 @@ R = 1/lim|cₙ|^(1/n)
       id: 'power3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of finding the radius?',
-            options: [
-              'Use the Ratio Test',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'Use the Ratio Test: L = lim|cₙ₊₁(x-a)ⁿ⁺¹/(cₙ(x-a)ⁿ)| < 1'
-          },
-          {
-            question: 'In the context of finding the radius, which is accurate?',
+            question: 'Which of the following correctly describes Use the Ratio Test?',
             options: [
               'Or use R = 1/lim|cₙ₊₁/cₙ|',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'L = lim|cₙ₊₁(x-a)ⁿ⁺¹/(cₙ(x-a)ⁿ)| < 1',
+              'Solve for |x-a| < R where R = lim|cₙ/cₙ₊₁|',
+              'R = 1/lim|cₙ|^(1/n)'
             ],
-            correctAnswer: 0,
-            explanation: 'Or use R = 1/lim|cₙ₊₁/cₙ|'
+            correctAnswer: 1,
+            explanation: 'Correct — Use the Ratio Test: L = lim|cₙ₊₁(x-a)ⁿ⁺¹/(cₙ(x-a)ⁿ)| < 1. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Or use R = 1/lim|cₙ₊₁/cₙ|?',
+            options: [
+              'R = 1/lim|cₙ|^(1/n)',
+              'L = lim|cₙ₊₁(x-a)ⁿ⁺¹/(cₙ(x-a)ⁿ)| < 1',
+              'Or use R = 1/lim|cₙ₊₁/cₙ|',
+              'Solve for |x-a| < R where R = lim|cₙ/cₙ₊₁|'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Or use R = 1/lim|cₙ₊₁/cₙ|. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ R = 1/lim|cₙ|^(1/n)
       id: 'power3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to finding the radius?',
+            question: 'Regarding Finding the Radius, which correctly describes Root test can also be used?',
             options: [
               'R = 1/lim|cₙ|^(1/n)',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'Solve for |x-a| < R where R = lim|cₙ/cₙ₊₁|',
+              'L = lim|cₙ₊₁(x-a)ⁿ⁺¹/(cₙ(x-a)ⁿ)| < 1',
+              'Or use R = 1/lim|cₙ₊₁/cₙ|'
             ],
             correctAnswer: 0,
-            explanation: 'Root test can also be used: R = 1/lim|cₙ|^(1/n)'
+            explanation: 'Correct — Root test can also be used: R = 1/lim|cₙ|^(1/n). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,24 @@ R = 1/lim|cₙ|^(1/n)
       id: 'power3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Use the Ratio Test',
-            options: ['L = lim|cₙ₊₁(x-a)ⁿ⁺¹/(cₙ(x-a)ⁿ)| < 1', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Solve for |x-a| < R where R = lim|cₙ/cₙ₊₁|', 'R = 1/lim|cₙ|^(1/n)', 'L = lim|cₙ₊₁(x-a)ⁿ⁺¹/(cₙ(x-a)ⁿ)| < 1', 'Or use R = 1/lim|cₙ₊₁/cₙ|']
           },
           {
-            label: 'Solve for |x-a| < R where R = lim|cₙ/cₙ₊₁|',
-            options: ['Solve for |x-a| < R where R = lim|cₙ/cₙ₊₁|', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
-          },
-          {
-            label: 'Or use R = 1/lim|cₙ₊₁/cₙ|',
-            options: ['Or use R = 1/lim|cₙ₊₁/cₙ|', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Root test can also be used',
+            options: ['R = 1/lim|cₙ|^(1/n)', 'L = lim|cₙ₊₁(x-a)ⁿ⁺¹/(cₙ(x-a)ⁿ)| < 1', 'Solve for |x-a| < R where R = lim|cₙ/cₙ₊₁|', 'Or use R = 1/lim|cₙ₊₁/cₙ|']
           }
         ],
-        correctAnswers: ['L = lim|cₙ₊₁(x-a)ⁿ⁺¹/(cₙ(x-a)ⁿ)| < 1', 'Solve for |x-a| < R where R = lim|cₙ/cₙ₊₁|', 'Or use R = 1/lim|cₙ₊₁/cₙ|'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Finding the Radius.'
+        correctAnswers: ['L = lim|cₙ₊₁(x-a)ⁿ⁺¹/(cₙ(x-a)ⁿ)| < 1', 'R = 1/lim|cₙ|^(1/n)'],
+        hint1: 'Think about what each concept specifically describes in Finding the Radius.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Finding the Radius describes a specific idea. Use the Ratio Test: L = lim|cₙ₊₁(x-a)ⁿ⁺¹/(cₙ(x-a)ⁿ)| < 1. Root test can also be used: R = 1/lim|cₙ|^(1/n).'
       }
     }
   ]

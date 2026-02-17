@@ -30,31 +30,31 @@ slant (oblique) asymptote found by polynomial division
       id: 'ratio3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of horizontal & slant asymptotes?',
+            question: 'What does "Horizontal asymptote depends on degree…" refer to in precalculus?',
             options: [
-              'Horizontal asymptote depends on degree comparison of p(x) and q(x)',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'y = 0',
+              'slant (oblique) asymptote found by polynomial division',
+              'y = (leading coeff of p)/(leading coeff of q)',
+              'Horizontal asymptote depends on degree comparison of p(x) and q(x)'
             ],
-            correctAnswer: 0,
-            explanation: 'Horizontal asymptote depends on degree comparison of p(x) and q(x)'
+            correctAnswer: 3,
+            explanation: 'Correct — Horizontal asymptote depends on degree comparison of p(x) and q(x). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of horizontal & slant asymptotes, which is accurate?',
+            question: 'Which of the following is true about Degrees equal?',
             options: [
-              'y = (leading coeff of p)/(leading coeff of q)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'slant (oblique) asymptote found by polynomial division',
+              'Horizontal asymptote depends on degree comparison of p(x) and q(x)',
+              'y = 0',
+              'y = (leading coeff of p)/(leading coeff of q)'
             ],
-            correctAnswer: 0,
-            explanation: 'Degrees equal: y = (leading coeff of p)/(leading coeff of q)'
+            correctAnswer: 3,
+            explanation: 'Correct — Degrees equal: y = (leading coeff of p)/(leading coeff of q). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ slant (oblique) asymptote found by polynomial division
       id: 'ratio3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Horizontal asymptote depends on degree comparison of p(x) and q(x)',
-            options: ['Horizontal asymptote depends on degree comparison ', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
-          },
-          {
             label: 'Degree of numerator < degree of denominator',
-            options: ['y = 0', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['y = 0', 'Horizontal asymptote depends on degree comparison of p(x) and q(x)', 'y = (leading coeff of p)/(leading coeff of q)', 'slant (oblique) asymptote found by polynomial division']
           },
           {
             label: 'Degrees equal',
-            options: ['y = (leading coeff of p)/(leading coeff of q)', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['slant (oblique) asymptote found by polynomial division', 'y = 0', 'y = (leading coeff of p)/(leading coeff of q)', 'Horizontal asymptote depends on degree comparison of p(x) and q(x)']
+          },
+          {
+            label: 'Degree of numerator = denominator + 1',
+            options: ['y = 0', 'y = (leading coeff of p)/(leading coeff of q)', 'Horizontal asymptote depends on degree comparison of p(x) and q(x)', 'slant (oblique) asymptote found by polynomial division']
           }
         ],
-        correctAnswers: ['Horizontal asymptote depends on degree comparison ', 'y = 0', 'y = (leading coeff of p)/(leading coeff of q)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Horizontal & Slant Asymptotes.'
+        correctAnswers: ['y = 0', 'y = (leading coeff of p)/(leading coeff of q)', 'slant (oblique) asymptote found by polynomial division'],
+        hint1: 'Think about what each concept specifically describes in Horizontal & Slant Asymptotes.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Horizontal & Slant Asymptotes describes a specific idea. Degree of numerator < degree of denominator: y = 0. Degrees equal: y = (leading coeff of p)/(leading coeff of q). Degree of numerator = denominator + 1: slant (oblique) asymptote found by polynomial division.'
       }
     }
   ]

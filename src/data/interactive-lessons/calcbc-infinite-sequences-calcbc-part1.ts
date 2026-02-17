@@ -30,31 +30,31 @@ A sequence converges if and only if the terms get arbitrarily close to L
       id: 'infin1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of sequences & convergence?',
-            options: [
-              'Sequence {aₙ}',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'Sequence {aₙ}: an ordered list a₁, a₂, a₃, ...'
-          },
-          {
-            question: 'In the context of sequences & convergence, which is accurate?',
+            question: 'Which statement accurately explains Sequence {aₙ}?',
             options: [
               'the limit does not exist or is ±∞',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'A sequence converges if and only if the terms get arbitrarily close to L',
+              'lim(n→∞) aₙ = L (approaches a finite limit)',
+              'an ordered list a₁, a₂, a₃, ...'
             ],
-            correctAnswer: 0,
-            explanation: 'Divergent: the limit does not exist or is ±∞'
+            correctAnswer: 3,
+            explanation: 'Correct — Sequence {aₙ}: an ordered list a₁, a₂, a₃, ... The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of ∮ Infinite Sequences, which explains Divergent?',
+            options: [
+              'lim(n→∞) aₙ = L (approaches a finite limit)',
+              'A sequence converges if and only if the terms get arbitrarily close to L',
+              'the limit does not exist or is ±∞',
+              'an ordered list a₁, a₂, a₃, ...'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Divergent: the limit does not exist or is ±∞. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ A sequence converges if and only if the terms get arbitrarily close to L
       id: 'infin1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to sequences & convergence?',
+            question: 'Regarding ∮ Infinite Sequences, which correctly describes A sequence converges if and only if the…?',
             options: [
-              'A sequence converges if and only if the terms get arbitrarily close to L',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'lim(n→∞) aₙ = L (approaches a finite limit)',
+              'the limit does not exist or is ±∞',
+              'an ordered list a₁, a₂, a₃, ...',
+              'A sequence converges if and only if the terms get arbitrarily close to L'
             ],
-            correctAnswer: 0,
-            explanation: 'A sequence converges if and only if the terms get arbitrarily close to L'
+            correctAnswer: 3,
+            explanation: 'Correct — A sequence converges if and only if the terms get arbitrarily close to L. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ A sequence converges if and only if the terms get arbitrarily close to L
       id: 'infin1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Sequence {aₙ}',
-            options: ['an ordered list a₁, a₂, a₃, ...', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['an ordered list a₁, a₂, a₃, ...', 'lim(n→∞) aₙ = L (approaches a finite limit)', 'A sequence converges if and only if the terms get arbitrarily close to L', 'the limit does not exist or is ±∞']
           },
           {
             label: 'Convergent',
-            options: ['lim(n→∞) aₙ = L (approaches a finite limit)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['lim(n→∞) aₙ = L (approaches a finite limit)', 'A sequence converges if and only if the terms get arbitrarily close to L', 'an ordered list a₁, a₂, a₃, ...', 'the limit does not exist or is ±∞']
           },
           {
             label: 'Divergent',
-            options: ['the limit does not exist or is ±∞', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['A sequence converges if and only if the terms get arbitrarily close to L', 'the limit does not exist or is ±∞', 'an ordered list a₁, a₂, a₃, ...', 'lim(n→∞) aₙ = L (approaches a finite limit)']
           }
         ],
         correctAnswers: ['an ordered list a₁, a₂, a₃, ...', 'lim(n→∞) aₙ = L (approaches a finite limit)', 'the limit does not exist or is ±∞'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Sequences & Convergence.'
+        hint1: 'Think about what each concept specifically describes in ∮ Infinite Sequences.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in ∮ Infinite Sequences describes a specific idea. Sequence {aₙ}: an ordered list a₁, a₂, a₃, ... Convergent: lim(n→∞) aₙ = L (approaches a finite limit). Divergent: the limit does not exist or is ±∞.'
       }
     }
   ]

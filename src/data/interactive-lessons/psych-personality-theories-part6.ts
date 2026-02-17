@@ -30,31 +30,31 @@ Applying social-cognitive theory
       id: 'perso6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of problem-solving workshop?',
+            question: 'What does "Comparing personality perspectives" refer to in psychology?',
             options: [
+              'Applying social-cognitive theory',
+              'Evaluating personality assessments',
               'Comparing personality perspectives',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'Identifying defense mechanisms in scenarios'
             ],
-            correctAnswer: 0,
-            explanation: 'Comparing personality perspectives'
+            correctAnswer: 2,
+            explanation: 'Correct — Comparing personality perspectives. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of problem-solving workshop, which is accurate?',
+            question: 'In the context of Problem-Solving Workshop, which explains Evaluating personality assessments?',
             options: [
               'Evaluating personality assessments',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Applying social-cognitive theory',
+              'Identifying defense mechanisms in scenarios',
+              'Comparing personality perspectives'
             ],
             correctAnswer: 0,
-            explanation: 'Evaluating personality assessments'
+            explanation: 'Correct — Evaluating personality assessments. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Applying social-cognitive theory
       id: 'perso6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Comparing personality perspectives',
-            options: ['Comparing personality perspectives', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Identifying defense mechanisms in scenarios', 'Applying social-cognitive theory', 'Comparing personality perspectives', 'Evaluating personality assessments']
           },
           {
-            label: 'Identifying defense mechanisms in scenarios',
-            options: ['Identifying defense mechanisms in scenarios', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            label: 'Identifying defense mechanisms in…',
+            options: ['Comparing personality perspectives', 'Applying social-cognitive theory', 'Identifying defense mechanisms in scenarios', 'Evaluating personality assessments']
           },
           {
             label: 'Evaluating personality assessments',
-            options: ['Evaluating personality assessments', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Comparing personality perspectives', 'Identifying defense mechanisms in scenarios', 'Applying social-cognitive theory', 'Evaluating personality assessments']
           }
         ],
         correctAnswers: ['Comparing personality perspectives', 'Identifying defense mechanisms in scenarios', 'Evaluating personality assessments'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving Workshop.'
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Comparing personality perspectives. Identifying defense mechanisms in scenarios. Evaluating personality assessments.'
       }
     }
   ]

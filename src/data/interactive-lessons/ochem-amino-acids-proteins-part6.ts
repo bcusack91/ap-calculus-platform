@@ -30,31 +30,31 @@ Analyzing electrophoresis results
       id: 'amino6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of problem-solving workshop?',
+            question: 'Which statement accurately explains Determining amino acid charge at…?',
             options: [
+              'Analyzing electrophoresis results',
               'Determining amino acid charge at different pH values',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'Drawing peptide structures',
+              'Predicting protein structure from sequence'
             ],
-            correctAnswer: 0,
-            explanation: 'Determining amino acid charge at different pH values'
+            correctAnswer: 1,
+            explanation: 'Correct — Determining amino acid charge at different pH values. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of problem-solving workshop, which is accurate?',
+            question: 'In the context of Problem-Solving Workshop, which explains Predicting protein structure from…?',
             options: [
+              'Drawing peptide structures',
               'Predicting protein structure from sequence',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Determining amino acid charge at different pH values',
+              'Analyzing electrophoresis results'
             ],
-            correctAnswer: 0,
-            explanation: 'Predicting protein structure from sequence'
+            correctAnswer: 1,
+            explanation: 'Correct — Predicting protein structure from sequence. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Analyzing electrophoresis results
       id: 'amino6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Determining amino acid charge at different pH values',
-            options: ['Determining amino acid charge at different pH valu', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Determining amino acid charge at…',
+            options: ['Drawing peptide structures', 'Analyzing electrophoresis results', 'Determining amino acid charge at different pH values', 'Predicting protein structure from sequence']
           },
           {
             label: 'Drawing peptide structures',
-            options: ['Drawing peptide structures', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Predicting protein structure from sequence', 'Drawing peptide structures', 'Analyzing electrophoresis results', 'Determining amino acid charge at different pH values']
           },
           {
-            label: 'Predicting protein structure from sequence',
-            options: ['Predicting protein structure from sequence', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Predicting protein structure from…',
+            options: ['Drawing peptide structures', 'Predicting protein structure from sequence', 'Analyzing electrophoresis results', 'Determining amino acid charge at different pH values']
           }
         ],
-        correctAnswers: ['Determining amino acid charge at different pH valu', 'Drawing peptide structures', 'Predicting protein structure from sequence'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving Workshop.'
+        correctAnswers: ['Determining amino acid charge at different pH values', 'Drawing peptide structures', 'Predicting protein structure from sequence'],
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Determining amino acid charge at different pH values. Drawing peptide structures. Predicting protein structure from sequence.'
       }
     }
   ]

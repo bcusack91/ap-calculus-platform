@@ -18,20 +18,31 @@ Point-slope form: y - y₁ = m(x - x₁).
       id: 'act-c1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes slope-intercept form?',
+            question: 'Which statement accurately explains Slope-intercept form?',
             options: [
-              'Slope-intercept form is a key concept for ACT Math',
-              'Point-slope form: y - y₁ = m(x - x₁)',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'Standard form: Ax + By = C.',
+              'y - y₁ = m(x - x₁).',
+              'Convert between forms as needed by the ACT question.',
+              'y = mx + b (m = slope, b = y-intercept).'
             ],
-            correctAnswer: 0,
-            explanation: 'Slope-intercept form: y = mx + b (m = slope, b = y-intercept)'
+            correctAnswer: 3,
+            explanation: 'Correct — Slope-intercept form: y = mx + b (m = slope, b = y-intercept). The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Key Insight?',
+            options: [
+              'y = mx + b (m = slope, b = y-intercept).',
+              'Convert between forms as needed by the ACT question.',
+              'y - y₁ = m(x - x₁).',
+              'Standard form: Ax + By = C.'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Key Insight: Standard form: Ax + By = C. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Point-slope form: y - y₁ = m(x - x₁).
       id: 'act-c1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for graphing lines?',
+            question: 'Regarding Coordinate Geometry, which correctly describes ACT Tip?',
             options: [
-              'Standard form: Ax + By = C',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'y - y₁ = m(x - x₁).',
+              'y = mx + b (m = slope, b = y-intercept).',
+              'Convert between forms as needed by the ACT question.',
+              'Standard form: Ax + By = C.'
             ],
-            correctAnswer: 0,
-            explanation: 'Standard form: Ax + By = C'
+            correctAnswer: 2,
+            explanation: 'Correct — ACT Tip: Convert between forms as needed by the ACT question. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Point-slope form: y - y₁ = m(x - x₁).
       id: 'act-c1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Graphing Lines:',
-            options: ['Slope-intercept form: y = mx + b (m = slope, b = y', 'Point-slope form: y - y₁ = m(x - x₁)', 'Not applicable', 'None of these']
+            label: 'Slope-intercept form',
+            options: ['y - y₁ = m(x - x₁).', 'y = mx + b (m = slope, b = y-intercept).', 'Convert between forms as needed by the ACT question.', 'Standard form: Ax + By = C.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Standard form: Ax + By = C', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Point-slope form',
+            options: ['y - y₁ = m(x - x₁).', 'y = mx + b (m = slope, b = y-intercept).', 'Standard form: Ax + By = C.', 'Convert between forms as needed by the ACT question.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['Standard form: Ax + By = C.', 'y = mx + b (m = slope, b = y-intercept).', 'Convert between forms as needed by the ACT question.', 'y - y₁ = m(x - x₁).']
           }
         ],
-        correctAnswers: ['Slope-intercept form: y = mx + b (m = slope, b = y', 'Standard form: Ax + By = C'],
-        hint1: 'Think about graphing lines',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Slope-intercept form: y = mx + b (m = slope, b = y-intercept). Standard form: Ax + By = C.'
+        correctAnswers: ['y = mx + b (m = slope, b = y-intercept).', 'y - y₁ = m(x - x₁).', 'Standard form: Ax + By = C.'],
+        hint1: 'Think about what each concept specifically describes in Coordinate Geometry.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Coordinate Geometry describes a specific idea. Slope-intercept form: y = mx + b (m = slope, b = y-intercept). Point-slope form: y - y₁ = m(x - x₁). Key Insight: Standard form: Ax + By = C.'
       }
     }
   ]

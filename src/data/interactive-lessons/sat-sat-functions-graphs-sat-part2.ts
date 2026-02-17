@@ -18,20 +18,31 @@ Range: all possible output (y) values.
       id: 'sat-f2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes domain?',
+            question: 'Which statement accurately explains Domain?',
             options: [
-              'Domain is a fundamental concept in SAT Math',
-              'Range: all possible output (y) values',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'Restrictions: no division by zero, no square root of negatives (for reals).',
+              'From a graph: domain is the horizontal extent, range is the vertical extent.',
+              'all possible input (x) values.',
+              'all possible output (y) values.'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Domain: all possible input (x) values. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              'Restrictions: no division by zero, no square root of negatives (for reals).',
+              'all possible output (y) values.',
+              'From a graph: domain is the horizontal extent, range is the vertical extent.',
+              'all possible input (x) values.'
             ],
             correctAnswer: 0,
-            explanation: 'Domain: all possible input (x) values'
+            explanation: 'Correct — Key Insight: Restrictions: no division by zero, no square root of negatives (for reals). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Range: all possible output (y) values.
       id: 'sat-f2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for domain and range?',
+            question: 'Regarding Domain and Range, which correctly describes SAT Tip?',
             options: [
-              'Restrictions: no division by zero, no square root of negatives (for reals)',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'Restrictions: no division by zero, no square root of negatives (for reals).',
+              'all possible input (x) values.',
+              'all possible output (y) values.',
+              'From a graph: domain is the horizontal extent, range is the vertical extent.'
             ],
-            correctAnswer: 0,
-            explanation: 'Restrictions: no division by zero, no square root of negatives (for reals)'
+            correctAnswer: 3,
+            explanation: 'Correct — SAT Tip: From a graph: domain is the horizontal extent, range is the vertical extent. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Range: all possible output (y) values.
       id: 'sat-f2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Domain and Range:',
-            options: ['Domain: all possible input (x) values', 'Range: all possible output (y) values', 'Not applicable', 'None of these']
+            label: 'Domain',
+            options: ['all possible output (y) values.', 'all possible input (x) values.', 'Restrictions: no division by zero, no square root of negatives (for reals).', 'From a graph: domain is the horizontal extent, range is the vertical extent.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Restrictions: no division by zero, no square root ', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Range',
+            options: ['all possible input (x) values.', 'all possible output (y) values.', 'From a graph: domain is the horizontal extent, range is the vertical extent.', 'Restrictions: no division by zero, no square root of negatives (for reals).']
+          },
+          {
+            label: 'Key Insight',
+            options: ['From a graph: domain is the horizontal extent, range is the vertical extent.', 'Restrictions: no division by zero, no square root of negatives (for reals).', 'all possible input (x) values.', 'all possible output (y) values.']
           }
         ],
-        correctAnswers: ['Domain: all possible input (x) values', 'Restrictions: no division by zero, no square root '],
-        hint1: 'Think about domain and range',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'Domain: all possible input (x) values. Restrictions: no division by zero, no square root of negatives (for reals).'
+        correctAnswers: ['all possible input (x) values.', 'all possible output (y) values.', 'Restrictions: no division by zero, no square root of negatives (for reals).'],
+        hint1: 'Think about what each concept specifically describes in Domain and Range.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Domain and Range describes a specific idea. Domain: all possible input (x) values. Range: all possible output (y) values. Key Insight: Restrictions: no division by zero, no square root of negatives (for reals).'
       }
     }
   ]

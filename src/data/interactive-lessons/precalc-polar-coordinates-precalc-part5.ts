@@ -30,31 +30,31 @@ n equally spaced roots on a circle of radius r^(1/n)
       id: 'polar5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of complex numbers in polar form?',
+            question: 'Which of the following correctly describes Complex number?',
             options: [
-              'Complex number',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'z = a + bi plotted as (a, b) in complex plane',
+              'n equally spaced roots on a circle of radius r^(1/n)',
+              'z = r(cos θ + i sin θ) where r = |z|',
+              'zⁿ = rⁿ(cos(nθ) + i sin(nθ))'
             ],
             correctAnswer: 0,
-            explanation: 'Complex number: z = a + bi plotted as (a, b) in complex plane'
+            explanation: 'Correct — Complex number: z = a + bi plotted as (a, b) in complex plane. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of complex numbers in polar form, which is accurate?',
+            question: 'In the context of Complex Numbers in Polar Form, which explains De Moivre\'s Theorem?',
             options: [
               'zⁿ = rⁿ(cos(nθ) + i sin(nθ))',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'z = r(cos θ + i sin θ) where r = |z|',
+              'z = a + bi plotted as (a, b) in complex plane',
+              'n equally spaced roots on a circle of radius r^(1/n)'
             ],
             correctAnswer: 0,
-            explanation: 'De Moivre\'s Theorem: zⁿ = rⁿ(cos(nθ) + i sin(nθ))'
+            explanation: 'Correct — De Moivre\'s Theorem: zⁿ = rⁿ(cos(nθ) + i sin(nθ)). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ n equally spaced roots on a circle of radius r^(1/n)
       id: 'polar5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Complex number',
-            options: ['z = a + bi plotted as (a, b) in complex plane', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['z = r(cos θ + i sin θ) where r = |z|', 'zⁿ = rⁿ(cos(nθ) + i sin(nθ))', 'n equally spaced roots on a circle of radius r^(1/n)', 'z = a + bi plotted as (a, b) in complex plane']
           },
           {
             label: 'Polar (trigonometric) form',
-            options: ['z = r(cos θ + i sin θ) where r = |z|', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['n equally spaced roots on a circle of radius r^(1/n)', 'zⁿ = rⁿ(cos(nθ) + i sin(nθ))', 'z = r(cos θ + i sin θ) where r = |z|', 'z = a + bi plotted as (a, b) in complex plane']
           },
           {
             label: 'De Moivre\'s Theorem',
-            options: ['zⁿ = rⁿ(cos(nθ) + i sin(nθ))', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['zⁿ = rⁿ(cos(nθ) + i sin(nθ))', 'n equally spaced roots on a circle of radius r^(1/n)', 'z = a + bi plotted as (a, b) in complex plane', 'z = r(cos θ + i sin θ) where r = |z|']
           }
         ],
         correctAnswers: ['z = a + bi plotted as (a, b) in complex plane', 'z = r(cos θ + i sin θ) where r = |z|', 'zⁿ = rⁿ(cos(nθ) + i sin(nθ))'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Complex Numbers in Polar Form.'
+        hint1: 'Think about what each concept specifically describes in Complex Numbers in Polar Form.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Complex Numbers in Polar Form describes a specific idea. Complex number: z = a + bi plotted as (a, b) in complex plane. Polar (trigonometric) form: z = r(cos θ + i sin θ) where r = |z|. De Moivre\'s Theorem: zⁿ = rⁿ(cos(nθ) + i sin(nθ)).'
       }
     }
   ]

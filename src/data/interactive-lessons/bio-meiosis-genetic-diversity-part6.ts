@@ -19,31 +19,31 @@ export const bioMeiosisPart6Data = {
       id: 'meio6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes chromosome counting through meiosis stages?',
+            question: 'Which of the following correctly describes Chromosome counting through meiosis…?',
             options: [
               'Chromosome counting through meiosis stages',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Predicting gamete genotypes',
+              'Comparing mitosis and meiosis',
+              'Nondisjunction and its consequences'
             ],
             correctAnswer: 0,
-            explanation: 'Chromosome counting through meiosis stages'
+            explanation: 'Correct — Chromosome counting through meiosis stages. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of problem-solving, which statement is accurate?',
+            question: 'Which of the following is true about Comparing mitosis and meiosis?',
             options: [
+              'Chromosome counting through meiosis stages',
+              'Nondisjunction and its consequences',
               'Comparing mitosis and meiosis',
-              'segats sisoiem hguorht gnitnuoc emosomorhC',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Predicting gamete genotypes'
             ],
-            correctAnswer: 0,
-            explanation: 'Comparing mitosis and meiosis'
+            correctAnswer: 2,
+            explanation: 'Correct — Comparing mitosis and meiosis. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioMeiosisPart6Data = {
       id: 'meio6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to problem-solving?',
+            question: 'Which of these accurately represents Nondisjunction and its consequences?',
             options: [
+              'Comparing mitosis and meiosis',
               'Nondisjunction and its consequences',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Chromosome counting through meiosis stages',
+              'Predicting gamete genotypes'
             ],
-            correctAnswer: 0,
-            explanation: 'Nondisjunction and its consequences'
+            correctAnswer: 1,
+            explanation: 'Correct — Nondisjunction and its consequences. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioMeiosisPart6Data = {
       id: 'meio6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Chromosome counting through meiosis stages is important in problem-solving because',
-            options: ['Chromosome counting through meiosis stages', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Chromosome counting through meiosis…',
+            options: ['Chromosome counting through meiosis stages', 'Nondisjunction and its consequences', 'Comparing mitosis and meiosis', 'Predicting gamete genotypes']
           },
           {
-            label: 'Predicting gamete genotypes is important in problem-solving because',
-            options: ['Predicting gamete genotypes', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Predicting gamete genotypes',
+            options: ['Chromosome counting through meiosis stages', 'Predicting gamete genotypes', 'Nondisjunction and its consequences', 'Comparing mitosis and meiosis']
           },
           {
-            label: 'Comparing mitosis and meiosis is important in problem-solving because',
-            options: ['Comparing mitosis and meiosis', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Comparing mitosis and meiosis',
+            options: ['Comparing mitosis and meiosis', 'Chromosome counting through meiosis stages', 'Nondisjunction and its consequences', 'Predicting gamete genotypes']
           }
         ],
         correctAnswers: ['Chromosome counting through meiosis stages', 'Predicting gamete genotypes', 'Comparing mitosis and meiosis'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving.'
+        hint1: 'Think about what each concept specifically describes in Meiosis: Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Meiosis: Problem-Solving Workshop describes a specific idea. Chromosome counting through meiosis stages. Predicting gamete genotypes. Comparing mitosis and meiosis.'
       }
     }
   ]

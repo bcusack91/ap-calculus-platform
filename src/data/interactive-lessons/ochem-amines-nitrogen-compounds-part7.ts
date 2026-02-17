@@ -30,31 +30,31 @@ amine properties and reactions
       id: 'amine7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of synthesis & review?',
+            question: 'Which statement accurately explains Amines are fundamental in biochemistry…?',
             options: [
+              'amine properties and reactions',
+              'Basicity and nucleophilicity make amines versatile',
               'Amines are fundamental in biochemistry (amino acids, neurotransmitters)',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'Diazonium chemistry enables aromatic substitutions'
             ],
-            correctAnswer: 0,
-            explanation: 'Amines are fundamental in biochemistry (amino acids, neurotransmitters)'
+            correctAnswer: 2,
+            explanation: 'Correct — Amines are fundamental in biochemistry (amino acids, neurotransmitters). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of synthesis & review, which is accurate?',
+            question: 'Which of the following is true about Diazonium chemistry enables aromatic…?',
             options: [
+              'amine properties and reactions',
               'Diazonium chemistry enables aromatic substitutions',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Basicity and nucleophilicity make amines versatile',
+              'Amines are fundamental in biochemistry (amino acids, neurotransmitters)'
             ],
-            correctAnswer: 0,
-            explanation: 'Diazonium chemistry enables aromatic substitutions'
+            correctAnswer: 1,
+            explanation: 'Correct — Diazonium chemistry enables aromatic substitutions. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ amine properties and reactions
       id: 'amine7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Amines are fundamental in biochemistry (amino acids, neurotransmitters)',
-            options: ['Amines are fundamental in biochemistry (amino acid', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Amines are fundamental in biochemistry…',
+            options: ['Basicity and nucleophilicity make amines versatile', 'Amines are fundamental in biochemistry (amino acids, neurotransmitters)', 'amine properties and reactions', 'Diazonium chemistry enables aromatic substitutions']
           },
           {
-            label: 'Basicity and nucleophilicity make amines versatile',
-            options: ['Basicity and nucleophilicity make amines versatile', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Basicity and nucleophilicity make…',
+            options: ['Amines are fundamental in biochemistry (amino acids, neurotransmitters)', 'Diazonium chemistry enables aromatic substitutions', 'Basicity and nucleophilicity make amines versatile', 'amine properties and reactions']
           },
           {
-            label: 'Diazonium chemistry enables aromatic substitutions',
-            options: ['Diazonium chemistry enables aromatic substitutions', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Diazonium chemistry enables aromatic…',
+            options: ['Basicity and nucleophilicity make amines versatile', 'Amines are fundamental in biochemistry (amino acids, neurotransmitters)', 'amine properties and reactions', 'Diazonium chemistry enables aromatic substitutions']
           }
         ],
-        correctAnswers: ['Amines are fundamental in biochemistry (amino acid', 'Basicity and nucleophilicity make amines versatile', 'Diazonium chemistry enables aromatic substitutions'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Synthesis & Review.'
+        correctAnswers: ['Amines are fundamental in biochemistry (amino acids, neurotransmitters)', 'Basicity and nucleophilicity make amines versatile', 'Diazonium chemistry enables aromatic substitutions'],
+        hint1: 'Think about what each concept specifically describes in Synthesis & Review.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Synthesis & Review describes a specific idea. Amines are fundamental in biochemistry (amino acids, neurotransmitters). Basicity and nucleophilicity make amines versatile. Diazonium chemistry enables aromatic substitutions.'
       }
     }
   ]

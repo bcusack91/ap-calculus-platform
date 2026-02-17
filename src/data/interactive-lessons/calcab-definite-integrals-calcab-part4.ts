@@ -30,31 +30,31 @@ This connects differentiation and integration as inverse processes
       id: 'defin4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of fundamental theorem of calculus (part 1)?',
+            question: 'What does "FTC Part 1" refer to in calculus?',
             options: [
-              'FTC Part 1',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'd/dx[∫ₐˣ f(t)dt] = f(x)',
+              'If F(x) = ∫ₐˣ f(t)dt, then F\'(x) = f(x)',
+              'This connects differentiation and integration as inverse processes',
+              'd/dx[∫ₐ^(g(x)) f(t)dt] = f(g(x)) · g\'(x)'
             ],
             correctAnswer: 0,
-            explanation: 'FTC Part 1: d/dx[∫ₐˣ f(t)dt] = f(x)'
+            explanation: 'Correct — FTC Part 1: d/dx[∫ₐˣ f(t)dt] = f(x). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of fundamental theorem of calculus (part 1), which is accurate?',
+            question: 'In the context of Fundamental Theorem of Calculus (Part 1), which explains With chain rule?',
             options: [
+              'If F(x) = ∫ₐˣ f(t)dt, then F\'(x) = f(x)',
               'd/dx[∫ₐ^(g(x)) f(t)dt] = f(g(x)) · g\'(x)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'd/dx[∫ₐˣ f(t)dt] = f(x)',
+              'This connects differentiation and integration as inverse processes'
             ],
-            correctAnswer: 0,
-            explanation: 'With chain rule: d/dx[∫ₐ^(g(x)) f(t)dt] = f(g(x)) · g\'(x)'
+            correctAnswer: 1,
+            explanation: 'Correct — With chain rule: d/dx[∫ₐ^(g(x)) f(t)dt] = f(g(x)) · g\'(x). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ This connects differentiation and integration as inverse processes
       id: 'defin4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to fundamental theorem of calculus (part 1)?',
+            question: 'Regarding Fundamental Theorem of Calculus (Part 1), which correctly describes This connects differentiation and…?',
             options: [
+              'If F(x) = ∫ₐˣ f(t)dt, then F\'(x) = f(x)',
+              'd/dx[∫ₐˣ f(t)dt] = f(x)',
               'This connects differentiation and integration as inverse processes',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'd/dx[∫ₐ^(g(x)) f(t)dt] = f(g(x)) · g\'(x)'
             ],
-            correctAnswer: 0,
-            explanation: 'This connects differentiation and integration as inverse processes'
+            correctAnswer: 2,
+            explanation: 'Correct — This connects differentiation and integration as inverse processes. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,24 @@ This connects differentiation and integration as inverse processes
       id: 'defin4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'FTC Part 1',
-            options: ['d/dx[∫ₐˣ f(t)dt] = f(x)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
-          },
-          {
-            label: 'If F(x) = ∫ₐˣ f(t)dt, then F\'(x) = f(x)',
-            options: ['If F(x) = ∫ₐˣ f(t)dt, then F\'(x) = f(x)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['This connects differentiation and integration as inverse processes', 'd/dx[∫ₐˣ f(t)dt] = f(x)', 'd/dx[∫ₐ^(g(x)) f(t)dt] = f(g(x)) · g\'(x)', 'If F(x) = ∫ₐˣ f(t)dt, then F\'(x) = f(x)']
           },
           {
             label: 'With chain rule',
-            options: ['d/dx[∫ₐ^(g(x)) f(t)dt] = f(g(x)) · g\'(x)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['This connects differentiation and integration as inverse processes', 'd/dx[∫ₐˣ f(t)dt] = f(x)', 'If F(x) = ∫ₐˣ f(t)dt, then F\'(x) = f(x)', 'd/dx[∫ₐ^(g(x)) f(t)dt] = f(g(x)) · g\'(x)']
           }
         ],
-        correctAnswers: ['d/dx[∫ₐˣ f(t)dt] = f(x)', 'If F(x) = ∫ₐˣ f(t)dt, then F\'(x) = f(x)', 'd/dx[∫ₐ^(g(x)) f(t)dt] = f(g(x)) · g\'(x)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Fundamental Theorem of Calculus (Part 1).'
+        correctAnswers: ['d/dx[∫ₐˣ f(t)dt] = f(x)', 'd/dx[∫ₐ^(g(x)) f(t)dt] = f(g(x)) · g\'(x)'],
+        hint1: 'Think about what each concept specifically describes in Fundamental Theorem of Calculus (Part 1).',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Fundamental Theorem of Calculus (Part 1) describes a specific idea. FTC Part 1: d/dx[∫ₐˣ f(t)dt] = f(x). With chain rule: d/dx[∫ₐ^(g(x)) f(t)dt] = f(g(x)) · g\'(x).'
       }
     }
   ]

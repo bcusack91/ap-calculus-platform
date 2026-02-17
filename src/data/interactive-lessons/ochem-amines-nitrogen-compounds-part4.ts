@@ -30,31 +30,31 @@ distinguishes 1°, 2°, 3° amines
       id: 'amine4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of amine reactions?',
-            options: [
-              'Alkylation',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
-            ],
-            correctAnswer: 0,
-            explanation: 'Alkylation: amines react with alkyl halides (over-alkylation problem)'
-          },
-          {
-            question: 'In the context of amine reactions, which is accurate?',
+            question: 'What does "Alkylation" refer to in this topic?',
             options: [
               'amines + sulfonyl chlorides',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'distinguishes 1°, 2°, 3° amines',
+              'amines react with alkyl halides (over-alkylation problem)',
+              'amines react with acid chlorides → amides'
             ],
-            correctAnswer: 0,
-            explanation: 'Sulfonamide formation: amines + sulfonyl chlorides'
+            correctAnswer: 2,
+            explanation: 'Correct — Alkylation: amines react with alkyl halides (over-alkylation problem). The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Sulfonamide formation:',
+            options: [
+              'distinguishes 1°, 2°, 3° amines',
+              'amines react with alkyl halides (over-alkylation problem)',
+              'amines react with acid chlorides → amides',
+              'amines + sulfonyl chlorides'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Sulfonamide formation: amines + sulfonyl chlorides. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ distinguishes 1°, 2°, 3° amines
       id: 'amine4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Alkylation',
-            options: ['amines react with alkyl halides (over-alkylation p', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['amines react with alkyl halides (over-alkylation problem)', 'amines react with acid chlorides → amides', 'amines + sulfonyl chlorides', 'distinguishes 1°, 2°, 3° amines']
           },
           {
             label: 'Acylation',
-            options: ['amines react with acid chlorides → amides', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['amines react with acid chlorides → amides', 'amines react with alkyl halides (over-alkylation problem)', 'amines + sulfonyl chlorides', 'distinguishes 1°, 2°, 3° amines']
           },
           {
             label: 'Sulfonamide formation',
-            options: ['amines + sulfonyl chlorides', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['distinguishes 1°, 2°, 3° amines', 'amines react with acid chlorides → amides', 'amines + sulfonyl chlorides', 'amines react with alkyl halides (over-alkylation problem)']
           }
         ],
-        correctAnswers: ['amines react with alkyl halides (over-alkylation p', 'amines react with acid chlorides → amides', 'amines + sulfonyl chlorides'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Amine Reactions.'
+        correctAnswers: ['amines react with alkyl halides (over-alkylation problem)', 'amines react with acid chlorides → amides', 'amines + sulfonyl chlorides'],
+        hint1: 'Think about what each concept specifically describes in Amine Reactions.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Amine Reactions describes a specific idea. Alkylation: amines react with alkyl halides (over-alkylation problem). Acylation: amines react with acid chlorides → amides. Sulfonamide formation: amines + sulfonyl chlorides.'
       }
     }
   ]

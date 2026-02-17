@@ -30,31 +30,31 @@ above 1500 cm⁻¹ (functional groups)
       id: 'infra2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of infrared (ir) spectroscopy?',
+            question: 'Which of the following correctly describes IR measures bond vibrations (stretching…?',
             options: [
+              'above 1500 cm⁻¹ (functional groups)',
               'IR measures bond vibrations (stretching and bending)',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'below 1500 cm⁻¹ (complex, unique)',
+              'Frequency measured in wavenumbers (cm⁻¹)'
             ],
-            correctAnswer: 0,
-            explanation: 'IR measures bond vibrations (stretching and bending)'
+            correctAnswer: 1,
+            explanation: 'Correct — IR measures bond vibrations (stretching and bending). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of infrared (ir) spectroscopy, which is accurate?',
+            question: 'In the context of Infrared (IR) Spectroscopy, which explains Fingerprint region?',
             options: [
-              'below 1500 cm⁻¹ (complex, unique)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'IR measures bond vibrations (stretching and bending)',
+              'Frequency measured in wavenumbers (cm⁻¹)',
+              'above 1500 cm⁻¹ (functional groups)',
+              'below 1500 cm⁻¹ (complex, unique)'
             ],
-            correctAnswer: 0,
-            explanation: 'Fingerprint region: below 1500 cm⁻¹ (complex, unique)'
+            correctAnswer: 3,
+            explanation: 'Correct — Fingerprint region: below 1500 cm⁻¹ (complex, unique). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,24 @@ above 1500 cm⁻¹ (functional groups)
       id: 'infra2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'IR measures bond vibrations (stretching and bending)',
-            options: ['IR measures bond vibrations (stretching and bendin', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
-          },
-          {
-            label: 'Frequency measured in wavenumbers (cm⁻¹)',
-            options: ['Frequency measured in wavenumbers (cm⁻¹)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
-          },
-          {
             label: 'Fingerprint region',
-            options: ['below 1500 cm⁻¹ (complex, unique)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Frequency measured in wavenumbers (cm⁻¹)', 'above 1500 cm⁻¹ (functional groups)', 'IR measures bond vibrations (stretching and bending)', 'below 1500 cm⁻¹ (complex, unique)']
+          },
+          {
+            label: 'Diagnostic region',
+            options: ['above 1500 cm⁻¹ (functional groups)', 'IR measures bond vibrations (stretching and bending)', 'Frequency measured in wavenumbers (cm⁻¹)', 'below 1500 cm⁻¹ (complex, unique)']
           }
         ],
-        correctAnswers: ['IR measures bond vibrations (stretching and bendin', 'Frequency measured in wavenumbers (cm⁻¹)', 'below 1500 cm⁻¹ (complex, unique)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Infrared (IR) Spectroscopy.'
+        correctAnswers: ['below 1500 cm⁻¹ (complex, unique)', 'above 1500 cm⁻¹ (functional groups)'],
+        hint1: 'Think about what each concept specifically describes in Infrared (IR) Spectroscopy.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Infrared (IR) Spectroscopy describes a specific idea. Fingerprint region: below 1500 cm⁻¹ (complex, unique). Diagnostic region: above 1500 cm⁻¹ (functional groups).'
       }
     }
   ]

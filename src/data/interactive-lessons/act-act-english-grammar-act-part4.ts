@@ -18,20 +18,31 @@ Fragment: lacks a subject, verb, or complete thought.
       id: 'act-e4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes run-on?',
+            question: 'What does "Run-on" refer to in ACT prep?',
             options: [
-              'Run-on is a key concept for ACT English/Reading',
-              'Fragment: lacks a subject, verb, or complete thought',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'two independent clauses improperly joined.',
+              'lacks a subject, verb, or complete thought.',
+              'Semicolons connect two related independent clauses.',
+              'Fix run-ons with: period, semicolon, comma + FANBOYS, or subordination.'
             ],
             correctAnswer: 0,
-            explanation: 'Run-on: two independent clauses improperly joined'
+            explanation: 'Correct — Run-on: two independent clauses improperly joined. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Key Insight?',
+            options: [
+              'Semicolons connect two related independent clauses.',
+              'two independent clauses improperly joined.',
+              'lacks a subject, verb, or complete thought.',
+              'Fix run-ons with: period, semicolon, comma + FANBOYS, or subordination.'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Key Insight: Fix run-ons with: period, semicolon, comma + FANBOYS, or subordination. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Fragment: lacks a subject, verb, or complete thought.
       id: 'act-e4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for sentence structure?',
+            question: 'Which statement about ACT Tip is correct?',
             options: [
-              'Fix run-ons with: period, semicolon, comma + FANBOYS, or subordination',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Fix run-ons with: period, semicolon, comma + FANBOYS, or subordination.',
+              'two independent clauses improperly joined.',
+              'Semicolons connect two related independent clauses.',
+              'lacks a subject, verb, or complete thought.'
             ],
-            correctAnswer: 0,
-            explanation: 'Fix run-ons with: period, semicolon, comma + FANBOYS, or subordination'
+            correctAnswer: 2,
+            explanation: 'Correct — ACT Tip: Semicolons connect two related independent clauses. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Fragment: lacks a subject, verb, or complete thought.
       id: 'act-e4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Sentence Structure:',
-            options: ['Run-on: two independent clauses improperly joined', 'Fragment: lacks a subject, verb, or complete thoug', 'Not applicable', 'None of these']
+            label: 'Run-on',
+            options: ['two independent clauses improperly joined.', 'lacks a subject, verb, or complete thought.', 'Semicolons connect two related independent clauses.', 'Fix run-ons with: period, semicolon, comma + FANBOYS, or subordination.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Fix run-ons with: period, semicolon, comma + FANBO', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Fragment',
+            options: ['Semicolons connect two related independent clauses.', 'two independent clauses improperly joined.', 'Fix run-ons with: period, semicolon, comma + FANBOYS, or subordination.', 'lacks a subject, verb, or complete thought.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['Fix run-ons with: period, semicolon, comma + FANBOYS, or subordination.', 'Semicolons connect two related independent clauses.', 'lacks a subject, verb, or complete thought.', 'two independent clauses improperly joined.']
           }
         ],
-        correctAnswers: ['Run-on: two independent clauses improperly joined', 'Fix run-ons with: period, semicolon, comma + FANBO'],
-        hint1: 'Think about sentence structure',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Run-on: two independent clauses improperly joined. Fix run-ons with: period, semicolon, comma + FANBOYS, or subordination.'
+        correctAnswers: ['two independent clauses improperly joined.', 'lacks a subject, verb, or complete thought.', 'Fix run-ons with: period, semicolon, comma + FANBOYS, or subordination.'],
+        hint1: 'Think about what each concept specifically describes in Sentence Structure.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Sentence Structure describes a specific idea. Run-on: two independent clauses improperly joined. Fragment: lacks a subject, verb, or complete thought. Key Insight: Fix run-ons with: period, semicolon, comma + FANBOYS, or subordination.'
       }
     }
   ]

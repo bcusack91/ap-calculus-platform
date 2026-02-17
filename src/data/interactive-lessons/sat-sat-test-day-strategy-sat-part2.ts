@@ -18,20 +18,31 @@ On math: estimate to eliminate impossible answers.
       id: 'sat-t2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes eliminate wrong answers before guessing?',
+            question: 'Which of the following correctly describes Eliminate wrong answers before guessing.?',
             options: [
-              'Eliminate wrong answers before guessing is a fundamental concept in SAT Math',
-              'On math: estimate to eliminate impossible answers',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'On reading: eliminate answers that are too extreme, unsupported, or opposite.',
+              'estimate to eliminate impossible answers.',
+              'Usually 2 answers are clearly wrong, leaving a 50/50 guess.',
+              'Eliminate wrong answers before guessing.'
             ],
-            correctAnswer: 0,
-            explanation: 'Eliminate wrong answers before guessing'
+            correctAnswer: 3,
+            explanation: 'Correct — Eliminate wrong answers before guessing. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Key Insight?',
+            options: [
+              'Eliminate wrong answers before guessing.',
+              'On reading: eliminate answers that are too extreme, unsupported, or opposite.',
+              'Usually 2 answers are clearly wrong, leaving a 50/50 guess.',
+              'estimate to eliminate impossible answers.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Key Insight: On reading: eliminate answers that are too extreme, unsupported, or opposite. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ On math: estimate to eliminate impossible answers.
       id: 'sat-t2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for process of elimination?',
+            question: 'Regarding Process of Elimination, which correctly describes SAT Tip?',
             options: [
-              'On reading: eliminate answers that are too extreme, unsupported, or opposite',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'Usually 2 answers are clearly wrong, leaving a 50/50 guess.',
+              'On reading: eliminate answers that are too extreme, unsupported, or opposite.',
+              'estimate to eliminate impossible answers.',
+              'Eliminate wrong answers before guessing.'
             ],
             correctAnswer: 0,
-            explanation: 'On reading: eliminate answers that are too extreme, unsupported, or opposite'
+            explanation: 'Correct — SAT Tip: Usually 2 answers are clearly wrong, leaving a 50/50 guess. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ On math: estimate to eliminate impossible answers.
       id: 'sat-t2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Process of Elimination:',
-            options: ['Eliminate wrong answers before guessing', 'On math: estimate to eliminate impossible answers', 'Not applicable', 'None of these']
+            label: 'On math',
+            options: ['Usually 2 answers are clearly wrong, leaving a 50/50 guess.', 'Eliminate wrong answers before guessing.', 'On reading: eliminate answers that are too extreme, unsupported, or opposite.', 'estimate to eliminate impossible answers.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['On reading: eliminate answers that are too extreme', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Key Insight',
+            options: ['On reading: eliminate answers that are too extreme, unsupported, or opposite.', 'estimate to eliminate impossible answers.', 'Usually 2 answers are clearly wrong, leaving a 50/50 guess.', 'Eliminate wrong answers before guessing.']
+          },
+          {
+            label: 'SAT Tip',
+            options: ['estimate to eliminate impossible answers.', 'Usually 2 answers are clearly wrong, leaving a 50/50 guess.', 'On reading: eliminate answers that are too extreme, unsupported, or opposite.', 'Eliminate wrong answers before guessing.']
           }
         ],
-        correctAnswers: ['Eliminate wrong answers before guessing', 'On reading: eliminate answers that are too extreme'],
-        hint1: 'Think about process of elimination',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'Eliminate wrong answers before guessing. On reading: eliminate answers that are too extreme, unsupported, or opposite.'
+        correctAnswers: ['estimate to eliminate impossible answers.', 'On reading: eliminate answers that are too extreme, unsupported, or opposite.', 'Usually 2 answers are clearly wrong, leaving a 50/50 guess.'],
+        hint1: 'Think about what each concept specifically describes in Process of Elimination.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Process of Elimination describes a specific idea. On math: estimate to eliminate impossible answers. Key Insight: On reading: eliminate answers that are too extreme, unsupported, or opposite. SAT Tip: Usually 2 answers are clearly wrong, leaving a 50/50 guess.'
       }
     }
   ]

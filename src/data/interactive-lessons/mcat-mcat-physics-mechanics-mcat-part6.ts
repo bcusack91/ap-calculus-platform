@@ -71,23 +71,24 @@ Sound is a longitudinal wave; light is a transverse electromagnetic wave.
       id: 'mcat-6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Waves & Sound:',
-            options: ['Wave speed v = f*lambda; frequency f = 1/T where T is the pe', 'Sound is a longitudinal wave; light is a transverse electrom', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Key Insight',
+            options: ['Sound is a longitudinal wave; light is a transverse electromagnetic wave.', 'Wave speed v = f*lambda; frequency f = 1/T where T is the period.', 'Doppler effect: frequency increases when source and observer approach each other.', 'Intensity follows inverse-square law: I is proportional to 1/r2; decibels: beta = 10*log(I/I0).']
           },
           {
-            label: 'MCAT application:',
-            options: ['Doppler effect: frequency increases when source and observer', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'MCAT Tip',
+            options: ['Intensity follows inverse-square law: I is proportional to 1/r2; decibels: beta = 10*log(I/I0).', 'Doppler effect: frequency increases when source and observer approach each other.', 'Sound is a longitudinal wave; light is a transverse electromagnetic wave.', 'Wave speed v = f*lambda; frequency f = 1/T where T is the period.']
           }
         ],
-        correctAnswers: ['Wave speed v = f*lambda; frequency f = 1/T where T is the pe', 'Doppler effect: frequency increases when source and observer'],
-        hint1: 'Think about waves & sound',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Wave speed v = f*lambda; frequency f = 1/T where T is the period. Doppler effect: frequency increases when source and observer approach each other.'
+        correctAnswers: ['Doppler effect: frequency increases when source and observer approach each other.', 'Intensity follows inverse-square law: I is proportional to 1/r2; decibels: beta = 10*log(I/I0).'],
+        hint1: 'Think about what each concept specifically describes in Waves & Sound.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Waves & Sound describes a specific idea. Key Insight: Doppler effect: frequency increases when source and observer approach each other. MCAT Tip: Intensity follows inverse-square law: I is proportional to 1/r2; decibels: beta = 10*log(I/I0).'
       }
     }
   ]

@@ -19,31 +19,31 @@ export const bioMendelianPart5Data = {
       id: 'mend5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes tests if observed data fits expected ratios?',
+            question: 'What does "Tests if observed data fits expected…" refer to in biology?',
             options: [
               'Tests if observed data fits expected ratios',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'χ² = Σ (observed - expected)² / expected',
+              'Degrees of freedom = categories - 1',
+              'reject null hypothesis (results differ significantly)'
             ],
             correctAnswer: 0,
-            explanation: 'Tests if observed data fits expected ratios'
+            explanation: 'Correct — Tests if observed data fits expected ratios. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of chi-square analysis, which statement is accurate?',
+            question: 'Select the statement that correctly describes Degrees of freedom = categories - 1:',
             options: [
               'Degrees of freedom = categories - 1',
-              'soitar detcepxe stif atad devresbo fi stseT',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Tests if observed data fits expected ratios',
+              'reject null hypothesis (results differ significantly)',
+              'χ² = Σ (observed - expected)² / expected'
             ],
             correctAnswer: 0,
-            explanation: 'Degrees of freedom = categories - 1'
+            explanation: 'Correct — Degrees of freedom = categories - 1. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioMendelianPart5Data = {
       id: 'mend5-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to chi-square analysis?',
+            question: 'Which of these accurately represents p < 0.05?',
             options: [
-              'p < 0.05: reject null hypothesis (results differ significantly)',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'reject null hypothesis (results differ significantly)',
+              'Tests if observed data fits expected ratios',
+              'Degrees of freedom = categories - 1',
+              'χ² = Σ (observed - expected)² / expected'
             ],
             correctAnswer: 0,
-            explanation: 'p < 0.05: reject null hypothesis (results differ significantly)'
+            explanation: 'Correct — p < 0.05: reject null hypothesis (results differ significantly). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioMendelianPart5Data = {
       id: 'mend5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Tests if observed data fits expected ratios is important in chi-square analysis because',
-            options: ['Tests if observed data fits expected ratios', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Tests if observed data fits expected…',
+            options: ['Tests if observed data fits expected ratios', 'reject null hypothesis (results differ significantly)', 'Degrees of freedom = categories - 1', 'χ² = Σ (observed - expected)² / expected']
           },
           {
-            label: 'χ² = Σ (observed - expected)² / expected is important in chi-square analysis because',
-            options: ['χ² = Σ (observed - expected)² / expected', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'χ² = Σ (observed - expected)² / expected',
+            options: ['Tests if observed data fits expected ratios', 'Degrees of freedom = categories - 1', 'reject null hypothesis (results differ significantly)', 'χ² = Σ (observed - expected)² / expected']
           },
           {
-            label: 'Degrees of freedom = categories - 1 is important in chi-square analysis because',
-            options: ['Degrees of freedom = categories - 1', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Degrees of freedom = categories - 1',
+            options: ['Tests if observed data fits expected ratios', 'reject null hypothesis (results differ significantly)', 'χ² = Σ (observed - expected)² / expected', 'Degrees of freedom = categories - 1']
           }
         ],
         correctAnswers: ['Tests if observed data fits expected ratios', 'χ² = Σ (observed - expected)² / expected', 'Degrees of freedom = categories - 1'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Chi-Square Analysis.'
+        hint1: 'Think about what each concept specifically describes in Chi-Square Analysis.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Chi-Square Analysis describes a specific idea. Tests if observed data fits expected ratios. χ² = Σ (observed - expected)² / expected. Degrees of freedom = categories - 1.'
       }
     }
   ]

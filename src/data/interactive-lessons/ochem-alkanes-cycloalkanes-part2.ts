@@ -30,31 +30,31 @@ substituents 180° apart (most stable)
       id: 'alkan2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of conformational analysis?',
+            question: 'Which of the following correctly describes Newman projections?',
             options: [
-              'Newman projections',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              '60° dihedral angle (more stable)',
+              'view along C-C bond',
+              'substituents 180° apart (most stable)',
+              '0° dihedral angle (less stable)'
             ],
-            correctAnswer: 0,
-            explanation: 'Newman projections: view along C-C bond'
+            correctAnswer: 1,
+            explanation: 'Correct — Newman projections: view along C-C bond. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of conformational analysis, which is accurate?',
+            question: 'Which of the following is true about Eclipsed?',
             options: [
-              '0° dihedral angle (less stable)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              '60° dihedral angle (more stable)',
+              'view along C-C bond',
+              'substituents 180° apart (most stable)',
+              '0° dihedral angle (less stable)'
             ],
-            correctAnswer: 0,
-            explanation: 'Eclipsed: 0° dihedral angle (less stable)'
+            correctAnswer: 3,
+            explanation: 'Correct — Eclipsed: 0° dihedral angle (less stable). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ substituents 180° apart (most stable)
       id: 'alkan2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Newman projections',
-            options: ['view along C-C bond', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['60° dihedral angle (more stable)', '0° dihedral angle (less stable)', 'substituents 180° apart (most stable)', 'view along C-C bond']
           },
           {
             label: 'Staggered',
-            options: ['60° dihedral angle (more stable)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['view along C-C bond', 'substituents 180° apart (most stable)', '0° dihedral angle (less stable)', '60° dihedral angle (more stable)']
           },
           {
             label: 'Eclipsed',
-            options: ['0° dihedral angle (less stable)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['view along C-C bond', '0° dihedral angle (less stable)', '60° dihedral angle (more stable)', 'substituents 180° apart (most stable)']
           }
         ],
         correctAnswers: ['view along C-C bond', '60° dihedral angle (more stable)', '0° dihedral angle (less stable)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Conformational Analysis.'
+        hint1: 'Think about what each concept specifically describes in Conformational Analysis.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Conformational Analysis describes a specific idea. Newman projections: view along C-C bond. Staggered: 60° dihedral angle (more stable). Eclipsed: 0° dihedral angle (less stable).'
       }
     }
   ]

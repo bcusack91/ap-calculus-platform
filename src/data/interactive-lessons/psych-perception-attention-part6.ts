@@ -30,31 +30,31 @@ Demonstrating selective attention phenomena
       id: 'perce6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of problem-solving workshop?',
+            question: 'Which statement accurately explains Identifying Gestalt principles in images?',
             options: [
               'Identifying Gestalt principles in images',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'Demonstrating selective attention phenomena',
+              'Analyzing depth cue scenarios',
+              'Explaining visual illusions'
             ],
             correctAnswer: 0,
-            explanation: 'Identifying Gestalt principles in images'
+            explanation: 'Correct — Identifying Gestalt principles in images. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of problem-solving workshop, which is accurate?',
+            question: 'Which of the following is true about Explaining visual illusions?',
             options: [
               'Explaining visual illusions',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Identifying Gestalt principles in images',
+              'Analyzing depth cue scenarios',
+              'Demonstrating selective attention phenomena'
             ],
             correctAnswer: 0,
-            explanation: 'Explaining visual illusions'
+            explanation: 'Correct — Explaining visual illusions. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Demonstrating selective attention phenomena
       id: 'perce6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Identifying Gestalt principles in images',
-            options: ['Identifying Gestalt principles in images', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Explaining visual illusions', 'Identifying Gestalt principles in images', 'Demonstrating selective attention phenomena', 'Analyzing depth cue scenarios']
           },
           {
             label: 'Analyzing depth cue scenarios',
-            options: ['Analyzing depth cue scenarios', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Demonstrating selective attention phenomena', 'Analyzing depth cue scenarios', 'Identifying Gestalt principles in images', 'Explaining visual illusions']
           },
           {
             label: 'Explaining visual illusions',
-            options: ['Explaining visual illusions', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Explaining visual illusions', 'Demonstrating selective attention phenomena', 'Analyzing depth cue scenarios', 'Identifying Gestalt principles in images']
           }
         ],
         correctAnswers: ['Identifying Gestalt principles in images', 'Analyzing depth cue scenarios', 'Explaining visual illusions'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving Workshop.'
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Identifying Gestalt principles in images. Analyzing depth cue scenarios. Explaining visual illusions.'
       }
     }
   ]

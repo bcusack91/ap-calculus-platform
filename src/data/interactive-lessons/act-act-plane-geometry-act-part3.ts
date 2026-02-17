@@ -18,20 +18,31 @@ Rectangle: all angles 90°; Rhombus: all sides equal; Square: both.
       id: 'act-p3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes parallelogram?',
+            question: 'Which of the following correctly describes Parallelogram?',
             options: [
-              'Parallelogram is a key concept for ACT Math',
-              'Rectangle: all angles 90°; Rhombus: all sides equal; Square: both',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'opposite sides equal and parallel, opposite angles equal.',
+              'all angles 90°; Rhombus: all sides equal; Square: both.',
+              'Trapezoid area: ½(b₁ + b₂)h.',
+              'Regular polygon: all sides and angles equal.'
             ],
             correctAnswer: 0,
-            explanation: 'Parallelogram: opposite sides equal and parallel, opposite angles equal'
+            explanation: 'Correct — Parallelogram: opposite sides equal and parallel, opposite angles equal. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Key Insight?',
+            options: [
+              'Trapezoid area: ½(b₁ + b₂)h.',
+              'all angles 90°; Rhombus: all sides equal; Square: both.',
+              'Regular polygon: all sides and angles equal.',
+              'opposite sides equal and parallel, opposite angles equal.'
+            ],
+            correctAnswer: 0,
+            explanation: 'Correct — Key Insight: Trapezoid area: ½(b₁ + b₂)h. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Rectangle: all angles 90°; Rhombus: all sides equal; Square: both.
       id: 'act-p3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for quadrilaterals & polygons?',
+            question: 'Regarding Quadrilaterals & Polygons, which correctly describes ACT Tip?',
             options: [
-              'Trapezoid area: ½(b₁ + b₂)h',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Trapezoid area: ½(b₁ + b₂)h.',
+              'opposite sides equal and parallel, opposite angles equal.',
+              'all angles 90°; Rhombus: all sides equal; Square: both.',
+              'Regular polygon: all sides and angles equal.'
             ],
-            correctAnswer: 0,
-            explanation: 'Trapezoid area: ½(b₁ + b₂)h'
+            correctAnswer: 3,
+            explanation: 'Correct — ACT Tip: Regular polygon: all sides and angles equal. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Rectangle: all angles 90°; Rhombus: all sides equal; Square: both.
       id: 'act-p3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Quadrilaterals & Polygons:',
-            options: ['Parallelogram: opposite sides equal and parallel, ', 'Rectangle: all angles 90°; Rhombus: all sides equa', 'Not applicable', 'None of these']
+            label: 'Parallelogram',
+            options: ['Regular polygon: all sides and angles equal.', 'all angles 90°; Rhombus: all sides equal; Square: both.', 'opposite sides equal and parallel, opposite angles equal.', 'Trapezoid area: ½(b₁ + b₂)h.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Trapezoid area: ½(b₁ + b₂)h', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Rectangle',
+            options: ['Trapezoid area: ½(b₁ + b₂)h.', 'Regular polygon: all sides and angles equal.', 'all angles 90°; Rhombus: all sides equal; Square: both.', 'opposite sides equal and parallel, opposite angles equal.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['opposite sides equal and parallel, opposite angles equal.', 'all angles 90°; Rhombus: all sides equal; Square: both.', 'Trapezoid area: ½(b₁ + b₂)h.', 'Regular polygon: all sides and angles equal.']
           }
         ],
-        correctAnswers: ['Parallelogram: opposite sides equal and parallel, ', 'Trapezoid area: ½(b₁ + b₂)h'],
-        hint1: 'Think about quadrilaterals & polygons',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Parallelogram: opposite sides equal and parallel, opposite angles equal. Trapezoid area: ½(b₁ + b₂)h.'
+        correctAnswers: ['opposite sides equal and parallel, opposite angles equal.', 'all angles 90°; Rhombus: all sides equal; Square: both.', 'Trapezoid area: ½(b₁ + b₂)h.'],
+        hint1: 'Think about what each concept specifically describes in Quadrilaterals & Polygons.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Quadrilaterals & Polygons describes a specific idea. Parallelogram: opposite sides equal and parallel, opposite angles equal. Rectangle: all angles 90°; Rhombus: all sides equal; Square: both. Key Insight: Trapezoid area: ½(b₁ + b₂)h.'
       }
     }
   ]

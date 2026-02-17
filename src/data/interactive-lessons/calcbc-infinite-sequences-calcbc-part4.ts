@@ -30,31 +30,31 @@ ln(n) << nᵖ << aⁿ << n! << nⁿ
       id: 'infin4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of growth rates?',
-            options: [
-              'Exponential growth dominates polynomial',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'Exponential growth dominates polynomial: xⁿ/n! → 0 and nᵏ/aⁿ → 0 for a > 1'
-          },
-          {
-            question: 'In the context of growth rates, which is accurate?',
+            question: 'Which statement accurately explains Exponential growth dominates polynomial?',
             options: [
               'ln(n) grows slower than any positive power of n',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'n! grows faster than aⁿ which grows faster than nᵏ',
+              'xⁿ/n! → 0 and nᵏ/aⁿ → 0 for a > 1',
+              'ln(n) << nᵖ << aⁿ << n! << nⁿ'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Exponential growth dominates polynomial: xⁿ/n! → 0 and nᵏ/aⁿ → 0 for a > 1. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about ln(n) grows slower than any positive…?',
+            options: [
+              'ln(n) grows slower than any positive power of n',
+              'ln(n) << nᵖ << aⁿ << n! << nⁿ',
+              'xⁿ/n! → 0 and nᵏ/aⁿ → 0 for a > 1',
+              'n! grows faster than aⁿ which grows faster than nᵏ'
             ],
             correctAnswer: 0,
-            explanation: 'ln(n) grows slower than any positive power of n'
+            explanation: 'Correct — ln(n) grows slower than any positive power of n. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ ln(n) << nᵖ << aⁿ << n! << nⁿ
       id: 'infin4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to growth rates?',
+            question: 'Regarding Growth Rates, which correctly describes Useful hierarchy?',
             options: [
-              'ln(n) << nᵖ << aⁿ << n! << nⁿ',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'ln(n) grows slower than any positive power of n',
+              'n! grows faster than aⁿ which grows faster than nᵏ',
+              'xⁿ/n! → 0 and nᵏ/aⁿ → 0 for a > 1',
+              'ln(n) << nᵖ << aⁿ << n! << nⁿ'
             ],
-            correctAnswer: 0,
-            explanation: 'Useful hierarchy: ln(n) << nᵖ << aⁿ << n! << nⁿ'
+            correctAnswer: 3,
+            explanation: 'Correct — Useful hierarchy: ln(n) << nᵖ << aⁿ << n! << nⁿ. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,24 @@ ln(n) << nᵖ << aⁿ << n! << nⁿ
       id: 'infin4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Exponential growth dominates polynomial',
-            options: ['xⁿ/n! → 0 and nᵏ/aⁿ → 0 for a > 1', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['n! grows faster than aⁿ which grows faster than nᵏ', 'xⁿ/n! → 0 and nᵏ/aⁿ → 0 for a > 1', 'ln(n) << nᵖ << aⁿ << n! << nⁿ', 'ln(n) grows slower than any positive power of n']
           },
           {
-            label: 'n! grows faster than aⁿ which grows faster than nᵏ',
-            options: ['n! grows faster than aⁿ which grows faster than nᵏ', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
-          },
-          {
-            label: 'ln(n) grows slower than any positive power of n',
-            options: ['ln(n) grows slower than any positive power of n', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Useful hierarchy',
+            options: ['ln(n) grows slower than any positive power of n', 'n! grows faster than aⁿ which grows faster than nᵏ', 'xⁿ/n! → 0 and nᵏ/aⁿ → 0 for a > 1', 'ln(n) << nᵖ << aⁿ << n! << nⁿ']
           }
         ],
-        correctAnswers: ['xⁿ/n! → 0 and nᵏ/aⁿ → 0 for a > 1', 'n! grows faster than aⁿ which grows faster than nᵏ', 'ln(n) grows slower than any positive power of n'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Growth Rates.'
+        correctAnswers: ['xⁿ/n! → 0 and nᵏ/aⁿ → 0 for a > 1', 'ln(n) << nᵖ << aⁿ << n! << nⁿ'],
+        hint1: 'Think about what each concept specifically describes in Growth Rates.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Growth Rates describes a specific idea. Exponential growth dominates polynomial: xⁿ/n! → 0 and nᵏ/aⁿ → 0 for a > 1. Useful hierarchy: ln(n) << nᵖ << aⁿ << n! << nⁿ.'
       }
     }
   ]

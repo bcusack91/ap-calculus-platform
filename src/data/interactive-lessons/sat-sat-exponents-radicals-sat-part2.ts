@@ -18,20 +18,31 @@ a⁻ⁿ = 1/aⁿ — move to denominator and make positive.
       id: 'sat-e2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes a⁰ = 1 for any a ≠ 0?',
+            question: 'Which statement accurately explains a⁰ = 1 for any a ≠ 0.?',
             options: [
-              'a⁰ = 1 for any a ≠ 0 is a fundamental concept in SAT Math',
-              'a⁻ⁿ = 1/aⁿ — move to denominator and make positive',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'Simplify step by step: apply rules, then convert negative exponents.',
+              '(a/b)⁻ⁿ = (b/a)ⁿ — flip the fraction.',
+              'a⁻ⁿ = 1/aⁿ — move to denominator and make positive.',
+              'a⁰ = 1 for any a ≠ 0.'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — a⁰ = 1 for any a ≠ 0. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              '(a/b)⁻ⁿ = (b/a)ⁿ — flip the fraction.',
+              'a⁻ⁿ = 1/aⁿ — move to denominator and make positive.',
+              'Simplify step by step: apply rules, then convert negative exponents.',
+              'a⁰ = 1 for any a ≠ 0.'
             ],
             correctAnswer: 0,
-            explanation: 'a⁰ = 1 for any a ≠ 0'
+            explanation: 'Correct — Key Insight: (a/b)⁻ⁿ = (b/a)ⁿ — flip the fraction. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ a⁻ⁿ = 1/aⁿ — move to denominator and make positive.
       id: 'sat-e2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for negative & zero exponents?',
+            question: 'Regarding Negative & Zero Exponents, which correctly describes SAT Tip?',
             options: [
-              '(a/b)⁻ⁿ = (b/a)ⁿ — flip the fraction',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'a⁻ⁿ = 1/aⁿ — move to denominator and make positive.',
+              'Simplify step by step: apply rules, then convert negative exponents.',
+              '(a/b)⁻ⁿ = (b/a)ⁿ — flip the fraction.',
+              'a⁰ = 1 for any a ≠ 0.'
             ],
-            correctAnswer: 0,
-            explanation: '(a/b)⁻ⁿ = (b/a)ⁿ — flip the fraction'
+            correctAnswer: 1,
+            explanation: 'Correct — SAT Tip: Simplify step by step: apply rules, then convert negative exponents. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ a⁻ⁿ = 1/aⁿ — move to denominator and make positive.
       id: 'sat-e2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Negative & Zero Exponents:',
-            options: ['a⁰ = 1 for any a ≠ 0', 'a⁻ⁿ = 1/aⁿ — move to denominator and make positive', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['Simplify step by step: apply rules, then convert negative exponents.', '(a/b)⁻ⁿ = (b/a)ⁿ — flip the fraction.', 'a⁻ⁿ = 1/aⁿ — move to denominator and make positive.', 'a⁰ = 1 for any a ≠ 0.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['(a/b)⁻ⁿ = (b/a)ⁿ — flip the fraction', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'SAT Tip',
+            options: ['a⁻ⁿ = 1/aⁿ — move to denominator and make positive.', 'Simplify step by step: apply rules, then convert negative exponents.', '(a/b)⁻ⁿ = (b/a)ⁿ — flip the fraction.', 'a⁰ = 1 for any a ≠ 0.']
           }
         ],
-        correctAnswers: ['a⁰ = 1 for any a ≠ 0', '(a/b)⁻ⁿ = (b/a)ⁿ — flip the fraction'],
-        hint1: 'Think about negative & zero exponents',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'a⁰ = 1 for any a ≠ 0. (a/b)⁻ⁿ = (b/a)ⁿ — flip the fraction.'
+        correctAnswers: ['(a/b)⁻ⁿ = (b/a)ⁿ — flip the fraction.', 'Simplify step by step: apply rules, then convert negative exponents.'],
+        hint1: 'Think about what each concept specifically describes in Negative & Zero Exponents.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Negative & Zero Exponents describes a specific idea. Key Insight: (a/b)⁻ⁿ = (b/a)ⁿ — flip the fraction. SAT Tip: Simplify step by step: apply rules, then convert negative exponents.'
       }
     }
   ]

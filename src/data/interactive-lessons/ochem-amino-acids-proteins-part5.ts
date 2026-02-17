@@ -30,31 +30,31 @@ sequencing from N-terminus
       id: 'amino5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of amino acid reactions?',
+            question: 'Which statement accurately explains Strecker synthesis?',
             options: [
-              'Strecker synthesis',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'phthalimide route',
+              'detects amino acids (purple color)',
+              'aldehyde + NH₃ + HCN → amino acid',
+              'sequencing from N-terminus'
             ],
-            correctAnswer: 0,
-            explanation: 'Strecker synthesis: aldehyde + NH₃ + HCN → amino acid'
+            correctAnswer: 2,
+            explanation: 'Correct — Strecker synthesis: aldehyde + NH₃ + HCN → amino acid. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of amino acid reactions, which is accurate?',
+            question: 'In the context of Amino Acid Reactions, which explains Ninhydrin test?',
             options: [
+              'phthalimide route',
               'detects amino acids (purple color)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'sequencing from N-terminus',
+              'aldehyde + NH₃ + HCN → amino acid'
             ],
-            correctAnswer: 0,
-            explanation: 'Ninhydrin test: detects amino acids (purple color)'
+            correctAnswer: 1,
+            explanation: 'Correct — Ninhydrin test: detects amino acids (purple color). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ sequencing from N-terminus
       id: 'amino5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Strecker synthesis',
-            options: ['aldehyde + NH₃ + HCN → amino acid', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['sequencing from N-terminus', 'aldehyde + NH₃ + HCN → amino acid', 'detects amino acids (purple color)', 'phthalimide route']
           },
           {
             label: 'Gabriel malonic ester synthesis',
-            options: ['phthalimide route', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['detects amino acids (purple color)', 'aldehyde + NH₃ + HCN → amino acid', 'phthalimide route', 'sequencing from N-terminus']
           },
           {
             label: 'Ninhydrin test',
-            options: ['detects amino acids (purple color)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['sequencing from N-terminus', 'phthalimide route', 'aldehyde + NH₃ + HCN → amino acid', 'detects amino acids (purple color)']
           }
         ],
         correctAnswers: ['aldehyde + NH₃ + HCN → amino acid', 'phthalimide route', 'detects amino acids (purple color)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Amino Acid Reactions.'
+        hint1: 'Think about what each concept specifically describes in Amino Acid Reactions.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Amino Acid Reactions describes a specific idea. Strecker synthesis: aldehyde + NH₃ + HCN → amino acid. Gabriel malonic ester synthesis: phthalimide route. Ninhydrin test: detects amino acids (purple color).'
       }
     }
   ]

@@ -30,31 +30,31 @@ Isomers have different physical and chemical properties
       id: 'molec3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of constitutional isomers?',
+            question: 'Which of the following correctly describes Constitutional (structural) isomers?',
             options: [
-              'Constitutional (structural) isomers',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'same formula, different connectivity',
+              'C₄H₁₀ → butane and isobutane',
+              'Isomers have different physical and chemical properties',
+              'More carbons → more possible isomers'
             ],
             correctAnswer: 0,
-            explanation: 'Constitutional (structural) isomers: same formula, different connectivity'
+            explanation: 'Correct — Constitutional (structural) isomers: same formula, different connectivity. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of constitutional isomers, which is accurate?',
+            question: 'Which of the following is true about More carbons → more possible isomers?',
             options: [
-              'More carbons → more possible isomers',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'same formula, different connectivity',
+              'C₄H₁₀ → butane and isobutane',
+              'Isomers have different physical and chemical properties',
+              'More carbons → more possible isomers'
             ],
-            correctAnswer: 0,
-            explanation: 'More carbons → more possible isomers'
+            correctAnswer: 3,
+            explanation: 'Correct — More carbons → more possible isomers. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,24 @@ Isomers have different physical and chemical properties
       id: 'molec3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Constitutional (structural) isomers',
-            options: ['same formula, different connectivity', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Isomers have different physical and chemical properties', 'C₄H₁₀ → butane and isobutane', 'same formula, different connectivity', 'More carbons → more possible isomers']
           },
           {
             label: 'Example',
-            options: ['C₄H₁₀ → butane and isobutane', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
-          },
-          {
-            label: 'More carbons → more possible isomers',
-            options: ['More carbons → more possible isomers', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['C₄H₁₀ → butane and isobutane', 'More carbons → more possible isomers', 'same formula, different connectivity', 'Isomers have different physical and chemical properties']
           }
         ],
-        correctAnswers: ['same formula, different connectivity', 'C₄H₁₀ → butane and isobutane', 'More carbons → more possible isomers'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Constitutional Isomers.'
+        correctAnswers: ['same formula, different connectivity', 'C₄H₁₀ → butane and isobutane'],
+        hint1: 'Think about what each concept specifically describes in Constitutional Isomers.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Constitutional Isomers describes a specific idea. Constitutional (structural) isomers: same formula, different connectivity. Example: C₄H₁₀ → butane and isobutane.'
       }
     }
   ]

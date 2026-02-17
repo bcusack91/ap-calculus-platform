@@ -71,23 +71,28 @@ Health disparities: unequal health outcomes across socioeconomic and demographic
       id: 'mcat-5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Health Disparities:',
-            options: ['Social determinants of health: income, education, race, envi', 'Health disparities: unequal health outcomes across socioecon', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Social determinants of health',
+            options: ['income, education, race, environment, access to healthcare.', 'Healthcare access: uninsured populations have worse outcomes; preventive care reduces disparities.', 'Sick role (Parsons): society expects sick people to seek help and try to get well.', 'unequal health outcomes across socioeconomic and demographic groups.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Sick role (Parsons): society expects sick people to seek hel', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Health disparities',
+            options: ['income, education, race, environment, access to healthcare.', 'Healthcare access: uninsured populations have worse outcomes; preventive care reduces disparities.', 'unequal health outcomes across socioeconomic and demographic groups.', 'Sick role (Parsons): society expects sick people to seek help and try to get well.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['Healthcare access: uninsured populations have worse outcomes; preventive care reduces disparities.', 'unequal health outcomes across socioeconomic and demographic groups.', 'Sick role (Parsons): society expects sick people to seek help and try to get well.', 'income, education, race, environment, access to healthcare.']
           }
         ],
-        correctAnswers: ['Social determinants of health: income, education, race, envi', 'Sick role (Parsons): society expects sick people to seek hel'],
-        hint1: 'Think about health disparities',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Social determinants of health: income, education, race, environment, access to healthcare. Sick role (Parsons): society expects sick people to seek help and try to get well.'
+        correctAnswers: ['income, education, race, environment, access to healthcare.', 'unequal health outcomes across socioeconomic and demographic groups.', 'Sick role (Parsons): society expects sick people to seek help and try to get well.'],
+        hint1: 'Think about what each concept specifically describes in Health Disparities.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Health Disparities describes a specific idea. Social determinants of health: income, education, race, environment, access to healthcare. Health disparities: unequal health outcomes across socioeconomic and demographic groups. Key Insight: Sick role (Parsons): society expects sick people to seek help and try to get well.'
       }
     }
   ]

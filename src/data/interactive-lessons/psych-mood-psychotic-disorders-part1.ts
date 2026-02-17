@@ -30,31 +30,31 @@ negative thinking patterns (Beck's cognitive triad)
       id: 'mood-1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of major depressive disorder?',
+            question: 'What does "MDD" refer to in psychology?',
             options: [
-              'MDD',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'negative thinking patterns (Beck\'s cognitive triad)',
+              'persistent depressed mood, loss of interest, ≥2 weeks',
+              'sleep changes, appetite changes, fatigue, worthlessness',
+              'low serotonin/norepinephrine, genetics'
             ],
-            correctAnswer: 0,
-            explanation: 'MDD: persistent depressed mood, loss of interest, ≥2 weeks'
+            correctAnswer: 1,
+            explanation: 'Correct — MDD: persistent depressed mood, loss of interest, ≥2 weeks. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of major depressive disorder, which is accurate?',
+            question: 'In the context of Mood & Psychotic Disorders, which explains Biological?',
             options: [
               'low serotonin/norepinephrine, genetics',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'sleep changes, appetite changes, fatigue, worthlessness',
+              'persistent depressed mood, loss of interest, ≥2 weeks',
+              'negative thinking patterns (Beck\'s cognitive triad)'
             ],
             correctAnswer: 0,
-            explanation: 'Biological: low serotonin/norepinephrine, genetics'
+            explanation: 'Correct — Biological: low serotonin/norepinephrine, genetics. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ negative thinking patterns (Beck's cognitive triad)
       id: 'mood-1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'MDD',
-            options: ['persistent depressed mood, loss of interest, ≥2 we', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['negative thinking patterns (Beck\'s cognitive triad)', 'low serotonin/norepinephrine, genetics', 'sleep changes, appetite changes, fatigue, worthlessness', 'persistent depressed mood, loss of interest, ≥2 weeks']
           },
           {
             label: 'Symptoms',
-            options: ['sleep changes, appetite changes, fatigue, worthles', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['persistent depressed mood, loss of interest, ≥2 weeks', 'sleep changes, appetite changes, fatigue, worthlessness', 'low serotonin/norepinephrine, genetics', 'negative thinking patterns (Beck\'s cognitive triad)']
           },
           {
             label: 'Biological',
-            options: ['low serotonin/norepinephrine, genetics', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['sleep changes, appetite changes, fatigue, worthlessness', 'negative thinking patterns (Beck\'s cognitive triad)', 'persistent depressed mood, loss of interest, ≥2 weeks', 'low serotonin/norepinephrine, genetics']
           }
         ],
-        correctAnswers: ['persistent depressed mood, loss of interest, ≥2 we', 'sleep changes, appetite changes, fatigue, worthles', 'low serotonin/norepinephrine, genetics'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Major Depressive Disorder.'
+        correctAnswers: ['persistent depressed mood, loss of interest, ≥2 weeks', 'sleep changes, appetite changes, fatigue, worthlessness', 'low serotonin/norepinephrine, genetics'],
+        hint1: 'Think about what each concept specifically describes in Mood & Psychotic Disorders.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Mood & Psychotic Disorders describes a specific idea. MDD: persistent depressed mood, loss of interest, ≥2 weeks. Symptoms: sleep changes, appetite changes, fatigue, worthlessness. Biological: low serotonin/norepinephrine, genetics.'
       }
     }
   ]

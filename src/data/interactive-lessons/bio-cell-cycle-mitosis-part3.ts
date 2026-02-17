@@ -19,31 +19,31 @@ export const bioCellCyclePart3Data = {
       id: 'cell3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes prophase?',
+            question: 'What does "Prophase" refer to in biology?',
             options: [
+              'sister chromatids separate, move to poles',
               'chromosomes condense, spindle forms',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'chromosomes align at metaphase plate',
+              'nuclear envelopes reform, chromosomes decondense'
             ],
-            correctAnswer: 0,
-            explanation: 'Prophase: chromosomes condense, spindle forms'
+            correctAnswer: 1,
+            explanation: 'Correct — Prophase: chromosomes condense, spindle forms. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of mitosis phases, which statement is accurate?',
+            question: 'Which of the following is true about Anaphase?',
             options: [
-              'Anaphase: sister chromatids separate, move to poles',
-              'smrof eldnips ,esnednoc semosomorhc :esahporP',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'nuclear envelopes reform, chromosomes decondense',
+              'chromosomes align at metaphase plate',
+              'chromosomes condense, spindle forms',
+              'sister chromatids separate, move to poles'
             ],
-            correctAnswer: 0,
-            explanation: 'Anaphase: sister chromatids separate, move to poles'
+            correctAnswer: 3,
+            explanation: 'Correct — Anaphase: sister chromatids separate, move to poles. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioCellCyclePart3Data = {
       id: 'cell3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to mitosis phases?',
+            question: 'Which of these accurately represents Telophase?',
             options: [
-              'Telophase: nuclear envelopes reform, chromosomes decondense',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'sister chromatids separate, move to poles',
+              'chromosomes condense, spindle forms',
+              'nuclear envelopes reform, chromosomes decondense',
+              'chromosomes align at metaphase plate'
             ],
-            correctAnswer: 0,
-            explanation: 'Telophase: nuclear envelopes reform, chromosomes decondense'
+            correctAnswer: 2,
+            explanation: 'Correct — Telophase: nuclear envelopes reform, chromosomes decondense. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioCellCyclePart3Data = {
       id: 'cell3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Prophase is important in mitosis phases because',
-            options: ['chromosomes condense, spindle forms', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Prophase',
+            options: ['sister chromatids separate, move to poles', 'nuclear envelopes reform, chromosomes decondense', 'chromosomes condense, spindle forms', 'chromosomes align at metaphase plate']
           },
           {
-            label: 'Metaphase is important in mitosis phases because',
-            options: ['chromosomes align at metaphase plate', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Metaphase',
+            options: ['chromosomes align at metaphase plate', 'nuclear envelopes reform, chromosomes decondense', 'sister chromatids separate, move to poles', 'chromosomes condense, spindle forms']
           },
           {
-            label: 'Anaphase is important in mitosis phases because',
-            options: ['sister chromatids separate, move to poles', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Anaphase',
+            options: ['nuclear envelopes reform, chromosomes decondense', 'chromosomes condense, spindle forms', 'sister chromatids separate, move to poles', 'chromosomes align at metaphase plate']
           }
         ],
         correctAnswers: ['chromosomes condense, spindle forms', 'chromosomes align at metaphase plate', 'sister chromatids separate, move to poles'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Mitosis Phases.'
+        hint1: 'Think about what each concept specifically describes in Mitosis Phases.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Mitosis Phases describes a specific idea. Prophase: chromosomes condense, spindle forms. Metaphase: chromosomes align at metaphase plate. Anaphase: sister chromatids separate, move to poles.'
       }
     }
   ]

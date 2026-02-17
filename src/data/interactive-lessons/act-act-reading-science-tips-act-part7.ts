@@ -18,20 +18,31 @@ Focus improvement on your weakest section for the biggest gains.
       id: 'act-r7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes take a full-length practice test to establish your baseline?',
+            question: 'Which statement accurately explains Take a full-length practice test to…?',
             options: [
-              'Take a full-length practice test to establish your baseline is a key concept for ACT English/Reading',
-              'Focus improvement on your weakest section for the biggest gains',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'Focus improvement on your weakest section for the biggest gains.',
+              'Practice regularly with official ACT materials.',
+              'Review every wrong answer — understand WHY you missed it.',
+              'Take a full-length practice test to establish your baseline.'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Take a full-length practice test to establish your baseline. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              'Practice regularly with official ACT materials.',
+              'Review every wrong answer — understand WHY you missed it.',
+              'Take a full-length practice test to establish your baseline.',
+              'Focus improvement on your weakest section for the biggest gains.'
             ],
             correctAnswer: 0,
-            explanation: 'Take a full-length practice test to establish your baseline'
+            explanation: 'Correct — Key Insight: Practice regularly with official ACT materials. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Focus improvement on your weakest section for the biggest gains.
       id: 'act-r7-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for review & applications?',
+            question: 'Which of these accurately represents ACT Tip?',
             options: [
-              'Practice regularly with official ACT materials',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Take a full-length practice test to establish your baseline.',
+              'Focus improvement on your weakest section for the biggest gains.',
+              'Practice regularly with official ACT materials.',
+              'Review every wrong answer — understand WHY you missed it.'
             ],
-            correctAnswer: 0,
-            explanation: 'Practice regularly with official ACT materials'
+            correctAnswer: 3,
+            explanation: 'Correct — ACT Tip: Review every wrong answer — understand WHY you missed it. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ Focus improvement on your weakest section for the biggest gains.
       id: 'act-r7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Review & Applications:',
-            options: ['Take a full-length practice test to establish your', 'Focus improvement on your weakest section for the ', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['Practice regularly with official ACT materials.', 'Focus improvement on your weakest section for the biggest gains.', 'Review every wrong answer — understand WHY you missed it.', 'Take a full-length practice test to establish your baseline.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Practice regularly with official ACT materials', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'ACT Tip',
+            options: ['Practice regularly with official ACT materials.', 'Take a full-length practice test to establish your baseline.', 'Focus improvement on your weakest section for the biggest gains.', 'Review every wrong answer — understand WHY you missed it.']
           }
         ],
-        correctAnswers: ['Take a full-length practice test to establish your', 'Practice regularly with official ACT materials'],
-        hint1: 'Think about review & applications',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Take a full-length practice test to establish your baseline. Practice regularly with official ACT materials.'
+        correctAnswers: ['Practice regularly with official ACT materials.', 'Review every wrong answer — understand WHY you missed it.'],
+        hint1: 'Think about what each concept specifically describes in Review & Applications.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Review & Applications describes a specific idea. Key Insight: Practice regularly with official ACT materials. ACT Tip: Review every wrong answer — understand WHY you missed it.'
       }
     }
   ]

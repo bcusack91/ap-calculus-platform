@@ -18,20 +18,31 @@ P(A or B) = P(A) + P(B) - P(A and B).
       id: 'act-s4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes p(event) = favorable outcomes / total outcomes?',
+            question: 'What does "P(event) = favorable outcomes / total…" refer to in ACT prep?',
             options: [
-              'P(event) = favorable outcomes / total outcomes is a key concept for ACT Math',
-              'P(A or B) = P(A) + P(B) - P(A and B)',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'P(A and B) = P(A) × P(B|A).',
+              'P(event) = favorable outcomes / total outcomes.',
+              'P(A or B) = P(A) + P(B) - P(A and B).',
+              'Complement: P(not A) = 1 - P(A).'
             ],
-            correctAnswer: 0,
-            explanation: 'P(event) = favorable outcomes / total outcomes'
+            correctAnswer: 1,
+            explanation: 'Correct — P(event) = favorable outcomes / total outcomes. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Key Insight?',
+            options: [
+              'Complement: P(not A) = 1 - P(A).',
+              'P(event) = favorable outcomes / total outcomes.',
+              'P(A or B) = P(A) + P(B) - P(A and B).',
+              'P(A and B) = P(A) × P(B|A).'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Key Insight: P(A and B) = P(A) × P(B|A). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ P(A or B) = P(A) + P(B) - P(A and B).
       id: 'act-s4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for basic probability?',
+            question: 'Which of these accurately represents ACT Tip?',
             options: [
-              'P(A and B) = P(A) × P(B|A)',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'P(A and B) = P(A) × P(B|A).',
+              'P(A or B) = P(A) + P(B) - P(A and B).',
+              'P(event) = favorable outcomes / total outcomes.',
+              'Complement: P(not A) = 1 - P(A).'
             ],
-            correctAnswer: 0,
-            explanation: 'P(A and B) = P(A) × P(B|A)'
+            correctAnswer: 3,
+            explanation: 'Correct — ACT Tip: Complement: P(not A) = 1 - P(A). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ P(A or B) = P(A) + P(B) - P(A and B).
       id: 'act-s4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Basic Probability:',
-            options: ['P(event) = favorable outcomes / total outcomes', 'P(A or B) = P(A) + P(B) - P(A and B)', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['Complement: P(not A) = 1 - P(A).', 'P(A or B) = P(A) + P(B) - P(A and B).', 'P(A and B) = P(A) × P(B|A).', 'P(event) = favorable outcomes / total outcomes.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['P(A and B) = P(A) × P(B|A)', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'ACT Tip',
+            options: ['P(A and B) = P(A) × P(B|A).', 'P(event) = favorable outcomes / total outcomes.', 'Complement: P(not A) = 1 - P(A).', 'P(A or B) = P(A) + P(B) - P(A and B).']
           }
         ],
-        correctAnswers: ['P(event) = favorable outcomes / total outcomes', 'P(A and B) = P(A) × P(B|A)'],
-        hint1: 'Think about basic probability',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'P(event) = favorable outcomes / total outcomes. P(A and B) = P(A) × P(B|A).'
+        correctAnswers: ['P(A and B) = P(A) × P(B|A).', 'Complement: P(not A) = 1 - P(A).'],
+        hint1: 'Think about what each concept specifically describes in Basic Probability.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Basic Probability describes a specific idea. Key Insight: P(A and B) = P(A) × P(B|A). ACT Tip: Complement: P(not A) = 1 - P(A).'
       }
     }
   ]

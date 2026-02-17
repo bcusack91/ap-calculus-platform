@@ -30,31 +30,31 @@ acyl substitution reactions
       id: 'carbo7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of synthesis & review?',
+            question: 'What does "Carboxylic acid derivatives are…" refer to in this topic?',
             options: [
               'Carboxylic acid derivatives are interconnected',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'acyl substitution reactions',
+              'Reactivity reflects leaving group ability',
+              'These reactions are essential in biochemistry (proteins, fats)'
             ],
             correctAnswer: 0,
-            explanation: 'Carboxylic acid derivatives are interconnected'
+            explanation: 'Correct — Carboxylic acid derivatives are interconnected. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of synthesis & review, which is accurate?',
+            question: 'Which of the following is true about These reactions are essential in…?',
             options: [
               'These reactions are essential in biochemistry (proteins, fats)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Reactivity reflects leaving group ability',
+              'acyl substitution reactions',
+              'Carboxylic acid derivatives are interconnected'
             ],
             correctAnswer: 0,
-            explanation: 'These reactions are essential in biochemistry (proteins, fats)'
+            explanation: 'Correct — These reactions are essential in biochemistry (proteins, fats). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ acyl substitution reactions
       id: 'carbo7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Carboxylic acid derivatives are interconnected',
-            options: ['Carboxylic acid derivatives are interconnected', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Carboxylic acid derivatives are…',
+            options: ['These reactions are essential in biochemistry (proteins, fats)', 'Reactivity reflects leaving group ability', 'acyl substitution reactions', 'Carboxylic acid derivatives are interconnected']
           },
           {
-            label: 'Reactivity reflects leaving group ability',
-            options: ['Reactivity reflects leaving group ability', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Reactivity reflects leaving group…',
+            options: ['Carboxylic acid derivatives are interconnected', 'These reactions are essential in biochemistry (proteins, fats)', 'acyl substitution reactions', 'Reactivity reflects leaving group ability']
           },
           {
-            label: 'These reactions are essential in biochemistry (proteins, fats)',
-            options: ['These reactions are essential in biochemistry (pro', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'These reactions are essential in…',
+            options: ['Reactivity reflects leaving group ability', 'acyl substitution reactions', 'Carboxylic acid derivatives are interconnected', 'These reactions are essential in biochemistry (proteins, fats)']
           }
         ],
-        correctAnswers: ['Carboxylic acid derivatives are interconnected', 'Reactivity reflects leaving group ability', 'These reactions are essential in biochemistry (pro'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Synthesis & Review.'
+        correctAnswers: ['Carboxylic acid derivatives are interconnected', 'Reactivity reflects leaving group ability', 'These reactions are essential in biochemistry (proteins, fats)'],
+        hint1: 'Think about what each concept specifically describes in Synthesis & Review.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Synthesis & Review describes a specific idea. Carboxylic acid derivatives are interconnected. Reactivity reflects leaving group ability. These reactions are essential in biochemistry (proteins, fats).'
       }
     }
   ]

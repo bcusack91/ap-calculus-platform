@@ -19,31 +19,31 @@ export const bioSpeciationPart2Data = {
       id: 'spec2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes geographic isolation separates populations?',
+            question: 'What does "Geographic isolation separates…" refer to in biology?',
             options: [
+              'Most common form of speciation',
               'Geographic isolation separates populations',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Grand Canyon squirrels, Darwin\'s finches',
+              'Populations evolve independently'
             ],
-            correctAnswer: 0,
-            explanation: 'Geographic isolation separates populations'
+            correctAnswer: 1,
+            explanation: 'Correct — Geographic isolation separates populations. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of allopatric speciation, which statement is accurate?',
+            question: 'Select the statement that correctly describes Examples:',
             options: [
-              'Examples: Grand Canyon squirrels, Darwin\'s finches',
-              'snoitalupop setarapes noitalosi cihpargoeG',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Geographic isolation separates populations',
+              'Grand Canyon squirrels, Darwin\'s finches',
+              'Populations evolve independently',
+              'Most common form of speciation'
             ],
-            correctAnswer: 0,
-            explanation: 'Examples: Grand Canyon squirrels, Darwin\'s finches'
+            correctAnswer: 1,
+            explanation: 'Correct — Examples: Grand Canyon squirrels, Darwin\'s finches. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioSpeciationPart2Data = {
       id: 'spec2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to allopatric speciation?',
+            question: 'Which of these accurately represents Most common form of speciation?',
             options: [
               'Most common form of speciation',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Geographic isolation separates populations',
+              'Grand Canyon squirrels, Darwin\'s finches',
+              'Populations evolve independently'
             ],
             correctAnswer: 0,
-            explanation: 'Most common form of speciation'
+            explanation: 'Correct — Most common form of speciation. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioSpeciationPart2Data = {
       id: 'spec2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Geographic isolation separates populations is important in allopatric speciation because',
-            options: ['Geographic isolation separates populations', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Geographic isolation separates…',
+            options: ['Most common form of speciation', 'Grand Canyon squirrels, Darwin\'s finches', 'Populations evolve independently', 'Geographic isolation separates populations']
           },
           {
-            label: 'Populations evolve independently is important in allopatric speciation because',
-            options: ['Populations evolve independently', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Populations evolve independently',
+            options: ['Populations evolve independently', 'Most common form of speciation', 'Grand Canyon squirrels, Darwin\'s finches', 'Geographic isolation separates populations']
           },
           {
-            label: 'Examples is important in allopatric speciation because',
-            options: ['Grand Canyon squirrels, Darwin\'s finches', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Examples',
+            options: ['Most common form of speciation', 'Geographic isolation separates populations', 'Grand Canyon squirrels, Darwin\'s finches', 'Populations evolve independently']
           }
         ],
         correctAnswers: ['Geographic isolation separates populations', 'Populations evolve independently', 'Grand Canyon squirrels, Darwin\'s finches'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Allopatric Speciation.'
+        hint1: 'Think about what each concept specifically describes in Allopatric Speciation.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Allopatric Speciation describes a specific idea. Geographic isolation separates populations. Populations evolve independently. Examples: Grand Canyon squirrels, Darwin\'s finches.'
       }
     }
   ]

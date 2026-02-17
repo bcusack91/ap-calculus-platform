@@ -19,31 +19,31 @@ export const bioMendelianPart3Data = {
       id: 'mend3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes two-gene punnett square (4×4 = 16 outcomes)?',
+            question: 'What does "Two-gene Punnett square (4×4 = 16…" refer to in biology?',
             options: [
               'Two-gene Punnett square (4×4 = 16 outcomes)',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              '9:3:3:1',
+              '3:3:1 suggests gene linkage',
+              'AaBb × AaBb cross'
             ],
             correctAnswer: 0,
-            explanation: 'Two-gene Punnett square (4×4 = 16 outcomes)'
+            explanation: 'Correct — Two-gene Punnett square (4×4 = 16 outcomes). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of dihybrid crosses, which statement is accurate?',
+            question: 'Select the statement that correctly describes AaBb × AaBb cross:',
             options: [
+              '9:3:3:1',
               'AaBb × AaBb cross',
-              ')semoctuo 61 = 4×4( erauqs ttennuP eneg-owT',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Two-gene Punnett square (4×4 = 16 outcomes)',
+              '3:3:1 suggests gene linkage'
             ],
-            correctAnswer: 0,
-            explanation: 'AaBb × AaBb cross'
+            correctAnswer: 1,
+            explanation: 'Correct — AaBb × AaBb cross. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioMendelianPart3Data = {
       id: 'mend3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to dihybrid crosses?',
+            question: 'Regarding Dihybrid Crosses, which correctly describes Deviation from 9?',
             options: [
-              'Deviation from 9:3:3:1 suggests gene linkage',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              '9:3:3:1',
+              'Two-gene Punnett square (4×4 = 16 outcomes)',
+              'AaBb × AaBb cross',
+              '3:3:1 suggests gene linkage'
             ],
-            correctAnswer: 0,
-            explanation: 'Deviation from 9:3:3:1 suggests gene linkage'
+            correctAnswer: 3,
+            explanation: 'Correct — Deviation from 9: 3:3:1 suggests gene linkage. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,24 @@ export const bioMendelianPart3Data = {
       id: 'mend3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Two-gene Punnett square (4×4 = 16 outcomes) is important in dihybrid crosses because',
-            options: ['Two-gene Punnett square (4×4 = 16 outcomes)', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Expected phenotypic ratio',
+            options: ['Two-gene Punnett square (4×4 = 16 outcomes)', 'AaBb × AaBb cross', '3:3:1 suggests gene linkage', '9:3:3:1']
           },
           {
-            label: 'Expected phenotypic ratio is important in dihybrid crosses because',
-            options: ['9:3:3:1', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
-          },
-          {
-            label: 'AaBb × AaBb cross is important in dihybrid crosses because',
-            options: ['AaBb × AaBb cross', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Deviation from 9',
+            options: ['3:3:1 suggests gene linkage', 'Two-gene Punnett square (4×4 = 16 outcomes)', '9:3:3:1', 'AaBb × AaBb cross']
           }
         ],
-        correctAnswers: ['Two-gene Punnett square (4×4 = 16 outcomes)', '9:3:3:1', 'AaBb × AaBb cross'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Dihybrid Crosses.'
+        correctAnswers: ['9:3:3:1', '3:3:1 suggests gene linkage'],
+        hint1: 'Think about what each concept specifically describes in Dihybrid Crosses.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Dihybrid Crosses describes a specific idea. Expected phenotypic ratio: 9:3:3:1. Deviation from 9: 3:3:1 suggests gene linkage.'
       }
     }
   ]

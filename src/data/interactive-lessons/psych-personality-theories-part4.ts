@@ -30,31 +30,31 @@ behavior varies by situation
       id: 'perso4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of social-cognitive perspective?',
+            question: 'What does "Bandura" refer to in psychology?',
             options: [
-              'Bandura',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'reciprocal determinism (behavior ↔ person ↔ environment)',
+              'belief in one\'s ability to succeed',
+              'internal vs external',
+              'behavior varies by situation'
             ],
             correctAnswer: 0,
-            explanation: 'Bandura: reciprocal determinism (behavior ↔ person ↔ environment)'
+            explanation: 'Correct — Bandura: reciprocal determinism (behavior ↔ person ↔ environment). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of social-cognitive perspective, which is accurate?',
+            question: 'In the context of Social-Cognitive Perspective, which explains Locus of control (Rotter)?',
             options: [
+              'behavior varies by situation',
               'internal vs external',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'belief in one\'s ability to succeed',
+              'reciprocal determinism (behavior ↔ person ↔ environment)'
             ],
-            correctAnswer: 0,
-            explanation: 'Locus of control (Rotter): internal vs external'
+            correctAnswer: 1,
+            explanation: 'Correct — Locus of control (Rotter): internal vs external. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ behavior varies by situation
       id: 'perso4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Bandura',
-            options: ['reciprocal determinism (behavior ↔ person ↔ enviro', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['internal vs external', 'belief in one\'s ability to succeed', 'behavior varies by situation', 'reciprocal determinism (behavior ↔ person ↔ environment)']
           },
           {
             label: 'Self-efficacy',
-            options: ['belief in one\'s ability to succeed', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['belief in one\'s ability to succeed', 'behavior varies by situation', 'internal vs external', 'reciprocal determinism (behavior ↔ person ↔ environment)']
           },
           {
             label: 'Locus of control (Rotter)',
-            options: ['internal vs external', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['behavior varies by situation', 'internal vs external', 'belief in one\'s ability to succeed', 'reciprocal determinism (behavior ↔ person ↔ environment)']
           }
         ],
-        correctAnswers: ['reciprocal determinism (behavior ↔ person ↔ enviro', 'belief in one\'s ability to succeed', 'internal vs external'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Social-Cognitive Perspective.'
+        correctAnswers: ['reciprocal determinism (behavior ↔ person ↔ environment)', 'belief in one\'s ability to succeed', 'internal vs external'],
+        hint1: 'Think about what each concept specifically describes in Social-Cognitive Perspective.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Social-Cognitive Perspective describes a specific idea. Bandura: reciprocal determinism (behavior ↔ person ↔ environment). Self-efficacy: belief in one\'s ability to succeed. Locus of control (Rotter): internal vs external.'
       }
     }
   ]

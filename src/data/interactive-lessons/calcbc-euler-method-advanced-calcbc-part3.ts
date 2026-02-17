@@ -30,31 +30,31 @@ Inflection point at P = L/2 (fastest growth); P → L as t → ∞
       id: 'euler3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of logistic differential equations?',
+            question: 'Which of the following correctly describes Logistic?',
             options: [
-              'Logistic',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
+              'Inflection point at P = L/2 (fastest growth); P → L as t → ∞',
+              'dP/dt = kP(1 - P/L)',
+              'P(t) = L/(1 + Ae^(-kt)) where A = (L-P₀)/P₀',
+              '∫dP/[P(1-P/L)] = ∫k dt'
             ],
-            correctAnswer: 0,
-            explanation: 'Logistic: dP/dt = kP(1 - P/L)'
+            correctAnswer: 1,
+            explanation: 'Correct — Logistic: dP/dt = kP(1 - P/L). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of logistic differential equations, which is accurate?',
+            question: 'Select the statement that correctly describes Solution:',
             options: [
               'P(t) = L/(1 + Ae^(-kt)) where A = (L-P₀)/P₀',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              '∫dP/[P(1-P/L)] = ∫k dt',
+              'Inflection point at P = L/2 (fastest growth); P → L as t → ∞',
+              'dP/dt = kP(1 - P/L)'
             ],
             correctAnswer: 0,
-            explanation: 'Solution: P(t) = L/(1 + Ae^(-kt)) where A = (L-P₀)/P₀'
+            explanation: 'Correct — Solution: P(t) = L/(1 + Ae^(-kt)) where A = (L-P₀)/P₀. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Inflection point at P = L/2 (fastest growth); P → L as t → ∞
       id: 'euler3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to logistic differential equations?',
+            question: 'Which statement about Inflection point at P = L/2 (fastest… is correct?',
             options: [
-              'Inflection point at P = L/2 (fastest growth); P → L as t → ∞',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'dP/dt = kP(1 - P/L)',
+              '∫dP/[P(1-P/L)] = ∫k dt',
+              'P(t) = L/(1 + Ae^(-kt)) where A = (L-P₀)/P₀',
+              'Inflection point at P = L/2 (fastest growth); P → L as t → ∞'
             ],
-            correctAnswer: 0,
-            explanation: 'Inflection point at P = L/2 (fastest growth); P → L as t → ∞'
+            correctAnswer: 3,
+            explanation: 'Correct — Inflection point at P = L/2 (fastest growth); P → L as t → ∞. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Inflection point at P = L/2 (fastest growth); P → L as t → ∞
       id: 'euler3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Logistic',
-            options: ['dP/dt = kP(1 - P/L)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Inflection point at P = L/2 (fastest growth); P → L as t → ∞', 'dP/dt = kP(1 - P/L)', '∫dP/[P(1-P/L)] = ∫k dt', 'P(t) = L/(1 + Ae^(-kt)) where A = (L-P₀)/P₀']
           },
           {
             label: 'Separable',
-            options: ['∫dP/[P(1-P/L)] = ∫k dt', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['dP/dt = kP(1 - P/L)', 'Inflection point at P = L/2 (fastest growth); P → L as t → ∞', '∫dP/[P(1-P/L)] = ∫k dt', 'P(t) = L/(1 + Ae^(-kt)) where A = (L-P₀)/P₀']
           },
           {
             label: 'Solution',
-            options: ['P(t) = L/(1 + Ae^(-kt)) where A = (L-P₀)/P₀', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Inflection point at P = L/2 (fastest growth); P → L as t → ∞', 'P(t) = L/(1 + Ae^(-kt)) where A = (L-P₀)/P₀', 'dP/dt = kP(1 - P/L)', '∫dP/[P(1-P/L)] = ∫k dt']
           }
         ],
         correctAnswers: ['dP/dt = kP(1 - P/L)', '∫dP/[P(1-P/L)] = ∫k dt', 'P(t) = L/(1 + Ae^(-kt)) where A = (L-P₀)/P₀'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Logistic Differential Equations.'
+        hint1: 'Think about what each concept specifically describes in Logistic Differential Equations.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Logistic Differential Equations describes a specific idea. Logistic: dP/dt = kP(1 - P/L). Separable: ∫dP/[P(1-P/L)] = ∫k dt. Solution: P(t) = L/(1 + Ae^(-kt)) where A = (L-P₀)/P₀.'
       }
     }
   ]

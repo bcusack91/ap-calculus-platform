@@ -71,23 +71,28 @@ Dramaturgy (Goffman): life as a stage — front stage (public self) vs backstage
       id: 'mcat-3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Social Interaction & Self:',
-            options: ['Symbolic interactionism: meaning is created through social i', 'Dramaturgy (Goffman): life as a stage — front stage (public ', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Symbolic interactionism',
+            options: ['Looking-glass self (Cooley): self-concept based on how we think others perceive us.', 'meaning is created through social interaction and shared symbols.', 'life as a stage — front stage (public self) vs backstage (private self).', 'Social identity theory (Tajfel): in-group favoritism and out-group discrimination.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Looking-glass self (Cooley): self-concept based on how we th', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Dramaturgy (Goffman)',
+            options: ['Social identity theory (Tajfel): in-group favoritism and out-group discrimination.', 'meaning is created through social interaction and shared symbols.', 'life as a stage — front stage (public self) vs backstage (private self).', 'Looking-glass self (Cooley): self-concept based on how we think others perceive us.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['Social identity theory (Tajfel): in-group favoritism and out-group discrimination.', 'meaning is created through social interaction and shared symbols.', 'Looking-glass self (Cooley): self-concept based on how we think others perceive us.', 'life as a stage — front stage (public self) vs backstage (private self).']
           }
         ],
-        correctAnswers: ['Symbolic interactionism: meaning is created through social i', 'Looking-glass self (Cooley): self-concept based on how we th'],
-        hint1: 'Think about social interaction & self',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Symbolic interactionism: meaning is created through social interaction and shared symbols. Looking-glass self (Cooley): self-concept based on how we think others perceive us.'
+        correctAnswers: ['meaning is created through social interaction and shared symbols.', 'life as a stage — front stage (public self) vs backstage (private self).', 'Looking-glass self (Cooley): self-concept based on how we think others perceive us.'],
+        hint1: 'Think about what each concept specifically describes in Social Interaction & Self.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Social Interaction & Self describes a specific idea. Symbolic interactionism: meaning is created through social interaction and shared symbols. Dramaturgy (Goffman): life as a stage — front stage (public self) vs backstage (private self). Key Insight: Looking-glass self (Cooley): self-concept based on how we think others perceive us.'
       }
     }
   ]

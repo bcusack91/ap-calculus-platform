@@ -30,31 +30,31 @@ Lower BDE = easier radical formation
       id: 'radic5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of radical stability?',
+            question: 'What does "Radical stability" refer to in this topic?',
             options: [
-              'Radical stability',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'Lower BDE = easier radical formation',
+              '3° > 2° > 1° > methyl (same as carbocations)',
+              'energy to break bond homolytically',
+              'stabilized by resonance'
             ],
-            correctAnswer: 0,
-            explanation: 'Radical stability: 3° > 2° > 1° > methyl (same as carbocations)'
+            correctAnswer: 1,
+            explanation: 'Correct — Radical stability: 3° > 2° > 1° > methyl (same as carbocations). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of radical stability, which is accurate?',
+            question: 'Which of the following is true about Bond dissociation energy (BDE)?',
             options: [
+              '3° > 2° > 1° > methyl (same as carbocations)',
               'energy to break bond homolytically',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Lower BDE = easier radical formation',
+              'stabilized by resonance'
             ],
-            correctAnswer: 0,
-            explanation: 'Bond dissociation energy (BDE): energy to break bond homolytically'
+            correctAnswer: 1,
+            explanation: 'Correct — Bond dissociation energy (BDE): energy to break bond homolytically. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Lower BDE = easier radical formation
       id: 'radic5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Radical stability',
-            options: ['3° > 2° > 1° > methyl (same as carbocations)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['3° > 2° > 1° > methyl (same as carbocations)', 'Lower BDE = easier radical formation', 'stabilized by resonance', 'energy to break bond homolytically']
           },
           {
             label: 'Allylic and benzylic radicals',
-            options: ['stabilized by resonance', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['3° > 2° > 1° > methyl (same as carbocations)', 'Lower BDE = easier radical formation', 'energy to break bond homolytically', 'stabilized by resonance']
           },
           {
             label: 'Bond dissociation energy (BDE)',
-            options: ['energy to break bond homolytically', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Lower BDE = easier radical formation', 'stabilized by resonance', 'energy to break bond homolytically', '3° > 2° > 1° > methyl (same as carbocations)']
           }
         ],
         correctAnswers: ['3° > 2° > 1° > methyl (same as carbocations)', 'stabilized by resonance', 'energy to break bond homolytically'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Radical Stability.'
+        hint1: 'Think about what each concept specifically describes in Radical Stability.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Radical Stability describes a specific idea. Radical stability: 3° > 2° > 1° > methyl (same as carbocations). Allylic and benzylic radicals: stabilized by resonance. Bond dissociation energy (BDE): energy to break bond homolytically.'
       }
     }
   ]

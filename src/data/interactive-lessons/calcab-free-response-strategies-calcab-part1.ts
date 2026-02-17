@@ -30,31 +30,31 @@ Show all work — no credit for answers without supporting work
       id: 'free-1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of reading ap free response questions?',
+            question: 'Which statement accurately explains Read the entire problem before starting?',
             options: [
+              'Show all work — no credit for answers without supporting work',
+              'Label answers clearly with units',
               'Read the entire problem before starting',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'find, show, justify, explain'
             ],
-            correctAnswer: 0,
-            explanation: 'Read the entire problem before starting'
+            correctAnswer: 2,
+            explanation: 'Correct — Read the entire problem before starting. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of reading ap free response questions, which is accurate?',
+            question: 'Select the statement that correctly describes Label answers clearly with units:',
             options: [
+              'Read the entire problem before starting',
+              'find, show, justify, explain',
               'Label answers clearly with units',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Show all work — no credit for answers without supporting work'
             ],
-            correctAnswer: 0,
-            explanation: 'Label answers clearly with units'
+            correctAnswer: 2,
+            explanation: 'Correct — Label answers clearly with units. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Show all work — no credit for answers without supporting work
       id: 'free-1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to reading ap free response questions?',
+            question: 'Regarding Free Response Strategies, which correctly describes Show all work — no credit for answers…?',
             options: [
               'Show all work — no credit for answers without supporting work',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'Label answers clearly with units',
+              'find, show, justify, explain',
+              'Read the entire problem before starting'
             ],
             correctAnswer: 0,
-            explanation: 'Show all work — no credit for answers without supporting work'
+            explanation: 'Correct — Show all work — no credit for answers without supporting work. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Show all work — no credit for answers without supporting work
       id: 'free-1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Read the entire problem before starting',
-            options: ['Read the entire problem before starting', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Label answers clearly with units', 'Read the entire problem before starting', 'Show all work — no credit for answers without supporting work', 'find, show, justify, explain']
           },
           {
             label: 'Identify what each part asks',
-            options: ['find, show, justify, explain', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['find, show, justify, explain', 'Read the entire problem before starting', 'Show all work — no credit for answers without supporting work', 'Label answers clearly with units']
           },
           {
             label: 'Label answers clearly with units',
-            options: ['Label answers clearly with units', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['find, show, justify, explain', 'Show all work — no credit for answers without supporting work', 'Read the entire problem before starting', 'Label answers clearly with units']
           }
         ],
         correctAnswers: ['Read the entire problem before starting', 'find, show, justify, explain', 'Label answers clearly with units'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Reading AP Free Response Questions.'
+        hint1: 'Think about what each concept specifically describes in Free Response Strategies.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Free Response Strategies describes a specific idea. Read the entire problem before starting. Identify what each part asks: find, show, justify, explain. Label answers clearly with units.'
       }
     }
   ]

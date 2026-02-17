@@ -30,31 +30,31 @@ As t → ∞, P → L (carrying capacity is the horizontal asymptote)
       id: 'logis3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of analyzing logistic growth?',
+            question: 'What does "P(t) is an S-shaped (sigmoid) curve" refer to in calculus?',
             options: [
+              'Inflection point at P = L/2 — growth rate is maximum here',
               'P(t) is an S-shaped (sigmoid) curve',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
+              'max rate = kL/4',
+              'As t → ∞, P → L (carrying capacity is the horizontal asymptote)'
             ],
-            correctAnswer: 0,
-            explanation: 'P(t) is an S-shaped (sigmoid) curve'
+            correctAnswer: 1,
+            explanation: 'Correct — P(t) is an S-shaped (sigmoid) curve. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of analyzing logistic growth, which is accurate?',
+            question: 'Select the statement that correctly describes dP/dt is maximized when P = L/2:',
             options: [
-              'max rate = kL/4',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Inflection point at P = L/2 — growth rate is maximum here',
+              'P(t) is an S-shaped (sigmoid) curve',
+              'As t → ∞, P → L (carrying capacity is the horizontal asymptote)',
+              'max rate = kL/4'
             ],
-            correctAnswer: 0,
-            explanation: 'dP/dt is maximized when P = L/2: max rate = kL/4'
+            correctAnswer: 3,
+            explanation: 'Correct — dP/dt is maximized when P = L/2: max rate = kL/4. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ As t → ∞, P → L (carrying capacity is the horizontal asymptote)
       id: 'logis3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to analyzing logistic growth?',
+            question: 'Which of these accurately represents As t → ∞, P → L (carrying capacity is…?',
             options: [
-              'As t → ∞, P → L (carrying capacity is the horizontal asymptote)',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'Inflection point at P = L/2 — growth rate is maximum here',
+              'max rate = kL/4',
+              'P(t) is an S-shaped (sigmoid) curve',
+              'As t → ∞, P → L (carrying capacity is the horizontal asymptote)'
             ],
-            correctAnswer: 0,
-            explanation: 'As t → ∞, P → L (carrying capacity is the horizontal asymptote)'
+            correctAnswer: 3,
+            explanation: 'Correct — As t → ∞, P → L (carrying capacity is the horizontal asymptote). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ As t → ∞, P → L (carrying capacity is the horizontal asymptote)
       id: 'logis3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'P(t) is an S-shaped (sigmoid) curve',
-            options: ['P(t) is an S-shaped (sigmoid) curve', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Inflection point at P = L/2 — growth rate is maximum here', 'As t → ∞, P → L (carrying capacity is the horizontal asymptote)', 'max rate = kL/4', 'P(t) is an S-shaped (sigmoid) curve']
           },
           {
-            label: 'Inflection point at P = L/2 — growth rate is maximum here',
-            options: ['Inflection point at P = L/2 — growth rate is maxim', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Inflection point at P = L/2 — growth…',
+            options: ['Inflection point at P = L/2 — growth rate is maximum here', 'P(t) is an S-shaped (sigmoid) curve', 'max rate = kL/4', 'As t → ∞, P → L (carrying capacity is the horizontal asymptote)']
           },
           {
             label: 'dP/dt is maximized when P = L/2',
-            options: ['max rate = kL/4', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['P(t) is an S-shaped (sigmoid) curve', 'max rate = kL/4', 'As t → ∞, P → L (carrying capacity is the horizontal asymptote)', 'Inflection point at P = L/2 — growth rate is maximum here']
           }
         ],
-        correctAnswers: ['P(t) is an S-shaped (sigmoid) curve', 'Inflection point at P = L/2 — growth rate is maxim', 'max rate = kL/4'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Analyzing Logistic Growth.'
+        correctAnswers: ['P(t) is an S-shaped (sigmoid) curve', 'Inflection point at P = L/2 — growth rate is maximum here', 'max rate = kL/4'],
+        hint1: 'Think about what each concept specifically describes in Analyzing Logistic Growth.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Analyzing Logistic Growth describes a specific idea. P(t) is an S-shaped (sigmoid) curve. Inflection point at P = L/2 — growth rate is maximum here. dP/dt is maximized when P = L/2: max rate = kL/4.'
       }
     }
   ]

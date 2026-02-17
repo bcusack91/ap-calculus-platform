@@ -30,31 +30,31 @@ Use solid lines for non-strict inequalities (≤, ≥)
       id: 'syste7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of review & applications?',
+            question: 'What does "Graph each inequality by shading the…" refer to in precalculus?',
             options: [
+              'Use solid lines for non-strict inequalities (≤, ≥)',
+              'Use dashed lines for strict inequalities (<, >)',
               'Graph each inequality by shading the correct region',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'The solution set is the intersection of all shaded regions'
             ],
-            correctAnswer: 0,
-            explanation: 'Graph each inequality by shading the correct region'
+            correctAnswer: 2,
+            explanation: 'Correct — Graph each inequality by shading the correct region. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of review & applications, which is accurate?',
+            question: 'Select the statement that correctly describes Use dashed lines for strict…:',
             options: [
-              'Use dashed lines for strict inequalities (<, >)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Use solid lines for non-strict inequalities (≤, ≥)',
+              'The solution set is the intersection of all shaded regions',
+              'Graph each inequality by shading the correct region',
+              'Use dashed lines for strict inequalities (<, >)'
             ],
-            correctAnswer: 0,
-            explanation: 'Use dashed lines for strict inequalities (<, >)'
+            correctAnswer: 3,
+            explanation: 'Correct — Use dashed lines for strict inequalities (<, >). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Use solid lines for non-strict inequalities (≤, ≥)
       id: 'syste7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Graph each inequality by shading the correct region',
-            options: ['Graph each inequality by shading the correct regio', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            label: 'Graph each inequality by shading the…',
+            options: ['Use solid lines for non-strict inequalities (≤, ≥)', 'The solution set is the intersection of all shaded regions', 'Use dashed lines for strict inequalities (<, >)', 'Graph each inequality by shading the correct region']
           },
           {
-            label: 'The solution set is the intersection of all shaded regions',
-            options: ['The solution set is the intersection of all shaded', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            label: 'The solution set is the intersection of…',
+            options: ['The solution set is the intersection of all shaded regions', 'Use solid lines for non-strict inequalities (≤, ≥)', 'Graph each inequality by shading the correct region', 'Use dashed lines for strict inequalities (<, >)']
           },
           {
-            label: 'Use dashed lines for strict inequalities (<, >)',
-            options: ['Use dashed lines for strict inequalities (<, >)', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            label: 'Use dashed lines for strict…',
+            options: ['Graph each inequality by shading the correct region', 'Use dashed lines for strict inequalities (<, >)', 'Use solid lines for non-strict inequalities (≤, ≥)', 'The solution set is the intersection of all shaded regions']
           }
         ],
-        correctAnswers: ['Graph each inequality by shading the correct regio', 'The solution set is the intersection of all shaded', 'Use dashed lines for strict inequalities (<, >)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Review & Applications.'
+        correctAnswers: ['Graph each inequality by shading the correct region', 'The solution set is the intersection of all shaded regions', 'Use dashed lines for strict inequalities (<, >)'],
+        hint1: 'Think about what each concept specifically describes in Review & Applications.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Review & Applications describes a specific idea. Graph each inequality by shading the correct region. The solution set is the intersection of all shaded regions. Use dashed lines for strict inequalities (<, >).'
       }
     }
   ]

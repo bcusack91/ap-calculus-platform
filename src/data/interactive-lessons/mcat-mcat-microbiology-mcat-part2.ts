@@ -71,23 +71,28 @@ Lytic cycle: virus replicates immediately, lyses host cell; Lysogenic: integrate
       id: 'mcat-2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Viruses & Prions:',
-            options: ['Viruses: obligate intracellular parasites; DNA or RNA genome', 'Lytic cycle: virus replicates immediately, lyses host cell; ', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Viruses',
+            options: ['obligate intracellular parasites; DNA or RNA genome, protein capsid, some have envelope.', 'Retroviruses (HIV): RNA genome, reverse transcriptase makes DNA, integrates as provirus.', 'virus replicates immediately, lyses host cell; Lysogenic: integrates into host genome.', 'Prions: misfolded proteins that cause other proteins to misfold — no nucleic acid (e.g., CJD, mad cow).']
           },
           {
-            label: 'MCAT application:',
-            options: ['Retroviruses (HIV): RNA genome, reverse transcriptase makes ', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Lytic cycle',
+            options: ['Retroviruses (HIV): RNA genome, reverse transcriptase makes DNA, integrates as provirus.', 'obligate intracellular parasites; DNA or RNA genome, protein capsid, some have envelope.', 'Prions: misfolded proteins that cause other proteins to misfold — no nucleic acid (e.g., CJD, mad cow).', 'virus replicates immediately, lyses host cell; Lysogenic: integrates into host genome.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['virus replicates immediately, lyses host cell; Lysogenic: integrates into host genome.', 'obligate intracellular parasites; DNA or RNA genome, protein capsid, some have envelope.', 'Prions: misfolded proteins that cause other proteins to misfold — no nucleic acid (e.g., CJD, mad cow).', 'Retroviruses (HIV): RNA genome, reverse transcriptase makes DNA, integrates as provirus.']
           }
         ],
-        correctAnswers: ['Viruses: obligate intracellular parasites; DNA or RNA genome', 'Retroviruses (HIV): RNA genome, reverse transcriptase makes '],
-        hint1: 'Think about viruses & prions',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Viruses: obligate intracellular parasites; DNA or RNA genome, protein capsid, some have envelope. Retroviruses (HIV): RNA genome, reverse transcriptase makes DNA, integrates as provirus.'
+        correctAnswers: ['obligate intracellular parasites; DNA or RNA genome, protein capsid, some have envelope.', 'virus replicates immediately, lyses host cell; Lysogenic: integrates into host genome.', 'Retroviruses (HIV): RNA genome, reverse transcriptase makes DNA, integrates as provirus.'],
+        hint1: 'Think about what each concept specifically describes in Viruses & Prions.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Viruses & Prions describes a specific idea. Viruses: obligate intracellular parasites; DNA or RNA genome, protein capsid, some have envelope. Lytic cycle: virus replicates immediately, lyses host cell; Lysogenic: integrates into host genome. Key Insight: Retroviruses (HIV): RNA genome, reverse transcriptase makes DNA, integrates as provirus.'
       }
     }
   ]

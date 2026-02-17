@@ -30,31 +30,31 @@ f(x) = log_b(x); Greatest integer: f(x) = ⌊x⌋
       id: 'trans7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of review & applications?',
-            options: [
-              'Linear',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'Linear: f(x) = x; Quadratic: f(x) = x²; Cubic: f(x) = x³'
-          },
-          {
-            question: 'In the context of review & applications, which is accurate?',
+            question: 'What does "Linear" refer to in precalculus?',
             options: [
               'f(x) = 1/x; Exponential: f(x) = bˣ',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'f(x) = log_b(x); Greatest integer: f(x) = ⌊x⌋',
+              'f(x) = x; Quadratic: f(x) = x²; Cubic: f(x) = x³',
+              'f(x) = |x|; Square root: f(x) = √x'
             ],
-            correctAnswer: 0,
-            explanation: 'Reciprocal: f(x) = 1/x; Exponential: f(x) = bˣ'
+            correctAnswer: 2,
+            explanation: 'Correct — Linear: f(x) = x; Quadratic: f(x) = x²; Cubic: f(x) = x³. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Reciprocal:',
+            options: [
+              'f(x) = x; Quadratic: f(x) = x²; Cubic: f(x) = x³',
+              'f(x) = log_b(x); Greatest integer: f(x) = ⌊x⌋',
+              'f(x) = |x|; Square root: f(x) = √x',
+              'f(x) = 1/x; Exponential: f(x) = bˣ'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Reciprocal: f(x) = 1/x; Exponential: f(x) = bˣ. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ f(x) = log_b(x); Greatest integer: f(x) = ⌊x⌋
       id: 'trans7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Linear',
-            options: ['f(x) = x; Quadratic: f(x) = x²; Cubic: f(x) = x³', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['f(x) = 1/x; Exponential: f(x) = bˣ', 'f(x) = |x|; Square root: f(x) = √x', 'f(x) = log_b(x); Greatest integer: f(x) = ⌊x⌋', 'f(x) = x; Quadratic: f(x) = x²; Cubic: f(x) = x³']
           },
           {
             label: 'Absolute value',
-            options: ['f(x) = |x|; Square root: f(x) = √x', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['f(x) = log_b(x); Greatest integer: f(x) = ⌊x⌋', 'f(x) = 1/x; Exponential: f(x) = bˣ', 'f(x) = |x|; Square root: f(x) = √x', 'f(x) = x; Quadratic: f(x) = x²; Cubic: f(x) = x³']
           },
           {
             label: 'Reciprocal',
-            options: ['f(x) = 1/x; Exponential: f(x) = bˣ', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['f(x) = |x|; Square root: f(x) = √x', 'f(x) = log_b(x); Greatest integer: f(x) = ⌊x⌋', 'f(x) = 1/x; Exponential: f(x) = bˣ', 'f(x) = x; Quadratic: f(x) = x²; Cubic: f(x) = x³']
           }
         ],
         correctAnswers: ['f(x) = x; Quadratic: f(x) = x²; Cubic: f(x) = x³', 'f(x) = |x|; Square root: f(x) = √x', 'f(x) = 1/x; Exponential: f(x) = bˣ'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Review & Applications.'
+        hint1: 'Think about what each concept specifically describes in Review & Applications.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Review & Applications describes a specific idea. Linear: f(x) = x; Quadratic: f(x) = x²; Cubic: f(x) = x³. Absolute value: f(x) = |x|; Square root: f(x) = √x. Reciprocal: f(x) = 1/x; Exponential: f(x) = bˣ.'
       }
     }
   ]

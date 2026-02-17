@@ -30,31 +30,31 @@ Round to 3 decimal places unless otherwise specified
       id: 'free-3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of calculator vs no-calculator sections?',
+            question: 'Which statement accurately explains Calculator section?',
             options: [
-              'Calculator section',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'use stored integrals and derivatives, graph to find intersections',
+              'show all algebraic steps',
+              'Round to 3 decimal places unless otherwise specified',
+              'On calculator problems, write the integral/equation being computed'
             ],
             correctAnswer: 0,
-            explanation: 'Calculator section: use stored integrals and derivatives, graph to find intersections'
+            explanation: 'Correct — Calculator section: use stored integrals and derivatives, graph to find intersections. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of calculator vs no-calculator sections, which is accurate?',
+            question: 'Select the statement that correctly describes On calculator problems, write the…:',
             options: [
+              'show all algebraic steps',
+              'Round to 3 decimal places unless otherwise specified',
               'On calculator problems, write the integral/equation being computed',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'use stored integrals and derivatives, graph to find intersections'
             ],
-            correctAnswer: 0,
-            explanation: 'On calculator problems, write the integral/equation being computed'
+            correctAnswer: 2,
+            explanation: 'Correct — On calculator problems, write the integral/equation being computed. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Round to 3 decimal places unless otherwise specified
       id: 'free-3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to calculator vs no-calculator sections?',
+            question: 'Which of these accurately represents Round to 3 decimal places unless…?',
             options: [
-              'Round to 3 decimal places unless otherwise specified',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'use stored integrals and derivatives, graph to find intersections',
+              'On calculator problems, write the integral/equation being computed',
+              'show all algebraic steps',
+              'Round to 3 decimal places unless otherwise specified'
             ],
-            correctAnswer: 0,
-            explanation: 'Round to 3 decimal places unless otherwise specified'
+            correctAnswer: 3,
+            explanation: 'Correct — Round to 3 decimal places unless otherwise specified. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,24 @@ Round to 3 decimal places unless otherwise specified
       id: 'free-3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Calculator section',
-            options: ['use stored integrals and derivatives, graph to fin', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['show all algebraic steps', 'On calculator problems, write the integral/equation being computed', 'Round to 3 decimal places unless otherwise specified', 'use stored integrals and derivatives, graph to find intersections']
           },
           {
             label: 'No-calculator section',
-            options: ['show all algebraic steps', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
-          },
-          {
-            label: 'On calculator problems, write the integral/equation being computed',
-            options: ['On calculator problems, write the integral/equatio', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Round to 3 decimal places unless otherwise specified', 'On calculator problems, write the integral/equation being computed', 'use stored integrals and derivatives, graph to find intersections', 'show all algebraic steps']
           }
         ],
-        correctAnswers: ['use stored integrals and derivatives, graph to fin', 'show all algebraic steps', 'On calculator problems, write the integral/equatio'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Calculator vs No-Calculator Sections.'
+        correctAnswers: ['use stored integrals and derivatives, graph to find intersections', 'show all algebraic steps'],
+        hint1: 'Think about what each concept specifically describes in Calculator vs No-Calculator Sections.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Calculator vs No-Calculator Sections describes a specific idea. Calculator section: use stored integrals and derivatives, graph to find intersections. No-calculator section: show all algebraic steps.'
       }
     }
   ]

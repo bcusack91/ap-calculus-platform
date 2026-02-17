@@ -30,31 +30,31 @@ Smaller step size Δx gives more accurate approximation (but more steps)
       id: 'diffe3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of euler\'s method?',
+            question: 'Which statement accurately explains Euler\'s Method?',
             options: [
-              'Euler\'s Method',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'yₙ₊₁ = yₙ + f(xₙ, yₙ)·Δx',
+              'Start from initial condition (x₀, y₀) and step forward',
+              'numerical approximation of solutions',
+              'Smaller step size Δx gives more accurate approximation (but more steps)'
             ],
-            correctAnswer: 0,
-            explanation: 'Euler\'s Method: numerical approximation of solutions'
+            correctAnswer: 2,
+            explanation: 'Correct — Euler\'s Method: numerical approximation of solutions. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of euler\'s method, which is accurate?',
+            question: 'Select the statement that correctly describes Start from initial condition (x₀, y₀)…:',
             options: [
               'Start from initial condition (x₀, y₀) and step forward',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'numerical approximation of solutions',
+              'Smaller step size Δx gives more accurate approximation (but more steps)',
+              'yₙ₊₁ = yₙ + f(xₙ, yₙ)·Δx'
             ],
             correctAnswer: 0,
-            explanation: 'Start from initial condition (x₀, y₀) and step forward'
+            explanation: 'Correct — Start from initial condition (x₀, y₀) and step forward. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Smaller step size Δx gives more accurate approximation (but more steps)
       id: 'diffe3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to euler\'s method?',
+            question: 'Which of these accurately represents Smaller step size Δx gives more…?',
             options: [
-              'Smaller step size Δx gives more accurate approximation (but more steps)',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'yₙ₊₁ = yₙ + f(xₙ, yₙ)·Δx',
+              'numerical approximation of solutions',
+              'Start from initial condition (x₀, y₀) and step forward',
+              'Smaller step size Δx gives more accurate approximation (but more steps)'
             ],
-            correctAnswer: 0,
-            explanation: 'Smaller step size Δx gives more accurate approximation (but more steps)'
+            correctAnswer: 3,
+            explanation: 'Correct — Smaller step size Δx gives more accurate approximation (but more steps). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Smaller step size Δx gives more accurate approximation (but more steps)
       id: 'diffe3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Euler\'s Method',
-            options: ['numerical approximation of solutions', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Start from initial condition (x₀, y₀) and step forward', 'numerical approximation of solutions', 'Smaller step size Δx gives more accurate approximation (but more steps)', 'yₙ₊₁ = yₙ + f(xₙ, yₙ)·Δx']
           },
           {
             label: 'yₙ₊₁ = yₙ + f(xₙ, yₙ)·Δx',
-            options: ['yₙ₊₁ = yₙ + f(xₙ, yₙ)·Δx', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Smaller step size Δx gives more accurate approximation (but more steps)', 'Start from initial condition (x₀, y₀) and step forward', 'yₙ₊₁ = yₙ + f(xₙ, yₙ)·Δx', 'numerical approximation of solutions']
           },
           {
-            label: 'Start from initial condition (x₀, y₀) and step forward',
-            options: ['Start from initial condition (x₀, y₀) and step for', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Start from initial condition (x₀, y₀)…',
+            options: ['Start from initial condition (x₀, y₀) and step forward', 'numerical approximation of solutions', 'yₙ₊₁ = yₙ + f(xₙ, yₙ)·Δx', 'Smaller step size Δx gives more accurate approximation (but more steps)']
           }
         ],
-        correctAnswers: ['numerical approximation of solutions', 'yₙ₊₁ = yₙ + f(xₙ, yₙ)·Δx', 'Start from initial condition (x₀, y₀) and step for'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Euler\'s Method.'
+        correctAnswers: ['numerical approximation of solutions', 'yₙ₊₁ = yₙ + f(xₙ, yₙ)·Δx', 'Start from initial condition (x₀, y₀) and step forward'],
+        hint1: 'Think about what each concept specifically describes in Euler\'s Method.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Euler\'s Method describes a specific idea. Euler\'s Method: numerical approximation of solutions. yₙ₊₁ = yₙ + f(xₙ, yₙ)·Δx. Start from initial condition (x₀, y₀) and step forward.'
       }
     }
   ]

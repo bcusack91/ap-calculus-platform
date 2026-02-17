@@ -30,31 +30,31 @@ overestimating accuracy of our judgments
       id: 'think3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of decision making?',
-            options: [
-              'Framing effect',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
-            ],
-            correctAnswer: 0,
-            explanation: 'Framing effect: how a question is presented affects decisions'
-          },
-          {
-            question: 'In the context of decision making, which is accurate?',
+            question: 'Which of the following correctly describes Framing effect?',
             options: [
               'continuing because of past investment',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'losses loom larger than equivalent gains',
+              'overestimating accuracy of our judgments',
+              'how a question is presented affects decisions'
             ],
-            correctAnswer: 0,
-            explanation: 'Sunk cost fallacy: continuing because of past investment'
+            correctAnswer: 3,
+            explanation: 'Correct — Framing effect: how a question is presented affects decisions. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Sunk cost fallacy?',
+            options: [
+              'how a question is presented affects decisions',
+              'overestimating accuracy of our judgments',
+              'continuing because of past investment',
+              'losses loom larger than equivalent gains'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Sunk cost fallacy: continuing because of past investment. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ overestimating accuracy of our judgments
       id: 'think3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Framing effect',
-            options: ['how a question is presented affects decisions', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['continuing because of past investment', 'how a question is presented affects decisions', 'losses loom larger than equivalent gains', 'overestimating accuracy of our judgments']
           },
           {
             label: 'Loss aversion',
-            options: ['losses loom larger than equivalent gains', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['continuing because of past investment', 'losses loom larger than equivalent gains', 'overestimating accuracy of our judgments', 'how a question is presented affects decisions']
           },
           {
             label: 'Sunk cost fallacy',
-            options: ['continuing because of past investment', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['continuing because of past investment', 'losses loom larger than equivalent gains', 'how a question is presented affects decisions', 'overestimating accuracy of our judgments']
           }
         ],
         correctAnswers: ['how a question is presented affects decisions', 'losses loom larger than equivalent gains', 'continuing because of past investment'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Decision Making.'
+        hint1: 'Think about what each concept specifically describes in Decision Making.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Decision Making describes a specific idea. Framing effect: how a question is presented affects decisions. Loss aversion: losses loom larger than equivalent gains. Sunk cost fallacy: continuing because of past investment.'
       }
     }
   ]

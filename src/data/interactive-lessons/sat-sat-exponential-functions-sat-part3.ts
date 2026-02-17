@@ -18,20 +18,31 @@ Exponential: constant percent change (multiplying by the same factor).
       id: 'sat-e3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes linear?',
+            question: 'Which statement accurately explains Linear?',
             options: [
-              'Linear is a fundamental concept in SAT Math',
-              'Exponential: constant percent change (multiplying by the same factor)',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'Exponential eventually overtakes linear growth.',
+              'Linear grows by addition; exponential grows by multiplication.',
+              'constant percent change (multiplying by the same factor).',
+              'constant rate of change (adding the same amount).'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Linear: constant rate of change (adding the same amount). The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Exponential vs. Linear, which explains Key Insight?',
+            options: [
+              'Linear grows by addition; exponential grows by multiplication.',
+              'constant rate of change (adding the same amount).',
+              'constant percent change (multiplying by the same factor).',
+              'Exponential eventually overtakes linear growth.'
             ],
             correctAnswer: 0,
-            explanation: 'Linear: constant rate of change (adding the same amount)'
+            explanation: 'Correct — Key Insight: Linear grows by addition; exponential grows by multiplication. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Exponential: constant percent change (multiplying by the same factor).
       id: 'sat-e3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for exponential vs. linear?',
+            question: 'Regarding Exponential vs. Linear, which correctly describes SAT Tip?',
             options: [
-              'Linear grows by addition; exponential grows by multiplication',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'constant percent change (multiplying by the same factor).',
+              'Exponential eventually overtakes linear growth.',
+              'Linear grows by addition; exponential grows by multiplication.',
+              'constant rate of change (adding the same amount).'
             ],
-            correctAnswer: 0,
-            explanation: 'Linear grows by addition; exponential grows by multiplication'
+            correctAnswer: 1,
+            explanation: 'Correct — SAT Tip: Exponential eventually overtakes linear growth. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Exponential: constant percent change (multiplying by the same factor).
       id: 'sat-e3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Exponential vs. Linear:',
-            options: ['Linear: constant rate of change (adding the same a', 'Exponential: constant percent change (multiplying ', 'Not applicable', 'None of these']
+            label: 'Linear',
+            options: ['Linear grows by addition; exponential grows by multiplication.', 'constant rate of change (adding the same amount).', 'Exponential eventually overtakes linear growth.', 'constant percent change (multiplying by the same factor).']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Linear grows by addition; exponential grows by mul', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Exponential',
+            options: ['constant rate of change (adding the same amount).', 'Exponential eventually overtakes linear growth.', 'Linear grows by addition; exponential grows by multiplication.', 'constant percent change (multiplying by the same factor).']
+          },
+          {
+            label: 'Key Insight',
+            options: ['Exponential eventually overtakes linear growth.', 'constant percent change (multiplying by the same factor).', 'Linear grows by addition; exponential grows by multiplication.', 'constant rate of change (adding the same amount).']
           }
         ],
-        correctAnswers: ['Linear: constant rate of change (adding the same a', 'Linear grows by addition; exponential grows by mul'],
-        hint1: 'Think about exponential vs. linear',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'Linear: constant rate of change (adding the same amount). Linear grows by addition; exponential grows by multiplication.'
+        correctAnswers: ['constant rate of change (adding the same amount).', 'constant percent change (multiplying by the same factor).', 'Linear grows by addition; exponential grows by multiplication.'],
+        hint1: 'Think about what each concept specifically describes in Exponential vs. Linear.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Exponential vs. Linear describes a specific idea. Linear: constant rate of change (adding the same amount). Exponential: constant percent change (multiplying by the same factor). Key Insight: Linear grows by addition; exponential grows by multiplication.'
       }
     }
   ]

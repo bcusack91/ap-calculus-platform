@@ -30,31 +30,31 @@ same environment aids recall
       id: 'retri1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of retrieval processes?',
+            question: 'Which statement accurately explains Recall?',
             options: [
-              'Recall',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'identifying previously learned info (multiple choice)',
+              'retrieving information without cues (essay questions)',
+              'same environment aids recall',
+              'stimuli that help access stored memories'
             ],
-            correctAnswer: 0,
-            explanation: 'Recall: retrieving information without cues (essay questions)'
+            correctAnswer: 1,
+            explanation: 'Correct — Recall: retrieving information without cues (essay questions). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of retrieval processes, which is accurate?',
+            question: 'Select the statement that correctly describes Retrieval cues:',
             options: [
-              'stimuli that help access stored memories',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'identifying previously learned info (multiple choice)',
+              'same environment aids recall',
+              'retrieving information without cues (essay questions)',
+              'stimuli that help access stored memories'
             ],
-            correctAnswer: 0,
-            explanation: 'Retrieval cues: stimuli that help access stored memories'
+            correctAnswer: 3,
+            explanation: 'Correct — Retrieval cues: stimuli that help access stored memories. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ same environment aids recall
       id: 'retri1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Recall',
-            options: ['retrieving information without cues (essay questio', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['retrieving information without cues (essay questions)', 'identifying previously learned info (multiple choice)', 'stimuli that help access stored memories', 'same environment aids recall']
           },
           {
             label: 'Recognition',
-            options: ['identifying previously learned info (multiple choi', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['stimuli that help access stored memories', 'retrieving information without cues (essay questions)', 'same environment aids recall', 'identifying previously learned info (multiple choice)']
           },
           {
             label: 'Retrieval cues',
-            options: ['stimuli that help access stored memories', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['retrieving information without cues (essay questions)', 'identifying previously learned info (multiple choice)', 'stimuli that help access stored memories', 'same environment aids recall']
           }
         ],
-        correctAnswers: ['retrieving information without cues (essay questio', 'identifying previously learned info (multiple choi', 'stimuli that help access stored memories'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Retrieval Processes.'
+        correctAnswers: ['retrieving information without cues (essay questions)', 'identifying previously learned info (multiple choice)', 'stimuli that help access stored memories'],
+        hint1: 'Think about what each concept specifically describes in Retrieval & Forgetting.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Retrieval & Forgetting describes a specific idea. Recall: retrieving information without cues (essay questions). Recognition: identifying previously learned info (multiple choice). Retrieval cues: stimuli that help access stored memories.'
       }
     }
   ]

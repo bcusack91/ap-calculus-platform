@@ -30,31 +30,31 @@ memory model applications
       id: 'memor7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of synthesis & ap review?',
+            question: 'What does "Memory is constructive and fallible" refer to in psychology?',
             options: [
+              'Multiple memory systems in the brain',
               'Memory is constructive and fallible',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'memory model applications',
+              'Encoding strategies for studying'
             ],
-            correctAnswer: 0,
-            explanation: 'Memory is constructive and fallible'
+            correctAnswer: 1,
+            explanation: 'Correct — Memory is constructive and fallible. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of synthesis & ap review, which is accurate?',
+            question: 'Select the statement that correctly describes Encoding strategies for studying:',
             options: [
+              'memory model applications',
               'Encoding strategies for studying',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Memory is constructive and fallible',
+              'Multiple memory systems in the brain'
             ],
-            correctAnswer: 0,
-            explanation: 'Encoding strategies for studying'
+            correctAnswer: 1,
+            explanation: 'Correct — Encoding strategies for studying. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ memory model applications
       id: 'memor7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Memory is constructive and fallible',
-            options: ['Memory is constructive and fallible', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Encoding strategies for studying', 'memory model applications', 'Multiple memory systems in the brain', 'Memory is constructive and fallible']
           },
           {
             label: 'Multiple memory systems in the brain',
-            options: ['Multiple memory systems in the brain', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Memory is constructive and fallible', 'Multiple memory systems in the brain', 'Encoding strategies for studying', 'memory model applications']
           },
           {
             label: 'Encoding strategies for studying',
-            options: ['Encoding strategies for studying', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Memory is constructive and fallible', 'Encoding strategies for studying', 'memory model applications', 'Multiple memory systems in the brain']
           }
         ],
         correctAnswers: ['Memory is constructive and fallible', 'Multiple memory systems in the brain', 'Encoding strategies for studying'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Synthesis & AP Review.'
+        hint1: 'Think about what each concept specifically describes in Synthesis & AP Review.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Synthesis & AP Review describes a specific idea. Memory is constructive and fallible. Multiple memory systems in the brain. Encoding strategies for studying.'
       }
     }
   ]

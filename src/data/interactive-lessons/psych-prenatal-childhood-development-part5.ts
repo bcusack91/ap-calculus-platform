@@ -30,31 +30,31 @@ low warmth, low control (worst outcomes)
       id: 'prena5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of parenting styles?',
+            question: 'Which statement accurately explains Authoritative?',
             options: [
-              'Authoritative',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'low warmth, high control',
+              'high warmth, high control (best outcomes)',
+              'high warmth, low control',
+              'low warmth, low control (worst outcomes)'
             ],
-            correctAnswer: 0,
-            explanation: 'Authoritative: high warmth, high control (best outcomes)'
+            correctAnswer: 1,
+            explanation: 'Correct — Authoritative: high warmth, high control (best outcomes). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of parenting styles, which is accurate?',
+            question: 'In the context of Parenting Styles, which explains Permissive?',
             options: [
+              'low warmth, low control (worst outcomes)',
+              'low warmth, high control',
               'high warmth, low control',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'high warmth, high control (best outcomes)'
             ],
-            correctAnswer: 0,
-            explanation: 'Permissive: high warmth, low control'
+            correctAnswer: 2,
+            explanation: 'Correct — Permissive: high warmth, low control. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ low warmth, low control (worst outcomes)
       id: 'prena5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Authoritative',
-            options: ['high warmth, high control (best outcomes)', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['high warmth, high control (best outcomes)', 'low warmth, high control', 'low warmth, low control (worst outcomes)', 'high warmth, low control']
           },
           {
             label: 'Authoritarian',
-            options: ['low warmth, high control', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['high warmth, high control (best outcomes)', 'high warmth, low control', 'low warmth, high control', 'low warmth, low control (worst outcomes)']
           },
           {
             label: 'Permissive',
-            options: ['high warmth, low control', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['high warmth, low control', 'low warmth, high control', 'low warmth, low control (worst outcomes)', 'high warmth, high control (best outcomes)']
           }
         ],
         correctAnswers: ['high warmth, high control (best outcomes)', 'low warmth, high control', 'high warmth, low control'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Parenting Styles.'
+        hint1: 'Think about what each concept specifically describes in Parenting Styles.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Parenting Styles describes a specific idea. Authoritative: high warmth, high control (best outcomes). Authoritarian: low warmth, high control. Permissive: high warmth, low control.'
       }
     }
   ]

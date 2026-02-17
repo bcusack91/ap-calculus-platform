@@ -30,31 +30,31 @@ reparametrize by distance traveled
       id: 'arc-l5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of speed & distance applications?',
+            question: 'What does "Speed at time t" refer to in calculus?',
             options: [
-              'Speed at time t',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
+              'reparametrize by distance traveled',
+              '|v⃗(t)| = √[x\'(t)² + y\'(t)²]',
+              'Average speed = (total distance)/(total time)',
+              'Total distance = ∫ₐᵇ |v⃗(t)| dt'
             ],
-            correctAnswer: 0,
-            explanation: 'Speed at time t: |v⃗(t)| = √[x\'(t)² + y\'(t)²]'
+            correctAnswer: 1,
+            explanation: 'Correct — Speed at time t: |v⃗(t)| = √[x\'(t)² + y\'(t)²]. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of speed & distance applications, which is accurate?',
+            question: 'In the context of Speed & Distance Applications, which explains Average speed = (total distance)/(total…?',
             options: [
+              'reparametrize by distance traveled',
+              '|v⃗(t)| = √[x\'(t)² + y\'(t)²]',
               'Average speed = (total distance)/(total time)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Total distance = ∫ₐᵇ |v⃗(t)| dt'
             ],
-            correctAnswer: 0,
-            explanation: 'Average speed = (total distance)/(total time)'
+            correctAnswer: 2,
+            explanation: 'Correct — Average speed = (total distance)/(total time). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ reparametrize by distance traveled
       id: 'arc-l5-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to speed & distance applications?',
+            question: 'Regarding Speed & Distance Applications, which correctly describes Arc length parametrization?',
             options: [
+              'Average speed = (total distance)/(total time)',
+              'Total distance = ∫ₐᵇ |v⃗(t)| dt',
               'reparametrize by distance traveled',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              '|v⃗(t)| = √[x\'(t)² + y\'(t)²]'
             ],
-            correctAnswer: 0,
-            explanation: 'Arc length parametrization: reparametrize by distance traveled'
+            correctAnswer: 2,
+            explanation: 'Correct — Arc length parametrization: reparametrize by distance traveled. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,24 @@ reparametrize by distance traveled
       id: 'arc-l5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Speed at time t',
-            options: ['|v⃗(t)| = √[x\'(t)² + y\'(t)²]', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Average speed = (total distance)/(total time)', 'reparametrize by distance traveled', '|v⃗(t)| = √[x\'(t)² + y\'(t)²]', 'Total distance = ∫ₐᵇ |v⃗(t)| dt']
           },
           {
-            label: 'Total distance = ∫ₐᵇ |v⃗(t)| dt',
-            options: ['Total distance = ∫ₐᵇ |v⃗(t)| dt', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
-          },
-          {
-            label: 'Average speed = (total distance)/(total time)',
-            options: ['Average speed = (total distance)/(total time)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Arc length parametrization',
+            options: ['|v⃗(t)| = √[x\'(t)² + y\'(t)²]', 'Average speed = (total distance)/(total time)', 'reparametrize by distance traveled', 'Total distance = ∫ₐᵇ |v⃗(t)| dt']
           }
         ],
-        correctAnswers: ['|v⃗(t)| = √[x\'(t)² + y\'(t)²]', 'Total distance = ∫ₐᵇ |v⃗(t)| dt', 'Average speed = (total distance)/(total time)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Speed & Distance Applications.'
+        correctAnswers: ['|v⃗(t)| = √[x\'(t)² + y\'(t)²]', 'reparametrize by distance traveled'],
+        hint1: 'Think about what each concept specifically describes in Speed & Distance Applications.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Speed & Distance Applications describes a specific idea. Speed at time t: |v⃗(t)| = √[x\'(t)² + y\'(t)²]. Arc length parametrization: reparametrize by distance traveled.'
       }
     }
   ]

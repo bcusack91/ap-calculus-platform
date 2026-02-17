@@ -30,31 +30,31 @@ Restrict t-domain to show only part of the curve
       id: 'param2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of graphing parametric curves?',
+            question: 'Which of the following correctly describes Make a table of t, x, y values and plot…?',
             options: [
+              'Indicate direction with arrows',
               'Make a table of t, x, y values and plot points',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'Restrict t-domain to show only part of the curve',
+              'The same curve can have different parametric representations'
             ],
-            correctAnswer: 0,
-            explanation: 'Make a table of t, x, y values and plot points'
+            correctAnswer: 1,
+            explanation: 'Correct — Make a table of t, x, y values and plot points. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of graphing parametric curves, which is accurate?',
+            question: 'In the context of Graphing Parametric Curves, which explains The same curve can have different…?',
             options: [
+              'Indicate direction with arrows',
+              'Make a table of t, x, y values and plot points',
               'The same curve can have different parametric representations',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Restrict t-domain to show only part of the curve'
             ],
-            correctAnswer: 0,
-            explanation: 'The same curve can have different parametric representations'
+            correctAnswer: 2,
+            explanation: 'Correct — The same curve can have different parametric representations. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Restrict t-domain to show only part of the curve
       id: 'param2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Make a table of t, x, y values and plot points',
-            options: ['Make a table of t, x, y values and plot points', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            label: 'Make a table of t, x, y values and plot…',
+            options: ['Indicate direction with arrows', 'Make a table of t, x, y values and plot points', 'The same curve can have different parametric representations', 'Restrict t-domain to show only part of the curve']
           },
           {
             label: 'Indicate direction with arrows',
-            options: ['Indicate direction with arrows', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['Restrict t-domain to show only part of the curve', 'The same curve can have different parametric representations', 'Indicate direction with arrows', 'Make a table of t, x, y values and plot points']
           },
           {
-            label: 'The same curve can have different parametric representations',
-            options: ['The same curve can have different parametric repre', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            label: 'The same curve can have different…',
+            options: ['Make a table of t, x, y values and plot points', 'The same curve can have different parametric representations', 'Restrict t-domain to show only part of the curve', 'Indicate direction with arrows']
           }
         ],
-        correctAnswers: ['Make a table of t, x, y values and plot points', 'Indicate direction with arrows', 'The same curve can have different parametric repre'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Graphing Parametric Curves.'
+        correctAnswers: ['Make a table of t, x, y values and plot points', 'Indicate direction with arrows', 'The same curve can have different parametric representations'],
+        hint1: 'Think about what each concept specifically describes in Graphing Parametric Curves.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Graphing Parametric Curves describes a specific idea. Make a table of t, x, y values and plot points. Indicate direction with arrows. The same curve can have different parametric representations.'
       }
     }
   ]

@@ -71,23 +71,28 @@ Nucleus: contains DNA; Mitochondria: ATP via oxidative phosphorylation; ER: prot
       id: 'mcat-1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Cell Structure & Organelles:',
-            options: ['Eukaryotic cells have membrane-bound organelles; prokaryotic', 'Nucleus: contains DNA; Mitochondria: ATP via oxidative phosp', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Nucleus',
+            options: ['contains DNA; Mitochondria: ATP via oxidative phosphorylation; ER: protein/lipid synthesis.', 'Eukaryotic cells have membrane-bound organelles; prokaryotic cells do not.', 'Golgi apparatus: modifies, sorts, and packages proteins for secretion or intracellular use.', 'Rough ER: ribosome-studded, protein synthesis; Smooth ER: lipid synthesis, detoxification.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Rough ER: ribosome-studded, protein synthesis; Smooth ER: li', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Key Insight',
+            options: ['Golgi apparatus: modifies, sorts, and packages proteins for secretion or intracellular use.', 'Rough ER: ribosome-studded, protein synthesis; Smooth ER: lipid synthesis, detoxification.', 'contains DNA; Mitochondria: ATP via oxidative phosphorylation; ER: protein/lipid synthesis.', 'Eukaryotic cells have membrane-bound organelles; prokaryotic cells do not.']
+          },
+          {
+            label: 'MCAT Tip',
+            options: ['Golgi apparatus: modifies, sorts, and packages proteins for secretion or intracellular use.', 'Rough ER: ribosome-studded, protein synthesis; Smooth ER: lipid synthesis, detoxification.', 'contains DNA; Mitochondria: ATP via oxidative phosphorylation; ER: protein/lipid synthesis.', 'Eukaryotic cells have membrane-bound organelles; prokaryotic cells do not.']
           }
         ],
-        correctAnswers: ['Eukaryotic cells have membrane-bound organelles; prokaryotic', 'Rough ER: ribosome-studded, protein synthesis; Smooth ER: li'],
-        hint1: 'Think about cell structure & organelles',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Eukaryotic cells have membrane-bound organelles; prokaryotic cells do not. Rough ER: ribosome-studded, protein synthesis; Smooth ER: lipid synthesis, detoxification.'
+        correctAnswers: ['contains DNA; Mitochondria: ATP via oxidative phosphorylation; ER: protein/lipid synthesis.', 'Rough ER: ribosome-studded, protein synthesis; Smooth ER: lipid synthesis, detoxification.', 'Golgi apparatus: modifies, sorts, and packages proteins for secretion or intracellular use.'],
+        hint1: 'Think about what each concept specifically describes in Cell Biology.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Cell Biology describes a specific idea. Nucleus: contains DNA; Mitochondria: ATP via oxidative phosphorylation; ER: protein/lipid synthesis. Key Insight: Rough ER: ribosome-studded, protein synthesis; Smooth ER: lipid synthesis, detoxification. MCAT Tip: Golgi apparatus: modifies, sorts, and packages proteins for secretion or intracellular use.'
       }
     }
   ]

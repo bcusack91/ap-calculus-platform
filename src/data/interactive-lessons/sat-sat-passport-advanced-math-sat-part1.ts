@@ -18,20 +18,31 @@ Rewrite expressions in equivalent forms to reveal information.
       id: 'sat-p1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes factor, expand, and simplify algebraic expressions?',
+            question: 'Which statement accurately explains Factor, expand, and simplify algebraic…?',
             options: [
-              'Factor, expand, and simplify algebraic expressions is a fundamental concept in SAT Math',
-              'Rewrite expressions in equivalent forms to reveal information',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'Factor, expand, and simplify algebraic expressions.',
+              'SAT may ask "which is equivalent to..." — transform step by step.',
+              'Common factor, complete the square, use identities.',
+              'Rewrite expressions in equivalent forms to reveal information.'
             ],
             correctAnswer: 0,
-            explanation: 'Factor, expand, and simplify algebraic expressions'
+            explanation: 'Correct — Factor, expand, and simplify algebraic expressions. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Passport Advanced Math, which explains Key Insight?',
+            options: [
+              'Common factor, complete the square, use identities.',
+              'SAT may ask "which is equivalent to..." — transform step by step.',
+              'Rewrite expressions in equivalent forms to reveal information.',
+              'Factor, expand, and simplify algebraic expressions.'
+            ],
+            correctAnswer: 0,
+            explanation: 'Correct — Key Insight: Common factor, complete the square, use identities. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Rewrite expressions in equivalent forms to reveal information.
       id: 'sat-p1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for manipulating expressions?',
+            question: 'Regarding Passport Advanced Math, which correctly describes SAT Tip?',
             options: [
-              'Common factor, complete the square, use identities',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'SAT may ask "which is equivalent to..." — transform step by step.',
+              'Common factor, complete the square, use identities.',
+              'Rewrite expressions in equivalent forms to reveal information.',
+              'Factor, expand, and simplify algebraic expressions.'
             ],
             correctAnswer: 0,
-            explanation: 'Common factor, complete the square, use identities'
+            explanation: 'Correct — SAT Tip: SAT may ask "which is equivalent to..." — transform step by step. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ Rewrite expressions in equivalent forms to reveal information.
       id: 'sat-p1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Manipulating Expressions:',
-            options: ['Factor, expand, and simplify algebraic expressions', 'Rewrite expressions in equivalent forms to reveal ', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['Factor, expand, and simplify algebraic expressions.', 'SAT may ask "which is equivalent to..." — transform step by step.', 'Common factor, complete the square, use identities.', 'Rewrite expressions in equivalent forms to reveal information.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Common factor, complete the square, use identities', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'SAT Tip',
+            options: ['SAT may ask "which is equivalent to..." — transform step by step.', 'Factor, expand, and simplify algebraic expressions.', 'Common factor, complete the square, use identities.', 'Rewrite expressions in equivalent forms to reveal information.']
           }
         ],
-        correctAnswers: ['Factor, expand, and simplify algebraic expressions', 'Common factor, complete the square, use identities'],
-        hint1: 'Think about manipulating expressions',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'Factor, expand, and simplify algebraic expressions. Common factor, complete the square, use identities.'
+        correctAnswers: ['Common factor, complete the square, use identities.', 'SAT may ask "which is equivalent to..." — transform step by step.'],
+        hint1: 'Think about what each concept specifically describes in Passport Advanced Math.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Passport Advanced Math describes a specific idea. Key Insight: Common factor, complete the square, use identities. SAT Tip: SAT may ask "which is equivalent to..." — transform step by step.'
       }
     }
   ]

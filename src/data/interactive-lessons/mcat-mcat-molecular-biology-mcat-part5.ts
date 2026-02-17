@@ -71,23 +71,28 @@ Missense: different amino acid; Nonsense: premature stop codon; Silent: same ami
       id: 'mcat-5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Mutations & Repair:',
-            options: ['Point mutations: silent, missense, nonsense, frameshift (ins', 'Missense: different amino acid; Nonsense: premature stop cod', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Point mutations',
+            options: ['silent, missense, nonsense, frameshift (insertion/deletion).', 'DNA repair: mismatch repair, base excision repair, nucleotide excision repair.', 'Mutagens: UV light (thymine dimers), chemicals (alkylating agents), radiation (double-strand breaks).', 'different amino acid; Nonsense: premature stop codon; Silent: same amino acid.']
           },
           {
-            label: 'MCAT application:',
-            options: ['DNA repair: mismatch repair, base excision repair, nucleotid', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Missense',
+            options: ['DNA repair: mismatch repair, base excision repair, nucleotide excision repair.', 'silent, missense, nonsense, frameshift (insertion/deletion).', 'Mutagens: UV light (thymine dimers), chemicals (alkylating agents), radiation (double-strand breaks).', 'different amino acid; Nonsense: premature stop codon; Silent: same amino acid.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['Mutagens: UV light (thymine dimers), chemicals (alkylating agents), radiation (double-strand breaks).', 'silent, missense, nonsense, frameshift (insertion/deletion).', 'different amino acid; Nonsense: premature stop codon; Silent: same amino acid.', 'DNA repair: mismatch repair, base excision repair, nucleotide excision repair.']
           }
         ],
-        correctAnswers: ['Point mutations: silent, missense, nonsense, frameshift (ins', 'DNA repair: mismatch repair, base excision repair, nucleotid'],
-        hint1: 'Think about mutations & repair',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Point mutations: silent, missense, nonsense, frameshift (insertion/deletion). DNA repair: mismatch repair, base excision repair, nucleotide excision repair.'
+        correctAnswers: ['silent, missense, nonsense, frameshift (insertion/deletion).', 'different amino acid; Nonsense: premature stop codon; Silent: same amino acid.', 'DNA repair: mismatch repair, base excision repair, nucleotide excision repair.'],
+        hint1: 'Think about what each concept specifically describes in Mutations & Repair.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Mutations & Repair describes a specific idea. Point mutations: silent, missense, nonsense, frameshift (insertion/deletion). Missense: different amino acid; Nonsense: premature stop codon; Silent: same amino acid. Key Insight: DNA repair: mismatch repair, base excision repair, nucleotide excision repair.'
       }
     }
   ]

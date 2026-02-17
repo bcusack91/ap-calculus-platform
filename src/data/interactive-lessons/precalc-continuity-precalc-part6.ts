@@ -30,31 +30,31 @@ Graph each piece on its defined interval
       id: 'conti6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of problem-solving workshop?',
+            question: 'What does "Piecewise functions" refer to in precalculus?',
             options: [
-              'Piecewise functions',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'check continuity at each boundary point',
+              'Set left-hand limit = right-hand limit = function value at the boundary',
+              'Graph each piece on its defined interval',
+              'Solve for parameters to make piecewise functions continuous'
             ],
             correctAnswer: 0,
-            explanation: 'Piecewise functions: check continuity at each boundary point'
+            explanation: 'Correct — Piecewise functions: check continuity at each boundary point. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of problem-solving workshop, which is accurate?',
+            question: 'Select the statement that correctly describes Solve for parameters to make piecewise…:',
             options: [
+              'check continuity at each boundary point',
+              'Graph each piece on its defined interval',
               'Solve for parameters to make piecewise functions continuous',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Set left-hand limit = right-hand limit = function value at the boundary'
             ],
-            correctAnswer: 0,
-            explanation: 'Solve for parameters to make piecewise functions continuous'
+            correctAnswer: 2,
+            explanation: 'Correct — Solve for parameters to make piecewise functions continuous. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Graph each piece on its defined interval
       id: 'conti6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Piecewise functions',
-            options: ['check continuity at each boundary point', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['Graph each piece on its defined interval', 'Set left-hand limit = right-hand limit = function value at the boundary', 'Solve for parameters to make piecewise functions continuous', 'check continuity at each boundary point']
           },
           {
-            label: 'Set left-hand limit = right-hand limit = function value at the boundary',
-            options: ['Set left-hand limit = right-hand limit = function ', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            label: 'Set left-hand limit = right-hand limit…',
+            options: ['Graph each piece on its defined interval', 'Set left-hand limit = right-hand limit = function value at the boundary', 'Solve for parameters to make piecewise functions continuous', 'check continuity at each boundary point']
           },
           {
-            label: 'Solve for parameters to make piecewise functions continuous',
-            options: ['Solve for parameters to make piecewise functions c', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            label: 'Solve for parameters to make piecewise…',
+            options: ['Solve for parameters to make piecewise functions continuous', 'check continuity at each boundary point', 'Graph each piece on its defined interval', 'Set left-hand limit = right-hand limit = function value at the boundary']
           }
         ],
-        correctAnswers: ['check continuity at each boundary point', 'Set left-hand limit = right-hand limit = function ', 'Solve for parameters to make piecewise functions c'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving Workshop.'
+        correctAnswers: ['check continuity at each boundary point', 'Set left-hand limit = right-hand limit = function value at the boundary', 'Solve for parameters to make piecewise functions continuous'],
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Piecewise functions: check continuity at each boundary point. Set left-hand limit = right-hand limit = function value at the boundary. Solve for parameters to make piecewise functions continuous.'
       }
     }
   ]

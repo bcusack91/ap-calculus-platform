@@ -30,31 +30,31 @@ Aromatic compounds are exceptionally stable
       id: 'aroma1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of aromaticity & hückel rule?',
-            options: [
-              'Hückel\'s rule',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
-            ],
-            correctAnswer: 0,
-            explanation: 'Hückel\'s rule: planar, cyclic, conjugated, 4n+2 π electrons → aromatic'
-          },
-          {
-            question: 'In the context of aromaticity & hückel rule, which is accurate?',
+            question: 'What does "Hückel\'s rule" refer to in this topic?',
             options: [
               '2 π electrons; n=1: 6 π electrons; n=2: 10 π electrons',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              '6 π electrons (n=1), aromatic',
+              'planar, cyclic, conjugated, 4n+2 π electrons → aromatic',
+              'Aromatic compounds are exceptionally stable'
             ],
-            correctAnswer: 0,
-            explanation: 'n=0: 2 π electrons; n=1: 6 π electrons; n=2: 10 π electrons'
+            correctAnswer: 2,
+            explanation: 'Correct — Hückel\'s rule: planar, cyclic, conjugated, 4n+2 π electrons → aromatic. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about n=0?',
+            options: [
+              'planar, cyclic, conjugated, 4n+2 π electrons → aromatic',
+              'Aromatic compounds are exceptionally stable',
+              '2 π electrons; n=1: 6 π electrons; n=2: 10 π electrons',
+              '6 π electrons (n=1), aromatic'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — n=0: 2 π electrons; n=1: 6 π electrons; n=2: 10 π electrons. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Aromatic compounds are exceptionally stable
       id: 'aroma1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Hückel\'s rule',
-            options: ['planar, cyclic, conjugated, 4n+2 π electrons → aro', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
-          },
-          {
-            label: 'Aromatic compounds are exceptionally stable',
-            options: ['Aromatic compounds are exceptionally stable', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['2 π electrons; n=1: 6 π electrons; n=2: 10 π electrons', 'Aromatic compounds are exceptionally stable', '6 π electrons (n=1), aromatic', 'planar, cyclic, conjugated, 4n+2 π electrons → aromatic']
           },
           {
             label: 'n=0',
-            options: ['2 π electrons; n=1: 6 π electrons; n=2: 10 π elect', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Aromatic compounds are exceptionally stable', '2 π electrons; n=1: 6 π electrons; n=2: 10 π electrons', '6 π electrons (n=1), aromatic', 'planar, cyclic, conjugated, 4n+2 π electrons → aromatic']
+          },
+          {
+            label: 'Benzene',
+            options: ['2 π electrons; n=1: 6 π electrons; n=2: 10 π electrons', 'planar, cyclic, conjugated, 4n+2 π electrons → aromatic', 'Aromatic compounds are exceptionally stable', '6 π electrons (n=1), aromatic']
           }
         ],
-        correctAnswers: ['planar, cyclic, conjugated, 4n+2 π electrons → aro', 'Aromatic compounds are exceptionally stable', '2 π electrons; n=1: 6 π electrons; n=2: 10 π elect'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Aromaticity & Hückel Rule.'
+        correctAnswers: ['planar, cyclic, conjugated, 4n+2 π electrons → aromatic', '2 π electrons; n=1: 6 π electrons; n=2: 10 π electrons', '6 π electrons (n=1), aromatic'],
+        hint1: 'Think about what each concept specifically describes in ️ Aromatic Compounds Benzene.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in ️ Aromatic Compounds Benzene describes a specific idea. Hückel\'s rule: planar, cyclic, conjugated, 4n+2 π electrons → aromatic. n=0: 2 π electrons; n=1: 6 π electrons; n=2: 10 π electrons. Benzene: 6 π electrons (n=1), aromatic.'
       }
     }
   ]

@@ -30,31 +30,31 @@ The alternating harmonic series Σ(-1)ⁿ⁺¹/n converges (to ln 2)
       id: 'alter2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of alternating series test?',
+            question: 'What does "AST" refer to in calculus?',
             options: [
-              'AST',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
+              'All three conditions must be verified',
+              'Σ(-1)ⁿ bₙ converges if (1) bₙ > 0, (2) bₙ is decreasing, (3) lim bₙ = 0',
+              'The alternating harmonic series Σ(-1)ⁿ⁺¹/n converges (to ln 2)',
+              'If lim bₙ ≠ 0, the series diverges (by the Divergence Test)'
             ],
-            correctAnswer: 0,
-            explanation: 'AST: Σ(-1)ⁿ bₙ converges if (1) bₙ > 0, (2) bₙ is decreasing, (3) lim bₙ = 0'
+            correctAnswer: 1,
+            explanation: 'Correct — AST: Σ(-1)ⁿ bₙ converges if (1) bₙ > 0, (2) bₙ is decreasing, (3) lim bₙ = 0. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of alternating series test, which is accurate?',
+            question: 'Which of the following is true about If lim bₙ ≠ 0, the series diverges (by…?',
             options: [
+              'All three conditions must be verified',
+              'Σ(-1)ⁿ bₙ converges if (1) bₙ > 0, (2) bₙ is decreasing, (3) lim bₙ = 0',
               'If lim bₙ ≠ 0, the series diverges (by the Divergence Test)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'The alternating harmonic series Σ(-1)ⁿ⁺¹/n converges (to ln 2)'
             ],
-            correctAnswer: 0,
-            explanation: 'If lim bₙ ≠ 0, the series diverges (by the Divergence Test)'
+            correctAnswer: 2,
+            explanation: 'Correct — If lim bₙ ≠ 0, the series diverges (by the Divergence Test). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ The alternating harmonic series Σ(-1)ⁿ⁺¹/n converges (to ln 2)
       id: 'alter2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to alternating series test?',
+            question: 'Which statement about The alternating harmonic series… is correct?',
             options: [
               'The alternating harmonic series Σ(-1)ⁿ⁺¹/n converges (to ln 2)',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'All three conditions must be verified',
+              'Σ(-1)ⁿ bₙ converges if (1) bₙ > 0, (2) bₙ is decreasing, (3) lim bₙ = 0',
+              'If lim bₙ ≠ 0, the series diverges (by the Divergence Test)'
             ],
             correctAnswer: 0,
-            explanation: 'The alternating harmonic series Σ(-1)ⁿ⁺¹/n converges (to ln 2)'
+            explanation: 'Correct — The alternating harmonic series Σ(-1)ⁿ⁺¹/n converges (to ln 2). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ The alternating harmonic series Σ(-1)ⁿ⁺¹/n converges (to ln 2)
       id: 'alter2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'AST',
-            options: ['Σ(-1)ⁿ bₙ converges if (1) bₙ > 0, (2) bₙ is decre', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['All three conditions must be verified', 'The alternating harmonic series Σ(-1)ⁿ⁺¹/n converges (to ln 2)', 'If lim bₙ ≠ 0, the series diverges (by the Divergence Test)', 'Σ(-1)ⁿ bₙ converges if (1) bₙ > 0, (2) bₙ is decreasing, (3) lim bₙ = 0']
           },
           {
             label: 'All three conditions must be verified',
-            options: ['All three conditions must be verified', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['All three conditions must be verified', 'The alternating harmonic series Σ(-1)ⁿ⁺¹/n converges (to ln 2)', 'Σ(-1)ⁿ bₙ converges if (1) bₙ > 0, (2) bₙ is decreasing, (3) lim bₙ = 0', 'If lim bₙ ≠ 0, the series diverges (by the Divergence Test)']
           },
           {
-            label: 'If lim bₙ ≠ 0, the series diverges (by the Divergence Test)',
-            options: ['If lim bₙ ≠ 0, the series diverges (by the Diverge', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'If lim bₙ ≠ 0, the series diverges (by…',
+            options: ['The alternating harmonic series Σ(-1)ⁿ⁺¹/n converges (to ln 2)', 'If lim bₙ ≠ 0, the series diverges (by the Divergence Test)', 'Σ(-1)ⁿ bₙ converges if (1) bₙ > 0, (2) bₙ is decreasing, (3) lim bₙ = 0', 'All three conditions must be verified']
           }
         ],
-        correctAnswers: ['Σ(-1)ⁿ bₙ converges if (1) bₙ > 0, (2) bₙ is decre', 'All three conditions must be verified', 'If lim bₙ ≠ 0, the series diverges (by the Diverge'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Alternating Series Test.'
+        correctAnswers: ['Σ(-1)ⁿ bₙ converges if (1) bₙ > 0, (2) bₙ is decreasing, (3) lim bₙ = 0', 'All three conditions must be verified', 'If lim bₙ ≠ 0, the series diverges (by the Divergence Test)'],
+        hint1: 'Think about what each concept specifically describes in Alternating Series Test.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Alternating Series Test describes a specific idea. AST: Σ(-1)ⁿ bₙ converges if (1) bₙ > 0, (2) bₙ is decreasing, (3) lim bₙ = 0. All three conditions must be verified. If lim bₙ ≠ 0, the series diverges (by the Divergence Test).'
       }
     }
   ]

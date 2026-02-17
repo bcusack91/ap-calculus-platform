@@ -18,20 +18,31 @@ f(x - h): shifts right h units; f(x + h): shifts left h.
       id: 'sat-f4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes f(x) + k?',
+            question: 'Which statement accurately explains f(x) + k?',
             options: [
-              'f(x) + k is a fundamental concept in SAT Math',
-              'f(x - h): shifts right h units; f(x + h): shifts left h',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'shifts up k units; f(x) - k: shifts down k.',
+              'af(x): vertical stretch (a > 1) or compression (0 < a < 1).',
+              'f(-x): reflects over y-axis; -f(x): reflects over x-axis.',
+              'shifts right h units; f(x + h): shifts left h.'
             ],
             correctAnswer: 0,
-            explanation: 'f(x) + k: shifts up k units; f(x) - k: shifts down k'
+            explanation: 'Correct — f(x) + k: shifts up k units; f(x) - k: shifts down k. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              'af(x): vertical stretch (a > 1) or compression (0 < a < 1).',
+              'shifts right h units; f(x + h): shifts left h.',
+              'f(-x): reflects over y-axis; -f(x): reflects over x-axis.',
+              'shifts up k units; f(x) - k: shifts down k.'
+            ],
+            correctAnswer: 0,
+            explanation: 'Correct — Key Insight: af(x): vertical stretch (a > 1) or compression (0 < a < 1). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ f(x - h): shifts right h units; f(x + h): shifts left h.
       id: 'sat-f4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for transformations of functions?',
+            question: 'Which of these accurately represents SAT Tip?',
             options: [
-              'af(x): vertical stretch (a > 1) or compression (0 < a < 1)',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'shifts right h units; f(x + h): shifts left h.',
+              'f(-x): reflects over y-axis; -f(x): reflects over x-axis.',
+              'shifts up k units; f(x) - k: shifts down k.',
+              'af(x): vertical stretch (a > 1) or compression (0 < a < 1).'
             ],
-            correctAnswer: 0,
-            explanation: 'af(x): vertical stretch (a > 1) or compression (0 < a < 1)'
+            correctAnswer: 1,
+            explanation: 'Correct — SAT Tip: f(-x): reflects over y-axis; -f(x): reflects over x-axis. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ f(x - h): shifts right h units; f(x + h): shifts left h.
       id: 'sat-f4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Transformations of Functions:',
-            options: ['f(x) + k: shifts up k units; f(x) - k: shifts down', 'f(x - h): shifts right h units; f(x + h): shifts l', 'Not applicable', 'None of these']
+            label: 'f(x) + k',
+            options: ['shifts up k units; f(x) - k: shifts down k.', 'shifts right h units; f(x + h): shifts left h.', 'af(x): vertical stretch (a > 1) or compression (0 < a < 1).', 'f(-x): reflects over y-axis; -f(x): reflects over x-axis.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['af(x): vertical stretch (a > 1) or compression (0 ', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'f(x - h)',
+            options: ['shifts up k units; f(x) - k: shifts down k.', 'af(x): vertical stretch (a > 1) or compression (0 < a < 1).', 'f(-x): reflects over y-axis; -f(x): reflects over x-axis.', 'shifts right h units; f(x + h): shifts left h.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['af(x): vertical stretch (a > 1) or compression (0 < a < 1).', 'shifts right h units; f(x + h): shifts left h.', 'f(-x): reflects over y-axis; -f(x): reflects over x-axis.', 'shifts up k units; f(x) - k: shifts down k.']
           }
         ],
-        correctAnswers: ['f(x) + k: shifts up k units; f(x) - k: shifts down', 'af(x): vertical stretch (a > 1) or compression (0 '],
-        hint1: 'Think about transformations of functions',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'f(x) + k: shifts up k units; f(x) - k: shifts down k. af(x): vertical stretch (a > 1) or compression (0 < a < 1).'
+        correctAnswers: ['shifts up k units; f(x) - k: shifts down k.', 'shifts right h units; f(x + h): shifts left h.', 'af(x): vertical stretch (a > 1) or compression (0 < a < 1).'],
+        hint1: 'Think about what each concept specifically describes in Transformations of Functions.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Transformations of Functions describes a specific idea. f(x) + k: shifts up k units; f(x) - k: shifts down k. f(x - h): shifts right h units; f(x + h): shifts left h. Key Insight: af(x): vertical stretch (a > 1) or compression (0 < a < 1).'
       }
     }
   ]

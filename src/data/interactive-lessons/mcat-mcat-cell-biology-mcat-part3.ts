@@ -71,23 +71,28 @@ G-protein coupled receptors (GPCRs): activate G proteins which activate effector
       id: 'mcat-3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Cell Signaling:',
-            options: ['Signal transduction: ligand binds receptor, activates intrac', 'G-protein coupled receptors (GPCRs): activate G proteins whi', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Signal transduction',
+            options: ['Second messengers: cAMP, IP3, DAG, Ca2+ — amplify the signal inside the cell.', 'Receptor tyrosine kinases (RTKs): dimerize and autophosphorylate upon ligand binding.', 'ligand binds receptor, activates intracellular cascade, produces cellular response.', 'activate G proteins which activate effector enzymes.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Receptor tyrosine kinases (RTKs): dimerize and autophosphory', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'G-protein coupled receptors (GPCRs)',
+            options: ['activate G proteins which activate effector enzymes.', 'Receptor tyrosine kinases (RTKs): dimerize and autophosphorylate upon ligand binding.', 'Second messengers: cAMP, IP3, DAG, Ca2+ — amplify the signal inside the cell.', 'ligand binds receptor, activates intracellular cascade, produces cellular response.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['Second messengers: cAMP, IP3, DAG, Ca2+ — amplify the signal inside the cell.', 'activate G proteins which activate effector enzymes.', 'Receptor tyrosine kinases (RTKs): dimerize and autophosphorylate upon ligand binding.', 'ligand binds receptor, activates intracellular cascade, produces cellular response.']
           }
         ],
-        correctAnswers: ['Signal transduction: ligand binds receptor, activates intrac', 'Receptor tyrosine kinases (RTKs): dimerize and autophosphory'],
-        hint1: 'Think about cell signaling',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Signal transduction: ligand binds receptor, activates intracellular cascade, produces cellular response. Receptor tyrosine kinases (RTKs): dimerize and autophosphorylate upon ligand binding.'
+        correctAnswers: ['ligand binds receptor, activates intracellular cascade, produces cellular response.', 'activate G proteins which activate effector enzymes.', 'Receptor tyrosine kinases (RTKs): dimerize and autophosphorylate upon ligand binding.'],
+        hint1: 'Think about what each concept specifically describes in Cell Signaling.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Cell Signaling describes a specific idea. Signal transduction: ligand binds receptor, activates intracellular cascade, produces cellular response. G-protein coupled receptors (GPCRs): activate G proteins which activate effector enzymes. Key Insight: Receptor tyrosine kinases (RTKs): dimerize and autophosphorylate upon ligand binding.'
       }
     }
   ]

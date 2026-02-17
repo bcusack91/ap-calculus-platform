@@ -30,31 +30,31 @@ a monotone bounded sequence converges
       id: 'infin2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of monotonic & bounded sequences?',
+            question: 'Which statement accurately explains Monotonically increasing?',
             options: [
-              'Monotonically increasing',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
+              'aₙ₊₁ ≤ aₙ for all n',
+              'aₙ₊₁ ≥ aₙ for all n',
+              'aₙ ≤ M for all n; Bounded below: aₙ ≥ m for all n',
+              'a monotone bounded sequence converges'
             ],
-            correctAnswer: 0,
-            explanation: 'Monotonically increasing: aₙ₊₁ ≥ aₙ for all n'
+            correctAnswer: 1,
+            explanation: 'Correct — Monotonically increasing: aₙ₊₁ ≥ aₙ for all n. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of monotonic & bounded sequences, which is accurate?',
+            question: 'In the context of Monotonic & Bounded Sequences, which explains Bounded above?',
             options: [
+              'a monotone bounded sequence converges',
               'aₙ ≤ M for all n; Bounded below: aₙ ≥ m for all n',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'aₙ₊₁ ≥ aₙ for all n',
+              'aₙ₊₁ ≤ aₙ for all n'
             ],
-            correctAnswer: 0,
-            explanation: 'Bounded above: aₙ ≤ M for all n; Bounded below: aₙ ≥ m for all n'
+            correctAnswer: 1,
+            explanation: 'Correct — Bounded above: aₙ ≤ M for all n; Bounded below: aₙ ≥ m for all n. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ a monotone bounded sequence converges
       id: 'infin2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to monotonic & bounded sequences?',
+            question: 'Which statement about Monotone Convergence Theorem is correct?',
             options: [
+              'aₙ₊₁ ≥ aₙ for all n',
+              'aₙ ≤ M for all n; Bounded below: aₙ ≥ m for all n',
               'a monotone bounded sequence converges',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'aₙ₊₁ ≤ aₙ for all n'
             ],
-            correctAnswer: 0,
-            explanation: 'Monotone Convergence Theorem: a monotone bounded sequence converges'
+            correctAnswer: 2,
+            explanation: 'Correct — Monotone Convergence Theorem: a monotone bounded sequence converges. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ a monotone bounded sequence converges
       id: 'infin2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Monotonically increasing',
-            options: ['aₙ₊₁ ≥ aₙ for all n', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['aₙ₊₁ ≤ aₙ for all n', 'aₙ ≤ M for all n; Bounded below: aₙ ≥ m for all n', 'aₙ₊₁ ≥ aₙ for all n', 'a monotone bounded sequence converges']
           },
           {
             label: 'Monotonically decreasing',
-            options: ['aₙ₊₁ ≤ aₙ for all n', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['aₙ ≤ M for all n; Bounded below: aₙ ≥ m for all n', 'aₙ₊₁ ≤ aₙ for all n', 'a monotone bounded sequence converges', 'aₙ₊₁ ≥ aₙ for all n']
           },
           {
             label: 'Bounded above',
-            options: ['aₙ ≤ M for all n; Bounded below: aₙ ≥ m for all n', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['aₙ₊₁ ≤ aₙ for all n', 'aₙ₊₁ ≥ aₙ for all n', 'aₙ ≤ M for all n; Bounded below: aₙ ≥ m for all n', 'a monotone bounded sequence converges']
           }
         ],
         correctAnswers: ['aₙ₊₁ ≥ aₙ for all n', 'aₙ₊₁ ≤ aₙ for all n', 'aₙ ≤ M for all n; Bounded below: aₙ ≥ m for all n'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Monotonic & Bounded Sequences.'
+        hint1: 'Think about what each concept specifically describes in Monotonic & Bounded Sequences.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Monotonic & Bounded Sequences describes a specific idea. Monotonically increasing: aₙ₊₁ ≥ aₙ for all n. Monotonically decreasing: aₙ₊₁ ≤ aₙ for all n. Bounded above: aₙ ≤ M for all n; Bounded below: aₙ ≥ m for all n.'
       }
     }
   ]

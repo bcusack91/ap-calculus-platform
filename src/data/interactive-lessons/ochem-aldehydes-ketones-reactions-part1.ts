@@ -30,31 +30,31 @@ Aldehydes more reactive than ketones (less steric hindrance, less electron donat
       id: 'aldeh1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of carbonyl chemistry introduction?',
-            options: [
-              'Carbonyl group (C=O)',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
-            ],
-            correctAnswer: 0,
-            explanation: 'Carbonyl group (C=O): polar, electrophilic carbon'
-          },
-          {
-            question: 'In the context of carbonyl chemistry introduction, which is accurate?',
+            question: 'Which of the following correctly describes Carbonyl group (C=O)?',
             options: [
               'Nu⁻ attacks electrophilic C',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'RCHO (terminal); Ketones: RCOR (internal)',
+              'Aldehydes more reactive than ketones (less steric hindrance, less electron donation)',
+              'polar, electrophilic carbon'
             ],
-            correctAnswer: 0,
-            explanation: 'Nucleophilic addition: Nu⁻ attacks electrophilic C'
+            correctAnswer: 3,
+            explanation: 'Correct — Carbonyl group (C=O): polar, electrophilic carbon. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Nucleophilic addition:',
+            options: [
+              'RCHO (terminal); Ketones: RCOR (internal)',
+              'Nu⁻ attacks electrophilic C',
+              'polar, electrophilic carbon',
+              'Aldehydes more reactive than ketones (less steric hindrance, less electron donation)'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Nucleophilic addition: Nu⁻ attacks electrophilic C. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Aldehydes more reactive than ketones (less steric hindrance, less electron donat
       id: 'aldeh1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Carbonyl group (C=O)',
-            options: ['polar, electrophilic carbon', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Nu⁻ attacks electrophilic C', 'RCHO (terminal); Ketones: RCOR (internal)', 'Aldehydes more reactive than ketones (less steric hindrance, less electron donation)', 'polar, electrophilic carbon']
           },
           {
             label: 'Aldehydes',
-            options: ['RCHO (terminal); Ketones: RCOR (internal)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['polar, electrophilic carbon', 'RCHO (terminal); Ketones: RCOR (internal)', 'Nu⁻ attacks electrophilic C', 'Aldehydes more reactive than ketones (less steric hindrance, less electron donation)']
           },
           {
             label: 'Nucleophilic addition',
-            options: ['Nu⁻ attacks electrophilic C', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['RCHO (terminal); Ketones: RCOR (internal)', 'Aldehydes more reactive than ketones (less steric hindrance, less electron donation)', 'Nu⁻ attacks electrophilic C', 'polar, electrophilic carbon']
           }
         ],
         correctAnswers: ['polar, electrophilic carbon', 'RCHO (terminal); Ketones: RCOR (internal)', 'Nu⁻ attacks electrophilic C'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Carbonyl Chemistry Introduction.'
+        hint1: 'Think about what each concept specifically describes in ️ Aldehydes Ketones Reactions.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in ️ Aldehydes Ketones Reactions describes a specific idea. Carbonyl group (C=O): polar, electrophilic carbon. Aldehydes: RCHO (terminal); Ketones: RCOR (internal). Nucleophilic addition: Nu⁻ attacks electrophilic C.'
       }
     }
   ]

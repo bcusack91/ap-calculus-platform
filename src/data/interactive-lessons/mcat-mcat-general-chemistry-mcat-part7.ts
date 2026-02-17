@@ -71,23 +71,28 @@ Arrhenius equation: k = Ae^(-Ea/RT) — higher temperature increases rate consta
       id: 'mcat-7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Review & MCAT Practice:',
-            options: ['Rate = k[A]^m[B]^n — rate law is determined experimentally, ', 'Arrhenius equation: k = Ae^(-Ea/RT) — higher temperature inc', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Arrhenius equation',
+            options: ['Rate-determining step: the slowest step in a mechanism controls the overall rate.', 'Rate = k[A]^m[B]^n — rate law is determined experimentally, not from stoichiometry.', 'k = Ae^(-Ea/RT) — higher temperature increases rate constant k.', 'Catalysts lower activation energy (Ea) without being consumed — enzymes are biological catalysts.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Catalysts lower activation energy (Ea) without being consume', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Key Insight',
+            options: ['Rate = k[A]^m[B]^n — rate law is determined experimentally, not from stoichiometry.', 'Catalysts lower activation energy (Ea) without being consumed — enzymes are biological catalysts.', 'Rate-determining step: the slowest step in a mechanism controls the overall rate.', 'k = Ae^(-Ea/RT) — higher temperature increases rate constant k.']
+          },
+          {
+            label: 'MCAT Tip',
+            options: ['Catalysts lower activation energy (Ea) without being consumed — enzymes are biological catalysts.', 'k = Ae^(-Ea/RT) — higher temperature increases rate constant k.', 'Rate-determining step: the slowest step in a mechanism controls the overall rate.', 'Rate = k[A]^m[B]^n — rate law is determined experimentally, not from stoichiometry.']
           }
         ],
-        correctAnswers: ['Rate = k[A]^m[B]^n — rate law is determined experimentally, ', 'Catalysts lower activation energy (Ea) without being consume'],
-        hint1: 'Think about review & mcat practice',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Rate = k[A]^m[B]^n — rate law is determined experimentally, not from stoichiometry. Catalysts lower activation energy (Ea) without being consumed — enzymes are biological catalysts.'
+        correctAnswers: ['k = Ae^(-Ea/RT) — higher temperature increases rate constant k.', 'Catalysts lower activation energy (Ea) without being consumed — enzymes are biological catalysts.', 'Rate-determining step: the slowest step in a mechanism controls the overall rate.'],
+        hint1: 'Think about what each concept specifically describes in Review & MCAT Practice.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Review & MCAT Practice describes a specific idea. Arrhenius equation: k = Ae^(-Ea/RT) — higher temperature increases rate constant k. Key Insight: Catalysts lower activation energy (Ea) without being consumed — enzymes are biological catalysts. MCAT Tip: Rate-determining step: the slowest step in a mechanism controls the overall rate.'
       }
     }
   ]

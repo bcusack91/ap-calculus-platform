@@ -30,31 +30,31 @@ add (Cx+D)/(ax²+bx+c)² etc.
       id: 'parti4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of irreducible quadratic factors?',
+            question: 'Which of the following correctly describes For irreducible quadratic ax²+bx+c…?',
             options: [
               'For irreducible quadratic ax²+bx+c (b²-4ac < 0)',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
+              'add (Cx+D)/(ax²+bx+c)² etc.',
+              'The numerator has degree one less than the quadratic',
+              '(Ax+B)/(ax²+bx+c) for each irreducible quadratic factor'
             ],
             correctAnswer: 0,
-            explanation: 'For irreducible quadratic ax²+bx+c (b²-4ac < 0)'
+            explanation: 'Correct — For irreducible quadratic ax²+bx+c (b²-4ac < 0). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of irreducible quadratic factors, which is accurate?',
+            question: 'Which of the following is true about The numerator has degree one less than…?',
             options: [
+              'For irreducible quadratic ax²+bx+c (b²-4ac < 0)',
               'The numerator has degree one less than the quadratic',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'add (Cx+D)/(ax²+bx+c)² etc.',
+              '(Ax+B)/(ax²+bx+c) for each irreducible quadratic factor'
             ],
-            correctAnswer: 0,
-            explanation: 'The numerator has degree one less than the quadratic'
+            correctAnswer: 1,
+            explanation: 'Correct — The numerator has degree one less than the quadratic. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ add (Cx+D)/(ax²+bx+c)² etc.
       id: 'parti4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to irreducible quadratic factors?',
+            question: 'Which statement about If repeated is correct?',
             options: [
+              'The numerator has degree one less than the quadratic',
               'add (Cx+D)/(ax²+bx+c)² etc.',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'For irreducible quadratic ax²+bx+c (b²-4ac < 0)',
+              '(Ax+B)/(ax²+bx+c) for each irreducible quadratic factor'
             ],
-            correctAnswer: 0,
-            explanation: 'If repeated: add (Cx+D)/(ax²+bx+c)² etc.'
+            correctAnswer: 1,
+            explanation: 'Correct — If repeated: add (Cx+D)/(ax²+bx+c)² etc. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,24 @@ add (Cx+D)/(ax²+bx+c)² etc.
       id: 'parti4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'For irreducible quadratic ax²+bx+c (b²-4ac < 0)',
-            options: ['For irreducible quadratic ax²+bx+c (b²-4ac < 0)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
-          },
-          {
             label: 'Include',
-            options: ['(Ax+B)/(ax²+bx+c) for each irreducible quadratic f', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['The numerator has degree one less than the quadratic', '(Ax+B)/(ax²+bx+c) for each irreducible quadratic factor', 'For irreducible quadratic ax²+bx+c (b²-4ac < 0)', 'add (Cx+D)/(ax²+bx+c)² etc.']
           },
           {
-            label: 'The numerator has degree one less than the quadratic',
-            options: ['The numerator has degree one less than the quadrat', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'If repeated',
+            options: ['add (Cx+D)/(ax²+bx+c)² etc.', 'The numerator has degree one less than the quadratic', 'For irreducible quadratic ax²+bx+c (b²-4ac < 0)', '(Ax+B)/(ax²+bx+c) for each irreducible quadratic factor']
           }
         ],
-        correctAnswers: ['For irreducible quadratic ax²+bx+c (b²-4ac < 0)', '(Ax+B)/(ax²+bx+c) for each irreducible quadratic f', 'The numerator has degree one less than the quadrat'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Irreducible Quadratic Factors.'
+        correctAnswers: ['(Ax+B)/(ax²+bx+c) for each irreducible quadratic factor', 'add (Cx+D)/(ax²+bx+c)² etc.'],
+        hint1: 'Think about what each concept specifically describes in Irreducible Quadratic Factors.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Irreducible Quadratic Factors describes a specific idea. Include: (Ax+B)/(ax²+bx+c) for each irreducible quadratic factor. If repeated: add (Cx+D)/(ax²+bx+c)² etc.'
       }
     }
   ]

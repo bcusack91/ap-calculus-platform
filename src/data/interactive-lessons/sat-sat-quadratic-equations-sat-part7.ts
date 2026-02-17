@@ -18,20 +18,31 @@ Maximum height: find the vertex.
       id: 'sat-q7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes projectile motion?',
+            question: 'Which statement accurately explains Projectile motion?',
             options: [
-              'Projectile motion is a fundamental concept in SAT Math',
-              'Maximum height: find the vertex',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'When does it hit the ground? Set h(t) = 0 and solve.',
+              'find the vertex.',
+              'h(t) = -16t² + v₀t + h₀ (feet) or h(t) = -4.9t² + v₀t + h₀ (meters).',
+              'Area problems: set up quadratic from length/width relationships.'
             ],
-            correctAnswer: 0,
-            explanation: 'Projectile motion: h(t) = -16t² + v₀t + h₀ (feet) or h(t) = -4.9t² + v₀t + h₀ (meters)'
+            correctAnswer: 2,
+            explanation: 'Correct — Projectile motion: h(t) = -16t² + v₀t + h₀ (feet) or h(t) = -4.9t² + v₀t + h₀ (meters). The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              'Area problems: set up quadratic from length/width relationships.',
+              'find the vertex.',
+              'When does it hit the ground? Set h(t) = 0 and solve.',
+              'h(t) = -16t² + v₀t + h₀ (feet) or h(t) = -4.9t² + v₀t + h₀ (meters).'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Key Insight: When does it hit the ground? Set h(t) = 0 and solve. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Maximum height: find the vertex.
       id: 'sat-q7-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for review & applications?',
+            question: 'Which of these accurately represents SAT Tip?',
             options: [
-              'When does it hit the ground? Set h(t) = 0 and solve',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'When does it hit the ground? Set h(t) = 0 and solve.',
+              'h(t) = -16t² + v₀t + h₀ (feet) or h(t) = -4.9t² + v₀t + h₀ (meters).',
+              'Area problems: set up quadratic from length/width relationships.',
+              'find the vertex.'
             ],
-            correctAnswer: 0,
-            explanation: 'When does it hit the ground? Set h(t) = 0 and solve'
+            correctAnswer: 2,
+            explanation: 'Correct — SAT Tip: Area problems: set up quadratic from length/width relationships. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Maximum height: find the vertex.
       id: 'sat-q7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Review & Applications:',
-            options: ['Projectile motion: h(t) = -16t² + v₀t + h₀ (feet) ', 'Maximum height: find the vertex', 'Not applicable', 'None of these']
+            label: 'Projectile motion',
+            options: ['Area problems: set up quadratic from length/width relationships.', 'h(t) = -16t² + v₀t + h₀ (feet) or h(t) = -4.9t² + v₀t + h₀ (meters).', 'find the vertex.', 'When does it hit the ground? Set h(t) = 0 and solve.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['When does it hit the ground? Set h(t) = 0 and solv', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Maximum height',
+            options: ['When does it hit the ground? Set h(t) = 0 and solve.', 'Area problems: set up quadratic from length/width relationships.', 'find the vertex.', 'h(t) = -16t² + v₀t + h₀ (feet) or h(t) = -4.9t² + v₀t + h₀ (meters).']
+          },
+          {
+            label: 'Key Insight',
+            options: ['h(t) = -16t² + v₀t + h₀ (feet) or h(t) = -4.9t² + v₀t + h₀ (meters).', 'find the vertex.', 'When does it hit the ground? Set h(t) = 0 and solve.', 'Area problems: set up quadratic from length/width relationships.']
           }
         ],
-        correctAnswers: ['Projectile motion: h(t) = -16t² + v₀t + h₀ (feet) ', 'When does it hit the ground? Set h(t) = 0 and solv'],
-        hint1: 'Think about review & applications',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'Projectile motion: h(t) = -16t² + v₀t + h₀ (feet) or h(t) = -4.9t² + v₀t + h₀ (meters). When does it hit the ground? Set h(t) = 0 and solve.'
+        correctAnswers: ['h(t) = -16t² + v₀t + h₀ (feet) or h(t) = -4.9t² + v₀t + h₀ (meters).', 'find the vertex.', 'When does it hit the ground? Set h(t) = 0 and solve.'],
+        hint1: 'Think about what each concept specifically describes in Review & Applications.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Review & Applications describes a specific idea. Projectile motion: h(t) = -16t² + v₀t + h₀ (feet) or h(t) = -4.9t² + v₀t + h₀ (meters). Maximum height: find the vertex. Key Insight: When does it hit the ground? Set h(t) = 0 and solve.'
       }
     }
   ]

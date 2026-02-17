@@ -19,31 +19,31 @@ export const bioPhotosynthesisPart7Data = {
       id: 'phot7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes connection between light reactions and calvin cycle?',
+            question: 'Which of the following correctly describes Connection between light reactions and…?',
             options: [
+              'Comparing C3, C4, and CAM strategies',
               'Connection between light reactions and Calvin cycle',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Environmental factors affecting photosynthesis rate',
+              'light → chemical → ATP'
             ],
-            correctAnswer: 0,
-            explanation: 'Connection between light reactions and Calvin cycle'
+            correctAnswer: 1,
+            explanation: 'Correct — Connection between light reactions and Calvin cycle. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of synthesis & ap review, which statement is accurate?',
+            question: 'In the context of Photosynthesis: Synthesis & AP Review, which explains Environmental factors affecting…?',
             options: [
+              'light → chemical → ATP',
+              'Connection between light reactions and Calvin cycle',
               'Environmental factors affecting photosynthesis rate',
-              'elcyc nivlaC dna snoitcaer thgil neewteb noitcennoC',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Comparing C3, C4, and CAM strategies'
             ],
-            correctAnswer: 0,
-            explanation: 'Environmental factors affecting photosynthesis rate'
+            correctAnswer: 2,
+            explanation: 'Correct — Environmental factors affecting photosynthesis rate. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioPhotosynthesisPart7Data = {
       id: 'phot7-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to synthesis & ap review?',
+            question: 'Regarding Photosynthesis: Synthesis & AP Review, which correctly describes Comparing C3, C4, and CAM strategies?',
             options: [
+              'light → chemical → ATP',
               'Comparing C3, C4, and CAM strategies',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Connection between light reactions and Calvin cycle',
+              'Environmental factors affecting photosynthesis rate'
             ],
-            correctAnswer: 0,
-            explanation: 'Comparing C3, C4, and CAM strategies'
+            correctAnswer: 1,
+            explanation: 'Correct — Comparing C3, C4, and CAM strategies. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioPhotosynthesisPart7Data = {
       id: 'phot7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Connection between light reactions and Calvin cycle is important in synthesis & ap review because',
-            options: ['Connection between light reactions and Calvin cycl', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Connection between light reactions and…',
+            options: ['light → chemical → ATP', 'Comparing C3, C4, and CAM strategies', 'Connection between light reactions and Calvin cycle', 'Environmental factors affecting photosynthesis rate']
           },
           {
-            label: 'Energy transformations is important in synthesis & ap review because',
-            options: ['light → chemical → ATP', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Energy transformations',
+            options: ['Environmental factors affecting photosynthesis rate', 'Comparing C3, C4, and CAM strategies', 'Connection between light reactions and Calvin cycle', 'light → chemical → ATP']
           },
           {
-            label: 'Environmental factors affecting photosynthesis rate is important in synthesis & ap review because',
-            options: ['Environmental factors affecting photosynthesis rat', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Environmental factors affecting…',
+            options: ['Comparing C3, C4, and CAM strategies', 'Connection between light reactions and Calvin cycle', 'Environmental factors affecting photosynthesis rate', 'light → chemical → ATP']
           }
         ],
-        correctAnswers: ['Connection between light reactions and Calvin cycl', 'light → chemical → ATP', 'Environmental factors affecting photosynthesis rat'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Synthesis & AP Review.'
+        correctAnswers: ['Connection between light reactions and Calvin cycle', 'light → chemical → ATP', 'Environmental factors affecting photosynthesis rate'],
+        hint1: 'Think about what each concept specifically describes in Photosynthesis: Synthesis & AP Review.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Photosynthesis: Synthesis & AP Review describes a specific idea. Connection between light reactions and Calvin cycle. Energy transformations: light → chemical → ATP. Environmental factors affecting photosynthesis rate.'
       }
     }
   ]

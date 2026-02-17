@@ -19,31 +19,31 @@ export const bioPhotosynthesisPart6Data = {
       id: 'phot6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes interpreting absorption spectra?',
+            question: 'Which of the following correctly describes Interpreting absorption spectra?',
             options: [
               'Interpreting absorption spectra',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Calculating net vs gross photosynthesis',
+              'Predicting effects of light color on photosynthesis rate',
+              'Experimental design with photosynthesis variables'
             ],
             correctAnswer: 0,
-            explanation: 'Interpreting absorption spectra'
+            explanation: 'Correct — Interpreting absorption spectra. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of problem-solving, which statement is accurate?',
+            question: 'In the context of Photosynthesis: Problem-Solving Workshop, which explains Experimental design with photosynthesis…?',
             options: [
               'Experimental design with photosynthesis variables',
-              'artceps noitprosba gniterpretnI',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Calculating net vs gross photosynthesis',
+              'Interpreting absorption spectra',
+              'Predicting effects of light color on photosynthesis rate'
             ],
             correctAnswer: 0,
-            explanation: 'Experimental design with photosynthesis variables'
+            explanation: 'Correct — Experimental design with photosynthesis variables. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioPhotosynthesisPart6Data = {
       id: 'phot6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to problem-solving?',
+            question: 'Which of these accurately represents Calculating net vs gross photosynthesis?',
             options: [
+              'Interpreting absorption spectra',
+              'Experimental design with photosynthesis variables',
               'Calculating net vs gross photosynthesis',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Predicting effects of light color on photosynthesis rate'
             ],
-            correctAnswer: 0,
-            explanation: 'Calculating net vs gross photosynthesis'
+            correctAnswer: 2,
+            explanation: 'Correct — Calculating net vs gross photosynthesis. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioPhotosynthesisPart6Data = {
       id: 'phot6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Interpreting absorption spectra is important in problem-solving because',
-            options: ['Interpreting absorption spectra', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Interpreting absorption spectra',
+            options: ['Predicting effects of light color on photosynthesis rate', 'Calculating net vs gross photosynthesis', 'Experimental design with photosynthesis variables', 'Interpreting absorption spectra']
           },
           {
-            label: 'Predicting effects of light color on photosynthesis rate is important in problem-solving because',
-            options: ['Predicting effects of light color on photosynthesi', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Predicting effects of light color on…',
+            options: ['Predicting effects of light color on photosynthesis rate', 'Calculating net vs gross photosynthesis', 'Interpreting absorption spectra', 'Experimental design with photosynthesis variables']
           },
           {
-            label: 'Experimental design with photosynthesis variables is important in problem-solving because',
-            options: ['Experimental design with photosynthesis variables', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Experimental design with photosynthesis…',
+            options: ['Predicting effects of light color on photosynthesis rate', 'Calculating net vs gross photosynthesis', 'Interpreting absorption spectra', 'Experimental design with photosynthesis variables']
           }
         ],
-        correctAnswers: ['Interpreting absorption spectra', 'Predicting effects of light color on photosynthesi', 'Experimental design with photosynthesis variables'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving.'
+        correctAnswers: ['Interpreting absorption spectra', 'Predicting effects of light color on photosynthesis rate', 'Experimental design with photosynthesis variables'],
+        hint1: 'Think about what each concept specifically describes in Photosynthesis: Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Photosynthesis: Problem-Solving Workshop describes a specific idea. Interpreting absorption spectra. Predicting effects of light color on photosynthesis rate. Experimental design with photosynthesis variables.'
       }
     }
   ]

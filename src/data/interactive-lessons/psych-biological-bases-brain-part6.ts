@@ -30,31 +30,31 @@ Predicting effects of brain damage
       id: 'biolo6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of problem-solving workshop?',
+            question: 'Which of the following correctly describes Identifying brain regions from symptoms?',
             options: [
+              'Predicting effects of brain damage',
               'Identifying brain regions from symptoms',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'Matching neurotransmitters to functions',
+              'Analyzing brain imaging results'
             ],
-            correctAnswer: 0,
-            explanation: 'Identifying brain regions from symptoms'
+            correctAnswer: 1,
+            explanation: 'Correct — Identifying brain regions from symptoms. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of problem-solving workshop, which is accurate?',
+            question: 'Select the statement that correctly describes Analyzing brain imaging results:',
             options: [
               'Analyzing brain imaging results',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Predicting effects of brain damage',
+              'Matching neurotransmitters to functions',
+              'Identifying brain regions from symptoms'
             ],
             correctAnswer: 0,
-            explanation: 'Analyzing brain imaging results'
+            explanation: 'Correct — Analyzing brain imaging results. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Predicting effects of brain damage
       id: 'biolo6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Identifying brain regions from symptoms',
-            options: ['Identifying brain regions from symptoms', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Matching neurotransmitters to functions', 'Identifying brain regions from symptoms', 'Predicting effects of brain damage', 'Analyzing brain imaging results']
           },
           {
             label: 'Matching neurotransmitters to functions',
-            options: ['Matching neurotransmitters to functions', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Predicting effects of brain damage', 'Analyzing brain imaging results', 'Identifying brain regions from symptoms', 'Matching neurotransmitters to functions']
           },
           {
             label: 'Analyzing brain imaging results',
-            options: ['Analyzing brain imaging results', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Predicting effects of brain damage', 'Identifying brain regions from symptoms', 'Analyzing brain imaging results', 'Matching neurotransmitters to functions']
           }
         ],
         correctAnswers: ['Identifying brain regions from symptoms', 'Matching neurotransmitters to functions', 'Analyzing brain imaging results'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving Workshop.'
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Identifying brain regions from symptoms. Matching neurotransmitters to functions. Analyzing brain imaging results.'
       }
     }
   ]

@@ -30,31 +30,31 @@ memory loss due to psychological trauma
       id: 'retri4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of amnesia types?',
+            question: 'Which statement accurately explains Anterograde amnesia?',
             options: [
-              'Anterograde amnesia',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'can\'t recall past memories',
+              'can\'t form new memories (H.M.)',
+              'memory loss due to psychological trauma',
+              'few memories before age 3'
             ],
-            correctAnswer: 0,
-            explanation: 'Anterograde amnesia: can\'t form new memories (H.M.)'
+            correctAnswer: 1,
+            explanation: 'Correct — Anterograde amnesia: can\'t form new memories (H.M.). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of amnesia types, which is accurate?',
+            question: 'In the context of Amnesia Types, which explains Infantile amnesia?',
             options: [
+              'memory loss due to psychological trauma',
               'few memories before age 3',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'can\'t recall past memories',
+              'can\'t form new memories (H.M.)'
             ],
-            correctAnswer: 0,
-            explanation: 'Infantile amnesia: few memories before age 3'
+            correctAnswer: 1,
+            explanation: 'Correct — Infantile amnesia: few memories before age 3. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ memory loss due to psychological trauma
       id: 'retri4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Anterograde amnesia',
-            options: ['can\'t form new memories (H.M.)', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['can\'t form new memories (H.M.)', 'few memories before age 3', 'can\'t recall past memories', 'memory loss due to psychological trauma']
           },
           {
             label: 'Retrograde amnesia',
-            options: ['can\'t recall past memories', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['memory loss due to psychological trauma', 'few memories before age 3', 'can\'t recall past memories', 'can\'t form new memories (H.M.)']
           },
           {
             label: 'Infantile amnesia',
-            options: ['few memories before age 3', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['can\'t form new memories (H.M.)', 'few memories before age 3', 'memory loss due to psychological trauma', 'can\'t recall past memories']
           }
         ],
         correctAnswers: ['can\'t form new memories (H.M.)', 'can\'t recall past memories', 'few memories before age 3'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Amnesia Types.'
+        hint1: 'Think about what each concept specifically describes in Amnesia Types.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Amnesia Types describes a specific idea. Anterograde amnesia: can\'t form new memories (H.M.). Retrograde amnesia: can\'t recall past memories. Infantile amnesia: few memories before age 3.'
       }
     }
   ]

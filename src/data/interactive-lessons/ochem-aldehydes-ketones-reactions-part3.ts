@@ -30,31 +30,31 @@ Ketone + RMgBr → tertiary alcohol
       id: 'aldeh3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of grignard & organolithium reactions?',
+            question: 'Which of the following correctly describes Grignard reagent (RMgBr) adds to…?',
             options: [
               'Grignard reagent (RMgBr) adds to carbonyls',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'Formaldehyde + RMgBr → primary alcohol',
+              'Aldehyde + RMgBr → secondary alcohol',
+              'Ketone + RMgBr → tertiary alcohol'
             ],
             correctAnswer: 0,
-            explanation: 'Grignard reagent (RMgBr) adds to carbonyls'
+            explanation: 'Correct — Grignard reagent (RMgBr) adds to carbonyls. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of grignard & organolithium reactions, which is accurate?',
+            question: 'Select the statement that correctly describes Aldehyde + RMgBr → secondary alcohol:',
             options: [
-              'Aldehyde + RMgBr → secondary alcohol',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Ketone + RMgBr → tertiary alcohol',
+              'Formaldehyde + RMgBr → primary alcohol',
+              'Grignard reagent (RMgBr) adds to carbonyls',
+              'Aldehyde + RMgBr → secondary alcohol'
             ],
-            correctAnswer: 0,
-            explanation: 'Aldehyde + RMgBr → secondary alcohol'
+            correctAnswer: 3,
+            explanation: 'Correct — Aldehyde + RMgBr → secondary alcohol. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Ketone + RMgBr → tertiary alcohol
       id: 'aldeh3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Grignard reagent (RMgBr) adds to carbonyls',
-            options: ['Grignard reagent (RMgBr) adds to carbonyls', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Grignard reagent (RMgBr) adds to…',
+            options: ['Grignard reagent (RMgBr) adds to carbonyls', 'Ketone + RMgBr → tertiary alcohol', 'Aldehyde + RMgBr → secondary alcohol', 'Formaldehyde + RMgBr → primary alcohol']
           },
           {
             label: 'Formaldehyde + RMgBr → primary alcohol',
-            options: ['Formaldehyde + RMgBr → primary alcohol', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Aldehyde + RMgBr → secondary alcohol', 'Grignard reagent (RMgBr) adds to carbonyls', 'Formaldehyde + RMgBr → primary alcohol', 'Ketone + RMgBr → tertiary alcohol']
           },
           {
             label: 'Aldehyde + RMgBr → secondary alcohol',
-            options: ['Aldehyde + RMgBr → secondary alcohol', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Aldehyde + RMgBr → secondary alcohol', 'Grignard reagent (RMgBr) adds to carbonyls', 'Ketone + RMgBr → tertiary alcohol', 'Formaldehyde + RMgBr → primary alcohol']
           }
         ],
         correctAnswers: ['Grignard reagent (RMgBr) adds to carbonyls', 'Formaldehyde + RMgBr → primary alcohol', 'Aldehyde + RMgBr → secondary alcohol'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Grignard & Organolithium Reactions.'
+        hint1: 'Think about what each concept specifically describes in Grignard & Organolithium Reactions.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Grignard & Organolithium Reactions describes a specific idea. Grignard reagent (RMgBr) adds to carbonyls. Formaldehyde + RMgBr → primary alcohol. Aldehyde + RMgBr → secondary alcohol.'
       }
     }
   ]

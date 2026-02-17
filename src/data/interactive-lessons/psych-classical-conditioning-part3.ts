@@ -30,31 +30,31 @@ CS1 paired with CS2
       id: 'class3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of acquisition & extinction?',
+            question: 'Which of the following correctly describes Acquisition?',
             options: [
-              'Acquisition',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'CS1 paired with CS2',
+              'CS-UCS pairing builds the association',
+              'CR reappears after rest period',
+              'CS presented alone → CR weakens'
             ],
-            correctAnswer: 0,
-            explanation: 'Acquisition: CS-UCS pairing builds the association'
+            correctAnswer: 1,
+            explanation: 'Correct — Acquisition: CS-UCS pairing builds the association. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of acquisition & extinction, which is accurate?',
+            question: 'Select the statement that correctly describes Spontaneous recovery:',
             options: [
+              'CS-UCS pairing builds the association',
               'CR reappears after rest period',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'CS presented alone → CR weakens',
+              'CS1 paired with CS2'
             ],
-            correctAnswer: 0,
-            explanation: 'Spontaneous recovery: CR reappears after rest period'
+            correctAnswer: 1,
+            explanation: 'Correct — Spontaneous recovery: CR reappears after rest period. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ CS1 paired with CS2
       id: 'class3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Acquisition',
-            options: ['CS-UCS pairing builds the association', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['CS-UCS pairing builds the association', 'CR reappears after rest period', 'CS1 paired with CS2', 'CS presented alone → CR weakens']
           },
           {
             label: 'Extinction',
-            options: ['CS presented alone → CR weakens', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['CS1 paired with CS2', 'CS-UCS pairing builds the association', 'CR reappears after rest period', 'CS presented alone → CR weakens']
           },
           {
             label: 'Spontaneous recovery',
-            options: ['CR reappears after rest period', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['CS-UCS pairing builds the association', 'CS presented alone → CR weakens', 'CS1 paired with CS2', 'CR reappears after rest period']
           }
         ],
         correctAnswers: ['CS-UCS pairing builds the association', 'CS presented alone → CR weakens', 'CR reappears after rest period'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Acquisition & Extinction.'
+        hint1: 'Think about what each concept specifically describes in Acquisition & Extinction.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Acquisition & Extinction describes a specific idea. Acquisition: CS-UCS pairing builds the association. Extinction: CS presented alone → CR weakens. Spontaneous recovery: CR reappears after rest period.'
       }
     }
   ]

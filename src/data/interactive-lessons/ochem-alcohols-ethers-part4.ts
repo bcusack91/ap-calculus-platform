@@ -30,31 +30,31 @@ cyclic ethers that complex cations
       id: 'alcoh4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of ether nomenclature & synthesis?',
+            question: 'Which of the following correctly describes Ethers?',
             options: [
-              'Ethers',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'cyclic ethers that complex cations',
+              'Ethers are relatively unreactive (good solvents)',
+              'alkoxide + primary alkyl halide (SN2)',
+              'R-O-R; named as alkoxy + alkane'
             ],
-            correctAnswer: 0,
-            explanation: 'Ethers: R-O-R; named as alkoxy + alkane'
+            correctAnswer: 3,
+            explanation: 'Correct — Ethers: R-O-R; named as alkoxy + alkane. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of ether nomenclature & synthesis, which is accurate?',
+            question: 'Which of the following is true about Ethers are relatively unreactive (good…?',
             options: [
               'Ethers are relatively unreactive (good solvents)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'cyclic ethers that complex cations',
+              'R-O-R; named as alkoxy + alkane',
+              'alkoxide + primary alkyl halide (SN2)'
             ],
             correctAnswer: 0,
-            explanation: 'Ethers are relatively unreactive (good solvents)'
+            explanation: 'Correct — Ethers are relatively unreactive (good solvents). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ cyclic ethers that complex cations
       id: 'alcoh4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Ethers',
-            options: ['R-O-R; named as alkoxy + alkane', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['alkoxide + primary alkyl halide (SN2)', 'R-O-R; named as alkoxy + alkane', 'cyclic ethers that complex cations', 'Ethers are relatively unreactive (good solvents)']
           },
           {
             label: 'Williamson ether synthesis',
-            options: ['alkoxide + primary alkyl halide (SN2)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['cyclic ethers that complex cations', 'alkoxide + primary alkyl halide (SN2)', 'R-O-R; named as alkoxy + alkane', 'Ethers are relatively unreactive (good solvents)']
           },
           {
-            label: 'Ethers are relatively unreactive (good solvents)',
-            options: ['Ethers are relatively unreactive (good solvents)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Crown ethers',
+            options: ['cyclic ethers that complex cations', 'R-O-R; named as alkoxy + alkane', 'alkoxide + primary alkyl halide (SN2)', 'Ethers are relatively unreactive (good solvents)']
           }
         ],
-        correctAnswers: ['R-O-R; named as alkoxy + alkane', 'alkoxide + primary alkyl halide (SN2)', 'Ethers are relatively unreactive (good solvents)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Ether Nomenclature & Synthesis.'
+        correctAnswers: ['R-O-R; named as alkoxy + alkane', 'alkoxide + primary alkyl halide (SN2)', 'cyclic ethers that complex cations'],
+        hint1: 'Think about what each concept specifically describes in Ether Nomenclature & Synthesis.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Ether Nomenclature & Synthesis describes a specific idea. Ethers: R-O-R; named as alkoxy + alkane. Williamson ether synthesis: alkoxide + primary alkyl halide (SN2). Crown ethers: cyclic ethers that complex cations.'
       }
     }
   ]

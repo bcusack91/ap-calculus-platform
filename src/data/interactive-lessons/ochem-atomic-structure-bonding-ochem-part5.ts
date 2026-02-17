@@ -30,31 +30,31 @@ Molecular polarity affects physical properties
       id: 'atomi5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of bond polarity & dipole moments?',
+            question: 'What does "Electronegativity difference determines…" refer to in this topic?',
             options: [
               'Electronegativity difference determines polarity',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'μ = q × d',
+              'Molecular polarity affects physical properties',
+              'Polar bonds in symmetric molecules can cancel'
             ],
             correctAnswer: 0,
-            explanation: 'Electronegativity difference determines polarity'
+            explanation: 'Correct — Electronegativity difference determines polarity. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of bond polarity & dipole moments, which is accurate?',
+            question: 'Select the statement that correctly describes Polar bonds in symmetric molecules can…:',
             options: [
+              'μ = q × d',
+              'Electronegativity difference determines polarity',
               'Polar bonds in symmetric molecules can cancel',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Molecular polarity affects physical properties'
             ],
-            correctAnswer: 0,
-            explanation: 'Polar bonds in symmetric molecules can cancel'
+            correctAnswer: 2,
+            explanation: 'Correct — Polar bonds in symmetric molecules can cancel. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Molecular polarity affects physical properties
       id: 'atomi5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Electronegativity difference determines polarity',
-            options: ['Electronegativity difference determines polarity', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Electronegativity difference determines…',
+            options: ['Polar bonds in symmetric molecules can cancel', 'Molecular polarity affects physical properties', 'μ = q × d', 'Electronegativity difference determines polarity']
           },
           {
             label: 'Dipole moment',
-            options: ['μ = q × d', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['μ = q × d', 'Polar bonds in symmetric molecules can cancel', 'Molecular polarity affects physical properties', 'Electronegativity difference determines polarity']
           },
           {
-            label: 'Polar bonds in symmetric molecules can cancel',
-            options: ['Polar bonds in symmetric molecules can cancel', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Polar bonds in symmetric molecules can…',
+            options: ['Polar bonds in symmetric molecules can cancel', 'μ = q × d', 'Molecular polarity affects physical properties', 'Electronegativity difference determines polarity']
           }
         ],
         correctAnswers: ['Electronegativity difference determines polarity', 'μ = q × d', 'Polar bonds in symmetric molecules can cancel'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Bond Polarity & Dipole Moments.'
+        hint1: 'Think about what each concept specifically describes in Bond Polarity & Dipole Moments.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Bond Polarity & Dipole Moments describes a specific idea. Electronegativity difference determines polarity. Dipole moment: μ = q × d. Polar bonds in symmetric molecules can cancel.'
       }
     }
   ]

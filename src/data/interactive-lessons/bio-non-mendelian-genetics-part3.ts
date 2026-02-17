@@ -19,31 +19,31 @@ export const bioNonMendelianPart3Data = {
       id: 'non-3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes one gene masks the expression of another?',
+            question: 'Which of the following correctly describes One gene masks the expression of another?',
             options: [
               'One gene masks the expression of another',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              '9:3:4, 12:3:1, 9:7',
+              'coat color in Labrador retrievers (E gene masks B gene)',
+              'Different from dominance (which is within one gene)'
             ],
             correctAnswer: 0,
-            explanation: 'One gene masks the expression of another'
+            explanation: 'Correct — One gene masks the expression of another. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of epistasis, which statement is accurate?',
+            question: 'In the context of Epistasis, which explains Modified dihybrid ratios?',
             options: [
-              'Modified dihybrid ratios: 9:3:4, 12:3:1, 9:7',
-              'rehtona fo noisserpxe eht sksam eneg enO',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'coat color in Labrador retrievers (E gene masks B gene)',
+              'Different from dominance (which is within one gene)',
+              '9:3:4, 12:3:1, 9:7',
+              'One gene masks the expression of another'
             ],
-            correctAnswer: 0,
-            explanation: 'Modified dihybrid ratios: 9:3:4, 12:3:1, 9:7'
+            correctAnswer: 2,
+            explanation: 'Correct — Modified dihybrid ratios: 9:3:4, 12:3:1, 9:7. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioNonMendelianPart3Data = {
       id: 'non-3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to epistasis?',
+            question: 'Regarding Epistasis, which correctly describes Different from dominance (which is…?',
             options: [
+              '9:3:4, 12:3:1, 9:7',
               'Different from dominance (which is within one gene)',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'One gene masks the expression of another',
+              'coat color in Labrador retrievers (E gene masks B gene)'
             ],
-            correctAnswer: 0,
-            explanation: 'Different from dominance (which is within one gene)'
+            correctAnswer: 1,
+            explanation: 'Correct — Different from dominance (which is within one gene). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,24 @@ export const bioNonMendelianPart3Data = {
       id: 'non-3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'One gene masks the expression of another is important in epistasis because',
-            options: ['One gene masks the expression of another', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Example',
+            options: ['One gene masks the expression of another', 'Different from dominance (which is within one gene)', '9:3:4, 12:3:1, 9:7', 'coat color in Labrador retrievers (E gene masks B gene)']
           },
           {
-            label: 'Example is important in epistasis because',
-            options: ['coat color in Labrador retrievers (E gene masks B ', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
-          },
-          {
-            label: 'Modified dihybrid ratios is important in epistasis because',
-            options: ['9:3:4, 12:3:1, 9:7', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Modified dihybrid ratios',
+            options: ['coat color in Labrador retrievers (E gene masks B gene)', 'One gene masks the expression of another', 'Different from dominance (which is within one gene)', '9:3:4, 12:3:1, 9:7']
           }
         ],
-        correctAnswers: ['One gene masks the expression of another', 'coat color in Labrador retrievers (E gene masks B ', '9:3:4, 12:3:1, 9:7'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Epistasis.'
+        correctAnswers: ['coat color in Labrador retrievers (E gene masks B gene)', '9:3:4, 12:3:1, 9:7'],
+        hint1: 'Think about what each concept specifically describes in Epistasis.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Epistasis describes a specific idea. Example: coat color in Labrador retrievers (E gene masks B gene). Modified dihybrid ratios: 9:3:4, 12:3:1, 9:7.'
       }
     }
   ]

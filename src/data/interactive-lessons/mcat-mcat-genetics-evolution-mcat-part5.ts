@@ -71,23 +71,28 @@ Allopatric: geographic barrier; Sympatric: same location, different niches or ti
       id: 'mcat-5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Speciation & Phylogeny:',
-            options: ['Speciation: formation of new species via reproductive isolat', 'Allopatric: geographic barrier; Sympatric: same location, di', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Speciation',
+            options: ['geographic barrier; Sympatric: same location, different niches or timing.', 'formation of new species via reproductive isolation.', 'Phylogenetic trees: show evolutionary relationships; most recent common ancestor at branch point.', 'Homologous structures: shared ancestry; Analogous: similar function, different origin (convergent evolution).']
           },
           {
-            label: 'MCAT application:',
-            options: ['Phylogenetic trees: show evolutionary relationships; most re', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Allopatric',
+            options: ['Phylogenetic trees: show evolutionary relationships; most recent common ancestor at branch point.', 'geographic barrier; Sympatric: same location, different niches or timing.', 'formation of new species via reproductive isolation.', 'Homologous structures: shared ancestry; Analogous: similar function, different origin (convergent evolution).']
+          },
+          {
+            label: 'Key Insight',
+            options: ['formation of new species via reproductive isolation.', 'Phylogenetic trees: show evolutionary relationships; most recent common ancestor at branch point.', 'geographic barrier; Sympatric: same location, different niches or timing.', 'Homologous structures: shared ancestry; Analogous: similar function, different origin (convergent evolution).']
           }
         ],
-        correctAnswers: ['Speciation: formation of new species via reproductive isolat', 'Phylogenetic trees: show evolutionary relationships; most re'],
-        hint1: 'Think about speciation & phylogeny',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Speciation: formation of new species via reproductive isolation. Phylogenetic trees: show evolutionary relationships; most recent common ancestor at branch point.'
+        correctAnswers: ['formation of new species via reproductive isolation.', 'geographic barrier; Sympatric: same location, different niches or timing.', 'Phylogenetic trees: show evolutionary relationships; most recent common ancestor at branch point.'],
+        hint1: 'Think about what each concept specifically describes in Speciation & Phylogeny.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Speciation & Phylogeny describes a specific idea. Speciation: formation of new species via reproductive isolation. Allopatric: geographic barrier; Sympatric: same location, different niches or timing. Key Insight: Phylogenetic trees: show evolutionary relationships; most recent common ancestor at branch point.'
       }
     }
   ]

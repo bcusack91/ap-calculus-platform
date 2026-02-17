@@ -30,31 +30,31 @@ The graph of y = log_b(x) passes through (1, 0) and (b, 1)
       id: 'logar1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of logarithm basics?',
+            question: 'Which statement accurately explains log_b(x) = y means b^y = x?',
             options: [
+              'The graph of y = log_b(x) passes through (1, 0) and (b, 1)',
               'log_b(x) = y means b^y = x',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'Logarithm is the inverse of the exponential function',
+              '(0, ∞); Range: all real numbers'
             ],
-            correctAnswer: 0,
-            explanation: 'log_b(x) = y means b^y = x'
+            correctAnswer: 1,
+            explanation: 'Correct — log_b(x) = y means b^y = x. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of logarithm basics, which is accurate?',
+            question: 'Which of the following is true about Domain?',
             options: [
-              '(0, ∞); Range: all real numbers',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'log_b(x) = y means b^y = x',
+              'The graph of y = log_b(x) passes through (1, 0) and (b, 1)',
+              'Logarithm is the inverse of the exponential function',
+              '(0, ∞); Range: all real numbers'
             ],
-            correctAnswer: 0,
-            explanation: 'Domain: (0, ∞); Range: all real numbers'
+            correctAnswer: 3,
+            explanation: 'Correct — Domain: (0, ∞); Range: all real numbers. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ The graph of y = log_b(x) passes through (1, 0) and (b, 1)
       id: 'logar1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'log_b(x) = y means b^y = x',
-            options: ['log_b(x) = y means b^y = x', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['Logarithm is the inverse of the exponential function', '(0, ∞); Range: all real numbers', 'The graph of y = log_b(x) passes through (1, 0) and (b, 1)', 'log_b(x) = y means b^y = x']
           },
           {
-            label: 'Logarithm is the inverse of the exponential function',
-            options: ['Logarithm is the inverse of the exponential functi', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            label: 'Logarithm is the inverse of the…',
+            options: ['(0, ∞); Range: all real numbers', 'log_b(x) = y means b^y = x', 'Logarithm is the inverse of the exponential function', 'The graph of y = log_b(x) passes through (1, 0) and (b, 1)']
           },
           {
             label: 'Domain',
-            options: ['(0, ∞); Range: all real numbers', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['Logarithm is the inverse of the exponential function', '(0, ∞); Range: all real numbers', 'The graph of y = log_b(x) passes through (1, 0) and (b, 1)', 'log_b(x) = y means b^y = x']
           }
         ],
-        correctAnswers: ['log_b(x) = y means b^y = x', 'Logarithm is the inverse of the exponential functi', '(0, ∞); Range: all real numbers'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Logarithm Basics.'
+        correctAnswers: ['log_b(x) = y means b^y = x', 'Logarithm is the inverse of the exponential function', '(0, ∞); Range: all real numbers'],
+        hint1: 'Think about what each concept specifically describes in Logarithmic Functions.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Logarithmic Functions describes a specific idea. log_b(x) = y means b^y = x. Logarithm is the inverse of the exponential function. Domain: (0, ∞); Range: all real numbers.'
       }
     }
   ]

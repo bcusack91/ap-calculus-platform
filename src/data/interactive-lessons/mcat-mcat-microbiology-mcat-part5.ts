@@ -71,23 +71,28 @@ Antivirals: target viral entry, replication, or assembly (e.g., acyclovir, prote
       id: 'mcat-5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Antimicrobial Agents:',
-            options: ['Antibiotics: target cell wall (penicillin), protein synthesi', 'Antivirals: target viral entry, replication, or assembly (e.', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Antibiotics',
+            options: ['target viral entry, replication, or assembly (e.g., acyclovir, protease inhibitors).', 'Antibiotic resistance: mutation or acquired via horizontal gene transfer; a growing global threat.', 'Antiseptics (on living tissue) vs disinfectants (on surfaces) vs sterilization (complete elimination).', 'target cell wall (penicillin), protein synthesis (tetracycline), DNA replication (fluoroquinolones).']
           },
           {
-            label: 'MCAT application:',
-            options: ['Antibiotic resistance: mutation or acquired via horizontal g', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Antivirals',
+            options: ['Antibiotic resistance: mutation or acquired via horizontal gene transfer; a growing global threat.', 'Antiseptics (on living tissue) vs disinfectants (on surfaces) vs sterilization (complete elimination).', 'target viral entry, replication, or assembly (e.g., acyclovir, protease inhibitors).', 'target cell wall (penicillin), protein synthesis (tetracycline), DNA replication (fluoroquinolones).']
+          },
+          {
+            label: 'Key Insight',
+            options: ['target cell wall (penicillin), protein synthesis (tetracycline), DNA replication (fluoroquinolones).', 'Antibiotic resistance: mutation or acquired via horizontal gene transfer; a growing global threat.', 'target viral entry, replication, or assembly (e.g., acyclovir, protease inhibitors).', 'Antiseptics (on living tissue) vs disinfectants (on surfaces) vs sterilization (complete elimination).']
           }
         ],
-        correctAnswers: ['Antibiotics: target cell wall (penicillin), protein synthesi', 'Antibiotic resistance: mutation or acquired via horizontal g'],
-        hint1: 'Think about antimicrobial agents',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Antibiotics: target cell wall (penicillin), protein synthesis (tetracycline), DNA replication (fluoroquinolones). Antibiotic resistance: mutation or acquired via horizontal gene transfer; a growing global threat.'
+        correctAnswers: ['target cell wall (penicillin), protein synthesis (tetracycline), DNA replication (fluoroquinolones).', 'target viral entry, replication, or assembly (e.g., acyclovir, protease inhibitors).', 'Antibiotic resistance: mutation or acquired via horizontal gene transfer; a growing global threat.'],
+        hint1: 'Think about what each concept specifically describes in Antimicrobial Agents.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Antimicrobial Agents describes a specific idea. Antibiotics: target cell wall (penicillin), protein synthesis (tetracycline), DNA replication (fluoroquinolones). Antivirals: target viral entry, replication, or assembly (e.g., acyclovir, protease inhibitors). Key Insight: Antibiotic resistance: mutation or acquired via horizontal gene transfer; a growing global threat.'
       }
     }
   ]

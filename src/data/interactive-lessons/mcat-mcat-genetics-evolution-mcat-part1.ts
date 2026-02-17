@@ -71,23 +71,28 @@ Dominant/recessive: heterozygote shows dominant phenotype; homozygous recessive 
       id: 'mcat-1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Mendelian Genetics:',
-            options: ['Mendels laws: segregation (alleles separate in meiosis) and ', 'Dominant/recessive: heterozygote shows dominant phenotype; h', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Mendels laws',
+            options: ['Punnett squares: predict offspring ratios; monohybrid cross Aa x Aa = 1:2:1 genotype, 3:1 phenotype.', 'Test cross: cross with homozygous recessive to determine unknown genotype.', 'segregation (alleles separate in meiosis) and independent assortment (genes on different chromosomes).', 'heterozygote shows dominant phenotype; homozygous recessive shows recessive.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Punnett squares: predict offspring ratios; monohybrid cross ', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Dominant/recessive',
+            options: ['segregation (alleles separate in meiosis) and independent assortment (genes on different chromosomes).', 'heterozygote shows dominant phenotype; homozygous recessive shows recessive.', 'Test cross: cross with homozygous recessive to determine unknown genotype.', 'Punnett squares: predict offspring ratios; monohybrid cross Aa x Aa = 1:2:1 genotype, 3:1 phenotype.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['Punnett squares: predict offspring ratios; monohybrid cross Aa x Aa = 1:2:1 genotype, 3:1 phenotype.', 'heterozygote shows dominant phenotype; homozygous recessive shows recessive.', 'Test cross: cross with homozygous recessive to determine unknown genotype.', 'segregation (alleles separate in meiosis) and independent assortment (genes on different chromosomes).']
           }
         ],
-        correctAnswers: ['Mendels laws: segregation (alleles separate in meiosis) and ', 'Punnett squares: predict offspring ratios; monohybrid cross '],
-        hint1: 'Think about mendelian genetics',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Mendels laws: segregation (alleles separate in meiosis) and independent assortment (genes on different chromosomes). Punnett squares: predict offspring ratios; monohybrid cross Aa x Aa = 1:2:1 genotype, 3:1 phenotype.'
+        correctAnswers: ['segregation (alleles separate in meiosis) and independent assortment (genes on different chromosomes).', 'heterozygote shows dominant phenotype; homozygous recessive shows recessive.', 'Punnett squares: predict offspring ratios; monohybrid cross Aa x Aa = 1:2:1 genotype, 3:1 phenotype.'],
+        hint1: 'Think about what each concept specifically describes in Genetics Evolution.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Genetics Evolution describes a specific idea. Mendels laws: segregation (alleles separate in meiosis) and independent assortment (genes on different chromosomes). Dominant/recessive: heterozygote shows dominant phenotype; homozygous recessive shows recessive. Key Insight: Punnett squares: predict offspring ratios; monohybrid cross Aa x Aa = 1:2:1 genotype, 3:1 phenotype.'
       }
     }
   ]

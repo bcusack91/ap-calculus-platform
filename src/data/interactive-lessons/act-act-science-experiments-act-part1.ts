@@ -18,20 +18,31 @@ Dependent variable: what is measured/observed.
       id: 'act-s1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes independent variable?',
+            question: 'Which of the following correctly describes Independent variable?',
             options: [
-              'Independent variable is a key concept for ACT Science',
-              'Dependent variable: what is measured/observed',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'Constants: everything kept the same across trials.',
+              'what is measured/observed.',
+              'Control group: the baseline for comparison.',
+              'what the scientist changes.'
             ],
-            correctAnswer: 0,
-            explanation: 'Independent variable: what the scientist changes'
+            correctAnswer: 3,
+            explanation: 'Correct — Independent variable: what the scientist changes. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Science Experiments, which explains Key Insight?',
+            options: [
+              'what is measured/observed.',
+              'what the scientist changes.',
+              'Constants: everything kept the same across trials.',
+              'Control group: the baseline for comparison.'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Key Insight: Control group: the baseline for comparison. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Dependent variable: what is measured/observed.
       id: 'act-s1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for experimental design?',
+            question: 'Which of these accurately represents ACT Tip?',
             options: [
-              'Control group: the baseline for comparison',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Control group: the baseline for comparison.',
+              'Constants: everything kept the same across trials.',
+              'what the scientist changes.',
+              'what is measured/observed.'
             ],
-            correctAnswer: 0,
-            explanation: 'Control group: the baseline for comparison'
+            correctAnswer: 1,
+            explanation: 'Correct — ACT Tip: Constants: everything kept the same across trials. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Dependent variable: what is measured/observed.
       id: 'act-s1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Experimental Design:',
-            options: ['Independent variable: what the scientist changes', 'Dependent variable: what is measured/observed', 'Not applicable', 'None of these']
+            label: 'Independent variable',
+            options: ['what the scientist changes.', 'what is measured/observed.', 'Control group: the baseline for comparison.', 'Constants: everything kept the same across trials.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Control group: the baseline for comparison', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Dependent variable',
+            options: ['what the scientist changes.', 'what is measured/observed.', 'Control group: the baseline for comparison.', 'Constants: everything kept the same across trials.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['Control group: the baseline for comparison.', 'what is measured/observed.', 'what the scientist changes.', 'Constants: everything kept the same across trials.']
           }
         ],
-        correctAnswers: ['Independent variable: what the scientist changes', 'Control group: the baseline for comparison'],
-        hint1: 'Think about experimental design',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Independent variable: what the scientist changes. Control group: the baseline for comparison.'
+        correctAnswers: ['what the scientist changes.', 'what is measured/observed.', 'Control group: the baseline for comparison.'],
+        hint1: 'Think about what each concept specifically describes in Science Experiments.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Science Experiments describes a specific idea. Independent variable: what the scientist changes. Dependent variable: what is measured/observed. Key Insight: Control group: the baseline for comparison.'
       }
     }
   ]

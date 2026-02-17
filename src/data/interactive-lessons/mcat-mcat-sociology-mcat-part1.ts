@@ -71,23 +71,28 @@ Social class: upper, middle, working, lower — defined by income, education, oc
       id: 'mcat-1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Social Structure & Stratification:',
-            options: ['Social stratification: unequal distribution of resources bas', 'Social class: upper, middle, working, lower — defined by inc', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Social stratification',
+            options: ['Social mobility: intragenerational (within lifetime) vs intergenerational (across generations).', 'unequal distribution of resources based on class, race, gender.', 'upper, middle, working, lower — defined by income, education, occupation, and wealth.', 'Intersectionality: race, class, gender, and other identities overlap to create unique experiences.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Social mobility: intragenerational (within lifetime) vs inte', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Social class',
+            options: ['upper, middle, working, lower — defined by income, education, occupation, and wealth.', 'unequal distribution of resources based on class, race, gender.', 'Intersectionality: race, class, gender, and other identities overlap to create unique experiences.', 'Social mobility: intragenerational (within lifetime) vs intergenerational (across generations).']
+          },
+          {
+            label: 'Key Insight',
+            options: ['Intersectionality: race, class, gender, and other identities overlap to create unique experiences.', 'upper, middle, working, lower — defined by income, education, occupation, and wealth.', 'unequal distribution of resources based on class, race, gender.', 'Social mobility: intragenerational (within lifetime) vs intergenerational (across generations).']
           }
         ],
-        correctAnswers: ['Social stratification: unequal distribution of resources bas', 'Social mobility: intragenerational (within lifetime) vs inte'],
-        hint1: 'Think about social structure & stratification',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Social stratification: unequal distribution of resources based on class, race, gender. Social mobility: intragenerational (within lifetime) vs intergenerational (across generations).'
+        correctAnswers: ['unequal distribution of resources based on class, race, gender.', 'upper, middle, working, lower — defined by income, education, occupation, and wealth.', 'Social mobility: intragenerational (within lifetime) vs intergenerational (across generations).'],
+        hint1: 'Think about what each concept specifically describes in Sociology.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Sociology describes a specific idea. Social stratification: unequal distribution of resources based on class, race, gender. Social class: upper, middle, working, lower — defined by income, education, occupation, and wealth. Key Insight: Social mobility: intragenerational (within lifetime) vs intergenerational (across generations).'
       }
     }
   ]

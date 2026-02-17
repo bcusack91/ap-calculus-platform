@@ -30,31 +30,31 @@ Total distance = ∫ₐᵇ |v(t)|dt (always positive)
       id: 'accum4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of net change theorem?',
-            options: [
-              'Net Change Theorem',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'Net Change Theorem: ∫ₐᵇ F\'(x)dx = F(b) - F(a)'
-          },
-          {
-            question: 'In the context of net change theorem, which is accurate?',
+            question: 'Which statement accurately explains Net Change Theorem?',
             options: [
               'Displacement = ∫ₐᵇ v(t)dt (net change in position)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'The integral of a rate of change gives the net change',
+              'Total distance = ∫ₐᵇ |v(t)|dt (always positive)',
+              '∫ₐᵇ F\'(x)dx = F(b) - F(a)'
             ],
-            correctAnswer: 0,
-            explanation: 'Displacement = ∫ₐᵇ v(t)dt (net change in position)'
+            correctAnswer: 3,
+            explanation: 'Correct — Net Change Theorem: ∫ₐᵇ F\'(x)dx = F(b) - F(a). The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Net Change Theorem, which explains Displacement = ∫ₐᵇ v(t)dt (net change…?',
+            options: [
+              'Total distance = ∫ₐᵇ |v(t)|dt (always positive)',
+              'The integral of a rate of change gives the net change',
+              'Displacement = ∫ₐᵇ v(t)dt (net change in position)',
+              '∫ₐᵇ F\'(x)dx = F(b) - F(a)'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Displacement = ∫ₐᵇ v(t)dt (net change in position). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Total distance = ∫ₐᵇ |v(t)|dt (always positive)
       id: 'accum4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to net change theorem?',
+            question: 'Which statement about Total distance = ∫ₐᵇ |v(t)|dt (always… is correct?',
             options: [
-              'Total distance = ∫ₐᵇ |v(t)|dt (always positive)',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'The integral of a rate of change gives the net change',
+              '∫ₐᵇ F\'(x)dx = F(b) - F(a)',
+              'Displacement = ∫ₐᵇ v(t)dt (net change in position)',
+              'Total distance = ∫ₐᵇ |v(t)|dt (always positive)'
             ],
-            correctAnswer: 0,
-            explanation: 'Total distance = ∫ₐᵇ |v(t)|dt (always positive)'
+            correctAnswer: 3,
+            explanation: 'Correct — Total distance = ∫ₐᵇ |v(t)|dt (always positive). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Total distance = ∫ₐᵇ |v(t)|dt (always positive)
       id: 'accum4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Net Change Theorem',
-            options: ['∫ₐᵇ F\'(x)dx = F(b) - F(a)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['The integral of a rate of change gives the net change', '∫ₐᵇ F\'(x)dx = F(b) - F(a)', 'Displacement = ∫ₐᵇ v(t)dt (net change in position)', 'Total distance = ∫ₐᵇ |v(t)|dt (always positive)']
           },
           {
-            label: 'The integral of a rate of change gives the net change',
-            options: ['The integral of a rate of change gives the net cha', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'The integral of a rate of change gives…',
+            options: ['The integral of a rate of change gives the net change', 'Displacement = ∫ₐᵇ v(t)dt (net change in position)', 'Total distance = ∫ₐᵇ |v(t)|dt (always positive)', '∫ₐᵇ F\'(x)dx = F(b) - F(a)']
           },
           {
-            label: 'Displacement = ∫ₐᵇ v(t)dt (net change in position)',
-            options: ['Displacement = ∫ₐᵇ v(t)dt (net change in position)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Displacement = ∫ₐᵇ v(t)dt (net change…',
+            options: ['The integral of a rate of change gives the net change', 'Total distance = ∫ₐᵇ |v(t)|dt (always positive)', 'Displacement = ∫ₐᵇ v(t)dt (net change in position)', '∫ₐᵇ F\'(x)dx = F(b) - F(a)']
           }
         ],
-        correctAnswers: ['∫ₐᵇ F\'(x)dx = F(b) - F(a)', 'The integral of a rate of change gives the net cha', 'Displacement = ∫ₐᵇ v(t)dt (net change in position)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Net Change Theorem.'
+        correctAnswers: ['∫ₐᵇ F\'(x)dx = F(b) - F(a)', 'The integral of a rate of change gives the net change', 'Displacement = ∫ₐᵇ v(t)dt (net change in position)'],
+        hint1: 'Think about what each concept specifically describes in Net Change Theorem.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Net Change Theorem describes a specific idea. Net Change Theorem: ∫ₐᵇ F\'(x)dx = F(b) - F(a). The integral of a rate of change gives the net change. Displacement = ∫ₐᵇ v(t)dt (net change in position).'
       }
     }
   ]

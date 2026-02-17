@@ -71,23 +71,28 @@ Half-life: t1/2 = ln(2)/lambda; N(t) = N0*(1/2)^(t/t1/2).
       id: 'mcat-5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Nuclear Physics & Radioactivity:',
-            options: ['Radioactive decay: alpha (He-4 nucleus), beta (electron or p', 'Half-life: t1/2 = ln(2)/lambda; N(t) = N0*(1/2)^(t/t1/2)', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Radioactive decay',
+            options: ['Mass-energy equivalence: E = mc2 — mass defect converts to binding energy.', 'Nuclear fission splits heavy nuclei; fusion combines light nuclei — both release energy.', 'alpha (He-4 nucleus), beta (electron or positron), gamma (photon).', 't1/2 = ln(2)/lambda; N(t) = N0*(1/2)^(t/t1/2).']
           },
           {
-            label: 'MCAT application:',
-            options: ['Mass-energy equivalence: E = mc2 — mass defect converts to b', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Half-life',
+            options: ['t1/2 = ln(2)/lambda; N(t) = N0*(1/2)^(t/t1/2).', 'Mass-energy equivalence: E = mc2 — mass defect converts to binding energy.', 'alpha (He-4 nucleus), beta (electron or positron), gamma (photon).', 'Nuclear fission splits heavy nuclei; fusion combines light nuclei — both release energy.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['t1/2 = ln(2)/lambda; N(t) = N0*(1/2)^(t/t1/2).', 'alpha (He-4 nucleus), beta (electron or positron), gamma (photon).', 'Nuclear fission splits heavy nuclei; fusion combines light nuclei — both release energy.', 'Mass-energy equivalence: E = mc2 — mass defect converts to binding energy.']
           }
         ],
-        correctAnswers: ['Radioactive decay: alpha (He-4 nucleus), beta (electron or p', 'Mass-energy equivalence: E = mc2 — mass defect converts to b'],
-        hint1: 'Think about nuclear physics & radioactivity',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Radioactive decay: alpha (He-4 nucleus), beta (electron or positron), gamma (photon). Mass-energy equivalence: E = mc2 — mass defect converts to binding energy.'
+        correctAnswers: ['alpha (He-4 nucleus), beta (electron or positron), gamma (photon).', 't1/2 = ln(2)/lambda; N(t) = N0*(1/2)^(t/t1/2).', 'Mass-energy equivalence: E = mc2 — mass defect converts to binding energy.'],
+        hint1: 'Think about what each concept specifically describes in Nuclear Physics & Radioactivity.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Nuclear Physics & Radioactivity describes a specific idea. Radioactive decay: alpha (He-4 nucleus), beta (electron or positron), gamma (photon). Half-life: t1/2 = ln(2)/lambda; N(t) = N0*(1/2)^(t/t1/2). Key Insight: Mass-energy equivalence: E = mc2 — mass defect converts to binding energy.'
       }
     }
   ]

@@ -19,31 +19,31 @@ export const bioSpeciationPart7Data = {
       id: 'spec7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes speciation connects micro- and macroevolution?',
+            question: 'What does "Speciation connects micro- and…" refer to in biology?',
             options: [
+              'phylogenetics questions',
+              'Reproductive isolation mechanisms',
               'Speciation connects micro- and macroevolution',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Reading and constructing cladograms'
             ],
-            correctAnswer: 0,
-            explanation: 'Speciation connects micro- and macroevolution'
+            correctAnswer: 2,
+            explanation: 'Correct — Speciation connects micro- and macroevolution. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of synthesis & ap review, which statement is accurate?',
+            question: 'Which of the following is true about Reading and constructing cladograms?',
             options: [
               'Reading and constructing cladograms',
-              'noituloveorcam dna -orcim stcennoc noitaicepS',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Reproductive isolation mechanisms',
+              'phylogenetics questions',
+              'Speciation connects micro- and macroevolution'
             ],
             correctAnswer: 0,
-            explanation: 'Reading and constructing cladograms'
+            explanation: 'Correct — Reading and constructing cladograms. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioSpeciationPart7Data = {
       id: 'spec7-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to synthesis & ap review?',
+            question: 'Regarding Speciation: Synthesis & AP Review, which correctly describes AP exam?',
             options: [
-              'AP exam: phylogenetics questions',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Reading and constructing cladograms',
+              'Speciation connects micro- and macroevolution',
+              'Reproductive isolation mechanisms',
+              'phylogenetics questions'
             ],
-            correctAnswer: 0,
-            explanation: 'AP exam: phylogenetics questions'
+            correctAnswer: 3,
+            explanation: 'Correct — AP exam: phylogenetics questions. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioSpeciationPart7Data = {
       id: 'spec7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Speciation connects micro- and macroevolution is important in synthesis & ap review because',
-            options: ['Speciation connects micro- and macroevolution', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Speciation connects micro- and…',
+            options: ['phylogenetics questions', 'Reproductive isolation mechanisms', 'Speciation connects micro- and macroevolution', 'Reading and constructing cladograms']
           },
           {
-            label: 'Reproductive isolation mechanisms is important in synthesis & ap review because',
-            options: ['Reproductive isolation mechanisms', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Reproductive isolation mechanisms',
+            options: ['Speciation connects micro- and macroevolution', 'Reproductive isolation mechanisms', 'Reading and constructing cladograms', 'phylogenetics questions']
           },
           {
-            label: 'Reading and constructing cladograms is important in synthesis & ap review because',
-            options: ['Reading and constructing cladograms', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Reading and constructing cladograms',
+            options: ['Reproductive isolation mechanisms', 'Reading and constructing cladograms', 'Speciation connects micro- and macroevolution', 'phylogenetics questions']
           }
         ],
         correctAnswers: ['Speciation connects micro- and macroevolution', 'Reproductive isolation mechanisms', 'Reading and constructing cladograms'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Synthesis & AP Review.'
+        hint1: 'Think about what each concept specifically describes in Speciation: Synthesis & AP Review.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Speciation: Synthesis & AP Review describes a specific idea. Speciation connects micro- and macroevolution. Reproductive isolation mechanisms. Reading and constructing cladograms.'
       }
     }
   ]

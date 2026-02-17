@@ -30,31 +30,31 @@ distance between split peaks in Hz
       id: 'nmr-s3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of integration & splitting?',
-            options: [
-              'Integration',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
-            ],
-            correctAnswer: 0,
-            explanation: 'Integration: area under peak proportional to number of H\'s'
-          },
-          {
-            question: 'In the context of integration & splitting, which is accurate?',
+            question: 'Which of the following correctly describes Integration?',
             options: [
               '1 neighbor; Triplet: 2 neighbors; Quartet: 3 neighbors',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'n equivalent neighbors → n+1 peaks',
+              'distance between split peaks in Hz',
+              'area under peak proportional to number of H\'s'
             ],
-            correctAnswer: 0,
-            explanation: 'Doublet: 1 neighbor; Triplet: 2 neighbors; Quartet: 3 neighbors'
+            correctAnswer: 3,
+            explanation: 'Correct — Integration: area under peak proportional to number of H\'s. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Integration & Splitting, which explains Doublet?',
+            options: [
+              'distance between split peaks in Hz',
+              'n equivalent neighbors → n+1 peaks',
+              '1 neighbor; Triplet: 2 neighbors; Quartet: 3 neighbors',
+              'area under peak proportional to number of H\'s'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Doublet: 1 neighbor; Triplet: 2 neighbors; Quartet: 3 neighbors. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ distance between split peaks in Hz
       id: 'nmr-s3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Integration',
-            options: ['area under peak proportional to number of H\'s', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['distance between split peaks in Hz', 'n equivalent neighbors → n+1 peaks', '1 neighbor; Triplet: 2 neighbors; Quartet: 3 neighbors', 'area under peak proportional to number of H\'s']
           },
           {
             label: 'Splitting (n+1 rule)',
-            options: ['n equivalent neighbors → n+1 peaks', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['1 neighbor; Triplet: 2 neighbors; Quartet: 3 neighbors', 'n equivalent neighbors → n+1 peaks', 'area under peak proportional to number of H\'s', 'distance between split peaks in Hz']
           },
           {
             label: 'Doublet',
-            options: ['1 neighbor; Triplet: 2 neighbors; Quartet: 3 neigh', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['1 neighbor; Triplet: 2 neighbors; Quartet: 3 neighbors', 'n equivalent neighbors → n+1 peaks', 'distance between split peaks in Hz', 'area under peak proportional to number of H\'s']
           }
         ],
-        correctAnswers: ['area under peak proportional to number of H\'s', 'n equivalent neighbors → n+1 peaks', '1 neighbor; Triplet: 2 neighbors; Quartet: 3 neigh'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Integration & Splitting.'
+        correctAnswers: ['area under peak proportional to number of H\'s', 'n equivalent neighbors → n+1 peaks', '1 neighbor; Triplet: 2 neighbors; Quartet: 3 neighbors'],
+        hint1: 'Think about what each concept specifically describes in Integration & Splitting.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Integration & Splitting describes a specific idea. Integration: area under peak proportional to number of H\'s. Splitting (n+1 rule): n equivalent neighbors → n+1 peaks. Doublet: 1 neighbor; Triplet: 2 neighbors; Quartet: 3 neighbors.'
       }
     }
   ]

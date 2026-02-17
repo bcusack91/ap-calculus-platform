@@ -30,31 +30,31 @@ smoker who knows smoking is harmful
       id: 'attit2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of cognitive dissonance?',
+            question: 'What does "Cognitive dissonance (Festinger)" refer to in psychology?',
             options: [
-              'Cognitive dissonance (Festinger)',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'People change attitudes to reduce dissonance',
+              'discomfort from contradictory beliefs/actions',
+              'smoker who knows smoking is harmful',
+              'less reward → more attitude change'
             ],
-            correctAnswer: 0,
-            explanation: 'Cognitive dissonance (Festinger): discomfort from contradictory beliefs/actions'
+            correctAnswer: 1,
+            explanation: 'Correct — Cognitive dissonance (Festinger): discomfort from contradictory beliefs/actions. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of cognitive dissonance, which is accurate?',
+            question: 'In the context of Cognitive Dissonance, which explains Insufficient justification?',
             options: [
+              'People change attitudes to reduce dissonance',
+              'smoker who knows smoking is harmful',
               'less reward → more attitude change',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'discomfort from contradictory beliefs/actions'
             ],
-            correctAnswer: 0,
-            explanation: 'Insufficient justification: less reward → more attitude change'
+            correctAnswer: 2,
+            explanation: 'Correct — Insufficient justification: less reward → more attitude change. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ smoker who knows smoking is harmful
       id: 'attit2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Cognitive dissonance (Festinger)',
-            options: ['discomfort from contradictory beliefs/actions', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
-          },
-          {
-            label: 'People change attitudes to reduce dissonance',
-            options: ['People change attitudes to reduce dissonance', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['less reward → more attitude change', 'smoker who knows smoking is harmful', 'discomfort from contradictory beliefs/actions', 'People change attitudes to reduce dissonance']
           },
           {
             label: 'Insufficient justification',
-            options: ['less reward → more attitude change', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['People change attitudes to reduce dissonance', 'smoker who knows smoking is harmful', 'less reward → more attitude change', 'discomfort from contradictory beliefs/actions']
+          },
+          {
+            label: 'Example',
+            options: ['less reward → more attitude change', 'smoker who knows smoking is harmful', 'People change attitudes to reduce dissonance', 'discomfort from contradictory beliefs/actions']
           }
         ],
-        correctAnswers: ['discomfort from contradictory beliefs/actions', 'People change attitudes to reduce dissonance', 'less reward → more attitude change'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Cognitive Dissonance.'
+        correctAnswers: ['discomfort from contradictory beliefs/actions', 'less reward → more attitude change', 'smoker who knows smoking is harmful'],
+        hint1: 'Think about what each concept specifically describes in Cognitive Dissonance.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Cognitive Dissonance describes a specific idea. Cognitive dissonance (Festinger): discomfort from contradictory beliefs/actions. Insufficient justification: less reward → more attitude change. Example: smoker who knows smoking is harmful.'
       }
     }
   ]

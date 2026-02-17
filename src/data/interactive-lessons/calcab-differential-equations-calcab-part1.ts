@@ -30,31 +30,31 @@ specific solution using an initial condition
       id: 'diffe1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of introduction to differential equations?',
-            options: [
-              'Differential equation',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'Differential equation: an equation involving a derivative (dy/dx = f(x,y))'
-          },
-          {
-            question: 'In the context of introduction to differential equations, which is accurate?',
+            question: 'Which statement accurately explains Differential equation?',
             options: [
               'includes arbitrary constant C',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'an equation involving a derivative (dy/dx = f(x,y))',
+              'a function y = g(x) that satisfies the equation',
+              'specific solution using an initial condition'
             ],
-            correctAnswer: 0,
-            explanation: 'General solution: includes arbitrary constant C'
+            correctAnswer: 1,
+            explanation: 'Correct — Differential equation: an equation involving a derivative (dy/dx = f(x,y)). The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes General solution:',
+            options: [
+              'specific solution using an initial condition',
+              'includes arbitrary constant C',
+              'a function y = g(x) that satisfies the equation',
+              'an equation involving a derivative (dy/dx = f(x,y))'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — General solution: includes arbitrary constant C. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ specific solution using an initial condition
       id: 'diffe1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to introduction to differential equations?',
+            question: 'Which statement about Particular solution is correct?',
             options: [
               'specific solution using an initial condition',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'includes arbitrary constant C',
+              'a function y = g(x) that satisfies the equation',
+              'an equation involving a derivative (dy/dx = f(x,y))'
             ],
             correctAnswer: 0,
-            explanation: 'Particular solution: specific solution using an initial condition'
+            explanation: 'Correct — Particular solution: specific solution using an initial condition. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ specific solution using an initial condition
       id: 'diffe1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Differential equation',
-            options: ['an equation involving a derivative (dy/dx = f(x,y)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['an equation involving a derivative (dy/dx = f(x,y))', 'a function y = g(x) that satisfies the equation', 'includes arbitrary constant C', 'specific solution using an initial condition']
           },
           {
             label: 'Solution',
-            options: ['a function y = g(x) that satisfies the equation', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['includes arbitrary constant C', 'specific solution using an initial condition', 'an equation involving a derivative (dy/dx = f(x,y))', 'a function y = g(x) that satisfies the equation']
           },
           {
             label: 'General solution',
-            options: ['includes arbitrary constant C', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['a function y = g(x) that satisfies the equation', 'includes arbitrary constant C', 'specific solution using an initial condition', 'an equation involving a derivative (dy/dx = f(x,y))']
           }
         ],
-        correctAnswers: ['an equation involving a derivative (dy/dx = f(x,y)', 'a function y = g(x) that satisfies the equation', 'includes arbitrary constant C'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Introduction to Differential Equations.'
+        correctAnswers: ['an equation involving a derivative (dy/dx = f(x,y))', 'a function y = g(x) that satisfies the equation', 'includes arbitrary constant C'],
+        hint1: 'Think about what each concept specifically describes in Differential Equations.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Differential Equations describes a specific idea. Differential equation: an equation involving a derivative (dy/dx = f(x,y)). Solution: a function y = g(x) that satisfies the equation. General solution: includes arbitrary constant C.'
       }
     }
   ]

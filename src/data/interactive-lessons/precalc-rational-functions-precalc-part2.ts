@@ -30,31 +30,31 @@ A factor in the denominator that does NOT cancel gives a vertical asymptote
       id: 'ratio2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of vertical asymptotes?',
+            question: 'What does "Vertical asymptotes occur where q(x) =…" refer to in precalculus?',
             options: [
+              'A factor in the denominator that does NOT cancel gives a vertical asymptote',
               'Vertical asymptotes occur where q(x) = 0 (after cancellation)',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'The graph approaches ±∞ near vertical asymptotes',
+              'Sign analysis determines whether the function goes to +∞ or -∞'
             ],
-            correctAnswer: 0,
-            explanation: 'Vertical asymptotes occur where q(x) = 0 (after cancellation)'
+            correctAnswer: 1,
+            explanation: 'Correct — Vertical asymptotes occur where q(x) = 0 (after cancellation). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of vertical asymptotes, which is accurate?',
+            question: 'Which of the following is true about Sign analysis determines whether the…?',
             options: [
-              'Sign analysis determines whether the function goes to +∞ or -∞',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'A factor in the denominator that does NOT cancel gives a vertical asymptote',
+              'The graph approaches ±∞ near vertical asymptotes',
+              'Vertical asymptotes occur where q(x) = 0 (after cancellation)',
+              'Sign analysis determines whether the function goes to +∞ or -∞'
             ],
-            correctAnswer: 0,
-            explanation: 'Sign analysis determines whether the function goes to +∞ or -∞'
+            correctAnswer: 3,
+            explanation: 'Correct — Sign analysis determines whether the function goes to +∞ or -∞. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ A factor in the denominator that does NOT cancel gives a vertical asymptote
       id: 'ratio2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Vertical asymptotes occur where q(x) = 0 (after cancellation)',
-            options: ['Vertical asymptotes occur where q(x) = 0 (after ca', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            label: 'Vertical asymptotes occur where q(x) =…',
+            options: ['Sign analysis determines whether the function goes to +∞ or -∞', 'Vertical asymptotes occur where q(x) = 0 (after cancellation)', 'The graph approaches ±∞ near vertical asymptotes', 'A factor in the denominator that does NOT cancel gives a vertical asymptote']
           },
           {
-            label: 'The graph approaches ±∞ near vertical asymptotes',
-            options: ['The graph approaches ±∞ near vertical asymptotes', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            label: 'The graph approaches ±∞ near vertical…',
+            options: ['A factor in the denominator that does NOT cancel gives a vertical asymptote', 'Vertical asymptotes occur where q(x) = 0 (after cancellation)', 'Sign analysis determines whether the function goes to +∞ or -∞', 'The graph approaches ±∞ near vertical asymptotes']
           },
           {
-            label: 'Sign analysis determines whether the function goes to +∞ or -∞',
-            options: ['Sign analysis determines whether the function goes', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            label: 'Sign analysis determines whether the…',
+            options: ['Sign analysis determines whether the function goes to +∞ or -∞', 'Vertical asymptotes occur where q(x) = 0 (after cancellation)', 'The graph approaches ±∞ near vertical asymptotes', 'A factor in the denominator that does NOT cancel gives a vertical asymptote']
           }
         ],
-        correctAnswers: ['Vertical asymptotes occur where q(x) = 0 (after ca', 'The graph approaches ±∞ near vertical asymptotes', 'Sign analysis determines whether the function goes'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Vertical Asymptotes.'
+        correctAnswers: ['Vertical asymptotes occur where q(x) = 0 (after cancellation)', 'The graph approaches ±∞ near vertical asymptotes', 'Sign analysis determines whether the function goes to +∞ or -∞'],
+        hint1: 'Think about what each concept specifically describes in Vertical Asymptotes.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Vertical Asymptotes describes a specific idea. Vertical asymptotes occur where q(x) = 0 (after cancellation). The graph approaches ±∞ near vertical asymptotes. Sign analysis determines whether the function goes to +∞ or -∞.'
       }
     }
   ]

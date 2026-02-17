@@ -30,31 +30,31 @@ Gene × environment interaction in mental health
       id: 'genet5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of gene-environment interaction?',
+            question: 'What does "Diathesis-stress model" refer to in psychology?',
             options: [
-              'Diathesis-stress model',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'genetic but treatable by environment',
+              'Epigenetic changes can be inherited',
+              'genetic predisposition + environmental trigger',
+              'Gene × environment interaction in mental health'
             ],
-            correctAnswer: 0,
-            explanation: 'Diathesis-stress model: genetic predisposition + environmental trigger'
+            correctAnswer: 2,
+            explanation: 'Correct — Diathesis-stress model: genetic predisposition + environmental trigger. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of gene-environment interaction, which is accurate?',
+            question: 'Which of the following is true about Epigenetic changes can be inherited?',
             options: [
+              'genetic but treatable by environment',
+              'Gene × environment interaction in mental health',
               'Epigenetic changes can be inherited',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'genetic predisposition + environmental trigger'
             ],
-            correctAnswer: 0,
-            explanation: 'Epigenetic changes can be inherited'
+            correctAnswer: 2,
+            explanation: 'Correct — Epigenetic changes can be inherited. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,24 @@ Gene × environment interaction in mental health
       id: 'genet5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Diathesis-stress model',
-            options: ['genetic predisposition + environmental trigger', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['genetic but treatable by environment', 'genetic predisposition + environmental trigger', 'Gene × environment interaction in mental health', 'Epigenetic changes can be inherited']
           },
           {
             label: 'Phenylketonuria (PKU)',
-            options: ['genetic but treatable by environment', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
-          },
-          {
-            label: 'Epigenetic changes can be inherited',
-            options: ['Epigenetic changes can be inherited', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Gene × environment interaction in mental health', 'genetic predisposition + environmental trigger', 'Epigenetic changes can be inherited', 'genetic but treatable by environment']
           }
         ],
-        correctAnswers: ['genetic predisposition + environmental trigger', 'genetic but treatable by environment', 'Epigenetic changes can be inherited'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Gene-Environment Interaction.'
+        correctAnswers: ['genetic predisposition + environmental trigger', 'genetic but treatable by environment'],
+        hint1: 'Think about what each concept specifically describes in Gene-Environment Interaction.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Gene-Environment Interaction describes a specific idea. Diathesis-stress model: genetic predisposition + environmental trigger. Phenylketonuria (PKU): genetic but treatable by environment.'
       }
     }
   ]

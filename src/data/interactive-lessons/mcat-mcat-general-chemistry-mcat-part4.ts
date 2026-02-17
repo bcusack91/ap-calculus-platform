@@ -71,23 +71,28 @@ pH = -log[H+]; pOH = -log[OH-]; pH + pOH = 14 at 25C.
       id: 'mcat-4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Acids, Bases & Buffers:',
-            options: ['Bronsted-Lowry: acids donate H+, bases accept H+; Lewis: aci', 'pH = -log[H+]; pOH = -log[OH-]; pH + pOH = 14 at 25C', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Bronsted-Lowry',
+            options: ['Buffer = weak acid + conjugate base (or weak base + conjugate acid) — resists pH change.', 'Henderson-Hasselbalch: pH = pKa + log([A-]/[HA]) — critical for MCAT buffer calculations.', 'acids donate H+, bases accept H+; Lewis: acids accept electron pairs, bases donate them.', 'pH = -log[H+]; pOH = -log[OH-]; pH + pOH = 14 at 25C.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Buffer = weak acid + conjugate base (or weak base + conjugat', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Key Insight',
+            options: ['acids donate H+, bases accept H+; Lewis: acids accept electron pairs, bases donate them.', 'pH = -log[H+]; pOH = -log[OH-]; pH + pOH = 14 at 25C.', 'Buffer = weak acid + conjugate base (or weak base + conjugate acid) — resists pH change.', 'Henderson-Hasselbalch: pH = pKa + log([A-]/[HA]) — critical for MCAT buffer calculations.']
+          },
+          {
+            label: 'MCAT Tip',
+            options: ['Henderson-Hasselbalch: pH = pKa + log([A-]/[HA]) — critical for MCAT buffer calculations.', 'acids donate H+, bases accept H+; Lewis: acids accept electron pairs, bases donate them.', 'pH = -log[H+]; pOH = -log[OH-]; pH + pOH = 14 at 25C.', 'Buffer = weak acid + conjugate base (or weak base + conjugate acid) — resists pH change.']
           }
         ],
-        correctAnswers: ['Bronsted-Lowry: acids donate H+, bases accept H+; Lewis: aci', 'Buffer = weak acid + conjugate base (or weak base + conjugat'],
-        hint1: 'Think about acids, bases & buffers',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Bronsted-Lowry: acids donate H+, bases accept H+; Lewis: acids accept electron pairs, bases donate them. Buffer = weak acid + conjugate base (or weak base + conjugate acid) — resists pH change.'
+        correctAnswers: ['acids donate H+, bases accept H+; Lewis: acids accept electron pairs, bases donate them.', 'Buffer = weak acid + conjugate base (or weak base + conjugate acid) — resists pH change.', 'Henderson-Hasselbalch: pH = pKa + log([A-]/[HA]) — critical for MCAT buffer calculations.'],
+        hint1: 'Think about what each concept specifically describes in Acids, Bases & Buffers.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Acids, Bases & Buffers describes a specific idea. Bronsted-Lowry: acids donate H+, bases accept H+; Lewis: acids accept electron pairs, bases donate them. Key Insight: Buffer = weak acid + conjugate base (or weak base + conjugate acid) — resists pH change. MCAT Tip: Henderson-Hasselbalch: pH = pKa + log([A-]/[HA]) — critical for MCAT buffer calculations.'
       }
     }
   ]

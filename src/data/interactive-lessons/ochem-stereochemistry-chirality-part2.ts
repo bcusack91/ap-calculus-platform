@@ -30,31 +30,31 @@ higher atomic number = higher priority
       id: 'stere2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of r/s configuration?',
+            question: 'What does "Cahn-Ingold-Prelog priority rules" refer to in this topic?',
             options: [
-              'Cahn-Ingold-Prelog priority rules',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'clockwise (priority 1→2→3 with 4 pointing back)',
+              'counterclockwise',
+              'atomic number',
+              'higher atomic number = higher priority'
             ],
-            correctAnswer: 0,
-            explanation: 'Cahn-Ingold-Prelog priority rules: atomic number'
+            correctAnswer: 2,
+            explanation: 'Correct — Cahn-Ingold-Prelog priority rules: atomic number. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of r/s configuration, which is accurate?',
+            question: 'Select the statement that correctly describes S configuration:',
             options: [
+              'higher atomic number = higher priority',
+              'clockwise (priority 1→2→3 with 4 pointing back)',
               'counterclockwise',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'atomic number'
             ],
-            correctAnswer: 0,
-            explanation: 'S configuration: counterclockwise'
+            correctAnswer: 2,
+            explanation: 'Correct — S configuration: counterclockwise. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ higher atomic number = higher priority
       id: 'stere2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Cahn-Ingold-Prelog priority rules',
-            options: ['atomic number', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['atomic number', 'clockwise (priority 1→2→3 with 4 pointing back)', 'counterclockwise', 'higher atomic number = higher priority']
           },
           {
             label: 'R configuration',
-            options: ['clockwise (priority 1→2→3 with 4 pointing back)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['atomic number', 'higher atomic number = higher priority', 'counterclockwise', 'clockwise (priority 1→2→3 with 4 pointing back)']
           },
           {
             label: 'S configuration',
-            options: ['counterclockwise', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['higher atomic number = higher priority', 'counterclockwise', 'clockwise (priority 1→2→3 with 4 pointing back)', 'atomic number']
           }
         ],
         correctAnswers: ['atomic number', 'clockwise (priority 1→2→3 with 4 pointing back)', 'counterclockwise'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding R/S Configuration.'
+        hint1: 'Think about what each concept specifically describes in R/S Configuration.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in R/S Configuration describes a specific idea. Cahn-Ingold-Prelog priority rules: atomic number. R configuration: clockwise (priority 1→2→3 with 4 pointing back). S configuration: counterclockwise.'
       }
     }
   ]

@@ -30,31 +30,31 @@ chirality, configuration, and stereoisomers
       id: 'stere7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of synthesis & review?',
+            question: 'What does "Stereochemistry determines biological…" refer to in this topic?',
             options: [
               'Stereochemistry determines biological activity',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'Enantiomers can have very different biological effects',
+              'Understanding 3D structure is crucial in drug design',
+              'chirality, configuration, and stereoisomers'
             ],
             correctAnswer: 0,
-            explanation: 'Stereochemistry determines biological activity'
+            explanation: 'Correct — Stereochemistry determines biological activity. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of synthesis & review, which is accurate?',
+            question: 'Which of the following is true about Understanding 3D structure is crucial…?',
             options: [
-              'Understanding 3D structure is crucial in drug design',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'chirality, configuration, and stereoisomers',
+              'Enantiomers can have very different biological effects',
+              'Stereochemistry determines biological activity',
+              'Understanding 3D structure is crucial in drug design'
             ],
-            correctAnswer: 0,
-            explanation: 'Understanding 3D structure is crucial in drug design'
+            correctAnswer: 3,
+            explanation: 'Correct — Understanding 3D structure is crucial in drug design. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ chirality, configuration, and stereoisomers
       id: 'stere7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Stereochemistry determines biological activity',
-            options: ['Stereochemistry determines biological activity', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Stereochemistry determines biological…',
+            options: ['Understanding 3D structure is crucial in drug design', 'Enantiomers can have very different biological effects', 'Stereochemistry determines biological activity', 'chirality, configuration, and stereoisomers']
           },
           {
-            label: 'Enantiomers can have very different biological effects',
-            options: ['Enantiomers can have very different biological eff', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Enantiomers can have very different…',
+            options: ['Enantiomers can have very different biological effects', 'chirality, configuration, and stereoisomers', 'Stereochemistry determines biological activity', 'Understanding 3D structure is crucial in drug design']
           },
           {
-            label: 'Understanding 3D structure is crucial in drug design',
-            options: ['Understanding 3D structure is crucial in drug desi', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Understanding 3D structure is crucial…',
+            options: ['Understanding 3D structure is crucial in drug design', 'Stereochemistry determines biological activity', 'Enantiomers can have very different biological effects', 'chirality, configuration, and stereoisomers']
           }
         ],
-        correctAnswers: ['Stereochemistry determines biological activity', 'Enantiomers can have very different biological eff', 'Understanding 3D structure is crucial in drug desi'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Synthesis & Review.'
+        correctAnswers: ['Stereochemistry determines biological activity', 'Enantiomers can have very different biological effects', 'Understanding 3D structure is crucial in drug design'],
+        hint1: 'Think about what each concept specifically describes in Synthesis & Review.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Synthesis & Review describes a specific idea. Stereochemistry determines biological activity. Enantiomers can have very different biological effects. Understanding 3D structure is crucial in drug design.'
       }
     }
   ]

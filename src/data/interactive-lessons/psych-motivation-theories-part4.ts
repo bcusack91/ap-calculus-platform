@@ -30,31 +30,31 @@ autonomy, competence, relatedness
       id: 'motiv4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of achievement & intrinsic motivation?',
+            question: 'What does "Intrinsic motivation" refer to in psychology?',
             options: [
-              'Intrinsic motivation',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'external rewards',
+              'autonomy, competence, relatedness',
+              'extrinsic rewards can undermine intrinsic motivation',
+              'internal satisfaction'
             ],
-            correctAnswer: 0,
-            explanation: 'Intrinsic motivation: internal satisfaction'
+            correctAnswer: 3,
+            explanation: 'Correct — Intrinsic motivation: internal satisfaction. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of achievement & intrinsic motivation, which is accurate?',
+            question: 'Select the statement that correctly describes Overjustification effect:',
             options: [
-              'extrinsic rewards can undermine intrinsic motivation',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'internal satisfaction',
+              'external rewards',
+              'autonomy, competence, relatedness',
+              'extrinsic rewards can undermine intrinsic motivation'
             ],
-            correctAnswer: 0,
-            explanation: 'Overjustification effect: extrinsic rewards can undermine intrinsic motivation'
+            correctAnswer: 3,
+            explanation: 'Correct — Overjustification effect: extrinsic rewards can undermine intrinsic motivation. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ autonomy, competence, relatedness
       id: 'motiv4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Intrinsic motivation',
-            options: ['internal satisfaction', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['autonomy, competence, relatedness', 'extrinsic rewards can undermine intrinsic motivation', 'external rewards', 'internal satisfaction']
           },
           {
             label: 'Extrinsic motivation',
-            options: ['external rewards', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['extrinsic rewards can undermine intrinsic motivation', 'autonomy, competence, relatedness', 'external rewards', 'internal satisfaction']
           },
           {
             label: 'Overjustification effect',
-            options: ['extrinsic rewards can undermine intrinsic motivati', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['autonomy, competence, relatedness', 'internal satisfaction', 'external rewards', 'extrinsic rewards can undermine intrinsic motivation']
           }
         ],
-        correctAnswers: ['internal satisfaction', 'external rewards', 'extrinsic rewards can undermine intrinsic motivati'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Achievement & Intrinsic Motivation.'
+        correctAnswers: ['internal satisfaction', 'external rewards', 'extrinsic rewards can undermine intrinsic motivation'],
+        hint1: 'Think about what each concept specifically describes in Achievement & Intrinsic Motivation.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Achievement & Intrinsic Motivation describes a specific idea. Intrinsic motivation: internal satisfaction. Extrinsic motivation: external rewards. Overjustification effect: extrinsic rewards can undermine intrinsic motivation.'
       }
     }
   ]

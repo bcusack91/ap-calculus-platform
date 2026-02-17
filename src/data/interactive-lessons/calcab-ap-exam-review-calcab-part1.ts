@@ -30,31 +30,31 @@ continuous function on closed interval
       id: 'ap-ex1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of limits & continuity review?',
+            question: 'Which of the following correctly describes Evaluate limits using substitution,…?',
             options: [
               'Evaluate limits using substitution, factoring, rationalization, L\'Hôpital\'s Rule',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'continuous function on closed interval',
+              'removable, jump, infinite',
+              'Apply Squeeze Theorem for bounded functions'
             ],
             correctAnswer: 0,
-            explanation: 'Evaluate limits using substitution, factoring, rationalization, L\'Hôpital\'s Rule'
+            explanation: 'Correct — Evaluate limits using substitution, factoring, rationalization, L\'Hôpital\'s Rule. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of limits & continuity review, which is accurate?',
+            question: 'Select the statement that correctly describes Apply Squeeze Theorem for bounded…:',
             options: [
+              'continuous function on closed interval',
+              'removable, jump, infinite',
               'Apply Squeeze Theorem for bounded functions',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Evaluate limits using substitution, factoring, rationalization, L\'Hôpital\'s Rule'
             ],
-            correctAnswer: 0,
-            explanation: 'Apply Squeeze Theorem for bounded functions'
+            correctAnswer: 2,
+            explanation: 'Correct — Apply Squeeze Theorem for bounded functions. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ continuous function on closed interval
       id: 'ap-ex1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to limits & continuity review?',
+            question: 'Which statement about IVT and its conditions is correct?',
             options: [
+              'Evaluate limits using substitution, factoring, rationalization, L\'Hôpital\'s Rule',
               'continuous function on closed interval',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'Apply Squeeze Theorem for bounded functions',
+              'removable, jump, infinite'
             ],
-            correctAnswer: 0,
-            explanation: 'IVT and its conditions: continuous function on closed interval'
+            correctAnswer: 1,
+            explanation: 'Correct — IVT and its conditions: continuous function on closed interval. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,24 @@ continuous function on closed interval
       id: 'ap-ex1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Evaluate limits using substitution, factoring, rationalization, L\'Hôpital\'s Rule',
-            options: ['Evaluate limits using substitution, factoring, rat', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
-          },
-          {
             label: 'Identify types of discontinuities',
-            options: ['removable, jump, infinite', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['continuous function on closed interval', 'Apply Squeeze Theorem for bounded functions', 'Evaluate limits using substitution, factoring, rationalization, L\'Hôpital\'s Rule', 'removable, jump, infinite']
           },
           {
-            label: 'Apply Squeeze Theorem for bounded functions',
-            options: ['Apply Squeeze Theorem for bounded functions', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'IVT and its conditions',
+            options: ['Apply Squeeze Theorem for bounded functions', 'continuous function on closed interval', 'Evaluate limits using substitution, factoring, rationalization, L\'Hôpital\'s Rule', 'removable, jump, infinite']
           }
         ],
-        correctAnswers: ['Evaluate limits using substitution, factoring, rat', 'removable, jump, infinite', 'Apply Squeeze Theorem for bounded functions'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Limits & Continuity Review.'
+        correctAnswers: ['removable, jump, infinite', 'continuous function on closed interval'],
+        hint1: 'Think about what each concept specifically describes in Ap Exam Review.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Ap Exam Review describes a specific idea. Identify types of discontinuities: removable, jump, infinite. IVT and its conditions: continuous function on closed interval.'
       }
     }
   ]

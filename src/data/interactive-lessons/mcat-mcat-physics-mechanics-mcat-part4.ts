@@ -71,23 +71,28 @@ Conservation of momentum: total momentum before = total momentum after (isolated
       id: 'mcat-4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Momentum & Collisions:',
-            options: ['Momentum p = mv; Impulse J = F*delta-t = delta-p', 'Conservation of momentum: total momentum before = total mome', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Conservation of momentum',
+            options: ['Momentum p = mv; Impulse J = F*delta-t = delta-p.', 'Elastic collision: both momentum and KE conserved; Inelastic: only momentum conserved.', 'Center of mass: x_cm = (m1x1 + m2x2)/(m1 + m2) — moves as if all mass is concentrated there.', 'total momentum before = total momentum after (isolated system).']
           },
           {
-            label: 'MCAT application:',
-            options: ['Elastic collision: both momentum and KE conserved; Inelastic', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Key Insight',
+            options: ['Center of mass: x_cm = (m1x1 + m2x2)/(m1 + m2) — moves as if all mass is concentrated there.', 'total momentum before = total momentum after (isolated system).', 'Elastic collision: both momentum and KE conserved; Inelastic: only momentum conserved.', 'Momentum p = mv; Impulse J = F*delta-t = delta-p.']
+          },
+          {
+            label: 'MCAT Tip',
+            options: ['Elastic collision: both momentum and KE conserved; Inelastic: only momentum conserved.', 'total momentum before = total momentum after (isolated system).', 'Momentum p = mv; Impulse J = F*delta-t = delta-p.', 'Center of mass: x_cm = (m1x1 + m2x2)/(m1 + m2) — moves as if all mass is concentrated there.']
           }
         ],
-        correctAnswers: ['Momentum p = mv; Impulse J = F*delta-t = delta-p', 'Elastic collision: both momentum and KE conserved; Inelastic'],
-        hint1: 'Think about momentum & collisions',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Momentum p = mv; Impulse J = F*delta-t = delta-p. Elastic collision: both momentum and KE conserved; Inelastic: only momentum conserved.'
+        correctAnswers: ['total momentum before = total momentum after (isolated system).', 'Elastic collision: both momentum and KE conserved; Inelastic: only momentum conserved.', 'Center of mass: x_cm = (m1x1 + m2x2)/(m1 + m2) — moves as if all mass is concentrated there.'],
+        hint1: 'Think about what each concept specifically describes in Momentum & Collisions.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Momentum & Collisions describes a specific idea. Conservation of momentum: total momentum before = total momentum after (isolated system). Key Insight: Elastic collision: both momentum and KE conserved; Inelastic: only momentum conserved. MCAT Tip: Center of mass: x_cm = (m1x1 + m2x2)/(m1 + m2) — moves as if all mass is concentrated there.'
       }
     }
   ]

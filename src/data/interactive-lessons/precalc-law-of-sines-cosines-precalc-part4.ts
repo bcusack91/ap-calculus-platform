@@ -30,31 +30,31 @@ These formulas work for any triangle, not just right triangles
       id: 'law-o4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of area of triangles?',
+            question: 'What does "Area = ½ab sin C (using two sides and…" refer to in precalculus?',
             options: [
+              'Area = √(s(s-a)(s-b)(s-c)) where s = (a+b+c)/2',
+              'These formulas work for any triangle, not just right triangles',
               'Area = ½ab sin C (using two sides and included angle)',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'Area = a² sin B sin C / (2 sin A)'
             ],
-            correctAnswer: 0,
-            explanation: 'Area = ½ab sin C (using two sides and included angle)'
+            correctAnswer: 2,
+            explanation: 'Correct — Area = ½ab sin C (using two sides and included angle). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of area of triangles, which is accurate?',
+            question: 'Which of the following is true about Area using Law of Sines?',
             options: [
+              'Area = √(s(s-a)(s-b)(s-c)) where s = (a+b+c)/2',
+              'Area = ½ab sin C (using two sides and included angle)',
               'Area = a² sin B sin C / (2 sin A)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'These formulas work for any triangle, not just right triangles'
             ],
-            correctAnswer: 0,
-            explanation: 'Area using Law of Sines: Area = a² sin B sin C / (2 sin A)'
+            correctAnswer: 2,
+            explanation: 'Correct — Area using Law of Sines: Area = a² sin B sin C / (2 sin A). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,24 @@ These formulas work for any triangle, not just right triangles
       id: 'law-o4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Area = ½ab sin C (using two sides and included angle)',
-            options: ['Area = ½ab sin C (using two sides and included ang', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
-          },
-          {
             label: 'Heron\'s formula',
-            options: ['Area = √(s(s-a)(s-b)(s-c)) where s = (a+b+c)/2', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['Area = a² sin B sin C / (2 sin A)', 'Area = √(s(s-a)(s-b)(s-c)) where s = (a+b+c)/2', 'These formulas work for any triangle, not just right triangles', 'Area = ½ab sin C (using two sides and included angle)']
           },
           {
             label: 'Area using Law of Sines',
-            options: ['Area = a² sin B sin C / (2 sin A)', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['These formulas work for any triangle, not just right triangles', 'Area = √(s(s-a)(s-b)(s-c)) where s = (a+b+c)/2', 'Area = ½ab sin C (using two sides and included angle)', 'Area = a² sin B sin C / (2 sin A)']
           }
         ],
-        correctAnswers: ['Area = ½ab sin C (using two sides and included ang', 'Area = √(s(s-a)(s-b)(s-c)) where s = (a+b+c)/2', 'Area = a² sin B sin C / (2 sin A)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Area of Triangles.'
+        correctAnswers: ['Area = √(s(s-a)(s-b)(s-c)) where s = (a+b+c)/2', 'Area = a² sin B sin C / (2 sin A)'],
+        hint1: 'Think about what each concept specifically describes in Area of Triangles.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Area of Triangles describes a specific idea. Heron\'s formula: Area = √(s(s-a)(s-b)(s-c)) where s = (a+b+c)/2. Area using Law of Sines: Area = a² sin B sin C / (2 sin A).'
       }
     }
   ]

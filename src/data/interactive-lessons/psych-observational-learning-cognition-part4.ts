@@ -30,31 +30,31 @@ applying knowledge to new situations
       id: 'obser4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of insight & latent learning?',
+            question: 'Which of the following correctly describes Insight learning?',
             options: [
-              'Insight learning',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'applying knowledge to new situations',
+              'Köhler\'s apes — sudden "aha!" solutions',
+              'Not trial-and-error but sudden reorganization',
+              'understanding rules and principles'
             ],
-            correctAnswer: 0,
-            explanation: 'Insight learning: Köhler\'s apes — sudden "aha!" solutions'
+            correctAnswer: 1,
+            explanation: 'Correct — Insight learning: Köhler\'s apes — sudden "aha!" solutions. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of insight & latent learning, which is accurate?',
+            question: 'Which of the following is true about Abstract learning?',
             options: [
+              'Köhler\'s apes — sudden "aha!" solutions',
+              'Not trial-and-error but sudden reorganization',
               'understanding rules and principles',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'applying knowledge to new situations'
             ],
-            correctAnswer: 0,
-            explanation: 'Abstract learning: understanding rules and principles'
+            correctAnswer: 2,
+            explanation: 'Correct — Abstract learning: understanding rules and principles. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ applying knowledge to new situations
       id: 'obser4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Insight learning',
-            options: ['Köhler\'s apes — sudden "aha!" solutions', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
-          },
-          {
-            label: 'Not trial-and-error but sudden reorganization',
-            options: ['Not trial-and-error but sudden reorganization', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Köhler\'s apes — sudden "aha!" solutions', 'understanding rules and principles', 'applying knowledge to new situations', 'Not trial-and-error but sudden reorganization']
           },
           {
             label: 'Abstract learning',
-            options: ['understanding rules and principles', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Köhler\'s apes — sudden "aha!" solutions', 'understanding rules and principles', 'applying knowledge to new situations', 'Not trial-and-error but sudden reorganization']
+          },
+          {
+            label: 'Transfer of learning',
+            options: ['Not trial-and-error but sudden reorganization', 'applying knowledge to new situations', 'understanding rules and principles', 'Köhler\'s apes — sudden "aha!" solutions']
           }
         ],
-        correctAnswers: ['Köhler\'s apes — sudden "aha!" solutions', 'Not trial-and-error but sudden reorganization', 'understanding rules and principles'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Insight & Latent Learning.'
+        correctAnswers: ['Köhler\'s apes — sudden "aha!" solutions', 'understanding rules and principles', 'applying knowledge to new situations'],
+        hint1: 'Think about what each concept specifically describes in Insight & Latent Learning.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Insight & Latent Learning describes a specific idea. Insight learning: Köhler\'s apes — sudden "aha!" solutions. Abstract learning: understanding rules and principles. Transfer of learning: applying knowledge to new situations.'
       }
     }
   ]

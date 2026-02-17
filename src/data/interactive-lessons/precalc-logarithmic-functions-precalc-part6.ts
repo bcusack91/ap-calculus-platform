@@ -30,31 +30,31 @@ y = a + b · ln(x) for data modeling
       id: 'logar6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of problem-solving workshop?',
+            question: 'Which statement accurately explains Richter scale?',
             options: [
-              'Richter scale',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'M = log(I/I₀), each unit is 10× intensity',
+              'dB = 10 · log(I/I₀)',
+              'y = a + b · ln(x) for data modeling',
+              'pH = -log[H⁺], logarithmic measure of acidity'
             ],
             correctAnswer: 0,
-            explanation: 'Richter scale: M = log(I/I₀), each unit is 10× intensity'
+            explanation: 'Correct — Richter scale: M = log(I/I₀), each unit is 10× intensity. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of problem-solving workshop, which is accurate?',
+            question: 'Select the statement that correctly describes pH scale:',
             options: [
               'pH = -log[H⁺], logarithmic measure of acidity',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'M = log(I/I₀), each unit is 10× intensity',
+              'y = a + b · ln(x) for data modeling',
+              'dB = 10 · log(I/I₀)'
             ],
             correctAnswer: 0,
-            explanation: 'pH scale: pH = -log[H⁺], logarithmic measure of acidity'
+            explanation: 'Correct — pH scale: pH = -log[H⁺], logarithmic measure of acidity. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ y = a + b · ln(x) for data modeling
       id: 'logar6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Richter scale',
-            options: ['M = log(I/I₀), each unit is 10× intensity', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['y = a + b · ln(x) for data modeling', 'dB = 10 · log(I/I₀)', 'M = log(I/I₀), each unit is 10× intensity', 'pH = -log[H⁺], logarithmic measure of acidity']
           },
           {
             label: 'Decibel scale',
-            options: ['dB = 10 · log(I/I₀)', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['dB = 10 · log(I/I₀)', 'pH = -log[H⁺], logarithmic measure of acidity', 'M = log(I/I₀), each unit is 10× intensity', 'y = a + b · ln(x) for data modeling']
           },
           {
             label: 'pH scale',
-            options: ['pH = -log[H⁺], logarithmic measure of acidity', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['pH = -log[H⁺], logarithmic measure of acidity', 'y = a + b · ln(x) for data modeling', 'dB = 10 · log(I/I₀)', 'M = log(I/I₀), each unit is 10× intensity']
           }
         ],
         correctAnswers: ['M = log(I/I₀), each unit is 10× intensity', 'dB = 10 · log(I/I₀)', 'pH = -log[H⁺], logarithmic measure of acidity'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving Workshop.'
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Richter scale: M = log(I/I₀), each unit is 10× intensity. Decibel scale: dB = 10 · log(I/I₀). pH scale: pH = -log[H⁺], logarithmic measure of acidity.'
       }
     }
   ]

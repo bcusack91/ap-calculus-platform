@@ -30,31 +30,31 @@ Use differentials to estimate maximum error in computed quantities
       id: 'linea3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of error estimation?',
+            question: 'Which of the following correctly describes Relative error = |dy/y| or |Δy/y|?',
             options: [
               'Relative error = |dy/y| or |Δy/y|',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'Percentage error = relative error × 100%',
+              'Use differentials to estimate maximum error in computed quantities',
+              'error in output due to error in input'
             ],
             correctAnswer: 0,
-            explanation: 'Relative error = |dy/y| or |Δy/y|'
+            explanation: 'Correct — Relative error = |dy/y| or |Δy/y|. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of error estimation, which is accurate?',
+            question: 'Select the statement that correctly describes Propagated error:',
             options: [
+              'Percentage error = relative error × 100%',
+              'Use differentials to estimate maximum error in computed quantities',
               'error in output due to error in input',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Relative error = |dy/y| or |Δy/y|'
             ],
-            correctAnswer: 0,
-            explanation: 'Propagated error: error in output due to error in input'
+            correctAnswer: 2,
+            explanation: 'Correct — Propagated error: error in output due to error in input. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Use differentials to estimate maximum error in computed quantities
       id: 'linea3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to error estimation?',
+            question: 'Which of these accurately represents Use differentials to estimate maximum…?',
             options: [
-              'Use differentials to estimate maximum error in computed quantities',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'Percentage error = relative error × 100%',
+              'Relative error = |dy/y| or |Δy/y|',
+              'error in output due to error in input',
+              'Use differentials to estimate maximum error in computed quantities'
             ],
-            correctAnswer: 0,
-            explanation: 'Use differentials to estimate maximum error in computed quantities'
+            correctAnswer: 3,
+            explanation: 'Correct — Use differentials to estimate maximum error in computed quantities. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Use differentials to estimate maximum error in computed quantities
       id: 'linea3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Relative error = |dy/y| or |Δy/y|',
-            options: ['Relative error = |dy/y| or |Δy/y|', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Use differentials to estimate maximum error in computed quantities', 'Percentage error = relative error × 100%', 'Relative error = |dy/y| or |Δy/y|', 'error in output due to error in input']
           },
           {
             label: 'Percentage error = relative error × 100%',
-            options: ['Percentage error = relative error × 100%', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Relative error = |dy/y| or |Δy/y|', 'Percentage error = relative error × 100%', 'error in output due to error in input', 'Use differentials to estimate maximum error in computed quantities']
           },
           {
             label: 'Propagated error',
-            options: ['error in output due to error in input', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Use differentials to estimate maximum error in computed quantities', 'Relative error = |dy/y| or |Δy/y|', 'Percentage error = relative error × 100%', 'error in output due to error in input']
           }
         ],
         correctAnswers: ['Relative error = |dy/y| or |Δy/y|', 'Percentage error = relative error × 100%', 'error in output due to error in input'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Error Estimation.'
+        hint1: 'Think about what each concept specifically describes in Error Estimation.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Error Estimation describes a specific idea. Relative error = |dy/y| or |Δy/y|. Percentage error = relative error × 100%. Propagated error: error in output due to error in input.'
       }
     }
   ]

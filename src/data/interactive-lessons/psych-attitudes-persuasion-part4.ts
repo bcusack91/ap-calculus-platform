@@ -30,31 +30,31 @@ anonymity reduces self-awareness → aggression
       id: 'attit4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of aggression?',
-            options: [
-              'Biological',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
-            ],
-            correctAnswer: 0,
-            explanation: 'Biological: testosterone, brain damage (amygdala)'
-          },
-          {
-            question: 'In the context of aggression, which is accurate?',
+            question: 'What does "Biological" refer to in psychology?',
             options: [
               'observing and imitating aggressive models',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'anonymity reduces self-awareness → aggression',
+              'testosterone, brain damage (amygdala)',
+              'frustration triggers aggression'
             ],
-            correctAnswer: 0,
-            explanation: 'Social learning: observing and imitating aggressive models'
+            correctAnswer: 2,
+            explanation: 'Correct — Biological: testosterone, brain damage (amygdala). The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Aggression, which explains Social learning?',
+            options: [
+              'frustration triggers aggression',
+              'anonymity reduces self-awareness → aggression',
+              'observing and imitating aggressive models',
+              'testosterone, brain damage (amygdala)'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Social learning: observing and imitating aggressive models. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ anonymity reduces self-awareness → aggression
       id: 'attit4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Biological',
-            options: ['testosterone, brain damage (amygdala)', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['anonymity reduces self-awareness → aggression', 'testosterone, brain damage (amygdala)', 'frustration triggers aggression', 'observing and imitating aggressive models']
           },
           {
             label: 'Frustration-aggression hypothesis',
-            options: ['frustration triggers aggression', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['anonymity reduces self-awareness → aggression', 'observing and imitating aggressive models', 'testosterone, brain damage (amygdala)', 'frustration triggers aggression']
           },
           {
             label: 'Social learning',
-            options: ['observing and imitating aggressive models', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['observing and imitating aggressive models', 'frustration triggers aggression', 'testosterone, brain damage (amygdala)', 'anonymity reduces self-awareness → aggression']
           }
         ],
         correctAnswers: ['testosterone, brain damage (amygdala)', 'frustration triggers aggression', 'observing and imitating aggressive models'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Aggression.'
+        hint1: 'Think about what each concept specifically describes in Aggression.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Aggression describes a specific idea. Biological: testosterone, brain damage (amygdala). Frustration-aggression hypothesis: frustration triggers aggression. Social learning: observing and imitating aggressive models.'
       }
     }
   ]

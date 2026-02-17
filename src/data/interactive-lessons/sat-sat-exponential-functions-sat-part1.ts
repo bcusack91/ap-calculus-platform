@@ -18,20 +18,31 @@ Decay: f(x) = a · bˣ where 0 < b < 1.
       id: 'sat-e1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes growth?',
+            question: 'Which statement accurately explains Growth?',
             options: [
-              'Growth is a fundamental concept in SAT Math',
-              'Decay: f(x) = a · bˣ where 0 < b < 1',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'Growth rate r: b = 1 + r; Decay rate r: b = 1 - r.',
+              'f(x) = a · bˣ where b > 1.',
+              'f(x) = a · bˣ where 0 < b < 1.',
+              'a = initial value (when x = 0).'
             ],
-            correctAnswer: 0,
-            explanation: 'Growth: f(x) = a · bˣ where b > 1'
+            correctAnswer: 1,
+            explanation: 'Correct — Growth: f(x) = a · bˣ where b > 1. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Exponential Functions, which explains Key Insight?',
+            options: [
+              'Growth rate r: b = 1 + r; Decay rate r: b = 1 - r.',
+              'a = initial value (when x = 0).',
+              'f(x) = a · bˣ where 0 < b < 1.',
+              'f(x) = a · bˣ where b > 1.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Key Insight: a = initial value (when x = 0). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Decay: f(x) = a · bˣ where 0 < b < 1.
       id: 'sat-e1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for exponential growth & decay?',
+            question: 'Which statement about SAT Tip is correct?',
             options: [
-              'a = initial value (when x = 0)',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'f(x) = a · bˣ where b > 1.',
+              'a = initial value (when x = 0).',
+              'Growth rate r: b = 1 + r; Decay rate r: b = 1 - r.',
+              'f(x) = a · bˣ where 0 < b < 1.'
             ],
-            correctAnswer: 0,
-            explanation: 'a = initial value (when x = 0)'
+            correctAnswer: 2,
+            explanation: 'Correct — SAT Tip: Growth rate r: b = 1 + r; Decay rate r: b = 1 - r. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Decay: f(x) = a · bˣ where 0 < b < 1.
       id: 'sat-e1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Exponential Growth & Decay:',
-            options: ['Growth: f(x) = a · bˣ where b > 1', 'Decay: f(x) = a · bˣ where 0 < b < 1', 'Not applicable', 'None of these']
+            label: 'Growth',
+            options: ['f(x) = a · bˣ where b > 1.', 'Growth rate r: b = 1 + r; Decay rate r: b = 1 - r.', 'f(x) = a · bˣ where 0 < b < 1.', 'a = initial value (when x = 0).']
           },
           {
-            label: 'Strategy tip:',
-            options: ['a = initial value (when x = 0)', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Decay',
+            options: ['Growth rate r: b = 1 + r; Decay rate r: b = 1 - r.', 'f(x) = a · bˣ where 0 < b < 1.', 'a = initial value (when x = 0).', 'f(x) = a · bˣ where b > 1.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['a = initial value (when x = 0).', 'f(x) = a · bˣ where b > 1.', 'f(x) = a · bˣ where 0 < b < 1.', 'Growth rate r: b = 1 + r; Decay rate r: b = 1 - r.']
           }
         ],
-        correctAnswers: ['Growth: f(x) = a · bˣ where b > 1', 'a = initial value (when x = 0)'],
-        hint1: 'Think about exponential growth & decay',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'Growth: f(x) = a · bˣ where b > 1. a = initial value (when x = 0).'
+        correctAnswers: ['f(x) = a · bˣ where b > 1.', 'f(x) = a · bˣ where 0 < b < 1.', 'a = initial value (when x = 0).'],
+        hint1: 'Think about what each concept specifically describes in Exponential Functions.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Exponential Functions describes a specific idea. Growth: f(x) = a · bˣ where b > 1. Decay: f(x) = a · bˣ where 0 < b < 1. Key Insight: a = initial value (when x = 0).'
       }
     }
   ]

@@ -30,31 +30,31 @@ Predicting most stable conformations
       id: 'alkan6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of problem-solving workshop?',
-            options: [
-              'Naming alkanes and cycloalkanes',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
-            ],
-            correctAnswer: 0,
-            explanation: 'Naming alkanes and cycloalkanes'
-          },
-          {
-            question: 'In the context of problem-solving workshop, which is accurate?',
+            question: 'Which of the following correctly describes Naming alkanes and cycloalkanes?',
             options: [
               'Analyzing cyclohexane chair conformations',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Predicting most stable conformations',
+              'Naming alkanes and cycloalkanes',
+              'Drawing Newman projections'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Naming alkanes and cycloalkanes. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Problem-Solving Workshop, which explains Analyzing cyclohexane chair…?',
+            options: [
+              'Analyzing cyclohexane chair conformations',
+              'Predicting most stable conformations',
+              'Drawing Newman projections',
+              'Naming alkanes and cycloalkanes'
             ],
             correctAnswer: 0,
-            explanation: 'Analyzing cyclohexane chair conformations'
+            explanation: 'Correct — Analyzing cyclohexane chair conformations. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Predicting most stable conformations
       id: 'alkan6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Naming alkanes and cycloalkanes',
-            options: ['Naming alkanes and cycloalkanes', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Drawing Newman projections', 'Naming alkanes and cycloalkanes', 'Predicting most stable conformations', 'Analyzing cyclohexane chair conformations']
           },
           {
             label: 'Drawing Newman projections',
-            options: ['Drawing Newman projections', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Predicting most stable conformations', 'Naming alkanes and cycloalkanes', 'Drawing Newman projections', 'Analyzing cyclohexane chair conformations']
           },
           {
-            label: 'Analyzing cyclohexane chair conformations',
-            options: ['Analyzing cyclohexane chair conformations', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Analyzing cyclohexane chair…',
+            options: ['Drawing Newman projections', 'Naming alkanes and cycloalkanes', 'Predicting most stable conformations', 'Analyzing cyclohexane chair conformations']
           }
         ],
         correctAnswers: ['Naming alkanes and cycloalkanes', 'Drawing Newman projections', 'Analyzing cyclohexane chair conformations'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving Workshop.'
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Naming alkanes and cycloalkanes. Drawing Newman projections. Analyzing cyclohexane chair conformations.'
       }
     }
   ]

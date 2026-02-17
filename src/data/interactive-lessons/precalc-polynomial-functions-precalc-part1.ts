@@ -30,31 +30,31 @@ Standard form lists terms from highest to lowest degree
       id: 'polyn1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of polynomial basics?',
+            question: 'Which statement accurately explains Polynomials are expressions of the form…?',
             options: [
+              'Standard form lists terms from highest to lowest degree',
               'Polynomials are expressions of the form aₙxⁿ + aₙ₋₁xⁿ⁻¹ + ... + a₁x + a₀',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'the coefficient of the highest-degree term',
+              'highest power of x determines the polynomial\'s behavior'
             ],
-            correctAnswer: 0,
-            explanation: 'Polynomials are expressions of the form aₙxⁿ + aₙ₋₁xⁿ⁻¹ + ... + a₁x + a₀'
+            correctAnswer: 1,
+            explanation: 'Correct — Polynomials are expressions of the form aₙxⁿ + aₙ₋₁xⁿ⁻¹ + ... + a₁x + a₀. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of polynomial basics, which is accurate?',
+            question: 'Which of the following is true about Leading coefficient?',
             options: [
               'the coefficient of the highest-degree term',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Standard form lists terms from highest to lowest degree',
+              'Polynomials are expressions of the form aₙxⁿ + aₙ₋₁xⁿ⁻¹ + ... + a₁x + a₀',
+              'highest power of x determines the polynomial\'s behavior'
             ],
             correctAnswer: 0,
-            explanation: 'Leading coefficient: the coefficient of the highest-degree term'
+            explanation: 'Correct — Leading coefficient: the coefficient of the highest-degree term. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,24 @@ Standard form lists terms from highest to lowest degree
       id: 'polyn1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Polynomials are expressions of the form aₙxⁿ + aₙ₋₁xⁿ⁻¹ + ... + a₁x + a₀',
-            options: ['Polynomials are expressions of the form aₙxⁿ + aₙ₋', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
-          },
-          {
             label: 'Degree',
-            options: ['highest power of x determines the polynomial\'s beh', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['the coefficient of the highest-degree term', 'highest power of x determines the polynomial\'s behavior', 'Polynomials are expressions of the form aₙxⁿ + aₙ₋₁xⁿ⁻¹ + ... + a₁x + a₀', 'Standard form lists terms from highest to lowest degree']
           },
           {
             label: 'Leading coefficient',
-            options: ['the coefficient of the highest-degree term', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['highest power of x determines the polynomial\'s behavior', 'Standard form lists terms from highest to lowest degree', 'Polynomials are expressions of the form aₙxⁿ + aₙ₋₁xⁿ⁻¹ + ... + a₁x + a₀', 'the coefficient of the highest-degree term']
           }
         ],
-        correctAnswers: ['Polynomials are expressions of the form aₙxⁿ + aₙ₋', 'highest power of x determines the polynomial\'s beh', 'the coefficient of the highest-degree term'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Polynomial Basics.'
+        correctAnswers: ['highest power of x determines the polynomial\'s behavior', 'the coefficient of the highest-degree term'],
+        hint1: 'Think about what each concept specifically describes in Polynomial Functions.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Polynomial Functions describes a specific idea. Degree: highest power of x determines the polynomial\'s behavior. Leading coefficient: the coefficient of the highest-degree term.'
       }
     }
   ]

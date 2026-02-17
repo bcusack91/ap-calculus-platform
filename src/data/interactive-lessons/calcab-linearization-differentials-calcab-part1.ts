@@ -30,31 +30,31 @@ Approximation improves as x gets closer to a
       id: 'linea1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of linear approximation?',
+            question: 'Which of the following correctly describes Linearization?',
             options: [
-              'Linearization',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'L(x) = f(a) + f\'(a)(x - a) — the tangent line approximation',
+              'Best linear approximation of f near x = a',
+              '√(4.01) ≈ L(4.01) using f(x) = √x at a = 4',
+              'Approximation improves as x gets closer to a'
             ],
             correctAnswer: 0,
-            explanation: 'Linearization: L(x) = f(a) + f\'(a)(x - a) — the tangent line approximation'
+            explanation: 'Correct — Linearization: L(x) = f(a) + f\'(a)(x - a) — the tangent line approximation. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of linear approximation, which is accurate?',
+            question: 'In the context of Linearization Differentials, which explains Approximation improves as x gets closer…?',
             options: [
               'Approximation improves as x gets closer to a',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Best linear approximation of f near x = a',
+              'L(x) = f(a) + f\'(a)(x - a) — the tangent line approximation',
+              '√(4.01) ≈ L(4.01) using f(x) = √x at a = 4'
             ],
             correctAnswer: 0,
-            explanation: 'Approximation improves as x gets closer to a'
+            explanation: 'Correct — Approximation improves as x gets closer to a. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Approximation improves as x gets closer to a
       id: 'linea1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to linear approximation?',
+            question: 'Which statement about Example is correct?',
             options: [
               '√(4.01) ≈ L(4.01) using f(x) = √x at a = 4',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'Approximation improves as x gets closer to a',
+              'L(x) = f(a) + f\'(a)(x - a) — the tangent line approximation',
+              'Best linear approximation of f near x = a'
             ],
             correctAnswer: 0,
-            explanation: 'Example: √(4.01) ≈ L(4.01) using f(x) = √x at a = 4'
+            explanation: 'Correct — Example: √(4.01) ≈ L(4.01) using f(x) = √x at a = 4. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,24 @@ Approximation improves as x gets closer to a
       id: 'linea1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Linearization',
-            options: ['L(x) = f(a) + f\'(a)(x - a) — the tangent line appr', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Approximation improves as x gets closer to a', 'Best linear approximation of f near x = a', '√(4.01) ≈ L(4.01) using f(x) = √x at a = 4', 'L(x) = f(a) + f\'(a)(x - a) — the tangent line approximation']
           },
           {
-            label: 'Best linear approximation of f near x = a',
-            options: ['Best linear approximation of f near x = a', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
-          },
-          {
-            label: 'Approximation improves as x gets closer to a',
-            options: ['Approximation improves as x gets closer to a', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Example',
+            options: ['Best linear approximation of f near x = a', 'Approximation improves as x gets closer to a', 'L(x) = f(a) + f\'(a)(x - a) — the tangent line approximation', '√(4.01) ≈ L(4.01) using f(x) = √x at a = 4']
           }
         ],
-        correctAnswers: ['L(x) = f(a) + f\'(a)(x - a) — the tangent line appr', 'Best linear approximation of f near x = a', 'Approximation improves as x gets closer to a'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Linear Approximation.'
+        correctAnswers: ['L(x) = f(a) + f\'(a)(x - a) — the tangent line approximation', '√(4.01) ≈ L(4.01) using f(x) = √x at a = 4'],
+        hint1: 'Think about what each concept specifically describes in Linearization Differentials.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Linearization Differentials describes a specific idea. Linearization: L(x) = f(a) + f\'(a)(x - a) — the tangent line approximation. Example: √(4.01) ≈ L(4.01) using f(x) = √x at a = 4.'
       }
     }
   ]

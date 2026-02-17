@@ -19,31 +19,31 @@ export const bioSpeciationPart5Data = {
       id: 'spec5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes background extinction?',
+            question: 'What does "Background extinction" refer to in biology?',
             options: [
-              'normal rate of species loss',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              '>75% species lost (Big Five events)',
+              'Phylogenetic trees show evolutionary relationships',
+              'shared derived characters define groups',
+              'normal rate of species loss'
             ],
-            correctAnswer: 0,
-            explanation: 'Background extinction: normal rate of species loss'
+            correctAnswer: 3,
+            explanation: 'Correct — Background extinction: normal rate of species loss. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of extinction & phylogenetics, which statement is accurate?',
+            question: 'Select the statement that correctly describes Phylogenetic trees show evolutionary…:',
             options: [
-              'Phylogenetic trees show evolutionary relationships',
-              'ssol seiceps fo etar lamron :noitcnitxe dnuorgkcaB',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'normal rate of species loss',
+              '>75% species lost (Big Five events)',
+              'shared derived characters define groups',
+              'Phylogenetic trees show evolutionary relationships'
             ],
-            correctAnswer: 0,
-            explanation: 'Phylogenetic trees show evolutionary relationships'
+            correctAnswer: 3,
+            explanation: 'Correct — Phylogenetic trees show evolutionary relationships. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioSpeciationPart5Data = {
       id: 'spec5-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to extinction & phylogenetics?',
+            question: 'Which of these accurately represents Cladistics?',
             options: [
-              'Cladistics: shared derived characters define groups',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Phylogenetic trees show evolutionary relationships',
+              'shared derived characters define groups',
+              'normal rate of species loss',
+              '>75% species lost (Big Five events)'
             ],
-            correctAnswer: 0,
-            explanation: 'Cladistics: shared derived characters define groups'
+            correctAnswer: 1,
+            explanation: 'Correct — Cladistics: shared derived characters define groups. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioSpeciationPart5Data = {
       id: 'spec5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Background extinction is important in extinction & phylogenetics because',
-            options: ['normal rate of species loss', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Background extinction',
+            options: ['Phylogenetic trees show evolutionary relationships', 'shared derived characters define groups', '>75% species lost (Big Five events)', 'normal rate of species loss']
           },
           {
-            label: 'Mass extinction is important in extinction & phylogenetics because',
-            options: ['>75% species lost (Big Five events)', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Mass extinction',
+            options: ['Phylogenetic trees show evolutionary relationships', 'normal rate of species loss', 'shared derived characters define groups', '>75% species lost (Big Five events)']
           },
           {
-            label: 'Phylogenetic trees show evolutionary relationships is important in extinction & phylogenetics because',
-            options: ['Phylogenetic trees show evolutionary relationships', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Cladistics',
+            options: ['>75% species lost (Big Five events)', 'normal rate of species loss', 'shared derived characters define groups', 'Phylogenetic trees show evolutionary relationships']
           }
         ],
-        correctAnswers: ['normal rate of species loss', '>75% species lost (Big Five events)', 'Phylogenetic trees show evolutionary relationships'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Extinction & Phylogenetics.'
+        correctAnswers: ['normal rate of species loss', '>75% species lost (Big Five events)', 'shared derived characters define groups'],
+        hint1: 'Think about what each concept specifically describes in Extinction & Phylogenetics.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Extinction & Phylogenetics describes a specific idea. Background extinction: normal rate of species loss. Mass extinction: >75% species lost (Big Five events). Cladistics: shared derived characters define groups.'
       }
     }
   ]

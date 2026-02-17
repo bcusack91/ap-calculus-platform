@@ -30,31 +30,31 @@ Used to determine extent of conjugation
       id: 'conju5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of uv-vis spectroscopy?',
-            options: [
-              'UV-Vis spectroscopy',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
-            ],
-            correctAnswer: 0,
-            explanation: 'UV-Vis spectroscopy: measures π → π* transitions'
-          },
-          {
-            question: 'In the context of uv-vis spectroscopy, which is accurate?',
+            question: 'Which statement accurately explains UV-Vis spectroscopy?',
             options: [
               'Colored compounds absorb visible light',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'measures π → π* transitions',
+              'λmax increases with more conjugation',
+              'Used to determine extent of conjugation'
             ],
-            correctAnswer: 0,
-            explanation: 'Colored compounds absorb visible light'
+            correctAnswer: 1,
+            explanation: 'Correct — UV-Vis spectroscopy: measures π → π* transitions. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Colored compounds absorb visible light?',
+            options: [
+              'measures π → π* transitions',
+              'Used to determine extent of conjugation',
+              'λmax increases with more conjugation',
+              'Colored compounds absorb visible light'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Colored compounds absorb visible light. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Used to determine extent of conjugation
       id: 'conju5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'UV-Vis spectroscopy',
-            options: ['measures π → π* transitions', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['measures π → π* transitions', 'λmax increases with more conjugation', 'Colored compounds absorb visible light', 'Used to determine extent of conjugation']
           },
           {
             label: 'λmax increases with more conjugation',
-            options: ['λmax increases with more conjugation', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Used to determine extent of conjugation', 'Colored compounds absorb visible light', 'λmax increases with more conjugation', 'measures π → π* transitions']
           },
           {
             label: 'Colored compounds absorb visible light',
-            options: ['Colored compounds absorb visible light', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['λmax increases with more conjugation', 'Used to determine extent of conjugation', 'measures π → π* transitions', 'Colored compounds absorb visible light']
           }
         ],
         correctAnswers: ['measures π → π* transitions', 'λmax increases with more conjugation', 'Colored compounds absorb visible light'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding UV-Vis Spectroscopy.'
+        hint1: 'Think about what each concept specifically describes in UV-Vis Spectroscopy.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in UV-Vis Spectroscopy describes a specific idea. UV-Vis spectroscopy: measures π → π* transitions. λmax increases with more conjugation. Colored compounds absorb visible light.'
       }
     }
   ]

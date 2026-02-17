@@ -30,31 +30,31 @@ d/dx[ln(g(x))] = g'(x)/g(x) (chain rule)
       id: 'expon1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of derivatives of eˣ and ln(x)?',
+            question: 'What does "d/dx[eˣ] = eˣ — the exponential…" refer to in calculus?',
             options: [
               'd/dx[eˣ] = eˣ — the exponential function is its own derivative',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'd/dx[e^(g(x))] = e^(g(x)) · g\'(x) (chain rule)',
+              'd/dx[ln(x)] = 1/x for x > 0',
+              'd/dx[ln(g(x))] = g\'(x)/g(x) (chain rule)'
             ],
             correctAnswer: 0,
-            explanation: 'd/dx[eˣ] = eˣ — the exponential function is its own derivative'
+            explanation: 'Correct — d/dx[eˣ] = eˣ — the exponential function is its own derivative. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of derivatives of eˣ and ln(x), which is accurate?',
+            question: 'Which of the following is true about d/dx[ln(x)] = 1/x for x > 0?',
             options: [
-              'd/dx[ln(x)] = 1/x for x > 0',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'd/dx[e^(g(x))] = e^(g(x)) · g\'(x) (chain rule)',
+              'd/dx[ln(g(x))] = g\'(x)/g(x) (chain rule)',
+              'd/dx[eˣ] = eˣ — the exponential function is its own derivative',
+              'd/dx[ln(x)] = 1/x for x > 0'
             ],
-            correctAnswer: 0,
-            explanation: 'd/dx[ln(x)] = 1/x for x > 0'
+            correctAnswer: 3,
+            explanation: 'Correct — d/dx[ln(x)] = 1/x for x > 0. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ d/dx[ln(g(x))] = g'(x)/g(x) (chain rule)
       id: 'expon1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to derivatives of eˣ and ln(x)?',
+            question: 'Which statement about d/dx[ln(g(x))] = g\'(x)/g(x) (chain rule) is correct?',
             options: [
-              'd/dx[ln(g(x))] = g\'(x)/g(x) (chain rule)',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'd/dx[eˣ] = eˣ — the exponential function is its own derivative',
+              'd/dx[ln(x)] = 1/x for x > 0',
+              'd/dx[e^(g(x))] = e^(g(x)) · g\'(x) (chain rule)',
+              'd/dx[ln(g(x))] = g\'(x)/g(x) (chain rule)'
             ],
-            correctAnswer: 0,
-            explanation: 'd/dx[ln(g(x))] = g\'(x)/g(x) (chain rule)'
+            correctAnswer: 3,
+            explanation: 'Correct — d/dx[ln(g(x))] = g\'(x)/g(x) (chain rule). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ d/dx[ln(g(x))] = g'(x)/g(x) (chain rule)
       id: 'expon1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'd/dx[eˣ] = eˣ — the exponential function is its own derivative',
-            options: ['d/dx[eˣ] = eˣ — the exponential function is its ow', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'd/dx[eˣ] = eˣ — the exponential…',
+            options: ['d/dx[ln(x)] = 1/x for x > 0', 'd/dx[e^(g(x))] = e^(g(x)) · g\'(x) (chain rule)', 'd/dx[eˣ] = eˣ — the exponential function is its own derivative', 'd/dx[ln(g(x))] = g\'(x)/g(x) (chain rule)']
           },
           {
-            label: 'd/dx[e^(g(x))] = e^(g(x)) · g\'(x) (chain rule)',
-            options: ['d/dx[e^(g(x))] = e^(g(x)) · g\'(x) (chain rule)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'd/dx[e^(g(x))] = e^(g(x)) · g\'(x)…',
+            options: ['d/dx[ln(g(x))] = g\'(x)/g(x) (chain rule)', 'd/dx[eˣ] = eˣ — the exponential function is its own derivative', 'd/dx[e^(g(x))] = e^(g(x)) · g\'(x) (chain rule)', 'd/dx[ln(x)] = 1/x for x > 0']
           },
           {
             label: 'd/dx[ln(x)] = 1/x for x > 0',
-            options: ['d/dx[ln(x)] = 1/x for x > 0', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['d/dx[ln(x)] = 1/x for x > 0', 'd/dx[ln(g(x))] = g\'(x)/g(x) (chain rule)', 'd/dx[eˣ] = eˣ — the exponential function is its own derivative', 'd/dx[e^(g(x))] = e^(g(x)) · g\'(x) (chain rule)']
           }
         ],
-        correctAnswers: ['d/dx[eˣ] = eˣ — the exponential function is its ow', 'd/dx[e^(g(x))] = e^(g(x)) · g\'(x) (chain rule)', 'd/dx[ln(x)] = 1/x for x > 0'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Derivatives of eˣ and ln(x).'
+        correctAnswers: ['d/dx[eˣ] = eˣ — the exponential function is its own derivative', 'd/dx[e^(g(x))] = e^(g(x)) · g\'(x) (chain rule)', 'd/dx[ln(x)] = 1/x for x > 0'],
+        hint1: 'Think about what each concept specifically describes in Exponential Models.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Exponential Models describes a specific idea. d/dx[eˣ] = eˣ — the exponential function is its own derivative. d/dx[e^(g(x))] = e^(g(x)) · g\'(x) (chain rule). d/dx[ln(x)] = 1/x for x > 0.'
       }
     }
   ]

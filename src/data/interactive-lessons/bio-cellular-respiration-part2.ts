@@ -19,31 +19,31 @@ export const bioCellRespirationPart2Data = {
       id: 'cell2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes pyruvate → acetyl-coa + co₂ + nadh (in mitochondrial matrix)?',
+            question: 'Which statement accurately explains Pyruvate → acetyl-CoA + CO₂ + NADH (in…?',
             options: [
-              'Pyruvate → acetyl-CoA + CO₂ + NADH (in mitochondrial matrix)',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'cycle turns twice',
+              'acetyl-CoA → 2CO₂ + 3NADH + FADH₂ + ATP',
+              'Occurs in mitochondrial matrix',
+              'Pyruvate → acetyl-CoA + CO₂ + NADH (in mitochondrial matrix)'
             ],
-            correctAnswer: 0,
-            explanation: 'Pyruvate → acetyl-CoA + CO₂ + NADH (in mitochondrial matrix)'
+            correctAnswer: 3,
+            explanation: 'Correct — Pyruvate → acetyl-CoA + CO₂ + NADH (in mitochondrial matrix). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of pyruvate oxidation & krebs cycle, which statement is accurate?',
+            question: 'Which of the following is true about Per glucose?',
             options: [
-              'Per glucose: cycle turns twice',
-              ')xirtam lairdnohcotim ni( HDAN + ₂OC + AoC-lyteca → etavuryP',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Occurs in mitochondrial matrix',
+              'Pyruvate → acetyl-CoA + CO₂ + NADH (in mitochondrial matrix)',
+              'cycle turns twice',
+              'acetyl-CoA → 2CO₂ + 3NADH + FADH₂ + ATP'
             ],
-            correctAnswer: 0,
-            explanation: 'Per glucose: cycle turns twice'
+            correctAnswer: 2,
+            explanation: 'Correct — Per glucose: cycle turns twice. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioCellRespirationPart2Data = {
       id: 'cell2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to pyruvate oxidation & krebs cycle?',
+            question: 'Regarding Pyruvate Oxidation & Krebs Cycle, which correctly describes Occurs in mitochondrial matrix?',
             options: [
               'Occurs in mitochondrial matrix',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'cycle turns twice',
+              'acetyl-CoA → 2CO₂ + 3NADH + FADH₂ + ATP',
+              'Pyruvate → acetyl-CoA + CO₂ + NADH (in mitochondrial matrix)'
             ],
             correctAnswer: 0,
-            explanation: 'Occurs in mitochondrial matrix'
+            explanation: 'Correct — Occurs in mitochondrial matrix. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,24 @@ export const bioCellRespirationPart2Data = {
       id: 'cell2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Pyruvate → acetyl-CoA + CO₂ + NADH (in mitochondrial matrix) is important in pyruvate oxidation & krebs cycle because',
-            options: ['Pyruvate → acetyl-CoA + CO₂ + NADH (in mitochondri', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Krebs cycle',
+            options: ['Pyruvate → acetyl-CoA + CO₂ + NADH (in mitochondrial matrix)', 'cycle turns twice', 'Occurs in mitochondrial matrix', 'acetyl-CoA → 2CO₂ + 3NADH + FADH₂ + ATP']
           },
           {
-            label: 'Krebs cycle is important in pyruvate oxidation & krebs cycle because',
-            options: ['acetyl-CoA → 2CO₂ + 3NADH + FADH₂ + ATP', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
-          },
-          {
-            label: 'Per glucose is important in pyruvate oxidation & krebs cycle because',
-            options: ['cycle turns twice', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Per glucose',
+            options: ['Pyruvate → acetyl-CoA + CO₂ + NADH (in mitochondrial matrix)', 'Occurs in mitochondrial matrix', 'acetyl-CoA → 2CO₂ + 3NADH + FADH₂ + ATP', 'cycle turns twice']
           }
         ],
-        correctAnswers: ['Pyruvate → acetyl-CoA + CO₂ + NADH (in mitochondri', 'acetyl-CoA → 2CO₂ + 3NADH + FADH₂ + ATP', 'cycle turns twice'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Pyruvate Oxidation & Krebs Cycle.'
+        correctAnswers: ['acetyl-CoA → 2CO₂ + 3NADH + FADH₂ + ATP', 'cycle turns twice'],
+        hint1: 'Think about what each concept specifically describes in Pyruvate Oxidation & Krebs Cycle.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Pyruvate Oxidation & Krebs Cycle describes a specific idea. Krebs cycle: acetyl-CoA → 2CO₂ + 3NADH + FADH₂ + ATP. Per glucose: cycle turns twice.'
       }
     }
   ]

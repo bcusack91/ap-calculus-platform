@@ -71,23 +71,28 @@ Strength depends on the relevance of the similarities between the two cases.
       id: 'mcat-5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Analogical Reasoning:',
-            options: ['Analogical reasoning: situation A is like situation B, so wh', 'Strength depends on the relevance of the similarities betwee', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Analogical reasoning',
+            options: ['Weak analogies are a common MCAT trap: superficial similarity, deep differences.', 'Strength depends on the relevance of the similarities between the two cases.', 'Identify the key similarity the analogy relies on — then assess if it holds.', 'situation A is like situation B, so what is true of A should be true of B.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Identify the key similarity the analogy relies on — then ass', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Key Insight',
+            options: ['Identify the key similarity the analogy relies on — then assess if it holds.', 'Strength depends on the relevance of the similarities between the two cases.', 'situation A is like situation B, so what is true of A should be true of B.', 'Weak analogies are a common MCAT trap: superficial similarity, deep differences.']
+          },
+          {
+            label: 'MCAT Tip',
+            options: ['Weak analogies are a common MCAT trap: superficial similarity, deep differences.', 'Strength depends on the relevance of the similarities between the two cases.', 'Identify the key similarity the analogy relies on — then assess if it holds.', 'situation A is like situation B, so what is true of A should be true of B.']
           }
         ],
-        correctAnswers: ['Analogical reasoning: situation A is like situation B, so wh', 'Identify the key similarity the analogy relies on — then ass'],
-        hint1: 'Think about analogical reasoning',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Analogical reasoning: situation A is like situation B, so what is true of A should be true of B. Identify the key similarity the analogy relies on — then assess if it holds.'
+        correctAnswers: ['situation A is like situation B, so what is true of A should be true of B.', 'Identify the key similarity the analogy relies on — then assess if it holds.', 'Weak analogies are a common MCAT trap: superficial similarity, deep differences.'],
+        hint1: 'Think about what each concept specifically describes in Analogical Reasoning.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Analogical Reasoning describes a specific idea. Analogical reasoning: situation A is like situation B, so what is true of A should be true of B. Key Insight: Identify the key similarity the analogy relies on — then assess if it holds. MCAT Tip: Weak analogies are a common MCAT trap: superficial similarity, deep differences.'
       }
     }
   ]

@@ -30,31 +30,31 @@ proj_v(u) = (u⃗ · v⃗ / |v⃗|²) v⃗
       id: 'vecto7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of review & applications?',
-            options: [
-              'Resultant force',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'Resultant force: vector sum of all forces acting on an object'
-          },
-          {
-            question: 'In the context of review & applications, which is accurate?',
+            question: 'Which statement accurately explains Resultant force?',
             options: [
               'W = F⃗ · d⃗ = |F||d|cos θ',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'proj_v(u) = (u⃗ · v⃗ / |v⃗|²) v⃗',
+              'vector sum of all forces acting on an object',
+              'velocity vectors for wind and heading'
             ],
-            correctAnswer: 0,
-            explanation: 'Work: W = F⃗ · d⃗ = |F||d|cos θ'
+            correctAnswer: 2,
+            explanation: 'Correct — Resultant force: vector sum of all forces acting on an object. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Review & Applications, which explains Work?',
+            options: [
+              'vector sum of all forces acting on an object',
+              'velocity vectors for wind and heading',
+              'W = F⃗ · d⃗ = |F||d|cos θ',
+              'proj_v(u) = (u⃗ · v⃗ / |v⃗|²) v⃗'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Work: W = F⃗ · d⃗ = |F||d|cos θ. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ proj_v(u) = (u⃗ · v⃗ / |v⃗|²) v⃗
       id: 'vecto7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Resultant force',
-            options: ['vector sum of all forces acting on an object', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['vector sum of all forces acting on an object', 'proj_v(u) = (u⃗ · v⃗ / |v⃗|²) v⃗', 'W = F⃗ · d⃗ = |F||d|cos θ', 'velocity vectors for wind and heading']
           },
           {
             label: 'Navigation',
-            options: ['velocity vectors for wind and heading', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['velocity vectors for wind and heading', 'proj_v(u) = (u⃗ · v⃗ / |v⃗|²) v⃗', 'vector sum of all forces acting on an object', 'W = F⃗ · d⃗ = |F||d|cos θ']
           },
           {
             label: 'Work',
-            options: ['W = F⃗ · d⃗ = |F||d|cos θ', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['vector sum of all forces acting on an object', 'velocity vectors for wind and heading', 'proj_v(u) = (u⃗ · v⃗ / |v⃗|²) v⃗', 'W = F⃗ · d⃗ = |F||d|cos θ']
           }
         ],
         correctAnswers: ['vector sum of all forces acting on an object', 'velocity vectors for wind and heading', 'W = F⃗ · d⃗ = |F||d|cos θ'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Review & Applications.'
+        hint1: 'Think about what each concept specifically describes in Review & Applications.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Review & Applications describes a specific idea. Resultant force: vector sum of all forces acting on an object. Navigation: velocity vectors for wind and heading. Work: W = F⃗ · d⃗ = |F||d|cos θ.'
       }
     }
   ]

@@ -18,20 +18,31 @@ A good experiment changes only one variable at a time.
       id: 'act-s2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes identify the iv, dv, and constants in each experiment?',
+            question: 'Which of the following correctly describes Identify the IV, DV, and constants in…?',
             options: [
-              'Identify the IV, DV, and constants in each experiment is a key concept for ACT Science',
-              'A good experiment changes only one variable at a time',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'Identify the IV, DV, and constants in each experiment.',
+              'Replication: repeating the experiment to verify results.',
+              'Sample size matters: larger samples give more reliable results.',
+              'A good experiment changes only one variable at a time.'
             ],
             correctAnswer: 0,
-            explanation: 'Identify the IV, DV, and constants in each experiment'
+            explanation: 'Correct — Identify the IV, DV, and constants in each experiment. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Variables & Controls, which explains Key Insight?',
+            options: [
+              'Sample size matters: larger samples give more reliable results.',
+              'Identify the IV, DV, and constants in each experiment.',
+              'A good experiment changes only one variable at a time.',
+              'Replication: repeating the experiment to verify results.'
+            ],
+            correctAnswer: 0,
+            explanation: 'Correct — Key Insight: Sample size matters: larger samples give more reliable results. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ A good experiment changes only one variable at a time.
       id: 'act-s2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for variables & controls?',
+            question: 'Regarding Variables & Controls, which correctly describes ACT Tip?',
             options: [
-              'Sample size matters: larger samples give more reliable results',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Sample size matters: larger samples give more reliable results.',
+              'Identify the IV, DV, and constants in each experiment.',
+              'A good experiment changes only one variable at a time.',
+              'Replication: repeating the experiment to verify results.'
             ],
-            correctAnswer: 0,
-            explanation: 'Sample size matters: larger samples give more reliable results'
+            correctAnswer: 3,
+            explanation: 'Correct — ACT Tip: Replication: repeating the experiment to verify results. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ A good experiment changes only one variable at a time.
       id: 'act-s2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Variables & Controls:',
-            options: ['Identify the IV, DV, and constants in each experim', 'A good experiment changes only one variable at a t', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['A good experiment changes only one variable at a time.', 'Replication: repeating the experiment to verify results.', 'Identify the IV, DV, and constants in each experiment.', 'Sample size matters: larger samples give more reliable results.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Sample size matters: larger samples give more reli', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'ACT Tip',
+            options: ['Sample size matters: larger samples give more reliable results.', 'A good experiment changes only one variable at a time.', 'Identify the IV, DV, and constants in each experiment.', 'Replication: repeating the experiment to verify results.']
           }
         ],
-        correctAnswers: ['Identify the IV, DV, and constants in each experim', 'Sample size matters: larger samples give more reli'],
-        hint1: 'Think about variables & controls',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Identify the IV, DV, and constants in each experiment. Sample size matters: larger samples give more reliable results.'
+        correctAnswers: ['Sample size matters: larger samples give more reliable results.', 'Replication: repeating the experiment to verify results.'],
+        hint1: 'Think about what each concept specifically describes in Variables & Controls.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Variables & Controls describes a specific idea. Key Insight: Sample size matters: larger samples give more reliable results. ACT Tip: Replication: repeating the experiment to verify results.'
       }
     }
   ]

@@ -18,20 +18,31 @@ If you understand the concept, you can predict outcomes in novel scenarios.
       id: 'act-s4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes apply scientific principles to new situations or data?',
+            question: 'Which of the following correctly describes Apply scientific principles to new…?',
             options: [
-              'Apply scientific principles to new situations or data is a key concept for ACT Science',
-              'If you understand the concept, you can predict outcomes in novel scenarios',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'If you understand the concept, you can predict outcomes in novel scenarios.',
+              'Connect findings to real-world applications.',
+              'Analogical reasoning: this experiment is like that situation because....',
+              'Apply scientific principles to new situations or data.'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Apply scientific principles to new situations or data. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Key Insight?',
+            options: [
+              'Connect findings to real-world applications.',
+              'Analogical reasoning: this experiment is like that situation because....',
+              'Apply scientific principles to new situations or data.',
+              'If you understand the concept, you can predict outcomes in novel scenarios.'
             ],
             correctAnswer: 0,
-            explanation: 'Apply scientific principles to new situations or data'
+            explanation: 'Correct — Key Insight: Connect findings to real-world applications. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ If you understand the concept, you can predict outcomes in novel scenarios.
       id: 'act-s4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for applying concepts?',
+            question: 'Regarding Applying Concepts, which correctly describes ACT Tip?',
             options: [
-              'Connect findings to real-world applications',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Analogical reasoning: this experiment is like that situation because....',
+              'If you understand the concept, you can predict outcomes in novel scenarios.',
+              'Apply scientific principles to new situations or data.',
+              'Connect findings to real-world applications.'
             ],
             correctAnswer: 0,
-            explanation: 'Connect findings to real-world applications'
+            explanation: 'Correct — ACT Tip: Analogical reasoning: this experiment is like that situation because.... Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ If you understand the concept, you can predict outcomes in novel scenarios.
       id: 'act-s4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Applying Concepts:',
-            options: ['Apply scientific principles to new situations or d', 'If you understand the concept, you can predict out', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['Connect findings to real-world applications.', 'If you understand the concept, you can predict outcomes in novel scenarios.', 'Analogical reasoning: this experiment is like that situation because....', 'Apply scientific principles to new situations or data.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Connect findings to real-world applications', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'ACT Tip',
+            options: ['If you understand the concept, you can predict outcomes in novel scenarios.', 'Analogical reasoning: this experiment is like that situation because....', 'Apply scientific principles to new situations or data.', 'Connect findings to real-world applications.']
           }
         ],
-        correctAnswers: ['Apply scientific principles to new situations or d', 'Connect findings to real-world applications'],
-        hint1: 'Think about applying concepts',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Apply scientific principles to new situations or data. Connect findings to real-world applications.'
+        correctAnswers: ['Connect findings to real-world applications.', 'Analogical reasoning: this experiment is like that situation because....'],
+        hint1: 'Think about what each concept specifically describes in Applying Concepts.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Applying Concepts describes a specific idea. Key Insight: Connect findings to real-world applications. ACT Tip: Analogical reasoning: this experiment is like that situation because....'
       }
     }
   ]

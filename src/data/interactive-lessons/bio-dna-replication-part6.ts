@@ -19,31 +19,31 @@ export const bioDnaReplicationPart6Data = {
       id: 'dna-6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes identifying replication enzymes and their functions?',
-            options: [
-              'Identifying replication enzymes and their functions',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
-            ],
-            correctAnswer: 0,
-            explanation: 'Identifying replication enzymes and their functions'
-          },
-          {
-            question: 'In the context of problem-solving, which statement is accurate?',
+            question: 'Which of the following correctly describes Identifying replication enzymes and…?',
             options: [
               'Diagramming the replication fork',
-              'snoitcnuf rieht dna semyzne noitacilper gniyfitnedI',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Predicting effects of enzyme mutations',
+              'Connecting replication errors to mutations',
+              'Identifying replication enzymes and their functions'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Identifying replication enzymes and their functions. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Diagramming the replication fork?',
+            options: [
+              'Diagramming the replication fork',
+              'Predicting effects of enzyme mutations',
+              'Connecting replication errors to mutations',
+              'Identifying replication enzymes and their functions'
             ],
             correctAnswer: 0,
-            explanation: 'Diagramming the replication fork'
+            explanation: 'Correct — Diagramming the replication fork. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioDnaReplicationPart6Data = {
       id: 'dna-6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to problem-solving?',
+            question: 'Regarding DNA Replication: Problem-Solving Workshop, which correctly describes Connecting replication errors to…?',
             options: [
-              'Connecting replication errors to mutations',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Identifying replication enzymes and their functions',
+              'Predicting effects of enzyme mutations',
+              'Diagramming the replication fork',
+              'Connecting replication errors to mutations'
             ],
-            correctAnswer: 0,
-            explanation: 'Connecting replication errors to mutations'
+            correctAnswer: 3,
+            explanation: 'Correct — Connecting replication errors to mutations. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioDnaReplicationPart6Data = {
       id: 'dna-6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Identifying replication enzymes and their functions is important in problem-solving because',
-            options: ['Identifying replication enzymes and their function', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Identifying replication enzymes and…',
+            options: ['Connecting replication errors to mutations', 'Identifying replication enzymes and their functions', 'Predicting effects of enzyme mutations', 'Diagramming the replication fork']
           },
           {
-            label: 'Predicting effects of enzyme mutations is important in problem-solving because',
-            options: ['Predicting effects of enzyme mutations', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Predicting effects of enzyme mutations',
+            options: ['Connecting replication errors to mutations', 'Predicting effects of enzyme mutations', 'Identifying replication enzymes and their functions', 'Diagramming the replication fork']
           },
           {
-            label: 'Diagramming the replication fork is important in problem-solving because',
-            options: ['Diagramming the replication fork', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Diagramming the replication fork',
+            options: ['Connecting replication errors to mutations', 'Diagramming the replication fork', 'Predicting effects of enzyme mutations', 'Identifying replication enzymes and their functions']
           }
         ],
-        correctAnswers: ['Identifying replication enzymes and their function', 'Predicting effects of enzyme mutations', 'Diagramming the replication fork'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving.'
+        correctAnswers: ['Identifying replication enzymes and their functions', 'Predicting effects of enzyme mutations', 'Diagramming the replication fork'],
+        hint1: 'Think about what each concept specifically describes in DNA Replication: Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in DNA Replication: Problem-Solving Workshop describes a specific idea. Identifying replication enzymes and their functions. Predicting effects of enzyme mutations. Diagramming the replication fork.'
       }
     }
   ]

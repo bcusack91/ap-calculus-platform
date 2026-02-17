@@ -30,31 +30,31 @@ Peroxides reverse the selectivity via radical mechanism
       id: 'alken3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of markovnikov & anti-markovnikov?',
+            question: 'Which statement accurately explains Markovnikov\'s rule?',
             options: [
-              'Markovnikov\'s rule',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'Peroxides reverse the selectivity via radical mechanism',
+              'Carbocation stability determines regiochemistry',
+              'H adds to carbon with more H\'s',
+              'HBr/peroxides (radical addition)'
             ],
-            correctAnswer: 0,
-            explanation: 'Markovnikov\'s rule: H adds to carbon with more H\'s'
+            correctAnswer: 2,
+            explanation: 'Correct — Markovnikov\'s rule: H adds to carbon with more H\'s. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of markovnikov & anti-markovnikov, which is accurate?',
+            question: 'In the context of Markovnikov & Anti-Markovnikov, which explains Anti-Markovnikov?',
             options: [
               'HBr/peroxides (radical addition)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Carbocation stability determines regiochemistry',
+              'Peroxides reverse the selectivity via radical mechanism',
+              'H adds to carbon with more H\'s'
             ],
             correctAnswer: 0,
-            explanation: 'Anti-Markovnikov: HBr/peroxides (radical addition)'
+            explanation: 'Correct — Anti-Markovnikov: HBr/peroxides (radical addition). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,24 @@ Peroxides reverse the selectivity via radical mechanism
       id: 'alken3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Markovnikov\'s rule',
-            options: ['H adds to carbon with more H\'s', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
-          },
-          {
-            label: 'Carbocation stability determines regiochemistry',
-            options: ['Carbocation stability determines regiochemistry', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['HBr/peroxides (radical addition)', 'Carbocation stability determines regiochemistry', 'Peroxides reverse the selectivity via radical mechanism', 'H adds to carbon with more H\'s']
           },
           {
             label: 'Anti-Markovnikov',
-            options: ['HBr/peroxides (radical addition)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['HBr/peroxides (radical addition)', 'Peroxides reverse the selectivity via radical mechanism', 'Carbocation stability determines regiochemistry', 'H adds to carbon with more H\'s']
           }
         ],
-        correctAnswers: ['H adds to carbon with more H\'s', 'Carbocation stability determines regiochemistry', 'HBr/peroxides (radical addition)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Markovnikov & Anti-Markovnikov.'
+        correctAnswers: ['H adds to carbon with more H\'s', 'HBr/peroxides (radical addition)'],
+        hint1: 'Think about what each concept specifically describes in Markovnikov & Anti-Markovnikov.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Markovnikov & Anti-Markovnikov describes a specific idea. Markovnikov\'s rule: H adds to carbon with more H\'s. Anti-Markovnikov: HBr/peroxides (radical addition).'
       }
     }
   ]

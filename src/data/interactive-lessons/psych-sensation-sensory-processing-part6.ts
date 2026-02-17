@@ -30,31 +30,31 @@ Connecting sensation disorders to mechanisms
       id: 'sensa6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of problem-solving workshop?',
+            question: 'Which statement accurately explains Applying Weber\'s Law to problems?',
             options: [
+              'Identifying sensory structures',
               'Applying Weber\'s Law to problems',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'Connecting sensation disorders to mechanisms',
+              'Analyzing signal detection scenarios'
             ],
-            correctAnswer: 0,
-            explanation: 'Applying Weber\'s Law to problems'
+            correctAnswer: 1,
+            explanation: 'Correct — Applying Weber\'s Law to problems. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of problem-solving workshop, which is accurate?',
+            question: 'Which of the following is true about Analyzing signal detection scenarios?',
             options: [
+              'Identifying sensory structures',
               'Analyzing signal detection scenarios',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Applying Weber\'s Law to problems',
+              'Connecting sensation disorders to mechanisms'
             ],
-            correctAnswer: 0,
-            explanation: 'Analyzing signal detection scenarios'
+            correctAnswer: 1,
+            explanation: 'Correct — Analyzing signal detection scenarios. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Connecting sensation disorders to mechanisms
       id: 'sensa6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Applying Weber\'s Law to problems',
-            options: ['Applying Weber\'s Law to problems', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Applying Weber\'s Law to problems', 'Identifying sensory structures', 'Analyzing signal detection scenarios', 'Connecting sensation disorders to mechanisms']
           },
           {
             label: 'Identifying sensory structures',
-            options: ['Identifying sensory structures', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Analyzing signal detection scenarios', 'Applying Weber\'s Law to problems', 'Identifying sensory structures', 'Connecting sensation disorders to mechanisms']
           },
           {
             label: 'Analyzing signal detection scenarios',
-            options: ['Analyzing signal detection scenarios', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Applying Weber\'s Law to problems', 'Identifying sensory structures', 'Connecting sensation disorders to mechanisms', 'Analyzing signal detection scenarios']
           }
         ],
         correctAnswers: ['Applying Weber\'s Law to problems', 'Identifying sensory structures', 'Analyzing signal detection scenarios'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving Workshop.'
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Applying Weber\'s Law to problems. Identifying sensory structures. Analyzing signal detection scenarios.'
       }
     }
   ]

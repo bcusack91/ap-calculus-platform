@@ -18,20 +18,31 @@ Check the first and last paragraphs — they often state or reinforce the main i
       id: 'act-r1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes main idea = the central point or argument of the passage?',
+            question: 'Which of the following correctly describes Main idea = the central point or…?',
             options: [
-              'Main idea = the central point or argument of the passage is a key concept for ACT English/Reading',
-              'Check the first and last paragraphs — they often state or reinforce the main idea',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'Every paragraph should relate back to the main idea.',
+              'Check the first and last paragraphs — they often state or reinforce the main idea.',
+              'Eliminate answers that are too specific (a detail) or too broad (beyond the passage).',
+              'Main idea = the central point or argument of the passage.'
             ],
-            correctAnswer: 0,
-            explanation: 'Main idea = the central point or argument of the passage'
+            correctAnswer: 3,
+            explanation: 'Correct — Main idea = the central point or argument of the passage. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              'Check the first and last paragraphs — they often state or reinforce the main idea.',
+              'Main idea = the central point or argument of the passage.',
+              'Every paragraph should relate back to the main idea.',
+              'Eliminate answers that are too specific (a detail) or too broad (beyond the passage).'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Key Insight: Eliminate answers that are too specific (a detail) or too broad (beyond the passage). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Check the first and last paragraphs — they often state or reinforce the main i
       id: 'act-r1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for finding the main idea?',
+            question: 'Which statement about ACT Tip is correct?',
             options: [
-              'Eliminate answers that are too specific (a detail) or too broad (beyond the passage)',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Main idea = the central point or argument of the passage.',
+              'Check the first and last paragraphs — they often state or reinforce the main idea.',
+              'Every paragraph should relate back to the main idea.',
+              'Eliminate answers that are too specific (a detail) or too broad (beyond the passage).'
             ],
-            correctAnswer: 0,
-            explanation: 'Eliminate answers that are too specific (a detail) or too broad (beyond the passage)'
+            correctAnswer: 2,
+            explanation: 'Correct — ACT Tip: Every paragraph should relate back to the main idea. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ Check the first and last paragraphs — they often state or reinforce the main i
       id: 'act-r1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Finding the Main Idea:',
-            options: ['Main idea = the central point or argument of the p', 'Check the first and last paragraphs — they often s', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['Eliminate answers that are too specific (a detail) or too broad (beyond the passage).', 'Every paragraph should relate back to the main idea.', 'Main idea = the central point or argument of the passage.', 'Check the first and last paragraphs — they often state or reinforce the main idea.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Eliminate answers that are too specific (a detail)', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'ACT Tip',
+            options: ['Every paragraph should relate back to the main idea.', 'Eliminate answers that are too specific (a detail) or too broad (beyond the passage).', 'Check the first and last paragraphs — they often state or reinforce the main idea.', 'Main idea = the central point or argument of the passage.']
           }
         ],
-        correctAnswers: ['Main idea = the central point or argument of the p', 'Eliminate answers that are too specific (a detail)'],
-        hint1: 'Think about finding the main idea',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Main idea = the central point or argument of the passage. Eliminate answers that are too specific (a detail) or too broad (beyond the passage).'
+        correctAnswers: ['Eliminate answers that are too specific (a detail) or too broad (beyond the passage).', 'Every paragraph should relate back to the main idea.'],
+        hint1: 'Think about what each concept specifically describes in Reading Main Ideas.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Reading Main Ideas describes a specific idea. Key Insight: Eliminate answers that are too specific (a detail) or too broad (beyond the passage). ACT Tip: Every paragraph should relate back to the main idea.'
       }
     }
   ]

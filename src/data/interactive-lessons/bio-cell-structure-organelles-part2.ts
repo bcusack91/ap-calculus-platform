@@ -19,31 +19,31 @@ export const bioCellStructurePart2Data = {
       id: 'cell2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes nucleus?',
+            question: 'Which statement accurately explains Nucleus?',
             options: [
+              'rough (ribosomes) and smooth',
               'contains DNA, double membrane',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'digestive enzymes, pH ~5',
+              'modifies, sorts, ships proteins'
             ],
-            correctAnswer: 0,
-            explanation: 'Nucleus: contains DNA, double membrane'
+            correctAnswer: 1,
+            explanation: 'Correct — Nucleus: contains DNA, double membrane. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of membrane-bound organelles, which statement is accurate?',
+            question: 'In the context of Membrane-Bound Organelles, which explains Golgi apparatus?',
             options: [
-              'Golgi apparatus: modifies, sorts, ships proteins',
-              'enarbmem elbuod ,AND sniatnoc :suelcuN',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'rough (ribosomes) and smooth',
+              'digestive enzymes, pH ~5',
+              'modifies, sorts, ships proteins',
+              'contains DNA, double membrane'
             ],
-            correctAnswer: 0,
-            explanation: 'Golgi apparatus: modifies, sorts, ships proteins'
+            correctAnswer: 2,
+            explanation: 'Correct — Golgi apparatus: modifies, sorts, ships proteins. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioCellStructurePart2Data = {
       id: 'cell2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to membrane-bound organelles?',
+            question: 'Regarding Membrane-Bound Organelles, which correctly describes Lysosomes?',
             options: [
-              'Lysosomes: digestive enzymes, pH ~5',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'modifies, sorts, ships proteins',
+              'rough (ribosomes) and smooth',
+              'digestive enzymes, pH ~5',
+              'contains DNA, double membrane'
             ],
-            correctAnswer: 0,
-            explanation: 'Lysosomes: digestive enzymes, pH ~5'
+            correctAnswer: 2,
+            explanation: 'Correct — Lysosomes: digestive enzymes, pH ~5. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioCellStructurePart2Data = {
       id: 'cell2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Nucleus is important in membrane-bound organelles because',
-            options: ['contains DNA, double membrane', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Nucleus',
+            options: ['contains DNA, double membrane', 'modifies, sorts, ships proteins', 'rough (ribosomes) and smooth', 'digestive enzymes, pH ~5']
           },
           {
-            label: 'Endoplasmic reticulum is important in membrane-bound organelles because',
-            options: ['rough (ribosomes) and smooth', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Endoplasmic reticulum',
+            options: ['rough (ribosomes) and smooth', 'modifies, sorts, ships proteins', 'digestive enzymes, pH ~5', 'contains DNA, double membrane']
           },
           {
-            label: 'Golgi apparatus is important in membrane-bound organelles because',
-            options: ['modifies, sorts, ships proteins', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Golgi apparatus',
+            options: ['modifies, sorts, ships proteins', 'digestive enzymes, pH ~5', 'rough (ribosomes) and smooth', 'contains DNA, double membrane']
           }
         ],
         correctAnswers: ['contains DNA, double membrane', 'rough (ribosomes) and smooth', 'modifies, sorts, ships proteins'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Membrane-Bound Organelles.'
+        hint1: 'Think about what each concept specifically describes in Membrane-Bound Organelles.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Membrane-Bound Organelles describes a specific idea. Nucleus: contains DNA, double membrane. Endoplasmic reticulum: rough (ribosomes) and smooth. Golgi apparatus: modifies, sorts, ships proteins.'
       }
     }
   ]

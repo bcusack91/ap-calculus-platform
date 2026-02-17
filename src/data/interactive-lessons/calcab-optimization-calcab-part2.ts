@@ -30,31 +30,31 @@ Draw a picture and label all relevant quantities
       id: 'optim2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of setting up optimization problems?',
+            question: 'What does "Write the quantity to optimize as a…" refer to in calculus?',
             options: [
-              'Write the quantity to optimize as a function of one variable',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'Draw a picture and label all relevant quantities',
+              'Use the constraint to eliminate one variable',
+              'Determine the domain (often a closed interval)',
+              'Write the quantity to optimize as a function of one variable'
             ],
-            correctAnswer: 0,
-            explanation: 'Write the quantity to optimize as a function of one variable'
+            correctAnswer: 3,
+            explanation: 'Correct — Write the quantity to optimize as a function of one variable. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of setting up optimization problems, which is accurate?',
+            question: 'Select the statement that correctly describes Determine the domain (often a closed…:',
             options: [
+              'Use the constraint to eliminate one variable',
               'Determine the domain (often a closed interval)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Write the quantity to optimize as a function of one variable',
+              'Draw a picture and label all relevant quantities'
             ],
-            correctAnswer: 0,
-            explanation: 'Determine the domain (often a closed interval)'
+            correctAnswer: 1,
+            explanation: 'Correct — Determine the domain (often a closed interval). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Draw a picture and label all relevant quantities
       id: 'optim2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to setting up optimization problems?',
+            question: 'Which statement about Draw a picture and label all relevant… is correct?',
             options: [
-              'Draw a picture and label all relevant quantities',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'Determine the domain (often a closed interval)',
+              'Use the constraint to eliminate one variable',
+              'Write the quantity to optimize as a function of one variable',
+              'Draw a picture and label all relevant quantities'
             ],
-            correctAnswer: 0,
-            explanation: 'Draw a picture and label all relevant quantities'
+            correctAnswer: 3,
+            explanation: 'Correct — Draw a picture and label all relevant quantities. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Draw a picture and label all relevant quantities
       id: 'optim2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Write the quantity to optimize as a function of one variable',
-            options: ['Write the quantity to optimize as a function of on', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Write the quantity to optimize as a…',
+            options: ['Determine the domain (often a closed interval)', 'Use the constraint to eliminate one variable', 'Write the quantity to optimize as a function of one variable', 'Draw a picture and label all relevant quantities']
           },
           {
-            label: 'Use the constraint to eliminate one variable',
-            options: ['Use the constraint to eliminate one variable', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Use the constraint to eliminate one…',
+            options: ['Determine the domain (often a closed interval)', 'Write the quantity to optimize as a function of one variable', 'Use the constraint to eliminate one variable', 'Draw a picture and label all relevant quantities']
           },
           {
-            label: 'Determine the domain (often a closed interval)',
-            options: ['Determine the domain (often a closed interval)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Determine the domain (often a closed…',
+            options: ['Determine the domain (often a closed interval)', 'Draw a picture and label all relevant quantities', 'Use the constraint to eliminate one variable', 'Write the quantity to optimize as a function of one variable']
           }
         ],
-        correctAnswers: ['Write the quantity to optimize as a function of on', 'Use the constraint to eliminate one variable', 'Determine the domain (often a closed interval)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Setting Up Optimization Problems.'
+        correctAnswers: ['Write the quantity to optimize as a function of one variable', 'Use the constraint to eliminate one variable', 'Determine the domain (often a closed interval)'],
+        hint1: 'Think about what each concept specifically describes in Setting Up Optimization Problems.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Setting Up Optimization Problems describes a specific idea. Write the quantity to optimize as a function of one variable. Use the constraint to eliminate one variable. Determine the domain (often a closed interval).'
       }
     }
   ]

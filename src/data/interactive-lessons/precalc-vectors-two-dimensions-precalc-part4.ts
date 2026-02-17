@@ -30,31 +30,31 @@ u⃗ · v⃗ = 0
       id: 'vecto4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of dot product?',
-            options: [
-              'Dot product',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'Dot product: u⃗ · v⃗ = a₁a₂ + b₁b₂'
-          },
-          {
-            question: 'In the context of dot product, which is accurate?',
+            question: 'Which statement accurately explains Dot product?',
             options: [
               'u⃗ · v⃗ = 0',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'u⃗ · v⃗ = |u⃗||v⃗|cos θ',
+              'u⃗ · v⃗ = a₁a₂ + b₁b₂',
+              'θ = arccos(u⃗ · v⃗ / (|u⃗||v⃗|))'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Dot product: u⃗ · v⃗ = a₁a₂ + b₁b₂. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Perpendicular vectors:',
+            options: [
+              'u⃗ · v⃗ = 0',
+              'u⃗ · v⃗ = |u⃗||v⃗|cos θ',
+              'u⃗ · v⃗ = a₁a₂ + b₁b₂',
+              'θ = arccos(u⃗ · v⃗ / (|u⃗||v⃗|))'
             ],
             correctAnswer: 0,
-            explanation: 'Perpendicular vectors: u⃗ · v⃗ = 0'
+            explanation: 'Correct — Perpendicular vectors: u⃗ · v⃗ = 0. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ u⃗ · v⃗ = 0
       id: 'vecto4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Dot product',
-            options: ['u⃗ · v⃗ = a₁a₂ + b₁b₂', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['u⃗ · v⃗ = 0', 'u⃗ · v⃗ = a₁a₂ + b₁b₂', 'θ = arccos(u⃗ · v⃗ / (|u⃗||v⃗|))', 'u⃗ · v⃗ = |u⃗||v⃗|cos θ']
           },
           {
             label: 'Geometric form',
-            options: ['u⃗ · v⃗ = |u⃗||v⃗|cos θ', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['u⃗ · v⃗ = |u⃗||v⃗|cos θ', 'θ = arccos(u⃗ · v⃗ / (|u⃗||v⃗|))', 'u⃗ · v⃗ = a₁a₂ + b₁b₂', 'u⃗ · v⃗ = 0']
           },
           {
             label: 'Perpendicular vectors',
-            options: ['u⃗ · v⃗ = 0', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['θ = arccos(u⃗ · v⃗ / (|u⃗||v⃗|))', 'u⃗ · v⃗ = 0', 'u⃗ · v⃗ = a₁a₂ + b₁b₂', 'u⃗ · v⃗ = |u⃗||v⃗|cos θ']
           }
         ],
         correctAnswers: ['u⃗ · v⃗ = a₁a₂ + b₁b₂', 'u⃗ · v⃗ = |u⃗||v⃗|cos θ', 'u⃗ · v⃗ = 0'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Dot Product.'
+        hint1: 'Think about what each concept specifically describes in Dot Product.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Dot Product describes a specific idea. Dot product: u⃗ · v⃗ = a₁a₂ + b₁b₂. Geometric form: u⃗ · v⃗ = |u⃗||v⃗|cos θ. Perpendicular vectors: u⃗ · v⃗ = 0.'
       }
     }
   ]

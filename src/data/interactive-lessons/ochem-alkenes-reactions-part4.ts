@@ -30,31 +30,31 @@ H and OH add to same face
       id: 'alken4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of hydroboration-oxidation?',
+            question: 'Which statement accurately explains Hydroboration-oxidation?',
             options: [
-              'Hydroboration-oxidation',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'H and OH add to same face',
+              'Oxidation with H₂O₂/NaOH gives anti-Markovnikov alcohol',
+              'BH₃ adds B to less substituted carbon',
+              'anti-Markovnikov, syn addition'
             ],
-            correctAnswer: 0,
-            explanation: 'Hydroboration-oxidation: anti-Markovnikov, syn addition'
+            correctAnswer: 3,
+            explanation: 'Correct — Hydroboration-oxidation: anti-Markovnikov, syn addition. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of hydroboration-oxidation, which is accurate?',
+            question: 'In the context of Hydroboration-Oxidation, which explains Oxidation with H₂O₂/NaOH gives…?',
             options: [
-              'Oxidation with H₂O₂/NaOH gives anti-Markovnikov alcohol',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'anti-Markovnikov, syn addition',
+              'H and OH add to same face',
+              'BH₃ adds B to less substituted carbon',
+              'Oxidation with H₂O₂/NaOH gives anti-Markovnikov alcohol'
             ],
-            correctAnswer: 0,
-            explanation: 'Oxidation with H₂O₂/NaOH gives anti-Markovnikov alcohol'
+            correctAnswer: 3,
+            explanation: 'Correct — Oxidation with H₂O₂/NaOH gives anti-Markovnikov alcohol. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,24 @@ H and OH add to same face
       id: 'alken4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Hydroboration-oxidation',
-            options: ['anti-Markovnikov, syn addition', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['anti-Markovnikov, syn addition', 'BH₃ adds B to less substituted carbon', 'H and OH add to same face', 'Oxidation with H₂O₂/NaOH gives anti-Markovnikov alcohol']
           },
           {
-            label: 'BH₃ adds B to less substituted carbon',
-            options: ['BH₃ adds B to less substituted carbon', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
-          },
-          {
-            label: 'Oxidation with H₂O₂/NaOH gives anti-Markovnikov alcohol',
-            options: ['Oxidation with H₂O₂/NaOH gives anti-Markovnikov al', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Syn addition',
+            options: ['BH₃ adds B to less substituted carbon', 'H and OH add to same face', 'anti-Markovnikov, syn addition', 'Oxidation with H₂O₂/NaOH gives anti-Markovnikov alcohol']
           }
         ],
-        correctAnswers: ['anti-Markovnikov, syn addition', 'BH₃ adds B to less substituted carbon', 'Oxidation with H₂O₂/NaOH gives anti-Markovnikov al'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Hydroboration-Oxidation.'
+        correctAnswers: ['anti-Markovnikov, syn addition', 'H and OH add to same face'],
+        hint1: 'Think about what each concept specifically describes in Hydroboration-Oxidation.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Hydroboration-Oxidation describes a specific idea. Hydroboration-oxidation: anti-Markovnikov, syn addition. Syn addition: H and OH add to same face.'
       }
     }
   ]

@@ -71,23 +71,28 @@ Totipotent: can become any cell (zygote); Pluripotent: any cell except placenta 
       id: 'mcat-6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Stem Cells & Differentiation:',
-            options: ['Stem cells: self-renewing, can differentiate into specialize', 'Totipotent: can become any cell (zygote); Pluripotent: any c', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Stem cells',
+            options: ['can become any cell (zygote); Pluripotent: any cell except placenta (embryonic stem cells).', 'Differentiation is controlled by gene expression — same DNA, different genes active.', 'self-renewing, can differentiate into specialized cell types.', 'Multipotent: limited range (hematopoietic stem cells make blood cells).']
           },
           {
-            label: 'MCAT application:',
-            options: ['Multipotent: limited range (hematopoietic stem cells make bl', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Totipotent',
+            options: ['Differentiation is controlled by gene expression — same DNA, different genes active.', 'self-renewing, can differentiate into specialized cell types.', 'Multipotent: limited range (hematopoietic stem cells make blood cells).', 'can become any cell (zygote); Pluripotent: any cell except placenta (embryonic stem cells).']
+          },
+          {
+            label: 'Key Insight',
+            options: ['self-renewing, can differentiate into specialized cell types.', 'can become any cell (zygote); Pluripotent: any cell except placenta (embryonic stem cells).', 'Multipotent: limited range (hematopoietic stem cells make blood cells).', 'Differentiation is controlled by gene expression — same DNA, different genes active.']
           }
         ],
-        correctAnswers: ['Stem cells: self-renewing, can differentiate into specialize', 'Multipotent: limited range (hematopoietic stem cells make bl'],
-        hint1: 'Think about stem cells & differentiation',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Stem cells: self-renewing, can differentiate into specialized cell types. Multipotent: limited range (hematopoietic stem cells make blood cells).'
+        correctAnswers: ['self-renewing, can differentiate into specialized cell types.', 'can become any cell (zygote); Pluripotent: any cell except placenta (embryonic stem cells).', 'Multipotent: limited range (hematopoietic stem cells make blood cells).'],
+        hint1: 'Think about what each concept specifically describes in Stem Cells & Differentiation.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Stem Cells & Differentiation describes a specific idea. Stem cells: self-renewing, can differentiate into specialized cell types. Totipotent: can become any cell (zygote); Pluripotent: any cell except placenta (embryonic stem cells). Key Insight: Multipotent: limited range (hematopoietic stem cells make blood cells).'
       }
     }
   ]

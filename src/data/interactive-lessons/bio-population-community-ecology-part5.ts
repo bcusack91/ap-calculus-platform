@@ -19,31 +19,31 @@ export const bioPopulationPart5Data = {
       id: 'popu5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes primary succession?',
+            question: 'Which statement accurately explains Primary succession?',
             options: [
-              'starts on bare rock/new land',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'stable, mature ecosystem',
+              'starts after disturbance (fire, flood)',
+              'Pioneer species colonize first (lichens, mosses)',
+              'starts on bare rock/new land'
             ],
-            correctAnswer: 0,
-            explanation: 'Primary succession: starts on bare rock/new land'
+            correctAnswer: 3,
+            explanation: 'Correct — Primary succession: starts on bare rock/new land. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of ecological succession, which statement is accurate?',
+            question: 'In the context of Ecological Succession, which explains Pioneer species colonize first…?',
             options: [
+              'starts after disturbance (fire, flood)',
               'Pioneer species colonize first (lichens, mosses)',
-              'dnal wen/kcor erab no strats :noisseccus yramirP',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'stable, mature ecosystem',
+              'starts on bare rock/new land'
             ],
-            correctAnswer: 0,
-            explanation: 'Pioneer species colonize first (lichens, mosses)'
+            correctAnswer: 1,
+            explanation: 'Correct — Pioneer species colonize first (lichens, mosses). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioPopulationPart5Data = {
       id: 'popu5-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to ecological succession?',
+            question: 'Which of these accurately represents Climax community?',
             options: [
-              'Climax community: stable, mature ecosystem',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Pioneer species colonize first (lichens, mosses)',
+              'starts on bare rock/new land',
+              'starts after disturbance (fire, flood)',
+              'stable, mature ecosystem'
             ],
-            correctAnswer: 0,
-            explanation: 'Climax community: stable, mature ecosystem'
+            correctAnswer: 3,
+            explanation: 'Correct — Climax community: stable, mature ecosystem. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioPopulationPart5Data = {
       id: 'popu5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Primary succession is important in ecological succession because',
-            options: ['starts on bare rock/new land', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Primary succession',
+            options: ['Pioneer species colonize first (lichens, mosses)', 'starts on bare rock/new land', 'stable, mature ecosystem', 'starts after disturbance (fire, flood)']
           },
           {
-            label: 'Secondary succession is important in ecological succession because',
-            options: ['starts after disturbance (fire, flood)', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Secondary succession',
+            options: ['stable, mature ecosystem', 'starts on bare rock/new land', 'Pioneer species colonize first (lichens, mosses)', 'starts after disturbance (fire, flood)']
           },
           {
-            label: 'Pioneer species colonize first (lichens, mosses) is important in ecological succession because',
-            options: ['Pioneer species colonize first (lichens, mosses)', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Climax community',
+            options: ['Pioneer species colonize first (lichens, mosses)', 'stable, mature ecosystem', 'starts on bare rock/new land', 'starts after disturbance (fire, flood)']
           }
         ],
-        correctAnswers: ['starts on bare rock/new land', 'starts after disturbance (fire, flood)', 'Pioneer species colonize first (lichens, mosses)'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Ecological Succession.'
+        correctAnswers: ['starts on bare rock/new land', 'starts after disturbance (fire, flood)', 'stable, mature ecosystem'],
+        hint1: 'Think about what each concept specifically describes in Ecological Succession.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Ecological Succession describes a specific idea. Primary succession: starts on bare rock/new land. Secondary succession: starts after disturbance (fire, flood). Climax community: stable, mature ecosystem.'
       }
     }
   ]

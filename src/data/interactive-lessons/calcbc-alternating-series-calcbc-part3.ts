@@ -30,31 +30,31 @@ conditionally convergent (Σ1/n diverges)
       id: 'alter3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of absolute vs conditional convergence?',
+            question: 'What does "Absolute convergence" refer to in calculus?',
             options: [
-              'Absolute convergence',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
+              'Σ|aₙ| converges → Σaₙ converges absolutely',
+              'conditionally convergent (Σ1/n diverges)',
+              'Σaₙ converges but Σ|aₙ| diverges',
+              'Absolute convergence implies convergence (stronger condition)'
             ],
             correctAnswer: 0,
-            explanation: 'Absolute convergence: Σ|aₙ| converges → Σaₙ converges absolutely'
+            explanation: 'Correct — Absolute convergence: Σ|aₙ| converges → Σaₙ converges absolutely. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of absolute vs conditional convergence, which is accurate?',
+            question: 'Which of the following is true about Absolute convergence implies…?',
             options: [
+              'conditionally convergent (Σ1/n diverges)',
               'Absolute convergence implies convergence (stronger condition)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Σaₙ converges but Σ|aₙ| diverges',
+              'Σ|aₙ| converges → Σaₙ converges absolutely'
             ],
-            correctAnswer: 0,
-            explanation: 'Absolute convergence implies convergence (stronger condition)'
+            correctAnswer: 1,
+            explanation: 'Correct — Absolute convergence implies convergence (stronger condition). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ conditionally convergent (Σ1/n diverges)
       id: 'alter3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to absolute vs conditional convergence?',
+            question: 'Which of these accurately represents Alternating harmonic series?',
             options: [
+              'Absolute convergence implies convergence (stronger condition)',
+              'Σaₙ converges but Σ|aₙ| diverges',
               'conditionally convergent (Σ1/n diverges)',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'Σ|aₙ| converges → Σaₙ converges absolutely'
             ],
-            correctAnswer: 0,
-            explanation: 'Alternating harmonic series: conditionally convergent (Σ1/n diverges)'
+            correctAnswer: 2,
+            explanation: 'Correct — Alternating harmonic series: conditionally convergent (Σ1/n diverges). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ conditionally convergent (Σ1/n diverges)
       id: 'alter3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Absolute convergence',
-            options: ['Σ|aₙ| converges → Σaₙ converges absolutely', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Σaₙ converges but Σ|aₙ| diverges', 'Σ|aₙ| converges → Σaₙ converges absolutely', 'conditionally convergent (Σ1/n diverges)', 'Absolute convergence implies convergence (stronger condition)']
           },
           {
             label: 'Conditional convergence',
-            options: ['Σaₙ converges but Σ|aₙ| diverges', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['conditionally convergent (Σ1/n diverges)', 'Σaₙ converges but Σ|aₙ| diverges', 'Absolute convergence implies convergence (stronger condition)', 'Σ|aₙ| converges → Σaₙ converges absolutely']
           },
           {
-            label: 'Absolute convergence implies convergence (stronger condition)',
-            options: ['Absolute convergence implies convergence (stronger', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Alternating harmonic series',
+            options: ['Σ|aₙ| converges → Σaₙ converges absolutely', 'Σaₙ converges but Σ|aₙ| diverges', 'Absolute convergence implies convergence (stronger condition)', 'conditionally convergent (Σ1/n diverges)']
           }
         ],
-        correctAnswers: ['Σ|aₙ| converges → Σaₙ converges absolutely', 'Σaₙ converges but Σ|aₙ| diverges', 'Absolute convergence implies convergence (stronger'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Absolute vs Conditional Convergence.'
+        correctAnswers: ['Σ|aₙ| converges → Σaₙ converges absolutely', 'Σaₙ converges but Σ|aₙ| diverges', 'conditionally convergent (Σ1/n diverges)'],
+        hint1: 'Think about what each concept specifically describes in Absolute vs Conditional Convergence.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Absolute vs Conditional Convergence describes a specific idea. Absolute convergence: Σ|aₙ| converges → Σaₙ converges absolutely. Conditional convergence: Σaₙ converges but Σ|aₙ| diverges. Alternating harmonic series: conditionally convergent (Σ1/n diverges).'
       }
     }
   ]

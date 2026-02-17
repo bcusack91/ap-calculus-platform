@@ -71,23 +71,28 @@ Reasoning Beyond the Text: apply passage ideas to new situations.
       id: 'mcat-7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Review & MCAT Practice:',
-            options: ['Foundation: answer is directly stated in the passage', 'Reasoning Beyond the Text: apply passage ideas to new situat', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Foundation',
+            options: ['apply passage ideas to new situations.', 'answer is directly stated in the passage.', 'Reasoning Within the Text: evaluate the logic and structure of the argument.', 'Common traps: extreme language, out of scope, opposite of the authors view, partially correct.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Reasoning Within the Text: evaluate the logic and structure ', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Reasoning Beyond the Text',
+            options: ['apply passage ideas to new situations.', 'Reasoning Within the Text: evaluate the logic and structure of the argument.', 'Common traps: extreme language, out of scope, opposite of the authors view, partially correct.', 'answer is directly stated in the passage.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['Reasoning Within the Text: evaluate the logic and structure of the argument.', 'apply passage ideas to new situations.', 'answer is directly stated in the passage.', 'Common traps: extreme language, out of scope, opposite of the authors view, partially correct.']
           }
         ],
-        correctAnswers: ['Foundation: answer is directly stated in the passage', 'Reasoning Within the Text: evaluate the logic and structure '],
-        hint1: 'Think about review & mcat practice',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Foundation: answer is directly stated in the passage. Reasoning Within the Text: evaluate the logic and structure of the argument.'
+        correctAnswers: ['answer is directly stated in the passage.', 'apply passage ideas to new situations.', 'Reasoning Within the Text: evaluate the logic and structure of the argument.'],
+        hint1: 'Think about what each concept specifically describes in Review & MCAT Practice.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Review & MCAT Practice describes a specific idea. Foundation: answer is directly stated in the passage. Reasoning Beyond the Text: apply passage ideas to new situations. Key Insight: Reasoning Within the Text: evaluate the logic and structure of the argument.'
       }
     }
   ]

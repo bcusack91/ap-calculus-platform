@@ -19,31 +19,31 @@ export const bioEnergyFlowPart5Data = {
       id: 'ener5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes burning fossil fuels increases atmospheric co₂?',
+            question: 'What does "Burning fossil fuels increases…" refer to in biology?',
             options: [
+              'Climate change disrupts all biogeochemical cycles',
+              'Deforestation reduces carbon fixation',
               'Burning fossil fuels increases atmospheric CO₂',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Fertilizer runoff causes eutrophication'
             ],
-            correctAnswer: 0,
-            explanation: 'Burning fossil fuels increases atmospheric CO₂'
+            correctAnswer: 2,
+            explanation: 'Correct — Burning fossil fuels increases atmospheric CO₂. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of human impact on cycles, which statement is accurate?',
+            question: 'In the context of Human Impact on Cycles, which explains Deforestation reduces carbon fixation?',
             options: [
               'Deforestation reduces carbon fixation',
-              '₂OC cirehpsomta sesaercni sleuf lissof gninruB',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Fertilizer runoff causes eutrophication',
+              'Climate change disrupts all biogeochemical cycles',
+              'Burning fossil fuels increases atmospheric CO₂'
             ],
             correctAnswer: 0,
-            explanation: 'Deforestation reduces carbon fixation'
+            explanation: 'Correct — Deforestation reduces carbon fixation. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioEnergyFlowPart5Data = {
       id: 'ener5-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to human impact on cycles?',
+            question: 'Which of these accurately represents Climate change disrupts all…?',
             options: [
-              'Climate change disrupts all biogeochemical cycles',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Burning fossil fuels increases atmospheric CO₂',
+              'Fertilizer runoff causes eutrophication',
+              'Deforestation reduces carbon fixation',
+              'Climate change disrupts all biogeochemical cycles'
             ],
-            correctAnswer: 0,
-            explanation: 'Climate change disrupts all biogeochemical cycles'
+            correctAnswer: 3,
+            explanation: 'Correct — Climate change disrupts all biogeochemical cycles. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioEnergyFlowPart5Data = {
       id: 'ener5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Burning fossil fuels increases atmospheric CO₂ is important in human impact on cycles because',
-            options: ['Burning fossil fuels increases atmospheric CO₂', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Burning fossil fuels increases…',
+            options: ['Burning fossil fuels increases atmospheric CO₂', 'Climate change disrupts all biogeochemical cycles', 'Deforestation reduces carbon fixation', 'Fertilizer runoff causes eutrophication']
           },
           {
-            label: 'Fertilizer runoff causes eutrophication is important in human impact on cycles because',
-            options: ['Fertilizer runoff causes eutrophication', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Fertilizer runoff causes eutrophication',
+            options: ['Fertilizer runoff causes eutrophication', 'Climate change disrupts all biogeochemical cycles', 'Burning fossil fuels increases atmospheric CO₂', 'Deforestation reduces carbon fixation']
           },
           {
-            label: 'Deforestation reduces carbon fixation is important in human impact on cycles because',
-            options: ['Deforestation reduces carbon fixation', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Deforestation reduces carbon fixation',
+            options: ['Deforestation reduces carbon fixation', 'Fertilizer runoff causes eutrophication', 'Climate change disrupts all biogeochemical cycles', 'Burning fossil fuels increases atmospheric CO₂']
           }
         ],
         correctAnswers: ['Burning fossil fuels increases atmospheric CO₂', 'Fertilizer runoff causes eutrophication', 'Deforestation reduces carbon fixation'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Human Impact on Cycles.'
+        hint1: 'Think about what each concept specifically describes in Human Impact on Cycles.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Human Impact on Cycles describes a specific idea. Burning fossil fuels increases atmospheric CO₂. Fertilizer runoff causes eutrophication. Deforestation reduces carbon fixation.'
       }
     }
   ]

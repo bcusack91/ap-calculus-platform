@@ -19,31 +19,31 @@ export const bioCellRespirationPart5Data = {
       id: 'cell5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes fermentation when o₂ is absent?',
+            question: 'Which statement accurately explains Fermentation when O₂ is absent?',
             options: [
+              'pyruvate → ethanol + CO₂ (yeast)',
               'Fermentation when O₂ is absent',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'pyruvate → lactate (animals, bacteria)',
+              'Only 2 ATP per glucose without O₂'
             ],
-            correctAnswer: 0,
-            explanation: 'Fermentation when O₂ is absent'
+            correctAnswer: 1,
+            explanation: 'Correct — Fermentation when O₂ is absent. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of anaerobic respiration, which statement is accurate?',
+            question: 'In the context of Anaerobic Respiration, which explains Alcohol fermentation?',
             options: [
-              'Alcohol fermentation: pyruvate → ethanol + CO₂ (yeast)',
-              'tnesba si ₂O nehw noitatnemreF',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Only 2 ATP per glucose without O₂',
+              'Fermentation when O₂ is absent',
+              'pyruvate → lactate (animals, bacteria)',
+              'pyruvate → ethanol + CO₂ (yeast)'
             ],
-            correctAnswer: 0,
-            explanation: 'Alcohol fermentation: pyruvate → ethanol + CO₂ (yeast)'
+            correctAnswer: 3,
+            explanation: 'Correct — Alcohol fermentation: pyruvate → ethanol + CO₂ (yeast). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioCellRespirationPart5Data = {
       id: 'cell5-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to anaerobic respiration?',
+            question: 'Regarding Anaerobic Respiration, which correctly describes Only 2 ATP per glucose without O₂?',
             options: [
+              'pyruvate → ethanol + CO₂ (yeast)',
               'Only 2 ATP per glucose without O₂',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Fermentation when O₂ is absent',
+              'pyruvate → lactate (animals, bacteria)'
             ],
-            correctAnswer: 0,
-            explanation: 'Only 2 ATP per glucose without O₂'
+            correctAnswer: 1,
+            explanation: 'Correct — Only 2 ATP per glucose without O₂. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,24 @@ export const bioCellRespirationPart5Data = {
       id: 'cell5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Fermentation when O₂ is absent is important in anaerobic respiration because',
-            options: ['Fermentation when O₂ is absent', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Lactic acid fermentation',
+            options: ['pyruvate → ethanol + CO₂ (yeast)', 'Fermentation when O₂ is absent', 'Only 2 ATP per glucose without O₂', 'pyruvate → lactate (animals, bacteria)']
           },
           {
-            label: 'Lactic acid fermentation is important in anaerobic respiration because',
-            options: ['pyruvate → lactate (animals, bacteria)', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
-          },
-          {
-            label: 'Alcohol fermentation is important in anaerobic respiration because',
-            options: ['pyruvate → ethanol + CO₂ (yeast)', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Alcohol fermentation',
+            options: ['pyruvate → lactate (animals, bacteria)', 'pyruvate → ethanol + CO₂ (yeast)', 'Fermentation when O₂ is absent', 'Only 2 ATP per glucose without O₂']
           }
         ],
-        correctAnswers: ['Fermentation when O₂ is absent', 'pyruvate → lactate (animals, bacteria)', 'pyruvate → ethanol + CO₂ (yeast)'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Anaerobic Respiration.'
+        correctAnswers: ['pyruvate → lactate (animals, bacteria)', 'pyruvate → ethanol + CO₂ (yeast)'],
+        hint1: 'Think about what each concept specifically describes in Anaerobic Respiration.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Anaerobic Respiration describes a specific idea. Lactic acid fermentation: pyruvate → lactate (animals, bacteria). Alcohol fermentation: pyruvate → ethanol + CO₂ (yeast).'
       }
     }
   ]

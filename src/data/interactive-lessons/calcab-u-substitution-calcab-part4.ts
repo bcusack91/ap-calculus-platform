@@ -30,31 +30,31 @@ Rewriting integrands to reveal standard forms
       id: 'u-sub4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of advanced u-substitution techniques?',
+            question: 'Which statement accurately explains Multiplying/dividing by a constant to…?',
             options: [
+              'Rewriting integrands to reveal standard forms',
               'Multiplying/dividing by a constant to match du',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              '∫(A+B)/C dx = ∫A/C dx + ∫B/C dx',
+              'Long division before substitution for improper rational functions'
             ],
-            correctAnswer: 0,
-            explanation: 'Multiplying/dividing by a constant to match du'
+            correctAnswer: 1,
+            explanation: 'Correct — Multiplying/dividing by a constant to match du. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of advanced u-substitution techniques, which is accurate?',
+            question: 'Which of the following is true about Splitting fractions?',
             options: [
+              'Multiplying/dividing by a constant to match du',
+              'Rewriting integrands to reveal standard forms',
               '∫(A+B)/C dx = ∫A/C dx + ∫B/C dx',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Long division before substitution for improper rational functions'
             ],
-            correctAnswer: 0,
-            explanation: 'Splitting fractions: ∫(A+B)/C dx = ∫A/C dx + ∫B/C dx'
+            correctAnswer: 2,
+            explanation: 'Correct — Splitting fractions: ∫(A+B)/C dx = ∫A/C dx + ∫B/C dx. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Rewriting integrands to reveal standard forms
       id: 'u-sub4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to advanced u-substitution techniques?',
+            question: 'Which statement about Rewriting integrands to reveal standard… is correct?',
             options: [
               'Rewriting integrands to reveal standard forms',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'Multiplying/dividing by a constant to match du',
+              '∫(A+B)/C dx = ∫A/C dx + ∫B/C dx',
+              'Long division before substitution for improper rational functions'
             ],
             correctAnswer: 0,
-            explanation: 'Rewriting integrands to reveal standard forms'
+            explanation: 'Correct — Rewriting integrands to reveal standard forms. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Rewriting integrands to reveal standard forms
       id: 'u-sub4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Multiplying/dividing by a constant to match du',
-            options: ['Multiplying/dividing by a constant to match du', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Multiplying/dividing by a constant to…',
+            options: ['∫(A+B)/C dx = ∫A/C dx + ∫B/C dx', 'Rewriting integrands to reveal standard forms', 'Long division before substitution for improper rational functions', 'Multiplying/dividing by a constant to match du']
           },
           {
-            label: 'Long division before substitution for improper rational functions',
-            options: ['Long division before substitution for improper rat', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Long division before substitution for…',
+            options: ['Multiplying/dividing by a constant to match du', '∫(A+B)/C dx = ∫A/C dx + ∫B/C dx', 'Rewriting integrands to reveal standard forms', 'Long division before substitution for improper rational functions']
           },
           {
             label: 'Splitting fractions',
-            options: ['∫(A+B)/C dx = ∫A/C dx + ∫B/C dx', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Long division before substitution for improper rational functions', '∫(A+B)/C dx = ∫A/C dx + ∫B/C dx', 'Multiplying/dividing by a constant to match du', 'Rewriting integrands to reveal standard forms']
           }
         ],
-        correctAnswers: ['Multiplying/dividing by a constant to match du', 'Long division before substitution for improper rat', '∫(A+B)/C dx = ∫A/C dx + ∫B/C dx'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Advanced u-Substitution Techniques.'
+        correctAnswers: ['Multiplying/dividing by a constant to match du', 'Long division before substitution for improper rational functions', '∫(A+B)/C dx = ∫A/C dx + ∫B/C dx'],
+        hint1: 'Think about what each concept specifically describes in Advanced u-Substitution Techniques.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Advanced u-Substitution Techniques describes a specific idea. Multiplying/dividing by a constant to match du. Long division before substitution for improper rational functions. Splitting fractions: ∫(A+B)/C dx = ∫A/C dx + ∫B/C dx.'
       }
     }
   ]

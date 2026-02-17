@@ -18,20 +18,31 @@ Snacks and water for breaks (keep in your bag, not on the desk).
       id: 'act-t2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes admission ticket (printed), valid photo id, #2 pencils (no mechanical), approved calculator?',
+            question: 'What does "Admission ticket (printed), valid photo…" refer to in ACT prep?',
             options: [
-              'Admission ticket (printed), valid photo ID, #2 pencils (no mechanical), approved calculator is a key concept for ACT Math',
-              'Snacks and water for breaks (keep in your bag, not on the desk)',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'Watch (no smartwatch) for time tracking.',
+              'Admission ticket (printed), valid photo ID, #2 pencils (no mechanical), approved calculator.',
+              'Snacks and water for breaks (keep in your bag, not on the desk).',
+              'Backup calculator and extra pencils — be prepared.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Admission ticket (printed), valid photo ID, #2 pencils (no mechanical), approved calculator. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              'Watch (no smartwatch) for time tracking.',
+              'Admission ticket (printed), valid photo ID, #2 pencils (no mechanical), approved calculator.',
+              'Snacks and water for breaks (keep in your bag, not on the desk).',
+              'Backup calculator and extra pencils — be prepared.'
             ],
             correctAnswer: 0,
-            explanation: 'Admission ticket (printed), valid photo ID, #2 pencils (no mechanical), approved calculator'
+            explanation: 'Correct — Key Insight: Watch (no smartwatch) for time tracking. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Snacks and water for breaks (keep in your bag, not on the desk).
       id: 'act-t2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for what to bring?',
+            question: 'Regarding What to Bring, which correctly describes ACT Tip?',
             options: [
-              'Watch (no smartwatch) for time tracking',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Backup calculator and extra pencils — be prepared.',
+              'Snacks and water for breaks (keep in your bag, not on the desk).',
+              'Watch (no smartwatch) for time tracking.',
+              'Admission ticket (printed), valid photo ID, #2 pencils (no mechanical), approved calculator.'
             ],
             correctAnswer: 0,
-            explanation: 'Watch (no smartwatch) for time tracking'
+            explanation: 'Correct — ACT Tip: Backup calculator and extra pencils — be prepared. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ Snacks and water for breaks (keep in your bag, not on the desk).
       id: 'act-t2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for What to Bring:',
-            options: ['Admission ticket (printed), valid photo ID, #2 pen', 'Snacks and water for breaks (keep in your bag, not', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['Snacks and water for breaks (keep in your bag, not on the desk).', 'Admission ticket (printed), valid photo ID, #2 pencils (no mechanical), approved calculator.', 'Watch (no smartwatch) for time tracking.', 'Backup calculator and extra pencils — be prepared.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Watch (no smartwatch) for time tracking', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'ACT Tip',
+            options: ['Snacks and water for breaks (keep in your bag, not on the desk).', 'Watch (no smartwatch) for time tracking.', 'Admission ticket (printed), valid photo ID, #2 pencils (no mechanical), approved calculator.', 'Backup calculator and extra pencils — be prepared.']
           }
         ],
-        correctAnswers: ['Admission ticket (printed), valid photo ID, #2 pen', 'Watch (no smartwatch) for time tracking'],
-        hint1: 'Think about what to bring',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Admission ticket (printed), valid photo ID, #2 pencils (no mechanical), approved calculator. Watch (no smartwatch) for time tracking.'
+        correctAnswers: ['Watch (no smartwatch) for time tracking.', 'Backup calculator and extra pencils — be prepared.'],
+        hint1: 'Think about what each concept specifically describes in What to Bring.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in What to Bring describes a specific idea. Key Insight: Watch (no smartwatch) for time tracking. ACT Tip: Backup calculator and extra pencils — be prepared.'
       }
     }
   ]

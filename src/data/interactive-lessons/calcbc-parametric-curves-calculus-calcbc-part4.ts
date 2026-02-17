@@ -30,31 +30,31 @@ s(t) = ∫ₐᵗ |v(u)| du
       id: 'param4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of arc length (parametric)?',
+            question: 'Which of the following correctly describes Arc length?',
             options: [
-              'Arc length',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
+              's(t) = ∫ₐᵗ |v(u)| du',
+              'Total distance traveled = ∫ₐᵇ |v(t)| dt',
+              'L = ∫ₐᵇ √[(dx/dt)² + (dy/dt)²] dt',
+              '|v(t)| = √[(dx/dt)² + (dy/dt)²]'
             ],
-            correctAnswer: 0,
-            explanation: 'Arc length: L = ∫ₐᵇ √[(dx/dt)² + (dy/dt)²] dt'
+            correctAnswer: 2,
+            explanation: 'Correct — Arc length: L = ∫ₐᵇ √[(dx/dt)² + (dy/dt)²] dt. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of arc length (parametric), which is accurate?',
+            question: 'Select the statement that correctly describes Total distance traveled = ∫ₐᵇ |v(t)| dt:',
             options: [
               'Total distance traveled = ∫ₐᵇ |v(t)| dt',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              '|v(t)| = √[(dx/dt)² + (dy/dt)²]',
+              's(t) = ∫ₐᵗ |v(u)| du',
+              'L = ∫ₐᵇ √[(dx/dt)² + (dy/dt)²] dt'
             ],
             correctAnswer: 0,
-            explanation: 'Total distance traveled = ∫ₐᵇ |v(t)| dt'
+            explanation: 'Correct — Total distance traveled = ∫ₐᵇ |v(t)| dt. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ s(t) = ∫ₐᵗ |v(u)| du
       id: 'param4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to arc length (parametric)?',
+            question: 'Which statement about Arc length parametrization is correct?',
             options: [
+              'Total distance traveled = ∫ₐᵇ |v(t)| dt',
+              'L = ∫ₐᵇ √[(dx/dt)² + (dy/dt)²] dt',
               's(t) = ∫ₐᵗ |v(u)| du',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              '|v(t)| = √[(dx/dt)² + (dy/dt)²]'
             ],
-            correctAnswer: 0,
-            explanation: 'Arc length parametrization: s(t) = ∫ₐᵗ |v(u)| du'
+            correctAnswer: 2,
+            explanation: 'Correct — Arc length parametrization: s(t) = ∫ₐᵗ |v(u)| du. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ s(t) = ∫ₐᵗ |v(u)| du
       id: 'param4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Arc length',
-            options: ['L = ∫ₐᵇ √[(dx/dt)² + (dy/dt)²] dt', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['|v(t)| = √[(dx/dt)² + (dy/dt)²]', 's(t) = ∫ₐᵗ |v(u)| du', 'L = ∫ₐᵇ √[(dx/dt)² + (dy/dt)²] dt', 'Total distance traveled = ∫ₐᵇ |v(t)| dt']
           },
           {
             label: 'Speed',
-            options: ['|v(t)| = √[(dx/dt)² + (dy/dt)²]', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Total distance traveled = ∫ₐᵇ |v(t)| dt', 's(t) = ∫ₐᵗ |v(u)| du', 'L = ∫ₐᵇ √[(dx/dt)² + (dy/dt)²] dt', '|v(t)| = √[(dx/dt)² + (dy/dt)²]']
           },
           {
-            label: 'Total distance traveled = ∫ₐᵇ |v(t)| dt',
-            options: ['Total distance traveled = ∫ₐᵇ |v(t)| dt', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Arc length parametrization',
+            options: ['s(t) = ∫ₐᵗ |v(u)| du', '|v(t)| = √[(dx/dt)² + (dy/dt)²]', 'L = ∫ₐᵇ √[(dx/dt)² + (dy/dt)²] dt', 'Total distance traveled = ∫ₐᵇ |v(t)| dt']
           }
         ],
-        correctAnswers: ['L = ∫ₐᵇ √[(dx/dt)² + (dy/dt)²] dt', '|v(t)| = √[(dx/dt)² + (dy/dt)²]', 'Total distance traveled = ∫ₐᵇ |v(t)| dt'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Arc Length (Parametric).'
+        correctAnswers: ['L = ∫ₐᵇ √[(dx/dt)² + (dy/dt)²] dt', '|v(t)| = √[(dx/dt)² + (dy/dt)²]', 's(t) = ∫ₐᵗ |v(u)| du'],
+        hint1: 'Think about what each concept specifically describes in Arc Length (Parametric).',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Arc Length (Parametric) describes a specific idea. Arc length: L = ∫ₐᵇ √[(dx/dt)² + (dy/dt)²] dt. Speed: |v(t)| = √[(dx/dt)² + (dy/dt)²]. Arc length parametrization: s(t) = ∫ₐᵗ |v(u)| du.'
       }
     }
   ]

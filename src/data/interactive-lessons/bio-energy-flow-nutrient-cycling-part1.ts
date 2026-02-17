@@ -19,31 +19,31 @@ export const bioEnergyFlowPart1Data = {
       id: 'ener1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes food chain?',
-            options: [
-              'linear path of energy transfer',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
-            ],
-            correctAnswer: 0,
-            explanation: 'Food chain: linear path of energy transfer'
-          },
-          {
-            question: 'In the context of food chains & webs, which statement is accurate?',
+            question: 'What does "Food chain" refer to in biology?',
             options: [
               'Energy flows one direction (producers → consumers)',
-              'refsnart ygrene fo htap raenil :niahc dooF',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'interconnected food chains',
+              'Matter cycles (recycled through ecosystem)',
+              'linear path of energy transfer'
             ],
-            correctAnswer: 0,
-            explanation: 'Energy flows one direction (producers → consumers)'
+            correctAnswer: 3,
+            explanation: 'Correct — Food chain: linear path of energy transfer. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Food Chains & Webs, which explains Energy flows one direction (producers →…?',
+            options: [
+              'Matter cycles (recycled through ecosystem)',
+              'linear path of energy transfer',
+              'interconnected food chains',
+              'Energy flows one direction (producers → consumers)'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Energy flows one direction (producers → consumers). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioEnergyFlowPart1Data = {
       id: 'ener1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to food chains & webs?',
+            question: 'Regarding Food Chains & Webs, which correctly describes Matter cycles (recycled through…?',
             options: [
               'Matter cycles (recycled through ecosystem)',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Energy flows one direction (producers → consumers)',
+              'linear path of energy transfer',
+              'interconnected food chains'
             ],
             correctAnswer: 0,
-            explanation: 'Matter cycles (recycled through ecosystem)'
+            explanation: 'Correct — Matter cycles (recycled through ecosystem). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,24 @@ export const bioEnergyFlowPart1Data = {
       id: 'ener1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Food chain is important in food chains & webs because',
-            options: ['linear path of energy transfer', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Food chain',
+            options: ['Matter cycles (recycled through ecosystem)', 'interconnected food chains', 'Energy flows one direction (producers → consumers)', 'linear path of energy transfer']
           },
           {
-            label: 'Food web is important in food chains & webs because',
-            options: ['interconnected food chains', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
-          },
-          {
-            label: 'Energy flows one direction (producers → consumers) is important in food chains & webs because',
-            options: ['Energy flows one direction (producers → consumers)', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Food web',
+            options: ['linear path of energy transfer', 'Matter cycles (recycled through ecosystem)', 'Energy flows one direction (producers → consumers)', 'interconnected food chains']
           }
         ],
-        correctAnswers: ['linear path of energy transfer', 'interconnected food chains', 'Energy flows one direction (producers → consumers)'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Food Chains & Webs.'
+        correctAnswers: ['linear path of energy transfer', 'interconnected food chains'],
+        hint1: 'Think about what each concept specifically describes in Food Chains & Webs.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Food Chains & Webs describes a specific idea. Food chain: linear path of energy transfer. Food web: interconnected food chains.'
       }
     }
   ]

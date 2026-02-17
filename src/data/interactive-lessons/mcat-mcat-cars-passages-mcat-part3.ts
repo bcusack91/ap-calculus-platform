@@ -71,23 +71,28 @@ Common frameworks: utilitarianism (outcomes), deontology (duties), virtue ethics
       id: 'mcat-3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Ethics & Philosophy:',
-            options: ['Ethics passages present moral dilemmas or competing ethical ', 'Common frameworks: utilitarianism (outcomes), deontology (du', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Common frameworks',
+            options: ['Identify the authors position and the strongest counterargument.', 'Ethics passages present moral dilemmas or competing ethical frameworks.', 'utilitarianism (outcomes), deontology (duties), virtue ethics (character).', 'MCAT does not test your personal ethics — only your comprehension of the argument.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Identify the authors position and the strongest counterargum', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Key Insight',
+            options: ['utilitarianism (outcomes), deontology (duties), virtue ethics (character).', 'Ethics passages present moral dilemmas or competing ethical frameworks.', 'Identify the authors position and the strongest counterargument.', 'MCAT does not test your personal ethics — only your comprehension of the argument.']
+          },
+          {
+            label: 'MCAT Tip',
+            options: ['MCAT does not test your personal ethics — only your comprehension of the argument.', 'utilitarianism (outcomes), deontology (duties), virtue ethics (character).', 'Ethics passages present moral dilemmas or competing ethical frameworks.', 'Identify the authors position and the strongest counterargument.']
           }
         ],
-        correctAnswers: ['Ethics passages present moral dilemmas or competing ethical ', 'Identify the authors position and the strongest counterargum'],
-        hint1: 'Think about ethics & philosophy',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Ethics passages present moral dilemmas or competing ethical frameworks. Identify the authors position and the strongest counterargument.'
+        correctAnswers: ['utilitarianism (outcomes), deontology (duties), virtue ethics (character).', 'Identify the authors position and the strongest counterargument.', 'MCAT does not test your personal ethics — only your comprehension of the argument.'],
+        hint1: 'Think about what each concept specifically describes in Ethics & Philosophy.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Ethics & Philosophy describes a specific idea. Common frameworks: utilitarianism (outcomes), deontology (duties), virtue ethics (character). Key Insight: Identify the authors position and the strongest counterargument. MCAT Tip: MCAT does not test your personal ethics — only your comprehension of the argument.'
       }
     }
   ]

@@ -30,31 +30,31 @@ v⃗ or ⟨a, b⟩ (component form) or ai + bj
       id: 'vecto1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of vector basics?',
-            options: [
-              'Vector',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'Vector: a quantity with both magnitude and direction'
-          },
-          {
-            question: 'In the context of vector basics, which is accurate?',
+            question: 'Which statement accurately explains Vector?',
             options: [
               '|v⃗| = √(a² + b²)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'v⃗ or ⟨a, b⟩ (component form) or ai + bj',
+              'θ = arctan(b/a), adjust for quadrant',
+              'a quantity with both magnitude and direction'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Vector: a quantity with both magnitude and direction. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Magnitude (length)?',
+            options: [
+              '|v⃗| = √(a² + b²)',
+              'a quantity with both magnitude and direction',
+              'v⃗ or ⟨a, b⟩ (component form) or ai + bj',
+              'θ = arctan(b/a), adjust for quadrant'
             ],
             correctAnswer: 0,
-            explanation: 'Magnitude (length): |v⃗| = √(a² + b²)'
+            explanation: 'Correct — Magnitude (length): |v⃗| = √(a² + b²). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ v⃗ or ⟨a, b⟩ (component form) or ai + bj
       id: 'vecto1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Vector',
-            options: ['a quantity with both magnitude and direction', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['|v⃗| = √(a² + b²)', 'a quantity with both magnitude and direction', 'v⃗ or ⟨a, b⟩ (component form) or ai + bj', 'θ = arctan(b/a), adjust for quadrant']
           },
           {
             label: 'Notation',
-            options: ['v⃗ or ⟨a, b⟩ (component form) or ai + bj', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['a quantity with both magnitude and direction', 'θ = arctan(b/a), adjust for quadrant', '|v⃗| = √(a² + b²)', 'v⃗ or ⟨a, b⟩ (component form) or ai + bj']
           },
           {
             label: 'Magnitude (length)',
-            options: ['|v⃗| = √(a² + b²)', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['a quantity with both magnitude and direction', 'θ = arctan(b/a), adjust for quadrant', 'v⃗ or ⟨a, b⟩ (component form) or ai + bj', '|v⃗| = √(a² + b²)']
           }
         ],
         correctAnswers: ['a quantity with both magnitude and direction', 'v⃗ or ⟨a, b⟩ (component form) or ai + bj', '|v⃗| = √(a² + b²)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Vector Basics.'
+        hint1: 'Think about what each concept specifically describes in Vectors Two Dimensions.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Vectors Two Dimensions describes a specific idea. Vector: a quantity with both magnitude and direction. Notation: v⃗ or ⟨a, b⟩ (component form) or ai + bj. Magnitude (length): |v⃗| = √(a² + b²).'
       }
     }
   ]

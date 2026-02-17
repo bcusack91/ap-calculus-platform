@@ -71,23 +71,24 @@ Just because data is presented in a passage does not mean it supports the answer
       id: 'mcat-7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Review & MCAT Practice:',
-            options: ['Extreme answer choices are usually wrong — the MCAT favors n', 'Just because data is presented in a passage does not mean it', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Key Insight',
+            options: ['If two answers are opposites, one of them is likely correct.', 'Just because data is presented in a passage does not mean it supports the answer.', 'Answer the question being asked, not the question you think they should ask.', 'Extreme answer choices are usually wrong — the MCAT favors nuanced answers.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Answer the question being asked, not the question you think ', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'MCAT Tip',
+            options: ['Extreme answer choices are usually wrong — the MCAT favors nuanced answers.', 'Answer the question being asked, not the question you think they should ask.', 'Just because data is presented in a passage does not mean it supports the answer.', 'If two answers are opposites, one of them is likely correct.']
           }
         ],
-        correctAnswers: ['Extreme answer choices are usually wrong — the MCAT favors n', 'Answer the question being asked, not the question you think '],
-        hint1: 'Think about review & mcat practice',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Extreme answer choices are usually wrong — the MCAT favors nuanced answers. Answer the question being asked, not the question you think they should ask.'
+        correctAnswers: ['Answer the question being asked, not the question you think they should ask.', 'If two answers are opposites, one of them is likely correct.'],
+        hint1: 'Think about what each concept specifically describes in Review & MCAT Practice.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Review & MCAT Practice describes a specific idea. Key Insight: Answer the question being asked, not the question you think they should ask. MCAT Tip: If two answers are opposites, one of them is likely correct.'
       }
     }
   ]

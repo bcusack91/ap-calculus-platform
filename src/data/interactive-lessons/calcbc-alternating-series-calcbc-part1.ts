@@ -30,31 +30,31 @@ Many important series are alternating (ln 2, π/4, etc.)
       id: 'alter1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of alternating series?',
+            question: 'What does "Alternating series" refer to in calculus?',
             options: [
-              'Alternating series',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
+              'Many important series are alternating (ln 2, π/4, etc.)',
+              'Σ(-1)ⁿ/n (alternating harmonic), Σ(-1)ⁿ/n²',
+              'terms alternate in sign — Σ(-1)ⁿ bₙ or Σ(-1)ⁿ⁺¹ bₙ',
+              '+, -, +, -, ...'
             ],
-            correctAnswer: 0,
-            explanation: 'Alternating series: terms alternate in sign — Σ(-1)ⁿ bₙ or Σ(-1)ⁿ⁺¹ bₙ'
+            correctAnswer: 2,
+            explanation: 'Correct — Alternating series: terms alternate in sign — Σ(-1)ⁿ bₙ or Σ(-1)ⁿ⁺¹ bₙ. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of alternating series, which is accurate?',
+            question: 'Which of the following is true about The signs must strictly alternate?',
             options: [
+              'terms alternate in sign — Σ(-1)ⁿ bₙ or Σ(-1)ⁿ⁺¹ bₙ',
               '+, -, +, -, ...',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Many important series are alternating (ln 2, π/4, etc.)',
+              'Σ(-1)ⁿ/n (alternating harmonic), Σ(-1)ⁿ/n²'
             ],
-            correctAnswer: 0,
-            explanation: 'The signs must strictly alternate: +, -, +, -, ...'
+            correctAnswer: 1,
+            explanation: 'Correct — The signs must strictly alternate: +, -, +, -, ... Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Many important series are alternating (ln 2, π/4, etc.)
       id: 'alter1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to alternating series?',
+            question: 'Regarding ∮ Alternating Series, which correctly describes Many important series are alternating…?',
             options: [
+              '+, -, +, -, ...',
               'Many important series are alternating (ln 2, π/4, etc.)',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'terms alternate in sign — Σ(-1)ⁿ bₙ or Σ(-1)ⁿ⁺¹ bₙ',
+              'Σ(-1)ⁿ/n (alternating harmonic), Σ(-1)ⁿ/n²'
             ],
-            correctAnswer: 0,
-            explanation: 'Many important series are alternating (ln 2, π/4, etc.)'
+            correctAnswer: 1,
+            explanation: 'Correct — Many important series are alternating (ln 2, π/4, etc.). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Many important series are alternating (ln 2, π/4, etc.)
       id: 'alter1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Alternating series',
-            options: ['terms alternate in sign — Σ(-1)ⁿ bₙ or Σ(-1)ⁿ⁺¹ bₙ', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Many important series are alternating (ln 2, π/4, etc.)', 'Σ(-1)ⁿ/n (alternating harmonic), Σ(-1)ⁿ/n²', 'terms alternate in sign — Σ(-1)ⁿ bₙ or Σ(-1)ⁿ⁺¹ bₙ', '+, -, +, -, ...']
           },
           {
             label: 'Examples',
-            options: ['Σ(-1)ⁿ/n (alternating harmonic), Σ(-1)ⁿ/n²', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Σ(-1)ⁿ/n (alternating harmonic), Σ(-1)ⁿ/n²', 'Many important series are alternating (ln 2, π/4, etc.)', 'terms alternate in sign — Σ(-1)ⁿ bₙ or Σ(-1)ⁿ⁺¹ bₙ', '+, -, +, -, ...']
           },
           {
             label: 'The signs must strictly alternate',
-            options: ['+, -, +, -, ...', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Σ(-1)ⁿ/n (alternating harmonic), Σ(-1)ⁿ/n²', 'Many important series are alternating (ln 2, π/4, etc.)', '+, -, +, -, ...', 'terms alternate in sign — Σ(-1)ⁿ bₙ or Σ(-1)ⁿ⁺¹ bₙ']
           }
         ],
         correctAnswers: ['terms alternate in sign — Σ(-1)ⁿ bₙ or Σ(-1)ⁿ⁺¹ bₙ', 'Σ(-1)ⁿ/n (alternating harmonic), Σ(-1)ⁿ/n²', '+, -, +, -, ...'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Alternating Series.'
+        hint1: 'Think about what each concept specifically describes in ∮ Alternating Series.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in ∮ Alternating Series describes a specific idea. Alternating series: terms alternate in sign — Σ(-1)ⁿ bₙ or Σ(-1)ⁿ⁺¹ bₙ. Examples: Σ(-1)ⁿ/n (alternating harmonic), Σ(-1)ⁿ/n². The signs must strictly alternate: +, -, +, -, ...'
       }
     }
   ]

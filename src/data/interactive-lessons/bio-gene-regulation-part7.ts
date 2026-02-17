@@ -19,31 +19,31 @@ export const bioGeneRegPart7Data = {
       id: 'gene7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes regulation at every level?',
+            question: 'Which statement accurately explains Regulation at every level?',
             options: [
               'DNA → RNA → protein',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Operons on the AP exam',
+              'Epigenetics as a growing field',
+              'Dysregulation and disease (cancer)'
             ],
             correctAnswer: 0,
-            explanation: 'Regulation at every level: DNA → RNA → protein'
+            explanation: 'Correct — Regulation at every level: DNA → RNA → protein. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of synthesis & ap review, which statement is accurate?',
+            question: 'Select the statement that correctly describes Operons on the AP exam:',
             options: [
               'Operons on the AP exam',
-              'nietorp → ANR → AND :level yreve ta noitalugeR',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Dysregulation and disease (cancer)',
+              'Epigenetics as a growing field',
+              'DNA → RNA → protein'
             ],
             correctAnswer: 0,
-            explanation: 'Operons on the AP exam'
+            explanation: 'Correct — Operons on the AP exam. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioGeneRegPart7Data = {
       id: 'gene7-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to synthesis & ap review?',
+            question: 'Regarding Gene Regulation: Synthesis & AP Review, which correctly describes Epigenetics as a growing field?',
             options: [
+              'Operons on the AP exam',
               'Epigenetics as a growing field',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'DNA → RNA → protein',
+              'Dysregulation and disease (cancer)'
             ],
-            correctAnswer: 0,
-            explanation: 'Epigenetics as a growing field'
+            correctAnswer: 1,
+            explanation: 'Correct — Epigenetics as a growing field. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioGeneRegPart7Data = {
       id: 'gene7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Regulation at every level is important in synthesis & ap review because',
-            options: ['DNA → RNA → protein', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Regulation at every level',
+            options: ['DNA → RNA → protein', 'Operons on the AP exam', 'Epigenetics as a growing field', 'Dysregulation and disease (cancer)']
           },
           {
-            label: 'Dysregulation and disease (cancer) is important in synthesis & ap review because',
-            options: ['Dysregulation and disease (cancer)', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Dysregulation and disease (cancer)',
+            options: ['DNA → RNA → protein', 'Epigenetics as a growing field', 'Dysregulation and disease (cancer)', 'Operons on the AP exam']
           },
           {
-            label: 'Operons on the AP exam is important in synthesis & ap review because',
-            options: ['Operons on the AP exam', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Operons on the AP exam',
+            options: ['Operons on the AP exam', 'Dysregulation and disease (cancer)', 'DNA → RNA → protein', 'Epigenetics as a growing field']
           }
         ],
         correctAnswers: ['DNA → RNA → protein', 'Dysregulation and disease (cancer)', 'Operons on the AP exam'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Synthesis & AP Review.'
+        hint1: 'Think about what each concept specifically describes in Gene Regulation: Synthesis & AP Review.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Gene Regulation: Synthesis & AP Review describes a specific idea. Regulation at every level: DNA → RNA → protein. Dysregulation and disease (cancer). Operons on the AP exam.'
       }
     }
   ]

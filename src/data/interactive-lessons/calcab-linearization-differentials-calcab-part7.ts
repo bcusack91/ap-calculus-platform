@@ -30,31 +30,31 @@ Other indeterminate forms (0·∞, ∞-∞, 0⁰, ∞⁰, 1^∞) must be convert
       id: 'linea7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of review & applications?',
+            question: 'Which of the following correctly describes L\'Hôpital\'s Rule?',
             options: [
-              'L\'Hôpital\'s Rule',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'Other indeterminate forms (0·∞, ∞-∞, 0⁰, ∞⁰, 1^∞) must be converted first',
+              'May need to apply multiple times',
+              'Only apply when the limit is an indeterminate form',
+              'for 0/0 or ∞/∞ indeterminate forms, lim f(x)/g(x) = lim f\'(x)/g\'(x)'
             ],
-            correctAnswer: 0,
-            explanation: 'L\'Hôpital\'s Rule: for 0/0 or ∞/∞ indeterminate forms, lim f(x)/g(x) = lim f\'(x)/g\'(x)'
+            correctAnswer: 3,
+            explanation: 'Correct — L\'Hôpital\'s Rule: for 0/0 or ∞/∞ indeterminate forms, lim f(x)/g(x) = lim f\'(x)/g\'(x). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of review & applications, which is accurate?',
+            question: 'Select the statement that correctly describes May need to apply multiple times:',
             options: [
-              'May need to apply multiple times',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Only apply when the limit is an indeterminate form',
+              'for 0/0 or ∞/∞ indeterminate forms, lim f(x)/g(x) = lim f\'(x)/g\'(x)',
+              'Other indeterminate forms (0·∞, ∞-∞, 0⁰, ∞⁰, 1^∞) must be converted first',
+              'May need to apply multiple times'
             ],
-            correctAnswer: 0,
-            explanation: 'May need to apply multiple times'
+            correctAnswer: 3,
+            explanation: 'Correct — May need to apply multiple times. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Other indeterminate forms (0·∞, ∞-∞, 0⁰, ∞⁰, 1^∞) must be convert
       id: 'linea7-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to review & applications?',
+            question: 'Regarding Review & Applications, which correctly describes Other indeterminate forms (0·∞, ∞-∞,…?',
             options: [
+              'Only apply when the limit is an indeterminate form',
+              'May need to apply multiple times',
               'Other indeterminate forms (0·∞, ∞-∞, 0⁰, ∞⁰, 1^∞) must be converted first',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'for 0/0 or ∞/∞ indeterminate forms, lim f(x)/g(x) = lim f\'(x)/g\'(x)'
             ],
-            correctAnswer: 0,
-            explanation: 'Other indeterminate forms (0·∞, ∞-∞, 0⁰, ∞⁰, 1^∞) must be converted first'
+            correctAnswer: 2,
+            explanation: 'Correct — Other indeterminate forms (0·∞, ∞-∞, 0⁰, ∞⁰, 1^∞) must be converted first. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Other indeterminate forms (0·∞, ∞-∞, 0⁰, ∞⁰, 1^∞) must be convert
       id: 'linea7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'L\'Hôpital\'s Rule',
-            options: ['for 0/0 or ∞/∞ indeterminate forms, lim f(x)/g(x) ', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['May need to apply multiple times', 'Other indeterminate forms (0·∞, ∞-∞, 0⁰, ∞⁰, 1^∞) must be converted first', 'Only apply when the limit is an indeterminate form', 'for 0/0 or ∞/∞ indeterminate forms, lim f(x)/g(x) = lim f\'(x)/g\'(x)']
           },
           {
-            label: 'Only apply when the limit is an indeterminate form',
-            options: ['Only apply when the limit is an indeterminate form', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Only apply when the limit is an…',
+            options: ['Only apply when the limit is an indeterminate form', 'Other indeterminate forms (0·∞, ∞-∞, 0⁰, ∞⁰, 1^∞) must be converted first', 'May need to apply multiple times', 'for 0/0 or ∞/∞ indeterminate forms, lim f(x)/g(x) = lim f\'(x)/g\'(x)']
           },
           {
             label: 'May need to apply multiple times',
-            options: ['May need to apply multiple times', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Only apply when the limit is an indeterminate form', 'May need to apply multiple times', 'Other indeterminate forms (0·∞, ∞-∞, 0⁰, ∞⁰, 1^∞) must be converted first', 'for 0/0 or ∞/∞ indeterminate forms, lim f(x)/g(x) = lim f\'(x)/g\'(x)']
           }
         ],
-        correctAnswers: ['for 0/0 or ∞/∞ indeterminate forms, lim f(x)/g(x) ', 'Only apply when the limit is an indeterminate form', 'May need to apply multiple times'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Review & Applications.'
+        correctAnswers: ['for 0/0 or ∞/∞ indeterminate forms, lim f(x)/g(x) = lim f\'(x)/g\'(x)', 'Only apply when the limit is an indeterminate form', 'May need to apply multiple times'],
+        hint1: 'Think about what each concept specifically describes in Review & Applications.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Review & Applications describes a specific idea. L\'Hôpital\'s Rule: for 0/0 or ∞/∞ indeterminate forms, lim f(x)/g(x) = lim f\'(x)/g\'(x). Only apply when the limit is an indeterminate form. May need to apply multiple times.'
       }
     }
   ]

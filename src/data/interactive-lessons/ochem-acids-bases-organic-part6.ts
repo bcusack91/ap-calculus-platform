@@ -30,31 +30,31 @@ Analyzing effects of substituents on acidity
       id: 'acids6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of problem-solving workshop?',
+            question: 'Which of the following correctly describes Ranking acids by pKa?',
             options: [
+              'Analyzing effects of substituents on acidity',
+              'Drawing curved arrow mechanisms',
               'Ranking acids by pKa',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'Predicting products of acid-base reactions'
             ],
-            correctAnswer: 0,
-            explanation: 'Ranking acids by pKa'
+            correctAnswer: 2,
+            explanation: 'Correct — Ranking acids by pKa. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of problem-solving workshop, which is accurate?',
+            question: 'Which of the following is true about Drawing curved arrow mechanisms?',
             options: [
-              'Drawing curved arrow mechanisms',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Predicting products of acid-base reactions',
+              'Analyzing effects of substituents on acidity',
+              'Ranking acids by pKa',
+              'Drawing curved arrow mechanisms'
             ],
-            correctAnswer: 0,
-            explanation: 'Drawing curved arrow mechanisms'
+            correctAnswer: 3,
+            explanation: 'Correct — Drawing curved arrow mechanisms. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Analyzing effects of substituents on acidity
       id: 'acids6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Ranking acids by pKa',
-            options: ['Ranking acids by pKa', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Ranking acids by pKa', 'Analyzing effects of substituents on acidity', 'Predicting products of acid-base reactions', 'Drawing curved arrow mechanisms']
           },
           {
-            label: 'Predicting products of acid-base reactions',
-            options: ['Predicting products of acid-base reactions', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Predicting products of acid-base…',
+            options: ['Drawing curved arrow mechanisms', 'Predicting products of acid-base reactions', 'Analyzing effects of substituents on acidity', 'Ranking acids by pKa']
           },
           {
             label: 'Drawing curved arrow mechanisms',
-            options: ['Drawing curved arrow mechanisms', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Predicting products of acid-base reactions', 'Drawing curved arrow mechanisms', 'Ranking acids by pKa', 'Analyzing effects of substituents on acidity']
           }
         ],
         correctAnswers: ['Ranking acids by pKa', 'Predicting products of acid-base reactions', 'Drawing curved arrow mechanisms'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving Workshop.'
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Ranking acids by pKa. Predicting products of acid-base reactions. Drawing curved arrow mechanisms.'
       }
     }
   ]

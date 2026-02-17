@@ -30,31 +30,31 @@ Works only on closed, bounded intervals
       id: 'optim3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of closed interval method?',
+            question: 'What does "Extreme Value Theorem" refer to in calculus?',
             options: [
-              'Extreme Value Theorem',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'Evaluate f at all critical points in (a,b) and at endpoints a and b',
+              'The largest value is the global maximum; the smallest is the global minimum',
+              'a continuous function on [a,b] attains a global max and min',
+              'Works only on closed, bounded intervals'
             ],
-            correctAnswer: 0,
-            explanation: 'Extreme Value Theorem: a continuous function on [a,b] attains a global max and min'
+            correctAnswer: 2,
+            explanation: 'Correct — Extreme Value Theorem: a continuous function on [a,b] attains a global max and min. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of closed interval method, which is accurate?',
+            question: 'Which of the following is true about The largest value is the global…?',
             options: [
+              'a continuous function on [a,b] attains a global max and min',
               'The largest value is the global maximum; the smallest is the global minimum',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Works only on closed, bounded intervals',
+              'Evaluate f at all critical points in (a,b) and at endpoints a and b'
             ],
-            correctAnswer: 0,
-            explanation: 'The largest value is the global maximum; the smallest is the global minimum'
+            correctAnswer: 1,
+            explanation: 'Correct — The largest value is the global maximum; the smallest is the global minimum. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Works only on closed, bounded intervals
       id: 'optim3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to closed interval method?',
+            question: 'Regarding Closed Interval Method, which correctly describes Works only on closed, bounded intervals?',
             options: [
+              'Evaluate f at all critical points in (a,b) and at endpoints a and b',
+              'The largest value is the global maximum; the smallest is the global minimum',
               'Works only on closed, bounded intervals',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'a continuous function on [a,b] attains a global max and min'
             ],
-            correctAnswer: 0,
-            explanation: 'Works only on closed, bounded intervals'
+            correctAnswer: 2,
+            explanation: 'Correct — Works only on closed, bounded intervals. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Works only on closed, bounded intervals
       id: 'optim3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Extreme Value Theorem',
-            options: ['a continuous function on [a,b] attains a global ma', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Works only on closed, bounded intervals', 'a continuous function on [a,b] attains a global max and min', 'The largest value is the global maximum; the smallest is the global minimum', 'Evaluate f at all critical points in (a,b) and at endpoints a and b']
           },
           {
-            label: 'Evaluate f at all critical points in (a,b) and at endpoints a and b',
-            options: ['Evaluate f at all critical points in (a,b) and at ', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Evaluate f at all critical points in…',
+            options: ['The largest value is the global maximum; the smallest is the global minimum', 'a continuous function on [a,b] attains a global max and min', 'Evaluate f at all critical points in (a,b) and at endpoints a and b', 'Works only on closed, bounded intervals']
           },
           {
-            label: 'The largest value is the global maximum; the smallest is the global minimum',
-            options: ['The largest value is the global maximum; the small', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'The largest value is the global…',
+            options: ['a continuous function on [a,b] attains a global max and min', 'Evaluate f at all critical points in (a,b) and at endpoints a and b', 'The largest value is the global maximum; the smallest is the global minimum', 'Works only on closed, bounded intervals']
           }
         ],
-        correctAnswers: ['a continuous function on [a,b] attains a global ma', 'Evaluate f at all critical points in (a,b) and at ', 'The largest value is the global maximum; the small'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Closed Interval Method.'
+        correctAnswers: ['a continuous function on [a,b] attains a global max and min', 'Evaluate f at all critical points in (a,b) and at endpoints a and b', 'The largest value is the global maximum; the smallest is the global minimum'],
+        hint1: 'Think about what each concept specifically describes in Closed Interval Method.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Closed Interval Method describes a specific idea. Extreme Value Theorem: a continuous function on [a,b] attains a global max and min. Evaluate f at all critical points in (a,b) and at endpoints a and b. The largest value is the global maximum; the smallest is the global minimum.'
       }
     }
   ]

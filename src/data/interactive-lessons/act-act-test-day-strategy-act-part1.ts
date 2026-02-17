@@ -18,20 +18,31 @@ Total: ~2 hours 55 minutes (without Writing) or ~3 hours 35 minutes (with Writin
       id: 'act-t1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes 4 sections?',
+            question: 'What does "4 sections" refer to in ACT prep?',
             options: [
-              '4 sections is a key concept for ACT Math',
-              'Total: ~2 hours 55 minutes (without Writing) or ~3 hours 35 minutes (with Writing)',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              '10-minute break between Math and Reading; 5-minute break between Reading and Science.',
+              'Register at act.org — check deadlines for your preferred test date.',
+              '~2 hours 55 minutes (without Writing) or ~3 hours 35 minutes (with Writing).',
+              'English (45 min), Math (60 min), Reading (35 min), Science (35 min) + optional Writing (40 min).'
             ],
-            correctAnswer: 0,
-            explanation: '4 sections: English (45 min), Math (60 min), Reading (35 min), Science (35 min) + optional Writing (40 min)'
+            correctAnswer: 3,
+            explanation: 'Correct — 4 sections: English (45 min), Math (60 min), Reading (35 min), Science (35 min) + optional Writing (40 min). The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              'Register at act.org — check deadlines for your preferred test date.',
+              '~2 hours 55 minutes (without Writing) or ~3 hours 35 minutes (with Writing).',
+              '10-minute break between Math and Reading; 5-minute break between Reading and Science.',
+              'English (45 min), Math (60 min), Reading (35 min), Science (35 min) + optional Writing (40 min).'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Key Insight: 10-minute break between Math and Reading; 5-minute break between Reading and Science. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Total: ~2 hours 55 minutes (without Writing) or ~3 hours 35 minutes (with Writin
       id: 'act-t1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for test format & registration?',
+            question: 'Which of these accurately represents ACT Tip?',
             options: [
-              '10-minute break between Math and Reading; 5-minute break between Reading and Science',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'English (45 min), Math (60 min), Reading (35 min), Science (35 min) + optional Writing (40 min).',
+              'Register at act.org — check deadlines for your preferred test date.',
+              '~2 hours 55 minutes (without Writing) or ~3 hours 35 minutes (with Writing).',
+              '10-minute break between Math and Reading; 5-minute break between Reading and Science.'
             ],
-            correctAnswer: 0,
-            explanation: '10-minute break between Math and Reading; 5-minute break between Reading and Science'
+            correctAnswer: 1,
+            explanation: 'Correct — ACT Tip: Register at act.org — check deadlines for your preferred test date. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Total: ~2 hours 55 minutes (without Writing) or ~3 hours 35 minutes (with Writin
       id: 'act-t1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Test Format & Registration:',
-            options: ['4 sections: English (45 min), Math (60 min), Readi', 'Total: ~2 hours 55 minutes (without Writing) or ~3', 'Not applicable', 'None of these']
+            label: '4 sections',
+            options: ['~2 hours 55 minutes (without Writing) or ~3 hours 35 minutes (with Writing).', 'English (45 min), Math (60 min), Reading (35 min), Science (35 min) + optional Writing (40 min).', '10-minute break between Math and Reading; 5-minute break between Reading and Science.', 'Register at act.org — check deadlines for your preferred test date.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['10-minute break between Math and Reading; 5-minute', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Total',
+            options: ['10-minute break between Math and Reading; 5-minute break between Reading and Science.', 'Register at act.org — check deadlines for your preferred test date.', '~2 hours 55 minutes (without Writing) or ~3 hours 35 minutes (with Writing).', 'English (45 min), Math (60 min), Reading (35 min), Science (35 min) + optional Writing (40 min).']
+          },
+          {
+            label: 'Key Insight',
+            options: ['Register at act.org — check deadlines for your preferred test date.', '~2 hours 55 minutes (without Writing) or ~3 hours 35 minutes (with Writing).', '10-minute break between Math and Reading; 5-minute break between Reading and Science.', 'English (45 min), Math (60 min), Reading (35 min), Science (35 min) + optional Writing (40 min).']
           }
         ],
-        correctAnswers: ['4 sections: English (45 min), Math (60 min), Readi', '10-minute break between Math and Reading; 5-minute'],
-        hint1: 'Think about test format & registration',
-        hint2: 'Consider the best ACT strategy',
-        explanation: '4 sections: English (45 min), Math (60 min), Reading (35 min), Science (35 min) + optional Writing (40 min). 10-minute break between Math and Reading; 5-minute break between Reading and Science.'
+        correctAnswers: ['English (45 min), Math (60 min), Reading (35 min), Science (35 min) + optional Writing (40 min).', '~2 hours 55 minutes (without Writing) or ~3 hours 35 minutes (with Writing).', '10-minute break between Math and Reading; 5-minute break between Reading and Science.'],
+        hint1: 'Think about what each concept specifically describes in Test Day Strategy.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Test Day Strategy describes a specific idea. 4 sections: English (45 min), Math (60 min), Reading (35 min), Science (35 min) + optional Writing (40 min). Total: ~2 hours 55 minutes (without Writing) or ~3 hours 35 minutes (with Writing). Key Insight: 10-minute break between Math and Reading; 5-minute break between Reading and Science.'
       }
     }
   ]

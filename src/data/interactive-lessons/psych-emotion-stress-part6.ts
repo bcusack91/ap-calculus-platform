@@ -30,31 +30,31 @@ Analyzing stress and health connections
       id: 'emoti6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of problem-solving workshop?',
-            options: [
-              'Comparing emotion theories using scenarios',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
-            ],
-            correctAnswer: 0,
-            explanation: 'Comparing emotion theories using scenarios'
-          },
-          {
-            question: 'In the context of problem-solving workshop, which is accurate?',
+            question: 'Which statement accurately explains Comparing emotion theories using…?',
             options: [
               'Evaluating coping strategies',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Comparing emotion theories using scenarios',
+              'Identifying stress responses',
+              'Analyzing stress and health connections'
             ],
-            correctAnswer: 0,
-            explanation: 'Evaluating coping strategies'
+            correctAnswer: 1,
+            explanation: 'Correct — Comparing emotion theories using scenarios. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Problem-Solving Workshop, which explains Evaluating coping strategies?',
+            options: [
+              'Analyzing stress and health connections',
+              'Comparing emotion theories using scenarios',
+              'Identifying stress responses',
+              'Evaluating coping strategies'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Evaluating coping strategies. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Analyzing stress and health connections
       id: 'emoti6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Comparing emotion theories using scenarios',
-            options: ['Comparing emotion theories using scenarios', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            label: 'Comparing emotion theories using…',
+            options: ['Identifying stress responses', 'Comparing emotion theories using scenarios', 'Evaluating coping strategies', 'Analyzing stress and health connections']
           },
           {
             label: 'Identifying stress responses',
-            options: ['Identifying stress responses', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Identifying stress responses', 'Analyzing stress and health connections', 'Comparing emotion theories using scenarios', 'Evaluating coping strategies']
           },
           {
             label: 'Evaluating coping strategies',
-            options: ['Evaluating coping strategies', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Identifying stress responses', 'Evaluating coping strategies', 'Analyzing stress and health connections', 'Comparing emotion theories using scenarios']
           }
         ],
         correctAnswers: ['Comparing emotion theories using scenarios', 'Identifying stress responses', 'Evaluating coping strategies'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving Workshop.'
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Comparing emotion theories using scenarios. Identifying stress responses. Evaluating coping strategies.'
       }
     }
   ]

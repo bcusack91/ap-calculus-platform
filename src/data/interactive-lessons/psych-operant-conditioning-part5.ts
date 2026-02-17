@@ -30,31 +30,31 @@ treating autism
       id: 'opera5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of shaping & chaining?',
-            options: [
-              'Shaping',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
-            ],
-            correctAnswer: 0,
-            explanation: 'Shaping: reinforcing successive approximations'
-          },
-          {
-            question: 'In the context of shaping & chaining, which is accurate?',
+            question: 'Which of the following correctly describes Shaping?',
             options: [
               'secondary reinforcers exchangeable for primary',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'treating autism',
+              'reinforcing successive approximations',
+              'Used to teach complex behaviors'
             ],
-            correctAnswer: 0,
-            explanation: 'Token economy: secondary reinforcers exchangeable for primary'
+            correctAnswer: 2,
+            explanation: 'Correct — Shaping: reinforcing successive approximations. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Shaping & Chaining, which explains Token economy?',
+            options: [
+              'reinforcing successive approximations',
+              'secondary reinforcers exchangeable for primary',
+              'Used to teach complex behaviors',
+              'treating autism'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Token economy: secondary reinforcers exchangeable for primary. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ treating autism
       id: 'opera5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Shaping',
-            options: ['reinforcing successive approximations', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
-          },
-          {
-            label: 'Used to teach complex behaviors',
-            options: ['Used to teach complex behaviors', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['secondary reinforcers exchangeable for primary', 'treating autism', 'Used to teach complex behaviors', 'reinforcing successive approximations']
           },
           {
             label: 'Token economy',
-            options: ['secondary reinforcers exchangeable for primary', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Used to teach complex behaviors', 'secondary reinforcers exchangeable for primary', 'treating autism', 'reinforcing successive approximations']
+          },
+          {
+            label: 'Applied behavior analysis (ABA)',
+            options: ['reinforcing successive approximations', 'treating autism', 'secondary reinforcers exchangeable for primary', 'Used to teach complex behaviors']
           }
         ],
-        correctAnswers: ['reinforcing successive approximations', 'Used to teach complex behaviors', 'secondary reinforcers exchangeable for primary'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Shaping & Chaining.'
+        correctAnswers: ['reinforcing successive approximations', 'secondary reinforcers exchangeable for primary', 'treating autism'],
+        hint1: 'Think about what each concept specifically describes in Shaping & Chaining.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Shaping & Chaining describes a specific idea. Shaping: reinforcing successive approximations. Token economy: secondary reinforcers exchangeable for primary. Applied behavior analysis (ABA): treating autism.'
       }
     }
   ]

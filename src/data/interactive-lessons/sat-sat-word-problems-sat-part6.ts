@@ -18,20 +18,31 @@ Identify what you're solving for.
       id: 'sat-w6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes read the entire problem before starting?',
+            question: 'What does "Read the entire problem before starting." refer to in SAT prep?',
             options: [
-              'Read the entire problem before starting is a fundamental concept in SAT Math',
-              'Identify what youre solving for',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'Set up equations, then solve systematically.',
+              'Check: does your answer make sense? Are units correct?.',
+              'Read the entire problem before starting.',
+              'Identify what you\'re solving for.'
             ],
-            correctAnswer: 0,
-            explanation: 'Read the entire problem before starting'
+            correctAnswer: 2,
+            explanation: 'Correct — Read the entire problem before starting. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Key Insight?',
+            options: [
+              'Check: does your answer make sense? Are units correct?.',
+              'Set up equations, then solve systematically.',
+              'Identify what you\'re solving for.',
+              'Read the entire problem before starting.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Key Insight: Set up equations, then solve systematically. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Identify what you're solving for.
       id: 'sat-w6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for problem-solving workshop?',
+            question: 'Which statement about SAT Tip is correct?',
             options: [
-              'Set up equations, then solve systematically',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'Identify what you\'re solving for.',
+              'Read the entire problem before starting.',
+              'Check: does your answer make sense? Are units correct?.',
+              'Set up equations, then solve systematically.'
             ],
-            correctAnswer: 0,
-            explanation: 'Set up equations, then solve systematically'
+            correctAnswer: 2,
+            explanation: 'Correct — SAT Tip: Check: does your answer make sense? Are units correct?. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ Identify what you're solving for.
       id: 'sat-w6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Problem-Solving Workshop:',
-            options: ['Read the entire problem before starting', 'Identify what you\'re solving for', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['Check: does your answer make sense? Are units correct?.', 'Read the entire problem before starting.', 'Identify what you\'re solving for.', 'Set up equations, then solve systematically.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Set up equations, then solve systematically', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'SAT Tip',
+            options: ['Read the entire problem before starting.', 'Identify what you\'re solving for.', 'Set up equations, then solve systematically.', 'Check: does your answer make sense? Are units correct?.']
           }
         ],
-        correctAnswers: ['Read the entire problem before starting', 'Set up equations, then solve systematically'],
-        hint1: 'Think about problem-solving workshop',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'Read the entire problem before starting. Set up equations, then solve systematically.'
+        correctAnswers: ['Set up equations, then solve systematically.', 'Check: does your answer make sense? Are units correct?.'],
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Key Insight: Set up equations, then solve systematically. SAT Tip: Check: does your answer make sense? Are units correct?.'
       }
     }
   ]

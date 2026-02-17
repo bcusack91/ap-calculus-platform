@@ -19,31 +19,31 @@ export const bioEvidencePart5Data = {
       id: 'evid5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes antibiotic resistance in bacteria?',
+            question: 'What does "Antibiotic resistance in bacteria" refer to in biology?',
             options: [
+              'Pesticide resistance in insects',
+              'Artificial selection demonstrates selection principle',
               'Antibiotic resistance in bacteria',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Darwin\'s finch beak changes during drought'
             ],
-            correctAnswer: 0,
-            explanation: 'Antibiotic resistance in bacteria'
+            correctAnswer: 2,
+            explanation: 'Correct — Antibiotic resistance in bacteria. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of direct observation, which statement is accurate?',
+            question: 'Which of the following is true about Darwin\'s finch beak changes during…?',
             options: [
+              'Pesticide resistance in insects',
+              'Antibiotic resistance in bacteria',
               'Darwin\'s finch beak changes during drought',
-              'airetcab ni ecnatsiser citoibitnA',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Artificial selection demonstrates selection principle'
             ],
-            correctAnswer: 0,
-            explanation: 'Darwin\'s finch beak changes during drought'
+            correctAnswer: 2,
+            explanation: 'Correct — Darwin\'s finch beak changes during drought. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioEvidencePart5Data = {
       id: 'evid5-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to direct observation?',
+            question: 'Regarding Direct Observation, which correctly describes Artificial selection demonstrates…?',
             options: [
               'Artificial selection demonstrates selection principle',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Darwin\'s finch beak changes during drought',
+              'Antibiotic resistance in bacteria',
+              'Pesticide resistance in insects'
             ],
             correctAnswer: 0,
-            explanation: 'Artificial selection demonstrates selection principle'
+            explanation: 'Correct — Artificial selection demonstrates selection principle. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioEvidencePart5Data = {
       id: 'evid5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Antibiotic resistance in bacteria is important in direct observation because',
-            options: ['Antibiotic resistance in bacteria', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Antibiotic resistance in bacteria',
+            options: ['Pesticide resistance in insects', 'Antibiotic resistance in bacteria', 'Darwin\'s finch beak changes during drought', 'Artificial selection demonstrates selection principle']
           },
           {
-            label: 'Pesticide resistance in insects is important in direct observation because',
-            options: ['Pesticide resistance in insects', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Pesticide resistance in insects',
+            options: ['Darwin\'s finch beak changes during drought', 'Pesticide resistance in insects', 'Antibiotic resistance in bacteria', 'Artificial selection demonstrates selection principle']
           },
           {
-            label: 'Darwin\'s finch beak changes during drought is important in direct observation because',
-            options: ['Darwin\'s finch beak changes during drought', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Darwin\'s finch beak changes during…',
+            options: ['Darwin\'s finch beak changes during drought', 'Antibiotic resistance in bacteria', 'Artificial selection demonstrates selection principle', 'Pesticide resistance in insects']
           }
         ],
         correctAnswers: ['Antibiotic resistance in bacteria', 'Pesticide resistance in insects', 'Darwin\'s finch beak changes during drought'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Direct Observation.'
+        hint1: 'Think about what each concept specifically describes in Direct Observation.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Direct Observation describes a specific idea. Antibiotic resistance in bacteria. Pesticide resistance in insects. Darwin\'s finch beak changes during drought.'
       }
     }
   ]

@@ -71,23 +71,28 @@ Right-hand rule: point fingers in direction of v, curl toward B, thumb points to
       id: 'mcat-3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Magnetism & EM Induction:',
-            options: ['Moving charges create magnetic fields; F = qvB sin(theta) — ', 'Right-hand rule: point fingers in direction of v, curl towar', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Right-hand rule',
+            options: ['point fingers in direction of v, curl toward B, thumb points to F (for positive charge).', 'Faradays law: changing magnetic flux induces EMF; Lenzs law: induced current opposes the change.', 'Electromagnetic spectrum: radio, microwave, IR, visible, UV, X-ray, gamma — increasing frequency/energy.', 'Moving charges create magnetic fields; F = qvB sin(theta) — force on a moving charge.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Faradays law: changing magnetic flux induces EMF; Lenzs law:', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Key Insight',
+            options: ['Moving charges create magnetic fields; F = qvB sin(theta) — force on a moving charge.', 'Electromagnetic spectrum: radio, microwave, IR, visible, UV, X-ray, gamma — increasing frequency/energy.', 'point fingers in direction of v, curl toward B, thumb points to F (for positive charge).', 'Faradays law: changing magnetic flux induces EMF; Lenzs law: induced current opposes the change.']
+          },
+          {
+            label: 'MCAT Tip',
+            options: ['Moving charges create magnetic fields; F = qvB sin(theta) — force on a moving charge.', 'point fingers in direction of v, curl toward B, thumb points to F (for positive charge).', 'Electromagnetic spectrum: radio, microwave, IR, visible, UV, X-ray, gamma — increasing frequency/energy.', 'Faradays law: changing magnetic flux induces EMF; Lenzs law: induced current opposes the change.']
           }
         ],
-        correctAnswers: ['Moving charges create magnetic fields; F = qvB sin(theta) — ', 'Faradays law: changing magnetic flux induces EMF; Lenzs law:'],
-        hint1: 'Think about magnetism & em induction',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Moving charges create magnetic fields; F = qvB sin(theta) — force on a moving charge. Faradays law: changing magnetic flux induces EMF; Lenzs law: induced current opposes the change.'
+        correctAnswers: ['point fingers in direction of v, curl toward B, thumb points to F (for positive charge).', 'Faradays law: changing magnetic flux induces EMF; Lenzs law: induced current opposes the change.', 'Electromagnetic spectrum: radio, microwave, IR, visible, UV, X-ray, gamma — increasing frequency/energy.'],
+        hint1: 'Think about what each concept specifically describes in Magnetism & EM Induction.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Magnetism & EM Induction describes a specific idea. Right-hand rule: point fingers in direction of v, curl toward B, thumb points to F (for positive charge). Key Insight: Faradays law: changing magnetic flux induces EMF; Lenzs law: induced current opposes the change. MCAT Tip: Electromagnetic spectrum: radio, microwave, IR, visible, UV, X-ray, gamma — increasing frequency/energy.'
       }
     }
   ]

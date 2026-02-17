@@ -18,20 +18,31 @@ Simplify by factoring out perfect squares.
       id: 'act-i3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes √(ab) = √a · √b; √(a/b) = √a/√b?',
+            question: 'What does "√(ab) = √a · √b; √(a/b) = √a/√b." refer to in ACT prep?',
             options: [
-              '√(ab) = √a · √b; √(a/b) = √a/√b is a key concept for ACT Math',
-              'Simplify by factoring out perfect squares',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'Simplify by factoring out perfect squares.',
+              'Cannot add unlike radicals: √2 + √3 ≠ √5.',
+              'Rationalize denominators: multiply by √n/√n.',
+              '√(ab) = √a · √b; √(a/b) = √a/√b.'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — √(ab) = √a · √b; √(a/b) = √a/√b. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Radical Expressions, which explains Key Insight?',
+            options: [
+              'Rationalize denominators: multiply by √n/√n.',
+              'Cannot add unlike radicals: √2 + √3 ≠ √5.',
+              'Simplify by factoring out perfect squares.',
+              '√(ab) = √a · √b; √(a/b) = √a/√b.'
             ],
             correctAnswer: 0,
-            explanation: '√(ab) = √a · √b; √(a/b) = √a/√b'
+            explanation: 'Correct — Key Insight: Rationalize denominators: multiply by √n/√n. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Simplify by factoring out perfect squares.
       id: 'act-i3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for radical expressions?',
+            question: 'Which statement about ACT Tip is correct?',
             options: [
-              'Rationalize denominators: multiply by √n/√n',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Rationalize denominators: multiply by √n/√n.',
+              'Simplify by factoring out perfect squares.',
+              '√(ab) = √a · √b; √(a/b) = √a/√b.',
+              'Cannot add unlike radicals: √2 + √3 ≠ √5.'
             ],
-            correctAnswer: 0,
-            explanation: 'Rationalize denominators: multiply by √n/√n'
+            correctAnswer: 3,
+            explanation: 'Correct — ACT Tip: Cannot add unlike radicals: √2 + √3 ≠ √5. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ Simplify by factoring out perfect squares.
       id: 'act-i3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Radical Expressions:',
-            options: ['√(ab) = √a · √b; √(a/b) = √a/√b', 'Simplify by factoring out perfect squares', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['√(ab) = √a · √b; √(a/b) = √a/√b.', 'Rationalize denominators: multiply by √n/√n.', 'Cannot add unlike radicals: √2 + √3 ≠ √5.', 'Simplify by factoring out perfect squares.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Rationalize denominators: multiply by √n/√n', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'ACT Tip',
+            options: ['√(ab) = √a · √b; √(a/b) = √a/√b.', 'Rationalize denominators: multiply by √n/√n.', 'Simplify by factoring out perfect squares.', 'Cannot add unlike radicals: √2 + √3 ≠ √5.']
           }
         ],
-        correctAnswers: ['√(ab) = √a · √b; √(a/b) = √a/√b', 'Rationalize denominators: multiply by √n/√n'],
-        hint1: 'Think about radical expressions',
-        hint2: 'Consider the best ACT strategy',
-        explanation: '√(ab) = √a · √b; √(a/b) = √a/√b. Rationalize denominators: multiply by √n/√n.'
+        correctAnswers: ['Rationalize denominators: multiply by √n/√n.', 'Cannot add unlike radicals: √2 + √3 ≠ √5.'],
+        hint1: 'Think about what each concept specifically describes in Radical Expressions.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Radical Expressions describes a specific idea. Key Insight: Rationalize denominators: multiply by √n/√n. ACT Tip: Cannot add unlike radicals: √2 + √3 ≠ √5.'
       }
     }
   ]

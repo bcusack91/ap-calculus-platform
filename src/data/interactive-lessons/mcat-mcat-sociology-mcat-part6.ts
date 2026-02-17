@@ -71,23 +71,28 @@ Urbanization: movement to cities; impacts health, social networks, and resource 
       id: 'mcat-6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Demographics & Population:',
-            options: ['Demographic transition: pre-industrial (high birth/death), t', 'Urbanization: movement to cities; impacts health, social net', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Demographic transition',
+            options: ['Globalization: increased interconnection affects disease spread, economic opportunity, and cultural change.', 'movement to cities; impacts health, social networks, and resource distribution.', 'Fertility rate, mortality rate, and migration determine population growth.', 'pre-industrial (high birth/death), transitional, industrial (low birth/death).']
           },
           {
-            label: 'MCAT application:',
-            options: ['Globalization: increased interconnection affects disease spr', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Urbanization',
+            options: ['Globalization: increased interconnection affects disease spread, economic opportunity, and cultural change.', 'Fertility rate, mortality rate, and migration determine population growth.', 'pre-industrial (high birth/death), transitional, industrial (low birth/death).', 'movement to cities; impacts health, social networks, and resource distribution.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['movement to cities; impacts health, social networks, and resource distribution.', 'pre-industrial (high birth/death), transitional, industrial (low birth/death).', 'Globalization: increased interconnection affects disease spread, economic opportunity, and cultural change.', 'Fertility rate, mortality rate, and migration determine population growth.']
           }
         ],
-        correctAnswers: ['Demographic transition: pre-industrial (high birth/death), t', 'Globalization: increased interconnection affects disease spr'],
-        hint1: 'Think about demographics & population',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Demographic transition: pre-industrial (high birth/death), transitional, industrial (low birth/death). Globalization: increased interconnection affects disease spread, economic opportunity, and cultural change.'
+        correctAnswers: ['pre-industrial (high birth/death), transitional, industrial (low birth/death).', 'movement to cities; impacts health, social networks, and resource distribution.', 'Globalization: increased interconnection affects disease spread, economic opportunity, and cultural change.'],
+        hint1: 'Think about what each concept specifically describes in Demographics & Population.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Demographics & Population describes a specific idea. Demographic transition: pre-industrial (high birth/death), transitional, industrial (low birth/death). Urbanization: movement to cities; impacts health, social networks, and resource distribution. Key Insight: Globalization: increased interconnection affects disease spread, economic opportunity, and cultural change.'
       }
     }
   ]

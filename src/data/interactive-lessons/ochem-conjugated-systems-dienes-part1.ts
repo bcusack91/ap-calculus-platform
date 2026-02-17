@@ -30,31 +30,31 @@ Conjugated dienes are more stable than isolated dienes
       id: 'conju1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of conjugation & stability?',
+            question: 'Which statement accurately explains Conjugated dienes?',
             options: [
-              'Conjugated dienes',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'alternating single and double bonds',
+              'Conjugation stabilizes molecules through delocalization',
+              's-cis and s-trans conformations',
+              'Conjugated dienes are more stable than isolated dienes'
             ],
             correctAnswer: 0,
-            explanation: 'Conjugated dienes: alternating single and double bonds'
+            explanation: 'Correct — Conjugated dienes: alternating single and double bonds. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of conjugation & stability, which is accurate?',
+            question: 'In the context of ️ Conjugated Systems Dienes, which explains s-cis and s-trans conformations?',
             options: [
+              'Conjugated dienes are more stable than isolated dienes',
               's-cis and s-trans conformations',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'alternating single and double bonds',
+              'Conjugation stabilizes molecules through delocalization'
             ],
-            correctAnswer: 0,
-            explanation: 's-cis and s-trans conformations'
+            correctAnswer: 1,
+            explanation: 'Correct — s-cis and s-trans conformations. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Conjugated dienes are more stable than isolated dienes
       id: 'conju1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Conjugated dienes',
-            options: ['alternating single and double bonds', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['alternating single and double bonds', 's-cis and s-trans conformations', 'Conjugated dienes are more stable than isolated dienes', 'Conjugation stabilizes molecules through delocalization']
           },
           {
-            label: 'Conjugation stabilizes molecules through delocalization',
-            options: ['Conjugation stabilizes molecules through delocaliz', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Conjugation stabilizes molecules…',
+            options: ['s-cis and s-trans conformations', 'Conjugation stabilizes molecules through delocalization', 'Conjugated dienes are more stable than isolated dienes', 'alternating single and double bonds']
           },
           {
             label: 's-cis and s-trans conformations',
-            options: ['s-cis and s-trans conformations', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Conjugation stabilizes molecules through delocalization', 's-cis and s-trans conformations', 'Conjugated dienes are more stable than isolated dienes', 'alternating single and double bonds']
           }
         ],
-        correctAnswers: ['alternating single and double bonds', 'Conjugation stabilizes molecules through delocaliz', 's-cis and s-trans conformations'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Conjugation & Stability.'
+        correctAnswers: ['alternating single and double bonds', 'Conjugation stabilizes molecules through delocalization', 's-cis and s-trans conformations'],
+        hint1: 'Think about what each concept specifically describes in ️ Conjugated Systems Dienes.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in ️ Conjugated Systems Dienes describes a specific idea. Conjugated dienes: alternating single and double bonds. Conjugation stabilizes molecules through delocalization. s-cis and s-trans conformations.'
       }
     }
   ]

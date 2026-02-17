@@ -30,31 +30,31 @@ Each factor of Q contributes one or more partial fraction terms
       id: 'parti1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of partial fraction decomposition?',
-            options: [
-              'Partial fractions',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'Partial fractions: decompose P(x)/Q(x) into simpler fractions'
-          },
-          {
-            question: 'In the context of partial fraction decomposition, which is accurate?',
+            question: 'What does "Partial fractions" refer to in calculus?',
             options: [
               'Degree of P must be less than degree of Q (use long division if not)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Q(x) must be factored completely',
+              'Each factor of Q contributes one or more partial fraction terms',
+              'decompose P(x)/Q(x) into simpler fractions'
             ],
-            correctAnswer: 0,
-            explanation: 'Degree of P must be less than degree of Q (use long division if not)'
+            correctAnswer: 3,
+            explanation: 'Correct — Partial fractions: decompose P(x)/Q(x) into simpler fractions. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of ∮ Partial Fractions, which explains Degree of P must be less than degree of…?',
+            options: [
+              'decompose P(x)/Q(x) into simpler fractions',
+              'Each factor of Q contributes one or more partial fraction terms',
+              'Degree of P must be less than degree of Q (use long division if not)',
+              'Q(x) must be factored completely'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Degree of P must be less than degree of Q (use long division if not). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Each factor of Q contributes one or more partial fraction terms
       id: 'parti1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to partial fraction decomposition?',
+            question: 'Which statement about Each factor of Q contributes one or… is correct?',
             options: [
               'Each factor of Q contributes one or more partial fraction terms',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'Degree of P must be less than degree of Q (use long division if not)',
+              'decompose P(x)/Q(x) into simpler fractions',
+              'Q(x) must be factored completely'
             ],
             correctAnswer: 0,
-            explanation: 'Each factor of Q contributes one or more partial fraction terms'
+            explanation: 'Correct — Each factor of Q contributes one or more partial fraction terms. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Each factor of Q contributes one or more partial fraction terms
       id: 'parti1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Partial fractions',
-            options: ['decompose P(x)/Q(x) into simpler fractions', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['decompose P(x)/Q(x) into simpler fractions', 'Degree of P must be less than degree of Q (use long division if not)', 'Q(x) must be factored completely', 'Each factor of Q contributes one or more partial fraction terms']
           },
           {
             label: 'Q(x) must be factored completely',
-            options: ['Q(x) must be factored completely', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['decompose P(x)/Q(x) into simpler fractions', 'Q(x) must be factored completely', 'Degree of P must be less than degree of Q (use long division if not)', 'Each factor of Q contributes one or more partial fraction terms']
           },
           {
-            label: 'Degree of P must be less than degree of Q (use long division if not)',
-            options: ['Degree of P must be less than degree of Q (use lon', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Degree of P must be less than degree of…',
+            options: ['decompose P(x)/Q(x) into simpler fractions', 'Q(x) must be factored completely', 'Each factor of Q contributes one or more partial fraction terms', 'Degree of P must be less than degree of Q (use long division if not)']
           }
         ],
-        correctAnswers: ['decompose P(x)/Q(x) into simpler fractions', 'Q(x) must be factored completely', 'Degree of P must be less than degree of Q (use lon'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Partial Fraction Decomposition.'
+        correctAnswers: ['decompose P(x)/Q(x) into simpler fractions', 'Q(x) must be factored completely', 'Degree of P must be less than degree of Q (use long division if not)'],
+        hint1: 'Think about what each concept specifically describes in ∮ Partial Fractions.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in ∮ Partial Fractions describes a specific idea. Partial fractions: decompose P(x)/Q(x) into simpler fractions. Q(x) must be factored completely. Degree of P must be less than degree of Q (use long division if not).'
       }
     }
   ]

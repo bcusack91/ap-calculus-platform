@@ -18,20 +18,31 @@ Use TABLE feature to test values quickly.
       id: 'sat-c3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes graph functions to find intersections (solutions to systems)?',
+            question: 'What does "Graph functions to find intersections…" refer to in SAT prep?',
             options: [
-              'Graph functions to find intersections (solutions to systems) is a fundamental concept in SAT Math',
-              'Use TABLE feature to test values quickly',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'Store intermediate values in memory.',
+              'Graph functions to find intersections (solutions to systems).',
+              'Use TABLE feature to test values quickly.',
+              'Graph y = left side and y = right side to solve equations.'
             ],
-            correctAnswer: 0,
-            explanation: 'Graph functions to find intersections (solutions to systems)'
+            correctAnswer: 1,
+            explanation: 'Correct — Graph functions to find intersections (solutions to systems). The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              'Use TABLE feature to test values quickly.',
+              'Graph functions to find intersections (solutions to systems).',
+              'Store intermediate values in memory.',
+              'Graph y = left side and y = right side to solve equations.'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Key Insight: Store intermediate values in memory. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Use TABLE feature to test values quickly.
       id: 'sat-c3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for graphing calculator tricks?',
+            question: 'Regarding Graphing Calculator Tricks, which correctly describes SAT Tip?',
             options: [
-              'Store intermediate values in memory',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'Graph y = left side and y = right side to solve equations.',
+              'Use TABLE feature to test values quickly.',
+              'Store intermediate values in memory.',
+              'Graph functions to find intersections (solutions to systems).'
             ],
             correctAnswer: 0,
-            explanation: 'Store intermediate values in memory'
+            explanation: 'Correct — SAT Tip: Graph y = left side and y = right side to solve equations. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ Use TABLE feature to test values quickly.
       id: 'sat-c3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Graphing Calculator Tricks:',
-            options: ['Graph functions to find intersections (solutions t', 'Use TABLE feature to test values quickly', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['Store intermediate values in memory.', 'Graph functions to find intersections (solutions to systems).', 'Use TABLE feature to test values quickly.', 'Graph y = left side and y = right side to solve equations.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Store intermediate values in memory', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'SAT Tip',
+            options: ['Store intermediate values in memory.', 'Graph functions to find intersections (solutions to systems).', 'Use TABLE feature to test values quickly.', 'Graph y = left side and y = right side to solve equations.']
           }
         ],
-        correctAnswers: ['Graph functions to find intersections (solutions t', 'Store intermediate values in memory'],
-        hint1: 'Think about graphing calculator tricks',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'Graph functions to find intersections (solutions to systems). Store intermediate values in memory.'
+        correctAnswers: ['Store intermediate values in memory.', 'Graph y = left side and y = right side to solve equations.'],
+        hint1: 'Think about what each concept specifically describes in Graphing Calculator Tricks.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Graphing Calculator Tricks describes a specific idea. Key Insight: Store intermediate values in memory. SAT Tip: Graph y = left side and y = right side to solve equations.'
       }
     }
   ]

@@ -30,31 +30,31 @@ The graph of f⁻¹ is the reflection of f over the line y = x
       id: 'funct3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of inverse functions?',
+            question: 'Which of the following correctly describes f⁻¹ is the inverse function?',
             options: [
-              'f⁻¹ is the inverse function',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'The graph of f⁻¹ is the reflection of f over the line y = x',
+              'Only one-to-one functions have inverses',
+              'if any horizontal line crosses the graph more than once, no inverse exists',
+              'f⁻¹(f(x)) = x and f(f⁻¹(x)) = x'
             ],
-            correctAnswer: 0,
-            explanation: 'f⁻¹ is the inverse function: f⁻¹(f(x)) = x and f(f⁻¹(x)) = x'
+            correctAnswer: 3,
+            explanation: 'Correct — f⁻¹ is the inverse function: f⁻¹(f(x)) = x and f(f⁻¹(x)) = x. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of inverse functions, which is accurate?',
+            question: 'In the context of Inverse Functions, which explains Horizontal Line Test?',
             options: [
+              'The graph of f⁻¹ is the reflection of f over the line y = x',
               'if any horizontal line crosses the graph more than once, no inverse exists',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Only one-to-one functions have inverses',
+              'f⁻¹(f(x)) = x and f(f⁻¹(x)) = x'
             ],
-            correctAnswer: 0,
-            explanation: 'Horizontal Line Test: if any horizontal line crosses the graph more than once, no inverse exists'
+            correctAnswer: 1,
+            explanation: 'Correct — Horizontal Line Test: if any horizontal line crosses the graph more than once, no inverse exists. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,24 @@ The graph of f⁻¹ is the reflection of f over the line y = x
       id: 'funct3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'f⁻¹ is the inverse function',
-            options: ['f⁻¹(f(x)) = x and f(f⁻¹(x)) = x', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
-          },
-          {
-            label: 'Only one-to-one functions have inverses',
-            options: ['Only one-to-one functions have inverses', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['Only one-to-one functions have inverses', 'The graph of f⁻¹ is the reflection of f over the line y = x', 'f⁻¹(f(x)) = x and f(f⁻¹(x)) = x', 'if any horizontal line crosses the graph more than once, no inverse exists']
           },
           {
             label: 'Horizontal Line Test',
-            options: ['if any horizontal line crosses the graph more than', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['f⁻¹(f(x)) = x and f(f⁻¹(x)) = x', 'if any horizontal line crosses the graph more than once, no inverse exists', 'Only one-to-one functions have inverses', 'The graph of f⁻¹ is the reflection of f over the line y = x']
           }
         ],
-        correctAnswers: ['f⁻¹(f(x)) = x and f(f⁻¹(x)) = x', 'Only one-to-one functions have inverses', 'if any horizontal line crosses the graph more than'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Inverse Functions.'
+        correctAnswers: ['f⁻¹(f(x)) = x and f(f⁻¹(x)) = x', 'if any horizontal line crosses the graph more than once, no inverse exists'],
+        hint1: 'Think about what each concept specifically describes in Inverse Functions.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Inverse Functions describes a specific idea. f⁻¹ is the inverse function: f⁻¹(f(x)) = x and f(f⁻¹(x)) = x. Horizontal Line Test: if any horizontal line crosses the graph more than once, no inverse exists.'
       }
     }
   ]

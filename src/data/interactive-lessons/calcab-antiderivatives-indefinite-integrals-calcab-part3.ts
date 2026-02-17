@@ -30,31 +30,31 @@ integration reverses the sign patterns from differentiation
       id: 'antid3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of integrating trig functions?',
-            options: [
-              '∫sin x dx = -cos x + C; ∫cos x dx = sin x + C',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: '∫sin x dx = -cos x + C; ∫cos x dx = sin x + C'
-          },
-          {
-            question: 'In the context of integrating trig functions, which is accurate?',
+            question: 'Which statement accurately explains ∫sin x dx = -cos x + C; ∫cos x dx = sin…?',
             options: [
               '∫sec x tan x dx = sec x + C; ∫csc x cot x dx = -csc x + C',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'integration reverses the sign patterns from differentiation',
+              '∫sec²x dx = tan x + C; ∫csc²x dx = -cot x + C',
+              '∫sin x dx = -cos x + C; ∫cos x dx = sin x + C'
             ],
-            correctAnswer: 0,
-            explanation: '∫sec x tan x dx = sec x + C; ∫csc x cot x dx = -csc x + C'
+            correctAnswer: 3,
+            explanation: 'Correct — ∫sin x dx = -cos x + C; ∫cos x dx = sin x + C. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Integrating Trig Functions, which explains ∫sec x tan x dx = sec x + C; ∫csc x cot…?',
+            options: [
+              '∫sin x dx = -cos x + C; ∫cos x dx = sin x + C',
+              '∫sec²x dx = tan x + C; ∫csc²x dx = -cot x + C',
+              'integration reverses the sign patterns from differentiation',
+              '∫sec x tan x dx = sec x + C; ∫csc x cot x dx = -csc x + C'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — ∫sec x tan x dx = sec x + C; ∫csc x cot x dx = -csc x + C. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ integration reverses the sign patterns from differentiation
       id: 'antid3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to integrating trig functions?',
+            question: 'Which statement about Remember is correct?',
             options: [
-              'integration reverses the sign patterns from differentiation',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              '∫sin x dx = -cos x + C; ∫cos x dx = sin x + C',
+              '∫sec²x dx = tan x + C; ∫csc²x dx = -cot x + C',
+              '∫sec x tan x dx = sec x + C; ∫csc x cot x dx = -csc x + C',
+              'integration reverses the sign patterns from differentiation'
             ],
-            correctAnswer: 0,
-            explanation: 'Remember: integration reverses the sign patterns from differentiation'
+            correctAnswer: 3,
+            explanation: 'Correct — Remember: integration reverses the sign patterns from differentiation. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ integration reverses the sign patterns from differentiation
       id: 'antid3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: '∫sin x dx = -cos x + C; ∫cos x dx = sin x + C',
-            options: ['∫sin x dx = -cos x + C; ∫cos x dx = sin x + C', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: '∫sin x dx = -cos x + C; ∫cos x dx = sin…',
+            options: ['∫sin x dx = -cos x + C; ∫cos x dx = sin x + C', '∫sec x tan x dx = sec x + C; ∫csc x cot x dx = -csc x + C', 'integration reverses the sign patterns from differentiation', '∫sec²x dx = tan x + C; ∫csc²x dx = -cot x + C']
           },
           {
-            label: '∫sec²x dx = tan x + C; ∫csc²x dx = -cot x + C',
-            options: ['∫sec²x dx = tan x + C; ∫csc²x dx = -cot x + C', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: '∫sec²x dx = tan x + C; ∫csc²x dx = -cot…',
+            options: ['integration reverses the sign patterns from differentiation', '∫sec²x dx = tan x + C; ∫csc²x dx = -cot x + C', '∫sec x tan x dx = sec x + C; ∫csc x cot x dx = -csc x + C', '∫sin x dx = -cos x + C; ∫cos x dx = sin x + C']
           },
           {
-            label: '∫sec x tan x dx = sec x + C; ∫csc x cot x dx = -csc x + C',
-            options: ['∫sec x tan x dx = sec x + C; ∫csc x cot x dx = -cs', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: '∫sec x tan x dx = sec x + C; ∫csc x cot…',
+            options: ['∫sec x tan x dx = sec x + C; ∫csc x cot x dx = -csc x + C', '∫sec²x dx = tan x + C; ∫csc²x dx = -cot x + C', '∫sin x dx = -cos x + C; ∫cos x dx = sin x + C', 'integration reverses the sign patterns from differentiation']
           }
         ],
-        correctAnswers: ['∫sin x dx = -cos x + C; ∫cos x dx = sin x + C', '∫sec²x dx = tan x + C; ∫csc²x dx = -cot x + C', '∫sec x tan x dx = sec x + C; ∫csc x cot x dx = -cs'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Integrating Trig Functions.'
+        correctAnswers: ['∫sin x dx = -cos x + C; ∫cos x dx = sin x + C', '∫sec²x dx = tan x + C; ∫csc²x dx = -cot x + C', '∫sec x tan x dx = sec x + C; ∫csc x cot x dx = -csc x + C'],
+        hint1: 'Think about what each concept specifically describes in Integrating Trig Functions.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Integrating Trig Functions describes a specific idea. ∫sin x dx = -cos x + C; ∫cos x dx = sin x + C. ∫sec²x dx = tan x + C; ∫csc²x dx = -cot x + C. ∫sec x tan x dx = sec x + C; ∫csc x cot x dx = -csc x + C.'
       }
     }
   ]

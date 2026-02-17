@@ -30,31 +30,31 @@ Better leaving group = more reactive
       id: 'carbo2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of nucleophilic acyl substitution?',
+            question: 'Which statement accurately explains Nucleophilic acyl substitution?',
             options: [
-              'Nucleophilic acyl substitution',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'Different from nucleophilic addition (no leaving group expulsion with aldehydes/ketones)',
+              'acid chloride > anhydride > ester > amide',
+              'Better leaving group = more reactive',
+              'Nu attacks C=O → tetrahedral intermediate → leaving group departs'
             ],
-            correctAnswer: 0,
-            explanation: 'Nucleophilic acyl substitution: Nu attacks C=O → tetrahedral intermediate → leaving group departs'
+            correctAnswer: 3,
+            explanation: 'Correct — Nucleophilic acyl substitution: Nu attacks C=O → tetrahedral intermediate → leaving group departs. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of nucleophilic acyl substitution, which is accurate?',
+            question: 'In the context of Nucleophilic Acyl Substitution, which explains Reactivity order?',
             options: [
+              'Better leaving group = more reactive',
               'acid chloride > anhydride > ester > amide',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Different from nucleophilic addition (no leaving group expulsion with aldehydes/ketones)',
+              'Nu attacks C=O → tetrahedral intermediate → leaving group departs'
             ],
-            correctAnswer: 0,
-            explanation: 'Reactivity order: acid chloride > anhydride > ester > amide'
+            correctAnswer: 1,
+            explanation: 'Correct — Reactivity order: acid chloride > anhydride > ester > amide. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,24 @@ Better leaving group = more reactive
       id: 'carbo2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Nucleophilic acyl substitution',
-            options: ['Nu attacks C=O → tetrahedral intermediate → leavin', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
-          },
-          {
-            label: 'Different from nucleophilic addition (no leaving group expulsion with aldehydes/ketones)',
-            options: ['Different from nucleophilic addition (no leaving g', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Better leaving group = more reactive', 'Nu attacks C=O → tetrahedral intermediate → leaving group departs', 'acid chloride > anhydride > ester > amide', 'Different from nucleophilic addition (no leaving group expulsion with aldehydes/ketones)']
           },
           {
             label: 'Reactivity order',
-            options: ['acid chloride > anhydride > ester > amide', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Different from nucleophilic addition (no leaving group expulsion with aldehydes/ketones)', 'acid chloride > anhydride > ester > amide', 'Better leaving group = more reactive', 'Nu attacks C=O → tetrahedral intermediate → leaving group departs']
           }
         ],
-        correctAnswers: ['Nu attacks C=O → tetrahedral intermediate → leavin', 'Different from nucleophilic addition (no leaving g', 'acid chloride > anhydride > ester > amide'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Nucleophilic Acyl Substitution.'
+        correctAnswers: ['Nu attacks C=O → tetrahedral intermediate → leaving group departs', 'acid chloride > anhydride > ester > amide'],
+        hint1: 'Think about what each concept specifically describes in Nucleophilic Acyl Substitution.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Nucleophilic Acyl Substitution describes a specific idea. Nucleophilic acyl substitution: Nu attacks C=O → tetrahedral intermediate → leaving group departs. Reactivity order: acid chloride > anhydride > ester > amide.'
       }
     }
   ]

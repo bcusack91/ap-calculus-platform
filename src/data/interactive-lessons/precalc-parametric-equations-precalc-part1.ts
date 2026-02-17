@@ -30,31 +30,31 @@ Direction of motion is determined by increasing t
       id: 'param1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of introduction to parametric equations?',
+            question: 'Which of the following correctly describes Parametric equations?',
             options: [
-              'Parametric equations',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'x = f(t) and y = g(t) define a curve',
+              'Parameter t often represents time',
+              'Each value of t gives a point (x, y) on the curve',
+              'Direction of motion is determined by increasing t'
             ],
             correctAnswer: 0,
-            explanation: 'Parametric equations: x = f(t) and y = g(t) define a curve'
+            explanation: 'Correct — Parametric equations: x = f(t) and y = g(t) define a curve. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of introduction to parametric equations, which is accurate?',
+            question: 'Select the statement that correctly describes Each value of t gives a point (x, y) on…:',
             options: [
+              'Direction of motion is determined by increasing t',
               'Each value of t gives a point (x, y) on the curve',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'x = f(t) and y = g(t) define a curve',
+              'Parameter t often represents time'
             ],
-            correctAnswer: 0,
-            explanation: 'Each value of t gives a point (x, y) on the curve'
+            correctAnswer: 1,
+            explanation: 'Correct — Each value of t gives a point (x, y) on the curve. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Direction of motion is determined by increasing t
       id: 'param1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Parametric equations',
-            options: ['x = f(t) and y = g(t) define a curve', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['Each value of t gives a point (x, y) on the curve', 'x = f(t) and y = g(t) define a curve', 'Direction of motion is determined by increasing t', 'Parameter t often represents time']
           },
           {
             label: 'Parameter t often represents time',
-            options: ['Parameter t often represents time', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['Parameter t often represents time', 'Each value of t gives a point (x, y) on the curve', 'Direction of motion is determined by increasing t', 'x = f(t) and y = g(t) define a curve']
           },
           {
-            label: 'Each value of t gives a point (x, y) on the curve',
-            options: ['Each value of t gives a point (x, y) on the curve', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            label: 'Each value of t gives a point (x, y) on…',
+            options: ['x = f(t) and y = g(t) define a curve', 'Direction of motion is determined by increasing t', 'Each value of t gives a point (x, y) on the curve', 'Parameter t often represents time']
           }
         ],
         correctAnswers: ['x = f(t) and y = g(t) define a curve', 'Parameter t often represents time', 'Each value of t gives a point (x, y) on the curve'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Introduction to Parametric Equations.'
+        hint1: 'Think about what each concept specifically describes in Parametric Equations.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Parametric Equations describes a specific idea. Parametric equations: x = f(t) and y = g(t) define a curve. Parameter t often represents time. Each value of t gives a point (x, y) on the curve.'
       }
     }
   ]

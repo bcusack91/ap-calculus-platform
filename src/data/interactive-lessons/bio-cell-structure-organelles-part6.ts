@@ -19,31 +19,31 @@ export const bioCellStructurePart6Data = {
       id: 'cell6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes identifying organelles by function?',
+            question: 'Which statement accurately explains Identifying organelles by function?',
             options: [
+              'Experimental design with cellular components',
+              'Comparing plant and animal cells',
               'Identifying organelles by function',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Predicting effects of organelle dysfunction'
             ],
-            correctAnswer: 0,
-            explanation: 'Identifying organelles by function'
+            correctAnswer: 2,
+            explanation: 'Correct — Identifying organelles by function. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of problem-solving, which statement is accurate?',
+            question: 'Select the statement that correctly describes Comparing plant and animal cells:',
             options: [
-              'Comparing plant and animal cells',
-              'noitcnuf yb sellenagro gniyfitnedI',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Identifying organelles by function',
+              'Experimental design with cellular components',
+              'Predicting effects of organelle dysfunction',
+              'Comparing plant and animal cells'
             ],
-            correctAnswer: 0,
-            explanation: 'Comparing plant and animal cells'
+            correctAnswer: 3,
+            explanation: 'Correct — Comparing plant and animal cells. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioCellStructurePart6Data = {
       id: 'cell6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to problem-solving?',
+            question: 'Which of these accurately represents Experimental design with cellular…?',
             options: [
+              'Comparing plant and animal cells',
+              'Identifying organelles by function',
               'Experimental design with cellular components',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Predicting effects of organelle dysfunction'
             ],
-            correctAnswer: 0,
-            explanation: 'Experimental design with cellular components'
+            correctAnswer: 2,
+            explanation: 'Correct — Experimental design with cellular components. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioCellStructurePart6Data = {
       id: 'cell6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Identifying organelles by function is important in problem-solving because',
-            options: ['Identifying organelles by function', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Identifying organelles by function',
+            options: ['Experimental design with cellular components', 'Comparing plant and animal cells', 'Identifying organelles by function', 'Predicting effects of organelle dysfunction']
           },
           {
-            label: 'Predicting effects of organelle dysfunction is important in problem-solving because',
-            options: ['Predicting effects of organelle dysfunction', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Predicting effects of organelle…',
+            options: ['Experimental design with cellular components', 'Identifying organelles by function', 'Comparing plant and animal cells', 'Predicting effects of organelle dysfunction']
           },
           {
-            label: 'Comparing plant and animal cells is important in problem-solving because',
-            options: ['Comparing plant and animal cells', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Comparing plant and animal cells',
+            options: ['Comparing plant and animal cells', 'Predicting effects of organelle dysfunction', 'Identifying organelles by function', 'Experimental design with cellular components']
           }
         ],
         correctAnswers: ['Identifying organelles by function', 'Predicting effects of organelle dysfunction', 'Comparing plant and animal cells'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving.'
+        hint1: 'Think about what each concept specifically describes in Cell Structure & Organelles: Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Cell Structure & Organelles: Problem-Solving Workshop describes a specific idea. Identifying organelles by function. Predicting effects of organelle dysfunction. Comparing plant and animal cells.'
       }
     }
   ]

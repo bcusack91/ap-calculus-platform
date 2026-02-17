@@ -71,23 +71,28 @@ Promoter: TATA box ~25 bp upstream; transcription factors help RNA pol II bind.
       id: 'mcat-2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Transcription & RNA Processing:',
-            options: ['Transcription: RNA polymerase reads template 3-to-5, synthes', 'Promoter: TATA box ~25 bp upstream; transcription factors he', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Transcription',
+            options: ['Alternative splicing: one gene can produce multiple mRNA variants and thus multiple proteins.', 'TATA box ~25 bp upstream; transcription factors help RNA pol II bind.', 'Post-transcriptional processing: 5-cap (7-methylguanosine), 3-poly-A tail, intron splicing.', 'RNA polymerase reads template 3-to-5, synthesizes mRNA 5-to-3.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Post-transcriptional processing: 5-cap (7-methylguanosine), ', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Promoter',
+            options: ['Post-transcriptional processing: 5-cap (7-methylguanosine), 3-poly-A tail, intron splicing.', 'Alternative splicing: one gene can produce multiple mRNA variants and thus multiple proteins.', 'TATA box ~25 bp upstream; transcription factors help RNA pol II bind.', 'RNA polymerase reads template 3-to-5, synthesizes mRNA 5-to-3.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['TATA box ~25 bp upstream; transcription factors help RNA pol II bind.', 'Post-transcriptional processing: 5-cap (7-methylguanosine), 3-poly-A tail, intron splicing.', 'RNA polymerase reads template 3-to-5, synthesizes mRNA 5-to-3.', 'Alternative splicing: one gene can produce multiple mRNA variants and thus multiple proteins.']
           }
         ],
-        correctAnswers: ['Transcription: RNA polymerase reads template 3-to-5, synthes', 'Post-transcriptional processing: 5-cap (7-methylguanosine), '],
-        hint1: 'Think about transcription & rna processing',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Transcription: RNA polymerase reads template 3-to-5, synthesizes mRNA 5-to-3. Post-transcriptional processing: 5-cap (7-methylguanosine), 3-poly-A tail, intron splicing.'
+        correctAnswers: ['RNA polymerase reads template 3-to-5, synthesizes mRNA 5-to-3.', 'TATA box ~25 bp upstream; transcription factors help RNA pol II bind.', 'Post-transcriptional processing: 5-cap (7-methylguanosine), 3-poly-A tail, intron splicing.'],
+        hint1: 'Think about what each concept specifically describes in Transcription & RNA Processing.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Transcription & RNA Processing describes a specific idea. Transcription: RNA polymerase reads template 3-to-5, synthesizes mRNA 5-to-3. Promoter: TATA box ~25 bp upstream; transcription factors help RNA pol II bind. Key Insight: Post-transcriptional processing: 5-cap (7-methylguanosine), 3-poly-A tail, intron splicing.'
       }
     }
   ]

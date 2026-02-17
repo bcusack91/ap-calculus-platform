@@ -71,23 +71,28 @@ Mitosis: prophase, metaphase, anaphase, telophase — produces 2 identical diplo
       id: 'mcat-4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Cell Cycle & Division:',
-            options: ['Cell cycle: G1 (growth), S (DNA synthesis), G2 (prep for div', 'Mitosis: prophase, metaphase, anaphase, telophase — produces', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Cell cycle',
+            options: ['G1 (growth), S (DNA synthesis), G2 (prep for division), M (mitosis).', 'Checkpoints: G1/S (DNA damage?), G2/M (replication complete?), metaphase (all chromosomes attached?).', 'prophase, metaphase, anaphase, telophase — produces 2 identical diploid cells.', 'Meiosis: two divisions producing 4 haploid gametes; crossing over creates genetic diversity.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Meiosis: two divisions producing 4 haploid gametes; crossing', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Mitosis',
+            options: ['Checkpoints: G1/S (DNA damage?), G2/M (replication complete?), metaphase (all chromosomes attached?).', 'G1 (growth), S (DNA synthesis), G2 (prep for division), M (mitosis).', 'Meiosis: two divisions producing 4 haploid gametes; crossing over creates genetic diversity.', 'prophase, metaphase, anaphase, telophase — produces 2 identical diploid cells.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['G1 (growth), S (DNA synthesis), G2 (prep for division), M (mitosis).', 'prophase, metaphase, anaphase, telophase — produces 2 identical diploid cells.', 'Meiosis: two divisions producing 4 haploid gametes; crossing over creates genetic diversity.', 'Checkpoints: G1/S (DNA damage?), G2/M (replication complete?), metaphase (all chromosomes attached?).']
           }
         ],
-        correctAnswers: ['Cell cycle: G1 (growth), S (DNA synthesis), G2 (prep for div', 'Meiosis: two divisions producing 4 haploid gametes; crossing'],
-        hint1: 'Think about cell cycle & division',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Cell cycle: G1 (growth), S (DNA synthesis), G2 (prep for division), M (mitosis). Meiosis: two divisions producing 4 haploid gametes; crossing over creates genetic diversity.'
+        correctAnswers: ['G1 (growth), S (DNA synthesis), G2 (prep for division), M (mitosis).', 'prophase, metaphase, anaphase, telophase — produces 2 identical diploid cells.', 'Meiosis: two divisions producing 4 haploid gametes; crossing over creates genetic diversity.'],
+        hint1: 'Think about what each concept specifically describes in Cell Cycle & Division.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Cell Cycle & Division describes a specific idea. Cell cycle: G1 (growth), S (DNA synthesis), G2 (prep for division), M (mitosis). Mitosis: prophase, metaphase, anaphase, telophase — produces 2 identical diploid cells. Key Insight: Meiosis: two divisions producing 4 haploid gametes; crossing over creates genetic diversity.'
       }
     }
   ]

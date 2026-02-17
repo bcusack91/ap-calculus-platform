@@ -19,31 +19,31 @@ export const bioPopulationPart3Data = {
       id: 'popu3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes r-selected?',
+            question: 'What does "r-selected" refer to in biology?',
             options: [
+              'insects, bacteria, annual plants',
+              'slow reproduction, large offspring, extensive parental care',
               'rapid reproduction, small offspring, little parental care',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'elephants, whales, humans'
             ],
-            correctAnswer: 0,
-            explanation: 'r-selected: rapid reproduction, small offspring, little parental care'
+            correctAnswer: 2,
+            explanation: 'Correct — r-selected: rapid reproduction, small offspring, little parental care. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of life history strategies, which statement is accurate?',
+            question: 'In the context of Life History Strategies, which explains r-selected examples?',
             options: [
-              'r-selected examples: insects, bacteria, annual plants',
-              'erac latnerap elttil ,gnirpsffo llams ,noitcudorper dipar :detceles-r',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'rapid reproduction, small offspring, little parental care',
+              'elephants, whales, humans',
+              'slow reproduction, large offspring, extensive parental care',
+              'insects, bacteria, annual plants'
             ],
-            correctAnswer: 0,
-            explanation: 'r-selected examples: insects, bacteria, annual plants'
+            correctAnswer: 3,
+            explanation: 'Correct — r-selected examples: insects, bacteria, annual plants. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioPopulationPart3Data = {
       id: 'popu3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to life history strategies?',
+            question: 'Which statement about K-selected examples is correct?',
             options: [
-              'K-selected examples: elephants, whales, humans',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'rapid reproduction, small offspring, little parental care',
+              'elephants, whales, humans',
+              'insects, bacteria, annual plants',
+              'slow reproduction, large offspring, extensive parental care'
             ],
-            correctAnswer: 0,
-            explanation: 'K-selected examples: elephants, whales, humans'
+            correctAnswer: 1,
+            explanation: 'Correct — K-selected examples: elephants, whales, humans. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioPopulationPart3Data = {
       id: 'popu3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'r-selected is important in life history strategies because',
-            options: ['rapid reproduction, small offspring, little parent', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'r-selected',
+            options: ['rapid reproduction, small offspring, little parental care', 'insects, bacteria, annual plants', 'elephants, whales, humans', 'slow reproduction, large offspring, extensive parental care']
           },
           {
-            label: 'K-selected is important in life history strategies because',
-            options: ['slow reproduction, large offspring, extensive pare', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'K-selected',
+            options: ['slow reproduction, large offspring, extensive parental care', 'insects, bacteria, annual plants', 'elephants, whales, humans', 'rapid reproduction, small offspring, little parental care']
           },
           {
-            label: 'r-selected examples is important in life history strategies because',
-            options: ['insects, bacteria, annual plants', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'r-selected examples',
+            options: ['rapid reproduction, small offspring, little parental care', 'elephants, whales, humans', 'insects, bacteria, annual plants', 'slow reproduction, large offspring, extensive parental care']
           }
         ],
-        correctAnswers: ['rapid reproduction, small offspring, little parent', 'slow reproduction, large offspring, extensive pare', 'insects, bacteria, annual plants'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Life History Strategies.'
+        correctAnswers: ['rapid reproduction, small offspring, little parental care', 'slow reproduction, large offspring, extensive parental care', 'insects, bacteria, annual plants'],
+        hint1: 'Think about what each concept specifically describes in Life History Strategies.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Life History Strategies describes a specific idea. r-selected: rapid reproduction, small offspring, little parental care. K-selected: slow reproduction, large offspring, extensive parental care. r-selected examples: insects, bacteria, annual plants.'
       }
     }
   ]

@@ -30,31 +30,31 @@ As t → ∞, P → L (population approaches carrying capacity)
       id: 'expon4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of logistic growth?',
+            question: 'What does "Logistic model" refer to in calculus?',
             options: [
-              'Logistic model',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'dP/dt = kP(1 - P/L) where L is carrying capacity',
+              'P(t) = L/(1 + Ae^(-kt)) where A = (L-P₀)/P₀',
+              'Population grows fastest at P = L/2 (inflection point)',
+              'As t → ∞, P → L (population approaches carrying capacity)'
             ],
             correctAnswer: 0,
-            explanation: 'Logistic model: dP/dt = kP(1 - P/L) where L is carrying capacity'
+            explanation: 'Correct — Logistic model: dP/dt = kP(1 - P/L) where L is carrying capacity. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of logistic growth, which is accurate?',
+            question: 'In the context of Logistic Growth, which explains Population grows fastest at P = L/2…?',
             options: [
               'Population grows fastest at P = L/2 (inflection point)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'dP/dt = kP(1 - P/L) where L is carrying capacity',
+              'P(t) = L/(1 + Ae^(-kt)) where A = (L-P₀)/P₀',
+              'As t → ∞, P → L (population approaches carrying capacity)'
             ],
             correctAnswer: 0,
-            explanation: 'Population grows fastest at P = L/2 (inflection point)'
+            explanation: 'Correct — Population grows fastest at P = L/2 (inflection point). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ As t → ∞, P → L (population approaches carrying capacity)
       id: 'expon4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to logistic growth?',
+            question: 'Which statement about As t → ∞, P → L (population approaches… is correct?',
             options: [
+              'Population grows fastest at P = L/2 (inflection point)',
+              'P(t) = L/(1 + Ae^(-kt)) where A = (L-P₀)/P₀',
               'As t → ∞, P → L (population approaches carrying capacity)',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'dP/dt = kP(1 - P/L) where L is carrying capacity'
             ],
-            correctAnswer: 0,
-            explanation: 'As t → ∞, P → L (population approaches carrying capacity)'
+            correctAnswer: 2,
+            explanation: 'Correct — As t → ∞, P → L (population approaches carrying capacity). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,24 @@ As t → ∞, P → L (population approaches carrying capacity)
       id: 'expon4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Logistic model',
-            options: ['dP/dt = kP(1 - P/L) where L is carrying capacity', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['P(t) = L/(1 + Ae^(-kt)) where A = (L-P₀)/P₀', 'As t → ∞, P → L (population approaches carrying capacity)', 'dP/dt = kP(1 - P/L) where L is carrying capacity', 'Population grows fastest at P = L/2 (inflection point)']
           },
           {
             label: 'Solution',
-            options: ['P(t) = L/(1 + Ae^(-kt)) where A = (L-P₀)/P₀', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
-          },
-          {
-            label: 'Population grows fastest at P = L/2 (inflection point)',
-            options: ['Population grows fastest at P = L/2 (inflection po', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['dP/dt = kP(1 - P/L) where L is carrying capacity', 'Population grows fastest at P = L/2 (inflection point)', 'P(t) = L/(1 + Ae^(-kt)) where A = (L-P₀)/P₀', 'As t → ∞, P → L (population approaches carrying capacity)']
           }
         ],
-        correctAnswers: ['dP/dt = kP(1 - P/L) where L is carrying capacity', 'P(t) = L/(1 + Ae^(-kt)) where A = (L-P₀)/P₀', 'Population grows fastest at P = L/2 (inflection po'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Logistic Growth.'
+        correctAnswers: ['dP/dt = kP(1 - P/L) where L is carrying capacity', 'P(t) = L/(1 + Ae^(-kt)) where A = (L-P₀)/P₀'],
+        hint1: 'Think about what each concept specifically describes in Logistic Growth.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Logistic Growth describes a specific idea. Logistic model: dP/dt = kP(1 - P/L) where L is carrying capacity. Solution: P(t) = L/(1 + Ae^(-kt)) where A = (L-P₀)/P₀.'
       }
     }
   ]

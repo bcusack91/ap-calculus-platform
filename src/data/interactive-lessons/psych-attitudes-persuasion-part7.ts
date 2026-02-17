@@ -30,31 +30,31 @@ social psychology applications
       id: 'attit7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of synthesis & ap review?',
-            options: [
-              'Attitudes and behavior influence each other',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
-            ],
-            correctAnswer: 0,
-            explanation: 'Attitudes and behavior influence each other'
-          },
-          {
-            question: 'In the context of synthesis & ap review, which is accurate?',
+            question: 'What does "Attitudes and behavior influence each…" refer to in psychology?',
             options: [
               'Situational factors affect helping behavior',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Prejudice can be reduced through contact',
+              'social psychology applications',
+              'Attitudes and behavior influence each other'
             ],
-            correctAnswer: 0,
-            explanation: 'Situational factors affect helping behavior'
+            correctAnswer: 3,
+            explanation: 'Correct — Attitudes and behavior influence each other. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Situational factors affect helping…?',
+            options: [
+              'social psychology applications',
+              'Attitudes and behavior influence each other',
+              'Situational factors affect helping behavior',
+              'Prejudice can be reduced through contact'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Situational factors affect helping behavior. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ social psychology applications
       id: 'attit7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Attitudes and behavior influence each other',
-            options: ['Attitudes and behavior influence each other', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            label: 'Attitudes and behavior influence each…',
+            options: ['Attitudes and behavior influence each other', 'social psychology applications', 'Prejudice can be reduced through contact', 'Situational factors affect helping behavior']
           },
           {
             label: 'Prejudice can be reduced through contact',
-            options: ['Prejudice can be reduced through contact', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['social psychology applications', 'Prejudice can be reduced through contact', 'Situational factors affect helping behavior', 'Attitudes and behavior influence each other']
           },
           {
-            label: 'Situational factors affect helping behavior',
-            options: ['Situational factors affect helping behavior', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            label: 'Situational factors affect helping…',
+            options: ['social psychology applications', 'Attitudes and behavior influence each other', 'Situational factors affect helping behavior', 'Prejudice can be reduced through contact']
           }
         ],
         correctAnswers: ['Attitudes and behavior influence each other', 'Prejudice can be reduced through contact', 'Situational factors affect helping behavior'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Synthesis & AP Review.'
+        hint1: 'Think about what each concept specifically describes in Synthesis & AP Review.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Synthesis & AP Review describes a specific idea. Attitudes and behavior influence each other. Prejudice can be reduced through contact. Situational factors affect helping behavior.'
       }
     }
   ]

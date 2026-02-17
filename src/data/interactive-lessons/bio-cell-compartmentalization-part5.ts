@@ -19,31 +19,31 @@ export const bioCellCompartmentPart5Data = {
       id: 'cell5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes endomembrane system connects organelles?',
+            question: 'Which of the following correctly describes Endomembrane system connects organelles?',
             options: [
+              'Mitochondria interact with ER',
               'Endomembrane system connects organelles',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Metabolic pathways span multiple organelles',
+              'Vesicle trafficking between compartments'
             ],
-            correctAnswer: 0,
-            explanation: 'Endomembrane system connects organelles'
+            correctAnswer: 1,
+            explanation: 'Correct — Endomembrane system connects organelles. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of organelle interactions, which statement is accurate?',
+            question: 'Which of the following is true about Vesicle trafficking between compartments?',
             options: [
               'Vesicle trafficking between compartments',
-              'sellenagro stcennoc metsys enarbmemodnE',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Mitochondria interact with ER',
+              'Endomembrane system connects organelles',
+              'Metabolic pathways span multiple organelles'
             ],
             correctAnswer: 0,
-            explanation: 'Vesicle trafficking between compartments'
+            explanation: 'Correct — Vesicle trafficking between compartments. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioCellCompartmentPart5Data = {
       id: 'cell5-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to organelle interactions?',
+            question: 'Which statement about Metabolic pathways span multiple… is correct?',
             options: [
               'Metabolic pathways span multiple organelles',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Mitochondria interact with ER',
+              'Vesicle trafficking between compartments',
+              'Endomembrane system connects organelles'
             ],
             correctAnswer: 0,
-            explanation: 'Metabolic pathways span multiple organelles'
+            explanation: 'Correct — Metabolic pathways span multiple organelles. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioCellCompartmentPart5Data = {
       id: 'cell5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Endomembrane system connects organelles is important in organelle interactions because',
-            options: ['Endomembrane system connects organelles', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Endomembrane system connects organelles',
+            options: ['Mitochondria interact with ER', 'Endomembrane system connects organelles', 'Metabolic pathways span multiple organelles', 'Vesicle trafficking between compartments']
           },
           {
-            label: 'Mitochondria interact with ER is important in organelle interactions because',
-            options: ['Mitochondria interact with ER', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Mitochondria interact with ER',
+            options: ['Mitochondria interact with ER', 'Metabolic pathways span multiple organelles', 'Endomembrane system connects organelles', 'Vesicle trafficking between compartments']
           },
           {
-            label: 'Vesicle trafficking between compartments is important in organelle interactions because',
-            options: ['Vesicle trafficking between compartments', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Vesicle trafficking between compartments',
+            options: ['Vesicle trafficking between compartments', 'Endomembrane system connects organelles', 'Metabolic pathways span multiple organelles', 'Mitochondria interact with ER']
           }
         ],
         correctAnswers: ['Endomembrane system connects organelles', 'Mitochondria interact with ER', 'Vesicle trafficking between compartments'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Organelle Interactions.'
+        hint1: 'Think about what each concept specifically describes in Organelle Interactions.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Organelle Interactions describes a specific idea. Endomembrane system connects organelles. Mitochondria interact with ER. Vesicle trafficking between compartments.'
       }
     }
   ]

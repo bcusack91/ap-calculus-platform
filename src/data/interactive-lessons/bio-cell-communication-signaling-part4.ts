@@ -19,31 +19,31 @@ export const bioCellCommPart4Data = {
       id: 'cell4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes phosphorylation cascades?',
+            question: 'Which of the following correctly describes Phosphorylation cascades?',
             options: [
+              'cAMP, Ca²⁺, IP₃',
+              'one signal → many responses',
               'kinases add phosphate groups',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'α subunit activates adenylyl cyclase → cAMP'
             ],
-            correctAnswer: 0,
-            explanation: 'Phosphorylation cascades: kinases add phosphate groups'
+            correctAnswer: 2,
+            explanation: 'Correct — Phosphorylation cascades: kinases add phosphate groups. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of signal transduction pathways, which statement is accurate?',
+            question: 'Select the statement that correctly describes Signal amplification:',
             options: [
-              'Signal amplification: one signal → many responses',
-              'spuorg etahpsohp dda sesanik :sedacsac noitalyrohpsohP',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'cAMP, Ca²⁺, IP₃',
+              'α subunit activates adenylyl cyclase → cAMP',
+              'one signal → many responses',
+              'kinases add phosphate groups'
             ],
-            correctAnswer: 0,
-            explanation: 'Signal amplification: one signal → many responses'
+            correctAnswer: 2,
+            explanation: 'Correct — Signal amplification: one signal → many responses. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioCellCommPart4Data = {
       id: 'cell4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to signal transduction pathways?',
+            question: 'Which of these accurately represents G-protein linked?',
             options: [
-              'G-protein linked: α subunit activates adenylyl cyclase → cAMP',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'cAMP, Ca²⁺, IP₃',
+              'α subunit activates adenylyl cyclase → cAMP',
+              'kinases add phosphate groups',
+              'one signal → many responses'
             ],
-            correctAnswer: 0,
-            explanation: 'G-protein linked: α subunit activates adenylyl cyclase → cAMP'
+            correctAnswer: 1,
+            explanation: 'Correct — G-protein linked: α subunit activates adenylyl cyclase → cAMP. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioCellCommPart4Data = {
       id: 'cell4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Phosphorylation cascades is important in signal transduction pathways because',
-            options: ['kinases add phosphate groups', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Phosphorylation cascades',
+            options: ['α subunit activates adenylyl cyclase → cAMP', 'cAMP, Ca²⁺, IP₃', 'kinases add phosphate groups', 'one signal → many responses']
           },
           {
-            label: 'Second messengers is important in signal transduction pathways because',
-            options: ['cAMP, Ca²⁺, IP₃', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Second messengers',
+            options: ['one signal → many responses', 'α subunit activates adenylyl cyclase → cAMP', 'cAMP, Ca²⁺, IP₃', 'kinases add phosphate groups']
           },
           {
-            label: 'Signal amplification is important in signal transduction pathways because',
-            options: ['one signal → many responses', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Signal amplification',
+            options: ['one signal → many responses', 'cAMP, Ca²⁺, IP₃', 'kinases add phosphate groups', 'α subunit activates adenylyl cyclase → cAMP']
           }
         ],
         correctAnswers: ['kinases add phosphate groups', 'cAMP, Ca²⁺, IP₃', 'one signal → many responses'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Signal Transduction Pathways.'
+        hint1: 'Think about what each concept specifically describes in Signal Transduction Pathways.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Signal Transduction Pathways describes a specific idea. Phosphorylation cascades: kinases add phosphate groups. Second messengers: cAMP, Ca²⁺, IP₃. Signal amplification: one signal → many responses.'
       }
     }
   ]

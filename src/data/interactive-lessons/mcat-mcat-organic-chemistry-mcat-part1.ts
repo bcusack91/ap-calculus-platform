@@ -71,23 +71,28 @@ Naming: find the longest carbon chain, number from the end nearest the first sub
       id: 'mcat-1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Functional Groups & Nomenclature:',
-            options: ['Key functional groups: hydroxyl (-OH), carbonyl (C=O), carbo', 'Naming: find the longest carbon chain, number from the end n', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Key functional groups',
+            options: ['Functional group interconversions are heavily tested: alcohol to aldehyde to carboxylic acid.', 'find the longest carbon chain, number from the end nearest the first substituent.', 'hydroxyl (-OH), carbonyl (C=O), carboxyl (-COOH), amino (-NH2), thiol (-SH).', 'Degree of unsaturation (DoU) = (2C + 2 + N - H - X) / 2 — predicts rings and double bonds.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Degree of unsaturation (DoU) = (2C + 2 + N - H - X) / 2 — pr', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Naming',
+            options: ['hydroxyl (-OH), carbonyl (C=O), carboxyl (-COOH), amino (-NH2), thiol (-SH).', 'Degree of unsaturation (DoU) = (2C + 2 + N - H - X) / 2 — predicts rings and double bonds.', 'Functional group interconversions are heavily tested: alcohol to aldehyde to carboxylic acid.', 'find the longest carbon chain, number from the end nearest the first substituent.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['Functional group interconversions are heavily tested: alcohol to aldehyde to carboxylic acid.', 'hydroxyl (-OH), carbonyl (C=O), carboxyl (-COOH), amino (-NH2), thiol (-SH).', 'find the longest carbon chain, number from the end nearest the first substituent.', 'Degree of unsaturation (DoU) = (2C + 2 + N - H - X) / 2 — predicts rings and double bonds.']
           }
         ],
-        correctAnswers: ['Key functional groups: hydroxyl (-OH), carbonyl (C=O), carbo', 'Degree of unsaturation (DoU) = (2C + 2 + N - H - X) / 2 — pr'],
-        hint1: 'Think about functional groups & nomenclature',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Key functional groups: hydroxyl (-OH), carbonyl (C=O), carboxyl (-COOH), amino (-NH2), thiol (-SH). Degree of unsaturation (DoU) = (2C + 2 + N - H - X) / 2 — predicts rings and double bonds.'
+        correctAnswers: ['hydroxyl (-OH), carbonyl (C=O), carboxyl (-COOH), amino (-NH2), thiol (-SH).', 'find the longest carbon chain, number from the end nearest the first substituent.', 'Degree of unsaturation (DoU) = (2C + 2 + N - H - X) / 2 — predicts rings and double bonds.'],
+        hint1: 'Think about what each concept specifically describes in Organic Chemistry.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Organic Chemistry describes a specific idea. Key functional groups: hydroxyl (-OH), carbonyl (C=O), carboxyl (-COOH), amino (-NH2), thiol (-SH). Naming: find the longest carbon chain, number from the end nearest the first substituent. Key Insight: Degree of unsaturation (DoU) = (2C + 2 + N - H - X) / 2 — predicts rings and double bonds.'
       }
     }
   ]

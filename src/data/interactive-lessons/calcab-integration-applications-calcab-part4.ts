@@ -30,31 +30,31 @@ Net change = integral of the rate function over the interval
       id: 'integ4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of population & accumulation?',
+            question: 'Which statement accurately explains Population growth?',
             options: [
-              'Population growth',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'P(t) = P(0) + ∫₀ᵗ r(s)ds where r is the growth rate',
+              'Net change = integral of the rate function over the interval',
+              'Average rate over [a,b] = (1/(b-a))∫ₐᵇ r(t)dt',
+              'integral of the rate'
             ],
             correctAnswer: 0,
-            explanation: 'Population growth: P(t) = P(0) + ∫₀ᵗ r(s)ds where r is the growth rate'
+            explanation: 'Correct — Population growth: P(t) = P(0) + ∫₀ᵗ r(s)ds where r is the growth rate. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of population & accumulation, which is accurate?',
+            question: 'In the context of Population & Accumulation, which explains Average rate over [a,b] = (1/(b-a))∫ₐᵇ…?',
             options: [
+              'Net change = integral of the rate function over the interval',
               'Average rate over [a,b] = (1/(b-a))∫ₐᵇ r(t)dt',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'P(t) = P(0) + ∫₀ᵗ r(s)ds where r is the growth rate',
+              'integral of the rate'
             ],
-            correctAnswer: 0,
-            explanation: 'Average rate over [a,b] = (1/(b-a))∫ₐᵇ r(t)dt'
+            correctAnswer: 1,
+            explanation: 'Correct — Average rate over [a,b] = (1/(b-a))∫ₐᵇ r(t)dt. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Net change = integral of the rate function over the interval
       id: 'integ4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to population & accumulation?',
+            question: 'Which of these accurately represents Net change = integral of the rate…?',
             options: [
               'Net change = integral of the rate function over the interval',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'Average rate over [a,b] = (1/(b-a))∫ₐᵇ r(t)dt',
+              'P(t) = P(0) + ∫₀ᵗ r(s)ds where r is the growth rate',
+              'integral of the rate'
             ],
             correctAnswer: 0,
-            explanation: 'Net change = integral of the rate function over the interval'
+            explanation: 'Correct — Net change = integral of the rate function over the interval. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,24 @@ Net change = integral of the rate function over the interval
       id: 'integ4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Population growth',
-            options: ['P(t) = P(0) + ∫₀ᵗ r(s)ds where r is the growth rat', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['integral of the rate', 'Average rate over [a,b] = (1/(b-a))∫ₐᵇ r(t)dt', 'Net change = integral of the rate function over the interval', 'P(t) = P(0) + ∫₀ᵗ r(s)ds where r is the growth rate']
           },
           {
             label: 'Total amount consumed/produced',
-            options: ['integral of the rate', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
-          },
-          {
-            label: 'Average rate over [a,b] = (1/(b-a))∫ₐᵇ r(t)dt',
-            options: ['Average rate over [a,b] = (1/(b-a))∫ₐᵇ r(t)dt', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Average rate over [a,b] = (1/(b-a))∫ₐᵇ r(t)dt', 'integral of the rate', 'Net change = integral of the rate function over the interval', 'P(t) = P(0) + ∫₀ᵗ r(s)ds where r is the growth rate']
           }
         ],
-        correctAnswers: ['P(t) = P(0) + ∫₀ᵗ r(s)ds where r is the growth rat', 'integral of the rate', 'Average rate over [a,b] = (1/(b-a))∫ₐᵇ r(t)dt'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Population & Accumulation.'
+        correctAnswers: ['P(t) = P(0) + ∫₀ᵗ r(s)ds where r is the growth rate', 'integral of the rate'],
+        hint1: 'Think about what each concept specifically describes in Population & Accumulation.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Population & Accumulation describes a specific idea. Population growth: P(t) = P(0) + ∫₀ᵗ r(s)ds where r is the growth rate. Total amount consumed/produced: integral of the rate.'
       }
     }
   ]

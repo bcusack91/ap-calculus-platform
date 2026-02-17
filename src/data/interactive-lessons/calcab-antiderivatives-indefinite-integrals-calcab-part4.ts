@@ -30,31 +30,31 @@ export const calcABAntiderivativesPart4Data = {
       id: 'antid4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of integrating exponentials & logs?',
-            options: [
-              '∫eˣ dx = eˣ + C',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: '∫eˣ dx = eˣ + C'
-          },
-          {
-            question: 'In the context of integrating exponentials & logs, which is accurate?',
+            question: 'Which statement accurately explains ∫eˣ dx = eˣ + C?',
             options: [
               '∫1/x dx = ln|x| + C',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              '∫1/(1+x²) dx = arctan(x) + C; ∫1/√(1-x²) dx = arcsin(x) + C',
+              '∫eˣ dx = eˣ + C',
+              '∫aˣ dx = aˣ/ln(a) + C for a > 0, a ≠ 1'
             ],
-            correctAnswer: 0,
-            explanation: '∫1/x dx = ln|x| + C'
+            correctAnswer: 2,
+            explanation: 'Correct — ∫eˣ dx = eˣ + C. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Integrating Exponentials & Logs, which explains ∫1/x dx = ln|x| + C?',
+            options: [
+              '∫aˣ dx = aˣ/ln(a) + C for a > 0, a ≠ 1',
+              '∫eˣ dx = eˣ + C',
+              '∫1/(1+x²) dx = arctan(x) + C; ∫1/√(1-x²) dx = arcsin(x) + C',
+              '∫1/x dx = ln|x| + C'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — ∫1/x dx = ln|x| + C. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ export const calcABAntiderivativesPart4Data = {
       id: 'antid4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to integrating exponentials & logs?',
+            question: 'Which of these accurately represents ∫1/(1+x²) dx = arctan(x) + C;…?',
             options: [
+              '∫eˣ dx = eˣ + C',
+              '∫1/x dx = ln|x| + C',
               '∫1/(1+x²) dx = arctan(x) + C; ∫1/√(1-x²) dx = arcsin(x) + C',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              '∫aˣ dx = aˣ/ln(a) + C for a > 0, a ≠ 1'
             ],
-            correctAnswer: 0,
-            explanation: '∫1/(1+x²) dx = arctan(x) + C; ∫1/√(1-x²) dx = arcsin(x) + C'
+            correctAnswer: 2,
+            explanation: 'Correct — ∫1/(1+x²) dx = arctan(x) + C; ∫1/√(1-x²) dx = arcsin(x) + C. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ export const calcABAntiderivativesPart4Data = {
       id: 'antid4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: '∫eˣ dx = eˣ + C',
-            options: ['∫eˣ dx = eˣ + C', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['∫1/x dx = ln|x| + C', '∫1/(1+x²) dx = arctan(x) + C; ∫1/√(1-x²) dx = arcsin(x) + C', '∫aˣ dx = aˣ/ln(a) + C for a > 0, a ≠ 1', '∫eˣ dx = eˣ + C']
           },
           {
             label: '∫aˣ dx = aˣ/ln(a) + C for a > 0, a ≠ 1',
-            options: ['∫aˣ dx = aˣ/ln(a) + C for a > 0, a ≠ 1', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['∫eˣ dx = eˣ + C', '∫1/(1+x²) dx = arctan(x) + C; ∫1/√(1-x²) dx = arcsin(x) + C', '∫1/x dx = ln|x| + C', '∫aˣ dx = aˣ/ln(a) + C for a > 0, a ≠ 1']
           },
           {
             label: '∫1/x dx = ln|x| + C',
-            options: ['∫1/x dx = ln|x| + C', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['∫eˣ dx = eˣ + C', '∫aˣ dx = aˣ/ln(a) + C for a > 0, a ≠ 1', '∫1/x dx = ln|x| + C', '∫1/(1+x²) dx = arctan(x) + C; ∫1/√(1-x²) dx = arcsin(x) + C']
           }
         ],
         correctAnswers: ['∫eˣ dx = eˣ + C', '∫aˣ dx = aˣ/ln(a) + C for a > 0, a ≠ 1', '∫1/x dx = ln|x| + C'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Integrating Exponentials & Logs.'
+        hint1: 'Think about what each concept specifically describes in Integrating Exponentials & Logs.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Integrating Exponentials & Logs describes a specific idea. ∫eˣ dx = eˣ + C. ∫aˣ dx = aˣ/ln(a) + C for a > 0, a ≠ 1. ∫1/x dx = ln|x| + C.'
       }
     }
   ]

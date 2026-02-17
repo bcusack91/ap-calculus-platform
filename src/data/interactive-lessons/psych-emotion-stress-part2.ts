@@ -30,31 +30,31 @@ happiness, sadness, fear, anger, disgust, surprise
       id: 'emoti2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of components of emotion?',
+            question: 'Which of the following correctly describes Physiological?',
             options: [
-              'Physiological',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'autonomic nervous system activation',
+              'facial expressions, body language',
+              'happiness, sadness, fear, anger, disgust, surprise',
+              'interpretation and appraisal'
             ],
             correctAnswer: 0,
-            explanation: 'Physiological: autonomic nervous system activation'
+            explanation: 'Correct — Physiological: autonomic nervous system activation. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of components of emotion, which is accurate?',
+            question: 'Select the statement that correctly describes Cognitive:',
             options: [
+              'facial expressions, body language',
               'interpretation and appraisal',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'autonomic nervous system activation',
+              'happiness, sadness, fear, anger, disgust, surprise'
             ],
-            correctAnswer: 0,
-            explanation: 'Cognitive: interpretation and appraisal'
+            correctAnswer: 1,
+            explanation: 'Correct — Cognitive: interpretation and appraisal. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ happiness, sadness, fear, anger, disgust, surprise
       id: 'emoti2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Physiological',
-            options: ['autonomic nervous system activation', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['interpretation and appraisal', 'facial expressions, body language', 'happiness, sadness, fear, anger, disgust, surprise', 'autonomic nervous system activation']
           },
           {
             label: 'Behavioral',
-            options: ['facial expressions, body language', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['happiness, sadness, fear, anger, disgust, surprise', 'autonomic nervous system activation', 'facial expressions, body language', 'interpretation and appraisal']
           },
           {
             label: 'Cognitive',
-            options: ['interpretation and appraisal', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['autonomic nervous system activation', 'facial expressions, body language', 'happiness, sadness, fear, anger, disgust, surprise', 'interpretation and appraisal']
           }
         ],
         correctAnswers: ['autonomic nervous system activation', 'facial expressions, body language', 'interpretation and appraisal'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Components of Emotion.'
+        hint1: 'Think about what each concept specifically describes in Components of Emotion.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Components of Emotion describes a specific idea. Physiological: autonomic nervous system activation. Behavioral: facial expressions, body language. Cognitive: interpretation and appraisal.'
       }
     }
   ]

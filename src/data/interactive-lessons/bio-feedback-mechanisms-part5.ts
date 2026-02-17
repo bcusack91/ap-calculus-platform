@@ -19,31 +19,31 @@ export const bioFeedbackPart5Data = {
       id: 'feed5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes hypothalamus-pituitary axis?',
+            question: 'Which statement accurately explains Hypothalamus-pituitary axis?',
             options: [
+              'PTH and calcitonin',
               'Hypothalamus-pituitary axis',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'insulin (lowers) and glucagon (raises)',
+              'Thyroid hormone negative feedback'
             ],
-            correctAnswer: 0,
-            explanation: 'Hypothalamus-pituitary axis'
+            correctAnswer: 1,
+            explanation: 'Correct — Hypothalamus-pituitary axis. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of hormonal feedback, which statement is accurate?',
+            question: 'In the context of Hormonal Feedback, which explains Blood calcium regulation?',
             options: [
-              'Blood calcium regulation: PTH and calcitonin',
-              'sixa yratiutip-sumalahtopyH',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'insulin (lowers) and glucagon (raises)',
+              'Hypothalamus-pituitary axis',
+              'Thyroid hormone negative feedback',
+              'PTH and calcitonin'
             ],
-            correctAnswer: 0,
-            explanation: 'Blood calcium regulation: PTH and calcitonin'
+            correctAnswer: 3,
+            explanation: 'Correct — Blood calcium regulation: PTH and calcitonin. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioFeedbackPart5Data = {
       id: 'feed5-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to hormonal feedback?',
+            question: 'Which of these accurately represents Blood glucose?',
             options: [
-              'Blood glucose: insulin (lowers) and glucagon (raises)',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Hypothalamus-pituitary axis',
+              'insulin (lowers) and glucagon (raises)',
+              'Thyroid hormone negative feedback',
+              'PTH and calcitonin'
             ],
-            correctAnswer: 0,
-            explanation: 'Blood glucose: insulin (lowers) and glucagon (raises)'
+            correctAnswer: 1,
+            explanation: 'Correct — Blood glucose: insulin (lowers) and glucagon (raises). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,24 @@ export const bioFeedbackPart5Data = {
       id: 'feed5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Hypothalamus-pituitary axis is important in hormonal feedback because',
-            options: ['Hypothalamus-pituitary axis', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Blood calcium regulation',
+            options: ['PTH and calcitonin', 'Hypothalamus-pituitary axis', 'Thyroid hormone negative feedback', 'insulin (lowers) and glucagon (raises)']
           },
           {
-            label: 'Thyroid hormone negative feedback is important in hormonal feedback because',
-            options: ['Thyroid hormone negative feedback', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
-          },
-          {
-            label: 'Blood calcium regulation is important in hormonal feedback because',
-            options: ['PTH and calcitonin', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Blood glucose',
+            options: ['Thyroid hormone negative feedback', 'PTH and calcitonin', 'Hypothalamus-pituitary axis', 'insulin (lowers) and glucagon (raises)']
           }
         ],
-        correctAnswers: ['Hypothalamus-pituitary axis', 'Thyroid hormone negative feedback', 'PTH and calcitonin'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Hormonal Feedback.'
+        correctAnswers: ['PTH and calcitonin', 'insulin (lowers) and glucagon (raises)'],
+        hint1: 'Think about what each concept specifically describes in Hormonal Feedback.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Hormonal Feedback describes a specific idea. Blood calcium regulation: PTH and calcitonin. Blood glucose: insulin (lowers) and glucagon (raises).'
       }
     }
   ]

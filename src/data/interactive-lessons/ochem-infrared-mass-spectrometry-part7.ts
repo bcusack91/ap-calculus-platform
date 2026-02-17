@@ -30,31 +30,31 @@ interpreting spectra systematically
       id: 'infra7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of synthesis & review?',
+            question: 'Which of the following correctly describes Spectroscopy is essential for structure…?',
             options: [
-              'Spectroscopy is essential for structure determination',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'IR identifies functional groups',
+              'interpreting spectra systematically',
+              'MS gives molecular weight and formula clues',
+              'Spectroscopy is essential for structure determination'
             ],
-            correctAnswer: 0,
-            explanation: 'Spectroscopy is essential for structure determination'
+            correctAnswer: 3,
+            explanation: 'Correct — Spectroscopy is essential for structure determination. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of synthesis & review, which is accurate?',
+            question: 'Select the statement that correctly describes MS gives molecular weight and formula…:',
             options: [
+              'IR identifies functional groups',
               'MS gives molecular weight and formula clues',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'interpreting spectra systematically',
+              'Spectroscopy is essential for structure determination'
             ],
-            correctAnswer: 0,
-            explanation: 'MS gives molecular weight and formula clues'
+            correctAnswer: 1,
+            explanation: 'Correct — MS gives molecular weight and formula clues. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ interpreting spectra systematically
       id: 'infra7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Spectroscopy is essential for structure determination',
-            options: ['Spectroscopy is essential for structure determinat', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Spectroscopy is essential for structure…',
+            options: ['interpreting spectra systematically', 'IR identifies functional groups', 'Spectroscopy is essential for structure determination', 'MS gives molecular weight and formula clues']
           },
           {
             label: 'IR identifies functional groups',
-            options: ['IR identifies functional groups', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Spectroscopy is essential for structure determination', 'MS gives molecular weight and formula clues', 'IR identifies functional groups', 'interpreting spectra systematically']
           },
           {
-            label: 'MS gives molecular weight and formula clues',
-            options: ['MS gives molecular weight and formula clues', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'MS gives molecular weight and formula…',
+            options: ['interpreting spectra systematically', 'MS gives molecular weight and formula clues', 'Spectroscopy is essential for structure determination', 'IR identifies functional groups']
           }
         ],
-        correctAnswers: ['Spectroscopy is essential for structure determinat', 'IR identifies functional groups', 'MS gives molecular weight and formula clues'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Synthesis & Review.'
+        correctAnswers: ['Spectroscopy is essential for structure determination', 'IR identifies functional groups', 'MS gives molecular weight and formula clues'],
+        hint1: 'Think about what each concept specifically describes in Synthesis & Review.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Synthesis & Review describes a specific idea. Spectroscopy is essential for structure determination. IR identifies functional groups. MS gives molecular weight and formula clues.'
       }
     }
   ]

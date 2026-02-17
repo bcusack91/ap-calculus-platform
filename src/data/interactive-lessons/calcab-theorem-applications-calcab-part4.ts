@@ -30,31 +30,31 @@ Know when to apply each theorem based on what you need to prove
       id: 'theor4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of existence theorems summary?',
+            question: 'Which of the following correctly describes All three theorems (EVT, MVT, IVT) are…?',
             options: [
+              'They guarantee SOMETHING EXISTS but don\'t give a formula to find it',
               'All three theorems (EVT, MVT, IVT) are existence theorems',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'continuity (and differentiability for MVT) is essential',
+              'Know when to apply each theorem based on what you need to prove'
             ],
-            correctAnswer: 0,
-            explanation: 'All three theorems (EVT, MVT, IVT) are existence theorems'
+            correctAnswer: 1,
+            explanation: 'Correct — All three theorems (EVT, MVT, IVT) are existence theorems. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of existence theorems summary, which is accurate?',
+            question: 'Select the statement that correctly describes Common thread:',
             options: [
+              'Know when to apply each theorem based on what you need to prove',
               'continuity (and differentiability for MVT) is essential',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'All three theorems (EVT, MVT, IVT) are existence theorems',
+              'They guarantee SOMETHING EXISTS but don\'t give a formula to find it'
             ],
-            correctAnswer: 0,
-            explanation: 'Common thread: continuity (and differentiability for MVT) is essential'
+            correctAnswer: 1,
+            explanation: 'Correct — Common thread: continuity (and differentiability for MVT) is essential. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Know when to apply each theorem based on what you need to prove
       id: 'theor4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to existence theorems summary?',
+            question: 'Which of these accurately represents Know when to apply each theorem based…?',
             options: [
               'Know when to apply each theorem based on what you need to prove',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'They guarantee SOMETHING EXISTS but don\'t give a formula to find it',
+              'continuity (and differentiability for MVT) is essential',
+              'All three theorems (EVT, MVT, IVT) are existence theorems'
             ],
             correctAnswer: 0,
-            explanation: 'Know when to apply each theorem based on what you need to prove'
+            explanation: 'Correct — Know when to apply each theorem based on what you need to prove. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Know when to apply each theorem based on what you need to prove
       id: 'theor4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'All three theorems (EVT, MVT, IVT) are existence theorems',
-            options: ['All three theorems (EVT, MVT, IVT) are existence t', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'All three theorems (EVT, MVT, IVT) are…',
+            options: ['They guarantee SOMETHING EXISTS but don\'t give a formula to find it', 'continuity (and differentiability for MVT) is essential', 'All three theorems (EVT, MVT, IVT) are existence theorems', 'Know when to apply each theorem based on what you need to prove']
           },
           {
-            label: 'They guarantee SOMETHING EXISTS but don\'t give a formula to find it',
-            options: ['They guarantee SOMETHING EXISTS but don\'t give a f', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'They guarantee SOMETHING EXISTS but…',
+            options: ['They guarantee SOMETHING EXISTS but don\'t give a formula to find it', 'continuity (and differentiability for MVT) is essential', 'All three theorems (EVT, MVT, IVT) are existence theorems', 'Know when to apply each theorem based on what you need to prove']
           },
           {
             label: 'Common thread',
-            options: ['continuity (and differentiability for MVT) is esse', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['They guarantee SOMETHING EXISTS but don\'t give a formula to find it', 'Know when to apply each theorem based on what you need to prove', 'All three theorems (EVT, MVT, IVT) are existence theorems', 'continuity (and differentiability for MVT) is essential']
           }
         ],
-        correctAnswers: ['All three theorems (EVT, MVT, IVT) are existence t', 'They guarantee SOMETHING EXISTS but don\'t give a f', 'continuity (and differentiability for MVT) is esse'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Existence Theorems Summary.'
+        correctAnswers: ['All three theorems (EVT, MVT, IVT) are existence theorems', 'They guarantee SOMETHING EXISTS but don\'t give a formula to find it', 'continuity (and differentiability for MVT) is essential'],
+        hint1: 'Think about what each concept specifically describes in Existence Theorems Summary.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Existence Theorems Summary describes a specific idea. All three theorems (EVT, MVT, IVT) are existence theorems. They guarantee SOMETHING EXISTS but don\'t give a formula to find it. Common thread: continuity (and differentiability for MVT) is essential.'
       }
     }
   ]

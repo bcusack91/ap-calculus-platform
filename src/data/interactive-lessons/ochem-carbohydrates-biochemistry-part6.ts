@@ -30,31 +30,31 @@ Analyzing glycosidic bond types
       id: 'carbo6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of problem-solving workshop?',
-            options: [
-              'Drawing Fischer and Haworth projections',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
-            ],
-            correctAnswer: 0,
-            explanation: 'Drawing Fischer and Haworth projections'
-          },
-          {
-            question: 'In the context of problem-solving workshop, which is accurate?',
+            question: 'What does "Drawing Fischer and Haworth projections" refer to in this topic?',
             options: [
               'Predicting reducing vs nonreducing sugars',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Analyzing glycosidic bond types',
+              'Drawing Fischer and Haworth projections',
+              'Identifying anomers and epimers'
             ],
-            correctAnswer: 0,
-            explanation: 'Predicting reducing vs nonreducing sugars'
+            correctAnswer: 2,
+            explanation: 'Correct — Drawing Fischer and Haworth projections. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Predicting reducing vs nonreducing…?',
+            options: [
+              'Identifying anomers and epimers',
+              'Drawing Fischer and Haworth projections',
+              'Analyzing glycosidic bond types',
+              'Predicting reducing vs nonreducing sugars'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Predicting reducing vs nonreducing sugars. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Analyzing glycosidic bond types
       id: 'carbo6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Drawing Fischer and Haworth projections',
-            options: ['Drawing Fischer and Haworth projections', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Predicting reducing vs nonreducing sugars', 'Drawing Fischer and Haworth projections', 'Analyzing glycosidic bond types', 'Identifying anomers and epimers']
           },
           {
             label: 'Identifying anomers and epimers',
-            options: ['Identifying anomers and epimers', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Drawing Fischer and Haworth projections', 'Identifying anomers and epimers', 'Analyzing glycosidic bond types', 'Predicting reducing vs nonreducing sugars']
           },
           {
-            label: 'Predicting reducing vs nonreducing sugars',
-            options: ['Predicting reducing vs nonreducing sugars', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Predicting reducing vs nonreducing…',
+            options: ['Analyzing glycosidic bond types', 'Drawing Fischer and Haworth projections', 'Predicting reducing vs nonreducing sugars', 'Identifying anomers and epimers']
           }
         ],
         correctAnswers: ['Drawing Fischer and Haworth projections', 'Identifying anomers and epimers', 'Predicting reducing vs nonreducing sugars'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving Workshop.'
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Drawing Fischer and Haworth projections. Identifying anomers and epimers. Predicting reducing vs nonreducing sugars.'
       }
     }
   ]

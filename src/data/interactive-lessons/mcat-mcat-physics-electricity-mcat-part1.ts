@@ -71,23 +71,28 @@ Electric field E = F/q = kQ/r2 — field points away from positive, toward negat
       id: 'mcat-1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Electrostatics & Coulombs Law:',
-            options: ['Coulombs law: F = kq1q2/r2 — force between charges; like cha', 'Electric field E = F/q = kQ/r2 — field points away from posi', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Coulombs law',
+            options: ['Capacitance C = Q/V; parallel plate: C = epsilon0*A/d; energy stored = (1/2)CV2.', 'F = kq1q2/r2 — force between charges; like charges repel, opposite attract.', 'Electric field E = F/q = kQ/r2 — field points away from positive, toward negative charges.', 'Electric potential V = kQ/r; Voltage = energy per unit charge (J/C = Volt).']
           },
           {
-            label: 'MCAT application:',
-            options: ['Electric potential V = kQ/r; Voltage = energy per unit charg', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Key Insight',
+            options: ['Capacitance C = Q/V; parallel plate: C = epsilon0*A/d; energy stored = (1/2)CV2.', 'F = kq1q2/r2 — force between charges; like charges repel, opposite attract.', 'Electric field E = F/q = kQ/r2 — field points away from positive, toward negative charges.', 'Electric potential V = kQ/r; Voltage = energy per unit charge (J/C = Volt).']
+          },
+          {
+            label: 'MCAT Tip',
+            options: ['Electric potential V = kQ/r; Voltage = energy per unit charge (J/C = Volt).', 'F = kq1q2/r2 — force between charges; like charges repel, opposite attract.', 'Electric field E = F/q = kQ/r2 — field points away from positive, toward negative charges.', 'Capacitance C = Q/V; parallel plate: C = epsilon0*A/d; energy stored = (1/2)CV2.']
           }
         ],
-        correctAnswers: ['Coulombs law: F = kq1q2/r2 — force between charges; like cha', 'Electric potential V = kQ/r; Voltage = energy per unit charg'],
-        hint1: 'Think about electrostatics & coulombs law',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Coulombs law: F = kq1q2/r2 — force between charges; like charges repel, opposite attract. Electric potential V = kQ/r; Voltage = energy per unit charge (J/C = Volt).'
+        correctAnswers: ['F = kq1q2/r2 — force between charges; like charges repel, opposite attract.', 'Electric potential V = kQ/r; Voltage = energy per unit charge (J/C = Volt).', 'Capacitance C = Q/V; parallel plate: C = epsilon0*A/d; energy stored = (1/2)CV2.'],
+        hint1: 'Think about what each concept specifically describes in Physics Electricity.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Physics Electricity describes a specific idea. Coulombs law: F = kq1q2/r2 — force between charges; like charges repel, opposite attract. Key Insight: Electric potential V = kQ/r; Voltage = energy per unit charge (J/C = Volt). MCAT Tip: Capacitance C = Q/V; parallel plate: C = epsilon0*A/d; energy stored = (1/2)CV2.'
       }
     }
   ]

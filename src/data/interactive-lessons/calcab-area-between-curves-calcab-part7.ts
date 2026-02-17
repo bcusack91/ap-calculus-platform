@@ -30,31 +30,31 @@ Watch for functions that intersect more than twice
       id: 'area-7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of review & applications?',
+            question: 'Which statement accurately explains Find all intersection points by setting…?',
             options: [
+              'Create separate integrals for each region between consecutive intersection points',
+              'Watch for functions that intersect more than twice',
               'Find all intersection points by setting f(x) = g(x)',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'Sum the areas of all regions (each area is positive)'
             ],
-            correctAnswer: 0,
-            explanation: 'Find all intersection points by setting f(x) = g(x)'
+            correctAnswer: 2,
+            explanation: 'Correct — Find all intersection points by setting f(x) = g(x). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of review & applications, which is accurate?',
+            question: 'Which of the following is true about Sum the areas of all regions (each area…?',
             options: [
+              'Find all intersection points by setting f(x) = g(x)',
               'Sum the areas of all regions (each area is positive)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Create separate integrals for each region between consecutive intersection points',
+              'Watch for functions that intersect more than twice'
             ],
-            correctAnswer: 0,
-            explanation: 'Sum the areas of all regions (each area is positive)'
+            correctAnswer: 1,
+            explanation: 'Correct — Sum the areas of all regions (each area is positive). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Watch for functions that intersect more than twice
       id: 'area-7-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to review & applications?',
+            question: 'Regarding Review & Applications, which correctly describes Watch for functions that intersect more…?',
             options: [
-              'Watch for functions that intersect more than twice',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'Create separate integrals for each region between consecutive intersection points',
+              'Sum the areas of all regions (each area is positive)',
+              'Find all intersection points by setting f(x) = g(x)',
+              'Watch for functions that intersect more than twice'
             ],
-            correctAnswer: 0,
-            explanation: 'Watch for functions that intersect more than twice'
+            correctAnswer: 3,
+            explanation: 'Correct — Watch for functions that intersect more than twice. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Watch for functions that intersect more than twice
       id: 'area-7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Find all intersection points by setting f(x) = g(x)',
-            options: ['Find all intersection points by setting f(x) = g(x', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Find all intersection points by setting…',
+            options: ['Create separate integrals for each region between consecutive intersection points', 'Watch for functions that intersect more than twice', 'Sum the areas of all regions (each area is positive)', 'Find all intersection points by setting f(x) = g(x)']
           },
           {
-            label: 'Create separate integrals for each region between consecutive intersection points',
-            options: ['Create separate integrals for each region between ', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Create separate integrals for each…',
+            options: ['Watch for functions that intersect more than twice', 'Find all intersection points by setting f(x) = g(x)', 'Create separate integrals for each region between consecutive intersection points', 'Sum the areas of all regions (each area is positive)']
           },
           {
-            label: 'Sum the areas of all regions (each area is positive)',
-            options: ['Sum the areas of all regions (each area is positiv', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Sum the areas of all regions (each area…',
+            options: ['Create separate integrals for each region between consecutive intersection points', 'Find all intersection points by setting f(x) = g(x)', 'Sum the areas of all regions (each area is positive)', 'Watch for functions that intersect more than twice']
           }
         ],
-        correctAnswers: ['Find all intersection points by setting f(x) = g(x', 'Create separate integrals for each region between ', 'Sum the areas of all regions (each area is positiv'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Review & Applications.'
+        correctAnswers: ['Find all intersection points by setting f(x) = g(x)', 'Create separate integrals for each region between consecutive intersection points', 'Sum the areas of all regions (each area is positive)'],
+        hint1: 'Think about what each concept specifically describes in Review & Applications.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Review & Applications describes a specific idea. Find all intersection points by setting f(x) = g(x). Create separate integrals for each region between consecutive intersection points. Sum the areas of all regions (each area is positive).'
       }
     }
   ]

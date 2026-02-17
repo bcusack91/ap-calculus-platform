@@ -30,31 +30,31 @@ After substitution, simplify using trig identities and integrate
       id: 'advan1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of trig substitution (overview)?',
-            options: [
-              'For √(a²-x²)',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'For √(a²-x²): substitute x = a sin θ'
-          },
-          {
-            question: 'In the context of trig substitution (overview), which is accurate?',
+            question: 'What does "For √(a²-x²)" refer to in calculus?',
             options: [
               'substitute x = a sec θ',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'substitute x = a tan θ',
+              'After substitution, simplify using trig identities and integrate',
+              'substitute x = a sin θ'
             ],
-            correctAnswer: 0,
-            explanation: 'For √(x²-a²): substitute x = a sec θ'
+            correctAnswer: 3,
+            explanation: 'Correct — For √(a²-x²): substitute x = a sin θ. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of ∮ Advanced Integration, which explains For √(x²-a²)?',
+            options: [
+              'substitute x = a tan θ',
+              'After substitution, simplify using trig identities and integrate',
+              'substitute x = a sin θ',
+              'substitute x = a sec θ'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — For √(x²-a²): substitute x = a sec θ. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ After substitution, simplify using trig identities and integrate
       id: 'advan1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to trig substitution (overview)?',
+            question: 'Which of these accurately represents After substitution, simplify using trig…?',
             options: [
+              'substitute x = a tan θ',
               'After substitution, simplify using trig identities and integrate',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'substitute x = a sin θ',
+              'substitute x = a sec θ'
             ],
-            correctAnswer: 0,
-            explanation: 'After substitution, simplify using trig identities and integrate'
+            correctAnswer: 1,
+            explanation: 'Correct — After substitution, simplify using trig identities and integrate. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ After substitution, simplify using trig identities and integrate
       id: 'advan1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'For √(a²-x²)',
-            options: ['substitute x = a sin θ', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['substitute x = a sin θ', 'After substitution, simplify using trig identities and integrate', 'substitute x = a sec θ', 'substitute x = a tan θ']
           },
           {
             label: 'For √(a²+x²)',
-            options: ['substitute x = a tan θ', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['substitute x = a sin θ', 'After substitution, simplify using trig identities and integrate', 'substitute x = a sec θ', 'substitute x = a tan θ']
           },
           {
             label: 'For √(x²-a²)',
-            options: ['substitute x = a sec θ', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['substitute x = a sec θ', 'After substitution, simplify using trig identities and integrate', 'substitute x = a sin θ', 'substitute x = a tan θ']
           }
         ],
         correctAnswers: ['substitute x = a sin θ', 'substitute x = a tan θ', 'substitute x = a sec θ'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Trig Substitution (Overview).'
+        hint1: 'Think about what each concept specifically describes in ∮ Advanced Integration.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in ∮ Advanced Integration describes a specific idea. For √(a²-x²): substitute x = a sin θ. For √(a²+x²): substitute x = a tan θ. For √(x²-a²): substitute x = a sec θ.'
       }
     }
   ]

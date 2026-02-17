@@ -71,23 +71,28 @@ Reasoning Beyond the Text: apply passage ideas to new situations.
       id: 'mcat-6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Question Types & Traps:',
-            options: ['Foundation: answer is directly stated in the passage', 'Reasoning Beyond the Text: apply passage ideas to new situat', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Foundation',
+            options: ['answer is directly stated in the passage.', 'apply passage ideas to new situations.', 'Common traps: extreme language, out of scope, opposite of the authors view, partially correct.', 'Reasoning Within the Text: evaluate the logic and structure of the argument.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Reasoning Within the Text: evaluate the logic and structure ', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Reasoning Beyond the Text',
+            options: ['answer is directly stated in the passage.', 'Common traps: extreme language, out of scope, opposite of the authors view, partially correct.', 'apply passage ideas to new situations.', 'Reasoning Within the Text: evaluate the logic and structure of the argument.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['apply passage ideas to new situations.', 'Common traps: extreme language, out of scope, opposite of the authors view, partially correct.', 'Reasoning Within the Text: evaluate the logic and structure of the argument.', 'answer is directly stated in the passage.']
           }
         ],
-        correctAnswers: ['Foundation: answer is directly stated in the passage', 'Reasoning Within the Text: evaluate the logic and structure '],
-        hint1: 'Think about question types & traps',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Foundation: answer is directly stated in the passage. Reasoning Within the Text: evaluate the logic and structure of the argument.'
+        correctAnswers: ['answer is directly stated in the passage.', 'apply passage ideas to new situations.', 'Reasoning Within the Text: evaluate the logic and structure of the argument.'],
+        hint1: 'Think about what each concept specifically describes in Question Types & Traps.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Question Types & Traps describes a specific idea. Foundation: answer is directly stated in the passage. Reasoning Beyond the Text: apply passage ideas to new situations. Key Insight: Reasoning Within the Text: evaluate the logic and structure of the argument.'
       }
     }
   ]

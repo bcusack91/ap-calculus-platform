@@ -30,31 +30,31 @@ Limits describe behavior near a point, not at the point
       id: 'limit1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of intuitive understanding of limits?',
+            question: 'Which of the following correctly describes Limit?',
             options: [
-              'Limit',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'Written as lim(x→c) f(x) = L',
+              'Limits describe behavior near a point, not at the point',
+              'The limit may exist even if f(c) is undefined',
+              'the value f(x) approaches as x approaches a value c'
             ],
-            correctAnswer: 0,
-            explanation: 'Limit: the value f(x) approaches as x approaches a value c'
+            correctAnswer: 3,
+            explanation: 'Correct — Limit: the value f(x) approaches as x approaches a value c. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of intuitive understanding of limits, which is accurate?',
+            question: 'Select the statement that correctly describes The limit may exist even if f(c) is…:',
             options: [
-              'The limit may exist even if f(c) is undefined',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'the value f(x) approaches as x approaches a value c',
+              'Limits describe behavior near a point, not at the point',
+              'Written as lim(x→c) f(x) = L',
+              'The limit may exist even if f(c) is undefined'
             ],
-            correctAnswer: 0,
-            explanation: 'The limit may exist even if f(c) is undefined'
+            correctAnswer: 3,
+            explanation: 'Correct — The limit may exist even if f(c) is undefined. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Limits describe behavior near a point, not at the point
       id: 'limit1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Limit',
-            options: ['the value f(x) approaches as x approaches a value ', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['Limits describe behavior near a point, not at the point', 'Written as lim(x→c) f(x) = L', 'the value f(x) approaches as x approaches a value c', 'The limit may exist even if f(c) is undefined']
           },
           {
             label: 'Written as lim(x→c) f(x) = L',
-            options: ['Written as lim(x→c) f(x) = L', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['Limits describe behavior near a point, not at the point', 'The limit may exist even if f(c) is undefined', 'the value f(x) approaches as x approaches a value c', 'Written as lim(x→c) f(x) = L']
           },
           {
-            label: 'The limit may exist even if f(c) is undefined',
-            options: ['The limit may exist even if f(c) is undefined', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            label: 'The limit may exist even if f(c) is…',
+            options: ['the value f(x) approaches as x approaches a value c', 'Limits describe behavior near a point, not at the point', 'Written as lim(x→c) f(x) = L', 'The limit may exist even if f(c) is undefined']
           }
         ],
-        correctAnswers: ['the value f(x) approaches as x approaches a value ', 'Written as lim(x→c) f(x) = L', 'The limit may exist even if f(c) is undefined'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Intuitive Understanding of Limits.'
+        correctAnswers: ['the value f(x) approaches as x approaches a value c', 'Written as lim(x→c) f(x) = L', 'The limit may exist even if f(c) is undefined'],
+        hint1: 'Think about what each concept specifically describes in Limits Introduction.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Limits Introduction describes a specific idea. Limit: the value f(x) approaches as x approaches a value c. Written as lim(x→c) f(x) = L. The limit may exist even if f(c) is undefined.'
       }
     }
   ]

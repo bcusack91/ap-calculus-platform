@@ -30,31 +30,31 @@ Error bounds quantify the quality of polynomial approximations
       id: 'revie2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of series & function representation?',
+            question: 'Which of the following correctly describes Taylor series represent functions as…?',
             options: [
-              'Taylor series represent functions as infinite polynomials',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
+              'The series "remembers" the function via its derivatives at the center',
+              'Convergence tests determine where the representation is valid',
+              'Error bounds quantify the quality of polynomial approximations',
+              'Taylor series represent functions as infinite polynomials'
             ],
-            correctAnswer: 0,
-            explanation: 'Taylor series represent functions as infinite polynomials'
+            correctAnswer: 3,
+            explanation: 'Correct — Taylor series represent functions as infinite polynomials. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of series & function representation, which is accurate?',
+            question: 'Select the statement that correctly describes Convergence tests determine where the…:',
             options: [
-              'Convergence tests determine where the representation is valid',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'The series "remembers" the function via its derivatives at the center',
+              'Error bounds quantify the quality of polynomial approximations',
+              'Taylor series represent functions as infinite polynomials',
+              'Convergence tests determine where the representation is valid'
             ],
-            correctAnswer: 0,
-            explanation: 'Convergence tests determine where the representation is valid'
+            correctAnswer: 3,
+            explanation: 'Correct — Convergence tests determine where the representation is valid. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Error bounds quantify the quality of polynomial approximations
       id: 'revie2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to series & function representation?',
+            question: 'Which of these accurately represents Error bounds quantify the quality of…?',
             options: [
               'Error bounds quantify the quality of polynomial approximations',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'Taylor series represent functions as infinite polynomials',
+              'The series "remembers" the function via its derivatives at the center',
+              'Convergence tests determine where the representation is valid'
             ],
             correctAnswer: 0,
-            explanation: 'Error bounds quantify the quality of polynomial approximations'
+            explanation: 'Correct — Error bounds quantify the quality of polynomial approximations. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Error bounds quantify the quality of polynomial approximations
       id: 'revie2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Taylor series represent functions as infinite polynomials',
-            options: ['Taylor series represent functions as infinite poly', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Taylor series represent functions as…',
+            options: ['Convergence tests determine where the representation is valid', 'The series "remembers" the function via its derivatives at the center', 'Error bounds quantify the quality of polynomial approximations', 'Taylor series represent functions as infinite polynomials']
           },
           {
-            label: 'The series "remembers" the function via its derivatives at the center',
-            options: ['The series "remembers" the function via its deriva', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'The series "remembers" the function via…',
+            options: ['Convergence tests determine where the representation is valid', 'Taylor series represent functions as infinite polynomials', 'Error bounds quantify the quality of polynomial approximations', 'The series "remembers" the function via its derivatives at the center']
           },
           {
-            label: 'Convergence tests determine where the representation is valid',
-            options: ['Convergence tests determine where the representati', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Convergence tests determine where the…',
+            options: ['Convergence tests determine where the representation is valid', 'Error bounds quantify the quality of polynomial approximations', 'Taylor series represent functions as infinite polynomials', 'The series "remembers" the function via its derivatives at the center']
           }
         ],
-        correctAnswers: ['Taylor series represent functions as infinite poly', 'The series "remembers" the function via its deriva', 'Convergence tests determine where the representati'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Series & Function Representation.'
+        correctAnswers: ['Taylor series represent functions as infinite polynomials', 'The series "remembers" the function via its derivatives at the center', 'Convergence tests determine where the representation is valid'],
+        hint1: 'Think about what each concept specifically describes in Series & Function Representation.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Series & Function Representation describes a specific idea. Taylor series represent functions as infinite polynomials. The series "remembers" the function via its derivatives at the center. Convergence tests determine where the representation is valid.'
       }
     }
   ]

@@ -18,20 +18,31 @@ Vertex: x = -b/(2a), then find y.
       id: 'sat-q4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes parabola opens up if a > 0, down if a < 0?',
+            question: 'Which statement accurately explains Parabola opens up if a > 0, down if a <…?',
             options: [
-              'Parabola opens up if a > 0, down if a < 0 is a fundamental concept in SAT Math',
-              'Vertex: x = -b/(2a), then find y',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'x = -b/(2a), then find y.',
+              'x-intercepts (roots): set y = 0 and solve; y-intercept: set x = 0.',
+              'Axis of symmetry: x = -b/(2a).',
+              'Parabola opens up if a > 0, down if a < 0.'
             ],
-            correctAnswer: 0,
-            explanation: 'Parabola opens up if a > 0, down if a < 0'
+            correctAnswer: 3,
+            explanation: 'Correct — Parabola opens up if a > 0, down if a < 0. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              'x = -b/(2a), then find y.',
+              'x-intercepts (roots): set y = 0 and solve; y-intercept: set x = 0.',
+              'Parabola opens up if a > 0, down if a < 0.',
+              'Axis of symmetry: x = -b/(2a).'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Key Insight: Axis of symmetry: x = -b/(2a). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Vertex: x = -b/(2a), then find y.
       id: 'sat-q4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for graphing parabolas?',
+            question: 'Which of these accurately represents SAT Tip?',
             options: [
-              'Axis of symmetry: x = -b/(2a)',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'Axis of symmetry: x = -b/(2a).',
+              'x = -b/(2a), then find y.',
+              'x-intercepts (roots): set y = 0 and solve; y-intercept: set x = 0.',
+              'Parabola opens up if a > 0, down if a < 0.'
             ],
-            correctAnswer: 0,
-            explanation: 'Axis of symmetry: x = -b/(2a)'
+            correctAnswer: 2,
+            explanation: 'Correct — SAT Tip: x-intercepts (roots): set y = 0 and solve; y-intercept: set x = 0. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Vertex: x = -b/(2a), then find y.
       id: 'sat-q4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Graphing Parabolas:',
-            options: ['Parabola opens up if a > 0, down if a < 0', 'Vertex: x = -b/(2a), then find y', 'Not applicable', 'None of these']
+            label: 'Vertex',
+            options: ['x-intercepts (roots): set y = 0 and solve; y-intercept: set x = 0.', 'x = -b/(2a), then find y.', 'Parabola opens up if a > 0, down if a < 0.', 'Axis of symmetry: x = -b/(2a).']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Axis of symmetry: x = -b/(2a)', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Key Insight',
+            options: ['Axis of symmetry: x = -b/(2a).', 'x = -b/(2a), then find y.', 'x-intercepts (roots): set y = 0 and solve; y-intercept: set x = 0.', 'Parabola opens up if a > 0, down if a < 0.']
+          },
+          {
+            label: 'SAT Tip',
+            options: ['Axis of symmetry: x = -b/(2a).', 'x-intercepts (roots): set y = 0 and solve; y-intercept: set x = 0.', 'Parabola opens up if a > 0, down if a < 0.', 'x = -b/(2a), then find y.']
           }
         ],
-        correctAnswers: ['Parabola opens up if a > 0, down if a < 0', 'Axis of symmetry: x = -b/(2a)'],
-        hint1: 'Think about graphing parabolas',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'Parabola opens up if a > 0, down if a < 0. Axis of symmetry: x = -b/(2a).'
+        correctAnswers: ['x = -b/(2a), then find y.', 'Axis of symmetry: x = -b/(2a).', 'x-intercepts (roots): set y = 0 and solve; y-intercept: set x = 0.'],
+        hint1: 'Think about what each concept specifically describes in Graphing Parabolas.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Graphing Parabolas describes a specific idea. Vertex: x = -b/(2a), then find y. Key Insight: Axis of symmetry: x = -b/(2a). SAT Tip: x-intercepts (roots): set y = 0 and solve; y-intercept: set x = 0.'
       }
     }
   ]

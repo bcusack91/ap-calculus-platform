@@ -30,31 +30,31 @@ social psychology research studies
       id: 'group7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of synthesis & ap review?',
+            question: 'Which of the following correctly describes Group membership shapes identity and…?',
             options: [
               'Group membership shapes identity and behavior',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'Prejudice can be reduced through structured contact',
+              'Culture influences psychological processes',
+              'social psychology research studies'
             ],
             correctAnswer: 0,
-            explanation: 'Group membership shapes identity and behavior'
+            explanation: 'Correct — Group membership shapes identity and behavior. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of synthesis & ap review, which is accurate?',
+            question: 'In the context of Synthesis & AP Review, which explains Culture influences psychological…?',
             options: [
               'Culture influences psychological processes',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Group membership shapes identity and behavior',
+              'social psychology research studies',
+              'Prejudice can be reduced through structured contact'
             ],
             correctAnswer: 0,
-            explanation: 'Culture influences psychological processes'
+            explanation: 'Correct — Culture influences psychological processes. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ social psychology research studies
       id: 'group7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Group membership shapes identity and behavior',
-            options: ['Group membership shapes identity and behavior', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            label: 'Group membership shapes identity and…',
+            options: ['social psychology research studies', 'Prejudice can be reduced through structured contact', 'Group membership shapes identity and behavior', 'Culture influences psychological processes']
           },
           {
-            label: 'Prejudice can be reduced through structured contact',
-            options: ['Prejudice can be reduced through structured contac', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            label: 'Prejudice can be reduced through…',
+            options: ['Prejudice can be reduced through structured contact', 'social psychology research studies', 'Group membership shapes identity and behavior', 'Culture influences psychological processes']
           },
           {
-            label: 'Culture influences psychological processes',
-            options: ['Culture influences psychological processes', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            label: 'Culture influences psychological…',
+            options: ['social psychology research studies', 'Prejudice can be reduced through structured contact', 'Group membership shapes identity and behavior', 'Culture influences psychological processes']
           }
         ],
-        correctAnswers: ['Group membership shapes identity and behavior', 'Prejudice can be reduced through structured contac', 'Culture influences psychological processes'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Synthesis & AP Review.'
+        correctAnswers: ['Group membership shapes identity and behavior', 'Prejudice can be reduced through structured contact', 'Culture influences psychological processes'],
+        hint1: 'Think about what each concept specifically describes in Synthesis & AP Review.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Synthesis & AP Review describes a specific idea. Group membership shapes identity and behavior. Prejudice can be reduced through structured contact. Culture influences psychological processes.'
       }
     }
   ]

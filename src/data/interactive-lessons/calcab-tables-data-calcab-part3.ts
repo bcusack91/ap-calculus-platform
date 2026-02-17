@@ -30,31 +30,31 @@ Over/underestimates depend on whether f is increasing or decreasing
       id: 'table3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of riemann sums from tables?',
+            question: 'What does "Left Riemann sum" refer to in calculus?',
             options: [
-              'Left Riemann sum',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'uses left endpoints of each subinterval',
+              'uses the midpoint of each subinterval',
+              'uses right endpoints',
+              'Over/underestimates depend on whether f is increasing or decreasing'
             ],
             correctAnswer: 0,
-            explanation: 'Left Riemann sum: uses left endpoints of each subinterval'
+            explanation: 'Correct — Left Riemann sum: uses left endpoints of each subinterval. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of riemann sums from tables, which is accurate?',
+            question: 'Select the statement that correctly describes Midpoint sum:',
             options: [
               'uses the midpoint of each subinterval',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Over/underestimates depend on whether f is increasing or decreasing',
+              'uses right endpoints',
+              'uses left endpoints of each subinterval'
             ],
             correctAnswer: 0,
-            explanation: 'Midpoint sum: uses the midpoint of each subinterval'
+            explanation: 'Correct — Midpoint sum: uses the midpoint of each subinterval. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Over/underestimates depend on whether f is increasing or decreasing
       id: 'table3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to riemann sums from tables?',
+            question: 'Which of these accurately represents Over/underestimates depend on whether f…?',
             options: [
+              'uses left endpoints of each subinterval',
+              'uses right endpoints',
               'Over/underestimates depend on whether f is increasing or decreasing',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'uses the midpoint of each subinterval'
             ],
-            correctAnswer: 0,
-            explanation: 'Over/underestimates depend on whether f is increasing or decreasing'
+            correctAnswer: 2,
+            explanation: 'Correct — Over/underestimates depend on whether f is increasing or decreasing. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Over/underestimates depend on whether f is increasing or decreasing
       id: 'table3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Left Riemann sum',
-            options: ['uses left endpoints of each subinterval', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['uses left endpoints of each subinterval', 'uses the midpoint of each subinterval', 'Over/underestimates depend on whether f is increasing or decreasing', 'uses right endpoints']
           },
           {
             label: 'Right Riemann sum',
-            options: ['uses right endpoints', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['uses the midpoint of each subinterval', 'uses left endpoints of each subinterval', 'uses right endpoints', 'Over/underestimates depend on whether f is increasing or decreasing']
           },
           {
             label: 'Midpoint sum',
-            options: ['uses the midpoint of each subinterval', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Over/underestimates depend on whether f is increasing or decreasing', 'uses left endpoints of each subinterval', 'uses the midpoint of each subinterval', 'uses right endpoints']
           }
         ],
         correctAnswers: ['uses left endpoints of each subinterval', 'uses right endpoints', 'uses the midpoint of each subinterval'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Riemann Sums from Tables.'
+        hint1: 'Think about what each concept specifically describes in Riemann Sums from Tables.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Riemann Sums from Tables describes a specific idea. Left Riemann sum: uses left endpoints of each subinterval. Right Riemann sum: uses right endpoints. Midpoint sum: uses the midpoint of each subinterval.'
       }
     }
   ]

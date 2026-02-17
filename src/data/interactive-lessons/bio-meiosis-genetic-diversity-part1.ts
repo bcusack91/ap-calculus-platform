@@ -19,31 +19,31 @@ export const bioMeiosisPart1Data = {
       id: 'meio1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes meiosis produces gametes (sex cells)?',
+            question: 'Which of the following correctly describes Meiosis produces gametes (sex cells)?',
             options: [
+              'meiosis I and meiosis II',
               'Meiosis produces gametes (sex cells)',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Results in 4 haploid daughter cells',
+              'Reduces chromosome number by half (2n → n)'
             ],
-            correctAnswer: 0,
-            explanation: 'Meiosis produces gametes (sex cells)'
+            correctAnswer: 1,
+            explanation: 'Correct — Meiosis produces gametes (sex cells). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of meiosis overview, which statement is accurate?',
+            question: 'In the context of Meiosis Overview, which explains Two divisions?',
             options: [
-              'Two divisions: meiosis I and meiosis II',
-              ')sllec xes( setemag secudorp sisoieM',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Meiosis produces gametes (sex cells)',
+              'Results in 4 haploid daughter cells',
+              'meiosis I and meiosis II',
+              'Reduces chromosome number by half (2n → n)'
             ],
-            correctAnswer: 0,
-            explanation: 'Two divisions: meiosis I and meiosis II'
+            correctAnswer: 2,
+            explanation: 'Correct — Two divisions: meiosis I and meiosis II. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioMeiosisPart1Data = {
       id: 'meio1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to meiosis overview?',
+            question: 'Regarding Meiosis Overview, which correctly describes Results in 4 haploid daughter cells?',
             options: [
-              'Results in 4 haploid daughter cells',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'meiosis I and meiosis II',
+              'Meiosis produces gametes (sex cells)',
+              'Reduces chromosome number by half (2n → n)',
+              'Results in 4 haploid daughter cells'
             ],
-            correctAnswer: 0,
-            explanation: 'Results in 4 haploid daughter cells'
+            correctAnswer: 3,
+            explanation: 'Correct — Results in 4 haploid daughter cells. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioMeiosisPart1Data = {
       id: 'meio1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Meiosis produces gametes (sex cells) is important in meiosis overview because',
-            options: ['Meiosis produces gametes (sex cells)', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Meiosis produces gametes (sex cells)',
+            options: ['Reduces chromosome number by half (2n → n)', 'Results in 4 haploid daughter cells', 'meiosis I and meiosis II', 'Meiosis produces gametes (sex cells)']
           },
           {
-            label: 'Reduces chromosome number by half (2n → n) is important in meiosis overview because',
-            options: ['Reduces chromosome number by half (2n → n)', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Reduces chromosome number by half (2n →…',
+            options: ['Meiosis produces gametes (sex cells)', 'meiosis I and meiosis II', 'Reduces chromosome number by half (2n → n)', 'Results in 4 haploid daughter cells']
           },
           {
-            label: 'Two divisions is important in meiosis overview because',
-            options: ['meiosis I and meiosis II', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Two divisions',
+            options: ['Results in 4 haploid daughter cells', 'Reduces chromosome number by half (2n → n)', 'Meiosis produces gametes (sex cells)', 'meiosis I and meiosis II']
           }
         ],
         correctAnswers: ['Meiosis produces gametes (sex cells)', 'Reduces chromosome number by half (2n → n)', 'meiosis I and meiosis II'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Meiosis Overview.'
+        hint1: 'Think about what each concept specifically describes in Meiosis Overview.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Meiosis Overview describes a specific idea. Meiosis produces gametes (sex cells). Reduces chromosome number by half (2n → n). Two divisions: meiosis I and meiosis II.'
       }
     }
   ]

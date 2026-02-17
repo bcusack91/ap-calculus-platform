@@ -19,31 +19,31 @@ export const bioMendelianPart4Data = {
       id: 'mend4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes circles = females, squares = males?',
+            question: 'What does "Circles = females, squares = males" refer to in biology?',
             options: [
-              'Circles = females, squares = males',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'can skip generations, carrier parents',
+              'affected in every generation',
+              'Filled = affected, open = unaffected',
+              'Circles = females, squares = males'
             ],
-            correctAnswer: 0,
-            explanation: 'Circles = females, squares = males'
+            correctAnswer: 3,
+            explanation: 'Correct — Circles = females, squares = males. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of pedigree analysis, which statement is accurate?',
+            question: 'Select the statement that correctly describes Autosomal dominant:',
             options: [
-              'Autosomal dominant: affected in every generation',
-              'selam = serauqs ,selamef = selcriC',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'affected in every generation',
+              'Circles = females, squares = males',
+              'can skip generations, carrier parents',
+              'Filled = affected, open = unaffected'
             ],
             correctAnswer: 0,
-            explanation: 'Autosomal dominant: affected in every generation'
+            explanation: 'Correct — Autosomal dominant: affected in every generation. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioMendelianPart4Data = {
       id: 'mend4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to pedigree analysis?',
+            question: 'Which statement about Autosomal recessive is correct?',
             options: [
-              'Autosomal recessive: can skip generations, carrier parents',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'can skip generations, carrier parents',
+              'Circles = females, squares = males',
+              'affected in every generation',
+              'Filled = affected, open = unaffected'
             ],
             correctAnswer: 0,
-            explanation: 'Autosomal recessive: can skip generations, carrier parents'
+            explanation: 'Correct — Autosomal recessive: can skip generations, carrier parents. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,24 @@ export const bioMendelianPart4Data = {
       id: 'mend4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Circles = females, squares = males is important in pedigree analysis because',
-            options: ['Circles = females, squares = males', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Autosomal dominant',
+            options: ['can skip generations, carrier parents', 'Filled = affected, open = unaffected', 'affected in every generation', 'Circles = females, squares = males']
           },
           {
-            label: 'Filled = affected, open = unaffected is important in pedigree analysis because',
-            options: ['Filled = affected, open = unaffected', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
-          },
-          {
-            label: 'Autosomal dominant is important in pedigree analysis because',
-            options: ['affected in every generation', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Autosomal recessive',
+            options: ['can skip generations, carrier parents', 'Circles = females, squares = males', 'affected in every generation', 'Filled = affected, open = unaffected']
           }
         ],
-        correctAnswers: ['Circles = females, squares = males', 'Filled = affected, open = unaffected', 'affected in every generation'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Pedigree Analysis.'
+        correctAnswers: ['affected in every generation', 'can skip generations, carrier parents'],
+        hint1: 'Think about what each concept specifically describes in Pedigree Analysis.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Pedigree Analysis describes a specific idea. Autosomal dominant: affected in every generation. Autosomal recessive: can skip generations, carrier parents.'
       }
     }
   ]

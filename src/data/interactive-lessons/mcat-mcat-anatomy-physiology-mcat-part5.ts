@@ -71,23 +71,28 @@ Hearing: sound waves vibrate tympanic membrane, ossicles amplify, cochlea transd
       id: 'mcat-5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Sensory Systems:',
-            options: ['Vision: cornea + lens focus light on retina; rods (dim light', 'Hearing: sound waves vibrate tympanic membrane, ossicles amp', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Vision',
+            options: ['Taste and smell: chemoreceptors; Somatosensory: mechanoreceptors, thermoreceptors, nociceptors.', 'cornea + lens focus light on retina; rods (dim light) and cones (color).', 'sound waves vibrate tympanic membrane, ossicles amplify, cochlea transduces.', 'Vestibular system: semicircular canals detect rotational acceleration; otolith organs detect linear.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Vestibular system: semicircular canals detect rotational acc', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Hearing',
+            options: ['sound waves vibrate tympanic membrane, ossicles amplify, cochlea transduces.', 'Taste and smell: chemoreceptors; Somatosensory: mechanoreceptors, thermoreceptors, nociceptors.', 'cornea + lens focus light on retina; rods (dim light) and cones (color).', 'Vestibular system: semicircular canals detect rotational acceleration; otolith organs detect linear.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['cornea + lens focus light on retina; rods (dim light) and cones (color).', 'sound waves vibrate tympanic membrane, ossicles amplify, cochlea transduces.', 'Taste and smell: chemoreceptors; Somatosensory: mechanoreceptors, thermoreceptors, nociceptors.', 'Vestibular system: semicircular canals detect rotational acceleration; otolith organs detect linear.']
           }
         ],
-        correctAnswers: ['Vision: cornea + lens focus light on retina; rods (dim light', 'Vestibular system: semicircular canals detect rotational acc'],
-        hint1: 'Think about sensory systems',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Vision: cornea + lens focus light on retina; rods (dim light) and cones (color). Vestibular system: semicircular canals detect rotational acceleration; otolith organs detect linear.'
+        correctAnswers: ['cornea + lens focus light on retina; rods (dim light) and cones (color).', 'sound waves vibrate tympanic membrane, ossicles amplify, cochlea transduces.', 'Vestibular system: semicircular canals detect rotational acceleration; otolith organs detect linear.'],
+        hint1: 'Think about what each concept specifically describes in Sensory Systems.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Sensory Systems describes a specific idea. Vision: cornea + lens focus light on retina; rods (dim light) and cones (color). Hearing: sound waves vibrate tympanic membrane, ossicles amplify, cochlea transduces. Key Insight: Vestibular system: semicircular canals detect rotational acceleration; otolith organs detect linear.'
       }
     }
   ]

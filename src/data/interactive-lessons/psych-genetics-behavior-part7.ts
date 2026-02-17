@@ -30,31 +30,31 @@ Critical evaluation of genetic determinism
       id: 'genet7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of synthesis & ap review?',
+            question: 'Which statement accurately explains Genes set the range, environment…?',
             options: [
               'Genes set the range, environment determines position',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'Evolutionary psychology on the AP exam',
+              'Neither nature nor nurture alone',
+              'Critical evaluation of genetic determinism'
             ],
             correctAnswer: 0,
-            explanation: 'Genes set the range, environment determines position'
+            explanation: 'Correct — Genes set the range, environment determines position. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of synthesis & ap review, which is accurate?',
+            question: 'Which of the following is true about Evolutionary psychology on the AP exam?',
             options: [
+              'Critical evaluation of genetic determinism',
+              'Neither nature nor nurture alone',
               'Evolutionary psychology on the AP exam',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Genes set the range, environment determines position'
             ],
-            correctAnswer: 0,
-            explanation: 'Evolutionary psychology on the AP exam'
+            correctAnswer: 2,
+            explanation: 'Correct — Evolutionary psychology on the AP exam. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Critical evaluation of genetic determinism
       id: 'genet7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Genes set the range, environment determines position',
-            options: ['Genes set the range, environment determines positi', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            label: 'Genes set the range, environment…',
+            options: ['Critical evaluation of genetic determinism', 'Neither nature nor nurture alone', 'Genes set the range, environment determines position', 'Evolutionary psychology on the AP exam']
           },
           {
             label: 'Neither nature nor nurture alone',
-            options: ['Neither nature nor nurture alone', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Evolutionary psychology on the AP exam', 'Neither nature nor nurture alone', 'Critical evaluation of genetic determinism', 'Genes set the range, environment determines position']
           },
           {
             label: 'Evolutionary psychology on the AP exam',
-            options: ['Evolutionary psychology on the AP exam', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Neither nature nor nurture alone', 'Critical evaluation of genetic determinism', 'Evolutionary psychology on the AP exam', 'Genes set the range, environment determines position']
           }
         ],
-        correctAnswers: ['Genes set the range, environment determines positi', 'Neither nature nor nurture alone', 'Evolutionary psychology on the AP exam'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Synthesis & AP Review.'
+        correctAnswers: ['Genes set the range, environment determines position', 'Neither nature nor nurture alone', 'Evolutionary psychology on the AP exam'],
+        hint1: 'Think about what each concept specifically describes in Synthesis & AP Review.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Synthesis & AP Review describes a specific idea. Genes set the range, environment determines position. Neither nature nor nurture alone. Evolutionary psychology on the AP exam.'
       }
     }
   ]

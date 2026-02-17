@@ -30,31 +30,31 @@ Heat of hydrogenation is 150 kJ/mol LESS than expected (resonance energy)
       id: 'aroma2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of benzene structure?',
-            options: [
-              'Benzene',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
-            ],
-            correctAnswer: 0,
-            explanation: 'Benzene: six equivalent C-H bonds, all 1.39 Å'
-          },
-          {
-            question: 'In the context of benzene structure, which is accurate?',
+            question: 'What does "Benzene" refer to in this topic?',
             options: [
               'Actual structure is a hybrid (delocalized)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Heat of hydrogenation is 150 kJ/mol LESS than expected (resonance energy)',
+              'Two equivalent resonance structures',
+              'six equivalent C-H bonds, all 1.39 Å'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Benzene: six equivalent C-H bonds, all 1.39 Å. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Actual structure is a hybrid…?',
+            options: [
+              'Actual structure is a hybrid (delocalized)',
+              'six equivalent C-H bonds, all 1.39 Å',
+              'Heat of hydrogenation is 150 kJ/mol LESS than expected (resonance energy)',
+              'Two equivalent resonance structures'
             ],
             correctAnswer: 0,
-            explanation: 'Actual structure is a hybrid (delocalized)'
+            explanation: 'Correct — Actual structure is a hybrid (delocalized). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Heat of hydrogenation is 150 kJ/mol LESS than expected (resonance energy)
       id: 'aroma2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Benzene',
-            options: ['six equivalent C-H bonds, all 1.39 Å', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Two equivalent resonance structures', 'six equivalent C-H bonds, all 1.39 Å', 'Heat of hydrogenation is 150 kJ/mol LESS than expected (resonance energy)', 'Actual structure is a hybrid (delocalized)']
           },
           {
             label: 'Two equivalent resonance structures',
-            options: ['Two equivalent resonance structures', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Two equivalent resonance structures', 'six equivalent C-H bonds, all 1.39 Å', 'Actual structure is a hybrid (delocalized)', 'Heat of hydrogenation is 150 kJ/mol LESS than expected (resonance energy)']
           },
           {
-            label: 'Actual structure is a hybrid (delocalized)',
-            options: ['Actual structure is a hybrid (delocalized)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Actual structure is a hybrid…',
+            options: ['Heat of hydrogenation is 150 kJ/mol LESS than expected (resonance energy)', 'Two equivalent resonance structures', 'six equivalent C-H bonds, all 1.39 Å', 'Actual structure is a hybrid (delocalized)']
           }
         ],
         correctAnswers: ['six equivalent C-H bonds, all 1.39 Å', 'Two equivalent resonance structures', 'Actual structure is a hybrid (delocalized)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Benzene Structure.'
+        hint1: 'Think about what each concept specifically describes in Benzene Structure.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Benzene Structure describes a specific idea. Benzene: six equivalent C-H bonds, all 1.39 Å. Two equivalent resonance structures. Actual structure is a hybrid (delocalized).'
       }
     }
   ]

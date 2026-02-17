@@ -19,31 +19,31 @@ export const bioMembraneTransportPart3Data = {
       id: 'memb3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes osmosis?',
+            question: 'Which statement accurately explains Osmosis?',
             options: [
-              'water moves across semipermeable membrane',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'no net water movement',
+              'water leaves cell (crenation/plasmolysis)',
+              'water enters cell (lysis in animal cells)',
+              'water moves across semipermeable membrane'
             ],
-            correctAnswer: 0,
-            explanation: 'Osmosis: water moves across semipermeable membrane'
+            correctAnswer: 3,
+            explanation: 'Correct — Osmosis: water moves across semipermeable membrane. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of osmosis & tonicity, which statement is accurate?',
+            question: 'In the context of Osmosis & Tonicity, which explains Hypertonic?',
             options: [
-              'Hypertonic: water leaves cell (crenation/plasmolysis)',
-              'enarbmem elbaemrepimes ssorca sevom retaw :sisomsO',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'water leaves cell (crenation/plasmolysis)',
+              'water moves across semipermeable membrane',
+              'water enters cell (lysis in animal cells)',
+              'no net water movement'
             ],
             correctAnswer: 0,
-            explanation: 'Hypertonic: water leaves cell (crenation/plasmolysis)'
+            explanation: 'Correct — Hypertonic: water leaves cell (crenation/plasmolysis). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioMembraneTransportPart3Data = {
       id: 'memb3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to osmosis & tonicity?',
+            question: 'Which statement about Isotonic is correct?',
             options: [
-              'Isotonic: no net water movement',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'water leaves cell (crenation/plasmolysis)',
+              'water moves across semipermeable membrane',
+              'no net water movement',
+              'water enters cell (lysis in animal cells)'
             ],
-            correctAnswer: 0,
-            explanation: 'Isotonic: no net water movement'
+            correctAnswer: 2,
+            explanation: 'Correct — Isotonic: no net water movement. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioMembraneTransportPart3Data = {
       id: 'memb3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Osmosis is important in osmosis & tonicity because',
-            options: ['water moves across semipermeable membrane', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Osmosis',
+            options: ['water moves across semipermeable membrane', 'no net water movement', 'water enters cell (lysis in animal cells)', 'water leaves cell (crenation/plasmolysis)']
           },
           {
-            label: 'Hypotonic is important in osmosis & tonicity because',
-            options: ['water enters cell (lysis in animal cells)', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Hypotonic',
+            options: ['no net water movement', 'water moves across semipermeable membrane', 'water leaves cell (crenation/plasmolysis)', 'water enters cell (lysis in animal cells)']
           },
           {
-            label: 'Hypertonic is important in osmosis & tonicity because',
-            options: ['water leaves cell (crenation/plasmolysis)', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Hypertonic',
+            options: ['water enters cell (lysis in animal cells)', 'water leaves cell (crenation/plasmolysis)', 'no net water movement', 'water moves across semipermeable membrane']
           }
         ],
         correctAnswers: ['water moves across semipermeable membrane', 'water enters cell (lysis in animal cells)', 'water leaves cell (crenation/plasmolysis)'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Osmosis & Tonicity.'
+        hint1: 'Think about what each concept specifically describes in Osmosis & Tonicity.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Osmosis & Tonicity describes a specific idea. Osmosis: water moves across semipermeable membrane. Hypotonic: water enters cell (lysis in animal cells). Hypertonic: water leaves cell (crenation/plasmolysis).'
       }
     }
   ]

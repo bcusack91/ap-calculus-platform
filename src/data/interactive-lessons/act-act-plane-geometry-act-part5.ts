@@ -18,20 +18,31 @@ Triangle: A = ½bh.
       id: 'act-p5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes rectangle?',
+            question: 'Which of the following correctly describes Rectangle?',
             options: [
-              'Rectangle is a key concept for ACT Math',
-              'Triangle: A = ½bh',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'Circle: A = πr², C = 2πr.',
+              'A = ½bh.',
+              'Composite figures: break into simple shapes, add/subtract areas.',
+              'A = lw, P = 2l + 2w.'
             ],
-            correctAnswer: 0,
-            explanation: 'Rectangle: A = lw, P = 2l + 2w'
+            correctAnswer: 3,
+            explanation: 'Correct — Rectangle: A = lw, P = 2l + 2w. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              'A = ½bh.',
+              'A = lw, P = 2l + 2w.',
+              'Circle: A = πr², C = 2πr.',
+              'Composite figures: break into simple shapes, add/subtract areas.'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Key Insight: Circle: A = πr², C = 2πr. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Triangle: A = ½bh.
       id: 'act-p5-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for area & perimeter?',
+            question: 'Which of these accurately represents ACT Tip?',
             options: [
-              'Circle: A = πr², C = 2πr',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Composite figures: break into simple shapes, add/subtract areas.',
+              'A = ½bh.',
+              'Circle: A = πr², C = 2πr.',
+              'A = lw, P = 2l + 2w.'
             ],
             correctAnswer: 0,
-            explanation: 'Circle: A = πr², C = 2πr'
+            explanation: 'Correct — ACT Tip: Composite figures: break into simple shapes, add/subtract areas. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Triangle: A = ½bh.
       id: 'act-p5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Area & Perimeter:',
-            options: ['Rectangle: A = lw, P = 2l + 2w', 'Triangle: A = ½bh', 'Not applicable', 'None of these']
+            label: 'Rectangle',
+            options: ['A = ½bh.', 'A = lw, P = 2l + 2w.', 'Circle: A = πr², C = 2πr.', 'Composite figures: break into simple shapes, add/subtract areas.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Circle: A = πr², C = 2πr', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Triangle',
+            options: ['Composite figures: break into simple shapes, add/subtract areas.', 'A = ½bh.', 'A = lw, P = 2l + 2w.', 'Circle: A = πr², C = 2πr.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['A = lw, P = 2l + 2w.', 'Composite figures: break into simple shapes, add/subtract areas.', 'A = ½bh.', 'Circle: A = πr², C = 2πr.']
           }
         ],
-        correctAnswers: ['Rectangle: A = lw, P = 2l + 2w', 'Circle: A = πr², C = 2πr'],
-        hint1: 'Think about area & perimeter',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Rectangle: A = lw, P = 2l + 2w. Circle: A = πr², C = 2πr.'
+        correctAnswers: ['A = lw, P = 2l + 2w.', 'A = ½bh.', 'Circle: A = πr², C = 2πr.'],
+        hint1: 'Think about what each concept specifically describes in Area & Perimeter.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Area & Perimeter describes a specific idea. Rectangle: A = lw, P = 2l + 2w. Triangle: A = ½bh. Key Insight: Circle: A = πr², C = 2πr.'
       }
     }
   ]

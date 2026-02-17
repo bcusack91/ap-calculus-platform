@@ -19,31 +19,31 @@ export const bioPhotosynthesisPart1Data = {
       id: 'phot1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes occur in thylakoid membranes?',
+            question: 'What does "Occur in thylakoid membranes" refer to in biology?',
             options: [
+              'Light energy → ATP + NADPH + O₂',
               'Occur in thylakoid membranes',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              '2H₂O → 4H⁺ + 4e⁻ + O₂',
+              'Chlorophyll absorbs red and blue light, reflects green'
             ],
-            correctAnswer: 0,
-            explanation: 'Occur in thylakoid membranes'
+            correctAnswer: 1,
+            explanation: 'Correct — Occur in thylakoid membranes. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of light reactions overview, which statement is accurate?',
+            question: 'Select the statement that correctly describes Water is split (photolysis):',
             options: [
-              'Water is split (photolysis): 2H₂O → 4H⁺ + 4e⁻ + O₂',
-              'senarbmem diokalyht ni ruccO',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Chlorophyll absorbs red and blue light, reflects green',
+              '2H₂O → 4H⁺ + 4e⁻ + O₂',
+              'Occur in thylakoid membranes',
+              'Light energy → ATP + NADPH + O₂'
             ],
-            correctAnswer: 0,
-            explanation: 'Water is split (photolysis): 2H₂O → 4H⁺ + 4e⁻ + O₂'
+            correctAnswer: 1,
+            explanation: 'Correct — Water is split (photolysis): 2H₂O → 4H⁺ + 4e⁻ + O₂. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioPhotosynthesisPart1Data = {
       id: 'phot1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to light reactions overview?',
+            question: 'Regarding Light Reactions Overview, which correctly describes Chlorophyll absorbs red and blue light,…?',
             options: [
+              '2H₂O → 4H⁺ + 4e⁻ + O₂',
               'Chlorophyll absorbs red and blue light, reflects green',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Occur in thylakoid membranes',
+              'Light energy → ATP + NADPH + O₂'
             ],
-            correctAnswer: 0,
-            explanation: 'Chlorophyll absorbs red and blue light, reflects green'
+            correctAnswer: 1,
+            explanation: 'Correct — Chlorophyll absorbs red and blue light, reflects green. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioPhotosynthesisPart1Data = {
       id: 'phot1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Occur in thylakoid membranes is important in light reactions overview because',
-            options: ['Occur in thylakoid membranes', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Occur in thylakoid membranes',
+            options: ['Occur in thylakoid membranes', '2H₂O → 4H⁺ + 4e⁻ + O₂', 'Chlorophyll absorbs red and blue light, reflects green', 'Light energy → ATP + NADPH + O₂']
           },
           {
-            label: 'Light energy → ATP + NADPH + O₂ is important in light reactions overview because',
-            options: ['Light energy → ATP + NADPH + O₂', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Light energy → ATP + NADPH + O₂',
+            options: ['Chlorophyll absorbs red and blue light, reflects green', '2H₂O → 4H⁺ + 4e⁻ + O₂', 'Light energy → ATP + NADPH + O₂', 'Occur in thylakoid membranes']
           },
           {
-            label: 'Water is split (photolysis) is important in light reactions overview because',
-            options: ['2H₂O → 4H⁺ + 4e⁻ + O₂', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Water is split (photolysis)',
+            options: ['Chlorophyll absorbs red and blue light, reflects green', 'Occur in thylakoid membranes', '2H₂O → 4H⁺ + 4e⁻ + O₂', 'Light energy → ATP + NADPH + O₂']
           }
         ],
         correctAnswers: ['Occur in thylakoid membranes', 'Light energy → ATP + NADPH + O₂', '2H₂O → 4H⁺ + 4e⁻ + O₂'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Light Reactions Overview.'
+        hint1: 'Think about what each concept specifically describes in Light Reactions Overview.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Light Reactions Overview describes a specific idea. Occur in thylakoid membranes. Light energy → ATP + NADPH + O₂. Water is split (photolysis): 2H₂O → 4H⁺ + 4e⁻ + O₂.'
       }
     }
   ]

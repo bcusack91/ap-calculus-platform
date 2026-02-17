@@ -19,31 +19,31 @@ export const bioMeiosisPart3Data = {
       id: 'meio3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes similar to mitosis?',
+            question: 'Which of the following correctly describes Similar to mitosis?',
             options: [
               'Similar to mitosis',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'No DNA replication between meiosis I and II',
+              'Four haploid cells produced',
+              'Sister chromatids separate'
             ],
             correctAnswer: 0,
-            explanation: 'Similar to mitosis'
+            explanation: 'Correct — Similar to mitosis. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of meiosis ii, which statement is accurate?',
+            question: 'Which of the following is true about No DNA replication between meiosis I…?',
             options: [
-              'No DNA replication between meiosis I and II',
-              'sisotim ot ralimiS',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Four haploid cells produced',
+              'Sister chromatids separate',
+              'Similar to mitosis',
+              'No DNA replication between meiosis I and II'
             ],
-            correctAnswer: 0,
-            explanation: 'No DNA replication between meiosis I and II'
+            correctAnswer: 3,
+            explanation: 'Correct — No DNA replication between meiosis I and II. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioMeiosisPart3Data = {
       id: 'meio3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to meiosis ii?',
+            question: 'Which of these accurately represents Four haploid cells produced?',
             options: [
+              'No DNA replication between meiosis I and II',
               'Four haploid cells produced',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Similar to mitosis',
+              'Sister chromatids separate'
             ],
-            correctAnswer: 0,
-            explanation: 'Four haploid cells produced'
+            correctAnswer: 1,
+            explanation: 'Correct — Four haploid cells produced. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioMeiosisPart3Data = {
       id: 'meio3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Similar to mitosis is important in meiosis ii because',
-            options: ['Similar to mitosis', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Similar to mitosis',
+            options: ['Four haploid cells produced', 'Similar to mitosis', 'No DNA replication between meiosis I and II', 'Sister chromatids separate']
           },
           {
-            label: 'Sister chromatids separate is important in meiosis ii because',
-            options: ['Sister chromatids separate', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Sister chromatids separate',
+            options: ['Sister chromatids separate', 'Four haploid cells produced', 'No DNA replication between meiosis I and II', 'Similar to mitosis']
           },
           {
-            label: 'No DNA replication between meiosis I and II is important in meiosis ii because',
-            options: ['No DNA replication between meiosis I and II', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'No DNA replication between meiosis I…',
+            options: ['Similar to mitosis', 'No DNA replication between meiosis I and II', 'Sister chromatids separate', 'Four haploid cells produced']
           }
         ],
         correctAnswers: ['Similar to mitosis', 'Sister chromatids separate', 'No DNA replication between meiosis I and II'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Meiosis II.'
+        hint1: 'Think about what each concept specifically describes in Meiosis II.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Meiosis II describes a specific idea. Similar to mitosis. Sister chromatids separate. No DNA replication between meiosis I and II.'
       }
     }
   ]

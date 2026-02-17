@@ -30,31 +30,31 @@ State the domain of the particular solution
       id: 'free-7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of review & applications?',
+            question: 'Which statement accurately explains Sketch solution curve on slope field…?',
             options: [
+              'State the domain of the particular solution',
+              'Separate and integrate with proper technique',
               'Sketch solution curve on slope field through given initial condition',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'Apply initial condition to find particular solution'
             ],
-            correctAnswer: 0,
-            explanation: 'Sketch solution curve on slope field through given initial condition'
+            correctAnswer: 2,
+            explanation: 'Correct — Sketch solution curve on slope field through given initial condition. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of review & applications, which is accurate?',
+            question: 'In the context of Review & Applications, which explains Apply initial condition to find…?',
             options: [
+              'State the domain of the particular solution',
               'Apply initial condition to find particular solution',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Sketch solution curve on slope field through given initial condition',
+              'Separate and integrate with proper technique'
             ],
-            correctAnswer: 0,
-            explanation: 'Apply initial condition to find particular solution'
+            correctAnswer: 1,
+            explanation: 'Correct — Apply initial condition to find particular solution. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ State the domain of the particular solution
       id: 'free-7-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to review & applications?',
+            question: 'Regarding Review & Applications, which correctly describes State the domain of the particular…?',
             options: [
+              'Apply initial condition to find particular solution',
               'State the domain of the particular solution',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'Sketch solution curve on slope field through given initial condition',
+              'Separate and integrate with proper technique'
             ],
-            correctAnswer: 0,
-            explanation: 'State the domain of the particular solution'
+            correctAnswer: 1,
+            explanation: 'Correct — State the domain of the particular solution. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ State the domain of the particular solution
       id: 'free-7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Sketch solution curve on slope field through given initial condition',
-            options: ['Sketch solution curve on slope field through given', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Sketch solution curve on slope field…',
+            options: ['Separate and integrate with proper technique', 'State the domain of the particular solution', 'Sketch solution curve on slope field through given initial condition', 'Apply initial condition to find particular solution']
           },
           {
-            label: 'Separate and integrate with proper technique',
-            options: ['Separate and integrate with proper technique', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Separate and integrate with proper…',
+            options: ['Sketch solution curve on slope field through given initial condition', 'Apply initial condition to find particular solution', 'State the domain of the particular solution', 'Separate and integrate with proper technique']
           },
           {
-            label: 'Apply initial condition to find particular solution',
-            options: ['Apply initial condition to find particular solutio', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Apply initial condition to find…',
+            options: ['Apply initial condition to find particular solution', 'Separate and integrate with proper technique', 'State the domain of the particular solution', 'Sketch solution curve on slope field through given initial condition']
           }
         ],
-        correctAnswers: ['Sketch solution curve on slope field through given', 'Separate and integrate with proper technique', 'Apply initial condition to find particular solutio'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Review & Applications.'
+        correctAnswers: ['Sketch solution curve on slope field through given initial condition', 'Separate and integrate with proper technique', 'Apply initial condition to find particular solution'],
+        hint1: 'Think about what each concept specifically describes in Review & Applications.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Review & Applications describes a specific idea. Sketch solution curve on slope field through given initial condition. Separate and integrate with proper technique. Apply initial condition to find particular solution.'
       }
     }
   ]

@@ -18,20 +18,31 @@ Factoring: find two numbers that multiply to ac and add to b.
       id: 'sat-q1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes standard form?',
+            question: 'Which statement accurately explains Standard form?',
             options: [
-              'Standard form is a fundamental concept in SAT Math',
-              'Factoring: find two numbers that multiply to ac and add to b',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'ax² + bx + c = 0.',
+              'find two numbers that multiply to ac and add to b.',
+              'Zero product property: if (x - r)(x - s) = 0, then x = r or x = s.',
+              'Special patterns: difference of squares a² - b² = (a+b)(a-b), perfect square trinomials.'
             ],
             correctAnswer: 0,
-            explanation: 'Standard form: ax² + bx + c = 0'
+            explanation: 'Correct — Standard form: ax² + bx + c = 0. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Key Insight?',
+            options: [
+              'Zero product property: if (x - r)(x - s) = 0, then x = r or x = s.',
+              'find two numbers that multiply to ac and add to b.',
+              'ax² + bx + c = 0.',
+              'Special patterns: difference of squares a² - b² = (a+b)(a-b), perfect square trinomials.'
+            ],
+            correctAnswer: 0,
+            explanation: 'Correct — Key Insight: Zero product property: if (x - r)(x - s) = 0, then x = r or x = s. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Factoring: find two numbers that multiply to ac and add to b.
       id: 'sat-q1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for quadratic form & factoring?',
+            question: 'Which of these accurately represents SAT Tip?',
             options: [
-              'Zero product property: if (x - r)(x - s) = 0, then x = r or x = s',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'find two numbers that multiply to ac and add to b.',
+              'Special patterns: difference of squares a² - b² = (a+b)(a-b), perfect square trinomials.',
+              'Zero product property: if (x - r)(x - s) = 0, then x = r or x = s.',
+              'ax² + bx + c = 0.'
             ],
-            correctAnswer: 0,
-            explanation: 'Zero product property: if (x - r)(x - s) = 0, then x = r or x = s'
+            correctAnswer: 1,
+            explanation: 'Correct — SAT Tip: Special patterns: difference of squares a² - b² = (a+b)(a-b), perfect square trinomials. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Factoring: find two numbers that multiply to ac and add to b.
       id: 'sat-q1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Quadratic Form & Factoring:',
-            options: ['Standard form: ax² + bx + c = 0', 'Factoring: find two numbers that multiply to ac an', 'Not applicable', 'None of these']
+            label: 'Standard form',
+            options: ['ax² + bx + c = 0.', 'find two numbers that multiply to ac and add to b.', 'Special patterns: difference of squares a² - b² = (a+b)(a-b), perfect square trinomials.', 'Zero product property: if (x - r)(x - s) = 0, then x = r or x = s.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Zero product property: if (x - r)(x - s) = 0, then', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Factoring',
+            options: ['Special patterns: difference of squares a² - b² = (a+b)(a-b), perfect square trinomials.', 'find two numbers that multiply to ac and add to b.', 'ax² + bx + c = 0.', 'Zero product property: if (x - r)(x - s) = 0, then x = r or x = s.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['find two numbers that multiply to ac and add to b.', 'Zero product property: if (x - r)(x - s) = 0, then x = r or x = s.', 'ax² + bx + c = 0.', 'Special patterns: difference of squares a² - b² = (a+b)(a-b), perfect square trinomials.']
           }
         ],
-        correctAnswers: ['Standard form: ax² + bx + c = 0', 'Zero product property: if (x - r)(x - s) = 0, then'],
-        hint1: 'Think about quadratic form & factoring',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'Standard form: ax² + bx + c = 0. Zero product property: if (x - r)(x - s) = 0, then x = r or x = s.'
+        correctAnswers: ['ax² + bx + c = 0.', 'find two numbers that multiply to ac and add to b.', 'Zero product property: if (x - r)(x - s) = 0, then x = r or x = s.'],
+        hint1: 'Think about what each concept specifically describes in Quadratic Equations.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Quadratic Equations describes a specific idea. Standard form: ax² + bx + c = 0. Factoring: find two numbers that multiply to ac and add to b. Key Insight: Zero product property: if (x - r)(x - s) = 0, then x = r or x = s.'
       }
     }
   ]

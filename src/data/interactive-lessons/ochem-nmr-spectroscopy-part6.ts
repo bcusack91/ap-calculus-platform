@@ -30,31 +30,31 @@ Practice problems with unknown identification
       id: 'nmr-s6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of problem-solving workshop?',
-            options: [
-              'Predicting NMR spectra from structures',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
-            ],
-            correctAnswer: 0,
-            explanation: 'Predicting NMR spectra from structures'
-          },
-          {
-            question: 'In the context of problem-solving workshop, which is accurate?',
+            question: 'Which of the following correctly describes Predicting NMR spectra from structures?',
             options: [
               'Combining IR, MS, and NMR data',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Determining structures from NMR data',
+              'Predicting NMR spectra from structures',
+              'Practice problems with unknown identification'
             ],
-            correctAnswer: 0,
-            explanation: 'Combining IR, MS, and NMR data'
+            correctAnswer: 2,
+            explanation: 'Correct — Predicting NMR spectra from structures. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Combining IR, MS, and NMR data?',
+            options: [
+              'Determining structures from NMR data',
+              'Practice problems with unknown identification',
+              'Predicting NMR spectra from structures',
+              'Combining IR, MS, and NMR data'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Combining IR, MS, and NMR data. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Practice problems with unknown identification
       id: 'nmr-s6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Predicting NMR spectra from structures',
-            options: ['Predicting NMR spectra from structures', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Determining structures from NMR data', 'Practice problems with unknown identification', 'Combining IR, MS, and NMR data', 'Predicting NMR spectra from structures']
           },
           {
             label: 'Determining structures from NMR data',
-            options: ['Determining structures from NMR data', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Combining IR, MS, and NMR data', 'Determining structures from NMR data', 'Practice problems with unknown identification', 'Predicting NMR spectra from structures']
           },
           {
             label: 'Combining IR, MS, and NMR data',
-            options: ['Combining IR, MS, and NMR data', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Determining structures from NMR data', 'Predicting NMR spectra from structures', 'Practice problems with unknown identification', 'Combining IR, MS, and NMR data']
           }
         ],
         correctAnswers: ['Predicting NMR spectra from structures', 'Determining structures from NMR data', 'Combining IR, MS, and NMR data'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving Workshop.'
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Predicting NMR spectra from structures. Determining structures from NMR data. Combining IR, MS, and NMR data.'
       }
     }
   ]

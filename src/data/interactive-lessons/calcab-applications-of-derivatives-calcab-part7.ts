@@ -30,31 +30,31 @@ Inflection points occur where f'' = 0 or f'' is undefined (check sign change)
       id: 'appli7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of review & applications?',
-            options: [
-              'f\'\' > 0',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'f\'\' > 0: concave up (holds water like a cup)'
-          },
-          {
-            question: 'In the context of review & applications, which is accurate?',
+            question: 'Which of the following correctly describes f\'\' > 0?',
             options: [
               'where concavity changes (f\'\' changes sign)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'concave up (holds water like a cup)',
+              'Inflection points occur where f\'\' = 0 or f\'\' is undefined (check sign change)',
+              'concave down (spills water like a cap)'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — f\'\' > 0: concave up (holds water like a cup). The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Inflection point?',
+            options: [
+              'where concavity changes (f\'\' changes sign)',
+              'concave up (holds water like a cup)',
+              'concave down (spills water like a cap)',
+              'Inflection points occur where f\'\' = 0 or f\'\' is undefined (check sign change)'
             ],
             correctAnswer: 0,
-            explanation: 'Inflection point: where concavity changes (f\'\' changes sign)'
+            explanation: 'Correct — Inflection point: where concavity changes (f\'\' changes sign). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Inflection points occur where f'' = 0 or f'' is undefined (check sign change)
       id: 'appli7-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to review & applications?',
+            question: 'Regarding Review & Applications, which correctly describes Inflection points occur where f\'\' = 0…?',
             options: [
               'Inflection points occur where f\'\' = 0 or f\'\' is undefined (check sign change)',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'concave down (spills water like a cap)',
+              'where concavity changes (f\'\' changes sign)',
+              'concave up (holds water like a cup)'
             ],
             correctAnswer: 0,
-            explanation: 'Inflection points occur where f\'\' = 0 or f\'\' is undefined (check sign change)'
+            explanation: 'Correct — Inflection points occur where f\'\' = 0 or f\'\' is undefined (check sign change). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Inflection points occur where f'' = 0 or f'' is undefined (check sign change)
       id: 'appli7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'f\'\' > 0',
-            options: ['concave up (holds water like a cup)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['concave up (holds water like a cup)', 'where concavity changes (f\'\' changes sign)', 'concave down (spills water like a cap)', 'Inflection points occur where f\'\' = 0 or f\'\' is undefined (check sign change)']
           },
           {
             label: 'f\'\' < 0',
-            options: ['concave down (spills water like a cap)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['where concavity changes (f\'\' changes sign)', 'Inflection points occur where f\'\' = 0 or f\'\' is undefined (check sign change)', 'concave down (spills water like a cap)', 'concave up (holds water like a cup)']
           },
           {
             label: 'Inflection point',
-            options: ['where concavity changes (f\'\' changes sign)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['concave up (holds water like a cup)', 'where concavity changes (f\'\' changes sign)', 'concave down (spills water like a cap)', 'Inflection points occur where f\'\' = 0 or f\'\' is undefined (check sign change)']
           }
         ],
         correctAnswers: ['concave up (holds water like a cup)', 'concave down (spills water like a cap)', 'where concavity changes (f\'\' changes sign)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Review & Applications.'
+        hint1: 'Think about what each concept specifically describes in Review & Applications.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Review & Applications describes a specific idea. f\'\' > 0: concave up (holds water like a cup). f\'\' < 0: concave down (spills water like a cap). Inflection point: where concavity changes (f\'\' changes sign).'
       }
     }
   ]

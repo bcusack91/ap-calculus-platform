@@ -71,23 +71,28 @@ Gram-positive: thick peptidoglycan, stains purple; Gram-negative: thin peptidogl
       id: 'mcat-1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Bacteria Structure & Function:',
-            options: ['Bacteria: prokaryotic, cell wall (peptidoglycan), no membran', 'Gram-positive: thick peptidoglycan, stains purple; Gram-nega', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Bacteria',
+            options: ['Bacterial shapes: cocci (spheres), bacilli (rods), spirilla (spirals).', 'prokaryotic, cell wall (peptidoglycan), no membrane-bound organelles.', 'Binary fission: asexual reproduction; doubling time can be as short as 20 minutes.', 'thick peptidoglycan, stains purple; Gram-negative: thin peptidoglycan + outer membrane, stains pink.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Bacterial shapes: cocci (spheres), bacilli (rods), spirilla ', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Gram-positive',
+            options: ['Binary fission: asexual reproduction; doubling time can be as short as 20 minutes.', 'Bacterial shapes: cocci (spheres), bacilli (rods), spirilla (spirals).', 'prokaryotic, cell wall (peptidoglycan), no membrane-bound organelles.', 'thick peptidoglycan, stains purple; Gram-negative: thin peptidoglycan + outer membrane, stains pink.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['Bacterial shapes: cocci (spheres), bacilli (rods), spirilla (spirals).', 'thick peptidoglycan, stains purple; Gram-negative: thin peptidoglycan + outer membrane, stains pink.', 'Binary fission: asexual reproduction; doubling time can be as short as 20 minutes.', 'prokaryotic, cell wall (peptidoglycan), no membrane-bound organelles.']
           }
         ],
-        correctAnswers: ['Bacteria: prokaryotic, cell wall (peptidoglycan), no membran', 'Bacterial shapes: cocci (spheres), bacilli (rods), spirilla '],
-        hint1: 'Think about bacteria structure & function',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Bacteria: prokaryotic, cell wall (peptidoglycan), no membrane-bound organelles. Bacterial shapes: cocci (spheres), bacilli (rods), spirilla (spirals).'
+        correctAnswers: ['prokaryotic, cell wall (peptidoglycan), no membrane-bound organelles.', 'thick peptidoglycan, stains purple; Gram-negative: thin peptidoglycan + outer membrane, stains pink.', 'Bacterial shapes: cocci (spheres), bacilli (rods), spirilla (spirals).'],
+        hint1: 'Think about what each concept specifically describes in Microbiology.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Microbiology describes a specific idea. Bacteria: prokaryotic, cell wall (peptidoglycan), no membrane-bound organelles. Gram-positive: thick peptidoglycan, stains purple; Gram-negative: thin peptidoglycan + outer membrane, stains pink. Key Insight: Bacterial shapes: cocci (spheres), bacilli (rods), spirilla (spirals).'
       }
     }
   ]

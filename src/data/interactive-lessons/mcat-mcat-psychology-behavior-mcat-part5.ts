@@ -71,23 +71,28 @@ Erikson: 8 psychosocial stages from trust vs mistrust to integrity vs despair.
       id: 'mcat-5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Developmental Psychology:',
-            options: ['Piagets stages: sensorimotor (0-2), preoperational (2-7), co', 'Erikson: 8 psychosocial stages from trust vs mistrust to int', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Piagets stages',
+            options: ['Attachment: Ainsworth — secure, anxious-avoidant, anxious-ambivalent, disorganized.', '8 psychosocial stages from trust vs mistrust to integrity vs despair.', 'Kohlberg: preconventional (reward/punishment), conventional (social norms), postconventional (universal principles).', 'sensorimotor (0-2), preoperational (2-7), concrete operational (7-11), formal operational (11+).']
           },
           {
-            label: 'MCAT application:',
-            options: ['Kohlberg: preconventional (reward/punishment), conventional ', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Erikson',
+            options: ['sensorimotor (0-2), preoperational (2-7), concrete operational (7-11), formal operational (11+).', 'Attachment: Ainsworth — secure, anxious-avoidant, anxious-ambivalent, disorganized.', 'Kohlberg: preconventional (reward/punishment), conventional (social norms), postconventional (universal principles).', '8 psychosocial stages from trust vs mistrust to integrity vs despair.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['8 psychosocial stages from trust vs mistrust to integrity vs despair.', 'Attachment: Ainsworth — secure, anxious-avoidant, anxious-ambivalent, disorganized.', 'sensorimotor (0-2), preoperational (2-7), concrete operational (7-11), formal operational (11+).', 'Kohlberg: preconventional (reward/punishment), conventional (social norms), postconventional (universal principles).']
           }
         ],
-        correctAnswers: ['Piagets stages: sensorimotor (0-2), preoperational (2-7), co', 'Kohlberg: preconventional (reward/punishment), conventional '],
-        hint1: 'Think about developmental psychology',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Piagets stages: sensorimotor (0-2), preoperational (2-7), concrete operational (7-11), formal operational (11+). Kohlberg: preconventional (reward/punishment), conventional (social norms), postconventional (universal principles).'
+        correctAnswers: ['sensorimotor (0-2), preoperational (2-7), concrete operational (7-11), formal operational (11+).', '8 psychosocial stages from trust vs mistrust to integrity vs despair.', 'Kohlberg: preconventional (reward/punishment), conventional (social norms), postconventional (universal principles).'],
+        hint1: 'Think about what each concept specifically describes in Developmental Psychology.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Developmental Psychology describes a specific idea. Piagets stages: sensorimotor (0-2), preoperational (2-7), concrete operational (7-11), formal operational (11+). Erikson: 8 psychosocial stages from trust vs mistrust to integrity vs despair. Key Insight: Kohlberg: preconventional (reward/punishment), conventional (social norms), postconventional (universal principles).'
       }
     }
   ]

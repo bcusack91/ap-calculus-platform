@@ -18,20 +18,31 @@ Median: middle value when sorted (average of two middle if even count).
       id: 'sat-d1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes mean (average)?',
+            question: 'Which of the following correctly describes Mean (average)?',
             options: [
-              'Mean (average) is a fundamental concept in SAT Math',
-              'Median: middle value when sorted (average of two middle if even count)',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'SAT tip: adding/removing values changes mean — track the sum.',
+              'Mode: most frequent value.',
+              'sum of values / number of values.',
+              'middle value when sorted (average of two middle if even count).'
             ],
-            correctAnswer: 0,
-            explanation: 'Mean (average): sum of values / number of values'
+            correctAnswer: 2,
+            explanation: 'Correct — Mean (average): sum of values / number of values. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Key Insight?',
+            options: [
+              'sum of values / number of values.',
+              'Mode: most frequent value.',
+              'middle value when sorted (average of two middle if even count).',
+              'SAT tip: adding/removing values changes mean — track the sum.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Key Insight: Mode: most frequent value. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Median: middle value when sorted (average of two middle if even count).
       id: 'sat-d1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for mean, median, mode?',
+            question: 'Regarding Data Statistics, which correctly describes SAT Tip?',
             options: [
-              'Mode: most frequent value',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'middle value when sorted (average of two middle if even count).',
+              'SAT tip: adding/removing values changes mean — track the sum.',
+              'sum of values / number of values.',
+              'Mode: most frequent value.'
             ],
-            correctAnswer: 0,
-            explanation: 'Mode: most frequent value'
+            correctAnswer: 1,
+            explanation: 'Correct — SAT Tip: SAT tip: adding/removing values changes mean — track the sum. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Median: middle value when sorted (average of two middle if even count).
       id: 'sat-d1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Mean, Median, Mode:',
-            options: ['Mean (average): sum of values / number of values', 'Median: middle value when sorted (average of two m', 'Not applicable', 'None of these']
+            label: 'Mean (average)',
+            options: ['SAT tip: adding/removing values changes mean — track the sum.', 'middle value when sorted (average of two middle if even count).', 'Mode: most frequent value.', 'sum of values / number of values.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Mode: most frequent value', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Median',
+            options: ['Mode: most frequent value.', 'middle value when sorted (average of two middle if even count).', 'sum of values / number of values.', 'SAT tip: adding/removing values changes mean — track the sum.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['sum of values / number of values.', 'SAT tip: adding/removing values changes mean — track the sum.', 'Mode: most frequent value.', 'middle value when sorted (average of two middle if even count).']
           }
         ],
-        correctAnswers: ['Mean (average): sum of values / number of values', 'Mode: most frequent value'],
-        hint1: 'Think about mean, median, mode',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'Mean (average): sum of values / number of values. Mode: most frequent value.'
+        correctAnswers: ['sum of values / number of values.', 'middle value when sorted (average of two middle if even count).', 'Mode: most frequent value.'],
+        hint1: 'Think about what each concept specifically describes in Data Statistics.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Data Statistics describes a specific idea. Mean (average): sum of values / number of values. Median: middle value when sorted (average of two middle if even count). Key Insight: Mode: most frequent value.'
       }
     }
   ]

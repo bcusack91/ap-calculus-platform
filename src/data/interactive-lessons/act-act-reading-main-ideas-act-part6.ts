@@ -18,20 +18,31 @@ Substitute each answer choice — which one makes the most sense?.
       id: 'act-r6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes context clues?',
+            question: 'Which of the following correctly describes Context clues?',
             options: [
-              'Context clues is a key concept for ACT English/Reading',
-              'Substitute each answer choice — which one makes the most sense?',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'ACT tests common words with uncommon meanings.',
+              'Substitute each answer choice — which one makes the most sense?.',
+              'Read the full sentence, not just the phrase around the word.',
+              'the surrounding words reveal the meaning.'
             ],
-            correctAnswer: 0,
-            explanation: 'Context clues: the surrounding words reveal the meaning'
+            correctAnswer: 3,
+            explanation: 'Correct — Context clues: the surrounding words reveal the meaning. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Key Insight?',
+            options: [
+              'Substitute each answer choice — which one makes the most sense?.',
+              'the surrounding words reveal the meaning.',
+              'ACT tests common words with uncommon meanings.',
+              'Read the full sentence, not just the phrase around the word.'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Key Insight: ACT tests common words with uncommon meanings. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Substitute each answer choice — which one makes the most sense?.
       id: 'act-r6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for problem-solving workshop?',
+            question: 'Which of these accurately represents ACT Tip?',
             options: [
-              'ACT tests common words with uncommon meanings',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Substitute each answer choice — which one makes the most sense?.',
+              'ACT tests common words with uncommon meanings.',
+              'the surrounding words reveal the meaning.',
+              'Read the full sentence, not just the phrase around the word.'
             ],
-            correctAnswer: 0,
-            explanation: 'ACT tests common words with uncommon meanings'
+            correctAnswer: 3,
+            explanation: 'Correct — ACT Tip: Read the full sentence, not just the phrase around the word. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Substitute each answer choice — which one makes the most sense?.
       id: 'act-r6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Problem-Solving Workshop:',
-            options: ['Context clues: the surrounding words reveal the me', 'Substitute each answer choice — which one makes th', 'Not applicable', 'None of these']
+            label: 'Context clues',
+            options: ['Substitute each answer choice — which one makes the most sense?.', 'ACT tests common words with uncommon meanings.', 'Read the full sentence, not just the phrase around the word.', 'the surrounding words reveal the meaning.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['ACT tests common words with uncommon meanings', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Key Insight',
+            options: ['the surrounding words reveal the meaning.', 'Substitute each answer choice — which one makes the most sense?.', 'Read the full sentence, not just the phrase around the word.', 'ACT tests common words with uncommon meanings.']
+          },
+          {
+            label: 'ACT Tip',
+            options: ['Read the full sentence, not just the phrase around the word.', 'the surrounding words reveal the meaning.', 'ACT tests common words with uncommon meanings.', 'Substitute each answer choice — which one makes the most sense?.']
           }
         ],
-        correctAnswers: ['Context clues: the surrounding words reveal the me', 'ACT tests common words with uncommon meanings'],
-        hint1: 'Think about problem-solving workshop',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Context clues: the surrounding words reveal the meaning. ACT tests common words with uncommon meanings.'
+        correctAnswers: ['the surrounding words reveal the meaning.', 'ACT tests common words with uncommon meanings.', 'Read the full sentence, not just the phrase around the word.'],
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Context clues: the surrounding words reveal the meaning. Key Insight: ACT tests common words with uncommon meanings. ACT Tip: Read the full sentence, not just the phrase around the word.'
       }
     }
   ]

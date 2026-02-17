@@ -19,31 +19,31 @@ export const bioMembraneTransportPart1Data = {
       id: 'memb1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes fluid mosaic model?',
+            question: 'Which statement accurately explains Fluid mosaic model?',
             options: [
+              'integral and peripheral',
+              'maintains fluidity',
               'Fluid mosaic model',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'hydrophilic heads, hydrophobic tails'
             ],
-            correctAnswer: 0,
-            explanation: 'Fluid mosaic model'
+            correctAnswer: 2,
+            explanation: 'Correct — Fluid mosaic model. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of membrane structure, which statement is accurate?',
+            question: 'In the context of Membrane Structure, which explains Membrane proteins?',
             options: [
-              'Membrane proteins: integral and peripheral',
-              'ledom ciasom diulF',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'maintains fluidity',
+              'integral and peripheral',
+              'hydrophilic heads, hydrophobic tails',
+              'Fluid mosaic model'
             ],
-            correctAnswer: 0,
-            explanation: 'Membrane proteins: integral and peripheral'
+            correctAnswer: 1,
+            explanation: 'Correct — Membrane proteins: integral and peripheral. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioMembraneTransportPart1Data = {
       id: 'memb1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to membrane structure?',
+            question: 'Which of these accurately represents Cholesterol?',
             options: [
-              'Cholesterol: maintains fluidity',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Fluid mosaic model',
+              'maintains fluidity',
+              'hydrophilic heads, hydrophobic tails',
+              'integral and peripheral'
             ],
-            correctAnswer: 0,
-            explanation: 'Cholesterol: maintains fluidity'
+            correctAnswer: 1,
+            explanation: 'Correct — Cholesterol: maintains fluidity. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioMembraneTransportPart1Data = {
       id: 'memb1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Fluid mosaic model is important in membrane structure because',
-            options: ['Fluid mosaic model', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Phospholipid bilayer',
+            options: ['hydrophilic heads, hydrophobic tails', 'integral and peripheral', 'Fluid mosaic model', 'maintains fluidity']
           },
           {
-            label: 'Phospholipid bilayer is important in membrane structure because',
-            options: ['hydrophilic heads, hydrophobic tails', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Membrane proteins',
+            options: ['Fluid mosaic model', 'hydrophilic heads, hydrophobic tails', 'integral and peripheral', 'maintains fluidity']
           },
           {
-            label: 'Membrane proteins is important in membrane structure because',
-            options: ['integral and peripheral', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Cholesterol',
+            options: ['Fluid mosaic model', 'integral and peripheral', 'hydrophilic heads, hydrophobic tails', 'maintains fluidity']
           }
         ],
-        correctAnswers: ['Fluid mosaic model', 'hydrophilic heads, hydrophobic tails', 'integral and peripheral'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Membrane Structure.'
+        correctAnswers: ['hydrophilic heads, hydrophobic tails', 'integral and peripheral', 'maintains fluidity'],
+        hint1: 'Think about what each concept specifically describes in Membrane Structure.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Membrane Structure describes a specific idea. Phospholipid bilayer: hydrophilic heads, hydrophobic tails. Membrane proteins: integral and peripheral. Cholesterol: maintains fluidity.'
       }
     }
   ]

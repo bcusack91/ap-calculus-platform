@@ -30,31 +30,31 @@ if g(x) ≤ f(x) ≤ h(x) and lim g = lim h = L, then lim f = L
       id: 'limit3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of evaluating limits algebraically?',
+            question: 'Which statement accurately explains Direct substitution works for…?',
             options: [
               'Direct substitution works for continuous functions',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'if g(x) ≤ f(x) ≤ h(x) and lim g = lim h = L, then lim f = L',
+              'factor, rationalize, or simplify',
+              'lim(x→0) sin(x)/x = 1'
             ],
             correctAnswer: 0,
-            explanation: 'Direct substitution works for continuous functions'
+            explanation: 'Correct — Direct substitution works for continuous functions. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of evaluating limits algebraically, which is accurate?',
+            question: 'Which of the following is true about Special limit?',
             options: [
-              'lim(x→0) sin(x)/x = 1',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'factor, rationalize, or simplify',
+              'Direct substitution works for continuous functions',
+              'if g(x) ≤ f(x) ≤ h(x) and lim g = lim h = L, then lim f = L',
+              'lim(x→0) sin(x)/x = 1'
             ],
-            correctAnswer: 0,
-            explanation: 'Special limit: lim(x→0) sin(x)/x = 1'
+            correctAnswer: 3,
+            explanation: 'Correct — Special limit: lim(x→0) sin(x)/x = 1. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ if g(x) ≤ f(x) ≤ h(x) and lim g = lim h = L, then lim f = L
       id: 'limit3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to evaluating limits algebraically?',
+            question: 'Regarding Evaluating Limits Algebraically, which correctly describes Squeeze Theorem?',
             options: [
               'if g(x) ≤ f(x) ≤ h(x) and lim g = lim h = L, then lim f = L',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'Direct substitution works for continuous functions',
+              'factor, rationalize, or simplify',
+              'lim(x→0) sin(x)/x = 1'
             ],
             correctAnswer: 0,
-            explanation: 'Squeeze Theorem: if g(x) ≤ f(x) ≤ h(x) and lim g = lim h = L, then lim f = L'
+            explanation: 'Correct — Squeeze Theorem: if g(x) ≤ f(x) ≤ h(x) and lim g = lim h = L, then lim f = L. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ if g(x) ≤ f(x) ≤ h(x) and lim g = lim h = L, then lim f = L
       id: 'limit3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Direct substitution works for continuous functions',
-            options: ['Direct substitution works for continuous functions', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
-          },
-          {
             label: 'For 0/0 indeterminate form',
-            options: ['factor, rationalize, or simplify', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['factor, rationalize, or simplify', 'if g(x) ≤ f(x) ≤ h(x) and lim g = lim h = L, then lim f = L', 'Direct substitution works for continuous functions', 'lim(x→0) sin(x)/x = 1']
           },
           {
             label: 'Special limit',
-            options: ['lim(x→0) sin(x)/x = 1', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['if g(x) ≤ f(x) ≤ h(x) and lim g = lim h = L, then lim f = L', 'factor, rationalize, or simplify', 'Direct substitution works for continuous functions', 'lim(x→0) sin(x)/x = 1']
+          },
+          {
+            label: 'Squeeze Theorem',
+            options: ['if g(x) ≤ f(x) ≤ h(x) and lim g = lim h = L, then lim f = L', 'factor, rationalize, or simplify', 'lim(x→0) sin(x)/x = 1', 'Direct substitution works for continuous functions']
           }
         ],
-        correctAnswers: ['Direct substitution works for continuous functions', 'factor, rationalize, or simplify', 'lim(x→0) sin(x)/x = 1'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Evaluating Limits Algebraically.'
+        correctAnswers: ['factor, rationalize, or simplify', 'lim(x→0) sin(x)/x = 1', 'if g(x) ≤ f(x) ≤ h(x) and lim g = lim h = L, then lim f = L'],
+        hint1: 'Think about what each concept specifically describes in Evaluating Limits Algebraically.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Evaluating Limits Algebraically describes a specific idea. For 0/0 indeterminate form: factor, rationalize, or simplify. Special limit: lim(x→0) sin(x)/x = 1. Squeeze Theorem: if g(x) ≤ f(x) ≤ h(x) and lim g = lim h = L, then lim f = L.'
       }
     }
   ]

@@ -18,20 +18,31 @@ Topic sentence usually goes first; conclusion sentence goes last.
       id: 'sat-e4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes place sentences where they logically belong in the paragraph?',
+            question: 'Which of the following correctly describes Place sentences where they logically…?',
             options: [
-              'Place sentences where they logically belong in the paragraph is a fundamental concept in SAT Reading & Writing',
-              'Topic sentence usually goes first; conclusion sentence goes last',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'Ask: does this sentence fit the flow and purpose of the paragraph?.',
+              'Add or delete sentences based on whether they support the main point.',
+              'Place sentences where they logically belong in the paragraph.',
+              'Topic sentence usually goes first; conclusion sentence goes last.'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Place sentences where they logically belong in the paragraph. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Logical Sequence, which explains Key Insight?',
+            options: [
+              'Add or delete sentences based on whether they support the main point.',
+              'Place sentences where they logically belong in the paragraph.',
+              'Ask: does this sentence fit the flow and purpose of the paragraph?.',
+              'Topic sentence usually goes first; conclusion sentence goes last.'
             ],
             correctAnswer: 0,
-            explanation: 'Place sentences where they logically belong in the paragraph'
+            explanation: 'Correct — Key Insight: Add or delete sentences based on whether they support the main point. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Topic sentence usually goes first; conclusion sentence goes last.
       id: 'sat-e4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for logical sequence?',
+            question: 'Which of these accurately represents SAT Tip?',
             options: [
-              'Add or delete sentences based on whether they support the main point',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'Ask: does this sentence fit the flow and purpose of the paragraph?.',
+              'Place sentences where they logically belong in the paragraph.',
+              'Add or delete sentences based on whether they support the main point.',
+              'Topic sentence usually goes first; conclusion sentence goes last.'
             ],
             correctAnswer: 0,
-            explanation: 'Add or delete sentences based on whether they support the main point'
+            explanation: 'Correct — SAT Tip: Ask: does this sentence fit the flow and purpose of the paragraph?. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ Topic sentence usually goes first; conclusion sentence goes last.
       id: 'sat-e4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Logical Sequence:',
-            options: ['Place sentences where they logically belong in the', 'Topic sentence usually goes first; conclusion sent', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['Ask: does this sentence fit the flow and purpose of the paragraph?.', 'Add or delete sentences based on whether they support the main point.', 'Place sentences where they logically belong in the paragraph.', 'Topic sentence usually goes first; conclusion sentence goes last.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Add or delete sentences based on whether they supp', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'SAT Tip',
+            options: ['Add or delete sentences based on whether they support the main point.', 'Ask: does this sentence fit the flow and purpose of the paragraph?.', 'Place sentences where they logically belong in the paragraph.', 'Topic sentence usually goes first; conclusion sentence goes last.']
           }
         ],
-        correctAnswers: ['Place sentences where they logically belong in the', 'Add or delete sentences based on whether they supp'],
-        hint1: 'Think about logical sequence',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'Place sentences where they logically belong in the paragraph. Add or delete sentences based on whether they support the main point.'
+        correctAnswers: ['Add or delete sentences based on whether they support the main point.', 'Ask: does this sentence fit the flow and purpose of the paragraph?.'],
+        hint1: 'Think about what each concept specifically describes in Logical Sequence.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Logical Sequence describes a specific idea. Key Insight: Add or delete sentences based on whether they support the main point. SAT Tip: Ask: does this sentence fit the flow and purpose of the paragraph?.'
       }
     }
   ]

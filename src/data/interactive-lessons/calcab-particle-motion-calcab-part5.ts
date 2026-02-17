@@ -30,31 +30,31 @@ Particle farthest from origin when displacement is maximized
       id: 'parti5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of particle motion from graphs?',
+            question: 'What does "Given a velocity graph" refer to in calculus?',
             options: [
-              'Given a velocity graph',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'Particle farthest from origin when displacement is maximized',
+              's(b) = s(a) + ∫ₐᵇ v(t)dt',
+              'Acceleration is the slope of the velocity graph',
+              'area above t-axis is positive displacement, below is negative'
             ],
-            correctAnswer: 0,
-            explanation: 'Given a velocity graph: area above t-axis is positive displacement, below is negative'
+            correctAnswer: 3,
+            explanation: 'Correct — Given a velocity graph: area above t-axis is positive displacement, below is negative. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of particle motion from graphs, which is accurate?',
+            question: 'Select the statement that correctly describes Acceleration is the slope of the…:',
             options: [
+              'area above t-axis is positive displacement, below is negative',
               'Acceleration is the slope of the velocity graph',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              's(b) = s(a) + ∫ₐᵇ v(t)dt',
+              'Particle farthest from origin when displacement is maximized'
             ],
-            correctAnswer: 0,
-            explanation: 'Acceleration is the slope of the velocity graph'
+            correctAnswer: 1,
+            explanation: 'Correct — Acceleration is the slope of the velocity graph. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Particle farthest from origin when displacement is maximized
       id: 'parti5-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to particle motion from graphs?',
+            question: 'Which statement about Particle farthest from origin when… is correct?',
             options: [
+              'Acceleration is the slope of the velocity graph',
               'Particle farthest from origin when displacement is maximized',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              's(b) = s(a) + ∫ₐᵇ v(t)dt',
+              'area above t-axis is positive displacement, below is negative'
             ],
-            correctAnswer: 0,
-            explanation: 'Particle farthest from origin when displacement is maximized'
+            correctAnswer: 1,
+            explanation: 'Correct — Particle farthest from origin when displacement is maximized. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,24 @@ Particle farthest from origin when displacement is maximized
       id: 'parti5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Given a velocity graph',
-            options: ['area above t-axis is positive displacement, below ', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['s(b) = s(a) + ∫ₐᵇ v(t)dt', 'area above t-axis is positive displacement, below is negative', 'Particle farthest from origin when displacement is maximized', 'Acceleration is the slope of the velocity graph']
           },
           {
             label: 'Position at time b',
-            options: ['s(b) = s(a) + ∫ₐᵇ v(t)dt', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
-          },
-          {
-            label: 'Acceleration is the slope of the velocity graph',
-            options: ['Acceleration is the slope of the velocity graph', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['s(b) = s(a) + ∫ₐᵇ v(t)dt', 'Acceleration is the slope of the velocity graph', 'Particle farthest from origin when displacement is maximized', 'area above t-axis is positive displacement, below is negative']
           }
         ],
-        correctAnswers: ['area above t-axis is positive displacement, below ', 's(b) = s(a) + ∫ₐᵇ v(t)dt', 'Acceleration is the slope of the velocity graph'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Particle Motion from Graphs.'
+        correctAnswers: ['area above t-axis is positive displacement, below is negative', 's(b) = s(a) + ∫ₐᵇ v(t)dt'],
+        hint1: 'Think about what each concept specifically describes in Particle Motion from Graphs.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Particle Motion from Graphs describes a specific idea. Given a velocity graph: area above t-axis is positive displacement, below is negative. Position at time b: s(b) = s(a) + ∫ₐᵇ v(t)dt.'
       }
     }
   ]

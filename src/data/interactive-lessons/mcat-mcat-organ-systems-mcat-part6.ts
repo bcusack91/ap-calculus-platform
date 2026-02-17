@@ -71,23 +71,28 @@ Autonomic: sympathetic (fight or flight) vs parasympathetic (rest and digest).
       id: 'mcat-6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Nervous System:',
-            options: ['Central nervous system: brain + spinal cord; Peripheral: som', 'Autonomic: sympathetic (fight or flight) vs parasympathetic ', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Central nervous system',
+            options: ['Neuron: dendrites receive, axon transmits, synaptic terminal releases neurotransmitters.', 'sympathetic (fight or flight) vs parasympathetic (rest and digest).', 'Action potential: resting (-70mV), depolarization (Na+ in), repolarization (K+ out), refractory period.', 'brain + spinal cord; Peripheral: somatic + autonomic.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Neuron: dendrites receive, axon transmits, synaptic terminal', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Autonomic',
+            options: ['sympathetic (fight or flight) vs parasympathetic (rest and digest).', 'Action potential: resting (-70mV), depolarization (Na+ in), repolarization (K+ out), refractory period.', 'Neuron: dendrites receive, axon transmits, synaptic terminal releases neurotransmitters.', 'brain + spinal cord; Peripheral: somatic + autonomic.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['Action potential: resting (-70mV), depolarization (Na+ in), repolarization (K+ out), refractory period.', 'Neuron: dendrites receive, axon transmits, synaptic terminal releases neurotransmitters.', 'brain + spinal cord; Peripheral: somatic + autonomic.', 'sympathetic (fight or flight) vs parasympathetic (rest and digest).']
           }
         ],
-        correctAnswers: ['Central nervous system: brain + spinal cord; Peripheral: som', 'Neuron: dendrites receive, axon transmits, synaptic terminal'],
-        hint1: 'Think about nervous system',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Central nervous system: brain + spinal cord; Peripheral: somatic + autonomic. Neuron: dendrites receive, axon transmits, synaptic terminal releases neurotransmitters.'
+        correctAnswers: ['brain + spinal cord; Peripheral: somatic + autonomic.', 'sympathetic (fight or flight) vs parasympathetic (rest and digest).', 'Neuron: dendrites receive, axon transmits, synaptic terminal releases neurotransmitters.'],
+        hint1: 'Think about what each concept specifically describes in Nervous System.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Nervous System describes a specific idea. Central nervous system: brain + spinal cord; Peripheral: somatic + autonomic. Autonomic: sympathetic (fight or flight) vs parasympathetic (rest and digest). Key Insight: Neuron: dendrites receive, axon transmits, synaptic terminal releases neurotransmitters.'
       }
     }
   ]

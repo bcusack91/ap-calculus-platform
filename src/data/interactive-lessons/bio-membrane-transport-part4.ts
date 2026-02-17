@@ -19,31 +19,31 @@ export const bioMembraneTransportPart4Data = {
       id: 'memb4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes requires atp?',
+            question: 'Which statement accurately explains Requires ATP?',
             options: [
+              '3 Na⁺ out, 2 K⁺ in',
+              'Moves against concentration gradient',
               'Requires ATP',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Electrochemical gradient'
             ],
-            correctAnswer: 0,
-            explanation: 'Requires ATP'
+            correctAnswer: 2,
+            explanation: 'Correct — Requires ATP. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of active transport, which statement is accurate?',
+            question: 'Which of the following is true about Moves against concentration gradient?',
             options: [
+              '3 Na⁺ out, 2 K⁺ in',
+              'Electrochemical gradient',
               'Moves against concentration gradient',
-              'PTA seriuqeR',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Requires ATP'
             ],
-            correctAnswer: 0,
-            explanation: 'Moves against concentration gradient'
+            correctAnswer: 2,
+            explanation: 'Correct — Moves against concentration gradient. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioMembraneTransportPart4Data = {
       id: 'memb4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to active transport?',
+            question: 'Which of these accurately represents Electrochemical gradient?',
             options: [
               'Electrochemical gradient',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              '3 Na⁺ out, 2 K⁺ in',
+              'Requires ATP',
+              'Moves against concentration gradient'
             ],
             correctAnswer: 0,
-            explanation: 'Electrochemical gradient'
+            explanation: 'Correct — Electrochemical gradient. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioMembraneTransportPart4Data = {
       id: 'memb4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Requires ATP is important in active transport because',
-            options: ['Requires ATP', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Requires ATP',
+            options: ['Moves against concentration gradient', 'Requires ATP', '3 Na⁺ out, 2 K⁺ in', 'Electrochemical gradient']
           },
           {
-            label: 'Sodium-potassium pump is important in active transport because',
-            options: ['3 Na⁺ out, 2 K⁺ in', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Sodium-potassium pump',
+            options: ['Moves against concentration gradient', '3 Na⁺ out, 2 K⁺ in', 'Requires ATP', 'Electrochemical gradient']
           },
           {
-            label: 'Moves against concentration gradient is important in active transport because',
-            options: ['Moves against concentration gradient', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Moves against concentration gradient',
+            options: ['Electrochemical gradient', '3 Na⁺ out, 2 K⁺ in', 'Requires ATP', 'Moves against concentration gradient']
           }
         ],
         correctAnswers: ['Requires ATP', '3 Na⁺ out, 2 K⁺ in', 'Moves against concentration gradient'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Active Transport.'
+        hint1: 'Think about what each concept specifically describes in Active Transport.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Active Transport describes a specific idea. Requires ATP. Sodium-potassium pump: 3 Na⁺ out, 2 K⁺ in. Moves against concentration gradient.'
       }
     }
   ]

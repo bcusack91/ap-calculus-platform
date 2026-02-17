@@ -30,31 +30,31 @@ groups become more extreme after discussion
       id: 'socia4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of group behavior?',
+            question: 'Which of the following correctly describes Social facilitation?',
             options: [
-              'Social facilitation',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'perform better on simple tasks with audience',
+              'desire for harmony overrides critical thinking',
+              'groups become more extreme after discussion',
+              'less effort in groups'
             ],
             correctAnswer: 0,
-            explanation: 'Social facilitation: perform better on simple tasks with audience'
+            explanation: 'Correct — Social facilitation: perform better on simple tasks with audience. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of group behavior, which is accurate?',
+            question: 'Which of the following is true about Groupthink?',
             options: [
-              'desire for harmony overrides critical thinking',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'groups become more extreme after discussion',
+              'perform better on simple tasks with audience',
+              'less effort in groups',
+              'desire for harmony overrides critical thinking'
             ],
-            correctAnswer: 0,
-            explanation: 'Groupthink: desire for harmony overrides critical thinking'
+            correctAnswer: 3,
+            explanation: 'Correct — Groupthink: desire for harmony overrides critical thinking. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ groups become more extreme after discussion
       id: 'socia4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Social facilitation',
-            options: ['perform better on simple tasks with audience', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['less effort in groups', 'desire for harmony overrides critical thinking', 'groups become more extreme after discussion', 'perform better on simple tasks with audience']
           },
           {
             label: 'Social loafing',
-            options: ['less effort in groups', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['groups become more extreme after discussion', 'perform better on simple tasks with audience', 'less effort in groups', 'desire for harmony overrides critical thinking']
           },
           {
             label: 'Groupthink',
-            options: ['desire for harmony overrides critical thinking', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['desire for harmony overrides critical thinking', 'groups become more extreme after discussion', 'perform better on simple tasks with audience', 'less effort in groups']
           }
         ],
         correctAnswers: ['perform better on simple tasks with audience', 'less effort in groups', 'desire for harmony overrides critical thinking'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Group Behavior.'
+        hint1: 'Think about what each concept specifically describes in Group Behavior.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Group Behavior describes a specific idea. Social facilitation: perform better on simple tasks with audience. Social loafing: less effort in groups. Groupthink: desire for harmony overrides critical thinking.'
       }
     }
   ]

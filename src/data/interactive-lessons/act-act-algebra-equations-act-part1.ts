@@ -18,20 +18,31 @@ Multi-step: distribute, combine like terms, then isolate.
       id: 'act-a1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes isolate the variable using inverse operations?',
+            question: 'What does "Isolate the variable using inverse…" refer to in ACT prep?',
             options: [
-              'Isolate the variable using inverse operations is a key concept for ACT Math',
-              'Multi-step: distribute, combine like terms, then isolate',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'distribute, combine like terms, then isolate.',
+              'Isolate the variable using inverse operations.',
+              'Variables on both sides: move all variable terms to one side.',
+              'Check your answer by substituting back into the original equation.'
             ],
-            correctAnswer: 0,
-            explanation: 'Isolate the variable using inverse operations'
+            correctAnswer: 1,
+            explanation: 'Correct — Isolate the variable using inverse operations. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              'Check your answer by substituting back into the original equation.',
+              'distribute, combine like terms, then isolate.',
+              'Isolate the variable using inverse operations.',
+              'Variables on both sides: move all variable terms to one side.'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Key Insight: Variables on both sides: move all variable terms to one side. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Multi-step: distribute, combine like terms, then isolate.
       id: 'act-a1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for linear equations?',
+            question: 'Regarding Algebra Equations, which correctly describes ACT Tip?',
             options: [
-              'Variables on both sides: move all variable terms to one side',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Isolate the variable using inverse operations.',
+              'distribute, combine like terms, then isolate.',
+              'Variables on both sides: move all variable terms to one side.',
+              'Check your answer by substituting back into the original equation.'
             ],
-            correctAnswer: 0,
-            explanation: 'Variables on both sides: move all variable terms to one side'
+            correctAnswer: 3,
+            explanation: 'Correct — ACT Tip: Check your answer by substituting back into the original equation. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Multi-step: distribute, combine like terms, then isolate.
       id: 'act-a1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Linear Equations:',
-            options: ['Isolate the variable using inverse operations', 'Multi-step: distribute, combine like terms, then i', 'Not applicable', 'None of these']
+            label: 'Multi-step',
+            options: ['Check your answer by substituting back into the original equation.', 'Variables on both sides: move all variable terms to one side.', 'Isolate the variable using inverse operations.', 'distribute, combine like terms, then isolate.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Variables on both sides: move all variable terms t', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Key Insight',
+            options: ['Variables on both sides: move all variable terms to one side.', 'Isolate the variable using inverse operations.', 'distribute, combine like terms, then isolate.', 'Check your answer by substituting back into the original equation.']
+          },
+          {
+            label: 'ACT Tip',
+            options: ['Check your answer by substituting back into the original equation.', 'distribute, combine like terms, then isolate.', 'Isolate the variable using inverse operations.', 'Variables on both sides: move all variable terms to one side.']
           }
         ],
-        correctAnswers: ['Isolate the variable using inverse operations', 'Variables on both sides: move all variable terms t'],
-        hint1: 'Think about linear equations',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Isolate the variable using inverse operations. Variables on both sides: move all variable terms to one side.'
+        correctAnswers: ['distribute, combine like terms, then isolate.', 'Variables on both sides: move all variable terms to one side.', 'Check your answer by substituting back into the original equation.'],
+        hint1: 'Think about what each concept specifically describes in Algebra Equations.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Algebra Equations describes a specific idea. Multi-step: distribute, combine like terms, then isolate. Key Insight: Variables on both sides: move all variable terms to one side. ACT Tip: Check your answer by substituting back into the original equation.'
       }
     }
   ]

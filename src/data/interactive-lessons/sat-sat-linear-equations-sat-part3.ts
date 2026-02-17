@@ -18,20 +18,31 @@ Solve like equations, but flip the inequality when multiplying/dividing by a neg
       id: 'sat-l3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes inequalities use <, >, ≤, ≥ instead of =?',
+            question: 'Which of the following correctly describes Inequalities use <, >, ≤, ≥ instead of…?',
             options: [
-              'Inequalities use <, >, ≤, ≥ instead of = is a fundamental concept in SAT Math',
-              'Solve like equations, but flip the inequality when multiplying/dividing by a negative',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'Compound inequalities: -3 < 2x + 1 ≤ 7 — solve both parts.',
+              'Graph solutions on a number line.',
+              'Inequalities use <, >, ≤, ≥ instead of =.',
+              'Solve like equations, but flip the inequality when multiplying/dividing by a negative.'
             ],
-            correctAnswer: 0,
-            explanation: 'Inequalities use <, >, ≤, ≥ instead of ='
+            correctAnswer: 2,
+            explanation: 'Correct — Inequalities use <, >, ≤, ≥ instead of =. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Linear Inequalities, which explains Key Insight?',
+            options: [
+              'Compound inequalities: -3 < 2x + 1 ≤ 7 — solve both parts.',
+              'Inequalities use <, >, ≤, ≥ instead of =.',
+              'Graph solutions on a number line.',
+              'Solve like equations, but flip the inequality when multiplying/dividing by a negative.'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Key Insight: Graph solutions on a number line. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Solve like equations, but flip the inequality when multiplying/dividing by a neg
       id: 'sat-l3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for linear inequalities?',
+            question: 'Which of these accurately represents SAT Tip?',
             options: [
-              'Graph solutions on a number line',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'Graph solutions on a number line.',
+              'Solve like equations, but flip the inequality when multiplying/dividing by a negative.',
+              'Inequalities use <, >, ≤, ≥ instead of =.',
+              'Compound inequalities: -3 < 2x + 1 ≤ 7 — solve both parts.'
             ],
-            correctAnswer: 0,
-            explanation: 'Graph solutions on a number line'
+            correctAnswer: 3,
+            explanation: 'Correct — SAT Tip: Compound inequalities: -3 < 2x + 1 ≤ 7 — solve both parts. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ Solve like equations, but flip the inequality when multiplying/dividing by a neg
       id: 'sat-l3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Linear Inequalities:',
-            options: ['Inequalities use <, >, ≤, ≥ instead of =', 'Solve like equations, but flip the inequality when', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['Solve like equations, but flip the inequality when multiplying/dividing by a negative.', 'Graph solutions on a number line.', 'Compound inequalities: -3 < 2x + 1 ≤ 7 — solve both parts.', 'Inequalities use <, >, ≤, ≥ instead of =.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Graph solutions on a number line', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'SAT Tip',
+            options: ['Solve like equations, but flip the inequality when multiplying/dividing by a negative.', 'Graph solutions on a number line.', 'Compound inequalities: -3 < 2x + 1 ≤ 7 — solve both parts.', 'Inequalities use <, >, ≤, ≥ instead of =.']
           }
         ],
-        correctAnswers: ['Inequalities use <, >, ≤, ≥ instead of =', 'Graph solutions on a number line'],
-        hint1: 'Think about linear inequalities',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'Inequalities use <, >, ≤, ≥ instead of =. Graph solutions on a number line.'
+        correctAnswers: ['Graph solutions on a number line.', 'Compound inequalities: -3 < 2x + 1 ≤ 7 — solve both parts.'],
+        hint1: 'Think about what each concept specifically describes in Linear Inequalities.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Linear Inequalities describes a specific idea. Key Insight: Graph solutions on a number line. SAT Tip: Compound inequalities: -3 < 2x + 1 ≤ 7 — solve both parts.'
       }
     }
   ]

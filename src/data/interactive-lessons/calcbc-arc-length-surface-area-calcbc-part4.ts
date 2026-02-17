@@ -30,31 +30,31 @@ Surface area involves multiplying arc length element by circumference
       id: 'arc-l4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of surface area of revolution?',
+            question: 'What does "Revolution about x-axis" refer to in calculus?',
             options: [
-              'Revolution about x-axis',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
+              'SA = 2π∫ₐᵇ f(x)√(1+[f\'(x)]²) dx (for f(x) ≥ 0)',
+              'SA = 2π∫ₐᵇ x√(1+[f\'(x)]²) dx',
+              'Surface area involves multiplying arc length element by circumference',
+              'SA = 2π∫ₐᵇ y(t)√[(dx/dt)² + (dy/dt)²] dt (about x-axis)'
             ],
             correctAnswer: 0,
-            explanation: 'Revolution about x-axis: SA = 2π∫ₐᵇ f(x)√(1+[f\'(x)]²) dx (for f(x) ≥ 0)'
+            explanation: 'Correct — Revolution about x-axis: SA = 2π∫ₐᵇ f(x)√(1+[f\'(x)]²) dx (for f(x) ≥ 0). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of surface area of revolution, which is accurate?',
+            question: 'In the context of Surface Area of Revolution, which explains Parametric?',
             options: [
               'SA = 2π∫ₐᵇ y(t)√[(dx/dt)² + (dy/dt)²] dt (about x-axis)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'SA = 2π∫ₐᵇ f(x)√(1+[f\'(x)]²) dx (for f(x) ≥ 0)',
+              'SA = 2π∫ₐᵇ x√(1+[f\'(x)]²) dx',
+              'Surface area involves multiplying arc length element by circumference'
             ],
             correctAnswer: 0,
-            explanation: 'Parametric: SA = 2π∫ₐᵇ y(t)√[(dx/dt)² + (dy/dt)²] dt (about x-axis)'
+            explanation: 'Correct — Parametric: SA = 2π∫ₐᵇ y(t)√[(dx/dt)² + (dy/dt)²] dt (about x-axis). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Surface area involves multiplying arc length element by circumference
       id: 'arc-l4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to surface area of revolution?',
+            question: 'Which of these accurately represents Surface area involves multiplying arc…?',
             options: [
+              'SA = 2π∫ₐᵇ x√(1+[f\'(x)]²) dx',
               'Surface area involves multiplying arc length element by circumference',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'SA = 2π∫ₐᵇ y(t)√[(dx/dt)² + (dy/dt)²] dt (about x-axis)',
+              'SA = 2π∫ₐᵇ f(x)√(1+[f\'(x)]²) dx (for f(x) ≥ 0)'
             ],
-            correctAnswer: 0,
-            explanation: 'Surface area involves multiplying arc length element by circumference'
+            correctAnswer: 1,
+            explanation: 'Correct — Surface area involves multiplying arc length element by circumference. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Surface area involves multiplying arc length element by circumference
       id: 'arc-l4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Revolution about x-axis',
-            options: ['SA = 2π∫ₐᵇ f(x)√(1+[f\'(x)]²) dx (for f(x) ≥ 0)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['SA = 2π∫ₐᵇ x√(1+[f\'(x)]²) dx', 'SA = 2π∫ₐᵇ f(x)√(1+[f\'(x)]²) dx (for f(x) ≥ 0)', 'SA = 2π∫ₐᵇ y(t)√[(dx/dt)² + (dy/dt)²] dt (about x-axis)', 'Surface area involves multiplying arc length element by circumference']
           },
           {
             label: 'Revolution about y-axis',
-            options: ['SA = 2π∫ₐᵇ x√(1+[f\'(x)]²) dx', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['SA = 2π∫ₐᵇ y(t)√[(dx/dt)² + (dy/dt)²] dt (about x-axis)', 'Surface area involves multiplying arc length element by circumference', 'SA = 2π∫ₐᵇ f(x)√(1+[f\'(x)]²) dx (for f(x) ≥ 0)', 'SA = 2π∫ₐᵇ x√(1+[f\'(x)]²) dx']
           },
           {
             label: 'Parametric',
-            options: ['SA = 2π∫ₐᵇ y(t)√[(dx/dt)² + (dy/dt)²] dt (about x-', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['SA = 2π∫ₐᵇ f(x)√(1+[f\'(x)]²) dx (for f(x) ≥ 0)', 'Surface area involves multiplying arc length element by circumference', 'SA = 2π∫ₐᵇ x√(1+[f\'(x)]²) dx', 'SA = 2π∫ₐᵇ y(t)√[(dx/dt)² + (dy/dt)²] dt (about x-axis)']
           }
         ],
-        correctAnswers: ['SA = 2π∫ₐᵇ f(x)√(1+[f\'(x)]²) dx (for f(x) ≥ 0)', 'SA = 2π∫ₐᵇ x√(1+[f\'(x)]²) dx', 'SA = 2π∫ₐᵇ y(t)√[(dx/dt)² + (dy/dt)²] dt (about x-'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Surface Area of Revolution.'
+        correctAnswers: ['SA = 2π∫ₐᵇ f(x)√(1+[f\'(x)]²) dx (for f(x) ≥ 0)', 'SA = 2π∫ₐᵇ x√(1+[f\'(x)]²) dx', 'SA = 2π∫ₐᵇ y(t)√[(dx/dt)² + (dy/dt)²] dt (about x-axis)'],
+        hint1: 'Think about what each concept specifically describes in Surface Area of Revolution.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Surface Area of Revolution describes a specific idea. Revolution about x-axis: SA = 2π∫ₐᵇ f(x)√(1+[f\'(x)]²) dx (for f(x) ≥ 0). Revolution about y-axis: SA = 2π∫ₐᵇ x√(1+[f\'(x)]²) dx. Parametric: SA = 2π∫ₐᵇ y(t)√[(dx/dt)² + (dy/dt)²] dt (about x-axis).'
       }
     }
   ]

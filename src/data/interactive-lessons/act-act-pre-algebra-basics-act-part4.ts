@@ -18,20 +18,31 @@ Percent of a number: (percent/100) × number.
       id: 'act-p4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes percent = part/whole × 100?',
+            question: 'Which statement accurately explains Percent = part/whole × 100.?',
             options: [
-              'Percent = part/whole × 100 is a key concept for ACT Math',
-              'Percent of a number: (percent/100) × number',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'Percent = part/whole × 100.',
+              'Discount then tax: calculate discount first, then apply tax to the reduced price.',
+              '(percent/100) × number.',
+              'Percent increase = (new - old)/old × 100.'
             ],
             correctAnswer: 0,
-            explanation: 'Percent = part/whole × 100'
+            explanation: 'Correct — Percent = part/whole × 100. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              '(percent/100) × number.',
+              'Percent = part/whole × 100.',
+              'Discount then tax: calculate discount first, then apply tax to the reduced price.',
+              'Percent increase = (new - old)/old × 100.'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Key Insight: Percent increase = (new - old)/old × 100. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Percent of a number: (percent/100) × number.
       id: 'act-p4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for percentages?',
+            question: 'Regarding Percentages, which correctly describes ACT Tip?',
             options: [
-              'Percent increase = (new - old)/old × 100',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              '(percent/100) × number.',
+              'Discount then tax: calculate discount first, then apply tax to the reduced price.',
+              'Percent increase = (new - old)/old × 100.',
+              'Percent = part/whole × 100.'
             ],
-            correctAnswer: 0,
-            explanation: 'Percent increase = (new - old)/old × 100'
+            correctAnswer: 1,
+            explanation: 'Correct — ACT Tip: Discount then tax: calculate discount first, then apply tax to the reduced price. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Percent of a number: (percent/100) × number.
       id: 'act-p4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Percentages:',
-            options: ['Percent = part/whole × 100', 'Percent of a number: (percent/100) × number', 'Not applicable', 'None of these']
+            label: 'Percent of a number',
+            options: ['Percent increase = (new - old)/old × 100.', '(percent/100) × number.', 'Percent = part/whole × 100.', 'Discount then tax: calculate discount first, then apply tax to the reduced price.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Percent increase = (new - old)/old × 100', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Key Insight',
+            options: ['(percent/100) × number.', 'Percent = part/whole × 100.', 'Discount then tax: calculate discount first, then apply tax to the reduced price.', 'Percent increase = (new - old)/old × 100.']
+          },
+          {
+            label: 'ACT Tip',
+            options: ['Discount then tax: calculate discount first, then apply tax to the reduced price.', 'Percent increase = (new - old)/old × 100.', '(percent/100) × number.', 'Percent = part/whole × 100.']
           }
         ],
-        correctAnswers: ['Percent = part/whole × 100', 'Percent increase = (new - old)/old × 100'],
-        hint1: 'Think about percentages',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Percent = part/whole × 100. Percent increase = (new - old)/old × 100.'
+        correctAnswers: ['(percent/100) × number.', 'Percent increase = (new - old)/old × 100.', 'Discount then tax: calculate discount first, then apply tax to the reduced price.'],
+        hint1: 'Think about what each concept specifically describes in Percentages.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Percentages describes a specific idea. Percent of a number: (percent/100) × number. Key Insight: Percent increase = (new - old)/old × 100. ACT Tip: Discount then tax: calculate discount first, then apply tax to the reduced price.'
       }
     }
   ]

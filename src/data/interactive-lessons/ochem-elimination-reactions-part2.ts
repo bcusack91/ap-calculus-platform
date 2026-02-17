@@ -30,31 +30,31 @@ Strong, bulky bases favor E2 (t-BuOK, DBU)
       id: 'elimi2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of e2 mechanism?',
-            options: [
-              'E2',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
-            ],
-            correctAnswer: 0,
-            explanation: 'E2: one-step, concerted (bimolecular)'
-          },
-          {
-            question: 'In the context of e2 mechanism, which is accurate?',
+            question: 'Which of the following correctly describes E2?',
             options: [
               'Requires anti-periplanar geometry (H and LG 180° apart)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Strong, bulky bases favor E2 (t-BuOK, DBU)',
+              'one-step, concerted (bimolecular)',
+              'Rate = k[substrate][base]'
             ],
-            correctAnswer: 0,
-            explanation: 'Requires anti-periplanar geometry (H and LG 180° apart)'
+            correctAnswer: 2,
+            explanation: 'Correct — E2: one-step, concerted (bimolecular). The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of E2 Mechanism, which explains Requires anti-periplanar geometry (H…?',
+            options: [
+              'one-step, concerted (bimolecular)',
+              'Rate = k[substrate][base]',
+              'Strong, bulky bases favor E2 (t-BuOK, DBU)',
+              'Requires anti-periplanar geometry (H and LG 180° apart)'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Requires anti-periplanar geometry (H and LG 180° apart). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Strong, bulky bases favor E2 (t-BuOK, DBU)
       id: 'elimi2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'E2',
-            options: ['one-step, concerted (bimolecular)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['one-step, concerted (bimolecular)', 'Requires anti-periplanar geometry (H and LG 180° apart)', 'Rate = k[substrate][base]', 'Strong, bulky bases favor E2 (t-BuOK, DBU)']
           },
           {
             label: 'Rate = k[substrate][base]',
-            options: ['Rate = k[substrate][base]', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Rate = k[substrate][base]', 'Strong, bulky bases favor E2 (t-BuOK, DBU)', 'Requires anti-periplanar geometry (H and LG 180° apart)', 'one-step, concerted (bimolecular)']
           },
           {
-            label: 'Requires anti-periplanar geometry (H and LG 180° apart)',
-            options: ['Requires anti-periplanar geometry (H and LG 180° a', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Requires anti-periplanar geometry (H…',
+            options: ['Rate = k[substrate][base]', 'Requires anti-periplanar geometry (H and LG 180° apart)', 'Strong, bulky bases favor E2 (t-BuOK, DBU)', 'one-step, concerted (bimolecular)']
           }
         ],
-        correctAnswers: ['one-step, concerted (bimolecular)', 'Rate = k[substrate][base]', 'Requires anti-periplanar geometry (H and LG 180° a'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding E2 Mechanism.'
+        correctAnswers: ['one-step, concerted (bimolecular)', 'Rate = k[substrate][base]', 'Requires anti-periplanar geometry (H and LG 180° apart)'],
+        hint1: 'Think about what each concept specifically describes in E2 Mechanism.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in E2 Mechanism describes a specific idea. E2: one-step, concerted (bimolecular). Rate = k[substrate][base]. Requires anti-periplanar geometry (H and LG 180° apart).'
       }
     }
   ]

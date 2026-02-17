@@ -30,31 +30,31 @@ position of signal in ppm
       id: 'nmr-s1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of ¹h nmr basics?',
+            question: 'Which of the following correctly describes NMR?',
             options: [
-              'NMR',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'nuclei in magnetic field absorb radiofrequency energy',
+              'Equivalent protons give one signal',
+              'Number of signals = number of unique proton environments',
+              'position of signal in ppm'
             ],
             correctAnswer: 0,
-            explanation: 'NMR: nuclei in magnetic field absorb radiofrequency energy'
+            explanation: 'Correct — NMR: nuclei in magnetic field absorb radiofrequency energy. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of ¹h nmr basics, which is accurate?',
+            question: 'In the context of ️ NMR Spectroscopy, which explains Number of signals = number of unique…?',
             options: [
+              'position of signal in ppm',
+              'nuclei in magnetic field absorb radiofrequency energy',
               'Number of signals = number of unique proton environments',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Equivalent protons give one signal'
             ],
-            correctAnswer: 0,
-            explanation: 'Number of signals = number of unique proton environments'
+            correctAnswer: 2,
+            explanation: 'Correct — Number of signals = number of unique proton environments. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,24 @@ position of signal in ppm
       id: 'nmr-s1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'NMR',
-            options: ['nuclei in magnetic field absorb radiofrequency ene', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Equivalent protons give one signal', 'nuclei in magnetic field absorb radiofrequency energy', 'position of signal in ppm', 'Number of signals = number of unique proton environments']
           },
           {
-            label: 'Equivalent protons give one signal',
-            options: ['Equivalent protons give one signal', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
-          },
-          {
-            label: 'Number of signals = number of unique proton environments',
-            options: ['Number of signals = number of unique proton enviro', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Chemical shift (δ)',
+            options: ['position of signal in ppm', 'Equivalent protons give one signal', 'Number of signals = number of unique proton environments', 'nuclei in magnetic field absorb radiofrequency energy']
           }
         ],
-        correctAnswers: ['nuclei in magnetic field absorb radiofrequency ene', 'Equivalent protons give one signal', 'Number of signals = number of unique proton enviro'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding ¹H NMR Basics.'
+        correctAnswers: ['nuclei in magnetic field absorb radiofrequency energy', 'position of signal in ppm'],
+        hint1: 'Think about what each concept specifically describes in ️ NMR Spectroscopy.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in ️ NMR Spectroscopy describes a specific idea. NMR: nuclei in magnetic field absorb radiofrequency energy. Chemical shift (δ): position of signal in ppm.'
       }
     }
   ]

@@ -30,31 +30,31 @@ excess dopamine activity
       id: 'mood-4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of schizophrenia?',
+            question: 'What does "Schizophrenia" refer to in psychology?',
             options: [
-              'Schizophrenia',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'excess dopamine activity',
+              'split from reality (NOT split personality)',
+              'flat affect, social withdrawal, reduced motivation',
+              'hallucinations, delusions, disorganized thinking'
             ],
-            correctAnswer: 0,
-            explanation: 'Schizophrenia: split from reality (NOT split personality)'
+            correctAnswer: 1,
+            explanation: 'Correct — Schizophrenia: split from reality (NOT split personality). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of schizophrenia, which is accurate?',
+            question: 'Select the statement that correctly describes Negative symptoms:',
             options: [
-              'flat affect, social withdrawal, reduced motivation',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'hallucinations, delusions, disorganized thinking',
+              'split from reality (NOT split personality)',
+              'excess dopamine activity',
+              'flat affect, social withdrawal, reduced motivation'
             ],
-            correctAnswer: 0,
-            explanation: 'Negative symptoms: flat affect, social withdrawal, reduced motivation'
+            correctAnswer: 3,
+            explanation: 'Correct — Negative symptoms: flat affect, social withdrawal, reduced motivation. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ excess dopamine activity
       id: 'mood-4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Schizophrenia',
-            options: ['split from reality (NOT split personality)', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['flat affect, social withdrawal, reduced motivation', 'excess dopamine activity', 'hallucinations, delusions, disorganized thinking', 'split from reality (NOT split personality)']
           },
           {
             label: 'Positive symptoms',
-            options: ['hallucinations, delusions, disorganized thinking', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['flat affect, social withdrawal, reduced motivation', 'hallucinations, delusions, disorganized thinking', 'excess dopamine activity', 'split from reality (NOT split personality)']
           },
           {
             label: 'Negative symptoms',
-            options: ['flat affect, social withdrawal, reduced motivation', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['flat affect, social withdrawal, reduced motivation', 'hallucinations, delusions, disorganized thinking', 'split from reality (NOT split personality)', 'excess dopamine activity']
           }
         ],
         correctAnswers: ['split from reality (NOT split personality)', 'hallucinations, delusions, disorganized thinking', 'flat affect, social withdrawal, reduced motivation'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Schizophrenia.'
+        hint1: 'Think about what each concept specifically describes in Schizophrenia.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Schizophrenia describes a specific idea. Schizophrenia: split from reality (NOT split personality). Positive symptoms: hallucinations, delusions, disorganized thinking. Negative symptoms: flat affect, social withdrawal, reduced motivation.'
       }
     }
   ]

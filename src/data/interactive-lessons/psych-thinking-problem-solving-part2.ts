@@ -30,31 +30,31 @@ inability to see a problem from a new perspective
       id: 'think2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of problem-solving strategies?',
-            options: [
-              'Algorithms',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
-            ],
-            correctAnswer: 0,
-            explanation: 'Algorithms: step-by-step procedures (guaranteed solution)'
-          },
-          {
-            question: 'In the context of problem-solving strategies, which is accurate?',
+            question: 'Which of the following correctly describes Algorithms?',
             options: [
               'sudden realization of a solution',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'inability to see a problem from a new perspective',
+              'step-by-step procedures (guaranteed solution)',
+              'mental shortcuts (faster but error-prone)'
             ],
-            correctAnswer: 0,
-            explanation: 'Insight: sudden realization of a solution'
+            correctAnswer: 2,
+            explanation: 'Correct — Algorithms: step-by-step procedures (guaranteed solution). The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Problem-Solving Strategies, which explains Insight?',
+            options: [
+              'inability to see a problem from a new perspective',
+              'sudden realization of a solution',
+              'mental shortcuts (faster but error-prone)',
+              'step-by-step procedures (guaranteed solution)'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Insight: sudden realization of a solution. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ inability to see a problem from a new perspective
       id: 'think2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Algorithms',
-            options: ['step-by-step procedures (guaranteed solution)', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['inability to see a problem from a new perspective', 'step-by-step procedures (guaranteed solution)', 'mental shortcuts (faster but error-prone)', 'sudden realization of a solution']
           },
           {
             label: 'Heuristics',
-            options: ['mental shortcuts (faster but error-prone)', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['sudden realization of a solution', 'mental shortcuts (faster but error-prone)', 'step-by-step procedures (guaranteed solution)', 'inability to see a problem from a new perspective']
           },
           {
             label: 'Insight',
-            options: ['sudden realization of a solution', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['inability to see a problem from a new perspective', 'sudden realization of a solution', 'step-by-step procedures (guaranteed solution)', 'mental shortcuts (faster but error-prone)']
           }
         ],
         correctAnswers: ['step-by-step procedures (guaranteed solution)', 'mental shortcuts (faster but error-prone)', 'sudden realization of a solution'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving Strategies.'
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Strategies.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Strategies describes a specific idea. Algorithms: step-by-step procedures (guaranteed solution). Heuristics: mental shortcuts (faster but error-prone). Insight: sudden realization of a solution.'
       }
     }
   ]

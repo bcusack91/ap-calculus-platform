@@ -30,31 +30,31 @@ Cultural influences on perception
       id: 'perce5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of perceptual set & context?',
+            question: 'Which statement accurately explains Perceptual set?',
             options: [
-              'Perceptual set',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'surrounding information affects interpretation',
+              'mental frameworks that guide perception',
+              'expectations influence perception',
+              'Cultural influences on perception'
             ],
-            correctAnswer: 0,
-            explanation: 'Perceptual set: expectations influence perception'
+            correctAnswer: 2,
+            explanation: 'Correct — Perceptual set: expectations influence perception. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of perceptual set & context, which is accurate?',
+            question: 'Which of the following is true about Schemas?',
             options: [
+              'surrounding information affects interpretation',
+              'Cultural influences on perception',
               'mental frameworks that guide perception',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'expectations influence perception'
             ],
-            correctAnswer: 0,
-            explanation: 'Schemas: mental frameworks that guide perception'
+            correctAnswer: 2,
+            explanation: 'Correct — Schemas: mental frameworks that guide perception. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Cultural influences on perception
       id: 'perce5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Perceptual set',
-            options: ['expectations influence perception', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['mental frameworks that guide perception', 'surrounding information affects interpretation', 'Cultural influences on perception', 'expectations influence perception']
           },
           {
             label: 'Context effects',
-            options: ['surrounding information affects interpretation', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['surrounding information affects interpretation', 'Cultural influences on perception', 'expectations influence perception', 'mental frameworks that guide perception']
           },
           {
             label: 'Schemas',
-            options: ['mental frameworks that guide perception', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['mental frameworks that guide perception', 'Cultural influences on perception', 'expectations influence perception', 'surrounding information affects interpretation']
           }
         ],
         correctAnswers: ['expectations influence perception', 'surrounding information affects interpretation', 'mental frameworks that guide perception'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Perceptual Set & Context.'
+        hint1: 'Think about what each concept specifically describes in Perceptual Set & Context.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Perceptual Set & Context describes a specific idea. Perceptual set: expectations influence perception. Context effects: surrounding information affects interpretation. Schemas: mental frameworks that guide perception.'
       }
     }
   ]

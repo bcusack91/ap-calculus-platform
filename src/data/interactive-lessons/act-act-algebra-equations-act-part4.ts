@@ -18,20 +18,31 @@ export const actAlgebraPart4Data = {
       id: 'act-a4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes |x| = a means x = a or x = -a?',
+            question: 'What does "|x| = a means x = a or x = -a." refer to in ACT prep?',
             options: [
-              '|x| = a means x = a or x = -a is a key concept for ACT Math',
-              '|x| < a means -a < x < a (AND compound inequality)',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              '|x| < a means -a < x < a (AND compound inequality).',
+              '|x| > a means x > a or x < -a (OR compound inequality).',
+              '|x| = a means x = a or x = -a.',
+              'Always isolate the absolute value expression first before splitting into cases.'
             ],
-            correctAnswer: 0,
-            explanation: '|x| = a means x = a or x = -a'
+            correctAnswer: 2,
+            explanation: 'Correct — |x| = a means x = a or x = -a. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Absolute Value, which explains Key Insight?',
+            options: [
+              'Always isolate the absolute value expression first before splitting into cases.',
+              '|x| > a means x > a or x < -a (OR compound inequality).',
+              '|x| = a means x = a or x = -a.',
+              '|x| < a means -a < x < a (AND compound inequality).'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Key Insight: |x| > a means x > a or x < -a (OR compound inequality). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ export const actAlgebraPart4Data = {
       id: 'act-a4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for absolute value?',
+            question: 'Regarding Absolute Value, which correctly describes ACT Tip?',
             options: [
-              '|x| > a means x > a or x < -a (OR compound inequality)',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              '|x| < a means -a < x < a (AND compound inequality).',
+              '|x| = a means x = a or x = -a.',
+              '|x| > a means x > a or x < -a (OR compound inequality).',
+              'Always isolate the absolute value expression first before splitting into cases.'
             ],
-            correctAnswer: 0,
-            explanation: '|x| > a means x > a or x < -a (OR compound inequality)'
+            correctAnswer: 3,
+            explanation: 'Correct — ACT Tip: Always isolate the absolute value expression first before splitting into cases. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ export const actAlgebraPart4Data = {
       id: 'act-a4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Absolute Value:',
-            options: ['|x| = a means x = a or x = -a', '|x| < a means -a < x < a (AND compound inequality)', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['|x| < a means -a < x < a (AND compound inequality).', 'Always isolate the absolute value expression first before splitting into cases.', '|x| = a means x = a or x = -a.', '|x| > a means x > a or x < -a (OR compound inequality).']
           },
           {
-            label: 'Strategy tip:',
-            options: ['|x| > a means x > a or x < -a (OR compound inequal', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'ACT Tip',
+            options: ['|x| > a means x > a or x < -a (OR compound inequality).', '|x| < a means -a < x < a (AND compound inequality).', '|x| = a means x = a or x = -a.', 'Always isolate the absolute value expression first before splitting into cases.']
           }
         ],
-        correctAnswers: ['|x| = a means x = a or x = -a', '|x| > a means x > a or x < -a (OR compound inequal'],
-        hint1: 'Think about absolute value',
-        hint2: 'Consider the best ACT strategy',
-        explanation: '|x| = a means x = a or x = -a. |x| > a means x > a or x < -a (OR compound inequality).'
+        correctAnswers: ['|x| > a means x > a or x < -a (OR compound inequality).', 'Always isolate the absolute value expression first before splitting into cases.'],
+        hint1: 'Think about what each concept specifically describes in Absolute Value.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Absolute Value describes a specific idea. Key Insight: |x| > a means x > a or x < -a (OR compound inequality). ACT Tip: Always isolate the absolute value expression first before splitting into cases.'
       }
     }
   ]

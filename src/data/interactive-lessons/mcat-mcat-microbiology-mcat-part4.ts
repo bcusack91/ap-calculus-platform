@@ -71,23 +71,28 @@ Conjugation: direct DNA transfer via pilus (F-plasmid); horizontal gene transfer
       id: 'mcat-4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Microbial Genetics:',
-            options: ['Transformation: uptake of free DNA from environment; Transdu', 'Conjugation: direct DNA transfer via pilus (F-plasmid); hori', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Transformation',
+            options: ['Transposons: jumping genes that can move within and between genomes.', 'uptake of free DNA from environment; Transduction: DNA transfer via bacteriophage.', 'Plasmids: extrachromosomal DNA, often carry antibiotic resistance genes.', 'direct DNA transfer via pilus (F-plasmid); horizontal gene transfer.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Plasmids: extrachromosomal DNA, often carry antibiotic resis', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Conjugation',
+            options: ['Plasmids: extrachromosomal DNA, often carry antibiotic resistance genes.', 'uptake of free DNA from environment; Transduction: DNA transfer via bacteriophage.', 'Transposons: jumping genes that can move within and between genomes.', 'direct DNA transfer via pilus (F-plasmid); horizontal gene transfer.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['Plasmids: extrachromosomal DNA, often carry antibiotic resistance genes.', 'direct DNA transfer via pilus (F-plasmid); horizontal gene transfer.', 'uptake of free DNA from environment; Transduction: DNA transfer via bacteriophage.', 'Transposons: jumping genes that can move within and between genomes.']
           }
         ],
-        correctAnswers: ['Transformation: uptake of free DNA from environment; Transdu', 'Plasmids: extrachromosomal DNA, often carry antibiotic resis'],
-        hint1: 'Think about microbial genetics',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Transformation: uptake of free DNA from environment; Transduction: DNA transfer via bacteriophage. Plasmids: extrachromosomal DNA, often carry antibiotic resistance genes.'
+        correctAnswers: ['uptake of free DNA from environment; Transduction: DNA transfer via bacteriophage.', 'direct DNA transfer via pilus (F-plasmid); horizontal gene transfer.', 'Plasmids: extrachromosomal DNA, often carry antibiotic resistance genes.'],
+        hint1: 'Think about what each concept specifically describes in Microbial Genetics.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Microbial Genetics describes a specific idea. Transformation: uptake of free DNA from environment; Transduction: DNA transfer via bacteriophage. Conjugation: direct DNA transfer via pilus (F-plasmid); horizontal gene transfer. Key Insight: Plasmids: extrachromosomal DNA, often carry antibiotic resistance genes.'
       }
     }
   ]

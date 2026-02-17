@@ -30,31 +30,31 @@ no angle strain (chair conformation)
       id: 'alkan4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of ring strain?',
-            options: [
-              'Cyclopropane',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
-            ],
-            correctAnswer: 0,
-            explanation: 'Cyclopropane: highest ring strain (angle strain 60° vs 109.5°)'
-          },
-          {
-            question: 'In the context of ring strain, which is accurate?',
+            question: 'Which of the following correctly describes Cyclopropane?',
             options: [
               'nearly strain-free',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'no angle strain (chair conformation)',
+              'still significant strain',
+              'highest ring strain (angle strain 60° vs 109.5°)'
             ],
-            correctAnswer: 0,
-            explanation: 'Cyclopentane: nearly strain-free'
+            correctAnswer: 3,
+            explanation: 'Correct — Cyclopropane: highest ring strain (angle strain 60° vs 109.5°). The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Cyclopentane?',
+            options: [
+              'still significant strain',
+              'nearly strain-free',
+              'no angle strain (chair conformation)',
+              'highest ring strain (angle strain 60° vs 109.5°)'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Cyclopentane: nearly strain-free. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ no angle strain (chair conformation)
       id: 'alkan4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Cyclopropane',
-            options: ['highest ring strain (angle strain 60° vs 109.5°)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['highest ring strain (angle strain 60° vs 109.5°)', 'still significant strain', 'no angle strain (chair conformation)', 'nearly strain-free']
           },
           {
             label: 'Cyclobutane',
-            options: ['still significant strain', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['no angle strain (chair conformation)', 'still significant strain', 'nearly strain-free', 'highest ring strain (angle strain 60° vs 109.5°)']
           },
           {
             label: 'Cyclopentane',
-            options: ['nearly strain-free', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['highest ring strain (angle strain 60° vs 109.5°)', 'still significant strain', 'nearly strain-free', 'no angle strain (chair conformation)']
           }
         ],
         correctAnswers: ['highest ring strain (angle strain 60° vs 109.5°)', 'still significant strain', 'nearly strain-free'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Ring Strain.'
+        hint1: 'Think about what each concept specifically describes in Ring Strain.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Ring Strain describes a specific idea. Cyclopropane: highest ring strain (angle strain 60° vs 109.5°). Cyclobutane: still significant strain. Cyclopentane: nearly strain-free.'
       }
     }
   ]

@@ -19,31 +19,31 @@ export const bioCellCommPart5Data = {
       id: 'cell5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes gene expression changes?',
+            question: 'Which of the following correctly describes Gene expression changes?',
             options: [
+              'programmed cell death',
               'transcription factors activated',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Enzyme activation/deactivation',
+              'Cell division stimulation or inhibition'
             ],
-            correctAnswer: 0,
-            explanation: 'Gene expression changes: transcription factors activated'
+            correctAnswer: 1,
+            explanation: 'Correct — Gene expression changes: transcription factors activated. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of cellular responses, which statement is accurate?',
+            question: 'Select the statement that correctly describes Cell division stimulation or inhibition:',
             options: [
-              'Cell division stimulation or inhibition',
-              'detavitca srotcaf noitpircsnart :segnahc noisserpxe eneG',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'programmed cell death',
+              'transcription factors activated',
+              'Enzyme activation/deactivation',
+              'Cell division stimulation or inhibition'
             ],
-            correctAnswer: 0,
-            explanation: 'Cell division stimulation or inhibition'
+            correctAnswer: 3,
+            explanation: 'Correct — Cell division stimulation or inhibition. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioCellCommPart5Data = {
       id: 'cell5-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to cellular responses?',
+            question: 'Regarding Cellular Responses, which correctly describes Apoptosis?',
             options: [
-              'Apoptosis: programmed cell death',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Enzyme activation/deactivation',
+              'transcription factors activated',
+              'programmed cell death',
+              'Cell division stimulation or inhibition'
             ],
-            correctAnswer: 0,
-            explanation: 'Apoptosis: programmed cell death'
+            correctAnswer: 2,
+            explanation: 'Correct — Apoptosis: programmed cell death. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,24 @@ export const bioCellCommPart5Data = {
       id: 'cell5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Gene expression changes is important in cellular responses because',
-            options: ['transcription factors activated', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Gene expression changes',
+            options: ['transcription factors activated', 'Enzyme activation/deactivation', 'Cell division stimulation or inhibition', 'programmed cell death']
           },
           {
-            label: 'Enzyme activation/deactivation is important in cellular responses because',
-            options: ['Enzyme activation/deactivation', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
-          },
-          {
-            label: 'Cell division stimulation or inhibition is important in cellular responses because',
-            options: ['Cell division stimulation or inhibition', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Apoptosis',
+            options: ['programmed cell death', 'transcription factors activated', 'Enzyme activation/deactivation', 'Cell division stimulation or inhibition']
           }
         ],
-        correctAnswers: ['transcription factors activated', 'Enzyme activation/deactivation', 'Cell division stimulation or inhibition'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Cellular Responses.'
+        correctAnswers: ['transcription factors activated', 'programmed cell death'],
+        hint1: 'Think about what each concept specifically describes in Cellular Responses.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Cellular Responses describes a specific idea. Gene expression changes: transcription factors activated. Apoptosis: programmed cell death.'
       }
     }
   ]

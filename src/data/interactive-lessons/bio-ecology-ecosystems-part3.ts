@@ -19,31 +19,31 @@ export const bioEcologyPart3Data = {
       id: 'ecol3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes producers (autotrophs)?',
+            question: 'What does "Producers (autotrophs)" refer to in biology?',
             options: [
-              'make organic molecules from inorganic',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'eat other organisms',
+              'break down dead material',
+              'producers → primary consumers → secondary → tertiary',
+              'make organic molecules from inorganic'
             ],
-            correctAnswer: 0,
-            explanation: 'Producers (autotrophs): make organic molecules from inorganic'
+            correctAnswer: 3,
+            explanation: 'Correct — Producers (autotrophs): make organic molecules from inorganic. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of ecosystem structure, which statement is accurate?',
+            question: 'In the context of Ecosystem Structure, which explains Decomposers?',
             options: [
-              'Decomposers: break down dead material',
-              'cinagroni morf selucelom cinagro ekam :)shportotua( srecudorP',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'make organic molecules from inorganic',
+              'producers → primary consumers → secondary → tertiary',
+              'eat other organisms',
+              'break down dead material'
             ],
-            correctAnswer: 0,
-            explanation: 'Decomposers: break down dead material'
+            correctAnswer: 3,
+            explanation: 'Correct — Decomposers: break down dead material. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioEcologyPart3Data = {
       id: 'ecol3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to ecosystem structure?',
+            question: 'Which statement about Trophic levels is correct?',
             options: [
-              'Trophic levels: producers → primary consumers → secondary → tertiary',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'make organic molecules from inorganic',
+              'break down dead material',
+              'eat other organisms',
+              'producers → primary consumers → secondary → tertiary'
             ],
-            correctAnswer: 0,
-            explanation: 'Trophic levels: producers → primary consumers → secondary → tertiary'
+            correctAnswer: 3,
+            explanation: 'Correct — Trophic levels: producers → primary consumers → secondary → tertiary. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioEcologyPart3Data = {
       id: 'ecol3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Producers (autotrophs) is important in ecosystem structure because',
-            options: ['make organic molecules from inorganic', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Producers (autotrophs)',
+            options: ['break down dead material', 'producers → primary consumers → secondary → tertiary', 'eat other organisms', 'make organic molecules from inorganic']
           },
           {
-            label: 'Consumers (heterotrophs) is important in ecosystem structure because',
-            options: ['eat other organisms', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Consumers (heterotrophs)',
+            options: ['make organic molecules from inorganic', 'eat other organisms', 'producers → primary consumers → secondary → tertiary', 'break down dead material']
           },
           {
-            label: 'Decomposers is important in ecosystem structure because',
-            options: ['break down dead material', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Decomposers',
+            options: ['break down dead material', 'make organic molecules from inorganic', 'producers → primary consumers → secondary → tertiary', 'eat other organisms']
           }
         ],
         correctAnswers: ['make organic molecules from inorganic', 'eat other organisms', 'break down dead material'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Ecosystem Structure.'
+        hint1: 'Think about what each concept specifically describes in Ecosystem Structure.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Ecosystem Structure describes a specific idea. Producers (autotrophs): make organic molecules from inorganic. Consumers (heterotrophs): eat other organisms. Decomposers: break down dead material.'
       }
     }
   ]

@@ -19,31 +19,31 @@ export const bioPopulationPart7Data = {
       id: 'popu7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes population ecology and conservation?',
-            options: [
-              'Population ecology and conservation',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
-            ],
-            correctAnswer: 0,
-            explanation: 'Population ecology and conservation'
-          },
-          {
-            question: 'In the context of synthesis & ap review, which statement is accurate?',
+            question: 'Which statement accurately explains Population ecology and conservation?',
             options: [
               'Human population growth',
-              'noitavresnoc dna ygoloce noitalupoP',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Population ecology and conservation',
+              'Community interactions shape ecosystems',
+              'mathematical population analysis'
             ],
-            correctAnswer: 0,
-            explanation: 'Human population growth'
+            correctAnswer: 1,
+            explanation: 'Correct — Population ecology and conservation. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Population Ecology: Synthesis & AP Review, which explains Human population growth?',
+            options: [
+              'mathematical population analysis',
+              'Community interactions shape ecosystems',
+              'Human population growth',
+              'Population ecology and conservation'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Human population growth. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioPopulationPart7Data = {
       id: 'popu7-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to synthesis & ap review?',
+            question: 'Regarding Population Ecology: Synthesis & AP Review, which correctly describes AP exam?',
             options: [
-              'AP exam: mathematical population analysis',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Population ecology and conservation',
+              'mathematical population analysis',
+              'Community interactions shape ecosystems',
+              'Human population growth'
             ],
-            correctAnswer: 0,
-            explanation: 'AP exam: mathematical population analysis'
+            correctAnswer: 1,
+            explanation: 'Correct — AP exam: mathematical population analysis. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioPopulationPart7Data = {
       id: 'popu7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Population ecology and conservation is important in synthesis & ap review because',
-            options: ['Population ecology and conservation', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Population ecology and conservation',
+            options: ['Community interactions shape ecosystems', 'Human population growth', 'Population ecology and conservation', 'mathematical population analysis']
           },
           {
-            label: 'Community interactions shape ecosystems is important in synthesis & ap review because',
-            options: ['Community interactions shape ecosystems', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Community interactions shape ecosystems',
+            options: ['Population ecology and conservation', 'Community interactions shape ecosystems', 'Human population growth', 'mathematical population analysis']
           },
           {
-            label: 'Human population growth is important in synthesis & ap review because',
-            options: ['Human population growth', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Human population growth',
+            options: ['Human population growth', 'mathematical population analysis', 'Community interactions shape ecosystems', 'Population ecology and conservation']
           }
         ],
         correctAnswers: ['Population ecology and conservation', 'Community interactions shape ecosystems', 'Human population growth'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Synthesis & AP Review.'
+        hint1: 'Think about what each concept specifically describes in Population Ecology: Synthesis & AP Review.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Population Ecology: Synthesis & AP Review describes a specific idea. Population ecology and conservation. Community interactions shape ecosystems. Human population growth.'
       }
     }
   ]

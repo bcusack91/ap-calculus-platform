@@ -19,31 +19,31 @@ export const bioCellCommPart1Data = {
       id: 'cell1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes cells communicate through chemical signals?',
+            question: 'Which of the following correctly describes Cells communicate through chemical…?',
             options: [
+              'reception, transduction, response',
+              'hormones, neurotransmitters, growth factors',
               'Cells communicate through chemical signals',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'only target cells with correct receptors respond'
             ],
-            correctAnswer: 0,
-            explanation: 'Cells communicate through chemical signals'
+            correctAnswer: 2,
+            explanation: 'Correct — Cells communicate through chemical signals. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of signal transduction overview, which statement is accurate?',
+            question: 'Which of the following is true about Signal molecules?',
             options: [
-              'Signal molecules: hormones, neurotransmitters, growth factors',
-              'slangis lacimehc hguorht etacinummoc slleC',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'only target cells with correct receptors respond',
+              'hormones, neurotransmitters, growth factors',
+              'reception, transduction, response',
+              'Cells communicate through chemical signals'
             ],
-            correctAnswer: 0,
-            explanation: 'Signal molecules: hormones, neurotransmitters, growth factors'
+            correctAnswer: 1,
+            explanation: 'Correct — Signal molecules: hormones, neurotransmitters, growth factors. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioCellCommPart1Data = {
       id: 'cell1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to signal transduction overview?',
+            question: 'Which of these accurately represents Specificity?',
             options: [
-              'Specificity: only target cells with correct receptors respond',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'only target cells with correct receptors respond',
+              'hormones, neurotransmitters, growth factors',
+              'Cells communicate through chemical signals',
+              'reception, transduction, response'
             ],
             correctAnswer: 0,
-            explanation: 'Specificity: only target cells with correct receptors respond'
+            explanation: 'Correct — Specificity: only target cells with correct receptors respond. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioCellCommPart1Data = {
       id: 'cell1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Cells communicate through chemical signals is important in signal transduction overview because',
-            options: ['Cells communicate through chemical signals', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Three stages',
+            options: ['Cells communicate through chemical signals', 'only target cells with correct receptors respond', 'reception, transduction, response', 'hormones, neurotransmitters, growth factors']
           },
           {
-            label: 'Three stages is important in signal transduction overview because',
-            options: ['reception, transduction, response', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Signal molecules',
+            options: ['reception, transduction, response', 'Cells communicate through chemical signals', 'hormones, neurotransmitters, growth factors', 'only target cells with correct receptors respond']
           },
           {
-            label: 'Signal molecules is important in signal transduction overview because',
-            options: ['hormones, neurotransmitters, growth factors', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Specificity',
+            options: ['Cells communicate through chemical signals', 'reception, transduction, response', 'only target cells with correct receptors respond', 'hormones, neurotransmitters, growth factors']
           }
         ],
-        correctAnswers: ['Cells communicate through chemical signals', 'reception, transduction, response', 'hormones, neurotransmitters, growth factors'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Signal Transduction Overview.'
+        correctAnswers: ['reception, transduction, response', 'hormones, neurotransmitters, growth factors', 'only target cells with correct receptors respond'],
+        hint1: 'Think about what each concept specifically describes in Signal Transduction Overview.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Signal Transduction Overview describes a specific idea. Three stages: reception, transduction, response. Signal molecules: hormones, neurotransmitters, growth factors. Specificity: only target cells with correct receptors respond.'
       }
     }
   ]

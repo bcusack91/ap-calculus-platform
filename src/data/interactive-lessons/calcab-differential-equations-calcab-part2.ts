@@ -30,31 +30,31 @@ Draw by evaluating dy/dx at grid points and sketching segments
       id: 'diffe2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of slope fields?',
+            question: 'Which statement accurately explains Slope field?',
             options: [
-              'Slope field',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'Each segment shows the slope a solution curve would have at that point',
+              'Solution curves follow the pattern of the slope field',
+              'Draw by evaluating dy/dx at grid points and sketching segments',
+              'grid of short line segments with slope dy/dx at each point'
             ],
-            correctAnswer: 0,
-            explanation: 'Slope field: grid of short line segments with slope dy/dx at each point'
+            correctAnswer: 3,
+            explanation: 'Correct — Slope field: grid of short line segments with slope dy/dx at each point. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of slope fields, which is accurate?',
+            question: 'Select the statement that correctly describes Solution curves follow the pattern of…:',
             options: [
+              'grid of short line segments with slope dy/dx at each point',
+              'Draw by evaluating dy/dx at grid points and sketching segments',
               'Solution curves follow the pattern of the slope field',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Each segment shows the slope a solution curve would have at that point'
             ],
-            correctAnswer: 0,
-            explanation: 'Solution curves follow the pattern of the slope field'
+            correctAnswer: 2,
+            explanation: 'Correct — Solution curves follow the pattern of the slope field. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Draw by evaluating dy/dx at grid points and sketching segments
       id: 'diffe2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to slope fields?',
+            question: 'Regarding Slope Fields, which correctly describes Draw by evaluating dy/dx at grid points…?',
             options: [
               'Draw by evaluating dy/dx at grid points and sketching segments',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'Solution curves follow the pattern of the slope field',
+              'Each segment shows the slope a solution curve would have at that point',
+              'grid of short line segments with slope dy/dx at each point'
             ],
             correctAnswer: 0,
-            explanation: 'Draw by evaluating dy/dx at grid points and sketching segments'
+            explanation: 'Correct — Draw by evaluating dy/dx at grid points and sketching segments. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Draw by evaluating dy/dx at grid points and sketching segments
       id: 'diffe2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Slope field',
-            options: ['grid of short line segments with slope dy/dx at ea', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Draw by evaluating dy/dx at grid points and sketching segments', 'Solution curves follow the pattern of the slope field', 'Each segment shows the slope a solution curve would have at that point', 'grid of short line segments with slope dy/dx at each point']
           },
           {
-            label: 'Each segment shows the slope a solution curve would have at that point',
-            options: ['Each segment shows the slope a solution curve woul', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Each segment shows the slope a solution…',
+            options: ['Each segment shows the slope a solution curve would have at that point', 'Draw by evaluating dy/dx at grid points and sketching segments', 'Solution curves follow the pattern of the slope field', 'grid of short line segments with slope dy/dx at each point']
           },
           {
-            label: 'Solution curves follow the pattern of the slope field',
-            options: ['Solution curves follow the pattern of the slope fi', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Solution curves follow the pattern of…',
+            options: ['Each segment shows the slope a solution curve would have at that point', 'Draw by evaluating dy/dx at grid points and sketching segments', 'grid of short line segments with slope dy/dx at each point', 'Solution curves follow the pattern of the slope field']
           }
         ],
-        correctAnswers: ['grid of short line segments with slope dy/dx at ea', 'Each segment shows the slope a solution curve woul', 'Solution curves follow the pattern of the slope fi'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Slope Fields.'
+        correctAnswers: ['grid of short line segments with slope dy/dx at each point', 'Each segment shows the slope a solution curve would have at that point', 'Solution curves follow the pattern of the slope field'],
+        hint1: 'Think about what each concept specifically describes in Slope Fields.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Slope Fields describes a specific idea. Slope field: grid of short line segments with slope dy/dx at each point. Each segment shows the slope a solution curve would have at that point. Solution curves follow the pattern of the slope field.'
       }
     }
   ]

@@ -30,31 +30,31 @@ High temperature favors thermodynamic (1,4) product
       id: 'conju2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of 1,2- vs 1,4-addition?',
+            question: 'Which statement accurately explains 1,2-addition?',
             options: [
-              '1,2-addition',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'High temperature favors thermodynamic (1,4) product',
+              'electrophile adds across one double bond (kinetic product)',
+              'Low temperature favors kinetic (1,2) product',
+              'electrophile adds across entire system (thermodynamic product)'
             ],
-            correctAnswer: 0,
-            explanation: '1,2-addition: electrophile adds across one double bond (kinetic product)'
+            correctAnswer: 1,
+            explanation: 'Correct — 1,2-addition: electrophile adds across one double bond (kinetic product). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of 1,2- vs 1,4-addition, which is accurate?',
+            question: 'In the context of ,2- vs 1,4-Addition, which explains Low temperature favors kinetic (1,2)…?',
             options: [
+              'electrophile adds across entire system (thermodynamic product)',
+              'electrophile adds across one double bond (kinetic product)',
               'Low temperature favors kinetic (1,2) product',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'High temperature favors thermodynamic (1,4) product'
             ],
-            correctAnswer: 0,
-            explanation: 'Low temperature favors kinetic (1,2) product'
+            correctAnswer: 2,
+            explanation: 'Correct — Low temperature favors kinetic (1,2) product. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,24 @@ High temperature favors thermodynamic (1,4) product
       id: 'conju2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: '1,2-addition',
-            options: ['electrophile adds across one double bond (kinetic ', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['electrophile adds across one double bond (kinetic product)', 'electrophile adds across entire system (thermodynamic product)', 'Low temperature favors kinetic (1,2) product', 'High temperature favors thermodynamic (1,4) product']
           },
           {
             label: '1,4-addition',
-            options: ['electrophile adds across entire system (thermodyna', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
-          },
-          {
-            label: 'Low temperature favors kinetic (1,2) product',
-            options: ['Low temperature favors kinetic (1,2) product', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['High temperature favors thermodynamic (1,4) product', 'electrophile adds across one double bond (kinetic product)', 'Low temperature favors kinetic (1,2) product', 'electrophile adds across entire system (thermodynamic product)']
           }
         ],
-        correctAnswers: ['electrophile adds across one double bond (kinetic ', 'electrophile adds across entire system (thermodyna', 'Low temperature favors kinetic (1,2) product'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding 1,2- vs 1,4-Addition.'
+        correctAnswers: ['electrophile adds across one double bond (kinetic product)', 'electrophile adds across entire system (thermodynamic product)'],
+        hint1: 'Think about what each concept specifically describes in ,2- vs 1,4-Addition.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in ,2- vs 1,4-Addition describes a specific idea. 1,2-addition: electrophile adds across one double bond (kinetic product). 1,4-addition: electrophile adds across entire system (thermodynamic product).'
       }
     }
   ]

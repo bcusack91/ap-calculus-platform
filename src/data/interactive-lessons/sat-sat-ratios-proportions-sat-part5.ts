@@ -18,20 +18,31 @@ Combined rates: add rates when working together.
       id: 'sat-r5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes rate = distance/time or work/time?',
+            question: 'What does "Rate = distance/time or work/time." refer to in SAT prep?',
             options: [
-              'Rate = distance/time or work/time is a fundamental concept in SAT Math',
-              'Combined rates: add rates when working together',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'Average speed = total distance / total time (NOT average of speeds).',
+              'd = rt (distance = rate × time).',
+              'add rates when working together.',
+              'Rate = distance/time or work/time.'
             ],
-            correctAnswer: 0,
-            explanation: 'Rate = distance/time or work/time'
+            correctAnswer: 3,
+            explanation: 'Correct — Rate = distance/time or work/time. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              'Average speed = total distance / total time (NOT average of speeds).',
+              'add rates when working together.',
+              'd = rt (distance = rate × time).',
+              'Rate = distance/time or work/time.'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Key Insight: d = rt (distance = rate × time). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Combined rates: add rates when working together.
       id: 'sat-r5-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for rate problems?',
+            question: 'Which statement about SAT Tip is correct?',
             options: [
-              'd = rt (distance = rate × time)',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'Average speed = total distance / total time (NOT average of speeds).',
+              'add rates when working together.',
+              'd = rt (distance = rate × time).',
+              'Rate = distance/time or work/time.'
             ],
             correctAnswer: 0,
-            explanation: 'd = rt (distance = rate × time)'
+            explanation: 'Correct — SAT Tip: Average speed = total distance / total time (NOT average of speeds). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Combined rates: add rates when working together.
       id: 'sat-r5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Rate Problems:',
-            options: ['Rate = distance/time or work/time', 'Combined rates: add rates when working together', 'Not applicable', 'None of these']
+            label: 'Combined rates',
+            options: ['Rate = distance/time or work/time.', 'd = rt (distance = rate × time).', 'add rates when working together.', 'Average speed = total distance / total time (NOT average of speeds).']
           },
           {
-            label: 'Strategy tip:',
-            options: ['d = rt (distance = rate × time)', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Key Insight',
+            options: ['add rates when working together.', 'Average speed = total distance / total time (NOT average of speeds).', 'Rate = distance/time or work/time.', 'd = rt (distance = rate × time).']
+          },
+          {
+            label: 'SAT Tip',
+            options: ['Average speed = total distance / total time (NOT average of speeds).', 'd = rt (distance = rate × time).', 'Rate = distance/time or work/time.', 'add rates when working together.']
           }
         ],
-        correctAnswers: ['Rate = distance/time or work/time', 'd = rt (distance = rate × time)'],
-        hint1: 'Think about rate problems',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'Rate = distance/time or work/time. d = rt (distance = rate × time).'
+        correctAnswers: ['add rates when working together.', 'd = rt (distance = rate × time).', 'Average speed = total distance / total time (NOT average of speeds).'],
+        hint1: 'Think about what each concept specifically describes in Rate Problems.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Rate Problems describes a specific idea. Combined rates: add rates when working together. Key Insight: d = rt (distance = rate × time). SAT Tip: Average speed = total distance / total time (NOT average of speeds).'
       }
     }
   ]

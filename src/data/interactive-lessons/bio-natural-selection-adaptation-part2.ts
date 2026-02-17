@@ -19,31 +19,31 @@ export const bioNatSelectionPart2Data = {
       id: 'natu2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes differential reproductive success?',
-            options: [
-              'Differential reproductive success',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
-            ],
-            correctAnswer: 0,
-            explanation: 'Differential reproductive success'
-          },
-          {
-            question: 'In the context of mechanisms of natural selection, which statement is accurate?',
+            question: 'Which statement accurately explains Differential reproductive success?',
             options: [
               'Environment determines which traits are favorable',
-              'sseccus evitcudorper laitnereffiD',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Natural selection is the only mechanism that leads to adaptation',
+              'Selection acts on phenotypes, not genotypes',
+              'Differential reproductive success'
             ],
-            correctAnswer: 0,
-            explanation: 'Environment determines which traits are favorable'
+            correctAnswer: 3,
+            explanation: 'Correct — Differential reproductive success. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Mechanisms of Natural Selection, which explains Environment determines which traits are…?',
+            options: [
+              'Differential reproductive success',
+              'Selection acts on phenotypes, not genotypes',
+              'Environment determines which traits are favorable',
+              'Natural selection is the only mechanism that leads to adaptation'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Environment determines which traits are favorable. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioNatSelectionPart2Data = {
       id: 'natu2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to mechanisms of natural selection?',
+            question: 'Regarding Mechanisms of Natural Selection, which correctly describes Natural selection is the only mechanism…?',
             options: [
+              'Differential reproductive success',
+              'Selection acts on phenotypes, not genotypes',
               'Natural selection is the only mechanism that leads to adaptation',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Environment determines which traits are favorable'
             ],
-            correctAnswer: 0,
-            explanation: 'Natural selection is the only mechanism that leads to adaptation'
+            correctAnswer: 2,
+            explanation: 'Correct — Natural selection is the only mechanism that leads to adaptation. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioNatSelectionPart2Data = {
       id: 'natu2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Differential reproductive success is important in mechanisms of natural selection because',
-            options: ['Differential reproductive success', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Differential reproductive success',
+            options: ['Selection acts on phenotypes, not genotypes', 'Natural selection is the only mechanism that leads to adaptation', 'Differential reproductive success', 'Environment determines which traits are favorable']
           },
           {
-            label: 'Selection acts on phenotypes, not genotypes is important in mechanisms of natural selection because',
-            options: ['Selection acts on phenotypes, not genotypes', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Selection acts on phenotypes, not…',
+            options: ['Environment determines which traits are favorable', 'Differential reproductive success', 'Natural selection is the only mechanism that leads to adaptation', 'Selection acts on phenotypes, not genotypes']
           },
           {
-            label: 'Environment determines which traits are favorable is important in mechanisms of natural selection because',
-            options: ['Environment determines which traits are favorable', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Environment determines which traits are…',
+            options: ['Environment determines which traits are favorable', 'Selection acts on phenotypes, not genotypes', 'Differential reproductive success', 'Natural selection is the only mechanism that leads to adaptation']
           }
         ],
         correctAnswers: ['Differential reproductive success', 'Selection acts on phenotypes, not genotypes', 'Environment determines which traits are favorable'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Mechanisms of Natural Selection.'
+        hint1: 'Think about what each concept specifically describes in Mechanisms of Natural Selection.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Mechanisms of Natural Selection describes a specific idea. Differential reproductive success. Selection acts on phenotypes, not genotypes. Environment determines which traits are favorable.'
       }
     }
   ]

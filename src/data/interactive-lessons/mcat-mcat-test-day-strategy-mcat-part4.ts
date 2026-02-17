@@ -71,23 +71,28 @@ Content gap: you didnt know the material — go back and study.
       id: 'mcat-4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Practice Test Analysis:',
-            options: ['Review every wrong answer on practice tests — categorize err', 'Content gap: you didnt know the material — go back and study', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Content gap',
+            options: ['Careless mistake: you knew the answer but misread — slow down, read carefully.', 'Reasoning error: you knew the content but applied it incorrectly — practice passage strategy.', 'you didnt know the material — go back and study.', 'Review every wrong answer on practice tests — categorize errors as content, reasoning, or careless.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Reasoning error: you knew the content but applied it incorre', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Key Insight',
+            options: ['Careless mistake: you knew the answer but misread — slow down, read carefully.', 'Review every wrong answer on practice tests — categorize errors as content, reasoning, or careless.', 'you didnt know the material — go back and study.', 'Reasoning error: you knew the content but applied it incorrectly — practice passage strategy.']
+          },
+          {
+            label: 'MCAT Tip',
+            options: ['Reasoning error: you knew the content but applied it incorrectly — practice passage strategy.', 'Careless mistake: you knew the answer but misread — slow down, read carefully.', 'you didnt know the material — go back and study.', 'Review every wrong answer on practice tests — categorize errors as content, reasoning, or careless.']
           }
         ],
-        correctAnswers: ['Review every wrong answer on practice tests — categorize err', 'Reasoning error: you knew the content but applied it incorre'],
-        hint1: 'Think about practice test analysis',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Review every wrong answer on practice tests — categorize errors as content, reasoning, or careless. Reasoning error: you knew the content but applied it incorrectly — practice passage strategy.'
+        correctAnswers: ['you didnt know the material — go back and study.', 'Reasoning error: you knew the content but applied it incorrectly — practice passage strategy.', 'Careless mistake: you knew the answer but misread — slow down, read carefully.'],
+        hint1: 'Think about what each concept specifically describes in Practice Test Analysis.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Practice Test Analysis describes a specific idea. Content gap: you didnt know the material — go back and study. Key Insight: Reasoning error: you knew the content but applied it incorrectly — practice passage strategy. MCAT Tip: Careless mistake: you knew the answer but misread — slow down, read carefully.'
       }
     }
   ]

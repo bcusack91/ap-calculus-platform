@@ -30,31 +30,31 @@ If terms are similar to 1/nᵖ, try p-series or comparison
       id: 'conve1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of test selection strategy?',
+            question: 'Which statement accurately explains First?',
             options: [
-              'First',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
+              'If terms are similar to 1/nᵖ, try p-series or comparison',
+              'If terms involve factorials or exponentials, try Ratio Test',
+              'always check the Divergence Test — if lim aₙ ≠ 0, series diverges',
+              'If the series is geometric, use |r| < 1 criterion'
             ],
-            correctAnswer: 0,
-            explanation: 'First: always check the Divergence Test — if lim aₙ ≠ 0, series diverges'
+            correctAnswer: 2,
+            explanation: 'Correct — First: always check the Divergence Test — if lim aₙ ≠ 0, series diverges. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of test selection strategy, which is accurate?',
+            question: 'Which of the following is true about If terms involve factorials or…?',
             options: [
-              'If terms involve factorials or exponentials, try Ratio Test',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'always check the Divergence Test — if lim aₙ ≠ 0, series diverges',
+              'If terms are similar to 1/nᵖ, try p-series or comparison',
+              'If the series is geometric, use |r| < 1 criterion',
+              'If terms involve factorials or exponentials, try Ratio Test'
             ],
-            correctAnswer: 0,
-            explanation: 'If terms involve factorials or exponentials, try Ratio Test'
+            correctAnswer: 3,
+            explanation: 'Correct — If terms involve factorials or exponentials, try Ratio Test. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ If terms are similar to 1/nᵖ, try p-series or comparison
       id: 'conve1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to test selection strategy?',
+            question: 'Which statement about If terms are similar to 1/nᵖ, try… is correct?',
             options: [
+              'If terms involve factorials or exponentials, try Ratio Test',
               'If terms are similar to 1/nᵖ, try p-series or comparison',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'If the series is geometric, use |r| < 1 criterion',
+              'always check the Divergence Test — if lim aₙ ≠ 0, series diverges'
             ],
-            correctAnswer: 0,
-            explanation: 'If terms are similar to 1/nᵖ, try p-series or comparison'
+            correctAnswer: 1,
+            explanation: 'Correct — If terms are similar to 1/nᵖ, try p-series or comparison. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ If terms are similar to 1/nᵖ, try p-series or comparison
       id: 'conve1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'First',
-            options: ['always check the Divergence Test — if lim aₙ ≠ 0, ', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['If the series is geometric, use |r| < 1 criterion', 'always check the Divergence Test — if lim aₙ ≠ 0, series diverges', 'If terms involve factorials or exponentials, try Ratio Test', 'If terms are similar to 1/nᵖ, try p-series or comparison']
           },
           {
-            label: 'If the series is geometric, use |r| < 1 criterion',
-            options: ['If the series is geometric, use |r| < 1 criterion', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'If the series is geometric, use |r| < 1…',
+            options: ['always check the Divergence Test — if lim aₙ ≠ 0, series diverges', 'If the series is geometric, use |r| < 1 criterion', 'If terms are similar to 1/nᵖ, try p-series or comparison', 'If terms involve factorials or exponentials, try Ratio Test']
           },
           {
-            label: 'If terms involve factorials or exponentials, try Ratio Test',
-            options: ['If terms involve factorials or exponentials, try R', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'If terms involve factorials or…',
+            options: ['If terms involve factorials or exponentials, try Ratio Test', 'always check the Divergence Test — if lim aₙ ≠ 0, series diverges', 'If the series is geometric, use |r| < 1 criterion', 'If terms are similar to 1/nᵖ, try p-series or comparison']
           }
         ],
-        correctAnswers: ['always check the Divergence Test — if lim aₙ ≠ 0, ', 'If the series is geometric, use |r| < 1 criterion', 'If terms involve factorials or exponentials, try R'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Test Selection Strategy.'
+        correctAnswers: ['always check the Divergence Test — if lim aₙ ≠ 0, series diverges', 'If the series is geometric, use |r| < 1 criterion', 'If terms involve factorials or exponentials, try Ratio Test'],
+        hint1: 'Think about what each concept specifically describes in ∮ Convergence Tests Summary.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in ∮ Convergence Tests Summary describes a specific idea. First: always check the Divergence Test — if lim aₙ ≠ 0, series diverges. If the series is geometric, use |r| < 1 criterion. If terms involve factorials or exponentials, try Ratio Test.'
       }
     }
   ]

@@ -19,31 +19,31 @@ export const bioMeiosisPart4Data = {
       id: 'meio4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes nonsister chromatids exchange segments?',
+            question: 'Which of the following correctly describes Nonsister chromatids exchange segments?',
             options: [
-              'Nonsister chromatids exchange segments',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Increases genetic variation in offspring',
+              'Creates recombinant chromosomes',
+              'Occurs at chiasmata during prophase I',
+              'Nonsister chromatids exchange segments'
             ],
-            correctAnswer: 0,
-            explanation: 'Nonsister chromatids exchange segments'
+            correctAnswer: 3,
+            explanation: 'Correct — Nonsister chromatids exchange segments. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of crossing over & recombination, which statement is accurate?',
+            question: 'Which of the following is true about Creates recombinant chromosomes?',
             options: [
-              'Creates recombinant chromosomes',
-              'stnemges egnahcxe sditamorhc retsisnoN',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Occurs at chiasmata during prophase I',
+              'Increases genetic variation in offspring',
+              'Nonsister chromatids exchange segments',
+              'Creates recombinant chromosomes'
             ],
-            correctAnswer: 0,
-            explanation: 'Creates recombinant chromosomes'
+            correctAnswer: 3,
+            explanation: 'Correct — Creates recombinant chromosomes. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioMeiosisPart4Data = {
       id: 'meio4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to crossing over & recombination?',
+            question: 'Regarding Crossing Over & Recombination, which correctly describes Increases genetic variation in offspring?',
             options: [
-              'Increases genetic variation in offspring',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Creates recombinant chromosomes',
+              'Nonsister chromatids exchange segments',
+              'Occurs at chiasmata during prophase I',
+              'Increases genetic variation in offspring'
             ],
-            correctAnswer: 0,
-            explanation: 'Increases genetic variation in offspring'
+            correctAnswer: 3,
+            explanation: 'Correct — Increases genetic variation in offspring. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioMeiosisPart4Data = {
       id: 'meio4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Nonsister chromatids exchange segments is important in crossing over & recombination because',
-            options: ['Nonsister chromatids exchange segments', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Nonsister chromatids exchange segments',
+            options: ['Creates recombinant chromosomes', 'Increases genetic variation in offspring', 'Occurs at chiasmata during prophase I', 'Nonsister chromatids exchange segments']
           },
           {
-            label: 'Occurs at chiasmata during prophase I is important in crossing over & recombination because',
-            options: ['Occurs at chiasmata during prophase I', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Occurs at chiasmata during prophase I',
+            options: ['Creates recombinant chromosomes', 'Increases genetic variation in offspring', 'Nonsister chromatids exchange segments', 'Occurs at chiasmata during prophase I']
           },
           {
-            label: 'Creates recombinant chromosomes is important in crossing over & recombination because',
-            options: ['Creates recombinant chromosomes', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Creates recombinant chromosomes',
+            options: ['Increases genetic variation in offspring', 'Occurs at chiasmata during prophase I', 'Nonsister chromatids exchange segments', 'Creates recombinant chromosomes']
           }
         ],
         correctAnswers: ['Nonsister chromatids exchange segments', 'Occurs at chiasmata during prophase I', 'Creates recombinant chromosomes'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Crossing Over & Recombination.'
+        hint1: 'Think about what each concept specifically describes in Crossing Over & Recombination.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Crossing Over & Recombination describes a specific idea. Nonsister chromatids exchange segments. Occurs at chiasmata during prophase I. Creates recombinant chromosomes.'
       }
     }
   ]

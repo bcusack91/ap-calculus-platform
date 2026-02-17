@@ -18,20 +18,31 @@ Must be strongly supported by the text — don't go too far.
       id: 'act-r3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes inferences?',
+            question: 'Which of the following correctly describes Inferences?',
             options: [
-              'Inferences is a key concept for ACT English/Reading',
-              'Must be strongly supported by the text — dont go too far',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'Eliminate answers that require outside knowledge or are too extreme.',
+              'conclusions based on evidence + reasoning (not directly stated).',
+              '"It can be inferred" or "the passage suggests" = inference question.',
+              'Must be strongly supported by the text — don\'t go too far.'
             ],
-            correctAnswer: 0,
-            explanation: 'Inferences: conclusions based on evidence + reasoning (not directly stated)'
+            correctAnswer: 1,
+            explanation: 'Correct — Inferences: conclusions based on evidence + reasoning (not directly stated). The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              'Must be strongly supported by the text — don\'t go too far.',
+              '"It can be inferred" or "the passage suggests" = inference question.',
+              'conclusions based on evidence + reasoning (not directly stated).',
+              'Eliminate answers that require outside knowledge or are too extreme.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Key Insight: "It can be inferred" or "the passage suggests" = inference question. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Must be strongly supported by the text — don't go too far.
       id: 'act-r3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for making inferences?',
+            question: 'Which of these accurately represents ACT Tip?',
             options: [
-              '"It can be inferred" or "the passage suggests" = inference question',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Eliminate answers that require outside knowledge or are too extreme.',
+              'Must be strongly supported by the text — don\'t go too far.',
+              '"It can be inferred" or "the passage suggests" = inference question.',
+              'conclusions based on evidence + reasoning (not directly stated).'
             ],
             correctAnswer: 0,
-            explanation: '"It can be inferred" or "the passage suggests" = inference question'
+            explanation: 'Correct — ACT Tip: Eliminate answers that require outside knowledge or are too extreme. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Must be strongly supported by the text — don't go too far.
       id: 'act-r3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Making Inferences:',
-            options: ['Inferences: conclusions based on evidence + reason', 'Must be strongly supported by the text — don\'t go ', 'Not applicable', 'None of these']
+            label: 'Inferences',
+            options: ['Eliminate answers that require outside knowledge or are too extreme.', '"It can be inferred" or "the passage suggests" = inference question.', 'conclusions based on evidence + reasoning (not directly stated).', 'Must be strongly supported by the text — don\'t go too far.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['"It can be inferred" or "the passage suggests" = i', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Key Insight',
+            options: ['conclusions based on evidence + reasoning (not directly stated).', 'Must be strongly supported by the text — don\'t go too far.', '"It can be inferred" or "the passage suggests" = inference question.', 'Eliminate answers that require outside knowledge or are too extreme.']
+          },
+          {
+            label: 'ACT Tip',
+            options: ['Eliminate answers that require outside knowledge or are too extreme.', '"It can be inferred" or "the passage suggests" = inference question.', 'conclusions based on evidence + reasoning (not directly stated).', 'Must be strongly supported by the text — don\'t go too far.']
           }
         ],
-        correctAnswers: ['Inferences: conclusions based on evidence + reason', '"It can be inferred" or "the passage suggests" = i'],
-        hint1: 'Think about making inferences',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Inferences: conclusions based on evidence + reasoning (not directly stated). "It can be inferred" or "the passage suggests" = inference question.'
+        correctAnswers: ['conclusions based on evidence + reasoning (not directly stated).', '"It can be inferred" or "the passage suggests" = inference question.', 'Eliminate answers that require outside knowledge or are too extreme.'],
+        hint1: 'Think about what each concept specifically describes in Making Inferences.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Making Inferences describes a specific idea. Inferences: conclusions based on evidence + reasoning (not directly stated). Key Insight: "It can be inferred" or "the passage suggests" = inference question. ACT Tip: Eliminate answers that require outside knowledge or are too extreme.'
       }
     }
   ]

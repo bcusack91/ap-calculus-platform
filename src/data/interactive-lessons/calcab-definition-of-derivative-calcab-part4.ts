@@ -30,31 +30,31 @@ Differentiability is a stronger condition than continuity
       id: 'defin4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of differentiability?',
-            options: [
-              'If f is differentiable at c, then f is continuous at c',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'If f is differentiable at c, then f is continuous at c'
-          },
-          {
-            question: 'In the context of differentiability, which is accurate?',
+            question: 'Which of the following correctly describes If f is differentiable at c, then f is…?',
             options: [
               'Not differentiable at corners, cusps, vertical tangents, or discontinuities',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'If f is differentiable at c, then f is continuous at c',
+              '|x| at x=0)',
+              'Differentiability is a stronger condition than continuity'
             ],
-            correctAnswer: 0,
-            explanation: 'Not differentiable at corners, cusps, vertical tangents, or discontinuities'
+            correctAnswer: 1,
+            explanation: 'Correct — If f is differentiable at c, then f is continuous at c. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Not differentiable at corners, cusps,…?',
+            options: [
+              '|x| at x=0)',
+              'Differentiability is a stronger condition than continuity',
+              'Not differentiable at corners, cusps, vertical tangents, or discontinuities',
+              'If f is differentiable at c, then f is continuous at c'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Not differentiable at corners, cusps, vertical tangents, or discontinuities. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Differentiability is a stronger condition than continuity
       id: 'defin4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to differentiability?',
+            question: 'Regarding Differentiability, which correctly describes Differentiability is a stronger…?',
             options: [
               'Differentiability is a stronger condition than continuity',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              '|x| at x=0)',
+              'Not differentiable at corners, cusps, vertical tangents, or discontinuities',
+              'If f is differentiable at c, then f is continuous at c'
             ],
             correctAnswer: 0,
-            explanation: 'Differentiability is a stronger condition than continuity'
+            explanation: 'Correct — Differentiability is a stronger condition than continuity. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Differentiability is a stronger condition than continuity
       id: 'defin4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'If f is differentiable at c, then f is continuous at c',
-            options: ['If f is differentiable at c, then f is continuous ', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'If f is differentiable at c, then f is…',
+            options: ['Differentiability is a stronger condition than continuity', '|x| at x=0)', 'If f is differentiable at c, then f is continuous at c', 'Not differentiable at corners, cusps, vertical tangents, or discontinuities']
           },
           {
             label: 'Continuous does NOT imply differentiable (example',
-            options: ['|x| at x=0)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Not differentiable at corners, cusps, vertical tangents, or discontinuities', '|x| at x=0)', 'Differentiability is a stronger condition than continuity', 'If f is differentiable at c, then f is continuous at c']
           },
           {
-            label: 'Not differentiable at corners, cusps, vertical tangents, or discontinuities',
-            options: ['Not differentiable at corners, cusps, vertical tan', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Not differentiable at corners, cusps,…',
+            options: ['Not differentiable at corners, cusps, vertical tangents, or discontinuities', 'If f is differentiable at c, then f is continuous at c', '|x| at x=0)', 'Differentiability is a stronger condition than continuity']
           }
         ],
-        correctAnswers: ['If f is differentiable at c, then f is continuous ', '|x| at x=0)', 'Not differentiable at corners, cusps, vertical tan'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Differentiability.'
+        correctAnswers: ['If f is differentiable at c, then f is continuous at c', '|x| at x=0)', 'Not differentiable at corners, cusps, vertical tangents, or discontinuities'],
+        hint1: 'Think about what each concept specifically describes in Differentiability.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Differentiability describes a specific idea. If f is differentiable at c, then f is continuous at c. Continuous does NOT imply differentiable (example: |x| at x=0). Not differentiable at corners, cusps, vertical tangents, or discontinuities.'
       }
     }
   ]

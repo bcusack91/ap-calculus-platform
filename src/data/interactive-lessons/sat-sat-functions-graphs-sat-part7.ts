@@ -18,20 +18,31 @@ Find g(x) first, then use that result as input to f.
       id: 'sat-f7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes (f ∘ g)(x) = f(g(x))?',
+            question: 'Which statement accurately explains (f ∘ g)(x) = f(g(x))?',
             options: [
-              '(f ∘ g)(x) = f(g(x)) is a fundamental concept in SAT Math',
-              'Find g(x) first, then use that result as input to f',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'Example: f(x) = x², g(x) = x + 1, then f(g(x)) = (x+1)².',
+              'Find g(x) first, then use that result as input to f.',
+              'apply g first, then f.',
+              'Domain of f ∘ g: x must be in domain of g, AND g(x) must be in domain of f.'
             ],
-            correctAnswer: 0,
-            explanation: '(f ∘ g)(x) = f(g(x)): apply g first, then f'
+            correctAnswer: 2,
+            explanation: 'Correct — (f ∘ g)(x) = f(g(x)): apply g first, then f. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Review & Applications, which explains Key Insight?',
+            options: [
+              'Example: f(x) = x², g(x) = x + 1, then f(g(x)) = (x+1)².',
+              'Domain of f ∘ g: x must be in domain of g, AND g(x) must be in domain of f.',
+              'Find g(x) first, then use that result as input to f.',
+              'apply g first, then f.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Key Insight: Domain of f ∘ g: x must be in domain of g, AND g(x) must be in domain of f. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Find g(x) first, then use that result as input to f.
       id: 'sat-f7-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for review & applications?',
+            question: 'Which of these accurately represents SAT Tip?',
             options: [
-              'Domain of f ∘ g: x must be in domain of g, AND g(x) must be in domain of f',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'Example: f(x) = x², g(x) = x + 1, then f(g(x)) = (x+1)².',
+              'Find g(x) first, then use that result as input to f.',
+              'Domain of f ∘ g: x must be in domain of g, AND g(x) must be in domain of f.',
+              'apply g first, then f.'
             ],
             correctAnswer: 0,
-            explanation: 'Domain of f ∘ g: x must be in domain of g, AND g(x) must be in domain of f'
+            explanation: 'Correct — SAT Tip: Example: f(x) = x², g(x) = x + 1, then f(g(x)) = (x+1)². Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Find g(x) first, then use that result as input to f.
       id: 'sat-f7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Review & Applications:',
-            options: ['(f ∘ g)(x) = f(g(x)): apply g first, then f', 'Find g(x) first, then use that result as input to ', 'Not applicable', 'None of these']
+            label: '(f ∘ g)(x) = f(g(x))',
+            options: ['apply g first, then f.', 'Find g(x) first, then use that result as input to f.', 'Domain of f ∘ g: x must be in domain of g, AND g(x) must be in domain of f.', 'Example: f(x) = x², g(x) = x + 1, then f(g(x)) = (x+1)².']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Domain of f ∘ g: x must be in domain of g, AND g(x', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Key Insight',
+            options: ['Find g(x) first, then use that result as input to f.', 'Example: f(x) = x², g(x) = x + 1, then f(g(x)) = (x+1)².', 'Domain of f ∘ g: x must be in domain of g, AND g(x) must be in domain of f.', 'apply g first, then f.']
+          },
+          {
+            label: 'SAT Tip',
+            options: ['Find g(x) first, then use that result as input to f.', 'Example: f(x) = x², g(x) = x + 1, then f(g(x)) = (x+1)².', 'Domain of f ∘ g: x must be in domain of g, AND g(x) must be in domain of f.', 'apply g first, then f.']
           }
         ],
-        correctAnswers: ['(f ∘ g)(x) = f(g(x)): apply g first, then f', 'Domain of f ∘ g: x must be in domain of g, AND g(x'],
-        hint1: 'Think about review & applications',
-        hint2: 'Consider the best SAT strategy',
-        explanation: '(f ∘ g)(x) = f(g(x)): apply g first, then f. Domain of f ∘ g: x must be in domain of g, AND g(x) must be in domain of f.'
+        correctAnswers: ['apply g first, then f.', 'Domain of f ∘ g: x must be in domain of g, AND g(x) must be in domain of f.', 'Example: f(x) = x², g(x) = x + 1, then f(g(x)) = (x+1)².'],
+        hint1: 'Think about what each concept specifically describes in Review & Applications.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Review & Applications describes a specific idea. (f ∘ g)(x) = f(g(x)): apply g first, then f. Key Insight: Domain of f ∘ g: x must be in domain of g, AND g(x) must be in domain of f. SAT Tip: Example: f(x) = x², g(x) = x + 1, then f(g(x)) = (x+1)².'
       }
     }
   ]

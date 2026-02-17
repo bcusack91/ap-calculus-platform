@@ -30,31 +30,31 @@ May need to restrict domain/range after elimination
       id: 'param3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of eliminating the parameter?',
+            question: 'Which of the following correctly describes Solve one equation for t, substitute…?',
             options: [
+              'use cos²t + sin²t = 1 → x² + y² = 1',
+              'Eliminating the parameter gives the rectangular equation',
               'Solve one equation for t, substitute into the other',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'May need to restrict domain/range after elimination'
             ],
-            correctAnswer: 0,
-            explanation: 'Solve one equation for t, substitute into the other'
+            correctAnswer: 2,
+            explanation: 'Correct — Solve one equation for t, substitute into the other. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of eliminating the parameter, which is accurate?',
+            question: 'In the context of Eliminating the Parameter, which explains Eliminating the parameter gives the…?',
             options: [
+              'use cos²t + sin²t = 1 → x² + y² = 1',
               'Eliminating the parameter gives the rectangular equation',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'May need to restrict domain/range after elimination',
+              'Solve one equation for t, substitute into the other'
             ],
-            correctAnswer: 0,
-            explanation: 'Eliminating the parameter gives the rectangular equation'
+            correctAnswer: 1,
+            explanation: 'Correct — Eliminating the parameter gives the rectangular equation. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ May need to restrict domain/range after elimination
       id: 'param3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Solve one equation for t, substitute into the other',
-            options: ['Solve one equation for t, substitute into the othe', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            label: 'Solve one equation for t, substitute…',
+            options: ['May need to restrict domain/range after elimination', 'use cos²t + sin²t = 1 → x² + y² = 1', 'Eliminating the parameter gives the rectangular equation', 'Solve one equation for t, substitute into the other']
           },
           {
             label: 'For x = cos t, y = sin t',
-            options: ['use cos²t + sin²t = 1 → x² + y² = 1', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['Eliminating the parameter gives the rectangular equation', 'May need to restrict domain/range after elimination', 'Solve one equation for t, substitute into the other', 'use cos²t + sin²t = 1 → x² + y² = 1']
           },
           {
-            label: 'Eliminating the parameter gives the rectangular equation',
-            options: ['Eliminating the parameter gives the rectangular eq', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            label: 'Eliminating the parameter gives the…',
+            options: ['use cos²t + sin²t = 1 → x² + y² = 1', 'Eliminating the parameter gives the rectangular equation', 'May need to restrict domain/range after elimination', 'Solve one equation for t, substitute into the other']
           }
         ],
-        correctAnswers: ['Solve one equation for t, substitute into the othe', 'use cos²t + sin²t = 1 → x² + y² = 1', 'Eliminating the parameter gives the rectangular eq'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Eliminating the Parameter.'
+        correctAnswers: ['Solve one equation for t, substitute into the other', 'use cos²t + sin²t = 1 → x² + y² = 1', 'Eliminating the parameter gives the rectangular equation'],
+        hint1: 'Think about what each concept specifically describes in Eliminating the Parameter.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Eliminating the Parameter describes a specific idea. Solve one equation for t, substitute into the other. For x = cos t, y = sin t: use cos²t + sin²t = 1 → x² + y² = 1. Eliminating the parameter gives the rectangular equation.'
       }
     }
   ]

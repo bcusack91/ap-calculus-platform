@@ -19,31 +19,31 @@ export const bioMembraneTransportPart5Data = {
       id: 'memb5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes endocytosis?',
-            options: [
-              'phagocytosis, pinocytosis, receptor-mediated',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
-            ],
-            correctAnswer: 0,
-            explanation: 'Endocytosis: phagocytosis, pinocytosis, receptor-mediated'
-          },
-          {
-            question: 'In the context of bulk transport, which statement is accurate?',
+            question: 'Which statement accurately explains Endocytosis?',
             options: [
               'Used for large molecules and particles',
-              'detaidem-rotpecer ,sisotyconip ,sisotycogahp :sisotycodnE',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'phagocytosis, pinocytosis, receptor-mediated',
+              'vesicles fuse with membrane',
+              'Requires energy (ATP)'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Endocytosis: phagocytosis, pinocytosis, receptor-mediated. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Used for large molecules and particles?',
+            options: [
+              'Used for large molecules and particles',
+              'vesicles fuse with membrane',
+              'phagocytosis, pinocytosis, receptor-mediated',
+              'Requires energy (ATP)'
             ],
             correctAnswer: 0,
-            explanation: 'Used for large molecules and particles'
+            explanation: 'Correct — Used for large molecules and particles. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioMembraneTransportPart5Data = {
       id: 'memb5-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to bulk transport?',
+            question: 'Regarding Bulk Transport, which correctly describes Requires energy (ATP)?',
             options: [
-              'Requires energy (ATP)',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'vesicles fuse with membrane',
+              'phagocytosis, pinocytosis, receptor-mediated',
+              'Used for large molecules and particles',
+              'Requires energy (ATP)'
             ],
-            correctAnswer: 0,
-            explanation: 'Requires energy (ATP)'
+            correctAnswer: 3,
+            explanation: 'Correct — Requires energy (ATP). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,24 @@ export const bioMembraneTransportPart5Data = {
       id: 'memb5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Endocytosis is important in bulk transport because',
-            options: ['phagocytosis, pinocytosis, receptor-mediated', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Endocytosis',
+            options: ['Requires energy (ATP)', 'vesicles fuse with membrane', 'phagocytosis, pinocytosis, receptor-mediated', 'Used for large molecules and particles']
           },
           {
-            label: 'Exocytosis is important in bulk transport because',
-            options: ['vesicles fuse with membrane', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
-          },
-          {
-            label: 'Used for large molecules and particles is important in bulk transport because',
-            options: ['Used for large molecules and particles', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Exocytosis',
+            options: ['Requires energy (ATP)', 'phagocytosis, pinocytosis, receptor-mediated', 'vesicles fuse with membrane', 'Used for large molecules and particles']
           }
         ],
-        correctAnswers: ['phagocytosis, pinocytosis, receptor-mediated', 'vesicles fuse with membrane', 'Used for large molecules and particles'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Bulk Transport.'
+        correctAnswers: ['phagocytosis, pinocytosis, receptor-mediated', 'vesicles fuse with membrane'],
+        hint1: 'Think about what each concept specifically describes in Bulk Transport.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Bulk Transport describes a specific idea. Endocytosis: phagocytosis, pinocytosis, receptor-mediated. Exocytosis: vesicles fuse with membrane.'
       }
     }
   ]

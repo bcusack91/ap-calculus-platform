@@ -19,31 +19,31 @@ export const bioTranscriptionPart1Data = {
       id: 'tran1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes dna → rna → protein?',
+            question: 'Which of the following correctly describes DNA → RNA → Protein?',
             options: [
+              'mRNA → protein',
+              'retroviruses (RNA → DNA via reverse transcriptase)',
               'DNA → RNA → Protein',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'DNA → mRNA'
             ],
-            correctAnswer: 0,
-            explanation: 'DNA → RNA → Protein'
+            correctAnswer: 2,
+            explanation: 'Correct — DNA → RNA → Protein. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of central dogma, which statement is accurate?',
+            question: 'Which of the following is true about Translation?',
             options: [
-              'Translation: mRNA → protein',
-              'nietorP → ANR → AND',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'DNA → mRNA',
+              'retroviruses (RNA → DNA via reverse transcriptase)',
+              'DNA → RNA → Protein',
+              'mRNA → protein'
             ],
-            correctAnswer: 0,
-            explanation: 'Translation: mRNA → protein'
+            correctAnswer: 3,
+            explanation: 'Correct — Translation: mRNA → protein. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioTranscriptionPart1Data = {
       id: 'tran1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to central dogma?',
+            question: 'Which of these accurately represents Exceptions?',
             options: [
-              'Exceptions: retroviruses (RNA → DNA via reverse transcriptase)',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'retroviruses (RNA → DNA via reverse transcriptase)',
+              'DNA → RNA → Protein',
+              'mRNA → protein',
+              'DNA → mRNA'
             ],
             correctAnswer: 0,
-            explanation: 'Exceptions: retroviruses (RNA → DNA via reverse transcriptase)'
+            explanation: 'Correct — Exceptions: retroviruses (RNA → DNA via reverse transcriptase). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioTranscriptionPart1Data = {
       id: 'tran1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'DNA → RNA → Protein is important in central dogma because',
-            options: ['DNA → RNA → Protein', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Transcription',
+            options: ['retroviruses (RNA → DNA via reverse transcriptase)', 'mRNA → protein', 'DNA → RNA → Protein', 'DNA → mRNA']
           },
           {
-            label: 'Transcription is important in central dogma because',
-            options: ['DNA → mRNA', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Translation',
+            options: ['retroviruses (RNA → DNA via reverse transcriptase)', 'DNA → mRNA', 'DNA → RNA → Protein', 'mRNA → protein']
           },
           {
-            label: 'Translation is important in central dogma because',
-            options: ['mRNA → protein', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Exceptions',
+            options: ['DNA → RNA → Protein', 'retroviruses (RNA → DNA via reverse transcriptase)', 'DNA → mRNA', 'mRNA → protein']
           }
         ],
-        correctAnswers: ['DNA → RNA → Protein', 'DNA → mRNA', 'mRNA → protein'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Central Dogma.'
+        correctAnswers: ['DNA → mRNA', 'mRNA → protein', 'retroviruses (RNA → DNA via reverse transcriptase)'],
+        hint1: 'Think about what each concept specifically describes in Central Dogma.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Central Dogma describes a specific idea. Transcription: DNA → mRNA. Translation: mRNA → protein. Exceptions: retroviruses (RNA → DNA via reverse transcriptase).'
       }
     }
   ]

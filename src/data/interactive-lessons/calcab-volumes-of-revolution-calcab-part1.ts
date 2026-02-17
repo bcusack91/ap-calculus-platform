@@ -30,31 +30,31 @@ Use when the region touches the axis of revolution (no hole)
       id: 'volum1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of disk method?',
+            question: 'What does "Disk method" refer to in calculus?',
             options: [
-              'Disk method',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'Each cross-section is a disk with radius R(x) = |f(x)|',
+              'The volume element is π[R(x)]²Δx — a thin cylinder',
+              'Use when the region touches the axis of revolution (no hole)',
+              'V = π∫ₐᵇ [R(x)]² dx for revolution about x-axis'
             ],
-            correctAnswer: 0,
-            explanation: 'Disk method: V = π∫ₐᵇ [R(x)]² dx for revolution about x-axis'
+            correctAnswer: 3,
+            explanation: 'Correct — Disk method: V = π∫ₐᵇ [R(x)]² dx for revolution about x-axis. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of disk method, which is accurate?',
+            question: 'In the context of Volumes Of Revolution, which explains The volume element is π[R(x)]²Δx — a…?',
             options: [
+              'V = π∫ₐᵇ [R(x)]² dx for revolution about x-axis',
               'The volume element is π[R(x)]²Δx — a thin cylinder',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Use when the region touches the axis of revolution (no hole)',
+              'Each cross-section is a disk with radius R(x) = |f(x)|'
             ],
-            correctAnswer: 0,
-            explanation: 'The volume element is π[R(x)]²Δx — a thin cylinder'
+            correctAnswer: 1,
+            explanation: 'Correct — The volume element is π[R(x)]²Δx — a thin cylinder. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Use when the region touches the axis of revolution (no hole)
       id: 'volum1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to disk method?',
+            question: 'Which of these accurately represents Use when the region touches the axis of…?',
             options: [
+              'V = π∫ₐᵇ [R(x)]² dx for revolution about x-axis',
               'Use when the region touches the axis of revolution (no hole)',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'Each cross-section is a disk with radius R(x) = |f(x)|',
+              'The volume element is π[R(x)]²Δx — a thin cylinder'
             ],
-            correctAnswer: 0,
-            explanation: 'Use when the region touches the axis of revolution (no hole)'
+            correctAnswer: 1,
+            explanation: 'Correct — Use when the region touches the axis of revolution (no hole). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Use when the region touches the axis of revolution (no hole)
       id: 'volum1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Disk method',
-            options: ['V = π∫ₐᵇ [R(x)]² dx for revolution about x-axis', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['The volume element is π[R(x)]²Δx — a thin cylinder', 'Each cross-section is a disk with radius R(x) = |f(x)|', 'V = π∫ₐᵇ [R(x)]² dx for revolution about x-axis', 'Use when the region touches the axis of revolution (no hole)']
           },
           {
-            label: 'Each cross-section is a disk with radius R(x) = |f(x)|',
-            options: ['Each cross-section is a disk with radius R(x) = |f', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Each cross-section is a disk with…',
+            options: ['The volume element is π[R(x)]²Δx — a thin cylinder', 'V = π∫ₐᵇ [R(x)]² dx for revolution about x-axis', 'Each cross-section is a disk with radius R(x) = |f(x)|', 'Use when the region touches the axis of revolution (no hole)']
           },
           {
-            label: 'The volume element is π[R(x)]²Δx — a thin cylinder',
-            options: ['The volume element is π[R(x)]²Δx — a thin cylinder', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'The volume element is π[R(x)]²Δx — a…',
+            options: ['V = π∫ₐᵇ [R(x)]² dx for revolution about x-axis', 'Each cross-section is a disk with radius R(x) = |f(x)|', 'The volume element is π[R(x)]²Δx — a thin cylinder', 'Use when the region touches the axis of revolution (no hole)']
           }
         ],
-        correctAnswers: ['V = π∫ₐᵇ [R(x)]² dx for revolution about x-axis', 'Each cross-section is a disk with radius R(x) = |f', 'The volume element is π[R(x)]²Δx — a thin cylinder'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Disk Method.'
+        correctAnswers: ['V = π∫ₐᵇ [R(x)]² dx for revolution about x-axis', 'Each cross-section is a disk with radius R(x) = |f(x)|', 'The volume element is π[R(x)]²Δx — a thin cylinder'],
+        hint1: 'Think about what each concept specifically describes in Volumes Of Revolution.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Volumes Of Revolution describes a specific idea. Disk method: V = π∫ₐᵇ [R(x)]² dx for revolution about x-axis. Each cross-section is a disk with radius R(x) = |f(x)|. The volume element is π[R(x)]²Δx — a thin cylinder.'
       }
     }
   ]

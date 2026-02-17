@@ -19,31 +19,31 @@ export const bioDnaReplicationPart4Data = {
       id: 'dna-4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes dna polymerase has 3\'→5\' exonuclease (proofreading) activity?',
+            question: 'What does "DNA polymerase has 3\'→5\' exonuclease…" refer to in biology?',
             options: [
+              'corrects base-pairing errors',
+              '~1 per 10⁹ nucleotides after all repair',
               'DNA polymerase has 3\'→5\' exonuclease (proofreading) activity',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'fixes UV damage (thymine dimers)'
             ],
-            correctAnswer: 0,
-            explanation: 'DNA polymerase has 3\'→5\' exonuclease (proofreading) activity'
+            correctAnswer: 2,
+            explanation: 'Correct — DNA polymerase has 3\'→5\' exonuclease (proofreading) activity. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of proofreading & repair, which statement is accurate?',
+            question: 'Which of the following is true about Nucleotide excision repair?',
             options: [
-              'Nucleotide excision repair: fixes UV damage (thymine dimers)',
-              'ytivitca )gnidaerfoorp( esaelcunoxe \'5→\'3 sah esaremylop AND',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'corrects base-pairing errors',
+              'DNA polymerase has 3\'→5\' exonuclease (proofreading) activity',
+              '~1 per 10⁹ nucleotides after all repair',
+              'fixes UV damage (thymine dimers)'
             ],
-            correctAnswer: 0,
-            explanation: 'Nucleotide excision repair: fixes UV damage (thymine dimers)'
+            correctAnswer: 3,
+            explanation: 'Correct — Nucleotide excision repair: fixes UV damage (thymine dimers). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioDnaReplicationPart4Data = {
       id: 'dna-4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to proofreading & repair?',
+            question: 'Which statement about Error rate is correct?',
             options: [
-              'Error rate: ~1 per 10⁹ nucleotides after all repair',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'fixes UV damage (thymine dimers)',
+              'DNA polymerase has 3\'→5\' exonuclease (proofreading) activity',
+              '~1 per 10⁹ nucleotides after all repair',
+              'corrects base-pairing errors'
             ],
-            correctAnswer: 0,
-            explanation: 'Error rate: ~1 per 10⁹ nucleotides after all repair'
+            correctAnswer: 2,
+            explanation: 'Correct — Error rate: ~1 per 10⁹ nucleotides after all repair. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioDnaReplicationPart4Data = {
       id: 'dna-4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'DNA polymerase has 3\'→5\' exonuclease (proofreading) activity is important in proofreading & repair because',
-            options: ['DNA polymerase has 3\'→5\' exonuclease (proofreading', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Mismatch repair',
+            options: ['fixes UV damage (thymine dimers)', 'corrects base-pairing errors', 'DNA polymerase has 3\'→5\' exonuclease (proofreading) activity', '~1 per 10⁹ nucleotides after all repair']
           },
           {
-            label: 'Mismatch repair is important in proofreading & repair because',
-            options: ['corrects base-pairing errors', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Nucleotide excision repair',
+            options: ['corrects base-pairing errors', 'DNA polymerase has 3\'→5\' exonuclease (proofreading) activity', '~1 per 10⁹ nucleotides after all repair', 'fixes UV damage (thymine dimers)']
           },
           {
-            label: 'Nucleotide excision repair is important in proofreading & repair because',
-            options: ['fixes UV damage (thymine dimers)', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Error rate',
+            options: ['~1 per 10⁹ nucleotides after all repair', 'fixes UV damage (thymine dimers)', 'DNA polymerase has 3\'→5\' exonuclease (proofreading) activity', 'corrects base-pairing errors']
           }
         ],
-        correctAnswers: ['DNA polymerase has 3\'→5\' exonuclease (proofreading', 'corrects base-pairing errors', 'fixes UV damage (thymine dimers)'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Proofreading & Repair.'
+        correctAnswers: ['corrects base-pairing errors', 'fixes UV damage (thymine dimers)', '~1 per 10⁹ nucleotides after all repair'],
+        hint1: 'Think about what each concept specifically describes in Proofreading & Repair.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Proofreading & Repair describes a specific idea. Mismatch repair: corrects base-pairing errors. Nucleotide excision repair: fixes UV damage (thymine dimers). Error rate: ~1 per 10⁹ nucleotides after all repair.'
       }
     }
   ]

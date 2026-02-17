@@ -19,31 +19,31 @@ export const bioFeedbackPart1Data = {
       id: 'feed1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes homeostasis?',
+            question: 'Which statement accurately explains Homeostasis?',
             options: [
+              'Receptor → control center → effector pathway',
+              'target value for a variable',
               'maintaining internal stability',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'constant adjustments'
             ],
-            correctAnswer: 0,
-            explanation: 'Homeostasis: maintaining internal stability'
+            correctAnswer: 2,
+            explanation: 'Correct — Homeostasis: maintaining internal stability. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of homeostasis introduction, which statement is accurate?',
+            question: 'In the context of Homeostasis Introduction, which explains Set point?',
             options: [
-              'Set point: target value for a variable',
-              'ytilibats lanretni gniniatniam :sisatsoemoH',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'target value for a variable',
+              'Receptor → control center → effector pathway',
+              'constant adjustments',
+              'maintaining internal stability'
             ],
             correctAnswer: 0,
-            explanation: 'Set point: target value for a variable'
+            explanation: 'Correct — Set point: target value for a variable. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioFeedbackPart1Data = {
       id: 'feed1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to homeostasis introduction?',
+            question: 'Which statement about Receptor → control center → effector… is correct?',
             options: [
-              'Receptor → control center → effector pathway',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'constant adjustments',
+              'target value for a variable',
+              'maintaining internal stability',
+              'Receptor → control center → effector pathway'
             ],
-            correctAnswer: 0,
-            explanation: 'Receptor → control center → effector pathway'
+            correctAnswer: 3,
+            explanation: 'Correct — Receptor → control center → effector pathway. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioFeedbackPart1Data = {
       id: 'feed1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Homeostasis is important in homeostasis introduction because',
-            options: ['maintaining internal stability', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Homeostasis',
+            options: ['Receptor → control center → effector pathway', 'target value for a variable', 'maintaining internal stability', 'constant adjustments']
           },
           {
-            label: 'Dynamic equilibrium is important in homeostasis introduction because',
-            options: ['constant adjustments', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Dynamic equilibrium',
+            options: ['target value for a variable', 'Receptor → control center → effector pathway', 'maintaining internal stability', 'constant adjustments']
           },
           {
-            label: 'Set point is important in homeostasis introduction because',
-            options: ['target value for a variable', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Set point',
+            options: ['target value for a variable', 'constant adjustments', 'maintaining internal stability', 'Receptor → control center → effector pathway']
           }
         ],
         correctAnswers: ['maintaining internal stability', 'constant adjustments', 'target value for a variable'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Homeostasis Introduction.'
+        hint1: 'Think about what each concept specifically describes in Homeostasis Introduction.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Homeostasis Introduction describes a specific idea. Homeostasis: maintaining internal stability. Dynamic equilibrium: constant adjustments. Set point: target value for a variable.'
       }
     }
   ]

@@ -30,31 +30,31 @@ alkane naming and conformations
       id: 'alkan7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of synthesis & review?',
+            question: 'Which of the following correctly describes Nomenclature is essential for…?',
             options: [
               'Nomenclature is essential for communication',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'Ring strain affects reactivity',
+              'alkane naming and conformations',
+              'Conformational analysis predicts stability'
             ],
             correctAnswer: 0,
-            explanation: 'Nomenclature is essential for communication'
+            explanation: 'Correct — Nomenclature is essential for communication. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of synthesis & review, which is accurate?',
+            question: 'In the context of Synthesis & Review, which explains Ring strain affects reactivity?',
             options: [
+              'alkane naming and conformations',
+              'Conformational analysis predicts stability',
               'Ring strain affects reactivity',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Nomenclature is essential for communication'
             ],
-            correctAnswer: 0,
-            explanation: 'Ring strain affects reactivity'
+            correctAnswer: 2,
+            explanation: 'Correct — Ring strain affects reactivity. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ alkane naming and conformations
       id: 'alkan7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Nomenclature is essential for communication',
-            options: ['Nomenclature is essential for communication', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Nomenclature is essential for…',
+            options: ['Ring strain affects reactivity', 'alkane naming and conformations', 'Nomenclature is essential for communication', 'Conformational analysis predicts stability']
           },
           {
-            label: 'Conformational analysis predicts stability',
-            options: ['Conformational analysis predicts stability', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Conformational analysis predicts…',
+            options: ['Nomenclature is essential for communication', 'Conformational analysis predicts stability', 'Ring strain affects reactivity', 'alkane naming and conformations']
           },
           {
             label: 'Ring strain affects reactivity',
-            options: ['Ring strain affects reactivity', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Nomenclature is essential for communication', 'Ring strain affects reactivity', 'Conformational analysis predicts stability', 'alkane naming and conformations']
           }
         ],
         correctAnswers: ['Nomenclature is essential for communication', 'Conformational analysis predicts stability', 'Ring strain affects reactivity'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Synthesis & Review.'
+        hint1: 'Think about what each concept specifically describes in Synthesis & Review.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Synthesis & Review describes a specific idea. Nomenclature is essential for communication. Conformational analysis predicts stability. Ring strain affects reactivity.'
       }
     }
   ]

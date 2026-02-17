@@ -30,31 +30,31 @@ cognitive appraisal determines emotion
       id: 'emoti1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of theories of emotion?',
-            options: [
-              'James-Lange',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
-            ],
-            correctAnswer: 0,
-            explanation: 'James-Lange: stimulus → physiological arousal → emotion'
-          },
-          {
-            question: 'In the context of theories of emotion, which is accurate?',
+            question: 'Which of the following correctly describes James-Lange?',
             options: [
               'arousal + cognitive label = emotion',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'cognitive appraisal determines emotion',
+              'stimulus → physiological arousal → emotion',
+              'stimulus → simultaneous arousal AND emotion'
             ],
-            correctAnswer: 0,
-            explanation: 'Schachter-Singer (two-factor): arousal + cognitive label = emotion'
+            correctAnswer: 2,
+            explanation: 'Correct — James-Lange: stimulus → physiological arousal → emotion. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Schachter-Singer (two-factor):',
+            options: [
+              'cognitive appraisal determines emotion',
+              'stimulus → physiological arousal → emotion',
+              'arousal + cognitive label = emotion',
+              'stimulus → simultaneous arousal AND emotion'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Schachter-Singer (two-factor): arousal + cognitive label = emotion. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ cognitive appraisal determines emotion
       id: 'emoti1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'James-Lange',
-            options: ['stimulus → physiological arousal → emotion', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['cognitive appraisal determines emotion', 'stimulus → simultaneous arousal AND emotion', 'stimulus → physiological arousal → emotion', 'arousal + cognitive label = emotion']
           },
           {
             label: 'Cannon-Bard',
-            options: ['stimulus → simultaneous arousal AND emotion', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['cognitive appraisal determines emotion', 'arousal + cognitive label = emotion', 'stimulus → physiological arousal → emotion', 'stimulus → simultaneous arousal AND emotion']
           },
           {
             label: 'Schachter-Singer (two-factor)',
-            options: ['arousal + cognitive label = emotion', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['stimulus → physiological arousal → emotion', 'stimulus → simultaneous arousal AND emotion', 'cognitive appraisal determines emotion', 'arousal + cognitive label = emotion']
           }
         ],
         correctAnswers: ['stimulus → physiological arousal → emotion', 'stimulus → simultaneous arousal AND emotion', 'arousal + cognitive label = emotion'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Theories of Emotion.'
+        hint1: 'Think about what each concept specifically describes in Emotion & Stress.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Emotion & Stress describes a specific idea. James-Lange: stimulus → physiological arousal → emotion. Cannon-Bard: stimulus → simultaneous arousal AND emotion. Schachter-Singer (two-factor): arousal + cognitive label = emotion.'
       }
     }
   ]

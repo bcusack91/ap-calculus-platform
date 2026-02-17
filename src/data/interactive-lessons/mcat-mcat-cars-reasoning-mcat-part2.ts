@@ -71,23 +71,28 @@ Weaken: find evidence that undermines a premise or provides a counterexample.
       id: 'mcat-2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Strengthening & Weakening Arguments:',
-            options: ['Strengthen: find evidence that supports the conclusion or fi', 'Weaken: find evidence that undermines a premise or provides ', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Strengthen',
+            options: ['find evidence that supports the conclusion or fills a gap.', 'find evidence that undermines a premise or provides a counterexample.', 'Be careful of answers that are true but irrelevant to the argument.', 'The correct answer addresses the specific connection between evidence and conclusion.']
           },
           {
-            label: 'MCAT application:',
-            options: ['The correct answer addresses the specific connection between', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Weaken',
+            options: ['The correct answer addresses the specific connection between evidence and conclusion.', 'find evidence that undermines a premise or provides a counterexample.', 'Be careful of answers that are true but irrelevant to the argument.', 'find evidence that supports the conclusion or fills a gap.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['The correct answer addresses the specific connection between evidence and conclusion.', 'Be careful of answers that are true but irrelevant to the argument.', 'find evidence that supports the conclusion or fills a gap.', 'find evidence that undermines a premise or provides a counterexample.']
           }
         ],
-        correctAnswers: ['Strengthen: find evidence that supports the conclusion or fi', 'The correct answer addresses the specific connection between'],
-        hint1: 'Think about strengthening & weakening arguments',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Strengthen: find evidence that supports the conclusion or fills a gap. The correct answer addresses the specific connection between evidence and conclusion.'
+        correctAnswers: ['find evidence that supports the conclusion or fills a gap.', 'find evidence that undermines a premise or provides a counterexample.', 'The correct answer addresses the specific connection between evidence and conclusion.'],
+        hint1: 'Think about what each concept specifically describes in Strengthening & Weakening Arguments.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Strengthening & Weakening Arguments describes a specific idea. Strengthen: find evidence that supports the conclusion or fills a gap. Weaken: find evidence that undermines a premise or provides a counterexample. Key Insight: The correct answer addresses the specific connection between evidence and conclusion.'
       }
     }
   ]

@@ -30,31 +30,31 @@ Used whenever one function is "inside" another
       id: 'chain1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of the chain rule?',
+            question: 'What does "Chain Rule" refer to in calculus?',
             options: [
-              'Chain Rule',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'Used whenever one function is "inside" another',
+              'dy/dx = (dy/du)(du/dx)',
+              'd/dx[f(g(x))] = f\'(g(x)) · g\'(x)',
+              'Outer derivative times inner derivative'
             ],
-            correctAnswer: 0,
-            explanation: 'Chain Rule: d/dx[f(g(x))] = f\'(g(x)) · g\'(x)'
+            correctAnswer: 2,
+            explanation: 'Correct — Chain Rule: d/dx[f(g(x))] = f\'(g(x)) · g\'(x). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of the chain rule, which is accurate?',
+            question: 'Select the statement that correctly describes Leibniz notation:',
             options: [
+              'Used whenever one function is "inside" another',
               'dy/dx = (dy/du)(du/dx)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'd/dx[f(g(x))] = f\'(g(x)) · g\'(x)',
+              'Outer derivative times inner derivative'
             ],
-            correctAnswer: 0,
-            explanation: 'Leibniz notation: dy/dx = (dy/du)(du/dx)'
+            correctAnswer: 1,
+            explanation: 'Correct — Leibniz notation: dy/dx = (dy/du)(du/dx). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Used whenever one function is "inside" another
       id: 'chain1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to the chain rule?',
+            question: 'Which of these accurately represents Used whenever one function is "inside"…?',
             options: [
-              'Used whenever one function is "inside" another',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'Outer derivative times inner derivative',
+              'dy/dx = (dy/du)(du/dx)',
+              'd/dx[f(g(x))] = f\'(g(x)) · g\'(x)',
+              'Used whenever one function is "inside" another'
             ],
-            correctAnswer: 0,
-            explanation: 'Used whenever one function is "inside" another'
+            correctAnswer: 3,
+            explanation: 'Correct — Used whenever one function is "inside" another. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,24 @@ Used whenever one function is "inside" another
       id: 'chain1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Chain Rule',
-            options: ['d/dx[f(g(x))] = f\'(g(x)) · g\'(x)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
-          },
-          {
-            label: 'Outer derivative times inner derivative',
-            options: ['Outer derivative times inner derivative', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Used whenever one function is "inside" another', 'd/dx[f(g(x))] = f\'(g(x)) · g\'(x)', 'Outer derivative times inner derivative', 'dy/dx = (dy/du)(du/dx)']
           },
           {
             label: 'Leibniz notation',
-            options: ['dy/dx = (dy/du)(du/dx)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['d/dx[f(g(x))] = f\'(g(x)) · g\'(x)', 'Outer derivative times inner derivative', 'dy/dx = (dy/du)(du/dx)', 'Used whenever one function is "inside" another']
           }
         ],
-        correctAnswers: ['d/dx[f(g(x))] = f\'(g(x)) · g\'(x)', 'Outer derivative times inner derivative', 'dy/dx = (dy/du)(du/dx)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding The Chain Rule.'
+        correctAnswers: ['d/dx[f(g(x))] = f\'(g(x)) · g\'(x)', 'dy/dx = (dy/du)(du/dx)'],
+        hint1: 'Think about what each concept specifically describes in Chain Rule.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Chain Rule describes a specific idea. Chain Rule: d/dx[f(g(x))] = f\'(g(x)) · g\'(x). Leibniz notation: dy/dx = (dy/du)(du/dx).'
       }
     }
   ]

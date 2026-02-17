@@ -30,31 +30,31 @@ Curved arrow notation shows electron flow
       id: 'acids5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of predicting acid-base reactions?',
+            question: 'What does "Equilibrium favors formation of weaker…" refer to in this topic?',
             options: [
-              'Equilibrium favors formation of weaker acid + weaker base',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'Compare pKa values to predict direction',
+              'Strong acid + strong base → complete reaction',
+              'Curved arrow notation shows electron flow',
+              'Equilibrium favors formation of weaker acid + weaker base'
             ],
-            correctAnswer: 0,
-            explanation: 'Equilibrium favors formation of weaker acid + weaker base'
+            correctAnswer: 3,
+            explanation: 'Correct — Equilibrium favors formation of weaker acid + weaker base. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of predicting acid-base reactions, which is accurate?',
+            question: 'Which of the following is true about Strong acid + strong base → complete…?',
             options: [
-              'Strong acid + strong base → complete reaction',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Equilibrium favors formation of weaker acid + weaker base',
+              'Compare pKa values to predict direction',
+              'Curved arrow notation shows electron flow',
+              'Strong acid + strong base → complete reaction'
             ],
-            correctAnswer: 0,
-            explanation: 'Strong acid + strong base → complete reaction'
+            correctAnswer: 3,
+            explanation: 'Correct — Strong acid + strong base → complete reaction. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Curved arrow notation shows electron flow
       id: 'acids5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Equilibrium favors formation of weaker acid + weaker base',
-            options: ['Equilibrium favors formation of weaker acid + weak', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Equilibrium favors formation of weaker…',
+            options: ['Strong acid + strong base → complete reaction', 'Curved arrow notation shows electron flow', 'Equilibrium favors formation of weaker acid + weaker base', 'Compare pKa values to predict direction']
           },
           {
             label: 'Compare pKa values to predict direction',
-            options: ['Compare pKa values to predict direction', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Strong acid + strong base → complete reaction', 'Compare pKa values to predict direction', 'Equilibrium favors formation of weaker acid + weaker base', 'Curved arrow notation shows electron flow']
           },
           {
-            label: 'Strong acid + strong base → complete reaction',
-            options: ['Strong acid + strong base → complete reaction', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Strong acid + strong base → complete…',
+            options: ['Strong acid + strong base → complete reaction', 'Equilibrium favors formation of weaker acid + weaker base', 'Curved arrow notation shows electron flow', 'Compare pKa values to predict direction']
           }
         ],
-        correctAnswers: ['Equilibrium favors formation of weaker acid + weak', 'Compare pKa values to predict direction', 'Strong acid + strong base → complete reaction'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Predicting Acid-Base Reactions.'
+        correctAnswers: ['Equilibrium favors formation of weaker acid + weaker base', 'Compare pKa values to predict direction', 'Strong acid + strong base → complete reaction'],
+        hint1: 'Think about what each concept specifically describes in Predicting Acid-Base Reactions.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Predicting Acid-Base Reactions describes a specific idea. Equilibrium favors formation of weaker acid + weaker base. Compare pKa values to predict direction. Strong acid + strong base → complete reaction.'
       }
     }
   ]

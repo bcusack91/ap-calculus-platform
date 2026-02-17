@@ -30,31 +30,31 @@ Verify your answer makes sense in the context of the problem
       id: 'optim1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of optimization strategy?',
+            question: 'What does "Optimization" refer to in calculus?',
             options: [
-              'Optimization',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'finding the maximum or minimum value of a function subject to constraints',
+              'define variables, write the objective function, apply constraints, find critical points',
+              'Check critical points and endpoints for global extrema',
+              'Verify your answer makes sense in the context of the problem'
             ],
             correctAnswer: 0,
-            explanation: 'Optimization: finding the maximum or minimum value of a function subject to constraints'
+            explanation: 'Correct — Optimization: finding the maximum or minimum value of a function subject to constraints. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of optimization strategy, which is accurate?',
+            question: 'Select the statement that correctly describes Check critical points and endpoints for…:',
             options: [
+              'Verify your answer makes sense in the context of the problem',
               'Check critical points and endpoints for global extrema',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'finding the maximum or minimum value of a function subject to constraints',
+              'define variables, write the objective function, apply constraints, find critical points'
             ],
-            correctAnswer: 0,
-            explanation: 'Check critical points and endpoints for global extrema'
+            correctAnswer: 1,
+            explanation: 'Correct — Check critical points and endpoints for global extrema. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Verify your answer makes sense in the context of the problem
       id: 'optim1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to optimization strategy?',
+            question: 'Which of these accurately represents Verify your answer makes sense in the…?',
             options: [
               'Verify your answer makes sense in the context of the problem',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'Check critical points and endpoints for global extrema',
+              'define variables, write the objective function, apply constraints, find critical points',
+              'finding the maximum or minimum value of a function subject to constraints'
             ],
             correctAnswer: 0,
-            explanation: 'Verify your answer makes sense in the context of the problem'
+            explanation: 'Correct — Verify your answer makes sense in the context of the problem. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,24 @@ Verify your answer makes sense in the context of the problem
       id: 'optim1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Optimization',
-            options: ['finding the maximum or minimum value of a function', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Verify your answer makes sense in the context of the problem', 'Check critical points and endpoints for global extrema', 'define variables, write the objective function, apply constraints, find critical points', 'finding the maximum or minimum value of a function subject to constraints']
           },
           {
             label: 'Steps',
-            options: ['define variables, write the objective function, ap', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
-          },
-          {
-            label: 'Check critical points and endpoints for global extrema',
-            options: ['Check critical points and endpoints for global ext', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['finding the maximum or minimum value of a function subject to constraints', 'Verify your answer makes sense in the context of the problem', 'Check critical points and endpoints for global extrema', 'define variables, write the objective function, apply constraints, find critical points']
           }
         ],
-        correctAnswers: ['finding the maximum or minimum value of a function', 'define variables, write the objective function, ap', 'Check critical points and endpoints for global ext'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Optimization Strategy.'
+        correctAnswers: ['finding the maximum or minimum value of a function subject to constraints', 'define variables, write the objective function, apply constraints, find critical points'],
+        hint1: 'Think about what each concept specifically describes in Optimization.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Optimization describes a specific idea. Optimization: finding the maximum or minimum value of a function subject to constraints. Steps: define variables, write the objective function, apply constraints, find critical points.'
       }
     }
   ]

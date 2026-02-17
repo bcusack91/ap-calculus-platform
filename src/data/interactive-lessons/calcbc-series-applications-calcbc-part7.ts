@@ -30,31 +30,31 @@ Series solutions are fundamental in differential equations and mathematical phys
       id: 'serie7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of review & applications?',
-            options: [
-              'Fourier series',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'Fourier series: represent periodic functions (preview)'
-          },
-          {
-            question: 'In the context of review & applications, which is accurate?',
+            question: 'Which of the following correctly describes Fourier series?',
             options: [
               '(1+x)ᵖ = Σ C(p,n)xⁿ for any real p',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Series solutions are fundamental in differential equations and mathematical physics',
+              'small-angle approximations (sin θ ≈ θ)',
+              'represent periodic functions (preview)'
             ],
-            correctAnswer: 0,
-            explanation: 'Binomial series: (1+x)ᵖ = Σ C(p,n)xⁿ for any real p'
+            correctAnswer: 3,
+            explanation: 'Correct — Fourier series: represent periodic functions (preview). The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Binomial series:',
+            options: [
+              'small-angle approximations (sin θ ≈ θ)',
+              'Series solutions are fundamental in differential equations and mathematical physics',
+              'represent periodic functions (preview)',
+              '(1+x)ᵖ = Σ C(p,n)xⁿ for any real p'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Binomial series: (1+x)ᵖ = Σ C(p,n)xⁿ for any real p. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Series solutions are fundamental in differential equations and mathematical phys
       id: 'serie7-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to review & applications?',
+            question: 'Which statement about Series solutions are fundamental in… is correct?',
             options: [
-              'Series solutions are fundamental in differential equations and mathematical phys',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              '(1+x)ᵖ = Σ C(p,n)xⁿ for any real p',
+              'small-angle approximations (sin θ ≈ θ)',
+              'Series solutions are fundamental in differential equations and mathematical physics',
+              'represent periodic functions (preview)'
             ],
-            correctAnswer: 0,
-            explanation: 'Series solutions are fundamental in differential equations and mathematical physics'
+            correctAnswer: 2,
+            explanation: 'Correct — Series solutions are fundamental in differential equations and mathematical physics. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Series solutions are fundamental in differential equations and mathematical phys
       id: 'serie7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Fourier series',
-            options: ['represent periodic functions (preview)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Series solutions are fundamental in differential equations and mathematical physics', 'represent periodic functions (preview)', 'small-angle approximations (sin θ ≈ θ)', '(1+x)ᵖ = Σ C(p,n)xⁿ for any real p']
           },
           {
             label: 'Taylor series in physics',
-            options: ['small-angle approximations (sin θ ≈ θ)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['(1+x)ᵖ = Σ C(p,n)xⁿ for any real p', 'Series solutions are fundamental in differential equations and mathematical physics', 'small-angle approximations (sin θ ≈ θ)', 'represent periodic functions (preview)']
           },
           {
             label: 'Binomial series',
-            options: ['(1+x)ᵖ = Σ C(p,n)xⁿ for any real p', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['(1+x)ᵖ = Σ C(p,n)xⁿ for any real p', 'Series solutions are fundamental in differential equations and mathematical physics', 'small-angle approximations (sin θ ≈ θ)', 'represent periodic functions (preview)']
           }
         ],
         correctAnswers: ['represent periodic functions (preview)', 'small-angle approximations (sin θ ≈ θ)', '(1+x)ᵖ = Σ C(p,n)xⁿ for any real p'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Review & Applications.'
+        hint1: 'Think about what each concept specifically describes in Review & Applications.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Review & Applications describes a specific idea. Fourier series: represent periodic functions (preview). Taylor series in physics: small-angle approximations (sin θ ≈ θ). Binomial series: (1+x)ᵖ = Σ C(p,n)xⁿ for any real p.'
       }
     }
   ]

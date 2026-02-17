@@ -18,20 +18,31 @@ Midpoint: ((x₁+x₂)/2, (y₁+y₂)/2).
       id: 'sat-g4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes distance?',
+            question: 'Which of the following correctly describes Distance?',
             options: [
-              'Distance is a fundamental concept in SAT Math',
-              'Midpoint: ((x₁+x₂)/2, (y₁+y₂)/2)',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'd = √((x₂-x₁)² + (y₂-y₁)²).',
+              '((x₁+x₂)/2, (y₁+y₂)/2).',
+              'Slope: m = (y₂-y₁)/(x₂-x₁).',
+              'Parallel lines: same slope; Perpendicular lines: slopes are negative reciprocals.'
             ],
             correctAnswer: 0,
-            explanation: 'Distance: d = √((x₂-x₁)² + (y₂-y₁)²)'
+            explanation: 'Correct — Distance: d = √((x₂-x₁)² + (y₂-y₁)²). The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Coordinate Geometry, which explains Key Insight?',
+            options: [
+              '((x₁+x₂)/2, (y₁+y₂)/2).',
+              'Parallel lines: same slope; Perpendicular lines: slopes are negative reciprocals.',
+              'Slope: m = (y₂-y₁)/(x₂-x₁).',
+              'd = √((x₂-x₁)² + (y₂-y₁)²).'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Key Insight: Slope: m = (y₂-y₁)/(x₂-x₁). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Midpoint: ((x₁+x₂)/2, (y₁+y₂)/2).
       id: 'sat-g4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for coordinate geometry?',
+            question: 'Which statement about SAT Tip is correct?',
             options: [
-              'Slope: m = (y₂-y₁)/(x₂-x₁)',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              '((x₁+x₂)/2, (y₁+y₂)/2).',
+              'Slope: m = (y₂-y₁)/(x₂-x₁).',
+              'd = √((x₂-x₁)² + (y₂-y₁)²).',
+              'Parallel lines: same slope; Perpendicular lines: slopes are negative reciprocals.'
             ],
-            correctAnswer: 0,
-            explanation: 'Slope: m = (y₂-y₁)/(x₂-x₁)'
+            correctAnswer: 3,
+            explanation: 'Correct — SAT Tip: Parallel lines: same slope; Perpendicular lines: slopes are negative reciprocals. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Midpoint: ((x₁+x₂)/2, (y₁+y₂)/2).
       id: 'sat-g4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Coordinate Geometry:',
-            options: ['Distance: d = √((x₂-x₁)² + (y₂-y₁)²)', 'Midpoint: ((x₁+x₂)/2, (y₁+y₂)/2)', 'Not applicable', 'None of these']
+            label: 'Distance',
+            options: ['Slope: m = (y₂-y₁)/(x₂-x₁).', 'Parallel lines: same slope; Perpendicular lines: slopes are negative reciprocals.', '((x₁+x₂)/2, (y₁+y₂)/2).', 'd = √((x₂-x₁)² + (y₂-y₁)²).']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Slope: m = (y₂-y₁)/(x₂-x₁)', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Midpoint',
+            options: ['Slope: m = (y₂-y₁)/(x₂-x₁).', 'Parallel lines: same slope; Perpendicular lines: slopes are negative reciprocals.', '((x₁+x₂)/2, (y₁+y₂)/2).', 'd = √((x₂-x₁)² + (y₂-y₁)²).']
+          },
+          {
+            label: 'Key Insight',
+            options: ['d = √((x₂-x₁)² + (y₂-y₁)²).', '((x₁+x₂)/2, (y₁+y₂)/2).', 'Slope: m = (y₂-y₁)/(x₂-x₁).', 'Parallel lines: same slope; Perpendicular lines: slopes are negative reciprocals.']
           }
         ],
-        correctAnswers: ['Distance: d = √((x₂-x₁)² + (y₂-y₁)²)', 'Slope: m = (y₂-y₁)/(x₂-x₁)'],
-        hint1: 'Think about coordinate geometry',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'Distance: d = √((x₂-x₁)² + (y₂-y₁)²). Slope: m = (y₂-y₁)/(x₂-x₁).'
+        correctAnswers: ['d = √((x₂-x₁)² + (y₂-y₁)²).', '((x₁+x₂)/2, (y₁+y₂)/2).', 'Slope: m = (y₂-y₁)/(x₂-x₁).'],
+        hint1: 'Think about what each concept specifically describes in Coordinate Geometry.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Coordinate Geometry describes a specific idea. Distance: d = √((x₂-x₁)² + (y₂-y₁)²). Midpoint: ((x₁+x₂)/2, (y₁+y₂)/2). Key Insight: Slope: m = (y₂-y₁)/(x₂-x₁).'
       }
     }
   ]

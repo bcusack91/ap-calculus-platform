@@ -71,23 +71,28 @@ Helicase unwinds, primase lays RNA primer, DNA pol III extends 5-to-3, ligase se
       id: 'mcat-1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for DNA Replication:',
-            options: ['Replication is semiconservative: each new DNA molecule has o', 'Helicase unwinds, primase lays RNA primer, DNA pol III exten', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Replication is semiconservative',
+            options: ['Telomerase extends telomeres in germ cells and stem cells — prevents chromosome shortening.', 'each new DNA molecule has one old and one new strand.', 'Helicase unwinds, primase lays RNA primer, DNA pol III extends 5-to-3, ligase seals gaps.', 'Leading strand: continuous synthesis; Lagging strand: Okazaki fragments.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Leading strand: continuous synthesis; Lagging strand: Okazak', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Key Insight',
+            options: ['Telomerase extends telomeres in germ cells and stem cells — prevents chromosome shortening.', 'Helicase unwinds, primase lays RNA primer, DNA pol III extends 5-to-3, ligase seals gaps.', 'Leading strand: continuous synthesis; Lagging strand: Okazaki fragments.', 'each new DNA molecule has one old and one new strand.']
+          },
+          {
+            label: 'MCAT Tip',
+            options: ['Helicase unwinds, primase lays RNA primer, DNA pol III extends 5-to-3, ligase seals gaps.', 'Leading strand: continuous synthesis; Lagging strand: Okazaki fragments.', 'each new DNA molecule has one old and one new strand.', 'Telomerase extends telomeres in germ cells and stem cells — prevents chromosome shortening.']
           }
         ],
-        correctAnswers: ['Replication is semiconservative: each new DNA molecule has o', 'Leading strand: continuous synthesis; Lagging strand: Okazak'],
-        hint1: 'Think about dna replication',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Replication is semiconservative: each new DNA molecule has one old and one new strand. Leading strand: continuous synthesis; Lagging strand: Okazaki fragments.'
+        correctAnswers: ['each new DNA molecule has one old and one new strand.', 'Leading strand: continuous synthesis; Lagging strand: Okazaki fragments.', 'Telomerase extends telomeres in germ cells and stem cells — prevents chromosome shortening.'],
+        hint1: 'Think about what each concept specifically describes in Molecular Biology.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Molecular Biology describes a specific idea. Replication is semiconservative: each new DNA molecule has one old and one new strand. Key Insight: Leading strand: continuous synthesis; Lagging strand: Okazaki fragments. MCAT Tip: Telomerase extends telomeres in germ cells and stem cells — prevents chromosome shortening.'
       }
     }
   ]

@@ -30,31 +30,31 @@ Applications (area, volume, motion) are built on these foundations
       id: 'revie1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of ab foundations for bc?',
+            question: 'Which of the following correctly describes All AB topics are fair game on the BC…?',
             options: [
+              'Limits → derivatives → integrals is the core AB progression',
               'All AB topics are fair game on the BC exam',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
+              'FTC connects differentiation and integration',
+              'Applications (area, volume, motion) are built on these foundations'
             ],
-            correctAnswer: 0,
-            explanation: 'All AB topics are fair game on the BC exam'
+            correctAnswer: 1,
+            explanation: 'Correct — All AB topics are fair game on the BC exam. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of ab foundations for bc, which is accurate?',
+            question: 'Select the statement that correctly describes FTC connects differentiation and…:',
             options: [
-              'FTC connects differentiation and integration',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'All AB topics are fair game on the BC exam',
+              'Limits → derivatives → integrals is the core AB progression',
+              'Applications (area, volume, motion) are built on these foundations',
+              'FTC connects differentiation and integration'
             ],
-            correctAnswer: 0,
-            explanation: 'FTC connects differentiation and integration'
+            correctAnswer: 3,
+            explanation: 'Correct — FTC connects differentiation and integration. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Applications (area, volume, motion) are built on these foundations
       id: 'revie1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to ab foundations for bc?',
+            question: 'Which statement about Applications (area, volume, motion) are… is correct?',
             options: [
               'Applications (area, volume, motion) are built on these foundations',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'All AB topics are fair game on the BC exam',
+              'Limits → derivatives → integrals is the core AB progression',
+              'FTC connects differentiation and integration'
             ],
             correctAnswer: 0,
-            explanation: 'Applications (area, volume, motion) are built on these foundations'
+            explanation: 'Correct — Applications (area, volume, motion) are built on these foundations. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Applications (area, volume, motion) are built on these foundations
       id: 'revie1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'All AB topics are fair game on the BC exam',
-            options: ['All AB topics are fair game on the BC exam', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'All AB topics are fair game on the BC…',
+            options: ['All AB topics are fair game on the BC exam', 'FTC connects differentiation and integration', 'Applications (area, volume, motion) are built on these foundations', 'Limits → derivatives → integrals is the core AB progression']
           },
           {
-            label: 'Limits → derivatives → integrals is the core AB progression',
-            options: ['Limits → derivatives → integrals is the core AB pr', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Limits → derivatives → integrals is the…',
+            options: ['FTC connects differentiation and integration', 'Applications (area, volume, motion) are built on these foundations', 'Limits → derivatives → integrals is the core AB progression', 'All AB topics are fair game on the BC exam']
           },
           {
-            label: 'FTC connects differentiation and integration',
-            options: ['FTC connects differentiation and integration', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'FTC connects differentiation and…',
+            options: ['All AB topics are fair game on the BC exam', 'Applications (area, volume, motion) are built on these foundations', 'FTC connects differentiation and integration', 'Limits → derivatives → integrals is the core AB progression']
           }
         ],
-        correctAnswers: ['All AB topics are fair game on the BC exam', 'Limits → derivatives → integrals is the core AB pr', 'FTC connects differentiation and integration'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding AB Foundations for BC.'
+        correctAnswers: ['All AB topics are fair game on the BC exam', 'Limits → derivatives → integrals is the core AB progression', 'FTC connects differentiation and integration'],
+        hint1: 'Think about what each concept specifically describes in ∮ Review Connections.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in ∮ Review Connections describes a specific idea. All AB topics are fair game on the BC exam. Limits → derivatives → integrals is the core AB progression. FTC connects differentiation and integration.'
       }
     }
   ]

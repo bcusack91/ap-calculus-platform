@@ -30,31 +30,31 @@ These functions are still well-defined — they just can't be written in closed 
       id: 'advan6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of problem-solving workshop?',
-            options: [
-              'Some functions have no elementary antiderivative',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'Some functions have no elementary antiderivative: e^(-x²), sin(x)/x, etc.'
-          },
-          {
-            question: 'In the context of problem-solving workshop, which is accurate?',
+            question: 'What does "Some functions have no elementary antiderivative" refer to in calculus?',
             options: [
               'Use numerical methods for definite integrals',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'These functions are still well-defined — they just can\'t be written in closed form',
+              'e^(-x²), sin(x)/x, etc.',
+              'Use power series to integrate term by term'
             ],
-            correctAnswer: 0,
-            explanation: 'Use numerical methods for definite integrals'
+            correctAnswer: 2,
+            explanation: 'Correct — Some functions have no elementary antiderivative: e^(-x²), sin(x)/x, etc. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Use numerical methods for definite…?',
+            options: [
+              'These functions are still well-defined — they just can\'t be written in closed form',
+              'e^(-x²), sin(x)/x, etc.',
+              'Use numerical methods for definite integrals',
+              'Use power series to integrate term by term'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Use numerical methods for definite integrals. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ These functions are still well-defined — they just can't be written in closed 
       id: 'advan6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to problem-solving workshop?',
+            question: 'Which statement about These functions are still well-defined… is correct?',
             options: [
-              'These functions are still well-defined — they just can\'t be written in closed fo',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'Use power series to integrate term by term',
+              'e^(-x²), sin(x)/x, etc.',
+              'Use numerical methods for definite integrals',
+              'These functions are still well-defined — they just can\'t be written in closed form'
             ],
-            correctAnswer: 0,
-            explanation: 'These functions are still well-defined — they just can\'t be written in closed form'
+            correctAnswer: 3,
+            explanation: 'Correct — These functions are still well-defined — they just can\'t be written in closed form. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ These functions are still well-defined — they just can't be written in closed 
       id: 'advan6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Some functions have no elementary antiderivative',
-            options: ['e^(-x²), sin(x)/x, etc.', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['e^(-x²), sin(x)/x, etc.', 'Use numerical methods for definite integrals', 'Use power series to integrate term by term', 'These functions are still well-defined — they just can\'t be written in closed form']
           },
           {
-            label: 'Use power series to integrate term by term',
-            options: ['Use power series to integrate term by term', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Use power series to integrate term by…',
+            options: ['These functions are still well-defined — they just can\'t be written in closed form', 'Use numerical methods for definite integrals', 'Use power series to integrate term by term', 'e^(-x²), sin(x)/x, etc.']
           },
           {
-            label: 'Use numerical methods for definite integrals',
-            options: ['Use numerical methods for definite integrals', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Use numerical methods for definite…',
+            options: ['e^(-x²), sin(x)/x, etc.', 'Use numerical methods for definite integrals', 'Use power series to integrate term by term', 'These functions are still well-defined — they just can\'t be written in closed form']
           }
         ],
         correctAnswers: ['e^(-x²), sin(x)/x, etc.', 'Use power series to integrate term by term', 'Use numerical methods for definite integrals'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving Workshop.'
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Some functions have no elementary antiderivative: e^(-x²), sin(x)/x, etc. Use power series to integrate term by term. Use numerical methods for definite integrals.'
       }
     }
   ]

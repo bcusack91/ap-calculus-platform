@@ -30,31 +30,31 @@ Stronger acid → weaker conjugate base
       id: 'acids1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of brønsted-lowry acids & bases?',
+            question: 'What does "Brønsted acid" refer to in this topic?',
             options: [
-              'Brønsted acid',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'proton (H⁺) donor',
+              'proton acceptor',
+              'Stronger acid → weaker conjugate base',
+              'Conjugate acid-base pairs differ by one proton'
             ],
             correctAnswer: 0,
-            explanation: 'Brønsted acid: proton (H⁺) donor'
+            explanation: 'Correct — Brønsted acid: proton (H⁺) donor. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of brønsted-lowry acids & bases, which is accurate?',
+            question: 'In the context of ️ Acids Bases Organic, which explains Conjugate acid-base pairs differ by one…?',
             options: [
+              'Stronger acid → weaker conjugate base',
+              'proton acceptor',
               'Conjugate acid-base pairs differ by one proton',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'proton (H⁺) donor'
             ],
-            correctAnswer: 0,
-            explanation: 'Conjugate acid-base pairs differ by one proton'
+            correctAnswer: 2,
+            explanation: 'Correct — Conjugate acid-base pairs differ by one proton. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,24 @@ Stronger acid → weaker conjugate base
       id: 'acids1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Brønsted acid',
-            options: ['proton (H⁺) donor', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['proton acceptor', 'proton (H⁺) donor', 'Stronger acid → weaker conjugate base', 'Conjugate acid-base pairs differ by one proton']
           },
           {
             label: 'Brønsted base',
-            options: ['proton acceptor', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
-          },
-          {
-            label: 'Conjugate acid-base pairs differ by one proton',
-            options: ['Conjugate acid-base pairs differ by one proton', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['proton (H⁺) donor', 'Stronger acid → weaker conjugate base', 'proton acceptor', 'Conjugate acid-base pairs differ by one proton']
           }
         ],
-        correctAnswers: ['proton (H⁺) donor', 'proton acceptor', 'Conjugate acid-base pairs differ by one proton'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Brønsted-Lowry Acids & Bases.'
+        correctAnswers: ['proton (H⁺) donor', 'proton acceptor'],
+        hint1: 'Think about what each concept specifically describes in ️ Acids Bases Organic.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in ️ Acids Bases Organic describes a specific idea. Brønsted acid: proton (H⁺) donor. Brønsted base: proton acceptor.'
       }
     }
   ]

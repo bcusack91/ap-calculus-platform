@@ -71,23 +71,28 @@ Pyruvate dehydrogenase: pyruvate to acetyl-CoA + CO2 + NADH (mitochondrial matri
       id: 'mcat-3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Carbohydrate Metabolism:',
-            options: ['Glycolysis: glucose to 2 pyruvate, net 2 ATP + 2 NADH (cytop', 'Pyruvate dehydrogenase: pyruvate to acetyl-CoA + CO2 + NADH ', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Glycolysis',
+            options: ['pyruvate to acetyl-CoA + CO2 + NADH (mitochondrial matrix).', 'Citric acid cycle (Krebs): acetyl-CoA to 2 CO2 + 3 NADH + 1 FADH2 + 1 GTP per turn.', 'glucose to 2 pyruvate, net 2 ATP + 2 NADH (cytoplasm, anaerobic).', 'Gluconeogenesis: essentially reverse glycolysis with 4 bypass enzymes — occurs in liver.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Citric acid cycle (Krebs): acetyl-CoA to 2 CO2 + 3 NADH + 1 ', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Pyruvate dehydrogenase',
+            options: ['Gluconeogenesis: essentially reverse glycolysis with 4 bypass enzymes — occurs in liver.', 'pyruvate to acetyl-CoA + CO2 + NADH (mitochondrial matrix).', 'glucose to 2 pyruvate, net 2 ATP + 2 NADH (cytoplasm, anaerobic).', 'Citric acid cycle (Krebs): acetyl-CoA to 2 CO2 + 3 NADH + 1 FADH2 + 1 GTP per turn.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['glucose to 2 pyruvate, net 2 ATP + 2 NADH (cytoplasm, anaerobic).', 'Citric acid cycle (Krebs): acetyl-CoA to 2 CO2 + 3 NADH + 1 FADH2 + 1 GTP per turn.', 'Gluconeogenesis: essentially reverse glycolysis with 4 bypass enzymes — occurs in liver.', 'pyruvate to acetyl-CoA + CO2 + NADH (mitochondrial matrix).']
           }
         ],
-        correctAnswers: ['Glycolysis: glucose to 2 pyruvate, net 2 ATP + 2 NADH (cytop', 'Citric acid cycle (Krebs): acetyl-CoA to 2 CO2 + 3 NADH + 1 '],
-        hint1: 'Think about carbohydrate metabolism',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Glycolysis: glucose to 2 pyruvate, net 2 ATP + 2 NADH (cytoplasm, anaerobic). Citric acid cycle (Krebs): acetyl-CoA to 2 CO2 + 3 NADH + 1 FADH2 + 1 GTP per turn.'
+        correctAnswers: ['glucose to 2 pyruvate, net 2 ATP + 2 NADH (cytoplasm, anaerobic).', 'pyruvate to acetyl-CoA + CO2 + NADH (mitochondrial matrix).', 'Citric acid cycle (Krebs): acetyl-CoA to 2 CO2 + 3 NADH + 1 FADH2 + 1 GTP per turn.'],
+        hint1: 'Think about what each concept specifically describes in Carbohydrate Metabolism.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Carbohydrate Metabolism describes a specific idea. Glycolysis: glucose to 2 pyruvate, net 2 ATP + 2 NADH (cytoplasm, anaerobic). Pyruvate dehydrogenase: pyruvate to acetyl-CoA + CO2 + NADH (mitochondrial matrix). Key Insight: Citric acid cycle (Krebs): acetyl-CoA to 2 CO2 + 3 NADH + 1 FADH2 + 1 GTP per turn.'
       }
     }
   ]

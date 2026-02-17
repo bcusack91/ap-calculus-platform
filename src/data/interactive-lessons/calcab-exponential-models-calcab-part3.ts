@@ -30,31 +30,31 @@ Doubling time = ln(2)/k; half-life = ln(2)/|k|
       id: 'expon3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of exponential growth models?',
+            question: 'What does "dy/dt = ky → y = Ce^(kt)" refer to in calculus?',
             options: [
-              'dy/dt = ky → y = Ce^(kt)',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'Doubling time = ln(2)/k; half-life = ln(2)/|k|',
+              'C = initial value y(0)',
+              'k = growth rate (instantaneous rate proportional to current value)',
+              'continuous exponential model'
             ],
-            correctAnswer: 0,
-            explanation: 'dy/dt = ky → y = Ce^(kt): continuous exponential model'
+            correctAnswer: 3,
+            explanation: 'Correct — dy/dt = ky → y = Ce^(kt): continuous exponential model. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of exponential growth models, which is accurate?',
+            question: 'Which of the following is true about C = initial value y(0)?',
             options: [
-              'C = initial value y(0)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'k = growth rate (instantaneous rate proportional to current value)',
+              'Doubling time = ln(2)/k; half-life = ln(2)/|k|',
+              'continuous exponential model',
+              'C = initial value y(0)'
             ],
-            correctAnswer: 0,
-            explanation: 'C = initial value y(0)'
+            correctAnswer: 3,
+            explanation: 'Correct — C = initial value y(0). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Doubling time = ln(2)/k; half-life = ln(2)/|k|
       id: 'expon3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to exponential growth models?',
+            question: 'Which of these accurately represents Doubling time = ln(2)/k; half-life =…?',
             options: [
               'Doubling time = ln(2)/k; half-life = ln(2)/|k|',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'continuous exponential model',
+              'k = growth rate (instantaneous rate proportional to current value)',
+              'C = initial value y(0)'
             ],
             correctAnswer: 0,
-            explanation: 'Doubling time = ln(2)/k; half-life = ln(2)/|k|'
+            explanation: 'Correct — Doubling time = ln(2)/k; half-life = ln(2)/|k|. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Doubling time = ln(2)/k; half-life = ln(2)/|k|
       id: 'expon3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'dy/dt = ky → y = Ce^(kt)',
-            options: ['continuous exponential model', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['C = initial value y(0)', 'Doubling time = ln(2)/k; half-life = ln(2)/|k|', 'k = growth rate (instantaneous rate proportional to current value)', 'continuous exponential model']
           },
           {
-            label: 'k = growth rate (instantaneous rate proportional to current value)',
-            options: ['k = growth rate (instantaneous rate proportional t', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'k = growth rate (instantaneous rate…',
+            options: ['continuous exponential model', 'C = initial value y(0)', 'Doubling time = ln(2)/k; half-life = ln(2)/|k|', 'k = growth rate (instantaneous rate proportional to current value)']
           },
           {
             label: 'C = initial value y(0)',
-            options: ['C = initial value y(0)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['k = growth rate (instantaneous rate proportional to current value)', 'C = initial value y(0)', 'continuous exponential model', 'Doubling time = ln(2)/k; half-life = ln(2)/|k|']
           }
         ],
-        correctAnswers: ['continuous exponential model', 'k = growth rate (instantaneous rate proportional t', 'C = initial value y(0)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Exponential Growth Models.'
+        correctAnswers: ['continuous exponential model', 'k = growth rate (instantaneous rate proportional to current value)', 'C = initial value y(0)'],
+        hint1: 'Think about what each concept specifically describes in Exponential Growth Models.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Exponential Growth Models describes a specific idea. dy/dt = ky → y = Ce^(kt): continuous exponential model. k = growth rate (instantaneous rate proportional to current value). C = initial value y(0).'
       }
     }
   ]

@@ -19,31 +19,31 @@ export const bioDnaReplicationPart2Data = {
       id: 'dna-2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes helicase?',
+            question: 'What does "Helicase" refer to in biology?',
             options: [
-              'unwinds double helix',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'seals gaps between Okazaki fragments',
+              'synthesizes RNA primer',
+              'adds nucleotides 5\'→3\'',
+              'unwinds double helix'
             ],
-            correctAnswer: 0,
-            explanation: 'Helicase: unwinds double helix'
+            correctAnswer: 3,
+            explanation: 'Correct — Helicase: unwinds double helix. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of enzymes of replication, which statement is accurate?',
+            question: 'In the context of Enzymes of Replication, which explains DNA polymerase III?',
             options: [
-              'DNA polymerase III: adds nucleotides 5\'→3\'',
-              'xileh elbuod sdniwnu :esacileH',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'unwinds double helix',
+              'synthesizes RNA primer',
+              'seals gaps between Okazaki fragments',
+              'adds nucleotides 5\'→3\''
             ],
-            correctAnswer: 0,
-            explanation: 'DNA polymerase III: adds nucleotides 5\'→3\''
+            correctAnswer: 3,
+            explanation: 'Correct — DNA polymerase III: adds nucleotides 5\'→3\'. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioDnaReplicationPart2Data = {
       id: 'dna-2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to enzymes of replication?',
+            question: 'Which of these accurately represents Ligase?',
             options: [
-              'Ligase: seals gaps between Okazaki fragments',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'seals gaps between Okazaki fragments',
+              'synthesizes RNA primer',
+              'unwinds double helix',
+              'adds nucleotides 5\'→3\''
             ],
             correctAnswer: 0,
-            explanation: 'Ligase: seals gaps between Okazaki fragments'
+            explanation: 'Correct — Ligase: seals gaps between Okazaki fragments. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioDnaReplicationPart2Data = {
       id: 'dna-2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Helicase is important in enzymes of replication because',
-            options: ['unwinds double helix', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Helicase',
+            options: ['adds nucleotides 5\'→3\'', 'synthesizes RNA primer', 'seals gaps between Okazaki fragments', 'unwinds double helix']
           },
           {
-            label: 'Primase is important in enzymes of replication because',
-            options: ['synthesizes RNA primer', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Primase',
+            options: ['synthesizes RNA primer', 'adds nucleotides 5\'→3\'', 'unwinds double helix', 'seals gaps between Okazaki fragments']
           },
           {
-            label: 'DNA polymerase III is important in enzymes of replication because',
-            options: ['adds nucleotides 5\'→3\'', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'DNA polymerase III',
+            options: ['unwinds double helix', 'synthesizes RNA primer', 'adds nucleotides 5\'→3\'', 'seals gaps between Okazaki fragments']
           }
         ],
         correctAnswers: ['unwinds double helix', 'synthesizes RNA primer', 'adds nucleotides 5\'→3\''],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Enzymes of Replication.'
+        hint1: 'Think about what each concept specifically describes in Enzymes of Replication.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Enzymes of Replication describes a specific idea. Helicase: unwinds double helix. Primase: synthesizes RNA primer. DNA polymerase III: adds nucleotides 5\'→3\'.'
       }
     }
   ]

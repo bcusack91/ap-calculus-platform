@@ -18,20 +18,31 @@ Read the intro and scan figures BEFORE reading the questions.
       id: 'act-s7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes spend 5-6 minutes per passage (7 passages total, 40 questions, 35 minutes)?',
+            question: 'Which of the following correctly describes Spend 5-6 minutes per passage (7…?',
             options: [
-              'Spend 5-6 minutes per passage (7 passages total, 40 questions, 35 minutes) is a key concept for ACT Science',
-              'Read the intro and scan figures BEFORE reading the questions',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'You don\'t need outside science knowledge — everything is in the passage.',
+              'Read the intro and scan figures BEFORE reading the questions.',
+              'Spend 5-6 minutes per passage (7 passages total, 40 questions, 35 minutes).',
+              'Don\'t get bogged down in technical details — focus on trends and relationships.'
             ],
-            correctAnswer: 0,
-            explanation: 'Spend 5-6 minutes per passage (7 passages total, 40 questions, 35 minutes)'
+            correctAnswer: 2,
+            explanation: 'Correct — Spend 5-6 minutes per passage (7 passages total, 40 questions, 35 minutes). The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Key Insight?',
+            options: [
+              'Spend 5-6 minutes per passage (7 passages total, 40 questions, 35 minutes).',
+              'You don\'t need outside science knowledge — everything is in the passage.',
+              'Don\'t get bogged down in technical details — focus on trends and relationships.',
+              'Read the intro and scan figures BEFORE reading the questions.'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Key Insight: Don\'t get bogged down in technical details — focus on trends and relationships. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Read the intro and scan figures BEFORE reading the questions.
       id: 'act-s7-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for review & applications?',
+            question: 'Regarding Review & Applications, which correctly describes ACT Tip?',
             options: [
-              'Don\'t get bogged down in technical details — focus on trends and relationships',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Read the intro and scan figures BEFORE reading the questions.',
+              'You don\'t need outside science knowledge — everything is in the passage.',
+              'Spend 5-6 minutes per passage (7 passages total, 40 questions, 35 minutes).',
+              'Don\'t get bogged down in technical details — focus on trends and relationships.'
             ],
-            correctAnswer: 0,
-            explanation: 'Don\'t get bogged down in technical details — focus on trends and relationships'
+            correctAnswer: 1,
+            explanation: 'Correct — ACT Tip: You don\'t need outside science knowledge — everything is in the passage. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ Read the intro and scan figures BEFORE reading the questions.
       id: 'act-s7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Review & Applications:',
-            options: ['Spend 5-6 minutes per passage (7 passages total, 4', 'Read the intro and scan figures BEFORE reading the', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['Spend 5-6 minutes per passage (7 passages total, 40 questions, 35 minutes).', 'Read the intro and scan figures BEFORE reading the questions.', 'Don\'t get bogged down in technical details — focus on trends and relationships.', 'You don\'t need outside science knowledge — everything is in the passage.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Don\'t get bogged down in technical details — focus', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'ACT Tip',
+            options: ['You don\'t need outside science knowledge — everything is in the passage.', 'Spend 5-6 minutes per passage (7 passages total, 40 questions, 35 minutes).', 'Don\'t get bogged down in technical details — focus on trends and relationships.', 'Read the intro and scan figures BEFORE reading the questions.']
           }
         ],
-        correctAnswers: ['Spend 5-6 minutes per passage (7 passages total, 4', 'Don\'t get bogged down in technical details — focus'],
-        hint1: 'Think about review & applications',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Spend 5-6 minutes per passage (7 passages total, 40 questions, 35 minutes). Don\'t get bogged down in technical details — focus on trends and relationships.'
+        correctAnswers: ['Don\'t get bogged down in technical details — focus on trends and relationships.', 'You don\'t need outside science knowledge — everything is in the passage.'],
+        hint1: 'Think about what each concept specifically describes in Review & Applications.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Review & Applications describes a specific idea. Key Insight: Don\'t get bogged down in technical details — focus on trends and relationships. ACT Tip: You don\'t need outside science knowledge — everything is in the passage.'
       }
     }
   ]

@@ -30,31 +30,31 @@ acidity trends and predictions
       id: 'acids7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of synthesis & review?',
+            question: 'Which of the following correctly describes Acid-base chemistry is foundational for…?',
             options: [
               'Acid-base chemistry is foundational for mechanisms',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'pKa determines proton transfer direction',
+              'Lewis acid/base concept is broader and essential',
+              'acidity trends and predictions'
             ],
             correctAnswer: 0,
-            explanation: 'Acid-base chemistry is foundational for mechanisms'
+            explanation: 'Correct — Acid-base chemistry is foundational for mechanisms. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of synthesis & review, which is accurate?',
+            question: 'Which of the following is true about Lewis acid/base concept is broader and…?',
             options: [
+              'acidity trends and predictions',
               'Lewis acid/base concept is broader and essential',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Acid-base chemistry is foundational for mechanisms',
+              'pKa determines proton transfer direction'
             ],
-            correctAnswer: 0,
-            explanation: 'Lewis acid/base concept is broader and essential'
+            correctAnswer: 1,
+            explanation: 'Correct — Lewis acid/base concept is broader and essential. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ acidity trends and predictions
       id: 'acids7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Acid-base chemistry is foundational for mechanisms',
-            options: ['Acid-base chemistry is foundational for mechanisms', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Acid-base chemistry is foundational for…',
+            options: ['pKa determines proton transfer direction', 'Lewis acid/base concept is broader and essential', 'acidity trends and predictions', 'Acid-base chemistry is foundational for mechanisms']
           },
           {
             label: 'pKa determines proton transfer direction',
-            options: ['pKa determines proton transfer direction', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['acidity trends and predictions', 'Lewis acid/base concept is broader and essential', 'pKa determines proton transfer direction', 'Acid-base chemistry is foundational for mechanisms']
           },
           {
-            label: 'Lewis acid/base concept is broader and essential',
-            options: ['Lewis acid/base concept is broader and essential', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Lewis acid/base concept is broader and…',
+            options: ['acidity trends and predictions', 'pKa determines proton transfer direction', 'Lewis acid/base concept is broader and essential', 'Acid-base chemistry is foundational for mechanisms']
           }
         ],
         correctAnswers: ['Acid-base chemistry is foundational for mechanisms', 'pKa determines proton transfer direction', 'Lewis acid/base concept is broader and essential'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Synthesis & Review.'
+        hint1: 'Think about what each concept specifically describes in Synthesis & Review.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Synthesis & Review describes a specific idea. Acid-base chemistry is foundational for mechanisms. pKa determines proton transfer direction. Lewis acid/base concept is broader and essential.'
       }
     }
   ]

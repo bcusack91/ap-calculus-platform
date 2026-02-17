@@ -30,31 +30,31 @@ twin, adoption, family studies
       id: 'genet2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of behavioral genetics?',
+            question: 'What does "Heritability" refer to in psychology?',
             options: [
-              'Heritability',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'inborn behavioral style',
+              '~50-80%',
+              'proportion of variation due to genetics',
+              'twin, adoption, family studies'
             ],
-            correctAnswer: 0,
-            explanation: 'Heritability: proportion of variation due to genetics'
+            correctAnswer: 2,
+            explanation: 'Correct — Heritability: proportion of variation due to genetics. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of behavioral genetics, which is accurate?',
+            question: 'Select the statement that correctly describes Behavioral genetics methods:',
             options: [
               'twin, adoption, family studies',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              '~50-80%',
+              'inborn behavioral style',
+              'proportion of variation due to genetics'
             ],
             correctAnswer: 0,
-            explanation: 'Behavioral genetics methods: twin, adoption, family studies'
+            explanation: 'Correct — Behavioral genetics methods: twin, adoption, family studies. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ twin, adoption, family studies
       id: 'genet2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Heritability',
-            options: ['proportion of variation due to genetics', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['proportion of variation due to genetics', '~50-80%', 'inborn behavioral style', 'twin, adoption, family studies']
           },
           {
             label: 'Temperament',
-            options: ['inborn behavioral style', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['twin, adoption, family studies', 'proportion of variation due to genetics', '~50-80%', 'inborn behavioral style']
           },
           {
             label: 'Behavioral genetics methods',
-            options: ['twin, adoption, family studies', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['twin, adoption, family studies', 'proportion of variation due to genetics', 'inborn behavioral style', '~50-80%']
           }
         ],
         correctAnswers: ['proportion of variation due to genetics', 'inborn behavioral style', 'twin, adoption, family studies'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Behavioral Genetics.'
+        hint1: 'Think about what each concept specifically describes in Behavioral Genetics.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Behavioral Genetics describes a specific idea. Heritability: proportion of variation due to genetics. Temperament: inborn behavioral style. Behavioral genetics methods: twin, adoption, family studies.'
       }
     }
   ]

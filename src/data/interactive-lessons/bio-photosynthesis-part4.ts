@@ -19,31 +19,31 @@ export const bioPhotosynthesisPart4Data = {
       id: 'phot4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes c3 plants?',
+            question: 'What does "C3 plants" refer to in biology?',
             options: [
+              'C4 and CAM adaptations reduce photorespiration',
               'Calvin cycle directly (most plants)',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'fix CO₂ in mesophyll, Calvin cycle in bundle sheath',
+              'fix CO₂ at night, Calvin cycle by day'
             ],
-            correctAnswer: 0,
-            explanation: 'C3 plants: Calvin cycle directly (most plants)'
+            correctAnswer: 1,
+            explanation: 'Correct — C3 plants: Calvin cycle directly (most plants). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of c4 & cam plants, which statement is accurate?',
+            question: 'Select the statement that correctly describes CAM plants:',
             options: [
-              'CAM plants: fix CO₂ at night, Calvin cycle by day',
-              ')stnalp tsom( yltcerid elcyc nivlaC :stnalp 3C',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'fix CO₂ in mesophyll, Calvin cycle in bundle sheath',
+              'fix CO₂ at night, Calvin cycle by day',
+              'Calvin cycle directly (most plants)',
+              'C4 and CAM adaptations reduce photorespiration'
             ],
-            correctAnswer: 0,
-            explanation: 'CAM plants: fix CO₂ at night, Calvin cycle by day'
+            correctAnswer: 1,
+            explanation: 'Correct — CAM plants: fix CO₂ at night, Calvin cycle by day. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioPhotosynthesisPart4Data = {
       id: 'phot4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to c4 & cam plants?',
+            question: 'Regarding C4 & CAM Plants, which correctly describes C4 and CAM adaptations reduce…?',
             options: [
               'C4 and CAM adaptations reduce photorespiration',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'fix CO₂ at night, Calvin cycle by day',
+              'Calvin cycle directly (most plants)',
+              'fix CO₂ in mesophyll, Calvin cycle in bundle sheath'
             ],
             correctAnswer: 0,
-            explanation: 'C4 and CAM adaptations reduce photorespiration'
+            explanation: 'Correct — C4 and CAM adaptations reduce photorespiration. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioPhotosynthesisPart4Data = {
       id: 'phot4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'C3 plants is important in c4 & cam plants because',
-            options: ['Calvin cycle directly (most plants)', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'C3 plants',
+            options: ['fix CO₂ at night, Calvin cycle by day', 'C4 and CAM adaptations reduce photorespiration', 'Calvin cycle directly (most plants)', 'fix CO₂ in mesophyll, Calvin cycle in bundle sheath']
           },
           {
-            label: 'C4 plants is important in c4 & cam plants because',
-            options: ['fix CO₂ in mesophyll, Calvin cycle in bundle sheat', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'C4 plants',
+            options: ['fix CO₂ in mesophyll, Calvin cycle in bundle sheath', 'fix CO₂ at night, Calvin cycle by day', 'C4 and CAM adaptations reduce photorespiration', 'Calvin cycle directly (most plants)']
           },
           {
-            label: 'CAM plants is important in c4 & cam plants because',
-            options: ['fix CO₂ at night, Calvin cycle by day', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'CAM plants',
+            options: ['Calvin cycle directly (most plants)', 'C4 and CAM adaptations reduce photorespiration', 'fix CO₂ at night, Calvin cycle by day', 'fix CO₂ in mesophyll, Calvin cycle in bundle sheath']
           }
         ],
-        correctAnswers: ['Calvin cycle directly (most plants)', 'fix CO₂ in mesophyll, Calvin cycle in bundle sheat', 'fix CO₂ at night, Calvin cycle by day'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding C4 & CAM Plants.'
+        correctAnswers: ['Calvin cycle directly (most plants)', 'fix CO₂ in mesophyll, Calvin cycle in bundle sheath', 'fix CO₂ at night, Calvin cycle by day'],
+        hint1: 'Think about what each concept specifically describes in C4 & CAM Plants.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in C4 & CAM Plants describes a specific idea. C3 plants: Calvin cycle directly (most plants). C4 plants: fix CO₂ in mesophyll, Calvin cycle in bundle sheath. CAM plants: fix CO₂ at night, Calvin cycle by day.'
       }
     }
   ]

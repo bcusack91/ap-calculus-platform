@@ -71,23 +71,28 @@ Look for transition words: however, moreover, nevertheless, conversely — they 
       id: 'mcat-2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Active Reading Techniques:',
-            options: ['Annotate mentally: identify the thesis, supporting arguments', 'Look for transition words: however, moreover, nevertheless, ', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Annotate mentally',
+            options: ['Note the authors tone: is it critical, supportive, neutral, ironic, or ambivalent?.', 'however, moreover, nevertheless, conversely — they signal shifts.', 'identify the thesis, supporting arguments, and counterarguments.', 'Paraphrase each paragraph in one sentence to ensure comprehension.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Note the authors tone: is it critical, supportive, neutral, ', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Look for transition words',
+            options: ['Note the authors tone: is it critical, supportive, neutral, ironic, or ambivalent?.', 'however, moreover, nevertheless, conversely — they signal shifts.', 'Paraphrase each paragraph in one sentence to ensure comprehension.', 'identify the thesis, supporting arguments, and counterarguments.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['however, moreover, nevertheless, conversely — they signal shifts.', 'identify the thesis, supporting arguments, and counterarguments.', 'Note the authors tone: is it critical, supportive, neutral, ironic, or ambivalent?.', 'Paraphrase each paragraph in one sentence to ensure comprehension.']
           }
         ],
-        correctAnswers: ['Annotate mentally: identify the thesis, supporting arguments', 'Note the authors tone: is it critical, supportive, neutral, '],
-        hint1: 'Think about active reading techniques',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Annotate mentally: identify the thesis, supporting arguments, and counterarguments. Note the authors tone: is it critical, supportive, neutral, ironic, or ambivalent?.'
+        correctAnswers: ['identify the thesis, supporting arguments, and counterarguments.', 'however, moreover, nevertheless, conversely — they signal shifts.', 'Note the authors tone: is it critical, supportive, neutral, ironic, or ambivalent?.'],
+        hint1: 'Think about what each concept specifically describes in Active Reading Techniques.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Active Reading Techniques describes a specific idea. Annotate mentally: identify the thesis, supporting arguments, and counterarguments. Look for transition words: however, moreover, nevertheless, conversely — they signal shifts. Key Insight: Note the authors tone: is it critical, supportive, neutral, ironic, or ambivalent?.'
       }
     }
   ]

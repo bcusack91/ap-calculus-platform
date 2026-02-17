@@ -30,31 +30,31 @@ Shifts do not change the shape, only the position
       id: 'trans1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of vertical & horizontal shifts?',
+            question: 'What does "Vertical shift" refer to in precalculus?',
             options: [
-              'Vertical shift',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'Shifts do not change the shape, only the position',
+              'horizontal shifts are opposite to the sign inside',
+              'f(x - h) moves the graph right (h > 0) or left (h < 0)',
+              'f(x) + k moves the graph up (k > 0) or down (k < 0)'
             ],
-            correctAnswer: 0,
-            explanation: 'Vertical shift: f(x) + k moves the graph up (k > 0) or down (k < 0)'
+            correctAnswer: 3,
+            explanation: 'Correct — Vertical shift: f(x) + k moves the graph up (k > 0) or down (k < 0). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of vertical & horizontal shifts, which is accurate?',
+            question: 'In the context of Transformations, which explains Note?',
             options: [
               'horizontal shifts are opposite to the sign inside',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Shifts do not change the shape, only the position',
+              'f(x - h) moves the graph right (h > 0) or left (h < 0)',
+              'f(x) + k moves the graph up (k > 0) or down (k < 0)'
             ],
             correctAnswer: 0,
-            explanation: 'Note: horizontal shifts are opposite to the sign inside'
+            explanation: 'Correct — Note: horizontal shifts are opposite to the sign inside. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Shifts do not change the shape, only the position
       id: 'trans1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Vertical shift',
-            options: ['f(x) + k moves the graph up (k > 0) or down (k < 0', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['f(x - h) moves the graph right (h > 0) or left (h < 0)', 'horizontal shifts are opposite to the sign inside', 'Shifts do not change the shape, only the position', 'f(x) + k moves the graph up (k > 0) or down (k < 0)']
           },
           {
             label: 'Horizontal shift',
-            options: ['f(x - h) moves the graph right (h > 0) or left (h ', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['f(x) + k moves the graph up (k > 0) or down (k < 0)', 'Shifts do not change the shape, only the position', 'horizontal shifts are opposite to the sign inside', 'f(x - h) moves the graph right (h > 0) or left (h < 0)']
           },
           {
             label: 'Note',
-            options: ['horizontal shifts are opposite to the sign inside', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['horizontal shifts are opposite to the sign inside', 'Shifts do not change the shape, only the position', 'f(x) + k moves the graph up (k > 0) or down (k < 0)', 'f(x - h) moves the graph right (h > 0) or left (h < 0)']
           }
         ],
-        correctAnswers: ['f(x) + k moves the graph up (k > 0) or down (k < 0', 'f(x - h) moves the graph right (h > 0) or left (h ', 'horizontal shifts are opposite to the sign inside'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Vertical & Horizontal Shifts.'
+        correctAnswers: ['f(x) + k moves the graph up (k > 0) or down (k < 0)', 'f(x - h) moves the graph right (h > 0) or left (h < 0)', 'horizontal shifts are opposite to the sign inside'],
+        hint1: 'Think about what each concept specifically describes in Transformations.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Transformations describes a specific idea. Vertical shift: f(x) + k moves the graph up (k > 0) or down (k < 0). Horizontal shift: f(x - h) moves the graph right (h > 0) or left (h < 0). Note: horizontal shifts are opposite to the sign inside.'
       }
     }
   ]

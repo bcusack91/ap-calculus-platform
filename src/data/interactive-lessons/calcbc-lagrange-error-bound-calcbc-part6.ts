@@ -30,31 +30,31 @@ Use Lagrange bound when the series doesn't alternate or you need a general bound
       id: 'lagra6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of problem-solving workshop?',
+            question: 'Which statement accurately explains For alternating Taylor series?',
             options: [
-              'For alternating Taylor series',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
+              'use alternating series error bound |S-Sₙ| ≤ |aₙ₊₁|',
+              'Use alternating series bound when the series alternates in sign',
+              'Use Lagrange bound when the series doesn\'t alternate or you need a general bound',
+              'This is often tighter (better) than the Lagrange bound'
             ],
             correctAnswer: 0,
-            explanation: 'For alternating Taylor series: use alternating series error bound |S-Sₙ| ≤ |aₙ₊₁|'
+            explanation: 'Correct — For alternating Taylor series: use alternating series error bound |S-Sₙ| ≤ |aₙ₊₁|. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of problem-solving workshop, which is accurate?',
+            question: 'In the context of Problem-Solving Workshop, which explains Use alternating series bound when the…?',
             options: [
+              'This is often tighter (better) than the Lagrange bound',
               'Use alternating series bound when the series alternates in sign',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Use Lagrange bound when the series doesn\'t alternate or you need a general bound',
+              'use alternating series error bound |S-Sₙ| ≤ |aₙ₊₁|'
             ],
-            correctAnswer: 0,
-            explanation: 'Use alternating series bound when the series alternates in sign'
+            correctAnswer: 1,
+            explanation: 'Correct — Use alternating series bound when the series alternates in sign. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Use Lagrange bound when the series doesn't alternate or you need a general bound
       id: 'lagra6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to problem-solving workshop?',
+            question: 'Regarding Problem-Solving Workshop, which correctly describes Use Lagrange bound when the series…?',
             options: [
+              'use alternating series error bound |S-Sₙ| ≤ |aₙ₊₁|',
+              'Use alternating series bound when the series alternates in sign',
               'Use Lagrange bound when the series doesn\'t alternate or you need a general bound',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'This is often tighter (better) than the Lagrange bound'
             ],
-            correctAnswer: 0,
-            explanation: 'Use Lagrange bound when the series doesn\'t alternate or you need a general bound'
+            correctAnswer: 2,
+            explanation: 'Correct — Use Lagrange bound when the series doesn\'t alternate or you need a general bound. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Use Lagrange bound when the series doesn't alternate or you need a general bound
       id: 'lagra6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'For alternating Taylor series',
-            options: ['use alternating series error bound |S-Sₙ| ≤ |aₙ₊₁|', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['use alternating series error bound |S-Sₙ| ≤ |aₙ₊₁|', 'Use alternating series bound when the series alternates in sign', 'Use Lagrange bound when the series doesn\'t alternate or you need a general bound', 'This is often tighter (better) than the Lagrange bound']
           },
           {
-            label: 'This is often tighter (better) than the Lagrange bound',
-            options: ['This is often tighter (better) than the Lagrange b', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'This is often tighter (better) than the…',
+            options: ['Use Lagrange bound when the series doesn\'t alternate or you need a general bound', 'Use alternating series bound when the series alternates in sign', 'This is often tighter (better) than the Lagrange bound', 'use alternating series error bound |S-Sₙ| ≤ |aₙ₊₁|']
           },
           {
-            label: 'Use alternating series bound when the series alternates in sign',
-            options: ['Use alternating series bound when the series alter', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Use alternating series bound when the…',
+            options: ['This is often tighter (better) than the Lagrange bound', 'Use alternating series bound when the series alternates in sign', 'Use Lagrange bound when the series doesn\'t alternate or you need a general bound', 'use alternating series error bound |S-Sₙ| ≤ |aₙ₊₁|']
           }
         ],
-        correctAnswers: ['use alternating series error bound |S-Sₙ| ≤ |aₙ₊₁|', 'This is often tighter (better) than the Lagrange b', 'Use alternating series bound when the series alter'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving Workshop.'
+        correctAnswers: ['use alternating series error bound |S-Sₙ| ≤ |aₙ₊₁|', 'This is often tighter (better) than the Lagrange bound', 'Use alternating series bound when the series alternates in sign'],
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. For alternating Taylor series: use alternating series error bound |S-Sₙ| ≤ |aₙ₊₁|. This is often tighter (better) than the Lagrange bound. Use alternating series bound when the series alternates in sign.'
       }
     }
   ]

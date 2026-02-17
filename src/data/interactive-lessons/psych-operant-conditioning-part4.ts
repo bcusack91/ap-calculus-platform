@@ -30,31 +30,31 @@ Fixed-interval (FI) and Variable-interval (VI) schedules
       id: 'opera4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of schedules of reinforcement?',
+            question: 'Which of the following correctly describes Continuous reinforcement?',
             options: [
-              'Continuous reinforcement',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'reinforce after set number of responses',
+              'reinforce after unpredictable number (gambling, most resistant to extinction)',
+              'Fixed-interval (FI) and Variable-interval (VI) schedules',
+              'reinforce every response'
             ],
-            correctAnswer: 0,
-            explanation: 'Continuous reinforcement: reinforce every response'
+            correctAnswer: 3,
+            explanation: 'Correct — Continuous reinforcement: reinforce every response. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of schedules of reinforcement, which is accurate?',
+            question: 'In the context of Schedules of Reinforcement, which explains Variable-ratio (VR)?',
             options: [
+              'Fixed-interval (FI) and Variable-interval (VI) schedules',
+              'reinforce every response',
               'reinforce after unpredictable number (gambling, most resistant to extinction)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'reinforce after set number of responses'
             ],
-            correctAnswer: 0,
-            explanation: 'Variable-ratio (VR): reinforce after unpredictable number (gambling, most resistant to extinction)'
+            correctAnswer: 2,
+            explanation: 'Correct — Variable-ratio (VR): reinforce after unpredictable number (gambling, most resistant to extinction). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Fixed-interval (FI) and Variable-interval (VI) schedules
       id: 'opera4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Continuous reinforcement',
-            options: ['reinforce every response', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['reinforce after set number of responses', 'reinforce after unpredictable number (gambling, most resistant to extinction)', 'reinforce every response', 'Fixed-interval (FI) and Variable-interval (VI) schedules']
           },
           {
             label: 'Fixed-ratio (FR)',
-            options: ['reinforce after set number of responses', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['reinforce after set number of responses', 'Fixed-interval (FI) and Variable-interval (VI) schedules', 'reinforce every response', 'reinforce after unpredictable number (gambling, most resistant to extinction)']
           },
           {
             label: 'Variable-ratio (VR)',
-            options: ['reinforce after unpredictable number (gambling, mo', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['reinforce after set number of responses', 'reinforce every response', 'reinforce after unpredictable number (gambling, most resistant to extinction)', 'Fixed-interval (FI) and Variable-interval (VI) schedules']
           }
         ],
-        correctAnswers: ['reinforce every response', 'reinforce after set number of responses', 'reinforce after unpredictable number (gambling, mo'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Schedules of Reinforcement.'
+        correctAnswers: ['reinforce every response', 'reinforce after set number of responses', 'reinforce after unpredictable number (gambling, most resistant to extinction)'],
+        hint1: 'Think about what each concept specifically describes in Schedules of Reinforcement.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Schedules of Reinforcement describes a specific idea. Continuous reinforcement: reinforce every response. Fixed-ratio (FR): reinforce after set number of responses. Variable-ratio (VR): reinforce after unpredictable number (gambling, most resistant to extinction).'
       }
     }
   ]

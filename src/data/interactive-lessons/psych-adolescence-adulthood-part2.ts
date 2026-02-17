@@ -30,31 +30,31 @@ Peer influence increases during adolescence
       id: 'adole2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of identity formation?',
-            options: [
-              'Erikson',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
-            ],
-            correctAnswer: 0,
-            explanation: 'Erikson: identity vs role confusion'
-          },
-          {
-            question: 'In the context of identity formation, which is accurate?',
+            question: 'Which of the following correctly describes Erikson?',
             options: [
               'race, gender, culture, religion',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Peer influence increases during adolescence',
+              'identity vs role confusion',
+              'identity statuses (achievement, moratorium, foreclosure, diffusion)'
             ],
-            correctAnswer: 0,
-            explanation: 'Social identity: race, gender, culture, religion'
+            correctAnswer: 2,
+            explanation: 'Correct — Erikson: identity vs role confusion. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Social identity:',
+            options: [
+              'identity statuses (achievement, moratorium, foreclosure, diffusion)',
+              'Peer influence increases during adolescence',
+              'race, gender, culture, religion',
+              'identity vs role confusion'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Social identity: race, gender, culture, religion. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Peer influence increases during adolescence
       id: 'adole2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Erikson',
-            options: ['identity vs role confusion', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['identity statuses (achievement, moratorium, foreclosure, diffusion)', 'identity vs role confusion', 'Peer influence increases during adolescence', 'race, gender, culture, religion']
           },
           {
             label: 'Marcia',
-            options: ['identity statuses (achievement, moratorium, forecl', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['identity vs role confusion', 'race, gender, culture, religion', 'identity statuses (achievement, moratorium, foreclosure, diffusion)', 'Peer influence increases during adolescence']
           },
           {
             label: 'Social identity',
-            options: ['race, gender, culture, religion', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['identity vs role confusion', 'race, gender, culture, religion', 'Peer influence increases during adolescence', 'identity statuses (achievement, moratorium, foreclosure, diffusion)']
           }
         ],
-        correctAnswers: ['identity vs role confusion', 'identity statuses (achievement, moratorium, forecl', 'race, gender, culture, religion'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Identity Formation.'
+        correctAnswers: ['identity vs role confusion', 'identity statuses (achievement, moratorium, foreclosure, diffusion)', 'race, gender, culture, religion'],
+        hint1: 'Think about what each concept specifically describes in Identity Formation.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Identity Formation describes a specific idea. Erikson: identity vs role confusion. Marcia: identity statuses (achievement, moratorium, foreclosure, diffusion). Social identity: race, gender, culture, religion.'
       }
     }
   ]

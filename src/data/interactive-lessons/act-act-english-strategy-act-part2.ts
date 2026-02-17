@@ -18,20 +18,31 @@ Rhetoric: best answer based on effectiveness, purpose, or style.
       id: 'act-e2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes grammar?',
+            question: 'Which statement accurately explains Grammar?',
             options: [
-              'Grammar is a key concept for ACT English/Reading',
-              'Rhetoric: best answer based on effectiveness, purpose, or style',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'best answer based on effectiveness, purpose, or style.',
+              'For grammar: apply the rule; for rhetoric: consider the goal.',
+              'Grammar = ~51% of questions; Rhetoric = ~49%.',
+              'one objectively correct answer based on rules.'
             ],
-            correctAnswer: 0,
-            explanation: 'Grammar: one objectively correct answer based on rules'
+            correctAnswer: 3,
+            explanation: 'Correct — Grammar: one objectively correct answer based on rules. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Key Insight:',
+            options: [
+              'one objectively correct answer based on rules.',
+              'For grammar: apply the rule; for rhetoric: consider the goal.',
+              'Grammar = ~51% of questions; Rhetoric = ~49%.',
+              'best answer based on effectiveness, purpose, or style.'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Key Insight: Grammar = ~51% of questions; Rhetoric = ~49%. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Rhetoric: best answer based on effectiveness, purpose, or style.
       id: 'act-e2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for grammar vs. rhetoric?',
+            question: 'Regarding Grammar vs. Rhetoric, which correctly describes ACT Tip?',
             options: [
-              'Grammar = ~51% of questions; Rhetoric = ~49%',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'For grammar: apply the rule; for rhetoric: consider the goal.',
+              'Grammar = ~51% of questions; Rhetoric = ~49%.',
+              'one objectively correct answer based on rules.',
+              'best answer based on effectiveness, purpose, or style.'
             ],
             correctAnswer: 0,
-            explanation: 'Grammar = ~51% of questions; Rhetoric = ~49%'
+            explanation: 'Correct — ACT Tip: For grammar: apply the rule; for rhetoric: consider the goal. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Rhetoric: best answer based on effectiveness, purpose, or style.
       id: 'act-e2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Grammar vs. Rhetoric:',
-            options: ['Grammar: one objectively correct answer based on r', 'Rhetoric: best answer based on effectiveness, purp', 'Not applicable', 'None of these']
+            label: 'Grammar',
+            options: ['one objectively correct answer based on rules.', 'For grammar: apply the rule; for rhetoric: consider the goal.', 'Grammar = ~51% of questions; Rhetoric = ~49%.', 'best answer based on effectiveness, purpose, or style.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Grammar = ~51% of questions; Rhetoric = ~49%', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Rhetoric',
+            options: ['For grammar: apply the rule; for rhetoric: consider the goal.', 'Grammar = ~51% of questions; Rhetoric = ~49%.', 'one objectively correct answer based on rules.', 'best answer based on effectiveness, purpose, or style.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['Grammar = ~51% of questions; Rhetoric = ~49%.', 'one objectively correct answer based on rules.', 'For grammar: apply the rule; for rhetoric: consider the goal.', 'best answer based on effectiveness, purpose, or style.']
           }
         ],
-        correctAnswers: ['Grammar: one objectively correct answer based on r', 'Grammar = ~51% of questions; Rhetoric = ~49%'],
-        hint1: 'Think about grammar vs. rhetoric',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Grammar: one objectively correct answer based on rules. Grammar = ~51% of questions; Rhetoric = ~49%.'
+        correctAnswers: ['one objectively correct answer based on rules.', 'best answer based on effectiveness, purpose, or style.', 'Grammar = ~51% of questions; Rhetoric = ~49%.'],
+        hint1: 'Think about what each concept specifically describes in Grammar vs. Rhetoric.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Grammar vs. Rhetoric describes a specific idea. Grammar: one objectively correct answer based on rules. Rhetoric: best answer based on effectiveness, purpose, or style. Key Insight: Grammar = ~51% of questions; Rhetoric = ~49%.'
       }
     }
   ]

@@ -30,31 +30,31 @@ Reduce to y = f(x) formula when x = t, y = f(t)
       id: 'arc-l2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of arc length for parametric curves?',
-            options: [
-              'Parametric arc length',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'Parametric arc length: L = ∫ₐᵇ √[(dx/dt)² + (dy/dt)²] dt'
-          },
-          {
-            question: 'In the context of arc length for parametric curves, which is accurate?',
+            question: 'What does "Parametric arc length" refer to in calculus?',
             options: [
               'Same formula as total distance traveled by a particle',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'This is the integral of the speed |v⃗(t)|',
+              'Reduce to y = f(x) formula when x = t, y = f(t)',
+              'L = ∫ₐᵇ √[(dx/dt)² + (dy/dt)²] dt'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Parametric arc length: L = ∫ₐᵇ √[(dx/dt)² + (dy/dt)²] dt. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Same formula as total distance traveled…:',
+            options: [
+              'Same formula as total distance traveled by a particle',
+              'Reduce to y = f(x) formula when x = t, y = f(t)',
+              'L = ∫ₐᵇ √[(dx/dt)² + (dy/dt)²] dt',
+              'This is the integral of the speed |v⃗(t)|'
             ],
             correctAnswer: 0,
-            explanation: 'Same formula as total distance traveled by a particle'
+            explanation: 'Correct — Same formula as total distance traveled by a particle. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Reduce to y = f(x) formula when x = t, y = f(t)
       id: 'arc-l2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to arc length for parametric curves?',
+            question: 'Regarding Arc Length for Parametric Curves, which correctly describes Reduce to y = f(x) formula when x = t,…?',
             options: [
-              'Reduce to y = f(x) formula when x = t, y = f(t)',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'L = ∫ₐᵇ √[(dx/dt)² + (dy/dt)²] dt',
+              'This is the integral of the speed |v⃗(t)|',
+              'Same formula as total distance traveled by a particle',
+              'Reduce to y = f(x) formula when x = t, y = f(t)'
             ],
-            correctAnswer: 0,
-            explanation: 'Reduce to y = f(x) formula when x = t, y = f(t)'
+            correctAnswer: 3,
+            explanation: 'Correct — Reduce to y = f(x) formula when x = t, y = f(t). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Reduce to y = f(x) formula when x = t, y = f(t)
       id: 'arc-l2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Parametric arc length',
-            options: ['L = ∫ₐᵇ √[(dx/dt)² + (dy/dt)²] dt', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Reduce to y = f(x) formula when x = t, y = f(t)', 'Same formula as total distance traveled by a particle', 'L = ∫ₐᵇ √[(dx/dt)² + (dy/dt)²] dt', 'This is the integral of the speed |v⃗(t)|']
           },
           {
-            label: 'This is the integral of the speed |v⃗(t)|',
-            options: ['This is the integral of the speed |v⃗(t)|', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'This is the integral of the speed…',
+            options: ['This is the integral of the speed |v⃗(t)|', 'Same formula as total distance traveled by a particle', 'L = ∫ₐᵇ √[(dx/dt)² + (dy/dt)²] dt', 'Reduce to y = f(x) formula when x = t, y = f(t)']
           },
           {
-            label: 'Same formula as total distance traveled by a particle',
-            options: ['Same formula as total distance traveled by a parti', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Same formula as total distance traveled…',
+            options: ['Same formula as total distance traveled by a particle', 'This is the integral of the speed |v⃗(t)|', 'Reduce to y = f(x) formula when x = t, y = f(t)', 'L = ∫ₐᵇ √[(dx/dt)² + (dy/dt)²] dt']
           }
         ],
-        correctAnswers: ['L = ∫ₐᵇ √[(dx/dt)² + (dy/dt)²] dt', 'This is the integral of the speed |v⃗(t)|', 'Same formula as total distance traveled by a parti'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Arc Length for Parametric Curves.'
+        correctAnswers: ['L = ∫ₐᵇ √[(dx/dt)² + (dy/dt)²] dt', 'This is the integral of the speed |v⃗(t)|', 'Same formula as total distance traveled by a particle'],
+        hint1: 'Think about what each concept specifically describes in Arc Length for Parametric Curves.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Arc Length for Parametric Curves describes a specific idea. Parametric arc length: L = ∫ₐᵇ √[(dx/dt)² + (dy/dt)²] dt. This is the integral of the speed |v⃗(t)|. Same formula as total distance traveled by a particle.'
       }
     }
   ]

@@ -71,23 +71,28 @@ Absolute threshold: minimum stimulus intensity detected 50% of the time.
       id: 'mcat-1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Sensation & Perception:',
-            options: ['Sensation: detection of stimuli by sensory receptors; Percep', 'Absolute threshold: minimum stimulus intensity detected 50% ', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Sensation',
+            options: ['minimum stimulus intensity detected 50% of the time.', 'Signal detection theory: ability to detect signal depends on sensitivity and response bias.', 'Weber law: just noticeable difference (JND) is proportional to stimulus magnitude (delta-I/I = constant).', 'detection of stimuli by sensory receptors; Perception: interpretation by the brain.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Signal detection theory: ability to detect signal depends on', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Absolute threshold',
+            options: ['minimum stimulus intensity detected 50% of the time.', 'Signal detection theory: ability to detect signal depends on sensitivity and response bias.', 'detection of stimuli by sensory receptors; Perception: interpretation by the brain.', 'Weber law: just noticeable difference (JND) is proportional to stimulus magnitude (delta-I/I = constant).']
+          },
+          {
+            label: 'Key Insight',
+            options: ['minimum stimulus intensity detected 50% of the time.', 'Signal detection theory: ability to detect signal depends on sensitivity and response bias.', 'detection of stimuli by sensory receptors; Perception: interpretation by the brain.', 'Weber law: just noticeable difference (JND) is proportional to stimulus magnitude (delta-I/I = constant).']
           }
         ],
-        correctAnswers: ['Sensation: detection of stimuli by sensory receptors; Percep', 'Signal detection theory: ability to detect signal depends on'],
-        hint1: 'Think about sensation & perception',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Sensation: detection of stimuli by sensory receptors; Perception: interpretation by the brain. Signal detection theory: ability to detect signal depends on sensitivity and response bias.'
+        correctAnswers: ['detection of stimuli by sensory receptors; Perception: interpretation by the brain.', 'minimum stimulus intensity detected 50% of the time.', 'Signal detection theory: ability to detect signal depends on sensitivity and response bias.'],
+        hint1: 'Think about what each concept specifically describes in Psychology Behavior.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Psychology Behavior describes a specific idea. Sensation: detection of stimuli by sensory receptors; Perception: interpretation by the brain. Absolute threshold: minimum stimulus intensity detected 50% of the time. Key Insight: Signal detection theory: ability to detect signal depends on sensitivity and response bias.'
       }
     }
   ]

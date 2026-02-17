@@ -19,31 +19,31 @@ export const bioEcologyPart7Data = {
       id: 'ecol7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes ecology connects to evolution?',
+            question: 'What does "Ecology connects to evolution" refer to in biology?',
             options: [
-              'Ecology connects to evolution',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'data analysis in ecology',
+              'Ecosystems and energy flow',
+              'Human impacts on ecosystems',
+              'Ecology connects to evolution'
             ],
-            correctAnswer: 0,
-            explanation: 'Ecology connects to evolution'
+            correctAnswer: 3,
+            explanation: 'Correct — Ecology connects to evolution. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of synthesis & ap review, which statement is accurate?',
+            question: 'Select the statement that correctly describes Human impacts on ecosystems:',
             options: [
+              'Ecosystems and energy flow',
+              'Ecology connects to evolution',
               'Human impacts on ecosystems',
-              'noitulove ot stcennoc ygolocE',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'data analysis in ecology'
             ],
-            correctAnswer: 0,
-            explanation: 'Human impacts on ecosystems'
+            correctAnswer: 2,
+            explanation: 'Correct — Human impacts on ecosystems. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioEcologyPart7Data = {
       id: 'ecol7-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to synthesis & ap review?',
+            question: 'Regarding Ecology: Synthesis & AP Review, which correctly describes AP exam?',
             options: [
-              'AP exam: data analysis in ecology',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'data analysis in ecology',
+              'Ecosystems and energy flow',
+              'Ecology connects to evolution',
+              'Human impacts on ecosystems'
             ],
             correctAnswer: 0,
-            explanation: 'AP exam: data analysis in ecology'
+            explanation: 'Correct — AP exam: data analysis in ecology. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioEcologyPart7Data = {
       id: 'ecol7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Ecology connects to evolution is important in synthesis & ap review because',
-            options: ['Ecology connects to evolution', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Ecology connects to evolution',
+            options: ['data analysis in ecology', 'Human impacts on ecosystems', 'Ecology connects to evolution', 'Ecosystems and energy flow']
           },
           {
-            label: 'Ecosystems and energy flow is important in synthesis & ap review because',
-            options: ['Ecosystems and energy flow', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Ecosystems and energy flow',
+            options: ['Ecology connects to evolution', 'Ecosystems and energy flow', 'Human impacts on ecosystems', 'data analysis in ecology']
           },
           {
-            label: 'Human impacts on ecosystems is important in synthesis & ap review because',
-            options: ['Human impacts on ecosystems', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Human impacts on ecosystems',
+            options: ['Ecology connects to evolution', 'data analysis in ecology', 'Ecosystems and energy flow', 'Human impacts on ecosystems']
           }
         ],
         correctAnswers: ['Ecology connects to evolution', 'Ecosystems and energy flow', 'Human impacts on ecosystems'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Synthesis & AP Review.'
+        hint1: 'Think about what each concept specifically describes in Ecology: Synthesis & AP Review.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Ecology: Synthesis & AP Review describes a specific idea. Ecology connects to evolution. Ecosystems and energy flow. Human impacts on ecosystems.'
       }
     }
   ]

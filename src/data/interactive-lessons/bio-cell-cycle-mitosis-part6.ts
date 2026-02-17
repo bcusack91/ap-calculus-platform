@@ -19,31 +19,31 @@ export const bioCellCyclePart6Data = {
       id: 'cell6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes identifying mitosis stages from images?',
+            question: 'What does "Identifying mitosis stages from images" refer to in biology?',
             options: [
+              'Connecting to cancer biology',
               'Identifying mitosis stages from images',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Predicting chromosome numbers after division',
+              'Analyzing cell cycle regulation failures'
             ],
-            correctAnswer: 0,
-            explanation: 'Identifying mitosis stages from images'
+            correctAnswer: 1,
+            explanation: 'Correct — Identifying mitosis stages from images. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of problem-solving, which statement is accurate?',
+            question: 'Select the statement that correctly describes Analyzing cell cycle regulation failures:',
             options: [
+              'Identifying mitosis stages from images',
+              'Predicting chromosome numbers after division',
               'Analyzing cell cycle regulation failures',
-              'segami morf segats sisotim gniyfitnedI',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Connecting to cancer biology'
             ],
-            correctAnswer: 0,
-            explanation: 'Analyzing cell cycle regulation failures'
+            correctAnswer: 2,
+            explanation: 'Correct — Analyzing cell cycle regulation failures. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioCellCyclePart6Data = {
       id: 'cell6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to problem-solving?',
+            question: 'Which of these accurately represents Connecting to cancer biology?',
             options: [
+              'Analyzing cell cycle regulation failures',
+              'Identifying mitosis stages from images',
               'Connecting to cancer biology',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Predicting chromosome numbers after division'
             ],
-            correctAnswer: 0,
-            explanation: 'Connecting to cancer biology'
+            correctAnswer: 2,
+            explanation: 'Correct — Connecting to cancer biology. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioCellCyclePart6Data = {
       id: 'cell6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Identifying mitosis stages from images is important in problem-solving because',
-            options: ['Identifying mitosis stages from images', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Identifying mitosis stages from images',
+            options: ['Analyzing cell cycle regulation failures', 'Identifying mitosis stages from images', 'Connecting to cancer biology', 'Predicting chromosome numbers after division']
           },
           {
-            label: 'Predicting chromosome numbers after division is important in problem-solving because',
-            options: ['Predicting chromosome numbers after division', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Predicting chromosome numbers after…',
+            options: ['Connecting to cancer biology', 'Identifying mitosis stages from images', 'Predicting chromosome numbers after division', 'Analyzing cell cycle regulation failures']
           },
           {
-            label: 'Analyzing cell cycle regulation failures is important in problem-solving because',
-            options: ['Analyzing cell cycle regulation failures', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Analyzing cell cycle regulation failures',
+            options: ['Identifying mitosis stages from images', 'Predicting chromosome numbers after division', 'Analyzing cell cycle regulation failures', 'Connecting to cancer biology']
           }
         ],
         correctAnswers: ['Identifying mitosis stages from images', 'Predicting chromosome numbers after division', 'Analyzing cell cycle regulation failures'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving.'
+        hint1: 'Think about what each concept specifically describes in Cell Cycle & Mitosis: Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Cell Cycle & Mitosis: Problem-Solving Workshop describes a specific idea. Identifying mitosis stages from images. Predicting chromosome numbers after division. Analyzing cell cycle regulation failures.'
       }
     }
   ]

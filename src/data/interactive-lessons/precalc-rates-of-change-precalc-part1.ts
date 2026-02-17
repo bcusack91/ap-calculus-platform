@@ -30,31 +30,31 @@ Average rate of change = slope of secant line
       id: 'rates1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of average rate of change?',
+            question: 'What does "Average rate of change of f on [a,b]" refer to in precalculus?',
             options: [
-              'Average rate of change of f on [a,b]',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'Average rate of change = slope of secant line',
+              '(output units)/(input units)',
+              '(f(b) - f(a))/(b - a)',
+              'This is the slope of the secant line through (a, f(a)) and (b, f(b))'
             ],
-            correctAnswer: 0,
-            explanation: 'Average rate of change of f on [a,b]: (f(b) - f(a))/(b - a)'
+            correctAnswer: 2,
+            explanation: 'Correct — Average rate of change of f on [a,b]: (f(b) - f(a))/(b - a). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of average rate of change, which is accurate?',
+            question: 'Which of the following is true about Units?',
             options: [
               '(output units)/(input units)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Average rate of change = slope of secant line',
+              'This is the slope of the secant line through (a, f(a)) and (b, f(b))',
+              '(f(b) - f(a))/(b - a)'
             ],
             correctAnswer: 0,
-            explanation: 'Units: (output units)/(input units)'
+            explanation: 'Correct — Units: (output units)/(input units). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,24 @@ Average rate of change = slope of secant line
       id: 'rates1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Average rate of change of f on [a,b]',
-            options: ['(f(b) - f(a))/(b - a)', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
-          },
-          {
-            label: 'This is the slope of the secant line through (a, f(a)) and (b, f(b))',
-            options: ['This is the slope of the secant line through (a, f', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['Average rate of change = slope of secant line', '(output units)/(input units)', 'This is the slope of the secant line through (a, f(a)) and (b, f(b))', '(f(b) - f(a))/(b - a)']
           },
           {
             label: 'Units',
-            options: ['(output units)/(input units)', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['This is the slope of the secant line through (a, f(a)) and (b, f(b))', 'Average rate of change = slope of secant line', '(output units)/(input units)', '(f(b) - f(a))/(b - a)']
           }
         ],
-        correctAnswers: ['(f(b) - f(a))/(b - a)', 'This is the slope of the secant line through (a, f', '(output units)/(input units)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Average Rate of Change.'
+        correctAnswers: ['(f(b) - f(a))/(b - a)', '(output units)/(input units)'],
+        hint1: 'Think about what each concept specifically describes in Rates Of Change.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Rates Of Change describes a specific idea. Average rate of change of f on [a,b]: (f(b) - f(a))/(b - a). Units: (output units)/(input units).'
       }
     }
   ]

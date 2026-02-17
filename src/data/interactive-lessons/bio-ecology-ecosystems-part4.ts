@@ -19,31 +19,31 @@ export const bioEcologyPart4Data = {
       id: 'ecol4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes temperature, water, sunlight, soil, nutrients (abiotic)?',
+            question: 'What does "Temperature, water, sunlight, soil,…" refer to in biology?',
             options: [
               'Temperature, water, sunlight, soil, nutrients (abiotic)',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'Competition, predation, symbiosis (biotic)',
+              'Limiting factors constrain population growth',
+              'Tolerance range for each environmental factor'
             ],
             correctAnswer: 0,
-            explanation: 'Temperature, water, sunlight, soil, nutrients (abiotic)'
+            explanation: 'Correct — Temperature, water, sunlight, soil, nutrients (abiotic). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of abiotic & biotic factors, which statement is accurate?',
+            question: 'In the context of Abiotic & Biotic Factors, which explains Limiting factors constrain population…?',
             options: [
+              'Tolerance range for each environmental factor',
               'Limiting factors constrain population growth',
-              ')citoiba( stneirtun ,lios ,thgilnus ,retaw ,erutarepmeT',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Temperature, water, sunlight, soil, nutrients (abiotic)',
+              'Competition, predation, symbiosis (biotic)'
             ],
-            correctAnswer: 0,
-            explanation: 'Limiting factors constrain population growth'
+            correctAnswer: 1,
+            explanation: 'Correct — Limiting factors constrain population growth. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioEcologyPart4Data = {
       id: 'ecol4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to abiotic & biotic factors?',
+            question: 'Regarding Abiotic & Biotic Factors, which correctly describes Tolerance range for each environmental…?',
             options: [
+              'Competition, predation, symbiosis (biotic)',
               'Tolerance range for each environmental factor',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Limiting factors constrain population growth',
+              'Temperature, water, sunlight, soil, nutrients (abiotic)'
             ],
-            correctAnswer: 0,
-            explanation: 'Tolerance range for each environmental factor'
+            correctAnswer: 1,
+            explanation: 'Correct — Tolerance range for each environmental factor. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioEcologyPart4Data = {
       id: 'ecol4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Temperature, water, sunlight, soil, nutrients (abiotic) is important in abiotic & biotic factors because',
-            options: ['Temperature, water, sunlight, soil, nutrients (abi', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Temperature, water, sunlight, soil,…',
+            options: ['Tolerance range for each environmental factor', 'Temperature, water, sunlight, soil, nutrients (abiotic)', 'Limiting factors constrain population growth', 'Competition, predation, symbiosis (biotic)']
           },
           {
-            label: 'Competition, predation, symbiosis (biotic) is important in abiotic & biotic factors because',
-            options: ['Competition, predation, symbiosis (biotic)', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Competition, predation, symbiosis…',
+            options: ['Tolerance range for each environmental factor', 'Limiting factors constrain population growth', 'Temperature, water, sunlight, soil, nutrients (abiotic)', 'Competition, predation, symbiosis (biotic)']
           },
           {
-            label: 'Limiting factors constrain population growth is important in abiotic & biotic factors because',
-            options: ['Limiting factors constrain population growth', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Limiting factors constrain population…',
+            options: ['Competition, predation, symbiosis (biotic)', 'Limiting factors constrain population growth', 'Temperature, water, sunlight, soil, nutrients (abiotic)', 'Tolerance range for each environmental factor']
           }
         ],
-        correctAnswers: ['Temperature, water, sunlight, soil, nutrients (abi', 'Competition, predation, symbiosis (biotic)', 'Limiting factors constrain population growth'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Abiotic & Biotic Factors.'
+        correctAnswers: ['Temperature, water, sunlight, soil, nutrients (abiotic)', 'Competition, predation, symbiosis (biotic)', 'Limiting factors constrain population growth'],
+        hint1: 'Think about what each concept specifically describes in Abiotic & Biotic Factors.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Abiotic & Biotic Factors describes a specific idea. Temperature, water, sunlight, soil, nutrients (abiotic). Competition, predation, symbiosis (biotic). Limiting factors constrain population growth.'
       }
     }
   ]

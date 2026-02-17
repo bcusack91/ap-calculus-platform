@@ -18,20 +18,31 @@ Shorter is usually better on the SAT (if meaning is preserved).
       id: 'sat-e1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes avoid redundancy?',
+            question: 'Which of the following correctly describes Avoid redundancy?',
             options: [
-              'Avoid redundancy is a fundamental concept in SAT Reading & Writing',
-              'Shorter is usually better on the SAT (if meaning is preserved)',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'Shorter is usually better on the SAT (if meaning is preserved).',
+              'Eliminate wordy phrases: "due to the fact that" → "because".',
+              'don\'t say the same thing twice in different words.',
+              'If two answers convey the same meaning, choose the more concise one.'
             ],
-            correctAnswer: 0,
-            explanation: 'Avoid redundancy: don\'t say the same thing twice in different words'
+            correctAnswer: 2,
+            explanation: 'Correct — Avoid redundancy: don\'t say the same thing twice in different words. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Expression Ideas, which explains Key Insight?',
+            options: [
+              'Shorter is usually better on the SAT (if meaning is preserved).',
+              'Eliminate wordy phrases: "due to the fact that" → "because".',
+              'don\'t say the same thing twice in different words.',
+              'If two answers convey the same meaning, choose the more concise one.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Key Insight: Eliminate wordy phrases: "due to the fact that" → "because". Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Shorter is usually better on the SAT (if meaning is preserved).
       id: 'sat-e1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for conciseness & redundancy?',
+            question: 'Which of these accurately represents SAT Tip?',
             options: [
-              'Eliminate wordy phrases: "due to the fact that" → "because"',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'Shorter is usually better on the SAT (if meaning is preserved).',
+              'If two answers convey the same meaning, choose the more concise one.',
+              'don\'t say the same thing twice in different words.',
+              'Eliminate wordy phrases: "due to the fact that" → "because".'
             ],
-            correctAnswer: 0,
-            explanation: 'Eliminate wordy phrases: "due to the fact that" → "because"'
+            correctAnswer: 1,
+            explanation: 'Correct — SAT Tip: If two answers convey the same meaning, choose the more concise one. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Shorter is usually better on the SAT (if meaning is preserved).
       id: 'sat-e1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Conciseness & Redundancy:',
-            options: ['Avoid redundancy: don\'t say the same thing twice i', 'Shorter is usually better on the SAT (if meaning i', 'Not applicable', 'None of these']
+            label: 'Avoid redundancy',
+            options: ['If two answers convey the same meaning, choose the more concise one.', 'don\'t say the same thing twice in different words.', 'Shorter is usually better on the SAT (if meaning is preserved).', 'Eliminate wordy phrases: "due to the fact that" → "because".']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Eliminate wordy phrases: "due to the fact that" → ', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Key Insight',
+            options: ['Eliminate wordy phrases: "due to the fact that" → "because".', 'don\'t say the same thing twice in different words.', 'If two answers convey the same meaning, choose the more concise one.', 'Shorter is usually better on the SAT (if meaning is preserved).']
+          },
+          {
+            label: 'SAT Tip',
+            options: ['Eliminate wordy phrases: "due to the fact that" → "because".', 'Shorter is usually better on the SAT (if meaning is preserved).', 'If two answers convey the same meaning, choose the more concise one.', 'don\'t say the same thing twice in different words.']
           }
         ],
-        correctAnswers: ['Avoid redundancy: don\'t say the same thing twice i', 'Eliminate wordy phrases: "due to the fact that" → '],
-        hint1: 'Think about conciseness & redundancy',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'Avoid redundancy: don\'t say the same thing twice in different words. Eliminate wordy phrases: "due to the fact that" → "because".'
+        correctAnswers: ['don\'t say the same thing twice in different words.', 'Eliminate wordy phrases: "due to the fact that" → "because".', 'If two answers convey the same meaning, choose the more concise one.'],
+        hint1: 'Think about what each concept specifically describes in Expression Ideas.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Expression Ideas describes a specific idea. Avoid redundancy: don\'t say the same thing twice in different words. Key Insight: Eliminate wordy phrases: "due to the fact that" → "because". SAT Tip: If two answers convey the same meaning, choose the more concise one.'
       }
     }
   ]

@@ -30,31 +30,31 @@ Using acetals as protecting groups
       id: 'aldeh6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of problem-solving workshop?',
+            question: 'Which of the following correctly describes Predicting nucleophilic addition…?',
             options: [
               'Predicting nucleophilic addition products',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'Choosing appropriate reducing agents',
+              'Designing Grignard-based syntheses',
+              'Using acetals as protecting groups'
             ],
             correctAnswer: 0,
-            explanation: 'Predicting nucleophilic addition products'
+            explanation: 'Correct — Predicting nucleophilic addition products. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of problem-solving workshop, which is accurate?',
+            question: 'In the context of Problem-Solving Workshop, which explains Choosing appropriate reducing agents?',
             options: [
               'Choosing appropriate reducing agents',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Predicting nucleophilic addition products',
+              'Designing Grignard-based syntheses',
+              'Using acetals as protecting groups'
             ],
             correctAnswer: 0,
-            explanation: 'Choosing appropriate reducing agents'
+            explanation: 'Correct — Choosing appropriate reducing agents. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Using acetals as protecting groups
       id: 'aldeh6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Predicting nucleophilic addition products',
-            options: ['Predicting nucleophilic addition products', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Predicting nucleophilic addition…',
+            options: ['Choosing appropriate reducing agents', 'Predicting nucleophilic addition products', 'Using acetals as protecting groups', 'Designing Grignard-based syntheses']
           },
           {
             label: 'Designing Grignard-based syntheses',
-            options: ['Designing Grignard-based syntheses', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Choosing appropriate reducing agents', 'Predicting nucleophilic addition products', 'Using acetals as protecting groups', 'Designing Grignard-based syntheses']
           },
           {
             label: 'Choosing appropriate reducing agents',
-            options: ['Choosing appropriate reducing agents', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Designing Grignard-based syntheses', 'Predicting nucleophilic addition products', 'Using acetals as protecting groups', 'Choosing appropriate reducing agents']
           }
         ],
         correctAnswers: ['Predicting nucleophilic addition products', 'Designing Grignard-based syntheses', 'Choosing appropriate reducing agents'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving Workshop.'
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Predicting nucleophilic addition products. Designing Grignard-based syntheses. Choosing appropriate reducing agents.'
       }
     }
   ]

@@ -30,31 +30,31 @@ Fear generalized to other furry objects
       id: 'class4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of generalization & discrimination?',
+            question: 'Which of the following correctly describes Generalization?',
             options: [
-              'Generalization',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'responding to similar stimuli',
+              'responding only to the specific CS',
+              'Fear generalized to other furry objects',
+              'Watson conditioned fear of white rat'
             ],
             correctAnswer: 0,
-            explanation: 'Generalization: responding to similar stimuli'
+            explanation: 'Correct — Generalization: responding to similar stimuli. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of generalization & discrimination, which is accurate?',
+            question: 'Select the statement that correctly describes Little Albert experiment:',
             options: [
+              'Fear generalized to other furry objects',
               'Watson conditioned fear of white rat',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'responding only to the specific CS',
+              'responding to similar stimuli'
             ],
-            correctAnswer: 0,
-            explanation: 'Little Albert experiment: Watson conditioned fear of white rat'
+            correctAnswer: 1,
+            explanation: 'Correct — Little Albert experiment: Watson conditioned fear of white rat. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Fear generalized to other furry objects
       id: 'class4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Generalization',
-            options: ['responding to similar stimuli', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Watson conditioned fear of white rat', 'responding only to the specific CS', 'Fear generalized to other furry objects', 'responding to similar stimuli']
           },
           {
             label: 'Discrimination',
-            options: ['responding only to the specific CS', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Watson conditioned fear of white rat', 'Fear generalized to other furry objects', 'responding only to the specific CS', 'responding to similar stimuli']
           },
           {
             label: 'Little Albert experiment',
-            options: ['Watson conditioned fear of white rat', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['responding only to the specific CS', 'Fear generalized to other furry objects', 'responding to similar stimuli', 'Watson conditioned fear of white rat']
           }
         ],
         correctAnswers: ['responding to similar stimuli', 'responding only to the specific CS', 'Watson conditioned fear of white rat'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Generalization & Discrimination.'
+        hint1: 'Think about what each concept specifically describes in Generalization & Discrimination.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Generalization & Discrimination describes a specific idea. Generalization: responding to similar stimuli. Discrimination: responding only to the specific CS. Little Albert experiment: Watson conditioned fear of white rat.'
       }
     }
   ]

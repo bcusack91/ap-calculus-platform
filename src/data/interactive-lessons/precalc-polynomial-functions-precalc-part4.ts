@@ -30,31 +30,31 @@ Connect with a smooth, continuous curve
       id: 'polyn4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of graphing polynomials?',
-            options: [
-              'Plot zeros and y-intercept first',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'Plot zeros and y-intercept first'
-          },
-          {
-            question: 'In the context of graphing polynomials, which is accurate?',
+            question: 'What does "Plot zeros and y-intercept first" refer to in precalculus?',
             options: [
               'Apply multiplicity to determine crossing vs bouncing',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Plot zeros and y-intercept first',
+              'Use end behavior to sketch the tails',
+              'Connect with a smooth, continuous curve'
             ],
-            correctAnswer: 0,
-            explanation: 'Apply multiplicity to determine crossing vs bouncing'
+            correctAnswer: 1,
+            explanation: 'Correct — Plot zeros and y-intercept first. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Apply multiplicity to determine…:',
+            options: [
+              'Use end behavior to sketch the tails',
+              'Plot zeros and y-intercept first',
+              'Connect with a smooth, continuous curve',
+              'Apply multiplicity to determine crossing vs bouncing'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Apply multiplicity to determine crossing vs bouncing. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Connect with a smooth, continuous curve
       id: 'polyn4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Plot zeros and y-intercept first',
-            options: ['Plot zeros and y-intercept first', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['Apply multiplicity to determine crossing vs bouncing', 'Connect with a smooth, continuous curve', 'Plot zeros and y-intercept first', 'Use end behavior to sketch the tails']
           },
           {
             label: 'Use end behavior to sketch the tails',
-            options: ['Use end behavior to sketch the tails', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['Apply multiplicity to determine crossing vs bouncing', 'Connect with a smooth, continuous curve', 'Plot zeros and y-intercept first', 'Use end behavior to sketch the tails']
           },
           {
-            label: 'Apply multiplicity to determine crossing vs bouncing',
-            options: ['Apply multiplicity to determine crossing vs bounci', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            label: 'Apply multiplicity to determine…',
+            options: ['Connect with a smooth, continuous curve', 'Apply multiplicity to determine crossing vs bouncing', 'Use end behavior to sketch the tails', 'Plot zeros and y-intercept first']
           }
         ],
-        correctAnswers: ['Plot zeros and y-intercept first', 'Use end behavior to sketch the tails', 'Apply multiplicity to determine crossing vs bounci'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Graphing Polynomials.'
+        correctAnswers: ['Plot zeros and y-intercept first', 'Use end behavior to sketch the tails', 'Apply multiplicity to determine crossing vs bouncing'],
+        hint1: 'Think about what each concept specifically describes in Graphing Polynomials.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Graphing Polynomials describes a specific idea. Plot zeros and y-intercept first. Use end behavior to sketch the tails. Apply multiplicity to determine crossing vs bouncing.'
       }
     }
   ]

@@ -18,20 +18,31 @@ Past perfect (had + past participle): action completed before another past actio
       id: 'sat-g3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes keep verb tenses consistent within a passage unless there\'s a time shift?',
+            question: 'Which statement accurately explains Keep verb tenses consistent within a…?',
             options: [
-              'Keep verb tenses consistent within a passage unless there\'s a time shift is a fundamental concept in SAT Reading & Writing',
-              'Past perfect (had + past participle): action completed before another past action',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'Subjunctive mood: "If I were" (contrary to fact), "It is essential that she be present".',
+              'action completed before another past action.',
+              'Keep verb tenses consistent within a passage unless there\'s a time shift.',
+              'SAT loves testing tense consistency and unnecessary tense shifts.'
             ],
-            correctAnswer: 0,
-            explanation: 'Keep verb tenses consistent within a passage unless there\'s a time shift'
+            correctAnswer: 2,
+            explanation: 'Correct — Keep verb tenses consistent within a passage unless there\'s a time shift. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Key Insight?',
+            options: [
+              'SAT loves testing tense consistency and unnecessary tense shifts.',
+              'action completed before another past action.',
+              'Subjunctive mood: "If I were" (contrary to fact), "It is essential that she be present".',
+              'Keep verb tenses consistent within a passage unless there\'s a time shift.'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Key Insight: Subjunctive mood: "If I were" (contrary to fact), "It is essential that she be present". Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Past perfect (had + past participle): action completed before another past actio
       id: 'sat-g3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for verb tense & mood?',
+            question: 'Regarding Verb Tense & Mood, which correctly describes SAT Tip?',
             options: [
-              'Subjunctive mood: "If I were" (contrary to fact), "It is essential that she be present"',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'SAT loves testing tense consistency and unnecessary tense shifts.',
+              'Subjunctive mood: "If I were" (contrary to fact), "It is essential that she be present".',
+              'action completed before another past action.',
+              'Keep verb tenses consistent within a passage unless there\'s a time shift.'
             ],
             correctAnswer: 0,
-            explanation: 'Subjunctive mood: "If I were" (contrary to fact), "It is essential that she be present"'
+            explanation: 'Correct — SAT Tip: SAT loves testing tense consistency and unnecessary tense shifts. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Past perfect (had + past participle): action completed before another past actio
       id: 'sat-g3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Verb Tense & Mood:',
-            options: ['Keep verb tenses consistent within a passage unles', 'Past perfect (had + past participle): action compl', 'Not applicable', 'None of these']
+            label: 'Past perfect (had + past participle)',
+            options: ['Keep verb tenses consistent within a passage unless there\'s a time shift.', 'Subjunctive mood: "If I were" (contrary to fact), "It is essential that she be present".', 'SAT loves testing tense consistency and unnecessary tense shifts.', 'action completed before another past action.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Subjunctive mood: "If I were" (contrary to fact), ', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Key Insight',
+            options: ['Keep verb tenses consistent within a passage unless there\'s a time shift.', 'SAT loves testing tense consistency and unnecessary tense shifts.', 'action completed before another past action.', 'Subjunctive mood: "If I were" (contrary to fact), "It is essential that she be present".']
+          },
+          {
+            label: 'SAT Tip',
+            options: ['SAT loves testing tense consistency and unnecessary tense shifts.', 'action completed before another past action.', 'Keep verb tenses consistent within a passage unless there\'s a time shift.', 'Subjunctive mood: "If I were" (contrary to fact), "It is essential that she be present".']
           }
         ],
-        correctAnswers: ['Keep verb tenses consistent within a passage unles', 'Subjunctive mood: "If I were" (contrary to fact), '],
-        hint1: 'Think about verb tense & mood',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'Keep verb tenses consistent within a passage unless there\'s a time shift. Subjunctive mood: "If I were" (contrary to fact), "It is essential that she be present".'
+        correctAnswers: ['action completed before another past action.', 'Subjunctive mood: "If I were" (contrary to fact), "It is essential that she be present".', 'SAT loves testing tense consistency and unnecessary tense shifts.'],
+        hint1: 'Think about what each concept specifically describes in Verb Tense & Mood.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Verb Tense & Mood describes a specific idea. Past perfect (had + past participle): action completed before another past action. Key Insight: Subjunctive mood: "If I were" (contrary to fact), "It is essential that she be present". SAT Tip: SAT loves testing tense consistency and unnecessary tense shifts.'
       }
     }
   ]

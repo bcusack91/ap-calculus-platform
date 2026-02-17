@@ -19,31 +19,31 @@ export const bioTranscriptionPart4Data = {
       id: 'tran4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes ribosomes read mrna codons (triplets of nucleotides)?',
+            question: 'Which of the following correctly describes Ribosomes read mRNA codons (triplets of…?',
             options: [
+              'AUG (methionine)',
+              'tRNA carries amino acids; anticodon pairs with codon',
               'Ribosomes read mRNA codons (triplets of nucleotides)',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'UAA, UAG, UGA'
             ],
-            correctAnswer: 0,
-            explanation: 'Ribosomes read mRNA codons (triplets of nucleotides)'
+            correctAnswer: 2,
+            explanation: 'Correct — Ribosomes read mRNA codons (triplets of nucleotides). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of translation, which statement is accurate?',
+            question: 'Which of the following is true about Start codon?',
             options: [
-              'Start codon: AUG (methionine)',
-              ')seditoelcun fo stelpirt( snodoc ANRm daer semosobiR',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'AUG (methionine)',
+              'Ribosomes read mRNA codons (triplets of nucleotides)',
+              'tRNA carries amino acids; anticodon pairs with codon',
+              'UAA, UAG, UGA'
             ],
             correctAnswer: 0,
-            explanation: 'Start codon: AUG (methionine)'
+            explanation: 'Correct — Start codon: AUG (methionine). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioTranscriptionPart4Data = {
       id: 'tran4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to translation?',
+            question: 'Which of these accurately represents Stop codons?',
             options: [
-              'Stop codons: UAA, UAG, UGA',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Ribosomes read mRNA codons (triplets of nucleotides)',
+              'UAA, UAG, UGA',
+              'AUG (methionine)',
+              'tRNA carries amino acids; anticodon pairs with codon'
             ],
-            correctAnswer: 0,
-            explanation: 'Stop codons: UAA, UAG, UGA'
+            correctAnswer: 1,
+            explanation: 'Correct — Stop codons: UAA, UAG, UGA. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,24 @@ export const bioTranscriptionPart4Data = {
       id: 'tran4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Ribosomes read mRNA codons (triplets of nucleotides) is important in translation because',
-            options: ['Ribosomes read mRNA codons (triplets of nucleotide', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Start codon',
+            options: ['Ribosomes read mRNA codons (triplets of nucleotides)', 'UAA, UAG, UGA', 'tRNA carries amino acids; anticodon pairs with codon', 'AUG (methionine)']
           },
           {
-            label: 'tRNA carries amino acids; anticodon pairs with codon is important in translation because',
-            options: ['tRNA carries amino acids; anticodon pairs with cod', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
-          },
-          {
-            label: 'Start codon is important in translation because',
-            options: ['AUG (methionine)', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Stop codons',
+            options: ['Ribosomes read mRNA codons (triplets of nucleotides)', 'AUG (methionine)', 'tRNA carries amino acids; anticodon pairs with codon', 'UAA, UAG, UGA']
           }
         ],
-        correctAnswers: ['Ribosomes read mRNA codons (triplets of nucleotide', 'tRNA carries amino acids; anticodon pairs with cod', 'AUG (methionine)'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Translation.'
+        correctAnswers: ['AUG (methionine)', 'UAA, UAG, UGA'],
+        hint1: 'Think about what each concept specifically describes in Translation.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Translation describes a specific idea. Start codon: AUG (methionine). Stop codons: UAA, UAG, UGA.'
       }
     }
   ]

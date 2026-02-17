@@ -30,31 +30,31 @@ det(AB) = det(A)·det(B)
       id: 'matri3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of determinants?',
+            question: 'What does "2×2 determinant" refer to in precalculus?',
             options: [
-              '2×2 determinant',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              '|A| = ad - bc for A = [[a,b],[c,d]]',
+              'expand along a row or column using cofactors',
+              'det(AB) = det(A)·det(B)',
+              'If det(A) = 0, the matrix is singular (no inverse)'
             ],
             correctAnswer: 0,
-            explanation: '2×2 determinant: |A| = ad - bc for A = [[a,b],[c,d]]'
+            explanation: 'Correct — 2×2 determinant: |A| = ad - bc for A = [[a,b],[c,d]]. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of determinants, which is accurate?',
+            question: 'In the context of Determinants, which explains If det(A) = 0, the matrix is singular…?',
             options: [
+              '|A| = ad - bc for A = [[a,b],[c,d]]',
               'If det(A) = 0, the matrix is singular (no inverse)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'det(AB) = det(A)·det(B)',
+              'expand along a row or column using cofactors'
             ],
-            correctAnswer: 0,
-            explanation: 'If det(A) = 0, the matrix is singular (no inverse)'
+            correctAnswer: 1,
+            explanation: 'Correct — If det(A) = 0, the matrix is singular (no inverse). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ det(AB) = det(A)·det(B)
       id: 'matri3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: '2×2 determinant',
-            options: ['|A| = ad - bc for A = [[a,b],[c,d]]', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['expand along a row or column using cofactors', '|A| = ad - bc for A = [[a,b],[c,d]]', 'If det(A) = 0, the matrix is singular (no inverse)', 'det(AB) = det(A)·det(B)']
           },
           {
             label: '3×3 determinant',
-            options: ['expand along a row or column using cofactors', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['expand along a row or column using cofactors', 'det(AB) = det(A)·det(B)', '|A| = ad - bc for A = [[a,b],[c,d]]', 'If det(A) = 0, the matrix is singular (no inverse)']
           },
           {
-            label: 'If det(A) = 0, the matrix is singular (no inverse)',
-            options: ['If det(A) = 0, the matrix is singular (no inverse)', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            label: 'Determinant properties',
+            options: ['det(AB) = det(A)·det(B)', 'expand along a row or column using cofactors', 'If det(A) = 0, the matrix is singular (no inverse)', '|A| = ad - bc for A = [[a,b],[c,d]]']
           }
         ],
-        correctAnswers: ['|A| = ad - bc for A = [[a,b],[c,d]]', 'expand along a row or column using cofactors', 'If det(A) = 0, the matrix is singular (no inverse)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Determinants.'
+        correctAnswers: ['|A| = ad - bc for A = [[a,b],[c,d]]', 'expand along a row or column using cofactors', 'det(AB) = det(A)·det(B)'],
+        hint1: 'Think about what each concept specifically describes in Determinants.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Determinants describes a specific idea. 2×2 determinant: |A| = ad - bc for A = [[a,b],[c,d]]. 3×3 determinant: expand along a row or column using cofactors. Determinant properties: det(AB) = det(A)·det(B).'
       }
     }
   ]

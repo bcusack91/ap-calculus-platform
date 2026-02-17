@@ -30,31 +30,31 @@ Displacement vector = r⃗(b) - r⃗(a) = ∫ₐᵇ v⃗(t)dt
       id: 'vecto6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of problem-solving workshop?',
+            question: 'Which statement accurately explains Speed = |v⃗(t)| = √[x\'(t)² + y\'(t)²]?',
             options: [
-              'Speed = |v⃗(t)| = √[x\'(t)² + y\'(t)²]',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
+              'Total distance = ∫ₐᵇ |v⃗(t)| dt = ∫ₐᵇ √[x\'(t)² + y\'(t)²] dt',
+              'This is the arc length formula',
+              'Displacement vector = r⃗(b) - r⃗(a) = ∫ₐᵇ v⃗(t)dt',
+              'Speed = |v⃗(t)| = √[x\'(t)² + y\'(t)²]'
             ],
-            correctAnswer: 0,
-            explanation: 'Speed = |v⃗(t)| = √[x\'(t)² + y\'(t)²]'
+            correctAnswer: 3,
+            explanation: 'Correct — Speed = |v⃗(t)| = √[x\'(t)² + y\'(t)²]. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of problem-solving workshop, which is accurate?',
+            question: 'Which of the following is true about This is the arc length formula?',
             options: [
               'This is the arc length formula',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Total distance = ∫ₐᵇ |v⃗(t)| dt = ∫ₐᵇ √[x\'(t)² + y\'(t)²] dt',
+              'Speed = |v⃗(t)| = √[x\'(t)² + y\'(t)²]',
+              'Displacement vector = r⃗(b) - r⃗(a) = ∫ₐᵇ v⃗(t)dt'
             ],
             correctAnswer: 0,
-            explanation: 'This is the arc length formula'
+            explanation: 'Correct — This is the arc length formula. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Displacement vector = r⃗(b) - r⃗(a) = ∫ₐᵇ v⃗(t)dt
       id: 'vecto6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to problem-solving workshop?',
+            question: 'Regarding Problem-Solving Workshop, which correctly describes Displacement vector = r⃗(b) - r⃗(a) =…?',
             options: [
               'Displacement vector = r⃗(b) - r⃗(a) = ∫ₐᵇ v⃗(t)dt',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'Total distance = ∫ₐᵇ |v⃗(t)| dt = ∫ₐᵇ √[x\'(t)² + y\'(t)²] dt',
+              'This is the arc length formula',
+              'Speed = |v⃗(t)| = √[x\'(t)² + y\'(t)²]'
             ],
             correctAnswer: 0,
-            explanation: 'Displacement vector = r⃗(b) - r⃗(a) = ∫ₐᵇ v⃗(t)dt'
+            explanation: 'Correct — Displacement vector = r⃗(b) - r⃗(a) = ∫ₐᵇ v⃗(t)dt. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Displacement vector = r⃗(b) - r⃗(a) = ∫ₐᵇ v⃗(t)dt
       id: 'vecto6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Speed = |v⃗(t)| = √[x\'(t)² + y\'(t)²]',
-            options: ['Speed = |v⃗(t)| = √[x\'(t)² + y\'(t)²]', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Displacement vector = r⃗(b) - r⃗(a) = ∫ₐᵇ v⃗(t)dt', 'Total distance = ∫ₐᵇ |v⃗(t)| dt = ∫ₐᵇ √[x\'(t)² + y\'(t)²] dt', 'Speed = |v⃗(t)| = √[x\'(t)² + y\'(t)²]', 'This is the arc length formula']
           },
           {
-            label: 'Total distance = ∫ₐᵇ |v⃗(t)| dt = ∫ₐᵇ √[x\'(t)² + y\'(t)²] dt',
-            options: ['Total distance = ∫ₐᵇ |v⃗(t)| dt = ∫ₐᵇ √[x\'(t)² + y', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Total distance = ∫ₐᵇ |v⃗(t)| dt = ∫ₐᵇ…',
+            options: ['This is the arc length formula', 'Speed = |v⃗(t)| = √[x\'(t)² + y\'(t)²]', 'Total distance = ∫ₐᵇ |v⃗(t)| dt = ∫ₐᵇ √[x\'(t)² + y\'(t)²] dt', 'Displacement vector = r⃗(b) - r⃗(a) = ∫ₐᵇ v⃗(t)dt']
           },
           {
             label: 'This is the arc length formula',
-            options: ['This is the arc length formula', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['This is the arc length formula', 'Speed = |v⃗(t)| = √[x\'(t)² + y\'(t)²]', 'Displacement vector = r⃗(b) - r⃗(a) = ∫ₐᵇ v⃗(t)dt', 'Total distance = ∫ₐᵇ |v⃗(t)| dt = ∫ₐᵇ √[x\'(t)² + y\'(t)²] dt']
           }
         ],
-        correctAnswers: ['Speed = |v⃗(t)| = √[x\'(t)² + y\'(t)²]', 'Total distance = ∫ₐᵇ |v⃗(t)| dt = ∫ₐᵇ √[x\'(t)² + y', 'This is the arc length formula'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving Workshop.'
+        correctAnswers: ['Speed = |v⃗(t)| = √[x\'(t)² + y\'(t)²]', 'Total distance = ∫ₐᵇ |v⃗(t)| dt = ∫ₐᵇ √[x\'(t)² + y\'(t)²] dt', 'This is the arc length formula'],
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Speed = |v⃗(t)| = √[x\'(t)² + y\'(t)²]. Total distance = ∫ₐᵇ |v⃗(t)| dt = ∫ₐᵇ √[x\'(t)² + y\'(t)²] dt. This is the arc length formula.'
       }
     }
   ]

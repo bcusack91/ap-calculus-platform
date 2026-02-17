@@ -19,31 +19,31 @@ export const bioCellRespirationPart6Data = {
       id: 'cell6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes atp yield calculations?',
-            options: [
-              'ATP yield calculations',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
-            ],
-            correctAnswer: 0,
-            explanation: 'ATP yield calculations'
-          },
-          {
-            question: 'In the context of problem-solving, which statement is accurate?',
+            question: 'Which statement accurately explains ATP yield calculations?',
             options: [
               'Predicting effects of ETC inhibitors',
-              'snoitaluclac dleiy PTA',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Comparing aerobic vs anaerobic pathways',
+              'Identifying where each stage occurs',
+              'ATP yield calculations'
             ],
-            correctAnswer: 0,
-            explanation: 'Predicting effects of ETC inhibitors'
+            correctAnswer: 3,
+            explanation: 'Correct — ATP yield calculations. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Cellular Respiration: Problem-Solving Workshop, which explains Predicting effects of ETC inhibitors?',
+            options: [
+              'Identifying where each stage occurs',
+              'ATP yield calculations',
+              'Predicting effects of ETC inhibitors',
+              'Comparing aerobic vs anaerobic pathways'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Predicting effects of ETC inhibitors. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioCellRespirationPart6Data = {
       id: 'cell6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to problem-solving?',
+            question: 'Which of these accurately represents Comparing aerobic vs anaerobic pathways?',
             options: [
-              'Comparing aerobic vs anaerobic pathways',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Predicting effects of ETC inhibitors',
+              'Identifying where each stage occurs',
+              'ATP yield calculations',
+              'Comparing aerobic vs anaerobic pathways'
             ],
-            correctAnswer: 0,
-            explanation: 'Comparing aerobic vs anaerobic pathways'
+            correctAnswer: 3,
+            explanation: 'Correct — Comparing aerobic vs anaerobic pathways. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioCellRespirationPart6Data = {
       id: 'cell6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'ATP yield calculations is important in problem-solving because',
-            options: ['ATP yield calculations', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'ATP yield calculations',
+            options: ['ATP yield calculations', 'Identifying where each stage occurs', 'Comparing aerobic vs anaerobic pathways', 'Predicting effects of ETC inhibitors']
           },
           {
-            label: 'Identifying where each stage occurs is important in problem-solving because',
-            options: ['Identifying where each stage occurs', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Identifying where each stage occurs',
+            options: ['Predicting effects of ETC inhibitors', 'ATP yield calculations', 'Comparing aerobic vs anaerobic pathways', 'Identifying where each stage occurs']
           },
           {
-            label: 'Predicting effects of ETC inhibitors is important in problem-solving because',
-            options: ['Predicting effects of ETC inhibitors', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Predicting effects of ETC inhibitors',
+            options: ['Comparing aerobic vs anaerobic pathways', 'Identifying where each stage occurs', 'Predicting effects of ETC inhibitors', 'ATP yield calculations']
           }
         ],
         correctAnswers: ['ATP yield calculations', 'Identifying where each stage occurs', 'Predicting effects of ETC inhibitors'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Problem-Solving.'
+        hint1: 'Think about what each concept specifically describes in Cellular Respiration: Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Cellular Respiration: Problem-Solving Workshop describes a specific idea. ATP yield calculations. Identifying where each stage occurs. Predicting effects of ETC inhibitors.'
       }
     }
   ]

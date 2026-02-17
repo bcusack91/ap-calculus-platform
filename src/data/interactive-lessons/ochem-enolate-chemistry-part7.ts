@@ -30,31 +30,31 @@ enolate reactions in synthesis
       id: 'enola7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of synthesis & review?',
+            question: 'Which statement accurately explains Enolate chemistry builds C-C bonds?',
             options: [
-              'Enolate chemistry builds C-C bonds',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'Aldol and Claisen are the most important C-C forming reactions',
+              'Michael/Robinson extends to complex synthesis',
+              'enolate reactions in synthesis',
+              'Enolate chemistry builds C-C bonds'
             ],
-            correctAnswer: 0,
-            explanation: 'Enolate chemistry builds C-C bonds'
+            correctAnswer: 3,
+            explanation: 'Correct — Enolate chemistry builds C-C bonds. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of synthesis & review, which is accurate?',
+            question: 'Which of the following is true about Michael/Robinson extends to complex…?',
             options: [
+              'Aldol and Claisen are the most important C-C forming reactions',
+              'enolate reactions in synthesis',
               'Michael/Robinson extends to complex synthesis',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Enolate chemistry builds C-C bonds'
             ],
-            correctAnswer: 0,
-            explanation: 'Michael/Robinson extends to complex synthesis'
+            correctAnswer: 2,
+            explanation: 'Correct — Michael/Robinson extends to complex synthesis. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ enolate reactions in synthesis
       id: 'enola7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Enolate chemistry builds C-C bonds',
-            options: ['Enolate chemistry builds C-C bonds', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Michael/Robinson extends to complex synthesis', 'Aldol and Claisen are the most important C-C forming reactions', 'enolate reactions in synthesis', 'Enolate chemistry builds C-C bonds']
           },
           {
-            label: 'Aldol and Claisen are the most important C-C forming reactions',
-            options: ['Aldol and Claisen are the most important C-C formi', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Aldol and Claisen are the most…',
+            options: ['Enolate chemistry builds C-C bonds', 'Aldol and Claisen are the most important C-C forming reactions', 'enolate reactions in synthesis', 'Michael/Robinson extends to complex synthesis']
           },
           {
-            label: 'Michael/Robinson extends to complex synthesis',
-            options: ['Michael/Robinson extends to complex synthesis', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Michael/Robinson extends to complex…',
+            options: ['Enolate chemistry builds C-C bonds', 'Michael/Robinson extends to complex synthesis', 'Aldol and Claisen are the most important C-C forming reactions', 'enolate reactions in synthesis']
           }
         ],
-        correctAnswers: ['Enolate chemistry builds C-C bonds', 'Aldol and Claisen are the most important C-C formi', 'Michael/Robinson extends to complex synthesis'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Synthesis & Review.'
+        correctAnswers: ['Enolate chemistry builds C-C bonds', 'Aldol and Claisen are the most important C-C forming reactions', 'Michael/Robinson extends to complex synthesis'],
+        hint1: 'Think about what each concept specifically describes in Synthesis & Review.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Synthesis & Review describes a specific idea. Enolate chemistry builds C-C bonds. Aldol and Claisen are the most important C-C forming reactions. Michael/Robinson extends to complex synthesis.'
       }
     }
   ]

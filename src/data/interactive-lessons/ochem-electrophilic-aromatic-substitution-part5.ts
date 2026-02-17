@@ -30,31 +30,31 @@ Ar-COR → Ar-CH₂R
       id: 'elect5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of multi-step eas?',
+            question: 'Which statement accurately explains Order of reactions matters for desired…?',
             options: [
+              'Ar-COR → Ar-CH₂R',
               'Order of reactions matters for desired product',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'Retrosynthetic analysis for multi-step EAS',
+              'Blocking groups can be used strategically'
             ],
-            correctAnswer: 0,
-            explanation: 'Order of reactions matters for desired product'
+            correctAnswer: 1,
+            explanation: 'Correct — Order of reactions matters for desired product. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of multi-step eas, which is accurate?',
+            question: 'Select the statement that correctly describes Retrosynthetic analysis for multi-step…:',
             options: [
+              'Blocking groups can be used strategically',
+              'Order of reactions matters for desired product',
               'Retrosynthetic analysis for multi-step EAS',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Ar-COR → Ar-CH₂R'
             ],
-            correctAnswer: 0,
-            explanation: 'Retrosynthetic analysis for multi-step EAS'
+            correctAnswer: 2,
+            explanation: 'Correct — Retrosynthetic analysis for multi-step EAS. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Ar-COR → Ar-CH₂R
       id: 'elect5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Order of reactions matters for desired product',
-            options: ['Order of reactions matters for desired product', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Order of reactions matters for desired…',
+            options: ['Order of reactions matters for desired product', 'Ar-COR → Ar-CH₂R', 'Blocking groups can be used strategically', 'Retrosynthetic analysis for multi-step EAS']
           },
           {
-            label: 'Blocking groups can be used strategically',
-            options: ['Blocking groups can be used strategically', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Blocking groups can be used…',
+            options: ['Ar-COR → Ar-CH₂R', 'Retrosynthetic analysis for multi-step EAS', 'Order of reactions matters for desired product', 'Blocking groups can be used strategically']
           },
           {
-            label: 'Retrosynthetic analysis for multi-step EAS',
-            options: ['Retrosynthetic analysis for multi-step EAS', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Retrosynthetic analysis for multi-step…',
+            options: ['Order of reactions matters for desired product', 'Retrosynthetic analysis for multi-step EAS', 'Ar-COR → Ar-CH₂R', 'Blocking groups can be used strategically']
           }
         ],
         correctAnswers: ['Order of reactions matters for desired product', 'Blocking groups can be used strategically', 'Retrosynthetic analysis for multi-step EAS'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Multi-Step EAS.'
+        hint1: 'Think about what each concept specifically describes in Multi-Step EAS.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Multi-Step EAS describes a specific idea. Order of reactions matters for desired product. Blocking groups can be used strategically. Retrosynthetic analysis for multi-step EAS.'
       }
     }
   ]

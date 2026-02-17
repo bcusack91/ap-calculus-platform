@@ -30,31 +30,31 @@ acetal linkage between two sugars
       id: 'carbo4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of disaccharides & glycosidic bonds?',
+            question: 'What does "Glycosidic bond" refer to in this topic?',
             options: [
-              'Glycosidic bond',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'α-1,4 (glucose-glucose)',
+              'acetal linkage between two sugars',
+              'α-1,β-2 (glucose-fructose) — not a reducing sugar',
+              'β-1,4 (galactose-glucose)'
             ],
-            correctAnswer: 0,
-            explanation: 'Glycosidic bond: acetal linkage between two sugars'
+            correctAnswer: 1,
+            explanation: 'Correct — Glycosidic bond: acetal linkage between two sugars. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of disaccharides & glycosidic bonds, which is accurate?',
+            question: 'Which of the following is true about Lactose?',
             options: [
+              'α-1,β-2 (glucose-fructose) — not a reducing sugar',
               'β-1,4 (galactose-glucose)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'acetal linkage between two sugars',
+              'α-1,4 (glucose-glucose)'
             ],
-            correctAnswer: 0,
-            explanation: 'Lactose: β-1,4 (galactose-glucose)'
+            correctAnswer: 1,
+            explanation: 'Correct — Lactose: β-1,4 (galactose-glucose). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ acetal linkage between two sugars
       id: 'carbo4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Glycosidic bond',
-            options: ['acetal linkage between two sugars', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['acetal linkage between two sugars', 'β-1,4 (galactose-glucose)', 'α-1,β-2 (glucose-fructose) — not a reducing sugar', 'α-1,4 (glucose-glucose)']
           },
           {
             label: 'Maltose',
-            options: ['α-1,4 (glucose-glucose)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['α-1,β-2 (glucose-fructose) — not a reducing sugar', 'α-1,4 (glucose-glucose)', 'acetal linkage between two sugars', 'β-1,4 (galactose-glucose)']
           },
           {
             label: 'Lactose',
-            options: ['β-1,4 (galactose-glucose)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['α-1,β-2 (glucose-fructose) — not a reducing sugar', 'acetal linkage between two sugars', 'α-1,4 (glucose-glucose)', 'β-1,4 (galactose-glucose)']
           }
         ],
         correctAnswers: ['acetal linkage between two sugars', 'α-1,4 (glucose-glucose)', 'β-1,4 (galactose-glucose)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Disaccharides & Glycosidic Bonds.'
+        hint1: 'Think about what each concept specifically describes in Disaccharides & Glycosidic Bonds.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Disaccharides & Glycosidic Bonds describes a specific idea. Glycosidic bond: acetal linkage between two sugars. Maltose: α-1,4 (glucose-glucose). Lactose: β-1,4 (galactose-glucose).'
       }
     }
   ]

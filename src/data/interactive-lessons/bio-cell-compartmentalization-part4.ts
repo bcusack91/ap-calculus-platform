@@ -19,31 +19,31 @@ export const bioCellCompartmentPart4Data = {
       id: 'cell4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes diffusion limits how large cells can be?',
-            options: [
-              'Diffusion limits how large cells can be',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
-            ],
-            correctAnswer: 0,
-            explanation: 'Diffusion limits how large cells can be'
-          },
-          {
-            question: 'In the context of cell size constraints, which statement is accurate?',
+            question: 'What does "Diffusion limits how large cells can be" refer to in biology?',
             options: [
               'DNA must be able to control entire cell volume',
-              'eb nac sllec egral woh stimil noisuffiD',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Need adequate surface area for nutrient/waste exchange',
+              'neurons, muscle fibers (multinucleated)',
+              'Diffusion limits how large cells can be'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Diffusion limits how large cells can be. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about DNA must be able to control entire cell…?',
+            options: [
+              'DNA must be able to control entire cell volume',
+              'Diffusion limits how large cells can be',
+              'Need adequate surface area for nutrient/waste exchange',
+              'neurons, muscle fibers (multinucleated)'
             ],
             correctAnswer: 0,
-            explanation: 'DNA must be able to control entire cell volume'
+            explanation: 'Correct — DNA must be able to control entire cell volume. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioCellCompartmentPart4Data = {
       id: 'cell4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to cell size constraints?',
+            question: 'Regarding Cell Size Constraints, which correctly describes Exceptions?',
             options: [
-              'Exceptions: neurons, muscle fibers (multinucleated)',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'neurons, muscle fibers (multinucleated)',
+              'Diffusion limits how large cells can be',
+              'DNA must be able to control entire cell volume',
+              'Need adequate surface area for nutrient/waste exchange'
             ],
             correctAnswer: 0,
-            explanation: 'Exceptions: neurons, muscle fibers (multinucleated)'
+            explanation: 'Correct — Exceptions: neurons, muscle fibers (multinucleated). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioCellCompartmentPart4Data = {
       id: 'cell4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Diffusion limits how large cells can be is important in cell size constraints because',
-            options: ['Diffusion limits how large cells can be', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Diffusion limits how large cells can be',
+            options: ['Need adequate surface area for nutrient/waste exchange', 'neurons, muscle fibers (multinucleated)', 'Diffusion limits how large cells can be', 'DNA must be able to control entire cell volume']
           },
           {
-            label: 'Need adequate surface area for nutrient/waste exchange is important in cell size constraints because',
-            options: ['Need adequate surface area for nutrient/waste exch', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Need adequate surface area for…',
+            options: ['DNA must be able to control entire cell volume', 'Diffusion limits how large cells can be', 'neurons, muscle fibers (multinucleated)', 'Need adequate surface area for nutrient/waste exchange']
           },
           {
-            label: 'DNA must be able to control entire cell volume is important in cell size constraints because',
-            options: ['DNA must be able to control entire cell volume', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'DNA must be able to control entire cell…',
+            options: ['neurons, muscle fibers (multinucleated)', 'Diffusion limits how large cells can be', 'DNA must be able to control entire cell volume', 'Need adequate surface area for nutrient/waste exchange']
           }
         ],
-        correctAnswers: ['Diffusion limits how large cells can be', 'Need adequate surface area for nutrient/waste exch', 'DNA must be able to control entire cell volume'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Cell Size Constraints.'
+        correctAnswers: ['Diffusion limits how large cells can be', 'Need adequate surface area for nutrient/waste exchange', 'DNA must be able to control entire cell volume'],
+        hint1: 'Think about what each concept specifically describes in Cell Size Constraints.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Cell Size Constraints describes a specific idea. Diffusion limits how large cells can be. Need adequate surface area for nutrient/waste exchange. DNA must be able to control entire cell volume.'
       }
     }
   ]

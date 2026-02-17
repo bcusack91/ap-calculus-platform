@@ -30,31 +30,31 @@ failing to detect changes in scenes
       id: 'perce4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of attention?',
+            question: 'Which statement accurately explains Selective attention?',
             options: [
-              'Selective attention',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'focusing on one stimulus while ignoring others',
+              'failing to notice obvious stimuli',
+              'hearing your name in a noisy room',
+              'failing to detect changes in scenes'
             ],
             correctAnswer: 0,
-            explanation: 'Selective attention: focusing on one stimulus while ignoring others'
+            explanation: 'Correct — Selective attention: focusing on one stimulus while ignoring others. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of attention, which is accurate?',
+            question: 'In the context of Attention, which explains Inattentional blindness?',
             options: [
-              'failing to notice obvious stimuli',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'hearing your name in a noisy room',
+              'failing to detect changes in scenes',
+              'focusing on one stimulus while ignoring others',
+              'failing to notice obvious stimuli'
             ],
-            correctAnswer: 0,
-            explanation: 'Inattentional blindness: failing to notice obvious stimuli'
+            correctAnswer: 3,
+            explanation: 'Correct — Inattentional blindness: failing to notice obvious stimuli. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ failing to detect changes in scenes
       id: 'perce4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Selective attention',
-            options: ['focusing on one stimulus while ignoring others', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['focusing on one stimulus while ignoring others', 'failing to notice obvious stimuli', 'hearing your name in a noisy room', 'failing to detect changes in scenes']
           },
           {
             label: 'Cocktail party effect',
-            options: ['hearing your name in a noisy room', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['failing to detect changes in scenes', 'focusing on one stimulus while ignoring others', 'hearing your name in a noisy room', 'failing to notice obvious stimuli']
           },
           {
             label: 'Inattentional blindness',
-            options: ['failing to notice obvious stimuli', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['hearing your name in a noisy room', 'focusing on one stimulus while ignoring others', 'failing to notice obvious stimuli', 'failing to detect changes in scenes']
           }
         ],
         correctAnswers: ['focusing on one stimulus while ignoring others', 'hearing your name in a noisy room', 'failing to notice obvious stimuli'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Attention.'
+        hint1: 'Think about what each concept specifically describes in Attention.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Attention describes a specific idea. Selective attention: focusing on one stimulus while ignoring others. Cocktail party effect: hearing your name in a noisy room. Inattentional blindness: failing to notice obvious stimuli.'
       }
     }
   ]

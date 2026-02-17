@@ -30,31 +30,31 @@ amines; Halide (-X): alkyl halides
       id: 'molec2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of functional groups?',
+            question: 'Which of the following correctly describes Functional group determines reactivity?',
             options: [
+              'amines; Halide (-X): alkyl halides',
+              'alcohols',
               'Functional group determines reactivity',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'aldehydes, ketones, carboxylic acids'
             ],
-            correctAnswer: 0,
-            explanation: 'Functional group determines reactivity'
+            correctAnswer: 2,
+            explanation: 'Correct — Functional group determines reactivity. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of functional groups, which is accurate?',
+            question: 'Which of the following is true about Carbonyl (C=O)?',
             options: [
-              'aldehydes, ketones, carboxylic acids',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'alcohols',
+              'Functional group determines reactivity',
+              'amines; Halide (-X): alkyl halides',
+              'aldehydes, ketones, carboxylic acids'
             ],
-            correctAnswer: 0,
-            explanation: 'Carbonyl (C=O): aldehydes, ketones, carboxylic acids'
+            correctAnswer: 3,
+            explanation: 'Correct — Carbonyl (C=O): aldehydes, ketones, carboxylic acids. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ amines; Halide (-X): alkyl halides
       id: 'molec2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Functional group determines reactivity',
-            options: ['Functional group determines reactivity', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
-          },
-          {
             label: 'Hydroxyl (-OH)',
-            options: ['alcohols', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['aldehydes, ketones, carboxylic acids', 'Functional group determines reactivity', 'amines; Halide (-X): alkyl halides', 'alcohols']
           },
           {
             label: 'Carbonyl (C=O)',
-            options: ['aldehydes, ketones, carboxylic acids', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['amines; Halide (-X): alkyl halides', 'Functional group determines reactivity', 'aldehydes, ketones, carboxylic acids', 'alcohols']
+          },
+          {
+            label: 'Amino (-NH₂)',
+            options: ['amines; Halide (-X): alkyl halides', 'alcohols', 'Functional group determines reactivity', 'aldehydes, ketones, carboxylic acids']
           }
         ],
-        correctAnswers: ['Functional group determines reactivity', 'alcohols', 'aldehydes, ketones, carboxylic acids'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Functional Groups.'
+        correctAnswers: ['alcohols', 'aldehydes, ketones, carboxylic acids', 'amines; Halide (-X): alkyl halides'],
+        hint1: 'Think about what each concept specifically describes in Functional Groups.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Functional Groups describes a specific idea. Hydroxyl (-OH): alcohols. Carbonyl (C=O): aldehydes, ketones, carboxylic acids. Amino (-NH₂): amines; Halide (-X): alkyl halides.'
       }
     }
   ]

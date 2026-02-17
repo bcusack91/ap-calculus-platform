@@ -19,31 +19,31 @@ export const bioGeneRegPart4Data = {
       id: 'gene4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes dna methylation?',
-            options: [
-              'silences genes (adds CH₃ groups)',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
-            ],
-            correctAnswer: 0,
-            explanation: 'DNA methylation: silences genes (adds CH₃ groups)'
-          },
-          {
-            question: 'In the context of epigenetics, which statement is accurate?',
+            question: 'What does "DNA methylation" refer to in biology?',
             options: [
               'Heritable changes without DNA sequence changes',
-              ')spuorg ₃HC sdda( seneg secnelis :noitalyhtem AND',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'Environmental factors can cause epigenetic changes',
+              'acetylation loosens chromatin (genes ON)',
+              'silences genes (adds CH₃ groups)'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — DNA methylation: silences genes (adds CH₃ groups). The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Epigenetics, which explains Heritable changes without DNA sequence…?',
+            options: [
+              'Heritable changes without DNA sequence changes',
+              'Environmental factors can cause epigenetic changes',
+              'silences genes (adds CH₃ groups)',
+              'acetylation loosens chromatin (genes ON)'
             ],
             correctAnswer: 0,
-            explanation: 'Heritable changes without DNA sequence changes'
+            explanation: 'Correct — Heritable changes without DNA sequence changes. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioGeneRegPart4Data = {
       id: 'gene4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to epigenetics?',
+            question: 'Regarding Epigenetics, which correctly describes Environmental factors can cause…?',
             options: [
               'Environmental factors can cause epigenetic changes',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'silences genes (adds CH₃ groups)',
+              'acetylation loosens chromatin (genes ON)',
+              'Heritable changes without DNA sequence changes'
             ],
             correctAnswer: 0,
-            explanation: 'Environmental factors can cause epigenetic changes'
+            explanation: 'Correct — Environmental factors can cause epigenetic changes. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,24 @@ export const bioGeneRegPart4Data = {
       id: 'gene4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'DNA methylation is important in epigenetics because',
-            options: ['silences genes (adds CH₃ groups)', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'DNA methylation',
+            options: ['silences genes (adds CH₃ groups)', 'Heritable changes without DNA sequence changes', 'acetylation loosens chromatin (genes ON)', 'Environmental factors can cause epigenetic changes']
           },
           {
-            label: 'Histone modification is important in epigenetics because',
-            options: ['acetylation loosens chromatin (genes ON)', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
-          },
-          {
-            label: 'Heritable changes without DNA sequence changes is important in epigenetics because',
-            options: ['Heritable changes without DNA sequence changes', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Histone modification',
+            options: ['Heritable changes without DNA sequence changes', 'Environmental factors can cause epigenetic changes', 'acetylation loosens chromatin (genes ON)', 'silences genes (adds CH₃ groups)']
           }
         ],
-        correctAnswers: ['silences genes (adds CH₃ groups)', 'acetylation loosens chromatin (genes ON)', 'Heritable changes without DNA sequence changes'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Epigenetics.'
+        correctAnswers: ['silences genes (adds CH₃ groups)', 'acetylation loosens chromatin (genes ON)'],
+        hint1: 'Think about what each concept specifically describes in Epigenetics.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Epigenetics describes a specific idea. DNA methylation: silences genes (adds CH₃ groups). Histone modification: acetylation loosens chromatin (genes ON).'
       }
     }
   ]

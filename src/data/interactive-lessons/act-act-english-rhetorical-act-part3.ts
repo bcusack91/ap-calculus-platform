@@ -18,20 +18,31 @@ Supporting details follow the topic sentence.
       id: 'act-e3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes topic sentences usually go at the beginning of paragraphs?',
+            question: 'What does "Topic sentences usually go at the…" refer to in ACT prep?',
             options: [
-              'Topic sentences usually go at the beginning of paragraphs is a key concept for ACT English/Reading',
-              'Supporting details follow the topic sentence',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'Place sentences where they maintain chronological or logical order.',
+              'Concluding/transitional sentences go at the end.',
+              'Topic sentences usually go at the beginning of paragraphs.',
+              'Supporting details follow the topic sentence.'
             ],
-            correctAnswer: 0,
-            explanation: 'Topic sentences usually go at the beginning of paragraphs'
+            correctAnswer: 2,
+            explanation: 'Correct — Topic sentences usually go at the beginning of paragraphs. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Sentence Placement, which explains Key Insight?',
+            options: [
+              'Place sentences where they maintain chronological or logical order.',
+              'Supporting details follow the topic sentence.',
+              'Topic sentences usually go at the beginning of paragraphs.',
+              'Concluding/transitional sentences go at the end.'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Key Insight: Concluding/transitional sentences go at the end. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Supporting details follow the topic sentence.
       id: 'act-e3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for sentence placement?',
+            question: 'Regarding Sentence Placement, which correctly describes ACT Tip?',
             options: [
-              'Concluding/transitional sentences go at the end',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Topic sentences usually go at the beginning of paragraphs.',
+              'Supporting details follow the topic sentence.',
+              'Place sentences where they maintain chronological or logical order.',
+              'Concluding/transitional sentences go at the end.'
             ],
-            correctAnswer: 0,
-            explanation: 'Concluding/transitional sentences go at the end'
+            correctAnswer: 2,
+            explanation: 'Correct — ACT Tip: Place sentences where they maintain chronological or logical order. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ Supporting details follow the topic sentence.
       id: 'act-e3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Sentence Placement:',
-            options: ['Topic sentences usually go at the beginning of par', 'Supporting details follow the topic sentence', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['Concluding/transitional sentences go at the end.', 'Place sentences where they maintain chronological or logical order.', 'Supporting details follow the topic sentence.', 'Topic sentences usually go at the beginning of paragraphs.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Concluding/transitional sentences go at the end', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'ACT Tip',
+            options: ['Concluding/transitional sentences go at the end.', 'Supporting details follow the topic sentence.', 'Place sentences where they maintain chronological or logical order.', 'Topic sentences usually go at the beginning of paragraphs.']
           }
         ],
-        correctAnswers: ['Topic sentences usually go at the beginning of par', 'Concluding/transitional sentences go at the end'],
-        hint1: 'Think about sentence placement',
-        hint2: 'Consider the best ACT strategy',
-        explanation: 'Topic sentences usually go at the beginning of paragraphs. Concluding/transitional sentences go at the end.'
+        correctAnswers: ['Concluding/transitional sentences go at the end.', 'Place sentences where they maintain chronological or logical order.'],
+        hint1: 'Think about what each concept specifically describes in Sentence Placement.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Sentence Placement describes a specific idea. Key Insight: Concluding/transitional sentences go at the end. ACT Tip: Place sentences where they maintain chronological or logical order.'
       }
     }
   ]

@@ -30,31 +30,31 @@ state which bound you're using and show the calculation
       id: 'serie4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of error analysis in practice?',
+            question: 'Which of the following correctly describes Lagrange error bound?',
             options: [
-              'Lagrange error bound',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
+              'state which bound you\'re using and show the calculation',
+              '|Rₙ(x)| ≤ M|x-a|ⁿ⁺¹/(n+1)!',
+              '|S - Sₙ| ≤ |aₙ₊₁|',
+              'Choose the tighter bound when both apply'
             ],
-            correctAnswer: 0,
-            explanation: 'Lagrange error bound: |Rₙ(x)| ≤ M|x-a|ⁿ⁺¹/(n+1)!'
+            correctAnswer: 1,
+            explanation: 'Correct — Lagrange error bound: |Rₙ(x)| ≤ M|x-a|ⁿ⁺¹/(n+1)!. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of error analysis in practice, which is accurate?',
+            question: 'Select the statement that correctly describes Choose the tighter bound when both apply:',
             options: [
-              'Choose the tighter bound when both apply',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'state which bound you\'re using and show the calculation',
+              '|S - Sₙ| ≤ |aₙ₊₁|',
+              '|Rₙ(x)| ≤ M|x-a|ⁿ⁺¹/(n+1)!',
+              'Choose the tighter bound when both apply'
             ],
-            correctAnswer: 0,
-            explanation: 'Choose the tighter bound when both apply'
+            correctAnswer: 3,
+            explanation: 'Correct — Choose the tighter bound when both apply. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ state which bound you're using and show the calculation
       id: 'serie4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to error analysis in practice?',
+            question: 'Which statement about On AP exam is correct?',
             options: [
+              '|S - Sₙ| ≤ |aₙ₊₁|',
+              '|Rₙ(x)| ≤ M|x-a|ⁿ⁺¹/(n+1)!',
               'state which bound you\'re using and show the calculation',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'Choose the tighter bound when both apply'
             ],
-            correctAnswer: 0,
-            explanation: 'On AP exam: state which bound you\'re using and show the calculation'
+            correctAnswer: 2,
+            explanation: 'Correct — On AP exam: state which bound you\'re using and show the calculation. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ state which bound you're using and show the calculation
       id: 'serie4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Lagrange error bound',
-            options: ['|Rₙ(x)| ≤ M|x-a|ⁿ⁺¹/(n+1)!', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['|Rₙ(x)| ≤ M|x-a|ⁿ⁺¹/(n+1)!', 'state which bound you\'re using and show the calculation', '|S - Sₙ| ≤ |aₙ₊₁|', 'Choose the tighter bound when both apply']
           },
           {
             label: 'Alternating series error',
-            options: ['|S - Sₙ| ≤ |aₙ₊₁|', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['state which bound you\'re using and show the calculation', '|Rₙ(x)| ≤ M|x-a|ⁿ⁺¹/(n+1)!', '|S - Sₙ| ≤ |aₙ₊₁|', 'Choose the tighter bound when both apply']
           },
           {
-            label: 'Choose the tighter bound when both apply',
-            options: ['Choose the tighter bound when both apply', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'On AP exam',
+            options: ['state which bound you\'re using and show the calculation', '|Rₙ(x)| ≤ M|x-a|ⁿ⁺¹/(n+1)!', 'Choose the tighter bound when both apply', '|S - Sₙ| ≤ |aₙ₊₁|']
           }
         ],
-        correctAnswers: ['|Rₙ(x)| ≤ M|x-a|ⁿ⁺¹/(n+1)!', '|S - Sₙ| ≤ |aₙ₊₁|', 'Choose the tighter bound when both apply'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Error Analysis in Practice.'
+        correctAnswers: ['|Rₙ(x)| ≤ M|x-a|ⁿ⁺¹/(n+1)!', '|S - Sₙ| ≤ |aₙ₊₁|', 'state which bound you\'re using and show the calculation'],
+        hint1: 'Think about what each concept specifically describes in Error Analysis in Practice.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Error Analysis in Practice describes a specific idea. Lagrange error bound: |Rₙ(x)| ≤ M|x-a|ⁿ⁺¹/(n+1)!. Alternating series error: |S - Sₙ| ≤ |aₙ₊₁|. On AP exam: state which bound you\'re using and show the calculation.'
       }
     }
   ]

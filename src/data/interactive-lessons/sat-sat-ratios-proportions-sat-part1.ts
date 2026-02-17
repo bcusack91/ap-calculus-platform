@@ -18,20 +18,31 @@ Proportion: two equal ratios, a/b = c/d.
       id: 'sat-r1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes ratio?',
+            question: 'Which statement accurately explains Ratio?',
             options: [
-              'Ratio is a fundamental concept in SAT Math',
-              'Proportion: two equal ratios, a/b = c/d',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'Cross-multiply to solve: ad = bc.',
+              'Part-to-whole vs. part-to-part ratios: context matters on the SAT.',
+              'two equal ratios, a/b = c/d.',
+              'comparison of two quantities (a:b or a/b).'
             ],
-            correctAnswer: 0,
-            explanation: 'Ratio: comparison of two quantities (a:b or a/b)'
+            correctAnswer: 3,
+            explanation: 'Correct — Ratio: comparison of two quantities (a:b or a/b). The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Key Insight?',
+            options: [
+              'comparison of two quantities (a:b or a/b).',
+              'Part-to-whole vs. part-to-part ratios: context matters on the SAT.',
+              'two equal ratios, a/b = c/d.',
+              'Cross-multiply to solve: ad = bc.'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Key Insight: Cross-multiply to solve: ad = bc. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Proportion: two equal ratios, a/b = c/d.
       id: 'sat-r1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for ratios and proportions?',
+            question: 'Regarding Ratios Proportions, which correctly describes SAT Tip?',
             options: [
-              'Cross-multiply to solve: ad = bc',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'comparison of two quantities (a:b or a/b).',
+              'Part-to-whole vs. part-to-part ratios: context matters on the SAT.',
+              'two equal ratios, a/b = c/d.',
+              'Cross-multiply to solve: ad = bc.'
             ],
-            correctAnswer: 0,
-            explanation: 'Cross-multiply to solve: ad = bc'
+            correctAnswer: 1,
+            explanation: 'Correct — SAT Tip: Part-to-whole vs. part-to-part ratios: context matters on the SAT. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Proportion: two equal ratios, a/b = c/d.
       id: 'sat-r1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Ratios and Proportions:',
-            options: ['Ratio: comparison of two quantities (a:b or a/b)', 'Proportion: two equal ratios, a/b = c/d', 'Not applicable', 'None of these']
+            label: 'Ratio',
+            options: ['comparison of two quantities (a:b or a/b).', 'Part-to-whole vs. part-to-part ratios: context matters on the SAT.', 'two equal ratios, a/b = c/d.', 'Cross-multiply to solve: ad = bc.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Cross-multiply to solve: ad = bc', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Proportion',
+            options: ['Cross-multiply to solve: ad = bc.', 'comparison of two quantities (a:b or a/b).', 'Part-to-whole vs. part-to-part ratios: context matters on the SAT.', 'two equal ratios, a/b = c/d.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['Part-to-whole vs. part-to-part ratios: context matters on the SAT.', 'two equal ratios, a/b = c/d.', 'comparison of two quantities (a:b or a/b).', 'Cross-multiply to solve: ad = bc.']
           }
         ],
-        correctAnswers: ['Ratio: comparison of two quantities (a:b or a/b)', 'Cross-multiply to solve: ad = bc'],
-        hint1: 'Think about ratios and proportions',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'Ratio: comparison of two quantities (a:b or a/b). Cross-multiply to solve: ad = bc.'
+        correctAnswers: ['comparison of two quantities (a:b or a/b).', 'two equal ratios, a/b = c/d.', 'Cross-multiply to solve: ad = bc.'],
+        hint1: 'Think about what each concept specifically describes in Ratios Proportions.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Ratios Proportions describes a specific idea. Ratio: comparison of two quantities (a:b or a/b). Proportion: two equal ratios, a/b = c/d. Key Insight: Cross-multiply to solve: ad = bc.'
       }
     }
   ]

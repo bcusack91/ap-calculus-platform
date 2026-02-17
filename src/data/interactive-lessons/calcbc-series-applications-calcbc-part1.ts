@@ -30,31 +30,31 @@ Polynomial approximations are fast to compute — no transcendental functions ne
       id: 'serie1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of approximating functions?',
-            options: [
-              'Use Taylor polynomials to approximate function values near the center',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'Use Taylor polynomials to approximate function values near the center'
-          },
-          {
-            question: 'In the context of approximating functions, which is accurate?',
+            question: 'Which of the following correctly describes Use Taylor polynomials to approximate…?',
             options: [
               'e^(0.1) ≈ 1 + 0.1 + 0.01/2 + 0.001/6 = 1.10517 (to 5 decimal places)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Use Taylor polynomials to approximate function values near the center',
+              'Higher degree → better approximation (within radius of convergence)',
+              'Polynomial approximations are fast to compute — no transcendental functions needed'
             ],
-            correctAnswer: 0,
-            explanation: 'Example: e^(0.1) ≈ 1 + 0.1 + 0.01/2 + 0.001/6 = 1.10517 (to 5 decimal places)'
+            correctAnswer: 1,
+            explanation: 'Correct — Use Taylor polynomials to approximate function values near the center. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Example?',
+            options: [
+              'Polynomial approximations are fast to compute — no transcendental functions needed',
+              'e^(0.1) ≈ 1 + 0.1 + 0.01/2 + 0.001/6 = 1.10517 (to 5 decimal places)',
+              'Higher degree → better approximation (within radius of convergence)',
+              'Use Taylor polynomials to approximate function values near the center'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Example: e^(0.1) ≈ 1 + 0.1 + 0.01/2 + 0.001/6 = 1.10517 (to 5 decimal places). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Polynomial approximations are fast to compute — no transcendental functions ne
       id: 'serie1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to approximating functions?',
+            question: 'Which statement about Polynomial approximations are fast to… is correct?',
             options: [
-              'Polynomial approximations are fast to compute — no transcendental functions need',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'Use Taylor polynomials to approximate function values near the center',
+              'Higher degree → better approximation (within radius of convergence)',
+              'Polynomial approximations are fast to compute — no transcendental functions needed',
+              'e^(0.1) ≈ 1 + 0.1 + 0.01/2 + 0.001/6 = 1.10517 (to 5 decimal places)'
             ],
-            correctAnswer: 0,
-            explanation: 'Polynomial approximations are fast to compute — no transcendental functions needed'
+            correctAnswer: 2,
+            explanation: 'Correct — Polynomial approximations are fast to compute — no transcendental functions needed. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Polynomial approximations are fast to compute — no transcendental functions ne
       id: 'serie1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Use Taylor polynomials to approximate function values near the center',
-            options: ['Use Taylor polynomials to approximate function val', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Use Taylor polynomials to approximate…',
+            options: ['Use Taylor polynomials to approximate function values near the center', 'Higher degree → better approximation (within radius of convergence)', 'e^(0.1) ≈ 1 + 0.1 + 0.01/2 + 0.001/6 = 1.10517 (to 5 decimal places)', 'Polynomial approximations are fast to compute — no transcendental functions needed']
           },
           {
-            label: 'Higher degree → better approximation (within radius of convergence)',
-            options: ['Higher degree → better approximation (within radiu', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Higher degree → better approximation…',
+            options: ['e^(0.1) ≈ 1 + 0.1 + 0.01/2 + 0.001/6 = 1.10517 (to 5 decimal places)', 'Use Taylor polynomials to approximate function values near the center', 'Polynomial approximations are fast to compute — no transcendental functions needed', 'Higher degree → better approximation (within radius of convergence)']
           },
           {
             label: 'Example',
-            options: ['e^(0.1) ≈ 1 + 0.1 + 0.01/2 + 0.001/6 = 1.10517 (to', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Higher degree → better approximation (within radius of convergence)', 'e^(0.1) ≈ 1 + 0.1 + 0.01/2 + 0.001/6 = 1.10517 (to 5 decimal places)', 'Use Taylor polynomials to approximate function values near the center', 'Polynomial approximations are fast to compute — no transcendental functions needed']
           }
         ],
-        correctAnswers: ['Use Taylor polynomials to approximate function val', 'Higher degree → better approximation (within radiu', 'e^(0.1) ≈ 1 + 0.1 + 0.01/2 + 0.001/6 = 1.10517 (to'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Approximating Functions.'
+        correctAnswers: ['Use Taylor polynomials to approximate function values near the center', 'Higher degree → better approximation (within radius of convergence)', 'e^(0.1) ≈ 1 + 0.1 + 0.01/2 + 0.001/6 = 1.10517 (to 5 decimal places)'],
+        hint1: 'Think about what each concept specifically describes in ∮ Series Applications.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in ∮ Series Applications describes a specific idea. Use Taylor polynomials to approximate function values near the center. Higher degree → better approximation (within radius of convergence). Example: e^(0.1) ≈ 1 + 0.1 + 0.01/2 + 0.001/6 = 1.10517 (to 5 decimal places).'
       }
     }
   ]

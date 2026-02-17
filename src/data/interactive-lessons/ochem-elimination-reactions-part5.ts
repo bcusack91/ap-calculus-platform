@@ -30,31 +30,31 @@ Temperature increase favors elimination over substitution
       id: 'elimi5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of substitution vs elimination?',
+            question: 'What does "Strong base + primary substrate → SN2…" refer to in this topic?',
             options: [
+              'Temperature increase favors elimination over substitution',
+              'Strong bulky base → E2 favored over SN2',
               'Strong base + primary substrate → SN2 or E2',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'Weak base + tertiary substrate → SN1 or E1'
             ],
-            correctAnswer: 0,
-            explanation: 'Strong base + primary substrate → SN2 or E2'
+            correctAnswer: 2,
+            explanation: 'Correct — Strong base + primary substrate → SN2 or E2. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of substitution vs elimination, which is accurate?',
+            question: 'Select the statement that correctly describes Weak base + tertiary substrate → SN1 or…:',
             options: [
+              'Temperature increase favors elimination over substitution',
               'Weak base + tertiary substrate → SN1 or E1',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Strong base + primary substrate → SN2 or E2',
+              'Strong bulky base → E2 favored over SN2'
             ],
-            correctAnswer: 0,
-            explanation: 'Weak base + tertiary substrate → SN1 or E1'
+            correctAnswer: 1,
+            explanation: 'Correct — Weak base + tertiary substrate → SN1 or E1. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Temperature increase favors elimination over substitution
       id: 'elimi5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Strong base + primary substrate → SN2 or E2',
-            options: ['Strong base + primary substrate → SN2 or E2', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Strong base + primary substrate → SN2…',
+            options: ['Weak base + tertiary substrate → SN1 or E1', 'Strong bulky base → E2 favored over SN2', 'Strong base + primary substrate → SN2 or E2', 'Temperature increase favors elimination over substitution']
           },
           {
             label: 'Strong bulky base → E2 favored over SN2',
-            options: ['Strong bulky base → E2 favored over SN2', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['Temperature increase favors elimination over substitution', 'Strong bulky base → E2 favored over SN2', 'Weak base + tertiary substrate → SN1 or E1', 'Strong base + primary substrate → SN2 or E2']
           },
           {
-            label: 'Weak base + tertiary substrate → SN1 or E1',
-            options: ['Weak base + tertiary substrate → SN1 or E1', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Weak base + tertiary substrate → SN1 or…',
+            options: ['Strong bulky base → E2 favored over SN2', 'Weak base + tertiary substrate → SN1 or E1', 'Temperature increase favors elimination over substitution', 'Strong base + primary substrate → SN2 or E2']
           }
         ],
         correctAnswers: ['Strong base + primary substrate → SN2 or E2', 'Strong bulky base → E2 favored over SN2', 'Weak base + tertiary substrate → SN1 or E1'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Substitution vs Elimination.'
+        hint1: 'Think about what each concept specifically describes in Substitution vs Elimination.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Substitution vs Elimination describes a specific idea. Strong base + primary substrate → SN2 or E2. Strong bulky base → E2 favored over SN2. Weak base + tertiary substrate → SN1 or E1.'
       }
     }
   ]

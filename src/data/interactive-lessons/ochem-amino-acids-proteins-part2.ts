@@ -30,31 +30,31 @@ amino acid is anionic (-1)
       id: 'amino2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of acid-base properties?',
-            options: [
-              'Amino acids are zwitterions at physiological pH',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
-            ],
-            correctAnswer: 0,
-            explanation: 'Amino acids are zwitterions at physiological pH'
-          },
-          {
-            question: 'In the context of acid-base properties, which is accurate?',
+            question: 'Which statement accurately explains Amino acids are zwitterions at…?',
             options: [
               'amino acid is cationic (+1)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'pH at which net charge = 0',
+              'amino acid is anionic (-1)',
+              'Amino acids are zwitterions at physiological pH'
             ],
-            correctAnswer: 0,
-            explanation: 'Below pI: amino acid is cationic (+1)'
+            correctAnswer: 3,
+            explanation: 'Correct — Amino acids are zwitterions at physiological pH. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Below pI?',
+            options: [
+              'amino acid is anionic (-1)',
+              'pH at which net charge = 0',
+              'amino acid is cationic (+1)',
+              'Amino acids are zwitterions at physiological pH'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Below pI: amino acid is cationic (+1). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ amino acid is anionic (-1)
       id: 'amino2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Amino acids are zwitterions at physiological pH',
-            options: ['Amino acids are zwitterions at physiological pH', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
-          },
-          {
             label: 'Isoelectric point (pI)',
-            options: ['pH at which net charge = 0', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['pH at which net charge = 0', 'Amino acids are zwitterions at physiological pH', 'amino acid is cationic (+1)', 'amino acid is anionic (-1)']
           },
           {
             label: 'Below pI',
-            options: ['amino acid is cationic (+1)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['pH at which net charge = 0', 'Amino acids are zwitterions at physiological pH', 'amino acid is cationic (+1)', 'amino acid is anionic (-1)']
+          },
+          {
+            label: 'Above pI',
+            options: ['pH at which net charge = 0', 'amino acid is anionic (-1)', 'amino acid is cationic (+1)', 'Amino acids are zwitterions at physiological pH']
           }
         ],
-        correctAnswers: ['Amino acids are zwitterions at physiological pH', 'pH at which net charge = 0', 'amino acid is cationic (+1)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Acid-Base Properties.'
+        correctAnswers: ['pH at which net charge = 0', 'amino acid is cationic (+1)', 'amino acid is anionic (-1)'],
+        hint1: 'Think about what each concept specifically describes in Acid-Base Properties.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Acid-Base Properties describes a specific idea. Isoelectric point (pI): pH at which net charge = 0. Below pI: amino acid is cationic (+1). Above pI: amino acid is anionic (-1).'
       }
     }
   ]

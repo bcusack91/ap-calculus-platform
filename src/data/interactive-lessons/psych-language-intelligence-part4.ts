@@ -30,31 +30,31 @@ Reliability and validity of intelligence tests
       id: 'langu4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of intelligence testing?',
+            question: 'Which of the following correctly describes Stanford-Binet and Wechsler tests (IQ…?',
             options: [
-              'Stanford-Binet and Wechsler tests (IQ tests)',
-              'An unrelated concept',
-              'Something not covered in AP Psychology',
-              'A physics principle'
+              'Reliability and validity of intelligence tests',
+              'IQ = (mental age / chronological age) × 100 (original formula)',
+              'mean = 100, SD = 15',
+              'Stanford-Binet and Wechsler tests (IQ tests)'
             ],
-            correctAnswer: 0,
-            explanation: 'Stanford-Binet and Wechsler tests (IQ tests)'
+            correctAnswer: 3,
+            explanation: 'Correct — Stanford-Binet and Wechsler tests (IQ tests). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of intelligence testing, which is accurate?',
+            question: 'Which of the following is true about Normal distribution?',
             options: [
-              'mean = 100, SD = 15',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Stanford-Binet and Wechsler tests (IQ tests)',
+              'Reliability and validity of intelligence tests',
+              'IQ = (mental age / chronological age) × 100 (original formula)',
+              'mean = 100, SD = 15'
             ],
-            correctAnswer: 0,
-            explanation: 'Normal distribution: mean = 100, SD = 15'
+            correctAnswer: 3,
+            explanation: 'Correct — Normal distribution: mean = 100, SD = 15. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Reliability and validity of intelligence tests
       id: 'langu4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Stanford-Binet and Wechsler tests (IQ tests)',
-            options: ['Stanford-Binet and Wechsler tests (IQ tests)', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            label: 'Stanford-Binet and Wechsler tests (IQ…',
+            options: ['Reliability and validity of intelligence tests', 'mean = 100, SD = 15', 'Stanford-Binet and Wechsler tests (IQ tests)', 'IQ = (mental age / chronological age) × 100 (original formula)']
           },
           {
-            label: 'IQ = (mental age / chronological age) × 100 (original formula)',
-            options: ['IQ = (mental age / chronological age) × 100 (origi', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            label: 'IQ = (mental age / chronological age) ×…',
+            options: ['Stanford-Binet and Wechsler tests (IQ tests)', 'IQ = (mental age / chronological age) × 100 (original formula)', 'mean = 100, SD = 15', 'Reliability and validity of intelligence tests']
           },
           {
             label: 'Normal distribution',
-            options: ['mean = 100, SD = 15', 'Not applicable', 'Unrelated to psychology', 'Only in animals']
+            options: ['Stanford-Binet and Wechsler tests (IQ tests)', 'Reliability and validity of intelligence tests', 'IQ = (mental age / chronological age) × 100 (original formula)', 'mean = 100, SD = 15']
           }
         ],
-        correctAnswers: ['Stanford-Binet and Wechsler tests (IQ tests)', 'IQ = (mental age / chronological age) × 100 (origi', 'mean = 100, SD = 15'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Intelligence Testing.'
+        correctAnswers: ['Stanford-Binet and Wechsler tests (IQ tests)', 'IQ = (mental age / chronological age) × 100 (original formula)', 'mean = 100, SD = 15'],
+        hint1: 'Think about what each concept specifically describes in Intelligence Testing.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Intelligence Testing describes a specific idea. Stanford-Binet and Wechsler tests (IQ tests). IQ = (mental age / chronological age) × 100 (original formula). Normal distribution: mean = 100, SD = 15.'
       }
     }
   ]

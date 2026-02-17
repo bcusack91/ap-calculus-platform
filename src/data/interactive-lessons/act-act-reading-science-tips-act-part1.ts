@@ -18,20 +18,31 @@ Passage types: literary narrative, social science, humanities, natural science.
       id: 'act-r1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes 40 questions in 35 minutes across 4 passages?',
+            question: 'Which statement accurately explains 40 questions in 35 minutes across 4…?',
             options: [
-              '40 questions in 35 minutes across 4 passages is a key concept for ACT English/Reading',
-              'Passage types: literary narrative, social science, humanities, natural science',
-              'This concept is not tested on the ACT',
-              'None of these apply to ACT preparation'
+              'literary narrative, social science, humanities, natural science.',
+              '40 questions in 35 minutes across 4 passages.',
+              'Questions test comprehension, inference, vocabulary, and author\'s craft.',
+              'Every answer is supported by the passage text — no outside knowledge needed.'
             ],
-            correctAnswer: 0,
-            explanation: '40 questions in 35 minutes across 4 passages'
+            correctAnswer: 1,
+            explanation: 'Correct — 40 questions in 35 minutes across 4 passages. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Key Insight?',
+            options: [
+              '40 questions in 35 minutes across 4 passages.',
+              'Questions test comprehension, inference, vocabulary, and author\'s craft.',
+              'literary narrative, social science, humanities, natural science.',
+              'Every answer is supported by the passage text — no outside knowledge needed.'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — Key Insight: Questions test comprehension, inference, vocabulary, and author\'s craft. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Passage types: literary narrative, social science, humanities, natural science.
       id: 'act-r1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for act reading overview?',
+            question: 'Which of these accurately represents ACT Tip?',
             options: [
-              'Questions test comprehension, inference, vocabulary, and author\'s craft',
-              'Skip these questions entirely on the ACT',
-              'These are only on the optional Writing section',
-              'This topic appears only on the SAT'
+              'Questions test comprehension, inference, vocabulary, and author\'s craft.',
+              '40 questions in 35 minutes across 4 passages.',
+              'literary narrative, social science, humanities, natural science.',
+              'Every answer is supported by the passage text — no outside knowledge needed.'
             ],
-            correctAnswer: 0,
-            explanation: 'Questions test comprehension, inference, vocabulary, and author\'s craft'
+            correctAnswer: 3,
+            explanation: 'Correct — ACT Tip: Every answer is supported by the passage text — no outside knowledge needed. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Passage types: literary narrative, social science, humanities, natural science.
       id: 'act-r1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for ACT Reading Overview:',
-            options: ['40 questions in 35 minutes across 4 passages', 'Passage types: literary narrative, social science,', 'Not applicable', 'None of these']
+            label: 'Passage types',
+            options: ['Questions test comprehension, inference, vocabulary, and author\'s craft.', 'literary narrative, social science, humanities, natural science.', 'Every answer is supported by the passage text — no outside knowledge needed.', '40 questions in 35 minutes across 4 passages.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Questions test comprehension, inference, vocabular', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Key Insight',
+            options: ['literary narrative, social science, humanities, natural science.', 'Every answer is supported by the passage text — no outside knowledge needed.', 'Questions test comprehension, inference, vocabulary, and author\'s craft.', '40 questions in 35 minutes across 4 passages.']
+          },
+          {
+            label: 'ACT Tip',
+            options: ['literary narrative, social science, humanities, natural science.', '40 questions in 35 minutes across 4 passages.', 'Questions test comprehension, inference, vocabulary, and author\'s craft.', 'Every answer is supported by the passage text — no outside knowledge needed.']
           }
         ],
-        correctAnswers: ['40 questions in 35 minutes across 4 passages', 'Questions test comprehension, inference, vocabular'],
-        hint1: 'Think about act reading overview',
-        hint2: 'Consider the best ACT strategy',
-        explanation: '40 questions in 35 minutes across 4 passages. Questions test comprehension, inference, vocabulary, and author\'s craft.'
+        correctAnswers: ['literary narrative, social science, humanities, natural science.', 'Questions test comprehension, inference, vocabulary, and author\'s craft.', 'Every answer is supported by the passage text — no outside knowledge needed.'],
+        hint1: 'Think about what each concept specifically describes in Reading Science Tips.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Reading Science Tips describes a specific idea. Passage types: literary narrative, social science, humanities, natural science. Key Insight: Questions test comprehension, inference, vocabulary, and author\'s craft. ACT Tip: Every answer is supported by the passage text — no outside knowledge needed.'
       }
     }
   ]

@@ -18,20 +18,31 @@ P = principal, r = annual rate, n = compounds per year, t = years.
       id: 'sat-e4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes a = p(1 + r/n)^(nt) — compound interest formula?',
+            question: 'Which statement accurately explains A = P(1 + r/n)^(nt) — compound interest…?',
             options: [
-              'A = P(1 + r/n)^(nt) — compound interest formula is a fundamental concept in SAT Math',
-              'P = principal, r = annual rate, n = compounds per year, t = years',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'SAT focuses on interpreting parts of the formula.',
+              'A = P(1 + r/n)^(nt) — compound interest formula.',
+              'Continuous compounding: A = Pe^(rt).',
+              'P = principal, r = annual rate, n = compounds per year, t = years.'
             ],
-            correctAnswer: 0,
-            explanation: 'A = P(1 + r/n)^(nt) — compound interest formula'
+            correctAnswer: 1,
+            explanation: 'Correct — A = P(1 + r/n)^(nt) — compound interest formula. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Compound Interest, which explains Key Insight?',
+            options: [
+              'SAT focuses on interpreting parts of the formula.',
+              'P = principal, r = annual rate, n = compounds per year, t = years.',
+              'Continuous compounding: A = Pe^(rt).',
+              'A = P(1 + r/n)^(nt) — compound interest formula.'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Key Insight: Continuous compounding: A = Pe^(rt). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ P = principal, r = annual rate, n = compounds per year, t = years.
       id: 'sat-e4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for compound interest?',
+            question: 'Which statement about SAT Tip is correct?',
             options: [
-              'Continuous compounding: A = Pe^(rt)',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'P = principal, r = annual rate, n = compounds per year, t = years.',
+              'SAT focuses on interpreting parts of the formula.',
+              'Continuous compounding: A = Pe^(rt).',
+              'A = P(1 + r/n)^(nt) — compound interest formula.'
             ],
-            correctAnswer: 0,
-            explanation: 'Continuous compounding: A = Pe^(rt)'
+            correctAnswer: 1,
+            explanation: 'Correct — SAT Tip: SAT focuses on interpreting parts of the formula. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,24 @@ P = principal, r = annual rate, n = compounds per year, t = years.
       id: 'sat-e4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Compound Interest:',
-            options: ['A = P(1 + r/n)^(nt) — compound interest formula', 'P = principal, r = annual rate, n = compounds per ', 'Not applicable', 'None of these']
+            label: 'Key Insight',
+            options: ['SAT focuses on interpreting parts of the formula.', 'A = P(1 + r/n)^(nt) — compound interest formula.', 'Continuous compounding: A = Pe^(rt).', 'P = principal, r = annual rate, n = compounds per year, t = years.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Continuous compounding: A = Pe^(rt)', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'SAT Tip',
+            options: ['SAT focuses on interpreting parts of the formula.', 'P = principal, r = annual rate, n = compounds per year, t = years.', 'Continuous compounding: A = Pe^(rt).', 'A = P(1 + r/n)^(nt) — compound interest formula.']
           }
         ],
-        correctAnswers: ['A = P(1 + r/n)^(nt) — compound interest formula', 'Continuous compounding: A = Pe^(rt)'],
-        hint1: 'Think about compound interest',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'A = P(1 + r/n)^(nt) — compound interest formula. Continuous compounding: A = Pe^(rt).'
+        correctAnswers: ['Continuous compounding: A = Pe^(rt).', 'SAT focuses on interpreting parts of the formula.'],
+        hint1: 'Think about what each concept specifically describes in Compound Interest.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Compound Interest describes a specific idea. Key Insight: Continuous compounding: A = Pe^(rt). SAT Tip: SAT focuses on interpreting parts of the formula.'
       }
     }
   ]

@@ -30,31 +30,31 @@ r = aθ, distance from pole increases with angle
       id: 'polar4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of classic polar curves?',
+            question: 'Which of the following correctly describes Rose curves?',
             options: [
-              'Rose curves',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'r = a + b cos θ; inner loop when |a/b| < 1, cardioid when |a/b| = 1',
+              'r = a cos(nθ) or r = a sin(nθ); n petals if odd, 2n petals if even',
+              'r = aθ, distance from pole increases with angle',
+              'r² = a² cos(2θ) or r² = a² sin(2θ)'
             ],
-            correctAnswer: 0,
-            explanation: 'Rose curves: r = a cos(nθ) or r = a sin(nθ); n petals if odd, 2n petals if even'
+            correctAnswer: 1,
+            explanation: 'Correct — Rose curves: r = a cos(nθ) or r = a sin(nθ); n petals if odd, 2n petals if even. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of classic polar curves, which is accurate?',
+            question: 'In the context of Classic Polar Curves, which explains Lemniscate?',
             options: [
+              'r = a + b cos θ; inner loop when |a/b| < 1, cardioid when |a/b| = 1',
               'r² = a² cos(2θ) or r² = a² sin(2θ)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'r = aθ, distance from pole increases with angle',
+              'r = a cos(nθ) or r = a sin(nθ); n petals if odd, 2n petals if even'
             ],
-            correctAnswer: 0,
-            explanation: 'Lemniscate: r² = a² cos(2θ) or r² = a² sin(2θ)'
+            correctAnswer: 1,
+            explanation: 'Correct — Lemniscate: r² = a² cos(2θ) or r² = a² sin(2θ). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ r = aθ, distance from pole increases with angle
       id: 'polar4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Rose curves',
-            options: ['r = a cos(nθ) or r = a sin(nθ); n petals if odd, 2', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['r = a + b cos θ; inner loop when |a/b| < 1, cardioid when |a/b| = 1', 'r = a cos(nθ) or r = a sin(nθ); n petals if odd, 2n petals if even', 'r = aθ, distance from pole increases with angle', 'r² = a² cos(2θ) or r² = a² sin(2θ)']
           },
           {
             label: 'Limaçons',
-            options: ['r = a + b cos θ; inner loop when |a/b| < 1, cardio', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['r = a + b cos θ; inner loop when |a/b| < 1, cardioid when |a/b| = 1', 'r² = a² cos(2θ) or r² = a² sin(2θ)', 'r = a cos(nθ) or r = a sin(nθ); n petals if odd, 2n petals if even', 'r = aθ, distance from pole increases with angle']
           },
           {
             label: 'Lemniscate',
-            options: ['r² = a² cos(2θ) or r² = a² sin(2θ)', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['r = a cos(nθ) or r = a sin(nθ); n petals if odd, 2n petals if even', 'r = a + b cos θ; inner loop when |a/b| < 1, cardioid when |a/b| = 1', 'r² = a² cos(2θ) or r² = a² sin(2θ)', 'r = aθ, distance from pole increases with angle']
           }
         ],
-        correctAnswers: ['r = a cos(nθ) or r = a sin(nθ); n petals if odd, 2', 'r = a + b cos θ; inner loop when |a/b| < 1, cardio', 'r² = a² cos(2θ) or r² = a² sin(2θ)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Classic Polar Curves.'
+        correctAnswers: ['r = a cos(nθ) or r = a sin(nθ); n petals if odd, 2n petals if even', 'r = a + b cos θ; inner loop when |a/b| < 1, cardioid when |a/b| = 1', 'r² = a² cos(2θ) or r² = a² sin(2θ)'],
+        hint1: 'Think about what each concept specifically describes in Classic Polar Curves.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Classic Polar Curves describes a specific idea. Rose curves: r = a cos(nθ) or r = a sin(nθ); n petals if odd, 2n petals if even. Limaçons: r = a + b cos θ; inner loop when |a/b| < 1, cardioid when |a/b| = 1. Lemniscate: r² = a² cos(2θ) or r² = a² sin(2θ).'
       }
     }
   ]

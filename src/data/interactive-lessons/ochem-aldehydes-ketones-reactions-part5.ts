@@ -30,31 +30,31 @@ found in sugars (glucose, fructose)
       id: 'aldeh5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of acetals & hemiacetals?',
-            options: [
-              'Hemiacetal',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
-            ],
-            correctAnswer: 0,
-            explanation: 'Hemiacetal: one -OH and one -OR on same carbon'
-          },
-          {
-            question: 'In the context of acetals & hemiacetals, which is accurate?',
+            question: 'Which of the following correctly describes Hemiacetal?',
             options: [
               'Acetals are stable under basic conditions → protecting groups',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'found in sugars (glucose, fructose)',
+              'two -OR groups on same carbon (formed in acid, excess alcohol)',
+              'one -OH and one -OR on same carbon'
             ],
-            correctAnswer: 0,
-            explanation: 'Acetals are stable under basic conditions → protecting groups'
+            correctAnswer: 3,
+            explanation: 'Correct — Hemiacetal: one -OH and one -OR on same carbon. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'In the context of Acetals & Hemiacetals, which explains Acetals are stable under basic…?',
+            options: [
+              'found in sugars (glucose, fructose)',
+              'two -OR groups on same carbon (formed in acid, excess alcohol)',
+              'one -OH and one -OR on same carbon',
+              'Acetals are stable under basic conditions → protecting groups'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Acetals are stable under basic conditions → protecting groups. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ found in sugars (glucose, fructose)
       id: 'aldeh5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Hemiacetal',
-            options: ['one -OH and one -OR on same carbon', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['found in sugars (glucose, fructose)', 'two -OR groups on same carbon (formed in acid, excess alcohol)', 'one -OH and one -OR on same carbon', 'Acetals are stable under basic conditions → protecting groups']
           },
           {
             label: 'Acetal',
-            options: ['two -OR groups on same carbon (formed in acid, exc', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['two -OR groups on same carbon (formed in acid, excess alcohol)', 'found in sugars (glucose, fructose)', 'one -OH and one -OR on same carbon', 'Acetals are stable under basic conditions → protecting groups']
           },
           {
-            label: 'Acetals are stable under basic conditions → protecting groups',
-            options: ['Acetals are stable under basic conditions → protec', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            label: 'Cyclic hemiacetals',
+            options: ['one -OH and one -OR on same carbon', 'Acetals are stable under basic conditions → protecting groups', 'found in sugars (glucose, fructose)', 'two -OR groups on same carbon (formed in acid, excess alcohol)']
           }
         ],
-        correctAnswers: ['one -OH and one -OR on same carbon', 'two -OR groups on same carbon (formed in acid, exc', 'Acetals are stable under basic conditions → protec'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Acetals & Hemiacetals.'
+        correctAnswers: ['one -OH and one -OR on same carbon', 'two -OR groups on same carbon (formed in acid, excess alcohol)', 'found in sugars (glucose, fructose)'],
+        hint1: 'Think about what each concept specifically describes in Acetals & Hemiacetals.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Acetals & Hemiacetals describes a specific idea. Hemiacetal: one -OH and one -OR on same carbon. Acetal: two -OR groups on same carbon (formed in acid, excess alcohol). Cyclic hemiacetals: found in sugars (glucose, fructose).'
       }
     }
   ]

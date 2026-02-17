@@ -30,31 +30,31 @@ Better methods exist (Runge-Kutta) but Euler is what's tested on AP
       id: 'euler2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of improving accuracy?',
-            options: [
-              'Smaller step size Δx reduces error per step',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
-            ],
-            correctAnswer: 0,
-            explanation: 'Smaller step size Δx reduces error per step'
-          },
-          {
-            question: 'In the context of improving accuracy, which is accurate?',
+            question: 'Which of the following correctly describes Smaller step size Δx reduces error per…?',
             options: [
               'concave up → Euler underestimates (if increasing)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Error compounds over many steps',
+              'Better methods exist (Runge-Kutta) but Euler is what\'s tested on AP',
+              'Smaller step size Δx reduces error per step'
             ],
-            correctAnswer: 0,
-            explanation: 'Concavity affects accuracy: concave up → Euler underestimates (if increasing)'
+            correctAnswer: 3,
+            explanation: 'Correct — Smaller step size Δx reduces error per step. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes Concavity affects accuracy:',
+            options: [
+              'Error compounds over many steps',
+              'Better methods exist (Runge-Kutta) but Euler is what\'s tested on AP',
+              'concave up → Euler underestimates (if increasing)',
+              'Smaller step size Δx reduces error per step'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Concavity affects accuracy: concave up → Euler underestimates (if increasing). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Better methods exist (Runge-Kutta) but Euler is what's tested on AP
       id: 'euler2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to improving accuracy?',
+            question: 'Regarding Improving Accuracy, which correctly describes Better methods exist (Runge-Kutta) but…?',
             options: [
               'Better methods exist (Runge-Kutta) but Euler is what\'s tested on AP',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'concave up → Euler underestimates (if increasing)',
+              'Smaller step size Δx reduces error per step',
+              'Error compounds over many steps'
             ],
             correctAnswer: 0,
-            explanation: 'Better methods exist (Runge-Kutta) but Euler is what\'s tested on AP'
+            explanation: 'Correct — Better methods exist (Runge-Kutta) but Euler is what\'s tested on AP. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Better methods exist (Runge-Kutta) but Euler is what's tested on AP
       id: 'euler2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Smaller step size Δx reduces error per step',
-            options: ['Smaller step size Δx reduces error per step', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Smaller step size Δx reduces error per…',
+            options: ['Smaller step size Δx reduces error per step', 'Error compounds over many steps', 'Better methods exist (Runge-Kutta) but Euler is what\'s tested on AP', 'concave up → Euler underestimates (if increasing)']
           },
           {
             label: 'Error compounds over many steps',
-            options: ['Error compounds over many steps', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Error compounds over many steps', 'Better methods exist (Runge-Kutta) but Euler is what\'s tested on AP', 'concave up → Euler underestimates (if increasing)', 'Smaller step size Δx reduces error per step']
           },
           {
             label: 'Concavity affects accuracy',
-            options: ['concave up → Euler underestimates (if increasing)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['Error compounds over many steps', 'Smaller step size Δx reduces error per step', 'Better methods exist (Runge-Kutta) but Euler is what\'s tested on AP', 'concave up → Euler underestimates (if increasing)']
           }
         ],
         correctAnswers: ['Smaller step size Δx reduces error per step', 'Error compounds over many steps', 'concave up → Euler underestimates (if increasing)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Improving Accuracy.'
+        hint1: 'Think about what each concept specifically describes in Improving Accuracy.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Improving Accuracy describes a specific idea. Smaller step size Δx reduces error per step. Error compounds over many steps. Concavity affects accuracy: concave up → Euler underestimates (if increasing).'
       }
     }
   ]

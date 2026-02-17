@@ -30,31 +30,31 @@ AB ≠ BA in general (not commutative)
       id: 'matri2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of matrix operations?',
+            question: 'What does "Addition/subtraction" refer to in precalculus?',
             options: [
-              'Addition/subtraction',
-              'An unrelated concept',
-              'This is not covered in Precalculus',
-              'A concept from a different course'
+              'multiply every element by the scalar',
+              'AB ≠ BA in general (not commutative)',
+              '(AB)_ij = sum of row i of A times column j of B',
+              'add corresponding elements (same dimensions required)'
             ],
-            correctAnswer: 0,
-            explanation: 'Addition/subtraction: add corresponding elements (same dimensions required)'
+            correctAnswer: 3,
+            explanation: 'Correct — Addition/subtraction: add corresponding elements (same dimensions required). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of matrix operations, which is accurate?',
+            question: 'In the context of Matrix Operations, which explains Matrix multiplication?',
             options: [
               '(AB)_ij = sum of row i of A times column j of B',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'multiply every element by the scalar',
+              'add corresponding elements (same dimensions required)',
+              'AB ≠ BA in general (not commutative)'
             ],
             correctAnswer: 0,
-            explanation: 'Matrix multiplication: (AB)_ij = sum of row i of A times column j of B'
+            explanation: 'Correct — Matrix multiplication: (AB)_ij = sum of row i of A times column j of B. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ AB ≠ BA in general (not commutative)
       id: 'matri2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Addition/subtraction',
-            options: ['add corresponding elements (same dimensions requir', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['multiply every element by the scalar', '(AB)_ij = sum of row i of A times column j of B', 'add corresponding elements (same dimensions required)', 'AB ≠ BA in general (not commutative)']
           },
           {
             label: 'Scalar multiplication',
-            options: ['multiply every element by the scalar', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['add corresponding elements (same dimensions required)', '(AB)_ij = sum of row i of A times column j of B', 'multiply every element by the scalar', 'AB ≠ BA in general (not commutative)']
           },
           {
             label: 'Matrix multiplication',
-            options: ['(AB)_ij = sum of row i of A times column j of B', 'Not applicable', 'Unrelated to precalculus', 'Only in higher math']
+            options: ['(AB)_ij = sum of row i of A times column j of B', 'multiply every element by the scalar', 'add corresponding elements (same dimensions required)', 'AB ≠ BA in general (not commutative)']
           }
         ],
-        correctAnswers: ['add corresponding elements (same dimensions requir', 'multiply every element by the scalar', '(AB)_ij = sum of row i of A times column j of B'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Matrix Operations.'
+        correctAnswers: ['add corresponding elements (same dimensions required)', 'multiply every element by the scalar', '(AB)_ij = sum of row i of A times column j of B'],
+        hint1: 'Think about what each concept specifically describes in Matrix Operations.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Matrix Operations describes a specific idea. Addition/subtraction: add corresponding elements (same dimensions required). Scalar multiplication: multiply every element by the scalar. Matrix multiplication: (AB)_ij = sum of row i of A times column j of B.'
       }
     }
   ]

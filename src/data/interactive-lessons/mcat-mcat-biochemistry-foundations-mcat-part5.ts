@@ -71,23 +71,28 @@ Replication: semiconservative, 5-to-3 direction, DNA polymerase III, leading/lag
       id: 'mcat-5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Nucleic Acids & DNA:',
-            options: ['DNA: deoxyribose sugar, A-T (2 H-bonds), G-C (3 H-bonds), an', 'Replication: semiconservative, 5-to-3 direction, DNA polymer', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'DNA',
+            options: ['Transcription: DNA to mRNA by RNA polymerase; processing includes 5-cap, poly-A tail, splicing.', 'deoxyribose sugar, A-T (2 H-bonds), G-C (3 H-bonds), antiparallel double helix.', 'semiconservative, 5-to-3 direction, DNA polymerase III, leading/lagging strands.', 'Translation: mRNA to protein at ribosome; tRNA brings amino acids; codons read 5-to-3.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Transcription: DNA to mRNA by RNA polymerase; processing inc', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Replication',
+            options: ['Transcription: DNA to mRNA by RNA polymerase; processing includes 5-cap, poly-A tail, splicing.', 'deoxyribose sugar, A-T (2 H-bonds), G-C (3 H-bonds), antiparallel double helix.', 'semiconservative, 5-to-3 direction, DNA polymerase III, leading/lagging strands.', 'Translation: mRNA to protein at ribosome; tRNA brings amino acids; codons read 5-to-3.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['Transcription: DNA to mRNA by RNA polymerase; processing includes 5-cap, poly-A tail, splicing.', 'semiconservative, 5-to-3 direction, DNA polymerase III, leading/lagging strands.', 'Translation: mRNA to protein at ribosome; tRNA brings amino acids; codons read 5-to-3.', 'deoxyribose sugar, A-T (2 H-bonds), G-C (3 H-bonds), antiparallel double helix.']
           }
         ],
-        correctAnswers: ['DNA: deoxyribose sugar, A-T (2 H-bonds), G-C (3 H-bonds), an', 'Transcription: DNA to mRNA by RNA polymerase; processing inc'],
-        hint1: 'Think about nucleic acids & dna',
-        hint2: 'Consider the MCAT application',
-        explanation: 'DNA: deoxyribose sugar, A-T (2 H-bonds), G-C (3 H-bonds), antiparallel double helix. Transcription: DNA to mRNA by RNA polymerase; processing includes 5-cap, poly-A tail, splicing.'
+        correctAnswers: ['deoxyribose sugar, A-T (2 H-bonds), G-C (3 H-bonds), antiparallel double helix.', 'semiconservative, 5-to-3 direction, DNA polymerase III, leading/lagging strands.', 'Transcription: DNA to mRNA by RNA polymerase; processing includes 5-cap, poly-A tail, splicing.'],
+        hint1: 'Think about what each concept specifically describes in Nucleic Acids & DNA.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Nucleic Acids & DNA describes a specific idea. DNA: deoxyribose sugar, A-T (2 H-bonds), G-C (3 H-bonds), antiparallel double helix. Replication: semiconservative, 5-to-3 direction, DNA polymerase III, leading/lagging strands. Key Insight: Transcription: DNA to mRNA by RNA polymerase; processing includes 5-cap, poly-A tail, splicing.'
       }
     }
   ]

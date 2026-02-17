@@ -30,31 +30,31 @@ ribose + A, G, C, U
       id: 'lipid4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of nucleotide structure?',
+            question: 'Which statement accurately explains Nucleotides?',
             options: [
-              'Nucleotides',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
+              'two fused rings; Pyrimidines (C, T, U): one ring',
+              'ribose + A, G, C, U',
+              'deoxyribose + A, G, C, T',
+              'base + sugar + phosphate'
             ],
-            correctAnswer: 0,
-            explanation: 'Nucleotides: base + sugar + phosphate'
+            correctAnswer: 3,
+            explanation: 'Correct — Nucleotides: base + sugar + phosphate. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of nucleotide structure, which is accurate?',
+            question: 'In the context of Nucleotide Structure, which explains DNA?',
             options: [
+              'two fused rings; Pyrimidines (C, T, U): one ring',
+              'ribose + A, G, C, U',
               'deoxyribose + A, G, C, T',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'base + sugar + phosphate'
             ],
-            correctAnswer: 0,
-            explanation: 'DNA: deoxyribose + A, G, C, T'
+            correctAnswer: 2,
+            explanation: 'Correct — DNA: deoxyribose + A, G, C, T. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ ribose + A, G, C, U
       id: 'lipid4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Nucleotides',
-            options: ['base + sugar + phosphate', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['deoxyribose + A, G, C, T', 'ribose + A, G, C, U', 'two fused rings; Pyrimidines (C, T, U): one ring', 'base + sugar + phosphate']
           },
           {
             label: 'Purines (A, G)',
-            options: ['two fused rings; Pyrimidines (C, T, U): one ring', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['deoxyribose + A, G, C, T', 'base + sugar + phosphate', 'two fused rings; Pyrimidines (C, T, U): one ring', 'ribose + A, G, C, U']
           },
           {
             label: 'DNA',
-            options: ['deoxyribose + A, G, C, T', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['two fused rings; Pyrimidines (C, T, U): one ring', 'base + sugar + phosphate', 'ribose + A, G, C, U', 'deoxyribose + A, G, C, T']
           }
         ],
         correctAnswers: ['base + sugar + phosphate', 'two fused rings; Pyrimidines (C, T, U): one ring', 'deoxyribose + A, G, C, T'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Nucleotide Structure.'
+        hint1: 'Think about what each concept specifically describes in Nucleotide Structure.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Nucleotide Structure describes a specific idea. Nucleotides: base + sugar + phosphate. Purines (A, G): two fused rings; Pyrimidines (C, T, U): one ring. DNA: deoxyribose + A, G, C, T.'
       }
     }
   ]

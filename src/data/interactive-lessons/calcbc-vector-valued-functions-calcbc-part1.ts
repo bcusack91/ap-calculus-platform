@@ -30,31 +30,31 @@ all t for which both components are defined
       id: 'vecto1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of vector-valued functions?',
+            question: 'What does "r⃗(t) = ⟨f(t), g(t)⟩ = f(t)i + g(t)j…" refer to in calculus?',
             options: [
+              'gives location at time t',
+              'all t for which both components are defined',
               'r⃗(t) = ⟨f(t), g(t)⟩ = f(t)i + g(t)j defines a vector-valued function',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
+              'The tip of r⃗(t) traces a curve in the plane'
             ],
-            correctAnswer: 0,
-            explanation: 'r⃗(t) = ⟨f(t), g(t)⟩ = f(t)i + g(t)j defines a vector-valued function'
+            correctAnswer: 2,
+            explanation: 'Correct — r⃗(t) = ⟨f(t), g(t)⟩ = f(t)i + g(t)j defines a vector-valued function. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of vector-valued functions, which is accurate?',
+            question: 'Select the statement that correctly describes The tip of r⃗(t) traces a curve in the…:',
             options: [
+              'r⃗(t) = ⟨f(t), g(t)⟩ = f(t)i + g(t)j defines a vector-valued function',
               'The tip of r⃗(t) traces a curve in the plane',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'all t for which both components are defined',
+              'gives location at time t'
             ],
-            correctAnswer: 0,
-            explanation: 'The tip of r⃗(t) traces a curve in the plane'
+            correctAnswer: 1,
+            explanation: 'Correct — The tip of r⃗(t) traces a curve in the plane. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ all t for which both components are defined
       id: 'vecto1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to vector-valued functions?',
+            question: 'Which of these accurately represents Domain?',
             options: [
+              'The tip of r⃗(t) traces a curve in the plane',
               'all t for which both components are defined',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'r⃗(t) = ⟨f(t), g(t)⟩ = f(t)i + g(t)j defines a vector-valued function',
+              'gives location at time t'
             ],
-            correctAnswer: 0,
-            explanation: 'Domain: all t for which both components are defined'
+            correctAnswer: 1,
+            explanation: 'Correct — Domain: all t for which both components are defined. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,24 @@ all t for which both components are defined
       id: 'vecto1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'r⃗(t) = ⟨f(t), g(t)⟩ = f(t)i + g(t)j defines a vector-valued function',
-            options: ['r⃗(t) = ⟨f(t), g(t)⟩ = f(t)i + g(t)j defines a vec', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
-          },
-          {
             label: 'Position vector',
-            options: ['gives location at time t', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['gives location at time t', 'all t for which both components are defined', 'The tip of r⃗(t) traces a curve in the plane', 'r⃗(t) = ⟨f(t), g(t)⟩ = f(t)i + g(t)j defines a vector-valued function']
           },
           {
-            label: 'The tip of r⃗(t) traces a curve in the plane',
-            options: ['The tip of r⃗(t) traces a curve in the plane', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Domain',
+            options: ['The tip of r⃗(t) traces a curve in the plane', 'all t for which both components are defined', 'gives location at time t', 'r⃗(t) = ⟨f(t), g(t)⟩ = f(t)i + g(t)j defines a vector-valued function']
           }
         ],
-        correctAnswers: ['r⃗(t) = ⟨f(t), g(t)⟩ = f(t)i + g(t)j defines a vec', 'gives location at time t', 'The tip of r⃗(t) traces a curve in the plane'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Vector-Valued Functions.'
+        correctAnswers: ['gives location at time t', 'all t for which both components are defined'],
+        hint1: 'Think about what each concept specifically describes in ∮ Vector Valued Functions.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in ∮ Vector Valued Functions describes a specific idea. Position vector: gives location at time t. Domain: all t for which both components are defined.'
       }
     }
   ]

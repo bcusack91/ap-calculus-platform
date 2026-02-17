@@ -71,23 +71,28 @@ Application: how would the author respond to a new scenario?.
       id: 'mcat-4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Inference & Application:',
-            options: ['Inference = what must be true based on the passage (not expl', 'Application: how would the author respond to a new scenario?', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Application',
+            options: ['Stay close to the text — MCAT inferences are conservative, not speculative.', 'Inference = what must be true based on the passage (not explicitly stated).', 'Strongly supported > possibly true; eliminate answers that go too far.', 'how would the author respond to a new scenario?.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Stay close to the text — MCAT inferences are conservative, n', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Key Insight',
+            options: ['Strongly supported > possibly true; eliminate answers that go too far.', 'how would the author respond to a new scenario?.', 'Stay close to the text — MCAT inferences are conservative, not speculative.', 'Inference = what must be true based on the passage (not explicitly stated).']
+          },
+          {
+            label: 'MCAT Tip',
+            options: ['Stay close to the text — MCAT inferences are conservative, not speculative.', 'how would the author respond to a new scenario?.', 'Inference = what must be true based on the passage (not explicitly stated).', 'Strongly supported > possibly true; eliminate answers that go too far.']
           }
         ],
-        correctAnswers: ['Inference = what must be true based on the passage (not expl', 'Stay close to the text — MCAT inferences are conservative, n'],
-        hint1: 'Think about inference & application',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Inference = what must be true based on the passage (not explicitly stated). Stay close to the text — MCAT inferences are conservative, not speculative.'
+        correctAnswers: ['how would the author respond to a new scenario?.', 'Stay close to the text — MCAT inferences are conservative, not speculative.', 'Strongly supported > possibly true; eliminate answers that go too far.'],
+        hint1: 'Think about what each concept specifically describes in Inference & Application.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Inference & Application describes a specific idea. Application: how would the author respond to a new scenario?. Key Insight: Stay close to the text — MCAT inferences are conservative, not speculative. MCAT Tip: Strongly supported > possibly true; eliminate answers that go too far.'
       }
     }
   ]

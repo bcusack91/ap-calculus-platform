@@ -30,31 +30,31 @@ EWG (withdraw electrons, slow down EAS)
       id: 'elect4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of substituent effects?',
-            options: [
-              'Activating groups',
-              'An unrelated concept',
-              'This is not covered in Organic Chemistry',
-              'A biological concept only'
-            ],
-            correctAnswer: 0,
-            explanation: 'Activating groups: EDG (donate electrons, speed up EAS)'
-          },
-          {
-            question: 'In the context of substituent effects, which is accurate?',
+            question: 'Which statement accurately explains Activating groups?',
             options: [
               '-OH, -NH₂, -OR, -R, halogens',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              '-NO₂, -CN, -COOH, -COR, -SO₃H',
+              'EWG (withdraw electrons, slow down EAS)',
+              'EDG (donate electrons, speed up EAS)'
             ],
-            correctAnswer: 0,
-            explanation: 'ortho/para directors: -OH, -NH₂, -OR, -R, halogens'
+            correctAnswer: 3,
+            explanation: 'Correct — Activating groups: EDG (donate electrons, speed up EAS). The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Select the statement that correctly describes ortho/para directors:',
+            options: [
+              'EWG (withdraw electrons, slow down EAS)',
+              '-OH, -NH₂, -OR, -R, halogens',
+              '-NO₂, -CN, -COOH, -COR, -SO₃H',
+              'EDG (donate electrons, speed up EAS)'
+            ],
+            correctAnswer: 1,
+            explanation: 'Correct — ortho/para directors: -OH, -NH₂, -OR, -R, halogens. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -97,28 +97,28 @@ EWG (withdraw electrons, slow down EAS)
       id: 'elect4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Activating groups',
-            options: ['EDG (donate electrons, speed up EAS)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['EDG (donate electrons, speed up EAS)', 'EWG (withdraw electrons, slow down EAS)', '-NO₂, -CN, -COOH, -COR, -SO₃H', '-OH, -NH₂, -OR, -R, halogens']
           },
           {
             label: 'Deactivating groups',
-            options: ['EWG (withdraw electrons, slow down EAS)', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['-NO₂, -CN, -COOH, -COR, -SO₃H', '-OH, -NH₂, -OR, -R, halogens', 'EWG (withdraw electrons, slow down EAS)', 'EDG (donate electrons, speed up EAS)']
           },
           {
             label: 'ortho/para directors',
-            options: ['-OH, -NH₂, -OR, -R, halogens', 'Not applicable', 'Unrelated to organic chemistry', 'Only in biochemistry']
+            options: ['EDG (donate electrons, speed up EAS)', '-NO₂, -CN, -COOH, -COR, -SO₃H', 'EWG (withdraw electrons, slow down EAS)', '-OH, -NH₂, -OR, -R, halogens']
           }
         ],
         correctAnswers: ['EDG (donate electrons, speed up EAS)', 'EWG (withdraw electrons, slow down EAS)', '-OH, -NH₂, -OR, -R, halogens'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Substituent Effects.'
+        hint1: 'Think about what each concept specifically describes in Substituent Effects.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Substituent Effects describes a specific idea. Activating groups: EDG (donate electrons, speed up EAS). Deactivating groups: EWG (withdraw electrons, slow down EAS). ortho/para directors: -OH, -NH₂, -OR, -R, halogens.'
       }
     }
   ]

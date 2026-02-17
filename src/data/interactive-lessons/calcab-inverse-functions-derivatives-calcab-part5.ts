@@ -30,31 +30,31 @@ Understanding the restricted domains that make inverses possible
       id: 'inver5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of applications of inverse derivatives?',
+            question: 'Which of the following correctly describes Finding tangent lines to inverse…?',
             options: [
               'Finding tangent lines to inverse function graphs',
-              'An unrelated concept',
-              'This is not covered in AP Calculus AB',
-              'A concept from a different course'
+              'Solving equations involving inverse trig functions',
+              'Understanding the restricted domains that make inverses possible',
+              'Related rates with inverse trig functions'
             ],
             correctAnswer: 0,
-            explanation: 'Finding tangent lines to inverse function graphs'
+            explanation: 'Correct — Finding tangent lines to inverse function graphs. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of applications of inverse derivatives, which is accurate?',
+            question: 'Select the statement that correctly describes Related rates with inverse trig…:',
             options: [
               'Related rates with inverse trig functions',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'Understanding the restricted domains that make inverses possible',
+              'Finding tangent lines to inverse function graphs',
+              'Solving equations involving inverse trig functions'
             ],
             correctAnswer: 0,
-            explanation: 'Related rates with inverse trig functions'
+            explanation: 'Correct — Related rates with inverse trig functions. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ Understanding the restricted domains that make inverses possible
       id: 'inver5-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to applications of inverse derivatives?',
+            question: 'Which of these accurately represents Understanding the restricted domains…?',
             options: [
+              'Related rates with inverse trig functions',
+              'Finding tangent lines to inverse function graphs',
               'Understanding the restricted domains that make inverses possible',
-              'Only in linear algebra',
-              'Exclusively in statistics',
-              'This applies only to discrete math'
+              'Solving equations involving inverse trig functions'
             ],
-            correctAnswer: 0,
-            explanation: 'Understanding the restricted domains that make inverses possible'
+            correctAnswer: 2,
+            explanation: 'Correct — Understanding the restricted domains that make inverses possible. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ Understanding the restricted domains that make inverses possible
       id: 'inver5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Finding tangent lines to inverse function graphs',
-            options: ['Finding tangent lines to inverse function graphs', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Finding tangent lines to inverse…',
+            options: ['Understanding the restricted domains that make inverses possible', 'Finding tangent lines to inverse function graphs', 'Solving equations involving inverse trig functions', 'Related rates with inverse trig functions']
           },
           {
-            label: 'Solving equations involving inverse trig functions',
-            options: ['Solving equations involving inverse trig functions', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Solving equations involving inverse…',
+            options: ['Understanding the restricted domains that make inverses possible', 'Solving equations involving inverse trig functions', 'Related rates with inverse trig functions', 'Finding tangent lines to inverse function graphs']
           },
           {
-            label: 'Related rates with inverse trig functions',
-            options: ['Related rates with inverse trig functions', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            label: 'Related rates with inverse trig…',
+            options: ['Understanding the restricted domains that make inverses possible', 'Solving equations involving inverse trig functions', 'Finding tangent lines to inverse function graphs', 'Related rates with inverse trig functions']
           }
         ],
         correctAnswers: ['Finding tangent lines to inverse function graphs', 'Solving equations involving inverse trig functions', 'Related rates with inverse trig functions'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Applications of Inverse Derivatives.'
+        hint1: 'Think about what each concept specifically describes in Applications of Inverse Derivatives.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Applications of Inverse Derivatives describes a specific idea. Finding tangent lines to inverse function graphs. Solving equations involving inverse trig functions. Related rates with inverse trig functions.'
       }
     }
   ]

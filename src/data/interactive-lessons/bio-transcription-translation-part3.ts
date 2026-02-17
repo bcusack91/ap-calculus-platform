@@ -19,31 +19,31 @@ export const bioTranscriptionPart3Data = {
       id: 'tran3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes 5\' cap?',
+            question: 'Which of the following correctly describes 5\' cap?',
             options: [
-              'modified G nucleotide (stability, ribosome recognition)',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
+              'one gene → multiple proteins',
+              '~200 adenines at 3\' end (stability)',
+              'introns removed, exons joined',
+              'modified G nucleotide (stability, ribosome recognition)'
             ],
-            correctAnswer: 0,
-            explanation: '5\' cap: modified G nucleotide (stability, ribosome recognition)'
+            correctAnswer: 3,
+            explanation: 'Correct — 5\' cap: modified G nucleotide (stability, ribosome recognition). The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of rna processing, which statement is accurate?',
+            question: 'Which of the following is true about Splicing?',
             options: [
-              'Splicing: introns removed, exons joined',
-              ')noitingocer emosobir ,ytilibats( editoelcun G deifidom :pac \'5',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'one gene → multiple proteins',
+              'modified G nucleotide (stability, ribosome recognition)',
+              '~200 adenines at 3\' end (stability)',
+              'introns removed, exons joined'
             ],
-            correctAnswer: 0,
-            explanation: 'Splicing: introns removed, exons joined'
+            correctAnswer: 3,
+            explanation: 'Correct — Splicing: introns removed, exons joined. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioTranscriptionPart3Data = {
       id: 'tran3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to rna processing?',
+            question: 'Regarding RNA Processing, which correctly describes Alternative splicing?',
             options: [
-              'Alternative splicing: one gene → multiple proteins',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              '~200 adenines at 3\' end (stability)',
+              'modified G nucleotide (stability, ribosome recognition)',
+              'introns removed, exons joined',
+              'one gene → multiple proteins'
             ],
-            correctAnswer: 0,
-            explanation: 'Alternative splicing: one gene → multiple proteins'
+            correctAnswer: 3,
+            explanation: 'Correct — Alternative splicing: one gene → multiple proteins. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioTranscriptionPart3Data = {
       id: 'tran3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: '5\' cap is important in rna processing because',
-            options: ['modified G nucleotide (stability, ribosome recogni', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: '5\' cap',
+            options: ['~200 adenines at 3\' end (stability)', 'one gene → multiple proteins', 'modified G nucleotide (stability, ribosome recognition)', 'introns removed, exons joined']
           },
           {
-            label: 'Poly-A tail is important in rna processing because',
-            options: ['~200 adenines at 3\' end (stability)', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Poly-A tail',
+            options: ['modified G nucleotide (stability, ribosome recognition)', '~200 adenines at 3\' end (stability)', 'introns removed, exons joined', 'one gene → multiple proteins']
           },
           {
-            label: 'Splicing is important in rna processing because',
-            options: ['introns removed, exons joined', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Splicing',
+            options: ['modified G nucleotide (stability, ribosome recognition)', '~200 adenines at 3\' end (stability)', 'introns removed, exons joined', 'one gene → multiple proteins']
           }
         ],
-        correctAnswers: ['modified G nucleotide (stability, ribosome recogni', '~200 adenines at 3\' end (stability)', 'introns removed, exons joined'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding RNA Processing.'
+        correctAnswers: ['modified G nucleotide (stability, ribosome recognition)', '~200 adenines at 3\' end (stability)', 'introns removed, exons joined'],
+        hint1: 'Think about what each concept specifically describes in RNA Processing.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in RNA Processing describes a specific idea. 5\' cap: modified G nucleotide (stability, ribosome recognition). Poly-A tail: ~200 adenines at 3\' end (stability). Splicing: introns removed, exons joined.'
       }
     }
   ]

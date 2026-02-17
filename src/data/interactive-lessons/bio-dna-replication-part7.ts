@@ -19,31 +19,31 @@ export const bioDnaReplicationPart7Data = {
       id: 'dna-7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes replication accuracy and mutation rates?',
-            options: [
-              'Replication accuracy and mutation rates',
-              'The opposite process occurs',
-              'This is not relevant to biology',
-              'This only occurs in prokaryotes'
-            ],
-            correctAnswer: 0,
-            explanation: 'Replication accuracy and mutation rates'
-          },
-          {
-            question: 'In the context of synthesis & ap review, which statement is accurate?',
+            question: 'Which of the following correctly describes Replication accuracy and mutation rates?',
             options: [
               'Telomeres and aging/cancer',
-              'setar noitatum dna ycarucca noitacilpeR',
-              'None of the above are correct',
-              'This topic is not covered in AP Biology'
+              'enzyme identification and function',
+              'Replication accuracy and mutation rates',
+              'Connection to cell cycle checkpoints'
+            ],
+            correctAnswer: 2,
+            explanation: 'Correct — Replication accuracy and mutation rates. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Telomeres and aging/cancer?',
+            options: [
+              'Telomeres and aging/cancer',
+              'Connection to cell cycle checkpoints',
+              'enzyme identification and function',
+              'Replication accuracy and mutation rates'
             ],
             correctAnswer: 0,
-            explanation: 'Telomeres and aging/cancer'
+            explanation: 'Correct — Telomeres and aging/cancer. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -64,20 +64,20 @@ export const bioDnaReplicationPart7Data = {
       id: 'dna-7-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept is most directly related to synthesis & ap review?',
+            question: 'Which statement about AP exam is correct?',
             options: [
-              'AP exam: enzyme identification and function',
-              'Photosynthesis only',
-              'Abiotic factors exclusively',
-              'Mitochondrial DNA only'
+              'Telomeres and aging/cancer',
+              'Replication accuracy and mutation rates',
+              'enzyme identification and function',
+              'Connection to cell cycle checkpoints'
             ],
-            correctAnswer: 0,
-            explanation: 'AP exam: enzyme identification and function'
+            correctAnswer: 2,
+            explanation: 'Correct — AP exam: enzyme identification and function. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -86,28 +86,28 @@ export const bioDnaReplicationPart7Data = {
       id: 'dna-7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Replication accuracy and mutation rates is important in synthesis & ap review because',
-            options: ['Replication accuracy and mutation rates', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Replication accuracy and mutation rates',
+            options: ['Replication accuracy and mutation rates', 'Telomeres and aging/cancer', 'Connection to cell cycle checkpoints', 'enzyme identification and function']
           },
           {
-            label: 'Connection to cell cycle checkpoints is important in synthesis & ap review because',
-            options: ['Connection to cell cycle checkpoints', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Connection to cell cycle checkpoints',
+            options: ['enzyme identification and function', 'Connection to cell cycle checkpoints', 'Telomeres and aging/cancer', 'Replication accuracy and mutation rates']
           },
           {
-            label: 'Telomeres and aging/cancer is important in synthesis & ap review because',
-            options: ['Telomeres and aging/cancer', 'it is not relevant', 'it only occurs in labs', 'it was disproven']
+            label: 'Telomeres and aging/cancer',
+            options: ['Telomeres and aging/cancer', 'Connection to cell cycle checkpoints', 'Replication accuracy and mutation rates', 'enzyme identification and function']
           }
         ],
         correctAnswers: ['Replication accuracy and mutation rates', 'Connection to cell cycle checkpoints', 'Telomeres and aging/cancer'],
-        hint1: 'Review concept 1.',
-        hint2: 'Review concept 2.',
-        hint3: 'Review concept 3.',
-        explanation: 'These concepts are fundamental to understanding Synthesis & AP Review.'
+        hint1: 'Think about what each concept specifically describes in DNA Replication: Synthesis & AP Review.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in DNA Replication: Synthesis & AP Review describes a specific idea. Replication accuracy and mutation rates. Connection to cell cycle checkpoints. Telomeres and aging/cancer.'
       }
     }
   ]

@@ -71,23 +71,28 @@ Freud: id (pleasure), ego (reality), superego (morality); defense mechanisms (re
       id: 'mcat-7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Core concept for Review & MCAT Practice:',
-            options: ['Big Five (OCEAN): openness, conscientiousness, extraversion,', 'Freud: id (pleasure), ego (reality), superego (morality); de', 'Not MCAT-relevant', 'Cannot be determined']
+            label: 'Big Five (OCEAN)',
+            options: ['Psychological disorders: anxiety, mood, psychotic, personality, trauma-related.', 'openness, conscientiousness, extraversion, agreeableness, neuroticism.', 'id (pleasure), ego (reality), superego (morality); defense mechanisms (repression, projection, etc.).', 'DSM-5 classification: categorical diagnosis based on symptom criteria and duration.']
           },
           {
-            label: 'MCAT application:',
-            options: ['Psychological disorders: anxiety, mood, psychotic, personali', 'Skip this topic', 'Only on practice tests', 'Not applicable']
+            label: 'Freud',
+            options: ['openness, conscientiousness, extraversion, agreeableness, neuroticism.', 'DSM-5 classification: categorical diagnosis based on symptom criteria and duration.', 'Psychological disorders: anxiety, mood, psychotic, personality, trauma-related.', 'id (pleasure), ego (reality), superego (morality); defense mechanisms (repression, projection, etc.).']
+          },
+          {
+            label: 'Key Insight',
+            options: ['id (pleasure), ego (reality), superego (morality); defense mechanisms (repression, projection, etc.).', 'DSM-5 classification: categorical diagnosis based on symptom criteria and duration.', 'Psychological disorders: anxiety, mood, psychotic, personality, trauma-related.', 'openness, conscientiousness, extraversion, agreeableness, neuroticism.']
           }
         ],
-        correctAnswers: ['Big Five (OCEAN): openness, conscientiousness, extraversion,', 'Psychological disorders: anxiety, mood, psychotic, personali'],
-        hint1: 'Think about review & mcat practice',
-        hint2: 'Consider the MCAT application',
-        explanation: 'Big Five (OCEAN): openness, conscientiousness, extraversion, agreeableness, neuroticism. Psychological disorders: anxiety, mood, psychotic, personality, trauma-related.'
+        correctAnswers: ['openness, conscientiousness, extraversion, agreeableness, neuroticism.', 'id (pleasure), ego (reality), superego (morality); defense mechanisms (repression, projection, etc.).', 'Psychological disorders: anxiety, mood, psychotic, personality, trauma-related.'],
+        hint1: 'Think about what each concept specifically describes in Review & MCAT Practice.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Review & MCAT Practice describes a specific idea. Big Five (OCEAN): openness, conscientiousness, extraversion, agreeableness, neuroticism. Freud: id (pleasure), ego (reality), superego (morality); defense mechanisms (repression, projection, etc.). Key Insight: Psychological disorders: anxiety, mood, psychotic, personality, trauma-related.'
       }
     }
   ]

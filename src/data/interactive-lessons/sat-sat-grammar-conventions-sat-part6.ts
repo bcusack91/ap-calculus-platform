@@ -18,20 +18,31 @@ Semicolon: connects two related independent clauses (no conjunction needed).
       id: 'sat-g6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement best describes comma?',
+            question: 'Which statement accurately explains Comma?',
             options: [
-              'Comma is a fundamental concept in SAT Reading & Writing',
-              'Semicolon: connects two related independent clauses (no conjunction needed)',
-              'This concept is not tested on the SAT',
-              'None of these apply to SAT preparation'
+              'Dash: sets off a parenthetical or emphatic statement — can replace commas or colons for emphasis.',
+              'connects two related independent clauses (no conjunction needed).',
+              'before FANBOYS in compound sentences, after introductory elements, around nonessential clauses.',
+              'Colon: introduces a list, explanation, or elaboration (independent clause before it).'
             ],
-            correctAnswer: 0,
-            explanation: 'Comma: before FANBOYS in compound sentences, after introductory elements, around nonessential clauses'
+            correctAnswer: 2,
+            explanation: 'Correct — Comma: before FANBOYS in compound sentences, after introductory elements, around nonessential clauses. The other options describe different concepts from this topic.'
+          },
+          {
+            question: 'Which of the following is true about Key Insight?',
+            options: [
+              'before FANBOYS in compound sentences, after introductory elements, around nonessential clauses.',
+              'Dash: sets off a parenthetical or emphatic statement — can replace commas or colons for emphasis.',
+              'connects two related independent clauses (no conjunction needed).',
+              'Colon: introduces a list, explanation, or elaboration (independent clause before it).'
+            ],
+            correctAnswer: 3,
+            explanation: 'Correct — Key Insight: Colon: introduces a list, explanation, or elaboration (independent clause before it). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -49,20 +60,20 @@ Semicolon: connects two related independent clauses (no conjunction needed).
       id: 'sat-g6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is a key strategy for problem-solving workshop?',
+            question: 'Regarding Problem-Solving Workshop, which correctly describes SAT Tip?',
             options: [
-              'Colon: introduces a list, explanation, or elaboration (independent clause before it)',
-              'Skip these questions entirely on the SAT',
-              'These are only in the no-calculator section',
-              'This topic appears only on the PSAT'
+              'Colon: introduces a list, explanation, or elaboration (independent clause before it).',
+              'Dash: sets off a parenthetical or emphatic statement — can replace commas or colons for emphasis.',
+              'connects two related independent clauses (no conjunction needed).',
+              'before FANBOYS in compound sentences, after introductory elements, around nonessential clauses.'
             ],
-            correctAnswer: 0,
-            explanation: 'Colon: introduces a list, explanation, or elaboration (independent clause before it)'
+            correctAnswer: 1,
+            explanation: 'Correct — SAT Tip: Dash: sets off a parenthetical or emphatic statement — can replace commas or colons for emphasis. Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -71,23 +82,28 @@ Semicolon: connects two related independent clauses (no conjunction needed).
       id: 'sat-g6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key concept for Problem-Solving Workshop:',
-            options: ['Comma: before FANBOYS in compound sentences, after', 'Semicolon: connects two related independent clause', 'Not applicable', 'None of these']
+            label: 'Comma',
+            options: ['Colon: introduces a list, explanation, or elaboration (independent clause before it).', 'connects two related independent clauses (no conjunction needed).', 'Dash: sets off a parenthetical or emphatic statement — can replace commas or colons for emphasis.', 'before FANBOYS in compound sentences, after introductory elements, around nonessential clauses.']
           },
           {
-            label: 'Strategy tip:',
-            options: ['Colon: introduces a list, explanation, or elaborat', 'Guess randomly', 'Skip the question', 'Use a different test']
+            label: 'Semicolon',
+            options: ['before FANBOYS in compound sentences, after introductory elements, around nonessential clauses.', 'Colon: introduces a list, explanation, or elaboration (independent clause before it).', 'connects two related independent clauses (no conjunction needed).', 'Dash: sets off a parenthetical or emphatic statement — can replace commas or colons for emphasis.']
+          },
+          {
+            label: 'Key Insight',
+            options: ['Colon: introduces a list, explanation, or elaboration (independent clause before it).', 'Dash: sets off a parenthetical or emphatic statement — can replace commas or colons for emphasis.', 'before FANBOYS in compound sentences, after introductory elements, around nonessential clauses.', 'connects two related independent clauses (no conjunction needed).']
           }
         ],
-        correctAnswers: ['Comma: before FANBOYS in compound sentences, after', 'Colon: introduces a list, explanation, or elaborat'],
-        hint1: 'Think about problem-solving workshop',
-        hint2: 'Consider the best SAT strategy',
-        explanation: 'Comma: before FANBOYS in compound sentences, after introductory elements, around nonessential clauses. Colon: introduces a list, explanation, or elaboration (independent clause before it).'
+        correctAnswers: ['before FANBOYS in compound sentences, after introductory elements, around nonessential clauses.', 'connects two related independent clauses (no conjunction needed).', 'Colon: introduces a list, explanation, or elaboration (independent clause before it).'],
+        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Comma: before FANBOYS in compound sentences, after introductory elements, around nonessential clauses. Semicolon: connects two related independent clauses (no conjunction needed). Key Insight: Colon: introduces a list, explanation, or elaboration (independent clause before it).'
       }
     }
   ]

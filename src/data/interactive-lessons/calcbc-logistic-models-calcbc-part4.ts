@@ -30,31 +30,31 @@ dP/dt < 0 (population decreasing toward L)
       id: 'logis4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key concept of phase lines & equilibria?',
+            question: 'What does "Phase line" refer to in calculus?',
             options: [
-              'Phase line',
-              'An unrelated concept',
-              'This is not covered in AP Calculus BC',
-              'A concept from a different course'
+              'dP/dt < 0 (population decreasing toward L)',
+              'dP/dt > 0 (population increasing)',
+              'one-dimensional diagram showing direction of change',
+              'P = 0 (unstable) and P = L (stable)'
             ],
-            correctAnswer: 0,
-            explanation: 'Phase line: one-dimensional diagram showing direction of change'
+            correctAnswer: 2,
+            explanation: 'Correct — Phase line: one-dimensional diagram showing direction of change. The other options describe different concepts from this topic.'
           },
           {
-            question: 'In the context of phase lines & equilibria, which is accurate?',
+            question: 'Select the statement that correctly describes If P < L:',
             options: [
               'dP/dt > 0 (population increasing)',
-              'The opposite is true',
-              'This concept is obsolete',
-              'None of these are correct'
+              'P = 0 (unstable) and P = L (stable)',
+              'one-dimensional diagram showing direction of change',
+              'dP/dt < 0 (population decreasing toward L)'
             ],
             correctAnswer: 0,
-            explanation: 'If P < L: dP/dt > 0 (population increasing)'
+            explanation: 'Correct — If P < L: dP/dt > 0 (population increasing). Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -75,20 +75,20 @@ dP/dt < 0 (population decreasing toward L)
       id: 'logis4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which concept relates directly to phase lines & equilibria?',
+            question: 'Regarding Phase Lines & Equilibria, which correctly describes If P > L?',
             options: [
+              'one-dimensional diagram showing direction of change',
+              'dP/dt > 0 (population increasing)',
               'dP/dt < 0 (population decreasing toward L)',
-              'Only in abstract algebra',
-              'Exclusively in number theory',
-              'This applies only to discrete math'
+              'P = 0 (unstable) and P = L (stable)'
             ],
-            correctAnswer: 0,
-            explanation: 'If P > L: dP/dt < 0 (population decreasing toward L)'
+            correctAnswer: 2,
+            explanation: 'Correct — If P > L: dP/dt < 0 (population decreasing toward L). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -97,28 +97,28 @@ dP/dt < 0 (population decreasing toward L)
       id: 'logis4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Phase line',
-            options: ['one-dimensional diagram showing direction of chang', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['one-dimensional diagram showing direction of change', 'dP/dt > 0 (population increasing)', 'P = 0 (unstable) and P = L (stable)', 'dP/dt < 0 (population decreasing toward L)']
           },
           {
             label: 'Equilibria',
-            options: ['P = 0 (unstable) and P = L (stable)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['dP/dt > 0 (population increasing)', 'P = 0 (unstable) and P = L (stable)', 'dP/dt < 0 (population decreasing toward L)', 'one-dimensional diagram showing direction of change']
           },
           {
             label: 'If P < L',
-            options: ['dP/dt > 0 (population increasing)', 'Not applicable', 'Unrelated to calculus', 'Only in higher math']
+            options: ['one-dimensional diagram showing direction of change', 'dP/dt > 0 (population increasing)', 'P = 0 (unstable) and P = L (stable)', 'dP/dt < 0 (population decreasing toward L)']
           }
         ],
-        correctAnswers: ['one-dimensional diagram showing direction of chang', 'P = 0 (unstable) and P = L (stable)', 'dP/dt > 0 (population increasing)'],
-        hint1: 'Review key concept 1.',
-        hint2: 'Review key concept 2.',
-        hint3: 'Review key concept 3.',
-        explanation: 'These concepts are fundamental to understanding Phase Lines & Equilibria.'
+        correctAnswers: ['one-dimensional diagram showing direction of change', 'P = 0 (unstable) and P = L (stable)', 'dP/dt > 0 (population increasing)'],
+        hint1: 'Think about what each concept specifically describes in Phase Lines & Equilibria.',
+        hint2: 'Look for key terms that distinguish each concept from the others.',
+        hint3: 'Remember the specific details — each concept has unique characteristics.',
+        explanation: 'Each concept in Phase Lines & Equilibria describes a specific idea. Phase line: one-dimensional diagram showing direction of change. Equilibria: P = 0 (unstable) and P = L (stable). If P < L: dP/dt > 0 (population increasing).'
       }
     }
   ]
