@@ -91,12 +91,11 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
   const [player2Emotion, setPlayer2Emotion] = useState<'neutral' | 'happy' | 'sad'>('neutral');
 
   // Render math in prompt (for both unit circle and multiple-choice)
+  // Handles both $...$ delimited LaTeX and raw LaTeX with backslashes
   const renderPrompt = (text: string) => {
-    // Check if prompt contains LaTeX (backslashes or \left, \right, \frac, etc.)
+    // Unit circle coordinate format: "Click the position for coordinate \left(...)\right)"
     if (text.includes('\\')) {
       try {
-        // Try to render the LaTeX content
-        // First check if it's the unit circle coordinate format
         const match = text.match(/coordinate\s+(.+)$/);
         if (match) {
           const coordLatex = match[1].trim();
@@ -111,18 +110,43 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
             </div>
           );
         }
-        
-        // For multiple-choice questions, render inline LaTeX
-        const rendered = katex.renderToString(text, {
-          throwOnError: false,
-          displayMode: false,
-        });
-        return <span dangerouslySetInnerHTML={{ __html: rendered }} />;
       } catch (e) {
-        console.error('KaTeX render error:', e);
-        console.error('Text:', text);
+        // fall through to $...$ parsing
       }
     }
+
+    // Handle $...$ and $$...$$ delimited LaTeX in mixed text
+    if (text.includes('$')) {
+      try {
+        const parts = text.split(/(\$\$[^$]+\$\$|\$[^$]+\$)/);
+        const rendered = parts.map((part, i) => {
+          if (part.startsWith('$$') && part.endsWith('$$')) {
+            const latex = part.slice(2, -2);
+            const html = katex.renderToString(latex, { throwOnError: false, displayMode: true });
+            return <span key={i} dangerouslySetInnerHTML={{ __html: html }} />;
+          } else if (part.startsWith('$') && part.endsWith('$')) {
+            const latex = part.slice(1, -1);
+            const html = katex.renderToString(latex, { throwOnError: false, displayMode: false });
+            return <span key={i} dangerouslySetInnerHTML={{ __html: html }} />;
+          }
+          return <span key={i}>{part}</span>;
+        });
+        return <span className="inline-flex flex-wrap items-baseline gap-x-1">{rendered}</span>;
+      } catch (e) {
+        console.error('KaTeX render error:', e);
+      }
+    }
+
+    // Pure backslash LaTeX without $ delimiters (e.g. \frac{1}{2})
+    if (text.includes('\\')) {
+      try {
+        const html = katex.renderToString(text, { throwOnError: false, displayMode: false });
+        return <span dangerouslySetInnerHTML={{ __html: html }} />;
+      } catch (e) {
+        // fallback to plain text
+      }
+    }
+
     return <span>{text}</span>;
   };
 
@@ -630,9 +654,9 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
                 <p className="text-sm font-semibold text-blue-900 dark:text-blue-300 mb-2">
                   Explanation:
                 </p>
-                <p className="text-sm text-blue-800 dark:text-blue-400">
-                  {currentQuestion.explanation}
-                </p>
+                <div className="text-sm text-blue-800 dark:text-blue-400">
+                  {renderPrompt(currentQuestion.explanation)}
+                </div>
               </div>
             )}
           </div>

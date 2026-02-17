@@ -40,12 +40,34 @@ export async function GET(req: NextRequest) {
     const completedTopicSlugs = completedTopics.map(tp => tp.topic.slug)
     const hasCompletedAnyTopic = completedTopicSlugs.length > 0
 
+    // Map completed topic slugs to competitive categories
+    // A competitive category is available if the user completed at least one matching topic
+    const competitiveCategories: Record<string, boolean> = {
+      'the-unit-circle': completedTopicSlugs.includes('the-unit-circle'),
+      'reflection-refraction': completedTopicSlugs.includes('reflection-refraction'),
+      'derivatives': completedTopicSlugs.some(s => 
+        s.includes('derivative') || s.includes('differentiation') || s.includes('definition-of-derivative')
+      ),
+      'limits': completedTopicSlugs.some(s => 
+        s.includes('limit') || s.includes('continuity')
+      ),
+      'integrals': completedTopicSlugs.some(s => 
+        s.includes('integral') || s.includes('antiderivative') || s.includes('integration')
+      ),
+      'algebra': completedTopicSlugs.some(s => 
+        s.includes('algebra') || s.includes('linear-equation') || s.includes('quadratic') || 
+        s.includes('polynomial') || s.includes('factoring') || s.includes('systems') ||
+        s.includes('functions-basics') || s.includes('exponential') || s.includes('rational')
+      ),
+    }
+
     // Check if already unlocked
     if (user.competitiveProfile?.competitiveModeUnlocked) {
       return NextResponse.json({
         unlocked: true,
         profile: user.competitiveProfile,
-        completedTopics: completedTopicSlugs
+        completedTopics: completedTopicSlugs,
+        competitiveCategories
       })
     }
 
@@ -64,7 +86,8 @@ export async function GET(req: NextRequest) {
         unlocked: true,
         justUnlocked: true,
         profile,
-        completedTopics: completedTopicSlugs
+        completedTopics: completedTopicSlugs,
+        competitiveCategories
       })
     }
 
@@ -79,7 +102,8 @@ export async function GET(req: NextRequest) {
         unlocked: true,
         justUnlocked: true,
         profile,
-        completedTopics: completedTopicSlugs
+        completedTopics: completedTopicSlugs,
+        competitiveCategories
       })
     }
 

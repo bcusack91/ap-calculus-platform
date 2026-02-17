@@ -15,6 +15,7 @@ export default function CompetitivePage() {
   const [selectedMode, setSelectedMode] = useState('SPEED_RACE')
   const [selectedTopic, setSelectedTopic] = useState<'the-unit-circle' | 'reflection-refraction' | 'derivatives' | 'limits' | 'integrals' | 'algebra' | 'cumulative'>('the-unit-circle')
   const [completedTopics, setCompletedTopics] = useState<string[]>([])
+  const [competitiveCategories, setCompetitiveCategories] = useState<Record<string, boolean>>({})
   const [requirements, setRequirements] = useState<any>(null)
   const [showAIOptions, setShowAIOptions] = useState(false)
   const [aiDifficulty, setAiDifficulty] = useState<'easy' | 'medium' | 'hard'>('medium')
@@ -48,6 +49,7 @@ export default function CompetitivePage() {
       setProfile(data.profile)
       setRequirements(data.requirements)
       setCompletedTopics(data.completedTopics || [])
+      setCompetitiveCategories(data.competitiveCategories || {})
       setLoading(false)
 
       if (data.justUnlocked) {
@@ -337,10 +339,15 @@ export default function CompetitivePage() {
 
             <button
               onClick={() => setSelectedTopic('derivatives')}
-              className={`p-5 rounded-xl transition-all cursor-pointer ${
+              disabled={!competitiveCategories['derivatives']}
+              className={`p-5 rounded-xl transition-all ${
                 selectedTopic === 'derivatives'
                   ? 'ring-4 ring-purple-500 bg-white dark:bg-gray-800 shadow-xl'
                   : 'bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl'
+              } ${
+                !competitiveCategories['derivatives']
+                  ? 'opacity-50 cursor-not-allowed'
+                  : 'cursor-pointer'
               }`}
             >
               <div className="text-3xl mb-2">📐</div>
@@ -348,14 +355,22 @@ export default function CompetitivePage() {
               <p className="text-xs text-gray-600 dark:text-gray-400">
                 Power, Chain, Product Rules
               </p>
+              {!competitiveCategories['derivatives'] && (
+                <span className="text-xs text-red-500 mt-1 block">Complete a Derivatives Topic</span>
+              )}
             </button>
 
             <button
               onClick={() => setSelectedTopic('limits')}
-              className={`p-5 rounded-xl transition-all cursor-pointer ${
+              disabled={!competitiveCategories['limits']}
+              className={`p-5 rounded-xl transition-all ${
                 selectedTopic === 'limits'
                   ? 'ring-4 ring-purple-500 bg-white dark:bg-gray-800 shadow-xl'
                   : 'bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl'
+              } ${
+                !competitiveCategories['limits']
+                  ? 'opacity-50 cursor-not-allowed'
+                  : 'cursor-pointer'
               }`}
             >
               <div className="text-3xl mb-2">♾️</div>
@@ -363,14 +378,22 @@ export default function CompetitivePage() {
               <p className="text-xs text-gray-600 dark:text-gray-400">
                 L&apos;Hôpital, Squeeze Theorem
               </p>
+              {!competitiveCategories['limits'] && (
+                <span className="text-xs text-red-500 mt-1 block">Complete a Limits Topic</span>
+              )}
             </button>
 
             <button
               onClick={() => setSelectedTopic('integrals')}
-              className={`p-5 rounded-xl transition-all cursor-pointer ${
+              disabled={!competitiveCategories['integrals']}
+              className={`p-5 rounded-xl transition-all ${
                 selectedTopic === 'integrals'
                   ? 'ring-4 ring-purple-500 bg-white dark:bg-gray-800 shadow-xl'
                   : 'bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl'
+              } ${
+                !competitiveCategories['integrals']
+                  ? 'opacity-50 cursor-not-allowed'
+                  : 'cursor-pointer'
               }`}
             >
               <div className="text-3xl mb-2">∫</div>
@@ -378,14 +401,22 @@ export default function CompetitivePage() {
               <p className="text-xs text-gray-600 dark:text-gray-400">
                 Antiderivatives & FTC
               </p>
+              {!competitiveCategories['integrals'] && (
+                <span className="text-xs text-red-500 mt-1 block">Complete an Integrals Topic</span>
+              )}
             </button>
 
             <button
               onClick={() => setSelectedTopic('algebra')}
-              className={`p-5 rounded-xl transition-all cursor-pointer ${
+              disabled={!competitiveCategories['algebra']}
+              className={`p-5 rounded-xl transition-all ${
                 selectedTopic === 'algebra'
                   ? 'ring-4 ring-purple-500 bg-white dark:bg-gray-800 shadow-xl'
                   : 'bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl'
+              } ${
+                !competitiveCategories['algebra']
+                  ? 'opacity-50 cursor-not-allowed'
+                  : 'cursor-pointer'
               }`}
             >
               <div className="text-3xl mb-2">🔢</div>
@@ -393,11 +424,14 @@ export default function CompetitivePage() {
               <p className="text-xs text-gray-600 dark:text-gray-400">
                 Equations & Functions
               </p>
+              {!competitiveCategories['algebra'] && (
+                <span className="text-xs text-red-500 mt-1 block">Complete an Algebra Topic</span>
+              )}
             </button>
 
             <button
               onClick={() => setSelectedTopic('cumulative')}
-              disabled={completedTopics.length < 1}
+              disabled={Object.values(competitiveCategories).filter(Boolean).length < 1}
               className={`p-5 rounded-xl transition-all col-span-2 ${
                 selectedTopic === 'cumulative'
                   ? 'ring-4 ring-purple-500 bg-gradient-to-br from-purple-500 to-blue-500 text-white shadow-xl'
@@ -413,7 +447,7 @@ export default function CompetitivePage() {
               <p className="text-xs text-white/90">
                 Mixed Questions from All Topics
               </p>
-              {completedTopics.length < 1 && (
+              {Object.values(competitiveCategories).filter(Boolean).length < 1 && (
                 <span className="text-xs text-red-200 mt-1 block">Complete 1+ Topic</span>
               )}
             </button>
