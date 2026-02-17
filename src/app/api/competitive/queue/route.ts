@@ -31,7 +31,16 @@ export async function POST(req: NextRequest) {
 
     const user = await prisma.user.findUnique({
       where: { email: session.user.email },
-      include: { competitiveProfile: true }
+      include: {
+        competitiveProfile: true,
+        topicProgress: {
+          where: {
+            status: { in: ['COMPLETED', 'MASTERED'] },
+            masteryLevel: { gte: 0.8 }
+          },
+          include: { topic: { select: { slug: true } } }
+        }
+      }
     })
 
     if (!user?.competitiveProfile) {
@@ -56,7 +65,9 @@ export async function POST(req: NextRequest) {
 
     if (match) {
       // Generate questions for the match with topic-specific content
-      const questions = generateMatchQuestions(10, topicSlug);
+      // Pass completedTopics so question banks can filter to only completed sections
+      const completedTopicSlugs = user.topicProgress.map(tp => tp.topic.slug)
+      const questions = generateMatchQuestions(10, topicSlug, completedTopicSlugs);
       
       // Create match in database
       const competitiveMatch = await prisma.competitiveMatch.create({

@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
+import { getUnlockedAlgebra2Subtopics, ALGEBRA2_SUBTOPIC_LABELS } from '@/data/competitive-questions/algebra2-bank'
 
 /**
  * Check if user has unlocked competitive mode
@@ -67,13 +68,21 @@ export async function GET(req: NextRequest) {
       ),
     }
 
+    // Compute which specific Algebra 2 subtopics are unlocked
+    const unlockedAlgebra2Subtopics = getUnlockedAlgebra2Subtopics(completedTopicSlugs)
+    const algebra2SubtopicDetails = unlockedAlgebra2Subtopics.map(st => ({
+      key: st,
+      label: ALGEBRA2_SUBTOPIC_LABELS[st]
+    }))
+
     // Check if already unlocked
     if (user.competitiveProfile?.competitiveModeUnlocked) {
       return NextResponse.json({
         unlocked: true,
         profile: user.competitiveProfile,
         completedTopics: completedTopicSlugs,
-        competitiveCategories
+        competitiveCategories,
+        algebra2SubtopicDetails
       })
     }
 
@@ -93,7 +102,8 @@ export async function GET(req: NextRequest) {
         justUnlocked: true,
         profile,
         completedTopics: completedTopicSlugs,
-        competitiveCategories
+        competitiveCategories,
+        algebra2SubtopicDetails
       })
     }
 
@@ -109,7 +119,8 @@ export async function GET(req: NextRequest) {
         justUnlocked: true,
         profile,
         completedTopics: completedTopicSlugs,
-        competitiveCategories
+        competitiveCategories,
+        algebra2SubtopicDetails
       })
     }
 

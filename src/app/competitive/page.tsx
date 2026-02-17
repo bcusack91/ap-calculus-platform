@@ -16,6 +16,7 @@ export default function CompetitivePage() {
   const [selectedTopic, setSelectedTopic] = useState<'the-unit-circle' | 'reflection-refraction' | 'derivatives' | 'limits' | 'integrals' | 'algebra' | 'algebra2' | 'cumulative'>('the-unit-circle')
   const [completedTopics, setCompletedTopics] = useState<string[]>([])
   const [competitiveCategories, setCompetitiveCategories] = useState<Record<string, boolean>>({})
+  const [algebra2SubtopicDetails, setAlgebra2SubtopicDetails] = useState<{key: string; label: string}[]>([])
   const [requirements, setRequirements] = useState<any>(null)
   const [showAIOptions, setShowAIOptions] = useState(false)
   const [aiDifficulty, setAiDifficulty] = useState<'easy' | 'medium' | 'hard'>('medium')
@@ -50,6 +51,7 @@ export default function CompetitivePage() {
       setRequirements(data.requirements)
       setCompletedTopics(data.completedTopics || [])
       setCompetitiveCategories(data.competitiveCategories || {})
+      setAlgebra2SubtopicDetails(data.algebra2SubtopicDetails || [])
       setLoading(false)
 
       if (data.justUnlocked) {
@@ -444,9 +446,15 @@ export default function CompetitivePage() {
             >
               <div className="text-3xl mb-2">📊</div>
               <h3 className="text-lg font-bold mb-1">Algebra 2</h3>
-              <p className="text-xs text-gray-600 dark:text-gray-400">
-                Polynomials, Rationals & Logs
-              </p>
+              {competitiveCategories['algebra2'] && algebra2SubtopicDetails.length > 0 ? (
+                <p className="text-xs text-gray-600 dark:text-gray-400">
+                  {algebra2SubtopicDetails.map(s => s.label).join(', ')}
+                </p>
+              ) : (
+                <p className="text-xs text-gray-600 dark:text-gray-400">
+                  Polynomials, Rationals & Logs
+                </p>
+              )}
               {!competitiveCategories['algebra2'] && (
                 <span className="text-xs text-red-500 mt-1 block">Complete an Algebra 2 Topic</span>
               )}

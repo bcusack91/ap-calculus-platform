@@ -1,4 +1,7 @@
 // Algebra 2 question bank for competitive mode
+// Each question is tagged with a subtopic so we can filter based on what the student has actually completed.
+
+export type Algebra2Subtopic = 'polynomials' | 'rational-expressions' | 'exponentials' | 'logarithms' | 'complex-numbers'
 
 export interface Algebra2Question {
   id: number
@@ -7,6 +10,41 @@ export interface Algebra2Question {
   correctAnswer: number
   explanation: string
   difficulty: 'easy' | 'medium' | 'hard'
+  subtopic: Algebra2Subtopic
+}
+
+/**
+ * Maps curriculum topic slugs → question subtopic tags.
+ * When a student completes a topic whose slug matches one of these,
+ * questions with that subtopic tag become available.
+ */
+export const ALGEBRA2_SLUG_TO_SUBTOPIC: Record<string, Algebra2Subtopic> = {
+  'polynomial-operations-algebra2': 'polynomials',
+  'factoring-polynomials-algebra2': 'polynomials',
+  'polynomial-theorems-algebra2': 'polynomials',
+  'polynomial-graphs-algebra2': 'polynomials',
+  'polynomial-long-division': 'polynomials',
+  'polynomial-division-algebra2': 'polynomials',
+  'synthetic-division': 'polynomials',
+  'simplifying-rationals-algebra2': 'rational-expressions',
+  'rational-operations-algebra2': 'rational-expressions',
+  'rational-equations-algebra2': 'rational-expressions',
+  'exponential-functions-algebra2': 'exponentials',
+  'exponential-equations-algebra2': 'exponentials',
+  'rational-exponents-algebra2': 'exponentials',
+  'logarithmic-functions-algebra2': 'logarithms',
+  'logarithmic-equations-algebra2': 'logarithms',
+  'complex-numbers-intro-algebra2': 'complex-numbers',
+  'radical-equations-algebra2': 'complex-numbers',
+}
+
+/** Human-readable labels for each subtopic */
+export const ALGEBRA2_SUBTOPIC_LABELS: Record<Algebra2Subtopic, string> = {
+  'polynomials': 'Polynomials',
+  'rational-expressions': 'Rational Expressions',
+  'exponentials': 'Exponentials',
+  'logarithms': 'Logarithms',
+  'complex-numbers': 'Complex Numbers',
 }
 
 const allQuestions: Algebra2Question[] = [
@@ -18,6 +56,7 @@ const allQuestions: Algebra2Question[] = [
     correctAnswer: 0,
     explanation: 'Difference of cubes: $a^3 - b^3 = (a-b)(a^2+ab+b^2)$. Here $a=x, b=2$.',
     difficulty: 'easy',
+    subtopic: 'polynomials',
   },
   {
     id: 2,
@@ -26,6 +65,7 @@ const allQuestions: Algebra2Question[] = [
     correctAnswer: 0,
     explanation: 'Multiply coefficients and add exponents: $2 \\cdot 3 = 6$ and $x^{3+2} = x^5$.',
     difficulty: 'easy',
+    subtopic: 'polynomials',
   },
   {
     id: 3,
@@ -34,6 +74,7 @@ const allQuestions: Algebra2Question[] = [
     correctAnswer: 0,
     explanation: 'The degree is the highest power of $x$, which is $5$.',
     difficulty: 'easy',
+    subtopic: 'polynomials',
   },
   {
     id: 4,
@@ -42,6 +83,7 @@ const allQuestions: Algebra2Question[] = [
     correctAnswer: 0,
     explanation: 'Factor: $\\frac{(x+3)(x-3)}{(x-3)^2} = \\frac{x+3}{x-3}$ for $x \\neq 3$.',
     difficulty: 'easy',
+    subtopic: 'rational-expressions',
   },
   {
     id: 5,
@@ -50,6 +92,7 @@ const allQuestions: Algebra2Question[] = [
     correctAnswer: 0,
     explanation: '$27^{2/3} = (27^{1/3})^2 = 3^2 = 9$.',
     difficulty: 'easy',
+    subtopic: 'exponentials',
   },
   {
     id: 6,
@@ -58,6 +101,7 @@ const allQuestions: Algebra2Question[] = [
     correctAnswer: 0,
     explanation: 'By definition, $i = \\sqrt{-1}$, so $i^2 = -1$.',
     difficulty: 'easy',
+    subtopic: 'complex-numbers',
   },
   {
     id: 7,
@@ -66,6 +110,7 @@ const allQuestions: Algebra2Question[] = [
     correctAnswer: 0,
     explanation: '$(x+3)^3 = x^3 + 3(x^2)(3) + 3(x)(9) + 27 = x^3 + 9x^2 + 27x + 27$.',
     difficulty: 'easy',
+    subtopic: 'polynomials',
   },
   // --- MEDIUM ---
   {
@@ -75,6 +120,7 @@ const allQuestions: Algebra2Question[] = [
     correctAnswer: 0,
     explanation: 'Synthetic division with $3$: coefficients $1, -2, -5, 6 \\to 1, 1, -2, 0$. Result: $x^2 + x - 2$.',
     difficulty: 'medium',
+    subtopic: 'polynomials',
   },
   {
     id: 9,
@@ -83,6 +129,7 @@ const allQuestions: Algebra2Question[] = [
     correctAnswer: 0,
     explanation: 'Let $u = x^2$: $u^2 - 5u + 4 = 0 \\Rightarrow (u-1)(u-4) = 0$. So $x^2 = 1$ or $x^2 = 4$.',
     difficulty: 'medium',
+    subtopic: 'polynomials',
   },
   {
     id: 10,
@@ -91,6 +138,7 @@ const allQuestions: Algebra2Question[] = [
     correctAnswer: 0,
     explanation: 'Common denominator: $\\frac{2(x-1)+3(x+1)}{(x+1)(x-1)} = \\frac{2x-2+3x+3}{x^2-1} = \\frac{5x+1}{x^2-1}$.',
     difficulty: 'medium',
+    subtopic: 'rational-expressions',
   },
   {
     id: 11,
@@ -99,6 +147,7 @@ const allQuestions: Algebra2Question[] = [
     correctAnswer: 0,
     explanation: '$\\log_3(x(x-2)) = 1 \\Rightarrow x^2 - 2x = 3 \\Rightarrow x^2 - 2x - 3 = 0 \\Rightarrow (x-3)(x+1) = 0$. Since $x > 2$, $x = 3$.',
     difficulty: 'medium',
+    subtopic: 'logarithms',
   },
   {
     id: 12,
@@ -107,6 +156,7 @@ const allQuestions: Algebra2Question[] = [
     correctAnswer: 0,
     explanation: 'By the Rational Root Theorem, test $x = -1$: $-1 -4 -1 + 6 = 0$. Factor out $(x+1)$ to get $(x+1)(x^2-5x+6) = (x+1)(x-2)(x-3)$.',
     difficulty: 'medium',
+    subtopic: 'polynomials',
   },
   {
     id: 13,
@@ -115,6 +165,7 @@ const allQuestions: Algebra2Question[] = [
     correctAnswer: 0,
     explanation: '$(3+2i)(1-4i) = 3 - 12i + 2i - 8i^2 = 3 - 10i + 8 = 11 - 10i$.',
     difficulty: 'medium',
+    subtopic: 'complex-numbers',
   },
   {
     id: 14,
@@ -123,6 +174,7 @@ const allQuestions: Algebra2Question[] = [
     correctAnswer: 0,
     explanation: 'When degrees are equal, the horizontal asymptote is the ratio of leading coefficients: $y = 3/1 = 3$.',
     difficulty: 'medium',
+    subtopic: 'rational-expressions',
   },
   // --- HARD ---
   {
@@ -132,6 +184,7 @@ const allQuestions: Algebra2Question[] = [
     correctAnswer: 0,
     explanation: '$f(2) = 2(8) - 3(4) + 2 - 5 = 16 - 12 + 2 - 5 = 1$.',
     difficulty: 'hard',
+    subtopic: 'polynomials',
   },
   {
     id: 16,
@@ -140,6 +193,7 @@ const allQuestions: Algebra2Question[] = [
     correctAnswer: 0,
     explanation: 'Note $x^2 - x -2 = (x-2)(x+1)$. Multiply through: $x(x+1) - 3(x-2) = 5 \\Rightarrow x^2 + x - 3x + 6 = 5 \\Rightarrow x^2 - 2x + 1 = 0 \\Rightarrow (x-1)^2 = 0$. So $x = 1$.',
     difficulty: 'hard',
+    subtopic: 'rational-expressions',
   },
   {
     id: 17,
@@ -148,6 +202,7 @@ const allQuestions: Algebra2Question[] = [
     correctAnswer: 0,
     explanation: 'Let $u = x^2$: $u^2 + u - 2 = 0 \\Rightarrow (u+2)(u-1) = 0$. So $u = 1$ gives $x = \\pm 1$ (real), and $u = -2$ gives $x = \\pm i\\sqrt{2}$ (complex). Two non-real solutions.',
     difficulty: 'hard',
+    subtopic: 'complex-numbers',
   },
   {
     id: 18,
@@ -156,6 +211,7 @@ const allQuestions: Algebra2Question[] = [
     correctAnswer: 0,
     explanation: 'Let $u = e^x$: $u^2 - 5u + 6 = 0 \\Rightarrow (u-2)(u-3) = 0$. So $e^x = 2 \\Rightarrow x = \\ln 2$ or $e^x = 3 \\Rightarrow x = \\ln 3$.',
     difficulty: 'hard',
+    subtopic: 'exponentials',
   },
   {
     id: 19,
@@ -164,6 +220,7 @@ const allQuestions: Algebra2Question[] = [
     correctAnswer: 0,
     explanation: 'Factor: $\\frac{(x-1)(x+1)}{x(x-1)(x+1)} = \\frac{1}{x}$ for $x \\neq \\pm 1$. The only vertical asymptote is $x = 0$; $x = \\pm 1$ are holes.',
     difficulty: 'hard',
+    subtopic: 'rational-expressions',
   },
   {
     id: 20,
@@ -172,10 +229,32 @@ const allQuestions: Algebra2Question[] = [
     correctAnswer: 0,
     explanation: 'Case 1: $x^2 - 4x = 3 \\Rightarrow x^2 - 4x - 3 = 0 \\Rightarrow x = 2 \\pm \\sqrt{7}$. Case 2: $x^2 - 4x = -3 \\Rightarrow x^2 - 4x + 3 = 0 \\Rightarrow x = 1, 3$. Sum $= (2+\\sqrt{7}) + (2-\\sqrt{7}) + 1 + 3 = 8$.',
     difficulty: 'hard',
+    subtopic: 'polynomials',
   },
 ]
 
-export function getAlgebra2Questions(count: number = 10): Algebra2Question[] {
-  const shuffled = [...allQuestions].sort(() => Math.random() - 0.5)
+/**
+ * Get Algebra 2 questions, optionally filtered by allowed subtopics.
+ * If allowedSubtopics is provided, only questions matching those subtopics are returned.
+ * This ensures students only see questions from sections they have actually completed.
+ */
+export function getAlgebra2Questions(count: number = 10, allowedSubtopics?: Algebra2Subtopic[]): Algebra2Question[] {
+  let pool = [...allQuestions]
+  if (allowedSubtopics && allowedSubtopics.length > 0) {
+    pool = pool.filter(q => allowedSubtopics.includes(q.subtopic))
+  }
+  const shuffled = pool.sort(() => Math.random() - 0.5)
   return shuffled.slice(0, Math.min(count, shuffled.length))
+}
+
+/**
+ * Given a list of completed topic slugs, return the Algebra 2 subtopics the student has unlocked.
+ */
+export function getUnlockedAlgebra2Subtopics(completedSlugs: string[]): Algebra2Subtopic[] {
+  const unlocked = new Set<Algebra2Subtopic>()
+  for (const slug of completedSlugs) {
+    const subtopic = ALGEBRA2_SLUG_TO_SUBTOPIC[slug]
+    if (subtopic) unlocked.add(subtopic)
+  }
+  return Array.from(unlocked)
 }

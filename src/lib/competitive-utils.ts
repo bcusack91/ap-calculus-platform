@@ -5,7 +5,7 @@ import { getDerivativeQuestions } from '@/data/competitive-questions/derivatives
 import { getLimitQuestions } from '@/data/competitive-questions/limits-bank'
 import { getIntegralQuestions } from '@/data/competitive-questions/integrals-bank'
 import { getAlgebraQuestions } from '@/data/competitive-questions/algebra-bank'
-import { getAlgebra2Questions } from '@/data/competitive-questions/algebra2-bank'
+import { getAlgebra2Questions, getUnlockedAlgebra2Subtopics } from '@/data/competitive-questions/algebra2-bank'
 
 interface UnitCirclePosition {
   angle: number;
@@ -70,7 +70,7 @@ function formatCoordinate(x: number, y: number): string {
  * Generate 10 random questions for a match
  * Ensures variety by mixing angle and coordinate questions
  */
-export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: string): any[] {
+export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: string, completedTopics?: string[]): any[] {
   // If topic is reflection-refraction, use that question bank
   if (topicSlug === 'reflection-refraction') {
     const questions = getQuestionSet(totalQuestions)
@@ -91,7 +91,6 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
     'limits': getLimitQuestions,
     'integrals': getIntegralQuestions,
     'algebra': getAlgebraQuestions,
-    'algebra2': getAlgebra2Questions,
   }
 
   if (topicSlug && topicSlug in mcqBanks) {
@@ -108,9 +107,25 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
     }))
   }
 
+  // Algebra 2: filter questions to only subtopics the student has completed
+  if (topicSlug === 'algebra2') {
+    const allowedSubtopics = completedTopics ? getUnlockedAlgebra2Subtopics(completedTopics) : undefined
+    const questions = getAlgebra2Questions(totalQuestions, allowedSubtopics)
+    return questions.map((q: any, i: number) => ({
+      id: i,
+      question: q.question,
+      options: q.options,
+      correctAnswer: q.correctAnswer,
+      answerIndex: q.correctAnswer,
+      explanation: q.explanation,
+      difficulty: q.difficulty,
+      type: 'multiple-choice'
+    }))
+  }
+
   // If cumulative, get mixed questions from all available topics
   if (topicSlug === 'cumulative') {
-    return generateCumulativeQuestions(totalQuestions)
+    return generateCumulativeQuestions(totalQuestions, completedTopics)
   }
   
   // Default: unit circle questions
@@ -166,7 +181,7 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
 /**
  * Generate cumulative questions from multiple topics
  */
-function generateCumulativeQuestions(totalQuestions: number): any[] {
+function generateCumulativeQuestions(totalQuestions: number, completedTopics?: string[]): any[] {
   const questions: any[] = []
 
   // Gather questions from all MCQ banks
@@ -209,8 +224,9 @@ function generateCumulativeQuestions(totalQuestions: number): any[] {
   }))
   allBankQuestions.push(...iQuestions)
 
-  // Algebra 2
-  const a2Questions = getAlgebra2Questions(1).map((q, i) => ({
+  // Algebra 2 — filtered to completed subtopics only
+  const allowedSubtopics = completedTopics ? getUnlockedAlgebra2Subtopics(completedTopics) : undefined
+  const a2Questions = getAlgebra2Questions(1, allowedSubtopics).map((q, i) => ({
     id: i, question: q.question, options: q.options, correctAnswer: q.correctAnswer,
     answerIndex: q.correctAnswer, explanation: q.explanation, difficulty: q.difficulty, type: 'multiple-choice'
   }))

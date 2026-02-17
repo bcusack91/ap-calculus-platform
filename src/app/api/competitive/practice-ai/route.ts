@@ -22,7 +22,16 @@ export async function POST(req: NextRequest) {
 
     const user = await prisma.user.findUnique({
       where: { email: session.user.email },
-      include: { competitiveProfile: true }
+      include: {
+        competitiveProfile: true,
+        topicProgress: {
+          where: {
+            status: { in: ['COMPLETED', 'MASTERED'] },
+            masteryLevel: { gte: 0.8 }
+          },
+          include: { topic: { select: { slug: true } } }
+        }
+      }
     })
 
     if (!user?.competitiveProfile) {
@@ -69,8 +78,10 @@ export async function POST(req: NextRequest) {
     }
 
     // Generate questions for the match based on selected topic
-    console.log('Generating questions for topic:', topicSlug)
-    const questions = generateMatchQuestions(10, topicSlug)
+    // Pass completedTopics so question banks can filter to only completed sections
+    const completedTopicSlugs = user.topicProgress.map(tp => tp.topic.slug)
+    console.log('Generating questions for topic:', topicSlug, '| Completed topics:', completedTopicSlugs.length)
+    const questions = generateMatchQuestions(10, topicSlug, completedTopicSlugs)
     console.log('Generated questions:', questions.length, 'First question type:', questions[0]?.type)
     
     // Create practice match in database
