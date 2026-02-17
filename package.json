@@ -13,9 +13,6 @@
     "seed:chemistry": "node --import tsx prisma/seed-chemistry-categories.ts && npm run seed:chem-all",
     "seed:chem-all": "for file in prisma/seed-chem-*.ts; do node --import tsx \"$file\"; done"
   },
-  "prisma": {
-    "seed": "tsx prisma/seed.ts"
-  },
   "dependencies": {
     "@auth/prisma-adapter": "^2.11.0",
     "@prisma/client": "^6.18.0",

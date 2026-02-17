@@ -2443,8 +2443,10 @@ function MiniBossBattle({
     const questionType = questionTypes[currentQuestionIndex]
     
     // Dynamically import questions from the correct module
-    const modulePath = `@/data/mini-boss-questions/${config.questionBankModule}`
-    import(modulePath).then(module => {
+    import(
+      /* webpackInclude: /boss\.ts$/ */
+      `@/data/mini-boss-questions/${config.questionBankModule}`
+    ).then(module => {
       const question = module.getRandomMiniBossQuestion(questionType, usedQuestionIds)
       
       // Shuffle the options so correct answer isn't always first
