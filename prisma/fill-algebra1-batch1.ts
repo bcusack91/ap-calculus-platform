@@ -11,277 +11,279 @@ async function main() {
     data: {
       textContent: `# Solving Linear Equations
 
-## What is a Linear Equation?
+## What Is a Linear Equation?
 
-A **linear equation** is an algebraic equation where the highest power of the variable is 1. The graph of a linear equation is always a straight line. Linear equations have the general form:
+A **linear equation** is an equation in which the variable appears only to the first power — no exponents, no square roots, no variables multiplied together. The word "linear" comes from the fact that the graph of every such equation is a **straight line**.
 
-ax + b = c
+The standard form of a linear equation in one variable looks like $ax + b = c$, where $a$, $b$, and $c$ are real numbers and $a \\neq 0$. The letter $x$ is the **unknown variable** — the value we are trying to find.
 
-Where:
-- x is the variable (unknown)
-- a, b, and c are constants (known numbers)
-- a ≠ 0
+Some examples of linear equations:
+- $2x + 5 = 13$
+- $3x - 7 = 20$
+- $\\frac{x}{4} + 3 = 7$
+- $5(x - 2) = 15$
 
-Examples of linear equations:
-- 2x + 5 = 13
-- 3x - 7 = 20
-- x/4 + 3 = 7
-- 5(x - 2) = 15
+And here are some NON-examples (these are NOT linear):
+- $x^2 + 3 = 12$ — the variable is squared, making it a **quadratic equation**
+- $\\sqrt{x} = 5$ — the variable is under a radical
+- $xy = 10$ — two variables multiplied together
 
-## Goal of Solving Equations
+Being able to tell the difference between linear and nonlinear equations is the first step toward mastering algebra.
 
-The goal is to **isolate the variable** on one side of the equation. This means getting x (or whatever variable) alone, with a coefficient of 1.
+## The Golden Rule: Keep the Equation Balanced
 
-We want to transform the equation into:
-x = (some number)
+Think of an equation as a **balance scale** with the equals sign as the fulcrum. Whatever sits on the left side must weigh the same as the right side. This is the most important idea in all of equation-solving:
 
-## Properties of Equality
+> Whatever you do to one side, you must do to the other side.
 
-These properties allow us to manipulate equations while keeping them balanced:
+This principle is captured by four **properties of equality**:
 
-**1. Addition Property of Equality**
-If a = b, then a + c = b + c
-You can add the same number to both sides.
+| Property | Statement | What it means |
+|----------|-----------|---------------|
+| Addition Property | If $a = b$, then $a + c = b + c$ | Add the same value to both sides |
+| Subtraction Property | If $a = b$, then $a - c = b - c$ | Subtract the same value from both sides |
+| Multiplication Property | If $a = b$, then $ac = bc$ | Multiply both sides by the same value |
+| Division Property | If $a = b$ and $c \\neq 0$, then $\\frac{a}{c} = \\frac{b}{c}$ | Divide both sides by the same nonzero value |
 
-**2. Subtraction Property of Equality**
-If a = b, then a - c = b - c
-You can subtract the same number from both sides.
+All four properties keep the equation **balanced and equivalent** to the original. Any sequence of these operations will never add or remove a solution.
 
-**3. Multiplication Property of Equality**
-If a = b, then a × c = b × c (where c ≠ 0)
-You can multiply both sides by the same non-zero number.
+## Inverse Operations: Your Equation-Solving Toolkit
 
-**4. Division Property of Equality**
-If a = b, then a ÷ c = b ÷ c (where c ≠ 0)
-You can divide both sides by the same non-zero number.
+The ultimate goal of solving an equation is to **isolate the variable** — get the variable completely alone on one side of the equation with a coefficient of 1. To peel numbers away from the variable, you use **inverse operations** — operations that undo each other:
+
+- Addition and **subtraction are inverses** of each other
+- Multiplication and **division are inverses** of each other
+
+Think of it like peeling layers off an onion: each inverse operation removes one layer, bringing you closer to $x$ alone. The order matters — you undo operations in the **reverse order of operations** (reverse PEMDAS), meaning you undo addition and subtraction before multiplication and division.
 
 ## Solving One-Step Equations
 
-**Addition/Subtraction Equations:**
+A **one-step equation** requires exactly one operation to solve. These are the building blocks for every harder equation you will encounter, so mastering them is critical.
 
-Example 1: x + 7 = 12
-Subtract 7 from both sides:
-x + 7 - 7 = 12 - 7
-x = 5
+**Undo Addition** — subtract from both sides:
+$$x + 7 = 12$$
+$$x + 7 - 7 = 12 - 7$$
+$$x = 5$$
 
-Example 2: x - 4 = 9
-Add 4 to both sides:
-x - 4 + 4 = 9 + 4
-x = 13
+**Undo Subtraction** — add to both sides:
+$$x - 4 = 9$$
+$$x - 4 + 4 = 9 + 4$$
+$$x = 13$$
 
-**Multiplication/Division Equations:**
+**Undo Multiplication** — divide both sides:
+$$3x = 15$$
+$$\\frac{3x}{3} = \\frac{15}{3}$$
+$$x = 5$$
 
-Example 3: 3x = 15
-Divide both sides by 3:
-3x/3 = 15/3
-x = 5
+**Undo Division** — multiply both sides:
+$$\\frac{x}{2} = 8$$
+$$2 \\cdot \\frac{x}{2} = 2 \\cdot 8$$
+$$x = 16$$
 
-Example 4: x/2 = 8
-Multiply both sides by 2:
-2 × (x/2) = 2 × 8
-x = 16
+Always verify by plugging back into the original: $\\frac{16}{2} = 8$ ✓
 
 ## Solving Two-Step Equations
 
-Two-step equations require two operations to solve. Use **reverse order of operations** - undo addition/subtraction first, then multiplication/division.
+A **two-step equation** has two operations applied to the variable. The strategy is to undo addition or subtraction first, then undo multiplication or division — this is the **reverse PEMDAS** approach.
 
-**General Strategy:**
-1. Undo addition or subtraction
-2. Undo multiplication or division
+**Example 1:** $2x + 5 = 13$
 
-Example 1: 2x + 5 = 13
-Step 1: Subtract 5 from both sides
-2x + 5 - 5 = 13 - 5
-2x = 8
+Step 1 — Undo the $+5$ by subtracting from both sides:
+$$2x = 8$$
 
-Step 2: Divide both sides by 2
-2x/2 = 8/2
-x = 4
+Step 2 — Undo the $\\times 2$ by dividing both sides:
+$$x = 4$$
 
-Check: 2(4) + 5 = 8 + 5 = 13 ✓
+Check: $2(4) + 5 = 8 + 5 = 13$ ✓
 
-Example 2: 3x - 7 = 20
-Step 1: Add 7 to both sides
-3x - 7 + 7 = 20 + 7
-3x = 27
+**Example 2:** $3x - 7 = 20$
 
-Step 2: Divide both sides by 3
-x = 9
+Step 1 — Add 7: $3x = 27$
 
-Example 3: x/4 + 3 = 7
-Step 1: Subtract 3 from both sides
-x/4 = 4
+Step 2 — Divide by 3: $x = 9$
 
-Step 2: Multiply both sides by 4
-x = 16
+Check: $3(9) - 7 = 27 - 7 = 20$ ✓
 
-## Solving Multi-Step Equations
+**Example 3:** $\\frac{x}{4} + 3 = 7$
 
-For more complex equations, follow this order:
+Step 1 — Subtract 3: $\\frac{x}{4} = 4$
 
-**Step 1: Simplify each side** (distribute, combine like terms)
-**Step 2: Get all variable terms on one side**
-**Step 3: Get all constants on the other side**
-**Step 4: Isolate the variable**
+Step 2 — Multiply by 4: $x = 16$
 
-Example 1: 5(x - 2) = 15
-Step 1: Distribute 5
-5x - 10 = 15
+Check: $\\frac{16}{4} + 3 = 4 + 3 = 7$ ✓
 
-Step 2: Add 10 to both sides
-5x = 25
+The two-step pattern appears constantly in algebra, so practice until it feels automatic.
 
-Step 3: Divide by 5
-x = 5
+## The Distributive Property in Equations
 
-Example 2: 3x + 7 = x + 19
-Step 1: Subtract x from both sides
-2x + 7 = 19
+Many multi-step equations involve parentheses. Before anything else, you must **distribute the outside factor** — multiply it by every term inside the parentheses:
 
-Step 2: Subtract 7 from both sides
-2x = 12
+$$a(b + c) = ab + ac$$
 
-Step 3: Divide by 2
-x = 6
+**Example:** Solve $5(x - 2) = 15$
 
-Example 3: 2(x + 3) - 5 = 4x - 7
-Step 1: Distribute
-2x + 6 - 5 = 4x - 7
-2x + 1 = 4x - 7
+Step 1 — Distribute the 5: $5x - 10 = 15$
 
-Step 2: Subtract 2x from both sides
-1 = 2x - 7
+Step 2 — Add 10: $5x = 25$
 
-Step 3: Add 7 to both sides
-8 = 2x
+Step 3 — Divide by 5: $x = 5$
 
-Step 4: Divide by 2
-4 = x, or x = 4
+**Common mistake alert!** Always distribute to ALL terms inside. For instance, $3(x + 2)$ equals $3x + 6$, NOT $3x + 2$. Forgetting to distribute to the second term is one of the most frequent errors in algebra and is called an **incomplete distribution** error.
 
-## Equations with Variables on Both Sides
+## Combining Like Terms
 
-When variables appear on both sides, collect all variable terms on one side and all constants on the other.
+Before isolating the variable, simplify each side of the equation by **combining like terms**. Like terms have the same variable raised to the same power — for example, $4x$ and $-x$ are like terms, but $3x$ and $3x^2$ are not.
 
-Example: 5x - 3 = 2x + 12
-Step 1: Subtract 2x from both sides
-3x - 3 = 12
+**Example:** Solve $4x + 3 - x + 7 = 22$
 
-Step 2: Add 3 to both sides
-3x = 15
+Combine like terms on the left: $4x - x = 3x$ and $3 + 7 = 10$
+$$3x + 10 = 22$$
 
-Step 3: Divide by 3
-x = 5
+Subtract 10: $3x = 12$
 
-## Equations with Fractions
+Divide by 3: $x = 4$
 
-**Method 1: Clear fractions by multiplying by LCD**
+Simplifying before solving always makes the work easier. A good habit is to scan both sides of the equation for like terms before doing anything else, which is called **simplifying each side first**.
 
-Example: (x/3) + (x/4) = 7
-LCD = 12
-Multiply everything by 12:
-12(x/3) + 12(x/4) = 12(7)
-4x + 3x = 84
-7x = 84
-x = 12
+## Variables on Both Sides
 
-**Method 2: Work with fractions directly**
+When the variable appears on **both sides of the equation**, your first job is to collect all variable terms on one side and all constant terms on the other. It does not matter which side you choose — pick whichever makes the arithmetic easier.
 
-Example: (2x + 1)/3 = 5
+**Example 1:** $5x - 3 = 2x + 12$
+
+Step 1 — Subtract $2x$ from both sides to get variables on the left:
+$$3x - 3 = 12$$
+
+Step 2 — Add 3:
+$$3x = 15$$
+
+Step 3 — Divide by 3:
+$$x = 5$$
+
+Check: Left = $5(5) - 3 = 22$. Right = $2(5) + 12 = 22$ ✓
+
+**Example 2:** $2(x + 3) - 5 = 4x - 7$
+
+Distribute: $2x + 6 - 5 = 4x - 7$, which simplifies to $2x + 1 = 4x - 7$
+
+Subtract $2x$: $1 = 2x - 7$
+
+Add 7: $8 = 2x$
+
+Divide by 2: $x = 4$
+
+The golden strategy is to **move variables to one side and constants to the other** using inverse operations.
+
+## Clearing Fractions with the LCD
+
+Equations with fractions can look intimidating, but there is a powerful shortcut: multiply every term on both sides by the **least common denominator** to eliminate all fractions at once. This technique is called **clearing the denominators** and turns a messy problem into a clean one.
+
+**Example 1:** $\\frac{x}{3} + \\frac{x}{4} = 7$
+
+The LCD of 3 and 4 is 12. Multiply every term by 12:
+$$12 \\cdot \\frac{x}{3} + 12 \\cdot \\frac{x}{4} = 12 \\cdot 7$$
+$$4x + 3x = 84$$
+$$7x = 84$$
+$$x = 12$$
+
+**Example 2:** $\\frac{2x + 1}{3} = 5$
+
 Multiply both sides by 3:
-2x + 1 = 15
-2x = 14
-x = 7
+$$2x + 1 = 15$$
+$$2x = 14$$
+$$x = 7$$
 
-## Checking Your Solution
+You can also clear **decimal coefficients** by multiplying both sides by a power of 10. For example, $0.3x + 1.5 = 4.2$ becomes $3x + 15 = 42$ when you multiply everything by 10.
 
-Always check by substituting your answer back into the original equation.
+## Special Cases: No Solution and Infinitely Many Solutions
 
-Example: If solving 3x + 5 = 14 gives x = 3
-Check: 3(3) + 5 = 9 + 5 = 14 ✓
+Most linear equations have exactly **one unique solution**. However, two special cases can occur:
 
-## Special Cases
+**Identity — Infinitely Many Solutions:**
+An **identity equation** is true for every possible value of the variable. Example:
+$$2(x + 3) = 2x + 6$$
+$$2x + 6 = 2x + 6$$
+$$6 = 6 \\quad \\text{(always true)}$$
 
-**Identity (Infinitely Many Solutions):**
-When you get a statement that's always true (like 0 = 0 or 5 = 5)
-Example: 2(x + 3) = 2x + 6
-After simplifying: 6 = 6 (true for all x)
+When the variables cancel and you get a **true statement** like $0 = 0$, every real number is a solution.
 
-**Contradiction (No Solution):**
-When you get a false statement (like 0 = 5)
-Example: 2(x + 3) = 2x + 8
-After simplifying: 6 = 8 (never true)
+**Contradiction — No Solution:**
+A **contradiction equation** is never true for any value. Example:
+$$2(x + 3) = 2x + 8$$
+$$2x + 6 = 2x + 8$$
+$$6 = 8 \\quad \\text{(false!)}$$
 
-## Common Mistakes to Avoid
+When the variables cancel and you get a **false statement** like $6 = 8$, no value of $x$ can make the equation true. The equation has no solution.
 
-1. **Not doing the same thing to both sides**
-   Wrong: If 2x = 10, x = 10 - 2 = 8
-   Right: Divide both sides by 2, x = 5
+Recognizing these special cases saves time — once the variable terms cancel, the answer is immediate.
 
-2. **Forgetting to distribute**
-   Wrong: 3(x + 2) = 3x + 2
-   Right: 3(x + 2) = 3x + 6
+## Common Mistakes and How to Avoid Them
 
-3. **Sign errors when moving terms**
-   2x + 5 = 13
-   Remember: 2x = 13 - 5, not 13 + 5
+Here are the errors that trip up students most often. Awareness is the first step to avoiding them!
 
-4. **Dividing by zero**
-   Never divide both sides by 0
+1. **Performing operations on only one side** — If you add 5 to the left, you MUST add 5 to the right. The equation stays balanced only when you apply the same operation to both sides.
 
-5. **Not checking the solution**
-   Always substitute back to verify!
+2. **Distributing to only the first term** — $3(x + 2) = 3x + 6$, NOT $3x + 2$. Multiply the factor by every single term inside the parentheses.
 
-## Real-World Applications
+3. **Sign errors when subtracting** — Remember that subtracting a negative is the same as adding: $a - (-b) = a + b$. Always double-check sign changes.
 
-Linear equations appear in many real-life situations:
+4. **Confusing subtraction with division** — In $2x = 10$, divide by 2 to get $x = 5$. Do NOT subtract 2 to get $x = 8$. The operation between 2 and $x$ is **multiplication, so undo with division**.
 
-**Example 1: Age Problems**
-"Sarah is 5 years older than Tom. Together their ages sum to 27. How old is Tom?"
-Let x = Tom's age
-x + (x + 5) = 27
-2x + 5 = 27
-x = 11 (Tom is 11)
+5. **Skipping verification** — Always substitute your answer back into the original equation. This catches arithmetic mistakes and reveals special cases. The habit of **checking your solution** is what separates strong algebra students from the rest.
 
-**Example 2: Money Problems**
-"You have $50. After buying some items at $7 each, you have $15 left. How many items did you buy?"
-50 - 7x = 15
-7x = 35
-x = 5 items
+## Word Problems: Translating English into Algebra
 
-**Example 3: Geometry**
-"The perimeter of a rectangle is 40 cm. The length is 3 cm more than the width. Find the dimensions."
-Let w = width
-Perimeter: 2w + 2(w + 3) = 40
-4w + 6 = 40
-w = 8.5 cm
+Linear equations model countless real-world situations. The key skill is **translating words into equations** by identifying the unknown and writing a mathematical statement.
 
-## Problem-Solving Strategy
+**Age Problem:**
+"Maya is 5 years older than Noah. Their ages sum to 27. How old is Noah?"
+Let $x$ = Noah's age. Maya's age is $x + 5$.
+$$x + (x + 5) = 27$$
+$$2x + 5 = 27 \\implies 2x = 22 \\implies x = 11$$
+Noah is 11, Maya is 16.
 
-1. Read the problem carefully
-2. Identify what you're solving for (define variable)
-3. Write an equation
-4. Solve the equation
-5. Check if the answer makes sense
-6. Answer the question in words
+**Money Problem:**
+"You have 50 dollars. After buying notebooks at 7 dollars each, you have 15 dollars left. How many did you buy?"
+$$50 - 7x = 15 \\implies 7x = 35 \\implies x = 5$$
+You bought 5 notebooks.
 
-## Quick Reference
+**Geometry Problem:**
+"The perimeter of a rectangle is 40 cm. The length is 3 cm more than the width."
+Let $w$ = width. Length $= w + 3$.
+$$2w + 2(w + 3) = 40 \\implies 4w + 6 = 40 \\implies 4w = 34 \\implies w = 8.5$$
+Width = 8.5 cm, Length = 11.5 cm.
 
-| Type | Example | First Step |
-|------|---------|------------|
-| x + 5 = 12 | One-step | Subtract 5 |
-| 3x = 15 | One-step | Divide by 3 |
-| 2x + 5 = 13 | Two-step | Subtract 5 |
-| 3(x - 2) = 15 | Multi-step | Distribute 3 |
-| 5x - 3 = 2x + 12 | Variables both sides | Collect variables |
+**Distance-Rate-Time:**
+Two cars leave the same point in opposite directions at 55 mph and 65 mph. When are they 360 miles apart?
+$$55t + 65t = 360 \\implies 120t = 360 \\implies t = 3 \\text{ hours}$$
 
-## Practice Tips
+The **problem-solving strategy** is always the same: define a variable, write an equation, solve, then check that the answer makes sense in context.
 
-- Always show your work step-by-step
-- Check your solution by substituting back
-- Keep equations balanced (what you do to one side, do to the other)
-- Work in reverse order of operations
-- Simplify before solving when possible
-- Be careful with negative signs`
+## Step-by-Step Solving Strategy
+
+Follow this **systematic approach** whenever you face any linear equation:
+
+1. **Simplify each side** — distribute and combine like terms
+2. **Collect variable terms** on one side using addition or subtraction
+3. **Collect constant terms** on the other side
+4. **Divide or multiply** to make the coefficient of $x$ equal to 1
+5. **Check your answer** by substituting back into the original equation
+
+This five-step framework works for every linear equation, from the simplest one-step problem to the most complex multi-step challenge.
+
+## Quick Reference Table
+
+| Equation Type | Example | First Move |
+|--------------|---------|-----------|
+| One-step (addition) | $x + 5 = 12$ | Subtract 5 from both sides |
+| One-step (multiplication) | $3x = 15$ | Divide both sides by 3 |
+| Two-step | $2x + 5 = 13$ | Subtract 5, then divide by 2 |
+| Distribution needed | $3(x - 2) = 15$ | Distribute the 3 first |
+| Variables on both sides | $5x - 3 = 2x + 12$ | Move variable terms to one side |
+| Fractions | $\\frac{x}{3} + \\frac{x}{4} = 7$ | Multiply all terms by the LCD |
+| Decimals | $0.3x + 1.5 = 4.2$ | Multiply all terms by 10 |
+
+Master each row of this table and you will be ready for any linear equation that comes your way!`
     }
   });
 

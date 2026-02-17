@@ -7,6 +7,7 @@ import remarkGfm from 'remark-gfm'
 import rehypeKatex from 'rehype-katex'
 import rehypeRaw from 'rehype-raw'
 import { useSession } from 'next-auth/react'
+import Link from 'next/link'
 
 // ---------------------------------------------------------------------------
 // Types
@@ -441,6 +442,7 @@ export default function DynamicInteractiveLessonRenderer({
   const [quizCorrect, setQuizCorrect] = useState<Set<number>>(new Set())
   const [cachedTopicId, setCachedTopicId] = useState<string | null>(null)
   const [progressLoaded, setProgressLoaded] = useState(false)
+  const [lessonComplete, setLessonComplete] = useState(false)
   const queryCountRef = useRef(0)
 
   const currentSection = sections[currentSectionIndex]
@@ -552,7 +554,9 @@ export default function DynamicInteractiveLessonRenderer({
     } else {
       const allDone = new Set(sections.map((_, i) => i))
       setCompletedSections(allDone)
+      setLessonComplete(true)
       saveProgress(true)
+      window.scrollTo({ top: 0, behavior: 'smooth' })
     }
   }
 
@@ -574,6 +578,58 @@ export default function DynamicInteractiveLessonRenderer({
   // -----------------------------------------------------------------------
   // Render
   // -----------------------------------------------------------------------
+
+  // Lesson complete celebration screen
+  if (lessonComplete) {
+    return (
+      <div className="space-y-6">
+        <div className="bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 dark:from-green-900/30 dark:via-emerald-900/30 dark:to-teal-900/30 rounded-2xl shadow-2xl p-10 border-2 border-green-200 dark:border-green-700 text-center">
+          <div className="text-6xl mb-6">🏆</div>
+          <h2 className="text-3xl font-extrabold text-green-800 dark:text-green-300 mb-4">
+            Lesson Complete!
+          </h2>
+          <p className="text-lg text-gray-700 dark:text-gray-300 mb-2">
+            You finished all {sections.length} sections and passed every check-for-understanding quiz.
+          </p>
+          <p className="text-gray-600 dark:text-gray-400 mb-8">
+            Great work mastering this topic!
+          </p>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link
+              href="/competitive"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-bold text-white bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 shadow-lg hover:shadow-xl transition-all hover:scale-[1.02]"
+            >
+              <span className="text-xl">⚔️</span>
+              Go to Competitive Mode
+            </Link>
+            <Link
+              href={`/topics/${topicSlug}`}
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-semibold text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-800 border-2 border-gray-300 dark:border-gray-600 hover:border-gray-400 dark:hover:border-gray-500 hover:shadow-lg transition-all"
+            >
+              Back to Topic
+            </Link>
+          </div>
+        </div>
+
+        {/* Progress bar showing 100% */}
+        <div className="space-y-3 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-xl p-4 border border-green-100/50 dark:border-green-500/20 shadow-md">
+          <div className="bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 dark:from-gray-700 dark:via-gray-600 dark:to-gray-700 rounded-full h-4 overflow-hidden shadow-inner">
+            <div
+              className="h-full transition-all duration-500 ease-out shadow-md"
+              style={{
+                width: '100%',
+                background: 'linear-gradient(90deg, #22c55e 0%, #10b981 50%, #22c55e 100%)',
+              }}
+            />
+          </div>
+          <div className="text-center text-sm text-green-700 dark:text-green-400 font-bold">
+            100% Complete — All sections finished!
+          </div>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className="space-y-6">
