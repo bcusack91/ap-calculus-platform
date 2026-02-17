@@ -55,9 +55,15 @@ export async function GET(req: NextRequest) {
         s.includes('integral') || s.includes('antiderivative') || s.includes('integration')
       ),
       'algebra': completedTopicSlugs.some(s => 
-        s.includes('algebra') || s.includes('linear-equation') || s.includes('quadratic') || 
-        s.includes('polynomial') || s.includes('factoring') || s.includes('systems') ||
-        s.includes('functions-basics') || s.includes('exponential') || s.includes('rational')
+        (s.includes('algebra1') || s.includes('-algebra1')) || s.includes('linear-equation') || s.includes('quadratic') || 
+        s.includes('factoring') || s.includes('systems') ||
+        s.includes('functions-basics')
+      ),
+      'algebra2': completedTopicSlugs.some(s => 
+        s.includes('algebra2') || s.includes('-alg2') || s.includes('polynomial-operations') || 
+        s.includes('rational-operations') || s.includes('simplifying-rationals') ||
+        s.includes('exponential-functions') || s.includes('complex-numbers') ||
+        s.includes('logarithm')
       ),
     }
 

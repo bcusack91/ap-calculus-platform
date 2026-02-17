@@ -5,6 +5,7 @@ import { getDerivativeQuestions } from '@/data/competitive-questions/derivatives
 import { getLimitQuestions } from '@/data/competitive-questions/limits-bank'
 import { getIntegralQuestions } from '@/data/competitive-questions/integrals-bank'
 import { getAlgebraQuestions } from '@/data/competitive-questions/algebra-bank'
+import { getAlgebra2Questions } from '@/data/competitive-questions/algebra2-bank'
 
 interface UnitCirclePosition {
   angle: number;
@@ -90,6 +91,7 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
     'limits': getLimitQuestions,
     'integrals': getIntegralQuestions,
     'algebra': getAlgebraQuestions,
+    'algebra2': getAlgebra2Questions,
   }
 
   if (topicSlug && topicSlug in mcqBanks) {
@@ -206,6 +208,13 @@ function generateCumulativeQuestions(totalQuestions: number): any[] {
     answerIndex: q.correctAnswer, explanation: q.explanation, difficulty: q.difficulty, type: 'multiple-choice'
   }))
   allBankQuestions.push(...iQuestions)
+
+  // Algebra 2
+  const a2Questions = getAlgebra2Questions(1).map((q, i) => ({
+    id: i, question: q.question, options: q.options, correctAnswer: q.correctAnswer,
+    answerIndex: q.correctAnswer, explanation: q.explanation, difficulty: q.difficulty, type: 'multiple-choice'
+  }))
+  allBankQuestions.push(...a2Questions)
 
   questions.push(...allBankQuestions)
 

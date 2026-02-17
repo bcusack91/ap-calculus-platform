@@ -13,7 +13,7 @@ export default function CompetitivePage() {
   const [inQueue, setInQueue] = useState(false)
   const [queueStatus, setQueueStatus] = useState<any>(null)
   const [selectedMode, setSelectedMode] = useState('SPEED_RACE')
-  const [selectedTopic, setSelectedTopic] = useState<'the-unit-circle' | 'reflection-refraction' | 'derivatives' | 'limits' | 'integrals' | 'algebra' | 'cumulative'>('the-unit-circle')
+  const [selectedTopic, setSelectedTopic] = useState<'the-unit-circle' | 'reflection-refraction' | 'derivatives' | 'limits' | 'integrals' | 'algebra' | 'algebra2' | 'cumulative'>('the-unit-circle')
   const [completedTopics, setCompletedTopics] = useState<string[]>([])
   const [competitiveCategories, setCompetitiveCategories] = useState<Record<string, boolean>>({})
   const [requirements, setRequirements] = useState<any>(null)
@@ -420,12 +420,35 @@ export default function CompetitivePage() {
               }`}
             >
               <div className="text-3xl mb-2">🔢</div>
-              <h3 className="text-lg font-bold mb-1">Algebra</h3>
+              <h3 className="text-lg font-bold mb-1">Algebra 1</h3>
               <p className="text-xs text-gray-600 dark:text-gray-400">
                 Equations & Functions
               </p>
               {!competitiveCategories['algebra'] && (
-                <span className="text-xs text-red-500 mt-1 block">Complete an Algebra Topic</span>
+                <span className="text-xs text-red-500 mt-1 block">Complete an Algebra 1 Topic</span>
+              )}
+            </button>
+
+            <button
+              onClick={() => setSelectedTopic('algebra2')}
+              disabled={!competitiveCategories['algebra2']}
+              className={`p-5 rounded-xl transition-all ${
+                selectedTopic === 'algebra2'
+                  ? 'ring-4 ring-purple-500 bg-white dark:bg-gray-800 shadow-xl'
+                  : 'bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl'
+              } ${
+                !competitiveCategories['algebra2']
+                  ? 'opacity-50 cursor-not-allowed'
+                  : 'cursor-pointer'
+              }`}
+            >
+              <div className="text-3xl mb-2">📊</div>
+              <h3 className="text-lg font-bold mb-1">Algebra 2</h3>
+              <p className="text-xs text-gray-600 dark:text-gray-400">
+                Polynomials, Rationals & Logs
+              </p>
+              {!competitiveCategories['algebra2'] && (
+                <span className="text-xs text-red-500 mt-1 block">Complete an Algebra 2 Topic</span>
               )}
             </button>
 
