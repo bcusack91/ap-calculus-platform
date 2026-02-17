@@ -9,6 +9,7 @@ import bcrypt from "bcryptjs"
 export const { handlers, auth, signIn, signOut } = NextAuth({
   adapter: PrismaAdapter(prisma),
   session: { strategy: "jwt" },
+  trustHost: true,
   pages: {
     signIn: "/auth/signin",
     error: "/auth/error",
@@ -17,6 +18,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
     Google({
       clientId: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+      allowDangerousEmailAccountLinking: true,
     }),
     Credentials({
       name: "credentials",
@@ -56,6 +58,19 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
     })
   ],
   callbacks: {
+    async signIn({ user, account }) {
+      // Allow all credential sign-ins
+      if (account?.provider === 'credentials') return true
+      
+      // Allow Google OAuth sign-ins
+      if (account?.provider === 'google') {
+        // Ensure user has an email
+        if (!user.email) return false
+        return true
+      }
+      
+      return true
+    },
     async session({ session, token }) {
       if (token && session.user) {
         session.user.id = token.sub!

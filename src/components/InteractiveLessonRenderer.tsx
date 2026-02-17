@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect, useCallback } from 'react'
 import { getInteractiveLessonData, getInteractiveTopicConfig } from '@/data/interactive-lessons/registry'
 import ReactMarkdown from 'react-markdown'
 import remarkMath from 'remark-math'
@@ -11,6 +11,11 @@ import { useSearchParams, useRouter } from 'next/navigation'
 import { useSession } from 'next-auth/react'
 import katex from 'katex'
 import { FlashcardNotification } from '@/components/flashcard-notification'
+import CorrectAnswerCelebration from '@/components/CorrectAnswerCelebration'
+import BookmarkButton from '@/components/BookmarkButton'
+import LessonProgressBar from '@/components/LessonProgressBar'
+import KeyboardShortcutHint from '@/components/KeyboardShortcutHint'
+import { useLessonKeyboard } from '@/hooks/useLessonKeyboard'
 
 // Helper component to render inline LaTeX within text strings
 // Parses $...$ and $$...$$ delimiters and renders via KaTeX
@@ -174,6 +179,10 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
   const [cachedTopicId, setCachedTopicId] = useState<string | null>(null)
   const [pendingSaveCount, setPendingSaveCount] = useState(0)
   const queryCountRef = useRef(0) // Track API calls
+  
+  // Celebration animation state
+  const [showCelebration, setShowCelebration] = useState(false)
+  const celebrationCounterRef = useRef(0)
   
   // Flashcard notification state
   const [showFlashcardNotification, setShowFlashcardNotification] = useState(false)
@@ -466,6 +475,18 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
   const handleSectionComplete = () => {
     console.log('🎯 Section completed:', currentSectionIndex)
     setCompletedSections(prev => new Set([...prev, currentSectionIndex]))
+    
+    // Trigger celebration animation for exercise completions
+    const isExercise = 
+      currentSection.type === 'input-boxes' || 
+      currentSection.type === 'dropdown-select' ||
+      currentSection.type === 'multiple-choice' ||
+      currentSection.type === 'reference-angle-quiz' ||
+      currentSection.type === 'factoring-practice'
+    if (isExercise) {
+      celebrationCounterRef.current += 1
+      setShowCelebration(true)
+    }
   }
 
   const isCurrentSectionComplete = completedSections.has(currentSectionIndex)
@@ -492,8 +513,37 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
     completedSections: Array.from(completedSections)
   })
 
+  // Keyboard navigation for lessons
+  useLessonKeyboard({
+    onNext: handleNext,
+    onPrevious: handlePrevious,
+    canGoNext: canProceedToNext,
+    canGoPrevious: currentSectionIndex > 0,
+    enabled: !showPracticeMode,
+  })
+
+  // Lesson title for progress bar and bookmark
+  const lessonTitle = topicConfig?.parts[lessonPart - 1]?.title || topicSlug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())
+
   return (
     <>
+      {/* Sticky lesson progress bar */}
+      <LessonProgressBar
+        currentStep={currentSectionIndex}
+        totalSteps={sections.length}
+        completedSteps={completedSections}
+        lessonTitle={lessonTitle}
+        partNumber={lessonPart}
+        totalParts={totalParts > 1 ? totalParts : undefined}
+      />
+      
+      {/* Celebration animation */}
+      <CorrectAnswerCelebration
+        key={celebrationCounterRef.current}
+        show={showCelebration}
+        onDone={() => setShowCelebration(false)}
+      />
+
       <div className="space-y-6">
       {/* Part Navigation Menu - Show for multi-part lessons */}
       {topicConfig && totalParts > 1 && (
@@ -621,6 +671,12 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
           💡 Complete the exercise above to continue
         </div>
       )}
+      
+      {/* Bookmark and keyboard shortcuts */}
+      <div className="flex items-center justify-between pt-2">
+        <BookmarkButton lessonId={`${topicSlug}-part${lessonPart}`} lessonTitle={lessonTitle} />
+        <KeyboardShortcutHint />
+      </div>
     </div>
     
     {/* Flashcard Notification */}

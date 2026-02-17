@@ -7,6 +7,12 @@ import Link from 'next/link'
 import AvatarDisplay from '@/components/AvatarDisplay'
 import { AvatarData } from '@/types/avatar'
 
+interface BookmarkEntry {
+  id: string
+  title: string
+  savedAt: string
+}
+
 interface DashboardData {
   overview: {
     topicsStarted: number
@@ -46,6 +52,7 @@ export default function DashboardPage() {
   const [data, setData] = useState<DashboardData | null>(null)
   const [loading, setLoading] = useState(true)
   const [avatarData, setAvatarData] = useState<AvatarData | null>(null)
+  const [bookmarks, setBookmarks] = useState<BookmarkEntry[]>([])
 
   useEffect(() => {
     if (status === 'unauthenticated') {
@@ -56,6 +63,11 @@ export default function DashboardPage() {
       fetchDashboard()
       fetchAvatar()
     }
+    // Load bookmarks from localStorage
+    try {
+      const saved = localStorage.getItem('studymondo-bookmarks')
+      if (saved) setBookmarks(JSON.parse(saved))
+    } catch {}
   }, [status, router])
 
   const fetchDashboard = async () => {
@@ -83,7 +95,7 @@ export default function DashboardPage() {
 
   if (status === 'loading' || loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900 flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-purple-600 mx-auto mb-4" />
           <p className="text-gray-600">Loading your dashboard...</p>
@@ -130,23 +142,23 @@ export default function DashboardPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
       <div className="container py-8 sm:py-12">
         {/* Header */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8">
           <div className="flex items-center gap-4">
             <AvatarDisplay avatarData={avatarData} size={56} className="ring-2 ring-purple-500 rounded-full" />
             <div>
-              <h1 className="text-3xl font-bold text-gray-900">
+              <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
                 Welcome back, {session.user?.name || 'Student'}!
               </h1>
-              <p className="text-gray-600">Here&apos;s your learning progress</p>
+              <p className="text-gray-600 dark:text-gray-400">Here&apos;s your learning progress</p>
             </div>
           </div>
           <div className="flex gap-3">
             <Link
               href="/profile"
-              className="px-4 py-2 text-sm font-medium rounded-lg border border-gray-300 hover:bg-gray-50 transition-colors"
+              className="px-4 py-2 text-sm font-medium rounded-lg border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-gray-700 dark:text-gray-300"
             >
               Edit Profile
             </Link>
@@ -165,29 +177,29 @@ export default function DashboardPage() {
 
         {/* Stats Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
-          <div className="bg-white rounded-xl border border-gray-200 p-5 shadow-sm">
+          <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-5 shadow-sm">
             <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">
               {overview?.topicsCompleted ?? 0}
             </div>
-            <div className="text-sm text-gray-600 mt-1">Topics Completed</div>
+            <div className="text-sm text-gray-600 dark:text-gray-400 mt-1">Topics Completed</div>
           </div>
-          <div className="bg-white rounded-xl border border-gray-200 p-5 shadow-sm">
+          <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-5 shadow-sm">
             <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-orange-500">
               {overview?.topicsMastered ?? 0}
             </div>
-            <div className="text-sm text-gray-600 mt-1">Topics Mastered</div>
+            <div className="text-sm text-gray-600 dark:text-gray-400 mt-1">Topics Mastered</div>
           </div>
-          <div className="bg-white rounded-xl border border-gray-200 p-5 shadow-sm">
+          <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-5 shadow-sm">
             <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-emerald-500">
               {overview?.totalFlashcards ?? 0}
             </div>
-            <div className="text-sm text-gray-600 mt-1">Flashcards Studied</div>
+            <div className="text-sm text-gray-600 dark:text-gray-400 mt-1">Flashcards Studied</div>
           </div>
-          <div className="bg-white rounded-xl border border-gray-200 p-5 shadow-sm">
+          <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-5 shadow-sm">
             <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-rose-500">
               {streak?.current ?? 0}🔥
             </div>
-            <div className="text-sm text-gray-600 mt-1">Day Streak</div>
+            <div className="text-sm text-gray-600 dark:text-gray-400 mt-1">Day Streak</div>
           </div>
         </div>
 
@@ -196,8 +208,8 @@ export default function DashboardPage() {
           <div className="lg:col-span-2 space-y-8">
             {/* Course Progress */}
             {courseProgress.length > 0 && (
-              <div className="bg-white rounded-xl border border-gray-200 p-6 shadow-sm">
-                <h2 className="text-xl font-bold text-gray-900 mb-4">📚 Course Progress</h2>
+              <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6 shadow-sm">
+                <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4">📚 Course Progress</h2>
                 <div className="space-y-4">
                   {courseProgress.map((course) => {
                     const total = course.completed + course.mastered + course.inProgress
@@ -231,8 +243,8 @@ export default function DashboardPage() {
             )}
 
             {/* Recent Activity */}
-            <div className="bg-white rounded-xl border border-gray-200 p-6 shadow-sm">
-              <h2 className="text-xl font-bold text-gray-900 mb-4">🕐 Recent Activity</h2>
+            <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6 shadow-sm">
+              <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4">🕐 Recent Activity</h2>
               {recentActivity.length === 0 ? (
                 <div className="text-center py-8">
                   <p className="text-gray-500 mb-4">No activity yet! Start learning to see your progress here.</p>
@@ -275,8 +287,8 @@ export default function DashboardPage() {
           {/* Sidebar — 1 col */}
           <div className="space-y-6">
             {/* Quick Actions */}
-            <div className="bg-white rounded-xl border border-gray-200 p-6 shadow-sm">
-              <h3 className="font-bold text-gray-900 mb-4">⚡ Quick Actions</h3>
+            <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6 shadow-sm">
+              <h3 className="font-bold text-gray-900 dark:text-white mb-4">⚡ Quick Actions</h3>
               <div className="space-y-3">
                 <Link
                   href="/flashcards/review/start"
@@ -336,28 +348,28 @@ export default function DashboardPage() {
             </div>
 
             {/* Study Stats */}
-            <div className="bg-white rounded-xl border border-gray-200 p-6 shadow-sm">
-              <h3 className="font-bold text-gray-900 mb-4">📊 Study Stats</h3>
-              <div className="space-y-3">
+            <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6 shadow-sm">
+              <h3 className="font-bold text-gray-900 dark:text-white mb-4">📊 Study Stats</h3>
+                <div className="space-y-3">
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Topics Started</span>
-                  <span className="font-semibold text-gray-900">{overview?.topicsStarted ?? 0}</span>
+                  <span className="text-gray-600 dark:text-gray-400">Topics Started</span>
+                  <span className="font-semibold text-gray-900 dark:text-gray-100">{overview?.topicsStarted ?? 0}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-600">In Progress</span>
+                  <span className="text-gray-600 dark:text-gray-400">In Progress</span>
                   <span className="font-semibold text-blue-600">{overview?.topicsInProgress ?? 0}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Completed</span>
+                  <span className="text-gray-600 dark:text-gray-400">Completed</span>
                   <span className="font-semibold text-green-600">{overview?.topicsCompleted ?? 0}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Mastered</span>
+                  <span className="text-gray-600 dark:text-gray-400">Mastered</span>
                   <span className="font-semibold text-yellow-600">{overview?.topicsMastered ?? 0}</span>
                 </div>
-                <div className="border-t pt-3 flex justify-between">
-                  <span className="text-gray-600">Time Studied</span>
-                  <span className="font-semibold text-gray-900">
+                <div className="border-t dark:border-gray-700 pt-3 flex justify-between">
+                  <span className="text-gray-600 dark:text-gray-400">Time Studied</span>
+                  <span className="font-semibold text-gray-900 dark:text-gray-100">
                     {overview && overview.totalTimeSpentMinutes > 60
                       ? `${Math.floor(overview.totalTimeSpentMinutes / 60)}h ${overview.totalTimeSpentMinutes % 60}m`
                       : `${overview?.totalTimeSpentMinutes ?? 0}m`}
@@ -365,6 +377,51 @@ export default function DashboardPage() {
                 </div>
               </div>
             </div>
+
+            {/* Bookmarked Lessons */}
+            {bookmarks.length > 0 && (
+              <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6 shadow-sm">
+                <h3 className="font-bold text-gray-900 dark:text-white mb-4">🔖 Saved Lessons</h3>
+                <div className="space-y-2">
+                  {bookmarks.slice(0, 5).map((bookmark) => {
+                    // Parse the bookmark ID to create a link (format: topicSlug-partN)
+                    const parts = bookmark.id.match(/^(.+)-part(\d+)$/)
+                    const slug = parts ? parts[1] : bookmark.id
+                    const partNum = parts ? parts[2] : '1'
+                    return (
+                      <Link
+                        key={bookmark.id}
+                        href={`/topics/${slug}?part=${partNum}`}
+                        className="flex items-center justify-between p-2 -mx-2 rounded-lg hover:bg-purple-50 transition-colors group"
+                      >
+                        <span className="text-sm font-medium text-gray-700 group-hover:text-purple-600 truncate">
+                          {bookmark.title}
+                        </span>
+                        <button
+                          onClick={(e) => {
+                            e.preventDefault()
+                            const updated = bookmarks.filter(b => b.id !== bookmark.id)
+                            setBookmarks(updated)
+                            localStorage.setItem('studymondo-bookmarks', JSON.stringify(updated))
+                          }}
+                          className="text-gray-400 hover:text-red-500 transition-colors ml-2 flex-shrink-0"
+                          title="Remove bookmark"
+                        >
+                          <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                          </svg>
+                        </button>
+                      </Link>
+                    )
+                  })}
+                  {bookmarks.length > 5 && (
+                    <p className="text-xs text-gray-500 pt-1">
+                      +{bookmarks.length - 5} more saved
+                    </p>
+                  )}
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>

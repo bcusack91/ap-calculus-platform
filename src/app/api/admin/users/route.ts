@@ -1,12 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { getServerSession } from 'next-auth'
-import { authOptions } from '@/lib/auth'
+import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 
 // GET /api/admin/users?search=email
 export async function GET(request: NextRequest) {
-  const session = await getServerSession(authOptions)
-  if (!session?.user || (session.user as any).role !== 'ADMIN') {
+  const session = await auth()
+  if (!session?.user || session.user.role !== 'ADMIN') {
     return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
   }
 
@@ -39,8 +38,8 @@ export async function GET(request: NextRequest) {
 
 // PUT /api/admin/users  { userId, role }
 export async function PUT(request: NextRequest) {
-  const session = await getServerSession(authOptions)
-  if (!session?.user || (session.user as any).role !== 'ADMIN') {
+  const session = await auth()
+  if (!session?.user || session.user.role !== 'ADMIN') {
     return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
   }
 
@@ -55,7 +54,7 @@ export async function PUT(request: NextRequest) {
   }
 
   // Prevent demoting yourself
-  if (userId === (session.user as any).id && role !== 'ADMIN') {
+  if (userId === session.user.id && role !== 'ADMIN') {
     return NextResponse.json({ error: 'Cannot change your own role' }, { status: 400 })
   }
 
