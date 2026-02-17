@@ -1,6 +1,5 @@
 import { notFound } from 'next/navigation'
 import { prisma } from '@/lib/prisma'
-import { auth } from '@/lib/auth'
 import { AdBanner, InArticleAd, SidebarAd } from '@/components/ad-banner'
 import ReactMarkdown from 'react-markdown'
 import rehypeKatex from 'rehype-katex'
@@ -10,8 +9,8 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import TopicContentRenderer from '@/components/TopicContentRenderer'
 
-// Force dynamic rendering
-export const dynamic = 'force-dynamic'
+// ISR: revalidate content every hour (content rarely changes)
+export const revalidate = 3600
 
 interface TopicPageProps {
   params: Promise<{
@@ -89,8 +88,6 @@ const MarkdownComponents = {
 
 export default async function TopicPage(props: TopicPageProps) {
   const params = await props.params
-  const session = await auth()
-  const isPremium = session?.user?.role === 'PREMIUM'
 
   const topic = await prisma.topic.findUnique({
     where: { slug: params.slug },
@@ -114,6 +111,16 @@ export default async function TopicPage(props: TopicPageProps) {
   if (!topic) {
     notFound()
   }
+
+  // Query adjacent topics in the same category for next/prev navigation
+  const siblingTopics = await prisma.topic.findMany({
+    where: { categoryId: topic.categoryId },
+    select: { slug: true, title: true, order: true },
+    orderBy: { order: 'asc' },
+  })
+  const currentIdx = siblingTopics.findIndex((t) => t.slug === topic.slug)
+  const prevTopic = currentIdx > 0 ? siblingTopics[currentIdx - 1] : null
+  const nextTopic = currentIdx < siblingTopics.length - 1 ? siblingTopics[currentIdx + 1] : null
 
   /* Temporarily hidden for free tier launch - all content is free
   // Check if user has access
@@ -161,6 +168,33 @@ export default async function TopicPage(props: TopicPageProps) {
 
   return (
     <div className="container py-10">
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'LearningResource',
+            name: topic.title,
+            description: topic.description,
+            url: `https://www.studymondo.com/topics/${topic.slug}`,
+            provider: {
+              '@type': 'Organization',
+              name: 'Study Mondo',
+              url: 'https://www.studymondo.com',
+            },
+            educationalLevel: 'High School / AP',
+            isPartOf: {
+              '@type': 'Course',
+              name: topic.category.course.name,
+              url: `https://www.studymondo.com/courses/${topic.category.course.slug}`,
+            },
+            learningResourceType: ['lesson', 'practice problem'],
+            inLanguage: 'en',
+          }),
+        }}
+      />
+
       {/* Top Banner Ad - High visibility */}
       <div className="mb-6">
         <AdBanner slot="topic-top" />
@@ -214,8 +248,8 @@ export default async function TopicPage(props: TopicPageProps) {
               </div>
             </div>
 
-            {/* Video (Premium only) */}
-            {isPremium && topic.videoUrl && (
+            {/* Video - Temporarily hidden for free tier launch
+            {topic.videoUrl && (
               <div className="mb-8 rounded-lg overflow-hidden bg-gray-100 shadow-lg border-2 border-purple-200">
                 <div className="bg-purple-600 text-white px-4 py-2 font-semibold flex items-center gap-2">
                   <span className="text-xl">🎥</span> Video Explanation
@@ -230,6 +264,7 @@ export default async function TopicPage(props: TopicPageProps) {
                 </div>
               </div>
             )}
+            */}
 
             {/* In-Content Ad (After intro, before main content) */}
             <div className="my-8">
@@ -327,6 +362,38 @@ export default async function TopicPage(props: TopicPageProps) {
                 )}
               </div>
             </div>
+
+            {/* Next / Previous Topic Navigation */}
+            {(prevTopic || nextTopic) && (
+              <div className="mt-12 flex justify-between items-stretch gap-4">
+                {prevTopic ? (
+                  <Link
+                    href={`/topics/${prevTopic.slug}`}
+                    className="flex-1 block rounded-lg border-2 border-gray-200 bg-white p-5 hover:border-purple-400 hover:shadow-md transition-all group"
+                  >
+                    <div className="text-sm text-gray-500 mb-1">← Previous Topic</div>
+                    <div className="font-semibold text-gray-900 group-hover:text-purple-700 transition-colors">
+                      {prevTopic.title}
+                    </div>
+                  </Link>
+                ) : (
+                  <div className="flex-1" />
+                )}
+                {nextTopic ? (
+                  <Link
+                    href={`/topics/${nextTopic.slug}`}
+                    className="flex-1 block rounded-lg border-2 border-gray-200 bg-white p-5 hover:border-purple-400 hover:shadow-md transition-all text-right group"
+                  >
+                    <div className="text-sm text-gray-500 mb-1">Next Topic →</div>
+                    <div className="font-semibold text-gray-900 group-hover:text-purple-700 transition-colors">
+                      {nextTopic.title}
+                    </div>
+                  </Link>
+                ) : (
+                  <div className="flex-1" />
+                )}
+              </div>
+            )}
 
             {/* Related Links with card styling */}
             <div className="mt-12 grid gap-4 sm:grid-cols-2">

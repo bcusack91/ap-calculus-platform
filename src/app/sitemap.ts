@@ -2,7 +2,6 @@ import { MetadataRoute } from 'next'
 import { prisma } from '@/lib/prisma'
 import { getAllInteractiveSlugs } from '@/data/interactive-lessons/registry'
 
-export const dynamic = 'force-dynamic'
 export const revalidate = 3600 // Revalidate every hour
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -90,5 +89,23 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.85,
   }))
 
-  return [...staticPages, ...coursePages, ...topicPages, ...interactivePages, ...categoryPages]
+  // Flashcard pages (one per topic)
+  const flashcardPages: MetadataRoute.Sitemap = topics.map((topic) => ({
+    url: `${baseUrl}/flashcards/${topic.slug}`,
+    lastModified: topic.updatedAt,
+    changeFrequency: 'weekly',
+    priority: 0.7,
+  }))
+
+  // Leaderboard page
+  const leaderboardPage: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}/leaderboard`,
+      lastModified: new Date(),
+      changeFrequency: 'daily',
+      priority: 0.6,
+    },
+  ]
+
+  return [...staticPages, ...coursePages, ...topicPages, ...interactivePages, ...categoryPages, ...flashcardPages, ...leaderboardPage]
 }

@@ -76,6 +76,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         session.user.id = token.sub!
         session.user.role = token.role as UserRole
         session.user.stripeCustomerId = token.stripeCustomerId as string | undefined
+        session.user.emailVerified = token.emailVerified as Date | null | undefined
       }
       return session
     },
@@ -88,6 +89,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         if (dbUser) {
           token.role = dbUser.role
           token.stripeCustomerId = dbUser.stripeCustomerId
+          token.emailVerified = dbUser.emailVerified
         }
       }
       return token

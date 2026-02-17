@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | AP Study Platform",
-  description: "Terms of Service for our free AP study platform",
+  title: "Terms of Service | Study Mondo",
+  description: "Terms of Service for Study Mondo - free math and science study platform",
 };
 
 export default function TermsPage() {
@@ -12,7 +12,7 @@ export default function TermsPage() {
       
       <div className="prose prose-slate max-w-none">
         <p className="text-muted-foreground">
-          <strong>Last Updated:</strong> October 27, 2025
+          <strong>Last Updated:</strong> February 17, 2026
         </p>
 
         <section className="mt-8">

@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | AP Study Platform",
-  description: "Privacy Policy for our free AP study platform",
+  title: "Privacy Policy | Study Mondo",
+  description: "Privacy Policy for Study Mondo - free math and science study platform",
 };
 
 export default function PrivacyPage() {
@@ -12,7 +12,7 @@ export default function PrivacyPage() {
       
       <div className="prose prose-slate max-w-none">
         <p className="text-muted-foreground">
-          <strong>Last Updated:</strong> October 27, 2025
+          <strong>Last Updated:</strong> February 17, 2026
         </p>
 
         <section className="mt-8">
@@ -32,8 +32,16 @@ export default function PrivacyPage() {
           
           <h3 className="text-xl font-semibold mt-6 mb-3">2.1 Information You Provide</h3>
           <p>
-            Currently, our Service does not require user registration or account creation. We do not directly collect personal information 
-            such as names, email addresses, or phone numbers unless you voluntarily provide them (e.g., through contact forms or feedback mechanisms).
+            Our Service offers optional user registration and account creation. When you create an account, we collect:
+          </p>
+          <ul className="list-disc pl-6 mt-2">
+            <li><strong>Account Information:</strong> Name, email address, and password (hashed and securely stored)</li>
+            <li><strong>OAuth Data:</strong> If you sign in with Google, we receive your name, email, and profile picture from Google</li>
+            <li><strong>Learning Progress:</strong> Topic completion, quiz scores, flashcard review data, and competitive match history</li>
+            <li><strong>Profile Data:</strong> Avatar selections and display preferences</li>
+          </ul>
+          <p className="mt-4">
+            We may also collect information you voluntarily provide through contact forms or feedback mechanisms.
           </p>
 
           <h3 className="text-xl font-semibold mt-6 mb-3">2.2 Automatically Collected Information</h3>

@@ -1,5 +1,13 @@
 import Link from "next/link";
 import { AdBanner } from "@/components/ad-banner";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Study Mondo — Free Math & Science Study Platform",
+  description:
+    "Master 24 courses from Grade 4 through AP with free notes, flashcards, interactive lessons, and practice problems. 700+ topics, completely free.",
+};
+
 
 // Course type definition
 type Course = {
@@ -193,8 +201,40 @@ const coursesBySection: Record<string, Course[]> = {
 export default function Home() {
   return (
     <div className="flex flex-col">
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'WebSite',
+            name: 'Study Mondo',
+            url: 'https://www.studymondo.com',
+            description: 'Free math and science study platform with 24 courses, 700+ topics, flashcards, and interactive lessons.',
+            potentialAction: {
+              '@type': 'SearchAction',
+              target: 'https://www.studymondo.com/search?q={search_term_string}',
+              'query-input': 'required name=search_term_string',
+            },
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            name: 'Study Mondo',
+            url: 'https://www.studymondo.com',
+            logo: 'https://www.studymondo.com/favicon.svg',
+            description: 'Free educational platform for math and science students from Grade 4 through AP and test prep.',
+          }),
+        }}
+      />
+
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-purple-50 via-blue-50 to-cyan-50 py-20 sm:py-32">
+      <section className="relative overflow-hidden bg-gradient-to-br from-purple-50 via-blue-50 to-cyan-50 dark:from-purple-950 dark:via-gray-900 dark:to-blue-950 py-20 sm:py-32">
         <div className="container">
           <div className="mx-auto max-w-3xl text-center">
             <span className="flex justify-center mb-6">
@@ -218,24 +258,53 @@ export default function Home() {
             <h1 className="text-4xl font-bold tracking-tight sm:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600">
               Master Math & Science
             </h1>
-            <p className="mt-4 text-base font-semibold tracking-wide uppercase text-purple-700">
+            <p className="mt-4 text-base font-semibold tracking-wide uppercase text-purple-700 dark:text-purple-400">
               From Grade 4 to AP. SAT to ACT.
             </p>
-            <p className="mt-3 text-lg leading-8 text-gray-600">
-              24 courses · 700 topics
+            <p className="mt-3 text-lg leading-8 text-gray-600 dark:text-gray-400">
+              24 courses · 700+ topics · Completely free
             </p>
+            <div className="mt-8 flex items-center justify-center gap-4">
+              <Link
+                href="/topics"
+                className="rounded-lg px-6 py-3 text-base font-semibold text-white bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 shadow-lg hover:shadow-xl transition-all"
+              >
+                Get Started Free
+              </Link>
+              <Link
+                href="/about"
+                className="rounded-lg px-6 py-3 text-base font-semibold text-purple-700 dark:text-purple-300 bg-white/70 dark:bg-gray-800/70 border border-purple-200 dark:border-purple-800 hover:bg-white dark:hover:bg-gray-800 transition-all"
+              >
+                Learn More
+              </Link>
+            </div>
+            {/* Social Proof Stats */}
+            <div className="mt-12 grid grid-cols-3 gap-6 max-w-md mx-auto">
+              <div>
+                <div className="text-2xl font-bold text-purple-700 dark:text-purple-400">24</div>
+                <div className="text-xs text-gray-500 dark:text-gray-400">Courses</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-blue-700 dark:text-blue-400">700+</div>
+                <div className="text-xs text-gray-500 dark:text-gray-400">Topics</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-cyan-700 dark:text-cyan-400">100%</div>
+                <div className="text-xs text-gray-500 dark:text-gray-400">Free</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Courses Grid */}
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24 bg-white dark:bg-gray-950">
         <div className="container">
           <div className="mx-auto max-w-2xl text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
               Choose Your Course
             </h2>
-            <p className="mt-4 text-lg text-gray-600">
+            <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
               Select a course to explore comprehensive study materials
             </p>
           </div>
@@ -243,7 +312,7 @@ export default function Home() {
           <div className="mx-auto max-w-7xl">
             {Object.entries(coursesBySection).map(([sectionName, courses], sectionIdx) => (
               <div key={sectionName} className={sectionIdx > 0 ? 'mt-20' : ''}>
-                <h3 className="text-2xl font-bold text-gray-900 mb-6 pb-2 border-b-2 border-purple-200">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 pb-2 border-b-2 border-purple-200 dark:border-purple-800">
                   {sectionName}
                 </h3>
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
@@ -251,17 +320,17 @@ export default function Home() {
                     <Link
                       key={course.slug}
                       href={`/courses/${course.slug}`}
-                      className="group relative flex flex-col rounded-2xl border border-gray-200 bg-white p-8 shadow-sm transition-all hover:shadow-xl hover:scale-105 hover:border-transparent"
+                      className="group relative flex flex-col rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-8 shadow-sm transition-all hover:shadow-xl hover:scale-105 hover:border-transparent"
                     >
                       <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${course.gradient} opacity-0 transition-opacity group-hover:opacity-5`}></div>
                       <div className="relative">
                         <div className={`mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br ${course.gradient} text-white text-3xl font-bold`}>
                           {course.icon}
                         </div>
-                        <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                        <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                           {course.name}
                         </h3>
-                        <p className="text-sm text-gray-600">
+                        <p className="text-sm text-gray-600 dark:text-gray-400">
                           {course.description}
                         </p>
                         <div className="mt-4 flex items-center text-sm font-semibold">
@@ -285,13 +354,13 @@ export default function Home() {
       </div>
 
       {/* Features Section */}
-      <section className="py-24 sm:py-32 bg-gray-50">
+      <section className="py-24 sm:py-32 bg-gray-50 dark:bg-gray-900">
         <div className="container">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
               Everything you need to succeed
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
+            <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-400">
               Whether you&apos;re just starting or preparing for the AP exam, we&apos;ve got you covered.
             </p>
           </div>
@@ -299,37 +368,37 @@ export default function Home() {
           <div className="mx-auto mt-16 max-w-5xl">
             <dl className="grid grid-cols-1 gap-x-8 gap-y-16 lg:grid-cols-3">
               <div className="flex flex-col">
-                <dt className="text-base font-semibold leading-7 text-gray-900">
+                <dt className="text-base font-semibold leading-7 text-gray-900 dark:text-white">
                   <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-purple-600">
                     <span className="text-white text-xl">📝</span>
                   </div>
                   Comprehensive Notes
                 </dt>
-                <dd className="mt-1 flex flex-auto flex-col text-base leading-7 text-gray-600">
+                <dd className="mt-1 flex flex-auto flex-col text-base leading-7 text-gray-600 dark:text-gray-400">
                   <p className="flex-auto">Clear, detailed text explanations for every topic. Concise and easy to understand.</p>
                 </dd>
               </div>
 
               <div className="flex flex-col">
-                <dt className="text-base font-semibold leading-7 text-gray-900">
+                <dt className="text-base font-semibold leading-7 text-gray-900 dark:text-white">
                   <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-purple-600">
                     <span className="text-white text-xl">🎯</span>
                   </div>
                   Practice Problems
                 </dt>
-                <dd className="mt-1 flex flex-auto flex-col text-base leading-7 text-gray-600">
+                <dd className="mt-1 flex flex-auto flex-col text-base leading-7 text-gray-600 dark:text-gray-400">
                   <p className="flex-auto">Hundreds of example problems with detailed step-by-step solutions to build your skills.</p>
                 </dd>
               </div>
 
               <div className="flex flex-col">
-                <dt className="text-base font-semibold leading-7 text-gray-900">
+                <dt className="text-base font-semibold leading-7 text-gray-900 dark:text-white">
                   <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-purple-600">
                     <span className="text-white text-xl">🎴</span>
                   </div>
                   Flashcards
                 </dt>
-                <dd className="mt-1 flex flex-auto flex-col text-base leading-7 text-gray-600">
+                <dd className="mt-1 flex flex-auto flex-col text-base leading-7 text-gray-600 dark:text-gray-400">
                   <p className="flex-auto">Quick review flashcards for every topic. Perfect for exam prep.</p>
                 </dd>
               </div>

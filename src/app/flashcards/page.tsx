@@ -1,9 +1,17 @@
 import Link from 'next/link'
 import { prisma } from '@/lib/prisma'
 import { AdBanner } from '@/components/ad-banner'
+import type { Metadata } from 'next'
 
-// Force dynamic rendering
-export const dynamic = 'force-dynamic'
+export const revalidate = 3600 // ISR: revalidate every hour
+
+export const metadata: Metadata = {
+  title: 'Flashcards | Study Mondo',
+  description: 'Review flashcards across 24 courses and 700+ topics. Powered by spaced repetition for optimal learning.',
+  alternates: {
+    canonical: 'https://www.studymondo.com/flashcards',
+  },
+}
 
 export default async function FlashcardsPage() {
   const categories = await prisma.category.findMany({

@@ -7,6 +7,7 @@ declare module 'next-auth' {
       id: string
       role: UserRole
       stripeCustomerId?: string
+      emailVerified?: Date | null
     } & DefaultSession['user']
   }
 
@@ -20,5 +21,6 @@ declare module 'next-auth/jwt' {
   interface JWT {
     role: UserRole
     stripeCustomerId?: string
+    emailVerified?: Date | null
   }
 }

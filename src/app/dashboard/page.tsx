@@ -53,7 +53,8 @@ export default function DashboardPage() {
   const [loading, setLoading] = useState(true)
   const [avatarData, setAvatarData] = useState<AvatarData | null>(null)
   const [bookmarks, setBookmarks] = useState<BookmarkEntry[]>([])
-
+  const [verificationSent, setVerificationSent] = useState(false)
+  const [sendingVerification, setSendingVerification] = useState(false)
   useEffect(() => {
     if (status === 'unauthenticated') {
       router.push('/auth/signin?callbackUrl=/dashboard')
@@ -174,6 +175,37 @@ export default function DashboardPage() {
             </Link>
           </div>
         </div>
+
+        {/* Email Verification Banner */}
+        {session?.user?.email && !session?.user?.emailVerified && (
+          <div className="mb-6 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-700 rounded-xl p-4 flex flex-col sm:flex-row items-start sm:items-center gap-3">
+            <span className="text-2xl">📧</span>
+            <div className="flex-1">
+              <p className="font-semibold text-yellow-900 dark:text-yellow-200">Verify your email address</p>
+              <p className="text-sm text-yellow-800 dark:text-yellow-300">
+                Please verify {session.user.email} to secure your account.
+              </p>
+            </div>
+            {verificationSent ? (
+              <span className="text-sm font-medium text-green-700 dark:text-green-400">✅ Verification email sent!</span>
+            ) : (
+              <button
+                onClick={async () => {
+                  setSendingVerification(true)
+                  try {
+                    await fetch('/api/auth/verify-email', { method: 'POST' })
+                    setVerificationSent(true)
+                  } catch {}
+                  setSendingVerification(false)
+                }}
+                disabled={sendingVerification}
+                className="px-4 py-2 text-sm font-semibold bg-yellow-600 text-white rounded-lg hover:bg-yellow-700 transition-colors disabled:opacity-50"
+              >
+                {sendingVerification ? 'Sending...' : 'Send Verification Email'}
+              </button>
+            )}
+          </div>
+        )}
 
         {/* Stats Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">

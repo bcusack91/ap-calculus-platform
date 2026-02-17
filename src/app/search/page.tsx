@@ -73,11 +73,11 @@ function SearchContent() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950">
       <div className="container py-12">
         <div className="mx-auto max-w-3xl">
           {/* Header */}
-          <h1 className="text-3xl font-bold text-gray-900 mb-6">Search</h1>
+          <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">Search</h1>
 
           {/* Search Input */}
           <div className="relative mb-8">
@@ -91,7 +91,7 @@ function SearchContent() {
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search courses, topics, categories..."
-              className="w-full pl-12 pr-4 py-4 text-lg border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white shadow-sm"
+              className="w-full pl-12 pr-4 py-4 text-lg border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-800 dark:text-white shadow-sm"
               autoFocus
             />
             {loading && (
@@ -104,7 +104,7 @@ function SearchContent() {
           {/* Results */}
           {searched && !loading && (
             <div>
-              <p className="text-sm text-gray-500 mb-4">
+              <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
                 {results.length === 0
                   ? `No results found for "${query}"`
                   : `Found ${results.length} result${results.length !== 1 ? 's' : ''}`}
@@ -115,24 +115,24 @@ function SearchContent() {
                   <Link
                     key={`${result.type}-${result.href}-${i}`}
                     href={result.href}
-                    className="block bg-white border border-gray-200 rounded-xl p-5 hover:shadow-md hover:border-purple-300 transition-all group"
+                    className="block bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-5 hover:shadow-md hover:border-purple-300 dark:hover:border-purple-600 transition-all group"
                   >
                     <div className="flex items-start gap-3">
                       <span className="text-xl flex-shrink-0 mt-0.5">{typeIcon(result.type)}</span>
                       <div className="min-w-0 flex-1">
                         <div className="flex items-center gap-2 mb-1">
-                          <h3 className="font-semibold text-gray-900 group-hover:text-purple-600 transition-colors truncate">
+                          <h3 className="font-semibold text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors truncate">
                             {result.title}
                           </h3>
-                          <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-gray-100 text-gray-600 flex-shrink-0">
+                          <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 flex-shrink-0">
                             {typeLabel(result.type)}
                           </span>
                         </div>
                         {result.context && (
-                          <p className="text-xs text-purple-600 mb-1">{result.context}</p>
+                          <p className="text-xs text-purple-600 dark:text-purple-400 mb-1">{result.context}</p>
                         )}
                         {result.description && (
-                          <p className="text-sm text-gray-600 line-clamp-2">{result.description}</p>
+                          <p className="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">{result.description}</p>
                         )}
                       </div>
                     </div>
@@ -146,7 +146,7 @@ function SearchContent() {
           {!searched && !loading && (
             <div className="text-center py-12">
               <div className="text-5xl mb-4">🔍</div>
-              <p className="text-gray-500">
+              <p className="text-gray-500 dark:text-gray-400">
                 Search across 24 courses and 700+ topics
               </p>
             </div>
@@ -161,11 +161,11 @@ export default function SearchPage() {
   return (
     <Suspense
       fallback={
-        <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50">
+        <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950">
           <div className="container py-12">
             <div className="mx-auto max-w-3xl">
-              <h1 className="text-3xl font-bold text-gray-900 mb-6">Search</h1>
-              <div className="animate-pulse bg-gray-200 h-14 rounded-xl" />
+              <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">Search</h1>
+              <div className="animate-pulse bg-gray-200 dark:bg-gray-700 h-14 rounded-xl" />
             </div>
           </div>
         </div>

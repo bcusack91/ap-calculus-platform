@@ -10,8 +10,8 @@ import InteractiveLessonSEO from '@/components/InteractiveLessonSEO'
 import { hasInteractiveLesson } from '@/data/interactive-lessons/registry'
 import 'katex/dist/katex.min.css'
 
-// Force dynamic rendering
-export const dynamic = 'force-dynamic'
+// ISR: revalidate every hour
+export const revalidate = 3600
 
 interface InteractivePageProps {
   params: Promise<{

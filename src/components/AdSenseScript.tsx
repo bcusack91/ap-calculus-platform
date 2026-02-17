@@ -3,7 +3,7 @@
 import Script from 'next/script'
 import { useState, useEffect } from 'react'
 
-export default function GoogleAnalytics({ measurementId }: { measurementId: string }) {
+export default function AdSenseScript({ clientId }: { clientId: string }) {
   const [hasConsent, setHasConsent] = useState(false)
 
   useEffect(() => {
@@ -12,16 +12,16 @@ export default function GoogleAnalytics({ measurementId }: { measurementId: stri
         const consent = localStorage.getItem('cookie-consent')
         if (consent) {
           const parsed = JSON.parse(consent)
-          setHasConsent(!!parsed.analytics)
+          setHasConsent(!!parsed.advertising)
         }
       } catch {
-        // If parsing fails, don't load GA
+        // If parsing fails, don't load AdSense
       }
     }
 
     checkConsent()
 
-    // Re-check when consent changes (listen for storage events)
+    // Re-check when consent changes
     const handleStorage = (e: StorageEvent) => {
       if (e.key === 'cookie-consent') {
         checkConsent()
@@ -29,7 +29,6 @@ export default function GoogleAnalytics({ measurementId }: { measurementId: stri
     }
     window.addEventListener('storage', handleStorage)
 
-    // Also poll briefly in case consent is given on same page
     const interval = setInterval(checkConsent, 2000)
     const timeout = setTimeout(() => clearInterval(interval), 30000)
 
@@ -43,19 +42,11 @@ export default function GoogleAnalytics({ measurementId }: { measurementId: stri
   if (!hasConsent) return null
 
   return (
-    <>
-      <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`}
-        strategy="afterInteractive"
-      />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', '${measurementId}');
-        `}
-      </Script>
-    </>
+    <Script
+      async
+      src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${clientId}`}
+      crossOrigin="anonymous"
+      strategy="afterInteractive"
+    />
   )
 }

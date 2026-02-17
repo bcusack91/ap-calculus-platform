@@ -4,8 +4,8 @@ import { prisma } from '@/lib/prisma'
 import { AdBanner } from '@/components/ad-banner'
 import type { Metadata } from 'next'
 
-// Force dynamic rendering
-export const dynamic = 'force-dynamic'
+// ISR: revalidate content every hour
+export const revalidate = 3600
 
 interface CoursePageProps {
   params: Promise<{
@@ -81,6 +81,32 @@ export default async function CoursePage({ params }: CoursePageProps) {
 
   return (
     <div className="container py-10">
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Course',
+            name: course.name,
+            description: course.description,
+            url: `https://www.studymondo.com/courses/${course.slug}`,
+            provider: {
+              '@type': 'Organization',
+              name: 'Study Mondo',
+              url: 'https://www.studymondo.com',
+            },
+            numberOfCredits: totalTopics,
+            hasCourseInstance: course.categories.map((cat) => ({
+              '@type': 'CourseInstance',
+              name: cat.name,
+              description: cat.description,
+            })),
+            inLanguage: 'en',
+          }),
+        }}
+      />
+
       <div className="mx-auto max-w-6xl">
         {/* Course Header */}
         <div className={`rounded-3xl bg-gradient-to-br ${colors.bg} p-12 mb-12`}>
@@ -89,9 +115,9 @@ export default async function CoursePage({ params }: CoursePageProps) {
               {course.icon || '📚'}
             </div>
             <div className="flex-1">
-              <h1 className="text-4xl font-bold text-gray-900 mb-4">{course.name}</h1>
-              <p className="text-lg text-gray-700 mb-6">{course.description}</p>
-              <div className="flex gap-6 text-sm text-gray-600">
+              <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">{course.name}</h1>
+              <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">{course.description}</p>
+              <div className="flex gap-6 text-sm text-gray-600 dark:text-gray-400">
                 <div>
                   <span className="font-semibold">{course.categories.length}</span> Categories
                 </div>
@@ -112,7 +138,7 @@ export default async function CoursePage({ params }: CoursePageProps) {
         {course.categories.length > 0 ? (
           <div className="space-y-12">
             {course.categories.map((category) => (
-              <div key={category.id} className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm">
+              <div key={category.id} className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 p-8 shadow-sm">
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center gap-3">
                     {category.icon && (
@@ -121,12 +147,12 @@ export default async function CoursePage({ params }: CoursePageProps) {
                     <div>
                       <Link 
                         href={`/categories/${category.slug}`}
-                        className="text-2xl font-bold text-gray-900 hover:text-purple-600 transition-colors"
+                        className="text-2xl font-bold text-gray-900 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
                       >
                         {category.name}
                       </Link>
                       {category.description && (
-                        <p className="text-gray-600 mt-1">{category.description}</p>
+                        <p className="text-gray-600 dark:text-gray-400 mt-1">{category.description}</p>
                       )}
                     </div>
                   </div>
@@ -144,12 +170,12 @@ export default async function CoursePage({ params }: CoursePageProps) {
                       <Link
                         key={topic.id}
                         href={`/topics/${topic.slug}`}
-                        className="group block p-4 rounded-lg border border-gray-200 hover:border-purple-300 hover:shadow-md transition-all"
+                        className="group block p-4 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-600 hover:shadow-md transition-all"
                       >
-                        <h3 className="font-semibold text-gray-900 group-hover:text-purple-600 transition-colors mb-2">
+                        <h3 className="font-semibold text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors mb-2">
                           {topic.title}
                         </h3>
-                        <p className="text-sm text-gray-600 line-clamp-2">
+                        <p className="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">
                           {topic.description}
                         </p>
                       </Link>
@@ -165,10 +191,10 @@ export default async function CoursePage({ params }: CoursePageProps) {
             ))}
           </div>
         ) : (
-          <div className="bg-white rounded-2xl border border-gray-200 p-12 text-center">
+          <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 p-12 text-center">
             <div className="text-6xl mb-4">🚧</div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">Content Coming Soon!</h2>
-            <p className="text-gray-600 mb-6">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Content Coming Soon!</h2>
+            <p className="text-gray-600 dark:text-gray-400 mb-6">
               We're working hard to create comprehensive study materials for {course.name}.
             </p>
             <Link

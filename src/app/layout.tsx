@@ -7,6 +7,8 @@ import { CookieConsent } from "@/components/cookie-consent";
 import { Analytics } from "@vercel/analytics/next"; // Temporarily disabled for local dev
 import Link from "next/link";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import AdSenseScript from "@/components/AdSenseScript";
+import { Footer } from "@/components/footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -89,48 +91,15 @@ export default function RootLayout({
             `,
           }}
         />
-        {adsenseClientId && (
-          <script
-            async
-            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseClientId}`}
-            crossOrigin="anonymous"
-          />
-        )}
       </head>
       <body className={`${inter.variable} font-sans antialiased`}>
         {gaId && <GoogleAnalytics measurementId={gaId} />}
+        {adsenseClientId && <AdSenseScript clientId={adsenseClientId} />}
         <Providers>
           <div className="flex min-h-screen flex-col">
             <Navbar />
             <main className="flex-1">{children}</main>
-            <footer className="border-t py-6 md:py-8">
-              <div className="container">
-                <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
-                  <div className="text-center md:text-left">
-                    <p className="text-sm leading-loose text-muted-foreground">
-                      Built for AP students. © {new Date().getFullYear()} Study Mondo
-                    </p>
-                    <p className="text-xs text-muted-foreground/80 mt-1">
-                      AP® is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this website.
-                    </p>
-                  </div>
-                  <div className="flex gap-6 text-sm text-muted-foreground">
-                    <Link href="/about" className="hover:text-foreground transition-colors">
-                      About
-                    </Link>
-                    <Link href="/contact" className="hover:text-foreground transition-colors">
-                      Contact
-                    </Link>
-                    <Link href="/terms" className="hover:text-foreground transition-colors">
-                      Terms
-                    </Link>
-                    <Link href="/privacy" className="hover:text-foreground transition-colors">
-                      Privacy
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </footer>
+            <Footer />
           </div>
           <CookieConsent />
         </Providers>

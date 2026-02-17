@@ -1,7 +1,20 @@
 'use client'
 
 import { useSession } from 'next-auth/react'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
+
+// Check if the user has consented to advertising cookies
+function hasAdConsent(): boolean {
+  if (typeof window === 'undefined') return false
+  try {
+    const consent = localStorage.getItem('cookie-consent')
+    if (!consent) return false
+    const parsed = JSON.parse(consent)
+    return parsed.advertising === true
+  } catch {
+    return false
+  }
+}
 
 interface AdBannerProps {
   slot: string
@@ -11,6 +24,7 @@ interface AdBannerProps {
 
 export function AdBanner({ slot, format = 'auto', responsive = true }: AdBannerProps) {
   const { data: session } = useSession()
+  const [consentGiven, setConsentGiven] = useState(false)
   
   // Don't show ads to premium users
   const isPremium = session?.user?.role === 'PREMIUM'
@@ -18,8 +32,29 @@ export function AdBanner({ slot, format = 'auto', responsive = true }: AdBannerP
   // Skip ads in development to avoid initialization errors
   const isDevelopment = process.env.NODE_ENV === 'development'
 
+  // Check consent on mount and listen for changes
   useEffect(() => {
-    if (isPremium || isDevelopment) return
+    setConsentGiven(hasAdConsent())
+    
+    // Re-check consent when storage changes (e.g. user accepts cookies)
+    const handleStorage = () => setConsentGiven(hasAdConsent())
+    window.addEventListener('storage', handleStorage)
+    
+    // Also poll briefly since cookie consent updates localStorage in the same tab
+    const interval = setInterval(() => {
+      if (hasAdConsent() !== consentGiven) {
+        setConsentGiven(hasAdConsent())
+      }
+    }, 2000)
+    
+    return () => {
+      window.removeEventListener('storage', handleStorage)
+      clearInterval(interval)
+    }
+  }, [consentGiven])
+
+  useEffect(() => {
+    if (isPremium || isDevelopment || !consentGiven) return
 
     try {
       // @ts-ignore
@@ -27,7 +62,7 @@ export function AdBanner({ slot, format = 'auto', responsive = true }: AdBannerP
     } catch (err) {
       console.error('AdSense error:', err)
     }
-  }, [isPremium, isDevelopment])
+  }, [isPremium, isDevelopment, consentGiven])
 
   if (isPremium) {
     return null
@@ -45,6 +80,11 @@ export function AdBanner({ slot, format = 'auto', responsive = true }: AdBannerP
         </div>
       </div>
     )
+  }
+
+  // Don't load ads until user has consented to advertising cookies
+  if (!consentGiven) {
+    return null
   }
 
   const adsenseClientId = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID

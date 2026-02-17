@@ -4,8 +4,8 @@ import { prisma } from '@/lib/prisma'
 import { AdBanner } from '@/components/ad-banner'
 import type { Metadata } from 'next'
 
-// Force dynamic rendering
-export const dynamic = 'force-dynamic'
+// ISR: revalidate content every hour
+export const revalidate = 3600
 
 interface CategoryPageProps {
   params: Promise<{

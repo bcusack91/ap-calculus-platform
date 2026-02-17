@@ -46,13 +46,13 @@ export default function AboutPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-purple-50 via-blue-50 to-cyan-50 py-20">
+      <section className="relative overflow-hidden bg-gradient-to-br from-purple-50 via-blue-50 to-cyan-50 dark:from-purple-950 dark:via-gray-900 dark:to-blue-950 py-20">
         <div className="container">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600">
               About Study Mondo
             </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
+            <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-400">
               Empowering students with free, comprehensive study materials — from 4th grade through college
             </p>
           </div>
@@ -60,17 +60,17 @@ export default function AboutPage() {
       </section>
 
       {/* Mission Section */}
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24 bg-white dark:bg-gray-950">
         <div className="container max-w-4xl">
           <div className="space-y-12">
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
-              <p className="text-lg text-gray-600 leading-relaxed mb-4">
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">Our Mission</h2>
+              <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
                 We believe that high-quality educational resources should be accessible to every student,
                 regardless of their financial situation. That&apos;s why we created this completely free platform
                 to help students master challenging math and science courses.
               </p>
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
                 Our comprehensive study materials span 24 courses with 700+ topics, thousands of flashcards,
                 interactive lessons, and detailed explanations — all created by educators who understand what
                 it takes to succeed.
@@ -79,52 +79,52 @@ export default function AboutPage() {
 
             {/* What We Offer */}
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">What We Offer</h2>
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">What We Offer</h2>
               <div className="grid sm:grid-cols-2 gap-6">
-                <div className="p-6 border border-gray-200 rounded-xl hover:shadow-lg transition-shadow">
+                <div className="p-6 border border-gray-200 dark:border-gray-700 rounded-xl hover:shadow-lg transition-shadow">
                   <div className="text-3xl mb-4">📚</div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Comprehensive Notes</h3>
-                  <p className="text-gray-600">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Comprehensive Notes</h3>
+                  <p className="text-gray-600 dark:text-gray-400">
                     Detailed explanations covering every topic across 24 courses, from Grade 4 math to AP sciences
                   </p>
                 </div>
 
-                <div className="p-6 border border-gray-200 rounded-xl hover:shadow-lg transition-shadow">
+                <div className="p-6 border border-gray-200 dark:border-gray-700 rounded-xl hover:shadow-lg transition-shadow">
                   <div className="text-3xl mb-4">🎯</div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Interactive Lessons</h3>
-                  <p className="text-gray-600">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Interactive Lessons</h3>
+                  <p className="text-gray-600 dark:text-gray-400">
                     Step-by-step interactive lessons with built-in practice exercises and instant feedback
                   </p>
                 </div>
 
-                <div className="p-6 border border-gray-200 rounded-xl hover:shadow-lg transition-shadow">
+                <div className="p-6 border border-gray-200 dark:border-gray-700 rounded-xl hover:shadow-lg transition-shadow">
                   <div className="text-3xl mb-4">🎴</div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Spaced Repetition Flashcards</h3>
-                  <p className="text-gray-600">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Spaced Repetition Flashcards</h3>
+                  <p className="text-gray-600 dark:text-gray-400">
                     Thousands of flashcards powered by the SM-2 algorithm to optimize your review schedule
                   </p>
                 </div>
 
-                <div className="p-6 border border-gray-200 rounded-xl hover:shadow-lg transition-shadow">
+                <div className="p-6 border border-gray-200 dark:border-gray-700 rounded-xl hover:shadow-lg transition-shadow">
                   <div className="text-3xl mb-4">📝</div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Practice Problems</h3>
-                  <p className="text-gray-600">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Practice Problems</h3>
+                  <p className="text-gray-600 dark:text-gray-400">
                     Hundreds of example problems with detailed step-by-step solutions
                   </p>
                 </div>
 
-                <div className="p-6 border border-gray-200 rounded-xl hover:shadow-lg transition-shadow">
+                <div className="p-6 border border-gray-200 dark:border-gray-700 rounded-xl hover:shadow-lg transition-shadow">
                   <div className="text-3xl mb-4">🎮</div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Competitive Mode</h3>
-                  <p className="text-gray-600">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Competitive Mode</h3>
+                  <p className="text-gray-600 dark:text-gray-400">
                     Challenge AI opponents or other students to test your skills under pressure
                   </p>
                 </div>
 
-                <div className="p-6 border border-gray-200 rounded-xl hover:shadow-lg transition-shadow">
+                <div className="p-6 border border-gray-200 dark:border-gray-700 rounded-xl hover:shadow-lg transition-shadow">
                   <div className="text-3xl mb-4">📊</div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Progress Tracking</h3>
-                  <p className="text-gray-600">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Progress Tracking</h3>
+                  <p className="text-gray-600 dark:text-gray-400">
                     Track your mastery across topics, maintain study streaks, and view your learning dashboard
                   </p>
                 </div>
@@ -133,14 +133,14 @@ export default function AboutPage() {
 
             {/* Courses Covered */}
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">24 Courses We Cover</h2>
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">24 Courses We Cover</h2>
               <div className="space-y-6">
                 {courseList.map((section) => (
-                  <div key={section.section} className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl p-6">
-                    <h3 className="text-lg font-bold text-purple-900 mb-3">{section.section}</h3>
+                  <div key={section.section} className="bg-gradient-to-br from-purple-50 to-blue-50 dark:from-purple-950/50 dark:to-blue-950/50 rounded-2xl p-6">
+                    <h3 className="text-lg font-bold text-purple-900 dark:text-purple-300 mb-3">{section.section}</h3>
                     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
                       {section.courses.map((course) => (
-                        <div key={course.name} className="flex items-center gap-3 text-gray-700">
+                        <div key={course.name} className="flex items-center gap-3 text-gray-700 dark:text-gray-300">
                           <span className="text-xl">{course.icon}</span>
                           <span className="font-medium">{course.name}</span>
                         </div>
@@ -153,7 +153,7 @@ export default function AboutPage() {
 
             {/* How It Works */}
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">How It Works</h2>
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">How It Works</h2>
               <div className="space-y-4">
                 {[
                   { step: 1, title: "Choose Your Course", desc: "Select from 24 courses spanning middle school, high school, AP, and test prep" },
@@ -166,8 +166,8 @@ export default function AboutPage() {
                       {step}
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-900 mb-1">{title}</h3>
-                      <p className="text-gray-600">{desc}</p>
+                      <h3 className="font-semibold text-gray-900 dark:text-white mb-1">{title}</h3>
+                      <p className="text-gray-600 dark:text-gray-400">{desc}</p>
                     </div>
                   </div>
                 ))}
@@ -175,32 +175,32 @@ export default function AboutPage() {
             </div>
 
             {/* Funding Model */}
-            <div className="bg-blue-50 border border-blue-100 rounded-2xl p-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">How We Stay Free</h2>
-              <p className="text-gray-700 leading-relaxed mb-4">
+            <div className="bg-blue-50 dark:bg-blue-950/50 border border-blue-100 dark:border-blue-900 rounded-2xl p-8">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">How We Stay Free</h2>
+              <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
                 Our platform is supported by non-intrusive advertisements. We carefully select
                 ad partners to ensure they don&apos;t disrupt your learning experience. These ads allow
                 us to maintain and improve the platform without charging students.
               </p>
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                 We&apos;re committed to keeping all educational content free. No hidden fees — just
                 free, quality education for everyone.
               </p>
             </div>
 
             {/* Content Disclaimer */}
-            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Important Notice</h2>
-              <p className="text-gray-700 leading-relaxed mb-4">
+            <div className="bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-2xl p-8">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Important Notice</h2>
+              <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
                 <strong>Original Content:</strong> All study materials, explanations, and practice problems
                 on this platform are original works created by our team of educators. We are not affiliated
                 with the College Board.
               </p>
-              <p className="text-gray-700 leading-relaxed mb-4">
+              <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
                 <strong>Trademark Notice:</strong> AP® is a trademark registered by the College Board,
                 which is not affiliated with, and does not endorse, this website.
               </p>
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                 <strong>Supplementary Resource:</strong> This platform is designed as a supplementary
                 study tool. We recommend using it alongside official course materials, textbooks,
                 and guidance from qualified teachers.
@@ -209,10 +209,10 @@ export default function AboutPage() {
 
             {/* Contact CTA */}
             <div className="text-center py-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
                 Have Questions or Feedback?
               </h2>
-              <p className="text-gray-600 mb-6">
+              <p className="text-gray-600 dark:text-gray-400 mb-6">
                 We&apos;d love to hear from you! Whether you found a typo, have a suggestion,
                 or just want to say thanks, reach out to us.
               </p>
@@ -230,25 +230,25 @@ export default function AboutPage() {
                 <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">
                   24
                 </div>
-                <div className="text-gray-600 mt-2">Courses</div>
+                <div className="text-gray-600 dark:text-gray-400 mt-2">Courses</div>
               </div>
               <div className="p-6">
                 <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">
                   700+
                 </div>
-                <div className="text-gray-600 mt-2">Topics</div>
+                <div className="text-gray-600 dark:text-gray-400 mt-2">Topics</div>
               </div>
               <div className="p-6">
                 <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">
                   1000+
                 </div>
-                <div className="text-gray-600 mt-2">Practice Problems</div>
+                <div className="text-gray-600 dark:text-gray-400 mt-2">Practice Problems</div>
               </div>
               <div className="p-6">
                 <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">
                   100%
                 </div>
-                <div className="text-gray-600 mt-2">Free Forever</div>
+                <div className="text-gray-600 dark:text-gray-400 mt-2">Free Forever</div>
               </div>
             </div>
           </div>

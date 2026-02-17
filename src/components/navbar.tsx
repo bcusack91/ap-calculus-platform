@@ -2,15 +2,24 @@
 
 import Link from 'next/link'
 import { useSession, signIn, signOut } from 'next-auth/react'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import AvatarDisplay from './AvatarDisplay'
 import ThemeToggle from './ThemeToggle'
 import { AvatarData } from '@/types/avatar'
+
+interface CourseLink {
+  slug: string
+  name: string
+  icon: string | null
+}
 
 export function Navbar() {
   const { data: session } = useSession()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [avatarData, setAvatarData] = useState<AvatarData | null>(null)
+  const [coursesOpen, setCoursesOpen] = useState(false)
+  const [courses, setCourses] = useState<CourseLink[]>([])
+  const coursesRef = useRef<HTMLDivElement>(null)
 
   const isPremium = session?.user?.role === 'PREMIUM'
   const isTeacher = session?.user?.role === 'TEACHER' || session?.user?.role === 'ADMIN'
@@ -47,6 +56,35 @@ export function Navbar() {
     }
   }, [session])
 
+  // Fetch courses for dropdown (cached in sessionStorage)
+  useEffect(() => {
+    const cached = sessionStorage.getItem('navCourses')
+    if (cached) {
+      try {
+        setCourses(JSON.parse(cached))
+        return
+      } catch (e) { /* fetch fresh */ }
+    }
+    fetch('/api/courses')
+      .then(res => res.json())
+      .then(data => {
+        setCourses(data)
+        sessionStorage.setItem('navCourses', JSON.stringify(data))
+      })
+      .catch(() => {})
+  }, [])
+
+  // Close courses dropdown on outside click
+  useEffect(() => {
+    function handleClick(e: MouseEvent) {
+      if (coursesRef.current && !coursesRef.current.contains(e.target as Node)) {
+        setCoursesOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handleClick)
+    return () => document.removeEventListener('mousedown', handleClick)
+  }, [])
+
   return (
     <nav className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
@@ -54,7 +92,7 @@ export function Navbar() {
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <span className="inline-block align-middle" style={{ width: 32, height: 32 }}>
               {/* Mascot: Smiling Book SVG */}
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true">
                 <rect width="32" height="32" rx="7" fill="url(#g)"/>
                 <defs>
                   <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
@@ -78,11 +116,44 @@ export function Navbar() {
             <Link href="/topics" className="transition-colors hover:text-foreground/80">
               Topics
             </Link>
+            {/* Courses Dropdown */}
+            <div ref={coursesRef} className="relative">
+              <button
+                onClick={() => setCoursesOpen(!coursesOpen)}
+                className="transition-colors hover:text-foreground/80 flex items-center gap-1"
+              >
+                Courses
+                <svg className={`h-3 w-3 transition-transform ${coursesOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {coursesOpen && (
+                <div className="absolute top-full left-0 mt-2 w-64 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg py-2 z-50">
+                  {courses.map((course) => (
+                    <Link
+                      key={course.slug}
+                      href={`/courses/${course.slug}`}
+                      className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-purple-900/30 hover:text-purple-700 dark:hover:text-purple-300 transition-colors"
+                      onClick={() => setCoursesOpen(false)}
+                    >
+                      <span>{course.icon || '📚'}</span>
+                      {course.name}
+                    </Link>
+                  ))}
+                  {courses.length === 0 && (
+                    <div className="px-4 py-2 text-sm text-gray-500">Loading...</div>
+                  )}
+                </div>
+              )}
+            </div>
             <Link href="/flashcards" className="transition-colors hover:text-foreground/80">
               Flashcards
             </Link>
             <Link href="/competitive" className="transition-colors hover:text-foreground/80 text-purple-600 dark:text-purple-400 font-semibold">
               🎮 Competitive
+            </Link>
+            <Link href="/leaderboard" className="transition-colors hover:text-foreground/80">
+              🏆 Leaderboard
             </Link>
             <Link href="/about" className="transition-colors hover:text-foreground/80">
               About
@@ -90,8 +161,8 @@ export function Navbar() {
             <Link href="/contact" className="transition-colors hover:text-foreground/80">
               Contact
             </Link>
-            <Link href="/search" className="transition-colors hover:text-foreground/80" title="Search">
-              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <Link href="/search" className="transition-colors hover:text-foreground/80" title="Search" aria-label="Search">
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
             </Link>
@@ -162,8 +233,10 @@ export function Navbar() {
           <button
             className="md:hidden"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={mobileMenuOpen}
           >
-            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </button>
@@ -177,11 +250,28 @@ export function Navbar() {
             <Link href="/topics" className="block px-3 py-2 text-base font-medium hover:bg-accent rounded-md">
               Topics
             </Link>
+            {/* Mobile Courses List */}
+            <div className="px-3 py-2">
+              <div className="text-base font-medium text-gray-500 dark:text-gray-400 mb-1">Courses</div>
+              {courses.map((course) => (
+                <Link
+                  key={course.slug}
+                  href={`/courses/${course.slug}`}
+                  className="block pl-4 py-1.5 text-sm hover:bg-accent rounded-md"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {course.icon || '📚'} {course.name}
+                </Link>
+              ))}
+            </div>
             <Link href="/flashcards" className="block px-3 py-2 text-base font-medium hover:bg-accent rounded-md">
               Flashcards
             </Link>
             <Link href="/competitive" className="block px-3 py-2 text-base font-medium text-purple-600 dark:text-purple-400 hover:bg-accent rounded-md">
               🎮 Competitive Mode
+            </Link>
+            <Link href="/leaderboard" className="block px-3 py-2 text-base font-medium hover:bg-accent rounded-md">
+              🏆 Leaderboard
             </Link>
             <Link href="/about" className="block px-3 py-2 text-base font-medium hover:bg-accent rounded-md">
               About

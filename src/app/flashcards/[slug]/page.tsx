@@ -81,6 +81,42 @@ export default function FlashcardStudyPage() {
     setIsFlipped(!isFlipped)
   }
 
+  // Keyboard shortcuts: Space = flip, ArrowLeft = prev, ArrowRight = next
+  useEffect(() => {
+    function handleKeyDown(e: KeyboardEvent) {
+      // Don't trigger if user is typing in an input
+      if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return
+      if (e.key === ' ' || e.key === 'Spacebar') {
+        e.preventDefault()
+        setIsFlipped((prev) => !prev)
+      } else if (e.key === 'ArrowLeft') {
+        e.preventDefault()
+        setCurrentIndex((prev) => {
+          if (prev > 0) {
+            setIsFlipped(false)
+            setShowHint(false)
+            return prev - 1
+          }
+          return prev
+        })
+      } else if (e.key === 'ArrowRight') {
+        e.preventDefault()
+        if (topic) {
+          setCurrentIndex((prev) => {
+            if (prev < topic.flashcards.length - 1) {
+              setIsFlipped(false)
+              setShowHint(false)
+              return prev + 1
+            }
+            return prev
+          })
+        }
+      }
+    }
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [topic])
+
   if (loading) {
     return (
       <div className="container py-10">
@@ -254,6 +290,15 @@ export default function FlashcardStudyPage() {
               >
                 Next →
               </button>
+            </div>
+
+            {/* Keyboard shortcuts hint */}
+            <div className="text-center mt-3 text-xs text-gray-400 dark:text-gray-500">
+              <kbd className="px-1.5 py-0.5 bg-gray-100 dark:bg-gray-700 rounded border border-gray-300 dark:border-gray-600 font-mono">←</kbd> Previous
+              {' · '}
+              <kbd className="px-1.5 py-0.5 bg-gray-100 dark:bg-gray-700 rounded border border-gray-300 dark:border-gray-600 font-mono">Space</kbd> Flip
+              {' · '}
+              <kbd className="px-1.5 py-0.5 bg-gray-100 dark:bg-gray-700 rounded border border-gray-300 dark:border-gray-600 font-mono">→</kbd> Next
             </div>
 
             {/* Completion Message */}
