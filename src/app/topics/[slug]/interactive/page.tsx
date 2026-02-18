@@ -8,6 +8,7 @@ import InteractiveLessonRenderer from '@/components/InteractiveLessonRenderer'
 import DynamicInteractiveLessonRenderer from '@/components/DynamicInteractiveLessonRenderer'
 import InteractiveLessonSEO from '@/components/InteractiveLessonSEO'
 import { hasInteractiveLesson } from '@/data/interactive-lessons/registry'
+import { preloadAllLessonParts } from '@/data/interactive-lessons/server-loader'
 import 'katex/dist/katex.min.css'
 
 // ISR: revalidate every hour
@@ -76,6 +77,12 @@ export default async function InteractivePage(props: InteractivePageProps) {
   const hasHandCraftedLesson = hasInteractiveLesson(topic.slug)
   // If no hand-crafted lesson, we'll use the dynamic renderer with textContent
   const hasDynamicContent = !hasHandCraftedLesson && !!topic.textContent?.trim()
+
+  // Pre-load lesson parts on the server to avoid client-side dynamic imports
+  // (client-side chunks may not deploy to CDN with large numbers of lesson files)
+  const lessonConfig = hasHandCraftedLesson
+    ? await preloadAllLessonParts(topic.slug)
+    : null
 
   if (!hasHandCraftedLesson && !hasDynamicContent) {
     // No hand-crafted lesson AND no textContent to generate from
@@ -146,8 +153,13 @@ export default async function InteractivePage(props: InteractivePageProps) {
             </div>
           </div>
         }>
-          {hasHandCraftedLesson ? (
-            <InteractiveLessonRenderer topicSlug={topic.slug} />
+          {hasHandCraftedLesson && lessonConfig && lessonConfig.parts.length > 0 ? (
+            <InteractiveLessonRenderer
+              topicSlug={topic.slug}
+              preloadedParts={lessonConfig.parts}
+              completionDestination={lessonConfig.completionDestination}
+              practiceModeParts={lessonConfig.practiceModeParts}
+            />
           ) : (
             <DynamicInteractiveLessonRenderer topicSlug={topic.slug} textContent={topic.textContent!} />
           )}

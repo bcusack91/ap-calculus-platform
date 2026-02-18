@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useRef, useEffect, useCallback } from 'react'
-import { getInteractiveLessonData, getInteractiveTopicConfig } from '@/data/interactive-lessons/registry'
+import type { PreloadedLessonPart } from '@/data/interactive-lessons/server-loader'
 import ReactMarkdown from 'react-markdown'
 import remarkMath from 'remark-math'
 import remarkGfm from 'remark-gfm'
@@ -144,6 +144,9 @@ interface Section {
 
 interface InteractiveLessonRendererProps {
   topicSlug: string
+  preloadedParts: PreloadedLessonPart[]
+  completionDestination?: 'competitive' | 'complete'
+  practiceModeParts?: number[]
 }
 
 type LessonPart = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8
@@ -156,14 +159,13 @@ function calculatePartMastery(lessonPart: number, completedSectionsCount: number
   return Math.min(1, baseLevel + progressInPart * partWeight)
 }
 
-export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLessonRendererProps) {
+export default function InteractiveLessonRenderer({ topicSlug, preloadedParts, completionDestination, practiceModeParts: practiceModePropParts }: InteractiveLessonRendererProps) {
   const searchParams = useSearchParams()
   const router = useRouter()
   const { data: session } = useSession()
-  const topicConfig = getInteractiveTopicConfig(topicSlug)
-  const totalParts = topicConfig?.parts.length ?? 1
-  const entersCompetitiveModeOnComplete = topicConfig?.completionDestination === 'competitive'
-  const practiceModeParts = topicConfig?.practiceModeParts ?? []
+  const totalParts = preloadedParts.length || 1
+  const entersCompetitiveModeOnComplete = completionDestination === 'competitive'
+  const practiceModeParts = practiceModePropParts ?? []
   
   // Get initial part from URL parameter (e.g., ?part=2)
   const urlPart = searchParams.get('part')
@@ -323,45 +325,11 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
     }
   }, [completedSections, progressLoaded])
 
-  // Async lesson data loading
-  const [lessonData, setLessonData] = useState<any>(null)
-  const [lessonLoading, setLessonLoading] = useState(true)
-  const [lessonLoadError, setLessonLoadError] = useState(false)
-
-  useEffect(() => {
-    let cancelled = false
-    setLessonLoading(true)
-    setLessonLoadError(false)
-    getInteractiveLessonData(topicSlug, lessonPart)
-      .then(data => {
-        if (!cancelled) {
-          setLessonData(data)
-          setLessonLoading(false)
-        }
-      })
-      .catch(err => {
-        console.error('Failed to load lesson data:', err)
-        if (!cancelled) {
-          setLessonLoadError(true)
-          setLessonLoading(false)
-        }
-      })
-    return () => { cancelled = true }
-  }, [topicSlug, lessonPart])
-
-  if (lessonLoading) {
-    return (
-      <div className="flex items-center justify-center min-h-[400px]">
-        <div className="text-center space-y-4">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600 mx-auto"></div>
-          <p className="text-lg text-gray-600 dark:text-gray-400">Loading lesson...</p>
-        </div>
-      </div>
-    )
-  }
+  // Lesson data from server-preloaded parts (no client-side dynamic imports needed)
+  const lessonData = preloadedParts[lessonPart - 1]?.data ?? null
 
   if (!lessonData) {
-    return <div>No interactive lesson available</div>
+    return <div>No interactive lesson available for this part.</div>
   }
 
   // Show practice mode if requested
@@ -539,7 +507,7 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
   })
 
   // Lesson title for progress bar and bookmark
-  const lessonTitle = topicConfig?.parts[lessonPart - 1]?.title || topicSlug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())
+  const lessonTitle = preloadedParts[lessonPart - 1]?.title || topicSlug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())
 
   return (
     <>
@@ -562,13 +530,13 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
 
       <div className="space-y-6">
       {/* Part Navigation Menu - Show for multi-part lessons */}
-      {topicConfig && totalParts > 1 && (
+      {preloadedParts.length > 1 && (
         <div className="bg-gradient-to-r from-indigo-100/80 via-purple-100/80 to-pink-100/80 dark:from-indigo-900/40 dark:via-purple-900/40 dark:to-pink-900/40 backdrop-blur-sm rounded-2xl p-5 border-2 border-indigo-200/70 dark:border-indigo-700/50 shadow-lg">
           <div className="flex items-center justify-between flex-wrap gap-4">
             <div className="flex items-center gap-2">
               <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">Jump to:</span>
               <div className="flex gap-2 flex-wrap">
-                {topicConfig.parts.map((partConfig, index) => {
+                {preloadedParts.map((partConfig, index) => {
                   const partNumber = (index + 1) as LessonPart
                   const isUnlocked = unlockedParts.has(partNumber)
 
