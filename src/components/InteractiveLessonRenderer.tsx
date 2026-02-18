@@ -213,7 +213,8 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
     
     try {
       // Calculate mastery level based on overall progress
-      const masteryLevel = calculatePartMastery(lessonPart, completedSections.size, sections.length, totalParts)
+      const sectionCount = lessonData?.sections?.length ?? 1
+      const masteryLevel = calculatePartMastery(lessonPart, completedSections.size, sectionCount, totalParts)
       
       const response = await fetch('/api/progress/save', {
         method: 'POST',
@@ -296,7 +297,8 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
     const handleBeforeUnload = () => {
       if (session?.user && completedSections.size > 0 && cachedTopicId) {
         // Use sendBeacon for reliable save on page unload
-        const masteryLevel = calculateMasteryLevel()
+        const sectionCount = lessonData?.sections?.length ?? 1
+        const masteryLevel = calculatePartMastery(lessonPart, completedSections.size, sectionCount, totalParts)
         navigator.sendBeacon('/api/progress/save', JSON.stringify({
           topicId: cachedTopicId,
           lessonPart,
@@ -324,16 +326,26 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
   // Async lesson data loading
   const [lessonData, setLessonData] = useState<any>(null)
   const [lessonLoading, setLessonLoading] = useState(true)
+  const [lessonLoadError, setLessonLoadError] = useState(false)
 
   useEffect(() => {
     let cancelled = false
     setLessonLoading(true)
-    getInteractiveLessonData(topicSlug, lessonPart).then(data => {
-      if (!cancelled) {
-        setLessonData(data)
-        setLessonLoading(false)
-      }
-    })
+    setLessonLoadError(false)
+    getInteractiveLessonData(topicSlug, lessonPart)
+      .then(data => {
+        if (!cancelled) {
+          setLessonData(data)
+          setLessonLoading(false)
+        }
+      })
+      .catch(err => {
+        console.error('Failed to load lesson data:', err)
+        if (!cancelled) {
+          setLessonLoadError(true)
+          setLessonLoading(false)
+        }
+      })
     return () => { cancelled = true }
   }, [topicSlug, lessonPart])
 
@@ -391,8 +403,12 @@ export default function InteractiveLessonRenderer({ topicSlug }: InteractiveLess
   }
 
   const { sections } = lessonData
-  const currentSection = sections[currentSectionIndex]
-  const progress = ((completedSections.size) / sections.length) * 100
+  const currentSection = sections?.[currentSectionIndex]
+  const progress = sections?.length > 0 ? ((completedSections.size) / sections.length) * 100 : 0
+
+  if (!currentSection) {
+    return <div>No interactive lesson available</div>
+  }
   
   // Helper to calculate mastery level (needs sections defined)
   const calculateMasteryLevel = () => {
