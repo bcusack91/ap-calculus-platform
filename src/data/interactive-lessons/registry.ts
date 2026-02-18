@@ -3218,6 +3218,16 @@ const interactiveLessonRegistry: Record<string, InteractiveTopicConfig> = {
       { title: 'Review & MCAT Practice', loader: () => import('./mcat-mcat-test-day-strategy-mcat-part7').then(m => m.mcatTestDayPart7Data) },
     ],
   },
+  // ── Grade 6: Negative Numbers ──────────────────────────────────────────
+  'negative-numbers-grade6': {
+    completionDestination: 'competitive',
+    practiceModeParts: [1, 2, 3],
+    parts: [
+      { title: 'What Are Negative Numbers?', loader: () => import('./negative-numbers-grade6-part1').then(m => m.negativeNumbersPart1Data) },
+      { title: 'Adding & Subtracting', loader: () => import('./negative-numbers-grade6-part2').then(m => m.negativeNumbersPart2Data) },
+      { title: 'Ordering & Review', loader: () => import('./negative-numbers-grade6-part3').then(m => m.negativeNumbersPart3Data) },
+    ],
+  },
 }
 
 // ---------------------------------------------------------------------------

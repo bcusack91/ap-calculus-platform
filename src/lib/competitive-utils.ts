@@ -6,6 +6,7 @@ import { getLimitQuestions } from '@/data/competitive-questions/limits-bank'
 import { getIntegralQuestions } from '@/data/competitive-questions/integrals-bank'
 import { getAlgebraQuestions } from '@/data/competitive-questions/algebra-bank'
 import { getAlgebra2Questions, getUnlockedAlgebra2Subtopics } from '@/data/competitive-questions/algebra2-bank'
+import { getNegativeNumbersQuestions } from '@/data/competitive-questions/negative-numbers-bank'
 
 interface UnitCirclePosition {
   angle: number;
@@ -111,6 +112,7 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
     'limits': getLimitQuestions,
     'integrals': getIntegralQuestions,
     'algebra': getAlgebraQuestions,
+    'negative-numbers-grade6': getNegativeNumbersQuestions,
   }
 
   if (topicSlug && topicSlug in mcqBanks) {
