@@ -2,98 +2,68 @@ export const mcatPsychBehavPart3Data = {
   topicSlug: 'mcat-psychology-behavior-mcat',
   sections: [
     {
-      id: 'mcat-3-intro',
+      id: 'pb3-intro',
       type: 'text' as const,
-      content: `
-# Cognition & Language
+      content: `# Psychology & Behavior for the MCAT
 
-**Part 3 of 7 — Cognition & Language**
+**Part 3 of 7 — Motivation, Emotion & Stress**
 
-Problem solving: algorithms (systematic) vs heuristics (shortcuts — availability, representativeness).
+### Theories of Motivation
 
-Language development: Chomsky (innate LAD) vs Skinner (operant conditioning).
-      `
+| Theory | Key Idea |
+|--------|----------|
+| **Drive reduction** | Behavior reduces biological needs (hunger → eat) |
+| **Incentive theory** | External rewards pull behavior |
+| **Maslow's hierarchy** | Physiological → Safety → Love → Esteem → Self-actualization |
+| **Self-determination** | Autonomy, competence, relatedness |
+| **Arousal theory** | Seek optimal level of arousal (Yerkes-Dodson law) |
+
+### Yerkes-Dodson Law
+
+- Performance is best at moderate arousal
+- Simple tasks: higher arousal = better
+- Complex tasks: lower arousal = better
+- Inverted-U relationship
+
+### Theories of Emotion
+
+| Theory | Sequence |
+|--------|----------|
+| **James-Lange** | Event → Physiological response → Emotion ("I'm afraid BECAUSE I'm running") |
+| **Cannon-Bard** | Event → Physiological response AND Emotion simultaneously |
+| **Schachter-Singer** (Two-Factor) | Event → Physiological arousal → Cognitive label → Emotion |
+
+### Stress
+
+**General Adaptation Syndrome** (Selye):
+1. **Alarm**: Fight-or-flight (sympathetic activation)
+2. **Resistance**: Body adapts but stays alert
+3. **Exhaustion**: Resources depleted → illness/burnout`
     },
     {
-      id: 'mcat-3-quiz1',
+      id: 'pb3-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Motivation & Emotion** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in cognition & language?',
-            options: [
-              'Problem solving: algorithms (systematic) vs heuristics (shortcuts — availability, representativeness)',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'According to the Schachter-Singer (two-factor) theory, experiencing an emotion requires:',
+            options: ['Physiological arousal AND a cognitive label for that arousal', 'Only physiological arousal', 'Only cognitive appraisal', 'Behavior before emotion'],
             correctAnswer: 0,
-            explanation: 'Problem solving: algorithms (systematic) vs heuristics (shortcuts — availability, representativeness)'
+            explanation: 'Two-factor theory: you experience arousal AND then cognitively interpret it. Same arousal can become different emotions depending on context. This is why a racing heart on a date might feel like attraction vs. anxiety.'
           }
         ]
       }
     },
     {
-      id: 'mcat-3-detail',
+      id: 'pb3-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Brocas area: speech production (damage = nonfluent aphasia); Wernickes area: comprehension (damage = fluent aphasia).
+      content: `### Key Takeaways — Part 3
 
-**MCAT Tip:** Cognitive biases: confirmation bias, anchoring, framing effect, hindsight bias.
-      `
-    },
-    {
-      id: 'mcat-3-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Psych/Soc related to cognition & language?',
-            options: [
-              'Brocas area: speech production (damage = nonfluent aphasia); Wernickes area: comprehension (damage = fluent aphasia)',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Brocas area: speech production (damage = nonfluent aphasia); Wernickes area: comprehension (damage = fluent aphasia)'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-3-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Problem solving',
-            options: ['algorithms (systematic) vs heuristics (shortcuts — availability, representativeness).', 'Cognitive biases: confirmation bias, anchoring, framing effect, hindsight bias.', 'Brocas area: speech production (damage = nonfluent aphasia); Wernickes area: comprehension (damage = fluent aphasia).', 'Chomsky (innate LAD) vs Skinner (operant conditioning).']
-          },
-          {
-            label: 'Language development',
-            options: ['Chomsky (innate LAD) vs Skinner (operant conditioning).', 'Brocas area: speech production (damage = nonfluent aphasia); Wernickes area: comprehension (damage = fluent aphasia).', 'algorithms (systematic) vs heuristics (shortcuts — availability, representativeness).', 'Cognitive biases: confirmation bias, anchoring, framing effect, hindsight bias.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['Brocas area: speech production (damage = nonfluent aphasia); Wernickes area: comprehension (damage = fluent aphasia).', 'Cognitive biases: confirmation bias, anchoring, framing effect, hindsight bias.', 'Chomsky (innate LAD) vs Skinner (operant conditioning).', 'algorithms (systematic) vs heuristics (shortcuts — availability, representativeness).']
-          }
-        ],
-        correctAnswers: ['algorithms (systematic) vs heuristics (shortcuts — availability, representativeness).', 'Chomsky (innate LAD) vs Skinner (operant conditioning).', 'Brocas area: speech production (damage = nonfluent aphasia); Wernickes area: comprehension (damage = fluent aphasia).'],
-        hint1: 'Think about what each concept specifically describes in Cognition & Language.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Cognition & Language describes a specific idea. Problem solving: algorithms (systematic) vs heuristics (shortcuts — availability, representativeness). Language development: Chomsky (innate LAD) vs Skinner (operant conditioning). Key Insight: Brocas area: speech production (damage = nonfluent aphasia); Wernickes area: comprehension (damage = fluent aphasia).'
-      }
+- James-Lange: body first. Cannon-Bard: simultaneous. Schachter-Singer: arousal + label.
+- Yerkes-Dodson: moderate arousal = best performance (inverted U)
+- Maslow: needs in hierarchy (must satisfy lower before higher)
+- Stress: Alarm → Resistance → Exhaustion (GAS)`
     }
   ]
-}
+};

@@ -2,98 +2,67 @@ export const mcatMicroPart5Data = {
   topicSlug: 'mcat-microbiology-mcat',
   sections: [
     {
-      id: 'mcat-5-intro',
+      id: 'mi5-intro',
       type: 'text' as const,
-      content: `
-# Antimicrobial Agents
+      content: `# Microbiology for the MCAT
 
-**Part 5 of 7 — Antimicrobial Agents**
+**Part 5 of 7 — Fungi, Parasites & Prions**
 
-Antibiotics: target cell wall (penicillin), protein synthesis (tetracycline), DNA replication (fluoroquinolones).
+### Fungi
 
-Antivirals: target viral entry, replication, or assembly (e.g., acyclovir, protease inhibitors).
-      `
+| Feature | Details |
+|---------|---------|
+| Cell wall | **Chitin** (not peptidoglycan!) |
+| Cell membrane | Contains **ergosterol** (target for antifungals) |
+| Nutrition | Heterotrophs, absorptive feeding |
+| Forms | Yeasts (unicellular), molds (multicellular), dimorphic (both) |
+
+### Fungal Reproduction
+
+- **Asexual**: Budding (yeasts), spore formation
+- **Sexual**: Occurs under stress conditions
+
+### Parasitology (Key MCAT Parasites)
+
+| Organism | Type | Disease | Transmission |
+|----------|------|---------|-------------|
+| *Plasmodium* | Protozoan | Malaria | Mosquito (*Anopheles*) |
+| *Trypanosoma* | Protozoan | Sleeping sickness | Tsetse fly |
+| *Giardia* | Protozoan | Giardiasis (diarrhea) | Contaminated water |
+| *Toxoplasma* | Protozoan | Toxoplasmosis | Cat feces, undercooked meat |
+| Tapeworms | Helminth | Intestinal infection | Undercooked meat |
+
+### Prions
+
+- Misfolded proteins (PrP$^{Sc}$) — NO nucleic acid
+- Convert normal PrP$^{C}$ to misfolded form
+- Cannot be sterilized by standard methods (resist heat, UV, chemicals)
+- Cause spongiform encephalopathies (BSE, CJD, kuru)`
     },
     {
-      id: 'mcat-5-quiz1',
+      id: 'mi5-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Fungi & Parasites** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in antimicrobial agents?',
-            options: [
-              'Antibiotics: target cell wall (penicillin), protein synthesis (tetracycline), DNA replication (fluoroquinolones)',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'Antifungal drugs target ergosterol because:',
+            options: ['Ergosterol is in fungal membranes but not human membranes (humans use cholesterol)', 'Ergosterol is in all cell walls', 'It disrupts bacterial growth too', 'Ergosterol is the same as cholesterol'],
             correctAnswer: 0,
-            explanation: 'Antibiotics: target cell wall (penicillin), protein synthesis (tetracycline), DNA replication (fluoroquinolones)'
+            explanation: 'Fungal membranes use ergosterol instead of cholesterol. Drugs like amphotericin B bind ergosterol (creating pores) and azoles block ergosterol synthesis. Since humans use cholesterol, these drugs selectively target fungi.'
           }
         ]
       }
     },
     {
-      id: 'mcat-5-detail',
+      id: 'mi5-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Antibiotic resistance: mutation or acquired via horizontal gene transfer; a growing global threat.
+      content: `### Key Takeaways — Part 5
 
-**MCAT Tip:** Antiseptics (on living tissue) vs disinfectants (on surfaces) vs sterilization (complete elimination).
-      `
-    },
-    {
-      id: 'mcat-5-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Bio/Biochem related to antimicrobial agents?',
-            options: [
-              'Antibiotic resistance: mutation or acquired via horizontal gene transfer; a growing global threat',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Antibiotic resistance: mutation or acquired via horizontal gene transfer; a growing global threat'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Antibiotics',
-            options: ['target viral entry, replication, or assembly (e.g., acyclovir, protease inhibitors).', 'Antibiotic resistance: mutation or acquired via horizontal gene transfer; a growing global threat.', 'Antiseptics (on living tissue) vs disinfectants (on surfaces) vs sterilization (complete elimination).', 'target cell wall (penicillin), protein synthesis (tetracycline), DNA replication (fluoroquinolones).']
-          },
-          {
-            label: 'Antivirals',
-            options: ['Antibiotic resistance: mutation or acquired via horizontal gene transfer; a growing global threat.', 'Antiseptics (on living tissue) vs disinfectants (on surfaces) vs sterilization (complete elimination).', 'target viral entry, replication, or assembly (e.g., acyclovir, protease inhibitors).', 'target cell wall (penicillin), protein synthesis (tetracycline), DNA replication (fluoroquinolones).']
-          },
-          {
-            label: 'Key Insight',
-            options: ['target cell wall (penicillin), protein synthesis (tetracycline), DNA replication (fluoroquinolones).', 'Antibiotic resistance: mutation or acquired via horizontal gene transfer; a growing global threat.', 'target viral entry, replication, or assembly (e.g., acyclovir, protease inhibitors).', 'Antiseptics (on living tissue) vs disinfectants (on surfaces) vs sterilization (complete elimination).']
-          }
-        ],
-        correctAnswers: ['target cell wall (penicillin), protein synthesis (tetracycline), DNA replication (fluoroquinolones).', 'target viral entry, replication, or assembly (e.g., acyclovir, protease inhibitors).', 'Antibiotic resistance: mutation or acquired via horizontal gene transfer; a growing global threat.'],
-        hint1: 'Think about what each concept specifically describes in Antimicrobial Agents.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Antimicrobial Agents describes a specific idea. Antibiotics: target cell wall (penicillin), protein synthesis (tetracycline), DNA replication (fluoroquinolones). Antivirals: target viral entry, replication, or assembly (e.g., acyclovir, protease inhibitors). Key Insight: Antibiotic resistance: mutation or acquired via horizontal gene transfer; a growing global threat.'
-      }
+- Fungi: chitin cell wall, ergosterol in membrane (drug target)
+- Malaria (*Plasmodium*) transmitted by *Anopheles* mosquito
+- Prions: misfolded proteins with NO nucleic acid — unique infectious agents
+- Antifungals target ergosterol (azoles) or chitin — not peptidoglycan`
     }
   ]
-}
+};

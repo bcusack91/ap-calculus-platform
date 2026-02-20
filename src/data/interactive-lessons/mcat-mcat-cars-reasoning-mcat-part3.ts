@@ -2,98 +2,66 @@ export const mcatCarsReasonPart3Data = {
   topicSlug: 'mcat-cars-reasoning-mcat',
   sections: [
     {
-      id: 'mcat-3-intro',
+      id: 'cr3-intro',
       type: 'text' as const,
-      content: `
-# Assumption Identification
+      content: `# CARS Logical Reasoning
 
-**Part 3 of 7 — Assumption Identification**
+**Part 3 of 7 — Assumptions & Implicit Reasoning**
 
-An assumption is an unstated premise the argument relies on.
+### What is an Assumption?
 
-Necessary assumption: without it, the argument falls apart.
-      `
+An assumption is an UNSTATED premise that must be true for the argument to work.
+
+**Example:**
+- Argument: "Students who take AP classes get into better colleges."
+- Unstated assumption: AP classes are a significant factor in admissions (not just correlation).
+
+### Finding Assumptions on CARS
+
+Ask yourself: **"What must be true for this conclusion to follow from this evidence?"**
+
+### The Negation Test
+
+To check if something is a necessary assumption:
+1. Negate the statement
+2. If the argument falls apart → it was a necessary assumption
+3. If the argument still works → it was NOT a necessary assumption
+
+**Example:**
+- Argument: "Organic food is healthier because it has no pesticides."
+- Test: "What if absence of pesticides doesn't make food healthier?" → Argument collapses!
+- Therefore, "no pesticides = healthier" is a necessary assumption.
+
+### CARS Questions About Assumptions
+
+- "The author's argument assumes which of the following?"
+- "Which is a necessary condition for the author's conclusion?"
+- "The argument depends on the assumption that..."`
     },
     {
-      id: 'mcat-3-quiz1',
+      id: 'cr3-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Assumptions** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in assumption identification?',
-            options: [
-              'An assumption is an unstated premise the argument relies on',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'An author argues that teaching students chess improves their math skills because chess requires logical thinking. An assumption of this argument is:',
+            options: ['Logical thinking skills transfer between different domains (chess to math)', 'All students enjoy chess', 'Math is the most important subject', 'Chess is harder than math'],
             correctAnswer: 0,
-            explanation: 'An assumption is an unstated premise the argument relies on'
+            explanation: 'The argument assumes that practicing logical thinking in one domain (chess) improves it in another (math). If skills don\'t transfer between domains, the argument fails. Use the negation test to verify.'
           }
         ]
       }
     },
     {
-      id: 'mcat-3-detail',
+      id: 'cr3-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Sufficient assumption: with it, the conclusion definitely follows.
+      content: `### Key Takeaways — Part 3
 
-**MCAT Tip:** Test by negation: if negating the answer choice destroys the argument, it is a necessary assumption.
-      `
-    },
-    {
-      id: 'mcat-3-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT CARS related to assumption identification?',
-            options: [
-              'Sufficient assumption: with it, the conclusion definitely follows',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Sufficient assumption: with it, the conclusion definitely follows'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-3-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Necessary assumption',
-            options: ['Sufficient assumption: with it, the conclusion definitely follows.', 'without it, the argument falls apart.', 'An assumption is an unstated premise the argument relies on.', 'Test by negation: if negating the answer choice destroys the argument, it is a necessary assumption.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['Sufficient assumption: with it, the conclusion definitely follows.', 'Test by negation: if negating the answer choice destroys the argument, it is a necessary assumption.', 'without it, the argument falls apart.', 'An assumption is an unstated premise the argument relies on.']
-          },
-          {
-            label: 'MCAT Tip',
-            options: ['Test by negation: if negating the answer choice destroys the argument, it is a necessary assumption.', 'without it, the argument falls apart.', 'Sufficient assumption: with it, the conclusion definitely follows.', 'An assumption is an unstated premise the argument relies on.']
-          }
-        ],
-        correctAnswers: ['without it, the argument falls apart.', 'Sufficient assumption: with it, the conclusion definitely follows.', 'Test by negation: if negating the answer choice destroys the argument, it is a necessary assumption.'],
-        hint1: 'Think about what each concept specifically describes in Assumption Identification.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Assumption Identification describes a specific idea. Necessary assumption: without it, the argument falls apart. Key Insight: Sufficient assumption: with it, the conclusion definitely follows. MCAT Tip: Test by negation: if negating the answer choice destroys the argument, it is a necessary assumption.'
-      }
+- Assumptions are unstated premises the argument depends on
+- Ask: "What must be true for this conclusion to follow?"
+- Negation test: Negate it — if the argument breaks, it's a necessary assumption
+- Assumption questions are among the most common on CARS`
     }
   ]
-}
+};

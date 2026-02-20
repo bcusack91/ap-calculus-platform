@@ -2,98 +2,59 @@ export const mcatPhysElecPart3Data = {
   topicSlug: 'mcat-physics-electricity-mcat',
   sections: [
     {
-      id: 'mcat-3-intro',
+      id: 'pe3-intro',
       type: 'text' as const,
-      content: `
-# Magnetism & EM Induction
+      content: `# Physics: Electricity, Magnetism & Optics
 
-**Part 3 of 7 — Magnetism & EM Induction**
+**Part 3 of 7 — Magnetism**
 
-Moving charges create magnetic fields; F = qvB sin(theta) — force on a moving charge.
+### Magnetic Force on a Moving Charge
 
-Right-hand rule: point fingers in direction of v, curl toward B, thumb points to F (for positive charge).
-      `
+$$F = qvB\\sin\\theta$$
+
+- Direction: Right-hand rule (fingers from $\\vec{v}$ to $\\vec{B}$, thumb = $\\vec{F}$)
+- Force is PERPENDICULAR to both velocity and field
+- Stationary charges feel NO magnetic force
+
+### Circular Motion in a Magnetic Field
+
+$$qvB = \\frac{mv^2}{r} \\implies r = \\frac{mv}{qB}$$
+
+### Force on a Current-Carrying Wire
+
+$$F = ILB\\sin\\theta$$
+
+### Electromagnetic Induction (Faraday's Law)
+
+$$\\varepsilon = -\\frac{d\\Phi_B}{dt}$$
+
+- Changing magnetic flux induces an EMF (voltage)
+- **Lenz's Law**: Induced current opposes the change that caused it`
     },
     {
-      id: 'mcat-3-quiz1',
+      id: 'pe3-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Magnetism** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in magnetism & em induction?',
-            options: [
-              'Moving charges create magnetic fields; F = qvB sin(theta) — force on a moving charge',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'A proton moves parallel to a magnetic field. The magnetic force on it is:',
+            options: ['Zero ($\\sin 0° = 0$)', 'Maximum', 'Equal to $qvB$', 'Depends on speed only'],
             correctAnswer: 0,
-            explanation: 'Moving charges create magnetic fields; F = qvB sin(theta) — force on a moving charge'
+            explanation: '$F = qvB\\sin\\theta$. When $\\vec{v}$ is parallel to $\\vec{B}$, $\\theta = 0°$, and $\\sin 0° = 0$. The charge must have a velocity component PERPENDICULAR to $\\vec{B}$ to feel a force.'
           }
         ]
       }
     },
     {
-      id: 'mcat-3-detail',
+      id: 'pe3-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Faradays law: changing magnetic flux induces EMF; Lenzs law: induced current opposes the change.
+      content: `### Key Takeaways — Part 3
 
-**MCAT Tip:** Electromagnetic spectrum: radio, microwave, IR, visible, UV, X-ray, gamma — increasing frequency/energy.
-      `
-    },
-    {
-      id: 'mcat-3-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Chem/Phys related to magnetism & em induction?',
-            options: [
-              'Faradays law: changing magnetic flux induces EMF; Lenzs law: induced current opposes the change',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Faradays law: changing magnetic flux induces EMF; Lenzs law: induced current opposes the change'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-3-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Right-hand rule',
-            options: ['point fingers in direction of v, curl toward B, thumb points to F (for positive charge).', 'Faradays law: changing magnetic flux induces EMF; Lenzs law: induced current opposes the change.', 'Electromagnetic spectrum: radio, microwave, IR, visible, UV, X-ray, gamma — increasing frequency/energy.', 'Moving charges create magnetic fields; F = qvB sin(theta) — force on a moving charge.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['Moving charges create magnetic fields; F = qvB sin(theta) — force on a moving charge.', 'Electromagnetic spectrum: radio, microwave, IR, visible, UV, X-ray, gamma — increasing frequency/energy.', 'point fingers in direction of v, curl toward B, thumb points to F (for positive charge).', 'Faradays law: changing magnetic flux induces EMF; Lenzs law: induced current opposes the change.']
-          },
-          {
-            label: 'MCAT Tip',
-            options: ['Moving charges create magnetic fields; F = qvB sin(theta) — force on a moving charge.', 'point fingers in direction of v, curl toward B, thumb points to F (for positive charge).', 'Electromagnetic spectrum: radio, microwave, IR, visible, UV, X-ray, gamma — increasing frequency/energy.', 'Faradays law: changing magnetic flux induces EMF; Lenzs law: induced current opposes the change.']
-          }
-        ],
-        correctAnswers: ['point fingers in direction of v, curl toward B, thumb points to F (for positive charge).', 'Faradays law: changing magnetic flux induces EMF; Lenzs law: induced current opposes the change.', 'Electromagnetic spectrum: radio, microwave, IR, visible, UV, X-ray, gamma — increasing frequency/energy.'],
-        hint1: 'Think about what each concept specifically describes in Magnetism & EM Induction.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Magnetism & EM Induction describes a specific idea. Right-hand rule: point fingers in direction of v, curl toward B, thumb points to F (for positive charge). Key Insight: Faradays law: changing magnetic flux induces EMF; Lenzs law: induced current opposes the change. MCAT Tip: Electromagnetic spectrum: radio, microwave, IR, visible, UV, X-ray, gamma — increasing frequency/energy.'
-      }
+- Magnetic force: $F = qvB\\sin\\theta$ (zero when parallel!)
+- Magnetic force does NO work (always perpendicular to velocity)
+- Right-hand rule for direction: point fingers from $\\vec{v}$ to $\\vec{B}$
+- Faraday: changing flux → induced EMF; Lenz: opposes the change`
     }
   ]
-}
+};

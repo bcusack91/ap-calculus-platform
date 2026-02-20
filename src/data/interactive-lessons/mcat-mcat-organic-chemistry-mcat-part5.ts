@@ -2,98 +2,59 @@ export const mcatOrgChemPart5Data = {
   topicSlug: 'mcat-organic-chemistry-mcat',
   sections: [
     {
-      id: 'mcat-5-intro',
+      id: 'oc5-intro',
       type: 'text' as const,
-      content: `
-# Carboxylic Acid Derivatives
+      content: `# Organic Chemistry for the MCAT
 
-**Part 5 of 7 — Carboxylic Acid Derivatives**
+**Part 5 of 7 — Aromatic Chemistry & Lab Techniques**
 
-Order of reactivity: acid halide > anhydride > ester > amide (most to least reactive).
+### Aromaticity Rules (Huckel)
 
-Nucleophilic acyl substitution: the leaving group departs as the nucleophile attacks.
-      `
+Must have: planar ring, conjugated $\\pi$ system, $4n + 2$ $\\pi$ electrons ($n = 0, 1, 2...$)
+
+- Benzene: 6 $\\pi$ electrons ($n = 1$) ✓
+- Cyclopentadienyl anion: 6 $\\pi$ electrons ✓
+- Cyclooctatetraene: 8 $\\pi$ electrons → anti-aromatic (if planar)
+
+### Electrophilic Aromatic Substitution (EAS)
+
+| Substituent type | Effect on ring | Directs to |
+|-----------------|----------------|-----------|
+| $-OH$, $-NH_2$, $-OR$ | Activating | ortho/para |
+| $-CH_3$, alkyl | Activating (weak) | ortho/para |
+| $-NO_2$, $-CF_3$ | Deactivating | meta |
+| Halogens ($-Cl$, $-Br$) | Deactivating BUT | ortho/para |
+
+### Lab Techniques on the MCAT
+
+- **Distillation**: Separates by boiling point
+- **Extraction**: Separates by solubility (aqueous vs. organic layer)
+- **Chromatography**: Separates by polarity (TLC, column)
+- **Recrystallization**: Purifies by differential solubility at different temps`
     },
     {
-      id: 'mcat-5-quiz1',
+      id: 'oc5-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Aromatics & Lab** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in carboxylic acid derivatives?',
-            options: [
-              'Order of reactivity: acid halide > anhydride > ester > amide (most to least reactive)',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'Nitration of toluene ($\\text{C}_6\\text{H}_5\\text{CH}_3$) primarily gives:',
+            options: ['ortho- and para-nitrotoluene ($-CH_3$ is ortho/para director)', 'meta-nitrotoluene', 'Only para-nitrotoluene', 'No reaction — toluene is deactivated'],
             correctAnswer: 0,
-            explanation: 'Order of reactivity: acid halide > anhydride > ester > amide (most to least reactive)'
+            explanation: 'Methyl ($-CH_3$) is an electron-donating group (activating, ortho/para director). You get a mixture of ortho and para products.'
           }
         ]
       }
     },
     {
-      id: 'mcat-5-detail',
+      id: 'oc5-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Esters undergo hydrolysis (saponification with base) — critical for lipid metabolism.
+      content: `### Key Takeaways — Part 5
 
-**MCAT Tip:** Amide bond formation: condensation of carboxylic acid + amine — this is the peptide bond.
-      `
-    },
-    {
-      id: 'mcat-5-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Bio/Biochem related to carboxylic acid derivatives?',
-            options: [
-              'Esters undergo hydrolysis (saponification with base) — critical for lipid metabolism',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Esters undergo hydrolysis (saponification with base) — critical for lipid metabolism'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Order of reactivity',
-            options: ['acid halide > anhydride > ester > amide (most to least reactive).', 'Amide bond formation: condensation of carboxylic acid + amine — this is the peptide bond.', 'the leaving group departs as the nucleophile attacks.', 'Esters undergo hydrolysis (saponification with base) — critical for lipid metabolism.']
-          },
-          {
-            label: 'Nucleophilic acyl substitution',
-            options: ['acid halide > anhydride > ester > amide (most to least reactive).', 'Amide bond formation: condensation of carboxylic acid + amine — this is the peptide bond.', 'the leaving group departs as the nucleophile attacks.', 'Esters undergo hydrolysis (saponification with base) — critical for lipid metabolism.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['Esters undergo hydrolysis (saponification with base) — critical for lipid metabolism.', 'acid halide > anhydride > ester > amide (most to least reactive).', 'Amide bond formation: condensation of carboxylic acid + amine — this is the peptide bond.', 'the leaving group departs as the nucleophile attacks.']
-          }
-        ],
-        correctAnswers: ['acid halide > anhydride > ester > amide (most to least reactive).', 'the leaving group departs as the nucleophile attacks.', 'Esters undergo hydrolysis (saponification with base) — critical for lipid metabolism.'],
-        hint1: 'Think about what each concept specifically describes in Carboxylic Acid Derivatives.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Carboxylic Acid Derivatives describes a specific idea. Order of reactivity: acid halide > anhydride > ester > amide (most to least reactive). Nucleophilic acyl substitution: the leaving group departs as the nucleophile attacks. Key Insight: Esters undergo hydrolysis (saponification with base) — critical for lipid metabolism.'
-      }
+- Aromaticity: planar + conjugated + $4n+2$ $\\pi$ electrons
+- Activators → ortho/para; Deactivators → meta (except halogens: deactivating but ortho/para)
+- Know lab separation techniques — the MCAT loves "which technique would you use to..." questions`
     }
   ]
-}
+};

@@ -2,98 +2,58 @@ export const mcatBiochemPart5Data = {
   topicSlug: 'mcat-biochemistry-foundations-mcat',
   sections: [
     {
-      id: 'mcat-5-intro',
+      id: 'bc5-intro',
       type: 'text' as const,
-      content: `
-# Nucleic Acids & DNA
+      content: `# Biochemistry Foundations
 
-**Part 5 of 7 — Nucleic Acids & DNA**
+**Part 5 of 7 — Lipids & Fatty Acid Metabolism**
 
-DNA: deoxyribose sugar, A-T (2 H-bonds), G-C (3 H-bonds), antiparallel double helix.
+### Lipid Classification
 
-Replication: semiconservative, 5-to-3 direction, DNA polymerase III, leading/lagging strands.
-      `
+| Type | Structure | Function |
+|------|-----------|----------|
+| Triglycerides | 3 fatty acids + glycerol | Energy storage |
+| Phospholipids | 2 fatty acids + glycerol + phosphate head | Membranes |
+| Steroids | 4 fused rings | Hormones (cholesterol, testosterone, estrogen) |
+| Sphingolipids | Sphingosine backbone | Myelin, cell signaling |
+
+### $\\beta$-Oxidation (Mitochondrial Matrix)
+
+Each cycle removes 2 carbons and produces:
+- 1 NADH, 1 FADH$_2$, 1 Acetyl-CoA
+
+$$\\text{Palmitate (C16)} \\to 7\\text{ cycles} \\to 8\\text{ Acetyl-CoA} + 7\\text{ NADH} + 7\\text{ FADH}_2$$
+
+Total ATP from palmitate: $8(10) + 7(2.5) + 7(1.5) - 2 = 106$ ATP
+
+### Why Fats Store More Energy Than Carbs
+
+Fats are more reduced (more C-H bonds) → more electrons to donate to ETC → more ATP per gram (~9 kcal/g vs ~4 kcal/g for carbs).`
     },
     {
-      id: 'mcat-5-quiz1',
+      id: 'bc5-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Lipid Metabolism** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in nucleic acids & dna?',
-            options: [
-              'DNA: deoxyribose sugar, A-T (2 H-bonds), G-C (3 H-bonds), antiparallel double helix',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'Carnitine shuttle is required for $\\beta$-oxidation because:',
+            options: ['Long-chain fatty acyl-CoA cannot cross the inner mitochondrial membrane without it', 'It activates fatty acids in the cytoplasm', 'It is the rate-limiting enzyme', 'Short-chain fatty acids need it for transport'],
             correctAnswer: 0,
-            explanation: 'DNA: deoxyribose sugar, A-T (2 H-bonds), G-C (3 H-bonds), antiparallel double helix'
+            explanation: 'The inner mitochondrial membrane is impermeable to long-chain acyl-CoA. Carnitine acyltransferase I (CPT-I) transfers the acyl group to carnitine for transport. CPT-I is also the rate-limiting step, inhibited by malonyl-CoA.'
           }
         ]
       }
     },
     {
-      id: 'mcat-5-detail',
+      id: 'bc5-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Transcription: DNA to mRNA by RNA polymerase; processing includes 5-cap, poly-A tail, splicing.
+      content: `### Key Takeaways — Part 5
 
-**MCAT Tip:** Translation: mRNA to protein at ribosome; tRNA brings amino acids; codons read 5-to-3.
-      `
-    },
-    {
-      id: 'mcat-5-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Chem/Phys related to nucleic acids & dna?',
-            options: [
-              'Transcription: DNA to mRNA by RNA polymerase; processing includes 5-cap, poly-A tail, splicing',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Transcription: DNA to mRNA by RNA polymerase; processing includes 5-cap, poly-A tail, splicing'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'DNA',
-            options: ['Transcription: DNA to mRNA by RNA polymerase; processing includes 5-cap, poly-A tail, splicing.', 'deoxyribose sugar, A-T (2 H-bonds), G-C (3 H-bonds), antiparallel double helix.', 'semiconservative, 5-to-3 direction, DNA polymerase III, leading/lagging strands.', 'Translation: mRNA to protein at ribosome; tRNA brings amino acids; codons read 5-to-3.']
-          },
-          {
-            label: 'Replication',
-            options: ['Transcription: DNA to mRNA by RNA polymerase; processing includes 5-cap, poly-A tail, splicing.', 'deoxyribose sugar, A-T (2 H-bonds), G-C (3 H-bonds), antiparallel double helix.', 'semiconservative, 5-to-3 direction, DNA polymerase III, leading/lagging strands.', 'Translation: mRNA to protein at ribosome; tRNA brings amino acids; codons read 5-to-3.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['Transcription: DNA to mRNA by RNA polymerase; processing includes 5-cap, poly-A tail, splicing.', 'semiconservative, 5-to-3 direction, DNA polymerase III, leading/lagging strands.', 'Translation: mRNA to protein at ribosome; tRNA brings amino acids; codons read 5-to-3.', 'deoxyribose sugar, A-T (2 H-bonds), G-C (3 H-bonds), antiparallel double helix.']
-          }
-        ],
-        correctAnswers: ['deoxyribose sugar, A-T (2 H-bonds), G-C (3 H-bonds), antiparallel double helix.', 'semiconservative, 5-to-3 direction, DNA polymerase III, leading/lagging strands.', 'Transcription: DNA to mRNA by RNA polymerase; processing includes 5-cap, poly-A tail, splicing.'],
-        hint1: 'Think about what each concept specifically describes in Nucleic Acids & DNA.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Nucleic Acids & DNA describes a specific idea. DNA: deoxyribose sugar, A-T (2 H-bonds), G-C (3 H-bonds), antiparallel double helix. Replication: semiconservative, 5-to-3 direction, DNA polymerase III, leading/lagging strands. Key Insight: Transcription: DNA to mRNA by RNA polymerase; processing includes 5-cap, poly-A tail, splicing.'
-      }
+- $\\beta$-oxidation: each cycle yields 1 NADH + 1 FADH$_2$ + 1 acetyl-CoA
+- Carnitine shuttle: required for long-chain FA entry into mitochondria
+- CPT-I is rate-limiting, inhibited by malonyl-CoA (fed state)
+- Fats yield ~9 kcal/g vs ~4 kcal/g for carbs/protein`
     }
   ]
-}
+};

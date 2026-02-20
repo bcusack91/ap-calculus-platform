@@ -2,98 +2,69 @@ export const mcatGenChemPart1Data = {
   topicSlug: 'mcat-general-chemistry-mcat',
   sections: [
     {
-      id: 'mcat-1-intro',
+      id: 'gc1-intro',
       type: 'text' as const,
-      content: `
-# 🏥 General Chemistry
+      content: `# General Chemistry for the MCAT
 
 **Part 1 of 7 — Atomic Structure & Periodic Trends**
 
-Electron configuration determines chemical behavior: 1s2 2s2 2p6 3s2 ....
+### Atomic Structure
 
-Periodic trends: electronegativity, ionization energy, and atomic radius follow predictable patterns across periods and groups.
-      `
+- **Quantum numbers**: $n$ (shell), $l$ (subshell: 0=s, 1=p, 2=d, 3=f), $m_l$ (-l to +l), $m_s$ ($\\pm 1/2$)
+- **Electron configuration**: Fill in order of increasing energy (1s, 2s, 2p, 3s, 3p, 4s, 3d...)
+- **Aufbau principle**: Electrons fill lowest energy orbitals first
+- **Hund's rule**: Electrons occupy degenerate orbitals singly before pairing
+- **Pauli exclusion**: No two electrons can share all four quantum numbers
+
+### Periodic Trends (HIGH YIELD!)
+
+| Property | Across Period → | Down Group ↓ |
+|----------|----------------|--------------|
+| Atomic radius | Decreases | Increases |
+| Ionization energy | Increases | Decreases |
+| Electronegativity | Increases | Decreases |
+| Electron affinity | More negative | Less negative |
+
+### MCAT Trap
+
+Transition metals: 4s electrons are removed FIRST despite being filled first. $\\text{Fe}^{2+}$: lose 4s$^2$, keep 3d$^6$.`
     },
     {
-      id: 'mcat-1-quiz1',
+      id: 'gc1-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Atomic Structure** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in atomic structure & periodic trends?',
-            options: [
-              'Electron configuration determines chemical behavior: 1s2 2s2 2p6 3s2 ...',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'The electron configuration of $\\text{Cr}$ (Z=24) is:',
+            options: ['$[\\text{Ar}]\\,3d^5\\,4s^1$ — half-filled d subshell is more stable', '$[\\text{Ar}]\\,3d^4\\,4s^2$ — following standard filling order', '$[\\text{Ar}]\\,3d^6$ — all electrons in d orbitals', '$[\\text{Ar}]\\,3d^3\\,4s^2\\,4p^1$'],
             correctAnswer: 0,
-            explanation: 'Electron configuration determines chemical behavior: 1s2 2s2 2p6 3s2 ...'
+            explanation: 'Cr is an exception: a half-filled 3d subshell ($3d^5\\,4s^1$) is more stable than $3d^4\\,4s^2$. Cu has a similar exception ($3d^{10}\\,4s^1$).'
+          },
+          {
+            question: 'Which has the LARGEST atomic radius?',
+            options: ['K', 'Ca', 'Br', 'Kr'],
+            correctAnswer: 0,
+            explanation: 'K is furthest left and lowest in the period. Across a period, atomic radius decreases (more protons pulling electrons in). K > Ca > Br > Kr.'
+          },
+          {
+            question: 'An element has a large jump between its 2nd and 3rd ionization energies. It is most likely in Group:',
+            options: ['IIA (2)', 'IIIA (13)', 'IA (1)', 'IVA (14)'],
+            correctAnswer: 0,
+            explanation: 'Group IIA has 2 valence electrons. Removing the 3rd requires breaking into a noble gas core — huge energy jump.'
           }
         ]
       }
     },
     {
-      id: 'mcat-1-detail',
+      id: 'gc1-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Effective nuclear charge (Zeff) increases across a period as electrons are added to the same shell.
+      content: `### Key Takeaways — Part 1
 
-**MCAT Tip:** Quantum numbers (n, l, ml, ms) describe the state of each electron — no two electrons share all four (Pauli exclusion).
-      `
-    },
-    {
-      id: 'mcat-1-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Chem/Phys related to atomic structure & periodic trends?',
-            options: [
-              'Effective nuclear charge (Zeff) increases across a period as electrons are added to the same shell',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Effective nuclear charge (Zeff) increases across a period as electrons are added to the same shell'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-1-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Electron configuration determines chemical behavior',
-            options: ['Quantum numbers (n, l, ml, ms) describe the state of each electron — no two electrons share all four (Pauli exclusion).', 'Effective nuclear charge (Zeff) increases across a period as electrons are added to the same shell.', '1s2 2s2 2p6 3s2 ....', 'electronegativity, ionization energy, and atomic radius follow predictable patterns across periods and groups.']
-          },
-          {
-            label: 'Periodic trends',
-            options: ['Effective nuclear charge (Zeff) increases across a period as electrons are added to the same shell.', 'electronegativity, ionization energy, and atomic radius follow predictable patterns across periods and groups.', '1s2 2s2 2p6 3s2 ....', 'Quantum numbers (n, l, ml, ms) describe the state of each electron — no two electrons share all four (Pauli exclusion).']
-          },
-          {
-            label: 'Key Insight',
-            options: ['Effective nuclear charge (Zeff) increases across a period as electrons are added to the same shell.', 'Quantum numbers (n, l, ml, ms) describe the state of each electron — no two electrons share all four (Pauli exclusion).', '1s2 2s2 2p6 3s2 ....', 'electronegativity, ionization energy, and atomic radius follow predictable patterns across periods and groups.']
-          }
-        ],
-        correctAnswers: ['1s2 2s2 2p6 3s2 ....', 'electronegativity, ionization energy, and atomic radius follow predictable patterns across periods and groups.', 'Effective nuclear charge (Zeff) increases across a period as electrons are added to the same shell.'],
-        hint1: 'Think about what each concept specifically describes in General Chemistry.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in General Chemistry describes a specific idea. Electron configuration determines chemical behavior: 1s2 2s2 2p6 3s2 .... Periodic trends: electronegativity, ionization energy, and atomic radius follow predictable patterns across periods and groups. Key Insight: Effective nuclear charge (Zeff) increases across a period as electrons are added to the same shell.'
-      }
+- Know quantum numbers cold — the MCAT loves "which set of quantum numbers is impossible?"
+- Periodic trends: radius ↑ down/left, IE ↑ up/right, EN ↑ up/right
+- Exceptions: Cr ($3d^5\\,4s^1$), Cu ($3d^{10}\\,4s^1$)
+- Transition metal ions: remove 4s first`
     }
   ]
-}
+};

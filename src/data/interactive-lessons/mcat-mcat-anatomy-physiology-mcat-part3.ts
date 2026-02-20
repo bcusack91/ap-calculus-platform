@@ -2,98 +2,61 @@ export const mcatAnatPhysPart3Data = {
   topicSlug: 'mcat-anatomy-physiology-mcat',
   sections: [
     {
-      id: 'mcat-3-intro',
+      id: 'ap3-intro',
       type: 'text' as const,
-      content: `
-# Integumentary System
+      content: `# Anatomy & Physiology for the MCAT
 
-**Part 3 of 7 — Integumentary System**
+**Part 3 of 7 — Embryology & Development**
 
-Skin layers: epidermis (keratinocytes, melanocytes), dermis (connective tissue), hypodermis (fat).
+### Early Development
 
-Functions: protection, thermoregulation, sensation, vitamin D synthesis, immune defense.
-      `
+| Stage | Description | Timing |
+|-------|-------------|--------|
+| Fertilization | Sperm + egg → zygote | Day 0 |
+| Cleavage | Mitotic divisions (no growth) | Days 1-4 |
+| Morula | Solid ball of 16+ cells | Day 3-4 |
+| Blastula/Blastocyst | Hollow ball, inner cell mass + trophoblast | Day 5-6 |
+| Implantation | Blastocyst embeds in endometrium | Day 6-12 |
+| Gastrulation | 3 germ layers form | Week 3 |
+
+### Three Germ Layers (ULTRA HIGH YIELD)
+
+| Layer | Becomes |
+|-------|---------|
+| **Ectoderm** | Nervous system (brain, spinal cord), skin (epidermis), hair, nails, lens of eye |
+| **Mesoderm** | Muscle, bone, cardiovascular, kidneys, gonads, blood |
+| **Endoderm** | GI tract lining, lungs, liver, pancreas, thyroid |
+
+### Mnemonic for Germ Layers
+
+- **Ectoderm**: Everything you can see or think with (skin + nervous system)
+- **Mesoderm**: "Meso-derm" = Middle = Muscle, bone, blood
+- **Endoderm**: Endoderm = Inner lining = digestive/respiratory lining`
     },
     {
-      id: 'mcat-3-quiz1',
+      id: 'ap3-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Embryology** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in integumentary system?',
-            options: [
-              'Skin layers: epidermis (keratinocytes, melanocytes), dermis (connective tissue), hypodermis (fat)',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'The nervous system develops from which germ layer?',
+            options: ['Ectoderm — via neurulation (neural plate → neural tube)', 'Mesoderm', 'Endoderm', 'Trophoblast'],
             correctAnswer: 0,
-            explanation: 'Skin layers: epidermis (keratinocytes, melanocytes), dermis (connective tissue), hypodermis (fat)'
+            explanation: 'The ectoderm forms the neural plate, which folds into the neural tube (future brain and spinal cord). This process is neurulation. Neural crest cells (also from ectoderm) form PNS, melanocytes, adrenal medulla.'
           }
         ]
       }
     },
     {
-      id: 'mcat-3-detail',
+      id: 'ap3-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Thermoregulation: vasodilation/vasoconstriction, sweating, shivering.
+      content: `### Key Takeaways — Part 3
 
-**MCAT Tip:** Wound healing: hemostasis, inflammation, proliferation, remodeling.
-      `
-    },
-    {
-      id: 'mcat-3-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Bio/Biochem related to integumentary system?',
-            options: [
-              'Thermoregulation: vasodilation/vasoconstriction, sweating, shivering',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Thermoregulation: vasodilation/vasoconstriction, sweating, shivering'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-3-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Skin layers',
-            options: ['Thermoregulation: vasodilation/vasoconstriction, sweating, shivering.', 'protection, thermoregulation, sensation, vitamin D synthesis, immune defense.', 'Wound healing: hemostasis, inflammation, proliferation, remodeling.', 'epidermis (keratinocytes, melanocytes), dermis (connective tissue), hypodermis (fat).']
-          },
-          {
-            label: 'Functions',
-            options: ['Wound healing: hemostasis, inflammation, proliferation, remodeling.', 'protection, thermoregulation, sensation, vitamin D synthesis, immune defense.', 'epidermis (keratinocytes, melanocytes), dermis (connective tissue), hypodermis (fat).', 'Thermoregulation: vasodilation/vasoconstriction, sweating, shivering.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['Wound healing: hemostasis, inflammation, proliferation, remodeling.', 'epidermis (keratinocytes, melanocytes), dermis (connective tissue), hypodermis (fat).', 'Thermoregulation: vasodilation/vasoconstriction, sweating, shivering.', 'protection, thermoregulation, sensation, vitamin D synthesis, immune defense.']
-          }
-        ],
-        correctAnswers: ['epidermis (keratinocytes, melanocytes), dermis (connective tissue), hypodermis (fat).', 'protection, thermoregulation, sensation, vitamin D synthesis, immune defense.', 'Thermoregulation: vasodilation/vasoconstriction, sweating, shivering.'],
-        hint1: 'Think about what each concept specifically describes in Integumentary System.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Integumentary System describes a specific idea. Skin layers: epidermis (keratinocytes, melanocytes), dermis (connective tissue), hypodermis (fat). Functions: protection, thermoregulation, sensation, vitamin D synthesis, immune defense. Key Insight: Thermoregulation: vasodilation/vasoconstriction, sweating, shivering.'
-      }
+- Fertilization → Cleavage → Morula → Blastocyst → Gastrulation
+- Three germ layers: Ecto (skin/nervous), Meso (muscle/bone/blood), Endo (GI/lung lining)
+- Neurulation: neural plate → neural tube (from ectoderm)
+- Germ layer derivatives are GUARANTEED MCAT questions`
     }
   ]
-}
+};

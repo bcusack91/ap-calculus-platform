@@ -2,98 +2,64 @@ export const mcatAnatPhysPart4Data = {
   topicSlug: 'mcat-anatomy-physiology-mcat',
   sections: [
     {
-      id: 'mcat-4-intro',
+      id: 'ap4-intro',
       type: 'text' as const,
-      content: `
-# Lymphatic & Immune
+      content: `# Anatomy & Physiology for the MCAT
 
-**Part 4 of 7 — Lymphatic & Immune**
+**Part 4 of 7 — Skin & Integumentary System**
 
-Lymphatic system: returns interstitial fluid to blood; lymph nodes filter pathogens.
+### Skin Layers
 
-Spleen: filters blood, recycles old RBCs, reservoir of monocytes and platelets.
-      `
+From outside to inside:
+1. **Epidermis** (epithelial): Keratinocytes, melanocytes, no blood vessels
+2. **Dermis**: Connective tissue, blood vessels, hair follicles, nerve endings, sweat glands
+3. **Hypodermis** (subcutaneous): Fat storage, insulation
+
+### Skin Functions
+
+| Function | Mechanism |
+|----------|-----------|
+| Protection | Barrier against pathogens, UV (melanin) |
+| Thermoregulation | Sweat (evaporative cooling), vasoconstriction/vasodilation |
+| Sensation | Mechanoreceptors, thermoreceptors, nociceptors |
+| Vitamin D synthesis | UV converts 7-dehydrocholesterol → cholecalciferol |
+| Excretion | Sweat removes small amounts of waste |
+
+### Thermoregulation
+
+**Hot environment**:
+- Vasodilation (increased blood flow to skin → heat loss)
+- Sweating (evaporative cooling)
+
+**Cold environment**:
+- Vasoconstriction (reduced blood flow to skin → conserves heat)
+- Shivering (muscle contraction generates heat)
+- Piloerection (goosebumps — minimal effect in humans)`
     },
     {
-      id: 'mcat-4-quiz1',
+      id: 'ap4-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Integumentary** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in lymphatic & immune?',
-            options: [
-              'Lymphatic system: returns interstitial fluid to blood; lymph nodes filter pathogens',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'A burn that destroys the epidermis and part of the dermis is classified as:',
+            options: ['Second-degree (partial thickness) — blistering occurs because fluid leaks between layers', 'First-degree (superficial)', 'Third-degree (full thickness)', 'Fourth-degree'],
             correctAnswer: 0,
-            explanation: 'Lymphatic system: returns interstitial fluid to blood; lymph nodes filter pathogens'
+            explanation: 'First-degree = epidermis only (sunburn). Second-degree = epidermis + partial dermis (blistering). Third-degree = through the full dermis (painless because nerve endings destroyed). Second-degree burns are actually the most painful.'
           }
         ]
       }
     },
     {
-      id: 'mcat-4-detail',
+      id: 'ap4-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Thymus: T cell maturation; Bone marrow: B cell maturation.
+      content: `### Key Takeaways — Part 4
 
-**MCAT Tip:** Vaccines: expose immune system to antigen, generating memory cells without disease.
-      `
-    },
-    {
-      id: 'mcat-4-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Bio/Biochem related to lymphatic & immune?',
-            options: [
-              'Thymus: T cell maturation; Bone marrow: B cell maturation',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Thymus: T cell maturation; Bone marrow: B cell maturation'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-4-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Lymphatic system',
-            options: ['Vaccines: expose immune system to antigen, generating memory cells without disease.', 'Thymus: T cell maturation; Bone marrow: B cell maturation.', 'returns interstitial fluid to blood; lymph nodes filter pathogens.', 'filters blood, recycles old RBCs, reservoir of monocytes and platelets.']
-          },
-          {
-            label: 'Spleen',
-            options: ['Vaccines: expose immune system to antigen, generating memory cells without disease.', 'filters blood, recycles old RBCs, reservoir of monocytes and platelets.', 'Thymus: T cell maturation; Bone marrow: B cell maturation.', 'returns interstitial fluid to blood; lymph nodes filter pathogens.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['filters blood, recycles old RBCs, reservoir of monocytes and platelets.', 'Thymus: T cell maturation; Bone marrow: B cell maturation.', 'returns interstitial fluid to blood; lymph nodes filter pathogens.', 'Vaccines: expose immune system to antigen, generating memory cells without disease.']
-          }
-        ],
-        correctAnswers: ['returns interstitial fluid to blood; lymph nodes filter pathogens.', 'filters blood, recycles old RBCs, reservoir of monocytes and platelets.', 'Thymus: T cell maturation; Bone marrow: B cell maturation.'],
-        hint1: 'Think about what each concept specifically describes in Lymphatic & Immune.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Lymphatic & Immune describes a specific idea. Lymphatic system: returns interstitial fluid to blood; lymph nodes filter pathogens. Spleen: filters blood, recycles old RBCs, reservoir of monocytes and platelets. Key Insight: Thymus: T cell maturation; Bone marrow: B cell maturation.'
-      }
+- Epidermis = outer, no blood vessels. Dermis = inner, blood supply.
+- Thermoregulation: vasodilation + sweating (hot) or vasoconstriction + shivering (cold)
+- Vitamin D synthesis begins in skin with UV exposure
+- Melanin protects against UV damage`
     }
   ]
-}
+};

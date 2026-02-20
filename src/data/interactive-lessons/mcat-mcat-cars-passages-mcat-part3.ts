@@ -2,98 +2,61 @@ export const mcatCarsPsgPart3Data = {
   topicSlug: 'mcat-cars-passages-mcat',
   sections: [
     {
-      id: 'mcat-3-intro',
+      id: 'cp3-intro',
       type: 'text' as const,
-      content: `
-# Ethics & Philosophy
+      content: `# CARS Passage Types
 
-**Part 3 of 7 — Ethics & Philosophy**
+**Part 3 of 7 — Argumentative Passages**
 
-Ethics passages present moral dilemmas or competing ethical frameworks.
+### Structure of an Argument
 
-Common frameworks: utilitarianism (outcomes), deontology (duties), virtue ethics (character).
-      `
+1. **Claim/Thesis**: The main point the author is making
+2. **Evidence/Support**: Facts, examples, reasoning that back the claim
+3. **Warrants**: Assumptions connecting evidence to the claim (often unstated!)
+4. **Counterarguments**: Opposing views the author addresses
+5. **Conclusion**: Where the argument lands
+
+### Common Argument Patterns in CARS
+
+| Pattern | Structure | Example Signal |
+|---------|-----------|----------------|
+| **Claim-Evidence** | Thesis → support | "Studies show..." |
+| **Problem-Solution** | Problem → proposed fix | "To address this..." |
+| **Compare-Contrast** | View A vs. View B | "While some argue... others contend..." |
+| **Cause-Effect** | X led to Y | "As a result of..." |
+| **Critique** | Examines and evaluates a position | "This argument fails because..." |
+
+### Identifying the Argument
+
+After reading, you should be able to articulate:
+- **What is being argued?** (the claim)
+- **Why should I believe it?** (the evidence)
+- **What are the assumptions?** (often tested on CARS!)`
     },
     {
-      id: 'mcat-3-quiz1',
+      id: 'cp3-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Argument Analysis** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in ethics & philosophy?',
-            options: [
-              'Ethics passages present moral dilemmas or competing ethical frameworks',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'A passage argues that public art funding improves community well-being, citing three city case studies. An unstated assumption is likely:',
+            options: ['That the improvements in those cities were caused by the art funding and not other factors', 'That all cities are identical', 'That public art is always popular', 'That community well-being cannot be measured'],
             correctAnswer: 0,
-            explanation: 'Ethics passages present moral dilemmas or competing ethical frameworks'
+            explanation: 'The argument assumes a causal link between art funding and improved well-being. But the case studies could be explained by other factors (confounding variables). CARS loves testing your ability to identify unstated assumptions.'
           }
         ]
       }
     },
     {
-      id: 'mcat-3-detail',
+      id: 'cp3-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Identify the authors position and the strongest counterargument.
+      content: `### Key Takeaways — Part 3
 
-**MCAT Tip:** MCAT does not test your personal ethics — only your comprehension of the argument.
-      `
-    },
-    {
-      id: 'mcat-3-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT CARS related to ethics & philosophy?',
-            options: [
-              'Identify the authors position and the strongest counterargument',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Identify the authors position and the strongest counterargument'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-3-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Common frameworks',
-            options: ['Identify the authors position and the strongest counterargument.', 'Ethics passages present moral dilemmas or competing ethical frameworks.', 'utilitarianism (outcomes), deontology (duties), virtue ethics (character).', 'MCAT does not test your personal ethics — only your comprehension of the argument.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['utilitarianism (outcomes), deontology (duties), virtue ethics (character).', 'Ethics passages present moral dilemmas or competing ethical frameworks.', 'Identify the authors position and the strongest counterargument.', 'MCAT does not test your personal ethics — only your comprehension of the argument.']
-          },
-          {
-            label: 'MCAT Tip',
-            options: ['MCAT does not test your personal ethics — only your comprehension of the argument.', 'utilitarianism (outcomes), deontology (duties), virtue ethics (character).', 'Ethics passages present moral dilemmas or competing ethical frameworks.', 'Identify the authors position and the strongest counterargument.']
-          }
-        ],
-        correctAnswers: ['utilitarianism (outcomes), deontology (duties), virtue ethics (character).', 'Identify the authors position and the strongest counterargument.', 'MCAT does not test your personal ethics — only your comprehension of the argument.'],
-        hint1: 'Think about what each concept specifically describes in Ethics & Philosophy.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Ethics & Philosophy describes a specific idea. Common frameworks: utilitarianism (outcomes), deontology (duties), virtue ethics (character). Key Insight: Identify the authors position and the strongest counterargument. MCAT Tip: MCAT does not test your personal ethics — only your comprehension of the argument.'
-      }
+- Every argument has: claim + evidence + assumptions + conclusion
+- Unstated assumptions are frequently tested on CARS
+- Know the common patterns: claim-evidence, problem-solution, compare-contrast
+- "Why should I believe this?" is the critical reader's key question`
     }
   ]
-}
+};

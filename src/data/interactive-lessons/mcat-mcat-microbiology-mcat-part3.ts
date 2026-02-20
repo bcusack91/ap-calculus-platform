@@ -2,98 +2,65 @@ export const mcatMicroPart3Data = {
   topicSlug: 'mcat-microbiology-mcat',
   sections: [
     {
-      id: 'mcat-3-intro',
+      id: 'mi3-intro',
       type: 'text' as const,
-      content: `
-# Fungi & Parasites
+      content: `# Microbiology for the MCAT
 
-**Part 3 of 7 — Fungi & Parasites**
+**Part 3 of 7 — Bacterial Genetics & Antibiotic Resistance**
 
-Fungi: eukaryotic, cell walls of chitin, heterotrophic, reproduce by spores.
+### Horizontal Gene Transfer
 
-Parasites: organisms that live on/in hosts; protozoa (single-celled) and helminths (worms).
-      `
+| Mechanism | How it works |
+|-----------|-------------|
+| **Transformation** | Bacteria picks up free DNA from environment |
+| **Transduction** | Bacteriophage transfers DNA between bacteria |
+| **Conjugation** | Direct DNA transfer via sex pilus (F plasmid) |
+
+### Antibiotic Resistance Mechanisms
+
+| Mechanism | Example |
+|-----------|---------|
+| Enzyme degradation | $\\beta$-lactamase destroys penicillin |
+| Target modification | Altered ribosome binding site → macrolide resistance |
+| Efflux pumps | Pump drug out of cell → tetracycline resistance |
+| Decreased permeability | Porin mutations → reduced drug entry |
+
+### MCAT Connection: Antibiotic Targets
+
+| Antibiotic Class | Target | Spectrum |
+|-----------------|--------|----------|
+| $\\beta$-lactams (penicillin) | Cell wall synthesis | Bacteria only |
+| Aminoglycosides | 30S ribosomal subunit | Bacteria only |
+| Macrolides (erythromycin) | 50S ribosomal subunit | Bacteria only |
+| Fluoroquinolones | DNA gyrase (topoisomerase) | Bacteria only |
+| Sulfonamides | Folate synthesis | Bacteria only |
+
+Antibiotics DON'T work against viruses — viruses use host machinery!`
     },
     {
-      id: 'mcat-3-quiz1',
+      id: 'mi3-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Bacterial Genetics** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in fungi & parasites?',
-            options: [
-              'Fungi: eukaryotic, cell walls of chitin, heterotrophic, reproduce by spores',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'A bacterium acquires antibiotic resistance after being infected by a bacteriophage carrying resistance genes from another bacterium. This is:',
+            options: ['Transduction — phage-mediated DNA transfer between bacteria', 'Transformation', 'Conjugation', 'Mutation'],
             correctAnswer: 0,
-            explanation: 'Fungi: eukaryotic, cell walls of chitin, heterotrophic, reproduce by spores'
+            explanation: 'Transduction = bacteriophage accidentally packages bacterial DNA and transfers it to a new host. Generalized transduction transfers random genes; specialized transduction transfers genes near the phage integration site.'
           }
         ]
       }
     },
     {
-      id: 'mcat-3-detail',
+      id: 'mi3-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Opportunistic infections: normally harmless microbes cause disease in immunocompromised hosts.
+      content: `### Key Takeaways — Part 3
 
-**MCAT Tip:** Symbiosis: mutualism (both benefit), commensalism (one benefits, other neutral), parasitism (one benefits, other harmed).
-      `
-    },
-    {
-      id: 'mcat-3-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Bio/Biochem related to fungi & parasites?',
-            options: [
-              'Opportunistic infections: normally harmless microbes cause disease in immunocompromised hosts',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Opportunistic infections: normally harmless microbes cause disease in immunocompromised hosts'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-3-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Fungi',
-            options: ['Opportunistic infections: normally harmless microbes cause disease in immunocompromised hosts.', 'organisms that live on/in hosts; protozoa (single-celled) and helminths (worms).', 'eukaryotic, cell walls of chitin, heterotrophic, reproduce by spores.', 'Symbiosis: mutualism (both benefit), commensalism (one benefits, other neutral), parasitism (one benefits, other harmed).']
-          },
-          {
-            label: 'Parasites',
-            options: ['Opportunistic infections: normally harmless microbes cause disease in immunocompromised hosts.', 'eukaryotic, cell walls of chitin, heterotrophic, reproduce by spores.', 'Symbiosis: mutualism (both benefit), commensalism (one benefits, other neutral), parasitism (one benefits, other harmed).', 'organisms that live on/in hosts; protozoa (single-celled) and helminths (worms).']
-          },
-          {
-            label: 'Key Insight',
-            options: ['eukaryotic, cell walls of chitin, heterotrophic, reproduce by spores.', 'Opportunistic infections: normally harmless microbes cause disease in immunocompromised hosts.', 'Symbiosis: mutualism (both benefit), commensalism (one benefits, other neutral), parasitism (one benefits, other harmed).', 'organisms that live on/in hosts; protozoa (single-celled) and helminths (worms).']
-          }
-        ],
-        correctAnswers: ['eukaryotic, cell walls of chitin, heterotrophic, reproduce by spores.', 'organisms that live on/in hosts; protozoa (single-celled) and helminths (worms).', 'Opportunistic infections: normally harmless microbes cause disease in immunocompromised hosts.'],
-        hint1: 'Think about what each concept specifically describes in Fungi & Parasites.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Fungi & Parasites describes a specific idea. Fungi: eukaryotic, cell walls of chitin, heterotrophic, reproduce by spores. Parasites: organisms that live on/in hosts; protozoa (single-celled) and helminths (worms). Key Insight: Opportunistic infections: normally harmless microbes cause disease in immunocompromised hosts.'
-      }
+- Horizontal gene transfer: Transformation (naked DNA), Transduction (phage), Conjugation (pilus)
+- Antibiotic resistance: enzyme degradation, target modification, efflux pumps
+- Know antibiotic targets: cell wall, 30S/50S ribosome, DNA gyrase, folate
+- Antibiotics target bacteria, NOT viruses`
     }
   ]
-}
+};

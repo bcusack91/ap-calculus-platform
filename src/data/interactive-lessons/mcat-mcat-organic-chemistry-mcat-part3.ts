@@ -2,98 +2,66 @@ export const mcatOrgChemPart3Data = {
   topicSlug: 'mcat-organic-chemistry-mcat',
   sections: [
     {
-      id: 'mcat-3-intro',
+      id: 'oc3-intro',
       type: 'text' as const,
-      content: `
-# Substitution & Elimination
+      content: `# Organic Chemistry for the MCAT
 
-**Part 3 of 7 — Substitution & Elimination**
+**Part 3 of 7 — Carbonyl Chemistry**
 
-SN1: two steps, carbocation intermediate, racemization, favored by 3-degree substrate and polar protic solvent.
+### Carbonyl Reactivity
 
-SN2: one step, backside attack, inversion of configuration, favored by 1-degree substrate and strong nucleophile.
-      `
+The $C=O$ is polar: carbon is electrophilic (attacked by nucleophiles).
+
+### Aldol Condensation
+
+$$\\text{Enolate} + \\text{Aldehyde} \\to \\beta\\text{-hydroxy carbonyl} \\xrightarrow{\\text{heat}} \\alpha,\\beta\\text{-unsaturated carbonyl}$$
+
+### Key Carbonyl Reactions
+
+| Reaction | Produces | Mechanism |
+|----------|----------|-----------|
+| Reduction of aldehyde | 1° alcohol | NaBH$_4$ or LiAlH$_4$ |
+| Reduction of ketone | 2° alcohol | NaBH$_4$ or LiAlH$_4$ |
+| Reduction of carboxylic acid | 1° alcohol | LiAlH$_4$ only (stronger) |
+| Oxidation of 1° alcohol | Aldehyde (PCC) or carboxylic acid (Jones) | Depends on reagent |
+| Oxidation of 2° alcohol | Ketone | PCC, Jones, or K$_2$Cr$_2$O$_7$ |
+| Fischer esterification | Ester | Acid + Alcohol + H$^+$ catalyst |
+
+### MCAT High Yield: Reducing Agents
+
+- **NaBH$_4$**: mild, reduces aldehydes and ketones only
+- **LiAlH$_4$**: strong, reduces ALL carbonyls (including esters, carboxylic acids, amides)`
     },
     {
-      id: 'mcat-3-quiz1',
+      id: 'oc3-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Carbonyl Chemistry** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in substitution & elimination?',
-            options: [
-              'SN1: two steps, carbocation intermediate, racemization, favored by 3-degree substrate and polar protic solvent',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'Treatment of a carboxylic acid with $\\text{NaBH}_4$ gives:',
+            options: ['No reaction (NaBH$_4$ is too mild)', 'A primary alcohol', 'An aldehyde', 'An ester'],
             correctAnswer: 0,
-            explanation: 'SN1: two steps, carbocation intermediate, racemization, favored by 3-degree substrate and polar protic solvent'
+            explanation: '$\\text{NaBH}_4$ cannot reduce carboxylic acids or esters. You need $\\text{LiAlH}_4$ for those. NaBH$_4$ only reduces aldehydes and ketones.'
+          },
+          {
+            question: 'PCC (pyridinium chlorochromate) oxidation of a primary alcohol gives:',
+            options: ['An aldehyde (mild oxidation stops here)', 'A carboxylic acid', 'A ketone', 'No reaction'],
+            correctAnswer: 0,
+            explanation: 'PCC is a mild oxidizing agent that converts 1° ROH to an aldehyde without over-oxidation. Jones reagent (CrO$_3$/H$_2$SO$_4$) would go all the way to carboxylic acid.'
           }
         ]
       }
     },
     {
-      id: 'mcat-3-detail',
+      id: 'oc3-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** E1: two steps, carbocation, Zaitsev product (more substituted alkene), competes with SN1.
+      content: `### Key Takeaways — Part 3
 
-**MCAT Tip:** E2: one step, anti-periplanar geometry required, strong base needed, Zaitsev product preferred.
-      `
-    },
-    {
-      id: 'mcat-3-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Bio/Biochem related to substitution & elimination?',
-            options: [
-              'E1: two steps, carbocation, Zaitsev product (more substituted alkene), competes with SN1',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'E1: two steps, carbocation, Zaitsev product (more substituted alkene), competes with SN1'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-3-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'SN1',
-            options: ['E1: two steps, carbocation, Zaitsev product (more substituted alkene), competes with SN1.', 'two steps, carbocation intermediate, racemization, favored by 3-degree substrate and polar protic solvent.', 'one step, backside attack, inversion of configuration, favored by 1-degree substrate and strong nucleophile.', 'E2: one step, anti-periplanar geometry required, strong base needed, Zaitsev product preferred.']
-          },
-          {
-            label: 'SN2',
-            options: ['one step, backside attack, inversion of configuration, favored by 1-degree substrate and strong nucleophile.', 'two steps, carbocation intermediate, racemization, favored by 3-degree substrate and polar protic solvent.', 'E2: one step, anti-periplanar geometry required, strong base needed, Zaitsev product preferred.', 'E1: two steps, carbocation, Zaitsev product (more substituted alkene), competes with SN1.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['one step, backside attack, inversion of configuration, favored by 1-degree substrate and strong nucleophile.', 'E1: two steps, carbocation, Zaitsev product (more substituted alkene), competes with SN1.', 'E2: one step, anti-periplanar geometry required, strong base needed, Zaitsev product preferred.', 'two steps, carbocation intermediate, racemization, favored by 3-degree substrate and polar protic solvent.']
-          }
-        ],
-        correctAnswers: ['two steps, carbocation intermediate, racemization, favored by 3-degree substrate and polar protic solvent.', 'one step, backside attack, inversion of configuration, favored by 1-degree substrate and strong nucleophile.', 'E1: two steps, carbocation, Zaitsev product (more substituted alkene), competes with SN1.'],
-        hint1: 'Think about what each concept specifically describes in Substitution & Elimination.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Substitution & Elimination describes a specific idea. SN1: two steps, carbocation intermediate, racemization, favored by 3-degree substrate and polar protic solvent. SN2: one step, backside attack, inversion of configuration, favored by 1-degree substrate and strong nucleophile. Key Insight: E1: two steps, carbocation, Zaitsev product (more substituted alkene), competes with SN1.'
-      }
+- NaBH$_4$: mild (aldehydes/ketones only). LiAlH$_4$: strong (everything).
+- PCC: mild oxidation (1° ROH → aldehyde). Jones/CrO$_3$: full oxidation.
+- Fischer esterification: carboxylic acid + alcohol + acid catalyst → ester + water
+- Amide bonds (peptides) are resistant to hydrolysis — that's why enzymes are needed!`
     }
   ]
-}
+};

@@ -2,94 +2,59 @@ export const mcatPhysMechPart6Data = {
   topicSlug: 'mcat-physics-mechanics-mcat',
   sections: [
     {
-      id: 'mcat-6-intro',
+      id: 'pm6-intro',
       type: 'text' as const,
-      content: `
-# Waves & Sound
+      content: `# Physics: Mechanics for the MCAT
 
-**Part 6 of 7 — Waves & Sound**
+**Part 6 of 7 — Torque, Equilibrium & Simple Machines**
 
-Wave speed v = f*lambda; frequency f = 1/T where T is the period.
+### Torque
 
-Sound is a longitudinal wave; light is a transverse electromagnetic wave.
-      `
+$$\\tau = rF\\sin\\theta$$
+
+- $r$ = distance from pivot (lever arm)
+- Counterclockwise = positive (by convention)
+
+### Equilibrium Conditions
+
+For static equilibrium: $\\sum F = 0$ AND $\\sum \\tau = 0$
+
+### Center of Mass
+
+$$x_{cm} = \\frac{\\sum m_i x_i}{\\sum m_i}$$
+
+### Simple Machines
+
+- **Lever**: $F_1 d_1 = F_2 d_2$ (mechanical advantage)
+- **Pulley**: redirects force; compound pulleys multiply force
+- **Inclined plane**: reduces force needed but increases distance
+
+**Key Principle**: Machines reduce force but NEVER reduce work ($W = Fd$ is constant).`
     },
     {
-      id: 'mcat-6-quiz1',
+      id: 'pm6-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Torque & Equilibrium** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in waves & sound?',
-            options: [
-              'Wave speed v = f*lambda; frequency f = 1/T where T is the period',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'A 3 m uniform beam (mass 10 kg) is supported at one end. A 20 kg mass hangs from the other end. The torque about the support point is ($g = 10\\;\\text{m/s}^2$):',
+            options: ['750 N$\\cdot$m', '600 N$\\cdot$m', '450 N$\\cdot$m', '300 N$\\cdot$m'],
             correctAnswer: 0,
-            explanation: 'Wave speed v = f*lambda; frequency f = 1/T where T is the period'
+            explanation: 'Beam weight acts at center of mass (1.5 m from support): $\\tau_1 = 10(10)(1.5) = 150$ N$\\cdot$m. Hanging mass: $\\tau_2 = 20(10)(3) = 600$ N$\\cdot$m. Total: $150 + 600 = 750$ N$\\cdot$m.'
           }
         ]
       }
     },
     {
-      id: 'mcat-6-detail',
+      id: 'pm6-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Doppler effect: frequency increases when source and observer approach each other.
+      content: `### Key Takeaways — Part 6
 
-**MCAT Tip:** Intensity follows inverse-square law: I is proportional to 1/r2; decibels: beta = 10*log(I/I0).
-      `
-    },
-    {
-      id: 'mcat-6-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Chem/Phys related to waves & sound?',
-            options: [
-              'Doppler effect: frequency increases when source and observer approach each other',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Doppler effect: frequency increases when source and observer approach each other'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-6-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Key Insight',
-            options: ['Sound is a longitudinal wave; light is a transverse electromagnetic wave.', 'Wave speed v = f*lambda; frequency f = 1/T where T is the period.', 'Doppler effect: frequency increases when source and observer approach each other.', 'Intensity follows inverse-square law: I is proportional to 1/r2; decibels: beta = 10*log(I/I0).']
-          },
-          {
-            label: 'MCAT Tip',
-            options: ['Intensity follows inverse-square law: I is proportional to 1/r2; decibels: beta = 10*log(I/I0).', 'Doppler effect: frequency increases when source and observer approach each other.', 'Sound is a longitudinal wave; light is a transverse electromagnetic wave.', 'Wave speed v = f*lambda; frequency f = 1/T where T is the period.']
-          }
-        ],
-        correctAnswers: ['Doppler effect: frequency increases when source and observer approach each other.', 'Intensity follows inverse-square law: I is proportional to 1/r2; decibels: beta = 10*log(I/I0).'],
-        hint1: 'Think about what each concept specifically describes in Waves & Sound.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Waves & Sound describes a specific idea. Key Insight: Doppler effect: frequency increases when source and observer approach each other. MCAT Tip: Intensity follows inverse-square law: I is proportional to 1/r2; decibels: beta = 10*log(I/I0).'
-      }
+- Torque = $rF\\sin\\theta$; maximum when force is perpendicular to lever arm
+- Equilibrium: $\\sum F = 0$ AND $\\sum \\tau = 0$ (choose any pivot point!)
+- Simple machines trade force for distance; work is conserved
+- MCAT loves beam/seesaw problems — practice them!`
     }
   ]
-}
+};

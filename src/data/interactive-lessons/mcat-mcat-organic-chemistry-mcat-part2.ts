@@ -2,98 +2,59 @@ export const mcatOrgChemPart2Data = {
   topicSlug: 'mcat-organic-chemistry-mcat',
   sections: [
     {
-      id: 'mcat-2-intro',
+      id: 'oc2-intro',
       type: 'text' as const,
-      content: `
-# Stereochemistry
+      content: `# Organic Chemistry for the MCAT
 
-**Part 2 of 7 — Stereochemistry**
+**Part 2 of 7 — SN1, SN2, E1, E2 Reactions**
 
-Chirality: a carbon with 4 different substituents is a chiral center (stereocenter).
+### Substitution vs. Elimination Decision Tree
 
-R/S configuration: assign priorities by atomic number (Cahn-Ingold-Prelog rules).
-      `
+| Factor | SN2 | SN1 | E2 | E1 |
+|--------|-----|-----|----|----|
+| Substrate | Methyl/1° | 3° | 3° (or 2°) | 3° |
+| Nucleophile | Strong | Weak | Strong BASE | Weak base |
+| Solvent | Polar aprotic | Polar protic | — | Polar protic |
+| Mechanism | 1 step, backside | 2 steps, carbocation | 1 step, anti | 2 steps |
+| Stereochem | Inversion | Racemization | Anti-periplanar | — |
+
+### Key Points
+
+- **SN2**: Rate = $k[\\text{substrate}][\\text{nuc}]$. Backside attack → inversion. Sterically hindered substrates slow it.
+- **SN1**: Rate = $k[\\text{substrate}]$. Carbocation intermediate → racemization. Favored by 3° substrates, polar protic solvents.
+- **E2**: Strong BULKY base (t-BuOK) favors elimination over substitution. Anti-periplanar geometry required.
+- **E1**: Shares carbocation intermediate with SN1. Heat favors elimination.`
     },
     {
-      id: 'mcat-2-quiz1',
+      id: 'oc2-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Reaction Mechanisms** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in stereochemistry?',
-            options: [
-              'Chirality: a carbon with 4 different substituents is a chiral center (stereocenter)',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'A 3° alkyl halide treated with NaOH in water would most likely undergo:',
+            options: ['SN1 and E1 (competing)', 'SN2', 'E2 only', 'No reaction'],
             correctAnswer: 0,
-            explanation: 'Chirality: a carbon with 4 different substituents is a chiral center (stereocenter)'
+            explanation: '3° substrate blocks SN2 (too sterically hindered). Water is polar protic. NaOH is both nucleophile and base but not bulky. Both SN1 and E1 proceed through the same carbocation intermediate. Heat favors E1.'
+          },
+          {
+            question: 'An SN2 reaction on a chiral substrate produces:',
+            options: ['Inversion of configuration', 'Retention of configuration', 'Racemic mixture', 'Random configuration'],
+            correctAnswer: 0,
+            explanation: 'SN2 proceeds through a single backside-attack step, giving 100% inversion of stereochemistry at the carbon center (Walden inversion).'
           }
         ]
       }
     },
     {
-      id: 'mcat-2-detail',
+      id: 'oc2-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Enantiomers: nonsuperimposable mirror images with identical physical properties but opposite optical rotation.
+      content: `### Key Takeaways — Part 2
 
-**MCAT Tip:** Diastereomers: stereoisomers that are NOT mirror images — different physical properties.
-      `
-    },
-    {
-      id: 'mcat-2-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Bio/Biochem related to stereochemistry?',
-            options: [
-              'Enantiomers: nonsuperimposable mirror images with identical physical properties but opposite optical rotation',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Enantiomers: nonsuperimposable mirror images with identical physical properties but opposite optical rotation'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-2-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Chirality',
-            options: ['Diastereomers: stereoisomers that are NOT mirror images — different physical properties.', 'Enantiomers: nonsuperimposable mirror images with identical physical properties but opposite optical rotation.', 'assign priorities by atomic number (Cahn-Ingold-Prelog rules).', 'a carbon with 4 different substituents is a chiral center (stereocenter).']
-          },
-          {
-            label: 'R/S configuration',
-            options: ['assign priorities by atomic number (Cahn-Ingold-Prelog rules).', 'Enantiomers: nonsuperimposable mirror images with identical physical properties but opposite optical rotation.', 'Diastereomers: stereoisomers that are NOT mirror images — different physical properties.', 'a carbon with 4 different substituents is a chiral center (stereocenter).']
-          },
-          {
-            label: 'Key Insight',
-            options: ['Enantiomers: nonsuperimposable mirror images with identical physical properties but opposite optical rotation.', 'Diastereomers: stereoisomers that are NOT mirror images — different physical properties.', 'a carbon with 4 different substituents is a chiral center (stereocenter).', 'assign priorities by atomic number (Cahn-Ingold-Prelog rules).']
-          }
-        ],
-        correctAnswers: ['a carbon with 4 different substituents is a chiral center (stereocenter).', 'assign priorities by atomic number (Cahn-Ingold-Prelog rules).', 'Enantiomers: nonsuperimposable mirror images with identical physical properties but opposite optical rotation.'],
-        hint1: 'Think about what each concept specifically describes in Stereochemistry.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Stereochemistry describes a specific idea. Chirality: a carbon with 4 different substituents is a chiral center (stereocenter). R/S configuration: assign priorities by atomic number (Cahn-Ingold-Prelog rules). Key Insight: Enantiomers: nonsuperimposable mirror images with identical physical properties but opposite optical rotation.'
-      }
+- SN2: strong nuc + methyl/1° + polar aprotic → inversion
+- SN1: weak nuc + 3° + polar protic → racemization
+- E2: strong bulky base + 2°/3° → Zaitsev product
+- The SN1/E1/SN2/E2 decision chart is GUARANTEED on the MCAT`
     }
   ]
-}
+};

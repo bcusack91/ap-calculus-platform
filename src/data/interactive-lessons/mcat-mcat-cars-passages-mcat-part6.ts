@@ -2,94 +2,60 @@ export const mcatCarsPsgPart6Data = {
   topicSlug: 'mcat-cars-passages-mcat',
   sections: [
     {
-      id: 'mcat-6-intro',
+      id: 'cp6-intro',
       type: 'text' as const,
-      content: `
-# Time Management
+      content: `# CARS Passage Types
 
-**Part 6 of 7 — Time Management**
+**Part 6 of 7 — Art, Architecture & Aesthetics Passages**
 
-10 minutes per passage (9 passages x 10 min = 90 min total).
+### What to Expect
 
-Spend ~4 minutes reading, ~6 minutes answering the ~6 questions.
-      `
+These passages discuss:
+- Theories of beauty and artistic value
+- Historical art movements (Modernism, Postmodernism, Impressionism, etc.)
+- Music theory and criticism
+- Architecture and design philosophy
+- Photography and visual culture
+
+### Common Themes
+
+1. **Art for art's sake vs. art as social commentary**
+2. **Objective vs. subjective standards of beauty**
+3. **Tradition vs. innovation**
+4. **The role of the artist in society**
+5. **How technology changes art (photography, digital media)**
+
+### Strategy
+
+- **Don't be intimidated by art jargon** — the passage will explain what matters
+- **Track the value judgments**: Is the author saying this art is good? Bad? Innovative? Derivative?
+- **Note historical context**: Art movements are often responses to previous movements
+- **Focus on the argument, not the art itself** — you don't need to visualize the work being discussed`
     },
     {
-      id: 'mcat-6-quiz1',
+      id: 'cp6-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Aesthetics** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in time management?',
-            options: [
-              '10 minutes per passage (9 passages x 10 min = 90 min total)',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'A passage argues that Postmodern architecture deliberately rejects Modernist emphasis on function. This suggests that understanding Postmodern architecture requires:',
+            options: ['Knowledge of what Modernism valued — since Postmodernism is defined as a reaction against it', 'Ignoring all historical context', 'Focusing only on building materials', 'Measuring the buildings\' energy efficiency'],
             correctAnswer: 0,
-            explanation: '10 minutes per passage (9 passages x 10 min = 90 min total)'
+            explanation: 'If Postmodernism is a reaction against Modernism, understanding the original movement is essential. This is a "reasoning beyond the text" question — applying the passage\'s logic.'
           }
         ]
       }
     },
     {
-      id: 'mcat-6-detail',
+      id: 'cp6-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** If stuck on a question for >90 seconds, flag it and move on.
+      content: `### Key Takeaways — Part 6
 
-**MCAT Tip:** Do all passages — there is no penalty for wrong answers, never leave blanks.
-      `
-    },
-    {
-      id: 'mcat-6-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT CARS related to time management?',
-            options: [
-              'If stuck on a question for >90 seconds, flag it and move on',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'If stuck on a question for >90 seconds, flag it and move on'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-6-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Key Insight',
-            options: ['Spend ~4 minutes reading, ~6 minutes answering the ~6 questions.', '10 minutes per passage (9 passages x 10 min = 90 min total).', 'Do all passages — there is no penalty for wrong answers, never leave blanks.', 'If stuck on a question for >90 seconds, flag it and move on.']
-          },
-          {
-            label: 'MCAT Tip',
-            options: ['If stuck on a question for >90 seconds, flag it and move on.', 'Do all passages — there is no penalty for wrong answers, never leave blanks.', '10 minutes per passage (9 passages x 10 min = 90 min total).', 'Spend ~4 minutes reading, ~6 minutes answering the ~6 questions.']
-          }
-        ],
-        correctAnswers: ['If stuck on a question for >90 seconds, flag it and move on.', 'Do all passages — there is no penalty for wrong answers, never leave blanks.'],
-        hint1: 'Think about what each concept specifically describes in Time Management.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Time Management describes a specific idea. Key Insight: If stuck on a question for >90 seconds, flag it and move on. MCAT Tip: Do all passages — there is no penalty for wrong answers, never leave blanks.'
-      }
+- Art/architecture passages test reading comprehension, NOT art knowledge
+- Track the value judgments: good/bad, innovative/derivative
+- Movements are often reactions to what came before
+- Jargon will be explained or inferable from context`
     }
   ]
-}
+};

@@ -2,94 +2,65 @@ export const mcatSciPassagePart6Data = {
   topicSlug: 'mcat-science-passage-strategy-mcat',
   sections: [
     {
-      id: 'mcat-6-intro',
+      id: 'sp6-intro',
       type: 'text' as const,
-      content: `
-# Common Traps & Pitfalls
+      content: `# Science Passage Strategy for the MCAT
 
-**Part 6 of 7 — Common Traps & Pitfalls**
+**Part 6 of 7 — Biology & Biochemistry Passage Tactics**
 
-Extreme answer choices are usually wrong — the MCAT favors nuanced answers.
+### Bio/Biochem Passage Features
 
-Just because data is presented in a passage does not mean it supports the answer.
-      `
+- Experimental passages dominate (Western blots, PCR, gene knockouts)
+- Figures often show gel electrophoresis, enzyme kinetics, or metabolic pathways
+- Questions integrate multiple biological concepts
+
+### Common Experimental Techniques in Passages
+
+| Technique | What It Shows | How to Read |
+|-----------|-------------|-------------|
+| SDS-PAGE / Western blot | Protein size/expression | Bands = proteins; darker = more |
+| PCR / gel electrophoresis | DNA fragment size | Lower bands = smaller fragments |
+| ELISA | Protein concentration | Higher absorbance = more protein |
+| Flow cytometry | Cell surface markers | Shifted peaks = marker present |
+
+### Bio/Biochem Passage Strategy
+
+1. **Identify the biological system**: What organ/pathway/molecule is being studied?
+2. **Find the perturbation**: What was changed (knockout, drug, mutation)?
+3. **Predict the effect**: Before looking at data, predict what should happen
+4. **Compare to actual results**: Do they match? If not, why?
+
+### Enzyme Kinetics in Passages
+
+- **Lineweaver-Burk plots**: Double reciprocal ($1/V$ vs $1/[S]$)
+- Competitive inhibitor: $K_m$ increases, $V_{max}$ unchanged
+- Uncompetitive: Both $K_m$ and $V_{max}$ decrease
+- Noncompetitive: $V_{max}$ decreases, $K_m$ unchanged`
     },
     {
-      id: 'mcat-6-quiz1',
+      id: 'sp6-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Bio/Biochem Tactics** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in common traps & pitfalls?',
-            options: [
-              'Extreme answer choices are usually wrong — the MCAT favors nuanced answers',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'A passage shows a Western blot with a band present in wild-type but absent in a mutant strain. The most likely conclusion is:',
+            options: ['The mutant strain does not express the target protein (gene knockout or loss of expression)', 'The mutant has MORE protein', 'The experiment failed', 'The antibody is nonspecific'],
             correctAnswer: 0,
-            explanation: 'Extreme answer choices are usually wrong — the MCAT favors nuanced answers'
+            explanation: 'In a Western blot, a missing band means the protein isn\'t expressed (or is too small/large to appear at expected position). In a passage context, this usually means the gene was knocked out, the promoter is mutated, or the protein is rapidly degraded.'
           }
         ]
       }
     },
     {
-      id: 'mcat-6-detail',
+      id: 'sp6-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Answer the question being asked, not the question you think they should ask.
+      content: `### Key Takeaways — Part 6
 
-**MCAT Tip:** If two answers are opposites, one of them is likely correct.
-      `
-    },
-    {
-      id: 'mcat-6-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Strategy related to common traps & pitfalls?',
-            options: [
-              'Answer the question being asked, not the question you think they should ask',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Answer the question being asked, not the question you think they should ask'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-6-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Key Insight',
-            options: ['If two answers are opposites, one of them is likely correct.', 'Answer the question being asked, not the question you think they should ask.', 'Just because data is presented in a passage does not mean it supports the answer.', 'Extreme answer choices are usually wrong — the MCAT favors nuanced answers.']
-          },
-          {
-            label: 'MCAT Tip',
-            options: ['Extreme answer choices are usually wrong — the MCAT favors nuanced answers.', 'Answer the question being asked, not the question you think they should ask.', 'Just because data is presented in a passage does not mean it supports the answer.', 'If two answers are opposites, one of them is likely correct.']
-          }
-        ],
-        correctAnswers: ['Answer the question being asked, not the question you think they should ask.', 'If two answers are opposites, one of them is likely correct.'],
-        hint1: 'Think about what each concept specifically describes in Common Traps & Pitfalls.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Common Traps & Pitfalls describes a specific idea. Key Insight: Answer the question being asked, not the question you think they should ask. MCAT Tip: If two answers are opposites, one of them is likely correct.'
-      }
+- Bio/Biochem passages often present experiments with gels, blots, or kinetics
+- Always predict the outcome BEFORE reading the data
+- Western blot: protein levels. PCR/gel: DNA size. ELISA: protein concentration.
+- Know enzyme kinetics patterns for competitive, uncompetitive, noncompetitive inhibitors`
     }
   ]
-}
+};

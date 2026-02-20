@@ -2,98 +2,63 @@ export const mcatMolBioPart4Data = {
   topicSlug: 'mcat-molecular-biology-mcat',
   sections: [
     {
-      id: 'mcat-4-intro',
+      id: 'mb4-intro',
       type: 'text' as const,
-      content: `
-# Gene Regulation
+      content: `# Molecular Biology for the MCAT
 
 **Part 4 of 7 — Gene Regulation**
 
-Operon model (prokaryotes): lac operon (inducible), trp operon (repressible).
+### Prokaryotic Gene Regulation: The Operon Model
 
-Eukaryotic regulation: enhancers, silencers, transcription factors, chromatin remodeling.
-      `
+**Lac Operon** (inducible — normally OFF)
+- Without lactose: Repressor binds operator → genes OFF
+- With lactose: Allolactose binds repressor → repressor falls off → genes ON
+- Low glucose + lactose = maximum expression (cAMP-CAP activates promoter)
+
+**Trp Operon** (repressible — normally ON)
+- Without tryptophan: Repressor inactive → genes ON (making trp)
+- With tryptophan: Trp binds repressor (corepressor) → repressor active → genes OFF
+
+### Eukaryotic Gene Regulation (Multiple Levels!)
+
+| Level | Mechanism | Example |
+|-------|-----------|---------|
+| Epigenetic | DNA methylation, histone modification | Methylation → gene silencing |
+| Transcriptional | Transcription factors, enhancers | Activators increase transcription |
+| Post-transcriptional | mRNA stability, alternative splicing | miRNA degrades mRNA |
+| Translational | mRNA availability, regulation | Iron response element |
+| Post-translational | Protein modification | Phosphorylation, ubiquitination |
+
+### Epigenetics (HIGH YIELD)
+
+- **DNA methylation** (CpG islands): Adds methyl groups → gene silencing
+- **Histone acetylation**: Loosens chromatin → gene activation
+- **Histone deacetylation**: Tightens chromatin → gene silencing`
     },
     {
-      id: 'mcat-4-quiz1',
+      id: 'mb4-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Gene Regulation** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in gene regulation?',
-            options: [
-              'Operon model (prokaryotes): lac operon (inducible), trp operon (repressible)',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'In the lac operon, the presence of glucose AND lactose results in:',
+            options: ['Low expression — glucose keeps cAMP low, so CAP cannot fully activate transcription', 'Maximum expression', 'Complete repression', 'No effect from glucose'],
             correctAnswer: 0,
-            explanation: 'Operon model (prokaryotes): lac operon (inducible), trp operon (repressible)'
+            explanation: 'With lactose present, the repressor is removed. But with glucose, cAMP is LOW → CAP is inactive → promoter only weakly bound by RNA polymerase. Maximum expression requires low glucose (high cAMP) AND lactose.'
           }
         ]
       }
     },
     {
-      id: 'mcat-4-detail',
+      id: 'mb4-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Epigenetics: DNA methylation silences genes; histone acetylation activates genes.
+      content: `### Key Takeaways — Part 4
 
-**MCAT Tip:** miRNA and siRNA: small RNAs that silence gene expression post-transcriptionally.
-      `
-    },
-    {
-      id: 'mcat-4-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Bio/Biochem related to gene regulation?',
-            options: [
-              'Epigenetics: DNA methylation silences genes; histone acetylation activates genes',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Epigenetics: DNA methylation silences genes; histone acetylation activates genes'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-4-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Operon model (prokaryotes)',
-            options: ['enhancers, silencers, transcription factors, chromatin remodeling.', 'lac operon (inducible), trp operon (repressible).', 'miRNA and siRNA: small RNAs that silence gene expression post-transcriptionally.', 'Epigenetics: DNA methylation silences genes; histone acetylation activates genes.']
-          },
-          {
-            label: 'Eukaryotic regulation',
-            options: ['Epigenetics: DNA methylation silences genes; histone acetylation activates genes.', 'miRNA and siRNA: small RNAs that silence gene expression post-transcriptionally.', 'lac operon (inducible), trp operon (repressible).', 'enhancers, silencers, transcription factors, chromatin remodeling.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['Epigenetics: DNA methylation silences genes; histone acetylation activates genes.', 'miRNA and siRNA: small RNAs that silence gene expression post-transcriptionally.', 'enhancers, silencers, transcription factors, chromatin remodeling.', 'lac operon (inducible), trp operon (repressible).']
-          }
-        ],
-        correctAnswers: ['lac operon (inducible), trp operon (repressible).', 'enhancers, silencers, transcription factors, chromatin remodeling.', 'Epigenetics: DNA methylation silences genes; histone acetylation activates genes.'],
-        hint1: 'Think about what each concept specifically describes in Gene Regulation.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Gene Regulation describes a specific idea. Operon model (prokaryotes): lac operon (inducible), trp operon (repressible). Eukaryotic regulation: enhancers, silencers, transcription factors, chromatin remodeling. Key Insight: Epigenetics: DNA methylation silences genes; histone acetylation activates genes.'
-      }
+- Lac operon: inducible (normally OFF). Trp operon: repressible (normally ON).
+- Eukaryotic regulation: epigenetic → transcriptional → post-transcriptional → translational → post-translational
+- Methylation = silencing. Acetylation = activation.
+- The lac operon is a FAVORITE MCAT topic — know it cold!`
     }
   ]
-}
+};

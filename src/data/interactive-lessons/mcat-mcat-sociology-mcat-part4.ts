@@ -2,98 +2,69 @@ export const mcatSociologyPart4Data = {
   topicSlug: 'mcat-sociology-mcat',
   sections: [
     {
-      id: 'mcat-4-intro',
+      id: 'so4-intro',
       type: 'text' as const,
-      content: `
-# Group Dynamics & Deviance
+      content: `# Sociology for the MCAT
 
-**Part 4 of 7 — Group Dynamics & Deviance**
+**Part 4 of 7 — Deviance & Social Control**
 
-Conformity (Asch): people conform to group pressure even when the group is wrong.
+### Theories of Deviance
 
-Obedience (Milgram): people obey authority figures even when causing harm.
-      `
+| Theory | Key Idea |
+|--------|----------|
+| **Labeling theory** | Deviance is created by social labels, not inherent in the act |
+| **Differential association** | Deviance is learned through interaction with others |
+| **Strain theory** (Merton) | Gap between cultural goals and legitimate means → deviance |
+| **Social control theory** | Strong social bonds prevent deviance |
+
+### Merton's Strain Theory Adaptations
+
+| Adaptation | Goals? | Means? | Example |
+|-----------|--------|--------|---------|
+| Conformity | Accept | Accept | Working hard for success |
+| Innovation | Accept | Reject | Drug dealing for money |
+| Ritualism | Reject | Accept | Going through motions at dead-end job |
+| Retreatism | Reject | Reject | Dropping out of society |
+| Rebellion | Replace | Replace | Revolutionary movements |
+
+### Stigma (Goffman)
+
+- **Stigma**: Attribute that is deeply discrediting
+- Can be visible (physical) or concealable (mental illness, HIV status)
+- Leads to discrimination, social exclusion
+- **Medicalization**: Framing deviance as medical condition (alcoholism → AUD)
+
+### MCAT Connection
+
+The MCAT frequently asks about stigma in healthcare:
+- Mental health stigma → delayed treatment seeking
+- HIV stigma → reduced testing and disclosure
+- Substance use stigma → barriers to treatment`
     },
     {
-      id: 'mcat-4-quiz1',
+      id: 'so4-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Deviance** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in group dynamics & deviance?',
-            options: [
-              'Conformity (Asch): people conform to group pressure even when the group is wrong',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'A teenager from a low-income neighborhood turns to drug dealing to achieve financial success. According to Merton\'s strain theory, this is:',
+            options: ['Innovation — accepting cultural goals (wealth) but using illegitimate means', 'Conformity', 'Retreatism', 'Ritualism'],
             correctAnswer: 0,
-            explanation: 'Conformity (Asch): people conform to group pressure even when the group is wrong'
+            explanation: 'Innovation: the person accepts society\'s goals (wealth/success) but rejects conventional means of achieving them (education/career), instead using illegitimate means (crime). This is Merton\'s explanation for why poverty correlates with certain types of crime.'
           }
         ]
       }
     },
     {
-      id: 'mcat-4-detail',
+      id: 'so4-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Groupthink: desire for harmony leads to poor decision-making; bystander effect: diffusion of responsibility.
+      content: `### Key Takeaways — Part 4
 
-**MCAT Tip:** Deviance: violation of social norms; labeling theory: societal reaction creates deviant identity.
-      `
-    },
-    {
-      id: 'mcat-4-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Psych/Soc related to group dynamics & deviance?',
-            options: [
-              'Groupthink: desire for harmony leads to poor decision-making; bystander effect: diffusion of responsibility',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Groupthink: desire for harmony leads to poor decision-making; bystander effect: diffusion of responsibility'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-4-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Conformity (Asch)',
-            options: ['Groupthink: desire for harmony leads to poor decision-making; bystander effect: diffusion of responsibility.', 'Deviance: violation of social norms; labeling theory: societal reaction creates deviant identity.', 'people conform to group pressure even when the group is wrong.', 'people obey authority figures even when causing harm.']
-          },
-          {
-            label: 'Obedience (Milgram)',
-            options: ['people conform to group pressure even when the group is wrong.', 'Groupthink: desire for harmony leads to poor decision-making; bystander effect: diffusion of responsibility.', 'people obey authority figures even when causing harm.', 'Deviance: violation of social norms; labeling theory: societal reaction creates deviant identity.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['people obey authority figures even when causing harm.', 'Deviance: violation of social norms; labeling theory: societal reaction creates deviant identity.', 'people conform to group pressure even when the group is wrong.', 'Groupthink: desire for harmony leads to poor decision-making; bystander effect: diffusion of responsibility.']
-          }
-        ],
-        correctAnswers: ['people conform to group pressure even when the group is wrong.', 'people obey authority figures even when causing harm.', 'Groupthink: desire for harmony leads to poor decision-making; bystander effect: diffusion of responsibility.'],
-        hint1: 'Think about what each concept specifically describes in Group Dynamics & Deviance.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Group Dynamics & Deviance describes a specific idea. Conformity (Asch): people conform to group pressure even when the group is wrong. Obedience (Milgram): people obey authority figures even when causing harm. Key Insight: Groupthink: desire for harmony leads to poor decision-making; bystander effect: diffusion of responsibility.'
-      }
+- Labeling theory: deviance isn't inherent — it's socially defined
+- Merton's strain theory: innovation (illegal means for accepted goals)
+- Stigma affects healthcare access and outcomes (mental health, HIV, addiction)
+- Medicalization turns deviance into medical conditions`
     }
   ]
-}
+};

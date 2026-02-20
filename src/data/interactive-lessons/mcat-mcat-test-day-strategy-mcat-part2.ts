@@ -2,98 +2,66 @@ export const mcatTestDayPart2Data = {
   topicSlug: 'mcat-test-day-strategy-mcat',
   sections: [
     {
-      id: 'mcat-2-intro',
+      id: 'td2-intro',
       type: 'text' as const,
-      content: `
-# Study Planning
+      content: `# Test Day Strategy for the MCAT
 
-**Part 2 of 7 — Study Planning**
+**Part 2 of 7 — Time Management**
 
-3-6 month study timeline is typical for most students.
+### Pacing Strategy
 
-Content review: 1-2 months; Practice passages: 2-3 months; Full-length tests: final month.
-      `
+| Passage Type | Reading | Questions | Total |
+|-------------|---------|-----------|-------|
+| Science (5-7 questions) | 2-3 min | 1 min each | ~8-9 min |
+| CARS (5-7 questions) | 3-4 min | 1-1.5 min each | ~10 min |
+| Discrete (standalone) | N/A | ~1 min | ~1 min |
+
+### Time Checkpoints
+
+For a 59-question science section (95 minutes):
+- After 5 passages (~25 questions): ~40 minutes used
+- After 8 passages (~45 questions): ~70 minutes used
+- Last 14 questions (discretes + final passage): ~25 minutes
+
+### When to Move On
+
+Move on if you've spent 2+ minutes on a single question:
+1. Eliminate what you can
+2. Flag the question
+3. Pick your best guess
+4. Move on confidently — you can return later
+
+### Flag Strategy
+
+- **Flag**: Any question you're unsure about
+- **Don't flag everything**: Only flag questions where you narrowed to 2 choices
+- **Review time**: Plan 5-10 minutes at the end for flagged questions
+- Often your first instinct is correct — don't change unless you have a clear reason`
     },
     {
-      id: 'mcat-2-quiz1',
+      id: 'td2-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Time Management** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in study planning?',
-            options: [
-              '3-6 month study timeline is typical for most students',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'You\'ve been stuck on a question for 2 minutes and can\'t decide between two answers. The best strategy is:',
+            options: ['Pick your best guess, flag it, and move on — protecting time for remaining questions', 'Keep working until you figure it out', 'Skip it without answering', 'Close your eyes and pick randomly'],
             correctAnswer: 0,
-            explanation: '3-6 month study timeline is typical for most students'
+            explanation: 'Every question is worth the same amount. Spending 4+ minutes on one hard question costs you easy questions later. Always answer something (no penalty for guessing), flag it, and move on. Your first instinct is often correct.'
           }
         ]
       }
     },
     {
-      id: 'mcat-2-detail',
+      id: 'td2-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Use spaced repetition (Anki) for high-yield facts and formulas.
+      content: `### Key Takeaways — Part 2
 
-**MCAT Tip:** Track your performance by topic to identify and target weak areas.
-      `
-    },
-    {
-      id: 'mcat-2-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Strategy related to study planning?',
-            options: [
-              'Use spaced repetition (Anki) for high-yield facts and formulas',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Use spaced repetition (Anki) for high-yield facts and formulas'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-2-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Content review',
-            options: ['Track your performance by topic to identify and target weak areas.', '1-2 months; Practice passages: 2-3 months; Full-length tests: final month.', '3-6 month study timeline is typical for most students.', 'Use spaced repetition (Anki) for high-yield facts and formulas.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['3-6 month study timeline is typical for most students.', 'Track your performance by topic to identify and target weak areas.', '1-2 months; Practice passages: 2-3 months; Full-length tests: final month.', 'Use spaced repetition (Anki) for high-yield facts and formulas.']
-          },
-          {
-            label: 'MCAT Tip',
-            options: ['Use spaced repetition (Anki) for high-yield facts and formulas.', '1-2 months; Practice passages: 2-3 months; Full-length tests: final month.', 'Track your performance by topic to identify and target weak areas.', '3-6 month study timeline is typical for most students.']
-          }
-        ],
-        correctAnswers: ['1-2 months; Practice passages: 2-3 months; Full-length tests: final month.', 'Use spaced repetition (Anki) for high-yield facts and formulas.', 'Track your performance by topic to identify and target weak areas.'],
-        hint1: 'Think about what each concept specifically describes in Study Planning.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Study Planning describes a specific idea. Content review: 1-2 months; Practice passages: 2-3 months; Full-length tests: final month. Key Insight: Use spaced repetition (Anki) for high-yield facts and formulas. MCAT Tip: Track your performance by topic to identify and target weak areas.'
-      }
+- ~8-9 minutes per science passage (reading + questions)
+- Never spend more than 2 minutes on a single question
+- Always answer before moving on (no penalty for wrong answers)
+- Flag judiciously — save 5-10 minutes for review`
     }
   ]
-}
+};

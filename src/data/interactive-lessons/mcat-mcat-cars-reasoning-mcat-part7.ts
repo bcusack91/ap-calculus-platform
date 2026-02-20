@@ -2,98 +2,63 @@ export const mcatCarsReasonPart7Data = {
   topicSlug: 'mcat-cars-reasoning-mcat',
   sections: [
     {
-      id: 'mcat-7-intro',
+      id: 'cr7-intro',
       type: 'text' as const,
-      content: `
-# Review & MCAT Practice
+      content: `# CARS Logical Reasoning
 
-**Part 7 of 7 — Review & MCAT Practice**
+**Part 7 of 7 — Putting It All Together**
 
-Ad hominem: attacking the person instead of the argument.
+### The Complete CARS Reasoning Toolkit
 
-Straw man: misrepresenting an opponents position to make it easier to attack.
-      `
+1. ✅ **Identify reasoning type**: Deductive or inductive?
+2. ✅ **Spot fallacies**: Ad hominem, straw man, false dichotomy, etc.
+3. ✅ **Find assumptions**: What must be true for the argument to work?
+4. ✅ **Strengthen/weaken**: What would make it more or less convincing?
+5. ✅ **Evaluate analogies**: Does the logical structure match?
+6. ✅ **Assess evidence**: How strong is the support?
+
+### Integration: A Complete Analysis
+
+For ANY CARS passage, you should be able to:
+
+| Element | Question to ask |
+|---------|----------------|
+| Main conclusion | What is the author's bottom line? |
+| Key evidence | What supports the conclusion? |
+| Assumptions | What's unstated but required? |
+| Weaknesses | Where might the argument fail? |
+| Implications | What follows if the author is right? |
+| Tone | What's the author's attitude? |
+
+### The CARS Mindset
+
+The strongest CARS performers think like this:
+- "What is this author trying to convince me of?"
+- "Why should I believe them?"
+- "What could make this argument wrong?"
+- "How does this apply beyond this specific case?"`
     },
     {
-      id: 'mcat-7-quiz1',
+      id: 'cr7-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Final Integration** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in review & mcat practice?',
-            options: [
-              'Ad hominem: attacking the person instead of the argument',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'A well-prepared CARS reader approaches a passage by:',
+            options: ['Actively tracking the argument, tone, and evidence while reading — then using these to answer questions', 'Memorizing every detail for later recall', 'Reading as quickly as possible', 'Looking at the questions first and only reading relevant sections'],
             correctAnswer: 0,
-            explanation: 'Ad hominem: attacking the person instead of the argument'
+            explanation: 'Active reading — tracking argument structure, author tone, and evidence quality — is the foundation of CARS success. This creates a mental map that makes all question types easier to answer.'
           }
         ]
       }
     },
     {
-      id: 'mcat-7-detail',
+      id: 'cr7-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** False dichotomy: presenting only two options when more exist.
+      content: `### CARS Logical Reasoning — Complete! ✅
 
-**MCAT Tip:** Appeal to authority: citing an authority figure rather than evidence (can be valid or fallacious).
-      `
-    },
-    {
-      id: 'mcat-7-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT CARS related to review & mcat practice?',
-            options: [
-              'False dichotomy: presenting only two options when more exist',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'False dichotomy: presenting only two options when more exist'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-7-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Ad hominem',
-            options: ['False dichotomy: presenting only two options when more exist.', 'misrepresenting an opponents position to make it easier to attack.', 'attacking the person instead of the argument.', 'Appeal to authority: citing an authority figure rather than evidence (can be valid or fallacious).']
-          },
-          {
-            label: 'Straw man',
-            options: ['misrepresenting an opponents position to make it easier to attack.', 'False dichotomy: presenting only two options when more exist.', 'attacking the person instead of the argument.', 'Appeal to authority: citing an authority figure rather than evidence (can be valid or fallacious).']
-          },
-          {
-            label: 'Key Insight',
-            options: ['misrepresenting an opponents position to make it easier to attack.', 'attacking the person instead of the argument.', 'Appeal to authority: citing an authority figure rather than evidence (can be valid or fallacious).', 'False dichotomy: presenting only two options when more exist.']
-          }
-        ],
-        correctAnswers: ['attacking the person instead of the argument.', 'misrepresenting an opponents position to make it easier to attack.', 'False dichotomy: presenting only two options when more exist.'],
-        hint1: 'Think about what each concept specifically describes in Review & MCAT Practice.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Review & MCAT Practice describes a specific idea. Ad hominem: attacking the person instead of the argument. Straw man: misrepresenting an opponents position to make it easier to attack. Key Insight: False dichotomy: presenting only two options when more exist.'
-      }
+You now have the complete toolkit: identify arguments, spot assumptions, evaluate evidence, recognize fallacies, and analyze analogies. Practice these skills with real passages until they become automatic.`
     }
   ]
-}
+};

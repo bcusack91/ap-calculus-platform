@@ -2,98 +2,62 @@ export const mcatOrganSysPart7Data = {
   topicSlug: 'mcat-organ-systems-mcat',
   sections: [
     {
-      id: 'mcat-7-intro',
+      id: 'os7-intro',
       type: 'text' as const,
-      content: `
-# Review & MCAT Practice
+      content: `# Organ Systems for the MCAT
 
-**Part 7 of 7 — Review & MCAT Practice**
+**Part 7 of 7 — Immune System**
 
-Central nervous system: brain + spinal cord; Peripheral: somatic + autonomic.
+### Innate vs. Adaptive Immunity
 
-Autonomic: sympathetic (fight or flight) vs parasympathetic (rest and digest).
-      `
+| Feature | Innate | Adaptive |
+|---------|--------|---------|
+| Speed | Immediate (0-12 hours) | Slow (days to weeks) |
+| Specificity | Broad | Highly specific (antigen-specific) |
+| Memory | No | Yes |
+| Components | Neutrophils, macrophages, NK cells, complement | T cells, B cells, antibodies |
+
+### Adaptive Immunity
+
+**Humoral (B cells)**:
+- B cells → Plasma cells → Antibodies (immunoglobulins)
+- Antibodies neutralize, opsonize, activate complement
+- **IgG**: Most abundant, crosses placenta
+- **IgM**: First responder, pentamer
+- **IgA**: Mucosal surfaces (saliva, breast milk)
+- **IgE**: Allergies, parasites
+
+**Cell-mediated (T cells)**:
+- **CD4+ (Helper T)**: Activate B cells and CD8+ cells
+- **CD8+ (Cytotoxic T)**: Kill infected/cancer cells directly
+- **T regulatory**: Suppress immune responses (prevent autoimmunity)
+
+### MHC Molecules
+
+- **MHC I**: On ALL nucleated cells. Presents intracellular antigens → recognized by CD8+
+- **MHC II**: On APCs only (macrophages, dendritic cells, B cells). Presents extracellular antigens → recognized by CD4+`
     },
     {
-      id: 'mcat-7-quiz1',
+      id: 'os7-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Immune System** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in review & mcat practice?',
-            options: [
-              'Central nervous system: brain + spinal cord; Peripheral: somatic + autonomic',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'A virus-infected cell would be killed primarily by:',
+            options: ['CD8+ cytotoxic T cells recognizing viral peptides on MHC I', 'B cells and antibodies', 'CD4+ helper T cells', 'Neutrophils'],
             correctAnswer: 0,
-            explanation: 'Central nervous system: brain + spinal cord; Peripheral: somatic + autonomic'
+            explanation: 'Virus-infected cells display viral peptides on MHC I (present on all nucleated cells). CD8+ T cells recognize this and kill the infected cell via perforin/granzyme. This is why MHC I = "license to kill."'
           }
         ]
       }
     },
     {
-      id: 'mcat-7-detail',
+      id: 'os7-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Neuron: dendrites receive, axon transmits, synaptic terminal releases neurotransmitters.
+      content: `### Organ Systems — Complete! ✅
 
-**MCAT Tip:** Action potential: resting (-70mV), depolarization (Na+ in), repolarization (K+ out), refractory period.
-      `
-    },
-    {
-      id: 'mcat-7-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Bio/Biochem related to review & mcat practice?',
-            options: [
-              'Neuron: dendrites receive, axon transmits, synaptic terminal releases neurotransmitters',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Neuron: dendrites receive, axon transmits, synaptic terminal releases neurotransmitters'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-7-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Central nervous system',
-            options: ['brain + spinal cord; Peripheral: somatic + autonomic.', 'Neuron: dendrites receive, axon transmits, synaptic terminal releases neurotransmitters.', 'sympathetic (fight or flight) vs parasympathetic (rest and digest).', 'Action potential: resting (-70mV), depolarization (Na+ in), repolarization (K+ out), refractory period.']
-          },
-          {
-            label: 'Autonomic',
-            options: ['brain + spinal cord; Peripheral: somatic + autonomic.', 'sympathetic (fight or flight) vs parasympathetic (rest and digest).', 'Action potential: resting (-70mV), depolarization (Na+ in), repolarization (K+ out), refractory period.', 'Neuron: dendrites receive, axon transmits, synaptic terminal releases neurotransmitters.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['sympathetic (fight or flight) vs parasympathetic (rest and digest).', 'Action potential: resting (-70mV), depolarization (Na+ in), repolarization (K+ out), refractory period.', 'Neuron: dendrites receive, axon transmits, synaptic terminal releases neurotransmitters.', 'brain + spinal cord; Peripheral: somatic + autonomic.']
-          }
-        ],
-        correctAnswers: ['brain + spinal cord; Peripheral: somatic + autonomic.', 'sympathetic (fight or flight) vs parasympathetic (rest and digest).', 'Neuron: dendrites receive, axon transmits, synaptic terminal releases neurotransmitters.'],
-        hint1: 'Think about what each concept specifically describes in Review & MCAT Practice.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Review & MCAT Practice describes a specific idea. Central nervous system: brain + spinal cord; Peripheral: somatic + autonomic. Autonomic: sympathetic (fight or flight) vs parasympathetic (rest and digest). Key Insight: Neuron: dendrites receive, axon transmits, synaptic terminal releases neurotransmitters.'
-      }
+From cardiovascular to immune, organ systems make up the bulk of MCAT biology. Know the key structures, functions, and regulatory mechanisms for each system. Integration between systems (e.g., kidney + endocrine, nervous + cardiovascular) is frequently tested.`
     }
   ]
-}
+};

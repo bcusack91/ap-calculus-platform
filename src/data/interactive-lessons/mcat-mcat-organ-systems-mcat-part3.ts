@@ -2,98 +2,65 @@ export const mcatOrganSysPart3Data = {
   topicSlug: 'mcat-organ-systems-mcat',
   sections: [
     {
-      id: 'mcat-3-intro',
+      id: 'os3-intro',
       type: 'text' as const,
-      content: `
-# Renal & Excretory System
+      content: `# Organ Systems for the MCAT
 
-**Part 3 of 7 — Renal & Excretory System**
+**Part 3 of 7 — Digestive System**
 
-Nephron: glomerulus (filtration), PCT (reabsorption), loop of Henle (concentration), DCT/CD (fine-tuning).
+### GI Tract Order
 
-GFR = glomerular filtration rate; filtered = all small molecules, not proteins/cells.
-      `
+Mouth → Esophagus → Stomach → Small intestine (duodenum → jejunum → ileum) → Large intestine → Rectum
+
+### Digestive Enzymes
+
+| Enzyme | Source | Substrate | Product |
+|--------|--------|-----------|---------|
+| Salivary amylase | Mouth | Starch | Maltose |
+| Pepsin | Stomach (chief cells) | Protein | Peptides |
+| Trypsin, chymotrypsin | Pancreas | Protein | Peptides |
+| Pancreatic lipase | Pancreas | Triglycerides | Monoglycerides + fatty acids |
+| Pancreatic amylase | Pancreas | Starch | Maltose |
+| Lactase, maltase | Small intestine brush border | Disaccharides | Monosaccharides |
+
+### Stomach
+
+- **Parietal cells**: HCl (acidic pH ~2) + intrinsic factor (for B$_{12}$ absorption)
+- **Chief cells**: Pepsinogen → activated to pepsin by HCl
+- **G cells**: Gastrin (stimulates HCl secretion)
+- **Mucous cells**: Protect stomach lining from acid
+
+### Absorption
+
+- **Duodenum**: Iron, calcium
+- **Jejunum**: Most nutrients (amino acids, sugars, fatty acids)
+- **Ileum**: Bile salts, vitamin B$_{12}$
+- **Large intestine**: Water, electrolytes`
     },
     {
-      id: 'mcat-3-quiz1',
+      id: 'os3-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Digestive System** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in renal & excretory system?',
-            options: [
-              'Nephron: glomerulus (filtration), PCT (reabsorption), loop of Henle (concentration), DCT/CD (fine-tuning)',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'Bile salts aid fat digestion by:',
+            options: ['Emulsifying large fat globules into smaller droplets (increasing surface area for lipase)', 'Directly breaking down triglycerides', 'Neutralizing stomach acid', 'Activating pepsinogen'],
             correctAnswer: 0,
-            explanation: 'Nephron: glomerulus (filtration), PCT (reabsorption), loop of Henle (concentration), DCT/CD (fine-tuning)'
+            explanation: 'Bile salts are amphipathic — they break large fat globules into smaller micelles (emulsification), vastly increasing surface area for pancreatic lipase. Bile does NOT digest fat — it prepares fat for digestion.'
           }
         ]
       }
     },
     {
-      id: 'mcat-3-detail',
+      id: 'os3-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** ADH (from posterior pituitary): increases water reabsorption in collecting duct.
+      content: `### Key Takeaways — Part 3
 
-**MCAT Tip:** Aldosterone: increases Na+ reabsorption (and thus water) in DCT; RAAS regulates blood pressure.
-      `
-    },
-    {
-      id: 'mcat-3-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Bio/Biochem related to renal & excretory system?',
-            options: [
-              'ADH (from posterior pituitary): increases water reabsorption in collecting duct',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'ADH (from posterior pituitary): increases water reabsorption in collecting duct'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-3-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Nephron',
-            options: ['ADH (from posterior pituitary): increases water reabsorption in collecting duct.', 'glomerulus (filtration), PCT (reabsorption), loop of Henle (concentration), DCT/CD (fine-tuning).', 'GFR = glomerular filtration rate; filtered = all small molecules, not proteins/cells.', 'Aldosterone: increases Na+ reabsorption (and thus water) in DCT; RAAS regulates blood pressure.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['GFR = glomerular filtration rate; filtered = all small molecules, not proteins/cells.', 'ADH (from posterior pituitary): increases water reabsorption in collecting duct.', 'glomerulus (filtration), PCT (reabsorption), loop of Henle (concentration), DCT/CD (fine-tuning).', 'Aldosterone: increases Na+ reabsorption (and thus water) in DCT; RAAS regulates blood pressure.']
-          },
-          {
-            label: 'MCAT Tip',
-            options: ['GFR = glomerular filtration rate; filtered = all small molecules, not proteins/cells.', 'Aldosterone: increases Na+ reabsorption (and thus water) in DCT; RAAS regulates blood pressure.', 'ADH (from posterior pituitary): increases water reabsorption in collecting duct.', 'glomerulus (filtration), PCT (reabsorption), loop of Henle (concentration), DCT/CD (fine-tuning).']
-          }
-        ],
-        correctAnswers: ['glomerulus (filtration), PCT (reabsorption), loop of Henle (concentration), DCT/CD (fine-tuning).', 'ADH (from posterior pituitary): increases water reabsorption in collecting duct.', 'Aldosterone: increases Na+ reabsorption (and thus water) in DCT; RAAS regulates blood pressure.'],
-        hint1: 'Think about what each concept specifically describes in Renal & Excretory System.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Renal & Excretory System describes a specific idea. Nephron: glomerulus (filtration), PCT (reabsorption), loop of Henle (concentration), DCT/CD (fine-tuning). Key Insight: ADH (from posterior pituitary): increases water reabsorption in collecting duct. MCAT Tip: Aldosterone: increases Na+ reabsorption (and thus water) in DCT; RAAS regulates blood pressure.'
-      }
+- Know all digestive enzymes with their sources and substrates
+- Stomach: HCl (parietal cells), pepsinogen (chief cells), gastrin (G cells)
+- Bile emulsifies fat (produced by liver, stored in gallbladder)
+- Most absorption occurs in the jejunum; B$_{12}$ absorbed in ileum`
     }
   ]
-}
+};

@@ -2,98 +2,63 @@ export const mcatPsychBehavPart7Data = {
   topicSlug: 'mcat-psychology-behavior-mcat',
   sections: [
     {
-      id: 'mcat-7-intro',
+      id: 'pb7-intro',
       type: 'text' as const,
-      content: `
-# Review & MCAT Practice
+      content: `# Psychology & Behavior for the MCAT
 
-**Part 7 of 7 — Review & MCAT Practice**
+**Part 7 of 7 — Development & Identity**
 
-Big Five (OCEAN): openness, conscientiousness, extraversion, agreeableness, neuroticism.
+### Erikson's Psychosocial Stages
 
-Freud: id (pleasure), ego (reality), superego (morality); defense mechanisms (repression, projection, etc.).
-      `
+| Stage | Age | Crisis |
+|-------|-----|--------|
+| Trust vs. Mistrust | 0-1 | Infant depends on caregiver reliability |
+| Autonomy vs. Shame | 1-3 | Toddler develops independence |
+| Initiative vs. Guilt | 3-6 | Child explores and leads |
+| Industry vs. Inferiority | 6-12 | Competence in school and social |
+| Identity vs. Role Confusion | 12-18 | Adolescent finds self |
+| Intimacy vs. Isolation | 18-40 | Young adult forms close relationships |
+| Generativity vs. Stagnation | 40-65 | Contributing to society |
+| Integrity vs. Despair | 65+ | Reflecting on life's meaning |
+
+### Kohlberg's Moral Development
+
+| Level | Reasoning | Example |
+|-------|-----------|---------|
+| **Pre-conventional** | Self-interest (punishment/reward) | "I'll get in trouble" |
+| **Conventional** | Social norms, law and order | "It's the rule" |
+| **Post-conventional** | Universal ethical principles | "It's the right thing even if illegal" |
+
+### Attachment Types (Ainsworth)
+
+| Type | Description |
+|------|-------------|
+| Secure | Distressed when parent leaves, happy on return |
+| Avoidant | Little distress, ignores parent's return |
+| Anxious-ambivalent | Very distressed, ambivalent on return (angry + clingy) |
+| Disorganized | No consistent pattern, often from abuse |`
     },
     {
-      id: 'mcat-7-quiz1',
+      id: 'pb7-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Development** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in review & mcat practice?',
-            options: [
-              'Big Five (OCEAN): openness, conscientiousness, extraversion, agreeableness, neuroticism',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'An adolescent struggling to define their values, career goals, and identity is in which Erikson stage?',
+            options: ['Identity vs. Role Confusion (ages 12-18)', 'Intimacy vs. Isolation', 'Industry vs. Inferiority', 'Initiative vs. Guilt'],
             correctAnswer: 0,
-            explanation: 'Big Five (OCEAN): openness, conscientiousness, extraversion, agreeableness, neuroticism'
+            explanation: 'Erikson\'s fifth stage (Identity vs. Role Confusion) occurs during adolescence. Successfully navigating this stage produces a strong sense of identity; failure leads to role confusion and uncertainty about self.'
           }
         ]
       }
     },
     {
-      id: 'mcat-7-detail',
+      id: 'pb7-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Psychological disorders: anxiety, mood, psychotic, personality, trauma-related.
+      content: `### Psychology & Behavior — Complete! ✅
 
-**MCAT Tip:** DSM-5 classification: categorical diagnosis based on symptom criteria and duration.
-      `
-    },
-    {
-      id: 'mcat-7-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Psych/Soc related to review & mcat practice?',
-            options: [
-              'Psychological disorders: anxiety, mood, psychotic, personality, trauma-related',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Psychological disorders: anxiety, mood, psychotic, personality, trauma-related'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-7-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Big Five (OCEAN)',
-            options: ['Psychological disorders: anxiety, mood, psychotic, personality, trauma-related.', 'openness, conscientiousness, extraversion, agreeableness, neuroticism.', 'id (pleasure), ego (reality), superego (morality); defense mechanisms (repression, projection, etc.).', 'DSM-5 classification: categorical diagnosis based on symptom criteria and duration.']
-          },
-          {
-            label: 'Freud',
-            options: ['openness, conscientiousness, extraversion, agreeableness, neuroticism.', 'DSM-5 classification: categorical diagnosis based on symptom criteria and duration.', 'Psychological disorders: anxiety, mood, psychotic, personality, trauma-related.', 'id (pleasure), ego (reality), superego (morality); defense mechanisms (repression, projection, etc.).']
-          },
-          {
-            label: 'Key Insight',
-            options: ['id (pleasure), ego (reality), superego (morality); defense mechanisms (repression, projection, etc.).', 'DSM-5 classification: categorical diagnosis based on symptom criteria and duration.', 'Psychological disorders: anxiety, mood, psychotic, personality, trauma-related.', 'openness, conscientiousness, extraversion, agreeableness, neuroticism.']
-          }
-        ],
-        correctAnswers: ['openness, conscientiousness, extraversion, agreeableness, neuroticism.', 'id (pleasure), ego (reality), superego (morality); defense mechanisms (repression, projection, etc.).', 'Psychological disorders: anxiety, mood, psychotic, personality, trauma-related.'],
-        hint1: 'Think about what each concept specifically describes in Review & MCAT Practice.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Review & MCAT Practice describes a specific idea. Big Five (OCEAN): openness, conscientiousness, extraversion, agreeableness, neuroticism. Freud: id (pleasure), ego (reality), superego (morality); defense mechanisms (repression, projection, etc.). Key Insight: Psychological disorders: anxiety, mood, psychotic, personality, trauma-related.'
-      }
+The Psych/Soc section tests your understanding of how psychological, social, and biological factors influence behavior and health. Master the major theories (Piaget, Erikson, Kohlberg, Freud), neurotransmitters, brain regions, and learning principles.`
     }
   ]
-}
+};

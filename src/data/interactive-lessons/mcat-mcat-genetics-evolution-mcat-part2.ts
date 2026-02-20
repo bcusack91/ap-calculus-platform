@@ -2,98 +2,61 @@ export const mcatGeneticsPart2Data = {
   topicSlug: 'mcat-genetics-evolution-mcat',
   sections: [
     {
-      id: 'mcat-2-intro',
+      id: 'ge2-intro',
       type: 'text' as const,
-      content: `
-# Non-Mendelian Inheritance
+      content: `# Genetics & Evolution for the MCAT
 
 **Part 2 of 7 — Non-Mendelian Inheritance**
 
-Incomplete dominance: heterozygote is intermediate (red x white = pink).
+### Extensions to Mendel
 
-Codominance: both alleles fully expressed (AB blood type).
-      `
+| Pattern | Description | Example |
+|---------|-------------|---------|
+| **Incomplete dominance** | Heterozygote = intermediate phenotype | Red $\\times$ White → Pink flowers |
+| **Codominance** | Both alleles fully expressed | Blood type AB (both A and B antigens) |
+| **Multiple alleles** | >2 alleles exist in population | ABO blood type ($I^A$, $I^B$, i) |
+| **Pleiotropy** | One gene → multiple phenotypic effects | Sickle cell anemia |
+| **Epistasis** | One gene masks another gene's expression | Coat color in labs |
+| **Polygenic** | Multiple genes → one trait | Height, skin color |
+
+### ABO Blood Type (MCAT FAVORITE)
+
+| Genotype | Blood Type | Antigens | Antibodies |
+|----------|-----------|----------|-----------|
+| $I^AI^A$ or $I^Ai$ | A | A antigen | Anti-B |
+| $I^BI^B$ or $I^Bi$ | B | B antigen | Anti-A |
+| $I^AI^B$ | AB | Both A and B | Neither |
+| ii | O | Neither | Anti-A and Anti-B |
+
+- $I^A$ and $I^B$ are **codominant** to each other
+- Both are **dominant** over i
+- Type O = universal donor (no antigens)
+- Type AB = universal recipient (no antibodies)`
     },
     {
-      id: 'mcat-2-quiz1',
+      id: 'ge2-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Non-Mendelian** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in non-mendelian inheritance?',
-            options: [
-              'Incomplete dominance: heterozygote is intermediate (red x white = pink)',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'A mother with blood type A (genotype $I^Ai$) and a father with blood type B (genotype $I^Bi$) can have children with which blood types?',
+            options: ['A, B, AB, or O — all four are possible', 'Only A or B', 'Only AB', 'Only A, B, or AB'],
             correctAnswer: 0,
-            explanation: 'Incomplete dominance: heterozygote is intermediate (red x white = pink)'
+            explanation: 'Cross $I^Ai \\times I^Bi$: offspring can be $I^AI^B$ (AB), $I^Ai$ (A), $I^Bi$ (B), or ii (O). All four blood types are possible — a classic MCAT genetics question.'
           }
         ]
       }
     },
     {
-      id: 'mcat-2-detail',
+      id: 'ge2-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** X-linked: gene on X chromosome; males are hemizygous (one copy determines phenotype).
+      content: `### Key Takeaways — Part 2
 
-**MCAT Tip:** Polygenic traits: multiple genes contribute (height, skin color); continuous distribution.
-      `
-    },
-    {
-      id: 'mcat-2-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Bio/Biochem related to non-mendelian inheritance?',
-            options: [
-              'X-linked: gene on X chromosome; males are hemizygous (one copy determines phenotype)',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'X-linked: gene on X chromosome; males are hemizygous (one copy determines phenotype)'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-2-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Incomplete dominance',
-            options: ['both alleles fully expressed (AB blood type).', 'heterozygote is intermediate (red x white = pink).', 'X-linked: gene on X chromosome; males are hemizygous (one copy determines phenotype).', 'Polygenic traits: multiple genes contribute (height, skin color); continuous distribution.']
-          },
-          {
-            label: 'Codominance',
-            options: ['both alleles fully expressed (AB blood type).', 'Polygenic traits: multiple genes contribute (height, skin color); continuous distribution.', 'heterozygote is intermediate (red x white = pink).', 'X-linked: gene on X chromosome; males are hemizygous (one copy determines phenotype).']
-          },
-          {
-            label: 'Key Insight',
-            options: ['Polygenic traits: multiple genes contribute (height, skin color); continuous distribution.', 'heterozygote is intermediate (red x white = pink).', 'both alleles fully expressed (AB blood type).', 'X-linked: gene on X chromosome; males are hemizygous (one copy determines phenotype).']
-          }
-        ],
-        correctAnswers: ['heterozygote is intermediate (red x white = pink).', 'both alleles fully expressed (AB blood type).', 'X-linked: gene on X chromosome; males are hemizygous (one copy determines phenotype).'],
-        hint1: 'Think about what each concept specifically describes in Non-Mendelian Inheritance.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Non-Mendelian Inheritance describes a specific idea. Incomplete dominance: heterozygote is intermediate (red x white = pink). Codominance: both alleles fully expressed (AB blood type). Key Insight: X-linked: gene on X chromosome; males are hemizygous (one copy determines phenotype).'
-      }
+- Incomplete dominance: blending. Codominance: both expressed (AB blood).
+- ABO: $I^A$ and $I^B$ codominant, both dominant over i
+- Pleiotropy = one gene, many effects. Epistasis = one gene masks another.
+- Polygenic traits show continuous variation (bell curve)`
     }
   ]
-}
+};

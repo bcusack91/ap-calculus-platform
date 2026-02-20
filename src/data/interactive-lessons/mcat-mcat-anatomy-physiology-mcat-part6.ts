@@ -2,98 +2,64 @@ export const mcatAnatPhysPart6Data = {
   topicSlug: 'mcat-anatomy-physiology-mcat',
   sections: [
     {
-      id: 'mcat-6-intro',
+      id: 'ap6-intro',
       type: 'text' as const,
-      content: `
-# Embryology & Development
+      content: `# Anatomy & Physiology for the MCAT
 
-**Part 6 of 7 — Embryology & Development**
+**Part 6 of 7 — Blood & Lymphatic System**
 
-Cleavage: rapid mitotic divisions of zygote; morula, then blastocyst (inner cell mass + trophoblast).
+### Blood Components
 
-Gastrulation: three germ layers form — ectoderm (skin, nervous system), mesoderm (muscle, bone, blood), endoderm (GI, lungs, liver).
-      `
+| Component | % of Blood | Function |
+|-----------|-----------|----------|
+| Plasma | ~55% | Water, proteins (albumin, fibrinogen, antibodies), electrolytes |
+| RBCs (erythrocytes) | ~45% | O$_2$ transport (hemoglobin) |
+| WBCs (leukocytes) | <1% | Immune defense |
+| Platelets (thrombocytes) | <1% | Clotting |
+
+### Hemostasis (Blood Clotting)
+
+1. **Vascular spasm**: Blood vessel constricts
+2. **Platelet plug**: Platelets adhere to collagen, aggregate
+3. **Coagulation cascade**: Fibrinogen → Fibrin (via thrombin) → stable clot
+
+### Hematocrit
+
+$$\\text{Hematocrit} = \\frac{\\text{Volume of RBCs}}{\\text{Total blood volume}} \\times 100$$
+
+Normal: ~45%. Elevated in dehydration or polycythemia. Decreased in anemia.
+
+### Lymphatic System
+
+- Returns excess interstitial fluid to blood
+- **Lymph nodes**: Filter lymph, contain B and T cells
+- **Spleen**: Filters blood, removes old RBCs
+- **Thymus**: T cell maturation`
     },
     {
-      id: 'mcat-6-quiz1',
+      id: 'ap6-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Blood & Lymph** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in embryology & development?',
-            options: [
-              'Cleavage: rapid mitotic divisions of zygote; morula, then blastocyst (inner cell mass + trophoblast)',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'A patient is severely dehydrated. Their hematocrit would be:',
+            options: ['Elevated — plasma volume decreases, but RBC count stays the same (relative polycythemia)', 'Decreased', 'Normal', 'Zero'],
             correctAnswer: 0,
-            explanation: 'Cleavage: rapid mitotic divisions of zygote; morula, then blastocyst (inner cell mass + trophoblast)'
+            explanation: 'Dehydration decreases plasma volume. Since hematocrit = RBC volume / total blood volume, the RBC percentage increases (even though absolute RBC count hasn\'t changed). This is called relative polycythemia.'
           }
         ]
       }
     },
     {
-      id: 'mcat-6-detail',
+      id: 'ap6-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Neurulation: ectoderm folds to form neural tube (becomes CNS).
+      content: `### Key Takeaways — Part 6
 
-**MCAT Tip:** Organogenesis: germ layers differentiate into organs; teratogens can disrupt development.
-      `
-    },
-    {
-      id: 'mcat-6-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Bio/Biochem related to embryology & development?',
-            options: [
-              'Neurulation: ectoderm folds to form neural tube (becomes CNS)',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Neurulation: ectoderm folds to form neural tube (becomes CNS)'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-6-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Cleavage',
-            options: ['Neurulation: ectoderm folds to form neural tube (becomes CNS).', 'rapid mitotic divisions of zygote; morula, then blastocyst (inner cell mass + trophoblast).', 'three germ layers form — ectoderm (skin, nervous system), mesoderm (muscle, bone, blood), endoderm (GI, lungs, liver).', 'Organogenesis: germ layers differentiate into organs; teratogens can disrupt development.']
-          },
-          {
-            label: 'Gastrulation',
-            options: ['Organogenesis: germ layers differentiate into organs; teratogens can disrupt development.', 'three germ layers form — ectoderm (skin, nervous system), mesoderm (muscle, bone, blood), endoderm (GI, lungs, liver).', 'rapid mitotic divisions of zygote; morula, then blastocyst (inner cell mass + trophoblast).', 'Neurulation: ectoderm folds to form neural tube (becomes CNS).']
-          },
-          {
-            label: 'Key Insight',
-            options: ['three germ layers form — ectoderm (skin, nervous system), mesoderm (muscle, bone, blood), endoderm (GI, lungs, liver).', 'Neurulation: ectoderm folds to form neural tube (becomes CNS).', 'rapid mitotic divisions of zygote; morula, then blastocyst (inner cell mass + trophoblast).', 'Organogenesis: germ layers differentiate into organs; teratogens can disrupt development.']
-          }
-        ],
-        correctAnswers: ['rapid mitotic divisions of zygote; morula, then blastocyst (inner cell mass + trophoblast).', 'three germ layers form — ectoderm (skin, nervous system), mesoderm (muscle, bone, blood), endoderm (GI, lungs, liver).', 'Neurulation: ectoderm folds to form neural tube (becomes CNS).'],
-        hint1: 'Think about what each concept specifically describes in Embryology & Development.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Embryology & Development describes a specific idea. Cleavage: rapid mitotic divisions of zygote; morula, then blastocyst (inner cell mass + trophoblast). Gastrulation: three germ layers form — ectoderm (skin, nervous system), mesoderm (muscle, bone, blood), endoderm (GI, lungs, liver). Key Insight: Neurulation: ectoderm folds to form neural tube (becomes CNS).'
-      }
+- Blood: 55% plasma + 45% RBCs (hematocrit) + <1% WBCs/platelets
+- Clotting cascade: vascular spasm → platelet plug → fibrin mesh
+- Lymphatic system: returns fluid, filters pathogens, T cell maturation (thymus)
+- Spleen filters blood; lymph nodes filter lymph`
     }
   ]
-}
+};

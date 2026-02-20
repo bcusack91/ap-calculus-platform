@@ -2,98 +2,72 @@ export const mcatPsychBehavPart4Data = {
   topicSlug: 'mcat-psychology-behavior-mcat',
   sections: [
     {
-      id: 'mcat-4-intro',
+      id: 'pb4-intro',
       type: 'text' as const,
-      content: `
-# Motivation & Emotion
+      content: `# Psychology & Behavior for the MCAT
 
-**Part 4 of 7 — Motivation & Emotion**
+**Part 4 of 7 — Cognition & Consciousness**
 
-Drive reduction theory: biological needs create drives that motivate behavior.
+### Cognitive Development (Piaget)
 
-Maslows hierarchy: physiological, safety, belonging, esteem, self-actualization.
-      `
+| Stage | Age | Key Feature |
+|-------|-----|-------------|
+| Sensorimotor | 0-2 | Object permanence |
+| Preoperational | 2-7 | Egocentrism, lack of conservation |
+| Concrete operational | 7-11 | Conservation, logical thinking (concrete) |
+| Formal operational | 12+ | Abstract/hypothetical reasoning |
+
+### Language Development
+
+| Stage | Age | Example |
+|-------|-----|---------|
+| Babbling | 6-9 months | "ba-ba-ba" |
+| One-word (holophrastic) | 12 months | "mama" |
+| Two-word (telegraphic) | 18-24 months | "want cookie" |
+| Grammar explosion | 2-5 years | Complex sentences |
+
+### Consciousness & Sleep
+
+**Sleep Stages**:
+
+| Stage | Features | Brain Waves |
+|-------|----------|-------------|
+| NREM 1 | Light sleep, hypnagogic hallucinations | Theta |
+| NREM 2 | Sleep spindles, K-complexes | Theta |
+| NREM 3 | Deep/slow-wave sleep, hard to wake | Delta |
+| REM | Dreams, muscle atonia, rapid eye movement | Beta (like awake!) |
+
+### Problem Solving
+
+- **Algorithm**: Step-by-step guaranteed solution
+- **Heuristic**: Mental shortcut (faster but error-prone)
+- **Confirmation bias**: Seeking evidence that confirms existing beliefs
+- **Functional fixedness**: Can't see new uses for familiar objects`
     },
     {
-      id: 'mcat-4-quiz1',
+      id: 'pb4-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Cognition** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in motivation & emotion?',
-            options: [
-              'Drive reduction theory: biological needs create drives that motivate behavior',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'A 4-year-old child watches liquid poured from a short wide glass into a tall narrow glass and says there is now "more." This demonstrates:',
+            options: ['Lack of conservation — a hallmark of Piaget\'s preoperational stage', 'Object permanence failure', 'Concrete operational thinking', 'Formal operational thinking'],
             correctAnswer: 0,
-            explanation: 'Drive reduction theory: biological needs create drives that motivate behavior'
+            explanation: 'Preoperational children (ages 2-7) lack conservation — they can\'t understand that quantity stays the same when appearance changes. They focus on ONE dimension (height) and ignore another (width).'
           }
         ]
       }
     },
     {
-      id: 'mcat-4-detail',
+      id: 'pb4-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** James-Lange theory: event causes physiological arousal, then emotion; Cannon-Bard: simultaneous.
+      content: `### Key Takeaways — Part 4
 
-**MCAT Tip:** Schachter-Singer (two-factor): arousal + cognitive label = emotion.
-      `
-    },
-    {
-      id: 'mcat-4-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Psych/Soc related to motivation & emotion?',
-            options: [
-              'James-Lange theory: event causes physiological arousal, then emotion; Cannon-Bard: simultaneous',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'James-Lange theory: event causes physiological arousal, then emotion; Cannon-Bard: simultaneous'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-4-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Drive reduction theory',
-            options: ['physiological, safety, belonging, esteem, self-actualization.', 'James-Lange theory: event causes physiological arousal, then emotion; Cannon-Bard: simultaneous.', 'biological needs create drives that motivate behavior.', 'Schachter-Singer (two-factor): arousal + cognitive label = emotion.']
-          },
-          {
-            label: 'Maslows hierarchy',
-            options: ['Schachter-Singer (two-factor): arousal + cognitive label = emotion.', 'biological needs create drives that motivate behavior.', 'James-Lange theory: event causes physiological arousal, then emotion; Cannon-Bard: simultaneous.', 'physiological, safety, belonging, esteem, self-actualization.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['physiological, safety, belonging, esteem, self-actualization.', 'James-Lange theory: event causes physiological arousal, then emotion; Cannon-Bard: simultaneous.', 'biological needs create drives that motivate behavior.', 'Schachter-Singer (two-factor): arousal + cognitive label = emotion.']
-          }
-        ],
-        correctAnswers: ['biological needs create drives that motivate behavior.', 'physiological, safety, belonging, esteem, self-actualization.', 'James-Lange theory: event causes physiological arousal, then emotion; Cannon-Bard: simultaneous.'],
-        hint1: 'Think about what each concept specifically describes in Motivation & Emotion.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Motivation & Emotion describes a specific idea. Drive reduction theory: biological needs create drives that motivate behavior. Maslows hierarchy: physiological, safety, belonging, esteem, self-actualization. Key Insight: James-Lange theory: event causes physiological arousal, then emotion; Cannon-Bard: simultaneous.'
-      }
+- Piaget: sensorimotor → preoperational → concrete → formal operational
+- REM sleep: dreams, muscle atonia, beta waves (paradoxical sleep)
+- NREM 3 (slow-wave): deep restorative sleep, delta waves
+- Heuristics: fast but error-prone. Confirmation bias: seeking confirming evidence.`
     }
   ]
-}
+};

@@ -2,98 +2,56 @@ export const mcatOrgChemPart4Data = {
   topicSlug: 'mcat-organic-chemistry-mcat',
   sections: [
     {
-      id: 'mcat-4-intro',
+      id: 'oc4-intro',
       type: 'text' as const,
-      content: `
-# Carbonyl Chemistry
+      content: `# Organic Chemistry for the MCAT
 
-**Part 4 of 7 — Carbonyl Chemistry**
+**Part 4 of 7 — Carboxylic Acid Derivatives**
 
-Aldehydes (RCHO) are more reactive than ketones (RCOR) due to less steric hindrance.
+### Reactivity Order (most reactive → least)
 
-Nucleophilic addition: nucleophile attacks electrophilic carbonyl carbon.
-      `
+$$\\text{Acid halide} > \\text{Anhydride} > \\text{Ester} > \\text{Amide} > \\text{Carboxylate}$$
+
+### Why? The better the leaving group, the more reactive.
+
+- Acid halide: Cl$^-$ is excellent leaving group
+- Amide: NH$_2^-$ is terrible leaving group → most stable
+
+### Key Interconversions
+
+- Acid halide + ROH → Ester
+- Acid halide + RNH$_2$ → Amide (how peptide bonds form in lab!)
+- Ester + H$_2$O (acid/base) → Carboxylic acid + ROH (hydrolysis)
+- Ester + NaOH → Carboxylate + ROH (saponification = soap making!)
+
+### Biochemistry Connection
+
+Thioester (CoA derivatives) are key metabolic intermediates — more reactive than regular esters due to weak C-S bond.`
     },
     {
-      id: 'mcat-4-quiz1',
+      id: 'oc4-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Carboxylic Acid Derivatives** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in carbonyl chemistry?',
-            options: [
-              'Aldehydes (RCHO) are more reactive than ketones (RCOR) due to less steric hindrance',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'Which carboxylic acid derivative is LEAST reactive toward nucleophilic acyl substitution?',
+            options: ['Amide', 'Acid chloride', 'Ester', 'Anhydride'],
             correctAnswer: 0,
-            explanation: 'Aldehydes (RCHO) are more reactive than ketones (RCOR) due to less steric hindrance'
+            explanation: 'Amides are least reactive because $\\text{NH}_2^-$ is a very poor leaving group. Also, nitrogen donates electrons into the carbonyl via resonance, reducing electrophilicity.'
           }
         ]
       }
     },
     {
-      id: 'mcat-4-detail',
+      id: 'oc4-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Aldol condensation: alpha-carbon of one aldehyde attacks another to form beta-hydroxy carbonyl.
+      content: `### Key Takeaways — Part 4
 
-**MCAT Tip:** Hemiacetal/acetal formation: important for cyclic sugar chemistry on the MCAT.
-      `
-    },
-    {
-      id: 'mcat-4-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Bio/Biochem related to carbonyl chemistry?',
-            options: [
-              'Aldol condensation: alpha-carbon of one aldehyde attacks another to form beta-hydroxy carbonyl',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Aldol condensation: alpha-carbon of one aldehyde attacks another to form beta-hydroxy carbonyl'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-4-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Nucleophilic addition',
-            options: ['Aldol condensation: alpha-carbon of one aldehyde attacks another to form beta-hydroxy carbonyl.', 'Hemiacetal/acetal formation: important for cyclic sugar chemistry on the MCAT.', 'nucleophile attacks electrophilic carbonyl carbon.', 'Aldehydes (RCHO) are more reactive than ketones (RCOR) due to less steric hindrance.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['nucleophile attacks electrophilic carbonyl carbon.', 'Aldol condensation: alpha-carbon of one aldehyde attacks another to form beta-hydroxy carbonyl.', 'Hemiacetal/acetal formation: important for cyclic sugar chemistry on the MCAT.', 'Aldehydes (RCHO) are more reactive than ketones (RCOR) due to less steric hindrance.']
-          },
-          {
-            label: 'MCAT Tip',
-            options: ['Aldehydes (RCHO) are more reactive than ketones (RCOR) due to less steric hindrance.', 'Hemiacetal/acetal formation: important for cyclic sugar chemistry on the MCAT.', 'nucleophile attacks electrophilic carbonyl carbon.', 'Aldol condensation: alpha-carbon of one aldehyde attacks another to form beta-hydroxy carbonyl.']
-          }
-        ],
-        correctAnswers: ['nucleophile attacks electrophilic carbonyl carbon.', 'Aldol condensation: alpha-carbon of one aldehyde attacks another to form beta-hydroxy carbonyl.', 'Hemiacetal/acetal formation: important for cyclic sugar chemistry on the MCAT.'],
-        hint1: 'Think about what each concept specifically describes in Carbonyl Chemistry.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Carbonyl Chemistry describes a specific idea. Nucleophilic addition: nucleophile attacks electrophilic carbonyl carbon. Key Insight: Aldol condensation: alpha-carbon of one aldehyde attacks another to form beta-hydroxy carbonyl. MCAT Tip: Hemiacetal/acetal formation: important for cyclic sugar chemistry on the MCAT.'
-      }
+- Reactivity of acid derivatives: halide > anhydride > ester > amide
+- Saponification = base hydrolysis of an ester → soap (carboxylate salt)
+- Thioesters (e.g., acetyl-CoA) are bioloical activated intermediates
+- Peptide bond = amide bond — resistant to hydrolysis (needs enzymes)`
     }
   ]
-}
+};

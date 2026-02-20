@@ -2,98 +2,68 @@ export const mcatMicroPart2Data = {
   topicSlug: 'mcat-microbiology-mcat',
   sections: [
     {
-      id: 'mcat-2-intro',
+      id: 'mi2-intro',
       type: 'text' as const,
-      content: `
-# Viruses & Prions
+      content: `# Microbiology for the MCAT
 
-**Part 2 of 7 — Viruses & Prions**
+**Part 2 of 7 — Bacterial Growth & Metabolism**
 
-Viruses: obligate intracellular parasites; DNA or RNA genome, protein capsid, some have envelope.
+### Bacterial Growth Curve
 
-Lytic cycle: virus replicates immediately, lyses host cell; Lysogenic: integrates into host genome.
-      `
+| Phase | Description |
+|-------|-------------|
+| **Lag** | Adapting to environment, synthesizing enzymes |
+| **Log (Exponential)** | Rapid binary fission, most sensitive to antibiotics |
+| **Stationary** | Growth rate = death rate (resources depleted) |
+| **Death** | Death rate > growth rate |
+
+### Binary Fission
+
+$$N = N_0 \\times 2^n$$
+
+Where $N$ = final number, $N_0$ = initial number, $n$ = number of generations
+
+### Bacterial Metabolism
+
+| Type | Energy Source | Carbon Source |
+|------|-------------|-------------|
+| Photoautotroph | Light | CO$_2$ |
+| Photoheterotroph | Light | Organic compounds |
+| Chemoautotroph | Inorganic chemicals | CO$_2$ |
+| Chemoheterotroph | Organic compounds | Organic compounds |
+
+### Oxygen Requirements
+
+| Type | O$_2$ Needed? | Example |
+|------|-------------|---------|
+| Obligate aerobe | Yes | *M. tuberculosis* |
+| Obligate anaerobe | No (O$_2$ is toxic!) | *Clostridium spp.* |
+| Facultative anaerobe | Either way (prefers O$_2$) | *E. coli* |`
     },
     {
-      id: 'mcat-2-quiz1',
+      id: 'mi2-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Bacterial Growth** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in viruses & prions?',
-            options: [
-              'Viruses: obligate intracellular parasites; DNA or RNA genome, protein capsid, some have envelope',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'Antibiotics are most effective during which growth phase?',
+            options: ['Log (exponential) phase — bacteria are actively dividing and most vulnerable', 'Lag phase', 'Stationary phase', 'Death phase'],
             correctAnswer: 0,
-            explanation: 'Viruses: obligate intracellular parasites; DNA or RNA genome, protein capsid, some have envelope'
+            explanation: 'During the log phase, bacteria are rapidly dividing. Many antibiotics target processes active during division (cell wall synthesis, DNA replication, translation), making this the most effective time to administer them.'
           }
         ]
       }
     },
     {
-      id: 'mcat-2-detail',
+      id: 'mi2-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Retroviruses (HIV): RNA genome, reverse transcriptase makes DNA, integrates as provirus.
+      content: `### Key Takeaways — Part 2
 
-**MCAT Tip:** Prions: misfolded proteins that cause other proteins to misfold — no nucleic acid (e.g., CJD, mad cow).
-      `
-    },
-    {
-      id: 'mcat-2-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Bio/Biochem related to viruses & prions?',
-            options: [
-              'Retroviruses (HIV): RNA genome, reverse transcriptase makes DNA, integrates as provirus',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Retroviruses (HIV): RNA genome, reverse transcriptase makes DNA, integrates as provirus'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-2-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Viruses',
-            options: ['obligate intracellular parasites; DNA or RNA genome, protein capsid, some have envelope.', 'Retroviruses (HIV): RNA genome, reverse transcriptase makes DNA, integrates as provirus.', 'virus replicates immediately, lyses host cell; Lysogenic: integrates into host genome.', 'Prions: misfolded proteins that cause other proteins to misfold — no nucleic acid (e.g., CJD, mad cow).']
-          },
-          {
-            label: 'Lytic cycle',
-            options: ['Retroviruses (HIV): RNA genome, reverse transcriptase makes DNA, integrates as provirus.', 'obligate intracellular parasites; DNA or RNA genome, protein capsid, some have envelope.', 'Prions: misfolded proteins that cause other proteins to misfold — no nucleic acid (e.g., CJD, mad cow).', 'virus replicates immediately, lyses host cell; Lysogenic: integrates into host genome.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['virus replicates immediately, lyses host cell; Lysogenic: integrates into host genome.', 'obligate intracellular parasites; DNA or RNA genome, protein capsid, some have envelope.', 'Prions: misfolded proteins that cause other proteins to misfold — no nucleic acid (e.g., CJD, mad cow).', 'Retroviruses (HIV): RNA genome, reverse transcriptase makes DNA, integrates as provirus.']
-          }
-        ],
-        correctAnswers: ['obligate intracellular parasites; DNA or RNA genome, protein capsid, some have envelope.', 'virus replicates immediately, lyses host cell; Lysogenic: integrates into host genome.', 'Retroviruses (HIV): RNA genome, reverse transcriptase makes DNA, integrates as provirus.'],
-        hint1: 'Think about what each concept specifically describes in Viruses & Prions.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Viruses & Prions describes a specific idea. Viruses: obligate intracellular parasites; DNA or RNA genome, protein capsid, some have envelope. Lytic cycle: virus replicates immediately, lyses host cell; Lysogenic: integrates into host genome. Key Insight: Retroviruses (HIV): RNA genome, reverse transcriptase makes DNA, integrates as provirus.'
-      }
+- Growth curve: Lag → Log → Stationary → Death
+- Binary fission: $N = N_0 \\times 2^n$ (exponential growth)
+- Obligate aerobes need O$_2$; obligate anaerobes are killed by O$_2$
+- Antibiotics most effective during log phase (active division)`
     }
   ]
-}
+};

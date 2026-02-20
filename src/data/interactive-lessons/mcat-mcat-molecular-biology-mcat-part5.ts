@@ -2,98 +2,63 @@ export const mcatMolBioPart5Data = {
   topicSlug: 'mcat-molecular-biology-mcat',
   sections: [
     {
-      id: 'mcat-5-intro',
+      id: 'mb5-intro',
       type: 'text' as const,
-      content: `
-# Mutations & Repair
+      content: `# Molecular Biology for the MCAT
 
-**Part 5 of 7 — Mutations & Repair**
+**Part 5 of 7 — Mutations & DNA Repair**
 
-Point mutations: silent, missense, nonsense, frameshift (insertion/deletion).
+### Types of Point Mutations
 
-Missense: different amino acid; Nonsense: premature stop codon; Silent: same amino acid.
-      `
+| Type | Change | Effect on Protein |
+|------|--------|------------------|
+| **Silent** | Different codon, same amino acid | None (degeneracy!) |
+| **Missense** | Different codon, different amino acid | May or may not affect function |
+| **Nonsense** | Codon → stop codon | Truncated protein (usually nonfunctional) |
+
+### Frameshift Mutations
+
+- **Insertion or deletion** (not multiples of 3) → shifts reading frame
+- Every downstream amino acid is wrong → usually nonfunctional protein
+- Multiples of 3 inserted/deleted → adds/removes amino acids without shifting frame
+
+### DNA Repair Mechanisms
+
+| Mechanism | Fixes | How |
+|-----------|-------|-----|
+| **Proofreading** | Replication errors | DNA Pol III $3' \\to 5'$ exonuclease |
+| **Mismatch repair** | Post-replication mismatches | Recognizes mismatched bases, excises, repairs |
+| **Base excision repair** | Damaged/modified bases | Glycosylase removes base → AP endonuclease → repair |
+| **Nucleotide excision repair** | Bulky lesions (thymine dimers) | Excises ~12 nucleotide stretch → repairs |
+
+### MCAT Connection: Xeroderma Pigmentosum
+
+Defect in nucleotide excision repair → can't fix UV-induced thymine dimers → extreme skin cancer risk.`
     },
     {
-      id: 'mcat-5-quiz1',
+      id: 'mb5-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Mutations** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in mutations & repair?',
-            options: [
-              'Point mutations: silent, missense, nonsense, frameshift (insertion/deletion)',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'A single nucleotide deletion in the second codon of an mRNA would:',
+            options: ['Cause a frameshift — every codon downstream is altered', 'Only change one amino acid', 'Have no effect', 'Only affect the second amino acid'],
             correctAnswer: 0,
-            explanation: 'Point mutations: silent, missense, nonsense, frameshift (insertion/deletion)'
+            explanation: 'A single deletion shifts the reading frame by one nucleotide. Every triplet downstream is now different → every amino acid from that point on is wrong. This is why frameshifts are usually devastating.'
           }
         ]
       }
     },
     {
-      id: 'mcat-5-detail',
+      id: 'mb5-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** DNA repair: mismatch repair, base excision repair, nucleotide excision repair.
+      content: `### Key Takeaways — Part 5
 
-**MCAT Tip:** Mutagens: UV light (thymine dimers), chemicals (alkylating agents), radiation (double-strand breaks).
-      `
-    },
-    {
-      id: 'mcat-5-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Bio/Biochem related to mutations & repair?',
-            options: [
-              'DNA repair: mismatch repair, base excision repair, nucleotide excision repair',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'DNA repair: mismatch repair, base excision repair, nucleotide excision repair'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Point mutations',
-            options: ['silent, missense, nonsense, frameshift (insertion/deletion).', 'DNA repair: mismatch repair, base excision repair, nucleotide excision repair.', 'Mutagens: UV light (thymine dimers), chemicals (alkylating agents), radiation (double-strand breaks).', 'different amino acid; Nonsense: premature stop codon; Silent: same amino acid.']
-          },
-          {
-            label: 'Missense',
-            options: ['DNA repair: mismatch repair, base excision repair, nucleotide excision repair.', 'silent, missense, nonsense, frameshift (insertion/deletion).', 'Mutagens: UV light (thymine dimers), chemicals (alkylating agents), radiation (double-strand breaks).', 'different amino acid; Nonsense: premature stop codon; Silent: same amino acid.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['Mutagens: UV light (thymine dimers), chemicals (alkylating agents), radiation (double-strand breaks).', 'silent, missense, nonsense, frameshift (insertion/deletion).', 'different amino acid; Nonsense: premature stop codon; Silent: same amino acid.', 'DNA repair: mismatch repair, base excision repair, nucleotide excision repair.']
-          }
-        ],
-        correctAnswers: ['silent, missense, nonsense, frameshift (insertion/deletion).', 'different amino acid; Nonsense: premature stop codon; Silent: same amino acid.', 'DNA repair: mismatch repair, base excision repair, nucleotide excision repair.'],
-        hint1: 'Think about what each concept specifically describes in Mutations & Repair.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Mutations & Repair describes a specific idea. Point mutations: silent, missense, nonsense, frameshift (insertion/deletion). Missense: different amino acid; Nonsense: premature stop codon; Silent: same amino acid. Key Insight: DNA repair: mismatch repair, base excision repair, nucleotide excision repair.'
-      }
+- Silent, missense, nonsense: increasing severity of point mutations
+- Frameshifts (insertions/deletions not in multiples of 3) are most damaging
+- Multiple repair pathways: proofreading → mismatch → base excision → nucleotide excision
+- Disease connections: xeroderma pigmentosum (NER), HNPCC (mismatch repair)`
     }
   ]
-}
+};

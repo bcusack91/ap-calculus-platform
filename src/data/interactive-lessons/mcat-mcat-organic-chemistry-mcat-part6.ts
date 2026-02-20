@@ -2,98 +2,69 @@ export const mcatOrgChemPart6Data = {
   topicSlug: 'mcat-organic-chemistry-mcat',
   sections: [
     {
-      id: 'mcat-6-intro',
+      id: 'oc6-intro',
       type: 'text' as const,
-      content: `
-# Spectroscopy & Structure
+      content: `# Organic Chemistry for the MCAT
 
-**Part 6 of 7 — Spectroscopy & Structure**
+**Part 6 of 7 — Spectroscopy (NMR, IR, Mass Spec)**
 
-IR spectroscopy: O-H broad ~3300, N-H sharp ~3300, C=O sharp ~1700, C-H ~2900 cm-1.
+### IR Spectroscopy — Key Absorptions
 
-1H NMR: chemical shift indicates electronic environment; splitting follows n+1 rule.
-      `
+| Bond | Wavenumber (cm$^{-1}$) | Shape |
+|------|----------------------|-------|
+| O-H (alcohol) | 3200-3600 | Broad |
+| O-H (carboxylic acid) | 2500-3300 | Very broad |
+| N-H | 3300-3500 | Medium |
+| C=O | 1700-1750 | Strong, sharp |
+| C-O | 1000-1300 | — |
+
+### $^1$H NMR — Quick Guide
+
+- **Chemical shift** ($\\delta$): TMS = 0 ppm (reference)
+- Alkyl: 0.5-2.0 ppm
+- Next to C=O: 2.0-2.5 ppm
+- Next to O or N: 3.0-4.0 ppm
+- Aromatic: 6.5-8.0 ppm
+- Aldehyde H: 9.0-10.0 ppm
+- Carboxylic acid H: 10-12 ppm
+
+### Splitting (n+1 rule)
+
+A proton with $n$ equivalent neighboring protons splits into $n + 1$ peaks.
+
+- Triplet: 2 neighbors
+- Quartet: 3 neighbors`
     },
     {
-      id: 'mcat-6-quiz1',
+      id: 'oc6-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Spectroscopy** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in spectroscopy & structure?',
-            options: [
-              'IR spectroscopy: O-H broad ~3300, N-H sharp ~3300, C=O sharp ~1700, C-H ~2900 cm-1',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'A compound shows a strong, sharp IR absorption at 1715 cm$^{-1}$ and a broad absorption at 2500-3300 cm$^{-1}$. It is most likely a:',
+            options: ['Carboxylic acid', 'Ketone', 'Alcohol', 'Amine'],
             correctAnswer: 0,
-            explanation: 'IR spectroscopy: O-H broad ~3300, N-H sharp ~3300, C=O sharp ~1700, C-H ~2900 cm-1'
+            explanation: '1715 cm$^{-1}$ = C=O stretch. Broad 2500-3300 cm$^{-1}$ = O-H of carboxylic acid (characteristically very broad due to H-bonding). Together, these are diagnostic for -COOH.'
+          },
+          {
+            question: 'In $^1$H NMR of $\\text{CH}_3\\text{CH}_2\\text{OH}$, the $\\text{CH}_2$ peak appears as a:',
+            options: ['Quartet (3 neighbors from $\\text{CH}_3$)', 'Triplet', 'Singlet', 'Doublet'],
+            correctAnswer: 0,
+            explanation: 'The $\\text{CH}_2$ has 3 neighboring H atoms on the $\\text{CH}_3$. By the n+1 rule: $3 + 1 = 4$ peaks = quartet. (The OH neighbor is often ignored due to rapid exchange).'
           }
         ]
       }
     },
     {
-      id: 'mcat-6-detail',
+      id: 'oc6-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Mass spectrometry: molecular ion peak gives molecular weight; fragmentation reveals structure.
+      content: `### Key Takeaways — Part 6
 
-**MCAT Tip:** UV-Vis: conjugated systems absorb longer wavelengths — more conjugation = lower energy transition.
-      `
-    },
-    {
-      id: 'mcat-6-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Bio/Biochem related to spectroscopy & structure?',
-            options: [
-              'Mass spectrometry: molecular ion peak gives molecular weight; fragmentation reveals structure',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Mass spectrometry: molecular ion peak gives molecular weight; fragmentation reveals structure'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-6-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'IR spectroscopy',
-            options: ['Mass spectrometry: molecular ion peak gives molecular weight; fragmentation reveals structure.', 'UV-Vis: conjugated systems absorb longer wavelengths — more conjugation = lower energy transition.', 'chemical shift indicates electronic environment; splitting follows n+1 rule.', 'O-H broad ~3300, N-H sharp ~3300, C=O sharp ~1700, C-H ~2900 cm-1.']
-          },
-          {
-            label: '1H NMR',
-            options: ['O-H broad ~3300, N-H sharp ~3300, C=O sharp ~1700, C-H ~2900 cm-1.', 'UV-Vis: conjugated systems absorb longer wavelengths — more conjugation = lower energy transition.', 'chemical shift indicates electronic environment; splitting follows n+1 rule.', 'Mass spectrometry: molecular ion peak gives molecular weight; fragmentation reveals structure.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['chemical shift indicates electronic environment; splitting follows n+1 rule.', 'Mass spectrometry: molecular ion peak gives molecular weight; fragmentation reveals structure.', 'UV-Vis: conjugated systems absorb longer wavelengths — more conjugation = lower energy transition.', 'O-H broad ~3300, N-H sharp ~3300, C=O sharp ~1700, C-H ~2900 cm-1.']
-          }
-        ],
-        correctAnswers: ['O-H broad ~3300, N-H sharp ~3300, C=O sharp ~1700, C-H ~2900 cm-1.', 'chemical shift indicates electronic environment; splitting follows n+1 rule.', 'Mass spectrometry: molecular ion peak gives molecular weight; fragmentation reveals structure.'],
-        hint1: 'Think about what each concept specifically describes in Spectroscopy & Structure.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Spectroscopy & Structure describes a specific idea. IR spectroscopy: O-H broad ~3300, N-H sharp ~3300, C=O sharp ~1700, C-H ~2900 cm-1. 1H NMR: chemical shift indicates electronic environment; splitting follows n+1 rule. Key Insight: Mass spectrometry: molecular ion peak gives molecular weight; fragmentation reveals structure.'
-      }
+- IR: Broad O-H (3200-3600 for alcohol, 2500-3300 for acid) and sharp C=O (~1715)
+- NMR: Chemical shift tells you environment, splitting tells you neighbors
+- n+1 rule: number of peaks = neighbors + 1
+- Mass spec: molecular ion peak (M$^+$) gives molecular weight`
     }
   ]
-}
+};

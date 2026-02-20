@@ -2,98 +2,67 @@ export const mcatGeneticsPart3Data = {
   topicSlug: 'mcat-genetics-evolution-mcat',
   sections: [
     {
-      id: 'mcat-3-intro',
+      id: 'ge3-intro',
       type: 'text' as const,
-      content: `
-# Population Genetics
+      content: `# Genetics & Evolution for the MCAT
 
-**Part 3 of 7 — Population Genetics**
+**Part 3 of 7 — Sex-Linked Inheritance & Pedigrees**
 
-Hardy-Weinberg equilibrium: p2 + 2pq + q2 = 1; p + q = 1 (allele frequencies).
+### X-Linked Inheritance
 
-Conditions: no mutation, no selection, no migration, random mating, large population.
-      `
+- Males (XY) only have ONE X chromosome → hemizygous
+- X-linked recessive diseases affect males more (no second X to compensate)
+- Carrier females ($X^AX^a$) pass the trait to ~50% of sons
+
+### Common X-Linked Recessive Diseases
+
+- Color blindness
+- Hemophilia A and B
+- Duchenne muscular dystrophy
+- G6PD deficiency
+
+### Pedigree Analysis
+
+Key patterns to recognize:
+
+**Autosomal Dominant**: Affected in every generation, males and females equally affected, unaffected parents don't transmit
+
+**Autosomal Recessive**: Can skip generations, often appears in consanguineous (related) parents, 25% of carrier $\\times$ carrier offspring affected
+
+**X-Linked Recessive**: Mostly males affected, carrier mother → 50% sons affected, no male-to-male transmission
+
+**X-Linked Dominant**: Affected fathers pass to ALL daughters (never sons), more females affected
+
+### MCAT Pedigree Strategy
+
+1. Check for male-to-male transmission → if yes, NOT X-linked
+2. Check if trait skips generations → if yes, likely recessive
+3. Count affected males vs. females → more males = X-linked recessive`
     },
     {
-      id: 'mcat-3-quiz1',
+      id: 'ge3-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Pedigrees** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in population genetics?',
-            options: [
-              'Hardy-Weinberg equilibrium: p2 + 2pq + q2 = 1; p + q = 1 (allele frequencies)',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'A trait appears in a grandfather and his grandson through his daughter (who is unaffected). This is most consistent with:',
+            options: ['X-linked recessive — the daughter is a carrier', 'Autosomal dominant', 'Autosomal recessive', 'Mitochondrial inheritance'],
             correctAnswer: 0,
-            explanation: 'Hardy-Weinberg equilibrium: p2 + 2pq + q2 = 1; p + q = 1 (allele frequencies)'
+            explanation: 'Grandfather ($X^aY$) → Daughter ($X^AX^a$, carrier) → Grandson ($X^aY$, affected). The trait skips the daughter because she has a normal X to compensate. This classic pattern = X-linked recessive.'
           }
         ]
       }
     },
     {
-      id: 'mcat-3-detail',
+      id: 'ge3-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Genetic drift: random changes in allele frequency, stronger in small populations.
+      content: `### Key Takeaways — Part 3
 
-**MCAT Tip:** Bottleneck effect and founder effect: reduce genetic diversity.
-      `
-    },
-    {
-      id: 'mcat-3-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Bio/Biochem related to population genetics?',
-            options: [
-              'Genetic drift: random changes in allele frequency, stronger in small populations',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Genetic drift: random changes in allele frequency, stronger in small populations'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-3-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Hardy-Weinberg equilibrium',
-            options: ['Bottleneck effect and founder effect: reduce genetic diversity.', 'no mutation, no selection, no migration, random mating, large population.', 'Genetic drift: random changes in allele frequency, stronger in small populations.', 'p2 + 2pq + q2 = 1; p + q = 1 (allele frequencies).']
-          },
-          {
-            label: 'Conditions',
-            options: ['Genetic drift: random changes in allele frequency, stronger in small populations.', 'no mutation, no selection, no migration, random mating, large population.', 'p2 + 2pq + q2 = 1; p + q = 1 (allele frequencies).', 'Bottleneck effect and founder effect: reduce genetic diversity.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['Bottleneck effect and founder effect: reduce genetic diversity.', 'Genetic drift: random changes in allele frequency, stronger in small populations.', 'p2 + 2pq + q2 = 1; p + q = 1 (allele frequencies).', 'no mutation, no selection, no migration, random mating, large population.']
-          }
-        ],
-        correctAnswers: ['p2 + 2pq + q2 = 1; p + q = 1 (allele frequencies).', 'no mutation, no selection, no migration, random mating, large population.', 'Genetic drift: random changes in allele frequency, stronger in small populations.'],
-        hint1: 'Think about what each concept specifically describes in Population Genetics.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Population Genetics describes a specific idea. Hardy-Weinberg equilibrium: p2 + 2pq + q2 = 1; p + q = 1 (allele frequencies). Conditions: no mutation, no selection, no migration, random mating, large population. Key Insight: Genetic drift: random changes in allele frequency, stronger in small populations.'
-      }
+- X-linked recessive: mainly males affected, no male-to-male transmission, carrier females
+- Autosomal recessive: can skip generations, 25% risk from carrier parents
+- Autosomal dominant: every generation, 50% chance if one parent affected
+- Pedigree strategy: check male-to-male, skipping, and sex ratios`
     }
   ]
-}
+};

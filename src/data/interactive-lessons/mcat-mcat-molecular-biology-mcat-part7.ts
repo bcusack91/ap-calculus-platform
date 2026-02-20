@@ -2,98 +2,57 @@ export const mcatMolBioPart7Data = {
   topicSlug: 'mcat-molecular-biology-mcat',
   sections: [
     {
-      id: 'mcat-7-intro',
+      id: 'mb7-intro',
       type: 'text' as const,
-      content: `
-# Review & MCAT Practice
+      content: `# Molecular Biology for the MCAT
 
-**Part 7 of 7 — Review & MCAT Practice**
+**Part 7 of 7 — Viruses & Recombinant DNA**
 
-PCR: amplifies specific DNA sequences using primers, Taq polymerase, and thermal cycling.
+### Virus Structure & Classification
 
-Gel electrophoresis: separates DNA/protein by size; smaller fragments migrate faster.
-      `
+| Feature | DNA Viruses | RNA Viruses | Retroviruses |
+|---------|------------|------------|-------------|
+| Genome | dsDNA usually | ssRNA or dsRNA | ssRNA |
+| Replication | Host DNA Pol | RNA-dependent RNA Pol (RdRp) | Reverse transcriptase → DNA → integrase |
+| Example | Herpes, Adenovirus | Influenza, Ebola | HIV |
+
+### Viral Life Cycles
+
+**Lytic cycle**: Virus replicates → lyses host cell → releases new virions
+**Lysogenic cycle**: Viral DNA integrates into host genome (prophage) → replicates with host → can switch to lytic
+
+### Retroviruses (HIV)
+
+$$\\text{ssRNA} \\xrightarrow{\\text{Reverse transcriptase}} \\text{dsDNA} \\xrightarrow{\\text{Integrase}} \\text{Provirus (in host DNA)}$$
+
+### Prions
+
+- NOT viruses — misfolded proteins (no nucleic acid!)
+- Convert normal proteins to misfolded form
+- Cannot be destroyed by standard sterilization
+- Example: Mad cow disease (BSE), Creutzfeldt-Jakob disease`
     },
     {
-      id: 'mcat-7-quiz1',
+      id: 'mb7-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Viruses** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in review & mcat practice?',
-            options: [
-              'PCR: amplifies specific DNA sequences using primers, Taq polymerase, and thermal cycling',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'HIV is difficult to treat because:',
+            options: ['Reverse transcriptase has no proofreading → high mutation rate → drug resistance', 'HIV has a DNA genome', 'Antibiotics kill HIV-infected cells', 'HIV only infects red blood cells'],
             correctAnswer: 0,
-            explanation: 'PCR: amplifies specific DNA sequences using primers, Taq polymerase, and thermal cycling'
+            explanation: 'Reverse transcriptase lacks $3\' \\to 5\'$ exonuclease (proofreading) activity, causing a very high mutation rate. This allows HIV to quickly evolve resistance to single drugs, which is why combination therapy (HAART) is used.'
           }
         ]
       }
     },
     {
-      id: 'mcat-7-detail',
+      id: 'mb7-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** CRISPR-Cas9: gene editing using guide RNA to target specific sequences.
+      content: `### Molecular Biology — Complete! ✅
 
-**MCAT Tip:** Southern blot (DNA), Northern blot (RNA), Western blot (protein) — remember SNOWdrop.
-      `
-    },
-    {
-      id: 'mcat-7-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Bio/Biochem related to review & mcat practice?',
-            options: [
-              'CRISPR-Cas9: gene editing using guide RNA to target specific sequences',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'CRISPR-Cas9: gene editing using guide RNA to target specific sequences'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-7-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'PCR',
-            options: ['CRISPR-Cas9: gene editing using guide RNA to target specific sequences.', 'Southern blot (DNA), Northern blot (RNA), Western blot (protein) — remember SNOWdrop.', 'separates DNA/protein by size; smaller fragments migrate faster.', 'amplifies specific DNA sequences using primers, Taq polymerase, and thermal cycling.']
-          },
-          {
-            label: 'Gel electrophoresis',
-            options: ['Southern blot (DNA), Northern blot (RNA), Western blot (protein) — remember SNOWdrop.', 'CRISPR-Cas9: gene editing using guide RNA to target specific sequences.', 'amplifies specific DNA sequences using primers, Taq polymerase, and thermal cycling.', 'separates DNA/protein by size; smaller fragments migrate faster.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['CRISPR-Cas9: gene editing using guide RNA to target specific sequences.', 'Southern blot (DNA), Northern blot (RNA), Western blot (protein) — remember SNOWdrop.', 'separates DNA/protein by size; smaller fragments migrate faster.', 'amplifies specific DNA sequences using primers, Taq polymerase, and thermal cycling.']
-          }
-        ],
-        correctAnswers: ['amplifies specific DNA sequences using primers, Taq polymerase, and thermal cycling.', 'separates DNA/protein by size; smaller fragments migrate faster.', 'CRISPR-Cas9: gene editing using guide RNA to target specific sequences.'],
-        hint1: 'Think about what each concept specifically describes in Review & MCAT Practice.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Review & MCAT Practice describes a specific idea. PCR: amplifies specific DNA sequences using primers, Taq polymerase, and thermal cycling. Gel electrophoresis: separates DNA/protein by size; smaller fragments migrate faster. Key Insight: CRISPR-Cas9: gene editing using guide RNA to target specific sequences.'
-      }
+From DNA replication to gene regulation to virology — molecular biology is the most heavily tested content on the MCAT Bio/Biochem section. Master the central dogma, regulation, and biotechnology techniques.`
     }
   ]
-}
+};

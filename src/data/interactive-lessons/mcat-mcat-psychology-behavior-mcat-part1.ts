@@ -2,98 +2,66 @@ export const mcatPsychBehavPart1Data = {
   topicSlug: 'mcat-psychology-behavior-mcat',
   sections: [
     {
-      id: 'mcat-1-intro',
+      id: 'pb1-intro',
       type: 'text' as const,
-      content: `
-# 🏥 Psychology Behavior
+      content: `# Psychology & Behavior for the MCAT
 
 **Part 1 of 7 — Sensation & Perception**
 
-Sensation: detection of stimuli by sensory receptors; Perception: interpretation by the brain.
+### Sensation vs. Perception
 
-Absolute threshold: minimum stimulus intensity detected 50% of the time.
-      `
+- **Sensation**: Detection of stimuli by sensory receptors (bottom-up)
+- **Perception**: Brain's interpretation of sensory information (top-down)
+
+### Sensory Thresholds
+
+| Concept | Definition |
+|---------|-----------|
+| **Absolute threshold** | Minimum stimulus detectable 50% of the time |
+| **Difference threshold (JND)** | Minimum change in stimulus detectable 50% of the time |
+| **Weber's Law** | $\\Delta I / I = k$ (JND is proportional to stimulus intensity) |
+| **Signal detection theory** | Detection depends on signal strength AND decision criteria (hits, misses, false alarms, correct rejections) |
+
+### Sensory Adaptation
+
+- Decreased sensitivity to constant stimuli over time
+- Example: You stop noticing the smell of your own house
+- Does NOT apply to pain (for survival reasons)
+
+### Gestalt Principles of Perception
+
+| Principle | Description |
+|-----------|-------------|
+| Proximity | Near objects grouped together |
+| Similarity | Similar objects grouped together |
+| Closure | Brain fills in gaps to complete shapes |
+| Continuity | Prefer smooth, continuous patterns |
+| Figure-ground | Distinguish object from background |`
     },
     {
-      id: 'mcat-1-quiz1',
+      id: 'pb1-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Sensation & Perception** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in sensation & perception?',
-            options: [
-              'Sensation: detection of stimuli by sensory receptors; Perception: interpretation by the brain',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'According to Weber\'s Law, if you can just barely notice the difference between 10 lbs and 11 lbs, the JND for a 50 lb weight would be:',
+            options: ['5 lbs ($\\Delta I / I = 1/10$, so $\\Delta I = 50 \\times 1/10 = 5$)', '1 lb', '10 lbs', '11 lbs'],
             correctAnswer: 0,
-            explanation: 'Sensation: detection of stimuli by sensory receptors; Perception: interpretation by the brain'
+            explanation: 'Weber\'s Law: $\\Delta I / I = k$. From the 10 lb example, $k = 1/10$. For 50 lbs: $\\Delta I = 50 \\times 1/10 = 5$ lbs. The JND scales with stimulus intensity — this is why you can notice a candle in a dark room but not in sunlight.'
           }
         ]
       }
     },
     {
-      id: 'mcat-1-detail',
+      id: 'pb1-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Signal detection theory: ability to detect signal depends on sensitivity and response bias.
+      content: `### Key Takeaways — Part 1
 
-**MCAT Tip:** Weber law: just noticeable difference (JND) is proportional to stimulus magnitude (delta-I/I = constant).
-      `
-    },
-    {
-      id: 'mcat-1-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Psych/Soc related to sensation & perception?',
-            options: [
-              'Signal detection theory: ability to detect signal depends on sensitivity and response bias',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Signal detection theory: ability to detect signal depends on sensitivity and response bias'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-1-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Sensation',
-            options: ['minimum stimulus intensity detected 50% of the time.', 'Signal detection theory: ability to detect signal depends on sensitivity and response bias.', 'Weber law: just noticeable difference (JND) is proportional to stimulus magnitude (delta-I/I = constant).', 'detection of stimuli by sensory receptors; Perception: interpretation by the brain.']
-          },
-          {
-            label: 'Absolute threshold',
-            options: ['minimum stimulus intensity detected 50% of the time.', 'Signal detection theory: ability to detect signal depends on sensitivity and response bias.', 'detection of stimuli by sensory receptors; Perception: interpretation by the brain.', 'Weber law: just noticeable difference (JND) is proportional to stimulus magnitude (delta-I/I = constant).']
-          },
-          {
-            label: 'Key Insight',
-            options: ['minimum stimulus intensity detected 50% of the time.', 'Signal detection theory: ability to detect signal depends on sensitivity and response bias.', 'detection of stimuli by sensory receptors; Perception: interpretation by the brain.', 'Weber law: just noticeable difference (JND) is proportional to stimulus magnitude (delta-I/I = constant).']
-          }
-        ],
-        correctAnswers: ['detection of stimuli by sensory receptors; Perception: interpretation by the brain.', 'minimum stimulus intensity detected 50% of the time.', 'Signal detection theory: ability to detect signal depends on sensitivity and response bias.'],
-        hint1: 'Think about what each concept specifically describes in Psychology Behavior.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Psychology Behavior describes a specific idea. Sensation: detection of stimuli by sensory receptors; Perception: interpretation by the brain. Absolute threshold: minimum stimulus intensity detected 50% of the time. Key Insight: Signal detection theory: ability to detect signal depends on sensitivity and response bias.'
-      }
+- Sensation = detection (bottom-up). Perception = interpretation (top-down).
+- Weber's Law: JND is proportional to stimulus intensity ($\\Delta I / I = k$)
+- Signal detection theory: both signal AND decision criteria matter
+- Gestalt principles: proximity, similarity, closure, continuity, figure-ground`
     }
   ]
-}
+};

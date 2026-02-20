@@ -2,98 +2,63 @@ export const mcatMicroPart6Data = {
   topicSlug: 'mcat-microbiology-mcat',
   sections: [
     {
-      id: 'mcat-6-intro',
+      id: 'mi6-intro',
       type: 'text' as const,
-      content: `
-# Host-Pathogen Interactions
+      content: `# Microbiology for the MCAT
 
-**Part 6 of 7 — Host-Pathogen Interactions**
+**Part 6 of 7 — Immune Response to Infection**
 
-Virulence factors: toxins (exotoxins, endotoxins), adhesins, capsule, biofilm.
+### First Line of Defense (Barriers)
 
-Exotoxins: secreted proteins (botulism, cholera, diphtheria); Endotoxins: lipid A of Gram-negative outer membrane.
-      `
+- Skin (physical), mucous membranes, stomach acid, lysozyme (tears/saliva), normal flora
+
+### Second Line (Innate Immune Response)
+
+| Component | Function |
+|-----------|----------|
+| **Neutrophils** | First responders, phagocytosis (most abundant WBC) |
+| **Macrophages** | Phagocytosis + antigen presentation (APC) |
+| **NK cells** | Kill virus-infected and tumor cells (no antigen specificity) |
+| **Complement** | Opsonization, membrane attack complex (MAC), inflammation |
+| **Inflammation** | Vasodilation, increased permeability, cell recruitment |
+
+### Third Line (Adaptive Immune Response)
+
+| Arm | Cells | Function |
+|-----|-------|----------|
+| Humoral | B cells → Plasma cells | Produce antibodies (target extracellular pathogens) |
+| Cell-mediated | T cells (CD4+, CD8+) | CD4+ helps, CD8+ kills infected cells |
+
+### Vaccination
+
+- **Active immunity**: Exposure to antigen → immune response → memory (vaccines, natural infection)
+- **Passive immunity**: Receiving pre-formed antibodies (maternal IgG, antiserum)
+  - Passive = immediate but temporary. Active = delayed but long-lasting.`
     },
     {
-      id: 'mcat-6-quiz1',
+      id: 'mi6-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Immune Response** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in host-pathogen interactions?',
-            options: [
-              'Virulence factors: toxins (exotoxins, endotoxins), adhesins, capsule, biofilm',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'A newborn has IgG antibodies from its mother. This is an example of:',
+            options: ['Passive immunity — antibodies were transferred, not produced by the baby\'s own immune system', 'Active immunity', 'Innate immunity', 'Cell-mediated immunity'],
             correctAnswer: 0,
-            explanation: 'Virulence factors: toxins (exotoxins, endotoxins), adhesins, capsule, biofilm'
+            explanation: 'Maternal IgG crosses the placenta, providing passive immunity. The baby didn\'t mount its own immune response. This protection is immediate but temporary (fades as maternal antibodies are degraded over months).'
           }
         ]
       }
     },
     {
-      id: 'mcat-6-detail',
+      id: 'mi6-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Koch postulates: criteria to establish a microorganism as the cause of a disease.
+      content: `### Key Takeaways — Part 6
 
-**MCAT Tip:** Immune evasion: antigenic variation, intracellular hiding, capsule to resist phagocytosis.
-      `
-    },
-    {
-      id: 'mcat-6-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Bio/Biochem related to host-pathogen interactions?',
-            options: [
-              'Koch postulates: criteria to establish a microorganism as the cause of a disease',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Koch postulates: criteria to establish a microorganism as the cause of a disease'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-6-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Virulence factors',
-            options: ['Koch postulates: criteria to establish a microorganism as the cause of a disease.', 'secreted proteins (botulism, cholera, diphtheria); Endotoxins: lipid A of Gram-negative outer membrane.', 'toxins (exotoxins, endotoxins), adhesins, capsule, biofilm.', 'Immune evasion: antigenic variation, intracellular hiding, capsule to resist phagocytosis.']
-          },
-          {
-            label: 'Exotoxins',
-            options: ['toxins (exotoxins, endotoxins), adhesins, capsule, biofilm.', 'secreted proteins (botulism, cholera, diphtheria); Endotoxins: lipid A of Gram-negative outer membrane.', 'Immune evasion: antigenic variation, intracellular hiding, capsule to resist phagocytosis.', 'Koch postulates: criteria to establish a microorganism as the cause of a disease.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['secreted proteins (botulism, cholera, diphtheria); Endotoxins: lipid A of Gram-negative outer membrane.', 'Immune evasion: antigenic variation, intracellular hiding, capsule to resist phagocytosis.', 'toxins (exotoxins, endotoxins), adhesins, capsule, biofilm.', 'Koch postulates: criteria to establish a microorganism as the cause of a disease.']
-          }
-        ],
-        correctAnswers: ['toxins (exotoxins, endotoxins), adhesins, capsule, biofilm.', 'secreted proteins (botulism, cholera, diphtheria); Endotoxins: lipid A of Gram-negative outer membrane.', 'Koch postulates: criteria to establish a microorganism as the cause of a disease.'],
-        hint1: 'Think about what each concept specifically describes in Host-Pathogen Interactions.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Host-Pathogen Interactions describes a specific idea. Virulence factors: toxins (exotoxins, endotoxins), adhesins, capsule, biofilm. Exotoxins: secreted proteins (botulism, cholera, diphtheria); Endotoxins: lipid A of Gram-negative outer membrane. Key Insight: Koch postulates: criteria to establish a microorganism as the cause of a disease.'
-      }
+- Three lines of defense: barriers → innate (neutrophils, complement) → adaptive (B and T cells)
+- Active immunity: long-lasting, requires time. Passive: immediate but temporary.
+- Neutrophils = first responders. Macrophages = APCs + phagocytes.
+- Vaccines = active immunity (memory cells formed)`
     }
   ]
-}
+};

@@ -2,98 +2,66 @@ export const mcatAnatPhysPart2Data = {
   topicSlug: 'mcat-anatomy-physiology-mcat',
   sections: [
     {
-      id: 'mcat-2-intro',
+      id: 'ap2-intro',
       type: 'text' as const,
-      content: `
-# Reproductive System
+      content: `# Anatomy & Physiology for the MCAT
 
 **Part 2 of 7 — Reproductive System**
 
-Male: testes produce sperm + testosterone; pathway: seminiferous tubules, epididymis, vas deferens.
+### Male Reproductive System
 
-Female: ovaries produce eggs + estrogen/progesterone; follicle matures, ovulation, corpus luteum.
-      `
+- **Testes**: Spermatogenesis (Sertoli cells support; Leydig cells produce testosterone)
+- **Epididymis**: Sperm maturation and storage
+- **Vas deferens**: Transports sperm
+- **Seminal vesicles**: Fructose (energy for sperm)
+- **Prostate**: Alkaline fluid (neutralizes vaginal acidity)
+
+### Female Reproductive System
+
+- **Ovaries**: Oogenesis, estrogen, progesterone
+- **Fallopian tubes (oviduct)**: Fertilization site
+- **Uterus**: Implantation and fetal development
+- **Endometrium**: Uterine lining (shed during menstruation)
+
+### Menstrual Cycle (28 days)
+
+| Phase | Days | Hormones | Events |
+|-------|------|----------|--------|
+| Follicular | 1-14 | FSH ↑, Estrogen ↑ | Follicle develops, endometrium thickens |
+| Ovulation | ~Day 14 | LH surge | Egg released |
+| Luteal | 14-28 | Progesterone ↑ (corpus luteum) | Endometrium maintained |
+| Menstruation | 1-5 | Progesterone ↓ | Endometrium shed |
+
+### MCAT Key Fact: LH Surge
+
+- LH surge triggers ovulation (~day 14)
+- This is an example of POSITIVE feedback (high estrogen → triggers LH surge)
+- After ovulation, the follicle becomes the corpus luteum (makes progesterone)`
     },
     {
-      id: 'mcat-2-quiz1',
+      id: 'ap2-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Reproductive System** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in reproductive system?',
-            options: [
-              'Male: testes produce sperm + testosterone; pathway: seminiferous tubules, epididymis, vas deferens',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'The corpus luteum produces mainly:',
+            options: ['Progesterone — which maintains the endometrium during the luteal phase', 'Estrogen only', 'FSH', 'Testosterone'],
             correctAnswer: 0,
-            explanation: 'Male: testes produce sperm + testosterone; pathway: seminiferous tubules, epididymis, vas deferens'
+            explanation: 'After ovulation, the ruptured follicle becomes the corpus luteum, producing progesterone (and some estrogen). Progesterone maintains the endometrium for possible implantation. If no pregnancy, the corpus luteum degenerates → progesterone drops → menstruation.'
           }
         ]
       }
     },
     {
-      id: 'mcat-2-detail',
+      id: 'ap2-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Menstrual cycle: follicular phase (FSH, estrogen), ovulation (LH surge), luteal phase (progesterone).
+      content: `### Key Takeaways — Part 2
 
-**MCAT Tip:** Fertilization: sperm capacitation, acrosome reaction, cortical reaction prevents polyspermy.
-      `
-    },
-    {
-      id: 'mcat-2-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Bio/Biochem related to reproductive system?',
-            options: [
-              'Menstrual cycle: follicular phase (FSH, estrogen), ovulation (LH surge), luteal phase (progesterone)',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Menstrual cycle: follicular phase (FSH, estrogen), ovulation (LH surge), luteal phase (progesterone)'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-2-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Male',
-            options: ['Menstrual cycle: follicular phase (FSH, estrogen), ovulation (LH surge), luteal phase (progesterone).', 'Fertilization: sperm capacitation, acrosome reaction, cortical reaction prevents polyspermy.', 'testes produce sperm + testosterone; pathway: seminiferous tubules, epididymis, vas deferens.', 'ovaries produce eggs + estrogen/progesterone; follicle matures, ovulation, corpus luteum.']
-          },
-          {
-            label: 'Female',
-            options: ['ovaries produce eggs + estrogen/progesterone; follicle matures, ovulation, corpus luteum.', 'Fertilization: sperm capacitation, acrosome reaction, cortical reaction prevents polyspermy.', 'Menstrual cycle: follicular phase (FSH, estrogen), ovulation (LH surge), luteal phase (progesterone).', 'testes produce sperm + testosterone; pathway: seminiferous tubules, epididymis, vas deferens.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['ovaries produce eggs + estrogen/progesterone; follicle matures, ovulation, corpus luteum.', 'Fertilization: sperm capacitation, acrosome reaction, cortical reaction prevents polyspermy.', 'Menstrual cycle: follicular phase (FSH, estrogen), ovulation (LH surge), luteal phase (progesterone).', 'testes produce sperm + testosterone; pathway: seminiferous tubules, epididymis, vas deferens.']
-          }
-        ],
-        correctAnswers: ['testes produce sperm + testosterone; pathway: seminiferous tubules, epididymis, vas deferens.', 'ovaries produce eggs + estrogen/progesterone; follicle matures, ovulation, corpus luteum.', 'Menstrual cycle: follicular phase (FSH, estrogen), ovulation (LH surge), luteal phase (progesterone).'],
-        hint1: 'Think about what each concept specifically describes in Reproductive System.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Reproductive System describes a specific idea. Male: testes produce sperm + testosterone; pathway: seminiferous tubules, epididymis, vas deferens. Female: ovaries produce eggs + estrogen/progesterone; follicle matures, ovulation, corpus luteum. Key Insight: Menstrual cycle: follicular phase (FSH, estrogen), ovulation (LH surge), luteal phase (progesterone).'
-      }
+- Follicular phase: FSH + estrogen (follicle grows). Luteal phase: progesterone (corpus luteum).
+- LH surge → ovulation (positive feedback from high estrogen)
+- Sertoli cells = sperm support. Leydig cells = testosterone.
+- If no pregnancy → corpus luteum dies → progesterone drops → menstruation`
     }
   ]
-}
+};

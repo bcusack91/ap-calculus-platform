@@ -2,98 +2,58 @@ export const mcatPhysElecPart4Data = {
   topicSlug: 'mcat-physics-electricity-mcat',
   sections: [
     {
-      id: 'mcat-4-intro',
+      id: 'pe4-intro',
       type: 'text' as const,
-      content: `
-# Optics & Light
+      content: `# Physics: Electricity, Magnetism & Optics
 
-**Part 4 of 7 — Optics & Light**
+**Part 4 of 7 — Optics: Reflection & Refraction**
 
-Refraction: Snells law n1*sin(theta1) = n2*sin(theta2) — light bends toward normal in denser medium.
+### Law of Reflection
 
-Lenses: converging (convex) focuses light; diverging (concave) spreads light.
-      `
+$$\\theta_{incident} = \\theta_{reflected}$$
+
+(Angles measured from the normal!)
+
+### Snell's Law (Refraction)
+
+$$n_1\\sin\\theta_1 = n_2\\sin\\theta_2$$
+
+- $n$ = index of refraction ($n = c/v$, always $\\ge 1$)
+- Light bends TOWARD normal when entering denser medium ($n_2 > n_1$)
+- Light bends AWAY from normal when entering less dense medium
+
+### Total Internal Reflection
+
+$$\\sin\\theta_c = \\frac{n_2}{n_1} \\quad (n_1 > n_2)$$
+
+- Only occurs when going from denser to less dense medium
+- Angle of incidence must exceed the critical angle
+- Applications: fiber optics, diamond sparkle`
     },
     {
-      id: 'mcat-4-quiz1',
+      id: 'pe4-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Optics: Refraction** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in optics & light?',
-            options: [
-              'Refraction: Snells law n1*sin(theta1) = n2*sin(theta2) — light bends toward normal in denser medium',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'Light passes from water ($n = 1.33$) into air ($n = 1.00$). The critical angle for total internal reflection is approximately:',
+            options: ['49° ($\\sin^{-1}(1/1.33) \\approx 49°$)', '90°', '33°', '75°'],
             correctAnswer: 0,
-            explanation: 'Refraction: Snells law n1*sin(theta1) = n2*sin(theta2) — light bends toward normal in denser medium'
+            explanation: '$\\sin\\theta_c = n_2/n_1 = 1.00/1.33 = 0.75$. $\\theta_c = \\sin^{-1}(0.75) \\approx 49°$. Any light hitting the water-air surface at $> 49°$ from normal undergoes total internal reflection.'
           }
         ]
       }
     },
     {
-      id: 'mcat-4-detail',
+      id: 'pe4-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Thin lens equation: 1/f = 1/do + 1/di; magnification m = -di/do.
+      content: `### Key Takeaways — Part 4
 
-**MCAT Tip:** Total internal reflection occurs when angle of incidence > critical angle (only going from dense to less dense).
-      `
-    },
-    {
-      id: 'mcat-4-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Chem/Phys related to optics & light?',
-            options: [
-              'Thin lens equation: 1/f = 1/do + 1/di; magnification m = -di/do',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Thin lens equation: 1/f = 1/do + 1/di; magnification m = -di/do'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-4-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Refraction',
-            options: ['Total internal reflection occurs when angle of incidence > critical angle (only going from dense to less dense).', 'Thin lens equation: 1/f = 1/do + 1/di; magnification m = -di/do.', 'converging (convex) focuses light; diverging (concave) spreads light.', 'Snells law n1*sin(theta1) = n2*sin(theta2) — light bends toward normal in denser medium.']
-          },
-          {
-            label: 'Lenses',
-            options: ['Snells law n1*sin(theta1) = n2*sin(theta2) — light bends toward normal in denser medium.', 'converging (convex) focuses light; diverging (concave) spreads light.', 'Total internal reflection occurs when angle of incidence > critical angle (only going from dense to less dense).', 'Thin lens equation: 1/f = 1/do + 1/di; magnification m = -di/do.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['Snells law n1*sin(theta1) = n2*sin(theta2) — light bends toward normal in denser medium.', 'converging (convex) focuses light; diverging (concave) spreads light.', 'Thin lens equation: 1/f = 1/do + 1/di; magnification m = -di/do.', 'Total internal reflection occurs when angle of incidence > critical angle (only going from dense to less dense).']
-          }
-        ],
-        correctAnswers: ['Snells law n1*sin(theta1) = n2*sin(theta2) — light bends toward normal in denser medium.', 'converging (convex) focuses light; diverging (concave) spreads light.', 'Thin lens equation: 1/f = 1/do + 1/di; magnification m = -di/do.'],
-        hint1: 'Think about what each concept specifically describes in Optics & Light.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Optics & Light describes a specific idea. Refraction: Snells law n1*sin(theta1) = n2*sin(theta2) — light bends toward normal in denser medium. Lenses: converging (convex) focuses light; diverging (concave) spreads light. Key Insight: Thin lens equation: 1/f = 1/do + 1/di; magnification m = -di/do.'
-      }
+- Snell's law: $n_1\\sin\\theta_1 = n_2\\sin\\theta_2$
+- Entering denser medium → bend toward normal (slower speed)
+- Total internal reflection: only denser → less dense, beyond critical angle
+- All angles measured from the NORMAL, not the surface!`
     }
   ]
-}
+};

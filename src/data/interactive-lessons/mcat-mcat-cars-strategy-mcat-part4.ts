@@ -2,98 +2,65 @@ export const mcatCarsStratPart4Data = {
   topicSlug: 'mcat-cars-strategy-mcat',
   sections: [
     {
-      id: 'mcat-4-intro',
+      id: 'cs4-intro',
       type: 'text' as const,
-      content: `
-# Inference & Application
+      content: `# CARS Strategy
 
-**Part 4 of 7 — Inference & Application**
+**Part 4 of 7 — Handling Difficult Passages**
 
-Inference = what must be true based on the passage (not explicitly stated).
+### When You're Lost
 
-Application: how would the author respond to a new scenario?.
-      `
+1. **Don't panic** — difficult passages are designed to be difficult for everyone
+2. **Focus on structure**: Even if content is confusing, you can track:
+   - What is the author arguing?
+   - Are they for or against something?
+   - Where does the argument shift?
+
+### Difficult Passage Types
+
+| Type | Challenge | Strategy |
+|------|-----------|----------|
+| **Philosophy** | Abstract, dense language | Focus on the core claim, ignore jargon |
+| **Art criticism** | Subjective, opinionated | Track the critic's position clearly |
+| **Ethics** | Multiple perspectives | Note who says what |
+| **History** | Dense dates/names | Focus on cause → effect, not memorizing specifics |
+
+### The 2-Pass Approach for Hard Passages
+
+**Pass 1**: Read through once, get the gist (don't stop to reread)
+**Pass 2**: Use questions to guide you back to specific sections
+
+### When to Skip a Passage
+
+- If a passage is extremely difficult, flag ALL its questions
+- Answer what you can on the first pass
+- Come back with remaining time
+- Always guess before time runs out!`
     },
     {
-      id: 'mcat-4-quiz1',
+      id: 'cs4-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Difficult Passages** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in inference & application?',
-            options: [
-              'Inference = what must be true based on the passage (not explicitly stated)',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'You finish reading a dense philosophy passage and cannot state the main idea. The best next step is:',
+            options: ['Start the questions — they will guide you to re-examine specific parts of the passage', 'Reread the entire passage from the beginning', 'Skip the passage entirely and move on', 'Guess on all questions immediately'],
             correctAnswer: 0,
-            explanation: 'Inference = what must be true based on the passage (not explicitly stated)'
+            explanation: 'Questions point you to specific sections. Often, working through the questions helps you understand the passage structure better than a second full read. This is more time-efficient than rereading everything.'
           }
         ]
       }
     },
     {
-      id: 'mcat-4-detail',
+      id: 'cs4-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Stay close to the text — MCAT inferences are conservative, not speculative.
+      content: `### Key Takeaways — Part 4
 
-**MCAT Tip:** Strongly supported > possibly true; eliminate answers that go too far.
-      `
-    },
-    {
-      id: 'mcat-4-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT CARS related to inference & application?',
-            options: [
-              'Stay close to the text — MCAT inferences are conservative, not speculative',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Stay close to the text — MCAT inferences are conservative, not speculative'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-4-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Application',
-            options: ['Stay close to the text — MCAT inferences are conservative, not speculative.', 'Inference = what must be true based on the passage (not explicitly stated).', 'Strongly supported > possibly true; eliminate answers that go too far.', 'how would the author respond to a new scenario?.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['Strongly supported > possibly true; eliminate answers that go too far.', 'how would the author respond to a new scenario?.', 'Stay close to the text — MCAT inferences are conservative, not speculative.', 'Inference = what must be true based on the passage (not explicitly stated).']
-          },
-          {
-            label: 'MCAT Tip',
-            options: ['Stay close to the text — MCAT inferences are conservative, not speculative.', 'how would the author respond to a new scenario?.', 'Inference = what must be true based on the passage (not explicitly stated).', 'Strongly supported > possibly true; eliminate answers that go too far.']
-          }
-        ],
-        correctAnswers: ['how would the author respond to a new scenario?.', 'Stay close to the text — MCAT inferences are conservative, not speculative.', 'Strongly supported > possibly true; eliminate answers that go too far.'],
-        hint1: 'Think about what each concept specifically describes in Inference & Application.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Inference & Application describes a specific idea. Application: how would the author respond to a new scenario?. Key Insight: Stay close to the text — MCAT inferences are conservative, not speculative. MCAT Tip: Strongly supported > possibly true; eliminate answers that go too far.'
-      }
+- Difficult passages are expected — don't let them derail you
+- Focus on argument STRUCTURE when content is confusing
+- Let questions guide your understanding on a second targeted read
+- Skip wisely: flag, guess, and come back if time permits`
     }
   ]
-}
+};

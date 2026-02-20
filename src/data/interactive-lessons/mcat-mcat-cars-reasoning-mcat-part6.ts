@@ -2,98 +2,64 @@ export const mcatCarsReasonPart6Data = {
   topicSlug: 'mcat-cars-reasoning-mcat',
   sections: [
     {
-      id: 'mcat-6-intro',
+      id: 'cr6-intro',
       type: 'text' as const,
-      content: `
-# Common Logical Fallacies
+      content: `# CARS Logical Reasoning
 
-**Part 6 of 7 — Common Logical Fallacies**
+**Part 6 of 7 — Evidence Evaluation**
 
-Ad hominem: attacking the person instead of the argument.
+### Types of Evidence in CARS
 
-Straw man: misrepresenting an opponents position to make it easier to attack.
-      `
+| Evidence Type | Strength | Example |
+|--------------|----------|---------|
+| **Empirical data** | Strong | "A study of 10,000 participants showed..." |
+| **Expert testimony** | Moderate | "According to Dr. Smith, a leading researcher..." |
+| **Historical precedent** | Moderate | "In 1932, a similar policy led to..." |
+| **Anecdotal** | Weak | "My friend tried it and it worked" |
+| **Hypothetical** | Weak | "Imagine a world where..." |
+
+### Evaluating Evidence on CARS
+
+Questions may ask:
+- "Which evidence most supports the author's claim?"
+- "The author uses the example of X primarily to..."
+- "How does paragraph 3 relate to the main argument?"
+
+### Role of Examples in Arguments
+
+Examples in CARS passages serve specific functions:
+1. **Illustrate** a general principle
+2. **Provide evidence** for a claim
+3. **Counter** an opposing position
+4. **Qualify** or nuance a broad claim
+5. **Introduce** a new perspective
+
+**Key Insight**: Always ask WHY the author included an example, not just WHAT it says.`
     },
     {
-      id: 'mcat-6-quiz1',
+      id: 'cr6-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Evidence Evaluation** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in common logical fallacies?',
-            options: [
-              'Ad hominem: attacking the person instead of the argument',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'An author argues that education reform improves outcomes, then describes one school that succeeded after reforms. A questioner could fairly note that:',
+            options: ['One school is anecdotal evidence — not sufficient to generalize to all schools', 'The school must be representative of all schools', 'Education reform always works everywhere', 'The example disproves the argument'],
             correctAnswer: 0,
-            explanation: 'Ad hominem: attacking the person instead of the argument'
+            explanation: 'A single case study is anecdotal — it illustrates possibility but doesn\'t prove the claim for all schools. The MCAT tests whether you can evaluate the strength and limitations of evidence.'
           }
         ]
       }
     },
     {
-      id: 'mcat-6-detail',
+      id: 'cr6-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** False dichotomy: presenting only two options when more exist.
+      content: `### Key Takeaways — Part 6
 
-**MCAT Tip:** Appeal to authority: citing an authority figure rather than evidence (can be valid or fallacious).
-      `
-    },
-    {
-      id: 'mcat-6-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT CARS related to common logical fallacies?',
-            options: [
-              'False dichotomy: presenting only two options when more exist',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'False dichotomy: presenting only two options when more exist'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-6-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Ad hominem',
-            options: ['misrepresenting an opponents position to make it easier to attack.', 'attacking the person instead of the argument.', 'Appeal to authority: citing an authority figure rather than evidence (can be valid or fallacious).', 'False dichotomy: presenting only two options when more exist.']
-          },
-          {
-            label: 'Straw man',
-            options: ['Appeal to authority: citing an authority figure rather than evidence (can be valid or fallacious).', 'misrepresenting an opponents position to make it easier to attack.', 'attacking the person instead of the argument.', 'False dichotomy: presenting only two options when more exist.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['False dichotomy: presenting only two options when more exist.', 'attacking the person instead of the argument.', 'Appeal to authority: citing an authority figure rather than evidence (can be valid or fallacious).', 'misrepresenting an opponents position to make it easier to attack.']
-          }
-        ],
-        correctAnswers: ['attacking the person instead of the argument.', 'misrepresenting an opponents position to make it easier to attack.', 'False dichotomy: presenting only two options when more exist.'],
-        hint1: 'Think about what each concept specifically describes in Common Logical Fallacies.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Common Logical Fallacies describes a specific idea. Ad hominem: attacking the person instead of the argument. Straw man: misrepresenting an opponents position to make it easier to attack. Key Insight: False dichotomy: presenting only two options when more exist.'
-      }
+- Empirical data > expert opinion > historical precedent > anecdote > hypothetical
+- Always ask WHY the author included an example
+- Single case studies don't prove general claims
+- Evidence can illustrate, support, counter, or qualify a claim`
     }
   ]
-}
+};

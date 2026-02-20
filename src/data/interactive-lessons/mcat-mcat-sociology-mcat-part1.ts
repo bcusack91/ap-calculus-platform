@@ -2,98 +2,63 @@ export const mcatSociologyPart1Data = {
   topicSlug: 'mcat-sociology-mcat',
   sections: [
     {
-      id: 'mcat-1-intro',
+      id: 'so1-intro',
       type: 'text' as const,
-      content: `
-# 🏥 Sociology
+      content: `# Sociology for the MCAT
 
-**Part 1 of 7 — Social Structure & Stratification**
+**Part 1 of 7 — Social Structure & Institutions**
 
-Social stratification: unequal distribution of resources based on class, race, gender.
+### Sociological Theories
 
-Social class: upper, middle, working, lower — defined by income, education, occupation, and wealth.
-      `
+| Theory | Focus | Key Thinker |
+|--------|-------|-------------|
+| **Functionalism** | Society as a system with interconnected parts | Durkheim |
+| **Conflict Theory** | Power, inequality, class struggle | Marx |
+| **Symbolic Interactionism** | Meaning created through social interactions | Mead, Goffman |
+| **Social Constructionism** | Reality is socially constructed | Berger, Luckmann |
+
+### Social Institutions
+
+| Institution | Function |
+|------------|----------|
+| Family | Socialization, support |
+| Education | Knowledge transmission, social placement |
+| Religion | Meaning, social cohesion |
+| Government | Order, resource allocation |
+| Economy | Production and distribution of goods |
+| Healthcare | Disease treatment, public health |
+
+### Durkheim's Concept of Anomie
+
+- **Anomie**: Normlessness — when social norms break down
+- Occurs during rapid social change
+- Associated with higher rates of deviance and suicide
+- Connection: healthcare disparities during social upheaval`
     },
     {
-      id: 'mcat-1-quiz1',
+      id: 'so1-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Social Structure** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in social structure & stratification?',
-            options: [
-              'Social stratification: unequal distribution of resources based on class, race, gender',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'A sociologist argues that healthcare inequality exists because the wealthy benefit from maintaining the current system. This perspective is:',
+            options: ['Conflict theory — focusing on power dynamics and inequality between social classes', 'Functionalism', 'Symbolic interactionism', 'Social constructionism'],
             correctAnswer: 0,
-            explanation: 'Social stratification: unequal distribution of resources based on class, race, gender'
+            explanation: 'Conflict theory (Marx) views society as a competition for resources. Healthcare inequality is maintained because it benefits the powerful — a classic conflict theory explanation. Functionalism would ask what purpose inequality serves for society as a whole.'
           }
         ]
       }
     },
     {
-      id: 'mcat-1-detail',
+      id: 'so1-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Social mobility: intragenerational (within lifetime) vs intergenerational (across generations).
+      content: `### Key Takeaways — Part 1
 
-**MCAT Tip:** Intersectionality: race, class, gender, and other identities overlap to create unique experiences.
-      `
-    },
-    {
-      id: 'mcat-1-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Psych/Soc related to social structure & stratification?',
-            options: [
-              'Social mobility: intragenerational (within lifetime) vs intergenerational (across generations)',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Social mobility: intragenerational (within lifetime) vs intergenerational (across generations)'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-1-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Social stratification',
-            options: ['Social mobility: intragenerational (within lifetime) vs intergenerational (across generations).', 'unequal distribution of resources based on class, race, gender.', 'upper, middle, working, lower — defined by income, education, occupation, and wealth.', 'Intersectionality: race, class, gender, and other identities overlap to create unique experiences.']
-          },
-          {
-            label: 'Social class',
-            options: ['upper, middle, working, lower — defined by income, education, occupation, and wealth.', 'unequal distribution of resources based on class, race, gender.', 'Intersectionality: race, class, gender, and other identities overlap to create unique experiences.', 'Social mobility: intragenerational (within lifetime) vs intergenerational (across generations).']
-          },
-          {
-            label: 'Key Insight',
-            options: ['Intersectionality: race, class, gender, and other identities overlap to create unique experiences.', 'upper, middle, working, lower — defined by income, education, occupation, and wealth.', 'unequal distribution of resources based on class, race, gender.', 'Social mobility: intragenerational (within lifetime) vs intergenerational (across generations).']
-          }
-        ],
-        correctAnswers: ['unequal distribution of resources based on class, race, gender.', 'upper, middle, working, lower — defined by income, education, occupation, and wealth.', 'Social mobility: intragenerational (within lifetime) vs intergenerational (across generations).'],
-        hint1: 'Think about what each concept specifically describes in Sociology.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Sociology describes a specific idea. Social stratification: unequal distribution of resources based on class, race, gender. Social class: upper, middle, working, lower — defined by income, education, occupation, and wealth. Key Insight: Social mobility: intragenerational (within lifetime) vs intergenerational (across generations).'
-      }
+- Functionalism: society works as a system. Conflict theory: power struggle. Symbolic interactionism: meaning through interaction.
+- Know the major social institutions and their functions
+- Anomie (Durkheim) = breakdown of social norms
+- The MCAT tests sociology through healthcare and inequality scenarios`
     }
   ]
-}
+};

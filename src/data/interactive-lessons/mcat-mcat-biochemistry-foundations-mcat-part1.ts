@@ -2,98 +2,64 @@ export const mcatBiochemPart1Data = {
   topicSlug: 'mcat-biochemistry-foundations-mcat',
   sections: [
     {
-      id: 'mcat-1-intro',
+      id: 'bc1-intro',
       type: 'text' as const,
-      content: `
-# 🏥 Biochemistry Foundations
+      content: `# Biochemistry Foundations
 
 **Part 1 of 7 — Amino Acids & Protein Structure**
 
-20 standard amino acids: nonpolar (G,A,V,L,I,P,F,W,M), polar (S,T,C,Y,N,Q), charged (D,E,K,R,H).
+### The 20 Amino Acids — Classify by Side Chain
 
-Protein structure: primary (sequence), secondary (alpha-helix, beta-sheet), tertiary (3D fold), quaternary (subunits).
-      `
+| Category | Amino Acids | Key Feature |
+|----------|-------------|-------------|
+| Nonpolar/Hydrophobic | G, A, V, L, I, P, F, W, M | Interior of proteins |
+| Polar uncharged | S, T, C, Y, N, Q | H-bonding |
+| Positively charged (pH 7) | K, R, H | Basic side chains |
+| Negatively charged (pH 7) | D, E | Acidic side chains |
+
+### Protein Structure Levels
+
+| Level | Held together by | Description |
+|-------|-----------------|-------------|
+| Primary (1°) | Peptide bonds (covalent) | Amino acid sequence |
+| Secondary (2°) | H-bonds (backbone N-H to C=O) | $\\alpha$-helix, $\\beta$-sheet |
+| Tertiary (3°) | Hydrophobic, ionic, disulfide, H-bonds | 3D shape of one polypeptide |
+| Quaternary (4°) | Same as tertiary | Multiple subunit assembly |
+
+### Disulfide Bonds
+
+Cysteine + Cysteine → Cystine (C-S-S-C), covalent bond stabilizing tertiary structure.`
     },
     {
-      id: 'mcat-1-quiz1',
+      id: 'bc1-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Amino Acids & Protein Structure** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in amino acids & protein structure?',
-            options: [
-              '20 standard amino acids: nonpolar (G,A,V,L,I,P,F,W,M), polar (S,T,C,Y,N,Q), charged (D,E,K,R,H)',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'Proline is unique among amino acids because it:',
+            options: ['Has a cyclic side chain bonded to the backbone nitrogen, creating rigidity', 'Is the only nonpolar amino acid', 'Has the smallest side chain', 'Can form disulfide bonds'],
             correctAnswer: 0,
-            explanation: '20 standard amino acids: nonpolar (G,A,V,L,I,P,F,W,M), polar (S,T,C,Y,N,Q), charged (D,E,K,R,H)'
+            explanation: 'Proline is an imino acid — its side chain cyclizes back to the backbone N, creating a rigid kink. This is why proline is a "helix breaker" in $\\alpha$-helices.'
+          },
+          {
+            question: '$\\alpha$-helices are stabilized primarily by:',
+            options: ['Hydrogen bonds between backbone C=O and N-H groups 4 residues apart', 'Disulfide bonds', 'Hydrophobic interactions', 'Ionic bonds between side chains'],
+            correctAnswer: 0,
+            explanation: '$\\alpha$-helices are stabilized by H-bonds between the C=O of residue $i$ and the N-H of residue $i+4$. These are backbone (not side chain) interactions, making them secondary structure.'
           }
         ]
       }
     },
     {
-      id: 'mcat-1-detail',
+      id: 'bc1-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Peptide bond: planar, partial double-bond character, trans configuration preferred.
+      content: `### Key Takeaways — Part 1
 
-**MCAT Tip:** pI = isoelectric point — pH where net charge = 0; average of flanking pKa values.
-      `
-    },
-    {
-      id: 'mcat-1-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Chem/Phys related to amino acids & protein structure?',
-            options: [
-              'Peptide bond: planar, partial double-bond character, trans configuration preferred',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Peptide bond: planar, partial double-bond character, trans configuration preferred'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-1-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: '20 standard amino acids',
-            options: ['nonpolar (G,A,V,L,I,P,F,W,M), polar (S,T,C,Y,N,Q), charged (D,E,K,R,H).', 'pI = isoelectric point — pH where net charge = 0; average of flanking pKa values.', 'primary (sequence), secondary (alpha-helix, beta-sheet), tertiary (3D fold), quaternary (subunits).', 'Peptide bond: planar, partial double-bond character, trans configuration preferred.']
-          },
-          {
-            label: 'Protein structure',
-            options: ['pI = isoelectric point — pH where net charge = 0; average of flanking pKa values.', 'primary (sequence), secondary (alpha-helix, beta-sheet), tertiary (3D fold), quaternary (subunits).', 'nonpolar (G,A,V,L,I,P,F,W,M), polar (S,T,C,Y,N,Q), charged (D,E,K,R,H).', 'Peptide bond: planar, partial double-bond character, trans configuration preferred.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['primary (sequence), secondary (alpha-helix, beta-sheet), tertiary (3D fold), quaternary (subunits).', 'nonpolar (G,A,V,L,I,P,F,W,M), polar (S,T,C,Y,N,Q), charged (D,E,K,R,H).', 'pI = isoelectric point — pH where net charge = 0; average of flanking pKa values.', 'Peptide bond: planar, partial double-bond character, trans configuration preferred.']
-          }
-        ],
-        correctAnswers: ['nonpolar (G,A,V,L,I,P,F,W,M), polar (S,T,C,Y,N,Q), charged (D,E,K,R,H).', 'primary (sequence), secondary (alpha-helix, beta-sheet), tertiary (3D fold), quaternary (subunits).', 'Peptide bond: planar, partial double-bond character, trans configuration preferred.'],
-        hint1: 'Think about what each concept specifically describes in Biochemistry Foundations.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Biochemistry Foundations describes a specific idea. 20 standard amino acids: nonpolar (G,A,V,L,I,P,F,W,M), polar (S,T,C,Y,N,Q), charged (D,E,K,R,H). Protein structure: primary (sequence), secondary (alpha-helix, beta-sheet), tertiary (3D fold), quaternary (subunits). Key Insight: Peptide bond: planar, partial double-bond character, trans configuration preferred.'
-      }
+- Know amino acid categories cold (nonpolar, polar, positive, negative)
+- Proline = helix breaker (rigid ring); Glycine = most flexible (no side chain)
+- Primary: sequence. Secondary: $\\alpha$-helix/$\\beta$-sheet. Tertiary: 3D fold. Quaternary: subunits.
+- Disulfide bonds (Cys-Cys) = only COVALENT bond in tertiary structure`
     }
   ]
-}
+};

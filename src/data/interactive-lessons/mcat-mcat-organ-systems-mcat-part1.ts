@@ -2,98 +2,63 @@ export const mcatOrganSysPart1Data = {
   topicSlug: 'mcat-organ-systems-mcat',
   sections: [
     {
-      id: 'mcat-1-intro',
+      id: 'os1-intro',
       type: 'text' as const,
-      content: `
-# 🏥 Organ Systems
+      content: `# Organ Systems for the MCAT
 
 **Part 1 of 7 — Cardiovascular System**
 
-Heart: 4 chambers; right side pumps to lungs (pulmonary), left side pumps to body (systemic).
+### Heart Structure
 
-Cardiac cycle: SA node pacemaker, atrial contraction, AV node delay, ventricular contraction.
-      `
+- 4 chambers: RA → RV → Lungs → LA → LV → Body
+- Right side: deoxygenated blood to lungs (pulmonary circulation)
+- Left side: oxygenated blood to body (systemic circulation)
+- LV has thickest walls (pumps against systemic resistance)
+
+### Cardiac Cycle
+
+| Phase | AV Valves | Semilunar Valves | What happens |
+|-------|-----------|-----------------|-------------|
+| Atrial systole | Open | Closed | Atria contract, blood into ventricles |
+| Ventricular systole | Closed (S1) | Open | Ventricles contract, blood into arteries |
+| Diastole | Open | Closed (S2) | Ventricles relax, fill with blood |
+
+### Key Equations
+
+$$\\text{Cardiac Output} = \\text{HR} \\times \\text{Stroke Volume}$$
+
+$$\\text{Blood Pressure} = \\text{CO} \\times \\text{Total Peripheral Resistance}$$
+
+### Blood Vessel Types
+
+- **Arteries**: Thick walls, elastic, carry blood FROM heart
+- **Veins**: Thin walls, valves, carry blood TO heart
+- **Capillaries**: Single cell thick, site of exchange`
     },
     {
-      id: 'mcat-1-quiz1',
+      id: 'os1-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Cardiovascular** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in cardiovascular system?',
-            options: [
-              'Heart: 4 chambers; right side pumps to lungs (pulmonary), left side pumps to body (systemic)',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'During exercise, cardiac output increases primarily through:',
+            options: ['Increased heart rate AND increased stroke volume', 'Increased heart rate only', 'Decreased peripheral resistance only', 'Increased blood vessel diameter only'],
             correctAnswer: 0,
-            explanation: 'Heart: 4 chambers; right side pumps to lungs (pulmonary), left side pumps to body (systemic)'
+            explanation: 'CO = HR $\\times$ SV. During exercise, sympathetic activation increases both HR (via SA node stimulation) and SV (via increased contractility and venous return). Both contribute to the ~4-5x increase in CO during vigorous exercise.'
           }
         ]
       }
     },
     {
-      id: 'mcat-1-detail',
+      id: 'os1-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Blood pressure: systolic/diastolic; regulated by baroreceptors, RAAS, and ANP.
+      content: `### Key Takeaways — Part 1
 
-**MCAT Tip:** Blood components: RBCs (O2 transport), WBCs (immunity), platelets (clotting), plasma (fluid).
-      `
-    },
-    {
-      id: 'mcat-1-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Bio/Biochem related to cardiovascular system?',
-            options: [
-              'Blood pressure: systolic/diastolic; regulated by baroreceptors, RAAS, and ANP',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Blood pressure: systolic/diastolic; regulated by baroreceptors, RAAS, and ANP'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-1-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Heart',
-            options: ['Blood pressure: systolic/diastolic; regulated by baroreceptors, RAAS, and ANP.', 'SA node pacemaker, atrial contraction, AV node delay, ventricular contraction.', 'Blood components: RBCs (O2 transport), WBCs (immunity), platelets (clotting), plasma (fluid).', '4 chambers; right side pumps to lungs (pulmonary), left side pumps to body (systemic).']
-          },
-          {
-            label: 'Cardiac cycle',
-            options: ['Blood pressure: systolic/diastolic; regulated by baroreceptors, RAAS, and ANP.', '4 chambers; right side pumps to lungs (pulmonary), left side pumps to body (systemic).', 'SA node pacemaker, atrial contraction, AV node delay, ventricular contraction.', 'Blood components: RBCs (O2 transport), WBCs (immunity), platelets (clotting), plasma (fluid).']
-          },
-          {
-            label: 'Key Insight',
-            options: ['Blood pressure: systolic/diastolic; regulated by baroreceptors, RAAS, and ANP.', '4 chambers; right side pumps to lungs (pulmonary), left side pumps to body (systemic).', 'SA node pacemaker, atrial contraction, AV node delay, ventricular contraction.', 'Blood components: RBCs (O2 transport), WBCs (immunity), platelets (clotting), plasma (fluid).']
-          }
-        ],
-        correctAnswers: ['4 chambers; right side pumps to lungs (pulmonary), left side pumps to body (systemic).', 'SA node pacemaker, atrial contraction, AV node delay, ventricular contraction.', 'Blood pressure: systolic/diastolic; regulated by baroreceptors, RAAS, and ANP.'],
-        hint1: 'Think about what each concept specifically describes in Organ Systems.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Organ Systems describes a specific idea. Heart: 4 chambers; right side pumps to lungs (pulmonary), left side pumps to body (systemic). Cardiac cycle: SA node pacemaker, atrial contraction, AV node delay, ventricular contraction. Key Insight: Blood pressure: systolic/diastolic; regulated by baroreceptors, RAAS, and ANP.'
-      }
+- CO = HR $\\times$ SV; BP = CO $\\times$ TPR
+- Left ventricle = thickest (systemic pressure)
+- S1 = AV valves close (lub); S2 = semilunar valves close (dub)
+- Capillaries = site of gas/nutrient exchange (largest total cross-sectional area)`
     }
   ]
-}
+};

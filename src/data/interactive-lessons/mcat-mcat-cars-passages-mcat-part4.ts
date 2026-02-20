@@ -2,98 +2,63 @@ export const mcatCarsPsgPart4Data = {
   topicSlug: 'mcat-cars-passages-mcat',
   sections: [
     {
-      id: 'mcat-4-intro',
+      id: 'cp4-intro',
       type: 'text' as const,
-      content: `
-# Arts & Culture Passages
+      content: `# CARS Passage Types
 
-**Part 4 of 7 — Arts & Culture Passages**
+**Part 4 of 7 — Comparative & Multiple-Perspective Passages**
 
-Art, music, architecture, and literary criticism passages appear on CARS.
+### Tracking Multiple Viewpoints
 
-Focus on the authors evaluation: what makes this work significant?.
-      `
+Many CARS passages present 2-3 different perspectives on an issue.
+
+### Strategy: The Viewpoint Grid
+
+As you read, mentally track:
+
+| Aspect | Viewpoint A | Viewpoint B | Author |
+|--------|------------|------------|--------|
+| Main claim | ? | ? | ? |
+| Key evidence | ? | ? | ? |
+| Tone | ? | ? | ? |
+
+### Common Traps in Multi-Perspective Passages
+
+1. **Attribution errors**: Confusing who said what
+2. **Assuming agreement**: Just because the author discusses a view doesn't mean they endorse it
+3. **False balance**: The author may present both sides but clearly favor one
+4. **Missing the synthesis**: The author may combine elements of both views
+
+### Signal Phrases
+
+- "According to theorist X..." → This is X's view, NOT necessarily the author's
+- "While X argues... Y contends..." → Two competing views
+- "Although X has merit... the evidence suggests..." → Author is about to side with one view`
     },
     {
-      id: 'mcat-4-quiz1',
+      id: 'cp4-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Multiple Perspectives** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in arts & culture passages?',
-            options: [
-              'Art, music, architecture, and literary criticism passages appear on CARS',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'A passage states: "Smith argues that technology enhances creativity. However, this view overlooks the mounting evidence that passive screen time diminishes it." The author most likely:',
+            options: ['Disagrees with Smith — "overlooks" signals criticism of Smith\'s position', 'Agrees with Smith', 'Has no opinion', 'Is merely summarizing both views neutrally'],
             correctAnswer: 0,
-            explanation: 'Art, music, architecture, and literary criticism passages appear on CARS'
+            explanation: '"However" signals a counterpoint, and "overlooks" implies Smith is wrong or incomplete in their reasoning. The author is positioning against Smith.'
           }
         ]
       }
     },
     {
-      id: 'mcat-4-detail',
+      id: 'cp4-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Aesthetic arguments may be subjective — track the authors reasoning, not your own opinion.
+      content: `### Key Takeaways — Part 4
 
-**MCAT Tip:** These passages often explore cultural significance and historical context.
-      `
-    },
-    {
-      id: 'mcat-4-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT CARS related to arts & culture passages?',
-            options: [
-              'Aesthetic arguments may be subjective — track the authors reasoning, not your own opinion',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Aesthetic arguments may be subjective — track the authors reasoning, not your own opinion'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-4-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Focus on the authors evaluation',
-            options: ['what makes this work significant?.', 'Aesthetic arguments may be subjective — track the authors reasoning, not your own opinion.', 'Art, music, architecture, and literary criticism passages appear on CARS.', 'These passages often explore cultural significance and historical context.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['These passages often explore cultural significance and historical context.', 'Art, music, architecture, and literary criticism passages appear on CARS.', 'Aesthetic arguments may be subjective — track the authors reasoning, not your own opinion.', 'what makes this work significant?.']
-          },
-          {
-            label: 'MCAT Tip',
-            options: ['These passages often explore cultural significance and historical context.', 'what makes this work significant?.', 'Art, music, architecture, and literary criticism passages appear on CARS.', 'Aesthetic arguments may be subjective — track the authors reasoning, not your own opinion.']
-          }
-        ],
-        correctAnswers: ['what makes this work significant?.', 'Aesthetic arguments may be subjective — track the authors reasoning, not your own opinion.', 'These passages often explore cultural significance and historical context.'],
-        hint1: 'Think about what each concept specifically describes in Arts & Culture Passages.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Arts & Culture Passages describes a specific idea. Focus on the authors evaluation: what makes this work significant?. Key Insight: Aesthetic arguments may be subjective — track the authors reasoning, not your own opinion. MCAT Tip: These passages often explore cultural significance and historical context.'
-      }
+- Track WHO says WHAT — the #1 skill for multi-perspective passages
+- "According to X" ≠ the author's view
+- Watch for signal phrases that reveal the author's actual position
+- Attribution errors are the most common trap in these passages`
     }
   ]
-}
+};

@@ -2,98 +2,67 @@ export const mcatGenChemPart3Data = {
   topicSlug: 'mcat-general-chemistry-mcat',
   sections: [
     {
-      id: 'mcat-3-intro',
+      id: 'gc3-intro',
       type: 'text' as const,
-      content: `
-# Stoichiometry & Solutions
+      content: `# General Chemistry for the MCAT
 
-**Part 3 of 7 — Stoichiometry & Solutions**
+**Part 3 of 7 — Stoichiometry, Solutions & Concentration**
 
-Molarity (M) = moles of solute / liters of solution — the most common concentration unit on the MCAT.
+### Key Formulas
 
-Dilution: M1V1 = M2V2 — moles of solute remain constant.
-      `
+$$\\text{Molarity (M)} = \\frac{\\text{mol solute}}{\\text{L solution}}$$
+
+$$\\text{Dilution: } M_1V_1 = M_2V_2$$
+
+$$\\text{Molality (m)} = \\frac{\\text{mol solute}}{\\text{kg solvent}}$$
+
+### Colligative Properties
+
+$$\\Delta T_b = K_b \\cdot m \\cdot i \\qquad \\Delta T_f = K_f \\cdot m \\cdot i$$
+
+where $i$ = van't Hoff factor (number of particles in solution)
+
+- $\\text{NaCl}$: $i = 2$ (Na$^+$ + Cl$^-$)
+- $\\text{CaCl}_2$: $i = 3$ (Ca$^{2+}$ + 2Cl$^-$)
+- Glucose: $i = 1$ (molecular, doesn't dissociate)
+
+### Solubility Rules (MCAT Favorites)
+
+- All Na$^+$, K$^+$, NH$_4^+$ salts are soluble
+- All nitrates (NO$_3^-$) and acetates are soluble
+- Most halides soluble EXCEPT AgCl, PbCl$_2$
+- Most sulfates soluble EXCEPT BaSO$_4$, PbSO$_4$`
     },
     {
-      id: 'mcat-3-quiz1',
+      id: 'gc3-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Solutions & Stoichiometry** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in stoichiometry & solutions?',
-            options: [
-              'Molarity (M) = moles of solute / liters of solution — the most common concentration unit on the MCAT',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'A researcher dissolves 0.1 mol NaCl in 500 mL of solution. What is the molarity of Na$^+$ ions?',
+            options: ['0.2 M', '0.1 M', '0.4 M', '0.05 M'],
             correctAnswer: 0,
-            explanation: 'Molarity (M) = moles of solute / liters of solution — the most common concentration unit on the MCAT'
+            explanation: 'M = 0.1 mol / 0.5 L = 0.2 M for NaCl. Since NaCl fully dissociates, [Na$^+$] = 0.2 M and [Cl$^-$] = 0.2 M.'
+          },
+          {
+            question: 'Which 0.1 m aqueous solution has the LOWEST freezing point?',
+            options: ['$\\text{CaCl}_2$ ($i = 3$)', '$\\text{NaCl}$ ($i = 2$)', 'Glucose ($i = 1$)', '$\\text{KBr}$ ($i = 2$)'],
+            correctAnswer: 0,
+            explanation: '$\\Delta T_f = K_f \\cdot m \\cdot i$. CaCl$_2$ has the highest $i$ (3 particles), giving the greatest freezing point depression (lowest freezing point).'
           }
         ]
       }
     },
     {
-      id: 'mcat-3-detail',
+      id: 'gc3-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Limiting reagent: the reactant that runs out first determines the maximum product.
+      content: `### Key Takeaways — Part 3
 
-**MCAT Tip:** Percent yield = (actual yield / theoretical yield) x 100.
-      `
-    },
-    {
-      id: 'mcat-3-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Chem/Phys related to stoichiometry & solutions?',
-            options: [
-              'Limiting reagent: the reactant that runs out first determines the maximum product',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Limiting reagent: the reactant that runs out first determines the maximum product'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-3-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Dilution',
-            options: ['M1V1 = M2V2 — moles of solute remain constant.', 'Molarity (M) = moles of solute / liters of solution — the most common concentration unit on the MCAT.', 'Limiting reagent: the reactant that runs out first determines the maximum product.', 'Percent yield = (actual yield / theoretical yield) x 100.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['Percent yield = (actual yield / theoretical yield) x 100.', 'Molarity (M) = moles of solute / liters of solution — the most common concentration unit on the MCAT.', 'Limiting reagent: the reactant that runs out first determines the maximum product.', 'M1V1 = M2V2 — moles of solute remain constant.']
-          },
-          {
-            label: 'MCAT Tip',
-            options: ['Molarity (M) = moles of solute / liters of solution — the most common concentration unit on the MCAT.', 'Percent yield = (actual yield / theoretical yield) x 100.', 'M1V1 = M2V2 — moles of solute remain constant.', 'Limiting reagent: the reactant that runs out first determines the maximum product.']
-          }
-        ],
-        correctAnswers: ['M1V1 = M2V2 — moles of solute remain constant.', 'Limiting reagent: the reactant that runs out first determines the maximum product.', 'Percent yield = (actual yield / theoretical yield) x 100.'],
-        hint1: 'Think about what each concept specifically describes in Stoichiometry & Solutions.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Stoichiometry & Solutions describes a specific idea. Dilution: M1V1 = M2V2 — moles of solute remain constant. Key Insight: Limiting reagent: the reactant that runs out first determines the maximum product. MCAT Tip: Percent yield = (actual yield / theoretical yield) x 100.'
-      }
+- Molarity = mol/L solution; Molality = mol/kg solvent
+- Colligative properties depend on $i$ (number of dissolved particles)
+- $M_1V_1 = M_2V_2$ for dilutions
+- Know solubility rules: all alkali metals and nitrates are soluble`
     }
   ]
-}
+};

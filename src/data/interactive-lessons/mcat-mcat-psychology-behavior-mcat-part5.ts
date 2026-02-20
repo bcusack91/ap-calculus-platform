@@ -2,98 +2,66 @@ export const mcatPsychBehavPart5Data = {
   topicSlug: 'mcat-psychology-behavior-mcat',
   sections: [
     {
-      id: 'mcat-5-intro',
+      id: 'pb5-intro',
       type: 'text' as const,
-      content: `
-# Developmental Psychology
+      content: `# Psychology & Behavior for the MCAT
 
-**Part 5 of 7 — Developmental Psychology**
+**Part 5 of 7 — Personality & Psychological Disorders**
 
-Piagets stages: sensorimotor (0-2), preoperational (2-7), concrete operational (7-11), formal operational (11+).
+### Personality Theories
 
-Erikson: 8 psychosocial stages from trust vs mistrust to integrity vs despair.
-      `
+| Theory | Key Idea |
+|--------|----------|
+| **Psychoanalytic** (Freud) | Id (pleasure), Ego (reality), Superego (morality); unconscious drives |
+| **Humanistic** (Rogers, Maslow) | Self-actualization, unconditional positive regard |
+| **Trait** (Big Five) | Openness, Conscientiousness, Extraversion, Agreeableness, Neuroticism (OCEAN) |
+| **Social-cognitive** (Bandura) | Reciprocal determinism (behavior ↔ cognition ↔ environment) |
+| **Biological** | Temperament, genetics, brain structure |
+
+### Freud's Defense Mechanisms
+
+| Defense | Description | Example |
+|---------|-------------|---------|
+| Repression | Pushing threatening thoughts unconscious | Forgetting traumatic event |
+| Projection | Attributing own unacceptable feelings to others | Cheater accuses partner of cheating |
+| Displacement | Redirecting emotion to safer target | Angry at boss → kicks dog |
+| Rationalization | Logical excuse for unacceptable behavior | "I deserved to cheat — the test was unfair" |
+| Reaction formation | Acting opposite to true feelings | Being overly kind to someone you hate |
+| Sublimation | Channeling unacceptable impulses into acceptable ones | Aggression → contact sports |
+
+### Psychological Disorders
+
+| Disorder | Key Features |
+|----------|-------------|
+| Major Depressive Disorder | Persistent sadness, anhedonia, sleep/appetite changes |
+| Bipolar Disorder | Manic and depressive episodes |
+| Schizophrenia | Positive symptoms (hallucinations, delusions) + negative (flat affect, social withdrawal) |
+| Anxiety Disorders | GAD, panic, phobias, OCD, PTSD |`
     },
     {
-      id: 'mcat-5-quiz1',
+      id: 'pb5-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Personality & Disorders** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in developmental psychology?',
-            options: [
-              'Piagets stages: sensorimotor (0-2), preoperational (2-7), concrete operational (7-11), formal operational (11+)',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'A person who is extremely hostile unconsciously but acts overly friendly to everyone is demonstrating:',
+            options: ['Reaction formation — acting opposite to true unconscious feelings', 'Projection', 'Sublimation', 'Displacement'],
             correctAnswer: 0,
-            explanation: 'Piagets stages: sensorimotor (0-2), preoperational (2-7), concrete operational (7-11), formal operational (11+)'
+            explanation: 'Reaction formation involves behaving in the OPPOSITE way of one\'s true (threatening) feelings. Being overly kind when harboring hostility is the classic example. Contrast with sublimation (channeling into acceptable activity).'
           }
         ]
       }
     },
     {
-      id: 'mcat-5-detail',
+      id: 'pb5-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Kohlberg: preconventional (reward/punishment), conventional (social norms), postconventional (universal principles).
+      content: `### Key Takeaways — Part 5
 
-**MCAT Tip:** Attachment: Ainsworth — secure, anxious-avoidant, anxious-ambivalent, disorganized.
-      `
-    },
-    {
-      id: 'mcat-5-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Psych/Soc related to developmental psychology?',
-            options: [
-              'Kohlberg: preconventional (reward/punishment), conventional (social norms), postconventional (universal principles)',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Kohlberg: preconventional (reward/punishment), conventional (social norms), postconventional (universal principles)'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Piagets stages',
-            options: ['Attachment: Ainsworth — secure, anxious-avoidant, anxious-ambivalent, disorganized.', '8 psychosocial stages from trust vs mistrust to integrity vs despair.', 'Kohlberg: preconventional (reward/punishment), conventional (social norms), postconventional (universal principles).', 'sensorimotor (0-2), preoperational (2-7), concrete operational (7-11), formal operational (11+).']
-          },
-          {
-            label: 'Erikson',
-            options: ['sensorimotor (0-2), preoperational (2-7), concrete operational (7-11), formal operational (11+).', 'Attachment: Ainsworth — secure, anxious-avoidant, anxious-ambivalent, disorganized.', 'Kohlberg: preconventional (reward/punishment), conventional (social norms), postconventional (universal principles).', '8 psychosocial stages from trust vs mistrust to integrity vs despair.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['8 psychosocial stages from trust vs mistrust to integrity vs despair.', 'Attachment: Ainsworth — secure, anxious-avoidant, anxious-ambivalent, disorganized.', 'sensorimotor (0-2), preoperational (2-7), concrete operational (7-11), formal operational (11+).', 'Kohlberg: preconventional (reward/punishment), conventional (social norms), postconventional (universal principles).']
-          }
-        ],
-        correctAnswers: ['sensorimotor (0-2), preoperational (2-7), concrete operational (7-11), formal operational (11+).', '8 psychosocial stages from trust vs mistrust to integrity vs despair.', 'Kohlberg: preconventional (reward/punishment), conventional (social norms), postconventional (universal principles).'],
-        hint1: 'Think about what each concept specifically describes in Developmental Psychology.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Developmental Psychology describes a specific idea. Piagets stages: sensorimotor (0-2), preoperational (2-7), concrete operational (7-11), formal operational (11+). Erikson: 8 psychosocial stages from trust vs mistrust to integrity vs despair. Key Insight: Kohlberg: preconventional (reward/punishment), conventional (social norms), postconventional (universal principles).'
-      }
+- Big Five (OCEAN): Openness, Conscientiousness, Extraversion, Agreeableness, Neuroticism
+- Freud: Id (pleasure), Ego (reality), Superego (morality) + defense mechanisms
+- Schizophrenia: positive symptoms (additions) + negative symptoms (deficits)
+- Bandura: reciprocal determinism (person ↔ behavior ↔ environment)`
     }
   ]
-}
+};

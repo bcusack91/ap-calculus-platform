@@ -2,98 +2,65 @@ export const mcatCellBioPart5Data = {
   topicSlug: 'mcat-cell-biology-mcat',
   sections: [
     {
-      id: 'mcat-5-intro',
+      id: 'cb5-intro',
       type: 'text' as const,
-      content: `
-# Apoptosis & Regulation
+      content: `# Cell Biology for the MCAT
 
-**Part 5 of 7 — Apoptosis & Regulation**
+**Part 5 of 7 — Cell Signaling**
 
-Apoptosis: programmed cell death — caspase cascade leads to orderly cell dismantling.
+### Signal Transduction Pathway
 
-Intrinsic pathway: mitochondrial stress releases cytochrome c, activating caspase-9.
-      `
+$$\\text{Signal} \\to \\text{Receptor} \\to \\text{Transduction} \\to \\text{Response}$$
+
+### Types of Signaling
+
+| Type | Distance | Example |
+|------|----------|---------|
+| Endocrine | Long (via blood) | Insulin from pancreas |
+| Paracrine | Short (nearby cells) | Growth factors |
+| Autocrine | Self (same cell) | IL-2 in T cells |
+| Juxtacrine | Contact (cell-to-cell) | Notch signaling |
+
+### Receptor Types
+
+| Receptor | Location | Mechanism | Example |
+|----------|----------|-----------|---------|
+| G-protein coupled (GPCR) | Membrane | G-protein → 2nd messenger (cAMP, IP$_3$) | Epinephrine receptor |
+| Receptor tyrosine kinase (RTK) | Membrane | Dimerization → phosphorylation cascade | Insulin receptor |
+| Ligand-gated ion channel | Membrane | Ion flow | ACh receptor at NMJ |
+| Intracellular/Nuclear | Cytoplasm/nucleus | Direct gene activation | Steroid hormones |
+
+### Second Messengers
+
+- **cAMP**: Activated by adenylyl cyclase, activates PKA
+- **IP$_3$ / DAG**: Activated by phospholipase C
+- **Ca$^{2+}$**: Released from ER, activates many enzymes
+- **cGMP**: Activated by guanylyl cyclase`
     },
     {
-      id: 'mcat-5-quiz1',
+      id: 'cb5-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Cell Signaling** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in apoptosis & regulation?',
-            options: [
-              'Apoptosis: programmed cell death — caspase cascade leads to orderly cell dismantling',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'Steroid hormones (like testosterone) can directly activate genes because they:',
+            options: ['Are hydrophobic and cross the cell membrane to bind intracellular receptors', 'Bind to GPCRs on the cell surface', 'Are water-soluble', 'Use cAMP as a second messenger'],
             correctAnswer: 0,
-            explanation: 'Apoptosis: programmed cell death — caspase cascade leads to orderly cell dismantling'
+            explanation: 'Steroids are derived from cholesterol (lipid-soluble). They cross the membrane, bind cytoplasmic or nuclear receptors, and the hormone-receptor complex directly acts as a transcription factor.'
           }
         ]
       }
     },
     {
-      id: 'mcat-5-detail',
+      id: 'cb5-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Extrinsic pathway: death ligands (FasL, TNF) bind death receptors, activating caspase-8.
+      content: `### Key Takeaways — Part 5
 
-**MCAT Tip:** Cancer: loss of apoptosis regulation + gain of proliferation signals = uncontrolled growth.
-      `
-    },
-    {
-      id: 'mcat-5-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Bio/Biochem related to apoptosis & regulation?',
-            options: [
-              'Extrinsic pathway: death ligands (FasL, TNF) bind death receptors, activating caspase-8',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Extrinsic pathway: death ligands (FasL, TNF) bind death receptors, activating caspase-8'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Apoptosis',
-            options: ['programmed cell death — caspase cascade leads to orderly cell dismantling.', 'mitochondrial stress releases cytochrome c, activating caspase-9.', 'Extrinsic pathway: death ligands (FasL, TNF) bind death receptors, activating caspase-8.', 'Cancer: loss of apoptosis regulation + gain of proliferation signals = uncontrolled growth.']
-          },
-          {
-            label: 'Intrinsic pathway',
-            options: ['programmed cell death — caspase cascade leads to orderly cell dismantling.', 'Extrinsic pathway: death ligands (FasL, TNF) bind death receptors, activating caspase-8.', 'Cancer: loss of apoptosis regulation + gain of proliferation signals = uncontrolled growth.', 'mitochondrial stress releases cytochrome c, activating caspase-9.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['mitochondrial stress releases cytochrome c, activating caspase-9.', 'programmed cell death — caspase cascade leads to orderly cell dismantling.', 'Cancer: loss of apoptosis regulation + gain of proliferation signals = uncontrolled growth.', 'Extrinsic pathway: death ligands (FasL, TNF) bind death receptors, activating caspase-8.']
-          }
-        ],
-        correctAnswers: ['programmed cell death — caspase cascade leads to orderly cell dismantling.', 'mitochondrial stress releases cytochrome c, activating caspase-9.', 'Extrinsic pathway: death ligands (FasL, TNF) bind death receptors, activating caspase-8.'],
-        hint1: 'Think about what each concept specifically describes in Apoptosis & Regulation.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Apoptosis & Regulation describes a specific idea. Apoptosis: programmed cell death — caspase cascade leads to orderly cell dismantling. Intrinsic pathway: mitochondrial stress releases cytochrome c, activating caspase-9. Key Insight: Extrinsic pathway: death ligands (FasL, TNF) bind death receptors, activating caspase-8.'
-      }
+- Signal transduction: Signal → Receptor → Transduction → Response
+- GPCRs use G-proteins and second messengers (cAMP, IP$_3$, Ca$^{2+}$)
+- RTKs dimerize and auto-phosphorylate (insulin, growth factors)
+- Steroid hormones bypass membrane receptors — directly enter cell`
     }
   ]
-}
+};

@@ -2,98 +2,62 @@ export const mcatPhysMechPart3Data = {
   topicSlug: 'mcat-physics-mechanics-mcat',
   sections: [
     {
-      id: 'mcat-3-intro',
+      id: 'pm3-intro',
       type: 'text' as const,
-      content: `
-# Work, Energy & Power
+      content: `# Physics: Mechanics for the MCAT
 
 **Part 3 of 7 — Work, Energy & Power**
 
-Work = Fd cos(theta) — only the component of force along displacement does work.
+### Work-Energy Theorem
 
-Kinetic energy KE = (1/2)mv2; Work-energy theorem: Wnet = delta KE.
-      `
+$$W_{net} = \\Delta KE = \\frac{1}{2}mv^2 - \\frac{1}{2}mv_0^2$$
+
+$$W = Fd\\cos\\theta$$
+
+### Conservation of Energy
+
+$$KE_i + PE_i = KE_f + PE_f \\quad (\\text{if no non-conservative forces})$$
+
+- Kinetic energy: $KE = \\frac{1}{2}mv^2$
+- Gravitational PE: $PE = mgh$
+- Spring PE: $PE = \\frac{1}{2}kx^2$
+
+### Power
+
+$$P = \\frac{W}{t} = Fv$$
+
+Units: Watts (W) = J/s`
     },
     {
-      id: 'mcat-3-quiz1',
+      id: 'pm3-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Work & Energy** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in work, energy & power?',
-            options: [
-              'Work = Fd cos(theta) — only the component of force along displacement does work',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'A 2 kg ball is dropped from 5 m. Its speed just before hitting the ground is ($g = 10\\;\\text{m/s}^2$):',
+            options: ['10 m/s', '5 m/s', '100 m/s', '7.07 m/s'],
             correctAnswer: 0,
-            explanation: 'Work = Fd cos(theta) — only the component of force along displacement does work'
+            explanation: 'Conservation of energy: $mgh = \\frac{1}{2}mv^2 \\implies v = \\sqrt{2gh} = \\sqrt{2(10)(5)} = \\sqrt{100} = 10$ m/s. Mass cancels!'
+          },
+          {
+            question: 'A force of 100 N pushes a box 5 m at a 60° angle to the displacement. The work done is:',
+            options: ['250 J', '500 J', '433 J', '0 J'],
+            correctAnswer: 0,
+            explanation: '$W = Fd\\cos\\theta = 100(5)\\cos 60° = 500(0.5) = 250$ J.'
           }
         ]
       }
     },
     {
-      id: 'mcat-3-detail',
+      id: 'pm3-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Potential energy: gravitational PE = mgh; elastic PE = (1/2)kx2.
+      content: `### Key Takeaways — Part 3
 
-**MCAT Tip:** Conservation of energy: KE1 + PE1 = KE2 + PE2 (when no non-conservative forces).
-      `
-    },
-    {
-      id: 'mcat-3-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Chem/Phys related to work, energy & power?',
-            options: [
-              'Potential energy: gravitational PE = mgh; elastic PE = (1/2)kx2',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Potential energy: gravitational PE = mgh; elastic PE = (1/2)kx2'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-3-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Kinetic energy KE = (1/2)mv2; Work-energy theorem',
-            options: ['Potential energy: gravitational PE = mgh; elastic PE = (1/2)kx2.', 'Work = Fd cos(theta) — only the component of force along displacement does work.', 'Wnet = delta KE.', 'Conservation of energy: KE1 + PE1 = KE2 + PE2 (when no non-conservative forces).']
-          },
-          {
-            label: 'Key Insight',
-            options: ['Conservation of energy: KE1 + PE1 = KE2 + PE2 (when no non-conservative forces).', 'Wnet = delta KE.', 'Potential energy: gravitational PE = mgh; elastic PE = (1/2)kx2.', 'Work = Fd cos(theta) — only the component of force along displacement does work.']
-          },
-          {
-            label: 'MCAT Tip',
-            options: ['Wnet = delta KE.', 'Potential energy: gravitational PE = mgh; elastic PE = (1/2)kx2.', 'Conservation of energy: KE1 + PE1 = KE2 + PE2 (when no non-conservative forces).', 'Work = Fd cos(theta) — only the component of force along displacement does work.']
-          }
-        ],
-        correctAnswers: ['Wnet = delta KE.', 'Potential energy: gravitational PE = mgh; elastic PE = (1/2)kx2.', 'Conservation of energy: KE1 + PE1 = KE2 + PE2 (when no non-conservative forces).'],
-        hint1: 'Think about what each concept specifically describes in Work, Energy & Power.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Work, Energy & Power describes a specific idea. Kinetic energy KE = (1/2)mv2; Work-energy theorem: Wnet = delta KE. Key Insight: Potential energy: gravitational PE = mgh; elastic PE = (1/2)kx2. MCAT Tip: Conservation of energy: KE1 + PE1 = KE2 + PE2 (when no non-conservative forces).'
-      }
+- $W = Fd\\cos\\theta$: only the component of force parallel to displacement does work
+- Conservation of energy: $KE + PE = \\text{constant}$ (no friction/air resistance)
+- $v = \\sqrt{2gh}$ for an object dropped from height $h$ — memorize this shortcut
+- Power = Work/time = Force $\\times$ velocity`
     }
   ]
-}
+};

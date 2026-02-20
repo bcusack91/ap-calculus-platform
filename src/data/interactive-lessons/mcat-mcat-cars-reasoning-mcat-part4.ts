@@ -2,98 +2,64 @@ export const mcatCarsReasonPart4Data = {
   topicSlug: 'mcat-cars-reasoning-mcat',
   sections: [
     {
-      id: 'mcat-4-intro',
+      id: 'cr4-intro',
       type: 'text' as const,
-      content: `
-# Evaluating Evidence
+      content: `# CARS Logical Reasoning
 
-**Part 4 of 7 — Evaluating Evidence**
+**Part 4 of 7 — Strengthening & Weakening Arguments**
 
-Evaluate the quality of evidence: anecdotal vs. empirical, sample size, controls.
+### How to Strengthen an Argument
 
-Distinguish facts from opinions — the MCAT will test whether you can tell the difference.
-      `
+Add evidence/premises that make the conclusion MORE likely.
+- Provides supporting data
+- Eliminates alternative explanations
+- Reinforces an assumption
+
+### How to Weaken an Argument
+
+Add evidence/premises that make the conclusion LESS likely.
+- Provides contradicting data
+- Introduces alternative explanations
+- Undermines an assumption
+
+### The Process
+
+1. **Identify the argument's conclusion**
+2. **Identify the evidence/reasoning**
+3. **Find the gap** (assumption) between evidence and conclusion
+4. **The best strengthener bridges that gap; the best weakener widens it**
+
+### MCAT Example
+
+Argument: "City X reduced crime by installing more streetlights."
+
+- **Strengthener**: "Cities with similar demographics that didn't install lights saw no crime reduction" (eliminates alternative explanation)
+- **Weakener**: "City X also hired 200 new police officers during the same period" (introduces alternative explanation)`
     },
     {
-      id: 'mcat-4-quiz1',
+      id: 'cr4-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Strengthen/Weaken** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in evaluating evidence?',
-            options: [
-              'Evaluate the quality of evidence: anecdotal vs. empirical, sample size, controls',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'An author argues that meditation reduces anxiety based on a study where meditators reported less anxiety than non-meditators. Which would MOST weaken this argument?',
+            options: ['People who choose to meditate may have been less anxious to begin with (self-selection bias)', 'Meditation has existed for thousands of years', 'Some meditators also exercise regularly', 'Anxiety can be measured in multiple ways'],
             correctAnswer: 0,
-            explanation: 'Evaluate the quality of evidence: anecdotal vs. empirical, sample size, controls'
+            explanation: 'Self-selection bias provides an alternative explanation: the correlation may not be causal. Less anxious people might simply be more likely to try meditation. This directly undermines the argument\'s core assumption of causation.'
           }
         ]
       }
     },
     {
-      id: 'mcat-4-detail',
+      id: 'cr4-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Look for cherry-picking: does the author ignore contradictory evidence?.
+      content: `### Key Takeaways — Part 4
 
-**MCAT Tip:** Consider alternative explanations for the data presented.
-      `
-    },
-    {
-      id: 'mcat-4-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT CARS related to evaluating evidence?',
-            options: [
-              'Look for cherry-picking: does the author ignore contradictory evidence?',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Look for cherry-picking: does the author ignore contradictory evidence?'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-4-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Evaluate the quality of evidence',
-            options: ['Look for cherry-picking: does the author ignore contradictory evidence?.', 'Distinguish facts from opinions — the MCAT will test whether you can tell the difference.', 'anecdotal vs. empirical, sample size, controls.', 'Consider alternative explanations for the data presented.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['Distinguish facts from opinions — the MCAT will test whether you can tell the difference.', 'Look for cherry-picking: does the author ignore contradictory evidence?.', 'Consider alternative explanations for the data presented.', 'anecdotal vs. empirical, sample size, controls.']
-          },
-          {
-            label: 'MCAT Tip',
-            options: ['Distinguish facts from opinions — the MCAT will test whether you can tell the difference.', 'anecdotal vs. empirical, sample size, controls.', 'Look for cherry-picking: does the author ignore contradictory evidence?.', 'Consider alternative explanations for the data presented.']
-          }
-        ],
-        correctAnswers: ['anecdotal vs. empirical, sample size, controls.', 'Look for cherry-picking: does the author ignore contradictory evidence?.', 'Consider alternative explanations for the data presented.'],
-        hint1: 'Think about what each concept specifically describes in Evaluating Evidence.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Evaluating Evidence describes a specific idea. Evaluate the quality of evidence: anecdotal vs. empirical, sample size, controls. Key Insight: Look for cherry-picking: does the author ignore contradictory evidence?. MCAT Tip: Consider alternative explanations for the data presented.'
-      }
+- To strengthen: support assumptions, eliminate alternatives, add confirming evidence
+- To weaken: undermine assumptions, introduce alternatives, add contradicting evidence
+- Always identify the CONCLUSION and the GAP first
+- Best weakeners often provide alternative explanations`
     }
   ]
-}
+};

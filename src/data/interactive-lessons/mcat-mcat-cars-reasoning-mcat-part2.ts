@@ -2,98 +2,53 @@ export const mcatCarsReasonPart2Data = {
   topicSlug: 'mcat-cars-reasoning-mcat',
   sections: [
     {
-      id: 'mcat-2-intro',
+      id: 'cr2-intro',
       type: 'text' as const,
-      content: `
-# Strengthening & Weakening Arguments
+      content: `# CARS Logical Reasoning
 
-**Part 2 of 7 — Strengthening & Weakening Arguments**
+**Part 2 of 7 — Logical Fallacies**
 
-Strengthen: find evidence that supports the conclusion or fills a gap.
+### Common Fallacies Tested on CARS
 
-Weaken: find evidence that undermines a premise or provides a counterexample.
-      `
+| Fallacy | Description | Example |
+|---------|-------------|---------|
+| **Ad hominem** | Attacking the person, not the argument | "His theory is wrong because he's biased" |
+| **Straw man** | Misrepresenting someone's argument to attack it easily | "She wants slight reform" → "She wants to destroy everything" |
+| **False dichotomy** | Presenting only 2 options when more exist | "Either we ban it completely or accept all consequences" |
+| **Appeal to authority** | Using someone's status instead of evidence | "A celebrity says it works, so it must" |
+| **Circular reasoning** | Conclusion restates the premise | "It's true because it's a fact" |
+| **Hasty generalization** | Broad conclusion from limited data | "I met two rude people from X, so everyone from X is rude" |
+| **Post hoc** | Assuming cause because of timing | "I wore my lucky hat and won, so the hat caused the win" |
+| **Slippery slope** | Assuming chain reaction without evidence | "If we allow X, then Y and Z will inevitably follow" |
+
+### On the MCAT
+
+Questions may ask you to identify the flaw in reasoning, either in the passage or in an answer choice.`
     },
     {
-      id: 'mcat-2-quiz1',
+      id: 'cr2-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Logical Fallacies** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in strengthening & weakening arguments?',
-            options: [
-              'Strengthen: find evidence that supports the conclusion or fills a gap',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'A critic responds to a scientist\'s climate research by saying, "She receives government funding, so her conclusions cannot be trusted." This is an example of:',
+            options: ['Ad hominem — attacking the researcher\'s credibility rather than the evidence', 'Straw man', 'False dichotomy', 'Circular reasoning'],
             correctAnswer: 0,
-            explanation: 'Strengthen: find evidence that supports the conclusion or fills a gap'
+            explanation: 'Ad hominem attacks the person rather than addressing the argument\'s merits. The funding source doesn\'t automatically invalidate the research findings.'
           }
         ]
       }
     },
     {
-      id: 'mcat-2-detail',
+      id: 'cr2-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** The correct answer addresses the specific connection between evidence and conclusion.
+      content: `### Key Takeaways — Part 2
 
-**MCAT Tip:** Be careful of answers that are true but irrelevant to the argument.
-      `
-    },
-    {
-      id: 'mcat-2-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT CARS related to strengthening & weakening arguments?',
-            options: [
-              'The correct answer addresses the specific connection between evidence and conclusion',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'The correct answer addresses the specific connection between evidence and conclusion'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-2-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Strengthen',
-            options: ['find evidence that supports the conclusion or fills a gap.', 'find evidence that undermines a premise or provides a counterexample.', 'Be careful of answers that are true but irrelevant to the argument.', 'The correct answer addresses the specific connection between evidence and conclusion.']
-          },
-          {
-            label: 'Weaken',
-            options: ['The correct answer addresses the specific connection between evidence and conclusion.', 'find evidence that undermines a premise or provides a counterexample.', 'Be careful of answers that are true but irrelevant to the argument.', 'find evidence that supports the conclusion or fills a gap.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['The correct answer addresses the specific connection between evidence and conclusion.', 'Be careful of answers that are true but irrelevant to the argument.', 'find evidence that supports the conclusion or fills a gap.', 'find evidence that undermines a premise or provides a counterexample.']
-          }
-        ],
-        correctAnswers: ['find evidence that supports the conclusion or fills a gap.', 'find evidence that undermines a premise or provides a counterexample.', 'The correct answer addresses the specific connection between evidence and conclusion.'],
-        hint1: 'Think about what each concept specifically describes in Strengthening & Weakening Arguments.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Strengthening & Weakening Arguments describes a specific idea. Strengthen: find evidence that supports the conclusion or fills a gap. Weaken: find evidence that undermines a premise or provides a counterexample. Key Insight: The correct answer addresses the specific connection between evidence and conclusion.'
-      }
+- Know the major fallacies — they appear in CARS passages and questions
+- Ad hominem, straw man, and false dichotomy are most common
+- Questions may ask you to identify weaknesses in an argument
+- An argument can still have a true conclusion even if it uses a fallacy`
     }
   ]
-}
+};

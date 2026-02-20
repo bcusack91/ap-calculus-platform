@@ -2,98 +2,64 @@ export const mcatMicroPart1Data = {
   topicSlug: 'mcat-microbiology-mcat',
   sections: [
     {
-      id: 'mcat-1-intro',
+      id: 'mi1-intro',
       type: 'text' as const,
-      content: `
-# 🏥 Microbiology
+      content: `# Microbiology for the MCAT
 
-**Part 1 of 7 — Bacteria Structure & Function**
+**Part 1 of 7 — Bacteria: Structure & Classification**
 
-Bacteria: prokaryotic, cell wall (peptidoglycan), no membrane-bound organelles.
+### Bacterial Cell Structure
 
-Gram-positive: thick peptidoglycan, stains purple; Gram-negative: thin peptidoglycan + outer membrane, stains pink.
-      `
+| Structure | Function | Notes |
+|-----------|----------|-------|
+| Cell wall | Protection, shape | Peptidoglycan |
+| Plasma membrane | Selective barrier | No cholesterol |
+| Nucleoid | Circular DNA | No membrane-bound nucleus |
+| Ribosomes | Protein synthesis | 70S (target for antibiotics!) |
+| Plasmid | Accessory genes | Often carry antibiotic resistance |
+| Flagella | Motility | Chemotaxis |
+| Pili | Attachment, conjugation | Sex pili for DNA transfer |
+| Capsule | Immune evasion | Prevents phagocytosis |
+
+### Gram Stain Classification
+
+| Feature | Gram Positive | Gram Negative |
+|---------|-------------|-------------|
+| Stain color | Purple/Blue | Pink/Red |
+| Cell wall | Thick peptidoglycan | Thin peptidoglycan |
+| Outer membrane | No | Yes (contains LPS) |
+| LPS (endotoxin) | No | Yes |
+
+### LPS (Lipopolysaccharide) — HIGH YIELD
+
+- Found ONLY in Gram-negative outer membrane
+- Released when bacteria lyse → triggers massive immune response
+- Can cause septic shock, fever, disseminated intravascular coagulation (DIC)`
     },
     {
-      id: 'mcat-1-quiz1',
+      id: 'mi1-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Bacteria Structure** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in bacteria structure & function?',
-            options: [
-              'Bacteria: prokaryotic, cell wall (peptidoglycan), no membrane-bound organelles',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'A Gram-negative bacterium is more difficult to treat with certain antibiotics because:',
+            options: ['The outer membrane acts as an additional barrier, blocking drug entry', 'It has a thicker peptidoglycan layer', 'It lacks a cell wall', 'It has no ribosomes'],
             correctAnswer: 0,
-            explanation: 'Bacteria: prokaryotic, cell wall (peptidoglycan), no membrane-bound organelles'
+            explanation: 'Gram-negative bacteria have an outer membrane (with LPS) that many antibiotics cannot penetrate. This is why Gram-negative infections (E. coli, Pseudomonas) are often harder to treat than Gram-positive.'
           }
         ]
       }
     },
     {
-      id: 'mcat-1-detail',
+      id: 'mi1-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Bacterial shapes: cocci (spheres), bacilli (rods), spirilla (spirals).
+      content: `### Key Takeaways — Part 1
 
-**MCAT Tip:** Binary fission: asexual reproduction; doubling time can be as short as 20 minutes.
-      `
-    },
-    {
-      id: 'mcat-1-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Bio/Biochem related to bacteria structure & function?',
-            options: [
-              'Bacterial shapes: cocci (spheres), bacilli (rods), spirilla (spirals)',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Bacterial shapes: cocci (spheres), bacilli (rods), spirilla (spirals)'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-1-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Bacteria',
-            options: ['Bacterial shapes: cocci (spheres), bacilli (rods), spirilla (spirals).', 'prokaryotic, cell wall (peptidoglycan), no membrane-bound organelles.', 'Binary fission: asexual reproduction; doubling time can be as short as 20 minutes.', 'thick peptidoglycan, stains purple; Gram-negative: thin peptidoglycan + outer membrane, stains pink.']
-          },
-          {
-            label: 'Gram-positive',
-            options: ['Binary fission: asexual reproduction; doubling time can be as short as 20 minutes.', 'Bacterial shapes: cocci (spheres), bacilli (rods), spirilla (spirals).', 'prokaryotic, cell wall (peptidoglycan), no membrane-bound organelles.', 'thick peptidoglycan, stains purple; Gram-negative: thin peptidoglycan + outer membrane, stains pink.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['Bacterial shapes: cocci (spheres), bacilli (rods), spirilla (spirals).', 'thick peptidoglycan, stains purple; Gram-negative: thin peptidoglycan + outer membrane, stains pink.', 'Binary fission: asexual reproduction; doubling time can be as short as 20 minutes.', 'prokaryotic, cell wall (peptidoglycan), no membrane-bound organelles.']
-          }
-        ],
-        correctAnswers: ['prokaryotic, cell wall (peptidoglycan), no membrane-bound organelles.', 'thick peptidoglycan, stains purple; Gram-negative: thin peptidoglycan + outer membrane, stains pink.', 'Bacterial shapes: cocci (spheres), bacilli (rods), spirilla (spirals).'],
-        hint1: 'Think about what each concept specifically describes in Microbiology.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Microbiology describes a specific idea. Bacteria: prokaryotic, cell wall (peptidoglycan), no membrane-bound organelles. Gram-positive: thick peptidoglycan, stains purple; Gram-negative: thin peptidoglycan + outer membrane, stains pink. Key Insight: Bacterial shapes: cocci (spheres), bacilli (rods), spirilla (spirals).'
-      }
+- Gram-positive: thick peptidoglycan, no outer membrane (stains purple)
+- Gram-negative: thin peptidoglycan + outer membrane with LPS (stains pink)
+- LPS = endotoxin → fever, shock
+- Bacterial ribosomes = 70S (antibiotics target these)`
     }
   ]
-}
+};

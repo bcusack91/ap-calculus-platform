@@ -2,98 +2,60 @@ export const mcatPhysMechPart4Data = {
   topicSlug: 'mcat-physics-mechanics-mcat',
   sections: [
     {
-      id: 'mcat-4-intro',
+      id: 'pm4-intro',
       type: 'text' as const,
-      content: `
-# Momentum & Collisions
+      content: `# Physics: Mechanics for the MCAT
 
 **Part 4 of 7 — Momentum & Collisions**
 
-Momentum p = mv; Impulse J = F*delta-t = delta-p.
+### Linear Momentum
 
-Conservation of momentum: total momentum before = total momentum after (isolated system).
-      `
+$$\\vec{p} = m\\vec{v}$$
+
+### Impulse-Momentum Theorem
+
+$$\\vec{J} = \\vec{F}\\Delta t = \\Delta\\vec{p}$$
+
+### Conservation of Momentum
+
+$$m_1v_{1i} + m_2v_{2i} = m_1v_{1f} + m_2v_{2f}$$
+
+Always conserved in the absence of external forces!
+
+### Collision Types
+
+| Type | Momentum | Kinetic Energy |
+|------|----------|---------------|
+| Elastic | Conserved | Conserved |
+| Inelastic | Conserved | NOT conserved (some lost to heat/deformation) |
+| Perfectly inelastic | Conserved | Maximum KE loss (objects stick together) |
+
+For perfectly inelastic: $m_1v_1 + m_2v_2 = (m_1 + m_2)v_f$`
     },
     {
-      id: 'mcat-4-quiz1',
+      id: 'pm4-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Momentum** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in momentum & collisions?',
-            options: [
-              'Momentum p = mv; Impulse J = F*delta-t = delta-p',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'A 1000 kg car at 20 m/s collides with a stationary 2000 kg truck. They stick together. The final velocity is:',
+            options: ['6.67 m/s', '10 m/s', '20 m/s', '3.33 m/s'],
             correctAnswer: 0,
-            explanation: 'Momentum p = mv; Impulse J = F*delta-t = delta-p'
+            explanation: 'Perfectly inelastic: $m_1v_1 = (m_1 + m_2)v_f$. $1000(20) = 3000 \\cdot v_f \\implies v_f = 20{,}000/3000 \\approx 6.67$ m/s.'
           }
         ]
       }
     },
     {
-      id: 'mcat-4-detail',
+      id: 'pm4-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Elastic collision: both momentum and KE conserved; Inelastic: only momentum conserved.
+      content: `### Key Takeaways — Part 4
 
-**MCAT Tip:** Center of mass: x_cm = (m1x1 + m2x2)/(m1 + m2) — moves as if all mass is concentrated there.
-      `
-    },
-    {
-      id: 'mcat-4-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Chem/Phys related to momentum & collisions?',
-            options: [
-              'Elastic collision: both momentum and KE conserved; Inelastic: only momentum conserved',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Elastic collision: both momentum and KE conserved; Inelastic: only momentum conserved'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-4-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Conservation of momentum',
-            options: ['Momentum p = mv; Impulse J = F*delta-t = delta-p.', 'Elastic collision: both momentum and KE conserved; Inelastic: only momentum conserved.', 'Center of mass: x_cm = (m1x1 + m2x2)/(m1 + m2) — moves as if all mass is concentrated there.', 'total momentum before = total momentum after (isolated system).']
-          },
-          {
-            label: 'Key Insight',
-            options: ['Center of mass: x_cm = (m1x1 + m2x2)/(m1 + m2) — moves as if all mass is concentrated there.', 'total momentum before = total momentum after (isolated system).', 'Elastic collision: both momentum and KE conserved; Inelastic: only momentum conserved.', 'Momentum p = mv; Impulse J = F*delta-t = delta-p.']
-          },
-          {
-            label: 'MCAT Tip',
-            options: ['Elastic collision: both momentum and KE conserved; Inelastic: only momentum conserved.', 'total momentum before = total momentum after (isolated system).', 'Momentum p = mv; Impulse J = F*delta-t = delta-p.', 'Center of mass: x_cm = (m1x1 + m2x2)/(m1 + m2) — moves as if all mass is concentrated there.']
-          }
-        ],
-        correctAnswers: ['total momentum before = total momentum after (isolated system).', 'Elastic collision: both momentum and KE conserved; Inelastic: only momentum conserved.', 'Center of mass: x_cm = (m1x1 + m2x2)/(m1 + m2) — moves as if all mass is concentrated there.'],
-        hint1: 'Think about what each concept specifically describes in Momentum & Collisions.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Momentum & Collisions describes a specific idea. Conservation of momentum: total momentum before = total momentum after (isolated system). Key Insight: Elastic collision: both momentum and KE conserved; Inelastic: only momentum conserved. MCAT Tip: Center of mass: x_cm = (m1x1 + m2x2)/(m1 + m2) — moves as if all mass is concentrated there.'
-      }
+- Momentum is ALWAYS conserved in collisions (absent external forces)
+- KE is ONLY conserved in elastic collisions
+- Perfectly inelastic = objects stick together = maximum KE loss
+- Impulse ($F\\Delta t$) = change in momentum — explains why airbags work (increase $\\Delta t$)`
     }
   ]
-}
+};

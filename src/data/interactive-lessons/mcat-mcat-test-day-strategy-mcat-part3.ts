@@ -2,98 +2,67 @@ export const mcatTestDayPart3Data = {
   topicSlug: 'mcat-test-day-strategy-mcat',
   sections: [
     {
-      id: 'mcat-3-intro',
+      id: 'td3-intro',
       type: 'text' as const,
-      content: `
-# Section-by-Section Strategy
+      content: `# Test Day Strategy for the MCAT
 
-**Part 3 of 7 — Section-by-Section Strategy**
+**Part 3 of 7 — Study Planning**
 
-Chem/Phys: strong on calculations — practice dimensional analysis and unit conversion.
+### Recommended Study Timeline
 
-CARS: practice daily — 1 passage per day minimum; focus on timing and accuracy.
-      `
+| Duration | Approach | Best For |
+|----------|---------|----------|
+| 3 months | Intensive, full-time | Post-graduation, summer |
+| 6 months | Part-time alongside classes | During school year |
+| 12 months | Gradual, with classes | Early planners |
+
+### Three Phases of MCAT Prep
+
+**Phase 1 — Content Review** (~40% of study time):
+- Textbooks, videos, notes
+- Focus on understanding, not memorization
+- Build concept maps connecting topics
+
+**Phase 2 — Practice Problems** (~30% of study time):
+- Section-bank style questions
+- Timed passage practice
+- Identify weak areas
+
+**Phase 3 — Full-Length Exams** (~30% of study time):
+- Take at least 5-8 full-length practice exams
+- Simulate real conditions (timed, no interruptions)
+- Review EVERY question (right and wrong)
+
+### Spaced Repetition
+
+- Review material at increasing intervals (1 day, 3 days, 7 days, 14 days)
+- Anki flashcards for high-yield facts
+- Focus on weakest topics during review sessions`
     },
     {
-      id: 'mcat-3-quiz1',
+      id: 'td3-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Study Planning** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in section-by-section strategy?',
-            options: [
-              'Chem/Phys: strong on calculations — practice dimensional analysis and unit conversion',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'The most effective way to identify weak areas in MCAT prep is:',
+            options: ['Regular practice tests with thorough review of both correct AND incorrect answers', 'Reading textbooks cover to cover', 'Memorizing flashcards only', 'Studying the same topics repeatedly'],
             correctAnswer: 0,
-            explanation: 'Chem/Phys: strong on calculations — practice dimensional analysis and unit conversion'
+            explanation: 'Practice tests reveal what you actually know vs. what you think you know. Reviewing correct answers shows your reasoning was right. Reviewing incorrect answers identifies gaps. Both are equally important for improvement.'
           }
         ]
       }
     },
     {
-      id: 'mcat-3-detail',
+      id: 'td3-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Bio/Biochem: most content-heavy section — amino acids, metabolism, and organ systems are highest yield.
+      content: `### Key Takeaways — Part 3
 
-**MCAT Tip:** Psych/Soc: often the easiest to improve — terminology-heavy, less application.
-      `
-    },
-    {
-      id: 'mcat-3-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Strategy related to section-by-section strategy?',
-            options: [
-              'Bio/Biochem: most content-heavy section — amino acids, metabolism, and organ systems are highest yield',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Bio/Biochem: most content-heavy section — amino acids, metabolism, and organ systems are highest yield'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-3-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Chem/Phys',
-            options: ['strong on calculations — practice dimensional analysis and unit conversion.', 'practice daily — 1 passage per day minimum; focus on timing and accuracy.', 'Bio/Biochem: most content-heavy section — amino acids, metabolism, and organ systems are highest yield.', 'Psych/Soc: often the easiest to improve — terminology-heavy, less application.']
-          },
-          {
-            label: 'CARS',
-            options: ['strong on calculations — practice dimensional analysis and unit conversion.', 'Bio/Biochem: most content-heavy section — amino acids, metabolism, and organ systems are highest yield.', 'Psych/Soc: often the easiest to improve — terminology-heavy, less application.', 'practice daily — 1 passage per day minimum; focus on timing and accuracy.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['Psych/Soc: often the easiest to improve — terminology-heavy, less application.', 'Bio/Biochem: most content-heavy section — amino acids, metabolism, and organ systems are highest yield.', 'strong on calculations — practice dimensional analysis and unit conversion.', 'practice daily — 1 passage per day minimum; focus on timing and accuracy.']
-          }
-        ],
-        correctAnswers: ['strong on calculations — practice dimensional analysis and unit conversion.', 'practice daily — 1 passage per day minimum; focus on timing and accuracy.', 'Bio/Biochem: most content-heavy section — amino acids, metabolism, and organ systems are highest yield.'],
-        hint1: 'Think about what each concept specifically describes in Section-by-Section Strategy.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Section-by-Section Strategy describes a specific idea. Chem/Phys: strong on calculations — practice dimensional analysis and unit conversion. CARS: practice daily — 1 passage per day minimum; focus on timing and accuracy. Key Insight: Bio/Biochem: most content-heavy section — amino acids, metabolism, and organ systems are highest yield.'
-      }
+- Three phases: Content Review → Practice Problems → Full-Length Exams
+- Take 5-8 full-length practice exams under realistic conditions
+- Spaced repetition builds long-term retention
+- Review EVERY practice question — even ones you got right`
     }
   ]
-}
+};

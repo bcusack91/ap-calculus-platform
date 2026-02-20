@@ -2,98 +2,66 @@ export const mcatPhysElecPart5Data = {
   topicSlug: 'mcat-physics-electricity-mcat',
   sections: [
     {
-      id: 'mcat-5-intro',
+      id: 'pe5-intro',
       type: 'text' as const,
-      content: `
-# Nuclear Physics & Radioactivity
+      content: `# Physics: Electricity, Magnetism & Optics
 
-**Part 5 of 7 — Nuclear Physics & Radioactivity**
+**Part 5 of 7 — Lenses & Mirrors**
 
-Radioactive decay: alpha (He-4 nucleus), beta (electron or positron), gamma (photon).
+### Thin Lens / Mirror Equation
 
-Half-life: t1/2 = ln(2)/lambda; N(t) = N0*(1/2)^(t/t1/2).
-      `
+$$\\frac{1}{f} = \\frac{1}{d_o} + \\frac{1}{d_i}$$
+
+### Magnification
+
+$$m = -\\frac{d_i}{d_o} = \\frac{h_i}{h_o}$$
+
+- $|m| > 1$: enlarged; $|m| < 1$: reduced
+- $m > 0$: upright; $m < 0$: inverted
+
+### Sign Conventions
+
+| Quantity | Positive | Negative |
+|----------|----------|----------|
+| $d_o$ | Object on same side as incoming light | (Virtual object) |
+| $d_i$ | Image on opposite side (real) | Same side as object (virtual) |
+| $f$ | Converging (convex lens/concave mirror) | Diverging (concave lens/convex mirror) |
+
+### MCAT Must-Know
+
+- **Concave mirror / Convex lens**: Converging, $f > 0$
+- **Convex mirror / Concave lens**: Diverging, $f < 0$, always produces virtual, upright, reduced image`
     },
     {
-      id: 'mcat-5-quiz1',
+      id: 'pe5-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Lenses & Mirrors** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in nuclear physics & radioactivity?',
-            options: [
-              'Radioactive decay: alpha (He-4 nucleus), beta (electron or positron), gamma (photon)',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'An object is placed 30 cm from a converging lens with $f = 20$ cm. The image distance is:',
+            options: ['60 cm (real, inverted)', '12 cm', '-60 cm', '10 cm'],
             correctAnswer: 0,
-            explanation: 'Radioactive decay: alpha (He-4 nucleus), beta (electron or positron), gamma (photon)'
+            explanation: '$1/f = 1/d_o + 1/d_i \\implies 1/20 = 1/30 + 1/d_i \\implies 1/d_i = 1/20 - 1/30 = 3/60 - 2/60 = 1/60$. So $d_i = 60$ cm (positive = real image, on opposite side of lens).'
+          },
+          {
+            question: 'A convex mirror always produces images that are:',
+            options: ['Virtual, upright, and reduced', 'Real, inverted, and enlarged', 'Virtual, inverted, and reduced', 'Real, upright, and enlarged'],
+            correctAnswer: 0,
+            explanation: 'Diverging optical elements (convex mirror, concave lens) ALWAYS produce virtual, upright, reduced images regardless of object position. This is a must-memorize fact.'
           }
         ]
       }
     },
     {
-      id: 'mcat-5-detail',
+      id: 'pe5-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Mass-energy equivalence: E = mc2 — mass defect converts to binding energy.
+      content: `### Key Takeaways — Part 5
 
-**MCAT Tip:** Nuclear fission splits heavy nuclei; fusion combines light nuclei — both release energy.
-      `
-    },
-    {
-      id: 'mcat-5-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Chem/Phys related to nuclear physics & radioactivity?',
-            options: [
-              'Mass-energy equivalence: E = mc2 — mass defect converts to binding energy',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Mass-energy equivalence: E = mc2 — mass defect converts to binding energy'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Radioactive decay',
-            options: ['Mass-energy equivalence: E = mc2 — mass defect converts to binding energy.', 'Nuclear fission splits heavy nuclei; fusion combines light nuclei — both release energy.', 'alpha (He-4 nucleus), beta (electron or positron), gamma (photon).', 't1/2 = ln(2)/lambda; N(t) = N0*(1/2)^(t/t1/2).']
-          },
-          {
-            label: 'Half-life',
-            options: ['t1/2 = ln(2)/lambda; N(t) = N0*(1/2)^(t/t1/2).', 'Mass-energy equivalence: E = mc2 — mass defect converts to binding energy.', 'alpha (He-4 nucleus), beta (electron or positron), gamma (photon).', 'Nuclear fission splits heavy nuclei; fusion combines light nuclei — both release energy.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['t1/2 = ln(2)/lambda; N(t) = N0*(1/2)^(t/t1/2).', 'alpha (He-4 nucleus), beta (electron or positron), gamma (photon).', 'Nuclear fission splits heavy nuclei; fusion combines light nuclei — both release energy.', 'Mass-energy equivalence: E = mc2 — mass defect converts to binding energy.']
-          }
-        ],
-        correctAnswers: ['alpha (He-4 nucleus), beta (electron or positron), gamma (photon).', 't1/2 = ln(2)/lambda; N(t) = N0*(1/2)^(t/t1/2).', 'Mass-energy equivalence: E = mc2 — mass defect converts to binding energy.'],
-        hint1: 'Think about what each concept specifically describes in Nuclear Physics & Radioactivity.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Nuclear Physics & Radioactivity describes a specific idea. Radioactive decay: alpha (He-4 nucleus), beta (electron or positron), gamma (photon). Half-life: t1/2 = ln(2)/lambda; N(t) = N0*(1/2)^(t/t1/2). Key Insight: Mass-energy equivalence: E = mc2 — mass defect converts to binding energy.'
-      }
+- $1/f = 1/d_o + 1/d_i$ — works for both lenses and mirrors
+- Diverging elements ($f < 0$): always virtual, upright, reduced
+- Sign of $d_i$ tells you real (+) vs virtual (−)
+- Sign of $m$ tells you inverted (−) vs upright (+)`
     }
   ]
-}
+};

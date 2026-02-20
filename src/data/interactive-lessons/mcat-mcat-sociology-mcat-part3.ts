@@ -2,98 +2,63 @@ export const mcatSociologyPart3Data = {
   topicSlug: 'mcat-sociology-mcat',
   sections: [
     {
-      id: 'mcat-3-intro',
+      id: 'so3-intro',
       type: 'text' as const,
-      content: `
-# Social Interaction & Self
+      content: `# Sociology for the MCAT
 
-**Part 3 of 7 — Social Interaction & Self**
+**Part 3 of 7 — Social Interaction & Groups**
 
-Symbolic interactionism: meaning is created through social interaction and shared symbols.
+### Types of Social Groups
 
-Dramaturgy (Goffman): life as a stage — front stage (public self) vs backstage (private self).
-      `
+| Type | Description | Example |
+|------|-------------|---------|
+| Primary group | Close, personal, long-term | Family, close friends |
+| Secondary group | Formal, task-oriented | Work colleagues, classmates |
+| In-group | Group you belong to | "Us" |
+| Out-group | Group you don't belong to | "Them" |
+| Reference group | Group you compare yourself to | Aspirational peers |
+
+### Group Dynamics
+
+| Concept | Description |
+|---------|-------------|
+| **Groupthink** | Group conformity overrides critical thinking |
+| **Social facilitation** | Performance improves on simple tasks with audience |
+| **Social loafing** | Individuals exert less effort in groups |
+| **Deindividuation** | Loss of self-awareness in groups → impulsive behavior |
+| **Bystander effect** | Less likely to help when others are present |
+
+### Social Roles
+
+- **Role**: Expected behaviors for a social position
+- **Role conflict**: Two roles with incompatible demands (doctor + parent)
+- **Role strain**: Tension within a SINGLE role (nurse: caregiving vs. efficiency)
+- **Dramaturgical theory** (Goffman): Life as performance — front stage (public) vs. back stage (private)`
     },
     {
-      id: 'mcat-3-quiz1',
+      id: 'so3-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Groups & Interaction** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in social interaction & self?',
-            options: [
-              'Symbolic interactionism: meaning is created through social interaction and shared symbols',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'A medical team makes a poor treatment decision because no one wants to disagree with the attending physician. This is:',
+            options: ['Groupthink — desire for group harmony suppresses dissenting opinions', 'Social loafing', 'Deindividuation', 'Bystander effect'],
             correctAnswer: 0,
-            explanation: 'Symbolic interactionism: meaning is created through social interaction and shared symbols'
+            explanation: 'Groupthink occurs when the desire for conformity/harmony overrides realistic appraisal. In medical settings, this is particularly dangerous — it can be combated by explicitly encouraging dissent and assigning a "devil\'s advocate" role.'
           }
         ]
       }
     },
     {
-      id: 'mcat-3-detail',
+      id: 'so3-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Looking-glass self (Cooley): self-concept based on how we think others perceive us.
+      content: `### Key Takeaways — Part 3
 
-**MCAT Tip:** Social identity theory (Tajfel): in-group favoritism and out-group discrimination.
-      `
-    },
-    {
-      id: 'mcat-3-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Psych/Soc related to social interaction & self?',
-            options: [
-              'Looking-glass self (Cooley): self-concept based on how we think others perceive us',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Looking-glass self (Cooley): self-concept based on how we think others perceive us'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-3-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Symbolic interactionism',
-            options: ['Looking-glass self (Cooley): self-concept based on how we think others perceive us.', 'meaning is created through social interaction and shared symbols.', 'life as a stage — front stage (public self) vs backstage (private self).', 'Social identity theory (Tajfel): in-group favoritism and out-group discrimination.']
-          },
-          {
-            label: 'Dramaturgy (Goffman)',
-            options: ['Social identity theory (Tajfel): in-group favoritism and out-group discrimination.', 'meaning is created through social interaction and shared symbols.', 'life as a stage — front stage (public self) vs backstage (private self).', 'Looking-glass self (Cooley): self-concept based on how we think others perceive us.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['Social identity theory (Tajfel): in-group favoritism and out-group discrimination.', 'meaning is created through social interaction and shared symbols.', 'Looking-glass self (Cooley): self-concept based on how we think others perceive us.', 'life as a stage — front stage (public self) vs backstage (private self).']
-          }
-        ],
-        correctAnswers: ['meaning is created through social interaction and shared symbols.', 'life as a stage — front stage (public self) vs backstage (private self).', 'Looking-glass self (Cooley): self-concept based on how we think others perceive us.'],
-        hint1: 'Think about what each concept specifically describes in Social Interaction & Self.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Social Interaction & Self describes a specific idea. Symbolic interactionism: meaning is created through social interaction and shared symbols. Dramaturgy (Goffman): life as a stage — front stage (public self) vs backstage (private self). Key Insight: Looking-glass self (Cooley): self-concept based on how we think others perceive us.'
-      }
+- Primary groups = close/emotional. Secondary groups = formal/task-oriented.
+- Groupthink: conformity suppresses critical thinking (dangerous in medicine!)
+- Role conflict = between roles. Role strain = within one role.
+- Goffman: front stage (public performance) vs. backstage (private self)`
     }
   ]
-}
+};

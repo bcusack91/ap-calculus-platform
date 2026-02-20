@@ -2,98 +2,66 @@ export const mcatBiochemPart3Data = {
   topicSlug: 'mcat-biochemistry-foundations-mcat',
   sections: [
     {
-      id: 'mcat-3-intro',
+      id: 'bc3-intro',
       type: 'text' as const,
-      content: `
-# Carbohydrate Metabolism
+      content: `# Biochemistry Foundations
 
-**Part 3 of 7 — Carbohydrate Metabolism**
+**Part 3 of 7 — Glycolysis & Gluconeogenesis**
 
-Glycolysis: glucose to 2 pyruvate, net 2 ATP + 2 NADH (cytoplasm, anaerobic).
+### Glycolysis (Cytoplasm, Anaerobic)
 
-Pyruvate dehydrogenase: pyruvate to acetyl-CoA + CO2 + NADH (mitochondrial matrix).
-      `
+$$\\text{Glucose} \\xrightarrow{10\\text{ steps}} 2\\text{ Pyruvate}$$
+
+**Net yield per glucose**: 2 ATP, 2 NADH, 2 Pyruvate
+
+### Key Regulatory Enzymes (HIGH YIELD!)
+
+| Enzyme | Step | Activated by | Inhibited by |
+|--------|------|-------------|-------------|
+| Hexokinase | Glucose → G6P | — | G6P (product inhibition) |
+| PFK-1 | F6P → F-1,6-BP | AMP, fructose-2,6-BP | ATP, citrate |
+| Pyruvate kinase | PEP → Pyruvate | F-1,6-BP | ATP, alanine |
+
+**PFK-1 is the PRIMARY rate-limiting step of glycolysis!**
+
+### Pyruvate Fates
+
+| Condition | Pathway | Product |
+|-----------|---------|---------|
+| Aerobic | Pyruvate dehydrogenase | Acetyl-CoA → TCA |
+| Anaerobic (muscle) | Lactate dehydrogenase | Lactate (regenerates NAD$^+$) |
+| Anaerobic (yeast) | Pyruvate decarboxylase | Ethanol + CO$_2$ |`
     },
     {
-      id: 'mcat-3-quiz1',
+      id: 'bc3-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Glycolysis** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in carbohydrate metabolism?',
-            options: [
-              'Glycolysis: glucose to 2 pyruvate, net 2 ATP + 2 NADH (cytoplasm, anaerobic)',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'A cell is exposed to high levels of ATP and citrate. The DIRECT effect on glycolysis is:',
+            options: ['PFK-1 is inhibited, slowing glycolysis', 'Hexokinase is activated', 'Pyruvate kinase is activated', 'Glycolysis speeds up'],
             correctAnswer: 0,
-            explanation: 'Glycolysis: glucose to 2 pyruvate, net 2 ATP + 2 NADH (cytoplasm, anaerobic)'
+            explanation: 'Both ATP and citrate are allosteric inhibitors of PFK-1, the rate-limiting enzyme. This signals that the cell has plenty of energy and TCA intermediates.'
+          },
+          {
+            question: 'During vigorous exercise, muscle cells produce lactate primarily to:',
+            options: ['Regenerate NAD$^+$ to continue glycolysis', 'Produce more ATP', 'Feed into the TCA cycle', 'Prevent acidosis'],
+            correctAnswer: 0,
+            explanation: 'Lactate dehydrogenase converts pyruvate → lactate while oxidizing NADH → NAD$^+$. The regenerated NAD$^+$ is needed for glyceraldehyde-3-P dehydrogenase (step 6) to keep glycolysis running anaerobically.'
           }
         ]
       }
     },
     {
-      id: 'mcat-3-detail',
+      id: 'bc3-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Citric acid cycle (Krebs): acetyl-CoA to 2 CO2 + 3 NADH + 1 FADH2 + 1 GTP per turn.
+      content: `### Key Takeaways — Part 3
 
-**MCAT Tip:** Gluconeogenesis: essentially reverse glycolysis with 4 bypass enzymes — occurs in liver.
-      `
-    },
-    {
-      id: 'mcat-3-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Chem/Phys related to carbohydrate metabolism?',
-            options: [
-              'Citric acid cycle (Krebs): acetyl-CoA to 2 CO2 + 3 NADH + 1 FADH2 + 1 GTP per turn',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Citric acid cycle (Krebs): acetyl-CoA to 2 CO2 + 3 NADH + 1 FADH2 + 1 GTP per turn'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-3-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Glycolysis',
-            options: ['pyruvate to acetyl-CoA + CO2 + NADH (mitochondrial matrix).', 'Citric acid cycle (Krebs): acetyl-CoA to 2 CO2 + 3 NADH + 1 FADH2 + 1 GTP per turn.', 'glucose to 2 pyruvate, net 2 ATP + 2 NADH (cytoplasm, anaerobic).', 'Gluconeogenesis: essentially reverse glycolysis with 4 bypass enzymes — occurs in liver.']
-          },
-          {
-            label: 'Pyruvate dehydrogenase',
-            options: ['Gluconeogenesis: essentially reverse glycolysis with 4 bypass enzymes — occurs in liver.', 'pyruvate to acetyl-CoA + CO2 + NADH (mitochondrial matrix).', 'glucose to 2 pyruvate, net 2 ATP + 2 NADH (cytoplasm, anaerobic).', 'Citric acid cycle (Krebs): acetyl-CoA to 2 CO2 + 3 NADH + 1 FADH2 + 1 GTP per turn.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['glucose to 2 pyruvate, net 2 ATP + 2 NADH (cytoplasm, anaerobic).', 'Citric acid cycle (Krebs): acetyl-CoA to 2 CO2 + 3 NADH + 1 FADH2 + 1 GTP per turn.', 'Gluconeogenesis: essentially reverse glycolysis with 4 bypass enzymes — occurs in liver.', 'pyruvate to acetyl-CoA + CO2 + NADH (mitochondrial matrix).']
-          }
-        ],
-        correctAnswers: ['glucose to 2 pyruvate, net 2 ATP + 2 NADH (cytoplasm, anaerobic).', 'pyruvate to acetyl-CoA + CO2 + NADH (mitochondrial matrix).', 'Citric acid cycle (Krebs): acetyl-CoA to 2 CO2 + 3 NADH + 1 FADH2 + 1 GTP per turn.'],
-        hint1: 'Think about what each concept specifically describes in Carbohydrate Metabolism.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Carbohydrate Metabolism describes a specific idea. Glycolysis: glucose to 2 pyruvate, net 2 ATP + 2 NADH (cytoplasm, anaerobic). Pyruvate dehydrogenase: pyruvate to acetyl-CoA + CO2 + NADH (mitochondrial matrix). Key Insight: Citric acid cycle (Krebs): acetyl-CoA to 2 CO2 + 3 NADH + 1 FADH2 + 1 GTP per turn.'
-      }
+- Glycolysis: glucose → 2 pyruvate + 2 ATP + 2 NADH (cytoplasm)
+- PFK-1 is the key regulatory enzyme — know its activators and inhibitors
+- Lactate production regenerates NAD$^+$ for anaerobic glycolysis to continue
+- Gluconeogenesis bypasses the 3 irreversible steps with different enzymes`
     }
   ]
-}
+};

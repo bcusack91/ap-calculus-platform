@@ -2,98 +2,61 @@ export const mcatSciPassagePart3Data = {
   topicSlug: 'mcat-science-passage-strategy-mcat',
   sections: [
     {
-      id: 'mcat-3-intro',
+      id: 'sp3-intro',
       type: 'text' as const,
-      content: `
-# Experimental Design
+      content: `# Science Passage Strategy for the MCAT
 
 **Part 3 of 7 — Experimental Design**
 
-Control group: baseline for comparison; Experimental group: receives the treatment.
+### Key Experimental Components
 
-Positive control: expected to produce a result (validates the assay); Negative control: expected to produce no result.
-      `
+| Component | Definition | Example |
+|-----------|-----------|---------|
+| **Independent variable (IV)** | What the researcher manipulates | Drug dosage |
+| **Dependent variable (DV)** | What is measured | Blood pressure |
+| **Control group** | No treatment / standard treatment | Placebo group |
+| **Experimental group** | Receives treatment | Drug group |
+| **Confounding variable** | Uncontrolled factor that could explain results | Age differences between groups |
+
+### Types of Studies
+
+| Type | Description | Strength |
+|------|-------------|---------|
+| Randomized controlled trial (RCT) | Random assignment, intervention, control | Gold standard for causation |
+| Cohort study | Follow groups over time | Good for rare exposures |
+| Case-control study | Compare cases vs. controls (retrospective) | Good for rare diseases |
+| Cross-sectional | Snapshot at one time point | Quick, shows associations |
+
+### Validity & Reliability
+
+- **Internal validity**: Can you conclude cause-and-effect? (controlled confounders)
+- **External validity**: Can you generalize to broader population?
+- **Reliability**: Reproducibility — same results with repeated testing`
     },
     {
-      id: 'mcat-3-quiz1',
+      id: 'sp3-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Experimental Design** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in experimental design?',
-            options: [
-              'Control group: baseline for comparison; Experimental group: receives the treatment',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'A study finds that coffee drinkers have lower rates of depression, but coffee drinkers also exercise more. Exercise is a:',
+            options: ['Confounding variable — it could explain the association instead of coffee itself', 'Dependent variable', 'Independent variable', 'Control variable'],
             correctAnswer: 0,
-            explanation: 'Control group: baseline for comparison; Experimental group: receives the treatment'
+            explanation: 'Exercise is a confounding variable because it\'s associated with both the exposure (coffee drinking) and the outcome (depression) and could be the real cause of the observed association. This limits internal validity.'
           }
         ]
       }
     },
     {
-      id: 'mcat-3-detail',
+      id: 'sp3-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Randomization and blinding reduce bias in experiments.
+      content: `### Key Takeaways — Part 3
 
-**MCAT Tip:** Statistical significance (p < 0.05): the result is unlikely due to chance alone.
-      `
-    },
-    {
-      id: 'mcat-3-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Strategy related to experimental design?',
-            options: [
-              'Randomization and blinding reduce bias in experiments',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Randomization and blinding reduce bias in experiments'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-3-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Control group',
-            options: ['Statistical significance (p < 0.05): the result is unlikely due to chance alone.', 'expected to produce a result (validates the assay); Negative control: expected to produce no result.', 'Randomization and blinding reduce bias in experiments.', 'baseline for comparison; Experimental group: receives the treatment.']
-          },
-          {
-            label: 'Positive control',
-            options: ['expected to produce a result (validates the assay); Negative control: expected to produce no result.', 'Statistical significance (p < 0.05): the result is unlikely due to chance alone.', 'baseline for comparison; Experimental group: receives the treatment.', 'Randomization and blinding reduce bias in experiments.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['Statistical significance (p < 0.05): the result is unlikely due to chance alone.', 'Randomization and blinding reduce bias in experiments.', 'baseline for comparison; Experimental group: receives the treatment.', 'expected to produce a result (validates the assay); Negative control: expected to produce no result.']
-          }
-        ],
-        correctAnswers: ['baseline for comparison; Experimental group: receives the treatment.', 'expected to produce a result (validates the assay); Negative control: expected to produce no result.', 'Randomization and blinding reduce bias in experiments.'],
-        hint1: 'Think about what each concept specifically describes in Experimental Design.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Experimental Design describes a specific idea. Control group: baseline for comparison; Experimental group: receives the treatment. Positive control: expected to produce a result (validates the assay); Negative control: expected to produce no result. Key Insight: Randomization and blinding reduce bias in experiments.'
-      }
+- IV = manipulated. DV = measured. Confounders = uncontrolled alternatives.
+- RCTs are gold standard for causation. Observational studies show associations only.
+- Internal validity = cause-and-effect confidence. External validity = generalizability.
+- ALWAYS look for confounding variables in MCAT passages`
     }
   ]
-}
+};

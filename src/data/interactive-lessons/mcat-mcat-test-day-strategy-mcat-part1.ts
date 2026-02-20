@@ -2,98 +2,59 @@ export const mcatTestDayPart1Data = {
   topicSlug: 'mcat-test-day-strategy-mcat',
   sections: [
     {
-      id: 'mcat-1-intro',
+      id: 'td1-intro',
       type: 'text' as const,
-      content: `
-# 🏥 Test Day Strategy
+      content: `# Test Day Strategy for the MCAT
 
-**Part 1 of 7 — MCAT Format & Scoring**
+**Part 1 of 7 — MCAT Structure & Timing**
 
-4 sections: Chem/Phys (59Q, 95 min), CARS (53Q, 90 min), Bio/Biochem (59Q, 95 min), Psych/Soc (59Q, 95 min).
+### MCAT Exam Structure
 
-Total: 230 questions in ~6 hours 15 minutes (with breaks).
-      `
+| Section | Questions | Time | Time per Question |
+|---------|----------|------|------------------|
+| **Chem/Phys** (CP) | 59 | 95 min | ~1.6 min |
+| Break | — | 10 min | — |
+| **CARS** | 53 | 90 min | ~1.7 min |
+| Break | — | 30 min | — |
+| **Bio/Biochem** (BB) | 59 | 95 min | ~1.6 min |
+| Break | — | 10 min | — |
+| **Psych/Soc** (PS) | 59 | 95 min | ~1.6 min |
+
+**Total**: 230 questions, 6 hours 15 minutes (test time), ~7.5 hours total (with breaks)
+
+### Scoring
+
+- Each section: 118-132 (midpoint 125)
+- Total: 472-528 (midpoint 500)
+- Scaled score based on percentile
+- **508**: ~75th percentile (competitive for most MD schools)
+- **515**: ~90th percentile (competitive for top schools)
+- **520+**: ~97th percentile (elite)`
     },
     {
-      id: 'mcat-1-quiz1',
+      id: 'td1-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**MCAT Structure** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in mcat format & scoring?',
-            options: [
-              '4 sections: Chem/Phys (59Q, 95 min), CARS (53Q, 90 min), Bio/Biochem (59Q, 95 min), Psych/Soc (59Q, 95 min)',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'The total number of questions on the MCAT is:',
+            options: ['230 questions across 4 sections', '200 questions', '300 questions', '180 questions'],
             correctAnswer: 0,
-            explanation: '4 sections: Chem/Phys (59Q, 95 min), CARS (53Q, 90 min), Bio/Biochem (59Q, 95 min), Psych/Soc (59Q, 95 min)'
+            explanation: 'CP: 59, CARS: 53, BB: 59, PS: 59 = 230 total questions. The exam takes about 7.5 hours including breaks. Knowing the structure reduces test-day anxiety.'
           }
         ]
       }
     },
     {
-      id: 'mcat-1-detail',
+      id: 'td1-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Scoring: each section 118-132, total 472-528; median ~500.
+      content: `### Key Takeaways — Part 1
 
-**MCAT Tip:** Optional breaks: 10 min after sections 1 and 3; 30-min lunch break after section 2.
-      `
-    },
-    {
-      id: 'mcat-1-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Strategy related to mcat format & scoring?',
-            options: [
-              'Scoring: each section 118-132, total 472-528; median ~500',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Scoring: each section 118-132, total 472-528; median ~500'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-1-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: '4 sections',
-            options: ['230 questions in ~6 hours 15 minutes (with breaks).', 'Optional breaks: 10 min after sections 1 and 3; 30-min lunch break after section 2.', 'Scoring: each section 118-132, total 472-528; median ~500.', 'Chem/Phys (59Q, 95 min), CARS (53Q, 90 min), Bio/Biochem (59Q, 95 min), Psych/Soc (59Q, 95 min).']
-          },
-          {
-            label: 'Total',
-            options: ['230 questions in ~6 hours 15 minutes (with breaks).', 'Chem/Phys (59Q, 95 min), CARS (53Q, 90 min), Bio/Biochem (59Q, 95 min), Psych/Soc (59Q, 95 min).', 'Scoring: each section 118-132, total 472-528; median ~500.', 'Optional breaks: 10 min after sections 1 and 3; 30-min lunch break after section 2.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['Optional breaks: 10 min after sections 1 and 3; 30-min lunch break after section 2.', 'Chem/Phys (59Q, 95 min), CARS (53Q, 90 min), Bio/Biochem (59Q, 95 min), Psych/Soc (59Q, 95 min).', '230 questions in ~6 hours 15 minutes (with breaks).', 'Scoring: each section 118-132, total 472-528; median ~500.']
-          }
-        ],
-        correctAnswers: ['Chem/Phys (59Q, 95 min), CARS (53Q, 90 min), Bio/Biochem (59Q, 95 min), Psych/Soc (59Q, 95 min).', '230 questions in ~6 hours 15 minutes (with breaks).', 'Scoring: each section 118-132, total 472-528; median ~500.'],
-        hint1: 'Think about what each concept specifically describes in Test Day Strategy.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Test Day Strategy describes a specific idea. 4 sections: Chem/Phys (59Q, 95 min), CARS (53Q, 90 min), Bio/Biochem (59Q, 95 min), Psych/Soc (59Q, 95 min). Total: 230 questions in ~6 hours 15 minutes (with breaks). Key Insight: Scoring: each section 118-132, total 472-528; median ~500.'
-      }
+- 4 sections: CP (59), CARS (53), BB (59), PS (59) = 230 questions
+- ~1.6-1.7 minutes per question — time management is critical
+- 508 = 75th %ile, 515 = 90th %ile, 520+ = 97th %ile
+- Take EVERY break — even 30 seconds of rest helps`
     }
   ]
-}
+};

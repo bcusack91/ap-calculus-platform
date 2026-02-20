@@ -2,94 +2,63 @@ export const mcatCarsPsgPart7Data = {
   topicSlug: 'mcat-cars-passages-mcat',
   sections: [
     {
-      id: 'mcat-7-intro',
+      id: 'cp7-intro',
       type: 'text' as const,
-      content: `
-# Review & MCAT Practice
+      content: `# CARS Passage Types
 
-**Part 7 of 7 — Review & MCAT Practice**
+**Part 7 of 7 — Passage Practice Principles**
 
-10 minutes per passage (9 passages x 10 min = 90 min total).
+### How to Practice CARS Effectively
 
-Spend ~4 minutes reading, ~6 minutes answering the ~6 questions.
-      `
+**The Review Process is More Important Than the Practice Itself**
+
+After completing each passage:
+
+### Step 1: Categorize the Passage
+- What type? (humanities, social science, ethics, etc.)
+- What was the main argument?
+- Was it easy, medium, or hard?
+
+### Step 2: Review EVERY Question
+- For questions you got RIGHT: Was it for the right reason?
+- For questions you got WRONG: What type of error?
+  - Misread the passage?
+  - Fell for a trap answer?
+  - Ran out of time?
+  - Confused who said what?
+
+### Step 3: Identify Patterns
+After 10+ passages, look for:
+- Which passage types are hardest for you?
+- Which question types do you miss most?
+- Are you making the same error repeatedly?
+
+### Step 4: Targeted Practice
+- If humanities passages are hard → read more philosophy and literary criticism
+- If inference questions are hard → practice finding the "one step beyond" the text
+- If timing is an issue → practice pacing with a stopwatch`
     },
     {
-      id: 'mcat-7-quiz1',
+      id: 'cp7-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**CARS Practice Strategy** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in review & mcat practice?',
-            options: [
-              '10 minutes per passage (9 passages x 10 min = 90 min total)',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'A student consistently misses "Reasoning Beyond the Text" questions but does well on comprehension questions. The most targeted improvement would be:',
+            options: ['Practice applying passage logic to new scenarios — the weak area is inference and application', 'Read passages more slowly', 'Focus on improving reading speed', 'Study more vocabulary'],
             correctAnswer: 0,
-            explanation: '10 minutes per passage (9 passages x 10 min = 90 min total)'
+            explanation: 'The student understands the passage (good comprehension) but struggles with extending ideas beyond the text. Targeted practice on inference and application questions will address this specific weakness.'
           }
         ]
       }
     },
     {
-      id: 'mcat-7-detail',
+      id: 'cp7-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** If stuck on a question for >90 seconds, flag it and move on.
+      content: `### CARS Passage Types — Complete! ✅
 
-**MCAT Tip:** Do all passages — there is no penalty for wrong answers, never leave blanks.
-      `
-    },
-    {
-      id: 'mcat-7-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT CARS related to review & mcat practice?',
-            options: [
-              'If stuck on a question for >90 seconds, flag it and move on',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'If stuck on a question for >90 seconds, flag it and move on'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-7-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Key Insight',
-            options: ['If stuck on a question for >90 seconds, flag it and move on.', 'Spend ~4 minutes reading, ~6 minutes answering the ~6 questions.', '10 minutes per passage (9 passages x 10 min = 90 min total).', 'Do all passages — there is no penalty for wrong answers, never leave blanks.']
-          },
-          {
-            label: 'MCAT Tip',
-            options: ['Do all passages — there is no penalty for wrong answers, never leave blanks.', '10 minutes per passage (9 passages x 10 min = 90 min total).', 'If stuck on a question for >90 seconds, flag it and move on.', 'Spend ~4 minutes reading, ~6 minutes answering the ~6 questions.']
-          }
-        ],
-        correctAnswers: ['If stuck on a question for >90 seconds, flag it and move on.', 'Do all passages — there is no penalty for wrong answers, never leave blanks.'],
-        hint1: 'Think about what each concept specifically describes in Review & MCAT Practice.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Review & MCAT Practice describes a specific idea. Key Insight: If stuck on a question for >90 seconds, flag it and move on. MCAT Tip: Do all passages — there is no penalty for wrong answers, never leave blanks.'
-      }
+The key to CARS improvement: consistent practice + thorough review. Know the passage types, identify your weaknesses, and target them specifically. Trust the process — CARS skills develop over months, not days.`
     }
   ]
-}
+};

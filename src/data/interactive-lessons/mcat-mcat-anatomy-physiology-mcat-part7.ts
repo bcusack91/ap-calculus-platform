@@ -2,98 +2,63 @@ export const mcatAnatPhysPart7Data = {
   topicSlug: 'mcat-anatomy-physiology-mcat',
   sections: [
     {
-      id: 'mcat-7-intro',
+      id: 'ap7-intro',
       type: 'text' as const,
-      content: `
-# Review & MCAT Practice
+      content: `# Anatomy & Physiology for the MCAT
 
-**Part 7 of 7 — Review & MCAT Practice**
+**Part 7 of 7 — Homeostasis & Integration**
 
-Cleavage: rapid mitotic divisions of zygote; morula, then blastocyst (inner cell mass + trophoblast).
+### Homeostasis
 
-Gastrulation: three germ layers form — ectoderm (skin, nervous system), mesoderm (muscle, bone, blood), endoderm (GI, lungs, liver).
-      `
+Maintenance of a stable internal environment despite external changes.
+
+**Negative feedback** (most common):
+- Response opposes the stimulus
+- Example: Blood glucose rises → insulin secreted → glucose drops → insulin stops
+
+**Positive feedback** (amplifying):
+- Response AMPLIFIES the stimulus
+- Examples: Oxytocin during labor, LH surge, blood clotting cascade
+
+### Acid-Base Balance
+
+$$\\text{pH} = -\\log[\\text{H}^+]$$
+
+| Condition | pH | Cause |
+|-----------|----|----|
+| Respiratory acidosis | Low | Hypoventilation (CO$_2$ retention) |
+| Respiratory alkalosis | High | Hyperventilation (CO$_2$ loss) |
+| Metabolic acidosis | Low | Excess acid (diabetic ketoacidosis) or bicarbonate loss |
+| Metabolic alkalosis | High | Excess bicarbonate or acid loss (vomiting) |
+
+### Compensation
+
+- Respiratory problems → kidneys compensate (slow, days)
+- Metabolic problems → lungs compensate (fast, minutes to hours)
+
+$$\\text{CO}_2 + \\text{H}_2\\text{O} \\rightleftharpoons \\text{H}_2\\text{CO}_3 \\rightleftharpoons \\text{H}^+ + \\text{HCO}_3^-$$`
     },
     {
-      id: 'mcat-7-quiz1',
+      id: 'ap7-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Homeostasis** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in review & mcat practice?',
-            options: [
-              'Cleavage: rapid mitotic divisions of zygote; morula, then blastocyst (inner cell mass + trophoblast)',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'A patient with uncontrolled diabetes develops ketoacidosis (metabolic acidosis). The body compensates by:',
+            options: ['Hyperventilation — blowing off CO$_2$ to raise blood pH (respiratory compensation)', 'Hypoventilation', 'Increasing ketone production', 'Raising insulin levels'],
             correctAnswer: 0,
-            explanation: 'Cleavage: rapid mitotic divisions of zygote; morula, then blastocyst (inner cell mass + trophoblast)'
+            explanation: 'Metabolic acidosis → lungs compensate by hyperventilating (Kussmaul breathing). Blowing off CO$_2$ shifts the equilibrium left, reducing H$^+$ and raising pH. This is fast but incomplete — treating the underlying cause is essential.'
           }
         ]
       }
     },
     {
-      id: 'mcat-7-detail',
+      id: 'ap7-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Neurulation: ectoderm folds to form neural tube (becomes CNS).
+      content: `### Anatomy & Physiology — Complete! ✅
 
-**MCAT Tip:** Organogenesis: germ layers differentiate into organs; teratogens can disrupt development.
-      `
-    },
-    {
-      id: 'mcat-7-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Bio/Biochem related to review & mcat practice?',
-            options: [
-              'Neurulation: ectoderm folds to form neural tube (becomes CNS)',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Neurulation: ectoderm folds to form neural tube (becomes CNS)'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-7-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Cleavage',
-            options: ['Organogenesis: germ layers differentiate into organs; teratogens can disrupt development.', 'three germ layers form — ectoderm (skin, nervous system), mesoderm (muscle, bone, blood), endoderm (GI, lungs, liver).', 'Neurulation: ectoderm folds to form neural tube (becomes CNS).', 'rapid mitotic divisions of zygote; morula, then blastocyst (inner cell mass + trophoblast).']
-          },
-          {
-            label: 'Gastrulation',
-            options: ['three germ layers form — ectoderm (skin, nervous system), mesoderm (muscle, bone, blood), endoderm (GI, lungs, liver).', 'Organogenesis: germ layers differentiate into organs; teratogens can disrupt development.', 'Neurulation: ectoderm folds to form neural tube (becomes CNS).', 'rapid mitotic divisions of zygote; morula, then blastocyst (inner cell mass + trophoblast).']
-          },
-          {
-            label: 'Key Insight',
-            options: ['rapid mitotic divisions of zygote; morula, then blastocyst (inner cell mass + trophoblast).', 'Neurulation: ectoderm folds to form neural tube (becomes CNS).', 'three germ layers form — ectoderm (skin, nervous system), mesoderm (muscle, bone, blood), endoderm (GI, lungs, liver).', 'Organogenesis: germ layers differentiate into organs; teratogens can disrupt development.']
-          }
-        ],
-        correctAnswers: ['rapid mitotic divisions of zygote; morula, then blastocyst (inner cell mass + trophoblast).', 'three germ layers form — ectoderm (skin, nervous system), mesoderm (muscle, bone, blood), endoderm (GI, lungs, liver).', 'Neurulation: ectoderm folds to form neural tube (becomes CNS).'],
-        hint1: 'Think about what each concept specifically describes in Review & MCAT Practice.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Review & MCAT Practice describes a specific idea. Cleavage: rapid mitotic divisions of zygote; morula, then blastocyst (inner cell mass + trophoblast). Gastrulation: three germ layers form — ectoderm (skin, nervous system), mesoderm (muscle, bone, blood), endoderm (GI, lungs, liver). Key Insight: Neurulation: ectoderm folds to form neural tube (becomes CNS).'
-      }
+Integration is key for the MCAT. Every organ system connects to others — the kidneys regulate blood pressure, the nervous system controls heart rate, hormones link everything. Think in systems and connections, not isolated facts.`
     }
   ]
-}
+};

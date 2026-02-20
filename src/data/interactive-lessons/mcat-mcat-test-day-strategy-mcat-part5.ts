@@ -2,98 +2,69 @@ export const mcatTestDayPart5Data = {
   topicSlug: 'mcat-test-day-strategy-mcat',
   sections: [
     {
-      id: 'mcat-5-intro',
+      id: 'td5-intro',
       type: 'text' as const,
-      content: `
-# Test Day Preparation
+      content: `# Test Day Strategy for the MCAT
 
-**Part 5 of 7 — Test Day Preparation**
+**Part 5 of 7 — Mental Stamina & Test Day Prep**
 
-Week before: light review, no new material, focus on rest and confidence.
+### Physical Preparation
 
-Night before: prepare materials, set alarms, get 8+ hours of sleep.
-      `
+| Area | Strategy |
+|------|---------|
+| **Sleep** | 7-8 hours for 2 weeks before (not just the night before) |
+| **Nutrition** | Eat a familiar, balanced breakfast (nothing new on test day) |
+| **Hydration** | Drink water during breaks, not too much during sections |
+| **Exercise** | Light exercise the day before (reduces anxiety) |
+| **Caffeine** | If you normally use it, use it. Don't start or stop on test day. |
+
+### Break Strategy
+
+| Break | Duration | Do This |
+|-------|----------|---------|
+| After CP | 10 min | Bathroom, snack, light stretching |
+| After CARS | 30 min | Full meal/snack, walk, reset mentally |
+| After BB | 10 min | Bathroom, snack, positive self-talk |
+
+### Managing Test Anxiety
+
+- **Before**: Deep breathing (4-7-8 method), visualization of success
+- **During**: If anxious, pause for 10 seconds, take 3 deep breaths
+- **Reframe**: "This is my opportunity to show what I know"
+- **Perspective**: One hard passage doesn't ruin your score — move on
+
+### The 30-Minute Mid-Exam Break
+
+This is the MOST IMPORTANT break:
+- Eat a real snack (protein + carbs: sandwich, trail mix, PB&J)
+- Walk around, stretch, go outside if possible
+- Do NOT think about CARS — it's done
+- Mentally reset for the second half`
     },
     {
-      id: 'mcat-5-quiz1',
+      id: 'td5-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Test Day Prep** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in test day preparation?',
-            options: [
-              'Week before: light review, no new material, focus on rest and confidence',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'The MOST important thing to do during the 30-minute break after CARS is:',
+            options: ['Eat a substantial snack and mentally reset for the second half', 'Review your CARS answers', 'Study flashcards for Bio/Biochem', 'Call a friend for reassurance'],
             correctAnswer: 0,
-            explanation: 'Week before: light review, no new material, focus on rest and confidence'
+            explanation: 'The 30-minute break is crucial for physical AND mental recovery. Eat (your brain needs glucose!), move around, and mentally let go of CARS. Reviewing past answers creates anxiety and studying more content at this point has diminishing returns.'
           }
         ]
       }
     },
     {
-      id: 'mcat-5-detail',
+      id: 'td5-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Bring: valid ID, confirmation email, snacks/drinks for breaks, layers for temperature.
+      content: `### Key Takeaways — Part 5
 
-**MCAT Tip:** During breaks: eat, hydrate, stretch, use the restroom — do NOT review material.
-      `
-    },
-    {
-      id: 'mcat-5-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Strategy related to test day preparation?',
-            options: [
-              'Bring: valid ID, confirmation email, snacks/drinks for breaks, layers for temperature',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Bring: valid ID, confirmation email, snacks/drinks for breaks, layers for temperature'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Week before',
-            options: ['During breaks: eat, hydrate, stretch, use the restroom — do NOT review material.', 'light review, no new material, focus on rest and confidence.', 'prepare materials, set alarms, get 8+ hours of sleep.', 'Bring: valid ID, confirmation email, snacks/drinks for breaks, layers for temperature.']
-          },
-          {
-            label: 'Night before',
-            options: ['Bring: valid ID, confirmation email, snacks/drinks for breaks, layers for temperature.', 'light review, no new material, focus on rest and confidence.', 'During breaks: eat, hydrate, stretch, use the restroom — do NOT review material.', 'prepare materials, set alarms, get 8+ hours of sleep.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['light review, no new material, focus on rest and confidence.', 'During breaks: eat, hydrate, stretch, use the restroom — do NOT review material.', 'prepare materials, set alarms, get 8+ hours of sleep.', 'Bring: valid ID, confirmation email, snacks/drinks for breaks, layers for temperature.']
-          }
-        ],
-        correctAnswers: ['light review, no new material, focus on rest and confidence.', 'prepare materials, set alarms, get 8+ hours of sleep.', 'Bring: valid ID, confirmation email, snacks/drinks for breaks, layers for temperature.'],
-        hint1: 'Think about what each concept specifically describes in Test Day Preparation.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Test Day Preparation describes a specific idea. Week before: light review, no new material, focus on rest and confidence. Night before: prepare materials, set alarms, get 8+ hours of sleep. Key Insight: Bring: valid ID, confirmation email, snacks/drinks for breaks, layers for temperature.'
-      }
+- Sleep and nutrition matter: prep your body for 2 weeks before the exam
+- Take EVERY break — especially the 30-minute mid-exam break
+- Eat during breaks (protein + carbs for sustained energy)
+- Don't review past sections during breaks — look forward, not backward`
     }
   ]
-}
+};

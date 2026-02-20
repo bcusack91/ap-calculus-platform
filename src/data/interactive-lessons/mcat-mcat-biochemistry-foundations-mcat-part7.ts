@@ -2,98 +2,59 @@ export const mcatBiochemPart7Data = {
   topicSlug: 'mcat-biochemistry-foundations-mcat',
   sections: [
     {
-      id: 'mcat-7-intro',
+      id: 'bc7-intro',
       type: 'text' as const,
-      content: `
-# Review & MCAT Practice
+      content: `# Biochemistry Foundations
 
-**Part 7 of 7 — Review & MCAT Practice**
+**Part 7 of 7 — Metabolic Regulation & Integration**
 
-Oxidative phosphorylation: ETC creates proton gradient; ATP synthase uses it to make ATP.
+### Fed vs. Fasting State
 
-NADH yields ~2.5 ATP; FADH2 yields ~1.5 ATP (via Complex I and II respectively).
-      `
+| State | Insulin | Glucagon | Active Pathways |
+|-------|---------|----------|----------------|
+| Fed | High | Low | Glycolysis, glycogenesis, lipogenesis, protein synthesis |
+| Fasting | Low | High | Gluconeogenesis, glycogenolysis, $\\beta$-oxidation, ketogenesis |
+
+### Key Regulatory Hormones
+
+- **Insulin**: promotes anabolism (storage). Activates PFK-1, pyruvate kinase, glycogen synthase.
+- **Glucagon**: promotes catabolism (mobilization). Activates glycogen phosphorylase, lipase.
+- **Epinephrine**: fight-or-flight. Similar to glucagon + increases heart rate.
+
+### Metabolic Integration
+
+- High ATP/NADH → inhibits TCA, glycolysis (feedback)
+- Acetyl-CoA activates pyruvate carboxylase (gluconeogenesis) and inhibits PDH
+- Malonyl-CoA (from fatty acid synthesis) inhibits CPT-I (blocks $\\beta$-oxidation)
+- You can't do fatty acid synthesis AND $\\beta$-oxidation simultaneously!`
     },
     {
-      id: 'mcat-7-quiz1',
+      id: 'bc7-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Metabolic Integration** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in review & mcat practice?',
-            options: [
-              'Oxidative phosphorylation: ETC creates proton gradient; ATP synthase uses it to make ATP',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'After a 24-hour fast, which metabolic pathway is MOST active in the liver?',
+            options: ['Gluconeogenesis', 'Glycolysis', 'Fatty acid synthesis', 'Glycogenesis'],
             correctAnswer: 0,
-            explanation: 'Oxidative phosphorylation: ETC creates proton gradient; ATP synthase uses it to make ATP'
+            explanation: 'After 24 hours, liver glycogen is depleted. Glucagon stimulates gluconeogenesis (making glucose from lactate, amino acids, glycerol) to maintain blood glucose for the brain.'
+          },
+          {
+            question: 'Insulin deficiency (Type 1 diabetes) leads to ketoacidosis because:',
+            options: ['Uncontrolled lipolysis floods the liver with fatty acids, producing excess ketone bodies', 'The liver cannot perform glycolysis', 'Excess glucose is converted to ketones', 'Muscle cells produce too much lactate'],
+            correctAnswer: 0,
+            explanation: 'Without insulin: uncontrolled lipolysis → excess fatty acids → hepatic $\\beta$-oxidation → excess acetyl-CoA → ketone bodies (acetoacetate, $\\beta$-hydroxybutyrate, acetone). These are acids that lower blood pH.'
           }
         ]
       }
     },
     {
-      id: 'mcat-7-detail',
+      id: 'bc7-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Complete glucose oxidation: ~30-32 ATP total (glycolysis + Krebs + ETC).
+      content: `### Biochemistry Foundations — Complete! ✅
 
-**MCAT Tip:** Chemiosmotic theory (Peter Mitchell): proton motive force drives ATP synthesis across inner mitochondrial membrane.
-      `
-    },
-    {
-      id: 'mcat-7-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Chem/Phys related to review & mcat practice?',
-            options: [
-              'Complete glucose oxidation: ~30-32 ATP total (glycolysis + Krebs + ETC)',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Complete glucose oxidation: ~30-32 ATP total (glycolysis + Krebs + ETC)'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-7-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Oxidative phosphorylation',
-            options: ['ETC creates proton gradient; ATP synthase uses it to make ATP.', 'Chemiosmotic theory (Peter Mitchell): proton motive force drives ATP synthesis across inner mitochondrial membrane.', 'NADH yields ~2.5 ATP; FADH2 yields ~1.5 ATP (via Complex I and II respectively).', 'Complete glucose oxidation: ~30-32 ATP total (glycolysis + Krebs + ETC).']
-          },
-          {
-            label: 'Key Insight',
-            options: ['NADH yields ~2.5 ATP; FADH2 yields ~1.5 ATP (via Complex I and II respectively).', 'ETC creates proton gradient; ATP synthase uses it to make ATP.', 'Complete glucose oxidation: ~30-32 ATP total (glycolysis + Krebs + ETC).', 'Chemiosmotic theory (Peter Mitchell): proton motive force drives ATP synthesis across inner mitochondrial membrane.']
-          },
-          {
-            label: 'MCAT Tip',
-            options: ['Chemiosmotic theory (Peter Mitchell): proton motive force drives ATP synthesis across inner mitochondrial membrane.', 'ETC creates proton gradient; ATP synthase uses it to make ATP.', 'NADH yields ~2.5 ATP; FADH2 yields ~1.5 ATP (via Complex I and II respectively).', 'Complete glucose oxidation: ~30-32 ATP total (glycolysis + Krebs + ETC).']
-          }
-        ],
-        correctAnswers: ['ETC creates proton gradient; ATP synthase uses it to make ATP.', 'Complete glucose oxidation: ~30-32 ATP total (glycolysis + Krebs + ETC).', 'Chemiosmotic theory (Peter Mitchell): proton motive force drives ATP synthesis across inner mitochondrial membrane.'],
-        hint1: 'Think about what each concept specifically describes in Review & MCAT Practice.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Review & MCAT Practice describes a specific idea. Oxidative phosphorylation: ETC creates proton gradient; ATP synthase uses it to make ATP. Key Insight: Complete glucose oxidation: ~30-32 ATP total (glycolysis + Krebs + ETC). MCAT Tip: Chemiosmotic theory (Peter Mitchell): proton motive force drives ATP synthesis across inner mitochondrial membrane.'
-      }
+Key themes: Fed state = insulin = anabolism. Fasting = glucagon = catabolism. Know how pathways are coordinated and regulated — the MCAT loves integrative metabolic questions.`
     }
   ]
-}
+};

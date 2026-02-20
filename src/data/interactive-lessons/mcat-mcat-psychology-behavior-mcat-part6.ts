@@ -2,98 +2,66 @@ export const mcatPsychBehavPart6Data = {
   topicSlug: 'mcat-psychology-behavior-mcat',
   sections: [
     {
-      id: 'mcat-6-intro',
+      id: 'pb6-intro',
       type: 'text' as const,
-      content: `
-# Personality & Disorders
+      content: `# Psychology & Behavior for the MCAT
 
-**Part 6 of 7 — Personality & Disorders**
+**Part 6 of 7 — Neuroscience & Biological Bases of Behavior**
 
-Big Five (OCEAN): openness, conscientiousness, extraversion, agreeableness, neuroticism.
+### Brain Regions
 
-Freud: id (pleasure), ego (reality), superego (morality); defense mechanisms (repression, projection, etc.).
-      `
+| Region | Functions |
+|--------|----------|
+| **Frontal lobe** | Executive function, planning, personality, motor cortex, Broca's area (speech production) |
+| **Parietal lobe** | Somatosensory cortex, spatial processing |
+| **Temporal lobe** | Auditory processing, Wernicke's area (language comprehension), memory |
+| **Occipital lobe** | Visual processing |
+| **Cerebellum** | Motor coordination, balance |
+| **Brainstem** | Vital functions (breathing, heart rate, sleep) |
+
+### Limbic System
+
+| Structure | Function |
+|-----------|----------|
+| **Hippocampus** | Memory formation (declarative/explicit) |
+| **Amygdala** | Emotion (especially fear) |
+| **Hypothalamus** | Homeostasis, hormones, 4 F's (fighting, fleeing, feeding, mating) |
+| **Thalamus** | Relay station for ALL senses EXCEPT smell |
+
+### Neurotransmitters & Behavior
+
+| NT | Effect | Clinical Connection |
+|----|--------|-------------------|
+| Dopamine | Reward, motivation, movement | Low: Parkinson's. High: Schizophrenia |
+| Serotonin | Mood, sleep, appetite | Low: Depression. Targeted by SSRIs |
+| Norepinephrine | Arousal, alertness | Fight-or-flight |
+| GABA | Inhibition | Low: Anxiety. Targeted by benzodiazepines |
+| Acetylcholine | Memory, muscle contraction | Low: Alzheimer's |`
     },
     {
-      id: 'mcat-6-quiz1',
+      id: 'pb6-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Neuroscience** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in personality & disorders?',
-            options: [
-              'Big Five (OCEAN): openness, conscientiousness, extraversion, agreeableness, neuroticism',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'A patient can understand speech perfectly but produces garbled, nonsensical output. The damaged area is most likely:',
+            options: ['Broca\'s area (frontal lobe) — responsible for speech PRODUCTION', 'Wernicke\'s area (temporal lobe)', 'Occipital lobe', 'Cerebellum'],
             correctAnswer: 0,
-            explanation: 'Big Five (OCEAN): openness, conscientiousness, extraversion, agreeableness, neuroticism'
+            explanation: 'Broca\'s area damage = Broca\'s aphasia (nonfluent): comprehension intact but speech production is slow, labored, agrammatic. Wernicke\'s damage = fluent but nonsensical speech with poor comprehension.'
           }
         ]
       }
     },
     {
-      id: 'mcat-6-detail',
+      id: 'pb6-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Psychological disorders: anxiety, mood, psychotic, personality, trauma-related.
+      content: `### Key Takeaways — Part 6
 
-**MCAT Tip:** DSM-5 classification: categorical diagnosis based on symptom criteria and duration.
-      `
-    },
-    {
-      id: 'mcat-6-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Psych/Soc related to personality & disorders?',
-            options: [
-              'Psychological disorders: anxiety, mood, psychotic, personality, trauma-related',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Psychological disorders: anxiety, mood, psychotic, personality, trauma-related'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-6-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Big Five (OCEAN)',
-            options: ['id (pleasure), ego (reality), superego (morality); defense mechanisms (repression, projection, etc.).', 'Psychological disorders: anxiety, mood, psychotic, personality, trauma-related.', 'openness, conscientiousness, extraversion, agreeableness, neuroticism.', 'DSM-5 classification: categorical diagnosis based on symptom criteria and duration.']
-          },
-          {
-            label: 'Freud',
-            options: ['Psychological disorders: anxiety, mood, psychotic, personality, trauma-related.', 'openness, conscientiousness, extraversion, agreeableness, neuroticism.', 'DSM-5 classification: categorical diagnosis based on symptom criteria and duration.', 'id (pleasure), ego (reality), superego (morality); defense mechanisms (repression, projection, etc.).']
-          },
-          {
-            label: 'Key Insight',
-            options: ['Psychological disorders: anxiety, mood, psychotic, personality, trauma-related.', 'id (pleasure), ego (reality), superego (morality); defense mechanisms (repression, projection, etc.).', 'openness, conscientiousness, extraversion, agreeableness, neuroticism.', 'DSM-5 classification: categorical diagnosis based on symptom criteria and duration.']
-          }
-        ],
-        correctAnswers: ['openness, conscientiousness, extraversion, agreeableness, neuroticism.', 'id (pleasure), ego (reality), superego (morality); defense mechanisms (repression, projection, etc.).', 'Psychological disorders: anxiety, mood, psychotic, personality, trauma-related.'],
-        hint1: 'Think about what each concept specifically describes in Personality & Disorders.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Personality & Disorders describes a specific idea. Big Five (OCEAN): openness, conscientiousness, extraversion, agreeableness, neuroticism. Freud: id (pleasure), ego (reality), superego (morality); defense mechanisms (repression, projection, etc.). Key Insight: Psychological disorders: anxiety, mood, psychotic, personality, trauma-related.'
-      }
+- Broca's = speech production (frontal). Wernicke's = comprehension (temporal).
+- Hippocampus = memory. Amygdala = fear/emotion. Thalamus = sensory relay (not smell).
+- Dopamine: reward + movement. Serotonin: mood. GABA: inhibition.
+- Low dopamine → Parkinson's. High dopamine → Schizophrenia.`
     }
   ]
-}
+};

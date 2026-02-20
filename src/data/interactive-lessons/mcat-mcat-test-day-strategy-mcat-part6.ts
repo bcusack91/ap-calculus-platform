@@ -2,98 +2,70 @@ export const mcatTestDayPart6Data = {
   topicSlug: 'mcat-test-day-strategy-mcat',
   sections: [
     {
-      id: 'mcat-6-intro',
+      id: 'td6-intro',
       type: 'text' as const,
-      content: `
-# Score Goals & Applications
+      content: `# Test Day Strategy for the MCAT
 
-**Part 6 of 7 — Score Goals & Applications**
+**Part 6 of 7 — Score Improvement & Practice Exam Analysis**
 
-Competitive scores: 510+ for MD, 505+ for DO, 515+ for top-25 schools.
+### How to Review Practice Exams
 
-Retake policy: can take 3 times per year, 4 times in 2 years, 7 times lifetime.
-      `
+For EVERY question (right and wrong), ask:
+
+1. **Why is the right answer right?** Understand the reasoning
+2. **Why is each wrong answer wrong?** Identify the trap
+3. **Did I use passage info or outside knowledge?** Know the question type
+4. **What content gap does this reveal?** Add to study list
+
+### Tracking Your Progress
+
+Keep a log for each practice exam:
+- **Score by section**: Identify strongest and weakest sections
+- **Score by topic**: Find specific content gaps (e.g., "I miss 60% of operon questions")
+- **Error type**: Content gap? Misread question? Ran out of time? Careless mistake?
+
+### Error Categories
+
+| Error Type | Fix |
+|-----------|-----|
+| Content gap | Study the topic, make flashcards |
+| Misread question | Practice reading question stems carefully |
+| Time pressure | Do timed passage practice |
+| Careless mistake | Slow down on "easy" questions, double-check |
+| Test anxiety | Practice under simulated conditions |
+
+### Score Plateaus
+
+If your score stops improving:
+- Focus on weakest topic areas (biggest point gains)
+- Do more practice passages, fewer content reviews
+- Analyze error patterns — are you making the same mistakes?
+- Take a day off — rest can improve performance`
     },
     {
-      id: 'mcat-6-quiz1',
+      id: 'td6-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Score Improvement** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in score goals & applications?',
-            options: [
-              'Competitive scores: 510+ for MD, 505+ for DO, 515+ for top-25 schools',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'You consistently get questions right when reviewing them calmly but miss them during timed practice. Your main issue is:',
+            options: ['Time pressure and test anxiety — practice more under timed, simulated conditions', 'A content gap', 'Bad luck', 'The questions are unfair'],
             correctAnswer: 0,
-            explanation: 'Competitive scores: 510+ for MD, 505+ for DO, 515+ for top-25 schools'
+            explanation: 'If you can answer correctly without time pressure, you have the knowledge. The issue is performance under pressure. The fix: more timed practice under real conditions, deep breathing strategies, and building familiarity with the time constraints.'
           }
         ]
       }
     },
     {
-      id: 'mcat-6-detail',
+      id: 'td6-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Schools see all scores — aim to take it once and do well.
+      content: `### Key Takeaways — Part 6
 
-**MCAT Tip:** Balanced scores matter: a 128 in each section (512) is generally viewed more favorably than a 132 + 124 + 128 + 128 (512).
-      `
-    },
-    {
-      id: 'mcat-6-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Strategy related to score goals & applications?',
-            options: [
-              'Schools see all scores — aim to take it once and do well',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Schools see all scores — aim to take it once and do well'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-6-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Competitive scores',
-            options: ['Balanced scores matter: a 128 in each section (512) is generally viewed more favorably than a 132 + 124 + 128 + 128 (512).', 'Schools see all scores — aim to take it once and do well.', 'can take 3 times per year, 4 times in 2 years, 7 times lifetime.', '510+ for MD, 505+ for DO, 515+ for top-25 schools.']
-          },
-          {
-            label: 'Retake policy',
-            options: ['Balanced scores matter: a 128 in each section (512) is generally viewed more favorably than a 132 + 124 + 128 + 128 (512).', '510+ for MD, 505+ for DO, 515+ for top-25 schools.', 'can take 3 times per year, 4 times in 2 years, 7 times lifetime.', 'Schools see all scores — aim to take it once and do well.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['Balanced scores matter: a 128 in each section (512) is generally viewed more favorably than a 132 + 124 + 128 + 128 (512).', 'Schools see all scores — aim to take it once and do well.', '510+ for MD, 505+ for DO, 515+ for top-25 schools.', 'can take 3 times per year, 4 times in 2 years, 7 times lifetime.']
-          }
-        ],
-        correctAnswers: ['510+ for MD, 505+ for DO, 515+ for top-25 schools.', 'can take 3 times per year, 4 times in 2 years, 7 times lifetime.', 'Schools see all scores — aim to take it once and do well.'],
-        hint1: 'Think about what each concept specifically describes in Score Goals & Applications.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Score Goals & Applications describes a specific idea. Competitive scores: 510+ for MD, 505+ for DO, 515+ for top-25 schools. Retake policy: can take 3 times per year, 4 times in 2 years, 7 times lifetime. Key Insight: Schools see all scores — aim to take it once and do well.'
-      }
+- Review EVERY practice question — right AND wrong
+- Categorize errors: content, misread, time pressure, careless, anxiety
+- Track scores by section AND topic to find specific gaps
+- At a plateau? Focus on weakest areas for biggest point gains`
     }
   ]
-}
+};

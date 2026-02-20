@@ -2,94 +2,65 @@ export const mcatPhysMechPart2Data = {
   topicSlug: 'mcat-physics-mechanics-mcat',
   sections: [
     {
-      id: 'mcat-2-intro',
+      id: 'pm2-intro',
       type: 'text' as const,
-      content: `
-# Forces & Newtons Laws
+      content: `# Physics: Mechanics for the MCAT
 
-**Part 2 of 7 — Forces & Newtons Laws**
+**Part 2 of 7 — Newton's Laws & Forces**
 
-F = ma — net force equals mass times acceleration (Newtons second law).
+### Newton's Three Laws
 
-Normal force is perpendicular to the contact surface; friction is parallel and opposes motion.
-      `
+1. **Inertia**: An object at rest stays at rest; an object in motion stays in motion (unless acted on by a net force)
+2. **$F = ma$**: Net force equals mass times acceleration
+3. **Action-Reaction**: Every force has an equal and opposite force (on a DIFFERENT object!)
+
+### Common MCAT Forces
+
+| Force | Formula | Direction |
+|-------|---------|-----------|
+| Weight | $W = mg$ | Downward |
+| Normal | $N$ (variable) | Perpendicular to surface |
+| Friction (static) | $f_s \\le \\mu_s N$ | Opposes potential motion |
+| Friction (kinetic) | $f_k = \\mu_k N$ | Opposes actual motion |
+| Tension | $T$ (variable) | Along the string |
+| Spring | $F = -kx$ | Restoring (toward equilibrium) |
+
+### Inclined Plane (MCAT FAVORITE)
+
+- Component along plane: $mg\\sin\\theta$
+- Component perpendicular: $mg\\cos\\theta$ (= Normal force if no other vertical forces)
+- Friction on incline: $f = \\mu mg\\cos\\theta$`
     },
     {
-      id: 'mcat-2-quiz1',
+      id: 'pm2-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Forces & Newton's Laws** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in forces & newtons laws?',
-            options: [
-              'F = ma — net force equals mass times acceleration (Newtons second law)',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'A 5 kg block sits on a frictionless 30° incline. The acceleration down the plane is ($g = 10\\;\\text{m/s}^2$):',
+            options: ['$5\\;\\text{m/s}^2$ ($g\\sin 30° = 10 \\times 0.5$)', '$10\\;\\text{m/s}^2$', '$8.66\\;\\text{m/s}^2$', '$2.5\\;\\text{m/s}^2$'],
             correctAnswer: 0,
-            explanation: 'F = ma — net force equals mass times acceleration (Newtons second law)'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-2-detail',
-      type: 'text' as const,
-      content: `
-**Key Insight:** Inclined plane: weight component along plane = mg sin(theta); perpendicular = mg cos(theta).
-
-**MCAT Tip:** Static friction (fs <= us*N) prevents motion; kinetic friction (fk = uk*N) acts during motion.
-      `
-    },
-    {
-      id: 'mcat-2-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Chem/Phys related to forces & newtons laws?',
-            options: [
-              'Inclined plane: weight component along plane = mg sin(theta); perpendicular = mg cos(theta)',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Inclined plane: weight component along plane = mg sin(theta); perpendicular = mg cos(theta)'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-2-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Key Insight',
-            options: ['Normal force is perpendicular to the contact surface; friction is parallel and opposes motion.', 'Inclined plane: weight component along plane = mg sin(theta); perpendicular = mg cos(theta).', 'Static friction (fs <= us*N) prevents motion; kinetic friction (fk = uk*N) acts during motion.', 'F = ma — net force equals mass times acceleration (Newtons second law).']
+            explanation: 'On a frictionless incline: $a = g\\sin\\theta = 10\\sin 30° = 10(0.5) = 5\\;\\text{m/s}^2$. Note: mass cancels out!'
           },
           {
-            label: 'MCAT Tip',
-            options: ['Normal force is perpendicular to the contact surface; friction is parallel and opposes motion.', 'F = ma — net force equals mass times acceleration (Newtons second law).', 'Static friction (fs <= us*N) prevents motion; kinetic friction (fk = uk*N) acts during motion.', 'Inclined plane: weight component along plane = mg sin(theta); perpendicular = mg cos(theta).']
+            question: 'An elevator accelerates upward at $2\\;\\text{m/s}^2$. A 60 kg person inside feels an apparent weight of:',
+            options: ['720 N', '600 N', '480 N', '588 N'],
+            correctAnswer: 0,
+            explanation: 'Apparent weight = $m(g + a) = 60(10 + 2) = 720$ N. Accelerating up increases apparent weight; accelerating down decreases it.'
           }
-        ],
-        correctAnswers: ['Inclined plane: weight component along plane = mg sin(theta); perpendicular = mg cos(theta).', 'Static friction (fs <= us*N) prevents motion; kinetic friction (fk = uk*N) acts during motion.'],
-        hint1: 'Think about what each concept specifically describes in Forces & Newtons Laws.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Forces & Newtons Laws describes a specific idea. Key Insight: Inclined plane: weight component along plane = mg sin(theta); perpendicular = mg cos(theta). MCAT Tip: Static friction (fs <= us*N) prevents motion; kinetic friction (fk = uk*N) acts during motion.'
+        ]
       }
+    },
+    {
+      id: 'pm2-summary',
+      type: 'text' as const,
+      content: `### Key Takeaways — Part 2
+
+- $F_{net} = ma$: always draw a free body diagram first!
+- Incline: $mg\\sin\\theta$ along the plane, $mg\\cos\\theta$ perpendicular
+- Elevator problems: apparent weight = $m(g \\pm a)$
+- Static friction is a maximum ($f_s \\le \\mu_s N$); kinetic friction is exact ($f_k = \\mu_k N$)`
     }
   ]
-}
+};

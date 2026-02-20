@@ -2,98 +2,67 @@ export const mcatCarsStratPart2Data = {
   topicSlug: 'mcat-cars-strategy-mcat',
   sections: [
     {
-      id: 'mcat-2-intro',
+      id: 'cs2-intro',
       type: 'text' as const,
-      content: `
-# Active Reading Techniques
+      content: `# CARS Strategy
 
 **Part 2 of 7 — Active Reading Techniques**
 
-Annotate mentally: identify the thesis, supporting arguments, and counterarguments.
+### How to Read CARS Passages
 
-Look for transition words: however, moreover, nevertheless, conversely — they signal shifts.
-      `
+**DO NOT** read passively! Active reading means:
+
+1. **Identify the main idea** of each paragraph as you go
+2. **Track the author's tone** (positive, negative, neutral, critical?)
+3. **Note structural shifts** ("However," "On the other hand," "Despite this")
+4. **Don't memorize details** — know WHERE things are, not WHAT they say
+
+### The Paragraph Map Strategy
+
+After reading each paragraph, mentally note:
+- P1: Main claim or thesis
+- P2: Supporting evidence or counterargument
+- P3: Author's response or new perspective
+- Continue...
+
+### Author's Main Idea (AMI)
+
+After finishing the passage, you should be able to state:
+- What is the MAIN argument?
+- Is the author FOR or AGAINST it?
+- What evidence supports the position?
+
+### Warning Signs of Passive Reading
+
+- You reached the end but can't summarize the passage
+- You're rereading sentences multiple times
+- You're highlighting everything (or nothing)
+- You don't know the author's position`
     },
     {
-      id: 'mcat-2-quiz1',
+      id: 'cs2-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Active Reading** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in active reading techniques?',
-            options: [
-              'Annotate mentally: identify the thesis, supporting arguments, and counterarguments',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'While reading a CARS passage, you encounter the phrase "Although critics have argued otherwise." This signals:',
+            options: ['A contrast — the author is about to present a counter or their own view', 'The author agrees with the critics', 'The passage is about literary criticism', 'The argument is about to end'],
             correctAnswer: 0,
-            explanation: 'Annotate mentally: identify the thesis, supporting arguments, and counterarguments'
+            explanation: '"Although" is a contrast word. The author is acknowledging an opposing view and will likely argue against it. Track these transitions — they reveal argument structure.'
           }
         ]
       }
     },
     {
-      id: 'mcat-2-detail',
+      id: 'cs2-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Note the authors tone: is it critical, supportive, neutral, ironic, or ambivalent?.
+      content: `### Key Takeaways — Part 2
 
-**MCAT Tip:** Paraphrase each paragraph in one sentence to ensure comprehension.
-      `
-    },
-    {
-      id: 'mcat-2-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT CARS related to active reading techniques?',
-            options: [
-              'Note the authors tone: is it critical, supportive, neutral, ironic, or ambivalent?',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Note the authors tone: is it critical, supportive, neutral, ironic, or ambivalent?'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-2-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Annotate mentally',
-            options: ['Note the authors tone: is it critical, supportive, neutral, ironic, or ambivalent?.', 'however, moreover, nevertheless, conversely — they signal shifts.', 'identify the thesis, supporting arguments, and counterarguments.', 'Paraphrase each paragraph in one sentence to ensure comprehension.']
-          },
-          {
-            label: 'Look for transition words',
-            options: ['Note the authors tone: is it critical, supportive, neutral, ironic, or ambivalent?.', 'however, moreover, nevertheless, conversely — they signal shifts.', 'Paraphrase each paragraph in one sentence to ensure comprehension.', 'identify the thesis, supporting arguments, and counterarguments.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['however, moreover, nevertheless, conversely — they signal shifts.', 'identify the thesis, supporting arguments, and counterarguments.', 'Note the authors tone: is it critical, supportive, neutral, ironic, or ambivalent?.', 'Paraphrase each paragraph in one sentence to ensure comprehension.']
-          }
-        ],
-        correctAnswers: ['identify the thesis, supporting arguments, and counterarguments.', 'however, moreover, nevertheless, conversely — they signal shifts.', 'Note the authors tone: is it critical, supportive, neutral, ironic, or ambivalent?.'],
-        hint1: 'Think about what each concept specifically describes in Active Reading Techniques.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Active Reading Techniques describes a specific idea. Annotate mentally: identify the thesis, supporting arguments, and counterarguments. Look for transition words: however, moreover, nevertheless, conversely — they signal shifts. Key Insight: Note the authors tone: is it critical, supportive, neutral, ironic, or ambivalent?.'
-      }
+- Read ACTIVELY: track main ideas, author's tone, and transitions
+- Know WHERE information is, not every detail
+- After each paragraph: what was the point?
+- After the passage: what is the Author's Main Idea?`
     }
   ]
-}
+};

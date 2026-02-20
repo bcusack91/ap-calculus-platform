@@ -2,94 +2,61 @@ export const mcatCarsPsgPart5Data = {
   topicSlug: 'mcat-cars-passages-mcat',
   sections: [
     {
-      id: 'mcat-5-intro',
+      id: 'cp5-intro',
       type: 'text' as const,
-      content: `
-# Comparative & Contrasting
+      content: `# CARS Passage Types
 
-**Part 5 of 7 — Comparative & Contrasting**
+**Part 5 of 7 — Ethics & Morality Passages**
 
-Some passages present two perspectives — identify areas of agreement and disagreement.
+### Common Ethics Topics on CARS
 
-Track each authors main claim and supporting evidence separately.
-      `
+- Medical ethics (autonomy, beneficence, justice)
+- Environmental ethics
+- Technology and privacy
+- Social justice and equality
+- Cultural relativism vs. universal morals
+
+### Key Ethical Frameworks
+
+| Framework | Core Idea | Key Thinker(s) |
+|-----------|-----------|----------------|
+| **Utilitarianism** | Greatest good for greatest number | Mill, Bentham |
+| **Deontology** | Duty-based; some actions are inherently right/wrong | Kant |
+| **Virtue Ethics** | Character matters; be a good person | Aristotle |
+| **Rights-Based** | Individual rights are paramount | Locke |
+| **Social Contract** | Society is based on implicit agreements | Hobbes, Rousseau |
+
+### Strategy for Ethics Passages
+
+- Identify WHICH ethical framework the author uses (or critiques)
+- Note when the author appeals to consequences vs. principles vs. character
+- Ethics passages often have a "but" — the author concedes one side before arguing the other
+- **Do NOT import your own ethical views** — answer based on the passage only!`
     },
     {
-      id: 'mcat-5-quiz1',
+      id: 'cp5-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Ethics Passages** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in comparative & contrasting?',
-            options: [
-              'Some passages present two perspectives — identify areas of agreement and disagreement',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'An author argues that a policy should be evaluated solely on whether it maximizes overall well-being. This aligns with:',
+            options: ['Utilitarianism', 'Deontology', 'Virtue ethics', 'Social contract theory'],
             correctAnswer: 0,
-            explanation: 'Some passages present two perspectives — identify areas of agreement and disagreement'
+            explanation: 'Utilitarianism judges actions by their consequences — specifically whether they maximize total well-being/happiness. Key phrase: "greatest good for the greatest number."'
           }
         ]
       }
     },
     {
-      id: 'mcat-5-detail',
+      id: 'cp5-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Questions may ask how one author would respond to the others argument.
+      content: `### Key Takeaways — Part 5
 
-**MCAT Tip:** Create a brief mental comparison chart: Author A says X because...; Author B says Y because....
-      `
-    },
-    {
-      id: 'mcat-5-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT CARS related to comparative & contrasting?',
-            options: [
-              'Questions may ask how one author would respond to the others argument',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Questions may ask how one author would respond to the others argument'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Key Insight',
-            options: ['Some passages present two perspectives — identify areas of agreement and disagreement.', 'Questions may ask how one author would respond to the others argument.', 'Track each authors main claim and supporting evidence separately.', 'Create a brief mental comparison chart: Author A says X because...; Author B says Y because....']
-          },
-          {
-            label: 'MCAT Tip',
-            options: ['Create a brief mental comparison chart: Author A says X because...; Author B says Y because....', 'Some passages present two perspectives — identify areas of agreement and disagreement.', 'Questions may ask how one author would respond to the others argument.', 'Track each authors main claim and supporting evidence separately.']
-          }
-        ],
-        correctAnswers: ['Questions may ask how one author would respond to the others argument.', 'Create a brief mental comparison chart: Author A says X because...; Author B says Y because....'],
-        hint1: 'Think about what each concept specifically describes in Comparative & Contrasting.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Comparative & Contrasting describes a specific idea. Key Insight: Questions may ask how one author would respond to the others argument. MCAT Tip: Create a brief mental comparison chart: Author A says X because...; Author B says Y because....'
-      }
+- Know the basic ethical frameworks — they provide context for understanding arguments
+- Don't inject your own moral views — answer from the author's perspective
+- Ethics passages often present a dilemma with competing values
+- Watch for consequences-based (utilitarian) vs. principle-based (deontological) reasoning`
     }
   ]
-}
+};

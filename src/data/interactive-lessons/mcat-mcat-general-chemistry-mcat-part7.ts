@@ -2,98 +2,64 @@ export const mcatGenChemPart7Data = {
   topicSlug: 'mcat-general-chemistry-mcat',
   sections: [
     {
-      id: 'mcat-7-intro',
+      id: 'gc7-intro',
       type: 'text' as const,
-      content: `
-# Review & MCAT Practice
+      content: `# General Chemistry for the MCAT
 
-**Part 7 of 7 — Review & MCAT Practice**
+**Part 7 of 7 — Electrochemistry & Redox**
 
-Rate = k[A]^m[B]^n — rate law is determined experimentally, not from stoichiometry.
+### Key Concepts
 
-Arrhenius equation: k = Ae^(-Ea/RT) — higher temperature increases rate constant k.
-      `
+**Oxidation** = loss of electrons (OIL RIG)
+**Reduction** = gain of electrons
+
+### Cell Potential
+
+$$E°_{cell} = E°_{cathode} - E°_{anode}$$
+
+- Galvanic cell: $E°_{cell} > 0$ (spontaneous, $\\Delta G < 0$)
+- Electrolytic cell: $E°_{cell} < 0$ (non-spontaneous, requires external energy)
+
+### Nernst Equation
+
+$$E = E° - \\frac{RT}{nF}\\ln Q = E° - \\frac{0.0592}{n}\\log Q \\quad (\\text{at } 25°C)$$
+
+### Relationship to Free Energy
+
+$$\\Delta G° = -nFE°$$
+
+where $n$ = moles of electrons transferred, $F$ = 96,485 C/mol`
     },
     {
-      id: 'mcat-7-quiz1',
+      id: 'gc7-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Electrochemistry** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in review & mcat practice?',
-            options: [
-              'Rate = k[A]^m[B]^n — rate law is determined experimentally, not from stoichiometry',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'Given: $Zn^{2+}/Zn$ has $E° = -0.76$ V and $Cu^{2+}/Cu$ has $E° = +0.34$ V. In a galvanic cell, $E°_{cell}$ is:',
+            options: ['$+1.10$ V (Cu is cathode, Zn is anode)', '$-1.10$ V', '$+0.42$ V', '$-0.42$ V'],
             correctAnswer: 0,
-            explanation: 'Rate = k[A]^m[B]^n — rate law is determined experimentally, not from stoichiometry'
+            explanation: 'In a galvanic cell, the more positive $E°$ is the cathode (reduction). $E°_{cell} = E°_{cathode} - E°_{anode} = 0.34 - (-0.76) = +1.10$ V.'
+          },
+          {
+            question: 'In an electrolytic cell, oxidation occurs at the:',
+            options: ['Anode (positive electrode)', 'Cathode (negative electrode)', 'Salt bridge', 'It varies'],
+            correctAnswer: 0,
+            explanation: 'Oxidation ALWAYS occurs at the anode (both galvanic and electrolytic). In electrolytic cells, the anode is positive (connected to + terminal of battery).'
           }
         ]
       }
     },
     {
-      id: 'mcat-7-detail',
+      id: 'gc7-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Catalysts lower activation energy (Ea) without being consumed — enzymes are biological catalysts.
+      content: `### Key Takeaways — Part 7
 
-**MCAT Tip:** Rate-determining step: the slowest step in a mechanism controls the overall rate.
-      `
-    },
-    {
-      id: 'mcat-7-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Chem/Phys related to review & mcat practice?',
-            options: [
-              'Catalysts lower activation energy (Ea) without being consumed — enzymes are biological catalysts',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Catalysts lower activation energy (Ea) without being consumed — enzymes are biological catalysts'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-7-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Arrhenius equation',
-            options: ['Rate-determining step: the slowest step in a mechanism controls the overall rate.', 'Rate = k[A]^m[B]^n — rate law is determined experimentally, not from stoichiometry.', 'k = Ae^(-Ea/RT) — higher temperature increases rate constant k.', 'Catalysts lower activation energy (Ea) without being consumed — enzymes are biological catalysts.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['Rate = k[A]^m[B]^n — rate law is determined experimentally, not from stoichiometry.', 'Catalysts lower activation energy (Ea) without being consumed — enzymes are biological catalysts.', 'Rate-determining step: the slowest step in a mechanism controls the overall rate.', 'k = Ae^(-Ea/RT) — higher temperature increases rate constant k.']
-          },
-          {
-            label: 'MCAT Tip',
-            options: ['Catalysts lower activation energy (Ea) without being consumed — enzymes are biological catalysts.', 'k = Ae^(-Ea/RT) — higher temperature increases rate constant k.', 'Rate-determining step: the slowest step in a mechanism controls the overall rate.', 'Rate = k[A]^m[B]^n — rate law is determined experimentally, not from stoichiometry.']
-          }
-        ],
-        correctAnswers: ['k = Ae^(-Ea/RT) — higher temperature increases rate constant k.', 'Catalysts lower activation energy (Ea) without being consumed — enzymes are biological catalysts.', 'Rate-determining step: the slowest step in a mechanism controls the overall rate.'],
-        hint1: 'Think about what each concept specifically describes in Review & MCAT Practice.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Review & MCAT Practice describes a specific idea. Arrhenius equation: k = Ae^(-Ea/RT) — higher temperature increases rate constant k. Key Insight: Catalysts lower activation energy (Ea) without being consumed — enzymes are biological catalysts. MCAT Tip: Rate-determining step: the slowest step in a mechanism controls the overall rate.'
-      }
+- AN OX, RED CAT: Anode = Oxidation, Reduction = Cathode (always!)
+- Galvanic: spontaneous, $E° > 0$; Electrolytic: non-spontaneous, $E° < 0$
+- $\\Delta G° = -nFE°$: positive cell potential means negative free energy
+- Nernst equation: how concentration affects cell potential`
     }
   ]
-}
+};

@@ -2,98 +2,68 @@ export const mcatGeneticsPart4Data = {
   topicSlug: 'mcat-genetics-evolution-mcat',
   sections: [
     {
-      id: 'mcat-4-intro',
+      id: 'ge4-intro',
       type: 'text' as const,
-      content: `
-# Natural Selection
+      content: `# Genetics & Evolution for the MCAT
 
-**Part 4 of 7 — Natural Selection**
+**Part 4 of 7 — Population Genetics**
 
-Natural selection: differential reproductive success based on heritable traits.
+### Hardy-Weinberg Equilibrium
 
-Fitness: reproductive success, not physical strength.
-      `
+For a population NOT evolving:
+
+$$p + q = 1$$
+$$p^2 + 2pq + q^2 = 1$$
+
+Where: $p$ = frequency of dominant allele, $q$ = frequency of recessive allele
+
+| Term | Represents |
+|------|-----------|
+| $p^2$ | Frequency of homozygous dominant |
+| $2pq$ | Frequency of heterozygous (carriers) |
+| $q^2$ | Frequency of homozygous recessive |
+
+### Conditions for Hardy-Weinberg (no evolution)
+
+1. No mutations
+2. No migration (gene flow)
+3. No natural selection
+4. Large population (no genetic drift)
+5. Random mating
+
+If ANY condition is violated → population is evolving!
+
+### MCAT Shortcut
+
+Usually given: "$q^2$ = frequency of affected individuals (recessive phenotype)"
+- Calculate $q = \\sqrt{q^2}$
+- Then $p = 1 - q$
+- Carrier frequency = $2pq$`
     },
     {
-      id: 'mcat-4-quiz1',
+      id: 'ge4-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Hardy-Weinberg** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in natural selection?',
-            options: [
-              'Natural selection: differential reproductive success based on heritable traits',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'In a population, 1 in 10,000 individuals has a recessive genetic disease. The carrier frequency is approximately:',
+            options: ['2% ($2pq \\approx 0.02$)', '1%', '0.01%', '10%'],
             correctAnswer: 0,
-            explanation: 'Natural selection: differential reproductive success based on heritable traits'
+            explanation: '$q^2 = 1/10{,}000 = 0.0001$, so $q = 0.01$ and $p = 0.99$. Carrier frequency = $2pq = 2(0.99)(0.01) = 0.0198 \\approx 2\\%$. Note: carrier frequency is MUCH higher than disease frequency — this is clinically important!'
           }
         ]
       }
     },
     {
-      id: 'mcat-4-detail',
+      id: 'ge4-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Directional, stabilizing, and disruptive selection — different effects on trait distribution.
+      content: `### Key Takeaways — Part 4
 
-**MCAT Tip:** Sexual selection: traits favored in mate choice (peacock tail) vs survival.
-      `
-    },
-    {
-      id: 'mcat-4-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Bio/Biochem related to natural selection?',
-            options: [
-              'Directional, stabilizing, and disruptive selection — different effects on trait distribution',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Directional, stabilizing, and disruptive selection — different effects on trait distribution'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-4-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Natural selection',
-            options: ['Directional, stabilizing, and disruptive selection — different effects on trait distribution.', 'reproductive success, not physical strength.', 'differential reproductive success based on heritable traits.', 'Sexual selection: traits favored in mate choice (peacock tail) vs survival.']
-          },
-          {
-            label: 'Fitness',
-            options: ['reproductive success, not physical strength.', 'Sexual selection: traits favored in mate choice (peacock tail) vs survival.', 'differential reproductive success based on heritable traits.', 'Directional, stabilizing, and disruptive selection — different effects on trait distribution.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['Directional, stabilizing, and disruptive selection — different effects on trait distribution.', 'Sexual selection: traits favored in mate choice (peacock tail) vs survival.', 'reproductive success, not physical strength.', 'differential reproductive success based on heritable traits.']
-          }
-        ],
-        correctAnswers: ['differential reproductive success based on heritable traits.', 'reproductive success, not physical strength.', 'Directional, stabilizing, and disruptive selection — different effects on trait distribution.'],
-        hint1: 'Think about what each concept specifically describes in Natural Selection.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Natural Selection describes a specific idea. Natural selection: differential reproductive success based on heritable traits. Fitness: reproductive success, not physical strength. Key Insight: Directional, stabilizing, and disruptive selection — different effects on trait distribution.'
-      }
+- Hardy-Weinberg: $p^2 + 2pq + q^2 = 1$ (only if 5 conditions met)
+- Start with $q^2$ (recessive phenotype frequency), then work backward
+- Carrier frequency ($2pq$) is always much higher than disease frequency ($q^2$)
+- Any violation of the 5 conditions = evolution occurring`
     }
   ]
-}
+};

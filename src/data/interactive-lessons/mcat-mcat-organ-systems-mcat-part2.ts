@@ -2,98 +2,66 @@ export const mcatOrganSysPart2Data = {
   topicSlug: 'mcat-organ-systems-mcat',
   sections: [
     {
-      id: 'mcat-2-intro',
+      id: 'os2-intro',
       type: 'text' as const,
-      content: `
-# Respiratory System
+      content: `# Organ Systems for the MCAT
 
 **Part 2 of 7 — Respiratory System**
 
-Ventilation: diaphragm contracts (inhalation), relaxes (exhalation); negative pressure breathing.
+### Gas Exchange
 
-Gas exchange: O2 diffuses into blood in alveoli; CO2 diffuses out — driven by partial pressure gradients.
-      `
+$$\\text{O}_2: \\text{Alveoli} \\to \\text{Blood} \\to \\text{Tissues}$$
+$$\\text{CO}_2: \\text{Tissues} \\to \\text{Blood} \\to \\text{Alveoli}$$
+
+- Driven by PARTIAL PRESSURE gradients (Fick's law)
+- Alveoli maximize surface area for diffusion
+
+### Oxygen Transport
+
+- 98.5% bound to hemoglobin (Hb), 1.5% dissolved in plasma
+- Each Hb binds 4 O$_2$ molecules
+- **Cooperative binding**: Binding of first O$_2$ increases affinity for subsequent O$_2$ (sigmoidal curve)
+
+### The Bohr Effect (MCAT FAVORITE)
+
+Conditions that RIGHT-shift the O$_2$-Hb dissociation curve (promote O$_2$ unloading):
+- Increased CO$_2$ (metabolically active tissue)
+- Decreased pH (acidic — more CO$_2$)
+- Increased temperature
+- Increased 2,3-BPG
+
+**Mnemonic**: Right shift = Release O$_2$ to tissues
+
+### CO$_2$ Transport
+
+- 70% as bicarbonate (HCO$_3^-$)
+- 23% bound to Hb (carbaminohemoglobin)
+- 7% dissolved in plasma`
     },
     {
-      id: 'mcat-2-quiz1',
+      id: 'os2-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Respiratory** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in respiratory system?',
-            options: [
-              'Ventilation: diaphragm contracts (inhalation), relaxes (exhalation); negative pressure breathing',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'During intense exercise, the O$_2$-hemoglobin dissociation curve shifts RIGHT because:',
+            options: ['Increased CO$_2$, lower pH, and higher temperature all promote O$_2$ release to working muscles', 'Muscles need less oxygen', 'Hemoglobin concentration increases', 'The lungs absorb more oxygen'],
             correctAnswer: 0,
-            explanation: 'Ventilation: diaphragm contracts (inhalation), relaxes (exhalation); negative pressure breathing'
+            explanation: 'Active muscles produce CO$_2$ and heat, lowering local pH. All three factors right-shift the curve (Bohr effect), causing Hb to release more O$_2$ exactly where it\'s needed most.'
           }
         ]
       }
     },
     {
-      id: 'mcat-2-detail',
+      id: 'os2-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Hemoglobin: cooperative binding, sigmoid curve; Bohr effect: low pH/high CO2 shifts curve right (releases O2).
+      content: `### Key Takeaways — Part 2
 
-**MCAT Tip:** Lung volumes: tidal volume, vital capacity, residual volume, total lung capacity.
-      `
-    },
-    {
-      id: 'mcat-2-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Bio/Biochem related to respiratory system?',
-            options: [
-              'Hemoglobin: cooperative binding, sigmoid curve; Bohr effect: low pH/high CO2 shifts curve right (releases O2)',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Hemoglobin: cooperative binding, sigmoid curve; Bohr effect: low pH/high CO2 shifts curve right (releases O2)'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-2-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Ventilation',
-            options: ['Hemoglobin: cooperative binding, sigmoid curve; Bohr effect: low pH/high CO2 shifts curve right (releases O2).', 'O2 diffuses into blood in alveoli; CO2 diffuses out — driven by partial pressure gradients.', 'Lung volumes: tidal volume, vital capacity, residual volume, total lung capacity.', 'diaphragm contracts (inhalation), relaxes (exhalation); negative pressure breathing.']
-          },
-          {
-            label: 'Gas exchange',
-            options: ['Hemoglobin: cooperative binding, sigmoid curve; Bohr effect: low pH/high CO2 shifts curve right (releases O2).', 'diaphragm contracts (inhalation), relaxes (exhalation); negative pressure breathing.', 'O2 diffuses into blood in alveoli; CO2 diffuses out — driven by partial pressure gradients.', 'Lung volumes: tidal volume, vital capacity, residual volume, total lung capacity.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['Lung volumes: tidal volume, vital capacity, residual volume, total lung capacity.', 'diaphragm contracts (inhalation), relaxes (exhalation); negative pressure breathing.', 'O2 diffuses into blood in alveoli; CO2 diffuses out — driven by partial pressure gradients.', 'Hemoglobin: cooperative binding, sigmoid curve; Bohr effect: low pH/high CO2 shifts curve right (releases O2).']
-          }
-        ],
-        correctAnswers: ['diaphragm contracts (inhalation), relaxes (exhalation); negative pressure breathing.', 'O2 diffuses into blood in alveoli; CO2 diffuses out — driven by partial pressure gradients.', 'Hemoglobin: cooperative binding, sigmoid curve; Bohr effect: low pH/high CO2 shifts curve right (releases O2).'],
-        hint1: 'Think about what each concept specifically describes in Respiratory System.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Respiratory System describes a specific idea. Ventilation: diaphragm contracts (inhalation), relaxes (exhalation); negative pressure breathing. Gas exchange: O2 diffuses into blood in alveoli; CO2 diffuses out — driven by partial pressure gradients. Key Insight: Hemoglobin: cooperative binding, sigmoid curve; Bohr effect: low pH/high CO2 shifts curve right (releases O2).'
-      }
+- Gas exchange driven by partial pressure gradients
+- O$_2$ transport: 98.5% on hemoglobin (cooperative binding, sigmoidal curve)
+- Bohr effect: right shift = more O$_2$ release (higher CO$_2$, lower pH, higher temp)
+- CO$_2$ transport: mostly as bicarbonate (70%)`
     }
   ]
-}
+};

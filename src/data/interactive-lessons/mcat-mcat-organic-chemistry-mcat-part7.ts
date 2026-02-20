@@ -2,98 +2,57 @@ export const mcatOrgChemPart7Data = {
   topicSlug: 'mcat-organic-chemistry-mcat',
   sections: [
     {
-      id: 'mcat-7-intro',
+      id: 'oc7-intro',
       type: 'text' as const,
-      content: `
-# Review & MCAT Practice
+      content: `# Organic Chemistry for the MCAT
 
-**Part 7 of 7 — Review & MCAT Practice**
+**Part 7 of 7 — Review & MCAT Strategy**
 
-IR spectroscopy: O-H broad ~3300, N-H sharp ~3300, C=O sharp ~1700, C-H ~2900 cm-1.
+### Highest-Yield MCAT Organic Topics
 
-1H NMR: chemical shift indicates electronic environment; splitting follows n+1 rule.
-      `
+1. **SN1/SN2/E1/E2** — almost guaranteed
+2. **Functional group recognition** — in every passage
+3. **Amino acid chemistry** — bridges to biochemistry
+4. **Carbonyl chemistry** — reduction/oxidation
+5. **Stereochemistry** — R/S, enantiomers vs diastereomers
+6. **Lab techniques** — separation and purification
+
+### Amino Acid Side Chain Chemistry (bridges to Biochem)
+
+| Property | Amino acids |
+|----------|-------------|
+| Nonpolar | Gly, Ala, Val, Leu, Ile, Pro, Phe, Trp, Met |
+| Polar uncharged | Ser, Thr, Cys, Tyr, Asn, Gln |
+| Positive (basic) | Lys, Arg, His |
+| Negative (acidic) | Asp, Glu |`
     },
     {
-      id: 'mcat-7-quiz1',
+      id: 'oc7-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Final Review** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in review & mcat practice?',
-            options: [
-              'IR spectroscopy: O-H broad ~3300, N-H sharp ~3300, C=O sharp ~1700, C-H ~2900 cm-1',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'An amino acid at pH 7 has a positively charged side chain. It is most likely:',
+            options: ['Lysine (pKa of side chain ~10.5)', 'Aspartate', 'Serine', 'Alanine'],
             correctAnswer: 0,
-            explanation: 'IR spectroscopy: O-H broad ~3300, N-H sharp ~3300, C=O sharp ~1700, C-H ~2900 cm-1'
+            explanation: 'At pH 7, Lys side chain ($-NH_3^+$, pKa ~10.5) is protonated and positive. Arg (pKa ~12.5) and His (pKa ~6.0) are the other basic residues. His may or may not be protonated at pH 7.'
+          },
+          {
+            question: 'A passage describes a molecule with a chiral center that rotates plane-polarized light +15°. Its enantiomer rotates light:',
+            options: ['$-15°$ (equal and opposite)', '$+15°$', '$0°$', '$+30°$'],
+            correctAnswer: 0,
+            explanation: 'Enantiomers rotate plane-polarized light by equal magnitude but opposite direction. If one is +15°, the other must be -15°.'
           }
         ]
       }
     },
     {
-      id: 'mcat-7-detail',
+      id: 'oc7-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Mass spectrometry: molecular ion peak gives molecular weight; fragmentation reveals structure.
+      content: `### Organic Chemistry — Complete! ✅
 
-**MCAT Tip:** UV-Vis: conjugated systems absorb longer wavelengths — more conjugation = lower energy transition.
-      `
-    },
-    {
-      id: 'mcat-7-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Bio/Biochem related to review & mcat practice?',
-            options: [
-              'Mass spectrometry: molecular ion peak gives molecular weight; fragmentation reveals structure',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Mass spectrometry: molecular ion peak gives molecular weight; fragmentation reveals structure'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-7-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'IR spectroscopy',
-            options: ['UV-Vis: conjugated systems absorb longer wavelengths — more conjugation = lower energy transition.', 'chemical shift indicates electronic environment; splitting follows n+1 rule.', 'O-H broad ~3300, N-H sharp ~3300, C=O sharp ~1700, C-H ~2900 cm-1.', 'Mass spectrometry: molecular ion peak gives molecular weight; fragmentation reveals structure.']
-          },
-          {
-            label: '1H NMR',
-            options: ['UV-Vis: conjugated systems absorb longer wavelengths — more conjugation = lower energy transition.', 'Mass spectrometry: molecular ion peak gives molecular weight; fragmentation reveals structure.', 'chemical shift indicates electronic environment; splitting follows n+1 rule.', 'O-H broad ~3300, N-H sharp ~3300, C=O sharp ~1700, C-H ~2900 cm-1.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['O-H broad ~3300, N-H sharp ~3300, C=O sharp ~1700, C-H ~2900 cm-1.', 'Mass spectrometry: molecular ion peak gives molecular weight; fragmentation reveals structure.', 'UV-Vis: conjugated systems absorb longer wavelengths — more conjugation = lower energy transition.', 'chemical shift indicates electronic environment; splitting follows n+1 rule.']
-          }
-        ],
-        correctAnswers: ['O-H broad ~3300, N-H sharp ~3300, C=O sharp ~1700, C-H ~2900 cm-1.', 'chemical shift indicates electronic environment; splitting follows n+1 rule.', 'Mass spectrometry: molecular ion peak gives molecular weight; fragmentation reveals structure.'],
-        hint1: 'Think about what each concept specifically describes in Review & MCAT Practice.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Review & MCAT Practice describes a specific idea. IR spectroscopy: O-H broad ~3300, N-H sharp ~3300, C=O sharp ~1700, C-H ~2900 cm-1. 1H NMR: chemical shift indicates electronic environment; splitting follows n+1 rule. Key Insight: Mass spectrometry: molecular ion peak gives molecular weight; fragmentation reveals structure.'
-      }
+Master the reaction decision chart, functional groups, and stereochemistry. These connect directly to amino acid and enzyme chemistry in Biochemistry.`
     }
   ]
-}
+};

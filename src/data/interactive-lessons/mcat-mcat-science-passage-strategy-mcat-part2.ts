@@ -2,98 +2,68 @@ export const mcatSciPassagePart2Data = {
   topicSlug: 'mcat-science-passage-strategy-mcat',
   sections: [
     {
-      id: 'mcat-2-intro',
+      id: 'sp2-intro',
       type: 'text' as const,
-      content: `
-# Data Interpretation
+      content: `# Science Passage Strategy for the MCAT
 
 **Part 2 of 7 — Data Interpretation**
 
-Read axis labels, units, and scales on all graphs before interpreting data.
+### Reading Graphs
 
-Identify trends: direct relationship, inverse relationship, no correlation.
-      `
+| Graph Element | What to Identify |
+|--------------|-----------------|
+| X-axis | Independent variable (what's being changed) |
+| Y-axis | Dependent variable (what's being measured) |
+| Trend | Increasing, decreasing, plateauing, sigmoidal |
+| Units | Must match answer choices |
+
+### Common Data Patterns on the MCAT
+
+| Pattern | Interpretation |
+|---------|---------------|
+| Linear increase | Direct proportional relationship |
+| Inverse relationship | As X increases, Y decreases |
+| Plateau | Maximum reached (saturation, $V_{max}$) |
+| Sigmoidal (S-curve) | Cooperative binding (hemoglobin) or logistic growth |
+| Logarithmic | pH scale, enzyme activity vs. pH |
+
+### Table Interpretation Strategy
+
+1. Read column headers (what's measured)
+2. Identify controls vs. experimental conditions
+3. Look for the biggest differences between groups
+4. Check if changes are statistically meaningful (error bars, p-values)
+
+### MCAT Trap: Correlation vs. Causation
+
+A passage shows that A correlates with B. Answer choices may state "A causes B."
+- Correlation $\\neq$ Causation unless the experiment was well-controlled
+- Look for confounding variables!`
     },
     {
-      id: 'mcat-2-quiz1',
+      id: 'sp2-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Data Interpretation** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in data interpretation?',
-            options: [
-              'Read axis labels, units, and scales on all graphs before interpreting data',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'A graph shows enzyme activity vs. substrate concentration with a plateau at high concentrations. The plateau indicates:',
+            options: ['All enzyme active sites are saturated ($V_{max}$ reached)', 'The enzyme is denatured', 'Substrate is being consumed', 'The experiment failed'],
             correctAnswer: 0,
-            explanation: 'Read axis labels, units, and scales on all graphs before interpreting data'
+            explanation: 'At high substrate concentration, all enzyme active sites are occupied → increasing substrate further has no effect on rate → plateau at $V_{max}$. This is the classic Michaelis-Menten curve.'
           }
         ]
       }
     },
     {
-      id: 'mcat-2-detail',
+      id: 'sp2-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Extrapolation vs interpolation: extending beyond data vs estimating between known points.
+      content: `### Key Takeaways — Part 2
 
-**MCAT Tip:** Tables: cross-reference rows and columns to find specific values.
-      `
-    },
-    {
-      id: 'mcat-2-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Strategy related to data interpretation?',
-            options: [
-              'Extrapolation vs interpolation: extending beyond data vs estimating between known points',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Extrapolation vs interpolation: extending beyond data vs estimating between known points'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-2-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Identify trends',
-            options: ['direct relationship, inverse relationship, no correlation.', 'Read axis labels, units, and scales on all graphs before interpreting data.', 'Extrapolation vs interpolation: extending beyond data vs estimating between known points.', 'Tables: cross-reference rows and columns to find specific values.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['Read axis labels, units, and scales on all graphs before interpreting data.', 'Extrapolation vs interpolation: extending beyond data vs estimating between known points.', 'Tables: cross-reference rows and columns to find specific values.', 'direct relationship, inverse relationship, no correlation.']
-          },
-          {
-            label: 'MCAT Tip',
-            options: ['Tables: cross-reference rows and columns to find specific values.', 'Extrapolation vs interpolation: extending beyond data vs estimating between known points.', 'direct relationship, inverse relationship, no correlation.', 'Read axis labels, units, and scales on all graphs before interpreting data.']
-          }
-        ],
-        correctAnswers: ['direct relationship, inverse relationship, no correlation.', 'Extrapolation vs interpolation: extending beyond data vs estimating between known points.', 'Tables: cross-reference rows and columns to find specific values.'],
-        hint1: 'Think about what each concept specifically describes in Data Interpretation.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Data Interpretation describes a specific idea. Identify trends: direct relationship, inverse relationship, no correlation. Key Insight: Extrapolation vs interpolation: extending beyond data vs estimating between known points. MCAT Tip: Tables: cross-reference rows and columns to find specific values.'
-      }
+- Always identify axes, units, and trends FIRST
+- Plateaus = saturation. Sigmoidal = cooperativity. Linear = proportional.
+- Tables: compare experimental to control groups
+- Correlation $\\neq$ Causation — always look for confounding variables`
     }
   ]
-}
+};

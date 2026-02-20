@@ -2,98 +2,73 @@ export const mcatCellBioPart3Data = {
   topicSlug: 'mcat-cell-biology-mcat',
   sections: [
     {
-      id: 'mcat-3-intro',
+      id: 'cb3-intro',
       type: 'text' as const,
-      content: `
-# Cell Signaling
+      content: `# Cell Biology for the MCAT
 
-**Part 3 of 7 — Cell Signaling**
+**Part 3 of 7 — Cell Cycle & Mitosis**
 
-Signal transduction: ligand binds receptor, activates intracellular cascade, produces cellular response.
+### The Cell Cycle
 
-G-protein coupled receptors (GPCRs): activate G proteins which activate effector enzymes.
-      `
+| Phase | Events | Duration |
+|-------|--------|----------|
+| G$_1$ | Cell growth, organelle duplication | Variable |
+| S | DNA replication | ~8 hours |
+| G$_2$ | Final growth, preparation for mitosis | ~4 hours |
+| M | Mitosis + cytokinesis | ~1 hour |
+| G$_0$ | Quiescent (non-dividing) | Indefinite |
+
+### Mitosis Stages (PMAT)
+
+1. **Prophase**: Chromosomes condense, nuclear envelope breaks down, spindle forms
+2. **Metaphase**: Chromosomes align at metaphase plate
+3. **Anaphase**: Sister chromatids separate, pulled to poles
+4. **Telophase**: Nuclear envelopes reform, chromosomes decondense
+
+### Cell Cycle Checkpoints
+
+| Checkpoint | Location | Checks for |
+|-----------|----------|-----------|
+| G$_1$/S | End of G$_1$ | DNA damage, cell size, growth signals |
+| G$_2$/M | End of G$_2$ | Complete DNA replication, no damage |
+| Spindle | During M | All chromosomes attached to spindle |
+
+### MCAT Connection: Cancer
+
+Cancer = uncontrolled cell division due to:
+- **Oncogenes**: Gain-of-function (gas pedal stuck ON)
+- **Tumor suppressors**: Loss-of-function (brakes broken) — e.g., p53, Rb`
     },
     {
-      id: 'mcat-3-quiz1',
+      id: 'cb3-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Cell Cycle** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in cell signaling?',
-            options: [
-              'Signal transduction: ligand binds receptor, activates intracellular cascade, produces cellular response',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'A cell has 46 chromosomes in G$_1$. After S phase but before mitosis, it has:',
+            options: ['46 chromosomes, each with 2 sister chromatids (92 chromatids total)', '92 chromosomes', '23 chromosomes', '46 chromosomes with 46 chromatids'],
             correctAnswer: 0,
-            explanation: 'Signal transduction: ligand binds receptor, activates intracellular cascade, produces cellular response'
+            explanation: 'DNA replicates in S phase, but centromeres haven\'t split yet. So: still 46 chromosomes, but each consists of 2 sister chromatids joined at the centromere. After anaphase, they separate into 92 individual chromatids.'
+          },
+          {
+            question: 'Loss of p53 function would most directly affect:',
+            options: ['The G$_1$/S checkpoint — damaged DNA would not be detected, allowing replication to proceed', 'Chromosome condensation during prophase', 'Cytokinesis', 'Spindle formation'],
+            correctAnswer: 0,
+            explanation: 'p53 is the "guardian of the genome" — it arrests the cell cycle at G$_1$/S when DNA damage is detected and can trigger apoptosis. Without p53, damaged cells continue dividing → cancer.'
           }
         ]
       }
     },
     {
-      id: 'mcat-3-detail',
+      id: 'cb3-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Receptor tyrosine kinases (RTKs): dimerize and autophosphorylate upon ligand binding.
+      content: `### Key Takeaways — Part 3
 
-**MCAT Tip:** Second messengers: cAMP, IP3, DAG, Ca2+ — amplify the signal inside the cell.
-      `
-    },
-    {
-      id: 'mcat-3-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Bio/Biochem related to cell signaling?',
-            options: [
-              'Receptor tyrosine kinases (RTKs): dimerize and autophosphorylate upon ligand binding',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Receptor tyrosine kinases (RTKs): dimerize and autophosphorylate upon ligand binding'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-3-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Signal transduction',
-            options: ['Second messengers: cAMP, IP3, DAG, Ca2+ — amplify the signal inside the cell.', 'Receptor tyrosine kinases (RTKs): dimerize and autophosphorylate upon ligand binding.', 'ligand binds receptor, activates intracellular cascade, produces cellular response.', 'activate G proteins which activate effector enzymes.']
-          },
-          {
-            label: 'G-protein coupled receptors (GPCRs)',
-            options: ['activate G proteins which activate effector enzymes.', 'Receptor tyrosine kinases (RTKs): dimerize and autophosphorylate upon ligand binding.', 'Second messengers: cAMP, IP3, DAG, Ca2+ — amplify the signal inside the cell.', 'ligand binds receptor, activates intracellular cascade, produces cellular response.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['Second messengers: cAMP, IP3, DAG, Ca2+ — amplify the signal inside the cell.', 'activate G proteins which activate effector enzymes.', 'Receptor tyrosine kinases (RTKs): dimerize and autophosphorylate upon ligand binding.', 'ligand binds receptor, activates intracellular cascade, produces cellular response.']
-          }
-        ],
-        correctAnswers: ['ligand binds receptor, activates intracellular cascade, produces cellular response.', 'activate G proteins which activate effector enzymes.', 'Receptor tyrosine kinases (RTKs): dimerize and autophosphorylate upon ligand binding.'],
-        hint1: 'Think about what each concept specifically describes in Cell Signaling.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Cell Signaling describes a specific idea. Signal transduction: ligand binds receptor, activates intracellular cascade, produces cellular response. G-protein coupled receptors (GPCRs): activate G proteins which activate effector enzymes. Key Insight: Receptor tyrosine kinases (RTKs): dimerize and autophosphorylate upon ligand binding.'
-      }
+- Cell cycle: G$_1$ → S → G$_2$ → M (interphase = G$_1$+S+G$_2$)
+- Mitosis: PMAT (Prophase, Metaphase, Anaphase, Telophase)
+- Checkpoints prevent damaged/incomplete cells from dividing
+- Cancer: oncogenes (gain of function) + tumor suppressors (loss of function)`
     }
   ]
-}
+};

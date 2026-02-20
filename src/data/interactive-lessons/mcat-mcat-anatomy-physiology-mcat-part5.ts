@@ -2,98 +2,60 @@ export const mcatAnatPhysPart5Data = {
   topicSlug: 'mcat-anatomy-physiology-mcat',
   sections: [
     {
-      id: 'mcat-5-intro',
+      id: 'ap5-intro',
       type: 'text' as const,
-      content: `
-# Sensory Systems
+      content: `# Anatomy & Physiology for the MCAT
 
-**Part 5 of 7 — Sensory Systems**
+**Part 5 of 7 — Special Senses**
 
-Vision: cornea + lens focus light on retina; rods (dim light) and cones (color).
+### Vision
 
-Hearing: sound waves vibrate tympanic membrane, ossicles amplify, cochlea transduces.
-      `
+| Structure | Function |
+|-----------|----------|
+| Cornea | Refracts light (most refraction here!) |
+| Lens | Fine-tunes focus (accommodation) |
+| Retina | Contains photoreceptors |
+| Rods | Dim light, peripheral vision (no color) |
+| Cones | Color vision, high acuity (3 types: R, G, B) |
+| Fovea | Highest cone density = sharpest vision |
+
+### Hearing
+
+Sound waves → Pinna → Ear canal → Tympanic membrane (vibrates) → Ossicles (malleus, incus, stapes) → Oval window → Cochlea → Hair cells → Auditory nerve → Brain
+
+- **Cochlea**: Tonotopic organization (base = high frequency, apex = low frequency)
+- **Hair cells**: Stereocilia bend → mechanotransduction → neural signal
+
+### Taste & Smell
+
+- **Taste**: 5 basic modalities (sweet, salty, sour, bitter, umami)
+- **Smell**: Olfactory receptors in nasal epithelium → olfactory bulb → limbic system
+- Smell is the ONLY sense that bypasses the thalamus (connects directly to limbic system → emotional memories)`
     },
     {
-      id: 'mcat-5-quiz1',
+      id: 'ap5-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Senses** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in sensory systems?',
-            options: [
-              'Vision: cornea + lens focus light on retina; rods (dim light) and cones (color)',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'A person with damage to the fovea would have difficulty with:',
+            options: ['Detailed central vision (reading, face recognition) — the fovea has the highest concentration of cones', 'Peripheral vision', 'Night vision', 'Hearing'],
             correctAnswer: 0,
-            explanation: 'Vision: cornea + lens focus light on retina; rods (dim light) and cones (color)'
+            explanation: 'The fovea contains the highest density of cones (responsible for color and fine detail vision). Foveal damage destroys central/sharp vision while peripheral vision (rod-dependent) may be preserved — this is macular degeneration.'
           }
         ]
       }
     },
     {
-      id: 'mcat-5-detail',
+      id: 'ap5-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Vestibular system: semicircular canals detect rotational acceleration; otolith organs detect linear.
+      content: `### Key Takeaways — Part 5
 
-**MCAT Tip:** Taste and smell: chemoreceptors; Somatosensory: mechanoreceptors, thermoreceptors, nociceptors.
-      `
-    },
-    {
-      id: 'mcat-5-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Bio/Biochem related to sensory systems?',
-            options: [
-              'Vestibular system: semicircular canals detect rotational acceleration; otolith organs detect linear',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Vestibular system: semicircular canals detect rotational acceleration; otolith organs detect linear'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Vision',
-            options: ['Taste and smell: chemoreceptors; Somatosensory: mechanoreceptors, thermoreceptors, nociceptors.', 'cornea + lens focus light on retina; rods (dim light) and cones (color).', 'sound waves vibrate tympanic membrane, ossicles amplify, cochlea transduces.', 'Vestibular system: semicircular canals detect rotational acceleration; otolith organs detect linear.']
-          },
-          {
-            label: 'Hearing',
-            options: ['sound waves vibrate tympanic membrane, ossicles amplify, cochlea transduces.', 'Taste and smell: chemoreceptors; Somatosensory: mechanoreceptors, thermoreceptors, nociceptors.', 'cornea + lens focus light on retina; rods (dim light) and cones (color).', 'Vestibular system: semicircular canals detect rotational acceleration; otolith organs detect linear.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['cornea + lens focus light on retina; rods (dim light) and cones (color).', 'sound waves vibrate tympanic membrane, ossicles amplify, cochlea transduces.', 'Taste and smell: chemoreceptors; Somatosensory: mechanoreceptors, thermoreceptors, nociceptors.', 'Vestibular system: semicircular canals detect rotational acceleration; otolith organs detect linear.']
-          }
-        ],
-        correctAnswers: ['cornea + lens focus light on retina; rods (dim light) and cones (color).', 'sound waves vibrate tympanic membrane, ossicles amplify, cochlea transduces.', 'Vestibular system: semicircular canals detect rotational acceleration; otolith organs detect linear.'],
-        hint1: 'Think about what each concept specifically describes in Sensory Systems.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Sensory Systems describes a specific idea. Vision: cornea + lens focus light on retina; rods (dim light) and cones (color). Hearing: sound waves vibrate tympanic membrane, ossicles amplify, cochlea transduces. Key Insight: Vestibular system: semicircular canals detect rotational acceleration; otolith organs detect linear.'
-      }
+- Rods = dim light/peripheral. Cones = color/acuity (concentrated in fovea).
+- Hearing: sound → ossicles → cochlea → hair cells (mechanotransduction)
+- Smell is unique: bypasses thalamus, connects directly to limbic system
+- Cornea does most light refraction; lens fine-tunes it`
     }
   ]
-}
+};

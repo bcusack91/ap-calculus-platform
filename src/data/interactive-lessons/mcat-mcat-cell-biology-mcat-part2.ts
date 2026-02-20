@@ -2,98 +2,66 @@ export const mcatCellBioPart2Data = {
   topicSlug: 'mcat-cell-biology-mcat',
   sections: [
     {
-      id: 'mcat-2-intro',
+      id: 'cb2-intro',
       type: 'text' as const,
-      content: `
-# Membrane Transport
+      content: `# Cell Biology for the MCAT
 
-**Part 2 of 7 — Membrane Transport**
+**Part 2 of 7 — Cell Membrane & Transport**
 
-Passive transport: diffusion, osmosis, facilitated diffusion — no energy required, down concentration gradient.
+### Membrane Structure (Fluid Mosaic Model)
 
-Active transport: Na+/K+ ATPase (3 Na+ out, 2 K+ in per ATP), against gradient.
-      `
+- **Phospholipid bilayer**: Hydrophilic heads out, hydrophobic tails in
+- **Cholesterol**: Regulates fluidity (prevents crystallization at low T, prevents too much fluidity at high T)
+- **Integral proteins**: Span the membrane (channels, receptors)
+- **Peripheral proteins**: Loosely attached to surface
+
+### Transport Mechanisms
+
+| Type | Energy? | Direction | Examples |
+|------|---------|-----------|---------|
+| Simple diffusion | No | High → Low | O$_2$, CO$_2$, small nonpolar |
+| Facilitated diffusion | No | High → Low | Glucose (GLUT), ions (channels) |
+| Active transport | Yes (ATP) | Low → High | Na$^+$/K$^+$ ATPase |
+| Endocytosis | Yes | Into cell | Phagocytosis, pinocytosis |
+| Exocytosis | Yes | Out of cell | Neurotransmitter release |
+
+### Na$^+$/K$^+$ ATPase (ULTRA HIGH YIELD)
+
+Per ATP hydrolyzed: **3 Na$^+$ out, 2 K$^+$ in**
+- Creates electrochemical gradient
+- Maintains resting membrane potential (~$-70$ mV)
+- Electrogenic (net positive charge moved out)`
     },
     {
-      id: 'mcat-2-quiz1',
+      id: 'cb2-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Membrane Transport** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in membrane transport?',
-            options: [
-              'Passive transport: diffusion, osmosis, facilitated diffusion — no energy required, down concentration gradient',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'A cell is placed in a hypertonic solution. The cell will:',
+            options: ['Shrink (crenation) — water moves out by osmosis', 'Swell and potentially lyse', 'Remain unchanged', 'Divide'],
             correctAnswer: 0,
-            explanation: 'Passive transport: diffusion, osmosis, facilitated diffusion — no energy required, down concentration gradient'
+            explanation: 'Hypertonic = higher solute concentration outside. Water follows solute (moves out by osmosis) → cell shrinks. In RBCs, this is called crenation.'
+          },
+          {
+            question: 'The Na$^+$/K$^+$ ATPase pumps:',
+            options: ['3 Na$^+$ out and 2 K$^+$ in per ATP', '2 Na$^+$ out and 3 K$^+$ in per ATP', '3 Na$^+$ in and 2 K$^+$ out per ATP', 'Equal numbers of Na$^+$ and K$^+$'],
+            correctAnswer: 0,
+            explanation: '3 Na$^+$ out, 2 K$^+$ in per ATP. This makes the pump electrogenic (net positive charge moved outside), contributing to the negative resting membrane potential (~$-70$ mV).'
           }
         ]
       }
     },
     {
-      id: 'mcat-2-detail',
+      id: 'cb2-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Endocytosis: phagocytosis (solids), pinocytosis (fluids), receptor-mediated (specific molecules).
+      content: `### Key Takeaways — Part 2
 
-**MCAT Tip:** Exocytosis: vesicles fuse with membrane to release contents (neurotransmitters, hormones).
-      `
-    },
-    {
-      id: 'mcat-2-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Bio/Biochem related to membrane transport?',
-            options: [
-              'Endocytosis: phagocytosis (solids), pinocytosis (fluids), receptor-mediated (specific molecules)',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Endocytosis: phagocytosis (solids), pinocytosis (fluids), receptor-mediated (specific molecules)'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-2-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Passive transport',
-            options: ['Endocytosis: phagocytosis (solids), pinocytosis (fluids), receptor-mediated (specific molecules).', 'Na+/K+ ATPase (3 Na+ out, 2 K+ in per ATP), against gradient.', 'Exocytosis: vesicles fuse with membrane to release contents (neurotransmitters, hormones).', 'diffusion, osmosis, facilitated diffusion — no energy required, down concentration gradient.']
-          },
-          {
-            label: 'Active transport',
-            options: ['Exocytosis: vesicles fuse with membrane to release contents (neurotransmitters, hormones).', 'Na+/K+ ATPase (3 Na+ out, 2 K+ in per ATP), against gradient.', 'Endocytosis: phagocytosis (solids), pinocytosis (fluids), receptor-mediated (specific molecules).', 'diffusion, osmosis, facilitated diffusion — no energy required, down concentration gradient.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['diffusion, osmosis, facilitated diffusion — no energy required, down concentration gradient.', 'Exocytosis: vesicles fuse with membrane to release contents (neurotransmitters, hormones).', 'Na+/K+ ATPase (3 Na+ out, 2 K+ in per ATP), against gradient.', 'Endocytosis: phagocytosis (solids), pinocytosis (fluids), receptor-mediated (specific molecules).']
-          }
-        ],
-        correctAnswers: ['diffusion, osmosis, facilitated diffusion — no energy required, down concentration gradient.', 'Na+/K+ ATPase (3 Na+ out, 2 K+ in per ATP), against gradient.', 'Endocytosis: phagocytosis (solids), pinocytosis (fluids), receptor-mediated (specific molecules).'],
-        hint1: 'Think about what each concept specifically describes in Membrane Transport.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Membrane Transport describes a specific idea. Passive transport: diffusion, osmosis, facilitated diffusion — no energy required, down concentration gradient. Active transport: Na+/K+ ATPase (3 Na+ out, 2 K+ in per ATP), against gradient. Key Insight: Endocytosis: phagocytosis (solids), pinocytosis (fluids), receptor-mediated (specific molecules).'
-      }
+- Fluid mosaic model: phospholipids + cholesterol + proteins
+- Small nonpolar molecules cross membranes freely; ions and large molecules need help
+- Na$^+$/K$^+$ ATPase: 3 Na$^+$ out, 2 K$^+$ in (electrogenic)
+- Osmosis: water moves toward higher solute concentration`
     }
   ]
-}
+};

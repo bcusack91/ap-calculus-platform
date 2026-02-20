@@ -2,98 +2,65 @@ export const mcatGenChemPart5Data = {
   topicSlug: 'mcat-general-chemistry-mcat',
   sections: [
     {
-      id: 'mcat-5-intro',
+      id: 'gc5-intro',
       type: 'text' as const,
-      content: `
-# Chemical Kinetics
+      content: `# General Chemistry for the MCAT
 
-**Part 5 of 7 — Chemical Kinetics**
+**Part 5 of 7 — Thermodynamics**
 
-Rate = k[A]^m[B]^n — rate law is determined experimentally, not from stoichiometry.
+### Key Equations
 
-Arrhenius equation: k = Ae^(-Ea/RT) — higher temperature increases rate constant k.
-      `
+$$\\Delta G = \\Delta H - T\\Delta S$$
+
+$$\\Delta G° = -RT\\ln K$$
+
+$$\\Delta G = \\Delta G° + RT\\ln Q$$
+
+### Spontaneity Table
+
+| $\\Delta H$ | $\\Delta S$ | $\\Delta G$ | Spontaneous? |
+|-----------|-----------|-----------|-------------|
+| − | + | Always − | Always |
+| + | − | Always + | Never |
+| − | − | Depends on T | Low T |
+| + | + | Depends on T | High T |
+
+### Hess's Law
+
+$\\Delta H_{rxn} = \\sum \\Delta H_f°(\\text{products}) - \\sum \\Delta H_f°(\\text{reactants})$
+
+Standard enthalpy of formation for elements in their standard state = 0.`
     },
     {
-      id: 'mcat-5-quiz1',
+      id: 'gc5-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Thermodynamics** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in chemical kinetics?',
-            options: [
-              'Rate = k[A]^m[B]^n — rate law is determined experimentally, not from stoichiometry',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'A reaction has $\\Delta H = +30$ kJ/mol and $\\Delta S = +100$ J/(mol$\\cdot$K). At what temperature does it become spontaneous?',
+            options: ['Above 300 K', 'Below 300 K', 'At all temperatures', 'Never spontaneous'],
             correctAnswer: 0,
-            explanation: 'Rate = k[A]^m[B]^n — rate law is determined experimentally, not from stoichiometry'
+            explanation: '$\\Delta G = 0$ when $T = \\Delta H / \\Delta S = 30{,}000 / 100 = 300$ K. Above 300 K, $T\\Delta S > \\Delta H$, so $\\Delta G < 0$ (spontaneous). Watch units: convert kJ to J!'
+          },
+          {
+            question: 'If $K_{eq} > 1$ at standard conditions, then $\\Delta G°$ is:',
+            options: ['Negative', 'Positive', 'Zero', 'Cannot determine'],
+            correctAnswer: 0,
+            explanation: '$\\Delta G° = -RT\\ln K$. If $K > 1$, then $\\ln K > 0$, so $\\Delta G° < 0$.'
           }
         ]
       }
     },
     {
-      id: 'mcat-5-detail',
+      id: 'gc5-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Catalysts lower activation energy (Ea) without being consumed — enzymes are biological catalysts.
+      content: `### Key Takeaways — Part 5
 
-**MCAT Tip:** Rate-determining step: the slowest step in a mechanism controls the overall rate.
-      `
-    },
-    {
-      id: 'mcat-5-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Chem/Phys related to chemical kinetics?',
-            options: [
-              'Catalysts lower activation energy (Ea) without being consumed — enzymes are biological catalysts',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Catalysts lower activation energy (Ea) without being consumed — enzymes are biological catalysts'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Arrhenius equation',
-            options: ['Rate = k[A]^m[B]^n — rate law is determined experimentally, not from stoichiometry.', 'Catalysts lower activation energy (Ea) without being consumed — enzymes are biological catalysts.', 'Rate-determining step: the slowest step in a mechanism controls the overall rate.', 'k = Ae^(-Ea/RT) — higher temperature increases rate constant k.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['Rate-determining step: the slowest step in a mechanism controls the overall rate.', 'Rate = k[A]^m[B]^n — rate law is determined experimentally, not from stoichiometry.', 'Catalysts lower activation energy (Ea) without being consumed — enzymes are biological catalysts.', 'k = Ae^(-Ea/RT) — higher temperature increases rate constant k.']
-          },
-          {
-            label: 'MCAT Tip',
-            options: ['k = Ae^(-Ea/RT) — higher temperature increases rate constant k.', 'Catalysts lower activation energy (Ea) without being consumed — enzymes are biological catalysts.', 'Rate = k[A]^m[B]^n — rate law is determined experimentally, not from stoichiometry.', 'Rate-determining step: the slowest step in a mechanism controls the overall rate.']
-          }
-        ],
-        correctAnswers: ['k = Ae^(-Ea/RT) — higher temperature increases rate constant k.', 'Catalysts lower activation energy (Ea) without being consumed — enzymes are biological catalysts.', 'Rate-determining step: the slowest step in a mechanism controls the overall rate.'],
-        hint1: 'Think about what each concept specifically describes in Chemical Kinetics.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Chemical Kinetics describes a specific idea. Arrhenius equation: k = Ae^(-Ea/RT) — higher temperature increases rate constant k. Key Insight: Catalysts lower activation energy (Ea) without being consumed — enzymes are biological catalysts. MCAT Tip: Rate-determining step: the slowest step in a mechanism controls the overall rate.'
-      }
+- $\\Delta G < 0$: spontaneous. $\\Delta G > 0$: non-spontaneous.
+- Know the spontaneity table cold
+- Watch unit conversions: $\\Delta H$ often in kJ, $\\Delta S$ in J
+- $K > 1 \\implies \\Delta G° < 0$; $K < 1 \\implies \\Delta G° > 0$`
     }
   ]
-}
+};

@@ -2,98 +2,59 @@ export const mcatSciPassagePart4Data = {
   topicSlug: 'mcat-science-passage-strategy-mcat',
   sections: [
     {
-      id: 'mcat-4-intro',
+      id: 'sp4-intro',
       type: 'text' as const,
-      content: `
-# Discrete Questions
+      content: `# Science Passage Strategy for the MCAT
 
-**Part 4 of 7 — Discrete Questions**
+**Part 4 of 7 — Question Types & Strategies**
 
-Discrete questions: standalone, not linked to a passage — test pure content knowledge.
+### MCAT Question Categories
 
-These are often the quickest points — do them if you have solid content mastery.
-      `
+| Type | % of Exam | What It Tests |
+|------|----------|---------------|
+| **Discrete** (standalone) | ~25% | Pure content knowledge, no passage |
+| **Passage-based: Recall** | ~15% | Finding info in the passage |
+| **Passage-based: Application** | ~35% | Applying passage info to new situations |
+| **Passage-based: Reasoning** | ~25% | Drawing conclusions from data/experiments |
+
+### Strategy by Question Type
+
+**Recall questions**: Answer is IN the passage — go back and find it!
+**Application questions**: Use passage + your knowledge to solve a new problem
+**Reasoning questions**: What do the results mean? What's the best conclusion?
+
+### Eliminating Wrong Answers
+
+Common wrong answer patterns:
+- **True but irrelevant**: Statement is factually correct but doesn't answer the question
+- **Extreme language**: "Always," "never," "completely," "no effect"
+- **Opposite of correct**: Tests if you're paying attention
+- **Partially correct**: Right concept but wrong detail`
     },
     {
-      id: 'mcat-4-quiz1',
+      id: 'sp4-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Question Strategy** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in discrete questions?',
-            options: [
-              'Discrete questions: standalone, not linked to a passage — test pure content knowledge',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'An answer choice states "The mutation completely eliminates all enzyme function." This is likely wrong because:',
+            options: ['Extreme language ("completely," "all") is usually wrong on the MCAT — most biological effects are partial', 'It contains scientific terminology', 'It\'s too short', 'Mutations always eliminate enzyme function'],
             correctAnswer: 0,
-            explanation: 'Discrete questions: standalone, not linked to a passage — test pure content knowledge'
+            explanation: 'The MCAT loves nuance. Words like "completely," "always," "never," "all" are red flags. In biology, most mutations affect function partially (reduced activity) rather than eliminating it entirely. Moderate, qualified language is usually correct.'
           }
         ]
       }
     },
     {
-      id: 'mcat-4-detail',
+      id: 'sp4-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Use process of elimination: cross out answers that are clearly wrong.
+      content: `### Key Takeaways — Part 4
 
-**MCAT Tip:** Educated guessing: if you can eliminate 2 options, you have a 50% chance.
-      `
-    },
-    {
-      id: 'mcat-4-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Strategy related to discrete questions?',
-            options: [
-              'Use process of elimination: cross out answers that are clearly wrong',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Use process of elimination: cross out answers that are clearly wrong'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-4-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Discrete questions',
-            options: ['These are often the quickest points — do them if you have solid content mastery.', 'Educated guessing: if you can eliminate 2 options, you have a 50% chance.', 'Use process of elimination: cross out answers that are clearly wrong.', 'standalone, not linked to a passage — test pure content knowledge.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['standalone, not linked to a passage — test pure content knowledge.', 'Use process of elimination: cross out answers that are clearly wrong.', 'Educated guessing: if you can eliminate 2 options, you have a 50% chance.', 'These are often the quickest points — do them if you have solid content mastery.']
-          },
-          {
-            label: 'MCAT Tip',
-            options: ['These are often the quickest points — do them if you have solid content mastery.', 'Use process of elimination: cross out answers that are clearly wrong.', 'standalone, not linked to a passage — test pure content knowledge.', 'Educated guessing: if you can eliminate 2 options, you have a 50% chance.']
-          }
-        ],
-        correctAnswers: ['standalone, not linked to a passage — test pure content knowledge.', 'Use process of elimination: cross out answers that are clearly wrong.', 'Educated guessing: if you can eliminate 2 options, you have a 50% chance.'],
-        hint1: 'Think about what each concept specifically describes in Discrete Questions.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Discrete Questions describes a specific idea. Discrete questions: standalone, not linked to a passage — test pure content knowledge. Key Insight: Use process of elimination: cross out answers that are clearly wrong. MCAT Tip: Educated guessing: if you can eliminate 2 options, you have a 50% chance.'
-      }
+- ~60% of questions require passage + external knowledge (not just reading)
+- Recall: find it in passage. Application: apply to new scenario. Reasoning: interpret data.
+- Eliminate extreme language, true-but-irrelevant, and opposite answers
+- If stuck, eliminate 2 answers and make an educated guess (no penalty for guessing)`
     }
   ]
-}
+};

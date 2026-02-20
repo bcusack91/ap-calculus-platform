@@ -2,98 +2,60 @@ export const mcatCellBioPart7Data = {
   topicSlug: 'mcat-cell-biology-mcat',
   sections: [
     {
-      id: 'mcat-7-intro',
+      id: 'cb7-intro',
       type: 'text' as const,
-      content: `
-# Review & MCAT Practice
+      content: `# Cell Biology for the MCAT
 
-**Part 7 of 7 — Review & MCAT Practice**
+**Part 7 of 7 — Specialized Cell Types & Tissues**
 
-Stem cells: self-renewing, can differentiate into specialized cell types.
+### The Four Tissue Types
 
-Totipotent: can become any cell (zygote); Pluripotent: any cell except placenta (embryonic stem cells).
-      `
+| Type | Function | Examples |
+|------|----------|---------|
+| **Epithelial** | Cover/line surfaces, secretion | Skin, intestinal lining, glands |
+| **Connective** | Support, connect, protect | Bone, blood, cartilage, adipose |
+| **Muscle** | Contraction/movement | Skeletal, smooth, cardiac |
+| **Nervous** | Signal transmission | Neurons, glial cells |
+
+### Muscle Types
+
+| Feature | Skeletal | Cardiac | Smooth |
+|---------|---------|---------|--------|
+| Striated? | Yes | Yes | No |
+| Voluntary? | Yes | No | No |
+| Nuclei | Multinucleated | 1-2 central | 1 central |
+| Special features | T-tubules, SR | Intercalated discs | Gap junctions |
+
+### Stem Cells
+
+| Type | Potency | Can become |
+|------|---------|-----------|
+| Totipotent | Everything | Any cell + placenta (zygote) |
+| Pluripotent | Almost everything | Any cell type (embryonic stem cells) |
+| Multipotent | Several types | Limited lineage (hematopoietic stem cells) |
+| Unipotent | One type | Only one cell type |`
     },
     {
-      id: 'mcat-7-quiz1',
+      id: 'cb7-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: '**Tissues & Cell Types** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes a key concept in review & mcat practice?',
-            options: [
-              'Stem cells: self-renewing, can differentiate into specialized cell types',
-              'This topic is not tested on the MCAT',
-              'This applies only to clinical practice, not the MCAT',
-              'None of the above'
-            ],
+            question: 'Cardiac muscle has intercalated discs because they:',
+            options: ['Contain gap junctions that allow synchronized contraction of the heart', 'Provide extra structural support', 'Store calcium', 'Are remnants from embryonic development'],
             correctAnswer: 0,
-            explanation: 'Stem cells: self-renewing, can differentiate into specialized cell types'
+            explanation: 'Intercalated discs have gap junctions (electrical coupling for rapid signal spread) and desmosomes (mechanical adhesion). This allows the heart to contract as a coordinated unit (functional syncytium).'
           }
         ]
       }
     },
     {
-      id: 'mcat-7-detail',
+      id: 'cb7-summary',
       type: 'text' as const,
-      content: `
-**Key Insight:** Multipotent: limited range (hematopoietic stem cells make blood cells).
+      content: `### Cell Biology — Complete! ✅
 
-**MCAT Tip:** Differentiation is controlled by gene expression — same DNA, different genes active.
-      `
-    },
-    {
-      id: 'mcat-7-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What is an important principle for MCAT Bio/Biochem related to review & mcat practice?',
-            options: [
-              'Multipotent: limited range (hematopoietic stem cells make blood cells)',
-              'Memorize without understanding — the MCAT only tests recall',
-              'This concept is only relevant to graduate-level courses',
-              'Skip this topic — it rarely appears on the MCAT'
-            ],
-            correctAnswer: 0,
-            explanation: 'Multipotent: limited range (hematopoietic stem cells make blood cells)'
-          }
-        ]
-      }
-    },
-    {
-      id: 'mcat-7-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Stem cells',
-            options: ['Differentiation is controlled by gene expression — same DNA, different genes active.', 'Multipotent: limited range (hematopoietic stem cells make blood cells).', 'can become any cell (zygote); Pluripotent: any cell except placenta (embryonic stem cells).', 'self-renewing, can differentiate into specialized cell types.']
-          },
-          {
-            label: 'Totipotent',
-            options: ['Multipotent: limited range (hematopoietic stem cells make blood cells).', 'Differentiation is controlled by gene expression — same DNA, different genes active.', 'self-renewing, can differentiate into specialized cell types.', 'can become any cell (zygote); Pluripotent: any cell except placenta (embryonic stem cells).']
-          },
-          {
-            label: 'Key Insight',
-            options: ['can become any cell (zygote); Pluripotent: any cell except placenta (embryonic stem cells).', 'self-renewing, can differentiate into specialized cell types.', 'Multipotent: limited range (hematopoietic stem cells make blood cells).', 'Differentiation is controlled by gene expression — same DNA, different genes active.']
-          }
-        ],
-        correctAnswers: ['self-renewing, can differentiate into specialized cell types.', 'can become any cell (zygote); Pluripotent: any cell except placenta (embryonic stem cells).', 'Multipotent: limited range (hematopoietic stem cells make blood cells).'],
-        hint1: 'Think about what each concept specifically describes in Review & MCAT Practice.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Review & MCAT Practice describes a specific idea. Stem cells: self-renewing, can differentiate into specialized cell types. Totipotent: can become any cell (zygote); Pluripotent: any cell except placenta (embryonic stem cells). Key Insight: Multipotent: limited range (hematopoietic stem cells make blood cells).'
-      }
+From organelles to tissues, cell biology is the foundation of every MCAT biology passage. Know organelle functions, membrane transport, the cell cycle, meiosis, signaling pathways, and apoptosis — these are all ultra-high-yield.`
     }
   ]
-}
+};
