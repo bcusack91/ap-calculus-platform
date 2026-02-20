@@ -87,6 +87,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
   const [feedback, setFeedback] = useState<'correct' | 'incorrect' | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [correctAnswerIndex, setCorrectAnswerIndex] = useState<number | null>(null);
+  const [feedbackQuestionIndex, setFeedbackQuestionIndex] = useState<number | null>(null);
   const [player1Emotion, setPlayer1Emotion] = useState<'neutral' | 'happy' | 'sad'>('neutral');
   const [player2Emotion, setPlayer2Emotion] = useState<'neutral' | 'happy' | 'sad'>('neutral');
 
@@ -251,6 +252,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
       if (matchState && newPlayerQuestionIndex !== oldPlayerQuestionIndex) {
         console.log('🔄 Question changed! Clearing all states. Old:', oldPlayerQuestionIndex, 'New:', newPlayerQuestionIndex);
         setFeedback(null);
+        setFeedbackQuestionIndex(null);
         setSelectedPosition(null);
         setCorrectAnswerIndex(null);
         setIsSubmitting(false);
@@ -350,6 +352,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
       if (data.correct) {
         console.log('Answer was CORRECT!');
         setFeedback('correct');
+        setFeedbackQuestionIndex(playerQuestionIndex);
         
         // Set happy emotion for the player who answered
         if (isPlayer1) {
@@ -363,6 +366,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
         // Wait 800ms to show feedback, then refresh state for next question
         setTimeout(async () => {
           setFeedback(null);
+          setFeedbackQuestionIndex(null);
           setSelectedPosition(null);
           if (isPlayer1) {
             setPlayer1Emotion('neutral');
@@ -375,6 +379,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
       } else {
         console.log('Answer was INCORRECT');
         setFeedback('incorrect');
+        setFeedbackQuestionIndex(playerQuestionIndex);
         
         // Set sad emotion for the player who answered
         if (isPlayer1) {
@@ -390,6 +395,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
         // Wait 800ms to show feedback, then clear and refresh
         setTimeout(async () => {
           setFeedback(null);
+          setFeedbackQuestionIndex(null);
           setSelectedPosition(null);
           setCorrectAnswerIndex(null);
           if (isPlayer1) {
@@ -439,6 +445,10 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
   const playerQuestionIndex = isPlayer1 ? matchState.player1QuestionIndex : matchState.player2QuestionIndex;
   const opponentQuestionIndex = isPlayer1 ? matchState.player2QuestionIndex : matchState.player1QuestionIndex;
   const currentQuestion = matchState.questions[playerQuestionIndex];
+  // Only show feedback styling when it belongs to the current question
+  // This prevents the next question's correct answer from flashing green
+  // when polling updates matchState before the feedback timeout clears
+  const isFeedbackCurrent = feedback !== null && feedbackQuestionIndex === playerQuestionIndex;
   
   // Results screen
   if (matchState.status === 'COMPLETED') {
@@ -584,7 +594,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
               <p className="font-semibold">Submitting answer...</p>
             </div>
           )}
-          {feedback && (
+          {isFeedbackCurrent && (
             <p className={`text-xl font-semibold ${
               feedback === 'correct' ? 'text-green-600' : 'text-red-600'
             }`}>
@@ -600,14 +610,14 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
               {currentQuestion.options?.map((option, index) => {
                 const isSelected = selectedPosition === index;
                 const isCorrect = index === currentQuestion.answerIndex;
-                const showCorrect = feedback !== null && isCorrect;
-                const showIncorrect = feedback !== null && isSelected && !isCorrect;
+                const showCorrect = isFeedbackCurrent && isCorrect;
+                const showIncorrect = isFeedbackCurrent && isSelected && !isCorrect;
                 
                 return (
                   <button
                     key={index}
                     onClick={() => handleOptionSelect(index)}
-                    disabled={isSubmitting || feedback !== null}
+                    disabled={isSubmitting || isFeedbackCurrent}
                     className={`w-full p-4 rounded-lg border-2 text-left transition-all ${
                       showCorrect
                         ? 'border-green-500 bg-green-50 dark:bg-green-900/20'
@@ -617,7 +627,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
                         ? 'border-purple-500 bg-purple-50 dark:bg-purple-900/20'
                         : 'border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-600'
                     } ${
-                      isSubmitting || feedback !== null
+                      isSubmitting || isFeedbackCurrent
                         ? 'cursor-not-allowed opacity-75'
                         : 'cursor-pointer hover:shadow-md'
                     }`}
@@ -649,7 +659,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
               })}
             </div>
             
-            {feedback && currentQuestion.explanation && (
+            {isFeedbackCurrent && currentQuestion.explanation && (
               <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
                 <p className="text-sm font-semibold text-blue-900 dark:text-blue-300 mb-2">
                   Explanation:
@@ -671,7 +681,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
                   correctAnswerIndex !== null ? correctAnswerIndex :
                   (feedback === 'correct' ? selectedPosition : null)
                 }
-                showFeedback={feedback !== null}
+                showFeedback={isFeedbackCurrent}
                 disabled={isSubmitting}
               />
             </div>
