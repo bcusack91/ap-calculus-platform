@@ -35,20 +35,20 @@ $$\\text{Enolate} + \\text{Aldehyde} \\to \\beta\\text{-hydroxy carbonyl} \\xrig
     {
       id: 'oc3-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Carbonyl Chemistry** 🎯',
+      content: `**Carbonyl Chemistry** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'Treatment of a carboxylic acid with $\\text{NaBH}_4$ gives:',
-            options: ['No reaction (NaBH$_4$ is too mild)', 'A primary alcohol', 'An aldehyde', 'An ester'],
+            question: `Treatment of a carboxylic acid with $\\text{NaBH}_4$ gives:`,
+            options: [`No reaction (NaBH$_4$ is too mild)`, `A primary alcohol`, `An aldehyde`, `An ester`],
             correctAnswer: 0,
-            explanation: '$\\text{NaBH}_4$ cannot reduce carboxylic acids or esters. You need $\\text{LiAlH}_4$ for those. NaBH$_4$ only reduces aldehydes and ketones.'
+            explanation: `$\\text{NaBH}_4$ cannot reduce carboxylic acids or esters. You need $\\text{LiAlH}_4$ for those. NaBH$_4$ only reduces aldehydes and ketones.`
           },
           {
-            question: 'PCC (pyridinium chlorochromate) oxidation of a primary alcohol gives:',
-            options: ['An aldehyde (mild oxidation stops here)', 'A carboxylic acid', 'A ketone', 'No reaction'],
+            question: `PCC (pyridinium chlorochromate) oxidation of a primary alcohol gives:`,
+            options: [`An aldehyde (mild oxidation stops here)`, `A carboxylic acid`, `A ketone`, `No reaction`],
             correctAnswer: 0,
-            explanation: 'PCC is a mild oxidizing agent that converts 1° ROH to an aldehyde without over-oxidation. Jones reagent (CrO$_3$/H$_2$SO$_4$) would go all the way to carboxylic acid.'
+            explanation: `PCC is a mild oxidizing agent that converts 1° ROH to an aldehyde without over-oxidation. Jones reagent (CrO$_3$/H$_2$SO$_4$) would go all the way to carboxylic acid.`
           }
         ]
       }

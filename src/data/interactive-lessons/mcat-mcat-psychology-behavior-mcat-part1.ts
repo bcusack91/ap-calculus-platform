@@ -41,14 +41,14 @@ export const mcatPsychBehavPart1Data = {
     {
       id: 'pb1-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Sensation & Perception** 🎯',
+      content: `**Sensation & Perception** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'According to Weber\'s Law, if you can just barely notice the difference between 10 lbs and 11 lbs, the JND for a 50 lb weight would be:',
-            options: ['5 lbs ($\\Delta I / I = 1/10$, so $\\Delta I = 50 \\times 1/10 = 5$)', '1 lb', '10 lbs', '11 lbs'],
+            question: `According to Weber's Law, if you can just barely notice the difference between 10 lbs and 11 lbs, the JND for a 50 lb weight would be:`,
+            options: [`5 lbs ($\\Delta I / I = 1/10$, so $\\Delta I = 50 \\times 1/10 = 5$)`, `1 lb`, `10 lbs`, `11 lbs`],
             correctAnswer: 0,
-            explanation: 'Weber\'s Law: $\\Delta I / I = k$. From the 10 lb example, $k = 1/10$. For 50 lbs: $\\Delta I = 50 \\times 1/10 = 5$ lbs. The JND scales with stimulus intensity — this is why you can notice a candle in a dark room but not in sunlight.'
+            explanation: `Weber's Law: $\\Delta I / I = k$. From the 10 lb example, $k = 1/10$. For 50 lbs: $\\Delta I = 50 \\times 1/10 = 5$ lbs. The JND scales with stimulus intensity — this is why you can notice a candle in a dark room but not in sunlight.`
           }
         ]
       }

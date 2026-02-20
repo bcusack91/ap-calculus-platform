@@ -36,14 +36,14 @@ export const mcatCarsPsgPart5Data = {
     {
       id: 'cp5-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Ethics Passages** 🎯',
+      content: `**Ethics Passages** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'An author argues that a policy should be evaluated solely on whether it maximizes overall well-being. This aligns with:',
-            options: ['Utilitarianism', 'Deontology', 'Virtue ethics', 'Social contract theory'],
+            question: `An author argues that a policy should be evaluated solely on whether it maximizes overall well-being. This aligns with:`,
+            options: [`Utilitarianism`, `Deontology`, `Virtue ethics`, `Social contract theory`],
             correctAnswer: 0,
-            explanation: 'Utilitarianism judges actions by their consequences — specifically whether they maximize total well-being/happiness. Key phrase: "greatest good for the greatest number."'
+            explanation: `Utilitarianism judges actions by their consequences — specifically whether they maximize total well-being/happiness. Key phrase: "greatest good for the greatest number."`
           }
         ]
       }

@@ -41,14 +41,14 @@ export const mcatCellBioPart6Data = {
     {
       id: 'cb6-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Apoptosis** 🎯',
+      content: `**Apoptosis** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A cancer cell overexpresses Bcl-2 protein. The effect is:',
-            options: ['Resistance to apoptosis — Bcl-2 prevents cytochrome c release from mitochondria', 'Increased apoptosis', 'No change in cell survival', 'Increased cell division rate'],
+            question: `A cancer cell overexpresses Bcl-2 protein. The effect is:`,
+            options: [`Resistance to apoptosis — Bcl-2 prevents cytochrome c release from mitochondria`, `Increased apoptosis`, `No change in cell survival`, `Increased cell division rate`],
             correctAnswer: 0,
-            explanation: 'Bcl-2 is anti-apoptotic — it stabilizes the mitochondrial membrane, preventing cytochrome c release and thus blocking the intrinsic apoptotic pathway. Overexpression = cells resist apoptosis = cancer.'
+            explanation: `Bcl-2 is anti-apoptotic — it stabilizes the mitochondrial membrane, preventing cytochrome c release and thus blocking the intrinsic apoptotic pathway. Overexpression = cells resist apoptosis = cancer.`
           }
         ]
       }

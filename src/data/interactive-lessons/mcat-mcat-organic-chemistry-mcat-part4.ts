@@ -31,14 +31,14 @@ Thioester (CoA derivatives) are key metabolic intermediates — more reactive th
     {
       id: 'oc4-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Carboxylic Acid Derivatives** 🎯',
+      content: `**Carboxylic Acid Derivatives** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'Which carboxylic acid derivative is LEAST reactive toward nucleophilic acyl substitution?',
-            options: ['Amide', 'Acid chloride', 'Ester', 'Anhydride'],
+            question: `Which carboxylic acid derivative is LEAST reactive toward nucleophilic acyl substitution?`,
+            options: [`Amide`, `Acid chloride`, `Ester`, `Anhydride`],
             correctAnswer: 0,
-            explanation: 'Amides are least reactive because $\\text{NH}_2^-$ is a very poor leaving group. Also, nitrogen donates electrons into the carbonyl via resonance, reducing electrophilicity.'
+            explanation: `Amides are least reactive because $\\text{NH}_2^-$ is a very poor leaving group. Also, nitrogen donates electrons into the carbonyl via resonance, reducing electrophilicity.`
           }
         ]
       }

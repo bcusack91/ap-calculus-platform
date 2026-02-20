@@ -33,14 +33,14 @@ export const mcatOrganSysPart5Data = {
     {
       id: 'os5-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Endocrine** 🎯',
+      content: `**Endocrine** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A patient has high T3/T4 levels AND high TSH. The most likely cause is:',
-            options: ['A TSH-secreting pituitary tumor (secondary hyperthyroidism)', 'A primary thyroid problem', 'Normal feedback functioning', 'Iodine deficiency'],
+            question: `A patient has high T3/T4 levels AND high TSH. The most likely cause is:`,
+            options: [`A TSH-secreting pituitary tumor (secondary hyperthyroidism)`, `A primary thyroid problem`, `Normal feedback functioning`, `Iodine deficiency`],
             correctAnswer: 0,
-            explanation: 'Normally, high T3/T4 should suppress TSH (negative feedback). If both are high, the pituitary is producing TSH autonomously (ignoring feedback) — most likely a pituitary adenoma.'
+            explanation: `Normally, high T3/T4 should suppress TSH (negative feedback). If both are high, the pituitary is producing TSH autonomously (ignoring feedback) — most likely a pituitary adenoma.`
           }
         ]
       }

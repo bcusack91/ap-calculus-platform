@@ -42,14 +42,14 @@ export const mcatMicroPart5Data = {
     {
       id: 'mi5-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Fungi & Parasites** 🎯',
+      content: `**Fungi & Parasites** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'Antifungal drugs target ergosterol because:',
-            options: ['Ergosterol is in fungal membranes but not human membranes (humans use cholesterol)', 'Ergosterol is in all cell walls', 'It disrupts bacterial growth too', 'Ergosterol is the same as cholesterol'],
+            question: `Antifungal drugs target ergosterol because:`,
+            options: [`Ergosterol is in fungal membranes but not human membranes (humans use cholesterol)`, `Ergosterol is in all cell walls`, `It disrupts bacterial growth too`, `Ergosterol is the same as cholesterol`],
             correctAnswer: 0,
-            explanation: 'Fungal membranes use ergosterol instead of cholesterol. Drugs like amphotericin B bind ergosterol (creating pores) and azoles block ergosterol synthesis. Since humans use cholesterol, these drugs selectively target fungi.'
+            explanation: `Fungal membranes use ergosterol instead of cholesterol. Drugs like amphotericin B bind ergosterol (creating pores) and azoles block ergosterol synthesis. Since humans use cholesterol, these drugs selectively target fungi.`
           }
         ]
       }

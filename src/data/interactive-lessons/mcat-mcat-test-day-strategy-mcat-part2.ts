@@ -41,14 +41,14 @@ Move on if you've spent 2+ minutes on a single question:
     {
       id: 'td2-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Time Management** 🎯',
+      content: `**Time Management** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'You\'ve been stuck on a question for 2 minutes and can\'t decide between two answers. The best strategy is:',
-            options: ['Pick your best guess, flag it, and move on — protecting time for remaining questions', 'Keep working until you figure it out', 'Skip it without answering', 'Close your eyes and pick randomly'],
+            question: `You've been stuck on a question for 2 minutes and can't decide between two answers. The best strategy is:`,
+            options: [`Pick your best guess, flag it, and move on — protecting time for remaining questions`, `Keep working until you figure it out`, `Skip it without answering`, `Close your eyes and pick randomly`],
             correctAnswer: 0,
-            explanation: 'Every question is worth the same amount. Spending 4+ minutes on one hard question costs you easy questions later. Always answer something (no penalty for guessing), flag it, and move on. Your first instinct is often correct.'
+            explanation: `Every question is worth the same amount. Spending 4+ minutes on one hard question costs you easy questions later. Always answer something (no penalty for guessing), flag it, and move on. Your first instinct is often correct.`
           }
         ]
       }

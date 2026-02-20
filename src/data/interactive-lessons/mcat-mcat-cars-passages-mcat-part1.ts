@@ -34,14 +34,14 @@ CARS draws from these humanities fields:
     {
       id: 'cp1-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Humanities Passages** 🎯',
+      content: `**Humanities Passages** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A philosophy passage discusses three philosophers\' views on justice. To answer questions about the AUTHOR\'s view, you should:',
-            options: ['Distinguish the author\'s voice from the philosophers being discussed — look for evaluative language', 'Assume the author agrees with the last philosopher mentioned', 'Average the three philosophers\' views', 'Look for the most modern perspective'],
+            question: `A philosophy passage discusses three philosophers' views on justice. To answer questions about the AUTHOR's view, you should:`,
+            options: [`Distinguish the author\`s voice from the philosophers being discussed — look for evaluative language`, `Assume the author agrees with the last philosopher mentioned`, `Average the three philosophers\` views`, `Look for the most modern perspective`],
             correctAnswer: 0,
-            explanation: 'Authors often present others\' views before giving their own assessment. Look for evaluative language: "However," "More convincingly," "This argument fails because" — these signal the author\'s actual position.'
+            explanation: `Authors often present others' views before giving their own assessment. Look for evaluative language: "However," "More convincingly," "This argument fails because" — these signal the author's actual position.`
           }
         ]
       }

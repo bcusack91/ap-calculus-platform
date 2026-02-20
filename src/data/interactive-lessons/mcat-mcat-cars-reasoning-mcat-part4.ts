@@ -39,14 +39,14 @@ Argument: "City X reduced crime by installing more streetlights."
     {
       id: 'cr4-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Strengthen/Weaken** 🎯',
+      content: `**Strengthen/Weaken** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'An author argues that meditation reduces anxiety based on a study where meditators reported less anxiety than non-meditators. Which would MOST weaken this argument?',
-            options: ['People who choose to meditate may have been less anxious to begin with (self-selection bias)', 'Meditation has existed for thousands of years', 'Some meditators also exercise regularly', 'Anxiety can be measured in multiple ways'],
+            question: `An author argues that meditation reduces anxiety based on a study where meditators reported less anxiety than non-meditators. Which would MOST weaken this argument?`,
+            options: [`People who choose to meditate may have been less anxious to begin with (self-selection bias)`, `Meditation has existed for thousands of years`, `Some meditators also exercise regularly`, `Anxiety can be measured in multiple ways`],
             correctAnswer: 0,
-            explanation: 'Self-selection bias provides an alternative explanation: the correlation may not be causal. Less anxious people might simply be more likely to try meditation. This directly undermines the argument\'s core assumption of causation.'
+            explanation: `Self-selection bias provides an alternative explanation: the correlation may not be causal. Less anxious people might simply be more likely to try meditation. This directly undermines the argument's core assumption of causation.`
           }
         ]
       }

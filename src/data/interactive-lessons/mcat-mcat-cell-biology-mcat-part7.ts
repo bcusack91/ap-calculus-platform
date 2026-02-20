@@ -38,14 +38,14 @@ export const mcatCellBioPart7Data = {
     {
       id: 'cb7-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Tissues & Cell Types** 🎯',
+      content: `**Tissues & Cell Types** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'Cardiac muscle has intercalated discs because they:',
-            options: ['Contain gap junctions that allow synchronized contraction of the heart', 'Provide extra structural support', 'Store calcium', 'Are remnants from embryonic development'],
+            question: `Cardiac muscle has intercalated discs because they:`,
+            options: [`Contain gap junctions that allow synchronized contraction of the heart`, `Provide extra structural support`, `Store calcium`, `Are remnants from embryonic development`],
             correctAnswer: 0,
-            explanation: 'Intercalated discs have gap junctions (electrical coupling for rapid signal spread) and desmosomes (mechanical adhesion). This allows the heart to contract as a coordinated unit (functional syncytium).'
+            explanation: `Intercalated discs have gap junctions (electrical coupling for rapid signal spread) and desmosomes (mechanical adhesion). This allows the heart to contract as a coordinated unit (functional syncytium).`
           }
         ]
       }

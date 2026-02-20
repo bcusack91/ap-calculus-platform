@@ -39,14 +39,14 @@ Normal: ~45%. Elevated in dehydration or polycythemia. Decreased in anemia.
     {
       id: 'ap6-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Blood & Lymph** 🎯',
+      content: `**Blood & Lymph** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A patient is severely dehydrated. Their hematocrit would be:',
-            options: ['Elevated — plasma volume decreases, but RBC count stays the same (relative polycythemia)', 'Decreased', 'Normal', 'Zero'],
+            question: `A patient is severely dehydrated. Their hematocrit would be:`,
+            options: [`Elevated — plasma volume decreases, but RBC count stays the same (relative polycythemia)`, `Decreased`, `Normal`, `Zero`],
             correctAnswer: 0,
-            explanation: 'Dehydration decreases plasma volume. Since hematocrit = RBC volume / total blood volume, the RBC percentage increases (even though absolute RBC count hasn\'t changed). This is called relative polycythemia.'
+            explanation: `Dehydration decreases plasma volume. Since hematocrit = RBC volume / total blood volume, the RBC percentage increases (even though absolute RBC count hasn't changed). This is called relative polycythemia.`
           }
         ]
       }

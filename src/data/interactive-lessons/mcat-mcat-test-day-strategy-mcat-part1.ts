@@ -34,14 +34,14 @@ export const mcatTestDayPart1Data = {
     {
       id: 'td1-quiz1',
       type: 'multiple-choice' as const,
-      content: '**MCAT Structure** 🎯',
+      content: `**MCAT Structure** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'The total number of questions on the MCAT is:',
-            options: ['230 questions across 4 sections', '200 questions', '300 questions', '180 questions'],
+            question: `The total number of questions on the MCAT is:`,
+            options: [`230 questions across 4 sections`, `200 questions`, `300 questions`, `180 questions`],
             correctAnswer: 0,
-            explanation: 'CP: 59, CARS: 53, BB: 59, PS: 59 = 230 total questions. The exam takes about 7.5 hours including breaks. Knowing the structure reduces test-day anxiety.'
+            explanation: `CP: 59, CARS: 53, BB: 59, PS: 59 = 230 total questions. The exam takes about 7.5 hours including breaks. Knowing the structure reduces test-day anxiety.`
           }
         ]
       }

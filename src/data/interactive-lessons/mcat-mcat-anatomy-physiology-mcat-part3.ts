@@ -36,14 +36,14 @@ export const mcatAnatPhysPart3Data = {
     {
       id: 'ap3-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Embryology** 🎯',
+      content: `**Embryology** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'The nervous system develops from which germ layer?',
-            options: ['Ectoderm — via neurulation (neural plate → neural tube)', 'Mesoderm', 'Endoderm', 'Trophoblast'],
+            question: `The nervous system develops from which germ layer?`,
+            options: [`Ectoderm — via neurulation (neural plate → neural tube)`, `Mesoderm`, `Endoderm`, `Trophoblast`],
             correctAnswer: 0,
-            explanation: 'The ectoderm forms the neural plate, which folds into the neural tube (future brain and spinal cord). This process is neurulation. Neural crest cells (also from ectoderm) form PNS, melanocytes, adrenal medulla.'
+            explanation: `The ectoderm forms the neural plate, which folds into the neural tube (future brain and spinal cord). This process is neurulation. Neural crest cells (also from ectoderm) form PNS, melanocytes, adrenal medulla.`
           }
         ]
       }

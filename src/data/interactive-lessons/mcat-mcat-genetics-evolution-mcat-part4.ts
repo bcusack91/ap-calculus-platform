@@ -43,14 +43,14 @@ Usually given: "$q^2$ = frequency of affected individuals (recessive phenotype)"
     {
       id: 'ge4-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Hardy-Weinberg** 🎯',
+      content: `**Hardy-Weinberg** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'In a population, 1 in 10,000 individuals has a recessive genetic disease. The carrier frequency is approximately:',
-            options: ['2% ($2pq \\approx 0.02$)', '1%', '0.01%', '10%'],
+            question: `In a population, 1 in 10,000 individuals has a recessive genetic disease. The carrier frequency is approximately:`,
+            options: [`2% ($2pq \\approx 0.02$)`, `1%`, `0.01%`, `10%`],
             correctAnswer: 0,
-            explanation: '$q^2 = 1/10{,}000 = 0.0001$, so $q = 0.01$ and $p = 0.99$. Carrier frequency = $2pq = 2(0.99)(0.01) = 0.0198 \\approx 2\\%$. Note: carrier frequency is MUCH higher than disease frequency — this is clinically important!'
+            explanation: `$q^2 = 1/10{,}000 = 0.0001$, so $q = 0.01$ and $p = 0.99$. Carrier frequency = $2pq = 2(0.99)(0.01) = 0.0198 \\approx 2\\%$. Note: carrier frequency is MUCH higher than disease frequency — this is clinically important!`
           }
         ]
       }

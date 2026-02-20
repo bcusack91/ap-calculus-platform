@@ -38,14 +38,14 @@ An analogy maps the **relationship structure** from one domain to another.
     {
       id: 'cr5-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Analogies** 🎯',
+      content: `**Analogies** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A passage describes how an invasive species outcompeted native plants because it grew faster and used more resources. Which is the best analogy?',
-            options: ['A large retailer driving small businesses out by offering lower prices through greater buying power', 'A student studying harder and earning better grades', 'A drought killing all plants equally', 'Two athletes competing fairly in a race'],
+            question: `A passage describes how an invasive species outcompeted native plants because it grew faster and used more resources. Which is the best analogy?`,
+            options: [`A large retailer driving small businesses out by offering lower prices through greater buying power`, `A student studying harder and earning better grades`, `A drought killing all plants equally`, `Two athletes competing fairly in a race`],
             correctAnswer: 0,
-            explanation: 'The key structure: an entity with a resource advantage displaces a weaker entity. The large retailer (invasive species) outcompetes small businesses (native plants) through resource advantage (buying power/growth rate).'
+            explanation: `The key structure: an entity with a resource advantage displaces a weaker entity. The large retailer (invasive species) outcompetes small businesses (native plants) through resource advantage (buying power/growth rate).`
           }
         ]
       }

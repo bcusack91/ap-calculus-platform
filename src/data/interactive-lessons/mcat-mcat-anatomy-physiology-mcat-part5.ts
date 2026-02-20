@@ -35,14 +35,14 @@ Sound waves → Pinna → Ear canal → Tympanic membrane (vibrates) → Ossicle
     {
       id: 'ap5-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Senses** 🎯',
+      content: `**Senses** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A person with damage to the fovea would have difficulty with:',
-            options: ['Detailed central vision (reading, face recognition) — the fovea has the highest concentration of cones', 'Peripheral vision', 'Night vision', 'Hearing'],
+            question: `A person with damage to the fovea would have difficulty with:`,
+            options: [`Detailed central vision (reading, face recognition) — the fovea has the highest concentration of cones`, `Peripheral vision`, `Night vision`, `Hearing`],
             correctAnswer: 0,
-            explanation: 'The fovea contains the highest density of cones (responsible for color and fine detail vision). Foveal damage destroys central/sharp vision while peripheral vision (rod-dependent) may be preserved — this is macular degeneration.'
+            explanation: `The fovea contains the highest density of cones (responsible for color and fine detail vision). Foveal damage destroys central/sharp vision while peripheral vision (rod-dependent) may be preserved — this is macular degeneration.`
           }
         ]
       }

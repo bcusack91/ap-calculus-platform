@@ -41,20 +41,20 @@ Narrower pipe → faster flow → lower pressure (Venturi effect)`
     {
       id: 'pm5-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Fluids** 🎯',
+      content: `**Fluids** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'Blood flows through an artery that narrows. In the narrow section, compared to the wide section:',
-            options: ['Velocity increases and pressure decreases', 'Both velocity and pressure increase', 'Velocity decreases and pressure increases', 'Both decrease'],
+            question: `Blood flows through an artery that narrows. In the narrow section, compared to the wide section:`,
+            options: [`Velocity increases and pressure decreases`, `Both velocity and pressure increase`, `Velocity decreases and pressure increases`, `Both decrease`],
             correctAnswer: 0,
-            explanation: 'By continuity ($A_1v_1 = A_2v_2$): smaller area → faster flow. By Bernoulli: faster flow → lower pressure. This is the Venturi effect and explains how aneurysms can expand (wider → slower → higher pressure on walls).'
+            explanation: `By continuity ($A_1v_1 = A_2v_2$): smaller area → faster flow. By Bernoulli: faster flow → lower pressure. This is the Venturi effect and explains how aneurysms can expand (wider → slower → higher pressure on walls).`
           },
           {
-            question: 'A block of wood ($\\rho = 600\\;\\text{kg/m}^3$) floats in water ($\\rho = 1000\\;\\text{kg/m}^3$). What fraction is submerged?',
-            options: ['60%', '40%', '100%', '50%'],
+            question: `A block of wood ($\\rho = 600\\;\\text{kg/m}^3$) floats in water ($\\rho = 1000\\;\\text{kg/m}^3$). What fraction is submerged?`,
+            options: [`60%`, `40%`, `100%`, `50%`],
             correctAnswer: 0,
-            explanation: 'For floating: $\\rho_{object}/\\rho_{fluid} = V_{submerged}/V_{total} = 600/1000 = 0.60$. So 60% is submerged.'
+            explanation: `For floating: $\\rho_{object}/\\rho_{fluid} = V_{submerged}/V_{total} = 600/1000 = 0.60$. So 60% is submerged.`
           }
         ]
       }

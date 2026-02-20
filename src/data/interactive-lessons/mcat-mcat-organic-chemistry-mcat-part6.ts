@@ -38,20 +38,20 @@ A proton with $n$ equivalent neighboring protons splits into $n + 1$ peaks.
     {
       id: 'oc6-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Spectroscopy** 🎯',
+      content: `**Spectroscopy** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A compound shows a strong, sharp IR absorption at 1715 cm$^{-1}$ and a broad absorption at 2500-3300 cm$^{-1}$. It is most likely a:',
-            options: ['Carboxylic acid', 'Ketone', 'Alcohol', 'Amine'],
+            question: `A compound shows a strong, sharp IR absorption at 1715 cm$^{-1}$ and a broad absorption at 2500-3300 cm$^{-1}$. It is most likely a:`,
+            options: [`Carboxylic acid`, `Ketone`, `Alcohol`, `Amine`],
             correctAnswer: 0,
-            explanation: '1715 cm$^{-1}$ = C=O stretch. Broad 2500-3300 cm$^{-1}$ = O-H of carboxylic acid (characteristically very broad due to H-bonding). Together, these are diagnostic for -COOH.'
+            explanation: `1715 cm$^{-1}$ = C=O stretch. Broad 2500-3300 cm$^{-1}$ = O-H of carboxylic acid (characteristically very broad due to H-bonding). Together, these are diagnostic for -COOH.`
           },
           {
-            question: 'In $^1$H NMR of $\\text{CH}_3\\text{CH}_2\\text{OH}$, the $\\text{CH}_2$ peak appears as a:',
-            options: ['Quartet (3 neighbors from $\\text{CH}_3$)', 'Triplet', 'Singlet', 'Doublet'],
+            question: `In $^1$H NMR of $\\text{CH}_3\\text{CH}_2\\text{OH}$, the $\\text{CH}_2$ peak appears as a:`,
+            options: [`Quartet (3 neighbors from $\\text{CH}_3$)`, `Triplet`, `Singlet`, `Doublet`],
             correctAnswer: 0,
-            explanation: 'The $\\text{CH}_2$ has 3 neighboring H atoms on the $\\text{CH}_3$. By the n+1 rule: $3 + 1 = 4$ peaks = quartet. (The OH neighbor is often ignored due to rapid exchange).'
+            explanation: `The $\\text{CH}_2$ has 3 neighboring H atoms on the $\\text{CH}_3$. By the n+1 rule: $3 + 1 = 4$ peaks = quartet. (The OH neighbor is often ignored due to rapid exchange).`
           }
         ]
       }

@@ -38,14 +38,14 @@ Multiple social identities (race, class, gender) intersect to create unique expe
     {
       id: 'so2-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Stratification** 🎯',
+      content: `**Stratification** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'Research shows that low-SES individuals have higher rates of heart disease, diabetes, and early death. This is BEST explained by:',
-            options: ['Social determinants of health — limited access to care, healthy food, safe environments, and chronic stress', 'Genetic differences between social classes', 'Personal choices alone', 'Random variation'],
+            question: `Research shows that low-SES individuals have higher rates of heart disease, diabetes, and early death. This is BEST explained by:`,
+            options: [`Social determinants of health — limited access to care, healthy food, safe environments, and chronic stress`, `Genetic differences between social classes`, `Personal choices alone`, `Random variation`],
             correctAnswer: 0,
-            explanation: 'Social determinants of health include economic stability, education, healthcare access, neighborhood environment, and social context. These structural factors explain most health disparities — not individual genetics or choices alone.'
+            explanation: `Social determinants of health include economic stability, education, healthcare access, neighborhood environment, and social context. These structural factors explain most health disparities — not individual genetics or choices alone.`
           }
         ]
       }

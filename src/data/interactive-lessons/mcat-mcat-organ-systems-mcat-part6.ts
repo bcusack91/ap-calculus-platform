@@ -41,14 +41,14 @@ $$\\text{AP reaches terminal} \\to \\text{Ca}^{2+}\\text{ influx} \\to \\text{Ve
     {
       id: 'os6-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Nervous System** 🎯',
+      content: `**Nervous System** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'Multiple sclerosis destroys myelin sheaths. This would:',
-            options: ['Slow or block action potential conduction (loss of saltatory conduction)', 'Speed up conduction', 'Have no effect on signal transmission', 'Only affect the CNS, not the PNS'],
+            question: `Multiple sclerosis destroys myelin sheaths. This would:`,
+            options: [`Slow or block action potential conduction (loss of saltatory conduction)`, `Speed up conduction`, `Have no effect on signal transmission`, `Only affect the CNS, not the PNS`],
             correctAnswer: 0,
-            explanation: 'Myelin insulates axons, enabling saltatory conduction (AP jumps between nodes of Ranvier). Without myelin, conduction slows dramatically or fails, causing motor and sensory deficits.'
+            explanation: `Myelin insulates axons, enabling saltatory conduction (AP jumps between nodes of Ranvier). Without myelin, conduction slows dramatically or fails, causing motor and sensory deficits.`
           }
         ]
       }

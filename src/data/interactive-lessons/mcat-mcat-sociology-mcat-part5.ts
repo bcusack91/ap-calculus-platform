@@ -41,14 +41,14 @@ Urbanization effects:
     {
       id: 'so5-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Demographics** 🎯',
+      content: `**Demographics** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'During Stage 2 of the demographic transition, population grows rapidly because:',
-            options: ['Death rates fall (better sanitation, medicine) while birth rates remain high', 'Both birth and death rates increase', 'Birth rates rise dramatically', 'Immigration increases'],
+            question: `During Stage 2 of the demographic transition, population grows rapidly because:`,
+            options: [`Death rates fall (better sanitation, medicine) while birth rates remain high`, `Both birth and death rates increase`, `Birth rates rise dramatically`, `Immigration increases`],
             correctAnswer: 0,
-            explanation: 'Stage 2: Public health improvements (clean water, vaccines, medicine) reduce death rates, but cultural and economic factors keep birth rates high → population boom. This is happening in many developing nations today.'
+            explanation: `Stage 2: Public health improvements (clean water, vaccines, medicine) reduce death rates, but cultural and economic factors keep birth rates high → population boom. This is happening in many developing nations today.`
           }
         ]
       }

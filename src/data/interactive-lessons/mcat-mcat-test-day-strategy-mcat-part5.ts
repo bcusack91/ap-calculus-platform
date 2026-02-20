@@ -44,14 +44,14 @@ This is the MOST IMPORTANT break:
     {
       id: 'td5-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Test Day Prep** 🎯',
+      content: `**Test Day Prep** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'The MOST important thing to do during the 30-minute break after CARS is:',
-            options: ['Eat a substantial snack and mentally reset for the second half', 'Review your CARS answers', 'Study flashcards for Bio/Biochem', 'Call a friend for reassurance'],
+            question: `The MOST important thing to do during the 30-minute break after CARS is:`,
+            options: [`Eat a substantial snack and mentally reset for the second half`, `Review your CARS answers`, `Study flashcards for Bio/Biochem`, `Call a friend for reassurance`],
             correctAnswer: 0,
-            explanation: 'The 30-minute break is crucial for physical AND mental recovery. Eat (your brain needs glucose!), move around, and mentally let go of CARS. Reviewing past answers creates anxiety and studying more content at this point has diminishing returns.'
+            explanation: `The 30-minute break is crucial for physical AND mental recovery. Eat (your brain needs glucose!), move around, and mentally let go of CARS. Reviewing past answers creates anxiety and studying more content at this point has diminishing returns.`
           }
         ]
       }

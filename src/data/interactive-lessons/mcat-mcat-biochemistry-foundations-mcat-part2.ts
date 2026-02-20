@@ -36,20 +36,20 @@ $$\\frac{1}{v} = \\frac{K_m}{V_{max}} \\cdot \\frac{1}{[S]} + \\frac{1}{V_{max}}
     {
       id: 'bc2-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Enzyme Kinetics** 🎯',
+      content: `**Enzyme Kinetics** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A researcher adds a molecule that binds ONLY to the enzyme-substrate complex. This is an example of:',
-            options: ['Uncompetitive inhibition', 'Competitive inhibition', 'Noncompetitive inhibition', 'Allosteric activation'],
+            question: `A researcher adds a molecule that binds ONLY to the enzyme-substrate complex. This is an example of:`,
+            options: [`Uncompetitive inhibition`, `Competitive inhibition`, `Noncompetitive inhibition`, `Allosteric activation`],
             correctAnswer: 0,
-            explanation: 'Uncompetitive inhibitors bind ONLY to the ES complex (not free enzyme). This decreases both $V_{max}$ and $K_m$ (apparent). On a Lineweaver-Burk plot, lines are parallel.'
+            explanation: `Uncompetitive inhibitors bind ONLY to the ES complex (not free enzyme). This decreases both $V_{max}$ and $K_m$ (apparent). On a Lineweaver-Burk plot, lines are parallel.`
           },
           {
-            question: 'An enzyme has $K_m = 2$ mM and $V_{max} = 100$ $\\mu$mol/min. At $[S] = 18$ mM, the reaction velocity is approximately:',
-            options: ['90 $\\mu$mol/min', '50 $\\mu$mol/min', '100 $\\mu$mol/min', '10 $\\mu$mol/min'],
+            question: `An enzyme has $K_m = 2$ mM and $V_{max} = 100$ $\\mu$mol/min. At $[S] = 18$ mM, the reaction velocity is approximately:`,
+            options: [`90 $\\mu$mol/min`, `50 $\\mu$mol/min`, `100 $\\mu$mol/min`, `10 $\\mu$mol/min`],
             correctAnswer: 0,
-            explanation: '$v = V_{max}[S]/(K_m + [S]) = 100(18)/(2 + 18) = 1800/20 = 90$ $\\mu$mol/min. At high [S] relative to $K_m$, the enzyme approaches $V_{max}$.'
+            explanation: `$v = V_{max}[S]/(K_m + [S]) = 100(18)/(2 + 18) = 1800/20 = 90$ $\\mu$mol/min. At high [S] relative to $K_m$, the enzyme approaches $V_{max}$.`
           }
         ]
       }

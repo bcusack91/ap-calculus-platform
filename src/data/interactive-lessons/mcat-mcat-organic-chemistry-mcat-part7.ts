@@ -29,20 +29,20 @@ export const mcatOrgChemPart7Data = {
     {
       id: 'oc7-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Final Review** 🎯',
+      content: `**Final Review** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'An amino acid at pH 7 has a positively charged side chain. It is most likely:',
-            options: ['Lysine (pKa of side chain ~10.5)', 'Aspartate', 'Serine', 'Alanine'],
+            question: `An amino acid at pH 7 has a positively charged side chain. It is most likely:`,
+            options: [`Lysine (pKa of side chain ~10.5)`, `Aspartate`, `Serine`, `Alanine`],
             correctAnswer: 0,
-            explanation: 'At pH 7, Lys side chain ($-NH_3^+$, pKa ~10.5) is protonated and positive. Arg (pKa ~12.5) and His (pKa ~6.0) are the other basic residues. His may or may not be protonated at pH 7.'
+            explanation: `At pH 7, Lys side chain ($-NH_3^+$, pKa ~10.5) is protonated and positive. Arg (pKa ~12.5) and His (pKa ~6.0) are the other basic residues. His may or may not be protonated at pH 7.`
           },
           {
-            question: 'A passage describes a molecule with a chiral center that rotates plane-polarized light +15°. Its enantiomer rotates light:',
-            options: ['$-15°$ (equal and opposite)', '$+15°$', '$0°$', '$+30°$'],
+            question: `A passage describes a molecule with a chiral center that rotates plane-polarized light +15°. Its enantiomer rotates light:`,
+            options: [`$-15°$ (equal and opposite)`, `$+15°$`, `$0°$`, `$+30°$`],
             correctAnswer: 0,
-            explanation: 'Enantiomers rotate plane-polarized light by equal magnitude but opposite direction. If one is +15°, the other must be -15°.'
+            explanation: `Enantiomers rotate plane-polarized light by equal magnitude but opposite direction. If one is +15°, the other must be -15°.`
           }
         ]
       }

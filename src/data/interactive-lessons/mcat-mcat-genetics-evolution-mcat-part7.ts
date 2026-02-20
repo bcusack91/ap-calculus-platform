@@ -41,14 +41,14 @@ Sickle cell carriers (HbAS) are resistant to malaria → explains high frequency
     {
       id: 'ge7-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Genetic Diseases** 🎯',
+      content: `**Genetic Diseases** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'Sickle cell disease persists at high frequency in malaria-endemic regions because:',
-            options: ['Heterozygote advantage — carriers (HbAS) have malaria resistance without severe disease', 'Sickle cell is dominant', 'There is no selective pressure against it', 'The mutation is beneficial in all individuals'],
+            question: `Sickle cell disease persists at high frequency in malaria-endemic regions because:`,
+            options: [`Heterozygote advantage — carriers (HbAS) have malaria resistance without severe disease`, `Sickle cell is dominant`, `There is no selective pressure against it`, `The mutation is beneficial in all individuals`],
             correctAnswer: 0,
-            explanation: 'HbAS carriers have mild sickling that kills malaria parasites in RBCs but don\'t have the severe complications of HbSS. This heterozygote advantage (balancing selection) maintains the allele at ~20% frequency in affected regions.'
+            explanation: `HbAS carriers have mild sickling that kills malaria parasites in RBCs but don't have the severe complications of HbSS. This heterozygote advantage (balancing selection) maintains the allele at ~20% frequency in affected regions.`
           }
         ]
       }

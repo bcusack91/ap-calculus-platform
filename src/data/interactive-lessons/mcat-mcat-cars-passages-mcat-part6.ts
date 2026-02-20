@@ -35,14 +35,14 @@ These passages discuss:
     {
       id: 'cp6-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Aesthetics** 🎯',
+      content: `**Aesthetics** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A passage argues that Postmodern architecture deliberately rejects Modernist emphasis on function. This suggests that understanding Postmodern architecture requires:',
-            options: ['Knowledge of what Modernism valued — since Postmodernism is defined as a reaction against it', 'Ignoring all historical context', 'Focusing only on building materials', 'Measuring the buildings\' energy efficiency'],
+            question: `A passage argues that Postmodern architecture deliberately rejects Modernist emphasis on function. This suggests that understanding Postmodern architecture requires:`,
+            options: [`Knowledge of what Modernism valued — since Postmodernism is defined as a reaction against it`, `Ignoring all historical context`, `Focusing only on building materials`, `Measuring the buildings\` energy efficiency'`],
             correctAnswer: 0,
-            explanation: 'If Postmodernism is a reaction against Modernism, understanding the original movement is essential. This is a "reasoning beyond the text" question — applying the passage\'s logic.'
+            explanation: `If Postmodernism is a reaction against Modernism, understanding the original movement is essential. This is a "reasoning beyond the text" question — applying the passage's logic.`
           }
         ]
       }

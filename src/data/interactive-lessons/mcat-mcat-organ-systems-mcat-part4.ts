@@ -39,14 +39,14 @@ But urine output is only ~1.5 L/day → 99% of filtrate is reabsorbed!`
     {
       id: 'os4-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Renal System** 🎯',
+      content: `**Renal System** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A patient with diabetes insipidus (ADH deficiency) would present with:',
-            options: ['Large volumes of dilute urine (can\'t reabsorb water in collecting duct)', 'Small volumes of concentrated urine', 'High blood glucose', 'Edema'],
+            question: `A patient with diabetes insipidus (ADH deficiency) would present with:`,
+            options: [`Large volumes of dilute urine (can\`t reabsorb water in collecting duct)`, `Small volumes of concentrated urine`, `High blood glucose`, `Edema'`],
             correctAnswer: 0,
-            explanation: 'Without ADH, aquaporins aren\'t inserted in the collecting duct → water can\'t be reabsorbed → large volumes of very dilute urine (polyuria) + excessive thirst (polydipsia). Not to be confused with diabetes mellitus!'
+            explanation: `Without ADH, aquaporins aren't inserted in the collecting duct → water can't be reabsorbed → large volumes of very dilute urine (polyuria) + excessive thirst (polydipsia). Not to be confused with diabetes mellitus!`
           }
         ]
       }

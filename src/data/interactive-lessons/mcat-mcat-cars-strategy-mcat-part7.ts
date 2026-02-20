@@ -40,14 +40,14 @@ For EVERY wrong answer, ask:
     {
       id: 'cs7-quiz1',
       type: 'multiple-choice' as const,
-      content: '**CARS Strategy Review** 🎯',
+      content: `**CARS Strategy Review** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'The single most effective way to improve CARS performance over 3 months is:',
-            options: ['Daily practice with careful review of every wrong answer', 'Memorizing a list of CARS strategies', 'Reading only science passages', 'Spending all study time on CARS and ignoring other sections'],
+            question: `The single most effective way to improve CARS performance over 3 months is:`,
+            options: [`Daily practice with careful review of every wrong answer`, `Memorizing a list of CARS strategies`, `Reading only science passages`, `Spending all study time on CARS and ignoring other sections`],
             correctAnswer: 0,
-            explanation: 'CARS improvement comes from consistent, deliberate practice with thorough review. Understanding WHY you got questions wrong is more valuable than doing more passages. Quality > quantity.'
+            explanation: `CARS improvement comes from consistent, deliberate practice with thorough review. Understanding WHY you got questions wrong is more valuable than doing more passages. Quality > quantity.`
           }
         ]
       }

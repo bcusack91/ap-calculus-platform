@@ -44,14 +44,14 @@ The MCAT frequently asks about stigma in healthcare:
     {
       id: 'so4-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Deviance** 🎯',
+      content: `**Deviance** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A teenager from a low-income neighborhood turns to drug dealing to achieve financial success. According to Merton\'s strain theory, this is:',
-            options: ['Innovation — accepting cultural goals (wealth) but using illegitimate means', 'Conformity', 'Retreatism', 'Ritualism'],
+            question: `A teenager from a low-income neighborhood turns to drug dealing to achieve financial success. According to Merton's strain theory, this is:`,
+            options: [`Innovation — accepting cultural goals (wealth) but using illegitimate means`, `Conformity`, `Retreatism`, `Ritualism`],
             correctAnswer: 0,
-            explanation: 'Innovation: the person accepts society\'s goals (wealth/success) but rejects conventional means of achieving them (education/career), instead using illegitimate means (crime). This is Merton\'s explanation for why poverty correlates with certain types of crime.'
+            explanation: `Innovation: the person accepts society's goals (wealth/success) but rejects conventional means of achieving them (education/career), instead using illegitimate means (crime). This is Merton's explanation for why poverty correlates with certain types of crime.`
           }
         ]
       }

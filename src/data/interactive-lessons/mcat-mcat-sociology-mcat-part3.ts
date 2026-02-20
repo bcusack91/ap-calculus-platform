@@ -38,14 +38,14 @@ export const mcatSociologyPart3Data = {
     {
       id: 'so3-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Groups & Interaction** 🎯',
+      content: `**Groups & Interaction** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A medical team makes a poor treatment decision because no one wants to disagree with the attending physician. This is:',
-            options: ['Groupthink — desire for group harmony suppresses dissenting opinions', 'Social loafing', 'Deindividuation', 'Bystander effect'],
+            question: `A medical team makes a poor treatment decision because no one wants to disagree with the attending physician. This is:`,
+            options: [`Groupthink — desire for group harmony suppresses dissenting opinions`, `Social loafing`, `Deindividuation`, `Bystander effect`],
             correctAnswer: 0,
-            explanation: 'Groupthink occurs when the desire for conformity/harmony overrides realistic appraisal. In medical settings, this is particularly dangerous — it can be combated by explicitly encouraging dissent and assigning a "devil\'s advocate" role.'
+            explanation: `Groupthink occurs when the desire for conformity/harmony overrides realistic appraisal. In medical settings, this is particularly dangerous — it can be combated by explicitly encouraging dissent and assigning a "devil's advocate" role.`
           }
         ]
       }

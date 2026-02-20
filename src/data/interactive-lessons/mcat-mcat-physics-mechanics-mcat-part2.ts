@@ -34,20 +34,20 @@ export const mcatPhysMechPart2Data = {
     {
       id: 'pm2-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Forces & Newton's Laws** 🎯',
+      content: `**Forces & Newton's Laws** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A 5 kg block sits on a frictionless 30° incline. The acceleration down the plane is ($g = 10\\;\\text{m/s}^2$):',
-            options: ['$5\\;\\text{m/s}^2$ ($g\\sin 30° = 10 \\times 0.5$)', '$10\\;\\text{m/s}^2$', '$8.66\\;\\text{m/s}^2$', '$2.5\\;\\text{m/s}^2$'],
+            question: `A 5 kg block sits on a frictionless 30° incline. The acceleration down the plane is ($g = 10\\;\\text{m/s}^2$):`,
+            options: [`$5\\;\\text{m/s}^2$ ($g\\sin 30° = 10 \\times 0.5$)`, `$10\\;\\text{m/s}^2$`, `$8.66\\;\\text{m/s}^2$`, `$2.5\\;\\text{m/s}^2$`],
             correctAnswer: 0,
-            explanation: 'On a frictionless incline: $a = g\\sin\\theta = 10\\sin 30° = 10(0.5) = 5\\;\\text{m/s}^2$. Note: mass cancels out!'
+            explanation: `On a frictionless incline: $a = g\\sin\\theta = 10\\sin 30° = 10(0.5) = 5\\;\\text{m/s}^2$. Note: mass cancels out!`
           },
           {
-            question: 'An elevator accelerates upward at $2\\;\\text{m/s}^2$. A 60 kg person inside feels an apparent weight of:',
-            options: ['720 N', '600 N', '480 N', '588 N'],
+            question: `An elevator accelerates upward at $2\\;\\text{m/s}^2$. A 60 kg person inside feels an apparent weight of:`,
+            options: [`720 N`, `600 N`, `480 N`, `588 N`],
             correctAnswer: 0,
-            explanation: 'Apparent weight = $m(g + a) = 60(10 + 2) = 720$ N. Accelerating up increases apparent weight; accelerating down decreases it.'
+            explanation: `Apparent weight = $m(g + a) = 60(10 + 2) = 720$ N. Accelerating up increases apparent weight; accelerating down decreases it.`
           }
         ]
       }

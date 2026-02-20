@@ -42,20 +42,20 @@ Cancer = uncontrolled cell division due to:
     {
       id: 'cb3-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Cell Cycle** 🎯',
+      content: `**Cell Cycle** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A cell has 46 chromosomes in G$_1$. After S phase but before mitosis, it has:',
-            options: ['46 chromosomes, each with 2 sister chromatids (92 chromatids total)', '92 chromosomes', '23 chromosomes', '46 chromosomes with 46 chromatids'],
+            question: `A cell has 46 chromosomes in G$_1$. After S phase but before mitosis, it has:`,
+            options: [`46 chromosomes, each with 2 sister chromatids (92 chromatids total)`, `92 chromosomes`, `23 chromosomes`, `46 chromosomes with 46 chromatids`],
             correctAnswer: 0,
-            explanation: 'DNA replicates in S phase, but centromeres haven\'t split yet. So: still 46 chromosomes, but each consists of 2 sister chromatids joined at the centromere. After anaphase, they separate into 92 individual chromatids.'
+            explanation: `DNA replicates in S phase, but centromeres haven't split yet. So: still 46 chromosomes, but each consists of 2 sister chromatids joined at the centromere. After anaphase, they separate into 92 individual chromatids.`
           },
           {
-            question: 'Loss of p53 function would most directly affect:',
-            options: ['The G$_1$/S checkpoint — damaged DNA would not be detected, allowing replication to proceed', 'Chromosome condensation during prophase', 'Cytokinesis', 'Spindle formation'],
+            question: `Loss of p53 function would most directly affect:`,
+            options: [`The G$_1$/S checkpoint — damaged DNA would not be detected, allowing replication to proceed`, `Chromosome condensation during prophase`, `Cytokinesis`, `Spindle formation`],
             correctAnswer: 0,
-            explanation: 'p53 is the "guardian of the genome" — it arrests the cell cycle at G$_1$/S when DNA damage is detected and can trigger apoptosis. Without p53, damaged cells continue dividing → cancer.'
+            explanation: `p53 is the "guardian of the genome" — it arrests the cell cycle at G$_1$/S when DNA damage is detected and can trigger apoptosis. Without p53, damaged cells continue dividing → cancer.`
           }
         ]
       }

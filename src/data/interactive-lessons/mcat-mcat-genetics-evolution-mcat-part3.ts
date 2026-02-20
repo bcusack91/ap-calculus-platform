@@ -42,14 +42,14 @@ Key patterns to recognize:
     {
       id: 'ge3-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Pedigrees** 🎯',
+      content: `**Pedigrees** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A trait appears in a grandfather and his grandson through his daughter (who is unaffected). This is most consistent with:',
-            options: ['X-linked recessive — the daughter is a carrier', 'Autosomal dominant', 'Autosomal recessive', 'Mitochondrial inheritance'],
+            question: `A trait appears in a grandfather and his grandson through his daughter (who is unaffected). This is most consistent with:`,
+            options: [`X-linked recessive — the daughter is a carrier`, `Autosomal dominant`, `Autosomal recessive`, `Mitochondrial inheritance`],
             correctAnswer: 0,
-            explanation: 'Grandfather ($X^aY$) → Daughter ($X^AX^a$, carrier) → Grandson ($X^aY$, affected). The trait skips the daughter because she has a normal X to compensate. This classic pattern = X-linked recessive.'
+            explanation: `Grandfather ($X^aY$) → Daughter ($X^AX^a$, carrier) → Grandson ($X^aY$, affected). The trait skips the daughter because she has a normal X to compensate. This classic pattern = X-linked recessive.`
           }
         ]
       }

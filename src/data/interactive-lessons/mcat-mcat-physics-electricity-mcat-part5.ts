@@ -35,20 +35,20 @@ $$m = -\\frac{d_i}{d_o} = \\frac{h_i}{h_o}$$
     {
       id: 'pe5-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Lenses & Mirrors** 🎯',
+      content: `**Lenses & Mirrors** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'An object is placed 30 cm from a converging lens with $f = 20$ cm. The image distance is:',
-            options: ['60 cm (real, inverted)', '12 cm', '-60 cm', '10 cm'],
+            question: `An object is placed 30 cm from a converging lens with $f = 20$ cm. The image distance is:`,
+            options: [`60 cm (real, inverted)`, `12 cm`, `-60 cm`, `10 cm`],
             correctAnswer: 0,
-            explanation: '$1/f = 1/d_o + 1/d_i \\implies 1/20 = 1/30 + 1/d_i \\implies 1/d_i = 1/20 - 1/30 = 3/60 - 2/60 = 1/60$. So $d_i = 60$ cm (positive = real image, on opposite side of lens).'
+            explanation: `$1/f = 1/d_o + 1/d_i \\implies 1/20 = 1/30 + 1/d_i \\implies 1/d_i = 1/20 - 1/30 = 3/60 - 2/60 = 1/60$. So $d_i = 60$ cm (positive = real image, on opposite side of lens).`
           },
           {
-            question: 'A convex mirror always produces images that are:',
-            options: ['Virtual, upright, and reduced', 'Real, inverted, and enlarged', 'Virtual, inverted, and reduced', 'Real, upright, and enlarged'],
+            question: `A convex mirror always produces images that are:`,
+            options: [`Virtual, upright, and reduced`, `Real, inverted, and enlarged`, `Virtual, inverted, and reduced`, `Real, upright, and enlarged`],
             correctAnswer: 0,
-            explanation: 'Diverging optical elements (convex mirror, concave lens) ALWAYS produce virtual, upright, reduced images regardless of object position. This is a must-memorize fact.'
+            explanation: `Diverging optical elements (convex mirror, concave lens) ALWAYS produce virtual, upright, reduced images regardless of object position. This is a must-memorize fact.`
           }
         ]
       }

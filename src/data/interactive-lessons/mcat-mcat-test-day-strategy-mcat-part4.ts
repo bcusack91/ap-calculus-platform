@@ -38,14 +38,14 @@ When stuck between two choices:
     {
       id: 'td4-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Elimination** 🎯',
+      content: `**Elimination** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'When choosing between two remaining answer choices on the MCAT, the BEST strategy is:',
-            options: ['Re-read the question stem to see which answer actually addresses what was asked', 'Always pick C', 'Choose the longer answer', 'Pick the first one you read'],
+            question: `When choosing between two remaining answer choices on the MCAT, the BEST strategy is:`,
+            options: [`Re-read the question stem to see which answer actually addresses what was asked`, `Always pick C`, `Choose the longer answer`, `Pick the first one you read`],
             correctAnswer: 0,
-            explanation: 'Most 50/50 mistakes happen because you\'re answering the wrong question. Re-reading the question stem often reveals one answer addresses the actual question while the other is a true statement about a different concept.'
+            explanation: `Most 50/50 mistakes happen because you're answering the wrong question. Re-reading the question stem often reveals one answer addresses the actual question while the other is a true statement about a different concept.`
           }
         ]
       }

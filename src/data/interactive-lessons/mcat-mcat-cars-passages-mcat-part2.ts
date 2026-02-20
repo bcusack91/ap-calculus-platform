@@ -34,14 +34,14 @@ export const mcatCarsPsgPart2Data = {
     {
       id: 'cp2-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Social Science Passages** 🎯',
+      content: `**Social Science Passages** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A social science passage presents data showing a correlation between two variables. The author concludes one causes the other. A good critical reader would:',
-            options: ['Note that the author may be conflating correlation with causation — a potential weakness', 'Accept the conclusion since data supports it', 'Ignore the data and focus on the argument', 'Assume the author is wrong without evidence'],
+            question: `A social science passage presents data showing a correlation between two variables. The author concludes one causes the other. A good critical reader would:`,
+            options: [`Note that the author may be conflating correlation with causation — a potential weakness`, `Accept the conclusion since data supports it`, `Ignore the data and focus on the argument`, `Assume the author is wrong without evidence`],
             correctAnswer: 0,
-            explanation: 'Correlation ≠ causation is a fundamental critical thinking principle. CARS questions often test whether you can identify logical weaknesses, including unwarranted causal claims.'
+            explanation: `Correlation ≠ causation is a fundamental critical thinking principle. CARS questions often test whether you can identify logical weaknesses, including unwarranted causal claims.`
           }
         ]
       }

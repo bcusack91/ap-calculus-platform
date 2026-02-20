@@ -33,14 +33,14 @@ The best CARS answer is usually:
     {
       id: 'cs3-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Elimination Practice** 🎯',
+      content: `**Elimination Practice** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A passage discusses how modern architecture balances aesthetics with function. The author argues both matter equally. Which answer to "What is the main idea?" is BEST?',
-            options: ['Modern architecture must integrate both aesthetic appeal and functional design', 'Function is always more important than aesthetics in architecture', 'The aesthetic qualities of modern buildings are declining', 'Every architect prioritizes aesthetics over function'],
+            question: `A passage discusses how modern architecture balances aesthetics with function. The author argues both matter equally. Which answer to "What is the main idea?" is BEST?`,
+            options: [`Modern architecture must integrate both aesthetic appeal and functional design`, `Function is always more important than aesthetics in architecture`, `The aesthetic qualities of modern buildings are declining`, `Every architect prioritizes aesthetics over function`],
             correctAnswer: 0,
-            explanation: 'Option B uses "always" (too extreme). Option C introduces "declining" (not stated — distortion). Option D uses "every" and reverses the balance (extreme + opposite). Option A correctly captures the balanced main idea.'
+            explanation: `Option B uses "always" (too extreme). Option C introduces "declining" (not stated — distortion). Option D uses "every" and reverses the balance (extreme + opposite). Option A correctly captures the balanced main idea.`
           }
         ]
       }

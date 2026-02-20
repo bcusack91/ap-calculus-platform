@@ -38,14 +38,14 @@ Defect in nucleotide excision repair → can't fix UV-induced thymine dimers →
     {
       id: 'mb5-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Mutations** 🎯',
+      content: `**Mutations** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A single nucleotide deletion in the second codon of an mRNA would:',
-            options: ['Cause a frameshift — every codon downstream is altered', 'Only change one amino acid', 'Have no effect', 'Only affect the second amino acid'],
+            question: `A single nucleotide deletion in the second codon of an mRNA would:`,
+            options: [`Cause a frameshift — every codon downstream is altered`, `Only change one amino acid`, `Have no effect`, `Only affect the second amino acid`],
             correctAnswer: 0,
-            explanation: 'A single deletion shifts the reading frame by one nucleotide. Every triplet downstream is now different → every amino acid from that point on is wrong. This is why frameshifts are usually devastating.'
+            explanation: `A single deletion shifts the reading frame by one nucleotide. Every triplet downstream is now different → every amino acid from that point on is wrong. This is why frameshifts are usually devastating.`
           }
         ]
       }

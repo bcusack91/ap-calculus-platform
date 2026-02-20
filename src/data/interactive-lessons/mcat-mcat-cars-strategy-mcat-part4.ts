@@ -40,14 +40,14 @@ export const mcatCarsStratPart4Data = {
     {
       id: 'cs4-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Difficult Passages** 🎯',
+      content: `**Difficult Passages** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'You finish reading a dense philosophy passage and cannot state the main idea. The best next step is:',
-            options: ['Start the questions — they will guide you to re-examine specific parts of the passage', 'Reread the entire passage from the beginning', 'Skip the passage entirely and move on', 'Guess on all questions immediately'],
+            question: `You finish reading a dense philosophy passage and cannot state the main idea. The best next step is:`,
+            options: [`Start the questions — they will guide you to re-examine specific parts of the passage`, `Reread the entire passage from the beginning`, `Skip the passage entirely and move on`, `Guess on all questions immediately`],
             correctAnswer: 0,
-            explanation: 'Questions point you to specific sections. Often, working through the questions helps you understand the passage structure better than a second full read. This is more time-efficient than rereading everything.'
+            explanation: `Questions point you to specific sections. Often, working through the questions helps you understand the passage structure better than a second full read. This is more time-efficient than rereading everything.`
           }
         ]
       }

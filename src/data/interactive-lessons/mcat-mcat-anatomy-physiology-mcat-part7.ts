@@ -41,14 +41,14 @@ $$\\text{CO}_2 + \\text{H}_2\\text{O} \\rightleftharpoons \\text{H}_2\\text{CO}_
     {
       id: 'ap7-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Homeostasis** 🎯',
+      content: `**Homeostasis** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A patient with uncontrolled diabetes develops ketoacidosis (metabolic acidosis). The body compensates by:',
-            options: ['Hyperventilation — blowing off CO$_2$ to raise blood pH (respiratory compensation)', 'Hypoventilation', 'Increasing ketone production', 'Raising insulin levels'],
+            question: `A patient with uncontrolled diabetes develops ketoacidosis (metabolic acidosis). The body compensates by:`,
+            options: [`Hyperventilation — blowing off CO$_2$ to raise blood pH (respiratory compensation)`, `Hypoventilation`, `Increasing ketone production`, `Raising insulin levels`],
             correctAnswer: 0,
-            explanation: 'Metabolic acidosis → lungs compensate by hyperventilating (Kussmaul breathing). Blowing off CO$_2$ shifts the equilibrium left, reducing H$^+$ and raising pH. This is fast but incomplete — treating the underlying cause is essential.'
+            explanation: `Metabolic acidosis → lungs compensate by hyperventilating (Kussmaul breathing). Blowing off CO$_2$ shifts the equilibrium left, reducing H$^+$ and raising pH. This is fast but incomplete — treating the underlying cause is essential.`
           }
         ]
       }

@@ -42,14 +42,14 @@ After finishing the passage, you should be able to state:
     {
       id: 'cs2-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Active Reading** 🎯',
+      content: `**Active Reading** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'While reading a CARS passage, you encounter the phrase "Although critics have argued otherwise." This signals:',
-            options: ['A contrast — the author is about to present a counter or their own view', 'The author agrees with the critics', 'The passage is about literary criticism', 'The argument is about to end'],
+            question: `While reading a CARS passage, you encounter the phrase "Although critics have argued otherwise." This signals:`,
+            options: [`A contrast — the author is about to present a counter or their own view`, `The author agrees with the critics`, `The passage is about literary criticism`, `The argument is about to end`],
             correctAnswer: 0,
-            explanation: '"Although" is a contrast word. The author is acknowledging an opposing view and will likely argue against it. Track these transitions — they reveal argument structure.'
+            explanation: `"Although" is a contrast word. The author is acknowledging an opposing view and will likely argue against it. Track these transitions — they reveal argument structure.`
           }
         ]
       }

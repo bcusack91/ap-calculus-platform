@@ -41,14 +41,14 @@ Conditions that RIGHT-shift the O$_2$-Hb dissociation curve (promote O$_2$ unloa
     {
       id: 'os2-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Respiratory** 🎯',
+      content: `**Respiratory** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'During intense exercise, the O$_2$-hemoglobin dissociation curve shifts RIGHT because:',
-            options: ['Increased CO$_2$, lower pH, and higher temperature all promote O$_2$ release to working muscles', 'Muscles need less oxygen', 'Hemoglobin concentration increases', 'The lungs absorb more oxygen'],
+            question: `During intense exercise, the O$_2$-hemoglobin dissociation curve shifts RIGHT because:`,
+            options: [`Increased CO$_2$, lower pH, and higher temperature all promote O$_2$ release to working muscles`, `Muscles need less oxygen`, `Hemoglobin concentration increases`, `The lungs absorb more oxygen`],
             correctAnswer: 0,
-            explanation: 'Active muscles produce CO$_2$ and heat, lowering local pH. All three factors right-shift the curve (Bohr effect), causing Hb to release more O$_2$ exactly where it\'s needed most.'
+            explanation: `Active muscles produce CO$_2$ and heat, lowering local pH. All three factors right-shift the curve (Bohr effect), causing Hb to release more O$_2$ exactly where it's needed most.`
           }
         ]
       }

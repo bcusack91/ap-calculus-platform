@@ -30,20 +30,20 @@ All objects fall at the same rate regardless of mass (ignoring air resistance). 
     {
       id: 'pm1-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Kinematics** 🎯',
+      content: `**Kinematics** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A ball is thrown upward at 20 m/s. Using $g = 10\\;\\text{m/s}^2$, the maximum height is:',
-            options: ['20 m', '40 m', '10 m', '200 m'],
+            question: `A ball is thrown upward at 20 m/s. Using $g = 10\\;\\text{m/s}^2$, the maximum height is:`,
+            options: [`20 m`, `40 m`, `10 m`, `200 m`],
             correctAnswer: 0,
-            explanation: 'Use $v^2 = v_0^2 - 2g\\Delta y$. At max height, $v = 0$: $0 = 400 - 20\\Delta y \\implies \\Delta y = 20$ m.'
+            explanation: `Use $v^2 = v_0^2 - 2g\\Delta y$. At max height, $v = 0$: $0 = 400 - 20\\Delta y \\implies \\Delta y = 20$ m.`
           },
           {
-            question: 'A projectile is launched at 30° above horizontal. Compared to 60°, it has:',
-            options: ['The same range (complementary angles)', 'A longer range', 'A shorter range', 'The same max height'],
+            question: `A projectile is launched at 30° above horizontal. Compared to 60°, it has:`,
+            options: [`The same range (complementary angles)`, `A longer range`, `A shorter range`, `The same max height`],
             correctAnswer: 0,
-            explanation: 'Complementary angles (30° and 60°) give the same range: $R = v_0^2\\sin(2\\theta)/g$. $\\sin(60°) = \\sin(120°)$. But 60° reaches a greater height.'
+            explanation: `Complementary angles (30° and 60°) give the same range: $R = v_0^2\\sin(2\\theta)/g$. $\\sin(60°) = \\sin(120°)$. But 60° reaches a greater height.`
           }
         ]
       }

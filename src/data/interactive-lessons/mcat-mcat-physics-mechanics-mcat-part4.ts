@@ -35,14 +35,14 @@ For perfectly inelastic: $m_1v_1 + m_2v_2 = (m_1 + m_2)v_f$`
     {
       id: 'pm4-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Momentum** 🎯',
+      content: `**Momentum** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A 1000 kg car at 20 m/s collides with a stationary 2000 kg truck. They stick together. The final velocity is:',
-            options: ['6.67 m/s', '10 m/s', '20 m/s', '3.33 m/s'],
+            question: `A 1000 kg car at 20 m/s collides with a stationary 2000 kg truck. They stick together. The final velocity is:`,
+            options: [`6.67 m/s`, `10 m/s`, `20 m/s`, `3.33 m/s`],
             correctAnswer: 0,
-            explanation: 'Perfectly inelastic: $m_1v_1 = (m_1 + m_2)v_f$. $1000(20) = 3000 \\cdot v_f \\implies v_f = 20{,}000/3000 \\approx 6.67$ m/s.'
+            explanation: `Perfectly inelastic: $m_1v_1 = (m_1 + m_2)v_f$. $1000(20) = 3000 \\cdot v_f \\implies v_f = 20{,}000/3000 \\approx 6.67$ m/s.`
           }
         ]
       }

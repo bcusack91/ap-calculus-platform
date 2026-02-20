@@ -39,20 +39,20 @@ export const mcatCarsStratPart1Data = {
     {
       id: 'cs1-quiz1',
       type: 'multiple-choice' as const,
-      content: '**CARS Fundamentals** 🎯',
+      content: `**CARS Fundamentals** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'In CARS, when a question asks "Which of the following can be inferred from the passage?", it is testing:',
-            options: ['Reasoning Beyond the Text — you must draw a conclusion not explicitly stated', 'Foundations of Comprehension — just find the answer in the text', 'Reasoning Within the Text — analyzing argument structure', 'Outside knowledge of the topic'],
+            question: `In CARS, when a question asks "Which of the following can be inferred from the passage?", it is testing:`,
+            options: [`Reasoning Beyond the Text — you must draw a conclusion not explicitly stated`, `Foundations of Comprehension — just find the answer in the text`, `Reasoning Within the Text — analyzing argument structure`, `Outside knowledge of the topic`],
             correctAnswer: 0,
-            explanation: 'Inference questions require you to go beyond what is explicitly stated and draw a logical conclusion. The answer is supported by the passage but not directly stated.'
+            explanation: `Inference questions require you to go beyond what is explicitly stated and draw a logical conclusion. The answer is supported by the passage but not directly stated.`
           },
           {
-            question: 'A student runs out of time on CARS with 8 questions remaining. The best strategy is:',
-            options: ['Quickly guess on all 8 — there is no penalty for wrong answers', 'Leave them blank', 'Rush through the remaining passage', 'Go back and change previous answers'],
+            question: `A student runs out of time on CARS with 8 questions remaining. The best strategy is:`,
+            options: [`Quickly guess on all 8 — there is no penalty for wrong answers`, `Leave them blank`, `Rush through the remaining passage`, `Go back and change previous answers`],
             correctAnswer: 0,
-            explanation: 'There is NO penalty for guessing on the MCAT. Always fill in an answer for every question. With 8 left, pick one letter and bubble them all — you should get ~2 right by chance.'
+            explanation: `There is NO penalty for guessing on the MCAT. Always fill in an answer for every question. With 8 left, pick one letter and bubble them all — you should get ~2 right by chance.`
           }
         ]
       }

@@ -37,20 +37,20 @@ export const mcatOrgChemPart1Data = {
     {
       id: 'oc1-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Functional Groups & Stereochem** 🎯',
+      content: `**Functional Groups & Stereochem** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A molecule with 2 chiral centers can have a maximum of how many stereoisomers?',
-            options: ['4 (using $2^n$ rule)', '2', '3', '8'],
+            question: `A molecule with 2 chiral centers can have a maximum of how many stereoisomers?`,
+            options: [`4 (using $2^n$ rule)`, `2`, `3`, `8`],
             correctAnswer: 0,
-            explanation: 'Maximum stereoisomers = $2^n$ where $n$ = number of chiral centers. $2^2 = 4$. May be fewer if meso compounds exist.'
+            explanation: `Maximum stereoisomers = $2^n$ where $n$ = number of chiral centers. $2^2 = 4$. May be fewer if meso compounds exist.`
           },
           {
-            question: 'The peptide bond is an example of which functional group?',
-            options: ['Amide', 'Amine', 'Ester', 'Carboxylic acid'],
+            question: `The peptide bond is an example of which functional group?`,
+            options: [`Amide`, `Amine`, `Ester`, `Carboxylic acid`],
             correctAnswer: 0,
-            explanation: 'The peptide bond ($-CO-NH-$) is an amide bond formed between the carboxyl group of one amino acid and the amino group of another, with loss of water.'
+            explanation: `The peptide bond ($-CO-NH-$) is an amide bond formed between the carboxyl group of one amino acid and the amino group of another, with loss of water.`
           }
         ]
       }

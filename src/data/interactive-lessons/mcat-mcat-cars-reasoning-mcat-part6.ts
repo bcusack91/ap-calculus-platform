@@ -39,14 +39,14 @@ Examples in CARS passages serve specific functions:
     {
       id: 'cr6-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Evidence Evaluation** 🎯',
+      content: `**Evidence Evaluation** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'An author argues that education reform improves outcomes, then describes one school that succeeded after reforms. A questioner could fairly note that:',
-            options: ['One school is anecdotal evidence — not sufficient to generalize to all schools', 'The school must be representative of all schools', 'Education reform always works everywhere', 'The example disproves the argument'],
+            question: `An author argues that education reform improves outcomes, then describes one school that succeeded after reforms. A questioner could fairly note that:`,
+            options: [`One school is anecdotal evidence — not sufficient to generalize to all schools`, `The school must be representative of all schools`, `Education reform always works everywhere`, `The example disproves the argument`],
             correctAnswer: 0,
-            explanation: 'A single case study is anecdotal — it illustrates possibility but doesn\'t prove the claim for all schools. The MCAT tests whether you can evaluate the strength and limitations of evidence.'
+            explanation: `A single case study is anecdotal — it illustrates possibility but doesn't prove the claim for all schools. The MCAT tests whether you can evaluate the strength and limitations of evidence.`
           }
         ]
       }

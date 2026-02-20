@@ -38,14 +38,14 @@ As you read, mentally track:
     {
       id: 'cp4-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Multiple Perspectives** 🎯',
+      content: `**Multiple Perspectives** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A passage states: "Smith argues that technology enhances creativity. However, this view overlooks the mounting evidence that passive screen time diminishes it." The author most likely:',
-            options: ['Disagrees with Smith — "overlooks" signals criticism of Smith\'s position', 'Agrees with Smith', 'Has no opinion', 'Is merely summarizing both views neutrally'],
+            question: `A passage states: "Smith argues that technology enhances creativity. However, this view overlooks the mounting evidence that passive screen time diminishes it." The author most likely:`,
+            options: [`Disagrees with Smith — "overlooks" signals criticism of Smith\`s position`, `Agrees with Smith`, `Has no opinion`, `Is merely summarizing both views neutrally'`],
             correctAnswer: 0,
-            explanation: '"However" signals a counterpoint, and "overlooks" implies Smith is wrong or incomplete in their reasoning. The author is positioning against Smith.'
+            explanation: `"However" signals a counterpoint, and "overlooks" implies Smith is wrong or incomplete in their reasoning. The author is positioning against Smith.`
           }
         ]
       }

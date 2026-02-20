@@ -39,20 +39,20 @@ $$\\text{DNA} \\xrightarrow{\\text{Transcription}} \\text{mRNA} \\xrightarrow{\\
     {
       id: 'bc6-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Nucleic Acids** 🎯',
+      content: `**Nucleic Acids** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'If a DNA sample is 30% adenine, what percent is guanine?',
-            options: ['20%', '30%', '40%', '25%'],
+            question: `If a DNA sample is 30% adenine, what percent is guanine?`,
+            options: [`20%`, `30%`, `40%`, `25%`],
             correctAnswer: 0,
-            explanation: 'By Chargaff: A = T = 30%. So A + T = 60%. G + C = 40%. Since G = C: G = 20%.'
+            explanation: `By Chargaff: A = T = 30%. So A + T = 60%. G + C = 40%. Since G = C: G = 20%.`
           },
           {
-            question: 'DNA polymerase requires:',
-            options: ['A free $3\'-OH$ group to add nucleotides (needs a primer!)', 'A $5\'-OH$ group', 'No primer — it can start de novo', 'Only single-stranded DNA'],
+            question: `DNA polymerase requires:`,
+            options: [`A free $3\`-OH$ group to add nucleotides (needs a primer!)`, `A $5\`-OH$ group`, `No primer — it can start de novo`, `Only single-stranded DNA`],
             correctAnswer: 0,
-            explanation: 'DNA polymerase can only add nucleotides to an existing $3\'-OH$ group. This is why primase must first lay down an RNA primer. RNA polymerase, in contrast, can start de novo.'
+            explanation: `DNA polymerase can only add nucleotides to an existing $3'-OH$ group. This is why primase must first lay down an RNA primer. RNA polymerase, in contrast, can start de novo.`
           }
         ]
       }

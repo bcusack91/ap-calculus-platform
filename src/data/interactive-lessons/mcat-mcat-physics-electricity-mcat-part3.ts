@@ -34,14 +34,14 @@ $$\\varepsilon = -\\frac{d\\Phi_B}{dt}$$
     {
       id: 'pe3-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Magnetism** 🎯',
+      content: `**Magnetism** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A proton moves parallel to a magnetic field. The magnetic force on it is:',
-            options: ['Zero ($\\sin 0° = 0$)', 'Maximum', 'Equal to $qvB$', 'Depends on speed only'],
+            question: `A proton moves parallel to a magnetic field. The magnetic force on it is:`,
+            options: [`Zero ($\\sin 0° = 0$)`, `Maximum`, `Equal to $qvB$`, `Depends on speed only`],
             correctAnswer: 0,
-            explanation: '$F = qvB\\sin\\theta$. When $\\vec{v}$ is parallel to $\\vec{B}$, $\\theta = 0°$, and $\\sin 0° = 0$. The charge must have a velocity component PERPENDICULAR to $\\vec{B}$ to feel a force.'
+            explanation: `$F = qvB\\sin\\theta$. When $\\vec{v}$ is parallel to $\\vec{B}$, $\\theta = 0°$, and $\\sin 0° = 0$. The charge must have a velocity component PERPENDICULAR to $\\vec{B}$ to feel a force.`
           }
         ]
       }

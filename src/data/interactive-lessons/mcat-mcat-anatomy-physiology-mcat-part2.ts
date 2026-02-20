@@ -41,14 +41,14 @@ export const mcatAnatPhysPart2Data = {
     {
       id: 'ap2-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Reproductive System** 🎯',
+      content: `**Reproductive System** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'The corpus luteum produces mainly:',
-            options: ['Progesterone — which maintains the endometrium during the luteal phase', 'Estrogen only', 'FSH', 'Testosterone'],
+            question: `The corpus luteum produces mainly:`,
+            options: [`Progesterone — which maintains the endometrium during the luteal phase`, `Estrogen only`, `FSH`, `Testosterone`],
             correctAnswer: 0,
-            explanation: 'After ovulation, the ruptured follicle becomes the corpus luteum, producing progesterone (and some estrogen). Progesterone maintains the endometrium for possible implantation. If no pregnancy, the corpus luteum degenerates → progesterone drops → menstruation.'
+            explanation: `After ovulation, the ruptured follicle becomes the corpus luteum, producing progesterone (and some estrogen). Progesterone maintains the endometrium for possible implantation. If no pregnancy, the corpus luteum degenerates → progesterone drops → menstruation.`
           }
         ]
       }

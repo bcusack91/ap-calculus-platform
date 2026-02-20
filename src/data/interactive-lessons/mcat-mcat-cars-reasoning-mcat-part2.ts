@@ -28,14 +28,14 @@ Questions may ask you to identify the flaw in reasoning, either in the passage o
     {
       id: 'cr2-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Logical Fallacies** 🎯',
+      content: `**Logical Fallacies** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A critic responds to a scientist\'s climate research by saying, "She receives government funding, so her conclusions cannot be trusted." This is an example of:',
-            options: ['Ad hominem — attacking the researcher\'s credibility rather than the evidence', 'Straw man', 'False dichotomy', 'Circular reasoning'],
+            question: `A critic responds to a scientist's climate research by saying, "She receives government funding, so her conclusions cannot be trusted." This is an example of:`,
+            options: [`Ad hominem — attacking the researcher\`s credibility rather than the evidence`, `Straw man`, `False dichotomy`, `Circular reasoning'`],
             correctAnswer: 0,
-            explanation: 'Ad hominem attacks the person rather than addressing the argument\'s merits. The funding source doesn\'t automatically invalidate the research findings.'
+            explanation: `Ad hominem attacks the person rather than addressing the argument's merits. The funding source doesn't automatically invalidate the research findings.`
           }
         ]
       }

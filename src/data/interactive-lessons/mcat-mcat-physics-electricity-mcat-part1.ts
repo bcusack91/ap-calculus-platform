@@ -36,20 +36,20 @@ $$U = k\\frac{q_1 q_2}{r} = qV$$
     {
       id: 'pe1-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Electrostatics** 🎯',
+      content: `**Electrostatics** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'If the distance between two charges is tripled, the electrostatic force becomes:',
-            options: ['1/9 of the original (inverse square law)', '1/3 of the original', '3 times the original', '9 times the original'],
+            question: `If the distance between two charges is tripled, the electrostatic force becomes:`,
+            options: [`1/9 of the original (inverse square law)`, `1/3 of the original`, `3 times the original`, `9 times the original`],
             correctAnswer: 0,
-            explanation: 'Coulomb\\'s law: $F \\propto 1/r^2$. If $r \\to 3r$: $F \\to F/(3^2) = F/9$.'
+            explanation: `Coulomb\'s law: $F \\propto 1/r^2$. If $r \\to 3r$: $F \\to F/(3^2) = F/9$.`
           },
           {
-            question: 'The electric field between two large parallel plates (capacitor) is:',
-            options: ['Uniform (same magnitude everywhere between plates)', 'Stronger near the positive plate', 'Zero', 'Inversely proportional to distance'],
+            question: `The electric field between two large parallel plates (capacitor) is:`,
+            options: [`Uniform (same magnitude everywhere between plates)`, `Stronger near the positive plate`, `Zero`, `Inversely proportional to distance`],
             correctAnswer: 0,
-            explanation: 'Between parallel plates, $E = V/d$ is uniform. This is why parallel plate capacitors are used in many MCAT problems — the uniform field simplifies calculations.'
+            explanation: `Between parallel plates, $E = V/d$ is uniform. This is why parallel plate capacitors are used in many MCAT problems — the uniform field simplifies calculations.`
           }
         ]
       }

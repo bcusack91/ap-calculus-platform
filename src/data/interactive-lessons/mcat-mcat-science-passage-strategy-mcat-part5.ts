@@ -40,14 +40,14 @@ export const mcatSciPassagePart5Data = {
     {
       id: 'sp5-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Chem/Phys Tactics** 🎯',
+      content: `**Chem/Phys Tactics** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'What is the pH of a $5 \\times 10^{-4}$ M HCl solution? (Use $\\log(5) \\approx 0.7$)',
-            options: ['3.3 ($-\\log(5 \\times 10^{-4}) = 4 - 0.7 = 3.3$)', '4.0', '3.7', '2.3'],
+            question: `What is the pH of a $5 \\times 10^{-4}$ M HCl solution? (Use $\\log(5) \\approx 0.7$)`,
+            options: [`3.3 ($-\\log(5 \\times 10^{-4}) = 4 - 0.7 = 3.3$)`, `4.0`, `3.7`, `2.3`],
             correctAnswer: 0,
-            explanation: '$\\text{pH} = -\\log[\\text{H}^+] = -\\log(5 \\times 10^{-4}) = -(\\log 5 + \\log 10^{-4}) = -(0.7 - 4) = 3.3$. HCl is a strong acid (complete dissociation), so $[H^+] = 5 \\times 10^{-4}$ M directly.'
+            explanation: `$\\text{pH} = -\\log[\\text{H}^+] = -\\log(5 \\times 10^{-4}) = -(\\log 5 + \\log 10^{-4}) = -(0.7 - 4) = 3.3$. HCl is a strong acid (complete dissociation), so $[H^+] = 5 \\times 10^{-4}$ M directly.`
           }
         ]
       }

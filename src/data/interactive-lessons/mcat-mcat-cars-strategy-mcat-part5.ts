@@ -40,14 +40,14 @@ export const mcatCarsStratPart5Data = {
     {
       id: 'cs5-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Question Types** 🎯',
+      content: `**Question Types** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A question asks: "Which of the following, if true, would most weaken the author's central argument?" To answer this, you should FIRST:',
-            options: ['Clearly identify the author's central argument from the passage', 'Look for the weakest answer choice', 'Find a detail that contradicts one paragraph', 'Choose the most extreme answer'],
+            question: `A question asks: "Which of the following, if true, would most weaken the author's central argument?" To answer this, you should FIRST:`,
+            options: [`Clearly identify the author`, `, `, `, `, `, `, ``],
             correctAnswer: 0,
-            explanation: 'You cannot weaken an argument you don\'t understand. First identify the core claim, then find the answer that most directly contradicts or undermines it.'
+            explanation: `You cannot weaken an argument you don't understand. First identify the core claim, then find the answer that most directly contradicts or undermines it.`
           }
         ]
       }

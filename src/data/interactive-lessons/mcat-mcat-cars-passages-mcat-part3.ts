@@ -36,14 +36,14 @@ After reading, you should be able to articulate:
     {
       id: 'cp3-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Argument Analysis** 🎯',
+      content: `**Argument Analysis** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A passage argues that public art funding improves community well-being, citing three city case studies. An unstated assumption is likely:',
-            options: ['That the improvements in those cities were caused by the art funding and not other factors', 'That all cities are identical', 'That public art is always popular', 'That community well-being cannot be measured'],
+            question: `A passage argues that public art funding improves community well-being, citing three city case studies. An unstated assumption is likely:`,
+            options: [`That the improvements in those cities were caused by the art funding and not other factors`, `That all cities are identical`, `That public art is always popular`, `That community well-being cannot be measured`],
             correctAnswer: 0,
-            explanation: 'The argument assumes a causal link between art funding and improved well-being. But the case studies could be explained by other factors (confounding variables). CARS loves testing your ability to identify unstated assumptions.'
+            explanation: `The argument assumes a causal link between art funding and improved well-being. But the case studies could be explained by other factors (confounding variables). CARS loves testing your ability to identify unstated assumptions.`
           }
         ]
       }

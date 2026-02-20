@@ -38,14 +38,14 @@ $$KE_{max} = hf - \\phi$$
     {
       id: 'pe6-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Light & Quantum** 🎯',
+      content: `**Light & Quantum** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'In the photoelectric effect, increasing the intensity of light above the threshold frequency:',
-            options: ['Increases the number of ejected electrons (more photons hitting surface)', 'Increases the kinetic energy of ejected electrons', 'Decreases the work function', 'Has no effect'],
+            question: `In the photoelectric effect, increasing the intensity of light above the threshold frequency:`,
+            options: [`Increases the number of ejected electrons (more photons hitting surface)`, `Increases the kinetic energy of ejected electrons`, `Decreases the work function`, `Has no effect`],
             correctAnswer: 0,
-            explanation: 'Intensity = number of photons per unit time. More photons → more electrons ejected. The KE of each electron depends only on frequency ($KE = hf - \\phi$), not intensity.'
+            explanation: `Intensity = number of photons per unit time. More photons → more electrons ejected. The KE of each electron depends only on frequency ($KE = hf - \\phi$), not intensity.`
           }
         ]
       }

@@ -38,20 +38,20 @@ $$C = \\frac{Q}{V} \\qquad U = \\frac{1}{2}CV^2$$
     {
       id: 'pe2-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Circuits** 🎯',
+      content: `**Circuits** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'Two resistors ($3\\;\\Omega$ and $6\\;\\Omega$) are in parallel. The equivalent resistance is:',
-            options: ['$2\\;\\Omega$', '$9\\;\\Omega$', '$4.5\\;\\Omega$', '$1.5\\;\\Omega$'],
+            question: `Two resistors ($3\\;\\Omega$ and $6\\;\\Omega$) are in parallel. The equivalent resistance is:`,
+            options: [`$2\\;\\Omega$`, `$9\\;\\Omega$`, `$4.5\\;\\Omega$`, `$1.5\\;\\Omega$`],
             correctAnswer: 0,
-            explanation: '$1/R_T = 1/3 + 1/6 = 2/6 + 1/6 = 3/6 = 1/2$. So $R_T = 2\\;\\Omega$. Parallel resistance is always LESS than the smallest individual resistor.'
+            explanation: `$1/R_T = 1/3 + 1/6 = 2/6 + 1/6 = 3/6 = 1/2$. So $R_T = 2\\;\\Omega$. Parallel resistance is always LESS than the smallest individual resistor.`
           },
           {
-            question: 'A 12 V battery drives 2 A through a circuit. The total power dissipated is:',
-            options: ['24 W', '6 W', '144 W', '48 W'],
+            question: `A 12 V battery drives 2 A through a circuit. The total power dissipated is:`,
+            options: [`24 W`, `6 W`, `144 W`, `48 W`],
             correctAnswer: 0,
-            explanation: '$P = IV = 2(12) = 24$ W. Could also use $P = I^2R$ or $V^2/R$ if you know the resistance.'
+            explanation: `$P = IV = 2(12) = 24$ W. Could also use $P = I^2R$ or $V^2/R$ if you know the resistance.`
           }
         ]
       }

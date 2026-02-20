@@ -38,14 +38,14 @@ Example:
     {
       id: 'cr1-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Reasoning Types** 🎯',
+      content: `**Reasoning Types** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'An author surveys 500 college students and concludes that young adults prefer digital textbooks. This is an example of:',
-            options: ['Inductive reasoning — generalizing from a sample to a broad claim', 'Deductive reasoning from established principles', 'Neither — this is pure observation', 'Circular reasoning'],
+            question: `An author surveys 500 college students and concludes that young adults prefer digital textbooks. This is an example of:`,
+            options: [`Inductive reasoning — generalizing from a sample to a broad claim`, `Deductive reasoning from established principles`, `Neither — this is pure observation`, `Circular reasoning`],
             correctAnswer: 0,
-            explanation: 'The author moves from specific observations (500 students) to a general claim (young adults broadly). This is inductive — the conclusion may be likely but is not guaranteed.'
+            explanation: `The author moves from specific observations (500 students) to a general claim (young adults broadly). This is inductive — the conclusion may be likely but is not guaranteed.`
           }
         ]
       }

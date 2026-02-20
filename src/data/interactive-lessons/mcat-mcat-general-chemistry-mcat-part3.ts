@@ -36,20 +36,20 @@ where $i$ = van't Hoff factor (number of particles in solution)
     {
       id: 'gc3-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Solutions & Stoichiometry** 🎯',
+      content: `**Solutions & Stoichiometry** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A researcher dissolves 0.1 mol NaCl in 500 mL of solution. What is the molarity of Na$^+$ ions?',
-            options: ['0.2 M', '0.1 M', '0.4 M', '0.05 M'],
+            question: `A researcher dissolves 0.1 mol NaCl in 500 mL of solution. What is the molarity of Na$^+$ ions?`,
+            options: [`0.2 M`, `0.1 M`, `0.4 M`, `0.05 M`],
             correctAnswer: 0,
-            explanation: 'M = 0.1 mol / 0.5 L = 0.2 M for NaCl. Since NaCl fully dissociates, [Na$^+$] = 0.2 M and [Cl$^-$] = 0.2 M.'
+            explanation: `M = 0.1 mol / 0.5 L = 0.2 M for NaCl. Since NaCl fully dissociates, [Na$^+$] = 0.2 M and [Cl$^-$] = 0.2 M.`
           },
           {
-            question: 'Which 0.1 m aqueous solution has the LOWEST freezing point?',
-            options: ['$\\text{CaCl}_2$ ($i = 3$)', '$\\text{NaCl}$ ($i = 2$)', 'Glucose ($i = 1$)', '$\\text{KBr}$ ($i = 2$)'],
+            question: `Which 0.1 m aqueous solution has the LOWEST freezing point?`,
+            options: [`$\\text{CaCl}_2$ ($i = 3$)`, `$\\text{NaCl}$ ($i = 2$)`, `Glucose ($i = 1$)`, `$\\text{KBr}$ ($i = 2$)`],
             correctAnswer: 0,
-            explanation: '$\\Delta T_f = K_f \\cdot m \\cdot i$. CaCl$_2$ has the highest $i$ (3 particles), giving the greatest freezing point depression (lowest freezing point).'
+            explanation: `$\\Delta T_f = K_f \\cdot m \\cdot i$. CaCl$_2$ has the highest $i$ (3 particles), giving the greatest freezing point depression (lowest freezing point).`
           }
         ]
       }

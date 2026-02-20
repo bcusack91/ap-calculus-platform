@@ -38,20 +38,20 @@ Each new double helix has one old strand and one new strand (Meselson-Stahl expe
     {
       id: 'mb1-quiz1',
       type: 'multiple-choice' as const,
-      content: '**DNA Replication** 🎯',
+      content: `**DNA Replication** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'DNA polymerase III requires a primer because it:',
-            options: ['Can only add nucleotides to an existing $3\'-OH$ group — it cannot start de novo', 'Needs a template to read', 'Works only in the 3\' to 5\' direction', 'Uses RNA nucleotides'],
+            question: `DNA polymerase III requires a primer because it:`,
+            options: [`Can only add nucleotides to an existing $3\`-OH$ group — it cannot start de novo`, `Needs a template to read`, `Works only in the 3\` to 5\` direction`, `Uses RNA nucleotides'`],
             correctAnswer: 0,
-            explanation: 'DNA Pol III adds nucleotides to the $3\'-OH$ of a pre-existing strand. Primase provides an RNA primer with a free $3\'-OH$ to get synthesis started. RNA polymerase does NOT need a primer.'
+            explanation: `DNA Pol III adds nucleotides to the $3'-OH$ of a pre-existing strand. Primase provides an RNA primer with a free $3'-OH$ to get synthesis started. RNA polymerase does NOT need a primer.`
           },
           {
-            question: 'Okazaki fragments are found on the:',
-            options: ['Lagging strand only', 'Leading strand only', 'Both strands', 'Neither strand'],
+            question: `Okazaki fragments are found on the:`,
+            options: [`Lagging strand only`, `Leading strand only`, `Both strands`, `Neither strand`],
             correctAnswer: 0,
-            explanation: 'The lagging strand is synthesized discontinuously as short Okazaki fragments because DNA Pol III can only synthesize $5\' \\to 3\'$, but the lagging template runs $5\' \\to 3\'$ away from the fork.'
+            explanation: `The lagging strand is synthesized discontinuously as short Okazaki fragments because DNA Pol III can only synthesize $5' \\to 3'$, but the lagging template runs $5' \\to 3'$ away from the fork.`
           }
         ]
       }

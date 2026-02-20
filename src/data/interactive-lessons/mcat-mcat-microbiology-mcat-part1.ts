@@ -39,14 +39,14 @@ export const mcatMicroPart1Data = {
     {
       id: 'mi1-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Bacteria Structure** 🎯',
+      content: `**Bacteria Structure** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A Gram-negative bacterium is more difficult to treat with certain antibiotics because:',
-            options: ['The outer membrane acts as an additional barrier, blocking drug entry', 'It has a thicker peptidoglycan layer', 'It lacks a cell wall', 'It has no ribosomes'],
+            question: `A Gram-negative bacterium is more difficult to treat with certain antibiotics because:`,
+            options: [`The outer membrane acts as an additional barrier, blocking drug entry`, `It has a thicker peptidoglycan layer`, `It lacks a cell wall`, `It has no ribosomes`],
             correctAnswer: 0,
-            explanation: 'Gram-negative bacteria have an outer membrane (with LPS) that many antibiotics cannot penetrate. This is why Gram-negative infections (E. coli, Pseudomonas) are often harder to treat than Gram-positive.'
+            explanation: `Gram-negative bacteria have an outer membrane (with LPS) that many antibiotics cannot penetrate. This is why Gram-negative infections (E. coli, Pseudomonas) are often harder to treat than Gram-positive.`
           }
         ]
       }

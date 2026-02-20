@@ -36,20 +36,20 @@ $$\\text{Acetyl-CoA} + \\text{OAA} \\to \\text{Citrate} \\to \\cdots \\to \\text
     {
       id: 'bc4-quiz1',
       type: 'multiple-choice' as const,
-      content: '**TCA & ETC** 🎯',
+      content: `**TCA & ETC** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'Cyanide poisoning inhibits Complex IV. The IMMEDIATE effect is:',
-            options: ['NADH accumulates, ETC stops, no proton gradient, no ATP synthesis', 'Only Complex IV stops, others continue normally', 'ATP synthase runs in reverse', 'Glycolysis is inhibited'],
+            question: `Cyanide poisoning inhibits Complex IV. The IMMEDIATE effect is:`,
+            options: [`NADH accumulates, ETC stops, no proton gradient, no ATP synthesis`, `Only Complex IV stops, others continue normally`, `ATP synthase runs in reverse`, `Glycolysis is inhibited`],
             correctAnswer: 0,
-            explanation: 'If Complex IV is blocked, electrons cannot pass to O$_2$. All upstream complexes become fully reduced and stop. No proton pumping → no gradient → no oxidative phosphorylation. NADH and FADH$_2$ accumulate.'
+            explanation: `If Complex IV is blocked, electrons cannot pass to O$_2$. All upstream complexes become fully reduced and stop. No proton pumping → no gradient → no oxidative phosphorylation. NADH and FADH$_2$ accumulate.`
           },
           {
-            question: 'FADH$_2$ produces fewer ATP than NADH because:',
-            options: ['FADH$_2$ enters at Complex II, bypassing Complex I (fewer protons pumped)', 'FADH$_2$ has less energy than NADH', 'FADH$_2$ cannot cross the membrane', '$FADH_2$ is used only in the TCA cycle'],
+            question: `FADH$_2$ produces fewer ATP than NADH because:`,
+            options: [`FADH$_2$ enters at Complex II, bypassing Complex I (fewer protons pumped)`, `FADH$_2$ has less energy than NADH`, `FADH$_2$ cannot cross the membrane`, `$FADH_2$ is used only in the TCA cycle`],
             correctAnswer: 0,
-            explanation: 'FADH$_2$ donates electrons to Complex II, which does NOT pump protons. NADH enters at Complex I, which DOES pump protons. So FADH$_2$ contributes to fewer H$^+$ pumped → fewer ATP (~1.5 vs ~2.5 per electron pair).'
+            explanation: `FADH$_2$ donates electrons to Complex II, which does NOT pump protons. NADH enters at Complex I, which DOES pump protons. So FADH$_2$ contributes to fewer H$^+$ pumped → fewer ATP (~1.5 vs ~2.5 per electron pair).`
           }
         ]
       }

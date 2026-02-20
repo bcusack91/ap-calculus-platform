@@ -49,14 +49,14 @@ These commonly appear and are easy to forget under pressure:
     {
       id: 'td7-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Final Strategy** 🎯',
+      content: `**Final Strategy** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'The night before the MCAT, the BEST strategy is:',
-            options: ['No studying — relax, eat a good dinner, and go to bed early', 'Cram high-yield topics until midnight', 'Take a full practice exam', 'Review all your notes from the beginning'],
+            question: `The night before the MCAT, the BEST strategy is:`,
+            options: [`No studying — relax, eat a good dinner, and go to bed early`, `Cram high-yield topics until midnight`, `Take a full practice exam`, `Review all your notes from the beginning`],
             correctAnswer: 0,
-            explanation: 'Sleep is the single most important thing the night before. Your brain consolidates memories during sleep. Cramming the night before creates anxiety and exhaustion — neither helps performance. Trust your months of preparation.'
+            explanation: `Sleep is the single most important thing the night before. Your brain consolidates memories during sleep. Cramming the night before creates anxiety and exhaustion — neither helps performance. Trust your months of preparation.`
           }
         ]
       }

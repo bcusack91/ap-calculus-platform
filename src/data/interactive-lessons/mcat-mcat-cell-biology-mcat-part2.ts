@@ -35,20 +35,20 @@ Per ATP hydrolyzed: **3 Na$^+$ out, 2 K$^+$ in**
     {
       id: 'cb2-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Membrane Transport** 🎯',
+      content: `**Membrane Transport** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A cell is placed in a hypertonic solution. The cell will:',
-            options: ['Shrink (crenation) — water moves out by osmosis', 'Swell and potentially lyse', 'Remain unchanged', 'Divide'],
+            question: `A cell is placed in a hypertonic solution. The cell will:`,
+            options: [`Shrink (crenation) — water moves out by osmosis`, `Swell and potentially lyse`, `Remain unchanged`, `Divide`],
             correctAnswer: 0,
-            explanation: 'Hypertonic = higher solute concentration outside. Water follows solute (moves out by osmosis) → cell shrinks. In RBCs, this is called crenation.'
+            explanation: `Hypertonic = higher solute concentration outside. Water follows solute (moves out by osmosis) → cell shrinks. In RBCs, this is called crenation.`
           },
           {
-            question: 'The Na$^+$/K$^+$ ATPase pumps:',
-            options: ['3 Na$^+$ out and 2 K$^+$ in per ATP', '2 Na$^+$ out and 3 K$^+$ in per ATP', '3 Na$^+$ in and 2 K$^+$ out per ATP', 'Equal numbers of Na$^+$ and K$^+$'],
+            question: `The Na$^+$/K$^+$ ATPase pumps:`,
+            options: [`3 Na$^+$ out and 2 K$^+$ in per ATP`, `2 Na$^+$ out and 3 K$^+$ in per ATP`, `3 Na$^+$ in and 2 K$^+$ out per ATP`, `Equal numbers of Na$^+$ and K$^+$`],
             correctAnswer: 0,
-            explanation: '3 Na$^+$ out, 2 K$^+$ in per ATP. This makes the pump electrogenic (net positive charge moved outside), contributing to the negative resting membrane potential (~$-70$ mV).'
+            explanation: `3 Na$^+$ out, 2 K$^+$ in per ATP. This makes the pump electrogenic (net positive charge moved outside), contributing to the negative resting membrane potential (~$-70$ mV).`
           }
         ]
       }

@@ -35,20 +35,20 @@ $$\\text{Glucose} \\xrightarrow{10\\text{ steps}} 2\\text{ Pyruvate}$$
     {
       id: 'bc3-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Glycolysis** 🎯',
+      content: `**Glycolysis** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A cell is exposed to high levels of ATP and citrate. The DIRECT effect on glycolysis is:',
-            options: ['PFK-1 is inhibited, slowing glycolysis', 'Hexokinase is activated', 'Pyruvate kinase is activated', 'Glycolysis speeds up'],
+            question: `A cell is exposed to high levels of ATP and citrate. The DIRECT effect on glycolysis is:`,
+            options: [`PFK-1 is inhibited, slowing glycolysis`, `Hexokinase is activated`, `Pyruvate kinase is activated`, `Glycolysis speeds up`],
             correctAnswer: 0,
-            explanation: 'Both ATP and citrate are allosteric inhibitors of PFK-1, the rate-limiting enzyme. This signals that the cell has plenty of energy and TCA intermediates.'
+            explanation: `Both ATP and citrate are allosteric inhibitors of PFK-1, the rate-limiting enzyme. This signals that the cell has plenty of energy and TCA intermediates.`
           },
           {
-            question: 'During vigorous exercise, muscle cells produce lactate primarily to:',
-            options: ['Regenerate NAD$^+$ to continue glycolysis', 'Produce more ATP', 'Feed into the TCA cycle', 'Prevent acidosis'],
+            question: `During vigorous exercise, muscle cells produce lactate primarily to:`,
+            options: [`Regenerate NAD$^+$ to continue glycolysis`, `Produce more ATP`, `Feed into the TCA cycle`, `Prevent acidosis`],
             correctAnswer: 0,
-            explanation: 'Lactate dehydrogenase converts pyruvate → lactate while oxidizing NADH → NAD$^+$. The regenerated NAD$^+$ is needed for glyceraldehyde-3-P dehydrogenase (step 6) to keep glycolysis running anaerobically.'
+            explanation: `Lactate dehydrogenase converts pyruvate → lactate while oxidizing NADH → NAD$^+$. The regenerated NAD$^+$ is needed for glyceraldehyde-3-P dehydrogenase (step 6) to keep glycolysis running anaerobically.`
           }
         ]
       }

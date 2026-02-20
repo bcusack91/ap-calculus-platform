@@ -40,14 +40,14 @@ $$\\text{Signal} \\to \\text{Receptor} \\to \\text{Transduction} \\to \\text{Res
     {
       id: 'cb5-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Cell Signaling** 🎯',
+      content: `**Cell Signaling** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'Steroid hormones (like testosterone) can directly activate genes because they:',
-            options: ['Are hydrophobic and cross the cell membrane to bind intracellular receptors', 'Bind to GPCRs on the cell surface', 'Are water-soluble', 'Use cAMP as a second messenger'],
+            question: `Steroid hormones (like testosterone) can directly activate genes because they:`,
+            options: [`Are hydrophobic and cross the cell membrane to bind intracellular receptors`, `Bind to GPCRs on the cell surface`, `Are water-soluble`, `Use cAMP as a second messenger`],
             correctAnswer: 0,
-            explanation: 'Steroids are derived from cholesterol (lipid-soluble). They cross the membrane, bind cytoplasmic or nuclear receptors, and the hormone-receptor complex directly acts as a transcription factor.'
+            explanation: `Steroids are derived from cholesterol (lipid-soluble). They cross the membrane, bind cytoplasmic or nuclear receptors, and the hormone-receptor complex directly acts as a transcription factor.`
           }
         ]
       }

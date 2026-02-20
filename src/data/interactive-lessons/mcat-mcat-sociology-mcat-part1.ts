@@ -38,14 +38,14 @@ export const mcatSociologyPart1Data = {
     {
       id: 'so1-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Social Structure** 🎯',
+      content: `**Social Structure** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A sociologist argues that healthcare inequality exists because the wealthy benefit from maintaining the current system. This perspective is:',
-            options: ['Conflict theory — focusing on power dynamics and inequality between social classes', 'Functionalism', 'Symbolic interactionism', 'Social constructionism'],
+            question: `A sociologist argues that healthcare inequality exists because the wealthy benefit from maintaining the current system. This perspective is:`,
+            options: [`Conflict theory — focusing on power dynamics and inequality between social classes`, `Functionalism`, `Symbolic interactionism`, `Social constructionism`],
             correctAnswer: 0,
-            explanation: 'Conflict theory (Marx) views society as a competition for resources. Healthcare inequality is maintained because it benefits the powerful — a classic conflict theory explanation. Functionalism would ask what purpose inequality serves for society as a whole.'
+            explanation: `Conflict theory (Marx) views society as a competition for resources. Healthcare inequality is maintained because it benefits the powerful — a classic conflict theory explanation. Functionalism would ask what purpose inequality serves for society as a whole.`
           }
         ]
       }

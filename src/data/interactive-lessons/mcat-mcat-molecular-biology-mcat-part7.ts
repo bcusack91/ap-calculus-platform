@@ -35,14 +35,14 @@ $$\\text{ssRNA} \\xrightarrow{\\text{Reverse transcriptase}} \\text{dsDNA} \\xri
     {
       id: 'mb7-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Viruses** 🎯',
+      content: `**Viruses** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'HIV is difficult to treat because:',
-            options: ['Reverse transcriptase has no proofreading → high mutation rate → drug resistance', 'HIV has a DNA genome', 'Antibiotics kill HIV-infected cells', 'HIV only infects red blood cells'],
+            question: `HIV is difficult to treat because:`,
+            options: [`Reverse transcriptase has no proofreading → high mutation rate → drug resistance`, `HIV has a DNA genome`, `Antibiotics kill HIV-infected cells`, `HIV only infects red blood cells`],
             correctAnswer: 0,
-            explanation: 'Reverse transcriptase lacks $3\' \\to 5\'$ exonuclease (proofreading) activity, causing a very high mutation rate. This allows HIV to quickly evolve resistance to single drugs, which is why combination therapy (HAART) is used.'
+            explanation: `Reverse transcriptase lacks $3' \\to 5'$ exonuclease (proofreading) activity, causing a very high mutation rate. This allows HIV to quickly evolve resistance to single drugs, which is why combination therapy (HAART) is used.`
           }
         ]
       }

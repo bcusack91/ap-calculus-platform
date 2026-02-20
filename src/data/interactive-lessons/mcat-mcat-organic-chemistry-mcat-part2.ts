@@ -28,20 +28,20 @@ export const mcatOrgChemPart2Data = {
     {
       id: 'oc2-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Reaction Mechanisms** 🎯',
+      content: `**Reaction Mechanisms** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A 3° alkyl halide treated with NaOH in water would most likely undergo:',
-            options: ['SN1 and E1 (competing)', 'SN2', 'E2 only', 'No reaction'],
+            question: `A 3° alkyl halide treated with NaOH in water would most likely undergo:`,
+            options: [`SN1 and E1 (competing)`, `SN2`, `E2 only`, `No reaction`],
             correctAnswer: 0,
-            explanation: '3° substrate blocks SN2 (too sterically hindered). Water is polar protic. NaOH is both nucleophile and base but not bulky. Both SN1 and E1 proceed through the same carbocation intermediate. Heat favors E1.'
+            explanation: `3° substrate blocks SN2 (too sterically hindered). Water is polar protic. NaOH is both nucleophile and base but not bulky. Both SN1 and E1 proceed through the same carbocation intermediate. Heat favors E1.`
           },
           {
-            question: 'An SN2 reaction on a chiral substrate produces:',
-            options: ['Inversion of configuration', 'Retention of configuration', 'Racemic mixture', 'Random configuration'],
+            question: `An SN2 reaction on a chiral substrate produces:`,
+            options: [`Inversion of configuration`, `Retention of configuration`, `Racemic mixture`, `Random configuration`],
             correctAnswer: 0,
-            explanation: 'SN2 proceeds through a single backside-attack step, giving 100% inversion of stereochemistry at the carbon center (Walden inversion).'
+            explanation: `SN2 proceeds through a single backside-attack step, giving 100% inversion of stereochemistry at the carbon center (Walden inversion).`
           }
         ]
       }

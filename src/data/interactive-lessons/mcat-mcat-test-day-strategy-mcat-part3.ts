@@ -42,14 +42,14 @@ export const mcatTestDayPart3Data = {
     {
       id: 'td3-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Study Planning** 🎯',
+      content: `**Study Planning** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'The most effective way to identify weak areas in MCAT prep is:',
-            options: ['Regular practice tests with thorough review of both correct AND incorrect answers', 'Reading textbooks cover to cover', 'Memorizing flashcards only', 'Studying the same topics repeatedly'],
+            question: `The most effective way to identify weak areas in MCAT prep is:`,
+            options: [`Regular practice tests with thorough review of both correct AND incorrect answers`, `Reading textbooks cover to cover`, `Memorizing flashcards only`, `Studying the same topics repeatedly`],
             correctAnswer: 0,
-            explanation: 'Practice tests reveal what you actually know vs. what you think you know. Reviewing correct answers shows your reasoning was right. Reviewing incorrect answers identifies gaps. Both are equally important for improvement.'
+            explanation: `Practice tests reveal what you actually know vs. what you think you know. Reviewing correct answers shows your reasoning was right. Reviewing incorrect answers identifies gaps. Both are equally important for improvement.`
           }
         ]
       }

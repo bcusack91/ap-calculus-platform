@@ -36,14 +36,14 @@ export const mcatGeneticsPart2Data = {
     {
       id: 'ge2-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Non-Mendelian** 🎯',
+      content: `**Non-Mendelian** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A mother with blood type A (genotype $I^Ai$) and a father with blood type B (genotype $I^Bi$) can have children with which blood types?',
-            options: ['A, B, AB, or O — all four are possible', 'Only A or B', 'Only AB', 'Only A, B, or AB'],
+            question: `A mother with blood type A (genotype $I^Ai$) and a father with blood type B (genotype $I^Bi$) can have children with which blood types?`,
+            options: [`A, B, AB, or O — all four are possible`, `Only A or B`, `Only AB`, `Only A, B, or AB`],
             correctAnswer: 0,
-            explanation: 'Cross $I^Ai \\times I^Bi$: offspring can be $I^AI^B$ (AB), $I^Ai$ (A), $I^Bi$ (B), or ii (O). All four blood types are possible — a classic MCAT genetics question.'
+            explanation: `Cross $I^Ai \\times I^Bi$: offspring can be $I^AI^B$ (AB), $I^Ai$ (A), $I^Bi$ (B), or ii (O). All four blood types are possible — a classic MCAT genetics question.`
           }
         ]
       }

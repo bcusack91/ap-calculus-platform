@@ -38,14 +38,14 @@ $$\\text{Blood Pressure} = \\text{CO} \\times \\text{Total Peripheral Resistance
     {
       id: 'os1-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Cardiovascular** 🎯',
+      content: `**Cardiovascular** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'During exercise, cardiac output increases primarily through:',
-            options: ['Increased heart rate AND increased stroke volume', 'Increased heart rate only', 'Decreased peripheral resistance only', 'Increased blood vessel diameter only'],
+            question: `During exercise, cardiac output increases primarily through:`,
+            options: [`Increased heart rate AND increased stroke volume`, `Increased heart rate only`, `Decreased peripheral resistance only`, `Increased blood vessel diameter only`],
             correctAnswer: 0,
-            explanation: 'CO = HR $\\times$ SV. During exercise, sympathetic activation increases both HR (via SA node stimulation) and SV (via increased contractility and venous return). Both contribute to the ~4-5x increase in CO during vigorous exercise.'
+            explanation: `CO = HR $\\times$ SV. During exercise, sympathetic activation increases both HR (via SA node stimulation) and SV (via increased contractility and venous return). Both contribute to the ~4-5x increase in CO during vigorous exercise.`
           }
         ]
       }

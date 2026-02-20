@@ -43,14 +43,14 @@ A passage shows that A correlates with B. Answer choices may state "A causes B."
     {
       id: 'sp2-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Data Interpretation** 🎯',
+      content: `**Data Interpretation** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A graph shows enzyme activity vs. substrate concentration with a plateau at high concentrations. The plateau indicates:',
-            options: ['All enzyme active sites are saturated ($V_{max}$ reached)', 'The enzyme is denatured', 'Substrate is being consumed', 'The experiment failed'],
+            question: `A graph shows enzyme activity vs. substrate concentration with a plateau at high concentrations. The plateau indicates:`,
+            options: [`All enzyme active sites are saturated ($V_{max}$ reached)`, `The enzyme is denatured`, `Substrate is being consumed`, `The experiment failed`],
             correctAnswer: 0,
-            explanation: 'At high substrate concentration, all enzyme active sites are occupied → increasing substrate further has no effect on rate → plateau at $V_{max}$. This is the classic Michaelis-Menten curve.'
+            explanation: `At high substrate concentration, all enzyme active sites are occupied → increasing substrate further has no effect on rate → plateau at $V_{max}$. This is the classic Michaelis-Menten curve.`
           }
         ]
       }

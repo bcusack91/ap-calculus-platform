@@ -37,14 +37,14 @@ The author's attitude toward the subject is CRUCIAL for CARS.
     {
       id: 'cs6-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Tone & Rhetoric** 🎯',
+      content: `**Tone & Rhetoric** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'An author writes: "While proponents celebrate the innovation, they conveniently overlook its devastating environmental consequences." The tone is:',
-            options: ['Critical — "conveniently overlook" and "devastating" show disapproval', 'Neutral — the author presents both sides', 'Supportive of the innovation', 'Ambivalent'],
+            question: `An author writes: "While proponents celebrate the innovation, they conveniently overlook its devastating environmental consequences." The tone is:`,
+            options: [`Critical — "conveniently overlook" and "devastating" show disapproval`, `Neutral — the author presents both sides`, `Supportive of the innovation`, `Ambivalent`],
             correctAnswer: 0,
-            explanation: '"Conveniently overlook" implies deliberate ignorance, and "devastating" is strongly negative. The author is criticizing both the innovation and its supporters.'
+            explanation: `"Conveniently overlook" implies deliberate ignorance, and "devastating" is strongly negative. The author is criticizing both the innovation and its supporters.`
           }
         ]
       }

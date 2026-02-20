@@ -47,14 +47,14 @@ Obligations of the sick person:
     {
       id: 'so7-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Healthcare & Ethics** 🎯',
+      content: `**Healthcare & Ethics** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A competent adult patient refuses life-saving treatment. The ethical principle that supports their right to do so is:',
-            options: ['Autonomy — the patient\'s right to make their own medical decisions', 'Beneficence', 'Justice', 'Non-maleficence'],
+            question: `A competent adult patient refuses life-saving treatment. The ethical principle that supports their right to do so is:`,
+            options: [`Autonomy — the patient\`s right to make their own medical decisions`, `Beneficence`, `Justice`, `Non-maleficence'`],
             correctAnswer: 0,
-            explanation: 'Autonomy means respecting the patient\'s right to make informed decisions about their own body, even if the physician disagrees. This overrides beneficence (doing good) when the patient is competent and informed.'
+            explanation: `Autonomy means respecting the patient's right to make informed decisions about their own body, even if the physician disagrees. This overrides beneficence (doing good) when the patient is competent and informed.`
           }
         ]
       }

@@ -33,14 +33,14 @@ Fats are more reduced (more C-H bonds) → more electrons to donate to ETC → m
     {
       id: 'bc5-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Lipid Metabolism** 🎯',
+      content: `**Lipid Metabolism** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'Carnitine shuttle is required for $\\beta$-oxidation because:',
-            options: ['Long-chain fatty acyl-CoA cannot cross the inner mitochondrial membrane without it', 'It activates fatty acids in the cytoplasm', 'It is the rate-limiting enzyme', 'Short-chain fatty acids need it for transport'],
+            question: `Carnitine shuttle is required for $\\beta$-oxidation because:`,
+            options: [`Long-chain fatty acyl-CoA cannot cross the inner mitochondrial membrane without it`, `It activates fatty acids in the cytoplasm`, `It is the rate-limiting enzyme`, `Short-chain fatty acids need it for transport`],
             correctAnswer: 0,
-            explanation: 'The inner mitochondrial membrane is impermeable to long-chain acyl-CoA. Carnitine acyltransferase I (CPT-I) transfers the acyl group to carnitine for transport. CPT-I is also the rate-limiting step, inhibited by malonyl-CoA.'
+            explanation: `The inner mitochondrial membrane is impermeable to long-chain acyl-CoA. Carnitine acyltransferase I (CPT-I) transfers the acyl group to carnitine for transport. CPT-I is also the rate-limiting step, inhibited by malonyl-CoA.`
           }
         ]
       }

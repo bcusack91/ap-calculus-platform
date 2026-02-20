@@ -41,14 +41,14 @@ The strongest CARS performers think like this:
     {
       id: 'cr7-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Final Integration** 🎯',
+      content: `**Final Integration** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A well-prepared CARS reader approaches a passage by:',
-            options: ['Actively tracking the argument, tone, and evidence while reading — then using these to answer questions', 'Memorizing every detail for later recall', 'Reading as quickly as possible', 'Looking at the questions first and only reading relevant sections'],
+            question: `A well-prepared CARS reader approaches a passage by:`,
+            options: [`Actively tracking the argument, tone, and evidence while reading — then using these to answer questions`, `Memorizing every detail for later recall`, `Reading as quickly as possible`, `Looking at the questions first and only reading relevant sections`],
             correctAnswer: 0,
-            explanation: 'Active reading — tracking argument structure, author tone, and evidence quality — is the foundation of CARS success. This creates a mental map that makes all question types easier to answer.'
+            explanation: `Active reading — tracking argument structure, author tone, and evidence quality — is the foundation of CARS success. This creates a mental map that makes all question types easier to answer.`
           }
         ]
       }

@@ -37,20 +37,20 @@ $$f' = f\\frac{v \\pm v_{observer}}{v \\mp v_{source}}$$
     {
       id: 'pm7-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Waves & Sound** 🎯',
+      content: `**Waves & Sound** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'An ambulance siren produces sound at 500 Hz. As it approaches you at 34 m/s (speed of sound = 340 m/s), you hear:',
-            options: ['~556 Hz (higher pitch)', '~450 Hz', '500 Hz', '~600 Hz'],
+            question: `An ambulance siren produces sound at 500 Hz. As it approaches you at 34 m/s (speed of sound = 340 m/s), you hear:`,
+            options: [`~556 Hz (higher pitch)`, `~450 Hz`, `500 Hz`, `~600 Hz`],
             correctAnswer: 0,
-            explanation: 'Source approaching: $f\' = f \\cdot v/(v - v_s) = 500(340)/(340 - 34) = 500(340/306) \\approx 556$ Hz. Higher frequency = higher pitch.'
+            explanation: `Source approaching: $f' = f \\cdot v/(v - v_s) = 500(340)/(340 - 34) = 500(340/306) \\approx 556$ Hz. Higher frequency = higher pitch.`
           },
           {
-            question: 'Increasing sound intensity by a factor of 100 increases the decibel level by:',
-            options: ['20 dB', '10 dB', '100 dB', '2 dB'],
+            question: `Increasing sound intensity by a factor of 100 increases the decibel level by:`,
+            options: [`20 dB`, `10 dB`, `100 dB`, `2 dB`],
             correctAnswer: 0,
-            explanation: '$\\Delta\\beta = 10\\log(100) = 10(2) = 20$ dB. Each factor of 10 in intensity = +10 dB.'
+            explanation: `$\\Delta\\beta = 10\\log(100) = 10(2) = 20$ dB. Each factor of 10 in intensity = +10 dB.`
           }
         ]
       }

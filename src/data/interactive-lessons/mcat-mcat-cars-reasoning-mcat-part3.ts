@@ -41,14 +41,14 @@ To check if something is a necessary assumption:
     {
       id: 'cr3-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Assumptions** 🎯',
+      content: `**Assumptions** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'An author argues that teaching students chess improves their math skills because chess requires logical thinking. An assumption of this argument is:',
-            options: ['Logical thinking skills transfer between different domains (chess to math)', 'All students enjoy chess', 'Math is the most important subject', 'Chess is harder than math'],
+            question: `An author argues that teaching students chess improves their math skills because chess requires logical thinking. An assumption of this argument is:`,
+            options: [`Logical thinking skills transfer between different domains (chess to math)`, `All students enjoy chess`, `Math is the most important subject`, `Chess is harder than math`],
             correctAnswer: 0,
-            explanation: 'The argument assumes that practicing logical thinking in one domain (chess) improves it in another (math). If skills don\'t transfer between domains, the argument fails. Use the negation test to verify.'
+            explanation: `The argument assumes that practicing logical thinking in one domain (chess) improves it in another (math). If skills don't transfer between domains, the argument fails. Use the negation test to verify.`
           }
         ]
       }

@@ -38,14 +38,14 @@ export const mcatMicroPart6Data = {
     {
       id: 'mi6-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Immune Response** 🎯',
+      content: `**Immune Response** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A newborn has IgG antibodies from its mother. This is an example of:',
-            options: ['Passive immunity — antibodies were transferred, not produced by the baby\'s own immune system', 'Active immunity', 'Innate immunity', 'Cell-mediated immunity'],
+            question: `A newborn has IgG antibodies from its mother. This is an example of:`,
+            options: [`Passive immunity — antibodies were transferred, not produced by the baby\`s own immune system`, `Active immunity`, `Innate immunity`, `Cell-mediated immunity'`],
             correctAnswer: 0,
-            explanation: 'Maternal IgG crosses the placenta, providing passive immunity. The baby didn\'t mount its own immune response. This protection is immediate but temporary (fades as maternal antibodies are degraded over months).'
+            explanation: `Maternal IgG crosses the placenta, providing passive immunity. The baby didn't mount its own immune response. This protection is immediate but temporary (fades as maternal antibodies are degraded over months).`
           }
         ]
       }

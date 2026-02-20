@@ -33,20 +33,20 @@ Cysteine + Cysteine → Cystine (C-S-S-C), covalent bond stabilizing tertiary st
     {
       id: 'bc1-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Amino Acids & Protein Structure** 🎯',
+      content: `**Amino Acids & Protein Structure** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'Proline is unique among amino acids because it:',
-            options: ['Has a cyclic side chain bonded to the backbone nitrogen, creating rigidity', 'Is the only nonpolar amino acid', 'Has the smallest side chain', 'Can form disulfide bonds'],
+            question: `Proline is unique among amino acids because it:`,
+            options: [`Has a cyclic side chain bonded to the backbone nitrogen, creating rigidity`, `Is the only nonpolar amino acid`, `Has the smallest side chain`, `Can form disulfide bonds`],
             correctAnswer: 0,
-            explanation: 'Proline is an imino acid — its side chain cyclizes back to the backbone N, creating a rigid kink. This is why proline is a "helix breaker" in $\\alpha$-helices.'
+            explanation: `Proline is an imino acid — its side chain cyclizes back to the backbone N, creating a rigid kink. This is why proline is a "helix breaker" in $\\alpha$-helices.`
           },
           {
-            question: '$\\alpha$-helices are stabilized primarily by:',
-            options: ['Hydrogen bonds between backbone C=O and N-H groups 4 residues apart', 'Disulfide bonds', 'Hydrophobic interactions', 'Ionic bonds between side chains'],
+            question: `$\\alpha$-helices are stabilized primarily by:`,
+            options: [`Hydrogen bonds between backbone C=O and N-H groups 4 residues apart`, `Disulfide bonds`, `Hydrophobic interactions`, `Ionic bonds between side chains`],
             correctAnswer: 0,
-            explanation: '$\\alpha$-helices are stabilized by H-bonds between the C=O of residue $i$ and the N-H of residue $i+4$. These are backbone (not side chain) interactions, making them secondary structure.'
+            explanation: `$\\alpha$-helices are stabilized by H-bonds between the C=O of residue $i$ and the N-H of residue $i+4$. These are backbone (not side chain) interactions, making them secondary structure.`
           }
         ]
       }

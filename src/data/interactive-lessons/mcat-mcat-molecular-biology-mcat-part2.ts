@@ -36,14 +36,14 @@ $$\\text{DNA (template)} \\xrightarrow{\\text{RNA Polymerase}} \\text{mRNA (pre-
     {
       id: 'mb2-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Transcription** 🎯',
+      content: `**Transcription** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A mutation in the spliceosome would most directly cause:',
-            options: ['Introns retained in mRNA → abnormal protein', 'Failure of 5\' capping', 'DNA replication errors', 'Ribosome malfunction'],
+            question: `A mutation in the spliceosome would most directly cause:`,
+            options: [`Introns retained in mRNA → abnormal protein`, `Failure of 5\` capping`, `DNA replication errors`, `Ribosome malfunction'`],
             correctAnswer: 0,
-            explanation: 'The spliceosome removes introns from pre-mRNA. If defective, introns remain in the mature mRNA, leading to premature stop codons or frame shifts → nonfunctional protein or disease (e.g., some forms of spinal muscular atrophy).'
+            explanation: `The spliceosome removes introns from pre-mRNA. If defective, introns remain in the mature mRNA, leading to premature stop codons or frame shifts → nonfunctional protein or disease (e.g., some forms of spinal muscular atrophy).`
           }
         ]
       }

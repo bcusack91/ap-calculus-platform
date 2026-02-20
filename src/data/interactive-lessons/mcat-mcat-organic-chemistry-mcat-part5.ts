@@ -35,14 +35,14 @@ Must have: planar ring, conjugated $\\pi$ system, $4n + 2$ $\\pi$ electrons ($n 
     {
       id: 'oc5-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Aromatics & Lab** 🎯',
+      content: `**Aromatics & Lab** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'Nitration of toluene ($\\text{C}_6\\text{H}_5\\text{CH}_3$) primarily gives:',
-            options: ['ortho- and para-nitrotoluene ($-CH_3$ is ortho/para director)', 'meta-nitrotoluene', 'Only para-nitrotoluene', 'No reaction — toluene is deactivated'],
+            question: `Nitration of toluene ($\\text{C}_6\\text{H}_5\\text{CH}_3$) primarily gives:`,
+            options: [`ortho- and para-nitrotoluene ($-CH_3$ is ortho/para director)`, `meta-nitrotoluene`, `Only para-nitrotoluene`, `No reaction — toluene is deactivated`],
             correctAnswer: 0,
-            explanation: 'Methyl ($-CH_3$) is an electron-donating group (activating, ortho/para director). You get a mixture of ortho and para products.'
+            explanation: `Methyl ($-CH_3$) is an electron-donating group (activating, ortho/para director). You get a mixture of ortho and para products.`
           }
         ]
       }

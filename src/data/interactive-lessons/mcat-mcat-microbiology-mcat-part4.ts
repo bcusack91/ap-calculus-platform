@@ -40,14 +40,14 @@ export const mcatMicroPart4Data = {
     {
       id: 'mi4-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Virology** 🎯',
+      content: `**Virology** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'Enveloped viruses are generally more susceptible to disinfection because:',
-            options: ['The lipid envelope is easily disrupted by detergents, alcohol, and desiccation', 'They have thicker capsids', 'They replicate more slowly', 'They lack nucleic acid'],
+            question: `Enveloped viruses are generally more susceptible to disinfection because:`,
+            options: [`The lipid envelope is easily disrupted by detergents, alcohol, and desiccation`, `They have thicker capsids`, `They replicate more slowly`, `They lack nucleic acid`],
             correctAnswer: 0,
-            explanation: 'The lipid envelope is fragile — destroyed by soap, alcohol, heat, and drying. Without their envelope, these viruses can\'t attach to host cells. Naked viruses (no envelope) are more resistant to environmental conditions.'
+            explanation: `The lipid envelope is fragile — destroyed by soap, alcohol, heat, and drying. Without their envelope, these viruses can't attach to host cells. Naked viruses (no envelope) are more resistant to environmental conditions.`
           }
         ]
       }

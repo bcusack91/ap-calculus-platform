@@ -40,14 +40,14 @@ Antibiotics DON'T work against viruses — viruses use host machinery!`
     {
       id: 'mi3-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Bacterial Genetics** 🎯',
+      content: `**Bacterial Genetics** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A bacterium acquires antibiotic resistance after being infected by a bacteriophage carrying resistance genes from another bacterium. This is:',
-            options: ['Transduction — phage-mediated DNA transfer between bacteria', 'Transformation', 'Conjugation', 'Mutation'],
+            question: `A bacterium acquires antibiotic resistance after being infected by a bacteriophage carrying resistance genes from another bacterium. This is:`,
+            options: [`Transduction — phage-mediated DNA transfer between bacteria`, `Transformation`, `Conjugation`, `Mutation`],
             correctAnswer: 0,
-            explanation: 'Transduction = bacteriophage accidentally packages bacterial DNA and transfers it to a new host. Generalized transduction transfers random genes; specialized transduction transfers genes near the phage integration site.'
+            explanation: `Transduction = bacteriophage accidentally packages bacterial DNA and transfers it to a new host. Generalized transduction transfers random genes; specialized transduction transfers genes near the phage integration site.`
           }
         ]
       }

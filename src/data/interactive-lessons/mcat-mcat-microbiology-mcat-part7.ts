@@ -39,14 +39,14 @@ export const mcatMicroPart7Data = {
     {
       id: 'mi7-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Immune Disorders** 🎯',
+      content: `**Immune Disorders** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'HIV primarily targets:',
-            options: ['CD4+ helper T cells — leading to progressive immunodeficiency', 'CD8+ cytotoxic T cells', 'B cells directly', 'Neutrophils'],
+            question: `HIV primarily targets:`,
+            options: [`CD4+ helper T cells — leading to progressive immunodeficiency`, `CD8+ cytotoxic T cells`, `B cells directly`, `Neutrophils`],
             correctAnswer: 0,
-            explanation: 'HIV binds CD4 receptor (on helper T cells) + CCR5/CXCR4 co-receptors. As CD4+ T cells are destroyed, the immune system progressively fails. When CD4 count drops below 200, susceptibility to opportunistic infections defines AIDS.'
+            explanation: `HIV binds CD4 receptor (on helper T cells) + CCR5/CXCR4 co-receptors. As CD4+ T cells are destroyed, the immune system progressively fails. When CD4 count drops below 200, susceptibility to opportunistic infections defines AIDS.`
           }
         ]
       }

@@ -33,14 +33,14 @@ export const mcatMolBioPart3Data = {
     {
       id: 'mb3-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Translation** 🎯',
+      content: `**Translation** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'An antibiotic that binds to the 50S ribosomal subunit would inhibit translation in:',
-            options: ['Bacteria (they have 70S = 50S + 30S ribosomes)', 'Human cells (they have 80S = 60S + 40S)', 'Both equally', 'Neither'],
+            question: `An antibiotic that binds to the 50S ribosomal subunit would inhibit translation in:`,
+            options: [`Bacteria (they have 70S = 50S + 30S ribosomes)`, `Human cells (they have 80S = 60S + 40S)`, `Both equally`, `Neither`],
             correctAnswer: 0,
-            explanation: 'Bacterial ribosomes are 70S (50S + 30S). Human ribosomes are 80S (60S + 40S). Drugs targeting 50S specifically affect bacteria, not human ribosomes. This is why antibiotics like chloramphenicol and erythromycin can target bacteria selectively.'
+            explanation: `Bacterial ribosomes are 70S (50S + 30S). Human ribosomes are 80S (60S + 40S). Drugs targeting 50S specifically affect bacteria, not human ribosomes. This is why antibiotics like chloramphenicol and erythromycin can target bacteria selectively.`
           }
         ]
       }

@@ -41,14 +41,14 @@ export const mcatPsychBehavPart7Data = {
     {
       id: 'pb7-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Development** 🎯',
+      content: `**Development** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'An adolescent struggling to define their values, career goals, and identity is in which Erikson stage?',
-            options: ['Identity vs. Role Confusion (ages 12-18)', 'Intimacy vs. Isolation', 'Industry vs. Inferiority', 'Initiative vs. Guilt'],
+            question: `An adolescent struggling to define their values, career goals, and identity is in which Erikson stage?`,
+            options: [`Identity vs. Role Confusion (ages 12-18)`, `Intimacy vs. Isolation`, `Industry vs. Inferiority`, `Initiative vs. Guilt`],
             correctAnswer: 0,
-            explanation: 'Erikson\'s fifth stage (Identity vs. Role Confusion) occurs during adolescence. Successfully navigating this stage produces a strong sense of identity; failure leads to role confusion and uncertainty about self.'
+            explanation: `Erikson's fifth stage (Identity vs. Role Confusion) occurs during adolescence. Successfully navigating this stage produces a strong sense of identity; failure leads to role confusion and uncertainty about self.`
           }
         ]
       }

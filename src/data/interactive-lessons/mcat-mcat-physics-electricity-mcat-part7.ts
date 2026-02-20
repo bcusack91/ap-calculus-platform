@@ -35,20 +35,20 @@ After $n$ half-lives: $N = N_0/2^n$`
     {
       id: 'pe7-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Nuclear Physics** 🎯',
+      content: `**Nuclear Physics** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A radioactive sample has a half-life of 8 days. After 24 days, what fraction remains?',
-            options: ['$1/8$ (3 half-lives: $1/2^3$)', '$1/4$', '$1/16$', '$1/3$'],
+            question: `A radioactive sample has a half-life of 8 days. After 24 days, what fraction remains?`,
+            options: [`$1/8$ (3 half-lives: $1/2^3$)`, `$1/4$`, `$1/16$`, `$1/3$`],
             correctAnswer: 0,
-            explanation: 'Number of half-lives = $24/8 = 3$. Remaining = $(1/2)^3 = 1/8$.'
+            explanation: `Number of half-lives = $24/8 = 3$. Remaining = $(1/2)^3 = 1/8$.`
           },
           {
-            question: '$^{238}_{92}\\text{U}$ undergoes alpha decay. The daughter nucleus is:',
-            options: ['$^{234}_{90}\\text{Th}$ ($A - 4$, $Z - 2$)', '$^{238}_{93}\\text{Np}$', '$^{234}_{92}\\text{U}$', '$^{238}_{90}\\text{Th}$'],
+            question: `$^{238}_{92}\\text{U}$ undergoes alpha decay. The daughter nucleus is:`,
+            options: [`$^{234}_{90}\\text{Th}$ ($A - 4$, $Z - 2$)`, `$^{238}_{93}\\text{Np}$`, `$^{234}_{92}\\text{U}$`, `$^{238}_{90}\\text{Th}$`],
             correctAnswer: 0,
-            explanation: 'Alpha decay emits $^4_2\\text{He}$: $A$ decreases by 4 (238→234) and $Z$ decreases by 2 (92→90). Element 90 = Thorium.'
+            explanation: `Alpha decay emits $^4_2\\text{He}$: $A$ decreases by 4 (238→234) and $Z$ decreases by 2 (92→90). Element 90 = Thorium.`
           }
         ]
       }

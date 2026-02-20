@@ -42,14 +42,14 @@ After $n$ cycles: $2^n$ copies. After 30 cycles: ~$10^9$ copies!
     {
       id: 'mb6-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Biotechnology** 🎯',
+      content: `**Biotechnology** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'After 20 cycles of PCR, approximately how many copies of the target DNA are produced from one template molecule?',
-            options: ['~$10^6$ ($2^{20} \\approx 10^6$)', '20', '40', '200'],
+            question: `After 20 cycles of PCR, approximately how many copies of the target DNA are produced from one template molecule?`,
+            options: [`~$10^6$ ($2^{20} \\approx 10^6$)`, `20`, `40`, `200`],
             correctAnswer: 0,
-            explanation: 'PCR doubles DNA each cycle: $2^{20} = 1{,}048{,}576 \\approx 10^6$ copies. This exponential amplification is why PCR is so powerful for detecting tiny amounts of DNA.'
+            explanation: `PCR doubles DNA each cycle: $2^{20} = 1{,}048{,}576 \\approx 10^6$ copies. This exponential amplification is why PCR is so powerful for detecting tiny amounts of DNA.`
           }
         ]
       }

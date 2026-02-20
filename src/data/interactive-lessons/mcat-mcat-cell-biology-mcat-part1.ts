@@ -34,20 +34,20 @@ export const mcatCellBioPart1Data = {
     {
       id: 'cb1-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Cell Structure** 🎯',
+      content: `**Cell Structure** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A researcher treats cells with a drug that disrupts hydrogen ion pumps on lysosomes, raising lysosomal pH to 7. The most likely effect is:',
-            options: ['Lysosomal enzymes become inactive — they require acidic pH to function', 'Lysosomes become more active', 'The cell produces more lysosomes', 'No effect — pH doesn\'t matter'],
+            question: `A researcher treats cells with a drug that disrupts hydrogen ion pumps on lysosomes, raising lysosomal pH to 7. The most likely effect is:`,
+            options: [`Lysosomal enzymes become inactive — they require acidic pH to function`, `Lysosomes become more active`, `The cell produces more lysosomes`, `No effect — pH doesn\`t matter'`],
             correctAnswer: 0,
-            explanation: 'Lysosomal hydrolases are acid hydrolases — they function optimally at pH ~5. At pH 7, these enzymes denature or become inactive, preventing intracellular digestion. This is a common MCAT passage scenario.'
+            explanation: `Lysosomal hydrolases are acid hydrolases — they function optimally at pH ~5. At pH 7, these enzymes denature or become inactive, preventing intracellular digestion. This is a common MCAT passage scenario.`
           },
           {
-            question: 'Mitochondria have their own DNA because they:',
-            options: ['Likely evolved from engulfed aerobic bacteria (endosymbiotic theory)', 'Were always part of eukaryotic cells', 'Stole DNA from the nucleus', 'Need separate DNA for replication'],
+            question: `Mitochondria have their own DNA because they:`,
+            options: [`Likely evolved from engulfed aerobic bacteria (endosymbiotic theory)`, `Were always part of eukaryotic cells`, `Stole DNA from the nucleus`, `Need separate DNA for replication`],
             correctAnswer: 0,
-            explanation: 'Endosymbiotic theory: mitochondria (and chloroplasts) were once free-living bacteria engulfed by a proto-eukaryote. Evidence: own circular DNA, 70S ribosomes, double membrane, divide by binary fission.'
+            explanation: `Endosymbiotic theory: mitochondria (and chloroplasts) were once free-living bacteria engulfed by a proto-eukaryote. Evidence: own circular DNA, 70S ribosomes, double membrane, divide by binary fission.`
           }
         ]
       }

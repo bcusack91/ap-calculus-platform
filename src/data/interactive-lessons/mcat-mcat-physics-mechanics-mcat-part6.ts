@@ -34,14 +34,14 @@ $$x_{cm} = \\frac{\\sum m_i x_i}{\\sum m_i}$$
     {
       id: 'pm6-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Torque & Equilibrium** 🎯',
+      content: `**Torque & Equilibrium** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A 3 m uniform beam (mass 10 kg) is supported at one end. A 20 kg mass hangs from the other end. The torque about the support point is ($g = 10\\;\\text{m/s}^2$):',
-            options: ['750 N$\\cdot$m', '600 N$\\cdot$m', '450 N$\\cdot$m', '300 N$\\cdot$m'],
+            question: `A 3 m uniform beam (mass 10 kg) is supported at one end. A 20 kg mass hangs from the other end. The torque about the support point is ($g = 10\\;\\text{m/s}^2$):`,
+            options: [`750 N$\\cdot$m`, `600 N$\\cdot$m`, `450 N$\\cdot$m`, `300 N$\\cdot$m`],
             correctAnswer: 0,
-            explanation: 'Beam weight acts at center of mass (1.5 m from support): $\\tau_1 = 10(10)(1.5) = 150$ N$\\cdot$m. Hanging mass: $\\tau_2 = 20(10)(3) = 600$ N$\\cdot$m. Total: $150 + 600 = 750$ N$\\cdot$m.'
+            explanation: `Beam weight acts at center of mass (1.5 m from support): $\\tau_1 = 10(10)(1.5) = 150$ N$\\cdot$m. Hanging mass: $\\tau_2 = 20(10)(3) = 600$ N$\\cdot$m. Total: $150 + 600 = 750$ N$\\cdot$m.`
           }
         ]
       }

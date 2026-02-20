@@ -40,14 +40,14 @@ Mouth → Esophagus → Stomach → Small intestine (duodenum → jejunum → il
     {
       id: 'os3-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Digestive System** 🎯',
+      content: `**Digestive System** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'Bile salts aid fat digestion by:',
-            options: ['Emulsifying large fat globules into smaller droplets (increasing surface area for lipase)', 'Directly breaking down triglycerides', 'Neutralizing stomach acid', 'Activating pepsinogen'],
+            question: `Bile salts aid fat digestion by:`,
+            options: [`Emulsifying large fat globules into smaller droplets (increasing surface area for lipase)`, `Directly breaking down triglycerides`, `Neutralizing stomach acid`, `Activating pepsinogen`],
             correctAnswer: 0,
-            explanation: 'Bile salts are amphipathic — they break large fat globules into smaller micelles (emulsification), vastly increasing surface area for pancreatic lipase. Bile does NOT digest fat — it prepares fat for digestion.'
+            explanation: `Bile salts are amphipathic — they break large fat globules into smaller micelles (emulsification), vastly increasing surface area for pancreatic lipase. Bile does NOT digest fat — it prepares fat for digestion.`
           }
         ]
       }

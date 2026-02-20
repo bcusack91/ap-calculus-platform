@@ -40,14 +40,14 @@ It's NOT about being strongest — it's about who reproduces most successfully.`
     {
       id: 'ge5-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Evolution** 🎯',
+      content: `**Evolution** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'After a hurricane destroys 90% of a lizard population, the surviving 10% have different allele frequencies than the original population. This is:',
-            options: ['Bottleneck effect (genetic drift) — random survivors, not selected by fitness', 'Natural selection', 'Gene flow', 'Directional selection'],
+            question: `After a hurricane destroys 90% of a lizard population, the surviving 10% have different allele frequencies than the original population. This is:`,
+            options: [`Bottleneck effect (genetic drift) — random survivors, not selected by fitness`, `Natural selection`, `Gene flow`, `Directional selection`],
             correctAnswer: 0,
-            explanation: 'A bottleneck drastically reduces population size randomly. Survivors aren\'t necessarily more fit — they were just lucky. Their allele frequencies may differ from the original population purely by chance.'
+            explanation: `A bottleneck drastically reduces population size randomly. Survivors aren't necessarily more fit — they were just lucky. Their allele frequencies may differ from the original population purely by chance.`
           }
         ]
       }

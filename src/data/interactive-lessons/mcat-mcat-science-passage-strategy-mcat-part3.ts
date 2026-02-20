@@ -36,14 +36,14 @@ export const mcatSciPassagePart3Data = {
     {
       id: 'sp3-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Experimental Design** 🎯',
+      content: `**Experimental Design** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A study finds that coffee drinkers have lower rates of depression, but coffee drinkers also exercise more. Exercise is a:',
-            options: ['Confounding variable — it could explain the association instead of coffee itself', 'Dependent variable', 'Independent variable', 'Control variable'],
+            question: `A study finds that coffee drinkers have lower rates of depression, but coffee drinkers also exercise more. Exercise is a:`,
+            options: [`Confounding variable — it could explain the association instead of coffee itself`, `Dependent variable`, `Independent variable`, `Control variable`],
             correctAnswer: 0,
-            explanation: 'Exercise is a confounding variable because it\'s associated with both the exposure (coffee drinking) and the outcome (depression) and could be the real cause of the observed association. This limits internal validity.'
+            explanation: `Exercise is a confounding variable because it's associated with both the exposure (coffee drinking) and the outcome (depression) and could be the real cause of the observed association. This limits internal validity.`
           }
         ]
       }

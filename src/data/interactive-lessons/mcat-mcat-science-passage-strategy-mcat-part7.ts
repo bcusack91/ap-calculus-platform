@@ -41,14 +41,14 @@ export const mcatSciPassagePart7Data = {
     {
       id: 'sp7-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Psych/Soc Passages** 🎯',
+      content: `**Psych/Soc Passages** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A study on exercise and mood has $p = 0.03$. This means:',
-            options: ['There is a 3% probability the results occurred by chance — the result is statistically significant', 'There is a 97% chance the hypothesis is true', 'The effect size is large', 'The study has high reliability'],
+            question: `A study on exercise and mood has $p = 0.03$. This means:`,
+            options: [`There is a 3% probability the results occurred by chance — the result is statistically significant`, `There is a 97% chance the hypothesis is true`, `The effect size is large`, `The study has high reliability`],
             correctAnswer: 0,
-            explanation: '$p < 0.05$ means statistically significant — there\'s less than a 5% chance the results are due to random chance. However, p-value does NOT tell you effect size, clinical significance, or the probability the hypothesis is true (common MCAT trap).'
+            explanation: `$p < 0.05$ means statistically significant — there's less than a 5% chance the results are due to random chance. However, p-value does NOT tell you effect size, clinical significance, or the probability the hypothesis is true (common MCAT trap).`
           }
         ]
       }

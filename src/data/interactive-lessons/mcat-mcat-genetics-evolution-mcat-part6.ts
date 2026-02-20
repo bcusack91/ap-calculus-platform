@@ -40,14 +40,14 @@ export const mcatGeneticsPart6Data = {
     {
       id: 'ge6-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Speciation** 🎯',
+      content: `**Speciation** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'Two species of frogs live in the same pond but breed in different months. This is an example of:',
-            options: ['Temporal (seasonal) isolation — a prezygotic barrier', 'Postzygotic isolation', 'Allopatric speciation', 'Hybrid sterility'],
+            question: `Two species of frogs live in the same pond but breed in different months. This is an example of:`,
+            options: [`Temporal (seasonal) isolation — a prezygotic barrier`, `Postzygotic isolation`, `Allopatric speciation`, `Hybrid sterility`],
             correctAnswer: 0,
-            explanation: 'Temporal isolation means the two species breed at different times, preventing interbreeding. It\'s prezygotic because it prevents mating from occurring in the first place.'
+            explanation: `Temporal isolation means the two species breed at different times, preventing interbreeding. It's prezygotic because it prevents mating from occurring in the first place.`
           }
         ]
       }

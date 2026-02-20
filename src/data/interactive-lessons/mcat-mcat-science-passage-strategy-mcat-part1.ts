@@ -39,14 +39,14 @@ DON'T:
     {
       id: 'sp1-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Passage Strategy** 🎯',
+      content: `**Passage Strategy** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'When reading a science passage with multiple experiments, the MOST important first step is:',
-            options: ['Identify what each experiment is testing (IV, DV) and how they differ from each other', 'Memorize all the numbers in the data tables', 'Read every word carefully before looking at questions', 'Skip the passage and go straight to questions'],
+            question: `When reading a science passage with multiple experiments, the MOST important first step is:`,
+            options: [`Identify what each experiment is testing (IV, DV) and how they differ from each other`, `Memorize all the numbers in the data tables`, `Read every word carefully before looking at questions`, `Skip the passage and go straight to questions`],
             correctAnswer: 0,
-            explanation: 'Understanding the experimental design is the foundation. Once you know what\'s being tested (independent variable) and measured (dependent variable), you can answer most questions. Data tables can be referenced as needed — no need to memorize.'
+            explanation: `Understanding the experimental design is the foundation. Once you know what's being tested (independent variable) and measured (dependent variable), you can answer most questions. Data tables can be referenced as needed — no need to memorize.`
           }
         ]
       }

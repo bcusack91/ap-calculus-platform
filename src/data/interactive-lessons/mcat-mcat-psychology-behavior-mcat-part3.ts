@@ -43,14 +43,14 @@ export const mcatPsychBehavPart3Data = {
     {
       id: 'pb3-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Motivation & Emotion** 🎯',
+      content: `**Motivation & Emotion** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'According to the Schachter-Singer (two-factor) theory, experiencing an emotion requires:',
-            options: ['Physiological arousal AND a cognitive label for that arousal', 'Only physiological arousal', 'Only cognitive appraisal', 'Behavior before emotion'],
+            question: `According to the Schachter-Singer (two-factor) theory, experiencing an emotion requires:`,
+            options: [`Physiological arousal AND a cognitive label for that arousal`, `Only physiological arousal`, `Only cognitive appraisal`, `Behavior before emotion`],
             correctAnswer: 0,
-            explanation: 'Two-factor theory: you experience arousal AND then cognitively interpret it. Same arousal can become different emotions depending on context. This is why a racing heart on a date might feel like attraction vs. anxiety.'
+            explanation: `Two-factor theory: you experience arousal AND then cognitively interpret it. Same arousal can become different emotions depending on context. This is why a racing heart on a date might feel like attraction vs. anxiety.`
           }
         ]
       }

@@ -42,20 +42,20 @@ $$\\text{9 A_B_} : \\text{3 A_bb} : \\text{3 aaB_} : \\text{1 aabb}$$`
     {
       id: 'ge1-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Mendelian Genetics** 🎯',
+      content: `**Mendelian Genetics** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'In a cross between two heterozygous parents (Aa $\\times$ Aa), what fraction of offspring are EXPECTED to be heterozygous?',
-            options: ['1/2 (50%)', '1/4 (25%)', '3/4 (75%)', '1/3 (33%)'],
+            question: `In a cross between two heterozygous parents (Aa $\\times$ Aa), what fraction of offspring are EXPECTED to be heterozygous?`,
+            options: [`1/2 (50%)`, `1/4 (25%)`, `3/4 (75%)`, `1/3 (33%)`],
             correctAnswer: 0,
-            explanation: 'Aa $\\times$ Aa → 1 AA : 2 Aa : 1 aa. Heterozygous (Aa) = 2/4 = 1/2. A common MCAT trap: 3/4 is the phenotype ratio (dominant), not the genotype ratio for heterozygotes.'
+            explanation: `Aa $\\times$ Aa → 1 AA : 2 Aa : 1 aa. Heterozygous (Aa) = 2/4 = 1/2. A common MCAT trap: 3/4 is the phenotype ratio (dominant), not the genotype ratio for heterozygotes.`
           },
           {
-            question: 'A test cross reveals half the offspring are recessive. The tested parent must be:',
-            options: ['Heterozygous (Aa)', 'Homozygous dominant (AA)', 'Homozygous recessive (aa)', 'Cannot determine'],
+            question: `A test cross reveals half the offspring are recessive. The tested parent must be:`,
+            options: [`Heterozygous (Aa)`, `Homozygous dominant (AA)`, `Homozygous recessive (aa)`, `Cannot determine`],
             correctAnswer: 0,
-            explanation: 'Test cross = unknown $\\times$ aa. If Aa $\\times$ aa → 1/2 Aa (dominant) : 1/2 aa (recessive). If AA $\\times$ aa → all Aa (all dominant). Since half are recessive, the parent is Aa.'
+            explanation: `Test cross = unknown $\\times$ aa. If Aa $\\times$ aa → 1/2 Aa (dominant) : 1/2 aa (recessive). If AA $\\times$ aa → all Aa (all dominant). Since half are recessive, the parent is Aa.`
           }
         ]
       }

@@ -44,14 +44,14 @@ export const mcatSociologyPart6Data = {
     {
       id: 'so6-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Culture & Identity** 🎯',
+      content: `**Culture & Identity** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A patient from a different culture refuses a blood transfusion. A physician who tries to understand the patient\'s cultural beliefs before making judgments is practicing:',
-            options: ['Cultural relativism — understanding behaviors within their cultural context', 'Ethnocentrism', 'Anomie', 'Medicalization'],
+            question: `A patient from a different culture refuses a blood transfusion. A physician who tries to understand the patient's cultural beliefs before making judgments is practicing:`,
+            options: [`Cultural relativism — understanding behaviors within their cultural context`, `Ethnocentrism`, `Anomie`, `Medicalization`],
             correctAnswer: 0,
-            explanation: 'Cultural relativism means understanding beliefs and practices within their cultural context rather than judging them by your own cultural standards (ethnocentrism). This is essential for culturally competent healthcare.'
+            explanation: `Cultural relativism means understanding beliefs and practices within their cultural context rather than judging them by your own cultural standards (ethnocentrism). This is essential for culturally competent healthcare.`
           }
         ]
       }

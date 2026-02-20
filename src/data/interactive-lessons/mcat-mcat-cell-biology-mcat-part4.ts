@@ -38,14 +38,14 @@ Failure of chromosomes to separate properly:
     {
       id: 'cb4-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Meiosis** 🎯',
+      content: `**Meiosis** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'Crossing over occurs between:',
-            options: ['Non-sister chromatids of homologous chromosomes during prophase I', 'Sister chromatids during prophase II', 'Homologous chromosomes during metaphase I', 'Any chromosomes during S phase'],
+            question: `Crossing over occurs between:`,
+            options: [`Non-sister chromatids of homologous chromosomes during prophase I`, `Sister chromatids during prophase II`, `Homologous chromosomes during metaphase I`, `Any chromosomes during S phase`],
             correctAnswer: 0,
-            explanation: 'Crossing over exchanges genetic material between non-sister chromatids of homologous chromosomes during prophase I, forming chiasmata. This produces recombinant chromosomes with new allele combinations.'
+            explanation: `Crossing over exchanges genetic material between non-sister chromatids of homologous chromosomes during prophase I, forming chiasmata. This produces recombinant chromosomes with new allele combinations.`
           }
         ]
       }

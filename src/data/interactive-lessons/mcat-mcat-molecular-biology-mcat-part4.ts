@@ -38,14 +38,14 @@ export const mcatMolBioPart4Data = {
     {
       id: 'mb4-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Gene Regulation** 🎯',
+      content: `**Gene Regulation** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'In the lac operon, the presence of glucose AND lactose results in:',
-            options: ['Low expression — glucose keeps cAMP low, so CAP cannot fully activate transcription', 'Maximum expression', 'Complete repression', 'No effect from glucose'],
+            question: `In the lac operon, the presence of glucose AND lactose results in:`,
+            options: [`Low expression — glucose keeps cAMP low, so CAP cannot fully activate transcription`, `Maximum expression`, `Complete repression`, `No effect from glucose`],
             correctAnswer: 0,
-            explanation: 'With lactose present, the repressor is removed. But with glucose, cAMP is LOW → CAP is inactive → promoter only weakly bound by RNA polymerase. Maximum expression requires low glucose (high cAMP) AND lactose.'
+            explanation: `With lactose present, the repressor is removed. But with glucose, cAMP is LOW → CAP is inactive → promoter only weakly bound by RNA polymerase. Maximum expression requires low glucose (high cAMP) AND lactose.`
           }
         ]
       }

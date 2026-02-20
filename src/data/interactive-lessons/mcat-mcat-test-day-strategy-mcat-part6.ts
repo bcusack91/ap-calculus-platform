@@ -45,14 +45,14 @@ If your score stops improving:
     {
       id: 'td6-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Score Improvement** 🎯',
+      content: `**Score Improvement** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'You consistently get questions right when reviewing them calmly but miss them during timed practice. Your main issue is:',
-            options: ['Time pressure and test anxiety — practice more under timed, simulated conditions', 'A content gap', 'Bad luck', 'The questions are unfair'],
+            question: `You consistently get questions right when reviewing them calmly but miss them during timed practice. Your main issue is:`,
+            options: [`Time pressure and test anxiety — practice more under timed, simulated conditions`, `A content gap`, `Bad luck`, `The questions are unfair`],
             correctAnswer: 0,
-            explanation: 'If you can answer correctly without time pressure, you have the knowledge. The issue is performance under pressure. The fix: more timed practice under real conditions, deep breathing strategies, and building familiarity with the time constraints.'
+            explanation: `If you can answer correctly without time pressure, you have the knowledge. The issue is performance under pressure. The fix: more timed practice under real conditions, deep breathing strategies, and building familiarity with the time constraints.`
           }
         ]
       }

@@ -40,14 +40,14 @@ export const mcatSciPassagePart6Data = {
     {
       id: 'sp6-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Bio/Biochem Tactics** 🎯',
+      content: `**Bio/Biochem Tactics** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A passage shows a Western blot with a band present in wild-type but absent in a mutant strain. The most likely conclusion is:',
-            options: ['The mutant strain does not express the target protein (gene knockout or loss of expression)', 'The mutant has MORE protein', 'The experiment failed', 'The antibody is nonspecific'],
+            question: `A passage shows a Western blot with a band present in wild-type but absent in a mutant strain. The most likely conclusion is:`,
+            options: [`The mutant strain does not express the target protein (gene knockout or loss of expression)`, `The mutant has MORE protein`, `The experiment failed`, `The antibody is nonspecific`],
             correctAnswer: 0,
-            explanation: 'In a Western blot, a missing band means the protein isn\'t expressed (or is too small/large to appear at expected position). In a passage context, this usually means the gene was knocked out, the promoter is mutated, or the protein is rapidly degraded.'
+            explanation: `In a Western blot, a missing band means the protein isn't expressed (or is too small/large to appear at expected position). In a passage context, this usually means the gene was knocked out, the promoter is mutated, or the protein is rapidly degraded.`
           }
         ]
       }

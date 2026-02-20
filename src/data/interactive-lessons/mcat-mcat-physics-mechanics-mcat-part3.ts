@@ -31,20 +31,20 @@ Units: Watts (W) = J/s`
     {
       id: 'pm3-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Work & Energy** 🎯',
+      content: `**Work & Energy** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A 2 kg ball is dropped from 5 m. Its speed just before hitting the ground is ($g = 10\\;\\text{m/s}^2$):',
-            options: ['10 m/s', '5 m/s', '100 m/s', '7.07 m/s'],
+            question: `A 2 kg ball is dropped from 5 m. Its speed just before hitting the ground is ($g = 10\\;\\text{m/s}^2$):`,
+            options: [`10 m/s`, `5 m/s`, `100 m/s`, `7.07 m/s`],
             correctAnswer: 0,
-            explanation: 'Conservation of energy: $mgh = \\frac{1}{2}mv^2 \\implies v = \\sqrt{2gh} = \\sqrt{2(10)(5)} = \\sqrt{100} = 10$ m/s. Mass cancels!'
+            explanation: `Conservation of energy: $mgh = \\frac{1}{2}mv^2 \\implies v = \\sqrt{2gh} = \\sqrt{2(10)(5)} = \\sqrt{100} = 10$ m/s. Mass cancels!`
           },
           {
-            question: 'A force of 100 N pushes a box 5 m at a 60° angle to the displacement. The work done is:',
-            options: ['250 J', '500 J', '433 J', '0 J'],
+            question: `A force of 100 N pushes a box 5 m at a 60° angle to the displacement. The work done is:`,
+            options: [`250 J`, `500 J`, `433 J`, `0 J`],
             correctAnswer: 0,
-            explanation: '$W = Fd\\cos\\theta = 100(5)\\cos 60° = 500(0.5) = 250$ J.'
+            explanation: `$W = Fd\\cos\\theta = 100(5)\\cos 60° = 500(0.5) = 250$ J.`
           }
         ]
       }

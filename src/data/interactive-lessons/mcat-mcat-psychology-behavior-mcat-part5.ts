@@ -41,14 +41,14 @@ export const mcatPsychBehavPart5Data = {
     {
       id: 'pb5-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Personality & Disorders** 🎯',
+      content: `**Personality & Disorders** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A person who is extremely hostile unconsciously but acts overly friendly to everyone is demonstrating:',
-            options: ['Reaction formation — acting opposite to true unconscious feelings', 'Projection', 'Sublimation', 'Displacement'],
+            question: `A person who is extremely hostile unconsciously but acts overly friendly to everyone is demonstrating:`,
+            options: [`Reaction formation — acting opposite to true unconscious feelings`, `Projection`, `Sublimation`, `Displacement`],
             correctAnswer: 0,
-            explanation: 'Reaction formation involves behaving in the OPPOSITE way of one\'s true (threatening) feelings. Being overly kind when harboring hostility is the classic example. Contrast with sublimation (channeling into acceptable activity).'
+            explanation: `Reaction formation involves behaving in the OPPOSITE way of one's true (threatening) feelings. Being overly kind when harboring hostility is the classic example. Contrast with sublimation (channeling into acceptable activity).`
           }
         ]
       }

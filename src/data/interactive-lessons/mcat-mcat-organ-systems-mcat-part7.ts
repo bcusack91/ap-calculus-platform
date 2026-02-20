@@ -40,14 +40,14 @@ export const mcatOrganSysPart7Data = {
     {
       id: 'os7-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Immune System** 🎯',
+      content: `**Immune System** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A virus-infected cell would be killed primarily by:',
-            options: ['CD8+ cytotoxic T cells recognizing viral peptides on MHC I', 'B cells and antibodies', 'CD4+ helper T cells', 'Neutrophils'],
+            question: `A virus-infected cell would be killed primarily by:`,
+            options: [`CD8+ cytotoxic T cells recognizing viral peptides on MHC I`, `B cells and antibodies`, `CD4+ helper T cells`, `Neutrophils`],
             correctAnswer: 0,
-            explanation: 'Virus-infected cells display viral peptides on MHC I (present on all nucleated cells). CD8+ T cells recognize this and kill the infected cell via perforin/granzyme. This is why MHC I = "license to kill."'
+            explanation: `Virus-infected cells display viral peptides on MHC I (present on all nucleated cells). CD8+ T cells recognize this and kill the infected cell via perforin/granzyme. This is why MHC I = "license to kill."`
           }
         ]
       }

@@ -34,14 +34,14 @@ Common wrong answer patterns:
     {
       id: 'sp4-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Question Strategy** 🎯',
+      content: `**Question Strategy** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'An answer choice states "The mutation completely eliminates all enzyme function." This is likely wrong because:',
-            options: ['Extreme language ("completely," "all") is usually wrong on the MCAT — most biological effects are partial', 'It contains scientific terminology', 'It\'s too short', 'Mutations always eliminate enzyme function'],
+            question: `An answer choice states "The mutation completely eliminates all enzyme function." This is likely wrong because:`,
+            options: [`Extreme language ("completely," "all") is usually wrong on the MCAT — most biological effects are partial`, `It contains scientific terminology`, `It\`s too short`, `Mutations always eliminate enzyme function'`],
             correctAnswer: 0,
-            explanation: 'The MCAT loves nuance. Words like "completely," "always," "never," "all" are red flags. In biology, most mutations affect function partially (reduced activity) rather than eliminating it entirely. Moderate, qualified language is usually correct.'
+            explanation: `The MCAT loves nuance. Words like "completely," "always," "never," "all" are red flags. In biology, most mutations affect function partially (reduced activity) rather than eliminating it entirely. Moderate, qualified language is usually correct.`
           }
         ]
       }

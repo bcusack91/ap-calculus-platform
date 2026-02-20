@@ -31,20 +31,20 @@ export const mcatBiochemPart7Data = {
     {
       id: 'bc7-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Metabolic Integration** 🎯',
+      content: `**Metabolic Integration** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'After a 24-hour fast, which metabolic pathway is MOST active in the liver?',
-            options: ['Gluconeogenesis', 'Glycolysis', 'Fatty acid synthesis', 'Glycogenesis'],
+            question: `After a 24-hour fast, which metabolic pathway is MOST active in the liver?`,
+            options: [`Gluconeogenesis`, `Glycolysis`, `Fatty acid synthesis`, `Glycogenesis`],
             correctAnswer: 0,
-            explanation: 'After 24 hours, liver glycogen is depleted. Glucagon stimulates gluconeogenesis (making glucose from lactate, amino acids, glycerol) to maintain blood glucose for the brain.'
+            explanation: `After 24 hours, liver glycogen is depleted. Glucagon stimulates gluconeogenesis (making glucose from lactate, amino acids, glycerol) to maintain blood glucose for the brain.`
           },
           {
-            question: 'Insulin deficiency (Type 1 diabetes) leads to ketoacidosis because:',
-            options: ['Uncontrolled lipolysis floods the liver with fatty acids, producing excess ketone bodies', 'The liver cannot perform glycolysis', 'Excess glucose is converted to ketones', 'Muscle cells produce too much lactate'],
+            question: `Insulin deficiency (Type 1 diabetes) leads to ketoacidosis because:`,
+            options: [`Uncontrolled lipolysis floods the liver with fatty acids, producing excess ketone bodies`, `The liver cannot perform glycolysis`, `Excess glucose is converted to ketones`, `Muscle cells produce too much lactate`],
             correctAnswer: 0,
-            explanation: 'Without insulin: uncontrolled lipolysis → excess fatty acids → hepatic $\\beta$-oxidation → excess acetyl-CoA → ketone bodies (acetoacetate, $\\beta$-hydroxybutyrate, acetone). These are acids that lower blood pH.'
+            explanation: `Without insulin: uncontrolled lipolysis → excess fatty acids → hepatic $\\beta$-oxidation → excess acetyl-CoA → ketone bodies (acetoacetate, $\\beta$-hydroxybutyrate, acetone). These are acids that lower blood pH.`
           }
         ]
       }

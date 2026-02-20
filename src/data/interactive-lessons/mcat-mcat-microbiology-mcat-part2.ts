@@ -43,14 +43,14 @@ Where $N$ = final number, $N_0$ = initial number, $n$ = number of generations
     {
       id: 'mi2-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Bacterial Growth** 🎯',
+      content: `**Bacterial Growth** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'Antibiotics are most effective during which growth phase?',
-            options: ['Log (exponential) phase — bacteria are actively dividing and most vulnerable', 'Lag phase', 'Stationary phase', 'Death phase'],
+            question: `Antibiotics are most effective during which growth phase?`,
+            options: [`Log (exponential) phase — bacteria are actively dividing and most vulnerable`, `Lag phase`, `Stationary phase`, `Death phase`],
             correctAnswer: 0,
-            explanation: 'During the log phase, bacteria are rapidly dividing. Many antibiotics target processes active during division (cell wall synthesis, DNA replication, translation), making this the most effective time to administer them.'
+            explanation: `During the log phase, bacteria are rapidly dividing. Many antibiotics target processes active during division (cell wall synthesis, DNA replication, translation), making this the most effective time to administer them.`
           }
         ]
       }

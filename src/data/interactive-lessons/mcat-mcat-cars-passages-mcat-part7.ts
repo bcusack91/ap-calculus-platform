@@ -41,14 +41,14 @@ After 10+ passages, look for:
     {
       id: 'cp7-quiz1',
       type: 'multiple-choice' as const,
-      content: '**CARS Practice Strategy** 🎯',
+      content: `**CARS Practice Strategy** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A student consistently misses "Reasoning Beyond the Text" questions but does well on comprehension questions. The most targeted improvement would be:',
-            options: ['Practice applying passage logic to new scenarios — the weak area is inference and application', 'Read passages more slowly', 'Focus on improving reading speed', 'Study more vocabulary'],
+            question: `A student consistently misses "Reasoning Beyond the Text" questions but does well on comprehension questions. The most targeted improvement would be:`,
+            options: [`Practice applying passage logic to new scenarios — the weak area is inference and application`, `Read passages more slowly`, `Focus on improving reading speed`, `Study more vocabulary`],
             correctAnswer: 0,
-            explanation: 'The student understands the passage (good comprehension) but struggles with extending ideas beyond the text. Targeted practice on inference and application questions will address this specific weakness.'
+            explanation: `The student understands the passage (good comprehension) but struggles with extending ideas beyond the text. Targeted practice on inference and application questions will address this specific weakness.`
           }
         ]
       }

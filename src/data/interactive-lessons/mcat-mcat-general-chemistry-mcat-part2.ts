@@ -35,20 +35,20 @@ London dispersion < Dipole-dipole < Hydrogen bonding < Ion-dipole`
     {
       id: 'gc2-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Bonding & Geometry** 🎯',
+      content: `**Bonding & Geometry** 🎯`,
       exercise: {
         questions: [
           {
-            question: '$\\text{XeF}_4$ has what molecular geometry?',
-            options: ['Square planar (6 electron groups, 2 lone pairs)', 'Tetrahedral', 'Seesaw', 'Octahedral'],
+            question: `$\\text{XeF}_4$ has what molecular geometry?`,
+            options: [`Square planar (6 electron groups, 2 lone pairs)`, `Tetrahedral`, `Seesaw`, `Octahedral`],
             correctAnswer: 0,
-            explanation: 'Xe has 8 valence e$^-$ + 4 from F bonds + 4 remain = 6 electron groups total (4 bonds + 2 lone pairs on Xe). This gives square planar geometry.'
+            explanation: `Xe has 8 valence e$^-$ + 4 from F bonds + 4 remain = 6 electron groups total (4 bonds + 2 lone pairs on Xe). This gives square planar geometry.`
           },
           {
-            question: 'Which intermolecular force explains why $\\text{CH}_3\\text{OH}$ (MW 32) has a higher boiling point than $\\text{CH}_3\\text{CH}_3$ (MW 30)?',
-            options: ['Hydrogen bonding in methanol', 'Greater London dispersion forces in ethane', 'Ion-dipole interactions', 'Covalent bonding differences'],
+            question: `Which intermolecular force explains why $\\text{CH}_3\\text{OH}$ (MW 32) has a higher boiling point than $\\text{CH}_3\\text{CH}_3$ (MW 30)?`,
+            options: [`Hydrogen bonding in methanol`, `Greater London dispersion forces in ethane`, `Ion-dipole interactions`, `Covalent bonding differences`],
             correctAnswer: 0,
-            explanation: 'Methanol has O-H bonds capable of hydrogen bonding (O is electronegative with lone pairs). Ethane only has weak London dispersion forces.'
+            explanation: `Methanol has O-H bonds capable of hydrogen bonding (O is electronegative with lone pairs). Ethane only has weak London dispersion forces.`
           }
         ]
       }

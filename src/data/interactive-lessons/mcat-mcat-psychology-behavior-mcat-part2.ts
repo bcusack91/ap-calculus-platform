@@ -39,14 +39,14 @@ export const mcatPsychBehavPart2Data = {
     {
       id: 'pb2-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Learning & Memory** 🎯',
+      content: `**Learning & Memory** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A child stops throwing tantrums when parents consistently ignore the behavior. This is:',
-            options: ['Extinction of operant conditioning — removing reinforcement (attention) decreases behavior', 'Classical conditioning', 'Negative reinforcement', 'Positive punishment'],
+            question: `A child stops throwing tantrums when parents consistently ignore the behavior. This is:`,
+            options: [`Extinction of operant conditioning — removing reinforcement (attention) decreases behavior`, `Classical conditioning`, `Negative reinforcement`, `Positive punishment`],
             correctAnswer: 0,
-            explanation: 'The tantrums were maintained by attention (positive reinforcement). When attention is consistently withheld, the behavior extinguishes. This is a common MCAT scenario in behavioral psychology.'
+            explanation: `The tantrums were maintained by attention (positive reinforcement). When attention is consistently withheld, the behavior extinguishes. This is a common MCAT scenario in behavioral psychology.`
           }
         ]
       }

@@ -39,14 +39,14 @@ From outside to inside:
     {
       id: 'ap4-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Integumentary** 🎯',
+      content: `**Integumentary** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A burn that destroys the epidermis and part of the dermis is classified as:',
-            options: ['Second-degree (partial thickness) — blistering occurs because fluid leaks between layers', 'First-degree (superficial)', 'Third-degree (full thickness)', 'Fourth-degree'],
+            question: `A burn that destroys the epidermis and part of the dermis is classified as:`,
+            options: [`Second-degree (partial thickness) — blistering occurs because fluid leaks between layers`, `First-degree (superficial)`, `Third-degree (full thickness)`, `Fourth-degree`],
             correctAnswer: 0,
-            explanation: 'First-degree = epidermis only (sunburn). Second-degree = epidermis + partial dermis (blistering). Third-degree = through the full dermis (painless because nerve endings destroyed). Second-degree burns are actually the most painful.'
+            explanation: `First-degree = epidermis only (sunburn). Second-degree = epidermis + partial dermis (blistering). Third-degree = through the full dermis (painless because nerve endings destroyed). Second-degree burns are actually the most painful.`
           }
         ]
       }
