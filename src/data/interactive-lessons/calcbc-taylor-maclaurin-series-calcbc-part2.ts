@@ -1,125 +1,49 @@
-export const calcBCTaylorMaclaurinPart2Data = {
+export const calcbcTaylorPart2Data = {
   topicSlug: 'taylor-maclaurin-series-calcbc',
   sections: [
     {
-      id: 'taylo2-intro',
+      id: 'tay2-intro',
       type: 'text' as const,
-      content: `
-# Maclaurin Series
+      content: `# Taylor & Maclaurin Series
 
-**Part 2 of 7 — Maclaurin Series**
+**Part 2 of 7 — The Big Four Maclaurin Series**
 
-### 1. Maclaurin series
+### Must-Know Series
 
-Taylor series centered at a = 0
+$$e^x = \sum_{n=0}^{\infty} \frac{x^n}{n!} = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots \quad (|x| < \infty)$$
 
-### 2. Σ f⁽ⁿ⁾(0)/n! · xⁿ
+$$\sin x = \sum_{n=0}^{\infty} \frac{(-1)^n x^{2n+1}}{(2n+1)!} = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \cdots \quad (|x| < \infty)$$
 
-Σ f⁽ⁿ⁾(0)/n! · xⁿ
+$$\cos x = \sum_{n=0}^{\infty} \frac{(-1)^n x^{2n}}{(2n)!} = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \cdots \quad (|x| < \infty)$$
 
-### 3. Many common functions have well-known Maclaurin series
-
-Many common functions have well-known Maclaurin series
-
-### 4. Easier to compute since all derivatives are evaluated at 0
-
-Easier to compute since all derivatives are evaluated at 0
-      `
+$$\frac{1}{1-x} = \sum_{n=0}^{\infty} x^n = 1 + x + x^2 + x^3 + \cdots \quad (|x| < 1)$$`
     },
     {
-      id: 'taylo2-quiz1',
+      id: 'tay2-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Big Four** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains Maclaurin series?',
-            options: [
-              'Taylor series centered at a = 0',
-              'Many common functions have well-known Maclaurin series',
-              'Easier to compute since all derivatives are evaluated at 0',
-              'Σ f⁽ⁿ⁾(0)/n! · xⁿ'
-            ],
+            question: 'The Maclaurin series for $e^{-x}$ is:',
+            options: ['$\\sum_{n=0}^{\\infty} \\frac{(-1)^n x^n}{n!}$', '$\\sum_{n=0}^{\\infty} \\frac{(-x)^n}{n!}$... same thing! $1 - x + \\frac{x^2}{2} - \\cdots$', '$\\sum_{n=0}^{\\infty} \\frac{x^n}{n!}$', '$-\\sum_{n=0}^{\\infty} \\frac{x^n}{n!}$'],
             correctAnswer: 0,
-            explanation: 'Correct — Maclaurin series: Taylor series centered at a = 0. The other options describe different concepts from this topic.'
+            explanation: 'Replace $x$ with $-x$ in $e^x$: $\\sum \\frac{(-x)^n}{n!} = \\sum \\frac{(-1)^n x^n}{n!}$.'
           },
           {
-            question: 'Select the statement that correctly describes Many common functions have well-known…:',
-            options: [
-              'Σ f⁽ⁿ⁾(0)/n! · xⁿ',
-              'Taylor series centered at a = 0',
-              'Many common functions have well-known Maclaurin series',
-              'Easier to compute since all derivatives are evaluated at 0'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Many common functions have well-known Maclaurin series. Be careful to distinguish between the different concepts in this topic.'
+            question: 'Find the Maclaurin series for $\\frac{1}{1+x}$.',
+            options: ['$\\sum_{n=0}^{\\infty} (-1)^n x^n$', '$\\sum_{n=0}^{\\infty} x^n$', '$\\sum_{n=1}^{\\infty} (-1)^n x^n$', '$\\frac{1}{1-x^2}$'],
+            correctAnswer: 0,
+            explanation: '$\\frac{1}{1+x} = \\frac{1}{1-(-x)} = \\sum (-x)^n = \\sum (-1)^n x^n$.'
           }
         ]
       }
     },
     {
-      id: 'taylo2-detail',
+      id: 'tay2-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Maclaurin series**: Taylor series centered at a = 0
-- **Σ f⁽ⁿ⁾(0)/n! · xⁿ**
-- **Many common functions have well-known Maclaurin series**
-- **Easier to compute since all derivatives are evaluated at 0**
-      `
-    },
-    {
-      id: 'taylo2-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Regarding Maclaurin Series, which correctly describes Easier to compute since all derivatives…?',
-            options: [
-              'Many common functions have well-known Maclaurin series',
-              'Taylor series centered at a = 0',
-              'Easier to compute since all derivatives are evaluated at 0',
-              'Σ f⁽ⁿ⁾(0)/n! · xⁿ'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Easier to compute since all derivatives are evaluated at 0. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'taylo2-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Maclaurin series',
-            options: ['Σ f⁽ⁿ⁾(0)/n! · xⁿ', 'Taylor series centered at a = 0', 'Many common functions have well-known Maclaurin series', 'Easier to compute since all derivatives are evaluated at 0']
-          },
-          {
-            label: 'Σ f⁽ⁿ⁾(0)/n! · xⁿ',
-            options: ['Σ f⁽ⁿ⁾(0)/n! · xⁿ', 'Easier to compute since all derivatives are evaluated at 0', 'Many common functions have well-known Maclaurin series', 'Taylor series centered at a = 0']
-          },
-          {
-            label: 'Many common functions have well-known…',
-            options: ['Σ f⁽ⁿ⁾(0)/n! · xⁿ', 'Many common functions have well-known Maclaurin series', 'Easier to compute since all derivatives are evaluated at 0', 'Taylor series centered at a = 0']
-          }
-        ],
-        correctAnswers: ['Taylor series centered at a = 0', 'Σ f⁽ⁿ⁾(0)/n! · xⁿ', 'Many common functions have well-known Maclaurin series'],
-        hint1: 'Think about what each concept specifically describes in Maclaurin Series.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Maclaurin Series describes a specific idea. Maclaurin series: Taylor series centered at a = 0. Σ f⁽ⁿ⁾(0)/n! · xⁿ. Many common functions have well-known Maclaurin series.'
-      }
+      content: `### Key Takeaways — Part 2
+Memorize $e^x$, $\\sin x$, $\\cos x$, $\\frac{1}{1-x}$. Build all others from these four!`
     }
   ]
-}
+};

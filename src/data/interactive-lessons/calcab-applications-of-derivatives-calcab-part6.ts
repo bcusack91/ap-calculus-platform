@@ -1,125 +1,49 @@
-export const calcABDerivAppsPart6Data = {
+export const calcabAppsDerivativesPart6Data = {
   topicSlug: 'applications-of-derivatives-calcab',
   sections: [
     {
-      id: 'appli6-intro',
+      id: 'apps6-intro',
       type: 'text' as const,
-      content: `
-# Problem-Solving Workshop
+      content: `# Applications of Derivatives
 
-**Part 6 of 7 — Problem-Solving Workshop**
+**Part 6 of 7 — Related Rates (Mini-Review)**
 
-### 1. f'' > 0
+### Related Rates Strategy
 
-concave up (holds water like a cup)
-
-### 2. f'' < 0
-
-concave down (spills water like a cap)
-
-### 3. Inflection point
-
-where concavity changes (f'' changes sign)
-
-### 4. Inflection points occur where f'' = 0 or f'' is undefined (check sign change)
-
-Inflection points occur where f'' = 0 or f'' is undefined (check sign change)
-      `
+1. Draw a picture and label variables
+2. Write an equation relating the variables
+3. Differentiate both sides with respect to time $t$
+4. Substitute known values and solve`
     },
     {
-      id: 'appli6-quiz1',
+      id: 'apps6-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Related Rates & Applications** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes f\'\' > 0?',
-            options: [
-              'concave down (spills water like a cap)',
-              'Inflection points occur where f\'\' = 0 or f\'\' is undefined (check sign change)',
-              'concave up (holds water like a cup)',
-              'where concavity changes (f\'\' changes sign)'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — f\'\' > 0: concave up (holds water like a cup). The other options describe different concepts from this topic.'
+            question: 'A circle is expanding with $\\frac{dr}{dt} = 3$ cm/s. Find $\\frac{dA}{dt}$ when $r = 5$ cm.',
+            options: ['$30\\pi$ cm$^2$/s', '$15\\pi$ cm$^2$/s', '$10\\pi$ cm$^2$/s', '$25\\pi$ cm$^2$/s'],
+            correctAnswer: 0,
+            explanation: '$A = \\pi r^2$. $\\frac{dA}{dt} = 2\\pi r \\frac{dr}{dt} = 2\\pi(5)(3) = 30\\pi$ cm$^2$/s.'
           },
           {
-            question: 'Which of the following is true about Inflection point?',
-            options: [
-              'concave down (spills water like a cap)',
-              'Inflection points occur where f\'\' = 0 or f\'\' is undefined (check sign change)',
-              'where concavity changes (f\'\' changes sign)',
-              'concave up (holds water like a cup)'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Inflection point: where concavity changes (f\'\' changes sign). Be careful to distinguish between the different concepts in this topic.'
+            question: 'Water fills a cone (radius 3 m, height 6 m) at 2 m$^3$/min. How fast is the depth rising when $h = 2$ m? ($r = h/2$)',
+            options: ['$\\frac{2}{\\pi}$ m/min', '$\\frac{8}{\\pi}$ m/min', '$\\frac{1}{\\pi}$ m/min', '$\\frac{4}{\\pi}$ m/min'],
+            correctAnswer: 0,
+            explanation: 'Since $r = h/2$: $V = \\frac{1}{3}\\pi r^2 h = \\frac{\\pi h^3}{12}$. $\\frac{dV}{dt} = \\frac{\\pi h^2}{4}\\frac{dh}{dt}$. $2 = \\frac{\\pi(4)}{4}\\frac{dh}{dt}$. $\\frac{dh}{dt} = \\frac{2}{\\pi}$ m/min.'
           }
         ]
       }
     },
     {
-      id: 'appli6-detail',
+      id: 'apps6-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
+      content: `### Key Takeaways — Part 6
 
-- **f'' > 0**: concave up (holds water like a cup)
-- **f'' < 0**: concave down (spills water like a cap)
-- **Inflection point**: where concavity changes (f'' changes sign)
-- **Inflection points occur where f'' = 0 or f'' is undefined (check sign change)**
-      `
-    },
-    {
-      id: 'appli6-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of these accurately represents Inflection points occur where f\'\' = 0…?',
-            options: [
-              'where concavity changes (f\'\' changes sign)',
-              'Inflection points occur where f\'\' = 0 or f\'\' is undefined (check sign change)',
-              'concave down (spills water like a cap)',
-              'concave up (holds water like a cup)'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Inflection points occur where f\'\' = 0 or f\'\' is undefined (check sign change). Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'appli6-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'f\'\' > 0',
-            options: ['concave up (holds water like a cup)', 'Inflection points occur where f\'\' = 0 or f\'\' is undefined (check sign change)', 'concave down (spills water like a cap)', 'where concavity changes (f\'\' changes sign)']
-          },
-          {
-            label: 'f\'\' < 0',
-            options: ['where concavity changes (f\'\' changes sign)', 'concave down (spills water like a cap)', 'Inflection points occur where f\'\' = 0 or f\'\' is undefined (check sign change)', 'concave up (holds water like a cup)']
-          },
-          {
-            label: 'Inflection point',
-            options: ['concave down (spills water like a cap)', 'Inflection points occur where f\'\' = 0 or f\'\' is undefined (check sign change)', 'concave up (holds water like a cup)', 'where concavity changes (f\'\' changes sign)']
-          }
-        ],
-        correctAnswers: ['concave up (holds water like a cup)', 'concave down (spills water like a cap)', 'where concavity changes (f\'\' changes sign)'],
-        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. f\'\' > 0: concave up (holds water like a cup). f\'\' < 0: concave down (spills water like a cap). Inflection point: where concavity changes (f\'\' changes sign).'
-      }
+1. Related rates: differentiate with respect to $t$ using Chain Rule
+2. Always identify what you're given and what you're finding
+3. Don't substitute values until AFTER differentiating`
     }
   ]
-}
+};

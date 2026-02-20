@@ -1,125 +1,52 @@
-export const calcABExpModelsPart5Data = {
+export const calcabExpModelsPart5Data = {
   topicSlug: 'exponential-models-calcab',
   sections: [
     {
-      id: 'expon5-intro',
+      id: 'exp5-intro',
       type: 'text' as const,
-      content: `
-# Bounded Growth Applications
+      content: `# Exponential Models
 
-**Part 5 of 7 — Bounded Growth Applications**
+**Part 5 of 7 — Logistic Growth Preview**
 
-### 1. Limited growth
+### The Logistic Model
 
-rate proportional to remaining capacity
+$$\\frac{dP}{dt} = kP\\left(1 - \\frac{P}{L}\\right)$$
 
-### 2. Newton's Law of Cooling
+where $L$ is the **carrying capacity**.
 
-dT/dt = k(T - Tₛ) → T(t) = Tₛ + (T₀-Tₛ)e^(kt)
+### Key Features
 
-### 3. Concentration mixing
-
-rate of change = rate in - rate out
-
-### 4. Logistic models capture S-shaped growth curves in biology and economics
-
-Logistic models capture S-shaped growth curves in biology and economics
-      `
+- Grows exponentially when $P \\ll L$
+- Fastest growth at $P = L/2$ (inflection point)
+- Solution approaches $L$ as $t \\to \\infty$`
     },
     {
-      id: 'expon5-quiz1',
+      id: 'exp5-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Logistic Growth** 🎯\n\n$\\frac{dP}{dt} = 0.5P(1 - P/1000)$',
       exercise: {
         questions: [
           {
-            question: 'What does "Limited growth" refer to in calculus?',
-            options: [
-              'rate of change = rate in - rate out',
-              'rate proportional to remaining capacity',
-              'Logistic models capture S-shaped growth curves in biology and economics',
-              'dT/dt = k(T - Tₛ) → T(t) = Tₛ + (T₀-Tₛ)e^(kt)'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Limited growth: rate proportional to remaining capacity. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'In the context of Bounded Growth Applications, which explains Concentration mixing?',
-            options: [
-              'rate of change = rate in - rate out',
-              'Logistic models capture S-shaped growth curves in biology and economics',
-              'rate proportional to remaining capacity',
-              'dT/dt = k(T - Tₛ) → T(t) = Tₛ + (T₀-Tₛ)e^(kt)'
-            ],
+            question: 'What is the carrying capacity?',
+            options: ['$1000$', '$500$', '$0.5$', '$2000$'],
             correctAnswer: 0,
-            explanation: 'Correct — Concentration mixing: rate of change = rate in - rate out. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'The carrying capacity $L = 1000$ appears in the factor $(1 - P/L)$.'
+          },
+          {
+            question: 'At what population is growth fastest?',
+            options: ['$P = 500$', '$P = 1000$', '$P = 250$', '$P = 0$'],
+            correctAnswer: 0,
+            explanation: 'Maximum growth rate at $P = L/2 = 500$.'
           }
         ]
       }
     },
     {
-      id: 'expon5-detail',
+      id: 'exp5-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Limited growth**: rate proportional to remaining capacity
-- **Newton's Law of Cooling**: dT/dt = k(T - Tₛ) → T(t) = Tₛ + (T₀-Tₛ)e^(kt)
-- **Concentration mixing**: rate of change = rate in - rate out
-- **Logistic models capture S-shaped growth curves in biology and economics**
-      `
-    },
-    {
-      id: 'expon5-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Regarding Bounded Growth Applications, which correctly describes Logistic models capture S-shaped growth…?',
-            options: [
-              'dT/dt = k(T - Tₛ) → T(t) = Tₛ + (T₀-Tₛ)e^(kt)',
-              'Logistic models capture S-shaped growth curves in biology and economics',
-              'rate proportional to remaining capacity',
-              'rate of change = rate in - rate out'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Logistic models capture S-shaped growth curves in biology and economics. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'expon5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Limited growth',
-            options: ['rate proportional to remaining capacity', 'Logistic models capture S-shaped growth curves in biology and economics', 'dT/dt = k(T - Tₛ) → T(t) = Tₛ + (T₀-Tₛ)e^(kt)', 'rate of change = rate in - rate out']
-          },
-          {
-            label: 'Newton\'s Law of Cooling',
-            options: ['dT/dt = k(T - Tₛ) → T(t) = Tₛ + (T₀-Tₛ)e^(kt)', 'Logistic models capture S-shaped growth curves in biology and economics', 'rate of change = rate in - rate out', 'rate proportional to remaining capacity']
-          },
-          {
-            label: 'Concentration mixing',
-            options: ['rate of change = rate in - rate out', 'Logistic models capture S-shaped growth curves in biology and economics', 'rate proportional to remaining capacity', 'dT/dt = k(T - Tₛ) → T(t) = Tₛ + (T₀-Tₛ)e^(kt)']
-          }
-        ],
-        correctAnswers: ['rate proportional to remaining capacity', 'dT/dt = k(T - Tₛ) → T(t) = Tₛ + (T₀-Tₛ)e^(kt)', 'rate of change = rate in - rate out'],
-        hint1: 'Think about what each concept specifically describes in Bounded Growth Applications.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Bounded Growth Applications describes a specific idea. Limited growth: rate proportional to remaining capacity. Newton\'s Law of Cooling: dT/dt = k(T - Tₛ) → T(t) = Tₛ + (T₀-Tₛ)e^(kt). Concentration mixing: rate of change = rate in - rate out.'
-      }
+      content: `### Key Takeaways — Part 5
+1. Logistic growth has a carrying capacity
+2. Fastest growth at half the carrying capacity`
     }
   ]
-}
+};

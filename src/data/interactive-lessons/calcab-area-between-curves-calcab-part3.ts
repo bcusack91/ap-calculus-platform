@@ -1,125 +1,52 @@
-export const calcABAreaCurvesPart3Data = {
+export const calcabAreaCurvesPart3Data = {
   topicSlug: 'area-between-curves-calcab',
   sections: [
     {
-      id: 'area-3-intro',
+      id: 'area3-intro',
       type: 'text' as const,
-      content: `
-# Area Between Two Curves (Horizontal)
+      content: `# Area Between Curves
 
-**Part 3 of 7 — Area Between Two Curves (Horizontal)**
+**Part 3 of 7 — Integrating with Respect to $y$**
 
-### 1. Integrate with respect to y when boundaries are horizontal
+### When to Use $dy$
 
-Integrate with respect to y when boundaries are horizontal
+Sometimes it's easier to integrate horizontally (with respect to $y$):
 
-### 2. A = ∫_c^d [right(y) - left(y)]dy
+$$A = \\int_c^d [\\text{right}(y) - \\text{left}(y)]\\,dy$$
 
-A = ∫_c^d [right(y) - left(y)]dy
+### Worked Example
 
-### 3. Right function minus left function, integrated from bottom to top
+Find the area between $x = y^2$ and $x = 4$.
 
-Right function minus left function, integrated from bottom to top
+Intersect: $y^2 = 4$ → $y = \\pm 2$
 
-### 4. Sometimes integrating with respect to y is simpler than with respect to x
+Right curve: $x = 4$. Left curve: $x = y^2$.
 
-Sometimes integrating with respect to y is simpler than with respect to x
-      `
+$$A = \\int_{-2}^{2} (4 - y^2)\\,dy = 2\\int_0^2 (4-y^2)\\,dy = 2\\left[4y - \\frac{y^3}{3}\\right]_0^2 = 2\\left(8 - \\frac{8}{3}\\right) = \\frac{32}{3}$$`
     },
     {
-      id: 'area-3-quiz1',
+      id: 'area3-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Integrating in $y$** 🎯',
       exercise: {
         questions: [
           {
-            question: 'What does "Integrate with respect to y when…" refer to in calculus?',
-            options: [
-              'Integrate with respect to y when boundaries are horizontal',
-              'Right function minus left function, integrated from bottom to top',
-              'Sometimes integrating with respect to y is simpler than with respect to x',
-              'A = ∫_c^d [right(y) - left(y)]dy'
-            ],
+            question: 'Find the area enclosed by $x = y^2 - 1$ and $x = y + 1$.',
+            options: ['$\\frac{9}{2}$', '$\\frac{7}{2}$', '$3$', '$\\frac{11}{2}$'],
             correctAnswer: 0,
-            explanation: 'Correct — Integrate with respect to y when boundaries are horizontal. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Select the statement that correctly describes Right function minus left function,…:',
-            options: [
-              'Right function minus left function, integrated from bottom to top',
-              'Sometimes integrating with respect to y is simpler than with respect to x',
-              'A = ∫_c^d [right(y) - left(y)]dy',
-              'Integrate with respect to y when boundaries are horizontal'
-            ],
-            correctAnswer: 0,
-            explanation: 'Correct — Right function minus left function, integrated from bottom to top. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'Intersect: $y^2 - 1 = y + 1$ → $y^2 - y - 2 = 0$ → $y = -1, 2$. Right: $y+1$, Left: $y^2-1$. $A = \\int_{-1}^2 [(y+1)-(y^2-1)]\\,dy = \\int_{-1}^2 (2+y-y^2)\\,dy = [2y+\\frac{y^2}{2}-\\frac{y^3}{3}]_{-1}^2 = (4+2-\\frac{8}{3})-(-2+\\frac{1}{2}+\\frac{1}{3}) = \\frac{10}{3} + \\frac{7}{6} = \\frac{9}{2}$.'
           }
         ]
       }
     },
     {
-      id: 'area-3-detail',
+      id: 'area3-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
+      content: `### Key Takeaways — Part 3
 
-- **Integrate with respect to y when boundaries are horizontal**
-- **A = ∫_c^d [right(y) - left(y)]dy**
-- **Right function minus left function, integrated from bottom to top**
-- **Sometimes integrating with respect to y is simpler than with respect to x**
-      `
-    },
-    {
-      id: 'area-3-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which statement about Sometimes integrating with respect to y… is correct?',
-            options: [
-              'Sometimes integrating with respect to y is simpler than with respect to x',
-              'Right function minus left function, integrated from bottom to top',
-              'A = ∫_c^d [right(y) - left(y)]dy',
-              'Integrate with respect to y when boundaries are horizontal'
-            ],
-            correctAnswer: 0,
-            explanation: 'Correct — Sometimes integrating with respect to y is simpler than with respect to x. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'area-3-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Integrate with respect to y when…',
-            options: ['Sometimes integrating with respect to y is simpler than with respect to x', 'A = ∫_c^d [right(y) - left(y)]dy', 'Integrate with respect to y when boundaries are horizontal', 'Right function minus left function, integrated from bottom to top']
-          },
-          {
-            label: 'A = ∫_c^d [right(y) - left(y)]dy',
-            options: ['Right function minus left function, integrated from bottom to top', 'Integrate with respect to y when boundaries are horizontal', 'A = ∫_c^d [right(y) - left(y)]dy', 'Sometimes integrating with respect to y is simpler than with respect to x']
-          },
-          {
-            label: 'Right function minus left function,…',
-            options: ['Sometimes integrating with respect to y is simpler than with respect to x', 'Integrate with respect to y when boundaries are horizontal', 'A = ∫_c^d [right(y) - left(y)]dy', 'Right function minus left function, integrated from bottom to top']
-          }
-        ],
-        correctAnswers: ['Integrate with respect to y when boundaries are horizontal', 'A = ∫_c^d [right(y) - left(y)]dy', 'Right function minus left function, integrated from bottom to top'],
-        hint1: 'Think about what each concept specifically describes in Area Between Two Curves (Horizontal).',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Area Between Two Curves (Horizontal) describes a specific idea. Integrate with respect to y when boundaries are horizontal. A = ∫_c^d [right(y) - left(y)]dy. Right function minus left function, integrated from bottom to top.'
-      }
+1. Use $\\int dy$ when curves are functions of $y$ (like $x = y^2$)
+2. Right minus left (instead of top minus bottom)
+3. Limits are $y$-values when integrating in $y$`
     }
   ]
-}
+};

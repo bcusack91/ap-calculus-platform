@@ -1,125 +1,56 @@
-export const calcABDiffEqPart1Data = {
+export const calcabDiffEqPart1Data = {
   topicSlug: 'differential-equations-calcab',
   sections: [
     {
-      id: 'diffe1-intro',
+      id: 'de1-intro',
       type: 'text' as const,
-      content: `
-# ∫ Differential Equations
+      content: `# Differential Equations
 
-**Part 1 of 7 — Introduction to Differential Equations**
+**Part 1 of 7 \u2014 Introduction to Differential Equations**
 
-### 1. Differential equation
+### What is a Differential Equation?
 
-an equation involving a derivative (dy/dx = f(x,y))
+A **differential equation (DE)** is an equation involving a function and its derivative(s).
 
-### 2. Solution
+Examples:
+- $\\frac{dy}{dx} = 3x^2$ \u2014 directly integrable
+- $\\frac{dy}{dx} = 2y$ \u2014 the rate depends on the current value
+- $\\frac{dy}{dx} = x + y$ \u2014 non-separable (not on AP AB)
 
-a function y = g(x) that satisfies the equation
+### Solving by Direct Integration
 
-### 3. General solution
+$$\\frac{dy}{dx} = f(x) \\implies y = \\int f(x)\\,dx$$
 
-includes arbitrary constant C
+### Worked Example
 
-### 4. Particular solution
+$\\frac{dy}{dx} = 6x^2 - 4x + 1$, $y(0) = 3$.
 
-specific solution using an initial condition
-      `
+$y = 2x^3 - 2x^2 + x + C$
+
+$y(0) = C = 3$. So $y = 2x^3 - 2x^2 + x + 3$.`
     },
     {
-      id: 'diffe1-quiz1',
+      id: 'de1-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Direct Integration** \ud83c\udfaf',
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains Differential equation?',
-            options: [
-              'includes arbitrary constant C',
-              'an equation involving a derivative (dy/dx = f(x,y))',
-              'a function y = g(x) that satisfies the equation',
-              'specific solution using an initial condition'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Differential equation: an equation involving a derivative (dy/dx = f(x,y)). The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Select the statement that correctly describes General solution:',
-            options: [
-              'specific solution using an initial condition',
-              'includes arbitrary constant C',
-              'a function y = g(x) that satisfies the equation',
-              'an equation involving a derivative (dy/dx = f(x,y))'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — General solution: includes arbitrary constant C. Be careful to distinguish between the different concepts in this topic.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'diffe1-detail',
-      type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Differential equation**: an equation involving a derivative (dy/dx = f(x,y))
-- **Solution**: a function y = g(x) that satisfies the equation
-- **General solution**: includes arbitrary constant C
-- **Particular solution**: specific solution using an initial condition
-      `
-    },
-    {
-      id: 'diffe1-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which statement about Particular solution is correct?',
-            options: [
-              'specific solution using an initial condition',
-              'includes arbitrary constant C',
-              'a function y = g(x) that satisfies the equation',
-              'an equation involving a derivative (dy/dx = f(x,y))'
-            ],
+            question: 'Solve $\\frac{dy}{dx} = \\cos x + 2$ with $y(0) = 1$.',
+            options: ['$y = \\sin x + 2x + 1$', '$y = \\sin x + 2x$', '$y = -\\sin x + 2x + 1$', '$y = \\cos x + 2x + 1$'],
             correctAnswer: 0,
-            explanation: 'Correct — Particular solution: specific solution using an initial condition. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: '$y = \\sin x + 2x + C$. $y(0) = 0 + 0 + C = 1$. $y = \\sin x + 2x + 1$.'
           }
         ]
       }
     },
     {
-      id: 'diffe1-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Differential equation',
-            options: ['an equation involving a derivative (dy/dx = f(x,y))', 'a function y = g(x) that satisfies the equation', 'includes arbitrary constant C', 'specific solution using an initial condition']
-          },
-          {
-            label: 'Solution',
-            options: ['includes arbitrary constant C', 'specific solution using an initial condition', 'an equation involving a derivative (dy/dx = f(x,y))', 'a function y = g(x) that satisfies the equation']
-          },
-          {
-            label: 'General solution',
-            options: ['a function y = g(x) that satisfies the equation', 'includes arbitrary constant C', 'specific solution using an initial condition', 'an equation involving a derivative (dy/dx = f(x,y))']
-          }
-        ],
-        correctAnswers: ['an equation involving a derivative (dy/dx = f(x,y))', 'a function y = g(x) that satisfies the equation', 'includes arbitrary constant C'],
-        hint1: 'Think about what each concept specifically describes in Differential Equations.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Differential Equations describes a specific idea. Differential equation: an equation involving a derivative (dy/dx = f(x,y)). Solution: a function y = g(x) that satisfies the equation. General solution: includes arbitrary constant C.'
-      }
+      id: 'de1-summary',
+      type: 'text' as const,
+      content: `### Key Takeaways \u2014 Part 1
+1. A DE relates a function to its derivatives
+2. Direct integration works when $\\frac{dy}{dx} = f(x)$
+3. Use initial conditions to find $C$`
     }
   ]
-}
+};

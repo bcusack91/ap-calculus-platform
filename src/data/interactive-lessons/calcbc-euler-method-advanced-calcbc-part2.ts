@@ -1,125 +1,43 @@
-export const calcBCEulerAdvPart2Data = {
+export const calcbcEulerPart2Data = {
   topicSlug: 'euler-method-advanced-calcbc',
   sections: [
     {
-      id: 'euler2-intro',
+      id: 'eul2-intro',
       type: 'text' as const,
-      content: `
-# Improving Accuracy
+      content: `# Euler's Method
 
-**Part 2 of 7 — Improving Accuracy**
+**Part 2 of 7 — Multi-Step Computations**
 
-### 1. Smaller step size Δx reduces error per step
+### Example: $dy/dx = 2x$, $y(1) = 3$, $\Delta x = 0.5$
 
-Smaller step size Δx reduces error per step
+| Step | $x_n$ | $y_n$ | $f(x_n, y_n)$ | $y_{n+1}$ |
+|------|--------|--------|----------------|-----------|
+| 0 | 1 | 3 | 2(1) = 2 | 3 + 2(0.5) = 4 |
+| 1 | 1.5 | 4 | 2(1.5) = 3 | 4 + 3(0.5) = 5.5 |
+| 2 | 2 | 5.5 | — | — |
 
-### 2. Error compounds over many steps
-
-Error compounds over many steps
-
-### 3. Concavity affects accuracy
-
-concave up → Euler underestimates (if increasing)
-
-### 4. Better methods exist (Runge-Kutta) but Euler is what's tested on AP
-
-Better methods exist (Runge-Kutta) but Euler is what's tested on AP
-      `
+Exact: $y = x^2 + 2$, $y(2) = 6$. Euler gives 5.5 (underestimate for concave up).`
     },
     {
-      id: 'euler2-quiz1',
+      id: 'eul2-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Multi-Step** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Smaller step size Δx reduces error per…?',
-            options: [
-              'concave up → Euler underestimates (if increasing)',
-              'Error compounds over many steps',
-              'Better methods exist (Runge-Kutta) but Euler is what\'s tested on AP',
-              'Smaller step size Δx reduces error per step'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Smaller step size Δx reduces error per step. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Select the statement that correctly describes Concavity affects accuracy:',
-            options: [
-              'Error compounds over many steps',
-              'Better methods exist (Runge-Kutta) but Euler is what\'s tested on AP',
-              'concave up → Euler underestimates (if increasing)',
-              'Smaller step size Δx reduces error per step'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Concavity affects accuracy: concave up → Euler underestimates (if increasing). Be careful to distinguish between the different concepts in this topic.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'euler2-detail',
-      type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Smaller step size Δx reduces error per step**
-- **Error compounds over many steps**
-- **Concavity affects accuracy**: concave up → Euler underestimates (if increasing)
-- **Better methods exist (Runge-Kutta) but Euler is what's tested on AP**
-      `
-    },
-    {
-      id: 'euler2-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Regarding Improving Accuracy, which correctly describes Better methods exist (Runge-Kutta) but…?',
-            options: [
-              'Better methods exist (Runge-Kutta) but Euler is what\'s tested on AP',
-              'concave up → Euler underestimates (if increasing)',
-              'Smaller step size Δx reduces error per step',
-              'Error compounds over many steps'
-            ],
+            question: '$dy/dx = y$, $y(0) = 1$, $\\Delta x = 0.5$, 2 steps. Find $y(1)$.',
+            options: ['$2.25$', '$e \\approx 2.718$', '$2$', '$2.5$'],
             correctAnswer: 0,
-            explanation: 'Correct — Better methods exist (Runge-Kutta) but Euler is what\'s tested on AP. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: 'Step 1: $y_1 = 1 + 1(0.5) = 1.5$. Step 2: $y_2 = 1.5 + 1.5(0.5) = 2.25$. (Exact: $e \\approx 2.718$.)'
           }
         ]
       }
     },
     {
-      id: 'euler2-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Smaller step size Δx reduces error per…',
-            options: ['Smaller step size Δx reduces error per step', 'Error compounds over many steps', 'Better methods exist (Runge-Kutta) but Euler is what\'s tested on AP', 'concave up → Euler underestimates (if increasing)']
-          },
-          {
-            label: 'Error compounds over many steps',
-            options: ['Error compounds over many steps', 'Better methods exist (Runge-Kutta) but Euler is what\'s tested on AP', 'concave up → Euler underestimates (if increasing)', 'Smaller step size Δx reduces error per step']
-          },
-          {
-            label: 'Concavity affects accuracy',
-            options: ['Error compounds over many steps', 'Smaller step size Δx reduces error per step', 'Better methods exist (Runge-Kutta) but Euler is what\'s tested on AP', 'concave up → Euler underestimates (if increasing)']
-          }
-        ],
-        correctAnswers: ['Smaller step size Δx reduces error per step', 'Error compounds over many steps', 'concave up → Euler underestimates (if increasing)'],
-        hint1: 'Think about what each concept specifically describes in Improving Accuracy.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Improving Accuracy describes a specific idea. Smaller step size Δx reduces error per step. Error compounds over many steps. Concavity affects accuracy: concave up → Euler underestimates (if increasing).'
-      }
+      id: 'eul2-summary',
+      type: 'text' as const,
+      content: `### Key Takeaways — Part 2
+Organize in a table. Smaller $\\Delta x$ gives better approximations.`
     }
   ]
-}
+};

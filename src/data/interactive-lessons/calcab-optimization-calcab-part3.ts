@@ -1,125 +1,59 @@
-export const calcABOptimizationPart3Data = {
+export const calcabOptimizationPart3Data = {
   topicSlug: 'optimization-calcab',
   sections: [
     {
-      id: 'optim3-intro',
+      id: 'opt3-intro',
       type: 'text' as const,
-      content: `
-# Closed Interval Method
+      content: `# Optimization
 
-**Part 3 of 7 — Closed Interval Method**
+**Part 3 of 7 — Cost & Revenue Optimization**
 
-### 1. Extreme Value Theorem
+### Business Applications
 
-a continuous function on [a,b] attains a global max and min
+- **Revenue:** $R(x) = x \\cdot p(x)$ where $p(x)$ is the price-demand function
+- **Profit:** $P(x) = R(x) - C(x)$ (revenue minus cost)
+- **Marginal cost:** $C'(x)$ — the cost of producing one more unit
+- Maximum profit occurs where $R'(x) = C'(x)$ (marginal revenue = marginal cost)
 
-### 2. Evaluate f at all critical points in (a,b) and at endpoints a and b
+### Worked Example
 
-Evaluate f at all critical points in (a,b) and at endpoints a and b
+A company sells widgets: demand is $p = 100 - 2x$ (price per widget when $x$ widgets are sold). Cost: $C(x) = 200 + 5x$.
 
-### 3. The largest value is the global maximum; the smallest is the global minimum
+$R(x) = xp = x(100-2x) = 100x - 2x^2$
 
-The largest value is the global maximum; the smallest is the global minimum
+$P(x) = R(x) - C(x) = 100x - 2x^2 - 200 - 5x = -2x^2 + 95x - 200$
 
-### 4. Works only on closed, bounded intervals
+$P'(x) = -4x + 95 = 0$ → $x = 23.75$
 
-Works only on closed, bounded intervals
-      `
+Since $x$ must be a whole number, check $x = 23$ and $x = 24$:
+- $P(23) = -2(529) + 95(23) - 200 = 927$
+- $P(24) = -2(576) + 95(24) - 200 = 928$
+
+**Maximum profit = $928 at $x = 24$ widgets.**`
     },
     {
-      id: 'optim3-quiz1',
+      id: 'opt3-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Applied Optimization** 🎯',
       exercise: {
         questions: [
           {
-            question: 'What does "Extreme Value Theorem" refer to in calculus?',
-            options: [
-              'Evaluate f at all critical points in (a,b) and at endpoints a and b',
-              'The largest value is the global maximum; the smallest is the global minimum',
-              'a continuous function on [a,b] attains a global max and min',
-              'Works only on closed, bounded intervals'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Extreme Value Theorem: a continuous function on [a,b] attains a global max and min. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Which of the following is true about The largest value is the global…?',
-            options: [
-              'a continuous function on [a,b] attains a global max and min',
-              'The largest value is the global maximum; the smallest is the global minimum',
-              'Works only on closed, bounded intervals',
-              'Evaluate f at all critical points in (a,b) and at endpoints a and b'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — The largest value is the global maximum; the smallest is the global minimum. Be careful to distinguish between the different concepts in this topic.'
+            question: 'If $C(x) = 0.01x^2 + 5x + 100$ is the cost of producing $x$ items, find the production level that minimizes the average cost $\\bar{C} = C(x)/x$.',
+            options: ['$x = 100$', '$x = 50$', '$x = 200$', '$x = 250$'],
+            correctAnswer: 0,
+            explanation: '$\\bar{C} = 0.01x + 5 + \\frac{100}{x}$. $\\bar{C}\' = 0.01 - \\frac{100}{x^2} = 0$. $x^2 = 10000$, so $x = 100$.'
           }
         ]
       }
     },
     {
-      id: 'optim3-detail',
+      id: 'opt3-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
+      content: `### Key Takeaways — Part 3
 
-- **Extreme Value Theorem**: a continuous function on [a,b] attains a global max and min
-- **Evaluate f at all critical points in (a,b) and at endpoints a and b**
-- **The largest value is the global maximum; the smallest is the global minimum**
-- **Works only on closed, bounded intervals**
-      `
-    },
-    {
-      id: 'optim3-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Regarding Closed Interval Method, which correctly describes Works only on closed, bounded intervals?',
-            options: [
-              'Evaluate f at all critical points in (a,b) and at endpoints a and b',
-              'The largest value is the global maximum; the smallest is the global minimum',
-              'Works only on closed, bounded intervals',
-              'a continuous function on [a,b] attains a global max and min'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Works only on closed, bounded intervals. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'optim3-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Extreme Value Theorem',
-            options: ['Works only on closed, bounded intervals', 'a continuous function on [a,b] attains a global max and min', 'The largest value is the global maximum; the smallest is the global minimum', 'Evaluate f at all critical points in (a,b) and at endpoints a and b']
-          },
-          {
-            label: 'Evaluate f at all critical points in…',
-            options: ['The largest value is the global maximum; the smallest is the global minimum', 'a continuous function on [a,b] attains a global max and min', 'Evaluate f at all critical points in (a,b) and at endpoints a and b', 'Works only on closed, bounded intervals']
-          },
-          {
-            label: 'The largest value is the global…',
-            options: ['a continuous function on [a,b] attains a global max and min', 'Evaluate f at all critical points in (a,b) and at endpoints a and b', 'The largest value is the global maximum; the smallest is the global minimum', 'Works only on closed, bounded intervals']
-          }
-        ],
-        correctAnswers: ['a continuous function on [a,b] attains a global max and min', 'Evaluate f at all critical points in (a,b) and at endpoints a and b', 'The largest value is the global maximum; the smallest is the global minimum'],
-        hint1: 'Think about what each concept specifically describes in Closed Interval Method.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Closed Interval Method describes a specific idea. Extreme Value Theorem: a continuous function on [a,b] attains a global max and min. Evaluate f at all critical points in (a,b) and at endpoints a and b. The largest value is the global maximum; the smallest is the global minimum.'
-      }
+1. Profit = Revenue - Cost
+2. Max profit where marginal revenue = marginal cost
+3. Average cost is minimized where $\\bar{C}' = 0$`
     }
   ]
-}
+};

@@ -1,125 +1,39 @@
-export const calcBCSeriesAppsPart3Data = {
+export const calcbcSeriesAppsPart3Data = {
   topicSlug: 'series-applications-calcbc',
   sections: [
     {
-      id: 'serie3-intro',
+      id: 'sapp3-intro',
       type: 'text' as const,
-      content: `
-# Solving DEs with Series
+      content: `# Series Applications
 
-**Part 3 of 7 — Solving DEs with Series**
+**Part 3 of 7 — Integration via Series**
 
-### 1. For y' = f(x,y), assume y = Σaₙxⁿ and match coefficients
+### Integrals with No Elementary Antiderivative
 
-For y' = f(x,y), assume y = Σaₙxⁿ and match coefficients
+$$\int e^{-x^2}\,dx = \int \sum \frac{(-1)^n x^{2n}}{n!}\,dx = C + \sum \frac{(-1)^n x^{2n+1}}{n!(2n+1)}$$
 
-### 2. Substitute the series into the DE and equate coefficients of like powers
-
-Substitute the series into the DE and equate coefficients of like powers
-
-### 3. This gives a recurrence relation for the coefficients aₙ
-
-This gives a recurrence relation for the coefficients aₙ
-
-### 4. Yields a power series solution even when closed-form solution is unknown
-
-Yields a power series solution even when closed-form solution is unknown
-      `
+$$\int \frac{\sin x}{x}\,dx = \int \sum \frac{(-1)^n x^{2n}}{(2n+1)!}\,dx = C + \sum \frac{(-1)^n x^{2n+1}}{(2n+1)(2n+1)!}$$`
     },
     {
-      id: 'serie3-quiz1',
+      id: 'sapp3-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Series Integration** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes For y\' = f(x,y), assume y = Σaₙxⁿ and…?',
-            options: [
-              'Yields a power series solution even when closed-form solution is unknown',
-              'This gives a recurrence relation for the coefficients aₙ',
-              'Substitute the series into the DE and equate coefficients of like powers',
-              'For y\' = f(x,y), assume y = Σaₙxⁿ and match coefficients'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — For y\' = f(x,y), assume y = Σaₙxⁿ and match coefficients. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Select the statement that correctly describes This gives a recurrence relation for…:',
-            options: [
-              'This gives a recurrence relation for the coefficients aₙ',
-              'Yields a power series solution even when closed-form solution is unknown',
-              'Substitute the series into the DE and equate coefficients of like powers',
-              'For y\' = f(x,y), assume y = Σaₙxⁿ and match coefficients'
-            ],
+            question: 'Approximate $\\int_0^1 e^{-x^2}\\,dx$ using first 3 terms.',
+            options: ['$1 - 1/3 + 1/10 = 0.7667$', '$1 - 1/2 + 1/6 = 0.6667$', '$1 - 1/3 + 1/6 = 0.8333$', '$0.5$'],
             correctAnswer: 0,
-            explanation: 'Correct — This gives a recurrence relation for the coefficients aₙ. Be careful to distinguish between the different concepts in this topic.'
+            explanation: '$\\int_0^1 (1 - x^2 + x^4/2)\\,dx = [x - x^3/3 + x^5/10]_0^1 = 1 - 1/3 + 1/10 = 23/30 \\approx 0.7667$.'
           }
         ]
       }
     },
     {
-      id: 'serie3-detail',
+      id: 'sapp3-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **For y' = f(x,y), assume y = Σaₙxⁿ and match coefficients**
-- **Substitute the series into the DE and equate coefficients of like powers**
-- **This gives a recurrence relation for the coefficients aₙ**
-- **Yields a power series solution even when closed-form solution is unknown**
-      `
-    },
-    {
-      id: 'serie3-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Regarding Solving DEs with Series, which correctly describes Yields a power series solution even…?',
-            options: [
-              'Yields a power series solution even when closed-form solution is unknown',
-              'For y\' = f(x,y), assume y = Σaₙxⁿ and match coefficients',
-              'This gives a recurrence relation for the coefficients aₙ',
-              'Substitute the series into the DE and equate coefficients of like powers'
-            ],
-            correctAnswer: 0,
-            explanation: 'Correct — Yields a power series solution even when closed-form solution is unknown. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'serie3-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'For y\' = f(x,y), assume y = Σaₙxⁿ and…',
-            options: ['Yields a power series solution even when closed-form solution is unknown', 'For y\' = f(x,y), assume y = Σaₙxⁿ and match coefficients', 'Substitute the series into the DE and equate coefficients of like powers', 'This gives a recurrence relation for the coefficients aₙ']
-          },
-          {
-            label: 'Substitute the series into the DE and…',
-            options: ['For y\' = f(x,y), assume y = Σaₙxⁿ and match coefficients', 'This gives a recurrence relation for the coefficients aₙ', 'Substitute the series into the DE and equate coefficients of like powers', 'Yields a power series solution even when closed-form solution is unknown']
-          },
-          {
-            label: 'This gives a recurrence relation for…',
-            options: ['Yields a power series solution even when closed-form solution is unknown', 'For y\' = f(x,y), assume y = Σaₙxⁿ and match coefficients', 'Substitute the series into the DE and equate coefficients of like powers', 'This gives a recurrence relation for the coefficients aₙ']
-          }
-        ],
-        correctAnswers: ['For y\' = f(x,y), assume y = Σaₙxⁿ and match coefficients', 'Substitute the series into the DE and equate coefficients of like powers', 'This gives a recurrence relation for the coefficients aₙ'],
-        hint1: 'Think about what each concept specifically describes in Solving DEs with Series.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Solving DEs with Series describes a specific idea. For y\' = f(x,y), assume y = Σaₙxⁿ and match coefficients. Substitute the series into the DE and equate coefficients of like powers. This gives a recurrence relation for the coefficients aₙ.'
-      }
+      content: `### Key Takeaways — Part 3
+Series turn impossible integrals into routine polynomial integrations.`
     }
   ]
-}
+};

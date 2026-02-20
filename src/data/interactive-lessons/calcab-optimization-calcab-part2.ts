@@ -1,125 +1,60 @@
-export const calcABOptimizationPart2Data = {
+export const calcabOptimizationPart2Data = {
   topicSlug: 'optimization-calcab',
   sections: [
     {
-      id: 'optim2-intro',
+      id: 'opt2-intro',
       type: 'text' as const,
-      content: `
-# Setting Up Optimization Problems
+      content: `# Optimization
 
-**Part 2 of 7 — Setting Up Optimization Problems**
+**Part 2 of 7 — Geometric Optimization**
 
-### 1. Write the quantity to optimize as a function of one variable
+### Box Problem (Classic AP Question)
 
-Write the quantity to optimize as a function of one variable
+An open-top box is made by cutting squares of side $x$ from corners of a 12 × 8 sheet and folding up.
 
-### 2. Use the constraint to eliminate one variable
+**Objective:** Maximize $V = x(12 - 2x)(8 - 2x)$
 
-Use the constraint to eliminate one variable
+**Domain:** $0 < x < 4$
 
-### 3. Determine the domain (often a closed interval)
+Expand: $V = x(96 - 24x - 16x + 4x^2) = 4x^3 - 40x^2 + 96x$
 
-Determine the domain (often a closed interval)
+$V'(x) = 12x^2 - 80x + 96 = 4(3x^2 - 20x + 24)$
 
-### 4. Draw a picture and label all relevant quantities
+Using the quadratic formula: $x = \\frac{20 \\pm \\sqrt{400-288}}{6} = \\frac{20 \\pm \\sqrt{112}}{6}$
 
-Draw a picture and label all relevant quantities
-      `
+$x \\approx 1.57$ or $x \\approx 5.10$
+
+Since $x < 4$, use $x \\approx 1.57$. $V \\approx 1.57(8.86)(4.86) \\approx 67.6$ cubic units.`
     },
     {
-      id: 'optim2-quiz1',
+      id: 'opt2-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Geometric Optimization** 🎯',
       exercise: {
         questions: [
           {
-            question: 'What does "Write the quantity to optimize as a…" refer to in calculus?',
-            options: [
-              'Draw a picture and label all relevant quantities',
-              'Use the constraint to eliminate one variable',
-              'Determine the domain (often a closed interval)',
-              'Write the quantity to optimize as a function of one variable'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Write the quantity to optimize as a function of one variable. The other options describe different concepts from this topic.'
+            question: 'A rectangle inscribed in the parabola $y = 12 - x^2$ (with base on the x-axis) has vertices at $(\\pm x, 0)$ and $(\\pm x, 12-x^2)$. Find $x$ that maximizes the area.',
+            options: ['$x = 2$', '$x = \\sqrt{3}$', '$x = 1$', '$x = 3$'],
+            correctAnswer: 0,
+            explanation: '$A = 2x(12 - x^2) = 24x - 2x^3$. $A\' = 24 - 6x^2 = 0$ at $x^2 = 4$, so $x = 2$.'
           },
           {
-            question: 'Select the statement that correctly describes Determine the domain (often a closed…:',
-            options: [
-              'Use the constraint to eliminate one variable',
-              'Determine the domain (often a closed interval)',
-              'Write the quantity to optimize as a function of one variable',
-              'Draw a picture and label all relevant quantities'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Determine the domain (often a closed interval). Be careful to distinguish between the different concepts in this topic.'
+            question: 'Find the point on $y = \\sqrt{x}$ closest to $(3, 0)$.',
+            options: ['$(\\frac{5}{2}, \\sqrt{\\frac{5}{2}})$', '$(1, 1)$', '$(4, 2)$', '$(2, \\sqrt{2})$'],
+            correctAnswer: 0,
+            explanation: 'Minimize $D^2 = (x-3)^2 + x$. $\\frac{d}{dx}D^2 = 2(x-3) + 1 = 2x - 5 = 0$ at $x = 5/2$.'
           }
         ]
       }
     },
     {
-      id: 'optim2-detail',
+      id: 'opt2-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
+      content: `### Key Takeaways — Part 2
 
-- **Write the quantity to optimize as a function of one variable**
-- **Use the constraint to eliminate one variable**
-- **Determine the domain (often a closed interval)**
-- **Draw a picture and label all relevant quantities**
-      `
-    },
-    {
-      id: 'optim2-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which statement about Draw a picture and label all relevant… is correct?',
-            options: [
-              'Determine the domain (often a closed interval)',
-              'Use the constraint to eliminate one variable',
-              'Write the quantity to optimize as a function of one variable',
-              'Draw a picture and label all relevant quantities'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Draw a picture and label all relevant quantities. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'optim2-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Write the quantity to optimize as a…',
-            options: ['Determine the domain (often a closed interval)', 'Use the constraint to eliminate one variable', 'Write the quantity to optimize as a function of one variable', 'Draw a picture and label all relevant quantities']
-          },
-          {
-            label: 'Use the constraint to eliminate one…',
-            options: ['Determine the domain (often a closed interval)', 'Write the quantity to optimize as a function of one variable', 'Use the constraint to eliminate one variable', 'Draw a picture and label all relevant quantities']
-          },
-          {
-            label: 'Determine the domain (often a closed…',
-            options: ['Determine the domain (often a closed interval)', 'Draw a picture and label all relevant quantities', 'Use the constraint to eliminate one variable', 'Write the quantity to optimize as a function of one variable']
-          }
-        ],
-        correctAnswers: ['Write the quantity to optimize as a function of one variable', 'Use the constraint to eliminate one variable', 'Determine the domain (often a closed interval)'],
-        hint1: 'Think about what each concept specifically describes in Setting Up Optimization Problems.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Setting Up Optimization Problems describes a specific idea. Write the quantity to optimize as a function of one variable. Use the constraint to eliminate one variable. Determine the domain (often a closed interval).'
-      }
+1. For minimizing distance, it's easier to minimize $D^2$ (avoids square roots)
+2. Check your domain carefully for geometric problems
+3. The box-cutting problem is a classic — know the setup`
     }
   ]
-}
+};

@@ -1,121 +1,68 @@
-export const calcABLinearizationPart1Data = {
+export const calcabLinearizationPart1Data = {
   topicSlug: 'linearization-differentials-calcab',
   sections: [
     {
-      id: 'linea1-intro',
+      id: 'lin1-intro',
       type: 'text' as const,
-      content: `
-# ∫ Linearization Differentials
+      content: `# Linearization & Differentials
 
-**Part 1 of 7 — Linear Approximation**
+**Part 1 of 7 — The Tangent Line Approximation**
 
-### 1. Linearization
+### Local Linearization
 
-L(x) = f(a) + f'(a)(x - a) — the tangent line approximation
+Near a point $x = a$, we can approximate $f(x)$ with its tangent line:
 
-### 2. Best linear approximation of f near x = a
+$$L(x) = f(a) + f'(a)(x - a)$$
 
-Best linear approximation of f near x = a
+This is also called the **linear approximation** or **tangent line approximation**.
 
-### 3. Approximation improves as x gets closer to a
+### Why It Works
 
-Approximation improves as x gets closer to a
+If $f$ is differentiable at $a$, then for $x$ **near** $a$:
+$$f(x) \approx L(x) = f(a) + f'(a)(x - a)$$
 
-### 4. Example
+### Worked Example
 
-√(4.01) ≈ L(4.01) using f(x) = √x at a = 4
-      `
+Approximate $\sqrt{4.1}$ using linearization.
+
+Let $f(x) = \sqrt{x}$, $a = 4$.
+
+$f(4) = 2$, $f'(x) = \frac{1}{2\sqrt{x}}$, $f'(4) = \frac{1}{4}$
+
+$L(x) = 2 + \frac{1}{4}(x - 4)$
+
+$L(4.1) = 2 + \frac{1}{4}(0.1) = 2.025$
+
+Actual: $\sqrt{4.1} \approx 2.02485...$  Very close!`
     },
     {
-      id: 'linea1-quiz1',
+      id: 'lin1-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Linearization** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Linearization?',
-            options: [
-              'L(x) = f(a) + f\'(a)(x - a) — the tangent line approximation',
-              'Best linear approximation of f near x = a',
-              '√(4.01) ≈ L(4.01) using f(x) = √x at a = 4',
-              'Approximation improves as x gets closer to a'
-            ],
+            question: 'Use linearization of $f(x) = x^3$ at $a = 2$ to approximate $f(2.01)$.',
+            options: ['$8.12$', '$8.06$', '$8.24$', '$8.01$'],
             correctAnswer: 0,
-            explanation: 'Correct — Linearization: L(x) = f(a) + f\'(a)(x - a) — the tangent line approximation. The other options describe different concepts from this topic.'
+            explanation: '$f(2) = 8$, $f\'(x) = 3x^2$, $f\'(2) = 12$. $L(2.01) = 8 + 12(0.01) = 8.12$.'
           },
           {
-            question: 'In the context of Linearization Differentials, which explains Approximation improves as x gets closer…?',
-            options: [
-              'Approximation improves as x gets closer to a',
-              'Best linear approximation of f near x = a',
-              'L(x) = f(a) + f\'(a)(x - a) — the tangent line approximation',
-              '√(4.01) ≈ L(4.01) using f(x) = √x at a = 4'
-            ],
+            question: 'Use linearization to approximate $\sin(0.1)$ (near $a = 0$).',
+            options: ['$0.1$', '$0$', '$1$', '$0.01$'],
             correctAnswer: 0,
-            explanation: 'Correct — Approximation improves as x gets closer to a. Be careful to distinguish between the different concepts in this topic.'
+            explanation: '$f(0) = 0$, $f\'(x) = \cos x$, $f\'(0) = 1$. $L(0.1) = 0 + 1(0.1) = 0.1$. (Actual: $0.0998...$)'
           }
         ]
       }
     },
     {
-      id: 'linea1-detail',
+      id: 'lin1-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Linearization**: L(x) = f(a) + f'(a)(x - a) — the tangent line approximation
-- **Best linear approximation of f near x = a**
-- **Approximation improves as x gets closer to a**
-- **Example**: √(4.01) ≈ L(4.01) using f(x) = √x at a = 4
-      `
-    },
-    {
-      id: 'linea1-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which statement about Example is correct?',
-            options: [
-              '√(4.01) ≈ L(4.01) using f(x) = √x at a = 4',
-              'Approximation improves as x gets closer to a',
-              'L(x) = f(a) + f\'(a)(x - a) — the tangent line approximation',
-              'Best linear approximation of f near x = a'
-            ],
-            correctAnswer: 0,
-            explanation: 'Correct — Example: √(4.01) ≈ L(4.01) using f(x) = √x at a = 4. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'linea1-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Linearization',
-            options: ['Approximation improves as x gets closer to a', 'Best linear approximation of f near x = a', '√(4.01) ≈ L(4.01) using f(x) = √x at a = 4', 'L(x) = f(a) + f\'(a)(x - a) — the tangent line approximation']
-          },
-          {
-            label: 'Example',
-            options: ['Best linear approximation of f near x = a', 'Approximation improves as x gets closer to a', 'L(x) = f(a) + f\'(a)(x - a) — the tangent line approximation', '√(4.01) ≈ L(4.01) using f(x) = √x at a = 4']
-          }
-        ],
-        correctAnswers: ['L(x) = f(a) + f\'(a)(x - a) — the tangent line approximation', '√(4.01) ≈ L(4.01) using f(x) = √x at a = 4'],
-        hint1: 'Think about what each concept specifically describes in Linearization Differentials.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Linearization Differentials describes a specific idea. Linearization: L(x) = f(a) + f\'(a)(x - a) — the tangent line approximation. Example: √(4.01) ≈ L(4.01) using f(x) = √x at a = 4.'
-      }
+      content: `### Key Takeaways — Part 1
+1. $L(x) = f(a) + f'(a)(x-a)$ is the linearization
+2. Works best when $x$ is close to $a$
+3. This is simply the tangent line used as an approximation`
     }
   ]
-}
+};

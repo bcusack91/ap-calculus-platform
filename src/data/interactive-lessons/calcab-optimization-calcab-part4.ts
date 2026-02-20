@@ -1,125 +1,49 @@
-export const calcABOptimizationPart4Data = {
+export const calcabOptimizationPart4Data = {
   topicSlug: 'optimization-calcab',
   sections: [
     {
-      id: 'optim4-intro',
+      id: 'opt4-intro',
       type: 'text' as const,
-      content: `
-# Applied Optimization
+      content: `# Optimization
 
-**Part 4 of 7 — Applied Optimization**
+**Part 4 of 7 — 3D Optimization (Cylinders & Cones)**
 
-### 1. Maximum area enclosed by a fixed perimeter
+### Cylinder with Fixed Surface Area
 
-Maximum area enclosed by a fixed perimeter
+Minimize the surface area of a cylinder with volume $V = 1000$ cm$^3$.
 
-### 2. Minimum distance between a point and a curve
+$V = \\pi r^2 h = 1000$ → $h = \\frac{1000}{\\pi r^2}$
 
-Minimum distance between a point and a curve
+$S = 2\\pi r^2 + 2\\pi r h = 2\\pi r^2 + \\frac{2000}{r}$
 
-### 3. Maximizing volume of a box given material constraints
+$S'(r) = 4\\pi r - \\frac{2000}{r^2} = 0$
 
-Maximizing volume of a box given material constraints
+$r^3 = \\frac{500}{\\pi}$ → $r = \\left(\\frac{500}{\\pi}\\right)^{1/3} \\approx 5.42$ cm
 
-### 4. Minimum surface area for a given volume
-
-Minimum surface area for a given volume
-      `
+This gives $h = 2r$ — the optimal cylinder has height equal to its diameter!`
     },
     {
-      id: 'optim4-quiz1',
+      id: 'opt4-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**3D Optimization** 🎯',
       exercise: {
         questions: [
           {
-            question: 'What does "Maximum area enclosed by a fixed…" refer to in calculus?',
-            options: [
-              'Maximum area enclosed by a fixed perimeter',
-              'Minimum surface area for a given volume',
-              'Maximizing volume of a box given material constraints',
-              'Minimum distance between a point and a curve'
-            ],
+            question: 'A cylinder with no top has volume $V = 27\\pi$. What radius minimizes the surface area?',
+            options: ['$r = 3$', '$r = 2$', '$r = \\sqrt[3]{27}$', '$r = 9$'],
             correctAnswer: 0,
-            explanation: 'Correct — Maximum area enclosed by a fixed perimeter. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Which of the following is true about Maximizing volume of a box given…?',
-            options: [
-              'Minimum surface area for a given volume',
-              'Maximum area enclosed by a fixed perimeter',
-              'Maximizing volume of a box given material constraints',
-              'Minimum distance between a point and a curve'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Maximizing volume of a box given material constraints. Be careful to distinguish between the different concepts in this topic.'
+            explanation: '$h = 27/r^2$. $S = \\pi r^2 + 2\\pi rh = \\pi r^2 + 54\\pi/r$. $S\' = 2\\pi r - 54\\pi/r^2 = 0$. $r^3 = 27$, $r = 3$.'
           }
         ]
       }
     },
     {
-      id: 'optim4-detail',
+      id: 'opt4-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Maximum area enclosed by a fixed perimeter**
-- **Minimum distance between a point and a curve**
-- **Maximizing volume of a box given material constraints**
-- **Minimum surface area for a given volume**
-      `
-    },
-    {
-      id: 'optim4-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of these accurately represents Minimum surface area for a given volume?',
-            options: [
-              'Maximum area enclosed by a fixed perimeter',
-              'Minimum surface area for a given volume',
-              'Minimum distance between a point and a curve',
-              'Maximizing volume of a box given material constraints'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Minimum surface area for a given volume. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'optim4-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Maximum area enclosed by a fixed…',
-            options: ['Minimum distance between a point and a curve', 'Minimum surface area for a given volume', 'Maximizing volume of a box given material constraints', 'Maximum area enclosed by a fixed perimeter']
-          },
-          {
-            label: 'Minimum distance between a point and a…',
-            options: ['Minimum distance between a point and a curve', 'Maximum area enclosed by a fixed perimeter', 'Maximizing volume of a box given material constraints', 'Minimum surface area for a given volume']
-          },
-          {
-            label: 'Maximizing volume of a box given…',
-            options: ['Minimum surface area for a given volume', 'Maximizing volume of a box given material constraints', 'Minimum distance between a point and a curve', 'Maximum area enclosed by a fixed perimeter']
-          }
-        ],
-        correctAnswers: ['Maximum area enclosed by a fixed perimeter', 'Minimum distance between a point and a curve', 'Maximizing volume of a box given material constraints'],
-        hint1: 'Think about what each concept specifically describes in Applied Optimization.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Applied Optimization describes a specific idea. Maximum area enclosed by a fixed perimeter. Minimum distance between a point and a curve. Maximizing volume of a box given material constraints.'
-      }
+      content: `### Key Takeaways \\u2014 Part 4
+1. 3D optimization follows the same strategy: objective + constraint
+2. Express surface area or volume in one variable using the constraint
+3. For optimal cylinders: $h = 2r$ (with top) or $h = r$ (without top)`
     }
   ]
-}
+};

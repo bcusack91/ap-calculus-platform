@@ -1,125 +1,60 @@
-export const calcABUSubPart7Data = {
+export const calcabUSubPart7Data = {
   topicSlug: 'u-substitution-calcab',
   sections: [
     {
-      id: 'u-sub7-intro',
+      id: 'usub7-intro',
       type: 'text' as const,
-      content: `
-# Review & Applications
+      content: `# u-Substitution Review
 
-**Part 7 of 7 — Review & Applications**
+**Part 7 of 7 — Comprehensive Assessment**
 
-### 1. ∫1/(x²+bx+c)dx
+### Quick Reference
 
-complete the square, then use arctan form
-
-### 2. ∫1/√(a²-x²)dx = arcsin(x/a) + C
-
-∫1/√(a²-x²)dx = arcsin(x/a) + C
-
-### 3. ∫1/(x²+a²)dx = (1/a)arctan(x/a) + C
-
-∫1/(x²+a²)dx = (1/a)arctan(x/a) + C
-
-### 4. Completing the square converts quadratics into recognizable integration forms
-
-Completing the square converts quadratics into recognizable integration forms
-      `
+| Pattern | Substitution |
+|---------|-------------|
+| $\\int f(g(x)) \\cdot g'(x)\\,dx$ | $u = g(x)$ |
+| $\\int \\frac{f'(x)}{f(x)}\\,dx$ | $u = f(x) \\to \\ln|f|$ |
+| $\\int f(ax+b)\\,dx$ | $u = ax+b$ |`
     },
     {
-      id: 'u-sub7-quiz1',
+      id: 'usub7-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Final Assessment** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains ∫1/(x²+bx+c)dx?',
-            options: [
-              'Completing the square converts quadratics into recognizable integration forms',
-              '∫1/√(a²-x²)dx = arcsin(x/a) + C',
-              'complete the square, then use arctan form',
-              '∫1/(x²+a²)dx = (1/a)arctan(x/a) + C'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — ∫1/(x²+bx+c)dx: complete the square, then use arctan form. The other options describe different concepts from this topic.'
+            question: 'Evaluate $\\int_0^{\\pi} x \\cos(x^2)\\,dx$.',
+            options: ['$\\frac{\\sin(\\pi^2)}{2}$', '$\\sin(\\pi^2)$', '$0$', '$\\frac{1}{2}$'],
+            correctAnswer: 0,
+            explanation: 'Let $u = x^2$, $du = 2x\\,dx$. Limits: $u=0$ to $u=\\pi^2$. $\\frac{1}{2}\\int_0^{\\pi^2} \\cos u\\,du = \\frac{1}{2}[\\sin u]_0^{\\pi^2} = \\frac{\\sin(\\pi^2)}{2}$.'
           },
           {
-            question: 'Which of the following is true about ∫1/(x²+a²)dx = (1/a)arctan(x/a) + C?',
-            options: [
-              'complete the square, then use arctan form',
-              '∫1/(x²+a²)dx = (1/a)arctan(x/a) + C',
-              'Completing the square converts quadratics into recognizable integration forms',
-              '∫1/√(a²-x²)dx = arcsin(x/a) + C'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — ∫1/(x²+a²)dx = (1/a)arctan(x/a) + C. Be careful to distinguish between the different concepts in this topic.'
+            question: 'Evaluate $\\int e^x \\sin(e^x)\\,dx$.',
+            options: ['$-\\cos(e^x) + C$', '$\\cos(e^x) + C$', '$e^x\\cos(e^x) + C$', '$\\sin(e^x) + C$'],
+            correctAnswer: 0,
+            explanation: 'Let $u = e^x$, $du = e^x\\,dx$. $\\int \\sin(u)\\,du = -\\cos(u) + C = -\\cos(e^x) + C$.'
+          },
+          {
+            question: 'Evaluate $\\int_0^1 x^2 e^{x^3+1}\\,dx$.',
+            options: ['$\\frac{e^2-e}{3}$', '$e^2 - e$', '$\\frac{e^2}{3}$', '$e - 1$'],
+            correctAnswer: 0,
+            explanation: 'Let $u = x^3+1$, $du = 3x^2\\,dx$. Limits: $u=1$ to $u=2$. $\\frac{1}{3}\\int_1^2 e^u\\,du = \\frac{1}{3}(e^2-e) = \\frac{e^2-e}{3}$.'
           }
         ]
       }
     },
     {
-      id: 'u-sub7-detail',
+      id: 'usub7-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
+      content: `### u-Substitution — Complete! ✅
 
-- **∫1/(x²+bx+c)dx**: complete the square, then use arctan form
-- **∫1/√(a²-x²)dx = arcsin(x/a) + C**
-- **∫1/(x²+a²)dx = (1/a)arctan(x/a) + C**
-- **Completing the square converts quadratics into recognizable integration forms**
-      `
-    },
-    {
-      id: 'u-sub7-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which statement about Completing the square converts… is correct?',
-            options: [
-              '∫1/√(a²-x²)dx = arcsin(x/a) + C',
-              'complete the square, then use arctan form',
-              'Completing the square converts quadratics into recognizable integration forms',
-              '∫1/(x²+a²)dx = (1/a)arctan(x/a) + C'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Completing the square converts quadratics into recognizable integration forms. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'u-sub7-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: '∫1/(x²+bx+c)dx',
-            options: ['∫1/(x²+a²)dx = (1/a)arctan(x/a) + C', 'Completing the square converts quadratics into recognizable integration forms', '∫1/√(a²-x²)dx = arcsin(x/a) + C', 'complete the square, then use arctan form']
-          },
-          {
-            label: '∫1/√(a²-x²)dx = arcsin(x/a) + C',
-            options: ['complete the square, then use arctan form', '∫1/(x²+a²)dx = (1/a)arctan(x/a) + C', '∫1/√(a²-x²)dx = arcsin(x/a) + C', 'Completing the square converts quadratics into recognizable integration forms']
-          },
-          {
-            label: '∫1/(x²+a²)dx = (1/a)arctan(x/a) + C',
-            options: ['∫1/√(a²-x²)dx = arcsin(x/a) + C', '∫1/(x²+a²)dx = (1/a)arctan(x/a) + C', 'Completing the square converts quadratics into recognizable integration forms', 'complete the square, then use arctan form']
-          }
-        ],
-        correctAnswers: ['complete the square, then use arctan form', '∫1/√(a²-x²)dx = arcsin(x/a) + C', '∫1/(x²+a²)dx = (1/a)arctan(x/a) + C'],
-        hint1: 'Think about what each concept specifically describes in Review & Applications.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Review & Applications describes a specific idea. ∫1/(x²+bx+c)dx: complete the square, then use arctan form. ∫1/√(a²-x²)dx = arcsin(x/a) + C. ∫1/(x²+a²)dx = (1/a)arctan(x/a) + C.'
-      }
+You have mastered:
+- ✅ Basic u-substitution
+- ✅ Adjusting for missing constants
+- ✅ Definite integrals with changed limits
+- ✅ Trickier substitutions (exponential, log, trig)
+- ✅ Long division and completing the square
+- ✅ Pattern recognition strategies`
     }
   ]
-}
+};

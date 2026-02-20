@@ -1,125 +1,59 @@
-export const calcABTablesDataPart1Data = {
+export const calcabTablesDataPart1Data = {
   topicSlug: 'tables-data-calcab',
   sections: [
     {
-      id: 'table1-intro',
+      id: 'td1-intro',
       type: 'text' as const,
-      content: `
-# ∫ Tables Data
+      content: `# Working with Tables & Data
 
-**Part 1 of 7 — Using Data Tables for Derivatives**
+**Part 1 of 7 — Approximating Derivatives from Tables**
 
-### 1. Approximate f'(c) ≈ [f(b)-f(a)]/(b-a) using nearby table values
+### Estimating $f'(a)$ from a Table
 
-Approximate f'(c) ≈ [f(b)-f(a)]/(b-a) using nearby table values
+When you have a table of values but no formula, estimate the derivative using:
 
-### 2. Use symmetric difference quotient when c is between a and b
+$$f'(a) \approx \frac{f(b) - f(c)}{b - c}$$
 
-Use symmetric difference quotient when c is between a and b
+Choose points closest to $a$.
 
-### 3. Cannot compute exact derivatives from discrete data — only approximations
+### Worked Example
 
-Cannot compute exact derivatives from discrete data — only approximations
+| $x$ | 1 | 3 | 5 | 8 |
+|-----|---|---|---|---|
+| $f(x)$ | 2 | 7 | 10 | 20 |
 
-### 4. Units of the derivative
+$f'(3) \approx \frac{f(5) - f(1)}{5 - 1} = \frac{10 - 2}{4} = 2$
 
-(units of f)/(units of x)
-      `
+(Using symmetric difference gives better estimate than one-sided.)`
     },
     {
-      id: 'table1-quiz1',
+      id: 'td1-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Table Derivatives** 🎯\n\n| $x$ | 0 | 2 | 5 | 7 | 10 |\n|---|---|---|---|---|---|\n| $f(x)$ | 3 | 8 | 14 | 18 | 25 |',
       exercise: {
         questions: [
           {
-            question: 'What does "Approximate f\'(c) ≈ [f(b)-f(a)]/(b-a)…" refer to in calculus?',
-            options: [
-              '(units of f)/(units of x)',
-              'Use symmetric difference quotient when c is between a and b',
-              'Cannot compute exact derivatives from discrete data — only approximations',
-              'Approximate f\'(c) ≈ [f(b)-f(a)]/(b-a) using nearby table values'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Approximate f\'(c) ≈ [f(b)-f(a)]/(b-a) using nearby table values. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Select the statement that correctly describes Cannot compute exact derivatives from…:',
-            options: [
-              'Cannot compute exact derivatives from discrete data — only approximations',
-              '(units of f)/(units of x)',
-              'Use symmetric difference quotient when c is between a and b',
-              'Approximate f\'(c) ≈ [f(b)-f(a)]/(b-a) using nearby table values'
-            ],
+            question: 'Estimate $f\'(5)$ using surrounding values.',
+            options: ['$2$', '$\\frac{10}{5}$', '$3$', '$\\frac{7}{3}$'],
             correctAnswer: 0,
-            explanation: 'Correct — Cannot compute exact derivatives from discrete data — only approximations. Be careful to distinguish between the different concepts in this topic.'
+            explanation: '$f\'(5) \\approx \\frac{f(7) - f(2)}{7 - 2} = \\frac{18 - 8}{5} = 2$.'
+          },
+          {
+            question: 'Estimate $f\'(0)$ (at the endpoint).',
+            options: ['$\\frac{5}{2}$', '$3$', '$8$', '$\\frac{8}{2}$'],
+            correctAnswer: 0,
+            explanation: 'At endpoint, use one-sided: $f\'(0) \\approx \\frac{f(2) - f(0)}{2 - 0} = \\frac{5}{2}$.'
           }
         ]
       }
     },
     {
-      id: 'table1-detail',
+      id: 'td1-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Approximate f'(c) ≈ [f(b)-f(a)]/(b-a) using nearby table values**
-- **Use symmetric difference quotient when c is between a and b**
-- **Cannot compute exact derivatives from discrete data — only approximations**
-- **Units of the derivative**: (units of f)/(units of x)
-      `
-    },
-    {
-      id: 'table1-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Regarding Tables Data, which correctly describes Units of the derivative?',
-            options: [
-              'Approximate f\'(c) ≈ [f(b)-f(a)]/(b-a) using nearby table values',
-              'Cannot compute exact derivatives from discrete data — only approximations',
-              'Use symmetric difference quotient when c is between a and b',
-              '(units of f)/(units of x)'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Units of the derivative: (units of f)/(units of x). Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'table1-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Approximate f\'(c) ≈ [f(b)-f(a)]/(b-a)…',
-            options: ['Use symmetric difference quotient when c is between a and b', 'Approximate f\'(c) ≈ [f(b)-f(a)]/(b-a) using nearby table values', '(units of f)/(units of x)', 'Cannot compute exact derivatives from discrete data — only approximations']
-          },
-          {
-            label: 'Use symmetric difference quotient when…',
-            options: ['Use symmetric difference quotient when c is between a and b', 'Approximate f\'(c) ≈ [f(b)-f(a)]/(b-a) using nearby table values', '(units of f)/(units of x)', 'Cannot compute exact derivatives from discrete data — only approximations']
-          },
-          {
-            label: 'Cannot compute exact derivatives from…',
-            options: ['Use symmetric difference quotient when c is between a and b', '(units of f)/(units of x)', 'Approximate f\'(c) ≈ [f(b)-f(a)]/(b-a) using nearby table values', 'Cannot compute exact derivatives from discrete data — only approximations']
-          }
-        ],
-        correctAnswers: ['Approximate f\'(c) ≈ [f(b)-f(a)]/(b-a) using nearby table values', 'Use symmetric difference quotient when c is between a and b', 'Cannot compute exact derivatives from discrete data — only approximations'],
-        hint1: 'Think about what each concept specifically describes in Tables Data.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Tables Data describes a specific idea. Approximate f\'(c) ≈ [f(b)-f(a)]/(b-a) using nearby table values. Use symmetric difference quotient when c is between a and b. Cannot compute exact derivatives from discrete data — only approximations.'
-      }
+      content: `### Key Takeaways — Part 1
+1. Use symmetric differences when possible
+2. At endpoints, use one-sided differences
+3. Always state units on the AP exam`
     }
   ]
-}
+};

@@ -1,125 +1,59 @@
-export const calcABExpModelsPart1Data = {
+export const calcabExpModelsPart1Data = {
   topicSlug: 'exponential-models-calcab',
   sections: [
     {
-      id: 'expon1-intro',
+      id: 'exp1-intro',
       type: 'text' as const,
-      content: `
-# ∫ Exponential Models
+      content: `# Exponential Models
 
-**Part 1 of 7 — Derivatives of eˣ and ln(x)**
+**Part 1 of 7 — Exponential Growth and Decay**
 
-### 1. d/dx[eˣ] = eˣ — the exponential function is its own derivative
+### The Differential Equation
 
-d/dx[eˣ] = eˣ — the exponential function is its own derivative
+$$\frac{dy}{dt} = ky \implies y = y_0 e^{kt}$$
 
-### 2. d/dx[e^(g(x))] = e^(g(x)) · g'(x) (chain rule)
+- $k > 0$: **exponential growth**
+- $k < 0$: **exponential decay**
 
-d/dx[e^(g(x))] = e^(g(x)) · g'(x) (chain rule)
+### Worked Example
 
-### 3. d/dx[ln(x)] = 1/x for x > 0
+A bacteria culture starts with 500 and grows to 1500 in 2 hours.
 
-d/dx[ln(x)] = 1/x for x > 0
+$1500 = 500e^{2k}$
 
-### 4. d/dx[ln(g(x))] = g'(x)/g(x) (chain rule)
+$3 = e^{2k}$
 
-d/dx[ln(g(x))] = g'(x)/g(x) (chain rule)
-      `
+$k = \frac{\ln 3}{2} \approx 0.549$
+
+Population at time $t$: $P(t) = 500e^{0.549t}$`
     },
     {
-      id: 'expon1-quiz1',
+      id: 'exp1-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Exponential Growth** 🎯',
       exercise: {
         questions: [
           {
-            question: 'What does "d/dx[eˣ] = eˣ — the exponential…" refer to in calculus?',
-            options: [
-              'd/dx[eˣ] = eˣ — the exponential function is its own derivative',
-              'd/dx[e^(g(x))] = e^(g(x)) · g\'(x) (chain rule)',
-              'd/dx[ln(x)] = 1/x for x > 0',
-              'd/dx[ln(g(x))] = g\'(x)/g(x) (chain rule)'
-            ],
+            question: 'A population of 200 grows to 800 in 6 hours. Find the growth constant $k$.',
+            options: ['$\\frac{\\ln 4}{6}$', '$\\frac{\\ln 2}{6}$', '$\\frac{4}{6}$', '$\\frac{\\ln 800}{6}$'],
             correctAnswer: 0,
-            explanation: 'Correct — d/dx[eˣ] = eˣ — the exponential function is its own derivative. The other options describe different concepts from this topic.'
+            explanation: '$800 = 200e^{6k}$. $4 = e^{6k}$. $k = \\frac{\\ln 4}{6}$.'
           },
           {
-            question: 'Which of the following is true about d/dx[ln(x)] = 1/x for x > 0?',
-            options: [
-              'd/dx[e^(g(x))] = e^(g(x)) · g\'(x) (chain rule)',
-              'd/dx[ln(g(x))] = g\'(x)/g(x) (chain rule)',
-              'd/dx[eˣ] = eˣ — the exponential function is its own derivative',
-              'd/dx[ln(x)] = 1/x for x > 0'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — d/dx[ln(x)] = 1/x for x > 0. Be careful to distinguish between the different concepts in this topic.'
+            question: 'A radioactive substance decays from 100 g to 75 g in 10 years. Find its half-life.',
+            options: ['$\\frac{10\\ln 2}{\\ln(4/3)}$', '$\\frac{10}{\\ln 2}$', '$20$ years', '$5\\ln 2$ years'],
+            correctAnswer: 0,
+            explanation: '$75 = 100e^{10k}$. $k = \\frac{\\ln(3/4)}{10} = -\\frac{\\ln(4/3)}{10}$. Half-life $= \\frac{\\ln 2}{|k|} = \\frac{10\\ln 2}{\\ln(4/3)}$.'
           }
         ]
       }
     },
     {
-      id: 'expon1-detail',
+      id: 'exp1-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **d/dx[eˣ] = eˣ — the exponential function is its own derivative**
-- **d/dx[e^(g(x))] = e^(g(x)) · g'(x) (chain rule)**
-- **d/dx[ln(x)] = 1/x for x > 0**
-- **d/dx[ln(g(x))] = g'(x)/g(x) (chain rule)**
-      `
-    },
-    {
-      id: 'expon1-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which statement about d/dx[ln(g(x))] = g\'(x)/g(x) (chain rule) is correct?',
-            options: [
-              'd/dx[eˣ] = eˣ — the exponential function is its own derivative',
-              'd/dx[ln(x)] = 1/x for x > 0',
-              'd/dx[e^(g(x))] = e^(g(x)) · g\'(x) (chain rule)',
-              'd/dx[ln(g(x))] = g\'(x)/g(x) (chain rule)'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — d/dx[ln(g(x))] = g\'(x)/g(x) (chain rule). Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'expon1-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'd/dx[eˣ] = eˣ — the exponential…',
-            options: ['d/dx[ln(x)] = 1/x for x > 0', 'd/dx[e^(g(x))] = e^(g(x)) · g\'(x) (chain rule)', 'd/dx[eˣ] = eˣ — the exponential function is its own derivative', 'd/dx[ln(g(x))] = g\'(x)/g(x) (chain rule)']
-          },
-          {
-            label: 'd/dx[e^(g(x))] = e^(g(x)) · g\'(x)…',
-            options: ['d/dx[ln(g(x))] = g\'(x)/g(x) (chain rule)', 'd/dx[eˣ] = eˣ — the exponential function is its own derivative', 'd/dx[e^(g(x))] = e^(g(x)) · g\'(x) (chain rule)', 'd/dx[ln(x)] = 1/x for x > 0']
-          },
-          {
-            label: 'd/dx[ln(x)] = 1/x for x > 0',
-            options: ['d/dx[ln(x)] = 1/x for x > 0', 'd/dx[ln(g(x))] = g\'(x)/g(x) (chain rule)', 'd/dx[eˣ] = eˣ — the exponential function is its own derivative', 'd/dx[e^(g(x))] = e^(g(x)) · g\'(x) (chain rule)']
-          }
-        ],
-        correctAnswers: ['d/dx[eˣ] = eˣ — the exponential function is its own derivative', 'd/dx[e^(g(x))] = e^(g(x)) · g\'(x) (chain rule)', 'd/dx[ln(x)] = 1/x for x > 0'],
-        hint1: 'Think about what each concept specifically describes in Exponential Models.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Exponential Models describes a specific idea. d/dx[eˣ] = eˣ — the exponential function is its own derivative. d/dx[e^(g(x))] = e^(g(x)) · g\'(x) (chain rule). d/dx[ln(x)] = 1/x for x > 0.'
-      }
+      content: `### Key Takeaways — Part 1
+1. $\\frac{dy}{dt} = ky$ always has solution $y = y_0 e^{kt}$
+2. Use two data points to find $k$`
     }
   ]
-}
+};

@@ -1,125 +1,53 @@
-export const calcBCImproperPart2Data = {
+export const calcbcImproperPart2Data = {
   topicSlug: 'improper-integrals-calcbc',
   sections: [
     {
-      id: 'impro2-intro',
+      id: 'imp2-intro',
       type: 'text' as const,
-      content: `
-# Type II: Discontinuous Integrands
+      content: `# Improper Integrals
 
-**Part 2 of 7 — Type II: Discontinuous Integrands**
+**Part 2 of 7 — The $p$-Test**
 
-### 1. Type II
+### $p$-Integral Test
 
-integrand has a discontinuity in [a,b]
+$$\int_1^{\infty} \frac{1}{x^p}\,dx \begin{cases} \text{converges} & \text{if } p > 1 \\ \text{diverges} & \text{if } p \leq 1 \end{cases}$$
 
-### 2. Discontinuity at a
+### Key Examples
 
-lim(c→a⁺) ∫_c^b f(x)dx
-
-### 3. Discontinuity at b
-
-lim(c→b⁻) ∫ₐ^c f(x)dx
-
-### 4. Interior discontinuity at d
-
-split into two integrals at d
-      `
+| Integral | $p$ | Result |
+|----------|-----|--------|
+| $\int_1^{\infty} 1/x^2\\,dx$ | $2$ | Converges (= $1$) |
+| $\int_1^{\infty} 1/x\\,dx$ | $1$ | Diverges |
+| $\int_1^{\infty} 1/\sqrt{x}\\,dx$ | $1/2$ | Diverges |
+| $\int_1^{\infty} 1/x^3\\,dx$ | $3$ | Converges (= $1/2$) |`
     },
     {
-      id: 'impro2-quiz1',
+      id: 'imp2-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**$p$-Test** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Type II?',
-            options: [
-              'lim(c→a⁺) ∫_c^b f(x)dx',
-              'lim(c→b⁻) ∫ₐ^c f(x)dx',
-              'integrand has a discontinuity in [a,b]',
-              'split into two integrals at d'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Type II: integrand has a discontinuity in [a,b]. The other options describe different concepts from this topic.'
+            question: 'Does $\\int_1^{\\infty} \\frac{1}{x^{3/2}}\\,dx$ converge or diverge?',
+            options: ['Converges', 'Diverges', 'Cannot determine', 'Oscillates'],
+            correctAnswer: 0,
+            explanation: '$p = 3/2 > 1$, so it converges.'
           },
           {
-            question: 'In the context of Type II: Discontinuous Integrands, which explains Discontinuity at b?',
-            options: [
-              'lim(c→a⁺) ∫_c^b f(x)dx',
-              'integrand has a discontinuity in [a,b]',
-              'split into two integrals at d',
-              'lim(c→b⁻) ∫ₐ^c f(x)dx'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Discontinuity at b: lim(c→b⁻) ∫ₐ^c f(x)dx. Be careful to distinguish between the different concepts in this topic.'
+            question: '$\\int_1^{\\infty} \\frac{1}{x^{0.99}}\\,dx$:',
+            options: ['Diverges', 'Converges', 'Converges to $100$', 'Need more info'],
+            correctAnswer: 0,
+            explanation: '$p = 0.99 < 1$, so it diverges. Even though $0.99$ is close to $1$, the integral still diverges.'
           }
         ]
       }
     },
     {
-      id: 'impro2-detail',
+      id: 'imp2-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Type II**: integrand has a discontinuity in [a,b]
-- **Discontinuity at a**: lim(c→a⁺) ∫_c^b f(x)dx
-- **Discontinuity at b**: lim(c→b⁻) ∫ₐ^c f(x)dx
-- **Interior discontinuity at d**: split into two integrals at d
-      `
-    },
-    {
-      id: 'impro2-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of these accurately represents Interior discontinuity at d?',
-            options: [
-              'lim(c→a⁺) ∫_c^b f(x)dx',
-              'split into two integrals at d',
-              'integrand has a discontinuity in [a,b]',
-              'lim(c→b⁻) ∫ₐ^c f(x)dx'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Interior discontinuity at d: split into two integrals at d. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'impro2-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Type II',
-            options: ['lim(c→b⁻) ∫ₐ^c f(x)dx', 'split into two integrals at d', 'integrand has a discontinuity in [a,b]', 'lim(c→a⁺) ∫_c^b f(x)dx']
-          },
-          {
-            label: 'Discontinuity at a',
-            options: ['integrand has a discontinuity in [a,b]', 'split into two integrals at d', 'lim(c→b⁻) ∫ₐ^c f(x)dx', 'lim(c→a⁺) ∫_c^b f(x)dx']
-          },
-          {
-            label: 'Discontinuity at b',
-            options: ['lim(c→b⁻) ∫ₐ^c f(x)dx', 'integrand has a discontinuity in [a,b]', 'split into two integrals at d', 'lim(c→a⁺) ∫_c^b f(x)dx']
-          }
-        ],
-        correctAnswers: ['integrand has a discontinuity in [a,b]', 'lim(c→a⁺) ∫_c^b f(x)dx', 'lim(c→b⁻) ∫ₐ^c f(x)dx'],
-        hint1: 'Think about what each concept specifically describes in Type II: Discontinuous Integrands.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Type II: Discontinuous Integrands describes a specific idea. Type II: integrand has a discontinuity in [a,b]. Discontinuity at a: lim(c→a⁺) ∫_c^b f(x)dx. Discontinuity at b: lim(c→b⁻) ∫ₐ^c f(x)dx.'
-      }
+      content: `### Key Takeaways — Part 2
+1. $p > 1$: converges. $p \\leq 1$: diverges.
+2. The boundary $p = 1$ ($\\ln x$) is the dividing line`
     }
   ]
-}
+};

@@ -1,125 +1,45 @@
-export const calcABExamReviewPart3Data = {
+export const calcabExamReviewPart3Data = {
   topicSlug: 'ap-exam-review-calcab',
   sections: [
     {
-      id: 'ap-ex3-intro',
+      id: 'er3-intro',
       type: 'text' as const,
-      content: `
-# Applications of Derivatives Review
+      content: `# AP Exam Review
 
 **Part 3 of 7 — Applications of Derivatives Review**
 
-### 1. Critical points, extrema, increasing/decreasing intervals
+### Key Applications
 
-Critical points, extrema, increasing/decreasing intervals
-
-### 2. Mean Value Theorem and Rolle's Theorem
-
-Mean Value Theorem and Rolle's Theorem
-
-### 3. Optimization
-
-set up and solve applied max/min problems
-
-### 4. Concavity, inflection points, second derivative test
-
-Concavity, inflection points, second derivative test
-      `
+1. **Related Rates** — differentiate equation with respect to time
+2. **Optimization** — find critical points, check endpoints
+3. **First/Second Derivative Test** — classify critical points
+4. **Concavity** — second derivative determines shape`
     },
     {
-      id: 'ap-ex3-quiz1',
+      id: 'er3-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Derivative Applications** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Critical points, extrema,…?',
-            options: [
-              'Mean Value Theorem and Rolle\'s Theorem',
-              'set up and solve applied max/min problems',
-              'Critical points, extrema, increasing/decreasing intervals',
-              'Concavity, inflection points, second derivative test'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Critical points, extrema, increasing/decreasing intervals. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'In the context of Applications of Derivatives Review, which explains Optimization?',
-            options: [
-              'Concavity, inflection points, second derivative test',
-              'Mean Value Theorem and Rolle\'s Theorem',
-              'set up and solve applied max/min problems',
-              'Critical points, extrema, increasing/decreasing intervals'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Optimization: set up and solve applied max/min problems. Be careful to distinguish between the different concepts in this topic.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'ap-ex3-detail',
-      type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Critical points, extrema, increasing/decreasing intervals**
-- **Mean Value Theorem and Rolle's Theorem**
-- **Optimization**: set up and solve applied max/min problems
-- **Concavity, inflection points, second derivative test**
-      `
-    },
-    {
-      id: 'ap-ex3-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Regarding Applications of Derivatives Review, which correctly describes Concavity, inflection points, second…?',
-            options: [
-              'Concavity, inflection points, second derivative test',
-              'set up and solve applied max/min problems',
-              'Mean Value Theorem and Rolle\'s Theorem',
-              'Critical points, extrema, increasing/decreasing intervals'
-            ],
+            question: 'If $f\'(c) = 0$ and $f\'\'(c) < 0$, then $f$ has a:',
+            options: ['Local maximum at $c$', 'Local minimum at $c$', 'Inflection point at $c$', 'Neither'],
             correctAnswer: 0,
-            explanation: 'Correct — Concavity, inflection points, second derivative test. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: 'Second derivative test: $f\'(c) = 0$ and $f\'\'(c) < 0$ means local maximum.'
+          },
+          {
+            question: 'A sphere expands so $\\frac{dr}{dt} = 2$ cm/s. When $r = 5$, find $\\frac{dV}{dt}$.',
+            options: ['$200\\pi$ cm$^3$/s', '$100\\pi$ cm$^3$/s', '$50\\pi$ cm$^3$/s', '$400\\pi$ cm$^3$/s'],
+            correctAnswer: 0,
+            explanation: '$V = \\frac{4}{3}\\pi r^3$. $\\frac{dV}{dt} = 4\\pi r^2 \\frac{dr}{dt} = 4\\pi(25)(2) = 200\\pi$.'
           }
         ]
       }
     },
     {
-      id: 'ap-ex3-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Critical points, extrema,…',
-            options: ['Mean Value Theorem and Rolle\'s Theorem', 'Critical points, extrema, increasing/decreasing intervals', 'set up and solve applied max/min problems', 'Concavity, inflection points, second derivative test']
-          },
-          {
-            label: 'Mean Value Theorem and Rolle\'s Theorem',
-            options: ['Concavity, inflection points, second derivative test', 'Critical points, extrema, increasing/decreasing intervals', 'Mean Value Theorem and Rolle\'s Theorem', 'set up and solve applied max/min problems']
-          },
-          {
-            label: 'Optimization',
-            options: ['set up and solve applied max/min problems', 'Mean Value Theorem and Rolle\'s Theorem', 'Concavity, inflection points, second derivative test', 'Critical points, extrema, increasing/decreasing intervals']
-          }
-        ],
-        correctAnswers: ['Critical points, extrema, increasing/decreasing intervals', 'Mean Value Theorem and Rolle\'s Theorem', 'set up and solve applied max/min problems'],
-        hint1: 'Think about what each concept specifically describes in Applications of Derivatives Review.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Applications of Derivatives Review describes a specific idea. Critical points, extrema, increasing/decreasing intervals. Mean Value Theorem and Rolle\'s Theorem. Optimization: set up and solve applied max/min problems.'
-      }
+      id: 'er3-summary',
+      type: 'text' as const,
+      content: `### Review — Part 3 Complete`
     }
   ]
-}
+};

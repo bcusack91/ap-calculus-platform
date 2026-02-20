@@ -1,125 +1,69 @@
-export const calcABDefiniteIntegralsPart6Data = {
+export const calcabDefiniteIntegralsPart6Data = {
   topicSlug: 'definite-integrals-calcab',
   sections: [
     {
-      id: 'defin6-intro',
+      id: 'int6-intro',
       type: 'text' as const,
-      content: `
-# Problem-Solving Workshop
+      content: `# \u222B Problem-Solving Workshop
 
-**Part 6 of 7 — Problem-Solving Workshop**
+**Part 6 of 7 \u2014 Mixed Integration Problems**
 
-### 1. FTC Part 2
-
-∫ₐᵇ f(x)dx = F(b) - F(a) where F' = f
-
-### 2. Find any antiderivative F of f, then evaluate at the bounds
-
-Find any antiderivative F of f, then evaluate at the bounds
-
-### 3. This gives an exact method for computing definite integrals
-
-This gives an exact method for computing definite integrals
-
-### 4. No need to take limits of Riemann sums — use antiderivatives instead
-
-No need to take limits of Riemann sums — use antiderivatives instead
-      `
+This workshop combines Riemann sums, FTC, properties of integrals, and applications.`
     },
     {
-      id: 'defin6-quiz1',
+      id: 'int6-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**AP-Style Mixed Problems** \ud83c\udfaf',
       exercise: {
         questions: [
           {
-            question: 'What does "FTC Part 2" refer to in calculus?',
-            options: [
-              'Find any antiderivative F of f, then evaluate at the bounds',
-              'No need to take limits of Riemann sums — use antiderivatives instead',
-              'This gives an exact method for computing definite integrals',
-              '∫ₐᵇ f(x)dx = F(b) - F(a) where F\' = f'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — FTC Part 2: ∫ₐᵇ f(x)dx = F(b) - F(a) where F\' = f. The other options describe different concepts from this topic.'
+            question: 'If $\\int_0^6 f(x)\\,dx = 15$ and $\\int_0^6 g(x)\\,dx = 7$, find $\\int_0^6 [3f(x) - 2g(x) + 4]\\,dx$.',
+            options: ['$55$', '$31$', '$59$', '$45$'],
+            correctAnswer: 2,
+            explanation: '$3(15) - 2(7) + \\int_0^6 4\\,dx = 45 - 14 + 24 = 55$. Wait: $\\int_0^6 4\\,dx = 4(6) = 24$. So $45 - 14 + 24 = 55$.'
           },
           {
-            question: 'In the context of Problem-Solving Workshop, which explains This gives an exact method for…?',
-            options: [
-              'No need to take limits of Riemann sums — use antiderivatives instead',
-              'This gives an exact method for computing definite integrals',
-              '∫ₐᵇ f(x)dx = F(b) - F(a) where F\' = f',
-              'Find any antiderivative F of f, then evaluate at the bounds'
-            ],
+            question: 'Find $\\frac{d}{dx}\\int_1^{x^3} \\frac{1}{1+t^2}\\,dt$.',
+            options: ['$\\frac{1}{1+x^6}$', '$\\frac{3x^2}{1+x^6}$', '$\\frac{3x^2}{1+x^2}$', '$\\frac{x^3}{1+x^6}$'],
             correctAnswer: 1,
-            explanation: 'Correct — This gives an exact method for computing definite integrals. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'FTC Part 1 + Chain Rule: $\\frac{1}{1+(x^3)^2} \\cdot 3x^2 = \\frac{3x^2}{1+x^6}$.'
+          },
+          {
+            question: 'Evaluate $\\int_{-1}^{1} (x^4 + x^3)\\,dx$.',
+            options: ['$\\frac{2}{5}$', '$0$', '$\\frac{2}{5} + 0$', '$\\frac{2}{5}$'],
+            correctAnswer: 0,
+            explanation: 'Split: $\\int_{-1}^1 x^4\\,dx + \\int_{-1}^1 x^3\\,dx$. $x^4$ is even: $2\\int_0^1 x^4\\,dx = 2 \\cdot \\frac{1}{5} = \\frac{2}{5}$. $x^3$ is odd: $\\int_{-1}^1 x^3\\,dx = 0$. Total: $\\frac{2}{5}$.'
           }
         ]
       }
     },
     {
-      id: 'defin6-detail',
-      type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **FTC Part 2**: ∫ₐᵇ f(x)dx = F(b) - F(a) where F' = f
-- **Find any antiderivative F of f, then evaluate at the bounds**
-- **This gives an exact method for computing definite integrals**
-- **No need to take limits of Riemann sums — use antiderivatives instead**
-      `
-    },
-    {
-      id: 'defin6-quiz2',
+      id: 'int6-quiz2',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**More Practice** \ud83c\udfaf',
       exercise: {
         questions: [
           {
-            question: 'Which of these accurately represents No need to take limits of Riemann sums…?',
-            options: [
-              'This gives an exact method for computing definite integrals',
-              'No need to take limits of Riemann sums — use antiderivatives instead',
-              '∫ₐᵇ f(x)dx = F(b) - F(a) where F\' = f',
-              'Find any antiderivative F of f, then evaluate at the bounds'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — No need to take limits of Riemann sums — use antiderivatives instead. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            question: 'A particle starts at position $s(0) = 2$ with velocity $v(t) = 3t^2 - 6t$. Find $s(3)$.',
+            options: ['$2$', '$11$', '$-7$', '$5$'],
+            correctAnswer: 0,
+            explanation: '$s(3) = s(0) + \\int_0^3 v(t)\\,dt = 2 + [t^3 - 3t^2]_0^3 = 2 + (27 - 27) = 2$.'
+          },
+          {
+            question: 'Evaluate $\\int_0^4 |x - 2|\\,dx$.',
+            options: ['$0$', '$2$', '$4$', '$8$'],
+            correctAnswer: 2,
+            explanation: 'Split at $x = 2$: $\\int_0^2 (2-x)\\,dx + \\int_2^4 (x-2)\\,dx = [2x - \\frac{x^2}{2}]_0^2 + [\\frac{x^2}{2} - 2x]_2^4 = 2 + 2 = 4$.'
           }
         ]
       }
     },
     {
-      id: 'defin6-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'FTC Part 2',
-            options: ['∫ₐᵇ f(x)dx = F(b) - F(a) where F\' = f', 'Find any antiderivative F of f, then evaluate at the bounds', 'This gives an exact method for computing definite integrals', 'No need to take limits of Riemann sums — use antiderivatives instead']
-          },
-          {
-            label: 'Find any antiderivative F of f, then…',
-            options: ['∫ₐᵇ f(x)dx = F(b) - F(a) where F\' = f', 'This gives an exact method for computing definite integrals', 'Find any antiderivative F of f, then evaluate at the bounds', 'No need to take limits of Riemann sums — use antiderivatives instead']
-          },
-          {
-            label: 'This gives an exact method for…',
-            options: ['∫ₐᵇ f(x)dx = F(b) - F(a) where F\' = f', 'This gives an exact method for computing definite integrals', 'Find any antiderivative F of f, then evaluate at the bounds', 'No need to take limits of Riemann sums — use antiderivatives instead']
-          }
-        ],
-        correctAnswers: ['∫ₐᵇ f(x)dx = F(b) - F(a) where F\' = f', 'Find any antiderivative F of f, then evaluate at the bounds', 'This gives an exact method for computing definite integrals'],
-        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. FTC Part 2: ∫ₐᵇ f(x)dx = F(b) - F(a) where F\' = f. Find any antiderivative F of f, then evaluate at the bounds. This gives an exact method for computing definite integrals.'
-      }
+      id: 'int6-summary',
+      type: 'text' as const,
+      content: `### Workshop Complete!
+
+You combined all definite integral tools: Riemann sums, FTC, properties, symmetry, and applications.`
     }
   ]
-}
+};

@@ -1,125 +1,61 @@
-export const calcBCParametricPart1Data = {
+export const calcbcParametricPart1Data = {
   topicSlug: 'parametric-curves-calculus-calcbc',
   sections: [
     {
       id: 'param1-intro',
       type: 'text' as const,
-      content: `
-# ∮ Parametric Curves Calculus
+      content: `# Parametric Curves & Calculus
 
-**Part 1 of 7 — Parametric Equations Review**
+**Part 1 of 7 — Parametric Equations**
 
-### 1. Parametric curve
+### What Are Parametric Equations?
 
-x = f(t), y = g(t) for t in some interval
+Instead of $y = f(x)$, we express both coordinates in terms of a parameter $t$:
 
-### 2. The parameter t traces the curve as it varies
+$$x = f(t), \quad y = g(t)$$
 
-The parameter t traces the curve as it varies
+### First Derivative
 
-### 3. Direction of motion determined by increasing t
+$$\frac{dy}{dx} = \frac{dy/dt}{dx/dt} = \frac{g'(t)}{f'(t)}$$
 
-Direction of motion determined by increasing t
+### Worked Example
 
-### 4. Eliminate t to find the rectangular equation (when useful)
+$x = t^2$, $y = t^3$
 
-Eliminate t to find the rectangular equation (when useful)
-      `
+$\frac{dx}{dt} = 2t$, $\frac{dy}{dt} = 3t^2$
+
+$$\frac{dy}{dx} = \frac{3t^2}{2t} = \frac{3t}{2}$$
+
+At $t = 2$: slope $= 3$.`
     },
     {
       id: 'param1-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Parametric Derivatives** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Parametric curve?',
-            options: [
-              'The parameter t traces the curve as it varies',
-              'Eliminate t to find the rectangular equation (when useful)',
-              'Direction of motion determined by increasing t',
-              'x = f(t), y = g(t) for t in some interval'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Parametric curve: x = f(t), y = g(t) for t in some interval. The other options describe different concepts from this topic.'
+            question: 'Given $x = \\cos t$, $y = \\sin t$, find $\\frac{dy}{dx}$.',
+            options: ['$-\\cot t$', '$\\cot t$', '$-\\tan t$', '$\\tan t$'],
+            correctAnswer: 0,
+            explanation: '$\\frac{dy}{dx} = \\frac{\\cos t}{-\\sin t} = -\\cot t$.'
           },
           {
-            question: 'In the context of ∮ Parametric Curves Calculus, which explains Direction of motion determined by…?',
-            options: [
-              'The parameter t traces the curve as it varies',
-              'x = f(t), y = g(t) for t in some interval',
-              'Direction of motion determined by increasing t',
-              'Eliminate t to find the rectangular equation (when useful)'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Direction of motion determined by increasing t. Be careful to distinguish between the different concepts in this topic.'
+            question: 'For $x = t + 1$, $y = t^2 - 3t$, find $\\frac{dy}{dx}$ at $t = 2$.',
+            options: ['$1$', '$-1$', '$2$', '$0$'],
+            correctAnswer: 0,
+            explanation: '$\\frac{dy}{dx} = \\frac{2t-3}{1} = 2t - 3$. At $t = 2$: $2(2)-3 = 1$.'
           }
         ]
       }
     },
     {
-      id: 'param1-detail',
+      id: 'param1-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Parametric curve**: x = f(t), y = g(t) for t in some interval
-- **The parameter t traces the curve as it varies**
-- **Direction of motion determined by increasing t**
-- **Eliminate t to find the rectangular equation (when useful)**
-      `
-    },
-    {
-      id: 'param1-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which statement about Eliminate t to find the rectangular… is correct?',
-            options: [
-              'x = f(t), y = g(t) for t in some interval',
-              'Direction of motion determined by increasing t',
-              'Eliminate t to find the rectangular equation (when useful)',
-              'The parameter t traces the curve as it varies'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Eliminate t to find the rectangular equation (when useful). Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'param1-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Parametric curve',
-            options: ['Direction of motion determined by increasing t', 'The parameter t traces the curve as it varies', 'x = f(t), y = g(t) for t in some interval', 'Eliminate t to find the rectangular equation (when useful)']
-          },
-          {
-            label: 'The parameter t traces the curve as it…',
-            options: ['Direction of motion determined by increasing t', 'Eliminate t to find the rectangular equation (when useful)', 'x = f(t), y = g(t) for t in some interval', 'The parameter t traces the curve as it varies']
-          },
-          {
-            label: 'Direction of motion determined by…',
-            options: ['Eliminate t to find the rectangular equation (when useful)', 'Direction of motion determined by increasing t', 'x = f(t), y = g(t) for t in some interval', 'The parameter t traces the curve as it varies']
-          }
-        ],
-        correctAnswers: ['x = f(t), y = g(t) for t in some interval', 'The parameter t traces the curve as it varies', 'Direction of motion determined by increasing t'],
-        hint1: 'Think about what each concept specifically describes in ∮ Parametric Curves Calculus.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in ∮ Parametric Curves Calculus describes a specific idea. Parametric curve: x = f(t), y = g(t) for t in some interval. The parameter t traces the curve as it varies. Direction of motion determined by increasing t.'
-      }
+      content: `### Key Takeaways — Part 1
+1. $\\frac{dy}{dx} = \\frac{dy/dt}{dx/dt}$
+2. Horizontal tangent when $\\frac{dy}{dt} = 0$ (and $\\frac{dx}{dt} \\neq 0$)
+3. Vertical tangent when $\\frac{dx}{dt} = 0$`
     }
   ]
-}
+};

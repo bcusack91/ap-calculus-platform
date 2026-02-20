@@ -1,121 +1,44 @@
-export const calcABParticleMotionPart7Data = {
+export const calcabParticleMotionPart7Data = {
   topicSlug: 'particle-motion-calcab',
   sections: [
     {
-      id: 'parti7-intro',
+      id: 'pm7-intro',
       type: 'text' as const,
-      content: `
-# Review & Applications
+      content: `# Particle Motion \u2014 Review
 
-**Part 7 of 7 — Review & Applications**
-
-### 1. Given a velocity graph
-
-area above t-axis is positive displacement, below is negative
-
-### 2. Position at time b
-
-s(b) = s(a) + ∫ₐᵇ v(t)dt
-
-### 3. Acceleration is the slope of the velocity graph
-
-Acceleration is the slope of the velocity graph
-
-### 4. Particle farthest from origin when displacement is maximized
-
-Particle farthest from origin when displacement is maximized
-      `
+**Part 7 of 7 \u2014 Final Assessment**`
     },
     {
-      id: 'parti7-quiz1',
+      id: 'pm7-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Final Assessment** \ud83c\udfaf',
       exercise: {
         questions: [
           {
-            question: 'What does "Given a velocity graph" refer to in calculus?',
-            options: [
-              's(b) = s(a) + ∫ₐᵇ v(t)dt',
-              'Acceleration is the slope of the velocity graph',
-              'area above t-axis is positive displacement, below is negative',
-              'Particle farthest from origin when displacement is maximized'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Given a velocity graph: area above t-axis is positive displacement, below is negative. The other options describe different concepts from this topic.'
+            question: 'If $s(t) = t^4 - 8t^2$, when is the particle moving right?',
+            options: ['$t > 2$', '$(-2, 0) \\cup (2, \\infty)$', '$(0, 2)$', '$t > 0$'],
+            correctAnswer: 1,
+            explanation: '$v(t) = 4t^3 - 16t = 4t(t^2-4) = 4t(t-2)(t+2)$. $v > 0$ on $(-2, 0) \\cup (2, \\infty)$.'
           },
           {
-            question: 'Which of the following is true about Acceleration is the slope of the…?',
-            options: [
-              'Particle farthest from origin when displacement is maximized',
-              'area above t-axis is positive displacement, below is negative',
-              'Acceleration is the slope of the velocity graph',
-              's(b) = s(a) + ∫ₐᵇ v(t)dt'
-            ],
+            question: 'A particle has $v(t) = e^{-t}(1-t)$. At $t = 1$, is it speeding up or slowing down?',
+            options: ['Speeding up', 'Slowing down', 'Neither (at rest)', 'Cannot determine'],
             correctAnswer: 2,
-            explanation: 'Correct — Acceleration is the slope of the velocity graph. Be careful to distinguish between the different concepts in this topic.'
+            explanation: '$v(1) = e^{-1}(0) = 0$. The particle is at rest at $t = 1$, so neither speeding up nor slowing down.'
           }
         ]
       }
     },
     {
-      id: 'parti7-detail',
+      id: 'pm7-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
+      content: `### Particle Motion \u2014 Complete! \u2705
 
-- **Given a velocity graph**: area above t-axis is positive displacement, below is negative
-- **Position at time b**: s(b) = s(a) + ∫ₐᵇ v(t)dt
-- **Acceleration is the slope of the velocity graph**
-- **Particle farthest from origin when displacement is maximized**
-      `
-    },
-    {
-      id: 'parti7-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of these accurately represents Particle farthest from origin when…?',
-            options: [
-              'Particle farthest from origin when displacement is maximized',
-              'Acceleration is the slope of the velocity graph',
-              's(b) = s(a) + ∫ₐᵇ v(t)dt',
-              'area above t-axis is positive displacement, below is negative'
-            ],
-            correctAnswer: 0,
-            explanation: 'Correct — Particle farthest from origin when displacement is maximized. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'parti7-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Given a velocity graph',
-            options: ['area above t-axis is positive displacement, below is negative', 's(b) = s(a) + ∫ₐᵇ v(t)dt', 'Particle farthest from origin when displacement is maximized', 'Acceleration is the slope of the velocity graph']
-          },
-          {
-            label: 'Position at time b',
-            options: ['Acceleration is the slope of the velocity graph', 'area above t-axis is positive displacement, below is negative', 's(b) = s(a) + ∫ₐᵇ v(t)dt', 'Particle farthest from origin when displacement is maximized']
-          }
-        ],
-        correctAnswers: ['area above t-axis is positive displacement, below is negative', 's(b) = s(a) + ∫ₐᵇ v(t)dt'],
-        hint1: 'Think about what each concept specifically describes in Review & Applications.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Review & Applications describes a specific idea. Given a velocity graph: area above t-axis is positive displacement, below is negative. Position at time b: s(b) = s(a) + ∫ₐᵇ v(t)dt.'
-      }
+You have mastered:
+- \u2705 Position, velocity, acceleration relationships
+- \u2705 Displacement vs total distance
+- \u2705 Speed analysis (speeding up/slowing down)
+- \u2705 Finding position from velocity and acceleration`
     }
   ]
-}
+};

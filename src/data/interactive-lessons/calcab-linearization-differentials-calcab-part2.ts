@@ -1,125 +1,54 @@
-export const calcABLinearizationPart2Data = {
+export const calcabLinearizationPart2Data = {
   topicSlug: 'linearization-differentials-calcab',
   sections: [
     {
-      id: 'linea2-intro',
+      id: 'lin2-intro',
       type: 'text' as const,
-      content: `
-# Differentials
+      content: `# Linearization & Differentials
 
 **Part 2 of 7 — Differentials**
 
-### 1. Differential
+### The Differential $dy$
 
-dy = f'(x)dx represents the change along the tangent line
+$$dy = f'(x)\,dx$$
 
-### 2. Δy is the actual change in f; dy is the approximate change
+$dx$ is a small change in $x$, $dy$ is the corresponding estimated change in $y$.
 
-Δy is the actual change in f; dy is the approximate change
+### Differentials vs Actual Change
 
-### 3. dy ≈ Δy for small dx
+- $\Delta y = f(x + \Delta x) - f(x)$ — exact change
+- $dy = f'(x) \cdot dx$ — estimated change (using tangent line)
 
-dy ≈ Δy for small dx
-
-### 4. dx is an independent variable; dy depends on both x and dx
-
-dx is an independent variable; dy depends on both x and dx
-      `
+For small $dx$: $\Delta y \approx dy$`
     },
     {
-      id: 'linea2-quiz1',
+      id: 'lin2-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Differentials** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Differential?',
-            options: [
-              'Δy is the actual change in f; dy is the approximate change',
-              'dy ≈ Δy for small dx',
-              'dx is an independent variable; dy depends on both x and dx',
-              'dy = f\'(x)dx represents the change along the tangent line'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Differential: dy = f\'(x)dx represents the change along the tangent line. The other options describe different concepts from this topic.'
+            question: 'If $y = x^4$ and $x = 1$, $dx = 0.02$, find $dy$.',
+            options: ['$0.08$', '$0.04$', '$0.02$', '$0.16$'],
+            correctAnswer: 0,
+            explanation: '$dy = 4x^3 \cdot dx = 4(1)^3(0.02) = 0.08$.'
           },
           {
-            question: 'In the context of Differentials, which explains dy ≈ Δy for small dx?',
-            options: [
-              'dy ≈ Δy for small dx',
-              'dy = f\'(x)dx represents the change along the tangent line',
-              'Δy is the actual change in f; dy is the approximate change',
-              'dx is an independent variable; dy depends on both x and dx'
-            ],
+            question: 'A cube has side $s = 5$ cm measured with error $ds = \pm 0.1$ cm. Estimate the error in volume $V = s^3$.',
+            options: ['$\pm 7.5$ cm$^3$', '$\pm 0.3$ cm$^3$', '$\pm 15$ cm$^3$', '$\pm 0.001$ cm$^3$'],
             correctAnswer: 0,
-            explanation: 'Correct — dy ≈ Δy for small dx. Be careful to distinguish between the different concepts in this topic.'
+            explanation: '$dV = 3s^2 \cdot ds = 3(25)(0.1) = 7.5$ cm$^3$.'
           }
         ]
       }
     },
     {
-      id: 'linea2-detail',
+      id: 'lin2-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Differential**: dy = f'(x)dx represents the change along the tangent line
-- **Δy is the actual change in f; dy is the approximate change**
-- **dy ≈ Δy for small dx**
-- **dx is an independent variable; dy depends on both x and dx**
-      `
-    },
-    {
-      id: 'linea2-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Regarding Differentials, which correctly describes dx is an independent variable; dy…?',
-            options: [
-              'dx is an independent variable; dy depends on both x and dx',
-              'dy = f\'(x)dx represents the change along the tangent line',
-              'Δy is the actual change in f; dy is the approximate change',
-              'dy ≈ Δy for small dx'
-            ],
-            correctAnswer: 0,
-            explanation: 'Correct — dx is an independent variable; dy depends on both x and dx. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'linea2-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Differential',
-            options: ['dy ≈ Δy for small dx', 'dy = f\'(x)dx represents the change along the tangent line', 'Δy is the actual change in f; dy is the approximate change', 'dx is an independent variable; dy depends on both x and dx']
-          },
-          {
-            label: 'Δy is the actual change in f; dy is the…',
-            options: ['dy = f\'(x)dx represents the change along the tangent line', 'Δy is the actual change in f; dy is the approximate change', 'dy ≈ Δy for small dx', 'dx is an independent variable; dy depends on both x and dx']
-          },
-          {
-            label: 'dy ≈ Δy for small dx',
-            options: ['dy ≈ Δy for small dx', 'Δy is the actual change in f; dy is the approximate change', 'dx is an independent variable; dy depends on both x and dx', 'dy = f\'(x)dx represents the change along the tangent line']
-          }
-        ],
-        correctAnswers: ['dy = f\'(x)dx represents the change along the tangent line', 'Δy is the actual change in f; dy is the approximate change', 'dy ≈ Δy for small dx'],
-        hint1: 'Think about what each concept specifically describes in Differentials.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Differentials describes a specific idea. Differential: dy = f\'(x)dx represents the change along the tangent line. Δy is the actual change in f; dy is the approximate change. dy ≈ Δy for small dx.'
-      }
+      content: `### Key Takeaways — Part 2
+1. $dy = f'(x)\,dx$
+2. Differentials estimate the change in output for a small change in input
+3. Error propagation uses differentials`
     }
   ]
-}
+};

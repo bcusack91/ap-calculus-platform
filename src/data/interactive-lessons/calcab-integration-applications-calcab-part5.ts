@@ -1,121 +1,45 @@
-export const calcABIntAppsPart5Data = {
+export const calcabIntAppsPart5Data = {
   topicSlug: 'integration-applications-calcab',
   sections: [
     {
-      id: 'integ5-intro',
+      id: 'ia5-intro',
       type: 'text' as const,
-      content: `
-# Work & Fluid Force (Preview)
+      content: `# Integration Applications
 
-**Part 5 of 7 — Work & Fluid Force (Preview)**
+**Part 5 of 7 — Rate Problems & Net Change**
 
-### 1. Work = ∫ₐᵇ F(x)dx where F(x) is force as a function of position
+### The Net Change Theorem
 
-Work = ∫ₐᵇ F(x)dx where F(x) is force as a function of position
+$$\int_a^b f'(x)\,dx = f(b) - f(a)$$
 
-### 2. Spring force
+### Common Contexts
 
-F(x) = kx (Hooke's Law)
-
-### 3. Pumping fluid
-
-W = ∫ρg · A(y) · (D-y) dy
-
-### 4. These applications extend the accumulation framework to physics
-
-These applications extend the accumulation framework to physics
-      `
+- **Water flow**: $\int R(t)\,dt$ = total water
+- **Population**: $\int P'(t)\,dt$ = net change in population
+- **Cost**: $\int C'(x)\,dx$ = total cost change
+- **Velocity**: $\int v(t)\,dt$ = displacement`
     },
     {
-      id: 'integ5-quiz1',
+      id: 'ia5-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Rate Problems** 🎯\n\nWater flows into a tank at $R(t) = 10 + \\sin(t)$ gal/min.',
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains Work = ∫ₐᵇ F(x)dx where F(x) is force…?',
-            options: [
-              'F(x) = kx (Hooke\'s Law)',
-              'W = ∫ρg · A(y) · (D-y) dy',
-              'These applications extend the accumulation framework to physics',
-              'Work = ∫ₐᵇ F(x)dx where F(x) is force as a function of position'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Work = ∫ₐᵇ F(x)dx where F(x) is force as a function of position. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'In the context of Work & Fluid Force (Preview), which explains Pumping fluid?',
-            options: [
-              'These applications extend the accumulation framework to physics',
-              'W = ∫ρg · A(y) · (D-y) dy',
-              'Work = ∫ₐᵇ F(x)dx where F(x) is force as a function of position',
-              'F(x) = kx (Hooke\'s Law)'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Pumping fluid: W = ∫ρg · A(y) · (D-y) dy. Be careful to distinguish between the different concepts in this topic.'
+            question: 'How much water enters the tank from $t = 0$ to $t = \\pi$?',
+            options: ['$10\\pi + 2$ gal', '$10\\pi$ gal', '$10\\pi - 2$ gal', '$2$ gal'],
+            correctAnswer: 0,
+            explanation: '$\\int_0^{\\pi}(10 + \\sin t)\\,dt = [10t - \\cos t]_0^{\\pi} = (10\\pi + 1) - (0 - 1) = 10\\pi + 2$.'
           }
         ]
       }
     },
     {
-      id: 'integ5-detail',
+      id: 'ia5-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Work = ∫ₐᵇ F(x)dx where F(x) is force as a function of position**
-- **Spring force**: F(x) = kx (Hooke's Law)
-- **Pumping fluid**: W = ∫ρg · A(y) · (D-y) dy
-- **These applications extend the accumulation framework to physics**
-      `
-    },
-    {
-      id: 'integ5-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which statement about These applications extend the… is correct?',
-            options: [
-              'Work = ∫ₐᵇ F(x)dx where F(x) is force as a function of position',
-              'F(x) = kx (Hooke\'s Law)',
-              'W = ∫ρg · A(y) · (D-y) dy',
-              'These applications extend the accumulation framework to physics'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — These applications extend the accumulation framework to physics. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'integ5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Spring force',
-            options: ['F(x) = kx (Hooke\'s Law)', 'Work = ∫ₐᵇ F(x)dx where F(x) is force as a function of position', 'W = ∫ρg · A(y) · (D-y) dy', 'These applications extend the accumulation framework to physics']
-          },
-          {
-            label: 'Pumping fluid',
-            options: ['Work = ∫ₐᵇ F(x)dx where F(x) is force as a function of position', 'W = ∫ρg · A(y) · (D-y) dy', 'F(x) = kx (Hooke\'s Law)', 'These applications extend the accumulation framework to physics']
-          }
-        ],
-        correctAnswers: ['F(x) = kx (Hooke\'s Law)', 'W = ∫ρg · A(y) · (D-y) dy'],
-        hint1: 'Think about what each concept specifically describes in Work & Fluid Force (Preview).',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Work & Fluid Force (Preview) describes a specific idea. Spring force: F(x) = kx (Hooke\'s Law). Pumping fluid: W = ∫ρg · A(y) · (D-y) dy.'
-      }
+      content: `### Key Takeaways — Part 5
+1. Integrating a rate gives total accumulation
+2. Include units in your answer on the AP exam`
     }
   ]
-}
+};

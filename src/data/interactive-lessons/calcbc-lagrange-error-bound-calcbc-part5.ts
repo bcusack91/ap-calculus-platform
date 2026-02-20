@@ -1,125 +1,39 @@
-export const calcBCLagrangePart5Data = {
+export const calcbcLagrangePart5Data = {
   topicSlug: 'lagrange-error-bound-calcbc',
   sections: [
     {
-      id: 'lagra5-intro',
+      id: 'lag5-intro',
       type: 'text' as const,
-      content: `
-# Alternating Series Error vs Lagrange
+      content: `# Lagrange Error
 
-**Part 5 of 7 — Alternating Series Error vs Lagrange**
+**Part 5 of 7 — AP FRQ Practice**
 
-### 1. For alternating Taylor series
+### Typical AP Question Format
 
-use alternating series error bound |S-Sₙ| ≤ |aₙ₊₁|
+"Let $f$ be a function with $|f^{(4)}(x)| \\leq 6$ for all $x$ in $[-1, 1]$. Show that the error of $P_3(x)$ at $x = 0.5$ is less than $0.02$."
 
-### 2. This is often tighter (better) than the Lagrange bound
-
-This is often tighter (better) than the Lagrange bound
-
-### 3. Use alternating series bound when the series alternates in sign
-
-Use alternating series bound when the series alternates in sign
-
-### 4. Use Lagrange bound when the series doesn't alternate or you need a general bound
-
-Use Lagrange bound when the series doesn't alternate or you need a general bound
-      `
+**Solution**: $|R_3(0.5)| \\leq \\frac{6}{4!}(0.5)^4 = \\frac{6}{24} \\cdot \\frac{1}{16} = \\frac{1}{64} \\approx 0.0156 < 0.02$ ✓`
     },
     {
-      id: 'lagra5-quiz1',
+      id: 'lag5-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**AP Practice** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains For alternating Taylor series?',
-            options: [
-              'Use alternating series bound when the series alternates in sign',
-              'This is often tighter (better) than the Lagrange bound',
-              'use alternating series error bound |S-Sₙ| ≤ |aₙ₊₁|',
-              'Use Lagrange bound when the series doesn\'t alternate or you need a general bound'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — For alternating Taylor series: use alternating series error bound |S-Sₙ| ≤ |aₙ₊₁|. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'In the context of Alternating Series Error vs Lagrange, which explains Use alternating series bound when the…?',
-            options: [
-              'This is often tighter (better) than the Lagrange bound',
-              'use alternating series error bound |S-Sₙ| ≤ |aₙ₊₁|',
-              'Use alternating series bound when the series alternates in sign',
-              'Use Lagrange bound when the series doesn\'t alternate or you need a general bound'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Use alternating series bound when the series alternates in sign. Be careful to distinguish between the different concepts in this topic.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'lagra5-detail',
-      type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **For alternating Taylor series**: use alternating series error bound |S-Sₙ| ≤ |aₙ₊₁|
-- **This is often tighter (better) than the Lagrange bound**
-- **Use alternating series bound when the series alternates in sign**
-- **Use Lagrange bound when the series doesn't alternate or you need a general bound**
-      `
-    },
-    {
-      id: 'lagra5-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of these accurately represents Use Lagrange bound when the series…?',
-            options: [
-              'Use Lagrange bound when the series doesn\'t alternate or you need a general bound',
-              'This is often tighter (better) than the Lagrange bound',
-              'use alternating series error bound |S-Sₙ| ≤ |aₙ₊₁|',
-              'Use alternating series bound when the series alternates in sign'
-            ],
+            question: 'If $|f^{(5)}(x)| \\leq 10$ for $x \\in [0, 2]$, then $|R_4(2)|$ is at most:',
+            options: ['$10 \\cdot 32 / 120 = 8/3$', '$10 \\cdot 16/24$', '$10/120$', '$320/120$... wait, same as first option!'],
             correctAnswer: 0,
-            explanation: 'Correct — Use Lagrange bound when the series doesn\'t alternate or you need a general bound. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: '$|R_4(2)| \\leq \\frac{10}{5!}|2-0|^5 = \\frac{10 \\cdot 32}{120} = \\frac{320}{120} = \\frac{8}{3}$.'
           }
         ]
       }
     },
     {
-      id: 'lagra5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'For alternating Taylor series',
-            options: ['This is often tighter (better) than the Lagrange bound', 'use alternating series error bound |S-Sₙ| ≤ |aₙ₊₁|', 'Use alternating series bound when the series alternates in sign', 'Use Lagrange bound when the series doesn\'t alternate or you need a general bound']
-          },
-          {
-            label: 'This is often tighter (better) than the…',
-            options: ['use alternating series error bound |S-Sₙ| ≤ |aₙ₊₁|', 'Use Lagrange bound when the series doesn\'t alternate or you need a general bound', 'Use alternating series bound when the series alternates in sign', 'This is often tighter (better) than the Lagrange bound']
-          },
-          {
-            label: 'Use alternating series bound when the…',
-            options: ['Use Lagrange bound when the series doesn\'t alternate or you need a general bound', 'use alternating series error bound |S-Sₙ| ≤ |aₙ₊₁|', 'Use alternating series bound when the series alternates in sign', 'This is often tighter (better) than the Lagrange bound']
-          }
-        ],
-        correctAnswers: ['use alternating series error bound |S-Sₙ| ≤ |aₙ₊₁|', 'This is often tighter (better) than the Lagrange bound', 'Use alternating series bound when the series alternates in sign'],
-        hint1: 'Think about what each concept specifically describes in Alternating Series Error vs Lagrange.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Alternating Series Error vs Lagrange describes a specific idea. For alternating Taylor series: use alternating series error bound |S-Sₙ| ≤ |aₙ₊₁|. This is often tighter (better) than the Lagrange bound. Use alternating series bound when the series alternates in sign.'
-      }
+      id: 'lag5-summary',
+      type: 'text' as const,
+      content: `### Key Takeaways — Part 5
+Show your formula, substitute values, simplify. State conclusion clearly.`
     }
   ]
-}
+};

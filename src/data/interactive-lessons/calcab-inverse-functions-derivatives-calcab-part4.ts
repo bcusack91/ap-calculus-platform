@@ -1,125 +1,55 @@
-export const calcABInverseDerivPart4Data = {
+export const calcabInverseFunctionsPart4Data = {
   topicSlug: 'inverse-functions-derivatives-calcab',
   sections: [
     {
-      id: 'inver4-intro',
+      id: 'inv4-intro',
       type: 'text' as const,
-      content: `
-# Integrals Leading to Inverse Trig
+      content: `# Inverse Functions & Their Derivatives
 
-**Part 4 of 7 — Integrals Leading to Inverse Trig**
+**Part 4 of 7 — Table-Based Inverse Problems**
 
-### 1. ∫1/√(a²-x²) dx = arcsin(x/a) + C
+### The AP Pattern
 
-∫1/√(a²-x²) dx = arcsin(x/a) + C
+Given a table of $f$ and $f'$ values, find $(f^{-1})'$ at a point.
 
-### 2. ∫1/(a²+x²) dx = (1/a)arctan(x/a) + C
+| $x$ | $f(x)$ | $f'(x)$ |
+|-----|---------|----------|
+| 1 | 4 | 3 |
+| 2 | 7 | 5 |
+| 4 | 10 | 2 |
 
-∫1/(a²+x²) dx = (1/a)arctan(x/a) + C
+To find $(f^{-1})'(7)$:
 
-### 3. Recognize these forms in integrands
-
-Recognize these forms in integrands
-
-### 4. May need to complete the square or factor to reveal these forms
-
-May need to complete the square or factor to reveal these forms
-      `
+1. $f(2) = 7$, so $f^{-1}(7) = 2$
+2. $(f^{-1})'(7) = \\frac{1}{f'(2)} = \\frac{1}{5}$`
     },
     {
-      id: 'inver4-quiz1',
+      id: 'inv4-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Table Problems** 🎯\n\nUsing the table: $f(1) = 4$, $f\'(1) = 3$, $f(2) = 7$, $f\'(2) = 5$, $f(4) = 10$, $f\'(4) = 2$.',
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes ∫1/√(a²-x²) dx = arcsin(x/a) + C?',
-            options: [
-              'Recognize these forms in integrands',
-              '∫1/√(a²-x²) dx = arcsin(x/a) + C',
-              '∫1/(a²+x²) dx = (1/a)arctan(x/a) + C',
-              'May need to complete the square or factor to reveal these forms'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — ∫1/√(a²-x²) dx = arcsin(x/a) + C. The other options describe different concepts from this topic.'
+            question: 'Find $(f^{-1})\'(4)$.',
+            options: ['$\\frac{1}{3}$', '$3$', '$\\frac{1}{4}$', '$4$'],
+            correctAnswer: 0,
+            explanation: '$f(1) = 4$, so $f^{-1}(4) = 1$. $(f^{-1})\'(4) = \\frac{1}{f\'(1)} = \\frac{1}{3}$.'
           },
           {
-            question: 'Select the statement that correctly describes Recognize these forms in integrands:',
-            options: [
-              '∫1/√(a²-x²) dx = arcsin(x/a) + C',
-              'May need to complete the square or factor to reveal these forms',
-              '∫1/(a²+x²) dx = (1/a)arctan(x/a) + C',
-              'Recognize these forms in integrands'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Recognize these forms in integrands. Be careful to distinguish between the different concepts in this topic.'
+            question: 'Find $(f^{-1})\'(10)$.',
+            options: ['$\\frac{1}{2}$', '$2$', '$\\frac{1}{10}$', '$4$'],
+            correctAnswer: 0,
+            explanation: '$f(4) = 10$, so $f^{-1}(10) = 4$. $(f^{-1})\'(10) = \\frac{1}{f\'(4)} = \\frac{1}{2}$.'
           }
         ]
       }
     },
     {
-      id: 'inver4-detail',
+      id: 'inv4-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **∫1/√(a²-x²) dx = arcsin(x/a) + C**
-- **∫1/(a²+x²) dx = (1/a)arctan(x/a) + C**
-- **Recognize these forms in integrands**
-- **May need to complete the square or factor to reveal these forms**
-      `
-    },
-    {
-      id: 'inver4-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Regarding Integrals Leading to Inverse Trig, which correctly describes May need to complete the square or…?',
-            options: [
-              '∫1/√(a²-x²) dx = arcsin(x/a) + C',
-              'May need to complete the square or factor to reveal these forms',
-              '∫1/(a²+x²) dx = (1/a)arctan(x/a) + C',
-              'Recognize these forms in integrands'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — May need to complete the square or factor to reveal these forms. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'inver4-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: '∫1/√(a²-x²) dx = arcsin(x/a) + C',
-            options: ['∫1/(a²+x²) dx = (1/a)arctan(x/a) + C', 'May need to complete the square or factor to reveal these forms', 'Recognize these forms in integrands', '∫1/√(a²-x²) dx = arcsin(x/a) + C']
-          },
-          {
-            label: '∫1/(a²+x²) dx = (1/a)arctan(x/a) + C',
-            options: ['Recognize these forms in integrands', '∫1/√(a²-x²) dx = arcsin(x/a) + C', 'May need to complete the square or factor to reveal these forms', '∫1/(a²+x²) dx = (1/a)arctan(x/a) + C']
-          },
-          {
-            label: 'Recognize these forms in integrands',
-            options: ['∫1/(a²+x²) dx = (1/a)arctan(x/a) + C', 'May need to complete the square or factor to reveal these forms', 'Recognize these forms in integrands', '∫1/√(a²-x²) dx = arcsin(x/a) + C']
-          }
-        ],
-        correctAnswers: ['∫1/√(a²-x²) dx = arcsin(x/a) + C', '∫1/(a²+x²) dx = (1/a)arctan(x/a) + C', 'Recognize these forms in integrands'],
-        hint1: 'Think about what each concept specifically describes in Integrals Leading to Inverse Trig.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Integrals Leading to Inverse Trig describes a specific idea. ∫1/√(a²-x²) dx = arcsin(x/a) + C. ∫1/(a²+x²) dx = (1/a)arctan(x/a) + C. Recognize these forms in integrands.'
-      }
+      content: `### Key Takeaways — Part 4
+1. find the $x$ where $f(x) = $ the target value
+2. Take reciprocal of $f'$ at that $x$`
     }
   ]
-}
+};

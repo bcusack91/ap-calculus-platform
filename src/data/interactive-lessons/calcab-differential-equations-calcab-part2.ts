@@ -1,125 +1,61 @@
-export const calcABDiffEqPart2Data = {
+export const calcabDiffEqPart2Data = {
   topicSlug: 'differential-equations-calcab',
   sections: [
     {
-      id: 'diffe2-intro',
+      id: 'de2-intro',
       type: 'text' as const,
-      content: `
-# Slope Fields
+      content: `# Differential Equations
 
-**Part 2 of 7 — Slope Fields**
+**Part 2 of 7 \u2014 Separation of Variables**
 
-### 1. Slope field
+### The Method
 
-grid of short line segments with slope dy/dx at each point
+For DEs of the form $\\frac{dy}{dx} = f(x) \\cdot g(y)$:
 
-### 2. Each segment shows the slope a solution curve would have at that point
+1. Separate: $\\frac{dy}{g(y)} = f(x)\\,dx$
+2. Integrate both sides
+3. Solve for $y$ (if possible)
 
-Each segment shows the slope a solution curve would have at that point
+### Worked Example
 
-### 3. Solution curves follow the pattern of the slope field
+$\\frac{dy}{dx} = xy$, $y(0) = 2$.
 
-Solution curves follow the pattern of the slope field
+$\\frac{dy}{y} = x\\,dx$
 
-### 4. Draw by evaluating dy/dx at grid points and sketching segments
+$\\ln|y| = \\frac{x^2}{2} + C$
 
-Draw by evaluating dy/dx at grid points and sketching segments
-      `
+$y = Ae^{x^2/2}$ where $A = e^C$
+
+$y(0) = A = 2$. So $y = 2e^{x^2/2}$.`
     },
     {
-      id: 'diffe2-quiz1',
+      id: 'de2-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Separation of Variables** \ud83c\udfaf',
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains Slope field?',
-            options: [
-              'Each segment shows the slope a solution curve would have at that point',
-              'Solution curves follow the pattern of the slope field',
-              'Draw by evaluating dy/dx at grid points and sketching segments',
-              'grid of short line segments with slope dy/dx at each point'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Slope field: grid of short line segments with slope dy/dx at each point. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Select the statement that correctly describes Solution curves follow the pattern of…:',
-            options: [
-              'grid of short line segments with slope dy/dx at each point',
-              'Draw by evaluating dy/dx at grid points and sketching segments',
-              'Solution curves follow the pattern of the slope field',
-              'Each segment shows the slope a solution curve would have at that point'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Solution curves follow the pattern of the slope field. Be careful to distinguish between the different concepts in this topic.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'diffe2-detail',
-      type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Slope field**: grid of short line segments with slope dy/dx at each point
-- **Each segment shows the slope a solution curve would have at that point**
-- **Solution curves follow the pattern of the slope field**
-- **Draw by evaluating dy/dx at grid points and sketching segments**
-      `
-    },
-    {
-      id: 'diffe2-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Regarding Slope Fields, which correctly describes Draw by evaluating dy/dx at grid points…?',
-            options: [
-              'Draw by evaluating dy/dx at grid points and sketching segments',
-              'Solution curves follow the pattern of the slope field',
-              'Each segment shows the slope a solution curve would have at that point',
-              'grid of short line segments with slope dy/dx at each point'
-            ],
+            question: 'Solve $\\frac{dy}{dx} = \\frac{x}{y}$ with $y(0) = 3$.',
+            options: ['$y = \\sqrt{x^2 + 9}$', '$y = x^2 + 9$', '$y = \\sqrt{x + 9}$', '$y = \\sqrt{2x^2 + 9}$'],
             correctAnswer: 0,
-            explanation: 'Correct — Draw by evaluating dy/dx at grid points and sketching segments. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: '$y\\,dy = x\\,dx$. $\\frac{y^2}{2} = \\frac{x^2}{2} + C$. $y^2 = x^2 + 2C$. $y(0) = 3$: $9 = 2C$, so $y^2 = x^2 + 9$, $y = \\sqrt{x^2 + 9}$.'
+          },
+          {
+            question: 'Solve $\\frac{dy}{dx} = 3y$ with $y(0) = 5$.',
+            options: ['$y = 5e^{3x}$', '$y = 3e^{5x}$', '$y = 5 + 3x$', '$y = e^{3x} + 4$'],
+            correctAnswer: 0,
+            explanation: '$\\frac{dy}{y} = 3\\,dx$. $\\ln|y| = 3x + C$. $y = Ae^{3x}$. $y(0) = A = 5$.'
           }
         ]
       }
     },
     {
-      id: 'diffe2-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Slope field',
-            options: ['Draw by evaluating dy/dx at grid points and sketching segments', 'Solution curves follow the pattern of the slope field', 'Each segment shows the slope a solution curve would have at that point', 'grid of short line segments with slope dy/dx at each point']
-          },
-          {
-            label: 'Each segment shows the slope a solution…',
-            options: ['Each segment shows the slope a solution curve would have at that point', 'Draw by evaluating dy/dx at grid points and sketching segments', 'Solution curves follow the pattern of the slope field', 'grid of short line segments with slope dy/dx at each point']
-          },
-          {
-            label: 'Solution curves follow the pattern of…',
-            options: ['Each segment shows the slope a solution curve would have at that point', 'Draw by evaluating dy/dx at grid points and sketching segments', 'grid of short line segments with slope dy/dx at each point', 'Solution curves follow the pattern of the slope field']
-          }
-        ],
-        correctAnswers: ['grid of short line segments with slope dy/dx at each point', 'Each segment shows the slope a solution curve would have at that point', 'Solution curves follow the pattern of the slope field'],
-        hint1: 'Think about what each concept specifically describes in Slope Fields.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Slope Fields describes a specific idea. Slope field: grid of short line segments with slope dy/dx at each point. Each segment shows the slope a solution curve would have at that point. Solution curves follow the pattern of the slope field.'
-      }
+      id: 'de2-summary',
+      type: 'text' as const,
+      content: `### Key Takeaways \u2014 Part 2
+1. Separate variables: get all $y$ on one side, all $x$ on the other
+2. Integrate both sides
+3. Don't forget the constant $+C$ (or $A = e^C$ for exponentials)`
     }
   ]
-}
+};

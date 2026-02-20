@@ -1,125 +1,56 @@
-export const calcABInverseDerivPart3Data = {
+export const calcabInverseFunctionsPart3Data = {
   topicSlug: 'inverse-functions-derivatives-calcab',
   sections: [
     {
-      id: 'inver3-intro',
+      id: 'inv3-intro',
       type: 'text' as const,
-      content: `
-# Derivatives of Inverse Trig Functions
+      content: `# Inverse Functions & Their Derivatives
 
-**Part 3 of 7 — Derivatives of Inverse Trig Functions**
+**Part 3 of 7 — $e^x$ and $\\ln x$ Review**
 
-### 1. d/dx[arcsin(x)] = 1/√(1-x²)
+### Essential Derivatives
 
-d/dx[arcsin(x)] = 1/√(1-x²)
+$$\\frac{d}{dx}[e^x] = e^x \\qquad \\frac{d}{dx}[\\ln x] = \\frac{1}{x}$$
 
-### 2. d/dx[arccos(x)] = -1/√(1-x²)
+$$\\frac{d}{dx}[a^x] = a^x \\ln a \\qquad \\frac{d}{dx}[\\log_a x] = \\frac{1}{x \\ln a}$$
 
-d/dx[arccos(x)] = -1/√(1-x²)
+### Logarithmic Differentiation
 
-### 3. d/dx[arctan(x)] = 1/(1+x²)
+For complex products/quotients, take $\\ln$ of both sides first.
 
-d/dx[arctan(x)] = 1/(1+x²)
+**Example:** $y = \\frac{x^2 \\sqrt{x+1}}{(x-3)^4}$
 
-### 4. With chain rule
+$\\ln y = 2\\ln x + \\frac{1}{2}\\ln(x+1) - 4\\ln(x-3)$
 
-d/dx[arctan(g(x))] = g'(x)/(1+[g(x)]²)
-      `
+$\\frac{y'}{y} = \\frac{2}{x} + \\frac{1}{2(x+1)} - \\frac{4}{x-3}$`
     },
     {
-      id: 'inver3-quiz1',
+      id: 'inv3-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Exponential & Log Derivatives** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes d/dx[arcsin(x)] = 1/√(1-x²)?',
-            options: [
-              'd/dx[arccos(x)] = -1/√(1-x²)',
-              'd/dx[arctan(x)] = 1/(1+x²)',
-              'd/dx[arcsin(x)] = 1/√(1-x²)',
-              'd/dx[arctan(g(x))] = g\'(x)/(1+[g(x)]²)'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — d/dx[arcsin(x)] = 1/√(1-x²). The other options describe different concepts from this topic.'
+            question: 'Find $\\frac{d}{dx}[e^{\\sin x}]$.',
+            options: ['$e^{\\sin x} \\cos x$', '$e^{\\sin x}$', '$e^{\\cos x}$', '$\\cos x \\cdot e^x$'],
+            correctAnswer: 0,
+            explanation: 'Chain rule: $e^{\\sin x} \\cdot \\cos x$.'
           },
           {
-            question: 'In the context of Derivatives of Inverse Trig Functions, which explains d/dx[arctan(x)] = 1/(1+x²)?',
-            options: [
-              'd/dx[arccos(x)] = -1/√(1-x²)',
-              'd/dx[arctan(g(x))] = g\'(x)/(1+[g(x)]²)',
-              'd/dx[arcsin(x)] = 1/√(1-x²)',
-              'd/dx[arctan(x)] = 1/(1+x²)'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — d/dx[arctan(x)] = 1/(1+x²). Be careful to distinguish between the different concepts in this topic.'
+            question: 'Find $\\frac{d}{dx}[\\ln(x^2 + 1)]$.',
+            options: ['$\\frac{2x}{x^2+1}$', '$\\frac{1}{x^2+1}$', '$\\frac{2x}{x}$', '$\\frac{1}{2x}$'],
+            correctAnswer: 0,
+            explanation: '$\\frac{d}{dx}[\\ln(x^2+1)] = \\frac{2x}{x^2+1}$.'
           }
         ]
       }
     },
     {
-      id: 'inver3-detail',
+      id: 'inv3-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **d/dx[arcsin(x)] = 1/√(1-x²)**
-- **d/dx[arccos(x)] = -1/√(1-x²)**
-- **d/dx[arctan(x)] = 1/(1+x²)**
-- **With chain rule**: d/dx[arctan(g(x))] = g'(x)/(1+[g(x)]²)
-      `
-    },
-    {
-      id: 'inver3-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which statement about With chain rule is correct?',
-            options: [
-              'd/dx[arctan(x)] = 1/(1+x²)',
-              'd/dx[arccos(x)] = -1/√(1-x²)',
-              'd/dx[arcsin(x)] = 1/√(1-x²)',
-              'd/dx[arctan(g(x))] = g\'(x)/(1+[g(x)]²)'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — With chain rule: d/dx[arctan(g(x))] = g\'(x)/(1+[g(x)]²). Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'inver3-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'd/dx[arcsin(x)] = 1/√(1-x²)',
-            options: ['d/dx[arccos(x)] = -1/√(1-x²)', 'd/dx[arctan(x)] = 1/(1+x²)', 'd/dx[arcsin(x)] = 1/√(1-x²)', 'd/dx[arctan(g(x))] = g\'(x)/(1+[g(x)]²)']
-          },
-          {
-            label: 'd/dx[arccos(x)] = -1/√(1-x²)',
-            options: ['d/dx[arccos(x)] = -1/√(1-x²)', 'd/dx[arctan(g(x))] = g\'(x)/(1+[g(x)]²)', 'd/dx[arcsin(x)] = 1/√(1-x²)', 'd/dx[arctan(x)] = 1/(1+x²)']
-          },
-          {
-            label: 'd/dx[arctan(x)] = 1/(1+x²)',
-            options: ['d/dx[arctan(x)] = 1/(1+x²)', 'd/dx[arctan(g(x))] = g\'(x)/(1+[g(x)]²)', 'd/dx[arccos(x)] = -1/√(1-x²)', 'd/dx[arcsin(x)] = 1/√(1-x²)']
-          }
-        ],
-        correctAnswers: ['d/dx[arcsin(x)] = 1/√(1-x²)', 'd/dx[arccos(x)] = -1/√(1-x²)', 'd/dx[arctan(x)] = 1/(1+x²)'],
-        hint1: 'Think about what each concept specifically describes in Derivatives of Inverse Trig Functions.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Derivatives of Inverse Trig Functions describes a specific idea. d/dx[arcsin(x)] = 1/√(1-x²). d/dx[arccos(x)] = -1/√(1-x²). d/dx[arctan(x)] = 1/(1+x²).'
-      }
+      content: `### Key Takeaways — Part 3
+1. $e^x$ and $\\ln x$ are inverses with simple derivatives
+2. Always apply chain rule with composite functions`
     }
   ]
-}
+};

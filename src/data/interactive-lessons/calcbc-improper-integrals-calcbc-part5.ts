@@ -1,121 +1,39 @@
-export const calcBCImproperPart5Data = {
+export const calcbcImproperPart5Data = {
   topicSlug: 'improper-integrals-calcbc',
   sections: [
     {
-      id: 'impro5-intro',
+      id: 'imp5-intro',
       type: 'text' as const,
-      content: `
-# Applications of Improper Integrals
+      content: `# Improper Integrals
 
-**Part 5 of 7 — Applications of Improper Integrals**
+**Part 5 of 7 — Both-Sided Improper Integrals**
 
-### 1. Probability
+### Integrals from $-\infty$ to $\infty$
 
-∫₋∞^∞ f(x)dx = 1 for probability density functions
+$$\int_{-\infty}^{\infty} f(x)\,dx = \int_{-\infty}^c f(x)\,dx + \int_c^{\infty} f(x)\,dx$$
 
-### 2. Laplace transforms use improper integrals
-
-Laplace transforms use improper integrals
-
-### 3. Area under curves that extend to infinity
-
-Area under curves that extend to infinity
-
-### 4. Gabriel's Horn
-
-finite volume but infinite surface area
-      `
+**Both** must converge independently!`
     },
     {
-      id: 'impro5-quiz1',
+      id: 'imp5-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Full Line Integrals** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Probability?',
-            options: [
-              'Laplace transforms use improper integrals',
-              'finite volume but infinite surface area',
-              'Area under curves that extend to infinity',
-              '∫₋∞^∞ f(x)dx = 1 for probability density functions'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Probability: ∫₋∞^∞ f(x)dx = 1 for probability density functions. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'In the context of Applications of Improper Integrals, which explains Area under curves that extend to…?',
-            options: [
-              'Area under curves that extend to infinity',
-              '∫₋∞^∞ f(x)dx = 1 for probability density functions',
-              'Laplace transforms use improper integrals',
-              'finite volume but infinite surface area'
-            ],
+            question: 'Evaluate $\\int_{-\\infty}^{\\infty} \\frac{1}{1+x^2}\\,dx$.',
+            options: ['$\\pi$', '$2\\pi$', '$\\pi/2$', 'Diverges'],
             correctAnswer: 0,
-            explanation: 'Correct — Area under curves that extend to infinity. Be careful to distinguish between the different concepts in this topic.'
+            explanation: '$\\int_{-\\infty}^{\\infty} \\frac{dx}{1+x^2} = [\\arctan x]_{-\\infty}^{\\infty} = \\frac{\\pi}{2} - (-\\frac{\\pi}{2}) = \\pi$.'
           }
         ]
       }
     },
     {
-      id: 'impro5-detail',
+      id: 'imp5-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Probability**: ∫₋∞^∞ f(x)dx = 1 for probability density functions
-- **Laplace transforms use improper integrals**
-- **Area under curves that extend to infinity**
-- **Gabriel's Horn**: finite volume but infinite surface area
-      `
-    },
-    {
-      id: 'impro5-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of these accurately represents Gabriel\'s Horn?',
-            options: [
-              'finite volume but infinite surface area',
-              'Laplace transforms use improper integrals',
-              '∫₋∞^∞ f(x)dx = 1 for probability density functions',
-              'Area under curves that extend to infinity'
-            ],
-            correctAnswer: 0,
-            explanation: 'Correct — Gabriel\'s Horn: finite volume but infinite surface area. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'impro5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Probability',
-            options: ['∫₋∞^∞ f(x)dx = 1 for probability density functions', 'Area under curves that extend to infinity', 'finite volume but infinite surface area', 'Laplace transforms use improper integrals']
-          },
-          {
-            label: 'Gabriel\'s Horn',
-            options: ['Laplace transforms use improper integrals', 'Area under curves that extend to infinity', 'finite volume but infinite surface area', '∫₋∞^∞ f(x)dx = 1 for probability density functions']
-          }
-        ],
-        correctAnswers: ['∫₋∞^∞ f(x)dx = 1 for probability density functions', 'finite volume but infinite surface area'],
-        hint1: 'Think about what each concept specifically describes in Applications of Improper Integrals.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Applications of Improper Integrals describes a specific idea. Probability: ∫₋∞^∞ f(x)dx = 1 for probability density functions. Gabriel\'s Horn: finite volume but infinite surface area.'
-      }
+      content: `### Key Takeaways — Part 5
+Split at any point $c$ (usually 0) and evaluate each half.`
     }
   ]
-}
+};

@@ -1,125 +1,50 @@
-export const calcABParticleMotionPart4Data = {
+export const calcabParticleMotionPart4Data = {
   topicSlug: 'particle-motion-calcab',
   sections: [
     {
-      id: 'parti4-intro',
+      id: 'pm4-intro',
       type: 'text' as const,
-      content: `
-# Displacement vs Distance
+      content: `# Particle Motion
 
-**Part 4 of 7 — Displacement vs Distance**
+**Part 4 of 7 \u2014 Position from Velocity**
 
-### 1. Displacement = ∫ₐᵇ v(t)dt — net change in position (can be negative)
+### Given $v(t)$, Find $s(t)$
 
-Displacement = ∫ₐᵇ v(t)dt — net change in position (can be negative)
+$$s(t) = s(0) + \\int_0^t v(\\tau)\\,d\\tau$$
 
-### 2. Total distance = ∫ₐᵇ |v(t)|dt — always positive
+### Worked Example
 
-Total distance = ∫ₐᵇ |v(t)|dt — always positive
+$v(t) = 3t^2 - 2$, $s(0) = 5$. Find $s(2)$.
 
-### 3. Split the integral at zeros of v(t) to find total distance
-
-Split the integral at zeros of v(t) to find total distance
-
-### 4. Displacement can be zero even if the particle moved (returned to start)
-
-Displacement can be zero even if the particle moved (returned to start)
-      `
+$s(2) = 5 + \\int_0^2 (3t^2 - 2)\\,dt = 5 + [t^3 - 2t]_0^2 = 5 + (8-4) = 9$`
     },
     {
-      id: 'parti4-quiz1',
+      id: 'pm4-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Finding Position** \ud83c\udfaf',
       exercise: {
         questions: [
           {
-            question: 'What does "Displacement = ∫ₐᵇ v(t)dt — net change…" refer to in calculus?',
-            options: [
-              'Total distance = ∫ₐᵇ |v(t)|dt — always positive',
-              'Split the integral at zeros of v(t) to find total distance',
-              'Displacement = ∫ₐᵇ v(t)dt — net change in position (can be negative)',
-              'Displacement can be zero even if the particle moved (returned to start)'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Displacement = ∫ₐᵇ v(t)dt — net change in position (can be negative). The other options describe different concepts from this topic.'
+            question: 'A particle starts at $s(0) = 3$ with $v(t) = 4 - 2t$. Find $s(5)$.',
+            options: ['$-2$', '$8$', '$3$', '$-7$'],
+            correctAnswer: 0,
+            explanation: '$s(5) = 3 + \\int_0^5 (4-2t)\\,dt = 3 + [4t-t^2]_0^5 = 3 + (20-25) = 3 - 5 = -2$.'
           },
           {
-            question: 'Select the statement that correctly describes Split the integral at zeros of v(t) to…:',
-            options: [
-              'Displacement can be zero even if the particle moved (returned to start)',
-              'Total distance = ∫ₐᵇ |v(t)|dt — always positive',
-              'Split the integral at zeros of v(t) to find total distance',
-              'Displacement = ∫ₐᵇ v(t)dt — net change in position (can be negative)'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Split the integral at zeros of v(t) to find total distance. Be careful to distinguish between the different concepts in this topic.'
+            question: 'With the same $v(t)$, what is the farthest right the particle reaches?',
+            options: ['$s(2) = 7$', '$s(3) = 6$', '$s(1) = 6$', '$s(4) = 3$'],
+            correctAnswer: 0,
+            explanation: '$v(t) = 0$ at $t = 2$. $v$ changes $+ \\to -$, so max position at $t=2$. $s(2) = 3 + [4t-t^2]_0^2 = 3 + 4 = 7$.'
           }
         ]
       }
     },
     {
-      id: 'parti4-detail',
+      id: 'pm4-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Displacement = ∫ₐᵇ v(t)dt — net change in position (can be negative)**
-- **Total distance = ∫ₐᵇ |v(t)|dt — always positive**
-- **Split the integral at zeros of v(t) to find total distance**
-- **Displacement can be zero even if the particle moved (returned to start)**
-      `
-    },
-    {
-      id: 'parti4-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of these accurately represents Displacement can be zero even if the…?',
-            options: [
-              'Total distance = ∫ₐᵇ |v(t)|dt — always positive',
-              'Displacement can be zero even if the particle moved (returned to start)',
-              'Split the integral at zeros of v(t) to find total distance',
-              'Displacement = ∫ₐᵇ v(t)dt — net change in position (can be negative)'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Displacement can be zero even if the particle moved (returned to start). Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'parti4-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Displacement = ∫ₐᵇ v(t)dt — net change…',
-            options: ['Displacement = ∫ₐᵇ v(t)dt — net change in position (can be negative)', 'Total distance = ∫ₐᵇ |v(t)|dt — always positive', 'Displacement can be zero even if the particle moved (returned to start)', 'Split the integral at zeros of v(t) to find total distance']
-          },
-          {
-            label: 'Total distance = ∫ₐᵇ |v(t)|dt — always…',
-            options: ['Total distance = ∫ₐᵇ |v(t)|dt — always positive', 'Displacement = ∫ₐᵇ v(t)dt — net change in position (can be negative)', 'Split the integral at zeros of v(t) to find total distance', 'Displacement can be zero even if the particle moved (returned to start)']
-          },
-          {
-            label: 'Split the integral at zeros of v(t) to…',
-            options: ['Displacement = ∫ₐᵇ v(t)dt — net change in position (can be negative)', 'Displacement can be zero even if the particle moved (returned to start)', 'Split the integral at zeros of v(t) to find total distance', 'Total distance = ∫ₐᵇ |v(t)|dt — always positive']
-          }
-        ],
-        correctAnswers: ['Displacement = ∫ₐᵇ v(t)dt — net change in position (can be negative)', 'Total distance = ∫ₐᵇ |v(t)|dt — always positive', 'Split the integral at zeros of v(t) to find total distance'],
-        hint1: 'Think about what each concept specifically describes in Displacement vs Distance.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Displacement vs Distance describes a specific idea. Displacement = ∫ₐᵇ v(t)dt — net change in position (can be negative). Total distance = ∫ₐᵇ |v(t)|dt — always positive. Split the integral at zeros of v(t) to find total distance.'
-      }
+      content: `### Key Takeaways \u2014 Part 4
+1. Position = initial position + displacement
+2. Maximum/minimum position occurs when $v = 0$ (direction change)`
     }
   ]
-}
+};

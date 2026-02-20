@@ -1,125 +1,50 @@
-export const calcABFreeResponsePart1Data = {
+export const calcabFRQPart1Data = {
   topicSlug: 'free-response-strategies-calcab',
   sections: [
     {
-      id: 'free-1-intro',
+      id: 'frq1-intro',
       type: 'text' as const,
-      content: `
-# ∫ Free Response Strategies
+      content: `# Free Response Strategies
 
-**Part 1 of 7 — Reading AP Free Response Questions**
+**Part 1 of 7 — The AP FRQ Format**
 
-### 1. Read the entire problem before starting
+### Structure of the FRQ Section
 
-Read the entire problem before starting
+- **6 questions** in 90 minutes
+- Questions 1-2: **Calculator allowed** (30 min)
+- Questions 3-6: **No calculator** (60 min)
 
-### 2. Identify what each part asks
+### Common FRQ Types
 
-find, show, justify, explain
-
-### 3. Label answers clearly with units
-
-Label answers clearly with units
-
-### 4. Show all work — no credit for answers without supporting work
-
-Show all work — no credit for answers without supporting work
-      `
+1. **Rate/Accumulation** (graph or table of rate, find accumulation)
+2. **Particle Motion** (position, velocity, acceleration)
+3. **Area/Volume** (between curves, disk/washer)
+4. **Differential Equations** (slope field, separation of variables)
+5. **Table Analysis** (Riemann sums, MVT, IVT)
+6. **Connected Rates/Related Rates**`
     },
     {
-      id: 'free-1-quiz1',
+      id: 'frq1-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**FRQ Format** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains Read the entire problem before starting?',
-            options: [
-              'Show all work — no credit for answers without supporting work',
-              'Label answers clearly with units',
-              'Read the entire problem before starting',
-              'find, show, justify, explain'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Read the entire problem before starting. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Select the statement that correctly describes Label answers clearly with units:',
-            options: [
-              'Read the entire problem before starting',
-              'find, show, justify, explain',
-              'Label answers clearly with units',
-              'Show all work — no credit for answers without supporting work'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Label answers clearly with units. Be careful to distinguish between the different concepts in this topic.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'free-1-detail',
-      type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Read the entire problem before starting**
-- **Identify what each part asks**: find, show, justify, explain
-- **Label answers clearly with units**
-- **Show all work — no credit for answers without supporting work**
-      `
-    },
-    {
-      id: 'free-1-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Regarding Free Response Strategies, which correctly describes Show all work — no credit for answers…?',
-            options: [
-              'Show all work — no credit for answers without supporting work',
-              'Label answers clearly with units',
-              'find, show, justify, explain',
-              'Read the entire problem before starting'
-            ],
+            question: 'On the AP exam, how should you present work for full credit?',
+            options: ['Show all mathematical steps and justify conclusions', 'Write just the final answer', 'Explain in full sentences only', 'Draw diagrams only'],
             correctAnswer: 0,
-            explanation: 'Correct — Show all work — no credit for answers without supporting work. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: 'Show your setup (integral, equation), work (solving steps), and answer. Justify with theorem names when needed.'
           }
         ]
       }
     },
     {
-      id: 'free-1-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Read the entire problem before starting',
-            options: ['Label answers clearly with units', 'Read the entire problem before starting', 'Show all work — no credit for answers without supporting work', 'find, show, justify, explain']
-          },
-          {
-            label: 'Identify what each part asks',
-            options: ['find, show, justify, explain', 'Read the entire problem before starting', 'Show all work — no credit for answers without supporting work', 'Label answers clearly with units']
-          },
-          {
-            label: 'Label answers clearly with units',
-            options: ['find, show, justify, explain', 'Show all work — no credit for answers without supporting work', 'Read the entire problem before starting', 'Label answers clearly with units']
-          }
-        ],
-        correctAnswers: ['Read the entire problem before starting', 'find, show, justify, explain', 'Label answers clearly with units'],
-        hint1: 'Think about what each concept specifically describes in Free Response Strategies.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Free Response Strategies describes a specific idea. Read the entire problem before starting. Identify what each part asks: find, show, justify, explain. Label answers clearly with units.'
-      }
+      id: 'frq1-summary',
+      type: 'text' as const,
+      content: `### Key Takeaways — Part 1
+1. Know the 6 common FRQ types
+2. Show all work for full credit
+3. Practice pacing: ~15 min per question`
     }
   ]
-}
+};

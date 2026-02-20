@@ -1,125 +1,61 @@
-export const calcABDiffEqPart3Data = {
+export const calcabDiffEqPart3Data = {
   topicSlug: 'differential-equations-calcab',
   sections: [
     {
-      id: 'diffe3-intro',
+      id: 'de3-intro',
       type: 'text' as const,
-      content: `
-# Euler's Method
+      content: `# Differential Equations
 
-**Part 3 of 7 — Euler's Method**
+**Part 3 of 7 \u2014 Slope Fields**
 
-### 1. Euler's Method
+### What is a Slope Field?
 
-numerical approximation of solutions
+A **slope field** (direction field) is a visual representation of a DE. At each point $(x, y)$, a small line segment shows the slope $\\frac{dy}{dx}$.
 
-### 2. yₙ₊₁ = yₙ + f(xₙ, yₙ)·Δx
+### Reading Slope Fields
 
-yₙ₊₁ = yₙ + f(xₙ, yₙ)·Δx
+| Observation | Meaning |
+|------------|---------|
+| All slopes horizontal where $y = 2$ | $\\frac{dy}{dx} = 0$ when $y = 2$ |
+| Slopes steeper as $x$ increases | DE depends on $x$ |
+| Slopes same along horizontal lines | DE depends only on $y$ |
+| Slopes same along vertical lines | DE depends only on $x$ |
 
-### 3. Start from initial condition (x₀, y₀) and step forward
+### Matching Slope Fields to DEs
 
-Start from initial condition (x₀, y₀) and step forward
-
-### 4. Smaller step size Δx gives more accurate approximation (but more steps)
-
-Smaller step size Δx gives more accurate approximation (but more steps)
-      `
+To match a slope field to a DE:
+1. Check specific points: what's the slope at $(0,0)$, $(1,1)$, etc.?
+2. Look for where slopes are zero (horizontal segments)
+3. Look for patterns (same slopes on lines, etc.)`
     },
     {
-      id: 'diffe3-quiz1',
+      id: 'de3-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Slope Field Analysis** \ud83c\udfaf',
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains Euler\'s Method?',
-            options: [
-              'yₙ₊₁ = yₙ + f(xₙ, yₙ)·Δx',
-              'Start from initial condition (x₀, y₀) and step forward',
-              'numerical approximation of solutions',
-              'Smaller step size Δx gives more accurate approximation (but more steps)'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Euler\'s Method: numerical approximation of solutions. The other options describe different concepts from this topic.'
+            question: 'For $\\frac{dy}{dx} = y - 1$, where are the slopes zero?',
+            options: ['$y = 0$', '$y = 1$', '$x = 0$', '$x = 1$'],
+            correctAnswer: 1,
+            explanation: '$\\frac{dy}{dx} = y - 1 = 0$ when $y = 1$. All points on $y = 1$ have horizontal slopes.'
           },
           {
-            question: 'Select the statement that correctly describes Start from initial condition (x₀, y₀)…:',
-            options: [
-              'Start from initial condition (x₀, y₀) and step forward',
-              'numerical approximation of solutions',
-              'Smaller step size Δx gives more accurate approximation (but more steps)',
-              'yₙ₊₁ = yₙ + f(xₙ, yₙ)·Δx'
-            ],
+            question: 'For $\\frac{dy}{dx} = x + y$, what is the slope at $(1, -1)$?',
+            options: ['$0$', '$2$', '$-2$', '$1$'],
             correctAnswer: 0,
-            explanation: 'Correct — Start from initial condition (x₀, y₀) and step forward. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'At $(1, -1)$: slope $= 1 + (-1) = 0$.'
           }
         ]
       }
     },
     {
-      id: 'diffe3-detail',
+      id: 'de3-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Euler's Method**: numerical approximation of solutions
-- **yₙ₊₁ = yₙ + f(xₙ, yₙ)·Δx**
-- **Start from initial condition (x₀, y₀) and step forward**
-- **Smaller step size Δx gives more accurate approximation (but more steps)**
-      `
-    },
-    {
-      id: 'diffe3-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of these accurately represents Smaller step size Δx gives more…?',
-            options: [
-              'yₙ₊₁ = yₙ + f(xₙ, yₙ)·Δx',
-              'numerical approximation of solutions',
-              'Start from initial condition (x₀, y₀) and step forward',
-              'Smaller step size Δx gives more accurate approximation (but more steps)'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Smaller step size Δx gives more accurate approximation (but more steps). Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'diffe3-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Euler\'s Method',
-            options: ['Start from initial condition (x₀, y₀) and step forward', 'numerical approximation of solutions', 'Smaller step size Δx gives more accurate approximation (but more steps)', 'yₙ₊₁ = yₙ + f(xₙ, yₙ)·Δx']
-          },
-          {
-            label: 'yₙ₊₁ = yₙ + f(xₙ, yₙ)·Δx',
-            options: ['Smaller step size Δx gives more accurate approximation (but more steps)', 'Start from initial condition (x₀, y₀) and step forward', 'yₙ₊₁ = yₙ + f(xₙ, yₙ)·Δx', 'numerical approximation of solutions']
-          },
-          {
-            label: 'Start from initial condition (x₀, y₀)…',
-            options: ['Start from initial condition (x₀, y₀) and step forward', 'numerical approximation of solutions', 'yₙ₊₁ = yₙ + f(xₙ, yₙ)·Δx', 'Smaller step size Δx gives more accurate approximation (but more steps)']
-          }
-        ],
-        correctAnswers: ['numerical approximation of solutions', 'yₙ₊₁ = yₙ + f(xₙ, yₙ)·Δx', 'Start from initial condition (x₀, y₀) and step forward'],
-        hint1: 'Think about what each concept specifically describes in Euler\'s Method.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Euler\'s Method describes a specific idea. Euler\'s Method: numerical approximation of solutions. yₙ₊₁ = yₙ + f(xₙ, yₙ)·Δx. Start from initial condition (x₀, y₀) and step forward.'
-      }
+      content: `### Key Takeaways \u2014 Part 3
+1. Slope fields visualize the behavior of solutions
+2. Solutions follow the slope field like flowing water
+3. Check where slopes are 0, positive, or negative to match DEs`
     }
   ]
-}
+};

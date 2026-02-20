@@ -1,121 +1,54 @@
-export const calcBCLogisticPart1Data = {
+export const calcbcLogisticPart1Data = {
   topicSlug: 'logistic-models-calcbc',
   sections: [
     {
-      id: 'logis1-intro',
+      id: 'log1-intro',
       type: 'text' as const,
-      content: `
-# ∮ Logistic Models
+      content: `# Logistic Models
 
-**Part 1 of 7 — Logistic Differential Equation**
+**Part 1 of 7 — The Logistic Differential Equation**
 
-### 1. dP/dt = kP(1 - P/L) where k = growth rate, L = carrying capacity
+### The Model
 
-dP/dt = kP(1 - P/L) where k = growth rate, L = carrying capacity
+$$\frac{dP}{dt} = kP\left(1 - \frac{P}{L}\right)$$
 
-### 2. When P is small
+where:
+- $P$ = population (or quantity)
+- $k$ = growth rate constant
+- $L$ = carrying capacity
 
-growth is approximately exponential (kP)
+### Key Features
 
-### 3. When P → L
-
-growth slows to zero (1 - P/L → 0)
-
-### 4. This models populations limited by resources
-
-This models populations limited by resources
-      `
+- When $P \ll L$: nearly exponential growth ($\approx kP$)
+- When $P = L/2$: **fastest growth rate**
+- When $P = L$: growth stops ($dP/dt = 0$)`
     },
     {
-      id: 'logis1-quiz1',
+      id: 'log1-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Logistic Basics** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains dP/dt = kP(1 - P/L) where k = growth…?',
-            options: [
-              'growth is approximately exponential (kP)',
-              'This models populations limited by resources',
-              'dP/dt = kP(1 - P/L) where k = growth rate, L = carrying capacity',
-              'growth slows to zero (1 - P/L → 0)'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — dP/dt = kP(1 - P/L) where k = growth rate, L = carrying capacity. The other options describe different concepts from this topic.'
+            question: 'In $dP/dt = 0.3P(1 - P/500)$, what is the carrying capacity?',
+            options: ['$500$', '$0.3$', '$150$', '$1000$'],
+            correctAnswer: 0,
+            explanation: '$L = 500$ is the carrying capacity (appears as $P/L$).'
           },
           {
-            question: 'Select the statement that correctly describes When P → L:',
-            options: [
-              'growth is approximately exponential (kP)',
-              'This models populations limited by resources',
-              'dP/dt = kP(1 - P/L) where k = growth rate, L = carrying capacity',
-              'growth slows to zero (1 - P/L → 0)'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — When P → L: growth slows to zero (1 - P/L → 0). Be careful to distinguish between the different concepts in this topic.'
+            question: 'At what population is the growth rate maximum?',
+            options: ['$P = 250$ (half of $L$)', '$P = 500$', '$P = 0$', '$P = 100$'],
+            correctAnswer: 0,
+            explanation: 'Maximum growth at $P = L/2 = 250$.'
           }
         ]
       }
     },
     {
-      id: 'logis1-detail',
+      id: 'log1-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **dP/dt = kP(1 - P/L) where k = growth rate, L = carrying capacity**
-- **When P is small**: growth is approximately exponential (kP)
-- **When P → L**: growth slows to zero (1 - P/L → 0)
-- **This models populations limited by resources**
-      `
-    },
-    {
-      id: 'logis1-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Regarding ∮ Logistic Models, which correctly describes This models populations limited by…?',
-            options: [
-              'growth is approximately exponential (kP)',
-              'This models populations limited by resources',
-              'dP/dt = kP(1 - P/L) where k = growth rate, L = carrying capacity',
-              'growth slows to zero (1 - P/L → 0)'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — This models populations limited by resources. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'logis1-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'When P is small',
-            options: ['growth slows to zero (1 - P/L → 0)', 'growth is approximately exponential (kP)', 'dP/dt = kP(1 - P/L) where k = growth rate, L = carrying capacity', 'This models populations limited by resources']
-          },
-          {
-            label: 'When P → L',
-            options: ['growth slows to zero (1 - P/L → 0)', 'dP/dt = kP(1 - P/L) where k = growth rate, L = carrying capacity', 'growth is approximately exponential (kP)', 'This models populations limited by resources']
-          }
-        ],
-        correctAnswers: ['growth is approximately exponential (kP)', 'growth slows to zero (1 - P/L → 0)'],
-        hint1: 'Think about what each concept specifically describes in ∮ Logistic Models.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in ∮ Logistic Models describes a specific idea. When P is small: growth is approximately exponential (kP). When P → L: growth slows to zero (1 - P/L → 0).'
-      }
+      content: `### Key Takeaways — Part 1
+Logistic: $dP/dt = kP(1 - P/L)$. Max growth at $P = L/2$.`
     }
   ]
-}
+};

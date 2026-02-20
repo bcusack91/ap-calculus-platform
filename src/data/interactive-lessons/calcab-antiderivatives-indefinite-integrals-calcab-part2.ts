@@ -1,121 +1,68 @@
-export const calcABAntiderivativesPart2Data = {
+export const calcabAntiderivativesPart2Data = {
   topicSlug: 'antiderivatives-indefinite-integrals-calcab',
   sections: [
     {
-      id: 'antid2-intro',
+      id: 'anti2-intro',
       type: 'text' as const,
-      content: `
-# Basic Integration Rules
+      content: `# Antiderivatives
 
-**Part 2 of 7 — Basic Integration Rules**
+**Part 2 of 7 — Essential Antiderivative Formulas**
 
-### 1. Power Rule for integration
+### Complete Table of Basic Antiderivatives
 
-∫xⁿ dx = x^(n+1)/(n+1) + C, n ≠ -1
+| Function | Antiderivative |
+|----------|---------------|
+| $x^n$ $(n \\neq -1)$ | $\\frac{x^{n+1}}{n+1} + C$ |
+| $\\frac{1}{x}$ | $\\ln|x| + C$ |
+| $e^x$ | $e^x + C$ |
+| $a^x$ | $\\frac{a^x}{\\ln a} + C$ |
+| $\\sin x$ | $-\\cos x + C$ |
+| $\\cos x$ | $\\sin x + C$ |
+| $\\sec^2 x$ | $\\tan x + C$ |
+| $\\csc^2 x$ | $-\\cot x + C$ |
+| $\\sec x \\tan x$ | $\\sec x + C$ |
+| $\\csc x \\cot x$ | $-\\csc x + C$ |
+| $\\frac{1}{\\sqrt{1-x^2}}$ | $\\arcsin x + C$ |
+| $\\frac{1}{1+x^2}$ | $\\arctan x + C$ |
 
-### 2. ∫1/x dx = ln|x| + C (the case n = -1)
-
-∫1/x dx = ln|x| + C (the case n = -1)
-
-### 3. ∫dx = x + C; ∫k dx = kx + C
-
-∫dx = x + C; ∫k dx = kx + C
-
-### 4. Sum/Difference rule
-
-∫[f(x) ± g(x)]dx = ∫f(x)dx ± ∫g(x)dx
-      `
+> **Memorize this table!** These are the building blocks of all integration.`
     },
     {
-      id: 'antid2-quiz1',
+      id: 'anti2-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Essential Antiderivatives** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains Power Rule for integration?',
-            options: [
-              '∫dx = x + C; ∫k dx = kx + C',
-              '∫xⁿ dx = x^(n+1)/(n+1) + C, n ≠ -1',
-              '∫[f(x) ± g(x)]dx = ∫f(x)dx ± ∫g(x)dx',
-              '∫1/x dx = ln|x| + C (the case n = -1)'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Power Rule for integration: ∫xⁿ dx = x^(n+1)/(n+1) + C, n ≠ -1. The other options describe different concepts from this topic.'
+            question: 'Evaluate $\\int (3\\sin x + 2e^x)\\,dx$.',
+            options: ['$-3\\cos x + 2e^x + C$', '$3\\cos x + 2e^x + C$', '$-3\\cos x + e^{2x} + C$', '$3\\sin x + 2e^x + C$'],
+            correctAnswer: 0,
+            explanation: '$\\int 3\\sin x\\,dx + \\int 2e^x\\,dx = -3\\cos x + 2e^x + C$.'
           },
           {
-            question: 'In the context of Basic Integration Rules, which explains ∫dx = x + C; ∫k dx = kx + C?',
-            options: [
-              '∫1/x dx = ln|x| + C (the case n = -1)',
-              '∫xⁿ dx = x^(n+1)/(n+1) + C, n ≠ -1',
-              '∫[f(x) ± g(x)]dx = ∫f(x)dx ± ∫g(x)dx',
-              '∫dx = x + C; ∫k dx = kx + C'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — ∫dx = x + C; ∫k dx = kx + C. Be careful to distinguish between the different concepts in this topic.'
+            question: 'Evaluate $\\int \\left(\\frac{4}{x} + \\sec^2 x\\right)\\,dx$.',
+            options: ['$4\\ln x + \\tan x + C$', '$4\\ln|x| + \\tan x + C$', '$\\frac{4}{x^2} + \\sec x + C$', '$4\\ln|x| + \\sec x + C$'],
+            correctAnswer: 1,
+            explanation: '$\\int \\frac{4}{x}\\,dx + \\int \\sec^2 x\\,dx = 4\\ln|x| + \\tan x + C$. Note the absolute value on $\\ln$!'
+          },
+          {
+            question: 'Evaluate $\\int 5^x\\,dx$.',
+            options: ['$5^x + C$', '$\\frac{5^{x+1}}{x+1} + C$', '$\\frac{5^x}{\\ln 5} + C$', '$x \\cdot 5^{x-1} + C$'],
+            correctAnswer: 2,
+            explanation: '$\\int a^x\\,dx = \\frac{a^x}{\\ln a} + C$. So $\\int 5^x\\,dx = \\frac{5^x}{\\ln 5} + C$.'
           }
         ]
       }
     },
     {
-      id: 'antid2-detail',
+      id: 'anti2-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
+      content: `### Key Takeaways — Part 2
 
-- **Power Rule for integration**: ∫xⁿ dx = x^(n+1)/(n+1) + C, n ≠ -1
-- **∫1/x dx = ln|x| + C (the case n = -1)**
-- **∫dx = x + C; ∫k dx = kx + C**
-- **Sum/Difference rule**: ∫[f(x) ± g(x)]dx = ∫f(x)dx ± ∫g(x)dx
-      `
-    },
-    {
-      id: 'antid2-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Regarding Basic Integration Rules, which correctly describes Sum/Difference rule?',
-            options: [
-              '∫1/x dx = ln|x| + C (the case n = -1)',
-              '∫[f(x) ± g(x)]dx = ∫f(x)dx ± ∫g(x)dx',
-              '∫dx = x + C; ∫k dx = kx + C',
-              '∫xⁿ dx = x^(n+1)/(n+1) + C, n ≠ -1'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Sum/Difference rule: ∫[f(x) ± g(x)]dx = ∫f(x)dx ± ∫g(x)dx. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'antid2-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Power Rule for integration',
-            options: ['∫xⁿ dx = x^(n+1)/(n+1) + C, n ≠ -1', '∫[f(x) ± g(x)]dx = ∫f(x)dx ± ∫g(x)dx', '∫1/x dx = ln|x| + C (the case n = -1)', '∫dx = x + C; ∫k dx = kx + C']
-          },
-          {
-            label: 'Sum/Difference rule',
-            options: ['∫dx = x + C; ∫k dx = kx + C', '∫[f(x) ± g(x)]dx = ∫f(x)dx ± ∫g(x)dx', '∫xⁿ dx = x^(n+1)/(n+1) + C, n ≠ -1', '∫1/x dx = ln|x| + C (the case n = -1)']
-          }
-        ],
-        correctAnswers: ['∫xⁿ dx = x^(n+1)/(n+1) + C, n ≠ -1', '∫[f(x) ± g(x)]dx = ∫f(x)dx ± ∫g(x)dx'],
-        hint1: 'Think about what each concept specifically describes in Basic Integration Rules.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Basic Integration Rules describes a specific idea. Power Rule for integration: ∫xⁿ dx = x^(n+1)/(n+1) + C, n ≠ -1. Sum/Difference rule: ∫[f(x) ± g(x)]dx = ∫f(x)dx ± ∫g(x)dx.'
-      }
+1. Memorize the complete table of basic antiderivatives
+2. $\\int \\frac{1}{x}\\,dx = \\ln|x| + C$ (absolute value matters!)
+3. $\\int a^x\\,dx = \\frac{a^x}{\\ln a} + C$ (not the power rule!)
+4. Linearity: $\\int [af + bg]\\,dx = a\\int f\\,dx + b\\int g\\,dx$`
     }
   ]
-}
+};

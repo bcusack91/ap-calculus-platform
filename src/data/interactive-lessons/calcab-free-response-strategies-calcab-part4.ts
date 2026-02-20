@@ -1,125 +1,48 @@
-export const calcABFreeResponsePart4Data = {
+export const calcabFRQPart4Data = {
   topicSlug: 'free-response-strategies-calcab',
   sections: [
     {
-      id: 'free-4-intro',
+      id: 'frq4-intro',
       type: 'text' as const,
-      content: `
-# Rate & Accumulation Problems
+      content: `# Free Response Strategies
 
-**Part 4 of 7 — Rate & Accumulation Problems**
+**Part 4 of 7 — Calculator Strategies**
 
-### 1. Total amount = ∫ₐᵇ rate(t)dt
+### When Calculators Are Allowed (Q1-Q2)
 
-Total amount = ∫ₐᵇ rate(t)dt
+You may be asked to:
+1. **Evaluate a definite integral** — use numerical integration
+2. **Find zeros of $f'$** — graph and find zeros
+3. **Find intersections** — graph both functions
+4. **Evaluate $f(a)$** — direct computation
 
-### 2. Interpret ∫ₐᵇ r(t)dt in context with units
-
-Interpret ∫ₐᵇ r(t)dt in context with units
-
-### 3. "At time t = c, the rate is..." vs "The total from a to b is..."
-
-"At time t = c, the rate is..." vs "The total from a to b is..."
-
-### 4. Average value = (1/(b-a))∫ₐᵇ f(t)dt
-
-Average value = (1/(b-a))∫ₐᵇ f(t)dt
-      `
+### Important Rules
+- Store intermediate values (don't round too early)
+- Show the mathematical setup even if using calculator
+- Write at least 3 decimal places`
     },
     {
-      id: 'free-4-quiz1',
+      id: 'frq4-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Calculator Skills** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains Total amount = ∫ₐᵇ rate(t)dt?',
-            options: [
-              '"At time t = c, the rate is..." vs "The total from a to b is..."',
-              'Interpret ∫ₐᵇ r(t)dt in context with units',
-              'Total amount = ∫ₐᵇ rate(t)dt',
-              'Average value = (1/(b-a))∫ₐᵇ f(t)dt'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Total amount = ∫ₐᵇ rate(t)dt. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'In the context of Rate & Accumulation Problems, which explains "At time t = c, the rate is..." vs "The…?',
-            options: [
-              '"At time t = c, the rate is..." vs "The total from a to b is..."',
-              'Interpret ∫ₐᵇ r(t)dt in context with units',
-              'Average value = (1/(b-a))∫ₐᵇ f(t)dt',
-              'Total amount = ∫ₐᵇ rate(t)dt'
-            ],
+            question: 'On calculator problems, if you evaluate $\\int_0^3 \\sqrt{1+x^3}\\,dx$ numerically, what must you write?',
+            options: ['The integral setup AND the decimal answer', 'Just the decimal value', 'A Riemann sum approximation', 'The antiderivative'],
             correctAnswer: 0,
-            explanation: 'Correct — "At time t = c, the rate is..." vs "The total from a to b is...". Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'Always show the mathematical setup: $\\int_0^3 \\sqrt{1+x^3}\\,dx = 6.586$ (or similar). Both are needed for full credit.'
           }
         ]
       }
     },
     {
-      id: 'free-4-detail',
+      id: 'frq4-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Total amount = ∫ₐᵇ rate(t)dt**
-- **Interpret ∫ₐᵇ r(t)dt in context with units**
-- **"At time t = c, the rate is..." vs "The total from a to b is..."**
-- **Average value = (1/(b-a))∫ₐᵇ f(t)dt**
-      `
-    },
-    {
-      id: 'free-4-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Regarding Rate & Accumulation Problems, which correctly describes Average value = (1/(b-a))∫ₐᵇ f(t)dt?',
-            options: [
-              '"At time t = c, the rate is..." vs "The total from a to b is..."',
-              'Average value = (1/(b-a))∫ₐᵇ f(t)dt',
-              'Interpret ∫ₐᵇ r(t)dt in context with units',
-              'Total amount = ∫ₐᵇ rate(t)dt'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Average value = (1/(b-a))∫ₐᵇ f(t)dt. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'free-4-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Total amount = ∫ₐᵇ rate(t)dt',
-            options: ['Total amount = ∫ₐᵇ rate(t)dt', 'Interpret ∫ₐᵇ r(t)dt in context with units', 'Average value = (1/(b-a))∫ₐᵇ f(t)dt', '"At time t = c, the rate is..." vs "The total from a to b is..."']
-          },
-          {
-            label: 'Interpret ∫ₐᵇ r(t)dt in context with…',
-            options: ['Total amount = ∫ₐᵇ rate(t)dt', 'Interpret ∫ₐᵇ r(t)dt in context with units', '"At time t = c, the rate is..." vs "The total from a to b is..."', 'Average value = (1/(b-a))∫ₐᵇ f(t)dt']
-          },
-          {
-            label: '"At time t = c, the rate is..." vs "The…',
-            options: ['Interpret ∫ₐᵇ r(t)dt in context with units', 'Total amount = ∫ₐᵇ rate(t)dt', 'Average value = (1/(b-a))∫ₐᵇ f(t)dt', '"At time t = c, the rate is..." vs "The total from a to b is..."']
-          }
-        ],
-        correctAnswers: ['Total amount = ∫ₐᵇ rate(t)dt', 'Interpret ∫ₐᵇ r(t)dt in context with units', '"At time t = c, the rate is..." vs "The total from a to b is..."'],
-        hint1: 'Think about what each concept specifically describes in Rate & Accumulation Problems.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Rate & Accumulation Problems describes a specific idea. Total amount = ∫ₐᵇ rate(t)dt. Interpret ∫ₐᵇ r(t)dt in context with units. "At time t = c, the rate is..." vs "The total from a to b is...".'
-      }
+      content: `### Key Takeaways — Part 4
+1. Show setup + numerical answer
+2. Use 3+ decimal places
+3. Don't round intermediate results`
     }
   ]
-}
+};

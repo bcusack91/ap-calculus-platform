@@ -1,125 +1,49 @@
-export const calcABLinearizationPart3Data = {
+export const calcabLinearizationPart3Data = {
   topicSlug: 'linearization-differentials-calcab',
   sections: [
     {
-      id: 'linea3-intro',
+      id: 'lin3-intro',
       type: 'text' as const,
-      content: `
-# Error Estimation
+      content: `# Linearization & Differentials
 
-**Part 3 of 7 — Error Estimation**
+**Part 3 of 7 — Over/Underestimates**
 
-### 1. Relative error = |dy/y| or |Δy/y|
+### Concavity Determines the Error
 
-Relative error = |dy/y| or |Δy/y|
+| Concavity | Tangent line is... | Linear approx is... |
+|-----------|-------------------|---------------------|
+| Concave up ($f'' > 0$) | Below the curve | Underestimate |
+| Concave down ($f'' < 0$) | Above the curve | Overestimate |
 
-### 2. Percentage error = relative error × 100%
-
-Percentage error = relative error × 100%
-
-### 3. Propagated error
-
-error in output due to error in input
-
-### 4. Use differentials to estimate maximum error in computed quantities
-
-Use differentials to estimate maximum error in computed quantities
-      `
+This is a common AP exam question!`
     },
     {
-      id: 'linea3-quiz1',
+      id: 'lin3-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Over or Under?** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Relative error = |dy/y| or |Δy/y|?',
-            options: [
-              'Relative error = |dy/y| or |Δy/y|',
-              'Percentage error = relative error × 100%',
-              'Use differentials to estimate maximum error in computed quantities',
-              'error in output due to error in input'
-            ],
+            question: 'The linearization of $f(x) = e^x$ at $a = 0$ gives $L(x) = 1 + x$. Is $L(0.5)$ an overestimate or underestimate?',
+            options: ['Underestimate', 'Overestimate', 'Exact', 'Cannot determine'],
             correctAnswer: 0,
-            explanation: 'Correct — Relative error = |dy/y| or |Δy/y|. The other options describe different concepts from this topic.'
+            explanation: '$f\'\'(x) = e^x > 0$ everywhere, so $f$ is concave up. The tangent line lies below the curve → underestimate.'
           },
           {
-            question: 'Select the statement that correctly describes Propagated error:',
-            options: [
-              'Percentage error = relative error × 100%',
-              'Use differentials to estimate maximum error in computed quantities',
-              'error in output due to error in input',
-              'Relative error = |dy/y| or |Δy/y|'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Propagated error: error in output due to error in input. Be careful to distinguish between the different concepts in this topic.'
+            question: 'The linearization of $f(x) = \ln x$ at $a = 1$ gives $L(x) = x - 1$. Is $L(1.5)$ an overestimate or underestimate?',
+            options: ['Overestimate', 'Underestimate', 'Exact', 'Cannot determine'],
+            correctAnswer: 0,
+            explanation: '$f\'\'(x) = -1/x^2 < 0$, so $f$ is concave down. The tangent line lies above the curve → overestimate. $L(1.5) = 0.5 > \ln(1.5) \approx 0.405$.'
           }
         ]
       }
     },
     {
-      id: 'linea3-detail',
+      id: 'lin3-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Relative error = |dy/y| or |Δy/y|**
-- **Percentage error = relative error × 100%**
-- **Propagated error**: error in output due to error in input
-- **Use differentials to estimate maximum error in computed quantities**
-      `
-    },
-    {
-      id: 'linea3-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of these accurately represents Use differentials to estimate maximum…?',
-            options: [
-              'Percentage error = relative error × 100%',
-              'Relative error = |dy/y| or |Δy/y|',
-              'error in output due to error in input',
-              'Use differentials to estimate maximum error in computed quantities'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Use differentials to estimate maximum error in computed quantities. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'linea3-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Relative error = |dy/y| or |Δy/y|',
-            options: ['Use differentials to estimate maximum error in computed quantities', 'Percentage error = relative error × 100%', 'Relative error = |dy/y| or |Δy/y|', 'error in output due to error in input']
-          },
-          {
-            label: 'Percentage error = relative error × 100%',
-            options: ['Relative error = |dy/y| or |Δy/y|', 'Percentage error = relative error × 100%', 'error in output due to error in input', 'Use differentials to estimate maximum error in computed quantities']
-          },
-          {
-            label: 'Propagated error',
-            options: ['Use differentials to estimate maximum error in computed quantities', 'Relative error = |dy/y| or |Δy/y|', 'Percentage error = relative error × 100%', 'error in output due to error in input']
-          }
-        ],
-        correctAnswers: ['Relative error = |dy/y| or |Δy/y|', 'Percentage error = relative error × 100%', 'error in output due to error in input'],
-        hint1: 'Think about what each concept specifically describes in Error Estimation.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Error Estimation describes a specific idea. Relative error = |dy/y| or |Δy/y|. Percentage error = relative error × 100%. Propagated error: error in output due to error in input.'
-      }
+      content: `### Key Takeaways — Part 3
+1. Concave up → tangent line below → underestimate
+2. Concave down → tangent line above → overestimate`
     }
   ]
-}
+};

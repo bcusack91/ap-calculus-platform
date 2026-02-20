@@ -1,125 +1,63 @@
-export const calcABParticleMotionPart1Data = {
+export const calcabParticleMotionPart1Data = {
   topicSlug: 'particle-motion-calcab',
   sections: [
     {
-      id: 'parti1-intro',
+      id: 'pm1-intro',
       type: 'text' as const,
-      content: `
-# ∫ Particle Motion
+      content: `# Particle Motion
 
-**Part 1 of 7 — Position, Velocity, Acceleration**
+**Part 1 of 7 \u2014 Position, Velocity, Acceleration**
 
-### 1. Position s(t) describes location at time t
+### The Relationships
 
-Position s(t) describes location at time t
+| Function | Symbol | Relationship |
+|----------|--------|-------------|
+| Position | $s(t)$ | Given or found by integrating $v$ |
+| Velocity | $v(t)$ | $v(t) = s'(t)$ |
+| Acceleration | $a(t)$ | $a(t) = v'(t) = s''(t)$ |
 
-### 2. Velocity v(t) = s'(t) — rate of change of position
+### Key Interpretations
 
-Velocity v(t) = s'(t) — rate of change of position
-
-### 3. Acceleration a(t) = v'(t) = s''{t} — rate of change of velocity
-
-Acceleration a(t) = v'(t) = s''{t} — rate of change of velocity
-
-### 4. Relationships
-
-differentiate position → velocity → acceleration; integrate in reverse
-      `
+- **Speed** $= |v(t)|$ (always positive)
+- Particle moves **right** when $v(t) > 0$
+- Particle moves **left** when $v(t) < 0$
+- Particle **speeds up** when $v$ and $a$ have the **same sign**
+- Particle **slows down** when $v$ and $a$ have **opposite signs**`
     },
     {
-      id: 'parti1-quiz1',
+      id: 'pm1-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Position, Velocity, Acceleration** \ud83c\udfaf\n\nA particle moves along a line with $s(t) = t^3 - 6t^2 + 9t + 1$.',
       exercise: {
         questions: [
           {
-            question: 'What does "Position s(t) describes location at…" refer to in calculus?',
-            options: [
-              'Acceleration a(t) = v\'(t) = s\'\'{t} — rate of change of velocity',
-              'Velocity v(t) = s\'(t) — rate of change of position',
-              'differentiate position → velocity → acceleration; integrate in reverse',
-              'Position s(t) describes location at time t'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Position s(t) describes location at time t. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'In the context of Particle Motion, which explains Acceleration a(t) = v\'(t) = s\'\'{t} —…?',
-            options: [
-              'differentiate position → velocity → acceleration; integrate in reverse',
-              'Acceleration a(t) = v\'(t) = s\'\'{t} — rate of change of velocity',
-              'Velocity v(t) = s\'(t) — rate of change of position',
-              'Position s(t) describes location at time t'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Acceleration a(t) = v\'(t) = s\'\'{t} — rate of change of velocity. Be careful to distinguish between the different concepts in this topic.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'parti1-detail',
-      type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Position s(t) describes location at time t**
-- **Velocity v(t) = s'(t) — rate of change of position**
-- **Acceleration a(t) = v'(t) = s''{t} — rate of change of velocity**
-- **Relationships**: differentiate position → velocity → acceleration; integrate in reverse
-      `
-    },
-    {
-      id: 'parti1-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Regarding Particle Motion, which correctly describes Relationships?',
-            options: [
-              'differentiate position → velocity → acceleration; integrate in reverse',
-              'Position s(t) describes location at time t',
-              'Acceleration a(t) = v\'(t) = s\'\'{t} — rate of change of velocity',
-              'Velocity v(t) = s\'(t) — rate of change of position'
-            ],
+            question: 'When is the particle at rest?',
+            options: ['$t = 1$ and $t = 3$', '$t = 0$ and $t = 2$', '$t = 2$ only', '$t = 3$ only'],
             correctAnswer: 0,
-            explanation: 'Correct — Relationships: differentiate position → velocity → acceleration; integrate in reverse. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: '$v(t) = 3t^2 - 12t + 9 = 3(t-1)(t-3) = 0$ at $t = 1$ and $t = 3$.'
+          },
+          {
+            question: 'When is the particle moving left?',
+            options: ['$t < 1$', '$1 < t < 3$', '$t > 3$', '$t < 0$'],
+            correctAnswer: 1,
+            explanation: '$v(t) = 3(t-1)(t-3) < 0$ when $1 < t < 3$. The particle moves left on this interval.'
+          },
+          {
+            question: 'At $t = 2$, is the particle speeding up or slowing down?',
+            options: ['Speeding up', 'Slowing down', 'Neither', 'Cannot determine'],
+            correctAnswer: 0,
+            explanation: '$v(2) = 3(1)(-1) = -3 < 0$. $a(t) = 6t - 12$, $a(2) = 0$. Actually $a(2) = 0$, so neither speeding up nor slowing down at that instant.'
           }
         ]
       }
     },
     {
-      id: 'parti1-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Position s(t) describes location at…',
-            options: ['differentiate position → velocity → acceleration; integrate in reverse', 'Acceleration a(t) = v\'(t) = s\'\'{t} — rate of change of velocity', 'Velocity v(t) = s\'(t) — rate of change of position', 'Position s(t) describes location at time t']
-          },
-          {
-            label: 'Velocity v(t) = s\'(t) — rate of change…',
-            options: ['Velocity v(t) = s\'(t) — rate of change of position', 'Acceleration a(t) = v\'(t) = s\'\'{t} — rate of change of velocity', 'differentiate position → velocity → acceleration; integrate in reverse', 'Position s(t) describes location at time t']
-          },
-          {
-            label: 'Acceleration a(t) = v\'(t) = s\'\'{t} —…',
-            options: ['differentiate position → velocity → acceleration; integrate in reverse', 'Position s(t) describes location at time t', 'Acceleration a(t) = v\'(t) = s\'\'{t} — rate of change of velocity', 'Velocity v(t) = s\'(t) — rate of change of position']
-          }
-        ],
-        correctAnswers: ['Position s(t) describes location at time t', 'Velocity v(t) = s\'(t) — rate of change of position', 'Acceleration a(t) = v\'(t) = s\'\'{t} — rate of change of velocity'],
-        hint1: 'Think about what each concept specifically describes in Particle Motion.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Particle Motion describes a specific idea. Position s(t) describes location at time t. Velocity v(t) = s\'(t) — rate of change of position. Acceleration a(t) = v\'(t) = s\'\'{t} — rate of change of velocity.'
-      }
+      id: 'pm1-summary',
+      type: 'text' as const,
+      content: `### Key Takeaways \u2014 Part 1
+1. Differentiate position to get velocity, differentiate again for acceleration
+2. "At rest" means $v(t) = 0$
+3. Direction of motion determined by sign of $v(t)$`
     }
   ]
-}
+};

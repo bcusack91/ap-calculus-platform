@@ -1,125 +1,64 @@
-export const calcABAntiderivativesPart3Data = {
+export const calcabAntiderivativesPart3Data = {
   topicSlug: 'antiderivatives-indefinite-integrals-calcab',
   sections: [
     {
-      id: 'antid3-intro',
+      id: 'anti3-intro',
       type: 'text' as const,
-      content: `
-# Integrating Trig Functions
+      content: `# Antiderivatives
 
-**Part 3 of 7 — Integrating Trig Functions**
+**Part 3 of 7 — Initial Value Problems (IVPs)**
 
-### 1. ∫sin x dx = -cos x + C; ∫cos x dx = sin x + C
+### Finding Specific Antiderivatives
 
-∫sin x dx = -cos x + C; ∫cos x dx = sin x + C
+An initial condition pins down the value of $C$:
 
-### 2. ∫sec²x dx = tan x + C; ∫csc²x dx = -cot x + C
+Given: $f'(x) = 3x^2 - 4x + 1$ and $f(0) = 5$. Find $f(x)$.
 
-∫sec²x dx = tan x + C; ∫csc²x dx = -cot x + C
+**Step 1:** Find the general antiderivative.
+$$f(x) = x^3 - 2x^2 + x + C$$
 
-### 3. ∫sec x tan x dx = sec x + C; ∫csc x cot x dx = -csc x + C
+**Step 2:** Use the initial condition to find $C$.
+$$f(0) = 0 - 0 + 0 + C = 5 \\implies C = 5$$
 
-∫sec x tan x dx = sec x + C; ∫csc x cot x dx = -csc x + C
+**Answer:** $f(x) = x^3 - 2x^2 + x + 5$
 
-### 4. Remember
+### Position-Velocity-Acceleration
 
-integration reverses the sign patterns from differentiation
-      `
+If $a(t) =$ acceleration, then:
+- $v(t) = \\int a(t)\\,dt$ (velocity)
+- $s(t) = \\int v(t)\\,dt$ (position)
+
+Each integration introduces a constant determined by initial conditions.`
     },
     {
-      id: 'antid3-quiz1',
+      id: 'anti3-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Initial Value Problems** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains ∫sin x dx = -cos x + C; ∫cos x dx = sin…?',
-            options: [
-              '∫sec x tan x dx = sec x + C; ∫csc x cot x dx = -csc x + C',
-              'integration reverses the sign patterns from differentiation',
-              '∫sec²x dx = tan x + C; ∫csc²x dx = -cot x + C',
-              '∫sin x dx = -cos x + C; ∫cos x dx = sin x + C'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — ∫sin x dx = -cos x + C; ∫cos x dx = sin x + C. The other options describe different concepts from this topic.'
+            question: 'If $f\'(x) = 6x + 2$ and $f(1) = 8$, find $f(x)$.',
+            options: ['$3x^2 + 2x + 3$', '$3x^2 + 2x$', '$6x^2 + 2x + 3$', '$3x^2 + 2x - 3$'],
+            correctAnswer: 0,
+            explanation: '$f(x) = 3x^2 + 2x + C$. $f(1) = 3 + 2 + C = 8$, so $C = 3$. $f(x) = 3x^2 + 2x + 3$.'
           },
           {
-            question: 'In the context of Integrating Trig Functions, which explains ∫sec x tan x dx = sec x + C; ∫csc x cot…?',
-            options: [
-              '∫sin x dx = -cos x + C; ∫cos x dx = sin x + C',
-              '∫sec²x dx = tan x + C; ∫csc²x dx = -cot x + C',
-              'integration reverses the sign patterns from differentiation',
-              '∫sec x tan x dx = sec x + C; ∫csc x cot x dx = -csc x + C'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — ∫sec x tan x dx = sec x + C; ∫csc x cot x dx = -csc x + C. Be careful to distinguish between the different concepts in this topic.'
+            question: 'A ball is thrown upward with $v(0) = 64$ ft/s from height $s(0) = 80$ ft. If $a(t) = -32$ ft/s$^2$, find $s(t)$.',
+            options: ['$-16t^2 + 64t + 80$', '$-32t^2 + 64t + 80$', '$-16t^2 + 64t$', '$-32t + 64$'],
+            correctAnswer: 0,
+            explanation: '$v(t) = -32t + C_1$. $v(0) = 64 \\Rightarrow C_1 = 64$. $s(t) = -16t^2 + 64t + C_2$. $s(0) = 80 \\Rightarrow C_2 = 80$.'
           }
         ]
       }
     },
     {
-      id: 'antid3-detail',
+      id: 'anti3-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
+      content: `### Key Takeaways — Part 3
 
-- **∫sin x dx = -cos x + C; ∫cos x dx = sin x + C**
-- **∫sec²x dx = tan x + C; ∫csc²x dx = -cot x + C**
-- **∫sec x tan x dx = sec x + C; ∫csc x cot x dx = -csc x + C**
-- **Remember**: integration reverses the sign patterns from differentiation
-      `
-    },
-    {
-      id: 'antid3-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which statement about Remember is correct?',
-            options: [
-              '∫sin x dx = -cos x + C; ∫cos x dx = sin x + C',
-              '∫sec²x dx = tan x + C; ∫csc²x dx = -cot x + C',
-              '∫sec x tan x dx = sec x + C; ∫csc x cot x dx = -csc x + C',
-              'integration reverses the sign patterns from differentiation'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Remember: integration reverses the sign patterns from differentiation. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'antid3-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: '∫sin x dx = -cos x + C; ∫cos x dx = sin…',
-            options: ['∫sin x dx = -cos x + C; ∫cos x dx = sin x + C', '∫sec x tan x dx = sec x + C; ∫csc x cot x dx = -csc x + C', 'integration reverses the sign patterns from differentiation', '∫sec²x dx = tan x + C; ∫csc²x dx = -cot x + C']
-          },
-          {
-            label: '∫sec²x dx = tan x + C; ∫csc²x dx = -cot…',
-            options: ['integration reverses the sign patterns from differentiation', '∫sec²x dx = tan x + C; ∫csc²x dx = -cot x + C', '∫sec x tan x dx = sec x + C; ∫csc x cot x dx = -csc x + C', '∫sin x dx = -cos x + C; ∫cos x dx = sin x + C']
-          },
-          {
-            label: '∫sec x tan x dx = sec x + C; ∫csc x cot…',
-            options: ['∫sec x tan x dx = sec x + C; ∫csc x cot x dx = -csc x + C', '∫sec²x dx = tan x + C; ∫csc²x dx = -cot x + C', '∫sin x dx = -cos x + C; ∫cos x dx = sin x + C', 'integration reverses the sign patterns from differentiation']
-          }
-        ],
-        correctAnswers: ['∫sin x dx = -cos x + C; ∫cos x dx = sin x + C', '∫sec²x dx = tan x + C; ∫csc²x dx = -cot x + C', '∫sec x tan x dx = sec x + C; ∫csc x cot x dx = -csc x + C'],
-        hint1: 'Think about what each concept specifically describes in Integrating Trig Functions.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Integrating Trig Functions describes a specific idea. ∫sin x dx = -cos x + C; ∫cos x dx = sin x + C. ∫sec²x dx = tan x + C; ∫csc²x dx = -cot x + C. ∫sec x tan x dx = sec x + C; ∫csc x cot x dx = -csc x + C.'
-      }
+1. An IVP consists of a derivative equation plus initial condition(s)
+2. Find the general antiderivative, then plug in the initial condition to find $C$
+3. For particle motion: integrate $a(t)$ to get $v(t)$, integrate $v(t)$ to get $s(t)$`
     }
   ]
-}
+};

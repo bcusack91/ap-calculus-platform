@@ -1,125 +1,38 @@
-export const calcBCVectorsPart6Data = {
+export const calcbcVectorsPart6Data = {
   topicSlug: 'vector-valued-functions-calcbc',
   sections: [
     {
-      id: 'vecto6-intro',
+      id: 'vec6-intro',
       type: 'text' as const,
-      content: `
-# Problem-Solving Workshop
+      content: `# Vector-Valued Functions
 
-**Part 6 of 7 — Problem-Solving Workshop**
-
-### 1. Speed = |v⃗(t)| = √[x'(t)² + y'(t)²]
-
-Speed = |v⃗(t)| = √[x'(t)² + y'(t)²]
-
-### 2. Total distance = ∫ₐᵇ |v⃗(t)| dt = ∫ₐᵇ √[x'(t)² + y'(t)²] dt
-
-Total distance = ∫ₐᵇ |v⃗(t)| dt = ∫ₐᵇ √[x'(t)² + y'(t)²] dt
-
-### 3. This is the arc length formula
-
-This is the arc length formula
-
-### 4. Displacement vector = r⃗(b) - r⃗(a) = ∫ₐᵇ v⃗(t)dt
-
-Displacement vector = r⃗(b) - r⃗(a) = ∫ₐᵇ v⃗(t)dt
-      `
+**Part 6 of 7 — Practice Workshop**`
     },
     {
-      id: 'vecto6-quiz1',
+      id: 'vec6-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Mixed Practice** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains Speed = |v⃗(t)| = √[x\'(t)² + y\'(t)²]?',
-            options: [
-              'Total distance = ∫ₐᵇ |v⃗(t)| dt = ∫ₐᵇ √[x\'(t)² + y\'(t)²] dt',
-              'This is the arc length formula',
-              'Displacement vector = r⃗(b) - r⃗(a) = ∫ₐᵇ v⃗(t)dt',
-              'Speed = |v⃗(t)| = √[x\'(t)² + y\'(t)²]'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Speed = |v⃗(t)| = √[x\'(t)² + y\'(t)²]. The other options describe different concepts from this topic.'
+            question: '$\\vec{r}(t) = \\langle 2\\cos t, 3\\sin t \\rangle$ traces what shape?',
+            options: ['An ellipse', 'A circle', 'A parabola', 'A line'],
+            correctAnswer: 0,
+            explanation: '$x = 2\\cos t$, $y = 3\\sin t$ → $\\frac{x^2}{4} + \\frac{y^2}{9} = 1$. Ellipse!'
           },
           {
-            question: 'Which of the following is true about This is the arc length formula?',
-            options: [
-              'This is the arc length formula',
-              'Total distance = ∫ₐᵇ |v⃗(t)| dt = ∫ₐᵇ √[x\'(t)² + y\'(t)²] dt',
-              'Speed = |v⃗(t)| = √[x\'(t)² + y\'(t)²]',
-              'Displacement vector = r⃗(b) - r⃗(a) = ∫ₐᵇ v⃗(t)dt'
-            ],
+            question: 'Find the speed of $\\vec{r}(t) = \\langle 5\\cos(2t), 5\\sin(2t) \\rangle$.',
+            options: ['$10$', '$5$', '$25$', '$2$'],
             correctAnswer: 0,
-            explanation: 'Correct — This is the arc length formula. Be careful to distinguish between the different concepts in this topic.'
+            explanation: '$\\vec{v} = \\langle -10\\sin(2t), 10\\cos(2t) \\rangle$. $|\\vec{v}| = \\sqrt{100\\sin^2(2t) + 100\\cos^2(2t)} = 10$.'
           }
         ]
       }
     },
     {
-      id: 'vecto6-detail',
+      id: 'vec6-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Speed = |v⃗(t)| = √[x'(t)² + y'(t)²]**
-- **Total distance = ∫ₐᵇ |v⃗(t)| dt = ∫ₐᵇ √[x'(t)² + y'(t)²] dt**
-- **This is the arc length formula**
-- **Displacement vector = r⃗(b) - r⃗(a) = ∫ₐᵇ v⃗(t)dt**
-      `
-    },
-    {
-      id: 'vecto6-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Regarding Problem-Solving Workshop, which correctly describes Displacement vector = r⃗(b) - r⃗(a) =…?',
-            options: [
-              'Displacement vector = r⃗(b) - r⃗(a) = ∫ₐᵇ v⃗(t)dt',
-              'Total distance = ∫ₐᵇ |v⃗(t)| dt = ∫ₐᵇ √[x\'(t)² + y\'(t)²] dt',
-              'This is the arc length formula',
-              'Speed = |v⃗(t)| = √[x\'(t)² + y\'(t)²]'
-            ],
-            correctAnswer: 0,
-            explanation: 'Correct — Displacement vector = r⃗(b) - r⃗(a) = ∫ₐᵇ v⃗(t)dt. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'vecto6-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Speed = |v⃗(t)| = √[x\'(t)² + y\'(t)²]',
-            options: ['Displacement vector = r⃗(b) - r⃗(a) = ∫ₐᵇ v⃗(t)dt', 'Total distance = ∫ₐᵇ |v⃗(t)| dt = ∫ₐᵇ √[x\'(t)² + y\'(t)²] dt', 'Speed = |v⃗(t)| = √[x\'(t)² + y\'(t)²]', 'This is the arc length formula']
-          },
-          {
-            label: 'Total distance = ∫ₐᵇ |v⃗(t)| dt = ∫ₐᵇ…',
-            options: ['This is the arc length formula', 'Speed = |v⃗(t)| = √[x\'(t)² + y\'(t)²]', 'Total distance = ∫ₐᵇ |v⃗(t)| dt = ∫ₐᵇ √[x\'(t)² + y\'(t)²] dt', 'Displacement vector = r⃗(b) - r⃗(a) = ∫ₐᵇ v⃗(t)dt']
-          },
-          {
-            label: 'This is the arc length formula',
-            options: ['This is the arc length formula', 'Speed = |v⃗(t)| = √[x\'(t)² + y\'(t)²]', 'Displacement vector = r⃗(b) - r⃗(a) = ∫ₐᵇ v⃗(t)dt', 'Total distance = ∫ₐᵇ |v⃗(t)| dt = ∫ₐᵇ √[x\'(t)² + y\'(t)²] dt']
-          }
-        ],
-        correctAnswers: ['Speed = |v⃗(t)| = √[x\'(t)² + y\'(t)²]', 'Total distance = ∫ₐᵇ |v⃗(t)| dt = ∫ₐᵇ √[x\'(t)² + y\'(t)²] dt', 'This is the arc length formula'],
-        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Speed = |v⃗(t)| = √[x\'(t)² + y\'(t)²]. Total distance = ∫ₐᵇ |v⃗(t)| dt = ∫ₐᵇ √[x\'(t)² + y\'(t)²] dt. This is the arc length formula.'
-      }
+      content: `### Workshop Complete!`
     }
   ]
-}
+};

@@ -1,121 +1,106 @@
-export const calcABDefiniteIntegralsPart2Data = {
+export const calcabDefiniteIntegralsPart2Data = {
   topicSlug: 'definite-integrals-calcab',
   sections: [
     {
-      id: 'defin2-intro',
+      id: 'int2-intro',
       type: 'text' as const,
-      content: `
-# The Definite Integral
+      content: `# \u222B The Definite Integral
 
-**Part 2 of 7 — The Definite Integral**
+**Part 2 of 7 \u2014 Definite Integral Definition**
 
-### 1. ∫ₐᵇ f(x)dx = lim(n→∞) Σ f(xᵢ*)Δx
+### From Riemann Sums to the Definite Integral
 
-∫ₐᵇ f(x)dx = lim(n→∞) Σ f(xᵢ*)Δx
+The definite integral is the **limit of a Riemann sum** as $n \\to \\infty$:
 
-### 2. Geometric interpretation
+$$\\int_a^b f(x)\\,dx = \\lim_{n \\to \\infty} \\sum_{i=1}^n f(x_i^*) \\Delta x$$
 
-signed area under the curve from a to b
+### Geometric Interpretation
 
-### 3. Area above x-axis is positive; area below is negative
+- $\\int_a^b f(x)\\,dx$ = **signed area** between $f(x)$ and the $x$-axis
+- Area **above** the $x$-axis is **positive**
+- Area **below** the $x$-axis is **negative**
 
-Area above x-axis is positive; area below is negative
+### Worked Example
 
-### 4. Net area vs total area
+**Evaluate** $\\int_0^3 (2x + 1)\\,dx$ **geometrically.**
 
-total area uses |f(x)|
-      `
+This is a trapezoid with:
+- Left height: $f(0) = 1$
+- Right height: $f(3) = 7$
+- Width: $3$
+
+Area $= \\frac{1}{2}(1 + 7)(3) = 12$
+
+So $\\int_0^3 (2x+1)\\,dx = 12$, which we can verify: $\\left[x^2 + x\\right]_0^3 = (9+3) - 0 = 12$ \u2713`
     },
     {
-      id: 'defin2-quiz1',
+      id: 'int2-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Definite Integral Concepts** \ud83c\udfaf',
       exercise: {
         questions: [
           {
-            question: 'What does "∫ₐᵇ f(x)dx = lim(n→∞) Σ f(xᵢ*)Δx" refer to in calculus?',
-            options: [
-              'total area uses |f(x)|',
-              'Area above x-axis is positive; area below is negative',
-              'signed area under the curve from a to b',
-              '∫ₐᵇ f(x)dx = lim(n→∞) Σ f(xᵢ*)Δx'
-            ],
+            question: 'If $\\int_0^5 f(x)\\,dx = 8$ and the area of the region below the $x$-axis on $[0,5]$ is $3$, what is the total area between $f$ and the $x$-axis?',
+            options: ['$5$', '$8$', '$11$', '$14$'],
             correctAnswer: 3,
-            explanation: 'Correct — ∫ₐᵇ f(x)dx = lim(n→∞) Σ f(xᵢ*)Δx. The other options describe different concepts from this topic.'
+            explanation: 'The integral gives signed area: (area above) - (area below) = 8. Area below = 3, so area above = 11. Total area = 11 + 3 = 14.'
           },
           {
-            question: 'Select the statement that correctly describes Area above x-axis is positive; area…:',
-            options: [
-              'Area above x-axis is positive; area below is negative',
-              'signed area under the curve from a to b',
-              '∫ₐᵇ f(x)dx = lim(n→∞) Σ f(xᵢ*)Δx',
-              'total area uses |f(x)|'
-            ],
+            question: 'Evaluate $\\int_{-2}^{2} x^3\\,dx$ without computing.',
+            options: ['$0$', '$4$', '$8$', '$-8$'],
             correctAnswer: 0,
-            explanation: 'Correct — Area above x-axis is positive; area below is negative. Be careful to distinguish between the different concepts in this topic.'
+            explanation: '$x^3$ is an odd function, and the interval $[-2, 2]$ is symmetric about the origin. The integral of an odd function over a symmetric interval is always $0$.'
           }
         ]
       }
     },
     {
-      id: 'defin2-detail',
+      id: 'int2-text2',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
+      content: `### Important Properties
 
-- **∫ₐᵇ f(x)dx = lim(n→∞) Σ f(xᵢ*)Δx**
-- **Geometric interpretation**: signed area under the curve from a to b
-- **Area above x-axis is positive; area below is negative**
-- **Net area vs total area**: total area uses |f(x)|
-      `
+For **odd functions** ($f(-x) = -f(x)$) on symmetric intervals:
+$$\\int_{-a}^{a} f(x)\\,dx = 0$$
+
+For **even functions** ($f(-x) = f(x)$) on symmetric intervals:
+$$\\int_{-a}^{a} f(x)\\,dx = 2\\int_0^a f(x)\\,dx$$
+
+### Evaluation via Antiderivatives
+
+$$\\int_a^b f(x)\\,dx = F(b) - F(a)$$
+
+where $F$ is any antiderivative of $f$.`
     },
     {
-      id: 'defin2-quiz2',
+      id: 'int2-quiz2',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Evaluate Definite Integrals** \ud83c\udfaf',
       exercise: {
         questions: [
           {
-            question: 'Which statement about Net area vs total area is correct?',
-            options: [
-              'total area uses |f(x)|',
-              'Area above x-axis is positive; area below is negative',
-              'signed area under the curve from a to b',
-              '∫ₐᵇ f(x)dx = lim(n→∞) Σ f(xᵢ*)Δx'
-            ],
-            correctAnswer: 0,
-            explanation: 'Correct — Net area vs total area: total area uses |f(x)|. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            question: 'Evaluate $\\int_1^4 (3x^2 - 2x + 1)\\,dx$.',
+            options: ['$54$', '$48$', '$51$', '$42$'],
+            correctAnswer: 2,
+            explanation: 'Antiderivative: $x^3 - x^2 + x$. At $x=4$: $64 - 16 + 4 = 52$. At $x=1$: $1 - 1 + 1 = 1$. Result: $52 - 1 = 51$.'
+          },
+          {
+            question: 'Evaluate $\\int_0^{\\pi} \\sin x\\,dx$.',
+            options: ['$0$', '$1$', '$2$', '$\\pi$'],
+            correctAnswer: 2,
+            explanation: '$[-\\cos x]_0^{\\pi} = -\\cos(\\pi) - (-\\cos(0)) = -(-1) + 1 = 1 + 1 = 2$.'
           }
         ]
       }
     },
     {
-      id: 'defin2-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Geometric interpretation',
-            options: ['Area above x-axis is positive; area below is negative', 'total area uses |f(x)|', '∫ₐᵇ f(x)dx = lim(n→∞) Σ f(xᵢ*)Δx', 'signed area under the curve from a to b']
-          },
-          {
-            label: 'Net area vs total area',
-            options: ['Area above x-axis is positive; area below is negative', '∫ₐᵇ f(x)dx = lim(n→∞) Σ f(xᵢ*)Δx', 'total area uses |f(x)|', 'signed area under the curve from a to b']
-          }
-        ],
-        correctAnswers: ['signed area under the curve from a to b', 'total area uses |f(x)|'],
-        hint1: 'Think about what each concept specifically describes in The Definite Integral.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in The Definite Integral describes a specific idea. Geometric interpretation: signed area under the curve from a to b. Net area vs total area: total area uses |f(x)|.'
-      }
+      id: 'int2-summary',
+      type: 'text' as const,
+      content: `### Key Takeaways \u2014 Part 2
+
+1. The definite integral is the limit of Riemann sums
+2. It represents **signed area** (above axis positive, below negative)
+3. **Odd functions** integrate to 0 over symmetric intervals
+4. Evaluate using the **antiderivative**: $\\int_a^b f(x)\\,dx = F(b) - F(a)$`
     }
   ]
-}
+};

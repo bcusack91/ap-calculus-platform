@@ -1,121 +1,55 @@
-export const calcBCSeriesPart1Data = {
+export const calcbcSeriesPart1Data = {
   topicSlug: 'infinite-series-calcbc',
   sections: [
     {
-      id: 'infin1-intro',
+      id: 'ser1-intro',
       type: 'text' as const,
-      content: `
-# ∮ Infinite Series
+      content: `# Infinite Series
 
-**Part 1 of 7 — Introduction to Series**
+**Part 1 of 7 — Partial Sums & Geometric Series**
 
-### 1. Series
+### Partial Sums
 
-Σ aₙ = a₁ + a₂ + a₃ + ... (sum of a sequence)
+$$S_n = \sum_{k=1}^n a_k = a_1 + a_2 + \cdots + a_n$$
 
-### 2. Partial sums
+$\sum_{n=1}^{\infty} a_n = L$ means $\lim_{n \to \infty} S_n = L$.
 
-Sₙ = a₁ + a₂ + ... + aₙ
+### Geometric Series
 
-### 3. If lim(n→∞) Sₙ = S (finite), the series converges to S
+$$\sum_{n=0}^{\infty} ar^n = \frac{a}{1-r} \quad \text{if } |r| < 1$$
 
-If lim(n→∞) Sₙ = S (finite), the series converges to S
+Diverges if $|r| \geq 1$.
 
-### 4. If the limit of partial sums doesn't exist or is infinite, the series diverges
+### Example
 
-If the limit of partial sums doesn't exist or is infinite, the series diverges
-      `
+$\sum_{n=0}^{\infty} \frac{3}{4^n} = \frac{3}{1 - 1/4} = 4$`
     },
     {
-      id: 'infin1-quiz1',
+      id: 'ser1-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Geometric Series** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains Series?',
-            options: [
-              'Σ aₙ = a₁ + a₂ + a₃ + ... (sum of a sequence)',
-              'If lim(n→∞) Sₙ = S (finite), the series converges to S',
-              'Sₙ = a₁ + a₂ + ... + aₙ',
-              'If the limit of partial sums doesn\'t exist or is infinite, the series diverges'
-            ],
+            question: '$\\sum_{n=1}^{\\infty} \\left(\\frac{2}{3}\\right)^n = $',
+            options: ['$2$', '$3$', '$2/3$', '$3/2$'],
             correctAnswer: 0,
-            explanation: 'Correct — Series: Σ aₙ = a₁ + a₂ + a₃ + ... (sum of a sequence). The other options describe different concepts from this topic.'
+            explanation: '$\\sum_{n=1}^{\\infty} (2/3)^n = \\frac{2/3}{1 - 2/3} = \\frac{2/3}{1/3} = 2$.'
           },
           {
-            question: 'In the context of ∮ Infinite Series, which explains If lim(n→∞) Sₙ = S (finite), the series…?',
-            options: [
-              'Sₙ = a₁ + a₂ + ... + aₙ',
-              'If the limit of partial sums doesn\'t exist or is infinite, the series diverges',
-              'If lim(n→∞) Sₙ = S (finite), the series converges to S',
-              'Σ aₙ = a₁ + a₂ + a₃ + ... (sum of a sequence)'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — If lim(n→∞) Sₙ = S (finite), the series converges to S. Be careful to distinguish between the different concepts in this topic.'
+            question: '$\\sum_{n=0}^{\\infty} (-1)^n \\cdot \\frac{1}{2^n} = $',
+            options: ['$2/3$', '$1/2$', '$1$', 'Diverges'],
+            correctAnswer: 0,
+            explanation: 'Geometric with $r = -1/2$: $\\frac{1}{1-(-1/2)} = \\frac{1}{3/2} = 2/3$.'
           }
         ]
       }
     },
     {
-      id: 'infin1-detail',
+      id: 'ser1-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Series**: Σ aₙ = a₁ + a₂ + a₃ + ... (sum of a sequence)
-- **Partial sums**: Sₙ = a₁ + a₂ + ... + aₙ
-- **If lim(n→∞) Sₙ = S (finite), the series converges to S**
-- **If the limit of partial sums doesn't exist or is infinite, the series diverges**
-      `
-    },
-    {
-      id: 'infin1-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of these accurately represents If the limit of partial sums doesn\'t…?',
-            options: [
-              'If the limit of partial sums doesn\'t exist or is infinite, the series diverges',
-              'Σ aₙ = a₁ + a₂ + a₃ + ... (sum of a sequence)',
-              'If lim(n→∞) Sₙ = S (finite), the series converges to S',
-              'Sₙ = a₁ + a₂ + ... + aₙ'
-            ],
-            correctAnswer: 0,
-            explanation: 'Correct — If the limit of partial sums doesn\'t exist or is infinite, the series diverges. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'infin1-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Series',
-            options: ['If the limit of partial sums doesn\'t exist or is infinite, the series diverges', 'If lim(n→∞) Sₙ = S (finite), the series converges to S', 'Sₙ = a₁ + a₂ + ... + aₙ', 'Σ aₙ = a₁ + a₂ + a₃ + ... (sum of a sequence)']
-          },
-          {
-            label: 'Partial sums',
-            options: ['Σ aₙ = a₁ + a₂ + a₃ + ... (sum of a sequence)', 'If lim(n→∞) Sₙ = S (finite), the series converges to S', 'If the limit of partial sums doesn\'t exist or is infinite, the series diverges', 'Sₙ = a₁ + a₂ + ... + aₙ']
-          }
-        ],
-        correctAnswers: ['Σ aₙ = a₁ + a₂ + a₃ + ... (sum of a sequence)', 'Sₙ = a₁ + a₂ + ... + aₙ'],
-        hint1: 'Think about what each concept specifically describes in ∮ Infinite Series.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in ∮ Infinite Series describes a specific idea. Series: Σ aₙ = a₁ + a₂ + a₃ + ... (sum of a sequence). Partial sums: Sₙ = a₁ + a₂ + ... + aₙ.'
-      }
+      content: `### Key Takeaways — Part 1
+Geometric: $\\frac{a}{1-r}$ when $|r| < 1$. First ratio, then answer!`
     }
   ]
-}
+};

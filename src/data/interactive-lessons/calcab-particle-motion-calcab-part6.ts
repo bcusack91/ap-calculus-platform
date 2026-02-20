@@ -1,121 +1,38 @@
-export const calcABParticleMotionPart6Data = {
+export const calcabParticleMotionPart6Data = {
   topicSlug: 'particle-motion-calcab',
   sections: [
     {
-      id: 'parti6-intro',
+      id: 'pm6-intro',
       type: 'text' as const,
-      content: `
-# Problem-Solving Workshop
+      content: `# Particle Motion
 
-**Part 6 of 7 — Problem-Solving Workshop**
-
-### 1. Given a velocity graph
-
-area above t-axis is positive displacement, below is negative
-
-### 2. Position at time b
-
-s(b) = s(a) + ∫ₐᵇ v(t)dt
-
-### 3. Acceleration is the slope of the velocity graph
-
-Acceleration is the slope of the velocity graph
-
-### 4. Particle farthest from origin when displacement is maximized
-
-Particle farthest from origin when displacement is maximized
-      `
+**Part 6 of 7 \u2014 AP-Style Workshop**`
     },
     {
-      id: 'parti6-quiz1',
+      id: 'pm6-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**AP-Style Motion Problems** \ud83c\udfaf\n\nA particle moves with $v(t) = 2\\sin(t)$ for $t \\geq 0$.',
       exercise: {
         questions: [
           {
-            question: 'What does "Given a velocity graph" refer to in calculus?',
-            options: [
-              'Particle farthest from origin when displacement is maximized',
-              'area above t-axis is positive displacement, below is negative',
-              's(b) = s(a) + ∫ₐᵇ v(t)dt',
-              'Acceleration is the slope of the velocity graph'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Given a velocity graph: area above t-axis is positive displacement, below is negative. The other options describe different concepts from this topic.'
+            question: 'Find the total distance traveled on $[0, 2\\pi]$.',
+            options: ['$0$', '$4$', '$8$', '$2\\pi$'],
+            correctAnswer: 2,
+            explanation: '$v = 0$ at $t = 0, \\pi, 2\\pi$. $\\int_0^{\\pi} 2\\sin t\\,dt + \\int_{\\pi}^{2\\pi} 2|\\sin t|\\,dt = 4 + 4 = 8$.'
           },
           {
-            question: 'Select the statement that correctly describes Acceleration is the slope of the…:',
-            options: [
-              'Acceleration is the slope of the velocity graph',
-              'Particle farthest from origin when displacement is maximized',
-              's(b) = s(a) + ∫ₐᵇ v(t)dt',
-              'area above t-axis is positive displacement, below is negative'
-            ],
+            question: 'At what time on $(0, 2\\pi)$ is the speed maximum?',
+            options: ['$t = \\pi/2$ and $t = 3\\pi/2$', '$t = \\pi$', '$t = \\pi/2$ only', '$t = 0$'],
             correctAnswer: 0,
-            explanation: 'Correct — Acceleration is the slope of the velocity graph. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'Speed $= |2\\sin t|$. Maximum when $|\\sin t| = 1$, at $t = \\pi/2$ and $t = 3\\pi/2$.'
           }
         ]
       }
     },
     {
-      id: 'parti6-detail',
+      id: 'pm6-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Given a velocity graph**: area above t-axis is positive displacement, below is negative
-- **Position at time b**: s(b) = s(a) + ∫ₐᵇ v(t)dt
-- **Acceleration is the slope of the velocity graph**
-- **Particle farthest from origin when displacement is maximized**
-      `
-    },
-    {
-      id: 'parti6-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Regarding Problem-Solving Workshop, which correctly describes Particle farthest from origin when…?',
-            options: [
-              'area above t-axis is positive displacement, below is negative',
-              's(b) = s(a) + ∫ₐᵇ v(t)dt',
-              'Acceleration is the slope of the velocity graph',
-              'Particle farthest from origin when displacement is maximized'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Particle farthest from origin when displacement is maximized. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'parti6-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Given a velocity graph',
-            options: ['Particle farthest from origin when displacement is maximized', 's(b) = s(a) + ∫ₐᵇ v(t)dt', 'area above t-axis is positive displacement, below is negative', 'Acceleration is the slope of the velocity graph']
-          },
-          {
-            label: 'Position at time b',
-            options: ['area above t-axis is positive displacement, below is negative', 'Particle farthest from origin when displacement is maximized', 's(b) = s(a) + ∫ₐᵇ v(t)dt', 'Acceleration is the slope of the velocity graph']
-          }
-        ],
-        correctAnswers: ['area above t-axis is positive displacement, below is negative', 's(b) = s(a) + ∫ₐᵇ v(t)dt'],
-        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Given a velocity graph: area above t-axis is positive displacement, below is negative. Position at time b: s(b) = s(a) + ∫ₐᵇ v(t)dt.'
-      }
+      content: `### Workshop Complete!`
     }
   ]
-}
+};

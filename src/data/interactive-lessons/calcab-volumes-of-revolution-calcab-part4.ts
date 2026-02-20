@@ -1,121 +1,69 @@
-export const calcABVolumesPart4Data = {
+export const calcabVolumesPart4Data = {
   topicSlug: 'volumes-of-revolution-calcab',
   sections: [
     {
-      id: 'volum4-intro',
+      id: 'vol4-intro',
       type: 'text' as const,
-      content: `
-# Volumes by Cross Sections
+      content: `# Volumes of Revolution
 
-**Part 4 of 7 — Volumes by Cross Sections**
+**Part 4 of 7 — Cross-Sectional Volumes**
 
-### 1. Known cross-sections perpendicular to the x-axis
+### Known Cross-Sections
 
-V = ∫ₐᵇ A(x)dx
+Instead of rotating, we can have cross-sections that are squares, semicircles, equilateral triangles, etc.
 
-### 2. A(x) is the area of the cross-section at position x
+$$V = \\int_a^b A(x)\\,dx$$
 
-A(x) is the area of the cross-section at position x
+where $A(x)$ is the area of the cross-section at position $x$.
 
-### 3. Common shapes
+### Common Cross-Section Formulas
 
-squares, semicircles, equilateral triangles, rectangles
+If the base goes from $y = g(x)$ to $y = f(x)$, the side length is $s = f(x) - g(x)$.
 
-### 4. The "base" of each cross-section is typically bounded by two curves
+| Cross-section | Area Formula |
+|--------------|-------------|
+| Square | $A = s^2$ |
+| Semicircle | $A = \\frac{\\pi s^2}{8}$ |
+| Equilateral triangle | $A = \\frac{\\sqrt{3}}{4}s^2$ |
+| Isosceles right triangle (leg = side) | $A = \\frac{s^2}{2}$ |
 
-The "base" of each cross-section is typically bounded by two curves
-      `
+### Worked Example
+
+Base is the region between $y = \\sqrt{x}$ and $y = 0$ on $[0, 4]$. Cross-sections perpendicular to $x$-axis are **squares**.
+
+$s = \\sqrt{x} - 0 = \\sqrt{x}$. $A = (\\sqrt{x})^2 = x$.
+
+$$V = \\int_0^4 x\\,dx = \\left[\\frac{x^2}{2}\\right]_0^4 = 8$$`
     },
     {
-      id: 'volum4-quiz1',
+      id: 'vol4-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Cross-Section Volumes** 🎯',
       exercise: {
         questions: [
           {
-            question: 'What does "Known cross-sections perpendicular to the x-axis" refer to in calculus?',
-            options: [
-              'squares, semicircles, equilateral triangles, rectangles',
-              'The "base" of each cross-section is typically bounded by two curves',
-              'V = ∫ₐᵇ A(x)dx',
-              'A(x) is the area of the cross-section at position x'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Known cross-sections perpendicular to the x-axis: V = ∫ₐᵇ A(x)dx. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Select the statement that correctly describes Common shapes:',
-            options: [
-              'The "base" of each cross-section is typically bounded by two curves',
-              'V = ∫ₐᵇ A(x)dx',
-              'squares, semicircles, equilateral triangles, rectangles',
-              'A(x) is the area of the cross-section at position x'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Common shapes: squares, semicircles, equilateral triangles, rectangles. Be careful to distinguish between the different concepts in this topic.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'volum4-detail',
-      type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Known cross-sections perpendicular to the x-axis**: V = ∫ₐᵇ A(x)dx
-- **A(x) is the area of the cross-section at position x**
-- **Common shapes**: squares, semicircles, equilateral triangles, rectangles
-- **The "base" of each cross-section is typically bounded by two curves**
-      `
-    },
-    {
-      id: 'volum4-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of these accurately represents The "base" of each cross-section is…?',
-            options: [
-              'The "base" of each cross-section is typically bounded by two curves',
-              'V = ∫ₐᵇ A(x)dx',
-              'A(x) is the area of the cross-section at position x',
-              'squares, semicircles, equilateral triangles, rectangles'
-            ],
+            question: 'Base between $y = x$ and $y = x^2$ on $[0,1]$. Cross-sections perpendicular to x-axis are squares. Find the volume.',
+            options: ['$\\frac{1}{30}$', '$\\frac{1}{6}$', '$\\frac{1}{15}$', '$\\frac{2}{15}$'],
             correctAnswer: 0,
-            explanation: 'Correct — The "base" of each cross-section is typically bounded by two curves. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: '$s = x - x^2$. $A = s^2 = (x-x^2)^2 = x^2 - 2x^3 + x^4$. $V = \\int_0^1 (x^2-2x^3+x^4)\\,dx = [\\frac{x^3}{3}-\\frac{x^4}{2}+\\frac{x^5}{5}]_0^1 = \\frac{1}{3}-\\frac{1}{2}+\\frac{1}{5} = \\frac{1}{30}$.'
+          },
+          {
+            question: 'Same base. Cross-sections are equilateral triangles. Find the volume.',
+            options: ['$\\frac{\\sqrt{3}}{120}$', '$\\frac{\\sqrt{3}}{30}$', '$\\frac{1}{30}$', '$\\frac{\\sqrt{3}}{60}$'],
+            correctAnswer: 0,
+            explanation: '$A = \\frac{\\sqrt{3}}{4}(x-x^2)^2$. $V = \\frac{\\sqrt{3}}{4} \\cdot \\frac{1}{30} = \\frac{\\sqrt{3}}{120}$.'
           }
         ]
       }
     },
     {
-      id: 'volum4-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Known cross-sections perpendicular to the x-axis',
-            options: ['A(x) is the area of the cross-section at position x', 'squares, semicircles, equilateral triangles, rectangles', 'V = ∫ₐᵇ A(x)dx', 'The "base" of each cross-section is typically bounded by two curves']
-          },
-          {
-            label: 'Common shapes',
-            options: ['V = ∫ₐᵇ A(x)dx', 'A(x) is the area of the cross-section at position x', 'The "base" of each cross-section is typically bounded by two curves', 'squares, semicircles, equilateral triangles, rectangles']
-          }
-        ],
-        correctAnswers: ['V = ∫ₐᵇ A(x)dx', 'squares, semicircles, equilateral triangles, rectangles'],
-        hint1: 'Think about what each concept specifically describes in Volumes by Cross Sections.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Volumes by Cross Sections describes a specific idea. Known cross-sections perpendicular to the x-axis: V = ∫ₐᵇ A(x)dx. Common shapes: squares, semicircles, equilateral triangles, rectangles.'
-      }
+      id: 'vol4-summary',
+      type: 'text' as const,
+      content: `### Key Takeaways — Part 4
+
+1. Cross-section problems: $V = \\int A(x)\\,dx$
+2. Find the side length from the base region, then apply the area formula
+3. **This is a common AP free-response topic!**`
     }
   ]
-}
+};

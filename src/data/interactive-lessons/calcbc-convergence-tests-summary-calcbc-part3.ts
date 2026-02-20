@@ -1,125 +1,40 @@
-export const calcBCConvergenceTestsPart3Data = {
+export const calcbcConvergencePart3Data = {
   topicSlug: 'convergence-tests-summary-calcbc',
   sections: [
     {
-      id: 'conve3-intro',
+      id: 'conv3-intro',
       type: 'text' as const,
-      content: `
-# Integral & p-Series Tests
+      content: `# Convergence Tests
 
-**Part 3 of 7 — Integral & p-Series Tests**
+**Part 3 of 7 — Common Pitfalls**
 
-### 1. Integral Test
+### Mistakes to Avoid
 
-Σf(n) and ∫₁^∞ f(x)dx behave the same (f positive, decreasing, continuous)
-
-### 2. p-series
-
-Σ1/nᵖ converges iff p > 1
-
-### 3. Harmonic series (p=1) diverges — know this cold
-
-Harmonic series (p=1) diverges — know this cold
-
-### 4. Integral test remainder
-
-Sₙ + ∫_(n+1)^∞ f(x)dx ≤ S ≤ Sₙ + ∫_n^∞ f(x)dx
-      `
+1. **Divergence test ≠ convergence test**: $a_n \to 0$ does NOT prove convergence
+2. **Ratio test $L = 1$**: INCONCLUSIVE (try another test!)
+3. **Comparison wrong direction**: bigger than convergent → NOT helpful
+4. **Forgetting to check AST conditions**: must verify decreasing AND $\to 0$`
     },
     {
-      id: 'conve3-quiz1',
+      id: 'conv3-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Pitfalls** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains Integral Test?',
-            options: [
-              'Sₙ + ∫_(n+1)^∞ f(x)dx ≤ S ≤ Sₙ + ∫_n^∞ f(x)dx',
-              'Σf(n) and ∫₁^∞ f(x)dx behave the same (f positive, decreasing, continuous)',
-              'Σ1/nᵖ converges iff p > 1',
-              'Harmonic series (p=1) diverges — know this cold'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Integral Test: Σf(n) and ∫₁^∞ f(x)dx behave the same (f positive, decreasing, continuous). The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Which of the following is true about Harmonic series (p=1) diverges — know…?',
-            options: [
-              'Harmonic series (p=1) diverges — know this cold',
-              'Σf(n) and ∫₁^∞ f(x)dx behave the same (f positive, decreasing, continuous)',
-              'Σ1/nᵖ converges iff p > 1',
-              'Sₙ + ∫_(n+1)^∞ f(x)dx ≤ S ≤ Sₙ + ∫_n^∞ f(x)dx'
-            ],
+            question: '$\\sum 1/n$: $a_n \\to 0$, so it converges. What is wrong?',
+            options: ['$a_n \\to 0$ does not prove convergence; harmonic series diverges', 'Nothing, it does converge', 'Need to check $a_n$ is decreasing', 'Should use root test'],
             correctAnswer: 0,
-            explanation: 'Correct — Harmonic series (p=1) diverges — know this cold. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'The divergence test only works one way: $a_n \\not\\to 0$ implies divergence. $a_n \\to 0$ is necessary but not sufficient.'
           }
         ]
       }
     },
     {
-      id: 'conve3-detail',
+      id: 'conv3-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Integral Test**: Σf(n) and ∫₁^∞ f(x)dx behave the same (f positive, decreasing, continuous)
-- **p-series**: Σ1/nᵖ converges iff p > 1
-- **Harmonic series (p=1) diverges — know this cold**
-- **Integral test remainder**: Sₙ + ∫_(n+1)^∞ f(x)dx ≤ S ≤ Sₙ + ∫_n^∞ f(x)dx
-      `
-    },
-    {
-      id: 'conve3-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Regarding Integral & p-Series Tests, which correctly describes Integral test remainder?',
-            options: [
-              'Σ1/nᵖ converges iff p > 1',
-              'Harmonic series (p=1) diverges — know this cold',
-              'Σf(n) and ∫₁^∞ f(x)dx behave the same (f positive, decreasing, continuous)',
-              'Sₙ + ∫_(n+1)^∞ f(x)dx ≤ S ≤ Sₙ + ∫_n^∞ f(x)dx'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Integral test remainder: Sₙ + ∫_(n+1)^∞ f(x)dx ≤ S ≤ Sₙ + ∫_n^∞ f(x)dx. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'conve3-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Integral Test',
-            options: ['Sₙ + ∫_(n+1)^∞ f(x)dx ≤ S ≤ Sₙ + ∫_n^∞ f(x)dx', 'Harmonic series (p=1) diverges — know this cold', 'Σ1/nᵖ converges iff p > 1', 'Σf(n) and ∫₁^∞ f(x)dx behave the same (f positive, decreasing, continuous)']
-          },
-          {
-            label: 'p-series',
-            options: ['Σf(n) and ∫₁^∞ f(x)dx behave the same (f positive, decreasing, continuous)', 'Sₙ + ∫_(n+1)^∞ f(x)dx ≤ S ≤ Sₙ + ∫_n^∞ f(x)dx', 'Harmonic series (p=1) diverges — know this cold', 'Σ1/nᵖ converges iff p > 1']
-          },
-          {
-            label: 'Integral test remainder',
-            options: ['Σ1/nᵖ converges iff p > 1', 'Sₙ + ∫_(n+1)^∞ f(x)dx ≤ S ≤ Sₙ + ∫_n^∞ f(x)dx', 'Harmonic series (p=1) diverges — know this cold', 'Σf(n) and ∫₁^∞ f(x)dx behave the same (f positive, decreasing, continuous)']
-          }
-        ],
-        correctAnswers: ['Σf(n) and ∫₁^∞ f(x)dx behave the same (f positive, decreasing, continuous)', 'Σ1/nᵖ converges iff p > 1', 'Sₙ + ∫_(n+1)^∞ f(x)dx ≤ S ≤ Sₙ + ∫_n^∞ f(x)dx'],
-        hint1: 'Think about what each concept specifically describes in Integral & p-Series Tests.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Integral & p-Series Tests describes a specific idea. Integral Test: Σf(n) and ∫₁^∞ f(x)dx behave the same (f positive, decreasing, continuous). p-series: Σ1/nᵖ converges iff p > 1. Integral test remainder: Sₙ + ∫_(n+1)^∞ f(x)dx ≤ S ≤ Sₙ + ∫_n^∞ f(x)dx.'
-      }
+      content: `### Key Takeaways — Part 3
+The divergence test can only prove divergence, never convergence.`
     }
   ]
-}
+};

@@ -1,125 +1,95 @@
-export const calcABBasicDiffPart7Data = {
+export const calcabBasicDiffPart7Data = {
   topicSlug: 'basic-differentiation-rules-calcab',
   sections: [
     {
-      id: 'basic7-intro',
+      id: 'diff7-intro',
       type: 'text' as const,
-      content: `
-# Review & Applications
+      content: `# 📐 Review & Applications
 
-**Part 7 of 7 — Review & Applications**
+**Part 7 of 7 — Comprehensive Review**
 
-### 1. d/dx[sin x] = cos x; d/dx[cos x] = -sin x
+### Complete Derivative Reference
 
-d/dx[sin x] = cos x; d/dx[cos x] = -sin x
+| Rule | Formula |
+|------|---------|
+| Power | $\\frac{d}{dx}x^n = nx^{n-1}$ |
+| Constant Multiple | $\\frac{d}{dx}[cf] = cf'$ |
+| Sum/Difference | $\\frac{d}{dx}[f \\pm g] = f' \\pm g'$ |
+| Product | $(fg)' = f'g + fg'$ |
+| Quotient | $\\left(\\frac{f}{g}\\right)' = \\frac{f'g - fg'}{g^2}$ |
+| Chain | $\\frac{d}{dx}[f(g(x))] = f'(g(x))g'(x)$ |
 
-### 2. d/dx[tan x] = sec²x; d/dx[cot x] = -csc²x
+### Special Derivatives
 
-d/dx[tan x] = sec²x; d/dx[cot x] = -csc²x
-
-### 3. d/dx[sec x] = sec x tan x; d/dx[csc x] = -csc x cot x
-
-d/dx[sec x] = sec x tan x; d/dx[csc x] = -csc x cot x
-
-### 4. These come from the limit definition and the identity sin(x)/x → 1
-
-These come from the limit definition and the identity sin(x)/x → 1
-      `
+| Function | Derivative |
+|----------|-----------|
+| $e^x$ | $e^x$ |
+| $\\ln x$ | $\\frac{1}{x}$ |
+| $a^x$ | $a^x \\ln a$ |
+| $\\log_a x$ | $\\frac{1}{x \\ln a}$ |`
     },
     {
-      id: 'basic7-quiz1',
+      id: 'diff7-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Comprehensive Assessment** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains d/dx[sin x] = cos x; d/dx[cos x] = -sin…?',
-            options: [
-              'These come from the limit definition and the identity sin(x)/x → 1',
-              'd/dx[sec x] = sec x tan x; d/dx[csc x] = -csc x cot x',
-              'd/dx[sin x] = cos x; d/dx[cos x] = -sin x',
-              'd/dx[tan x] = sec²x; d/dx[cot x] = -csc²x'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — d/dx[sin x] = cos x; d/dx[cos x] = -sin x. The other options describe different concepts from this topic.'
+            question: 'Find $\\frac{d}{dx}(x^2 e^x \\sin x)$ at $x = 0$.',
+            options: ['$0$', '$1$', '$2$', 'undefined'],
+            correctAnswer: 0,
+            explanation: 'At $x=0$: $f(0) = 0$. Using product rule with three functions or just noting that $x^2$ makes the whole expression and its derivative zero at $x=0$, since $f(x) = x^2 \\cdot (e^x \\sin x)$ and $f\'(0) = 2(0)e^0\\sin 0 + 0 \\cdot [\\text{stuff}] = 0$.'
           },
           {
-            question: 'In the context of Review & Applications, which explains d/dx[sec x] = sec x tan x; d/dx[csc x]…?',
-            options: [
-              'd/dx[sin x] = cos x; d/dx[cos x] = -sin x',
-              'd/dx[tan x] = sec²x; d/dx[cot x] = -csc²x',
-              'd/dx[sec x] = sec x tan x; d/dx[csc x] = -csc x cot x',
-              'These come from the limit definition and the identity sin(x)/x → 1'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — d/dx[sec x] = sec x tan x; d/dx[csc x] = -csc x cot x. Be careful to distinguish between the different concepts in this topic.'
+            question: 'If $f(x) = \\frac{x^2+1}{x^2-1}$, where is $f\'(x) = 0$?',
+            options: ['$x = 0$', '$x = 1$', 'Nowhere — $f\'(x)$ is never zero', '$x = \\pm 1$'],
+            correctAnswer: 0,
+            explanation: '$f\'(x) = \\frac{2x(x^2-1) - (x^2+1)(2x)}{(x^2-1)^2} = \\frac{-4x}{(x^2-1)^2}$. This equals 0 when $x = 0$.'
+          },
+          {
+            question: 'Find the 50th derivative of $\\cos x$.',
+            options: ['$\\cos x$', '$-\\cos x$', '$\\sin x$', '$-\\sin x$'],
+            correctAnswer: 1,
+            explanation: 'The cycle repeats every 4: $\\cos x, -\\sin x, -\\cos x, \\sin x, \\cos x, ...$. $50 = 4(12) + 2$, so the 50th derivative matches the 2nd: $-\\cos x$.'
           }
         ]
       }
     },
     {
-      id: 'basic7-detail',
-      type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **d/dx[sin x] = cos x; d/dx[cos x] = -sin x**
-- **d/dx[tan x] = sec²x; d/dx[cot x] = -csc²x**
-- **d/dx[sec x] = sec x tan x; d/dx[csc x] = -csc x cot x**
-- **These come from the limit definition and the identity sin(x)/x → 1**
-      `
-    },
-    {
-      id: 'basic7-quiz2',
+      id: 'diff7-quiz2',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Final Problems** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Regarding Review & Applications, which correctly describes These come from the limit definition…?',
-            options: [
-              'd/dx[sec x] = sec x tan x; d/dx[csc x] = -csc x cot x',
-              'd/dx[sin x] = cos x; d/dx[cos x] = -sin x',
-              'These come from the limit definition and the identity sin(x)/x → 1',
-              'd/dx[tan x] = sec²x; d/dx[cot x] = -csc²x'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — These come from the limit definition and the identity sin(x)/x → 1. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            question: 'A function $f$ satisfies $f(1) = 3$, $f\'(1) = -2$. If $g(x) = x^2 f(x)$, find $g\'(1)$.',
+            options: ['$-2$', '$4$', '$6$', '$2$'],
+            correctAnswer: 1,
+            explanation: '$g\'(x) = 2xf(x) + x^2f\'(x)$. At $x=1$: $g\'(1) = 2(1)(3) + (1)(-2) = 6 - 2 = 4$.'
+          },
+          {
+            question: 'Find the equation of the tangent line to $y = x^3 - 4x$ at $x = 2$.',
+            options: ['$y = 8x - 16$', '$y = 8x - 8$', '$y = 8(x-2)$', 'Both A and C'],
+            correctAnswer: 3,
+            explanation: '$y(2) = 8-8 = 0$. $y\'(x) = 3x^2-4$, $y\'(2) = 12-4 = 8$. Tangent: $y - 0 = 8(x-2)$, i.e., $y = 8x - 16$. Both A and C are equivalent.'
           }
         ]
       }
     },
     {
-      id: 'basic7-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'd/dx[sin x] = cos x; d/dx[cos x] = -sin…',
-            options: ['d/dx[tan x] = sec²x; d/dx[cot x] = -csc²x', 'd/dx[sin x] = cos x; d/dx[cos x] = -sin x', 'd/dx[sec x] = sec x tan x; d/dx[csc x] = -csc x cot x', 'These come from the limit definition and the identity sin(x)/x → 1']
-          },
-          {
-            label: 'd/dx[tan x] = sec²x; d/dx[cot x] =…',
-            options: ['d/dx[sec x] = sec x tan x; d/dx[csc x] = -csc x cot x', 'd/dx[tan x] = sec²x; d/dx[cot x] = -csc²x', 'd/dx[sin x] = cos x; d/dx[cos x] = -sin x', 'These come from the limit definition and the identity sin(x)/x → 1']
-          },
-          {
-            label: 'd/dx[sec x] = sec x tan x; d/dx[csc x]…',
-            options: ['These come from the limit definition and the identity sin(x)/x → 1', 'd/dx[tan x] = sec²x; d/dx[cot x] = -csc²x', 'd/dx[sec x] = sec x tan x; d/dx[csc x] = -csc x cot x', 'd/dx[sin x] = cos x; d/dx[cos x] = -sin x']
-          }
-        ],
-        correctAnswers: ['d/dx[sin x] = cos x; d/dx[cos x] = -sin x', 'd/dx[tan x] = sec²x; d/dx[cot x] = -csc²x', 'd/dx[sec x] = sec x tan x; d/dx[csc x] = -csc x cot x'],
-        hint1: 'Think about what each concept specifically describes in Review & Applications.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Review & Applications describes a specific idea. d/dx[sin x] = cos x; d/dx[cos x] = -sin x. d/dx[tan x] = sec²x; d/dx[cot x] = -csc²x. d/dx[sec x] = sec x tan x; d/dx[csc x] = -csc x cot x.'
-      }
+      id: 'diff7-summary',
+      type: 'text' as const,
+      content: `### Basic Differentiation Rules — Complete! ✅
+
+You have mastered:
+- ✅ Power Rule (including negative/fractional exponents)
+- ✅ Product Rule
+- ✅ Quotient Rule
+- ✅ All six trig derivatives
+- ✅ Higher-order derivatives and their applications
+- ✅ Combining multiple rules
+
+**Ready to move on to the Chain Rule!**`
     }
   ]
-}
+};

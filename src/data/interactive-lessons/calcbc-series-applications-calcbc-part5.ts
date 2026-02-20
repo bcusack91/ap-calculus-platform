@@ -1,125 +1,49 @@
-export const calcBCSeriesAppsPart5Data = {
+export const calcbcSeriesAppsPart5Data = {
   topicSlug: 'series-applications-calcbc',
   sections: [
     {
-      id: 'serie5-intro',
+      id: 'sapp5-intro',
       type: 'text' as const,
-      content: `
-# Series in Physics & Engineering
+      content: `# Series Applications
 
-**Part 5 of 7 — Series in Physics & Engineering**
+**Part 5 of 7 — Euler's Formula**
 
-### 1. Fourier series
+### The Beautiful Connection
 
-represent periodic functions (preview)
+$$e^{ix} = \cos x + i\sin x$$
 
-### 2. Taylor series in physics
+This follows from comparing Maclaurin series:
 
-small-angle approximations (sin θ ≈ θ)
+$e^{ix} = 1 + ix + \frac{(ix)^2}{2!} + \frac{(ix)^3}{3!} + \cdots$
 
-### 3. Binomial series
+$= \left(1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \cdots\right) + i\left(x - \frac{x^3}{3!} + \cdots\right)$
 
-(1+x)ᵖ = Σ C(p,n)xⁿ for any real p
+$= \cos x + i\sin x$
 
-### 4. Series solutions are fundamental in differential equations and mathematical physics
+### Euler's Identity
 
-Series solutions are fundamental in differential equations and mathematical physics
-      `
+$$e^{i\pi} + 1 = 0$$`
     },
     {
-      id: 'serie5-quiz1',
+      id: 'sapp5-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Euler Connection** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Fourier series?',
-            options: [
-              'small-angle approximations (sin θ ≈ θ)',
-              '(1+x)ᵖ = Σ C(p,n)xⁿ for any real p',
-              'represent periodic functions (preview)',
-              'Series solutions are fundamental in differential equations and mathematical physics'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Fourier series: represent periodic functions (preview). The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Select the statement that correctly describes Binomial series:',
-            options: [
-              'small-angle approximations (sin θ ≈ θ)',
-              'Series solutions are fundamental in differential equations and mathematical physics',
-              'represent periodic functions (preview)',
-              '(1+x)ᵖ = Σ C(p,n)xⁿ for any real p'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Binomial series: (1+x)ᵖ = Σ C(p,n)xⁿ for any real p. Be careful to distinguish between the different concepts in this topic.'
+            question: 'Why do $\\sin x$, $\\cos x$, and $e^x$ series produce Euler\'s formula?',
+            options: ['The even powers of $e^{ix}$ give $\\cos x$ and the odd powers give $i\\sin x$', 'It is just a coincidence', 'Only works for $x = \\pi$', 'They are unrelated series'],
+            correctAnswer: 0,
+            explanation: '$i^{2n}$ alternates $\\pm 1$ (matching $\\cos x$) and $i^{2n+1}$ alternates $\\pm i$ (matching $i\\sin x$).'
           }
         ]
       }
     },
     {
-      id: 'serie5-detail',
+      id: 'sapp5-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Fourier series**: represent periodic functions (preview)
-- **Taylor series in physics**: small-angle approximations (sin θ ≈ θ)
-- **Binomial series**: (1+x)ᵖ = Σ C(p,n)xⁿ for any real p
-- **Series solutions are fundamental in differential equations and mathematical physics**
-      `
-    },
-    {
-      id: 'serie5-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of these accurately represents Series solutions are fundamental in…?',
-            options: [
-              'small-angle approximations (sin θ ≈ θ)',
-              'Series solutions are fundamental in differential equations and mathematical physics',
-              '(1+x)ᵖ = Σ C(p,n)xⁿ for any real p',
-              'represent periodic functions (preview)'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Series solutions are fundamental in differential equations and mathematical physics. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'serie5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Fourier series',
-            options: ['small-angle approximations (sin θ ≈ θ)', 'Series solutions are fundamental in differential equations and mathematical physics', 'represent periodic functions (preview)', '(1+x)ᵖ = Σ C(p,n)xⁿ for any real p']
-          },
-          {
-            label: 'Taylor series in physics',
-            options: ['(1+x)ᵖ = Σ C(p,n)xⁿ for any real p', 'Series solutions are fundamental in differential equations and mathematical physics', 'represent periodic functions (preview)', 'small-angle approximations (sin θ ≈ θ)']
-          },
-          {
-            label: 'Binomial series',
-            options: ['Series solutions are fundamental in differential equations and mathematical physics', 'small-angle approximations (sin θ ≈ θ)', '(1+x)ᵖ = Σ C(p,n)xⁿ for any real p', 'represent periodic functions (preview)']
-          }
-        ],
-        correctAnswers: ['represent periodic functions (preview)', 'small-angle approximations (sin θ ≈ θ)', '(1+x)ᵖ = Σ C(p,n)xⁿ for any real p'],
-        hint1: 'Think about what each concept specifically describes in Series in Physics & Engineering.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Series in Physics & Engineering describes a specific idea. Fourier series: represent periodic functions (preview). Taylor series in physics: small-angle approximations (sin θ ≈ θ). Binomial series: (1+x)ᵖ = Σ C(p,n)xⁿ for any real p.'
-      }
+      content: `### Key Takeaways — Part 5
+Euler's formula connects exponential and trigonometric functions through series.`
     }
   ]
-}
+};

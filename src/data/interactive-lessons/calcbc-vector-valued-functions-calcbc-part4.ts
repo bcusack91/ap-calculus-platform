@@ -1,125 +1,41 @@
-export const calcBCVectorsPart4Data = {
+export const calcbcVectorsPart4Data = {
   topicSlug: 'vector-valued-functions-calcbc',
   sections: [
     {
-      id: 'vecto4-intro',
+      id: 'vec4-intro',
       type: 'text' as const,
-      content: `
-# Motion in the Plane
+      content: `# Vector-Valued Functions
 
-**Part 4 of 7 — Motion in the Plane**
+**Part 4 of 7 — Motion Analysis**
 
-### 1. Position
+### Direction of Motion
 
-r⃗(t) = ⟨x(t), y(t)⟩
+The velocity vector $\vec{v}(t)$ points in the direction of motion.
 
-### 2. Velocity
+### When Is the Particle at Rest?
 
-v⃗(t) = r⃗'(t) = ⟨x'(t), y'(t)⟩
-
-### 3. Acceleration
-
-a⃗(t) = v⃗'(t) = ⟨x''{t}, y''{t}⟩
-
-### 4. Each component of motion is analyzed independently
-
-Each component of motion is analyzed independently
-      `
+At rest when $\vec{v}(t) = \vec{0}$, meaning **both** $x'(t) = 0$ **and** $y'(t) = 0$ simultaneously.`
     },
     {
-      id: 'vecto4-quiz1',
+      id: 'vec4-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Motion Analysis** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains Position?',
-            options: [
-              'v⃗(t) = r⃗\'(t) = ⟨x\'(t), y\'(t)⟩',
-              'Each component of motion is analyzed independently',
-              'r⃗(t) = ⟨x(t), y(t)⟩',
-              'a⃗(t) = v⃗\'(t) = ⟨x\'\'{t}, y\'\'{t}⟩'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Position: r⃗(t) = ⟨x(t), y(t)⟩. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Which of the following is true about Acceleration?',
-            options: [
-              'r⃗(t) = ⟨x(t), y(t)⟩',
-              'v⃗(t) = r⃗\'(t) = ⟨x\'(t), y\'(t)⟩',
-              'Each component of motion is analyzed independently',
-              'a⃗(t) = v⃗\'(t) = ⟨x\'\'{t}, y\'\'{t}⟩'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Acceleration: a⃗(t) = v⃗\'(t) = ⟨x\'\'{t}, y\'\'{t}⟩. Be careful to distinguish between the different concepts in this topic.'
+            question: '$\\vec{r}(t) = \\langle t^2 - 4t, t^2 - 6t \\rangle$. When is the particle at rest?',
+            options: ['Never (components zero at different times)', '$t = 2$', '$t = 3$', '$t = 0$'],
+            correctAnswer: 0,
+            explanation: '$x\'(t) = 2t - 4 = 0$ at $t = 2$. $y\'(t) = 2t - 6 = 0$ at $t = 3$. They are never simultaneously zero.'
           }
         ]
       }
     },
     {
-      id: 'vecto4-detail',
+      id: 'vec4-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Position**: r⃗(t) = ⟨x(t), y(t)⟩
-- **Velocity**: v⃗(t) = r⃗'(t) = ⟨x'(t), y'(t)⟩
-- **Acceleration**: a⃗(t) = v⃗'(t) = ⟨x''{t}, y''{t}⟩
-- **Each component of motion is analyzed independently**
-      `
-    },
-    {
-      id: 'vecto4-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of these accurately represents Each component of motion is analyzed…?',
-            options: [
-              'v⃗(t) = r⃗\'(t) = ⟨x\'(t), y\'(t)⟩',
-              'Each component of motion is analyzed independently',
-              'a⃗(t) = v⃗\'(t) = ⟨x\'\'{t}, y\'\'{t}⟩',
-              'r⃗(t) = ⟨x(t), y(t)⟩'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Each component of motion is analyzed independently. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'vecto4-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Position',
-            options: ['a⃗(t) = v⃗\'(t) = ⟨x\'\'{t}, y\'\'{t}⟩', 'r⃗(t) = ⟨x(t), y(t)⟩', 'Each component of motion is analyzed independently', 'v⃗(t) = r⃗\'(t) = ⟨x\'(t), y\'(t)⟩']
-          },
-          {
-            label: 'Velocity',
-            options: ['v⃗(t) = r⃗\'(t) = ⟨x\'(t), y\'(t)⟩', 'Each component of motion is analyzed independently', 'a⃗(t) = v⃗\'(t) = ⟨x\'\'{t}, y\'\'{t}⟩', 'r⃗(t) = ⟨x(t), y(t)⟩']
-          },
-          {
-            label: 'Acceleration',
-            options: ['Each component of motion is analyzed independently', 'a⃗(t) = v⃗\'(t) = ⟨x\'\'{t}, y\'\'{t}⟩', 'r⃗(t) = ⟨x(t), y(t)⟩', 'v⃗(t) = r⃗\'(t) = ⟨x\'(t), y\'(t)⟩']
-          }
-        ],
-        correctAnswers: ['r⃗(t) = ⟨x(t), y(t)⟩', 'v⃗(t) = r⃗\'(t) = ⟨x\'(t), y\'(t)⟩', 'a⃗(t) = v⃗\'(t) = ⟨x\'\'{t}, y\'\'{t}⟩'],
-        hint1: 'Think about what each concept specifically describes in Motion in the Plane.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Motion in the Plane describes a specific idea. Position: r⃗(t) = ⟨x(t), y(t)⟩. Velocity: v⃗(t) = r⃗\'(t) = ⟨x\'(t), y\'(t)⟩. Acceleration: a⃗(t) = v⃗\'(t) = ⟨x\'\'{t}, y\'\'{t}⟩.'
-      }
+      content: `### Key Takeaways — Part 4
+A particle is at rest only when ALL velocity components are zero simultaneously.`
     }
   ]
-}
+};

@@ -1,121 +1,54 @@
-export const calcBCImproperPart1Data = {
+export const calcbcImproperPart1Data = {
   topicSlug: 'improper-integrals-calcbc',
   sections: [
     {
-      id: 'impro1-intro',
+      id: 'imp1-intro',
       type: 'text' as const,
-      content: `
-# ∮ Improper Integrals
+      content: `# Improper Integrals
 
-**Part 1 of 7 — Type I: Infinite Limits**
+**Part 1 of 7 — Infinite Limits of Integration**
 
-### 1. Type I
+### Type 1: Infinite Bounds
 
-one or both limits of integration are ±∞
+$$\int_a^{\infty} f(x)\,dx = \lim_{b \to \infty} \int_a^b f(x)\,dx$$
 
-### 2. ∫ₐ^∞ f(x)dx = lim(b→∞) ∫ₐᵇ f(x)dx
+- If the limit exists → the integral **converges**
+- If the limit is $\pm\infty$ or DNE → the integral **diverges**
 
-∫ₐ^∞ f(x)dx = lim(b→∞) ∫ₐᵇ f(x)dx
+### Classic Example
 
-### 3. ∫₋∞^∞ f(x)dx
+$$\int_1^{\infty} \frac{1}{x^2}\,dx = \lim_{b \to \infty} \left[-\frac{1}{x}\right]_1^b = \lim_{b \to \infty}\left(-\frac{1}{b} + 1\right) = 1$$
 
-split at any point c and evaluate both halves
-
-### 4. Both halves must converge for the integral to converge
-
-Both halves must converge for the integral to converge
-      `
+Converges! The infinite area under $1/x^2$ is exactly $1$.`
     },
     {
-      id: 'impro1-quiz1',
+      id: 'imp1-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Infinite Bounds** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Type I?',
-            options: [
-              'Both halves must converge for the integral to converge',
-              '∫ₐ^∞ f(x)dx = lim(b→∞) ∫ₐᵇ f(x)dx',
-              'split at any point c and evaluate both halves',
-              'one or both limits of integration are ±∞'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Type I: one or both limits of integration are ±∞. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Which of the following is true about ∫₋∞^∞ f(x)dx?',
-            options: [
-              'Both halves must converge for the integral to converge',
-              'one or both limits of integration are ±∞',
-              'split at any point c and evaluate both halves',
-              '∫ₐ^∞ f(x)dx = lim(b→∞) ∫ₐᵇ f(x)dx'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — ∫₋∞^∞ f(x)dx: split at any point c and evaluate both halves. Be careful to distinguish between the different concepts in this topic.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'impro1-detail',
-      type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Type I**: one or both limits of integration are ±∞
-- **∫ₐ^∞ f(x)dx = lim(b→∞) ∫ₐᵇ f(x)dx**
-- **∫₋∞^∞ f(x)dx**: split at any point c and evaluate both halves
-- **Both halves must converge for the integral to converge**
-      `
-    },
-    {
-      id: 'impro1-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Regarding ∮ Improper Integrals, which correctly describes Both halves must converge for the…?',
-            options: [
-              'Both halves must converge for the integral to converge',
-              'one or both limits of integration are ±∞',
-              '∫ₐ^∞ f(x)dx = lim(b→∞) ∫ₐᵇ f(x)dx',
-              'split at any point c and evaluate both halves'
-            ],
+            question: 'Does $\\int_1^{\\infty} \\frac{1}{x}\\,dx$ converge or diverge?',
+            options: ['Diverges', 'Converges to $1$', 'Converges to $0$', 'Converges to $\\ln 2$'],
             correctAnswer: 0,
-            explanation: 'Correct — Both halves must converge for the integral to converge. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: '$\\lim_{b \\to \\infty} [\\ln x]_1^b = \\lim_{b \\to \\infty} \\ln b = \\infty$. Diverges!'
+          },
+          {
+            question: 'Evaluate $\\int_0^{\\infty} e^{-x}\\,dx$.',
+            options: ['$1$', '$0$', '$\\infty$', '$e$'],
+            correctAnswer: 0,
+            explanation: '$\\lim_{b \\to \\infty}[-e^{-x}]_0^b = \\lim_{b \\to \\infty}(-e^{-b} + 1) = 0 + 1 = 1$.'
           }
         ]
       }
     },
     {
-      id: 'impro1-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Type I',
-            options: ['∫ₐ^∞ f(x)dx = lim(b→∞) ∫ₐᵇ f(x)dx', 'one or both limits of integration are ±∞', 'split at any point c and evaluate both halves', 'Both halves must converge for the integral to converge']
-          },
-          {
-            label: '∫₋∞^∞ f(x)dx',
-            options: ['one or both limits of integration are ±∞', 'Both halves must converge for the integral to converge', 'split at any point c and evaluate both halves', '∫ₐ^∞ f(x)dx = lim(b→∞) ∫ₐᵇ f(x)dx']
-          }
-        ],
-        correctAnswers: ['one or both limits of integration are ±∞', 'split at any point c and evaluate both halves'],
-        hint1: 'Think about what each concept specifically describes in ∮ Improper Integrals.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in ∮ Improper Integrals describes a specific idea. Type I: one or both limits of integration are ±∞. ∫₋∞^∞ f(x)dx: split at any point c and evaluate both halves.'
-      }
+      id: 'imp1-summary',
+      type: 'text' as const,
+      content: `### Key Takeaways — Part 1
+1. Replace $\\infty$ with a limit variable
+2. Evaluate, then take the limit
+3. $\\int_1^{\\infty} 1/x\\,dx$ diverges but $\\int_1^{\\infty} 1/x^2\\,dx$ converges`
     }
   ]
-}
+};

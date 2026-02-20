@@ -1,121 +1,56 @@
-export const calcABIntAppsPart4Data = {
+export const calcabIntAppsPart4Data = {
   topicSlug: 'integration-applications-calcab',
   sections: [
     {
-      id: 'integ4-intro',
+      id: 'ia4-intro',
       type: 'text' as const,
-      content: `
-# Population & Accumulation
+      content: `# Integration Applications
 
-**Part 4 of 7 — Population & Accumulation**
+**Part 4 of 7 — Riemann Sums and Trapezoidal Rule**
 
-### 1. Population growth
+### Left, Right, and Midpoint Sums
 
-P(t) = P(0) + ∫₀ᵗ r(s)ds where r is the growth rate
+$$L_n = \sum_{i=0}^{n-1} f(x_i)\,\Delta x \qquad R_n = \sum_{i=1}^{n} f(x_i)\,\Delta x$$
 
-### 2. Total amount consumed/produced
+### Trapezoidal Rule
 
-integral of the rate
+$$T_n = \frac{\Delta x}{2}[f(x_0) + 2f(x_1) + 2f(x_2) + \cdots + 2f(x_{n-1}) + f(x_n)]$$
 
-### 3. Average rate over [a,b] = (1/(b-a))∫ₐᵇ r(t)dt
+### Over/Underestimates
 
-Average rate over [a,b] = (1/(b-a))∫ₐᵇ r(t)dt
-
-### 4. Net change = integral of the rate function over the interval
-
-Net change = integral of the rate function over the interval
-      `
+| Method | Increasing $f$ | Decreasing $f$ |
+|--------|----------------|----------------|
+| Left | Under | Over |
+| Right | Over | Under |
+| Trap | Over (concave up) | Under (concave down) |`
     },
     {
-      id: 'integ4-quiz1',
+      id: 'ia4-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Numerical Integration** 🎯\n\nGiven: $x = 0, 1, 2, 3$ with $f(0) = 1, f(1) = 3, f(2) = 2, f(3) = 5$.',
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains Population growth?',
-            options: [
-              'P(t) = P(0) + ∫₀ᵗ r(s)ds where r is the growth rate',
-              'Net change = integral of the rate function over the interval',
-              'Average rate over [a,b] = (1/(b-a))∫ₐᵇ r(t)dt',
-              'integral of the rate'
-            ],
+            question: 'Compute the left Riemann sum with $n = 3$.',
+            options: ['$6$', '$10$', '$8$', '$7$'],
             correctAnswer: 0,
-            explanation: 'Correct — Population growth: P(t) = P(0) + ∫₀ᵗ r(s)ds where r is the growth rate. The other options describe different concepts from this topic.'
+            explanation: '$L_3 = f(0)(1) + f(1)(1) + f(2)(1) = 1 + 3 + 2 = 6$.'
           },
           {
-            question: 'In the context of Population & Accumulation, which explains Average rate over [a,b] = (1/(b-a))∫ₐᵇ…?',
-            options: [
-              'Net change = integral of the rate function over the interval',
-              'Average rate over [a,b] = (1/(b-a))∫ₐᵇ r(t)dt',
-              'P(t) = P(0) + ∫₀ᵗ r(s)ds where r is the growth rate',
-              'integral of the rate'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Average rate over [a,b] = (1/(b-a))∫ₐᵇ r(t)dt. Be careful to distinguish between the different concepts in this topic.'
+            question: 'Compute the trapezoidal approximation.',
+            options: ['$8$', '$6$', '$10$', '$7$'],
+            correctAnswer: 0,
+            explanation: '$T = \\frac{1}{2}[1 + 2(3) + 2(2) + 5] = \\frac{1}{2}[1 + 6 + 4 + 5] = \\frac{16}{2} = 8$.'
           }
         ]
       }
     },
     {
-      id: 'integ4-detail',
+      id: 'ia4-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Population growth**: P(t) = P(0) + ∫₀ᵗ r(s)ds where r is the growth rate
-- **Total amount consumed/produced**: integral of the rate
-- **Average rate over [a,b] = (1/(b-a))∫ₐᵇ r(t)dt**
-- **Net change = integral of the rate function over the interval**
-      `
-    },
-    {
-      id: 'integ4-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of these accurately represents Net change = integral of the rate…?',
-            options: [
-              'Net change = integral of the rate function over the interval',
-              'Average rate over [a,b] = (1/(b-a))∫ₐᵇ r(t)dt',
-              'P(t) = P(0) + ∫₀ᵗ r(s)ds where r is the growth rate',
-              'integral of the rate'
-            ],
-            correctAnswer: 0,
-            explanation: 'Correct — Net change = integral of the rate function over the interval. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'integ4-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Population growth',
-            options: ['integral of the rate', 'Average rate over [a,b] = (1/(b-a))∫ₐᵇ r(t)dt', 'Net change = integral of the rate function over the interval', 'P(t) = P(0) + ∫₀ᵗ r(s)ds where r is the growth rate']
-          },
-          {
-            label: 'Total amount consumed/produced',
-            options: ['Average rate over [a,b] = (1/(b-a))∫ₐᵇ r(t)dt', 'integral of the rate', 'Net change = integral of the rate function over the interval', 'P(t) = P(0) + ∫₀ᵗ r(s)ds where r is the growth rate']
-          }
-        ],
-        correctAnswers: ['P(t) = P(0) + ∫₀ᵗ r(s)ds where r is the growth rate', 'integral of the rate'],
-        hint1: 'Think about what each concept specifically describes in Population & Accumulation.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Population & Accumulation describes a specific idea. Population growth: P(t) = P(0) + ∫₀ᵗ r(s)ds where r is the growth rate. Total amount consumed/produced: integral of the rate.'
-      }
+      content: `### Key Takeaways — Part 4
+1. Trapezoidal rule averages left and right sums
+2. Know which methods overestimate vs underestimate`
     }
   ]
-}
+};

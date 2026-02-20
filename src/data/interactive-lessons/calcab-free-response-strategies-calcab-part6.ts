@@ -1,125 +1,50 @@
-export const calcABFreeResponsePart6Data = {
+export const calcabFRQPart6Data = {
   topicSlug: 'free-response-strategies-calcab',
   sections: [
     {
-      id: 'free-6-intro',
+      id: 'frq6-intro',
       type: 'text' as const,
-      content: `
-# Problem-Solving Workshop
+      content: `# Free Response Strategies
 
-**Part 6 of 7 — Problem-Solving Workshop**
+**Part 6 of 7 — Scoring & Partial Credit**
 
-### 1. Sketch solution curve on slope field through given initial condition
+### How FRQs Are Scored
 
-Sketch solution curve on slope field through given initial condition
+Each question is worth **9 points**, typically split:
+- Part (a): 2 points
+- Part (b): 2-3 points
+- Part (c): 2-3 points
+- Part (d): 2-3 points
 
-### 2. Separate and integrate with proper technique
+### Partial Credit Tips
 
-Separate and integrate with proper technique
-
-### 3. Apply initial condition to find particular solution
-
-Apply initial condition to find particular solution
-
-### 4. State the domain of the particular solution
-
-State the domain of the particular solution
-      `
+- **Each part is graded independently** — always attempt every part
+- You can use results from earlier parts even if wrong
+- Show your setup for credit even if computation has errors
+- A correct answer with no work may get 0 points`
     },
     {
-      id: 'free-6-quiz1',
+      id: 'frq6-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Scoring Strategy** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains Sketch solution curve on slope field…?',
-            options: [
-              'Apply initial condition to find particular solution',
-              'Separate and integrate with proper technique',
-              'State the domain of the particular solution',
-              'Sketch solution curve on slope field through given initial condition'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Sketch solution curve on slope field through given initial condition. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'In the context of Problem-Solving Workshop, which explains Apply initial condition to find…?',
-            options: [
-              'Sketch solution curve on slope field through given initial condition',
-              'Separate and integrate with proper technique',
-              'Apply initial condition to find particular solution',
-              'State the domain of the particular solution'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Apply initial condition to find particular solution. Be careful to distinguish between the different concepts in this topic.'
+            question: 'You get part (a) wrong. What should you do for parts (b)-(d)?',
+            options: ['Use your (possibly wrong) answer and continue', 'Leave them blank', 'Start over', 'Write "see part (a)"'],
+            correctAnswer: 0,
+            explanation: 'Parts are graded independently. If you use a wrong answer from (a) correctly in (b), you can still earn full credit on (b).'
           }
         ]
       }
     },
     {
-      id: 'free-6-detail',
+      id: 'frq6-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Sketch solution curve on slope field through given initial condition**
-- **Separate and integrate with proper technique**
-- **Apply initial condition to find particular solution**
-- **State the domain of the particular solution**
-      `
-    },
-    {
-      id: 'free-6-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of these accurately represents State the domain of the particular…?',
-            options: [
-              'Sketch solution curve on slope field through given initial condition',
-              'Separate and integrate with proper technique',
-              'Apply initial condition to find particular solution',
-              'State the domain of the particular solution'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — State the domain of the particular solution. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'free-6-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Sketch solution curve on slope field…',
-            options: ['State the domain of the particular solution', 'Separate and integrate with proper technique', 'Apply initial condition to find particular solution', 'Sketch solution curve on slope field through given initial condition']
-          },
-          {
-            label: 'Separate and integrate with proper…',
-            options: ['Apply initial condition to find particular solution', 'Sketch solution curve on slope field through given initial condition', 'Separate and integrate with proper technique', 'State the domain of the particular solution']
-          },
-          {
-            label: 'Apply initial condition to find…',
-            options: ['Sketch solution curve on slope field through given initial condition', 'Separate and integrate with proper technique', 'Apply initial condition to find particular solution', 'State the domain of the particular solution']
-          }
-        ],
-        correctAnswers: ['Sketch solution curve on slope field through given initial condition', 'Separate and integrate with proper technique', 'Apply initial condition to find particular solution'],
-        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Sketch solution curve on slope field through given initial condition. Separate and integrate with proper technique. Apply initial condition to find particular solution.'
-      }
+      content: `### Key Takeaways — Part 6
+1. Never leave a part blank
+2. Show work for every part
+3. Parts are scored independently`
     }
   ]
-}
+};

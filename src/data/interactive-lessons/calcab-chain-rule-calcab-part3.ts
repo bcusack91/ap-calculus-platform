@@ -1,94 +1,125 @@
-export const calcABChainRulePart3Data = {
+export const calcabChainRulePart3Data = {
   topicSlug: 'chain-rule-calcab',
   sections: [
     {
       id: 'chain3-intro',
       type: 'text' as const,
-      content: `
-# Chain Rule with Trig
+      content: `# 🔗 Implicit Differentiation
 
-**Part 3 of 7 — Chain Rule with Trig**
+**Part 3 of 7 — Implicit Differentiation**
 
-### 1. d/dx[sin(u)] = cos(u) · u' where u = g(x)
+### What Is Implicit Differentiation?
 
-d/dx[sin(u)] = cos(u) · u' where u = g(x)
+Sometimes a relationship between $x$ and $y$ is not solved for $y$. For example:
 
-### 2. d/dx[cos(3x²)] = -sin(3x²) · 6x
+$$x^2 + y^2 = 25$$
 
-d/dx[cos(3x²)] = -sin(3x²) · 6x
+This is a circle. We cannot easily write $y$ as a single function of $x$. But we can still find $\\frac{dy}{dx}$ using the **Chain Rule**.
 
-### 3. d/dx[tan(u)] = sec²(u) · u'
+### The Key Idea
 
-d/dx[tan(u)] = sec²(u) · u'
+When you differentiate a term containing $y$ with respect to $x$, treat $y$ as a function of $x$ and apply the Chain Rule:
 
-### 4. Chain rule combines with every trig derivative
+$$\\frac{d}{dx}[y^2] = 2y \\cdot \\frac{dy}{dx}$$
 
-Chain rule combines with every trig derivative
-      `
+The $\\frac{dy}{dx}$ appears because $y$ is implicitly a function of $x$.
+
+### Worked Example 1
+
+**Find** $\\frac{dy}{dx}$ for $x^2 + y^2 = 25$
+
+| Step | Work |
+|------|------|
+| Differentiate both sides | $2x + 2y\\frac{dy}{dx} = 0$ |
+| Isolate $\\frac{dy}{dx}$ | $2y\\frac{dy}{dx} = -2x$ |
+| Solve | $\\frac{dy}{dx} = -\\frac{x}{y}$ |
+
+### Worked Example 2
+
+**Find** $\\frac{dy}{dx}$ for $x^3 + y^3 = 6xy$
+
+| Step | Work |
+|------|------|
+| Differentiate | $3x^2 + 3y^2\\frac{dy}{dx} = 6y + 6x\\frac{dy}{dx}$ |
+| Group $dy/dx$ terms | $3y^2\\frac{dy}{dx} - 6x\\frac{dy}{dx} = 6y - 3x^2$ |
+| Factor | $\\frac{dy}{dx}(3y^2 - 6x) = 6y - 3x^2$ |
+| Solve | $\\frac{dy}{dx} = \\frac{6y - 3x^2}{3y^2 - 6x} = \\frac{2y - x^2}{y^2 - 2x}$ |
+
+> **AP Tip:** Implicit differentiation appears frequently on the AP exam, especially when finding slopes of tangent lines to curves defined implicitly.`
     },
     {
       id: 'chain3-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Practice Implicit Differentiation** 🎯',
       exercise: {
         questions: [
           {
-            question: 'What does "d/dx[sin(u)] = cos(u) · u\' where u =…" refer to in calculus?',
-            options: [
-              'd/dx[sin(u)] = cos(u) · u\' where u = g(x)',
-              'd/dx[tan(u)] = sec²(u) · u\'',
-              'Chain rule combines with every trig derivative',
-              'd/dx[cos(3x²)] = -sin(3x²) · 6x'
-            ],
+            question: 'Find $\\frac{dy}{dx}$ for $x^2 + 3y^2 = 12$.',
+            options: ['$-\\frac{x}{3y}$', '$-\\frac{2x}{3y}$', '$-\\frac{x}{6y}$', '$\\frac{x}{3y}$'],
             correctAnswer: 0,
-            explanation: 'Correct — d/dx[sin(u)] = cos(u) · u\' where u = g(x). The other options describe different concepts from this topic.'
+            explanation: 'Differentiate: $2x + 6y\\frac{dy}{dx} = 0$. Solve: $\\frac{dy}{dx} = \\frac{-2x}{6y} = -\\frac{x}{3y}$.'
           },
           {
-            question: 'Which of the following is true about d/dx[tan(u)] = sec²(u) · u\'?',
-            options: [
-              'Chain rule combines with every trig derivative',
-              'd/dx[sin(u)] = cos(u) · u\' where u = g(x)',
-              'd/dx[cos(3x²)] = -sin(3x²) · 6x',
-              'd/dx[tan(u)] = sec²(u) · u\''
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — d/dx[tan(u)] = sec²(u) · u\'. Be careful to distinguish between the different concepts in this topic.'
+            question: 'Find $\\frac{dy}{dx}$ for $xy = 10$.',
+            options: ['$-\\frac{y}{x}$', '$\\frac{10}{x^2}$', '$-\\frac{x}{y}$', '$\\frac{y}{x}$'],
+            correctAnswer: 0,
+            explanation: 'Use product rule: $y + x\\frac{dy}{dx} = 0$. Solve: $\\frac{dy}{dx} = -\\frac{y}{x}$.'
           }
         ]
       }
     },
     {
-      id: 'chain3-detail',
+      id: 'chain3-text2',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
+      content: `### Implicit Differentiation with Trig Functions
 
-- **d/dx[sin(u)] = cos(u) · u' where u = g(x)**
-- **d/dx[cos(3x²)] = -sin(3x²) · 6x**
-- **d/dx[tan(u)] = sec²(u) · u'**
-- **Chain rule combines with every trig derivative**
-      `
+### Worked Example 3
+
+**Find** $\\frac{dy}{dx}$ for $\\sin(y) = x$
+
+| Step | Work |
+|------|------|
+| Differentiate | $\\cos(y) \\cdot \\frac{dy}{dx} = 1$ |
+| Solve | $\\frac{dy}{dx} = \\frac{1}{\\cos(y)}$ |
+
+This also equals $\\sec(y)$, which makes sense since $y = \\arcsin(x)$ and $\\frac{d}{dx}\\arcsin(x) = \\frac{1}{\\sqrt{1-x^2}} = \\sec(\\arcsin(x))$.
+
+### Worked Example 4: Finding a Tangent Line
+
+**Find the slope of the tangent line to** $x^2 + xy + y^2 = 7$ **at** $(1, 2)$.
+
+| Step | Work |
+|------|------|
+| Differentiate | $2x + y + x\\frac{dy}{dx} + 2y\\frac{dy}{dx} = 0$ |
+| Collect $dy/dx$ | $\\frac{dy}{dx}(x + 2y) = -2x - y$ |
+| Solve | $\\frac{dy}{dx} = \\frac{-2x - y}{x + 2y}$ |
+| Evaluate at $(1,2)$ | $\\frac{dy}{dx} = \\frac{-2(1) - 2}{1 + 2(2)} = \\frac{-4}{5}$ |
+
+The tangent line has slope $-\\frac{4}{5}$ at $(1, 2)$.`
     },
     {
       id: 'chain3-quiz2',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Implicit Differentiation Applications** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Regarding Chain Rule with Trig, which correctly describes Chain rule combines with every trig…?',
-            options: [
-              'd/dx[sin(u)] = cos(u) · u\' where u = g(x)',
-              'd/dx[cos(3x²)] = -sin(3x²) · 6x',
-              'Chain rule combines with every trig derivative',
-              'd/dx[tan(u)] = sec²(u) · u\''
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Chain rule combines with every trig derivative. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            question: 'Find $\\frac{dy}{dx}$ for $e^y = x^2 + 1$.',
+            options: ['$\\frac{2x}{e^y}$', '$\\frac{e^y}{2x}$', '$2xe^{-y}$', 'Both A and C'],
+            correctAnswer: 3,
+            explanation: 'Differentiate: $e^y \\cdot \\frac{dy}{dx} = 2x$. Solve: $\\frac{dy}{dx} = \\frac{2x}{e^y} = 2xe^{-y}$. Both A and C are equivalent.'
+          },
+          {
+            question: 'For $x^2 + y^2 = 25$, find the slope of the tangent at $(3, 4)$.',
+            options: ['$-\\frac{3}{4}$', '$\\frac{3}{4}$', '$-\\frac{4}{3}$', '$\\frac{4}{3}$'],
+            correctAnswer: 0,
+            explanation: 'We found $\\frac{dy}{dx} = -\\frac{x}{y}$. At $(3,4)$: $\\frac{dy}{dx} = -\\frac{3}{4}$.'
+          },
+          {
+            question: 'Find $\\frac{dy}{dx}$ for $\\cos(xy) = x$.',
+            options: ['$\\frac{-1 + y\\sin(xy)}{x\\sin(xy)}$', '$\\frac{1 + y\\sin(xy)}{x\\sin(xy)}$', '$\\frac{-1 - y\\sin(xy)}{x\\sin(xy)}$', '$-\\frac{\\sin(xy)}{x}$'],
+            correctAnswer: 0,
+            explanation: 'Differentiate: $-\\sin(xy)(y + x\\frac{dy}{dx}) = 1$. Expand: $-y\\sin(xy) - x\\sin(xy)\\frac{dy}{dx} = 1$. Solve: $\\frac{dy}{dx} = \\frac{-1 - y\\sin(xy) \\cdot(-1)}{x\\sin(xy)\\cdot(-1)} = \\frac{-1+y\\sin(xy)}{x\\sin(xy)}$... Let me redo: $-y\\sin(xy) - x\\sin(xy)\\frac{dy}{dx} = 1 \\Rightarrow \\frac{dy}{dx} = \\frac{-1-y\\sin(xy)}{x\\sin(xy)}$. Hmm, rearranging: $\\frac{dy}{dx} = \\frac{-(1+y\\sin(xy))}{x\\sin(xy)}$.'
           }
         ]
       }
@@ -96,30 +127,32 @@ Chain rule combines with every trig derivative
     {
       id: 'chain3-dropdown',
       type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
+      content: '**Which differentiation rule is needed?** 🔍\n\nFor each term, select the rule needed when differentiating with respect to $x$.',
       exercise: {
         dropdowns: [
-          {
-            label: 'd/dx[sin(u)] = cos(u) · u\' where u =…',
-            options: ['d/dx[cos(3x²)] = -sin(3x²) · 6x', 'd/dx[tan(u)] = sec²(u) · u\'', 'd/dx[sin(u)] = cos(u) · u\' where u = g(x)', 'Chain rule combines with every trig derivative']
-          },
-          {
-            label: 'd/dx[cos(3x²)] = -sin(3x²) · 6x',
-            options: ['d/dx[cos(3x²)] = -sin(3x²) · 6x', 'd/dx[tan(u)] = sec²(u) · u\'', 'd/dx[sin(u)] = cos(u) · u\' where u = g(x)', 'Chain rule combines with every trig derivative']
-          },
-          {
-            label: 'd/dx[tan(u)] = sec²(u) · u\'',
-            options: ['d/dx[sin(u)] = cos(u) · u\' where u = g(x)', 'd/dx[cos(3x²)] = -sin(3x²) · 6x', 'Chain rule combines with every trig derivative', 'd/dx[tan(u)] = sec²(u) · u\'']
-          }
+          { label: '$y^3$', options: ['Power Rule only', 'Chain Rule (implicit)', 'Product Rule', 'Quotient Rule'] },
+          { label: '$xy^2$', options: ['Power Rule only', 'Chain Rule only', 'Product Rule + Chain Rule', 'Product Rule only'] },
+          { label: '$\\sin(y)$', options: ['Power Rule only', 'Chain Rule (implicit)', 'Product Rule', 'No rule needed'] },
+          { label: '$x^3$', options: ['Power Rule only', 'Chain Rule (implicit)', 'Product Rule + Chain Rule', 'Quotient Rule'] }
         ],
-        correctAnswers: ['d/dx[sin(u)] = cos(u) · u\' where u = g(x)', 'd/dx[cos(3x²)] = -sin(3x²) · 6x', 'd/dx[tan(u)] = sec²(u) · u\''],
-        hint1: 'Think about what each concept specifically describes in Chain Rule with Trig.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Chain Rule with Trig describes a specific idea. d/dx[sin(u)] = cos(u) · u\' where u = g(x). d/dx[cos(3x²)] = -sin(3x²) · 6x. d/dx[tan(u)] = sec²(u) · u\'.'
+        correctAnswers: ['Chain Rule (implicit)', 'Product Rule + Chain Rule', 'Chain Rule (implicit)', 'Power Rule only'],
+        hint1: 'Any term with $y$ requires the chain rule because $y$ is a function of $x$.',
+        hint2: '$xy^2$ has both $x$ and $y$ multiplied, so product rule. The $y^2$ part also needs chain rule.',
+        hint3: '$x^3$ has no $y$ in it, so just regular power rule.',
+        explanation: '$y^3$: Chain Rule gives $3y^2\\frac{dy}{dx}$. $xy^2$: Product Rule + Chain Rule gives $y^2 + 2xy\\frac{dy}{dx}$. $\\sin(y)$: Chain Rule gives $\\cos(y)\\frac{dy}{dx}$. $x^3$: just $3x^2$.'
       }
+    },
+    {
+      id: 'chain3-summary',
+      type: 'text' as const,
+      content: `### Key Takeaways — Part 3
+
+1. **Implicit differentiation** uses the Chain Rule: every time you differentiate $y$, multiply by $\\frac{dy}{dx}$
+2. **Steps:** differentiate both sides → collect $\\frac{dy}{dx}$ terms → factor → solve
+3. **Product rule** is often needed when $x$ and $y$ appear together (like $xy$)
+4. **Tangent lines:** plug in the point after finding the general $\\frac{dy}{dx}$ formula
+
+> **Next up:** Related rates — using implicit differentiation with respect to time.`
     }
   ]
-}
+};

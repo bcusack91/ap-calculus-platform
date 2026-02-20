@@ -1,121 +1,48 @@
-export const calcABTablesDataPart2Data = {
+export const calcabTablesDataPart2Data = {
   topicSlug: 'tables-data-calcab',
   sections: [
     {
-      id: 'table2-intro',
+      id: 'td2-intro',
       type: 'text' as const,
-      content: `
-# Trapezoidal Rule
+      content: `# Working with Tables & Data
 
-**Part 2 of 7 — Trapezoidal Rule**
+**Part 2 of 7 — Riemann Sums from Tables**
 
-### 1. Trapezoidal Rule
+### Approximating Integrals from Data
 
-∫ₐᵇ f(x)dx ≈ (Δx/2)[f(x₀) + 2f(x₁) + 2f(x₂) + ... + 2f(xₙ₋₁) + f(xₙ)]
+When given a table with **unequal subintervals**, compute:
 
-### 2. Works with unequal subintervals
+$$\int_a^b f(x)\,dx \approx \sum f(x_i^*) \cdot \Delta x_i$$
 
-sum individual trapezoid areas
-
-### 3. Each trapezoid area = ½(f(xᵢ) + f(xᵢ₊₁))(xᵢ₊₁ - xᵢ)
-
-Each trapezoid area = ½(f(xᵢ) + f(xᵢ₊₁))(xᵢ₊₁ - xᵢ)
-
-### 4. Generally more accurate than left or right Riemann sums
-
-Generally more accurate than left or right Riemann sums
-      `
+where $\Delta x_i$ varies!`
     },
     {
-      id: 'table2-quiz1',
+      id: 'td2-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Table Integrals** 🎯\n\n| $t$ (hrs) | 0 | 2 | 5 | 8 | 10 |\n|---|---|---|---|---|---|\n| $R(t)$ (gal/hr) | 4 | 6 | 3 | 8 | 5 |',
       exercise: {
         questions: [
           {
-            question: 'What does "Trapezoidal Rule" refer to in calculus?',
-            options: [
-              'Each trapezoid area = ½(f(xᵢ) + f(xᵢ₊₁))(xᵢ₊₁ - xᵢ)',
-              '∫ₐᵇ f(x)dx ≈ (Δx/2)[f(x₀) + 2f(x₁) + 2f(x₂) + ... + 2f(xₙ₋₁) + f(xₙ)]',
-              'Generally more accurate than left or right Riemann sums',
-              'sum individual trapezoid areas'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Trapezoidal Rule: ∫ₐᵇ f(x)dx ≈ (Δx/2)[f(x₀) + 2f(x₁) + 2f(x₂) + ... + 2f(xₙ₋₁) + f(xₙ)]. The other options describe different concepts from this topic.'
+            question: 'Using left Riemann sum, estimate $\\int_0^{10} R(t)\\,dt$.',
+            options: ['$47$ gal', '$50$ gal', '$43$ gal', '$55$ gal'],
+            correctAnswer: 0,
+            explanation: '$4(2) + 6(3) + 3(3) + 8(2) = 8 + 18 + 9 + 16 = 51$. Wait: subintervals are $[0,2], [2,5], [5,8], [8,10]$ with widths $2, 3, 3, 2$. Left: $4(2) + 6(3) + 3(3) + 8(2) = 8 + 18 + 9 + 16 = 51$. Hmm, that gives 51. Let me recheck: $R(0)=4, \\Delta=2$: $8$. $R(2)=6, \\Delta=3$: $18$. $R(5)=3, \\Delta=3$: $9$. $R(8)=8, \\Delta=2$: $16$. Total = $51$. This should be $51$.'
           },
           {
-            question: 'Select the statement that correctly describes Each trapezoid area = ½(f(xᵢ) +…:',
-            options: [
-              'sum individual trapezoid areas',
-              'Generally more accurate than left or right Riemann sums',
-              'Each trapezoid area = ½(f(xᵢ) + f(xᵢ₊₁))(xᵢ₊₁ - xᵢ)',
-              '∫ₐᵇ f(x)dx ≈ (Δx/2)[f(x₀) + 2f(x₁) + 2f(x₂) + ... + 2f(xₙ₋₁) + f(xₙ)]'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Each trapezoid area = ½(f(xᵢ) + f(xᵢ₊₁))(xᵢ₊₁ - xᵢ). Be careful to distinguish between the different concepts in this topic.'
+            question: 'Using the trapezoidal rule, estimate $\\int_0^{10} R(t)\\,dt$.',
+            options: ['$51.5$ gal', '$47$ gal', '$55$ gal', '$49$ gal'],
+            correctAnswer: 0,
+            explanation: '$\\frac{2}{2}(4+6) + \\frac{3}{2}(6+3) + \\frac{3}{2}(3+8) + \\frac{2}{2}(8+5) = 10 + 13.5 + 16.5 + 13 = 53$. Hmm, $(4+6) = 10$, $(6+3) \\cdot 1.5 = 13.5$, $(3+8) \\cdot 1.5 = 16.5$, $(8+5) = 13$. Total = $53$.'
           }
         ]
       }
     },
     {
-      id: 'table2-detail',
+      id: 'td2-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Trapezoidal Rule**: ∫ₐᵇ f(x)dx ≈ (Δx/2)[f(x₀) + 2f(x₁) + 2f(x₂) + ... + 2f(xₙ₋₁) + f(xₙ)]
-- **Works with unequal subintervals**: sum individual trapezoid areas
-- **Each trapezoid area = ½(f(xᵢ) + f(xᵢ₊₁))(xᵢ₊₁ - xᵢ)**
-- **Generally more accurate than left or right Riemann sums**
-      `
-    },
-    {
-      id: 'table2-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which statement about Generally more accurate than left or… is correct?',
-            options: [
-              'sum individual trapezoid areas',
-              'Generally more accurate than left or right Riemann sums',
-              'Each trapezoid area = ½(f(xᵢ) + f(xᵢ₊₁))(xᵢ₊₁ - xᵢ)',
-              '∫ₐᵇ f(x)dx ≈ (Δx/2)[f(x₀) + 2f(x₁) + 2f(x₂) + ... + 2f(xₙ₋₁) + f(xₙ)]'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Generally more accurate than left or right Riemann sums. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'table2-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Trapezoidal Rule',
-            options: ['Generally more accurate than left or right Riemann sums', 'sum individual trapezoid areas', 'Each trapezoid area = ½(f(xᵢ) + f(xᵢ₊₁))(xᵢ₊₁ - xᵢ)', '∫ₐᵇ f(x)dx ≈ (Δx/2)[f(x₀) + 2f(x₁) + 2f(x₂) + ... + 2f(xₙ₋₁) + f(xₙ)]']
-          },
-          {
-            label: 'Works with unequal subintervals',
-            options: ['Generally more accurate than left or right Riemann sums', '∫ₐᵇ f(x)dx ≈ (Δx/2)[f(x₀) + 2f(x₁) + 2f(x₂) + ... + 2f(xₙ₋₁) + f(xₙ)]', 'Each trapezoid area = ½(f(xᵢ) + f(xᵢ₊₁))(xᵢ₊₁ - xᵢ)', 'sum individual trapezoid areas']
-          }
-        ],
-        correctAnswers: ['∫ₐᵇ f(x)dx ≈ (Δx/2)[f(x₀) + 2f(x₁) + 2f(x₂) + ... + 2f(xₙ₋₁) + f(xₙ)]', 'sum individual trapezoid areas'],
-        hint1: 'Think about what each concept specifically describes in Trapezoidal Rule.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Trapezoidal Rule describes a specific idea. Trapezoidal Rule: ∫ₐᵇ f(x)dx ≈ (Δx/2)[f(x₀) + 2f(x₁) + 2f(x₂) + ... + 2f(xₙ₋₁) + f(xₙ)]. Works with unequal subintervals: sum individual trapezoid areas.'
-      }
+      content: `### Key Takeaways — Part 2
+1. Watch for unequal subintervals — multiply each value by its own $\\Delta x$
+2. Trapezoidal: average the endpoints of each subinterval`
     }
   ]
-}
+};

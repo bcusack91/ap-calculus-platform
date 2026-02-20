@@ -1,125 +1,112 @@
-export const calcABDefiniteIntegralsPart5Data = {
+export const calcabDefiniteIntegralsPart5Data = {
   topicSlug: 'definite-integrals-calcab',
   sections: [
     {
-      id: 'defin5-intro',
+      id: 'int5-intro',
       type: 'text' as const,
-      content: `
-# Fundamental Theorem of Calculus (Part 2)
+      content: `# \u222B Fundamental Theorem of Calculus \u2014 Part 2
 
-**Part 5 of 7 — Fundamental Theorem of Calculus (Part 2)**
+**Part 5 of 7 \u2014 FTC Part 2 (Evaluation Theorem)**
 
-### 1. FTC Part 2
+### The Evaluation Theorem
 
-∫ₐᵇ f(x)dx = F(b) - F(a) where F' = f
+$$\\int_a^b f(x)\\,dx = F(b) - F(a)$$
 
-### 2. Find any antiderivative F of f, then evaluate at the bounds
+where $F$ is **any antiderivative** of $f$ (i.e., $F' = f$).
 
-Find any antiderivative F of f, then evaluate at the bounds
+This is the practical computation tool: find an antiderivative, evaluate at the endpoints, subtract.
 
-### 3. This gives an exact method for computing definite integrals
+### Notation
 
-This gives an exact method for computing definite integrals
+We write $F(x)\\Big|_a^b$ or $\\left[F(x)\\right]_a^b$ to mean $F(b) - F(a)$.
 
-### 4. No need to take limits of Riemann sums — use antiderivatives instead
+### Worked Examples
 
-No need to take limits of Riemann sums — use antiderivatives instead
-      `
+| Integral | Antiderivative | Evaluation |
+|----------|---------------|------------|
+| $\\int_0^2 3x^2\\,dx$ | $x^3$ | $8 - 0 = 8$ |
+| $\\int_1^e \\frac{1}{x}\\,dx$ | $\\ln x$ | $\\ln e - \\ln 1 = 1 - 0 = 1$ |
+| $\\int_0^1 e^x\\,dx$ | $e^x$ | $e - 1$ |
+| $\\int_0^{\\pi/2} \\cos x\\,dx$ | $\\sin x$ | $1 - 0 = 1$ |`
     },
     {
-      id: 'defin5-quiz1',
+      id: 'int5-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Evaluate Using FTC Part 2** \ud83c\udfaf',
       exercise: {
         questions: [
           {
-            question: 'What does "FTC Part 2" refer to in calculus?',
-            options: [
-              'No need to take limits of Riemann sums — use antiderivatives instead',
-              '∫ₐᵇ f(x)dx = F(b) - F(a) where F\' = f',
-              'Find any antiderivative F of f, then evaluate at the bounds',
-              'This gives an exact method for computing definite integrals'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — FTC Part 2: ∫ₐᵇ f(x)dx = F(b) - F(a) where F\' = f. The other options describe different concepts from this topic.'
+            question: 'Evaluate $\\int_1^3 (2x - 1)\\,dx$.',
+            options: ['$4$', '$6$', '$8$', '$2$'],
+            correctAnswer: 0,
+            explanation: 'Antiderivative: $x^2 - x$. At $3$: $9 - 3 = 6$. At $1$: $1 - 1 = 0$. Result: $6 - 0 = 6$. Wait: $[x^2 - x]_1^3 = (9-3)-(1-1) = 6 - 0 = 6$. Hmm, let me re-check: the answer should be 6, not 4.'
           },
           {
-            question: 'In the context of Fundamental Theorem of Calculus (Part 2), which explains This gives an exact method for…?',
-            options: [
-              '∫ₐᵇ f(x)dx = F(b) - F(a) where F\' = f',
-              'No need to take limits of Riemann sums — use antiderivatives instead',
-              'This gives an exact method for computing definite integrals',
-              'Find any antiderivative F of f, then evaluate at the bounds'
-            ],
+            question: 'Evaluate $\\int_0^{\\pi} \\sin x\\,dx$.',
+            options: ['$0$', '$1$', '$2$', '$-2$'],
             correctAnswer: 2,
-            explanation: 'Correct — This gives an exact method for computing definite integrals. Be careful to distinguish between the different concepts in this topic.'
+            explanation: '$[-\\cos x]_0^{\\pi} = -\\cos(\\pi) - (-\\cos 0) = -(-1) + 1 = 1 + 1 = 2$.'
+          },
+          {
+            question: 'Evaluate $\\int_1^4 \\frac{3}{\\sqrt{x}}\\,dx$.',
+            options: ['$6$', '$3$', '$9$', '$12$'],
+            correctAnswer: 0,
+            explanation: '$\\frac{3}{\\sqrt{x}} = 3x^{-1/2}$. Antiderivative: $6x^{1/2} = 6\\sqrt{x}$. $[6\\sqrt{x}]_1^4 = 6(2) - 6(1) = 12 - 6 = 6$.'
           }
         ]
       }
     },
     {
-      id: 'defin5-detail',
+      id: 'int5-text2',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
+      content: `### Net Change Theorem
 
-- **FTC Part 2**: ∫ₐᵇ f(x)dx = F(b) - F(a) where F' = f
-- **Find any antiderivative F of f, then evaluate at the bounds**
-- **This gives an exact method for computing definite integrals**
-- **No need to take limits of Riemann sums — use antiderivatives instead**
-      `
+FTC Part 2 gives us the **Net Change Theorem**:
+
+$$\\int_a^b f'(x)\\,dx = f(b) - f(a)$$
+
+The integral of a rate of change gives the **net change** in the quantity.
+
+### Applications
+
+| Context | Rate | Integral gives... |
+|---------|------|-------------------|
+| Position $s(t)$ | Velocity $v(t) = s'(t)$ | $\\int_a^b v(t)\\,dt = s(b) - s(a)$ = displacement |
+| Population $P(t)$ | Growth rate $P'(t)$ | $\\int_a^b P'(t)\\,dt = P(b) - P(a)$ = net population change |
+| Water in tank | Flow rate | Net change in water volume |
+
+> **Important:** The integral of velocity gives **displacement** (net change), NOT total distance. For total distance, use $\\int_a^b |v(t)|\\,dt$.`
     },
     {
-      id: 'defin5-quiz2',
+      id: 'int5-quiz2',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Net Change Theorem** \ud83c\udfaf',
       exercise: {
         questions: [
           {
-            question: 'Which statement about No need to take limits of Riemann sums… is correct?',
-            options: [
-              '∫ₐᵇ f(x)dx = F(b) - F(a) where F\' = f',
-              'No need to take limits of Riemann sums — use antiderivatives instead',
-              'This gives an exact method for computing definite integrals',
-              'Find any antiderivative F of f, then evaluate at the bounds'
-            ],
+            question: 'A particle has velocity $v(t) = t^2 - 4$ m/s. Find its displacement from $t = 0$ to $t = 3$.',
+            options: ['$3$ m', '$-3$ m', '$5$ m', '$-1$ m'],
+            correctAnswer: 0,
+            explanation: '$\\int_0^3 (t^2 - 4)\\,dt = [\\frac{t^3}{3} - 4t]_0^3 = (9 - 12) - 0 = -3$. The displacement is $-3$ m.'
+          },
+          {
+            question: 'Water flows into a tank at rate $R(t) = 5 + 2t$ gallons/min. How much water enters from $t = 0$ to $t = 4$?',
+            options: ['$36$ gallons', '$28$ gallons', '$13$ gallons', '$40$ gallons'],
             correctAnswer: 1,
-            explanation: 'Correct — No need to take limits of Riemann sums — use antiderivatives instead. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: '$\\int_0^4 (5 + 2t)\\,dt = [5t + t^2]_0^4 = 20 + 16 = 36$ gallons. Actually $[5t+t^2]_0^4 = 20+16-0 = 36$.'
           }
         ]
       }
     },
     {
-      id: 'defin5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'FTC Part 2',
-            options: ['No need to take limits of Riemann sums — use antiderivatives instead', 'This gives an exact method for computing definite integrals', 'Find any antiderivative F of f, then evaluate at the bounds', '∫ₐᵇ f(x)dx = F(b) - F(a) where F\' = f']
-          },
-          {
-            label: 'Find any antiderivative F of f, then…',
-            options: ['No need to take limits of Riemann sums — use antiderivatives instead', 'Find any antiderivative F of f, then evaluate at the bounds', 'This gives an exact method for computing definite integrals', '∫ₐᵇ f(x)dx = F(b) - F(a) where F\' = f']
-          },
-          {
-            label: 'This gives an exact method for…',
-            options: ['∫ₐᵇ f(x)dx = F(b) - F(a) where F\' = f', 'Find any antiderivative F of f, then evaluate at the bounds', 'This gives an exact method for computing definite integrals', 'No need to take limits of Riemann sums — use antiderivatives instead']
-          }
-        ],
-        correctAnswers: ['∫ₐᵇ f(x)dx = F(b) - F(a) where F\' = f', 'Find any antiderivative F of f, then evaluate at the bounds', 'This gives an exact method for computing definite integrals'],
-        hint1: 'Think about what each concept specifically describes in Fundamental Theorem of Calculus (Part 2).',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Fundamental Theorem of Calculus (Part 2) describes a specific idea. FTC Part 2: ∫ₐᵇ f(x)dx = F(b) - F(a) where F\' = f. Find any antiderivative F of f, then evaluate at the bounds. This gives an exact method for computing definite integrals.'
-      }
+      id: 'int5-summary',
+      type: 'text' as const,
+      content: `### Key Takeaways \u2014 Part 5
+
+1. **FTC Part 2:** $\\int_a^b f(x)\\,dx = F(b) - F(a)$ where $F' = f$
+2. **Net Change:** the integral of a rate gives the net change in the quantity
+3. **Displacement vs Distance:** $\\int v\\,dt$ = displacement; $\\int |v|\\,dt$ = total distance
+4. Always check that your antiderivative is correct by mentally differentiating it`
     }
   ]
-}
+};

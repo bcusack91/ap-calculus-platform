@@ -1,125 +1,46 @@
-export const calcABLinearizationPart5Data = {
+export const calcabLinearizationPart5Data = {
   topicSlug: 'linearization-differentials-calcab',
   sections: [
     {
-      id: 'linea5-intro',
+      id: 'lin5-intro',
       type: 'text' as const,
-      content: `
-# L'Hôpital's Rule
+      content: `# Linearization & Differentials
 
-**Part 5 of 7 — L'Hôpital's Rule**
+**Part 5 of 7 — Linearization with Tables**
 
-### 1. L'Hôpital's Rule
+### Using a Table of Values
 
-for 0/0 or ∞/∞ indeterminate forms, lim f(x)/g(x) = lim f'(x)/g'(x)
+When given a table of $f(a)$ and $f'(a)$, you can write the linearization immediately:
 
-### 2. Only apply when the limit is an indeterminate form
-
-Only apply when the limit is an indeterminate form
-
-### 3. May need to apply multiple times
-
-May need to apply multiple times
-
-### 4. Other indeterminate forms (0·∞, ∞-∞, 0⁰, ∞⁰, 1^∞) must be converted first
-
-Other indeterminate forms (0·∞, ∞-∞, 0⁰, ∞⁰, 1^∞) must be converted first
-      `
+$$L(x) = f(a) + f'(a)(x - a)$$`
     },
     {
-      id: 'linea5-quiz1',
+      id: 'lin5-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Table-Based Linearization** 🎯\n\nGiven: $f(3) = 7$ and $f\'(3) = -2$.',
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes L\'Hôpital\'s Rule?',
-            options: [
-              'Only apply when the limit is an indeterminate form',
-              'Other indeterminate forms (0·∞, ∞-∞, 0⁰, ∞⁰, 1^∞) must be converted first',
-              'for 0/0 or ∞/∞ indeterminate forms, lim f(x)/g(x) = lim f\'(x)/g\'(x)',
-              'May need to apply multiple times'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — L\'Hôpital\'s Rule: for 0/0 or ∞/∞ indeterminate forms, lim f(x)/g(x) = lim f\'(x)/g\'(x). The other options describe different concepts from this topic.'
+            question: 'Write the linearization at $a = 3$ and approximate $f(3.1)$.',
+            options: ['$6.8$', '$7.2$', '$7$', '$6.98$'],
+            correctAnswer: 0,
+            explanation: '$L(x) = 7 + (-2)(x-3) = 7 - 2(x-3)$. $L(3.1) = 7 - 2(0.1) = 6.8$.'
           },
           {
-            question: 'Select the statement that correctly describes May need to apply multiple times:',
-            options: [
-              'Only apply when the limit is an indeterminate form',
-              'for 0/0 or ∞/∞ indeterminate forms, lim f(x)/g(x) = lim f\'(x)/g\'(x)',
-              'Other indeterminate forms (0·∞, ∞-∞, 0⁰, ∞⁰, 1^∞) must be converted first',
-              'May need to apply multiple times'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — May need to apply multiple times. Be careful to distinguish between the different concepts in this topic.'
+            question: 'Using the same linearization, approximate $f(2.9)$.',
+            options: ['$7.2$', '$6.8$', '$7.1$', '$6.9$'],
+            correctAnswer: 0,
+            explanation: '$L(2.9) = 7 - 2(-0.1) = 7 + 0.2 = 7.2$.'
           }
         ]
       }
     },
     {
-      id: 'linea5-detail',
+      id: 'lin5-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **L'Hôpital's Rule**: for 0/0 or ∞/∞ indeterminate forms, lim f(x)/g(x) = lim f'(x)/g'(x)
-- **Only apply when the limit is an indeterminate form**
-- **May need to apply multiple times**
-- **Other indeterminate forms (0·∞, ∞-∞, 0⁰, ∞⁰, 1^∞) must be converted first**
-      `
-    },
-    {
-      id: 'linea5-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of these accurately represents Other indeterminate forms (0·∞, ∞-∞,…?',
-            options: [
-              'for 0/0 or ∞/∞ indeterminate forms, lim f(x)/g(x) = lim f\'(x)/g\'(x)',
-              'Other indeterminate forms (0·∞, ∞-∞, 0⁰, ∞⁰, 1^∞) must be converted first',
-              'Only apply when the limit is an indeterminate form',
-              'May need to apply multiple times'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Other indeterminate forms (0·∞, ∞-∞, 0⁰, ∞⁰, 1^∞) must be converted first. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'linea5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'L\'Hôpital\'s Rule',
-            options: ['for 0/0 or ∞/∞ indeterminate forms, lim f(x)/g(x) = lim f\'(x)/g\'(x)', 'May need to apply multiple times', 'Only apply when the limit is an indeterminate form', 'Other indeterminate forms (0·∞, ∞-∞, 0⁰, ∞⁰, 1^∞) must be converted first']
-          },
-          {
-            label: 'Only apply when the limit is an…',
-            options: ['for 0/0 or ∞/∞ indeterminate forms, lim f(x)/g(x) = lim f\'(x)/g\'(x)', 'Other indeterminate forms (0·∞, ∞-∞, 0⁰, ∞⁰, 1^∞) must be converted first', 'May need to apply multiple times', 'Only apply when the limit is an indeterminate form']
-          },
-          {
-            label: 'May need to apply multiple times',
-            options: ['May need to apply multiple times', 'Other indeterminate forms (0·∞, ∞-∞, 0⁰, ∞⁰, 1^∞) must be converted first', 'for 0/0 or ∞/∞ indeterminate forms, lim f(x)/g(x) = lim f\'(x)/g\'(x)', 'Only apply when the limit is an indeterminate form']
-          }
-        ],
-        correctAnswers: ['for 0/0 or ∞/∞ indeterminate forms, lim f(x)/g(x) = lim f\'(x)/g\'(x)', 'Only apply when the limit is an indeterminate form', 'May need to apply multiple times'],
-        hint1: 'Think about what each concept specifically describes in L\'Hôpital\'s Rule.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in L\'Hôpital\'s Rule describes a specific idea. L\'Hôpital\'s Rule: for 0/0 or ∞/∞ indeterminate forms, lim f(x)/g(x) = lim f\'(x)/g\'(x). Only apply when the limit is an indeterminate form. May need to apply multiple times.'
-      }
+      content: `### Key Takeaways — Part 5
+1. Table problems give you $f(a)$ and $f'(a)$ directly
+2. Just plug into $L(x) = f(a) + f'(a)(x-a)$`
     }
   ]
-}
+};

@@ -1,125 +1,62 @@
-export const calcABUSubPart5Data = {
+export const calcabUSubPart5Data = {
   topicSlug: 'u-substitution-calcab',
   sections: [
     {
-      id: 'u-sub5-intro',
+      id: 'usub5-intro',
       type: 'text' as const,
-      content: `
-# Completing the Square for Integration
+      content: `# u-Substitution
 
-**Part 5 of 7 — Completing the Square for Integration**
+**Part 5 of 7 — Long Division and Completing the Square**
 
-### 1. ∫1/(x²+bx+c)dx
+### When u-Sub Doesn't Work Directly
 
-complete the square, then use arctan form
+Some integrals need **algebraic manipulation** before substitution.
 
-### 2. ∫1/√(a²-x²)dx = arcsin(x/a) + C
+### Long Division for Improper Fractions
 
-∫1/√(a²-x²)dx = arcsin(x/a) + C
+$$\\int \\frac{x^2 + 1}{x + 1}\\,dx$$
 
-### 3. ∫1/(x²+a²)dx = (1/a)arctan(x/a) + C
+Divide first: $\\frac{x^2+1}{x+1} = x - 1 + \\frac{2}{x+1}$
 
-∫1/(x²+a²)dx = (1/a)arctan(x/a) + C
+$$\\int \\left(x - 1 + \\frac{2}{x+1}\\right)dx = \\frac{x^2}{2} - x + 2\\ln|x+1| + C$$
 
-### 4. Completing the square converts quadratics into recognizable integration forms
+### Completing the Square
 
-Completing the square converts quadratics into recognizable integration forms
-      `
+$$\\int \\frac{1}{x^2 + 4x + 8}\\,dx = \\int \\frac{1}{(x+2)^2 + 4}\\,dx$$
+
+Let $u = x + 2$:
+
+$$\\int \\frac{1}{u^2 + 4}\\,du = \\frac{1}{2}\\arctan\\left(\\frac{u}{2}\\right) + C = \\frac{1}{2}\\arctan\\left(\\frac{x+2}{2}\\right) + C$$`
     },
     {
-      id: 'u-sub5-quiz1',
+      id: 'usub5-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Algebraic Manipulation + Integration** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains ∫1/(x²+bx+c)dx?',
-            options: [
-              '∫1/√(a²-x²)dx = arcsin(x/a) + C',
-              '∫1/(x²+a²)dx = (1/a)arctan(x/a) + C',
-              'Completing the square converts quadratics into recognizable integration forms',
-              'complete the square, then use arctan form'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — ∫1/(x²+bx+c)dx: complete the square, then use arctan form. The other options describe different concepts from this topic.'
+            question: 'Evaluate $\\int \\frac{x^2}{x-1}\\,dx$.',
+            options: ['$\\frac{x^2}{2} + x + \\ln|x-1| + C$', '$x^2 + \\ln|x-1| + C$', '$\\frac{x^2}{2} - x + \\ln|x-1| + C$', '$\\frac{x^2}{2} + x - \\ln|x-1| + C$'],
+            correctAnswer: 0,
+            explanation: 'Long division: $\\frac{x^2}{x-1} = x + 1 + \\frac{1}{x-1}$. Integrating: $\\frac{x^2}{2} + x + \\ln|x-1| + C$.'
           },
           {
-            question: 'Which of the following is true about ∫1/(x²+a²)dx = (1/a)arctan(x/a) + C?',
-            options: [
-              '∫1/(x²+a²)dx = (1/a)arctan(x/a) + C',
-              'complete the square, then use arctan form',
-              '∫1/√(a²-x²)dx = arcsin(x/a) + C',
-              'Completing the square converts quadratics into recognizable integration forms'
-            ],
+            question: 'Evaluate $\\int \\frac{1}{x^2 + 6x + 13}\\,dx$.',
+            options: ['$\\frac{1}{2}\\arctan\\left(\\frac{x+3}{2}\\right) + C$', '$\\arctan(x+3) + C$', '$\\ln|x^2+6x+13| + C$', '$\\frac{1}{4}\\arctan\\left(\\frac{x+3}{2}\\right) + C$'],
             correctAnswer: 0,
-            explanation: 'Correct — ∫1/(x²+a²)dx = (1/a)arctan(x/a) + C. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'Complete the square: $x^2+6x+13 = (x+3)^2 + 4$. Let $u = x+3$: $\\int \\frac{du}{u^2+4} = \\frac{1}{2}\\arctan(u/2) + C$.'
           }
         ]
       }
     },
     {
-      id: 'u-sub5-detail',
+      id: 'usub5-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
+      content: `### Key Takeaways — Part 5
 
-- **∫1/(x²+bx+c)dx**: complete the square, then use arctan form
-- **∫1/√(a²-x²)dx = arcsin(x/a) + C**
-- **∫1/(x²+a²)dx = (1/a)arctan(x/a) + C**
-- **Completing the square converts quadratics into recognizable integration forms**
-      `
-    },
-    {
-      id: 'u-sub5-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of these accurately represents Completing the square converts…?',
-            options: [
-              'Completing the square converts quadratics into recognizable integration forms',
-              'complete the square, then use arctan form',
-              '∫1/(x²+a²)dx = (1/a)arctan(x/a) + C',
-              '∫1/√(a²-x²)dx = arcsin(x/a) + C'
-            ],
-            correctAnswer: 0,
-            explanation: 'Correct — Completing the square converts quadratics into recognizable integration forms. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'u-sub5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: '∫1/(x²+bx+c)dx',
-            options: ['∫1/√(a²-x²)dx = arcsin(x/a) + C', 'complete the square, then use arctan form', '∫1/(x²+a²)dx = (1/a)arctan(x/a) + C', 'Completing the square converts quadratics into recognizable integration forms']
-          },
-          {
-            label: '∫1/√(a²-x²)dx = arcsin(x/a) + C',
-            options: ['∫1/√(a²-x²)dx = arcsin(x/a) + C', 'Completing the square converts quadratics into recognizable integration forms', 'complete the square, then use arctan form', '∫1/(x²+a²)dx = (1/a)arctan(x/a) + C']
-          },
-          {
-            label: '∫1/(x²+a²)dx = (1/a)arctan(x/a) + C',
-            options: ['Completing the square converts quadratics into recognizable integration forms', 'complete the square, then use arctan form', '∫1/√(a²-x²)dx = arcsin(x/a) + C', '∫1/(x²+a²)dx = (1/a)arctan(x/a) + C']
-          }
-        ],
-        correctAnswers: ['complete the square, then use arctan form', '∫1/√(a²-x²)dx = arcsin(x/a) + C', '∫1/(x²+a²)dx = (1/a)arctan(x/a) + C'],
-        hint1: 'Think about what each concept specifically describes in Completing the Square for Integration.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Completing the Square for Integration describes a specific idea. ∫1/(x²+bx+c)dx: complete the square, then use arctan form. ∫1/√(a²-x²)dx = arcsin(x/a) + C. ∫1/(x²+a²)dx = (1/a)arctan(x/a) + C.'
-      }
+1. **Long division** when the degree of numerator $\\geq$ degree of denominator
+2. **Complete the square** when you see $x^2 + bx + c$ in a denominator
+3. After algebraic prep, standard techniques (u-sub, $\\arctan$) apply`
     }
   ]
-}
+};

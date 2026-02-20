@@ -1,121 +1,52 @@
-export const calcABParticleMotionPart3Data = {
+export const calcabParticleMotionPart3Data = {
   topicSlug: 'particle-motion-calcab',
   sections: [
     {
-      id: 'parti3-intro',
+      id: 'pm3-intro',
       type: 'text' as const,
-      content: `
-# Speed & Direction
+      content: `# Particle Motion
 
-**Part 3 of 7 — Speed & Direction**
+**Part 3 of 7 \u2014 Speed and Speeding Up/Slowing Down**
 
-### 1. Speed = |v(t)| — always non-negative
+### Speed vs Velocity
 
-Speed = |v(t)| — always non-negative
+- **Velocity** has direction (can be negative)
+- **Speed** $= |v(t)|$ (always non-negative)
+- Maximum speed occurs at an endpoint or where $\\frac{d}{dt}|v(t)| = 0$
 
-### 2. If v(t) > 0
+### Speeding Up vs Slowing Down
 
-moving in positive direction (right/up)
+| $v(t)$ | $a(t)$ | Particle is... |
+|--------|--------|----------------|
+| $+$ | $+$ | Speeding up (moving right, accelerating right) |
+| $-$ | $-$ | Speeding up (moving left, accelerating left) |
+| $+$ | $-$ | Slowing down |
+| $-$ | $+$ | Slowing down |
 
-### 3. If v(t) < 0
-
-moving in negative direction (left/down)
-
-### 4. Maximum speed occurs at the largest |v(t)| value
-
-Maximum speed occurs at the largest |v(t)| value
-      `
+**Key:** Same sign = speeding up. Opposite signs = slowing down.`
     },
     {
-      id: 'parti3-quiz1',
+      id: 'pm3-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Speed Analysis** \ud83c\udfaf\n\n$v(t) = t^2 - 5t + 4 = (t-1)(t-4)$, $a(t) = 2t - 5$',
       exercise: {
         questions: [
           {
-            question: 'What does "Speed = |v(t)| — always non-negative" refer to in calculus?',
-            options: [
-              'Maximum speed occurs at the largest |v(t)| value',
-              'Speed = |v(t)| — always non-negative',
-              'moving in negative direction (left/down)',
-              'moving in positive direction (right/up)'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Speed = |v(t)| — always non-negative. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Select the statement that correctly describes If v(t) < 0:',
-            options: [
-              'moving in positive direction (right/up)',
-              'moving in negative direction (left/down)',
-              'Maximum speed occurs at the largest |v(t)| value',
-              'Speed = |v(t)| — always non-negative'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — If v(t) < 0: moving in negative direction (left/down). Be careful to distinguish between the different concepts in this topic.'
+            question: 'On what interval(s) is the particle speeding up?',
+            options: ['$(1, 2.5)$', '$(2.5, 4)$', '$(1, 2.5) \\cup (4, \\infty)$', '$(0, 1) \\cup (2.5, 4)$'],
+            correctAnswer: 2,
+            explanation: '$v < 0$ on $(1,4)$, $a < 0$ on $(0, 2.5)$. Same sign (both negative): $(1, 2.5)$. $v > 0$ on $(4,\\infty)$, $a > 0$ on $(2.5,\\infty)$. Same sign (both positive): $(4, \\infty)$. Speeding up on $(1, 2.5) \\cup (4, \\infty)$.'
           }
         ]
       }
     },
     {
-      id: 'parti3-detail',
+      id: 'pm3-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Speed = |v(t)| — always non-negative**
-- **If v(t) > 0**: moving in positive direction (right/up)
-- **If v(t) < 0**: moving in negative direction (left/down)
-- **Maximum speed occurs at the largest |v(t)| value**
-      `
-    },
-    {
-      id: 'parti3-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which statement about Maximum speed occurs at the largest… is correct?',
-            options: [
-              'moving in positive direction (right/up)',
-              'moving in negative direction (left/down)',
-              'Speed = |v(t)| — always non-negative',
-              'Maximum speed occurs at the largest |v(t)| value'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Maximum speed occurs at the largest |v(t)| value. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'parti3-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'If v(t) > 0',
-            options: ['Speed = |v(t)| — always non-negative', 'Maximum speed occurs at the largest |v(t)| value', 'moving in positive direction (right/up)', 'moving in negative direction (left/down)']
-          },
-          {
-            label: 'If v(t) < 0',
-            options: ['moving in positive direction (right/up)', 'Maximum speed occurs at the largest |v(t)| value', 'Speed = |v(t)| — always non-negative', 'moving in negative direction (left/down)']
-          }
-        ],
-        correctAnswers: ['moving in positive direction (right/up)', 'moving in negative direction (left/down)'],
-        hint1: 'Think about what each concept specifically describes in Speed & Direction.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Speed & Direction describes a specific idea. If v(t) > 0: moving in positive direction (right/up). If v(t) < 0: moving in negative direction (left/down).'
-      }
+      content: `### Key Takeaways \u2014 Part 3
+1. Speed = $|v(t)|$
+2. Same sign of $v$ and $a$ = speeding up
+3. Opposite signs = slowing down`
     }
   ]
-}
+};

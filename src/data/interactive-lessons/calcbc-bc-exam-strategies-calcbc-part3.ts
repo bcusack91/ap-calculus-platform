@@ -1,125 +1,49 @@
-export const calcBCExamStrategiesPart3Data = {
+export const calcbcExamStrategyPart3Data = {
   topicSlug: 'bc-exam-strategies-calcbc',
   sections: [
     {
-      id: 'bc-ex3-intro',
+      id: 'str3-intro',
       type: 'text' as const,
-      content: `
-# Parametric & Polar Strategies
+      content: `# BC Exam Strategies
 
-**Part 3 of 7 — Parametric & Polar Strategies**
+**Part 3 of 7 — FRQ Strategies**
 
-### 1. Parametric FRQ
+### The 6 FRQs Usually Cover
 
-find dy/dx, tangent lines, arc length, area
+1. Rate/accumulation (with table or graph)
+2. Particle motion or related rates
+3. Area/volume
+4. Differential equation (often Euler + separation)
+5. **Series** (Taylor polynomial, error bound, interval)
+6. Parametric/polar or mixed topic
 
-### 2. Polar FRQ
+### Earning Points
 
-area = ½∫r²dθ, find tangent lines, intersections
-
-### 3. Vector motion
-
-position, velocity, speed, distance, direction
-
-### 4. Always set up the integral clearly even if you use a calculator to evaluate
-
-Always set up the integral clearly even if you use a calculator to evaluate
-      `
+- Show setup AND answer separately
+- Label all integrals/derivatives
+- Include units when given
+- "Since..." justification format`
     },
     {
-      id: 'bc-ex3-quiz1',
+      id: 'str3-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**FRQ Tips** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains Parametric FRQ?',
-            options: [
-              'find dy/dx, tangent lines, arc length, area',
-              'position, velocity, speed, distance, direction',
-              'Always set up the integral clearly even if you use a calculator to evaluate',
-              'area = ½∫r²dθ, find tangent lines, intersections'
-            ],
+            question: 'On an FRQ, you set up an integral correctly but make an arithmetic error. You typically:',
+            options: ['Earn most points (setup points + partial credit)', 'Earn zero points', 'Earn full credit', 'Lose all subsequent part credit'],
             correctAnswer: 0,
-            explanation: 'Correct — Parametric FRQ: find dy/dx, tangent lines, arc length, area. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Which of the following is true about Vector motion?',
-            options: [
-              'position, velocity, speed, distance, direction',
-              'area = ½∫r²dθ, find tangent lines, intersections',
-              'find dy/dx, tangent lines, arc length, area',
-              'Always set up the integral clearly even if you use a calculator to evaluate'
-            ],
-            correctAnswer: 0,
-            explanation: 'Correct — Vector motion: position, velocity, speed, distance, direction. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'AP scoring separates setup from computation. Correct setup earns points even with arithmetic errors.'
           }
         ]
       }
     },
     {
-      id: 'bc-ex3-detail',
+      id: 'str3-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Parametric FRQ**: find dy/dx, tangent lines, arc length, area
-- **Polar FRQ**: area = ½∫r²dθ, find tangent lines, intersections
-- **Vector motion**: position, velocity, speed, distance, direction
-- **Always set up the integral clearly even if you use a calculator to evaluate**
-      `
-    },
-    {
-      id: 'bc-ex3-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which statement about Always set up the integral clearly even… is correct?',
-            options: [
-              'area = ½∫r²dθ, find tangent lines, intersections',
-              'find dy/dx, tangent lines, arc length, area',
-              'position, velocity, speed, distance, direction',
-              'Always set up the integral clearly even if you use a calculator to evaluate'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Always set up the integral clearly even if you use a calculator to evaluate. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'bc-ex3-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Parametric FRQ',
-            options: ['find dy/dx, tangent lines, arc length, area', 'Always set up the integral clearly even if you use a calculator to evaluate', 'position, velocity, speed, distance, direction', 'area = ½∫r²dθ, find tangent lines, intersections']
-          },
-          {
-            label: 'Polar FRQ',
-            options: ['area = ½∫r²dθ, find tangent lines, intersections', 'Always set up the integral clearly even if you use a calculator to evaluate', 'position, velocity, speed, distance, direction', 'find dy/dx, tangent lines, arc length, area']
-          },
-          {
-            label: 'Vector motion',
-            options: ['Always set up the integral clearly even if you use a calculator to evaluate', 'area = ½∫r²dθ, find tangent lines, intersections', 'position, velocity, speed, distance, direction', 'find dy/dx, tangent lines, arc length, area']
-          }
-        ],
-        correctAnswers: ['find dy/dx, tangent lines, arc length, area', 'area = ½∫r²dθ, find tangent lines, intersections', 'position, velocity, speed, distance, direction'],
-        hint1: 'Think about what each concept specifically describes in Parametric & Polar Strategies.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Parametric & Polar Strategies describes a specific idea. Parametric FRQ: find dy/dx, tangent lines, arc length, area. Polar FRQ: area = ½∫r²dθ, find tangent lines, intersections. Vector motion: position, velocity, speed, distance, direction.'
-      }
+      content: `### Key Takeaways — Part 3
+Show ALL work. Setup and answer are scored separately.`
     }
   ]
-}
+};

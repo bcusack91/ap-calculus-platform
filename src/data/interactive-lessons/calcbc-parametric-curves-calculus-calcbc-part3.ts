@@ -1,125 +1,45 @@
-export const calcBCParametricPart3Data = {
+export const calcbcParametricPart3Data = {
   topicSlug: 'parametric-curves-calculus-calcbc',
   sections: [
     {
       id: 'param3-intro',
       type: 'text' as const,
-      content: `
-# Second Derivatives (Parametric)
+      content: `# Parametric Curves
 
-**Part 3 of 7 — Second Derivatives (Parametric)**
+**Part 3 of 7 — Arc Length (Parametric)**
 
-### 1. d²y/dx² = (d/dt[dy/dx])/(dx/dt)
+### Parametric Arc Length Formula
 
-d²y/dx² = (d/dt[dy/dx])/(dx/dt)
+$$L = \int_a^b \sqrt{\left(\frac{dx}{dt}\right)^2 + \left(\frac{dy}{dt}\right)^2}\,dt$$
 
-### 2. First find dy/dx as a function of t
+### Example: Circle
 
-First find dy/dx as a function of t
+$x = 3\cos t$, $y = 3\sin t$, $0 \leq t \leq 2\pi$
 
-### 3. Then differentiate dy/dx with respect to t
+$\frac{dx}{dt} = -3\sin t$, $\frac{dy}{dt} = 3\cos t$
 
-Then differentiate dy/dx with respect to t
-
-### 4. Divide by dx/dt to get the second derivative
-
-Divide by dx/dt to get the second derivative
-      `
+$L = \int_0^{2\pi}\sqrt{9\sin^2 t + 9\cos^2 t}\,dt = \int_0^{2\pi} 3\,dt = 6\pi$`
     },
     {
       id: 'param3-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Arc Length** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes d²y/dx² = (d/dt[dy/dx])/(dx/dt)?',
-            options: [
-              'd²y/dx² = (d/dt[dy/dx])/(dx/dt)',
-              'First find dy/dx as a function of t',
-              'Then differentiate dy/dx with respect to t',
-              'Divide by dx/dt to get the second derivative'
-            ],
+            question: 'Find arc length for $x = t^2$, $y = t^3$, $0 \\leq t \\leq 1$. Set up the integral.',
+            options: ['$\\int_0^1 \\sqrt{4t^2 + 9t^4}\\,dt$', '$\\int_0^1 \\sqrt{2t + 3t^2}\\,dt$', '$\\int_0^1 (2t + 3t^2)\\,dt$', '$\\int_0^1 \\sqrt{t^4 + t^6}\\,dt$'],
             correctAnswer: 0,
-            explanation: 'Correct — d²y/dx² = (d/dt[dy/dx])/(dx/dt). The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Select the statement that correctly describes Then differentiate dy/dx with respect…:',
-            options: [
-              'd²y/dx² = (d/dt[dy/dx])/(dx/dt)',
-              'First find dy/dx as a function of t',
-              'Then differentiate dy/dx with respect to t',
-              'Divide by dx/dt to get the second derivative'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Then differentiate dy/dx with respect to t. Be careful to distinguish between the different concepts in this topic.'
+            explanation: '$\\sqrt{(2t)^2 + (3t^2)^2} = \\sqrt{4t^2 + 9t^4}$.'
           }
         ]
       }
     },
     {
-      id: 'param3-detail',
+      id: 'param3-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **d²y/dx² = (d/dt[dy/dx])/(dx/dt)**
-- **First find dy/dx as a function of t**
-- **Then differentiate dy/dx with respect to t**
-- **Divide by dx/dt to get the second derivative**
-      `
-    },
-    {
-      id: 'param3-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of these accurately represents Divide by dx/dt to get the second…?',
-            options: [
-              'd²y/dx² = (d/dt[dy/dx])/(dx/dt)',
-              'Divide by dx/dt to get the second derivative',
-              'Then differentiate dy/dx with respect to t',
-              'First find dy/dx as a function of t'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Divide by dx/dt to get the second derivative. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'param3-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'd²y/dx² = (d/dt[dy/dx])/(dx/dt)',
-            options: ['d²y/dx² = (d/dt[dy/dx])/(dx/dt)', 'Then differentiate dy/dx with respect to t', 'Divide by dx/dt to get the second derivative', 'First find dy/dx as a function of t']
-          },
-          {
-            label: 'First find dy/dx as a function of t',
-            options: ['First find dy/dx as a function of t', 'Divide by dx/dt to get the second derivative', 'Then differentiate dy/dx with respect to t', 'd²y/dx² = (d/dt[dy/dx])/(dx/dt)']
-          },
-          {
-            label: 'Then differentiate dy/dx with respect…',
-            options: ['d²y/dx² = (d/dt[dy/dx])/(dx/dt)', 'First find dy/dx as a function of t', 'Divide by dx/dt to get the second derivative', 'Then differentiate dy/dx with respect to t']
-          }
-        ],
-        correctAnswers: ['d²y/dx² = (d/dt[dy/dx])/(dx/dt)', 'First find dy/dx as a function of t', 'Then differentiate dy/dx with respect to t'],
-        hint1: 'Think about what each concept specifically describes in Second Derivatives (Parametric).',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Second Derivatives (Parametric) describes a specific idea. d²y/dx² = (d/dt[dy/dx])/(dx/dt). First find dy/dx as a function of t. Then differentiate dy/dx with respect to t.'
-      }
+      content: `### Key Takeaways — Part 3
+Arc length: $\\sqrt{(dx/dt)^2 + (dy/dt)^2}\\,dt$ — Pythagorean theorem in the parameter space.`
     }
   ]
-}
+};

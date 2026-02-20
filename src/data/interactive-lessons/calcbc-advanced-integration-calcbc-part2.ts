@@ -1,125 +1,45 @@
-export const calcBCAdvIntegrationPart2Data = {
+export const calcbcAdvIntegrationPart2Data = {
   topicSlug: 'advanced-integration-calcbc',
   sections: [
     {
-      id: 'advan2-intro',
+      id: 'adv2-intro',
       type: 'text' as const,
-      content: `
-# Integration Strategy Selection
+      content: `# Advanced Integration
 
-**Part 2 of 7 — Integration Strategy Selection**
+**Part 2 of 7 — Challenging u-Substitutions**
 
-### 1. Try direct/simple methods first
+### Tricky u-Sub Examples
 
-u-sub, basic formulas
+$\int \frac{e^x}{1 + e^x}\,dx$: let $u = 1 + e^x$
 
-### 2. Products of powers
+$\int \frac{\ln x}{x}\,dx$: let $u = \ln x$
 
-integration by parts or reduction formulas
+$\int x\sqrt{x+1}\,dx$: let $u = x+1$, so $x = u - 1$
 
-### 3. Rational functions with quadratics
+### Completing the Square for u-Sub
 
-partial fractions
-
-### 4. Recognize inverse trig patterns
-
-arctan, arcsin forms
-      `
+$\int \frac{dx}{x^2 + 4x + 8} = \int \frac{dx}{(x+2)^2 + 4}$: let $u = x + 2$`
     },
     {
-      id: 'advan2-quiz1',
+      id: 'adv2-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**u-Sub** 🎯',
       exercise: {
         questions: [
           {
-            question: 'What does "Try direct/simple methods first" refer to in calculus?',
-            options: [
-              'partial fractions',
-              'u-sub, basic formulas',
-              'arctan, arcsin forms',
-              'integration by parts or reduction formulas'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Try direct/simple methods first: u-sub, basic formulas. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'In the context of Integration Strategy Selection, which explains Rational functions with quadratics?',
-            options: [
-              'arctan, arcsin forms',
-              'integration by parts or reduction formulas',
-              'u-sub, basic formulas',
-              'partial fractions'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Rational functions with quadratics: partial fractions. Be careful to distinguish between the different concepts in this topic.'
+            question: '$\\int \\frac{e^x}{1 + e^x}\\,dx = $',
+            options: ['$\\ln(1 + e^x) + C$', '$e^x/(1+e^x) + C$', '$\\arctan(e^x) + C$', '$\\ln(e^x) + C$'],
+            correctAnswer: 0,
+            explanation: '$u = 1 + e^x$, $du = e^x\\,dx$. $\\int du/u = \\ln|u| + C = \\ln(1+e^x) + C$.'
           }
         ]
       }
     },
     {
-      id: 'advan2-detail',
+      id: 'adv2-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Try direct/simple methods first**: u-sub, basic formulas
-- **Products of powers**: integration by parts or reduction formulas
-- **Rational functions with quadratics**: partial fractions
-- **Recognize inverse trig patterns**: arctan, arcsin forms
-      `
-    },
-    {
-      id: 'advan2-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Regarding Integration Strategy Selection, which correctly describes Recognize inverse trig patterns?',
-            options: [
-              'integration by parts or reduction formulas',
-              'partial fractions',
-              'arctan, arcsin forms',
-              'u-sub, basic formulas'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Recognize inverse trig patterns: arctan, arcsin forms. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'advan2-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Try direct/simple methods first',
-            options: ['arctan, arcsin forms', 'integration by parts or reduction formulas', 'u-sub, basic formulas', 'partial fractions']
-          },
-          {
-            label: 'Products of powers',
-            options: ['u-sub, basic formulas', 'arctan, arcsin forms', 'integration by parts or reduction formulas', 'partial fractions']
-          },
-          {
-            label: 'Rational functions with quadratics',
-            options: ['integration by parts or reduction formulas', 'u-sub, basic formulas', 'partial fractions', 'arctan, arcsin forms']
-          }
-        ],
-        correctAnswers: ['u-sub, basic formulas', 'integration by parts or reduction formulas', 'partial fractions'],
-        hint1: 'Think about what each concept specifically describes in Integration Strategy Selection.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Integration Strategy Selection describes a specific idea. Try direct/simple methods first: u-sub, basic formulas. Products of powers: integration by parts or reduction formulas. Rational functions with quadratics: partial fractions.'
-      }
+      content: `### Key Takeaways — Part 2
+Look for the derivative of a function inside the integral. Complete the square when needed.`
     }
   ]
-}
+};

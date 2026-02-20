@@ -1,125 +1,49 @@
-export const calcBCAlternatingPart2Data = {
+export const calcbcAlternatingPart2Data = {
   topicSlug: 'alternating-series-calcbc',
   sections: [
     {
-      id: 'alter2-intro',
+      id: 'alt2-intro',
       type: 'text' as const,
-      content: `
-# Alternating Series Test
+      content: `# Alternating Series
 
-**Part 2 of 7 — Alternating Series Test**
+**Part 2 of 7 — Error Bound**
 
-### 1. AST
+### Alternating Series Error Bound
 
-Σ(-1)ⁿ bₙ converges if (1) bₙ > 0, (2) bₙ is decreasing, (3) lim bₙ = 0
+If $S = \sum_{n=1}^{\infty}(-1)^{n+1}b_n$ and $S_n$ is the $n$th partial sum:
 
-### 2. All three conditions must be verified
+$$|S - S_n| \leq b_{n+1}$$
 
-All three conditions must be verified
+The error is **at most** the absolute value of **the first omitted term**.
 
-### 3. If lim bₙ ≠ 0, the series diverges (by the Divergence Test)
+### Example
 
-If lim bₙ ≠ 0, the series diverges (by the Divergence Test)
+$S = \sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n^2}$. After 4 terms:
 
-### 4. The alternating harmonic series Σ(-1)ⁿ⁺¹/n converges (to ln 2)
+$S_4 = 1 - 1/4 + 1/9 - 1/16$
 
-The alternating harmonic series Σ(-1)ⁿ⁺¹/n converges (to ln 2)
-      `
+Error $\leq b_5 = 1/25 = 0.04$`
     },
     {
-      id: 'alter2-quiz1',
+      id: 'alt2-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Error Bound** 🎯',
       exercise: {
         questions: [
           {
-            question: 'What does "AST" refer to in calculus?',
-            options: [
-              'All three conditions must be verified',
-              'Σ(-1)ⁿ bₙ converges if (1) bₙ > 0, (2) bₙ is decreasing, (3) lim bₙ = 0',
-              'The alternating harmonic series Σ(-1)ⁿ⁺¹/n converges (to ln 2)',
-              'If lim bₙ ≠ 0, the series diverges (by the Divergence Test)'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — AST: Σ(-1)ⁿ bₙ converges if (1) bₙ > 0, (2) bₙ is decreasing, (3) lim bₙ = 0. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Which of the following is true about If lim bₙ ≠ 0, the series diverges (by…?',
-            options: [
-              'All three conditions must be verified',
-              'Σ(-1)ⁿ bₙ converges if (1) bₙ > 0, (2) bₙ is decreasing, (3) lim bₙ = 0',
-              'If lim bₙ ≠ 0, the series diverges (by the Divergence Test)',
-              'The alternating harmonic series Σ(-1)ⁿ⁺¹/n converges (to ln 2)'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — If lim bₙ ≠ 0, the series diverges (by the Divergence Test). Be careful to distinguish between the different concepts in this topic.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'alter2-detail',
-      type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **AST**: Σ(-1)ⁿ bₙ converges if (1) bₙ > 0, (2) bₙ is decreasing, (3) lim bₙ = 0
-- **All three conditions must be verified**
-- **If lim bₙ ≠ 0, the series diverges (by the Divergence Test)**
-- **The alternating harmonic series Σ(-1)ⁿ⁺¹/n converges (to ln 2)**
-      `
-    },
-    {
-      id: 'alter2-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which statement about The alternating harmonic series… is correct?',
-            options: [
-              'The alternating harmonic series Σ(-1)ⁿ⁺¹/n converges (to ln 2)',
-              'All three conditions must be verified',
-              'Σ(-1)ⁿ bₙ converges if (1) bₙ > 0, (2) bₙ is decreasing, (3) lim bₙ = 0',
-              'If lim bₙ ≠ 0, the series diverges (by the Divergence Test)'
-            ],
+            question: 'For $\\sum \\frac{(-1)^{n+1}}{n!}$, how many terms ensure error $< 0.01$?',
+            options: ['$4$ terms ($b_5 = 1/120 < 0.01$)', '$3$ terms', '$5$ terms', '$10$ terms'],
             correctAnswer: 0,
-            explanation: 'Correct — The alternating harmonic series Σ(-1)ⁿ⁺¹/n converges (to ln 2). Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: '$b_5 = 1/5! = 1/120 \\approx 0.0083 < 0.01$. $b_4 = 1/4! = 1/24 \\approx 0.042 > 0.01$. Need 4 terms.'
           }
         ]
       }
     },
     {
-      id: 'alter2-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'AST',
-            options: ['All three conditions must be verified', 'The alternating harmonic series Σ(-1)ⁿ⁺¹/n converges (to ln 2)', 'If lim bₙ ≠ 0, the series diverges (by the Divergence Test)', 'Σ(-1)ⁿ bₙ converges if (1) bₙ > 0, (2) bₙ is decreasing, (3) lim bₙ = 0']
-          },
-          {
-            label: 'All three conditions must be verified',
-            options: ['All three conditions must be verified', 'The alternating harmonic series Σ(-1)ⁿ⁺¹/n converges (to ln 2)', 'Σ(-1)ⁿ bₙ converges if (1) bₙ > 0, (2) bₙ is decreasing, (3) lim bₙ = 0', 'If lim bₙ ≠ 0, the series diverges (by the Divergence Test)']
-          },
-          {
-            label: 'If lim bₙ ≠ 0, the series diverges (by…',
-            options: ['The alternating harmonic series Σ(-1)ⁿ⁺¹/n converges (to ln 2)', 'If lim bₙ ≠ 0, the series diverges (by the Divergence Test)', 'Σ(-1)ⁿ bₙ converges if (1) bₙ > 0, (2) bₙ is decreasing, (3) lim bₙ = 0', 'All three conditions must be verified']
-          }
-        ],
-        correctAnswers: ['Σ(-1)ⁿ bₙ converges if (1) bₙ > 0, (2) bₙ is decreasing, (3) lim bₙ = 0', 'All three conditions must be verified', 'If lim bₙ ≠ 0, the series diverges (by the Divergence Test)'],
-        hint1: 'Think about what each concept specifically describes in Alternating Series Test.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Alternating Series Test describes a specific idea. AST: Σ(-1)ⁿ bₙ converges if (1) bₙ > 0, (2) bₙ is decreasing, (3) lim bₙ = 0. All three conditions must be verified. If lim bₙ ≠ 0, the series diverges (by the Divergence Test).'
-      }
+      id: 'alt2-summary',
+      type: 'text' as const,
+      content: `### Key Takeaways — Part 2
+Error $\\leq$ first omitted term. This is a very useful and simple bound!`
     }
   ]
-}
+};

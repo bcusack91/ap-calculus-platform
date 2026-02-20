@@ -1,121 +1,43 @@
-export const calcBCVectorsPart3Data = {
+export const calcbcVectorsPart3Data = {
   topicSlug: 'vector-valued-functions-calcbc',
   sections: [
     {
-      id: 'vecto3-intro',
+      id: 'vec3-intro',
       type: 'text' as const,
-      content: `
-# Integrals of Vector Functions
+      content: `# Vector-Valued Functions
 
-**Part 3 of 7 — Integrals of Vector Functions**
+**Part 3 of 7 — Distance Traveled**
 
-### 1. ∫r⃗(t)dt = ⟨∫f(t)dt, ∫g(t)dt⟩ — integrate component by component
+### Total Distance
 
-∫r⃗(t)dt = ⟨∫f(t)dt, ∫g(t)dt⟩ — integrate component by component
+$$\text{Distance} = \int_a^b |\vec{v}(t)|\,dt = \int_a^b \sqrt{[x'(t)]^2 + [y'(t)]^2}\,dt$$
 
-### 2. Definite integral
+### Displacement vs Distance
 
-∫ₐᵇ r⃗(t)dt = ⟨∫ₐᵇ f(t)dt, ∫ₐᵇ g(t)dt⟩
+**Displacement** (net change): $\vec{r}(b) - \vec{r}(a)$
 
-### 3. The result is a vector
-
-The result is a vector
-
-### 4. Position from velocity
-
-r⃗(t) = r⃗(t₀) + ∫_(t₀)^t v⃗(s)ds
-      `
+**Distance** (total path length): $\int_a^b |\vec{v}(t)|\,dt$`
     },
     {
-      id: 'vecto3-quiz1',
+      id: 'vec3-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Distance** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains ∫r⃗(t)dt = ⟨∫f(t)dt, ∫g(t)dt⟩ —…?',
-            options: [
-              '∫ₐᵇ r⃗(t)dt = ⟨∫ₐᵇ f(t)dt, ∫ₐᵇ g(t)dt⟩',
-              '∫r⃗(t)dt = ⟨∫f(t)dt, ∫g(t)dt⟩ — integrate component by component',
-              'r⃗(t) = r⃗(t₀) + ∫_(t₀)^t v⃗(s)ds',
-              'The result is a vector'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — ∫r⃗(t)dt = ⟨∫f(t)dt, ∫g(t)dt⟩ — integrate component by component. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Which of the following is true about The result is a vector?',
-            options: [
-              'r⃗(t) = r⃗(t₀) + ∫_(t₀)^t v⃗(s)ds',
-              '∫r⃗(t)dt = ⟨∫f(t)dt, ∫g(t)dt⟩ — integrate component by component',
-              '∫ₐᵇ r⃗(t)dt = ⟨∫ₐᵇ f(t)dt, ∫ₐᵇ g(t)dt⟩',
-              'The result is a vector'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — The result is a vector. Be careful to distinguish between the different concepts in this topic.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'vecto3-detail',
-      type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **∫r⃗(t)dt = ⟨∫f(t)dt, ∫g(t)dt⟩ — integrate component by component**
-- **Definite integral**: ∫ₐᵇ r⃗(t)dt = ⟨∫ₐᵇ f(t)dt, ∫ₐᵇ g(t)dt⟩
-- **The result is a vector**
-- **Position from velocity**: r⃗(t) = r⃗(t₀) + ∫_(t₀)^t v⃗(s)ds
-      `
-    },
-    {
-      id: 'vecto3-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Regarding Integrals of Vector Functions, which correctly describes Position from velocity?',
-            options: [
-              'r⃗(t) = r⃗(t₀) + ∫_(t₀)^t v⃗(s)ds',
-              '∫r⃗(t)dt = ⟨∫f(t)dt, ∫g(t)dt⟩ — integrate component by component',
-              '∫ₐᵇ r⃗(t)dt = ⟨∫ₐᵇ f(t)dt, ∫ₐᵇ g(t)dt⟩',
-              'The result is a vector'
-            ],
+            question: '$\\vec{r}(t) = \\langle \\cos t, \\sin t \\rangle$ for $0 \\leq t \\leq 2\\pi$. Find the total distance.',
+            options: ['$2\\pi$', '$0$', '$\\pi$', '$4$'],
             correctAnswer: 0,
-            explanation: 'Correct — Position from velocity: r⃗(t) = r⃗(t₀) + ∫_(t₀)^t v⃗(s)ds. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: '$|\\vec{v}(t)| = \\sqrt{\\sin^2 t + \\cos^2 t} = 1$. Distance $= \\int_0^{2\\pi} 1\\,dt = 2\\pi$.'
           }
         ]
       }
     },
     {
-      id: 'vecto3-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Definite integral',
-            options: ['The result is a vector', 'r⃗(t) = r⃗(t₀) + ∫_(t₀)^t v⃗(s)ds', '∫ₐᵇ r⃗(t)dt = ⟨∫ₐᵇ f(t)dt, ∫ₐᵇ g(t)dt⟩', '∫r⃗(t)dt = ⟨∫f(t)dt, ∫g(t)dt⟩ — integrate component by component']
-          },
-          {
-            label: 'Position from velocity',
-            options: ['∫r⃗(t)dt = ⟨∫f(t)dt, ∫g(t)dt⟩ — integrate component by component', '∫ₐᵇ r⃗(t)dt = ⟨∫ₐᵇ f(t)dt, ∫ₐᵇ g(t)dt⟩', 'r⃗(t) = r⃗(t₀) + ∫_(t₀)^t v⃗(s)ds', 'The result is a vector']
-          }
-        ],
-        correctAnswers: ['∫ₐᵇ r⃗(t)dt = ⟨∫ₐᵇ f(t)dt, ∫ₐᵇ g(t)dt⟩', 'r⃗(t) = r⃗(t₀) + ∫_(t₀)^t v⃗(s)ds'],
-        hint1: 'Think about what each concept specifically describes in Integrals of Vector Functions.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Integrals of Vector Functions describes a specific idea. Definite integral: ∫ₐᵇ r⃗(t)dt = ⟨∫ₐᵇ f(t)dt, ∫ₐᵇ g(t)dt⟩. Position from velocity: r⃗(t) = r⃗(t₀) + ∫_(t₀)^t v⃗(s)ds.'
-      }
+      id: 'vec3-summary',
+      type: 'text' as const,
+      content: `### Key Takeaways — Part 3
+Distance ≠ displacement. Distance integrates speed; displacement is net change.`
     }
   ]
-}
+};

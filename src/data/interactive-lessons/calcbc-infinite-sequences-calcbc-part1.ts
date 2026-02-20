@@ -1,125 +1,61 @@
-export const calcBCSequencesPart1Data = {
+export const calcbcSequencesPart1Data = {
   topicSlug: 'infinite-sequences-calcbc',
   sections: [
     {
-      id: 'infin1-intro',
+      id: 'seq1-intro',
       type: 'text' as const,
-      content: `
-# ∮ Infinite Sequences
+      content: `# Infinite Sequences
 
-**Part 1 of 7 — Sequences & Convergence**
+**Part 1 of 7 — Definition & Convergence**
 
-### 1. Sequence {aₙ}
+### What Is a Sequence?
 
-an ordered list a₁, a₂, a₃, ...
+An ordered list of numbers: $a_1, a_2, a_3, \ldots$ or $\{a_n\}_{n=1}^{\infty}$
 
-### 2. Convergent
+### Convergence
 
-lim(n→∞) aₙ = L (approaches a finite limit)
+A sequence $\{a_n\}$ **converges** to $L$ if:
 
-### 3. Divergent
+$$\lim_{n \to \infty} a_n = L$$
 
-the limit does not exist or is ±∞
+If no such $L$ exists, the sequence **diverges**.
 
-### 4. A sequence converges if and only if the terms get arbitrarily close to L
+### Examples
 
-A sequence converges if and only if the terms get arbitrarily close to L
-      `
+| Sequence | Limit | Converges? |
+|----------|-------|-----------|
+| $a_n = 1/n$ | $0$ | Yes |
+| $a_n = (-1)^n$ | DNE | No |
+| $a_n = (1 + 1/n)^n$ | $e$ | Yes |
+| $a_n = n^2$ | $\infty$ | No |`
     },
     {
-      id: 'infin1-quiz1',
+      id: 'seq1-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Sequence Convergence** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains Sequence {aₙ}?',
-            options: [
-              'the limit does not exist or is ±∞',
-              'A sequence converges if and only if the terms get arbitrarily close to L',
-              'lim(n→∞) aₙ = L (approaches a finite limit)',
-              'an ordered list a₁, a₂, a₃, ...'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Sequence {aₙ}: an ordered list a₁, a₂, a₃, ... The other options describe different concepts from this topic.'
+            question: 'Does $a_n = \\frac{3n+1}{2n-5}$ converge?',
+            options: ['Yes, to $3/2$', 'Yes, to $0$', 'No', 'Yes, to $\\infty$'],
+            correctAnswer: 0,
+            explanation: '$\\lim_{n \\to \\infty} \\frac{3n+1}{2n-5} = \\frac{3}{2}$. Divide top and bottom by $n$.'
           },
           {
-            question: 'In the context of ∮ Infinite Sequences, which explains Divergent?',
-            options: [
-              'lim(n→∞) aₙ = L (approaches a finite limit)',
-              'A sequence converges if and only if the terms get arbitrarily close to L',
-              'the limit does not exist or is ±∞',
-              'an ordered list a₁, a₂, a₃, ...'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Divergent: the limit does not exist or is ±∞. Be careful to distinguish between the different concepts in this topic.'
+            question: '$\\lim_{n \\to \\infty} \\frac{n!}{n^n}$:',
+            options: ['$0$', '$1$', '$\\infty$', '$1/e$'],
+            correctAnswer: 0,
+            explanation: '$n!/n^n = (1/n)(2/n)(3/n)\\cdots(n/n)$. Each factor $\\leq 1$ and the first factor $\\to 0$. The limit is $0$.'
           }
         ]
       }
     },
     {
-      id: 'infin1-detail',
+      id: 'seq1-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Sequence {aₙ}**: an ordered list a₁, a₂, a₃, ...
-- **Convergent**: lim(n→∞) aₙ = L (approaches a finite limit)
-- **Divergent**: the limit does not exist or is ±∞
-- **A sequence converges if and only if the terms get arbitrarily close to L**
-      `
-    },
-    {
-      id: 'infin1-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Regarding ∮ Infinite Sequences, which correctly describes A sequence converges if and only if the…?',
-            options: [
-              'lim(n→∞) aₙ = L (approaches a finite limit)',
-              'the limit does not exist or is ±∞',
-              'an ordered list a₁, a₂, a₃, ...',
-              'A sequence converges if and only if the terms get arbitrarily close to L'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — A sequence converges if and only if the terms get arbitrarily close to L. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'infin1-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Sequence {aₙ}',
-            options: ['an ordered list a₁, a₂, a₃, ...', 'lim(n→∞) aₙ = L (approaches a finite limit)', 'A sequence converges if and only if the terms get arbitrarily close to L', 'the limit does not exist or is ±∞']
-          },
-          {
-            label: 'Convergent',
-            options: ['lim(n→∞) aₙ = L (approaches a finite limit)', 'A sequence converges if and only if the terms get arbitrarily close to L', 'an ordered list a₁, a₂, a₃, ...', 'the limit does not exist or is ±∞']
-          },
-          {
-            label: 'Divergent',
-            options: ['A sequence converges if and only if the terms get arbitrarily close to L', 'the limit does not exist or is ±∞', 'an ordered list a₁, a₂, a₃, ...', 'lim(n→∞) aₙ = L (approaches a finite limit)']
-          }
-        ],
-        correctAnswers: ['an ordered list a₁, a₂, a₃, ...', 'lim(n→∞) aₙ = L (approaches a finite limit)', 'the limit does not exist or is ±∞'],
-        hint1: 'Think about what each concept specifically describes in ∮ Infinite Sequences.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in ∮ Infinite Sequences describes a specific idea. Sequence {aₙ}: an ordered list a₁, a₂, a₃, ... Convergent: lim(n→∞) aₙ = L (approaches a finite limit). Divergent: the limit does not exist or is ±∞.'
-      }
+      content: `### Key Takeaways — Part 1
+1. A sequence is a function on the natural numbers
+2. "Converges" means the limit exists and is finite`
     }
   ]
-}
+};

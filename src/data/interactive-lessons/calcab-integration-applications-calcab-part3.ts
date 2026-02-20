@@ -1,121 +1,56 @@
-export const calcABIntAppsPart3Data = {
+export const calcabIntAppsPart3Data = {
   topicSlug: 'integration-applications-calcab',
   sections: [
     {
-      id: 'integ3-intro',
+      id: 'ia3-intro',
       type: 'text' as const,
-      content: `
-# Distance from Velocity
+      content: `# Integration Applications
 
-**Part 3 of 7 — Distance from Velocity**
+**Part 3 of 7 — Volumes: Disk and Washer Methods**
 
-### 1. Displacement = ∫ₐᵇ v(t)dt; Total distance = ∫ₐᵇ |v(t)|dt
+### Disk Method (rotation about x-axis)
 
-Displacement = ∫ₐᵇ v(t)dt; Total distance = ∫ₐᵇ |v(t)|dt
+$$V = \pi\int_a^b [f(x)]^2\,dx$$
 
-### 2. Position function
+### Washer Method
 
-s(t) = s(0) + ∫₀ᵗ v(u)du
+$$V = \pi\int_a^b \left([R(x)]^2 - [r(x)]^2\right)\,dx$$
 
-### 3. If velocity is given as data, use trapezoidal approximation
+$R$ = outer radius, $r$ = inner radius.
 
-If velocity is given as data, use trapezoidal approximation
+### Rotation About Other Lines
 
-### 4. Units
-
-velocity in m/s, time in s → displacement in meters
-      `
+If rotating about $y = k$:
+- radius = $|f(x) - k|$`
     },
     {
-      id: 'integ3-quiz1',
+      id: 'ia3-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Disk & Washer** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains Displacement = ∫ₐᵇ v(t)dt; Total…?',
-            options: [
-              's(t) = s(0) + ∫₀ᵗ v(u)du',
-              'velocity in m/s, time in s → displacement in meters',
-              'Displacement = ∫ₐᵇ v(t)dt; Total distance = ∫ₐᵇ |v(t)|dt',
-              'If velocity is given as data, use trapezoidal approximation'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Displacement = ∫ₐᵇ v(t)dt; Total distance = ∫ₐᵇ |v(t)|dt. The other options describe different concepts from this topic.'
+            question: 'Rotate $y = x^2$ about the $x$-axis from $x = 0$ to $x = 2$. Find the volume.',
+            options: ['$\\frac{32\\pi}{5}$', '$\\frac{16\\pi}{5}$', '$8\\pi$', '$4\\pi$'],
+            correctAnswer: 0,
+            explanation: '$V = \\pi\\int_0^2 (x^2)^2\\,dx = \\pi\\int_0^2 x^4\\,dx = \\pi[x^5/5]_0^2 = \\frac{32\\pi}{5}$.'
           },
           {
-            question: 'In the context of Distance from Velocity, which explains If velocity is given as data, use…?',
-            options: [
-              'velocity in m/s, time in s → displacement in meters',
-              's(t) = s(0) + ∫₀ᵗ v(u)du',
-              'If velocity is given as data, use trapezoidal approximation',
-              'Displacement = ∫ₐᵇ v(t)dt; Total distance = ∫ₐᵇ |v(t)|dt'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — If velocity is given as data, use trapezoidal approximation. Be careful to distinguish between the different concepts in this topic.'
+            question: 'Rotate the region between $y = x$ and $y = x^2$ ($0 \\leq x \\leq 1$) about the $x$-axis.',
+            options: ['$\\frac{2\\pi}{15}$', '$\\frac{\\pi}{6}$', '$\\frac{\\pi}{3}$', '$\\frac{\\pi}{15}$'],
+            correctAnswer: 0,
+            explanation: '$V = \\pi\\int_0^1(x^2 - x^4)\\,dx = \\pi[x^3/3 - x^5/5]_0^1 = \\pi(1/3 - 1/5) = \\frac{2\\pi}{15}$.'
           }
         ]
       }
     },
     {
-      id: 'integ3-detail',
+      id: 'ia3-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Displacement = ∫ₐᵇ v(t)dt; Total distance = ∫ₐᵇ |v(t)|dt**
-- **Position function**: s(t) = s(0) + ∫₀ᵗ v(u)du
-- **If velocity is given as data, use trapezoidal approximation**
-- **Units**: velocity in m/s, time in s → displacement in meters
-      `
-    },
-    {
-      id: 'integ3-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Regarding Distance from Velocity, which correctly describes Units?',
-            options: [
-              's(t) = s(0) + ∫₀ᵗ v(u)du',
-              'If velocity is given as data, use trapezoidal approximation',
-              'velocity in m/s, time in s → displacement in meters',
-              'Displacement = ∫ₐᵇ v(t)dt; Total distance = ∫ₐᵇ |v(t)|dt'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Units: velocity in m/s, time in s → displacement in meters. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'integ3-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Position function',
-            options: ['If velocity is given as data, use trapezoidal approximation', 's(t) = s(0) + ∫₀ᵗ v(u)du', 'Displacement = ∫ₐᵇ v(t)dt; Total distance = ∫ₐᵇ |v(t)|dt', 'velocity in m/s, time in s → displacement in meters']
-          },
-          {
-            label: 'Units',
-            options: ['If velocity is given as data, use trapezoidal approximation', 's(t) = s(0) + ∫₀ᵗ v(u)du', 'velocity in m/s, time in s → displacement in meters', 'Displacement = ∫ₐᵇ v(t)dt; Total distance = ∫ₐᵇ |v(t)|dt']
-          }
-        ],
-        correctAnswers: ['s(t) = s(0) + ∫₀ᵗ v(u)du', 'velocity in m/s, time in s → displacement in meters'],
-        hint1: 'Think about what each concept specifically describes in Distance from Velocity.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Distance from Velocity describes a specific idea. Position function: s(t) = s(0) + ∫₀ᵗ v(u)du. Units: velocity in m/s, time in s → displacement in meters.'
-      }
+      content: `### Key Takeaways — Part 3
+1. Disk: $\\pi r^2$ — one function
+2. Washer: $\\pi(R^2 - r^2)$ — two functions
+3. Adjust radii when rotating about lines other than axes`
     }
   ]
-}
+};

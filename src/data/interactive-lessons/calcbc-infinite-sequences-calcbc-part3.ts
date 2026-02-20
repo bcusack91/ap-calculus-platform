@@ -1,125 +1,45 @@
-export const calcBCSequencesPart3Data = {
+export const calcbcSequencesPart3Data = {
   topicSlug: 'infinite-sequences-calcbc',
   sections: [
     {
-      id: 'infin3-intro',
+      id: 'seq3-intro',
       type: 'text' as const,
-      content: `
-# Limits of Sequences
+      content: `# Infinite Sequences
 
-**Part 3 of 7 — Limits of Sequences**
+**Part 3 of 7 — Geometric & Recursive Sequences**
 
-### 1. Direct computation
+### Geometric Sequences
 
-plug in and simplify
+$a_n = a_1 \cdot r^{n-1}$
 
-### 2. L'Hôpital's Rule (applied to a related function)
+Converges to $0$ if $|r| < 1$, diverges if $|r| \geq 1$ (except $r = 1$, const).
 
-if lim f(x) helps find lim aₙ
+### Recursive Sequences
 
-### 3. If lim(n→∞) |aₙ| = 0, then lim(n→∞) aₙ = 0
+Defined by a recurrence: $a_{n+1} = f(a_n)$
 
-If lim(n→∞) |aₙ| = 0, then lim(n→∞) aₙ = 0
-
-### 4. Continuous function theorem
-
-if f is continuous and aₙ → L, then f(aₙ) → f(L)
-      `
+To find the limit $L$: set $L = f(L)$ and solve.`
     },
     {
-      id: 'infin3-quiz1',
+      id: 'seq3-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Geometric/Recursive** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains Direct computation?',
-            options: [
-              'plug in and simplify',
-              'if lim f(x) helps find lim aₙ',
-              'if f is continuous and aₙ → L, then f(aₙ) → f(L)',
-              'If lim(n→∞) |aₙ| = 0, then lim(n→∞) aₙ = 0'
-            ],
+            question: '$a_1 = 2$, $a_{n+1} = \\sqrt{2 + a_n}$. If it converges, what is $L$?',
+            options: ['$2$', '$\\sqrt{2}$', '$1 + \\sqrt{3}$', '$4$'],
             correctAnswer: 0,
-            explanation: 'Correct — Direct computation: plug in and simplify. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Which of the following is true about If lim(n→∞) |aₙ| = 0, then lim(n→∞) aₙ…?',
-            options: [
-              'if lim f(x) helps find lim aₙ',
-              'plug in and simplify',
-              'If lim(n→∞) |aₙ| = 0, then lim(n→∞) aₙ = 0',
-              'if f is continuous and aₙ → L, then f(aₙ) → f(L)'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — If lim(n→∞) |aₙ| = 0, then lim(n→∞) aₙ = 0. Be careful to distinguish between the different concepts in this topic.'
+            explanation: '$L = \\sqrt{2 + L}$. $L^2 = 2 + L$. $L^2 - L - 2 = 0$. $(L-2)(L+1) = 0$. $L = 2$ (positive).'
           }
         ]
       }
     },
     {
-      id: 'infin3-detail',
+      id: 'seq3-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Direct computation**: plug in and simplify
-- **L'Hôpital's Rule (applied to a related function)**: if lim f(x) helps find lim aₙ
-- **If lim(n→∞) |aₙ| = 0, then lim(n→∞) aₙ = 0**
-- **Continuous function theorem**: if f is continuous and aₙ → L, then f(aₙ) → f(L)
-      `
-    },
-    {
-      id: 'infin3-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of these accurately represents Continuous function theorem?',
-            options: [
-              'if f is continuous and aₙ → L, then f(aₙ) → f(L)',
-              'plug in and simplify',
-              'if lim f(x) helps find lim aₙ',
-              'If lim(n→∞) |aₙ| = 0, then lim(n→∞) aₙ = 0'
-            ],
-            correctAnswer: 0,
-            explanation: 'Correct — Continuous function theorem: if f is continuous and aₙ → L, then f(aₙ) → f(L). Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'infin3-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Direct computation',
-            options: ['if f is continuous and aₙ → L, then f(aₙ) → f(L)', 'if lim f(x) helps find lim aₙ', 'If lim(n→∞) |aₙ| = 0, then lim(n→∞) aₙ = 0', 'plug in and simplify']
-          },
-          {
-            label: 'L\'Hôpital\'s Rule (applied to a related function)',
-            options: ['If lim(n→∞) |aₙ| = 0, then lim(n→∞) aₙ = 0', 'if lim f(x) helps find lim aₙ', 'plug in and simplify', 'if f is continuous and aₙ → L, then f(aₙ) → f(L)']
-          },
-          {
-            label: 'Continuous function theorem',
-            options: ['if lim f(x) helps find lim aₙ', 'plug in and simplify', 'If lim(n→∞) |aₙ| = 0, then lim(n→∞) aₙ = 0', 'if f is continuous and aₙ → L, then f(aₙ) → f(L)']
-          }
-        ],
-        correctAnswers: ['plug in and simplify', 'if lim f(x) helps find lim aₙ', 'if f is continuous and aₙ → L, then f(aₙ) → f(L)'],
-        hint1: 'Think about what each concept specifically describes in Limits of Sequences.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Limits of Sequences describes a specific idea. Direct computation: plug in and simplify. L\'Hôpital\'s Rule (applied to a related function): if lim f(x) helps find lim aₙ. Continuous function theorem: if f is continuous and aₙ → L, then f(aₙ) → f(L).'
-      }
+      content: `### Key Takeaways — Part 3
+For recursive sequences: set $L = f(L)$ and solve for $L$.`
     }
   ]
-}
+};

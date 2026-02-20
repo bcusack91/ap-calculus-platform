@@ -1,121 +1,66 @@
-export const calcABUSubPart3Data = {
+export const calcabUSubPart3Data = {
   topicSlug: 'u-substitution-calcab',
   sections: [
     {
-      id: 'u-sub3-intro',
+      id: 'usub3-intro',
       type: 'text' as const,
-      content: `
-# Definite Integrals with u-Sub
+      content: `# u-Substitution
 
-**Part 3 of 7 — Definite Integrals with u-Sub**
+**Part 3 of 7 — u-Substitution with Definite Integrals**
 
-### 1. Option 1
+### Two Approaches
 
-change bounds to u-values: when x = a, u = g(a)
+**Method 1: Change the limits** (recommended)
+When you substitute $u = g(x)$, change the limits: if $x = a$ then $u = g(a)$, if $x = b$ then $u = g(b)$.
 
-### 2. Option 2
+**Method 2: Back-substitute** 
+Find the antiderivative in terms of $x$, then evaluate at the original limits.
 
-integrate in u, back-substitute, then use original x-bounds
+### Worked Example — Method 1
 
-### 3. Changing bounds is often cleaner — no need to back-substitute
+$$\\int_0^2 x(x^2+1)^3\\,dx$$
 
-Changing bounds is often cleaner — no need to back-substitute
+Let $u = x^2 + 1$, $du = 2x\\,dx$, so $x\\,dx = \\frac{du}{2}$.
 
-### 4. Don't mix x-bounds with u-integrand (or vice versa)
+Change limits: $x=0 \\Rightarrow u=1$, $x=2 \\Rightarrow u=5$.
 
-Don't mix x-bounds with u-integrand (or vice versa)
-      `
+$$\\frac{1}{2}\\int_1^5 u^3\\,du = \\frac{1}{2} \\cdot \\frac{u^4}{4}\\bigg|_1^5 = \\frac{1}{8}(625 - 1) = \\frac{624}{8} = 78$$`
     },
     {
-      id: 'u-sub3-quiz1',
+      id: 'usub3-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Definite Integrals with u-Sub** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains Option 1?',
-            options: [
-              'change bounds to u-values: when x = a, u = g(a)',
-              'integrate in u, back-substitute, then use original x-bounds',
-              'Changing bounds is often cleaner — no need to back-substitute',
-              'Don\'t mix x-bounds with u-integrand (or vice versa)'
-            ],
-            correctAnswer: 0,
-            explanation: 'Correct — Option 1: change bounds to u-values: when x = a, u = g(a). The other options describe different concepts from this topic.'
+            question: 'Evaluate $\\int_0^{\\pi/2} \\sin x \\cos x\\,dx$.',
+            options: ['$1$', '$\\frac{1}{2}$', '$0$', '$\\frac{\\pi}{4}$'],
+            correctAnswer: 1,
+            explanation: 'Let $u = \\sin x$, $du = \\cos x\\,dx$. Limits: $x=0 \\Rightarrow u=0$, $x=\\pi/2 \\Rightarrow u=1$. $\\int_0^1 u\\,du = \\frac{u^2}{2}\\Big|_0^1 = \\frac{1}{2}$.'
           },
           {
-            question: 'In the context of Definite Integrals with u-Sub, which explains Changing bounds is often cleaner — no…?',
-            options: [
-              'Changing bounds is often cleaner — no need to back-substitute',
-              'Don\'t mix x-bounds with u-integrand (or vice versa)',
-              'integrate in u, back-substitute, then use original x-bounds',
-              'change bounds to u-values: when x = a, u = g(a)'
-            ],
+            question: 'Evaluate $\\int_0^1 \\frac{2x}{(x^2+1)^2}\\,dx$.',
+            options: ['$\\frac{1}{2}$', '$1$', '$\\frac{1}{4}$', '$\\ln 2$'],
             correctAnswer: 0,
-            explanation: 'Correct — Changing bounds is often cleaner — no need to back-substitute. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'Let $u = x^2+1$, $du = 2x\\,dx$. Limits: $u=1$ to $u=2$. $\\int_1^2 u^{-2}\\,du = [-u^{-1}]_1^2 = -\\frac{1}{2} + 1 = \\frac{1}{2}$.'
+          },
+          {
+            question: 'Evaluate $\\int_1^e \\frac{\\ln x}{x}\\,dx$.',
+            options: ['$1$', '$\\frac{1}{2}$', '$e-1$', '$\\frac{1}{e}$'],
+            correctAnswer: 1,
+            explanation: 'Let $u = \\ln x$, $du = \\frac{1}{x}\\,dx$. Limits: $x=1 \\Rightarrow u=0$, $x=e \\Rightarrow u=1$. $\\int_0^1 u\\,du = \\frac{1}{2}$.'
           }
         ]
       }
     },
     {
-      id: 'u-sub3-detail',
+      id: 'usub3-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
+      content: `### Key Takeaways — Part 3
 
-- **Option 1**: change bounds to u-values: when x = a, u = g(a)
-- **Option 2**: integrate in u, back-substitute, then use original x-bounds
-- **Changing bounds is often cleaner — no need to back-substitute**
-- **Don't mix x-bounds with u-integrand (or vice versa)**
-      `
-    },
-    {
-      id: 'u-sub3-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Regarding Definite Integrals with u-Sub, which correctly describes Don\'t mix x-bounds with u-integrand (or…?',
-            options: [
-              'Changing bounds is often cleaner — no need to back-substitute',
-              'integrate in u, back-substitute, then use original x-bounds',
-              'change bounds to u-values: when x = a, u = g(a)',
-              'Don\'t mix x-bounds with u-integrand (or vice versa)'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Don\'t mix x-bounds with u-integrand (or vice versa). Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'u-sub3-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Option 1',
-            options: ['change bounds to u-values: when x = a, u = g(a)', 'Changing bounds is often cleaner — no need to back-substitute', 'Don\'t mix x-bounds with u-integrand (or vice versa)', 'integrate in u, back-substitute, then use original x-bounds']
-          },
-          {
-            label: 'Option 2',
-            options: ['Don\'t mix x-bounds with u-integrand (or vice versa)', 'change bounds to u-values: when x = a, u = g(a)', 'integrate in u, back-substitute, then use original x-bounds', 'Changing bounds is often cleaner — no need to back-substitute']
-          }
-        ],
-        correctAnswers: ['change bounds to u-values: when x = a, u = g(a)', 'integrate in u, back-substitute, then use original x-bounds'],
-        hint1: 'Think about what each concept specifically describes in Definite Integrals with u-Sub.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Definite Integrals with u-Sub describes a specific idea. Option 1: change bounds to u-values: when x = a, u = g(a). Option 2: integrate in u, back-substitute, then use original x-bounds.'
-      }
+1. For definite integrals, **change the limits** to $u$-values to avoid back-substituting
+2. If $u = g(x)$: new lower = $g(a)$, new upper = $g(b)$
+3. After changing limits, evaluate entirely in $u$ — never mix $u$ and $x$`
     }
   ]
-}
+};

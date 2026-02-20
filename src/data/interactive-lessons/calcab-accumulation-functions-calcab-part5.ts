@@ -1,125 +1,54 @@
-export const calcABAccumulationPart5Data = {
+export const calcabAccumulationPart5Data = {
   topicSlug: 'accumulation-functions-calcab',
   sections: [
     {
-      id: 'accum5-intro',
+      id: 'acc5-intro',
       type: 'text' as const,
-      content: `
-# Average Value of a Function
+      content: `# Accumulation Functions
 
-**Part 5 of 7 — Average Value of a Function**
+**Part 5 of 7 \u2014 Average Value of a Function**
 
-### 1. Average value of f on [a,b]
+### Average Value Formula
 
-f_avg = (1/(b-a)) ∫ₐᵇ f(x)dx
+$$f_{\\text{avg}} = \\frac{1}{b-a}\\int_a^b f(x)\\,dx$$
 
-### 2. Mean Value Theorem for Integrals
+### Mean Value Theorem for Integrals
 
-f(c) = f_avg for some c in (a,b)
+There exists $c \\in [a,b]$ such that $f(c) = f_{\\text{avg}}$.
 
-### 3. Geometric interpretation
+### Worked Example
 
-rectangle with same area as the region under f
+Find the average value of $f(x) = x^2$ on $[0, 3]$.
 
-### 4. Units of average value are the same as the units of f
-
-Units of average value are the same as the units of f
-      `
+$$f_{\\text{avg}} = \\frac{1}{3-0}\\int_0^3 x^2\\,dx = \\frac{1}{3} \\cdot \\frac{27}{3} = 3$$`
     },
     {
-      id: 'accum5-quiz1',
+      id: 'acc5-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Average Value** \ud83c\udfaf',
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Average value of f on [a,b]?',
-            options: [
-              'rectangle with same area as the region under f',
-              'f_avg = (1/(b-a)) ∫ₐᵇ f(x)dx',
-              'f(c) = f_avg for some c in (a,b)',
-              'Units of average value are the same as the units of f'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Average value of f on [a,b]: f_avg = (1/(b-a)) ∫ₐᵇ f(x)dx. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'In the context of Average Value of a Function, which explains Geometric interpretation?',
-            options: [
-              'Units of average value are the same as the units of f',
-              'f(c) = f_avg for some c in (a,b)',
-              'f_avg = (1/(b-a)) ∫ₐᵇ f(x)dx',
-              'rectangle with same area as the region under f'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Geometric interpretation: rectangle with same area as the region under f. Be careful to distinguish between the different concepts in this topic.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'accum5-detail',
-      type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Average value of f on [a,b]**: f_avg = (1/(b-a)) ∫ₐᵇ f(x)dx
-- **Mean Value Theorem for Integrals**: f(c) = f_avg for some c in (a,b)
-- **Geometric interpretation**: rectangle with same area as the region under f
-- **Units of average value are the same as the units of f**
-      `
-    },
-    {
-      id: 'accum5-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Regarding Average Value of a Function, which correctly describes Units of average value are the same as…?',
-            options: [
-              'Units of average value are the same as the units of f',
-              'f_avg = (1/(b-a)) ∫ₐᵇ f(x)dx',
-              'rectangle with same area as the region under f',
-              'f(c) = f_avg for some c in (a,b)'
-            ],
+            question: 'Find the average value of $f(x) = \\sin x$ on $[0, \\pi]$.',
+            options: ['$\\frac{2}{\\pi}$', '$\\frac{1}{\\pi}$', '$1$', '$\\frac{\\pi}{2}$'],
             correctAnswer: 0,
-            explanation: 'Correct — Units of average value are the same as the units of f. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: '$f_{\\text{avg}} = \\frac{1}{\\pi}\\int_0^{\\pi} \\sin x\\,dx = \\frac{1}{\\pi}[-\\cos x]_0^{\\pi} = \\frac{1}{\\pi}(1+1) = \\frac{2}{\\pi}$.'
+          },
+          {
+            question: 'The average value of $f(x) = 3x + 1$ on $[0, 4]$ is:',
+            options: ['$7$', '$6$', '$8$', '$5$'],
+            correctAnswer: 0,
+            explanation: '$f_{\\text{avg}} = \\frac{1}{4}\\int_0^4 (3x+1)\\,dx = \\frac{1}{4}[\\frac{3x^2}{2}+x]_0^4 = \\frac{1}{4}(24+4) = 7$.'
           }
         ]
       }
     },
     {
-      id: 'accum5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Average value of f on [a,b]',
-            options: ['f_avg = (1/(b-a)) ∫ₐᵇ f(x)dx', 'f(c) = f_avg for some c in (a,b)', 'rectangle with same area as the region under f', 'Units of average value are the same as the units of f']
-          },
-          {
-            label: 'Mean Value Theorem for Integrals',
-            options: ['rectangle with same area as the region under f', 'Units of average value are the same as the units of f', 'f_avg = (1/(b-a)) ∫ₐᵇ f(x)dx', 'f(c) = f_avg for some c in (a,b)']
-          },
-          {
-            label: 'Geometric interpretation',
-            options: ['rectangle with same area as the region under f', 'f(c) = f_avg for some c in (a,b)', 'Units of average value are the same as the units of f', 'f_avg = (1/(b-a)) ∫ₐᵇ f(x)dx']
-          }
-        ],
-        correctAnswers: ['f_avg = (1/(b-a)) ∫ₐᵇ f(x)dx', 'f(c) = f_avg for some c in (a,b)', 'rectangle with same area as the region under f'],
-        hint1: 'Think about what each concept specifically describes in Average Value of a Function.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Average Value of a Function describes a specific idea. Average value of f on [a,b]: f_avg = (1/(b-a)) ∫ₐᵇ f(x)dx. Mean Value Theorem for Integrals: f(c) = f_avg for some c in (a,b). Geometric interpretation: rectangle with same area as the region under f.'
-      }
+      id: 'acc5-summary',
+      type: 'text' as const,
+      content: `### Key Takeaways \u2014 Part 5
+1. Average value = $\\frac{1}{b-a}\\int_a^b f(x)\\,dx$
+2. MVT for integrals guarantees $f(c) = f_{\\text{avg}}$ for some $c$`
     }
   ]
-}
+};

@@ -1,125 +1,38 @@
-export const calcABAreaCurvesPart6Data = {
+export const calcabAreaCurvesPart6Data = {
   topicSlug: 'area-between-curves-calcab',
   sections: [
     {
-      id: 'area-6-intro',
+      id: 'area6-intro',
       type: 'text' as const,
-      content: `
-# Problem-Solving Workshop
+      content: `# Area Between Curves
 
-**Part 6 of 7 — Problem-Solving Workshop**
-
-### 1. Find all intersection points by setting f(x) = g(x)
-
-Find all intersection points by setting f(x) = g(x)
-
-### 2. Create separate integrals for each region between consecutive intersection points
-
-Create separate integrals for each region between consecutive intersection points
-
-### 3. Sum the areas of all regions (each area is positive)
-
-Sum the areas of all regions (each area is positive)
-
-### 4. Watch for functions that intersect more than twice
-
-Watch for functions that intersect more than twice
-      `
+**Part 6 of 7 \u2014 AP-Style Workshop**`
     },
     {
-      id: 'area-6-quiz1',
+      id: 'area6-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**AP-Style Area Problems** \ud83c\udfaf',
       exercise: {
         questions: [
           {
-            question: 'What does "Find all intersection points by setting…" refer to in calculus?',
-            options: [
-              'Sum the areas of all regions (each area is positive)',
-              'Create separate integrals for each region between consecutive intersection points',
-              'Watch for functions that intersect more than twice',
-              'Find all intersection points by setting f(x) = g(x)'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Find all intersection points by setting f(x) = g(x). The other options describe different concepts from this topic.'
+            question: 'The region $R$ is bounded by $y = e^x$, $y = 1$, and $x = 2$. Find the area of $R$.',
+            options: ['$e^2 - 3$', '$e^2 - 1$', '$e^2 + 1$', '$e^2 - 2$'],
+            correctAnswer: 0,
+            explanation: '$e^x = 1$ at $x = 0$. For $x \\in [0,2]$, $e^x \\geq 1$. $A = \\int_0^2 (e^x - 1)\\,dx = [e^x - x]_0^2 = (e^2 - 2) - (1 - 0) = e^2 - 3$.'
           },
           {
-            question: 'Which of the following is true about Sum the areas of all regions (each area…?',
-            options: [
-              'Watch for functions that intersect more than twice',
-              'Find all intersection points by setting f(x) = g(x)',
-              'Sum the areas of all regions (each area is positive)',
-              'Create separate integrals for each region between consecutive intersection points'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Sum the areas of all regions (each area is positive). Be careful to distinguish between the different concepts in this topic.'
+            question: 'Find the area between $y = \\sqrt{x}$ and $y = x^2$ for $x \\geq 0$.',
+            options: ['$\\frac{1}{3}$', '$\\frac{1}{6}$', '$\\frac{1}{2}$', '$\\frac{2}{3}$'],
+            correctAnswer: 0,
+            explanation: 'Intersect: $\\sqrt{x} = x^2$ at $x = 0$ and $x = 1$. $\\sqrt{x} \\geq x^2$ on $[0,1]$. $A = \\int_0^1 (x^{1/2} - x^2)\\,dx = [\\frac{2}{3}x^{3/2} - \\frac{x^3}{3}]_0^1 = \\frac{2}{3} - \\frac{1}{3} = \\frac{1}{3}$.'
           }
         ]
       }
     },
     {
-      id: 'area-6-detail',
+      id: 'area6-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Find all intersection points by setting f(x) = g(x)**
-- **Create separate integrals for each region between consecutive intersection points**
-- **Sum the areas of all regions (each area is positive)**
-- **Watch for functions that intersect more than twice**
-      `
-    },
-    {
-      id: 'area-6-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which statement about Watch for functions that intersect more… is correct?',
-            options: [
-              'Sum the areas of all regions (each area is positive)',
-              'Watch for functions that intersect more than twice',
-              'Create separate integrals for each region between consecutive intersection points',
-              'Find all intersection points by setting f(x) = g(x)'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Watch for functions that intersect more than twice. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'area-6-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Find all intersection points by setting…',
-            options: ['Create separate integrals for each region between consecutive intersection points', 'Watch for functions that intersect more than twice', 'Find all intersection points by setting f(x) = g(x)', 'Sum the areas of all regions (each area is positive)']
-          },
-          {
-            label: 'Create separate integrals for each…',
-            options: ['Find all intersection points by setting f(x) = g(x)', 'Watch for functions that intersect more than twice', 'Sum the areas of all regions (each area is positive)', 'Create separate integrals for each region between consecutive intersection points']
-          },
-          {
-            label: 'Sum the areas of all regions (each area…',
-            options: ['Watch for functions that intersect more than twice', 'Find all intersection points by setting f(x) = g(x)', 'Create separate integrals for each region between consecutive intersection points', 'Sum the areas of all regions (each area is positive)']
-          }
-        ],
-        correctAnswers: ['Find all intersection points by setting f(x) = g(x)', 'Create separate integrals for each region between consecutive intersection points', 'Sum the areas of all regions (each area is positive)'],
-        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Find all intersection points by setting f(x) = g(x). Create separate integrals for each region between consecutive intersection points. Sum the areas of all regions (each area is positive).'
-      }
+      content: `### Workshop Complete!`
     }
   ]
-}
+};

@@ -1,121 +1,54 @@
-export const calcABExpModelsPart2Data = {
+export const calcabExpModelsPart2Data = {
   topicSlug: 'exponential-models-calcab',
   sections: [
     {
-      id: 'expon2-intro',
+      id: 'exp2-intro',
       type: 'text' as const,
-      content: `
-# Logarithmic Differentiation
+      content: `# Exponential Models
 
-**Part 2 of 7 — Logarithmic Differentiation**
+**Part 2 of 7 — Newton's Law of Cooling**
 
-### 1. Logarithmic differentiation
+### The Model
 
-take ln of both sides, then differentiate
+$$\frac{dT}{dt} = k(T - T_s)$$
 
-### 2. Useful for products, quotients, and variable exponents like x^x
+where $T_s$ is the surrounding temperature.
 
-Useful for products, quotients, and variable exponents like x^x
+**Solution:** $T(t) = T_s + (T_0 - T_s)e^{kt}$ where $k < 0$.
 
-### 3. Steps
+### Worked Example
 
-y = f(x) → ln y = ln f(x) → (1/y)y' = [ln f(x)]' → y' = f(x)·[ln f(x)]'
+A cup of coffee at $200°F$ is placed in a $70°F$ room. After 10 min it's $150°F$.
 
-### 4. d/dx[x^x] = x^x(ln x + 1) using logarithmic differentiation
+$150 = 70 + 130e^{10k}$
 
-d/dx[x^x] = x^x(ln x + 1) using logarithmic differentiation
-      `
+$80 = 130e^{10k}$
+
+$e^{10k} = \\frac{8}{13}$
+
+$T(t) = 70 + 130\\left(\\frac{8}{13}\\right)^{t/10}$`
     },
     {
-      id: 'expon2-quiz1',
+      id: 'exp2-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Newton\'s Cooling** 🎯',
       exercise: {
         questions: [
           {
-            question: 'What does "Logarithmic differentiation" refer to in calculus?',
-            options: [
-              'Useful for products, quotients, and variable exponents like x^x',
-              'take ln of both sides, then differentiate',
-              'y = f(x) → ln y = ln f(x) → (1/y)y\' = [ln f(x)]\' → y\' = f(x)·[ln f(x)]\'',
-              'd/dx[x^x] = x^x(ln x + 1) using logarithmic differentiation'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Logarithmic differentiation: take ln of both sides, then differentiate. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Which of the following is true about Steps?',
-            options: [
-              'd/dx[x^x] = x^x(ln x + 1) using logarithmic differentiation',
-              'take ln of both sides, then differentiate',
-              'Useful for products, quotients, and variable exponents like x^x',
-              'y = f(x) → ln y = ln f(x) → (1/y)y\' = [ln f(x)]\' → y\' = f(x)·[ln f(x)]\''
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Steps: y = f(x) → ln y = ln f(x) → (1/y)y\' = [ln f(x)]\' → y\' = f(x)·[ln f(x)]\'. Be careful to distinguish between the different concepts in this topic.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'expon2-detail',
-      type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Logarithmic differentiation**: take ln of both sides, then differentiate
-- **Useful for products, quotients, and variable exponents like x^x**
-- **Steps**: y = f(x) → ln y = ln f(x) → (1/y)y' = [ln f(x)]' → y' = f(x)·[ln f(x)]'
-- **d/dx[x^x] = x^x(ln x + 1) using logarithmic differentiation**
-      `
-    },
-    {
-      id: 'expon2-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Regarding Logarithmic Differentiation, which correctly describes d/dx[x^x] = x^x(ln x + 1) using…?',
-            options: [
-              'd/dx[x^x] = x^x(ln x + 1) using logarithmic differentiation',
-              'y = f(x) → ln y = ln f(x) → (1/y)y\' = [ln f(x)]\' → y\' = f(x)·[ln f(x)]\'',
-              'Useful for products, quotients, and variable exponents like x^x',
-              'take ln of both sides, then differentiate'
-            ],
+            question: 'A body at $98°F$ is found in a $65°F$ room. After 1 hour it\'s $90°F$. What was the temperature 2 hours after death?',
+            options: ['$83.1°F$', '$85°F$', '$80°F$', '$77°F$'],
             correctAnswer: 0,
-            explanation: 'Correct — d/dx[x^x] = x^x(ln x + 1) using logarithmic differentiation. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: '$90 = 65 + 33e^{k}$. $e^k = 25/33$. After 2 hrs: $T = 65 + 33(25/33)^2 = 65 + 33 \\cdot 625/1089 \\approx 65 + 18.94 = 83.1°F$.'
           }
         ]
       }
     },
     {
-      id: 'expon2-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Logarithmic differentiation',
-            options: ['d/dx[x^x] = x^x(ln x + 1) using logarithmic differentiation', 'take ln of both sides, then differentiate', 'Useful for products, quotients, and variable exponents like x^x', 'y = f(x) → ln y = ln f(x) → (1/y)y\' = [ln f(x)]\' → y\' = f(x)·[ln f(x)]\'']
-          },
-          {
-            label: 'Steps',
-            options: ['y = f(x) → ln y = ln f(x) → (1/y)y\' = [ln f(x)]\' → y\' = f(x)·[ln f(x)]\'', 'Useful for products, quotients, and variable exponents like x^x', 'd/dx[x^x] = x^x(ln x + 1) using logarithmic differentiation', 'take ln of both sides, then differentiate']
-          }
-        ],
-        correctAnswers: ['take ln of both sides, then differentiate', 'y = f(x) → ln y = ln f(x) → (1/y)y\' = [ln f(x)]\' → y\' = f(x)·[ln f(x)]\''],
-        hint1: 'Think about what each concept specifically describes in Logarithmic Differentiation.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Logarithmic Differentiation describes a specific idea. Logarithmic differentiation: take ln of both sides, then differentiate. Steps: y = f(x) → ln y = ln f(x) → (1/y)y\' = [ln f(x)]\' → y\' = f(x)·[ln f(x)]\'.'
-      }
+      id: 'exp2-summary',
+      type: 'text' as const,
+      content: `### Key Takeaways — Part 2
+1. Newton's Cooling: rate proportional to temperature difference
+2. Temperature approaches surroundings exponentially`
     }
   ]
-}
+};

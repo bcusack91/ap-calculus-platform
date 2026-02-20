@@ -1,121 +1,44 @@
-export const calcABOptimizationPart5Data = {
+export const calcabOptimizationPart5Data = {
   topicSlug: 'optimization-calcab',
   sections: [
     {
-      id: 'optim5-intro',
+      id: 'opt5-intro',
       type: 'text' as const,
-      content: `
-# Business & Economics Applications
+      content: `# Optimization
 
-**Part 5 of 7 — Business & Economics Applications**
+**Part 5 of 7 — Distance & Angle Optimization**
 
-### 1. Revenue R(x) = x · p(x) where p(x) is the price function
+### Minimizing Travel Distance
 
-Revenue R(x) = x · p(x) where p(x) is the price function
+A lifeguard at point $A$ on the beach must reach a swimmer at point $B$ in the water. She runs on sand at 8 m/s and swims at 2 m/s. Where should she enter the water?
 
-### 2. Profit P(x) = R(x) - C(x) where C(x) is cost
+This uses **Snell's Law**: the optimal path has $\\frac{\\sin \\theta_1}{v_1} = \\frac{\\sin \\theta_2}{v_2}$.
 
-Profit P(x) = R(x) - C(x) where C(x) is cost
+### Optimization with Trigonometry
 
-### 3. Maximize profit
-
-set P'(x) = 0 → marginal revenue = marginal cost
-
-### 4. Elasticity of demand
-
-how quantity changes in response to price
-      `
+When angles are involved, express the objective function using trig and differentiate.`
     },
     {
-      id: 'optim5-quiz1',
+      id: 'opt5-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Practice Problems** 🎯',
       exercise: {
         questions: [
           {
-            question: 'What does "Revenue R(x) = x · p(x) where p(x) is…" refer to in calculus?',
-            options: [
-              'Profit P(x) = R(x) - C(x) where C(x) is cost',
-              'Revenue R(x) = x · p(x) where p(x) is the price function',
-              'set P\'(x) = 0 → marginal revenue = marginal cost',
-              'how quantity changes in response to price'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Revenue R(x) = x · p(x) where p(x) is the price function. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Which of the following is true about Maximize profit?',
-            options: [
-              'set P\'(x) = 0 → marginal revenue = marginal cost',
-              'Revenue R(x) = x · p(x) where p(x) is the price function',
-              'Profit P(x) = R(x) - C(x) where C(x) is cost',
-              'how quantity changes in response to price'
-            ],
+            question: 'A wire of length 20 is cut into two pieces. One is bent into a square, the other into a circle. What length should be used for the circle to minimize total area?',
+            options: ['$\\frac{20\\pi}{\\pi + 4}$', '$10$', '$\\frac{20}{\\pi + 4}$', '$0$ (all for the square)'],
             correctAnswer: 0,
-            explanation: 'Correct — Maximize profit: set P\'(x) = 0 → marginal revenue = marginal cost. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'Let $x$ = length for circle. Circle: $r = \\frac{x}{2\\pi}$, $A_c = \\frac{x^2}{4\\pi}$. Square: side $= \\frac{20-x}{4}$, $A_s = \\frac{(20-x)^2}{16}$. $A\' = \\frac{x}{2\\pi} - \\frac{20-x}{8} = 0$. Solving: $x = \\frac{20\\pi}{\\pi + 4}$.'
           }
         ]
       }
     },
     {
-      id: 'optim5-detail',
+      id: 'opt5-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Revenue R(x) = x · p(x) where p(x) is the price function**
-- **Profit P(x) = R(x) - C(x) where C(x) is cost**
-- **Maximize profit**: set P'(x) = 0 → marginal revenue = marginal cost
-- **Elasticity of demand**: how quantity changes in response to price
-      `
-    },
-    {
-      id: 'optim5-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which statement about Elasticity of demand is correct?',
-            options: [
-              'Profit P(x) = R(x) - C(x) where C(x) is cost',
-              'set P\'(x) = 0 → marginal revenue = marginal cost',
-              'Revenue R(x) = x · p(x) where p(x) is the price function',
-              'how quantity changes in response to price'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Elasticity of demand: how quantity changes in response to price. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'optim5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Maximize profit',
-            options: ['Revenue R(x) = x · p(x) where p(x) is the price function', 'Profit P(x) = R(x) - C(x) where C(x) is cost', 'set P\'(x) = 0 → marginal revenue = marginal cost', 'how quantity changes in response to price']
-          },
-          {
-            label: 'Elasticity of demand',
-            options: ['set P\'(x) = 0 → marginal revenue = marginal cost', 'Revenue R(x) = x · p(x) where p(x) is the price function', 'Profit P(x) = R(x) - C(x) where C(x) is cost', 'how quantity changes in response to price']
-          }
-        ],
-        correctAnswers: ['set P\'(x) = 0 → marginal revenue = marginal cost', 'how quantity changes in response to price'],
-        hint1: 'Think about what each concept specifically describes in Business & Economics Applications.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Business & Economics Applications describes a specific idea. Maximize profit: set P\'(x) = 0 → marginal revenue = marginal cost. Elasticity of demand: how quantity changes in response to price.'
-      }
+      content: `### Key Takeaways \\u2014 Part 5
+1. Some optimization problems involve geometry with angles or paths
+2. Set up the objective function carefully, then use standard calculus techniques`
     }
   ]
-}
+};

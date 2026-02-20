@@ -1,121 +1,40 @@
-export const calcBCExamStrategiesPart7Data = {
+export const calcbcExamStrategyPart7Data = {
   topicSlug: 'bc-exam-strategies-calcbc',
   sections: [
     {
-      id: 'bc-ex7-intro',
+      id: 'str7-intro',
       type: 'text' as const,
-      content: `
-# Comprehensive Review
+      content: `# BC Exam Strategies — Review
 
-**Part 7 of 7 — Comprehensive Review**
+**Part 7 of 7 — Final Tips**
 
-### 1. Practice with released AP exams under timed conditions
+### Day-of Checklist
 
-Practice with released AP exams under timed conditions
-
-### 2. Master the calculator
-
-store functions, use numerical integration
-
-### 3. Show all work on free-response — communication matters
-
-Show all work on free-response — communication matters
-
-### 4. Time management
-
-don't spend too long on any one problem
-      `
+1. Bring: pencils, erasers, approved calculator (charged!)
+2. Read each question FULLY before starting
+3. If stuck, SKIP and return (no penalty for MC guessing)
+4. FRQ: write "something" for every part—partial credit is real
+5. Check your work if time permits`
     },
     {
-      id: 'bc-ex7-quiz1',
+      id: 'str7-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Final Tips** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains Practice with released AP exams under…?',
-            options: [
-              'don\'t spend too long on any one problem',
-              'Show all work on free-response — communication matters',
-              'Practice with released AP exams under timed conditions',
-              'store functions, use numerical integration'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Practice with released AP exams under timed conditions. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Select the statement that correctly describes Show all work on free-response —…:',
-            options: [
-              'Practice with released AP exams under timed conditions',
-              'don\'t spend too long on any one problem',
-              'Show all work on free-response — communication matters',
-              'store functions, use numerical integration'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Show all work on free-response — communication matters. Be careful to distinguish between the different concepts in this topic.'
+            question: 'What score typically earns a 5 on the BC exam?',
+            options: ['About 60-70% of total points', 'About 90%', 'About 50%', 'About 80%'],
+            correctAnswer: 0,
+            explanation: 'The cut score for a 5 is typically around 60-70%, varying slightly by year.'
           }
         ]
       }
     },
     {
-      id: 'bc-ex7-detail',
+      id: 'str7-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Practice with released AP exams under timed conditions**
-- **Master the calculator**: store functions, use numerical integration
-- **Show all work on free-response — communication matters**
-- **Time management**: don't spend too long on any one problem
-      `
-    },
-    {
-      id: 'bc-ex7-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of these accurately represents Time management?',
-            options: [
-              'store functions, use numerical integration',
-              'don\'t spend too long on any one problem',
-              'Practice with released AP exams under timed conditions',
-              'Show all work on free-response — communication matters'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Time management: don\'t spend too long on any one problem. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'bc-ex7-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Master the calculator',
-            options: ['Practice with released AP exams under timed conditions', 'don\'t spend too long on any one problem', 'store functions, use numerical integration', 'Show all work on free-response — communication matters']
-          },
-          {
-            label: 'Time management',
-            options: ['Practice with released AP exams under timed conditions', 'don\'t spend too long on any one problem', 'store functions, use numerical integration', 'Show all work on free-response — communication matters']
-          }
-        ],
-        correctAnswers: ['store functions, use numerical integration', 'don\'t spend too long on any one problem'],
-        hint1: 'Think about what each concept specifically describes in Comprehensive Review.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Comprehensive Review describes a specific idea. Master the calculator: store functions, use numerical integration. Time management: don\'t spend too long on any one problem.'
-      }
+      content: `### BC Exam Strategies — Complete! ✅`
     }
   ]
-}
+};

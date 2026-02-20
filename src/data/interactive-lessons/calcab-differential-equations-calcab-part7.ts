@@ -1,125 +1,38 @@
-export const calcABDiffEqPart7Data = {
+export const calcabDiffEqPart7Data = {
   topicSlug: 'differential-equations-calcab',
   sections: [
     {
-      id: 'diffe7-intro',
+      id: 'de7-intro',
       type: 'text' as const,
-      content: `
-# Review & Applications
+      content: `# Differential Equations \u2014 Review
 
-**Part 7 of 7 — Review & Applications**
-
-### 1. Exponential growth/decay
-
-dy/dt = ky → y = y₀·e^(kt)
-
-### 2. k > 0
-
-growth; k < 0: decay
-
-### 3. Half-life
-
-t₁/₂ = ln(2)/|k|
-
-### 4. Newton's Law of Cooling
-
-dT/dt = k(T - Tₛ) where Tₛ is ambient temperature
-      `
+**Part 7 of 7 \u2014 Comprehensive Assessment**`
     },
     {
-      id: 'diffe7-quiz1',
+      id: 'de7-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Final Assessment** \ud83c\udfaf',
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains Exponential growth/decay?',
-            options: [
-              'growth; k < 0: decay',
-              'dy/dt = ky → y = y₀·e^(kt)',
-              'dT/dt = k(T - Tₛ) where Tₛ is ambient temperature',
-              't₁/₂ = ln(2)/|k|'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Exponential growth/decay: dy/dt = ky → y = y₀·e^(kt). The other options describe different concepts from this topic.'
+            question: 'Solve $\\frac{dy}{dx} = 2xy^2$ with $y(0) = 1$.',
+            options: ['$y = \\frac{1}{1-x^2}$', '$y = e^{x^2}$', '$y = \\frac{1}{1+x^2}$', '$y = (1+x^2)^2$'],
+            correctAnswer: 0,
+            explanation: '$\\frac{dy}{y^2} = 2x\\,dx$. $-\\frac{1}{y} = x^2 + C$. $y(0)=1$: $C = -1$. $y = \\frac{1}{1-x^2}$.'
           },
           {
-            question: 'Which of the following is true about Half-life?',
-            options: [
-              'growth; k < 0: decay',
-              'dy/dt = ky → y = y₀·e^(kt)',
-              'dT/dt = k(T - Tₛ) where Tₛ is ambient temperature',
-              't₁/₂ = ln(2)/|k|'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Half-life: t₁/₂ = ln(2)/|k|. Be careful to distinguish between the different concepts in this topic.'
+            question: 'A bacteria population grows at rate $\\frac{dP}{dt} = 0.05P$. Starting at 500, when does it reach 2000?',
+            options: ['$\\frac{\\ln 4}{0.05}$ hours', '$\\frac{\\ln 2}{0.05}$ hours', '$80$ hours', '$20$ hours'],
+            correctAnswer: 0,
+            explanation: '$P = 500e^{0.05t} = 2000$. $e^{0.05t} = 4$. $t = \\frac{\\ln 4}{0.05}$.'
           }
         ]
       }
     },
     {
-      id: 'diffe7-detail',
+      id: 'de7-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Exponential growth/decay**: dy/dt = ky → y = y₀·e^(kt)
-- **k > 0**: growth; k < 0: decay
-- **Half-life**: t₁/₂ = ln(2)/|k|
-- **Newton's Law of Cooling**: dT/dt = k(T - Tₛ) where Tₛ is ambient temperature
-      `
-    },
-    {
-      id: 'diffe7-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which statement about Newton\'s Law of Cooling is correct?',
-            options: [
-              'dy/dt = ky → y = y₀·e^(kt)',
-              'growth; k < 0: decay',
-              'dT/dt = k(T - Tₛ) where Tₛ is ambient temperature',
-              't₁/₂ = ln(2)/|k|'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Newton\'s Law of Cooling: dT/dt = k(T - Tₛ) where Tₛ is ambient temperature. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'diffe7-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Exponential growth/decay',
-            options: ['dy/dt = ky → y = y₀·e^(kt)', 't₁/₂ = ln(2)/|k|', 'growth; k < 0: decay', 'dT/dt = k(T - Tₛ) where Tₛ is ambient temperature']
-          },
-          {
-            label: 'k > 0',
-            options: ['dy/dt = ky → y = y₀·e^(kt)', 'dT/dt = k(T - Tₛ) where Tₛ is ambient temperature', 'growth; k < 0: decay', 't₁/₂ = ln(2)/|k|']
-          },
-          {
-            label: 'Half-life',
-            options: ['dy/dt = ky → y = y₀·e^(kt)', 'dT/dt = k(T - Tₛ) where Tₛ is ambient temperature', 't₁/₂ = ln(2)/|k|', 'growth; k < 0: decay']
-          }
-        ],
-        correctAnswers: ['dy/dt = ky → y = y₀·e^(kt)', 'growth; k < 0: decay', 't₁/₂ = ln(2)/|k|'],
-        hint1: 'Think about what each concept specifically describes in Review & Applications.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Review & Applications describes a specific idea. Exponential growth/decay: dy/dt = ky → y = y₀·e^(kt). k > 0: growth; k < 0: decay. Half-life: t₁/₂ = ln(2)/|k|.'
-      }
+      content: `### Differential Equations \u2014 Complete! \u2705`
     }
   ]
-}
+};

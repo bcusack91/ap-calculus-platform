@@ -1,125 +1,109 @@
-export const calcABDerivAppsPart1Data = {
+export const calcabAppsDerivativesPart1Data = {
   topicSlug: 'applications-of-derivatives-calcab',
   sections: [
     {
-      id: 'appli1-intro',
+      id: 'apps1-intro',
       type: 'text' as const,
-      content: `
-# ∫ Applications Of Derivatives
+      content: `# Applications of Derivatives
 
-**Part 1 of 7 — Related Rates**
+**Part 1 of 7 — Critical Points & Increasing/Decreasing**
 
-### 1. Related rates
+### Critical Points
 
-quantities changing with respect to time, connected by an equation
+A **critical point** of $f$ occurs where:
+- $f'(x) = 0$, or
+- $f'(x)$ is undefined (but $f(x)$ exists)
 
-### 2. Steps
+### First Derivative Test for Increasing/Decreasing
 
-draw a picture, identify variables, write an equation, differentiate with respect to t
+| $f'(x)$ | Behavior of $f$ |
+|---------|----------------|
+| $f'(x) > 0$ | $f$ is **increasing** |
+| $f'(x) < 0$ | $f$ is **decreasing** |
 
-### 3. Use the chain rule
+### Worked Example
 
-d/dt[r²] = 2r · dr/dt
+Find where $f(x) = x^3 - 3x + 1$ is increasing and decreasing.
 
-### 4. Substitute known values AFTER differentiating, not before
+$f'(x) = 3x^2 - 3 = 3(x+1)(x-1)$
 
-Substitute known values AFTER differentiating, not before
-      `
+Critical points: $x = -1$ and $x = 1$.
+
+| Interval | $f'(x)$ | Behavior |
+|----------|---------|----------|
+| $(-\\infty, -1)$ | $+$ | Increasing |
+| $(-1, 1)$ | $-$ | Decreasing |
+| $(1, \\infty)$ | $+$ | Increasing |`
     },
     {
-      id: 'appli1-quiz1',
+      id: 'apps1-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Critical Points** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Related rates?',
-            options: [
-              'draw a picture, identify variables, write an equation, differentiate with respect to t',
-              'quantities changing with respect to time, connected by an equation',
-              'Substitute known values AFTER differentiating, not before',
-              'd/dt[r²] = 2r · dr/dt'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Related rates: quantities changing with respect to time, connected by an equation. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'In the context of Applications Of Derivatives, which explains Use the chain rule?',
-            options: [
-              'Substitute known values AFTER differentiating, not before',
-              'd/dt[r²] = 2r · dr/dt',
-              'draw a picture, identify variables, write an equation, differentiate with respect to t',
-              'quantities changing with respect to time, connected by an equation'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Use the chain rule: d/dt[r²] = 2r · dr/dt. Be careful to distinguish between the different concepts in this topic.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'appli1-detail',
-      type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Related rates**: quantities changing with respect to time, connected by an equation
-- **Steps**: draw a picture, identify variables, write an equation, differentiate with respect to t
-- **Use the chain rule**: d/dt[r²] = 2r · dr/dt
-- **Substitute known values AFTER differentiating, not before**
-      `
-    },
-    {
-      id: 'appli1-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Regarding Applications Of Derivatives, which correctly describes Substitute known values AFTER…?',
-            options: [
-              'draw a picture, identify variables, write an equation, differentiate with respect to t',
-              'quantities changing with respect to time, connected by an equation',
-              'Substitute known values AFTER differentiating, not before',
-              'd/dt[r²] = 2r · dr/dt'
-            ],
+            question: 'Find the critical points of $f(x) = x^4 - 4x^3$.',
+            options: ['$x = 0$ only', '$x = 3$ only', '$x = 0$ and $x = 3$', '$x = 0, 1, 3$'],
             correctAnswer: 2,
-            explanation: 'Correct — Substitute known values AFTER differentiating, not before. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: '$f\'(x) = 4x^3 - 12x^2 = 4x^2(x - 3) = 0$. Solutions: $x = 0$ and $x = 3$.'
+          },
+          {
+            question: 'On what intervals is $g(x) = xe^{-x}$ increasing?',
+            options: ['$(-\\infty, 1)$', '$(1, \\infty)$', '$(-\\infty, 0)$', '$(0, 1)$'],
+            correctAnswer: 0,
+            explanation: '$g\'(x) = e^{-x} - xe^{-x} = e^{-x}(1-x)$. Since $e^{-x} > 0$ always, the sign depends on $(1-x)$. $g\' > 0$ when $x < 1$, so increasing on $(-\\infty, 1)$.'
           }
         ]
       }
     },
     {
-      id: 'appli1-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
+      id: 'apps1-text2',
+      type: 'text' as const,
+      content: `### First Derivative Test for Local Extrema
+
+At a critical point $c$:
+
+| Sign change of $f'$ | Conclusion |
+|---------------------|------------|
+| $+ \\to -$ | **Local maximum** at $x = c$ |
+| $- \\to +$ | **Local minimum** at $x = c$ |
+| No sign change | **Neither** (e.g., inflection point) |
+
+### Example (continued)
+
+For $f(x) = x^3 - 3x + 1$:
+- At $x = -1$: $f'$ changes from $+$ to $-$ → **local max** at $f(-1) = 3$
+- At $x = 1$: $f'$ changes from $-$ to $+$ → **local min** at $f(1) = -1$`
+    },
+    {
+      id: 'apps1-quiz2',
+      type: 'multiple-choice' as const,
+      content: '**Classify Critical Points** 🎯',
       exercise: {
-        dropdowns: [
+        questions: [
           {
-            label: 'Related rates',
-            options: ['d/dt[r²] = 2r · dr/dt', 'draw a picture, identify variables, write an equation, differentiate with respect to t', 'quantities changing with respect to time, connected by an equation', 'Substitute known values AFTER differentiating, not before']
+            question: 'For $f(x) = x^4 - 4x^3$, classify $x = 0$.',
+            options: ['Local maximum', 'Local minimum', 'Neither', 'Cannot determine'],
+            correctAnswer: 2,
+            explanation: '$f\'(x) = 4x^2(x-3)$. For $x < 0$: $f\' < 0$. For $0 < x < 3$: $f\' < 0$. No sign change at $x = 0$, so neither max nor min.'
           },
           {
-            label: 'Steps',
-            options: ['Substitute known values AFTER differentiating, not before', 'quantities changing with respect to time, connected by an equation', 'd/dt[r²] = 2r · dr/dt', 'draw a picture, identify variables, write an equation, differentiate with respect to t']
-          },
-          {
-            label: 'Use the chain rule',
-            options: ['d/dt[r²] = 2r · dr/dt', 'quantities changing with respect to time, connected by an equation', 'draw a picture, identify variables, write an equation, differentiate with respect to t', 'Substitute known values AFTER differentiating, not before']
+            question: 'For $f(x) = x^4 - 4x^3$, classify $x = 3$.',
+            options: ['Local maximum', 'Local minimum', 'Neither', 'Cannot determine'],
+            correctAnswer: 1,
+            explanation: 'For $0 < x < 3$: $f\' < 0$. For $x > 3$: $f\' > 0$. Sign change $- \\to +$ means local minimum at $x = 3$.'
           }
-        ],
-        correctAnswers: ['quantities changing with respect to time, connected by an equation', 'draw a picture, identify variables, write an equation, differentiate with respect to t', 'd/dt[r²] = 2r · dr/dt'],
-        hint1: 'Think about what each concept specifically describes in Applications Of Derivatives.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Applications Of Derivatives describes a specific idea. Related rates: quantities changing with respect to time, connected by an equation. Steps: draw a picture, identify variables, write an equation, differentiate with respect to t. Use the chain rule: d/dt[r²] = 2r · dr/dt.'
+        ]
       }
+    },
+    {
+      id: 'apps1-summary',
+      type: 'text' as const,
+      content: `### Key Takeaways — Part 1
+
+1. Critical points occur where $f' = 0$ or $f'$ is undefined
+2. $f' > 0$ → increasing, $f' < 0$ → decreasing
+3. First Derivative Test: sign change determines max/min/neither`
     }
   ]
-}
+};

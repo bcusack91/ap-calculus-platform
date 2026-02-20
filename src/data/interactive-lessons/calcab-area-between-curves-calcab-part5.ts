@@ -1,125 +1,42 @@
-export const calcABAreaCurvesPart5Data = {
+export const calcabAreaCurvesPart5Data = {
   topicSlug: 'area-between-curves-calcab',
   sections: [
     {
-      id: 'area-5-intro',
+      id: 'area5-intro',
       type: 'text' as const,
-      content: `
-# Multiple Intersection Points
+      content: `# Area Between Curves
 
-**Part 5 of 7 — Multiple Intersection Points**
+**Part 5 of 7 \u2014 Area with Absolute Value**
 
-### 1. Find all intersection points by setting f(x) = g(x)
+### Using Absolute Value
 
-Find all intersection points by setting f(x) = g(x)
+$\\int_a^b |f(x)|\\,dx$ gives the total area between $f(x)$ and the $x$-axis (always positive).
 
-### 2. Create separate integrals for each region between consecutive intersection points
+### Example
 
-Create separate integrals for each region between consecutive intersection points
-
-### 3. Sum the areas of all regions (each area is positive)
-
-Sum the areas of all regions (each area is positive)
-
-### 4. Watch for functions that intersect more than twice
-
-Watch for functions that intersect more than twice
-      `
+$\\int_0^{2\\pi} |\\sin x|\\,dx = \\int_0^{\\pi} \\sin x\\,dx + \\int_{\\pi}^{2\\pi} (-\\sin x)\\,dx = 2 + 2 = 4$`
     },
     {
-      id: 'area-5-quiz1',
+      id: 'area5-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Total vs Signed Area** \ud83c\udfaf',
       exercise: {
         questions: [
           {
-            question: 'What does "Find all intersection points by setting…" refer to in calculus?',
-            options: [
-              'Watch for functions that intersect more than twice',
-              'Find all intersection points by setting f(x) = g(x)',
-              'Sum the areas of all regions (each area is positive)',
-              'Create separate integrals for each region between consecutive intersection points'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Find all intersection points by setting f(x) = g(x). The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Select the statement that correctly describes Sum the areas of all regions (each area…:',
-            options: [
-              'Sum the areas of all regions (each area is positive)',
-              'Find all intersection points by setting f(x) = g(x)',
-              'Create separate integrals for each region between consecutive intersection points',
-              'Watch for functions that intersect more than twice'
-            ],
+            question: 'Find the total area between $y = x^2 - 4$ and the $x$-axis on $[-3, 3]$.',
+            options: ['$\\frac{46}{3}$', '$\\frac{32}{3}$', '$2$', '$\\frac{26}{3}$'],
             correctAnswer: 0,
-            explanation: 'Correct — Sum the areas of all regions (each area is positive). Be careful to distinguish between the different concepts in this topic.'
+            explanation: '$x^2-4 < 0$ on $(-2,2)$ and $> 0$ outside. Total area = $\\int_{-3}^{-2}(x^2-4)\\,dx + \\int_{-2}^{2}(4-x^2)\\,dx + \\int_2^3(x^2-4)\\,dx = \\frac{4}{3} + \\frac{32}{3} + \\frac{4}{3} + \\frac{4}{3} + \\frac{2}{3} = we need $2[\\frac{x^3}{3}-4x]_2^3 + [4x-\\frac{x^3}{3}]_{-2}^2 = 2(9-12-\\frac{8}{3}+8) + 2(8-\\frac{8}{3}) = 2\\cdot\\frac{7}{3} + \\frac{32}{3} = \\frac{14}{3}+\\frac{32}{3} = \\frac{46}{3}$.'
           }
         ]
       }
     },
     {
-      id: 'area-5-detail',
+      id: 'area5-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Find all intersection points by setting f(x) = g(x)**
-- **Create separate integrals for each region between consecutive intersection points**
-- **Sum the areas of all regions (each area is positive)**
-- **Watch for functions that intersect more than twice**
-      `
-    },
-    {
-      id: 'area-5-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of these accurately represents Watch for functions that intersect more…?',
-            options: [
-              'Find all intersection points by setting f(x) = g(x)',
-              'Sum the areas of all regions (each area is positive)',
-              'Watch for functions that intersect more than twice',
-              'Create separate integrals for each region between consecutive intersection points'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Watch for functions that intersect more than twice. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'area-5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Find all intersection points by setting…',
-            options: ['Create separate integrals for each region between consecutive intersection points', 'Find all intersection points by setting f(x) = g(x)', 'Sum the areas of all regions (each area is positive)', 'Watch for functions that intersect more than twice']
-          },
-          {
-            label: 'Create separate integrals for each…',
-            options: ['Find all intersection points by setting f(x) = g(x)', 'Create separate integrals for each region between consecutive intersection points', 'Watch for functions that intersect more than twice', 'Sum the areas of all regions (each area is positive)']
-          },
-          {
-            label: 'Sum the areas of all regions (each area…',
-            options: ['Sum the areas of all regions (each area is positive)', 'Watch for functions that intersect more than twice', 'Create separate integrals for each region between consecutive intersection points', 'Find all intersection points by setting f(x) = g(x)']
-          }
-        ],
-        correctAnswers: ['Find all intersection points by setting f(x) = g(x)', 'Create separate integrals for each region between consecutive intersection points', 'Sum the areas of all regions (each area is positive)'],
-        hint1: 'Think about what each concept specifically describes in Multiple Intersection Points.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Multiple Intersection Points describes a specific idea. Find all intersection points by setting f(x) = g(x). Create separate integrals for each region between consecutive intersection points. Sum the areas of all regions (each area is positive).'
-      }
+      content: `### Key Takeaways \u2014 Part 5
+- Total area = $\\int |f(x)|\\,dx$ (split where $f$ changes sign)
+- Signed area = $\\int f(x)\\,dx$ (can be negative)`
     }
   ]
-}
+};

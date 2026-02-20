@@ -1,125 +1,72 @@
-export const calcABDerivAppsPart2Data = {
+export const calcabAppsDerivativesPart2Data = {
   topicSlug: 'applications-of-derivatives-calcab',
   sections: [
     {
-      id: 'appli2-intro',
+      id: 'apps2-intro',
       type: 'text' as const,
-      content: `
-# Local Extrema
+      content: `# Applications of Derivatives
 
-**Part 2 of 7 — Local Extrema**
+**Part 2 of 7 — Second Derivative & Concavity**
 
-### 1. Local maximum
+### Concavity
 
-f(c) ≥ f(x) for all x near c
+| $f''(x)$ | Concavity |
+|----------|-----------|
+| $f''(x) > 0$ | **Concave up** (opens upward, "cup") |
+| $f''(x) < 0$ | **Concave down** (opens downward, "cap") |
 
-### 2. Local minimum
+### Inflection Points
 
-f(c) ≤ f(x) for all x near c
+An **inflection point** is where concavity **changes**. This occurs where $f'' = 0$ or $f''$ is undefined, AND $f''$ actually changes sign.
 
-### 3. Critical points
+### Second Derivative Test
 
-where f'(c) = 0 or f'(c) is undefined
+At a critical point where $f'(c) = 0$:
+- If $f''(c) > 0$: **local minimum** (concave up)
+- If $f''(c) < 0$: **local maximum** (concave down)
+- If $f''(c) = 0$: **inconclusive** (use First Derivative Test)
 
-### 4. Extrema only occur at critical points (within the domain)
+### Worked Example
 
-Extrema only occur at critical points (within the domain)
-      `
+$f(x) = x^3 - 6x^2 + 9x + 1$
+
+$f'(x) = 3x^2 - 12x + 9 = 3(x-1)(x-3)$. Critical points: $x = 1, 3$.
+
+$f''(x) = 6x - 12$.
+
+- $f''(1) = -6 < 0$ → **local max** at $x = 1$
+- $f''(3) = 6 > 0$ → **local min** at $x = 3$
+- $f''(x) = 0$ at $x = 2$ → inflection point`
     },
     {
-      id: 'appli2-quiz1',
+      id: 'apps2-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Second Derivative Analysis** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Local maximum?',
-            options: [
-              'Extrema only occur at critical points (within the domain)',
-              'f(c) ≥ f(x) for all x near c',
-              'f(c) ≤ f(x) for all x near c',
-              'where f\'(c) = 0 or f\'(c) is undefined'
-            ],
+            question: 'Find the inflection point(s) of $f(x) = x^4 - 6x^2 + 5$.',
+            options: ['$x = 0$', '$x = \\pm 1$', '$x = \\pm\\sqrt{3}$', '$x = \\pm\\frac{1}{\\sqrt{3}}$'],
             correctAnswer: 1,
-            explanation: 'Correct — Local maximum: f(c) ≥ f(x) for all x near c. The other options describe different concepts from this topic.'
+            explanation: '$f\'\'(x) = 12x^2 - 12 = 12(x^2-1) = 12(x-1)(x+1)$. $f\'\' = 0$ at $x = \\pm 1$. Sign changes at both, so inflection at $x = -1$ and $x = 1$.'
           },
           {
-            question: 'In the context of Local Extrema, which explains Critical points?',
-            options: [
-              'f(c) ≥ f(x) for all x near c',
-              'where f\'(c) = 0 or f\'(c) is undefined',
-              'f(c) ≤ f(x) for all x near c',
-              'Extrema only occur at critical points (within the domain)'
-            ],
+            question: 'Use the Second Derivative Test: $f(x) = x^3 - 12x$. Classify $x = 2$.',
+            options: ['Local maximum', 'Local minimum', 'Inflection point', 'Inconclusive'],
             correctAnswer: 1,
-            explanation: 'Correct — Critical points: where f\'(c) = 0 or f\'(c) is undefined. Be careful to distinguish between the different concepts in this topic.'
+            explanation: '$f\'(x) = 3x^2 - 12 = 0$ at $x = \\pm 2$. $f\'\'(x) = 6x$. $f\'\'(2) = 12 > 0$, so local minimum.'
           }
         ]
       }
     },
     {
-      id: 'appli2-detail',
+      id: 'apps2-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
+      content: `### Key Takeaways — Part 2
 
-- **Local maximum**: f(c) ≥ f(x) for all x near c
-- **Local minimum**: f(c) ≤ f(x) for all x near c
-- **Critical points**: where f'(c) = 0 or f'(c) is undefined
-- **Extrema only occur at critical points (within the domain)**
-      `
-    },
-    {
-      id: 'appli2-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which statement about Extrema only occur at critical points… is correct?',
-            options: [
-              'Extrema only occur at critical points (within the domain)',
-              'f(c) ≤ f(x) for all x near c',
-              'f(c) ≥ f(x) for all x near c',
-              'where f\'(c) = 0 or f\'(c) is undefined'
-            ],
-            correctAnswer: 0,
-            explanation: 'Correct — Extrema only occur at critical points (within the domain). Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'appli2-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Local maximum',
-            options: ['Extrema only occur at critical points (within the domain)', 'f(c) ≤ f(x) for all x near c', 'where f\'(c) = 0 or f\'(c) is undefined', 'f(c) ≥ f(x) for all x near c']
-          },
-          {
-            label: 'Local minimum',
-            options: ['f(c) ≤ f(x) for all x near c', 'where f\'(c) = 0 or f\'(c) is undefined', 'f(c) ≥ f(x) for all x near c', 'Extrema only occur at critical points (within the domain)']
-          },
-          {
-            label: 'Critical points',
-            options: ['Extrema only occur at critical points (within the domain)', 'f(c) ≤ f(x) for all x near c', 'where f\'(c) = 0 or f\'(c) is undefined', 'f(c) ≥ f(x) for all x near c']
-          }
-        ],
-        correctAnswers: ['f(c) ≥ f(x) for all x near c', 'f(c) ≤ f(x) for all x near c', 'where f\'(c) = 0 or f\'(c) is undefined'],
-        hint1: 'Think about what each concept specifically describes in Local Extrema.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Local Extrema describes a specific idea. Local maximum: f(c) ≥ f(x) for all x near c. Local minimum: f(c) ≤ f(x) for all x near c. Critical points: where f\'(c) = 0 or f\'(c) is undefined.'
-      }
+1. $f'' > 0$: concave up; $f'' < 0$: concave down
+2. Inflection points: where $f''$ changes sign
+3. Second Derivative Test: faster than First Derivative Test when $f''(c) \\neq 0$`
     }
   ]
-}
+};

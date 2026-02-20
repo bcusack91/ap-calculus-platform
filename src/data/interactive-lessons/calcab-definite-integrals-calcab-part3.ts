@@ -1,125 +1,60 @@
-export const calcABDefiniteIntegralsPart3Data = {
+export const calcabDefiniteIntegralsPart3Data = {
   topicSlug: 'definite-integrals-calcab',
   sections: [
     {
-      id: 'defin3-intro',
+      id: 'int3-intro',
       type: 'text' as const,
-      content: `
-# Properties of Definite Integrals
+      content: `# \u222B Properties of Integrals
 
-**Part 3 of 7 — Properties of Definite Integrals**
+**Part 3 of 7 \u2014 Properties of Integrals**
 
-### 1. ∫ₐᵃ f(x)dx = 0 (zero-width interval)
+### Essential Properties
 
-∫ₐᵃ f(x)dx = 0 (zero-width interval)
-
-### 2. ∫ₐᵇ f(x)dx = -∫ᵇₐ f(x)dx (reversing limits negates the integral)
-
-∫ₐᵇ f(x)dx = -∫ᵇₐ f(x)dx (reversing limits negates the integral)
-
-### 3. ∫ₐᵇ [f(x) + g(x)]dx = ∫ₐᵇ f(x)dx + ∫ₐᵇ g(x)dx
-
-∫ₐᵇ [f(x) + g(x)]dx = ∫ₐᵇ f(x)dx + ∫ₐᵇ g(x)dx
-
-### 4. ∫ₐᵇ cf(x)dx = c∫ₐᵇ f(x)dx (constant multiple)
-
-∫ₐᵇ cf(x)dx = c∫ₐᵇ f(x)dx (constant multiple)
-      `
+| Property | Formula |
+|----------|---------|
+| Constant Multiple | $\\int_a^b cf(x)\\,dx = c\\int_a^b f(x)\\,dx$ |
+| Sum/Difference | $\\int_a^b [f(x) \\pm g(x)]\\,dx = \\int_a^b f(x)\\,dx \\pm \\int_a^b g(x)\\,dx$ |
+| Additivity | $\\int_a^b f(x)\\,dx + \\int_b^c f(x)\\,dx = \\int_a^c f(x)\\,dx$ |
+| Reversal | $\\int_a^b f(x)\\,dx = -\\int_b^a f(x)\\,dx$ |
+| Zero Width | $\\int_a^a f(x)\\,dx = 0$ |
+| Comparison | If $f(x) \\geq g(x)$ on $[a,b]$, then $\\int_a^b f\\,dx \\geq \\int_a^b g\\,dx$ |`
     },
     {
-      id: 'defin3-quiz1',
+      id: 'int3-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Apply Integral Properties** \ud83c\udfaf\n\nGiven: $\\int_0^5 f(x)\\,dx = 10$ and $\\int_0^5 g(x)\\,dx = 3$.',
       exercise: {
         questions: [
           {
-            question: 'What does "∫ₐᵃ f(x)dx = 0 (zero-width interval)" refer to in calculus?',
-            options: [
-              '∫ₐᵇ cf(x)dx = c∫ₐᵇ f(x)dx (constant multiple)',
-              '∫ₐᵇ [f(x) + g(x)]dx = ∫ₐᵇ f(x)dx + ∫ₐᵇ g(x)dx',
-              '∫ₐᵃ f(x)dx = 0 (zero-width interval)',
-              '∫ₐᵇ f(x)dx = -∫ᵇₐ f(x)dx (reversing limits negates the integral)'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — ∫ₐᵃ f(x)dx = 0 (zero-width interval). The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Select the statement that correctly describes ∫ₐᵇ [f(x) + g(x)]dx = ∫ₐᵇ f(x)dx + ∫ₐᵇ…:',
-            options: [
-              '∫ₐᵇ f(x)dx = -∫ᵇₐ f(x)dx (reversing limits negates the integral)',
-              '∫ₐᵇ cf(x)dx = c∫ₐᵇ f(x)dx (constant multiple)',
-              '∫ₐᵇ [f(x) + g(x)]dx = ∫ₐᵇ f(x)dx + ∫ₐᵇ g(x)dx',
-              '∫ₐᵃ f(x)dx = 0 (zero-width interval)'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — ∫ₐᵇ [f(x) + g(x)]dx = ∫ₐᵇ f(x)dx + ∫ₐᵇ g(x)dx. Be careful to distinguish between the different concepts in this topic.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'defin3-detail',
-      type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **∫ₐᵃ f(x)dx = 0 (zero-width interval)**
-- **∫ₐᵇ f(x)dx = -∫ᵇₐ f(x)dx (reversing limits negates the integral)**
-- **∫ₐᵇ [f(x) + g(x)]dx = ∫ₐᵇ f(x)dx + ∫ₐᵇ g(x)dx**
-- **∫ₐᵇ cf(x)dx = c∫ₐᵇ f(x)dx (constant multiple)**
-      `
-    },
-    {
-      id: 'defin3-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of these accurately represents ∫ₐᵇ cf(x)dx = c∫ₐᵇ f(x)dx (constant…?',
-            options: [
-              '∫ₐᵇ cf(x)dx = c∫ₐᵇ f(x)dx (constant multiple)',
-              '∫ₐᵇ [f(x) + g(x)]dx = ∫ₐᵇ f(x)dx + ∫ₐᵇ g(x)dx',
-              '∫ₐᵃ f(x)dx = 0 (zero-width interval)',
-              '∫ₐᵇ f(x)dx = -∫ᵇₐ f(x)dx (reversing limits negates the integral)'
-            ],
+            question: 'Find $\\int_0^5 [2f(x) - 3g(x)]\\,dx$.',
+            options: ['$11$', '$7$', '$20$', '$1$'],
             correctAnswer: 0,
-            explanation: 'Correct — ∫ₐᵇ cf(x)dx = c∫ₐᵇ f(x)dx (constant multiple). Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: '$2\\int_0^5 f\\,dx - 3\\int_0^5 g\\,dx = 2(10) - 3(3) = 20 - 9 = 11$.'
+          },
+          {
+            question: 'If $\\int_0^3 f(x)\\,dx = 7$, find $\\int_3^5 f(x)\\,dx$.',
+            options: ['$3$', '$17$', '$7$', '$-3$'],
+            correctAnswer: 0,
+            explanation: 'By additivity: $\\int_0^3 f + \\int_3^5 f = \\int_0^5 f$. So $7 + \\int_3^5 f = 10$, giving $\\int_3^5 f = 3$.'
+          },
+          {
+            question: 'Find $\\int_5^0 f(x)\\,dx$.',
+            options: ['$10$', '$-10$', '$0$', '$5$'],
+            correctAnswer: 1,
+            explanation: 'Reversing limits changes the sign: $\\int_5^0 f = -\\int_0^5 f = -10$.'
           }
         ]
       }
     },
     {
-      id: 'defin3-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: '∫ₐᵃ f(x)dx = 0 (zero-width interval)',
-            options: ['∫ₐᵃ f(x)dx = 0 (zero-width interval)', '∫ₐᵇ f(x)dx = -∫ᵇₐ f(x)dx (reversing limits negates the integral)', '∫ₐᵇ [f(x) + g(x)]dx = ∫ₐᵇ f(x)dx + ∫ₐᵇ g(x)dx', '∫ₐᵇ cf(x)dx = c∫ₐᵇ f(x)dx (constant multiple)']
-          },
-          {
-            label: '∫ₐᵇ f(x)dx = -∫ᵇₐ f(x)dx (reversing…',
-            options: ['∫ₐᵇ cf(x)dx = c∫ₐᵇ f(x)dx (constant multiple)', '∫ₐᵇ f(x)dx = -∫ᵇₐ f(x)dx (reversing limits negates the integral)', '∫ₐᵃ f(x)dx = 0 (zero-width interval)', '∫ₐᵇ [f(x) + g(x)]dx = ∫ₐᵇ f(x)dx + ∫ₐᵇ g(x)dx']
-          },
-          {
-            label: '∫ₐᵇ [f(x) + g(x)]dx = ∫ₐᵇ f(x)dx + ∫ₐᵇ…',
-            options: ['∫ₐᵃ f(x)dx = 0 (zero-width interval)', '∫ₐᵇ cf(x)dx = c∫ₐᵇ f(x)dx (constant multiple)', '∫ₐᵇ f(x)dx = -∫ᵇₐ f(x)dx (reversing limits negates the integral)', '∫ₐᵇ [f(x) + g(x)]dx = ∫ₐᵇ f(x)dx + ∫ₐᵇ g(x)dx']
-          }
-        ],
-        correctAnswers: ['∫ₐᵃ f(x)dx = 0 (zero-width interval)', '∫ₐᵇ f(x)dx = -∫ᵇₐ f(x)dx (reversing limits negates the integral)', '∫ₐᵇ [f(x) + g(x)]dx = ∫ₐᵇ f(x)dx + ∫ₐᵇ g(x)dx'],
-        hint1: 'Think about what each concept specifically describes in Properties of Definite Integrals.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Properties of Definite Integrals describes a specific idea. ∫ₐᵃ f(x)dx = 0 (zero-width interval). ∫ₐᵇ f(x)dx = -∫ᵇₐ f(x)dx (reversing limits negates the integral). ∫ₐᵇ [f(x) + g(x)]dx = ∫ₐᵇ f(x)dx + ∫ₐᵇ g(x)dx.'
-      }
+      id: 'int3-summary',
+      type: 'text' as const,
+      content: `### Key Takeaways \u2014 Part 3
+
+1. Integrals are **linear**: constants factor out, sums split
+2. **Additivity** lets you break integrals into pieces over subintervals
+3. **Reversing limits** flips the sign
+4. These properties are essential for AP free-response questions with tables and given integral values`
     }
   ]
-}
+};

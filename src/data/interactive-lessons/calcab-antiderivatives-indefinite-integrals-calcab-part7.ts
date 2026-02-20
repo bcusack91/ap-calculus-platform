@@ -1,125 +1,45 @@
-export const calcABAntiderivativesPart7Data = {
+export const calcabAntiderivativesPart7Data = {
   topicSlug: 'antiderivatives-indefinite-integrals-calcab',
   sections: [
     {
-      id: 'antid7-intro',
+      id: 'anti7-intro',
       type: 'text' as const,
-      content: `
-# Review & Applications
+      content: `# Antiderivatives — Review
 
-**Part 7 of 7 — Review & Applications**
-
-### 1. Given f'(x) and an initial condition f(a) = b, find f(x)
-
-Given f'(x) and an initial condition f(a) = b, find f(x)
-
-### 2. Integrate f'(x) to get f(x) + C
-
-Integrate f'(x) to get f(x) + C
-
-### 3. Use the initial condition to solve for C
-
-Use the initial condition to solve for C
-
-### 4. Velocity → position and acceleration → velocity are common applications
-
-Velocity → position and acceleration → velocity are common applications
-      `
+**Part 7 of 7 — Comprehensive Assessment**`
     },
     {
-      id: 'antid7-quiz1',
+      id: 'anti7-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Final Assessment** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains Given f\'(x) and an initial condition…?',
-            options: [
-              'Velocity → position and acceleration → velocity are common applications',
-              'Integrate f\'(x) to get f(x) + C',
-              'Use the initial condition to solve for C',
-              'Given f\'(x) and an initial condition f(a) = b, find f(x)'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Given f\'(x) and an initial condition f(a) = b, find f(x). The other options describe different concepts from this topic.'
+            question: 'Evaluate $\\int \\left(\\frac{2}{\\sqrt{x}} + 4x^3 - \\sin x\\right)\\,dx$.',
+            options: ['$4\\sqrt{x} + x^4 + \\cos x + C$', '$4\\sqrt{x} + x^4 - \\cos x + C$', '$\\frac{1}{\\sqrt{x}} + x^4 + \\cos x + C$', '$4\\sqrt{x} + 4x^4 + \\cos x + C$'],
+            correctAnswer: 0,
+            explanation: '$\\int 2x^{-1/2}\\,dx = 4x^{1/2} = 4\\sqrt{x}$. $\\int 4x^3 = x^4$. $\\int -\\sin x = \\cos x$. Total: $4\\sqrt{x} + x^4 + \\cos x + C$.'
           },
           {
-            question: 'Which of the following is true about Use the initial condition to solve for C?',
-            options: [
-              'Velocity → position and acceleration → velocity are common applications',
-              'Integrate f\'(x) to get f(x) + C',
-              'Use the initial condition to solve for C',
-              'Given f\'(x) and an initial condition f(a) = b, find f(x)'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Use the initial condition to solve for C. Be careful to distinguish between the different concepts in this topic.'
+            question: 'A particle has acceleration $a(t) = 6t$ with $v(0) = -5$ and $s(0) = 2$. Find $s(2)$.',
+            options: ['$0$', '$-2$', '$6$', '$4$'],
+            correctAnswer: 0,
+            explanation: '$v(t) = 3t^2 - 5$. $s(t) = t^3 - 5t + 2$. $s(2) = 8 - 10 + 2 = 0$.'
           }
         ]
       }
     },
     {
-      id: 'antid7-detail',
+      id: 'anti7-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
+      content: `### Antiderivatives — Complete! ✅
 
-- **Given f'(x) and an initial condition f(a) = b, find f(x)**
-- **Integrate f'(x) to get f(x) + C**
-- **Use the initial condition to solve for C**
-- **Velocity → position and acceleration → velocity are common applications**
-      `
-    },
-    {
-      id: 'antid7-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of these accurately represents Velocity → position and acceleration →…?',
-            options: [
-              'Integrate f\'(x) to get f(x) + C',
-              'Given f\'(x) and an initial condition f(a) = b, find f(x)',
-              'Velocity → position and acceleration → velocity are common applications',
-              'Use the initial condition to solve for C'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Velocity → position and acceleration → velocity are common applications. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'antid7-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Given f\'(x) and an initial condition…',
-            options: ['Integrate f\'(x) to get f(x) + C', 'Velocity → position and acceleration → velocity are common applications', 'Use the initial condition to solve for C', 'Given f\'(x) and an initial condition f(a) = b, find f(x)']
-          },
-          {
-            label: 'Integrate f\'(x) to get f(x) + C',
-            options: ['Integrate f\'(x) to get f(x) + C', 'Use the initial condition to solve for C', 'Given f\'(x) and an initial condition f(a) = b, find f(x)', 'Velocity → position and acceleration → velocity are common applications']
-          },
-          {
-            label: 'Use the initial condition to solve for C',
-            options: ['Velocity → position and acceleration → velocity are common applications', 'Integrate f\'(x) to get f(x) + C', 'Given f\'(x) and an initial condition f(a) = b, find f(x)', 'Use the initial condition to solve for C']
-          }
-        ],
-        correctAnswers: ['Given f\'(x) and an initial condition f(a) = b, find f(x)', 'Integrate f\'(x) to get f(x) + C', 'Use the initial condition to solve for C'],
-        hint1: 'Think about what each concept specifically describes in Review & Applications.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Review & Applications describes a specific idea. Given f\'(x) and an initial condition f(a) = b, find f(x). Integrate f\'(x) to get f(x) + C. Use the initial condition to solve for C.'
-      }
+You have mastered:
+- ✅ Power Rule for integration
+- ✅ All basic antiderivative formulas
+- ✅ Initial Value Problems
+- ✅ Rewriting before integrating
+- ✅ Inverse trig antiderivatives`
     }
   ]
-}
+};

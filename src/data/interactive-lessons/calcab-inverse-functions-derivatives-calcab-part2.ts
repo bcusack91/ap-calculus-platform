@@ -1,125 +1,52 @@
-export const calcABInverseDerivPart2Data = {
+export const calcabInverseFunctionsPart2Data = {
   topicSlug: 'inverse-functions-derivatives-calcab',
   sections: [
     {
-      id: 'inver2-intro',
+      id: 'inv2-intro',
       type: 'text' as const,
-      content: `
-# Derivative of Inverse Functions
+      content: `# Inverse Functions & Their Derivatives
 
-**Part 2 of 7 — Derivative of Inverse Functions**
+**Part 2 of 7 — Inverse Trigonometric Derivatives**
 
-### 1. (f⁻¹)'(a) = 1/f'(f⁻¹(a))
+### Essential Formulas
 
-(f⁻¹)'(a) = 1/f'(f⁻¹(a))
+$$\frac{d}{dx}[\arcsin x] = \frac{1}{\sqrt{1-x^2}}$$
 
-### 2. This formula comes from differentiating f(f⁻¹(x)) = x implicitly
+$$\frac{d}{dx}[\arccos x] = -\frac{1}{\sqrt{1-x^2}}$$
 
-This formula comes from differentiating f(f⁻¹(x)) = x implicitly
+$$\frac{d}{dx}[\arctan x] = \frac{1}{1+x^2}$$
 
-### 3. You need both f⁻¹(a) and f' at that point
+### With Chain Rule
 
-You need both f⁻¹(a) and f' at that point
-
-### 4. Example
-
-if f(3)=7 and f'(3)=4, then (f⁻¹)'(7) = 1/4
-      `
+$$\frac{d}{dx}[\arctan(g(x))] = \frac{g'(x)}{1+(g(x))^2}$$`
     },
     {
-      id: 'inver2-quiz1',
+      id: 'inv2-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Inverse Trig Derivatives** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes (f⁻¹)\'(a) = 1/f\'(f⁻¹(a))?',
-            options: [
-              'if f(3)=7 and f\'(3)=4, then (f⁻¹)\'(7) = 1/4',
-              'This formula comes from differentiating f(f⁻¹(x)) = x implicitly',
-              'You need both f⁻¹(a) and f\' at that point',
-              '(f⁻¹)\'(a) = 1/f\'(f⁻¹(a))'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — (f⁻¹)\'(a) = 1/f\'(f⁻¹(a)). The other options describe different concepts from this topic.'
+            question: 'Find $\\frac{d}{dx}[\\arctan(3x)]$.',
+            options: ['$\\frac{3}{1+9x^2}$', '$\\frac{1}{1+9x^2}$', '$\\frac{3}{1+3x^2}$', '$\\frac{1}{\\sqrt{1-9x^2}}$'],
+            correctAnswer: 0,
+            explanation: '$\\frac{d}{dx}[\\arctan(3x)] = \\frac{3}{1+(3x)^2} = \\frac{3}{1+9x^2}$.'
           },
           {
-            question: 'In the context of Derivative of Inverse Functions, which explains You need both f⁻¹(a) and f\' at that…?',
-            options: [
-              '(f⁻¹)\'(a) = 1/f\'(f⁻¹(a))',
-              'if f(3)=7 and f\'(3)=4, then (f⁻¹)\'(7) = 1/4',
-              'This formula comes from differentiating f(f⁻¹(x)) = x implicitly',
-              'You need both f⁻¹(a) and f\' at that point'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — You need both f⁻¹(a) and f\' at that point. Be careful to distinguish between the different concepts in this topic.'
+            question: 'Find $\\frac{d}{dx}[\\arcsin(x^2)]$.',
+            options: ['$\\frac{2x}{\\sqrt{1-x^4}}$', '$\\frac{1}{\\sqrt{1-x^4}}$', '$\\frac{2x}{\\sqrt{1-x^2}}$', '$\\frac{x}{\\sqrt{1-x^4}}$'],
+            correctAnswer: 0,
+            explanation: '$\\frac{d}{dx}[\\arcsin(x^2)] = \\frac{2x}{\\sqrt{1-(x^2)^2}} = \\frac{2x}{\\sqrt{1-x^4}}$.'
           }
         ]
       }
     },
     {
-      id: 'inver2-detail',
+      id: 'inv2-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **(f⁻¹)'(a) = 1/f'(f⁻¹(a))**
-- **This formula comes from differentiating f(f⁻¹(x)) = x implicitly**
-- **You need both f⁻¹(a) and f' at that point**
-- **Example**: if f(3)=7 and f'(3)=4, then (f⁻¹)'(7) = 1/4
-      `
-    },
-    {
-      id: 'inver2-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of these accurately represents Example?',
-            options: [
-              '(f⁻¹)\'(a) = 1/f\'(f⁻¹(a))',
-              'You need both f⁻¹(a) and f\' at that point',
-              'if f(3)=7 and f\'(3)=4, then (f⁻¹)\'(7) = 1/4',
-              'This formula comes from differentiating f(f⁻¹(x)) = x implicitly'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Example: if f(3)=7 and f\'(3)=4, then (f⁻¹)\'(7) = 1/4. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'inver2-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: '(f⁻¹)\'(a) = 1/f\'(f⁻¹(a))',
-            options: ['(f⁻¹)\'(a) = 1/f\'(f⁻¹(a))', 'if f(3)=7 and f\'(3)=4, then (f⁻¹)\'(7) = 1/4', 'This formula comes from differentiating f(f⁻¹(x)) = x implicitly', 'You need both f⁻¹(a) and f\' at that point']
-          },
-          {
-            label: 'This formula comes from differentiating…',
-            options: ['This formula comes from differentiating f(f⁻¹(x)) = x implicitly', '(f⁻¹)\'(a) = 1/f\'(f⁻¹(a))', 'You need both f⁻¹(a) and f\' at that point', 'if f(3)=7 and f\'(3)=4, then (f⁻¹)\'(7) = 1/4']
-          },
-          {
-            label: 'You need both f⁻¹(a) and f\' at that…',
-            options: ['(f⁻¹)\'(a) = 1/f\'(f⁻¹(a))', 'You need both f⁻¹(a) and f\' at that point', 'if f(3)=7 and f\'(3)=4, then (f⁻¹)\'(7) = 1/4', 'This formula comes from differentiating f(f⁻¹(x)) = x implicitly']
-          }
-        ],
-        correctAnswers: ['(f⁻¹)\'(a) = 1/f\'(f⁻¹(a))', 'This formula comes from differentiating f(f⁻¹(x)) = x implicitly', 'You need both f⁻¹(a) and f\' at that point'],
-        hint1: 'Think about what each concept specifically describes in Derivative of Inverse Functions.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Derivative of Inverse Functions describes a specific idea. (f⁻¹)\'(a) = 1/f\'(f⁻¹(a)). This formula comes from differentiating f(f⁻¹(x)) = x implicitly. You need both f⁻¹(a) and f\' at that point.'
-      }
+      content: `### Key Takeaways — Part 2
+1. Memorize the three inverse trig derivatives
+2. Always apply chain rule with composite functions`
     }
   ]
-}
+};

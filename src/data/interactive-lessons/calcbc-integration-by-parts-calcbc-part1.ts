@@ -1,125 +1,64 @@
-export const calcBCIntByPartsPart1Data = {
+export const calcbcIntByPartsPart1Data = {
   topicSlug: 'integration-by-parts-calcbc',
   sections: [
     {
-      id: 'integ1-intro',
+      id: 'ibp1-intro',
       type: 'text' as const,
-      content: `
-# ∮ Integration By Parts
+      content: `# Integration by Parts
 
-**Part 1 of 7 — Integration by Parts Formula**
+**Part 1 of 7 — The Formula**
 
-### 1. Integration by parts
+### Integration by Parts Formula
 
-∫u dv = uv - ∫v du
+$$\int u\,dv = uv - \int v\,du$$
 
-### 2. Derived from the product rule in reverse
+### LIATE Rule for Choosing $u$
 
-Derived from the product rule in reverse
+Choose $u$ in this priority order:
+1. **L**ogarithmic ($\ln x$, $\log x$)
+2. **I**nverse trig ($\arctan x$, $\arcsin x$)
+3. **A**lgebraic ($x^2$, $x$, polynomials)
+4. **T**rigonometric ($\sin x$, $\cos x$)
+5. **E**xponential ($e^x$, $2^x$)
 
-### 3. Choose u (to differentiate) and dv (to integrate)
+### Worked Example
 
-Choose u (to differentiate) and dv (to integrate)
+$\int x\,e^x\,dx$
 
-### 4. Transforms a hard integral into a simpler one
+$u = x$, $dv = e^x\,dx$
 
-Transforms a hard integral into a simpler one
-      `
+$du = dx$, $v = e^x$
+
+$\int x\,e^x\,dx = xe^x - \int e^x\,dx = xe^x - e^x + C = e^x(x-1) + C$`
     },
     {
-      id: 'integ1-quiz1',
+      id: 'ibp1-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Integration by Parts** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Integration by parts?',
-            options: [
-              'Derived from the product rule in reverse',
-              'Choose u (to differentiate) and dv (to integrate)',
-              'Transforms a hard integral into a simpler one',
-              '∫u dv = uv - ∫v du'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Integration by parts: ∫u dv = uv - ∫v du. The other options describe different concepts from this topic.'
+            question: 'Evaluate $\\int x\\cos x\\,dx$.',
+            options: ['$x\\sin x + \\cos x + C$', '$x\\sin x - \\cos x + C$', '$x\\cos x + \\sin x + C$', '$\\frac{x^2}{2}\\sin x + C$'],
+            correctAnswer: 0,
+            explanation: '$u = x$, $dv = \\cos x\\,dx$. $du = dx$, $v = \\sin x$. $x\\sin x - \\int \\sin x\\,dx = x\\sin x + \\cos x + C$.'
           },
           {
-            question: 'In the context of ∮ Integration By Parts, which explains Choose u (to differentiate) and dv (to…?',
-            options: [
-              '∫u dv = uv - ∫v du',
-              'Choose u (to differentiate) and dv (to integrate)',
-              'Transforms a hard integral into a simpler one',
-              'Derived from the product rule in reverse'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Choose u (to differentiate) and dv (to integrate). Be careful to distinguish between the different concepts in this topic.'
+            question: 'To integrate $\\int \\ln x\\,dx$, what should $u$ be?',
+            options: ['$u = \\ln x$', '$u = x$', '$u = 1$', '$u = x\\ln x$'],
+            correctAnswer: 0,
+            explanation: 'LIATE: $\\ln x$ is logarithmic, highest priority for $u$. $dv = dx$, $v = x$.'
           }
         ]
       }
     },
     {
-      id: 'integ1-detail',
+      id: 'ibp1-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Integration by parts**: ∫u dv = uv - ∫v du
-- **Derived from the product rule in reverse**
-- **Choose u (to differentiate) and dv (to integrate)**
-- **Transforms a hard integral into a simpler one**
-      `
-    },
-    {
-      id: 'integ1-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of these accurately represents Transforms a hard integral into a…?',
-            options: [
-              'Choose u (to differentiate) and dv (to integrate)',
-              'Derived from the product rule in reverse',
-              '∫u dv = uv - ∫v du',
-              'Transforms a hard integral into a simpler one'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Transforms a hard integral into a simpler one. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'integ1-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Integration by parts',
-            options: ['Choose u (to differentiate) and dv (to integrate)', 'Derived from the product rule in reverse', 'Transforms a hard integral into a simpler one', '∫u dv = uv - ∫v du']
-          },
-          {
-            label: 'Derived from the product rule in reverse',
-            options: ['Derived from the product rule in reverse', '∫u dv = uv - ∫v du', 'Choose u (to differentiate) and dv (to integrate)', 'Transforms a hard integral into a simpler one']
-          },
-          {
-            label: 'Choose u (to differentiate) and dv (to…',
-            options: ['Choose u (to differentiate) and dv (to integrate)', 'Derived from the product rule in reverse', 'Transforms a hard integral into a simpler one', '∫u dv = uv - ∫v du']
-          }
-        ],
-        correctAnswers: ['∫u dv = uv - ∫v du', 'Derived from the product rule in reverse', 'Choose u (to differentiate) and dv (to integrate)'],
-        hint1: 'Think about what each concept specifically describes in ∮ Integration By Parts.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in ∮ Integration By Parts describes a specific idea. Integration by parts: ∫u dv = uv - ∫v du. Derived from the product rule in reverse. Choose u (to differentiate) and dv (to integrate).'
-      }
+      content: `### Key Takeaways — Part 1
+1. $\\int u\\,dv = uv - \\int v\\,du$
+2. Use LIATE to choose $u$
+3. $\\int \\ln x\\,dx = x\\ln x - x + C$`
     }
   ]
-}
+};

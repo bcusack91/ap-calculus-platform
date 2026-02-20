@@ -1,121 +1,44 @@
-export const calcABOptimizationPart7Data = {
+export const calcabOptimizationPart7Data = {
   topicSlug: 'optimization-calcab',
   sections: [
     {
-      id: 'optim7-intro',
+      id: 'opt7-intro',
       type: 'text' as const,
-      content: `
-# Review & Applications
+      content: `# Optimization — Review
 
-**Part 7 of 7 — Review & Applications**
+**Part 7 of 7 — Comprehensive Assessment**
 
-### 1. Revenue R(x) = x · p(x) where p(x) is the price function
-
-Revenue R(x) = x · p(x) where p(x) is the price function
-
-### 2. Profit P(x) = R(x) - C(x) where C(x) is cost
-
-Profit P(x) = R(x) - C(x) where C(x) is cost
-
-### 3. Maximize profit
-
-set P'(x) = 0 → marginal revenue = marginal cost
-
-### 4. Elasticity of demand
-
-how quantity changes in response to price
-      `
+### Optimization Checklist
+1. \\u2705 Define variables and draw a picture
+2. \\u2705 Write the objective function
+3. \\u2705 Use constraint to reduce to one variable
+4. \\u2705 Find critical points
+5. \\u2705 Verify max/min (Second Derivative Test or domain check)`
     },
     {
-      id: 'optim7-quiz1',
+      id: 'opt7-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Final Assessment** 🎯',
       exercise: {
         questions: [
           {
-            question: 'What does "Revenue R(x) = x · p(x) where p(x) is…" refer to in calculus?',
-            options: [
-              'Revenue R(x) = x · p(x) where p(x) is the price function',
-              'Profit P(x) = R(x) - C(x) where C(x) is cost',
-              'how quantity changes in response to price',
-              'set P\'(x) = 0 → marginal revenue = marginal cost'
-            ],
-            correctAnswer: 0,
-            explanation: 'Correct — Revenue R(x) = x · p(x) where p(x) is the price function. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Which of the following is true about Maximize profit?',
-            options: [
-              'set P\'(x) = 0 → marginal revenue = marginal cost',
-              'how quantity changes in response to price',
-              'Profit P(x) = R(x) - C(x) where C(x) is cost',
-              'Revenue R(x) = x · p(x) where p(x) is the price function'
-            ],
-            correctAnswer: 0,
-            explanation: 'Correct — Maximize profit: set P\'(x) = 0 → marginal revenue = marginal cost. Be careful to distinguish between the different concepts in this topic.'
+            question: 'A rectangular page has margins of 1 inch on all sides. The printable area (inside margins) must be 24 sq in. Find the page width that minimizes total paper area.',
+            options: ['$\\sqrt{24} + 2$ inches', '$6$ inches', '$4 + 2 = 6$ inches', '$2\\sqrt{6} + 2$ inches'],
+            correctAnswer: 3,
+            explanation: 'Print area: $(w-2)(h-2) = 24$, so $h = \\frac{24}{w-2} + 2$. Total area: $A = wh = w(\\frac{24}{w-2}+2)$. Using calculus, the minimum occurs at $w = 2 + 2\\sqrt{6}$.'
           }
         ]
       }
     },
     {
-      id: 'optim7-detail',
+      id: 'opt7-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
+      content: `### Optimization — Complete! \\u2705
 
-- **Revenue R(x) = x · p(x) where p(x) is the price function**
-- **Profit P(x) = R(x) - C(x) where C(x) is cost**
-- **Maximize profit**: set P'(x) = 0 → marginal revenue = marginal cost
-- **Elasticity of demand**: how quantity changes in response to price
-      `
-    },
-    {
-      id: 'optim7-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of these accurately represents Elasticity of demand?',
-            options: [
-              'how quantity changes in response to price',
-              'Revenue R(x) = x · p(x) where p(x) is the price function',
-              'Profit P(x) = R(x) - C(x) where C(x) is cost',
-              'set P\'(x) = 0 → marginal revenue = marginal cost'
-            ],
-            correctAnswer: 0,
-            explanation: 'Correct — Elasticity of demand: how quantity changes in response to price. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'optim7-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Maximize profit',
-            options: ['set P\'(x) = 0 → marginal revenue = marginal cost', 'Revenue R(x) = x · p(x) where p(x) is the price function', 'Profit P(x) = R(x) - C(x) where C(x) is cost', 'how quantity changes in response to price']
-          },
-          {
-            label: 'Elasticity of demand',
-            options: ['Profit P(x) = R(x) - C(x) where C(x) is cost', 'how quantity changes in response to price', 'Revenue R(x) = x · p(x) where p(x) is the price function', 'set P\'(x) = 0 → marginal revenue = marginal cost']
-          }
-        ],
-        correctAnswers: ['set P\'(x) = 0 → marginal revenue = marginal cost', 'how quantity changes in response to price'],
-        hint1: 'Think about what each concept specifically describes in Review & Applications.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Review & Applications describes a specific idea. Maximize profit: set P\'(x) = 0 → marginal revenue = marginal cost. Elasticity of demand: how quantity changes in response to price.'
-      }
+You have mastered:
+- \\u2705 Setting up objective functions and constraints
+- \\u2705 Geometric, business, and distance optimization
+- \\u2705 Verifying solutions using calculus tests`
     }
   ]
-}
+};

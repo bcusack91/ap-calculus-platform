@@ -1,125 +1,64 @@
-export const calcABAreaCurvesPart1Data = {
+export const calcabAreaCurvesPart1Data = {
   topicSlug: 'area-between-curves-calcab',
   sections: [
     {
-      id: 'area-1-intro',
+      id: 'area1-intro',
       type: 'text' as const,
-      content: `
-# ∫ Area Between Curves
+      content: `# Area Between Curves
 
-**Part 1 of 7 — Area Under a Curve**
+**Part 1 of 7 — Area Between Two Curves**
 
-### 1. Area under f(x) from a to b
+### The Formula
 
-A = ∫ₐᵇ f(x)dx (when f(x) ≥ 0)
+For two functions where $f(x) \\geq g(x)$ on $[a, b]$:
 
-### 2. For f(x) < 0, the integral gives negative area; use |f(x)| for total area
+$$A = \\int_a^b [f(x) - g(x)]\\,dx$$
 
-For f(x) < 0, the integral gives negative area; use |f(x)| for total area
+**Top function minus bottom function.**
 
-### 3. Total area = ∫ₐᵇ |f(x)|dx = sum of areas of positive and negative regions
+### Worked Example
 
-Total area = ∫ₐᵇ |f(x)|dx = sum of areas of positive and negative regions
+Find the area between $y = x^2$ and $y = x + 2$.
 
-### 4. Split the integral at zeros of f when the sign changes
+**Step 1:** Find intersection points.
+$x^2 = x + 2$ → $x^2 - x - 2 = 0$ → $(x-2)(x+1) = 0$ → $x = -1, 2$
 
-Split the integral at zeros of f when the sign changes
-      `
+**Step 2:** Determine which is on top. At $x = 0$: $y = 0$ vs $y = 2$. So $x + 2$ is on top.
+
+**Step 3:** Integrate.
+$$A = \\int_{-1}^{2} [(x+2) - x^2]\\,dx = \\left[\\frac{x^2}{2} + 2x - \\frac{x^3}{3}\\right]_{-1}^{2}$$
+
+$$= \\left(2 + 4 - \\frac{8}{3}\\right) - \\left(\\frac{1}{2} - 2 + \\frac{1}{3}\\right) = \\frac{10}{3} - \\left(-\\frac{7}{6}\\right) = \\frac{27}{6} = \\frac{9}{2}$$`
     },
     {
-      id: 'area-1-quiz1',
+      id: 'area1-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Area Between Curves** 🎯',
       exercise: {
         questions: [
           {
-            question: 'What does "Area under f(x) from a to b" refer to in calculus?',
-            options: [
-              'Total area = ∫ₐᵇ |f(x)|dx = sum of areas of positive and negative regions',
-              'For f(x) < 0, the integral gives negative area; use |f(x)| for total area',
-              'Split the integral at zeros of f when the sign changes',
-              'A = ∫ₐᵇ f(x)dx (when f(x) ≥ 0)'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Area under f(x) from a to b: A = ∫ₐᵇ f(x)dx (when f(x) ≥ 0). The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Select the statement that correctly describes Total area = ∫ₐᵇ |f(x)|dx = sum of…:',
-            options: [
-              'Total area = ∫ₐᵇ |f(x)|dx = sum of areas of positive and negative regions',
-              'A = ∫ₐᵇ f(x)dx (when f(x) ≥ 0)',
-              'Split the integral at zeros of f when the sign changes',
-              'For f(x) < 0, the integral gives negative area; use |f(x)| for total area'
-            ],
+            question: 'Find the area between $y = x^2$ and $y = 4$.',
+            options: ['$\\frac{32}{3}$', '$\\frac{16}{3}$', '$8$', '$\\frac{64}{3}$'],
             correctAnswer: 0,
-            explanation: 'Correct — Total area = ∫ₐᵇ |f(x)|dx = sum of areas of positive and negative regions. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'Intersect: $x^2 = 4$ at $x = \\pm 2$. $A = \\int_{-2}^{2} (4 - x^2)\\,dx = 2\\int_0^2 (4-x^2)\\,dx = 2[4x - \\frac{x^3}{3}]_0^2 = 2(8 - \\frac{8}{3}) = 2 \\cdot \\frac{16}{3} = \\frac{32}{3}$.'
+          },
+          {
+            question: 'Find the area between $y = \\sin x$ and $y = 0$ on $[0, \\pi]$.',
+            options: ['$1$', '$2$', '$\\pi$', '$0$'],
+            correctAnswer: 1,
+            explanation: '$\\sin x \\geq 0$ on $[0, \\pi]$. $A = \\int_0^{\\pi} \\sin x\\,dx = [-\\cos x]_0^{\\pi} = 1 + 1 = 2$.'
           }
         ]
       }
     },
     {
-      id: 'area-1-detail',
+      id: 'area1-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
+      content: `### Key Takeaways — Part 1
 
-- **Area under f(x) from a to b**: A = ∫ₐᵇ f(x)dx (when f(x) ≥ 0)
-- **For f(x) < 0, the integral gives negative area; use |f(x)| for total area**
-- **Total area = ∫ₐᵇ |f(x)|dx = sum of areas of positive and negative regions**
-- **Split the integral at zeros of f when the sign changes**
-      `
-    },
-    {
-      id: 'area-1-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Regarding Area Between Curves, which correctly describes Split the integral at zeros of f when…?',
-            options: [
-              'Total area = ∫ₐᵇ |f(x)|dx = sum of areas of positive and negative regions',
-              'A = ∫ₐᵇ f(x)dx (when f(x) ≥ 0)',
-              'For f(x) < 0, the integral gives negative area; use |f(x)| for total area',
-              'Split the integral at zeros of f when the sign changes'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Split the integral at zeros of f when the sign changes. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'area-1-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Area under f(x) from a to b',
-            options: ['Split the integral at zeros of f when the sign changes', 'A = ∫ₐᵇ f(x)dx (when f(x) ≥ 0)', 'For f(x) < 0, the integral gives negative area; use |f(x)| for total area', 'Total area = ∫ₐᵇ |f(x)|dx = sum of areas of positive and negative regions']
-          },
-          {
-            label: 'For f(x) < 0, the integral gives…',
-            options: ['For f(x) < 0, the integral gives negative area; use |f(x)| for total area', 'Total area = ∫ₐᵇ |f(x)|dx = sum of areas of positive and negative regions', 'A = ∫ₐᵇ f(x)dx (when f(x) ≥ 0)', 'Split the integral at zeros of f when the sign changes']
-          },
-          {
-            label: 'Total area = ∫ₐᵇ |f(x)|dx = sum of…',
-            options: ['Total area = ∫ₐᵇ |f(x)|dx = sum of areas of positive and negative regions', 'Split the integral at zeros of f when the sign changes', 'A = ∫ₐᵇ f(x)dx (when f(x) ≥ 0)', 'For f(x) < 0, the integral gives negative area; use |f(x)| for total area']
-          }
-        ],
-        correctAnswers: ['A = ∫ₐᵇ f(x)dx (when f(x) ≥ 0)', 'For f(x) < 0, the integral gives negative area; use |f(x)| for total area', 'Total area = ∫ₐᵇ |f(x)|dx = sum of areas of positive and negative regions'],
-        hint1: 'Think about what each concept specifically describes in Area Between Curves.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Area Between Curves describes a specific idea. Area under f(x) from a to b: A = ∫ₐᵇ f(x)dx (when f(x) ≥ 0). For f(x) < 0, the integral gives negative area; use |f(x)| for total area. Total area = ∫ₐᵇ |f(x)|dx = sum of areas of positive and negative regions.'
-      }
+1. Area = $\\int$ (top curve $-$ bottom curve)
+2. Always find intersection points first
+3. Check which function is on top by testing a point in the interval`
     }
   ]
-}
+};

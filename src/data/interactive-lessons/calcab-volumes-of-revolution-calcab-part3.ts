@@ -1,121 +1,54 @@
-export const calcABVolumesPart3Data = {
+export const calcabVolumesPart3Data = {
   topicSlug: 'volumes-of-revolution-calcab',
   sections: [
     {
-      id: 'volum3-intro',
+      id: 'vol3-intro',
       type: 'text' as const,
-      content: `
-# Revolving Around Other Axes
+      content: `# Volumes of Revolution
 
-**Part 3 of 7 — Revolving Around Other Axes**
+**Part 3 of 7 — Rotation About Other Axes**
 
-### 1. Revolving about y = k
+### Rotating About $y = k$ or $x = k$
 
-adjust radii by subtracting k
+When rotating about a line other than the $x$-axis, adjust the radii:
 
-### 2. Revolving about x = k
+**Rotation about $y = k$ (horizontal line):**
+- $R(x) = |f(x) - k|$ (distance from outer curve to axis)
+- $r(x) = |g(x) - k|$ (distance from inner curve to axis)
 
-integrate with respect to y, adjust radii
+### Worked Example
 
-### 3. Outer radius = |farther boundary - axis|
+Rotate the region between $y = x^2$ and $y = 1$ about $y = 2$.
 
-Outer radius = |farther boundary - axis|
+On $[-1, 1]$: Outer radius: $R = 2 - x^2$. Inner radius: $r = 2 - 1 = 1$.
 
-### 4. Inner radius = |closer boundary - axis|
-
-Inner radius = |closer boundary - axis|
-      `
+$$V = \\pi\\int_{-1}^{1} [(2-x^2)^2 - 1^2]\\,dx = 2\\pi\\int_0^1 (4-4x^2+x^4 - 1)\\,dx$$
+$$= 2\\pi\\int_0^1 (3-4x^2+x^4)\\,dx = 2\\pi\\left[3x - \\frac{4x^3}{3} + \\frac{x^5}{5}\\right]_0^1 = 2\\pi\\left(3 - \\frac{4}{3} + \\frac{1}{5}\\right) = \\frac{56\\pi}{15}$$`
     },
     {
-      id: 'volum3-quiz1',
+      id: 'vol3-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Rotation About Other Lines** 🎯',
       exercise: {
         questions: [
           {
-            question: 'What does "Revolving about y = k" refer to in calculus?',
-            options: [
-              'adjust radii by subtracting k',
-              'Inner radius = |closer boundary - axis|',
-              'integrate with respect to y, adjust radii',
-              'Outer radius = |farther boundary - axis|'
-            ],
+            question: 'Region between $y = x$ and $y = x^2$ on $[0,1]$ is rotated about $y = -1$. What are the radii?',
+            options: ['$R = x + 1$, $r = x^2 + 1$', '$R = x - 1$, $r = x^2 - 1$', '$R = 1 - x$, $r = 1 - x^2$', '$R = x$, $r = x^2$'],
             correctAnswer: 0,
-            explanation: 'Correct — Revolving about y = k: adjust radii by subtracting k. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'In the context of Revolving Around Other Axes, which explains Outer radius = |farther boundary - axis|?',
-            options: [
-              'Outer radius = |farther boundary - axis|',
-              'adjust radii by subtracting k',
-              'Inner radius = |closer boundary - axis|',
-              'integrate with respect to y, adjust radii'
-            ],
-            correctAnswer: 0,
-            explanation: 'Correct — Outer radius = |farther boundary - axis|. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'Distance from $y = x$ to $y = -1$ is $x - (-1) = x + 1$ (outer). Distance from $y = x^2$ to $y = -1$ is $x^2 + 1$ (inner).'
           }
         ]
       }
     },
     {
-      id: 'volum3-detail',
+      id: 'vol3-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
+      content: `### Key Takeaways — Part 3
 
-- **Revolving about y = k**: adjust radii by subtracting k
-- **Revolving about x = k**: integrate with respect to y, adjust radii
-- **Outer radius = |farther boundary - axis|**
-- **Inner radius = |closer boundary - axis|**
-      `
-    },
-    {
-      id: 'volum3-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Regarding Revolving Around Other Axes, which correctly describes Inner radius = |closer boundary - axis|?',
-            options: [
-              'adjust radii by subtracting k',
-              'integrate with respect to y, adjust radii',
-              'Inner radius = |closer boundary - axis|',
-              'Outer radius = |farther boundary - axis|'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Inner radius = |closer boundary - axis|. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'volum3-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Revolving about y = k',
-            options: ['Outer radius = |farther boundary - axis|', 'adjust radii by subtracting k', 'Inner radius = |closer boundary - axis|', 'integrate with respect to y, adjust radii']
-          },
-          {
-            label: 'Revolving about x = k',
-            options: ['integrate with respect to y, adjust radii', 'Inner radius = |closer boundary - axis|', 'adjust radii by subtracting k', 'Outer radius = |farther boundary - axis|']
-          }
-        ],
-        correctAnswers: ['adjust radii by subtracting k', 'integrate with respect to y, adjust radii'],
-        hint1: 'Think about what each concept specifically describes in Revolving Around Other Axes.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Revolving Around Other Axes describes a specific idea. Revolving about y = k: adjust radii by subtracting k. Revolving about x = k: integrate with respect to y, adjust radii.'
-      }
+1. Radius = distance from curve to axis of rotation
+2. When axis is below: $R = f(x) - k$
+3. When axis is above: $R = k - f(x)$
+4. Always think: what's farther (outer) vs closer (inner) to the axis`
     }
   ]
-}
+};

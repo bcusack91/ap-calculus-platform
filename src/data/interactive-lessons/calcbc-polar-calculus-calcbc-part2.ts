@@ -1,121 +1,50 @@
-export const calcBCPolarPart2Data = {
+export const calcbcPolarPart2Data = {
   topicSlug: 'polar-calculus-calcbc',
   sections: [
     {
       id: 'polar2-intro',
       type: 'text' as const,
-      content: `
-# Derivatives in Polar
+      content: `# Polar Calculus
 
-**Part 2 of 7 — Derivatives in Polar**
+**Part 2 of 7 — Area in Polar Coordinates**
 
-### 1. For r = f(θ)
+### Area Formula
 
-dy/dx = (dy/dθ)/(dx/dθ)
+$$A = \frac{1}{2}\int_\alpha^\beta r^2\,d\theta$$
 
-### 2. dy/dθ = f'(θ)sin θ + f(θ)cos θ
+### Worked Example: Cardioid
 
-dy/dθ = f'(θ)sin θ + f(θ)cos θ
+$r = 1 + \cos\theta$, find total area.
 
-### 3. dx/dθ = f'(θ)cos θ - f(θ)sin θ
+$$A = \frac{1}{2}\int_0^{2\pi}(1 + \cos\theta)^2\,d\theta$$
 
-dx/dθ = f'(θ)cos θ - f(θ)sin θ
+Expand: $(1 + \cos\theta)^2 = 1 + 2\cos\theta + \cos^2\theta = 1 + 2\cos\theta + \frac{1+\cos 2\theta}{2}$
 
-### 4. Horizontal tangent
+$= \frac{3}{2} + 2\cos\theta + \frac{\cos 2\theta}{2}$
 
-dy/dθ = 0; Vertical tangent: dx/dθ = 0
-      `
+$$A = \frac{1}{2}\int_0^{2\pi}\left(\frac{3}{2} + 2\cos\theta + \frac{\cos 2\theta}{2}\right)d\theta = \frac{1}{2}\cdot 3\pi = \frac{3\pi}{2}$$`
     },
     {
       id: 'polar2-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Polar Area** 🎯',
       exercise: {
         questions: [
           {
-            question: 'What does "For r = f(θ)" refer to in calculus?',
-            options: [
-              'dy/dθ = f\'(θ)sin θ + f(θ)cos θ',
-              'dy/dx = (dy/dθ)/(dx/dθ)',
-              'dy/dθ = 0; Vertical tangent: dx/dθ = 0',
-              'dx/dθ = f\'(θ)cos θ - f(θ)sin θ'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — For r = f(θ): dy/dx = (dy/dθ)/(dx/dθ). The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Which of the following is true about dx/dθ = f\'(θ)cos θ - f(θ)sin θ?',
-            options: [
-              'dy/dθ = f\'(θ)sin θ + f(θ)cos θ',
-              'dy/dθ = 0; Vertical tangent: dx/dθ = 0',
-              'dy/dx = (dy/dθ)/(dx/dθ)',
-              'dx/dθ = f\'(θ)cos θ - f(θ)sin θ'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — dx/dθ = f\'(θ)cos θ - f(θ)sin θ. Be careful to distinguish between the different concepts in this topic.'
+            question: 'Find the area enclosed by $r = 3\\cos\\theta$.',
+            options: ['$\\frac{9\\pi}{4}$', '$9\\pi$', '$\\frac{9\\pi}{2}$', '$3\\pi$'],
+            correctAnswer: 0,
+            explanation: '$A = \\frac{1}{2}\\int_0^{\\pi}(3\\cos\\theta)^2\\,d\\theta = \\frac{9}{2}\\int_0^{\\pi}\\cos^2\\theta\\,d\\theta = \\frac{9}{2} \\cdot \\frac{\\pi}{2} = \\frac{9\\pi}{4}$.'
           }
         ]
       }
     },
     {
-      id: 'polar2-detail',
+      id: 'polar2-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **For r = f(θ)**: dy/dx = (dy/dθ)/(dx/dθ)
-- **dy/dθ = f'(θ)sin θ + f(θ)cos θ**
-- **dx/dθ = f'(θ)cos θ - f(θ)sin θ**
-- **Horizontal tangent**: dy/dθ = 0; Vertical tangent: dx/dθ = 0
-      `
-    },
-    {
-      id: 'polar2-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Regarding Derivatives in Polar, which correctly describes Horizontal tangent?',
-            options: [
-              'dy/dx = (dy/dθ)/(dx/dθ)',
-              'dy/dθ = 0; Vertical tangent: dx/dθ = 0',
-              'dy/dθ = f\'(θ)sin θ + f(θ)cos θ',
-              'dx/dθ = f\'(θ)cos θ - f(θ)sin θ'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Horizontal tangent: dy/dθ = 0; Vertical tangent: dx/dθ = 0. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'polar2-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'For r = f(θ)',
-            options: ['dy/dθ = f\'(θ)sin θ + f(θ)cos θ', 'dy/dθ = 0; Vertical tangent: dx/dθ = 0', 'dy/dx = (dy/dθ)/(dx/dθ)', 'dx/dθ = f\'(θ)cos θ - f(θ)sin θ']
-          },
-          {
-            label: 'Horizontal tangent',
-            options: ['dy/dθ = 0; Vertical tangent: dx/dθ = 0', 'dy/dθ = f\'(θ)sin θ + f(θ)cos θ', 'dx/dθ = f\'(θ)cos θ - f(θ)sin θ', 'dy/dx = (dy/dθ)/(dx/dθ)']
-          }
-        ],
-        correctAnswers: ['dy/dx = (dy/dθ)/(dx/dθ)', 'dy/dθ = 0; Vertical tangent: dx/dθ = 0'],
-        hint1: 'Think about what each concept specifically describes in Derivatives in Polar.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Derivatives in Polar describes a specific idea. For r = f(θ): dy/dx = (dy/dθ)/(dx/dθ). Horizontal tangent: dy/dθ = 0; Vertical tangent: dx/dθ = 0.'
-      }
+      content: `### Key Takeaways — Part 2
+1. Area = $\\frac{1}{2}\\int r^2\\,d\\theta$
+2. Choose bounds carefully — trace the curve once!`
     }
   ]
-}
+};

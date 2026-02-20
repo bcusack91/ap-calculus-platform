@@ -1,125 +1,32 @@
-export const calcBCPowerSeriesPart7Data = {
+export const calcbcPowerSeriesPart7Data = {
   topicSlug: 'power-series-calcbc',
   sections: [
     {
-      id: 'power7-intro',
+      id: 'pow7-intro',
       type: 'text' as const,
-      content: `
-# Review & Applications
+      content: `# Power Series — Review
 
-**Part 7 of 7 — Review & Applications**
-
-### 1. d/dx[Σcₙxⁿ] = Σn·cₙxⁿ⁻¹ (term-by-term differentiation)
-
-d/dx[Σcₙxⁿ] = Σn·cₙxⁿ⁻¹ (term-by-term differentiation)
-
-### 2. ∫[Σcₙxⁿ]dx = Σcₙxⁿ⁺¹/(n+1) + C (term-by-term integration)
-
-∫[Σcₙxⁿ]dx = Σcₙxⁿ⁺¹/(n+1) + C (term-by-term integration)
-
-### 3. Radius of convergence is preserved (endpoints may change)
-
-Radius of convergence is preserved (endpoints may change)
-
-### 4. Use this to find power series for ln(1+x), arctan(x), etc.
-
-Use this to find power series for ln(1+x), arctan(x), etc.
-      `
+**Part 7 of 7 — Final Assessment**`
     },
     {
-      id: 'power7-quiz1',
+      id: 'pow7-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Final Assessment** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes d/dx[Σcₙxⁿ] = Σn·cₙxⁿ⁻¹ (term-by-term…?',
-            options: [
-              '∫[Σcₙxⁿ]dx = Σcₙxⁿ⁺¹/(n+1) + C (term-by-term integration)',
-              'Use this to find power series for ln(1+x), arctan(x), etc.',
-              'd/dx[Σcₙxⁿ] = Σn·cₙxⁿ⁻¹ (term-by-term differentiation)',
-              'Radius of convergence is preserved (endpoints may change)'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — d/dx[Σcₙxⁿ] = Σn·cₙxⁿ⁻¹ (term-by-term differentiation). The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Select the statement that correctly describes Radius of convergence is preserved…:',
-            options: [
-              'd/dx[Σcₙxⁿ] = Σn·cₙxⁿ⁻¹ (term-by-term differentiation)',
-              'Radius of convergence is preserved (endpoints may change)',
-              '∫[Σcₙxⁿ]dx = Σcₙxⁿ⁺¹/(n+1) + C (term-by-term integration)',
-              'Use this to find power series for ln(1+x), arctan(x), etc.'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Radius of convergence is preserved (endpoints may change). Be careful to distinguish between the different concepts in this topic.'
+            question: 'Find the power series for $\\arctan x$.',
+            options: ['$\\sum_{n=0}^{\\infty} \\frac{(-1)^n x^{2n+1}}{2n+1}$', '$\\sum_{n=0}^{\\infty} \\frac{x^{2n+1}}{2n+1}$', '$\\sum_{n=0}^{\\infty} (-1)^n x^{2n}$', '$\\sum_{n=1}^{\\infty} \\frac{(-1)^n x^n}{n}$'],
+            correctAnswer: 0,
+            explanation: 'Integrate $\\frac{1}{1+x^2} = \\sum (-1)^n x^{2n}$: $\\arctan x = \\sum \\frac{(-1)^n x^{2n+1}}{2n+1}$.'
           }
         ]
       }
     },
     {
-      id: 'power7-detail',
+      id: 'pow7-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **d/dx[Σcₙxⁿ] = Σn·cₙxⁿ⁻¹ (term-by-term differentiation)**
-- **∫[Σcₙxⁿ]dx = Σcₙxⁿ⁺¹/(n+1) + C (term-by-term integration)**
-- **Radius of convergence is preserved (endpoints may change)**
-- **Use this to find power series for ln(1+x), arctan(x), etc.**
-      `
-    },
-    {
-      id: 'power7-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which statement about Use this to find power series for… is correct?',
-            options: [
-              'd/dx[Σcₙxⁿ] = Σn·cₙxⁿ⁻¹ (term-by-term differentiation)',
-              'Radius of convergence is preserved (endpoints may change)',
-              '∫[Σcₙxⁿ]dx = Σcₙxⁿ⁺¹/(n+1) + C (term-by-term integration)',
-              'Use this to find power series for ln(1+x), arctan(x), etc.'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Use this to find power series for ln(1+x), arctan(x), etc. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'power7-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'd/dx[Σcₙxⁿ] = Σn·cₙxⁿ⁻¹ (term-by-term…',
-            options: ['d/dx[Σcₙxⁿ] = Σn·cₙxⁿ⁻¹ (term-by-term differentiation)', '∫[Σcₙxⁿ]dx = Σcₙxⁿ⁺¹/(n+1) + C (term-by-term integration)', 'Use this to find power series for ln(1+x), arctan(x), etc.', 'Radius of convergence is preserved (endpoints may change)']
-          },
-          {
-            label: '∫[Σcₙxⁿ]dx = Σcₙxⁿ⁺¹/(n+1) + C…',
-            options: ['Use this to find power series for ln(1+x), arctan(x), etc.', '∫[Σcₙxⁿ]dx = Σcₙxⁿ⁺¹/(n+1) + C (term-by-term integration)', 'Radius of convergence is preserved (endpoints may change)', 'd/dx[Σcₙxⁿ] = Σn·cₙxⁿ⁻¹ (term-by-term differentiation)']
-          },
-          {
-            label: 'Radius of convergence is preserved…',
-            options: ['Use this to find power series for ln(1+x), arctan(x), etc.', '∫[Σcₙxⁿ]dx = Σcₙxⁿ⁺¹/(n+1) + C (term-by-term integration)', 'd/dx[Σcₙxⁿ] = Σn·cₙxⁿ⁻¹ (term-by-term differentiation)', 'Radius of convergence is preserved (endpoints may change)']
-          }
-        ],
-        correctAnswers: ['d/dx[Σcₙxⁿ] = Σn·cₙxⁿ⁻¹ (term-by-term differentiation)', '∫[Σcₙxⁿ]dx = Σcₙxⁿ⁺¹/(n+1) + C (term-by-term integration)', 'Radius of convergence is preserved (endpoints may change)'],
-        hint1: 'Think about what each concept specifically describes in Review & Applications.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Review & Applications describes a specific idea. d/dx[Σcₙxⁿ] = Σn·cₙxⁿ⁻¹ (term-by-term differentiation). ∫[Σcₙxⁿ]dx = Σcₙxⁿ⁺¹/(n+1) + C (term-by-term integration). Radius of convergence is preserved (endpoints may change).'
-      }
+      content: `### Power Series — Complete! ✅`
     }
   ]
-}
+};

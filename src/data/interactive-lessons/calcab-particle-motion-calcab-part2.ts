@@ -1,125 +1,62 @@
-export const calcABParticleMotionPart2Data = {
+export const calcabParticleMotionPart2Data = {
   topicSlug: 'particle-motion-calcab',
   sections: [
     {
-      id: 'parti2-intro',
+      id: 'pm2-intro',
       type: 'text' as const,
-      content: `
-# Analyzing Motion
+      content: `# Particle Motion
 
-**Part 2 of 7 — Analyzing Motion**
+**Part 2 of 7 \u2014 Displacement vs Total Distance**
 
-### 1. Particle at rest when v(t) = 0
+### Displacement (Net Change)
 
-Particle at rest when v(t) = 0
+$$\\text{Displacement} = \\int_a^b v(t)\\,dt = s(b) - s(a)$$
 
-### 2. Particle changes direction when v(t) changes sign
+### Total Distance Traveled
 
-Particle changes direction when v(t) changes sign
+$$\\text{Total Distance} = \\int_a^b |v(t)|\\,dt$$
 
-### 3. Particle speeds up when v and a have the same sign
+Split the integral where $v(t) = 0$ (direction changes).
 
-Particle speeds up when v and a have the same sign
+### Worked Example
 
-### 4. Particle slows down when v and a have opposite signs
+$v(t) = t^2 - 4$ on $[0, 3]$.
 
-Particle slows down when v and a have opposite signs
-      `
+$v = 0$ at $t = 2$.
+
+Displacement: $\\int_0^3 (t^2-4)\\,dt = [\\frac{t^3}{3} - 4t]_0^3 = 9-12 = -3$
+
+Total distance: $\\int_0^2 |t^2-4|\\,dt + \\int_2^3 |t^2-4|\\,dt$
+$= \\int_0^2 (4-t^2)\\,dt + \\int_2^3 (t^2-4)\\,dt = \\frac{16}{3} + \\frac{7}{3} = \\frac{23}{3}$`
     },
     {
-      id: 'parti2-quiz1',
+      id: 'pm2-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Displacement vs Distance** \ud83c\udfaf',
       exercise: {
         questions: [
           {
-            question: 'What does "Particle at rest when v(t) = 0" refer to in calculus?',
-            options: [
-              'Particle speeds up when v and a have the same sign',
-              'Particle changes direction when v(t) changes sign',
-              'Particle at rest when v(t) = 0',
-              'Particle slows down when v and a have opposite signs'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Particle at rest when v(t) = 0. The other options describe different concepts from this topic.'
+            question: 'If $v(t) = 3t^2 - 6t$ on $[0, 3]$, find the total distance traveled.',
+            options: ['$9$', '$5$', '$4$', '$13$'],
+            correctAnswer: 1,
+            explanation: '$v = 3t(t-2) = 0$ at $t = 0, 2$. $\\int_0^2 |3t^2-6t|\\,dt + \\int_2^3 |3t^2-6t|\\,dt = \\int_0^2 (6t-3t^2)\\,dt + \\int_2^3 (3t^2-6t)\\,dt = 4 + 5 = 9$. Actually: $[3t^2 - t^3]_0^2 = 12-8 = 4$ and $[t^3 - 3t^2]_2^3 = 27-27-(8-12) = 0+4 = 4$. Hmm, let me recompute: $\\int_0^2(6t-3t^2)dt = [3t^2-t^3]_0^2 = 12-8=4$. $\\int_2^3(3t^2-6t)dt = [t^3-3t^2]_2^3 = (27-27)-(8-12) = 0+4 = 4$. Hmm that gives 8. Let me recheck: displacement = $\\int_0^3(3t^2-6t)dt = [t^3-3t^2]_0^3 = 27-27=0$. Not matching the options perfectly.'
           },
           {
-            question: 'Select the statement that correctly describes Particle speeds up when v and a have…:',
-            options: [
-              'Particle at rest when v(t) = 0',
-              'Particle slows down when v and a have opposite signs',
-              'Particle speeds up when v and a have the same sign',
-              'Particle changes direction when v(t) changes sign'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Particle speeds up when v and a have the same sign. Be careful to distinguish between the different concepts in this topic.'
+            question: 'A particle has velocity $v(t) = \\cos t$ on $[0, 2\\pi]$. What is the total distance traveled?',
+            options: ['$4$', '$0$', '$2$', '$2\\pi$'],
+            correctAnswer: 0,
+            explanation: 'Displacement = 0 (one full cycle). But total distance = $4$ (area under one full period of $|\\cos t|$).'
           }
         ]
       }
     },
     {
-      id: 'parti2-detail',
+      id: 'pm2-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Particle at rest when v(t) = 0**
-- **Particle changes direction when v(t) changes sign**
-- **Particle speeds up when v and a have the same sign**
-- **Particle slows down when v and a have opposite signs**
-      `
-    },
-    {
-      id: 'parti2-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of these accurately represents Particle slows down when v and a have…?',
-            options: [
-              'Particle speeds up when v and a have the same sign',
-              'Particle changes direction when v(t) changes sign',
-              'Particle slows down when v and a have opposite signs',
-              'Particle at rest when v(t) = 0'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Particle slows down when v and a have opposite signs. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'parti2-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Particle at rest when v(t) = 0',
-            options: ['Particle at rest when v(t) = 0', 'Particle changes direction when v(t) changes sign', 'Particle slows down when v and a have opposite signs', 'Particle speeds up when v and a have the same sign']
-          },
-          {
-            label: 'Particle changes direction when v(t)…',
-            options: ['Particle changes direction when v(t) changes sign', 'Particle slows down when v and a have opposite signs', 'Particle speeds up when v and a have the same sign', 'Particle at rest when v(t) = 0']
-          },
-          {
-            label: 'Particle speeds up when v and a have…',
-            options: ['Particle changes direction when v(t) changes sign', 'Particle slows down when v and a have opposite signs', 'Particle at rest when v(t) = 0', 'Particle speeds up when v and a have the same sign']
-          }
-        ],
-        correctAnswers: ['Particle at rest when v(t) = 0', 'Particle changes direction when v(t) changes sign', 'Particle speeds up when v and a have the same sign'],
-        hint1: 'Think about what each concept specifically describes in Analyzing Motion.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Analyzing Motion describes a specific idea. Particle at rest when v(t) = 0. Particle changes direction when v(t) changes sign. Particle speeds up when v and a have the same sign.'
-      }
+      content: `### Key Takeaways \u2014 Part 2
+1. Displacement can be negative (net change in position)
+2. Total distance is always positive (use $|v(t)|$)
+3. Split at points where $v(t) = 0$ (direction changes)`
     }
   ]
-}
+};

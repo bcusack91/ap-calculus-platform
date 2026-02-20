@@ -1,125 +1,46 @@
-export const calcBCEulerAdvPart5Data = {
+export const calcbcEulerPart5Data = {
   topicSlug: 'euler-method-advanced-calcbc',
   sections: [
     {
-      id: 'euler5-intro',
+      id: 'eul5-intro',
       type: 'text' as const,
-      content: `
-# Slope Fields for BC
+      content: `# Euler's Method
 
-**Part 5 of 7 — Slope Fields for BC**
+**Part 5 of 7 — AP Exam Contexts**
 
-### 1. Slope fields show dy/dx at each (x,y) point
+### What the AP Exam Asks
 
-Slope fields show dy/dx at each (x,y) point
+1. **Compute**: Perform 2-3 steps of Euler
+2. **Interpret**: Is result an over/underestimate?
+3. **Justify**: Explain using concavity
 
-### 2. Match slope field patterns to differential equations
+### Template Answer
 
-Match slope field patterns to differential equations
+"Using Euler's method with step size $\\Delta x$:
+$y_1 = y_0 + f(x_0, y_0)\\Delta x = ...$
 
-### 3. Isoclines
-
-curves where the slope is constant
-
-### 4. Particular solutions follow the flow of the slope field
-
-Particular solutions follow the flow of the slope field
-      `
+Since $f''(x) > 0$ (concave up), the tangent lines lie below the curve, so Euler's method produces an underestimate."`
     },
     {
-      id: 'euler5-quiz1',
+      id: 'eul5-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**AP Context** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Slope fields show dy/dx at each (x,y)…?',
-            options: [
-              'Slope fields show dy/dx at each (x,y) point',
-              'Match slope field patterns to differential equations',
-              'Particular solutions follow the flow of the slope field',
-              'curves where the slope is constant'
-            ],
+            question: '$dy/dx = \\cos(xy)$, $y(0) = 0$, $\\Delta x = 0.5$. Find $y(0.5)$.',
+            options: ['$0.5$', '$0$', '$1$', '$0.25$'],
             correctAnswer: 0,
-            explanation: 'Correct — Slope fields show dy/dx at each (x,y) point. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Select the statement that correctly describes Isoclines:',
-            options: [
-              'curves where the slope is constant',
-              'Match slope field patterns to differential equations',
-              'Particular solutions follow the flow of the slope field',
-              'Slope fields show dy/dx at each (x,y) point'
-            ],
-            correctAnswer: 0,
-            explanation: 'Correct — Isoclines: curves where the slope is constant. Be careful to distinguish between the different concepts in this topic.'
+            explanation: '$y_1 = 0 + \\cos(0 \\cdot 0)(0.5) = 0 + \\cos(0)(0.5) = 0 + 1(0.5) = 0.5$.'
           }
         ]
       }
     },
     {
-      id: 'euler5-detail',
+      id: 'eul5-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Slope fields show dy/dx at each (x,y) point**
-- **Match slope field patterns to differential equations**
-- **Isoclines**: curves where the slope is constant
-- **Particular solutions follow the flow of the slope field**
-      `
-    },
-    {
-      id: 'euler5-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Regarding Slope Fields for BC, which correctly describes Particular solutions follow the flow of…?',
-            options: [
-              'Particular solutions follow the flow of the slope field',
-              'Slope fields show dy/dx at each (x,y) point',
-              'Match slope field patterns to differential equations',
-              'curves where the slope is constant'
-            ],
-            correctAnswer: 0,
-            explanation: 'Correct — Particular solutions follow the flow of the slope field. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'euler5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Slope fields show dy/dx at each (x,y)…',
-            options: ['Slope fields show dy/dx at each (x,y) point', 'Particular solutions follow the flow of the slope field', 'Match slope field patterns to differential equations', 'curves where the slope is constant']
-          },
-          {
-            label: 'Match slope field patterns to…',
-            options: ['Slope fields show dy/dx at each (x,y) point', 'Match slope field patterns to differential equations', 'Particular solutions follow the flow of the slope field', 'curves where the slope is constant']
-          },
-          {
-            label: 'Isoclines',
-            options: ['Slope fields show dy/dx at each (x,y) point', 'Particular solutions follow the flow of the slope field', 'Match slope field patterns to differential equations', 'curves where the slope is constant']
-          }
-        ],
-        correctAnswers: ['Slope fields show dy/dx at each (x,y) point', 'Match slope field patterns to differential equations', 'curves where the slope is constant'],
-        hint1: 'Think about what each concept specifically describes in Slope Fields for BC.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Slope Fields for BC describes a specific idea. Slope fields show dy/dx at each (x,y) point. Match slope field patterns to differential equations. Isoclines: curves where the slope is constant.'
-      }
+      content: `### Key Takeaways — Part 5
+Compute, then justify over/underestimate using concavity.`
     }
   ]
-}
+};

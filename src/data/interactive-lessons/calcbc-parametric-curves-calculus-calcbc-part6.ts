@@ -1,125 +1,38 @@
-export const calcBCParametricPart6Data = {
+export const calcbcParametricPart6Data = {
   topicSlug: 'parametric-curves-calculus-calcbc',
   sections: [
     {
       id: 'param6-intro',
       type: 'text' as const,
-      content: `
-# Problem-Solving Workshop
+      content: `# Parametric Curves
 
-**Part 6 of 7 — Problem-Solving Workshop**
-
-### 1. Area under parametric curve
-
-A = ∫ₐᵇ y(t) · x'(t) dt
-
-### 2. Or equivalently
-
-A = ∫ₐᵇ g(t) · f'(t) dt
-
-### 3. Watch the direction of traversal (may need absolute value)
-
-Watch the direction of traversal (may need absolute value)
-
-### 4. Closed curve area
-
-A = ½|∮(x dy - y dx)|
-      `
+**Part 6 of 7 — Practice Workshop**`
     },
     {
       id: 'param6-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Mixed Practice** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Area under parametric curve?',
-            options: [
-              'A = ∫ₐᵇ y(t) · x\'(t) dt',
-              'A = ∫ₐᵇ g(t) · f\'(t) dt',
-              'A = ½|∮(x dy - y dx)|',
-              'Watch the direction of traversal (may need absolute value)'
-            ],
+            question: 'For $x = \\sin t$, $y = \\cos 2t$, find $\\frac{dy}{dx}$ at $t = \\pi/6$.',
+            options: ['$-2$', '$2$', '$-\\sqrt{3}$', '$0$'],
             correctAnswer: 0,
-            explanation: 'Correct — Area under parametric curve: A = ∫ₐᵇ y(t) · x\'(t) dt. The other options describe different concepts from this topic.'
+            explanation: '$\\frac{dy}{dx} = \\frac{-2\\sin 2t}{\\cos t}$. At $t = \\pi/6$: $\\frac{-2\\sin(\\pi/3)}{\\cos(\\pi/6)} = \\frac{-2(\\sqrt{3}/2)}{\\sqrt{3}/2} = -2$.'
           },
           {
-            question: 'Select the statement that correctly describes Watch the direction of traversal (may…:',
-            options: [
-              'A = ∫ₐᵇ g(t) · f\'(t) dt',
-              'Watch the direction of traversal (may need absolute value)',
-              'A = ½|∮(x dy - y dx)|',
-              'A = ∫ₐᵇ y(t) · x\'(t) dt'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Watch the direction of traversal (may need absolute value). Be careful to distinguish between the different concepts in this topic.'
+            question: 'At what $t$ does $x = t^2 - 4$, $y = t^3 - 3t$ have a horizontal tangent?',
+            options: ['$t = \\pm 1$', '$t = 0$', '$t = 2$', '$t = \\pm 2$'],
+            correctAnswer: 0,
+            explanation: 'Horizontal tangent: $\\frac{dy}{dt} = 3t^2 - 3 = 0$, so $t = \\pm 1$. Check $\\frac{dx}{dt} = 2t \\neq 0$ at $t = \\pm 1$. ✓'
           }
         ]
       }
     },
     {
-      id: 'param6-detail',
+      id: 'param6-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Area under parametric curve**: A = ∫ₐᵇ y(t) · x'(t) dt
-- **Or equivalently**: A = ∫ₐᵇ g(t) · f'(t) dt
-- **Watch the direction of traversal (may need absolute value)**
-- **Closed curve area**: A = ½|∮(x dy - y dx)|
-      `
-    },
-    {
-      id: 'param6-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of these accurately represents Closed curve area?',
-            options: [
-              'A = ∫ₐᵇ y(t) · x\'(t) dt',
-              'A = ½|∮(x dy - y dx)|',
-              'Watch the direction of traversal (may need absolute value)',
-              'A = ∫ₐᵇ g(t) · f\'(t) dt'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Closed curve area: A = ½|∮(x dy - y dx)|. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'param6-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Area under parametric curve',
-            options: ['A = ½|∮(x dy - y dx)|', 'Watch the direction of traversal (may need absolute value)', 'A = ∫ₐᵇ y(t) · x\'(t) dt', 'A = ∫ₐᵇ g(t) · f\'(t) dt']
-          },
-          {
-            label: 'Or equivalently',
-            options: ['Watch the direction of traversal (may need absolute value)', 'A = ½|∮(x dy - y dx)|', 'A = ∫ₐᵇ g(t) · f\'(t) dt', 'A = ∫ₐᵇ y(t) · x\'(t) dt']
-          },
-          {
-            label: 'Closed curve area',
-            options: ['A = ∫ₐᵇ g(t) · f\'(t) dt', 'A = ∫ₐᵇ y(t) · x\'(t) dt', 'Watch the direction of traversal (may need absolute value)', 'A = ½|∮(x dy - y dx)|']
-          }
-        ],
-        correctAnswers: ['A = ∫ₐᵇ y(t) · x\'(t) dt', 'A = ∫ₐᵇ g(t) · f\'(t) dt', 'A = ½|∮(x dy - y dx)|'],
-        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Area under parametric curve: A = ∫ₐᵇ y(t) · x\'(t) dt. Or equivalently: A = ∫ₐᵇ g(t) · f\'(t) dt. Closed curve area: A = ½|∮(x dy - y dx)|.'
-      }
+      content: `### Workshop Complete!`
     }
   ]
-}
+};

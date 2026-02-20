@@ -1,125 +1,65 @@
-export const calcABInverseDerivPart1Data = {
+export const calcabInverseFunctionsPart1Data = {
   topicSlug: 'inverse-functions-derivatives-calcab',
   sections: [
     {
-      id: 'inver1-intro',
+      id: 'inv1-intro',
       type: 'text' as const,
-      content: `
-# ∫ Inverse Functions Derivatives
+      content: `# Inverse Functions & Their Derivatives
 
-**Part 1 of 7 — Review of Inverse Functions**
+**Part 1 of 7 — Derivative of an Inverse Function**
 
-### 1. f and f⁻¹ are reflections across y = x
+### The Key Formula
 
-f and f⁻¹ are reflections across y = x
+If $f$ and $g$ are inverses ($g = f^{-1}$), then:
 
-### 2. f(f⁻¹(x)) = x and f⁻¹(f(x)) = x
+$$(f^{-1})'(a) = \frac{1}{f'(f^{-1}(a))}$$
 
-f(f⁻¹(x)) = x and f⁻¹(f(x)) = x
+Or equivalently: if $f(b) = a$, then $(f^{-1})'(a) = \frac{1}{f'(b)}$.
 
-### 3. Domain of f = Range of f⁻¹ and vice versa
+### Why It Works
 
-Domain of f = Range of f⁻¹ and vice versa
+If $f(g(x)) = x$, differentiate both sides:
 
-### 4. Only one-to-one functions have inverses
+$f'(g(x)) \cdot g'(x) = 1$
 
-Only one-to-one functions have inverses
-      `
+$g'(x) = \frac{1}{f'(g(x))}$
+
+### Worked Example
+
+$f(x) = x^3 + x$. Find $(f^{-1})'(2)$.
+
+We need $f(b) = 2$: $b^3 + b = 2 \implies b = 1$.
+
+$(f^{-1})'(2) = \frac{1}{f'(1)} = \frac{1}{3(1)^2 + 1} = \frac{1}{4}$`
     },
     {
-      id: 'inver1-quiz1',
+      id: 'inv1-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Inverse Function Derivatives** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes f and f⁻¹ are reflections across y = x?',
-            options: [
-              'f(f⁻¹(x)) = x and f⁻¹(f(x)) = x',
-              'f and f⁻¹ are reflections across y = x',
-              'Only one-to-one functions have inverses',
-              'Domain of f = Range of f⁻¹ and vice versa'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — f and f⁻¹ are reflections across y = x. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'In the context of Inverse Functions Derivatives, which explains Domain of f = Range of f⁻¹ and vice…?',
-            options: [
-              'f(f⁻¹(x)) = x and f⁻¹(f(x)) = x',
-              'f and f⁻¹ are reflections across y = x',
-              'Domain of f = Range of f⁻¹ and vice versa',
-              'Only one-to-one functions have inverses'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Domain of f = Range of f⁻¹ and vice versa. Be careful to distinguish between the different concepts in this topic.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'inver1-detail',
-      type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **f and f⁻¹ are reflections across y = x**
-- **f(f⁻¹(x)) = x and f⁻¹(f(x)) = x**
-- **Domain of f = Range of f⁻¹ and vice versa**
-- **Only one-to-one functions have inverses**
-      `
-    },
-    {
-      id: 'inver1-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Regarding Inverse Functions Derivatives, which correctly describes Only one-to-one functions have inverses?',
-            options: [
-              'Only one-to-one functions have inverses',
-              'f and f⁻¹ are reflections across y = x',
-              'f(f⁻¹(x)) = x and f⁻¹(f(x)) = x',
-              'Domain of f = Range of f⁻¹ and vice versa'
-            ],
+            question: 'If $f(x) = 2x + \\cos x$ and $f(0) = 1$, find $(f^{-1})\'(1)$.',
+            options: ['$\\frac{1}{2}$', '$1$', '$2$', '$\\frac{1}{3}$'],
             correctAnswer: 0,
-            explanation: 'Correct — Only one-to-one functions have inverses. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: '$f(0) = 0 + 1 = 1$, so $f^{-1}(1) = 0$. $f\'(x) = 2 - \\sin x$. $f\'(0) = 2$. $(f^{-1})\'(1) = \\frac{1}{f\'(0)} = \\frac{1}{2}$.'
+          },
+          {
+            question: 'If $f(3) = 7$ and $f\'(3) = 5$, find $(f^{-1})\'(7)$.',
+            options: ['$\\frac{1}{5}$', '$5$', '$\\frac{1}{7}$', '$\\frac{1}{3}$'],
+            correctAnswer: 0,
+            explanation: '$f(3) = 7$ means $f^{-1}(7) = 3$. $(f^{-1})\'(7) = \\frac{1}{f\'(3)} = \\frac{1}{5}$.'
           }
         ]
       }
     },
     {
-      id: 'inver1-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'f and f⁻¹ are reflections across y = x',
-            options: ['f(f⁻¹(x)) = x and f⁻¹(f(x)) = x', 'Domain of f = Range of f⁻¹ and vice versa', 'Only one-to-one functions have inverses', 'f and f⁻¹ are reflections across y = x']
-          },
-          {
-            label: 'f(f⁻¹(x)) = x and f⁻¹(f(x)) = x',
-            options: ['f(f⁻¹(x)) = x and f⁻¹(f(x)) = x', 'f and f⁻¹ are reflections across y = x', 'Domain of f = Range of f⁻¹ and vice versa', 'Only one-to-one functions have inverses']
-          },
-          {
-            label: 'Domain of f = Range of f⁻¹ and vice…',
-            options: ['f and f⁻¹ are reflections across y = x', 'f(f⁻¹(x)) = x and f⁻¹(f(x)) = x', 'Domain of f = Range of f⁻¹ and vice versa', 'Only one-to-one functions have inverses']
-          }
-        ],
-        correctAnswers: ['f and f⁻¹ are reflections across y = x', 'f(f⁻¹(x)) = x and f⁻¹(f(x)) = x', 'Domain of f = Range of f⁻¹ and vice versa'],
-        hint1: 'Think about what each concept specifically describes in Inverse Functions Derivatives.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Inverse Functions Derivatives describes a specific idea. f and f⁻¹ are reflections across y = x. f(f⁻¹(x)) = x and f⁻¹(f(x)) = x. Domain of f = Range of f⁻¹ and vice versa.'
-      }
+      id: 'inv1-summary',
+      type: 'text' as const,
+      content: `### Key Takeaways — Part 1
+1. $(f^{-1})'(a) = \\frac{1}{f'(f^{-1}(a))}$
+2. First find the $x$-value where $f(x) = a$
+3. Then take the reciprocal of $f'$ at that point`
     }
   ]
-}
+};

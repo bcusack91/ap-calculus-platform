@@ -1,121 +1,38 @@
-export const calcBCSeriesPart7Data = {
+export const calcbcSeriesPart7Data = {
   topicSlug: 'infinite-series-calcbc',
   sections: [
     {
-      id: 'infin7-intro',
+      id: 'ser7-intro',
       type: 'text' as const,
-      content: `
-# Review & Applications
+      content: `# Infinite Series — Review
 
-**Part 7 of 7 — Review & Applications**
-
-### 1. Ratio Test
-
-L = lim|aₙ₊₁/aₙ|; converges if L < 1, diverges if L > 1
-
-### 2. If L = 1, the ratio test is inconclusive
-
-If L = 1, the ratio test is inconclusive
-
-### 3. Best for series with factorials and exponentials
-
-Best for series with factorials and exponentials
-
-### 4. Root Test
-
-L = lim|aₙ|^(1/n); same conclusion rules as ratio test
-      `
+**Part 7 of 7 — Final Assessment**`
     },
     {
-      id: 'infin7-quiz1',
+      id: 'ser7-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Final Assessment** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains Ratio Test?',
-            options: [
-              'If L = 1, the ratio test is inconclusive',
-              'Best for series with factorials and exponentials',
-              'L = lim|aₙ|^(1/n); same conclusion rules as ratio test',
-              'L = lim|aₙ₊₁/aₙ|; converges if L < 1, diverges if L > 1'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Ratio Test: L = lim|aₙ₊₁/aₙ|; converges if L < 1, diverges if L > 1. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Which of the following is true about Best for series with factorials and…?',
-            options: [
-              'Best for series with factorials and exponentials',
-              'If L = 1, the ratio test is inconclusive',
-              'L = lim|aₙ₊₁/aₙ|; converges if L < 1, diverges if L > 1',
-              'L = lim|aₙ|^(1/n); same conclusion rules as ratio test'
-            ],
+            question: '$\\sum_{n=0}^{\\infty} \\frac{5 \\cdot 2^n}{3^n} = $',
+            options: ['$15$', '$10$', '$5/3$', 'Diverges'],
             correctAnswer: 0,
-            explanation: 'Correct — Best for series with factorials and exponentials. Be careful to distinguish between the different concepts in this topic.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'infin7-detail',
-      type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Ratio Test**: L = lim|aₙ₊₁/aₙ|; converges if L < 1, diverges if L > 1
-- **If L = 1, the ratio test is inconclusive**
-- **Best for series with factorials and exponentials**
-- **Root Test**: L = lim|aₙ|^(1/n); same conclusion rules as ratio test
-      `
-    },
-    {
-      id: 'infin7-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of these accurately represents Root Test?',
-            options: [
-              'If L = 1, the ratio test is inconclusive',
-              'L = lim|aₙ₊₁/aₙ|; converges if L < 1, diverges if L > 1',
-              'L = lim|aₙ|^(1/n); same conclusion rules as ratio test',
-              'Best for series with factorials and exponentials'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Root Test: L = lim|aₙ|^(1/n); same conclusion rules as ratio test. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'infin7-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Ratio Test',
-            options: ['L = lim|aₙ|^(1/n); same conclusion rules as ratio test', 'Best for series with factorials and exponentials', 'If L = 1, the ratio test is inconclusive', 'L = lim|aₙ₊₁/aₙ|; converges if L < 1, diverges if L > 1']
+            explanation: '$\\sum 5(2/3)^n = \\frac{5}{1 - 2/3} = \\frac{5}{1/3} = 15$.'
           },
           {
-            label: 'Root Test',
-            options: ['L = lim|aₙ₊₁/aₙ|; converges if L < 1, diverges if L > 1', 'If L = 1, the ratio test is inconclusive', 'L = lim|aₙ|^(1/n); same conclusion rules as ratio test', 'Best for series with factorials and exponentials']
+            question: '$\\sum_{n=1}^{\\infty} \\frac{n^2}{e^n}$:',
+            options: ['Converges', 'Diverges', 'Inconclusive', 'Oscillates'],
+            correctAnswer: 0,
+            explanation: 'Ratio test: $\\frac{(n+1)^2/e^{n+1}}{n^2/e^n} = \\frac{(n+1)^2}{en^2} \\to 1/e < 1$. Converges.'
           }
-        ],
-        correctAnswers: ['L = lim|aₙ₊₁/aₙ|; converges if L < 1, diverges if L > 1', 'L = lim|aₙ|^(1/n); same conclusion rules as ratio test'],
-        hint1: 'Think about what each concept specifically describes in Review & Applications.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Review & Applications describes a specific idea. Ratio Test: L = lim|aₙ₊₁/aₙ|; converges if L < 1, diverges if L > 1. Root Test: L = lim|aₙ|^(1/n); same conclusion rules as ratio test.'
+        ]
       }
+    },
+    {
+      id: 'ser7-summary',
+      type: 'text' as const,
+      content: `### Infinite Series — Complete! ✅`
     }
   ]
-}
+};

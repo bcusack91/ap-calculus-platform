@@ -1,125 +1,60 @@
-export const calcABDerivAppsPart5Data = {
+export const calcabAppsDerivativesPart5Data = {
   topicSlug: 'applications-of-derivatives-calcab',
   sections: [
     {
-      id: 'appli5-intro',
+      id: 'apps5-intro',
       type: 'text' as const,
-      content: `
-# Concavity & Inflection Points
+      content: `# Applications of Derivatives
 
-**Part 5 of 7 — Concavity & Inflection Points**
+**Part 5 of 7 — Mean Value Theorem**
 
-### 1. f'' > 0
+### Statement (MVT)
 
-concave up (holds water like a cup)
+If $f$ is continuous on $[a,b]$ and differentiable on $(a,b)$, then there exists at least one $c$ in $(a,b)$ such that:
 
-### 2. f'' < 0
+$$f'(c) = \\frac{f(b) - f(a)}{b - a}$$
 
-concave down (spills water like a cap)
+**Geometric meaning:** There's a point where the tangent line is parallel to the secant line through $(a, f(a))$ and $(b, f(b))$.
 
-### 3. Inflection point
+### Worked Example
 
-where concavity changes (f'' changes sign)
+$f(x) = x^3$ on $[0, 2]$.
 
-### 4. Inflection points occur where f'' = 0 or f'' is undefined (check sign change)
+Average rate of change: $\\frac{f(2)-f(0)}{2-0} = \\frac{8-0}{2} = 4$.
 
-Inflection points occur where f'' = 0 or f'' is undefined (check sign change)
-      `
+Find $c$: $f'(c) = 3c^2 = 4$ → $c = \\frac{2}{\\sqrt{3}} = \\frac{2\\sqrt{3}}{3} \\approx 1.155$.
+
+Since $c \\in (0, 2)$, MVT is confirmed.`
     },
     {
-      id: 'appli5-quiz1',
+      id: 'apps5-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Mean Value Theorem** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes f\'\' > 0?',
-            options: [
-              'where concavity changes (f\'\' changes sign)',
-              'concave up (holds water like a cup)',
-              'concave down (spills water like a cap)',
-              'Inflection points occur where f\'\' = 0 or f\'\' is undefined (check sign change)'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — f\'\' > 0: concave up (holds water like a cup). The other options describe different concepts from this topic.'
+            question: 'For $f(x) = \\sqrt{x}$ on $[1, 9]$, find the value of $c$ guaranteed by MVT.',
+            options: ['$c = 4$', '$c = 5$', '$c = 3$', '$c = 2$'],
+            correctAnswer: 0,
+            explanation: '$\\frac{f(9)-f(1)}{9-1} = \\frac{3-1}{8} = \\frac{1}{4}$. $f\'(x) = \\frac{1}{2\\sqrt{x}} = \\frac{1}{4}$. $2\\sqrt{x} = 4$, $\\sqrt{x} = 2$, $x = 4$.'
           },
           {
-            question: 'In the context of Concavity & Inflection Points, which explains Inflection point?',
-            options: [
-              'concave up (holds water like a cup)',
-              'concave down (spills water like a cap)',
-              'Inflection points occur where f\'\' = 0 or f\'\' is undefined (check sign change)',
-              'where concavity changes (f\'\' changes sign)'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Inflection point: where concavity changes (f\'\' changes sign). Be careful to distinguish between the different concepts in this topic.'
+            question: 'If $f$ is differentiable, $f(2) = 3$, and $f(5) = 15$, what can we guarantee?',
+            options: ['$f\'(c) = 4$ for some $c \\in (2,5)$', '$f\'(c) = 5$ for some $c \\in (2,5)$', '$f(c) = 9$ for some $c \\in (2,5)$', 'Both A and C'],
+            correctAnswer: 0,
+            explanation: 'MVT: $f\'(c) = \\frac{15-3}{5-2} = 4$ for some $c \\in (2,5)$. IVT also gives us C (since $f$ is continuous and $3 < 9 < 15$), so actually D is also valid. But the MVT specifically guarantees $f\'(c) = 4$.'
           }
         ]
       }
     },
     {
-      id: 'appli5-detail',
+      id: 'apps5-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
+      content: `### Key Takeaways — Part 5
 
-- **f'' > 0**: concave up (holds water like a cup)
-- **f'' < 0**: concave down (spills water like a cap)
-- **Inflection point**: where concavity changes (f'' changes sign)
-- **Inflection points occur where f'' = 0 or f'' is undefined (check sign change)**
-      `
-    },
-    {
-      id: 'appli5-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which statement about Inflection points occur where f\'\' = 0… is correct?',
-            options: [
-              'where concavity changes (f\'\' changes sign)',
-              'concave down (spills water like a cap)',
-              'Inflection points occur where f\'\' = 0 or f\'\' is undefined (check sign change)',
-              'concave up (holds water like a cup)'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Inflection points occur where f\'\' = 0 or f\'\' is undefined (check sign change). Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'appli5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'f\'\' > 0',
-            options: ['where concavity changes (f\'\' changes sign)', 'Inflection points occur where f\'\' = 0 or f\'\' is undefined (check sign change)', 'concave down (spills water like a cap)', 'concave up (holds water like a cup)']
-          },
-          {
-            label: 'f\'\' < 0',
-            options: ['where concavity changes (f\'\' changes sign)', 'concave down (spills water like a cap)', 'Inflection points occur where f\'\' = 0 or f\'\' is undefined (check sign change)', 'concave up (holds water like a cup)']
-          },
-          {
-            label: 'Inflection point',
-            options: ['Inflection points occur where f\'\' = 0 or f\'\' is undefined (check sign change)', 'concave down (spills water like a cap)', 'where concavity changes (f\'\' changes sign)', 'concave up (holds water like a cup)']
-          }
-        ],
-        correctAnswers: ['concave up (holds water like a cup)', 'concave down (spills water like a cap)', 'where concavity changes (f\'\' changes sign)'],
-        hint1: 'Think about what each concept specifically describes in Concavity & Inflection Points.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Concavity & Inflection Points describes a specific idea. f\'\' > 0: concave up (holds water like a cup). f\'\' < 0: concave down (spills water like a cap). Inflection point: where concavity changes (f\'\' changes sign).'
-      }
+1. MVT: there's a point where instantaneous rate = average rate
+2. Must check: $f$ continuous on $[a,b]$, differentiable on $(a,b)$
+3. MVT is used heavily in AP justifications and proofs`
     }
   ]
-}
+};

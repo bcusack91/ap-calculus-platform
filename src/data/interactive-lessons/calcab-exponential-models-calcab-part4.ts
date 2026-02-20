@@ -1,121 +1,46 @@
-export const calcABExpModelsPart4Data = {
+export const calcabExpModelsPart4Data = {
   topicSlug: 'exponential-models-calcab',
   sections: [
     {
-      id: 'expon4-intro',
+      id: 'exp4-intro',
       type: 'text' as const,
-      content: `
-# Logistic Growth
+      content: `# Exponential Models
 
-**Part 4 of 7 — Logistic Growth**
+**Part 4 of 7 — Derivatives and Integrals of Exponentials**
 
-### 1. Logistic model
+### Key Rules
 
-dP/dt = kP(1 - P/L) where L is carrying capacity
+$$\\frac{d}{dx}[e^{kx}] = ke^{kx} \\qquad \\int e^{kx}\\,dx = \\frac{1}{k}e^{kx} + C$$
 
-### 2. Solution
-
-P(t) = L/(1 + Ae^(-kt)) where A = (L-P₀)/P₀
-
-### 3. Population grows fastest at P = L/2 (inflection point)
-
-Population grows fastest at P = L/2 (inflection point)
-
-### 4. As t → ∞, P → L (population approaches carrying capacity)
-
-As t → ∞, P → L (population approaches carrying capacity)
-      `
+$$\\frac{d}{dx}[a^x] = a^x \\ln a \\qquad \\int a^x\\,dx = \\frac{a^x}{\\ln a} + C$$`
     },
     {
-      id: 'expon4-quiz1',
+      id: 'exp4-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Exponential Calculus** 🎯',
       exercise: {
         questions: [
           {
-            question: 'What does "Logistic model" refer to in calculus?',
-            options: [
-              'dP/dt = kP(1 - P/L) where L is carrying capacity',
-              'P(t) = L/(1 + Ae^(-kt)) where A = (L-P₀)/P₀',
-              'Population grows fastest at P = L/2 (inflection point)',
-              'As t → ∞, P → L (population approaches carrying capacity)'
-            ],
+            question: 'Evaluate $\\int_0^1 3e^{2x}\\,dx$.',
+            options: ['$\\frac{3}{2}(e^2 - 1)$', '$3(e^2 - 1)$', '$\\frac{3}{2}e^2$', '$3e^2$'],
             correctAnswer: 0,
-            explanation: 'Correct — Logistic model: dP/dt = kP(1 - P/L) where L is carrying capacity. The other options describe different concepts from this topic.'
+            explanation: '$3 \\cdot \\frac{1}{2}[e^{2x}]_0^1 = \\frac{3}{2}(e^2 - 1)$.'
           },
           {
-            question: 'In the context of Logistic Growth, which explains Population grows fastest at P = L/2…?',
-            options: [
-              'Population grows fastest at P = L/2 (inflection point)',
-              'dP/dt = kP(1 - P/L) where L is carrying capacity',
-              'P(t) = L/(1 + Ae^(-kt)) where A = (L-P₀)/P₀',
-              'As t → ∞, P → L (population approaches carrying capacity)'
-            ],
+            question: 'Find $\\int 2^x\\,dx$.',
+            options: ['$\\frac{2^x}{\\ln 2} + C$', '$2^x \\ln 2 + C$', '$\\frac{2^{x+1}}{x+1} + C$', '$2^x + C$'],
             correctAnswer: 0,
-            explanation: 'Correct — Population grows fastest at P = L/2 (inflection point). Be careful to distinguish between the different concepts in this topic.'
+            explanation: '$\\int a^x\\,dx = \\frac{a^x}{\\ln a} + C$. So $\\int 2^x\\,dx = \\frac{2^x}{\\ln 2} + C$.'
           }
         ]
       }
     },
     {
-      id: 'expon4-detail',
+      id: 'exp4-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Logistic model**: dP/dt = kP(1 - P/L) where L is carrying capacity
-- **Solution**: P(t) = L/(1 + Ae^(-kt)) where A = (L-P₀)/P₀
-- **Population grows fastest at P = L/2 (inflection point)**
-- **As t → ∞, P → L (population approaches carrying capacity)**
-      `
-    },
-    {
-      id: 'expon4-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which statement about As t → ∞, P → L (population approaches… is correct?',
-            options: [
-              'Population grows fastest at P = L/2 (inflection point)',
-              'P(t) = L/(1 + Ae^(-kt)) where A = (L-P₀)/P₀',
-              'As t → ∞, P → L (population approaches carrying capacity)',
-              'dP/dt = kP(1 - P/L) where L is carrying capacity'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — As t → ∞, P → L (population approaches carrying capacity). Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'expon4-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Logistic model',
-            options: ['P(t) = L/(1 + Ae^(-kt)) where A = (L-P₀)/P₀', 'As t → ∞, P → L (population approaches carrying capacity)', 'dP/dt = kP(1 - P/L) where L is carrying capacity', 'Population grows fastest at P = L/2 (inflection point)']
-          },
-          {
-            label: 'Solution',
-            options: ['dP/dt = kP(1 - P/L) where L is carrying capacity', 'Population grows fastest at P = L/2 (inflection point)', 'P(t) = L/(1 + Ae^(-kt)) where A = (L-P₀)/P₀', 'As t → ∞, P → L (population approaches carrying capacity)']
-          }
-        ],
-        correctAnswers: ['dP/dt = kP(1 - P/L) where L is carrying capacity', 'P(t) = L/(1 + Ae^(-kt)) where A = (L-P₀)/P₀'],
-        hint1: 'Think about what each concept specifically describes in Logistic Growth.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Logistic Growth describes a specific idea. Logistic model: dP/dt = kP(1 - P/L) where L is carrying capacity. Solution: P(t) = L/(1 + Ae^(-kt)) where A = (L-P₀)/P₀.'
-      }
+      content: `### Key Takeaways — Part 4
+1. $\\int e^{kx}\\,dx = \\frac{1}{k}e^{kx} + C$
+2. $\\int a^x\\,dx = \\frac{a^x}{\\ln a} + C$`
     }
   ]
-}
+};

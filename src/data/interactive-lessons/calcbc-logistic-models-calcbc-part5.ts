@@ -1,125 +1,43 @@
-export const calcBCLogisticPart5Data = {
+export const calcbcLogisticPart5Data = {
   topicSlug: 'logistic-models-calcbc',
   sections: [
     {
-      id: 'logis5-intro',
+      id: 'log5-intro',
       type: 'text' as const,
-      content: `
-# Real-World Logistic Models
+      content: `# Logistic Models
 
-**Part 5 of 7 — Real-World Logistic Models**
+**Part 5 of 7 — Logistic vs Exponential**
 
-### 1. Ecology
+### Comparison
 
-population growth with limited resources
-
-### 2. Epidemiology
-
-spread of disease through a population
-
-### 3. Technology adoption
-
-S-curve of market penetration
-
-### 4. Chemical reactions
-
-approach to equilibrium concentration
-      `
+| Feature | Exponential | Logistic |
+|---------|-------------|----------|
+| DE | $dP/dt = kP$ | $dP/dt = kP(1-P/L)$ |
+| Solution | $P = P_0 e^{kt}$ | $P = L/(1+Ae^{-kt})$ |
+| $t \to \infty$ | $P \to \infty$ | $P \to L$ |
+| Shape | J-curve | S-curve |
+| Realistic? | Short term | Long term |`
     },
     {
-      id: 'logis5-quiz1',
+      id: 'log5-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Compare** 🎯',
       exercise: {
         questions: [
           {
-            question: 'What does "Ecology" refer to in calculus?',
-            options: [
-              'population growth with limited resources',
-              'S-curve of market penetration',
-              'spread of disease through a population',
-              'approach to equilibrium concentration'
-            ],
+            question: 'When $P \\ll L$, the logistic model behaves like:',
+            options: ['Exponential growth', 'Exponential decay', 'Linear growth', 'No growth'],
             correctAnswer: 0,
-            explanation: 'Correct — Ecology: population growth with limited resources. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Select the statement that correctly describes Technology adoption:',
-            options: [
-              'population growth with limited resources',
-              'approach to equilibrium concentration',
-              'S-curve of market penetration',
-              'spread of disease through a population'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Technology adoption: S-curve of market penetration. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'When $P \\ll L$: $(1 - P/L) \\approx 1$, so $dP/dt \\approx kP$ — exponential growth.'
           }
         ]
       }
     },
     {
-      id: 'logis5-detail',
+      id: 'log5-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Ecology**: population growth with limited resources
-- **Epidemiology**: spread of disease through a population
-- **Technology adoption**: S-curve of market penetration
-- **Chemical reactions**: approach to equilibrium concentration
-      `
-    },
-    {
-      id: 'logis5-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which statement about Chemical reactions is correct?',
-            options: [
-              'population growth with limited resources',
-              'approach to equilibrium concentration',
-              'spread of disease through a population',
-              'S-curve of market penetration'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Chemical reactions: approach to equilibrium concentration. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'logis5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Ecology',
-            options: ['spread of disease through a population', 'S-curve of market penetration', 'population growth with limited resources', 'approach to equilibrium concentration']
-          },
-          {
-            label: 'Epidemiology',
-            options: ['S-curve of market penetration', 'approach to equilibrium concentration', 'spread of disease through a population', 'population growth with limited resources']
-          },
-          {
-            label: 'Technology adoption',
-            options: ['approach to equilibrium concentration', 'spread of disease through a population', 'S-curve of market penetration', 'population growth with limited resources']
-          }
-        ],
-        correctAnswers: ['population growth with limited resources', 'spread of disease through a population', 'S-curve of market penetration'],
-        hint1: 'Think about what each concept specifically describes in Real-World Logistic Models.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Real-World Logistic Models describes a specific idea. Ecology: population growth with limited resources. Epidemiology: spread of disease through a population. Technology adoption: S-curve of market penetration.'
-      }
+      content: `### Key Takeaways — Part 5
+Logistic starts exponential, then levels off at $L$. More realistic.`
     }
   ]
-}
+};

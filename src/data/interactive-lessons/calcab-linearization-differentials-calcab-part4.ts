@@ -1,125 +1,40 @@
-export const calcABLinearizationPart4Data = {
+export const calcabLinearizationPart4Data = {
   topicSlug: 'linearization-differentials-calcab',
   sections: [
     {
-      id: 'linea4-intro',
+      id: 'lin4-intro',
       type: 'text' as const,
-      content: `
-# Newton's Method (Preview)
+      content: `# Linearization & Differentials
 
-**Part 4 of 7 — Newton's Method (Preview)**
+**Part 4 of 7 — Percentage Error**
 
-### 1. Newton's Method
+### Relative and Percentage Error
 
-xₙ₊₁ = xₙ - f(xₙ)/f'(xₙ)
+$$\text{Relative error} = \frac{dy}{y} = \frac{f'(x)\,dx}{f(x)}$$
 
-### 2. Iteratively approximates roots of f(x) = 0
-
-Iteratively approximates roots of f(x) = 0
-
-### 3. Converges quickly when starting near a root
-
-Converges quickly when starting near a root
-
-### 4. May fail if f'(xₙ) = 0 or if the initial guess is too far from the root
-
-May fail if f'(xₙ) = 0 or if the initial guess is too far from the root
-      `
+$$\text{Percentage error} = \frac{dy}{y} \times 100\%$$`
     },
     {
-      id: 'linea4-quiz1',
+      id: 'lin4-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Error Estimation** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Newton\'s Method?',
-            options: [
-              'xₙ₊₁ = xₙ - f(xₙ)/f\'(xₙ)',
-              'Iteratively approximates roots of f(x) = 0',
-              'May fail if f\'(xₙ) = 0 or if the initial guess is too far from the root',
-              'Converges quickly when starting near a root'
-            ],
+            question: 'A sphere has radius $r = 10$ cm with error $dr = \pm 0.05$ cm. Estimate the percentage error in the volume.',
+            options: ['$\pm 1.5\%$', '$\pm 0.5\%$', '$\pm 3\%$', '$\pm 0.15\%$'],
             correctAnswer: 0,
-            explanation: 'Correct — Newton\'s Method: xₙ₊₁ = xₙ - f(xₙ)/f\'(xₙ). The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Select the statement that correctly describes Converges quickly when starting near a…:',
-            options: [
-              'xₙ₊₁ = xₙ - f(xₙ)/f\'(xₙ)',
-              'Converges quickly when starting near a root',
-              'May fail if f\'(xₙ) = 0 or if the initial guess is too far from the root',
-              'Iteratively approximates roots of f(x) = 0'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Converges quickly when starting near a root. Be careful to distinguish between the different concepts in this topic.'
+            explanation: '$V = \\frac{4}{3}\\pi r^3$. $\\frac{dV}{V} = \\frac{4\\pi r^2\\,dr}{\\frac{4}{3}\\pi r^3} = \\frac{3\\,dr}{r} = \\frac{3(0.05)}{10} = 0.015 = 1.5\\%$.'
           }
         ]
       }
     },
     {
-      id: 'linea4-detail',
+      id: 'lin4-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Newton's Method**: xₙ₊₁ = xₙ - f(xₙ)/f'(xₙ)
-- **Iteratively approximates roots of f(x) = 0**
-- **Converges quickly when starting near a root**
-- **May fail if f'(xₙ) = 0 or if the initial guess is too far from the root**
-      `
-    },
-    {
-      id: 'linea4-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Regarding Newton\'s Method (Preview), which correctly describes May fail if f\'(xₙ) = 0 or if the…?',
-            options: [
-              'Iteratively approximates roots of f(x) = 0',
-              'May fail if f\'(xₙ) = 0 or if the initial guess is too far from the root',
-              'Converges quickly when starting near a root',
-              'xₙ₊₁ = xₙ - f(xₙ)/f\'(xₙ)'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — May fail if f\'(xₙ) = 0 or if the initial guess is too far from the root. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'linea4-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Newton\'s Method',
-            options: ['May fail if f\'(xₙ) = 0 or if the initial guess is too far from the root', 'Iteratively approximates roots of f(x) = 0', 'Converges quickly when starting near a root', 'xₙ₊₁ = xₙ - f(xₙ)/f\'(xₙ)']
-          },
-          {
-            label: 'Iteratively approximates roots of f(x)…',
-            options: ['Iteratively approximates roots of f(x) = 0', 'Converges quickly when starting near a root', 'May fail if f\'(xₙ) = 0 or if the initial guess is too far from the root', 'xₙ₊₁ = xₙ - f(xₙ)/f\'(xₙ)']
-          },
-          {
-            label: 'Converges quickly when starting near a…',
-            options: ['Iteratively approximates roots of f(x) = 0', 'Converges quickly when starting near a root', 'May fail if f\'(xₙ) = 0 or if the initial guess is too far from the root', 'xₙ₊₁ = xₙ - f(xₙ)/f\'(xₙ)']
-          }
-        ],
-        correctAnswers: ['xₙ₊₁ = xₙ - f(xₙ)/f\'(xₙ)', 'Iteratively approximates roots of f(x) = 0', 'Converges quickly when starting near a root'],
-        hint1: 'Think about what each concept specifically describes in Newton\'s Method (Preview).',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Newton\'s Method (Preview) describes a specific idea. Newton\'s Method: xₙ₊₁ = xₙ - f(xₙ)/f\'(xₙ). Iteratively approximates roots of f(x) = 0. Converges quickly when starting near a root.'
-      }
+      content: `### Key Takeaways — Part 4
+1. Relative error = $dy/y$
+2. For $V = \\frac{4}{3}\\pi r^3$: percentage error in $V$ = $3 \\times$ percentage error in $r$`
     }
   ]
-}
+};

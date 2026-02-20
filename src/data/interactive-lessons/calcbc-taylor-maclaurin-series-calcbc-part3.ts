@@ -1,125 +1,49 @@
-export const calcBCTaylorMaclaurinPart3Data = {
+export const calcbcTaylorPart3Data = {
   topicSlug: 'taylor-maclaurin-series-calcbc',
   sections: [
     {
-      id: 'taylo3-intro',
+      id: 'tay3-intro',
       type: 'text' as const,
-      content: `
-# Common Maclaurin Series
+      content: `# Taylor & Maclaurin Series
 
-**Part 3 of 7 — Common Maclaurin Series**
+**Part 3 of 7 — Building New Series**
 
-### 1. eˣ = Σ xⁿ/n! = 1 + x + x²/2! + x³/3! + ... (R = ∞)
+### Substitution
 
-eˣ = Σ xⁿ/n! = 1 + x + x²/2! + x³/3! + ... (R = ∞)
+$e^{x^2} = \sum \frac{(x^2)^n}{n!} = \sum \frac{x^{2n}}{n!}$
 
-### 2. sin x = Σ (-1)ⁿx²ⁿ⁺¹/(2n+1)! = x - x³/3! + x⁵/5! - ... (R = ∞)
+### Multiplication
 
-sin x = Σ (-1)ⁿx²ⁿ⁺¹/(2n+1)! = x - x³/3! + x⁵/5! - ... (R = ∞)
+$x\sin x = x\left(x - \frac{x^3}{6} + \cdots\right) = x^2 - \frac{x^4}{6} + \cdots$
 
-### 3. cos x = Σ (-1)ⁿx²ⁿ/(2n)! = 1 - x²/2! + x⁴/4! - ... (R = ∞)
+### Differentiation
 
-cos x = Σ (-1)ⁿx²ⁿ/(2n)! = 1 - x²/2! + x⁴/4! - ... (R = ∞)
+$\frac{d}{dx}\left(\frac{1}{1-x}\right) = \frac{1}{(1-x)^2} = \sum_{n=1}^{\infty} nx^{n-1}$
 
-### 4. 1/(1-x) = Σ xⁿ = 1 + x + x² + x³ + ... (R = 1)
+### Integration
 
-1/(1-x) = Σ xⁿ = 1 + x + x² + x³ + ... (R = 1)
-      `
+$\int \frac{1}{1+x^2}\,dx = \arctan x = \sum_{n=0}^{\infty} \frac{(-1)^n x^{2n+1}}{2n+1}$`
     },
     {
-      id: 'taylo3-quiz1',
+      id: 'tay3-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Building Series** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains eˣ = Σ xⁿ/n! = 1 + x + x²/2! + x³/3! +…?',
-            options: [
-              'cos x = Σ (-1)ⁿx²ⁿ/(2n)! = 1 - x²/2! + x⁴/4! - ... (R = ∞)',
-              '1/(1-x) = Σ xⁿ = 1 + x + x² + x³ + ... (R = 1)',
-              'eˣ = Σ xⁿ/n! = 1 + x + x²/2! + x³/3! + ... (R = ∞)',
-              'sin x = Σ (-1)ⁿx²ⁿ⁺¹/(2n+1)! = x - x³/3! + x⁵/5! - ... (R = ∞)'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — eˣ = Σ xⁿ/n! = 1 + x + x²/2! + x³/3! + ... (R = ∞). The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Which of the following is true about cos x = Σ (-1)ⁿx²ⁿ/(2n)! = 1 - x²/2! +…?',
-            options: [
-              'cos x = Σ (-1)ⁿx²ⁿ/(2n)! = 1 - x²/2! + x⁴/4! - ... (R = ∞)',
-              'eˣ = Σ xⁿ/n! = 1 + x + x²/2! + x³/3! + ... (R = ∞)',
-              'sin x = Σ (-1)ⁿx²ⁿ⁺¹/(2n+1)! = x - x³/3! + x⁵/5! - ... (R = ∞)',
-              '1/(1-x) = Σ xⁿ = 1 + x + x² + x³ + ... (R = 1)'
-            ],
+            question: 'Find the Maclaurin series for $\\cos(x^2)$.',
+            options: ['$\\sum_{n=0}^{\\infty} \\frac{(-1)^n x^{4n}}{(2n)!}$', '$\\sum_{n=0}^{\\infty} \\frac{(-1)^n x^{2n}}{(2n)!}$', '$\\sum_{n=0}^{\\infty} \\frac{x^{4n}}{(2n)!}$', '$\\sum_{n=0}^{\\infty} \\frac{(-1)^n x^{4n+2}}{(2n+1)!}$'],
             correctAnswer: 0,
-            explanation: 'Correct — cos x = Σ (-1)ⁿx²ⁿ/(2n)! = 1 - x²/2! + x⁴/4! - ... (R = ∞). Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'Replace $x$ with $x^2$ in $\\cos x = \\sum \\frac{(-1)^n x^{2n}}{(2n)!}$: $\\cos(x^2) = \\sum \\frac{(-1)^n (x^2)^{2n}}{(2n)!} = \\sum \\frac{(-1)^n x^{4n}}{(2n)!}$.'
           }
         ]
       }
     },
     {
-      id: 'taylo3-detail',
+      id: 'tay3-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **eˣ = Σ xⁿ/n! = 1 + x + x²/2! + x³/3! + ... (R = ∞)**
-- **sin x = Σ (-1)ⁿx²ⁿ⁺¹/(2n+1)! = x - x³/3! + x⁵/5! - ... (R = ∞)**
-- **cos x = Σ (-1)ⁿx²ⁿ/(2n)! = 1 - x²/2! + x⁴/4! - ... (R = ∞)**
-- **1/(1-x) = Σ xⁿ = 1 + x + x² + x³ + ... (R = 1)**
-      `
-    },
-    {
-      id: 'taylo3-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of these accurately represents 1/(1-x) = Σ xⁿ = 1 + x + x² + x³ + ...…?',
-            options: [
-              'eˣ = Σ xⁿ/n! = 1 + x + x²/2! + x³/3! + ... (R = ∞)',
-              'cos x = Σ (-1)ⁿx²ⁿ/(2n)! = 1 - x²/2! + x⁴/4! - ... (R = ∞)',
-              'sin x = Σ (-1)ⁿx²ⁿ⁺¹/(2n+1)! = x - x³/3! + x⁵/5! - ... (R = ∞)',
-              '1/(1-x) = Σ xⁿ = 1 + x + x² + x³ + ... (R = 1)'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — 1/(1-x) = Σ xⁿ = 1 + x + x² + x³ + ... (R = 1). Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'taylo3-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'eˣ = Σ xⁿ/n! = 1 + x + x²/2! + x³/3! +…',
-            options: ['1/(1-x) = Σ xⁿ = 1 + x + x² + x³ + ... (R = 1)', 'sin x = Σ (-1)ⁿx²ⁿ⁺¹/(2n+1)! = x - x³/3! + x⁵/5! - ... (R = ∞)', 'eˣ = Σ xⁿ/n! = 1 + x + x²/2! + x³/3! + ... (R = ∞)', 'cos x = Σ (-1)ⁿx²ⁿ/(2n)! = 1 - x²/2! + x⁴/4! - ... (R = ∞)']
-          },
-          {
-            label: 'sin x = Σ (-1)ⁿx²ⁿ⁺¹/(2n+1)! = x -…',
-            options: ['sin x = Σ (-1)ⁿx²ⁿ⁺¹/(2n+1)! = x - x³/3! + x⁵/5! - ... (R = ∞)', '1/(1-x) = Σ xⁿ = 1 + x + x² + x³ + ... (R = 1)', 'eˣ = Σ xⁿ/n! = 1 + x + x²/2! + x³/3! + ... (R = ∞)', 'cos x = Σ (-1)ⁿx²ⁿ/(2n)! = 1 - x²/2! + x⁴/4! - ... (R = ∞)']
-          },
-          {
-            label: 'cos x = Σ (-1)ⁿx²ⁿ/(2n)! = 1 - x²/2! +…',
-            options: ['sin x = Σ (-1)ⁿx²ⁿ⁺¹/(2n+1)! = x - x³/3! + x⁵/5! - ... (R = ∞)', 'cos x = Σ (-1)ⁿx²ⁿ/(2n)! = 1 - x²/2! + x⁴/4! - ... (R = ∞)', '1/(1-x) = Σ xⁿ = 1 + x + x² + x³ + ... (R = 1)', 'eˣ = Σ xⁿ/n! = 1 + x + x²/2! + x³/3! + ... (R = ∞)']
-          }
-        ],
-        correctAnswers: ['eˣ = Σ xⁿ/n! = 1 + x + x²/2! + x³/3! + ... (R = ∞)', 'sin x = Σ (-1)ⁿx²ⁿ⁺¹/(2n+1)! = x - x³/3! + x⁵/5! - ... (R = ∞)', 'cos x = Σ (-1)ⁿx²ⁿ/(2n)! = 1 - x²/2! + x⁴/4! - ... (R = ∞)'],
-        hint1: 'Think about what each concept specifically describes in Common Maclaurin Series.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Common Maclaurin Series describes a specific idea. eˣ = Σ xⁿ/n! = 1 + x + x²/2! + x³/3! + ... (R = ∞). sin x = Σ (-1)ⁿx²ⁿ⁺¹/(2n+1)! = x - x³/3! + x⁵/5! - ... (R = ∞). cos x = Σ (-1)ⁿx²ⁿ/(2n)! = 1 - x²/2! + x⁴/4! - ... (R = ∞).'
-      }
+      content: `### Key Takeaways — Part 3
+Substitution, multiplication, differentiation, and integration all apply term-by-term.`
     }
   ]
-}
+};

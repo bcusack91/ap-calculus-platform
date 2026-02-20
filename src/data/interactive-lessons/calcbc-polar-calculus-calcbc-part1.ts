@@ -1,125 +1,46 @@
-export const calcBCPolarPart1Data = {
+export const calcbcPolarPart1Data = {
   topicSlug: 'polar-calculus-calcbc',
   sections: [
     {
       id: 'polar1-intro',
       type: 'text' as const,
-      content: `
-# ∮ Polar Calculus
+      content: `# Polar Calculus
 
-**Part 1 of 7 — Polar Coordinates Review**
+**Part 1 of 7 — Polar Coordinates & Slopes**
 
-### 1. Polar coordinates
+### Polar ↔ Rectangular Conversion
 
-(r, θ); x = r cos θ, y = r sin θ
+$$x = r\cos\theta, \quad y = r\sin\theta$$
+$$r^2 = x^2 + y^2, \quad \tan\theta = y/x$$
 
-### 2. r = f(θ) defines a polar curve
+### Slope of a Polar Curve
 
-r = f(θ) defines a polar curve
+For $r = f(\theta)$:
 
-### 3. Common curves
+$$\frac{dy}{dx} = \frac{\frac{dr}{d\theta}\sin\theta + r\cos\theta}{\frac{dr}{d\theta}\cos\theta - r\sin\theta}$$
 
-circles, cardioids, limaçons, roses, lemniscates
-
-### 4. r can be negative
-
-the point is reflected through the origin
-      `
+(This comes from the chain rule: $x = r\cos\theta$, $y = r\sin\theta$)`
     },
     {
       id: 'polar1-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Polar Slopes** 🎯',
       exercise: {
         questions: [
           {
-            question: 'What does "Polar coordinates" refer to in calculus?',
-            options: [
-              'circles, cardioids, limaçons, roses, lemniscates',
-              'the point is reflected through the origin',
-              'r = f(θ) defines a polar curve',
-              '(r, θ); x = r cos θ, y = r sin θ'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Polar coordinates: (r, θ); x = r cos θ, y = r sin θ. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Which of the following is true about Common curves?',
-            options: [
-              '(r, θ); x = r cos θ, y = r sin θ',
-              'r = f(θ) defines a polar curve',
-              'the point is reflected through the origin',
-              'circles, cardioids, limaçons, roses, lemniscates'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Common curves: circles, cardioids, limaçons, roses, lemniscates. Be careful to distinguish between the different concepts in this topic.'
+            question: 'For $r = 2$, find $\\frac{dy}{dx}$ at $\\theta = \\pi/4$.',
+            options: ['$-1$', '$1$', '$0$', 'Undefined'],
+            correctAnswer: 0,
+            explanation: '$dr/d\\theta = 0$. $\\frac{dy}{dx} = \\frac{0 \\cdot \\sin\\theta + 2\\cos\\theta}{0 \\cdot \\cos\\theta - 2\\sin\\theta} = \\frac{2\\cos\\theta}{-2\\sin\\theta} = -\\cot\\theta$. At $\\theta = \\pi/4$: $-\\cot(\\pi/4) = -1$.'
           }
         ]
       }
     },
     {
-      id: 'polar1-detail',
+      id: 'polar1-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Polar coordinates**: (r, θ); x = r cos θ, y = r sin θ
-- **r = f(θ) defines a polar curve**
-- **Common curves**: circles, cardioids, limaçons, roses, lemniscates
-- **r can be negative**: the point is reflected through the origin
-      `
-    },
-    {
-      id: 'polar1-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which statement about r can be negative is correct?',
-            options: [
-              'r = f(θ) defines a polar curve',
-              'the point is reflected through the origin',
-              'circles, cardioids, limaçons, roses, lemniscates',
-              '(r, θ); x = r cos θ, y = r sin θ'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — r can be negative: the point is reflected through the origin. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'polar1-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Polar coordinates',
-            options: ['circles, cardioids, limaçons, roses, lemniscates', 'r = f(θ) defines a polar curve', 'the point is reflected through the origin', '(r, θ); x = r cos θ, y = r sin θ']
-          },
-          {
-            label: 'Common curves',
-            options: ['circles, cardioids, limaçons, roses, lemniscates', 'the point is reflected through the origin', '(r, θ); x = r cos θ, y = r sin θ', 'r = f(θ) defines a polar curve']
-          },
-          {
-            label: 'r can be negative',
-            options: ['the point is reflected through the origin', 'circles, cardioids, limaçons, roses, lemniscates', '(r, θ); x = r cos θ, y = r sin θ', 'r = f(θ) defines a polar curve']
-          }
-        ],
-        correctAnswers: ['(r, θ); x = r cos θ, y = r sin θ', 'circles, cardioids, limaçons, roses, lemniscates', 'the point is reflected through the origin'],
-        hint1: 'Think about what each concept specifically describes in ∮ Polar Calculus.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in ∮ Polar Calculus describes a specific idea. Polar coordinates: (r, θ); x = r cos θ, y = r sin θ. Common curves: circles, cardioids, limaçons, roses, lemniscates. r can be negative: the point is reflected through the origin.'
-      }
+      content: `### Key Takeaways — Part 1
+The slope formula uses the product rule on $x = r\\cos\\theta$ and $y = r\\sin\\theta$.`
     }
   ]
-}
+};

@@ -1,125 +1,50 @@
-export const calcABVolumesPart7Data = {
+export const calcabVolumesPart7Data = {
   topicSlug: 'volumes-of-revolution-calcab',
   sections: [
     {
-      id: 'volum7-intro',
+      id: 'vol7-intro',
       type: 'text' as const,
-      content: `
-# Review & Applications
+      content: `# Volumes of Revolution \u2014 Review
 
-**Part 7 of 7 — Review & Applications**
+**Part 7 of 7 \u2014 Comprehensive Assessment**
 
-### 1. Sketch the region and axis of revolution
-
-Sketch the region and axis of revolution
-
-### 2. Determine if you need disks, washers, or known cross-sections
-
-Determine if you need disks, washers, or known cross-sections
-
-### 3. Identify the correct radii and bounds of integration
-
-Identify the correct radii and bounds of integration
-
-### 4. Integrate with respect to the variable parallel to the axis of revolution
-
-Integrate with respect to the variable parallel to the axis of revolution
-      `
+| Method | Formula |
+|--------|---------|
+| Disk | $V = \\pi\\int [R]^2\\,dx$ |
+| Washer | $V = \\pi\\int [R^2 - r^2]\\,dx$ |
+| Cross-section | $V = \\int A(x)\\,dx$ |`
     },
     {
-      id: 'volum7-quiz1',
+      id: 'vol7-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Final Assessment** \ud83c\udfaf',
       exercise: {
         questions: [
           {
-            question: 'What does "Sketch the region and axis of revolution" refer to in calculus?',
-            options: [
-              'Identify the correct radii and bounds of integration',
-              'Integrate with respect to the variable parallel to the axis of revolution',
-              'Sketch the region and axis of revolution',
-              'Determine if you need disks, washers, or known cross-sections'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Sketch the region and axis of revolution. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Select the statement that correctly describes Identify the correct radii and bounds…:',
-            options: [
-              'Identify the correct radii and bounds of integration',
-              'Integrate with respect to the variable parallel to the axis of revolution',
-              'Determine if you need disks, washers, or known cross-sections',
-              'Sketch the region and axis of revolution'
-            ],
+            question: 'Rotate $y = x^3$ from $x = 0$ to $x = 1$ about the $x$-axis. Find the volume.',
+            options: ['$\\frac{\\pi}{7}$', '$\\frac{\\pi}{4}$', '$\\frac{2\\pi}{7}$', '$\\frac{\\pi}{3}$'],
             correctAnswer: 0,
-            explanation: 'Correct — Identify the correct radii and bounds of integration. Be careful to distinguish between the different concepts in this topic.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'volum7-detail',
-      type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Sketch the region and axis of revolution**
-- **Determine if you need disks, washers, or known cross-sections**
-- **Identify the correct radii and bounds of integration**
-- **Integrate with respect to the variable parallel to the axis of revolution**
-      `
-    },
-    {
-      id: 'volum7-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
+            explanation: '$V = \\pi\\int_0^1 x^6\\,dx = \\pi[\\frac{x^7}{7}]_0^1 = \\frac{\\pi}{7}$.'
+          },
           {
-            question: 'Which of these accurately represents Integrate with respect to the variable…?',
-            options: [
-              'Sketch the region and axis of revolution',
-              'Integrate with respect to the variable parallel to the axis of revolution',
-              'Determine if you need disks, washers, or known cross-sections',
-              'Identify the correct radii and bounds of integration'
-            ],
+            question: 'Which method has cross-sections that are rings (annuli)?',
+            options: ['Disk', 'Washer', 'Shell', 'Cross-section'],
             correctAnswer: 1,
-            explanation: 'Correct — Integrate with respect to the variable parallel to the axis of revolution. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: 'The washer method produces ring-shaped cross-sections with outer radius $R$ and inner radius $r$.'
           }
         ]
       }
     },
     {
-      id: 'volum7-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Sketch the region and axis of revolution',
-            options: ['Identify the correct radii and bounds of integration', 'Determine if you need disks, washers, or known cross-sections', 'Sketch the region and axis of revolution', 'Integrate with respect to the variable parallel to the axis of revolution']
-          },
-          {
-            label: 'Determine if you need disks, washers,…',
-            options: ['Integrate with respect to the variable parallel to the axis of revolution', 'Determine if you need disks, washers, or known cross-sections', 'Identify the correct radii and bounds of integration', 'Sketch the region and axis of revolution']
-          },
-          {
-            label: 'Identify the correct radii and bounds…',
-            options: ['Identify the correct radii and bounds of integration', 'Sketch the region and axis of revolution', 'Determine if you need disks, washers, or known cross-sections', 'Integrate with respect to the variable parallel to the axis of revolution']
-          }
-        ],
-        correctAnswers: ['Sketch the region and axis of revolution', 'Determine if you need disks, washers, or known cross-sections', 'Identify the correct radii and bounds of integration'],
-        hint1: 'Think about what each concept specifically describes in Review & Applications.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Review & Applications describes a specific idea. Sketch the region and axis of revolution. Determine if you need disks, washers, or known cross-sections. Identify the correct radii and bounds of integration.'
-      }
+      id: 'vol7-summary',
+      type: 'text' as const,
+      content: `### Volumes of Revolution \u2014 Complete! \u2705
+
+You have mastered:
+- \u2705 Disk method (single curve rotation)
+- \u2705 Washer method (two curves, hole in middle)
+- \u2705 Rotation about non-standard axes
+- \u2705 Cross-sectional volumes with known shapes`
     }
   ]
-}
+};

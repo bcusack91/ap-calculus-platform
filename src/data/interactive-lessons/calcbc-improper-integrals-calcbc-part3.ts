@@ -1,121 +1,50 @@
-export const calcBCImproperPart3Data = {
+export const calcbcImproperPart3Data = {
   topicSlug: 'improper-integrals-calcbc',
   sections: [
     {
-      id: 'impro3-intro',
+      id: 'imp3-intro',
       type: 'text' as const,
-      content: `
-# Convergence & Divergence
+      content: `# Improper Integrals
 
-**Part 3 of 7 — Convergence & Divergence**
+**Part 3 of 7 — Discontinuous Integrands (Type 2)**
 
-### 1. If the limit exists and is finite, the integral converges
+### Type 2: Vertical Asymptotes
 
-If the limit exists and is finite, the integral converges
+If $f$ has a vertical asymptote at $x = c$ inside $[a, b]$:
 
-### 2. If the limit is ±∞ or doesn't exist, the integral diverges
+$$\int_a^b f(x)\,dx = \lim_{t \to c^-}\int_a^t f(x)\,dx + \lim_{t \to c^+}\int_t^b f(x)\,dx$$
 
-If the limit is ±∞ or doesn't exist, the integral diverges
+### Example
 
-### 3. ∫₁^∞ 1/xᵖ dx
-
-converges if p > 1, diverges if p ≤ 1 (p-series test)
-
-### 4. ∫₀¹ 1/xᵖ dx
-
-converges if p < 1, diverges if p ≥ 1
-      `
+$\int_0^1 \frac{1}{\sqrt{x}}\,dx = \lim_{t \to 0^+}\int_t^1 x^{-1/2}\,dx = \lim_{t \to 0^+}[2\sqrt{x}]_t^1 = 2 - 0 = 2$`
     },
     {
-      id: 'impro3-quiz1',
+      id: 'imp3-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Discontinuous Integrands** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes If the limit exists and is finite, the…?',
-            options: [
-              'If the limit exists and is finite, the integral converges',
-              'converges if p < 1, diverges if p ≥ 1',
-              'converges if p > 1, diverges if p ≤ 1 (p-series test)',
-              'If the limit is ±∞ or doesn\'t exist, the integral diverges'
-            ],
+            question: 'Does $\\int_0^1 \\frac{1}{x}\\,dx$ converge?',
+            options: ['No, it diverges', 'Yes, to $1$', 'Yes, to $\\ln 1 = 0$', 'Yes, to $\\infty$'],
             correctAnswer: 0,
-            explanation: 'Correct — If the limit exists and is finite, the integral converges. The other options describe different concepts from this topic.'
+            explanation: '$\\lim_{t \\to 0^+}[\\ln x]_t^1 = 0 - \\lim_{t \\to 0^+}\\ln t = -(-\\infty) = \\infty$. Diverges.'
           },
           {
-            question: 'In the context of Convergence & Divergence, which explains ∫₁^∞ 1/xᵖ dx?',
-            options: [
-              'If the limit exists and is finite, the integral converges',
-              'If the limit is ±∞ or doesn\'t exist, the integral diverges',
-              'converges if p < 1, diverges if p ≥ 1',
-              'converges if p > 1, diverges if p ≤ 1 (p-series test)'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — ∫₁^∞ 1/xᵖ dx: converges if p > 1, diverges if p ≤ 1 (p-series test). Be careful to distinguish between the different concepts in this topic.'
+            question: 'Evaluate $\\int_0^4 \\frac{1}{\\sqrt{4-x}}\\,dx$.',
+            options: ['$4$', '$2$', '$\\infty$', '$0$'],
+            correctAnswer: 0,
+            explanation: 'Asymptote at $x = 4$. $\\lim_{t \\to 4^-}[-2\\sqrt{4-x}]_0^t = \\lim_{t \\to 4^-}(-2\\sqrt{4-t}+2\\cdot 2) = 0 + 4 = 4$.'
           }
         ]
       }
     },
     {
-      id: 'impro3-detail',
+      id: 'imp3-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **If the limit exists and is finite, the integral converges**
-- **If the limit is ±∞ or doesn't exist, the integral diverges**
-- **∫₁^∞ 1/xᵖ dx**: converges if p > 1, diverges if p ≤ 1 (p-series test)
-- **∫₀¹ 1/xᵖ dx**: converges if p < 1, diverges if p ≥ 1
-      `
-    },
-    {
-      id: 'impro3-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which statement about ∫₀¹ 1/xᵖ dx is correct?',
-            options: [
-              'If the limit is ±∞ or doesn\'t exist, the integral diverges',
-              'If the limit exists and is finite, the integral converges',
-              'converges if p > 1, diverges if p ≤ 1 (p-series test)',
-              'converges if p < 1, diverges if p ≥ 1'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — ∫₀¹ 1/xᵖ dx: converges if p < 1, diverges if p ≥ 1. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'impro3-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: '∫₁^∞ 1/xᵖ dx',
-            options: ['converges if p > 1, diverges if p ≤ 1 (p-series test)', 'If the limit is ±∞ or doesn\'t exist, the integral diverges', 'converges if p < 1, diverges if p ≥ 1', 'If the limit exists and is finite, the integral converges']
-          },
-          {
-            label: '∫₀¹ 1/xᵖ dx',
-            options: ['converges if p < 1, diverges if p ≥ 1', 'If the limit exists and is finite, the integral converges', 'converges if p > 1, diverges if p ≤ 1 (p-series test)', 'If the limit is ±∞ or doesn\'t exist, the integral diverges']
-          }
-        ],
-        correctAnswers: ['converges if p > 1, diverges if p ≤ 1 (p-series test)', 'converges if p < 1, diverges if p ≥ 1'],
-        hint1: 'Think about what each concept specifically describes in Convergence & Divergence.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Convergence & Divergence describes a specific idea. ∫₁^∞ 1/xᵖ dx: converges if p > 1, diverges if p ≤ 1 (p-series test). ∫₀¹ 1/xᵖ dx: converges if p < 1, diverges if p ≥ 1.'
-      }
+      content: `### Key Takeaways — Part 3
+1. Check for vertical asymptotes inside the interval
+2. Split and use limits from the appropriate side`
     }
   ]
-}
+};

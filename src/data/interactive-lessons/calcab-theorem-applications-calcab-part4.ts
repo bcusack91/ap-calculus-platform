@@ -1,125 +1,44 @@
-export const calcABTheoremsPart4Data = {
+export const calcabTheoremsPart4Data = {
   topicSlug: 'theorem-applications-calcab',
   sections: [
     {
-      id: 'theor4-intro',
+      id: 'thm4-intro',
       type: 'text' as const,
-      content: `
-# Existence Theorems Summary
+      content: `# Theorem Applications
 
-**Part 4 of 7 — Existence Theorems Summary**
+**Part 4 of 7 — Rolle's Theorem & MVT Applications**
 
-### 1. All three theorems (EVT, MVT, IVT) are existence theorems
+### Rolle's Theorem (Special Case of MVT)
 
-All three theorems (EVT, MVT, IVT) are existence theorems
+If $f$ is continuous on $[a, b]$, differentiable on $(a, b)$, and $f(a) = f(b)$, then there exists $c \in (a, b)$ such that $f'(c) = 0$.
 
-### 2. They guarantee SOMETHING EXISTS but don't give a formula to find it
+### MVT for Speed
 
-They guarantee SOMETHING EXISTS but don't give a formula to find it
+If a car travels 120 miles in 2 hours, then at some moment the speedometer reads exactly 60 mph.
 
-### 3. Common thread
-
-continuity (and differentiability for MVT) is essential
-
-### 4. Know when to apply each theorem based on what you need to prove
-
-Know when to apply each theorem based on what you need to prove
-      `
+This is MVT applied: average speed = instantaneous speed at some point!`
     },
     {
-      id: 'theor4-quiz1',
+      id: 'thm4-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Rolle\'s Theorem & MVT Apps** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes All three theorems (EVT, MVT, IVT) are…?',
-            options: [
-              'They guarantee SOMETHING EXISTS but don\'t give a formula to find it',
-              'All three theorems (EVT, MVT, IVT) are existence theorems',
-              'continuity (and differentiability for MVT) is essential',
-              'Know when to apply each theorem based on what you need to prove'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — All three theorems (EVT, MVT, IVT) are existence theorems. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Select the statement that correctly describes Common thread:',
-            options: [
-              'Know when to apply each theorem based on what you need to prove',
-              'continuity (and differentiability for MVT) is essential',
-              'All three theorems (EVT, MVT, IVT) are existence theorems',
-              'They guarantee SOMETHING EXISTS but don\'t give a formula to find it'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Common thread: continuity (and differentiability for MVT) is essential. Be careful to distinguish between the different concepts in this topic.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'theor4-detail',
-      type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **All three theorems (EVT, MVT, IVT) are existence theorems**
-- **They guarantee SOMETHING EXISTS but don't give a formula to find it**
-- **Common thread**: continuity (and differentiability for MVT) is essential
-- **Know when to apply each theorem based on what you need to prove**
-      `
-    },
-    {
-      id: 'theor4-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of these accurately represents Know when to apply each theorem based…?',
-            options: [
-              'Know when to apply each theorem based on what you need to prove',
-              'They guarantee SOMETHING EXISTS but don\'t give a formula to find it',
-              'continuity (and differentiability for MVT) is essential',
-              'All three theorems (EVT, MVT, IVT) are existence theorems'
-            ],
+            question: '$f(0) = 3$ and $f(4) = 3$, $f$ is continuous on $[0,4]$ and differentiable on $(0,4)$. What can we conclude?',
+            options: ['$f\'(c) = 0$ for some $c \\in (0, 4)$', '$f$ is constant', '$f$ has a max at $c$', '$f\'(c) = 3$'],
             correctAnswer: 0,
-            explanation: 'Correct — Know when to apply each theorem based on what you need to prove. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: 'By Rolle\'s Theorem: $f(0) = f(4) = 3$, so $f\'(c) = 0$ for some $c \\in (0, 4)$.'
           }
         ]
       }
     },
     {
-      id: 'theor4-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'All three theorems (EVT, MVT, IVT) are…',
-            options: ['They guarantee SOMETHING EXISTS but don\'t give a formula to find it', 'continuity (and differentiability for MVT) is essential', 'All three theorems (EVT, MVT, IVT) are existence theorems', 'Know when to apply each theorem based on what you need to prove']
-          },
-          {
-            label: 'They guarantee SOMETHING EXISTS but…',
-            options: ['They guarantee SOMETHING EXISTS but don\'t give a formula to find it', 'continuity (and differentiability for MVT) is essential', 'All three theorems (EVT, MVT, IVT) are existence theorems', 'Know when to apply each theorem based on what you need to prove']
-          },
-          {
-            label: 'Common thread',
-            options: ['They guarantee SOMETHING EXISTS but don\'t give a formula to find it', 'Know when to apply each theorem based on what you need to prove', 'All three theorems (EVT, MVT, IVT) are existence theorems', 'continuity (and differentiability for MVT) is essential']
-          }
-        ],
-        correctAnswers: ['All three theorems (EVT, MVT, IVT) are existence theorems', 'They guarantee SOMETHING EXISTS but don\'t give a formula to find it', 'continuity (and differentiability for MVT) is essential'],
-        hint1: 'Think about what each concept specifically describes in Existence Theorems Summary.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Existence Theorems Summary describes a specific idea. All three theorems (EVT, MVT, IVT) are existence theorems. They guarantee SOMETHING EXISTS but don\'t give a formula to find it. Common thread: continuity (and differentiability for MVT) is essential.'
-      }
+      id: 'thm4-summary',
+      type: 'text' as const,
+      content: `### Key Takeaways — Part 4
+1. Rolle's Theorem: same endpoints → horizontal tangent somewhere
+2. MVT has real-world applications (speed, rates)`
     }
   ]
-}
+};

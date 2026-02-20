@@ -1,121 +1,42 @@
-export const calcBCReviewConnectionsPart3Data = {
+export const calcbcReviewPart3Data = {
   topicSlug: 'review-connections-calcbc',
   sections: [
     {
-      id: 'revie3-intro',
+      id: 'rev3-intro',
       type: 'text' as const,
-      content: `
-# Parametric, Polar & Vector Unity
+      content: `# BC Review
 
-**Part 3 of 7 — Parametric, Polar & Vector Unity**
+**Part 3 of 7 — Integration Techniques Summary**
 
-### 1. Parametric, polar, and vector functions all describe curves in the plane
+### Integration Toolkit
 
-Parametric, polar, and vector functions all describe curves in the plane
-
-### 2. Each uses different coordinates but shares calculus operations (derivatives, integrals)
-
-Each uses different coordinates but shares calculus operations (derivatives, integrals)
-
-### 3. Arc length formula unifies all three
-
-∫√[(dx)² + (dy)²]
-
-### 4. Area formulas differ
-
-rectangular, polar (½∫r²dθ), parametric
-      `
+1. **Direct**: power, trig, exponential
+2. **u-Substitution**: $\int f(g(x))g'(x)\,dx$
+3. **Integration by Parts** (BC): $\int u\,dv = uv - \int v\,du$
+4. **Partial Fractions** (BC): for rational functions
+5. **Improper Integrals** (BC): limits at $\pm\infty$ or discontinuities
+6. **Series Integration** (BC): term-by-term for power series`
     },
     {
-      id: 'revie3-quiz1',
+      id: 'rev3-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Integration** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Parametric, polar, and vector functions…?',
-            options: [
-              '∫√[(dx)² + (dy)²]',
-              'rectangular, polar (½∫r²dθ), parametric',
-              'Each uses different coordinates but shares calculus operations (derivatives, integrals)',
-              'Parametric, polar, and vector functions all describe curves in the plane'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Parametric, polar, and vector functions all describe curves in the plane. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Select the statement that correctly describes Arc length formula unifies all three:',
-            options: [
-              'Each uses different coordinates but shares calculus operations (derivatives, integrals)',
-              'Parametric, polar, and vector functions all describe curves in the plane',
-              'rectangular, polar (½∫r²dθ), parametric',
-              '∫√[(dx)² + (dy)²]'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Arc length formula unifies all three: ∫√[(dx)² + (dy)²]. Be careful to distinguish between the different concepts in this topic.'
+            question: '$\\int \\frac{2x}{x^2+1}\\,dx = $',
+            options: ['$\\ln(x^2+1) + C$', '$\\arctan x + C$', '$2\\arctan x + C$', '$x^2/(x^2+1) + C$'],
+            correctAnswer: 0,
+            explanation: '$u = x^2 + 1$, $du = 2x\\,dx$. $\\int du/u = \\ln|u| + C = \\ln(x^2+1) + C$.'
           }
         ]
       }
     },
     {
-      id: 'revie3-detail',
+      id: 'rev3-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Parametric, polar, and vector functions all describe curves in the plane**
-- **Each uses different coordinates but shares calculus operations (derivatives, integrals)**
-- **Arc length formula unifies all three**: ∫√[(dx)² + (dy)²]
-- **Area formulas differ**: rectangular, polar (½∫r²dθ), parametric
-      `
-    },
-    {
-      id: 'revie3-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Regarding Parametric, Polar & Vector Unity, which correctly describes Area formulas differ?',
-            options: [
-              'Each uses different coordinates but shares calculus operations (derivatives, integrals)',
-              'Parametric, polar, and vector functions all describe curves in the plane',
-              'rectangular, polar (½∫r²dθ), parametric',
-              '∫√[(dx)² + (dy)²]'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Area formulas differ: rectangular, polar (½∫r²dθ), parametric. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'revie3-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Arc length formula unifies all three',
-            options: ['Parametric, polar, and vector functions all describe curves in the plane', 'Each uses different coordinates but shares calculus operations (derivatives, integrals)', '∫√[(dx)² + (dy)²]', 'rectangular, polar (½∫r²dθ), parametric']
-          },
-          {
-            label: 'Area formulas differ',
-            options: ['rectangular, polar (½∫r²dθ), parametric', 'Parametric, polar, and vector functions all describe curves in the plane', '∫√[(dx)² + (dy)²]', 'Each uses different coordinates but shares calculus operations (derivatives, integrals)']
-          }
-        ],
-        correctAnswers: ['∫√[(dx)² + (dy)²]', 'rectangular, polar (½∫r²dθ), parametric'],
-        hint1: 'Think about what each concept specifically describes in Parametric, Polar & Vector Unity.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Parametric, Polar & Vector Unity describes a specific idea. Arc length formula unifies all three: ∫√[(dx)² + (dy)²]. Area formulas differ: rectangular, polar (½∫r²dθ), parametric.'
-      }
+      content: `### Key Takeaways — Part 3
+Master all six integration techniques. Know when to use each.`
     }
   ]
-}
+};

@@ -1,125 +1,51 @@
-export const calcBCPolarPart4Data = {
+export const calcbcPolarPart4Data = {
   topicSlug: 'polar-calculus-calcbc',
   sections: [
     {
       id: 'polar4-intro',
       type: 'text' as const,
-      content: `
-# Arc Length in Polar
+      content: `# Polar Calculus
 
-**Part 4 of 7 — Arc Length in Polar**
+**Part 4 of 7 — Common Polar Curves**
 
-### 1. Arc length
+### Gallery of Polar Curves
 
-L = ∫_α^β √[r² + (dr/dθ)²] dθ
-
-### 2. Derived from the parametric arc length formula
-
-Derived from the parametric arc length formula
-
-### 3. r² + (dr/dθ)² under the square root
-
-r² + (dr/dθ)² under the square root
-
-### 4. Can be quite complex — often requires numerical methods on AP exam
-
-Can be quite complex — often requires numerical methods on AP exam
-      `
+| Equation | Shape |
+|----------|-------|
+| $r = a$ | Circle (radius $a$) |
+| $r = a\\cos\\theta$ | Circle through origin |
+| $r = a\\sin\\theta$ | Circle through origin |
+| $r = 1 + \\cos\\theta$ | Cardioid |
+| $r = 1 + 2\\cos\\theta$ | Limaçon with inner loop |
+| $r = \\cos(2\\theta)$ | Rose (4 petals) |
+| $r = \\cos(3\\theta)$ | Rose (3 petals) |`
     },
     {
       id: 'polar4-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Polar Curve ID** 🎯',
       exercise: {
         questions: [
           {
-            question: 'What does "Arc length" refer to in calculus?',
-            options: [
-              'r² + (dr/dθ)² under the square root',
-              'Derived from the parametric arc length formula',
-              'L = ∫_α^β √[r² + (dr/dθ)²] dθ',
-              'Can be quite complex — often requires numerical methods on AP exam'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Arc length: L = ∫_α^β √[r² + (dr/dθ)²] dθ. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'In the context of Arc Length in Polar, which explains r² + (dr/dθ)² under the square root?',
-            options: [
-              'r² + (dr/dθ)² under the square root',
-              'Can be quite complex — often requires numerical methods on AP exam',
-              'L = ∫_α^β √[r² + (dr/dθ)²] dθ',
-              'Derived from the parametric arc length formula'
-            ],
+            question: 'How many petals does $r = \\sin(4\\theta)$ have?',
+            options: ['$8$', '$4$', '$2$', '$16$'],
             correctAnswer: 0,
-            explanation: 'Correct — r² + (dr/dθ)² under the square root. Be careful to distinguish between the different concepts in this topic.'
+            explanation: '$r = \\sin(n\\theta)$ has $2n$ petals when $n$ is even. $2(4) = 8$ petals.'
+          },
+          {
+            question: 'Area of one petal of $r = \\cos(2\\theta)$ equals:',
+            options: ['$\\frac{\\pi}{8}$', '$\\frac{\\pi}{4}$', '$\\frac{\\pi}{2}$', '$\\pi$'],
+            correctAnswer: 0,
+            explanation: 'One petal from $-\\pi/4$ to $\\pi/4$. $A = \\frac{1}{2}\\int_{-\\pi/4}^{\\pi/4}\\cos^2(2\\theta)\\,d\\theta = \\frac{1}{2} \\cdot \\frac{\\pi}{4} = \\frac{\\pi}{8}$.'
           }
         ]
       }
     },
     {
-      id: 'polar4-detail',
+      id: 'polar4-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Arc length**: L = ∫_α^β √[r² + (dr/dθ)²] dθ
-- **Derived from the parametric arc length formula**
-- **r² + (dr/dθ)² under the square root**
-- **Can be quite complex — often requires numerical methods on AP exam**
-      `
-    },
-    {
-      id: 'polar4-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which statement about Can be quite complex — often requires… is correct?',
-            options: [
-              'Derived from the parametric arc length formula',
-              'L = ∫_α^β √[r² + (dr/dθ)²] dθ',
-              'Can be quite complex — often requires numerical methods on AP exam',
-              'r² + (dr/dθ)² under the square root'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Can be quite complex — often requires numerical methods on AP exam. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'polar4-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Arc length',
-            options: ['Can be quite complex — often requires numerical methods on AP exam', 'r² + (dr/dθ)² under the square root', 'Derived from the parametric arc length formula', 'L = ∫_α^β √[r² + (dr/dθ)²] dθ']
-          },
-          {
-            label: 'Derived from the parametric arc length…',
-            options: ['Derived from the parametric arc length formula', 'r² + (dr/dθ)² under the square root', 'L = ∫_α^β √[r² + (dr/dθ)²] dθ', 'Can be quite complex — often requires numerical methods on AP exam']
-          },
-          {
-            label: 'r² + (dr/dθ)² under the square root',
-            options: ['Can be quite complex — often requires numerical methods on AP exam', 'r² + (dr/dθ)² under the square root', 'L = ∫_α^β √[r² + (dr/dθ)²] dθ', 'Derived from the parametric arc length formula']
-          }
-        ],
-        correctAnswers: ['L = ∫_α^β √[r² + (dr/dθ)²] dθ', 'Derived from the parametric arc length formula', 'r² + (dr/dθ)² under the square root'],
-        hint1: 'Think about what each concept specifically describes in Arc Length in Polar.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Arc Length in Polar describes a specific idea. Arc length: L = ∫_α^β √[r² + (dr/dθ)²] dθ. Derived from the parametric arc length formula. r² + (dr/dθ)² under the square root.'
-      }
+      content: `### Key Takeaways — Part 4
+Know the standard polar curves for the AP exam.`
     }
   ]
-}
+};

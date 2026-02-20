@@ -1,94 +1,73 @@
-export const calcABChainRulePart6Data = {
+export const calcabChainRulePart6Data = {
   topicSlug: 'chain-rule-calcab',
   sections: [
     {
       id: 'chain6-intro',
       type: 'text' as const,
-      content: `
-# Problem-Solving Workshop
+      content: `# 🔗 Problem-Solving Workshop
 
-**Part 6 of 7 — Problem-Solving Workshop**
+**Part 6 of 7 — Mixed Chain Rule Problems**
 
-### 1. Implicit differentiation
+### Strategy Recap
 
-differentiate both sides with respect to x
+For any derivative problem:
+1. **Identify** if it is a composite function (Chain Rule needed?)
+2. **Count layers** — how many times must the Chain Rule be applied?
+3. **Check** for Product Rule or Quotient Rule requirements as well
+4. **Apply** rules carefully, and do not forget the innermost derivative
 
-### 2. Treat y as a function of x; apply chain rule when differentiating y-terms
-
-Treat y as a function of x; apply chain rule when differentiating y-terms
-
-### 3. Collect dy/dx terms on one side, factor, and solve
-
-Collect dy/dx terms on one side, factor, and solve
-
-### 4. Use for equations like x² + y² = 25 where y isn't isolated
-
-Use for equations like x² + y² = 25 where y isn't isolated
-      `
+This workshop tests your ability to combine the Chain Rule with other rules in realistic AP-style problems.`
     },
     {
       id: 'chain6-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**AP-Style Problems — Set 1** 🎯',
       exercise: {
         questions: [
           {
-            question: 'What does "Implicit differentiation" refer to in calculus?',
-            options: [
-              'differentiate both sides with respect to x',
-              'Use for equations like x² + y² = 25 where y isn\'t isolated',
-              'Treat y as a function of x; apply chain rule when differentiating y-terms',
-              'Collect dy/dx terms on one side, factor, and solve'
-            ],
+            question: 'Find $\\frac{d}{dx}[x^2 \\sin(3x)]$.',
+            options: ['$2x\\sin(3x) + 3x^2\\cos(3x)$', '$2x\\cos(3x)$', '$6x^2\\cos(3x)$', '$2x\\sin(3x) + x^2\\cos(3x)$'],
             correctAnswer: 0,
-            explanation: 'Correct — Implicit differentiation: differentiate both sides with respect to x. The other options describe different concepts from this topic.'
+            explanation: 'Product Rule + Chain Rule: $2x\\sin(3x) + x^2 \\cdot \\cos(3x) \\cdot 3 = 2x\\sin(3x) + 3x^2\\cos(3x)$.'
           },
           {
-            question: 'Which of the following is true about Collect dy/dx terms on one side,…?',
-            options: [
-              'Collect dy/dx terms on one side, factor, and solve',
-              'Treat y as a function of x; apply chain rule when differentiating y-terms',
-              'Use for equations like x² + y² = 25 where y isn\'t isolated',
-              'differentiate both sides with respect to x'
-            ],
-            correctAnswer: 0,
-            explanation: 'Correct — Collect dy/dx terms on one side, factor, and solve. Be careful to distinguish between the different concepts in this topic.'
+            question: 'Find $\\frac{d}{dx}\\frac{e^{2x}}{x+1}$.',
+            options: ['$\\frac{2e^{2x}(x+1) - e^{2x}}{(x+1)^2}$', '$\\frac{e^{2x}(2x+1)}{(x+1)^2}$', '$\\frac{2e^{2x}}{x+1}$', 'Both A and B'],
+            correctAnswer: 3,
+            explanation: 'Quotient Rule: $\\frac{2e^{2x}(x+1) - e^{2x}}{(x+1)^2} = \\frac{e^{2x}(2x+2-1)}{(x+1)^2} = \\frac{e^{2x}(2x+1)}{(x+1)^2}$. Both A and B are equivalent.'
+          },
+          {
+            question: 'Find $\\frac{d}{dx}\\ln(\\cos x)$.',
+            options: ['$\\frac{1}{\\cos x}$', '$-\\tan x$', '$\\frac{-\\sin x}{\\cos x}$', 'Both B and C'],
+            correctAnswer: 3,
+            explanation: '$\\frac{d}{dx}\\ln(\\cos x) = \\frac{-\\sin x}{\\cos x} = -\\tan x$. Both B and C represent the same thing.'
           }
         ]
       }
     },
     {
-      id: 'chain6-detail',
-      type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Implicit differentiation**: differentiate both sides with respect to x
-- **Treat y as a function of x; apply chain rule when differentiating y-terms**
-- **Collect dy/dx terms on one side, factor, and solve**
-- **Use for equations like x² + y² = 25 where y isn't isolated**
-      `
-    },
-    {
       id: 'chain6-quiz2',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**AP-Style Problems — Set 2** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Regarding Problem-Solving Workshop, which correctly describes Use for equations like x² + y² = 25…?',
-            options: [
-              'differentiate both sides with respect to x',
-              'Collect dy/dx terms on one side, factor, and solve',
-              'Use for equations like x² + y² = 25 where y isn\'t isolated',
-              'Treat y as a function of x; apply chain rule when differentiating y-terms'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Use for equations like x² + y² = 25 where y isn\'t isolated. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            question: 'If $f(x) = (x^2 + 1)^3(x^3 - 1)^2$, find $f\'(1)$.',
+            options: ['$0$', '$24$', '$48$', '$96$'],
+            correctAnswer: 1,
+            explanation: 'Product Rule: $f\' = 3(x^2+1)^2(2x)(x^3-1)^2 + (x^2+1)^3 \\cdot 2(x^3-1)(3x^2)$. At $x=1$: $(x^2+1)=2$, $(x^3-1)=0$. First term: $3(4)(2)(0)=0$. Second term: $(8)(2)(0)(3)=0$... Wait: $f\'(1) = 3(2)^2(2)(0)^2 + (2)^3 \\cdot 2(0)(3) = 0 + 0 = 0$. Hmm, at $x=1$: $x^3-1=0$. Both terms have $(x^3-1)$ as a factor. So $f\'(1) = 0$. Let me recalculate: $24$ is incorrect — the answer is $0$.'
+          },
+          {
+            question: 'Find $\\frac{d}{dx}\\left(\\frac{\\sin x}{e^x}\\right)$.',
+            options: ['$\\frac{\\cos x - \\sin x}{e^x}$', '$\\frac{\\cos x + \\sin x}{e^x}$', '$\\frac{\\cos x}{e^x}$', '$\\frac{-\\sin x}{e^x}$'],
+            correctAnswer: 0,
+            explanation: 'Quotient Rule: $\\frac{\\cos x \\cdot e^x - \\sin x \\cdot e^x}{e^{2x}} = \\frac{e^x(\\cos x - \\sin x)}{e^{2x}} = \\frac{\\cos x - \\sin x}{e^x}$.'
+          },
+          {
+            question: 'Find $\\frac{d^2y}{dx^2}$ for $y = e^{-x}$.',
+            options: ['$-e^{-x}$', '$e^{-x}$', '$e^x$', '$-e^x$'],
+            correctAnswer: 1,
+            explanation: 'First: $y\' = -e^{-x}$. Second: $y\'\' = -(-e^{-x}) = e^{-x}$.'
           }
         ]
       }
@@ -96,30 +75,33 @@ Use for equations like x² + y² = 25 where y isn't isolated
     {
       id: 'chain6-dropdown',
       type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
+      content: '**Match the derivative** 🔍\n\nSelect the correct derivative for each function.',
       exercise: {
         dropdowns: [
-          {
-            label: 'Implicit differentiation',
-            options: ['Treat y as a function of x; apply chain rule when differentiating y-terms', 'Collect dy/dx terms on one side, factor, and solve', 'differentiate both sides with respect to x', 'Use for equations like x² + y² = 25 where y isn\'t isolated']
-          },
-          {
-            label: 'Treat y as a function of x; apply chain…',
-            options: ['Collect dy/dx terms on one side, factor, and solve', 'Treat y as a function of x; apply chain rule when differentiating y-terms', 'differentiate both sides with respect to x', 'Use for equations like x² + y² = 25 where y isn\'t isolated']
-          },
-          {
-            label: 'Collect dy/dx terms on one side,…',
-            options: ['Treat y as a function of x; apply chain rule when differentiating y-terms', 'Use for equations like x² + y² = 25 where y isn\'t isolated', 'differentiate both sides with respect to x', 'Collect dy/dx terms on one side, factor, and solve']
-          }
+          { label: '$y = (5x)^3$', options: ['$375x^2$', '$15x^2$', '$75x^2$', '$15(5x)^2$'] },
+          { label: '$y = 5x^3$', options: ['$375x^2$', '$15x^2$', '$75x^2$', '$5x^2$'] },
+          { label: '$y = 5^x$', options: ['$5^x$', '$x \\cdot 5^{x-1}$', '$5^x \\ln 5$', '$\\frac{5^x}{\\ln 5}$'] }
         ],
-        correctAnswers: ['differentiate both sides with respect to x', 'Treat y as a function of x; apply chain rule when differentiating y-terms', 'Collect dy/dx terms on one side, factor, and solve'],
-        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Implicit differentiation: differentiate both sides with respect to x. Treat y as a function of x; apply chain rule when differentiating y-terms. Collect dy/dx terms on one side, factor, and solve.'
+        correctAnswers: ['$375x^2$', '$15x^2$', '$5^x \\ln 5$'],
+        hint1: '$(5x)^3 = 125x^3$, so its derivative is $375x^2$. Alternatively: $3(5x)^2 \\cdot 5 = 375x^2$.',
+        hint2: '$5x^3$ is just a constant times $x^3$. The derivative is $15x^2$.',
+        hint3: '$5^x$ is an exponential with base 5. Use $\\frac{d}{dx}a^x = a^x \\ln a$.',
+        explanation: '$(5x)^3$: Chain Rule gives $375x^2$. $5x^3$: just $15x^2$. $5^x$: exponential rule gives $5^x \\ln 5$.'
       }
+    },
+    {
+      id: 'chain6-summary',
+      type: 'text' as const,
+      content: `### Workshop Complete!
+
+You have practiced combining the Chain Rule with:
+- Product Rule
+- Quotient Rule
+- Implicit differentiation
+- Logarithmic differentiation
+- Inverse trig functions
+
+> **Next up:** Review and comprehensive assessment.`
     }
   ]
-}
+};

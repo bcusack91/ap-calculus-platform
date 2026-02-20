@@ -1,125 +1,43 @@
-export const calcBCPowerSeriesPart4Data = {
+export const calcbcPowerSeriesPart4Data = {
   topicSlug: 'power-series-calcbc',
   sections: [
     {
-      id: 'power4-intro',
+      id: 'pow4-intro',
       type: 'text' as const,
-      content: `
-# Operations on Power Series
+      content: `# Power Series
 
-**Part 4 of 7 — Operations on Power Series**
+**Part 4 of 7 — Representing Functions as Power Series**
 
-### 1. Addition
+### Strategy: Start from Known Series
 
-Σaₙxⁿ + Σbₙxⁿ = Σ(aₙ+bₙ)xⁿ (within shared interval)
+$\frac{1}{1-x} = \sum x^n$, then manipulate!
 
-### 2. Multiplication
+$\frac{1}{1+x^2} = \sum (-x^2)^n = \sum (-1)^n x^{2n}$
 
-Cauchy product (not tested explicitly on AP exam)
+$\frac{x}{1-x^3} = x \sum (x^3)^n = \sum x^{3n+1}$
 
-### 3. Substitution
-
-replace x with a function of x in a known series
-
-### 4. Example
-
-e^(-x²) = Σ(-1)ⁿx²ⁿ/n! (substitute -x² into eˣ series)
-      `
+$\ln(1+x) = \int \frac{1}{1+x}\,dx = \sum \frac{(-1)^n x^{n+1}}{n+1}$`
     },
     {
-      id: 'power4-quiz1',
+      id: 'pow4-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Building Power Series** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Addition?',
-            options: [
-              'replace x with a function of x in a known series',
-              'e^(-x²) = Σ(-1)ⁿx²ⁿ/n! (substitute -x² into eˣ series)',
-              'Cauchy product (not tested explicitly on AP exam)',
-              'Σaₙxⁿ + Σbₙxⁿ = Σ(aₙ+bₙ)xⁿ (within shared interval)'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Addition: Σaₙxⁿ + Σbₙxⁿ = Σ(aₙ+bₙ)xⁿ (within shared interval). The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Which of the following is true about Substitution?',
-            options: [
-              'e^(-x²) = Σ(-1)ⁿx²ⁿ/n! (substitute -x² into eˣ series)',
-              'Σaₙxⁿ + Σbₙxⁿ = Σ(aₙ+bₙ)xⁿ (within shared interval)',
-              'Cauchy product (not tested explicitly on AP exam)',
-              'replace x with a function of x in a known series'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Substitution: replace x with a function of x in a known series. Be careful to distinguish between the different concepts in this topic.'
+            question: 'Express $\\frac{1}{(1-x)^2}$ as a power series.',
+            options: ['$\\sum_{n=0}^{\\infty} (n+1)x^n$', '$\\sum_{n=0}^{\\infty} x^{2n}$', '$\\sum_{n=0}^{\\infty} 2^n x^n$', '$\\sum_{n=1}^{\\infty} x^n/n$'],
+            correctAnswer: 0,
+            explanation: 'Differentiate $\\frac{1}{1-x} = \\sum x^n$: $\\frac{1}{(1-x)^2} = \\sum nx^{n-1} = \\sum (n+1)x^n$.'
           }
         ]
       }
     },
     {
-      id: 'power4-detail',
+      id: 'pow4-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Addition**: Σaₙxⁿ + Σbₙxⁿ = Σ(aₙ+bₙ)xⁿ (within shared interval)
-- **Multiplication**: Cauchy product (not tested explicitly on AP exam)
-- **Substitution**: replace x with a function of x in a known series
-- **Example**: e^(-x²) = Σ(-1)ⁿx²ⁿ/n! (substitute -x² into eˣ series)
-      `
-    },
-    {
-      id: 'power4-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which statement about Example is correct?',
-            options: [
-              'Σaₙxⁿ + Σbₙxⁿ = Σ(aₙ+bₙ)xⁿ (within shared interval)',
-              'replace x with a function of x in a known series',
-              'Cauchy product (not tested explicitly on AP exam)',
-              'e^(-x²) = Σ(-1)ⁿx²ⁿ/n! (substitute -x² into eˣ series)'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Example: e^(-x²) = Σ(-1)ⁿx²ⁿ/n! (substitute -x² into eˣ series). Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'power4-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Addition',
-            options: ['Σaₙxⁿ + Σbₙxⁿ = Σ(aₙ+bₙ)xⁿ (within shared interval)', 'Cauchy product (not tested explicitly on AP exam)', 'e^(-x²) = Σ(-1)ⁿx²ⁿ/n! (substitute -x² into eˣ series)', 'replace x with a function of x in a known series']
-          },
-          {
-            label: 'Multiplication',
-            options: ['e^(-x²) = Σ(-1)ⁿx²ⁿ/n! (substitute -x² into eˣ series)', 'Σaₙxⁿ + Σbₙxⁿ = Σ(aₙ+bₙ)xⁿ (within shared interval)', 'Cauchy product (not tested explicitly on AP exam)', 'replace x with a function of x in a known series']
-          },
-          {
-            label: 'Substitution',
-            options: ['e^(-x²) = Σ(-1)ⁿx²ⁿ/n! (substitute -x² into eˣ series)', 'Cauchy product (not tested explicitly on AP exam)', 'Σaₙxⁿ + Σbₙxⁿ = Σ(aₙ+bₙ)xⁿ (within shared interval)', 'replace x with a function of x in a known series']
-          }
-        ],
-        correctAnswers: ['Σaₙxⁿ + Σbₙxⁿ = Σ(aₙ+bₙ)xⁿ (within shared interval)', 'Cauchy product (not tested explicitly on AP exam)', 'replace x with a function of x in a known series'],
-        hint1: 'Think about what each concept specifically describes in Operations on Power Series.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Operations on Power Series describes a specific idea. Addition: Σaₙxⁿ + Σbₙxⁿ = Σ(aₙ+bₙ)xⁿ (within shared interval). Multiplication: Cauchy product (not tested explicitly on AP exam). Substitution: replace x with a function of x in a known series.'
-      }
+      content: `### Key Takeaways — Part 4
+Start from $\\frac{1}{1-x}$ and use substitution, differentiation, integration.`
     }
   ]
-}
+};

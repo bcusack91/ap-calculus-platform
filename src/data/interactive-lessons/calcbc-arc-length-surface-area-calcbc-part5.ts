@@ -1,121 +1,43 @@
-export const calcBCArcLengthPart5Data = {
+export const calcbcArcLengthPart5Data = {
   topicSlug: 'arc-length-surface-area-calcbc',
   sections: [
     {
-      id: 'arc-l5-intro',
+      id: 'arc5-intro',
       type: 'text' as const,
-      content: `
-# Speed & Distance Applications
+      content: `# Arc Length
 
-**Part 5 of 7 — Speed & Distance Applications**
+**Part 5 of 7 — Arc Length with $x = g(y)$**
 
-### 1. Speed at time t
+### When $x$ is a Function of $y$
 
-|v⃗(t)| = √[x'(t)² + y'(t)²]
+$$L = \int_c^d \sqrt{1 + \left(\frac{dx}{dy}\right)^2}\,dy$$
 
-### 2. Total distance = ∫ₐᵇ |v⃗(t)| dt
+### Example
 
-Total distance = ∫ₐᵇ |v⃗(t)| dt
+$x = y^2$ from $y = 0$ to $y = 1$:
 
-### 3. Average speed = (total distance)/(total time)
-
-Average speed = (total distance)/(total time)
-
-### 4. Arc length parametrization
-
-reparametrize by distance traveled
-      `
+$L = \int_0^1 \sqrt{1 + 4y^2}\,dy$`
     },
     {
-      id: 'arc-l5-quiz1',
+      id: 'arc5-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**$x = g(y)$ Form** 🎯',
       exercise: {
         questions: [
           {
-            question: 'What does "Speed at time t" refer to in calculus?',
-            options: [
-              'reparametrize by distance traveled',
-              '|v⃗(t)| = √[x\'(t)² + y\'(t)²]',
-              'Average speed = (total distance)/(total time)',
-              'Total distance = ∫ₐᵇ |v⃗(t)| dt'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Speed at time t: |v⃗(t)| = √[x\'(t)² + y\'(t)²]. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'In the context of Speed & Distance Applications, which explains Average speed = (total distance)/(total…?',
-            options: [
-              'reparametrize by distance traveled',
-              '|v⃗(t)| = √[x\'(t)² + y\'(t)²]',
-              'Average speed = (total distance)/(total time)',
-              'Total distance = ∫ₐᵇ |v⃗(t)| dt'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Average speed = (total distance)/(total time). Be careful to distinguish between the different concepts in this topic.'
+            question: 'Arc length of $x = \\frac{y^3}{3}$ from $y = 0$ to $y = 1$: set up the integral.',
+            options: ['$\\int_0^1 \\sqrt{1 + y^4}\\,dy$', '$\\int_0^1 \\sqrt{1 + y^2}\\,dy$', '$\\int_0^1 y^2\\,dy$', '$\\int_0^1 \\sqrt{1 + 9y^4}\\,dy$'],
+            correctAnswer: 0,
+            explanation: '$dx/dy = y^2$. $(dx/dy)^2 = y^4$. $L = \\int_0^1 \\sqrt{1 + y^4}\\,dy$.'
           }
         ]
       }
     },
     {
-      id: 'arc-l5-detail',
+      id: 'arc5-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Speed at time t**: |v⃗(t)| = √[x'(t)² + y'(t)²]
-- **Total distance = ∫ₐᵇ |v⃗(t)| dt**
-- **Average speed = (total distance)/(total time)**
-- **Arc length parametrization**: reparametrize by distance traveled
-      `
-    },
-    {
-      id: 'arc-l5-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Regarding Speed & Distance Applications, which correctly describes Arc length parametrization?',
-            options: [
-              'Average speed = (total distance)/(total time)',
-              'Total distance = ∫ₐᵇ |v⃗(t)| dt',
-              'reparametrize by distance traveled',
-              '|v⃗(t)| = √[x\'(t)² + y\'(t)²]'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Arc length parametrization: reparametrize by distance traveled. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'arc-l5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Speed at time t',
-            options: ['Average speed = (total distance)/(total time)', 'reparametrize by distance traveled', '|v⃗(t)| = √[x\'(t)² + y\'(t)²]', 'Total distance = ∫ₐᵇ |v⃗(t)| dt']
-          },
-          {
-            label: 'Arc length parametrization',
-            options: ['|v⃗(t)| = √[x\'(t)² + y\'(t)²]', 'Average speed = (total distance)/(total time)', 'reparametrize by distance traveled', 'Total distance = ∫ₐᵇ |v⃗(t)| dt']
-          }
-        ],
-        correctAnswers: ['|v⃗(t)| = √[x\'(t)² + y\'(t)²]', 'reparametrize by distance traveled'],
-        hint1: 'Think about what each concept specifically describes in Speed & Distance Applications.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Speed & Distance Applications describes a specific idea. Speed at time t: |v⃗(t)| = √[x\'(t)² + y\'(t)²]. Arc length parametrization: reparametrize by distance traveled.'
-      }
+      content: `### Key Takeaways — Part 5
+Sometimes integrating with respect to $y$ gives a simpler integral.`
     }
   ]
-}
+};

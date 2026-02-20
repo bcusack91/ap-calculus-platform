@@ -1,125 +1,52 @@
-export const calcABExamReviewPart4Data = {
+export const calcabExamReviewPart4Data = {
   topicSlug: 'ap-exam-review-calcab',
   sections: [
     {
-      id: 'ap-ex4-intro',
+      id: 'er4-intro',
       type: 'text' as const,
-      content: `
-# Integrals Review
+      content: `# AP Exam Review
 
-**Part 4 of 7 — Integrals Review**
+**Part 4 of 7 — Integration Review**
 
-### 1. Fundamental Theorem of Calculus (Parts 1 and 2)
+### Essential Integrals
 
-Fundamental Theorem of Calculus (Parts 1 and 2)
+$$\\int x^n\\,dx = \\frac{x^{n+1}}{n+1} + C \\quad (n \\neq -1)$$
 
-### 2. u-substitution for definite and indefinite integrals
+$$\\int \\frac{1}{x}\\,dx = \\ln|x| + C$$
 
-u-substitution for definite and indefinite integrals
+$$\\int e^x\\,dx = e^x + C$$
 
-### 3. Properties of integrals
+$$\\int \\sin x\\,dx = -\\cos x + C$$
 
-linearity, additivity, comparison
+$$\\int \\cos x\\,dx = \\sin x + C$$
 
-### 4. Basic antiderivative formulas and techniques
-
-Basic antiderivative formulas and techniques
-      `
+$$\\int \\sec^2 x\\,dx = \\tan x + C$$`
     },
     {
-      id: 'ap-ex4-quiz1',
+      id: 'er4-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Integration Review** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Fundamental Theorem of Calculus (Parts…?',
-            options: [
-              'Fundamental Theorem of Calculus (Parts 1 and 2)',
-              'linearity, additivity, comparison',
-              'Basic antiderivative formulas and techniques',
-              'u-substitution for definite and indefinite integrals'
-            ],
+            question: 'Evaluate $\\int_0^{\\pi} (2\\cos x + 3)\\,dx$.',
+            options: ['$3\\pi$', '$2\\pi$', '$3\\pi + 2$', '$6$'],
             correctAnswer: 0,
-            explanation: 'Correct — Fundamental Theorem of Calculus (Parts 1 and 2). The other options describe different concepts from this topic.'
+            explanation: '$[2\\sin x + 3x]_0^{\\pi} = (0 + 3\\pi) - (0) = 3\\pi$.'
           },
           {
-            question: 'In the context of Integrals Review, which explains Properties of integrals?',
-            options: [
-              'linearity, additivity, comparison',
-              'Basic antiderivative formulas and techniques',
-              'u-substitution for definite and indefinite integrals',
-              'Fundamental Theorem of Calculus (Parts 1 and 2)'
-            ],
+            question: 'Find $\\int \\frac{2x}{x^2+1}\\,dx$.',
+            options: ['$\\ln(x^2+1) + C$', '$\\arctan x + C$', '$\\frac{1}{x^2+1} + C$', '$2\\ln(x^2+1) + C$'],
             correctAnswer: 0,
-            explanation: 'Correct — Properties of integrals: linearity, additivity, comparison. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'Let $u = x^2+1$, $du = 2x\\,dx$. $\\int \\frac{du}{u} = \\ln|u| + C = \\ln(x^2+1) + C$.'
           }
         ]
       }
     },
     {
-      id: 'ap-ex4-detail',
+      id: 'er4-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Fundamental Theorem of Calculus (Parts 1 and 2)**
-- **u-substitution for definite and indefinite integrals**
-- **Properties of integrals**: linearity, additivity, comparison
-- **Basic antiderivative formulas and techniques**
-      `
-    },
-    {
-      id: 'ap-ex4-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which statement about Basic antiderivative formulas and… is correct?',
-            options: [
-              'linearity, additivity, comparison',
-              'Basic antiderivative formulas and techniques',
-              'Fundamental Theorem of Calculus (Parts 1 and 2)',
-              'u-substitution for definite and indefinite integrals'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Basic antiderivative formulas and techniques. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'ap-ex4-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Fundamental Theorem of Calculus (Parts…',
-            options: ['Basic antiderivative formulas and techniques', 'Fundamental Theorem of Calculus (Parts 1 and 2)', 'linearity, additivity, comparison', 'u-substitution for definite and indefinite integrals']
-          },
-          {
-            label: 'u-substitution for definite and…',
-            options: ['Basic antiderivative formulas and techniques', 'linearity, additivity, comparison', 'Fundamental Theorem of Calculus (Parts 1 and 2)', 'u-substitution for definite and indefinite integrals']
-          },
-          {
-            label: 'Properties of integrals',
-            options: ['u-substitution for definite and indefinite integrals', 'Fundamental Theorem of Calculus (Parts 1 and 2)', 'Basic antiderivative formulas and techniques', 'linearity, additivity, comparison']
-          }
-        ],
-        correctAnswers: ['Fundamental Theorem of Calculus (Parts 1 and 2)', 'u-substitution for definite and indefinite integrals', 'linearity, additivity, comparison'],
-        hint1: 'Think about what each concept specifically describes in Integrals Review.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Integrals Review describes a specific idea. Fundamental Theorem of Calculus (Parts 1 and 2). u-substitution for definite and indefinite integrals. Properties of integrals: linearity, additivity, comparison.'
-      }
+      content: `### Review — Part 4 Complete`
     }
   ]
-}
+};

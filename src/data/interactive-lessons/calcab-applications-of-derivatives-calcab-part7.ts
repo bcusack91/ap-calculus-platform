@@ -1,125 +1,52 @@
-export const calcABDerivAppsPart7Data = {
+export const calcabAppsDerivativesPart7Data = {
   topicSlug: 'applications-of-derivatives-calcab',
   sections: [
     {
-      id: 'appli7-intro',
+      id: 'apps7-intro',
       type: 'text' as const,
-      content: `
-# Review & Applications
+      content: `# Applications of Derivatives — Review
 
-**Part 7 of 7 — Review & Applications**
-
-### 1. f'' > 0
-
-concave up (holds water like a cup)
-
-### 2. f'' < 0
-
-concave down (spills water like a cap)
-
-### 3. Inflection point
-
-where concavity changes (f'' changes sign)
-
-### 4. Inflection points occur where f'' = 0 or f'' is undefined (check sign change)
-
-Inflection points occur where f'' = 0 or f'' is undefined (check sign change)
-      `
+**Part 7 of 7 — Comprehensive Assessment**`
     },
     {
-      id: 'appli7-quiz1',
+      id: 'apps7-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Final Assessment** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes f\'\' > 0?',
-            options: [
-              'where concavity changes (f\'\' changes sign)',
-              'concave up (holds water like a cup)',
-              'Inflection points occur where f\'\' = 0 or f\'\' is undefined (check sign change)',
-              'concave down (spills water like a cap)'
-            ],
+            question: 'Find the absolute maximum of $f(x) = x^3 - 12x$ on $[-3, 4]$.',
+            options: ['$16$', '$9$', '$36$', '$24$'],
             correctAnswer: 1,
-            explanation: 'Correct — f\'\' > 0: concave up (holds water like a cup). The other options describe different concepts from this topic.'
+            explanation: '$f\'(x) = 3x^2 - 12 = 0$ at $x = \\pm 2$. $f(-3) = -27+36 = 9$, $f(-2) = -8+24 = 16$, $f(2) = 8-24 = -16$, $f(4) = 64-48 = 16$. Absolute max = $16$.'
           },
           {
-            question: 'Which of the following is true about Inflection point?',
-            options: [
-              'where concavity changes (f\'\' changes sign)',
-              'concave up (holds water like a cup)',
-              'concave down (spills water like a cap)',
-              'Inflection points occur where f\'\' = 0 or f\'\' is undefined (check sign change)'
-            ],
-            correctAnswer: 0,
-            explanation: 'Correct — Inflection point: where concavity changes (f\'\' changes sign). Be careful to distinguish between the different concepts in this topic.'
+            question: 'How many inflection points does $g(x) = x^5 - 5x^3$ have?',
+            options: ['$1$', '$2$', '$3$', '$4$'],
+            correctAnswer: 2,
+            explanation: '$g\'\'(x) = 20x^3 - 30x = 10x(2x^2 - 3) = 0$ at $x = 0, \\pm\\sqrt{3/2}$. All three are actual sign changes, so 3 inflection points.'
+          },
+          {
+            question: 'If $f\'(2) = 0$, $f\'\'(2) = -3$, what type of extremum is at $x = 2$?',
+            options: ['Local minimum', 'Local maximum', 'Inflection point', 'Cannot determine'],
+            correctAnswer: 1,
+            explanation: 'Second Derivative Test: $f\'(2) = 0$ and $f\'\'(2) < 0$, so concave down at $x = 2$ → local maximum.'
           }
         ]
       }
     },
     {
-      id: 'appli7-detail',
+      id: 'apps7-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
+      content: `### Applications of Derivatives — Complete! ✅
 
-- **f'' > 0**: concave up (holds water like a cup)
-- **f'' < 0**: concave down (spills water like a cap)
-- **Inflection point**: where concavity changes (f'' changes sign)
-- **Inflection points occur where f'' = 0 or f'' is undefined (check sign change)**
-      `
-    },
-    {
-      id: 'appli7-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Regarding Review & Applications, which correctly describes Inflection points occur where f\'\' = 0…?',
-            options: [
-              'Inflection points occur where f\'\' = 0 or f\'\' is undefined (check sign change)',
-              'concave down (spills water like a cap)',
-              'where concavity changes (f\'\' changes sign)',
-              'concave up (holds water like a cup)'
-            ],
-            correctAnswer: 0,
-            explanation: 'Correct — Inflection points occur where f\'\' = 0 or f\'\' is undefined (check sign change). Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'appli7-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'f\'\' > 0',
-            options: ['concave up (holds water like a cup)', 'where concavity changes (f\'\' changes sign)', 'concave down (spills water like a cap)', 'Inflection points occur where f\'\' = 0 or f\'\' is undefined (check sign change)']
-          },
-          {
-            label: 'f\'\' < 0',
-            options: ['where concavity changes (f\'\' changes sign)', 'Inflection points occur where f\'\' = 0 or f\'\' is undefined (check sign change)', 'concave down (spills water like a cap)', 'concave up (holds water like a cup)']
-          },
-          {
-            label: 'Inflection point',
-            options: ['concave up (holds water like a cup)', 'where concavity changes (f\'\' changes sign)', 'concave down (spills water like a cap)', 'Inflection points occur where f\'\' = 0 or f\'\' is undefined (check sign change)']
-          }
-        ],
-        correctAnswers: ['concave up (holds water like a cup)', 'concave down (spills water like a cap)', 'where concavity changes (f\'\' changes sign)'],
-        hint1: 'Think about what each concept specifically describes in Review & Applications.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Review & Applications describes a specific idea. f\'\' > 0: concave up (holds water like a cup). f\'\' < 0: concave down (spills water like a cap). Inflection point: where concavity changes (f\'\' changes sign).'
-      }
+You have mastered:
+- ✅ Critical points and increasing/decreasing analysis
+- ✅ Second derivative test and concavity
+- ✅ Absolute extrema on closed intervals
+- ✅ Curve sketching
+- ✅ Mean Value Theorem
+- ✅ Related rates applications`
     }
   ]
-}
+};

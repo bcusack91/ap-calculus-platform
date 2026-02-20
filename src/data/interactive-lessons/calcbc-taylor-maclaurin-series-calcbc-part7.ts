@@ -1,125 +1,38 @@
-export const calcBCTaylorMaclaurinPart7Data = {
+export const calcbcTaylorPart7Data = {
   topicSlug: 'taylor-maclaurin-series-calcbc',
   sections: [
     {
-      id: 'taylo7-intro',
+      id: 'tay7-intro',
       type: 'text' as const,
-      content: `
-# Review & Applications
+      content: `# Taylor & Maclaurin Series — Review
 
-**Part 7 of 7 — Review & Applications**
-
-### 1. Substitution
-
-replace x in a known series (e.g., e^(-x²) from eˣ)
-
-### 2. Differentiation
-
-differentiate a known series term by term
-
-### 3. Integration
-
-integrate a known series term by term
-
-### 4. Multiplication
-
-multiply series together for products of functions
-      `
+**Part 7 of 7 — Final Assessment**`
     },
     {
-      id: 'taylo7-quiz1',
+      id: 'tay7-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Final Assessment** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Substitution?',
-            options: [
-              'integrate a known series term by term',
-              'replace x in a known series (e.g., e^(-x²) from eˣ)',
-              'multiply series together for products of functions',
-              'differentiate a known series term by term'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Substitution: replace x in a known series (e.g., e^(-x²) from eˣ). The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Which of the following is true about Integration?',
-            options: [
-              'replace x in a known series (e.g., e^(-x²) from eˣ)',
-              'integrate a known series term by term',
-              'differentiate a known series term by term',
-              'multiply series together for products of functions'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Integration: integrate a known series term by term. Be careful to distinguish between the different concepts in this topic.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'taylo7-detail',
-      type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Substitution**: replace x in a known series (e.g., e^(-x²) from eˣ)
-- **Differentiation**: differentiate a known series term by term
-- **Integration**: integrate a known series term by term
-- **Multiplication**: multiply series together for products of functions
-      `
-    },
-    {
-      id: 'taylo7-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which statement about Multiplication is correct?',
-            options: [
-              'multiply series together for products of functions',
-              'replace x in a known series (e.g., e^(-x²) from eˣ)',
-              'integrate a known series term by term',
-              'differentiate a known series term by term'
-            ],
+            question: 'The Maclaurin series for $\\ln(1+x)$ is:',
+            options: ['$\\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1}x^n}{n}$', '$\\sum_{n=0}^{\\infty} \\frac{x^n}{n}$', '$\\sum_{n=1}^{\\infty} \\frac{x^n}{n!}$', '$\\sum_{n=0}^{\\infty} (-1)^n x^n$'],
             correctAnswer: 0,
-            explanation: 'Correct — Multiplication: multiply series together for products of functions. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: 'Integrate $\\frac{1}{1+x} = \\sum (-1)^n x^n$ term by term: $\\ln(1+x) = \\sum \\frac{(-1)^{n+1}x^n}{n}$.'
+          },
+          {
+            question: 'The 3rd-degree Taylor polynomial for $e^x$ about $a = 1$:',
+            options: ['$e + e(x-1) + \\frac{e}{2}(x-1)^2 + \\frac{e}{6}(x-1)^3$', '$1 + x + x^2/2 + x^3/6$', '$e(1 + x + x^2/2 + x^3/6)$', '$e + (x-1) + (x-1)^2/2$'],
+            correctAnswer: 0,
+            explanation: 'All derivatives of $e^x$ at $x = 1$ equal $e$. $P_3 = e + e(x-1) + \\frac{e}{2!}(x-1)^2 + \\frac{e}{3!}(x-1)^3$.'
           }
         ]
       }
     },
     {
-      id: 'taylo7-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Substitution',
-            options: ['integrate a known series term by term', 'multiply series together for products of functions', 'differentiate a known series term by term', 'replace x in a known series (e.g., e^(-x²) from eˣ)']
-          },
-          {
-            label: 'Differentiation',
-            options: ['integrate a known series term by term', 'differentiate a known series term by term', 'replace x in a known series (e.g., e^(-x²) from eˣ)', 'multiply series together for products of functions']
-          },
-          {
-            label: 'Integration',
-            options: ['integrate a known series term by term', 'multiply series together for products of functions', 'replace x in a known series (e.g., e^(-x²) from eˣ)', 'differentiate a known series term by term']
-          }
-        ],
-        correctAnswers: ['replace x in a known series (e.g., e^(-x²) from eˣ)', 'differentiate a known series term by term', 'integrate a known series term by term'],
-        hint1: 'Think about what each concept specifically describes in Review & Applications.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Review & Applications describes a specific idea. Substitution: replace x in a known series (e.g., e^(-x²) from eˣ). Differentiation: differentiate a known series term by term. Integration: integrate a known series term by term.'
-      }
+      id: 'tay7-summary',
+      type: 'text' as const,
+      content: `### Taylor & Maclaurin Series — Complete! ✅`
     }
   ]
-}
+};

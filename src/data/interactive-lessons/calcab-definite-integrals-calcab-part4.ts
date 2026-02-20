@@ -1,121 +1,121 @@
-export const calcABDefiniteIntegralsPart4Data = {
+export const calcabDefiniteIntegralsPart4Data = {
   topicSlug: 'definite-integrals-calcab',
   sections: [
     {
-      id: 'defin4-intro',
+      id: 'int4-intro',
       type: 'text' as const,
-      content: `
-# Fundamental Theorem of Calculus (Part 1)
+      content: `# \u222B Fundamental Theorem of Calculus \u2014 Part 1
 
-**Part 4 of 7 — Fundamental Theorem of Calculus (Part 1)**
+**Part 4 of 7 \u2014 FTC Part 1**
 
-### 1. FTC Part 1
+### The Big Idea
 
-d/dx[∫ₐˣ f(t)dt] = f(x)
+FTC Part 1 connects **integration and differentiation** as inverse operations:
 
-### 2. If F(x) = ∫ₐˣ f(t)dt, then F'(x) = f(x)
+$$\\frac{d}{dx}\\int_a^x f(t)\\,dt = f(x)$$
 
-If F(x) = ∫ₐˣ f(t)dt, then F'(x) = f(x)
+In words: if you integrate a function and then differentiate, you get the original function back.
 
-### 3. With chain rule
+### With Chain Rule
 
-d/dx[∫ₐ^(g(x)) f(t)dt] = f(g(x)) · g'(x)
+If the upper limit is a function $g(x)$ instead of just $x$:
 
-### 4. This connects differentiation and integration as inverse processes
+$$\\frac{d}{dx}\\int_a^{g(x)} f(t)\\,dt = f(g(x)) \\cdot g'(x)$$
 
-This connects differentiation and integration as inverse processes
-      `
+### Worked Example 1
+
+**Find** $\\frac{d}{dx}\\int_2^x t^3\\,dt$
+
+By FTC Part 1: the answer is simply $x^3$.
+
+### Worked Example 2
+
+**Find** $\\frac{d}{dx}\\int_0^{x^2} \\sin(t)\\,dt$
+
+Upper limit is $g(x) = x^2$, so apply Chain Rule:
+
+$$\\frac{d}{dx}\\int_0^{x^2} \\sin(t)\\,dt = \\sin(x^2) \\cdot 2x = 2x\\sin(x^2)$$
+
+### Worked Example 3
+
+**Find** $\\frac{d}{dx}\\int_x^5 e^{t^2}\\,dt$
+
+Reverse limits first: $\\int_x^5 = -\\int_5^x$. Then:
+
+$$= -e^{x^2} \\cdot 1 = -e^{x^2}$$`
     },
     {
-      id: 'defin4-quiz1',
+      id: 'int4-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**FTC Part 1** \ud83c\udfaf',
       exercise: {
         questions: [
           {
-            question: 'What does "FTC Part 1" refer to in calculus?',
-            options: [
-              'd/dx[∫ₐˣ f(t)dt] = f(x)',
-              'If F(x) = ∫ₐˣ f(t)dt, then F\'(x) = f(x)',
-              'This connects differentiation and integration as inverse processes',
-              'd/dx[∫ₐ^(g(x)) f(t)dt] = f(g(x)) · g\'(x)'
-            ],
+            question: 'Find $\\frac{d}{dx}\\int_1^x \\sqrt{t^2 + 4}\\,dt$.',
+            options: ['$\\sqrt{x^2 + 4}$', '$\\frac{x}{\\sqrt{x^2+4}}$', '$\\frac{2x}{\\sqrt{x^2+4}}$', '$\\sqrt{x + 4}$'],
             correctAnswer: 0,
-            explanation: 'Correct — FTC Part 1: d/dx[∫ₐˣ f(t)dt] = f(x). The other options describe different concepts from this topic.'
+            explanation: 'Direct FTC Part 1: just substitute $x$ for $t$ in the integrand. Answer: $\\sqrt{x^2 + 4}$.'
           },
           {
-            question: 'In the context of Fundamental Theorem of Calculus (Part 1), which explains With chain rule?',
-            options: [
-              'If F(x) = ∫ₐˣ f(t)dt, then F\'(x) = f(x)',
-              'd/dx[∫ₐ^(g(x)) f(t)dt] = f(g(x)) · g\'(x)',
-              'd/dx[∫ₐˣ f(t)dt] = f(x)',
-              'This connects differentiation and integration as inverse processes'
-            ],
+            question: 'Find $\\frac{d}{dx}\\int_0^{3x} \\cos(t)\\,dt$.',
+            options: ['$\\cos(3x)$', '$3\\cos(3x)$', '$-\\sin(3x)$', '$3\\sin(3x)$'],
             correctAnswer: 1,
-            explanation: 'Correct — With chain rule: d/dx[∫ₐ^(g(x)) f(t)dt] = f(g(x)) · g\'(x). Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'FTC Part 1 with Chain Rule: $\\cos(3x) \\cdot \\frac{d}{dx}(3x) = \\cos(3x) \\cdot 3 = 3\\cos(3x)$.'
+          },
+          {
+            question: 'Find $\\frac{d}{dx}\\int_{x}^{0} t^4\\,dt$.',
+            options: ['$x^4$', '$-x^4$', '$0$', '$4x^3$'],
+            correctAnswer: 1,
+            explanation: '$\\int_x^0 = -\\int_0^x$. So $\\frac{d}{dx}\\int_x^0 t^4\\,dt = -\\frac{d}{dx}\\int_0^x t^4\\,dt = -x^4$.'
           }
         ]
       }
     },
     {
-      id: 'defin4-detail',
+      id: 'int4-text2',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
+      content: `### Accumulation Functions
 
-- **FTC Part 1**: d/dx[∫ₐˣ f(t)dt] = f(x)
-- **If F(x) = ∫ₐˣ f(t)dt, then F'(x) = f(x)**
-- **With chain rule**: d/dx[∫ₐ^(g(x)) f(t)dt] = f(g(x)) · g'(x)
-- **This connects differentiation and integration as inverse processes**
-      `
+$F(x) = \\int_a^x f(t)\\,dt$ is called an **accumulation function**. It represents "how much has accumulated from $a$ to $x$."
+
+Key facts:
+- $F(a) = 0$ (nothing accumulated yet)
+- $F'(x) = f(x)$ (by FTC Part 1)
+- $F$ is increasing where $f > 0$ and decreasing where $f < 0$
+- $F$ has a local max where $f$ changes from positive to negative
+
+> **AP Tip:** FTC Part 1 with the Chain Rule is tested almost every year on the AP exam.`
     },
     {
-      id: 'defin4-quiz2',
+      id: 'int4-quiz2',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Accumulation Functions** \ud83c\udfaf\n\nLet $F(x) = \\int_0^x f(t)\\,dt$ where $f$ is continuous.',
       exercise: {
         questions: [
           {
-            question: 'Regarding Fundamental Theorem of Calculus (Part 1), which correctly describes This connects differentiation and…?',
-            options: [
-              'If F(x) = ∫ₐˣ f(t)dt, then F\'(x) = f(x)',
-              'd/dx[∫ₐˣ f(t)dt] = f(x)',
-              'This connects differentiation and integration as inverse processes',
-              'd/dx[∫ₐ^(g(x)) f(t)dt] = f(g(x)) · g\'(x)'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — This connects differentiation and integration as inverse processes. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            question: 'If $f(3) = 5$, what is $F\'(3)$?',
+            options: ['$5$', '$0$', '$3$', 'Cannot determine'],
+            correctAnswer: 0,
+            explanation: 'By FTC Part 1: $F\'(x) = f(x)$, so $F\'(3) = f(3) = 5$.'
+          },
+          {
+            question: 'If $f$ changes from positive to negative at $x = 4$, what happens to $F$ at $x = 4$?',
+            options: ['$F$ has a local minimum', '$F$ has a local maximum', '$F$ has an inflection point', '$F = 0$'],
+            correctAnswer: 1,
+            explanation: '$F\'(x) = f(x)$ changes from positive to negative at $x=4$, so $F$ changes from increasing to decreasing. This is a local maximum of $F$.'
           }
         ]
       }
     },
     {
-      id: 'defin4-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'FTC Part 1',
-            options: ['This connects differentiation and integration as inverse processes', 'd/dx[∫ₐˣ f(t)dt] = f(x)', 'd/dx[∫ₐ^(g(x)) f(t)dt] = f(g(x)) · g\'(x)', 'If F(x) = ∫ₐˣ f(t)dt, then F\'(x) = f(x)']
-          },
-          {
-            label: 'With chain rule',
-            options: ['This connects differentiation and integration as inverse processes', 'd/dx[∫ₐˣ f(t)dt] = f(x)', 'If F(x) = ∫ₐˣ f(t)dt, then F\'(x) = f(x)', 'd/dx[∫ₐ^(g(x)) f(t)dt] = f(g(x)) · g\'(x)']
-          }
-        ],
-        correctAnswers: ['d/dx[∫ₐˣ f(t)dt] = f(x)', 'd/dx[∫ₐ^(g(x)) f(t)dt] = f(g(x)) · g\'(x)'],
-        hint1: 'Think about what each concept specifically describes in Fundamental Theorem of Calculus (Part 1).',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Fundamental Theorem of Calculus (Part 1) describes a specific idea. FTC Part 1: d/dx[∫ₐˣ f(t)dt] = f(x). With chain rule: d/dx[∫ₐ^(g(x)) f(t)dt] = f(g(x)) · g\'(x).'
-      }
+      id: 'int4-summary',
+      type: 'text' as const,
+      content: `### Key Takeaways \u2014 Part 4
+
+1. **FTC Part 1:** $\\frac{d}{dx}\\int_a^x f(t)\\,dt = f(x)$
+2. **With Chain Rule:** $\\frac{d}{dx}\\int_a^{g(x)} f(t)\\,dt = f(g(x)) \\cdot g'(x)$
+3. **Variable in lower limit:** reverse limits first (adds a negative sign)
+4. **Accumulation functions** connect the graph of $f$ to the behavior of $F$`
     }
   ]
-}
+};

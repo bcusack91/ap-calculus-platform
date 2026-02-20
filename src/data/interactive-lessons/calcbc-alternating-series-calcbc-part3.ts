@@ -1,125 +1,57 @@
-export const calcBCAlternatingPart3Data = {
+export const calcbcAlternatingPart3Data = {
   topicSlug: 'alternating-series-calcbc',
   sections: [
     {
-      id: 'alter3-intro',
+      id: 'alt3-intro',
       type: 'text' as const,
-      content: `
-# Absolute vs Conditional Convergence
+      content: `# Alternating Series
 
 **Part 3 of 7 — Absolute vs Conditional Convergence**
 
-### 1. Absolute convergence
+### Absolute Convergence
 
-Σ|aₙ| converges → Σaₙ converges absolutely
+$\sum a_n$ converges **absolutely** if $\sum |a_n|$ converges.
 
-### 2. Conditional convergence
+### Conditional Convergence
 
-Σaₙ converges but Σ|aₙ| diverges
+$\sum a_n$ converges **conditionally** if $\sum a_n$ converges but $\sum |a_n|$ diverges.
 
-### 3. Absolute convergence implies convergence (stronger condition)
+### Key Fact
 
-Absolute convergence implies convergence (stronger condition)
+Absolute convergence → convergence (but NOT vice versa!)
 
-### 4. Alternating harmonic series
+### Example
 
-conditionally convergent (Σ1/n diverges)
-      `
+$\sum \frac{(-1)^{n+1}}{n}$: converges (AST) but $\sum 1/n$ diverges → **conditional convergence**
+
+$\sum \frac{(-1)^n}{n^2}$: $\sum 1/n^2$ converges → **absolute convergence**`
     },
     {
-      id: 'alter3-quiz1',
+      id: 'alt3-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Absolute vs Conditional** 🎯',
       exercise: {
         questions: [
           {
-            question: 'What does "Absolute convergence" refer to in calculus?',
-            options: [
-              'Σ|aₙ| converges → Σaₙ converges absolutely',
-              'conditionally convergent (Σ1/n diverges)',
-              'Σaₙ converges but Σ|aₙ| diverges',
-              'Absolute convergence implies convergence (stronger condition)'
-            ],
+            question: '$\\sum \\frac{(-1)^n}{n^{3/2}}$ converges:',
+            options: ['Absolutely', 'Conditionally', 'Diverges', 'Cannot determine'],
             correctAnswer: 0,
-            explanation: 'Correct — Absolute convergence: Σ|aₙ| converges → Σaₙ converges absolutely. The other options describe different concepts from this topic.'
+            explanation: '$\\sum 1/n^{3/2}$ converges ($p = 3/2 > 1$). So the alternating series converges absolutely.'
           },
           {
-            question: 'Which of the following is true about Absolute convergence implies…?',
-            options: [
-              'conditionally convergent (Σ1/n diverges)',
-              'Absolute convergence implies convergence (stronger condition)',
-              'Σaₙ converges but Σ|aₙ| diverges',
-              'Σ|aₙ| converges → Σaₙ converges absolutely'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Absolute convergence implies convergence (stronger condition). Be careful to distinguish between the different concepts in this topic.'
+            question: '$\\sum \\frac{(-1)^n}{\\sqrt{n}}$ converges:',
+            options: ['Conditionally', 'Absolutely', 'Diverges', 'Cannot determine'],
+            correctAnswer: 0,
+            explanation: 'AST: converges. But $\\sum 1/\\sqrt{n}$ diverges ($p = 1/2 < 1$). Conditional convergence.'
           }
         ]
       }
     },
     {
-      id: 'alter3-detail',
+      id: 'alt3-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Absolute convergence**: Σ|aₙ| converges → Σaₙ converges absolutely
-- **Conditional convergence**: Σaₙ converges but Σ|aₙ| diverges
-- **Absolute convergence implies convergence (stronger condition)**
-- **Alternating harmonic series**: conditionally convergent (Σ1/n diverges)
-      `
-    },
-    {
-      id: 'alter3-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of these accurately represents Alternating harmonic series?',
-            options: [
-              'Absolute convergence implies convergence (stronger condition)',
-              'Σaₙ converges but Σ|aₙ| diverges',
-              'conditionally convergent (Σ1/n diverges)',
-              'Σ|aₙ| converges → Σaₙ converges absolutely'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Alternating harmonic series: conditionally convergent (Σ1/n diverges). Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'alter3-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Absolute convergence',
-            options: ['Σaₙ converges but Σ|aₙ| diverges', 'Σ|aₙ| converges → Σaₙ converges absolutely', 'conditionally convergent (Σ1/n diverges)', 'Absolute convergence implies convergence (stronger condition)']
-          },
-          {
-            label: 'Conditional convergence',
-            options: ['conditionally convergent (Σ1/n diverges)', 'Σaₙ converges but Σ|aₙ| diverges', 'Absolute convergence implies convergence (stronger condition)', 'Σ|aₙ| converges → Σaₙ converges absolutely']
-          },
-          {
-            label: 'Alternating harmonic series',
-            options: ['Σ|aₙ| converges → Σaₙ converges absolutely', 'Σaₙ converges but Σ|aₙ| diverges', 'Absolute convergence implies convergence (stronger condition)', 'conditionally convergent (Σ1/n diverges)']
-          }
-        ],
-        correctAnswers: ['Σ|aₙ| converges → Σaₙ converges absolutely', 'Σaₙ converges but Σ|aₙ| diverges', 'conditionally convergent (Σ1/n diverges)'],
-        hint1: 'Think about what each concept specifically describes in Absolute vs Conditional Convergence.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Absolute vs Conditional Convergence describes a specific idea. Absolute convergence: Σ|aₙ| converges → Σaₙ converges absolutely. Conditional convergence: Σaₙ converges but Σ|aₙ| diverges. Alternating harmonic series: conditionally convergent (Σ1/n diverges).'
-      }
+      content: `### Key Takeaways — Part 3
+Absolute: $\\sum |a_n|$ converges. Conditional: series converges but absolute version doesn't.`
     }
   ]
-}
+};

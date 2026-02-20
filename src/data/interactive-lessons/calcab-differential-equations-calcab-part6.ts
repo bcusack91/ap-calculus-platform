@@ -1,125 +1,38 @@
-export const calcABDiffEqPart6Data = {
+export const calcabDiffEqPart6Data = {
   topicSlug: 'differential-equations-calcab',
   sections: [
     {
-      id: 'diffe6-intro',
+      id: 'de6-intro',
       type: 'text' as const,
-      content: `
-# Problem-Solving Workshop
+      content: `# Differential Equations
 
-**Part 6 of 7 — Problem-Solving Workshop**
-
-### 1. Exponential growth/decay
-
-dy/dt = ky → y = y₀·e^(kt)
-
-### 2. k > 0
-
-growth; k < 0: decay
-
-### 3. Half-life
-
-t₁/₂ = ln(2)/|k|
-
-### 4. Newton's Law of Cooling
-
-dT/dt = k(T - Tₛ) where Tₛ is ambient temperature
-      `
+**Part 6 of 7 \u2014 AP-Style Workshop**`
     },
     {
-      id: 'diffe6-quiz1',
+      id: 'de6-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**AP-Style DE Problems** \ud83c\udfaf',
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains Exponential growth/decay?',
-            options: [
-              't₁/₂ = ln(2)/|k|',
-              'dT/dt = k(T - Tₛ) where Tₛ is ambient temperature',
-              'growth; k < 0: decay',
-              'dy/dt = ky → y = y₀·e^(kt)'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Exponential growth/decay: dy/dt = ky → y = y₀·e^(kt). The other options describe different concepts from this topic.'
+            question: 'For $\\frac{dy}{dx} = y(3-y)$, which values of $y$ are equilibrium solutions?',
+            options: ['$y = 0$ and $y = 3$', '$y = 0$ only', '$y = 3$ only', '$y = -3$ and $y = 0$'],
+            correctAnswer: 0,
+            explanation: 'Equilibrium when $\\frac{dy}{dx} = 0$: $y(3-y) = 0$ gives $y = 0$ and $y = 3$.'
           },
           {
-            question: 'Which of the following is true about Half-life?',
-            options: [
-              'dy/dt = ky → y = y₀·e^(kt)',
-              'dT/dt = k(T - Tₛ) where Tₛ is ambient temperature',
-              'growth; k < 0: decay',
-              't₁/₂ = ln(2)/|k|'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Half-life: t₁/₂ = ln(2)/|k|. Be careful to distinguish between the different concepts in this topic.'
+            question: 'Newton\'s Law of Cooling: $\\frac{dT}{dt} = -0.1(T - 70)$. If $T(0) = 200$, find $T(t)$.',
+            options: ['$T = 70 + 130e^{-0.1t}$', '$T = 200e^{-0.1t}$', '$T = 70 + 200e^{-0.1t}$', '$T = 130e^{-0.1t}$'],
+            correctAnswer: 0,
+            explanation: 'Let $u = T - 70$. $\\frac{du}{dt} = -0.1u$, so $u = 130e^{-0.1t}$. $T = 70 + 130e^{-0.1t}$.'
           }
         ]
       }
     },
     {
-      id: 'diffe6-detail',
+      id: 'de6-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Exponential growth/decay**: dy/dt = ky → y = y₀·e^(kt)
-- **k > 0**: growth; k < 0: decay
-- **Half-life**: t₁/₂ = ln(2)/|k|
-- **Newton's Law of Cooling**: dT/dt = k(T - Tₛ) where Tₛ is ambient temperature
-      `
-    },
-    {
-      id: 'diffe6-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of these accurately represents Newton\'s Law of Cooling?',
-            options: [
-              'growth; k < 0: decay',
-              't₁/₂ = ln(2)/|k|',
-              'dy/dt = ky → y = y₀·e^(kt)',
-              'dT/dt = k(T - Tₛ) where Tₛ is ambient temperature'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Newton\'s Law of Cooling: dT/dt = k(T - Tₛ) where Tₛ is ambient temperature. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'diffe6-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Exponential growth/decay',
-            options: ['dy/dt = ky → y = y₀·e^(kt)', 't₁/₂ = ln(2)/|k|', 'dT/dt = k(T - Tₛ) where Tₛ is ambient temperature', 'growth; k < 0: decay']
-          },
-          {
-            label: 'k > 0',
-            options: ['t₁/₂ = ln(2)/|k|', 'growth; k < 0: decay', 'dy/dt = ky → y = y₀·e^(kt)', 'dT/dt = k(T - Tₛ) where Tₛ is ambient temperature']
-          },
-          {
-            label: 'Half-life',
-            options: ['t₁/₂ = ln(2)/|k|', 'dy/dt = ky → y = y₀·e^(kt)', 'growth; k < 0: decay', 'dT/dt = k(T - Tₛ) where Tₛ is ambient temperature']
-          }
-        ],
-        correctAnswers: ['dy/dt = ky → y = y₀·e^(kt)', 'growth; k < 0: decay', 't₁/₂ = ln(2)/|k|'],
-        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Exponential growth/decay: dy/dt = ky → y = y₀·e^(kt). k > 0: growth; k < 0: decay. Half-life: t₁/₂ = ln(2)/|k|.'
-      }
+      content: `### Workshop Complete!`
     }
   ]
-}
+};

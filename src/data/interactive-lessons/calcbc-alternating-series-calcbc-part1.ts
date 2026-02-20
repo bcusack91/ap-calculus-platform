@@ -1,125 +1,53 @@
-export const calcBCAlternatingPart1Data = {
+export const calcbcAlternatingPart1Data = {
   topicSlug: 'alternating-series-calcbc',
   sections: [
     {
-      id: 'alter1-intro',
+      id: 'alt1-intro',
       type: 'text' as const,
-      content: `
-# ∮ Alternating Series
+      content: `# Alternating Series
 
-**Part 1 of 7 — Alternating Series**
+**Part 1 of 7 — The Alternating Series Test**
 
-### 1. Alternating series
+### Alternating Series Test (Leibniz Test)
 
-terms alternate in sign — Σ(-1)ⁿ bₙ or Σ(-1)ⁿ⁺¹ bₙ
+$\sum_{n=1}^{\infty} (-1)^{n+1} b_n$ converges if:
 
-### 2. Examples
+1. $b_n > 0$ (terms are positive)
+2. $b_{n+1} \leq b_n$ (decreasing)
+3. $\lim_{n \to \infty} b_n = 0$
 
-Σ(-1)ⁿ/n (alternating harmonic), Σ(-1)ⁿ/n²
+### Examples
 
-### 3. The signs must strictly alternate
+$\sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n} = 1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \cdots = \ln 2$
 
-+, -, +, -, ...
-
-### 4. Many important series are alternating (ln 2, π/4, etc.)
-
-Many important series are alternating (ln 2, π/4, etc.)
-      `
+This is the **alternating harmonic series** — it converges!`
     },
     {
-      id: 'alter1-quiz1',
+      id: 'alt1-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Alternating Series Test** 🎯',
       exercise: {
         questions: [
           {
-            question: 'What does "Alternating series" refer to in calculus?',
-            options: [
-              'Many important series are alternating (ln 2, π/4, etc.)',
-              'Σ(-1)ⁿ/n (alternating harmonic), Σ(-1)ⁿ/n²',
-              'terms alternate in sign — Σ(-1)ⁿ bₙ or Σ(-1)ⁿ⁺¹ bₙ',
-              '+, -, +, -, ...'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Alternating series: terms alternate in sign — Σ(-1)ⁿ bₙ or Σ(-1)ⁿ⁺¹ bₙ. The other options describe different concepts from this topic.'
+            question: 'Does $\\sum_{n=1}^{\\infty} \\frac{(-1)^n}{\\sqrt{n}}$ converge?',
+            options: ['Yes, by AST', 'No', 'Need ratio test', 'Inconclusive'],
+            correctAnswer: 0,
+            explanation: '$b_n = 1/\\sqrt{n}$: positive ✓, decreasing ✓, limit $0$ ✓. Converges by AST.'
           },
           {
-            question: 'Which of the following is true about The signs must strictly alternate?',
-            options: [
-              'terms alternate in sign — Σ(-1)ⁿ bₙ or Σ(-1)ⁿ⁺¹ bₙ',
-              '+, -, +, -, ...',
-              'Many important series are alternating (ln 2, π/4, etc.)',
-              'Σ(-1)ⁿ/n (alternating harmonic), Σ(-1)ⁿ/n²'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — The signs must strictly alternate: +, -, +, -, ... Be careful to distinguish between the different concepts in this topic.'
+            question: 'Does $\\sum_{n=1}^{\\infty} \\frac{(-1)^n \\cdot n}{n+1}$ converge?',
+            options: ['No, $b_n \\to 1 \\neq 0$', 'Yes by AST', 'Conditionally', 'Need more info'],
+            correctAnswer: 0,
+            explanation: '$b_n = n/(n+1) \\to 1 \\neq 0$. The terms do not go to zero. Diverges by the divergence test!'
           }
         ]
       }
     },
     {
-      id: 'alter1-detail',
+      id: 'alt1-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Alternating series**: terms alternate in sign — Σ(-1)ⁿ bₙ or Σ(-1)ⁿ⁺¹ bₙ
-- **Examples**: Σ(-1)ⁿ/n (alternating harmonic), Σ(-1)ⁿ/n²
-- **The signs must strictly alternate**: +, -, +, -, ...
-- **Many important series are alternating (ln 2, π/4, etc.)**
-      `
-    },
-    {
-      id: 'alter1-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Regarding ∮ Alternating Series, which correctly describes Many important series are alternating…?',
-            options: [
-              '+, -, +, -, ...',
-              'Many important series are alternating (ln 2, π/4, etc.)',
-              'terms alternate in sign — Σ(-1)ⁿ bₙ or Σ(-1)ⁿ⁺¹ bₙ',
-              'Σ(-1)ⁿ/n (alternating harmonic), Σ(-1)ⁿ/n²'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Many important series are alternating (ln 2, π/4, etc.). Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'alter1-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Alternating series',
-            options: ['Many important series are alternating (ln 2, π/4, etc.)', 'Σ(-1)ⁿ/n (alternating harmonic), Σ(-1)ⁿ/n²', 'terms alternate in sign — Σ(-1)ⁿ bₙ or Σ(-1)ⁿ⁺¹ bₙ', '+, -, +, -, ...']
-          },
-          {
-            label: 'Examples',
-            options: ['Σ(-1)ⁿ/n (alternating harmonic), Σ(-1)ⁿ/n²', 'Many important series are alternating (ln 2, π/4, etc.)', 'terms alternate in sign — Σ(-1)ⁿ bₙ or Σ(-1)ⁿ⁺¹ bₙ', '+, -, +, -, ...']
-          },
-          {
-            label: 'The signs must strictly alternate',
-            options: ['Σ(-1)ⁿ/n (alternating harmonic), Σ(-1)ⁿ/n²', 'Many important series are alternating (ln 2, π/4, etc.)', '+, -, +, -, ...', 'terms alternate in sign — Σ(-1)ⁿ bₙ or Σ(-1)ⁿ⁺¹ bₙ']
-          }
-        ],
-        correctAnswers: ['terms alternate in sign — Σ(-1)ⁿ bₙ or Σ(-1)ⁿ⁺¹ bₙ', 'Σ(-1)ⁿ/n (alternating harmonic), Σ(-1)ⁿ/n²', '+, -, +, -, ...'],
-        hint1: 'Think about what each concept specifically describes in ∮ Alternating Series.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in ∮ Alternating Series describes a specific idea. Alternating series: terms alternate in sign — Σ(-1)ⁿ bₙ or Σ(-1)ⁿ⁺¹ bₙ. Examples: Σ(-1)ⁿ/n (alternating harmonic), Σ(-1)ⁿ/n². The signs must strictly alternate: +, -, +, -, ...'
-      }
+      content: `### Key Takeaways — Part 1
+AST: decreasing positive terms going to zero → converges.`
     }
   ]
-}
+};

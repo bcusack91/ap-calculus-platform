@@ -1,125 +1,47 @@
-export const calcBCVectorsPart2Data = {
+export const calcbcVectorsPart2Data = {
   topicSlug: 'vector-valued-functions-calcbc',
   sections: [
     {
-      id: 'vecto2-intro',
+      id: 'vec2-intro',
       type: 'text' as const,
-      content: `
-# Derivatives of Vector Functions
+      content: `# Vector-Valued Functions
 
-**Part 2 of 7 — Derivatives of Vector Functions**
+**Part 2 of 7 — Integration of Vectors**
 
-### 1. r⃗'(t) = ⟨f'(t), g'(t)⟩ — differentiate component by component
+### Integrating Vector Functions
 
-r⃗'(t) = ⟨f'(t), g'(t)⟩ — differentiate component by component
+$$\int \vec{v}(t)\,dt = \left\langle \int x'(t)\,dt,\, \int y'(t)\,dt \right\rangle + \vec{C}$$
 
-### 2. r⃗'(t) is the velocity vector, tangent to the curve
+### Position from Velocity
 
-r⃗'(t) is the velocity vector, tangent to the curve
+$$\vec{r}(t) = \vec{r}(t_0) + \int_{t_0}^t \vec{v}(s)\,ds$$
 
-### 3. Direction of r⃗'(t) gives the direction of motion
+### Worked Example
 
-Direction of r⃗'(t) gives the direction of motion
+$\vec{v}(t) = \langle 2t, e^t \rangle$, $\vec{r}(0) = \langle 1, 3 \rangle$
 
-### 4. Tangent line
-
-R⃗(s) = r⃗(t₀) + s·r⃗'(t₀)
-      `
+$\vec{r}(t) = \langle 1 + t^2, 3 + e^t - 1 \rangle = \langle 1 + t^2, 2 + e^t \rangle$`
     },
     {
-      id: 'vecto2-quiz1',
+      id: 'vec2-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Vector Integration** 🎯',
       exercise: {
         questions: [
           {
-            question: 'What does "r⃗\'(t) = ⟨f\'(t), g\'(t)⟩ — differentiate…" refer to in calculus?',
-            options: [
-              'r⃗\'(t) is the velocity vector, tangent to the curve',
-              'Direction of r⃗\'(t) gives the direction of motion',
-              'R⃗(s) = r⃗(t₀) + s·r⃗\'(t₀)',
-              'r⃗\'(t) = ⟨f\'(t), g\'(t)⟩ — differentiate component by component'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — r⃗\'(t) = ⟨f\'(t), g\'(t)⟩ — differentiate component by component. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Select the statement that correctly describes Direction of r⃗\'(t) gives the direction…:',
-            options: [
-              'R⃗(s) = r⃗(t₀) + s·r⃗\'(t₀)',
-              'r⃗\'(t) = ⟨f\'(t), g\'(t)⟩ — differentiate component by component',
-              'Direction of r⃗\'(t) gives the direction of motion',
-              'r⃗\'(t) is the velocity vector, tangent to the curve'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Direction of r⃗\'(t) gives the direction of motion. Be careful to distinguish between the different concepts in this topic.'
+            question: '$\\vec{v}(t) = \\langle 6t, 2 \\rangle$, $\\vec{r}(0) = \\langle 0, 5 \\rangle$. Find $\\vec{r}(1)$.',
+            options: ['$\\langle 3, 7 \\rangle$', '$\\langle 6, 7 \\rangle$', '$\\langle 3, 2 \\rangle$', '$\\langle 1, 7 \\rangle$'],
+            correctAnswer: 0,
+            explanation: '$\\vec{r}(t) = \\langle 3t^2, 2t + 5 \\rangle$. At $t = 1$: $\\langle 3, 7 \\rangle$.'
           }
         ]
       }
     },
     {
-      id: 'vecto2-detail',
+      id: 'vec2-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **r⃗'(t) = ⟨f'(t), g'(t)⟩ — differentiate component by component**
-- **r⃗'(t) is the velocity vector, tangent to the curve**
-- **Direction of r⃗'(t) gives the direction of motion**
-- **Tangent line**: R⃗(s) = r⃗(t₀) + s·r⃗'(t₀)
-      `
-    },
-    {
-      id: 'vecto2-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which statement about Tangent line is correct?',
-            options: [
-              'Direction of r⃗\'(t) gives the direction of motion',
-              'r⃗\'(t) is the velocity vector, tangent to the curve',
-              'r⃗\'(t) = ⟨f\'(t), g\'(t)⟩ — differentiate component by component',
-              'R⃗(s) = r⃗(t₀) + s·r⃗\'(t₀)'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Tangent line: R⃗(s) = r⃗(t₀) + s·r⃗\'(t₀). Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'vecto2-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'r⃗\'(t) = ⟨f\'(t), g\'(t)⟩ — differentiate…',
-            options: ['Direction of r⃗\'(t) gives the direction of motion', 'R⃗(s) = r⃗(t₀) + s·r⃗\'(t₀)', 'r⃗\'(t) is the velocity vector, tangent to the curve', 'r⃗\'(t) = ⟨f\'(t), g\'(t)⟩ — differentiate component by component']
-          },
-          {
-            label: 'r⃗\'(t) is the velocity vector, tangent…',
-            options: ['R⃗(s) = r⃗(t₀) + s·r⃗\'(t₀)', 'Direction of r⃗\'(t) gives the direction of motion', 'r⃗\'(t) = ⟨f\'(t), g\'(t)⟩ — differentiate component by component', 'r⃗\'(t) is the velocity vector, tangent to the curve']
-          },
-          {
-            label: 'Direction of r⃗\'(t) gives the direction…',
-            options: ['r⃗\'(t) = ⟨f\'(t), g\'(t)⟩ — differentiate component by component', 'r⃗\'(t) is the velocity vector, tangent to the curve', 'Direction of r⃗\'(t) gives the direction of motion', 'R⃗(s) = r⃗(t₀) + s·r⃗\'(t₀)']
-          }
-        ],
-        correctAnswers: ['r⃗\'(t) = ⟨f\'(t), g\'(t)⟩ — differentiate component by component', 'r⃗\'(t) is the velocity vector, tangent to the curve', 'Direction of r⃗\'(t) gives the direction of motion'],
-        hint1: 'Think about what each concept specifically describes in Derivatives of Vector Functions.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Derivatives of Vector Functions describes a specific idea. r⃗\'(t) = ⟨f\'(t), g\'(t)⟩ — differentiate component by component. r⃗\'(t) is the velocity vector, tangent to the curve. Direction of r⃗\'(t) gives the direction of motion.'
-      }
+      content: `### Key Takeaways — Part 2
+Integrate vectors component-by-component. Don't forget initial conditions!`
     }
   ]
-}
+};

@@ -1,125 +1,44 @@
-export const calcABAreaCurvesPart7Data = {
+export const calcabAreaCurvesPart7Data = {
   topicSlug: 'area-between-curves-calcab',
   sections: [
     {
-      id: 'area-7-intro',
+      id: 'area7-intro',
       type: 'text' as const,
-      content: `
-# Review & Applications
+      content: `# Area Between Curves \u2014 Review
 
-**Part 7 of 7 — Review & Applications**
-
-### 1. Find all intersection points by setting f(x) = g(x)
-
-Find all intersection points by setting f(x) = g(x)
-
-### 2. Create separate integrals for each region between consecutive intersection points
-
-Create separate integrals for each region between consecutive intersection points
-
-### 3. Sum the areas of all regions (each area is positive)
-
-Sum the areas of all regions (each area is positive)
-
-### 4. Watch for functions that intersect more than twice
-
-Watch for functions that intersect more than twice
-      `
+**Part 7 of 7 \u2014 Comprehensive Assessment**`
     },
     {
-      id: 'area-7-quiz1',
+      id: 'area7-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Final Assessment** \ud83c\udfaf',
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains Find all intersection points by setting…?',
-            options: [
-              'Create separate integrals for each region between consecutive intersection points',
-              'Watch for functions that intersect more than twice',
-              'Find all intersection points by setting f(x) = g(x)',
-              'Sum the areas of all regions (each area is positive)'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Find all intersection points by setting f(x) = g(x). The other options describe different concepts from this topic.'
+            question: 'Find the area enclosed by $y = x^3 - x$ and $y = 0$.',
+            options: ['$\\frac{1}{2}$', '$0$', '$\\frac{1}{4}$', '$1$'],
+            correctAnswer: 0,
+            explanation: 'Roots: $x(x-1)(x+1) = 0$ at $x = -1, 0, 1$. Total area = $\\int_{-1}^0 (x^3-x)\\,dx + \\int_0^1 (x-x^3)\\,dx = \\frac{1}{4} + \\frac{1}{4} = \\frac{1}{2}$ (using symmetry).'
           },
           {
-            question: 'Which of the following is true about Sum the areas of all regions (each area…?',
-            options: [
-              'Find all intersection points by setting f(x) = g(x)',
-              'Sum the areas of all regions (each area is positive)',
-              'Create separate integrals for each region between consecutive intersection points',
-              'Watch for functions that intersect more than twice'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Sum the areas of all regions (each area is positive). Be careful to distinguish between the different concepts in this topic.'
+            question: 'Set up (but evaluate) the area between $y = \\ln x$, $y = 0$, and $x = e$ using $dy$.',
+            options: ['$\\int_0^1 (e - e^y)\\,dy$', '$\\int_0^e \\ln x\\,dx$', '$\\int_1^e (e - x)\\,dx$', '$\\int_0^1 e^y\\,dy$'],
+            correctAnswer: 0,
+            explanation: 'In terms of $y$: $x = e^y$ is the left boundary. Right boundary: $x = e$. $y$ goes from $0$ to $1$ (since $\\ln e = 1$). $A = \\int_0^1 (e - e^y)\\,dy$.'
           }
         ]
       }
     },
     {
-      id: 'area-7-detail',
+      id: 'area7-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
+      content: `### Area Between Curves \u2014 Complete! \u2705
 
-- **Find all intersection points by setting f(x) = g(x)**
-- **Create separate integrals for each region between consecutive intersection points**
-- **Sum the areas of all regions (each area is positive)**
-- **Watch for functions that intersect more than twice**
-      `
-    },
-    {
-      id: 'area-7-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Regarding Review & Applications, which correctly describes Watch for functions that intersect more…?',
-            options: [
-              'Create separate integrals for each region between consecutive intersection points',
-              'Sum the areas of all regions (each area is positive)',
-              'Find all intersection points by setting f(x) = g(x)',
-              'Watch for functions that intersect more than twice'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Watch for functions that intersect more than twice. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'area-7-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Find all intersection points by setting…',
-            options: ['Create separate integrals for each region between consecutive intersection points', 'Watch for functions that intersect more than twice', 'Sum the areas of all regions (each area is positive)', 'Find all intersection points by setting f(x) = g(x)']
-          },
-          {
-            label: 'Create separate integrals for each…',
-            options: ['Watch for functions that intersect more than twice', 'Find all intersection points by setting f(x) = g(x)', 'Create separate integrals for each region between consecutive intersection points', 'Sum the areas of all regions (each area is positive)']
-          },
-          {
-            label: 'Sum the areas of all regions (each area…',
-            options: ['Create separate integrals for each region between consecutive intersection points', 'Find all intersection points by setting f(x) = g(x)', 'Sum the areas of all regions (each area is positive)', 'Watch for functions that intersect more than twice']
-          }
-        ],
-        correctAnswers: ['Find all intersection points by setting f(x) = g(x)', 'Create separate integrals for each region between consecutive intersection points', 'Sum the areas of all regions (each area is positive)'],
-        hint1: 'Think about what each concept specifically describes in Review & Applications.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Review & Applications describes a specific idea. Find all intersection points by setting f(x) = g(x). Create separate integrals for each region between consecutive intersection points. Sum the areas of all regions (each area is positive).'
-      }
+You have mastered:
+- \u2705 Area between two curves ($dx$ and $dy$)
+- \u2705 When curves cross (splitting integrals)
+- \u2705 Multiple regions and absolute value
+- \u2705 Choosing $dx$ vs $dy$ integration`
     }
   ]
-}
+};

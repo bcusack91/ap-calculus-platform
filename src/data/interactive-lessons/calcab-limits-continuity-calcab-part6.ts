@@ -1,60 +1,71 @@
-export const calcABLimitsContinuityPart6Data = {
+export const calcabLimitsPart6Data = {
   topicSlug: 'limits-continuity-calcab',
   sections: [
     {
       id: 'limit6-intro',
       type: 'text' as const,
       content: `
-# Problem-Solving Workshop
+# ∫ Problem-Solving Workshop
 
-**Part 6 of 7 — Problem-Solving Workshop**
+**Part 6 of 7 — AP-Level Practice**
 
-### 1. IVT
+### Strategy Guide for Limit Problems
 
-if f is continuous on [a,b] and N is between f(a) and f(b), then f(c) = N for some c in (a,b)
+**Step 1: Try direct substitution.** If it works, you're done.
 
-### 2. IVT guarantees existence of a solution but doesn't locate it
+**Step 2: Identify the form.**
+- $\\frac{0}{0}$: Try factoring, rationalizing, or trig identities
+- $\\frac{\\text{nonzero}}{0}$: The limit is $\\pm\\infty$ (or DNE if signs differ by side)
+- $\\frac{\\pm\\infty}{\\pm\\infty}$: Divide top and bottom by highest power of $x$
 
-IVT guarantees existence of a solution but doesn't locate it
+**Step 3: For piecewise or absolute value,** check both one-sided limits.
 
-### 3. Useful for proving a function has a root in an interval
+**Step 4: For oscillating factors,** try the Squeeze Theorem.
 
-Useful for proving a function has a root in an interval
+### Worked Example 1
 
-### 4. Requires continuity on the closed interval — cannot skip this condition
+$$\\lim_{x \\to 4} \\frac{\\sqrt{x} - 2}{x - 4}$$
 
-Requires continuity on the closed interval — cannot skip this condition
+Direct sub: $\\frac{0}{0}$. Rationalize:
+
+$\\frac{\\sqrt{x}-2}{x-4} \\cdot \\frac{\\sqrt{x}+2}{\\sqrt{x}+2} = \\frac{x-4}{(x-4)(\\sqrt{x}+2)} = \\frac{1}{\\sqrt{x}+2}$
+
+At $x = 4$: $\\frac{1}{\\sqrt{4}+2} = \\frac{1}{4}$
+
+### Worked Example 2
+
+$$\\lim_{x \\to 0} \\frac{\\sin(3x)}{\\sin(5x)}$$
+
+Rewrite: $\\frac{\\sin(3x)}{\\sin(5x)} = \\frac{\\sin(3x)}{3x} \\cdot \\frac{5x}{\\sin(5x)} \\cdot \\frac{3x}{5x} = 1 \\cdot 1 \\cdot \\frac{3}{5} = \\frac{3}{5}$
+
+### Worked Example 3
+
+$$\\lim_{x \\to -\\infty} \\frac{2x + 1}{\\sqrt{x^2 + 3}}$$
+
+For $x < 0$: $\\sqrt{x^2} = |x| = -x$. Factor:
+
+$\\frac{2x+1}{\\sqrt{x^2+3}} = \\frac{x(2+1/x)}{|x|\\sqrt{1+3/x^2}} = \\frac{x(2+1/x)}{-x\\sqrt{1+3/x^2}}$
+
+$= \\frac{-(2+1/x)}{\\sqrt{1+3/x^2}} \\to \\frac{-2}{1} = -2$
       `
     },
     {
       id: 'limit6-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: `**Check Your Understanding** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains IVT?',
-            options: [
-              'if f is continuous on [a,b] and N is between f(a) and f(b), then f(c) = N for some c in (a,b)',
-              'Useful for proving a function has a root in an interval',
-              'Requires continuity on the closed interval — cannot skip this condition',
-              'IVT guarantees existence of a solution but doesn\'t locate it'
-            ],
+            question: 'Evaluate $\\lim_{x \\to 4} \\frac{\\sqrt{x} - 2}{x - 4}$.',
+            options: ['$\\frac{1}{4}$', '$\\frac{1}{2}$', '$0$', '$4$'],
             correctAnswer: 0,
-            explanation: 'Correct — IVT: if f is continuous on [a,b] and N is between f(a) and f(b), then f(c) = N for some c in (a,b). The other options describe different concepts from this topic.'
+            explanation: 'Rationalize: $\\frac{\\sqrt{x}-2}{x-4} \\cdot \\frac{\\sqrt{x}+2}{\\sqrt{x}+2} = \\frac{x-4}{(x-4)(\\sqrt{x}+2)} = \\frac{1}{\\sqrt{x}+2}$. At $x=4$: $\\frac{1}{2+2} = \\frac{1}{4}$.'
           },
           {
-            question: 'Select the statement that correctly describes Useful for proving a function has a…:',
-            options: [
-              'IVT guarantees existence of a solution but doesn\'t locate it',
-              'Useful for proving a function has a root in an interval',
-              'Requires continuity on the closed interval — cannot skip this condition',
-              'if f is continuous on [a,b] and N is between f(a) and f(b), then f(c) = N for some c in (a,b)'
-            ],
+            question: 'Evaluate $\\lim_{x \\to 0} \\frac{\\sin(3x)}{\\sin(5x)}$.',
+            options: ['$\\frac{5}{3}$', '$\\frac{3}{5}$', '$0$', '$1$'],
             correctAnswer: 1,
-            explanation: 'Correct — Useful for proving a function has a root in an interval. Be careful to distinguish between the different concepts in this topic.'
+            explanation: '$\\frac{\\sin(3x)}{\\sin(5x)} = \\frac{\\sin(3x)}{3x} \\cdot \\frac{5x}{\\sin(5x)} \\cdot \\frac{3}{5} \\to 1 \\cdot 1 \\cdot \\frac{3}{5} = \\frac{3}{5}$'
           }
         ]
       }
@@ -63,32 +74,28 @@ Requires continuity on the closed interval — cannot skip this condition
       id: 'limit6-detail',
       type: 'text' as const,
       content: `
-### Key Concepts Summary
+### Common AP Exam Limit Tricks
 
-- **IVT**: if f is continuous on [a,b] and N is between f(a) and f(b), then f(c) = N for some c in (a,b)
-- **IVT guarantees existence of a solution but doesn't locate it**
-- **Useful for proving a function has a root in an interval**
-- **Requires continuity on the closed interval — cannot skip this condition**
+| Problem Type | Key Move |
+|-------------|----------|
+| $\\frac{\\sqrt{\\text{stuff}} - \\text{number}}{\\text{something}}$ | Multiply by conjugate |
+| $\\frac{\\sin(ax)}{\\sin(bx)}$ | Rewrite using $\\frac{\\sin u}{u} \\to 1$ |
+| $\\frac{f(x)}{g(x)}$ as $x \\to \\pm\\infty$ | Divide by highest power of $x$ |
+| $\\frac{0}{0}$ with polynomials | Factor! |
+| Function with $|x|$ | Split into cases: $x > 0$ and $x < 0$ |
       `
     },
     {
       id: 'limit6-quiz2',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: `**Check Your Understanding** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'Regarding Problem-Solving Workshop, which correctly describes Requires continuity on the closed…?',
-            options: [
-              'Requires continuity on the closed interval — cannot skip this condition',
-              'if f is continuous on [a,b] and N is between f(a) and f(b), then f(c) = N for some c in (a,b)',
-              'IVT guarantees existence of a solution but doesn\'t locate it',
-              'Useful for proving a function has a root in an interval'
-            ],
-            correctAnswer: 0,
-            explanation: 'Correct — Requires continuity on the closed interval — cannot skip this condition. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            question: 'Evaluate $\\lim_{x \\to -\\infty} \\frac{5x}{\\sqrt{x^2 + 4}}$.',
+            options: ['$5$', '$-5$', '$0$', '$\\infty$'],
+            correctAnswer: 1,
+            explanation: 'For $x < 0$: $\\sqrt{x^2} = -x$, so $\\sqrt{x^2+4} \\approx -x$ for large $|x|$. Then $\\frac{5x}{\\sqrt{x^2+4}} = \\frac{5x}{-x\\sqrt{1+4/x^2}} = \\frac{-5}{\\sqrt{1+4/x^2}} \\to -5$.'
           }
         ]
       }
@@ -96,29 +103,18 @@ Requires continuity on the closed interval — cannot skip this condition
     {
       id: 'limit6-dropdown',
       type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
+      content: `**Quick Evaluation** 🔍`,
       exercise: {
         dropdowns: [
-          {
-            label: 'IVT',
-            options: ['Requires continuity on the closed interval — cannot skip this condition', 'if f is continuous on [a,b] and N is between f(a) and f(b), then f(c) = N for some c in (a,b)', 'IVT guarantees existence of a solution but doesn\'t locate it', 'Useful for proving a function has a root in an interval']
-          },
-          {
-            label: 'IVT guarantees existence of a solution…',
-            options: ['Useful for proving a function has a root in an interval', 'IVT guarantees existence of a solution but doesn\'t locate it', 'if f is continuous on [a,b] and N is between f(a) and f(b), then f(c) = N for some c in (a,b)', 'Requires continuity on the closed interval — cannot skip this condition']
-          },
-          {
-            label: 'Useful for proving a function has a…',
-            options: ['if f is continuous on [a,b] and N is between f(a) and f(b), then f(c) = N for some c in (a,b)', 'Useful for proving a function has a root in an interval', 'IVT guarantees existence of a solution but doesn\'t locate it', 'Requires continuity on the closed interval — cannot skip this condition']
-          }
+          { label: '$\\lim_{x \\to 1} \\frac{x^3-1}{x-1}$', options: ['0', '1', '2', '3'] },
+          { label: '$\\lim_{x \\to 0} \\frac{\\tan x}{x}$', options: ['0', '1', '-1', 'DNE'] },
+          { label: '$\\lim_{x \\to \\infty} \\frac{2x}{3x-1}$', options: ['0', '2/3', '1', '∞'] }
         ],
-        correctAnswers: ['if f is continuous on [a,b] and N is between f(a) and f(b), then f(c) = N for some c in (a,b)', 'IVT guarantees existence of a solution but doesn\'t locate it', 'Useful for proving a function has a root in an interval'],
-        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. IVT: if f is continuous on [a,b] and N is between f(a) and f(b), then f(c) = N for some c in (a,b). IVT guarantees existence of a solution but doesn\'t locate it. Useful for proving a function has a root in an interval.'
+        correctAnswers: ['3', '1', '2/3'],
+        hint1: 'Factor $x^3-1 = (x-1)(x^2+x+1)$ and cancel.',
+        hint2: '$\\tan x = \\frac{\\sin x}{\\cos x}$, so $\\frac{\\tan x}{x} = \\frac{\\sin x}{x} \\cdot \\frac{1}{\\cos x}$.',
+        hint3: 'Same degree — ratio of leading coefficients.',
+        explanation: '$\\frac{x^3-1}{x-1} = x^2+x+1 \\to 3$. $\\frac{\\tan x}{x} = \\frac{\\sin x}{x} \\cdot \\frac{1}{\\cos x} \\to 1 \\cdot 1 = 1$. $\\frac{2x}{3x-1}$: same degree, ratio $= \\frac{2}{3}$.'
       }
     }
   ]

@@ -1,125 +1,47 @@
-export const calcABExamReviewPart5Data = {
+export const calcabExamReviewPart5Data = {
   topicSlug: 'ap-exam-review-calcab',
   sections: [
     {
-      id: 'ap-ex5-intro',
+      id: 'er5-intro',
       type: 'text' as const,
-      content: `
-# Applications of Integrals Review
+      content: `# AP Exam Review
 
-**Part 5 of 7 — Applications of Integrals Review**
+**Part 5 of 7 — FTC, Accumulation, and DEs**
 
-### 1. Area between curves, volumes of revolution (disk/washer)
+### FTC Part 1
+$$\\frac{d}{dx}\\int_a^x f(t)\\,dt = f(x)$$
 
-Area between curves, volumes of revolution (disk/washer)
+### FTC Part 2
+$$\\int_a^b f(x)\\,dx = F(b) - F(a)$$
 
-### 2. Accumulation functions and net change
-
-Accumulation functions and net change
-
-### 3. Average value of a function
-
-Average value of a function
-
-### 4. Particle motion
-
-displacement vs total distance
-      `
+### Separation of Variables
+$$\\frac{dy}{dx} = f(x)g(y) \\implies \\frac{dy}{g(y)} = f(x)\\,dx$$`
     },
     {
-      id: 'ap-ex5-quiz1',
+      id: 'er5-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**FTC & DE Review** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Area between curves, volumes of…?',
-            options: [
-              'Area between curves, volumes of revolution (disk/washer)',
-              'Accumulation functions and net change',
-              'displacement vs total distance',
-              'Average value of a function'
-            ],
+            question: 'If $F(x) = \\int_1^x \\sqrt{t^3 + 1}\\,dt$, find $F\'(4)$.',
+            options: ['$\\sqrt{65}$', '$65$', '$\\sqrt{17}$', '$4$'],
             correctAnswer: 0,
-            explanation: 'Correct — Area between curves, volumes of revolution (disk/washer). The other options describe different concepts from this topic.'
+            explanation: '$F\'(x) = \\sqrt{x^3 + 1}$. $F\'(4) = \\sqrt{64+1} = \\sqrt{65}$.'
           },
           {
-            question: 'In the context of Applications of Integrals Review, which explains Average value of a function?',
-            options: [
-              'Accumulation functions and net change',
-              'Average value of a function',
-              'Area between curves, volumes of revolution (disk/washer)',
-              'displacement vs total distance'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Average value of a function. Be careful to distinguish between the different concepts in this topic.'
+            question: 'Solve $\\frac{dy}{dx} = \\frac{x}{y}$ with $y(0) = 4$. Find $y$ when $x = 3$.',
+            options: ['$5$', '$\\sqrt{25}$', '$\\sqrt{7}$', '$3$'],
+            correctAnswer: 0,
+            explanation: '$y\\,dy = x\\,dx$. $y^2/2 = x^2/2 + C$. $y(0)=4$: $C = 8$. $y^2 = x^2 + 16$. $y(3) = \\sqrt{25} = 5$.'
           }
         ]
       }
     },
     {
-      id: 'ap-ex5-detail',
+      id: 'er5-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Area between curves, volumes of revolution (disk/washer)**
-- **Accumulation functions and net change**
-- **Average value of a function**
-- **Particle motion**: displacement vs total distance
-      `
-    },
-    {
-      id: 'ap-ex5-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of these accurately represents Particle motion?',
-            options: [
-              'Average value of a function',
-              'Accumulation functions and net change',
-              'Area between curves, volumes of revolution (disk/washer)',
-              'displacement vs total distance'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Particle motion: displacement vs total distance. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'ap-ex5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Area between curves, volumes of…',
-            options: ['Accumulation functions and net change', 'displacement vs total distance', 'Area between curves, volumes of revolution (disk/washer)', 'Average value of a function']
-          },
-          {
-            label: 'Accumulation functions and net change',
-            options: ['Accumulation functions and net change', 'Area between curves, volumes of revolution (disk/washer)', 'Average value of a function', 'displacement vs total distance']
-          },
-          {
-            label: 'Average value of a function',
-            options: ['displacement vs total distance', 'Average value of a function', 'Accumulation functions and net change', 'Area between curves, volumes of revolution (disk/washer)']
-          }
-        ],
-        correctAnswers: ['Area between curves, volumes of revolution (disk/washer)', 'Accumulation functions and net change', 'Average value of a function'],
-        hint1: 'Think about what each concept specifically describes in Applications of Integrals Review.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Applications of Integrals Review describes a specific idea. Area between curves, volumes of revolution (disk/washer). Accumulation functions and net change. Average value of a function.'
-      }
+      content: `### Review — Part 5 Complete`
     }
   ]
-}
+};

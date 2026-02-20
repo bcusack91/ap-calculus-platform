@@ -1,125 +1,51 @@
-export const calcABIntAppsPart2Data = {
+export const calcabIntAppsPart2Data = {
   topicSlug: 'integration-applications-calcab',
   sections: [
     {
-      id: 'integ2-intro',
+      id: 'ia2-intro',
       type: 'text' as const,
-      content: `
-# Volumes of Known Cross-Sections
+      content: `# Integration Applications
 
-**Part 2 of 7 — Volumes of Known Cross-Sections**
+**Part 2 of 7 — Cross-Sectional Volumes**
 
-### 1. Volume = ∫ₐᵇ A(x)dx where A(x) is the cross-sectional area
+### Volume with Known Cross Sections
 
-Volume = ∫ₐᵇ A(x)dx where A(x) is the cross-sectional area
+$$V = \int_a^b A(x)\,dx$$
 
-### 2. Square cross-sections
+where $A(x)$ is the area of the cross section at position $x$.
 
-A(x) = [f(x) - g(x)]²
+### Common Cross Sections
 
-### 3. Semicircular cross-sections
+If the base is between $y = f(x)$ and $y = g(x)$, the side length is $s = f(x) - g(x)$.
 
-A(x) = π/8 · [f(x) - g(x)]²
-
-### 4. Equilateral triangle cross-sections
-
-A(x) = (√3/4)[f(x) - g(x)]²
-      `
+| Shape | Area Formula |
+|-------|-------------|
+| Square | $s^2$ |
+| Semicircle | $\frac{\pi}{8}s^2$ |
+| Equilateral triangle | $\frac{\sqrt{3}}{4}s^2$ |
+| Isosceles right triangle | $\frac{1}{2}s^2$ |`
     },
     {
-      id: 'integ2-quiz1',
+      id: 'ia2-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Cross Sections** 🎯\n\nBase is the region between $y = \\sqrt{x}$ and $y = 0$ from $x = 0$ to $x = 4$. Cross sections perpendicular to $x$-axis are squares.',
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains Volume = ∫ₐᵇ A(x)dx where A(x) is the…?',
-            options: [
-              'A(x) = [f(x) - g(x)]²',
-              'Volume = ∫ₐᵇ A(x)dx where A(x) is the cross-sectional area',
-              'A(x) = (√3/4)[f(x) - g(x)]²',
-              'A(x) = π/8 · [f(x) - g(x)]²'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Volume = ∫ₐᵇ A(x)dx where A(x) is the cross-sectional area. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Which of the following is true about Semicircular cross-sections?',
-            options: [
-              'A(x) = π/8 · [f(x) - g(x)]²',
-              'A(x) = [f(x) - g(x)]²',
-              'Volume = ∫ₐᵇ A(x)dx where A(x) is the cross-sectional area',
-              'A(x) = (√3/4)[f(x) - g(x)]²'
-            ],
+            question: 'Find the volume.',
+            options: ['$8$', '$4$', '$16$', '$\\frac{8}{3}$'],
             correctAnswer: 0,
-            explanation: 'Correct — Semicircular cross-sections: A(x) = π/8 · [f(x) - g(x)]². Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'Side $= \\sqrt{x}$. $A(x) = (\\sqrt{x})^2 = x$. $V = \\int_0^4 x\\,dx = [x^2/2]_0^4 = 8$.'
           }
         ]
       }
     },
     {
-      id: 'integ2-detail',
+      id: 'ia2-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Volume = ∫ₐᵇ A(x)dx where A(x) is the cross-sectional area**
-- **Square cross-sections**: A(x) = [f(x) - g(x)]²
-- **Semicircular cross-sections**: A(x) = π/8 · [f(x) - g(x)]²
-- **Equilateral triangle cross-sections**: A(x) = (√3/4)[f(x) - g(x)]²
-      `
-    },
-    {
-      id: 'integ2-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which statement about Equilateral triangle cross-sections is correct?',
-            options: [
-              'A(x) = π/8 · [f(x) - g(x)]²',
-              'A(x) = [f(x) - g(x)]²',
-              'Volume = ∫ₐᵇ A(x)dx where A(x) is the cross-sectional area',
-              'A(x) = (√3/4)[f(x) - g(x)]²'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Equilateral triangle cross-sections: A(x) = (√3/4)[f(x) - g(x)]². Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'integ2-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Square cross-sections',
-            options: ['Volume = ∫ₐᵇ A(x)dx where A(x) is the cross-sectional area', 'A(x) = [f(x) - g(x)]²', 'A(x) = π/8 · [f(x) - g(x)]²', 'A(x) = (√3/4)[f(x) - g(x)]²']
-          },
-          {
-            label: 'Semicircular cross-sections',
-            options: ['A(x) = [f(x) - g(x)]²', 'A(x) = (√3/4)[f(x) - g(x)]²', 'Volume = ∫ₐᵇ A(x)dx where A(x) is the cross-sectional area', 'A(x) = π/8 · [f(x) - g(x)]²']
-          },
-          {
-            label: 'Equilateral triangle cross-sections',
-            options: ['A(x) = (√3/4)[f(x) - g(x)]²', 'A(x) = [f(x) - g(x)]²', 'Volume = ∫ₐᵇ A(x)dx where A(x) is the cross-sectional area', 'A(x) = π/8 · [f(x) - g(x)]²']
-          }
-        ],
-        correctAnswers: ['A(x) = [f(x) - g(x)]²', 'A(x) = π/8 · [f(x) - g(x)]²', 'A(x) = (√3/4)[f(x) - g(x)]²'],
-        hint1: 'Think about what each concept specifically describes in Volumes of Known Cross-Sections.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Volumes of Known Cross-Sections describes a specific idea. Square cross-sections: A(x) = [f(x) - g(x)]². Semicircular cross-sections: A(x) = π/8 · [f(x) - g(x)]². Equilateral triangle cross-sections: A(x) = (√3/4)[f(x) - g(x)]².'
-      }
+      content: `### Key Takeaways — Part 2
+1. Volume = $\\int A(x)\\,dx$ where $A(x)$ = cross-section area
+2. The side length of the cross section comes from the curve`
     }
   ]
-}
+};

@@ -1,125 +1,74 @@
-export const calcABAntiderivativesPart1Data = {
+export const calcabAntiderivativesPart1Data = {
   topicSlug: 'antiderivatives-indefinite-integrals-calcab',
   sections: [
     {
-      id: 'antid1-intro',
+      id: 'anti1-intro',
       type: 'text' as const,
-      content: `
-# ∫ Antiderivatives Indefinite Integrals
+      content: `# Antiderivatives & Indefinite Integrals
 
-**Part 1 of 7 — Antiderivatives**
+**Part 1 of 7 — What is an Antiderivative?**
 
-### 1. An antiderivative of f is a function F such that F' = f
+### Definition
 
-An antiderivative of f is a function F such that F' = f
+An **antiderivative** of $f(x)$ is a function $F(x)$ such that $F'(x) = f(x)$.
 
-### 2. General antiderivative
+The **indefinite integral** represents the family of all antiderivatives:
 
-F(x) + C (always include the constant of integration)
+$$\\int f(x)\\,dx = F(x) + C$$
 
-### 3. The indefinite integral ∫f(x)dx represents the family of all antiderivatives
+The "$+ C$" is essential! Since the derivative of a constant is 0, there are infinitely many antiderivatives.
 
-The indefinite integral ∫f(x)dx represents the family of all antiderivatives
+### Power Rule for Integration
 
-### 4. Integration is the reverse of differentiation
+$$\\int x^n\\,dx = \\frac{x^{n+1}}{n+1} + C \\quad (n \\neq -1)$$
 
-Integration is the reverse of differentiation
-      `
+This reverses the power rule for differentiation.
+
+### Worked Examples
+
+| $f(x)$ | $\\int f(x)\\,dx$ |
+|---------|-------------------|
+| $x^4$ | $\\frac{x^5}{5} + C$ |
+| $x^{-3}$ | $\\frac{x^{-2}}{-2} + C = -\\frac{1}{2x^2} + C$ |
+| $\\sqrt{x} = x^{1/2}$ | $\\frac{x^{3/2}}{3/2} + C = \\frac{2}{3}x^{3/2} + C$ |
+| $\\frac{1}{x^4} = x^{-4}$ | $\\frac{x^{-3}}{-3} + C = -\\frac{1}{3x^3} + C$ |`
     },
     {
-      id: 'antid1-quiz1',
+      id: 'anti1-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Power Rule for Integration** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains An antiderivative of f is a function F…?',
-            options: [
-              'The indefinite integral ∫f(x)dx represents the family of all antiderivatives',
-              'F(x) + C (always include the constant of integration)',
-              'An antiderivative of f is a function F such that F\' = f',
-              'Integration is the reverse of differentiation'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — An antiderivative of f is a function F such that F\' = f. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'In the context of Antiderivatives Indefinite Integrals, which explains The indefinite integral ∫f(x)dx…?',
-            options: [
-              'An antiderivative of f is a function F such that F\' = f',
-              'The indefinite integral ∫f(x)dx represents the family of all antiderivatives',
-              'Integration is the reverse of differentiation',
-              'F(x) + C (always include the constant of integration)'
-            ],
+            question: 'Evaluate $\\int x^7\\,dx$.',
+            options: ['$7x^6 + C$', '$\\frac{x^8}{8} + C$', '$\\frac{x^7}{7} + C$', '$8x^8 + C$'],
             correctAnswer: 1,
-            explanation: 'Correct — The indefinite integral ∫f(x)dx represents the family of all antiderivatives. Be careful to distinguish between the different concepts in this topic.'
+            explanation: '$\\int x^7\\,dx = \\frac{x^{7+1}}{7+1} + C = \\frac{x^8}{8} + C$.'
+          },
+          {
+            question: 'Evaluate $\\int \\frac{1}{x^5}\\,dx$.',
+            options: ['$-\\frac{1}{4x^4} + C$', '$\\frac{1}{4x^4} + C$', '$-\\frac{5}{x^4} + C$', '$\\ln|x^5| + C$'],
+            correctAnswer: 0,
+            explanation: '$\\int x^{-5}\\,dx = \\frac{x^{-4}}{-4} + C = -\\frac{1}{4x^4} + C$.'
+          },
+          {
+            question: 'Evaluate $\\int \\sqrt[3]{x}\\,dx$.',
+            options: ['$\\frac{3}{4}x^{4/3} + C$', '$\\frac{4}{3}x^{4/3} + C$', '$\\frac{x^{2/3}}{2/3} + C$', '$\\frac{1}{3}x^{-2/3} + C$'],
+            correctAnswer: 0,
+            explanation: '$\\int x^{1/3}\\,dx = \\frac{x^{4/3}}{4/3} + C = \\frac{3}{4}x^{4/3} + C$.'
           }
         ]
       }
     },
     {
-      id: 'antid1-detail',
+      id: 'anti1-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
+      content: `### Key Takeaways — Part 1
 
-- **An antiderivative of f is a function F such that F' = f**
-- **General antiderivative**: F(x) + C (always include the constant of integration)
-- **The indefinite integral ∫f(x)dx represents the family of all antiderivatives**
-- **Integration is the reverse of differentiation**
-      `
-    },
-    {
-      id: 'antid1-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of these accurately represents Integration is the reverse of…?',
-            options: [
-              'The indefinite integral ∫f(x)dx represents the family of all antiderivatives',
-              'An antiderivative of f is a function F such that F\' = f',
-              'Integration is the reverse of differentiation',
-              'F(x) + C (always include the constant of integration)'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Integration is the reverse of differentiation. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'antid1-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'An antiderivative of f is a function F…',
-            options: ['Integration is the reverse of differentiation', 'The indefinite integral ∫f(x)dx represents the family of all antiderivatives', 'F(x) + C (always include the constant of integration)', 'An antiderivative of f is a function F such that F\' = f']
-          },
-          {
-            label: 'General antiderivative',
-            options: ['An antiderivative of f is a function F such that F\' = f', 'The indefinite integral ∫f(x)dx represents the family of all antiderivatives', 'F(x) + C (always include the constant of integration)', 'Integration is the reverse of differentiation']
-          },
-          {
-            label: 'The indefinite integral ∫f(x)dx…',
-            options: ['An antiderivative of f is a function F such that F\' = f', 'Integration is the reverse of differentiation', 'The indefinite integral ∫f(x)dx represents the family of all antiderivatives', 'F(x) + C (always include the constant of integration)']
-          }
-        ],
-        correctAnswers: ['An antiderivative of f is a function F such that F\' = f', 'F(x) + C (always include the constant of integration)', 'The indefinite integral ∫f(x)dx represents the family of all antiderivatives'],
-        hint1: 'Think about what each concept specifically describes in Antiderivatives Indefinite Integrals.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Antiderivatives Indefinite Integrals describes a specific idea. An antiderivative of f is a function F such that F\' = f. General antiderivative: F(x) + C (always include the constant of integration). The indefinite integral ∫f(x)dx represents the family of all antiderivatives.'
-      }
+1. An antiderivative reverses differentiation: if $F' = f$, then $\\int f = F + C$
+2. **Power Rule:** add 1 to the exponent, divide by the new exponent
+3. **Always include $+C$** for indefinite integrals
+4. The special case $n = -1$: $\\int x^{-1}\\,dx = \\ln|x| + C$ (next part)`
     }
   ]
-}
+};

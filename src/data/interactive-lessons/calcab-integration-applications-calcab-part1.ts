@@ -1,125 +1,63 @@
-export const calcABIntAppsPart1Data = {
+export const calcabIntAppsPart1Data = {
   topicSlug: 'integration-applications-calcab',
   sections: [
     {
-      id: 'integ1-intro',
+      id: 'ia1-intro',
       type: 'text' as const,
-      content: `
-# ∫ Integration Applications
+      content: `# Integration Applications
 
-**Part 1 of 7 — Area Review & Setup**
+**Part 1 of 7 — Area Between Curves (Advanced)**
 
-### 1. Area between curves
+### Area Between Two Curves
 
-∫ₐᵇ [top(x) - bottom(x)]dx or ∫_c^d [right(y) - left(y)]dy
+$$A = \int_a^b |f(x) - g(x)|\,dx$$
 
-### 2. Choose the variable that makes bounds and functions simplest
+When $f(x) \geq g(x)$ on $[a,b]$:
 
-Choose the variable that makes bounds and functions simplest
+$$A = \int_a^b [f(x) - g(x)]\,dx$$
 
-### 3. Split at intersections where top/bottom switch
+### When Curves Cross
 
-Split at intersections where top/bottom switch
+Split the integral at intersection points!
 
-### 4. Always verify which function is on top by testing a point
+### Worked Example
 
-Always verify which function is on top by testing a point
-      `
+Area between $y = x^2$ and $y = x$ on $[0, 1]$:
+
+Intersection: $x^2 = x \implies x = 0, 1$.
+
+On $[0,1]$: $x \geq x^2$.
+
+$A = \int_0^1 (x - x^2)\,dx = \left[\frac{x^2}{2} - \frac{x^3}{3}\right]_0^1 = \frac{1}{2} - \frac{1}{3} = \frac{1}{6}$`
     },
     {
-      id: 'integ1-quiz1',
+      id: 'ia1-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Area Between Curves** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains Area between curves?',
-            options: [
-              'Split at intersections where top/bottom switch',
-              'Choose the variable that makes bounds and functions simplest',
-              'Always verify which function is on top by testing a point',
-              '∫ₐᵇ [top(x) - bottom(x)]dx or ∫_c^d [right(y) - left(y)]dy'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Area between curves: ∫ₐᵇ [top(x) - bottom(x)]dx or ∫_c^d [right(y) - left(y)]dy. The other options describe different concepts from this topic.'
+            question: 'Find the area enclosed by $y = x^2$ and $y = 2x$.',
+            options: ['$\\frac{4}{3}$', '$\\frac{2}{3}$', '$2$', '$\\frac{8}{3}$'],
+            correctAnswer: 0,
+            explanation: 'Intersect: $x^2 = 2x \\implies x = 0, 2$. $A = \\int_0^2(2x - x^2)\\,dx = [x^2 - x^3/3]_0^2 = 4 - 8/3 = 4/3$.'
           },
           {
-            question: 'Which of the following is true about Split at intersections where top/bottom…?',
-            options: [
-              'Always verify which function is on top by testing a point',
-              'Choose the variable that makes bounds and functions simplest',
-              'Split at intersections where top/bottom switch',
-              '∫ₐᵇ [top(x) - bottom(x)]dx or ∫_c^d [right(y) - left(y)]dy'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Split at intersections where top/bottom switch. Be careful to distinguish between the different concepts in this topic.'
+            question: 'Find the area between $y = \\sqrt{x}$ and $y = x^2$ on $[0, 1]$.',
+            options: ['$\\frac{1}{3}$', '$\\frac{1}{6}$', '$\\frac{1}{2}$', '$\\frac{2}{3}$'],
+            correctAnswer: 0,
+            explanation: '$\\sqrt{x} \\geq x^2$ on $[0,1]$. $A = \\int_0^1(\\sqrt{x} - x^2)\\,dx = [\\frac{2}{3}x^{3/2} - \\frac{x^3}{3}]_0^1 = \\frac{2}{3} - \\frac{1}{3} = \\frac{1}{3}$.'
           }
         ]
       }
     },
     {
-      id: 'integ1-detail',
+      id: 'ia1-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Area between curves**: ∫ₐᵇ [top(x) - bottom(x)]dx or ∫_c^d [right(y) - left(y)]dy
-- **Choose the variable that makes bounds and functions simplest**
-- **Split at intersections where top/bottom switch**
-- **Always verify which function is on top by testing a point**
-      `
-    },
-    {
-      id: 'integ1-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of these accurately represents Always verify which function is on top…?',
-            options: [
-              'Split at intersections where top/bottom switch',
-              'Always verify which function is on top by testing a point',
-              '∫ₐᵇ [top(x) - bottom(x)]dx or ∫_c^d [right(y) - left(y)]dy',
-              'Choose the variable that makes bounds and functions simplest'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Always verify which function is on top by testing a point. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'integ1-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Area between curves',
-            options: ['Split at intersections where top/bottom switch', 'Choose the variable that makes bounds and functions simplest', 'Always verify which function is on top by testing a point', '∫ₐᵇ [top(x) - bottom(x)]dx or ∫_c^d [right(y) - left(y)]dy']
-          },
-          {
-            label: 'Choose the variable that makes bounds…',
-            options: ['Choose the variable that makes bounds and functions simplest', 'Split at intersections where top/bottom switch', 'Always verify which function is on top by testing a point', '∫ₐᵇ [top(x) - bottom(x)]dx or ∫_c^d [right(y) - left(y)]dy']
-          },
-          {
-            label: 'Split at intersections where top/bottom…',
-            options: ['∫ₐᵇ [top(x) - bottom(x)]dx or ∫_c^d [right(y) - left(y)]dy', 'Always verify which function is on top by testing a point', 'Split at intersections where top/bottom switch', 'Choose the variable that makes bounds and functions simplest']
-          }
-        ],
-        correctAnswers: ['∫ₐᵇ [top(x) - bottom(x)]dx or ∫_c^d [right(y) - left(y)]dy', 'Choose the variable that makes bounds and functions simplest', 'Split at intersections where top/bottom switch'],
-        hint1: 'Think about what each concept specifically describes in Integration Applications.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Integration Applications describes a specific idea. Area between curves: ∫ₐᵇ [top(x) - bottom(x)]dx or ∫_c^d [right(y) - left(y)]dy. Choose the variable that makes bounds and functions simplest. Split at intersections where top/bottom switch.'
-      }
+      content: `### Key Takeaways — Part 1
+1. Always determine which curve is on top
+2. Find intersection points to set limits
+3. Split integral if curves cross within the interval`
     }
   ]
-}
+};

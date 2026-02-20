@@ -1,121 +1,69 @@
-export const calcABOptimizationPart1Data = {
+export const calcabOptimizationPart1Data = {
   topicSlug: 'optimization-calcab',
   sections: [
     {
-      id: 'optim1-intro',
+      id: 'opt1-intro',
       type: 'text' as const,
-      content: `
-# ∫ Optimization
+      content: `# Optimization
 
-**Part 1 of 7 — Optimization Strategy**
+**Part 1 of 7 — Setting Up Optimization Problems**
 
-### 1. Optimization
+### The Strategy
 
-finding the maximum or minimum value of a function subject to constraints
+1. **Identify** the quantity to maximize or minimize (the **objective function**)
+2. **Write** an equation for it in terms of your variables
+3. Use a **constraint** to eliminate a variable (reduce to one variable)
+4. Find **critical points** of the objective function
+5. **Verify** it's actually a max or min (use endpoints or Second Derivative Test)
 
-### 2. Steps
+### Worked Example: Fencing Problem
 
-define variables, write the objective function, apply constraints, find critical points
+A rancher has 200 m of fencing. She wants to enclose a rectangular area along a river (no fence needed on the river side). Find the maximum area.
 
-### 3. Check critical points and endpoints for global extrema
+Let $x$ = width (perpendicular to river), $y$ = length (parallel to river).
 
-Check critical points and endpoints for global extrema
+**Objective:** Maximize $A = xy$
 
-### 4. Verify your answer makes sense in the context of the problem
+**Constraint:** $2x + y = 200$ → $y = 200 - 2x$
 
-Verify your answer makes sense in the context of the problem
-      `
+**Substitute:** $A(x) = x(200 - 2x) = 200x - 2x^2$
+
+$A'(x) = 200 - 4x = 0$ → $x = 50$
+
+$A''(x) = -4 < 0$ → concave down → **maximum**
+
+$y = 200 - 100 = 100$. **Maximum area = $5000$ m$^2$.**`
     },
     {
-      id: 'optim1-quiz1',
+      id: 'opt1-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Setting Up Optimization** 🎯',
       exercise: {
         questions: [
           {
-            question: 'What does "Optimization" refer to in calculus?',
-            options: [
-              'finding the maximum or minimum value of a function subject to constraints',
-              'define variables, write the objective function, apply constraints, find critical points',
-              'Check critical points and endpoints for global extrema',
-              'Verify your answer makes sense in the context of the problem'
-            ],
+            question: 'A farmer has 120 m of fencing to enclose a rectangular pen (all 4 sides). What dimensions maximize area?',
+            options: ['$30 \\times 30$', '$20 \\times 40$', '$10 \\times 50$', '$25 \\times 35$'],
             correctAnswer: 0,
-            explanation: 'Correct — Optimization: finding the maximum or minimum value of a function subject to constraints. The other options describe different concepts from this topic.'
+            explanation: 'Constraint: $2x + 2y = 120$, so $y = 60 - x$. $A = x(60-x) = 60x - x^2$. $A\' = 60 - 2x = 0$ at $x = 30$. So $y = 30$. A square gives the maximum area.'
           },
           {
-            question: 'Select the statement that correctly describes Check critical points and endpoints for…:',
-            options: [
-              'Verify your answer makes sense in the context of the problem',
-              'Check critical points and endpoints for global extrema',
-              'finding the maximum or minimum value of a function subject to constraints',
-              'define variables, write the objective function, apply constraints, find critical points'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Check critical points and endpoints for global extrema. Be careful to distinguish between the different concepts in this topic.'
+            question: 'The sum of two positive numbers is 50. What is the maximum product?',
+            options: ['$625$', '$600$', '$500$', '$650$'],
+            correctAnswer: 0,
+            explanation: 'Let $x + y = 50$. $P = x(50-x) = 50x - x^2$. $P\' = 50 - 2x = 0$ at $x = 25$. $P = 25 \\times 25 = 625$.'
           }
         ]
       }
     },
     {
-      id: 'optim1-detail',
+      id: 'opt1-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
+      content: `### Key Takeaways — Part 1
 
-- **Optimization**: finding the maximum or minimum value of a function subject to constraints
-- **Steps**: define variables, write the objective function, apply constraints, find critical points
-- **Check critical points and endpoints for global extrema**
-- **Verify your answer makes sense in the context of the problem**
-      `
-    },
-    {
-      id: 'optim1-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of these accurately represents Verify your answer makes sense in the…?',
-            options: [
-              'Verify your answer makes sense in the context of the problem',
-              'Check critical points and endpoints for global extrema',
-              'define variables, write the objective function, apply constraints, find critical points',
-              'finding the maximum or minimum value of a function subject to constraints'
-            ],
-            correctAnswer: 0,
-            explanation: 'Correct — Verify your answer makes sense in the context of the problem. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'optim1-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Optimization',
-            options: ['Verify your answer makes sense in the context of the problem', 'Check critical points and endpoints for global extrema', 'define variables, write the objective function, apply constraints, find critical points', 'finding the maximum or minimum value of a function subject to constraints']
-          },
-          {
-            label: 'Steps',
-            options: ['finding the maximum or minimum value of a function subject to constraints', 'Verify your answer makes sense in the context of the problem', 'Check critical points and endpoints for global extrema', 'define variables, write the objective function, apply constraints, find critical points']
-          }
-        ],
-        correctAnswers: ['finding the maximum or minimum value of a function subject to constraints', 'define variables, write the objective function, apply constraints, find critical points'],
-        hint1: 'Think about what each concept specifically describes in Optimization.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Optimization describes a specific idea. Optimization: finding the maximum or minimum value of a function subject to constraints. Steps: define variables, write the objective function, apply constraints, find critical points.'
-      }
+1. Always define your variables clearly
+2. Write the **objective function** (what to optimize)
+3. Use the **constraint** to reduce to one variable
+4. Verify using the Second Derivative Test or endpoint analysis`
     }
   ]
-}
+};

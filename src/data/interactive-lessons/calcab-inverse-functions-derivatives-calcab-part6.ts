@@ -1,125 +1,38 @@
-export const calcABInverseDerivPart6Data = {
+export const calcabInverseFunctionsPart6Data = {
   topicSlug: 'inverse-functions-derivatives-calcab',
   sections: [
     {
-      id: 'inver6-intro',
+      id: 'inv6-intro',
       type: 'text' as const,
-      content: `
-# Problem-Solving Workshop
+      content: `# Inverse Functions & Their Derivatives
 
-**Part 6 of 7 — Problem-Solving Workshop**
-
-### 1. Finding tangent lines to inverse function graphs
-
-Finding tangent lines to inverse function graphs
-
-### 2. Solving equations involving inverse trig functions
-
-Solving equations involving inverse trig functions
-
-### 3. Related rates with inverse trig functions
-
-Related rates with inverse trig functions
-
-### 4. Understanding the restricted domains that make inverses possible
-
-Understanding the restricted domains that make inverses possible
-      `
+**Part 6 of 7 — Practice Workshop**`
     },
     {
-      id: 'inver6-quiz1',
+      id: 'inv6-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Mixed Practice** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Finding tangent lines to inverse…?',
-            options: [
-              'Solving equations involving inverse trig functions',
-              'Related rates with inverse trig functions',
-              'Understanding the restricted domains that make inverses possible',
-              'Finding tangent lines to inverse function graphs'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Finding tangent lines to inverse function graphs. The other options describe different concepts from this topic.'
+            question: 'If $g(x) = x^5 + x^3 + x$, find $(g^{-1})\'(3)$.',
+            options: ['$\\frac{1}{9}$', '$\\frac{1}{3}$', '$9$', '$3$'],
+            correctAnswer: 0,
+            explanation: '$g(1) = 1+1+1 = 3$, so $g^{-1}(3) = 1$. $g\'(x) = 5x^4+3x^2+1$, $g\'(1) = 9$. $(g^{-1})\'(3) = \\frac{1}{9}$.'
           },
           {
-            question: 'Select the statement that correctly describes Related rates with inverse trig…:',
-            options: [
-              'Understanding the restricted domains that make inverses possible',
-              'Solving equations involving inverse trig functions',
-              'Related rates with inverse trig functions',
-              'Finding tangent lines to inverse function graphs'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Related rates with inverse trig functions. Be careful to distinguish between the different concepts in this topic.'
+            question: 'Find $\\frac{d}{dx}[x \\cdot \\arctan x]$.',
+            options: ['$\\arctan x + \\frac{x}{1+x^2}$', '$\\frac{x}{1+x^2}$', '$\\arctan x$', '$\\frac{1}{1+x^2}$'],
+            correctAnswer: 0,
+            explanation: 'Product rule: $\\arctan x + x \\cdot \\frac{1}{1+x^2}$.'
           }
         ]
       }
     },
     {
-      id: 'inver6-detail',
+      id: 'inv6-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Finding tangent lines to inverse function graphs**
-- **Solving equations involving inverse trig functions**
-- **Related rates with inverse trig functions**
-- **Understanding the restricted domains that make inverses possible**
-      `
-    },
-    {
-      id: 'inver6-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which statement about Understanding the restricted domains… is correct?',
-            options: [
-              'Solving equations involving inverse trig functions',
-              'Related rates with inverse trig functions',
-              'Finding tangent lines to inverse function graphs',
-              'Understanding the restricted domains that make inverses possible'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Understanding the restricted domains that make inverses possible. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'inver6-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Finding tangent lines to inverse…',
-            options: ['Related rates with inverse trig functions', 'Solving equations involving inverse trig functions', 'Finding tangent lines to inverse function graphs', 'Understanding the restricted domains that make inverses possible']
-          },
-          {
-            label: 'Solving equations involving inverse…',
-            options: ['Related rates with inverse trig functions', 'Solving equations involving inverse trig functions', 'Finding tangent lines to inverse function graphs', 'Understanding the restricted domains that make inverses possible']
-          },
-          {
-            label: 'Related rates with inverse trig…',
-            options: ['Related rates with inverse trig functions', 'Finding tangent lines to inverse function graphs', 'Understanding the restricted domains that make inverses possible', 'Solving equations involving inverse trig functions']
-          }
-        ],
-        correctAnswers: ['Finding tangent lines to inverse function graphs', 'Solving equations involving inverse trig functions', 'Related rates with inverse trig functions'],
-        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Finding tangent lines to inverse function graphs. Solving equations involving inverse trig functions. Related rates with inverse trig functions.'
-      }
+      content: `### Workshop Complete!`
     }
   ]
-}
+};

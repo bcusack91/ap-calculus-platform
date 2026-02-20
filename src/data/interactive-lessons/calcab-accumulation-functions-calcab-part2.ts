@@ -1,125 +1,52 @@
-export const calcABAccumulationPart2Data = {
+export const calcabAccumulationPart2Data = {
   topicSlug: 'accumulation-functions-calcab',
   sections: [
     {
-      id: 'accum2-intro',
+      id: 'acc2-intro',
       type: 'text' as const,
-      content: `
-# FTC with Variable Bounds
+      content: `# Accumulation Functions
 
-**Part 2 of 7 — FTC with Variable Bounds**
+**Part 2 of 7 \u2014 Reading Graphs of $f$ to Analyze $F$**
 
-### 1. d/dx[∫ₐˣ f(t)dt] = f(x) (FTC Part 1)
+### Graph-Based Analysis
 
-d/dx[∫ₐˣ f(t)dt] = f(x) (FTC Part 1)
+Given the **graph of $f$**, you can determine everything about $F(x) = \\int_a^x f(t)\\,dt$:
 
-### 2. With variable upper bound g(x)
+- **Values of $F$**: computed as signed areas under $f$
+- **Where $F$ increases/decreases**: where $f$ is positive/negative
+- **Max/min of $F$**: where $f$ changes sign
+- **Concavity of $F$**: $F'' = f'$, so look at whether $f$ is increasing/decreasing
 
-d/dx[∫ₐ^(g(x)) f(t)dt] = f(g(x))·g'(x)
-
-### 3. With variable lower bound
-
-d/dx[∫_(h(x))^b f(t)dt] = -f(h(x))·h'(x)
-
-### 4. Both bounds variable
-
-split into two integrals and apply chain rule to each
-      `
+> **AP Tip:** This is one of the most commonly tested skills on the AP exam!`
     },
     {
-      id: 'accum2-quiz1',
+      id: 'acc2-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Graph Analysis** \ud83c\udfaf\n\nSuppose $f$ is a piecewise linear function on $[0, 6]$: $f(0) = 2$, $f(2) = 2$, $f(4) = -2$, $f(6) = 0$. Let $g(x) = \\int_0^x f(t)\\,dt$.',
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains d/dx[∫ₐˣ f(t)dt] = f(x) (FTC Part 1)?',
-            options: [
-              'd/dx[∫_(h(x))^b f(t)dt] = -f(h(x))·h\'(x)',
-              'd/dx[∫ₐˣ f(t)dt] = f(x) (FTC Part 1)',
-              'd/dx[∫ₐ^(g(x)) f(t)dt] = f(g(x))·g\'(x)',
-              'split into two integrals and apply chain rule to each'
-            ],
+            question: 'What is $g(2)$?',
+            options: ['$2$', '$4$', '$0$', '$1$'],
             correctAnswer: 1,
-            explanation: 'Correct — d/dx[∫ₐˣ f(t)dt] = f(x) (FTC Part 1). The other options describe different concepts from this topic.'
+            explanation: '$g(2)$ = area under $f$ from $0$ to $2$. Since $f = 2$ (constant) on $[0,2]$, the area is $2 \\times 2 = 4$.'
           },
           {
-            question: 'In the context of FTC with Variable Bounds, which explains With variable lower bound?',
-            options: [
-              'd/dx[∫ₐˣ f(t)dt] = f(x) (FTC Part 1)',
-              'd/dx[∫_(h(x))^b f(t)dt] = -f(h(x))·h\'(x)',
-              'd/dx[∫ₐ^(g(x)) f(t)dt] = f(g(x))·g\'(x)',
-              'split into two integrals and apply chain rule to each'
-            ],
+            question: 'At what $x$ value does $g$ reach its absolute maximum on $[0, 6]$?',
+            options: ['$x = 2$', '$x = 3$', '$x = 4$', '$x = 6$'],
             correctAnswer: 1,
-            explanation: 'Correct — With variable lower bound: d/dx[∫_(h(x))^b f(t)dt] = -f(h(x))·h\'(x). Be careful to distinguish between the different concepts in this topic.'
+            explanation: '$g\'(x) = f(x)$. $f$ changes from positive to negative at $x = 3$ (linear from $2$ to $-2$ crosses zero at $x = 3$). So $g$ has its maximum at $x = 3$.'
           }
         ]
       }
     },
     {
-      id: 'accum2-detail',
+      id: 'acc2-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **d/dx[∫ₐˣ f(t)dt] = f(x) (FTC Part 1)**
-- **With variable upper bound g(x)**: d/dx[∫ₐ^(g(x)) f(t)dt] = f(g(x))·g'(x)
-- **With variable lower bound**: d/dx[∫_(h(x))^b f(t)dt] = -f(h(x))·h'(x)
-- **Both bounds variable**: split into two integrals and apply chain rule to each
-      `
-    },
-    {
-      id: 'accum2-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Regarding FTC with Variable Bounds, which correctly describes Both bounds variable?',
-            options: [
-              'split into two integrals and apply chain rule to each',
-              'd/dx[∫ₐˣ f(t)dt] = f(x) (FTC Part 1)',
-              'd/dx[∫_(h(x))^b f(t)dt] = -f(h(x))·h\'(x)',
-              'd/dx[∫ₐ^(g(x)) f(t)dt] = f(g(x))·g\'(x)'
-            ],
-            correctAnswer: 0,
-            explanation: 'Correct — Both bounds variable: split into two integrals and apply chain rule to each. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'accum2-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'With variable upper bound g(x)',
-            options: ['d/dx[∫ₐ^(g(x)) f(t)dt] = f(g(x))·g\'(x)', 'd/dx[∫ₐˣ f(t)dt] = f(x) (FTC Part 1)', 'd/dx[∫_(h(x))^b f(t)dt] = -f(h(x))·h\'(x)', 'split into two integrals and apply chain rule to each']
-          },
-          {
-            label: 'With variable lower bound',
-            options: ['split into two integrals and apply chain rule to each', 'd/dx[∫_(h(x))^b f(t)dt] = -f(h(x))·h\'(x)', 'd/dx[∫ₐˣ f(t)dt] = f(x) (FTC Part 1)', 'd/dx[∫ₐ^(g(x)) f(t)dt] = f(g(x))·g\'(x)']
-          },
-          {
-            label: 'Both bounds variable',
-            options: ['d/dx[∫ₐˣ f(t)dt] = f(x) (FTC Part 1)', 'split into two integrals and apply chain rule to each', 'd/dx[∫_(h(x))^b f(t)dt] = -f(h(x))·h\'(x)', 'd/dx[∫ₐ^(g(x)) f(t)dt] = f(g(x))·g\'(x)']
-          }
-        ],
-        correctAnswers: ['d/dx[∫ₐ^(g(x)) f(t)dt] = f(g(x))·g\'(x)', 'd/dx[∫_(h(x))^b f(t)dt] = -f(h(x))·h\'(x)', 'split into two integrals and apply chain rule to each'],
-        hint1: 'Think about what each concept specifically describes in FTC with Variable Bounds.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in FTC with Variable Bounds describes a specific idea. With variable upper bound g(x): d/dx[∫ₐ^(g(x)) f(t)dt] = f(g(x))·g\'(x). With variable lower bound: d/dx[∫_(h(x))^b f(t)dt] = -f(h(x))·h\'(x). Both bounds variable: split into two integrals and apply chain rule to each.'
-      }
+      content: `### Key Takeaways \u2014 Part 2
+1. Read the graph of $f$ to determine the behavior of $g = \\int f$
+2. Signed area under $f$ gives the value of $g$
+3. This skill is tested on nearly every AP exam`
     }
   ]
-}
+};

@@ -1,121 +1,41 @@
-export const calcBCArcLengthPart3Data = {
+export const calcbcArcLengthPart3Data = {
   topicSlug: 'arc-length-surface-area-calcbc',
   sections: [
     {
-      id: 'arc-l3-intro',
+      id: 'arc3-intro',
       type: 'text' as const,
-      content: `
-# Arc Length for Polar Curves
+      content: `# Arc Length & Surface Area
 
-**Part 3 of 7 — Arc Length for Polar Curves**
+**Part 3 of 7 — Surface Area of Revolution**
 
-### 1. Polar arc length
+### Around the $x$-axis
 
-L = ∫_α^β √[r² + (dr/dθ)²] dθ
+$$S = 2\pi\int_a^b y\sqrt{1 + (y')^2}\,dx$$
 
-### 2. Derived from parametric formula with x = r cos θ, y = r sin θ
+### Around the $y$-axis
 
-Derived from parametric formula with x = r cos θ, y = r sin θ
-
-### 3. Often used for cardioids, roses, spirals
-
-Often used for cardioids, roses, spirals
-
-### 4. Simplifies when r = constant (circle
-
-L = rΔθ)
-      `
+$$S = 2\pi\int_a^b x\sqrt{1 + (y')^2}\,dx$$`
     },
     {
-      id: 'arc-l3-quiz1',
+      id: 'arc3-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Surface Area** 🎯',
       exercise: {
         questions: [
           {
-            question: 'What does "Polar arc length" refer to in calculus?',
-            options: [
-              'Often used for cardioids, roses, spirals',
-              'Derived from parametric formula with x = r cos θ, y = r sin θ',
-              'L = rΔθ)',
-              'L = ∫_α^β √[r² + (dr/dθ)²] dθ'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Polar arc length: L = ∫_α^β √[r² + (dr/dθ)²] dθ. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Select the statement that correctly describes Often used for cardioids, roses, spirals:',
-            options: [
-              'Derived from parametric formula with x = r cos θ, y = r sin θ',
-              'L = ∫_α^β √[r² + (dr/dθ)²] dθ',
-              'Often used for cardioids, roses, spirals',
-              'L = rΔθ)'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Often used for cardioids, roses, spirals. Be careful to distinguish between the different concepts in this topic.'
+            question: 'Surface area of $y = x$ from $0$ to $1$ rotated about the $x$-axis:',
+            options: ['$\\pi\\sqrt{2}$', '$2\\pi$', '$\\pi$', '$\\sqrt{2}\\pi/2$'],
+            correctAnswer: 0,
+            explanation: '$S = 2\\pi\\int_0^1 x\\sqrt{1 + 1}\\,dx = 2\\pi\\sqrt{2} \\cdot [x^2/2]_0^1 = 2\\pi\\sqrt{2} \\cdot 1/2 = \\pi\\sqrt{2}$.'
           }
         ]
       }
     },
     {
-      id: 'arc-l3-detail',
+      id: 'arc3-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Polar arc length**: L = ∫_α^β √[r² + (dr/dθ)²] dθ
-- **Derived from parametric formula with x = r cos θ, y = r sin θ**
-- **Often used for cardioids, roses, spirals**
-- **Simplifies when r = constant (circle**: L = rΔθ)
-      `
-    },
-    {
-      id: 'arc-l3-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which statement about Simplifies when r = constant (circle is correct?',
-            options: [
-              'Often used for cardioids, roses, spirals',
-              'L = rΔθ)',
-              'L = ∫_α^β √[r² + (dr/dθ)²] dθ',
-              'Derived from parametric formula with x = r cos θ, y = r sin θ'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Simplifies when r = constant (circle: L = rΔθ). Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'arc-l3-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Polar arc length',
-            options: ['Often used for cardioids, roses, spirals', 'Derived from parametric formula with x = r cos θ, y = r sin θ', 'L = rΔθ)', 'L = ∫_α^β √[r² + (dr/dθ)²] dθ']
-          },
-          {
-            label: 'Simplifies when r = constant (circle',
-            options: ['L = rΔθ)', 'L = ∫_α^β √[r² + (dr/dθ)²] dθ', 'Derived from parametric formula with x = r cos θ, y = r sin θ', 'Often used for cardioids, roses, spirals']
-          }
-        ],
-        correctAnswers: ['L = ∫_α^β √[r² + (dr/dθ)²] dθ', 'L = rΔθ)'],
-        hint1: 'Think about what each concept specifically describes in Arc Length for Polar Curves.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Arc Length for Polar Curves describes a specific idea. Polar arc length: L = ∫_α^β √[r² + (dr/dθ)²] dθ. Simplifies when r = constant (circle: L = rΔθ).'
-      }
+      content: `### Key Takeaways — Part 3
+$S = 2\\pi\\int r \\cdot ds$ where $r$ is the radius and $ds$ is the arc length element.`
     }
   ]
-}
+};

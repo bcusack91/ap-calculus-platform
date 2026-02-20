@@ -1,125 +1,74 @@
-export const calcABAccumulationPart1Data = {
+export const calcabAccumulationPart1Data = {
   topicSlug: 'accumulation-functions-calcab',
   sections: [
     {
-      id: 'accum1-intro',
+      id: 'acc1-intro',
       type: 'text' as const,
-      content: `
-# ∫ Accumulation Functions
+      content: `# Accumulation Functions
 
-**Part 1 of 7 — Accumulation Functions**
+**Part 1 of 7 — The Accumulation Concept**
 
-### 1. F(x) = ∫ₐˣ f(t)dt is an accumulation function
+### What is an Accumulation Function?
 
-F(x) = ∫ₐˣ f(t)dt is an accumulation function
+$$F(x) = \\int_a^x f(t)\\,dt$$
 
-### 2. F(x) accumulates the net signed area from a to x
+$F(x)$ measures **how much has accumulated** from $a$ to $x$.
 
-F(x) accumulates the net signed area from a to x
+### Key Properties
 
-### 3. F(a) = 0 (no accumulation at the starting point)
+| Property | Explanation |
+|----------|------------|
+| $F(a) = 0$ | Nothing has accumulated at the starting point |
+| $F'(x) = f(x)$ | FTC Part 1 — the rate equals the integrand |
+| $F$ increasing | where $f(x) > 0$ |
+| $F$ decreasing | where $f(x) < 0$ |
+| $F$ has max | where $f$ changes from $+$ to $-$ |
+| $F$ has min | where $f$ changes from $-$ to $+$ |
 
-F(a) = 0 (no accumulation at the starting point)
+### Worked Example
 
-### 4. F is increasing where f > 0, decreasing where f < 0
+Let $F(x) = \\int_0^x (2t - 4)\\,dt$. Find $F(3)$ and $F'(3)$.
 
-F is increasing where f > 0, decreasing where f < 0
-      `
+$F(3) = \\int_0^3 (2t-4)\\,dt = [t^2 - 4t]_0^3 = 9 - 12 = -3$
+
+$F'(3) = f(3) = 2(3) - 4 = 2$
+
+So at $x = 3$, only $-3$ has accumulated so far, but the rate is $+2$ (accumulating positively).`
     },
     {
-      id: 'accum1-quiz1',
+      id: 'acc1-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Accumulation Functions** \ud83c\udfaf\n\nLet $g(x) = \\int_1^x f(t)\\,dt$ where $f$ is continuous.',
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains F(x) = ∫ₐˣ f(t)dt is an accumulation…?',
-            options: [
-              'F(a) = 0 (no accumulation at the starting point)',
-              'F(x) = ∫ₐˣ f(t)dt is an accumulation function',
-              'F(x) accumulates the net signed area from a to x',
-              'F is increasing where f > 0, decreasing where f < 0'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — F(x) = ∫ₐˣ f(t)dt is an accumulation function. The other options describe different concepts from this topic.'
+            question: 'What is $g(1)$?',
+            options: ['$0$', '$f(1)$', '$1$', 'Cannot determine'],
+            correctAnswer: 0,
+            explanation: '$g(1) = \\int_1^1 f(t)\\,dt = 0$. The integral from a number to itself is always 0.'
           },
           {
-            question: 'Which of the following is true about F(a) = 0 (no accumulation at the…?',
-            options: [
-              'F(x) accumulates the net signed area from a to x',
-              'F(a) = 0 (no accumulation at the starting point)',
-              'F is increasing where f > 0, decreasing where f < 0',
-              'F(x) = ∫ₐˣ f(t)dt is an accumulation function'
-            ],
+            question: 'If $f(x) > 0$ for all $x$ in $(1, 5)$, what can we say about $g$ on $(1, 5)$?',
+            options: ['$g$ is positive', '$g$ is increasing', '$g$ is concave up', '$g$ is decreasing'],
             correctAnswer: 1,
-            explanation: 'Correct — F(a) = 0 (no accumulation at the starting point). Be careful to distinguish between the different concepts in this topic.'
+            explanation: '$g\'(x) = f(x) > 0$, so $g$ is increasing on $(1, 5)$.'
+          },
+          {
+            question: 'If $f(3) = 0$ and $f$ changes from positive to negative at $x = 3$, what happens to $g$ at $x = 3$?',
+            options: ['$g$ has a local minimum', '$g$ has a local maximum', '$g$ equals zero', '$g$ has an inflection point'],
+            correctAnswer: 1,
+            explanation: '$g\'(3) = f(3) = 0$ and $g\'$ changes from $+$ to $-$. This means $g$ has a local maximum at $x = 3$.'
           }
         ]
       }
     },
     {
-      id: 'accum1-detail',
+      id: 'acc1-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **F(x) = ∫ₐˣ f(t)dt is an accumulation function**
-- **F(x) accumulates the net signed area from a to x**
-- **F(a) = 0 (no accumulation at the starting point)**
-- **F is increasing where f > 0, decreasing where f < 0**
-      `
-    },
-    {
-      id: 'accum1-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which statement about F is increasing where f > 0, decreasing… is correct?',
-            options: [
-              'F(x) = ∫ₐˣ f(t)dt is an accumulation function',
-              'F(x) accumulates the net signed area from a to x',
-              'F(a) = 0 (no accumulation at the starting point)',
-              'F is increasing where f > 0, decreasing where f < 0'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — F is increasing where f > 0, decreasing where f < 0. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'accum1-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'F(x) = ∫ₐˣ f(t)dt is an accumulation…',
-            options: ['F(x) = ∫ₐˣ f(t)dt is an accumulation function', 'F(x) accumulates the net signed area from a to x', 'F(a) = 0 (no accumulation at the starting point)', 'F is increasing where f > 0, decreasing where f < 0']
-          },
-          {
-            label: 'F(x) accumulates the net signed area…',
-            options: ['F(a) = 0 (no accumulation at the starting point)', 'F(x) = ∫ₐˣ f(t)dt is an accumulation function', 'F is increasing where f > 0, decreasing where f < 0', 'F(x) accumulates the net signed area from a to x']
-          },
-          {
-            label: 'F(a) = 0 (no accumulation at the…',
-            options: ['F(x) = ∫ₐˣ f(t)dt is an accumulation function', 'F(x) accumulates the net signed area from a to x', 'F is increasing where f > 0, decreasing where f < 0', 'F(a) = 0 (no accumulation at the starting point)']
-          }
-        ],
-        correctAnswers: ['F(x) = ∫ₐˣ f(t)dt is an accumulation function', 'F(x) accumulates the net signed area from a to x', 'F(a) = 0 (no accumulation at the starting point)'],
-        hint1: 'Think about what each concept specifically describes in Accumulation Functions.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Accumulation Functions describes a specific idea. F(x) = ∫ₐˣ f(t)dt is an accumulation function. F(x) accumulates the net signed area from a to x. F(a) = 0 (no accumulation at the starting point).'
-      }
+      content: `### Key Takeaways \u2014 Part 1
+1. $F(x) = \\int_a^x f(t)\\,dt$ accumulates starting from $a$
+2. $F(a) = 0$ always
+3. $F' = f$ connects the accumulation function to the original function`
     }
   ]
-}
+};

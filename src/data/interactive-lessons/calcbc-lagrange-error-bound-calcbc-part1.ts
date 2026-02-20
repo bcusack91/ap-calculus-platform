@@ -1,125 +1,45 @@
-export const calcBCLagrangePart1Data = {
+export const calcbcLagrangePart1Data = {
   topicSlug: 'lagrange-error-bound-calcbc',
   sections: [
     {
-      id: 'lagra1-intro',
+      id: 'lag1-intro',
       type: 'text' as const,
-      content: `
-# ∮ Lagrange Error Bound
+      content: `# Lagrange Error Bound
 
-**Part 1 of 7 — Taylor Polynomial Error**
+**Part 1 of 7 — The Formula**
 
-### 1. Rₙ(x) = f(x) - Pₙ(x) is the remainder (error) of the nth-degree Taylor polynomial
+### Taylor's Theorem with Remainder
 
-Rₙ(x) = f(x) - Pₙ(x) is the remainder (error) of the nth-degree Taylor polynomial
+$$f(x) = P_n(x) + R_n(x)$$
 
-### 2. The remainder tells us how far off our polynomial approximation is
+### Lagrange Error Bound
 
-The remainder tells us how far off our polynomial approximation is
+$$|R_n(x)| \leq \frac{M}{(n+1)!}|x - a|^{n+1}$$
 
-### 3. We want |Rₙ(x)| to be small for the approximation to be useful
+where $M = \max|f^{(n+1)}(c)|$ for $c$ between $a$ and $x$.
 
-We want |Rₙ(x)| to be small for the approximation to be useful
-
-### 4. Higher degree → smaller error (generally) near the center
-
-Higher degree → smaller error (generally) near the center
-      `
+This tells you: **how good is your Taylor polynomial approximation?**`
     },
     {
-      id: 'lagra1-quiz1',
+      id: 'lag1-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Lagrange Error** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains Rₙ(x) = f(x) - Pₙ(x) is the remainder…?',
-            options: [
-              'We want |Rₙ(x)| to be small for the approximation to be useful',
-              'Rₙ(x) = f(x) - Pₙ(x) is the remainder (error) of the nth-degree Taylor polynomial',
-              'The remainder tells us how far off our polynomial approximation is',
-              'Higher degree → smaller error (generally) near the center'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Rₙ(x) = f(x) - Pₙ(x) is the remainder (error) of the nth-degree Taylor polynomial. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Select the statement that correctly describes We want |Rₙ(x)| to be small for the…:',
-            options: [
-              'We want |Rₙ(x)| to be small for the approximation to be useful',
-              'Rₙ(x) = f(x) - Pₙ(x) is the remainder (error) of the nth-degree Taylor polynomial',
-              'Higher degree → smaller error (generally) near the center',
-              'The remainder tells us how far off our polynomial approximation is'
-            ],
+            question: 'For $e^x$ approximated by $P_3(x)$ at $a = 0$, the error at $x = 0.1$ is at most... (note: $e^{0.1} < 2$)',
+            options: ['$\\frac{2(0.1)^4}{4!} \\approx 0.0000833$', '$\\frac{(0.1)^3}{3!}$', '$\\frac{e(0.1)^4}{4!}$', '$0.1$'],
             correctAnswer: 0,
-            explanation: 'Correct — We want |Rₙ(x)| to be small for the approximation to be useful. Be careful to distinguish between the different concepts in this topic.'
+            explanation: '$M = \\max|f^{(4)}(c)| = \\max e^c$ for $c \\in [0, 0.1]$. Bound $M \\leq 2$. $|R_3| \\leq \\frac{2(0.1)^4}{24} \\approx 0.0000833$.'
           }
         ]
       }
     },
     {
-      id: 'lagra1-detail',
+      id: 'lag1-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Rₙ(x) = f(x) - Pₙ(x) is the remainder (error) of the nth-degree Taylor polynomial**
-- **The remainder tells us how far off our polynomial approximation is**
-- **We want |Rₙ(x)| to be small for the approximation to be useful**
-- **Higher degree → smaller error (generally) near the center**
-      `
-    },
-    {
-      id: 'lagra1-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which statement about Higher degree → smaller error… is correct?',
-            options: [
-              'Higher degree → smaller error (generally) near the center',
-              'We want |Rₙ(x)| to be small for the approximation to be useful',
-              'The remainder tells us how far off our polynomial approximation is',
-              'Rₙ(x) = f(x) - Pₙ(x) is the remainder (error) of the nth-degree Taylor polynomial'
-            ],
-            correctAnswer: 0,
-            explanation: 'Correct — Higher degree → smaller error (generally) near the center. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'lagra1-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Rₙ(x) = f(x) - Pₙ(x) is the remainder…',
-            options: ['Rₙ(x) = f(x) - Pₙ(x) is the remainder (error) of the nth-degree Taylor polynomial', 'The remainder tells us how far off our polynomial approximation is', 'Higher degree → smaller error (generally) near the center', 'We want |Rₙ(x)| to be small for the approximation to be useful']
-          },
-          {
-            label: 'The remainder tells us how far off our…',
-            options: ['We want |Rₙ(x)| to be small for the approximation to be useful', 'Higher degree → smaller error (generally) near the center', 'Rₙ(x) = f(x) - Pₙ(x) is the remainder (error) of the nth-degree Taylor polynomial', 'The remainder tells us how far off our polynomial approximation is']
-          },
-          {
-            label: 'We want |Rₙ(x)| to be small for the…',
-            options: ['Higher degree → smaller error (generally) near the center', 'Rₙ(x) = f(x) - Pₙ(x) is the remainder (error) of the nth-degree Taylor polynomial', 'The remainder tells us how far off our polynomial approximation is', 'We want |Rₙ(x)| to be small for the approximation to be useful']
-          }
-        ],
-        correctAnswers: ['Rₙ(x) = f(x) - Pₙ(x) is the remainder (error) of the nth-degree Taylor polynomial', 'The remainder tells us how far off our polynomial approximation is', 'We want |Rₙ(x)| to be small for the approximation to be useful'],
-        hint1: 'Think about what each concept specifically describes in ∮ Lagrange Error Bound.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in ∮ Lagrange Error Bound describes a specific idea. Rₙ(x) = f(x) - Pₙ(x) is the remainder (error) of the nth-degree Taylor polynomial. The remainder tells us how far off our polynomial approximation is. We want |Rₙ(x)| to be small for the approximation to be useful.'
-      }
+      content: `### Key Takeaways — Part 1
+$|R_n| \\leq \\frac{M|x-a|^{n+1}}{(n+1)!}$ where $M$ bounds $|f^{(n+1)}|$.`
     }
   ]
-}
+};

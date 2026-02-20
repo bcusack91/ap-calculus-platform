@@ -1,121 +1,38 @@
-export const calcBCImproperPart6Data = {
+export const calcbcImproperPart6Data = {
   topicSlug: 'improper-integrals-calcbc',
   sections: [
     {
-      id: 'impro6-intro',
+      id: 'imp6-intro',
       type: 'text' as const,
-      content: `
-# Problem-Solving Workshop
+      content: `# Improper Integrals
 
-**Part 6 of 7 — Problem-Solving Workshop**
-
-### 1. Probability
-
-∫₋∞^∞ f(x)dx = 1 for probability density functions
-
-### 2. Laplace transforms use improper integrals
-
-Laplace transforms use improper integrals
-
-### 3. Area under curves that extend to infinity
-
-Area under curves that extend to infinity
-
-### 4. Gabriel's Horn
-
-finite volume but infinite surface area
-      `
+**Part 6 of 7 — Practice Workshop**`
     },
     {
-      id: 'impro6-quiz1',
+      id: 'imp6-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Mixed Practice** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Probability?',
-            options: [
-              'finite volume but infinite surface area',
-              '∫₋∞^∞ f(x)dx = 1 for probability density functions',
-              'Laplace transforms use improper integrals',
-              'Area under curves that extend to infinity'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Probability: ∫₋∞^∞ f(x)dx = 1 for probability density functions. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'In the context of Problem-Solving Workshop, which explains Area under curves that extend to…?',
-            options: [
-              'Area under curves that extend to infinity',
-              'Laplace transforms use improper integrals',
-              'finite volume but infinite surface area',
-              '∫₋∞^∞ f(x)dx = 1 for probability density functions'
-            ],
+            question: '$\\int_1^{\\infty} \\frac{1}{x(x+1)}\\,dx = $',
+            options: ['$\\ln 2$', '$1$', '$\\infty$', '$\\ln 3$'],
             correctAnswer: 0,
-            explanation: 'Correct — Area under curves that extend to infinity. Be careful to distinguish between the different concepts in this topic.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'impro6-detail',
-      type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Probability**: ∫₋∞^∞ f(x)dx = 1 for probability density functions
-- **Laplace transforms use improper integrals**
-- **Area under curves that extend to infinity**
-- **Gabriel's Horn**: finite volume but infinite surface area
-      `
-    },
-    {
-      id: 'impro6-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which statement about Gabriel\'s Horn is correct?',
-            options: [
-              'Laplace transforms use improper integrals',
-              '∫₋∞^∞ f(x)dx = 1 for probability density functions',
-              'Area under curves that extend to infinity',
-              'finite volume but infinite surface area'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Gabriel\'s Horn: finite volume but infinite surface area. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'impro6-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Probability',
-            options: ['Area under curves that extend to infinity', '∫₋∞^∞ f(x)dx = 1 for probability density functions', 'finite volume but infinite surface area', 'Laplace transforms use improper integrals']
+            explanation: 'Partial fractions: $\\frac{1}{x} - \\frac{1}{x+1}$. $[\\ln x - \\ln(x+1)]_1^{\\infty} = [\\ln\\frac{x}{x+1}]_1^{\\infty}$. As $x \\to \\infty$: $\\ln 1 = 0$. At $x=1$: $\\ln(1/2) = -\\ln 2$. Answer: $0 - (-\\ln 2) = \\ln 2$.'
           },
           {
-            label: 'Gabriel\'s Horn',
-            options: ['Laplace transforms use improper integrals', 'Area under curves that extend to infinity', '∫₋∞^∞ f(x)dx = 1 for probability density functions', 'finite volume but infinite surface area']
+            question: '$\\int_2^{\\infty} xe^{-x}\\,dx$ converges. True or false?',
+            options: ['True', 'False'],
+            correctAnswer: 0,
+            explanation: 'Exponential decay dominates polynomial growth: $xe^{-x} \\to 0$ fast enough. IBP gives a finite answer.'
           }
-        ],
-        correctAnswers: ['∫₋∞^∞ f(x)dx = 1 for probability density functions', 'finite volume but infinite surface area'],
-        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Probability: ∫₋∞^∞ f(x)dx = 1 for probability density functions. Gabriel\'s Horn: finite volume but infinite surface area.'
+        ]
       }
+    },
+    {
+      id: 'imp6-summary',
+      type: 'text' as const,
+      content: `### Workshop Complete!`
     }
   ]
-}
+};

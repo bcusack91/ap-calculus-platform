@@ -1,124 +1,120 @@
-export const calcABDerivativeDefPart3Data = {
+export const calcabDerivativeDefPart3Data = {
   topicSlug: 'definition-of-derivative-calcab',
   sections: [
     {
-      id: 'defin3-intro',
+      id: 'derdef3-intro',
       type: 'text' as const,
       content: `
-# Derivative as a Function
+# ∫ Graphical Interpretation of Derivatives
 
-**Part 3 of 7 — Derivative as a Function**
+**Part 3 of 7 — Reading Derivatives from Graphs**
 
-### 1. f'(x) is itself a function — it has its own domain, range, and graph
+### 1. Derivative = Slope of Tangent Line
 
-f'(x) is itself a function — it has its own domain, range, and graph
+At any point, $f'(a)$ equals the slope of the tangent line to $f$ at $x = a$.
+- $f'(a) > 0$: $f$ is **increasing** at $a$
+- $f'(a) < 0$: $f$ is **decreasing** at $a$
+- $f'(a) = 0$: $f$ has a **horizontal tangent** at $a$ (possible max, min, or inflection)
 
-### 2. f'(x) > 0 means f is increasing; f'(x) < 0 means f is decreasing
+### 2. From Graph of $f$ to Graph of $f'$
 
-f'(x) > 0 means f is increasing; f'(x) < 0 means f is decreasing
+| Feature of $f$ | Corresponding feature of $f'$ |
+|---------------|-------------------------------|
+| $f$ increasing | $f' > 0$ (above $x$-axis) |
+| $f$ decreasing | $f' < 0$ (below $x$-axis) |
+| Local max of $f$ | $f' = 0$ (crosses from $+$ to $-$) |
+| Local min of $f$ | $f' = 0$ (crosses from $-$ to $+$) |
+| Inflection point of $f$ | Local max or min of $f'$ |
+| $f$ concave up | $f'$ increasing |
+| $f$ concave down | $f'$ decreasing |
 
-### 3. f'(x) = 0 at horizontal tangent lines (potential extrema)
+### 3. Estimating Derivatives from Data
 
-f'(x) = 0 at horizontal tangent lines (potential extrema)
+From a table of values, approximate $f'(a)$ using the **symmetric difference quotient**:
 
-### 4. The derivative of a polynomial of degree n has degree n-1
+$$f'(a) \\approx \\frac{f(a+h) - f(a-h)}{2h}$$
 
-The derivative of a polynomial of degree n has degree n-1
+This is more accurate than the one-sided difference quotient.
+
+### 4. Reading $f$ from $f'$
+
+Given the graph of $f'$:
+- Where $f' > 0$, $f$ is increasing
+- Where $f' < 0$, $f$ is decreasing
+- Where $f'$ changes sign, $f$ has a local extremum
       `
     },
     {
-      id: 'defin3-quiz1',
+      id: 'derdef3-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: `**Check Your Understanding** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes f\'(x) is itself a function — it has its…?',
-            options: [
-              'f\'(x) is itself a function — it has its own domain, range, and graph',
-              'The derivative of a polynomial of degree n has degree n-1',
-              'f\'(x) = 0 at horizontal tangent lines (potential extrema)',
-              'f\'(x) > 0 means f is increasing; f\'(x) < 0 means f is decreasing'
-            ],
+            question: 'Given data: $f(1) = 3$, $f(3) = 7$. Approximate $f\'(2)$.',
+            options: ['$2$', '$4$', '$5$', '$10$'],
             correctAnswer: 0,
-            explanation: 'Correct — f\'(x) is itself a function — it has its own domain, range, and graph. The other options describe different concepts from this topic.'
+            explanation: 'Using the difference quotient: $f\'(2) \\approx \\frac{f(3)-f(1)}{3-1} = \\frac{7-3}{2} = 2$.'
           },
           {
-            question: 'Which of the following is true about f\'(x) = 0 at horizontal tangent lines…?',
+            question: 'If $f\'(x) > 0$ for all $x$ in $(2, 5)$ and $f\'(2) = f\'(5) = 0$, what can you conclude?',
             options: [
-              'f\'(x) = 0 at horizontal tangent lines (potential extrema)',
-              'f\'(x) > 0 means f is increasing; f\'(x) < 0 means f is decreasing',
-              'f\'(x) is itself a function — it has its own domain, range, and graph',
-              'The derivative of a polynomial of degree n has degree n-1'
+              '$f$ has a local max at $x = 2$ and min at $x = 5$',
+              '$f$ has a local min at $x = 2$ and max at $x = 5$',
+              '$f$ is constant on $(2, 5)$',
+              '$f$ is increasing on $[2, 5]$'
             ],
-            correctAnswer: 0,
-            explanation: 'Correct — f\'(x) = 0 at horizontal tangent lines (potential extrema). Be careful to distinguish between the different concepts in this topic.'
+            correctAnswer: 3,
+            explanation: 'Since $f\'(x) > 0$ on $(2,5)$ and $f\' = 0$ at the endpoints, $f$ is increasing on the entire interval $[2,5]$. $x=2$ could be a local min and $x=5$ a local max, but we need more info about $f\'$ outside this interval.'
           }
         ]
       }
     },
     {
-      id: 'defin3-detail',
+      id: 'derdef3-detail',
       type: 'text' as const,
       content: `
-### Key Concepts Summary
+### AP Exam Graph-Reading Tips
 
-- **f'(x) is itself a function — it has its own domain, range, and graph**
-- **f'(x) > 0 means f is increasing; f'(x) < 0 means f is decreasing**
-- **f'(x) = 0 at horizontal tangent lines (potential extrema)**
-- **The derivative of a polynomial of degree n has degree n-1**
+When given the graph of $f'$ and asked about $f$:
+1. **Zeros of $f'$** = horizontal tangent lines of $f$ (possible extrema)
+2. **Sign changes of $f'$** = extrema of $f$
+3. **Extrema of $f'$** = inflection points of $f$
+4. **$f'$ positive** = $f$ rising, **$f'$ negative** = $f$ falling
+
+**Common trap:** A zero of $f'$ is NOT always an extremum. If $f'$ doesn't change sign (like $f(x) = x^3$ at $x=0$), it's just an inflection point.
       `
     },
     {
-      id: 'defin3-quiz2',
+      id: 'derdef3-quiz2',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: `**Check Your Understanding** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'Which statement about The derivative of a polynomial of… is correct?',
-            options: [
-              'The derivative of a polynomial of degree n has degree n-1',
-              'f\'(x) = 0 at horizontal tangent lines (potential extrema)',
-              'f\'(x) is itself a function — it has its own domain, range, and graph',
-              'f\'(x) > 0 means f is increasing; f\'(x) < 0 means f is decreasing'
-            ],
-            correctAnswer: 0,
-            explanation: 'Correct — The derivative of a polynomial of degree n has degree n-1. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            question: 'If $f\'(3) = 0$ and $f\'$ changes from negative to positive at $x = 3$, then $f$ has a:',
+            options: ['Local maximum at $x = 3$', 'Local minimum at $x = 3$', 'Inflection point at $x = 3$', 'Cannot determine'],
+            correctAnswer: 1,
+            explanation: 'When $f\'$ changes from negative (decreasing) to positive (increasing), $f$ has a local minimum. This is the First Derivative Test.'
           }
         ]
       }
     },
     {
-      id: 'defin3-dropdown',
+      id: 'derdef3-dropdown',
       type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
+      content: `**From $f$ to $f'$** 🔍\n\nDetermine the sign of $f'$ at each point.`,
       exercise: {
         dropdowns: [
-          {
-            label: 'f\'(x) is itself a function — it has its…',
-            options: ['The derivative of a polynomial of degree n has degree n-1', 'f\'(x) = 0 at horizontal tangent lines (potential extrema)', 'f\'(x) > 0 means f is increasing; f\'(x) < 0 means f is decreasing', 'f\'(x) is itself a function — it has its own domain, range, and graph']
-          },
-          {
-            label: 'f\'(x) > 0 means f is increasing; f\'(x)…',
-            options: ['f\'(x) is itself a function — it has its own domain, range, and graph', 'The derivative of a polynomial of degree n has degree n-1', 'f\'(x) = 0 at horizontal tangent lines (potential extrema)', 'f\'(x) > 0 means f is increasing; f\'(x) < 0 means f is decreasing']
-          },
-          {
-            label: 'f\'(x) = 0 at horizontal tangent lines…',
-            options: ['f\'(x) is itself a function — it has its own domain, range, and graph', 'f\'(x) > 0 means f is increasing; f\'(x) < 0 means f is decreasing', 'f\'(x) = 0 at horizontal tangent lines (potential extrema)', 'The derivative of a polynomial of degree n has degree n-1']
-          }
+          { label: 'At a local maximum of $f$, $f\' = $', options: ['Positive', 'Zero', 'Negative', 'Undefined'] },
+          { label: 'Where $f$ is increasing, $f\'$ is', options: ['Positive', 'Zero', 'Negative', 'Undefined'] },
+          { label: 'At an inflection point of $f$, $f\'$ has a', options: ['Zero', 'Maximum or minimum', 'Discontinuity', 'Vertical tangent'] }
         ],
-        correctAnswers: ['f\'(x) is itself a function — it has its own domain, range, and graph', 'f\'(x) > 0 means f is increasing; f\'(x) < 0 means f is decreasing', 'f\'(x) = 0 at horizontal tangent lines (potential extrema)'],
-        hint1: 'Think about what each concept specifically describes in Derivative as a Function.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Derivative as a Function describes a specific idea. f\'(x) is itself a function — it has its own domain, range, and graph. f\'(x) > 0 means f is increasing; f\'(x) < 0 means f is decreasing. f\'(x) = 0 at horizontal tangent lines (potential extrema).'
+        correctAnswers: ['Zero', 'Positive', 'Maximum or minimum'],
+        hint1: 'At a local max, the tangent line is horizontal.',
+        hint2: 'If the function is going up, the slope is positive.',
+        hint3: 'Inflection points of $f$ correspond to extrema of $f\'$ (where concavity changes).',
+        explanation: 'Local max → horizontal tangent → $f\'=0$. Increasing → positive slope → $f\'>0$. Inflection point of $f$ → concavity changes → $f\'\'$ changes sign → $f\'$ has extremum.'
       }
     }
   ]

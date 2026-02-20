@@ -1,125 +1,38 @@
-export const calcBCSeriesAppsPart6Data = {
+export const calcbcSeriesAppsPart6Data = {
   topicSlug: 'series-applications-calcbc',
   sections: [
     {
-      id: 'serie6-intro',
+      id: 'sapp6-intro',
       type: 'text' as const,
-      content: `
-# Problem-Solving Workshop
+      content: `# Series Applications
 
-**Part 6 of 7 — Problem-Solving Workshop**
-
-### 1. Fourier series
-
-represent periodic functions (preview)
-
-### 2. Taylor series in physics
-
-small-angle approximations (sin θ ≈ θ)
-
-### 3. Binomial series
-
-(1+x)ᵖ = Σ C(p,n)xⁿ for any real p
-
-### 4. Series solutions are fundamental in differential equations and mathematical physics
-
-Series solutions are fundamental in differential equations and mathematical physics
-      `
+**Part 6 of 7 — Practice Workshop**`
     },
     {
-      id: 'serie6-quiz1',
+      id: 'sapp6-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Mixed Practice** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Fourier series?',
-            options: [
-              'represent periodic functions (preview)',
-              'Series solutions are fundamental in differential equations and mathematical physics',
-              'small-angle approximations (sin θ ≈ θ)',
-              '(1+x)ᵖ = Σ C(p,n)xⁿ for any real p'
-            ],
+            question: 'Use series to find $\\lim_{x \\to 0} \\frac{e^x - 1 - x}{x^2}$.',
+            options: ['$1/2$', '$0$', '$1$', '$\\infty$'],
             correctAnswer: 0,
-            explanation: 'Correct — Fourier series: represent periodic functions (preview). The other options describe different concepts from this topic.'
+            explanation: '$e^x - 1 - x = \\frac{x^2}{2} + \\frac{x^3}{6} + \\cdots$. Divided by $x^2$: $\\frac{1}{2} + \\frac{x}{6} + \\cdots \\to 1/2$.'
           },
           {
-            question: 'Select the statement that correctly describes Binomial series:',
-            options: [
-              'Series solutions are fundamental in differential equations and mathematical physics',
-              'represent periodic functions (preview)',
-              'small-angle approximations (sin θ ≈ θ)',
-              '(1+x)ᵖ = Σ C(p,n)xⁿ for any real p'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Binomial series: (1+x)ᵖ = Σ C(p,n)xⁿ for any real p. Be careful to distinguish between the different concepts in this topic.'
+            question: 'For $f(x) = \\sum_{n=0}^{\\infty} \\frac{(-1)^n x^{2n}}{(2n)!}$, what is $f$?',
+            options: ['$\\cos x$', '$\\sin x$', '$e^{-x}$', '$\\cosh x$'],
+            correctAnswer: 0,
+            explanation: 'This is exactly the Maclaurin series for $\\cos x$.'
           }
         ]
       }
     },
     {
-      id: 'serie6-detail',
+      id: 'sapp6-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Fourier series**: represent periodic functions (preview)
-- **Taylor series in physics**: small-angle approximations (sin θ ≈ θ)
-- **Binomial series**: (1+x)ᵖ = Σ C(p,n)xⁿ for any real p
-- **Series solutions are fundamental in differential equations and mathematical physics**
-      `
-    },
-    {
-      id: 'serie6-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Regarding Problem-Solving Workshop, which correctly describes Series solutions are fundamental in…?',
-            options: [
-              'represent periodic functions (preview)',
-              'Series solutions are fundamental in differential equations and mathematical physics',
-              '(1+x)ᵖ = Σ C(p,n)xⁿ for any real p',
-              'small-angle approximations (sin θ ≈ θ)'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Series solutions are fundamental in differential equations and mathematical physics. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'serie6-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Fourier series',
-            options: ['represent periodic functions (preview)', 'small-angle approximations (sin θ ≈ θ)', 'Series solutions are fundamental in differential equations and mathematical physics', '(1+x)ᵖ = Σ C(p,n)xⁿ for any real p']
-          },
-          {
-            label: 'Taylor series in physics',
-            options: ['(1+x)ᵖ = Σ C(p,n)xⁿ for any real p', 'small-angle approximations (sin θ ≈ θ)', 'Series solutions are fundamental in differential equations and mathematical physics', 'represent periodic functions (preview)']
-          },
-          {
-            label: 'Binomial series',
-            options: ['(1+x)ᵖ = Σ C(p,n)xⁿ for any real p', 'Series solutions are fundamental in differential equations and mathematical physics', 'represent periodic functions (preview)', 'small-angle approximations (sin θ ≈ θ)']
-          }
-        ],
-        correctAnswers: ['represent periodic functions (preview)', 'small-angle approximations (sin θ ≈ θ)', '(1+x)ᵖ = Σ C(p,n)xⁿ for any real p'],
-        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Fourier series: represent periodic functions (preview). Taylor series in physics: small-angle approximations (sin θ ≈ θ). Binomial series: (1+x)ᵖ = Σ C(p,n)xⁿ for any real p.'
-      }
+      content: `### Workshop Complete!`
     }
   ]
-}
+};

@@ -1,121 +1,51 @@
-export const calcABTheoremsPart3Data = {
+export const calcabTheoremsPart3Data = {
   topicSlug: 'theorem-applications-calcab',
   sections: [
     {
-      id: 'theor3-intro',
+      id: 'thm3-intro',
       type: 'text' as const,
-      content: `
-# Intermediate Value Theorem Applications
+      content: `# Theorem Applications
 
-**Part 3 of 7 — Intermediate Value Theorem Applications**
+**Part 3 of 7 — The Extreme Value Theorem (EVT)**
 
-### 1. IVT
+### Statement
 
-if f is continuous on [a,b] and N is between f(a) and f(b), then f(c) = N for some c
+If $f$ is **continuous** on $[a, b]$, then $f$ attains an **absolute maximum** and **absolute minimum** on $[a, b]$.
 
-### 2. Use IVT to show existence of solutions
+### Finding Absolute Extrema (Closed Interval Method)
 
-Use IVT to show existence of solutions
-
-### 3. Example
-
-show f(x) = 0 has a solution by finding a and b where f(a) and f(b) have opposite signs
-
-### 4. IVT requires continuity — always state this condition
-
-IVT requires continuity — always state this condition
-      `
+1. Find all critical points in $(a, b)$ where $f' = 0$ or $f'$ DNE
+2. Evaluate $f$ at critical points AND at endpoints
+3. Largest value = absolute max, smallest = absolute min`
     },
     {
-      id: 'theor3-quiz1',
+      id: 'thm3-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**EVT & Closed Interval Method** 🎯\n\n$f(x) = x^3 - 3x + 1$ on $[-2, 2]$.',
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes IVT?',
-            options: [
-              'if f is continuous on [a,b] and N is between f(a) and f(b), then f(c) = N for some c',
-              'Use IVT to show existence of solutions',
-              'show f(x) = 0 has a solution by finding a and b where f(a) and f(b) have opposite signs',
-              'IVT requires continuity — always state this condition'
-            ],
+            question: 'Find the absolute maximum of $f$ on $[-2, 2]$.',
+            options: ['$3$', '$1$', '$7$', '$-1$'],
             correctAnswer: 0,
-            explanation: 'Correct — IVT: if f is continuous on [a,b] and N is between f(a) and f(b), then f(c) = N for some c. The other options describe different concepts from this topic.'
+            explanation: '$f\'(x) = 3x^2 - 3 = 0$ at $x = \\pm 1$. $f(-2) = -1$, $f(-1) = 3$, $f(1) = -1$, $f(2) = 3$. Max is $3$.'
           },
           {
-            question: 'Select the statement that correctly describes Example:',
-            options: [
-              'if f is continuous on [a,b] and N is between f(a) and f(b), then f(c) = N for some c',
-              'IVT requires continuity — always state this condition',
-              'show f(x) = 0 has a solution by finding a and b where f(a) and f(b) have opposite signs',
-              'Use IVT to show existence of solutions'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Example: show f(x) = 0 has a solution by finding a and b where f(a) and f(b) have opposite signs. Be careful to distinguish between the different concepts in this topic.'
+            question: 'Find the absolute minimum of $f$ on $[-2, 2]$.',
+            options: ['$-1$', '$0$', '$-3$', '$1$'],
+            correctAnswer: 0,
+            explanation: 'From the values: $f(-2) = -1$, $f(-1) = 3$, $f(1) = -1$, $f(2) = 3$. Min is $-1$.'
           }
         ]
       }
     },
     {
-      id: 'theor3-detail',
+      id: 'thm3-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **IVT**: if f is continuous on [a,b] and N is between f(a) and f(b), then f(c) = N for some c
-- **Use IVT to show existence of solutions**
-- **Example**: show f(x) = 0 has a solution by finding a and b where f(a) and f(b) have opposite signs
-- **IVT requires continuity — always state this condition**
-      `
-    },
-    {
-      id: 'theor3-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Regarding Intermediate Value Theorem Applications, which correctly describes IVT requires continuity — always state…?',
-            options: [
-              'show f(x) = 0 has a solution by finding a and b where f(a) and f(b) have opposite signs',
-              'Use IVT to show existence of solutions',
-              'IVT requires continuity — always state this condition',
-              'if f is continuous on [a,b] and N is between f(a) and f(b), then f(c) = N for some c'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — IVT requires continuity — always state this condition. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'theor3-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'IVT',
-            options: ['show f(x) = 0 has a solution by finding a and b where f(a) and f(b) have opposite signs', 'if f is continuous on [a,b] and N is between f(a) and f(b), then f(c) = N for some c', 'Use IVT to show existence of solutions', 'IVT requires continuity — always state this condition']
-          },
-          {
-            label: 'Example',
-            options: ['IVT requires continuity — always state this condition', 'Use IVT to show existence of solutions', 'show f(x) = 0 has a solution by finding a and b where f(a) and f(b) have opposite signs', 'if f is continuous on [a,b] and N is between f(a) and f(b), then f(c) = N for some c']
-          }
-        ],
-        correctAnswers: ['if f is continuous on [a,b] and N is between f(a) and f(b), then f(c) = N for some c', 'show f(x) = 0 has a solution by finding a and b where f(a) and f(b) have opposite signs'],
-        hint1: 'Think about what each concept specifically describes in Intermediate Value Theorem Applications.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Intermediate Value Theorem Applications describes a specific idea. IVT: if f is continuous on [a,b] and N is between f(a) and f(b), then f(c) = N for some c. Example: show f(x) = 0 has a solution by finding a and b where f(a) and f(b) have opposite signs.'
-      }
+      content: `### Key Takeaways — Part 3
+1. EVT guarantees max and min exist on closed intervals
+2. Check critical points AND endpoints
+3. Only requires continuity`
     }
   ]
-}
+};

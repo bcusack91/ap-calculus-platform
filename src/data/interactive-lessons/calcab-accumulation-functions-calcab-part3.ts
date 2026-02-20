@@ -1,125 +1,48 @@
-export const calcABAccumulationPart3Data = {
+export const calcabAccumulationPart3Data = {
   topicSlug: 'accumulation-functions-calcab',
   sections: [
     {
-      id: 'accum3-intro',
+      id: 'acc3-intro',
       type: 'text' as const,
-      content: `
-# Interpreting Accumulation
+      content: `# Accumulation Functions
 
-**Part 3 of 7 — Interpreting Accumulation**
+**Part 3 of 7 \u2014 FTC Part 1 with Chain Rule Review**
 
-### 1. If f(t) represents a rate, ∫ₐˣ f(t)dt gives total accumulated quantity
+### Chain Rule Variant
 
-If f(t) represents a rate, ∫ₐˣ f(t)dt gives total accumulated quantity
+$$\\frac{d}{dx}\\int_a^{g(x)} f(t)\\,dt = f(g(x)) \\cdot g'(x)$$
 
-### 2. F'(x) = f(x) means the rate of accumulation equals the integrand
+### Both Limits Variable
 
-F'(x) = f(x) means the rate of accumulation equals the integrand
-
-### 3. Extrema of F correspond to zeros of f (where accumulation rate changes sign)
-
-Extrema of F correspond to zeros of f (where accumulation rate changes sign)
-
-### 4. Graph of f determines behavior of F
-
-positive f → F increasing
-      `
+$$\\frac{d}{dx}\\int_{h(x)}^{g(x)} f(t)\\,dt = f(g(x)) \\cdot g'(x) - f(h(x)) \\cdot h'(x)$$`
     },
     {
-      id: 'accum3-quiz1',
+      id: 'acc3-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**FTC with Chain Rule** \ud83c\udfaf',
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains If f(t) represents a rate, ∫ₐˣ f(t)dt…?',
-            options: [
-              'Extrema of F correspond to zeros of f (where accumulation rate changes sign)',
-              'F\'(x) = f(x) means the rate of accumulation equals the integrand',
-              'If f(t) represents a rate, ∫ₐˣ f(t)dt gives total accumulated quantity',
-              'positive f → F increasing'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — If f(t) represents a rate, ∫ₐˣ f(t)dt gives total accumulated quantity. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'In the context of Interpreting Accumulation, which explains Extrema of F correspond to zeros of f…?',
-            options: [
-              'Extrema of F correspond to zeros of f (where accumulation rate changes sign)',
-              'positive f → F increasing',
-              'If f(t) represents a rate, ∫ₐˣ f(t)dt gives total accumulated quantity',
-              'F\'(x) = f(x) means the rate of accumulation equals the integrand'
-            ],
+            question: 'Find $\\frac{d}{dx}\\int_0^{\\sin x} t^2\\,dt$.',
+            options: ['$\\sin^2(x) \\cos(x)$', '$\\sin^2(x)$', '$\\cos^2(x)$', '$2\\sin(x)\\cos(x)$'],
             correctAnswer: 0,
-            explanation: 'Correct — Extrema of F correspond to zeros of f (where accumulation rate changes sign). Be careful to distinguish between the different concepts in this topic.'
+            explanation: '$f(t) = t^2$, $g(x) = \\sin x$, $g\'(x) = \\cos x$. Answer: $(\\sin x)^2 \\cdot \\cos x = \\sin^2(x)\\cos(x)$.'
+          },
+          {
+            question: 'Find $\\frac{d}{dx}\\int_{2x}^{x^2} e^t\\,dt$.',
+            options: ['$2xe^{x^2} - 2e^{2x}$', '$e^{x^2} - e^{2x}$', '$2xe^{x^2} + 2e^{2x}$', '$e^{x^2}(2x-2)$'],
+            correctAnswer: 0,
+            explanation: 'Upper: $g(x) = x^2$ gives $e^{x^2} \\cdot 2x$. Lower: $h(x) = 2x$ gives $e^{2x} \\cdot 2$. Total: $2xe^{x^2} - 2e^{2x}$.'
           }
         ]
       }
     },
     {
-      id: 'accum3-detail',
+      id: 'acc3-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **If f(t) represents a rate, ∫ₐˣ f(t)dt gives total accumulated quantity**
-- **F'(x) = f(x) means the rate of accumulation equals the integrand**
-- **Extrema of F correspond to zeros of f (where accumulation rate changes sign)**
-- **Graph of f determines behavior of F**: positive f → F increasing
-      `
-    },
-    {
-      id: 'accum3-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of these accurately represents Graph of f determines behavior of F?',
-            options: [
-              'Extrema of F correspond to zeros of f (where accumulation rate changes sign)',
-              'F\'(x) = f(x) means the rate of accumulation equals the integrand',
-              'positive f → F increasing',
-              'If f(t) represents a rate, ∫ₐˣ f(t)dt gives total accumulated quantity'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Graph of f determines behavior of F: positive f → F increasing. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'accum3-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'If f(t) represents a rate, ∫ₐˣ f(t)dt…',
-            options: ['F\'(x) = f(x) means the rate of accumulation equals the integrand', 'positive f → F increasing', 'If f(t) represents a rate, ∫ₐˣ f(t)dt gives total accumulated quantity', 'Extrema of F correspond to zeros of f (where accumulation rate changes sign)']
-          },
-          {
-            label: 'F\'(x) = f(x) means the rate of…',
-            options: ['Extrema of F correspond to zeros of f (where accumulation rate changes sign)', 'F\'(x) = f(x) means the rate of accumulation equals the integrand', 'If f(t) represents a rate, ∫ₐˣ f(t)dt gives total accumulated quantity', 'positive f → F increasing']
-          },
-          {
-            label: 'Extrema of F correspond to zeros of f…',
-            options: ['F\'(x) = f(x) means the rate of accumulation equals the integrand', 'Extrema of F correspond to zeros of f (where accumulation rate changes sign)', 'If f(t) represents a rate, ∫ₐˣ f(t)dt gives total accumulated quantity', 'positive f → F increasing']
-          }
-        ],
-        correctAnswers: ['If f(t) represents a rate, ∫ₐˣ f(t)dt gives total accumulated quantity', 'F\'(x) = f(x) means the rate of accumulation equals the integrand', 'Extrema of F correspond to zeros of f (where accumulation rate changes sign)'],
-        hint1: 'Think about what each concept specifically describes in Interpreting Accumulation.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Interpreting Accumulation describes a specific idea. If f(t) represents a rate, ∫ₐˣ f(t)dt gives total accumulated quantity. F\'(x) = f(x) means the rate of accumulation equals the integrand. Extrema of F correspond to zeros of f (where accumulation rate changes sign).'
-      }
+      content: `### Key Takeaways \u2014 Part 3
+1. Both limits variable: subtract the lower limit contribution
+2. Each limit contributes: $f(\\text{limit}) \\cdot \\text{limit derivative}$`
     }
   ]
-}
+};

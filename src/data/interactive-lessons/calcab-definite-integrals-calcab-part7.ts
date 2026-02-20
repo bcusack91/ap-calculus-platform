@@ -1,125 +1,62 @@
-export const calcABDefiniteIntegralsPart7Data = {
+export const calcabDefiniteIntegralsPart7Data = {
   topicSlug: 'definite-integrals-calcab',
   sections: [
     {
-      id: 'defin7-intro',
+      id: 'int7-intro',
       type: 'text' as const,
-      content: `
-# Review & Applications
+      content: `# \u222B Review & Applications
 
-**Part 7 of 7 — Review & Applications**
+**Part 7 of 7 \u2014 Comprehensive Review**
 
-### 1. FTC Part 2
+### Complete Integration Summary
 
-∫ₐᵇ f(x)dx = F(b) - F(a) where F' = f
-
-### 2. Find any antiderivative F of f, then evaluate at the bounds
-
-Find any antiderivative F of f, then evaluate at the bounds
-
-### 3. This gives an exact method for computing definite integrals
-
-This gives an exact method for computing definite integrals
-
-### 4. No need to take limits of Riemann sums — use antiderivatives instead
-
-No need to take limits of Riemann sums — use antiderivatives instead
-      `
+| Concept | Key Formula |
+|---------|------------|
+| Riemann Sum | $\\sum f(x_i^*) \\Delta x$ |
+| Definite Integral | $\\lim_{n\\to\\infty} \\sum f(x_i^*) \\Delta x$ |
+| FTC Part 1 | $\\frac{d}{dx}\\int_a^x f(t)\\,dt = f(x)$ |
+| FTC Part 2 | $\\int_a^b f(x)\\,dx = F(b) - F(a)$ |
+| Net Change | $\\int_a^b f'(x)\\,dx = f(b) - f(a)$ |`
     },
     {
-      id: 'defin7-quiz1',
+      id: 'int7-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Final Assessment** \ud83c\udfaf',
       exercise: {
         questions: [
           {
-            question: 'What does "FTC Part 2" refer to in calculus?',
-            options: [
-              '∫ₐᵇ f(x)dx = F(b) - F(a) where F\' = f',
-              'No need to take limits of Riemann sums — use antiderivatives instead',
-              'Find any antiderivative F of f, then evaluate at the bounds',
-              'This gives an exact method for computing definite integrals'
-            ],
+            question: 'Evaluate $\\int_0^9 \\sqrt{x}\\,dx$.',
+            options: ['$9$', '$18$', '$27$', '$6$'],
+            correctAnswer: 1,
+            explanation: '$\\int x^{1/2}\\,dx = \\frac{2}{3}x^{3/2}$. $[\\frac{2}{3}x^{3/2}]_0^9 = \\frac{2}{3}(27) = 18$.'
+          },
+          {
+            question: 'If $F(x) = \\int_2^x (3t + 1)\\,dt$, find $F\'(5)$.',
+            options: ['$16$', '$15$', '$14$', '$32$'],
             correctAnswer: 0,
-            explanation: 'Correct — FTC Part 2: ∫ₐᵇ f(x)dx = F(b) - F(a) where F\' = f. The other options describe different concepts from this topic.'
+            explanation: 'FTC Part 1: $F\'(x) = 3x + 1$. $F\'(5) = 16$.'
           },
           {
-            question: 'In the context of Review & Applications, which explains This gives an exact method for…?',
-            options: [
-              'Find any antiderivative F of f, then evaluate at the bounds',
-              'No need to take limits of Riemann sums — use antiderivatives instead',
-              'This gives an exact method for computing definite integrals',
-              '∫ₐᵇ f(x)dx = F(b) - F(a) where F\' = f'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — This gives an exact method for computing definite integrals. Be careful to distinguish between the different concepts in this topic.'
+            question: 'Evaluate $\\int_0^{2\\pi} \\cos x\\,dx$.',
+            options: ['$0$', '$2$', '$2\\pi$', '$-2$'],
+            correctAnswer: 0,
+            explanation: '$[\\sin x]_0^{2\\pi} = \\sin(2\\pi) - \\sin(0) = 0 - 0 = 0$. One full period of cosine!'
           }
         ]
       }
     },
     {
-      id: 'defin7-detail',
+      id: 'int7-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
+      content: `### Definite Integrals \u2014 Complete! \u2705
 
-- **FTC Part 2**: ∫ₐᵇ f(x)dx = F(b) - F(a) where F' = f
-- **Find any antiderivative F of f, then evaluate at the bounds**
-- **This gives an exact method for computing definite integrals**
-- **No need to take limits of Riemann sums — use antiderivatives instead**
-      `
-    },
-    {
-      id: 'defin7-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Regarding Review & Applications, which correctly describes No need to take limits of Riemann sums…?',
-            options: [
-              'Find any antiderivative F of f, then evaluate at the bounds',
-              '∫ₐᵇ f(x)dx = F(b) - F(a) where F\' = f',
-              'No need to take limits of Riemann sums — use antiderivatives instead',
-              'This gives an exact method for computing definite integrals'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — No need to take limits of Riemann sums — use antiderivatives instead. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'defin7-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'FTC Part 2',
-            options: ['∫ₐᵇ f(x)dx = F(b) - F(a) where F\' = f', 'No need to take limits of Riemann sums — use antiderivatives instead', 'This gives an exact method for computing definite integrals', 'Find any antiderivative F of f, then evaluate at the bounds']
-          },
-          {
-            label: 'Find any antiderivative F of f, then…',
-            options: ['∫ₐᵇ f(x)dx = F(b) - F(a) where F\' = f', 'No need to take limits of Riemann sums — use antiderivatives instead', 'This gives an exact method for computing definite integrals', 'Find any antiderivative F of f, then evaluate at the bounds']
-          },
-          {
-            label: 'This gives an exact method for…',
-            options: ['No need to take limits of Riemann sums — use antiderivatives instead', 'Find any antiderivative F of f, then evaluate at the bounds', 'This gives an exact method for computing definite integrals', '∫ₐᵇ f(x)dx = F(b) - F(a) where F\' = f']
-          }
-        ],
-        correctAnswers: ['∫ₐᵇ f(x)dx = F(b) - F(a) where F\' = f', 'Find any antiderivative F of f, then evaluate at the bounds', 'This gives an exact method for computing definite integrals'],
-        hint1: 'Think about what each concept specifically describes in Review & Applications.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Review & Applications describes a specific idea. FTC Part 2: ∫ₐᵇ f(x)dx = F(b) - F(a) where F\' = f. Find any antiderivative F of f, then evaluate at the bounds. This gives an exact method for computing definite integrals.'
-      }
+You have mastered:
+- \u2705 Riemann Sums (left, right, midpoint, trapezoidal)
+- \u2705 Definite integral as a limit
+- \u2705 Properties of definite integrals
+- \u2705 FTC Part 1 (with and without Chain Rule)
+- \u2705 FTC Part 2 (evaluation)
+- \u2705 Net Change Theorem and applications`
     }
   ]
-}
+};

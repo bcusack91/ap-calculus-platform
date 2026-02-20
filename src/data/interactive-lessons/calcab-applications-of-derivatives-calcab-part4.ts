@@ -1,121 +1,66 @@
-export const calcABDerivAppsPart4Data = {
+export const calcabAppsDerivativesPart4Data = {
   topicSlug: 'applications-of-derivatives-calcab',
   sections: [
     {
-      id: 'appli4-intro',
+      id: 'apps4-intro',
       type: 'text' as const,
-      content: `
-# First & Second Derivative Tests
+      content: `# Applications of Derivatives
 
-**Part 4 of 7 — First & Second Derivative Tests**
+**Part 4 of 7 — Curve Sketching**
 
-### 1. First Derivative Test
+### Complete Curve Sketching Procedure
 
-f' changes sign from + to - at c → local max; - to + → local min
+1. **Domain** of $f$
+2. **Intercepts**: set $y = 0$ (x-intercepts) and $x = 0$ (y-intercept)
+3. **Symmetry**: even ($f(-x) = f(x)$) or odd ($f(-x) = -f(x)$)
+4. **First derivative**: critical points, increasing/decreasing, local extrema
+5. **Second derivative**: concavity, inflection points
+6. **End behavior**: $\\lim_{x \\to \\pm\\infty} f(x)$
+7. **Asymptotes** (if any)
 
-### 2. Second Derivative Test
+### Quick Example
 
-if f'(c)=0 and f''{c} < 0 → local max; f''{c} > 0 → local min
+$f(x) = x^4 - 4x^3$
 
-### 3. If f''{c} = 0, the second derivative test is inconclusive
+- $f'(x) = 4x^3 - 12x^2 = 4x^2(x-3)$
+  - Critical points: $x = 0, 3$
+  - Decreasing on $(-\\infty, 3)$, increasing on $(3, \\infty)$
+  - Local min at $x = 3$: $f(3) = 81 - 108 = -27$
 
-If f''{c} = 0, the second derivative test is inconclusive
-
-### 4. Create a sign chart for f' to determine increasing/decreasing intervals
-
-Create a sign chart for f' to determine increasing/decreasing intervals
-      `
+- $f''(x) = 12x^2 - 24x = 12x(x-2)$
+  - Inflection at $x = 0$ and $x = 2$
+  - Concave up on $(-\\infty, 0)$ and $(2, \\infty)$
+  - Concave down on $(0, 2)$`
     },
     {
-      id: 'appli4-quiz1',
+      id: 'apps4-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Curve Sketching from Derivatives** 🎯\n\nGiven $f\'(x) = (x-1)^2(x-4)$:',
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes First Derivative Test?',
-            options: [
-              'Create a sign chart for f\' to determine increasing/decreasing intervals',
-              'f\' changes sign from + to - at c → local max; - to + → local min',
-              'if f\'(c)=0 and f\'\'{c} < 0 → local max; f\'\'{c} > 0 → local min',
-              'If f\'\'{c} = 0, the second derivative test is inconclusive'
-            ],
+            question: 'Where does $f$ have a local minimum?',
+            options: ['$x = 1$', '$x = 4$', '$x = 1$ and $x = 4$', 'No local minimum'],
             correctAnswer: 1,
-            explanation: 'Correct — First Derivative Test: f\' changes sign from + to - at c → local max; - to + → local min. The other options describe different concepts from this topic.'
+            explanation: '$f\' = 0$ at $x = 1$ and $x = 4$. At $x = 1$: $(x-1)^2$ is always $\\geq 0$, and $(x-4)$ is negative on both sides. So $f\' < 0$ on both sides of $x=1$ — no sign change, not a min. At $x = 4$: $f\'$ changes from $-$ to $+$, so local min at $x = 4$.'
           },
           {
-            question: 'In the context of First & Second Derivative Tests, which explains If f\'\'{c} = 0, the second derivative…?',
-            options: [
-              'if f\'(c)=0 and f\'\'{c} < 0 → local max; f\'\'{c} > 0 → local min',
-              'f\' changes sign from + to - at c → local max; - to + → local min',
-              'Create a sign chart for f\' to determine increasing/decreasing intervals',
-              'If f\'\'{c} = 0, the second derivative test is inconclusive'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — If f\'\'{c} = 0, the second derivative test is inconclusive. Be careful to distinguish between the different concepts in this topic.'
+            question: 'How many inflection points does $f$ have?',
+            options: ['$0$', '$1$', '$2$', '$3$'],
+            correctAnswer: 1,
+            explanation: '$f\'(x) = (x-1)^2(x-4) = x^3 - 6x^2 + 9x - 4$. $f\'\'(x) = 3x^2 - 12x + 9 = 3(x-1)(x-3)$. Sign changes at $x = 1$ and $x = 3$, giving 2 inflection points. Actually, $f\'\'$ changes sign at both $x=1$ and $x=3$, so there are 2 inflection points.'
           }
         ]
       }
     },
     {
-      id: 'appli4-detail',
+      id: 'apps4-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
+      content: `### Key Takeaways — Part 4
 
-- **First Derivative Test**: f' changes sign from + to - at c → local max; - to + → local min
-- **Second Derivative Test**: if f'(c)=0 and f''{c} < 0 → local max; f''{c} > 0 → local min
-- **If f''{c} = 0, the second derivative test is inconclusive**
-- **Create a sign chart for f' to determine increasing/decreasing intervals**
-      `
-    },
-    {
-      id: 'appli4-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Regarding First & Second Derivative Tests, which correctly describes Create a sign chart for f\' to determine…?',
-            options: [
-              'f\' changes sign from + to - at c → local max; - to + → local min',
-              'If f\'\'{c} = 0, the second derivative test is inconclusive',
-              'Create a sign chart for f\' to determine increasing/decreasing intervals',
-              'if f\'(c)=0 and f\'\'{c} < 0 → local max; f\'\'{c} > 0 → local min'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Create a sign chart for f\' to determine increasing/decreasing intervals. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'appli4-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'First Derivative Test',
-            options: ['if f\'(c)=0 and f\'\'{c} < 0 → local max; f\'\'{c} > 0 → local min', 'If f\'\'{c} = 0, the second derivative test is inconclusive', 'f\' changes sign from + to - at c → local max; - to + → local min', 'Create a sign chart for f\' to determine increasing/decreasing intervals']
-          },
-          {
-            label: 'Second Derivative Test',
-            options: ['f\' changes sign from + to - at c → local max; - to + → local min', 'If f\'\'{c} = 0, the second derivative test is inconclusive', 'Create a sign chart for f\' to determine increasing/decreasing intervals', 'if f\'(c)=0 and f\'\'{c} < 0 → local max; f\'\'{c} > 0 → local min']
-          }
-        ],
-        correctAnswers: ['f\' changes sign from + to - at c → local max; - to + → local min', 'if f\'(c)=0 and f\'\'{c} < 0 → local max; f\'\'{c} > 0 → local min'],
-        hint1: 'Think about what each concept specifically describes in First & Second Derivative Tests.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in First & Second Derivative Tests describes a specific idea. First Derivative Test: f\' changes sign from + to - at c → local max; - to + → local min. Second Derivative Test: if f\'(c)=0 and f\'\'{c} < 0 → local max; f\'\'{c} > 0 → local min.'
-      }
+1. A systematic approach using both $f'$ and $f''$ gives a complete picture
+2. From a graph of $f'$, you can deduce everything about $f$'s shape
+3. This is a frequent AP free-response topic`
     }
   ]
-}
+};

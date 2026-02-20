@@ -1,125 +1,59 @@
-export const calcABTheoremsPart1Data = {
+export const calcabTheoremsPart1Data = {
   topicSlug: 'theorem-applications-calcab',
   sections: [
     {
-      id: 'theor1-intro',
+      id: 'thm1-intro',
       type: 'text' as const,
-      content: `
-# ∫ Theorem Applications
+      content: `# Theorem Applications
 
-**Part 1 of 7 — Extreme Value Theorem**
+**Part 1 of 7 — The Intermediate Value Theorem (IVT)**
 
-### 1. EVT
+### Statement
 
-a continuous function on [a,b] attains both a global max and a global min
+If $f$ is **continuous** on $[a, b]$ and $N$ is between $f(a)$ and $f(b)$, then there exists $c \in (a, b)$ such that $f(c) = N$.
 
-### 2. Global max and min occur at critical points or endpoints
+### What It Means
 
-Global max and min occur at critical points or endpoints
+A continuous function takes on every value between $f(a)$ and $f(b)$.
 
-### 3. Check f' = 0, f' undefined, and endpoints
+### AP Usage
 
-Check f' = 0, f' undefined, and endpoints
+"Since $f$ is continuous on $[a, b]$, $f(a) = 2$, and $f(b) = 7$, by the IVT there exists $c \in (a, b)$ such that $f(c) = 5$."
 
-### 4. EVT guarantees existence; finding extrema requires calculation
+### Important: IVT Does NOT Tell You
 
-EVT guarantees existence; finding extrema requires calculation
-      `
+- Where $c$ is
+- How many such $c$ values exist
+- Only that at least one exists`
     },
     {
-      id: 'theor1-quiz1',
+      id: 'thm1-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**IVT** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes EVT?',
-            options: [
-              'Global max and min occur at critical points or endpoints',
-              'EVT guarantees existence; finding extrema requires calculation',
-              'Check f\' = 0, f\' undefined, and endpoints',
-              'a continuous function on [a,b] attains both a global max and a global min'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — EVT: a continuous function on [a,b] attains both a global max and a global min. The other options describe different concepts from this topic.'
+            question: '$f$ is continuous on $[0, 4]$, $f(0) = -3$, $f(4) = 5$. Which must be true?',
+            options: ['$f(c) = 0$ for some $c$ in $(0, 4)$', '$f(c) = 0$ for exactly one $c$', '$f$ has a max of 5', '$f\'(c) = 0$ for some $c$'],
+            correctAnswer: 0,
+            explanation: 'Since $0$ is between $-3$ and $5$, IVT guarantees $f(c) = 0$ for some $c \\in (0, 4)$.'
           },
           {
-            question: 'Select the statement that correctly describes Check f\' = 0, f\' undefined, and…:',
-            options: [
-              'a continuous function on [a,b] attains both a global max and a global min',
-              'Check f\' = 0, f\' undefined, and endpoints',
-              'Global max and min occur at critical points or endpoints',
-              'EVT guarantees existence; finding extrema requires calculation'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Check f\' = 0, f\' undefined, and endpoints. Be careful to distinguish between the different concepts in this topic.'
+            question: 'Which hypothesis is needed for IVT?',
+            options: ['Continuity on $[a,b]$', 'Differentiability on $(a,b)$', '$f$ is increasing', '$f\' > 0$'],
+            correctAnswer: 0,
+            explanation: 'IVT requires only continuity on the closed interval.'
           }
         ]
       }
     },
     {
-      id: 'theor1-detail',
+      id: 'thm1-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **EVT**: a continuous function on [a,b] attains both a global max and a global min
-- **Global max and min occur at critical points or endpoints**
-- **Check f' = 0, f' undefined, and endpoints**
-- **EVT guarantees existence; finding extrema requires calculation**
-      `
-    },
-    {
-      id: 'theor1-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of these accurately represents EVT guarantees existence; finding…?',
-            options: [
-              'Check f\' = 0, f\' undefined, and endpoints',
-              'EVT guarantees existence; finding extrema requires calculation',
-              'Global max and min occur at critical points or endpoints',
-              'a continuous function on [a,b] attains both a global max and a global min'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — EVT guarantees existence; finding extrema requires calculation. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'theor1-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'EVT',
-            options: ['a continuous function on [a,b] attains both a global max and a global min', 'Check f\' = 0, f\' undefined, and endpoints', 'Global max and min occur at critical points or endpoints', 'EVT guarantees existence; finding extrema requires calculation']
-          },
-          {
-            label: 'Global max and min occur at critical…',
-            options: ['Check f\' = 0, f\' undefined, and endpoints', 'a continuous function on [a,b] attains both a global max and a global min', 'EVT guarantees existence; finding extrema requires calculation', 'Global max and min occur at critical points or endpoints']
-          },
-          {
-            label: 'Check f\' = 0, f\' undefined, and…',
-            options: ['Global max and min occur at critical points or endpoints', 'a continuous function on [a,b] attains both a global max and a global min', 'EVT guarantees existence; finding extrema requires calculation', 'Check f\' = 0, f\' undefined, and endpoints']
-          }
-        ],
-        correctAnswers: ['a continuous function on [a,b] attains both a global max and a global min', 'Global max and min occur at critical points or endpoints', 'Check f\' = 0, f\' undefined, and endpoints'],
-        hint1: 'Think about what each concept specifically describes in Theorem Applications.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Theorem Applications describes a specific idea. EVT: a continuous function on [a,b] attains both a global max and a global min. Global max and min occur at critical points or endpoints. Check f\' = 0, f\' undefined, and endpoints.'
-      }
+      content: `### Key Takeaways — Part 1
+1. IVT requires continuity
+2. Guarantees existence of a value, not location
+3. Always cite continuity when using IVT on the AP exam`
     }
   ]
-}
+};

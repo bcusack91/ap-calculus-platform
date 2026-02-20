@@ -1,125 +1,61 @@
-export const calcABTheoremsPart2Data = {
+export const calcabTheoremsPart2Data = {
   topicSlug: 'theorem-applications-calcab',
   sections: [
     {
-      id: 'theor2-intro',
+      id: 'thm2-intro',
       type: 'text' as const,
-      content: `
-# Mean Value Theorem Applications
+      content: `# Theorem Applications
 
-**Part 2 of 7 — Mean Value Theorem Applications**
+**Part 2 of 7 — The Mean Value Theorem (MVT)**
 
-### 1. MVT
+### Statement
 
-f'(c) = [f(b)-f(a)]/(b-a) for some c in (a,b)
+If $f$ is **continuous** on $[a, b]$ and **differentiable** on $(a, b)$, then there exists $c \in (a, b)$ such that:
 
-### 2. Interpretation
+$$f'(c) = \frac{f(b) - f(a)}{b - a}$$
 
-at some point the instantaneous rate equals the average rate
+### Geometric Meaning
 
-### 3. If a car travels 60 miles in 1 hour, at some moment it was going exactly 60 mph
+There's a point where the tangent line is parallel to the secant line.
 
-If a car travels 60 miles in 1 hour, at some moment it was going exactly 60 mph
+### Worked Example
 
-### 4. Rolle's
+$f(x) = x^2$ on $[1, 3]$.
 
-if f(a) = f(b), then f'(c) = 0 for some c in (a,b)
-      `
+Average rate: $\frac{9-1}{3-1} = 4$.
+
+$f'(c) = 2c = 4 \implies c = 2$.
+
+The tangent at $x = 2$ is parallel to the secant from $(1,1)$ to $(3,9)$.`
     },
     {
-      id: 'theor2-quiz1',
+      id: 'thm2-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**MVT** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes MVT?',
-            options: [
-              'at some point the instantaneous rate equals the average rate',
-              'If a car travels 60 miles in 1 hour, at some moment it was going exactly 60 mph',
-              'f\'(c) = [f(b)-f(a)]/(b-a) for some c in (a,b)',
-              'if f(a) = f(b), then f\'(c) = 0 for some c in (a,b)'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — MVT: f\'(c) = [f(b)-f(a)]/(b-a) for some c in (a,b). The other options describe different concepts from this topic.'
+            question: '$f(x) = x^3 - 3x$ on $[0, 2]$. Find the value of $c$ guaranteed by MVT.',
+            options: ['$c = \\frac{2}{\\sqrt{3}}$', '$c = 1$', '$c = \\sqrt{2}$', '$c = \\frac{2}{3}$'],
+            correctAnswer: 0,
+            explanation: 'Average rate: $\\frac{(8-6) - 0}{2} = 1$. $f\'(c) = 3c^2 - 3 = 1$. $c^2 = 4/3$. $c = \\frac{2}{\\sqrt{3}}$.'
           },
           {
-            question: 'Select the statement that correctly describes If a car travels 60 miles in 1 hour, at…:',
-            options: [
-              'at some point the instantaneous rate equals the average rate',
-              'If a car travels 60 miles in 1 hour, at some moment it was going exactly 60 mph',
-              'f\'(c) = [f(b)-f(a)]/(b-a) for some c in (a,b)',
-              'if f(a) = f(b), then f\'(c) = 0 for some c in (a,b)'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — If a car travels 60 miles in 1 hour, at some moment it was going exactly 60 mph. Be careful to distinguish between the different concepts in this topic.'
+            question: 'MVT requires which two conditions?',
+            options: ['Continuous on $[a,b]$ AND differentiable on $(a,b)$', 'Continuous on $[a,b]$ only', 'Differentiable on $[a,b]$ only', '$f\'$ is continuous'],
+            correctAnswer: 0,
+            explanation: 'MVT needs both continuity on $[a,b]$ and differentiability on $(a,b)$.'
           }
         ]
       }
     },
     {
-      id: 'theor2-detail',
+      id: 'thm2-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **MVT**: f'(c) = [f(b)-f(a)]/(b-a) for some c in (a,b)
-- **Interpretation**: at some point the instantaneous rate equals the average rate
-- **If a car travels 60 miles in 1 hour, at some moment it was going exactly 60 mph**
-- **Rolle's**: if f(a) = f(b), then f'(c) = 0 for some c in (a,b)
-      `
-    },
-    {
-      id: 'theor2-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which statement about Rolle\'s is correct?',
-            options: [
-              'at some point the instantaneous rate equals the average rate',
-              'If a car travels 60 miles in 1 hour, at some moment it was going exactly 60 mph',
-              'f\'(c) = [f(b)-f(a)]/(b-a) for some c in (a,b)',
-              'if f(a) = f(b), then f\'(c) = 0 for some c in (a,b)'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Rolle\'s: if f(a) = f(b), then f\'(c) = 0 for some c in (a,b). Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'theor2-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'MVT',
-            options: ['if f(a) = f(b), then f\'(c) = 0 for some c in (a,b)', 'If a car travels 60 miles in 1 hour, at some moment it was going exactly 60 mph', 'at some point the instantaneous rate equals the average rate', 'f\'(c) = [f(b)-f(a)]/(b-a) for some c in (a,b)']
-          },
-          {
-            label: 'Interpretation',
-            options: ['at some point the instantaneous rate equals the average rate', 'If a car travels 60 miles in 1 hour, at some moment it was going exactly 60 mph', 'if f(a) = f(b), then f\'(c) = 0 for some c in (a,b)', 'f\'(c) = [f(b)-f(a)]/(b-a) for some c in (a,b)']
-          },
-          {
-            label: 'Rolle\'s',
-            options: ['f\'(c) = [f(b)-f(a)]/(b-a) for some c in (a,b)', 'at some point the instantaneous rate equals the average rate', 'if f(a) = f(b), then f\'(c) = 0 for some c in (a,b)', 'If a car travels 60 miles in 1 hour, at some moment it was going exactly 60 mph']
-          }
-        ],
-        correctAnswers: ['f\'(c) = [f(b)-f(a)]/(b-a) for some c in (a,b)', 'at some point the instantaneous rate equals the average rate', 'if f(a) = f(b), then f\'(c) = 0 for some c in (a,b)'],
-        hint1: 'Think about what each concept specifically describes in Mean Value Theorem Applications.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Mean Value Theorem Applications describes a specific idea. MVT: f\'(c) = [f(b)-f(a)]/(b-a) for some c in (a,b). Interpretation: at some point the instantaneous rate equals the average rate. Rolle\'s: if f(a) = f(b), then f\'(c) = 0 for some c in (a,b).'
-      }
+      content: `### Key Takeaways — Part 2
+1. MVT: instantaneous rate = average rate at some point
+2. Requires continuity AND differentiability
+3. On the AP exam, always verify both conditions`
     }
   ]
-}
+};

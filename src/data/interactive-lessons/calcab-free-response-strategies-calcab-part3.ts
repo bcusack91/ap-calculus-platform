@@ -1,121 +1,45 @@
-export const calcABFreeResponsePart3Data = {
+export const calcabFRQPart3Data = {
   topicSlug: 'free-response-strategies-calcab',
   sections: [
     {
-      id: 'free-3-intro',
+      id: 'frq3-intro',
       type: 'text' as const,
-      content: `
-# Calculator vs No-Calculator Sections
+      content: `# Free Response Strategies
 
-**Part 3 of 7 — Calculator vs No-Calculator Sections**
+**Part 3 of 7 — Justification Language**
 
-### 1. Calculator section
+### Writing Justifications
 
-use stored integrals and derivatives, graph to find intersections
+The AP exam requires specific language. Here are templates:
 
-### 2. No-calculator section
+**For IVT:** "Since $f$ is continuous on $[a, b]$ and $f(a) < N < f(b)$, by the Intermediate Value Theorem, there exists $c \in (a, b)$ such that $f(c) = N$."
 
-show all algebraic steps
+**For MVT:** "Since $f$ is continuous on $[a, b]$ and differentiable on $(a, b)$, by the Mean Value Theorem, there exists $c \in (a, b)$ such that $f'(c) = \frac{f(b)-f(a)}{b-a}$."
 
-### 3. On calculator problems, write the integral/equation being computed
-
-On calculator problems, write the integral/equation being computed
-
-### 4. Round to 3 decimal places unless otherwise specified
-
-Round to 3 decimal places unless otherwise specified
-      `
+**For increasing:** "Since $f'(x) > 0$ on $(a, b)$, $f$ is increasing on $(a, b)$."`
     },
     {
-      id: 'free-3-quiz1',
+      id: 'frq3-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Justification** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains Calculator section?',
-            options: [
-              'use stored integrals and derivatives, graph to find intersections',
-              'show all algebraic steps',
-              'Round to 3 decimal places unless otherwise specified',
-              'On calculator problems, write the integral/equation being computed'
-            ],
+            question: 'To justify that $f$ has a relative maximum at $x = c$, you should write:',
+            options: ['$f\'(c) = 0$ and $f\'$ changes from positive to negative at $c$', '$f(c)$ is the largest value', '$f\'(c) = 0$', '$f\'\'(c) = 0$'],
             correctAnswer: 0,
-            explanation: 'Correct — Calculator section: use stored integrals and derivatives, graph to find intersections. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Select the statement that correctly describes On calculator problems, write the…:',
-            options: [
-              'show all algebraic steps',
-              'Round to 3 decimal places unless otherwise specified',
-              'On calculator problems, write the integral/equation being computed',
-              'use stored integrals and derivatives, graph to find intersections'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — On calculator problems, write the integral/equation being computed. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'First derivative test: $f\'(c) = 0$ (critical point) AND $f\'$ changes from $+$ to $-$ (confirming max).'
           }
         ]
       }
     },
     {
-      id: 'free-3-detail',
+      id: 'frq3-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Calculator section**: use stored integrals and derivatives, graph to find intersections
-- **No-calculator section**: show all algebraic steps
-- **On calculator problems, write the integral/equation being computed**
-- **Round to 3 decimal places unless otherwise specified**
-      `
-    },
-    {
-      id: 'free-3-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of these accurately represents Round to 3 decimal places unless…?',
-            options: [
-              'use stored integrals and derivatives, graph to find intersections',
-              'On calculator problems, write the integral/equation being computed',
-              'show all algebraic steps',
-              'Round to 3 decimal places unless otherwise specified'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Round to 3 decimal places unless otherwise specified. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'free-3-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Calculator section',
-            options: ['show all algebraic steps', 'On calculator problems, write the integral/equation being computed', 'Round to 3 decimal places unless otherwise specified', 'use stored integrals and derivatives, graph to find intersections']
-          },
-          {
-            label: 'No-calculator section',
-            options: ['Round to 3 decimal places unless otherwise specified', 'On calculator problems, write the integral/equation being computed', 'use stored integrals and derivatives, graph to find intersections', 'show all algebraic steps']
-          }
-        ],
-        correctAnswers: ['use stored integrals and derivatives, graph to find intersections', 'show all algebraic steps'],
-        hint1: 'Think about what each concept specifically describes in Calculator vs No-Calculator Sections.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Calculator vs No-Calculator Sections describes a specific idea. Calculator section: use stored integrals and derivatives, graph to find intersections. No-calculator section: show all algebraic steps.'
-      }
+      content: `### Key Takeaways — Part 3
+1. Cite theorem names explicitly
+2. State conditions (continuous, differentiable) before applying
+3. Use precise mathematical language`
     }
   ]
-}
+};

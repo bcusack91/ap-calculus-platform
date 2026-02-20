@@ -1,121 +1,43 @@
-export const calcBCExamStrategiesPart6Data = {
+export const calcbcExamStrategyPart6Data = {
   topicSlug: 'bc-exam-strategies-calcbc',
   sections: [
     {
-      id: 'bc-ex6-intro',
+      id: 'str6-intro',
       type: 'text' as const,
-      content: `
-# Problem-Solving Workshop
+      content: `# BC Exam Strategies
 
-**Part 6 of 7 — Problem-Solving Workshop**
+**Part 6 of 7 — Common Mistakes to Avoid**
 
-### 1. Practice with released AP exams under timed conditions
+### Top BC Mistakes
 
-Practice with released AP exams under timed conditions
-
-### 2. Master the calculator
-
-store functions, use numerical integration
-
-### 3. Show all work on free-response — communication matters
-
-Show all work on free-response — communication matters
-
-### 4. Time management
-
-don't spend too long on any one problem
-      `
+1. **Forgetting +C** on indefinite integrals
+2. **Wrong limits** on definite integrals
+3. **Mixing up convergence tests** (apply the right test!)
+4. **Not checking endpoints** for power series
+5. **Using wrong formula** for polar area vs. parametric arc length
+6. **Not justifying** over/underestimate claims
+7. **Dropping negative signs** in alternating series`
     },
     {
-      id: 'bc-ex6-quiz1',
+      id: 'str6-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Common Mistakes** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains Practice with released AP exams under…?',
-            options: [
-              'Show all work on free-response — communication matters',
-              'don\'t spend too long on any one problem',
-              'store functions, use numerical integration',
-              'Practice with released AP exams under timed conditions'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Practice with released AP exams under timed conditions. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Select the statement that correctly describes Show all work on free-response —…:',
-            options: [
-              'Show all work on free-response — communication matters',
-              'Practice with released AP exams under timed conditions',
-              'store functions, use numerical integration',
-              'don\'t spend too long on any one problem'
-            ],
+            question: 'The integral $\\int_0^{\\pi} \\sin\\theta\\,d\\theta = ?$',
+            options: ['$2$', '$0$', '$\\pi$', '$-2$'],
             correctAnswer: 0,
-            explanation: 'Correct — Show all work on free-response — communication matters. Be careful to distinguish between the different concepts in this topic.'
+            explanation: '$[-\\cos\\theta]_0^{\\pi} = -\\cos\\pi - (-\\cos 0) = -(-1) + 1 = 2$. Common mistake: getting $0$ by computing $\\cos\\pi - \\cos 0$.'
           }
         ]
       }
     },
     {
-      id: 'bc-ex6-detail',
+      id: 'str6-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Practice with released AP exams under timed conditions**
-- **Master the calculator**: store functions, use numerical integration
-- **Show all work on free-response — communication matters**
-- **Time management**: don't spend too long on any one problem
-      `
-    },
-    {
-      id: 'bc-ex6-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which statement about Time management is correct?',
-            options: [
-              'Practice with released AP exams under timed conditions',
-              'store functions, use numerical integration',
-              'Show all work on free-response — communication matters',
-              'don\'t spend too long on any one problem'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Time management: don\'t spend too long on any one problem. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'bc-ex6-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Master the calculator',
-            options: ['Show all work on free-response — communication matters', 'store functions, use numerical integration', 'don\'t spend too long on any one problem', 'Practice with released AP exams under timed conditions']
-          },
-          {
-            label: 'Time management',
-            options: ['Practice with released AP exams under timed conditions', 'store functions, use numerical integration', 'don\'t spend too long on any one problem', 'Show all work on free-response — communication matters']
-          }
-        ],
-        correctAnswers: ['store functions, use numerical integration', 'don\'t spend too long on any one problem'],
-        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Master the calculator: store functions, use numerical integration. Time management: don\'t spend too long on any one problem.'
-      }
+      content: `### Key Takeaways — Part 6
+Check signs, check endpoints, justify everything. Read questions carefully!`
     }
   ]
-}
+};

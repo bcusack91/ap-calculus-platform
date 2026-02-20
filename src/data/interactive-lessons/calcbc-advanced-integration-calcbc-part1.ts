@@ -1,125 +1,48 @@
-export const calcBCAdvIntegrationPart1Data = {
+export const calcbcAdvIntegrationPart1Data = {
   topicSlug: 'advanced-integration-calcbc',
   sections: [
     {
-      id: 'advan1-intro',
+      id: 'adv1-intro',
       type: 'text' as const,
-      content: `
-# ∮ Advanced Integration
+      content: `# Advanced Integration Techniques
 
-**Part 1 of 7 — Trig Substitution (Overview)**
+**Part 1 of 7 — Choosing a Method**
 
-### 1. For √(a²-x²)
+### Integration Decision Tree
 
-substitute x = a sin θ
-
-### 2. For √(a²+x²)
-
-substitute x = a tan θ
-
-### 3. For √(x²-a²)
-
-substitute x = a sec θ
-
-### 4. After substitution, simplify using trig identities and integrate
-
-After substitution, simplify using trig identities and integrate
-      `
+1. **Basic?** Power rule, trig, exponential → do it directly
+2. **Composite?** $\int f(g(x))g'(x)\,dx$ → **u-substitution**
+3. **Product of different types?** → **Integration by parts**
+4. **Rational function?** → **Partial fractions**
+5. **Trig powers?** → Trig identities
+6. **Square root of quadratic?** → Trig substitution (beyond BC, but good to know)`
     },
     {
-      id: 'advan1-quiz1',
+      id: 'adv1-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Choose the Method** 🎯',
       exercise: {
         questions: [
           {
-            question: 'What does "For √(a²-x²)" refer to in calculus?',
-            options: [
-              'substitute x = a sec θ',
-              'substitute x = a tan θ',
-              'After substitution, simplify using trig identities and integrate',
-              'substitute x = a sin θ'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — For √(a²-x²): substitute x = a sin θ. The other options describe different concepts from this topic.'
+            question: 'Best method for $\\int x\\ln x\\,dx$:',
+            options: ['Integration by parts', 'u-substitution', 'Partial fractions', 'Direct integration'],
+            correctAnswer: 0,
+            explanation: 'Product of polynomial and logarithm → integration by parts with $u = \\ln x$, $dv = x\\,dx$.'
           },
           {
-            question: 'In the context of ∮ Advanced Integration, which explains For √(x²-a²)?',
-            options: [
-              'substitute x = a tan θ',
-              'After substitution, simplify using trig identities and integrate',
-              'substitute x = a sin θ',
-              'substitute x = a sec θ'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — For √(x²-a²): substitute x = a sec θ. Be careful to distinguish between the different concepts in this topic.'
+            question: 'Best method for $\\int \\frac{3}{x^2 - 1}\\,dx$:',
+            options: ['Partial fractions', 'u-substitution', 'Integration by parts', 'Power rule'],
+            correctAnswer: 0,
+            explanation: '$\\frac{3}{x^2-1} = \\frac{3}{(x-1)(x+1)}$ → partial fractions.'
           }
         ]
       }
     },
     {
-      id: 'advan1-detail',
+      id: 'adv1-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **For √(a²-x²)**: substitute x = a sin θ
-- **For √(a²+x²)**: substitute x = a tan θ
-- **For √(x²-a²)**: substitute x = a sec θ
-- **After substitution, simplify using trig identities and integrate**
-      `
-    },
-    {
-      id: 'advan1-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of these accurately represents After substitution, simplify using trig…?',
-            options: [
-              'substitute x = a tan θ',
-              'After substitution, simplify using trig identities and integrate',
-              'substitute x = a sin θ',
-              'substitute x = a sec θ'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — After substitution, simplify using trig identities and integrate. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'advan1-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'For √(a²-x²)',
-            options: ['substitute x = a sin θ', 'After substitution, simplify using trig identities and integrate', 'substitute x = a sec θ', 'substitute x = a tan θ']
-          },
-          {
-            label: 'For √(a²+x²)',
-            options: ['substitute x = a sin θ', 'After substitution, simplify using trig identities and integrate', 'substitute x = a sec θ', 'substitute x = a tan θ']
-          },
-          {
-            label: 'For √(x²-a²)',
-            options: ['substitute x = a sec θ', 'After substitution, simplify using trig identities and integrate', 'substitute x = a sin θ', 'substitute x = a tan θ']
-          }
-        ],
-        correctAnswers: ['substitute x = a sin θ', 'substitute x = a tan θ', 'substitute x = a sec θ'],
-        hint1: 'Think about what each concept specifically describes in ∮ Advanced Integration.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in ∮ Advanced Integration describes a specific idea. For √(a²-x²): substitute x = a sin θ. For √(a²+x²): substitute x = a tan θ. For √(x²-a²): substitute x = a sec θ.'
-      }
+      content: `### Key Takeaways — Part 1
+Recognize the pattern first. Choose the right technique.`
     }
   ]
-}
+};

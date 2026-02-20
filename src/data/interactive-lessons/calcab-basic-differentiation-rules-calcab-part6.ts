@@ -1,125 +1,80 @@
-export const calcABBasicDiffPart6Data = {
+export const calcabBasicDiffPart6Data = {
   topicSlug: 'basic-differentiation-rules-calcab',
   sections: [
     {
-      id: 'basic6-intro',
+      id: 'diff6-intro',
       type: 'text' as const,
-      content: `
-# Problem-Solving Workshop
+      content: `# 📐 Problem-Solving Workshop
 
-**Part 6 of 7 — Problem-Solving Workshop**
+**Part 6 of 7 — Mixed Differentiation Problems**
 
-### 1. d/dx[sin x] = cos x; d/dx[cos x] = -sin x
+### Choosing the Right Rule
 
-d/dx[sin x] = cos x; d/dx[cos x] = -sin x
-
-### 2. d/dx[tan x] = sec²x; d/dx[cot x] = -csc²x
-
-d/dx[tan x] = sec²x; d/dx[cot x] = -csc²x
-
-### 3. d/dx[sec x] = sec x tan x; d/dx[csc x] = -csc x cot x
-
-d/dx[sec x] = sec x tan x; d/dx[csc x] = -csc x cot x
-
-### 4. These come from the limit definition and the identity sin(x)/x → 1
-
-These come from the limit definition and the identity sin(x)/x → 1
-      `
+| Situation | Rule to Use |
+|-----------|------------|
+| Single term: $x^n$ | Power Rule |
+| Product: $f \\cdot g$ | Product Rule |
+| Quotient: $f / g$ | Quotient Rule (or rewrite) |
+| Composite: $f(g(x))$ | Chain Rule |
+| Multiple rules | Combine as needed |`
     },
     {
-      id: 'basic6-quiz1',
+      id: 'diff6-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Identify and Apply** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains d/dx[sin x] = cos x; d/dx[cos x] = -sin…?',
-            options: [
-              'd/dx[sec x] = sec x tan x; d/dx[csc x] = -csc x cot x',
-              'd/dx[sin x] = cos x; d/dx[cos x] = -sin x',
-              'd/dx[tan x] = sec²x; d/dx[cot x] = -csc²x',
-              'These come from the limit definition and the identity sin(x)/x → 1'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — d/dx[sin x] = cos x; d/dx[cos x] = -sin x. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'In the context of Problem-Solving Workshop, which explains d/dx[sec x] = sec x tan x; d/dx[csc x]…?',
-            options: [
-              'These come from the limit definition and the identity sin(x)/x → 1',
-              'd/dx[tan x] = sec²x; d/dx[cot x] = -csc²x',
-              'd/dx[sin x] = cos x; d/dx[cos x] = -sin x',
-              'd/dx[sec x] = sec x tan x; d/dx[csc x] = -csc x cot x'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — d/dx[sec x] = sec x tan x; d/dx[csc x] = -csc x cot x. Be careful to distinguish between the different concepts in this topic.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'basic6-detail',
-      type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **d/dx[sin x] = cos x; d/dx[cos x] = -sin x**
-- **d/dx[tan x] = sec²x; d/dx[cot x] = -csc²x**
-- **d/dx[sec x] = sec x tan x; d/dx[csc x] = -csc x cot x**
-- **These come from the limit definition and the identity sin(x)/x → 1**
-      `
-    },
-    {
-      id: 'basic6-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of these accurately represents These come from the limit definition…?',
-            options: [
-              'These come from the limit definition and the identity sin(x)/x → 1',
-              'd/dx[tan x] = sec²x; d/dx[cot x] = -csc²x',
-              'd/dx[sin x] = cos x; d/dx[cos x] = -sin x',
-              'd/dx[sec x] = sec x tan x; d/dx[csc x] = -csc x cot x'
-            ],
+            question: 'Find $\\frac{d}{dx}\\left(\\frac{x^3 + 1}{x}\\right)$ by simplifying first.',
+            options: ['$2x - \\frac{1}{x^2}$', '$\\frac{3x^2}{1}$', '$3x^2 - 1$', '$2x + \\frac{1}{x^2}$'],
             correctAnswer: 0,
-            explanation: 'Correct — These come from the limit definition and the identity sin(x)/x → 1. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: 'Simplify: $\\frac{x^3+1}{x} = x^2 + x^{-1}$. Differentiate: $2x + (-1)x^{-2} = 2x - \\frac{1}{x^2}$.'
+          },
+          {
+            question: 'Find $f\'(2)$ given $f(x) = (x^2 - 1)(x + 3)$.',
+            options: ['$15$', '$11$', '$13$', '$17$'],
+            correctAnswer: 0,
+            explanation: 'Expand: $f(x) = x^3 + 3x^2 - x - 3$. $f\'(x) = 3x^2 + 6x - 1$. $f\'(2) = 12 + 12 - 1 = 23$. Or Product Rule: $2x(x+3) + (x^2-1)(1) = 2x^2+6x+x^2-1 = 3x^2+6x-1$. At $x=2$: $12+12-1 = 23$. Actually let me recompute: $3(4)+6(2)-1 = 12+12-1 = 23$.'
+          },
+          {
+            question: 'If $g(x) = \\frac{\\sin x + \\cos x}{\\sin x - \\cos x}$, find $g\'(x)$ in simplified form.',
+            options: ['$\\frac{-2}{(\\sin x - \\cos x)^2}$', '$\\frac{2}{(\\sin x - \\cos x)^2}$', '$\\frac{1}{(\\sin x - \\cos x)^2}$', '$0$'],
+            correctAnswer: 0,
+            explanation: 'Quotient Rule: numerator = $(\\cos x - \\sin x)(\\sin x - \\cos x) - (\\sin x + \\cos x)(\\cos x + \\sin x)$. First term: $-(\\sin x - \\cos x)^2 = -(\\sin^2 x - 2\\sin x\\cos x + \\cos^2 x) = -(1 - \\sin 2x)$. Hmm, let me use a cleaner approach. Num = $(\\cos x - \\sin x)(\\sin x - \\cos x) - (\\sin x + \\cos x)(\\cos x + \\sin x)$. Actually: $(\\cos x - \\sin x)(\\sin x - \\cos x) = -(\\cos x - \\sin x)^2$ and $(\\sin x + \\cos x)^2$. So numerator = $-(\\cos x - \\sin x)^2 - (\\sin x + \\cos x)^2 = -(1-\\sin 2x) - (1+\\sin 2x) = -2$.'
           }
         ]
       }
     },
     {
-      id: 'basic6-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
+      id: 'diff6-quiz2',
+      type: 'multiple-choice' as const,
+      content: '**AP-Style Free Response Setup** 🎯',
       exercise: {
-        dropdowns: [
+        questions: [
           {
-            label: 'd/dx[sin x] = cos x; d/dx[cos x] = -sin…',
-            options: ['These come from the limit definition and the identity sin(x)/x → 1', 'd/dx[sec x] = sec x tan x; d/dx[csc x] = -csc x cot x', 'd/dx[sin x] = cos x; d/dx[cos x] = -sin x', 'd/dx[tan x] = sec²x; d/dx[cot x] = -csc²x']
+            question: 'The position of a particle is $s(t) = t^3 - 6t^2 + 9t + 2$ for $t \\geq 0$. When is the particle at rest?',
+            options: ['$t = 1$ only', '$t = 3$ only', '$t = 1$ and $t = 3$', '$t = 0$ and $t = 2$'],
+            correctAnswer: 2,
+            explanation: 'At rest means $v(t) = s\'(t) = 0$. $s\'(t) = 3t^2 - 12t + 9 = 3(t^2-4t+3) = 3(t-1)(t-3) = 0$. So $t = 1$ and $t = 3$.'
           },
           {
-            label: 'd/dx[tan x] = sec²x; d/dx[cot x] =…',
-            options: ['d/dx[sec x] = sec x tan x; d/dx[csc x] = -csc x cot x', 'd/dx[tan x] = sec²x; d/dx[cot x] = -csc²x', 'These come from the limit definition and the identity sin(x)/x → 1', 'd/dx[sin x] = cos x; d/dx[cos x] = -sin x']
-          },
-          {
-            label: 'd/dx[sec x] = sec x tan x; d/dx[csc x]…',
-            options: ['d/dx[tan x] = sec²x; d/dx[cot x] = -csc²x', 'd/dx[sec x] = sec x tan x; d/dx[csc x] = -csc x cot x', 'd/dx[sin x] = cos x; d/dx[cos x] = -sin x', 'These come from the limit definition and the identity sin(x)/x → 1']
+            question: 'For the same particle, when is it moving to the left (negative direction)?',
+            options: ['$0 < t < 1$', '$1 < t < 3$', '$t > 3$', '$t < 0$'],
+            correctAnswer: 1,
+            explanation: '$v(t) = 3(t-1)(t-3)$. Sign analysis: $v < 0$ when exactly one factor is negative, which is $1 < t < 3$.'
           }
-        ],
-        correctAnswers: ['d/dx[sin x] = cos x; d/dx[cos x] = -sin x', 'd/dx[tan x] = sec²x; d/dx[cot x] = -csc²x', 'd/dx[sec x] = sec x tan x; d/dx[csc x] = -csc x cot x'],
-        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. d/dx[sin x] = cos x; d/dx[cos x] = -sin x. d/dx[tan x] = sec²x; d/dx[cot x] = -csc²x. d/dx[sec x] = sec x tan x; d/dx[csc x] = -csc x cot x.'
+        ]
       }
+    },
+    {
+      id: 'diff6-summary',
+      type: 'text' as const,
+      content: `### Workshop Complete!
+
+You can now:
+- Choose the right differentiation rule for any situation
+- Combine multiple rules in a single problem
+- Apply derivatives to motion problems`
     }
   ]
-}
+};

@@ -1,125 +1,48 @@
-export const calcBCReviewConnectionsPart2Data = {
+export const calcbcReviewPart2Data = {
   topicSlug: 'review-connections-calcbc',
   sections: [
     {
-      id: 'revie2-intro',
+      id: 'rev2-intro',
       type: 'text' as const,
-      content: `
-# Series & Function Representation
+      content: `# BC Review
 
-**Part 2 of 7 — Series & Function Representation**
+**Part 2 of 7 — Derivative Rules Summary**
 
-### 1. Taylor series represent functions as infinite polynomials
+### Must-Know Derivatives
 
-Taylor series represent functions as infinite polynomials
+| $f(x)$ | $f'(x)$ |
+|---------|---------|
+| $x^n$ | $nx^{n-1}$ |
+| $e^x$ | $e^x$ |
+| $\ln x$ | $1/x$ |
+| $\sin x$ | $\cos x$ |
+| $\cos x$ | $-\sin x$ |
+| $\tan x$ | $\sec^2 x$ |
+| $\arcsin x$ | $1/\sqrt{1-x^2}$ |
+| $\arctan x$ | $1/(1+x^2)$ |
 
-### 2. The series "remembers" the function via its derivatives at the center
-
-The series "remembers" the function via its derivatives at the center
-
-### 3. Convergence tests determine where the representation is valid
-
-Convergence tests determine where the representation is valid
-
-### 4. Error bounds quantify the quality of polynomial approximations
-
-Error bounds quantify the quality of polynomial approximations
-      `
+Plus: product rule, quotient rule, chain rule!`
     },
     {
-      id: 'revie2-quiz1',
+      id: 'rev2-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Derivatives** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Taylor series represent functions as…?',
-            options: [
-              'The series "remembers" the function via its derivatives at the center',
-              'Convergence tests determine where the representation is valid',
-              'Error bounds quantify the quality of polynomial approximations',
-              'Taylor series represent functions as infinite polynomials'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Taylor series represent functions as infinite polynomials. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Select the statement that correctly describes Convergence tests determine where the…:',
-            options: [
-              'The series "remembers" the function via its derivatives at the center',
-              'Error bounds quantify the quality of polynomial approximations',
-              'Taylor series represent functions as infinite polynomials',
-              'Convergence tests determine where the representation is valid'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Convergence tests determine where the representation is valid. Be careful to distinguish between the different concepts in this topic.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'revie2-detail',
-      type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Taylor series represent functions as infinite polynomials**
-- **The series "remembers" the function via its derivatives at the center**
-- **Convergence tests determine where the representation is valid**
-- **Error bounds quantify the quality of polynomial approximations**
-      `
-    },
-    {
-      id: 'revie2-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of these accurately represents Error bounds quantify the quality of…?',
-            options: [
-              'Error bounds quantify the quality of polynomial approximations',
-              'Taylor series represent functions as infinite polynomials',
-              'The series "remembers" the function via its derivatives at the center',
-              'Convergence tests determine where the representation is valid'
-            ],
+            question: '$\\frac{d}{dx}[e^{\\sin x}] = $',
+            options: ['$e^{\\sin x}\\cos x$', '$e^{\\cos x}$', '$\\cos x \\cdot e^x$', '$e^{\\sin x}/\\cos x$'],
             correctAnswer: 0,
-            explanation: 'Correct — Error bounds quantify the quality of polynomial approximations. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: 'Chain rule: $e^{\\sin x} \\cdot \\cos x$.'
           }
         ]
       }
     },
     {
-      id: 'revie2-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Taylor series represent functions as…',
-            options: ['Convergence tests determine where the representation is valid', 'The series "remembers" the function via its derivatives at the center', 'Error bounds quantify the quality of polynomial approximations', 'Taylor series represent functions as infinite polynomials']
-          },
-          {
-            label: 'The series "remembers" the function via…',
-            options: ['Convergence tests determine where the representation is valid', 'Taylor series represent functions as infinite polynomials', 'Error bounds quantify the quality of polynomial approximations', 'The series "remembers" the function via its derivatives at the center']
-          },
-          {
-            label: 'Convergence tests determine where the…',
-            options: ['Convergence tests determine where the representation is valid', 'Error bounds quantify the quality of polynomial approximations', 'Taylor series represent functions as infinite polynomials', 'The series "remembers" the function via its derivatives at the center']
-          }
-        ],
-        correctAnswers: ['Taylor series represent functions as infinite polynomials', 'The series "remembers" the function via its derivatives at the center', 'Convergence tests determine where the representation is valid'],
-        hint1: 'Think about what each concept specifically describes in Series & Function Representation.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Series & Function Representation describes a specific idea. Taylor series represent functions as infinite polynomials. The series "remembers" the function via its derivatives at the center. Convergence tests determine where the representation is valid.'
-      }
+      id: 'rev2-summary',
+      type: 'text' as const,
+      content: `### Key Takeaways — Part 2
+Know all basic derivative formulas cold. Chain rule applies to all of them.`
     }
   ]
-}
+};

@@ -1,125 +1,45 @@
-export const calcBCTaylorMaclaurinPart5Data = {
+export const calcbcTaylorPart5Data = {
   topicSlug: 'taylor-maclaurin-series-calcbc',
   sections: [
     {
-      id: 'taylo5-intro',
+      id: 'tay5-intro',
       type: 'text' as const,
-      content: `
-# Constructing New Series
+      content: `# Taylor & Maclaurin Series
 
-**Part 5 of 7 — Constructing New Series**
+**Part 5 of 7 — Using Series to Evaluate Limits & Integrals**
 
-### 1. Substitution
+### Limits via Taylor Series
 
-replace x in a known series (e.g., e^(-x²) from eˣ)
+$$\lim_{x \to 0}\frac{\sin x - x}{x^3} = \lim_{x \to 0}\frac{(x - x^3/6 + \cdots) - x}{x^3} = \lim_{x \to 0}\frac{-x^3/6 + \cdots}{x^3} = -\frac{1}{6}$$
 
-### 2. Differentiation
+### Integrals via Taylor Series
 
-differentiate a known series term by term
+$\int_0^1 e^{-x^2}\,dx$: no elementary antiderivative!
 
-### 3. Integration
+$e^{-x^2} = 1 - x^2 + \frac{x^4}{2} - \frac{x^6}{6} + \cdots$
 
-integrate a known series term by term
-
-### 4. Multiplication
-
-multiply series together for products of functions
-      `
+$\int_0^1 = \left[x - \frac{x^3}{3} + \frac{x^5}{10} - \frac{x^7}{42} + \cdots\right]_0^1 = 1 - 1/3 + 1/10 - 1/42 + \cdots$`
     },
     {
-      id: 'taylo5-quiz1',
+      id: 'tay5-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Series Applications** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Substitution?',
-            options: [
-              'integrate a known series term by term',
-              'multiply series together for products of functions',
-              'differentiate a known series term by term',
-              'replace x in a known series (e.g., e^(-x²) from eˣ)'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Substitution: replace x in a known series (e.g., e^(-x²) from eˣ). The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Which of the following is true about Integration?',
-            options: [
-              'integrate a known series term by term',
-              'differentiate a known series term by term',
-              'multiply series together for products of functions',
-              'replace x in a known series (e.g., e^(-x²) from eˣ)'
-            ],
+            question: '$\\lim_{x \\to 0}\\frac{1 - \\cos x}{x^2}$:',
+            options: ['$1/2$', '$0$', '$1$', '$\\infty$'],
             correctAnswer: 0,
-            explanation: 'Correct — Integration: integrate a known series term by term. Be careful to distinguish between the different concepts in this topic.'
+            explanation: '$1 - \\cos x = \\frac{x^2}{2} - \\frac{x^4}{24} + \\cdots$. Divided by $x^2$: $\\frac{1}{2} - \\frac{x^2}{24} + \\cdots \\to 1/2$.'
           }
         ]
       }
     },
     {
-      id: 'taylo5-detail',
+      id: 'tay5-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Substitution**: replace x in a known series (e.g., e^(-x²) from eˣ)
-- **Differentiation**: differentiate a known series term by term
-- **Integration**: integrate a known series term by term
-- **Multiplication**: multiply series together for products of functions
-      `
-    },
-    {
-      id: 'taylo5-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Regarding Constructing New Series, which correctly describes Multiplication?',
-            options: [
-              'differentiate a known series term by term',
-              'multiply series together for products of functions',
-              'replace x in a known series (e.g., e^(-x²) from eˣ)',
-              'integrate a known series term by term'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Multiplication: multiply series together for products of functions. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'taylo5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Substitution',
-            options: ['replace x in a known series (e.g., e^(-x²) from eˣ)', 'multiply series together for products of functions', 'differentiate a known series term by term', 'integrate a known series term by term']
-          },
-          {
-            label: 'Differentiation',
-            options: ['multiply series together for products of functions', 'integrate a known series term by term', 'replace x in a known series (e.g., e^(-x²) from eˣ)', 'differentiate a known series term by term']
-          },
-          {
-            label: 'Integration',
-            options: ['replace x in a known series (e.g., e^(-x²) from eˣ)', 'multiply series together for products of functions', 'differentiate a known series term by term', 'integrate a known series term by term']
-          }
-        ],
-        correctAnswers: ['replace x in a known series (e.g., e^(-x²) from eˣ)', 'differentiate a known series term by term', 'integrate a known series term by term'],
-        hint1: 'Think about what each concept specifically describes in Constructing New Series.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Constructing New Series describes a specific idea. Substitution: replace x in a known series (e.g., e^(-x²) from eˣ). Differentiation: differentiate a known series term by term. Integration: integrate a known series term by term.'
-      }
+      content: `### Key Takeaways — Part 5
+Taylor series elegantly evaluate limits and integrals that are otherwise difficult.`
     }
   ]
-}
+};

@@ -1,125 +1,38 @@
-export const calcBCAlternatingPart6Data = {
+export const calcbcAlternatingPart6Data = {
   topicSlug: 'alternating-series-calcbc',
   sections: [
     {
-      id: 'alter6-intro',
+      id: 'alt6-intro',
       type: 'text' as const,
-      content: `
-# Problem-Solving Workshop
+      content: `# Alternating Series
 
-**Part 6 of 7 — Problem-Solving Workshop**
-
-### 1. An absolutely convergent series can be rearranged without changing the sum
-
-An absolutely convergent series can be rearranged without changing the sum
-
-### 2. A conditionally convergent series can be rearranged to converge to any value (Riemann)
-
-A conditionally convergent series can be rearranged to converge to any value (Riemann)
-
-### 3. This is why absolute convergence is "better" than conditional
-
-This is why absolute convergence is "better" than conditional
-
-### 4. On the AP exam
-
-just determine absolute vs conditional convergence
-      `
+**Part 6 of 7 — Practice Workshop**`
     },
     {
-      id: 'alter6-quiz1',
+      id: 'alt6-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Mixed Practice** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes An absolutely convergent series can be…?',
-            options: [
-              'An absolutely convergent series can be rearranged without changing the sum',
-              'This is why absolute convergence is "better" than conditional',
-              'A conditionally convergent series can be rearranged to converge to any value (Riemann)',
-              'just determine absolute vs conditional convergence'
-            ],
+            question: 'Classify: $\\sum \\frac{(-1)^n \\ln n}{n}$ (for $n \\geq 2$)',
+            options: ['Conditionally convergent', 'Absolutely convergent', 'Divergent', 'Cannot determine'],
             correctAnswer: 0,
-            explanation: 'Correct — An absolutely convergent series can be rearranged without changing the sum. The other options describe different concepts from this topic.'
+            explanation: 'AST: $\\ln n / n$ is eventually decreasing and $\\to 0$. Converges. But $\\sum \\ln n/n > \\sum 1/n$ (eventually), so $\\sum |a_n|$ diverges. Conditional.'
           },
           {
-            question: 'Select the statement that correctly describes This is why absolute convergence is…:',
-            options: [
-              'This is why absolute convergence is "better" than conditional',
-              'A conditionally convergent series can be rearranged to converge to any value (Riemann)',
-              'An absolutely convergent series can be rearranged without changing the sum',
-              'just determine absolute vs conditional convergence'
-            ],
+            question: '$\\sum_{n=1}^{\\infty} \\frac{\\cos(n\\pi)}{n^3}$: this is alternating because $\\cos(n\\pi) = (-1)^n$. It converges:',
+            options: ['Absolutely', 'Conditionally', 'Diverges', 'Not alternating'],
             correctAnswer: 0,
-            explanation: 'Correct — This is why absolute convergence is "better" than conditional. Be careful to distinguish between the different concepts in this topic.'
+            explanation: '$\\sum |a_n| = \\sum 1/n^3$, converges ($p = 3$). Absolute convergence.'
           }
         ]
       }
     },
     {
-      id: 'alter6-detail',
+      id: 'alt6-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **An absolutely convergent series can be rearranged without changing the sum**
-- **A conditionally convergent series can be rearranged to converge to any value (Riemann)**
-- **This is why absolute convergence is "better" than conditional**
-- **On the AP exam**: just determine absolute vs conditional convergence
-      `
-    },
-    {
-      id: 'alter6-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of these accurately represents On the AP exam?',
-            options: [
-              'This is why absolute convergence is "better" than conditional',
-              'An absolutely convergent series can be rearranged without changing the sum',
-              'A conditionally convergent series can be rearranged to converge to any value (Riemann)',
-              'just determine absolute vs conditional convergence'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — On the AP exam: just determine absolute vs conditional convergence. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'alter6-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'An absolutely convergent series can be…',
-            options: ['An absolutely convergent series can be rearranged without changing the sum', 'A conditionally convergent series can be rearranged to converge to any value (Riemann)', 'just determine absolute vs conditional convergence', 'This is why absolute convergence is "better" than conditional']
-          },
-          {
-            label: 'A conditionally convergent series can…',
-            options: ['This is why absolute convergence is "better" than conditional', 'A conditionally convergent series can be rearranged to converge to any value (Riemann)', 'An absolutely convergent series can be rearranged without changing the sum', 'just determine absolute vs conditional convergence']
-          },
-          {
-            label: 'This is why absolute convergence is…',
-            options: ['An absolutely convergent series can be rearranged without changing the sum', 'just determine absolute vs conditional convergence', 'A conditionally convergent series can be rearranged to converge to any value (Riemann)', 'This is why absolute convergence is "better" than conditional']
-          }
-        ],
-        correctAnswers: ['An absolutely convergent series can be rearranged without changing the sum', 'A conditionally convergent series can be rearranged to converge to any value (Riemann)', 'This is why absolute convergence is "better" than conditional'],
-        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. An absolutely convergent series can be rearranged without changing the sum. A conditionally convergent series can be rearranged to converge to any value (Riemann). This is why absolute convergence is "better" than conditional.'
-      }
+      content: `### Workshop Complete!`
     }
   ]
-}
+};

@@ -1,125 +1,38 @@
-export const calcBCConvergenceTestsPart4Data = {
+export const calcbcConvergencePart4Data = {
   topicSlug: 'convergence-tests-summary-calcbc',
   sections: [
     {
-      id: 'conve4-intro',
+      id: 'conv4-intro',
       type: 'text' as const,
-      content: `
-# Comparison Tests
+      content: `# Convergence Tests
 
-**Part 4 of 7 — Comparison Tests**
-
-### 1. Direct Comparison
-
-aₙ ≤ bₙ and Σbₙ converges → Σaₙ converges
-
-### 2. Direct Comparison
-
-aₙ ≥ bₙ and Σbₙ diverges → Σaₙ diverges
-
-### 3. Limit Comparison
-
-lim(aₙ/bₙ) = c (finite, positive) → same behavior
-
-### 4. Choose bₙ to be a simpler series you know converges or diverges
-
-Choose bₙ to be a simpler series you know converges or diverges
-      `
+**Part 4 of 7 — Mixed Practice I**`
     },
     {
-      id: 'conve4-quiz1',
+      id: 'conv4-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Determine Convergence** 🎯',
       exercise: {
         questions: [
           {
-            question: 'What does "Direct Comparison" refer to in calculus?',
-            options: [
-              'Choose bₙ to be a simpler series you know converges or diverges',
-              'This is a common misconception about the topic',
-              'aₙ ≤ bₙ and Σbₙ converges → Σaₙ converges',
-              'lim(aₙ/bₙ) = c (finite, positive) → same behavior'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Direct Comparison: aₙ ≤ bₙ and Σbₙ converges → Σaₙ converges. The other options describe different concepts from this topic.'
+            question: '$\\sum_{n=1}^{\\infty} \\frac{3^n}{n \\cdot 4^n}$:',
+            options: ['Converges (ratio: $L = 3/4$)', 'Diverges', 'Converges (integral test)', 'Inconclusive'],
+            correctAnswer: 0,
+            explanation: 'Ratio: $\\frac{3^{n+1}/((n+1)4^{n+1})}{3^n/(n \\cdot 4^n)} = \\frac{3n}{4(n+1)} \\to 3/4 < 1$. Converges.'
           },
           {
-            question: 'Which of the following is true about Limit Comparison?',
-            options: [
-              'aₙ ≥ bₙ and Σbₙ diverges → Σaₙ diverges',
-              'Choose bₙ to be a simpler series you know converges or diverges',
-              'aₙ ≤ bₙ and Σbₙ converges → Σaₙ converges',
-              'lim(aₙ/bₙ) = c (finite, positive) → same behavior'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Limit Comparison: lim(aₙ/bₙ) = c (finite, positive) → same behavior. Be careful to distinguish between the different concepts in this topic.'
+            question: '$\\sum_{n=2}^{\\infty} \\frac{1}{n(\\ln n)^2}$:',
+            options: ['Converges (integral test)', 'Diverges', '$p$-series', 'Ratio test needed'],
+            correctAnswer: 0,
+            explanation: '$\\int_2^{\\infty} \\frac{dx}{x(\\ln x)^2} = [-1/\\ln x]_2^{\\infty} = 0 + 1/\\ln 2 < \\infty$. Converges.'
           }
         ]
       }
     },
     {
-      id: 'conve4-detail',
+      id: 'conv4-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Direct Comparison**: aₙ ≤ bₙ and Σbₙ converges → Σaₙ converges
-- **Direct Comparison**: aₙ ≥ bₙ and Σbₙ diverges → Σaₙ diverges
-- **Limit Comparison**: lim(aₙ/bₙ) = c (finite, positive) → same behavior
-- **Choose bₙ to be a simpler series you know converges or diverges**
-      `
-    },
-    {
-      id: 'conve4-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of these accurately represents Choose bₙ to be a simpler series you…?',
-            options: [
-              'lim(aₙ/bₙ) = c (finite, positive) → same behavior',
-              'aₙ ≤ bₙ and Σbₙ converges → Σaₙ converges',
-              'aₙ ≥ bₙ and Σbₙ diverges → Σaₙ diverges',
-              'Choose bₙ to be a simpler series you know converges or diverges'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Choose bₙ to be a simpler series you know converges or diverges. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'conve4-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Direct Comparison',
-            options: ['aₙ ≤ bₙ and Σbₙ converges → Σaₙ converges', 'aₙ ≥ bₙ and Σbₙ diverges → Σaₙ diverges', 'Choose bₙ to be a simpler series you know converges or diverges', 'lim(aₙ/bₙ) = c (finite, positive) → same behavior']
-          },
-          {
-            label: 'Direct Comparison',
-            options: ['aₙ ≥ bₙ and Σbₙ diverges → Σaₙ diverges', 'lim(aₙ/bₙ) = c (finite, positive) → same behavior', 'Choose bₙ to be a simpler series you know converges or diverges', 'aₙ ≤ bₙ and Σbₙ converges → Σaₙ converges']
-          },
-          {
-            label: 'Limit Comparison',
-            options: ['lim(aₙ/bₙ) = c (finite, positive) → same behavior', 'Choose bₙ to be a simpler series you know converges or diverges', 'aₙ ≤ bₙ and Σbₙ converges → Σaₙ converges', 'aₙ ≥ bₙ and Σbₙ diverges → Σaₙ diverges']
-          }
-        ],
-        correctAnswers: ['aₙ ≤ bₙ and Σbₙ converges → Σaₙ converges', 'aₙ ≥ bₙ and Σbₙ diverges → Σaₙ diverges', 'lim(aₙ/bₙ) = c (finite, positive) → same behavior'],
-        hint1: 'Think about what each concept specifically describes in Comparison Tests.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Comparison Tests describes a specific idea. Direct Comparison: aₙ ≤ bₙ and Σbₙ converges → Σaₙ converges. Direct Comparison: aₙ ≥ bₙ and Σbₙ diverges → Σaₙ diverges. Limit Comparison: lim(aₙ/bₙ) = c (finite, positive) → same behavior.'
-      }
+      content: `### Practice Complete!`
     }
   ]
-}
+};

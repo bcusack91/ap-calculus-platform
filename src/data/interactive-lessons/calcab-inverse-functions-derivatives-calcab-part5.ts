@@ -1,125 +1,52 @@
-export const calcABInverseDerivPart5Data = {
+export const calcabInverseFunctionsPart5Data = {
   topicSlug: 'inverse-functions-derivatives-calcab',
   sections: [
     {
-      id: 'inver5-intro',
+      id: 'inv5-intro',
       type: 'text' as const,
-      content: `
-# Applications of Inverse Derivatives
+      content: `# Inverse Functions & Their Derivatives
 
-**Part 5 of 7 — Applications of Inverse Derivatives**
+**Part 5 of 7 — Integrals Leading to Inverse Trig**
 
-### 1. Finding tangent lines to inverse function graphs
+### Key Antiderivatives
 
-Finding tangent lines to inverse function graphs
+$$\\int \\frac{1}{\\sqrt{1-x^2}}\\,dx = \\arcsin x + C$$
 
-### 2. Solving equations involving inverse trig functions
+$$\\int \\frac{1}{1+x^2}\\,dx = \\arctan x + C$$
 
-Solving equations involving inverse trig functions
+### General Forms
 
-### 3. Related rates with inverse trig functions
+$$\\int \\frac{1}{\\sqrt{a^2-x^2}}\\,dx = \\arcsin\\frac{x}{a} + C$$
 
-Related rates with inverse trig functions
-
-### 4. Understanding the restricted domains that make inverses possible
-
-Understanding the restricted domains that make inverses possible
-      `
+$$\\int \\frac{1}{a^2+x^2}\\,dx = \\frac{1}{a}\\arctan\\frac{x}{a} + C$$`
     },
     {
-      id: 'inver5-quiz1',
+      id: 'inv5-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Inverse Trig Integrals** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Finding tangent lines to inverse…?',
-            options: [
-              'Finding tangent lines to inverse function graphs',
-              'Solving equations involving inverse trig functions',
-              'Understanding the restricted domains that make inverses possible',
-              'Related rates with inverse trig functions'
-            ],
+            question: 'Evaluate $\\int_0^1 \\frac{1}{1+x^2}\\,dx$.',
+            options: ['$\\frac{\\pi}{4}$', '$\\frac{\\pi}{2}$', '$1$', '$\\arctan 1$'],
             correctAnswer: 0,
-            explanation: 'Correct — Finding tangent lines to inverse function graphs. The other options describe different concepts from this topic.'
+            explanation: '$[\\arctan x]_0^1 = \\arctan 1 - \\arctan 0 = \\frac{\\pi}{4} - 0 = \\frac{\\pi}{4}$.'
           },
           {
-            question: 'Select the statement that correctly describes Related rates with inverse trig…:',
-            options: [
-              'Related rates with inverse trig functions',
-              'Understanding the restricted domains that make inverses possible',
-              'Finding tangent lines to inverse function graphs',
-              'Solving equations involving inverse trig functions'
-            ],
+            question: 'Evaluate $\\int \\frac{1}{4+x^2}\\,dx$.',
+            options: ['$\\frac{1}{2}\\arctan\\frac{x}{2} + C$', '$\\arctan\\frac{x}{2} + C$', '$\\frac{1}{4}\\arctan\\frac{x}{4} + C$', '$\\arctan 2x + C$'],
             correctAnswer: 0,
-            explanation: 'Correct — Related rates with inverse trig functions. Be careful to distinguish between the different concepts in this topic.'
+            explanation: '$\\int \\frac{dx}{4+x^2} = \\frac{1}{2}\\arctan\\frac{x}{2} + C$ using the formula with $a = 2$.'
           }
         ]
       }
     },
     {
-      id: 'inver5-detail',
+      id: 'inv5-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Finding tangent lines to inverse function graphs**
-- **Solving equations involving inverse trig functions**
-- **Related rates with inverse trig functions**
-- **Understanding the restricted domains that make inverses possible**
-      `
-    },
-    {
-      id: 'inver5-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of these accurately represents Understanding the restricted domains…?',
-            options: [
-              'Related rates with inverse trig functions',
-              'Finding tangent lines to inverse function graphs',
-              'Understanding the restricted domains that make inverses possible',
-              'Solving equations involving inverse trig functions'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Understanding the restricted domains that make inverses possible. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'inver5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Finding tangent lines to inverse…',
-            options: ['Understanding the restricted domains that make inverses possible', 'Finding tangent lines to inverse function graphs', 'Solving equations involving inverse trig functions', 'Related rates with inverse trig functions']
-          },
-          {
-            label: 'Solving equations involving inverse…',
-            options: ['Understanding the restricted domains that make inverses possible', 'Solving equations involving inverse trig functions', 'Related rates with inverse trig functions', 'Finding tangent lines to inverse function graphs']
-          },
-          {
-            label: 'Related rates with inverse trig…',
-            options: ['Understanding the restricted domains that make inverses possible', 'Solving equations involving inverse trig functions', 'Finding tangent lines to inverse function graphs', 'Related rates with inverse trig functions']
-          }
-        ],
-        correctAnswers: ['Finding tangent lines to inverse function graphs', 'Solving equations involving inverse trig functions', 'Related rates with inverse trig functions'],
-        hint1: 'Think about what each concept specifically describes in Applications of Inverse Derivatives.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Applications of Inverse Derivatives describes a specific idea. Finding tangent lines to inverse function graphs. Solving equations involving inverse trig functions. Related rates with inverse trig functions.'
-      }
+      content: `### Key Takeaways — Part 5
+1. Recognize when an integral leads to $\\arcsin$ or $\\arctan$
+2. Use the general forms with parameter $a$`
     }
   ]
-}
+};

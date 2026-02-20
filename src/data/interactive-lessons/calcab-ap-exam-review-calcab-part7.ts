@@ -1,125 +1,53 @@
-export const calcABExamReviewPart7Data = {
+export const calcabExamReviewPart7Data = {
   topicSlug: 'ap-exam-review-calcab',
   sections: [
     {
-      id: 'ap-ex7-intro',
+      id: 'er7-intro',
       type: 'text' as const,
-      content: `
-# Comprehensive Review
+      content: `# AP Exam Review — Final
 
-**Part 7 of 7 — Comprehensive Review**
-
-### 1. Area between curves, volumes of revolution (disk/washer)
-
-Area between curves, volumes of revolution (disk/washer)
-
-### 2. Accumulation functions and net change
-
-Accumulation functions and net change
-
-### 3. Average value of a function
-
-Average value of a function
-
-### 4. Particle motion
-
-displacement vs total distance
-      `
+**Part 7 of 7 — Comprehensive Mixed Review**`
     },
     {
-      id: 'ap-ex7-quiz1',
+      id: 'er7-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Comprehensive Review** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Area between curves, volumes of…?',
-            options: [
-              'Area between curves, volumes of revolution (disk/washer)',
-              'Accumulation functions and net change',
-              'Average value of a function',
-              'displacement vs total distance'
-            ],
+            question: '$\\lim_{h \\to 0} \\frac{\\sin(\\pi + h) + \\sin \\pi}{h} = $',
+            options: ['$-1$', '$0$', '$1$', '$\\cos \\pi$'],
             correctAnswer: 0,
-            explanation: 'Correct — Area between curves, volumes of revolution (disk/washer). The other options describe different concepts from this topic.'
+            explanation: 'This is $f\'(\\pi)$ where $f(x) = \\sin x$: $f\'(\\pi) = \\cos \\pi = -1$. Note: both option A and D give $-1$.'
           },
           {
-            question: 'In the context of Comprehensive Review, which explains Average value of a function?',
-            options: [
-              'Accumulation functions and net change',
-              'displacement vs total distance',
-              'Area between curves, volumes of revolution (disk/washer)',
-              'Average value of a function'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Average value of a function. Be careful to distinguish between the different concepts in this topic.'
+            question: 'If $f(x) = \\int_0^{x^2} \\cos(t)\\,dt$, find $f\'(x)$.',
+            options: ['$2x\\cos(x^2)$', '$\\cos(x^2)$', '$2x\\sin(x^2)$', '$\\sin(x^2)$'],
+            correctAnswer: 0,
+            explanation: 'FTC + chain rule: $\\cos(x^2) \\cdot 2x = 2x\\cos(x^2)$.'
+          },
+          {
+            question: 'The absolute maximum of $f(x) = x^3 - 12x$ on $[-3, 4]$ is:',
+            options: ['$16$', '$9$', '$-9$', '$20$'],
+            correctAnswer: 0,
+            explanation: '$f\'(x) = 3x^2 - 12 = 0$ at $x = \\pm 2$. $f(-3) = 9$, $f(-2) = 16$, $f(2) = -16$, $f(4) = 16$. Max is $16$.'
           }
         ]
       }
     },
     {
-      id: 'ap-ex7-detail',
+      id: 'er7-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
+      content: `### AP Exam Review — Complete! 🎓
 
-- **Area between curves, volumes of revolution (disk/washer)**
-- **Accumulation functions and net change**
-- **Average value of a function**
-- **Particle motion**: displacement vs total distance
-      `
-    },
-    {
-      id: 'ap-ex7-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which statement about Particle motion is correct?',
-            options: [
-              'displacement vs total distance',
-              'Average value of a function',
-              'Area between curves, volumes of revolution (disk/washer)',
-              'Accumulation functions and net change'
-            ],
-            correctAnswer: 0,
-            explanation: 'Correct — Particle motion: displacement vs total distance. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'ap-ex7-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Area between curves, volumes of…',
-            options: ['Area between curves, volumes of revolution (disk/washer)', 'displacement vs total distance', 'Average value of a function', 'Accumulation functions and net change']
-          },
-          {
-            label: 'Accumulation functions and net change',
-            options: ['Area between curves, volumes of revolution (disk/washer)', 'Accumulation functions and net change', 'Average value of a function', 'displacement vs total distance']
-          },
-          {
-            label: 'Average value of a function',
-            options: ['Accumulation functions and net change', 'Area between curves, volumes of revolution (disk/washer)', 'displacement vs total distance', 'Average value of a function']
-          }
-        ],
-        correctAnswers: ['Area between curves, volumes of revolution (disk/washer)', 'Accumulation functions and net change', 'Average value of a function'],
-        hint1: 'Think about what each concept specifically describes in Comprehensive Review.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Comprehensive Review describes a specific idea. Area between curves, volumes of revolution (disk/washer). Accumulation functions and net change. Average value of a function.'
-      }
+You have reviewed all major topics for the AP Calculus AB exam:
+- ✅ Limits & Continuity
+- ✅ Derivatives & Applications
+- ✅ Integration & Applications
+- ✅ Differential Equations
+- ✅ Theorems (IVT, MVT, EVT, FTC)
+
+**Good luck on the exam!**`
     }
   ]
-}
+};

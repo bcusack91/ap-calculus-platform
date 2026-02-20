@@ -1,125 +1,43 @@
-export const calcABFreeResponsePart2Data = {
+export const calcabFRQPart2Data = {
   topicSlug: 'free-response-strategies-calcab',
   sections: [
     {
-      id: 'free-2-intro',
+      id: 'frq2-intro',
       type: 'text' as const,
-      content: `
-# Justification & Communication
+      content: `# Free Response Strategies
 
-**Part 2 of 7 — Justification & Communication**
+**Part 2 of 7 — Rate/Graph Problems**
 
-### 1. Use calculus-based justifications
+### The Rate Problem Template
 
-"Since f' > 0 on (a,b), f is increasing"
+Given a graph of rate $R(t)$:
 
-### 2. IVT
-
-"Since f is continuous and f(a) < N < f(b), by IVT there exists c..."
-
-### 3. MVT
-
-"Since f is continuous on [a,b] and differentiable on (a,b), by MVT..."
-
-### 4. State theorems by name and verify their hypotheses
-
-State theorems by name and verify their hypotheses
-      `
+1. "Total amount" → $\int_a^b R(t)\,dt$ (area under curve)
+2. "Rate of change at $t = c$" → read $R(c)$ from graph
+3. "Is amount increasing or decreasing?" → sign of rate
+4. "When is amount maximum?" → where rate changes from $+$ to $-$`
     },
     {
-      id: 'free-2-quiz1',
+      id: 'frq2-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Rate Problem Strategies** 🎯\n\n$R(t)$ is the rate of water flow (gal/hr). $R(t) > 0$ for $0 < t < 3$, $R(t) < 0$ for $3 < t < 7$, $R(3) = 0$.',
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains Use calculus-based justifications?',
-            options: [
-              '"Since f is continuous on [a,b] and differentiable on (a,b), by MVT..."',
-              '"Since f is continuous and f(a) < N < f(b), by IVT there exists c..."',
-              'State theorems by name and verify their hypotheses',
-              '"Since f\' > 0 on (a,b), f is increasing"'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Use calculus-based justifications: "Since f\' > 0 on (a,b), f is increasing". The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Select the statement that correctly describes MVT:',
-            options: [
-              '"Since f is continuous on [a,b] and differentiable on (a,b), by MVT..."',
-              'State theorems by name and verify their hypotheses',
-              '"Since f\' > 0 on (a,b), f is increasing"',
-              '"Since f is continuous and f(a) < N < f(b), by IVT there exists c..."'
-            ],
+            question: 'At what time is the amount of water in the tank greatest?',
+            options: ['$t = 3$', '$t = 0$', '$t = 7$', 'Cannot determine'],
             correctAnswer: 0,
-            explanation: 'Correct — MVT: "Since f is continuous on [a,b] and differentiable on (a,b), by MVT...". Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'Water accumulates when $R > 0$ (before $t=3$) and decreases when $R < 0$ (after $t=3$). Maximum at $t = 3$.'
           }
         ]
       }
     },
     {
-      id: 'free-2-detail',
+      id: 'frq2-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Use calculus-based justifications**: "Since f' > 0 on (a,b), f is increasing"
-- **IVT**: "Since f is continuous and f(a) < N < f(b), by IVT there exists c..."
-- **MVT**: "Since f is continuous on [a,b] and differentiable on (a,b), by MVT..."
-- **State theorems by name and verify their hypotheses**
-      `
-    },
-    {
-      id: 'free-2-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which statement about State theorems by name and verify their… is correct?',
-            options: [
-              '"Since f is continuous on [a,b] and differentiable on (a,b), by MVT..."',
-              '"Since f is continuous and f(a) < N < f(b), by IVT there exists c..."',
-              'State theorems by name and verify their hypotheses',
-              '"Since f\' > 0 on (a,b), f is increasing"'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — State theorems by name and verify their hypotheses. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'free-2-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Use calculus-based justifications',
-            options: ['"Since f is continuous on [a,b] and differentiable on (a,b), by MVT..."', '"Since f is continuous and f(a) < N < f(b), by IVT there exists c..."', '"Since f\' > 0 on (a,b), f is increasing"', 'State theorems by name and verify their hypotheses']
-          },
-          {
-            label: 'IVT',
-            options: ['"Since f is continuous on [a,b] and differentiable on (a,b), by MVT..."', 'State theorems by name and verify their hypotheses', '"Since f is continuous and f(a) < N < f(b), by IVT there exists c..."', '"Since f\' > 0 on (a,b), f is increasing"']
-          },
-          {
-            label: 'MVT',
-            options: ['State theorems by name and verify their hypotheses', '"Since f is continuous on [a,b] and differentiable on (a,b), by MVT..."', '"Since f\' > 0 on (a,b), f is increasing"', '"Since f is continuous and f(a) < N < f(b), by IVT there exists c..."']
-          }
-        ],
-        correctAnswers: ['"Since f\' > 0 on (a,b), f is increasing"', '"Since f is continuous and f(a) < N < f(b), by IVT there exists c..."', '"Since f is continuous on [a,b] and differentiable on (a,b), by MVT..."'],
-        hint1: 'Think about what each concept specifically describes in Justification & Communication.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Justification & Communication describes a specific idea. Use calculus-based justifications: "Since f\' > 0 on (a,b), f is increasing". IVT: "Since f is continuous and f(a) < N < f(b), by IVT there exists c...". MVT: "Since f is continuous on [a,b] and differentiable on (a,b), by MVT...".'
-      }
+      content: `### Key Takeaways — Part 2
+1. Accumulation max where rate changes sign
+2. Total = integral of rate`
     }
   ]
-}
+};

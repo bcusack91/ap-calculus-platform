@@ -1,125 +1,51 @@
-export const calcBCSeriesPart4Data = {
+export const calcbcSeriesPart4Data = {
   topicSlug: 'infinite-series-calcbc',
   sections: [
     {
-      id: 'infin4-intro',
+      id: 'ser4-intro',
       type: 'text' as const,
-      content: `
-# p-Series & Comparison Tests
+      content: `# Infinite Series
 
-**Part 4 of 7 — p-Series & Comparison Tests**
+**Part 4 of 7 — Comparison Tests**
 
-### 1. p-series
+### Direct Comparison Test
 
-Σ 1/nᵖ converges if p > 1, diverges if p ≤ 1
+For $0 \leq a_n \leq b_n$:
+- $\sum b_n$ converges → $\sum a_n$ converges
+- $\sum a_n$ diverges → $\sum b_n$ diverges
 
-### 2. Harmonic series (p=1)
+### Limit Comparison Test
 
-Σ 1/n diverges
+If $\lim_{n \to \infty} \frac{a_n}{b_n} = c$ where $0 < c < \infty$:
 
-### 3. Direct Comparison
-
-if 0 ≤ aₙ ≤ bₙ and Σbₙ converges, then Σaₙ converges
-
-### 4. Limit Comparison
-
-if lim(aₙ/bₙ) = c > 0, both series behave the same
-      `
+$\sum a_n$ and $\sum b_n$ either both converge or both diverge.`
     },
     {
-      id: 'infin4-quiz1',
+      id: 'ser4-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
+      content: '**Comparison Tests** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains p-series?',
-            options: [
-              'Σ 1/nᵖ converges if p > 1, diverges if p ≤ 1',
-              'if 0 ≤ aₙ ≤ bₙ and Σbₙ converges, then Σaₙ converges',
-              'Σ 1/n diverges',
-              'if lim(aₙ/bₙ) = c > 0, both series behave the same'
-            ],
+            question: 'Does $\\sum_{n=1}^{\\infty} \\frac{1}{n^2 + 1}$ converge?',
+            options: ['Yes, by comparison with $1/n^2$', 'No', 'Need ratio test', 'Inconclusive'],
             correctAnswer: 0,
-            explanation: 'Correct — p-series: Σ 1/nᵖ converges if p > 1, diverges if p ≤ 1. The other options describe different concepts from this topic.'
+            explanation: '$\\frac{1}{n^2+1} < \\frac{1}{n^2}$ and $\\sum 1/n^2$ converges ($p = 2$). By direct comparison, converges.'
           },
           {
-            question: 'In the context of p-Series & Comparison Tests, which explains Direct Comparison?',
-            options: [
-              'if lim(aₙ/bₙ) = c > 0, both series behave the same',
-              'Σ 1/nᵖ converges if p > 1, diverges if p ≤ 1',
-              'Σ 1/n diverges',
-              'if 0 ≤ aₙ ≤ bₙ and Σbₙ converges, then Σaₙ converges'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Direct Comparison: if 0 ≤ aₙ ≤ bₙ and Σbₙ converges, then Σaₙ converges. Be careful to distinguish between the different concepts in this topic.'
+            question: 'Use limit comparison to determine if $\\sum \\frac{3n+1}{n^3-2}$ converges.',
+            options: ['Converges (compare with $3/n^2$)', 'Diverges', 'Compare with $1/n$', 'Inconclusive'],
+            correctAnswer: 0,
+            explanation: '$\\lim \\frac{(3n+1)/(n^3-2)}{1/n^2} = \\lim \\frac{n^2(3n+1)}{n^3-2} = 3$. Since $\\sum 1/n^2$ converges, so does our series.'
           }
         ]
       }
     },
     {
-      id: 'infin4-detail',
+      id: 'ser4-summary',
       type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **p-series**: Σ 1/nᵖ converges if p > 1, diverges if p ≤ 1
-- **Harmonic series (p=1)**: Σ 1/n diverges
-- **Direct Comparison**: if 0 ≤ aₙ ≤ bₙ and Σbₙ converges, then Σaₙ converges
-- **Limit Comparison**: if lim(aₙ/bₙ) = c > 0, both series behave the same
-      `
-    },
-    {
-      id: 'infin4-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of these accurately represents Limit Comparison?',
-            options: [
-              'if 0 ≤ aₙ ≤ bₙ and Σbₙ converges, then Σaₙ converges',
-              'Σ 1/nᵖ converges if p > 1, diverges if p ≤ 1',
-              'if lim(aₙ/bₙ) = c > 0, both series behave the same',
-              'Σ 1/n diverges'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Limit Comparison: if lim(aₙ/bₙ) = c > 0, both series behave the same. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'infin4-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'p-series',
-            options: ['if 0 ≤ aₙ ≤ bₙ and Σbₙ converges, then Σaₙ converges', 'if lim(aₙ/bₙ) = c > 0, both series behave the same', 'Σ 1/n diverges', 'Σ 1/nᵖ converges if p > 1, diverges if p ≤ 1']
-          },
-          {
-            label: 'Harmonic series (p=1)',
-            options: ['if 0 ≤ aₙ ≤ bₙ and Σbₙ converges, then Σaₙ converges', 'Σ 1/n diverges', 'Σ 1/nᵖ converges if p > 1, diverges if p ≤ 1', 'if lim(aₙ/bₙ) = c > 0, both series behave the same']
-          },
-          {
-            label: 'Direct Comparison',
-            options: ['Σ 1/n diverges', 'Σ 1/nᵖ converges if p > 1, diverges if p ≤ 1', 'if lim(aₙ/bₙ) = c > 0, both series behave the same', 'if 0 ≤ aₙ ≤ bₙ and Σbₙ converges, then Σaₙ converges']
-          }
-        ],
-        correctAnswers: ['Σ 1/nᵖ converges if p > 1, diverges if p ≤ 1', 'Σ 1/n diverges', 'if 0 ≤ aₙ ≤ bₙ and Σbₙ converges, then Σaₙ converges'],
-        hint1: 'Think about what each concept specifically describes in p-Series & Comparison Tests.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in p-Series & Comparison Tests describes a specific idea. p-series: Σ 1/nᵖ converges if p > 1, diverges if p ≤ 1. Harmonic series (p=1): Σ 1/n diverges. Direct Comparison: if 0 ≤ aₙ ≤ bₙ and Σbₙ converges, then Σaₙ converges.'
-      }
+      content: `### Key Takeaways — Part 4
+Direct comparison needs inequality. Limit comparison just needs the ratio limit.`
     }
   ]
-}
+};
