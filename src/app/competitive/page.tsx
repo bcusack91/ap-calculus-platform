@@ -13,7 +13,7 @@ export default function CompetitivePage() {
   const [inQueue, setInQueue] = useState(false)
   const [queueStatus, setQueueStatus] = useState<any>(null)
   const [selectedMode, setSelectedMode] = useState('SPEED_RACE')
-  const [selectedTopic, setSelectedTopic] = useState<'the-unit-circle' | 'reflection-refraction' | 'derivatives' | 'limits' | 'integrals' | 'algebra' | 'algebra2' | 'cumulative'>('the-unit-circle')
+  const [selectedTopic, setSelectedTopic] = useState<'the-unit-circle' | 'reflection-refraction' | 'derivatives' | 'limits' | 'integrals' | 'algebra' | 'algebra2' | 'sat-punctuation-commas-semicolons' | 'sat-punctuation' | 'cumulative'>('the-unit-circle')
   const [completedTopics, setCompletedTopics] = useState<string[]>([])
   const [competitiveCategories, setCompetitiveCategories] = useState<Record<string, boolean>>({})
   const [algebra2SubtopicDetails, setAlgebra2SubtopicDetails] = useState<{key: string; label: string}[]>([])
@@ -457,6 +457,52 @@ export default function CompetitivePage() {
               )}
               {!competitiveCategories['algebra2'] && (
                 <span className="text-xs text-red-500 mt-1 block">Complete an Algebra 2 Topic</span>
+              )}
+            </button>
+
+            <button
+              onClick={() => setSelectedTopic('sat-punctuation-commas-semicolons')}
+              disabled={!competitiveCategories['sat-punctuation-commas-semicolons']}
+              className={`p-5 rounded-xl transition-all ${
+                selectedTopic === 'sat-punctuation-commas-semicolons'
+                  ? 'ring-4 ring-purple-500 bg-white dark:bg-gray-800 shadow-xl'
+                  : 'bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl'
+              } ${
+                !competitiveCategories['sat-punctuation-commas-semicolons']
+                  ? 'opacity-50 cursor-not-allowed'
+                  : 'cursor-pointer'
+              }`}
+            >
+              <div className="text-3xl mb-2">✏️</div>
+              <h3 className="text-lg font-bold mb-1">Commas, Semicolons & Colons</h3>
+              <p className="text-xs text-gray-600 dark:text-gray-400">
+                SAT Punctuation
+              </p>
+              {!competitiveCategories['sat-punctuation-commas-semicolons'] && (
+                <span className="text-xs text-red-500 mt-1 block">Complete the Topic First</span>
+              )}
+            </button>
+
+            <button
+              onClick={() => setSelectedTopic('sat-punctuation')}
+              disabled={!competitiveCategories['sat-punctuation']}
+              className={`p-5 rounded-xl transition-all ${
+                selectedTopic === 'sat-punctuation'
+                  ? 'ring-4 ring-purple-500 bg-white dark:bg-gray-800 shadow-xl'
+                  : 'bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl'
+              } ${
+                !competitiveCategories['sat-punctuation']
+                  ? 'opacity-50 cursor-not-allowed'
+                  : 'cursor-pointer'
+              }`}
+            >
+              <div className="text-3xl mb-2">📝</div>
+              <h3 className="text-lg font-bold mb-1">SAT Punctuation</h3>
+              <p className="text-xs text-gray-600 dark:text-gray-400">
+                All Punctuation Rules
+              </p>
+              {!competitiveCategories['sat-punctuation'] && (
+                <span className="text-xs text-red-500 mt-1 block">Complete the Topic First</span>
               )}
             </button>
 

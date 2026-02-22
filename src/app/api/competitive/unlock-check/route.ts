@@ -66,6 +66,12 @@ export async function GET(req: NextRequest) {
         s.includes('exponential-functions') || s.includes('complex-numbers') ||
         s.includes('logarithm')
       ),
+      'sat-punctuation-commas-semicolons': completedTopicSlugs.some(s =>
+        s.includes('sat-punctuation-commas-semicolons')
+      ),
+      'sat-punctuation': completedTopicSlugs.some(s =>
+        s.includes('sat-punctuation')
+      ),
     }
 
     // Compute which specific Algebra 2 subtopics are unlocked
