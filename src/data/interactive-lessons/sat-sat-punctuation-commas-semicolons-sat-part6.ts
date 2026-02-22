@@ -31,15 +31,11 @@ Before we dive in, remember the decision tree:
       type: 'multiple-choice' as const,
       content: `
 **SAT-Style Practice** 🎯
-
-*Read the passage below and answer the questions.*
-
-The Great Barrier Reef __(1)__ the world's largest coral reef system __(2)__ is home to thousands of species. Scientists have warned that rising ocean temperatures __(3)__ which contribute to coral bleaching __(4)__ could devastate the reef within decades. Many conservation groups are working to protect the reef __(5)__ however __(6)__ funding remains limited.
       `,
       exercise: {
         questions: [
           {
-            question: 'What is the best punctuation for blanks (1) and (2)?',
+            question: 'Read the passage and answer: The Great Barrier Reef __(1)__ the world\'s largest coral reef system __(2)__ is home to thousands of species. Scientists have warned that rising ocean temperatures __(3)__ which contribute to coral bleaching __(4)__ could devastate the reef within decades. Many conservation groups are working to protect the reef __(5)__ however __(6)__ funding remains limited.\n\nWhat is the best punctuation for blanks (1) and (2)?',
             options: [
               '(1) no punctuation ... (2) no punctuation',
               '(1) , ... (2) ,',
@@ -50,7 +46,7 @@ The Great Barrier Reef __(1)__ the world's largest coral reef system __(2)__ is 
             explanation: 'Correct — "the world\'s largest coral reef system" is a nonessential appositive renaming "The Great Barrier Reef." It needs commas on BOTH sides.'
           },
           {
-            question: 'What is the best punctuation for blanks (3) and (4)?',
+            question: 'Still referring to the passage: The Great Barrier Reef __(1)__ the world\'s largest coral reef system __(2)__ is home to thousands of species. Scientists have warned that rising ocean temperatures __(3)__ which contribute to coral bleaching __(4)__ could devastate the reef within decades. Many conservation groups are working to protect the reef __(5)__ however __(6)__ funding remains limited.\n\nWhat is the best punctuation for blanks (3) and (4)?',
             options: [
               '(3) no punctuation ... (4) no punctuation',
               '(3) , ... (4) ,',
@@ -61,7 +57,7 @@ The Great Barrier Reef __(1)__ the world's largest coral reef system __(2)__ is 
             explanation: 'Correct — "which contribute to coral bleaching" is a nonessential clause (it adds information but isn\'t required to identify which temperatures). Nonessential clauses with "which" need commas on both sides.'
           },
           {
-            question: 'What is the best punctuation for blanks (5) and (6)?',
+            question: 'Still referring to the passage: The Great Barrier Reef __(1)__ the world\'s largest coral reef system __(2)__ is home to thousands of species. Scientists have warned that rising ocean temperatures __(3)__ which contribute to coral bleaching __(4)__ could devastate the reef within decades. Many conservation groups are working to protect the reef __(5)__ however __(6)__ funding remains limited.\n\nWhat is the best punctuation for blanks (5) and (6)?',
             options: [
               '(5) , ... (6) ,',
               '(5) ; ... (6) ,',
