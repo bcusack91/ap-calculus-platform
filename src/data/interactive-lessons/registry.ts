@@ -2706,6 +2706,32 @@ const interactiveLessonRegistry: Record<string, InteractiveTopicConfig> = {
       { title: 'Review & Applications', loader: () => import('./sat-sat-reading-evidence-sat-part7').then(m => m.satReadingEvidencePart7Data) },
     ],
   },
+  'sat-punctuation-sat': {
+    completionDestination: 'competitive',
+    practiceModeParts: [1, 2, 3, 4, 5],
+    parts: [
+      { title: 'Overview & Sentence Fundamentals', loader: () => import('./sat-sat-punctuation-sat-part1').then(m => m.satPunctuationPart1Data) },
+      { title: 'Commas: The Most-Tested Mark', loader: () => import('./sat-sat-punctuation-sat-part2').then(m => m.satPunctuationPart2Data) },
+      { title: 'Semicolons & Colons', loader: () => import('./sat-sat-punctuation-sat-part3').then(m => m.satPunctuationPart3Data) },
+      { title: 'Dashes & Apostrophes', loader: () => import('./sat-sat-punctuation-sat-part4').then(m => m.satPunctuationPart4Data) },
+      { title: 'Restrictive vs. Nonrestrictive', loader: () => import('./sat-sat-punctuation-sat-part5').then(m => m.satPunctuationPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./sat-sat-punctuation-sat-part6').then(m => m.satPunctuationPart6Data) },
+      { title: 'Review & Final Challenge', loader: () => import('./sat-sat-punctuation-sat-part7').then(m => m.satPunctuationPart7Data) },
+    ],
+  },
+  'sat-punctuation-commas-semicolons-sat': {
+    completionDestination: 'competitive',
+    practiceModeParts: [1, 2, 3, 4, 5],
+    parts: [
+      { title: 'Comma Basics', loader: () => import('./sat-sat-punctuation-commas-semicolons-sat-part1').then(m => m.satPunctuationCommasPart1Data) },
+      { title: 'Nonessential vs. Essential Clauses', loader: () => import('./sat-sat-punctuation-commas-semicolons-sat-part2').then(m => m.satPunctuationCommasPart2Data) },
+      { title: 'Semicolons', loader: () => import('./sat-sat-punctuation-commas-semicolons-sat-part3').then(m => m.satPunctuationCommasPart3Data) },
+      { title: 'Colons', loader: () => import('./sat-sat-punctuation-commas-semicolons-sat-part4').then(m => m.satPunctuationCommasPart4Data) },
+      { title: 'Unnecessary Commas & Traps', loader: () => import('./sat-sat-punctuation-commas-semicolons-sat-part5').then(m => m.satPunctuationCommasPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./sat-sat-punctuation-commas-semicolons-sat-part6').then(m => m.satPunctuationCommasPart6Data) },
+      { title: 'Review & Final Challenge', loader: () => import('./sat-sat-punctuation-commas-semicolons-sat-part7').then(m => m.satPunctuationCommasPart7Data) },
+    ],
+  },
   'sat-grammar-conventions-sat': {
     parts: [
       { title: 'Subject-Verb Agreement', loader: () => import('./sat-sat-grammar-conventions-sat-part1').then(m => m.satGrammarPart1Data) },
@@ -3250,6 +3276,8 @@ const slugAliases: Record<string, string> = {
   'sat-exponents-radicals': 'sat-exponents-radicals-sat',
   'sat-complex-numbers': 'sat-complex-numbers-sat',
   'sat-grammar-conventions': 'sat-grammar-conventions-sat',
+  'sat-punctuation': 'sat-punctuation-sat',
+  'sat-punctuation-commas-semicolons': 'sat-punctuation-commas-semicolons-sat',
   'sat-ratios-proportions-percents': 'sat-ratios-proportions-sat',
   'sat-linear-equations-inequalities': 'sat-linear-equations-sat',
   'sat-statistics-data-interpretation': 'sat-data-statistics-sat',

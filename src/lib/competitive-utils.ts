@@ -7,6 +7,8 @@ import { getIntegralQuestions } from '@/data/competitive-questions/integrals-ban
 import { getAlgebraQuestions } from '@/data/competitive-questions/algebra-bank'
 import { getAlgebra2Questions, getUnlockedAlgebra2Subtopics } from '@/data/competitive-questions/algebra2-bank'
 import { getNegativeNumbersQuestions } from '@/data/competitive-questions/negative-numbers-bank'
+import { getSatPunctuationQuestions } from '@/data/competitive-questions/sat-punctuation-bank'
+import { getSatPunctuationGeneralQuestions } from '@/data/competitive-questions/sat-punctuation-general-bank'
 
 interface UnitCirclePosition {
   angle: number;
@@ -113,6 +115,8 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
     'integrals': getIntegralQuestions,
     'algebra': getAlgebraQuestions,
     'negative-numbers-grade6': getNegativeNumbersQuestions,
+    'sat-punctuation-commas-semicolons': getSatPunctuationQuestions,
+    'sat-punctuation': getSatPunctuationGeneralQuestions,
   }
 
   if (topicSlug && topicSlug in mcqBanks) {
