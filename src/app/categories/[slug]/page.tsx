@@ -1,7 +1,6 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { prisma } from '@/lib/prisma'
-import { AdBanner } from '@/components/ad-banner'
 import type { Metadata } from 'next'
 
 // ISR: revalidate content every hour
@@ -18,11 +17,19 @@ export async function generateMetadata(props: CategoryPageProps): Promise<Metada
   const params = await props.params
   const category = await prisma.category.findUnique({
     where: { slug: params.slug },
-    select: { name: true, description: true, slug: true }
+    select: { name: true, description: true, slug: true, _count: { select: { topics: true } } }
   })
 
   if (!category) {
     return {}
+  }
+
+  // Noindex categories with no topics (empty shells)
+  if (category._count.topics === 0) {
+    return {
+      title: `${category.name} | Study Mondo`,
+      robots: { index: false, follow: true },
+    }
   }
 
   const canonicalUrl = `https://www.studymondo.com/categories/${category.slug}`
@@ -189,10 +196,33 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
           </div>
         </div>
 
-        {/* Ad Banner */}
-        <div className="mb-12">
-          <AdBanner slot="category-top" />
-        </div>
+        {/* Category Overview */}
+        {category.topics.length > 0 && (
+          <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 p-8 mb-12 shadow-sm">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">What You&apos;ll Learn in {category.name}</h2>
+            <div className="prose prose-lg max-w-none text-gray-700 dark:text-gray-300">
+              {category.description && <p>{category.description}</p>}
+              <p>
+                This section contains {category.topics.length} {category.topics.length === 1 ? 'topic' : 'topics'} with{' '}
+                {category.topics.reduce((sum, topic) => sum + topic._count.exampleProblems, 0)} practice problems and{' '}
+                {category.topics.reduce((sum, topic) => sum + topic._count.flashcards, 0)} flashcards.
+                Each topic includes comprehensive written notes, worked examples with detailed solutions, 
+                and interactive lessons for hands-on practice.
+              </p>
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Topics Covered</h3>
+              <ul className="list-disc pl-6 space-y-1">
+                {category.topics.map((topic) => (
+                  <li key={topic.id}>
+                    <strong>{topic.title}</strong> — {topic.description}
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-4">
+                Click on any topic below to start studying. All materials are completely free.
+              </p>
+            </div>
+          </div>
+        )}
 
         {/* Topics Grid */}
         {category.topics.length > 0 ? (
@@ -235,11 +265,6 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
             <p className="text-sm text-gray-500">Check back soon for comprehensive study materials!</p>
           </div>
         )}
-
-        {/* Bottom Ad */}
-        <div className="mt-12">
-          <AdBanner slot="category-bottom" />
-        </div>
 
         {/* Back to Course Link */}
         <div className="mt-12 text-center">

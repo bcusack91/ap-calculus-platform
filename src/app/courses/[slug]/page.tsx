@@ -1,7 +1,6 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { prisma } from '@/lib/prisma'
-import { AdBanner } from '@/components/ad-banner'
 import type { Metadata } from 'next'
 
 // ISR: revalidate content every hour
@@ -18,11 +17,19 @@ export async function generateMetadata(props: CoursePageProps): Promise<Metadata
   const params = await props.params
   const course = await prisma.course.findUnique({
     where: { slug: params.slug },
-    select: { name: true, slug: true }
+    select: { name: true, slug: true, _count: { select: { categories: true } } }
   })
 
   if (!course) {
     return {}
+  }
+
+  // Noindex courses with no categories (empty shells)
+  if (course._count.categories === 0) {
+    return {
+      title: `${course.name} | Study Mondo`,
+      robots: { index: false, follow: true },
+    }
   }
 
   const canonicalUrl = `https://www.studymondo.com/courses/${course.slug}`
@@ -129,9 +136,34 @@ export default async function CoursePage({ params }: CoursePageProps) {
           </div>
         </div>
 
-        {/* Ad Banner */}
-        <div className="mb-12">
-          <AdBanner slot="course-top" />
+        {/* Course Overview */}
+        <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 p-8 mb-12 shadow-sm">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Course Overview</h2>
+          <div className="prose prose-lg max-w-none text-gray-700 dark:text-gray-300">
+            <p>
+              This {course.name} course on Study Mondo covers {totalTopics} topics organized across {course.categories.length} categories. 
+              Each topic includes detailed written explanations, worked examples, practice problems with step-by-step solutions, 
+              flashcards for review, and interactive lessons to help you master the material.
+            </p>
+            {course.categories.length > 0 && (
+              <div className="mt-4">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">What You&apos;ll Learn</h3>
+                <ul className="list-disc pl-6 space-y-1">
+                  {course.categories.slice(0, 8).map((cat) => (
+                    <li key={cat.id}>
+                      <strong>{cat.name}</strong>{cat.description ? ` — ${cat.description}` : ''} ({cat.topics.length} {cat.topics.length === 1 ? 'topic' : 'topics'})
+                    </li>
+                  ))}
+                  {course.categories.length > 8 && (
+                    <li>...and {course.categories.length - 8} more categories</li>
+                  )}
+                </ul>
+              </div>
+            )}
+            <p className="mt-4">
+              All content is completely free. Start with any category below, or jump to a specific topic that you need help with.
+            </p>
+          </div>
         </div>
 
         {/* Categories Grid */}
@@ -206,10 +238,6 @@ export default async function CoursePage({ params }: CoursePageProps) {
           </div>
         )}
 
-        {/* Bottom Ad */}
-        <div className="mt-12">
-          <AdBanner slot="course-bottom" />
-        </div>
       </div>
     </div>
   )

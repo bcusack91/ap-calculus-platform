@@ -25,11 +25,23 @@ export async function generateMetadata(props: InteractivePageProps): Promise<Met
   const params = await props.params
   const topic = await prisma.topic.findUnique({
     where: { slug: params.slug },
-    select: { title: true, description: true, slug: true }
+    select: { title: true, description: true, slug: true, textContent: true }
   })
 
   if (!topic) {
     return {}
+  }
+
+  // Check if this topic has actual interactive content
+  const hasLesson = hasInteractiveLesson(topic.slug)
+  const hasDynamic = !hasLesson && !!topic.textContent?.trim()
+
+  // Noindex pages with no interactive content
+  if (!hasLesson && !hasDynamic) {
+    return {
+      title: `${topic.title} - Interactive Lesson | Study Mondo`,
+      robots: { index: false, follow: false },
+    }
   }
 
   const canonicalUrl = `https://www.studymondo.com/topics/${topic.slug}/interactive`

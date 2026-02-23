@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation'
 import { prisma } from '@/lib/prisma'
-import { AdBanner, InArticleAd, SidebarAd } from '@/components/ad-banner'
+import { AdBanner, InArticleAd } from '@/components/ad-banner'
 import ReactMarkdown from 'react-markdown'
 import rehypeKatex from 'rehype-katex'
 import remarkMath from 'remark-math'
@@ -195,11 +195,6 @@ export default async function TopicPage(props: TopicPageProps) {
         }}
       />
 
-      {/* Top Banner Ad - High visibility */}
-      <div className="mb-6">
-        <AdBanner slot="topic-top" />
-      </div>
-
       <div className="mx-auto max-w-7xl">
         <div className="flex gap-8">
           {/* Main Content Area */}
@@ -265,11 +260,6 @@ export default async function TopicPage(props: TopicPageProps) {
               </div>
             )}
             */}
-
-            {/* In-Content Ad (After intro, before main content) */}
-            <div className="my-8">
-              <InArticleAd />
-            </div>
 
             {/* Main Content with styled boxes */}
             <div className="bg-white rounded-lg shadow-md p-8 mb-8 border border-gray-200">
@@ -432,9 +422,6 @@ export default async function TopicPage(props: TopicPageProps) {
           {/* Sticky Sidebar with Ads */}
           <aside className="hidden lg:block w-80 flex-shrink-0">
             <div className="sticky top-4 space-y-6">
-              {/* Sidebar Ad 1 */}
-              <SidebarAd />
-
               {/* Quick Links Card */}
               <div className="bg-gradient-to-br from-purple-50 to-blue-50 border-2 border-purple-200 rounded-lg p-4">
                 <h3 className="font-bold text-purple-900 mb-3 flex items-center gap-2">
@@ -455,9 +442,6 @@ export default async function TopicPage(props: TopicPageProps) {
                   </Link>
                 </div>
               </div>
-
-              {/* Sidebar Ad 2 */}
-              <SidebarAd />
 
               {/* Study Tips Card */}
               <div className="bg-gradient-to-br from-green-50 to-teal-50 border-2 border-green-200 rounded-lg p-4">

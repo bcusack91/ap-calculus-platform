@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import { prisma } from '@/lib/prisma'
-import { AdBanner } from '@/components/ad-banner'
 import type { Metadata } from 'next'
 
 export const revalidate = 3600 // ISR: revalidate every hour
@@ -109,8 +108,6 @@ export default async function TopicsPage() {
           </p>
         </div>
 
-        <AdBanner slot="topics-top" />
-
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 mt-8">
           {courses.map((course) => {
             const info = courseInfo[course.slug] || { 
@@ -150,9 +147,6 @@ export default async function TopicsPage() {
           })}
         </div>
 
-        <div className="mt-12">
-          <AdBanner slot="topics-bottom" />
-        </div>
       </div>
     </div>
   )

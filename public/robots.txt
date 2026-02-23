@@ -26,4 +26,4 @@ Disallow: /test/
 Disallow: /api/
 
 # Sitemap location
-Sitemap: https://studymondo.com/sitemap.xml
+Sitemap: https://www.studymondo.com/sitemap.xml

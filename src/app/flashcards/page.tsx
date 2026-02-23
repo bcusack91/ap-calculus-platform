@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import { prisma } from '@/lib/prisma'
-import { AdBanner } from '@/components/ad-banner'
 import type { Metadata } from 'next'
 
 export const revalidate = 3600 // ISR: revalidate every hour
@@ -45,8 +44,6 @@ export default async function FlashcardsPage() {
             🎯 Start Review Session
           </Link>
         </div>
-
-        <AdBanner slot="flashcards-top" />
 
         <div className="space-y-12 mt-8">
           {categories.length === 0 ? (
@@ -109,9 +106,6 @@ export default async function FlashcardsPage() {
         </div>
         */}
 
-        <div className="mt-8">
-          <AdBanner slot="flashcards-bottom" />
-        </div>
       </div>
     </div>
   )
