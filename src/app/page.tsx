@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { AdBanner } from "@/components/ad-banner";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -347,11 +346,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Ad Banner */}
-      <div className="container py-8">
-        <AdBanner slot="homepage-banner" />
-      </div>
 
       {/* Features Section */}
       <section className="py-24 sm:py-32 bg-gray-50 dark:bg-gray-900">
