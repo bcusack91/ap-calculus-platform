@@ -116,7 +116,7 @@ The SAT often gives you an equation and asks what a particular term **means** in
       exercise: {
         questions: [
           {
-            question: 'The equation $P = 8.50h + 120$ models an employee\\'s weekly pay $P$ where $h$ is the number of overtime hours worked. What does $120$ represent?',
+            question: "The equation $P = 8.50h + 120$ models an employee's weekly pay $P$ where $h$ is the number of overtime hours worked. What does $120$ represent?",
             options: [
               'The overtime rate per hour',
               'The total weekly pay with no overtime',

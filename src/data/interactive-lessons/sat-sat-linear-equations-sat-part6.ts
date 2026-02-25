@@ -95,7 +95,7 @@ If the SAT asks *"What value of $k$ makes this equation have no solution?"*, the
               'No value — this equation always has a solution for some $b$'
             ],
             correctAnswer: 3,
-            explanation: 'Distribute: $2x + 2b = 2x + 10$. Subtract $2x$: $2b = 10$, so $b = 5$, which gives infinitely many solutions. For any other $b$, you get a contradiction like $6 = 10$ — that means no solution. But the question asks for a single $b$ that creates "no solution," and any $b \\neq 5$ works. However, since the options don\\'t include "any $b \\neq 5$," the answer is D — the equation always has infinitely many or no solutions depending on $b$, and no specific value from the given choices creates "no solution" uniquely.'
+            explanation: "Distribute: $2x + 2b = 2x + 10$. Subtract $2x$: $2b = 10$, so $b = 5$, which gives infinitely many solutions. For any other $b$, you get a contradiction like $6 = 10$ — that means no solution. Since no single listed value of $b$ uniquely creates no solution, the answer is D."
           }
         ]
       }
@@ -136,7 +136,7 @@ If the SAT asks *"What value of $k$ makes this equation have no solution?"*, the
               '$57$'
             ],
             correctAnswer: 2,
-            explanation: 'Notice that $6x + 10 = 2(3x + 5) = 2(26) = 52$. You don\\'t even need to solve for $x$! This is a classic SAT shortcut.'
+            explanation: "Notice that $6x + 10 = 2(3x + 5) = 2(26) = 52$. You don't even need to solve for $x$! This is a classic SAT shortcut."
           },
           {
             question: 'A tank contains 200 gallons of water. Water drains at 8 gallons per minute. After how many minutes will the tank have exactly 40 gallons?',
