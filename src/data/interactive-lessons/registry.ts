@@ -28,6 +28,16 @@ const interactiveLessonRegistry: Record<string, InteractiveTopicConfig> = {
       { title: 'Complete Unit Circle', loader: () => import('./full-unit-circle').then(m => m.fullUnitCircleLessonData) },
     ],
   },
+  'solving-linear-equations-algebra1': {
+    completionDestination: 'complete',
+    parts: [
+      { title: 'One-Step Equations', loader: () => import('./solving-linear-equations-part1-one-step').then(m => m.solvingLinearEquationsPart1Data) },
+      { title: 'Two-Step Equations', loader: () => import('./solving-linear-equations-part2-two-step').then(m => m.solvingLinearEquationsPart2Data) },
+      { title: 'Multi-Step Equations', loader: () => import('./solving-linear-equations-part3-multi-step').then(m => m.solvingLinearEquationsPart3Data) },
+      { title: 'Special Cases', loader: () => import('./solving-linear-equations-part4-special-cases').then(m => m.solvingLinearEquationsPart4Data) },
+      { title: 'Mastery', loader: () => import('./solving-linear-equations-part5-mastery').then(m => m.solvingLinearEquationsPart5Data) },
+    ],
+  },
   'factoring-algebra1': {
     completionDestination: 'complete',
     parts: [

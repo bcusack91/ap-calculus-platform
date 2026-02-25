@@ -150,6 +150,14 @@ function generateQuizForSection(
     const idx = Math.floor(rng() * Math.min(sorted.length, 3))
     const selected = sorted[idx]
 
+    // Count how many LaTeX expressions are in the line
+    const mathCount = (selected.line.match(/\$[^$]+\$/g) || []).length
+
+    // Skip lines with 3+ math expressions — they become unreadable
+    // when every expression is replaced with generic "(expression)" text
+    if (mathCount >= 3) {
+      // Fall through to Strategy 2 instead
+    } else {
     const cleanLine = selected.line
       .replace(/\*\*/g, '')
       .replace(/\$\$[^$]+\$\$/g, '(formula)')
@@ -182,6 +190,7 @@ function generateQuizForSection(
         }
       }
     }
+    } // end else (mathCount < 3)
   }
 
   // Strategy 2: Section topic recognition (fallback)
