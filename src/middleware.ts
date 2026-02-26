@@ -1,34 +1,34 @@
 import { NextResponse } from 'next/server'
-import type { NextRequest } from 'next/server'
-import { getToken } from 'next-auth/jwt'
+import { auth } from '@/lib/auth'
 
-const secret = process.env.NEXTAUTH_SECRET || process.env.AUTH_SECRET
+export default auth((request) => {
+  const { nextUrl } = request
+  const session = request.auth
 
-export async function middleware(request: NextRequest) {
-  const token = await getToken({ req: request, secret })
-
-  if (!token) {
-    const signInUrl = new URL('/auth/signin', request.url)
-    signInUrl.searchParams.set('callbackUrl', request.nextUrl.pathname)
+  if (!session) {
+    const signInUrl = new URL('/auth/signin', nextUrl.origin)
+    signInUrl.searchParams.set('callbackUrl', nextUrl.pathname)
     return NextResponse.redirect(signInUrl)
   }
 
+  const role = session.user?.role
+
   // Role-based protection for teacher routes
-  if (request.nextUrl.pathname.startsWith('/teacher')) {
-    if (token.role !== 'TEACHER' && token.role !== 'ADMIN') {
-      return NextResponse.redirect(new URL('/dashboard', request.url))
+  if (nextUrl.pathname.startsWith('/teacher')) {
+    if (role !== 'TEACHER' && role !== 'ADMIN') {
+      return NextResponse.redirect(new URL('/dashboard', nextUrl.origin))
     }
   }
 
   // Role-based protection for admin routes
-  if (request.nextUrl.pathname.startsWith('/admin')) {
-    if (token.role !== 'ADMIN') {
-      return NextResponse.redirect(new URL('/dashboard', request.url))
+  if (nextUrl.pathname.startsWith('/admin')) {
+    if (role !== 'ADMIN') {
+      return NextResponse.redirect(new URL('/dashboard', nextUrl.origin))
     }
   }
 
   return NextResponse.next()
-}
+})
 
 export const config = {
   matcher: ['/dashboard/:path*', '/profile/:path*', '/teacher/:path*', '/admin/:path*'],
