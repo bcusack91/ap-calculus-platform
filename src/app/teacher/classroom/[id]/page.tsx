@@ -213,7 +213,7 @@ export default function ClassroomDetailPage() {
       const body: AssignmentCreateBody = {
         title: assignmentForm.title,
         type: assignmentForm.type,
-        requiredScore: assignmentForm.requiredScore ? parseInt(assignmentForm.requiredScore) : undefined,
+        requiredScore: assignmentForm.requiredScore ? parseInt(assignmentForm.requiredScore) / 100 : undefined,
         maxAttempts: assignmentForm.maxAttempts ? parseInt(assignmentForm.maxAttempts) : undefined,
         dueDate: assignmentForm.dueDate || undefined,
       }
@@ -481,7 +481,7 @@ export default function ClassroomDetailPage() {
                             {a.type.replace(/_/g, ' ')}
                           </span>
                           {a.topicSlug && <span>Topic: {a.topicSlug}</span>}
-                          {a.requiredScore && <span>Required: {a.requiredScore}%</span>}
+                          {a.requiredScore && <span>Required: {Math.round(a.requiredScore * 100)}%</span>}
                           {a.maxAttempts && <span>Max attempts: {a.maxAttempts}</span>}
                         </div>
                       </div>
