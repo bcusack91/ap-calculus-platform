@@ -85,12 +85,14 @@ export async function GET(
         : null
 
     return {
-      student: member.user,
+      userId: member.user.id,
+      name: member.user.name || 'Unknown',
+      email: member.user.email,
       joinedAt: member.joinedAt,
       topicStats: {
-        totalStarted: progress.length,
+        started: progress.length,
         completed: completedTopics,
-        avgMastery: Math.round(avgMastery * 100) / 100,
+        avgMastery: Math.round(avgMastery * 100),
         totalTimeMinutes: Math.round(totalTime / 60),
       },
       assignmentStats: {
@@ -124,15 +126,30 @@ export async function GET(
       studentPerformance.length > 0
         ? Math.round(
             (studentPerformance.reduce((s, p) => s + p.topicStats.avgMastery, 0) /
-              studentPerformance.length) *
-              100,
+              studentPerformance.length),
           )
         : 0,
     totalTopicsCompleted: studentPerformance.reduce((s, p) => s + p.topicStats.completed, 0),
     activeStreaks: studentPerformance.filter((p) => p.streak.current > 0).length,
+    avgAssignmentScore:
+      studentPerformance.length > 0
+        ? Math.round(
+            studentPerformance
+              .filter((s) => s.assignmentStats.avgScore !== null)
+              .reduce((sum, s) => sum + (s.assignmentStats.avgScore || 0), 0) /
+              Math.max(1, studentPerformance.filter((s) => s.assignmentStats.avgScore !== null).length),
+          )
+        : 0,
+    avgStreak:
+      studentPerformance.length > 0
+        ? Math.round(
+            studentPerformance.reduce((s, p) => s + p.streak.current, 0) /
+              studentPerformance.length,
+          )
+        : 0,
   }
 
-  return NextResponse.json({ students: studentPerformance, summary: classSummary })
+  return NextResponse.json({ students: studentPerformance, classSummary })
   } catch (error) {
     console.error('[GET /api/teacher/classrooms/[id]/performance]', error)
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 })

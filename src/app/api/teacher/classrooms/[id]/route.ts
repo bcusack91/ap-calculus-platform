@@ -51,7 +51,7 @@ export async function GET(
       },
     })
 
-    return NextResponse.json({ classroom })
+    return NextResponse.json(classroom)
   } catch (error) {
     console.error('[GET /api/teacher/classrooms/[id]]', error)
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
@@ -80,7 +80,7 @@ export async function PUT(
       },
     })
 
-    return NextResponse.json({ classroom })
+    return NextResponse.json(classroom)
   } catch (error) {
     console.error('[PUT /api/teacher/classrooms/[id]]', error)
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 })

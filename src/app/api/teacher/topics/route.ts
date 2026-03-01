@@ -25,7 +25,15 @@ export async function GET() {
       orderBy: { order: 'asc' },
     })
 
-    return NextResponse.json({ courses })
+    // Transform to the shape the client expects: { courseTitle, topics[] }
+    const grouped = courses.map((c) => ({
+      courseTitle: c.name,
+      topics: c.categories.flatMap((cat) =>
+        cat.topics.map((t) => ({ slug: t.slug, title: t.title, category: cat.name }))
+      ),
+    }))
+
+    return NextResponse.json(grouped)
   } catch (error) {
     console.error('[GET /api/teacher/topics]', error)
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
