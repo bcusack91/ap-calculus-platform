@@ -55,6 +55,7 @@ export default function DashboardPage() {
   const [bookmarks, setBookmarks] = useState<BookmarkEntry[]>([])
   const [verificationSent, setVerificationSent] = useState(false)
   const [sendingVerification, setSendingVerification] = useState(false)
+  const [pendingAssignments, setPendingAssignments] = useState(0)
   useEffect(() => {
     if (status === 'unauthenticated') {
       router.push('/auth/signin?callbackUrl=/dashboard')
@@ -63,6 +64,7 @@ export default function DashboardPage() {
     if (status === 'authenticated') {
       fetchDashboard()
       fetchAvatar()
+      fetchAssignments()
     }
     // Load bookmarks from localStorage
     try {
@@ -89,6 +91,22 @@ export default function DashboardPage() {
       const res = await fetch('/api/user/avatar')
       const d = await res.json()
       setAvatarData(d.avatarData)
+    } catch {
+      // ignore
+    }
+  }
+
+  const fetchAssignments = async () => {
+    try {
+      const res = await fetch('/api/student/assignments')
+      if (res.ok) {
+        const d = await res.json()
+        const pending = (d.assignments || []).filter(
+          (a: { submission: { status: string } }) =>
+            a.submission.status !== 'COMPLETED'
+        ).length
+        setPendingAssignments(pending)
+      }
     } catch {
       // ignore
     }
@@ -240,6 +258,27 @@ export default function DashboardPage() {
             <div className="text-sm text-gray-600 dark:text-gray-400 mt-1">Day Streak</div>
           </div>
         </div>
+
+        {/* Pending Assignments Banner */}
+        {pendingAssignments > 0 && (
+          <Link
+            href="/assignments"
+            className="mb-8 flex items-center justify-between bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 border border-blue-200 dark:border-blue-800 rounded-xl p-4 hover:shadow-md transition-all group"
+          >
+            <div className="flex items-center gap-3">
+              <span className="text-2xl">📋</span>
+              <div>
+                <p className="font-semibold text-gray-900 dark:text-white">
+                  {pendingAssignments} assignment{pendingAssignments !== 1 ? 's' : ''} pending
+                </p>
+                <p className="text-sm text-gray-500">From your teachers — click to view</p>
+              </div>
+            </div>
+            <span className="text-purple-600 font-semibold group-hover:translate-x-1 transition-transform">
+              View →
+            </span>
+          </Link>
+        )}
 
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Main Content — 2 cols */}
