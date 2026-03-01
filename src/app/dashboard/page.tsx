@@ -156,7 +156,13 @@ export default function DashboardPage() {
               <p className="text-gray-600 dark:text-gray-400">Here&apos;s your learning progress</p>
             </div>
           </div>
-          <div className="flex gap-3">
+          <div className="flex flex-wrap gap-3">
+            <Link
+              href="/join-class"
+              className="px-4 py-2 text-sm font-medium rounded-lg border border-purple-300 dark:border-purple-600 hover:bg-purple-50 dark:hover:bg-purple-900/20 transition-colors text-purple-700 dark:text-purple-300"
+            >
+              🏫 Join a Class
+            </Link>
             <Link
               href="/profile"
               className="px-4 py-2 text-sm font-medium rounded-lg border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-gray-700 dark:text-gray-300"

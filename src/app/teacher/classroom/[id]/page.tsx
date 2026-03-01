@@ -395,7 +395,8 @@ export default function ClassroomDetailPage() {
               <div className="text-center py-12">
                 <div className="text-5xl mb-4">👋</div>
                 <h3 className="text-lg font-bold mb-2">No students yet</h3>
-                <p className="text-gray-500">Share the join code <strong>{classroom.joinCode}</strong> with your students</p>
+                <p className="text-gray-500 mb-2">Share the join code <strong>{classroom.joinCode}</strong> with your students</p>
+                <p className="text-sm text-gray-400">Students can enter it at <strong>studymondo.com/join-class</strong></p>
               </div>
             ) : (
               <div className="space-y-2">
