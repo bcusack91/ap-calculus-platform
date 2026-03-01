@@ -2,104 +2,81 @@ export const satTestDayPart5Data = {
   topicSlug: 'sat-test-day-strategy-sat',
   sections: [
     {
-      id: 'sat-t5-intro',
+      id: 'sat-test-p5-intro',
       type: 'text' as const,
       content: `
-# Score Improvement Plan
+# 📝 Answer Grid Strategy
 
-**Part 5 of 7 — Score Improvement Plan**
+**Part 5 of 7 — Answer Grid Strategy**
 
-Take a diagnostic test first — know your baseline.
+Bubbling efficiently, checking for skipped questions
 
-Focus on your weakest areas for the biggest score gains.
+This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+
+**Key Concepts in This Section:**
+- Core principles and definitions
+- Step-by-step problem-solving methods
+- Common SAT question patterns
+- Strategic tips for test day
       `
     },
     {
-      id: 'sat-t5-quiz1',
+      id: 'sat-test-p5-check',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+**Quick Check** 🔍
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Take a diagnostic test first — know…?',
+            question: 'Based on the concepts in this section, which approach is most effective?',
             options: [
-              'Simulate test conditions: timed, quiet, full-length practice tests.',
-              'Take a diagnostic test first — know your baseline.',
-              'Focus on your weakest areas for the biggest score gains.',
-              'Practice with official College Board materials.'
+              'Memorize formulas without understanding when to apply them',
+              'Understand the underlying concepts and practice with varied problems',
+              'Only practice problems you find easy to build confidence',
+              'Skip practice and rely on intuition during the test'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — Take a diagnostic test first — know your baseline. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'In the context of Score Improvement Plan, which explains Key Insight?',
-            options: [
-              'Focus on your weakest areas for the biggest score gains.',
-              'Practice with official College Board materials.',
-              'Simulate test conditions: timed, quiet, full-length practice tests.',
-              'Take a diagnostic test first — know your baseline.'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Key Insight: Practice with official College Board materials. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
           }
         ]
       }
     },
     {
-      id: 'sat-t5-detail',
+      id: 'sat-test-p5-detail',
       type: 'text' as const,
       content: `
-**Key Insight:** Practice with official College Board materials.
+**Detailed Concepts & Examples**
 
-**SAT Tip:** Simulate test conditions: timed, quiet, full-length practice tests.
+This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
+
+1. **Identify** the type of problem quickly
+2. **Apply** the correct method systematically
+3. **Verify** your answer makes sense in context
+
+Work through each example carefully before attempting the practice problems below.
       `
     },
     {
-      id: 'sat-t5-quiz2',
+      id: 'sat-test-p5-practice',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+**SAT-Style Questions** 📋
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of these accurately represents SAT Tip?',
+            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
             options: [
-              'Practice with official College Board materials.',
-              'Simulate test conditions: timed, quiet, full-length practice tests.',
-              'Focus on your weakest areas for the biggest score gains.',
-              'Take a diagnostic test first — know your baseline.'
+              'Guess and move on quickly',
+              'Identify what the question is actually asking for',
+              'Try every formula you know until one works',
+              'Skip it permanently'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — SAT Tip: Simulate test conditions: timed, quiet, full-length practice tests. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
           }
         ]
-      }
-    },
-    {
-      id: 'sat-t5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Key Insight',
-            options: ['Simulate test conditions: timed, quiet, full-length practice tests.', 'Take a diagnostic test first — know your baseline.', 'Focus on your weakest areas for the biggest score gains.', 'Practice with official College Board materials.']
-          },
-          {
-            label: 'SAT Tip',
-            options: ['Practice with official College Board materials.', 'Simulate test conditions: timed, quiet, full-length practice tests.', 'Focus on your weakest areas for the biggest score gains.', 'Take a diagnostic test first — know your baseline.']
-          }
-        ],
-        correctAnswers: ['Practice with official College Board materials.', 'Simulate test conditions: timed, quiet, full-length practice tests.'],
-        hint1: 'Think about what each concept specifically describes in Score Improvement Plan.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Score Improvement Plan describes a specific idea. Key Insight: Practice with official College Board materials. SAT Tip: Simulate test conditions: timed, quiet, full-length practice tests.'
       }
     }
   ]

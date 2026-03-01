@@ -5,7 +5,7 @@ export const psychLanguagePart6Data = {
       id: 'langu6-intro',
       type: 'text' as const,
       content: `
-# ## Problem-Solving Workshop
+## Problem-Solving Workshop
 
 **Part 6 of 7 — Problem-Solving Workshop**
 
@@ -63,7 +63,7 @@ Applying linguistic relativity
       id: 'langu6-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Analyzing intelligence test data**
 - **Evaluating multiple intelligence theories**

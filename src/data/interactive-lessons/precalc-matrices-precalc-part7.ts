@@ -2,120 +2,190 @@ export const precalcMatricesPart7Data = {
   topicSlug: 'matrices-precalc',
   sections: [
     {
-      id: 'matri7-intro',
+      id: 'precalc-matrices-precalc-p7-s1-intro',
       type: 'text' as const,
       content: `
-# Review & Applications
-
-**Part 7 of 7 — Review & Applications**
-
-### 1. Write system as AX = B where A is coefficient matrix
-
-Write system as AX = B where A is coefficient matrix
-
-### 2. Solution
-
-X = A⁻¹B (if A is invertible)
-
-### 3. Cramer's rule
-
-x_i = det(A_i)/det(A)
-
-### 4. Row reduction (augmented matrix) works for any size system
-
-Row reduction (augmented matrix) works for any size system
+      ## Matrices: Mixed matrix operations synthesis
+      
+      **Part 7 of 7**
+      
+      This part focuses on integrating operations in mixed-response problems. Keep notation precise and connect each symbolic step to geometric or functional meaning.
+      
+      ### Core definitions
+      - **augmented matrix**: system coefficients with constants in one array
+      - **row operation**: legal transformation preserving system solutions
+      - **dimension**: rows by columns descriptor of a matrix
+      
+      
+      ### Worked Example
+      Solve $\\begin{cases}x+y=7\\2x-y=5\end{cases}$ by elimination.
+      
+      Add equations: $3x=12$, so $x=4$. Substitute into $x+y=7$ to get $y=3$.
+      
+      A quick matrix check with $\\begin{bmatrix}1&1\\2&-1\end{bmatrix}$ confirms a nonzero determinant, so the solution is unique.
       `
     },
     {
-      id: 'matri7-quiz1',
+      id: 'precalc-matrices-precalc-p7-s2-mcq-core',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+      **Multiple-choice check (2 questions)**
       `,
       exercise: {
         questions: [
           {
-            question: 'What does "Write system as AX = B where A is…" refer to in precalculus?',
+            question: 'Choose the most accurate definition of augmented matrix.',
             options: [
-              'x_i = det(A_i)/det(A)',
-              'Row reduction (augmented matrix) works for any size system',
-              'Write system as AX = B where A is coefficient matrix',
-              'X = A⁻¹B (if A is invertible)'
+              'legal transformation preserving system solutions',
+              'rows by columns descriptor of a matrix',
+              'system coefficients with constants in one array',
+              'single value identified by row and column'
             ],
             correctAnswer: 2,
-            explanation: 'Correct — Write system as AX = B where A is coefficient matrix. The other options describe different concepts from this topic.'
+            explanation: 'augmented matrix is defined as: system coefficients with constants in one array.'
           },
           {
-            question: 'Select the statement that correctly describes Cramer\'s rule:',
+            question: 'In integrating operations in mixed-response problems, which expression is the best starting model?',
             options: [
-              'Row reduction (augmented matrix) works for any size system',
-              'X = A⁻¹B (if A is invertible)',
-              'x_i = det(A_i)/det(A)',
-              'Write system as AX = B where A is coefficient matrix'
+              '$\\det\\begin{bmatrix}a&b\\\\c&d\\end{bmatrix}=ad-bc$',
+              '$A^{-1}=\\frac{1}{ad-bc}\\begin{bmatrix}d&-b\\\\-c&a\\end{bmatrix}$',
+              '$AI=IA=A$',
+              '$(AB)_{ij}=\\sum_k a_{ik}b_{kj}$'
             ],
-            correctAnswer: 2,
-            explanation: 'Correct — Cramer\'s rule: x_i = det(A_i)/det(A). Be careful to distinguish between the different concepts in this topic.'
+            correctAnswer: 3,
+            explanation: 'Use $(AB)_{ij}=\\sum_k a_{ik}b_{kj}$ first, then substitute known quantities from the prompt.'
           }
         ]
       }
     },
     {
-      id: 'matri7-detail',
+      id: 'precalc-matrices-precalc-p7-s3-deep-dive',
       type: 'text' as const,
       content: `
-### Key Concepts Summary
-
-- **Write system as AX = B where A is coefficient matrix**
-- **Solution**: X = A⁻¹B (if A is invertible)
-- **Cramer's rule**: x_i = det(A_i)/det(A)
-- **Row reduction (augmented matrix) works for any size system**
+      ### Deep-Dive: formulas and decision rules
+      
+      Use this table to pick the right expression before computing.
+      
+      | Tool | Formula | Best use |
+      |---|---|---|
+      | Product entry | $(AB)_{ij}=\sum_k a_{ik}b_{kj}$ | matrix multiplication |
+      | Identity action | $AI=IA=A$ | structure check |
+      | 2x2 determinant | $\det\begin{bmatrix}a&b\\c&d\end{bmatrix}=ad-bc$ | invertibility test |
+      | 2x2 inverse | $A^{-1}=\frac{1}{ad-bc}\begin{bmatrix}d&-b\\-c&a\end{bmatrix}$ | solving small systems |
+      
+      ### Common pitfalls
+      - Matrix multiplication is not commutative in general.
+      - Dimension mismatch blocks addition or multiplication.
+      - A zero determinant means no inverse exists.
+      
+      ### Precision checks
+      1. Identify givens and unknowns before selecting a formula.
+      2. Keep exact values through symbolic simplification when possible.
+      3. Verify units, angle mode, or domain constraints before finalizing.
       `
     },
     {
-      id: 'matri7-quiz2',
-      type: 'multiple-choice' as const,
+      id: 'precalc-matrices-precalc-p7-s4-input',
+      type: 'input-boxes' as const,
       content: `
-**Concept Check** 🎯
+      **Input Practice — Matrix Mechanics**
+      
+      1) Compute $\det\\begin{bmatrix}5&2\\3&4\end{bmatrix}$.
+      2) Compute first entry of $\\begin{bmatrix}1&2\\0&1\end{bmatrix}\\begin{bmatrix}3\\4\end{bmatrix}$.
+      3) Compute trace of $\\begin{bmatrix}2&1\\5&7\end{bmatrix}$.
       `,
       exercise: {
-        questions: [
-          {
-            question: 'Which concept relates directly to review & applications?',
-            options: [
-              'Row reduction (augmented matrix) works for any size system',
-              'Only complex analysis',
-              'Exclusively abstract algebra',
-              'This applies only to statistics'
-            ],
-            correctAnswer: 0,
-            explanation: 'Row reduction (augmented matrix) works for any size system'
-          }
-        ]
+        boxes: 3,
+        correctAnswers: ['14', '11', '9'],
+        hint1: 'Use $ad-bc$.',
+        hint2: 'Dot first row with the column vector.',
+        hint3: 'Trace is the sum of diagonal entries.',
+        explanation: 'Determinant is 14, product entry is 11, and trace is 9.'
       }
     },
     {
-      id: 'matri7-dropdown',
+      id: 'precalc-matrices-precalc-p7-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Match the Concepts** 🔍
+      **Dropdown-select practice (3 prompts)**
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Solution',
-            options: ['X = A⁻¹B (if A is invertible)', 'Write system as AX = B where A is coefficient matrix', 'x_i = det(A_i)/det(A)', 'Row reduction (augmented matrix) works for any size system']
+            label: 'augmented matrix',
+            options: ['system coefficients with constants in one array', 'rows by columns descriptor of a matrix', 'single value identified by row and column', 'legal transformation preserving system solutions']
           },
           {
-            label: 'Cramer\'s rule',
-            options: ['X = A⁻¹B (if A is invertible)', 'Row reduction (augmented matrix) works for any size system', 'Write system as AX = B where A is coefficient matrix', 'x_i = det(A_i)/det(A)']
+            label: 'row operation',
+            options: ['composition of linear mappings', 'single value identified by row and column', 'legal transformation preserving system solutions', 'rows by columns descriptor of a matrix']
+          },
+          {
+            label: 'dimension',
+            options: ['composition of linear mappings', 'scalar indicating area scaling and invertibility in $2	imes2$', 'rows by columns descriptor of a matrix', 'single value identified by row and column']
           }
         ],
-        correctAnswers: ['X = A⁻¹B (if A is invertible)', 'x_i = det(A_i)/det(A)'],
-        hint1: 'Think about what each concept specifically describes in Review & Applications.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Review & Applications describes a specific idea. Solution: X = A⁻¹B (if A is invertible). Cramer\'s rule: x_i = det(A_i)/det(A).'
+        correctAnswers: ['system coefficients with constants in one array', 'legal transformation preserving system solutions', 'rows by columns descriptor of a matrix'],
+        hint1: 'Match each term to the full definition, not just a keyword.',
+        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
+        hint3: 'Read the label and option together as one complete mathematical sentence.',
+        explanation: 'Correct mapping: augmented matrix, row operation, and dimension align with their exact definitions used in this part.'
+      }
+    },
+    {
+      id: 'precalc-matrices-precalc-p7-s6-strategy',
+      type: 'text' as const,
+      content: `
+      ### Strategy: graphing, calculator, and exam tactics
+      
+      **Graphing tactics**
+      - Sketch anchor points or intercept behavior before detailed algebra.
+      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
+      
+      **Calculator tactics**
+      - Confirm angle mode before trig operations.
+      - Store intermediate values to avoid rounded drift.
+      - Use table mode to test reasonableness around key inputs.
+      
+      **Exam tactics**
+      - Translate words to symbols first, then choose the matching formula family.
+      - Eliminate options that violate domain or structure.
+      - If two choices are close, substitute back into the original relationship.
+      
+      Tie each step to augmented matrix, row operation, and dimension so your reasoning is explicit and checkable.
+      `
+    },
+    {
+      id: 'precalc-matrices-precalc-p7-s7-mcq-applied',
+      type: 'multiple-choice' as const,
+      content: `
+      **Applied mixed questions (2 questions)**
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'A student is integrating operations in mixed-response problems. Which term best anchors the next reasoning step if the key idea is: single value identified by row and column?',
+            options: [
+              'row operation',
+              'dimension',
+              'entry',
+              'augmented matrix'
+            ],
+            correctAnswer: 2,
+            explanation: 'entry matches that description and keeps the model-to-interpretation chain consistent.'
+          },
+          {
+            question: 'A student is solving a mixed matrices prompt. Which term best anchors the next reasoning step if the key idea is: composition of linear mappings?',
+            options: [
+              'entry',
+              'determinant',
+              'dimension',
+              'matrix product'
+            ],
+            correctAnswer: 3,
+            explanation: 'matrix product matches that description and keeps the model-to-interpretation chain consistent.'
+          }
+        ]
       }
     }
   ]
-}
+};

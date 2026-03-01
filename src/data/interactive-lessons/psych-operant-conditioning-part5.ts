@@ -5,7 +5,7 @@ export const psychOperantPart5Data = {
       id: 'opera5-intro',
       type: 'text' as const,
       content: `
-# ## Shaping & Chaining
+## Shaping & Chaining
 
 **Part 5 of 7 — Shaping & Chaining**
 
@@ -63,7 +63,7 @@ treating autism
       id: 'opera5-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Shaping**: reinforcing successive approximations
 - **Used to teach complex behaviors**

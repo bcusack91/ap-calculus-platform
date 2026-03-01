@@ -5,7 +5,7 @@ export const bioMeiosisPart1Data = {
       id: 'meio1-intro-p1',
       type: 'text' as const,
       content: `
-# ## Meiosis Overview
+## Meiosis Overview
 
 **Part 1 of 7 — Meiosis Overview**
 
@@ -52,7 +52,7 @@ export const bioMeiosisPart1Data = {
       id: 'meio1-detail-p1',
       type: 'text' as const,
       content: `
-# ### Key Details
+### Key Details
 
 - **Meiosis produces gametes (sex cells)**
 - **Reduces chromosome number by half (2n → n)**

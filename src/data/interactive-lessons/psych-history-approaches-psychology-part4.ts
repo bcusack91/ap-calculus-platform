@@ -5,7 +5,7 @@ export const psychHistoryApproachesPart4Data = {
       id: 'histo4-stats',
       type: 'text' as const,
       content: `
-# ## Descriptive Statistics
+## Descriptive Statistics
 
 ### Measures of Central Tendency
 
@@ -58,7 +58,7 @@ export const psychHistoryApproachesPart4Data = {
       id: 'histo4-inferential',
       type: 'text' as const,
       content: `
-# ## Inferential Statistics
+## Inferential Statistics
 
 ### Statistical Significance
 

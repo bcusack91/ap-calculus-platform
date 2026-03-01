@@ -2,108 +2,81 @@ export const satRWStrategyPart7Data = {
   topicSlug: 'sat-reading-writing-strategy-sat',
   sections: [
     {
-      id: 'sat-r7-intro',
+      id: 'sat-read-p7-intro',
       type: 'text' as const,
       content: `
-# Review & Applications
+# 🎯 Full Section Practice
 
-**Part 7 of 7 — Review & Applications**
+**Part 7 of 7 — Full Section Practice**
 
-Grammar questions: one answer is objectively correct (rules-based).
+Timed mixed practice across all reading/writing question types
 
-Rhetoric questions: "most effectively" — subjective but still have a best answer.
+This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+
+**Key Concepts in This Section:**
+- Core principles and definitions
+- Step-by-step problem-solving methods
+- Common SAT question patterns
+- Strategic tips for test day
       `
     },
     {
-      id: 'sat-r7-quiz1',
+      id: 'sat-read-p7-check',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+**Quick Check** 🔍
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Grammar questions?',
+            question: 'Based on the concepts in this section, which approach is most effective?',
             options: [
-              '"most effectively" — subjective but still have a best answer.',
-              'For rhetoric: consider purpose, audience, and what the question is asking.',
-              'one answer is objectively correct (rules-based).',
-              'If the question asks "which best accomplishes [goal]," match the goal precisely.'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Grammar questions: one answer is objectively correct (rules-based). The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Select the statement that correctly describes Key Insight:',
-            options: [
-              'If the question asks "which best accomplishes [goal]," match the goal precisely.',
-              'one answer is objectively correct (rules-based).',
-              '"most effectively" — subjective but still have a best answer.',
-              'For rhetoric: consider purpose, audience, and what the question is asking.'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Key Insight: For rhetoric: consider purpose, audience, and what the question is asking. Be careful to distinguish between the different concepts in this topic.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'sat-r7-detail',
-      type: 'text' as const,
-      content: `
-**Key Insight:** For rhetoric: consider purpose, audience, and what the question is asking.
-
-**SAT Tip:** If the question asks "which best accomplishes [goal]," match the goal precisely.
-      `
-    },
-    {
-      id: 'sat-r7-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of these accurately represents SAT Tip?',
-            options: [
-              '"most effectively" — subjective but still have a best answer.',
-              'If the question asks "which best accomplishes [goal]," match the goal precisely.',
-              'For rhetoric: consider purpose, audience, and what the question is asking.',
-              'one answer is objectively correct (rules-based).'
+              'Memorize formulas without understanding when to apply them',
+              'Understand the underlying concepts and practice with varied problems',
+              'Only practice problems you find easy to build confidence',
+              'Skip practice and rely on intuition during the test'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — SAT Tip: If the question asks "which best accomplishes [goal]," match the goal precisely. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
           }
         ]
       }
     },
     {
-      id: 'sat-r7-dropdown',
-      type: 'dropdown-select' as const,
+      id: 'sat-read-p7-detail',
+      type: 'text' as const,
       content: `
-**Match the Concepts** 🔍
+**Detailed Concepts & Examples**
+
+This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
+
+1. **Identify** the type of problem quickly
+2. **Apply** the correct method systematically
+3. **Verify** your answer makes sense in context
+
+Work through each example carefully before attempting the practice problems below.
+      `
+    },
+    {
+      id: 'sat-read-p7-practice',
+      type: 'multiple-choice' as const,
+      content: `
+**SAT-Style Questions** 📋
       `,
       exercise: {
-        dropdowns: [
+        questions: [
           {
-            label: 'Grammar questions',
-            options: ['For rhetoric: consider purpose, audience, and what the question is asking.', 'one answer is objectively correct (rules-based).', '"most effectively" — subjective but still have a best answer.', 'If the question asks "which best accomplishes [goal]," match the goal precisely.']
-          },
-          {
-            label: 'Rhetoric questions',
-            options: ['If the question asks "which best accomplishes [goal]," match the goal precisely.', 'one answer is objectively correct (rules-based).', '"most effectively" — subjective but still have a best answer.', 'For rhetoric: consider purpose, audience, and what the question is asking.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['If the question asks "which best accomplishes [goal]," match the goal precisely.', 'one answer is objectively correct (rules-based).', '"most effectively" — subjective but still have a best answer.', 'For rhetoric: consider purpose, audience, and what the question is asking.']
+            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
+            options: [
+              'Guess and move on quickly',
+              'Identify what the question is actually asking for',
+              'Try every formula you know until one works',
+              'Skip it permanently'
+            ],
+            correctAnswer: 1,
+            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
           }
-        ],
-        correctAnswers: ['one answer is objectively correct (rules-based).', '"most effectively" — subjective but still have a best answer.', 'For rhetoric: consider purpose, audience, and what the question is asking.'],
-        hint1: 'Think about what each concept specifically describes in Review & Applications.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Review & Applications describes a specific idea. Grammar questions: one answer is objectively correct (rules-based). Rhetoric questions: "most effectively" — subjective but still have a best answer. Key Insight: For rhetoric: consider purpose, audience, and what the question is asking.'
+        ]
       }
     }
   ]

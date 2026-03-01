@@ -5,7 +5,7 @@ export const psychOperantPart2Data = {
       id: 'opera2-intro',
       type: 'text' as const,
       content: `
-# ## Reinforcement Types
+## Reinforcement Types
 
 **Part 2 of 7 — Reinforcement Types**
 
@@ -63,7 +63,7 @@ Primary reinforcers (food) vs secondary reinforcers (money, grades)
       id: 'opera2-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Positive reinforcement**: adding pleasant stimulus (+R)
 - **Negative reinforcement**: removing aversive stimulus (-R)

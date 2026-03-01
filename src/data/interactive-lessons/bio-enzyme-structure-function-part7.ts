@@ -5,7 +5,7 @@ export const bioEnzymesPart7Data = {
       id: 'enzy7-synthesis',
       type: 'text' as const,
       content: `
-# ## Enzyme Synthesis & AP Review
+## Enzyme Synthesis & AP Review
 
 ### Key Enzyme Concepts for AP Biology
 
@@ -47,7 +47,7 @@ export const bioEnzymesPart7Data = {
       id: 'enzy7-tips',
       type: 'text' as const,
       content: `
-# ## AP Exam Tips
+## AP Exam Tips
 
 - Be able to **interpret enzyme kinetics graphs** (rate vs. [S] curves)
 - Know how **inhibitor types** affect $K_m$ and $V_{max}$

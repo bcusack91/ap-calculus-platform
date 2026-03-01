@@ -5,7 +5,7 @@ export const bioCellCommPart5Data = {
       id: 'cell5-intro-p5',
       type: 'text' as const,
       content: `
-# ## Cellular Responses
+## Cellular Responses
 
 **Part 5 of 7 — Cellular Responses**
 
@@ -52,7 +52,7 @@ export const bioCellCommPart5Data = {
       id: 'cell5-detail-p5',
       type: 'text' as const,
       content: `
-# ### Key Details
+### Key Details
 
 - **Gene expression changes**: transcription factors activated
 - **Enzyme activation/deactivation**

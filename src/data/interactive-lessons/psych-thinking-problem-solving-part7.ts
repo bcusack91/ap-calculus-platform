@@ -5,7 +5,7 @@ export const psychThinkingPart7Data = {
       id: 'think7-intro',
       type: 'text' as const,
       content: `
-# ## Synthesis & AP Review
+## Synthesis & AP Review
 
 **Part 7 of 7 — Synthesis & AP Review**
 
@@ -63,7 +63,7 @@ identifying biases and heuristics
       id: 'think7-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Heuristics are efficient but can lead to errors**
 - **Cognitive biases affect everyday decisions**

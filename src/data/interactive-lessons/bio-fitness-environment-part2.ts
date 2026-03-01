@@ -2,113 +2,193 @@ export const bioFitnessPart2Data = {
   topicSlug: 'fitness-environment',
   sections: [
     {
-      id: 'fitn2-intro-p2',
+      id: 'bio-fitness-environment-p2-s1-intro',
       type: 'text' as const,
       content: `
-# ## Phenotype & Environment
-
-**Part 2 of 7 — Phenotype & Environment**
-
-1. Phenotype = genotype + environment
-2. Norm of reaction: range of phenotypes from one genotype
-3. Phenotypic plasticity: ability to change phenotype
-4. Examples: skin tanning, muscle growth, plant growth toward light
+      ## Fitness and Environment: Adaptation
+      
+      **Part 2 of 7**
+      
+      In this lesson, you will connect mechanism-level biology to exam-ready reasoning through beak-shape adaptation under resource shifts.
+      
+      ### Worked biological example
+      A student team investigates beak-shape adaptation under resource shifts. Their first interpretation step is to identify how **adaptation** and **phenotypic plasticity** work together in the same pathway.
+      
+      - They classify the primary signal using **adaptation**: heritable trait improving performance under selection.
+      - They trace the downstream response using **phenotypic plasticity**: ability of one genotype to produce different phenotypes.
+      - They then compare outcomes with **trade-off** and **selection gradient** to separate mechanism from correlation.
+      
+      ### Key terms for this part
+      - **adaptation**
+      - **phenotypic plasticity**
+      - **trade-off**
+      - **selection gradient**
       `
     },
     {
-      id: 'fitn2-quiz1',
+      id: 'bio-fitness-environment-p2-s2-mcq-core',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+      **Checkpoint MCQ (2 questions)**
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Phenotype = genotype + environment?',
+            question: 'For Adaptation, what best describes adaptation?',
             options: [
-              'skin tanning, muscle growth, plant growth toward light',
-              'ability to change phenotype',
-              'range of phenotypes from one genotype',
-              'Phenotype = genotype + environment'
+              'heritable trait improving performance under selection',
+              'direction and strength of selection on a trait',
+              'benefit in one function paired with cost in another',
+              'ability of one genotype to produce different phenotypes'
             ],
-            correctAnswer: 3,
-            explanation: 'Correct — Phenotype = genotype + environment. The other options describe different concepts from this topic.'
+            correctAnswer: 0,
+            explanation: 'adaptation is best matched with: heritable trait improving performance under selection.'
           },
           {
-            question: 'Select the statement that correctly describes Phenotypic plasticity:',
+            question: 'In this part\'s context, what is the strongest definition of phenotypic plasticity?',
             options: [
-              'Phenotype = genotype + environment',
-              'range of phenotypes from one genotype',
-              'skin tanning, muscle growth, plant growth toward light',
-              'ability to change phenotype'
+              'benefit in one function paired with cost in another',
+              'heritable trait improving performance under selection',
+              'favors intermediate phenotypes',
+              'ability of one genotype to produce different phenotypes'
             ],
             correctAnswer: 3,
-            explanation: 'Correct — Phenotypic plasticity: ability to change phenotype. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'phenotypic plasticity is best matched with: ability of one genotype to produce different phenotypes.'
           }
         ]
       }
     },
     {
-      id: 'fitn2-detail-p2',
+      id: 'bio-fitness-environment-p2-s3-deep-dive',
       type: 'text' as const,
       content: `
-# ### Key Details
-
-- **Phenotype = genotype + environment**
-- **Norm of reaction**: range of phenotypes from one genotype
-- **Phenotypic plasticity**: ability to change phenotype
-- **Examples**: skin tanning, muscle growth, plant growth toward light
+      ### Deep-Dive Map: Adaptation
+      
+      Use this diagram-style summary to track causation and evidence.
+      
+      #### Flow logic
+      - **Signal/Input** → adaptation
+      - **Immediate processing** → phenotypic plasticity
+      - **System-level consequence** → trade-off
+      - **Measured readout** → selection gradient
+      
+      #### Mechanism table
+      | Component | Biological role | Typical evidence pattern |
+      |---|---|---|
+      | adaptation | heritable trait improving performance under selection | Early shift in the primary variable |
+      | phenotypic plasticity | ability of one genotype to produce different phenotypes | Mid-pathway change in process rate |
+      | trade-off | benefit in one function paired with cost in another | Downstream phenotype trend |
+      | selection gradient | direction and strength of selection on a trait | Quantifiable endpoint in data summary |
+      
+      #### Reasoning checkpoints
+      1. Name the mechanism before describing the trend line.
+      2. Separate proximate mechanism from ecological or historical context.
+      3. Verify that each claim is tied to a measurable biological readout.
       `
     },
     {
-      id: 'fitn2-quiz2',
-      type: 'multiple-choice' as const,
+      id: 'bio-fitness-environment-p2-s4-input',
+      type: 'input-boxes' as const,
       content: `
-**Check Your Understanding** 🎯
+      **Input Practice — concrete vocabulary retrieval**
+      
+      Fill in each blank with the exact biological term.
+      
+      1) Term for this definition: **heritable trait improving performance under selection**
+      2) Term for this definition: **ability of one genotype to produce different phenotypes**
+      3) Term for this definition: **benefit in one function paired with cost in another**
       `,
       exercise: {
-        questions: [
-          {
-            question: 'Which of these accurately represents Examples?',
-            options: [
-              'Phenotype = genotype + environment',
-              'ability to change phenotype',
-              'skin tanning, muscle growth, plant growth toward light',
-              'range of phenotypes from one genotype'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Examples: skin tanning, muscle growth, plant growth toward light. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
+        boxes: 3,
+        correctAnswers: ['adaptation', 'phenotypic plasticity', 'trade-off'],
+        hint1: 'Start with the first item: it is the mechanism term used when a process is described as \'heritable trait improving performance under selection\'.',
+        hint2: 'Second blank points to phenotypic plasticity; think about the role \'ability of one genotype to produce different phenotypes\'.',
+        hint3: 'Third blank is trade-off; connect it to \'benefit in one function paired with cost in another\'.',
+        explanation: 'Correct set: adaptation, phenotypic plasticity, trade-off. These three terms define the core mechanism chain for Adaptation.'
       }
     },
     {
-      id: 'fitn2-dropdown',
+      id: 'bio-fitness-environment-p2-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Match the Concepts** 🔍
+      **Dropdown matching (3 prompts)**
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Norm of reaction',
-            options: ['ability to change phenotype', 'Phenotype = genotype + environment', 'skin tanning, muscle growth, plant growth toward light', 'range of phenotypes from one genotype']
+            label: 'adaptation',
+            options: ['ability of one genotype to produce different phenotypes', 'benefit in one function paired with cost in another', 'direction and strength of selection on a trait', 'heritable trait improving performance under selection']
           },
           {
-            label: 'Phenotypic plasticity',
-            options: ['range of phenotypes from one genotype', 'Phenotype = genotype + environment', 'skin tanning, muscle growth, plant growth toward light', 'ability to change phenotype']
+            label: 'phenotypic plasticity',
+            options: ['direction and strength of selection on a trait', 'favors intermediate phenotypes', 'ability of one genotype to produce different phenotypes', 'benefit in one function paired with cost in another']
           },
           {
-            label: 'Examples',
-            options: ['ability to change phenotype', 'Phenotype = genotype + environment', 'range of phenotypes from one genotype', 'skin tanning, muscle growth, plant growth toward light']
+            label: 'trade-off',
+            options: ['favors one phenotypic extreme', 'benefit in one function paired with cost in another', 'direction and strength of selection on a trait', 'favors intermediate phenotypes']
           }
         ],
-        correctAnswers: ['range of phenotypes from one genotype', 'ability to change phenotype', 'skin tanning, muscle growth, plant growth toward light'],
-        hint1: 'Think about what each concept specifically describes in Phenotype & Environment.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Phenotype & Environment describes a specific idea. Norm of reaction: range of phenotypes from one genotype. Phenotypic plasticity: ability to change phenotype. Examples: skin tanning, muscle growth, plant growth toward light.'
+        correctAnswers: ['heritable trait improving performance under selection', 'ability of one genotype to produce different phenotypes', 'benefit in one function paired with cost in another'],
+        hint1: 'Match each term to the definition that captures mechanism, not just keywords.',
+        hint2: 'If two definitions feel close, choose the one with the exact process direction.',
+        hint3: 'Read each label out loud, then pick the option that completes a causal sentence.',
+        explanation: 'adaptation, phenotypic plasticity, and trade-off should map to their exact mechanistic definitions. When options look similar, anchor your choice to process direction and biological scale.'
+      }
+    },
+    {
+      id: 'bio-fitness-environment-p2-s6-strategy',
+      type: 'text' as const,
+      content: `
+      ### ACT/AP strategy and misconception repair
+      
+      On ACT/AP style prompts, score gains come from linking vocabulary to evidence, not from isolated memorization.
+      
+      #### Strategy sequence
+      1. **Name the mechanism first**: identify whether the item is asking for process, structure, regulation, or population effect.
+      2. **Use a causation sentence**: "Because adaptation heritable trait improving performance under selection, we expect ...".
+      3. **Audit units and scale**: molecular claims, cellular claims, and ecosystem claims should not be mixed.
+      
+      #### Common misconceptions to avoid
+      - Plastic responses are not the same as evolutionary change in allele frequencies.
+      - Adaptation does not mean perfection; constraints and trade-offs persist.
+      - Selection can act differently on the same trait in different habitats.
+      
+      #### Exam execution tip
+      When two answer choices sound plausible, prefer the one that includes a direct mechanism and a measurable biological consequence.
+      `
+    },
+    {
+      id: 'bio-fitness-environment-p2-s7-mcq-final',
+      type: 'multiple-choice' as const,
+      content: `
+      **Final application MCQ (2 questions)**
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'In beak-shape adaptation under resource shifts, the observed pattern is: direction and strength of selection on a trait. What term should anchor the explanation?',
+            options: [
+              'phenotypic plasticity',
+              'trade-off',
+              'selection gradient',
+              'adaptation'
+            ],
+            correctAnswer: 2,
+            explanation: 'Use selection gradient because it directly maps to the described biological pattern: direction and strength of selection on a trait.'
+          },
+          {
+            question: 'In an AP-style free-response about adaptation, the observed pattern is: favors intermediate phenotypes. What term should anchor the explanation?',
+            options: [
+              'directional selection',
+              'stabilizing selection',
+              'trade-off',
+              'selection gradient'
+            ],
+            correctAnswer: 1,
+            explanation: 'Use stabilizing selection because it directly maps to the described biological pattern: favors intermediate phenotypes.'
+          }
+        ]
       }
     }
   ]
-}
+};

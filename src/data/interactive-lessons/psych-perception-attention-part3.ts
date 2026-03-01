@@ -5,7 +5,7 @@ export const psychPerceptionPart3Data = {
       id: 'perce3-intro',
       type: 'text' as const,
       content: `
-# ## Perceptual Constancies & Illusions
+## Perceptual Constancies & Illusions
 
 **Part 3 of 7 — Perceptual Constancies & Illusions**
 
@@ -63,7 +63,7 @@ Müller-Lyer, Ponzo, Ames room
       id: 'perce3-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Size constancy**: objects appear same size despite distance
 - **Shape constancy**: objects appear same shape despite viewing angle

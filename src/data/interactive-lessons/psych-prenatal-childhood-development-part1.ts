@@ -2,123 +2,184 @@ export const psychPrenatalPart1Data = {
   topicSlug: 'prenatal-childhood-development',
   sections: [
     {
-      id: 'prena1-intro',
+      id: 'prenatal-childhood-development-p1-s1-intro',
       type: 'text' as const,
       content: `
-# 🧠 Prenatal & Childhood Development
+      # 🧠 Prenatal and Childhood Development
 
-**Part 1 of 7 — Prenatal Development**
+      **Part 1 of 7 — Prenatal Stages and Teratogens**
 
-### 1. Germinal stage (0-2 weeks)
+      In this part, you will connect core psychological vocabulary to realistic contexts and AP-style reasoning. Focus on mechanism first, then evidence.
 
-zygote implants
+      ### Core Definitions
+      - **zygote**: fertilized egg in the earliest stage of development
+      - **embryo**: developing organism from implantation to about eight weeks
+      - **fetus**: prenatal stage from roughly nine weeks to birth
 
-### 2. Embryonic stage (2-8 weeks)
+      ### Concrete Real-World Example
+      A team is studying prenatal care counseling for risk reduction. They operationalize variables, compare plausible explanations, and look for the interpretation that best matches observed behavior instead of relying on intuition.
 
-major organs form
-
-### 3. Fetal stage (8 weeks-birth)
-
-growth and maturation
-
-### 4. Teratogens
-
-harmful agents (alcohol → FAS, drugs, infections)
+      ### Why This Matters
+      Strong AP responses define terms precisely, apply them to evidence, and justify why one interpretation is stronger than alternatives.
       `
     },
     {
-      id: 'prena1-quiz1',
+      id: 'prenatal-childhood-development-p1-s2-check',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+      **Concept Check** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains Germinal stage (0-2 weeks)?',
+            question: 'In a study about prenatal care counseling for risk reduction, participants change behavior after repeatedly seeing the same cue. Which concept is the best fit?',
             options: [
-              'major organs form',
-              'growth and maturation',
-              'zygote implants',
-              'harmful agents (alcohol → FAS, drugs, infections)'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Germinal stage (0-2 weeks): zygote implants. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Select the statement that correctly describes Fetal stage (8 weeks-birth):',
-            options: [
-              'harmful agents (alcohol → FAS, drugs, infections)',
-              'major organs form',
-              'growth and maturation',
-              'zygote implants'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Fetal stage (8 weeks-birth): growth and maturation. Be careful to distinguish between the different concepts in this topic.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'prena1-detail',
-      type: 'text' as const,
-      content: `
-# ### Key Points
-
-- **Germinal stage (0-2 weeks)**: zygote implants
-- **Embryonic stage (2-8 weeks)**: major organs form
-- **Fetal stage (8 weeks-birth)**: growth and maturation
-- **Teratogens**: harmful agents (alcohol → FAS, drugs, infections)
-      `
-    },
-    {
-      id: 'prena1-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which concept relates directly to prenatal development?',
-            options: [
-              'harmful agents (alcohol → FAS, drugs, infections)',
-              'Only biological factors',
-              'Exclusively cognitive processes',
-              'Mathematical formulas only'
+              'zygote',
+              'teratogen',
+              'embryo',
+              'fetus'
             ],
             correctAnswer: 0,
-            explanation: 'Teratogens: harmful agents (alcohol → FAS, drugs, infections)'
+            explanation: 'zygote is correct because it directly matches this mechanism: fertilized egg in the earliest stage of development. The distractors describe related but different processes.'
+          },
+          {
+            question: 'Researchers report that behavior shifts when participants receive a specific cue and then justify their choices afterward. Which concept best explains that pattern?',
+            options: [
+              'embryo',
+              'critical period',
+              'fetus',
+              'object permanence'
+            ],
+            correctAnswer: 1,
+            explanation: 'critical period is the strongest match here (time window when specific experiences strongly shape development). The other options do not explain both the cue-driven shift and the observed response pattern as directly.'
           }
         ]
       }
     },
     {
-      id: 'prena1-dropdown',
+      id: 'prenatal-childhood-development-p1-s3-deep',
+      type: 'text' as const,
+      content: `
+      ## Deep Dive: Comparing Explanations with Evidence
+
+      When analyzing prenatal care counseling for risk reduction, the best interpretation ties a clear psychological mechanism to measurable evidence.
+
+      | Theory / Concept | Core claim | Typical evidence | Common limitation |
+      |---|---|---|---|
+      | zygote | fertilized egg in the earliest stage of development | experimental manipulation with random assignment | possible demand characteristics |
+      | embryo | developing organism from implantation to about eight weeks | longitudinal trend with repeated measurement | third-variable risk in natural settings |
+      | fetus | prenatal stage from roughly nine weeks to birth | cross-sectional comparison with matched groups | limited generalizability across cultures |
+      | teratogen | environmental agent that can harm prenatal development | mixed-method evidence combining survey and behavioral indicators | measurement validity depends on construct quality |
+
+      ### Interpretation Strategy
+      1. Name the mechanism before describing outcomes.
+      2. Match the claim to the strongest available evidence type.
+      3. Acknowledge one limitation and explain whether it changes the conclusion.
+
+      This structure helps you earn reasoning points on free-response and avoid vague claims.
+      `
+    },
+    {
+      id: 'prenatal-childhood-development-p1-s4-input',
+      type: 'input-boxes' as const,
+      content: `
+      **Applied Recall (exact term answers)** ✍️
+
+      1) Write the concept that matches: fertilized egg in the earliest stage of development
+      2) Write the concept that matches: developing organism from implantation to about eight weeks
+      3) Write the concept that matches: prenatal stage from roughly nine weeks to birth
+
+      Use the exact vocabulary term from this part.
+      `,
+      exercise: {
+        boxes: 3,
+        correctAnswers: ['zygote', 'embryo', 'fetus'],
+        hint1: 'Starts with: Z',
+        hint2: 'Starts with: E',
+        hint3: 'Starts with: F',
+        explanation: 'Expected answers: zygote, embryo, and fetus. Each response should use the precise term connected to the definition cue.'
+      }
+    },
+    {
+      id: 'prenatal-childhood-development-p1-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Match the Concepts** 🔍
+      **Model Matching** 🔎
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Germinal stage (0-2 weeks)',
-            options: ['growth and maturation', 'major organs form', 'zygote implants', 'harmful agents (alcohol → FAS, drugs, infections)']
+            label: 'Select the concept that best matches: fertilized egg in the earliest stage of development',
+            options: ['teratogen', 'object permanence', 'embryo', 'zygote']
           },
           {
-            label: 'Embryonic stage (2-8 weeks)',
-            options: ['major organs form', 'harmful agents (alcohol → FAS, drugs, infections)', 'growth and maturation', 'zygote implants']
+            label: 'Select the concept that best matches: developing organism from implantation to about eight weeks',
+            options: ['zygote', 'critical period', 'fetus', 'embryo']
           },
           {
-            label: 'Fetal stage (8 weeks-birth)',
-            options: ['growth and maturation', 'zygote implants', 'major organs form', 'harmful agents (alcohol → FAS, drugs, infections)']
+            label: 'Select the concept that best matches: prenatal stage from roughly nine weeks to birth',
+            options: ['critical period', 'fetus', 'zygote', 'embryo']
           }
         ],
-        correctAnswers: ['zygote implants', 'major organs form', 'growth and maturation'],
-        hint1: 'Think about what each concept specifically describes in Prenatal & Childhood Development.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Prenatal & Childhood Development describes a specific idea. Germinal stage (0-2 weeks): zygote implants. Embryonic stage (2-8 weeks): major organs form. Fetal stage (8 weeks-birth): growth and maturation.'
+        correctAnswers: ['zygote', 'embryo', 'fetus'],
+        hint1: 'Start by matching the key mechanism in each prompt to the most specific concept.',
+        hint2: 'Eliminate options that describe a different level of analysis (biological vs cognitive vs social).',
+        hint3: 'Use the definition language from this part to avoid near-miss terms.',
+        explanation: 'Correct matches are zygote, embryo, and fetus. These choices align with the mechanism-language in each definition, not just broad topic similarity.'
+      }
+    },
+    {
+      id: 'prenatal-childhood-development-p1-s6-strategy',
+      type: 'text' as const,
+      content: `
+      ## Common Misconceptions and Exam Strategy
+
+      ### Misconceptions to Avoid
+      - Development is not strictly linear; domains can progress at different rates.
+      - Attachment quality reflects patterns over time, not one isolated event.
+      - Cognitive stages describe trends, but individual variation is expected.
+      - Early adversity raises risk but does not guarantee poor outcomes.
+
+      ### AP Strategy Moves
+      - Define the target concept in one precise sentence before giving examples.
+      - In scenario questions about prenatal care counseling for risk reduction, identify the manipulated variable and measured outcome.
+      - Use one competing explanation and explain why it is weaker.
+      - If data are provided, mention trend direction and at least one design limitation.
+
+      This combination of precision and evidence improves both multiple-choice accuracy and free-response scoring.
+      `
+    },
+    {
+      id: 'prenatal-childhood-development-p1-s7-applied',
+      type: 'multiple-choice' as const,
+      content: `
+      **Applied Scenarios** 🎯
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'A team investigating prenatal care counseling for risk reduction finds that participants rely on a persuasive cue when they are distracted, but use argument quality when they are highly focused. Which concept best captures the focused-processing route?',
+            options: [
+              'teratogen',
+              'zygote',
+              'embryo',
+              'fetus'
+            ],
+            correctAnswer: 0,
+            explanation: 'teratogen is best because it reflects this mechanism (environmental agent that can harm prenatal development). The other options describe different levels of explanation or related constructs.'
+          },
+          {
+            question: 'After an intervention, scores improve in the treatment group but not in a matched comparison group. Which interpretation is most defensible for the targeted mechanism?',
+            options: [
+              'embryo',
+              'object permanence',
+              'critical period',
+              'fetus'
+            ],
+            correctAnswer: 2,
+            explanation: 'critical period is the strongest interpretation because it maps to the measured pattern and proposed mechanism: time window when specific experiences strongly shape development. Good AP reasoning also notes alternative explanations and design limits.'
+          }
+        ]
       }
     }
   ]

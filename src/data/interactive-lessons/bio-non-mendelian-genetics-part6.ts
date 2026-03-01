@@ -5,7 +5,7 @@ export const bioNonMendelianPart6Data = {
       id: 'non-6-intro-p6',
       type: 'text' as const,
       content: `
-# ## Non-Mendelian Genetics: Problem-Solving Workshop
+## Non-Mendelian Genetics: Problem-Solving Workshop
 
 **Part 6 of 7 — Problem-Solving**
 
@@ -52,7 +52,7 @@ export const bioNonMendelianPart6Data = {
       id: 'non-6-detail-p6',
       type: 'text' as const,
       content: `
-# ### Key Details
+### Key Details
 
 - **Identifying inheritance patterns from crosses**
 - **Solving X-linked inheritance problems**

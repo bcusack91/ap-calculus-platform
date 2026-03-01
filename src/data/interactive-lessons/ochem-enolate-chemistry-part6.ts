@@ -2,124 +2,185 @@ export const oChemEnolatePart6Data = {
   topicSlug: 'enolate-chemistry',
   sections: [
     {
-      id: 'enola6-intro',
+      id: 'ochem-enolate-chemistry-p6-s1-intro',
       type: 'text' as const,
       content: `
-# Problem-Solving Workshop
-
-**Part 6 of 7 — Problem-Solving Workshop**
-
-### 1. Predicting aldol and Claisen products
-
-Predicting aldol and Claisen products
-
-### 2. Designing enolate-based syntheses
-
-Designing enolate-based syntheses
-
-### 3. Analyzing crossed reactions for selectivity
-
-Analyzing crossed reactions for selectivity
-
-### 4. Retrosynthetic analysis of ring systems
-
-Retrosynthetic analysis of ring systems
+      # Enolate Chemistry
+      
+      **Part 6 of 7 — Retrosynthesis with Enolate Logic**
+      
+      This part focuses on breaking targets into enolate and electrophile synthons. The goal is to connect vocabulary, curved-arrow reasoning, and product prediction in one workflow.
+      
+      ### Mechanism vocabulary for this part
+      - **aldol condensation**: dehydration of aldol product to enone
+      - **Claisen condensation**: ester enolate acylation yielding beta-keto ester
+      - **Michael addition**: 1,4-conjugate addition to alpha,beta-unsaturated carbonyl
+      - **Robinson annulation**: Michael addition followed by intramolecular aldol
+      
+      ### Worked reaction example
+      A representative transformation uses **enolate + enone**.
+      
+      1. Identify the governing mechanism: **Michael addition**.
+      2. Predict the dominant product pattern: **1,4-adduct**.
+      3. Justify with a mechanistic note: soft nucleophile pathway.
+      
+      Exam tip: state mechanism class before drawing product. It reduces avoidable regio- and stereochemistry errors.
       `
     },
     {
-      id: 'enola6-quiz1',
+      id: 'ochem-enolate-chemistry-p6-s2-mcq-core',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+      **Mechanism checkpoint (2 questions)**
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains Predicting aldol and Claisen products?',
+            question: 'Choose the best definition for aldol condensation.',
             options: [
-              'Designing enolate-based syntheses',
-              'Analyzing crossed reactions for selectivity',
-              'Predicting aldol and Claisen products',
-              'Retrosynthetic analysis of ring systems'
+              'Michael addition followed by intramolecular aldol',
+              'ester enolate acylation yielding beta-keto ester',
+              '1,4-conjugate addition to alpha,beta-unsaturated carbonyl',
+              'dehydration of aldol product to enone'
             ],
-            correctAnswer: 2,
-            explanation: 'Correct — Predicting aldol and Claisen products. The other options describe different concepts from this topic.'
+            correctAnswer: 3,
+            explanation: 'aldol condensation is defined as: dehydration of aldol product to enone.'
           },
           {
-            question: 'Which of the following is true about Analyzing crossed reactions for…?',
+            question: 'A reaction in this lesson uses LDA, THF, -78 °C and proceeds by kinetic enolate generation. What product pattern should you predict first?',
             options: [
-              'Predicting aldol and Claisen products',
-              'Analyzing crossed reactions for selectivity',
-              'Retrosynthetic analysis of ring systems',
-              'Designing enolate-based syntheses'
+              'thermodynamic enolate',
+              'less substituted enolate',
+              '1,4-adduct',
+              'beta-hydroxy carbonyl'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — Analyzing crossed reactions for selectivity. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'With LDA, THF, -78 °C, the benchmark outcome is less substituted enolate. Mechanistic anchor: irreversible deprotonation.'
           }
         ]
       }
     },
     {
-      id: 'enola6-detail',
+      id: 'ochem-enolate-chemistry-p6-s3-deep-dive',
       type: 'text' as const,
       content: `
-### Key Concepts Summary
-
-- **Predicting aldol and Claisen products**
-- **Designing enolate-based syntheses**
-- **Analyzing crossed reactions for selectivity**
-- **Retrosynthetic analysis of ring systems**
+      ## Deep-Dive: Reaction Pattern Table
+      
+      Use this table as a rapid decision grid.
+      
+      | Reagents | Conditions / Mechanistic Trigger | Product Pattern | Why it works |
+      |---|---|---|---|
+      | enolate + enone | Michael addition | 1,4-adduct | soft nucleophile pathway |
+      | LDA, THF, -78 °C | kinetic enolate generation | less substituted enolate | irreversible deprotonation |
+      | NaOEt/EtOH | equilibrating base | thermodynamic enolate | reversible proton exchange |
+      | enolate + aldehyde | aldol addition | beta-hydroxy carbonyl | new C-C bond formed |
+      
+      ### Fast interpretation protocol
+      1. Map reagent set to mechanism family.
+      2. Apply regio- or stereochemical rule attached to that family.
+      3. Check whether rearrangement, equilibration, or reversibility changes the major product call.
       `
     },
     {
-      id: 'enola6-quiz2',
-      type: 'multiple-choice' as const,
+      id: 'ochem-enolate-chemistry-p6-s4-input',
+      type: 'input-boxes' as const,
       content: `
-**Concept Check** 🎯
+      **Input Practice — enter exact chemistry terms**
+      
+      1) Term for: dehydration of aldol product to enone
+      2) Term for: ester enolate acylation yielding beta-keto ester
+      3) Product pattern expected under enolate + enone
       `,
       exercise: {
-        questions: [
-          {
-            question: 'Which concept relates directly to problem-solving workshop?',
-            options: [
-              'Retrosynthetic analysis of ring systems',
-              'Only inorganic compounds',
-              'Exclusively gas-phase reactions',
-              'This applies only to polymers'
-            ],
-            correctAnswer: 0,
-            explanation: 'Retrosynthetic analysis of ring systems'
-          }
-        ]
+        boxes: 3,
+        correctAnswers: ['aldol condensation', 'Claisen condensation', '1,4-adduct'],
+        hint1: 'Blank 1 is the vocabulary term paired with: dehydration of aldol product to enone.',
+        hint2: 'Blank 2 corresponds to ester enolate acylation yielding beta-keto ester.',
+        hint3: 'Use the worked example: enolate + enone gives 1,4-adduct.',
+        explanation: 'Correct entries: aldol condensation, Claisen condensation, and 1,4-adduct. These anchor mechanism ID, vocabulary precision, and product prediction.'
       }
     },
     {
-      id: 'enola6-dropdown',
+      id: 'ochem-enolate-chemistry-p6-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Match the Concepts** 🔍
+      **Dropdown matching (3 prompts)**
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Predicting aldol and Claisen products',
-            options: ['Predicting aldol and Claisen products', 'Designing enolate-based syntheses', 'Retrosynthetic analysis of ring systems', 'Analyzing crossed reactions for selectivity']
+            label: 'Michael addition',
+            options: ['1,4-conjugate addition to alpha,beta-unsaturated carbonyl', 'Michael addition followed by intramolecular aldol', 'dehydration of aldol product to enone', 'ester enolate acylation yielding beta-keto ester']
           },
           {
-            label: 'Designing enolate-based syntheses',
-            options: ['Retrosynthetic analysis of ring systems', 'Predicting aldol and Claisen products', 'Designing enolate-based syntheses', 'Analyzing crossed reactions for selectivity']
+            label: 'Expected pattern from LDA, THF, -78 °C',
+            options: ['beta-hydroxy carbonyl', '1,4-adduct', 'less substituted enolate', 'thermodynamic enolate']
           },
           {
-            label: 'Analyzing crossed reactions for…',
-            options: ['Retrosynthetic analysis of ring systems', 'Analyzing crossed reactions for selectivity', 'Designing enolate-based syntheses', 'Predicting aldol and Claisen products']
+            label: 'Best exam strategy statement',
+            options: ['Mechanism labels should be tied to observed bond changes, not memorized by reagent names alone.', 'Claisen reactions require esters with alpha hydrogens and suitable alkoxide base.', 'Aldol addition and condensation are distinct steps.', 'Conjugate (1,4) and direct (1,2) addition give different bond placements.']
           }
         ],
-        correctAnswers: ['Predicting aldol and Claisen products', 'Designing enolate-based syntheses', 'Analyzing crossed reactions for selectivity'],
-        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Predicting aldol and Claisen products. Designing enolate-based syntheses. Analyzing crossed reactions for selectivity.'
+        correctAnswers: ['1,4-conjugate addition to alpha,beta-unsaturated carbonyl', 'less substituted enolate', 'Mechanism labels should be tied to observed bond changes, not memorized by reagent names alone.'],
+        hint1: 'First align each prompt with mechanism language before reading all options.',
+        hint2: 'For reagent prompts, eliminate outcomes that violate known regio/stereo rules.',
+        hint3: 'For strategy prompts, pick the statement that links mechanism evidence to product prediction.',
+        explanation: 'Correct matches combine mechanistic definition, reagent outcome, and exam execution strategy.'
+      }
+    },
+    {
+      id: 'ochem-enolate-chemistry-p6-s6-strategy',
+      type: 'text' as const,
+      content: `
+      ## Strategy: Prediction Traps and Exam Techniques
+      
+      ### Common traps in this part
+      - Aldol addition and condensation are distinct steps.
+      - Claisen reactions require esters with alpha hydrogens and suitable alkoxide base.
+      - Conjugate (1,4) and direct (1,2) addition give different bond placements.
+      
+      ### High-yield exam sequence
+      1. **Read reagents before substrate details** to classify mechanism class quickly.
+      2. **Mark the reactive site** (electrophilic carbon, acidic alpha-carbon, benzylic/allylic position, or aromatic position).
+      3. **Commit to one major-product logic path** before checking answer choices.
+      4. **Audit stereochemistry and regiochemistry last** so you do not lose points on orientation errors.
+      
+      ### Timing technique
+      If two options differ only by orientation or placement, spend 10 seconds restating the governing rule out loud (Markovnikov, anti addition, kinetic control, etc.) before selecting.
+      `
+    },
+    {
+      id: 'ochem-enolate-chemistry-p6-s7-mcq-final',
+      type: 'multiple-choice' as const,
+      content: `
+      **Applied synthesis/mechanism check (2 questions)**
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'In a synthesis sequence centered on retrosynthesis with enolate logic, a step uses NaOEt/EtOH. Which major product pattern is most defensible?',
+            options: [
+              '1,4-adduct',
+              'thermodynamic enolate',
+              'beta-hydroxy carbonyl',
+              'less substituted enolate'
+            ],
+            correctAnswer: 1,
+            explanation: 'NaOEt/EtOH is classically associated with thermodynamic enolate because reversible proton exchange.'
+          },
+          {
+            question: 'A mechanism rationale cites alpha hydrogen: proton adjacent to carbonyl and relatively acidic. Which interpretation applies this idea correctly in product prediction?',
+            options: [
+              'Ignore alpha hydrogen and choose products only by molecular weight.',
+              'Use alpha hydrogen to justify why the pathway favors beta-hydroxy carbonyl under enolate + aldehyde.',
+              'Use alpha hydrogen only after final answer choice selection.',
+              'Treat alpha hydrogen as a naming convention unrelated to mechanism.'
+            ],
+            correctAnswer: 1,
+            explanation: 'The correct approach applies alpha hydrogen directly to mechanism and product control. In this context, enolate + aldehyde aligns with beta-hydroxy carbonyl.'
+          }
+        ]
       }
     }
   ]
-}
+};

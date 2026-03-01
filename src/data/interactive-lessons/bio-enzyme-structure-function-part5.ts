@@ -5,7 +5,7 @@ export const bioEnzymesPart5Data = {
       id: 'enzy5-cofactors',
       type: 'text' as const,
       content: `
-# ## Cofactors & Coenzymes
+## Cofactors & Coenzymes
 
 ### Cofactors
 
@@ -53,7 +53,7 @@ export const bioEnzymesPart5Data = {
       id: 'enzy5-vitamins',
       type: 'text' as const,
       content: `
-# ## Vitamins as Coenzymes
+## Vitamins as Coenzymes
 
 Many **vitamins** function as coenzymes or coenzyme precursors.
 

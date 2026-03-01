@@ -5,7 +5,7 @@ export const bioWaterPropertiesPart3Data = {
       id: 'wate3-specific-heat',
       type: 'text' as const,
       content: `
-# ## High Specific Heat
+## High Specific Heat
 
 Water has an unusually **high specific heat capacity**: 4.184 J/(g·°C).
 
@@ -52,7 +52,7 @@ This means water resists temperature change — it absorbs or releases a large a
       id: 'wate3-evap',
       type: 'text' as const,
       content: `
-# ## Evaporative Cooling & Heat of Vaporization
+## Evaporative Cooling & Heat of Vaporization
 
 Water has a **high heat of vaporization** (2,260 J/g) — it takes a lot of energy to convert liquid water to gas.
 

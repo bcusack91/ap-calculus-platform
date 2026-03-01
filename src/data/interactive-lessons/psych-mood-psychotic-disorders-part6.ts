@@ -2,123 +2,184 @@ export const psychMoodPsychPart6Data = {
   topicSlug: 'mood-psychotic-disorders',
   sections: [
     {
-      id: 'mood-6-intro',
+      id: 'mood-psychotic-disorders-p6-s1-intro',
       type: 'text' as const,
       content: `
-# ## Problem-Solving Workshop
+      # 🧠 Mood and Psychotic Disorders
 
-**Part 6 of 7 — Problem-Solving Workshop**
+      **Part 6 of 7 — Case Formulation and Data**
 
-### 1. Differentiating mood disorders
+      In this part, you will connect core psychological vocabulary to realistic contexts and AP-style reasoning. Focus on mechanism first, then evidence.
 
-Differentiating mood disorders
+      ### Core Definitions
+      - **major depressive disorder**: persistent low mood or loss of interest with functional impairment
+      - **persistent depressive disorder**: chronic depressed mood lasting at least two years
+      - **mania**: elevated or irritable mood with increased energy and reduced need for sleep
 
-### 2. Identifying schizophrenia symptoms
+      ### Concrete Real-World Example
+      A team is studying analyzing symptom timeline case notes. They operationalize variables, compare plausible explanations, and look for the interpretation that best matches observed behavior instead of relying on intuition.
 
-Identifying schizophrenia symptoms
-
-### 3. Analyzing neurotransmitter involvement
-
-Analyzing neurotransmitter involvement
-
-### 4. Evaluating diagnostic criteria
-
-Evaluating diagnostic criteria
+      ### Why This Matters
+      Strong AP responses define terms precisely, apply them to evidence, and justify why one interpretation is stronger than alternatives.
       `
     },
     {
-      id: 'mood-6-quiz1',
+      id: 'mood-psychotic-disorders-p6-s2-check',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+      **Concept Check** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What does "Differentiating mood disorders" refer to in psychology?',
+            question: 'In a study about analyzing symptom timeline case notes, participants change behavior after repeatedly seeing the same cue. Which concept is the best fit?',
             options: [
-              'Evaluating diagnostic criteria',
-              'Differentiating mood disorders',
-              'Analyzing neurotransmitter involvement',
-              'Identifying schizophrenia symptoms'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Differentiating mood disorders. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Select the statement that correctly describes Analyzing neurotransmitter involvement:',
-            options: [
-              'Differentiating mood disorders',
-              'Identifying schizophrenia symptoms',
-              'Analyzing neurotransmitter involvement',
-              'Evaluating diagnostic criteria'
+              'persistent depressive disorder',
+              'bipolar disorder',
+              'major depressive disorder',
+              'mania'
             ],
             correctAnswer: 2,
-            explanation: 'Correct — Analyzing neurotransmitter involvement. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'major depressive disorder is correct because it directly matches this mechanism: persistent low mood or loss of interest with functional impairment. The distractors describe related but different processes.'
+          },
+          {
+            question: 'Researchers report that behavior shifts when participants receive a specific cue and then justify their choices afterward. Which concept best explains that pattern?',
+            options: [
+              'persistent depressive disorder',
+              'mania',
+              'hallucination',
+              'delusion'
+            ],
+            correctAnswer: 3,
+            explanation: 'delusion is the strongest match here (a fixed false belief resistant to contradictory evidence). The other options do not explain both the cue-driven shift and the observed response pattern as directly.'
           }
         ]
       }
     },
     {
-      id: 'mood-6-detail',
+      id: 'mood-psychotic-disorders-p6-s3-deep',
       type: 'text' as const,
       content: `
-# ### Key Points
+      ## Deep Dive: Comparing Explanations with Evidence
 
-- **Differentiating mood disorders**
-- **Identifying schizophrenia symptoms**
-- **Analyzing neurotransmitter involvement**
-- **Evaluating diagnostic criteria**
+      When analyzing analyzing symptom timeline case notes, the best interpretation ties a clear psychological mechanism to measurable evidence.
+
+      | Theory / Concept | Core claim | Typical evidence | Common limitation |
+      |---|---|---|---|
+      | major depressive disorder | persistent low mood or loss of interest with functional impairment | experimental manipulation with random assignment | possible demand characteristics |
+      | persistent depressive disorder | chronic depressed mood lasting at least two years | longitudinal trend with repeated measurement | third-variable risk in natural settings |
+      | mania | elevated or irritable mood with increased energy and reduced need for sleep | cross-sectional comparison with matched groups | limited generalizability across cultures |
+      | bipolar disorder | disorder involving episodes of depression and mania or hypomania | mixed-method evidence combining survey and behavioral indicators | measurement validity depends on construct quality |
+
+      ### Interpretation Strategy
+      1. Name the mechanism before describing outcomes.
+      2. Match the claim to the strongest available evidence type.
+      3. Acknowledge one limitation and explain whether it changes the conclusion.
+
+      This structure helps you earn reasoning points on free-response and avoid vague claims.
       `
     },
     {
-      id: 'mood-6-quiz2',
-      type: 'multiple-choice' as const,
+      id: 'mood-psychotic-disorders-p6-s4-input',
+      type: 'input-boxes' as const,
       content: `
-**Concept Check** 🎯
+      **Applied Recall (exact term answers)** ✍️
+
+      1) Write the concept that matches: persistent low mood or loss of interest with functional impairment
+      2) Write the concept that matches: chronic depressed mood lasting at least two years
+      3) Write the concept that matches: elevated or irritable mood with increased energy and reduced need for sleep
+
+      Use the exact vocabulary term from this part.
       `,
       exercise: {
-        questions: [
-          {
-            question: 'Which concept relates directly to problem-solving workshop?',
-            options: [
-              'Evaluating diagnostic criteria',
-              'Only biological factors',
-              'Exclusively cognitive processes',
-              'Mathematical formulas only'
-            ],
-            correctAnswer: 0,
-            explanation: 'Evaluating diagnostic criteria'
-          }
-        ]
+        boxes: 3,
+        correctAnswers: ['major depressive disorder', 'persistent depressive disorder', 'mania'],
+        hint1: 'Starts with: M',
+        hint2: 'Starts with: P',
+        hint3: 'Starts with: M',
+        explanation: 'Expected answers: major depressive disorder, persistent depressive disorder, and mania. Each response should use the precise term connected to the definition cue.'
       }
     },
     {
-      id: 'mood-6-dropdown',
+      id: 'mood-psychotic-disorders-p6-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Match the Concepts** 🔍
+      **Model Matching** 🔎
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Differentiating mood disorders',
-            options: ['Differentiating mood disorders', 'Identifying schizophrenia symptoms', 'Analyzing neurotransmitter involvement', 'Evaluating diagnostic criteria']
+            label: 'Select the concept that best matches: persistent low mood or loss of interest with functional impairment',
+            options: ['bipolar disorder', 'hallucination', 'mania', 'major depressive disorder']
           },
           {
-            label: 'Identifying schizophrenia symptoms',
-            options: ['Analyzing neurotransmitter involvement', 'Differentiating mood disorders', 'Evaluating diagnostic criteria', 'Identifying schizophrenia symptoms']
+            label: 'Select the concept that best matches: chronic depressed mood lasting at least two years',
+            options: ['delusion', 'bipolar disorder', 'persistent depressive disorder', 'major depressive disorder']
           },
           {
-            label: 'Analyzing neurotransmitter involvement',
-            options: ['Differentiating mood disorders', 'Evaluating diagnostic criteria', 'Analyzing neurotransmitter involvement', 'Identifying schizophrenia symptoms']
+            label: 'Select the concept that best matches: elevated or irritable mood with increased energy and reduced need for sleep',
+            options: ['major depressive disorder', 'bipolar disorder', 'persistent depressive disorder', 'mania']
           }
         ],
-        correctAnswers: ['Differentiating mood disorders', 'Identifying schizophrenia symptoms', 'Analyzing neurotransmitter involvement'],
-        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Differentiating mood disorders. Identifying schizophrenia symptoms. Analyzing neurotransmitter involvement.'
+        correctAnswers: ['major depressive disorder', 'persistent depressive disorder', 'mania'],
+        hint1: 'Start by matching the key mechanism in each prompt to the most specific concept.',
+        hint2: 'Eliminate options that describe a different level of analysis (biological vs cognitive vs social).',
+        hint3: 'Use the definition language from this part to avoid near-miss terms.',
+        explanation: 'Correct matches are major depressive disorder, persistent depressive disorder, and mania. These choices align with the mechanism-language in each definition, not just broad topic similarity.'
+      }
+    },
+    {
+      id: 'mood-psychotic-disorders-p6-s6-strategy',
+      type: 'text' as const,
+      content: `
+      ## Common Misconceptions and Exam Strategy
+
+      ### Misconceptions to Avoid
+      - Mood changes alone are insufficient for diagnosis without duration and impairment criteria.
+      - Psychotic symptoms can occur in several disorders and must be interpreted in context.
+      - Bipolar disorder is not simply rapid mood swings; episodes have specific patterns.
+      - Treatment planning should address comorbidity and functioning, not only symptom labels.
+
+      ### AP Strategy Moves
+      - Define the target concept in one precise sentence before giving examples.
+      - In scenario questions about analyzing symptom timeline case notes, identify the manipulated variable and measured outcome.
+      - Use one competing explanation and explain why it is weaker.
+      - If data are provided, mention trend direction and at least one design limitation.
+
+      This combination of precision and evidence improves both multiple-choice accuracy and free-response scoring.
+      `
+    },
+    {
+      id: 'mood-psychotic-disorders-p6-s7-applied',
+      type: 'multiple-choice' as const,
+      content: `
+      **Applied Scenarios** 🎯
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'A team investigating analyzing symptom timeline case notes finds that participants rely on a persuasive cue when they are distracted, but use argument quality when they are highly focused. Which concept best captures the focused-processing route?',
+            options: [
+              'major depressive disorder',
+              'mania',
+              'bipolar disorder',
+              'persistent depressive disorder'
+            ],
+            correctAnswer: 2,
+            explanation: 'bipolar disorder is best because it reflects this mechanism (disorder involving episodes of depression and mania or hypomania). The other options describe different levels of explanation or related constructs.'
+          },
+          {
+            question: 'After an intervention, scores improve in the treatment group but not in a matched comparison group. Which interpretation is most defensible for the targeted mechanism?',
+            options: [
+              'mania',
+              'delusion',
+              'persistent depressive disorder',
+              'hallucination'
+            ],
+            correctAnswer: 1,
+            explanation: 'delusion is the strongest interpretation because it maps to the measured pattern and proposed mechanism: a fixed false belief resistant to contradictory evidence. Good AP reasoning also notes alternative explanations and design limits.'
+          }
+        ]
       }
     }
   ]

@@ -2,123 +2,184 @@ export const psychGeneticsPart2Data = {
   topicSlug: 'genetics-behavior',
   sections: [
     {
-      id: 'genet2-intro',
+      id: 'genetics-behavior-p2-s1-intro',
       type: 'text' as const,
       content: `
-# ## Behavioral Genetics
+      # 🧠 Genetics and Behavior
 
-**Part 2 of 7 — Behavioral Genetics**
+      **Part 2 of 7 — Twin and Adoption Designs**
 
-### 1. Heritability
+      In this part, you will connect core psychological vocabulary to realistic contexts and AP-style reasoning. Focus on mechanism first, then evidence.
 
-proportion of variation due to genetics
+      ### Core Definitions
+      - **phenotype**: observable characteristics produced by genes and environment
+      - **polygenic**: influenced by many genes with small effects
+      - **gene-environment interaction**: when environmental effects differ by genotype
 
-### 2. Temperament
+      ### Concrete Real-World Example
+      A team is studying adoption outcomes for language development. They operationalize variables, compare plausible explanations, and look for the interpretation that best matches observed behavior instead of relying on intuition.
 
-inborn behavioral style
-
-### 3. Behavioral genetics methods
-
-twin, adoption, family studies
-
-### 4. Heritability of intelligence
-
-~50-80%
+      ### Why This Matters
+      Strong AP responses define terms precisely, apply them to evidence, and justify why one interpretation is stronger than alternatives.
       `
     },
     {
-      id: 'genet2-quiz1',
+      id: 'genetics-behavior-p2-s2-check',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+      **Concept Check** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What does "Heritability" refer to in psychology?',
+            question: 'In a study about adoption outcomes for language development, participants change behavior after repeatedly seeing the same cue. Which concept is the best fit?',
             options: [
-              'inborn behavioral style',
-              '~50-80%',
-              'proportion of variation due to genetics',
-              'twin, adoption, family studies'
+              'phenotype',
+              'gene-environment interaction',
+              'polygenic',
+              'epigenetics'
             ],
-            correctAnswer: 2,
-            explanation: 'Correct — Heritability: proportion of variation due to genetics. The other options describe different concepts from this topic.'
+            correctAnswer: 0,
+            explanation: 'phenotype is correct because it directly matches this mechanism: observable characteristics produced by genes and environment. The distractors describe related but different processes.'
           },
           {
-            question: 'Select the statement that correctly describes Behavioral genetics methods:',
+            question: 'Researchers report that behavior shifts when participants receive a specific cue and then justify their choices afterward. Which concept best explains that pattern?',
             options: [
-              'twin, adoption, family studies',
-              '~50-80%',
-              'inborn behavioral style',
-              'proportion of variation due to genetics'
+              'polygenic',
+              'concordance',
+              'reaction range',
+              'gene-environment interaction'
             ],
-            correctAnswer: 0,
-            explanation: 'Correct — Behavioral genetics methods: twin, adoption, family studies. Be careful to distinguish between the different concepts in this topic.'
+            correctAnswer: 1,
+            explanation: 'concordance is the strongest match here (the degree to which related individuals share a trait). The other options do not explain both the cue-driven shift and the observed response pattern as directly.'
           }
         ]
       }
     },
     {
-      id: 'genet2-detail',
+      id: 'genetics-behavior-p2-s3-deep',
       type: 'text' as const,
       content: `
-# ### Key Points
+      ## Deep Dive: Comparing Explanations with Evidence
 
-- **Heritability**: proportion of variation due to genetics
-- **Temperament**: inborn behavioral style
-- **Behavioral genetics methods**: twin, adoption, family studies
-- **Heritability of intelligence**: ~50-80%
+      When analyzing adoption outcomes for language development, the best interpretation ties a clear psychological mechanism to measurable evidence.
+
+      | Theory / Concept | Core claim | Typical evidence | Common limitation |
+      |---|---|---|---|
+      | phenotype | observable characteristics produced by genes and environment | experimental manipulation with random assignment | possible demand characteristics |
+      | polygenic | influenced by many genes with small effects | longitudinal trend with repeated measurement | third-variable risk in natural settings |
+      | gene-environment interaction | when environmental effects differ by genotype | cross-sectional comparison with matched groups | limited generalizability across cultures |
+      | epigenetics | changes in gene expression without altering DNA sequence | mixed-method evidence combining survey and behavioral indicators | measurement validity depends on construct quality |
+
+      ### Interpretation Strategy
+      1. Name the mechanism before describing outcomes.
+      2. Match the claim to the strongest available evidence type.
+      3. Acknowledge one limitation and explain whether it changes the conclusion.
+
+      This structure helps you earn reasoning points on free-response and avoid vague claims.
       `
     },
     {
-      id: 'genet2-quiz2',
-      type: 'multiple-choice' as const,
+      id: 'genetics-behavior-p2-s4-input',
+      type: 'input-boxes' as const,
       content: `
-**Concept Check** 🎯
+      **Applied Recall (exact term answers)** ✍️
+
+      1) Write the concept that matches: observable characteristics produced by genes and environment
+      2) Write the concept that matches: influenced by many genes with small effects
+      3) Write the concept that matches: when environmental effects differ by genotype
+
+      Use the exact vocabulary term from this part.
       `,
       exercise: {
-        questions: [
-          {
-            question: 'Which concept relates directly to behavioral genetics?',
-            options: [
-              '~50-80%',
-              'Only biological factors',
-              'Exclusively cognitive processes',
-              'Mathematical formulas only'
-            ],
-            correctAnswer: 0,
-            explanation: 'Heritability of intelligence: ~50-80%'
-          }
-        ]
+        boxes: 3,
+        correctAnswers: ['phenotype', 'polygenic', 'gene-environment interaction'],
+        hint1: 'Starts with: P',
+        hint2: 'Starts with: P',
+        hint3: 'Starts with: G',
+        explanation: 'Expected answers: phenotype, polygenic, and gene-environment interaction. Each response should use the precise term connected to the definition cue.'
       }
     },
     {
-      id: 'genet2-dropdown',
+      id: 'genetics-behavior-p2-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Match the Concepts** 🔍
+      **Model Matching** 🔎
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Heritability',
-            options: ['proportion of variation due to genetics', '~50-80%', 'inborn behavioral style', 'twin, adoption, family studies']
+            label: 'Select the concept that best matches: observable characteristics produced by genes and environment',
+            options: ['phenotype', 'concordance', 'epigenetics', 'polygenic']
           },
           {
-            label: 'Temperament',
-            options: ['twin, adoption, family studies', 'proportion of variation due to genetics', '~50-80%', 'inborn behavioral style']
+            label: 'Select the concept that best matches: influenced by many genes with small effects',
+            options: ['gene-environment interaction', 'reaction range', 'polygenic', 'phenotype']
           },
           {
-            label: 'Behavioral genetics methods',
-            options: ['twin, adoption, family studies', 'proportion of variation due to genetics', 'inborn behavioral style', '~50-80%']
+            label: 'Select the concept that best matches: when environmental effects differ by genotype',
+            options: ['gene-environment interaction', 'polygenic', 'epigenetics', 'phenotype']
           }
         ],
-        correctAnswers: ['proportion of variation due to genetics', 'inborn behavioral style', 'twin, adoption, family studies'],
-        hint1: 'Think about what each concept specifically describes in Behavioral Genetics.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Behavioral Genetics describes a specific idea. Heritability: proportion of variation due to genetics. Temperament: inborn behavioral style. Behavioral genetics methods: twin, adoption, family studies.'
+        correctAnswers: ['phenotype', 'polygenic', 'gene-environment interaction'],
+        hint1: 'Start by matching the key mechanism in each prompt to the most specific concept.',
+        hint2: 'Eliminate options that describe a different level of analysis (biological vs cognitive vs social).',
+        hint3: 'Use the definition language from this part to avoid near-miss terms.',
+        explanation: 'Correct matches are phenotype, polygenic, and gene-environment interaction. These choices align with the mechanism-language in each definition, not just broad topic similarity.'
+      }
+    },
+    {
+      id: 'genetics-behavior-p2-s6-strategy',
+      type: 'text' as const,
+      content: `
+      ## Common Misconceptions and Exam Strategy
+
+      ### Misconceptions to Avoid
+      - High heritability does not mean a trait is fixed or unchangeable.
+      - Heritability applies to populations, not to an individual person.
+      - Genes set probabilities, not precise destinies, for complex behavior.
+      - Shared family context does not explain all sibling similarity.
+
+      ### AP Strategy Moves
+      - Define the target concept in one precise sentence before giving examples.
+      - In scenario questions about adoption outcomes for language development, identify the manipulated variable and measured outcome.
+      - Use one competing explanation and explain why it is weaker.
+      - If data are provided, mention trend direction and at least one design limitation.
+
+      This combination of precision and evidence improves both multiple-choice accuracy and free-response scoring.
+      `
+    },
+    {
+      id: 'genetics-behavior-p2-s7-applied',
+      type: 'multiple-choice' as const,
+      content: `
+      **Applied Scenarios** 🎯
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'A team investigating adoption outcomes for language development finds that participants rely on a persuasive cue when they are distracted, but use argument quality when they are highly focused. Which concept best captures the focused-processing route?',
+            options: [
+              'epigenetics',
+              'polygenic',
+              'phenotype',
+              'gene-environment interaction'
+            ],
+            correctAnswer: 0,
+            explanation: 'epigenetics is best because it reflects this mechanism (changes in gene expression without altering DNA sequence). The other options describe different levels of explanation or related constructs.'
+          },
+          {
+            question: 'After an intervention, scores improve in the treatment group but not in a matched comparison group. Which interpretation is most defensible for the targeted mechanism?',
+            options: [
+              'concordance',
+              'reaction range',
+              'gene-environment interaction',
+              'polygenic'
+            ],
+            correctAnswer: 0,
+            explanation: 'concordance is the strongest interpretation because it maps to the measured pattern and proposed mechanism: the degree to which related individuals share a trait. Good AP reasoning also notes alternative explanations and design limits.'
+          }
+        ]
       }
     }
   ]

@@ -2,108 +2,81 @@ export const satTestDayPart1Data = {
   topicSlug: 'sat-test-day-strategy-sat',
   sections: [
     {
-      id: 'sat-t1-intro',
+      id: 'sat-test-p1-intro',
       type: 'text' as const,
       content: `
-# 📝 Test Day Strategy
+# 📋 Before Test Day
 
-**Part 1 of 7 — Test Format & Timing**
+**Part 1 of 7 — Before Test Day**
 
-Total: ~3 hours + breaks.
+Registration, materials checklist, study schedule in final week
 
-Reading: 65 min, 52 questions; Writing: 35 min, 44 questions.
+This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+
+**Key Concepts in This Section:**
+- Core principles and definitions
+- Step-by-step problem-solving methods
+- Common SAT question patterns
+- Strategic tips for test day
       `
     },
     {
-      id: 'sat-t1-quiz1',
+      id: 'sat-test-p1-check',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+**Quick Check** 🔍
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Total?',
+            question: 'Based on the concepts in this section, which approach is most effective?',
             options: [
-              'Math No-Calc: 25 min, 20 questions; Math Calculator: 55 min, 38 questions.',
-              '~3 hours + breaks.',
-              '65 min, 52 questions; Writing: 35 min, 44 questions.',
-              'Bring: admission ticket, photo ID, #2 pencils, approved calculator, snacks for breaks.'
+              'Memorize formulas without understanding when to apply them',
+              'Understand the underlying concepts and practice with varied problems',
+              'Only practice problems you find easy to build confidence',
+              'Skip practice and rely on intuition during the test'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — Total: ~3 hours + breaks. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Which of the following is true about Key Insight?',
-            options: [
-              '~3 hours + breaks.',
-              '65 min, 52 questions; Writing: 35 min, 44 questions.',
-              'Math No-Calc: 25 min, 20 questions; Math Calculator: 55 min, 38 questions.',
-              'Bring: admission ticket, photo ID, #2 pencils, approved calculator, snacks for breaks.'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Key Insight: Math No-Calc: 25 min, 20 questions; Math Calculator: 55 min, 38 questions. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
           }
         ]
       }
     },
     {
-      id: 'sat-t1-detail',
+      id: 'sat-test-p1-detail',
       type: 'text' as const,
       content: `
-**Key Insight:** Math No-Calc: 25 min, 20 questions; Math Calculator: 55 min, 38 questions.
+**Detailed Concepts & Examples**
 
-**SAT Tip:** Bring: admission ticket, photo ID, #2 pencils, approved calculator, snacks for breaks.
+This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
+
+1. **Identify** the type of problem quickly
+2. **Apply** the correct method systematically
+3. **Verify** your answer makes sense in context
+
+Work through each example carefully before attempting the practice problems below.
       `
     },
     {
-      id: 'sat-t1-quiz2',
+      id: 'sat-test-p1-practice',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+**SAT-Style Questions** 📋
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement about SAT Tip is correct?',
+            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
             options: [
-              'Math No-Calc: 25 min, 20 questions; Math Calculator: 55 min, 38 questions.',
-              '~3 hours + breaks.',
-              '65 min, 52 questions; Writing: 35 min, 44 questions.',
-              'Bring: admission ticket, photo ID, #2 pencils, approved calculator, snacks for breaks.'
+              'Guess and move on quickly',
+              'Identify what the question is actually asking for',
+              'Try every formula you know until one works',
+              'Skip it permanently'
             ],
-            correctAnswer: 3,
-            explanation: 'Correct — SAT Tip: Bring: admission ticket, photo ID, #2 pencils, approved calculator, snacks for breaks. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            correctAnswer: 1,
+            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
           }
         ]
-      }
-    },
-    {
-      id: 'sat-t1-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Total',
-            options: ['Math No-Calc: 25 min, 20 questions; Math Calculator: 55 min, 38 questions.', '65 min, 52 questions; Writing: 35 min, 44 questions.', '~3 hours + breaks.', 'Bring: admission ticket, photo ID, #2 pencils, approved calculator, snacks for breaks.']
-          },
-          {
-            label: 'Reading',
-            options: ['65 min, 52 questions; Writing: 35 min, 44 questions.', 'Bring: admission ticket, photo ID, #2 pencils, approved calculator, snacks for breaks.', 'Math No-Calc: 25 min, 20 questions; Math Calculator: 55 min, 38 questions.', '~3 hours + breaks.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['Math No-Calc: 25 min, 20 questions; Math Calculator: 55 min, 38 questions.', '~3 hours + breaks.', '65 min, 52 questions; Writing: 35 min, 44 questions.', 'Bring: admission ticket, photo ID, #2 pencils, approved calculator, snacks for breaks.']
-          }
-        ],
-        correctAnswers: ['~3 hours + breaks.', '65 min, 52 questions; Writing: 35 min, 44 questions.', 'Math No-Calc: 25 min, 20 questions; Math Calculator: 55 min, 38 questions.'],
-        hint1: 'Think about what each concept specifically describes in Test Day Strategy.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Test Day Strategy describes a specific idea. Total: ~3 hours + breaks. Reading: 65 min, 52 questions; Writing: 35 min, 44 questions. Key Insight: Math No-Calc: 25 min, 20 questions; Math Calculator: 55 min, 38 questions.'
       }
     }
   ]

@@ -2,108 +2,81 @@ export const satWordProblemsPart2Data = {
   topicSlug: 'sat-word-problems-sat',
   sections: [
     {
-      id: 'sat-w2-intro',
+      id: 'sat-word-p2-intro',
       type: 'text' as const,
       content: `
-# Rate & Work Problems
+# 💰 Money & Age Problems
 
-**Part 2 of 7 — Rate & Work Problems**
+**Part 2 of 7 — Money & Age Problems**
 
-Distance = Rate × Time (d = rt).
+Classic word problem types with systematic solution methods
 
-Work rate: if A does a job in a hours, rate = 1/a per hour.
+This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+
+**Key Concepts in This Section:**
+- Core principles and definitions
+- Step-by-step problem-solving methods
+- Common SAT question patterns
+- Strategic tips for test day
       `
     },
     {
-      id: 'sat-w2-quiz1',
+      id: 'sat-word-p2-check',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+**Quick Check** 🔍
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Distance = Rate × Time (d = rt).?',
+            question: 'Based on the concepts in this section, which approach is most effective?',
             options: [
-              'Distance = Rate × Time (d = rt).',
-              'Combined work: 1/a + 1/b = 1/t where t is time together.',
-              'if A does a job in a hours, rate = 1/a per hour.',
-              'Two objects moving: determine if approaching (subtract speeds) or separating (add speeds).'
+              'Memorize formulas without understanding when to apply them',
+              'Understand the underlying concepts and practice with varied problems',
+              'Only practice problems you find easy to build confidence',
+              'Skip practice and rely on intuition during the test'
             ],
-            correctAnswer: 0,
-            explanation: 'Correct — Distance = Rate × Time (d = rt). The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Select the statement that correctly describes Key Insight:',
-            options: [
-              'Distance = Rate × Time (d = rt).',
-              'Two objects moving: determine if approaching (subtract speeds) or separating (add speeds).',
-              'Combined work: 1/a + 1/b = 1/t where t is time together.',
-              'if A does a job in a hours, rate = 1/a per hour.'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Key Insight: Combined work: 1/a + 1/b = 1/t where t is time together. Be careful to distinguish between the different concepts in this topic.'
+            correctAnswer: 1,
+            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
           }
         ]
       }
     },
     {
-      id: 'sat-w2-detail',
+      id: 'sat-word-p2-detail',
       type: 'text' as const,
       content: `
-**Key Insight:** Combined work: 1/a + 1/b = 1/t where t is time together.
+**Detailed Concepts & Examples**
 
-**SAT Tip:** Two objects moving: determine if approaching (subtract speeds) or separating (add speeds).
+This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
+
+1. **Identify** the type of problem quickly
+2. **Apply** the correct method systematically
+3. **Verify** your answer makes sense in context
+
+Work through each example carefully before attempting the practice problems below.
       `
     },
     {
-      id: 'sat-w2-quiz2',
+      id: 'sat-word-p2-practice',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+**SAT-Style Questions** 📋
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of these accurately represents SAT Tip?',
+            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
             options: [
-              'if A does a job in a hours, rate = 1/a per hour.',
-              'Combined work: 1/a + 1/b = 1/t where t is time together.',
-              'Distance = Rate × Time (d = rt).',
-              'Two objects moving: determine if approaching (subtract speeds) or separating (add speeds).'
+              'Guess and move on quickly',
+              'Identify what the question is actually asking for',
+              'Try every formula you know until one works',
+              'Skip it permanently'
             ],
-            correctAnswer: 3,
-            explanation: 'Correct — SAT Tip: Two objects moving: determine if approaching (subtract speeds) or separating (add speeds). Each option describes a real concept from this topic, so pay attention to the specific details.'
+            correctAnswer: 1,
+            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
           }
         ]
-      }
-    },
-    {
-      id: 'sat-w2-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Work rate',
-            options: ['if A does a job in a hours, rate = 1/a per hour.', 'Combined work: 1/a + 1/b = 1/t where t is time together.', 'Two objects moving: determine if approaching (subtract speeds) or separating (add speeds).', 'Distance = Rate × Time (d = rt).']
-          },
-          {
-            label: 'Key Insight',
-            options: ['Distance = Rate × Time (d = rt).', 'if A does a job in a hours, rate = 1/a per hour.', 'Two objects moving: determine if approaching (subtract speeds) or separating (add speeds).', 'Combined work: 1/a + 1/b = 1/t where t is time together.']
-          },
-          {
-            label: 'SAT Tip',
-            options: ['Combined work: 1/a + 1/b = 1/t where t is time together.', 'if A does a job in a hours, rate = 1/a per hour.', 'Two objects moving: determine if approaching (subtract speeds) or separating (add speeds).', 'Distance = Rate × Time (d = rt).']
-          }
-        ],
-        correctAnswers: ['if A does a job in a hours, rate = 1/a per hour.', 'Combined work: 1/a + 1/b = 1/t where t is time together.', 'Two objects moving: determine if approaching (subtract speeds) or separating (add speeds).'],
-        hint1: 'Think about what each concept specifically describes in Rate & Work Problems.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Rate & Work Problems describes a specific idea. Work rate: if A does a job in a hours, rate = 1/a per hour. Key Insight: Combined work: 1/a + 1/b = 1/t where t is time together. SAT Tip: Two objects moving: determine if approaching (subtract speeds) or separating (add speeds).'
       }
     }
   ]

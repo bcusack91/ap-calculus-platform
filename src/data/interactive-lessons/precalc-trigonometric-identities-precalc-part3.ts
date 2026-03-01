@@ -2,124 +2,197 @@ export const precalcTrigIdentitiesPart3Data = {
   topicSlug: 'trigonometric-identities-precalc',
   sections: [
     {
-      id: 'trigo3-intro',
+      id: 'precalc-trigonometric-identities-precalc-p3-s1-intro',
       type: 'text' as const,
       content: `
-# Sum & Difference Formulas
-
-**Part 3 of 7 — Sum & Difference Formulas**
-
-### 1. sin(A + B) = sin A cos B + cos A sin B
-
-sin(A + B) = sin A cos B + cos A sin B
-
-### 2. sin(A - B) = sin A cos B - cos A sin B
-
-sin(A - B) = sin A cos B - cos A sin B
-
-### 3. cos(A + B) = cos A cos B - sin A sin B
-
-cos(A + B) = cos A cos B - sin A sin B
-
-### 4. cos(A - B) = cos A cos B + sin A sin B
-
-cos(A - B) = cos A cos B + sin A sin B
+      ## Trigonometric Identities: Even-odd and cofunction identities
+      
+      **Part 3 of 7**
+      
+      This part focuses on using symmetry for angle sign checks. Keep notation precise and connect each symbolic step to geometric or functional meaning.
+      
+      ### Core definitions
+      - **reciprocal identity**: $\sec\\heta=
+      rac1{\cos\\heta}$ and analogs
+      - **even-odd identity**: sign behavior under $\\heta\mapsto -\\heta$
+      - **cofunction identity**: relation between complementary angles
+      
+      
+      ### Worked Example
+      Simplify $
+      rac{1-\cos^2\\heta}{\sin\\heta}$ for $\sin\\heta
+      eq0$.
+      
+      Use $1-\cos^2\\heta=\sin^2\\heta$:
+      
+      $$
+      rac{1-\cos^2\\heta}{\sin\\heta}=
+      rac{\sin^2\\heta}{\sin\\heta}=\sin\\heta$$
+      
+      Identity substitution first, then cancellation, keeps the algebra clean.
       `
     },
     {
-      id: 'trigo3-quiz1',
+      id: 'precalc-trigonometric-identities-precalc-p3-s2-mcq-core',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+      **Multiple-choice check (2 questions)**
       `,
       exercise: {
         questions: [
           {
-            question: 'What does "sin(A + B) = sin A cos B + cos A sin B" refer to in precalculus?',
+            question: 'Choose the most accurate definition of reciprocal identity.',
             options: [
-              'cos(A - B) = cos A cos B + sin A sin B',
-              'sin(A + B) = sin A cos B + cos A sin B',
-              'sin(A - B) = sin A cos B - cos A sin B',
-              'cos(A + B) = cos A cos B - sin A sin B'
+              'formula for trig of $A\\pm B$',
+              'sign behavior under $\\heta\\mapsto -\\heta$',
+              '$\\sec\\heta=\\rac1{\\cos\\heta}$ and analogs',
+              'relation between complementary angles'
             ],
-            correctAnswer: 1,
-            explanation: 'Correct — sin(A + B) = sin A cos B + cos A sin B. The other options describe different concepts from this topic.'
+            correctAnswer: 2,
+            explanation: 'reciprocal identity is defined as: $\\sec\\heta=\\rac1{\\cos\\heta}$ and analogs.'
           },
           {
-            question: 'Select the statement that correctly describes cos(A + B) = cos A cos B - sin A sin B:',
+            question: 'In using symmetry for angle sign checks, which expression is the best starting model?',
             options: [
-              'sin(A - B) = sin A cos B - cos A sin B',
-              'sin(A + B) = sin A cos B + cos A sin B',
-              'cos(A - B) = cos A cos B + sin A sin B',
-              'cos(A + B) = cos A cos B - sin A sin B'
+              '$\\cos(A+B)=\\cos A\\cos B-\\sin A\\sin B$',
+              '$\\sin^2\\theta+\\cos^2\\theta=1$',
+              '$\\tan\\theta=\\frac{\\sin\\theta}{\\cos\\theta}$',
+              '$\\sin(2\\theta)=2\\sin\\theta\\cos\\theta$'
             ],
-            correctAnswer: 3,
-            explanation: 'Correct — cos(A + B) = cos A cos B - sin A sin B. Be careful to distinguish between the different concepts in this topic.'
+            correctAnswer: 0,
+            explanation: 'Use $\\cos(A+B)=\\cos A\\cos B-\\sin A\\sin B$ first, then substitute known quantities from the prompt.'
           }
         ]
       }
     },
     {
-      id: 'trigo3-detail',
+      id: 'precalc-trigonometric-identities-precalc-p3-s3-deep-dive',
       type: 'text' as const,
       content: `
-### Key Concepts Summary
-
-- **sin(A + B) = sin A cos B + cos A sin B**
-- **sin(A - B) = sin A cos B - cos A sin B**
-- **cos(A + B) = cos A cos B - sin A sin B**
-- **cos(A - B) = cos A cos B + sin A sin B**
+      ### Deep-Dive: formulas and decision rules
+      
+      Use this table to pick the right expression before computing.
+      
+      | Tool | Formula | Best use |
+      |---|---|---|
+      | Cosine sum | $\cos(A+B)=\cos A\cos B-\sin A\sin B$ | angle combination |
+      | Sine double-angle | $\sin(2\theta)=2\sin\theta\cos\theta$ | power reduction and simplification |
+      | Pythagorean | $\sin^2\theta+\cos^2\theta=1$ | fundamental conversion |
+      | Tangent | $\tan\theta=\frac{\sin\theta}{\cos\theta}$ | quotient rewrite |
+      
+      ### Common pitfalls
+      - Choose one target form early to prevent circular verification.
+      - Do not treat identities as equations to solve unless the task requests solving.
+      - Keep track of domain restrictions when dividing by trig expressions.
+      
+      ### Precision checks
+      1. Identify givens and unknowns before selecting a formula.
+      2. Keep exact values through symbolic simplification when possible.
+      3. Verify units, angle mode, or domain constraints before finalizing.
       `
     },
     {
-      id: 'trigo3-quiz2',
-      type: 'multiple-choice' as const,
+      id: 'precalc-trigonometric-identities-precalc-p3-s4-input',
+      type: 'input-boxes' as const,
       content: `
-**Concept Check** 🎯
+      **Input Practice — Identity Values**
+      
+      1) Compute $\sin^2 30^\circ + \cos^2 30^\circ$.
+      2) Compute $\\an 45^\circ$.
+      3) Compute $\sec 60^\circ$.
       `,
       exercise: {
-        questions: [
-          {
-            question: 'Which concept relates directly to sum & difference formulas?',
-            options: [
-              'cos(A - B) = cos A cos B + sin A sin B',
-              'Only complex analysis',
-              'Exclusively abstract algebra',
-              'This applies only to statistics'
-            ],
-            correctAnswer: 0,
-            explanation: 'cos(A - B) = cos A cos B + sin A sin B'
-          }
-        ]
+        boxes: 3,
+        correctAnswers: ['1', '1', '2'],
+        hint1: 'Use the Pythagorean identity.',
+        hint2: 'Recall special-angle values.',
+        hint3: 'Use reciprocal: $\\sec\\heta=1/\\cos\\heta$.',
+        explanation: 'Pythagorean identity gives 1, tangent at 45° is 1, and secant at 60° is 2.'
       }
     },
     {
-      id: 'trigo3-dropdown',
+      id: 'precalc-trigonometric-identities-precalc-p3-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Match the Concepts** 🔍
+      **Dropdown-select practice (3 prompts)**
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'sin(A + B) = sin A cos B + cos A sin B',
-            options: ['cos(A - B) = cos A cos B + sin A sin B', 'cos(A + B) = cos A cos B - sin A sin B', 'sin(A + B) = sin A cos B + cos A sin B', 'sin(A - B) = sin A cos B - cos A sin B']
+            label: 'reciprocal identity',
+            options: ['formula for trig of $A\\pm B$', 'relation between complementary angles', 'sign behavior under $\\heta\\mapsto -\\heta$', '$\\sec\\heta=\\rac1{\\cos\\heta}$ and analogs']
           },
           {
-            label: 'sin(A - B) = sin A cos B - cos A sin B',
-            options: ['sin(A - B) = sin A cos B - cos A sin B', 'cos(A - B) = cos A cos B + sin A sin B', 'sin(A + B) = sin A cos B + cos A sin B', 'cos(A + B) = cos A cos B - sin A sin B']
+            label: 'even-odd identity',
+            options: ['sign behavior under $\\heta\\mapsto -\\heta$', 'relation between complementary angles', 'formula for trig of $A\\pm B$', 'expressions for trig of $2\\heta$']
           },
           {
-            label: 'cos(A + B) = cos A cos B - sin A sin B',
-            options: ['sin(A - B) = sin A cos B - cos A sin B', 'cos(A - B) = cos A cos B + sin A sin B', 'cos(A + B) = cos A cos B - sin A sin B', 'sin(A + B) = sin A cos B + cos A sin B']
+            label: 'cofunction identity',
+            options: ['relation between complementary angles', 'formula for trig of $A\\pm B$', 'expressions for trig of $2\\heta$', 'rewrite one side with targeted identities']
           }
         ],
-        correctAnswers: ['sin(A + B) = sin A cos B + cos A sin B', 'sin(A - B) = sin A cos B - cos A sin B', 'cos(A + B) = cos A cos B - sin A sin B'],
-        hint1: 'Think about what each concept specifically describes in Sum & Difference Formulas.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Sum & Difference Formulas describes a specific idea. sin(A + B) = sin A cos B + cos A sin B. sin(A - B) = sin A cos B - cos A sin B. cos(A + B) = cos A cos B - sin A sin B.'
+        correctAnswers: ['$\\sec\\heta=\\rac1{\\cos\\heta}$ and analogs', 'sign behavior under $\\heta\\mapsto -\\heta$', 'relation between complementary angles'],
+        hint1: 'Match each term to the full definition, not just a keyword.',
+        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
+        hint3: 'Read the label and option together as one complete mathematical sentence.',
+        explanation: 'Correct mapping: reciprocal identity, even-odd identity, and cofunction identity align with their exact definitions used in this part.'
+      }
+    },
+    {
+      id: 'precalc-trigonometric-identities-precalc-p3-s6-strategy',
+      type: 'text' as const,
+      content: `
+      ### Strategy: graphing, calculator, and exam tactics
+      
+      **Graphing tactics**
+      - Sketch anchor points or intercept behavior before detailed algebra.
+      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
+      
+      **Calculator tactics**
+      - Confirm angle mode before trig operations.
+      - Store intermediate values to avoid rounded drift.
+      - Use table mode to test reasonableness around key inputs.
+      
+      **Exam tactics**
+      - Translate words to symbols first, then choose the matching formula family.
+      - Eliminate options that violate domain or structure.
+      - If two choices are close, substitute back into the original relationship.
+      
+      Tie each step to reciprocal identity, even-odd identity, and cofunction identity so your reasoning is explicit and checkable.
+      `
+    },
+    {
+      id: 'precalc-trigonometric-identities-precalc-p3-s7-mcq-applied',
+      type: 'multiple-choice' as const,
+      content: `
+      **Applied mixed questions (2 questions)**
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'A student is using symmetry for angle sign checks. Which term best anchors the next reasoning step if the key idea is: formula for trig of $A\\pm B$?',
+            options: [
+              'reciprocal identity',
+              'sum identity',
+              'even-odd identity',
+              'cofunction identity'
+            ],
+            correctAnswer: 1,
+            explanation: 'sum identity matches that description and keeps the model-to-interpretation chain consistent.'
+          },
+          {
+            question: 'A student is solving a mixed trigonometric identities prompt. Which term best anchors the next reasoning step if the key idea is: expressions for trig of $2\\heta$?',
+            options: [
+              'cofunction identity',
+              'double-angle identity',
+              'sum identity',
+              'verification strategy'
+            ],
+            correctAnswer: 1,
+            explanation: 'double-angle identity matches that description and keeps the model-to-interpretation chain consistent.'
+          }
+        ]
       }
     }
   ]
-}
+};

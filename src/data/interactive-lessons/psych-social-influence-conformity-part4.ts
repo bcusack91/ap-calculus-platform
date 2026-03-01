@@ -5,7 +5,7 @@ export const psychSocialInfluencePart4Data = {
       id: 'socia4-intro',
       type: 'text' as const,
       content: `
-# ## Group Behavior
+## Group Behavior
 
 **Part 4 of 7 — Group Behavior**
 
@@ -63,7 +63,7 @@ groups become more extreme after discussion
       id: 'socia4-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Social facilitation**: perform better on simple tasks with audience
 - **Social loafing**: less effort in groups

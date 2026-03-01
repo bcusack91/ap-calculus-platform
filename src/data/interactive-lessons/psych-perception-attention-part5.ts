@@ -5,7 +5,7 @@ export const psychPerceptionPart5Data = {
       id: 'perce5-intro',
       type: 'text' as const,
       content: `
-# ## Perceptual Set & Context
+## Perceptual Set & Context
 
 **Part 5 of 7 — Perceptual Set & Context**
 
@@ -63,7 +63,7 @@ Cultural influences on perception
       id: 'perce5-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Perceptual set**: expectations influence perception
 - **Context effects**: surrounding information affects interpretation

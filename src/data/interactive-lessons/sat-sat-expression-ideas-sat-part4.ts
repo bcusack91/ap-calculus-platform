@@ -2,104 +2,81 @@ export const satExpressionPart4Data = {
   topicSlug: 'sat-expression-ideas-sat',
   sections: [
     {
-      id: 'sat-e4-intro',
+      id: 'sat-expr-p4-intro',
       type: 'text' as const,
       content: `
-# Logical Sequence
+# 📐 Sentence Combining
 
-**Part 4 of 7 — Logical Sequence**
+**Part 4 of 7 — Sentence Combining**
 
-Place sentences where they logically belong in the paragraph.
+Combining sentences for clarity, concision, and variety
 
-Topic sentence usually goes first; conclusion sentence goes last.
+This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+
+**Key Concepts in This Section:**
+- Core principles and definitions
+- Step-by-step problem-solving methods
+- Common SAT question patterns
+- Strategic tips for test day
       `
     },
     {
-      id: 'sat-e4-quiz1',
+      id: 'sat-expr-p4-check',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+**Quick Check** 🔍
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Place sentences where they logically…?',
+            question: 'Based on the concepts in this section, which approach is most effective?',
             options: [
-              'Ask: does this sentence fit the flow and purpose of the paragraph?.',
-              'Add or delete sentences based on whether they support the main point.',
-              'Place sentences where they logically belong in the paragraph.',
-              'Topic sentence usually goes first; conclusion sentence goes last.'
+              'Memorize formulas without understanding when to apply them',
+              'Understand the underlying concepts and practice with varied problems',
+              'Only practice problems you find easy to build confidence',
+              'Skip practice and rely on intuition during the test'
             ],
-            correctAnswer: 2,
-            explanation: 'Correct — Place sentences where they logically belong in the paragraph. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'In the context of Logical Sequence, which explains Key Insight?',
-            options: [
-              'Add or delete sentences based on whether they support the main point.',
-              'Place sentences where they logically belong in the paragraph.',
-              'Ask: does this sentence fit the flow and purpose of the paragraph?.',
-              'Topic sentence usually goes first; conclusion sentence goes last.'
-            ],
-            correctAnswer: 0,
-            explanation: 'Correct — Key Insight: Add or delete sentences based on whether they support the main point. Be careful to distinguish between the different concepts in this topic.'
+            correctAnswer: 1,
+            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
           }
         ]
       }
     },
     {
-      id: 'sat-e4-detail',
+      id: 'sat-expr-p4-detail',
       type: 'text' as const,
       content: `
-**Key Insight:** Add or delete sentences based on whether they support the main point.
+**Detailed Concepts & Examples**
 
-**SAT Tip:** Ask: does this sentence fit the flow and purpose of the paragraph?.
+This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
+
+1. **Identify** the type of problem quickly
+2. **Apply** the correct method systematically
+3. **Verify** your answer makes sense in context
+
+Work through each example carefully before attempting the practice problems below.
       `
     },
     {
-      id: 'sat-e4-quiz2',
+      id: 'sat-expr-p4-practice',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+**SAT-Style Questions** 📋
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of these accurately represents SAT Tip?',
+            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
             options: [
-              'Ask: does this sentence fit the flow and purpose of the paragraph?.',
-              'Place sentences where they logically belong in the paragraph.',
-              'Add or delete sentences based on whether they support the main point.',
-              'Topic sentence usually goes first; conclusion sentence goes last.'
+              'Guess and move on quickly',
+              'Identify what the question is actually asking for',
+              'Try every formula you know until one works',
+              'Skip it permanently'
             ],
-            correctAnswer: 0,
-            explanation: 'Correct — SAT Tip: Ask: does this sentence fit the flow and purpose of the paragraph?. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            correctAnswer: 1,
+            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
           }
         ]
-      }
-    },
-    {
-      id: 'sat-e4-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Key Insight',
-            options: ['Ask: does this sentence fit the flow and purpose of the paragraph?.', 'Add or delete sentences based on whether they support the main point.', 'Place sentences where they logically belong in the paragraph.', 'Topic sentence usually goes first; conclusion sentence goes last.']
-          },
-          {
-            label: 'SAT Tip',
-            options: ['Add or delete sentences based on whether they support the main point.', 'Ask: does this sentence fit the flow and purpose of the paragraph?.', 'Place sentences where they logically belong in the paragraph.', 'Topic sentence usually goes first; conclusion sentence goes last.']
-          }
-        ],
-        correctAnswers: ['Add or delete sentences based on whether they support the main point.', 'Ask: does this sentence fit the flow and purpose of the paragraph?.'],
-        hint1: 'Think about what each concept specifically describes in Logical Sequence.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Logical Sequence describes a specific idea. Key Insight: Add or delete sentences based on whether they support the main point. SAT Tip: Ask: does this sentence fit the flow and purpose of the paragraph?.'
       }
     }
   ]

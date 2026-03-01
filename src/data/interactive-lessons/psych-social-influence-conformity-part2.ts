@@ -5,7 +5,7 @@ export const psychSocialInfluencePart2Data = {
       id: 'socia2-intro',
       type: 'text' as const,
       content: `
-# ## Conformity
+## Conformity
 
 **Part 2 of 7 — Conformity**
 
@@ -63,7 +63,7 @@ Normative social influence (be liked) vs informational (be right)
       id: 'socia2-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Asch's conformity experiments**: line judgment task
 - **~75% conformed at least once**

@@ -5,7 +5,7 @@ export const psychSocialInfluencePart5Data = {
       id: 'socia5-intro',
       type: 'text' as const,
       content: `
-# ## Persuasion
+## Persuasion
 
 **Part 5 of 7 — Persuasion**
 
@@ -63,7 +63,7 @@ large request → smaller request
       id: 'socia5-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Central route**: careful evaluation of arguments (high involvement)
 - **Peripheral route**: influenced by superficial cues (low involvement)

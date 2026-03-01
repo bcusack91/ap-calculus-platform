@@ -5,7 +5,7 @@ export const bioCellCommPart4Data = {
       id: 'cell4-intro-p4',
       type: 'text' as const,
       content: `
-# ## Signal Transduction Pathways
+## Signal Transduction Pathways
 
 **Part 4 of 7 — Signal Transduction Pathways**
 
@@ -52,7 +52,7 @@ export const bioCellCommPart4Data = {
       id: 'cell4-detail-p4',
       type: 'text' as const,
       content: `
-# ### Key Details
+### Key Details
 
 - **Phosphorylation cascades**: kinases add phosphate groups
 - **Second messengers**: cAMP, Ca²⁺, IP₃

@@ -2,109 +2,193 @@ export const bioMendelianPart4Data = {
   topicSlug: 'mendelian-genetics',
   sections: [
     {
-      id: 'mend4-intro-p4',
+      id: 'bio-mendelian-genetics-p4-s1-intro',
       type: 'text' as const,
       content: `
-# ## Pedigree Analysis
-
-**Part 4 of 7 — Pedigree Analysis**
-
-1. Circles = females, squares = males
-2. Filled = affected, open = unaffected
-3. Autosomal dominant: affected in every generation
-4. Autosomal recessive: can skip generations, carrier parents
+      ## Mendelian Genetics: Probability in Genetics
+      
+      **Part 4 of 7**
+      
+      In this lesson, you will connect mechanism-level biology to exam-ready reasoning through probability trees for offspring outcomes.
+      
+      ### Worked biological example
+      A student team investigates probability trees for offspring outcomes. Their first interpretation step is to identify how **recessive allele** and **heterozygous** work together in the same pathway.
+      
+      - They classify the primary signal using **recessive allele**: allele expressed when no dominant allele is present.
+      - They trace the downstream response using **heterozygous**: genotype carrying two different alleles.
+      - They then compare outcomes with **homozygous** and **Punnett square** to separate mechanism from correlation.
+      
+      ### Key terms for this part
+      - **recessive allele**
+      - **heterozygous**
+      - **homozygous**
+      - **Punnett square**
       `
     },
     {
-      id: 'mend4-quiz1',
+      id: 'bio-mendelian-genetics-p4-s2-mcq-core',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+      **Checkpoint MCQ (2 questions)**
       `,
       exercise: {
         questions: [
           {
-            question: 'What does "Circles = females, squares = males" refer to in biology?',
+            question: 'For Probability in Genetics, what best describes recessive allele?',
             options: [
-              'can skip generations, carrier parents',
-              'affected in every generation',
-              'Filled = affected, open = unaffected',
-              'Circles = females, squares = males'
+              'grid method for predicting genotype combinations',
+              'genotype carrying two identical alleles',
+              'genotype carrying two different alleles',
+              'allele expressed when no dominant allele is present'
             ],
             correctAnswer: 3,
-            explanation: 'Correct — Circles = females, squares = males. The other options describe different concepts from this topic.'
+            explanation: 'recessive allele is best matched with: allele expressed when no dominant allele is present.'
           },
           {
-            question: 'Select the statement that correctly describes Autosomal dominant:',
+            question: 'In this part\'s context, what is the strongest definition of heterozygous?',
             options: [
-              'affected in every generation',
-              'Circles = females, squares = males',
-              'can skip generations, carrier parents',
-              'Filled = affected, open = unaffected'
+              'allele expressed when no dominant allele is present',
+              'genotype carrying two identical alleles',
+              'genotype carrying two different alleles',
+              'cross with homozygous recessive to reveal unknown genotype'
             ],
-            correctAnswer: 0,
-            explanation: 'Correct — Autosomal dominant: affected in every generation. Be careful to distinguish between the different concepts in this topic.'
+            correctAnswer: 2,
+            explanation: 'heterozygous is best matched with: genotype carrying two different alleles.'
           }
         ]
       }
     },
     {
-      id: 'mend4-detail-p4',
+      id: 'bio-mendelian-genetics-p4-s3-deep-dive',
       type: 'text' as const,
       content: `
-# ### Key Details
-
-- **Circles = females, squares = males**
-- **Filled = affected, open = unaffected**
-- **Autosomal dominant**: affected in every generation
-- **Autosomal recessive**: can skip generations, carrier parents
+      ### Deep-Dive Map: Probability in Genetics
+      
+      Use this diagram-style summary to track causation and evidence.
+      
+      #### Flow logic
+      - **Signal/Input** → recessive allele
+      - **Immediate processing** → heterozygous
+      - **System-level consequence** → homozygous
+      - **Measured readout** → Punnett square
+      
+      #### Mechanism table
+      | Component | Biological role | Typical evidence pattern |
+      |---|---|---|
+      | recessive allele | allele expressed when no dominant allele is present | Early shift in the primary variable |
+      | heterozygous | genotype carrying two different alleles | Mid-pathway change in process rate |
+      | homozygous | genotype carrying two identical alleles | Downstream phenotype trend |
+      | Punnett square | grid method for predicting genotype combinations | Quantifiable endpoint in data summary |
+      
+      #### Reasoning checkpoints
+      1. Name the mechanism before describing the trend line.
+      2. Separate proximate mechanism from ecological or historical context.
+      3. Verify that each claim is tied to a measurable biological readout.
       `
     },
     {
-      id: 'mend4-quiz2',
-      type: 'multiple-choice' as const,
+      id: 'bio-mendelian-genetics-p4-s4-input',
+      type: 'input-boxes' as const,
       content: `
-**Check Your Understanding** 🎯
+      **Input Practice — concrete vocabulary retrieval**
+      
+      Fill in each blank with the exact biological term.
+      
+      1) Term for this definition: **allele expressed when no dominant allele is present**
+      2) Term for this definition: **genotype carrying two different alleles**
+      3) Term for this definition: **genotype carrying two identical alleles**
       `,
       exercise: {
-        questions: [
-          {
-            question: 'Which statement about Autosomal recessive is correct?',
-            options: [
-              'can skip generations, carrier parents',
-              'Circles = females, squares = males',
-              'affected in every generation',
-              'Filled = affected, open = unaffected'
-            ],
-            correctAnswer: 0,
-            explanation: 'Correct — Autosomal recessive: can skip generations, carrier parents. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
+        boxes: 3,
+        correctAnswers: ['recessive allele', 'heterozygous', 'homozygous'],
+        hint1: 'Start with the first item: it is the mechanism term used when a process is described as \'allele expressed when no dominant allele is present\'.',
+        hint2: 'Second blank points to heterozygous; think about the role \'genotype carrying two different alleles\'.',
+        hint3: 'Third blank is homozygous; connect it to \'genotype carrying two identical alleles\'.',
+        explanation: 'Correct set: recessive allele, heterozygous, homozygous. These three terms define the core mechanism chain for Probability in Genetics.'
       }
     },
     {
-      id: 'mend4-dropdown',
+      id: 'bio-mendelian-genetics-p4-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Match the Concepts** 🔍
+      **Dropdown matching (3 prompts)**
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Autosomal dominant',
-            options: ['can skip generations, carrier parents', 'Filled = affected, open = unaffected', 'affected in every generation', 'Circles = females, squares = males']
+            label: 'recessive allele',
+            options: ['genotype carrying two different alleles', 'allele expressed when no dominant allele is present', 'grid method for predicting genotype combinations', 'genotype carrying two identical alleles']
           },
           {
-            label: 'Autosomal recessive',
-            options: ['can skip generations, carrier parents', 'Circles = females, squares = males', 'affected in every generation', 'Filled = affected, open = unaffected']
+            label: 'heterozygous',
+            options: ['grid method for predicting genotype combinations', 'genotype carrying two different alleles', 'genotype carrying two identical alleles', 'cross with homozygous recessive to reveal unknown genotype']
+          },
+          {
+            label: 'homozygous',
+            options: ['genotype carrying two identical alleles', 'cross with homozygous recessive to reveal unknown genotype', 'family diagram tracking trait inheritance across generations', 'grid method for predicting genotype combinations']
           }
         ],
-        correctAnswers: ['affected in every generation', 'can skip generations, carrier parents'],
-        hint1: 'Think about what each concept specifically describes in Pedigree Analysis.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Pedigree Analysis describes a specific idea. Autosomal dominant: affected in every generation. Autosomal recessive: can skip generations, carrier parents.'
+        correctAnswers: ['allele expressed when no dominant allele is present', 'genotype carrying two different alleles', 'genotype carrying two identical alleles'],
+        hint1: 'Match each term to the definition that captures mechanism, not just keywords.',
+        hint2: 'If two definitions feel close, choose the one with the exact process direction.',
+        hint3: 'Read each label out loud, then pick the option that completes a causal sentence.',
+        explanation: 'recessive allele, heterozygous, and homozygous should map to their exact mechanistic definitions. When options look similar, anchor your choice to process direction and biological scale.'
+      }
+    },
+    {
+      id: 'bio-mendelian-genetics-p4-s6-strategy',
+      type: 'text' as const,
+      content: `
+      ### ACT/AP strategy and misconception repair
+      
+      On ACT/AP style prompts, score gains come from linking vocabulary to evidence, not from isolated memorization.
+      
+      #### Strategy sequence
+      1. **Name the mechanism first**: identify whether the item is asking for process, structure, regulation, or population effect.
+      2. **Use a causation sentence**: "Because recessive allele allele expressed when no dominant allele is present, we expect ...".
+      3. **Audit units and scale**: molecular claims, cellular claims, and ecosystem claims should not be mixed.
+      
+      #### Common misconceptions to avoid
+      - Pedigree interpretation must consider sex linkage and incomplete family data.
+      - Dominant does not mean more common in populations.
+      - Independent assortment requires genes not tightly linked on the same chromosome.
+      
+      #### Exam execution tip
+      When two answer choices sound plausible, prefer the one that includes a direct mechanism and a measurable biological consequence.
+      `
+    },
+    {
+      id: 'bio-mendelian-genetics-p4-s7-mcq-final',
+      type: 'multiple-choice' as const,
+      content: `
+      **Final application MCQ (2 questions)**
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'In probability trees for offspring outcomes, the observed pattern is: grid method for predicting genotype combinations. What term should anchor the explanation?',
+            options: [
+              'recessive allele',
+              'heterozygous',
+              'Punnett square',
+              'homozygous'
+            ],
+            correctAnswer: 2,
+            explanation: 'Use Punnett square because it directly maps to the described biological pattern: grid method for predicting genotype combinations.'
+          },
+          {
+            question: 'In an AP-style free-response about probability in genetics, the observed pattern is: cross with homozygous recessive to reveal unknown genotype. What term should anchor the explanation?',
+            options: [
+              'Punnett square',
+              'pedigree',
+              'test cross',
+              'homozygous'
+            ],
+            correctAnswer: 2,
+            explanation: 'Use test cross because it directly maps to the described biological pattern: cross with homozygous recessive to reveal unknown genotype.'
+          }
+        ]
       }
     }
   ]
-}
+};

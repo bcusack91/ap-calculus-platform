@@ -5,7 +5,7 @@ export const bioMeiosisPart3Data = {
       id: 'meio3-intro-p3',
       type: 'text' as const,
       content: `
-# ## Meiosis II
+## Meiosis II
 
 **Part 3 of 7 — Meiosis II**
 
@@ -52,7 +52,7 @@ export const bioMeiosisPart3Data = {
       id: 'meio3-detail-p3',
       type: 'text' as const,
       content: `
-# ### Key Details
+### Key Details
 
 - **Similar to mitosis**
 - **Sister chromatids separate**

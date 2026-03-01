@@ -5,7 +5,7 @@ export const bioMeiosisPart7Data = {
       id: 'meio7-intro-p7',
       type: 'text' as const,
       content: `
-# ## Meiosis: Synthesis & AP Review
+## Meiosis: Synthesis & AP Review
 
 **Part 7 of 7 — Synthesis & AP Review**
 
@@ -52,7 +52,7 @@ export const bioMeiosisPart7Data = {
       id: 'meio7-detail-p7',
       type: 'text' as const,
       content: `
-# ### Key Details
+### Key Details
 
 - **Meiosis as the basis for Mendel's laws**
 - **Connection to evolution (genetic variation)**

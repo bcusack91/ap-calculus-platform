@@ -2,108 +2,81 @@ export const satReadingEvidencePart4Data = {
   topicSlug: 'sat-reading-evidence-sat',
   sections: [
     {
-      id: 'sat-r4-intro',
+      id: 'sat-read-p4-intro',
       type: 'text' as const,
       content: `
-# Vocabulary in Context
+# 📐 Vocabulary in Context
 
 **Part 4 of 7 — Vocabulary in Context**
 
-Context clues: look at the surrounding sentence for meaning.
+Determining word meaning from surrounding text
 
-Replace the word with each answer choice — which makes the most sense?.
+This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+
+**Key Concepts in This Section:**
+- Core principles and definitions
+- Step-by-step problem-solving methods
+- Common SAT question patterns
+- Strategic tips for test day
       `
     },
     {
-      id: 'sat-r4-quiz1',
+      id: 'sat-read-p4-check',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+**Quick Check** 🔍
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Context clues?',
+            question: 'Based on the concepts in this section, which approach is most effective?',
             options: [
-              'SAT tests secondary meanings of common words (e.g., "address" = deal with, not a street address).',
-              'Read 3-5 words before and after the target word.',
-              'Replace the word with each answer choice — which makes the most sense?.',
-              'look at the surrounding sentence for meaning.'
+              'Memorize formulas without understanding when to apply them',
+              'Understand the underlying concepts and practice with varied problems',
+              'Only practice problems you find easy to build confidence',
+              'Skip practice and rely on intuition during the test'
             ],
-            correctAnswer: 3,
-            explanation: 'Correct — Context clues: look at the surrounding sentence for meaning. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'In the context of Vocabulary in Context, which explains Key Insight?',
-            options: [
-              'SAT tests secondary meanings of common words (e.g., "address" = deal with, not a street address).',
-              'look at the surrounding sentence for meaning.',
-              'Replace the word with each answer choice — which makes the most sense?.',
-              'Read 3-5 words before and after the target word.'
-            ],
-            correctAnswer: 0,
-            explanation: 'Correct — Key Insight: SAT tests secondary meanings of common words (e.g., "address" = deal with, not a street address). Be careful to distinguish between the different concepts in this topic.'
+            correctAnswer: 1,
+            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
           }
         ]
       }
     },
     {
-      id: 'sat-r4-detail',
+      id: 'sat-read-p4-detail',
       type: 'text' as const,
       content: `
-**Key Insight:** SAT tests secondary meanings of common words (e.g., "address" = deal with, not a street address).
+**Detailed Concepts & Examples**
 
-**SAT Tip:** Read 3-5 words before and after the target word.
+This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
+
+1. **Identify** the type of problem quickly
+2. **Apply** the correct method systematically
+3. **Verify** your answer makes sense in context
+
+Work through each example carefully before attempting the practice problems below.
       `
     },
     {
-      id: 'sat-r4-quiz2',
+      id: 'sat-read-p4-practice',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+**SAT-Style Questions** 📋
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement about SAT Tip is correct?',
+            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
             options: [
-              'look at the surrounding sentence for meaning.',
-              'SAT tests secondary meanings of common words (e.g., "address" = deal with, not a street address).',
-              'Read 3-5 words before and after the target word.',
-              'Replace the word with each answer choice — which makes the most sense?.'
+              'Guess and move on quickly',
+              'Identify what the question is actually asking for',
+              'Try every formula you know until one works',
+              'Skip it permanently'
             ],
-            correctAnswer: 2,
-            explanation: 'Correct — SAT Tip: Read 3-5 words before and after the target word. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            correctAnswer: 1,
+            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
           }
         ]
-      }
-    },
-    {
-      id: 'sat-r4-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Context clues',
-            options: ['Read 3-5 words before and after the target word.', 'Replace the word with each answer choice — which makes the most sense?.', 'SAT tests secondary meanings of common words (e.g., "address" = deal with, not a street address).', 'look at the surrounding sentence for meaning.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['look at the surrounding sentence for meaning.', 'Replace the word with each answer choice — which makes the most sense?.', 'SAT tests secondary meanings of common words (e.g., "address" = deal with, not a street address).', 'Read 3-5 words before and after the target word.']
-          },
-          {
-            label: 'SAT Tip',
-            options: ['SAT tests secondary meanings of common words (e.g., "address" = deal with, not a street address).', 'look at the surrounding sentence for meaning.', 'Read 3-5 words before and after the target word.', 'Replace the word with each answer choice — which makes the most sense?.']
-          }
-        ],
-        correctAnswers: ['look at the surrounding sentence for meaning.', 'SAT tests secondary meanings of common words (e.g., "address" = deal with, not a street address).', 'Read 3-5 words before and after the target word.'],
-        hint1: 'Think about what each concept specifically describes in Vocabulary in Context.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Vocabulary in Context describes a specific idea. Context clues: look at the surrounding sentence for meaning. Key Insight: SAT tests secondary meanings of common words (e.g., "address" = deal with, not a street address). SAT Tip: Read 3-5 words before and after the target word.'
       }
     }
   ]

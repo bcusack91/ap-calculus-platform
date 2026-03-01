@@ -2,108 +2,81 @@ export const satExpressionPart3Data = {
   topicSlug: 'sat-expression-ideas-sat',
   sections: [
     {
-      id: 'sat-e3-intro',
+      id: 'sat-expr-p3-intro',
       type: 'text' as const,
       content: `
-# Transitions & Flow
+# 📊 Support & Evidence
 
-**Part 3 of 7 — Transitions & Flow**
+**Part 3 of 7 — Support & Evidence**
 
-Transitions show relationships: addition, contrast, cause/effect, sequence.
+Adding, revising, or removing evidence to strengthen arguments
 
-However/nevertheless = contrast; Furthermore/moreover = addition.
+This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+
+**Key Concepts in This Section:**
+- Core principles and definitions
+- Step-by-step problem-solving methods
+- Common SAT question patterns
+- Strategic tips for test day
       `
     },
     {
-      id: 'sat-e3-quiz1',
+      id: 'sat-expr-p3-check',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+**Quick Check** 🔍
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Transitions show relationships?',
+            question: 'Based on the concepts in this section, which approach is most effective?',
             options: [
-              'Therefore/consequently = cause-effect; Similarly/likewise = comparison.',
-              'However/nevertheless = contrast; Furthermore/moreover = addition.',
-              'Choose transitions based on the logical relationship between ideas.',
-              'addition, contrast, cause/effect, sequence.'
+              'Memorize formulas without understanding when to apply them',
+              'Understand the underlying concepts and practice with varied problems',
+              'Only practice problems you find easy to build confidence',
+              'Skip practice and rely on intuition during the test'
             ],
-            correctAnswer: 3,
-            explanation: 'Correct — Transitions show relationships: addition, contrast, cause/effect, sequence. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'In the context of Transitions & Flow, which explains Key Insight?',
-            options: [
-              'However/nevertheless = contrast; Furthermore/moreover = addition.',
-              'Choose transitions based on the logical relationship between ideas.',
-              'Therefore/consequently = cause-effect; Similarly/likewise = comparison.',
-              'addition, contrast, cause/effect, sequence.'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Key Insight: Therefore/consequently = cause-effect; Similarly/likewise = comparison. Be careful to distinguish between the different concepts in this topic.'
+            correctAnswer: 1,
+            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
           }
         ]
       }
     },
     {
-      id: 'sat-e3-detail',
+      id: 'sat-expr-p3-detail',
       type: 'text' as const,
       content: `
-**Key Insight:** Therefore/consequently = cause-effect; Similarly/likewise = comparison.
+**Detailed Concepts & Examples**
 
-**SAT Tip:** Choose transitions based on the logical relationship between ideas.
+This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
+
+1. **Identify** the type of problem quickly
+2. **Apply** the correct method systematically
+3. **Verify** your answer makes sense in context
+
+Work through each example carefully before attempting the practice problems below.
       `
     },
     {
-      id: 'sat-e3-quiz2',
+      id: 'sat-expr-p3-practice',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+**SAT-Style Questions** 📋
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement about SAT Tip is correct?',
+            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
             options: [
-              'addition, contrast, cause/effect, sequence.',
-              'Therefore/consequently = cause-effect; Similarly/likewise = comparison.',
-              'However/nevertheless = contrast; Furthermore/moreover = addition.',
-              'Choose transitions based on the logical relationship between ideas.'
+              'Guess and move on quickly',
+              'Identify what the question is actually asking for',
+              'Try every formula you know until one works',
+              'Skip it permanently'
             ],
-            correctAnswer: 3,
-            explanation: 'Correct — SAT Tip: Choose transitions based on the logical relationship between ideas. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            correctAnswer: 1,
+            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
           }
         ]
-      }
-    },
-    {
-      id: 'sat-e3-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Transitions show relationships',
-            options: ['Choose transitions based on the logical relationship between ideas.', 'Therefore/consequently = cause-effect; Similarly/likewise = comparison.', 'addition, contrast, cause/effect, sequence.', 'However/nevertheless = contrast; Furthermore/moreover = addition.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['addition, contrast, cause/effect, sequence.', 'Choose transitions based on the logical relationship between ideas.', 'Therefore/consequently = cause-effect; Similarly/likewise = comparison.', 'However/nevertheless = contrast; Furthermore/moreover = addition.']
-          },
-          {
-            label: 'SAT Tip',
-            options: ['addition, contrast, cause/effect, sequence.', 'However/nevertheless = contrast; Furthermore/moreover = addition.', 'Therefore/consequently = cause-effect; Similarly/likewise = comparison.', 'Choose transitions based on the logical relationship between ideas.']
-          }
-        ],
-        correctAnswers: ['addition, contrast, cause/effect, sequence.', 'Therefore/consequently = cause-effect; Similarly/likewise = comparison.', 'Choose transitions based on the logical relationship between ideas.'],
-        hint1: 'Think about what each concept specifically describes in Transitions & Flow.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Transitions & Flow describes a specific idea. Transitions show relationships: addition, contrast, cause/effect, sequence. Key Insight: Therefore/consequently = cause-effect; Similarly/likewise = comparison. SAT Tip: Choose transitions based on the logical relationship between ideas.'
       }
     }
   ]

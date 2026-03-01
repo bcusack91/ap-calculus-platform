@@ -2,108 +2,81 @@ export const satExpressionPart1Data = {
   topicSlug: 'sat-expression-ideas-sat',
   sections: [
     {
-      id: 'sat-e1-intro',
+      id: 'sat-expr-p1-intro',
       type: 'text' as const,
       content: `
-# 📝 Expression Ideas
+# 📝 Main Idea & Thesis
 
-**Part 1 of 7 — Conciseness & Redundancy**
+**Part 1 of 7 — Main Idea & Thesis**
 
-Avoid redundancy: don't say the same thing twice in different words.
+Identifying and strengthening the central argument
 
-Shorter is usually better on the SAT (if meaning is preserved).
+This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+
+**Key Concepts in This Section:**
+- Core principles and definitions
+- Step-by-step problem-solving methods
+- Common SAT question patterns
+- Strategic tips for test day
       `
     },
     {
-      id: 'sat-e1-quiz1',
+      id: 'sat-expr-p1-check',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+**Quick Check** 🔍
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Avoid redundancy?',
+            question: 'Based on the concepts in this section, which approach is most effective?',
             options: [
-              'Shorter is usually better on the SAT (if meaning is preserved).',
-              'Eliminate wordy phrases: "due to the fact that" → "because".',
-              'don\'t say the same thing twice in different words.',
-              'If two answers convey the same meaning, choose the more concise one.'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Avoid redundancy: don\'t say the same thing twice in different words. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'In the context of Expression Ideas, which explains Key Insight?',
-            options: [
-              'Shorter is usually better on the SAT (if meaning is preserved).',
-              'Eliminate wordy phrases: "due to the fact that" → "because".',
-              'don\'t say the same thing twice in different words.',
-              'If two answers convey the same meaning, choose the more concise one.'
+              'Memorize formulas without understanding when to apply them',
+              'Understand the underlying concepts and practice with varied problems',
+              'Only practice problems you find easy to build confidence',
+              'Skip practice and rely on intuition during the test'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — Key Insight: Eliminate wordy phrases: "due to the fact that" → "because". Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
           }
         ]
       }
     },
     {
-      id: 'sat-e1-detail',
+      id: 'sat-expr-p1-detail',
       type: 'text' as const,
       content: `
-**Key Insight:** Eliminate wordy phrases: "due to the fact that" → "because".
+**Detailed Concepts & Examples**
 
-**SAT Tip:** If two answers convey the same meaning, choose the more concise one.
+This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
+
+1. **Identify** the type of problem quickly
+2. **Apply** the correct method systematically
+3. **Verify** your answer makes sense in context
+
+Work through each example carefully before attempting the practice problems below.
       `
     },
     {
-      id: 'sat-e1-quiz2',
+      id: 'sat-expr-p1-practice',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+**SAT-Style Questions** 📋
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of these accurately represents SAT Tip?',
+            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
             options: [
-              'Shorter is usually better on the SAT (if meaning is preserved).',
-              'If two answers convey the same meaning, choose the more concise one.',
-              'don\'t say the same thing twice in different words.',
-              'Eliminate wordy phrases: "due to the fact that" → "because".'
+              'Guess and move on quickly',
+              'Identify what the question is actually asking for',
+              'Try every formula you know until one works',
+              'Skip it permanently'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — SAT Tip: If two answers convey the same meaning, choose the more concise one. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
           }
         ]
-      }
-    },
-    {
-      id: 'sat-e1-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Avoid redundancy',
-            options: ['If two answers convey the same meaning, choose the more concise one.', 'don\'t say the same thing twice in different words.', 'Shorter is usually better on the SAT (if meaning is preserved).', 'Eliminate wordy phrases: "due to the fact that" → "because".']
-          },
-          {
-            label: 'Key Insight',
-            options: ['Eliminate wordy phrases: "due to the fact that" → "because".', 'don\'t say the same thing twice in different words.', 'If two answers convey the same meaning, choose the more concise one.', 'Shorter is usually better on the SAT (if meaning is preserved).']
-          },
-          {
-            label: 'SAT Tip',
-            options: ['Eliminate wordy phrases: "due to the fact that" → "because".', 'Shorter is usually better on the SAT (if meaning is preserved).', 'If two answers convey the same meaning, choose the more concise one.', 'don\'t say the same thing twice in different words.']
-          }
-        ],
-        correctAnswers: ['don\'t say the same thing twice in different words.', 'Eliminate wordy phrases: "due to the fact that" → "because".', 'If two answers convey the same meaning, choose the more concise one.'],
-        hint1: 'Think about what each concept specifically describes in Expression Ideas.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Expression Ideas describes a specific idea. Avoid redundancy: don\'t say the same thing twice in different words. Key Insight: Eliminate wordy phrases: "due to the fact that" → "because". SAT Tip: If two answers convey the same meaning, choose the more concise one.'
       }
     }
   ]

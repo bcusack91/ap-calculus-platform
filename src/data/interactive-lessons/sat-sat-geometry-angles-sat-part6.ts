@@ -2,108 +2,81 @@ export const satGeometryPart6Data = {
   topicSlug: 'sat-geometry-angles-sat',
   sections: [
     {
-      id: 'sat-g6-intro',
+      id: 'sat-geom-p6-intro',
       type: 'text' as const,
       content: `
-# Problem-Solving Workshop
+# 🛠️ Volume & 3D Geometry
 
-**Part 6 of 7 — Problem-Solving Workshop**
+**Part 6 of 7 — Volume & 3D Geometry**
 
-Rectangular prism: V = lwh, SA = 2(lw + lh + wh).
+Prisms, cylinders, cones, spheres, and SAT 3D problems
 
-Cylinder: V = πr²h, SA = 2πr² + 2πrh.
+This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+
+**Key Concepts in This Section:**
+- Core principles and definitions
+- Step-by-step problem-solving methods
+- Common SAT question patterns
+- Strategic tips for test day
       `
     },
     {
-      id: 'sat-g6-quiz1',
+      id: 'sat-geom-p6-check',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+**Quick Check** 🔍
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Rectangular prism?',
+            question: 'Based on the concepts in this section, which approach is most effective?',
             options: [
-              'Cone: V = (1/3)πr²h.',
-              'V = πr²h, SA = 2πr² + 2πrh.',
-              'Sphere: V = (4/3)πr³, SA = 4πr².',
-              'V = lwh, SA = 2(lw + lh + wh).'
+              'Memorize formulas without understanding when to apply them',
+              'Understand the underlying concepts and practice with varied problems',
+              'Only practice problems you find easy to build confidence',
+              'Skip practice and rely on intuition during the test'
             ],
-            correctAnswer: 3,
-            explanation: 'Correct — Rectangular prism: V = lwh, SA = 2(lw + lh + wh). The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'In the context of Problem-Solving Workshop, which explains Key Insight?',
-            options: [
-              'V = πr²h, SA = 2πr² + 2πrh.',
-              'Sphere: V = (4/3)πr³, SA = 4πr².',
-              'Cone: V = (1/3)πr²h.',
-              'V = lwh, SA = 2(lw + lh + wh).'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Key Insight: Cone: V = (1/3)πr²h. Be careful to distinguish between the different concepts in this topic.'
+            correctAnswer: 1,
+            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
           }
         ]
       }
     },
     {
-      id: 'sat-g6-detail',
+      id: 'sat-geom-p6-detail',
       type: 'text' as const,
       content: `
-**Key Insight:** Cone: V = (1/3)πr²h.
+**Detailed Concepts & Examples**
 
-**SAT Tip:** Sphere: V = (4/3)πr³, SA = 4πr².
+This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
+
+1. **Identify** the type of problem quickly
+2. **Apply** the correct method systematically
+3. **Verify** your answer makes sense in context
+
+Work through each example carefully before attempting the practice problems below.
       `
     },
     {
-      id: 'sat-g6-quiz2',
+      id: 'sat-geom-p6-practice',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+**SAT-Style Questions** 📋
       `,
       exercise: {
         questions: [
           {
-            question: 'Regarding Problem-Solving Workshop, which correctly describes SAT Tip?',
+            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
             options: [
-              'Sphere: V = (4/3)πr³, SA = 4πr².',
-              'V = πr²h, SA = 2πr² + 2πrh.',
-              'V = lwh, SA = 2(lw + lh + wh).',
-              'Cone: V = (1/3)πr²h.'
+              'Guess and move on quickly',
+              'Identify what the question is actually asking for',
+              'Try every formula you know until one works',
+              'Skip it permanently'
             ],
-            correctAnswer: 0,
-            explanation: 'Correct — SAT Tip: Sphere: V = (4/3)πr³, SA = 4πr². Each option describes a real concept from this topic, so pay attention to the specific details.'
+            correctAnswer: 1,
+            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
           }
         ]
-      }
-    },
-    {
-      id: 'sat-g6-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Rectangular prism',
-            options: ['V = πr²h, SA = 2πr² + 2πrh.', 'V = lwh, SA = 2(lw + lh + wh).', 'Sphere: V = (4/3)πr³, SA = 4πr².', 'Cone: V = (1/3)πr²h.']
-          },
-          {
-            label: 'Cylinder',
-            options: ['V = πr²h, SA = 2πr² + 2πrh.', 'Sphere: V = (4/3)πr³, SA = 4πr².', 'V = lwh, SA = 2(lw + lh + wh).', 'Cone: V = (1/3)πr²h.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['V = πr²h, SA = 2πr² + 2πrh.', 'Cone: V = (1/3)πr²h.', 'Sphere: V = (4/3)πr³, SA = 4πr².', 'V = lwh, SA = 2(lw + lh + wh).']
-          }
-        ],
-        correctAnswers: ['V = lwh, SA = 2(lw + lh + wh).', 'V = πr²h, SA = 2πr² + 2πrh.', 'Cone: V = (1/3)πr²h.'],
-        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Rectangular prism: V = lwh, SA = 2(lw + lh + wh). Cylinder: V = πr²h, SA = 2πr² + 2πrh. Key Insight: Cone: V = (1/3)πr²h.'
       }
     }
   ]

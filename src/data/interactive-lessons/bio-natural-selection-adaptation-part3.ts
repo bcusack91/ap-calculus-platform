@@ -2,113 +2,193 @@ export const bioNatSelectionPart3Data = {
   topicSlug: 'natural-selection-adaptation',
   sections: [
     {
-      id: 'natu3-intro-p3',
+      id: 'bio-natural-selection-adaptation-p3-s1-intro',
       type: 'text' as const,
       content: `
-# ## Types of Selection
-
-**Part 3 of 7 — Types of Selection**
-
-1. Directional: favors one extreme phenotype
-2. Stabilizing: favors intermediate phenotype
-3. Disruptive: favors both extremes
-4. Sexual selection: traits that increase mating success
+      ## Natural Selection and Adaptation: Sexual Selection
+      
+      **Part 3 of 7**
+      
+      In this lesson, you will connect mechanism-level biology to exam-ready reasoning through mate-choice effects on trait frequencies.
+      
+      ### Worked biological example
+      A student team investigates mate-choice effects on trait frequencies. Their first interpretation step is to identify how **adaptation** and **sexual selection** work together in the same pathway.
+      
+      - They classify the primary signal using **adaptation**: trait increasing fitness in a specific environment.
+      - They trace the downstream response using **sexual selection**: selection driven by mating success differences.
+      - They then compare outcomes with **allele frequency** and **Hardy-Weinberg equilibrium** to separate mechanism from correlation.
+      
+      ### Key terms for this part
+      - **adaptation**
+      - **sexual selection**
+      - **allele frequency**
+      - **Hardy-Weinberg equilibrium**
       `
     },
     {
-      id: 'natu3-quiz1',
+      id: 'bio-natural-selection-adaptation-p3-s2-mcq-core',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+      **Checkpoint MCQ (2 questions)**
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains Directional?',
+            question: 'For Sexual Selection, what best describes adaptation?',
             options: [
-              'favors one extreme phenotype',
-              'favors both extremes',
-              'traits that increase mating success',
-              'favors intermediate phenotype'
+              'null model where allele frequencies remain constant',
+              'proportion of a specific allele in a population',
+              'selection driven by mating success differences',
+              'trait increasing fitness in a specific environment'
             ],
-            correctAnswer: 0,
-            explanation: 'Correct — Directional: favors one extreme phenotype. The other options describe different concepts from this topic.'
+            correctAnswer: 3,
+            explanation: 'adaptation is best matched with: trait increasing fitness in a specific environment.'
           },
           {
-            question: 'Select the statement that correctly describes Disruptive:',
+            question: 'In this part\'s context, what is the strongest definition of sexual selection?',
             options: [
-              'favors both extremes',
-              'traits that increase mating success',
-              'favors intermediate phenotype',
-              'favors one extreme phenotype'
+              'trait increasing fitness in a specific environment',
+              'random allele frequency change strongest in small populations',
+              'selection driven by mating success differences',
+              'proportion of a specific allele in a population'
             ],
-            correctAnswer: 0,
-            explanation: 'Correct — Disruptive: favors both extremes. Be careful to distinguish between the different concepts in this topic.'
+            correctAnswer: 2,
+            explanation: 'sexual selection is best matched with: selection driven by mating success differences.'
           }
         ]
       }
     },
     {
-      id: 'natu3-detail-p3',
+      id: 'bio-natural-selection-adaptation-p3-s3-deep-dive',
       type: 'text' as const,
       content: `
-# ### Key Details
-
-- **Directional**: favors one extreme phenotype
-- **Stabilizing**: favors intermediate phenotype
-- **Disruptive**: favors both extremes
-- **Sexual selection**: traits that increase mating success
+      ### Deep-Dive Map: Sexual Selection
+      
+      Use this diagram-style summary to track causation and evidence.
+      
+      #### Flow logic
+      - **Signal/Input** → adaptation
+      - **Immediate processing** → sexual selection
+      - **System-level consequence** → allele frequency
+      - **Measured readout** → Hardy-Weinberg equilibrium
+      
+      #### Mechanism table
+      | Component | Biological role | Typical evidence pattern |
+      |---|---|---|
+      | adaptation | trait increasing fitness in a specific environment | Early shift in the primary variable |
+      | sexual selection | selection driven by mating success differences | Mid-pathway change in process rate |
+      | allele frequency | proportion of a specific allele in a population | Downstream phenotype trend |
+      | Hardy-Weinberg equilibrium | null model where allele frequencies remain constant | Quantifiable endpoint in data summary |
+      
+      #### Reasoning checkpoints
+      1. Name the mechanism before describing the trend line.
+      2. Separate proximate mechanism from ecological or historical context.
+      3. Verify that each claim is tied to a measurable biological readout.
       `
     },
     {
-      id: 'natu3-quiz2',
-      type: 'multiple-choice' as const,
+      id: 'bio-natural-selection-adaptation-p3-s4-input',
+      type: 'input-boxes' as const,
       content: `
-**Check Your Understanding** 🎯
+      **Input Practice — concrete vocabulary retrieval**
+      
+      Fill in each blank with the exact biological term.
+      
+      1) Term for this definition: **trait increasing fitness in a specific environment**
+      2) Term for this definition: **selection driven by mating success differences**
+      3) Term for this definition: **proportion of a specific allele in a population**
       `,
       exercise: {
-        questions: [
-          {
-            question: 'Which of these accurately represents Sexual selection?',
-            options: [
-              'favors both extremes',
-              'favors one extreme phenotype',
-              'traits that increase mating success',
-              'favors intermediate phenotype'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Sexual selection: traits that increase mating success. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
+        boxes: 3,
+        correctAnswers: ['adaptation', 'sexual selection', 'allele frequency'],
+        hint1: 'Start with the first item: it is the mechanism term used when a process is described as \'trait increasing fitness in a specific environment\'.',
+        hint2: 'Second blank points to sexual selection; think about the role \'selection driven by mating success differences\'.',
+        hint3: 'Third blank is allele frequency; connect it to \'proportion of a specific allele in a population\'.',
+        explanation: 'Correct set: adaptation, sexual selection, allele frequency. These three terms define the core mechanism chain for Sexual Selection.'
       }
     },
     {
-      id: 'natu3-dropdown',
+      id: 'bio-natural-selection-adaptation-p3-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Match the Concepts** 🔍
+      **Dropdown matching (3 prompts)**
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Directional',
-            options: ['favors one extreme phenotype', 'traits that increase mating success', 'favors both extremes', 'favors intermediate phenotype']
+            label: 'adaptation',
+            options: ['selection driven by mating success differences', 'trait increasing fitness in a specific environment', 'proportion of a specific allele in a population', 'null model where allele frequencies remain constant']
           },
           {
-            label: 'Stabilizing',
-            options: ['favors both extremes', 'favors intermediate phenotype', 'favors one extreme phenotype', 'traits that increase mating success']
+            label: 'sexual selection',
+            options: ['selection driven by mating success differences', 'random allele frequency change strongest in small populations', 'proportion of a specific allele in a population', 'null model where allele frequencies remain constant']
           },
           {
-            label: 'Disruptive',
-            options: ['traits that increase mating success', 'favors one extreme phenotype', 'favors both extremes', 'favors intermediate phenotype']
+            label: 'allele frequency',
+            options: ['null model where allele frequencies remain constant', 'allele movement among populations through migration', 'random allele frequency change strongest in small populations', 'proportion of a specific allele in a population']
           }
         ],
-        correctAnswers: ['favors one extreme phenotype', 'favors intermediate phenotype', 'favors both extremes'],
-        hint1: 'Think about what each concept specifically describes in Types of Selection.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Types of Selection describes a specific idea. Directional: favors one extreme phenotype. Stabilizing: favors intermediate phenotype. Disruptive: favors both extremes.'
+        correctAnswers: ['trait increasing fitness in a specific environment', 'selection driven by mating success differences', 'proportion of a specific allele in a population'],
+        hint1: 'Match each term to the definition that captures mechanism, not just keywords.',
+        hint2: 'If two definitions feel close, choose the one with the exact process direction.',
+        hint3: 'Read each label out loud, then pick the option that completes a causal sentence.',
+        explanation: 'adaptation, sexual selection, and allele frequency should map to their exact mechanistic definitions. When options look similar, anchor your choice to process direction and biological scale.'
+      }
+    },
+    {
+      id: 'bio-natural-selection-adaptation-p3-s6-strategy',
+      type: 'text' as const,
+      content: `
+      ### ACT/AP strategy and misconception repair
+      
+      On ACT/AP style prompts, score gains come from linking vocabulary to evidence, not from isolated memorization.
+      
+      #### Strategy sequence
+      1. **Name the mechanism first**: identify whether the item is asking for process, structure, regulation, or population effect.
+      2. **Use a causation sentence**: "Because adaptation trait increasing fitness in a specific environment, we expect ...".
+      3. **Audit units and scale**: molecular claims, cellular claims, and ecosystem claims should not be mixed.
+      
+      #### Common misconceptions to avoid
+      - Hardy-Weinberg is a baseline comparison, not a claim that real populations are static.
+      - Adaptation and acclimation are different processes with different timescales.
+      - Individuals do not evolve genetically within a lifetime; populations evolve across generations.
+      
+      #### Exam execution tip
+      When two answer choices sound plausible, prefer the one that includes a direct mechanism and a measurable biological consequence.
+      `
+    },
+    {
+      id: 'bio-natural-selection-adaptation-p3-s7-mcq-final',
+      type: 'multiple-choice' as const,
+      content: `
+      **Final application MCQ (2 questions)**
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'In mate-choice effects on trait frequencies, the observed pattern is: null model where allele frequencies remain constant. What term should anchor the explanation?',
+            options: [
+              'adaptation',
+              'sexual selection',
+              'allele frequency',
+              'Hardy-Weinberg equilibrium'
+            ],
+            correctAnswer: 3,
+            explanation: 'Use Hardy-Weinberg equilibrium because it directly maps to the described biological pattern: null model where allele frequencies remain constant.'
+          },
+          {
+            question: 'In an AP-style free-response about sexual selection, the observed pattern is: random allele frequency change strongest in small populations. What term should anchor the explanation?',
+            options: [
+              'gene flow',
+              'genetic drift',
+              'Hardy-Weinberg equilibrium',
+              'allele frequency'
+            ],
+            correctAnswer: 1,
+            explanation: 'Use genetic drift because it directly maps to the described biological pattern: random allele frequency change strongest in small populations.'
+          }
+        ]
       }
     }
   ]
-}
+};

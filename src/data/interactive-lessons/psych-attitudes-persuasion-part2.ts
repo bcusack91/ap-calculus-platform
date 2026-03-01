@@ -2,123 +2,184 @@ export const psychAttitudesPart2Data = {
   topicSlug: 'attitudes-persuasion',
   sections: [
     {
-      id: 'attit2-intro',
+      id: 'attitudes-persuasion-p2-s1-intro',
       type: 'text' as const,
       content: `
-# ## Cognitive Dissonance
+      # 🧠 Attitudes and Persuasion
 
-**Part 2 of 7 — Cognitive Dissonance**
+      **Part 2 of 7 — Routes to Persuasion**
 
-### 1. Cognitive dissonance (Festinger)
+      In this part, you will connect core psychological vocabulary to realistic contexts and AP-style reasoning. Focus on mechanism first, then evidence.
 
-discomfort from contradictory beliefs/actions
+      ### Core Definitions
+      - **mere exposure effect**: increased liking after repeated exposure
+      - **central route**: persuasion through careful analysis of message quality
+      - **peripheral route**: persuasion through cues such as attractiveness or authority
 
-### 2. People change attitudes to reduce dissonance
+      ### Concrete Real-World Example
+      A team is studying a skincare advertisement using expert endorsements. They operationalize variables, compare plausible explanations, and look for the interpretation that best matches observed behavior instead of relying on intuition.
 
-People change attitudes to reduce dissonance
-
-### 3. Insufficient justification
-
-less reward → more attitude change
-
-### 4. Example
-
-smoker who knows smoking is harmful
+      ### Why This Matters
+      Strong AP responses define terms precisely, apply them to evidence, and justify why one interpretation is stronger than alternatives.
       `
     },
     {
-      id: 'attit2-quiz1',
+      id: 'attitudes-persuasion-p2-s2-check',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+      **Concept Check** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What does "Cognitive dissonance (Festinger)" refer to in psychology?',
+            question: 'In a study about a skincare advertisement using expert endorsements, participants change behavior after repeatedly seeing the same cue. Which concept is the best fit?',
             options: [
-              'People change attitudes to reduce dissonance',
-              'discomfort from contradictory beliefs/actions',
-              'smoker who knows smoking is harmful',
-              'less reward → more attitude change'
+              'cognitive dissonance',
+              'central route',
+              'peripheral route',
+              'mere exposure effect'
             ],
-            correctAnswer: 1,
-            explanation: 'Correct — Cognitive dissonance (Festinger): discomfort from contradictory beliefs/actions. The other options describe different concepts from this topic.'
+            correctAnswer: 3,
+            explanation: 'mere exposure effect is correct because it directly matches this mechanism: increased liking after repeated exposure. The distractors describe related but different processes.'
           },
           {
-            question: 'In the context of Cognitive Dissonance, which explains Insufficient justification?',
+            question: 'Researchers report that behavior shifts when participants receive a specific cue and then justify their choices afterward. Which concept best explains that pattern?',
             options: [
-              'People change attitudes to reduce dissonance',
-              'smoker who knows smoking is harmful',
-              'less reward → more attitude change',
-              'discomfort from contradictory beliefs/actions'
+              'foot-in-the-door',
+              'social judgment theory',
+              'peripheral route',
+              'central route'
             ],
-            correctAnswer: 2,
-            explanation: 'Correct — Insufficient justification: less reward → more attitude change. Be careful to distinguish between the different concepts in this topic.'
+            correctAnswer: 0,
+            explanation: 'foot-in-the-door is the strongest match here (gaining compliance with a small request before a larger one). The other options do not explain both the cue-driven shift and the observed response pattern as directly.'
           }
         ]
       }
     },
     {
-      id: 'attit2-detail',
+      id: 'attitudes-persuasion-p2-s3-deep',
       type: 'text' as const,
       content: `
-# ### Key Points
+      ## Deep Dive: Comparing Explanations with Evidence
 
-- **Cognitive dissonance (Festinger)**: discomfort from contradictory beliefs/actions
-- **People change attitudes to reduce dissonance**
-- **Insufficient justification**: less reward → more attitude change
-- **Example**: smoker who knows smoking is harmful
+      When analyzing a skincare advertisement using expert endorsements, the best interpretation ties a clear psychological mechanism to measurable evidence.
+
+      | Theory / Concept | Core claim | Typical evidence | Common limitation |
+      |---|---|---|---|
+      | mere exposure effect | increased liking after repeated exposure | experimental manipulation with random assignment | possible demand characteristics |
+      | central route | persuasion through careful analysis of message quality | longitudinal trend with repeated measurement | third-variable risk in natural settings |
+      | peripheral route | persuasion through cues such as attractiveness or authority | cross-sectional comparison with matched groups | limited generalizability across cultures |
+      | cognitive dissonance | discomfort from inconsistent beliefs and behaviors | mixed-method evidence combining survey and behavioral indicators | measurement validity depends on construct quality |
+
+      ### Interpretation Strategy
+      1. Name the mechanism before describing outcomes.
+      2. Match the claim to the strongest available evidence type.
+      3. Acknowledge one limitation and explain whether it changes the conclusion.
+
+      This structure helps you earn reasoning points on free-response and avoid vague claims.
       `
     },
     {
-      id: 'attit2-quiz2',
-      type: 'multiple-choice' as const,
+      id: 'attitudes-persuasion-p2-s4-input',
+      type: 'input-boxes' as const,
       content: `
-**Concept Check** 🎯
+      **Applied Recall (exact term answers)** ✍️
+
+      1) Write the concept that matches: increased liking after repeated exposure
+      2) Write the concept that matches: persuasion through careful analysis of message quality
+      3) Write the concept that matches: persuasion through cues such as attractiveness or authority
+
+      Use the exact vocabulary term from this part.
       `,
       exercise: {
-        questions: [
-          {
-            question: 'Which concept relates directly to cognitive dissonance?',
-            options: [
-              'smoker who knows smoking is harmful',
-              'Only biological factors',
-              'Exclusively cognitive processes',
-              'Mathematical formulas only'
-            ],
-            correctAnswer: 0,
-            explanation: 'Example: smoker who knows smoking is harmful'
-          }
-        ]
+        boxes: 3,
+        correctAnswers: ['mere exposure effect', 'central route', 'peripheral route'],
+        hint1: 'Starts with: M',
+        hint2: 'Starts with: C',
+        hint3: 'Starts with: P',
+        explanation: 'Expected answers: mere exposure effect, central route, and peripheral route. Each response should use the precise term connected to the definition cue.'
       }
     },
     {
-      id: 'attit2-dropdown',
+      id: 'attitudes-persuasion-p2-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Match the Concepts** 🔍
+      **Model Matching** 🔎
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Cognitive dissonance (Festinger)',
-            options: ['less reward → more attitude change', 'smoker who knows smoking is harmful', 'discomfort from contradictory beliefs/actions', 'People change attitudes to reduce dissonance']
+            label: 'Select the concept that best matches: increased liking after repeated exposure',
+            options: ['social judgment theory', 'mere exposure effect', 'central route', 'peripheral route']
           },
           {
-            label: 'Insufficient justification',
-            options: ['People change attitudes to reduce dissonance', 'smoker who knows smoking is harmful', 'less reward → more attitude change', 'discomfort from contradictory beliefs/actions']
+            label: 'Select the concept that best matches: persuasion through careful analysis of message quality',
+            options: ['central route', 'peripheral route', 'foot-in-the-door', 'social judgment theory']
           },
           {
-            label: 'Example',
-            options: ['less reward → more attitude change', 'smoker who knows smoking is harmful', 'People change attitudes to reduce dissonance', 'discomfort from contradictory beliefs/actions']
+            label: 'Select the concept that best matches: persuasion through cues such as attractiveness or authority',
+            options: ['foot-in-the-door', 'peripheral route', 'cognitive dissonance', 'mere exposure effect']
           }
         ],
-        correctAnswers: ['discomfort from contradictory beliefs/actions', 'less reward → more attitude change', 'smoker who knows smoking is harmful'],
-        hint1: 'Think about what each concept specifically describes in Cognitive Dissonance.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Cognitive Dissonance describes a specific idea. Cognitive dissonance (Festinger): discomfort from contradictory beliefs/actions. Insufficient justification: less reward → more attitude change. Example: smoker who knows smoking is harmful.'
+        correctAnswers: ['mere exposure effect', 'central route', 'peripheral route'],
+        hint1: 'Start by matching the key mechanism in each prompt to the most specific concept.',
+        hint2: 'Eliminate options that describe a different level of analysis (biological vs cognitive vs social).',
+        hint3: 'Use the definition language from this part to avoid near-miss terms.',
+        explanation: 'Correct matches are mere exposure effect, central route, and peripheral route. These choices align with the mechanism-language in each definition, not just broad topic similarity.'
+      }
+    },
+    {
+      id: 'attitudes-persuasion-p2-s6-strategy',
+      type: 'text' as const,
+      content: `
+      ## Common Misconceptions and Exam Strategy
+
+      ### Misconceptions to Avoid
+      - Strong emotions can persuade, but lasting change usually requires attitude-consistent reasoning.
+      - Peripheral cues can shift choices quickly, yet effects may fade without central processing.
+      - Dissonance reduction is not always conscious; people often rationalize automatically.
+      - Resistance does not mean no influence; it can mean delayed or context-dependent influence.
+
+      ### AP Strategy Moves
+      - Define the target concept in one precise sentence before giving examples.
+      - In scenario questions about a skincare advertisement using expert endorsements, identify the manipulated variable and measured outcome.
+      - Use one competing explanation and explain why it is weaker.
+      - If data are provided, mention trend direction and at least one design limitation.
+
+      This combination of precision and evidence improves both multiple-choice accuracy and free-response scoring.
+      `
+    },
+    {
+      id: 'attitudes-persuasion-p2-s7-applied',
+      type: 'multiple-choice' as const,
+      content: `
+      **Applied Scenarios** 🎯
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'A team investigating a skincare advertisement using expert endorsements finds that participants rely on a persuasive cue when they are distracted, but use argument quality when they are highly focused. Which concept best captures the focused-processing route?',
+            options: [
+              'central route',
+              'cognitive dissonance',
+              'peripheral route',
+              'mere exposure effect'
+            ],
+            correctAnswer: 1,
+            explanation: 'cognitive dissonance is best because it reflects this mechanism (discomfort from inconsistent beliefs and behaviors). The other options describe different levels of explanation or related constructs.'
+          },
+          {
+            question: 'After an intervention, scores improve in the treatment group but not in a matched comparison group. Which interpretation is most defensible for the targeted mechanism?',
+            options: [
+              'foot-in-the-door',
+              'peripheral route',
+              'central route',
+              'social judgment theory'
+            ],
+            correctAnswer: 0,
+            explanation: 'foot-in-the-door is the strongest interpretation because it maps to the measured pattern and proposed mechanism: gaining compliance with a small request before a larger one. Good AP reasoning also notes alternative explanations and design limits.'
+          }
+        ]
       }
     }
   ]

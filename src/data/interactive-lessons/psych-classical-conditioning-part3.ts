@@ -5,7 +5,7 @@ export const psychClassicalPart3Data = {
       id: 'class3-intro',
       type: 'text' as const,
       content: `
-# ## Acquisition & Extinction
+## Acquisition & Extinction
 
 **Part 3 of 7 — Acquisition & Extinction**
 
@@ -63,7 +63,7 @@ CS1 paired with CS2
       id: 'class3-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Acquisition**: CS-UCS pairing builds the association
 - **Extinction**: CS presented alone → CR weakens

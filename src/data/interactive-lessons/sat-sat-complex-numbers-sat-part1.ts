@@ -2,104 +2,177 @@ export const satComplexPart1Data = {
   topicSlug: 'sat-complex-numbers-sat',
   sections: [
     {
-      id: 'sat-c1-intro',
+      id: 'sat-cx1-intro',
       type: 'text' as const,
       content: `
-# 📝 Complex Numbers
+# 🔢 The Imaginary Unit $i$
 
-**Part 1 of 7 — Imaginary Numbers**
+**Part 1 of 7 — Definition, Powers of $i$, and the Cycle**
 
-i = √(-1), so i² = -1.
+The imaginary unit $i$ was invented to give meaning to the square root of negative numbers:
 
-√(-a) = i√a for a > 0.
+$$
+i = \\sqrt{-1} \\qquad i^2 = -1
+$$
+
+| Expression | Value |
+|------------|-------|
+| $\\sqrt{-4}$ | $2i$ |
+| $\\sqrt{-9}$ | $3i$ |
+| $\\sqrt{-25}$ | $5i$ |
+
+**General rule:** $\\sqrt{-a} = i\\sqrt{a}$ for any positive number $a$.
+
+A **complex number** has the form $a + bi$, where $a$ is the **real part** and $b$ is the **imaginary part**.
       `
     },
     {
-      id: 'sat-c1-quiz1',
+      id: 'sat-cx1-powers',
+      type: 'text' as const,
+      content: `
+## Powers of $i$ — The 4-Step Cycle
+
+The powers of $i$ repeat every 4:
+
+| Power | Value | Why |
+|-------|-------|-----|
+| $i^1$ | $i$ | Definition |
+| $i^2$ | $-1$ | Definition |
+| $i^3$ | $-i$ | $i^2 \\cdot i = -1 \\cdot i = -i$ |
+| $i^4$ | $1$ | $i^2 \\cdot i^2 = (-1)(-1) = 1$ |
+| $i^5$ | $i$ | Cycle restarts |
+
+**Shortcut:** To find $i^n$, divide $n$ by $4$ and look at the **remainder**:
+
+| Remainder | $i^n$ equals |
+|-----------|-------------|
+| $0$ | $1$ |
+| $1$ | $i$ |
+| $2$ | $-1$ |
+| $3$ | $-i$ |
+
+**Example:** $i^{23}$. Divide $23 \\div 4 = 5$ remainder $3$. So $i^{23} = -i$.
+
+**Example:** $i^{100}$. Divide $100 \\div 4 = 25$ remainder $0$. So $i^{100} = 1$.
+      `
+    },
+    {
+      id: 'sat-cx1-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+**Practice — Powers of $i$** 🔍
       `,
       exercise: {
         questions: [
           {
-            question: 'What does "i = √(-1), so i² = -1." refer to in SAT prep?',
-            options: [
-              'i = √(-1), so i² = -1.',
-              'Pure imaginary: bi (when a = 0); real: a (when b = 0).',
-              'Complex number: a + bi where a is real part, b is imaginary part.',
-              '√(-a) = i√a for a > 0.'
-            ],
-            correctAnswer: 0,
-            explanation: 'Correct — i = √(-1), so i² = -1. The other options describe different concepts from this topic.'
+            question: 'What is the value of $i^{42}$?',
+            options: ['$1$', '$i$', '$-1$', '$-i$'],
+            correctAnswer: 2,
+            explanation: '$42 \\div 4 = 10$ remainder $2$, so $i^{42} = i^2 = -1$.'
           },
           {
-            question: 'Which of the following is true about Key Insight?',
-            options: [
-              'Pure imaginary: bi (when a = 0); real: a (when b = 0).',
-              'Complex number: a + bi where a is real part, b is imaginary part.',
-              '√(-a) = i√a for a > 0.',
-              'i = √(-1), so i² = -1.'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Key Insight: Complex number: a + bi where a is real part, b is imaginary part. Be careful to distinguish between the different concepts in this topic.'
+            question: 'What is $i^{17} + i^{18}$?',
+            options: ['$0$', '$1 + i$', '$i - 1$', '$-1 - i$'],
+            correctAnswer: 2,
+            explanation: '$17 \\div 4$ has remainder $1$, so $i^{17} = i$. $18 \\div 4$ has remainder $2$, so $i^{18} = -1$. Sum: $i + (-1) = i - 1$.'
           }
         ]
       }
     },
     {
-      id: 'sat-c1-detail',
+      id: 'sat-cx1-simplify',
       type: 'text' as const,
       content: `
-**Key Insight:** Complex number: a + bi where a is real part, b is imaginary part.
+## Simplifying Square Roots of Negatives
 
-**SAT Tip:** Pure imaginary: bi (when a = 0); real: a (when b = 0).
+Always extract $i$ first, then simplify the radical:
+
+**Example 1:** $\\sqrt{-48}$
+$$\\sqrt{-48} = i\\sqrt{48} = i\\sqrt{16 \\cdot 3} = 4i\\sqrt{3}$$
+
+**Example 2:** $\\sqrt{-72}$
+$$\\sqrt{-72} = i\\sqrt{72} = i\\sqrt{36 \\cdot 2} = 6i\\sqrt{2}$$
+
+**Example 3:** $3\\sqrt{-50}$
+$$3\\sqrt{-50} = 3 \\cdot i\\sqrt{50} = 3i\\sqrt{25 \\cdot 2} = 15i\\sqrt{2}$$
+
+---
+
+**⚠️ Common mistake:** $\\sqrt{-4} \\cdot \\sqrt{-9} \\neq \\sqrt{36} = 6$. You must convert to $i$-form first: $(2i)(3i) = 6i^2 = -6$.
       `
     },
     {
-      id: 'sat-c1-quiz2',
-      type: 'multiple-choice' as const,
+      id: 'sat-cx1-input1',
+      type: 'input-boxes' as const,
       content: `
-**Check Your Understanding** 🎯
+**Simplify these expressions.** 🧮
+
+Write answers using $i$ (e.g. type "5i" or "-3i" or "1").
+
+1) $i^{36} = $
+
+2) $i^{75} = $
+
+3) $\\sqrt{-64} = $
       `,
       exercise: {
-        questions: [
-          {
-            question: 'Which statement about SAT Tip is correct?',
-            options: [
-              'Pure imaginary: bi (when a = 0); real: a (when b = 0).',
-              'Complex number: a + bi where a is real part, b is imaginary part.',
-              '√(-a) = i√a for a > 0.',
-              'i = √(-1), so i² = -1.'
-            ],
-            correctAnswer: 0,
-            explanation: 'Correct — SAT Tip: Pure imaginary: bi (when a = 0); real: a (when b = 0). Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
+        boxes: 3,
+        correctAnswers: ['1', '-i', '8i'],
+        hint1: '$36 \\div 4 = 9$ remainder $0$. Remainder $0$ means $i^{36} = 1$.',
+        hint2: '$75 \\div 4 = 18$ remainder $3$. Remainder $3$ means $i^{75} = -i$.',
+        hint3: '$\\sqrt{-64} = i\\sqrt{64} = 8i$.',
+        explanation: '$i^{36}=1$ (rem 0), $i^{75}=-i$ (rem 3), $\\sqrt{-64}=8i$.'
       }
     },
     {
-      id: 'sat-c1-dropdown',
+      id: 'sat-cx1-dropdown1',
       type: 'dropdown-select' as const,
       content: `
-**Match the Concepts** 🔍
+**Match each expression to its simplified value.** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key Insight',
-            options: ['Complex number: a + bi where a is real part, b is imaginary part.', 'i = √(-1), so i² = -1.', 'Pure imaginary: bi (when a = 0); real: a (when b = 0).', '√(-a) = i√a for a > 0.']
+            label: '$i^{20}$',
+            options: ['$1$', '$i$', '$-1$', '$-i$']
           },
           {
-            label: 'SAT Tip',
-            options: ['√(-a) = i√a for a > 0.', 'i = √(-1), so i² = -1.', 'Complex number: a + bi where a is real part, b is imaginary part.', 'Pure imaginary: bi (when a = 0); real: a (when b = 0).']
+            label: '$i^{31}$',
+            options: ['$1$', '$i$', '$-1$', '$-i$']
+          },
+          {
+            label: '$i^{50}$',
+            options: ['$1$', '$i$', '$-1$', '$-i$']
           }
         ],
-        correctAnswers: ['Complex number: a + bi where a is real part, b is imaginary part.', 'Pure imaginary: bi (when a = 0); real: a (when b = 0).'],
-        hint1: 'Think about what each concept specifically describes in Complex Numbers.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Complex Numbers describes a specific idea. Key Insight: Complex number: a + bi where a is real part, b is imaginary part. SAT Tip: Pure imaginary: bi (when a = 0); real: a (when b = 0).'
+        correctAnswers: ['$1$', '$-i$', '$-1$'],
+        hint1: '$20 \\div 4 = 5$ remainder $0$, so $i^{20} = 1$.',
+        hint2: '$31 \\div 4 = 7$ remainder $3$, so $i^{31} = -i$.',
+        hint3: '$50 \\div 4 = 12$ remainder $2$, so $i^{50} = -1$.',
+        explanation: 'Divide the exponent by 4 and use the remainder: 0→1, 1→i, 2→−1, 3→−i.'
+      }
+    },
+    {
+      id: 'sat-cx1-mcq2',
+      type: 'multiple-choice' as const,
+      content: `
+**SAT-Style Questions** 📋
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'Which of the following is equal to $i^4 + i^8 + i^{12} + i^{16}$?',
+            options: ['$4$', '$4i$', '$0$', '$-4$'],
+            correctAnswer: 0,
+            explanation: 'Each exponent is divisible by 4, so each term equals $1$. The sum is $1+1+1+1=4$.'
+          },
+          {
+            question: 'What is the value of $\\frac{i^{25}}{i^{21}}$?',
+            options: ['$1$', '$i$', '$-1$', '$-i$'],
+            correctAnswer: 0,
+            explanation: '$\\frac{i^{25}}{i^{21}} = i^{25-21} = i^4 = 1$.'
+          }
+        ]
       }
     }
   ]

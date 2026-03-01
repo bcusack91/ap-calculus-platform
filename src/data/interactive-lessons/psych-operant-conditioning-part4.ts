@@ -5,7 +5,7 @@ export const psychOperantPart4Data = {
       id: 'opera4-intro',
       type: 'text' as const,
       content: `
-# ## Schedules of Reinforcement
+## Schedules of Reinforcement
 
 **Part 4 of 7 — Schedules of Reinforcement**
 
@@ -63,7 +63,7 @@ Fixed-interval (FI) and Variable-interval (VI) schedules
       id: 'opera4-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Continuous reinforcement**: reinforce every response
 - **Fixed-ratio (FR)**: reinforce after set number of responses

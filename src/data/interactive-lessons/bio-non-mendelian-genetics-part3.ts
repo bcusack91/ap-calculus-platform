@@ -5,7 +5,7 @@ export const bioNonMendelianPart3Data = {
       id: 'non-3-intro-p3',
       type: 'text' as const,
       content: `
-# ## Epistasis
+## Epistasis
 
 **Part 3 of 7 — Epistasis**
 
@@ -52,7 +52,7 @@ export const bioNonMendelianPart3Data = {
       id: 'non-3-detail-p3',
       type: 'text' as const,
       content: `
-# ### Key Details
+### Key Details
 
 - **One gene masks the expression of another**
 - **Example**: coat color in Labrador retrievers (E gene masks B gene)

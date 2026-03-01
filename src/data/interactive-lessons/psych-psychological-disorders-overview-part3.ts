@@ -2,123 +2,184 @@ export const psychDisordersPart3Data = {
   topicSlug: 'psychological-disorders-overview',
   sections: [
     {
-      id: 'psych3-intro',
+      id: 'psychological-disorders-overview-p3-s1-intro',
       type: 'text' as const,
       content: `
-# ## Perspectives on Disorders
+      # 🧠 Psychological Disorders Overview
 
-**Part 3 of 7 — Perspectives on Disorders**
+      **Part 3 of 7 — Obsessive-Compulsive and Related Disorders**
 
-### 1. Biological
+      In this part, you will connect core psychological vocabulary to realistic contexts and AP-style reasoning. Focus on mechanism first, then evidence.
 
-genetics, neurotransmitters, brain structure
+      ### Core Definitions
+      - **PTSD**: trauma-related disorder involving intrusion, avoidance, and hyperarousal patterns
+      - **obsession**: intrusive, unwanted thought that causes distress
+      - **compulsion**: repetitive behavior performed to reduce distress or prevent feared outcomes
 
-### 2. Psychological
+      ### Concrete Real-World Example
+      A team is studying treatment planning for OCD symptom cycles. They operationalize variables, compare plausible explanations, and look for the interpretation that best matches observed behavior instead of relying on intuition.
 
-learning, cognition, personality
-
-### 3. Sociocultural
-
-culture, poverty, discrimination
-
-### 4. Diathesis-stress model
-
-vulnerability + stress → disorder
+      ### Why This Matters
+      Strong AP responses define terms precisely, apply them to evidence, and justify why one interpretation is stronger than alternatives.
       `
     },
     {
-      id: 'psych3-quiz1',
+      id: 'psychological-disorders-overview-p3-s2-check',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+      **Concept Check** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What does "Biological" refer to in psychology?',
+            question: 'In a study about treatment planning for OCD symptom cycles, participants change behavior after repeatedly seeing the same cue. Which concept is the best fit?',
             options: [
-              'vulnerability + stress → disorder',
-              'learning, cognition, personality',
-              'genetics, neurotransmitters, brain structure',
-              'culture, poverty, discrimination'
+              'PTSD',
+              'obsession',
+              'dissociation',
+              'compulsion'
             ],
-            correctAnswer: 2,
-            explanation: 'Correct — Biological: genetics, neurotransmitters, brain structure. The other options describe different concepts from this topic.'
+            correctAnswer: 0,
+            explanation: 'PTSD is correct because it directly matches this mechanism: trauma-related disorder involving intrusion, avoidance, and hyperarousal patterns. The distractors describe related but different processes.'
           },
           {
-            question: 'Select the statement that correctly describes Sociocultural:',
+            question: 'Researchers report that behavior shifts when participants receive a specific cue and then justify their choices afterward. Which concept best explains that pattern?',
             options: [
-              'culture, poverty, discrimination',
-              'vulnerability + stress → disorder',
-              'genetics, neurotransmitters, brain structure',
-              'learning, cognition, personality'
+              'biopsychosocial model',
+              'stigma',
+              'compulsion',
+              'obsession'
             ],
             correctAnswer: 0,
-            explanation: 'Correct — Sociocultural: culture, poverty, discrimination. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'biopsychosocial model is the strongest match here (framework integrating biological, psychological, and social influences). The other options do not explain both the cue-driven shift and the observed response pattern as directly.'
           }
         ]
       }
     },
     {
-      id: 'psych3-detail',
+      id: 'psychological-disorders-overview-p3-s3-deep',
       type: 'text' as const,
       content: `
-# ### Key Points
+      ## Deep Dive: Comparing Explanations with Evidence
 
-- **Biological**: genetics, neurotransmitters, brain structure
-- **Psychological**: learning, cognition, personality
-- **Sociocultural**: culture, poverty, discrimination
-- **Diathesis-stress model**: vulnerability + stress → disorder
+      When analyzing treatment planning for OCD symptom cycles, the best interpretation ties a clear psychological mechanism to measurable evidence.
+
+      | Theory / Concept | Core claim | Typical evidence | Common limitation |
+      |---|---|---|---|
+      | PTSD | trauma-related disorder involving intrusion, avoidance, and hyperarousal patterns | experimental manipulation with random assignment | possible demand characteristics |
+      | obsession | intrusive, unwanted thought that causes distress | longitudinal trend with repeated measurement | third-variable risk in natural settings |
+      | compulsion | repetitive behavior performed to reduce distress or prevent feared outcomes | cross-sectional comparison with matched groups | limited generalizability across cultures |
+      | dissociation | disruption in integration of consciousness, memory, or identity | mixed-method evidence combining survey and behavioral indicators | measurement validity depends on construct quality |
+
+      ### Interpretation Strategy
+      1. Name the mechanism before describing outcomes.
+      2. Match the claim to the strongest available evidence type.
+      3. Acknowledge one limitation and explain whether it changes the conclusion.
+
+      This structure helps you earn reasoning points on free-response and avoid vague claims.
       `
     },
     {
-      id: 'psych3-quiz2',
-      type: 'multiple-choice' as const,
+      id: 'psychological-disorders-overview-p3-s4-input',
+      type: 'input-boxes' as const,
       content: `
-**Concept Check** 🎯
+      **Applied Recall (exact term answers)** ✍️
+
+      1) Write the concept that matches: trauma-related disorder involving intrusion, avoidance, and hyperarousal patterns
+      2) Write the concept that matches: intrusive, unwanted thought that causes distress
+      3) Write the concept that matches: repetitive behavior performed to reduce distress or prevent feared outcomes
+
+      Use the exact vocabulary term from this part.
       `,
       exercise: {
-        questions: [
-          {
-            question: 'Which concept relates directly to perspectives on disorders?',
-            options: [
-              'vulnerability + stress → disorder',
-              'Only biological factors',
-              'Exclusively cognitive processes',
-              'Mathematical formulas only'
-            ],
-            correctAnswer: 0,
-            explanation: 'Diathesis-stress model: vulnerability + stress → disorder'
-          }
-        ]
+        boxes: 3,
+        correctAnswers: ['PTSD', 'obsession', 'compulsion'],
+        hint1: 'Starts with: P',
+        hint2: 'Starts with: O',
+        hint3: 'Starts with: C',
+        explanation: 'Expected answers: PTSD, obsession, and compulsion. Each response should use the precise term connected to the definition cue.'
       }
     },
     {
-      id: 'psych3-dropdown',
+      id: 'psychological-disorders-overview-p3-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Match the Concepts** 🔍
+      **Model Matching** 🔎
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Biological',
-            options: ['culture, poverty, discrimination', 'vulnerability + stress → disorder', 'learning, cognition, personality', 'genetics, neurotransmitters, brain structure']
+            label: 'Select the concept that best matches: trauma-related disorder involving intrusion, avoidance, and hyperarousal patterns',
+            options: ['compulsion', 'stigma', 'obsession', 'PTSD']
           },
           {
-            label: 'Psychological',
-            options: ['vulnerability + stress → disorder', 'culture, poverty, discrimination', 'learning, cognition, personality', 'genetics, neurotransmitters, brain structure']
+            label: 'Select the concept that best matches: intrusive, unwanted thought that causes distress',
+            options: ['biopsychosocial model', 'dissociation', 'obsession', 'stigma']
           },
           {
-            label: 'Sociocultural',
-            options: ['culture, poverty, discrimination', 'vulnerability + stress → disorder', 'genetics, neurotransmitters, brain structure', 'learning, cognition, personality']
+            label: 'Select the concept that best matches: repetitive behavior performed to reduce distress or prevent feared outcomes',
+            options: ['biopsychosocial model', 'obsession', 'PTSD', 'compulsion']
           }
         ],
-        correctAnswers: ['genetics, neurotransmitters, brain structure', 'learning, cognition, personality', 'culture, poverty, discrimination'],
-        hint1: 'Think about what each concept specifically describes in Perspectives on Disorders.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Perspectives on Disorders describes a specific idea. Biological: genetics, neurotransmitters, brain structure. Psychological: learning, cognition, personality. Sociocultural: culture, poverty, discrimination.'
+        correctAnswers: ['PTSD', 'obsession', 'compulsion'],
+        hint1: 'Start by matching the key mechanism in each prompt to the most specific concept.',
+        hint2: 'Eliminate options that describe a different level of analysis (biological vs cognitive vs social).',
+        hint3: 'Use the definition language from this part to avoid near-miss terms.',
+        explanation: 'Correct matches are PTSD, obsession, and compulsion. These choices align with the mechanism-language in each definition, not just broad topic similarity.'
+      }
+    },
+    {
+      id: 'psychological-disorders-overview-p3-s6-strategy',
+      type: 'text' as const,
+      content: `
+      ## Common Misconceptions and Exam Strategy
+
+      ### Misconceptions to Avoid
+      - A diagnosis requires distress or impairment, not just occasional symptoms.
+      - Diagnostic categories guide treatment but do not capture every individual nuance.
+      - Cultural context shapes symptom interpretation and help-seeking behavior.
+      - Comorbidity is common and should influence case formulation.
+
+      ### AP Strategy Moves
+      - Define the target concept in one precise sentence before giving examples.
+      - In scenario questions about treatment planning for OCD symptom cycles, identify the manipulated variable and measured outcome.
+      - Use one competing explanation and explain why it is weaker.
+      - If data are provided, mention trend direction and at least one design limitation.
+
+      This combination of precision and evidence improves both multiple-choice accuracy and free-response scoring.
+      `
+    },
+    {
+      id: 'psychological-disorders-overview-p3-s7-applied',
+      type: 'multiple-choice' as const,
+      content: `
+      **Applied Scenarios** 🎯
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'A team investigating treatment planning for OCD symptom cycles finds that participants rely on a persuasive cue when they are distracted, but use argument quality when they are highly focused. Which concept best captures the focused-processing route?',
+            options: [
+              'compulsion',
+              'PTSD',
+              'dissociation',
+              'obsession'
+            ],
+            correctAnswer: 2,
+            explanation: 'dissociation is best because it reflects this mechanism (disruption in integration of consciousness, memory, or identity). The other options describe different levels of explanation or related constructs.'
+          },
+          {
+            question: 'After an intervention, scores improve in the treatment group but not in a matched comparison group. Which interpretation is most defensible for the targeted mechanism?',
+            options: [
+              'stigma',
+              'biopsychosocial model',
+              'obsession',
+              'compulsion'
+            ],
+            correctAnswer: 1,
+            explanation: 'biopsychosocial model is the strongest interpretation because it maps to the measured pattern and proposed mechanism: framework integrating biological, psychological, and social influences. Good AP reasoning also notes alternative explanations and design limits.'
+          }
+        ]
       }
     }
   ]

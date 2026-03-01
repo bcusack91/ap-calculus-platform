@@ -2,123 +2,184 @@ export const psychBrainPart5Data = {
   topicSlug: 'biological-bases-brain',
   sections: [
     {
-      id: 'biolo5-intro',
+      id: 'biological-bases-brain-p5-s1-intro',
       type: 'text' as const,
       content: `
-# ## Brain Imaging Techniques
+      # 🧠 Biological Bases and Brain
 
-**Part 5 of 7 — Brain Imaging Techniques**
+      **Part 5 of 7 — Methods in Biological Psychology**
 
-### 1. fMRI
+      In this part, you will connect core psychological vocabulary to realistic contexts and AP-style reasoning. Focus on mechanism first, then evidence.
 
-shows brain activity (blood flow)
+      ### Core Definitions
+      - **EEG**: a method that records electrical brain activity with high temporal resolution
+      - **fMRI**: an imaging method that infers neural activity via blood-oxygen changes
+      - **action potential**: an all-or-none electrical impulse traveling down the axon
 
-### 2. EEG
+      ### Concrete Real-World Example
+      A team is studying brain imaging during memory retrieval tasks. They operationalize variables, compare plausible explanations, and look for the interpretation that best matches observed behavior instead of relying on intuition.
 
-measures electrical activity
-
-### 3. CT/MRI
-
-structural images
-
-### 4. PET scan
-
-metabolic activity using radioactive glucose
+      ### Why This Matters
+      Strong AP responses define terms precisely, apply them to evidence, and justify why one interpretation is stronger than alternatives.
       `
     },
     {
-      id: 'biolo5-quiz1',
+      id: 'biological-bases-brain-p5-s2-check',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+      **Concept Check** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes fMRI?',
+            question: 'In a study about brain imaging during memory retrieval tasks, participants change behavior after repeatedly seeing the same cue. Which concept is the best fit?',
             options: [
-              'measures electrical activity',
-              'metabolic activity using radioactive glucose',
-              'shows brain activity (blood flow)',
-              'structural images'
+              'action potential',
+              'EEG',
+              'fMRI',
+              'synapse'
             ],
-            correctAnswer: 2,
-            explanation: 'Correct — fMRI: shows brain activity (blood flow). The other options describe different concepts from this topic.'
+            correctAnswer: 1,
+            explanation: 'EEG is correct because it directly matches this mechanism: a method that records electrical brain activity with high temporal resolution. The distractors describe related but different processes.'
           },
           {
-            question: 'Select the statement that correctly describes CT/MRI:',
+            question: 'Researchers report that behavior shifts when participants receive a specific cue and then justify their choices afterward. Which concept best explains that pattern?',
             options: [
-              'measures electrical activity',
-              'metabolic activity using radioactive glucose',
-              'shows brain activity (blood flow)',
-              'structural images'
+              'dopamine',
+              'action potential',
+              'serotonin',
+              'fMRI'
             ],
-            correctAnswer: 3,
-            explanation: 'Correct — CT/MRI: structural images. Be careful to distinguish between the different concepts in this topic.'
+            correctAnswer: 0,
+            explanation: 'dopamine is the strongest match here (a neurotransmitter linked to reward, movement, and motivation). The other options do not explain both the cue-driven shift and the observed response pattern as directly.'
           }
         ]
       }
     },
     {
-      id: 'biolo5-detail',
+      id: 'biological-bases-brain-p5-s3-deep',
       type: 'text' as const,
       content: `
-# ### Key Points
+      ## Deep Dive: Comparing Explanations with Evidence
 
-- **fMRI**: shows brain activity (blood flow)
-- **EEG**: measures electrical activity
-- **CT/MRI**: structural images
-- **PET scan**: metabolic activity using radioactive glucose
+      When analyzing brain imaging during memory retrieval tasks, the best interpretation ties a clear psychological mechanism to measurable evidence.
+
+      | Theory / Concept | Core claim | Typical evidence | Common limitation |
+      |---|---|---|---|
+      | EEG | a method that records electrical brain activity with high temporal resolution | experimental manipulation with random assignment | possible demand characteristics |
+      | fMRI | an imaging method that infers neural activity via blood-oxygen changes | longitudinal trend with repeated measurement | third-variable risk in natural settings |
+      | action potential | an all-or-none electrical impulse traveling down the axon | cross-sectional comparison with matched groups | limited generalizability across cultures |
+      | synapse | the junction where one neuron communicates with another cell | mixed-method evidence combining survey and behavioral indicators | measurement validity depends on construct quality |
+
+      ### Interpretation Strategy
+      1. Name the mechanism before describing outcomes.
+      2. Match the claim to the strongest available evidence type.
+      3. Acknowledge one limitation and explain whether it changes the conclusion.
+
+      This structure helps you earn reasoning points on free-response and avoid vague claims.
       `
     },
     {
-      id: 'biolo5-quiz2',
-      type: 'multiple-choice' as const,
+      id: 'biological-bases-brain-p5-s4-input',
+      type: 'input-boxes' as const,
       content: `
-**Concept Check** 🎯
+      **Applied Recall (exact term answers)** ✍️
+
+      1) Write the concept that matches: a method that records electrical brain activity with high temporal resolution
+      2) Write the concept that matches: an imaging method that infers neural activity via blood-oxygen changes
+      3) Write the concept that matches: an all-or-none electrical impulse traveling down the axon
+
+      Use the exact vocabulary term from this part.
       `,
       exercise: {
-        questions: [
-          {
-            question: 'Which concept relates directly to brain imaging techniques?',
-            options: [
-              'metabolic activity using radioactive glucose',
-              'Only biological factors',
-              'Exclusively cognitive processes',
-              'Mathematical formulas only'
-            ],
-            correctAnswer: 0,
-            explanation: 'PET scan: metabolic activity using radioactive glucose'
-          }
-        ]
+        boxes: 3,
+        correctAnswers: ['EEG', 'fMRI', 'action potential'],
+        hint1: 'Starts with: E',
+        hint2: 'Starts with: F',
+        hint3: 'Starts with: A',
+        explanation: 'Expected answers: EEG, fMRI, and action potential. Each response should use the precise term connected to the definition cue.'
       }
     },
     {
-      id: 'biolo5-dropdown',
+      id: 'biological-bases-brain-p5-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Match the Concepts** 🔍
+      **Model Matching** 🔎
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'fMRI',
-            options: ['measures electrical activity', 'structural images', 'metabolic activity using radioactive glucose', 'shows brain activity (blood flow)']
+            label: 'Select the concept that best matches: a method that records electrical brain activity with high temporal resolution',
+            options: ['EEG', 'action potential', 'serotonin', 'fMRI']
           },
           {
-            label: 'EEG',
-            options: ['metabolic activity using radioactive glucose', 'shows brain activity (blood flow)', 'measures electrical activity', 'structural images']
+            label: 'Select the concept that best matches: an imaging method that infers neural activity via blood-oxygen changes',
+            options: ['serotonin', 'synapse', 'action potential', 'fMRI']
           },
           {
-            label: 'CT/MRI',
-            options: ['measures electrical activity', 'shows brain activity (blood flow)', 'metabolic activity using radioactive glucose', 'structural images']
+            label: 'Select the concept that best matches: an all-or-none electrical impulse traveling down the axon',
+            options: ['serotonin', 'EEG', 'synapse', 'action potential']
           }
         ],
-        correctAnswers: ['shows brain activity (blood flow)', 'measures electrical activity', 'structural images'],
-        hint1: 'Think about what each concept specifically describes in Brain Imaging Techniques.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Brain Imaging Techniques describes a specific idea. fMRI: shows brain activity (blood flow). EEG: measures electrical activity. CT/MRI: structural images.'
+        correctAnswers: ['EEG', 'fMRI', 'action potential'],
+        hint1: 'Start by matching the key mechanism in each prompt to the most specific concept.',
+        hint2: 'Eliminate options that describe a different level of analysis (biological vs cognitive vs social).',
+        hint3: 'Use the definition language from this part to avoid near-miss terms.',
+        explanation: 'Correct matches are EEG, fMRI, and action potential. These choices align with the mechanism-language in each definition, not just broad topic similarity.'
+      }
+    },
+    {
+      id: 'biological-bases-brain-p5-s6-strategy',
+      type: 'text' as const,
+      content: `
+      ## Common Misconceptions and Exam Strategy
+
+      ### Misconceptions to Avoid
+      - Single regions rarely act alone; cognition emerges from interacting networks.
+      - fMRI maps blood flow, not direct electrical firing.
+      - Neurotransmitters are context dependent; the same molecule can have different effects by pathway.
+      - Correlation in brain imaging does not by itself prove causation.
+
+      ### AP Strategy Moves
+      - Define the target concept in one precise sentence before giving examples.
+      - In scenario questions about brain imaging during memory retrieval tasks, identify the manipulated variable and measured outcome.
+      - Use one competing explanation and explain why it is weaker.
+      - If data are provided, mention trend direction and at least one design limitation.
+
+      This combination of precision and evidence improves both multiple-choice accuracy and free-response scoring.
+      `
+    },
+    {
+      id: 'biological-bases-brain-p5-s7-applied',
+      type: 'multiple-choice' as const,
+      content: `
+      **Applied Scenarios** 🎯
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'A team investigating brain imaging during memory retrieval tasks finds that participants rely on a persuasive cue when they are distracted, but use argument quality when they are highly focused. Which concept best captures the focused-processing route?',
+            options: [
+              'synapse',
+              'EEG',
+              'fMRI',
+              'action potential'
+            ],
+            correctAnswer: 0,
+            explanation: 'synapse is best because it reflects this mechanism (the junction where one neuron communicates with another cell). The other options describe different levels of explanation or related constructs.'
+          },
+          {
+            question: 'After an intervention, scores improve in the treatment group but not in a matched comparison group. Which interpretation is most defensible for the targeted mechanism?',
+            options: [
+              'fMRI',
+              'dopamine',
+              'action potential',
+              'serotonin'
+            ],
+            correctAnswer: 1,
+            explanation: 'dopamine is the strongest interpretation because it maps to the measured pattern and proposed mechanism: a neurotransmitter linked to reward, movement, and motivation. Good AP reasoning also notes alternative explanations and design limits.'
+          }
+        ]
       }
     }
   ]

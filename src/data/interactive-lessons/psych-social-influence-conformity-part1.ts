@@ -63,7 +63,7 @@ attributing success to self, failure to situation
       id: 'socia1-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Social psychology**: how people think about, influence, and relate to others
 - **Attribution theory**: explaining others' behavior

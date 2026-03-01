@@ -48,7 +48,7 @@ $$\\text{Polymer} + H_2O \\rightarrow \\text{Monomers}$$
       id: 'biol1-overview',
       type: 'text' as const,
       content: `
-# ## The Four Classes
+## The Four Classes
 
 | Macromolecule | Monomer | Function | Elements |
 |--------------|---------|----------|----------|

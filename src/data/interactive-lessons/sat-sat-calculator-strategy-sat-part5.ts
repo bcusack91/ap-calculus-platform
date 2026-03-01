@@ -2,108 +2,81 @@ export const satCalcStrategyPart5Data = {
   topicSlug: 'sat-calculator-strategy-sat',
   sections: [
     {
-      id: 'sat-c5-intro',
+      id: 'sat-calc-p5-intro',
       type: 'text' as const,
       content: `
-# Time Management
+# 📐 Calculator for Geometry
 
-**Part 5 of 7 — Time Management**
+**Part 5 of 7 — Calculator for Geometry**
 
-Average time per question: ~75 seconds (no-calc), ~87 seconds (calc).
+Trig functions, unit conversions, and area/volume calculations
 
-Do easy questions first — every question is worth the same.
+This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+
+**Key Concepts in This Section:**
+- Core principles and definitions
+- Step-by-step problem-solving methods
+- Common SAT question patterns
+- Strategic tips for test day
       `
     },
     {
-      id: 'sat-c5-quiz1',
+      id: 'sat-calc-p5-check',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+**Quick Check** 🔍
       `,
       exercise: {
         questions: [
           {
-            question: 'What does "Average time per question" refer to in SAT prep?',
+            question: 'Based on the concepts in this section, which approach is most effective?',
             options: [
-              'Do easy questions first — every question is worth the same.',
-              'Mark and skip questions that seem time-consuming, return later.',
-              'Last 5 minutes: answer every remaining question (no penalty for guessing).',
-              '~75 seconds (no-calc), ~87 seconds (calc).'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Average time per question: ~75 seconds (no-calc), ~87 seconds (calc). The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Select the statement that correctly describes Key Insight:',
-            options: [
-              '~75 seconds (no-calc), ~87 seconds (calc).',
-              'Mark and skip questions that seem time-consuming, return later.',
-              'Do easy questions first — every question is worth the same.',
-              'Last 5 minutes: answer every remaining question (no penalty for guessing).'
+              'Memorize formulas without understanding when to apply them',
+              'Understand the underlying concepts and practice with varied problems',
+              'Only practice problems you find easy to build confidence',
+              'Skip practice and rely on intuition during the test'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — Key Insight: Mark and skip questions that seem time-consuming, return later. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
           }
         ]
       }
     },
     {
-      id: 'sat-c5-detail',
+      id: 'sat-calc-p5-detail',
       type: 'text' as const,
       content: `
-**Key Insight:** Mark and skip questions that seem time-consuming, return later.
+**Detailed Concepts & Examples**
 
-**SAT Tip:** Last 5 minutes: answer every remaining question (no penalty for guessing).
+This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
+
+1. **Identify** the type of problem quickly
+2. **Apply** the correct method systematically
+3. **Verify** your answer makes sense in context
+
+Work through each example carefully before attempting the practice problems below.
       `
     },
     {
-      id: 'sat-c5-quiz2',
+      id: 'sat-calc-p5-practice',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+**SAT-Style Questions** 📋
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement about SAT Tip is correct?',
+            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
             options: [
-              'Do easy questions first — every question is worth the same.',
-              'Mark and skip questions that seem time-consuming, return later.',
-              '~75 seconds (no-calc), ~87 seconds (calc).',
-              'Last 5 minutes: answer every remaining question (no penalty for guessing).'
+              'Guess and move on quickly',
+              'Identify what the question is actually asking for',
+              'Try every formula you know until one works',
+              'Skip it permanently'
             ],
-            correctAnswer: 3,
-            explanation: 'Correct — SAT Tip: Last 5 minutes: answer every remaining question (no penalty for guessing). Each option describes a real concept from this topic, so pay attention to the specific details.'
+            correctAnswer: 1,
+            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
           }
         ]
-      }
-    },
-    {
-      id: 'sat-c5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Average time per question',
-            options: ['Mark and skip questions that seem time-consuming, return later.', '~75 seconds (no-calc), ~87 seconds (calc).', 'Last 5 minutes: answer every remaining question (no penalty for guessing).', 'Do easy questions first — every question is worth the same.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['Last 5 minutes: answer every remaining question (no penalty for guessing).', 'Mark and skip questions that seem time-consuming, return later.', '~75 seconds (no-calc), ~87 seconds (calc).', 'Do easy questions first — every question is worth the same.']
-          },
-          {
-            label: 'SAT Tip',
-            options: ['~75 seconds (no-calc), ~87 seconds (calc).', 'Mark and skip questions that seem time-consuming, return later.', 'Do easy questions first — every question is worth the same.', 'Last 5 minutes: answer every remaining question (no penalty for guessing).']
-          }
-        ],
-        correctAnswers: ['~75 seconds (no-calc), ~87 seconds (calc).', 'Mark and skip questions that seem time-consuming, return later.', 'Last 5 minutes: answer every remaining question (no penalty for guessing).'],
-        hint1: 'Think about what each concept specifically describes in Time Management.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Time Management describes a specific idea. Average time per question: ~75 seconds (no-calc), ~87 seconds (calc). Key Insight: Mark and skip questions that seem time-consuming, return later. SAT Tip: Last 5 minutes: answer every remaining question (no penalty for guessing).'
       }
     }
   ]

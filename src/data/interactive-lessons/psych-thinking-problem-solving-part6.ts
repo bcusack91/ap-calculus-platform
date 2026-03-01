@@ -5,7 +5,7 @@ export const psychThinkingPart6Data = {
       id: 'think6-intro',
       type: 'text' as const,
       content: `
-# ## Problem-Solving Workshop
+## Problem-Solving Workshop
 
 **Part 6 of 7 — Problem-Solving Workshop**
 
@@ -63,7 +63,7 @@ Evaluating framing effects
       id: 'think6-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Identifying heuristics and biases in scenarios**
 - **Analyzing decision-making errors**

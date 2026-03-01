@@ -5,7 +5,7 @@ export const psychHistoryApproachesPart3Data = {
       id: 'histo3-methods',
       type: 'text' as const,
       content: `
-# ## Research Methods in Psychology
+## Research Methods in Psychology
 
 ### The Scientific Method
 
@@ -52,7 +52,7 @@ export const psychHistoryApproachesPart3Data = {
       id: 'histo3-variables',
       type: 'text' as const,
       content: `
-# ## Variables & Experimental Design
+## Variables & Experimental Design
 
 ### Key Terms
 

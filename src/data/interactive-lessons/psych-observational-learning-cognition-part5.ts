@@ -5,7 +5,7 @@ export const psychObservationalPart5Data = {
       id: 'obser5-intro',
       type: 'text' as const,
       content: `
-# ## Biological Constraints
+## Biological Constraints
 
 **Part 5 of 7 — Biological Constraints**
 
@@ -63,7 +63,7 @@ Critical periods for certain types of learning
       id: 'obser5-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Biological preparedness**: some associations learned more easily
 - **Instinctive drift**: tendency to revert to innate behaviors

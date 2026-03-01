@@ -5,7 +5,7 @@ export const psychLanguagePart3Data = {
       id: 'langu3-intro',
       type: 'text' as const,
       content: `
-# ## Intelligence Theories
+## Intelligence Theories
 
 **Part 3 of 7 — Intelligence Theories**
 
@@ -63,7 +63,7 @@ perceiving, using, managing emotions
       id: 'langu3-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Spearman's g**: general intelligence factor
 - **Gardner's multiple intelligences**: 8 types (linguistic, musical, spatial, etc.)

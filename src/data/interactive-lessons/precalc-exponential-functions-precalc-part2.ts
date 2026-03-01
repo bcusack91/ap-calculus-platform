@@ -2,120 +2,191 @@ export const precalcExponentialPart2Data = {
   topicSlug: 'exponential-functions-precalc',
   sections: [
     {
-      id: 'expon2-intro',
+      id: 'precalc-exponential-functions-precalc-p2-s1-intro',
       type: 'text' as const,
       content: `
-# Properties of Exponential Functions
-
-**Part 2 of 7 — Properties of Exponential Functions**
-
-### 1. Domain
-
-all real numbers; Range: (0, ∞) for positive a
-
-### 2. Horizontal asymptote at y = 0 (or y = k for shifts)
-
-Horizontal asymptote at y = 0 (or y = k for shifts)
-
-### 3. Exponential functions are always one-to-one
-
-Exponential functions are always one-to-one
-
-### 4. Transformations
-
-f(x) = a · b^(x-h) + k shifts h units right, k units up
+      ## Exponential Functions: Transformations of exponential graphs
+      
+      **Part 2 of 7**
+      
+      This part focuses on comparing transformed growth curves. Keep notation precise and connect each symbolic step to geometric or functional meaning.
+      
+      ### Core definitions
+      - **growth factor**: multiplier per unit increase in input
+      - **decay factor**: multiplier between 0 and 1 per input step
+      - **initial value**: value when input is zero
+      
+      
+      ### Worked Example
+      Part 2 uses direct precalculus notation to move from structure to computation.
+      
+      Start with a model statement, substitute known values, and simplify step by step using exact form first.
+      When needed, convert to decimals only after the symbolic setup is complete.
       `
     },
     {
-      id: 'expon2-quiz1',
+      id: 'precalc-exponential-functions-precalc-p2-s2-mcq-core',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+      **Multiple-choice check (2 questions)**
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains Domain?',
+            question: 'Choose the most accurate definition of growth factor.',
             options: [
-              'f(x) = a · b^(x-h) + k shifts h units right, k units up',
-              'Horizontal asymptote at y = 0 (or y = k for shifts)',
-              'Exponential functions are always one-to-one',
-              'all real numbers; Range: (0, ∞) for positive a'
+              'input interval required to multiply output by 2',
+              'value when input is zero',
+              'multiplier per unit increase in input',
+              'multiplier between 0 and 1 per input step'
             ],
-            correctAnswer: 3,
-            explanation: 'Correct — Domain: all real numbers; Range: (0, ∞) for positive a. The other options describe different concepts from this topic.'
+            correctAnswer: 2,
+            explanation: 'growth factor is defined as: multiplier per unit increase in input.'
           },
           {
-            question: 'In the context of Properties of Exponential Functions, which explains Exponential functions are always…?',
+            question: 'In comparing transformed growth curves, which expression is the best starting model?',
             options: [
-              'Exponential functions are always one-to-one',
-              'all real numbers; Range: (0, ∞) for positive a',
-              'Horizontal asymptote at y = 0 (or y = k for shifts)',
-              'f(x) = a · b^(x-h) + k shifts h units right, k units up'
+              '$T_d=\\frac{\\ln 2}{k}$',
+              '$T_{1/2}=\\frac{\\ln 2}{|k|}$',
+              '$f(t)=Ae^{kt}$',
+              '$f(x)=ab^x$'
             ],
-            correctAnswer: 0,
-            explanation: 'Correct — Exponential functions are always one-to-one. Be careful to distinguish between the different concepts in this topic.'
+            correctAnswer: 2,
+            explanation: 'Use $f(t)=Ae^{kt}$ first, then substitute known quantities from the prompt.'
           }
         ]
       }
     },
     {
-      id: 'expon2-detail',
+      id: 'precalc-exponential-functions-precalc-p2-s3-deep-dive',
       type: 'text' as const,
       content: `
-### Key Concepts Summary
-
-- **Domain**: all real numbers; Range: (0, ∞) for positive a
-- **Horizontal asymptote at y = 0 (or y = k for shifts)**
-- **Exponential functions are always one-to-one**
-- **Transformations**: f(x) = a · b^(x-h) + k shifts h units right, k units up
+      ### Deep-Dive: formulas and decision rules
+      
+      Use this table to pick the right expression before computing.
+      
+      | Tool | Formula | Best use |
+      |---|---|---|
+      | Continuous model | $f(t)=Ae^{kt}$ | growth/decay by constant relative rate |
+      | Doubling time | $T_d=\frac{\ln 2}{k}$ | continuous growth timing |
+      | Half-life | $T_{1/2}=\frac{\ln 2}{|k|}$ | continuous decay timing |
+      | Exponential form | $f(x)=ab^x$ | model construction |
+      
+      ### Common pitfalls
+      - A linear graph of raw data is not exponential evidence; inspect ratios.
+      - When solving exponents, isolate the exponential expression before applying logs.
+      - Do not confuse the base $b$ with the initial value $a$.
+      
+      ### Precision checks
+      1. Identify givens and unknowns before selecting a formula.
+      2. Keep exact values through symbolic simplification when possible.
+      3. Verify units, angle mode, or domain constraints before finalizing.
       `
     },
     {
-      id: 'expon2-quiz2',
-      type: 'multiple-choice' as const,
+      id: 'precalc-exponential-functions-precalc-p2-s4-input',
+      type: 'input-boxes' as const,
       content: `
-**Concept Check** 🎯
+      **Input Practice — Exponential Evaluation**
+      
+      1) Solve $2^x=32$ for $x$.
+      2) Evaluate $f(3)$ for $f(x)=5\left(
+      rac{1}{2}
+      ight)^x$.
+      3) If $P(t)=100(1.1)^t$, compute $P(2)$.
       `,
       exercise: {
-        questions: [
-          {
-            question: 'Which concept relates directly to properties of exponential functions?',
-            options: [
-              'f(x) = a · b^(x-h) + k shifts h units right, k units up',
-              'Only complex analysis',
-              'Exclusively abstract algebra',
-              'This applies only to statistics'
-            ],
-            correctAnswer: 0,
-            explanation: 'Transformations: f(x) = a · b^(x-h) + k shifts h units right, k units up'
-          }
-        ]
+        boxes: 3,
+        correctAnswers: ['5', '0.625', '121'],
+        hint1: 'Rewrite 32 as a power of 2.',
+        hint2: 'Compute $(1/2)^3$ first, then scale by 5.',
+        hint3: 'Square the growth factor 1.1 and multiply by 100.',
+        explanation: 'The answers are 5, 0.625, and 121 after direct exponential substitution.'
       }
     },
     {
-      id: 'expon2-dropdown',
+      id: 'precalc-exponential-functions-precalc-p2-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Match the Concepts** 🔍
+      **Dropdown-select practice (3 prompts)**
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Domain',
-            options: ['f(x) = a · b^(x-h) + k shifts h units right, k units up', 'all real numbers; Range: (0, ∞) for positive a', 'Horizontal asymptote at y = 0 (or y = k for shifts)', 'Exponential functions are always one-to-one']
+            label: 'growth factor',
+            options: ['value when input is zero', 'multiplier per unit increase in input', 'input interval required to multiply output by 2', 'multiplier between 0 and 1 per input step']
           },
           {
-            label: 'Transformations',
-            options: ['f(x) = a · b^(x-h) + k shifts h units right, k units up', 'Exponential functions are always one-to-one', 'Horizontal asymptote at y = 0 (or y = k for shifts)', 'all real numbers; Range: (0, ∞) for positive a']
+            label: 'decay factor',
+            options: ['input interval required to multiply output by $\\rac12$', 'input interval required to multiply output by 2', 'value when input is zero', 'multiplier between 0 and 1 per input step']
+          },
+          {
+            label: 'initial value',
+            options: ['input interval required to multiply output by 2', 'value when input is zero', 'percent change per step or per unit time', 'input interval required to multiply output by $\\rac12$']
           }
         ],
-        correctAnswers: ['all real numbers; Range: (0, ∞) for positive a', 'f(x) = a · b^(x-h) + k shifts h units right, k units up'],
-        hint1: 'Think about what each concept specifically describes in Properties of Exponential Functions.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Properties of Exponential Functions describes a specific idea. Domain: all real numbers; Range: (0, ∞) for positive a. Transformations: f(x) = a · b^(x-h) + k shifts h units right, k units up.'
+        correctAnswers: ['multiplier per unit increase in input', 'multiplier between 0 and 1 per input step', 'value when input is zero'],
+        hint1: 'Match each term to the full definition, not just a keyword.',
+        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
+        hint3: 'Read the label and option together as one complete mathematical sentence.',
+        explanation: 'Correct mapping: growth factor, decay factor, and initial value align with their exact definitions used in this part.'
+      }
+    },
+    {
+      id: 'precalc-exponential-functions-precalc-p2-s6-strategy',
+      type: 'text' as const,
+      content: `
+      ### Strategy: graphing, calculator, and exam tactics
+      
+      **Graphing tactics**
+      - Sketch anchor points or intercept behavior before detailed algebra.
+      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
+      
+      **Calculator tactics**
+      - Confirm angle mode before trig operations.
+      - Store intermediate values to avoid rounded drift.
+      - Use table mode to test reasonableness around key inputs.
+      
+      **Exam tactics**
+      - Translate words to symbols first, then choose the matching formula family.
+      - Eliminate options that violate domain or structure.
+      - If two choices are close, substitute back into the original relationship.
+      
+      Tie each step to growth factor, decay factor, and initial value so your reasoning is explicit and checkable.
+      `
+    },
+    {
+      id: 'precalc-exponential-functions-precalc-p2-s7-mcq-applied',
+      type: 'multiple-choice' as const,
+      content: `
+      **Applied mixed questions (2 questions)**
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'A student is comparing transformed growth curves. Which term best anchors the next reasoning step if the key idea is: input interval required to multiply output by 2?',
+            options: [
+              'initial value',
+              'growth factor',
+              'decay factor',
+              'doubling time'
+            ],
+            correctAnswer: 3,
+            explanation: 'doubling time matches that description and keeps the model-to-interpretation chain consistent.'
+          },
+          {
+            question: 'A student is solving a mixed exponential functions prompt. Which term best anchors the next reasoning step if the key idea is: input interval required to multiply output by $\\rac12$?',
+            options: [
+              'relative rate',
+              'initial value',
+              'doubling time',
+              'half-life'
+            ],
+            correctAnswer: 3,
+            explanation: 'half-life matches that description and keeps the model-to-interpretation chain consistent.'
+          }
+        ]
       }
     }
   ]
-}
+};

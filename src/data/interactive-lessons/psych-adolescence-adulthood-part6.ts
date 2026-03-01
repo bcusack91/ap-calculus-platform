@@ -5,7 +5,7 @@ export const psychAdolescencePart6Data = {
       id: 'adole6-intro',
       type: 'text' as const,
       content: `
-# ## Problem-Solving Workshop
+## Problem-Solving Workshop
 
 **Part 6 of 7 — Problem-Solving Workshop**
 
@@ -63,7 +63,7 @@ Evaluating aging stereotypes
       id: 'adole6-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Applying Kohlberg's stages to moral dilemmas**
 - **Identifying Erikson's stages throughout lifespan**

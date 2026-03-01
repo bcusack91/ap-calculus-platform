@@ -63,7 +63,7 @@ schemas for sequences of events (restaurant script)
       id: 'think1-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Concepts**: mental categories for objects, events, ideas
 - **Prototypes**: best example of a concept (robin = bird)

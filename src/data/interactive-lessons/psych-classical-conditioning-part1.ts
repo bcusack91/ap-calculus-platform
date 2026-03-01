@@ -63,7 +63,7 @@ learning by association
       id: 'class1-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Ivan Pavlov**: Russian physiologist studying digestion
 - **Dogs salivated to bell after pairing with food**

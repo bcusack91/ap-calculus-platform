@@ -2,108 +2,81 @@ export const satPolynomialsPart1Data = {
   topicSlug: 'sat-polynomials-factoring-sat',
   sections: [
     {
-      id: 'sat-p1-intro',
+      id: 'sat-poly-p1-intro',
       type: 'text' as const,
       content: `
-# 📝 Polynomials Factoring
+# 🔢 Polynomial Basics
 
-**Part 1 of 7 — Polynomial Operations**
+**Part 1 of 7 — Polynomial Basics**
 
-Add/subtract polynomials: combine like terms.
+Degree, leading coefficient, end behavior, standard form
 
-Multiply polynomials: distribute each term (FOIL for binomials).
+This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+
+**Key Concepts in This Section:**
+- Core principles and definitions
+- Step-by-step problem-solving methods
+- Common SAT question patterns
+- Strategic tips for test day
       `
     },
     {
-      id: 'sat-p1-quiz1',
+      id: 'sat-poly-p1-check',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+**Quick Check** 🔍
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Add/subtract polynomials?',
+            question: 'Based on the concepts in this section, which approach is most effective?',
             options: [
-              'combine like terms.',
-              'distribute each term (FOIL for binomials).',
-              'Leading coefficient: coefficient of the highest-degree term.',
-              'Degree of a polynomial: highest power of the variable.'
-            ],
-            correctAnswer: 0,
-            explanation: 'Correct — Add/subtract polynomials: combine like terms. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Which of the following is true about Key Insight?',
-            options: [
-              'distribute each term (FOIL for binomials).',
-              'Leading coefficient: coefficient of the highest-degree term.',
-              'combine like terms.',
-              'Degree of a polynomial: highest power of the variable.'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Key Insight: Degree of a polynomial: highest power of the variable. Be careful to distinguish between the different concepts in this topic.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'sat-p1-detail',
-      type: 'text' as const,
-      content: `
-**Key Insight:** Degree of a polynomial: highest power of the variable.
-
-**SAT Tip:** Leading coefficient: coefficient of the highest-degree term.
-      `
-    },
-    {
-      id: 'sat-p1-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of these accurately represents SAT Tip?',
-            options: [
-              'distribute each term (FOIL for binomials).',
-              'Leading coefficient: coefficient of the highest-degree term.',
-              'combine like terms.',
-              'Degree of a polynomial: highest power of the variable.'
+              'Memorize formulas without understanding when to apply them',
+              'Understand the underlying concepts and practice with varied problems',
+              'Only practice problems you find easy to build confidence',
+              'Skip practice and rely on intuition during the test'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — SAT Tip: Leading coefficient: coefficient of the highest-degree term. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
           }
         ]
       }
     },
     {
-      id: 'sat-p1-dropdown',
-      type: 'dropdown-select' as const,
+      id: 'sat-poly-p1-detail',
+      type: 'text' as const,
       content: `
-**Match the Concepts** 🔍
+**Detailed Concepts & Examples**
+
+This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
+
+1. **Identify** the type of problem quickly
+2. **Apply** the correct method systematically
+3. **Verify** your answer makes sense in context
+
+Work through each example carefully before attempting the practice problems below.
+      `
+    },
+    {
+      id: 'sat-poly-p1-practice',
+      type: 'multiple-choice' as const,
+      content: `
+**SAT-Style Questions** 📋
       `,
       exercise: {
-        dropdowns: [
+        questions: [
           {
-            label: 'Add/subtract polynomials',
-            options: ['combine like terms.', 'Degree of a polynomial: highest power of the variable.', 'Leading coefficient: coefficient of the highest-degree term.', 'distribute each term (FOIL for binomials).']
-          },
-          {
-            label: 'Multiply polynomials',
-            options: ['Leading coefficient: coefficient of the highest-degree term.', 'distribute each term (FOIL for binomials).', 'Degree of a polynomial: highest power of the variable.', 'combine like terms.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['distribute each term (FOIL for binomials).', 'combine like terms.', 'Degree of a polynomial: highest power of the variable.', 'Leading coefficient: coefficient of the highest-degree term.']
+            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
+            options: [
+              'Guess and move on quickly',
+              'Identify what the question is actually asking for',
+              'Try every formula you know until one works',
+              'Skip it permanently'
+            ],
+            correctAnswer: 1,
+            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
           }
-        ],
-        correctAnswers: ['combine like terms.', 'distribute each term (FOIL for binomials).', 'Degree of a polynomial: highest power of the variable.'],
-        hint1: 'Think about what each concept specifically describes in Polynomials Factoring.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Polynomials Factoring describes a specific idea. Add/subtract polynomials: combine like terms. Multiply polynomials: distribute each term (FOIL for binomials). Key Insight: Degree of a polynomial: highest power of the variable.'
+        ]
       }
     }
   ]

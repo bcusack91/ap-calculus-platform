@@ -2,108 +2,81 @@ export const satTestDayPart4Data = {
   topicSlug: 'sat-test-day-strategy-sat',
   sections: [
     {
-      id: 'sat-t4-intro',
+      id: 'sat-test-p4-intro',
       type: 'text' as const,
       content: `
-# Common Traps & Pitfalls
+# 🧠 Stress Management
 
-**Part 4 of 7 — Common Traps & Pitfalls**
+**Part 4 of 7 — Stress Management**
 
-Misreading the question: "NOT" or "EXCEPT" or "must be true" vs. "could be true".
+Breathing techniques, positive self-talk, dealing with anxiety
 
-Calculation errors: double-check by substituting your answer back in.
+This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+
+**Key Concepts in This Section:**
+- Core principles and definitions
+- Step-by-step problem-solving methods
+- Common SAT question patterns
+- Strategic tips for test day
       `
     },
     {
-      id: 'sat-t4-quiz1',
+      id: 'sat-test-p4-check',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+**Quick Check** 🔍
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Misreading the question?',
+            question: 'Based on the concepts in this section, which approach is most effective?',
             options: [
-              'Picking the most tempting wrong answer (designed to catch common mistakes).',
-              '"NOT" or "EXCEPT" or "must be true" vs. "could be true".',
-              'Running out of time: pace yourself with a watch, don\'t get stuck on one question.',
-              'double-check by substituting your answer back in.'
+              'Memorize formulas without understanding when to apply them',
+              'Understand the underlying concepts and practice with varied problems',
+              'Only practice problems you find easy to build confidence',
+              'Skip practice and rely on intuition during the test'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — Misreading the question: "NOT" or "EXCEPT" or "must be true" vs. "could be true". The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'In the context of Common Traps & Pitfalls, which explains Key Insight?',
-            options: [
-              '"NOT" or "EXCEPT" or "must be true" vs. "could be true".',
-              'Picking the most tempting wrong answer (designed to catch common mistakes).',
-              'Running out of time: pace yourself with a watch, don\'t get stuck on one question.',
-              'double-check by substituting your answer back in.'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Key Insight: Picking the most tempting wrong answer (designed to catch common mistakes). Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
           }
         ]
       }
     },
     {
-      id: 'sat-t4-detail',
+      id: 'sat-test-p4-detail',
       type: 'text' as const,
       content: `
-**Key Insight:** Picking the most tempting wrong answer (designed to catch common mistakes).
+**Detailed Concepts & Examples**
 
-**SAT Tip:** Running out of time: pace yourself with a watch, don't get stuck on one question.
+This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
+
+1. **Identify** the type of problem quickly
+2. **Apply** the correct method systematically
+3. **Verify** your answer makes sense in context
+
+Work through each example carefully before attempting the practice problems below.
       `
     },
     {
-      id: 'sat-t4-quiz2',
+      id: 'sat-test-p4-practice',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+**SAT-Style Questions** 📋
       `,
       exercise: {
         questions: [
           {
-            question: 'Regarding Common Traps & Pitfalls, which correctly describes SAT Tip?',
+            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
             options: [
-              'Picking the most tempting wrong answer (designed to catch common mistakes).',
-              '"NOT" or "EXCEPT" or "must be true" vs. "could be true".',
-              'double-check by substituting your answer back in.',
-              'Running out of time: pace yourself with a watch, don\'t get stuck on one question.'
+              'Guess and move on quickly',
+              'Identify what the question is actually asking for',
+              'Try every formula you know until one works',
+              'Skip it permanently'
             ],
-            correctAnswer: 3,
-            explanation: 'Correct — SAT Tip: Running out of time: pace yourself with a watch, don\'t get stuck on one question. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            correctAnswer: 1,
+            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
           }
         ]
-      }
-    },
-    {
-      id: 'sat-t4-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Misreading the question',
-            options: ['double-check by substituting your answer back in.', 'Picking the most tempting wrong answer (designed to catch common mistakes).', '"NOT" or "EXCEPT" or "must be true" vs. "could be true".', 'Running out of time: pace yourself with a watch, don\'t get stuck on one question.']
-          },
-          {
-            label: 'Calculation errors',
-            options: ['Running out of time: pace yourself with a watch, don\'t get stuck on one question.', 'double-check by substituting your answer back in.', 'Picking the most tempting wrong answer (designed to catch common mistakes).', '"NOT" or "EXCEPT" or "must be true" vs. "could be true".']
-          },
-          {
-            label: 'Key Insight',
-            options: ['"NOT" or "EXCEPT" or "must be true" vs. "could be true".', 'Running out of time: pace yourself with a watch, don\'t get stuck on one question.', 'double-check by substituting your answer back in.', 'Picking the most tempting wrong answer (designed to catch common mistakes).']
-          }
-        ],
-        correctAnswers: ['"NOT" or "EXCEPT" or "must be true" vs. "could be true".', 'double-check by substituting your answer back in.', 'Picking the most tempting wrong answer (designed to catch common mistakes).'],
-        hint1: 'Think about what each concept specifically describes in Common Traps & Pitfalls.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Common Traps & Pitfalls describes a specific idea. Misreading the question: "NOT" or "EXCEPT" or "must be true" vs. "could be true". Calculation errors: double-check by substituting your answer back in. Key Insight: Picking the most tempting wrong answer (designed to catch common mistakes).'
       }
     }
   ]

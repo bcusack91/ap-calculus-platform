@@ -5,7 +5,7 @@ export const bioMacromoleculesPart5Data = {
       id: 'biol5-na',
       type: 'text' as const,
       content: `
-# ## Nucleic Acids: DNA & RNA
+## Nucleic Acids: DNA & RNA
 
 ### Nucleotide Structure
 
@@ -63,7 +63,7 @@ If a DNA sample is 30% adenine, then:
       id: 'biol5-bonding',
       type: 'text' as const,
       content: `
-# ## Phosphodiester Bonds & Directionality
+## Phosphodiester Bonds & Directionality
 
 Nucleotides are linked by **phosphodiester bonds** between the 3' carbon of one sugar and the 5' carbon of the next.
 

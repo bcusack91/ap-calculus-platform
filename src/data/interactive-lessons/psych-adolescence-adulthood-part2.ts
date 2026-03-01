@@ -5,7 +5,7 @@ export const psychAdolescencePart2Data = {
       id: 'adole2-intro',
       type: 'text' as const,
       content: `
-# ## Identity Formation
+## Identity Formation
 
 **Part 2 of 7 — Identity Formation**
 
@@ -63,7 +63,7 @@ Peer influence increases during adolescence
       id: 'adole2-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Erikson**: identity vs role confusion
 - **Marcia**: identity statuses (achievement, moratorium, foreclosure, diffusion)

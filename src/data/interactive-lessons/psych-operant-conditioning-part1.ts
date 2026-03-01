@@ -63,7 +63,7 @@ Behavior followed by reinforcement increases; by punishment decreases
       id: 'opera1-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Thorndike's Law of Effect**: rewarded behaviors are repeated
 - **B.F. Skinner**: operant conditioning chamber (Skinner box)

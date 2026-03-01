@@ -5,7 +5,7 @@ export const psychThinkingPart2Data = {
       id: 'think2-intro',
       type: 'text' as const,
       content: `
-# ## Problem-Solving Strategies
+## Problem-Solving Strategies
 
 **Part 2 of 7 — Problem-Solving Strategies**
 
@@ -63,7 +63,7 @@ inability to see a problem from a new perspective
       id: 'think2-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Algorithms**: step-by-step procedures (guaranteed solution)
 - **Heuristics**: mental shortcuts (faster but error-prone)

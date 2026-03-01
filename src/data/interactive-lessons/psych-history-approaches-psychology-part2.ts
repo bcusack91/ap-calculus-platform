@@ -5,7 +5,7 @@ export const psychHistoryApproachesPart2Data = {
       id: 'histo2-perspectives',
       type: 'text' as const,
       content: `
-# ## Modern Psychological Perspectives
+## Modern Psychological Perspectives
 
 | Perspective | Focus | Key Figures |
 |------------|-------|-------------|
@@ -51,7 +51,7 @@ Modern psychology recognizes that behavior results from the interaction of:
       id: 'histo2-subfields',
       type: 'text' as const,
       content: `
-# ## Subfields of Psychology
+## Subfields of Psychology
 
 | Subfield | Focus |
 |----------|-------|

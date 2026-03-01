@@ -2,109 +2,193 @@ export const bioCellRespirationPart2Data = {
   topicSlug: 'cellular-respiration',
   sections: [
     {
-      id: 'cell2-intro-p2',
+      id: 'bio-cellular-respiration-p2-s1-intro',
       type: 'text' as const,
       content: `
-# ## Pyruvate Oxidation & Krebs Cycle
-
-**Part 2 of 7 — Pyruvate Oxidation & Krebs Cycle**
-
-1. Pyruvate → acetyl-CoA + CO₂ + NADH (in mitochondrial matrix)
-2. Krebs cycle: acetyl-CoA → 2CO₂ + 3NADH + FADH₂ + ATP
-3. Per glucose: cycle turns twice
-4. Occurs in mitochondrial matrix
+      ## Cellular Respiration: Glycolysis
+      
+      **Part 2 of 7**
+      
+      In this lesson, you will connect mechanism-level biology to exam-ready reasoning through substrate-level phosphorylation in glycolysis.
+      
+      ### Worked biological example
+      A student team investigates substrate-level phosphorylation in glycolysis. Their first interpretation step is to identify how **pyruvate oxidation** and **citric acid cycle** work together in the same pathway.
+      
+      - They classify the primary signal using **pyruvate oxidation**: converts pyruvate to acetyl-CoA and releases CO2.
+      - They trace the downstream response using **citric acid cycle**: oxidizes acetyl groups and generates NADH/FADH2.
+      - They then compare outcomes with **electron transport chain** and **chemiosmosis** to separate mechanism from correlation.
+      
+      ### Key terms for this part
+      - **pyruvate oxidation**
+      - **citric acid cycle**
+      - **electron transport chain**
+      - **chemiosmosis**
       `
     },
     {
-      id: 'cell2-quiz1',
+      id: 'bio-cellular-respiration-p2-s2-mcq-core',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+      **Checkpoint MCQ (2 questions)**
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains Pyruvate → acetyl-CoA + CO₂ + NADH (in…?',
+            question: 'For Glycolysis, what best describes pyruvate oxidation?',
             options: [
-              'cycle turns twice',
-              'acetyl-CoA → 2CO₂ + 3NADH + FADH₂ + ATP',
-              'Occurs in mitochondrial matrix',
-              'Pyruvate → acetyl-CoA + CO₂ + NADH (in mitochondrial matrix)'
+              'uses proton gradient energy to drive ATP synthesis',
+              'transfers electrons to oxygen through membrane complexes',
+              'oxidizes acetyl groups and generates NADH/FADH2',
+              'converts pyruvate to acetyl-CoA and releases CO2'
             ],
             correctAnswer: 3,
-            explanation: 'Correct — Pyruvate → acetyl-CoA + CO₂ + NADH (in mitochondrial matrix). The other options describe different concepts from this topic.'
+            explanation: 'pyruvate oxidation is best matched with: converts pyruvate to acetyl-CoA and releases CO2.'
           },
           {
-            question: 'Which of the following is true about Per glucose?',
+            question: 'In this part\'s context, what is the strongest definition of citric acid cycle?',
             options: [
-              'Occurs in mitochondrial matrix',
-              'Pyruvate → acetyl-CoA + CO₂ + NADH (in mitochondrial matrix)',
-              'cycle turns twice',
-              'acetyl-CoA → 2CO₂ + 3NADH + FADH₂ + ATP'
+              'transfers electrons to oxygen through membrane complexes',
+              'enzyme complex that phosphorylates ADP using proton flow',
+              'oxidizes acetyl groups and generates NADH/FADH2',
+              'converts pyruvate to acetyl-CoA and releases CO2'
             ],
             correctAnswer: 2,
-            explanation: 'Correct — Per glucose: cycle turns twice. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'citric acid cycle is best matched with: oxidizes acetyl groups and generates NADH/FADH2.'
           }
         ]
       }
     },
     {
-      id: 'cell2-detail-p2',
+      id: 'bio-cellular-respiration-p2-s3-deep-dive',
       type: 'text' as const,
       content: `
-# ### Key Details
-
-- **Pyruvate → acetyl-CoA + CO₂ + NADH (in mitochondrial matrix)**
-- **Krebs cycle**: acetyl-CoA → 2CO₂ + 3NADH + FADH₂ + ATP
-- **Per glucose**: cycle turns twice
-- **Occurs in mitochondrial matrix**
+      ### Deep-Dive Map: Glycolysis
+      
+      Use this diagram-style summary to track causation and evidence.
+      
+      #### Flow logic
+      - **Signal/Input** → pyruvate oxidation
+      - **Immediate processing** → citric acid cycle
+      - **System-level consequence** → electron transport chain
+      - **Measured readout** → chemiosmosis
+      
+      #### Mechanism table
+      | Component | Biological role | Typical evidence pattern |
+      |---|---|---|
+      | pyruvate oxidation | converts pyruvate to acetyl-CoA and releases CO2 | Early shift in the primary variable |
+      | citric acid cycle | oxidizes acetyl groups and generates NADH/FADH2 | Mid-pathway change in process rate |
+      | electron transport chain | transfers electrons to oxygen through membrane complexes | Downstream phenotype trend |
+      | chemiosmosis | uses proton gradient energy to drive ATP synthesis | Quantifiable endpoint in data summary |
+      
+      #### Reasoning checkpoints
+      1. Name the mechanism before describing the trend line.
+      2. Separate proximate mechanism from ecological or historical context.
+      3. Verify that each claim is tied to a measurable biological readout.
       `
     },
     {
-      id: 'cell2-quiz2',
-      type: 'multiple-choice' as const,
+      id: 'bio-cellular-respiration-p2-s4-input',
+      type: 'input-boxes' as const,
       content: `
-**Check Your Understanding** 🎯
+      **Input Practice — concrete vocabulary retrieval**
+      
+      Fill in each blank with the exact biological term.
+      
+      1) Term for this definition: **converts pyruvate to acetyl-CoA and releases CO2**
+      2) Term for this definition: **oxidizes acetyl groups and generates NADH/FADH2**
+      3) Term for this definition: **transfers electrons to oxygen through membrane complexes**
       `,
       exercise: {
-        questions: [
-          {
-            question: 'Regarding Pyruvate Oxidation & Krebs Cycle, which correctly describes Occurs in mitochondrial matrix?',
-            options: [
-              'Occurs in mitochondrial matrix',
-              'cycle turns twice',
-              'acetyl-CoA → 2CO₂ + 3NADH + FADH₂ + ATP',
-              'Pyruvate → acetyl-CoA + CO₂ + NADH (in mitochondrial matrix)'
-            ],
-            correctAnswer: 0,
-            explanation: 'Correct — Occurs in mitochondrial matrix. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
+        boxes: 3,
+        correctAnswers: ['pyruvate oxidation', 'citric acid cycle', 'electron transport chain'],
+        hint1: 'Start with the first item: it is the mechanism term used when a process is described as \'converts pyruvate to acetyl-CoA and releases CO2\'.',
+        hint2: 'Second blank points to citric acid cycle; think about the role \'oxidizes acetyl groups and generates NADH/FADH2\'.',
+        hint3: 'Third blank is electron transport chain; connect it to \'transfers electrons to oxygen through membrane complexes\'.',
+        explanation: 'Correct set: pyruvate oxidation, citric acid cycle, electron transport chain. These three terms define the core mechanism chain for Glycolysis.'
       }
     },
     {
-      id: 'cell2-dropdown',
+      id: 'bio-cellular-respiration-p2-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Match the Concepts** 🔍
+      **Dropdown matching (3 prompts)**
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Krebs cycle',
-            options: ['Pyruvate → acetyl-CoA + CO₂ + NADH (in mitochondrial matrix)', 'cycle turns twice', 'Occurs in mitochondrial matrix', 'acetyl-CoA → 2CO₂ + 3NADH + FADH₂ + ATP']
+            label: 'pyruvate oxidation',
+            options: ['converts pyruvate to acetyl-CoA and releases CO2', 'uses proton gradient energy to drive ATP synthesis', 'transfers electrons to oxygen through membrane complexes', 'oxidizes acetyl groups and generates NADH/FADH2']
           },
           {
-            label: 'Per glucose',
-            options: ['Pyruvate → acetyl-CoA + CO₂ + NADH (in mitochondrial matrix)', 'Occurs in mitochondrial matrix', 'acetyl-CoA → 2CO₂ + 3NADH + FADH₂ + ATP', 'cycle turns twice']
+            label: 'citric acid cycle',
+            options: ['transfers electrons to oxygen through membrane complexes', 'enzyme complex that phosphorylates ADP using proton flow', 'oxidizes acetyl groups and generates NADH/FADH2', 'uses proton gradient energy to drive ATP synthesis']
+          },
+          {
+            label: 'electron transport chain',
+            options: ['enzyme complex that phosphorylates ADP using proton flow', 'high-energy electron carrier delivering reducing power', 'uses proton gradient energy to drive ATP synthesis', 'transfers electrons to oxygen through membrane complexes']
           }
         ],
-        correctAnswers: ['acetyl-CoA → 2CO₂ + 3NADH + FADH₂ + ATP', 'cycle turns twice'],
-        hint1: 'Think about what each concept specifically describes in Pyruvate Oxidation & Krebs Cycle.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Pyruvate Oxidation & Krebs Cycle describes a specific idea. Krebs cycle: acetyl-CoA → 2CO₂ + 3NADH + FADH₂ + ATP. Per glucose: cycle turns twice.'
+        correctAnswers: ['converts pyruvate to acetyl-CoA and releases CO2', 'oxidizes acetyl groups and generates NADH/FADH2', 'transfers electrons to oxygen through membrane complexes'],
+        hint1: 'Match each term to the definition that captures mechanism, not just keywords.',
+        hint2: 'If two definitions feel close, choose the one with the exact process direction.',
+        hint3: 'Read each label out loud, then pick the option that completes a causal sentence.',
+        explanation: 'pyruvate oxidation, citric acid cycle, and electron transport chain should map to their exact mechanistic definitions. When options look similar, anchor your choice to process direction and biological scale.'
+      }
+    },
+    {
+      id: 'bio-cellular-respiration-p2-s6-strategy',
+      type: 'text' as const,
+      content: `
+      ### ACT/AP strategy and misconception repair
+      
+      On ACT/AP style prompts, score gains come from linking vocabulary to evidence, not from isolated memorization.
+      
+      #### Strategy sequence
+      1. **Name the mechanism first**: identify whether the item is asking for process, structure, regulation, or population effect.
+      2. **Use a causation sentence**: "Because pyruvate oxidation converts pyruvate to acetyl-CoA and releases CO2, we expect ...".
+      3. **Audit units and scale**: molecular claims, cellular claims, and ecosystem claims should not be mixed.
+      
+      #### Common misconceptions to avoid
+      - Oxygen is the terminal electron acceptor, not a direct reactant in every step.
+      - NADH and FADH2 are not ATP themselves; they transfer electron energy.
+      - Pathway location matters for interpretation of transport and regulation questions.
+      
+      #### Exam execution tip
+      When two answer choices sound plausible, prefer the one that includes a direct mechanism and a measurable biological consequence.
+      `
+    },
+    {
+      id: 'bio-cellular-respiration-p2-s7-mcq-final',
+      type: 'multiple-choice' as const,
+      content: `
+      **Final application MCQ (2 questions)**
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'In substrate-level phosphorylation in glycolysis, the observed pattern is: uses proton gradient energy to drive ATP synthesis. What term should anchor the explanation?',
+            options: [
+              'pyruvate oxidation',
+              'chemiosmosis',
+              'electron transport chain',
+              'citric acid cycle'
+            ],
+            correctAnswer: 1,
+            explanation: 'Use chemiosmosis because it directly maps to the described biological pattern: uses proton gradient energy to drive ATP synthesis.'
+          },
+          {
+            question: 'In an AP-style free-response about glycolysis, the observed pattern is: enzyme complex that phosphorylates ADP using proton flow. What term should anchor the explanation?',
+            options: [
+              'electron transport chain',
+              'ATP synthase',
+              'NADH',
+              'chemiosmosis'
+            ],
+            correctAnswer: 1,
+            explanation: 'Use ATP synthase because it directly maps to the described biological pattern: enzyme complex that phosphorylates ADP using proton flow.'
+          }
+        ]
       }
     }
   ]
-}
+};

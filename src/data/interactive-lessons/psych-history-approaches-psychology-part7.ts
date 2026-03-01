@@ -5,7 +5,7 @@ export const psychHistoryApproachesPart7Data = {
       id: 'histo7-synthesis',
       type: 'text' as const,
       content: `
-# ## AP Psychology: History & Methods Review
+## AP Psychology: History & Methods Review
 
 ### Key Comparisons
 
@@ -47,7 +47,7 @@ export const psychHistoryApproachesPart7Data = {
       id: 'histo7-tips',
       type: 'text' as const,
       content: `
-# ## AP Exam Tips
+## AP Exam Tips
 
 - Know the **key figures** and their contributions
 - Be able to **design an experiment** from a research question

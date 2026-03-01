@@ -5,7 +5,7 @@ export const psychThinkingPart3Data = {
       id: 'think3-intro',
       type: 'text' as const,
       content: `
-# ## Decision Making
+## Decision Making
 
 **Part 3 of 7 — Decision Making**
 
@@ -63,7 +63,7 @@ overestimating accuracy of our judgments
       id: 'think3-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Framing effect**: how a question is presented affects decisions
 - **Loss aversion**: losses loom larger than equivalent gains

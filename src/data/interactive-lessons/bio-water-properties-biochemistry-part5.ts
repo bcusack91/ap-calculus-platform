@@ -5,7 +5,7 @@ export const bioWaterPropertiesPart5Data = {
       id: 'wate5-ice',
       type: 'text' as const,
       content: `
-# ## Ice Floats — And That's Critical
+## Ice Floats — And That's Critical
 
 Unlike most substances, water is **less dense as a solid** than as a liquid.
 
@@ -50,7 +50,7 @@ Unlike most substances, water is **less dense as a solid** than as a liquid.
       id: 'wate5-summary',
       type: 'text' as const,
       content: `
-# ## Summary of Water's Properties
+## Summary of Water's Properties
 
 | Property | Cause | Biological Importance |
 |----------|-------|----------------------|

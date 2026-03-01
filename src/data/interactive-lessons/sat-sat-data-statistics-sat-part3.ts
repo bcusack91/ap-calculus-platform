@@ -2,108 +2,152 @@ export const satDataStatsPart3Data = {
   topicSlug: 'sat-data-statistics-sat',
   sections: [
     {
-      id: 'sat-d3-intro',
+      id: 'sat-ds3-intro',
       type: 'text' as const,
       content: `
-# Data Displays
+# 📈 Reading Tables & Two-Way Tables
 
-**Part 3 of 7 — Data Displays**
+**Part 3 of 7 — Extracting Data**
 
-Histograms: bars show frequency for intervals (no gaps).
+The SAT loves **two-way frequency tables**. They organize data by two categorical variables.
 
-Box plots: show min, Q1, median, Q3, max.
+**Example:**
+
+|  | Prefer Dogs | Prefer Cats | Total |
+|--|------------|------------|-------|
+| **Boys** | 45 | 30 | 75 |
+| **Girls** | 35 | 40 | 75 |
+| **Total** | 80 | 70 | 150 |
+
+Key questions:
+- "What fraction of students prefer dogs?" → $\\frac{80}{150}$ (use grand total)
+- "What fraction of **boys** prefer dogs?" → $\\frac{45}{75}$ (use row total — conditional!)
+- "Of those who prefer cats, what fraction are girls?" → $\\frac{40}{70}$ (use column total)
+
+**Critical distinction:** "Of ALL students" uses the **grand total**. "Of boys" or "given that..." uses a **row/column total**.
       `
     },
     {
-      id: 'sat-d3-quiz1',
+      id: 'sat-ds3-check',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+**Quick Check** 🔍
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Histograms?',
+            question: 'Using the table above: What percentage of girls prefer cats? (Rounded)',
             options: [
-              'IQR = Q3 - Q1 (middle 50% of data).',
-              'Outliers: typically more than 1.5 × IQR below Q1 or above Q3.',
-              'show min, Q1, median, Q3, max.',
-              'bars show frequency for intervals (no gaps).'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Histograms: bars show frequency for intervals (no gaps). The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Which of the following is true about Key Insight?',
-            options: [
-              'show min, Q1, median, Q3, max.',
-              'bars show frequency for intervals (no gaps).',
-              'IQR = Q3 - Q1 (middle 50% of data).',
-              'Outliers: typically more than 1.5 × IQR below Q1 or above Q3.'
+              '27%',
+              '40%',
+              '53%',
+              '57%'
             ],
             correctAnswer: 2,
-            explanation: 'Correct — Key Insight: IQR = Q3 - Q1 (middle 50% of data). Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'Of girls: $40/75 \\approx 0.533 = 53\\%$. The denominator is 75 (total girls), NOT 70 (cat lovers) or 150 (everyone).'
           }
         ]
       }
     },
     {
-      id: 'sat-d3-detail',
+      id: 'sat-ds3-probability',
       type: 'text' as const,
       content: `
-**Key Insight:** IQR = Q3 - Q1 (middle 50% of data).
+**Relative Frequency and Conditional Probability**
 
-**SAT Tip:** Outliers: typically more than 1.5 × IQR below Q1 or above Q3.
+Two-way tables connect to probability:
+
+**Marginal probability** — uses totals from the margin:
+$$P(\\text{prefers dogs}) = \\frac{80}{150}$$
+
+**Joint probability** — uses a specific cell:
+$$P(\\text{boy AND prefers dogs}) = \\frac{45}{150}$$
+
+**Conditional probability** — "given that..." restricts the denominator:
+$$P(\\text{prefers dogs} \\mid \\text{boy}) = \\frac{45}{75}$$
+
+---
+
+**SAT Tip:** Words like "given that," "among those who," or "of the students who" signal **conditional probability**. The denominator is NOT the grand total.
       `
     },
     {
-      id: 'sat-d3-quiz2',
+      id: 'sat-ds3-practice',
+      type: 'input-boxes' as const,
+      content: `
+**Use this table.** 🧮
+
+|  | Pass | Fail | Total |
+|--|------|------|-------|
+| **Studied** | 72 | 8 | 80 |
+| **Didn't Study** | 12 | 8 | 20 |
+| **Total** | 84 | 16 | 100 |
+
+1) What percentage of ALL students passed?
+
+2) What percentage of students who studied passed?
+
+3) What percentage of those who failed had NOT studied?
+      `,
+      exercise: {
+        boxes: 3,
+        correctAnswers: ['84', '90', '50'],
+        hint1: '$84/100 = 84\\%$.',
+        hint2: 'Restrict to "studied" row: $72/80$.',
+        hint3: 'Restrict to "fail" column: $8/16$.',
+        explanation: '1) $84/100 = 84\\%$. 2) $72/80 = 90\\%$. 3) $8/16 = 50\\%$. The denominator changes depending on which group you are looking at.'
+      }
+    },
+    {
+      id: 'sat-ds3-shapes',
+      type: 'text' as const,
+      content: `
+**Histograms and Distribution Shape**
+
+**Histograms** show numerical data in intervals. The shape matters:
+
+| Shape | Description | Mean vs Median |
+|-------|------------|---------------|
+| Symmetric | Mirror image | Mean ≈ Median |
+| Right-skewed | Tail to the right | Mean > Median |
+| Left-skewed | Tail to the left | Mean < Median |
+
+**Key rule:** The mean is pulled toward the tail. In a right-skewed distribution, the tail extends right, pulling the mean above the median.
+
+**Bar charts** vs **histograms:** Bar charts are for categories (bars don't touch). Histograms are for continuous data (bars touch, x-axis shows intervals).
+      `
+    },
+    {
+      id: 'sat-ds3-sat-style',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+**SAT-Style Questions** 📋
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement about SAT Tip is correct?',
+            question: 'A histogram of home prices is strongly skewed right. Which must be true?',
             options: [
-              'show min, Q1, median, Q3, max.',
-              'bars show frequency for intervals (no gaps).',
-              'Outliers: typically more than 1.5 × IQR below Q1 or above Q3.',
-              'IQR = Q3 - Q1 (middle 50% of data).'
+              'Mean < Median',
+              'Mean = Median',
+              'Mean > Median',
+              'Mode > Mean'
             ],
             correctAnswer: 2,
-            explanation: 'Correct — SAT Tip: Outliers: typically more than 1.5 × IQR below Q1 or above Q3. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: 'Right-skewed means the tail extends right (toward expensive homes). The mean is pulled toward that tail, so mean > median.'
+          },
+          {
+            question: 'A survey of 200 people: 120 adults, 80 teens. 90 adults and 50 teens exercise regularly. What fraction of regular exercisers are teens?',
+            options: [
+              '$50/80$',
+              '$50/140$',
+              '$50/200$',
+              '$80/200$'
+            ],
+            correctAnswer: 1,
+            explanation: 'Total exercisers = $90 + 50 = 140$. Of those, 50 are teens. Fraction = $50/140 = 5/14$.'
           }
         ]
-      }
-    },
-    {
-      id: 'sat-d3-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Histograms',
-            options: ['show min, Q1, median, Q3, max.', 'bars show frequency for intervals (no gaps).', 'Outliers: typically more than 1.5 × IQR below Q1 or above Q3.', 'IQR = Q3 - Q1 (middle 50% of data).']
-          },
-          {
-            label: 'Box plots',
-            options: ['IQR = Q3 - Q1 (middle 50% of data).', 'bars show frequency for intervals (no gaps).', 'show min, Q1, median, Q3, max.', 'Outliers: typically more than 1.5 × IQR below Q1 or above Q3.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['show min, Q1, median, Q3, max.', 'IQR = Q3 - Q1 (middle 50% of data).', 'bars show frequency for intervals (no gaps).', 'Outliers: typically more than 1.5 × IQR below Q1 or above Q3.']
-          }
-        ],
-        correctAnswers: ['bars show frequency for intervals (no gaps).', 'show min, Q1, median, Q3, max.', 'IQR = Q3 - Q1 (middle 50% of data).'],
-        hint1: 'Think about what each concept specifically describes in Data Displays.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Data Displays describes a specific idea. Histograms: bars show frequency for intervals (no gaps). Box plots: show min, Q1, median, Q3, max. Key Insight: IQR = Q3 - Q1 (middle 50% of data).'
       }
     }
   ]

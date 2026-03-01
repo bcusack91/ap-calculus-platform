@@ -62,7 +62,7 @@ Wundt is considered the **"father of psychology"** for establishing the first ex
       id: 'histo1-schools',
       type: 'text' as const,
       content: `
-# ## Early Schools of Thought
+## Early Schools of Thought
 
 ### Structuralism (Wundt, Titchener)
 - Goal: identify basic elements of consciousness

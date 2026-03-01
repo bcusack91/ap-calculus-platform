@@ -5,7 +5,7 @@ export const psychAdolescencePart4Data = {
       id: 'adole4-intro',
       type: 'text' as const,
       content: `
-# ## Adulthood & Aging
+## Adulthood & Aging
 
 **Part 4 of 7 — Adulthood & Aging**
 
@@ -63,7 +63,7 @@ empty nest, retirement
       id: 'adole4-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Erikson's adult stages**: intimacy, generativity, integrity
 - **Physical changes**: menopause, declining sensory abilities

@@ -63,7 +63,7 @@ cognitive appraisal determines emotion
       id: 'emoti1-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **James-Lange**: stimulus → physiological arousal → emotion
 - **Cannon-Bard**: stimulus → simultaneous arousal AND emotion

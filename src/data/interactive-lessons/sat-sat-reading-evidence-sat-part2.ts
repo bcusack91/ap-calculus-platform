@@ -2,108 +2,81 @@ export const satReadingEvidencePart2Data = {
   topicSlug: 'sat-reading-evidence-sat',
   sections: [
     {
-      id: 'sat-r2-intro',
+      id: 'sat-read-p2-intro',
       type: 'text' as const,
       content: `
-# Textual Evidence Questions
+# 🔍 Detail & Evidence Questions
 
-**Part 2 of 7 — Textual Evidence Questions**
+**Part 2 of 7 — Detail & Evidence Questions**
 
-"Which choice provides the best evidence for the answer to the previous question?".
+Finding specific information and textual evidence
 
-Work backwards: check each line reference against the previous answer.
+This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+
+**Key Concepts in This Section:**
+- Core principles and definitions
+- Step-by-step problem-solving methods
+- Common SAT question patterns
+- Strategic tips for test day
       `
     },
     {
-      id: 'sat-r2-quiz1',
+      id: 'sat-read-p2-check',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+**Quick Check** 🔍
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes "Which choice provides the best…?',
+            question: 'Based on the concepts in this section, which approach is most effective?',
             options: [
-              'check each line reference against the previous answer.',
-              'These are paired with command-of-evidence questions — tackle them together.',
-              '"Which choice provides the best evidence for the answer to the previous question?".',
-              'Evidence must directly support the claim, not just relate to the topic.'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — "Which choice provides the best evidence for the answer to the previous question?". The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Which of the following is true about Key Insight?',
-            options: [
-              '"Which choice provides the best evidence for the answer to the previous question?".',
-              'Evidence must directly support the claim, not just relate to the topic.',
-              'check each line reference against the previous answer.',
-              'These are paired with command-of-evidence questions — tackle them together.'
+              'Memorize formulas without understanding when to apply them',
+              'Understand the underlying concepts and practice with varied problems',
+              'Only practice problems you find easy to build confidence',
+              'Skip practice and rely on intuition during the test'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — Key Insight: Evidence must directly support the claim, not just relate to the topic. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
           }
         ]
       }
     },
     {
-      id: 'sat-r2-detail',
+      id: 'sat-read-p2-detail',
       type: 'text' as const,
       content: `
-**Key Insight:** Evidence must directly support the claim, not just relate to the topic.
+**Detailed Concepts & Examples**
 
-**SAT Tip:** These are paired with command-of-evidence questions — tackle them together.
+This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
+
+1. **Identify** the type of problem quickly
+2. **Apply** the correct method systematically
+3. **Verify** your answer makes sense in context
+
+Work through each example carefully before attempting the practice problems below.
       `
     },
     {
-      id: 'sat-r2-quiz2',
+      id: 'sat-read-p2-practice',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+**SAT-Style Questions** 📋
       `,
       exercise: {
         questions: [
           {
-            question: 'Regarding Textual Evidence Questions, which correctly describes SAT Tip?',
+            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
             options: [
-              'check each line reference against the previous answer.',
-              'These are paired with command-of-evidence questions — tackle them together.',
-              'Evidence must directly support the claim, not just relate to the topic.',
-              '"Which choice provides the best evidence for the answer to the previous question?".'
+              'Guess and move on quickly',
+              'Identify what the question is actually asking for',
+              'Try every formula you know until one works',
+              'Skip it permanently'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — SAT Tip: These are paired with command-of-evidence questions — tackle them together. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
           }
         ]
-      }
-    },
-    {
-      id: 'sat-r2-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Work backwards',
-            options: ['"Which choice provides the best evidence for the answer to the previous question?".', 'These are paired with command-of-evidence questions — tackle them together.', 'check each line reference against the previous answer.', 'Evidence must directly support the claim, not just relate to the topic.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['These are paired with command-of-evidence questions — tackle them together.', '"Which choice provides the best evidence for the answer to the previous question?".', 'check each line reference against the previous answer.', 'Evidence must directly support the claim, not just relate to the topic.']
-          },
-          {
-            label: 'SAT Tip',
-            options: ['These are paired with command-of-evidence questions — tackle them together.', '"Which choice provides the best evidence for the answer to the previous question?".', 'Evidence must directly support the claim, not just relate to the topic.', 'check each line reference against the previous answer.']
-          }
-        ],
-        correctAnswers: ['check each line reference against the previous answer.', 'Evidence must directly support the claim, not just relate to the topic.', 'These are paired with command-of-evidence questions — tackle them together.'],
-        hint1: 'Think about what each concept specifically describes in Textual Evidence Questions.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Textual Evidence Questions describes a specific idea. Work backwards: check each line reference against the previous answer. Key Insight: Evidence must directly support the claim, not just relate to the topic. SAT Tip: These are paired with command-of-evidence questions — tackle them together.'
       }
     }
   ]

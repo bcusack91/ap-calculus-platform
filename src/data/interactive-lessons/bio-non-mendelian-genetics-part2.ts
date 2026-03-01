@@ -5,7 +5,7 @@ export const bioNonMendelianPart2Data = {
       id: 'non-2-intro-p2',
       type: 'text' as const,
       content: `
-# ## Multiple Alleles & Polygenic
+## Multiple Alleles & Polygenic
 
 **Part 2 of 7 — Multiple Alleles & Polygenic**
 
@@ -52,7 +52,7 @@ export const bioNonMendelianPart2Data = {
       id: 'non-2-detail-p2',
       type: 'text' as const,
       content: `
-# ### Key Details
+### Key Details
 
 - **Multiple alleles**: more than 2 alleles in population (ABO blood type: Iᴬ, Iᴮ, i)
 - **Polygenic traits**: multiple genes affect one trait

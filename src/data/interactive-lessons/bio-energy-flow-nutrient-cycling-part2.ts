@@ -2,113 +2,193 @@ export const bioEnergyFlowPart2Data = {
   topicSlug: 'energy-flow-nutrient-cycling',
   sections: [
     {
-      id: 'ener2-intro-p2',
+      id: 'bio-energy-flow-nutrient-cycling-p2-s1-intro',
       type: 'text' as const,
       content: `
-# ## Trophic Levels
-
-**Part 2 of 7 — Trophic Levels**
-
-1. Producers: trophic level 1
-2. Primary consumers (herbivores): trophic level 2
-3. Secondary consumers: trophic level 3
-4. Tertiary consumers (top predators): trophic level 4
+      ## Energy Flow and Nutrient Cycling: Food Webs
+      
+      **Part 2 of 7**
+      
+      In this lesson, you will connect mechanism-level biology to exam-ready reasoning through food-web stability after species removal.
+      
+      ### Worked biological example
+      A student team investigates food-web stability after species removal. Their first interpretation step is to identify how **consumer** and **energy transfer efficiency** work together in the same pathway.
+      
+      - They classify the primary signal using **consumer**: organism obtaining energy by feeding on other organisms.
+      - They trace the downstream response using **energy transfer efficiency**: fraction of energy passed to the next trophic level.
+      - They then compare outcomes with **food web** and **biomass pyramid** to separate mechanism from correlation.
+      
+      ### Key terms for this part
+      - **consumer**
+      - **energy transfer efficiency**
+      - **food web**
+      - **biomass pyramid**
       `
     },
     {
-      id: 'ener2-quiz1',
+      id: 'bio-energy-flow-nutrient-cycling-p2-s2-mcq-core',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+      **Checkpoint MCQ (2 questions)**
       `,
       exercise: {
         questions: [
           {
-            question: 'What does "Producers" refer to in biology?',
+            question: 'For Food Webs, what best describes consumer?',
             options: [
-              'trophic level 2',
-              'trophic level 3',
-              'trophic level 1',
-              'trophic level 4'
+              'representation of total mass at successive trophic levels',
+              'network of interconnected feeding relationships',
+              'organism obtaining energy by feeding on other organisms',
+              'fraction of energy passed to the next trophic level'
             ],
             correctAnswer: 2,
-            explanation: 'Correct — Producers: trophic level 1. The other options describe different concepts from this topic.'
+            explanation: 'consumer is best matched with: organism obtaining energy by feeding on other organisms.'
           },
           {
-            question: 'In the context of Trophic Levels, which explains Secondary consumers?',
+            question: 'In this part\'s context, what is the strongest definition of energy transfer efficiency?',
             options: [
-              'trophic level 4',
-              'trophic level 1',
-              'trophic level 2',
-              'trophic level 3'
+              'fraction of energy passed to the next trophic level',
+              'incorporation of inorganic carbon into organic molecules',
+              'organism obtaining energy by feeding on other organisms',
+              'network of interconnected feeding relationships'
             ],
-            correctAnswer: 3,
-            explanation: 'Correct — Secondary consumers: trophic level 3. Be careful to distinguish between the different concepts in this topic.'
+            correctAnswer: 0,
+            explanation: 'energy transfer efficiency is best matched with: fraction of energy passed to the next trophic level.'
           }
         ]
       }
     },
     {
-      id: 'ener2-detail-p2',
+      id: 'bio-energy-flow-nutrient-cycling-p2-s3-deep-dive',
       type: 'text' as const,
       content: `
-# ### Key Details
-
-- **Producers**: trophic level 1
-- **Primary consumers (herbivores)**: trophic level 2
-- **Secondary consumers**: trophic level 3
-- **Tertiary consumers (top predators)**: trophic level 4
+      ### Deep-Dive Map: Food Webs
+      
+      Use this diagram-style summary to track causation and evidence.
+      
+      #### Flow logic
+      - **Signal/Input** → consumer
+      - **Immediate processing** → energy transfer efficiency
+      - **System-level consequence** → food web
+      - **Measured readout** → biomass pyramid
+      
+      #### Mechanism table
+      | Component | Biological role | Typical evidence pattern |
+      |---|---|---|
+      | consumer | organism obtaining energy by feeding on other organisms | Early shift in the primary variable |
+      | energy transfer efficiency | fraction of energy passed to the next trophic level | Mid-pathway change in process rate |
+      | food web | network of interconnected feeding relationships | Downstream phenotype trend |
+      | biomass pyramid | representation of total mass at successive trophic levels | Quantifiable endpoint in data summary |
+      
+      #### Reasoning checkpoints
+      1. Name the mechanism before describing the trend line.
+      2. Separate proximate mechanism from ecological or historical context.
+      3. Verify that each claim is tied to a measurable biological readout.
       `
     },
     {
-      id: 'ener2-quiz2',
-      type: 'multiple-choice' as const,
+      id: 'bio-energy-flow-nutrient-cycling-p2-s4-input',
+      type: 'input-boxes' as const,
       content: `
-**Check Your Understanding** 🎯
+      **Input Practice — concrete vocabulary retrieval**
+      
+      Fill in each blank with the exact biological term.
+      
+      1) Term for this definition: **organism obtaining energy by feeding on other organisms**
+      2) Term for this definition: **fraction of energy passed to the next trophic level**
+      3) Term for this definition: **network of interconnected feeding relationships**
       `,
       exercise: {
-        questions: [
-          {
-            question: 'Which of these accurately represents Tertiary consumers (top predators)?',
-            options: [
-              'trophic level 2',
-              'trophic level 3',
-              'trophic level 1',
-              'trophic level 4'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Tertiary consumers (top predators): trophic level 4. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
+        boxes: 3,
+        correctAnswers: ['consumer', 'energy transfer efficiency', 'food web'],
+        hint1: 'Start with the first item: it is the mechanism term used when a process is described as \'organism obtaining energy by feeding on other organisms\'.',
+        hint2: 'Second blank points to energy transfer efficiency; think about the role \'fraction of energy passed to the next trophic level\'.',
+        hint3: 'Third blank is food web; connect it to \'network of interconnected feeding relationships\'.',
+        explanation: 'Correct set: consumer, energy transfer efficiency, food web. These three terms define the core mechanism chain for Food Webs.'
       }
     },
     {
-      id: 'ener2-dropdown',
+      id: 'bio-energy-flow-nutrient-cycling-p2-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Match the Concepts** 🔍
+      **Dropdown matching (3 prompts)**
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Producers',
-            options: ['trophic level 4', 'trophic level 1', 'trophic level 3', 'trophic level 2']
+            label: 'consumer',
+            options: ['fraction of energy passed to the next trophic level', 'network of interconnected feeding relationships', 'representation of total mass at successive trophic levels', 'organism obtaining energy by feeding on other organisms']
           },
           {
-            label: 'Primary consumers (herbivores)',
-            options: ['trophic level 1', 'trophic level 2', 'trophic level 4', 'trophic level 3']
+            label: 'energy transfer efficiency',
+            options: ['fraction of energy passed to the next trophic level', 'incorporation of inorganic carbon into organic molecules', 'network of interconnected feeding relationships', 'representation of total mass at successive trophic levels']
           },
           {
-            label: 'Secondary consumers',
-            options: ['trophic level 2', 'trophic level 4', 'trophic level 3', 'trophic level 1']
+            label: 'food web',
+            options: ['representation of total mass at successive trophic levels', 'network of interconnected feeding relationships', 'oxidation of organic molecules releasing usable energy', 'incorporation of inorganic carbon into organic molecules']
           }
         ],
-        correctAnswers: ['trophic level 1', 'trophic level 2', 'trophic level 3'],
-        hint1: 'Think about what each concept specifically describes in Trophic Levels.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Trophic Levels describes a specific idea. Producers: trophic level 1. Primary consumers (herbivores): trophic level 2. Secondary consumers: trophic level 3.'
+        correctAnswers: ['organism obtaining energy by feeding on other organisms', 'fraction of energy passed to the next trophic level', 'network of interconnected feeding relationships'],
+        hint1: 'Match each term to the definition that captures mechanism, not just keywords.',
+        hint2: 'If two definitions feel close, choose the one with the exact process direction.',
+        hint3: 'Read each label out loud, then pick the option that completes a causal sentence.',
+        explanation: 'consumer, energy transfer efficiency, and food web should map to their exact mechanistic definitions. When options look similar, anchor your choice to process direction and biological scale.'
+      }
+    },
+    {
+      id: 'bio-energy-flow-nutrient-cycling-p2-s6-strategy',
+      type: 'text' as const,
+      content: `
+      ### ACT/AP strategy and misconception repair
+      
+      On ACT/AP style prompts, score gains come from linking vocabulary to evidence, not from isolated memorization.
+      
+      #### Strategy sequence
+      1. **Name the mechanism first**: identify whether the item is asking for process, structure, regulation, or population effect.
+      2. **Use a causation sentence**: "Because consumer organism obtaining energy by feeding on other organisms, we expect ...".
+      3. **Audit units and scale**: molecular claims, cellular claims, and ecosystem claims should not be mixed.
+      
+      #### Common misconceptions to avoid
+      - Food chains are simplified slices of broader food webs.
+      - Carbon and nitrogen cycling include biological, geological, and atmospheric processes.
+      - Nutrient abundance can still coexist with low productivity when other factors limit growth.
+      
+      #### Exam execution tip
+      When two answer choices sound plausible, prefer the one that includes a direct mechanism and a measurable biological consequence.
+      `
+    },
+    {
+      id: 'bio-energy-flow-nutrient-cycling-p2-s7-mcq-final',
+      type: 'multiple-choice' as const,
+      content: `
+      **Final application MCQ (2 questions)**
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'In food-web stability after species removal, the observed pattern is: representation of total mass at successive trophic levels. What term should anchor the explanation?',
+            options: [
+              'biomass pyramid',
+              'consumer',
+              'food web',
+              'energy transfer efficiency'
+            ],
+            correctAnswer: 0,
+            explanation: 'Use biomass pyramid because it directly maps to the described biological pattern: representation of total mass at successive trophic levels.'
+          },
+          {
+            question: 'In an AP-style free-response about food webs, the observed pattern is: incorporation of inorganic carbon into organic molecules. What term should anchor the explanation?',
+            options: [
+              'cellular respiration',
+              'carbon fixation',
+              'food web',
+              'biomass pyramid'
+            ],
+            correctAnswer: 1,
+            explanation: 'Use carbon fixation because it directly maps to the described biological pattern: incorporation of inorganic carbon into organic molecules.'
+          }
+        ]
       }
     }
   ]
-}
+};

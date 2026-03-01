@@ -5,7 +5,7 @@ export const psychEmotionPart2Data = {
       id: 'emoti2-intro',
       type: 'text' as const,
       content: `
-# ## Components of Emotion
+## Components of Emotion
 
 **Part 2 of 7 — Components of Emotion**
 
@@ -63,7 +63,7 @@ happiness, sadness, fear, anger, disgust, surprise
       id: 'emoti2-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Physiological**: autonomic nervous system activation
 - **Behavioral**: facial expressions, body language

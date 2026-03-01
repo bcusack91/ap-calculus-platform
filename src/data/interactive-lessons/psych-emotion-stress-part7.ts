@@ -5,7 +5,7 @@ export const psychEmotionPart7Data = {
       id: 'emoti7-intro',
       type: 'text' as const,
       content: `
-# ## Synthesis & AP Review
+## Synthesis & AP Review
 
 **Part 7 of 7 — Synthesis & AP Review**
 
@@ -63,7 +63,7 @@ emotion theory comparison
       id: 'emoti7-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Emotion involves body, mind, and behavior**
 - **Chronic stress has serious health consequences**

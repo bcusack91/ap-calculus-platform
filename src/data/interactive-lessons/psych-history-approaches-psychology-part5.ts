@@ -5,7 +5,7 @@ export const psychHistoryApproachesPart5Data = {
       id: 'histo5-ethics',
       type: 'text' as const,
       content: `
-# ## Ethics in Psychological Research
+## Ethics in Psychological Research
 
 ### APA Ethical Guidelines
 
@@ -57,7 +57,7 @@ export const psychHistoryApproachesPart5Data = {
       id: 'histo5-animal',
       type: 'text' as const,
       content: `
-# ## Animal Research Ethics
+## Animal Research Ethics
 
 - **IACUC** (Institutional Animal Care and Use Committee) oversees animal research
 - Animals must be treated humanely

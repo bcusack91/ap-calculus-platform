@@ -54,7 +54,7 @@ Water is the most abundant molecule in living organisms, making up 60-70% of you
       id: 'wate1-polarity',
       type: 'text' as const,
       content: `
-# ## Polarity & Hydrogen Bonding
+## Polarity & Hydrogen Bonding
 
 Water ($H_2O$) has a **bent molecular geometry** with a bond angle of approximately 104.5°.
 

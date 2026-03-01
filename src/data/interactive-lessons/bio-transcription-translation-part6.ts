@@ -5,7 +5,7 @@ export const bioTranscriptionPart6Data = {
       id: 'tran6-intro-p6',
       type: 'text' as const,
       content: `
-# ## Transcription & Translation: Problem-Solving Workshop
+## Transcription & Translation: Problem-Solving Workshop
 
 **Part 6 of 7 — Problem-Solving**
 
@@ -52,7 +52,7 @@ export const bioTranscriptionPart6Data = {
       id: 'tran6-detail-p6',
       type: 'text' as const,
       content: `
-# ### Key Details
+### Key Details
 
 - **Using the genetic code table**
 - **Predicting effects of mutations on proteins**

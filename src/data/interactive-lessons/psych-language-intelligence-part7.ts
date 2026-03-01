@@ -5,7 +5,7 @@ export const psychLanguagePart7Data = {
       id: 'langu7-intro',
       type: 'text' as const,
       content: `
-# ## Synthesis & AP Review
+## Synthesis & AP Review
 
 **Part 7 of 7 — Synthesis & AP Review**
 
@@ -63,7 +63,7 @@ theory comparison questions
       id: 'langu7-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Intelligence is complex and multifaceted**
 - **Language and thought are interconnected**

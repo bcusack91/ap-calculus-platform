@@ -63,7 +63,7 @@ Bottom-up processing starts with raw sensory data
       id: 'perce1-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Gestalt principles**: proximity, similarity, closure, continuity, figure-ground
 - **We organize sensory input into meaningful patterns**

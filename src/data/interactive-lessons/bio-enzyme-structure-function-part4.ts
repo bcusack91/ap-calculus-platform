@@ -5,7 +5,7 @@ export const bioEnzymesPart4Data = {
       id: 'enzy4-inhibition',
       type: 'text' as const,
       content: `
-# ## Enzyme Inhibition
+## Enzyme Inhibition
 
 ### Competitive Inhibition
 
@@ -53,7 +53,7 @@ export const bioEnzymesPart4Data = {
       id: 'enzy4-allosteric',
       type: 'text' as const,
       content: `
-# ## Allosteric Regulation
+## Allosteric Regulation
 
 ### Allosteric Enzymes
 

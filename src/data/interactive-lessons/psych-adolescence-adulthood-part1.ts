@@ -63,7 +63,7 @@ Risk-taking behavior linked to brain development
       id: 'adole1-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Puberty**: biological changes, growth spurt
 - **Adolescent egocentrism**: imaginary audience, personal fable

@@ -5,7 +5,7 @@ export const bioMeiosisPart4Data = {
       id: 'meio4-intro-p4',
       type: 'text' as const,
       content: `
-# ## Crossing Over & Recombination
+## Crossing Over & Recombination
 
 **Part 4 of 7 — Crossing Over & Recombination**
 
@@ -52,7 +52,7 @@ export const bioMeiosisPart4Data = {
       id: 'meio4-detail-p4',
       type: 'text' as const,
       content: `
-# ### Key Details
+### Key Details
 
 - **Nonsister chromatids exchange segments**
 - **Occurs at chiasmata during prophase I**

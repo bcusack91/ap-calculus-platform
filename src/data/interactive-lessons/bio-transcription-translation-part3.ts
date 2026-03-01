@@ -5,7 +5,7 @@ export const bioTranscriptionPart3Data = {
       id: 'tran3-intro-p3',
       type: 'text' as const,
       content: `
-# ## RNA Processing
+## RNA Processing
 
 **Part 3 of 7 — RNA Processing**
 
@@ -52,7 +52,7 @@ export const bioTranscriptionPart3Data = {
       id: 'tran3-detail-p3',
       type: 'text' as const,
       content: `
-# ### Key Details
+### Key Details
 
 - **5' cap**: modified G nucleotide (stability, ribosome recognition)
 - **Poly-A tail**: ~200 adenines at 3' end (stability)

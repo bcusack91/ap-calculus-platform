@@ -2,108 +2,81 @@ export const satPolynomialsPart6Data = {
   topicSlug: 'sat-polynomials-factoring-sat',
   sections: [
     {
-      id: 'sat-p6-intro',
+      id: 'sat-poly-p6-intro',
       type: 'text' as const,
       content: `
-# Problem-Solving Workshop
+# 🛠️ Polynomial Division
 
-**Part 6 of 7 — Problem-Solving Workshop**
+**Part 6 of 7 — Polynomial Division**
 
-End behavior: determined by leading term (degree and sign of coefficient).
+Long division and synthetic division for polynomials
 
-Even degree with positive leading coefficient: both ends up.
+This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+
+**Key Concepts in This Section:**
+- Core principles and definitions
+- Step-by-step problem-solving methods
+- Common SAT question patterns
+- Strategic tips for test day
       `
     },
     {
-      id: 'sat-p6-quiz1',
+      id: 'sat-poly-p6-check',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+**Quick Check** 🔍
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes End behavior?',
+            question: 'Based on the concepts in this section, which approach is most effective?',
             options: [
-              'Odd degree with positive leading coefficient: left down, right up.',
-              'determined by leading term (degree and sign of coefficient).',
-              'Number of real zeros ≤ degree; turns ≤ degree - 1.',
-              'both ends up.'
+              'Memorize formulas without understanding when to apply them',
+              'Understand the underlying concepts and practice with varied problems',
+              'Only practice problems you find easy to build confidence',
+              'Skip practice and rely on intuition during the test'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — End behavior: determined by leading term (degree and sign of coefficient). The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'In the context of Problem-Solving Workshop, which explains Key Insight?',
-            options: [
-              'Number of real zeros ≤ degree; turns ≤ degree - 1.',
-              'Odd degree with positive leading coefficient: left down, right up.',
-              'both ends up.',
-              'determined by leading term (degree and sign of coefficient).'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Key Insight: Odd degree with positive leading coefficient: left down, right up. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
           }
         ]
       }
     },
     {
-      id: 'sat-p6-detail',
+      id: 'sat-poly-p6-detail',
       type: 'text' as const,
       content: `
-**Key Insight:** Odd degree with positive leading coefficient: left down, right up.
+**Detailed Concepts & Examples**
 
-**SAT Tip:** Number of real zeros ≤ degree; turns ≤ degree - 1.
+This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
+
+1. **Identify** the type of problem quickly
+2. **Apply** the correct method systematically
+3. **Verify** your answer makes sense in context
+
+Work through each example carefully before attempting the practice problems below.
       `
     },
     {
-      id: 'sat-p6-quiz2',
+      id: 'sat-poly-p6-practice',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+**SAT-Style Questions** 📋
       `,
       exercise: {
         questions: [
           {
-            question: 'Regarding Problem-Solving Workshop, which correctly describes SAT Tip?',
+            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
             options: [
-              'both ends up.',
-              'Number of real zeros ≤ degree; turns ≤ degree - 1.',
-              'Odd degree with positive leading coefficient: left down, right up.',
-              'determined by leading term (degree and sign of coefficient).'
+              'Guess and move on quickly',
+              'Identify what the question is actually asking for',
+              'Try every formula you know until one works',
+              'Skip it permanently'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — SAT Tip: Number of real zeros ≤ degree; turns ≤ degree - 1. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
           }
         ]
-      }
-    },
-    {
-      id: 'sat-p6-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'End behavior',
-            options: ['determined by leading term (degree and sign of coefficient).', 'both ends up.', 'Number of real zeros ≤ degree; turns ≤ degree - 1.', 'Odd degree with positive leading coefficient: left down, right up.']
-          },
-          {
-            label: 'Even degree with positive leading coefficient',
-            options: ['determined by leading term (degree and sign of coefficient).', 'Number of real zeros ≤ degree; turns ≤ degree - 1.', 'Odd degree with positive leading coefficient: left down, right up.', 'both ends up.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['Number of real zeros ≤ degree; turns ≤ degree - 1.', 'determined by leading term (degree and sign of coefficient).', 'Odd degree with positive leading coefficient: left down, right up.', 'both ends up.']
-          }
-        ],
-        correctAnswers: ['determined by leading term (degree and sign of coefficient).', 'both ends up.', 'Odd degree with positive leading coefficient: left down, right up.'],
-        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. End behavior: determined by leading term (degree and sign of coefficient). Even degree with positive leading coefficient: both ends up. Key Insight: Odd degree with positive leading coefficient: left down, right up.'
       }
     }
   ]

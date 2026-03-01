@@ -5,7 +5,7 @@ export const psychPerceptionPart6Data = {
       id: 'perce6-intro',
       type: 'text' as const,
       content: `
-# ## Problem-Solving Workshop
+## Problem-Solving Workshop
 
 **Part 6 of 7 — Problem-Solving Workshop**
 
@@ -63,7 +63,7 @@ Demonstrating selective attention phenomena
       id: 'perce6-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Identifying Gestalt principles in images**
 - **Analyzing depth cue scenarios**

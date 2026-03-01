@@ -5,7 +5,7 @@ export const psychClassicalPart4Data = {
       id: 'class4-intro',
       type: 'text' as const,
       content: `
-# ## Generalization & Discrimination
+## Generalization & Discrimination
 
 **Part 4 of 7 — Generalization & Discrimination**
 
@@ -63,7 +63,7 @@ Fear generalized to other furry objects
       id: 'class4-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Generalization**: responding to similar stimuli
 - **Discrimination**: responding only to the specific CS

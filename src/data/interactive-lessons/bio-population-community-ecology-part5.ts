@@ -2,113 +2,193 @@ export const bioPopulationPart5Data = {
   topicSlug: 'population-community-ecology',
   sections: [
     {
-      id: 'popu5-intro-p5',
+      id: 'bio-population-community-ecology-p5-s1-intro',
       type: 'text' as const,
       content: `
-# ## Ecological Succession
-
-**Part 5 of 7 — Ecological Succession**
-
-1. Primary succession: starts on bare rock/new land
-2. Secondary succession: starts after disturbance (fire, flood)
-3. Pioneer species colonize first (lichens, mosses)
-4. Climax community: stable, mature ecosystem
+      ## Population and Community Ecology: Biodiversity
+      
+      **Part 5 of 7**
+      
+      In this lesson, you will connect mechanism-level biology to exam-ready reasoning through biodiversity and resilience metrics.
+      
+      ### Worked biological example
+      A student team investigates biodiversity and resilience metrics. Their first interpretation step is to identify how **r-selected strategy** and **K-selected strategy** work together in the same pathway.
+      
+      - They classify the primary signal using **r-selected strategy**: life-history pattern favoring high reproduction in unstable settings.
+      - They trace the downstream response using **K-selected strategy**: life-history pattern favoring competitive efficiency near carrying capacity.
+      - They then compare outcomes with **species richness** and **species evenness** to separate mechanism from correlation.
+      
+      ### Key terms for this part
+      - **r-selected strategy**
+      - **K-selected strategy**
+      - **species richness**
+      - **species evenness**
       `
     },
     {
-      id: 'popu5-quiz1',
+      id: 'bio-population-community-ecology-p5-s2-mcq-core',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+      **Checkpoint MCQ (2 questions)**
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains Primary succession?',
+            question: 'For Biodiversity, what best describes r-selected strategy?',
             options: [
-              'stable, mature ecosystem',
-              'starts after disturbance (fire, flood)',
-              'Pioneer species colonize first (lichens, mosses)',
-              'starts on bare rock/new land'
+              'how evenly individuals are distributed among species',
+              'count of different species in a community',
+              'life-history pattern favoring competitive efficiency near carrying capacity',
+              'life-history pattern favoring high reproduction in unstable settings'
             ],
             correctAnswer: 3,
-            explanation: 'Correct — Primary succession: starts on bare rock/new land. The other options describe different concepts from this topic.'
+            explanation: 'r-selected strategy is best matched with: life-history pattern favoring high reproduction in unstable settings.'
           },
           {
-            question: 'In the context of Ecological Succession, which explains Pioneer species colonize first…?',
+            question: 'In this part\'s context, what is the strongest definition of K-selected strategy?',
             options: [
-              'starts after disturbance (fire, flood)',
-              'Pioneer species colonize first (lichens, mosses)',
-              'stable, mature ecosystem',
-              'starts on bare rock/new land'
+              'ability to resist or recover from disturbance',
+              'count of different species in a community',
+              'life-history pattern favoring competitive efficiency near carrying capacity',
+              'life-history pattern favoring high reproduction in unstable settings'
             ],
-            correctAnswer: 1,
-            explanation: 'Correct — Pioneer species colonize first (lichens, mosses). Be careful to distinguish between the different concepts in this topic.'
+            correctAnswer: 2,
+            explanation: 'K-selected strategy is best matched with: life-history pattern favoring competitive efficiency near carrying capacity.'
           }
         ]
       }
     },
     {
-      id: 'popu5-detail-p5',
+      id: 'bio-population-community-ecology-p5-s3-deep-dive',
       type: 'text' as const,
       content: `
-# ### Key Details
-
-- **Primary succession**: starts on bare rock/new land
-- **Secondary succession**: starts after disturbance (fire, flood)
-- **Pioneer species colonize first (lichens, mosses)**
-- **Climax community**: stable, mature ecosystem
+      ### Deep-Dive Map: Biodiversity
+      
+      Use this diagram-style summary to track causation and evidence.
+      
+      #### Flow logic
+      - **Signal/Input** → r-selected strategy
+      - **Immediate processing** → K-selected strategy
+      - **System-level consequence** → species richness
+      - **Measured readout** → species evenness
+      
+      #### Mechanism table
+      | Component | Biological role | Typical evidence pattern |
+      |---|---|---|
+      | r-selected strategy | life-history pattern favoring high reproduction in unstable settings | Early shift in the primary variable |
+      | K-selected strategy | life-history pattern favoring competitive efficiency near carrying capacity | Mid-pathway change in process rate |
+      | species richness | count of different species in a community | Downstream phenotype trend |
+      | species evenness | how evenly individuals are distributed among species | Quantifiable endpoint in data summary |
+      
+      #### Reasoning checkpoints
+      1. Name the mechanism before describing the trend line.
+      2. Separate proximate mechanism from ecological or historical context.
+      3. Verify that each claim is tied to a measurable biological readout.
       `
     },
     {
-      id: 'popu5-quiz2',
-      type: 'multiple-choice' as const,
+      id: 'bio-population-community-ecology-p5-s4-input',
+      type: 'input-boxes' as const,
       content: `
-**Check Your Understanding** 🎯
+      **Input Practice — concrete vocabulary retrieval**
+      
+      Fill in each blank with the exact biological term.
+      
+      1) Term for this definition: **life-history pattern favoring high reproduction in unstable settings**
+      2) Term for this definition: **life-history pattern favoring competitive efficiency near carrying capacity**
+      3) Term for this definition: **count of different species in a community**
       `,
       exercise: {
-        questions: [
-          {
-            question: 'Which of these accurately represents Climax community?',
-            options: [
-              'Pioneer species colonize first (lichens, mosses)',
-              'starts on bare rock/new land',
-              'starts after disturbance (fire, flood)',
-              'stable, mature ecosystem'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Climax community: stable, mature ecosystem. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
+        boxes: 3,
+        correctAnswers: ['r-selected strategy', 'K-selected strategy', 'species richness'],
+        hint1: 'Start with the first item: it is the mechanism term used when a process is described as \'life-history pattern favoring high reproduction in unstable settings\'.',
+        hint2: 'Second blank points to K-selected strategy; think about the role \'life-history pattern favoring competitive efficiency near carrying capacity\'.',
+        hint3: 'Third blank is species richness; connect it to \'count of different species in a community\'.',
+        explanation: 'Correct set: r-selected strategy, K-selected strategy, species richness. These three terms define the core mechanism chain for Biodiversity.'
       }
     },
     {
-      id: 'popu5-dropdown',
+      id: 'bio-population-community-ecology-p5-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Match the Concepts** 🔍
+      **Dropdown matching (3 prompts)**
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Primary succession',
-            options: ['Pioneer species colonize first (lichens, mosses)', 'starts on bare rock/new land', 'stable, mature ecosystem', 'starts after disturbance (fire, flood)']
+            label: 'r-selected strategy',
+            options: ['life-history pattern favoring competitive efficiency near carrying capacity', 'count of different species in a community', 'life-history pattern favoring high reproduction in unstable settings', 'how evenly individuals are distributed among species']
           },
           {
-            label: 'Secondary succession',
-            options: ['stable, mature ecosystem', 'starts on bare rock/new land', 'Pioneer species colonize first (lichens, mosses)', 'starts after disturbance (fire, flood)']
+            label: 'K-selected strategy',
+            options: ['life-history pattern favoring competitive efficiency near carrying capacity', 'ability to resist or recover from disturbance', 'count of different species in a community', 'how evenly individuals are distributed among species']
           },
           {
-            label: 'Climax community',
-            options: ['Pioneer species colonize first (lichens, mosses)', 'stable, mature ecosystem', 'starts on bare rock/new land', 'starts after disturbance (fire, flood)']
+            label: 'species richness',
+            options: ['ability to resist or recover from disturbance', 'how evenly individuals are distributed among species', 'population increase at a constant per-capita rate', 'count of different species in a community']
           }
         ],
-        correctAnswers: ['starts on bare rock/new land', 'starts after disturbance (fire, flood)', 'stable, mature ecosystem'],
-        hint1: 'Think about what each concept specifically describes in Ecological Succession.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Ecological Succession describes a specific idea. Primary succession: starts on bare rock/new land. Secondary succession: starts after disturbance (fire, flood). Climax community: stable, mature ecosystem.'
+        correctAnswers: ['life-history pattern favoring high reproduction in unstable settings', 'life-history pattern favoring competitive efficiency near carrying capacity', 'count of different species in a community'],
+        hint1: 'Match each term to the definition that captures mechanism, not just keywords.',
+        hint2: 'If two definitions feel close, choose the one with the exact process direction.',
+        hint3: 'Read each label out loud, then pick the option that completes a causal sentence.',
+        explanation: 'r-selected strategy, K-selected strategy, and species richness should map to their exact mechanistic definitions. When options look similar, anchor your choice to process direction and biological scale.'
+      }
+    },
+    {
+      id: 'bio-population-community-ecology-p5-s6-strategy',
+      type: 'text' as const,
+      content: `
+      ### ACT/AP strategy and misconception repair
+      
+      On ACT/AP style prompts, score gains come from linking vocabulary to evidence, not from isolated memorization.
+      
+      #### Strategy sequence
+      1. **Name the mechanism first**: identify whether the item is asking for process, structure, regulation, or population effect.
+      2. **Use a causation sentence**: "Because r-selected strategy life-history pattern favoring high reproduction in unstable settings, we expect ...".
+      3. **Audit units and scale**: molecular claims, cellular claims, and ecosystem claims should not be mixed.
+      
+      #### Common misconceptions to avoid
+      - r and K strategies are endpoints of a continuum, not strict categories.
+      - High biodiversity does not guarantee immunity from disturbance.
+      - Carrying capacity can change with climate, resources, and species interactions.
+      
+      #### Exam execution tip
+      When two answer choices sound plausible, prefer the one that includes a direct mechanism and a measurable biological consequence.
+      `
+    },
+    {
+      id: 'bio-population-community-ecology-p5-s7-mcq-final',
+      type: 'multiple-choice' as const,
+      content: `
+      **Final application MCQ (2 questions)**
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'In biodiversity and resilience metrics, the observed pattern is: how evenly individuals are distributed among species. What term should anchor the explanation?',
+            options: [
+              'r-selected strategy',
+              'species evenness',
+              'species richness',
+              'K-selected strategy'
+            ],
+            correctAnswer: 1,
+            explanation: 'Use species evenness because it directly maps to the described biological pattern: how evenly individuals are distributed among species.'
+          },
+          {
+            question: 'In an AP-style free-response about biodiversity, the observed pattern is: ability to resist or recover from disturbance. What term should anchor the explanation?',
+            options: [
+              'community stability',
+              'exponential growth',
+              'species richness',
+              'species evenness'
+            ],
+            correctAnswer: 0,
+            explanation: 'Use community stability because it directly maps to the described biological pattern: ability to resist or recover from disturbance.'
+          }
+        ]
       }
     }
   ]
-}
+};

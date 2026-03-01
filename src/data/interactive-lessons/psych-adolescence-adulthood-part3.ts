@@ -5,7 +5,7 @@ export const psychAdolescencePart3Data = {
       id: 'adole3-intro',
       type: 'text' as const,
       content: `
-# ## Moral Development
+## Moral Development
 
 **Part 3 of 7 — Moral Development**
 
@@ -63,7 +63,7 @@ universal ethical principles
       id: 'adole3-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Kohlberg's stages of moral development**
 - **Preconventional**: self-interest (punishment/reward)

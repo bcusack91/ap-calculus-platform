@@ -5,7 +5,7 @@ export const bioCellCommPart1Data = {
       id: 'cell1-intro-p1',
       type: 'text' as const,
       content: `
-# ## Signal Transduction Overview
+## Signal Transduction Overview
 
 **Part 1 of 7 — Signal Transduction Overview**
 
@@ -52,7 +52,7 @@ export const bioCellCommPart1Data = {
       id: 'cell1-detail-p1',
       type: 'text' as const,
       content: `
-# ### Key Details
+### Key Details
 
 - **Cells communicate through chemical signals**
 - **Three stages**: reception, transduction, response

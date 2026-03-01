@@ -5,7 +5,7 @@ export const bioTranscriptionPart2Data = {
       id: 'tran2-intro-p2',
       type: 'text' as const,
       content: `
-# ## Transcription
+## Transcription
 
 **Part 2 of 7 — Transcription**
 
@@ -52,7 +52,7 @@ export const bioTranscriptionPart2Data = {
       id: 'tran2-detail-p2',
       type: 'text' as const,
       content: `
-# ### Key Details
+### Key Details
 
 - **RNA polymerase reads template strand 3'→5'**
 - **mRNA is synthesized 5'→3'**

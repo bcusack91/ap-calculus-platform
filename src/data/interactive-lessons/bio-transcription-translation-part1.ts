@@ -5,7 +5,7 @@ export const bioTranscriptionPart1Data = {
       id: 'tran1-intro-p1',
       type: 'text' as const,
       content: `
-# ## Central Dogma
+## Central Dogma
 
 **Part 1 of 7 — Central Dogma**
 
@@ -52,7 +52,7 @@ export const bioTranscriptionPart1Data = {
       id: 'tran1-detail-p1',
       type: 'text' as const,
       content: `
-# ### Key Details
+### Key Details
 
 - **DNA → RNA → Protein**
 - **Transcription**: DNA → mRNA

@@ -5,7 +5,7 @@ export const psychEmotionPart3Data = {
       id: 'emoti3-intro',
       type: 'text' as const,
       content: `
-# ## Stress & Health
+## Stress & Health
 
 **Part 3 of 7 — Stress & Health**
 
@@ -63,7 +63,7 @@ relaxed, easygoing → lower health risk
       id: 'emoti3-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Stress**: perceived threat or challenge
 - **Stressors**: catastrophes, major life changes, daily hassles

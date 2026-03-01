@@ -2,123 +2,184 @@ export const psychMemoryEncodePart6Data = {
   topicSlug: 'memory-encoding-storage',
   sections: [
     {
-      id: 'memor6-intro',
+      id: 'memory-encoding-storage-p6-s1-intro',
       type: 'text' as const,
       content: `
-# ## Problem-Solving Workshop
+      # 🧠 Memory Encoding and Storage
 
-**Part 6 of 7 — Problem-Solving Workshop**
+      **Part 6 of 7 — Applied Study Design and Data**
 
-### 1. Identifying memory types from scenarios
+      In this part, you will connect core psychological vocabulary to realistic contexts and AP-style reasoning. Focus on mechanism first, then evidence.
 
-Identifying memory types from scenarios
+      ### Core Definitions
+      - **sensory memory**: brief retention of sensory information
+      - **working memory**: active short-term processing system with limited capacity
+      - **long-term memory**: relatively enduring store of knowledge, skills, and experiences
 
-### 2. Applying encoding strategies
+      ### Concrete Real-World Example
+      A team is studying interpreting classroom memory intervention data. They operationalize variables, compare plausible explanations, and look for the interpretation that best matches observed behavior instead of relying on intuition.
 
-Applying encoding strategies
-
-### 3. Analyzing amnesia cases
-
-Analyzing amnesia cases
-
-### 4. Designing memory improvement experiments
-
-Designing memory improvement experiments
+      ### Why This Matters
+      Strong AP responses define terms precisely, apply them to evidence, and justify why one interpretation is stronger than alternatives.
       `
     },
     {
-      id: 'memor6-quiz1',
+      id: 'memory-encoding-storage-p6-s2-check',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+      **Concept Check** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What does "Identifying memory types from scenarios" refer to in psychology?',
+            question: 'In a study about interpreting classroom memory intervention data, participants change behavior after repeatedly seeing the same cue. Which concept is the best fit?',
             options: [
-              'Analyzing amnesia cases',
-              'Applying encoding strategies',
-              'Designing memory improvement experiments',
-              'Identifying memory types from scenarios'
+              'encoding',
+              'long-term memory',
+              'sensory memory',
+              'working memory'
             ],
-            correctAnswer: 3,
-            explanation: 'Correct — Identifying memory types from scenarios. The other options describe different concepts from this topic.'
+            correctAnswer: 2,
+            explanation: 'sensory memory is correct because it directly matches this mechanism: brief retention of sensory information. The distractors describe related but different processes.'
           },
           {
-            question: 'Select the statement that correctly describes Analyzing amnesia cases:',
+            question: 'Researchers report that behavior shifts when participants receive a specific cue and then justify their choices afterward. Which concept best explains that pattern?',
             options: [
-              'Identifying memory types from scenarios',
-              'Analyzing amnesia cases',
-              'Applying encoding strategies',
-              'Designing memory improvement experiments'
+              'elaborative rehearsal',
+              'working memory',
+              'long-term memory',
+              'chunking'
             ],
-            correctAnswer: 1,
-            explanation: 'Correct — Analyzing amnesia cases. Be careful to distinguish between the different concepts in this topic.'
+            correctAnswer: 0,
+            explanation: 'elaborative rehearsal is the strongest match here (linking new information to meaning and prior knowledge). The other options do not explain both the cue-driven shift and the observed response pattern as directly.'
           }
         ]
       }
     },
     {
-      id: 'memor6-detail',
+      id: 'memory-encoding-storage-p6-s3-deep',
       type: 'text' as const,
       content: `
-# ### Key Points
+      ## Deep Dive: Comparing Explanations with Evidence
 
-- **Identifying memory types from scenarios**
-- **Applying encoding strategies**
-- **Analyzing amnesia cases**
-- **Designing memory improvement experiments**
+      When analyzing interpreting classroom memory intervention data, the best interpretation ties a clear psychological mechanism to measurable evidence.
+
+      | Theory / Concept | Core claim | Typical evidence | Common limitation |
+      |---|---|---|---|
+      | sensory memory | brief retention of sensory information | experimental manipulation with random assignment | possible demand characteristics |
+      | working memory | active short-term processing system with limited capacity | longitudinal trend with repeated measurement | third-variable risk in natural settings |
+      | long-term memory | relatively enduring store of knowledge, skills, and experiences | cross-sectional comparison with matched groups | limited generalizability across cultures |
+      | encoding | transforming input into a storable memory representation | mixed-method evidence combining survey and behavioral indicators | measurement validity depends on construct quality |
+
+      ### Interpretation Strategy
+      1. Name the mechanism before describing outcomes.
+      2. Match the claim to the strongest available evidence type.
+      3. Acknowledge one limitation and explain whether it changes the conclusion.
+
+      This structure helps you earn reasoning points on free-response and avoid vague claims.
       `
     },
     {
-      id: 'memor6-quiz2',
-      type: 'multiple-choice' as const,
+      id: 'memory-encoding-storage-p6-s4-input',
+      type: 'input-boxes' as const,
       content: `
-**Concept Check** 🎯
+      **Applied Recall (exact term answers)** ✍️
+
+      1) Write the concept that matches: brief retention of sensory information
+      2) Write the concept that matches: active short-term processing system with limited capacity
+      3) Write the concept that matches: relatively enduring store of knowledge, skills, and experiences
+
+      Use the exact vocabulary term from this part.
       `,
       exercise: {
-        questions: [
-          {
-            question: 'Which concept relates directly to problem-solving workshop?',
-            options: [
-              'Designing memory improvement experiments',
-              'Only biological factors',
-              'Exclusively cognitive processes',
-              'Mathematical formulas only'
-            ],
-            correctAnswer: 0,
-            explanation: 'Designing memory improvement experiments'
-          }
-        ]
+        boxes: 3,
+        correctAnswers: ['sensory memory', 'working memory', 'long-term memory'],
+        hint1: 'Starts with: S',
+        hint2: 'Starts with: W',
+        hint3: 'Starts with: L',
+        explanation: 'Expected answers: sensory memory, working memory, and long-term memory. Each response should use the precise term connected to the definition cue.'
       }
     },
     {
-      id: 'memor6-dropdown',
+      id: 'memory-encoding-storage-p6-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Match the Concepts** 🔍
+      **Model Matching** 🔎
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Identifying memory types from scenarios',
-            options: ['Applying encoding strategies', 'Identifying memory types from scenarios', 'Designing memory improvement experiments', 'Analyzing amnesia cases']
+            label: 'Select the concept that best matches: brief retention of sensory information',
+            options: ['chunking', 'working memory', 'long-term memory', 'sensory memory']
           },
           {
-            label: 'Applying encoding strategies',
-            options: ['Identifying memory types from scenarios', 'Analyzing amnesia cases', 'Designing memory improvement experiments', 'Applying encoding strategies']
+            label: 'Select the concept that best matches: active short-term processing system with limited capacity',
+            options: ['working memory', 'chunking', 'encoding', 'sensory memory']
           },
           {
-            label: 'Analyzing amnesia cases',
-            options: ['Identifying memory types from scenarios', 'Applying encoding strategies', 'Analyzing amnesia cases', 'Designing memory improvement experiments']
+            label: 'Select the concept that best matches: relatively enduring store of knowledge, skills, and experiences',
+            options: ['chunking', 'working memory', 'long-term memory', 'encoding']
           }
         ],
-        correctAnswers: ['Identifying memory types from scenarios', 'Applying encoding strategies', 'Analyzing amnesia cases'],
-        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Identifying memory types from scenarios. Applying encoding strategies. Analyzing amnesia cases.'
+        correctAnswers: ['sensory memory', 'working memory', 'long-term memory'],
+        hint1: 'Start by matching the key mechanism in each prompt to the most specific concept.',
+        hint2: 'Eliminate options that describe a different level of analysis (biological vs cognitive vs social).',
+        hint3: 'Use the definition language from this part to avoid near-miss terms.',
+        explanation: 'Correct matches are sensory memory, working memory, and long-term memory. These choices align with the mechanism-language in each definition, not just broad topic similarity.'
+      }
+    },
+    {
+      id: 'memory-encoding-storage-p6-s6-strategy',
+      type: 'text' as const,
+      content: `
+      ## Common Misconceptions and Exam Strategy
+
+      ### Misconceptions to Avoid
+      - Rereading feels fluent but often produces weaker long-term retention than retrieval practice.
+      - Working memory capacity is limited and context dependent.
+      - Encoding strength matters more than time spent passively reviewing.
+      - Storage and retrieval failures can look similar unless tested carefully.
+
+      ### AP Strategy Moves
+      - Define the target concept in one precise sentence before giving examples.
+      - In scenario questions about interpreting classroom memory intervention data, identify the manipulated variable and measured outcome.
+      - Use one competing explanation and explain why it is weaker.
+      - If data are provided, mention trend direction and at least one design limitation.
+
+      This combination of precision and evidence improves both multiple-choice accuracy and free-response scoring.
+      `
+    },
+    {
+      id: 'memory-encoding-storage-p6-s7-applied',
+      type: 'multiple-choice' as const,
+      content: `
+      **Applied Scenarios** 🎯
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'A team investigating interpreting classroom memory intervention data finds that participants rely on a persuasive cue when they are distracted, but use argument quality when they are highly focused. Which concept best captures the focused-processing route?',
+            options: [
+              'sensory memory',
+              'encoding',
+              'long-term memory',
+              'working memory'
+            ],
+            correctAnswer: 1,
+            explanation: 'encoding is best because it reflects this mechanism (transforming input into a storable memory representation). The other options describe different levels of explanation or related constructs.'
+          },
+          {
+            question: 'After an intervention, scores improve in the treatment group but not in a matched comparison group. Which interpretation is most defensible for the targeted mechanism?',
+            options: [
+              'working memory',
+              'long-term memory',
+              'elaborative rehearsal',
+              'chunking'
+            ],
+            correctAnswer: 2,
+            explanation: 'elaborative rehearsal is the strongest interpretation because it maps to the measured pattern and proposed mechanism: linking new information to meaning and prior knowledge. Good AP reasoning also notes alternative explanations and design limits.'
+          }
+        ]
       }
     }
   ]

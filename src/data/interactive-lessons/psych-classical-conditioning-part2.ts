@@ -5,7 +5,7 @@ export const psychClassicalPart2Data = {
       id: 'class2-intro',
       type: 'text' as const,
       content: `
-# ## Key Concepts
+## Key Concepts
 
 **Part 2 of 7 — Key Concepts**
 
@@ -63,7 +63,7 @@ learned response to CS (salivation to bell)
       id: 'class2-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **UCS (unconditioned stimulus)**: naturally triggers response (food)
 - **UCR (unconditioned response)**: natural response to UCS (salivation)

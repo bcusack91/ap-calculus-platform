@@ -2,108 +2,81 @@ export const satReadingEvidencePart6Data = {
   topicSlug: 'sat-reading-evidence-sat',
   sections: [
     {
-      id: 'sat-r6-intro',
+      id: 'sat-read-p6-intro',
       type: 'text' as const,
       content: `
-# Problem-Solving Workshop
+# 🛠️ Paired Passage Strategies
 
-**Part 6 of 7 — Problem-Solving Workshop**
+**Part 6 of 7 — Paired Passage Strategies**
 
-Compare/contrast the two passages.
+Comparing and contrasting two related passages
 
-Questions may ask: how would Author 1 respond to Author 2?.
+This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+
+**Key Concepts in This Section:**
+- Core principles and definitions
+- Step-by-step problem-solving methods
+- Common SAT question patterns
+- Strategic tips for test day
       `
     },
     {
-      id: 'sat-r6-quiz1',
+      id: 'sat-read-p6-check',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+**Quick Check** 🔍
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Compare/contrast the two passages.?',
+            question: 'Based on the concepts in this section, which approach is most effective?',
             options: [
-              'Find shared topics but differing perspectives.',
-              'Compare/contrast the two passages.',
-              'how would Author 1 respond to Author 2?.',
-              'Some questions target just Passage 1 or Passage 2; others ask about both.'
+              'Memorize formulas without understanding when to apply them',
+              'Understand the underlying concepts and practice with varied problems',
+              'Only practice problems you find easy to build confidence',
+              'Skip practice and rely on intuition during the test'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — Compare/contrast the two passages. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'In the context of Problem-Solving Workshop, which explains Key Insight?',
-            options: [
-              'Find shared topics but differing perspectives.',
-              'Compare/contrast the two passages.',
-              'Some questions target just Passage 1 or Passage 2; others ask about both.',
-              'how would Author 1 respond to Author 2?.'
-            ],
-            correctAnswer: 0,
-            explanation: 'Correct — Key Insight: Find shared topics but differing perspectives. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
           }
         ]
       }
     },
     {
-      id: 'sat-r6-detail',
+      id: 'sat-read-p6-detail',
       type: 'text' as const,
       content: `
-**Key Insight:** Find shared topics but differing perspectives.
+**Detailed Concepts & Examples**
 
-**SAT Tip:** Some questions target just Passage 1 or Passage 2; others ask about both.
+This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
+
+1. **Identify** the type of problem quickly
+2. **Apply** the correct method systematically
+3. **Verify** your answer makes sense in context
+
+Work through each example carefully before attempting the practice problems below.
       `
     },
     {
-      id: 'sat-r6-quiz2',
+      id: 'sat-read-p6-practice',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+**SAT-Style Questions** 📋
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of these accurately represents SAT Tip?',
+            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
             options: [
-              'Compare/contrast the two passages.',
-              'Some questions target just Passage 1 or Passage 2; others ask about both.',
-              'Find shared topics but differing perspectives.',
-              'how would Author 1 respond to Author 2?.'
+              'Guess and move on quickly',
+              'Identify what the question is actually asking for',
+              'Try every formula you know until one works',
+              'Skip it permanently'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — SAT Tip: Some questions target just Passage 1 or Passage 2; others ask about both. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
           }
         ]
-      }
-    },
-    {
-      id: 'sat-r6-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Questions may ask',
-            options: ['Compare/contrast the two passages.', 'how would Author 1 respond to Author 2?.', 'Find shared topics but differing perspectives.', 'Some questions target just Passage 1 or Passage 2; others ask about both.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['Some questions target just Passage 1 or Passage 2; others ask about both.', 'how would Author 1 respond to Author 2?.', 'Compare/contrast the two passages.', 'Find shared topics but differing perspectives.']
-          },
-          {
-            label: 'SAT Tip',
-            options: ['Find shared topics but differing perspectives.', 'how would Author 1 respond to Author 2?.', 'Compare/contrast the two passages.', 'Some questions target just Passage 1 or Passage 2; others ask about both.']
-          }
-        ],
-        correctAnswers: ['how would Author 1 respond to Author 2?.', 'Find shared topics but differing perspectives.', 'Some questions target just Passage 1 or Passage 2; others ask about both.'],
-        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Questions may ask: how would Author 1 respond to Author 2?. Key Insight: Find shared topics but differing perspectives. SAT Tip: Some questions target just Passage 1 or Passage 2; others ask about both.'
       }
     }
   ]

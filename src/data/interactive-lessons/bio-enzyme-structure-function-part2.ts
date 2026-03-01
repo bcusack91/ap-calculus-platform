@@ -5,7 +5,7 @@ export const bioEnzymesPart2Data = {
       id: 'enzy2-kinetics',
       type: 'text' as const,
       content: `
-# ## Enzyme Kinetics
+## Enzyme Kinetics
 
 ### Reaction Rate
 
@@ -54,7 +54,7 @@ $K_m$ is a measure of enzyme-substrate affinity:
       id: 'enzy2-factors',
       type: 'text' as const,
       content: `
-# ## Substrate Concentration Effects
+## Substrate Concentration Effects
 
 At low [S]: Reaction rate is proportional to substrate concentration (first-order kinetics)
 

@@ -2,124 +2,185 @@ export const oChemAlkenesPart1Data = {
   topicSlug: 'alkenes-reactions',
   sections: [
     {
-      id: 'alken1-intro',
+      id: 'ochem-alkenes-reactions-p1-s1-intro',
       type: 'text' as const,
       content: `
-# ⚗️ Alkenes Reactions
-
-**Part 1 of 7 — Alkene Structure & Stability**
-
-### 1. Alkenes
-
-C=C double bond (sp² hybridized)
-
-### 2. Degree of unsaturation
-
-one for each C=C or ring
-
-### 3. Stability
-
-more substituted = more stable
-
-### 4. E/Z isomerism
-
-priority-based naming of alkene geometry
+      # Alkene Reactions
+      
+      **Part 1 of 7 — Electrophilic Addition Foundations**
+      
+      This part focuses on predicting products from protonation-initiated alkene additions. The goal is to connect vocabulary, curved-arrow reasoning, and product prediction in one workflow.
+      
+      ### Mechanism vocabulary for this part
+      - **pi bond nucleophile**: alkene electrons attack electrophiles in first step
+      - **carbocation intermediate**: planar cation that enables rearrangement risk
+      - **Markovnikov addition**: electrophile adds to carbon with more hydrogens first
+      - **anti-Markovnikov addition**: functional group ends on less substituted alkene carbon
+      
+      ### Worked reaction example
+      A representative transformation uses **HBr (no peroxides)**.
+      
+      1. Identify the governing mechanism: **electrophilic addition via carbocation**.
+      2. Predict the dominant product pattern: **Markovnikov bromoalkane**.
+      3. Justify with a mechanistic note: rearrangement possible.
+      
+      Exam tip: state mechanism class before drawing product. It reduces avoidable regio- and stereochemistry errors.
       `
     },
     {
-      id: 'alken1-quiz1',
+      id: 'ochem-alkenes-reactions-p1-s2-mcq-core',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+      **Mechanism checkpoint (2 questions)**
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains Alkenes?',
+            question: 'Choose the best definition for pi bond nucleophile.',
             options: [
-              'C=C double bond (sp² hybridized)',
-              'one for each C=C or ring',
-              'priority-based naming of alkene geometry',
-              'more substituted = more stable'
-            ],
-            correctAnswer: 0,
-            explanation: 'Correct — Alkenes: C=C double bond (sp² hybridized). The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Select the statement that correctly describes Stability:',
-            options: [
-              'one for each C=C or ring',
-              'more substituted = more stable',
-              'priority-based naming of alkene geometry',
-              'C=C double bond (sp² hybridized)'
+              'planar cation that enables rearrangement risk',
+              'alkene electrons attack electrophiles in first step',
+              'functional group ends on less substituted alkene carbon',
+              'electrophile adds to carbon with more hydrogens first'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — Stability: more substituted = more stable. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'pi bond nucleophile is defined as: alkene electrons attack electrophiles in first step.'
+          },
+          {
+            question: 'A reaction in this lesson uses HBr, ROOR and proceeds by radical chain addition. What product pattern should you predict first?',
+            options: [
+              'anti-Markovnikov bromoalkane',
+              'anti-Markovnikov syn alcohol',
+              'Markovnikov alcohol',
+              'Markovnikov bromoalkane'
+            ],
+            correctAnswer: 0,
+            explanation: 'With HBr, ROOR, the benchmark outcome is anti-Markovnikov bromoalkane. Mechanistic anchor: no carbocation rearrangement.'
           }
         ]
       }
     },
     {
-      id: 'alken1-detail',
+      id: 'ochem-alkenes-reactions-p1-s3-deep-dive',
       type: 'text' as const,
       content: `
-### Key Concepts Summary
-
-- **Alkenes**: C=C double bond (sp² hybridized)
-- **Degree of unsaturation**: one for each C=C or ring
-- **Stability**: more substituted = more stable
-- **E/Z isomerism**: priority-based naming of alkene geometry
+      ## Deep-Dive: Reaction Pattern Table
+      
+      Use this table as a rapid decision grid.
+      
+      | Reagents | Conditions / Mechanistic Trigger | Product Pattern | Why it works |
+      |---|---|---|---|
+      | HBr (no peroxides) | electrophilic addition via carbocation | Markovnikov bromoalkane | rearrangement possible |
+      | HBr, ROOR | radical chain addition | anti-Markovnikov bromoalkane | no carbocation rearrangement |
+      | Hg(OAc)2, H2O; NaBH4 | oxymercuration-demercuration | Markovnikov alcohol | avoids rearrangement |
+      | BH3·THF; H2O2, NaOH | hydroboration-oxidation | anti-Markovnikov syn alcohol | concerted hydroboration step |
+      
+      ### Fast interpretation protocol
+      1. Map reagent set to mechanism family.
+      2. Apply regio- or stereochemical rule attached to that family.
+      3. Check whether rearrangement, equilibration, or reversibility changes the major product call.
       `
     },
     {
-      id: 'alken1-quiz2',
-      type: 'multiple-choice' as const,
+      id: 'ochem-alkenes-reactions-p1-s4-input',
+      type: 'input-boxes' as const,
       content: `
-**Concept Check** 🎯
+      **Input Practice — enter exact chemistry terms**
+      
+      1) Term for: alkene electrons attack electrophiles in first step
+      2) Term for: planar cation that enables rearrangement risk
+      3) Product pattern expected under HBr (no peroxides)
       `,
       exercise: {
-        questions: [
-          {
-            question: 'Which concept relates directly to alkene structure & stability?',
-            options: [
-              'priority-based naming of alkene geometry',
-              'Only inorganic compounds',
-              'Exclusively gas-phase reactions',
-              'This applies only to polymers'
-            ],
-            correctAnswer: 0,
-            explanation: 'E/Z isomerism: priority-based naming of alkene geometry'
-          }
-        ]
+        boxes: 3,
+        correctAnswers: ['pi bond nucleophile', 'carbocation intermediate', 'Markovnikov bromoalkane'],
+        hint1: 'Blank 1 is the vocabulary term paired with: alkene electrons attack electrophiles in first step.',
+        hint2: 'Blank 2 corresponds to planar cation that enables rearrangement risk.',
+        hint3: 'Use the worked example: HBr (no peroxides) gives Markovnikov bromoalkane.',
+        explanation: 'Correct entries: pi bond nucleophile, carbocation intermediate, and Markovnikov bromoalkane. These anchor mechanism ID, vocabulary precision, and product prediction.'
       }
     },
     {
-      id: 'alken1-dropdown',
+      id: 'ochem-alkenes-reactions-p1-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Match the Concepts** 🔍
+      **Dropdown matching (3 prompts)**
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Alkenes',
-            options: ['more substituted = more stable', 'one for each C=C or ring', 'C=C double bond (sp² hybridized)', 'priority-based naming of alkene geometry']
+            label: 'Markovnikov addition',
+            options: ['electrophile adds to carbon with more hydrogens first', 'functional group ends on less substituted alkene carbon', 'alkene electrons attack electrophiles in first step', 'planar cation that enables rearrangement risk']
           },
           {
-            label: 'Degree of unsaturation',
-            options: ['more substituted = more stable', 'one for each C=C or ring', 'C=C double bond (sp² hybridized)', 'priority-based naming of alkene geometry']
+            label: 'Expected pattern from HBr, ROOR',
+            options: ['anti-Markovnikov bromoalkane', 'Markovnikov alcohol', 'Markovnikov bromoalkane', 'anti-Markovnikov syn alcohol']
           },
           {
-            label: 'Stability',
-            options: ['more substituted = more stable', 'C=C double bond (sp² hybridized)', 'priority-based naming of alkene geometry', 'one for each C=C or ring']
+            label: 'Best exam strategy statement',
+            options: ['Syn/anti outcome depends on mechanism, not alkene substitution alone.', 'Peroxides alter HBr behavior but not HCl/HI in standard coursework.', 'Mechanism labels should be tied to observed bond changes, not memorized by reagent names alone.', 'Markovnikov labels regiochemistry, not stereochemistry.']
           }
         ],
-        correctAnswers: ['C=C double bond (sp² hybridized)', 'one for each C=C or ring', 'more substituted = more stable'],
-        hint1: 'Think about what each concept specifically describes in ️ Alkenes Reactions.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in ️ Alkenes Reactions describes a specific idea. Alkenes: C=C double bond (sp² hybridized). Degree of unsaturation: one for each C=C or ring. Stability: more substituted = more stable.'
+        correctAnswers: ['electrophile adds to carbon with more hydrogens first', 'anti-Markovnikov bromoalkane', 'Mechanism labels should be tied to observed bond changes, not memorized by reagent names alone.'],
+        hint1: 'First align each prompt with mechanism language before reading all options.',
+        hint2: 'For reagent prompts, eliminate outcomes that violate known regio/stereo rules.',
+        hint3: 'For strategy prompts, pick the statement that links mechanism evidence to product prediction.',
+        explanation: 'Correct matches combine mechanistic definition, reagent outcome, and exam execution strategy.'
+      }
+    },
+    {
+      id: 'ochem-alkenes-reactions-p1-s6-strategy',
+      type: 'text' as const,
+      content: `
+      ## Strategy: Prediction Traps and Exam Techniques
+      
+      ### Common traps in this part
+      - Markovnikov labels regiochemistry, not stereochemistry.
+      - Peroxides alter HBr behavior but not HCl/HI in standard coursework.
+      - Syn/anti outcome depends on mechanism, not alkene substitution alone.
+      
+      ### High-yield exam sequence
+      1. **Read reagents before substrate details** to classify mechanism class quickly.
+      2. **Mark the reactive site** (electrophilic carbon, acidic alpha-carbon, benzylic/allylic position, or aromatic position).
+      3. **Commit to one major-product logic path** before checking answer choices.
+      4. **Audit stereochemistry and regiochemistry last** so you do not lose points on orientation errors.
+      
+      ### Timing technique
+      If two options differ only by orientation or placement, spend 10 seconds restating the governing rule out loud (Markovnikov, anti addition, kinetic control, etc.) before selecting.
+      `
+    },
+    {
+      id: 'ochem-alkenes-reactions-p1-s7-mcq-final',
+      type: 'multiple-choice' as const,
+      content: `
+      **Applied synthesis/mechanism check (2 questions)**
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'In a synthesis sequence centered on electrophilic addition foundations, a step uses Hg(OAc)2, H2O; NaBH4. Which major product pattern is most defensible?',
+            options: [
+              'anti-Markovnikov bromoalkane',
+              'Markovnikov alcohol',
+              'Markovnikov bromoalkane',
+              'anti-Markovnikov syn alcohol'
+            ],
+            correctAnswer: 1,
+            explanation: 'Hg(OAc)2, H2O; NaBH4 is classically associated with Markovnikov alcohol because avoids rearrangement.'
+          },
+          {
+            question: 'A mechanism rationale cites syn addition: both new groups add to same alkene face. Which interpretation applies this idea correctly in product prediction?',
+            options: [
+              'Ignore syn addition and choose products only by molecular weight.',
+              'Treat syn addition as a naming convention unrelated to mechanism.',
+              'Use syn addition to justify why the pathway favors anti-Markovnikov syn alcohol under BH3·THF; H2O2, NaOH.',
+              'Use syn addition only after final answer choice selection.'
+            ],
+            correctAnswer: 2,
+            explanation: 'The correct approach applies syn addition directly to mechanism and product control. In this context, BH3·THF; H2O2, NaOH aligns with anti-Markovnikov syn alcohol.'
+          }
+        ]
       }
     }
   ]
-}
+};

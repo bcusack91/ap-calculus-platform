@@ -5,7 +5,7 @@ export const psychObservationalPart3Data = {
       id: 'obser3-intro',
       type: 'text' as const,
       content: `
-# ## Cognitive Factors in Learning
+## Cognitive Factors in Learning
 
 **Part 3 of 7 — Cognitive Factors in Learning**
 
@@ -63,7 +63,7 @@ belief in one's ability to succeed (Bandura)
       id: 'obser3-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Cognitive maps**: mental representations of space (Tolman)
 - **Latent learning**: learning occurs but isn't demonstrated until motivated

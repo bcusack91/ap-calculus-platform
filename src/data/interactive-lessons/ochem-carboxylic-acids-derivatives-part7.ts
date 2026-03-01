@@ -2,124 +2,185 @@ export const oChemCarboxylicAcidsPart7Data = {
   topicSlug: 'carboxylic-acids-derivatives',
   sections: [
     {
-      id: 'carbo7-intro',
+      id: 'ochem-carboxylic-acids-derivatives-p7-s1-intro',
       type: 'text' as const,
       content: `
-# Synthesis & Review
-
-**Part 7 of 7 — Synthesis & Review**
-
-### 1. Carboxylic acid derivatives are interconnected
-
-Carboxylic acid derivatives are interconnected
-
-### 2. Reactivity reflects leaving group ability
-
-Reactivity reflects leaving group ability
-
-### 3. These reactions are essential in biochemistry (proteins, fats)
-
-These reactions are essential in biochemistry (proteins, fats)
-
-### 4. Review
-
-acyl substitution reactions
+      # Carboxylic Acids and Derivatives
+      
+      **Part 7 of 7 — Exam-Level Carbonyl Strategy Review**
+      
+      This part focuses on solving mechanism-heavy carbonyl exam sets. The goal is to connect vocabulary, curved-arrow reasoning, and product prediction in one workflow.
+      
+      ### Mechanism vocabulary for this part
+      - **Fischer esterification**: acid-catalyzed carboxylic acid + alcohol condensation
+      - **saponification**: base-promoted irreversible ester hydrolysis
+      - **leaving-group ability**: stability of departing group controls rate
+      - **acyl chloride**: most reactive common carboxylic acid derivative
+      
+      ### Worked reaction example
+      A representative transformation uses **RCOCl + ROH, pyridine**.
+      
+      1. Identify the governing mechanism: **acyl substitution**.
+      2. Predict the dominant product pattern: **ester**.
+      3. Justify with a mechanistic note: fast due to good chloride leaving group.
+      
+      Exam tip: state mechanism class before drawing product. It reduces avoidable regio- and stereochemistry errors.
       `
     },
     {
-      id: 'carbo7-quiz1',
+      id: 'ochem-carboxylic-acids-derivatives-p7-s2-mcq-core',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+      **Mechanism checkpoint (2 questions)**
       `,
       exercise: {
         questions: [
           {
-            question: 'What does "Carboxylic acid derivatives are…" refer to in this topic?',
+            question: 'Choose the best definition for Fischer esterification.',
             options: [
-              'Carboxylic acid derivatives are interconnected',
-              'acyl substitution reactions',
-              'Reactivity reflects leaving group ability',
-              'These reactions are essential in biochemistry (proteins, fats)'
+              'acid-catalyzed carboxylic acid + alcohol condensation',
+              'most reactive common carboxylic acid derivative',
+              'stability of departing group controls rate',
+              'base-promoted irreversible ester hydrolysis'
             ],
             correctAnswer: 0,
-            explanation: 'Correct — Carboxylic acid derivatives are interconnected. The other options describe different concepts from this topic.'
+            explanation: 'Fischer esterification is defined as: acid-catalyzed carboxylic acid + alcohol condensation.'
           },
           {
-            question: 'Which of the following is true about These reactions are essential in…?',
+            question: 'A reaction in this lesson uses RCO2H + ROH, H+ and proceeds by Fischer esterification. What product pattern should you predict first?',
             options: [
-              'These reactions are essential in biochemistry (proteins, fats)',
-              'Reactivity reflects leaving group ability',
-              'acyl substitution reactions',
-              'Carboxylic acid derivatives are interconnected'
+              'equilibrium ester product',
+              'carboxylate + alcohol',
+              'primary amide',
+              'ester'
             ],
             correctAnswer: 0,
-            explanation: 'Correct — These reactions are essential in biochemistry (proteins, fats). Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'With RCO2H + ROH, H+, the benchmark outcome is equilibrium ester product. Mechanistic anchor: remove water to drive conversion.'
           }
         ]
       }
     },
     {
-      id: 'carbo7-detail',
+      id: 'ochem-carboxylic-acids-derivatives-p7-s3-deep-dive',
       type: 'text' as const,
       content: `
-### Key Concepts Summary
-
-- **Carboxylic acid derivatives are interconnected**
-- **Reactivity reflects leaving group ability**
-- **These reactions are essential in biochemistry (proteins, fats)**
-- **Review**: acyl substitution reactions
+      ## Deep-Dive: Reaction Pattern Table
+      
+      Use this table as a rapid decision grid.
+      
+      | Reagents | Conditions / Mechanistic Trigger | Product Pattern | Why it works |
+      |---|---|---|---|
+      | RCOCl + ROH, pyridine | acyl substitution | ester | fast due to good chloride leaving group |
+      | RCO2H + ROH, H+ | Fischer esterification | equilibrium ester product | remove water to drive conversion |
+      | ester + NaOH, heat | saponification | carboxylate + alcohol | irreversible under basic conditions |
+      | RCOCl + NH3 | amidation | primary amide | requires base scavenging for HCl |
+      
+      ### Fast interpretation protocol
+      1. Map reagent set to mechanism family.
+      2. Apply regio- or stereochemical rule attached to that family.
+      3. Check whether rearrangement, equilibration, or reversibility changes the major product call.
       `
     },
     {
-      id: 'carbo7-quiz2',
-      type: 'multiple-choice' as const,
+      id: 'ochem-carboxylic-acids-derivatives-p7-s4-input',
+      type: 'input-boxes' as const,
       content: `
-**Concept Check** 🎯
+      **Input Practice — enter exact chemistry terms**
+      
+      1) Term for: acid-catalyzed carboxylic acid + alcohol condensation
+      2) Term for: base-promoted irreversible ester hydrolysis
+      3) Product pattern expected under RCOCl + ROH, pyridine
       `,
       exercise: {
-        questions: [
-          {
-            question: 'Which concept relates directly to synthesis & review?',
-            options: [
-              'acyl substitution reactions',
-              'Only inorganic compounds',
-              'Exclusively gas-phase reactions',
-              'This applies only to polymers'
-            ],
-            correctAnswer: 0,
-            explanation: 'Review: acyl substitution reactions'
-          }
-        ]
+        boxes: 3,
+        correctAnswers: ['Fischer esterification', 'saponification', 'ester'],
+        hint1: 'Blank 1 is the vocabulary term paired with: acid-catalyzed carboxylic acid + alcohol condensation.',
+        hint2: 'Blank 2 corresponds to base-promoted irreversible ester hydrolysis.',
+        hint3: 'Use the worked example: RCOCl + ROH, pyridine gives ester.',
+        explanation: 'Correct entries: Fischer esterification, saponification, and ester. These anchor mechanism ID, vocabulary precision, and product prediction.'
       }
     },
     {
-      id: 'carbo7-dropdown',
+      id: 'ochem-carboxylic-acids-derivatives-p7-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Match the Concepts** 🔍
+      **Dropdown matching (3 prompts)**
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Carboxylic acid derivatives are…',
-            options: ['These reactions are essential in biochemistry (proteins, fats)', 'Reactivity reflects leaving group ability', 'acyl substitution reactions', 'Carboxylic acid derivatives are interconnected']
+            label: 'leaving-group ability',
+            options: ['base-promoted irreversible ester hydrolysis', 'stability of departing group controls rate', 'acid-catalyzed carboxylic acid + alcohol condensation', 'most reactive common carboxylic acid derivative']
           },
           {
-            label: 'Reactivity reflects leaving group…',
-            options: ['Carboxylic acid derivatives are interconnected', 'These reactions are essential in biochemistry (proteins, fats)', 'acyl substitution reactions', 'Reactivity reflects leaving group ability']
+            label: 'Expected pattern from RCO2H + ROH, H+',
+            options: ['equilibrium ester product', 'ester', 'carboxylate + alcohol', 'primary amide']
           },
           {
-            label: 'These reactions are essential in…',
-            options: ['Reactivity reflects leaving group ability', 'acyl substitution reactions', 'Carboxylic acid derivatives are interconnected', 'These reactions are essential in biochemistry (proteins, fats)']
+            label: 'Best exam strategy statement',
+            options: ['Saponification gives carboxylate until acidic workup protonates it.', 'Fischer esterification is reversible; equilibrium control matters.', 'Mechanism labels should be tied to observed bond changes, not memorized by reagent names alone.', 'Derivative reactivity tracks leaving-group quality and resonance donation.']
           }
         ],
-        correctAnswers: ['Carboxylic acid derivatives are interconnected', 'Reactivity reflects leaving group ability', 'These reactions are essential in biochemistry (proteins, fats)'],
-        hint1: 'Think about what each concept specifically describes in Synthesis & Review.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Synthesis & Review describes a specific idea. Carboxylic acid derivatives are interconnected. Reactivity reflects leaving group ability. These reactions are essential in biochemistry (proteins, fats).'
+        correctAnswers: ['stability of departing group controls rate', 'equilibrium ester product', 'Mechanism labels should be tied to observed bond changes, not memorized by reagent names alone.'],
+        hint1: 'First align each prompt with mechanism language before reading all options.',
+        hint2: 'For reagent prompts, eliminate outcomes that violate known regio/stereo rules.',
+        hint3: 'For strategy prompts, pick the statement that links mechanism evidence to product prediction.',
+        explanation: 'Correct matches combine mechanistic definition, reagent outcome, and exam execution strategy.'
+      }
+    },
+    {
+      id: 'ochem-carboxylic-acids-derivatives-p7-s6-strategy',
+      type: 'text' as const,
+      content: `
+      ## Strategy: Prediction Traps and Exam Techniques
+      
+      ### Common traps in this part
+      - Fischer esterification is reversible; equilibrium control matters.
+      - Saponification gives carboxylate until acidic workup protonates it.
+      - Derivative reactivity tracks leaving-group quality and resonance donation.
+      
+      ### High-yield exam sequence
+      1. **Read reagents before substrate details** to classify mechanism class quickly.
+      2. **Mark the reactive site** (electrophilic carbon, acidic alpha-carbon, benzylic/allylic position, or aromatic position).
+      3. **Commit to one major-product logic path** before checking answer choices.
+      4. **Audit stereochemistry and regiochemistry last** so you do not lose points on orientation errors.
+      
+      ### Timing technique
+      If two options differ only by orientation or placement, spend 10 seconds restating the governing rule out loud (Markovnikov, anti addition, kinetic control, etc.) before selecting.
+      `
+    },
+    {
+      id: 'ochem-carboxylic-acids-derivatives-p7-s7-mcq-final',
+      type: 'multiple-choice' as const,
+      content: `
+      **Applied synthesis/mechanism check (2 questions)**
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'In a synthesis sequence centered on exam-level carbonyl strategy review, a step uses ester + NaOH, heat. Which major product pattern is most defensible?',
+            options: [
+              'carboxylate + alcohol',
+              'ester',
+              'equilibrium ester product',
+              'primary amide'
+            ],
+            correctAnswer: 0,
+            explanation: 'ester + NaOH, heat is classically associated with carboxylate + alcohol because irreversible under basic conditions.'
+          },
+          {
+            question: 'A mechanism rationale cites anhydride: derivative containing two acyl groups linked by oxygen. Which interpretation applies this idea correctly in product prediction?',
+            options: [
+              'Treat anhydride as a naming convention unrelated to mechanism.',
+              'Use anhydride to justify why the pathway favors primary amide under RCOCl + NH3.',
+              'Ignore anhydride and choose products only by molecular weight.',
+              'Use anhydride only after final answer choice selection.'
+            ],
+            correctAnswer: 1,
+            explanation: 'The correct approach applies anhydride directly to mechanism and product control. In this context, RCOCl + NH3 aligns with primary amide.'
+          }
+        ]
       }
     }
   ]
-}
+};

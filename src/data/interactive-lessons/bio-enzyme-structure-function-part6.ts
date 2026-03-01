@@ -5,7 +5,7 @@ export const bioEnzymesPart6Data = {
       id: 'enzy6-workshop',
       type: 'text' as const,
       content: `
-# ## Enzyme Problem-Solving Workshop
+## Enzyme Problem-Solving Workshop
 
 ### AP Exam Strategy for Enzyme Questions
 
@@ -59,7 +59,7 @@ export const bioEnzymesPart6Data = {
       id: 'enzy6-practice',
       type: 'text' as const,
       content: `
-# ## Practice Scenarios
+## Practice Scenarios
 
 ### Scenario 1
 A pharmaceutical company designs a drug that has a similar shape to the substrate of a disease-causing enzyme. Predict how this drug works.

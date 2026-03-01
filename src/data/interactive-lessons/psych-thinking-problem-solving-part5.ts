@@ -5,7 +5,7 @@ export const psychThinkingPart5Data = {
       id: 'think5-intro',
       type: 'text' as const,
       content: `
-# ## Creativity
+## Creativity
 
 **Part 5 of 7 — Creativity**
 
@@ -63,7 +63,7 @@ Brainstorming and creative problem-solving
       id: 'think5-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Convergent thinking**: one correct answer
 - **Divergent thinking**: generating many possible solutions

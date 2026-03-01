@@ -2,123 +2,184 @@ export const psychPrenatalPart3Data = {
   topicSlug: 'prenatal-childhood-development',
   sections: [
     {
-      id: 'prena3-intro',
+      id: 'prenatal-childhood-development-p3-s1-intro',
       type: 'text' as const,
       content: `
-# ## Cognitive Development (Piaget)
+      # 🧠 Prenatal and Childhood Development
 
-**Part 3 of 7 — Cognitive Development (Piaget)**
+      **Part 3 of 7 — Cognitive Development Models**
 
-### 1. Sensorimotor (0-2)
+      In this part, you will connect core psychological vocabulary to realistic contexts and AP-style reasoning. Focus on mechanism first, then evidence.
 
-object permanence
+      ### Core Definitions
+      - **critical period**: time window when specific experiences strongly shape development
+      - **object permanence**: understanding that objects continue to exist when out of sight
+      - **secure attachment**: caregiver bond marked by trust and comfort in reunion
 
-### 2. Preoperational (2-7)
+      ### Concrete Real-World Example
+      A team is studying Piaget-style conservation tasks in elementary school. They operationalize variables, compare plausible explanations, and look for the interpretation that best matches observed behavior instead of relying on intuition.
 
-egocentrism, symbolic thinking
-
-### 3. Concrete operational (7-11)
-
-conservation, logical thought
-
-### 4. Formal operational (11+)
-
-abstract thinking, hypothetical reasoning
+      ### Why This Matters
+      Strong AP responses define terms precisely, apply them to evidence, and justify why one interpretation is stronger than alternatives.
       `
     },
     {
-      id: 'prena3-quiz1',
+      id: 'prenatal-childhood-development-p3-s2-check',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+      **Concept Check** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains Sensorimotor (0-2)?',
+            question: 'In a study about Piaget-style conservation tasks in elementary school, participants change behavior after repeatedly seeing the same cue. Which concept is the best fit?',
             options: [
+              'secure attachment',
+              'authoritative parenting',
               'object permanence',
-              'egocentrism, symbolic thinking',
-              'abstract thinking, hypothetical reasoning',
-              'conservation, logical thought'
+              'critical period'
             ],
-            correctAnswer: 0,
-            explanation: 'Correct — Sensorimotor (0-2): object permanence. The other options describe different concepts from this topic.'
+            correctAnswer: 3,
+            explanation: 'critical period is correct because it directly matches this mechanism: time window when specific experiences strongly shape development. The distractors describe related but different processes.'
           },
           {
-            question: 'In the context of Cognitive Development (Piaget), which explains Concrete operational (7-11)?',
+            question: 'Researchers report that behavior shifts when participants receive a specific cue and then justify their choices afterward. Which concept best explains that pattern?',
             options: [
-              'abstract thinking, hypothetical reasoning',
-              'object permanence',
-              'conservation, logical thought',
-              'egocentrism, symbolic thinking'
+              'theory of mind',
+              'secure attachment',
+              'scaffolding',
+              'object permanence'
             ],
             correctAnswer: 2,
-            explanation: 'Correct — Concrete operational (7-11): conservation, logical thought. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'scaffolding is the strongest match here (supporting a child just beyond current independent ability). The other options do not explain both the cue-driven shift and the observed response pattern as directly.'
           }
         ]
       }
     },
     {
-      id: 'prena3-detail',
+      id: 'prenatal-childhood-development-p3-s3-deep',
       type: 'text' as const,
       content: `
-# ### Key Points
+      ## Deep Dive: Comparing Explanations with Evidence
 
-- **Sensorimotor (0-2)**: object permanence
-- **Preoperational (2-7)**: egocentrism, symbolic thinking
-- **Concrete operational (7-11)**: conservation, logical thought
-- **Formal operational (11+)**: abstract thinking, hypothetical reasoning
+      When analyzing Piaget-style conservation tasks in elementary school, the best interpretation ties a clear psychological mechanism to measurable evidence.
+
+      | Theory / Concept | Core claim | Typical evidence | Common limitation |
+      |---|---|---|---|
+      | critical period | time window when specific experiences strongly shape development | experimental manipulation with random assignment | possible demand characteristics |
+      | object permanence | understanding that objects continue to exist when out of sight | longitudinal trend with repeated measurement | third-variable risk in natural settings |
+      | secure attachment | caregiver bond marked by trust and comfort in reunion | cross-sectional comparison with matched groups | limited generalizability across cultures |
+      | authoritative parenting | high warmth with firm, consistent expectations | mixed-method evidence combining survey and behavioral indicators | measurement validity depends on construct quality |
+
+      ### Interpretation Strategy
+      1. Name the mechanism before describing outcomes.
+      2. Match the claim to the strongest available evidence type.
+      3. Acknowledge one limitation and explain whether it changes the conclusion.
+
+      This structure helps you earn reasoning points on free-response and avoid vague claims.
       `
     },
     {
-      id: 'prena3-quiz2',
-      type: 'multiple-choice' as const,
+      id: 'prenatal-childhood-development-p3-s4-input',
+      type: 'input-boxes' as const,
       content: `
-**Concept Check** 🎯
+      **Applied Recall (exact term answers)** ✍️
+
+      1) Write the concept that matches: time window when specific experiences strongly shape development
+      2) Write the concept that matches: understanding that objects continue to exist when out of sight
+      3) Write the concept that matches: caregiver bond marked by trust and comfort in reunion
+
+      Use the exact vocabulary term from this part.
       `,
       exercise: {
-        questions: [
-          {
-            question: 'Which concept relates directly to cognitive development (piaget)?',
-            options: [
-              'abstract thinking, hypothetical reasoning',
-              'Only biological factors',
-              'Exclusively cognitive processes',
-              'Mathematical formulas only'
-            ],
-            correctAnswer: 0,
-            explanation: 'Formal operational (11+): abstract thinking, hypothetical reasoning'
-          }
-        ]
+        boxes: 3,
+        correctAnswers: ['critical period', 'object permanence', 'secure attachment'],
+        hint1: 'Starts with: C',
+        hint2: 'Starts with: O',
+        hint3: 'Starts with: S',
+        explanation: 'Expected answers: critical period, object permanence, and secure attachment. Each response should use the precise term connected to the definition cue.'
       }
     },
     {
-      id: 'prena3-dropdown',
+      id: 'prenatal-childhood-development-p3-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Match the Concepts** 🔍
+      **Model Matching** 🔎
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Sensorimotor (0-2)',
-            options: ['abstract thinking, hypothetical reasoning', 'object permanence', 'egocentrism, symbolic thinking', 'conservation, logical thought']
+            label: 'Select the concept that best matches: time window when specific experiences strongly shape development',
+            options: ['theory of mind', 'critical period', 'authoritative parenting', 'secure attachment']
           },
           {
-            label: 'Preoperational (2-7)',
-            options: ['conservation, logical thought', 'object permanence', 'abstract thinking, hypothetical reasoning', 'egocentrism, symbolic thinking']
+            label: 'Select the concept that best matches: understanding that objects continue to exist when out of sight',
+            options: ['object permanence', 'theory of mind', 'secure attachment', 'critical period']
           },
           {
-            label: 'Concrete operational (7-11)',
-            options: ['egocentrism, symbolic thinking', 'object permanence', 'conservation, logical thought', 'abstract thinking, hypothetical reasoning']
+            label: 'Select the concept that best matches: caregiver bond marked by trust and comfort in reunion',
+            options: ['theory of mind', 'secure attachment', 'scaffolding', 'object permanence']
           }
         ],
-        correctAnswers: ['object permanence', 'egocentrism, symbolic thinking', 'conservation, logical thought'],
-        hint1: 'Think about what each concept specifically describes in Cognitive Development (Piaget).',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Cognitive Development (Piaget) describes a specific idea. Sensorimotor (0-2): object permanence. Preoperational (2-7): egocentrism, symbolic thinking. Concrete operational (7-11): conservation, logical thought.'
+        correctAnswers: ['critical period', 'object permanence', 'secure attachment'],
+        hint1: 'Start by matching the key mechanism in each prompt to the most specific concept.',
+        hint2: 'Eliminate options that describe a different level of analysis (biological vs cognitive vs social).',
+        hint3: 'Use the definition language from this part to avoid near-miss terms.',
+        explanation: 'Correct matches are critical period, object permanence, and secure attachment. These choices align with the mechanism-language in each definition, not just broad topic similarity.'
+      }
+    },
+    {
+      id: 'prenatal-childhood-development-p3-s6-strategy',
+      type: 'text' as const,
+      content: `
+      ## Common Misconceptions and Exam Strategy
+
+      ### Misconceptions to Avoid
+      - Development is not strictly linear; domains can progress at different rates.
+      - Attachment quality reflects patterns over time, not one isolated event.
+      - Cognitive stages describe trends, but individual variation is expected.
+      - Early adversity raises risk but does not guarantee poor outcomes.
+
+      ### AP Strategy Moves
+      - Define the target concept in one precise sentence before giving examples.
+      - In scenario questions about Piaget-style conservation tasks in elementary school, identify the manipulated variable and measured outcome.
+      - Use one competing explanation and explain why it is weaker.
+      - If data are provided, mention trend direction and at least one design limitation.
+
+      This combination of precision and evidence improves both multiple-choice accuracy and free-response scoring.
+      `
+    },
+    {
+      id: 'prenatal-childhood-development-p3-s7-applied',
+      type: 'multiple-choice' as const,
+      content: `
+      **Applied Scenarios** 🎯
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'A team investigating Piaget-style conservation tasks in elementary school finds that participants rely on a persuasive cue when they are distracted, but use argument quality when they are highly focused. Which concept best captures the focused-processing route?',
+            options: [
+              'object permanence',
+              'secure attachment',
+              'critical period',
+              'authoritative parenting'
+            ],
+            correctAnswer: 3,
+            explanation: 'authoritative parenting is best because it reflects this mechanism (high warmth with firm, consistent expectations). The other options describe different levels of explanation or related constructs.'
+          },
+          {
+            question: 'After an intervention, scores improve in the treatment group but not in a matched comparison group. Which interpretation is most defensible for the targeted mechanism?',
+            options: [
+              'scaffolding',
+              'secure attachment',
+              'theory of mind',
+              'object permanence'
+            ],
+            correctAnswer: 0,
+            explanation: 'scaffolding is the strongest interpretation because it maps to the measured pattern and proposed mechanism: supporting a child just beyond current independent ability. Good AP reasoning also notes alternative explanations and design limits.'
+          }
+        ]
       }
     }
   ]

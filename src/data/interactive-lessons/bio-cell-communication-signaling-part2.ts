@@ -5,7 +5,7 @@ export const bioCellCommPart2Data = {
       id: 'cell2-intro-p2',
       type: 'text' as const,
       content: `
-# ## Types of Signaling
+## Types of Signaling
 
 **Part 2 of 7 — Types of Signaling**
 
@@ -52,7 +52,7 @@ export const bioCellCommPart2Data = {
       id: 'cell2-detail-p2',
       type: 'text' as const,
       content: `
-# ### Key Details
+### Key Details
 
 - **Endocrine**: long-distance via bloodstream (hormones)
 - **Paracrine**: local signaling to nearby cells

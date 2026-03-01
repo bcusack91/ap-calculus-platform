@@ -2,108 +2,81 @@ export const satExpressionPart6Data = {
   topicSlug: 'sat-expression-ideas-sat',
   sections: [
     {
-      id: 'sat-e6-intro',
+      id: 'sat-expr-p6-intro',
       type: 'text' as const,
       content: `
-# Problem-Solving Workshop
+# 🛠️ Organization & Order
 
-**Part 6 of 7 — Problem-Solving Workshop**
+**Part 6 of 7 — Organization & Order**
 
-Rhetorical synthesis: combine notes/bullet points into effective writing.
+Logical ordering of sentences and paragraphs
 
-Match the purpose: inform, argue, compare, etc..
+This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+
+**Key Concepts in This Section:**
+- Core principles and definitions
+- Step-by-step problem-solving methods
+- Common SAT question patterns
+- Strategic tips for test day
       `
     },
     {
-      id: 'sat-e6-quiz1',
+      id: 'sat-expr-p6-check',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+**Quick Check** 🔍
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Rhetorical synthesis?',
+            question: 'Based on the concepts in this section, which approach is most effective?',
             options: [
-              'combine notes/bullet points into effective writing.',
-              'Consider audience and tone when selecting the best synthesis.',
-              'Choose the option that best accomplishes the stated goal.',
-              'inform, argue, compare, etc..'
+              'Memorize formulas without understanding when to apply them',
+              'Understand the underlying concepts and practice with varied problems',
+              'Only practice problems you find easy to build confidence',
+              'Skip practice and rely on intuition during the test'
             ],
-            correctAnswer: 0,
-            explanation: 'Correct — Rhetorical synthesis: combine notes/bullet points into effective writing. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Which of the following is true about Key Insight?',
-            options: [
-              'inform, argue, compare, etc..',
-              'combine notes/bullet points into effective writing.',
-              'Consider audience and tone when selecting the best synthesis.',
-              'Choose the option that best accomplishes the stated goal.'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Key Insight: Choose the option that best accomplishes the stated goal. Be careful to distinguish between the different concepts in this topic.'
+            correctAnswer: 1,
+            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
           }
         ]
       }
     },
     {
-      id: 'sat-e6-detail',
+      id: 'sat-expr-p6-detail',
       type: 'text' as const,
       content: `
-**Key Insight:** Choose the option that best accomplishes the stated goal.
+**Detailed Concepts & Examples**
 
-**SAT Tip:** Consider audience and tone when selecting the best synthesis.
+This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
+
+1. **Identify** the type of problem quickly
+2. **Apply** the correct method systematically
+3. **Verify** your answer makes sense in context
+
+Work through each example carefully before attempting the practice problems below.
       `
     },
     {
-      id: 'sat-e6-quiz2',
+      id: 'sat-expr-p6-practice',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+**SAT-Style Questions** 📋
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement about SAT Tip is correct?',
+            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
             options: [
-              'inform, argue, compare, etc..',
-              'combine notes/bullet points into effective writing.',
-              'Choose the option that best accomplishes the stated goal.',
-              'Consider audience and tone when selecting the best synthesis.'
+              'Guess and move on quickly',
+              'Identify what the question is actually asking for',
+              'Try every formula you know until one works',
+              'Skip it permanently'
             ],
-            correctAnswer: 3,
-            explanation: 'Correct — SAT Tip: Consider audience and tone when selecting the best synthesis. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            correctAnswer: 1,
+            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
           }
         ]
-      }
-    },
-    {
-      id: 'sat-e6-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Rhetorical synthesis',
-            options: ['Choose the option that best accomplishes the stated goal.', 'Consider audience and tone when selecting the best synthesis.', 'combine notes/bullet points into effective writing.', 'inform, argue, compare, etc..']
-          },
-          {
-            label: 'Match the purpose',
-            options: ['combine notes/bullet points into effective writing.', 'Choose the option that best accomplishes the stated goal.', 'Consider audience and tone when selecting the best synthesis.', 'inform, argue, compare, etc..']
-          },
-          {
-            label: 'Key Insight',
-            options: ['inform, argue, compare, etc..', 'combine notes/bullet points into effective writing.', 'Choose the option that best accomplishes the stated goal.', 'Consider audience and tone when selecting the best synthesis.']
-          }
-        ],
-        correctAnswers: ['combine notes/bullet points into effective writing.', 'inform, argue, compare, etc..', 'Choose the option that best accomplishes the stated goal.'],
-        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Rhetorical synthesis: combine notes/bullet points into effective writing. Match the purpose: inform, argue, compare, etc.. Key Insight: Choose the option that best accomplishes the stated goal.'
       }
     }
   ]

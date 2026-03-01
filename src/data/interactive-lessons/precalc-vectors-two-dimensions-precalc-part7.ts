@@ -2,124 +2,194 @@ export const precalcVectors2DPart7Data = {
   topicSlug: 'vectors-two-dimensions-precalc',
   sections: [
     {
-      id: 'vecto7-intro',
+      id: 'precalc-vectors-two-dimensions-precalc-p7-s1-intro',
       type: 'text' as const,
       content: `
-# Review & Applications
-
-**Part 7 of 7 — Review & Applications**
-
-### 1. Resultant force
-
-vector sum of all forces acting on an object
-
-### 2. Navigation
-
-velocity vectors for wind and heading
-
-### 3. Work
-
-W = F⃗ · d⃗ = |F||d|cos θ
-
-### 4. Projection of u⃗ onto v⃗
-
-proj_v(u) = (u⃗ · v⃗ / |v⃗|²) v⃗
+      ## Vectors in Two Dimensions: Mixed vector synthesis
+      
+      **Part 7 of 7**
+      
+      This part focuses on integrating geometric and algebraic vector questions. Keep notation precise and connect each symbolic step to geometric or functional meaning.
+      
+      ### Core definitions
+      - **resultant**: single vector equivalent to a combined effect
+      - **orthogonal**: vectors with dot product zero
+      - **component form**: vector written as ordered components like $\langle a,b\rangle$
+      
+      
+      ### Worked Example
+      Part 7 uses direct precalculus notation to move from structure to computation.
+      
+      Start with a model statement, substitute known values, and simplify step by step using exact form first.
+      When needed, convert to decimals only after the symbolic setup is complete.
       `
     },
     {
-      id: 'vecto7-quiz1',
+      id: 'precalc-vectors-two-dimensions-precalc-p7-s2-mcq-core',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+      **Multiple-choice check (2 questions)**
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains Resultant force?',
+            question: 'Choose the most accurate definition of resultant.',
             options: [
-              'W = F⃗ · d⃗ = |F||d|cos θ',
-              'proj_v(u) = (u⃗ · v⃗ / |v⃗|²) v⃗',
-              'vector sum of all forces acting on an object',
-              'velocity vectors for wind and heading'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Resultant force: vector sum of all forces acting on an object. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'In the context of Review & Applications, which explains Work?',
-            options: [
-              'vector sum of all forces acting on an object',
-              'velocity vectors for wind and heading',
-              'W = F⃗ · d⃗ = |F||d|cos θ',
-              'proj_v(u) = (u⃗ · v⃗ / |v⃗|²) v⃗'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Work: W = F⃗ · d⃗ = |F||d|cos θ. Be careful to distinguish between the different concepts in this topic.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'vecto7-detail',
-      type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Resultant force**: vector sum of all forces acting on an object
-- **Navigation**: velocity vectors for wind and heading
-- **Work**: W = F⃗ · d⃗ = |F||d|cos θ
-- **Projection of u⃗ onto v⃗**: proj_v(u) = (u⃗ · v⃗ / |v⃗|²) v⃗
-      `
-    },
-    {
-      id: 'vecto7-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which concept relates directly to review & applications?',
-            options: [
-              'proj_v(u) = (u⃗ · v⃗ / |v⃗|²) v⃗',
-              'Only complex analysis',
-              'Exclusively abstract algebra',
-              'This applies only to statistics'
+              'single vector equivalent to a combined effect',
+              'vector written as ordered components like $\langle a,b\rangle$',
+              'vectors with dot product zero',
+              'length of a vector'
             ],
             correctAnswer: 0,
-            explanation: 'Projection of u⃗ onto v⃗: proj_v(u) = (u⃗ · v⃗ / |v⃗|²) v⃗'
+            explanation: 'resultant is defined as: single vector equivalent to a combined effect.'
+          },
+          {
+            question: 'In integrating geometric and algebraic vector questions, which expression is the best starting model?',
+            options: [
+              '$\\hat{\\mathbf u}=\\frac{\\mathbf u}{\\|\\mathbf u\\|}$',
+              '$\\langle a,b\\rangle\\cdot\\langle c,d\\rangle=ac+bd$',
+              '$\\|\\langle a,b\\rangle\\|=\\sqrt{a^2+b^2}$',
+              '$\\mathbf u\\cdot\\mathbf v=\\|\\mathbf u\\|\\|\\mathbf v\\|\\cos\\theta$'
+            ],
+            correctAnswer: 3,
+            explanation: 'Use $\\mathbf u\\cdot\\mathbf v=\\|\\mathbf u\\|\\|\\mathbf v\\|\\cos\\theta$ first, then substitute known quantities from the prompt.'
           }
         ]
       }
     },
     {
-      id: 'vecto7-dropdown',
+      id: 'precalc-vectors-two-dimensions-precalc-p7-s3-deep-dive',
+      type: 'text' as const,
+      content: `
+      ### Deep-Dive: formulas and decision rules
+      
+      Use this table to pick the right expression before computing.
+      
+      | Tool | Formula | Best use |
+      |---|---|---|
+      | Angle relation | $\mathbf u\cdot\mathbf v=\|\mathbf u\|\|\mathbf v\|\cos\theta$ | finding angle between vectors |
+      | Unit vector | $\hat{\mathbf u}=\frac{\mathbf u}{\|\mathbf u\|}$ | direction-only normalization |
+      | Magnitude | $\|\langle a,b\rangle\|=\sqrt{a^2+b^2}$ | length computation |
+      | Dot product | $\langle a,b\rangle\cdot\langle c,d\rangle=ac+bd$ | angle and projection |
+      
+      ### Common pitfalls
+      - Magnitude is always nonnegative.
+      - A zero dot product indicates orthogonality, not parallelism.
+      - Keep component order consistent as $(x,y)$.
+      
+      ### Precision checks
+      1. Identify givens and unknowns before selecting a formula.
+      2. Keep exact values through symbolic simplification when possible.
+      3. Verify units, angle mode, or domain constraints before finalizing.
+      `
+    },
+    {
+      id: 'precalc-vectors-two-dimensions-precalc-p7-s4-input',
+      type: 'input-boxes' as const,
+      content: `
+      **Input Practice — Vector Calculations**
+      
+      1) Compute magnitude of $\langle 3,4
+      angle$.
+      2) Compute $\langle 1,2
+      angle\cdot\langle 3,4
+      angle$.
+      3) Compute the $y$-component of $\langle 2,5
+      angle+\langle -1,3
+      angle$.
+      `,
+      exercise: {
+        boxes: 3,
+        correctAnswers: ['5', '11', '8'],
+        hint1: 'Use $\\sqrt{a^2+b^2}$.',
+        hint2: 'Multiply matching components and add.',
+        hint3: 'Add components independently.',
+        explanation: 'Magnitude is 5, dot product is 11, and the resulting $y$-component is 8.'
+      }
+    },
+    {
+      id: 'precalc-vectors-two-dimensions-precalc-p7-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Match the Concepts** 🔍
+      **Dropdown-select practice (3 prompts)**
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Resultant force',
-            options: ['vector sum of all forces acting on an object', 'proj_v(u) = (u⃗ · v⃗ / |v⃗|²) v⃗', 'W = F⃗ · d⃗ = |F||d|cos θ', 'velocity vectors for wind and heading']
+            label: 'resultant',
+            options: ['vector written as ordered components like $\langle a,b\rangle$', 'single vector equivalent to a combined effect', 'vectors with dot product zero', 'length of a vector']
           },
           {
-            label: 'Navigation',
-            options: ['velocity vectors for wind and heading', 'proj_v(u) = (u⃗ · v⃗ / |v⃗|²) v⃗', 'vector sum of all forces acting on an object', 'W = F⃗ · d⃗ = |F||d|cos θ']
+            label: 'orthogonal',
+            options: ['vectors with dot product zero', 'angle measured from positive $x$-axis', 'vector written as ordered components like $\langle a,b\rangle$', 'length of a vector']
           },
           {
-            label: 'Work',
-            options: ['vector sum of all forces acting on an object', 'velocity vectors for wind and heading', 'proj_v(u) = (u⃗ · v⃗ / |v⃗|²) v⃗', 'W = F⃗ · d⃗ = |F||d|cos θ']
+            label: 'component form',
+            options: ['vector written as ordered components like $\langle a,b\rangle$', 'scalar from component-wise multiplication and sum', 'length of a vector', 'angle measured from positive $x$-axis']
           }
         ],
-        correctAnswers: ['vector sum of all forces acting on an object', 'velocity vectors for wind and heading', 'W = F⃗ · d⃗ = |F||d|cos θ'],
-        hint1: 'Think about what each concept specifically describes in Review & Applications.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Review & Applications describes a specific idea. Resultant force: vector sum of all forces acting on an object. Navigation: velocity vectors for wind and heading. Work: W = F⃗ · d⃗ = |F||d|cos θ.'
+        correctAnswers: ['single vector equivalent to a combined effect', 'vectors with dot product zero', 'vector written as ordered components like $\langle a,b\rangle$'],
+        hint1: 'Match each term to the full definition, not just a keyword.',
+        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
+        hint3: 'Read the label and option together as one complete mathematical sentence.',
+        explanation: 'Correct mapping: resultant, orthogonal, and component form align with their exact definitions used in this part.'
+      }
+    },
+    {
+      id: 'precalc-vectors-two-dimensions-precalc-p7-s6-strategy',
+      type: 'text' as const,
+      content: `
+      ### Strategy: graphing, calculator, and exam tactics
+      
+      **Graphing tactics**
+      - Sketch anchor points or intercept behavior before detailed algebra.
+      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
+      
+      **Calculator tactics**
+      - Confirm angle mode before trig operations.
+      - Store intermediate values to avoid rounded drift.
+      - Use table mode to test reasonableness around key inputs.
+      
+      **Exam tactics**
+      - Translate words to symbols first, then choose the matching formula family.
+      - Eliminate options that violate domain or structure.
+      - If two choices are close, substitute back into the original relationship.
+      
+      Tie each step to resultant, orthogonal, and component form so your reasoning is explicit and checkable.
+      `
+    },
+    {
+      id: 'precalc-vectors-two-dimensions-precalc-p7-s7-mcq-applied',
+      type: 'multiple-choice' as const,
+      content: `
+      **Applied mixed questions (2 questions)**
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'A student is integrating geometric and algebraic vector questions. Which term best anchors the next reasoning step if the key idea is: length of a vector?',
+            options: [
+              'orthogonal',
+              'magnitude',
+              'resultant',
+              'component form'
+            ],
+            correctAnswer: 1,
+            explanation: 'magnitude matches that description and keeps the model-to-interpretation chain consistent.'
+          },
+          {
+            question: 'A student is solving a mixed vectors in two dimensions prompt. Which term best anchors the next reasoning step if the key idea is: angle measured from positive $x$-axis?',
+            options: [
+              'dot product',
+              'magnitude',
+              'direction angle',
+              'component form'
+            ],
+            correctAnswer: 2,
+            explanation: 'direction angle matches that description and keeps the model-to-interpretation chain consistent.'
+          }
+        ]
       }
     }
   ]
-}
+};

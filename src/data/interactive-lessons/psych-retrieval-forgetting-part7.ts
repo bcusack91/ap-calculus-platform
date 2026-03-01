@@ -2,123 +2,184 @@ export const psychRetrievalPart7Data = {
   topicSlug: 'retrieval-forgetting',
   sections: [
     {
-      id: 'retri7-intro',
+      id: 'retrieval-forgetting-p7-s1-intro',
       type: 'text' as const,
       content: `
-# ## Synthesis & AP Review
+      # 🧠 Retrieval and Forgetting
 
-**Part 7 of 7 — Synthesis & AP Review**
+      **Part 7 of 7 — AP Exam Synthesis**
 
-### 1. Forgetting is normal and adaptive
+      In this part, you will connect core psychological vocabulary to realistic contexts and AP-style reasoning. Focus on mechanism first, then evidence.
 
-Forgetting is normal and adaptive
+      ### Core Definitions
+      - **state-dependent memory**: recall improves when internal state matches learning state
+      - **proactive interference**: old learning disrupts new learning
+      - **retroactive interference**: new learning disrupts old memories
 
-### 2. Memory is reconstructive, not reproductive
+      ### Concrete Real-World Example
+      A team is studying AP synthesis on memory reliability. They operationalize variables, compare plausible explanations, and look for the interpretation that best matches observed behavior instead of relying on intuition.
 
-Memory is reconstructive, not reproductive
-
-### 3. Eyewitness testimony is unreliable
-
-Eyewitness testimony is unreliable
-
-### 4. AP exam
-
-forgetting and distortion questions
+      ### Why This Matters
+      Strong AP responses define terms precisely, apply them to evidence, and justify why one interpretation is stronger than alternatives.
       `
     },
     {
-      id: 'retri7-quiz1',
+      id: 'retrieval-forgetting-p7-s2-check',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+      **Concept Check** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains Forgetting is normal and adaptive?',
+            question: 'In a study about AP synthesis on memory reliability, participants change behavior after repeatedly seeing the same cue. Which concept is the best fit?',
             options: [
-              'Memory is reconstructive, not reproductive',
-              'Forgetting is normal and adaptive',
-              'forgetting and distortion questions',
-              'Eyewitness testimony is unreliable'
+              'retroactive interference',
+              'proactive interference',
+              'tip-of-the-tongue',
+              'state-dependent memory'
             ],
-            correctAnswer: 1,
-            explanation: 'Correct — Forgetting is normal and adaptive. The other options describe different concepts from this topic.'
+            correctAnswer: 3,
+            explanation: 'state-dependent memory is correct because it directly matches this mechanism: recall improves when internal state matches learning state. The distractors describe related but different processes.'
           },
           {
-            question: 'In the context of Synthesis & AP Review, which explains Eyewitness testimony is unreliable?',
+            question: 'Researchers report that behavior shifts when participants receive a specific cue and then justify their choices afterward. Which concept best explains that pattern?',
             options: [
-              'Eyewitness testimony is unreliable',
-              'forgetting and distortion questions',
-              'Forgetting is normal and adaptive',
-              'Memory is reconstructive, not reproductive'
+              'retroactive interference',
+              'proactive interference',
+              'misinformation effect',
+              'reconstructive memory'
             ],
-            correctAnswer: 0,
-            explanation: 'Correct — Eyewitness testimony is unreliable. Be careful to distinguish between the different concepts in this topic.'
+            correctAnswer: 3,
+            explanation: 'reconstructive memory is the strongest match here (remembering by rebuilding details from fragments and schemas). The other options do not explain both the cue-driven shift and the observed response pattern as directly.'
           }
         ]
       }
     },
     {
-      id: 'retri7-detail',
+      id: 'retrieval-forgetting-p7-s3-deep',
       type: 'text' as const,
       content: `
-# ### Key Points
+      ## Deep Dive: Comparing Explanations with Evidence
 
-- **Forgetting is normal and adaptive**
-- **Memory is reconstructive, not reproductive**
-- **Eyewitness testimony is unreliable**
-- **AP exam**: forgetting and distortion questions
+      When analyzing AP synthesis on memory reliability, the best interpretation ties a clear psychological mechanism to measurable evidence.
+
+      | Theory / Concept | Core claim | Typical evidence | Common limitation |
+      |---|---|---|---|
+      | state-dependent memory | recall improves when internal state matches learning state | experimental manipulation with random assignment | possible demand characteristics |
+      | proactive interference | old learning disrupts new learning | longitudinal trend with repeated measurement | third-variable risk in natural settings |
+      | retroactive interference | new learning disrupts old memories | cross-sectional comparison with matched groups | limited generalizability across cultures |
+      | tip-of-the-tongue | temporary inability to retrieve known information | mixed-method evidence combining survey and behavioral indicators | measurement validity depends on construct quality |
+
+      ### Interpretation Strategy
+      1. Name the mechanism before describing outcomes.
+      2. Match the claim to the strongest available evidence type.
+      3. Acknowledge one limitation and explain whether it changes the conclusion.
+
+      This structure helps you earn reasoning points on free-response and avoid vague claims.
       `
     },
     {
-      id: 'retri7-quiz2',
-      type: 'multiple-choice' as const,
+      id: 'retrieval-forgetting-p7-s4-input',
+      type: 'input-boxes' as const,
       content: `
-**Concept Check** 🎯
+      **Applied Recall (exact term answers)** ✍️
+
+      1) Write the concept that matches: recall improves when internal state matches learning state
+      2) Write the concept that matches: old learning disrupts new learning
+      3) Write the concept that matches: new learning disrupts old memories
+
+      Use the exact vocabulary term from this part.
       `,
       exercise: {
-        questions: [
-          {
-            question: 'Which concept relates directly to synthesis & ap review?',
-            options: [
-              'forgetting and distortion questions',
-              'Only biological factors',
-              'Exclusively cognitive processes',
-              'Mathematical formulas only'
-            ],
-            correctAnswer: 0,
-            explanation: 'AP exam: forgetting and distortion questions'
-          }
-        ]
+        boxes: 3,
+        correctAnswers: ['state-dependent memory', 'proactive interference', 'retroactive interference'],
+        hint1: 'Starts with: S',
+        hint2: 'Starts with: P',
+        hint3: 'Starts with: R',
+        explanation: 'Expected answers: state-dependent memory, proactive interference, and retroactive interference. Each response should use the precise term connected to the definition cue.'
       }
     },
     {
-      id: 'retri7-dropdown',
+      id: 'retrieval-forgetting-p7-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Match the Concepts** 🔍
+      **Model Matching** 🔎
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Forgetting is normal and adaptive',
-            options: ['Eyewitness testimony is unreliable', 'Forgetting is normal and adaptive', 'Memory is reconstructive, not reproductive', 'forgetting and distortion questions']
+            label: 'Select the concept that best matches: recall improves when internal state matches learning state',
+            options: ['retroactive interference', 'misinformation effect', 'state-dependent memory', 'reconstructive memory']
           },
           {
-            label: 'Memory is reconstructive, not…',
-            options: ['forgetting and distortion questions', 'Eyewitness testimony is unreliable', 'Memory is reconstructive, not reproductive', 'Forgetting is normal and adaptive']
+            label: 'Select the concept that best matches: old learning disrupts new learning',
+            options: ['state-dependent memory', 'misinformation effect', 'reconstructive memory', 'proactive interference']
           },
           {
-            label: 'Eyewitness testimony is unreliable',
-            options: ['forgetting and distortion questions', 'Memory is reconstructive, not reproductive', 'Forgetting is normal and adaptive', 'Eyewitness testimony is unreliable']
+            label: 'Select the concept that best matches: new learning disrupts old memories',
+            options: ['state-dependent memory', 'retroactive interference', 'tip-of-the-tongue', 'reconstructive memory']
           }
         ],
-        correctAnswers: ['Forgetting is normal and adaptive', 'Memory is reconstructive, not reproductive', 'Eyewitness testimony is unreliable'],
-        hint1: 'Think about what each concept specifically describes in Synthesis & AP Review.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Synthesis & AP Review describes a specific idea. Forgetting is normal and adaptive. Memory is reconstructive, not reproductive. Eyewitness testimony is unreliable.'
+        correctAnswers: ['state-dependent memory', 'proactive interference', 'retroactive interference'],
+        hint1: 'Start by matching the key mechanism in each prompt to the most specific concept.',
+        hint2: 'Eliminate options that describe a different level of analysis (biological vs cognitive vs social).',
+        hint3: 'Use the definition language from this part to avoid near-miss terms.',
+        explanation: 'Correct matches are state-dependent memory, proactive interference, and retroactive interference. These choices align with the mechanism-language in each definition, not just broad topic similarity.'
+      }
+    },
+    {
+      id: 'retrieval-forgetting-p7-s6-strategy',
+      type: 'text' as const,
+      content: `
+      ## Common Misconceptions and Exam Strategy
+
+      ### Misconceptions to Avoid
+      - Forgetting is not always decay; retrieval competition and cue mismatch are common causes.
+      - Confidence in a memory report does not guarantee accuracy.
+      - Repeated testing can outperform repeated rereading for long-term recall.
+      - Distortion can emerge from normal reconstruction, not intentional lying.
+
+      ### AP Strategy Moves
+      - Define the target concept in one precise sentence before giving examples.
+      - In scenario questions about AP synthesis on memory reliability, identify the manipulated variable and measured outcome.
+      - Use one competing explanation and explain why it is weaker.
+      - If data are provided, mention trend direction and at least one design limitation.
+
+      This combination of precision and evidence improves both multiple-choice accuracy and free-response scoring.
+      `
+    },
+    {
+      id: 'retrieval-forgetting-p7-s7-applied',
+      type: 'multiple-choice' as const,
+      content: `
+      **Applied Scenarios** 🎯
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'A team investigating AP synthesis on memory reliability finds that participants rely on a persuasive cue when they are distracted, but use argument quality when they are highly focused. Which concept best captures the focused-processing route?',
+            options: [
+              'state-dependent memory',
+              'proactive interference',
+              'retroactive interference',
+              'tip-of-the-tongue'
+            ],
+            correctAnswer: 3,
+            explanation: 'tip-of-the-tongue is best because it reflects this mechanism (temporary inability to retrieve known information). The other options describe different levels of explanation or related constructs.'
+          },
+          {
+            question: 'After an intervention, scores improve in the treatment group but not in a matched comparison group. Which interpretation is most defensible for the targeted mechanism?',
+            options: [
+              'proactive interference',
+              'reconstructive memory',
+              'misinformation effect',
+              'retroactive interference'
+            ],
+            correctAnswer: 1,
+            explanation: 'reconstructive memory is the strongest interpretation because it maps to the measured pattern and proposed mechanism: remembering by rebuilding details from fragments and schemas. Good AP reasoning also notes alternative explanations and design limits.'
+          }
+        ]
       }
     }
   ]

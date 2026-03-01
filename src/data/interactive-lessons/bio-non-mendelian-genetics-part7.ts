@@ -5,7 +5,7 @@ export const bioNonMendelianPart7Data = {
       id: 'non-7-intro-p7',
       type: 'text' as const,
       content: `
-# ## Non-Mendelian Genetics: Synthesis & AP Review
+## Non-Mendelian Genetics: Synthesis & AP Review
 
 **Part 7 of 7 — Synthesis & AP Review**
 
@@ -52,7 +52,7 @@ export const bioNonMendelianPart7Data = {
       id: 'non-7-detail-p7',
       type: 'text' as const,
       content: `
-# ### Key Details
+### Key Details
 
 - **Non-Mendelian patterns expand Mendel's laws**
 - **Multiple genes and environment create phenotypic diversity**

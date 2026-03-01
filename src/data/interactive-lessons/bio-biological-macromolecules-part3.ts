@@ -5,7 +5,7 @@ export const bioMacromoleculesPart3Data = {
       id: 'biol3-lipids',
       type: 'text' as const,
       content: `
-# ## Lipids: Fats, Phospholipids & Steroids
+## Lipids: Fats, Phospholipids & Steroids
 
 ### Triglycerides (Fats & Oils)
 
@@ -58,7 +58,7 @@ Four fused carbon rings (e.g., cholesterol, estrogen, testosterone). Cholesterol
       id: 'biol3-func',
       type: 'text' as const,
       content: `
-# ## Functions of Lipids
+## Functions of Lipids
 
 | Function | Example |
 |----------|--------|

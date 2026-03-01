@@ -5,7 +5,7 @@ export const psychPerceptionPart2Data = {
       id: 'perce2-intro',
       type: 'text' as const,
       content: `
-# ## Depth Perception
+## Depth Perception
 
 **Part 2 of 7 — Depth Perception**
 
@@ -63,7 +63,7 @@ Depth perception develops around 6 months (visual cliff)
       id: 'perce2-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Binocular cues**: retinal disparity, convergence (need both eyes)
 - **Monocular cues**: relative size, overlap, linear perspective, texture gradient

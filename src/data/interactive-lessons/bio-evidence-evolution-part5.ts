@@ -2,113 +2,193 @@ export const bioEvidencePart5Data = {
   topicSlug: 'evidence-evolution',
   sections: [
     {
-      id: 'evid5-intro-p5',
+      id: 'bio-evidence-evolution-p5-s1-intro',
       type: 'text' as const,
       content: `
-# ## Direct Observation
-
-**Part 5 of 7 — Direct Observation**
-
-1. Antibiotic resistance in bacteria
-2. Pesticide resistance in insects
-3. Darwin's finch beak changes during drought
-4. Artificial selection demonstrates selection principle
+      ## Evidence for Evolution: Direct Observation
+      
+      **Part 5 of 7**
+      
+      In this lesson, you will connect mechanism-level biology to exam-ready reasoning through antibiotic resistance monitoring.
+      
+      ### Worked biological example
+      A student team investigates antibiotic resistance monitoring. Their first interpretation step is to identify how **phylogeny** and **biogeography** work together in the same pathway.
+      
+      - They classify the primary signal using **phylogeny**: hypothesized pattern of evolutionary relationships.
+      - They trace the downstream response using **biogeography**: geographic distribution of species across regions and time.
+      - They then compare outcomes with **vestigial trait** and **selection pressure** to separate mechanism from correlation.
+      
+      ### Key terms for this part
+      - **phylogeny**
+      - **biogeography**
+      - **vestigial trait**
+      - **selection pressure**
       `
     },
     {
-      id: 'evid5-quiz1',
+      id: 'bio-evidence-evolution-p5-s2-mcq-core',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+      **Checkpoint MCQ (2 questions)**
       `,
       exercise: {
         questions: [
           {
-            question: 'What does "Antibiotic resistance in bacteria" refer to in biology?',
+            question: 'For Direct Observation, what best describes phylogeny?',
             options: [
-              'Pesticide resistance in insects',
-              'Artificial selection demonstrates selection principle',
-              'Antibiotic resistance in bacteria',
-              'Darwin\'s finch beak changes during drought'
+              'reduced structure inherited from an ancestral function',
+              'geographic distribution of species across regions and time',
+              'environmental factor that alters differential survival',
+              'hypothesized pattern of evolutionary relationships'
             ],
-            correctAnswer: 2,
-            explanation: 'Correct — Antibiotic resistance in bacteria. The other options describe different concepts from this topic.'
+            correctAnswer: 3,
+            explanation: 'phylogeny is best matched with: hypothesized pattern of evolutionary relationships.'
           },
           {
-            question: 'Which of the following is true about Darwin\'s finch beak changes during…?',
+            question: 'In this part\'s context, what is the strongest definition of biogeography?',
             options: [
-              'Pesticide resistance in insects',
-              'Antibiotic resistance in bacteria',
-              'Darwin\'s finch beak changes during drought',
-              'Artificial selection demonstrates selection principle'
+              'geographic distribution of species across regions and time',
+              'reduced structure inherited from an ancestral function',
+              'hypothesized pattern of evolutionary relationships',
+              'documented heritable change in populations over generations'
             ],
-            correctAnswer: 2,
-            explanation: 'Correct — Darwin\'s finch beak changes during drought. Be careful to distinguish between the different concepts in this topic.'
+            correctAnswer: 0,
+            explanation: 'biogeography is best matched with: geographic distribution of species across regions and time.'
           }
         ]
       }
     },
     {
-      id: 'evid5-detail-p5',
+      id: 'bio-evidence-evolution-p5-s3-deep-dive',
       type: 'text' as const,
       content: `
-# ### Key Details
-
-- **Antibiotic resistance in bacteria**
-- **Pesticide resistance in insects**
-- **Darwin's finch beak changes during drought**
-- **Artificial selection demonstrates selection principle**
+      ### Deep-Dive Map: Direct Observation
+      
+      Use this diagram-style summary to track causation and evidence.
+      
+      #### Flow logic
+      - **Signal/Input** → phylogeny
+      - **Immediate processing** → biogeography
+      - **System-level consequence** → vestigial trait
+      - **Measured readout** → selection pressure
+      
+      #### Mechanism table
+      | Component | Biological role | Typical evidence pattern |
+      |---|---|---|
+      | phylogeny | hypothesized pattern of evolutionary relationships | Early shift in the primary variable |
+      | biogeography | geographic distribution of species across regions and time | Mid-pathway change in process rate |
+      | vestigial trait | reduced structure inherited from an ancestral function | Downstream phenotype trend |
+      | selection pressure | environmental factor that alters differential survival | Quantifiable endpoint in data summary |
+      
+      #### Reasoning checkpoints
+      1. Name the mechanism before describing the trend line.
+      2. Separate proximate mechanism from ecological or historical context.
+      3. Verify that each claim is tied to a measurable biological readout.
       `
     },
     {
-      id: 'evid5-quiz2',
-      type: 'multiple-choice' as const,
+      id: 'bio-evidence-evolution-p5-s4-input',
+      type: 'input-boxes' as const,
       content: `
-**Check Your Understanding** 🎯
+      **Input Practice — concrete vocabulary retrieval**
+      
+      Fill in each blank with the exact biological term.
+      
+      1) Term for this definition: **hypothesized pattern of evolutionary relationships**
+      2) Term for this definition: **geographic distribution of species across regions and time**
+      3) Term for this definition: **reduced structure inherited from an ancestral function**
       `,
       exercise: {
-        questions: [
-          {
-            question: 'Regarding Direct Observation, which correctly describes Artificial selection demonstrates…?',
-            options: [
-              'Artificial selection demonstrates selection principle',
-              'Darwin\'s finch beak changes during drought',
-              'Antibiotic resistance in bacteria',
-              'Pesticide resistance in insects'
-            ],
-            correctAnswer: 0,
-            explanation: 'Correct — Artificial selection demonstrates selection principle. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
+        boxes: 3,
+        correctAnswers: ['phylogeny', 'biogeography', 'vestigial trait'],
+        hint1: 'Start with the first item: it is the mechanism term used when a process is described as \'hypothesized pattern of evolutionary relationships\'.',
+        hint2: 'Second blank points to biogeography; think about the role \'geographic distribution of species across regions and time\'.',
+        hint3: 'Third blank is vestigial trait; connect it to \'reduced structure inherited from an ancestral function\'.',
+        explanation: 'Correct set: phylogeny, biogeography, vestigial trait. These three terms define the core mechanism chain for Direct Observation.'
       }
     },
     {
-      id: 'evid5-dropdown',
+      id: 'bio-evidence-evolution-p5-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Match the Concepts** 🔍
+      **Dropdown matching (3 prompts)**
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Antibiotic resistance in bacteria',
-            options: ['Pesticide resistance in insects', 'Antibiotic resistance in bacteria', 'Darwin\'s finch beak changes during drought', 'Artificial selection demonstrates selection principle']
+            label: 'phylogeny',
+            options: ['environmental factor that alters differential survival', 'hypothesized pattern of evolutionary relationships', 'geographic distribution of species across regions and time', 'reduced structure inherited from an ancestral function']
           },
           {
-            label: 'Pesticide resistance in insects',
-            options: ['Darwin\'s finch beak changes during drought', 'Pesticide resistance in insects', 'Antibiotic resistance in bacteria', 'Artificial selection demonstrates selection principle']
+            label: 'biogeography',
+            options: ['geographic distribution of species across regions and time', 'environmental factor that alters differential survival', 'documented heritable change in populations over generations', 'reduced structure inherited from an ancestral function']
           },
           {
-            label: 'Darwin\'s finch beak changes during…',
-            options: ['Darwin\'s finch beak changes during drought', 'Antibiotic resistance in bacteria', 'Artificial selection demonstrates selection principle', 'Pesticide resistance in insects']
+            label: 'vestigial trait',
+            options: ['environmental factor that alters differential survival', 'chronological evidence of historical life forms in rock strata', 'reduced structure inherited from an ancestral function', 'documented heritable change in populations over generations']
           }
         ],
-        correctAnswers: ['Antibiotic resistance in bacteria', 'Pesticide resistance in insects', 'Darwin\'s finch beak changes during drought'],
-        hint1: 'Think about what each concept specifically describes in Direct Observation.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Direct Observation describes a specific idea. Antibiotic resistance in bacteria. Pesticide resistance in insects. Darwin\'s finch beak changes during drought.'
+        correctAnswers: ['hypothesized pattern of evolutionary relationships', 'geographic distribution of species across regions and time', 'reduced structure inherited from an ancestral function'],
+        hint1: 'Match each term to the definition that captures mechanism, not just keywords.',
+        hint2: 'If two definitions feel close, choose the one with the exact process direction.',
+        hint3: 'Read each label out loud, then pick the option that completes a causal sentence.',
+        explanation: 'phylogeny, biogeography, and vestigial trait should map to their exact mechanistic definitions. When options look similar, anchor your choice to process direction and biological scale.'
+      }
+    },
+    {
+      id: 'bio-evidence-evolution-p5-s6-strategy',
+      type: 'text' as const,
+      content: `
+      ### ACT/AP strategy and misconception repair
+      
+      On ACT/AP style prompts, score gains come from linking vocabulary to evidence, not from isolated memorization.
+      
+      #### Strategy sequence
+      1. **Name the mechanism first**: identify whether the item is asking for process, structure, regulation, or population effect.
+      2. **Use a causation sentence**: "Because phylogeny hypothesized pattern of evolutionary relationships, we expect ...".
+      3. **Audit units and scale**: molecular claims, cellular claims, and ecosystem claims should not be mixed.
+      
+      #### Common misconceptions to avoid
+      - No single line of evidence proves every detail; strength comes from convergence.
+      - Analogous traits do not necessarily indicate close relatedness.
+      - Evolutionary change can be measured on contemporary timescales.
+      
+      #### Exam execution tip
+      When two answer choices sound plausible, prefer the one that includes a direct mechanism and a measurable biological consequence.
+      `
+    },
+    {
+      id: 'bio-evidence-evolution-p5-s7-mcq-final',
+      type: 'multiple-choice' as const,
+      content: `
+      **Final application MCQ (2 questions)**
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'In antibiotic resistance monitoring, the observed pattern is: environmental factor that alters differential survival. What term should anchor the explanation?',
+            options: [
+              'biogeography',
+              'selection pressure',
+              'vestigial trait',
+              'phylogeny'
+            ],
+            correctAnswer: 1,
+            explanation: 'Use selection pressure because it directly maps to the described biological pattern: environmental factor that alters differential survival.'
+          },
+          {
+            question: 'In an AP-style free-response about direct observation, the observed pattern is: documented heritable change in populations over generations. What term should anchor the explanation?',
+            options: [
+              'selection pressure',
+              'fossil record',
+              'observed evolution',
+              'vestigial trait'
+            ],
+            correctAnswer: 2,
+            explanation: 'Use observed evolution because it directly maps to the described biological pattern: documented heritable change in populations over generations.'
+          }
+        ]
       }
     }
   ]
-}
+};

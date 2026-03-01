@@ -5,7 +5,7 @@ export const bioEnzymesPart3Data = {
       id: 'enzy3-temp',
       type: 'text' as const,
       content: `
-# ## Temperature & pH Effects
+## Temperature & pH Effects
 
 ### Temperature
 
@@ -54,7 +54,7 @@ export const bioEnzymesPart3Data = {
       id: 'enzy3-conc',
       type: 'text' as const,
       content: `
-# ## Enzyme & Substrate Concentration
+## Enzyme & Substrate Concentration
 
 ### Effect of Enzyme Concentration
 - At fixed [S], increasing [enzyme] increases rate **linearly**

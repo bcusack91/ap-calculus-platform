@@ -5,7 +5,7 @@ export const bioTranscriptionPart4Data = {
       id: 'tran4-intro-p4',
       type: 'text' as const,
       content: `
-# ## Translation
+## Translation
 
 **Part 4 of 7 — Translation**
 
@@ -52,7 +52,7 @@ export const bioTranscriptionPart4Data = {
       id: 'tran4-detail-p4',
       type: 'text' as const,
       content: `
-# ### Key Details
+### Key Details
 
 - **Ribosomes read mRNA codons (triplets of nucleotides)**
 - **tRNA carries amino acids; anticodon pairs with codon**

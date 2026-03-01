@@ -5,7 +5,7 @@ export const bioTranscriptionPart7Data = {
       id: 'tran7-intro-p7',
       type: 'text' as const,
       content: `
-# ## Transcription & Translation: Synthesis & AP Review
+## Transcription & Translation: Synthesis & AP Review
 
 **Part 7 of 7 — Synthesis & AP Review**
 
@@ -52,7 +52,7 @@ export const bioTranscriptionPart7Data = {
       id: 'tran7-detail-p7',
       type: 'text' as const,
       content: `
-# ### Key Details
+### Key Details
 
 - **Central dogma applications**
 - **Mutation types and consequences**

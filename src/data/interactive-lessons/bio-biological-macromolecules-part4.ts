@@ -5,7 +5,7 @@ export const bioMacromoleculesPart4Data = {
       id: 'biol4-proteins',
       type: 'text' as const,
       content: `
-# ## Proteins: Structure & Function
+## Proteins: Structure & Function
 
 ### Amino Acids
 
@@ -62,7 +62,7 @@ Amino acids link via **peptide bonds** (dehydration synthesis between $-COOH$ an
       id: 'biol4-structure',
       type: 'text' as const,
       content: `
-# ## Levels of Protein Structure
+## Levels of Protein Structure
 
 | Level | Bonds | Description |
 |-------|-------|-------------|

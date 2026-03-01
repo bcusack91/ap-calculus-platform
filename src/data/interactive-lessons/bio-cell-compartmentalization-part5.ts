@@ -2,113 +2,193 @@ export const bioCellCompartmentPart5Data = {
   topicSlug: 'cell-compartmentalization',
   sections: [
     {
-      id: 'cell5-intro-p5',
+      id: 'bio-cell-compartmentalization-p5-s1-intro',
       type: 'text' as const,
       content: `
-# ## Organelle Interactions
-
-**Part 5 of 7 — Organelle Interactions**
-
-1. Endomembrane system connects organelles
-2. Mitochondria interact with ER
-3. Vesicle trafficking between compartments
-4. Metabolic pathways span multiple organelles
+      ## Cell Compartmentalization: Endosymbiotic Theory
+      
+      **Part 5 of 7**
+      
+      In this lesson, you will connect mechanism-level biology to exam-ready reasoning through evidence for organelle evolutionary origin.
+      
+      ### Worked biological example
+      A student team investigates evidence for organelle evolutionary origin. Their first interpretation step is to identify how **vesicle budding** and **signal peptide** work together in the same pathway.
+      
+      - They classify the primary signal using **vesicle budding**: pinches off a membrane packet for cargo transport.
+      - They trace the downstream response using **signal peptide**: short amino acid sequence directing protein destination.
+      - They then compare outcomes with **proton gradient** and **endosymbiosis** to separate mechanism from correlation.
+      
+      ### Key terms for this part
+      - **vesicle budding**
+      - **signal peptide**
+      - **proton gradient**
+      - **endosymbiosis**
       `
     },
     {
-      id: 'cell5-quiz1',
+      id: 'bio-cell-compartmentalization-p5-s2-mcq-core',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+      **Checkpoint MCQ (2 questions)**
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Endomembrane system connects organelles?',
+            question: 'For Endosymbiotic Theory, what best describes vesicle budding?',
             options: [
-              'Mitochondria interact with ER',
-              'Endomembrane system connects organelles',
-              'Metabolic pathways span multiple organelles',
-              'Vesicle trafficking between compartments'
+              'origin model where mitochondria and chloroplasts derive from bacteria',
+              'pinches off a membrane packet for cargo transport',
+              'difference in proton concentration across a membrane',
+              'short amino acid sequence directing protein destination'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — Endomembrane system connects organelles. The other options describe different concepts from this topic.'
+            explanation: 'vesicle budding is best matched with: pinches off a membrane packet for cargo transport.'
           },
           {
-            question: 'Which of the following is true about Vesicle trafficking between compartments?',
+            question: 'In this part\'s context, what is the strongest definition of signal peptide?',
             options: [
-              'Vesicle trafficking between compartments',
-              'Mitochondria interact with ER',
-              'Endomembrane system connects organelles',
-              'Metabolic pathways span multiple organelles'
+              'difference in proton concentration across a membrane',
+              'delivery of molecules to correct intracellular compartment',
+              'short amino acid sequence directing protein destination',
+              'pinches off a membrane packet for cargo transport'
             ],
-            correctAnswer: 0,
-            explanation: 'Correct — Vesicle trafficking between compartments. Be careful to distinguish between the different concepts in this topic.'
+            correctAnswer: 2,
+            explanation: 'signal peptide is best matched with: short amino acid sequence directing protein destination.'
           }
         ]
       }
     },
     {
-      id: 'cell5-detail-p5',
+      id: 'bio-cell-compartmentalization-p5-s3-deep-dive',
       type: 'text' as const,
       content: `
-# ### Key Details
-
-- **Endomembrane system connects organelles**
-- **Mitochondria interact with ER**
-- **Vesicle trafficking between compartments**
-- **Metabolic pathways span multiple organelles**
+      ### Deep-Dive Map: Endosymbiotic Theory
+      
+      Use this diagram-style summary to track causation and evidence.
+      
+      #### Flow logic
+      - **Signal/Input** → vesicle budding
+      - **Immediate processing** → signal peptide
+      - **System-level consequence** → proton gradient
+      - **Measured readout** → endosymbiosis
+      
+      #### Mechanism table
+      | Component | Biological role | Typical evidence pattern |
+      |---|---|---|
+      | vesicle budding | pinches off a membrane packet for cargo transport | Early shift in the primary variable |
+      | signal peptide | short amino acid sequence directing protein destination | Mid-pathway change in process rate |
+      | proton gradient | difference in proton concentration across a membrane | Downstream phenotype trend |
+      | endosymbiosis | origin model where mitochondria and chloroplasts derive from bacteria | Quantifiable endpoint in data summary |
+      
+      #### Reasoning checkpoints
+      1. Name the mechanism before describing the trend line.
+      2. Separate proximate mechanism from ecological or historical context.
+      3. Verify that each claim is tied to a measurable biological readout.
       `
     },
     {
-      id: 'cell5-quiz2',
-      type: 'multiple-choice' as const,
+      id: 'bio-cell-compartmentalization-p5-s4-input',
+      type: 'input-boxes' as const,
       content: `
-**Check Your Understanding** 🎯
+      **Input Practice — concrete vocabulary retrieval**
+      
+      Fill in each blank with the exact biological term.
+      
+      1) Term for this definition: **pinches off a membrane packet for cargo transport**
+      2) Term for this definition: **short amino acid sequence directing protein destination**
+      3) Term for this definition: **difference in proton concentration across a membrane**
       `,
       exercise: {
-        questions: [
-          {
-            question: 'Which statement about Metabolic pathways span multiple… is correct?',
-            options: [
-              'Metabolic pathways span multiple organelles',
-              'Mitochondria interact with ER',
-              'Vesicle trafficking between compartments',
-              'Endomembrane system connects organelles'
-            ],
-            correctAnswer: 0,
-            explanation: 'Correct — Metabolic pathways span multiple organelles. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
+        boxes: 3,
+        correctAnswers: ['vesicle budding', 'signal peptide', 'proton gradient'],
+        hint1: 'Start with the first item: it is the mechanism term used when a process is described as \'pinches off a membrane packet for cargo transport\'.',
+        hint2: 'Second blank points to signal peptide; think about the role \'short amino acid sequence directing protein destination\'.',
+        hint3: 'Third blank is proton gradient; connect it to \'difference in proton concentration across a membrane\'.',
+        explanation: 'Correct set: vesicle budding, signal peptide, proton gradient. These three terms define the core mechanism chain for Endosymbiotic Theory.'
       }
     },
     {
-      id: 'cell5-dropdown',
+      id: 'bio-cell-compartmentalization-p5-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Match the Concepts** 🔍
+      **Dropdown matching (3 prompts)**
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Endomembrane system connects organelles',
-            options: ['Mitochondria interact with ER', 'Endomembrane system connects organelles', 'Metabolic pathways span multiple organelles', 'Vesicle trafficking between compartments']
+            label: 'vesicle budding',
+            options: ['difference in proton concentration across a membrane', 'pinches off a membrane packet for cargo transport', 'short amino acid sequence directing protein destination', 'origin model where mitochondria and chloroplasts derive from bacteria']
           },
           {
-            label: 'Mitochondria interact with ER',
-            options: ['Mitochondria interact with ER', 'Metabolic pathways span multiple organelles', 'Endomembrane system connects organelles', 'Vesicle trafficking between compartments']
+            label: 'signal peptide',
+            options: ['origin model where mitochondria and chloroplasts derive from bacteria', 'short amino acid sequence directing protein destination', 'delivery of molecules to correct intracellular compartment', 'difference in proton concentration across a membrane']
           },
           {
-            label: 'Vesicle trafficking between compartments',
-            options: ['Vesicle trafficking between compartments', 'Endomembrane system connects organelles', 'Metabolic pathways span multiple organelles', 'Mitochondria interact with ER']
+            label: 'proton gradient',
+            options: ['origin model where mitochondria and chloroplasts derive from bacteria', 'difference in proton concentration across a membrane', 'separates cellular processes into distinct membrane-bound regions', 'delivery of molecules to correct intracellular compartment']
           }
         ],
-        correctAnswers: ['Endomembrane system connects organelles', 'Mitochondria interact with ER', 'Vesicle trafficking between compartments'],
-        hint1: 'Think about what each concept specifically describes in Organelle Interactions.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Organelle Interactions describes a specific idea. Endomembrane system connects organelles. Mitochondria interact with ER. Vesicle trafficking between compartments.'
+        correctAnswers: ['pinches off a membrane packet for cargo transport', 'short amino acid sequence directing protein destination', 'difference in proton concentration across a membrane'],
+        hint1: 'Match each term to the definition that captures mechanism, not just keywords.',
+        hint2: 'If two definitions feel close, choose the one with the exact process direction.',
+        hint3: 'Read each label out loud, then pick the option that completes a causal sentence.',
+        explanation: 'vesicle budding, signal peptide, and proton gradient should map to their exact mechanistic definitions. When options look similar, anchor your choice to process direction and biological scale.'
+      }
+    },
+    {
+      id: 'bio-cell-compartmentalization-p5-s6-strategy',
+      type: 'text' as const,
+      content: `
+      ### ACT/AP strategy and misconception repair
+      
+      On ACT/AP style prompts, score gains come from linking vocabulary to evidence, not from isolated memorization.
+      
+      #### Strategy sequence
+      1. **Name the mechanism first**: identify whether the item is asking for process, structure, regulation, or population effect.
+      2. **Use a causation sentence**: "Because vesicle budding pinches off a membrane packet for cargo transport, we expect ...".
+      3. **Audit units and scale**: molecular claims, cellular claims, and ecosystem claims should not be mixed.
+      
+      #### Common misconceptions to avoid
+      - Organelles are dynamic and interactive, not isolated static containers.
+      - Not every protein enters the secretory pathway; destination depends on targeting signals.
+      - Compartmentalization improves efficiency by reducing interference, not by making diffusion faster everywhere.
+      
+      #### Exam execution tip
+      When two answer choices sound plausible, prefer the one that includes a direct mechanism and a measurable biological consequence.
+      `
+    },
+    {
+      id: 'bio-cell-compartmentalization-p5-s7-mcq-final',
+      type: 'multiple-choice' as const,
+      content: `
+      **Final application MCQ (2 questions)**
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'In evidence for organelle evolutionary origin, the observed pattern is: origin model where mitochondria and chloroplasts derive from bacteria. What term should anchor the explanation?',
+            options: [
+              'proton gradient',
+              'signal peptide',
+              'endosymbiosis',
+              'vesicle budding'
+            ],
+            correctAnswer: 2,
+            explanation: 'Use endosymbiosis because it directly maps to the described biological pattern: origin model where mitochondria and chloroplasts derive from bacteria.'
+          },
+          {
+            question: 'In an AP-style free-response about endosymbiotic theory, the observed pattern is: delivery of molecules to correct intracellular compartment. What term should anchor the explanation?',
+            options: [
+              'proton gradient',
+              'endosymbiosis',
+              'organelle targeting',
+              'compartmentalization'
+            ],
+            correctAnswer: 2,
+            explanation: 'Use organelle targeting because it directly maps to the described biological pattern: delivery of molecules to correct intracellular compartment.'
+          }
+        ]
       }
     }
   ]
-}
+};

@@ -2,124 +2,189 @@ export const precalcRatesOfChangePart5Data = {
   topicSlug: 'rates-of-change-precalc',
   sections: [
     {
-      id: 'rates5-intro',
+      id: 'precalc-rates-of-change-precalc-p5-s1-intro',
       type: 'text' as const,
       content: `
-# Modeling with Rates of Change
-
-**Part 5 of 7 — Modeling with Rates of Change**
-
-### 1. Position → velocity
-
-rate of change of position with respect to time
-
-### 2. Cost → marginal cost
-
-rate of change of total cost per unit
-
-### 3. Population growth rate
-
-how fast a population is changing
-
-### 4. Interpreting the sign of the rate
-
-positive = increasing, negative = decreasing
+      ## Rates of Change: Instantaneous intuition from local behavior
+      
+      **Part 5 of 7**
+      
+      This part focuses on estimating local behavior from nearby points. Keep notation precise and connect each symbolic step to geometric or functional meaning.
+      
+      ### Core definitions
+      - **decreasing interval**: interval where function values fall as input increases
+      - **local behavior**: small-interval trend around one input
+      - **percent change**: relative change expressed as a percent
+      
+      
+      ### Worked Example
+      Part 5 uses direct precalculus notation to move from structure to computation.
+      
+      Start with a model statement, substitute known values, and simplify step by step using exact form first.
+      When needed, convert to decimals only after the symbolic setup is complete.
       `
     },
     {
-      id: 'rates5-quiz1',
+      id: 'precalc-rates-of-change-precalc-p5-s2-mcq-core',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+      **Multiple-choice check (2 questions)**
       `,
       exercise: {
         questions: [
           {
-            question: 'What does "Position → velocity" refer to in precalculus?',
+            question: 'Choose the most accurate definition of decreasing interval.',
             options: [
-              'rate of change of position with respect to time',
-              'how fast a population is changing',
-              'rate of change of total cost per unit',
-              'positive = increasing, negative = decreasing'
+              'small-interval trend around one input',
+              'relative change expressed as a percent',
+              'how well a function captures observed change',
+              'interval where function values fall as input increases'
             ],
-            correctAnswer: 0,
-            explanation: 'Correct — Position → velocity: rate of change of position with respect to time. The other options describe different concepts from this topic.'
+            correctAnswer: 3,
+            explanation: 'decreasing interval is defined as: interval where function values fall as input increases.'
           },
           {
-            question: 'Select the statement that correctly describes Population growth rate:',
+            question: 'In estimating local behavior from nearby points, which expression is the best starting model?',
             options: [
-              'how fast a population is changing',
-              'rate of change of total cost per unit',
-              'rate of change of position with respect to time',
-              'positive = increasing, negative = decreasing'
+              '$y=mx+b$',
+              '$\\frac{f(b)-f(a)}{b-a}$',
+              '$\\frac{\\text{new}-\\text{old}}{\\text{old}}\\cdot 100\\%$',
+              '$m=\\frac{y_2-y_1}{x_2-x_1}$'
             ],
-            correctAnswer: 0,
-            explanation: 'Correct — Population growth rate: how fast a population is changing. Be careful to distinguish between the different concepts in this topic.'
+            correctAnswer: 1,
+            explanation: 'Use $\\frac{f(b)-f(a)}{b-a}$ first, then substitute known quantities from the prompt.'
           }
         ]
       }
     },
     {
-      id: 'rates5-detail',
+      id: 'precalc-rates-of-change-precalc-p5-s3-deep-dive',
       type: 'text' as const,
       content: `
-### Key Concepts Summary
-
-- **Position → velocity**: rate of change of position with respect to time
-- **Cost → marginal cost**: rate of change of total cost per unit
-- **Population growth rate**: how fast a population is changing
-- **Interpreting the sign of the rate**: positive = increasing, negative = decreasing
+      ### Deep-Dive: formulas and decision rules
+      
+      Use this table to pick the right expression before computing.
+      
+      | Tool | Formula | Best use |
+      |---|---|---|
+      | Average rate | $\frac{f(b)-f(a)}{b-a}$ | secant computation |
+      | Slope | $m=\frac{y_2-y_1}{x_2-x_1}$ | point-pair rate |
+      | Percent change | $\frac{\text{new}-\text{old}}{\text{old}}\cdot 100\%$ | relative growth/decline |
+      | Linear model | $y=mx+b$ | constant-rate baseline |
+      
+      ### Common pitfalls
+      - Rate units must combine output units per input unit.
+      - Do not compare rates across intervals without checking interval lengths.
+      - A positive average rate on an interval does not force monotonic increase everywhere inside.
+      
+      ### Precision checks
+      1. Identify givens and unknowns before selecting a formula.
+      2. Keep exact values through symbolic simplification when possible.
+      3. Verify units, angle mode, or domain constraints before finalizing.
       `
     },
     {
-      id: 'rates5-quiz2',
-      type: 'multiple-choice' as const,
+      id: 'precalc-rates-of-change-precalc-p5-s4-input',
+      type: 'input-boxes' as const,
       content: `
-**Concept Check** 🎯
+      **Input Practice — Rate Calculations**
+      
+      1) Compute average rate for $f(x)=x^2$ on $[2,5]$.
+      2) Find slope through $(1,3)$ and $(4,15)$.
+      3) Compute percent change from 50 to 65.
       `,
       exercise: {
-        questions: [
-          {
-            question: 'Which concept relates directly to modeling with rates of change?',
-            options: [
-              'positive = increasing, negative = decreasing',
-              'Only complex analysis',
-              'Exclusively abstract algebra',
-              'This applies only to statistics'
-            ],
-            correctAnswer: 0,
-            explanation: 'Interpreting the sign of the rate: positive = increasing, negative = decreasing'
-          }
-        ]
+        boxes: 3,
+        correctAnswers: ['7', '4', '30'],
+        hint1: 'Use $\\rac{f(5)-f(2)}{5-2}$.',
+        hint2: 'Use slope formula with ordered pairs.',
+        hint3: 'Relative change is $\\rac{15}{50}\\cdot100\\%$.',
+        explanation: 'Average rate is 7, secant slope is 4, and percent increase is 30%.'
       }
     },
     {
-      id: 'rates5-dropdown',
+      id: 'precalc-rates-of-change-precalc-p5-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Match the Concepts** 🔍
+      **Dropdown-select practice (3 prompts)**
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Position → velocity',
-            options: ['how fast a population is changing', 'rate of change of total cost per unit', 'rate of change of position with respect to time', 'positive = increasing, negative = decreasing']
+            label: 'decreasing interval',
+            options: ['relative change expressed as a percent', 'how well a function captures observed change', 'small-interval trend around one input', 'interval where function values fall as input increases']
           },
           {
-            label: 'Cost → marginal cost',
-            options: ['positive = increasing, negative = decreasing', 'how fast a population is changing', 'rate of change of position with respect to time', 'rate of change of total cost per unit']
+            label: 'local behavior',
+            options: ['relative change expressed as a percent', 'change in output divided by change in input', 'how well a function captures observed change', 'small-interval trend around one input']
           },
           {
-            label: 'Population growth rate',
-            options: ['rate of change of total cost per unit', 'how fast a population is changing', 'positive = increasing, negative = decreasing', 'rate of change of position with respect to time']
+            label: 'percent change',
+            options: ['slope through two points on a graph', 'change in output divided by change in input', 'how well a function captures observed change', 'relative change expressed as a percent']
           }
         ],
-        correctAnswers: ['rate of change of position with respect to time', 'rate of change of total cost per unit', 'how fast a population is changing'],
-        hint1: 'Think about what each concept specifically describes in Modeling with Rates of Change.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Modeling with Rates of Change describes a specific idea. Position → velocity: rate of change of position with respect to time. Cost → marginal cost: rate of change of total cost per unit. Population growth rate: how fast a population is changing.'
+        correctAnswers: ['interval where function values fall as input increases', 'small-interval trend around one input', 'relative change expressed as a percent'],
+        hint1: 'Match each term to the full definition, not just a keyword.',
+        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
+        hint3: 'Read the label and option together as one complete mathematical sentence.',
+        explanation: 'Correct mapping: decreasing interval, local behavior, and percent change align with their exact definitions used in this part.'
+      }
+    },
+    {
+      id: 'precalc-rates-of-change-precalc-p5-s6-strategy',
+      type: 'text' as const,
+      content: `
+      ### Strategy: graphing, calculator, and exam tactics
+      
+      **Graphing tactics**
+      - Sketch anchor points or intercept behavior before detailed algebra.
+      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
+      
+      **Calculator tactics**
+      - Confirm angle mode before trig operations.
+      - Store intermediate values to avoid rounded drift.
+      - Use table mode to test reasonableness around key inputs.
+      
+      **Exam tactics**
+      - Translate words to symbols first, then choose the matching formula family.
+      - Eliminate options that violate domain or structure.
+      - If two choices are close, substitute back into the original relationship.
+      
+      Tie each step to decreasing interval, local behavior, and percent change so your reasoning is explicit and checkable.
+      `
+    },
+    {
+      id: 'precalc-rates-of-change-precalc-p5-s7-mcq-applied',
+      type: 'multiple-choice' as const,
+      content: `
+      **Applied mixed questions (2 questions)**
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'A student is estimating local behavior from nearby points. Which term best anchors the next reasoning step if the key idea is: how well a function captures observed change?',
+            options: [
+              'model fit',
+              'percent change',
+              'local behavior',
+              'decreasing interval'
+            ],
+            correctAnswer: 0,
+            explanation: 'model fit matches that description and keeps the model-to-interpretation chain consistent.'
+          },
+          {
+            question: 'A student is solving a mixed rates of change prompt. Which term best anchors the next reasoning step if the key idea is: change in output divided by change in input?',
+            options: [
+              'average rate of change',
+              'percent change',
+              'secant slope',
+              'model fit'
+            ],
+            correctAnswer: 0,
+            explanation: 'average rate of change matches that description and keeps the model-to-interpretation chain consistent.'
+          }
+        ]
       }
     }
   ]
-}
+};

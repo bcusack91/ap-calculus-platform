@@ -5,7 +5,7 @@ export const bioCellCommPart3Data = {
       id: 'cell3-intro-p3',
       type: 'text' as const,
       content: `
-# ## Signal Reception
+## Signal Reception
 
 **Part 3 of 7 — Signal Reception**
 
@@ -52,7 +52,7 @@ export const bioCellCommPart3Data = {
       id: 'cell3-detail-p3',
       type: 'text' as const,
       content: `
-# ### Key Details
+### Key Details
 
 - **Membrane receptors**: G-protein coupled, receptor tyrosine kinases, ion channels
 - **Intracellular receptors**: for lipid-soluble signals (steroids)

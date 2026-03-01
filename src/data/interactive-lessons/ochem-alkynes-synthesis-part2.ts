@@ -2,124 +2,185 @@ export const oChemAlkynesPart2Data = {
   topicSlug: 'alkynes-synthesis',
   sections: [
     {
-      id: 'alkyn2-intro',
+      id: 'ochem-alkynes-synthesis-p2-s1-intro',
       type: 'text' as const,
       content: `
-# Alkyne Acidity
-
-**Part 2 of 7 — Alkyne Acidity**
-
-### 1. Terminal alkynes are weakly acidic (pKa ~25)
-
-Terminal alkynes are weakly acidic (pKa ~25)
-
-### 2. NaNH₂ deprotonates terminal alkynes → acetylide anion
-
-NaNH₂ deprotonates terminal alkynes → acetylide anion
-
-### 3. Acetylide is a good nucleophile and base
-
-Acetylide is a good nucleophile and base
-
-### 4. Alkylation
-
-R-C≡C⁻ + R'-X → R-C≡C-R' (SN2)
+      # Alkyne Synthesis and Reactions
+      
+      **Part 2 of 7 — Acetylide Formation and Alkylation**
+      
+      This part focuses on forming carbon-carbon bonds with acetylide nucleophiles. The goal is to connect vocabulary, curved-arrow reasoning, and product prediction in one workflow.
+      
+      ### Mechanism vocabulary for this part
+      - **acetylide anion**: strong nucleophile/base formed by deprotonation
+      - **SN2 alkylation**: acetylide attacks primary alkyl halide
+      - **Lindlar catalyst**: poisoned catalyst giving cis alkene from alkyne
+      - **dissolving metal reduction**: Na/NH3 gives trans alkene from alkyne
+      
+      ### Worked reaction example
+      A representative transformation uses **acetylide + 1° alkyl bromide**.
+      
+      1. Identify the governing mechanism: **SN2 C-C bond formation**.
+      2. Predict the dominant product pattern: **chain-extended alkyne**.
+      3. Justify with a mechanistic note: avoid 2°/3° substrates.
+      
+      Exam tip: state mechanism class before drawing product. It reduces avoidable regio- and stereochemistry errors.
       `
     },
     {
-      id: 'alkyn2-quiz1',
+      id: 'ochem-alkynes-synthesis-p2-s2-mcq-core',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+      **Mechanism checkpoint (2 questions)**
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains Terminal alkynes are weakly acidic (pKa…?',
+            question: 'Choose the best definition for acetylide anion.',
             options: [
-              'Terminal alkynes are weakly acidic (pKa ~25)',
-              'R-C≡C⁻ + R\'-X → R-C≡C-R\' (SN2)',
-              'NaNH₂ deprotonates terminal alkynes → acetylide anion',
-              'Acetylide is a good nucleophile and base'
+              'Na/NH3 gives trans alkene from alkyne',
+              'acetylide attacks primary alkyl halide',
+              'poisoned catalyst giving cis alkene from alkyne',
+              'strong nucleophile/base formed by deprotonation'
             ],
-            correctAnswer: 0,
-            explanation: 'Correct — Terminal alkynes are weakly acidic (pKa ~25). The other options describe different concepts from this topic.'
+            correctAnswer: 3,
+            explanation: 'acetylide anion is defined as: strong nucleophile/base formed by deprotonation.'
           },
           {
-            question: 'Select the statement that correctly describes Acetylide is a good nucleophile and base:',
+            question: 'A reaction in this lesson uses H2, Lindlar and proceeds by partial syn hydrogenation. What product pattern should you predict first?',
             options: [
-              'Terminal alkynes are weakly acidic (pKa ~25)',
-              'Acetylide is a good nucleophile and base',
-              'NaNH₂ deprotonates terminal alkynes → acetylide anion',
-              'R-C≡C⁻ + R\'-X → R-C≡C-R\' (SN2)'
+              'chain-extended alkyne',
+              'trans alkene',
+              'cis alkene',
+              'ketone after tautomerization'
             ],
-            correctAnswer: 1,
-            explanation: 'Correct — Acetylide is a good nucleophile and base. Be careful to distinguish between the different concepts in this topic.'
+            correctAnswer: 2,
+            explanation: 'With H2, Lindlar, the benchmark outcome is cis alkene. Mechanistic anchor: stops before alkane.'
           }
         ]
       }
     },
     {
-      id: 'alkyn2-detail',
+      id: 'ochem-alkynes-synthesis-p2-s3-deep-dive',
       type: 'text' as const,
       content: `
-### Key Concepts Summary
-
-- **Terminal alkynes are weakly acidic (pKa ~25)**
-- **NaNH₂ deprotonates terminal alkynes → acetylide anion**
-- **Acetylide is a good nucleophile and base**
-- **Alkylation**: R-C≡C⁻ + R'-X → R-C≡C-R' (SN2)
+      ## Deep-Dive: Reaction Pattern Table
+      
+      Use this table as a rapid decision grid.
+      
+      | Reagents | Conditions / Mechanistic Trigger | Product Pattern | Why it works |
+      |---|---|---|---|
+      | acetylide + 1° alkyl bromide | SN2 C-C bond formation | chain-extended alkyne | avoid 2°/3° substrates |
+      | H2, Lindlar | partial syn hydrogenation | cis alkene | stops before alkane |
+      | Na, NH3(l) | dissolving metal reduction | trans alkene | anti addition pattern |
+      | HgSO4, H2SO4, H2O | Markovnikov hydration | ketone after tautomerization | enol not isolated |
+      
+      ### Fast interpretation protocol
+      1. Map reagent set to mechanism family.
+      2. Apply regio- or stereochemical rule attached to that family.
+      3. Check whether rearrangement, equilibration, or reversibility changes the major product call.
       `
     },
     {
-      id: 'alkyn2-quiz2',
-      type: 'multiple-choice' as const,
+      id: 'ochem-alkynes-synthesis-p2-s4-input',
+      type: 'input-boxes' as const,
       content: `
-**Concept Check** 🎯
+      **Input Practice — enter exact chemistry terms**
+      
+      1) Term for: strong nucleophile/base formed by deprotonation
+      2) Term for: acetylide attacks primary alkyl halide
+      3) Product pattern expected under acetylide + 1° alkyl bromide
       `,
       exercise: {
-        questions: [
-          {
-            question: 'Which concept relates directly to alkyne acidity?',
-            options: [
-              'R-C≡C⁻ + R\'-X → R-C≡C-R\' (SN2)',
-              'Only inorganic compounds',
-              'Exclusively gas-phase reactions',
-              'This applies only to polymers'
-            ],
-            correctAnswer: 0,
-            explanation: 'Alkylation: R-C≡C⁻ + R\'-X → R-C≡C-R\' (SN2)'
-          }
-        ]
+        boxes: 3,
+        correctAnswers: ['acetylide anion', 'SN2 alkylation', 'chain-extended alkyne'],
+        hint1: 'Blank 1 is the vocabulary term paired with: strong nucleophile/base formed by deprotonation.',
+        hint2: 'Blank 2 corresponds to acetylide attacks primary alkyl halide.',
+        hint3: 'Use the worked example: acetylide + 1° alkyl bromide gives chain-extended alkyne.',
+        explanation: 'Correct entries: acetylide anion, SN2 alkylation, and chain-extended alkyne. These anchor mechanism ID, vocabulary precision, and product prediction.'
       }
     },
     {
-      id: 'alkyn2-dropdown',
+      id: 'ochem-alkynes-synthesis-p2-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Match the Concepts** 🔍
+      **Dropdown matching (3 prompts)**
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Terminal alkynes are weakly acidic (pKa…',
-            options: ['R-C≡C⁻ + R\'-X → R-C≡C-R\' (SN2)', 'Acetylide is a good nucleophile and base', 'Terminal alkynes are weakly acidic (pKa ~25)', 'NaNH₂ deprotonates terminal alkynes → acetylide anion']
+            label: 'Lindlar catalyst',
+            options: ['Na/NH3 gives trans alkene from alkyne', 'strong nucleophile/base formed by deprotonation', 'acetylide attacks primary alkyl halide', 'poisoned catalyst giving cis alkene from alkyne']
           },
           {
-            label: 'NaNH₂ deprotonates terminal alkynes →…',
-            options: ['NaNH₂ deprotonates terminal alkynes → acetylide anion', 'Terminal alkynes are weakly acidic (pKa ~25)', 'R-C≡C⁻ + R\'-X → R-C≡C-R\' (SN2)', 'Acetylide is a good nucleophile and base']
+            label: 'Expected pattern from H2, Lindlar',
+            options: ['cis alkene', 'trans alkene', 'chain-extended alkyne', 'ketone after tautomerization']
           },
           {
-            label: 'Acetylide is a good nucleophile and base',
-            options: ['NaNH₂ deprotonates terminal alkynes → acetylide anion', 'R-C≡C⁻ + R\'-X → R-C≡C-R\' (SN2)', 'Terminal alkynes are weakly acidic (pKa ~25)', 'Acetylide is a good nucleophile and base']
+            label: 'Best exam strategy statement',
+            options: ['Hydration products are usually carbonyls after tautomerization, not stable enols.', 'Mechanism labels should be tied to observed bond changes, not memorized by reagent names alone.', 'Terminal alkyne acidity is stronger than alkene/alkane C-H but still needs strong base.', 'Lindlar and dissolving metal reductions give opposite alkene stereochemistry.']
           }
         ],
-        correctAnswers: ['Terminal alkynes are weakly acidic (pKa ~25)', 'NaNH₂ deprotonates terminal alkynes → acetylide anion', 'Acetylide is a good nucleophile and base'],
-        hint1: 'Think about what each concept specifically describes in Alkyne Acidity.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Alkyne Acidity describes a specific idea. Terminal alkynes are weakly acidic (pKa ~25). NaNH₂ deprotonates terminal alkynes → acetylide anion. Acetylide is a good nucleophile and base.'
+        correctAnswers: ['poisoned catalyst giving cis alkene from alkyne', 'cis alkene', 'Mechanism labels should be tied to observed bond changes, not memorized by reagent names alone.'],
+        hint1: 'First align each prompt with mechanism language before reading all options.',
+        hint2: 'For reagent prompts, eliminate outcomes that violate known regio/stereo rules.',
+        hint3: 'For strategy prompts, pick the statement that links mechanism evidence to product prediction.',
+        explanation: 'Correct matches combine mechanistic definition, reagent outcome, and exam execution strategy.'
+      }
+    },
+    {
+      id: 'ochem-alkynes-synthesis-p2-s6-strategy',
+      type: 'text' as const,
+      content: `
+      ## Strategy: Prediction Traps and Exam Techniques
+      
+      ### Common traps in this part
+      - Hydration products are usually carbonyls after tautomerization, not stable enols.
+      - Lindlar and dissolving metal reductions give opposite alkene stereochemistry.
+      - Terminal alkyne acidity is stronger than alkene/alkane C-H but still needs strong base.
+      
+      ### High-yield exam sequence
+      1. **Read reagents before substrate details** to classify mechanism class quickly.
+      2. **Mark the reactive site** (electrophilic carbon, acidic alpha-carbon, benzylic/allylic position, or aromatic position).
+      3. **Commit to one major-product logic path** before checking answer choices.
+      4. **Audit stereochemistry and regiochemistry last** so you do not lose points on orientation errors.
+      
+      ### Timing technique
+      If two options differ only by orientation or placement, spend 10 seconds restating the governing rule out loud (Markovnikov, anti addition, kinetic control, etc.) before selecting.
+      `
+    },
+    {
+      id: 'ochem-alkynes-synthesis-p2-s7-mcq-final',
+      type: 'multiple-choice' as const,
+      content: `
+      **Applied synthesis/mechanism check (2 questions)**
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'In a synthesis sequence centered on acetylide formation and alkylation, a step uses Na, NH3(l). Which major product pattern is most defensible?',
+            options: [
+              'chain-extended alkyne',
+              'cis alkene',
+              'trans alkene',
+              'ketone after tautomerization'
+            ],
+            correctAnswer: 2,
+            explanation: 'Na, NH3(l) is classically associated with trans alkene because anti addition pattern.'
+          },
+          {
+            question: 'A mechanism rationale cites tautomerization: enol rearranges to carbonyl form. Which interpretation applies this idea correctly in product prediction?',
+            options: [
+              'Use tautomerization to justify why the pathway favors ketone after tautomerization under HgSO4, H2SO4, H2O.',
+              'Treat tautomerization as a naming convention unrelated to mechanism.',
+              'Ignore tautomerization and choose products only by molecular weight.',
+              'Use tautomerization only after final answer choice selection.'
+            ],
+            correctAnswer: 0,
+            explanation: 'The correct approach applies tautomerization directly to mechanism and product control. In this context, HgSO4, H2SO4, H2O aligns with ketone after tautomerization.'
+          }
+        ]
       }
     }
   ]
-}
+};

@@ -5,7 +5,7 @@ export const bioMeiosisPart5Data = {
       id: 'meio5-intro-p5',
       type: 'text' as const,
       content: `
-# ## Sources of Genetic Variation
+## Sources of Genetic Variation
 
 **Part 5 of 7 — Sources of Genetic Variation**
 
@@ -52,7 +52,7 @@ export const bioMeiosisPart5Data = {
       id: 'meio5-detail-p5',
       type: 'text' as const,
       content: `
-# ### Key Details
+### Key Details
 
 - **Independent assortment**: 2ⁿ possible combinations (n = # of chromosome pairs)
 - **Crossing over**: creates new allele combinations

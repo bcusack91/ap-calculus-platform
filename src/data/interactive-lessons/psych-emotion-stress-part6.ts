@@ -5,7 +5,7 @@ export const psychEmotionPart6Data = {
       id: 'emoti6-intro',
       type: 'text' as const,
       content: `
-# ## Problem-Solving Workshop
+## Problem-Solving Workshop
 
 **Part 6 of 7 — Problem-Solving Workshop**
 
@@ -63,7 +63,7 @@ Analyzing stress and health connections
       id: 'emoti6-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Comparing emotion theories using scenarios**
 - **Identifying stress responses**

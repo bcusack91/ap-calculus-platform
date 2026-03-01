@@ -5,7 +5,7 @@ export const bioNonMendelianPart1Data = {
       id: 'non-1-intro-p1',
       type: 'text' as const,
       content: `
-# ## Incomplete & Codominance
+## Incomplete & Codominance
 
 **Part 1 of 7 — Incomplete & Codominance**
 
@@ -52,7 +52,7 @@ export const bioNonMendelianPart1Data = {
       id: 'non-1-detail-p1',
       type: 'text' as const,
       content: `
-# ### Key Details
+### Key Details
 
 - **Incomplete dominance**: heterozygote is intermediate (red × white = pink)
 - **Codominance**: both alleles fully expressed (AB blood type)

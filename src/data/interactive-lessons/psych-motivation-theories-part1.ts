@@ -2,123 +2,184 @@ export const psychMotivationPart1Data = {
   topicSlug: 'motivation-theories',
   sections: [
     {
-      id: 'motiv1-intro',
+      id: 'motivation-theories-p1-s1-intro',
       type: 'text' as const,
       content: `
-# 🧠 Motivation Theories
+      # 🧠 Motivation Theories
 
-**Part 1 of 7 — Introduction to Motivation**
+      **Part 1 of 7 — Biological and Drive Accounts**
 
-### 1. Motivation
+      In this part, you will connect core psychological vocabulary to realistic contexts and AP-style reasoning. Focus on mechanism first, then evidence.
 
-need or desire that energizes and directs behavior
+      ### Core Definitions
+      - **drive-reduction theory**: motivation to reduce physiological tension and restore homeostasis
+      - **incentive theory**: motivation shaped by external rewards and consequences
+      - **expectancy-value theory**: motivation depends on expected success and value of outcome
 
-### 2. Instinct theory
+      ### Concrete Real-World Example
+      A team is studying student persistence in a challenging AP course. They operationalize variables, compare plausible explanations, and look for the interpretation that best matches observed behavior instead of relying on intuition.
 
-innate behavioral patterns (limited in humans)
-
-### 3. Incentive theory
-
-external stimuli pull behavior
-
-### 4. Multiple theories explain different aspects of motivation
-
-Multiple theories explain different aspects of motivation
+      ### Why This Matters
+      Strong AP responses define terms precisely, apply them to evidence, and justify why one interpretation is stronger than alternatives.
       `
     },
     {
-      id: 'motiv1-quiz1',
+      id: 'motivation-theories-p1-s2-check',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+      **Concept Check** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What does "Motivation" refer to in psychology?',
+            question: 'In a study about student persistence in a challenging AP course, participants change behavior after repeatedly seeing the same cue. Which concept is the best fit?',
             options: [
-              'need or desire that energizes and directs behavior',
-              'external stimuli pull behavior',
-              'innate behavioral patterns (limited in humans)',
-              'Multiple theories explain different aspects of motivation'
+              'expectancy-value theory',
+              'drive-reduction theory',
+              'self-determination theory',
+              'incentive theory'
             ],
-            correctAnswer: 0,
-            explanation: 'Correct — Motivation: need or desire that energizes and directs behavior. The other options describe different concepts from this topic.'
+            correctAnswer: 1,
+            explanation: 'drive-reduction theory is correct because it directly matches this mechanism: motivation to reduce physiological tension and restore homeostasis. The distractors describe related but different processes.'
           },
           {
-            question: 'In the context of Motivation Theories, which explains Incentive theory?',
+            question: 'Researchers report that behavior shifts when participants receive a specific cue and then justify their choices afterward. Which concept best explains that pattern?',
             options: [
-              'external stimuli pull behavior',
-              'innate behavioral patterns (limited in humans)',
-              'Multiple theories explain different aspects of motivation',
-              'need or desire that energizes and directs behavior'
+              'expectancy-value theory',
+              'extrinsic motivation',
+              'incentive theory',
+              'intrinsic motivation'
             ],
-            correctAnswer: 0,
-            explanation: 'Correct — Incentive theory: external stimuli pull behavior. Be careful to distinguish between the different concepts in this topic.'
+            correctAnswer: 3,
+            explanation: 'intrinsic motivation is the strongest match here (engaging in an activity for inherent interest or enjoyment). The other options do not explain both the cue-driven shift and the observed response pattern as directly.'
           }
         ]
       }
     },
     {
-      id: 'motiv1-detail',
+      id: 'motivation-theories-p1-s3-deep',
       type: 'text' as const,
       content: `
-# ### Key Points
+      ## Deep Dive: Comparing Explanations with Evidence
 
-- **Motivation**: need or desire that energizes and directs behavior
-- **Instinct theory**: innate behavioral patterns (limited in humans)
-- **Incentive theory**: external stimuli pull behavior
-- **Multiple theories explain different aspects of motivation**
+      When analyzing student persistence in a challenging AP course, the best interpretation ties a clear psychological mechanism to measurable evidence.
+
+      | Theory / Concept | Core claim | Typical evidence | Common limitation |
+      |---|---|---|---|
+      | drive-reduction theory | motivation to reduce physiological tension and restore homeostasis | experimental manipulation with random assignment | possible demand characteristics |
+      | incentive theory | motivation shaped by external rewards and consequences | longitudinal trend with repeated measurement | third-variable risk in natural settings |
+      | expectancy-value theory | motivation depends on expected success and value of outcome | cross-sectional comparison with matched groups | limited generalizability across cultures |
+      | self-determination theory | autonomy, competence, and relatedness support intrinsic motivation | mixed-method evidence combining survey and behavioral indicators | measurement validity depends on construct quality |
+
+      ### Interpretation Strategy
+      1. Name the mechanism before describing outcomes.
+      2. Match the claim to the strongest available evidence type.
+      3. Acknowledge one limitation and explain whether it changes the conclusion.
+
+      This structure helps you earn reasoning points on free-response and avoid vague claims.
       `
     },
     {
-      id: 'motiv1-quiz2',
-      type: 'multiple-choice' as const,
+      id: 'motivation-theories-p1-s4-input',
+      type: 'input-boxes' as const,
       content: `
-**Concept Check** 🎯
+      **Applied Recall (exact term answers)** ✍️
+
+      1) Write the concept that matches: motivation to reduce physiological tension and restore homeostasis
+      2) Write the concept that matches: motivation shaped by external rewards and consequences
+      3) Write the concept that matches: motivation depends on expected success and value of outcome
+
+      Use the exact vocabulary term from this part.
       `,
       exercise: {
-        questions: [
-          {
-            question: 'Which concept relates directly to introduction to motivation?',
-            options: [
-              'Multiple theories explain different aspects of motivation',
-              'Only biological factors',
-              'Exclusively cognitive processes',
-              'Mathematical formulas only'
-            ],
-            correctAnswer: 0,
-            explanation: 'Multiple theories explain different aspects of motivation'
-          }
-        ]
+        boxes: 3,
+        correctAnswers: ['drive-reduction theory', 'incentive theory', 'expectancy-value theory'],
+        hint1: 'Starts with: D',
+        hint2: 'Starts with: I',
+        hint3: 'Starts with: E',
+        explanation: 'Expected answers: drive-reduction theory, incentive theory, and expectancy-value theory. Each response should use the precise term connected to the definition cue.'
       }
     },
     {
-      id: 'motiv1-dropdown',
+      id: 'motivation-theories-p1-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Match the Concepts** 🔍
+      **Model Matching** 🔎
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Motivation',
-            options: ['Multiple theories explain different aspects of motivation', 'external stimuli pull behavior', 'innate behavioral patterns (limited in humans)', 'need or desire that energizes and directs behavior']
+            label: 'Select the concept that best matches: motivation to reduce physiological tension and restore homeostasis',
+            options: ['expectancy-value theory', 'self-determination theory', 'incentive theory', 'drive-reduction theory']
           },
           {
-            label: 'Instinct theory',
-            options: ['innate behavioral patterns (limited in humans)', 'Multiple theories explain different aspects of motivation', 'need or desire that energizes and directs behavior', 'external stimuli pull behavior']
+            label: 'Select the concept that best matches: motivation shaped by external rewards and consequences',
+            options: ['incentive theory', 'intrinsic motivation', 'extrinsic motivation', 'drive-reduction theory']
           },
           {
-            label: 'Incentive theory',
-            options: ['external stimuli pull behavior', 'innate behavioral patterns (limited in humans)', 'Multiple theories explain different aspects of motivation', 'need or desire that energizes and directs behavior']
+            label: 'Select the concept that best matches: motivation depends on expected success and value of outcome',
+            options: ['expectancy-value theory', 'drive-reduction theory', 'incentive theory', 'self-determination theory']
           }
         ],
-        correctAnswers: ['need or desire that energizes and directs behavior', 'innate behavioral patterns (limited in humans)', 'external stimuli pull behavior'],
-        hint1: 'Think about what each concept specifically describes in Motivation Theories.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Motivation Theories describes a specific idea. Motivation: need or desire that energizes and directs behavior. Instinct theory: innate behavioral patterns (limited in humans). Incentive theory: external stimuli pull behavior.'
+        correctAnswers: ['drive-reduction theory', 'incentive theory', 'expectancy-value theory'],
+        hint1: 'Start by matching the key mechanism in each prompt to the most specific concept.',
+        hint2: 'Eliminate options that describe a different level of analysis (biological vs cognitive vs social).',
+        hint3: 'Use the definition language from this part to avoid near-miss terms.',
+        explanation: 'Correct matches are drive-reduction theory, incentive theory, and expectancy-value theory. These choices align with the mechanism-language in each definition, not just broad topic similarity.'
+      }
+    },
+    {
+      id: 'motivation-theories-p1-s6-strategy',
+      type: 'text' as const,
+      content: `
+      ## Common Misconceptions and Exam Strategy
+
+      ### Misconceptions to Avoid
+      - Extrinsic rewards can help or hurt motivation depending on how they are framed.
+      - High arousal is not always beneficial; task complexity changes the optimal level.
+      - Motivation is dynamic and can change with feedback, context, and goals.
+      - Value without expectancy, or expectancy without value, often yields weak persistence.
+
+      ### AP Strategy Moves
+      - Define the target concept in one precise sentence before giving examples.
+      - In scenario questions about student persistence in a challenging AP course, identify the manipulated variable and measured outcome.
+      - Use one competing explanation and explain why it is weaker.
+      - If data are provided, mention trend direction and at least one design limitation.
+
+      This combination of precision and evidence improves both multiple-choice accuracy and free-response scoring.
+      `
+    },
+    {
+      id: 'motivation-theories-p1-s7-applied',
+      type: 'multiple-choice' as const,
+      content: `
+      **Applied Scenarios** 🎯
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'A team investigating student persistence in a challenging AP course finds that participants rely on a persuasive cue when they are distracted, but use argument quality when they are highly focused. Which concept best captures the focused-processing route?',
+            options: [
+              'self-determination theory',
+              'incentive theory',
+              'expectancy-value theory',
+              'drive-reduction theory'
+            ],
+            correctAnswer: 0,
+            explanation: 'self-determination theory is best because it reflects this mechanism (autonomy, competence, and relatedness support intrinsic motivation). The other options describe different levels of explanation or related constructs.'
+          },
+          {
+            question: 'After an intervention, scores improve in the treatment group but not in a matched comparison group. Which interpretation is most defensible for the targeted mechanism?',
+            options: [
+              'expectancy-value theory',
+              'incentive theory',
+              'intrinsic motivation',
+              'extrinsic motivation'
+            ],
+            correctAnswer: 2,
+            explanation: 'intrinsic motivation is the strongest interpretation because it maps to the measured pattern and proposed mechanism: engaging in an activity for inherent interest or enjoyment. Good AP reasoning also notes alternative explanations and design limits.'
+          }
+        ]
       }
     }
   ]

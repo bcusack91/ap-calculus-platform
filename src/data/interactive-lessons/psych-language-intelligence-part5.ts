@@ -5,7 +5,7 @@ export const psychLanguagePart5Data = {
       id: 'langu5-intro',
       type: 'text' as const,
       content: `
-# ## Intelligence Controversies
+## Intelligence Controversies
 
 **Part 5 of 7 — Intelligence Controversies**
 
@@ -63,7 +63,7 @@ test items may favor certain groups
       id: 'langu5-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Nature vs nurture in intelligence**
 - **Flynn effect**: IQ scores rising over generations

@@ -2,124 +2,185 @@ export const oChemAminesPart7Data = {
   topicSlug: 'amines-nitrogen-compounds',
   sections: [
     {
-      id: 'amine7-intro',
+      id: 'ochem-amines-nitrogen-compounds-p7-s1-intro',
       type: 'text' as const,
       content: `
-# Synthesis & Review
-
-**Part 7 of 7 — Synthesis & Review**
-
-### 1. Amines are fundamental in biochemistry (amino acids, neurotransmitters)
-
-Amines are fundamental in biochemistry (amino acids, neurotransmitters)
-
-### 2. Basicity and nucleophilicity make amines versatile
-
-Basicity and nucleophilicity make amines versatile
-
-### 3. Diazonium chemistry enables aromatic substitutions
-
-Diazonium chemistry enables aromatic substitutions
-
-### 4. Review
-
-amine properties and reactions
+      # Amines and Nitrogen Compounds
+      
+      **Part 7 of 7 — Integrated Nitrogen Mechanism Review**
+      
+      This part focuses on combining nitrogen chemistry in synthesis maps. The goal is to connect vocabulary, curved-arrow reasoning, and product prediction in one workflow.
+      
+      ### Mechanism vocabulary for this part
+      - **imine**: C=N product from carbonyl + primary amine
+      - **Hofmann elimination**: quaternary ammonium gives less substituted alkene
+      - **chemoselectivity**: reagent reacts with one functional group preferentially
+      - **amine basicity**: depends on lone-pair availability and stabilization
+      
+      ### Worked reaction example
+      A representative transformation uses **R-X + NH3 (excess)**.
+      
+      1. Identify the governing mechanism: **alkylation pathway**.
+      2. Predict the dominant product pattern: **primary amine major product**.
+      3. Justify with a mechanistic note: excess ammonia suppresses over-alkylation.
+      
+      Exam tip: state mechanism class before drawing product. It reduces avoidable regio- and stereochemistry errors.
       `
     },
     {
-      id: 'amine7-quiz1',
+      id: 'ochem-amines-nitrogen-compounds-p7-s2-mcq-core',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+      **Mechanism checkpoint (2 questions)**
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains Amines are fundamental in biochemistry…?',
+            question: 'Choose the best definition for imine.',
             options: [
-              'amine properties and reactions',
-              'Basicity and nucleophilicity make amines versatile',
-              'Amines are fundamental in biochemistry (amino acids, neurotransmitters)',
-              'Diazonium chemistry enables aromatic substitutions'
+              'quaternary ammonium gives less substituted alkene',
+              'depends on lone-pair availability and stabilization',
+              'reagent reacts with one functional group preferentially',
+              'C=N product from carbonyl + primary amine'
             ],
-            correctAnswer: 2,
-            explanation: 'Correct — Amines are fundamental in biochemistry (amino acids, neurotransmitters). The other options describe different concepts from this topic.'
+            correctAnswer: 3,
+            explanation: 'imine is defined as: C=N product from carbonyl + primary amine.'
           },
           {
-            question: 'Which of the following is true about Diazonium chemistry enables aromatic…?',
+            question: 'A reaction in this lesson uses R-CHO + R\'NH2, then NaBH3CN and proceeds by reductive amination. What product pattern should you predict first?',
             options: [
-              'amine properties and reactions',
-              'Diazonium chemistry enables aromatic substitutions',
-              'Basicity and nucleophilicity make amines versatile',
-              'Amines are fundamental in biochemistry (amino acids, neurotransmitters)'
+              'amide',
+              'aryl diazonium salt',
+              'primary amine major product',
+              'secondary amine'
             ],
-            correctAnswer: 1,
-            explanation: 'Correct — Diazonium chemistry enables aromatic substitutions. Be careful to distinguish between the different concepts in this topic.'
+            correctAnswer: 3,
+            explanation: 'With R-CHO + R\'NH2, then NaBH3CN, the benchmark outcome is secondary amine. Mechanistic anchor: mild reducing agent keeps carbonyl control.'
           }
         ]
       }
     },
     {
-      id: 'amine7-detail',
+      id: 'ochem-amines-nitrogen-compounds-p7-s3-deep-dive',
       type: 'text' as const,
       content: `
-### Key Concepts Summary
-
-- **Amines are fundamental in biochemistry (amino acids, neurotransmitters)**
-- **Basicity and nucleophilicity make amines versatile**
-- **Diazonium chemistry enables aromatic substitutions**
-- **Review**: amine properties and reactions
+      ## Deep-Dive: Reaction Pattern Table
+      
+      Use this table as a rapid decision grid.
+      
+      | Reagents | Conditions / Mechanistic Trigger | Product Pattern | Why it works |
+      |---|---|---|---|
+      | R-X + NH3 (excess) | alkylation pathway | primary amine major product | excess ammonia suppresses over-alkylation |
+      | R-CHO + R'NH2, then NaBH3CN | reductive amination | secondary amine | mild reducing agent keeps carbonyl control |
+      | R-COCl + R'NH2 | acyl substitution | amide | amine acts as nucleophile and base |
+      | ArNH2 + NaNO2/HCl (0-5 °C) | diazotization | aryl diazonium salt | temperature control is critical |
+      
+      ### Fast interpretation protocol
+      1. Map reagent set to mechanism family.
+      2. Apply regio- or stereochemical rule attached to that family.
+      3. Check whether rearrangement, equilibration, or reversibility changes the major product call.
       `
     },
     {
-      id: 'amine7-quiz2',
-      type: 'multiple-choice' as const,
+      id: 'ochem-amines-nitrogen-compounds-p7-s4-input',
+      type: 'input-boxes' as const,
       content: `
-**Concept Check** 🎯
+      **Input Practice — enter exact chemistry terms**
+      
+      1) Term for: C=N product from carbonyl + primary amine
+      2) Term for: quaternary ammonium gives less substituted alkene
+      3) Product pattern expected under R-X + NH3 (excess)
       `,
       exercise: {
-        questions: [
-          {
-            question: 'Which concept relates directly to synthesis & review?',
-            options: [
-              'amine properties and reactions',
-              'Only inorganic compounds',
-              'Exclusively gas-phase reactions',
-              'This applies only to polymers'
-            ],
-            correctAnswer: 0,
-            explanation: 'Review: amine properties and reactions'
-          }
-        ]
+        boxes: 3,
+        correctAnswers: ['imine', 'Hofmann elimination', 'primary amine major product'],
+        hint1: 'Blank 1 is the vocabulary term paired with: C=N product from carbonyl + primary amine.',
+        hint2: 'Blank 2 corresponds to quaternary ammonium gives less substituted alkene.',
+        hint3: 'Use the worked example: R-X + NH3 (excess) gives primary amine major product.',
+        explanation: 'Correct entries: imine, Hofmann elimination, and primary amine major product. These anchor mechanism ID, vocabulary precision, and product prediction.'
       }
     },
     {
-      id: 'amine7-dropdown',
+      id: 'ochem-amines-nitrogen-compounds-p7-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Match the Concepts** 🔍
+      **Dropdown matching (3 prompts)**
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Amines are fundamental in biochemistry…',
-            options: ['Basicity and nucleophilicity make amines versatile', 'Amines are fundamental in biochemistry (amino acids, neurotransmitters)', 'amine properties and reactions', 'Diazonium chemistry enables aromatic substitutions']
+            label: 'chemoselectivity',
+            options: ['reagent reacts with one functional group preferentially', 'quaternary ammonium gives less substituted alkene', 'depends on lone-pair availability and stabilization', 'C=N product from carbonyl + primary amine']
           },
           {
-            label: 'Basicity and nucleophilicity make…',
-            options: ['Amines are fundamental in biochemistry (amino acids, neurotransmitters)', 'Diazonium chemistry enables aromatic substitutions', 'Basicity and nucleophilicity make amines versatile', 'amine properties and reactions']
+            label: 'Expected pattern from R-CHO + R\'NH2, then NaBH3CN',
+            options: ['amide', 'aryl diazonium salt', 'secondary amine', 'primary amine major product']
           },
           {
-            label: 'Diazonium chemistry enables aromatic…',
-            options: ['Basicity and nucleophilicity make amines versatile', 'Amines are fundamental in biochemistry (amino acids, neurotransmitters)', 'amine properties and reactions', 'Diazonium chemistry enables aromatic substitutions']
+            label: 'Best exam strategy statement',
+            options: ['Mechanism labels should be tied to observed bond changes, not memorized by reagent names alone.', 'Over-alkylation is common when alkyl halide is not carefully limited.', 'Amides are far less basic than amines because lone pair is resonance-delocalized.', 'Diazonium salts require cold conditions to avoid decomposition.']
           }
         ],
-        correctAnswers: ['Amines are fundamental in biochemistry (amino acids, neurotransmitters)', 'Basicity and nucleophilicity make amines versatile', 'Diazonium chemistry enables aromatic substitutions'],
-        hint1: 'Think about what each concept specifically describes in Synthesis & Review.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Synthesis & Review describes a specific idea. Amines are fundamental in biochemistry (amino acids, neurotransmitters). Basicity and nucleophilicity make amines versatile. Diazonium chemistry enables aromatic substitutions.'
+        correctAnswers: ['reagent reacts with one functional group preferentially', 'secondary amine', 'Mechanism labels should be tied to observed bond changes, not memorized by reagent names alone.'],
+        hint1: 'First align each prompt with mechanism language before reading all options.',
+        hint2: 'For reagent prompts, eliminate outcomes that violate known regio/stereo rules.',
+        hint3: 'For strategy prompts, pick the statement that links mechanism evidence to product prediction.',
+        explanation: 'Correct matches combine mechanistic definition, reagent outcome, and exam execution strategy.'
+      }
+    },
+    {
+      id: 'ochem-amines-nitrogen-compounds-p7-s6-strategy',
+      type: 'text' as const,
+      content: `
+      ## Strategy: Prediction Traps and Exam Techniques
+      
+      ### Common traps in this part
+      - Diazonium salts require cold conditions to avoid decomposition.
+      - Over-alkylation is common when alkyl halide is not carefully limited.
+      - Amides are far less basic than amines because lone pair is resonance-delocalized.
+      
+      ### High-yield exam sequence
+      1. **Read reagents before substrate details** to classify mechanism class quickly.
+      2. **Mark the reactive site** (electrophilic carbon, acidic alpha-carbon, benzylic/allylic position, or aromatic position).
+      3. **Commit to one major-product logic path** before checking answer choices.
+      4. **Audit stereochemistry and regiochemistry last** so you do not lose points on orientation errors.
+      
+      ### Timing technique
+      If two options differ only by orientation or placement, spend 10 seconds restating the governing rule out loud (Markovnikov, anti addition, kinetic control, etc.) before selecting.
+      `
+    },
+    {
+      id: 'ochem-amines-nitrogen-compounds-p7-s7-mcq-final',
+      type: 'multiple-choice' as const,
+      content: `
+      **Applied synthesis/mechanism check (2 questions)**
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'In a synthesis sequence centered on integrated nitrogen mechanism review, a step uses R-COCl + R\'NH2. Which major product pattern is most defensible?',
+            options: [
+              'amide',
+              'primary amine major product',
+              'aryl diazonium salt',
+              'secondary amine'
+            ],
+            correctAnswer: 0,
+            explanation: 'R-COCl + R\'NH2 is classically associated with amide because amine acts as nucleophile and base.'
+          },
+          {
+            question: 'A mechanism rationale cites nucleophilic amine: nitrogen lone pair attacks electrophilic centers. Which interpretation applies this idea correctly in product prediction?',
+            options: [
+              'Use nucleophilic amine to justify why the pathway favors aryl diazonium salt under ArNH2 + NaNO2/HCl (0-5 °C).',
+              'Ignore nucleophilic amine and choose products only by molecular weight.',
+              'Use nucleophilic amine only after final answer choice selection.',
+              'Treat nucleophilic amine as a naming convention unrelated to mechanism.'
+            ],
+            correctAnswer: 0,
+            explanation: 'The correct approach applies nucleophilic amine directly to mechanism and product control. In this context, ArNH2 + NaNO2/HCl (0-5 °C) aligns with aryl diazonium salt.'
+          }
+        ]
       }
     }
   ]
-}
+};

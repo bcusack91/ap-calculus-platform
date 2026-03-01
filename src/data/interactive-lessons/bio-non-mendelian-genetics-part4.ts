@@ -5,7 +5,7 @@ export const bioNonMendelianPart4Data = {
       id: 'non-4-intro-p4',
       type: 'text' as const,
       content: `
-# ## Sex-Linked Traits
+## Sex-Linked Traits
 
 **Part 4 of 7 — Sex-Linked Traits**
 
@@ -52,7 +52,7 @@ export const bioNonMendelianPart4Data = {
       id: 'non-4-detail-p4',
       type: 'text' as const,
       content: `
-# ### Key Details
+### Key Details
 
 - **X-linked traits**: genes on X chromosome
 - **Males (XY) express all X-linked alleles (hemizygous)**

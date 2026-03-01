@@ -5,7 +5,7 @@ export const psychThinkingPart4Data = {
       id: 'think4-intro',
       type: 'text' as const,
       content: `
-# ## Judgment & Heuristics
+## Judgment & Heuristics
 
 **Part 4 of 7 — Judgment & Heuristics**
 
@@ -63,7 +63,7 @@ seeking evidence that supports beliefs
       id: 'think4-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Availability heuristic**: judging likelihood by ease of recall
 - **Representativeness heuristic**: judging by similarity to prototype

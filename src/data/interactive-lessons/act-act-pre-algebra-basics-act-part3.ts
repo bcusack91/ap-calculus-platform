@@ -2,109 +2,166 @@ export const actPreAlgebraPart3Data = {
   topicSlug: 'act-pre-algebra-basics-act',
   sections: [
     {
-      id: 'act-p3-intro',
+      id: 'act-pa3-intro',
       type: 'text' as const,
       content: `
-# Ratios & Proportions
+# 💯 Percents
 
-**Part 3 of 7 — Ratios & Proportions**
+**Part 3 of 7 — Percent of a Number, Increase/Decrease, Tax/Tip/Discount**
 
-Ratio a:b means for every a of one thing, there are b of another.
+"Percent" means "per hundred." So $45\\%$ means $\\frac{45}{100} = 0.45$.
 
-Proportion: a/b = c/d — cross multiply to solve.
+**Core conversions:**
+
+| From | To | Method |
+|------|-----|--------|
+| Percent → Decimal | $45\\% = 0.45$ | Divide by 100 |
+| Decimal → Percent | $0.08 = 8\\%$ | Multiply by 100 |
+| Fraction → Percent | $\\frac{3}{4} = 75\\%$ | Divide then multiply by 100 |
+
+**Percent of a number:**
+
+$$\\text{Part} = \\text{Percent} \\times \\text{Whole}$$
+
+**Example 1:** What is $30\\%$ of $250$?
+
+$$0.30 \\times 250 = 75$$
       `
     },
     {
-      id: 'act-p3-quiz1',
+      id: 'act-pa3-change',
+      type: 'text' as const,
+      content: `
+## Percent Increase & Decrease
+
+$$\\text{Percent Change} = \\frac{|\\text{New} - \\text{Original}|}{\\text{Original}} \\times 100\\%$$
+
+**Example 2 — Increase:** A price goes from $\\$40$ to $\\$52$. What is the percent increase?
+
+$$\\frac{52 - 40}{40} \\times 100\\% = \\frac{12}{40} \\times 100\\% = 30\\%$$
+
+**Example 3 — Decrease:** A shirt originally costs $\\$80$ and is on sale for $\\$60$. What is the percent discount?
+
+$$\\frac{80 - 60}{80} \\times 100\\% = \\frac{20}{80} \\times 100\\% = 25\\%$$
+
+**Shortcut:** For a $p\\%$ increase, multiply by $(1 + \\frac{p}{100})$. For a $p\\%$ decrease, multiply by $(1 - \\frac{p}{100})$.
+      `
+    },
+    {
+      id: 'act-pa3-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+**Percent Calculations** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains Ratio a?',
-            options: [
-              'Scale factors: if a model is 1:50, multiply model measurements by 50.',
-              'b means for every a of one thing, there are b of another.',
-              'a/b = c/d — cross multiply to solve.',
-              'Unit rates: simplify to "per one" (e.g., miles per hour, cost per item).'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Ratio a: b means for every a of one thing, there are b of another. The other options describe different concepts from this topic.'
+            question: 'What is $15\\%$ of $200$?',
+            options: ['$15$', '$25$', '$30$', '$35$'],
+            correctAnswer: 2,
+            explanation: '$0.15 \\times 200 = 30$.'
           },
           {
-            question: 'In the context of Ratios & Proportions, which explains Key Insight?',
-            options: [
-              'a/b = c/d — cross multiply to solve.',
-              'b means for every a of one thing, there are b of another.',
-              'Unit rates: simplify to "per one" (e.g., miles per hour, cost per item).',
-              'Scale factors: if a model is 1:50, multiply model measurements by 50.'
-            ],
+            question: 'A population grew from $500$ to $650$. What was the percent increase?',
+            options: ['$15\\%$', '$23\\%$', '$25\\%$', '$30\\%$'],
             correctAnswer: 3,
-            explanation: 'Correct — Key Insight: Scale factors: if a model is 1:50, multiply model measurements by 50. Be careful to distinguish between the different concepts in this topic.'
+            explanation: '$\\frac{650 - 500}{500} \\times 100\\% = \\frac{150}{500} \\times 100\\% = 30\\%$.'
           }
         ]
       }
     },
     {
-      id: 'act-p3-detail',
+      id: 'act-pa3-taxtip',
       type: 'text' as const,
       content: `
-**Key Insight:** Scale factors: if a model is 1:50, multiply model measurements by 50.
+## Tax, Tip & Discount
 
-**ACT Tip:** Unit rates: simplify to "per one" (e.g., miles per hour, cost per item).
+These are the most common real-world percent problems on the ACT.
+
+**Example 4 — Sales Tax:** A jacket costs $\\$65$ and the sales tax is $8\\%$. What is the total?
+
+$$\\text{Tax} = 0.08 \\times 65 = 5.20 \\implies \\text{Total} = 65 + 5.20 = \\$70.20$$
+
+Or use the multiplier: $65 \\times 1.08 = \\$70.20$.
+
+**Example 5 — Tip:** A meal costs $\\$42$. You leave a $20\\%$ tip. Total cost?
+
+$$42 \\times 1.20 = \\$50.40$$
+
+**Example 6 — Discount:** A $\\$120$ item is $35\\%$ off. Sale price?
+
+$$120 \\times (1 - 0.35) = 120 \\times 0.65 = \\$78$$
       `
     },
     {
-      id: 'act-p3-quiz2',
-      type: 'multiple-choice' as const,
+      id: 'act-pa3-input1',
+      type: 'input-boxes' as const,
       content: `
-**Check Your Understanding** 🎯
+**Percent Practice** 🧮
+
+1) What is $40\\%$ of $90$?
+2) A $\\$50$ item is $20\\%$ off. What is the sale price in dollars?
+3) A value increased from $80$ to $100$. What is the percent increase?
       `,
       exercise: {
-        questions: [
-          {
-            question: 'Which statement about ACT Tip is correct?',
-            options: [
-              'Unit rates: simplify to "per one" (e.g., miles per hour, cost per item).',
-              'b means for every a of one thing, there are b of another.',
-              'a/b = c/d — cross multiply to solve.',
-              'Scale factors: if a model is 1:50, multiply model measurements by 50.'
-            ],
-            correctAnswer: 0,
-            explanation: 'Correct — ACT Tip: Unit rates: simplify to "per one" (e.g., miles per hour, cost per item). Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
+        boxes: 3,
+        correctAnswers: ['36', '40', '25'],
+        hint1: '$0.40 \\times 90$.',
+        hint2: 'Discount $= 0.20 \\times 50 = 10$. Subtract from $50$.',
+        hint3: '$\\frac{100 - 80}{80} \\times 100\\%$.',
+        explanation: '$0.40 \\times 90 = 36$. Sale price $= 50 - 10 = \\$40$. Percent increase $= \\frac{20}{80} \\times 100 = 25\\%$.'
       }
     },
     {
-      id: 'act-p3-dropdown',
+      id: 'act-pa3-dropdown1',
       type: 'dropdown-select' as const,
       content: `
-**Match the Concepts** 🔍
+**Concept Check** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Ratio a',
-            options: ['Scale factors: if a model is 1:50, multiply model measurements by 50.', 'Unit rates: simplify to "per one" (e.g., miles per hour, cost per item).', 'b means for every a of one thing, there are b of another.', 'a/b = c/d — cross multiply to solve.']
+            label: 'To find the total price after an 8% tax, multiply the price by …',
+            options: ['$0.08$', '$0.92$', '$1.08$', '$8$']
           },
           {
-            label: 'Proportion',
-            options: ['Scale factors: if a model is 1:50, multiply model measurements by 50.', 'a/b = c/d — cross multiply to solve.', 'Unit rates: simplify to "per one" (e.g., miles per hour, cost per item).', 'b means for every a of one thing, there are b of another.']
+            label: '$0.04$ expressed as a percent is …',
+            options: ['$0.4\\%$', '$4\\%$', '$40\\%$', '$0.04\\%$']
           },
           {
-            label: 'Key Insight',
-            options: ['a/b = c/d — cross multiply to solve.', 'Scale factors: if a model is 1:50, multiply model measurements by 50.', 'b means for every a of one thing, there are b of another.', 'Unit rates: simplify to "per one" (e.g., miles per hour, cost per item).']
+            label: 'If an item is 30% off, you pay ______ of the original price.',
+            options: ['$30\\%$', '$70\\%$', '$130\\%$', '$0.30$']
           }
         ],
-        correctAnswers: ['b means for every a of one thing, there are b of another.', 'a/b = c/d — cross multiply to solve.', 'Scale factors: if a model is 1:50, multiply model measurements by 50.'],
-        hint1: 'Think about what each concept specifically describes in Ratios & Proportions.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Ratios & Proportions describes a specific idea. Ratio a: b means for every a of one thing, there are b of another. Proportion: a/b = c/d — cross multiply to solve. Key Insight: Scale factors: if a model is 1:50, multiply model measurements by 50.'
+        correctAnswers: ['$1.08$', '$4\\%$', '$70\\%$'],
+        hint1: 'You keep the original price (1.00) and add the tax.',
+        hint2: 'Move the decimal two places to the right.',
+        hint3: '$100\\% - 30\\% = 70\\%$.',
+        explanation: 'Total with 8% tax: multiply by $1.08$. $0.04 = 4\\%$. 30% off means you pay $70\\%$.'
+      }
+    },
+    {
+      id: 'act-pa3-act',
+      type: 'multiple-choice' as const,
+      content: `
+**ACT-Style Questions** 📋
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'A store marks up a wholesale price of $\\$25$ by $60\\%$. During a sale the marked price is then reduced by $25\\%$. What is the sale price?',
+            options: ['$\\$25$', '$\\$27$', '$\\$30$', '$\\$35$'],
+            correctAnswer: 2,
+            explanation: 'Marked price $= 25 \\times 1.60 = \\$40$. Sale price $= 40 \\times 0.75 = \\$30$.'
+          },
+          {
+            question: 'If $12$ is $p\\%$ of $48$, what is $p$?',
+            options: ['$4$', '$15$', '$25$', '$36$'],
+            correctAnswer: 2,
+            explanation: '$\\frac{12}{48} = 0.25 = 25\\%$.'
+          }
+        ]
       }
     }
   ]
-}
+};

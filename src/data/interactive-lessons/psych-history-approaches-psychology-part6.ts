@@ -5,7 +5,7 @@ export const psychHistoryApproachesPart6Data = {
       id: 'histo6-workshop',
       type: 'text' as const,
       content: `
-# ## Research Methods Problem-Solving
+## Research Methods Problem-Solving
 
 ### Common AP Question Types
 
@@ -62,7 +62,7 @@ A researcher wants to know if sleep deprivation affects memory. She randomly ass
       id: 'histo6-tips',
       type: 'text' as const,
       content: `
-# ## Tips
+## Tips
 
 - Always identify IV and DV first
 - Check for random assignment before claiming causation

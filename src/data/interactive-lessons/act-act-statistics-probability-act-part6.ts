@@ -1,110 +1,170 @@
 export const actStatProbPart6Data = {
   topicSlug: 'act-statistics-probability-act',
   sections: [
-    {
-      id: 'act-s6-intro',
-      type: 'text' as const,
-      content: `
-# Problem-Solving Workshop
+      {
+        id: "act-stat-p6-intro",
+        type: 'text' as const,
+        content: `\n# ACT Statistics and Probability
+**Part 6 of 7 — ACT statistics traps**
 
-**Part 6 of 7 — Problem-Solving Workshop**
+ACT math statistics questions are usually short and computation-based.
+Core scoring rule: compute exactly what is asked, then test units and constraints.
 
-Permutation (order matters): nPr = n!/(n-r)!.
+Common formulas used in this unit:
+- Mean = sum of values / number of values
+- Range = max - min
+- P(A or B) = P(A) + P(B) - P(A and B)\n        `
+      },
+      {
+        id: "act-stat-p6-mcq1",
+        type: 'multiple-choice' as const,
+        content: `\n**Core Concepts**\n        `,
+        exercise: {
+          questions: [
+            {
+              question: "What is the mean of 14, 18, and 22?",
+              options: [
+                "20",
+                "18",
+                "8",
+                "54"
+              ],
+              correctAnswer: 1,
+              explanation: "Mean is (14+18+22)/3 = 18."
+            },
+            {
+              question: "If P(rain)=0.30, what is P(no rain)?",
+              options: [
+                "0.70",
+                "0.30",
+                "1.30",
+                "0.50"
+              ],
+              correctAnswer: 0,
+              explanation: "Complement rule: P(not A) = 1 - P(A) = 0.70."
+            }
+          ]
+        }
+      },
+      {
+        id: "act-stat-p6-worked",
+        type: 'text' as const,
+        content: `\n## Worked Table Example
+A class survey result:
+- 40 students total
+- 18 take art
+- 15 take music
+- 7 take both
 
-Combination (order doesn't matter): nCr = n!/[r!(n-r)!].
-      `
-    },
-    {
-      id: 'act-s6-quiz1',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'What does "Permutation (order matters)" refer to in ACT prep?',
-            options: [
-              'nCr = n!/[r!(n-r)!].',
-              'Factorial: n! = n × (n-1) × ... × 2 × 1.',
-              'nPr = n!/(n-r)!.',
-              'ACT tip: ask "does order matter?" to decide which formula to use.'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Permutation (order matters): nPr = n!/(n-r)!. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Select the statement that correctly describes Key Insight:',
-            options: [
-              'ACT tip: ask "does order matter?" to decide which formula to use.',
-              'nPr = n!/(n-r)!.',
-              'nCr = n!/[r!(n-r)!].',
-              'Factorial: n! = n × (n-1) × ... × 2 × 1.'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Key Insight: Factorial: n! = n × (n-1) × ... × 2 × 1. Be careful to distinguish between the different concepts in this topic.'
-          }
-        ]
+Probability a random student takes art or music:
+\(P(A \cup M) = (18 + 15 - 7)/40 = 26/40 = 0.65\)
+
+Subtracting overlap once is the key move. ACT often tests this exact trap.\n        `
+      },
+      {
+        id: "act-stat-p6-input",
+        type: 'input-boxes' as const,
+        content: `\n**Numeric Practice**
+1) Dataset: 4, 7, 9, 10. Enter the median.
+2) If P(A)=0.4 and P(B)=0.5 and P(A and B)=0.2, enter P(A or B).
+3) How many 2-letter arrangements can be made from letters A, B, C with no repetition?\n        `,
+        exercise: {
+          boxes: 3,
+          correctAnswers: [
+            "8",
+            "0.7",
+            "6"
+          ],
+          hint1: "For even count, median is average of middle two values.",
+          hint2: "Use addition rule with overlap subtraction.",
+          hint3: "Order matters for arrangements (permutations).",
+          explanation: "Median is (7+9)/2=8. Union probability is 0.4+0.5-0.2=0.7. Two-letter permutations from 3 letters: 3×2=6."
+        }
+      },
+      {
+        id: "act-stat-p6-strategy",
+        type: 'text' as const,
+        content: `\n## ACT Pitfalls for ACT statistics traps
+- Do not confuse mean with median when outliers are present.
+- For conditional probability tables, confirm row/column denominator before dividing.
+- In counting problems, decide first: does order matter?
+- Translate wording to symbols before computing to avoid arithmetic slips.\n        `
+      },
+      {
+        id: "act-stat-p6-dropdown",
+        type: 'dropdown-select' as const,
+        content: `\n**Formula Selection**\n        `,
+        exercise: {
+          dropdowns: [
+            {
+              label: "Best formula for 'A or B':",
+              options: [
+                "P(A)+P(B)",
+                "P(A)+P(B)-P(A and B)",
+                "P(A)×P(B)",
+                "1-P(A and B)"
+              ]
+            },
+            {
+              label: "When order matters in counting, use:",
+              options: [
+                "Combinations",
+                "Permutations",
+                "Median",
+                "Range"
+              ]
+            },
+            {
+              label: "A quick check for impossible probability is:",
+              options: [
+                "Value less than 0 or greater than 1",
+                "Value is a decimal",
+                "Value has two significant digits",
+                "Value includes a fraction"
+              ]
+            }
+          ],
+          correctAnswers: [
+            "P(A)+P(B)-P(A and B)",
+            "Permutations",
+            "Value less than 0 or greater than 1"
+          ],
+          hint1: "Union needs overlap correction.",
+          hint2: "Permutations apply when arrangements are different by order.",
+          hint3: "Probabilities must lie in [0, 1].",
+          explanation: "Correct model choice is half the work on ACT stats: pick the right formula before arithmetic."
+        }
+      },
+      {
+        id: "act-stat-p6-mcq2",
+        type: 'multiple-choice' as const,
+        content: `\n**ACT-Style Review**\n        `,
+        exercise: {
+          questions: [
+            {
+              question: "A set has values 2, 3, 3, 4, 20. Which measure is most affected by the outlier?",
+              options: [
+                "Median",
+                "Mode",
+                "Mean",
+                "Minimum"
+              ],
+              correctAnswer: 2,
+              explanation: "The mean shifts strongly with extreme values, while the median remains anchored near center order."
+            },
+            {
+              question: "From 5 candidates, how many ways can captain and co-captain be chosen?",
+              options: [
+                "10",
+                "20",
+                "25",
+                "5"
+              ],
+              correctAnswer: 1,
+              explanation: "Different roles mean order matters: 5 choices for captain, then 4 for co-captain, so 5×4=20."
+            }
+          ]
+        }
       }
-    },
-    {
-      id: 'act-s6-detail',
-      type: 'text' as const,
-      content: `
-**Key Insight:** Factorial: n! = n × (n-1) × ... × 2 × 1.
-
-**ACT Tip:** ACT tip: ask "does order matter?" to decide which formula to use.
-      `
-    },
-    {
-      id: 'act-s6-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which statement about ACT Tip is correct?',
-            options: [
-              'ACT tip: ask "does order matter?" to decide which formula to use.',
-              'nPr = n!/(n-r)!.',
-              'Factorial: n! = n × (n-1) × ... × 2 × 1.',
-              'nCr = n!/[r!(n-r)!].'
-            ],
-            correctAnswer: 0,
-            explanation: 'Correct — ACT Tip: ACT tip: ask "does order matter?" to decide which formula to use. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'act-s6-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Permutation (order matters)',
-            options: ['nCr = n!/[r!(n-r)!].', 'Factorial: n! = n × (n-1) × ... × 2 × 1.', 'ACT tip: ask "does order matter?" to decide which formula to use.', 'nPr = n!/(n-r)!.']
-          },
-          {
-            label: 'Combination (order doesn\'t matter)',
-            options: ['ACT tip: ask "does order matter?" to decide which formula to use.', 'nCr = n!/[r!(n-r)!].', 'nPr = n!/(n-r)!.', 'Factorial: n! = n × (n-1) × ... × 2 × 1.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['Factorial: n! = n × (n-1) × ... × 2 × 1.', 'ACT tip: ask "does order matter?" to decide which formula to use.', 'nPr = n!/(n-r)!.', 'nCr = n!/[r!(n-r)!].']
-          }
-        ],
-        correctAnswers: ['nPr = n!/(n-r)!.', 'nCr = n!/[r!(n-r)!].', 'Factorial: n! = n × (n-1) × ... × 2 × 1.'],
-        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Permutation (order matters): nPr = n!/(n-r)!. Combination (order doesn\'t matter): nCr = n!/[r!(n-r)!]. Key Insight: Factorial: n! = n × (n-1) × ... × 2 × 1.'
-      }
-    }
-  ]
-}
+    ]
+};

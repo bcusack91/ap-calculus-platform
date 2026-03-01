@@ -5,7 +5,7 @@ export const bioWaterPropertiesPart2Data = {
       id: 'wate2-cohesion',
       type: 'text' as const,
       content: `
-# ## Cohesion & Adhesion
+## Cohesion & Adhesion
 
 ### Cohesion
 
@@ -57,7 +57,7 @@ Water moves up through narrow xylem vessels because:
       id: 'wate2-tension',
       type: 'text' as const,
       content: `
-# ## Surface Tension & Biological Significance
+## Surface Tension & Biological Significance
 
 Surface tension is the result of cohesive forces at the air-water interface.
 

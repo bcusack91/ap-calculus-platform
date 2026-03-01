@@ -2,104 +2,81 @@ export const satTestDayPart3Data = {
   topicSlug: 'sat-test-day-strategy-sat',
   sections: [
     {
-      id: 'sat-t3-intro',
+      id: 'sat-test-p3-intro',
       type: 'text' as const,
       content: `
-# Guessing Strategy
+# ⏱️ Time Management During the Test
 
-**Part 3 of 7 — Guessing Strategy**
+**Part 3 of 7 — Time Management During the Test**
 
-No penalty for wrong answers — ALWAYS guess (never leave blank).
+Pacing per section, when to skip and return
 
-If stuck, eliminate what you can, then guess from remaining choices.
+This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+
+**Key Concepts in This Section:**
+- Core principles and definitions
+- Step-by-step problem-solving methods
+- Common SAT question patterns
+- Strategic tips for test day
       `
     },
     {
-      id: 'sat-t3-quiz1',
+      id: 'sat-test-p3-check',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+**Quick Check** 🔍
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes No penalty for wrong answers — ALWAYS…?',
+            question: 'Based on the concepts in this section, which approach is most effective?',
             options: [
-              'Letter of the day: if completely stuck, consistently guess the same letter.',
-              'On grid-in: any correct form is accepted (1/2 = .5 = 0.5).',
-              'No penalty for wrong answers — ALWAYS guess (never leave blank).',
-              'If stuck, eliminate what you can, then guess from remaining choices.'
+              'Memorize formulas without understanding when to apply them',
+              'Understand the underlying concepts and practice with varied problems',
+              'Only practice problems you find easy to build confidence',
+              'Skip practice and rely on intuition during the test'
             ],
-            correctAnswer: 2,
-            explanation: 'Correct — No penalty for wrong answers — ALWAYS guess (never leave blank). The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'In the context of Guessing Strategy, which explains Key Insight?',
-            options: [
-              'No penalty for wrong answers — ALWAYS guess (never leave blank).',
-              'If stuck, eliminate what you can, then guess from remaining choices.',
-              'On grid-in: any correct form is accepted (1/2 = .5 = 0.5).',
-              'Letter of the day: if completely stuck, consistently guess the same letter.'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Key Insight: On grid-in: any correct form is accepted (1/2 = .5 = 0.5). Be careful to distinguish between the different concepts in this topic.'
+            correctAnswer: 1,
+            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
           }
         ]
       }
     },
     {
-      id: 'sat-t3-detail',
+      id: 'sat-test-p3-detail',
       type: 'text' as const,
       content: `
-**Key Insight:** On grid-in: any correct form is accepted (1/2 = .5 = 0.5).
+**Detailed Concepts & Examples**
 
-**SAT Tip:** Letter of the day: if completely stuck, consistently guess the same letter.
+This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
+
+1. **Identify** the type of problem quickly
+2. **Apply** the correct method systematically
+3. **Verify** your answer makes sense in context
+
+Work through each example carefully before attempting the practice problems below.
       `
     },
     {
-      id: 'sat-t3-quiz2',
+      id: 'sat-test-p3-practice',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+**SAT-Style Questions** 📋
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement about SAT Tip is correct?',
+            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
             options: [
-              'Letter of the day: if completely stuck, consistently guess the same letter.',
-              'No penalty for wrong answers — ALWAYS guess (never leave blank).',
-              'On grid-in: any correct form is accepted (1/2 = .5 = 0.5).',
-              'If stuck, eliminate what you can, then guess from remaining choices.'
+              'Guess and move on quickly',
+              'Identify what the question is actually asking for',
+              'Try every formula you know until one works',
+              'Skip it permanently'
             ],
-            correctAnswer: 0,
-            explanation: 'Correct — SAT Tip: Letter of the day: if completely stuck, consistently guess the same letter. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            correctAnswer: 1,
+            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
           }
         ]
-      }
-    },
-    {
-      id: 'sat-t3-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Key Insight',
-            options: ['On grid-in: any correct form is accepted (1/2 = .5 = 0.5).', 'If stuck, eliminate what you can, then guess from remaining choices.', 'No penalty for wrong answers — ALWAYS guess (never leave blank).', 'Letter of the day: if completely stuck, consistently guess the same letter.']
-          },
-          {
-            label: 'SAT Tip',
-            options: ['No penalty for wrong answers — ALWAYS guess (never leave blank).', 'On grid-in: any correct form is accepted (1/2 = .5 = 0.5).', 'If stuck, eliminate what you can, then guess from remaining choices.', 'Letter of the day: if completely stuck, consistently guess the same letter.']
-          }
-        ],
-        correctAnswers: ['On grid-in: any correct form is accepted (1/2 = .5 = 0.5).', 'Letter of the day: if completely stuck, consistently guess the same letter.'],
-        hint1: 'Think about what each concept specifically describes in Guessing Strategy.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Guessing Strategy describes a specific idea. Key Insight: On grid-in: any correct form is accepted (1/2 = .5 = 0.5). SAT Tip: Letter of the day: if completely stuck, consistently guess the same letter.'
       }
     }
   ]

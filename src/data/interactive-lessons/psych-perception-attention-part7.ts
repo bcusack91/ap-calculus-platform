@@ -5,7 +5,7 @@ export const psychPerceptionPart7Data = {
       id: 'perce7-intro',
       type: 'text' as const,
       content: `
-# ## Synthesis & AP Review
+## Synthesis & AP Review
 
 **Part 7 of 7 — Synthesis & AP Review**
 
@@ -63,7 +63,7 @@ perception applications
       id: 'perce7-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Perception is an active, constructive process**
 - **Experience shapes how we perceive**

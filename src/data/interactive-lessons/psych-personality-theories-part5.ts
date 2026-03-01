@@ -2,123 +2,184 @@ export const psychPersonalityPart5Data = {
   topicSlug: 'personality-theories',
   sections: [
     {
-      id: 'perso5-intro',
+      id: 'personality-theories-p5-s1-intro',
       type: 'text' as const,
       content: `
-# ## Personality Assessment
+      # 🧠 Personality Theories
 
-**Part 5 of 7 — Personality Assessment**
+      **Part 5 of 7 — Assessment Methods**
 
-### 1. Projective tests
+      In this part, you will connect core psychological vocabulary to realistic contexts and AP-style reasoning. Focus on mechanism first, then evidence.
 
-Rorschach inkblot, TAT (reveal unconscious)
+      ### Core Definitions
+      - **person-situation debate**: question of trait consistency versus situational influence
+      - **temperament**: early-appearing emotional reactivity and regulation tendencies
+      - **trait**: a relatively stable disposition influencing behavior across situations
 
-### 2. Self-report inventories
+      ### Concrete Real-World Example
+      A team is studying comparing personality test validity in hiring. They operationalize variables, compare plausible explanations, and look for the interpretation that best matches observed behavior instead of relying on intuition.
 
-MMPI, Big Five questionnaire (objective)
-
-### 3. Projective tests
-
-low reliability and validity
-
-### 4. Self-report
-
-vulnerable to social desirability bias
+      ### Why This Matters
+      Strong AP responses define terms precisely, apply them to evidence, and justify why one interpretation is stronger than alternatives.
       `
     },
     {
-      id: 'perso5-quiz1',
+      id: 'personality-theories-p5-s2-check',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+      **Concept Check** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Projective tests?',
+            question: 'In a study about comparing personality test validity in hiring, participants change behavior after repeatedly seeing the same cue. Which concept is the best fit?',
             options: [
-              'MMPI, Big Five questionnaire (objective)',
-              'This is a common misconception about the topic',
-              'Rorschach inkblot, TAT (reveal unconscious)',
-              'vulnerable to social desirability bias'
+              'person-situation debate',
+              'trait',
+              'Big Five',
+              'temperament'
             ],
-            correctAnswer: 2,
-            explanation: 'Correct — Projective tests: Rorschach inkblot, TAT (reveal unconscious). The other options describe different concepts from this topic.'
+            correctAnswer: 0,
+            explanation: 'person-situation debate is correct because it directly matches this mechanism: question of trait consistency versus situational influence. The distractors describe related but different processes.'
           },
           {
-            question: 'Which of the following is true about Projective tests?',
+            question: 'Researchers report that behavior shifts when participants receive a specific cue and then justify their choices afterward. Which concept best explains that pattern?',
             options: [
-              'low reliability and validity',
-              'vulnerable to social desirability bias',
-              'This is a common misconception about the topic',
-              'MMPI, Big Five questionnaire (objective)'
+              'temperament',
+              'self-actualization',
+              'trait',
+              'psychodynamic'
             ],
-            correctAnswer: 0,
-            explanation: 'Correct — Projective tests: low reliability and validity. Be careful to distinguish between the different concepts in this topic.'
+            correctAnswer: 3,
+            explanation: 'psychodynamic is the strongest match here (approach emphasizing unconscious processes and early relationships). The other options do not explain both the cue-driven shift and the observed response pattern as directly.'
           }
         ]
       }
     },
     {
-      id: 'perso5-detail',
+      id: 'personality-theories-p5-s3-deep',
       type: 'text' as const,
       content: `
-# ### Key Points
+      ## Deep Dive: Comparing Explanations with Evidence
 
-- **Projective tests**: Rorschach inkblot, TAT (reveal unconscious)
-- **Self-report inventories**: MMPI, Big Five questionnaire (objective)
-- **Projective tests**: low reliability and validity
-- **Self-report**: vulnerable to social desirability bias
+      When analyzing comparing personality test validity in hiring, the best interpretation ties a clear psychological mechanism to measurable evidence.
+
+      | Theory / Concept | Core claim | Typical evidence | Common limitation |
+      |---|---|---|---|
+      | person-situation debate | question of trait consistency versus situational influence | experimental manipulation with random assignment | possible demand characteristics |
+      | temperament | early-appearing emotional reactivity and regulation tendencies | longitudinal trend with repeated measurement | third-variable risk in natural settings |
+      | trait | a relatively stable disposition influencing behavior across situations | cross-sectional comparison with matched groups | limited generalizability across cultures |
+      | Big Five | five broad trait dimensions: openness, conscientiousness, extraversion, agreeableness, neuroticism | mixed-method evidence combining survey and behavioral indicators | measurement validity depends on construct quality |
+
+      ### Interpretation Strategy
+      1. Name the mechanism before describing outcomes.
+      2. Match the claim to the strongest available evidence type.
+      3. Acknowledge one limitation and explain whether it changes the conclusion.
+
+      This structure helps you earn reasoning points on free-response and avoid vague claims.
       `
     },
     {
-      id: 'perso5-quiz2',
-      type: 'multiple-choice' as const,
+      id: 'personality-theories-p5-s4-input',
+      type: 'input-boxes' as const,
       content: `
-**Concept Check** 🎯
+      **Applied Recall (exact term answers)** ✍️
+
+      1) Write the concept that matches: question of trait consistency versus situational influence
+      2) Write the concept that matches: early-appearing emotional reactivity and regulation tendencies
+      3) Write the concept that matches: a relatively stable disposition influencing behavior across situations
+
+      Use the exact vocabulary term from this part.
       `,
       exercise: {
-        questions: [
-          {
-            question: 'Which concept relates directly to personality assessment?',
-            options: [
-              'vulnerable to social desirability bias',
-              'Only biological factors',
-              'Exclusively cognitive processes',
-              'Mathematical formulas only'
-            ],
-            correctAnswer: 0,
-            explanation: 'Self-report: vulnerable to social desirability bias'
-          }
-        ]
+        boxes: 3,
+        correctAnswers: ['person-situation debate', 'temperament', 'trait'],
+        hint1: 'Starts with: P',
+        hint2: 'Starts with: T',
+        hint3: 'Starts with: T',
+        explanation: 'Expected answers: person-situation debate, temperament, and trait. Each response should use the precise term connected to the definition cue.'
       }
     },
     {
-      id: 'perso5-dropdown',
+      id: 'personality-theories-p5-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Match the Concepts** 🔍
+      **Model Matching** 🔎
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Projective tests',
-            options: ['vulnerable to social desirability bias', 'low reliability and validity', 'MMPI, Big Five questionnaire (objective)', 'Rorschach inkblot, TAT (reveal unconscious)']
+            label: 'Select the concept that best matches: question of trait consistency versus situational influence',
+            options: ['person-situation debate', 'Big Five', 'self-actualization', 'psychodynamic']
           },
           {
-            label: 'Self-report inventories',
-            options: ['Rorschach inkblot, TAT (reveal unconscious)', 'low reliability and validity', 'MMPI, Big Five questionnaire (objective)', 'vulnerable to social desirability bias']
+            label: 'Select the concept that best matches: early-appearing emotional reactivity and regulation tendencies',
+            options: ['trait', 'Big Five', 'temperament', 'self-actualization']
           },
           {
-            label: 'Projective tests',
-            options: ['vulnerable to social desirability bias', 'Rorschach inkblot, TAT (reveal unconscious)', 'MMPI, Big Five questionnaire (objective)', 'low reliability and validity']
+            label: 'Select the concept that best matches: a relatively stable disposition influencing behavior across situations',
+            options: ['trait', 'psychodynamic', 'Big Five', 'person-situation debate']
           }
         ],
-        correctAnswers: ['Rorschach inkblot, TAT (reveal unconscious)', 'MMPI, Big Five questionnaire (objective)', 'low reliability and validity'],
-        hint1: 'Think about what each concept specifically describes in Personality Assessment.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Personality Assessment describes a specific idea. Projective tests: Rorschach inkblot, TAT (reveal unconscious). Self-report inventories: MMPI, Big Five questionnaire (objective). Projective tests: low reliability and validity.'
+        correctAnswers: ['person-situation debate', 'temperament', 'trait'],
+        hint1: 'Start by matching the key mechanism in each prompt to the most specific concept.',
+        hint2: 'Eliminate options that describe a different level of analysis (biological vs cognitive vs social).',
+        hint3: 'Use the definition language from this part to avoid near-miss terms.',
+        explanation: 'Correct matches are person-situation debate, temperament, and trait. These choices align with the mechanism-language in each definition, not just broad topic similarity.'
+      }
+    },
+    {
+      id: 'personality-theories-p5-s6-strategy',
+      type: 'text' as const,
+      content: `
+      ## Common Misconceptions and Exam Strategy
+
+      ### Misconceptions to Avoid
+      - Traits summarize tendencies, not fixed behaviors in every context.
+      - Projective methods can be clinically useful but generally have weaker psychometrics than many inventories.
+      - Personality can show both stability and development across lifespan stages.
+      - No single theory fully explains personality; each emphasizes different mechanisms.
+
+      ### AP Strategy Moves
+      - Define the target concept in one precise sentence before giving examples.
+      - In scenario questions about comparing personality test validity in hiring, identify the manipulated variable and measured outcome.
+      - Use one competing explanation and explain why it is weaker.
+      - If data are provided, mention trend direction and at least one design limitation.
+
+      This combination of precision and evidence improves both multiple-choice accuracy and free-response scoring.
+      `
+    },
+    {
+      id: 'personality-theories-p5-s7-applied',
+      type: 'multiple-choice' as const,
+      content: `
+      **Applied Scenarios** 🎯
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'A team investigating comparing personality test validity in hiring finds that participants rely on a persuasive cue when they are distracted, but use argument quality when they are highly focused. Which concept best captures the focused-processing route?',
+            options: [
+              'Big Five',
+              'temperament',
+              'trait',
+              'person-situation debate'
+            ],
+            correctAnswer: 0,
+            explanation: 'Big Five is best because it reflects this mechanism (five broad trait dimensions: openness, conscientiousness, extraversion, agreeableness, neuroticism). The other options describe different levels of explanation or related constructs.'
+          },
+          {
+            question: 'After an intervention, scores improve in the treatment group but not in a matched comparison group. Which interpretation is most defensible for the targeted mechanism?',
+            options: [
+              'trait',
+              'self-actualization',
+              'temperament',
+              'psychodynamic'
+            ],
+            correctAnswer: 3,
+            explanation: 'psychodynamic is the strongest interpretation because it maps to the measured pattern and proposed mechanism: approach emphasizing unconscious processes and early relationships. Good AP reasoning also notes alternative explanations and design limits.'
+          }
+        ]
       }
     }
   ]

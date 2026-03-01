@@ -5,7 +5,7 @@ export const psychLanguagePart4Data = {
       id: 'langu4-intro',
       type: 'text' as const,
       content: `
-# ## Intelligence Testing
+## Intelligence Testing
 
 **Part 4 of 7 — Intelligence Testing**
 
@@ -63,7 +63,7 @@ Reliability and validity of intelligence tests
       id: 'langu4-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Stanford-Binet and Wechsler tests (IQ tests)**
 - **IQ = (mental age / chronological age) × 100 (original formula)**

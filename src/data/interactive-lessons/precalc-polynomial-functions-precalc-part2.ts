@@ -2,124 +2,189 @@ export const precalcPolynomialPart2Data = {
   topicSlug: 'polynomial-functions-precalc',
   sections: [
     {
-      id: 'polyn2-intro',
+      id: 'precalc-polynomial-functions-precalc-p2-s1-intro',
       type: 'text' as const,
       content: `
-# End Behavior
-
-**Part 2 of 7 — End Behavior**
-
-### 1. Even-degree polynomials
-
-both ends go the same direction
-
-### 2. Odd-degree polynomials
-
-ends go in opposite directions
-
-### 3. Positive leading coefficient with even degree
-
-both ends up
-
-### 4. Negative leading coefficient with odd degree
-
-left end up, right end down
+      ## Polynomial Functions: Factoring structure and zeros
+      
+      **Part 2 of 7**
+      
+      This part focuses on extracting roots from factored forms. Keep notation precise and connect each symbolic step to geometric or functional meaning.
+      
+      ### Core definitions
+      - **leading coefficient**: coefficient of the highest-degree term
+      - **zero**: input value where polynomial output is zero
+      - **multiplicity**: number of times a factor repeats
+      
+      
+      ### Worked Example
+      Part 2 uses direct precalculus notation to move from structure to computation.
+      
+      Start with a model statement, substitute known values, and simplify step by step using exact form first.
+      When needed, convert to decimals only after the symbolic setup is complete.
       `
     },
     {
-      id: 'polyn2-quiz1',
+      id: 'precalc-polynomial-functions-precalc-p2-s2-mcq-core',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+      **Multiple-choice check (2 questions)**
       `,
       exercise: {
         questions: [
           {
-            question: 'What does "Even-degree polynomials" refer to in precalculus?',
+            question: 'Choose the most accurate definition of leading coefficient.',
             options: [
-              'ends go in opposite directions',
-              'both ends up',
-              'both ends go the same direction',
-              'left end up, right end down'
+              'remainder of division by $x-c$ equals $p(c)$',
+              'input value where polynomial output is zero',
+              'coefficient of the highest-degree term',
+              'number of times a factor repeats'
             ],
             correctAnswer: 2,
-            explanation: 'Correct — Even-degree polynomials: both ends go the same direction. The other options describe different concepts from this topic.'
+            explanation: 'leading coefficient is defined as: coefficient of the highest-degree term.'
           },
           {
-            question: 'Which of the following is true about Positive leading coefficient with even degree?',
+            question: 'In extracting roots from factored forms, which expression is the best starting model?',
             options: [
-              'ends go in opposite directions',
-              'both ends go the same direction',
-              'both ends up',
-              'left end up, right end down'
+              '$p(x)=a\\prod (x-r_i)^{m_i}$',
+              '$\\deg(pq)=\\deg p+\\deg q$',
+              '$x=\\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}$',
+              '$\\text{rem}(p\\div (x-c))=p(c)$'
             ],
-            correctAnswer: 2,
-            explanation: 'Correct — Positive leading coefficient with even degree: both ends up. Be careful to distinguish between the different concepts in this topic.'
+            correctAnswer: 3,
+            explanation: 'Use $\\text{rem}(p\\div (x-c))=p(c)$ first, then substitute known quantities from the prompt.'
           }
         ]
       }
     },
     {
-      id: 'polyn2-detail',
+      id: 'precalc-polynomial-functions-precalc-p2-s3-deep-dive',
       type: 'text' as const,
       content: `
-### Key Concepts Summary
-
-- **Even-degree polynomials**: both ends go the same direction
-- **Odd-degree polynomials**: ends go in opposite directions
-- **Positive leading coefficient with even degree**: both ends up
-- **Negative leading coefficient with odd degree**: left end up, right end down
+      ### Deep-Dive: formulas and decision rules
+      
+      Use this table to pick the right expression before computing.
+      
+      | Tool | Formula | Best use |
+      |---|---|---|
+      | Remainder theorem | $\text{rem}(p\div (x-c))=p(c)$ | fast root testing |
+      | Quadratic roots | $x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$ | embedded factor analysis |
+      | Degree sum | $\deg(pq)=\deg p+\deg q$ | model-building checks |
+      | Factored form | $p(x)=a\prod (x-r_i)^{m_i}$ | zero/multiplicity encoding |
+      
+      ### Common pitfalls
+      - Even/odd degree does not determine all turning behavior.
+      - A numerical approximation can hide repeated roots if precision is low.
+      - Multiplicity affects local graph shape at zeros.
+      
+      ### Precision checks
+      1. Identify givens and unknowns before selecting a formula.
+      2. Keep exact values through symbolic simplification when possible.
+      3. Verify units, angle mode, or domain constraints before finalizing.
       `
     },
     {
-      id: 'polyn2-quiz2',
-      type: 'multiple-choice' as const,
+      id: 'precalc-polynomial-functions-precalc-p2-s4-input',
+      type: 'input-boxes' as const,
       content: `
-**Concept Check** 🎯
+      **Input Practice — Polynomial Structure**
+      
+      1) Evaluate $p(3)$ for $p(x)=x^3-2x$.
+      2) Compute $p(2)$ for $p(x)=x^2-5x+6$.
+      3) Find degree of $(x^2+1)(x^3-1)$.
       `,
       exercise: {
-        questions: [
-          {
-            question: 'Which concept relates directly to end behavior?',
-            options: [
-              'left end up, right end down',
-              'Only complex analysis',
-              'Exclusively abstract algebra',
-              'This applies only to statistics'
-            ],
-            correctAnswer: 0,
-            explanation: 'Negative leading coefficient with odd degree: left end up, right end down'
-          }
-        ]
+        boxes: 3,
+        correctAnswers: ['21', '0', '5'],
+        hint1: 'Substitute and simplify term by term.',
+        hint2: 'Use the remainder/factor theorem shortcut.',
+        hint3: 'Degrees add under multiplication.',
+        explanation: 'Values are 21 and 0, and the product polynomial has degree 5.'
       }
     },
     {
-      id: 'polyn2-dropdown',
+      id: 'precalc-polynomial-functions-precalc-p2-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Match the Concepts** 🔍
+      **Dropdown-select practice (3 prompts)**
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Even-degree polynomials',
-            options: ['left end up, right end down', 'both ends go the same direction', 'both ends up', 'ends go in opposite directions']
+            label: 'leading coefficient',
+            options: ['remainder of division by $x-c$ equals $p(c)$', 'input value where polynomial output is zero', 'number of times a factor repeats', 'coefficient of the highest-degree term']
           },
           {
-            label: 'Odd-degree polynomials',
-            options: ['ends go in opposite directions', 'both ends up', 'left end up, right end down', 'both ends go the same direction']
+            label: 'zero',
+            options: ['remainder of division by $x-c$ equals $p(c)$', 'number of times a factor repeats', 'input value where polynomial output is zero', '$p(c)=0$ implies $(x-c)$ is a factor']
           },
           {
-            label: 'Positive leading coefficient with even degree',
-            options: ['both ends up', 'left end up, right end down', 'ends go in opposite directions', 'both ends go the same direction']
+            label: 'multiplicity',
+            options: ['direction of graph tails as $x	o\\pm\\infty$', 'number of times a factor repeats', 'remainder of division by $x-c$ equals $p(c)$', '$p(c)=0$ implies $(x-c)$ is a factor']
           }
         ],
-        correctAnswers: ['both ends go the same direction', 'ends go in opposite directions', 'both ends up'],
-        hint1: 'Think about what each concept specifically describes in End Behavior.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in End Behavior describes a specific idea. Even-degree polynomials: both ends go the same direction. Odd-degree polynomials: ends go in opposite directions. Positive leading coefficient with even degree: both ends up.'
+        correctAnswers: ['coefficient of the highest-degree term', 'input value where polynomial output is zero', 'number of times a factor repeats'],
+        hint1: 'Match each term to the full definition, not just a keyword.',
+        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
+        hint3: 'Read the label and option together as one complete mathematical sentence.',
+        explanation: 'Correct mapping: leading coefficient, zero, and multiplicity align with their exact definitions used in this part.'
+      }
+    },
+    {
+      id: 'precalc-polynomial-functions-precalc-p2-s6-strategy',
+      type: 'text' as const,
+      content: `
+      ### Strategy: graphing, calculator, and exam tactics
+      
+      **Graphing tactics**
+      - Sketch anchor points or intercept behavior before detailed algebra.
+      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
+      
+      **Calculator tactics**
+      - Confirm angle mode before trig operations.
+      - Store intermediate values to avoid rounded drift.
+      - Use table mode to test reasonableness around key inputs.
+      
+      **Exam tactics**
+      - Translate words to symbols first, then choose the matching formula family.
+      - Eliminate options that violate domain or structure.
+      - If two choices are close, substitute back into the original relationship.
+      
+      Tie each step to leading coefficient, zero, and multiplicity so your reasoning is explicit and checkable.
+      `
+    },
+    {
+      id: 'precalc-polynomial-functions-precalc-p2-s7-mcq-applied',
+      type: 'multiple-choice' as const,
+      content: `
+      **Applied mixed questions (2 questions)**
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'A student is extracting roots from factored forms. Which term best anchors the next reasoning step if the key idea is: remainder of division by $x-c$ equals $p(c)$?',
+            options: [
+              'leading coefficient',
+              'multiplicity',
+              'remainder theorem',
+              'zero'
+            ],
+            correctAnswer: 2,
+            explanation: 'remainder theorem matches that description and keeps the model-to-interpretation chain consistent.'
+          },
+          {
+            question: 'A student is solving a mixed polynomial functions prompt. Which term best anchors the next reasoning step if the key idea is: $p(c)=0$ implies $(x-c)$ is a factor?',
+            options: [
+              'remainder theorem',
+              'factor theorem',
+              'multiplicity',
+              'end behavior'
+            ],
+            correctAnswer: 1,
+            explanation: 'factor theorem matches that description and keeps the model-to-interpretation chain consistent.'
+          }
+        ]
       }
     }
   ]
-}
+};

@@ -5,7 +5,7 @@ export const psychOperantPart6Data = {
       id: 'opera6-intro',
       type: 'text' as const,
       content: `
-# ## Problem-Solving Workshop
+## Problem-Solving Workshop
 
 **Part 6 of 7 — Problem-Solving Workshop**
 
@@ -63,7 +63,7 @@ Designing behavior modification plans
       id: 'opera6-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Classifying reinforcement and punishment scenarios**
 - **Identifying schedules of reinforcement**

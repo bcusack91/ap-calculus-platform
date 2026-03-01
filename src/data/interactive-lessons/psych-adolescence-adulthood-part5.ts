@@ -5,7 +5,7 @@ export const psychAdolescencePart5Data = {
       id: 'adole5-intro',
       type: 'text' as const,
       content: `
-# ## Death & Dying
+## Death & Dying
 
 **Part 5 of 7 — Death & Dying**
 
@@ -63,7 +63,7 @@ Hospice and palliative care
       id: 'adole5-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Kübler-Ross stages of grief**: denial, anger, bargaining, depression, acceptance
 - **Grief is individual — not everyone follows these stages**

@@ -5,7 +5,7 @@ export const psychEmotionPart5Data = {
       id: 'emoti5-intro',
       type: 'text' as const,
       content: `
-# ## Coping Strategies
+## Coping Strategies
 
 **Part 5 of 7 — Coping Strategies**
 
@@ -63,7 +63,7 @@ feeling in control reduces stress impact
       id: 'emoti5-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Problem-focused coping**: addressing the problem directly
 - **Emotion-focused coping**: managing emotional response

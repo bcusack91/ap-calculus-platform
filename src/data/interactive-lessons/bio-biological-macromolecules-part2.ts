@@ -5,7 +5,7 @@ export const bioMacromoleculesPart2Data = {
       id: 'biol2-carbs',
       type: 'text' as const,
       content: `
-# ## Carbohydrates: Structure & Function
+## Carbohydrates: Structure & Function
 
 ### Monosaccharides
 
@@ -56,7 +56,7 @@ Two monosaccharides linked by a **glycosidic bond**:
       id: 'biol2-poly',
       type: 'text' as const,
       content: `
-# ## Polysaccharides
+## Polysaccharides
 
 | Polysaccharide | Function | Organism | Linkage |
 |---------------|----------|----------|---------|

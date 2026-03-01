@@ -2,123 +2,184 @@ export const psychRetrievalPart2Data = {
   topicSlug: 'retrieval-forgetting',
   sections: [
     {
-      id: 'retri2-intro',
+      id: 'retrieval-forgetting-p2-s1-intro',
       type: 'text' as const,
       content: `
-# ## Forgetting Theories
+      # 🧠 Retrieval and Forgetting
 
-**Part 2 of 7 — Forgetting Theories**
+      **Part 2 of 7 — Forgetting Curves and Interference**
 
-### 1. Ebbinghaus forgetting curve
+      In this part, you will connect core psychological vocabulary to realistic contexts and AP-style reasoning. Focus on mechanism first, then evidence.
 
-rapid initial forgetting
+      ### Core Definitions
+      - **state-dependent memory**: recall improves when internal state matches learning state
+      - **proactive interference**: old learning disrupts new learning
+      - **retroactive interference**: new learning disrupts old memories
 
-### 2. Encoding failure
+      ### Concrete Real-World Example
+      A team is studying language learning with overlapping vocabulary. They operationalize variables, compare plausible explanations, and look for the interpretation that best matches observed behavior instead of relying on intuition.
 
-information never encoded properly
-
-### 3. Storage decay
-
-memory traces fade over time
-
-### 4. Retrieval failure
-
-information is stored but inaccessible (tip-of-tongue)
+      ### Why This Matters
+      Strong AP responses define terms precisely, apply them to evidence, and justify why one interpretation is stronger than alternatives.
       `
     },
     {
-      id: 'retri2-quiz1',
+      id: 'retrieval-forgetting-p2-s2-check',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+      **Concept Check** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains Ebbinghaus forgetting curve?',
+            question: 'In a study about language learning with overlapping vocabulary, participants change behavior after repeatedly seeing the same cue. Which concept is the best fit?',
             options: [
-              'information never encoded properly',
-              'memory traces fade over time',
-              'information is stored but inaccessible (tip-of-tongue)',
-              'rapid initial forgetting'
+              'tip-of-the-tongue',
+              'proactive interference',
+              'retroactive interference',
+              'state-dependent memory'
             ],
             correctAnswer: 3,
-            explanation: 'Correct — Ebbinghaus forgetting curve: rapid initial forgetting. The other options describe different concepts from this topic.'
+            explanation: 'state-dependent memory is correct because it directly matches this mechanism: recall improves when internal state matches learning state. The distractors describe related but different processes.'
           },
           {
-            question: 'Select the statement that correctly describes Storage decay:',
+            question: 'Researchers report that behavior shifts when participants receive a specific cue and then justify their choices afterward. Which concept best explains that pattern?',
             options: [
-              'information is stored but inaccessible (tip-of-tongue)',
-              'information never encoded properly',
-              'rapid initial forgetting',
-              'memory traces fade over time'
+              'reconstructive memory',
+              'misinformation effect',
+              'proactive interference',
+              'retroactive interference'
             ],
-            correctAnswer: 3,
-            explanation: 'Correct — Storage decay: memory traces fade over time. Be careful to distinguish between the different concepts in this topic.'
+            correctAnswer: 0,
+            explanation: 'reconstructive memory is the strongest match here (remembering by rebuilding details from fragments and schemas). The other options do not explain both the cue-driven shift and the observed response pattern as directly.'
           }
         ]
       }
     },
     {
-      id: 'retri2-detail',
+      id: 'retrieval-forgetting-p2-s3-deep',
       type: 'text' as const,
       content: `
-# ### Key Points
+      ## Deep Dive: Comparing Explanations with Evidence
 
-- **Ebbinghaus forgetting curve**: rapid initial forgetting
-- **Encoding failure**: information never encoded properly
-- **Storage decay**: memory traces fade over time
-- **Retrieval failure**: information is stored but inaccessible (tip-of-tongue)
+      When analyzing language learning with overlapping vocabulary, the best interpretation ties a clear psychological mechanism to measurable evidence.
+
+      | Theory / Concept | Core claim | Typical evidence | Common limitation |
+      |---|---|---|---|
+      | state-dependent memory | recall improves when internal state matches learning state | experimental manipulation with random assignment | possible demand characteristics |
+      | proactive interference | old learning disrupts new learning | longitudinal trend with repeated measurement | third-variable risk in natural settings |
+      | retroactive interference | new learning disrupts old memories | cross-sectional comparison with matched groups | limited generalizability across cultures |
+      | tip-of-the-tongue | temporary inability to retrieve known information | mixed-method evidence combining survey and behavioral indicators | measurement validity depends on construct quality |
+
+      ### Interpretation Strategy
+      1. Name the mechanism before describing outcomes.
+      2. Match the claim to the strongest available evidence type.
+      3. Acknowledge one limitation and explain whether it changes the conclusion.
+
+      This structure helps you earn reasoning points on free-response and avoid vague claims.
       `
     },
     {
-      id: 'retri2-quiz2',
-      type: 'multiple-choice' as const,
+      id: 'retrieval-forgetting-p2-s4-input',
+      type: 'input-boxes' as const,
       content: `
-**Concept Check** 🎯
+      **Applied Recall (exact term answers)** ✍️
+
+      1) Write the concept that matches: recall improves when internal state matches learning state
+      2) Write the concept that matches: old learning disrupts new learning
+      3) Write the concept that matches: new learning disrupts old memories
+
+      Use the exact vocabulary term from this part.
       `,
       exercise: {
-        questions: [
-          {
-            question: 'Which concept relates directly to forgetting theories?',
-            options: [
-              'information is stored but inaccessible (tip-of-tongue)',
-              'Only biological factors',
-              'Exclusively cognitive processes',
-              'Mathematical formulas only'
-            ],
-            correctAnswer: 0,
-            explanation: 'Retrieval failure: information is stored but inaccessible (tip-of-tongue)'
-          }
-        ]
+        boxes: 3,
+        correctAnswers: ['state-dependent memory', 'proactive interference', 'retroactive interference'],
+        hint1: 'Starts with: S',
+        hint2: 'Starts with: P',
+        hint3: 'Starts with: R',
+        explanation: 'Expected answers: state-dependent memory, proactive interference, and retroactive interference. Each response should use the precise term connected to the definition cue.'
       }
     },
     {
-      id: 'retri2-dropdown',
+      id: 'retrieval-forgetting-p2-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Match the Concepts** 🔍
+      **Model Matching** 🔎
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Ebbinghaus forgetting curve',
-            options: ['information is stored but inaccessible (tip-of-tongue)', 'rapid initial forgetting', 'memory traces fade over time', 'information never encoded properly']
+            label: 'Select the concept that best matches: recall improves when internal state matches learning state',
+            options: ['reconstructive memory', 'misinformation effect', 'state-dependent memory', 'proactive interference']
           },
           {
-            label: 'Encoding failure',
-            options: ['information never encoded properly', 'information is stored but inaccessible (tip-of-tongue)', 'memory traces fade over time', 'rapid initial forgetting']
+            label: 'Select the concept that best matches: old learning disrupts new learning',
+            options: ['reconstructive memory', 'proactive interference', 'state-dependent memory', 'tip-of-the-tongue']
           },
           {
-            label: 'Storage decay',
-            options: ['memory traces fade over time', 'rapid initial forgetting', 'information is stored but inaccessible (tip-of-tongue)', 'information never encoded properly']
+            label: 'Select the concept that best matches: new learning disrupts old memories',
+            options: ['reconstructive memory', 'retroactive interference', 'tip-of-the-tongue', 'state-dependent memory']
           }
         ],
-        correctAnswers: ['rapid initial forgetting', 'information never encoded properly', 'memory traces fade over time'],
-        hint1: 'Think about what each concept specifically describes in Forgetting Theories.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Forgetting Theories describes a specific idea. Ebbinghaus forgetting curve: rapid initial forgetting. Encoding failure: information never encoded properly. Storage decay: memory traces fade over time.'
+        correctAnswers: ['state-dependent memory', 'proactive interference', 'retroactive interference'],
+        hint1: 'Start by matching the key mechanism in each prompt to the most specific concept.',
+        hint2: 'Eliminate options that describe a different level of analysis (biological vs cognitive vs social).',
+        hint3: 'Use the definition language from this part to avoid near-miss terms.',
+        explanation: 'Correct matches are state-dependent memory, proactive interference, and retroactive interference. These choices align with the mechanism-language in each definition, not just broad topic similarity.'
+      }
+    },
+    {
+      id: 'retrieval-forgetting-p2-s6-strategy',
+      type: 'text' as const,
+      content: `
+      ## Common Misconceptions and Exam Strategy
+
+      ### Misconceptions to Avoid
+      - Forgetting is not always decay; retrieval competition and cue mismatch are common causes.
+      - Confidence in a memory report does not guarantee accuracy.
+      - Repeated testing can outperform repeated rereading for long-term recall.
+      - Distortion can emerge from normal reconstruction, not intentional lying.
+
+      ### AP Strategy Moves
+      - Define the target concept in one precise sentence before giving examples.
+      - In scenario questions about language learning with overlapping vocabulary, identify the manipulated variable and measured outcome.
+      - Use one competing explanation and explain why it is weaker.
+      - If data are provided, mention trend direction and at least one design limitation.
+
+      This combination of precision and evidence improves both multiple-choice accuracy and free-response scoring.
+      `
+    },
+    {
+      id: 'retrieval-forgetting-p2-s7-applied',
+      type: 'multiple-choice' as const,
+      content: `
+      **Applied Scenarios** 🎯
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'A team investigating language learning with overlapping vocabulary finds that participants rely on a persuasive cue when they are distracted, but use argument quality when they are highly focused. Which concept best captures the focused-processing route?',
+            options: [
+              'tip-of-the-tongue',
+              'retroactive interference',
+              'state-dependent memory',
+              'proactive interference'
+            ],
+            correctAnswer: 0,
+            explanation: 'tip-of-the-tongue is best because it reflects this mechanism (temporary inability to retrieve known information). The other options describe different levels of explanation or related constructs.'
+          },
+          {
+            question: 'After an intervention, scores improve in the treatment group but not in a matched comparison group. Which interpretation is most defensible for the targeted mechanism?',
+            options: [
+              'reconstructive memory',
+              'proactive interference',
+              'retroactive interference',
+              'misinformation effect'
+            ],
+            correctAnswer: 0,
+            explanation: 'reconstructive memory is the strongest interpretation because it maps to the measured pattern and proposed mechanism: remembering by rebuilding details from fragments and schemas. Good AP reasoning also notes alternative explanations and design limits.'
+          }
+        ]
       }
     }
   ]

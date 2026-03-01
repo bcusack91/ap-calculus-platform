@@ -2,124 +2,189 @@ export const precalcTransformationsPart7Data = {
   topicSlug: 'transformations-precalc',
   sections: [
     {
-      id: 'trans7-intro',
+      id: 'precalc-transformations-precalc-p7-s1-intro',
       type: 'text' as const,
       content: `
-# Review & Applications
-
-**Part 7 of 7 — Review & Applications**
-
-### 1. Linear
-
-f(x) = x; Quadratic: f(x) = x²; Cubic: f(x) = x³
-
-### 2. Absolute value
-
-f(x) = |x|; Square root: f(x) = √x
-
-### 3. Reciprocal
-
-f(x) = 1/x; Exponential: f(x) = bˣ
-
-### 4. Logarithmic
-
-f(x) = log_b(x); Greatest integer: f(x) = ⌊x⌋
+      ## Function Transformations: Mixed transformation synthesis
+      
+      **Part 7 of 7**
+      
+      This part focuses on solving mixed transformation exam prompts. Keep notation precise and connect each symbolic step to geometric or functional meaning.
+      
+      ### Core definitions
+      - **composite transform**: multiple transformations applied to one parent
+      - **invariant point**: point unchanged by selected transformation
+      - **parent function**: base graph before transformations
+      
+      
+      ### Worked Example
+      Part 7 uses direct precalculus notation to move from structure to computation.
+      
+      Start with a model statement, substitute known values, and simplify step by step using exact form first.
+      When needed, convert to decimals only after the symbolic setup is complete.
       `
     },
     {
-      id: 'trans7-quiz1',
+      id: 'precalc-transformations-precalc-p7-s2-mcq-core',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+      **Multiple-choice check (2 questions)**
       `,
       exercise: {
         questions: [
           {
-            question: 'What does "Linear" refer to in precalculus?',
+            question: 'Choose the most accurate definition of composite transform.',
             options: [
-              'f(x) = 1/x; Exponential: f(x) = bˣ',
-              'f(x) = log_b(x); Greatest integer: f(x) = ⌊x⌋',
-              'f(x) = x; Quadratic: f(x) = x²; Cubic: f(x) = x³',
-              'f(x) = |x|; Square root: f(x) = √x'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Linear: f(x) = x; Quadratic: f(x) = x²; Cubic: f(x) = x³. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Select the statement that correctly describes Reciprocal:',
-            options: [
-              'f(x) = x; Quadratic: f(x) = x²; Cubic: f(x) = x³',
-              'f(x) = log_b(x); Greatest integer: f(x) = ⌊x⌋',
-              'f(x) = |x|; Square root: f(x) = √x',
-              'f(x) = 1/x; Exponential: f(x) = bˣ'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Reciprocal: f(x) = 1/x; Exponential: f(x) = bˣ. Be careful to distinguish between the different concepts in this topic.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'trans7-detail',
-      type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **Linear**: f(x) = x; Quadratic: f(x) = x²; Cubic: f(x) = x³
-- **Absolute value**: f(x) = |x|; Square root: f(x) = √x
-- **Reciprocal**: f(x) = 1/x; Exponential: f(x) = bˣ
-- **Logarithmic**: f(x) = log_b(x); Greatest integer: f(x) = ⌊x⌋
-      `
-    },
-    {
-      id: 'trans7-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which concept relates directly to review & applications?',
-            options: [
-              'f(x) = log_b(x); Greatest integer: f(x) = ⌊x⌋',
-              'Only complex analysis',
-              'Exclusively abstract algebra',
-              'This applies only to statistics'
+              'multiple transformations applied to one parent',
+              'adds constant outside function value',
+              'base graph before transformations',
+              'point unchanged by selected transformation'
             ],
             correctAnswer: 0,
-            explanation: 'Logarithmic: f(x) = log_b(x); Greatest integer: f(x) = ⌊x⌋'
+            explanation: 'composite transform is defined as: multiple transformations applied to one parent.'
+          },
+          {
+            question: 'In solving mixed transformation exam prompts, which expression is the best starting model?',
+            options: [
+              '$f(x-h)$',
+              '$-f(x),\\;f(-x)$',
+              '$f(x)+k$',
+              '$g(x)=a\\,f(b(x-h))+k$'
+            ],
+            correctAnswer: 2,
+            explanation: 'Use $f(x)+k$ first, then substitute known quantities from the prompt.'
           }
         ]
       }
     },
     {
-      id: 'trans7-dropdown',
+      id: 'precalc-transformations-precalc-p7-s3-deep-dive',
+      type: 'text' as const,
+      content: `
+      ### Deep-Dive: formulas and decision rules
+      
+      Use this table to pick the right expression before computing.
+      
+      | Tool | Formula | Best use |
+      |---|---|---|
+      | Vertical shift | $f(x)+k$ | up by $k$ when $k>0$ |
+      | Reflections | $-f(x),\;f(-x)$ | over $x$-axis and $y$-axis |
+      | General transform | $g(x)=a\,f(b(x-h))+k$ | all major parameter moves |
+      | Horizontal shift | $f(x-h)$ | right by $h$ when $h>0$ |
+      
+      ### Common pitfalls
+      - Inside changes reverse intuitive direction for horizontal moves.
+      - A negative outside coefficient reflects across the $x$-axis.
+      - Apply transformations in the order implied by expression structure.
+      
+      ### Precision checks
+      1. Identify givens and unknowns before selecting a formula.
+      2. Keep exact values through symbolic simplification when possible.
+      3. Verify units, angle mode, or domain constraints before finalizing.
+      `
+    },
+    {
+      id: 'precalc-transformations-precalc-p7-s4-input',
+      type: 'input-boxes' as const,
+      content: `
+      **Input Practice — Transformation Parameters**
+      
+      1) In $g(x)=f(x-3)+2$, how many units right is the graph shifted?
+      2) In $y=-2f(x)$, what is the vertical stretch factor magnitude?
+      3) If $f(x)=x^2$, compute $f(-4)$.
+      `,
+      exercise: {
+        boxes: 3,
+        correctAnswers: ['3', '2', '16'],
+        hint1: 'Inside subtraction shifts right.',
+        hint2: 'Read absolute value of outside multiplier.',
+        hint3: 'Square the input after substitution.',
+        explanation: 'Shift is 3 right, stretch magnitude is 2, and $f(-4)=16$.'
+      }
+    },
+    {
+      id: 'precalc-transformations-precalc-p7-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Match the Concepts** 🔍
+      **Dropdown-select practice (3 prompts)**
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Linear',
-            options: ['f(x) = 1/x; Exponential: f(x) = bˣ', 'f(x) = |x|; Square root: f(x) = √x', 'f(x) = log_b(x); Greatest integer: f(x) = ⌊x⌋', 'f(x) = x; Quadratic: f(x) = x²; Cubic: f(x) = x³']
+            label: 'composite transform',
+            options: ['base graph before transformations', 'point unchanged by selected transformation', 'multiple transformations applied to one parent', 'adds constant outside function value']
           },
           {
-            label: 'Absolute value',
-            options: ['f(x) = log_b(x); Greatest integer: f(x) = ⌊x⌋', 'f(x) = 1/x; Exponential: f(x) = bˣ', 'f(x) = |x|; Square root: f(x) = √x', 'f(x) = x; Quadratic: f(x) = x²; Cubic: f(x) = x³']
+            label: 'invariant point',
+            options: ['point unchanged by selected transformation', 'adds constant outside function value', 'replaces $x$ with $x-h$ inside input', 'base graph before transformations']
           },
           {
-            label: 'Reciprocal',
-            options: ['f(x) = |x|; Square root: f(x) = √x', 'f(x) = log_b(x); Greatest integer: f(x) = ⌊x⌋', 'f(x) = 1/x; Exponential: f(x) = bˣ', 'f(x) = x; Quadratic: f(x) = x²; Cubic: f(x) = x³']
+            label: 'parent function',
+            options: ['multiplies input or output by $-1$', 'base graph before transformations', 'adds constant outside function value', 'replaces $x$ with $x-h$ inside input']
           }
         ],
-        correctAnswers: ['f(x) = x; Quadratic: f(x) = x²; Cubic: f(x) = x³', 'f(x) = |x|; Square root: f(x) = √x', 'f(x) = 1/x; Exponential: f(x) = bˣ'],
-        hint1: 'Think about what each concept specifically describes in Review & Applications.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Review & Applications describes a specific idea. Linear: f(x) = x; Quadratic: f(x) = x²; Cubic: f(x) = x³. Absolute value: f(x) = |x|; Square root: f(x) = √x. Reciprocal: f(x) = 1/x; Exponential: f(x) = bˣ.'
+        correctAnswers: ['multiple transformations applied to one parent', 'point unchanged by selected transformation', 'base graph before transformations'],
+        hint1: 'Match each term to the full definition, not just a keyword.',
+        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
+        hint3: 'Read the label and option together as one complete mathematical sentence.',
+        explanation: 'Correct mapping: composite transform, invariant point, and parent function align with their exact definitions used in this part.'
+      }
+    },
+    {
+      id: 'precalc-transformations-precalc-p7-s6-strategy',
+      type: 'text' as const,
+      content: `
+      ### Strategy: graphing, calculator, and exam tactics
+      
+      **Graphing tactics**
+      - Sketch anchor points or intercept behavior before detailed algebra.
+      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
+      
+      **Calculator tactics**
+      - Confirm angle mode before trig operations.
+      - Store intermediate values to avoid rounded drift.
+      - Use table mode to test reasonableness around key inputs.
+      
+      **Exam tactics**
+      - Translate words to symbols first, then choose the matching formula family.
+      - Eliminate options that violate domain or structure.
+      - If two choices are close, substitute back into the original relationship.
+      
+      Tie each step to composite transform, invariant point, and parent function so your reasoning is explicit and checkable.
+      `
+    },
+    {
+      id: 'precalc-transformations-precalc-p7-s7-mcq-applied',
+      type: 'multiple-choice' as const,
+      content: `
+      **Applied mixed questions (2 questions)**
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'A student is solving mixed transformation exam prompts. Which term best anchors the next reasoning step if the key idea is: adds constant outside function value?',
+            options: [
+              'invariant point',
+              'parent function',
+              'vertical shift',
+              'composite transform'
+            ],
+            correctAnswer: 2,
+            explanation: 'vertical shift matches that description and keeps the model-to-interpretation chain consistent.'
+          },
+          {
+            question: 'A student is solving a mixed function transformations prompt. Which term best anchors the next reasoning step if the key idea is: replaces $x$ with $x-h$ inside input?',
+            options: [
+              'horizontal shift',
+              'parent function',
+              'reflection',
+              'vertical shift'
+            ],
+            correctAnswer: 0,
+            explanation: 'horizontal shift matches that description and keeps the model-to-interpretation chain consistent.'
+          }
+        ]
       }
     }
   ]
-}
+};

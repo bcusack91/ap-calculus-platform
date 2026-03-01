@@ -2,108 +2,81 @@ export const satPolynomialsPart4Data = {
   topicSlug: 'sat-polynomials-factoring-sat',
   sections: [
     {
-      id: 'sat-p4-intro',
+      id: 'sat-poly-p4-intro',
       type: 'text' as const,
       content: `
-# Remainder & Factor Theorems
+# 📐 Factoring Trinomials
 
-**Part 4 of 7 — Remainder & Factor Theorems**
+**Part 4 of 7 — Factoring Trinomials**
 
-Remainder Theorem: when P(x) is divided by (x - c), the remainder is P(c).
+Factoring $ax^2 + bx + c$ using the AC method
 
-Factor Theorem: (x - c) is a factor of P(x) if and only if P(c) = 0.
+This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+
+**Key Concepts in This Section:**
+- Core principles and definitions
+- Step-by-step problem-solving methods
+- Common SAT question patterns
+- Strategic tips for test day
       `
     },
     {
-      id: 'sat-p4-quiz1',
+      id: 'sat-poly-p4-check',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+**Quick Check** 🔍
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Remainder Theorem?',
+            question: 'Based on the concepts in this section, which approach is most effective?',
             options: [
-              'Use to test potential rational roots.',
-              '(x - c) is a factor of P(x) if and only if P(c) = 0.',
-              'If P(c) = 0, then c is a root and (x - c) is a factor.',
-              'when P(x) is divided by (x - c), the remainder is P(c).'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Remainder Theorem: when P(x) is divided by (x - c), the remainder is P(c). The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'In the context of Remainder & Factor Theorems, which explains Key Insight?',
-            options: [
-              'when P(x) is divided by (x - c), the remainder is P(c).',
-              'Use to test potential rational roots.',
-              '(x - c) is a factor of P(x) if and only if P(c) = 0.',
-              'If P(c) = 0, then c is a root and (x - c) is a factor.'
+              'Memorize formulas without understanding when to apply them',
+              'Understand the underlying concepts and practice with varied problems',
+              'Only practice problems you find easy to build confidence',
+              'Skip practice and rely on intuition during the test'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — Key Insight: Use to test potential rational roots. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
           }
         ]
       }
     },
     {
-      id: 'sat-p4-detail',
+      id: 'sat-poly-p4-detail',
       type: 'text' as const,
       content: `
-**Key Insight:** Use to test potential rational roots.
+**Detailed Concepts & Examples**
 
-**SAT Tip:** If P(c) = 0, then c is a root and (x - c) is a factor.
+This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
+
+1. **Identify** the type of problem quickly
+2. **Apply** the correct method systematically
+3. **Verify** your answer makes sense in context
+
+Work through each example carefully before attempting the practice problems below.
       `
     },
     {
-      id: 'sat-p4-quiz2',
+      id: 'sat-poly-p4-practice',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+**SAT-Style Questions** 📋
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of these accurately represents SAT Tip?',
+            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
             options: [
-              'when P(x) is divided by (x - c), the remainder is P(c).',
-              'If P(c) = 0, then c is a root and (x - c) is a factor.',
-              '(x - c) is a factor of P(x) if and only if P(c) = 0.',
-              'Use to test potential rational roots.'
+              'Guess and move on quickly',
+              'Identify what the question is actually asking for',
+              'Try every formula you know until one works',
+              'Skip it permanently'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — SAT Tip: If P(c) = 0, then c is a root and (x - c) is a factor. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
           }
         ]
-      }
-    },
-    {
-      id: 'sat-p4-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Remainder Theorem',
-            options: ['If P(c) = 0, then c is a root and (x - c) is a factor.', '(x - c) is a factor of P(x) if and only if P(c) = 0.', 'when P(x) is divided by (x - c), the remainder is P(c).', 'Use to test potential rational roots.']
-          },
-          {
-            label: 'Factor Theorem',
-            options: ['(x - c) is a factor of P(x) if and only if P(c) = 0.', 'when P(x) is divided by (x - c), the remainder is P(c).', 'Use to test potential rational roots.', 'If P(c) = 0, then c is a root and (x - c) is a factor.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['Use to test potential rational roots.', 'when P(x) is divided by (x - c), the remainder is P(c).', '(x - c) is a factor of P(x) if and only if P(c) = 0.', 'If P(c) = 0, then c is a root and (x - c) is a factor.']
-          }
-        ],
-        correctAnswers: ['when P(x) is divided by (x - c), the remainder is P(c).', '(x - c) is a factor of P(x) if and only if P(c) = 0.', 'Use to test potential rational roots.'],
-        hint1: 'Think about what each concept specifically describes in Remainder & Factor Theorems.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Remainder & Factor Theorems describes a specific idea. Remainder Theorem: when P(x) is divided by (x - c), the remainder is P(c). Factor Theorem: (x - c) is a factor of P(x) if and only if P(c) = 0. Key Insight: Use to test potential rational roots.'
       }
     }
   ]

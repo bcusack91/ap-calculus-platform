@@ -2,104 +2,81 @@ export const satTestDayPart7Data = {
   topicSlug: 'sat-test-day-strategy-sat',
   sections: [
     {
-      id: 'sat-t7-intro',
+      id: 'sat-test-p7-intro',
       type: 'text' as const,
       content: `
-# Review & Applications
+# 🎯 Post-Test & Score Analysis
 
-**Part 7 of 7 — Review & Applications**
+**Part 7 of 7 — Post-Test & Score Analysis**
 
-Take a diagnostic test first — know your baseline.
+Understanding your score report and planning next steps
 
-Focus on your weakest areas for the biggest score gains.
+This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+
+**Key Concepts in This Section:**
+- Core principles and definitions
+- Step-by-step problem-solving methods
+- Common SAT question patterns
+- Strategic tips for test day
       `
     },
     {
-      id: 'sat-t7-quiz1',
+      id: 'sat-test-p7-check',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+**Quick Check** 🔍
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Take a diagnostic test first — know…?',
+            question: 'Based on the concepts in this section, which approach is most effective?',
             options: [
-              'Simulate test conditions: timed, quiet, full-length practice tests.',
-              'Practice with official College Board materials.',
-              'Focus on your weakest areas for the biggest score gains.',
-              'Take a diagnostic test first — know your baseline.'
+              'Memorize formulas without understanding when to apply them',
+              'Understand the underlying concepts and practice with varied problems',
+              'Only practice problems you find easy to build confidence',
+              'Skip practice and rely on intuition during the test'
             ],
-            correctAnswer: 3,
-            explanation: 'Correct — Take a diagnostic test first — know your baseline. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'In the context of Review & Applications, which explains Key Insight?',
-            options: [
-              'Practice with official College Board materials.',
-              'Focus on your weakest areas for the biggest score gains.',
-              'Take a diagnostic test first — know your baseline.',
-              'Simulate test conditions: timed, quiet, full-length practice tests.'
-            ],
-            correctAnswer: 0,
-            explanation: 'Correct — Key Insight: Practice with official College Board materials. Be careful to distinguish between the different concepts in this topic.'
+            correctAnswer: 1,
+            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
           }
         ]
       }
     },
     {
-      id: 'sat-t7-detail',
+      id: 'sat-test-p7-detail',
       type: 'text' as const,
       content: `
-**Key Insight:** Practice with official College Board materials.
+**Detailed Concepts & Examples**
 
-**SAT Tip:** Simulate test conditions: timed, quiet, full-length practice tests.
+This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
+
+1. **Identify** the type of problem quickly
+2. **Apply** the correct method systematically
+3. **Verify** your answer makes sense in context
+
+Work through each example carefully before attempting the practice problems below.
       `
     },
     {
-      id: 'sat-t7-quiz2',
+      id: 'sat-test-p7-practice',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+**SAT-Style Questions** 📋
       `,
       exercise: {
         questions: [
           {
-            question: 'Regarding Review & Applications, which correctly describes SAT Tip?',
+            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
             options: [
-              'Take a diagnostic test first — know your baseline.',
-              'Practice with official College Board materials.',
-              'Focus on your weakest areas for the biggest score gains.',
-              'Simulate test conditions: timed, quiet, full-length practice tests.'
+              'Guess and move on quickly',
+              'Identify what the question is actually asking for',
+              'Try every formula you know until one works',
+              'Skip it permanently'
             ],
-            correctAnswer: 3,
-            explanation: 'Correct — SAT Tip: Simulate test conditions: timed, quiet, full-length practice tests. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            correctAnswer: 1,
+            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
           }
         ]
-      }
-    },
-    {
-      id: 'sat-t7-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Key Insight',
-            options: ['Focus on your weakest areas for the biggest score gains.', 'Take a diagnostic test first — know your baseline.', 'Practice with official College Board materials.', 'Simulate test conditions: timed, quiet, full-length practice tests.']
-          },
-          {
-            label: 'SAT Tip',
-            options: ['Focus on your weakest areas for the biggest score gains.', 'Practice with official College Board materials.', 'Take a diagnostic test first — know your baseline.', 'Simulate test conditions: timed, quiet, full-length practice tests.']
-          }
-        ],
-        correctAnswers: ['Practice with official College Board materials.', 'Simulate test conditions: timed, quiet, full-length practice tests.'],
-        hint1: 'Think about what each concept specifically describes in Review & Applications.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Review & Applications describes a specific idea. Key Insight: Practice with official College Board materials. SAT Tip: Simulate test conditions: timed, quiet, full-length practice tests.'
       }
     }
   ]

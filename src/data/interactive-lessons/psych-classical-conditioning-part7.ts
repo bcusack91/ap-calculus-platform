@@ -5,7 +5,7 @@ export const psychClassicalPart7Data = {
       id: 'class7-intro',
       type: 'text' as const,
       content: `
-# ## Synthesis & AP Review
+## Synthesis & AP Review
 
 **Part 7 of 7 — Synthesis & AP Review**
 
@@ -63,7 +63,7 @@ scenario analysis
       id: 'class7-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Classical conditioning = involuntary responses**
 - **Biological preparedness**: some associations learned easier

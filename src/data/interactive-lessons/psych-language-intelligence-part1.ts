@@ -63,7 +63,7 @@ babbling (4mo), first words (12mo), two-word stage (24mo)
       id: 'langu1-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Phonemes**: basic sound units (~40 in English)
 - **Morphemes**: smallest meaningful units (prefixes, suffixes, words)

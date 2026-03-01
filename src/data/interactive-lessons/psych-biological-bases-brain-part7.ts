@@ -2,123 +2,184 @@ export const psychBrainPart7Data = {
   topicSlug: 'biological-bases-brain',
   sections: [
     {
-      id: 'biolo7-intro',
+      id: 'biological-bases-brain-p7-s1-intro',
       type: 'text' as const,
       content: `
-# ## Synthesis & AP Review
+      # 🧠 Biological Bases and Brain
 
-**Part 7 of 7 — Synthesis & AP Review**
+      **Part 7 of 7 — AP Exam Synthesis**
 
-### 1. Brain plasticity and lateralization
+      In this part, you will connect core psychological vocabulary to realistic contexts and AP-style reasoning. Focus on mechanism first, then evidence.
 
-Brain plasticity and lateralization
+      ### Core Definitions
+      - **dopamine**: a neurotransmitter linked to reward, movement, and motivation
+      - **serotonin**: a neurotransmitter involved in mood, appetite, and sleep regulation
+      - **hippocampus**: a medial temporal structure essential for new explicit memories
 
-### 2. Split-brain research (Sperry)
+      ### Concrete Real-World Example
+      A team is studying integrating neural evidence in AP-style responses. They operationalize variables, compare plausible explanations, and look for the interpretation that best matches observed behavior instead of relying on intuition.
 
-Split-brain research (Sperry)
-
-### 3. Phineas Gage case study
-
-Phineas Gage case study
-
-### 4. AP exam
-
-brain structure identification
+      ### Why This Matters
+      Strong AP responses define terms precisely, apply them to evidence, and justify why one interpretation is stronger than alternatives.
       `
     },
     {
-      id: 'biolo7-quiz1',
+      id: 'biological-bases-brain-p7-s2-check',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+      **Concept Check** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Brain plasticity and lateralization?',
+            question: 'In a study about integrating neural evidence in AP-style responses, participants change behavior after repeatedly seeing the same cue. Which concept is the best fit?',
             options: [
-              'Split-brain research (Sperry)',
-              'Brain plasticity and lateralization',
-              'Phineas Gage case study',
-              'brain structure identification'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Brain plasticity and lateralization. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Select the statement that correctly describes Phineas Gage case study:',
-            options: [
-              'Brain plasticity and lateralization',
-              'brain structure identification',
-              'Phineas Gage case study',
-              'Split-brain research (Sperry)'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Phineas Gage case study. Be careful to distinguish between the different concepts in this topic.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'biolo7-detail',
-      type: 'text' as const,
-      content: `
-# ### Key Points
-
-- **Brain plasticity and lateralization**
-- **Split-brain research (Sperry)**
-- **Phineas Gage case study**
-- **AP exam**: brain structure identification
-      `
-    },
-    {
-      id: 'biolo7-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which concept relates directly to synthesis & ap review?',
-            options: [
-              'brain structure identification',
-              'Only biological factors',
-              'Exclusively cognitive processes',
-              'Mathematical formulas only'
+              'dopamine',
+              'amygdala',
+              'hippocampus',
+              'serotonin'
             ],
             correctAnswer: 0,
-            explanation: 'AP exam: brain structure identification'
+            explanation: 'dopamine is correct because it directly matches this mechanism: a neurotransmitter linked to reward, movement, and motivation. The distractors describe related but different processes.'
+          },
+          {
+            question: 'Researchers report that behavior shifts when participants receive a specific cue and then justify their choices afterward. Which concept best explains that pattern?',
+            options: [
+              'broca area',
+              'hippocampus',
+              'prefrontal cortex',
+              'serotonin'
+            ],
+            correctAnswer: 2,
+            explanation: 'prefrontal cortex is the strongest match here (frontal region supporting planning, inhibition, and decision-making). The other options do not explain both the cue-driven shift and the observed response pattern as directly.'
           }
         ]
       }
     },
     {
-      id: 'biolo7-dropdown',
+      id: 'biological-bases-brain-p7-s3-deep',
+      type: 'text' as const,
+      content: `
+      ## Deep Dive: Comparing Explanations with Evidence
+
+      When analyzing integrating neural evidence in AP-style responses, the best interpretation ties a clear psychological mechanism to measurable evidence.
+
+      | Theory / Concept | Core claim | Typical evidence | Common limitation |
+      |---|---|---|---|
+      | dopamine | a neurotransmitter linked to reward, movement, and motivation | experimental manipulation with random assignment | possible demand characteristics |
+      | serotonin | a neurotransmitter involved in mood, appetite, and sleep regulation | longitudinal trend with repeated measurement | third-variable risk in natural settings |
+      | hippocampus | a medial temporal structure essential for new explicit memories | cross-sectional comparison with matched groups | limited generalizability across cultures |
+      | amygdala | a limbic structure involved in emotional processing, especially threat | mixed-method evidence combining survey and behavioral indicators | measurement validity depends on construct quality |
+
+      ### Interpretation Strategy
+      1. Name the mechanism before describing outcomes.
+      2. Match the claim to the strongest available evidence type.
+      3. Acknowledge one limitation and explain whether it changes the conclusion.
+
+      This structure helps you earn reasoning points on free-response and avoid vague claims.
+      `
+    },
+    {
+      id: 'biological-bases-brain-p7-s4-input',
+      type: 'input-boxes' as const,
+      content: `
+      **Applied Recall (exact term answers)** ✍️
+
+      1) Write the concept that matches: a neurotransmitter linked to reward, movement, and motivation
+      2) Write the concept that matches: a neurotransmitter involved in mood, appetite, and sleep regulation
+      3) Write the concept that matches: a medial temporal structure essential for new explicit memories
+
+      Use the exact vocabulary term from this part.
+      `,
+      exercise: {
+        boxes: 3,
+        correctAnswers: ['dopamine', 'serotonin', 'hippocampus'],
+        hint1: 'Starts with: D',
+        hint2: 'Starts with: S',
+        hint3: 'Starts with: H',
+        explanation: 'Expected answers: dopamine, serotonin, and hippocampus. Each response should use the precise term connected to the definition cue.'
+      }
+    },
+    {
+      id: 'biological-bases-brain-p7-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Match the Concepts** 🔍
+      **Model Matching** 🔎
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Brain plasticity and lateralization',
-            options: ['Brain plasticity and lateralization', 'Phineas Gage case study', 'brain structure identification', 'Split-brain research (Sperry)']
+            label: 'Select the concept that best matches: a neurotransmitter linked to reward, movement, and motivation',
+            options: ['amygdala', 'dopamine', 'serotonin', 'hippocampus']
           },
           {
-            label: 'Split-brain research (Sperry)',
-            options: ['Brain plasticity and lateralization', 'Split-brain research (Sperry)', 'Phineas Gage case study', 'brain structure identification']
+            label: 'Select the concept that best matches: a neurotransmitter involved in mood, appetite, and sleep regulation',
+            options: ['hippocampus', 'broca area', 'serotonin', 'dopamine']
           },
           {
-            label: 'Phineas Gage case study',
-            options: ['Brain plasticity and lateralization', 'Phineas Gage case study', 'Split-brain research (Sperry)', 'brain structure identification']
+            label: 'Select the concept that best matches: a medial temporal structure essential for new explicit memories',
+            options: ['prefrontal cortex', 'hippocampus', 'amygdala', 'dopamine']
           }
         ],
-        correctAnswers: ['Brain plasticity and lateralization', 'Split-brain research (Sperry)', 'Phineas Gage case study'],
-        hint1: 'Think about what each concept specifically describes in Synthesis & AP Review.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Synthesis & AP Review describes a specific idea. Brain plasticity and lateralization. Split-brain research (Sperry). Phineas Gage case study.'
+        correctAnswers: ['dopamine', 'serotonin', 'hippocampus'],
+        hint1: 'Start by matching the key mechanism in each prompt to the most specific concept.',
+        hint2: 'Eliminate options that describe a different level of analysis (biological vs cognitive vs social).',
+        hint3: 'Use the definition language from this part to avoid near-miss terms.',
+        explanation: 'Correct matches are dopamine, serotonin, and hippocampus. These choices align with the mechanism-language in each definition, not just broad topic similarity.'
+      }
+    },
+    {
+      id: 'biological-bases-brain-p7-s6-strategy',
+      type: 'text' as const,
+      content: `
+      ## Common Misconceptions and Exam Strategy
+
+      ### Misconceptions to Avoid
+      - Single regions rarely act alone; cognition emerges from interacting networks.
+      - fMRI maps blood flow, not direct electrical firing.
+      - Neurotransmitters are context dependent; the same molecule can have different effects by pathway.
+      - Correlation in brain imaging does not by itself prove causation.
+
+      ### AP Strategy Moves
+      - Define the target concept in one precise sentence before giving examples.
+      - In scenario questions about integrating neural evidence in AP-style responses, identify the manipulated variable and measured outcome.
+      - Use one competing explanation and explain why it is weaker.
+      - If data are provided, mention trend direction and at least one design limitation.
+
+      This combination of precision and evidence improves both multiple-choice accuracy and free-response scoring.
+      `
+    },
+    {
+      id: 'biological-bases-brain-p7-s7-applied',
+      type: 'multiple-choice' as const,
+      content: `
+      **Applied Scenarios** 🎯
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'A team investigating integrating neural evidence in AP-style responses finds that participants rely on a persuasive cue when they are distracted, but use argument quality when they are highly focused. Which concept best captures the focused-processing route?',
+            options: [
+              'amygdala',
+              'serotonin',
+              'hippocampus',
+              'dopamine'
+            ],
+            correctAnswer: 0,
+            explanation: 'amygdala is best because it reflects this mechanism (a limbic structure involved in emotional processing, especially threat). The other options describe different levels of explanation or related constructs.'
+          },
+          {
+            question: 'After an intervention, scores improve in the treatment group but not in a matched comparison group. Which interpretation is most defensible for the targeted mechanism?',
+            options: [
+              'serotonin',
+              'prefrontal cortex',
+              'hippocampus',
+              'broca area'
+            ],
+            correctAnswer: 1,
+            explanation: 'prefrontal cortex is the strongest interpretation because it maps to the measured pattern and proposed mechanism: frontal region supporting planning, inhibition, and decision-making. Good AP reasoning also notes alternative explanations and design limits.'
+          }
+        ]
       }
     }
   ]

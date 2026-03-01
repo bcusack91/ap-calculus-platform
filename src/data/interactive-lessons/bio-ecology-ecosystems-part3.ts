@@ -2,113 +2,193 @@ export const bioEcologyPart3Data = {
   topicSlug: 'ecology-ecosystems',
   sections: [
     {
-      id: 'ecol3-intro-p3',
+      id: 'bio-ecology-ecosystems-p3-s1-intro',
       type: 'text' as const,
       content: `
-# ## Ecosystem Structure
-
-**Part 3 of 7 — Ecosystem Structure**
-
-1. Producers (autotrophs): make organic molecules from inorganic
-2. Consumers (heterotrophs): eat other organisms
-3. Decomposers: break down dead material
-4. Trophic levels: producers → primary consumers → secondary → tertiary
+      ## Ecology and Ecosystems: Biogeochemical Cycles
+      
+      **Part 3 of 7**
+      
+      In this lesson, you will connect mechanism-level biology to exam-ready reasoning through carbon and nitrogen movement across reservoirs.
+      
+      ### Worked biological example
+      A student team investigates carbon and nitrogen movement across reservoirs. Their first interpretation step is to identify how **trophic level** and **primary productivity** work together in the same pathway.
+      
+      - They classify the primary signal using **trophic level**: position in feeding hierarchy based on energy source.
+      - They trace the downstream response using **primary productivity**: rate at which autotrophs convert energy into biomass.
+      - They then compare outcomes with **decomposer** and **mutualism** to separate mechanism from correlation.
+      
+      ### Key terms for this part
+      - **trophic level**
+      - **primary productivity**
+      - **decomposer**
+      - **mutualism**
       `
     },
     {
-      id: 'ecol3-quiz1',
+      id: 'bio-ecology-ecosystems-p3-s2-mcq-core',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+      **Checkpoint MCQ (2 questions)**
       `,
       exercise: {
         questions: [
           {
-            question: 'What does "Producers (autotrophs)" refer to in biology?',
+            question: 'For Biogeochemical Cycles, what best describes trophic level?',
             options: [
-              'eat other organisms',
-              'break down dead material',
-              'producers → primary consumers → secondary → tertiary',
-              'make organic molecules from inorganic'
+              'organism that recycles nutrients from organic matter',
+              'position in feeding hierarchy based on energy source',
+              'rate at which autotrophs convert energy into biomass',
+              'interaction where both species gain fitness benefits'
             ],
-            correctAnswer: 3,
-            explanation: 'Correct — Producers (autotrophs): make organic molecules from inorganic. The other options describe different concepts from this topic.'
+            correctAnswer: 1,
+            explanation: 'trophic level is best matched with: position in feeding hierarchy based on energy source.'
           },
           {
-            question: 'In the context of Ecosystem Structure, which explains Decomposers?',
+            question: 'In this part\'s context, what is the strongest definition of primary productivity?',
             options: [
-              'make organic molecules from inorganic',
-              'producers → primary consumers → secondary → tertiary',
-              'eat other organisms',
-              'break down dead material'
+              'interaction where species reduce each other\'s resource access',
+              'organism that recycles nutrients from organic matter',
+              'position in feeding hierarchy based on energy source',
+              'rate at which autotrophs convert energy into biomass'
             ],
             correctAnswer: 3,
-            explanation: 'Correct — Decomposers: break down dead material. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'primary productivity is best matched with: rate at which autotrophs convert energy into biomass.'
           }
         ]
       }
     },
     {
-      id: 'ecol3-detail-p3',
+      id: 'bio-ecology-ecosystems-p3-s3-deep-dive',
       type: 'text' as const,
       content: `
-# ### Key Details
-
-- **Producers (autotrophs)**: make organic molecules from inorganic
-- **Consumers (heterotrophs)**: eat other organisms
-- **Decomposers**: break down dead material
-- **Trophic levels**: producers → primary consumers → secondary → tertiary
+      ### Deep-Dive Map: Biogeochemical Cycles
+      
+      Use this diagram-style summary to track causation and evidence.
+      
+      #### Flow logic
+      - **Signal/Input** → trophic level
+      - **Immediate processing** → primary productivity
+      - **System-level consequence** → decomposer
+      - **Measured readout** → mutualism
+      
+      #### Mechanism table
+      | Component | Biological role | Typical evidence pattern |
+      |---|---|---|
+      | trophic level | position in feeding hierarchy based on energy source | Early shift in the primary variable |
+      | primary productivity | rate at which autotrophs convert energy into biomass | Mid-pathway change in process rate |
+      | decomposer | organism that recycles nutrients from organic matter | Downstream phenotype trend |
+      | mutualism | interaction where both species gain fitness benefits | Quantifiable endpoint in data summary |
+      
+      #### Reasoning checkpoints
+      1. Name the mechanism before describing the trend line.
+      2. Separate proximate mechanism from ecological or historical context.
+      3. Verify that each claim is tied to a measurable biological readout.
       `
     },
     {
-      id: 'ecol3-quiz2',
-      type: 'multiple-choice' as const,
+      id: 'bio-ecology-ecosystems-p3-s4-input',
+      type: 'input-boxes' as const,
       content: `
-**Check Your Understanding** 🎯
+      **Input Practice — concrete vocabulary retrieval**
+      
+      Fill in each blank with the exact biological term.
+      
+      1) Term for this definition: **position in feeding hierarchy based on energy source**
+      2) Term for this definition: **rate at which autotrophs convert energy into biomass**
+      3) Term for this definition: **organism that recycles nutrients from organic matter**
       `,
       exercise: {
-        questions: [
-          {
-            question: 'Which statement about Trophic levels is correct?',
-            options: [
-              'make organic molecules from inorganic',
-              'break down dead material',
-              'eat other organisms',
-              'producers → primary consumers → secondary → tertiary'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Trophic levels: producers → primary consumers → secondary → tertiary. Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
+        boxes: 3,
+        correctAnswers: ['trophic level', 'primary productivity', 'decomposer'],
+        hint1: 'Start with the first item: it is the mechanism term used when a process is described as \'position in feeding hierarchy based on energy source\'.',
+        hint2: 'Second blank points to primary productivity; think about the role \'rate at which autotrophs convert energy into biomass\'.',
+        hint3: 'Third blank is decomposer; connect it to \'organism that recycles nutrients from organic matter\'.',
+        explanation: 'Correct set: trophic level, primary productivity, decomposer. These three terms define the core mechanism chain for Biogeochemical Cycles.'
       }
     },
     {
-      id: 'ecol3-dropdown',
+      id: 'bio-ecology-ecosystems-p3-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Match the Concepts** 🔍
+      **Dropdown matching (3 prompts)**
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Producers (autotrophs)',
-            options: ['break down dead material', 'producers → primary consumers → secondary → tertiary', 'eat other organisms', 'make organic molecules from inorganic']
+            label: 'trophic level',
+            options: ['interaction where both species gain fitness benefits', 'organism that recycles nutrients from organic matter', 'position in feeding hierarchy based on energy source', 'rate at which autotrophs convert energy into biomass']
           },
           {
-            label: 'Consumers (heterotrophs)',
-            options: ['make organic molecules from inorganic', 'eat other organisms', 'producers → primary consumers → secondary → tertiary', 'break down dead material']
+            label: 'primary productivity',
+            options: ['rate at which autotrophs convert energy into biomass', 'interaction where species reduce each other\'s resource access', 'interaction where both species gain fitness benefits', 'organism that recycles nutrients from organic matter']
           },
           {
-            label: 'Decomposers',
-            options: ['break down dead material', 'make organic molecules from inorganic', 'producers → primary consumers → secondary → tertiary', 'eat other organisms']
+            label: 'decomposer',
+            options: ['interaction where both species gain fitness benefits', 'directional change in community composition over time', 'interaction where species reduce each other\'s resource access', 'organism that recycles nutrients from organic matter']
           }
         ],
-        correctAnswers: ['make organic molecules from inorganic', 'eat other organisms', 'break down dead material'],
-        hint1: 'Think about what each concept specifically describes in Ecosystem Structure.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Ecosystem Structure describes a specific idea. Producers (autotrophs): make organic molecules from inorganic. Consumers (heterotrophs): eat other organisms. Decomposers: break down dead material.'
+        correctAnswers: ['position in feeding hierarchy based on energy source', 'rate at which autotrophs convert energy into biomass', 'organism that recycles nutrients from organic matter'],
+        hint1: 'Match each term to the definition that captures mechanism, not just keywords.',
+        hint2: 'If two definitions feel close, choose the one with the exact process direction.',
+        hint3: 'Read each label out loud, then pick the option that completes a causal sentence.',
+        explanation: 'trophic level, primary productivity, and decomposer should map to their exact mechanistic definitions. When options look similar, anchor your choice to process direction and biological scale.'
+      }
+    },
+    {
+      id: 'bio-ecology-ecosystems-p3-s6-strategy',
+      type: 'text' as const,
+      content: `
+      ### ACT/AP strategy and misconception repair
+      
+      On ACT/AP style prompts, score gains come from linking vocabulary to evidence, not from isolated memorization.
+      
+      #### Strategy sequence
+      1. **Name the mechanism first**: identify whether the item is asking for process, structure, regulation, or population effect.
+      2. **Use a causation sentence**: "Because trophic level position in feeding hierarchy based on energy source, we expect ...".
+      3. **Audit units and scale**: molecular claims, cellular claims, and ecosystem claims should not be mixed.
+      
+      #### Common misconceptions to avoid
+      - Succession does not imply a fixed endpoint in every environment.
+      - Species interactions can shift with context, season, and disturbance.
+      - Energy flows one way through ecosystems; nutrients cycle repeatedly.
+      
+      #### Exam execution tip
+      When two answer choices sound plausible, prefer the one that includes a direct mechanism and a measurable biological consequence.
+      `
+    },
+    {
+      id: 'bio-ecology-ecosystems-p3-s7-mcq-final',
+      type: 'multiple-choice' as const,
+      content: `
+      **Final application MCQ (2 questions)**
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'In carbon and nitrogen movement across reservoirs, the observed pattern is: interaction where both species gain fitness benefits. What term should anchor the explanation?',
+            options: [
+              'decomposer',
+              'mutualism',
+              'primary productivity',
+              'trophic level'
+            ],
+            correctAnswer: 1,
+            explanation: 'Use mutualism because it directly maps to the described biological pattern: interaction where both species gain fitness benefits.'
+          },
+          {
+            question: 'In an AP-style free-response about biogeochemical cycles, the observed pattern is: interaction where species reduce each other\'s resource access. What term should anchor the explanation?',
+            options: [
+              'succession',
+              'mutualism',
+              'decomposer',
+              'competition'
+            ],
+            correctAnswer: 3,
+            explanation: 'Use competition because it directly maps to the described biological pattern: interaction where species reduce each other\'s resource access.'
+          }
+        ]
       }
     }
   ]
-}
+};

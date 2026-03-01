@@ -2,108 +2,81 @@ export const satCalcStrategyPart2Data = {
   topicSlug: 'sat-calculator-strategy-sat',
   sections: [
     {
-      id: 'sat-c2-intro',
+      id: 'sat-calc-p2-intro',
       type: 'text' as const,
       content: `
-# When to Use (and Skip) the Calculator
+# 📊 Graphing Calculator Tips
 
-**Part 2 of 7 — When to Use (and Skip) the Calculator**
+**Part 2 of 7 — Graphing Calculator Tips**
 
-Use calculator for: complex arithmetic, graphing to check, table of values.
+Using graphs to find intersections, zeros, and extrema
 
-Skip calculator for: simple algebra, factoring, conceptual questions.
+This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+
+**Key Concepts in This Section:**
+- Core principles and definitions
+- Step-by-step problem-solving methods
+- Common SAT question patterns
+- Strategic tips for test day
       `
     },
     {
-      id: 'sat-c2-quiz1',
+      id: 'sat-calc-p2-check',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+**Quick Check** 🔍
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Use calculator for?',
+            question: 'Based on the concepts in this section, which approach is most effective?',
             options: [
-              'simple algebra, factoring, conceptual questions.',
-              'Rule of thumb: if you can solve in under 30 seconds by hand, don\'t reach for the calculator.',
-              'complex arithmetic, graphing to check, table of values.',
-              'Mental math is often faster than typing into calculator.'
+              'Memorize formulas without understanding when to apply them',
+              'Understand the underlying concepts and practice with varied problems',
+              'Only practice problems you find easy to build confidence',
+              'Skip practice and rely on intuition during the test'
             ],
-            correctAnswer: 2,
-            explanation: 'Correct — Use calculator for: complex arithmetic, graphing to check, table of values. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Select the statement that correctly describes Key Insight:',
-            options: [
-              'Mental math is often faster than typing into calculator.',
-              'complex arithmetic, graphing to check, table of values.',
-              'simple algebra, factoring, conceptual questions.',
-              'Rule of thumb: if you can solve in under 30 seconds by hand, don\'t reach for the calculator.'
-            ],
-            correctAnswer: 0,
-            explanation: 'Correct — Key Insight: Mental math is often faster than typing into calculator. Be careful to distinguish between the different concepts in this topic.'
+            correctAnswer: 1,
+            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
           }
         ]
       }
     },
     {
-      id: 'sat-c2-detail',
+      id: 'sat-calc-p2-detail',
       type: 'text' as const,
       content: `
-**Key Insight:** Mental math is often faster than typing into calculator.
+**Detailed Concepts & Examples**
 
-**SAT Tip:** Rule of thumb: if you can solve in under 30 seconds by hand, don't reach for the calculator.
+This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
+
+1. **Identify** the type of problem quickly
+2. **Apply** the correct method systematically
+3. **Verify** your answer makes sense in context
+
+Work through each example carefully before attempting the practice problems below.
       `
     },
     {
-      id: 'sat-c2-quiz2',
+      id: 'sat-calc-p2-practice',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+**SAT-Style Questions** 📋
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement about SAT Tip is correct?',
+            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
             options: [
-              'Mental math is often faster than typing into calculator.',
-              'simple algebra, factoring, conceptual questions.',
-              'complex arithmetic, graphing to check, table of values.',
-              'Rule of thumb: if you can solve in under 30 seconds by hand, don\'t reach for the calculator.'
+              'Guess and move on quickly',
+              'Identify what the question is actually asking for',
+              'Try every formula you know until one works',
+              'Skip it permanently'
             ],
-            correctAnswer: 3,
-            explanation: 'Correct — SAT Tip: Rule of thumb: if you can solve in under 30 seconds by hand, don\'t reach for the calculator. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            correctAnswer: 1,
+            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
           }
         ]
-      }
-    },
-    {
-      id: 'sat-c2-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Use calculator for',
-            options: ['Rule of thumb: if you can solve in under 30 seconds by hand, don\'t reach for the calculator.', 'complex arithmetic, graphing to check, table of values.', 'Mental math is often faster than typing into calculator.', 'simple algebra, factoring, conceptual questions.']
-          },
-          {
-            label: 'Skip calculator for',
-            options: ['simple algebra, factoring, conceptual questions.', 'complex arithmetic, graphing to check, table of values.', 'Rule of thumb: if you can solve in under 30 seconds by hand, don\'t reach for the calculator.', 'Mental math is often faster than typing into calculator.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['simple algebra, factoring, conceptual questions.', 'Rule of thumb: if you can solve in under 30 seconds by hand, don\'t reach for the calculator.', 'complex arithmetic, graphing to check, table of values.', 'Mental math is often faster than typing into calculator.']
-          }
-        ],
-        correctAnswers: ['complex arithmetic, graphing to check, table of values.', 'simple algebra, factoring, conceptual questions.', 'Mental math is often faster than typing into calculator.'],
-        hint1: 'Think about what each concept specifically describes in When to Use (and Skip) the Calculator.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in When to Use (and Skip) the Calculator describes a specific idea. Use calculator for: complex arithmetic, graphing to check, table of values. Skip calculator for: simple algebra, factoring, conceptual questions. Key Insight: Mental math is often faster than typing into calculator.'
       }
     }
   ]

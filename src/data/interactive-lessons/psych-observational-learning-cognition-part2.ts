@@ -5,7 +5,7 @@ export const psychObservationalPart2Data = {
       id: 'obser2-intro',
       type: 'text' as const,
       content: `
-# ## Modeling Processes
+## Modeling Processes
 
 **Part 2 of 7 — Modeling Processes**
 
@@ -63,7 +63,7 @@ must want to imitate (vicarious reinforcement)
       id: 'obser2-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Attention**: must observe the model
 - **Retention**: must remember the behavior

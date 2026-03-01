@@ -2,108 +2,81 @@ export const satProbSolvDataPart7Data = {
   topicSlug: 'sat-problem-solving-data-sat',
   sections: [
     {
-      id: 'sat-p7-intro',
+      id: 'sat-prob-p7-intro',
       type: 'text' as const,
       content: `
-# Review & Applications
+# 🎯 Review & Mixed Practice
 
-**Part 7 of 7 — Review & Applications**
+**Part 7 of 7 — Review & Mixed Practice**
 
-Random sampling: every member has an equal chance of being selected.
+Mixed data analysis problems
 
-Random assignment: participants are randomly placed in treatment groups.
+This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+
+**Key Concepts in This Section:**
+- Core principles and definitions
+- Step-by-step problem-solving methods
+- Common SAT question patterns
+- Strategic tips for test day
       `
     },
     {
-      id: 'sat-p7-quiz1',
+      id: 'sat-prob-p7-check',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+**Quick Check** 🔍
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Random sampling?',
+            question: 'Based on the concepts in this section, which approach is most effective?',
             options: [
-              'participants are randomly placed in treatment groups.',
-              'Observational study: no treatment applied — can show association but not causation.',
-              'Experiment with random assignment: CAN establish causation.',
-              'every member has an equal chance of being selected.'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Random sampling: every member has an equal chance of being selected. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'In the context of Review & Applications, which explains Key Insight?',
-            options: [
-              'participants are randomly placed in treatment groups.',
-              'Observational study: no treatment applied — can show association but not causation.',
-              'every member has an equal chance of being selected.',
-              'Experiment with random assignment: CAN establish causation.'
+              'Memorize formulas without understanding when to apply them',
+              'Understand the underlying concepts and practice with varied problems',
+              'Only practice problems you find easy to build confidence',
+              'Skip practice and rely on intuition during the test'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — Key Insight: Observational study: no treatment applied — can show association but not causation. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
           }
         ]
       }
     },
     {
-      id: 'sat-p7-detail',
+      id: 'sat-prob-p7-detail',
       type: 'text' as const,
       content: `
-**Key Insight:** Observational study: no treatment applied — can show association but not causation.
+**Detailed Concepts & Examples**
 
-**SAT Tip:** Experiment with random assignment: CAN establish causation.
+This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
+
+1. **Identify** the type of problem quickly
+2. **Apply** the correct method systematically
+3. **Verify** your answer makes sense in context
+
+Work through each example carefully before attempting the practice problems below.
       `
     },
     {
-      id: 'sat-p7-quiz2',
+      id: 'sat-prob-p7-practice',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+**SAT-Style Questions** 📋
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement about SAT Tip is correct?',
+            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
             options: [
-              'Observational study: no treatment applied — can show association but not causation.',
-              'participants are randomly placed in treatment groups.',
-              'Experiment with random assignment: CAN establish causation.',
-              'every member has an equal chance of being selected.'
+              'Guess and move on quickly',
+              'Identify what the question is actually asking for',
+              'Try every formula you know until one works',
+              'Skip it permanently'
             ],
-            correctAnswer: 2,
-            explanation: 'Correct — SAT Tip: Experiment with random assignment: CAN establish causation. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            correctAnswer: 1,
+            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
           }
         ]
-      }
-    },
-    {
-      id: 'sat-p7-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Random sampling',
-            options: ['every member has an equal chance of being selected.', 'Observational study: no treatment applied — can show association but not causation.', 'Experiment with random assignment: CAN establish causation.', 'participants are randomly placed in treatment groups.']
-          },
-          {
-            label: 'Random assignment',
-            options: ['Experiment with random assignment: CAN establish causation.', 'Observational study: no treatment applied — can show association but not causation.', 'every member has an equal chance of being selected.', 'participants are randomly placed in treatment groups.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['Experiment with random assignment: CAN establish causation.', 'participants are randomly placed in treatment groups.', 'Observational study: no treatment applied — can show association but not causation.', 'every member has an equal chance of being selected.']
-          }
-        ],
-        correctAnswers: ['every member has an equal chance of being selected.', 'participants are randomly placed in treatment groups.', 'Observational study: no treatment applied — can show association but not causation.'],
-        hint1: 'Think about what each concept specifically describes in Review & Applications.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Review & Applications describes a specific idea. Random sampling: every member has an equal chance of being selected. Random assignment: participants are randomly placed in treatment groups. Key Insight: Observational study: no treatment applied — can show association but not causation.'
       }
     }
   ]

@@ -2,124 +2,185 @@ export const oChemAromaticPart2Data = {
   topicSlug: 'aromatic-compounds-benzene',
   sections: [
     {
-      id: 'aroma2-intro',
+      id: 'ochem-aromatic-compounds-benzene-p2-s1-intro',
       type: 'text' as const,
       content: `
-# Benzene Structure
-
-**Part 2 of 7 — Benzene Structure**
-
-### 1. Benzene
-
-six equivalent C-H bonds, all 1.39 Å
-
-### 2. Two equivalent resonance structures
-
-Two equivalent resonance structures
-
-### 3. Actual structure is a hybrid (delocalized)
-
-Actual structure is a hybrid (delocalized)
-
-### 4. Heat of hydrogenation is 150 kJ/mol LESS than expected (resonance energy)
-
-Heat of hydrogenation is 150 kJ/mol LESS than expected (resonance energy)
+      # Aromatic Compounds and Benzene
+      
+      **Part 2 of 7 — Resonance and Aromatic Stabilization**
+      
+      This part focuses on drawing resonance contributors without violating octets. The goal is to connect vocabulary, curved-arrow reasoning, and product prediction in one workflow.
+      
+      ### Mechanism vocabulary for this part
+      - **antiaromaticity**: cyclic planar conjugated system with 4n pi electrons
+      - **nonaromatic**: fails planarity or conjugation requirement
+      - **Huckel rule**: 4n+2 pi electron count predicts aromatic stabilization
+      - **ring current**: magnetic anisotropy signature of aromatic systems
+      
+      ### Worked reaction example
+      A representative transformation uses **HNO3, H2SO4**.
+      
+      1. Identify the governing mechanism: **nitration**.
+      2. Predict the dominant product pattern: **nitrobenzene derivative**.
+      3. Justify with a mechanistic note: forms nitronium electrophile.
+      
+      Exam tip: state mechanism class before drawing product. It reduces avoidable regio- and stereochemistry errors.
       `
     },
     {
-      id: 'aroma2-quiz1',
+      id: 'ochem-aromatic-compounds-benzene-p2-s2-mcq-core',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+      **Mechanism checkpoint (2 questions)**
       `,
       exercise: {
         questions: [
           {
-            question: 'What does "Benzene" refer to in this topic?',
+            question: 'Choose the best definition for antiaromaticity.',
             options: [
-              'Actual structure is a hybrid (delocalized)',
-              'Heat of hydrogenation is 150 kJ/mol LESS than expected (resonance energy)',
-              'Two equivalent resonance structures',
-              'six equivalent C-H bonds, all 1.39 Å'
+              '4n+2 pi electron count predicts aromatic stabilization',
+              'magnetic anisotropy signature of aromatic systems',
+              'fails planarity or conjugation requirement',
+              'cyclic planar conjugated system with 4n pi electrons'
             ],
             correctAnswer: 3,
-            explanation: 'Correct — Benzene: six equivalent C-H bonds, all 1.39 Å. The other options describe different concepts from this topic.'
+            explanation: 'antiaromaticity is defined as: cyclic planar conjugated system with 4n pi electrons.'
           },
           {
-            question: 'Which of the following is true about Actual structure is a hybrid…?',
+            question: 'A reaction in this lesson uses SO3, H2SO4 and proceeds by sulfonation. What product pattern should you predict first?',
             options: [
-              'Actual structure is a hybrid (delocalized)',
-              'six equivalent C-H bonds, all 1.39 Å',
-              'Heat of hydrogenation is 150 kJ/mol LESS than expected (resonance energy)',
-              'Two equivalent resonance structures'
+              'aryl ketone',
+              'aryl sulfonic acid',
+              'alkylbenzene',
+              'nitrobenzene derivative'
             ],
-            correctAnswer: 0,
-            explanation: 'Correct — Actual structure is a hybrid (delocalized). Be careful to distinguish between the different concepts in this topic.'
+            correctAnswer: 1,
+            explanation: 'With SO3, H2SO4, the benchmark outcome is aryl sulfonic acid. Mechanistic anchor: reversible under steam/acid.'
           }
         ]
       }
     },
     {
-      id: 'aroma2-detail',
+      id: 'ochem-aromatic-compounds-benzene-p2-s3-deep-dive',
       type: 'text' as const,
       content: `
-### Key Concepts Summary
-
-- **Benzene**: six equivalent C-H bonds, all 1.39 Å
-- **Two equivalent resonance structures**
-- **Actual structure is a hybrid (delocalized)**
-- **Heat of hydrogenation is 150 kJ/mol LESS than expected (resonance energy)**
+      ## Deep-Dive: Reaction Pattern Table
+      
+      Use this table as a rapid decision grid.
+      
+      | Reagents | Conditions / Mechanistic Trigger | Product Pattern | Why it works |
+      |---|---|---|---|
+      | HNO3, H2SO4 | nitration | nitrobenzene derivative | forms nitronium electrophile |
+      | SO3, H2SO4 | sulfonation | aryl sulfonic acid | reversible under steam/acid |
+      | RCl, AlCl3 | Friedel-Crafts alkylation | alkylbenzene | carbocation rearrangement possible |
+      | RCOCl, AlCl3 | Friedel-Crafts acylation | aryl ketone | no acylium rearrangement |
+      
+      ### Fast interpretation protocol
+      1. Map reagent set to mechanism family.
+      2. Apply regio- or stereochemical rule attached to that family.
+      3. Check whether rearrangement, equilibration, or reversibility changes the major product call.
       `
     },
     {
-      id: 'aroma2-quiz2',
-      type: 'multiple-choice' as const,
+      id: 'ochem-aromatic-compounds-benzene-p2-s4-input',
+      type: 'input-boxes' as const,
       content: `
-**Concept Check** 🎯
+      **Input Practice — enter exact chemistry terms**
+      
+      1) Term for: cyclic planar conjugated system with 4n pi electrons
+      2) Term for: fails planarity or conjugation requirement
+      3) Product pattern expected under HNO3, H2SO4
       `,
       exercise: {
-        questions: [
-          {
-            question: 'Which concept relates directly to benzene structure?',
-            options: [
-              'Heat of hydrogenation is 150 kJ/mol LESS than expected (resonance energy)',
-              'Only inorganic compounds',
-              'Exclusively gas-phase reactions',
-              'This applies only to polymers'
-            ],
-            correctAnswer: 0,
-            explanation: 'Heat of hydrogenation is 150 kJ/mol LESS than expected (resonance energy)'
-          }
-        ]
+        boxes: 3,
+        correctAnswers: ['antiaromaticity', 'nonaromatic', 'nitrobenzene derivative'],
+        hint1: 'Blank 1 is the vocabulary term paired with: cyclic planar conjugated system with 4n pi electrons.',
+        hint2: 'Blank 2 corresponds to fails planarity or conjugation requirement.',
+        hint3: 'Use the worked example: HNO3, H2SO4 gives nitrobenzene derivative.',
+        explanation: 'Correct entries: antiaromaticity, nonaromatic, and nitrobenzene derivative. These anchor mechanism ID, vocabulary precision, and product prediction.'
       }
     },
     {
-      id: 'aroma2-dropdown',
+      id: 'ochem-aromatic-compounds-benzene-p2-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Match the Concepts** 🔍
+      **Dropdown matching (3 prompts)**
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Benzene',
-            options: ['Two equivalent resonance structures', 'six equivalent C-H bonds, all 1.39 Å', 'Heat of hydrogenation is 150 kJ/mol LESS than expected (resonance energy)', 'Actual structure is a hybrid (delocalized)']
+            label: 'Huckel rule',
+            options: ['magnetic anisotropy signature of aromatic systems', '4n+2 pi electron count predicts aromatic stabilization', 'fails planarity or conjugation requirement', 'cyclic planar conjugated system with 4n pi electrons']
           },
           {
-            label: 'Two equivalent resonance structures',
-            options: ['Two equivalent resonance structures', 'six equivalent C-H bonds, all 1.39 Å', 'Actual structure is a hybrid (delocalized)', 'Heat of hydrogenation is 150 kJ/mol LESS than expected (resonance energy)']
+            label: 'Expected pattern from SO3, H2SO4',
+            options: ['aryl sulfonic acid', 'alkylbenzene', 'nitrobenzene derivative', 'aryl ketone']
           },
           {
-            label: 'Actual structure is a hybrid…',
-            options: ['Heat of hydrogenation is 150 kJ/mol LESS than expected (resonance energy)', 'Two equivalent resonance structures', 'six equivalent C-H bonds, all 1.39 Å', 'Actual structure is a hybrid (delocalized)']
+            label: 'Best exam strategy statement',
+            options: ['Benzylic oxidation needs at least one benzylic hydrogen.', 'Mechanism labels should be tied to observed bond changes, not memorized by reagent names alone.', 'Friedel-Crafts alkylation can over-alkylate activated rings.', 'Not every resonance drawing represents equivalent contributor weight.']
           }
         ],
-        correctAnswers: ['six equivalent C-H bonds, all 1.39 Å', 'Two equivalent resonance structures', 'Actual structure is a hybrid (delocalized)'],
-        hint1: 'Think about what each concept specifically describes in Benzene Structure.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Benzene Structure describes a specific idea. Benzene: six equivalent C-H bonds, all 1.39 Å. Two equivalent resonance structures. Actual structure is a hybrid (delocalized).'
+        correctAnswers: ['4n+2 pi electron count predicts aromatic stabilization', 'aryl sulfonic acid', 'Mechanism labels should be tied to observed bond changes, not memorized by reagent names alone.'],
+        hint1: 'First align each prompt with mechanism language before reading all options.',
+        hint2: 'For reagent prompts, eliminate outcomes that violate known regio/stereo rules.',
+        hint3: 'For strategy prompts, pick the statement that links mechanism evidence to product prediction.',
+        explanation: 'Correct matches combine mechanistic definition, reagent outcome, and exam execution strategy.'
+      }
+    },
+    {
+      id: 'ochem-aromatic-compounds-benzene-p2-s6-strategy',
+      type: 'text' as const,
+      content: `
+      ## Strategy: Prediction Traps and Exam Techniques
+      
+      ### Common traps in this part
+      - Friedel-Crafts alkylation can over-alkylate activated rings.
+      - Not every resonance drawing represents equivalent contributor weight.
+      - Benzylic oxidation needs at least one benzylic hydrogen.
+      
+      ### High-yield exam sequence
+      1. **Read reagents before substrate details** to classify mechanism class quickly.
+      2. **Mark the reactive site** (electrophilic carbon, acidic alpha-carbon, benzylic/allylic position, or aromatic position).
+      3. **Commit to one major-product logic path** before checking answer choices.
+      4. **Audit stereochemistry and regiochemistry last** so you do not lose points on orientation errors.
+      
+      ### Timing technique
+      If two options differ only by orientation or placement, spend 10 seconds restating the governing rule out loud (Markovnikov, anti addition, kinetic control, etc.) before selecting.
+      `
+    },
+    {
+      id: 'ochem-aromatic-compounds-benzene-p2-s7-mcq-final',
+      type: 'multiple-choice' as const,
+      content: `
+      **Applied synthesis/mechanism check (2 questions)**
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'In a synthesis sequence centered on resonance and aromatic stabilization, a step uses RCl, AlCl3. Which major product pattern is most defensible?',
+            options: [
+              'alkylbenzene',
+              'aryl ketone',
+              'nitrobenzene derivative',
+              'aryl sulfonic acid'
+            ],
+            correctAnswer: 0,
+            explanation: 'RCl, AlCl3 is classically associated with alkylbenzene because carbocation rearrangement possible.'
+          },
+          {
+            question: 'A mechanism rationale cites resonance contributor: valid Lewis structure sharing electron delocalization. Which interpretation applies this idea correctly in product prediction?',
+            options: [
+              'Ignore resonance contributor and choose products only by molecular weight.',
+              'Use resonance contributor only after final answer choice selection.',
+              'Use resonance contributor to justify why the pathway favors aryl ketone under RCOCl, AlCl3.',
+              'Treat resonance contributor as a naming convention unrelated to mechanism.'
+            ],
+            correctAnswer: 2,
+            explanation: 'The correct approach applies resonance contributor directly to mechanism and product control. In this context, RCOCl, AlCl3 aligns with aryl ketone.'
+          }
+        ]
       }
     }
   ]
-}
+};

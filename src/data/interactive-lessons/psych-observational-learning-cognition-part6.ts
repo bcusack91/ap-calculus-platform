@@ -5,7 +5,7 @@ export const psychObservationalPart6Data = {
       id: 'obser6-intro',
       type: 'text' as const,
       content: `
-# ## Problem-Solving Workshop
+## Problem-Solving Workshop
 
 **Part 6 of 7 — Problem-Solving Workshop**
 
@@ -63,7 +63,7 @@ Predicting learning outcomes
       id: 'obser6-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Applying learning theories to real scenarios**
 - **Comparing classical, operant, and observational learning**

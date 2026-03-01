@@ -5,7 +5,7 @@ export const psychPerceptionPart4Data = {
       id: 'perce4-intro',
       type: 'text' as const,
       content: `
-# ## Attention
+## Attention
 
 **Part 4 of 7 — Attention**
 
@@ -63,7 +63,7 @@ failing to detect changes in scenes
       id: 'perce4-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Selective attention**: focusing on one stimulus while ignoring others
 - **Cocktail party effect**: hearing your name in a noisy room

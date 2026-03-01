@@ -5,7 +5,7 @@ export const bioTranscriptionPart5Data = {
       id: 'tran5-intro-p5',
       type: 'text' as const,
       content: `
-# ## Post-Translational Modification
+## Post-Translational Modification
 
 **Part 5 of 7 — Post-Translational Modification**
 
@@ -52,7 +52,7 @@ export const bioTranscriptionPart5Data = {
       id: 'tran5-detail-p5',
       type: 'text' as const,
       content: `
-# ### Key Details
+### Key Details
 
 - **Protein folding (chaperones assist)**
 - **Chemical modifications**: phosphorylation, glycosylation

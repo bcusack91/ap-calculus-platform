@@ -5,7 +5,7 @@ export const psychEmotionPart4Data = {
       id: 'emoti4-intro',
       type: 'text' as const,
       content: `
-# ## Stress Responses
+## Stress Responses
 
 **Part 4 of 7 — Stress Responses**
 
@@ -63,7 +63,7 @@ stress weakens immune system
       id: 'emoti4-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **General Adaptation Syndrome (Selye)**: alarm → resistance → exhaustion
 - **Fight-or-flight response**: sympathetic nervous system activation

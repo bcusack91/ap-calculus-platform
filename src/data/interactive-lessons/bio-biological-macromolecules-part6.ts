@@ -5,7 +5,7 @@ export const bioMacromoleculesPart6Data = {
       id: 'biol6-workshop',
       type: 'text' as const,
       content: `
-# ## Macromolecule Problem-Solving
+## Macromolecule Problem-Solving
 
 ### Common AP Question Types
 
@@ -58,7 +58,7 @@ export const bioMacromoleculesPart6Data = {
       id: 'biol6-scenarios',
       type: 'text' as const,
       content: `
-# ## Practice Problems
+## Practice Problems
 
 ### Problem 1
 A protein normally functions at pH 7. A mutation replaces a nonpolar R group in the protein's interior with a charged R group. Predict the effect.

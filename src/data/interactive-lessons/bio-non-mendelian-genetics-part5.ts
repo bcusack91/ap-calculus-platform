@@ -5,7 +5,7 @@ export const bioNonMendelianPart5Data = {
       id: 'non-5-intro-p5',
       type: 'text' as const,
       content: `
-# ## Environmental Effects on Phenotype
+## Environmental Effects on Phenotype
 
 **Part 5 of 7 — Environmental Effects on Phenotype**
 
@@ -52,7 +52,7 @@ export const bioNonMendelianPart5Data = {
       id: 'non-5-detail-p5',
       type: 'text' as const,
       content: `
-# ### Key Details
+### Key Details
 
 - **Phenotype = genotype + environment**
 - **Temperature-sensitive alleles**: Siamese cats

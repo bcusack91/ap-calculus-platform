@@ -5,7 +5,7 @@ export const psychObservationalPart7Data = {
       id: 'obser7-intro',
       type: 'text' as const,
       content: `
-# ## Synthesis & AP Review
+## Synthesis & AP Review
 
 **Part 7 of 7 — Synthesis & AP Review**
 
@@ -63,7 +63,7 @@ learning theory identification
       id: 'obser7-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Three types of learning compared**
 - **Cognitive revolution in learning theory**

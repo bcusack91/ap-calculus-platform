@@ -5,7 +5,7 @@ export const bioMeiosisPart2Data = {
       id: 'meio2-intro-p2',
       type: 'text' as const,
       content: `
-# ## Meiosis I
+## Meiosis I
 
 **Part 2 of 7 — Meiosis I**
 
@@ -52,7 +52,7 @@ export const bioMeiosisPart2Data = {
       id: 'meio2-detail-p2',
       type: 'text' as const,
       content: `
-# ### Key Details
+### Key Details
 
 - **Homologous chromosomes pair up (synapsis)**
 - **Crossing over occurs during prophase I**

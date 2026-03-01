@@ -2,124 +2,198 @@ export const precalcInverseTrigPart4Data = {
   topicSlug: 'inverse-trig-functions-precalc',
   sections: [
     {
-      id: 'inver4-intro',
+      id: 'precalc-inverse-trig-functions-precalc-p4-s1-intro',
       type: 'text' as const,
       content: `
-# Compositions with Inverse Trig
-
-**Part 4 of 7 — Compositions with Inverse Trig**
-
-### 1. For sin(cos⁻¹(x)), draw a right triangle with cos θ = x
-
-For sin(cos⁻¹(x)), draw a right triangle with cos θ = x
-
-### 2. Use the Pythagorean theorem to find the missing side
-
-Use the Pythagorean theorem to find the missing side
-
-### 3. Evaluate the desired trig function from the triangle
-
-Evaluate the desired trig function from the triangle
-
-### 4. This technique works for any composition of trig and inverse trig
-
-This technique works for any composition of trig and inverse trig
+      ## Inverse Trigonometric Functions: Compositions and domain constraints
+      
+      **Part 4 of 7**
+      
+      This part focuses on testing valid compositions with domain filters. Keep notation precise and connect each symbolic step to geometric or functional meaning.
+      
+      ### Core definitions
+      - **arccos**: inverse of cosine on $[0,\pi]$
+      - **arctan**: inverse of tangent on $(-
+      rac\pi2,
+      rac\pi2)$
+      - **composition**: applying one function to the output of another
+      
+      
+      ### Worked Example
+      Part 4 uses direct precalculus notation to move from structure to computation.
+      
+      Start with a model statement, substitute known values, and simplify step by step using exact form first.
+      When needed, convert to decimals only after the symbolic setup is complete.
       `
     },
     {
-      id: 'inver4-quiz1',
+      id: 'precalc-inverse-trig-functions-precalc-p4-s2-mcq-core',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+      **Multiple-choice check (2 questions)**
       `,
       exercise: {
         questions: [
           {
-            question: 'What does "For sin(cos⁻¹(x)), draw a right…" refer to in precalculus?',
+            question: 'Choose the most accurate definition of arccos.',
             options: [
-              'Use the Pythagorean theorem to find the missing side',
-              'For sin(cos⁻¹(x)), draw a right triangle with cos θ = x',
-              'This technique works for any composition of trig and inverse trig',
-              'Evaluate the desired trig function from the triangle'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — For sin(cos⁻¹(x)), draw a right triangle with cos θ = x. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'In the context of Compositions with Inverse Trig, which explains Evaluate the desired trig function from…?',
-            options: [
-              'For sin(cos⁻¹(x)), draw a right triangle with cos θ = x',
-              'This technique works for any composition of trig and inverse trig',
-              'Use the Pythagorean theorem to find the missing side',
-              'Evaluate the desired trig function from the triangle'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Evaluate the desired trig function from the triangle. Be careful to distinguish between the different concepts in this topic.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'inver4-detail',
-      type: 'text' as const,
-      content: `
-### Key Concepts Summary
-
-- **For sin(cos⁻¹(x)), draw a right triangle with cos θ = x**
-- **Use the Pythagorean theorem to find the missing side**
-- **Evaluate the desired trig function from the triangle**
-- **This technique works for any composition of trig and inverse trig**
-      `
-    },
-    {
-      id: 'inver4-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which concept relates directly to compositions with inverse trig?',
-            options: [
-              'This technique works for any composition of trig and inverse trig',
-              'Only complex analysis',
-              'Exclusively abstract algebra',
-              'This applies only to statistics'
+              'inverse of cosine on $[0,\\pi]$',
+              'inverse of tangent on $(-\\rac\\pi2,\\rac\\pi2)$',
+              'applying one function to the output of another',
+              'triangle built from known trig ratios'
             ],
             correctAnswer: 0,
-            explanation: 'This technique works for any composition of trig and inverse trig'
+            explanation: 'arccos is defined as: inverse of cosine on $[0,\\pi]$.'
+          },
+          {
+            question: 'In testing valid compositions with domain filters, which expression is the best starting model?',
+            options: [
+              '$\\sin(\\arcsin x)=x$',
+              '$\\tan(\\arctan x)=x$',
+              '$\\arccos x \\in [0,\\pi]$',
+              '$\\arctan x + \\arctan\\!\\left(\\frac1x\\right)=\\frac\\pi2\\;(x>0)$'
+            ],
+            correctAnswer: 3,
+            explanation: 'Use $\\arctan x + \\arctan\\!\\left(\\frac1x\\right)=\\frac\\pi2\\;(x>0)$ first, then substitute known quantities from the prompt.'
           }
         ]
       }
     },
     {
-      id: 'inver4-dropdown',
+      id: 'precalc-inverse-trig-functions-precalc-p4-s3-deep-dive',
+      type: 'text' as const,
+      content: `
+      ### Deep-Dive: formulas and decision rules
+      
+      Use this table to pick the right expression before computing.
+      
+      | Tool | Formula | Best use |
+      |---|---|---|
+      | Reciprocal relation | $\arctan x + \arctan\!\left(\frac1x\right)=\frac\pi2\;(x>0)$ | angle decomposition |
+      | Inverse identity | $\sin(\arcsin x)=x$ | valid for $x\in[-1,1]$ |
+      | Principal output | $\arccos x \in [0,\pi]$ | range control |
+      | Tangent inverse | $\tan(\arctan x)=x$ | all real inputs |
+      
+      ### Common pitfalls
+      - Inverse trig outputs are angles, not raw ratio values.
+      - A composition can fail if the inner output leaves the inverse domain.
+      - Use principal intervals before comparing equivalent angle expressions.
+      
+      ### Precision checks
+      1. Identify givens and unknowns before selecting a formula.
+      2. Keep exact values through symbolic simplification when possible.
+      3. Verify units, angle mode, or domain constraints before finalizing.
+      `
+    },
+    {
+      id: 'precalc-inverse-trig-functions-precalc-p4-s4-input',
+      type: 'input-boxes' as const,
+      content: `
+      **Input Practice — Inverse Trig Values**
+      
+      Use degree values for angle outputs when prompted.
+      
+      1) Compute $rcsin\left(
+      rac{1}{2}
+      ight)$ in degrees.
+      2) Compute $rccos\left(
+      rac{\sqrt{2}}{2}
+      ight)$ in degrees.
+      3) Compute $\\an(rctan(
+      rac{3}{4}))$.
+      `,
+      exercise: {
+        boxes: 3,
+        correctAnswers: ['30', '45', '0.75'],
+        hint1: 'Use principal range for arcsin.',
+        hint2: 'Use principal range for arccos.',
+        hint3: 'A function and its inverse undo each other on valid inputs.',
+        explanation: 'Principal angles are 30° and 45°, and composition returns 0.75.'
+      }
+    },
+    {
+      id: 'precalc-inverse-trig-functions-precalc-p4-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Match the Concepts** 🔍
+      **Dropdown-select practice (3 prompts)**
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'For sin(cos⁻¹(x)), draw a right…',
-            options: ['This technique works for any composition of trig and inverse trig', 'For sin(cos⁻¹(x)), draw a right triangle with cos θ = x', 'Use the Pythagorean theorem to find the missing side', 'Evaluate the desired trig function from the triangle']
+            label: 'arccos',
+            options: ['applying one function to the output of another', 'inverse of tangent on $(-\\rac\\pi2,\\rac\\pi2)$', 'inverse of cosine on $[0,\\pi]$', 'triangle built from known trig ratios']
           },
           {
-            label: 'Use the Pythagorean theorem to find the…',
-            options: ['For sin(cos⁻¹(x)), draw a right triangle with cos θ = x', 'Use the Pythagorean theorem to find the missing side', 'Evaluate the desired trig function from the triangle', 'This technique works for any composition of trig and inverse trig']
+            label: 'arctan',
+            options: ['inverse of tangent on $(-\\rac\\pi2,\\rac\\pi2)$', 'applying one function to the output of another', 'triangle built from known trig ratios', 'placing angles inside principal intervals']
           },
           {
-            label: 'Evaluate the desired trig function from…',
-            options: ['This technique works for any composition of trig and inverse trig', 'For sin(cos⁻¹(x)), draw a right triangle with cos θ = x', 'Evaluate the desired trig function from the triangle', 'Use the Pythagorean theorem to find the missing side']
+            label: 'composition',
+            options: ['standard output interval used by an inverse trig function', 'placing angles inside principal intervals', 'applying one function to the output of another', 'triangle built from known trig ratios']
           }
         ],
-        correctAnswers: ['For sin(cos⁻¹(x)), draw a right triangle with cos θ = x', 'Use the Pythagorean theorem to find the missing side', 'Evaluate the desired trig function from the triangle'],
-        hint1: 'Think about what each concept specifically describes in Compositions with Inverse Trig.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Compositions with Inverse Trig describes a specific idea. For sin(cos⁻¹(x)), draw a right triangle with cos θ = x. Use the Pythagorean theorem to find the missing side. Evaluate the desired trig function from the triangle.'
+        correctAnswers: ['inverse of cosine on $[0,\\pi]$', 'inverse of tangent on $(-\\rac\\pi2,\\rac\\pi2)$', 'applying one function to the output of another'],
+        hint1: 'Match each term to the full definition, not just a keyword.',
+        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
+        hint3: 'Read the label and option together as one complete mathematical sentence.',
+        explanation: 'Correct mapping: arccos, arctan, and composition align with their exact definitions used in this part.'
+      }
+    },
+    {
+      id: 'precalc-inverse-trig-functions-precalc-p4-s6-strategy',
+      type: 'text' as const,
+      content: `
+      ### Strategy: graphing, calculator, and exam tactics
+      
+      **Graphing tactics**
+      - Sketch anchor points or intercept behavior before detailed algebra.
+      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
+      
+      **Calculator tactics**
+      - Confirm angle mode before trig operations.
+      - Store intermediate values to avoid rounded drift.
+      - Use table mode to test reasonableness around key inputs.
+      
+      **Exam tactics**
+      - Translate words to symbols first, then choose the matching formula family.
+      - Eliminate options that violate domain or structure.
+      - If two choices are close, substitute back into the original relationship.
+      
+      Tie each step to arccos, arctan, and composition so your reasoning is explicit and checkable.
+      `
+    },
+    {
+      id: 'precalc-inverse-trig-functions-precalc-p4-s7-mcq-applied',
+      type: 'multiple-choice' as const,
+      content: `
+      **Applied mixed questions (2 questions)**
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'A student is testing valid compositions with domain filters. Which term best anchors the next reasoning step if the key idea is: triangle built from known trig ratios?',
+            options: [
+              'composition',
+              'arccos',
+              'reference triangle',
+              'arctan'
+            ],
+            correctAnswer: 2,
+            explanation: 'reference triangle matches that description and keeps the model-to-interpretation chain consistent.'
+          },
+          {
+            question: 'A student is solving a mixed inverse trigonometric functions prompt. Which term best anchors the next reasoning step if the key idea is: placing angles inside principal intervals?',
+            options: [
+              'composition',
+              'angle normalization',
+              'reference triangle',
+              'principal value'
+            ],
+            correctAnswer: 1,
+            explanation: 'angle normalization matches that description and keeps the model-to-interpretation chain consistent.'
+          }
+        ]
       }
     }
   ]
-}
+};

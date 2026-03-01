@@ -2,108 +2,81 @@ export const satGeometryPart5Data = {
   topicSlug: 'sat-geometry-angles-sat',
   sections: [
     {
-      id: 'sat-g5-intro',
+      id: 'sat-geom-p5-intro',
       type: 'text' as const,
       content: `
-# Volume & Surface Area
+# 🔢 Area & Perimeter
 
-**Part 5 of 7 — Volume & Surface Area**
+**Part 5 of 7 — Area & Perimeter**
 
-Rectangular prism: V = lwh, SA = 2(lw + lh + wh).
+Formulas for triangles, rectangles, circles, and composite shapes
 
-Cylinder: V = πr²h, SA = 2πr² + 2πrh.
+This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+
+**Key Concepts in This Section:**
+- Core principles and definitions
+- Step-by-step problem-solving methods
+- Common SAT question patterns
+- Strategic tips for test day
       `
     },
     {
-      id: 'sat-g5-quiz1',
+      id: 'sat-geom-p5-check',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+**Quick Check** 🔍
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Rectangular prism?',
+            question: 'Based on the concepts in this section, which approach is most effective?',
             options: [
-              'Sphere: V = (4/3)πr³, SA = 4πr².',
-              'V = lwh, SA = 2(lw + lh + wh).',
-              'Cone: V = (1/3)πr²h.',
-              'V = πr²h, SA = 2πr² + 2πrh.'
+              'Memorize formulas without understanding when to apply them',
+              'Understand the underlying concepts and practice with varied problems',
+              'Only practice problems you find easy to build confidence',
+              'Skip practice and rely on intuition during the test'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — Rectangular prism: V = lwh, SA = 2(lw + lh + wh). The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'In the context of Volume & Surface Area, which explains Key Insight?',
-            options: [
-              'Cone: V = (1/3)πr²h.',
-              'Sphere: V = (4/3)πr³, SA = 4πr².',
-              'V = πr²h, SA = 2πr² + 2πrh.',
-              'V = lwh, SA = 2(lw + lh + wh).'
-            ],
-            correctAnswer: 0,
-            explanation: 'Correct — Key Insight: Cone: V = (1/3)πr²h. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
           }
         ]
       }
     },
     {
-      id: 'sat-g5-detail',
+      id: 'sat-geom-p5-detail',
       type: 'text' as const,
       content: `
-**Key Insight:** Cone: V = (1/3)πr²h.
+**Detailed Concepts & Examples**
 
-**SAT Tip:** Sphere: V = (4/3)πr³, SA = 4πr².
+This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
+
+1. **Identify** the type of problem quickly
+2. **Apply** the correct method systematically
+3. **Verify** your answer makes sense in context
+
+Work through each example carefully before attempting the practice problems below.
       `
     },
     {
-      id: 'sat-g5-quiz2',
+      id: 'sat-geom-p5-practice',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+**SAT-Style Questions** 📋
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of these accurately represents SAT Tip?',
+            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
             options: [
-              'Cone: V = (1/3)πr²h.',
-              'Sphere: V = (4/3)πr³, SA = 4πr².',
-              'V = πr²h, SA = 2πr² + 2πrh.',
-              'V = lwh, SA = 2(lw + lh + wh).'
+              'Guess and move on quickly',
+              'Identify what the question is actually asking for',
+              'Try every formula you know until one works',
+              'Skip it permanently'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — SAT Tip: Sphere: V = (4/3)πr³, SA = 4πr². Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
           }
         ]
-      }
-    },
-    {
-      id: 'sat-g5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Rectangular prism',
-            options: ['Sphere: V = (4/3)πr³, SA = 4πr².', 'Cone: V = (1/3)πr²h.', 'V = lwh, SA = 2(lw + lh + wh).', 'V = πr²h, SA = 2πr² + 2πrh.']
-          },
-          {
-            label: 'Cylinder',
-            options: ['V = πr²h, SA = 2πr² + 2πrh.', 'V = lwh, SA = 2(lw + lh + wh).', 'Sphere: V = (4/3)πr³, SA = 4πr².', 'Cone: V = (1/3)πr²h.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['Cone: V = (1/3)πr²h.', 'Sphere: V = (4/3)πr³, SA = 4πr².', 'V = lwh, SA = 2(lw + lh + wh).', 'V = πr²h, SA = 2πr² + 2πrh.']
-          }
-        ],
-        correctAnswers: ['V = lwh, SA = 2(lw + lh + wh).', 'V = πr²h, SA = 2πr² + 2πrh.', 'Cone: V = (1/3)πr²h.'],
-        hint1: 'Think about what each concept specifically describes in Volume & Surface Area.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Volume & Surface Area describes a specific idea. Rectangular prism: V = lwh, SA = 2(lw + lh + wh). Cylinder: V = πr²h, SA = 2πr² + 2πrh. Key Insight: Cone: V = (1/3)πr²h.'
       }
     }
   ]

@@ -5,7 +5,7 @@ export const bioCellCommPart7Data = {
       id: 'cell7-intro-p7',
       type: 'text' as const,
       content: `
-# ## Cell Communication: Synthesis & AP Review
+## Cell Communication: Synthesis & AP Review
 
 **Part 7 of 7 — Synthesis & AP Review**
 
@@ -52,7 +52,7 @@ export const bioCellCommPart7Data = {
       id: 'cell7-detail-p7',
       type: 'text' as const,
       content: `
-# ### Key Details
+### Key Details
 
 - **Signal transduction in homeostasis**
 - **Signaling errors and disease**

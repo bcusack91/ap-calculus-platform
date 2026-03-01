@@ -2,123 +2,184 @@ export const psychSensationPart6Data = {
   topicSlug: 'sensation-sensory-processing',
   sections: [
     {
-      id: 'sensa6-intro',
+      id: 'sensation-sensory-processing-p6-s1-intro',
       type: 'text' as const,
       content: `
-# ## Problem-Solving Workshop
+      # 🧠 Sensation and Sensory Processing
 
-**Part 6 of 7 — Problem-Solving Workshop**
+      **Part 6 of 7 — Applied Cases and Experimental Data**
 
-### 1. Applying Weber's Law to problems
+      In this part, you will connect core psychological vocabulary to realistic contexts and AP-style reasoning. Focus on mechanism first, then evidence.
 
-Applying Weber's Law to problems
+      ### Core Definitions
+      - **sensation**: detection of physical energy by sensory receptors
+      - **transduction**: conversion of physical stimulus energy into neural signals
+      - **absolute threshold**: minimum stimulus intensity detected 50% of the time
 
-### 2. Identifying sensory structures
+      ### Concrete Real-World Example
+      A team is studying interpreting psychophysics experiment outputs. They operationalize variables, compare plausible explanations, and look for the interpretation that best matches observed behavior instead of relying on intuition.
 
-Identifying sensory structures
-
-### 3. Analyzing signal detection scenarios
-
-Analyzing signal detection scenarios
-
-### 4. Connecting sensation disorders to mechanisms
-
-Connecting sensation disorders to mechanisms
+      ### Why This Matters
+      Strong AP responses define terms precisely, apply them to evidence, and justify why one interpretation is stronger than alternatives.
       `
     },
     {
-      id: 'sensa6-quiz1',
+      id: 'sensation-sensory-processing-p6-s2-check',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+      **Concept Check** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains Applying Weber\'s Law to problems?',
+            question: 'In a study about interpreting psychophysics experiment outputs, participants change behavior after repeatedly seeing the same cue. Which concept is the best fit?',
             options: [
-              'Identifying sensory structures',
-              'Applying Weber\'s Law to problems',
-              'Connecting sensation disorders to mechanisms',
-              'Analyzing signal detection scenarios'
+              'transduction',
+              'absolute threshold',
+              'sensation',
+              'difference threshold'
             ],
-            correctAnswer: 1,
-            explanation: 'Correct — Applying Weber\'s Law to problems. The other options describe different concepts from this topic.'
+            correctAnswer: 2,
+            explanation: 'sensation is correct because it directly matches this mechanism: detection of physical energy by sensory receptors. The distractors describe related but different processes.'
           },
           {
-            question: 'Which of the following is true about Analyzing signal detection scenarios?',
+            question: 'Researchers report that behavior shifts when participants receive a specific cue and then justify their choices afterward. Which concept best explains that pattern?',
             options: [
-              'Identifying sensory structures',
-              'Analyzing signal detection scenarios',
-              'Applying Weber\'s Law to problems',
-              'Connecting sensation disorders to mechanisms'
+              'transduction',
+              'selective attention',
+              'signal detection theory',
+              'absolute threshold'
             ],
-            correctAnswer: 1,
-            explanation: 'Correct — Analyzing signal detection scenarios. Be careful to distinguish between the different concepts in this topic.'
+            correctAnswer: 2,
+            explanation: 'signal detection theory is the strongest match here (framework separating sensitivity from response bias under uncertainty). The other options do not explain both the cue-driven shift and the observed response pattern as directly.'
           }
         ]
       }
     },
     {
-      id: 'sensa6-detail',
+      id: 'sensation-sensory-processing-p6-s3-deep',
       type: 'text' as const,
       content: `
-# ### Key Points
+      ## Deep Dive: Comparing Explanations with Evidence
 
-- **Applying Weber's Law to problems**
-- **Identifying sensory structures**
-- **Analyzing signal detection scenarios**
-- **Connecting sensation disorders to mechanisms**
+      When analyzing interpreting psychophysics experiment outputs, the best interpretation ties a clear psychological mechanism to measurable evidence.
+
+      | Theory / Concept | Core claim | Typical evidence | Common limitation |
+      |---|---|---|---|
+      | sensation | detection of physical energy by sensory receptors | experimental manipulation with random assignment | possible demand characteristics |
+      | transduction | conversion of physical stimulus energy into neural signals | longitudinal trend with repeated measurement | third-variable risk in natural settings |
+      | absolute threshold | minimum stimulus intensity detected 50% of the time | cross-sectional comparison with matched groups | limited generalizability across cultures |
+      | difference threshold | smallest detectable difference between two stimuli | mixed-method evidence combining survey and behavioral indicators | measurement validity depends on construct quality |
+
+      ### Interpretation Strategy
+      1. Name the mechanism before describing outcomes.
+      2. Match the claim to the strongest available evidence type.
+      3. Acknowledge one limitation and explain whether it changes the conclusion.
+
+      This structure helps you earn reasoning points on free-response and avoid vague claims.
       `
     },
     {
-      id: 'sensa6-quiz2',
-      type: 'multiple-choice' as const,
+      id: 'sensation-sensory-processing-p6-s4-input',
+      type: 'input-boxes' as const,
       content: `
-**Concept Check** 🎯
+      **Applied Recall (exact term answers)** ✍️
+
+      1) Write the concept that matches: detection of physical energy by sensory receptors
+      2) Write the concept that matches: conversion of physical stimulus energy into neural signals
+      3) Write the concept that matches: minimum stimulus intensity detected 50% of the time
+
+      Use the exact vocabulary term from this part.
       `,
       exercise: {
-        questions: [
-          {
-            question: 'Which concept relates directly to problem-solving workshop?',
-            options: [
-              'Connecting sensation disorders to mechanisms',
-              'Only biological factors',
-              'Exclusively cognitive processes',
-              'Mathematical formulas only'
-            ],
-            correctAnswer: 0,
-            explanation: 'Connecting sensation disorders to mechanisms'
-          }
-        ]
+        boxes: 3,
+        correctAnswers: ['sensation', 'transduction', 'absolute threshold'],
+        hint1: 'Starts with: S',
+        hint2: 'Starts with: T',
+        hint3: 'Starts with: A',
+        explanation: 'Expected answers: sensation, transduction, and absolute threshold. Each response should use the precise term connected to the definition cue.'
       }
     },
     {
-      id: 'sensa6-dropdown',
+      id: 'sensation-sensory-processing-p6-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Match the Concepts** 🔍
+      **Model Matching** 🔎
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Applying Weber\'s Law to problems',
-            options: ['Applying Weber\'s Law to problems', 'Identifying sensory structures', 'Analyzing signal detection scenarios', 'Connecting sensation disorders to mechanisms']
+            label: 'Select the concept that best matches: detection of physical energy by sensory receptors',
+            options: ['sensation', 'signal detection theory', 'selective attention', 'transduction']
           },
           {
-            label: 'Identifying sensory structures',
-            options: ['Analyzing signal detection scenarios', 'Applying Weber\'s Law to problems', 'Identifying sensory structures', 'Connecting sensation disorders to mechanisms']
+            label: 'Select the concept that best matches: conversion of physical stimulus energy into neural signals',
+            options: ['sensation', 'selective attention', 'transduction', 'signal detection theory']
           },
           {
-            label: 'Analyzing signal detection scenarios',
-            options: ['Applying Weber\'s Law to problems', 'Identifying sensory structures', 'Connecting sensation disorders to mechanisms', 'Analyzing signal detection scenarios']
+            label: 'Select the concept that best matches: minimum stimulus intensity detected 50% of the time',
+            options: ['difference threshold', 'absolute threshold', 'selective attention', 'sensation']
           }
         ],
-        correctAnswers: ['Applying Weber\'s Law to problems', 'Identifying sensory structures', 'Analyzing signal detection scenarios'],
-        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Applying Weber\'s Law to problems. Identifying sensory structures. Analyzing signal detection scenarios.'
+        correctAnswers: ['sensation', 'transduction', 'absolute threshold'],
+        hint1: 'Start by matching the key mechanism in each prompt to the most specific concept.',
+        hint2: 'Eliminate options that describe a different level of analysis (biological vs cognitive vs social).',
+        hint3: 'Use the definition language from this part to avoid near-miss terms.',
+        explanation: 'Correct matches are sensation, transduction, and absolute threshold. These choices align with the mechanism-language in each definition, not just broad topic similarity.'
+      }
+    },
+    {
+      id: 'sensation-sensory-processing-p6-s6-strategy',
+      type: 'text' as const,
+      content: `
+      ## Common Misconceptions and Exam Strategy
+
+      ### Misconceptions to Avoid
+      - Sensation and perception are related but distinct processes.
+      - Missed signals can reflect response criterion shifts, not only poor sensory ability.
+      - Adaptation reduces awareness of constant stimuli while preserving sensitivity to change.
+      - Expectation can bias perception without conscious intent.
+
+      ### AP Strategy Moves
+      - Define the target concept in one precise sentence before giving examples.
+      - In scenario questions about interpreting psychophysics experiment outputs, identify the manipulated variable and measured outcome.
+      - Use one competing explanation and explain why it is weaker.
+      - If data are provided, mention trend direction and at least one design limitation.
+
+      This combination of precision and evidence improves both multiple-choice accuracy and free-response scoring.
+      `
+    },
+    {
+      id: 'sensation-sensory-processing-p6-s7-applied',
+      type: 'multiple-choice' as const,
+      content: `
+      **Applied Scenarios** 🎯
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'A team investigating interpreting psychophysics experiment outputs finds that participants rely on a persuasive cue when they are distracted, but use argument quality when they are highly focused. Which concept best captures the focused-processing route?',
+            options: [
+              'sensation',
+              'absolute threshold',
+              'transduction',
+              'difference threshold'
+            ],
+            correctAnswer: 3,
+            explanation: 'difference threshold is best because it reflects this mechanism (smallest detectable difference between two stimuli). The other options describe different levels of explanation or related constructs.'
+          },
+          {
+            question: 'After an intervention, scores improve in the treatment group but not in a matched comparison group. Which interpretation is most defensible for the targeted mechanism?',
+            options: [
+              'selective attention',
+              'absolute threshold',
+              'transduction',
+              'signal detection theory'
+            ],
+            correctAnswer: 3,
+            explanation: 'signal detection theory is the strongest interpretation because it maps to the measured pattern and proposed mechanism: framework separating sensitivity from response bias under uncertainty. Good AP reasoning also notes alternative explanations and design limits.'
+          }
+        ]
       }
     }
   ]

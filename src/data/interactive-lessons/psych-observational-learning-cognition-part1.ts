@@ -63,7 +63,7 @@ No direct reinforcement needed
       id: 'obser1-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Albert Bandura**: social learning theory
 - **Bobo doll experiment**: children imitated aggressive model

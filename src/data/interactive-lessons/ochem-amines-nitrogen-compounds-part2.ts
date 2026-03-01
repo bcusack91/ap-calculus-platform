@@ -2,124 +2,185 @@ export const oChemAminesPart2Data = {
   topicSlug: 'amines-nitrogen-compounds',
   sections: [
     {
-      id: 'amine2-intro',
+      id: 'ochem-amines-nitrogen-compounds-p2-s1-intro',
       type: 'text' as const,
       content: `
-# Amine Basicity
-
-**Part 2 of 7 — Amine Basicity**
-
-### 1. Amine basicity
-
-pKb depends on electron density on nitrogen
-
-### 2. Alkylamines more basic than aniline (aromatic amine)
-
-Alkylamines more basic than aniline (aromatic amine)
-
-### 3. Electron-donating groups increase basicity
-
-Electron-donating groups increase basicity
-
-### 4. Electron-withdrawing groups decrease basicity
-
-Electron-withdrawing groups decrease basicity
+      # Amines and Nitrogen Compounds
+      
+      **Part 2 of 7 — Synthesis of Amines**
+      
+      This part focuses on choosing synthesis route to primary vs tertiary amines. The goal is to connect vocabulary, curved-arrow reasoning, and product prediction in one workflow.
+      
+      ### Mechanism vocabulary for this part
+      - **nucleophilic amine**: nitrogen lone pair attacks electrophilic centers
+      - **over-alkylation**: successive alkylation can push to quaternary ammonium
+      - **reductive amination**: carbonyl + amine then reduction to C-N single bond
+      - **diazonium salt**: aryl-N2+ intermediate used for substitution
+      
+      ### Worked reaction example
+      A representative transformation uses **R-CHO + R'NH2, then NaBH3CN**.
+      
+      1. Identify the governing mechanism: **reductive amination**.
+      2. Predict the dominant product pattern: **secondary amine**.
+      3. Justify with a mechanistic note: mild reducing agent keeps carbonyl control.
+      
+      Exam tip: state mechanism class before drawing product. It reduces avoidable regio- and stereochemistry errors.
       `
     },
     {
-      id: 'amine2-quiz1',
+      id: 'ochem-amines-nitrogen-compounds-p2-s2-mcq-core',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+      **Mechanism checkpoint (2 questions)**
       `,
       exercise: {
         questions: [
           {
-            question: 'What does "Amine basicity" refer to in this topic?',
+            question: 'Choose the best definition for nucleophilic amine.',
             options: [
-              'Electron-withdrawing groups decrease basicity',
-              'Alkylamines more basic than aniline (aromatic amine)',
-              'pKb depends on electron density on nitrogen',
-              'Electron-donating groups increase basicity'
+              'aryl-N2+ intermediate used for substitution',
+              'carbonyl + amine then reduction to C-N single bond',
+              'nitrogen lone pair attacks electrophilic centers',
+              'successive alkylation can push to quaternary ammonium'
             ],
             correctAnswer: 2,
-            explanation: 'Correct — Amine basicity: pKb depends on electron density on nitrogen. The other options describe different concepts from this topic.'
+            explanation: 'nucleophilic amine is defined as: nitrogen lone pair attacks electrophilic centers.'
           },
           {
-            question: 'Select the statement that correctly describes Electron-donating groups increase…:',
+            question: 'A reaction in this lesson uses R-COCl + R\'NH2 and proceeds by acyl substitution. What product pattern should you predict first?',
             options: [
-              'Alkylamines more basic than aniline (aromatic amine)',
-              'Electron-withdrawing groups decrease basicity',
-              'pKb depends on electron density on nitrogen',
-              'Electron-donating groups increase basicity'
+              'aryl bromide',
+              'amide',
+              'secondary amine',
+              'aryl diazonium salt'
             ],
-            correctAnswer: 3,
-            explanation: 'Correct — Electron-donating groups increase basicity. Be careful to distinguish between the different concepts in this topic.'
+            correctAnswer: 1,
+            explanation: 'With R-COCl + R\'NH2, the benchmark outcome is amide. Mechanistic anchor: amine acts as nucleophile and base.'
           }
         ]
       }
     },
     {
-      id: 'amine2-detail',
+      id: 'ochem-amines-nitrogen-compounds-p2-s3-deep-dive',
       type: 'text' as const,
       content: `
-### Key Concepts Summary
-
-- **Amine basicity**: pKb depends on electron density on nitrogen
-- **Alkylamines more basic than aniline (aromatic amine)**
-- **Electron-donating groups increase basicity**
-- **Electron-withdrawing groups decrease basicity**
+      ## Deep-Dive: Reaction Pattern Table
+      
+      Use this table as a rapid decision grid.
+      
+      | Reagents | Conditions / Mechanistic Trigger | Product Pattern | Why it works |
+      |---|---|---|---|
+      | R-CHO + R'NH2, then NaBH3CN | reductive amination | secondary amine | mild reducing agent keeps carbonyl control |
+      | R-COCl + R'NH2 | acyl substitution | amide | amine acts as nucleophile and base |
+      | ArNH2 + NaNO2/HCl (0-5 °C) | diazotization | aryl diazonium salt | temperature control is critical |
+      | ArN2+ + CuBr | Sandmeyer substitution | aryl bromide | N2 is leaving group |
+      
+      ### Fast interpretation protocol
+      1. Map reagent set to mechanism family.
+      2. Apply regio- or stereochemical rule attached to that family.
+      3. Check whether rearrangement, equilibration, or reversibility changes the major product call.
       `
     },
     {
-      id: 'amine2-quiz2',
-      type: 'multiple-choice' as const,
+      id: 'ochem-amines-nitrogen-compounds-p2-s4-input',
+      type: 'input-boxes' as const,
       content: `
-**Concept Check** 🎯
+      **Input Practice — enter exact chemistry terms**
+      
+      1) Term for: nitrogen lone pair attacks electrophilic centers
+      2) Term for: successive alkylation can push to quaternary ammonium
+      3) Product pattern expected under R-CHO + R'NH2, then NaBH3CN
       `,
       exercise: {
-        questions: [
-          {
-            question: 'Which concept relates directly to amine basicity?',
-            options: [
-              'Electron-withdrawing groups decrease basicity',
-              'Only inorganic compounds',
-              'Exclusively gas-phase reactions',
-              'This applies only to polymers'
-            ],
-            correctAnswer: 0,
-            explanation: 'Electron-withdrawing groups decrease basicity'
-          }
-        ]
+        boxes: 3,
+        correctAnswers: ['nucleophilic amine', 'over-alkylation', 'secondary amine'],
+        hint1: 'Blank 1 is the vocabulary term paired with: nitrogen lone pair attacks electrophilic centers.',
+        hint2: 'Blank 2 corresponds to successive alkylation can push to quaternary ammonium.',
+        hint3: 'Use the worked example: R-CHO + R\'NH2, then NaBH3CN gives secondary amine.',
+        explanation: 'Correct entries: nucleophilic amine, over-alkylation, and secondary amine. These anchor mechanism ID, vocabulary precision, and product prediction.'
       }
     },
     {
-      id: 'amine2-dropdown',
+      id: 'ochem-amines-nitrogen-compounds-p2-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Match the Concepts** 🔍
+      **Dropdown matching (3 prompts)**
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Amine basicity',
-            options: ['Electron-donating groups increase basicity', 'Electron-withdrawing groups decrease basicity', 'Alkylamines more basic than aniline (aromatic amine)', 'pKb depends on electron density on nitrogen']
+            label: 'reductive amination',
+            options: ['aryl-N2+ intermediate used for substitution', 'nitrogen lone pair attacks electrophilic centers', 'successive alkylation can push to quaternary ammonium', 'carbonyl + amine then reduction to C-N single bond']
           },
           {
-            label: 'Alkylamines more basic than aniline…',
-            options: ['pKb depends on electron density on nitrogen', 'Alkylamines more basic than aniline (aromatic amine)', 'Electron-donating groups increase basicity', 'Electron-withdrawing groups decrease basicity']
+            label: 'Expected pattern from R-COCl + R\'NH2',
+            options: ['aryl diazonium salt', 'secondary amine', 'amide', 'aryl bromide']
           },
           {
-            label: 'Electron-donating groups increase…',
-            options: ['Electron-donating groups increase basicity', 'pKb depends on electron density on nitrogen', 'Alkylamines more basic than aniline (aromatic amine)', 'Electron-withdrawing groups decrease basicity']
+            label: 'Best exam strategy statement',
+            options: ['Over-alkylation is common when alkyl halide is not carefully limited.', 'Diazonium salts require cold conditions to avoid decomposition.', 'Reductive amination is not simple direct SN2 on carbonyl carbon.', 'Mechanism labels should be tied to observed bond changes, not memorized by reagent names alone.']
           }
         ],
-        correctAnswers: ['pKb depends on electron density on nitrogen', 'Alkylamines more basic than aniline (aromatic amine)', 'Electron-donating groups increase basicity'],
-        hint1: 'Think about what each concept specifically describes in Amine Basicity.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Amine Basicity describes a specific idea. Amine basicity: pKb depends on electron density on nitrogen. Alkylamines more basic than aniline (aromatic amine). Electron-donating groups increase basicity.'
+        correctAnswers: ['carbonyl + amine then reduction to C-N single bond', 'amide', 'Mechanism labels should be tied to observed bond changes, not memorized by reagent names alone.'],
+        hint1: 'First align each prompt with mechanism language before reading all options.',
+        hint2: 'For reagent prompts, eliminate outcomes that violate known regio/stereo rules.',
+        hint3: 'For strategy prompts, pick the statement that links mechanism evidence to product prediction.',
+        explanation: 'Correct matches combine mechanistic definition, reagent outcome, and exam execution strategy.'
+      }
+    },
+    {
+      id: 'ochem-amines-nitrogen-compounds-p2-s6-strategy',
+      type: 'text' as const,
+      content: `
+      ## Strategy: Prediction Traps and Exam Techniques
+      
+      ### Common traps in this part
+      - Reductive amination is not simple direct SN2 on carbonyl carbon.
+      - Diazonium salts require cold conditions to avoid decomposition.
+      - Over-alkylation is common when alkyl halide is not carefully limited.
+      
+      ### High-yield exam sequence
+      1. **Read reagents before substrate details** to classify mechanism class quickly.
+      2. **Mark the reactive site** (electrophilic carbon, acidic alpha-carbon, benzylic/allylic position, or aromatic position).
+      3. **Commit to one major-product logic path** before checking answer choices.
+      4. **Audit stereochemistry and regiochemistry last** so you do not lose points on orientation errors.
+      
+      ### Timing technique
+      If two options differ only by orientation or placement, spend 10 seconds restating the governing rule out loud (Markovnikov, anti addition, kinetic control, etc.) before selecting.
+      `
+    },
+    {
+      id: 'ochem-amines-nitrogen-compounds-p2-s7-mcq-final',
+      type: 'multiple-choice' as const,
+      content: `
+      **Applied synthesis/mechanism check (2 questions)**
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'In a synthesis sequence centered on synthesis of amines, a step uses ArNH2 + NaNO2/HCl (0-5 °C). Which major product pattern is most defensible?',
+            options: [
+              'aryl diazonium salt',
+              'secondary amine',
+              'aryl bromide',
+              'amide'
+            ],
+            correctAnswer: 0,
+            explanation: 'ArNH2 + NaNO2/HCl (0-5 °C) is classically associated with aryl diazonium salt because temperature control is critical.'
+          },
+          {
+            question: 'A mechanism rationale cites amide resonance: lone pair delocalization lowers amide basicity. Which interpretation applies this idea correctly in product prediction?',
+            options: [
+              'Treat amide resonance as a naming convention unrelated to mechanism.',
+              'Use amide resonance to justify why the pathway favors aryl bromide under ArN2+ + CuBr.',
+              'Use amide resonance only after final answer choice selection.',
+              'Ignore amide resonance and choose products only by molecular weight.'
+            ],
+            correctAnswer: 1,
+            explanation: 'The correct approach applies amide resonance directly to mechanism and product control. In this context, ArN2+ + CuBr aligns with aryl bromide.'
+          }
+        ]
       }
     }
   ]
-}
+};

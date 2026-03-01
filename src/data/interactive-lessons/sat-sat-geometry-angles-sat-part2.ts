@@ -2,108 +2,81 @@ export const satGeometryPart2Data = {
   topicSlug: 'sat-geometry-angles-sat',
   sections: [
     {
-      id: 'sat-g2-intro',
+      id: 'sat-geom-p2-intro',
       type: 'text' as const,
       content: `
-# Triangles
+# 🔺 Triangle Properties
 
-**Part 2 of 7 — Triangles**
+**Part 2 of 7 — Triangle Properties**
 
-Pythagorean theorem: a² + b² = c² (right triangles).
+Angle sum, exterior angles, triangle inequality
 
-Special right triangles: 30-60-90 (x, x√3, 2x) and 45-45-90 (x, x, x√2).
+This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+
+**Key Concepts in This Section:**
+- Core principles and definitions
+- Step-by-step problem-solving methods
+- Common SAT question patterns
+- Strategic tips for test day
       `
     },
     {
-      id: 'sat-g2-quiz1',
+      id: 'sat-geom-p2-check',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+**Quick Check** 🔍
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Pythagorean theorem?',
+            question: 'Based on the concepts in this section, which approach is most effective?',
             options: [
-              '30-60-90 (x, x√3, 2x) and 45-45-90 (x, x, x√2).',
-              'a² + b² = c² (right triangles).',
-              'Similar triangles: corresponding sides proportional, angles equal.',
-              'Triangle inequality: sum of any two sides > third side.'
+              'Memorize formulas without understanding when to apply them',
+              'Understand the underlying concepts and practice with varied problems',
+              'Only practice problems you find easy to build confidence',
+              'Skip practice and rely on intuition during the test'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — Pythagorean theorem: a² + b² = c² (right triangles). The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Select the statement that correctly describes Key Insight:',
-            options: [
-              '30-60-90 (x, x√3, 2x) and 45-45-90 (x, x, x√2).',
-              'Triangle inequality: sum of any two sides > third side.',
-              'a² + b² = c² (right triangles).',
-              'Similar triangles: corresponding sides proportional, angles equal.'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Key Insight: Triangle inequality: sum of any two sides > third side. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
           }
         ]
       }
     },
     {
-      id: 'sat-g2-detail',
+      id: 'sat-geom-p2-detail',
       type: 'text' as const,
       content: `
-**Key Insight:** Triangle inequality: sum of any two sides > third side.
+**Detailed Concepts & Examples**
 
-**SAT Tip:** Similar triangles: corresponding sides proportional, angles equal.
+This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
+
+1. **Identify** the type of problem quickly
+2. **Apply** the correct method systematically
+3. **Verify** your answer makes sense in context
+
+Work through each example carefully before attempting the practice problems below.
       `
     },
     {
-      id: 'sat-g2-quiz2',
+      id: 'sat-geom-p2-practice',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+**SAT-Style Questions** 📋
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of these accurately represents SAT Tip?',
+            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
             options: [
-              'Similar triangles: corresponding sides proportional, angles equal.',
-              'Triangle inequality: sum of any two sides > third side.',
-              'a² + b² = c² (right triangles).',
-              '30-60-90 (x, x√3, 2x) and 45-45-90 (x, x, x√2).'
+              'Guess and move on quickly',
+              'Identify what the question is actually asking for',
+              'Try every formula you know until one works',
+              'Skip it permanently'
             ],
-            correctAnswer: 0,
-            explanation: 'Correct — SAT Tip: Similar triangles: corresponding sides proportional, angles equal. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            correctAnswer: 1,
+            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
           }
         ]
-      }
-    },
-    {
-      id: 'sat-g2-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Pythagorean theorem',
-            options: ['Triangle inequality: sum of any two sides > third side.', 'Similar triangles: corresponding sides proportional, angles equal.', 'a² + b² = c² (right triangles).', '30-60-90 (x, x√3, 2x) and 45-45-90 (x, x, x√2).']
-          },
-          {
-            label: 'Special right triangles',
-            options: ['30-60-90 (x, x√3, 2x) and 45-45-90 (x, x, x√2).', 'Similar triangles: corresponding sides proportional, angles equal.', 'Triangle inequality: sum of any two sides > third side.', 'a² + b² = c² (right triangles).']
-          },
-          {
-            label: 'Key Insight',
-            options: ['30-60-90 (x, x√3, 2x) and 45-45-90 (x, x, x√2).', 'Triangle inequality: sum of any two sides > third side.', 'a² + b² = c² (right triangles).', 'Similar triangles: corresponding sides proportional, angles equal.']
-          }
-        ],
-        correctAnswers: ['a² + b² = c² (right triangles).', '30-60-90 (x, x√3, 2x) and 45-45-90 (x, x, x√2).', 'Triangle inequality: sum of any two sides > third side.'],
-        hint1: 'Think about what each concept specifically describes in Triangles.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Triangles describes a specific idea. Pythagorean theorem: a² + b² = c² (right triangles). Special right triangles: 30-60-90 (x, x√3, 2x) and 45-45-90 (x, x, x√2). Key Insight: Triangle inequality: sum of any two sides > third side.'
       }
     }
   ]

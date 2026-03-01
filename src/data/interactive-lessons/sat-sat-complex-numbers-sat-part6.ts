@@ -2,104 +2,169 @@ export const satComplexPart6Data = {
   topicSlug: 'sat-complex-numbers-sat',
   sections: [
     {
-      id: 'sat-c6-intro',
+      id: 'sat-cx6-intro',
       type: 'text' as const,
       content: `
-# Problem-Solving Workshop
+# 🎯 Complex Numbers on the SAT
 
-**Part 6 of 7 — Problem-Solving Workshop**
+**Part 6 of 7 — Pattern Recognition, Common Traps, $i^n$ Cycles**
 
-Conjugate of a + bi is a - bi.
+Complex number questions appear in the **Calculator** and **No Calculator** sections. They test three main skills:
 
-(a + bi)(a - bi) = a² + b² (always real and positive).
+| Skill | Frequency |
+|-------|-----------|
+| Powers of $i$ | ★★★ Very common |
+| Add/subtract/multiply | ★★★ Very common |
+| Division (conjugates) | ★★ Common |
+| Discriminant / non-real solutions | ★★ Common |
+| Writing $\\frac{a+bi}{c+di}$ in $a+bi$ form | ★★ Common |
+
+**Key pattern:** Most SAT complex-number problems take 30–60 seconds if you know the rules. They reward **memorization** of the $i$-cycle and fluency with FOIL.
       `
     },
     {
-      id: 'sat-c6-quiz1',
+      id: 'sat-cx6-trap1',
+      type: 'text' as const,
+      content: `
+## Common SAT Traps
+
+**Trap 1: Forgetting $i^2 = -1$ when multiplying**
+
+Wrong: $(2+i)(3+i) = 6 + 2i + 3i + i^2 = 6 + 5i + i^2 = ?$
+
+Students who leave $i^2$ or write $+1$ instead of $-1$ get the wrong answer.
+
+Correct: $6 + 5i + (-1) = 5 + 5i$
+
+**Trap 2: Sign errors when subtracting**
+
+Wrong: $(4+3i)-(2+5i) = 4+3i-2+5i = 2+8i$ ❌
+
+Correct: $(4+3i)-(2+5i) = 4+3i-2-5i = 2-2i$ ✅
+
+**Trap 3: Confusing $r^2$ in the discriminant**
+
+When $\\Delta < 0$, students sometimes forget to put $\\sqrt{|\\Delta|}$ over $2a$.
+
+$$x = \\frac{-b \\pm \\sqrt{\\Delta}}{2a} = \\frac{-b \\pm i\\sqrt{|\\Delta|}}{2a}$$
+      `
+    },
+    {
+      id: 'sat-cx6-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+**Trap-Spotting Practice** 🔍
       `,
       exercise: {
         questions: [
           {
-            question: 'What does "Conjugate of a + bi is a - bi." refer to in SAT prep?',
-            options: [
-              'Use conjugates to divide complex numbers: multiply numerator and denominator by the conjugate of the denominator.',
-              'Conjugate of a + bi is a - bi.',
-              '(a + bi)(a - bi) = a² + b² (always real and positive).',
-              'Rationalizing: (3 + 2i)/(1 - i) × (1 + i)/(1 + i).'
-            ],
+            question: 'A student says $(3i)^2 = 9$. What is the correct value?',
+            options: ['$9$', '$-9$', '$9i$', '$-9i$'],
             correctAnswer: 1,
-            explanation: 'Correct — Conjugate of a + bi is a - bi. The other options describe different concepts from this topic.'
+            explanation: '$(3i)^2 = 9i^2 = 9(-1) = -9$. Remember to apply the exponent to $i$ too!'
           },
           {
-            question: 'Select the statement that correctly describes Key Insight:',
-            options: [
-              '(a + bi)(a - bi) = a² + b² (always real and positive).',
-              'Rationalizing: (3 + 2i)/(1 - i) × (1 + i)/(1 + i).',
-              'Conjugate of a + bi is a - bi.',
-              'Use conjugates to divide complex numbers: multiply numerator and denominator by the conjugate of the denominator.'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Key Insight: Use conjugates to divide complex numbers: multiply numerator and denominator by the conjugate of the denominator. Be careful to distinguish between the different concepts in this topic.'
+            question: 'Which expression is equivalent to $i + i^2 + i^3 + i^4$?',
+            options: ['$4i$', '$-1$', '$0$', '$1$'],
+            correctAnswer: 2,
+            explanation: '$i + (-1) + (-i) + 1 = (i - i) + (-1 + 1) = 0$. One complete cycle of powers of $i$ always sums to $0$!'
           }
         ]
       }
     },
     {
-      id: 'sat-c6-detail',
+      id: 'sat-cx6-cycle-sum',
       type: 'text' as const,
       content: `
-**Key Insight:** Use conjugates to divide complex numbers: multiply numerator and denominator by the conjugate of the denominator.
+## The Cycle Sum Trick
 
-**SAT Tip:** Rationalizing: (3 + 2i)/(1 - i) × (1 + i)/(1 + i).
+One complete cycle of consecutive powers of $i$ sums to $0$:
+
+$$i^1 + i^2 + i^3 + i^4 = i + (-1) + (-i) + 1 = 0$$
+
+This means:
+- $i + i^2 + i^3 + \\cdots + i^{100} = 0$ (25 complete cycles)
+- $i + i^2 + i^3 + \\cdots + i^{99} = i + i^2 + i^3 = i - 1 - i = -1$ (24 complete cycles + 3 extra)
+
+**Shortcut for sums:** Divide the number of terms by 4. Complete groups of 4 cancel to $0$. Then add up the remaining terms.
+
+**Example:** $i + i^2 + \\cdots + i^{42}$
+
+42 terms: $42 \\div 4 = 10$ complete groups (40 terms) + 2 remaining.
+
+Remaining: $i^{41} + i^{42} = i + (-1) = i - 1 = -1 + i$.
       `
     },
     {
-      id: 'sat-c6-quiz2',
-      type: 'multiple-choice' as const,
+      id: 'sat-cx6-input1',
+      type: 'input-boxes' as const,
       content: `
-**Check Your Understanding** 🎯
+**Quick calculations.** 🧮
+
+1) $(2i)^3 = $
+
+2) $i + i^2 + i^3 + i^4 + i^5 = $
+
+3) $\\frac{1}{i} = $ (Write in the form $ai$ or $-ai$)
       `,
       exercise: {
-        questions: [
-          {
-            question: 'Regarding Problem-Solving Workshop, which correctly describes SAT Tip?',
-            options: [
-              'Rationalizing: (3 + 2i)/(1 - i) × (1 + i)/(1 + i).',
-              '(a + bi)(a - bi) = a² + b² (always real and positive).',
-              'Use conjugates to divide complex numbers: multiply numerator and denominator by the conjugate of the denominator.',
-              'Conjugate of a + bi is a - bi.'
-            ],
-            correctAnswer: 0,
-            explanation: 'Correct — SAT Tip: Rationalizing: (3 + 2i)/(1 - i) × (1 + i)/(1 + i). Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
+        boxes: 3,
+        correctAnswers: ['-8i', 'i', '-i'],
+        hint1: '$(2i)^3 = 8i^3 = 8(-i) = -8i$.',
+        hint2: 'The first four terms sum to $0$, so just add $i^5 = i$.',
+        hint3: 'Multiply by $\\frac{i}{i}$: $\\frac{1}{i} \\cdot \\frac{i}{i} = \\frac{i}{i^2} = \\frac{i}{-1} = -i$.',
+        explanation: '$(2i)^3=-8i$. Sum of full cycle is $0$, plus $i^5=i$. $\\frac{1}{i}=-i$.'
       }
     },
     {
-      id: 'sat-c6-dropdown',
+      id: 'sat-cx6-dropdown1',
       type: 'dropdown-select' as const,
       content: `
-**Match the Concepts** 🔍
+**Identify the correct approach for each SAT problem type.** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Key Insight',
-            options: ['Use conjugates to divide complex numbers: multiply numerator and denominator by the conjugate of the denominator.', 'Rationalizing: (3 + 2i)/(1 - i) × (1 + i)/(1 + i).', 'Conjugate of a + bi is a - bi.', '(a + bi)(a - bi) = a² + b² (always real and positive).']
+            label: 'Simplify $i^{203}$',
+            options: ['Divide 203 by 4, use remainder', 'Multiply out 203 times', 'Use calculator', 'Factor 203']
           },
           {
-            label: 'SAT Tip',
-            options: ['Rationalizing: (3 + 2i)/(1 - i) × (1 + i)/(1 + i).', 'Use conjugates to divide complex numbers: multiply numerator and denominator by the conjugate of the denominator.', '(a + bi)(a - bi) = a² + b² (always real and positive).', 'Conjugate of a + bi is a - bi.']
+            label: 'Write $\\frac{3}{2-i}$ in $a+bi$ form',
+            options: ['Multiply by $\\frac{2+i}{2+i}$', 'Multiply by $\\frac{2-i}{2-i}$', 'Divide 3 by 2, ignore $i$', 'Set equal to $a+bi$ and guess']
+          },
+          {
+            label: 'Find non-real solutions of $x^2+2x+10=0$',
+            options: ['Factor the quadratic', 'Use the quadratic formula', 'Complete the square only', 'Graph it']
           }
         ],
-        correctAnswers: ['Use conjugates to divide complex numbers: multiply numerator and denominator by the conjugate of the denominator.', 'Rationalizing: (3 + 2i)/(1 - i) × (1 + i)/(1 + i).'],
-        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Key Insight: Use conjugates to divide complex numbers: multiply numerator and denominator by the conjugate of the denominator. SAT Tip: Rationalizing: (3 + 2i)/(1 - i) × (1 + i)/(1 + i).'
+        correctAnswers: ['Divide 203 by 4, use remainder', 'Multiply by $\\frac{2+i}{2+i}$', 'Use the quadratic formula'],
+        hint1: 'The power-of-$i$ cycle has period 4. $203 \\div 4 = 50$ remainder $3$, so $i^{203}=-i$.',
+        hint2: 'Multiply numerator and denominator by the conjugate of the denominator.',
+        hint3: 'When the discriminant is negative, the quadratic formula gives complex solutions.',
+        explanation: 'Powers of $i$: divide by 4. Division: multiply by conjugate. Non-real solutions: quadratic formula.'
+      }
+    },
+    {
+      id: 'sat-cx6-mcq2',
+      type: 'multiple-choice' as const,
+      content: `
+**SAT-Style Questions** 📋
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'What is the value of $(1+i)(1-i)(1+i)$?',
+            options: ['$2+2i$', '$2-2i$', '$4$', '$2(1+i)$'],
+            correctAnswer: 0,
+            explanation: 'First: $(1+i)(1-i)=1+1=2$. Then $2(1+i)=2+2i$.'
+          },
+          {
+            question: 'If $z = 3-2i$, what is $z \\cdot \\bar{z}$ (where $\\bar{z}$ is the conjugate)?',
+            options: ['$5$', '$13$', '$9+4i$', '$9-4i$'],
+            correctAnswer: 1,
+            explanation: '$z \\cdot \\bar{z} = (3-2i)(3+2i) = 9+4 = 13$. A number times its conjugate equals $a^2+b^2$.'
+          }
+        ]
       }
     }
   ]

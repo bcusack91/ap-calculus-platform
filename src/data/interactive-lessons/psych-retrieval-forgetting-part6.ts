@@ -2,123 +2,184 @@ export const psychRetrievalPart6Data = {
   topicSlug: 'retrieval-forgetting',
   sections: [
     {
-      id: 'retri6-intro',
+      id: 'retrieval-forgetting-p6-s1-intro',
       type: 'text' as const,
       content: `
-# ## Problem-Solving Workshop
+      # 🧠 Retrieval and Forgetting
 
-**Part 6 of 7 — Problem-Solving Workshop**
+      **Part 6 of 7 — Data Interpretation Workshop**
 
-### 1. Identifying forgetting mechanisms
+      In this part, you will connect core psychological vocabulary to realistic contexts and AP-style reasoning. Focus on mechanism first, then evidence.
 
-Identifying forgetting mechanisms
+      ### Core Definitions
+      - **retrieval cue**: stimulus that helps access stored information
+      - **encoding specificity**: retrieval is best when cues match encoding conditions
+      - **state-dependent memory**: recall improves when internal state matches learning state
 
-### 2. Analyzing misinformation scenarios
+      ### Concrete Real-World Example
+      A team is studying interpreting forgetting curve datasets. They operationalize variables, compare plausible explanations, and look for the interpretation that best matches observed behavior instead of relying on intuition.
 
-Analyzing misinformation scenarios
-
-### 3. Evaluating eyewitness testimony reliability
-
-Evaluating eyewitness testimony reliability
-
-### 4. Designing memory improvement strategies
-
-Designing memory improvement strategies
+      ### Why This Matters
+      Strong AP responses define terms precisely, apply them to evidence, and justify why one interpretation is stronger than alternatives.
       `
     },
     {
-      id: 'retri6-quiz1',
+      id: 'retrieval-forgetting-p6-s2-check',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+      **Concept Check** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement accurately explains Identifying forgetting mechanisms?',
+            question: 'In a study about interpreting forgetting curve datasets, participants change behavior after repeatedly seeing the same cue. Which concept is the best fit?',
             options: [
-              'Designing memory improvement strategies',
-              'Analyzing misinformation scenarios',
-              'Evaluating eyewitness testimony reliability',
-              'Identifying forgetting mechanisms'
+              'state-dependent memory',
+              'retrieval cue',
+              'proactive interference',
+              'encoding specificity'
             ],
-            correctAnswer: 3,
-            explanation: 'Correct — Identifying forgetting mechanisms. The other options describe different concepts from this topic.'
+            correctAnswer: 1,
+            explanation: 'retrieval cue is correct because it directly matches this mechanism: stimulus that helps access stored information. The distractors describe related but different processes.'
           },
           {
-            question: 'In the context of Problem-Solving Workshop, which explains Evaluating eyewitness testimony…?',
+            question: 'Researchers report that behavior shifts when participants receive a specific cue and then justify their choices afterward. Which concept best explains that pattern?',
             options: [
-              'Evaluating eyewitness testimony reliability',
-              'Designing memory improvement strategies',
-              'Identifying forgetting mechanisms',
-              'Analyzing misinformation scenarios'
+              'encoding specificity',
+              'tip-of-the-tongue',
+              'state-dependent memory',
+              'retroactive interference'
             ],
-            correctAnswer: 0,
-            explanation: 'Correct — Evaluating eyewitness testimony reliability. Be careful to distinguish between the different concepts in this topic.'
+            correctAnswer: 3,
+            explanation: 'retroactive interference is the strongest match here (new learning disrupts old memories). The other options do not explain both the cue-driven shift and the observed response pattern as directly.'
           }
         ]
       }
     },
     {
-      id: 'retri6-detail',
+      id: 'retrieval-forgetting-p6-s3-deep',
       type: 'text' as const,
       content: `
-# ### Key Points
+      ## Deep Dive: Comparing Explanations with Evidence
 
-- **Identifying forgetting mechanisms**
-- **Analyzing misinformation scenarios**
-- **Evaluating eyewitness testimony reliability**
-- **Designing memory improvement strategies**
+      When analyzing interpreting forgetting curve datasets, the best interpretation ties a clear psychological mechanism to measurable evidence.
+
+      | Theory / Concept | Core claim | Typical evidence | Common limitation |
+      |---|---|---|---|
+      | retrieval cue | stimulus that helps access stored information | experimental manipulation with random assignment | possible demand characteristics |
+      | encoding specificity | retrieval is best when cues match encoding conditions | longitudinal trend with repeated measurement | third-variable risk in natural settings |
+      | state-dependent memory | recall improves when internal state matches learning state | cross-sectional comparison with matched groups | limited generalizability across cultures |
+      | proactive interference | old learning disrupts new learning | mixed-method evidence combining survey and behavioral indicators | measurement validity depends on construct quality |
+
+      ### Interpretation Strategy
+      1. Name the mechanism before describing outcomes.
+      2. Match the claim to the strongest available evidence type.
+      3. Acknowledge one limitation and explain whether it changes the conclusion.
+
+      This structure helps you earn reasoning points on free-response and avoid vague claims.
       `
     },
     {
-      id: 'retri6-quiz2',
-      type: 'multiple-choice' as const,
+      id: 'retrieval-forgetting-p6-s4-input',
+      type: 'input-boxes' as const,
       content: `
-**Concept Check** 🎯
+      **Applied Recall (exact term answers)** ✍️
+
+      1) Write the concept that matches: stimulus that helps access stored information
+      2) Write the concept that matches: retrieval is best when cues match encoding conditions
+      3) Write the concept that matches: recall improves when internal state matches learning state
+
+      Use the exact vocabulary term from this part.
       `,
       exercise: {
-        questions: [
-          {
-            question: 'Which concept relates directly to problem-solving workshop?',
-            options: [
-              'Designing memory improvement strategies',
-              'Only biological factors',
-              'Exclusively cognitive processes',
-              'Mathematical formulas only'
-            ],
-            correctAnswer: 0,
-            explanation: 'Designing memory improvement strategies'
-          }
-        ]
+        boxes: 3,
+        correctAnswers: ['retrieval cue', 'encoding specificity', 'state-dependent memory'],
+        hint1: 'Starts with: R',
+        hint2: 'Starts with: E',
+        hint3: 'Starts with: S',
+        explanation: 'Expected answers: retrieval cue, encoding specificity, and state-dependent memory. Each response should use the precise term connected to the definition cue.'
       }
     },
     {
-      id: 'retri6-dropdown',
+      id: 'retrieval-forgetting-p6-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Match the Concepts** 🔍
+      **Model Matching** 🔎
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Identifying forgetting mechanisms',
-            options: ['Analyzing misinformation scenarios', 'Evaluating eyewitness testimony reliability', 'Designing memory improvement strategies', 'Identifying forgetting mechanisms']
+            label: 'Select the concept that best matches: stimulus that helps access stored information',
+            options: ['proactive interference', 'retroactive interference', 'retrieval cue', 'tip-of-the-tongue']
           },
           {
-            label: 'Analyzing misinformation scenarios',
-            options: ['Designing memory improvement strategies', 'Analyzing misinformation scenarios', 'Evaluating eyewitness testimony reliability', 'Identifying forgetting mechanisms']
+            label: 'Select the concept that best matches: retrieval is best when cues match encoding conditions',
+            options: ['encoding specificity', 'state-dependent memory', 'proactive interference', 'tip-of-the-tongue']
           },
           {
-            label: 'Evaluating eyewitness testimony…',
-            options: ['Designing memory improvement strategies', 'Analyzing misinformation scenarios', 'Identifying forgetting mechanisms', 'Evaluating eyewitness testimony reliability']
+            label: 'Select the concept that best matches: recall improves when internal state matches learning state',
+            options: ['proactive interference', 'state-dependent memory', 'retrieval cue', 'tip-of-the-tongue']
           }
         ],
-        correctAnswers: ['Identifying forgetting mechanisms', 'Analyzing misinformation scenarios', 'Evaluating eyewitness testimony reliability'],
-        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Identifying forgetting mechanisms. Analyzing misinformation scenarios. Evaluating eyewitness testimony reliability.'
+        correctAnswers: ['retrieval cue', 'encoding specificity', 'state-dependent memory'],
+        hint1: 'Start by matching the key mechanism in each prompt to the most specific concept.',
+        hint2: 'Eliminate options that describe a different level of analysis (biological vs cognitive vs social).',
+        hint3: 'Use the definition language from this part to avoid near-miss terms.',
+        explanation: 'Correct matches are retrieval cue, encoding specificity, and state-dependent memory. These choices align with the mechanism-language in each definition, not just broad topic similarity.'
+      }
+    },
+    {
+      id: 'retrieval-forgetting-p6-s6-strategy',
+      type: 'text' as const,
+      content: `
+      ## Common Misconceptions and Exam Strategy
+
+      ### Misconceptions to Avoid
+      - Forgetting is not always decay; retrieval competition and cue mismatch are common causes.
+      - Confidence in a memory report does not guarantee accuracy.
+      - Repeated testing can outperform repeated rereading for long-term recall.
+      - Distortion can emerge from normal reconstruction, not intentional lying.
+
+      ### AP Strategy Moves
+      - Define the target concept in one precise sentence before giving examples.
+      - In scenario questions about interpreting forgetting curve datasets, identify the manipulated variable and measured outcome.
+      - Use one competing explanation and explain why it is weaker.
+      - If data are provided, mention trend direction and at least one design limitation.
+
+      This combination of precision and evidence improves both multiple-choice accuracy and free-response scoring.
+      `
+    },
+    {
+      id: 'retrieval-forgetting-p6-s7-applied',
+      type: 'multiple-choice' as const,
+      content: `
+      **Applied Scenarios** 🎯
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'A team investigating interpreting forgetting curve datasets finds that participants rely on a persuasive cue when they are distracted, but use argument quality when they are highly focused. Which concept best captures the focused-processing route?',
+            options: [
+              'encoding specificity',
+              'retrieval cue',
+              'state-dependent memory',
+              'proactive interference'
+            ],
+            correctAnswer: 3,
+            explanation: 'proactive interference is best because it reflects this mechanism (old learning disrupts new learning). The other options describe different levels of explanation or related constructs.'
+          },
+          {
+            question: 'After an intervention, scores improve in the treatment group but not in a matched comparison group. Which interpretation is most defensible for the targeted mechanism?',
+            options: [
+              'state-dependent memory',
+              'encoding specificity',
+              'tip-of-the-tongue',
+              'retroactive interference'
+            ],
+            correctAnswer: 3,
+            explanation: 'retroactive interference is the strongest interpretation because it maps to the measured pattern and proposed mechanism: new learning disrupts old memories. Good AP reasoning also notes alternative explanations and design limits.'
+          }
+        ]
       }
     }
   ]

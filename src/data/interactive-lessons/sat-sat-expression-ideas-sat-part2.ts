@@ -2,104 +2,81 @@ export const satExpressionPart2Data = {
   topicSlug: 'sat-expression-ideas-sat',
   sections: [
     {
-      id: 'sat-e2-intro',
+      id: 'sat-expr-p2-intro',
       type: 'text' as const,
       content: `
-# Combining Sentences
+# 🔗 Transitions
 
-**Part 2 of 7 — Combining Sentences**
+**Part 2 of 7 — Transitions**
 
-Combine sentences to improve flow and eliminate repetition.
+Choosing appropriate transition words for logic and flow
 
-Use relative clauses (who, which, that), appositives, or participial phrases.
+This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+
+**Key Concepts in This Section:**
+- Core principles and definitions
+- Step-by-step problem-solving methods
+- Common SAT question patterns
+- Strategic tips for test day
       `
     },
     {
-      id: 'sat-e2-quiz1',
+      id: 'sat-expr-p2-check',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+**Quick Check** 🔍
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Combine sentences to improve flow and…?',
+            question: 'Based on the concepts in this section, which approach is most effective?',
             options: [
-              'Use relative clauses (who, which, that), appositives, or participial phrases.',
-              'Combine sentences to improve flow and eliminate repetition.',
-              'Shorter combined version is usually preferred.',
-              'Maintain the meaning and emphasis of the original sentences.'
+              'Memorize formulas without understanding when to apply them',
+              'Understand the underlying concepts and practice with varied problems',
+              'Only practice problems you find easy to build confidence',
+              'Skip practice and rely on intuition during the test'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — Combine sentences to improve flow and eliminate repetition. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'In the context of Combining Sentences, which explains Key Insight?',
-            options: [
-              'Combine sentences to improve flow and eliminate repetition.',
-              'Maintain the meaning and emphasis of the original sentences.',
-              'Shorter combined version is usually preferred.',
-              'Use relative clauses (who, which, that), appositives, or participial phrases.'
-            ],
-            correctAnswer: 1,
-            explanation: 'Correct — Key Insight: Maintain the meaning and emphasis of the original sentences. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
           }
         ]
       }
     },
     {
-      id: 'sat-e2-detail',
+      id: 'sat-expr-p2-detail',
       type: 'text' as const,
       content: `
-**Key Insight:** Maintain the meaning and emphasis of the original sentences.
+**Detailed Concepts & Examples**
 
-**SAT Tip:** Shorter combined version is usually preferred.
+This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
+
+1. **Identify** the type of problem quickly
+2. **Apply** the correct method systematically
+3. **Verify** your answer makes sense in context
+
+Work through each example carefully before attempting the practice problems below.
       `
     },
     {
-      id: 'sat-e2-quiz2',
+      id: 'sat-expr-p2-practice',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+**SAT-Style Questions** 📋
       `,
       exercise: {
         questions: [
           {
-            question: 'Regarding Combining Sentences, which correctly describes SAT Tip?',
+            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
             options: [
-              'Shorter combined version is usually preferred.',
-              'Combine sentences to improve flow and eliminate repetition.',
-              'Use relative clauses (who, which, that), appositives, or participial phrases.',
-              'Maintain the meaning and emphasis of the original sentences.'
+              'Guess and move on quickly',
+              'Identify what the question is actually asking for',
+              'Try every formula you know until one works',
+              'Skip it permanently'
             ],
-            correctAnswer: 0,
-            explanation: 'Correct — SAT Tip: Shorter combined version is usually preferred. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            correctAnswer: 1,
+            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
           }
         ]
-      }
-    },
-    {
-      id: 'sat-e2-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Key Insight',
-            options: ['Maintain the meaning and emphasis of the original sentences.', 'Use relative clauses (who, which, that), appositives, or participial phrases.', 'Combine sentences to improve flow and eliminate repetition.', 'Shorter combined version is usually preferred.']
-          },
-          {
-            label: 'SAT Tip',
-            options: ['Maintain the meaning and emphasis of the original sentences.', 'Use relative clauses (who, which, that), appositives, or participial phrases.', 'Combine sentences to improve flow and eliminate repetition.', 'Shorter combined version is usually preferred.']
-          }
-        ],
-        correctAnswers: ['Maintain the meaning and emphasis of the original sentences.', 'Shorter combined version is usually preferred.'],
-        hint1: 'Think about what each concept specifically describes in Combining Sentences.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Combining Sentences describes a specific idea. Key Insight: Maintain the meaning and emphasis of the original sentences. SAT Tip: Shorter combined version is usually preferred.'
       }
     }
   ]

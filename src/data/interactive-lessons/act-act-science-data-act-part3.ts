@@ -1,110 +1,170 @@
 export const actScienceDataPart3Data = {
   topicSlug: 'act-science-data-act',
   sections: [
-    {
-      id: 'act-s3-intro',
-      type: 'text' as const,
-      content: `
-# Identifying Trends
+      {
+        id: "act-sdata-p3-intro",
+        type: 'text' as const,
+        content: `\n# ACT Science Data Analysis
+**Part 3 of 7 — Rates and slopes**
 
-**Part 3 of 7 — Identifying Trends**
+Most ACT Science questions in this unit are solved with arithmetic and careful reading of labels.
+Use this sequence:
+1. Identify variable on each axis.
+2. Compute only what the question asks (difference, rate, or estimate).
+3. Match units before finalizing.
 
-Direct relationship: both variables increase together.
+Precision beats speed-reading in data-heavy passages.\n        `
+      },
+      {
+        id: "act-sdata-p3-mcq1",
+        type: 'multiple-choice' as const,
+        content: `\n**Data Fundamentals**\n        `,
+        exercise: {
+          questions: [
+            {
+              question: "In a graph, point A is (4, 19) and point B is (6, 27). What is the slope?",
+              options: [
+                "4.0",
+                "0.25",
+                "8",
+                "2"
+              ],
+              correctAnswer: 0,
+              explanation: "Slope is rise/run = (27-19)/(6-4) = 4.0."
+            },
+            {
+              question: "A best-fit line rises as x increases. Which claim is directly supported?",
+              options: [
+                "There is a positive association between variables",
+                "x causes y in all settings",
+                "The relationship is perfectly linear",
+                "No outliers exist"
+              ],
+              correctAnswer: 0,
+              explanation: "Upward trend supports positive association. Causation and perfect linearity are stronger claims not guaranteed by one plot."
+            }
+          ]
+        }
+      },
+      {
+        id: "act-sdata-p3-worked",
+        type: 'text' as const,
+        content: `\n## Worked Numeric Example
+A table lists concentration (mM) and absorbance:
+- 2 mM → 0.18
+- 4 mM → 0.33
+- 6 mM → 0.47
 
-Inverse relationship: one increases as the other decreases.
-      `
-    },
-    {
-      id: 'act-s3-quiz1',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which statement accurately explains Direct relationship?',
-            options: [
-              'both variables increase together.',
-              'Look for patterns: linear, exponential, cyclical.',
-              'Describe trends using "as X increases, Y...".',
-              'one increases as the other decreases.'
-            ],
-            correctAnswer: 0,
-            explanation: 'Correct — Direct relationship: both variables increase together. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Which of the following is true about Key Insight?',
-            options: [
-              'one increases as the other decreases.',
-              'both variables increase together.',
-              'Look for patterns: linear, exponential, cyclical.',
-              'Describe trends using "as X increases, Y...".'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Key Insight: Look for patterns: linear, exponential, cyclical. Be careful to distinguish between the different concepts in this topic.'
-          }
-        ]
+Suppose a question asks for the estimated absorbance at 5 mM.
+5 mM lies between 4 and 6 mM, so interpolate between 0.33 and 0.47.
+Midpoint estimate: about 0.40.
+
+On ACT Science, interpolation is usually linear unless the graph clearly curves.\n        `
+      },
+      {
+        id: "act-sdata-p3-input",
+        type: 'input-boxes' as const,
+        content: `\n**Computation Set**
+1) A value rises from 14 to 23. Enter the increase.
+2) A quantity changes from 50 to 65 over 3 minutes. Enter average rate per minute (decimal allowed).
+3) If a point estimate is 31 and measured value is 28, enter absolute error.\n        `,
+        exercise: {
+          boxes: 3,
+          correctAnswers: [
+            "9",
+            "5",
+            "3"
+          ],
+          hint1: "Increase = final - initial.",
+          hint2: "Rate = change divided by time.",
+          hint3: "Absolute error uses distance between estimate and observed value.",
+          explanation: "Increase is 9. Rate is (65-50)/3 = 5 per minute. Absolute error is |31-28| = 3."
+        }
+      },
+      {
+        id: "act-sdata-p3-strategy",
+        type: 'text' as const,
+        content: `\n## Practical Strategy for Rates and slopes
+- When options are close, compute with one extra decimal before choosing.
+- For controls/variables items, identify what is held constant first.
+- For uncertainty questions, overlapping error bars mean weak evidence for a difference.
+- In synthesis passages, build a mini two-column note: Source A claim vs Source B claim.\n        `
+      },
+      {
+        id: "act-sdata-p3-dropdown",
+        type: 'dropdown-select' as const,
+        content: `\n**Reasoning Match**\n        `,
+        exercise: {
+          dropdowns: [
+            {
+              label: "Interpolation means:",
+              options: [
+                "Estimating within observed x-values",
+                "Estimating far beyond observed x-values",
+                "Ignoring the graph scale",
+                "Choosing the largest y-value"
+              ]
+            },
+            {
+              label: "When two means differ but error bars overlap strongly, the safest conclusion is:",
+              options: [
+                "A definite difference exists",
+                "Difference is uncertain from this data",
+                "The larger mean must be wrong",
+                "Units are irrelevant"
+              ]
+            },
+            {
+              label: "A control condition is used to:",
+              options: [
+                "Increase vocabulary complexity",
+                "Provide a baseline for comparison",
+                "Eliminate all random error",
+                "Avoid graph interpretation"
+              ]
+            }
+          ],
+          correctAnswers: [
+            "Estimating within observed x-values",
+            "Difference is uncertain from this data",
+            "Provide a baseline for comparison"
+          ],
+          hint1: "Inside range = interpolation.",
+          hint2: "Overlap weakens certainty.",
+          hint3: "Controls establish what changes are due to treatment.",
+          explanation: "Data interpretation on ACT Science favors conservative conclusions backed by measured comparisons and baseline controls."
+        }
+      },
+      {
+        id: "act-sdata-p3-mcq2",
+        type: 'multiple-choice' as const,
+        content: `\n**Timed Review Questions**\n        `,
+        exercise: {
+          questions: [
+            {
+              question: "A question asks for the best estimate at x=7, while data points are x=1 to x=8. Which method is most appropriate?",
+              options: [
+                "Interpolation from nearby points",
+                "Random guessing because x=7 is not listed",
+                "Extrapolation far beyond data",
+                "Ignoring units"
+              ],
+              correctAnswer: 0,
+              explanation: "x=7 is inside the data range, so interpolation using neighboring values is appropriate."
+            },
+            {
+              question: "You have 90 seconds left and 2 data questions remain. Best scoring move?",
+              options: [
+                "Fully re-read the entire passage",
+                "Target each question's referenced figure directly",
+                "Leave both blank",
+                "Spend all time on one question"
+              ],
+              correctAnswer: 1,
+              explanation: "Directly accessing referenced figures maximizes attempts and accuracy under short time constraints."
+            }
+          ]
+        }
       }
-    },
-    {
-      id: 'act-s3-detail',
-      type: 'text' as const,
-      content: `
-**Key Insight:** Look for patterns: linear, exponential, cyclical.
-
-**ACT Tip:** Describe trends using "as X increases, Y...".
-      `
-    },
-    {
-      id: 'act-s3-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of these accurately represents ACT Tip?',
-            options: [
-              'Describe trends using "as X increases, Y...".',
-              'one increases as the other decreases.',
-              'Look for patterns: linear, exponential, cyclical.',
-              'both variables increase together.'
-            ],
-            correctAnswer: 0,
-            explanation: 'Correct — ACT Tip: Describe trends using "as X increases, Y...". Each option describes a real concept from this topic, so pay attention to the specific details.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'act-s3-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Direct relationship',
-            options: ['Look for patterns: linear, exponential, cyclical.', 'Describe trends using "as X increases, Y...".', 'both variables increase together.', 'one increases as the other decreases.']
-          },
-          {
-            label: 'Inverse relationship',
-            options: ['one increases as the other decreases.', 'Describe trends using "as X increases, Y...".', 'Look for patterns: linear, exponential, cyclical.', 'both variables increase together.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['Look for patterns: linear, exponential, cyclical.', 'one increases as the other decreases.', 'both variables increase together.', 'Describe trends using "as X increases, Y...".']
-          }
-        ],
-        correctAnswers: ['both variables increase together.', 'one increases as the other decreases.', 'Look for patterns: linear, exponential, cyclical.'],
-        hint1: 'Think about what each concept specifically describes in Identifying Trends.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Identifying Trends describes a specific idea. Direct relationship: both variables increase together. Inverse relationship: one increases as the other decreases. Key Insight: Look for patterns: linear, exponential, cyclical.'
-      }
-    }
-  ]
-}
+    ]
+};

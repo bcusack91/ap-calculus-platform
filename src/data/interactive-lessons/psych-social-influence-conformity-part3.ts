@@ -5,7 +5,7 @@ export const psychSocialInfluencePart3Data = {
       id: 'socia3-intro',
       type: 'text' as const,
       content: `
-# ## Obedience
+## Obedience
 
 **Part 3 of 7 — Obedience**
 
@@ -63,7 +63,7 @@ power of roles
       id: 'socia3-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Milgram's obedience study**: 65% delivered maximum shock
 - **Factors increasing obedience**: authority figure presence, proximity, legitimacy

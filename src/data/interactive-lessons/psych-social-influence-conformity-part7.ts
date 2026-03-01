@@ -5,7 +5,7 @@ export const psychSocialInfluencePart7Data = {
       id: 'socia7-intro',
       type: 'text' as const,
       content: `
-# ## Synthesis & AP Review
+## Synthesis & AP Review
 
 **Part 7 of 7 — Synthesis & AP Review**
 
@@ -63,7 +63,7 @@ social influence experiments
       id: 'socia7-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Situations powerfully influence behavior**
 - **People conform more than they think they will**

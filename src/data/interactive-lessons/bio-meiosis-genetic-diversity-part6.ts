@@ -5,7 +5,7 @@ export const bioMeiosisPart6Data = {
       id: 'meio6-intro-p6',
       type: 'text' as const,
       content: `
-# ## Meiosis: Problem-Solving Workshop
+## Meiosis: Problem-Solving Workshop
 
 **Part 6 of 7 — Problem-Solving**
 
@@ -52,7 +52,7 @@ export const bioMeiosisPart6Data = {
       id: 'meio6-detail-p6',
       type: 'text' as const,
       content: `
-# ### Key Details
+### Key Details
 
 - **Chromosome counting through meiosis stages**
 - **Predicting gamete genotypes**

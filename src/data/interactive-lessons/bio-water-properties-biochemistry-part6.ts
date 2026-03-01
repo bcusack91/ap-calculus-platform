@@ -5,7 +5,7 @@ export const bioWaterPropertiesPart6Data = {
       id: 'wate6-workshop',
       type: 'text' as const,
       content: `
-# ## Problem-Solving Workshop: Water Properties
+## Problem-Solving Workshop: Water Properties
 
 Let's apply what you've learned about water's properties to solve AP Biology-style problems.
 
@@ -54,7 +54,7 @@ Let's apply what you've learned about water's properties to solve AP Biology-sty
       id: 'wate6-practice',
       type: 'text' as const,
       content: `
-# ## Practice Scenarios
+## Practice Scenarios
 
 ### Scenario 1: Desert Organisms
 Desert lizards are ectotherms that regulate body temperature behaviorally. During the hottest part of the day, they retreat to burrows where the soil retains moisture.

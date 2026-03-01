@@ -5,7 +5,7 @@ export const psychObservationalPart4Data = {
       id: 'obser4-intro',
       type: 'text' as const,
       content: `
-# ## Insight & Latent Learning
+## Insight & Latent Learning
 
 **Part 4 of 7 — Insight & Latent Learning**
 
@@ -63,7 +63,7 @@ applying knowledge to new situations
       id: 'obser4-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Insight learning**: Köhler's apes — sudden "aha!" solutions
 - **Not trial-and-error but sudden reorganization**

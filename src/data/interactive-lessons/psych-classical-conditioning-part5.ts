@@ -5,7 +5,7 @@ export const psychClassicalPart5Data = {
       id: 'class5-intro',
       type: 'text' as const,
       content: `
-# ## Applications
+## Applications
 
 **Part 5 of 7 — Applications**
 
@@ -63,7 +63,7 @@ pairing products with pleasant stimuli
       id: 'class5-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Phobias**: learned through classical conditioning
 - **Taste aversion**: one-trial learning (Garcia effect)

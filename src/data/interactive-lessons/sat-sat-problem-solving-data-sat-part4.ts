@@ -2,108 +2,81 @@ export const satProbSolvDataPart4Data = {
   topicSlug: 'sat-problem-solving-data-sat',
   sections: [
     {
-      id: 'sat-p4-intro',
+      id: 'sat-prob-p4-intro',
       type: 'text' as const,
       content: `
-# Margin of Error
+# 📐 Counting & Combinations
 
-**Part 4 of 7 — Margin of Error**
+**Part 4 of 7 — Counting & Combinations**
 
-Margin of error: ± value around a sample statistic.
+Fundamental counting principle, permutations, combinations
 
-Larger sample → smaller margin of error.
+This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+
+**Key Concepts in This Section:**
+- Core principles and definitions
+- Step-by-step problem-solving methods
+- Common SAT question patterns
+- Strategic tips for test day
       `
     },
     {
-      id: 'sat-p4-quiz1',
+      id: 'sat-prob-p4-check',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+**Quick Check** 🔍
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Margin of error?',
+            question: 'Based on the concepts in this section, which approach is most effective?',
             options: [
-              'Larger sample → smaller margin of error.',
-              '95% confidence: if we repeated the survey, ~95% of intervals would contain the true value.',
-              '± value around a sample statistic.',
-              'Confidence interval: sample statistic ± margin of error.'
+              'Memorize formulas without understanding when to apply them',
+              'Understand the underlying concepts and practice with varied problems',
+              'Only practice problems you find easy to build confidence',
+              'Skip practice and rely on intuition during the test'
             ],
-            correctAnswer: 2,
-            explanation: 'Correct — Margin of error: ± value around a sample statistic. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Select the statement that correctly describes Key Insight:',
-            options: [
-              '± value around a sample statistic.',
-              'Larger sample → smaller margin of error.',
-              'Confidence interval: sample statistic ± margin of error.',
-              '95% confidence: if we repeated the survey, ~95% of intervals would contain the true value.'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Key Insight: Confidence interval: sample statistic ± margin of error. Be careful to distinguish between the different concepts in this topic.'
+            correctAnswer: 1,
+            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
           }
         ]
       }
     },
     {
-      id: 'sat-p4-detail',
+      id: 'sat-prob-p4-detail',
       type: 'text' as const,
       content: `
-**Key Insight:** Confidence interval: sample statistic ± margin of error.
+**Detailed Concepts & Examples**
 
-**SAT Tip:** 95% confidence: if we repeated the survey, ~95% of intervals would contain the true value.
+This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
+
+1. **Identify** the type of problem quickly
+2. **Apply** the correct method systematically
+3. **Verify** your answer makes sense in context
+
+Work through each example carefully before attempting the practice problems below.
       `
     },
     {
-      id: 'sat-p4-quiz2',
+      id: 'sat-prob-p4-practice',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+**SAT-Style Questions** 📋
       `,
       exercise: {
         questions: [
           {
-            question: 'Which statement about SAT Tip is correct?',
+            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
             options: [
-              '± value around a sample statistic.',
-              'Confidence interval: sample statistic ± margin of error.',
-              '95% confidence: if we repeated the survey, ~95% of intervals would contain the true value.',
-              'Larger sample → smaller margin of error.'
+              'Guess and move on quickly',
+              'Identify what the question is actually asking for',
+              'Try every formula you know until one works',
+              'Skip it permanently'
             ],
-            correctAnswer: 2,
-            explanation: 'Correct — SAT Tip: 95% confidence: if we repeated the survey, ~95% of intervals would contain the true value. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            correctAnswer: 1,
+            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
           }
         ]
-      }
-    },
-    {
-      id: 'sat-p4-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Margin of error',
-            options: ['Confidence interval: sample statistic ± margin of error.', '± value around a sample statistic.', 'Larger sample → smaller margin of error.', '95% confidence: if we repeated the survey, ~95% of intervals would contain the true value.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['± value around a sample statistic.', 'Larger sample → smaller margin of error.', '95% confidence: if we repeated the survey, ~95% of intervals would contain the true value.', 'Confidence interval: sample statistic ± margin of error.']
-          },
-          {
-            label: 'SAT Tip',
-            options: ['95% confidence: if we repeated the survey, ~95% of intervals would contain the true value.', '± value around a sample statistic.', 'Confidence interval: sample statistic ± margin of error.', 'Larger sample → smaller margin of error.']
-          }
-        ],
-        correctAnswers: ['± value around a sample statistic.', 'Confidence interval: sample statistic ± margin of error.', '95% confidence: if we repeated the survey, ~95% of intervals would contain the true value.'],
-        hint1: 'Think about what each concept specifically describes in Margin of Error.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Margin of Error describes a specific idea. Margin of error: ± value around a sample statistic. Key Insight: Confidence interval: sample statistic ± margin of error. SAT Tip: 95% confidence: if we repeated the survey, ~95% of intervals would contain the true value.'
       }
     }
   ]

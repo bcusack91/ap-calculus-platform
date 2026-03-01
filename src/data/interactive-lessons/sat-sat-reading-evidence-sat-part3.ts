@@ -2,108 +2,81 @@ export const satReadingEvidencePart3Data = {
   topicSlug: 'sat-reading-evidence-sat',
   sections: [
     {
-      id: 'sat-r3-intro',
+      id: 'sat-read-p3-intro',
       type: 'text' as const,
       content: `
-# Author Purpose & Tone
+# 📊 Inference Questions
 
-**Part 3 of 7 — Author Purpose & Tone**
+**Part 3 of 7 — Inference Questions**
 
-Purpose: why did the author write this? (inform, persuade, entertain, analyze).
+Drawing conclusions from stated information
 
-Tone: the author's attitude (objective, critical, enthusiastic, skeptical).
+This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+
+**Key Concepts in This Section:**
+- Core principles and definitions
+- Step-by-step problem-solving methods
+- Common SAT question patterns
+- Strategic tips for test day
       `
     },
     {
-      id: 'sat-r3-quiz1',
+      id: 'sat-read-p3-check',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+**Quick Check** 🔍
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Purpose?',
+            question: 'Based on the concepts in this section, which approach is most effective?',
             options: [
-              'Don\'t confuse the author\'s tone with a character\'s or speaker\'s tone.',
-              'why did the author write this? (inform, persuade, entertain, analyze).',
-              'the author\'s attitude (objective, critical, enthusiastic, skeptical).',
-              'Look at word choice (diction) for tone clues.'
+              'Memorize formulas without understanding when to apply them',
+              'Understand the underlying concepts and practice with varied problems',
+              'Only practice problems you find easy to build confidence',
+              'Skip practice and rely on intuition during the test'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — Purpose: why did the author write this? (inform, persuade, entertain, analyze). The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Which of the following is true about Key Insight?',
-            options: [
-              'Look at word choice (diction) for tone clues.',
-              'the author\'s attitude (objective, critical, enthusiastic, skeptical).',
-              'Don\'t confuse the author\'s tone with a character\'s or speaker\'s tone.',
-              'why did the author write this? (inform, persuade, entertain, analyze).'
-            ],
-            correctAnswer: 0,
-            explanation: 'Correct — Key Insight: Look at word choice (diction) for tone clues. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
           }
         ]
       }
     },
     {
-      id: 'sat-r3-detail',
+      id: 'sat-read-p3-detail',
       type: 'text' as const,
       content: `
-**Key Insight:** Look at word choice (diction) for tone clues.
+**Detailed Concepts & Examples**
 
-**SAT Tip:** Don't confuse the author's tone with a character's or speaker's tone.
+This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
+
+1. **Identify** the type of problem quickly
+2. **Apply** the correct method systematically
+3. **Verify** your answer makes sense in context
+
+Work through each example carefully before attempting the practice problems below.
       `
     },
     {
-      id: 'sat-r3-quiz2',
+      id: 'sat-read-p3-practice',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+**SAT-Style Questions** 📋
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of these accurately represents SAT Tip?',
+            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
             options: [
-              'the author\'s attitude (objective, critical, enthusiastic, skeptical).',
-              'why did the author write this? (inform, persuade, entertain, analyze).',
-              'Don\'t confuse the author\'s tone with a character\'s or speaker\'s tone.',
-              'Look at word choice (diction) for tone clues.'
+              'Guess and move on quickly',
+              'Identify what the question is actually asking for',
+              'Try every formula you know until one works',
+              'Skip it permanently'
             ],
-            correctAnswer: 2,
-            explanation: 'Correct — SAT Tip: Don\'t confuse the author\'s tone with a character\'s or speaker\'s tone. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            correctAnswer: 1,
+            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
           }
         ]
-      }
-    },
-    {
-      id: 'sat-r3-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Match the Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Purpose',
-            options: ['why did the author write this? (inform, persuade, entertain, analyze).', 'the author\'s attitude (objective, critical, enthusiastic, skeptical).', 'Look at word choice (diction) for tone clues.', 'Don\'t confuse the author\'s tone with a character\'s or speaker\'s tone.']
-          },
-          {
-            label: 'Tone',
-            options: ['the author\'s attitude (objective, critical, enthusiastic, skeptical).', 'why did the author write this? (inform, persuade, entertain, analyze).', 'Don\'t confuse the author\'s tone with a character\'s or speaker\'s tone.', 'Look at word choice (diction) for tone clues.']
-          },
-          {
-            label: 'Key Insight',
-            options: ['Don\'t confuse the author\'s tone with a character\'s or speaker\'s tone.', 'why did the author write this? (inform, persuade, entertain, analyze).', 'the author\'s attitude (objective, critical, enthusiastic, skeptical).', 'Look at word choice (diction) for tone clues.']
-          }
-        ],
-        correctAnswers: ['why did the author write this? (inform, persuade, entertain, analyze).', 'the author\'s attitude (objective, critical, enthusiastic, skeptical).', 'Look at word choice (diction) for tone clues.'],
-        hint1: 'Think about what each concept specifically describes in Author Purpose & Tone.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Author Purpose & Tone describes a specific idea. Purpose: why did the author write this? (inform, persuade, entertain, analyze). Tone: the author\'s attitude (objective, critical, enthusiastic, skeptical). Key Insight: Look at word choice (diction) for tone clues.'
       }
     }
   ]

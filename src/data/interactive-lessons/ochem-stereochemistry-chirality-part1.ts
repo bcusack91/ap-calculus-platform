@@ -2,124 +2,185 @@ export const oChemStereoPart1Data = {
   topicSlug: 'stereochemistry-chirality',
   sections: [
     {
-      id: 'stere1-intro',
+      id: 'ochem-stereochemistry-chirality-p1-s1-intro',
       type: 'text' as const,
       content: `
-# ⚗️ Stereochemistry Chirality
-
-**Part 1 of 7 — Chirality & Stereocenters**
-
-### 1. Chiral
-
-non-superimposable on its mirror image
-
-### 2. Stereocenter
-
-carbon with 4 different substituents
-
-### 3. Achiral
-
-superimposable on its mirror image
-
-### 4. Plane of symmetry → achiral molecule
-
-Plane of symmetry → achiral molecule
+      # Stereochemistry and Chirality
+      
+      **Part 1 of 7 — Chiral Centers and Symmetry**
+      
+      This part focuses on detecting chirality and hidden symmetry in structures. The goal is to connect vocabulary, curved-arrow reasoning, and product prediction in one workflow.
+      
+      ### Mechanism vocabulary for this part
+      - **chiral center**: tetrahedral atom bonded to four different substituents
+      - **R/S configuration**: absolute stereochemical descriptor from CIP ranking
+      - **enantiomers**: non-superimposable mirror-image stereoisomers
+      - **diastereomers**: stereoisomers that are not mirror images
+      
+      ### Worked reaction example
+      A representative transformation uses **SN2 at stereocenter**.
+      
+      1. Identify the governing mechanism: **backside displacement**.
+      2. Predict the dominant product pattern: **inverted configuration product**.
+      3. Justify with a mechanistic note: Walden inversion observed.
+      
+      Exam tip: state mechanism class before drawing product. It reduces avoidable regio- and stereochemistry errors.
       `
     },
     {
-      id: 'stere1-quiz1',
+      id: 'ochem-stereochemistry-chirality-p1-s2-mcq-core',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+      **Mechanism checkpoint (2 questions)**
       `,
       exercise: {
         questions: [
           {
-            question: 'What does "Chiral" refer to in this topic?',
+            question: 'Choose the best definition for chiral center.',
             options: [
-              'Plane of symmetry → achiral molecule',
-              'carbon with 4 different substituents',
-              'superimposable on its mirror image',
-              'non-superimposable on its mirror image'
+              'absolute stereochemical descriptor from CIP ranking',
+              'stereoisomers that are not mirror images',
+              'tetrahedral atom bonded to four different substituents',
+              'non-superimposable mirror-image stereoisomers'
             ],
-            correctAnswer: 3,
-            explanation: 'Correct — Chiral: non-superimposable on its mirror image. The other options describe different concepts from this topic.'
+            correctAnswer: 2,
+            explanation: 'chiral center is defined as: tetrahedral atom bonded to four different substituents.'
           },
           {
-            question: 'Select the statement that correctly describes Achiral:',
+            question: 'A reaction in this lesson uses SN1 at stereocenter and proceeds by carbocation pathway. What product pattern should you predict first?',
             options: [
-              'non-superimposable on its mirror image',
-              'superimposable on its mirror image',
-              'carbon with 4 different substituents',
-              'Plane of symmetry → achiral molecule'
+              'cis vicinal diol',
+              'partial racemization',
+              'trans vicinal dibromide',
+              'inverted configuration product'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — Achiral: superimposable on its mirror image. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'With SN1 at stereocenter, the benchmark outcome is partial racemization. Mechanistic anchor: both faces can be attacked.'
           }
         ]
       }
     },
     {
-      id: 'stere1-detail',
+      id: 'ochem-stereochemistry-chirality-p1-s3-deep-dive',
       type: 'text' as const,
       content: `
-### Key Concepts Summary
-
-- **Chiral**: non-superimposable on its mirror image
-- **Stereocenter**: carbon with 4 different substituents
-- **Achiral**: superimposable on its mirror image
-- **Plane of symmetry → achiral molecule**
+      ## Deep-Dive: Reaction Pattern Table
+      
+      Use this table as a rapid decision grid.
+      
+      | Reagents | Conditions / Mechanistic Trigger | Product Pattern | Why it works |
+      |---|---|---|---|
+      | SN2 at stereocenter | backside displacement | inverted configuration product | Walden inversion observed |
+      | SN1 at stereocenter | carbocation pathway | partial racemization | both faces can be attacked |
+      | Br2 addition to alkene | anti addition via halonium | trans vicinal dibromide | stereospecific anti outcome |
+      | OsO4 dihydroxylation | syn addition | cis vicinal diol | concerted oxygen delivery |
+      
+      ### Fast interpretation protocol
+      1. Map reagent set to mechanism family.
+      2. Apply regio- or stereochemical rule attached to that family.
+      3. Check whether rearrangement, equilibration, or reversibility changes the major product call.
       `
     },
     {
-      id: 'stere1-quiz2',
-      type: 'multiple-choice' as const,
+      id: 'ochem-stereochemistry-chirality-p1-s4-input',
+      type: 'input-boxes' as const,
       content: `
-**Concept Check** 🎯
+      **Input Practice — enter exact chemistry terms**
+      
+      1) Term for: tetrahedral atom bonded to four different substituents
+      2) Term for: absolute stereochemical descriptor from CIP ranking
+      3) Product pattern expected under SN2 at stereocenter
       `,
       exercise: {
-        questions: [
-          {
-            question: 'Which concept relates directly to chirality & stereocenters?',
-            options: [
-              'Plane of symmetry → achiral molecule',
-              'Only inorganic compounds',
-              'Exclusively gas-phase reactions',
-              'This applies only to polymers'
-            ],
-            correctAnswer: 0,
-            explanation: 'Plane of symmetry → achiral molecule'
-          }
-        ]
+        boxes: 3,
+        correctAnswers: ['chiral center', 'R/S configuration', 'inverted configuration product'],
+        hint1: 'Blank 1 is the vocabulary term paired with: tetrahedral atom bonded to four different substituents.',
+        hint2: 'Blank 2 corresponds to absolute stereochemical descriptor from CIP ranking.',
+        hint3: 'Use the worked example: SN2 at stereocenter gives inverted configuration product.',
+        explanation: 'Correct entries: chiral center, R/S configuration, and inverted configuration product. These anchor mechanism ID, vocabulary precision, and product prediction.'
       }
     },
     {
-      id: 'stere1-dropdown',
+      id: 'ochem-stereochemistry-chirality-p1-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Match the Concepts** 🔍
+      **Dropdown matching (3 prompts)**
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Chiral',
-            options: ['Plane of symmetry → achiral molecule', 'non-superimposable on its mirror image', 'superimposable on its mirror image', 'carbon with 4 different substituents']
+            label: 'enantiomers',
+            options: ['non-superimposable mirror-image stereoisomers', 'stereoisomers that are not mirror images', 'absolute stereochemical descriptor from CIP ranking', 'tetrahedral atom bonded to four different substituents']
           },
           {
-            label: 'Stereocenter',
-            options: ['carbon with 4 different substituents', 'Plane of symmetry → achiral molecule', 'superimposable on its mirror image', 'non-superimposable on its mirror image']
+            label: 'Expected pattern from SN1 at stereocenter',
+            options: ['partial racemization', 'trans vicinal dibromide', 'cis vicinal diol', 'inverted configuration product']
           },
           {
-            label: 'Achiral',
-            options: ['non-superimposable on its mirror image', 'carbon with 4 different substituents', 'superimposable on its mirror image', 'Plane of symmetry → achiral molecule']
+            label: 'Best exam strategy statement',
+            options: ['Meso compounds are optically inactive despite stereocenters.', 'R/S assignment depends on CIP priority and viewing orientation simultaneously.', 'Stereoselective and stereospecific are related but not identical terms.', 'Mechanism labels should be tied to observed bond changes, not memorized by reagent names alone.']
           }
         ],
-        correctAnswers: ['non-superimposable on its mirror image', 'carbon with 4 different substituents', 'superimposable on its mirror image'],
-        hint1: 'Think about what each concept specifically describes in ️ Stereochemistry Chirality.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in ️ Stereochemistry Chirality describes a specific idea. Chiral: non-superimposable on its mirror image. Stereocenter: carbon with 4 different substituents. Achiral: superimposable on its mirror image.'
+        correctAnswers: ['non-superimposable mirror-image stereoisomers', 'partial racemization', 'Mechanism labels should be tied to observed bond changes, not memorized by reagent names alone.'],
+        hint1: 'First align each prompt with mechanism language before reading all options.',
+        hint2: 'For reagent prompts, eliminate outcomes that violate known regio/stereo rules.',
+        hint3: 'For strategy prompts, pick the statement that links mechanism evidence to product prediction.',
+        explanation: 'Correct matches combine mechanistic definition, reagent outcome, and exam execution strategy.'
+      }
+    },
+    {
+      id: 'ochem-stereochemistry-chirality-p1-s6-strategy',
+      type: 'text' as const,
+      content: `
+      ## Strategy: Prediction Traps and Exam Techniques
+      
+      ### Common traps in this part
+      - R/S assignment depends on CIP priority and viewing orientation simultaneously.
+      - Meso compounds are optically inactive despite stereocenters.
+      - Stereoselective and stereospecific are related but not identical terms.
+      
+      ### High-yield exam sequence
+      1. **Read reagents before substrate details** to classify mechanism class quickly.
+      2. **Mark the reactive site** (electrophilic carbon, acidic alpha-carbon, benzylic/allylic position, or aromatic position).
+      3. **Commit to one major-product logic path** before checking answer choices.
+      4. **Audit stereochemistry and regiochemistry last** so you do not lose points on orientation errors.
+      
+      ### Timing technique
+      If two options differ only by orientation or placement, spend 10 seconds restating the governing rule out loud (Markovnikov, anti addition, kinetic control, etc.) before selecting.
+      `
+    },
+    {
+      id: 'ochem-stereochemistry-chirality-p1-s7-mcq-final',
+      type: 'multiple-choice' as const,
+      content: `
+      **Applied synthesis/mechanism check (2 questions)**
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'In a synthesis sequence centered on chiral centers and symmetry, a step uses Br2 addition to alkene. Which major product pattern is most defensible?',
+            options: [
+              'trans vicinal dibromide',
+              'cis vicinal diol',
+              'inverted configuration product',
+              'partial racemization'
+            ],
+            correctAnswer: 0,
+            explanation: 'Br2 addition to alkene is classically associated with trans vicinal dibromide because stereospecific anti outcome.'
+          },
+          {
+            question: 'A mechanism rationale cites meso compound: achiral molecule containing stereocenters and internal symmetry. Which interpretation applies this idea correctly in product prediction?',
+            options: [
+              'Use meso compound only after final answer choice selection.',
+              'Ignore meso compound and choose products only by molecular weight.',
+              'Treat meso compound as a naming convention unrelated to mechanism.',
+              'Use meso compound to justify why the pathway favors cis vicinal diol under OsO4 dihydroxylation.'
+            ],
+            correctAnswer: 3,
+            explanation: 'The correct approach applies meso compound directly to mechanism and product control. In this context, OsO4 dihydroxylation aligns with cis vicinal diol.'
+          }
+        ]
       }
     }
   ]
-}
+};

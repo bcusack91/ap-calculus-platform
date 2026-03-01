@@ -2,124 +2,190 @@ export const precalcMatricesPart2Data = {
   topicSlug: 'matrices-precalc',
   sections: [
     {
-      id: 'matri2-intro',
+      id: 'precalc-matrices-precalc-p2-s1-intro',
       type: 'text' as const,
       content: `
-# Matrix Operations
-
-**Part 2 of 7 — Matrix Operations**
-
-### 1. Addition/subtraction
-
-add corresponding elements (same dimensions required)
-
-### 2. Scalar multiplication
-
-multiply every element by the scalar
-
-### 3. Matrix multiplication
-
-(AB)_ij = sum of row i of A times column j of B
-
-### 4. AB ≠ BA in general (not commutative)
-
-AB ≠ BA in general (not commutative)
+      ## Matrices: Addition, subtraction, scalar scaling
+      
+      **Part 2 of 7**
+      
+      This part focuses on combining weighted data transforms. Keep notation precise and connect each symbolic step to geometric or functional meaning.
+      
+      ### Core definitions
+      - **entry**: single value identified by row and column
+      - **matrix product**: composition of linear mappings
+      - **determinant**: scalar indicating area scaling and invertibility in $2	imes2$
+      
+      
+      ### Worked Example
+      Solve $\\begin{cases}x+y=7\\2x-y=5\end{cases}$ by elimination.
+      
+      Add equations: $3x=12$, so $x=4$. Substitute into $x+y=7$ to get $y=3$.
+      
+      A quick matrix check with $\\begin{bmatrix}1&1\\2&-1\end{bmatrix}$ confirms a nonzero determinant, so the solution is unique.
       `
     },
     {
-      id: 'matri2-quiz1',
+      id: 'precalc-matrices-precalc-p2-s2-mcq-core',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+      **Multiple-choice check (2 questions)**
       `,
       exercise: {
         questions: [
           {
-            question: 'What does "Addition/subtraction" refer to in precalculus?',
+            question: 'Choose the most accurate definition of entry.',
             options: [
-              'multiply every element by the scalar',
-              'AB ≠ BA in general (not commutative)',
-              '(AB)_ij = sum of row i of A times column j of B',
-              'add corresponding elements (same dimensions required)'
+              'matrix that undoes another matrix',
+              'single value identified by row and column',
+              'scalar indicating area scaling and invertibility in $2	imes2$',
+              'composition of linear mappings'
             ],
-            correctAnswer: 3,
-            explanation: 'Correct — Addition/subtraction: add corresponding elements (same dimensions required). The other options describe different concepts from this topic.'
+            correctAnswer: 1,
+            explanation: 'entry is defined as: single value identified by row and column.'
           },
           {
-            question: 'In the context of Matrix Operations, which explains Matrix multiplication?',
+            question: 'In combining weighted data transforms, which expression is the best starting model?',
             options: [
-              '(AB)_ij = sum of row i of A times column j of B',
-              'multiply every element by the scalar',
-              'add corresponding elements (same dimensions required)',
-              'AB ≠ BA in general (not commutative)'
+              '$(AB)_{ij}=\\sum_k a_{ik}b_{kj}$',
+              '$\\det\\begin{bmatrix}a&b\\\\c&d\\end{bmatrix}=ad-bc$',
+              '$A^{-1}=\\frac{1}{ad-bc}\\begin{bmatrix}d&-b\\\\-c&a\\end{bmatrix}$',
+              '$AI=IA=A$'
             ],
-            correctAnswer: 0,
-            explanation: 'Correct — Matrix multiplication: (AB)_ij = sum of row i of A times column j of B. Be careful to distinguish between the different concepts in this topic.'
+            correctAnswer: 2,
+            explanation: 'Use $A^{-1}=\\frac{1}{ad-bc}\\begin{bmatrix}d&-b\\\\-c&a\\end{bmatrix}$ first, then substitute known quantities from the prompt.'
           }
         ]
       }
     },
     {
-      id: 'matri2-detail',
+      id: 'precalc-matrices-precalc-p2-s3-deep-dive',
       type: 'text' as const,
       content: `
-### Key Concepts Summary
-
-- **Addition/subtraction**: add corresponding elements (same dimensions required)
-- **Scalar multiplication**: multiply every element by the scalar
-- **Matrix multiplication**: (AB)_ij = sum of row i of A times column j of B
-- **AB ≠ BA in general (not commutative)**
+      ### Deep-Dive: formulas and decision rules
+      
+      Use this table to pick the right expression before computing.
+      
+      | Tool | Formula | Best use |
+      |---|---|---|
+      | 2x2 inverse | $A^{-1}=\frac{1}{ad-bc}\begin{bmatrix}d&-b\\-c&a\end{bmatrix}$ | solving small systems |
+      | Product entry | $(AB)_{ij}=\sum_k a_{ik}b_{kj}$ | matrix multiplication |
+      | Identity action | $AI=IA=A$ | structure check |
+      | 2x2 determinant | $\det\begin{bmatrix}a&b\\c&d\end{bmatrix}=ad-bc$ | invertibility test |
+      
+      ### Common pitfalls
+      - Dimension mismatch blocks addition or multiplication.
+      - A zero determinant means no inverse exists.
+      - Matrix multiplication is not commutative in general.
+      
+      ### Precision checks
+      1. Identify givens and unknowns before selecting a formula.
+      2. Keep exact values through symbolic simplification when possible.
+      3. Verify units, angle mode, or domain constraints before finalizing.
       `
     },
     {
-      id: 'matri2-quiz2',
-      type: 'multiple-choice' as const,
+      id: 'precalc-matrices-precalc-p2-s4-input',
+      type: 'input-boxes' as const,
       content: `
-**Concept Check** 🎯
+      **Input Practice — Matrix Mechanics**
+      
+      1) Compute $\det\\begin{bmatrix}5&2\\3&4\end{bmatrix}$.
+      2) Compute first entry of $\\begin{bmatrix}1&2\\0&1\end{bmatrix}\\begin{bmatrix}3\\4\end{bmatrix}$.
+      3) Compute trace of $\\begin{bmatrix}2&1\\5&7\end{bmatrix}$.
       `,
       exercise: {
-        questions: [
-          {
-            question: 'Which concept relates directly to matrix operations?',
-            options: [
-              'AB ≠ BA in general (not commutative)',
-              'Only complex analysis',
-              'Exclusively abstract algebra',
-              'This applies only to statistics'
-            ],
-            correctAnswer: 0,
-            explanation: 'AB ≠ BA in general (not commutative)'
-          }
-        ]
+        boxes: 3,
+        correctAnswers: ['14', '11', '9'],
+        hint1: 'Use $ad-bc$.',
+        hint2: 'Dot first row with the column vector.',
+        hint3: 'Trace is the sum of diagonal entries.',
+        explanation: 'Determinant is 14, product entry is 11, and trace is 9.'
       }
     },
     {
-      id: 'matri2-dropdown',
+      id: 'precalc-matrices-precalc-p2-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Match the Concepts** 🔍
+      **Dropdown-select practice (3 prompts)**
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Addition/subtraction',
-            options: ['multiply every element by the scalar', '(AB)_ij = sum of row i of A times column j of B', 'add corresponding elements (same dimensions required)', 'AB ≠ BA in general (not commutative)']
+            label: 'entry',
+            options: ['matrix that undoes another matrix', 'single value identified by row and column', 'scalar indicating area scaling and invertibility in $2	imes2$', 'composition of linear mappings']
           },
           {
-            label: 'Scalar multiplication',
-            options: ['add corresponding elements (same dimensions required)', '(AB)_ij = sum of row i of A times column j of B', 'multiply every element by the scalar', 'AB ≠ BA in general (not commutative)']
+            label: 'matrix product',
+            options: ['scalar indicating area scaling and invertibility in $2	imes2$', 'matrix that undoes another matrix', 'composition of linear mappings', 'multiplicative neutral matrix']
           },
           {
-            label: 'Matrix multiplication',
-            options: ['(AB)_ij = sum of row i of A times column j of B', 'multiply every element by the scalar', 'add corresponding elements (same dimensions required)', 'AB ≠ BA in general (not commutative)']
+            label: 'determinant',
+            options: ['system coefficients with constants in one array', 'matrix that undoes another matrix', 'scalar indicating area scaling and invertibility in $2	imes2$', 'multiplicative neutral matrix']
           }
         ],
-        correctAnswers: ['add corresponding elements (same dimensions required)', 'multiply every element by the scalar', '(AB)_ij = sum of row i of A times column j of B'],
-        hint1: 'Think about what each concept specifically describes in Matrix Operations.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Matrix Operations describes a specific idea. Addition/subtraction: add corresponding elements (same dimensions required). Scalar multiplication: multiply every element by the scalar. Matrix multiplication: (AB)_ij = sum of row i of A times column j of B.'
+        correctAnswers: ['single value identified by row and column', 'composition of linear mappings', 'scalar indicating area scaling and invertibility in $2	imes2$'],
+        hint1: 'Match each term to the full definition, not just a keyword.',
+        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
+        hint3: 'Read the label and option together as one complete mathematical sentence.',
+        explanation: 'Correct mapping: entry, matrix product, and determinant align with their exact definitions used in this part.'
+      }
+    },
+    {
+      id: 'precalc-matrices-precalc-p2-s6-strategy',
+      type: 'text' as const,
+      content: `
+      ### Strategy: graphing, calculator, and exam tactics
+      
+      **Graphing tactics**
+      - Sketch anchor points or intercept behavior before detailed algebra.
+      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
+      
+      **Calculator tactics**
+      - Confirm angle mode before trig operations.
+      - Store intermediate values to avoid rounded drift.
+      - Use table mode to test reasonableness around key inputs.
+      
+      **Exam tactics**
+      - Translate words to symbols first, then choose the matching formula family.
+      - Eliminate options that violate domain or structure.
+      - If two choices are close, substitute back into the original relationship.
+      
+      Tie each step to entry, matrix product, and determinant so your reasoning is explicit and checkable.
+      `
+    },
+    {
+      id: 'precalc-matrices-precalc-p2-s7-mcq-applied',
+      type: 'multiple-choice' as const,
+      content: `
+      **Applied mixed questions (2 questions)**
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'A student is combining weighted data transforms. Which term best anchors the next reasoning step if the key idea is: matrix that undoes another matrix?',
+            options: [
+              'inverse matrix',
+              'matrix product',
+              'entry',
+              'determinant'
+            ],
+            correctAnswer: 0,
+            explanation: 'inverse matrix matches that description and keeps the model-to-interpretation chain consistent.'
+          },
+          {
+            question: 'A student is solving a mixed matrices prompt. Which term best anchors the next reasoning step if the key idea is: multiplicative neutral matrix?',
+            options: [
+              'inverse matrix',
+              'identity matrix',
+              'determinant',
+              'augmented matrix'
+            ],
+            correctAnswer: 1,
+            explanation: 'identity matrix matches that description and keeps the model-to-interpretation chain consistent.'
+          }
+        ]
       }
     }
   ]
-}
+};

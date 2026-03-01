@@ -2,113 +2,193 @@ export const bioBiotechPart7Data = {
   topicSlug: 'biotechnology',
   sections: [
     {
-      id: 'biot7-intro-p7',
+      id: 'bio-biotechnology-p7-s1-intro',
       type: 'text' as const,
       content: `
-# ## Biotechnology: Synthesis & AP Review
-
-**Part 7 of 7 — Synthesis & AP Review**
-
-1. Biotechnology on the AP exam
-2. Connecting techniques to biological concepts
-3. Ethical reasoning in biology
-4. Experimental design with biotech tools
+      ## Biotechnology: AP Review
+      
+      **Part 7 of 7**
+      
+      In this lesson, you will connect mechanism-level biology to exam-ready reasoning through integrating biotech methods in AP free-response prompts.
+      
+      ### Worked biological example
+      A student team investigates integrating biotech methods in AP free-response prompts. Their first interpretation step is to identify how **CRISPR-Cas9** and **gRNA** work together in the same pathway.
+      
+      - They classify the primary signal using **CRISPR-Cas9**: uses guide RNA to direct sequence-specific DNA cutting.
+      - They trace the downstream response using **gRNA**: base-pairs with target DNA to position Cas9.
+      - They then compare outcomes with **DNA fingerprint** and **restriction enzyme** to separate mechanism from correlation.
+      
+      ### Key terms for this part
+      - **CRISPR-Cas9**
+      - **gRNA**
+      - **DNA fingerprint**
+      - **restriction enzyme**
       `
     },
     {
-      id: 'biot7-quiz1',
+      id: 'bio-biotechnology-p7-s2-mcq-core',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+      **Checkpoint MCQ (2 questions)**
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Biotechnology on the AP exam?',
+            question: 'For AP Review, what best describes CRISPR-Cas9?',
             options: [
-              'Connecting techniques to biological concepts',
-              'Ethical reasoning in biology',
-              'Biotechnology on the AP exam',
-              'Experimental design with biotech tools'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Biotechnology on the AP exam. The other options describe different concepts from this topic.'
-          },
-          {
-            question: 'Which of the following is true about Ethical reasoning in biology?',
-            options: [
-              'Connecting techniques to biological concepts',
-              'Biotechnology on the AP exam',
-              'Experimental design with biotech tools',
-              'Ethical reasoning in biology'
-            ],
-            correctAnswer: 3,
-            explanation: 'Correct — Ethical reasoning in biology. Be careful to distinguish between the different concepts in this topic.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'biot7-detail-p7',
-      type: 'text' as const,
-      content: `
-# ### Key Details
-
-- **Biotechnology on the AP exam**
-- **Connecting techniques to biological concepts**
-- **Ethical reasoning in biology**
-- **Experimental design with biotech tools**
-      `
-    },
-    {
-      id: 'biot7-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Check Your Understanding** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Regarding Biotechnology: Synthesis & AP Review, which correctly describes Experimental design with biotech tools?',
-            options: [
-              'Experimental design with biotech tools',
-              'Biotechnology on the AP exam',
-              'Connecting techniques to biological concepts',
-              'Ethical reasoning in biology'
+              'uses guide RNA to direct sequence-specific DNA cutting',
+              'banding profile used for identity comparison',
+              'base-pairs with target DNA to position Cas9',
+              'cuts DNA at a specific recognition sequence'
             ],
             correctAnswer: 0,
-            explanation: 'Correct — Experimental design with biotech tools. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: 'CRISPR-Cas9 is best matched with: uses guide RNA to direct sequence-specific DNA cutting.'
+          },
+          {
+            question: 'In this part\'s context, what is the strongest definition of gRNA?',
+            options: [
+              'base-pairs with target DNA to position Cas9',
+              'joins DNA fragments by sealing phosphodiester bonds',
+              'uses guide RNA to direct sequence-specific DNA cutting',
+              'banding profile used for identity comparison'
+            ],
+            correctAnswer: 0,
+            explanation: 'gRNA is best matched with: base-pairs with target DNA to position Cas9.'
           }
         ]
       }
     },
     {
-      id: 'biot7-dropdown',
+      id: 'bio-biotechnology-p7-s3-deep-dive',
+      type: 'text' as const,
+      content: `
+      ### Deep-Dive Map: AP Review
+      
+      Use this diagram-style summary to track causation and evidence.
+      
+      #### Flow logic
+      - **Signal/Input** → CRISPR-Cas9
+      - **Immediate processing** → gRNA
+      - **System-level consequence** → DNA fingerprint
+      - **Measured readout** → restriction enzyme
+      
+      #### Mechanism table
+      | Component | Biological role | Typical evidence pattern |
+      |---|---|---|
+      | CRISPR-Cas9 | uses guide RNA to direct sequence-specific DNA cutting | Early shift in the primary variable |
+      | gRNA | base-pairs with target DNA to position Cas9 | Mid-pathway change in process rate |
+      | DNA fingerprint | banding profile used for identity comparison | Downstream phenotype trend |
+      | restriction enzyme | cuts DNA at a specific recognition sequence | Quantifiable endpoint in data summary |
+      
+      #### Reasoning checkpoints
+      1. Name the mechanism before describing the trend line.
+      2. Separate proximate mechanism from ecological or historical context.
+      3. Verify that each claim is tied to a measurable biological readout.
+      `
+    },
+    {
+      id: 'bio-biotechnology-p7-s4-input',
+      type: 'input-boxes' as const,
+      content: `
+      **Input Practice — concrete vocabulary retrieval**
+      
+      Fill in each blank with the exact biological term.
+      
+      1) Term for this definition: **uses guide RNA to direct sequence-specific DNA cutting**
+      2) Term for this definition: **base-pairs with target DNA to position Cas9**
+      3) Term for this definition: **banding profile used for identity comparison**
+      `,
+      exercise: {
+        boxes: 3,
+        correctAnswers: ['CRISPR-Cas9', 'gRNA', 'DNA fingerprint'],
+        hint1: 'Start with the first item: it is the mechanism term used when a process is described as \'uses guide RNA to direct sequence-specific DNA cutting\'.',
+        hint2: 'Second blank points to gRNA; think about the role \'base-pairs with target DNA to position Cas9\'.',
+        hint3: 'Third blank is DNA fingerprint; connect it to \'banding profile used for identity comparison\'.',
+        explanation: 'Correct set: CRISPR-Cas9, gRNA, DNA fingerprint. These three terms define the core mechanism chain for AP Review.'
+      }
+    },
+    {
+      id: 'bio-biotechnology-p7-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Match the Concepts** 🔍
+      **Dropdown matching (3 prompts)**
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Biotechnology on the AP exam',
-            options: ['Experimental design with biotech tools', 'Ethical reasoning in biology', 'Biotechnology on the AP exam', 'Connecting techniques to biological concepts']
+            label: 'CRISPR-Cas9',
+            options: ['base-pairs with target DNA to position Cas9', 'cuts DNA at a specific recognition sequence', 'uses guide RNA to direct sequence-specific DNA cutting', 'banding profile used for identity comparison']
           },
           {
-            label: 'Connecting techniques to biological…',
-            options: ['Connecting techniques to biological concepts', 'Experimental design with biotech tools', 'Ethical reasoning in biology', 'Biotechnology on the AP exam']
+            label: 'gRNA',
+            options: ['cuts DNA at a specific recognition sequence', 'banding profile used for identity comparison', 'base-pairs with target DNA to position Cas9', 'joins DNA fragments by sealing phosphodiester bonds']
           },
           {
-            label: 'Ethical reasoning in biology',
-            options: ['Experimental design with biotech tools', 'Ethical reasoning in biology', 'Connecting techniques to biological concepts', 'Biotechnology on the AP exam']
+            label: 'DNA fingerprint',
+            options: ['separates DNA fragments by size through a matrix', 'cuts DNA at a specific recognition sequence', 'joins DNA fragments by sealing phosphodiester bonds', 'banding profile used for identity comparison']
           }
         ],
-        correctAnswers: ['Biotechnology on the AP exam', 'Connecting techniques to biological concepts', 'Ethical reasoning in biology'],
-        hint1: 'Think about what each concept specifically describes in Biotechnology: Synthesis & AP Review.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Biotechnology: Synthesis & AP Review describes a specific idea. Biotechnology on the AP exam. Connecting techniques to biological concepts. Ethical reasoning in biology.'
+        correctAnswers: ['uses guide RNA to direct sequence-specific DNA cutting', 'base-pairs with target DNA to position Cas9', 'banding profile used for identity comparison'],
+        hint1: 'Match each term to the definition that captures mechanism, not just keywords.',
+        hint2: 'If two definitions feel close, choose the one with the exact process direction.',
+        hint3: 'Read each label out loud, then pick the option that completes a causal sentence.',
+        explanation: 'CRISPR-Cas9, gRNA, and DNA fingerprint should map to their exact mechanistic definitions. When options look similar, anchor your choice to process direction and biological scale.'
+      }
+    },
+    {
+      id: 'bio-biotechnology-p7-s6-strategy',
+      type: 'text' as const,
+      content: `
+      ### ACT/AP strategy and misconception repair
+      
+      On ACT/AP style prompts, score gains come from linking vocabulary to evidence, not from isolated memorization.
+      
+      #### Strategy sequence
+      1. **Name the mechanism first**: identify whether the item is asking for process, structure, regulation, or population effect.
+      2. **Use a causation sentence**: "Because CRISPR-Cas9 uses guide RNA to direct sequence-specific DNA cutting, we expect ...".
+      3. **Audit units and scale**: molecular claims, cellular claims, and ecosystem claims should not be mixed.
+      
+      #### Common misconceptions to avoid
+      - CRISPR targeting is specific but can still have off-target effects.
+      - A plasmid alone does not guarantee expression without proper regulatory elements.
+      - A brighter gel band does not always mean a larger fragment; it often indicates more DNA mass.
+      
+      #### Exam execution tip
+      When two answer choices sound plausible, prefer the one that includes a direct mechanism and a measurable biological consequence.
+      `
+    },
+    {
+      id: 'bio-biotechnology-p7-s7-mcq-final',
+      type: 'multiple-choice' as const,
+      content: `
+      **Final application MCQ (2 questions)**
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'In integrating biotech methods in AP free-response prompts, the observed pattern is: cuts DNA at a specific recognition sequence. What term should anchor the explanation?',
+            options: [
+              'gRNA',
+              'restriction enzyme',
+              'DNA fingerprint',
+              'CRISPR-Cas9'
+            ],
+            correctAnswer: 1,
+            explanation: 'Use restriction enzyme because it directly maps to the described biological pattern: cuts DNA at a specific recognition sequence.'
+          },
+          {
+            question: 'In an AP-style free-response about ap review, the observed pattern is: joins DNA fragments by sealing phosphodiester bonds. What term should anchor the explanation?',
+            options: [
+              'restriction enzyme',
+              'DNA fingerprint',
+              'DNA ligase',
+              'gel electrophoresis'
+            ],
+            correctAnswer: 2,
+            explanation: 'Use DNA ligase because it directly maps to the described biological pattern: joins DNA fragments by sealing phosphodiester bonds.'
+          }
+        ]
       }
     }
   ]
-}
+};

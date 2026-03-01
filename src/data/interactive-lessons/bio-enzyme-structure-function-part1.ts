@@ -52,7 +52,7 @@ The **induced fit model** explains enzyme action:
       id: 'enzy1-energy',
       type: 'text' as const,
       content: `
-# ## Activation Energy
+## Activation Energy
 
 Every chemical reaction requires an initial input of energy — the **activation energy** ($E_a$).
 

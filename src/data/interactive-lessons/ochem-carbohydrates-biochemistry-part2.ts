@@ -2,124 +2,185 @@ export const oChemCarbsPart2Data = {
   topicSlug: 'carbohydrates-biochemistry',
   sections: [
     {
-      id: 'carbo2-intro',
+      id: 'ochem-carbohydrates-biochemistry-p2-s1-intro',
       type: 'text' as const,
       content: `
-# Fischer & Haworth Projections
-
-**Part 2 of 7 — Fischer & Haworth Projections**
-
-### 1. Fischer projection
-
-vertical = going back, horizontal = coming forward
-
-### 2. Haworth projection
-
-shows cyclic hemiacetal form
-
-### 3. α anomer
-
--OH on anomeric carbon is axial (down in Haworth)
-
-### 4. β anomer
-
--OH on anomeric carbon is equatorial (up in Haworth)
+      # Carbohydrates in Organic Chemistry
+      
+      **Part 2 of 7 — Cyclization and Anomers**
+      
+      This part focuses on assigning alpha/beta anomers after ring closure. The goal is to connect vocabulary, curved-arrow reasoning, and product prediction in one workflow.
+      
+      ### Mechanism vocabulary for this part
+      - **anomeric carbon**: former carbonyl carbon in cyclic sugar
+      - **alpha anomer**: anomeric substituent trans to CH2OH in D-sugars
+      - **beta anomer**: anomeric substituent cis to CH2OH in D-sugars
+      - **mutarotation**: equilibration between anomers via open-chain form
+      
+      ### Worked reaction example
+      A representative transformation uses **H2O, acid**.
+      
+      1. Identify the governing mechanism: **acetal hydrolysis**.
+      2. Predict the dominant product pattern: **returns hemiacetal + alcohol**.
+      3. Justify with a mechanistic note: reversible under acidic conditions.
+      
+      Exam tip: state mechanism class before drawing product. It reduces avoidable regio- and stereochemistry errors.
       `
     },
     {
-      id: 'carbo2-quiz1',
+      id: 'ochem-carbohydrates-biochemistry-p2-s2-mcq-core',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+      **Mechanism checkpoint (2 questions)**
       `,
       exercise: {
         questions: [
           {
-            question: 'What does "Fischer projection" refer to in this topic?',
+            question: 'Choose the best definition for anomeric carbon.',
             options: [
-              '-OH on anomeric carbon is equatorial (up in Haworth)',
-              'vertical = going back, horizontal = coming forward',
-              'shows cyclic hemiacetal form',
-              '-OH on anomeric carbon is axial (down in Haworth)'
+              'equilibration between anomers via open-chain form',
+              'anomeric substituent trans to CH2OH in D-sugars',
+              'former carbonyl carbon in cyclic sugar',
+              'anomeric substituent cis to CH2OH in D-sugars'
             ],
-            correctAnswer: 1,
-            explanation: 'Correct — Fischer projection: vertical = going back, horizontal = coming forward. The other options describe different concepts from this topic.'
+            correctAnswer: 2,
+            explanation: 'anomeric carbon is defined as: former carbonyl carbon in cyclic sugar.'
           },
           {
-            question: 'In the context of Fischer & Haworth Projections, which explains α anomer?',
+            question: 'A reaction in this lesson uses NaBH4 and proceeds by carbonyl reduction. What product pattern should you predict first?',
             options: [
-              '-OH on anomeric carbon is equatorial (up in Haworth)',
-              '-OH on anomeric carbon is axial (down in Haworth)',
-              'vertical = going back, horizontal = coming forward',
-              'shows cyclic hemiacetal form'
+              'alditol formation',
+              'returns hemiacetal + alcohol',
+              'aldonic acid',
+              'fragmented carbonyl products'
             ],
-            correctAnswer: 1,
-            explanation: 'Correct — α anomer: -OH on anomeric carbon is axial (down in Haworth). Be careful to distinguish between the different concepts in this topic.'
+            correctAnswer: 0,
+            explanation: 'With NaBH4, the benchmark outcome is alditol formation. Mechanistic anchor: reduces open-chain carbonyl.'
           }
         ]
       }
     },
     {
-      id: 'carbo2-detail',
+      id: 'ochem-carbohydrates-biochemistry-p2-s3-deep-dive',
       type: 'text' as const,
       content: `
-### Key Concepts Summary
-
-- **Fischer projection**: vertical = going back, horizontal = coming forward
-- **Haworth projection**: shows cyclic hemiacetal form
-- **α anomer**: -OH on anomeric carbon is axial (down in Haworth)
-- **β anomer**: -OH on anomeric carbon is equatorial (up in Haworth)
+      ## Deep-Dive: Reaction Pattern Table
+      
+      Use this table as a rapid decision grid.
+      
+      | Reagents | Conditions / Mechanistic Trigger | Product Pattern | Why it works |
+      |---|---|---|---|
+      | H2O, acid | acetal hydrolysis | returns hemiacetal + alcohol | reversible under acidic conditions |
+      | NaBH4 | carbonyl reduction | alditol formation | reduces open-chain carbonyl |
+      | Br2/H2O | mild oxidation | aldonic acid | selective for aldehyde oxidation |
+      | periodate cleavage | vicinal diol cleavage | fragmented carbonyl products | diagnostic for diol arrangement |
+      
+      ### Fast interpretation protocol
+      1. Map reagent set to mechanism family.
+      2. Apply regio- or stereochemical rule attached to that family.
+      3. Check whether rearrangement, equilibration, or reversibility changes the major product call.
       `
     },
     {
-      id: 'carbo2-quiz2',
-      type: 'multiple-choice' as const,
+      id: 'ochem-carbohydrates-biochemistry-p2-s4-input',
+      type: 'input-boxes' as const,
       content: `
-**Concept Check** 🎯
+      **Input Practice — enter exact chemistry terms**
+      
+      1) Term for: former carbonyl carbon in cyclic sugar
+      2) Term for: anomeric substituent trans to CH2OH in D-sugars
+      3) Product pattern expected under H2O, acid
       `,
       exercise: {
-        questions: [
-          {
-            question: 'Which concept relates directly to fischer & haworth projections?',
-            options: [
-              '-OH on anomeric carbon is equatorial (up in Haworth)',
-              'Only inorganic compounds',
-              'Exclusively gas-phase reactions',
-              'This applies only to polymers'
-            ],
-            correctAnswer: 0,
-            explanation: 'β anomer: -OH on anomeric carbon is equatorial (up in Haworth)'
-          }
-        ]
+        boxes: 3,
+        correctAnswers: ['anomeric carbon', 'alpha anomer', 'returns hemiacetal + alcohol'],
+        hint1: 'Blank 1 is the vocabulary term paired with: former carbonyl carbon in cyclic sugar.',
+        hint2: 'Blank 2 corresponds to anomeric substituent trans to CH2OH in D-sugars.',
+        hint3: 'Use the worked example: H2O, acid gives returns hemiacetal + alcohol.',
+        explanation: 'Correct entries: anomeric carbon, alpha anomer, and returns hemiacetal + alcohol. These anchor mechanism ID, vocabulary precision, and product prediction.'
       }
     },
     {
-      id: 'carbo2-dropdown',
+      id: 'ochem-carbohydrates-biochemistry-p2-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Match the Concepts** 🔍
+      **Dropdown matching (3 prompts)**
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Fischer projection',
-            options: ['-OH on anomeric carbon is axial (down in Haworth)', '-OH on anomeric carbon is equatorial (up in Haworth)', 'shows cyclic hemiacetal form', 'vertical = going back, horizontal = coming forward']
+            label: 'beta anomer',
+            options: ['anomeric substituent cis to CH2OH in D-sugars', 'anomeric substituent trans to CH2OH in D-sugars', 'equilibration between anomers via open-chain form', 'former carbonyl carbon in cyclic sugar']
           },
           {
-            label: 'Haworth projection',
-            options: ['-OH on anomeric carbon is axial (down in Haworth)', 'vertical = going back, horizontal = coming forward', 'shows cyclic hemiacetal form', '-OH on anomeric carbon is equatorial (up in Haworth)']
+            label: 'Expected pattern from NaBH4',
+            options: ['alditol formation', 'fragmented carbonyl products', 'aldonic acid', 'returns hemiacetal + alcohol']
           },
           {
-            label: 'α anomer',
-            options: ['vertical = going back, horizontal = coming forward', 'shows cyclic hemiacetal form', '-OH on anomeric carbon is axial (down in Haworth)', '-OH on anomeric carbon is equatorial (up in Haworth)']
+            label: 'Best exam strategy statement',
+            options: ['A nonreducing sugar lacks a free anomeric hemiacetal.', 'Haworth orientation must be tied back to D/L assignment carefully.', 'Acetals are stable in base but hydrolyze in acid.', 'Mechanism labels should be tied to observed bond changes, not memorized by reagent names alone.']
           }
         ],
-        correctAnswers: ['vertical = going back, horizontal = coming forward', 'shows cyclic hemiacetal form', '-OH on anomeric carbon is axial (down in Haworth)'],
-        hint1: 'Think about what each concept specifically describes in Fischer & Haworth Projections.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Fischer & Haworth Projections describes a specific idea. Fischer projection: vertical = going back, horizontal = coming forward. Haworth projection: shows cyclic hemiacetal form. α anomer: -OH on anomeric carbon is axial (down in Haworth).'
+        correctAnswers: ['anomeric substituent cis to CH2OH in D-sugars', 'alditol formation', 'Mechanism labels should be tied to observed bond changes, not memorized by reagent names alone.'],
+        hint1: 'First align each prompt with mechanism language before reading all options.',
+        hint2: 'For reagent prompts, eliminate outcomes that violate known regio/stereo rules.',
+        hint3: 'For strategy prompts, pick the statement that links mechanism evidence to product prediction.',
+        explanation: 'Correct matches combine mechanistic definition, reagent outcome, and exam execution strategy.'
+      }
+    },
+    {
+      id: 'ochem-carbohydrates-biochemistry-p2-s6-strategy',
+      type: 'text' as const,
+      content: `
+      ## Strategy: Prediction Traps and Exam Techniques
+      
+      ### Common traps in this part
+      - Acetals are stable in base but hydrolyze in acid.
+      - A nonreducing sugar lacks a free anomeric hemiacetal.
+      - Haworth orientation must be tied back to D/L assignment carefully.
+      
+      ### High-yield exam sequence
+      1. **Read reagents before substrate details** to classify mechanism class quickly.
+      2. **Mark the reactive site** (electrophilic carbon, acidic alpha-carbon, benzylic/allylic position, or aromatic position).
+      3. **Commit to one major-product logic path** before checking answer choices.
+      4. **Audit stereochemistry and regiochemistry last** so you do not lose points on orientation errors.
+      
+      ### Timing technique
+      If two options differ only by orientation or placement, spend 10 seconds restating the governing rule out loud (Markovnikov, anti addition, kinetic control, etc.) before selecting.
+      `
+    },
+    {
+      id: 'ochem-carbohydrates-biochemistry-p2-s7-mcq-final',
+      type: 'multiple-choice' as const,
+      content: `
+      **Applied synthesis/mechanism check (2 questions)**
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'In a synthesis sequence centered on cyclization and anomers, a step uses Br2/H2O. Which major product pattern is most defensible?',
+            options: [
+              'aldonic acid',
+              'returns hemiacetal + alcohol',
+              'fragmented carbonyl products',
+              'alditol formation'
+            ],
+            correctAnswer: 0,
+            explanation: 'Br2/H2O is classically associated with aldonic acid because selective for aldehyde oxidation.'
+          },
+          {
+            question: 'A mechanism rationale cites hemiacetal: functional group from alcohol addition to aldehyde. Which interpretation applies this idea correctly in product prediction?',
+            options: [
+              'Use hemiacetal to justify why the pathway favors fragmented carbonyl products under periodate cleavage.',
+              'Use hemiacetal only after final answer choice selection.',
+              'Treat hemiacetal as a naming convention unrelated to mechanism.',
+              'Ignore hemiacetal and choose products only by molecular weight.'
+            ],
+            correctAnswer: 0,
+            explanation: 'The correct approach applies hemiacetal directly to mechanism and product control. In this context, periodate cleavage aligns with fragmented carbonyl products.'
+          }
+        ]
       }
     }
   ]
-}
+};

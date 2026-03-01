@@ -5,7 +5,7 @@ export const bioCellCommPart6Data = {
       id: 'cell6-intro-p6',
       type: 'text' as const,
       content: `
-# ## Cell Communication: Problem-Solving Workshop
+## Cell Communication: Problem-Solving Workshop
 
 **Part 6 of 7 — Problem-Solving**
 
@@ -52,7 +52,7 @@ export const bioCellCommPart6Data = {
       id: 'cell6-detail-p6',
       type: 'text' as const,
       content: `
-# ### Key Details
+### Key Details
 
 - **Tracing a signal from reception to response**
 - **Predicting effects of pathway mutations**

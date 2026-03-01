@@ -5,7 +5,7 @@ export const bioWaterPropertiesPart7Data = {
       id: 'wate7-synthesis',
       type: 'text' as const,
       content: `
-# ## Synthesis: Water Properties in AP Biology
+## Synthesis: Water Properties in AP Biology
 
 ### Big Ideas Connected
 
@@ -59,7 +59,7 @@ export const bioWaterPropertiesPart7Data = {
       id: 'wate7-review',
       type: 'text' as const,
       content: `
-# ## Key Terms Review
+## Key Terms Review
 
 | Term | Definition |
 |------|------------|

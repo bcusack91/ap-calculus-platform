@@ -5,7 +5,7 @@ export const bioMacromoleculesPart7Data = {
       id: 'biol7-synthesis',
       type: 'text' as const,
       content: `
-# ## AP Biology: Macromolecules Review
+## AP Biology: Macromolecules Review
 
 ### Essential Comparisons
 
@@ -49,7 +49,7 @@ export const bioMacromoleculesPart7Data = {
       id: 'biol7-tips',
       type: 'text' as const,
       content: `
-# ## AP Exam Tips
+## AP Exam Tips
 
 - Be able to **identify macromolecules** from structural diagrams
 - Know the **monomers, bonds, and functions** for each class

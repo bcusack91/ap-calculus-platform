@@ -5,7 +5,7 @@ export const psychOperantPart3Data = {
       id: 'opera3-intro',
       type: 'text' as const,
       content: `
-# ## Punishment
+## Punishment
 
 **Part 3 of 7 — Punishment**
 
@@ -63,7 +63,7 @@ suppresses but doesn't eliminate, can cause aggression
       id: 'opera3-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Positive punishment**: adding aversive stimulus (+P)
 - **Negative punishment**: removing pleasant stimulus (-P)

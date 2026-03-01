@@ -5,7 +5,7 @@ export const psychLanguagePart2Data = {
       id: 'langu2-intro',
       type: 'text' as const,
       content: `
-# ## Language Theories
+## Language Theories
 
 **Part 2 of 7 — Language Theories**
 
@@ -63,7 +63,7 @@ language shapes thought
       id: 'langu2-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Chomsky**: language acquisition device (LAD), universal grammar
 - **Skinner**: language learned through operant conditioning

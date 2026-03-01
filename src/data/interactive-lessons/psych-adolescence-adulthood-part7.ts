@@ -5,7 +5,7 @@ export const psychAdolescencePart7Data = {
       id: 'adole7-intro',
       type: 'text' as const,
       content: `
-# ## Synthesis & AP Review
+## Synthesis & AP Review
 
 **Part 7 of 7 — Synthesis & AP Review**
 
@@ -63,7 +63,7 @@ lifespan development questions
       id: 'adole7-detail',
       type: 'text' as const,
       content: `
-# ### Key Points
+### Key Points
 
 - **Development continues throughout the lifespan**
 - **Multiple theories complement each other**

@@ -5,7 +5,7 @@ export const bioWaterPropertiesPart4Data = {
       id: 'wate4-solvent',
       type: 'text' as const,
       content: `
-# ## The Universal Solvent
+## The Universal Solvent
 
 Water is called the **universal solvent** because it dissolves more substances than any other liquid. This is due to its polarity.
 
@@ -53,7 +53,7 @@ Hydrophobic molecules are excluded from the aqueous environment, which is critic
       id: 'wate4-ph',
       type: 'text' as const,
       content: `
-# ## pH and Buffers
+## pH and Buffers
 
 ### The pH Scale
 
