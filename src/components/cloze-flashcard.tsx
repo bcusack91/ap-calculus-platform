@@ -5,7 +5,7 @@ import ReactMarkdown from 'react-markdown'
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
 import { formatFlashcardContent } from '@/lib/format-flashcard-content'
-import { detectCloze, extractClozeAnswer } from '@/lib/cloze-utils'
+import { detectCloze } from '@/lib/cloze-utils'
 
 interface ClozeFlashcardProps {
   front: string

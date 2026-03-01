@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { Prisma } from '@prisma/client'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { generateSixSigmaAnalytics, PerformanceDataPoint } from '@/utils/six-sigma-analytics'
@@ -71,7 +72,7 @@ export async function GET(request: NextRequest) {
         sigmaLevel: analytics.qualityMetrics.sigmaLevel,
         cpk: analytics.processCapability.cpk,
         cp: analytics.processCapability.cp,
-        performanceByType: analytics.typeBreakdown as any,
+        performanceByType: analytics.typeBreakdown as Prisma.InputJsonValue,
         trendDirection: 'stable',
         consecutiveCorrect: 0,
         longestStreak: 0,
@@ -90,7 +91,7 @@ export async function GET(request: NextRequest) {
         sigmaLevel: analytics.qualityMetrics.sigmaLevel,
         cpk: analytics.processCapability.cpk,
         cp: analytics.processCapability.cp,
-        performanceByType: analytics.typeBreakdown as any,
+        performanceByType: analytics.typeBreakdown as Prisma.InputJsonValue,
         hasOutliers: analytics.controlChart.outOfControlPoints > 0,
         outlierCount: analytics.controlChart.outOfControlPoints,
         calculatedAt: new Date(),

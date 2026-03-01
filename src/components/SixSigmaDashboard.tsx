@@ -1,7 +1,7 @@
 'use client'
 
 import { SixSigmaAnalytics } from '@/utils/six-sigma-analytics'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 
 interface SixSigmaDashboardProps {
   topicSlug: string
@@ -13,11 +13,7 @@ export default function SixSigmaDashboard({ topicSlug, userId }: SixSigmaDashboa
   const [loading, setLoading] = useState(true)
   const [activeTab, setActiveTab] = useState<'overview' | 'control-chart' | 'pareto' | 'recommendations'>('overview')
 
-  useEffect(() => {
-    loadAnalytics()
-  }, [topicSlug, userId])
-
-  const loadAnalytics = async () => {
+  const loadAnalytics = useCallback(async () => {
     try {
       const response = await fetch(`/api/analytics/six-sigma?topicSlug=${topicSlug}&userId=${userId}`)
       const data = await response.json()
@@ -27,7 +23,11 @@ export default function SixSigmaDashboard({ topicSlug, userId }: SixSigmaDashboa
     } finally {
       setLoading(false)
     }
-  }
+  }, [topicSlug, userId])
+
+  useEffect(() => {
+    loadAnalytics()
+  }, [loadAnalytics])
 
   if (loading) {
     return (

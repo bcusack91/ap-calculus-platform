@@ -1,9 +1,15 @@
 // Dynamic import registry - lesson data is loaded on-demand
 // This avoids bundling all 500+ lesson files into one chunk
 
-type LessonData = {
+type LessonSection = {
+  id?: string
+  content?: string
+  [key: string]: unknown
+}
+
+export type LessonData = {
   topicSlug: string
-  sections: any[]
+  sections: LessonSection[]
 }
 
 interface LazyPartConfig {

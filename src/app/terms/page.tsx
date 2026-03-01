@@ -18,7 +18,7 @@ export default function TermsPage() {
         <section className="mt-8">
           <h2 className="text-2xl font-semibold mb-4">1. Acceptance of Terms</h2>
           <p>
-            By accessing and using this website ("Service"), you accept and agree to be bound by the terms and provisions of this agreement. 
+            By accessing and using this website (&quot;Service&quot;), you accept and agree to be bound by the terms and provisions of this agreement. 
             If you do not agree to these Terms of Service, please do not use the Service.
           </p>
         </section>
@@ -123,9 +123,9 @@ export default function TermsPage() {
         <section className="mt-8">
           <h2 className="text-2xl font-semibold mb-4">7. Disclaimers and Limitation of Liability</h2>
           
-          <h3 className="text-xl font-semibold mt-6 mb-3">7.1 "AS IS" Basis</h3>
+          <h3 className="text-xl font-semibold mt-6 mb-3">7.1 &quot;AS IS&quot; Basis</h3>
           <p>
-            THE SERVICE IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, 
+            THE SERVICE IS PROVIDED ON AN &quot;AS IS&quot; AND &quot;AS AVAILABLE&quot; BASIS WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, 
             INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.
           </p>
 
@@ -163,7 +163,7 @@ export default function TermsPage() {
           <h2 className="text-2xl font-semibold mb-4">9. Changes to Terms</h2>
           <p>
             We reserve the right to modify these Terms of Service at any time. We will notify users of material changes by 
-            updating the "Last Updated" date at the top of this page. Your continued use of the Service after changes 
+            updating the &quot;Last Updated&quot; date at the top of this page. Your continued use of the Service after changes 
             constitutes acceptance of the modified terms.
           </p>
         </section>

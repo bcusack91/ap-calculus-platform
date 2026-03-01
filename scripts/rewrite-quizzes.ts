@@ -454,16 +454,6 @@ function generateDropdown(
   }
 }
 
-// ---------------------------------------------------------------------------
-// Escape helpers for template literals
-// ---------------------------------------------------------------------------
-function escapeForTemplateLiteral(s: string): string {
-  return s
-    .replace(/\\/g, '\\\\')
-    .replace(/`/g, '\\`')
-    .replace(/\$/g, '\\$')
-}
-
 function escapeForSingleQuotedString(s: string): string {
   return s.replace(/\\/g, '\\\\').replace(/'/g, "\\'")
 }
@@ -741,8 +731,9 @@ function processFile(filePath: string, dryRun: boolean): { success: boolean; cha
     }
 
     return { success: true, changed }
-  } catch (err: any) {
-    return { success: false, changed: false, error: err.message }
+  } catch (err: unknown) {
+    const message = err instanceof Error ? err.message : String(err)
+    return { success: false, changed: false, error: message }
   }
 }
 

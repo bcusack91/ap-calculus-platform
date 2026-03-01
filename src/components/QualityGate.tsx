@@ -89,8 +89,8 @@ export default function QualityGate({
                     Almost There!
                   </div>
                   <div className="text-sm text-orange-800 dark:text-orange-300">
-                    You need {(gap * 100).toFixed(0)}% more accuracy to meet the quality standard for "{sectionName}". 
-                    This ensures you're ready for the next challenge!
+                    You need {(gap * 100).toFixed(0)}% more accuracy to meet the quality standard for &quot;{sectionName}&quot;. 
+                    This ensures you&apos;re ready for the next challenge!
                   </div>
                 </div>
               </div>
@@ -106,7 +106,7 @@ export default function QualityGate({
                     Excellent Work!
                   </div>
                   <div className="text-sm text-green-800 dark:text-green-300">
-                    You've demonstrated mastery of "{sectionName}". You're ready to advance to the next section with confidence!
+                    You&apos;ve demonstrated mastery of &quot;{sectionName}&quot;. You&apos;re ready to advance to the next section with confidence!
                   </div>
                 </div>
               </div>
@@ -142,7 +142,7 @@ export default function QualityGate({
             </div>
             <div className="text-purple-800 dark:text-purple-300">
               Like in manufacturing, we use progressive quality gates to ensure each step builds a solid foundation. 
-              Meeting these standards means you're ready for the next level of complexity!
+              Meeting these standards means you&apos;re ready for the next level of complexity!
             </div>
           </div>
         </div>

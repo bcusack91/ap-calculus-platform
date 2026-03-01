@@ -23,7 +23,7 @@ export default function PrivacyPage() {
           </p>
           <p className="mt-4">
             We reserve the right to make changes to this Privacy Policy at any time and for any reason. We will alert you about any changes 
-            by updating the "Last Updated" date of this Privacy Policy.
+            by updating the &quot;Last Updated&quot; date of this Privacy Policy.
           </p>
         </section>
 
@@ -237,7 +237,7 @@ export default function PrivacyPage() {
 
           <h3 className="text-xl font-semibold mt-6 mb-3">7.3 Do Not Track</h3>
           <p>
-            Some browsers include a "Do Not Track" (DNT) feature. Currently, there is no industry standard for responding to DNT signals. 
+            Some browsers include a &quot;Do Not Track&quot; (DNT) feature. Currently, there is no industry standard for responding to DNT signals. 
             We do not currently respond to DNT signals, but we will update this policy if standards are established.
           </p>
 
@@ -267,7 +267,7 @@ export default function PrivacyPage() {
         </section>
 
         <section className="mt-8">
-          <h2 className="text-2xl font-semibold mb-4">8. Children's Privacy</h2>
+          <h2 className="text-2xl font-semibold mb-4">8. Children&apos;s Privacy</h2>
           <p>
             Our Service is designed for students preparing for AP® exams, which typically includes high school students. 
             While we do not knowingly collect personal information from children under 13, we recognize that minors may use our Service.
@@ -315,7 +315,7 @@ export default function PrivacyPage() {
             operational, or regulatory reasons. We will notify you of material changes by:
           </p>
           <ul className="list-disc pl-6 mt-2">
-            <li>Updating the "Last Updated" date at the top of this page</li>
+            <li>Updating the &quot;Last Updated&quot; date at the top of this page</li>
             <li>Posting a notice on our homepage (for significant changes)</li>
           </ul>
           <p className="mt-4">

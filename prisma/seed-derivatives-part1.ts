@@ -30,7 +30,7 @@ async function main() {
   console.log('✓ Cleared any existing topics with same slugs')
 
   // 1. What is a Derivative?
-  const topic1 = await prisma.topic.create({
+  await prisma.topic.create({
     data: {
       title: 'What is a Derivative?',
       slug: 'what-is-a-derivative',
@@ -214,7 +214,7 @@ $$= 4 + 0 = 4$$
   })
 
   // 2. Derivative Notation
-  const topic2 = await prisma.topic.create({
+  await prisma.topic.create({
     data: {
       title: 'Derivative Notation',
       slug: 'derivative-notation',
@@ -421,7 +421,7 @@ Both represent the **second derivative** - the derivative of the derivative.
   })
 
   // 3. Derivative as Slope of Tangent Line
-  const topic3 = await prisma.topic.create({
+  await prisma.topic.create({
     data: {
       title: 'Derivative as Slope',
       slug: 'derivative-as-slope',
@@ -630,7 +630,7 @@ These are the **critical points** where the function changes from increasing to 
   })
 
   // 4. Derivative as Rate of Change
-  const topic4 = await prisma.topic.create({
+  await prisma.topic.create({
     data: {
       title: 'Derivative as Rate of Change',
       slug: 'derivative-as-rate-of-change',

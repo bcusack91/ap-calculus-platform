@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useCallback } from 'react'
 import Link from 'next/link'
 
 interface FlashcardNotificationProps {
@@ -14,21 +14,26 @@ interface FlashcardNotificationProps {
 export function FlashcardNotification({ show, newCards, totalActive, topicTitle, onDismiss }: FlashcardNotificationProps) {
   const [visible, setVisible] = useState(false)
 
+  const handleDismiss = useCallback(() => {
+    setVisible(false)
+    setTimeout(onDismiss, 300) // Wait for animation to complete
+  }, [onDismiss])
+
   useEffect(() => {
     if (show) {
-      setVisible(true)
+      const showTimer = setTimeout(() => {
+        setVisible(true)
+      }, 0)
       // Auto-dismiss after 10 seconds
       const timer = setTimeout(() => {
         handleDismiss()
       }, 10000)
-      return () => clearTimeout(timer)
+      return () => {
+        clearTimeout(showTimer)
+        clearTimeout(timer)
+      }
     }
-  }, [show])
-
-  const handleDismiss = () => {
-    setVisible(false)
-    setTimeout(onDismiss, 300) // Wait for animation to complete
-  }
+  }, [show, handleDismiss])
 
   if (!visible) return null
 

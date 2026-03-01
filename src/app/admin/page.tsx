@@ -22,7 +22,7 @@ const ROLES = [
 
 export default function AdminPanel() {
   const router = useRouter()
-  const { data: session, status } = useSession()
+  const { status } = useSession()
   const [search, setSearch] = useState('')
   const [users, setUsers] = useState<UserResult[]>([])
   const [loading, setLoading] = useState(false)

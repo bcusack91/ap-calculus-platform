@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import { useSession } from 'next-auth/react'
 import Link from 'next/link'
@@ -62,11 +62,7 @@ export default function TeacherDashboard() {
     }
   }, [status, router])
 
-  useEffect(() => {
-    if (session) loadDashboard()
-  }, [session])
-
-  const loadDashboard = async () => {
+  const loadDashboard = useCallback(async () => {
     try {
       const res = await fetch('/api/teacher/dashboard')
       if (res.status === 403) {
@@ -80,7 +76,11 @@ export default function TeacherDashboard() {
     } finally {
       setLoading(false)
     }
-  }
+  }, [router])
+
+  useEffect(() => {
+    if (session) loadDashboard()
+  }, [session, loadDashboard])
 
   const createClassroom = async () => {
     if (!newClass.name.trim()) return

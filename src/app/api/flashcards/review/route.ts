@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { Prisma } from '@prisma/client'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { calculateNextReview, buttonToQuality } from '@/lib/spaced-repetition'
@@ -112,7 +113,7 @@ export async function GET(req: NextRequest) {
 
     // Build query
     const now = new Date()
-    const where: any = {
+    const where: Prisma.FlashcardProgressWhereInput = {
       userId: session.user.id,
       nextReview: {
         lte: now // Cards due now or in the past

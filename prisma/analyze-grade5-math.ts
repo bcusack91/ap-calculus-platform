@@ -2,6 +2,17 @@ import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
+interface ThinTopic {
+  slug: string;
+  title: string;
+  length: number;
+}
+
+interface TopicNeedingProblems {
+  slug: string;
+  title: string;
+}
+
 async function main() {
   console.log('Analyzing Grade 5 Math topics...\n');
 
@@ -35,8 +46,8 @@ async function main() {
   let topicsWithContent = 0;
   let topicsWithProblems = 0;
   let topicsWithFlashcards = 0;
-  let thinTopics: any[] = [];
-  let topicsNeedingProblems: any[] = [];
+  const thinTopics: ThinTopic[] = [];
+  const topicsNeedingProblems: TopicNeedingProblems[] = [];
 
   console.log('📊 GRADE 5 MATH ANALYSIS\n');
   console.log('=' .repeat(80));

@@ -1,7 +1,15 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { auth } from '@/lib/auth';
 import { prisma } from '@/lib/prisma';
-import { checkAnswer, UNIT_CIRCLE_POSITIONS, calculateMMRChange, getRankFromMMR } from '@/lib/competitive-utils';
+import { calculateMMRChange, getRankFromMMR } from '@/lib/competitive-utils';
+
+interface MatchGameData {
+  questions?: Array<{ answerIndex?: number; options?: string[]; [key: string]: unknown }>;
+  player1QuestionIndex?: number;
+  player2QuestionIndex?: number;
+  aiDifficulty?: 'easy' | 'medium' | 'hard';
+  isPracticeMatch?: boolean;
+}
 
 export async function POST(
   request: NextRequest,
@@ -55,7 +63,9 @@ export async function POST(
     }
 
     // Parse current game data
-    const gameData = match.gameData as any;
+    const gameData = (match.gameData && typeof match.gameData === 'object'
+      ? match.gameData
+      : {}) as MatchGameData;
     const questions = gameData?.questions || [];
     let player1QuestionIndex = gameData?.player1QuestionIndex ?? 0;
     let player2QuestionIndex = gameData?.player2QuestionIndex ?? 0;

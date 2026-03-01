@@ -26,7 +26,7 @@ async function main() {
   console.log('✓ Cleared any existing topics with same slugs')
 
   // 5. The Power Rule
-  const topic5 = await prisma.topic.create({
+  await prisma.topic.create({
     data: {
       title: 'The Power Rule',
       slug: 'power-rule-basics',
@@ -244,7 +244,7 @@ $$= \\frac{1}{3x^{2/3}} = \\frac{1}{3\\sqrt[3]{x^2}}$$
   })
 
   // 6. Constant Multiple and Sum/Difference Rules
-  const topic6 = await prisma.topic.create({
+  await prisma.topic.create({
     data: {
       title: 'Constant Multiple and Sum Rules',
       slug: 'constant-multiple-sum-rules',
@@ -464,7 +464,7 @@ $$g'(x) = \\frac{5}{2}x^{-1/2} + 2x^{-2}$$
   })
 
   // 7. The Product Rule
-  const topic7 = await prisma.topic.create({
+  await prisma.topic.create({
     data: {
       title: 'The Product Rule',
       slug: 'product-rule',
@@ -693,7 +693,7 @@ $$= 18x^2 - 26x - 7$$
   })
 
   // 8. The Quotient Rule
-  const topic8 = await prisma.topic.create({
+  await prisma.topic.create({
     data: {
       title: 'The Quotient Rule',
       slug: 'quotient-rule',

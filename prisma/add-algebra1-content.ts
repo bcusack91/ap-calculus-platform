@@ -18,7 +18,7 @@ async function main() {
     where: { slug: 'algebra1-linear-equations' }
   })
   
-  const systems = await prisma.category.findUnique({
+  await prisma.category.findUnique({
     where: { slug: 'algebra1-systems' }
   })
   
@@ -26,11 +26,11 @@ async function main() {
     where: { slug: 'algebra1-polynomials' }
   })
   
-  const quadratics = await prisma.category.findUnique({
+  await prisma.category.findUnique({
     where: { slug: 'algebra1-quadratics' }
   })
 
-  const functions = await prisma.category.findUnique({
+  await prisma.category.findUnique({
     where: { slug: 'algebra1-functions' }
   })
 

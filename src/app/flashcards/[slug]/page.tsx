@@ -306,7 +306,7 @@ export default function FlashcardStudyPage() {
               <div className="mt-8 p-6 bg-green-50 border border-green-200 rounded-lg text-center">
                 <h3 className="text-xl font-bold text-green-900 mb-2">🎉 Great Job!</h3>
                 <p className="text-green-900 mb-4">
-                  You've reviewed all {topic.flashcards.length} flashcards for this topic.
+                  You&apos;ve reviewed all {topic.flashcards.length} flashcards for this topic.
                 </p>
                 <div className="flex gap-4 justify-center">
                   <button

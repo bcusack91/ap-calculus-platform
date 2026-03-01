@@ -14,22 +14,26 @@ import ReactMarkdown from 'react-markdown'
 import remarkMath from 'remark-math'
 import remarkGfm from 'remark-gfm'
 import rehypeKatex from 'rehype-katex'
-import { getInteractiveLessonSEOContent, type SEOLessonContent } from '@/data/interactive-lessons/seo-content-loader'
+import { getInteractiveLessonSEOContent } from '@/data/interactive-lessons/seo-content-loader'
+
+type MarkdownChildrenProps = {
+  children?: React.ReactNode
+}
 
 // Minimal styled components for the SEO content
 const SEOMarkdownComponents = {
-  h1: ({ children }: any) => <h2 className="text-2xl font-bold mb-4 mt-6">{children}</h2>,
-  h2: ({ children }: any) => <h3 className="text-xl font-semibold mb-3 mt-5">{children}</h3>,
-  h3: ({ children }: any) => <h4 className="text-lg font-semibold mb-2 mt-4">{children}</h4>,
-  p: ({ children }: any) => <p className="mb-3 leading-relaxed">{children}</p>,
-  ul: ({ children }: any) => <ul className="list-disc list-inside mb-3 space-y-1 ml-4">{children}</ul>,
-  ol: ({ children }: any) => <ol className="list-decimal list-inside mb-3 space-y-1 ml-4">{children}</ol>,
-  li: ({ children }: any) => <li>{children}</li>,
-  blockquote: ({ children }: any) => <blockquote className="border-l-4 border-gray-300 pl-4 py-2 mb-3 italic">{children}</blockquote>,
-  strong: ({ children }: any) => <strong className="font-bold">{children}</strong>,
-  table: ({ children }: any) => <table className="w-full border-collapse mb-4">{children}</table>,
-  th: ({ children }: any) => <th className="border border-gray-300 px-3 py-2 bg-gray-100 text-left font-semibold">{children}</th>,
-  td: ({ children }: any) => <td className="border border-gray-300 px-3 py-2">{children}</td>,
+  h1: ({ children }: MarkdownChildrenProps) => <h2 className="text-2xl font-bold mb-4 mt-6">{children}</h2>,
+  h2: ({ children }: MarkdownChildrenProps) => <h3 className="text-xl font-semibold mb-3 mt-5">{children}</h3>,
+  h3: ({ children }: MarkdownChildrenProps) => <h4 className="text-lg font-semibold mb-2 mt-4">{children}</h4>,
+  p: ({ children }: MarkdownChildrenProps) => <p className="mb-3 leading-relaxed">{children}</p>,
+  ul: ({ children }: MarkdownChildrenProps) => <ul className="list-disc list-inside mb-3 space-y-1 ml-4">{children}</ul>,
+  ol: ({ children }: MarkdownChildrenProps) => <ol className="list-decimal list-inside mb-3 space-y-1 ml-4">{children}</ol>,
+  li: ({ children }: MarkdownChildrenProps) => <li>{children}</li>,
+  blockquote: ({ children }: MarkdownChildrenProps) => <blockquote className="border-l-4 border-gray-300 pl-4 py-2 mb-3 italic">{children}</blockquote>,
+  strong: ({ children }: MarkdownChildrenProps) => <strong className="font-bold">{children}</strong>,
+  table: ({ children }: MarkdownChildrenProps) => <table className="w-full border-collapse mb-4">{children}</table>,
+  th: ({ children }: MarkdownChildrenProps) => <th className="border border-gray-300 px-3 py-2 bg-gray-100 text-left font-semibold">{children}</th>,
+  td: ({ children }: MarkdownChildrenProps) => <td className="border border-gray-300 px-3 py-2">{children}</td>,
 }
 
 interface InteractiveLessonSEOProps {

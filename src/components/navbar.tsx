@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { useSession, signIn, signOut } from 'next-auth/react'
+import { useSession, signOut } from 'next-auth/react'
 import { useState, useEffect, useRef } from 'react'
 import AvatarDisplay from './AvatarDisplay'
 import ThemeToggle from './ThemeToggle'
@@ -34,7 +34,7 @@ export function Navbar() {
         try {
           setAvatarData(JSON.parse(cached))
           return
-        } catch (e) {
+        } catch {
           // Invalid cache, fetch fresh
         }
       }
@@ -63,7 +63,7 @@ export function Navbar() {
       try {
         setCourses(JSON.parse(cached))
         return
-      } catch (e) { /* fetch fresh */ }
+      } catch { /* fetch fresh */ }
     }
     fetch('/api/courses')
       .then(res => res.json())

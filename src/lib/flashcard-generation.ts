@@ -17,7 +17,6 @@ export function extractEquations(content: string): FlashcardCandidate[] {
   const flashcards: FlashcardCandidate[] = []
   
   // Match inline math $...$ and display math $$...$$
-  const inlineMathRegex = /\$([^$]+)\$/g
   const displayMathRegex = /\$\$([^$]+)\$\$/g
   
   // Extract display math equations (more likely to be important)

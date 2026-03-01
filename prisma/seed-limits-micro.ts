@@ -24,7 +24,7 @@ async function main() {
   })
 
   // 1. What is a Limit? (Intuitive Understanding)
-  const topic1 = await prisma.topic.create({
+  await prisma.topic.create({
     data: {
       title: 'What is a Limit?',
       slug: 'what-is-a-limit',
@@ -123,7 +123,7 @@ Both sides approach **5**, so: $\\lim_{x \\to 2} (3x - 1) = 5$`,
   })
 
   // 2. Limit Notation and Terminology
-  const topic2 = await prisma.topic.create({
+  await prisma.topic.create({
     data: {
       title: 'Limit Notation and Terminology',
       slug: 'limit-notation-terminology',
@@ -250,7 +250,7 @@ The overall limit $\\lim_{x \\to 3} f(x)$ exists **only if both one-sided limits
   })
 
   // 3. Estimating Limits from Tables
-  const topic3 = await prisma.topic.create({
+  await prisma.topic.create({
     data: {
       title: 'Estimating Limits from Tables',
       slug: 'estimating-limits-tables',
@@ -368,7 +368,7 @@ $$\\lim_{x \\to 1} \\frac{x - 1}{x^2 - 1} = 0.5 = \\frac{1}{2}$$`,
   })
 
   // 4. Estimating Limits from Graphs
-  const topic4 = await prisma.topic.create({
+  await prisma.topic.create({
     data: {
       title: 'Estimating Limits from Graphs',
       slug: 'estimating-limits-graphs',

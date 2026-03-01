@@ -12,7 +12,7 @@ interface ReviewStats {
 }
 
 export default function FlashcardReviewDashboard() {
-  const { data: session, status } = useSession()
+  const { status } = useSession()
   const [stats, setStats] = useState<ReviewStats | null>(null)
   const [loading, setLoading] = useState(true)
 
@@ -185,7 +185,7 @@ export default function FlashcardReviewDashboard() {
               <div>
                 <h3 className="font-bold text-gray-900 mb-2">Build Long-Term Memory</h3>
                 <p className="text-gray-600">
-                  Review cards just before you're about to forget them. This strengthens memory and helps you retain information for exams and beyond.
+                  Review cards just before you&apos;re about to forget them. This strengthens memory and helps you retain information for exams and beyond.
                 </p>
               </div>
             </div>
@@ -200,7 +200,7 @@ export default function FlashcardReviewDashboard() {
             <li>• Be honest with your ratings - it helps the algorithm work better</li>
             <li>• New cards appear immediately after completing topics</li>
             <li>• The more you use it, the smarter the scheduling becomes</li>
-            <li>• Struggling with a card? Hit "Again" to see it sooner</li>
+            <li>• Struggling with a card? Hit &quot;Again&quot; to see it sooner</li>
           </ul>
         </div>
 

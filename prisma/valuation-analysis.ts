@@ -2,6 +2,16 @@ import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
+interface CourseBreakdownEntry {
+  name: string;
+  categories: number;
+  topics: number;
+  complete: number;
+  completionRate: number;
+  problems: number;
+  flashcards: number;
+}
+
 async function main() {
   console.log('\n💰 WEBSITE VALUATION ANALYSIS\n');
   console.log('='.repeat(80));
@@ -33,7 +43,7 @@ async function main() {
   let totalFlashcards = 0;
   let completeTopics = 0;
 
-  const courseBreakdown: any[] = [];
+  const courseBreakdown: CourseBreakdownEntry[] = [];
 
   for (const course of courses) {
     totalCourses++;

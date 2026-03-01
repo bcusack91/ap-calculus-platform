@@ -2,6 +2,15 @@ import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
+interface PartialTopic {
+  slug: string;
+  title: string;
+  category: string;
+  problems: number;
+  flashcards: number;
+  contentLength: number;
+}
+
 async function main() {
   console.log('Analyzing Pre-Algebra topics with partial content...\n');
 
@@ -33,7 +42,7 @@ async function main() {
   console.log('🔍 Topics with PARTIAL content (3 problems, 3 flashcards):');
   console.log('─'.repeat(80));
 
-  const partialTopics: any[] = [];
+  const partialTopics: PartialTopic[] = [];
 
   for (const category of course.categories) {
     for (const topic of category.topics) {

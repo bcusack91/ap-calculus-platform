@@ -2,6 +2,15 @@ import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
+interface TopicNeedingWork {
+  title: string;
+  slug: string;
+  category: string;
+  contentLength: number;
+  problems: number;
+  flashcards: number;
+}
+
 async function main() {
   console.log('🔍 Analyzing Algebra 1 course...\n');
 
@@ -42,7 +51,7 @@ async function main() {
   let needsFlashcards = 0;
   let partialContent = 0;
 
-  const topicsNeedingWork: any[] = [];
+  const topicsNeedingWork: TopicNeedingWork[] = [];
 
   for (const category of course.categories) {
     console.log(`\n📁 ${category.name}`);

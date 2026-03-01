@@ -227,7 +227,7 @@ export default async function CoursePage({ params }: CoursePageProps) {
             <div className="text-6xl mb-4">🚧</div>
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Content Coming Soon!</h2>
             <p className="text-gray-600 dark:text-gray-400 mb-6">
-              We're working hard to create comprehensive study materials for {course.name}.
+              We&apos;re working hard to create comprehensive study materials for {course.name}.
             </p>
             <Link
               href="/"

@@ -131,7 +131,7 @@ interface Section {
   id: string
   type: 'text' | 'input-boxes' | 'dropdown-select' | 'multiple-choice' | 'reference-angle-quiz' | 'factoring-practice' | 'mini-boss'
   content: string
-  exercise?: any
+  exercise?: LessonExercise
   problemType?: 'gcf' | 'gcf-identify' | 'difference-of-squares' | 'simple-trinomials' | 'complex-trinomials' | 'mixed'
   miniBossConfig?: {
     bossName: string
@@ -140,6 +140,76 @@ interface Section {
     aiAccuracy: number // 0-1
     aiResponseTime: number // milliseconds
   }
+}
+
+interface ExerciseInput {
+  label: string
+  correctAnswer: string
+  explanation?: string
+}
+
+interface ExerciseDropdown {
+  label: string
+  options: string[]
+  correctIndex: number
+  explanation?: string
+}
+
+interface ExerciseQuestion {
+  question: string
+  options: string[]
+  correctAnswer: number
+  explanation: string
+}
+
+interface LessonExercise {
+  inputs?: ExerciseInput[]
+  boxes?: number
+  correctAnswers?: string[]
+  hint1?: string
+  hint2?: string
+  hint3?: string
+  explanation?: string
+  dropdowns?: ExerciseDropdown[]
+  questions?: ExerciseQuestion[]
+  [key: string]: unknown
+}
+
+interface MiniBossOption {
+  label: string
+  value: string
+  isCorrect: boolean
+  explanation?: string
+}
+
+interface MiniBossQuestion {
+  id: string
+  type: string
+  question: string
+  options: MiniBossOption[]
+  hint?: string
+  answer?: string
+  [key: string]: unknown
+}
+
+interface FactoringProblem {
+  id?: string
+  problem: string
+  answer: string
+  hint?: string
+}
+
+type WindowWithKatex = Window & {
+  katex?: {
+    renderToString: (input: string, options?: { throwOnError?: boolean; displayMode?: boolean }) => string
+  }
+}
+
+function renderWindowKatex(input: string, fallback: string, displayMode = false): string {
+  if (typeof window === 'undefined') return fallback
+  const windowKatex = (window as WindowWithKatex).katex
+  if (!windowKatex) return fallback
+  return windowKatex.renderToString(input, { throwOnError: false, displayMode })
 }
 
 interface InteractiveLessonRendererProps {
@@ -179,12 +249,11 @@ export default function InteractiveLessonRenderer({ topicSlug, preloadedParts, c
   const [progressLoaded, setProgressLoaded] = useState(false)
   const [unlockedParts, setUnlockedParts] = useState<Set<LessonPart>>(new Set([1])) // Part 1 always unlocked
   const [cachedTopicId, setCachedTopicId] = useState<string | null>(null)
-  const [pendingSaveCount, setPendingSaveCount] = useState(0)
   const queryCountRef = useRef(0) // Track API calls
   
   // Celebration animation state
   const [showCelebration, setShowCelebration] = useState(false)
-  const celebrationCounterRef = useRef(0)
+  const [celebrationKey, setCelebrationKey] = useState(0)
   
   // Flashcard notification state
   const [showFlashcardNotification, setShowFlashcardNotification] = useState(false)
@@ -193,6 +262,9 @@ export default function InteractiveLessonRenderer({ topicSlug, preloadedParts, c
     totalActive: number
     topicTitle: string
   } | null>(null)
+
+  // Lesson data from server-preloaded parts (no client-side dynamic imports needed)
+  const lessonData = preloadedParts[lessonPart - 1]?.data ?? null
 
   // Update URL when lesson part changes
   const updateLessonPart = (newPart: LessonPart) => {
@@ -206,7 +278,7 @@ export default function InteractiveLessonRenderer({ topicSlug, preloadedParts, c
   }
 
   // Save progress to database
-  const saveProgress = async (forceTopicId?: string, isPartCompletion: boolean = false) => {
+  const saveProgress = useCallback(async (forceTopicId?: string, isPartCompletion: boolean = false) => {
     if (!session?.user) return // Only save if user is logged in
     
     queryCountRef.current++
@@ -245,7 +317,7 @@ export default function InteractiveLessonRenderer({ topicSlug, preloadedParts, c
     } catch (error) {
       console.error('Failed to save progress:', error)
     }
-  }
+  }, [session?.user, cachedTopicId, topicSlug, lessonPart, completedSections, totalParts, lessonData])
 
   // Load progress from database on mount
   useEffect(() => {
@@ -313,76 +385,25 @@ export default function InteractiveLessonRenderer({ topicSlug, preloadedParts, c
     
     window.addEventListener('beforeunload', handleBeforeUnload)
     return () => window.removeEventListener('beforeunload', handleBeforeUnload)
-  }, [session, completedSections, cachedTopicId, lessonPart])
+  }, [session, completedSections, cachedTopicId, lessonPart, lessonData?.sections?.length, totalParts])
 
   // Smart batched saves: Save every 3 sections for progress tracking
   useEffect(() => {
     if (progressLoaded && completedSections.size > 0) {
       const shouldSave = completedSections.size % 3 === 0 // Every 3 sections
       if (shouldSave) {
-        saveProgress(undefined, false) // Progress checkpoint, not part completion
+        const timeoutId = setTimeout(() => {
+          saveProgress(undefined, false) // Progress checkpoint, not part completion
+        }, 0)
+        return () => clearTimeout(timeoutId)
       }
     }
-  }, [completedSections, progressLoaded])
+  }, [completedSections, progressLoaded, saveProgress])
 
-  // Lesson data from server-preloaded parts (no client-side dynamic imports needed)
-  const lessonData = preloadedParts[lessonPart - 1]?.data ?? null
-
-  if (!lessonData) {
-    return <div>No interactive lesson available for this part.</div>
-  }
-
-  // Show practice mode if requested
-  if (showPracticeMode && topicSlug === 'the-unit-circle') {
-    // Use different practice mode for Part 2
-    if (lessonPart === 2) {
-      return (
-        <Part2PracticeMode 
-          onBack={() => setShowPracticeMode(false)} 
-          onComplete={() => {
-            setShowPracticeMode(false)
-            if (totalParts >= 3) {
-              setUnlockedParts(prev => new Set([...prev, 3 as LessonPart])) // Unlock Part 3
-              updateLessonPart(3 as LessonPart) // Move to part 3 after completing Part 2 practice
-            }
-          }}
-        />
-      )
-    }
-    
-    // Part 1 practice mode (counting method)
-    if (lessonPart === 1) {
-      return (
-        <IndependentPracticeMode 
-          onBack={() => setShowPracticeMode(false)} 
-          onComplete={() => {
-            setShowPracticeMode(false)
-            if (totalParts >= 2) {
-              setUnlockedParts(prev => new Set([...prev, 2 as LessonPart]))
-              updateLessonPart(2 as LessonPart) // Move to part 2 after completing practice
-            }
-          }}
-        />
-      )
-    }
-    
-    // Parts 3 and 4 don't have practice modes yet
-    setShowPracticeMode(false)
-  }
-
-  const { sections } = lessonData
+  const sections = lessonData?.sections ?? []
   const currentSection = sections?.[currentSectionIndex]
   const progress = sections?.length > 0 ? ((completedSections.size) / sections.length) * 100 : 0
-
-  if (!currentSection) {
-    return <div>No interactive lesson available</div>
-  }
   
-  // Helper to calculate mastery level (needs sections defined)
-  const calculateMasteryLevel = () => {
-    return calculatePartMastery(lessonPart, completedSections.size, sections.length, totalParts)
-  }
-
   const handleNext = () => {
     // Mark current section as complete when moving to next
     if (!completedSections.has(currentSectionIndex)) {
@@ -457,6 +478,7 @@ export default function InteractiveLessonRenderer({ topicSlug, preloadedParts, c
   }
 
   const handleSectionComplete = () => {
+    if (!currentSection) return
     console.log('🎯 Section completed:', currentSectionIndex)
     setCompletedSections(prev => new Set([...prev, currentSectionIndex]))
     
@@ -468,7 +490,7 @@ export default function InteractiveLessonRenderer({ topicSlug, preloadedParts, c
       currentSection.type === 'reference-angle-quiz' ||
       currentSection.type === 'factoring-practice'
     if (isExercise) {
-      celebrationCounterRef.current += 1
+      setCelebrationKey(prev => prev + 1)
       setShowCelebration(true)
     }
   }
@@ -477,13 +499,15 @@ export default function InteractiveLessonRenderer({ topicSlug, preloadedParts, c
   
   // Check if current section requires completion before proceeding
   const currentSectionRequiresCompletion = 
-    currentSection.type === 'input-boxes' || 
-    currentSection.type === 'dropdown-select' ||
-    currentSection.type === 'multiple-choice' ||
-    currentSection.type === 'reference-angle-quiz' ||
-    currentSection.type === 'factoring-practice' ||
-    (currentSection.type === 'text' && currentSection.content.includes('[UNIT_CIRCLE_GAME]')) ||
-    (currentSection.type === 'text' && currentSection.content.includes('[FULL_UNIT_CIRCLE_GAME]'))
+    !!currentSection && (
+      currentSection.type === 'input-boxes' || 
+      currentSection.type === 'dropdown-select' ||
+      currentSection.type === 'multiple-choice' ||
+      currentSection.type === 'reference-angle-quiz' ||
+      currentSection.type === 'factoring-practice' ||
+      (currentSection.type === 'text' && currentSection.content.includes('[UNIT_CIRCLE_GAME]')) ||
+      (currentSection.type === 'text' && currentSection.content.includes('[FULL_UNIT_CIRCLE_GAME]'))
+    )
   
   // Disable Next button if it's an exercise that hasn't been completed
   const canProceedToNext = !currentSectionRequiresCompletion || isCurrentSectionComplete
@@ -501,13 +525,59 @@ export default function InteractiveLessonRenderer({ topicSlug, preloadedParts, c
   useLessonKeyboard({
     onNext: handleNext,
     onPrevious: handlePrevious,
-    canGoNext: canProceedToNext,
-    canGoPrevious: currentSectionIndex > 0,
-    enabled: !showPracticeMode,
+    canGoNext: !!currentSection && canProceedToNext,
+    canGoPrevious: !!currentSection && currentSectionIndex > 0,
+    enabled: !showPracticeMode && !!currentSection,
   })
 
   // Lesson title for progress bar and bookmark
   const lessonTitle = preloadedParts[lessonPart - 1]?.title || topicSlug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())
+
+  if (!lessonData) {
+    return <div>No interactive lesson available for this part.</div>
+  }
+
+  // Show practice mode if requested
+  if (showPracticeMode && topicSlug === 'the-unit-circle') {
+    // Use different practice mode for Part 2
+    if (lessonPart === 2) {
+      return (
+        <Part2PracticeMode 
+          onBack={() => setShowPracticeMode(false)} 
+          onComplete={() => {
+            setShowPracticeMode(false)
+            if (totalParts >= 3) {
+              setUnlockedParts(prev => new Set([...prev, 3 as LessonPart])) // Unlock Part 3
+              updateLessonPart(3 as LessonPart) // Move to part 3 after completing Part 2 practice
+            }
+          }}
+        />
+      )
+    }
+    
+    // Part 1 practice mode (counting method)
+    if (lessonPart === 1) {
+      return (
+        <IndependentPracticeMode 
+          onBack={() => setShowPracticeMode(false)} 
+          onComplete={() => {
+            setShowPracticeMode(false)
+            if (totalParts >= 2) {
+              setUnlockedParts(prev => new Set([...prev, 2 as LessonPart]))
+              updateLessonPart(2 as LessonPart) // Move to part 2 after completing practice
+            }
+          }}
+        />
+      )
+    }
+    
+    // Parts 3 and 4 don't have practice modes yet
+    setShowPracticeMode(false)
+  }
+
+  if (!currentSection) {
+    return <div>No interactive lesson available</div>
+  }
 
   return (
     <>
@@ -523,7 +593,7 @@ export default function InteractiveLessonRenderer({ topicSlug, preloadedParts, c
       
       {/* Celebration animation */}
       <CorrectAnswerCelebration
-        key={celebrationCounterRef.current}
+        key={celebrationKey}
         show={showCelebration}
         onDone={() => setShowCelebration(false)}
       />
@@ -684,9 +754,7 @@ export default function InteractiveLessonRenderer({ topicSlug, preloadedParts, c
 function SectionRenderer({ 
   section, 
   onComplete, 
-  isComplete,
-  isLastSection,
-  onStartPractice
+  isComplete
 }: { 
   section: Section
   onComplete: () => void
@@ -788,7 +856,7 @@ function SectionRenderer({
 
 // Reference Angle Quiz Component
 function ReferenceAngleQuiz({ section, onComplete, isComplete }: { section: Section, onComplete: () => void, isComplete: boolean }) {
-  const [currentAngle, setCurrentAngle] = useState<number>(0)
+  const [currentAngle, setCurrentAngle] = useState<number>(() => Math.floor(Math.random() * 361))
   const [userAnswer, setUserAnswer] = useState<string>('')
   const [correctStreak, setCorrectStreak] = useState<number>(0)
   const [attemptCount, setAttemptCount] = useState<number>(0)
@@ -797,13 +865,6 @@ function ReferenceAngleQuiz({ section, onComplete, isComplete }: { section: Sect
   const [hint1UsedCount, setHint1UsedCount] = useState<number>(0) // Track how many times hint 1 used
   const [hint2Used, setHint2Used] = useState<boolean>(false) // Track if hint 2 was used
   const [showingAnswer, setShowingAnswer] = useState<boolean>(false)
-
-  // Generate random angle on mount and when moving to next question
-  useEffect(() => {
-    if (currentAngle === 0) {
-      generateNewAngle()
-    }
-  }, [])
 
   const generateNewAngle = () => {
     const angle = Math.floor(Math.random() * 361) // 0 to 360 inclusive
@@ -919,14 +980,6 @@ function ReferenceAngleQuiz({ section, onComplete, isComplete }: { section: Sect
     }
   }
 
-  const handleHint1 = () => {
-    // Hints are now shown automatically after incorrect attempts
-  }
-
-  const handleHint2 = () => {
-    // Hints are now shown automatically after incorrect attempts
-  }
-
   if (isComplete || correctStreak >= 5) {
     return (
       <div className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-xl p-8 border-2 border-green-500">
@@ -936,7 +989,7 @@ function ReferenceAngleQuiz({ section, onComplete, isComplete }: { section: Sect
             Perfect! 5 Correct in a Row!
           </h3>
           <p className="text-xl text-gray-700 dark:text-gray-300">
-            You've mastered finding reference angles without hints!
+            You&apos;ve mastered finding reference angles without hints!
           </p>
         </div>
       </div>
@@ -1430,7 +1483,7 @@ function UnitCircleGame({ onComplete }: { onComplete?: () => void }) {
         
         {allCorrect && (
           <div className="mb-4 p-4 bg-green-100 dark:bg-green-900 border-2 border-green-500 rounded-lg text-center animate-bounce">
-            <p className="text-xl font-bold text-green-800 dark:text-green-200">🎉 Perfect! You've mastered the first quadrant!</p>
+            <p className="text-xl font-bold text-green-800 dark:text-green-200">🎉 Perfect! You&apos;ve mastered the first quadrant!</p>
           </div>
         )}
 
@@ -1748,7 +1801,7 @@ function FullUnitCircleGame({ onComplete }: { onComplete?: () => void }) {
       <div className="max-w-7xl mx-auto bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-950/30 dark:to-purple-950/30 rounded-lg p-8 border-2 border-purple-300 dark:border-purple-700">
         {allCorrect && (
           <div className="mb-6 p-4 bg-green-100 dark:bg-green-900/30 border-2 border-green-500 rounded-lg text-center">
-            <p className="text-2xl font-bold text-green-700 dark:text-green-300">🎉 Perfect! You've mastered the complete unit circle! 🎉</p>
+            <p className="text-2xl font-bold text-green-700 dark:text-green-300">🎉 Perfect! You&apos;ve mastered the complete unit circle! 🎉</p>
           </div>
         )}
         
@@ -2169,8 +2222,7 @@ function FadeInText({ content, onComplete }: { content: string; onComplete?: () 
 // Multiple Choice Quiz Component
 function MultipleChoiceQuiz({ 
   section, 
-  onComplete, 
-  isComplete 
+  onComplete
 }: { 
   section: Section
   onComplete: () => void
@@ -2328,8 +2380,7 @@ function MultipleChoiceQuiz({
 // Mini-Boss Battle Component
 function MiniBossBattle({ 
   section, 
-  onComplete, 
-  isComplete 
+  onComplete
 }: { 
   section: Section
   onComplete: () => void
@@ -2339,7 +2390,7 @@ function MiniBossBattle({
   const [playerScore, setPlayerScore] = useState<number>(0)
   const [aiScore, setAiScore] = useState<number>(0)
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState<number>(0)
-  const [currentQuestion, setCurrentQuestion] = useState<any>(null)
+  const [currentQuestion, setCurrentQuestion] = useState<MiniBossQuestion | null>(null)
   const [selectedAnswer, setSelectedAnswer] = useState<string>('')
   const [showFeedback, setShowFeedback] = useState<boolean>(false)
   const [feedbackType, setFeedbackType] = useState<'correct' | 'incorrect'>('correct')
@@ -2399,14 +2450,14 @@ function MiniBossBattle({
       
       return () => clearTimeout(timer)
     }
-  }, [gameState, currentQuestion, aiTimerActive, currentQuestionIndex])
+  }, [gameState, currentQuestion, aiTimerActive, currentQuestionIndex, config.aiAccuracy, questionTypes])
 
   // Load first question after entrance animation
   useEffect(() => {
     if (gameState === 'battle' && !currentQuestion) {
       loadNextQuestion()
     }
-  }, [gameState])
+  }, [gameState, currentQuestion, loadNextQuestion])
 
   // Start entrance animation
   useEffect(() => {
@@ -2418,7 +2469,7 @@ function MiniBossBattle({
     }
   }, [gameState])
 
-  const loadNextQuestion = () => {
+  const loadNextQuestion = useCallback(() => {
     if (currentQuestionIndex >= questionTypes.length) {
       // Restart question sequence if needed
       setCurrentQuestionIndex(0)
@@ -2446,7 +2497,7 @@ function MiniBossBattle({
     
     setSelectedAnswer('')
     setShowFeedback(false)
-  }
+  }, [currentQuestionIndex, questionTypes, config.questionBankModule, usedQuestionIds])
 
   const handleAnswerSelect = (optionLabel: string) => {
     if (showFeedback) return
@@ -2456,7 +2507,7 @@ function MiniBossBattle({
   const handleSubmit = () => {
     if (!selectedAnswer || !currentQuestion || showFeedback) return
 
-    const selectedOption = currentQuestion.options.find((opt: any) => opt.label === selectedAnswer)
+    const selectedOption = currentQuestion.options.find((opt: MiniBossOption) => opt.label === selectedAnswer)
     const isCorrect = selectedOption?.isCorrect
 
     setShowFeedback(true)
@@ -2531,7 +2582,7 @@ function MiniBossBattle({
           <p className="text-4xl text-white mb-4">You defeated {config.bossName}!</p>
           {isUltimateBoss ? (
             <>
-              <p className="text-2xl text-yellow-200 mb-4">🎉 You've mastered factoring! 🎉</p>
+              <p className="text-2xl text-yellow-200 mb-4">🎉 You&apos;ve mastered factoring! 🎉</p>
               <p className="text-xl text-yellow-100 mb-8">✨ Competitive Mode Unlocked! ✨</p>
               <div className="text-6xl mb-8">⭐ ⭐ ⭐</div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -2665,7 +2716,7 @@ function MiniBossBattle({
 
           {/* Multiple Choice Options - More Compact */}
           <div className="grid grid-cols-1 gap-3 mb-4">
-            {currentQuestion.options.map((option: any) => (
+            {currentQuestion.options.map((option: MiniBossOption) => (
               <button
                 key={option.label}
                 onClick={() => handleAnswerSelect(option.label)}
@@ -2744,7 +2795,7 @@ function FactoringPractice({
   onComplete: () => void
   isComplete: boolean
 }) {
-  const [currentProblem, setCurrentProblem] = useState<any>(null)
+  const [currentProblem, setCurrentProblem] = useState<FactoringProblem | null>(null)
   const [userAnswer, setUserAnswer] = useState<string>('')
   const [correctStreak, setCorrectStreak] = useState<number>(0)
   const [attemptCount, setAttemptCount] = useState<number>(0)
@@ -2771,7 +2822,7 @@ function FactoringPractice({
   }
 
   // Import the problem generators
-  const getRandomProblem = () => {
+  const getRandomProblem = useCallback(() => {
     if (!section.problemType) return null
     
     // Dynamically import and get problem
@@ -2779,13 +2830,13 @@ function FactoringPractice({
       const problem = module.getRandomFactoringProblem(section.problemType!)
       setCurrentProblem(problem)
     })
-  }
+  }, [section.problemType])
 
   useEffect(() => {
     if (!currentProblem) {
       getRandomProblem()
     }
-  }, [])
+  }, [currentProblem, getRandomProblem])
 
   // Reset state when section changes (different problemType means new section)
   useEffect(() => {
@@ -2798,7 +2849,7 @@ function FactoringPractice({
     setShowAnswer(false)
     setCurrentProblem(null)
     getRandomProblem()
-  }, [section.id, section.problemType])
+  }, [section.id, section.problemType, getRandomProblem])
 
   const handleSubmit = async () => {
     if (!userAnswer.trim() || !currentProblem) return
@@ -2877,7 +2928,7 @@ function FactoringPractice({
             Excellent! {requiredStreak} Correct in a Row!
           </h3>
           <p className="text-xl text-gray-700 dark:text-gray-300">
-            You've mastered this factoring technique!
+            You&apos;ve mastered this factoring technique!
           </p>
         </div>
       </div>
@@ -3022,23 +3073,23 @@ function InputBoxExercise({
   onComplete, 
   isComplete 
 }: { 
-  section: any
+  section: Section
   onComplete: () => void
   isComplete: boolean
 }) {
+  const exercise: LessonExercise = section.exercise ?? {}
+  const exerciseInputs: ExerciseInput[] = exercise.inputs ?? []
+
   // Normalize between two exercise formats:
   // Format A: { boxes, correctAnswers, hint1, hint2, hint3, explanation }
   // Format B: { inputs: [{ label, correctAnswer, explanation }] }
-  const hasInputsFormat = !!section.exercise.inputs
-  const numBoxes = hasInputsFormat ? section.exercise.inputs.length : (section.exercise.boxes || 1)
+  const hasInputsFormat = exerciseInputs.length > 0
+  const numBoxes = hasInputsFormat ? exerciseInputs.length : (exercise.boxes || 1)
   const correctAnswersList: string[] = hasInputsFormat 
-    ? section.exercise.inputs.map((input: any) => input.correctAnswer) 
-    : (section.exercise.correctAnswers || [])
-  const inputLabels: string[] | null = hasInputsFormat 
-    ? section.exercise.inputs.map((input: any) => input.label) 
-    : null
+    ? exerciseInputs.map((input: ExerciseInput) => input.correctAnswer) 
+    : (exercise.correctAnswers || [])
   const inputExplanations: string[] | null = hasInputsFormat 
-    ? section.exercise.inputs.map((input: any) => input.explanation || '') 
+    ? exerciseInputs.map((input: ExerciseInput) => input.explanation || '') 
     : null
 
   const [answers, setAnswers] = useState<string[]>(Array(numBoxes).fill(''))
@@ -3092,7 +3143,7 @@ function InputBoxExercise({
       {/* Inputs format: labeled input fields with descriptions */}
       {hasInputsFormat ? (
         <div className="space-y-4">
-          {section.exercise.inputs.map((input: any, index: number) => (
+          {exerciseInputs.map((input: ExerciseInput, index: number) => (
             <div key={index} className="flex items-center gap-4 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">
               <label className="flex-1 text-base font-medium text-gray-700 dark:text-gray-300">
                 <InlineLatex text={input.label} />
@@ -3145,7 +3196,7 @@ function InputBoxExercise({
       {showHint && attempts === 1 && !isCorrect && (
         <div className="bg-blue-100 dark:bg-blue-900/30 border-l-4 border-blue-500 p-6 rounded-r-lg">
           <p className="text-lg font-semibold text-blue-900 dark:text-blue-200">
-            💡 Hint: <InlineLatex text={section.exercise.hint1 || 'Try again! Check your calculation step by step.'} />
+            💡 Hint: <InlineLatex text={exercise.hint1 || 'Try again! Check your calculation step by step.'} />
           </p>
         </div>
       )}
@@ -3153,7 +3204,7 @@ function InputBoxExercise({
       {showHint && attempts === 2 && !isCorrect && (
         <div className="bg-yellow-100 dark:bg-yellow-900/30 border-l-4 border-yellow-500 p-6 rounded-r-lg">
           <p className="text-lg font-semibold text-yellow-900 dark:text-yellow-200">
-            💡 Hint: <InlineLatex text={section.exercise.hint2 || 'One more try!'} />
+            💡 Hint: <InlineLatex text={exercise.hint2 || 'One more try!'} />
           </p>
         </div>
       )}
@@ -3161,7 +3212,7 @@ function InputBoxExercise({
       {showHint && attempts === 3 && !isCorrect && !showAnswer && (
         <div className="bg-orange-100 dark:bg-orange-900/30 border-l-4 border-orange-500 p-6 rounded-r-lg">
           <p className="text-lg font-semibold text-orange-900 dark:text-orange-200">
-            💡 Hint: <InlineLatex text={section.exercise.hint3 || 'Last hint: write the setup carefully, then compute step by step.'} />
+            💡 Hint: <InlineLatex text={exercise.hint3 || 'Last hint: write the setup carefully, then compute step by step.'} />
           </p>
         </div>
       )}
@@ -3172,7 +3223,7 @@ function InputBoxExercise({
           {hasInputsFormat && inputExplanations ? (
             <div className="space-y-3">
               <p className="text-lg font-semibold text-green-900 dark:text-green-200 mb-2">✓ Answers:</p>
-              {section.exercise.inputs.map((input: any, index: number) => (
+              {exerciseInputs.map((input: ExerciseInput, index: number) => (
                 <div key={index} className="pl-4 border-l-2 border-green-400">
                   <p className="font-medium text-green-900 dark:text-green-200">
                     <InlineLatex text={input.label} />: <strong>{input.correctAnswer}</strong>
@@ -3192,7 +3243,7 @@ function InputBoxExercise({
                 ✓ Answer: {correctAnswersList.join(', ')}
               </p>
               <p className="text-lg text-green-800 dark:text-green-300">
-                <InlineLatex text={section.exercise.explanation || ''} />
+                <InlineLatex text={exercise.explanation || ''} />
               </p>
             </>
           )}
@@ -3214,20 +3265,23 @@ function DropdownExercise({
   onComplete, 
   isComplete 
 }: { 
-  section: any
+  section: Section
   onComplete: () => void
   isComplete: boolean
 }) {
+  const exercise: LessonExercise = section.exercise ?? {}
+  const dropdowns: ExerciseDropdown[] = exercise.dropdowns ?? []
+
   // Normalize between two data formats:
   // Format A: top-level correctAnswers: ['answer1', 'answer2', ...]
   // Format B: per-dropdown correctIndex: N (index into options array)
-  const correctAnswersList: string[] = section.exercise.correctAnswers
-    ? section.exercise.correctAnswers
-    : section.exercise.dropdowns.map((dd: any) => dd.options[dd.correctIndex])
+  const correctAnswersList: string[] = exercise.correctAnswers
+    ? exercise.correctAnswers
+    : dropdowns.map((dd: ExerciseDropdown) => dd.options[dd.correctIndex])
 
-  const [answers, setAnswers] = useState<string[]>(Array(section.exercise.dropdowns.length).fill(''))
+  const [answers, setAnswers] = useState<string[]>(Array(dropdowns.length).fill(''))
   const [randomizedOptions] = useState(() => 
-    section.exercise.dropdowns.map((dropdown: any) => 
+    dropdowns.map((dropdown: ExerciseDropdown) => 
       [...dropdown.options].sort(() => Math.random() - 0.5)
     )
   )
@@ -3270,7 +3324,7 @@ function DropdownExercise({
       <FadeInText content={section.content} />
       
       <div className="space-y-4">
-        {section.exercise.dropdowns.map((dropdown: any, index: number) => {
+        {dropdowns.map((dropdown: ExerciseDropdown, index: number) => {
           const isCorrect = answers[index] === correctAnswersList[index]
           const showFeedback = validated && answers[index]
           
@@ -3321,7 +3375,7 @@ function DropdownExercise({
       {showHint && attempts === 1 && !isFullyCorrect && (
         <div className="bg-blue-100 dark:bg-blue-900/30 border-l-4 border-blue-500 p-6 rounded-r-lg">
           <p className="text-lg font-semibold text-blue-900 dark:text-blue-200">
-            💡 Hint: <InlineLatex text={section.exercise.hint1 || 'Try matching each statement to its core rule before choosing.'} />
+            💡 Hint: <InlineLatex text={exercise.hint1 || 'Try matching each statement to its core rule before choosing.'} />
           </p>
         </div>
       )}
@@ -3329,7 +3383,7 @@ function DropdownExercise({
       {showHint && attempts === 2 && !isFullyCorrect && (
         <div className="bg-yellow-100 dark:bg-yellow-900/30 border-l-4 border-yellow-500 p-6 rounded-r-lg">
           <p className="text-lg font-semibold text-yellow-900 dark:text-yellow-200">
-            💡 Hint: <InlineLatex text={section.exercise.hint2 || 'Eliminate obviously wrong options first, then compare the remaining two carefully.'} />
+            💡 Hint: <InlineLatex text={exercise.hint2 || 'Eliminate obviously wrong options first, then compare the remaining two carefully.'} />
           </p>
         </div>
       )}
@@ -3337,7 +3391,7 @@ function DropdownExercise({
       {showHint && attempts === 3 && !isFullyCorrect && !showAnswer && (
         <div className="bg-orange-100 dark:bg-orange-900/30 border-l-4 border-orange-500 p-6 rounded-r-lg">
           <p className="text-lg font-semibold text-orange-900 dark:text-orange-200">
-            💡 Hint: <InlineLatex text={section.exercise.hint3 || 'Final hint: look for keywords in each prompt (direction, sign, relation) and match exactly.'} />
+            💡 Hint: <InlineLatex text={exercise.hint3 || 'Final hint: look for keywords in each prompt (direction, sign, relation) and match exactly.'} />
           </p>
         </div>
       )}
@@ -3348,7 +3402,7 @@ function DropdownExercise({
             ✓ Correct answers:
           </p>
           <ul className="space-y-2 text-lg text-green-800 dark:text-green-300">
-            {section.exercise.dropdowns.map((dropdown: any, index: number) => (
+            {dropdowns.map((dropdown: ExerciseDropdown, index: number) => (
               <li key={index}>
                 <InlineLatex text={dropdown.label} />: <strong><InlineLatex text={correctAnswersList[index]} /></strong>
                 {dropdown.explanation && (
@@ -3359,9 +3413,9 @@ function DropdownExercise({
               </li>
             ))}
           </ul>
-          {section.exercise.explanation && (
+          {exercise.explanation && (
             <p className="text-lg text-green-800 dark:text-green-300 mt-4">
-              <InlineLatex text={section.exercise.explanation} />
+              <InlineLatex text={exercise.explanation} />
             </p>
           )}
         </div>
@@ -3419,9 +3473,7 @@ function SquareRootInput({
           <span 
             className="katex-display text-2xl"
             dangerouslySetInnerHTML={{ 
-              __html: typeof window !== 'undefined' && (window as any).katex 
-                ? (window as any).katex.renderToString(getLatex(), { throwOnError: false, displayMode: false })
-                : value
+              __html: renderWindowKatex(getLatex(), value)
             }}
           />
         ) : (
@@ -3437,7 +3489,7 @@ function SquareRootInput({
         onChange={handleChange}
         disabled={disabled}
         className="w-24 h-8 text-sm text-center border-2 rounded focus:ring-2 focus:ring-blue-500 px-2"
-        placeholder="e.g. sqrt(2)"
+        placeholder={hint || 'e.g. sqrt(2)'}
       />
     </div>
   )
@@ -3493,9 +3545,7 @@ function FractionInput({
           <span 
             className="katex-display text-2xl"
             dangerouslySetInnerHTML={{ 
-              __html: typeof window !== 'undefined' && (window as any).katex 
-                ? (window as any).katex.renderToString(getLatex(), { throwOnError: false, displayMode: false })
-                : value
+              __html: renderWindowKatex(getLatex(), value)
             }}
           />
         ) : (
@@ -3688,12 +3738,12 @@ function IndependentPracticeMode({ onBack, onComplete }: { onBack: () => void, o
           'bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600'
         }`}>
           <div className="flex items-center justify-between mb-6">
-            <h2 className="text-2xl font-bold text-foreground">Step 2: Square Root (Don't Simplify Yet!)</h2>
+            <h2 className="text-2xl font-bold text-foreground">Step 2: Square Root (Don&apos;t Simplify Yet!)</h2>
             {step1Complete && <span className="text-3xl">✅</span>}
             {currentStep < 1 && <span className="text-2xl">🔒</span>}
           </div>
           <p className="text-lg mb-6 text-foreground">
-            Take the square root of each number. Don't simplify - just put each number under a square root.
+            Take the square root of each number. Don&apos;t simplify - just put each number under a square root.
           </p>
           <div className="flex gap-4 mb-6 justify-center flex-wrap">
             {step1Answers.map((answer, i) => (
@@ -3737,7 +3787,7 @@ function IndependentPracticeMode({ onBack, onComplete }: { onBack: () => void, o
             {currentStep < 2 && <span className="text-2xl">🔒</span>}
           </div>
           <p className="text-lg mb-6 text-foreground">
-            Simplify each square root if possible. Use "Add √" for values that can't be simplified.
+            Simplify each square root if possible. Use &quot;Add √&quot; for values that can&apos;t be simplified.
           </p>
           <div className="flex gap-4 mb-6 justify-center flex-wrap">
             {step2Answers.map((answer, i) => {
@@ -3752,9 +3802,7 @@ function IndependentPracticeMode({ onBack, onComplete }: { onBack: () => void, o
                   <div className="text-lg text-gray-600 dark:text-gray-400 mb-2 flex items-center gap-2">
                     <span 
                       dangerouslySetInnerHTML={{ 
-                        __html: typeof window !== 'undefined' && (window as any).katex 
-                          ? (window as any).katex.renderToString(getLatex(step1Answers[i]), { throwOnError: false, displayMode: false })
-                          : step1Answers[i]
+                        __html: renderWindowKatex(getLatex(step1Answers[i]), step1Answers[i])
                       }}
                     />
                     <span>=</span>
@@ -3913,10 +3961,10 @@ function IndependentPracticeMode({ onBack, onComplete }: { onBack: () => void, o
           <div className="text-center p-12 bg-gradient-to-r from-green-100 to-blue-100 dark:from-green-900/30 dark:to-blue-900/30 rounded-xl border-2 border-green-500">
             <div className="text-6xl mb-4">🎉</div>
             <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
-              Perfect! You've mastered it!
+              Perfect! You&apos;ve mastered it!
             </h2>
             <p className="text-xl text-foreground mb-6">
-              You've successfully completed all 5 steps of the counting method!
+              You&apos;ve successfully completed all 5 steps of the counting method!
             </p>
             <div className="flex gap-4 justify-center">
               <button
@@ -4167,9 +4215,7 @@ function Part2PracticeMode({ onBack, onComplete }: { onBack: () => void, onCompl
                                     : 'text-red-700 dark:text-red-400'
                               }`}
                               dangerouslySetInnerHTML={{
-                                __html: typeof window !== 'undefined' && (window as any).katex
-                                  ? (window as any).katex.renderToString(toLatex(sineAnswers[i]), { throwOnError: false })
-                                  : sineAnswers[i]
+                                __html: renderWindowKatex(toLatex(sineAnswers[i]), sineAnswers[i])
                               }}
                             />
                           ) : (
@@ -4196,9 +4242,7 @@ function Part2PracticeMode({ onBack, onComplete }: { onBack: () => void, onCompl
                       <div className="w-24 h-16 mx-auto flex items-center justify-center text-lg font-bold text-green-700 dark:text-green-400 bg-green-100 dark:bg-green-900/30 rounded-lg border-2 border-green-500">
                         <span
                           dangerouslySetInnerHTML={{
-                            __html: typeof window !== 'undefined' && (window as any).katex
-                              ? (window as any).katex.renderToString(toLatex(sineCorrect[i]), { throwOnError: false })
-                              : sineCorrect[i]
+                            __html: renderWindowKatex(toLatex(sineCorrect[i]), sineCorrect[i])
                           }}
                         />
                       </div>
@@ -4236,9 +4280,7 @@ function Part2PracticeMode({ onBack, onComplete }: { onBack: () => void, onCompl
                                     : 'text-red-700 dark:text-red-400'
                               }`}
                               dangerouslySetInnerHTML={{
-                                __html: typeof window !== 'undefined' && (window as any).katex
-                                  ? (window as any).katex.renderToString(toLatex(cosineAnswers[i]), { throwOnError: false })
-                                  : cosineAnswers[i]
+                                __html: renderWindowKatex(toLatex(cosineAnswers[i]), cosineAnswers[i])
                               }}
                             />
                           ) : (
@@ -4265,9 +4307,7 @@ function Part2PracticeMode({ onBack, onComplete }: { onBack: () => void, onCompl
                       <div className="w-24 h-16 mx-auto flex items-center justify-center text-lg font-bold text-green-700 dark:text-green-400 bg-green-100 dark:bg-green-900/30 rounded-lg border-2 border-green-500">
                         <span
                           dangerouslySetInnerHTML={{
-                            __html: typeof window !== 'undefined' && (window as any).katex
-                              ? (window as any).katex.renderToString(toLatex(cosineCorrect[i]), { throwOnError: false })
-                              : cosineCorrect[i]
+                            __html: renderWindowKatex(toLatex(cosineCorrect[i]), cosineCorrect[i])
                           }}
                         />
                       </div>

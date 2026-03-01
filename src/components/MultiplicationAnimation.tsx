@@ -201,7 +201,7 @@ export default function MultiplicationAnimation({
         {/* Result (appears as we go) */}
         <div className="text-right">
           {currentStep === 0 ? (
-            <span className="text-gray-400 italic">Click "Next Step" to begin</span>
+            <span className="text-gray-400 italic">Click &quot;Next Step&quot; to begin</span>
           ) : (
             result.split('').map((digit, i) => (
               <span
@@ -291,7 +291,7 @@ export default function MultiplicationAnimation({
       <div className="bg-blue-100 rounded p-4 mb-4 min-h-[60px]">
         {currentStep === 0 ? (
           <p className="text-blue-900">
-            <strong>Ready to start!</strong> We'll multiply {multiplicand} × {multiplier} step by step, showing how carrying works.
+            <strong>Ready to start!</strong> We&apos;ll multiply {multiplicand} × {multiplier} step by step, showing how carrying works.
           </p>
         ) : currentStep <= maxSteps ? (
           <p className="text-blue-900">

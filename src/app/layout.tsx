@@ -4,8 +4,6 @@ import "./globals.css";
 import { Providers } from "@/components/providers";
 import { Navbar } from "@/components/navbar";
 import { CookieConsent } from "@/components/cookie-consent";
-import { Analytics } from "@vercel/analytics/next"; // Temporarily disabled for local dev
-import Link from "next/link";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import AdSenseScript from "@/components/AdSenseScript";
 import { Footer } from "@/components/footer";

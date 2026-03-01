@@ -133,7 +133,7 @@ export async function POST(req: NextRequest) {
  * Leave the matchmaking queue
  * DELETE /api/competitive/queue
  */
-export async function DELETE(req: NextRequest) {
+export async function DELETE() {
   try {
     const session = await auth()
     
@@ -163,7 +163,7 @@ export async function DELETE(req: NextRequest) {
  * Check queue status
  * GET /api/competitive/queue
  */
-export async function GET(req: NextRequest) {
+export async function GET() {
   try {
     const session = await auth()
     

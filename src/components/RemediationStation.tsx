@@ -114,7 +114,6 @@ export default function RemediationStation({
         <div className="flex-1 overflow-y-auto p-8">
           <RemediationStepRenderer
             step={currentStep}
-            stepIndex={currentStepIndex}
             onComplete={handleStepComplete}
           />
         </div>
@@ -141,14 +140,11 @@ export default function RemediationStation({
 
 function RemediationStepRenderer({
   step,
-  stepIndex,
   onComplete
 }: {
   step: RemediationStep
-  stepIndex: number
   onComplete: (score?: number) => void
 }) {
-  const [quizScore, setQuizScore] = useState<number | null>(null)
   const [timeSpent, setTimeSpent] = useState(0)
 
   useEffect(() => {
@@ -219,8 +215,6 @@ function RemediationStepRenderer({
 }
 
 function VideoStep({ step, onComplete }: { step: RemediationStep; onComplete: () => void }) {
-  const [watched, setWatched] = useState(false)
-
   return (
     <div className="space-y-4">
       <div className="aspect-video bg-gray-900 rounded-lg overflow-hidden">
@@ -236,12 +230,11 @@ function VideoStep({ step, onComplete }: { step: RemediationStep; onComplete: ()
 
       <button
         onClick={() => {
-          setWatched(true)
           onComplete()
         }}
         className="w-full py-4 bg-green-600 hover:bg-green-700 text-white font-bold rounded-lg transition-colors"
       >
-        ✓ I've Watched and Understood
+        ✓ I&apos;ve Watched and Understood
       </button>
     </div>
   )
@@ -274,7 +267,6 @@ function GuidedPracticeStep({ step, onComplete }: { step: RemediationStep; onCom
   const [answers, setAnswers] = useState<boolean[]>([])
 
   const totalProblems = 3
-  const score = answers.filter(a => a).length / answers.length
 
   const handleAnswer = (isCorrect: boolean) => {
     setAnswers([...answers, isCorrect])

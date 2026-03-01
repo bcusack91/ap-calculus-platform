@@ -40,7 +40,7 @@ interface ReviewStats {
 }
 
 export default function FlashcardReviewPage() {
-  const { data: session, status } = useSession()
+  const { status } = useSession()
   const [cards, setCards] = useState<FlashcardProgress[]>([])
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isFlipped, setIsFlipped] = useState(false)
@@ -147,7 +147,7 @@ export default function FlashcardReviewPage() {
             <div className="text-6xl mb-4">🎉</div>
             <h1 className="text-3xl font-bold mb-4 text-gray-900">All Caught Up!</h1>
             <p className="text-lg text-gray-700 mb-6">
-              You've reviewed all your due flashcards. Great work!
+              You&apos;ve reviewed all your due flashcards. Great work!
             </p>
             
             {stats && (
@@ -350,7 +350,7 @@ export default function FlashcardReviewPage() {
           <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
             <p className="text-sm text-blue-900">
               <strong>How it works:</strong> Study the question, then click to reveal the answer. 
-              Rate your recall to schedule the next review using Anki's spaced repetition algorithm.
+              Rate your recall to schedule the next review using Anki&apos;s spaced repetition algorithm.
             </p>
           </div>
         )}

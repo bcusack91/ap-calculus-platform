@@ -3,14 +3,6 @@ const path = require('path');
 
 const LESSONS_DIR = path.join(__dirname, '..', 'src', 'data', 'interactive-lessons');
 
-function getPartTitle(prefix, slug, partNum) {
-  // Read the file and extract what we can
-  const fileName = `${prefix}-${slug}-part${partNum}.ts`;
-  const filePath = path.join(LESSONS_DIR, fileName);
-  if (!fs.existsSync(filePath)) return null;
-  return filePath;
-}
-
 function getExportName(filePath) {
   const content = fs.readFileSync(filePath, 'utf-8');
   const match = content.match(/export const (\w+)/);

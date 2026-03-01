@@ -26,7 +26,7 @@ async function main() {
   console.log('✓ Cleared any existing topics with same slugs')
 
   // 9. Limits at Infinity
-  const topic9 = await prisma.topic.create({
+  await prisma.topic.create({
     data: {
       title: 'Limits at Infinity',
       slug: 'limits-at-infinity',
@@ -191,7 +191,7 @@ $$= \\frac{0}{3 + 0} = 0$$ ✓
   })
 
   // 10. Infinite Limits (Vertical Asymptotes)
-  const topic10 = await prisma.topic.create({
+  await prisma.topic.create({
     data: {
       title: 'Infinite Limits and Vertical Asymptotes',
       slug: 'infinite-limits-vertical-asymptotes',
@@ -369,7 +369,7 @@ $$\\lim_{x \\to -2} \\frac{x}{(x + 2)^2} = -\\infty$$
   })
 
   // 11. Introduction to Continuity
-  const topic11 = await prisma.topic.create({
+  await prisma.topic.create({
     data: {
       title: 'What is Continuity?',
       slug: 'continuity-introduction',
@@ -531,7 +531,7 @@ With this value, f(2) = 4 and both one-sided limits equal 4, making the function
   })
 
   // 12. Types of Discontinuity
-  const topic12 = await prisma.topic.create({
+  await prisma.topic.create({
     data: {
       title: 'Types of Discontinuity',
       slug: 'types-of-discontinuity',

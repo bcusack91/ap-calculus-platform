@@ -226,7 +226,7 @@ $$(f \\circ g)(x) = f(g(x))$$
 
   // New categories
   const addCat = await prisma.category.create({ data: { name: 'Additional Topics in Math', slug: 'sat-additional-topics', order: 3, courseId: course.id } })
-  const geoTrig = await prisma.topic.create({ data: {
+  await prisma.topic.create({ data: {
     title: 'Geometry and Trigonometry', slug: 'sat-geometry-trigonometry', order: 0,
     description: 'Apply geometry concepts including area, volume, angles, and basic trigonometry.',
     textContent: `# SAT: Geometry and Trigonometry

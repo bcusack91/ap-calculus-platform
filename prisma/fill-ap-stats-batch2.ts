@@ -1516,8 +1516,9 @@ async function main() {
       })
       console.log('  ✅ ' + slug)
       count++
-    } catch (e: any) {
-      console.log('  ❌ ' + slug + ': ' + e.message)
+    } catch (e: unknown) {
+      const message = e instanceof Error ? e.message : String(e)
+      console.log('  ❌ ' + slug + ': ' + message)
     }
   }
   console.log('\n🎉 Updated ' + count + ' topics')

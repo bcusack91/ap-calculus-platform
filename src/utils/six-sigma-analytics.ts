@@ -205,7 +205,6 @@ function getSigmaGrade(sigma: number): string {
  */
 export function calculateProcessCapability(
   data: PerformanceDataPoint[],
-  targetAccuracy: number = 0.90,
   lowerSpec: number = 0.70,
   upperSpec: number = 1.00
 ): SixSigmaAnalytics['processCapability'] {
@@ -286,13 +285,11 @@ export function performParetoAnalysis(
     }))
   
   // Calculate cumulative percentage for Pareto
-  let cumulative = 0
   const criticalErrors = sortedErrors.map(error => {
-    cumulative += error.percentage
     return {
       ...error,
       impact: getErrorImpact(error.percentage),
-      recommendation: getErrorRecommendation(error.type, error.frequency)
+      recommendation: getErrorRecommendation(error.type)
     }
   })
   
@@ -321,7 +318,7 @@ function getErrorImpact(percentage: number): 'critical' | 'high' | 'medium' | 'l
   return 'low'
 }
 
-function getErrorRecommendation(errorType: string, frequency: number): string {
+function getErrorRecommendation(errorType: string): string {
   const recommendations: { [key: string]: string } = {
     'sign-error': 'Review sign convention rules and practice problems with negative coefficients',
     'multiplication-error': 'Practice basic multiplication facts and use the FOIL method systematically',

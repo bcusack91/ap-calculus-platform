@@ -1,9 +1,10 @@
 'use client';
 
-import { useEffect, useState, use } from 'react';
+import { useEffect, useState, use, useCallback, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import CompetitiveUnitCircle from '@/components/CompetitiveUnitCircle';
 import AvatarDisplay from '@/components/AvatarDisplay';
+import { AvatarData } from '@/types/avatar';
 import katex from 'katex';
 import 'katex/dist/katex.min.css';
 
@@ -37,14 +38,20 @@ interface MatchState {
   player2Name: string;
   player1Email?: string;
   player2Email?: string;
-  player1Avatar?: any;
-  player2Avatar?: any;
+  player1Avatar?: AvatarData | null;
+  player2Avatar?: AvatarData | null;
   player1QuestionIndex: number;
   player2QuestionIndex: number;
   questions: Question[];
   player1Score: number;
   player2Score: number;
-  gameData?: any;
+  gameData?: {
+    aiDifficulty?: 'easy' | 'medium' | 'hard';
+    isPracticeMatch?: boolean;
+    player1AnsweredCurrent?: boolean;
+    player2AnsweredCurrent?: boolean;
+    [key: string]: unknown;
+  };
   status: 'IN_PROGRESS' | 'COMPLETED' | 'PENDING';
   winnerId: string | null;
   startedAt: string;
@@ -90,6 +97,11 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
   const [feedbackQuestionIndex, setFeedbackQuestionIndex] = useState<number | null>(null);
   const [player1Emotion, setPlayer1Emotion] = useState<'neutral' | 'happy' | 'sad'>('neutral');
   const [player2Emotion, setPlayer2Emotion] = useState<'neutral' | 'happy' | 'sad'>('neutral');
+  const matchStateRef = useRef<MatchState | null>(null);
+
+  useEffect(() => {
+    matchStateRef.current = matchState;
+  }, [matchState]);
 
   // Render math in prompt (for both unit circle and multiple-choice)
   // Handles both $...$ delimited LaTeX and raw LaTeX with backslashes
@@ -111,7 +123,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
             </div>
           );
         }
-      } catch (e) {
+      } catch {
         // fall through to $...$ parsing
       }
     }
@@ -143,7 +155,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
       try {
         const html = katex.renderToString(text, { throwOnError: false, displayMode: false });
         return <span dangerouslySetInnerHTML={{ __html: html }} />;
-      } catch (e) {
+      } catch {
         // fallback to plain text
       }
     }
@@ -151,31 +163,75 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
     return <span>{text}</span>;
   };
 
+  const fetchMatchState = useCallback(async () => {
+    try {
+      const response = await fetch(`/api/competitive/match/${matchId}`);
+      if (!response.ok) {
+        throw new Error('Failed to fetch match state');
+      }
+      const data = await response.json();
+      const previousState = matchStateRef.current;
+
+      const newIsPlayer1 = data.currentUserId === data.match.player1Id;
+      const newPlayerQuestionIndex = newIsPlayer1 ? data.match.player1QuestionIndex : data.match.player2QuestionIndex;
+      const oldPlayerQuestionIndex = previousState && (
+        data.currentUserId === previousState.player1Id
+          ? previousState.player1QuestionIndex
+          : previousState.player2QuestionIndex
+      );
+
+      if (previousState && newPlayerQuestionIndex !== oldPlayerQuestionIndex) {
+        console.log('🔄 Question changed! Clearing all states. Old:', oldPlayerQuestionIndex, 'New:', newPlayerQuestionIndex);
+        setFeedback(null);
+        setFeedbackQuestionIndex(null);
+        setSelectedPosition(null);
+        setCorrectAnswerIndex(null);
+        setIsSubmitting(false);
+        setPlayer1Emotion('neutral');
+        setPlayer2Emotion('neutral');
+      }
+
+      setMatchState(data.match);
+      setCurrentUserId(data.currentUserId);
+      setLoading(false);
+
+      if (data.match.status === 'COMPLETED' && !previousState?.status) {
+        setTimeout(() => {
+          // Will show results screen instead
+        }, 1000);
+      }
+    } catch (error) {
+      console.error('Error fetching match state:', error);
+      setLoading(false);
+    }
+  }, [matchId]);
+
   // Fetch initial match state
   useEffect(() => {
     fetchMatchState();
     // Poll every 500ms for updates
     const interval = setInterval(fetchMatchState, 500);
     return () => clearInterval(interval);
-  }, [matchId]);
+  }, [fetchMatchState]);
 
   // Auto-schedule AI answers when question changes
   useEffect(() => {
-    if (!matchState || matchState.status !== 'IN_PROGRESS') return;
+    const activeMatch = matchStateRef.current;
+    if (!activeMatch || activeMatch.status !== 'IN_PROGRESS') return;
 
-    const isPlayer1 = currentUserId === matchState.player1Id;
-    const opponentEmail = isPlayer1 ? matchState.player2Email : matchState.player1Email;
+    const isPlayer1 = currentUserId === activeMatch.player1Id;
+    const opponentEmail = isPlayer1 ? activeMatch.player2Email : activeMatch.player1Email;
     
     // Check if opponent is AI
     const isOpponentAI = opponentEmail === 'ai-opponent@studyai.com';
     if (!isOpponentAI) return;
 
-    const opponentQuestionIndex = isPlayer1 ? matchState.player2QuestionIndex : matchState.player1QuestionIndex;
-    const opponentPlayerId = isPlayer1 ? matchState.player2Id : matchState.player1Id;
+    const opponentQuestionIndex = isPlayer1 ? activeMatch.player2QuestionIndex : activeMatch.player1QuestionIndex;
+    const opponentPlayerId = isPlayer1 ? activeMatch.player2Id : activeMatch.player1Id;
     
     // Get AI difficulty and calculate delay
-    const aiDifficulty = (matchState.gameData as any)?.aiDifficulty || 'medium';
-    const currentQuestion = matchState.questions[opponentQuestionIndex];
+    const aiDifficulty = activeMatch.gameData?.aiDifficulty || 'medium';
+    const currentQuestion = activeMatch.questions[opponentQuestionIndex];
     const isMultipleChoice = currentQuestion?.type === 'multiple-choice';
     
     // Base timings for unit circle questions
@@ -199,7 +255,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
       try {
         // Determine if AI answers correctly
         const willAnswerCorrectly = Math.random() < settings.accuracy;
-        const aiCurrentQuestion = matchState.questions[opponentQuestionIndex];
+        const aiCurrentQuestion = currentQuestion;
         
         let answerIndex: number;
         if (willAnswerCorrectly) {
@@ -233,48 +289,13 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
     
     // Cleanup timeout if question changes or component unmounts
     return () => clearTimeout(timeoutId);
-  }, [matchState?.player1QuestionIndex, matchState?.player2QuestionIndex, matchState?.status, currentUserId, matchId]);
-
-
-  const fetchMatchState = async () => {
-    try {
-      const response = await fetch(`/api/competitive/match/${matchId}`);
-      if (!response.ok) {
-        throw new Error('Failed to fetch match state');
-      }
-      const data = await response.json();
-      
-      // Check if player's question changed - if so, clear feedback states
-      const newIsPlayer1 = data.currentUserId === data.match.player1Id;
-      const newPlayerQuestionIndex = newIsPlayer1 ? data.match.player1QuestionIndex : data.match.player2QuestionIndex;
-      const oldPlayerQuestionIndex = matchState && (data.currentUserId === matchState.player1Id ? matchState.player1QuestionIndex : matchState.player2QuestionIndex);
-      
-      if (matchState && newPlayerQuestionIndex !== oldPlayerQuestionIndex) {
-        console.log('🔄 Question changed! Clearing all states. Old:', oldPlayerQuestionIndex, 'New:', newPlayerQuestionIndex);
-        setFeedback(null);
-        setFeedbackQuestionIndex(null);
-        setSelectedPosition(null);
-        setCorrectAnswerIndex(null);
-        setIsSubmitting(false);
-        setPlayer1Emotion('neutral');
-        setPlayer2Emotion('neutral');
-      }
-      
-      setMatchState(data.match);
-      setCurrentUserId(data.currentUserId);
-      setLoading(false);
-
-      // If match is completed, redirect to results after a delay
-      if (data.match.status === 'COMPLETED' && !matchState?.status) {
-        setTimeout(() => {
-          // Will show results screen instead
-        }, 1000);
-      }
-    } catch (error) {
-      console.error('Error fetching match state:', error);
-      setLoading(false);
-    }
-  };
+  }, [
+    matchState?.player1QuestionIndex,
+    matchState?.player2QuestionIndex,
+    matchState?.status,
+    currentUserId,
+    matchId,
+  ]);
 
   const handlePositionClick = async (positionIndex: number) => {
     await handleAnswer(positionIndex);
@@ -315,9 +336,9 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
     console.log('Correct answer:', currentQuestion.answerIndex || currentQuestion.correctAnswer);
     
     // Check if this player already answered the current question
-    const alreadyAnswered = isPlayer1 ? 
-      (matchState.gameData as any)?.player1AnsweredCurrent : 
-      (matchState.gameData as any)?.player2AnsweredCurrent;
+    const alreadyAnswered = isPlayer1
+      ? matchState.gameData?.player1AnsweredCurrent
+      : matchState.gameData?.player2AnsweredCurrent;
     
     if (alreadyAnswered) {
       console.log('Already answered this question');
@@ -443,7 +464,6 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
 
   const isPlayer1 = currentUserId === matchState.player1Id;
   const playerQuestionIndex = isPlayer1 ? matchState.player1QuestionIndex : matchState.player2QuestionIndex;
-  const opponentQuestionIndex = isPlayer1 ? matchState.player2QuestionIndex : matchState.player1QuestionIndex;
   const currentQuestion = matchState.questions[playerQuestionIndex];
   // Only show feedback styling when it belongs to the current question
   // This prevents the next question's correct answer from flashing green
@@ -546,7 +566,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-4 h-fit sticky top-8">
             <div className="text-center">
               <AvatarDisplay 
-                avatarData={matchState.player1Avatar as any}
+                avatarData={matchState.player1Avatar}
                 size={120}
                 className="mx-auto mb-3"
                 emotion={player1Emotion}
@@ -693,7 +713,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-4 h-fit sticky top-8">
             <div className="text-center">
               <AvatarDisplay 
-                avatarData={matchState.player2Avatar as any}
+                avatarData={matchState.player2Avatar}
                 size={120}
                 className="mx-auto mb-3"
                 emotion={player2Emotion}

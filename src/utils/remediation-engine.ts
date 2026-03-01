@@ -542,8 +542,7 @@ export function hasPassedRemediation(
  */
 export function calculateQualityGate(
   recentPerformance: Array<{ isCorrect: boolean }>,
-  currentSection: number,
-  totalSections: number
+  currentSection: number
 ): {
   canAdvance: boolean
   reason: string

@@ -24,26 +24,6 @@ const random = (min: number, max: number, decimals: number = 0): number => {
   return Number(value.toFixed(decimals))
 }
 
-// Helper to generate common wrong answers for angles
-const generateAngleDistractors = (correct: number): number[] => {
-  const distractors = [
-    correct * 0.7, // Used wrong formula
-    correct * 1.3, // Reciprocal error
-    90 - correct, // Complementary angle error
-    correct / 2, // Forgot to take inverse
-  ]
-  return distractors.map(d => Number(d.toFixed(1)))
-}
-
-// Helper to generate common wrong answers for index calculations
-const generateIndexDistractors = (correct: number): number[] => {
-  return [
-    1 / correct, // Reciprocal
-    correct * 1.5, // Wrong speed value
-    correct - 0.33, // Subtraction instead of division
-  ].map(d => Number(d.toFixed(2)))
-}
-
 export const reflectionRefractionQuestions: CompetitiveQuestion[] = [
   // ========== SIGN CONVENTION QUESTIONS (5) ==========
   {

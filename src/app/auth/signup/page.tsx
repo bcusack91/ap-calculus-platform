@@ -84,7 +84,7 @@ export default function SignUpPage() {
       // Redirect to homepage
       router.push('/')
       router.refresh()
-    } catch (err) {
+    } catch {
       setError('An error occurred during sign up')
       setIsLoading(false)
     }

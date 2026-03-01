@@ -17,7 +17,7 @@ async function main() {
     if (topic.exampleProblems.length === 0) {
       console.log('No problems found for this topic.')
     } else {
-      topic.exampleProblems.forEach((problem: any, index: number) => {
+      topic.exampleProblems.forEach((problem, index) => {
         console.log(`\n=== Problem ${index + 1} ===`)
         console.log(`ID: ${problem.id}`)
         console.log(`Question: ${problem.question}`)

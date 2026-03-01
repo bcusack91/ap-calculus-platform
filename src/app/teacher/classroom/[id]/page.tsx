@@ -62,6 +62,45 @@ interface CourseGroup {
   topics: TopicOption[]
 }
 
+interface ClassroomPerformanceData {
+  classSummary: {
+    avgMastery: number
+    totalTopicsCompleted: number
+    avgAssignmentScore: number
+    avgStreak: number
+  }
+  students: {
+    userId: string
+    name: string
+    email: string | null
+    topicStats: {
+      completed: number
+      started: number
+      avgMastery: number
+    }
+    assignmentStats: {
+      completed: number
+      total: number
+      avgScore: number
+    }
+    streak: {
+      current: number
+      longest: number
+      lastActive: string | null
+    }
+  }[]
+}
+
+interface AssignmentCreateBody {
+  title: string
+  type: string
+  requiredScore?: number
+  maxAttempts?: number
+  dueDate?: string
+  topicSlugs?: string[]
+  topicSlug?: string
+}
+
 type TabType = 'members' | 'assignments' | 'competitions' | 'performance' | 'settings'
 
 export default function ClassroomDetailPage() {
@@ -101,7 +140,7 @@ export default function ClassroomDetailPage() {
   const [creatingComp, setCreatingComp] = useState(false)
 
   // Performance data
-  const [perfData, setPerfData] = useState<any>(null)
+  const [perfData, setPerfData] = useState<ClassroomPerformanceData | null>(null)
   const [loadingPerf, setLoadingPerf] = useState(false)
 
   // Settings
@@ -171,7 +210,7 @@ export default function ClassroomDetailPage() {
     if (!assignmentForm.title.trim()) return
     setCreatingAssignment(true)
     try {
-      const body: any = {
+      const body: AssignmentCreateBody = {
         title: assignmentForm.title,
         type: assignmentForm.type,
         requiredScore: assignmentForm.requiredScore ? parseInt(assignmentForm.requiredScore) : undefined,
@@ -581,7 +620,7 @@ export default function ClassroomDetailPage() {
                       </tr>
                     </thead>
                     <tbody>
-                      {perfData.students.map((s: any) => (
+                      {perfData.students.map((s) => (
                         <tr key={s.userId} className="border-b border-gray-100 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/30">
                           <td className="py-3 px-4">
                             <p className="font-medium text-gray-900 dark:text-white">{s.name}</p>

@@ -2,11 +2,12 @@
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
+import { AvatarData } from '@/types/avatar'
 
 interface LeaderboardEntry {
   position: number
   name: string
-  avatarData: any
+  avatarData: AvatarData | null
   mmr: number
   rank: string
   totalMatches: number

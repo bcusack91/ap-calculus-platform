@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server'
+import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { getUnlockedAlgebra2Subtopics, ALGEBRA2_SUBTOPIC_LABELS } from '@/data/competitive-questions/algebra2-bank'
@@ -8,7 +8,7 @@ import { getUnlockedAlgebra2Subtopics, ALGEBRA2_SUBTOPIC_LABELS } from '@/data/c
  * Requirements:
  * User must have completed ANY topic with 80%+ mastery
  */
-export async function GET(req: NextRequest) {
+export async function GET() {
   try {
     const session = await auth()
     

@@ -225,7 +225,7 @@ To compare decimals, look at each place value from left to right:
     { slug: 'working-with-decimals', content: workingWithDecimalsContent, name: 'Working with Decimals' },
   ]
 
-  for (const { slug, content, name } of updates) {
+  for (const { slug, content } of updates) {
     const topic = await prisma.topic.update({
       where: { slug },
       data: { textContent: content },

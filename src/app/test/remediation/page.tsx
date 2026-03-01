@@ -91,7 +91,7 @@ export default function RemediationTestPage() {
       isCorrect: i < accuracy * 10
     }))
     
-    const gate = calculateQualityGate(mockPerformance, currentSection, 6)
+    calculateQualityGate(mockPerformance, currentSection)
     setShowQualityGate(true)
   }
 

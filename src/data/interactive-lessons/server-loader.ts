@@ -6,10 +6,11 @@
  * webpack chunks which may not be deployed to the CDN.
  */
 import { getInteractiveTopicConfig } from './registry'
+import type { LessonData } from './registry'
 
 export interface PreloadedLessonPart {
   title: string
-  data: { topicSlug: string; sections: any[] } | null
+  data: LessonData | null
 }
 
 export interface PreloadedLessonConfig {

@@ -1,50 +1,58 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import { useSession } from 'next-auth/react'
+
+interface CompetitiveProfile {
+  rank: string
+  overallMMR: number
+  wins: number
+  losses: number
+}
+
+interface QueueStatus {
+  status: string
+  matchId?: string
+  [key: string]: unknown
+}
+
+interface UnlockRequirements {
+  masteryLevel?: number
+  currentTopic?: string
+  currentTopicTitle?: string
+}
+
+interface UnlockCheckResponse {
+  unlocked: boolean
+  profile: CompetitiveProfile | null
+  requirements: UnlockRequirements | null
+  completedTopics?: string[]
+  competitiveCategories?: Record<string, boolean>
+  algebra2SubtopicDetails?: { key: string; label: string }[]
+  justUnlocked?: boolean
+}
 
 export default function CompetitivePage() {
   const router = useRouter()
   const { data: session, status } = useSession()
   const [loading, setLoading] = useState(true)
   const [unlocked, setUnlocked] = useState(false)
-  const [profile, setProfile] = useState<any>(null)
+  const [profile, setProfile] = useState<CompetitiveProfile | null>(null)
   const [inQueue, setInQueue] = useState(false)
-  const [queueStatus, setQueueStatus] = useState<any>(null)
+  const [queueStatus, setQueueStatus] = useState<QueueStatus | null>(null)
   const [selectedMode, setSelectedMode] = useState('SPEED_RACE')
   const [selectedTopic, setSelectedTopic] = useState<'the-unit-circle' | 'reflection-refraction' | 'derivatives' | 'limits' | 'integrals' | 'algebra' | 'algebra2' | 'sat-punctuation-commas-semicolons' | 'sat-punctuation' | 'cumulative'>('the-unit-circle')
   const [completedTopics, setCompletedTopics] = useState<string[]>([])
   const [competitiveCategories, setCompetitiveCategories] = useState<Record<string, boolean>>({})
   const [algebra2SubtopicDetails, setAlgebra2SubtopicDetails] = useState<{key: string; label: string}[]>([])
-  const [requirements, setRequirements] = useState<any>(null)
+  const [requirements, setRequirements] = useState<UnlockRequirements | null>(null)
   const [showAIOptions, setShowAIOptions] = useState(false)
-  const [aiDifficulty, setAiDifficulty] = useState<'easy' | 'medium' | 'hard'>('medium')
 
-  // Redirect to signin if not authenticated
-  useEffect(() => {
-    if (status === 'unauthenticated') {
-      router.push('/auth/signin?callbackUrl=/competitive')
-    }
-  }, [status, router])
-
-  useEffect(() => {
-    if (session) {
-      checkUnlock()
-    }
-  }, [session])
-
-  useEffect(() => {
-    if (inQueue) {
-      const interval = setInterval(checkQueue, 2000)
-      return () => clearInterval(interval)
-    }
-  }, [inQueue])
-
-  const checkUnlock = async () => {
+  async function checkUnlock() {
     try {
       const res = await fetch('/api/competitive/unlock-check')
-      const data = await res.json()
+      const data: UnlockCheckResponse = await res.json()
       
       setUnlocked(data.unlocked)
       setProfile(data.profile)
@@ -75,7 +83,7 @@ export default function CompetitivePage() {
         })
       })
       
-      const data = await res.json()
+      const data: QueueStatus = await res.json()
 
       if (data.status === 'matched') {
         router.push(`/competitive/match/${data.matchId}`)
@@ -120,10 +128,10 @@ export default function CompetitivePage() {
     }
   }
 
-  const checkQueue = async () => {
+  const checkQueue = useCallback(async () => {
     try {
       const res = await fetch('/api/competitive/queue')
-      const data = await res.json()
+      const data: QueueStatus = await res.json()
 
       if (data.status === 'not_in_queue') {
         setInQueue(false)
@@ -138,7 +146,30 @@ export default function CompetitivePage() {
     } catch (error) {
       console.error('Error checking queue:', error)
     }
-  }
+  }, [router])
+
+  // Redirect to signin if not authenticated
+  useEffect(() => {
+    if (status === 'unauthenticated') {
+      router.push('/auth/signin?callbackUrl=/competitive')
+    }
+  }, [status, router])
+
+  useEffect(() => {
+    if (session) {
+      const timeoutId = setTimeout(() => {
+        void checkUnlock()
+      }, 0)
+      return () => clearTimeout(timeoutId)
+    }
+  }, [session])
+
+  useEffect(() => {
+    if (inQueue) {
+      const interval = setInterval(checkQueue, 2000)
+      return () => clearInterval(interval)
+    }
+  }, [inQueue, checkQueue])
 
   if (status === 'loading' || loading) {
     return (

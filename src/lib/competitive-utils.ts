@@ -1,6 +1,6 @@
 // Utility functions for competitive match gameplay
 
-import { getQuestionSet, type CompetitiveQuestion } from '@/data/competitive-questions/reflection-refraction-bank'
+import { getQuestionSet } from '@/data/competitive-questions/reflection-refraction-bank'
 import { getDerivativeQuestions } from '@/data/competitive-questions/derivatives-bank'
 import { getLimitQuestions } from '@/data/competitive-questions/limits-bank'
 import { getIntegralQuestions } from '@/data/competitive-questions/integrals-bank'
@@ -23,6 +23,24 @@ interface Question {
   target: UnitCirclePosition;
   prompt: string;
   answerIndex: number; // Index in UNIT_CIRCLE_POSITIONS array
+}
+
+type OptionQuestion = {
+  options: string[];
+  correctAnswer: number;
+  [key: string]: unknown;
+}
+
+type MatchQuestion = {
+  id: number;
+  question?: string;
+  options?: string[];
+  correctAnswer?: number;
+  answerIndex?: number;
+  explanation?: string;
+  difficulty?: unknown;
+  type?: string;
+  [key: string]: unknown;
 }
 
 // All 16 unit circle positions
@@ -50,7 +68,7 @@ export const UNIT_CIRCLE_POSITIONS: UnitCirclePosition[] = [
  * doesn't always appear at the same index. Returns a new object with
  * shuffled options and an updated correctAnswer / answerIndex.
  */
-function shuffleOptions(q: { options: string[]; correctAnswer: number; [key: string]: any }) {
+function shuffleOptions(q: OptionQuestion) {
   const correctOption = q.options[q.correctAnswer]
   const shuffled = [...q.options]
   // Fisher-Yates shuffle
@@ -90,12 +108,14 @@ function formatCoordinate(x: number, y: number): string {
  * Generate 10 random questions for a match
  * Ensures variety by mixing angle and coordinate questions
  */
-export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: string, completedTopics?: string[]): any[] {
+export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: string, completedTopics?: string[]): MatchQuestion[] {
   // If topic is reflection-refraction, use that question bank
   if (topicSlug === 'reflection-refraction') {
     const questions = getQuestionSet(totalQuestions)
     return questions.map((q, i) => {
-      const { generateQuestion, ...serializableQuestion } = q as any
+      const serializableQuestion = Object.fromEntries(
+        Object.entries(q as Record<string, unknown>).filter(([key]) => key !== 'generateQuestion')
+      ) as { options: string[]; [key: string]: unknown }
       const shuffled = shuffleOptions({ options: serializableQuestion.options, correctAnswer: q.correctAnswer })
       return {
         ...serializableQuestion,
@@ -109,7 +129,7 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
   }
 
   // Multiple-choice question bank topics
-  const mcqBanks: Record<string, (count: number) => any[]> = {
+  const mcqBanks: Record<string, (count: number) => OptionQuestion[]> = {
     'derivatives': getDerivativeQuestions,
     'limits': getLimitQuestions,
     'integrals': getIntegralQuestions,
@@ -121,7 +141,7 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
 
   if (topicSlug && topicSlug in mcqBanks) {
     const questions = mcqBanks[topicSlug](totalQuestions)
-    return questions.map((q: any, i: number) => {
+    return questions.map((q: OptionQuestion, i: number) => {
       const shuffled = shuffleOptions(q)
       return {
         id: i,
@@ -140,7 +160,7 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
   if (topicSlug === 'algebra2') {
     const allowedSubtopics = completedTopics ? getUnlockedAlgebra2Subtopics(completedTopics) : undefined
     const questions = getAlgebra2Questions(totalQuestions, allowedSubtopics)
-    return questions.map((q: any, i: number) => {
+    return questions.map((q: OptionQuestion, i: number) => {
       const shuffled = shuffleOptions(q)
       return {
         id: i,
@@ -190,7 +210,6 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
     let prompt: string;
     if (type === 'find-angle') {
       // Given coordinate, find angle
-      const coord = formatCoordinate(position.x, position.y);
       prompt = `Click the position for angle ${position.angle}°`;
     } else {
       // Given angle, find coordinate
@@ -213,11 +232,11 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
 /**
  * Generate cumulative questions from multiple topics
  */
-function generateCumulativeQuestions(totalQuestions: number, completedTopics?: string[]): any[] {
-  const questions: any[] = []
+function generateCumulativeQuestions(totalQuestions: number, completedTopics?: string[]): MatchQuestion[] {
+  const questions: MatchQuestion[] = []
 
   // Gather questions from all MCQ banks
-  const allBankQuestions: any[] = []
+  const allBankQuestions: MatchQuestion[] = []
 
   // Unit circle questions
   const ucQuestions = generateMatchQuestions(3, 'the-unit-circle')
@@ -225,7 +244,9 @@ function generateCumulativeQuestions(totalQuestions: number, completedTopics?: s
 
   // Reflection-refraction questions
   const rrQuestions = getQuestionSet(2).map((q, i) => {
-    const { generateQuestion, ...serializableQuestion } = q as any
+    const serializableQuestion = Object.fromEntries(
+      Object.entries(q as Record<string, unknown>).filter(([key]) => key !== 'generateQuestion')
+    ) as Record<string, unknown>
     return {
       ...serializableQuestion,
       id: i,

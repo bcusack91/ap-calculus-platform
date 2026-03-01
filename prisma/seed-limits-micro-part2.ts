@@ -26,7 +26,7 @@ async function main() {
   console.log('✓ Cleared any existing topics with same slugs')
 
   // 5. One-Sided Limits in Depth
-  const topic5 = await prisma.topic.create({
+  await prisma.topic.create({
     data: {
       title: 'One-Sided Limits in Detail',
       slug: 'one-sided-limits-in-detail',
@@ -173,7 +173,7 @@ $$\\lim_{x \\to 5^+} \\frac{|x - 5|}{x - 5} = \\lim_{x \\to 5^+} \\frac{x - 5}{x
   })
 
   // 6. Direct Substitution Method
-  const topic6 = await prisma.topic.create({
+  await prisma.topic.create({
     data: {
       title: 'Direct Substitution Method',
       slug: 'direct-substitution-method',
@@ -328,7 +328,7 @@ The limit exists and equals **10**, but we couldn't find it with direct substitu
   })
 
   // 7. Factoring to Evaluate Limits
-  const topic7 = await prisma.topic.create({
+  await prisma.topic.create({
     data: {
       title: 'Factoring Method for Limits',
       slug: 'factoring-method-limits',
@@ -508,7 +508,7 @@ Note: This limit is actually the derivative of $f(x) = x^2$!`,
   })
 
   // 8. Rationalizing Technique
-  const topic8 = await prisma.topic.create({
+  await prisma.topic.create({
     data: {
       title: 'Rationalizing to Evaluate Limits',
       slug: 'rationalizing-technique-limits',

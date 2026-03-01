@@ -418,9 +418,9 @@ export default function TwoDigitMultiplicationAnimation({
       <div className="bg-blue-100 rounded p-4 mb-4 min-h-[60px]">
         {currentStep === 0 ? (
           <p className="text-blue-900">
-            <strong>Ready to start!</strong> We'll multiply {multiplicand} × {multiplier} step by step.
+            <strong>Ready to start!</strong> We&apos;ll multiply {multiplicand} × {multiplier} step by step.
             <br />
-            <span className="text-sm mt-2 block">First, we'll multiply {multiplicand} by {multiplierDigits[0]} (ones place), then by {multiplierDigits[1]} (tens place), and finally add them together.</span>
+            <span className="text-sm mt-2 block">First, we&apos;ll multiply {multiplicand} by {multiplierDigits[0]} (ones place), then by {multiplierDigits[1]} (tens place), and finally add them together.</span>
           </p>
         ) : currentStep <= maxSteps ? (
           <p className="text-blue-900">

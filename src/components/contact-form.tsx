@@ -58,7 +58,7 @@ export function ContactForm() {
         category: "general",
         message: "",
       });
-    } catch (error) {
+    } catch {
       setStatus("error");
       setErrorMessage(
         "There was a problem sending your message. Please try again or contact us via GitHub."
@@ -89,7 +89,7 @@ export function ContactForm() {
             Message Sent Successfully!
           </h3>
           <p className="text-gray-600 mb-6">
-            Thank you for reaching out. We'll get back to you within 2-3 business days.
+            Thank you for reaching out. We&apos;ll get back to you within 2-3 business days.
           </p>
           <button
             onClick={() => setStatus("idle")}
@@ -260,7 +260,7 @@ export function ContactForm() {
             <a href="/privacy" className="text-blue-600 hover:underline">
               Privacy Policy
             </a>
-            . We'll only use your email to respond to your inquiry.
+            . We&apos;ll only use your email to respond to your inquiry.
           </p>
         </form>
       )}

@@ -81,7 +81,7 @@ export function CookieConsent() {
                   <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
                     We use cookies to enhance your learning experience, analyze site traffic, 
                     and display relevant advertisements that help keep this platform free. 
-                    By clicking "Accept All", you consent to our use of cookies.{" "}
+                    By clicking &quot;Accept All&quot;, you consent to our use of cookies.{" "}
                     <Link 
                       href="/privacy" 
                       className="text-blue-600 hover:text-blue-700 underline font-medium"

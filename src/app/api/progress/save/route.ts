@@ -54,18 +54,6 @@ export async function POST(request: Request) {
       status = 'NOT_STARTED'
     }
 
-    // Check if this is the first completion BEFORE updating
-    const existingProgress = await prisma.topicProgress.findUnique({
-      where: {
-        userId_topicId: {
-          userId: session.user.id,
-          topicId: topic.id,
-        }
-      }
-    })
-    
-    const isFirstCompletion = (status === 'COMPLETED' || status === 'MASTERED') && !existingProgress?.completedAt
-
     // Upsert topic progress
     const progress = await prisma.topicProgress.upsert({
       where: {

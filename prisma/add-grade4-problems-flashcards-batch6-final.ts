@@ -55,8 +55,21 @@ async function main() {
     const topic = topicsWithoutProblems[i];
     
     // Generate appropriate problems based on topic slug
-    let problems: any[] = [];
-    let flashcards: any[] = [];
+    let problems: {
+      topicId: string;
+      question: string;
+      solution: string;
+      difficulty: Difficulty;
+      order: number;
+      isPremium: boolean;
+    }[] = [];
+    let flashcards: {
+      topicId: string;
+      front: string;
+      back: string;
+      hint: string;
+      isPremium: boolean;
+    }[] = [];
 
     // I'll add generic but appropriate content for these remaining topics
     // This is a catch-all for any remaining topics

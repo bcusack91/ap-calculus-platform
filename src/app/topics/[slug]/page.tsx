@@ -8,6 +8,7 @@ import 'katex/dist/katex.min.css'
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import TopicContentRenderer from '@/components/TopicContentRenderer'
+import type { ReactNode } from 'react'
 
 // ISR: revalidate content every hour (content rarely changes)
 export const revalidate = 3600
@@ -48,40 +49,49 @@ export async function generateMetadata(props: TopicPageProps): Promise<Metadata>
 }
 
 // Custom components for styled markdown
+type MarkdownChildrenProps = {
+  children?: ReactNode
+}
+
+type MarkdownCodeProps = {
+  inline?: boolean
+  children?: ReactNode
+}
+
 const MarkdownComponents = {
-  h1: ({ children }: any) => (
+  h1: ({ children }: MarkdownChildrenProps) => (
     <h1 className="text-3xl font-bold mb-6 mt-8 text-gray-900">{children}</h1>
   ),
-  h2: ({ children }: any) => (
+  h2: ({ children }: MarkdownChildrenProps) => (
     <h2 className="text-2xl font-bold mb-4 mt-8 text-gray-800 border-l-4 border-purple-500 pl-4 bg-purple-50 py-2 rounded-r">{children}</h2>
   ),
-  h3: ({ children }: any) => (
+  h3: ({ children }: MarkdownChildrenProps) => (
     <h3 className="text-xl font-semibold mb-3 mt-6 text-gray-700">{children}</h3>
   ),
-  p: ({ children }: any) => (
+  p: ({ children }: MarkdownChildrenProps) => (
     <p className="mb-4 leading-relaxed text-gray-700">{children}</p>
   ),
-  ul: ({ children }: any) => (
+  ul: ({ children }: MarkdownChildrenProps) => (
     <ul className="list-disc list-inside mb-4 space-y-2 ml-4">{children}</ul>
   ),
-  ol: ({ children }: any) => (
+  ol: ({ children }: MarkdownChildrenProps) => (
     <ol className="list-decimal list-inside mb-4 space-y-2 ml-4">{children}</ol>
   ),
-  li: ({ children }: any) => (
+  li: ({ children }: MarkdownChildrenProps) => (
     <li className="text-gray-700">{children}</li>
   ),
-  blockquote: ({ children }: any) => (
+  blockquote: ({ children }: MarkdownChildrenProps) => (
     <blockquote className="border-l-4 border-blue-500 bg-blue-50 pl-4 py-3 mb-4 italic rounded-r">
       {children}
     </blockquote>
   ),
-  code: ({ inline, children }: any) => 
+  code: ({ inline, children }: MarkdownCodeProps) => 
     inline ? (
       <code className="bg-gray-100 px-2 py-1 rounded text-sm font-mono text-purple-700">{children}</code>
     ) : (
       <code className="block bg-gray-900 text-gray-100 p-4 rounded-lg mb-4 overflow-x-auto">{children}</code>
     ),
-  strong: ({ children }: any) => (
+  strong: ({ children }: MarkdownChildrenProps) => (
     <strong className="font-bold text-purple-700">{children}</strong>
   ),
 }
@@ -297,7 +307,7 @@ export default async function TopicPage(props: TopicPageProps) {
                 {topic.exampleProblems.length === 0 ? (
                   <p className="text-muted-foreground">No example problems available yet.</p>
                 ) : (
-                  topic.exampleProblems.map((problem: any, index: number) => (
+                  topic.exampleProblems.map((problem, index: number) => (
                     <div key={problem.id} className="bg-white rounded-lg border-2 border-green-300 p-6 shadow-md hover:shadow-lg transition-shadow">
                       <div className="flex items-start justify-between mb-4">
                         <h3 className="text-lg font-semibold flex items-center gap-2">

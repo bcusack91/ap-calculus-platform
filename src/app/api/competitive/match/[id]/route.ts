@@ -2,6 +2,13 @@ import { NextRequest, NextResponse } from 'next/server';
 import { auth } from '@/lib/auth';
 import { prisma } from '@/lib/prisma';
 
+interface MatchGameData {
+  player1QuestionIndex?: number;
+  player2QuestionIndex?: number;
+  questions?: unknown[];
+  [key: string]: unknown;
+}
+
 export async function GET(
   request: NextRequest,
   { params }: { params: Promise<{ id: string }> }
@@ -47,7 +54,9 @@ export async function GET(
     }
 
     // Parse game data from JSON
-    const gameData = match.gameData as any;
+    const gameData = (match.gameData && typeof match.gameData === 'object'
+      ? match.gameData
+      : {}) as MatchGameData;
 
     // Format response
     const response = {
