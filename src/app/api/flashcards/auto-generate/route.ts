@@ -19,7 +19,8 @@ export async function POST(req: NextRequest) {
     }
 
     const body = await req.json()
-    const { topicId, triggerType } = body // triggerType: 'quiz' | 'practice' | 'manual'
+    const { topicId, triggerType: _triggerType } = body // triggerType: 'quiz' | 'practice' | 'manual'
+    void _triggerType;
 
     if (!topicId) {
       return NextResponse.json(

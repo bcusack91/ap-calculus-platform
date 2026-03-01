@@ -26,7 +26,7 @@ function InlineLatex({ text, className }: { text: string; className?: string }) 
 
   // Protect escaped dollar signs (\$) from being treated as LaTeX delimiters
   const ESCAPED_DOLLAR = '\u0000DOLLAR\u0000'
-  let processed = text.replace(/\\\$/g, ESCAPED_DOLLAR)
+  const processed = text.replace(/\\\$/g, ESCAPED_DOLLAR)
 
   // If no unescaped $ remains, just restore and return plain text
   if (!processed.includes('$')) {

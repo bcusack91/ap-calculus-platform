@@ -7,7 +7,8 @@ import Link from 'next/link'
 
 export default function JoinClassPage() {
   const { data: session, status } = useSession()
-  const router = useRouter()
+  const _router = useRouter()
+  void _router;
   const [joinCode, setJoinCode] = useState('')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')

@@ -29,7 +29,8 @@ export async function POST(
     if (!parsed.success) {
       return NextResponse.json({ error: parsed.error }, { status: 400 });
     }
-    const { questionIndex, answerIndex, isSecondAttempt, playerId } = parsed.data;
+    const { questionIndex, answerIndex, isSecondAttempt: _isSecondAttempt, playerId } = parsed.data;
+    void _isSecondAttempt;
 
 
 

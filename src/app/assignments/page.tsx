@@ -84,7 +84,7 @@ function formatDue(dateStr: string | null): string {
 }
 
 export default function StudentAssignmentsPage() {
-  const { data: session, status: authStatus } = useSession()
+  const { status: authStatus } = useSession()
   const router = useRouter()
   const [assignments, setAssignments] = useState<AssignmentItem[]>([])
   const [classrooms, setClassrooms] = useState<ClassroomInfo[]>([])

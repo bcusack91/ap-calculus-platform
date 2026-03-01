@@ -129,7 +129,6 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
   }
 
   // Multiple-choice question bank topics
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const mcqBanks: Record<string, (count?: number) => OptionQuestion[]> = {
     'derivatives': getDerivativeQuestions as unknown as (count?: number) => OptionQuestion[],
     'limits': getLimitQuestions as unknown as (count?: number) => OptionQuestion[],
