@@ -49,6 +49,8 @@ model User {
   assignmentSubmissions     AssignmentSubmission[]
   createdAssignments        Assignment[]             @relation("AssignmentCreator")
   competitionParticipations CompetitionParticipant[]
+  competitiveGrantsReceived CompetitiveGrant[]       @relation("CompetitiveGrantStudent")
+  competitiveGrantsGiven    CompetitiveGrant[]       @relation("CompetitiveGrantTeacher")
 }
 
 model Account {
@@ -659,12 +661,29 @@ model Classroom {
 
   teacher      User                   @relation("ClassroomTeacher", fields: [teacherId], references: [id], onDelete: Cascade)
   school       School?                @relation(fields: [schoolId], references: [id])
-  members      ClassroomMember[]
-  assignments  Assignment[]
-  competitions ScheduledCompetition[]
+  members           ClassroomMember[]
+  assignments       Assignment[]
+  competitions      ScheduledCompetition[]
+  competitiveGrants CompetitiveGrant[]
 
   @@index([teacherId])
   @@index([joinCode])
+}
+
+model CompetitiveGrant {
+  id          String    @id @default(cuid())
+  studentId   String
+  grantedById String    // teacher who granted access
+  classroomId String?   // optional classroom context
+  categories  Json?     // JSON array of category slugs, null = all categories
+  createdAt   DateTime  @default(now())
+
+  student   User       @relation("CompetitiveGrantStudent", fields: [studentId], references: [id], onDelete: Cascade)
+  grantedBy User       @relation("CompetitiveGrantTeacher", fields: [grantedById], references: [id], onDelete: Cascade)
+  classroom Classroom? @relation(fields: [classroomId], references: [id], onDelete: Cascade)
+
+  @@unique([studentId, grantedById])
+  @@index([studentId])
 }
 
 model ClassroomMember {

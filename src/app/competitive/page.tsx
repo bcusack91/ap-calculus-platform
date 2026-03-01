@@ -203,7 +203,7 @@ export default function CompetitivePage() {
               Complete any topic&apos;s interactive lesson with 80%+ mastery to unlock competitive challenges!
             </p>
             <p className="text-md text-gray-500 dark:text-gray-500 mb-8">
-              Finish an interactive lesson from any course to get started.
+              Finish an interactive lesson from any course to get started, or ask your teacher to grant you access.
             </p>
             
             {/* Progress Display */}

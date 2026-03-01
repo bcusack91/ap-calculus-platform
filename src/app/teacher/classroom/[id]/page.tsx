@@ -139,6 +139,10 @@ export default function ClassroomDetailPage() {
   })
   const [creatingComp, setCreatingComp] = useState(false)
 
+  // Competitive grants
+  const [competitiveGrants, setCompetitiveGrants] = useState<Record<string, boolean>>({})
+  const [grantingAccess, setGrantingAccess] = useState<string | null>(null)
+
   // Performance data
   const [perfData, setPerfData] = useState<ClassroomPerformanceData | null>(null)
   const [loadingPerf, setLoadingPerf] = useState(false)
@@ -204,6 +208,60 @@ export default function ClassroomDetailPage() {
       method: 'DELETE',
     })
     if (res.ok) loadClassroom()
+  }
+
+  const loadCompetitiveGrants = useCallback(async () => {
+    try {
+      const res = await fetch(`/api/teacher/classrooms/${classroomId}/competitive-grants`)
+      if (res.ok) {
+        const data = await res.json()
+        const grantMap: Record<string, boolean> = {}
+        for (const grant of data.grants) {
+          grantMap[grant.student.id] = true
+        }
+        setCompetitiveGrants(grantMap)
+      }
+    } catch (err) {
+      console.error('Error loading competitive grants:', err)
+    }
+  }, [classroomId])
+
+  useEffect(() => {
+    if (session && classroom) loadCompetitiveGrants()
+  }, [session, classroom, loadCompetitiveGrants])
+
+  const toggleCompetitiveAccess = async (studentId: string) => {
+    const hasGrant = competitiveGrants[studentId]
+    setGrantingAccess(studentId)
+    try {
+      if (hasGrant) {
+        const res = await fetch(`/api/teacher/classrooms/${classroomId}/competitive-grants`, {
+          method: 'DELETE',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ studentId }),
+        })
+        if (res.ok) {
+          setCompetitiveGrants(prev => {
+            const next = { ...prev }
+            delete next[studentId]
+            return next
+          })
+        }
+      } else {
+        const res = await fetch(`/api/teacher/classrooms/${classroomId}/competitive-grants`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ studentId }),
+        })
+        if (res.ok) {
+          setCompetitiveGrants(prev => ({ ...prev, [studentId]: true }))
+        }
+      }
+    } catch (err) {
+      console.error('Error toggling competitive access:', err)
+    } finally {
+      setGrantingAccess(null)
+    }
   }
 
   const createAssignment = async () => {
@@ -387,8 +445,34 @@ export default function ClassroomDetailPage() {
               <h2 className="text-xl font-bold text-gray-900 dark:text-white">
                 Students ({activeMembers.length})
               </h2>
-              <div className="text-sm text-gray-500">
-                Share join code: <span className="font-mono font-bold text-blue-600">{classroom.joinCode}</span>
+              <div className="flex items-center gap-3">
+                {activeMembers.length > 0 && (
+                  <button
+                    onClick={async () => {
+                      const allGranted = activeMembers.every(m => competitiveGrants[m.user.id])
+                      if (allGranted) {
+                        if (!confirm('Revoke competitive access for all students?')) return
+                        for (const m of activeMembers) {
+                          if (competitiveGrants[m.user.id]) {
+                            await toggleCompetitiveAccess(m.user.id)
+                          }
+                        }
+                      } else {
+                        for (const m of activeMembers) {
+                          if (!competitiveGrants[m.user.id]) {
+                            await toggleCompetitiveAccess(m.user.id)
+                          }
+                        }
+                      }
+                    }}
+                    className="text-xs font-medium px-3 py-1.5 rounded-lg bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-400 hover:bg-purple-200 dark:hover:bg-purple-900/50 transition-colors"
+                  >
+                    {activeMembers.every(m => competitiveGrants[m.user.id]) ? '⚔️ Revoke All Competitive' : '⚔️ Grant All Competitive'}
+                  </button>
+                )}
+                <div className="text-sm text-gray-500">
+                  Join code: <span className="font-mono font-bold text-blue-600">{classroom.joinCode}</span>
+                </div>
               </div>
             </div>
             {activeMembers.length === 0 ? (
@@ -429,6 +513,18 @@ export default function ClassroomDetailPage() {
                       <span className="text-xs text-gray-400">
                         Joined {new Date(m.joinedAt).toLocaleDateString()}
                       </span>
+                      <button
+                        onClick={() => toggleCompetitiveAccess(m.user.id)}
+                        disabled={grantingAccess === m.user.id}
+                        className={`text-xs font-medium px-3 py-1.5 rounded-lg transition-colors ${
+                          competitiveGrants[m.user.id]
+                            ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 hover:bg-green-200 dark:hover:bg-green-900/50'
+                            : 'bg-gray-100 dark:bg-gray-600 text-gray-600 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30 hover:text-purple-700 dark:hover:text-purple-400'
+                        }`}
+                        title={competitiveGrants[m.user.id] ? 'Click to revoke competitive access' : 'Grant competitive mode access (bypasses mastery requirement)'}
+                      >
+                        {grantingAccess === m.user.id ? '...' : competitiveGrants[m.user.id] ? '⚔️ Competitive ✓' : '⚔️ Grant Competitive'}
+                      </button>
                       <button
                         onClick={() => removeMember(m.id)}
                         className="text-red-500 hover:text-red-700 text-sm font-medium"

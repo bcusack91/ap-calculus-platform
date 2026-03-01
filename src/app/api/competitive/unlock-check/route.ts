@@ -24,7 +24,13 @@ export async function GET() {
             topic: { select: { slug: true, title: true } }
           }
         },
-        competitiveProfile: true
+        competitiveProfile: true,
+        competitiveGrantsReceived: {
+          include: {
+            grantedBy: { select: { name: true } },
+            classroom: { select: { name: true } }
+          }
+        }
       }
     })
 
@@ -41,35 +47,51 @@ export async function GET() {
     const completedTopicSlugs = completedTopics.map(tp => tp.topic.slug)
     const hasCompletedAnyTopic = completedTopicSlugs.length > 0
 
+    // Check for teacher-granted competitive access
+    const teacherGrants = user.competitiveGrantsReceived || []
+    const hasTeacherGrant = teacherGrants.length > 0
+    // Collect all teacher-granted category slugs (null categories = all)
+    const grantedCategories: Set<string> = new Set()
+    let grantAllCategories = false
+    for (const grant of teacherGrants) {
+      if (!grant.categories) {
+        grantAllCategories = true
+        break
+      }
+      const cats = grant.categories as string[]
+      cats.forEach(c => grantedCategories.add(c))
+    }
+
     // Map completed topic slugs to competitive categories
     // A competitive category is available if the user completed at least one matching topic
+    // OR if a teacher granted access to that category
     const competitiveCategories: Record<string, boolean> = {
-      'the-unit-circle': completedTopicSlugs.includes('the-unit-circle'),
-      'reflection-refraction': completedTopicSlugs.includes('reflection-refraction'),
-      'derivatives': completedTopicSlugs.some(s => 
+      'the-unit-circle': grantAllCategories || grantedCategories.has('the-unit-circle') || completedTopicSlugs.includes('the-unit-circle'),
+      'reflection-refraction': grantAllCategories || grantedCategories.has('reflection-refraction') || completedTopicSlugs.includes('reflection-refraction'),
+      'derivatives': grantAllCategories || grantedCategories.has('derivatives') || completedTopicSlugs.some(s => 
         s.includes('derivative') || s.includes('differentiation') || s.includes('definition-of-derivative')
       ),
-      'limits': completedTopicSlugs.some(s => 
+      'limits': grantAllCategories || grantedCategories.has('limits') || completedTopicSlugs.some(s => 
         s.includes('limit') || s.includes('continuity')
       ),
-      'integrals': completedTopicSlugs.some(s => 
+      'integrals': grantAllCategories || grantedCategories.has('integrals') || completedTopicSlugs.some(s => 
         s.includes('integral') || s.includes('antiderivative') || s.includes('integration')
       ),
-      'algebra': completedTopicSlugs.some(s => 
+      'algebra': grantAllCategories || grantedCategories.has('algebra') || completedTopicSlugs.some(s => 
         (s.includes('algebra1') || s.includes('-algebra1')) || s.includes('linear-equation') || s.includes('quadratic') || 
         s.includes('factoring') || s.includes('systems') ||
         s.includes('functions-basics')
       ),
-      'algebra2': completedTopicSlugs.some(s => 
+      'algebra2': grantAllCategories || grantedCategories.has('algebra2') || completedTopicSlugs.some(s => 
         s.includes('algebra2') || s.includes('-alg2') || s.includes('polynomial-operations') || 
         s.includes('rational-operations') || s.includes('simplifying-rationals') ||
         s.includes('exponential-functions') || s.includes('complex-numbers') ||
         s.includes('logarithm')
       ),
-      'sat-punctuation-commas-semicolons': completedTopicSlugs.some(s =>
+      'sat-punctuation-commas-semicolons': grantAllCategories || grantedCategories.has('sat-punctuation-commas-semicolons') || completedTopicSlugs.some(s =>
         s.includes('sat-punctuation-commas-semicolons')
       ),
-      'sat-punctuation': completedTopicSlugs.some(s =>
+      'sat-punctuation': grantAllCategories || grantedCategories.has('sat-punctuation') || completedTopicSlugs.some(s =>
         s.includes('sat-punctuation')
       ),
     }
@@ -88,12 +110,15 @@ export async function GET() {
         profile: user.competitiveProfile,
         completedTopics: completedTopicSlugs,
         competitiveCategories,
-        algebra2SubtopicDetails
+        algebra2SubtopicDetails,
+        teacherGranted: hasTeacherGrant
       })
     }
 
-    // Auto-unlock if user has completed any topic with 80%+ mastery
-    if (hasCompletedAnyTopic && !user.competitiveProfile) {
+    const shouldUnlock = hasCompletedAnyTopic || hasTeacherGrant
+
+    // Auto-unlock if user has completed any topic with 80%+ mastery OR has a teacher grant
+    if (shouldUnlock && !user.competitiveProfile) {
       const profile = await prisma.competitiveProfile.create({
         data: {
           userId: user.id,
@@ -109,12 +134,13 @@ export async function GET() {
         profile,
         completedTopics: completedTopicSlugs,
         competitiveCategories,
-        algebra2SubtopicDetails
+        algebra2SubtopicDetails,
+        teacherGranted: hasTeacherGrant
       })
     }
 
     // Also auto-unlock if profile exists but wasn't marked unlocked
-    if (hasCompletedAnyTopic && user.competitiveProfile && !user.competitiveProfile.competitiveModeUnlocked) {
+    if (shouldUnlock && user.competitiveProfile && !user.competitiveProfile.competitiveModeUnlocked) {
       const profile = await prisma.competitiveProfile.update({
         where: { userId: user.id },
         data: { competitiveModeUnlocked: true }
@@ -126,7 +152,8 @@ export async function GET() {
         profile,
         completedTopics: completedTopicSlugs,
         competitiveCategories,
-        algebra2SubtopicDetails
+        algebra2SubtopicDetails,
+        teacherGranted: hasTeacherGrant
       })
     }
 
@@ -142,7 +169,7 @@ export async function GET() {
       unlocked: false,
       completedTopics: [],
       requirements: {
-        message: 'Complete any topic with 80%+ mastery to unlock competitive mode',
+        message: 'Complete any topic with 80%+ mastery to unlock competitive mode, or ask your teacher for access',
         currentTopic: topicSlug,
         currentTopicTitle: topicTitle,
         masteryLevel: masteryLevel,
