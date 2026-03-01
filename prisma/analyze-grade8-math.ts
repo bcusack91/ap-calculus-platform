@@ -46,7 +46,7 @@ async function main() {
   let topicsWithContent = 0;
   let topicsWithProblems = 0;
   let topicsWithFlashcards = 0;
-  let topicsNeedingWork: string[] = [];
+  const topicsNeedingWork: string[] = [];
 
   course.categories.forEach(category => {
     console.log(`\n📂 Category: ${category.name}`);

@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
-import { stripe } from '@/lib/stripe'
+import { getStripe } from '@/lib/stripe'
 import { prisma } from '@/lib/prisma'
 
 export async function POST() {
@@ -30,8 +30,15 @@ export async function POST() {
     let stripeCustomerId = user.stripeCustomerId
 
     if (!stripeCustomerId) {
-      const customer = await stripe.customers.create({
-        email: user.email!,
+      if (!user.email) {
+        return NextResponse.json(
+          { error: 'A verified email address is required to subscribe' },
+          { status: 400 }
+        )
+      }
+
+      const customer = await getStripe().customers.create({
+        email: user.email,
         name: user.name || undefined,
         metadata: {
           userId: user.id,
@@ -47,7 +54,7 @@ export async function POST() {
     }
 
     // Create checkout session
-    const checkoutSession = await stripe.checkout.sessions.create({
+    const checkoutSession = await getStripe().checkout.sessions.create({
       customer: stripeCustomerId,
       mode: 'subscription',
       payment_method_types: ['card'],

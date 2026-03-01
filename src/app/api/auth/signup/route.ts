@@ -1,10 +1,38 @@
 import { NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import bcrypt from 'bcryptjs'
+import { checkRateLimit, getClientIp } from '@/lib/rate-limit'
+
+// Rate limit: 5 signup attempts per IP per 15 minutes
+const SIGNUP_RATE_LIMIT = { maxRequests: 5, windowMs: 15 * 60 * 1000 }
 
 export async function POST(request: Request) {
   try {
+    // Rate limit by IP address
+    const ip = getClientIp(request)
+    const rateLimitResult = checkRateLimit(`signup:${ip}`, SIGNUP_RATE_LIMIT)
+    if (!rateLimitResult.success) {
+      return NextResponse.json(
+        { error: 'Too many signup attempts. Please try again later.' },
+        {
+          status: 429,
+          headers: {
+            'Retry-After': String(Math.ceil((rateLimitResult.resetTime - Date.now()) / 1000)),
+          },
+        }
+      )
+    }
+
     const { email, password, name, avatarData } = await request.json()
+
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    if (!email || !emailRegex.test(email)) {
+      return NextResponse.json(
+        { error: 'A valid email address is required' },
+        { status: 400 }
+      )
+    }
 
     // Validate input
     if (!email || !password) {

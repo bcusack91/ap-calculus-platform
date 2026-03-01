@@ -2,17 +2,8 @@ import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { generateMatchQuestions } from '@/lib/competitive-utils'
-
-// In-memory matchmaking queue (would use Redis in production)
-const matchmakingQueue: Map<string, {
-  userId: string
-  topicSlug: string
-  mmr: number
-  joinedAt: number
-}> = new Map()
-
-// Store matches that have been created but players haven't been notified yet
-const pendingMatches: Map<string, string> = new Map() // userId -> matchId
+import { queueJoinSchema, parseBody } from '@/lib/validations'
+import type { Prisma } from '@prisma/client'
 
 /**
  * Join the matchmaking queue
@@ -21,26 +12,31 @@ const pendingMatches: Map<string, string> = new Map() // userId -> matchId
 export async function POST(req: NextRequest) {
   try {
     const session = await auth()
-    
+
     if (!session?.user?.email) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
     const body = await req.json()
-    const { topicSlug, gameMode } = body
+    const parsed = parseBody(queueJoinSchema, body)
+    if (!parsed.success) {
+      return NextResponse.json({ error: parsed.error }, { status: 400 })
+    }
+    const { topicSlug, gameMode } = parsed.data
 
     const user = await prisma.user.findUnique({
       where: { email: session.user.email },
       include: {
         competitiveProfile: true,
+        matchmakingEntry: true,
         topicProgress: {
           where: {
             status: { in: ['COMPLETED', 'MASTERED'] },
-            masteryLevel: { gte: 0.8 }
+            masteryLevel: { gte: 0.8 },
           },
-          include: { topic: { select: { slug: true } } }
-        }
-      }
+          include: { topic: { select: { slug: true } } },
+        },
+      },
     })
 
     if (!user?.competitiveProfile) {
@@ -48,81 +44,92 @@ export async function POST(req: NextRequest) {
     }
 
     // Get topic-specific MMR
-    const mmr = topicSlug === 'the-unit-circle' 
-      ? user.competitiveProfile.unitCircleMMR
-      : user.competitiveProfile.overallMMR
+    const mmr =
+      topicSlug === 'the-unit-circle'
+        ? user.competitiveProfile.unitCircleMMR
+        : user.competitiveProfile.overallMMR
 
     // Check if already in queue
-    if (matchmakingQueue.has(user.id)) {
-      return NextResponse.json({ 
+    if (user.matchmakingEntry) {
+      const queueCount = await prisma.matchmakingQueue.count({
+        where: { topicSlug: user.matchmakingEntry.topicSlug },
+      })
+      return NextResponse.json({
         status: 'already_in_queue',
-        position: Array.from(matchmakingQueue.keys()).indexOf(user.id) + 1
+        position: queueCount,
       })
     }
 
-    // Try to find a match
-    const match = findMatch(user.id, mmr, topicSlug)
+    // Clean up stale entries (older than 5 minutes)
+    await prisma.matchmakingQueue.deleteMany({
+      where: { joinedAt: { lt: new Date(Date.now() - 5 * 60 * 1000) } },
+    })
 
-    if (match) {
-      // Generate questions for the match with topic-specific content
-      // Pass completedTopics so question banks can filter to only completed sections
-      const completedTopicSlugs = user.topicProgress.map(tp => tp.topic.slug)
-      const questions = generateMatchQuestions(10, topicSlug, completedTopicSlugs);
-      
-      // Create match in database
-      const competitiveMatch = await prisma.competitiveMatch.create({
-        data: {
-          player1Id: match.player1Id,
-          player2Id: match.player2Id,
-          gameMode: gameMode || 'SPEED_RACE',
-          topicSlug,
-          player1MMRBefore: match.player1MMR,
-          player2MMRBefore: match.player2MMR,
-          player1MMRAfter: match.player1MMR, // Will update after match
-          player2MMRAfter: match.player2MMR,
-          player1Score: 0,
-          player2Score: 0,
-          status: 'IN_PROGRESS',
-          startedAt: new Date(),
-          gameData: {
-            questions,
-            player1QuestionIndex: 0,
-            player2QuestionIndex: 0,
+    // Try to find an opponent already in the queue
+    const mmrRange = 50
+    const opponent = await prisma.matchmakingQueue.findFirst({
+      where: {
+        topicSlug,
+        userId: { not: user.id },
+        mmr: { gte: mmr - mmrRange, lte: mmr + mmrRange },
+      },
+      orderBy: { joinedAt: 'asc' },
+    })
+
+    if (opponent) {
+      // Found a match — generate questions, create match, remove opponent from queue
+      const completedTopicSlugs = user.topicProgress.map((tp) => tp.topic.slug)
+      const questions = generateMatchQuestions(10, topicSlug, completedTopicSlugs)
+
+      const [competitiveMatch] = await prisma.$transaction([
+        prisma.competitiveMatch.create({
+          data: {
+            player1Id: opponent.userId,
+            player2Id: user.id,
+            gameMode: gameMode || 'SPEED_RACE',
+            topicSlug,
+            player1MMRBefore: opponent.mmr,
+            player2MMRBefore: mmr,
+            player1MMRAfter: opponent.mmr,
+            player2MMRAfter: mmr,
+            player1Score: 0,
+            player2Score: 0,
+            status: 'IN_PROGRESS',
+            startedAt: new Date(),
+            gameData: {
+              questions,
+              player1QuestionIndex: 0,
+              player2QuestionIndex: 0,
+            } as unknown as Prisma.InputJsonValue,
           },
-        }
-      })
-
-      // Remove both players from queue
-      matchmakingQueue.delete(match.player1Id)
-      matchmakingQueue.delete(match.player2Id)
-
-      // Store match for both players so they can retrieve it
-      pendingMatches.set(match.player1Id, competitiveMatch.id)
-      pendingMatches.set(match.player2Id, competitiveMatch.id)
+        }),
+        prisma.matchmakingQueue.delete({ where: { id: opponent.id } }),
+      ])
 
       return NextResponse.json({
         status: 'matched',
         matchId: competitiveMatch.id,
-        opponent: {
-          id: match.player1Id === user.id ? match.player2Id : match.player1Id
-        }
+        opponent: { id: opponent.userId },
       })
     }
 
-    // Add to queue
-    matchmakingQueue.set(user.id, {
-      userId: user.id,
-      topicSlug,
-      mmr,
-      joinedAt: Date.now()
+    // No match found — add to queue
+    await prisma.matchmakingQueue.create({
+      data: {
+        userId: user.id,
+        topicSlug,
+        mmr,
+        gameMode: gameMode || 'SPEED_RACE',
+      },
     })
+
+    const queueSize = await prisma.matchmakingQueue.count({ where: { topicSlug } })
 
     return NextResponse.json({
       status: 'searching',
-      queuePosition: matchmakingQueue.size,
-      estimatedWait: estimateWaitTime(matchmakingQueue.size)
+      queuePosition: queueSize,
+      estimatedWait: estimateWaitTime(queueSize),
     })
-
   } catch (error) {
     console.error('Error joining queue:', error)
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
@@ -136,23 +143,22 @@ export async function POST(req: NextRequest) {
 export async function DELETE() {
   try {
     const session = await auth()
-    
+
     if (!session?.user?.email) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
     const user = await prisma.user.findUnique({
-      where: { email: session.user.email }
+      where: { email: session.user.email },
     })
 
     if (!user) {
       return NextResponse.json({ error: 'User not found' }, { status: 404 })
     }
 
-    matchmakingQueue.delete(user.id)
+    await prisma.matchmakingQueue.deleteMany({ where: { userId: user.id } })
 
     return NextResponse.json({ status: 'left_queue' })
-
   } catch (error) {
     console.error('Error leaving queue:', error)
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
@@ -160,93 +166,117 @@ export async function DELETE() {
 }
 
 /**
- * Check queue status
+ * Check queue status — also performs expanded-range matching for users who
+ * have been waiting longer (MMR range widens over time).
  * GET /api/competitive/queue
  */
 export async function GET() {
   try {
     const session = await auth()
-    
+
     if (!session?.user?.email) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
     const user = await prisma.user.findUnique({
-      where: { email: session.user.email }
+      where: { email: session.user.email },
+      include: {
+        matchmakingEntry: true,
+        topicProgress: {
+          where: {
+            status: { in: ['COMPLETED', 'MASTERED'] },
+            masteryLevel: { gte: 0.8 },
+          },
+          include: { topic: { select: { slug: true } } },
+        },
+      },
     })
 
     if (!user) {
       return NextResponse.json({ error: 'User not found' }, { status: 404 })
     }
 
-    // Check if user has a pending match
-    const pendingMatchId = pendingMatches.get(user.id)
-    if (pendingMatchId) {
-      // Clear the pending match and return it
-      pendingMatches.delete(user.id)
-      return NextResponse.json({
-        status: 'matched',
-        matchId: pendingMatchId
-      })
-    }
-
-    const queueEntry = matchmakingQueue.get(user.id)
-
-    if (!queueEntry) {
+    const entry = user.matchmakingEntry
+    if (!entry) {
       return NextResponse.json({ status: 'not_in_queue' })
     }
 
-    const position = Array.from(matchmakingQueue.keys()).indexOf(user.id) + 1
-    const waitTime = Date.now() - queueEntry.joinedAt
+    // Expand MMR range based on how long the player has waited
+    const waitMs = Date.now() - entry.joinedAt.getTime()
+    const mmrRange =
+      waitMs < 5000
+        ? 50
+        : waitMs < 15000
+          ? 100
+          : waitMs < 30000
+            ? 150
+            : 250
+
+    // Try to find an opponent with the expanded range
+    const opponent = await prisma.matchmakingQueue.findFirst({
+      where: {
+        topicSlug: entry.topicSlug,
+        userId: { not: user.id },
+        mmr: { gte: entry.mmr - mmrRange, lte: entry.mmr + mmrRange },
+      },
+      orderBy: { joinedAt: 'asc' },
+    })
+
+    if (opponent) {
+      const completedTopicSlugs = user.topicProgress.map((tp) => tp.topic.slug)
+      const questions = generateMatchQuestions(10, entry.topicSlug, completedTopicSlugs)
+
+      const [competitiveMatch] = await prisma.$transaction([
+        prisma.competitiveMatch.create({
+          data: {
+            player1Id: opponent.userId,
+            player2Id: user.id,
+            gameMode: (entry.gameMode as 'SPEED_RACE') || 'SPEED_RACE',
+            topicSlug: entry.topicSlug,
+            player1MMRBefore: opponent.mmr,
+            player2MMRBefore: entry.mmr,
+            player1MMRAfter: opponent.mmr,
+            player2MMRAfter: entry.mmr,
+            player1Score: 0,
+            player2Score: 0,
+            status: 'IN_PROGRESS',
+            startedAt: new Date(),
+            gameData: {
+              questions,
+              player1QuestionIndex: 0,
+              player2QuestionIndex: 0,
+            } as unknown as Prisma.InputJsonValue,
+          },
+        }),
+        prisma.matchmakingQueue.delete({ where: { id: opponent.id } }),
+        prisma.matchmakingQueue.delete({ where: { id: entry.id } }),
+      ])
+
+      return NextResponse.json({
+        status: 'matched',
+        matchId: competitiveMatch.id,
+      })
+    }
+
+    // Still waiting
+    const position = await prisma.matchmakingQueue.count({
+      where: { topicSlug: entry.topicSlug, joinedAt: { lte: entry.joinedAt } },
+    })
 
     return NextResponse.json({
       status: 'in_queue',
       position,
-      waitTime,
-      topicSlug: queueEntry.topicSlug
+      waitTime: waitMs,
+      topicSlug: entry.topicSlug,
     })
-
   } catch (error) {
     console.error('Error checking queue:', error)
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
   }
 }
 
-// Helper functions
-
-function findMatch(userId: string, mmr: number, topicSlug: string) {
-  const waitTime = Date.now() - (matchmakingQueue.get(userId)?.joinedAt || Date.now())
-  
-  // Expand MMR range based on wait time
-  const mmrRange = 
-    waitTime < 5000 ? 50 :
-    waitTime < 15000 ? 100 :
-    waitTime < 30000 ? 150 :
-    250
-
-  for (const [opponentId, opponent] of matchmakingQueue.entries()) {
-    if (opponentId === userId) continue
-    if (opponent.topicSlug !== topicSlug) continue
-    
-    const mmrDiff = Math.abs(opponent.mmr - mmr)
-    
-    if (mmrDiff <= mmrRange) {
-      return {
-        player1Id: userId,
-        player2Id: opponentId,
-        player1MMR: mmr,
-        player2MMR: opponent.mmr
-      }
-    }
-  }
-
-  return null
-}
-
 function estimateWaitTime(queueSize: number): number {
-  // Simple estimation: fewer players = longer wait
-  if (queueSize === 1) return 30 // 30 seconds
-  if (queueSize <= 3) return 15
-  if (queueSize <= 10) return 5
-  return 2
+  if (queueSize >= 2) return 5
+  if (queueSize === 1) return 15
+  return 30
 }

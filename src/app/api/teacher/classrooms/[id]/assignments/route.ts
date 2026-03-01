@@ -11,38 +11,44 @@ export async function GET(
   req: NextRequest,
   { params }: { params: Promise<{ id: string }> }
 ) {
-  const { id } = await params
-  const result = await requireClassroomOwner(id)
-  if ('error' in result && result.error) return result.error
+  try {
+    const { id } = await params
+    const result = await requireClassroomOwner(id)
+    if ('error' in result && result.error) return result.error
 
-  const assignments = await prisma.assignment.findMany({
-    where: { classroomId: id, isActive: true },
-    include: {
-      submissions: {
-        include: {
-          student: { select: { id: true, name: true, email: true, image: true } },
+    const assignments = await prisma.assignment.findMany({
+      where: { classroomId: id, isActive: true },
+      include: {
+        submissions: {
+          include: {
+            student: { select: { id: true, name: true, email: true, image: true } },
+          },
         },
+        _count: { select: { submissions: true } },
       },
-      _count: { select: { submissions: true } },
-    },
-    orderBy: { createdAt: 'desc' },
-  })
+      orderBy: { createdAt: 'desc' },
+    })
 
-  // Also get total student count for completion stats
-  const memberCount = await prisma.classroomMember.count({
-    where: { classroomId: id, isActive: true },
-  })
+    // Also get total student count for completion stats
+    const memberCount = await prisma.classroomMember.count({
+      where: { classroomId: id, isActive: true },
+    })
 
-  return NextResponse.json({ assignments, memberCount })
+    return NextResponse.json({ assignments, memberCount })
+  } catch (error) {
+    console.error('[GET /api/teacher/classrooms/[id]/assignments]', error)
+    return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
+  }
 }
 
 export async function POST(
   req: NextRequest,
   { params }: { params: Promise<{ id: string }> }
 ) {
-  const { id } = await params
-  const result = await requireClassroomOwner(id)
-  if ('error' in result && result.error) return result.error
+  try {
+    const { id } = await params
+    const result = await requireClassroomOwner(id)
+    if ('error' in result && result.error) return result.error
 
   const { title, description, type, topicSlug, topicSlugs, quizId, dueDate, maxAttempts, requiredScore } =
     await req.json()
@@ -87,4 +93,8 @@ export async function POST(
   }
 
   return NextResponse.json({ assignment }, { status: 201 })
+  } catch (error) {
+    console.error('[POST /api/teacher/classrooms/[id]/assignments]', error)
+    return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
+  }
 }

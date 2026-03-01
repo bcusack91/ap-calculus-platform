@@ -25,54 +25,30 @@ export function Navbar() {
   const isTeacher = session?.user?.role === 'TEACHER' || session?.user?.role === 'ADMIN'
   const isAdmin = session?.user?.role === 'ADMIN'
 
-  // Fetch user's avatar when logged in (cached in sessionStorage)
+  // Fetch navbar data (courses + avatar) in a single request, cached in sessionStorage
   useEffect(() => {
-    if (session) {
-      // Try to get from cache first
-      const cached = sessionStorage.getItem('userAvatar')
-      if (cached) {
-        try {
-          setAvatarData(JSON.parse(cached))
-          return
-        } catch {
-          // Invalid cache, fetch fresh
-        }
-      }
-      
-      // Fetch only if not cached
-      fetch('/api/user/avatar')
-        .then(res => res.json())
-        .then(data => {
-          setAvatarData(data.avatarData)
-          // Cache for this session
-          if (data.avatarData) {
-            sessionStorage.setItem('userAvatar', JSON.stringify(data.avatarData))
-          }
-        })
-        .catch(err => console.error('Error fetching avatar:', err))
-    } else {
-      setAvatarData(null)
-      sessionStorage.removeItem('userAvatar')
-    }
-  }, [session])
-
-  // Fetch courses for dropdown (cached in sessionStorage)
-  useEffect(() => {
-    const cached = sessionStorage.getItem('navCourses')
+    const cacheKey = session ? 'navData-auth' : 'navData-anon'
+    const cached = sessionStorage.getItem(cacheKey)
     if (cached) {
       try {
-        setCourses(JSON.parse(cached))
-        return
+        const parsed = JSON.parse(cached)
+        const timeoutId = setTimeout(() => {
+          setCourses(parsed.courses ?? [])
+          if (parsed.avatarData) setAvatarData(parsed.avatarData)
+        }, 0)
+        return () => clearTimeout(timeoutId)
       } catch { /* fetch fresh */ }
     }
-    fetch('/api/courses')
+
+    fetch('/api/navbar')
       .then(res => res.json())
       .then(data => {
-        setCourses(data)
-        sessionStorage.setItem('navCourses', JSON.stringify(data))
+        setCourses(data.courses ?? [])
+        if (data.avatarData) setAvatarData(data.avatarData)
+        sessionStorage.setItem(cacheKey, JSON.stringify(data))
       })
-      .catch(() => {})
-  }, [])
+      .catch(err => console.error('Error fetching navbar data:', err))
+  }, [session])
 
   // Close courses dropdown on outside click
   useEffect(() => {

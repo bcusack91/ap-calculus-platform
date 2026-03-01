@@ -7,6 +7,7 @@ import type { UserRole } from "@prisma/client"
 import bcrypt from "bcryptjs"
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
+  // @ts-expect-error Adapter types diverge between @auth/core versions; functionally compatible
   adapter: PrismaAdapter(prisma),
   session: { strategy: "jwt" },
   trustHost: true,
@@ -18,7 +19,6 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
     Google({
       clientId: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-      allowDangerousEmailAccountLinking: true,
     }),
     Credentials({
       name: "credentials",
@@ -66,6 +66,23 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       if (account?.provider === 'google') {
         // Ensure user has an email
         if (!user.email) return false
+
+        // Check if a credentials-only account exists with this email.
+        // If it does, only allow linking if that account's email is verified.
+        // This prevents an attacker from pre-registering with a victim's
+        // email and then having the victim's Google sign-in link to it.
+        const existingUser = await prisma.user.findUnique({
+          where: { email: user.email },
+          select: { password: true, emailVerified: true, accounts: { where: { provider: 'google' } } },
+        })
+
+        if (existingUser && existingUser.accounts.length === 0) {
+          // A credentials-only account exists — only allow if email is verified
+          if (!existingUser.emailVerified) {
+            return false
+          }
+        }
+
         return true
       }
       
@@ -76,7 +93,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         session.user.id = token.sub!
         session.user.role = token.role as UserRole
         session.user.stripeCustomerId = token.stripeCustomerId as string | undefined
-        session.user.emailVerified = token.emailVerified as Date | null | undefined
+        session.user.emailVerified = (token.emailVerified as Date | null | undefined) ?? null
       }
       return session
     },
@@ -88,7 +105,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         
         if (dbUser) {
           token.role = dbUser.role
-          token.stripeCustomerId = dbUser.stripeCustomerId
+          token.stripeCustomerId = dbUser.stripeCustomerId ?? undefined
           token.emailVerified = dbUser.emailVerified
         }
       }

@@ -123,9 +123,6 @@ export async function POST(req: NextRequest) {
       })
     )
 
-    // Log the trigger event
-    console.log(`✅ Auto-generated ${createdFlashcards.length} flashcards for topic "${topic.title}" (trigger: ${triggerType})`)
-
     return NextResponse.json({
       message: `Successfully created ${createdFlashcards.length} flashcards`,
       flashcards: createdFlashcards,

@@ -1,6 +1,12 @@
 import { notFound } from 'next/navigation'
 import { prisma } from '@/lib/prisma'
 import { AdBanner, InArticleAd } from '@/components/ad-banner'
+
+function TopicBottomAd() {
+  const slot = process.env.NEXT_PUBLIC_AD_SLOT_TOPIC_BOTTOM
+  if (!slot) return null
+  return <AdBanner slot={slot} />
+}
 import ReactMarkdown from 'react-markdown'
 import rehypeKatex from 'rehype-katex'
 import remarkMath from 'remark-math'
@@ -425,7 +431,7 @@ export default async function TopicPage(props: TopicPageProps) {
 
             {/* Bottom Ad */}
             <div className="mt-8">
-              <AdBanner slot="topic-bottom" />
+              <TopicBottomAd />
             </div>
           </div>
 

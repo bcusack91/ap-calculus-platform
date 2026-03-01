@@ -134,6 +134,7 @@ export default function AdminPanel() {
                   <div key={user.id} className="p-5 flex items-center justify-between gap-4 hover:bg-gray-50 dark:hover:bg-gray-700/30 transition-colors">
                     <div className="flex items-center gap-4 min-w-0">
                       {user.image ? (
+                        // eslint-disable-next-line @next/next/no-img-element
                         <img src={user.image} alt="" className="w-12 h-12 rounded-full flex-shrink-0" />
                       ) : (
                         <div className="w-12 h-12 rounded-full bg-blue-100 dark:bg-blue-900 flex items-center justify-center text-blue-600 font-bold text-lg flex-shrink-0">

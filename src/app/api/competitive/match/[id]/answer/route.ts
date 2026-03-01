@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from 'next/server';
 import { auth } from '@/lib/auth';
 import { prisma } from '@/lib/prisma';
 import { calculateMMRChange, getRankFromMMR } from '@/lib/competitive-utils';
+import { answerSubmissionSchema, parseBody } from '@/lib/validations';
+import type { Prisma } from '@prisma/client';
 
 interface MatchGameData {
   questions?: Array<{ answerIndex?: number; options?: string[]; [key: string]: unknown }>;
@@ -23,9 +25,13 @@ export async function POST(
 
     const { id: matchId } = await params;
     const body = await request.json();
-    const { questionIndex, answerIndex, isSecondAttempt = false, playerId } = body;
+    const parsed = parseBody(answerSubmissionSchema, body);
+    if (!parsed.success) {
+      return NextResponse.json({ error: parsed.error }, { status: 400 });
+    }
+    const { questionIndex, answerIndex, isSecondAttempt, playerId } = parsed.data;
 
-    console.log('Answer submission:', { matchId, questionIndex, answerIndex, isSecondAttempt, playerId });
+
 
     // Fetch match
     const match = await prisma.competitiveMatch.findUnique({
@@ -75,12 +81,7 @@ export async function POST(
     // Get the current question index for this player
     const playerQuestionIndex = isPlayer1 ? player1QuestionIndex : player2QuestionIndex;
 
-    console.log('Game data:', { 
-      player1QuestionIndex, 
-      player2QuestionIndex, 
-      submittedQuestionIndex: questionIndex, 
-      questions: questions.length 
-    });
+
 
     // Check if question index matches this player's current question
     if (questionIndex !== playerQuestionIndex) {
@@ -89,10 +90,7 @@ export async function POST(
 
     // Check answer
     const currentQuestion = questions[questionIndex];
-    console.log('Checking answer:', { answerIndex, correctIndex: currentQuestion.answerIndex });
     const isCorrect = answerIndex === currentQuestion.answerIndex;
-
-    console.log('Answer is correct:', isCorrect);
 
     // Award/deduct points - 1 point for correct, -1 for incorrect
     if (isCorrect) {
@@ -101,14 +99,12 @@ export async function POST(
       } else {
         player2Score += 1;
       }
-      console.log('Points awarded: 1');
     } else {
       if (isPlayer1) {
         player1Score = Math.max(0, player1Score - 1); // Don't go below 0
       } else {
         player2Score = Math.max(0, player2Score - 1); // Don't go below 0
       }
-      console.log('Points deducted: -1');
     }
 
     // Check if either player has reached 10 points (winner!)
@@ -165,7 +161,7 @@ export async function POST(
             player2QuestionIndex,
             ...(gameData?.aiDifficulty && { aiDifficulty: gameData.aiDifficulty }),
             ...(gameData?.isPracticeMatch && { isPracticeMatch: gameData.isPracticeMatch }),
-          },
+          } as unknown as Prisma.InputJsonValue,
           player1MMRAfter,
           player2MMRAfter,
         },
@@ -260,7 +256,7 @@ export async function POST(
             player2QuestionIndex,
             ...(gameData?.aiDifficulty && { aiDifficulty: gameData.aiDifficulty }),
             ...(gameData?.isPracticeMatch && { isPracticeMatch: gameData.isPracticeMatch }),
-          },
+          } as unknown as Prisma.InputJsonValue,
         },
       });
 

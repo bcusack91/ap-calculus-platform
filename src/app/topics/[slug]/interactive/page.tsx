@@ -181,7 +181,6 @@ export default async function InteractivePage(props: InteractivePageProps) {
         {/* This renders all lesson text as HTML that Googlebot can index.
             Visually hidden (sr-only) so users see the interactive stepper above. */}
         {hasHandCraftedLesson && (
-          /* @ts-expect-error Async Server Component */
           <InteractiveLessonSEO topicSlug={topic.slug} topicTitle={topic.title} />
         )}
 

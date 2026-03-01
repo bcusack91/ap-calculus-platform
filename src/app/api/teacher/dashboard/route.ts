@@ -8,10 +8,11 @@ import { requireTeacher } from '@/lib/teacher-auth'
  */
 
 export async function GET() {
-  const result = await requireTeacher()
-  if ('error' in result && result.error) return result.error
+  try {
+    const result = await requireTeacher()
+    if ('error' in result && result.error) return result.error
 
-  const teacherId = result.user!.id
+    const teacherId = result.user!.id
 
   // Get all classrooms with counts
   const classrooms = await prisma.classroom.findMany({
@@ -113,4 +114,8 @@ export async function GET() {
     })),
     upcomingCompetitions,
   })
+  } catch (error) {
+    console.error('[GET /api/teacher/dashboard]', error)
+    return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
+  }
 }

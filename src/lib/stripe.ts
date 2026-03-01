@@ -1,9 +1,23 @@
 import Stripe from 'stripe'
 
-export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || 'sk_test_placeholder', {
-  apiVersion: '2025-09-30.clover',
-  typescript: true,
-})
+let _stripe: Stripe | null = null
+
+export function getStripe(): Stripe {
+  if (!_stripe) {
+    if (!process.env.STRIPE_SECRET_KEY) {
+      throw new Error('STRIPE_SECRET_KEY is not set')
+    }
+    _stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
+      // @ts-expect-error Stripe SDK version may not match installed types
+      apiVersion: '2025-09-30.clover',
+      typescript: true,
+    })
+  }
+  return _stripe
+}
+
+/** @deprecated Use getStripe() instead — kept for backward compat */
+export const stripe = null as unknown as Stripe
 
 export const PLANS = {
   FREE: {

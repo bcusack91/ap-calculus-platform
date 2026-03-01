@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { headers } from 'next/headers'
-import { stripe } from '@/lib/stripe'
+import { getStripe } from '@/lib/stripe'
 import { prisma } from '@/lib/prisma'
 import Stripe from 'stripe'
 
@@ -12,13 +12,19 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'No signature' }, { status: 400 })
   }
 
+  const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET
+  if (!webhookSecret) {
+    console.error('STRIPE_WEBHOOK_SECRET is not configured')
+    return NextResponse.json({ error: 'Webhook not configured' }, { status: 500 })
+  }
+
   let event: Stripe.Event
 
   try {
-    event = stripe.webhooks.constructEvent(
+    event = getStripe().webhooks.constructEvent(
       body,
       signature,
-      process.env.STRIPE_WEBHOOK_SECRET!
+      webhookSecret
     )
   } catch (err) {
     console.error('Webhook signature verification failed:', err)
@@ -32,7 +38,7 @@ export async function POST(req: NextRequest) {
         const userId = session.metadata?.userId
 
         if (userId && session.subscription) {
-          const subscription = await stripe.subscriptions.retrieve(
+          const subscription = await getStripe().subscriptions.retrieve(
             session.subscription as string
           )
 
@@ -42,7 +48,7 @@ export async function POST(req: NextRequest) {
               role: 'PREMIUM',
               stripeSubscriptionId: subscription.id,
               stripePriceId: subscription.items.data[0].price.id,
-              stripeCurrentPeriodEnd: new Date(subscription.current_period_end * 1000),
+              stripeCurrentPeriodEnd: new Date((subscription as unknown as { current_period_end: number }).current_period_end * 1000),
             },
           })
         }
@@ -51,16 +57,16 @@ export async function POST(req: NextRequest) {
 
       case 'invoice.payment_succeeded': {
         const invoice = event.data.object as Stripe.Invoice
-        const subscriptionId = invoice.subscription as string
+        const subscriptionId = (invoice as unknown as { subscription: string }).subscription as string
 
         if (subscriptionId) {
-          const subscription = await stripe.subscriptions.retrieve(subscriptionId)
+          const subscription = await getStripe().subscriptions.retrieve(subscriptionId)
           
           await prisma.user.updateMany({
             where: { stripeSubscriptionId: subscriptionId },
             data: {
               stripePriceId: subscription.items.data[0].price.id,
-              stripeCurrentPeriodEnd: new Date(subscription.current_period_end * 1000),
+              stripeCurrentPeriodEnd: new Date((subscription as unknown as { current_period_end: number }).current_period_end * 1000),
             },
           })
         }

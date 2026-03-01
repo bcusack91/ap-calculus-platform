@@ -237,18 +237,24 @@ function QuizBlock({
 
   useEffect(() => {
     if (isAnswered) {
-      setSelected(quiz.correctIndex)
-      setSubmitted(true)
-      setIsCorrect(true)
+      const timeoutId = setTimeout(() => {
+        setSelected(quiz.correctIndex)
+        setSubmitted(true)
+        setIsCorrect(true)
+      }, 0)
+      return () => clearTimeout(timeoutId)
     }
   }, [isAnswered, quiz.correctIndex])
 
   // Reset state when navigating to a different section
   useEffect(() => {
     if (!isAnswered) {
-      setSelected(null)
-      setSubmitted(false)
-      setIsCorrect(false)
+      const timeoutId = setTimeout(() => {
+        setSelected(null)
+        setSubmitted(false)
+        setIsCorrect(false)
+      }, 0)
+      return () => clearTimeout(timeoutId)
     }
   }, [sectionId, isAnswered])
 
@@ -404,6 +410,7 @@ const markdownComponents = {
     </td>
   ),
   img: ({ src, alt }: any) => (
+    // eslint-disable-next-line @next/next/no-img-element
     <img
       src={src}
       alt={alt || ''}

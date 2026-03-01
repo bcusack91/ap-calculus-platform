@@ -4,6 +4,7 @@ import { NextResponse } from 'next/server'
 export const revalidate = 300 // 5 minutes
 
 export async function GET() {
+  try {
   // Get top players by overall MMR
   const profiles = await prisma.competitiveProfile.findMany({
     where: { totalMatches: { gte: 1 } },
@@ -43,4 +44,8 @@ export async function GET() {
   }))
 
   return NextResponse.json(leaderboard)
+  } catch (error) {
+    console.error('[GET /api/leaderboard]', error)
+    return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
+  }
 }

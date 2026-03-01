@@ -157,7 +157,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
         </nav>
 
         {/* Category Header */}
-        <div className={`rounded-3xl bg-gradient-to-br ${colors.bg} p-12 mb-12`}>
+        <div className={`rounded-3xl bg-gradient-to-br ${colors.bg} dark:from-gray-800 dark:to-gray-900 p-12 mb-12`}>
           <div className="flex items-start gap-6">
             {category.icon && (
               <div className={`flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br ${colors.gradient} text-white text-5xl font-bold shadow-lg`}>
@@ -168,16 +168,16 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
               <div className="flex items-center gap-3 mb-3">
                 <Link 
                   href={`/courses/${category.course.slug}`}
-                  className="text-sm font-medium text-gray-600 hover:text-purple-600 transition-colors"
+                  className="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-purple-600 transition-colors"
                 >
                   {category.course.icon} {category.course.name}
                 </Link>
               </div>
-              <h1 className="text-4xl font-bold text-gray-900 mb-4">{category.name}</h1>
+              <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">{category.name}</h1>
               {category.description && (
-                <p className="text-lg text-gray-700 mb-6">{category.description}</p>
+                <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">{category.description}</p>
               )}
-              <div className="flex gap-6 text-sm text-gray-600">
+              <div className="flex gap-6 text-sm text-gray-600 dark:text-gray-400">
                 <div>
                   <span className="font-semibold">{category.topics.length}</span> Topics
                 </div>
@@ -227,18 +227,18 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
         {/* Topics Grid */}
         {category.topics.length > 0 ? (
           <div className="space-y-6">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">All Topics in {category.name}</h2>
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">All Topics in {category.name}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {category.topics.map((topic) => (
                 <Link
                   key={topic.id}
                   href={`/topics/${topic.slug}`}
-                  className={`group block p-6 rounded-xl border-2 ${colors.border} hover:shadow-lg transition-all bg-white`}
+                  className={`group block p-6 rounded-xl border-2 ${colors.border} hover:shadow-lg transition-all bg-white dark:bg-gray-900`}
                 >
-                  <h3 className="font-bold text-lg text-gray-900 group-hover:text-purple-600 transition-colors mb-3">
+                  <h3 className="font-bold text-lg text-gray-900 dark:text-white group-hover:text-purple-600 transition-colors mb-3">
                     {topic.title}
                   </h3>
-                  <p className="text-sm text-gray-600 line-clamp-3 mb-4">
+                  <p className="text-sm text-gray-600 dark:text-gray-400 line-clamp-3 mb-4">
                     {topic.description}
                   </p>
                   <div className="flex gap-4 text-xs text-gray-500">
@@ -260,9 +260,9 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
             </div>
           </div>
         ) : (
-          <div className="text-center py-20 bg-gray-50 rounded-2xl">
-            <p className="text-xl text-gray-600 mb-2">No topics yet in this category</p>
-            <p className="text-sm text-gray-500">Check back soon for comprehensive study materials!</p>
+          <div className="text-center py-20 bg-gray-50 dark:bg-gray-800/50 rounded-2xl">
+            <p className="text-xl text-gray-600 dark:text-gray-300 mb-2">No topics yet in this category</p>
+            <p className="text-sm text-gray-500 dark:text-gray-400">Check back soon for comprehensive study materials!</p>
           </div>
         )}
 

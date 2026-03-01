@@ -1974,13 +1974,13 @@ const interactiveLessonRegistry: Record<string, InteractiveTopicConfig> = {
   'vectors-two-dimensions-precalc': {
     completionDestination: 'competitive',
     parts: [
-      { title: 'Vector Basics', loader: () => import('./precalc-vectors-two-dimensions-precalc-part1').then(m => m.precalcVectorsPart1Data) },
-      { title: 'Vector Operations', loader: () => import('./precalc-vectors-two-dimensions-precalc-part2').then(m => m.precalcVectorsPart2Data) },
-      { title: 'Dot Product', loader: () => import('./precalc-vectors-two-dimensions-precalc-part3').then(m => m.precalcVectorsPart3Data) },
-      { title: 'Unit Vectors', loader: () => import('./precalc-vectors-two-dimensions-precalc-part4').then(m => m.precalcVectorsPart4Data) },
-      { title: 'Applications of Vectors', loader: () => import('./precalc-vectors-two-dimensions-precalc-part5').then(m => m.precalcVectorsPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./precalc-vectors-two-dimensions-precalc-part6').then(m => m.precalcVectorsPart6Data) },
-      { title: 'Review & Applications', loader: () => import('./precalc-vectors-two-dimensions-precalc-part7').then(m => m.precalcVectorsPart7Data) },
+      { title: 'Vector Basics', loader: () => import('./precalc-vectors-two-dimensions-precalc-part1').then(m => m.precalcVectors2DPart1Data) },
+      { title: 'Vector Operations', loader: () => import('./precalc-vectors-two-dimensions-precalc-part2').then(m => m.precalcVectors2DPart2Data) },
+      { title: 'Dot Product', loader: () => import('./precalc-vectors-two-dimensions-precalc-part3').then(m => m.precalcVectors2DPart3Data) },
+      { title: 'Unit Vectors', loader: () => import('./precalc-vectors-two-dimensions-precalc-part4').then(m => m.precalcVectors2DPart4Data) },
+      { title: 'Applications of Vectors', loader: () => import('./precalc-vectors-two-dimensions-precalc-part5').then(m => m.precalcVectors2DPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./precalc-vectors-two-dimensions-precalc-part6').then(m => m.precalcVectors2DPart6Data) },
+      { title: 'Review & Applications', loader: () => import('./precalc-vectors-two-dimensions-precalc-part7').then(m => m.precalcVectors2DPart7Data) },
     ],
   },
   'matrices-precalc': {

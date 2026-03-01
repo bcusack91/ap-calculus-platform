@@ -2,6 +2,10 @@ import { prisma } from '@/lib/prisma'
 import { auth } from '@/lib/auth'
 import { NextResponse } from 'next/server'
 import crypto from 'crypto'
+import { checkRateLimit } from '@/lib/rate-limit'
+
+// Rate limit: 3 verification emails per user per hour
+const VERIFY_RATE_LIMIT = { maxRequests: 3, windowMs: 60 * 60 * 1000 }
 
 // POST: Send verification email
 export async function POST() {
@@ -9,6 +13,15 @@ export async function POST() {
     const session = await auth()
     if (!session?.user?.email) {
       return NextResponse.json({ error: 'Not authenticated' }, { status: 401 })
+    }
+
+    // Rate limit by user ID to prevent spam
+    const rateLimitResult = checkRateLimit(`verify-email:${session.user.id}`, VERIFY_RATE_LIMIT)
+    if (!rateLimitResult.success) {
+      return NextResponse.json(
+        { error: 'Too many verification requests. Please try again later.' },
+        { status: 429 }
+      )
     }
 
     const email = session.user.email
@@ -32,8 +45,7 @@ export async function POST() {
 
     const verifyUrl = `${process.env.NEXTAUTH_URL || 'https://www.studymondo.com'}/auth/verify-email?token=${token}`
 
-    // Log for development. TODO: Send via email provider.
-    console.log(`[Email Verification] URL for ${email}: ${verifyUrl}`)
+    // TODO: Send via email provider (e.g. Resend, SendGrid).
 
     return NextResponse.json({ message: 'Verification email sent' })
   } catch (error) {

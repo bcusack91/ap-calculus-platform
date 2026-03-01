@@ -9,20 +9,20 @@ datasource db {
 }
 
 model User {
-  id                     String              @id @default(cuid())
+  id                     String                        @id @default(cuid())
   name                   String?
-  email                  String?             @unique
+  email                  String?                       @unique
   emailVerified          DateTime?
   image                  String?
   password               String?
-  role                   UserRole            @default(FREE)
-  stripeCustomerId       String?             @unique
-  stripeSubscriptionId   String?             @unique
+  role                   UserRole                      @default(FREE)
+  stripeCustomerId       String?                       @unique
+  stripeSubscriptionId   String?                       @unique
   stripePriceId          String?
   stripeCurrentPeriodEnd DateTime?
-  avatarData             Json?               // Custom avatar configuration
-  createdAt              DateTime            @default(now())
-  updatedAt              DateTime            @updatedAt
+  avatarData             Json? // Custom avatar configuration
+  createdAt              DateTime                      @default(now())
+  updatedAt              DateTime                      @updatedAt
   schoolId               String?
   classCode              String?
   accounts               Account[]
@@ -32,20 +32,22 @@ model User {
   quizAttempts           QuizAttempt[]
   sessions               Session[]
   topicProgress          TopicProgress[]
-  school                 School?             @relation(fields: [schoolId], references: [id])
+  school                 School?                       @relation(fields: [schoolId], references: [id])
+  dailyStreak            DailyStreak?
   competitiveProfile     CompetitiveProfile?
-  matchesAsPlayer1       CompetitiveMatch[]  @relation("Player1Matches")
-  matchesAsPlayer2       CompetitiveMatch[]  @relation("Player2Matches")
+  matchesAsPlayer1       CompetitiveMatch[]            @relation("Player1Matches")
+  matchesAsPlayer2       CompetitiveMatch[]            @relation("Player2Matches")
   mmrHistory             MMRHistory[]
+  matchmakingEntry       MatchmakingQueue?
   factoringMetrics       FactoringPerformanceMetrics[]
   sixSigmaMetrics        SixSigmaMetrics[]
   learningInsights       LearningInsights[]
 
   // Teacher dashboard relations
-  ownedClassrooms        Classroom[]           @relation("ClassroomTeacher")
-  classroomMemberships   ClassroomMember[]
-  assignmentSubmissions  AssignmentSubmission[]
-  createdAssignments     Assignment[]          @relation("AssignmentCreator")
+  ownedClassrooms           Classroom[]              @relation("ClassroomTeacher")
+  classroomMemberships      ClassroomMember[]
+  assignmentSubmissions     AssignmentSubmission[]
+  createdAssignments        Assignment[]             @relation("AssignmentCreator")
   competitionParticipations CompetitionParticipant[]
 }
 
@@ -65,6 +67,7 @@ model Account {
   user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([provider, providerAccountId])
+  @@index([userId])
 }
 
 model Session {
@@ -73,6 +76,8 @@ model Session {
   userId       String
   expires      DateTime
   user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
 }
 
 model VerificationToken {
@@ -136,6 +141,8 @@ model Topic {
   topicProgress   TopicProgress[]
   Topic_A         Topic[]          @relation("TopicPrerequisites")
   Topic_B         Topic[]          @relation("TopicPrerequisites")
+
+  @@index([categoryId])
 }
 
 model Category {
@@ -150,6 +157,8 @@ model Category {
   courseId    String
   course      Course   @relation(fields: [courseId], references: [id])
   topics      Topic[]
+
+  @@index([courseId])
 }
 
 model ExampleProblem {
@@ -163,6 +172,8 @@ model ExampleProblem {
   createdAt  DateTime   @default(now())
   updatedAt  DateTime   @updatedAt
   topic      Topic      @relation(fields: [topicId], references: [id], onDelete: Cascade)
+
+  @@index([topicId])
 }
 
 model Flashcard {
@@ -171,29 +182,32 @@ model Flashcard {
   front      String
   back       String
   hint       String?
-  lessonPart Int?                // Which lesson part this flashcard relates to (1, 2, 3, etc.)
+  lessonPart Int? // Which lesson part this flashcard relates to (1, 2, 3, etc.)
   isPremium  Boolean             @default(false)
   createdAt  DateTime            @default(now())
   updatedAt  DateTime            @updatedAt
   topic      Topic               @relation(fields: [topicId], references: [id], onDelete: Cascade)
   progress   FlashcardProgress[]
+
+  @@index([topicId])
 }
 
 model FlashcardProgress {
-  id              String    @id @default(cuid())
-  userId          String
-  flashcardId     String
-  easeFactor      Float     @default(2.5)
-  interval        Int       @default(0)
-  isMinuteInterval Boolean  @default(false) // True if interval is in minutes, false if in days
-  repetitions     Int       @default(0)
-  nextReview      DateTime  @default(now())
-  lastReviewed    DateTime  @default(now())
-  reviewCount     Int       @default(0)
-  flashcard       Flashcard @relation(fields: [flashcardId], references: [id], onDelete: Cascade)
-  user            User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  id               String    @id @default(cuid())
+  userId           String
+  flashcardId      String
+  easeFactor       Float     @default(2.5)
+  interval         Int       @default(0)
+  isMinuteInterval Boolean   @default(false) // True if interval is in minutes, false if in days
+  repetitions      Int       @default(0)
+  nextReview       DateTime  @default(now())
+  lastReviewed     DateTime  @default(now())
+  reviewCount      Int       @default(0)
+  flashcard        Flashcard @relation(fields: [flashcardId], references: [id], onDelete: Cascade)
+  user             User      @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([userId, flashcardId])
+  @@index([userId, nextReview])
 }
 
 model Quiz {
@@ -209,6 +223,8 @@ model Quiz {
   topic        Topic          @relation(fields: [topicId], references: [id], onDelete: Cascade)
   attempts     QuizAttempt[]
   questions    QuizQuestion[]
+
+  @@index([topicId])
 }
 
 model QuizQuestion {
@@ -241,6 +257,9 @@ model QuizAttempt {
   answers     QuizAnswer[]
   quiz        Quiz         @relation(fields: [quizId], references: [id], onDelete: Cascade)
   user        User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([quizId])
 }
 
 model QuizAnswer {
@@ -268,6 +287,7 @@ model TopicProgress {
   user         User           @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([userId, topicId])
+  @@index([userId])
 }
 
 model LearningPath {
@@ -301,6 +321,7 @@ model DailyStreak {
   lastActiveDate DateTime @default(now())
   createdAt      DateTime @default(now())
   updatedAt      DateTime @updatedAt
+  user           User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
 
 model Achievement {
@@ -334,7 +355,7 @@ model UserAchievement {
   userId        String
   achievementId String
   unlockedAt    DateTime    @default(now())
-  achievement   Achievement @relation(fields: [achievementId], references: [id])
+  achievement   Achievement @relation(fields: [achievementId], references: [id], onDelete: Cascade)
 
   @@unique([userId, achievementId])
 }
@@ -390,66 +411,78 @@ enum ProgressStatus {
 // Competitive Mode Models
 
 model School {
-  id        String   @id @default(cuid())
-  name      String
-  district  String?
-  state     String?
-  country   String   @default("USA")
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  users     User[]
+  id         String      @id @default(cuid())
+  name       String
+  district   String?
+  state      String?
+  country    String      @default("USA")
+  createdAt  DateTime    @default(now())
+  updatedAt  DateTime    @updatedAt
+  users      User[]
   classrooms Classroom[]
 
   @@index([name])
 }
 
 model CompetitiveProfile {
-  id                      String   @id @default(cuid())
-  userId                  String   @unique
-  overallMMR              Int      @default(1000)
-  unitCircleMMR           Int      @default(1000)
-  derivativesMMR          Int      @default(1000)
-  integralsMMR            Int      @default(1000)
-  limitsMMR               Int      @default(1000)
-  totalMatches            Int      @default(0)
-  wins                    Int      @default(0)
-  losses                  Int      @default(0)
-  winStreak               Int      @default(0)
-  bestWinStreak           Int      @default(0)
-  averageAccuracy         Float    @default(0)
-  averageSpeed            Float    @default(0)
-  rank                    String   @default("Bronze")
+  id                      String    @id @default(cuid())
+  userId                  String    @unique
+  overallMMR              Int       @default(1000)
+  unitCircleMMR           Int       @default(1000)
+  derivativesMMR          Int       @default(1000)
+  integralsMMR            Int       @default(1000)
+  limitsMMR               Int       @default(1000)
+  totalMatches            Int       @default(0)
+  wins                    Int       @default(0)
+  losses                  Int       @default(0)
+  winStreak               Int       @default(0)
+  bestWinStreak           Int       @default(0)
+  averageAccuracy         Float     @default(0)
+  averageSpeed            Float     @default(0)
+  rank                    String    @default("Bronze")
   lastMatchAt             DateTime?
-  competitiveModeUnlocked Boolean  @default(false)
-  createdAt               DateTime @default(now())
-  updatedAt               DateTime @updatedAt
-  user                    User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  competitiveModeUnlocked Boolean   @default(false)
+  createdAt               DateTime  @default(now())
+  updatedAt               DateTime  @updatedAt
+  user                    User      @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@index([overallMMR])
   @@index([rank])
 }
 
+model MatchmakingQueue {
+  id        String   @id @default(cuid())
+  userId    String   @unique
+  topicSlug String
+  mmr       Int
+  gameMode  String   @default("SPEED_RACE")
+  joinedAt  DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([topicSlug, mmr])
+}
+
 model CompetitiveMatch {
-  id             String          @id @default(cuid())
-  player1Id      String
-  player2Id      String
-  gameMode       CompetitiveMode
-  topicSlug      String
-  player1Score   Int             @default(0)
-  player2Score   Int             @default(0)
-  player1Time    Int?
-  player2Time    Int?
-  winnerId       String?
+  id               String          @id @default(cuid())
+  player1Id        String
+  player2Id        String
+  gameMode         CompetitiveMode
+  topicSlug        String
+  player1Score     Int             @default(0)
+  player2Score     Int             @default(0)
+  player1Time      Int?
+  player2Time      Int?
+  winnerId         String?
   player1MMRBefore Int
   player2MMRBefore Int
   player1MMRAfter  Int
   player2MMRAfter  Int
-  status         MatchStatus     @default(PENDING)
-  startedAt      DateTime        @default(now())
-  completedAt    DateTime?
-  gameData       Json?           // Stores questions, answers, current question index
-  player1        User            @relation("Player1Matches", fields: [player1Id], references: [id], onDelete: Cascade)
-  player2        User            @relation("Player2Matches", fields: [player2Id], references: [id], onDelete: Cascade)
+  status           MatchStatus     @default(PENDING)
+  startedAt        DateTime        @default(now())
+  completedAt      DateTime?
+  gameData         Json? // Stores questions, answers, current question index
+  player1          User            @relation("Player1Matches", fields: [player1Id], references: [id], onDelete: Cascade)
+  player2          User            @relation("Player2Matches", fields: [player2Id], references: [id], onDelete: Cascade)
 
   @@index([status])
   @@index([startedAt])
@@ -458,31 +491,31 @@ model CompetitiveMatch {
 }
 
 model MMRHistory {
-  id           String          @id @default(cuid())
-  userId       String
-  matchId      String?
-  topicSlug    String
-  mmrBefore    Int
-  mmrAfter     Int
-  mmrChange    Int
-  gameMode     CompetitiveMode
-  performance  String?
-  timestamp    DateTime        @default(now())
-  user         User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  id          String          @id @default(cuid())
+  userId      String
+  matchId     String?
+  topicSlug   String
+  mmrBefore   Int
+  mmrAfter    Int
+  mmrChange   Int
+  gameMode    CompetitiveMode
+  performance String?
+  timestamp   DateTime        @default(now())
+  user        User            @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@index([userId])
   @@index([timestamp])
 }
 
 model Leaderboard {
-  id         String          @id @default(cuid())
-  scope      LeaderboardScope
-  scopeId    String?
-  period     LeaderboardPeriod
-  topicSlug  String?
-  rankings   String
-  updatedAt  DateTime        @updatedAt
-  createdAt  DateTime        @default(now())
+  id        String            @id @default(cuid())
+  scope     LeaderboardScope
+  scopeId   String?
+  period    LeaderboardPeriod
+  topicSlug String?
+  rankings  String
+  updatedAt DateTime          @updatedAt
+  createdAt DateTime          @default(now())
 
   @@unique([scope, scopeId, period, topicSlug])
   @@index([scope, period])
@@ -519,90 +552,90 @@ enum LeaderboardPeriod {
 // Six Sigma Statistical Process Control Models
 
 model FactoringPerformanceMetrics {
-  id                    String   @id @default(cuid())
-  userId                String
-  timestamp             DateTime @default(now())
-  
+  id        String   @id @default(cuid())
+  userId    String
+  timestamp DateTime @default(now())
+
   // Session Information
-  sessionId             String   // Groups attempts in same study session
-  problemType           String   // 'gcf', 'difference-of-squares', 'simple-trinomials', etc.
-  lessonPart            Int      // Which part of the 6-part lesson (1-6)
-  
+  sessionId   String // Groups attempts in same study session
+  problemType String // 'gcf', 'difference-of-squares', 'simple-trinomials', etc.
+  lessonPart  Int // Which part of the 6-part lesson (1-6)
+
   // Performance Data
-  isCorrect             Boolean
-  attemptNumber         Int      // 1st, 2nd, 3rd attempt on this problem
-  timeToAnswer          Int      // milliseconds
-  hintsUsed             Int      @default(0)
-  
+  isCorrect     Boolean
+  attemptNumber Int // 1st, 2nd, 3rd attempt on this problem
+  timeToAnswer  Int // milliseconds
+  hintsUsed     Int     @default(0)
+
   // Problem Difficulty
-  problemDifficulty     String   // 'EASY', 'MEDIUM', 'HARD'
-  problemComplexity     Float    // 1-5 scale based on coefficients, terms, etc.
-  
+  problemDifficulty String // 'EASY', 'MEDIUM', 'HARD'
+  problemComplexity Float // 1-5 scale based on coefficients, terms, etc.
+
   // Error Classification (for Root Cause Analysis)
-  errorType             String?  // 'sign-error', 'multiplication-error', 'factoring-incomplete', etc.
-  errorCategory         String?  // 'conceptual', 'computational', 'careless'
-  
+  errorType     String? // 'sign-error', 'multiplication-error', 'factoring-incomplete', etc.
+  errorCategory String? // 'conceptual', 'computational', 'careless'
+
   // User reference
-  user                  User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  
-  createdAt             DateTime @default(now())
-  
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+
   @@index([userId, problemType])
   @@index([userId, sessionId])
   @@index([userId, timestamp])
 }
 
 model SixSigmaMetrics {
-  id                    String   @id @default(cuid())
-  userId                String
-  topicSlug             String   // 'factoring-algebra1'
-  calculatedAt          DateTime @default(now())
-  
+  id           String   @id @default(cuid())
+  userId       String
+  topicSlug    String // 'factoring-algebra1'
+  calculatedAt DateTime @default(now())
+
   // === CONTROL CHART METRICS ===
   // Average performance over rolling window
-  accuracyMean          Float    // Mean accuracy (0-1)
-  accuracyStdDev        Float    // Standard deviation
-  upperControlLimit     Float    // UCL = mean + 3*stddev
-  lowerControlLimit     Float    // LCL = mean - 3*stddev
-  
+  accuracyMean      Float // Mean accuracy (0-1)
+  accuracyStdDev    Float // Standard deviation
+  upperControlLimit Float // UCL = mean + 3*stddev
+  lowerControlLimit Float // LCL = mean - 3*stddev
+
   // Speed metrics
-  avgTimePerProblem     Float    // Average time in seconds
-  timeStdDev            Float    // Time standard deviation
-  
+  avgTimePerProblem Float // Average time in seconds
+  timeStdDev        Float // Time standard deviation
+
   // === DEFECT METRICS (DPMO) ===
   // Defects Per Million Opportunities
-  totalAttempts         Int
-  totalErrors           Int
-  dpmo                  Float    // (errors/attempts) * 1,000,000
-  sigmaLevel            Float    // Calculated sigma level (1-6)
-  
+  totalAttempts Int
+  totalErrors   Int
+  dpmo          Float // (errors/attempts) * 1,000,000
+  sigmaLevel    Float // Calculated sigma level (1-6)
+
   // === PROCESS CAPABILITY ===
   // How consistently student performs within "specification limits" (target mastery)
-  cpk                   Float    // Process capability index
-  cp                    Float    // Process capability
-  
+  cpk Float // Process capability index
+  cp  Float // Process capability
+
   // Target specification limits (what we want students to achieve)
-  targetAccuracy        Float    @default(0.90) // 90% target
-  toleranceLower        Float    @default(0.70) // Acceptable lower bound
-  toleranceUpper        Float    @default(1.00) // Perfect upper bound
-  
+  targetAccuracy Float @default(0.90) // 90% target
+  toleranceLower Float @default(0.70) // Acceptable lower bound
+  toleranceUpper Float @default(1.00) // Perfect upper bound
+
   // === BY PROBLEM TYPE ===
   // JSON field storing metrics broken down by each factoring type
-  performanceByType     Json     // { "gcf": { accuracy: 0.95, dpmo: 50000 }, ... }
-  
+  performanceByType Json // { "gcf": { accuracy: 0.95, dpmo: 50000 }, ... }
+
   // === IMPROVEMENT TRACKING ===
-  trendDirection        String   // 'improving', 'stable', 'declining'
-  consecutiveCorrect    Int      // Current streak
-  longestStreak         Int      // Best streak
-  
+  trendDirection     String // 'improving', 'stable', 'declining'
+  consecutiveCorrect Int // Current streak
+  longestStreak      Int // Best streak
+
   // === STATISTICAL OUTLIERS ===
-  hasOutliers           Boolean  @default(false)
-  outlierCount          Int      @default(0)
-  lastOutlierAt         DateTime?
-  
+  hasOutliers   Boolean   @default(false)
+  outlierCount  Int       @default(0)
+  lastOutlierAt DateTime?
+
   // User reference
-  user                  User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
   @@unique([userId, topicSlug])
   @@index([userId, calculatedAt])
 }
@@ -612,22 +645,22 @@ model SixSigmaMetrics {
 // ==========================================================================
 
 model Classroom {
-  id          String    @id @default(cuid())
+  id          String   @id @default(cuid())
   name        String
   description String?
-  joinCode    String    @unique  // 6-char code students use to join
+  joinCode    String   @unique // 6-char code students use to join
   teacherId   String
   schoolId    String?
-  subject     String?             // e.g., "AP Calculus", "Algebra 1"
-  grade       String?             // e.g., "9th", "10th"
-  isActive    Boolean   @default(true)
-  createdAt   DateTime  @default(now())
-  updatedAt   DateTime  @updatedAt
+  subject     String? // e.g., "AP Calculus", "Algebra 1"
+  grade       String? // e.g., "9th", "10th"
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
 
-  teacher     User          @relation("ClassroomTeacher", fields: [teacherId], references: [id], onDelete: Cascade)
-  school      School?       @relation(fields: [schoolId], references: [id])
-  members     ClassroomMember[]
-  assignments Assignment[]
+  teacher      User                   @relation("ClassroomTeacher", fields: [teacherId], references: [id], onDelete: Cascade)
+  school       School?                @relation(fields: [schoolId], references: [id])
+  members      ClassroomMember[]
+  assignments  Assignment[]
   competitions ScheduledCompetition[]
 
   @@index([teacherId])
@@ -635,40 +668,40 @@ model Classroom {
 }
 
 model ClassroomMember {
-  id          String    @id @default(cuid())
+  id          String   @id @default(cuid())
   classroomId String
   userId      String
-  joinedAt    DateTime  @default(now())
-  isActive    Boolean   @default(true)
-  nickname    String?   // optional display name within class
+  joinedAt    DateTime @default(now())
+  isActive    Boolean  @default(true)
+  nickname    String? // optional display name within class
 
-  classroom   Classroom @relation(fields: [classroomId], references: [id], onDelete: Cascade)
-  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  classroom Classroom @relation(fields: [classroomId], references: [id], onDelete: Cascade)
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([classroomId, userId])
   @@index([userId])
 }
 
 model Assignment {
-  id            String          @id @default(cuid())
+  id            String         @id @default(cuid())
   classroomId   String
   createdById   String
   title         String
   description   String?
   type          AssignmentType
-  topicSlug     String?         // specific topic to complete
-  topicSlugs    Json?           // array of topic slugs for multi-topic assignments
-  quizId        String?         // if type is QUIZ
+  topicSlug     String? // specific topic to complete
+  topicSlugs    Json? // array of topic slugs for multi-topic assignments
+  quizId        String? // if type is QUIZ
   dueDate       DateTime?
-  maxAttempts   Int             @default(1)
-  requiredScore Float?          // minimum mastery/score required (0-1)
-  isActive      Boolean         @default(true)
-  createdAt     DateTime        @default(now())
-  updatedAt     DateTime        @updatedAt
+  maxAttempts   Int            @default(1)
+  requiredScore Float? // minimum mastery/score required (0-1)
+  isActive      Boolean        @default(true)
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime       @updatedAt
 
-  classroom     Classroom              @relation(fields: [classroomId], references: [id], onDelete: Cascade)
-  createdBy     User                   @relation("AssignmentCreator", fields: [createdById], references: [id], onDelete: Cascade)
-  submissions   AssignmentSubmission[]
+  classroom   Classroom              @relation(fields: [classroomId], references: [id], onDelete: Cascade)
+  createdBy   User                   @relation("AssignmentCreator", fields: [createdById], references: [id], onDelete: Cascade)
+  submissions AssignmentSubmission[]
 
   @@index([classroomId])
   @@index([createdById])
@@ -676,21 +709,21 @@ model Assignment {
 }
 
 model AssignmentSubmission {
-  id            String           @id @default(cuid())
-  assignmentId  String
-  studentId     String
-  status        AssignmentStatus @default(NOT_STARTED)
-  score         Float?           // 0-1 mastery/score achieved
-  attempts      Int              @default(0)
-  timeSpent     Int              @default(0) // seconds
-  startedAt     DateTime?
-  completedAt   DateTime?
-  feedback      String?          // teacher feedback
-  createdAt     DateTime         @default(now())
-  updatedAt     DateTime         @updatedAt
+  id           String           @id @default(cuid())
+  assignmentId String
+  studentId    String
+  status       AssignmentStatus @default(NOT_STARTED)
+  score        Float? // 0-1 mastery/score achieved
+  attempts     Int              @default(0)
+  timeSpent    Int              @default(0) // seconds
+  startedAt    DateTime?
+  completedAt  DateTime?
+  feedback     String? // teacher feedback
+  createdAt    DateTime         @default(now())
+  updatedAt    DateTime         @updatedAt
 
-  assignment    Assignment @relation(fields: [assignmentId], references: [id], onDelete: Cascade)
-  student       User       @relation(fields: [studentId], references: [id], onDelete: Cascade)
+  assignment Assignment @relation(fields: [assignmentId], references: [id], onDelete: Cascade)
+  student    User       @relation(fields: [studentId], references: [id], onDelete: Cascade)
 
   @@unique([assignmentId, studentId])
   @@index([studentId])
@@ -698,20 +731,20 @@ model AssignmentSubmission {
 }
 
 model ScheduledCompetition {
-  id            String            @id @default(cuid())
-  classroomId   String
-  title         String
-  topicSlug     String            // competitive topic
-  gameMode      CompetitiveMode   @default(SPEED_RACE)
-  status        CompetitionStatus @default(SCHEDULED)
-  scheduledAt   DateTime          // when competition opens
-  endsAt        DateTime          // when competition closes
-  duration      Int               @default(600) // match duration in seconds
-  createdAt     DateTime          @default(now())
-  updatedAt     DateTime          @updatedAt
+  id          String            @id @default(cuid())
+  classroomId String
+  title       String
+  topicSlug   String // competitive topic
+  gameMode    CompetitiveMode   @default(SPEED_RACE)
+  status      CompetitionStatus @default(SCHEDULED)
+  scheduledAt DateTime // when competition opens
+  endsAt      DateTime // when competition closes
+  duration    Int               @default(600) // match duration in seconds
+  createdAt   DateTime          @default(now())
+  updatedAt   DateTime          @updatedAt
 
-  classroom     Classroom                @relation(fields: [classroomId], references: [id], onDelete: Cascade)
-  participants  CompetitionParticipant[]
+  classroom    Classroom                @relation(fields: [classroomId], references: [id], onDelete: Cascade)
+  participants CompetitionParticipant[]
 
   @@index([classroomId])
   @@index([scheduledAt])
@@ -719,55 +752,55 @@ model ScheduledCompetition {
 }
 
 model CompetitionParticipant {
-  id              String    @id @default(cuid())
-  competitionId   String
-  userId          String
-  score           Float?    // final score
-  accuracy        Float?    // accuracy percentage
-  timeSpent       Int?      // seconds
-  rank            Int?      // final placement
-  matchId         String?   // reference to competitive match if created
-  joinedAt        DateTime  @default(now())
-  completedAt     DateTime?
+  id            String    @id @default(cuid())
+  competitionId String
+  userId        String
+  score         Float? // final score
+  accuracy      Float? // accuracy percentage
+  timeSpent     Int? // seconds
+  rank          Int? // final placement
+  matchId       String? // reference to competitive match if created
+  joinedAt      DateTime  @default(now())
+  completedAt   DateTime?
 
-  competition     ScheduledCompetition @relation(fields: [competitionId], references: [id], onDelete: Cascade)
-  user            User                 @relation(fields: [userId], references: [id], onDelete: Cascade)
+  competition ScheduledCompetition @relation(fields: [competitionId], references: [id], onDelete: Cascade)
+  user        User                 @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([competitionId, userId])
   @@index([userId])
 }
 
 model LearningInsights {
-  id                    String   @id @default(cuid())
-  userId                String
-  topicSlug             String
-  generatedAt           DateTime @default(now())
-  
+  id          String   @id @default(cuid())
+  userId      String
+  topicSlug   String
+  generatedAt DateTime @default(now())
+
   // === ROOT CAUSE ANALYSIS ===
   // What specific skills need work?
-  weakestSkills         Json     // ["sign-convention", "perfect-square-recognition"]
-  strongestSkills       Json     // ["gcf-identification", "difference-of-squares"]
-  
+  weakestSkills   Json // ["sign-convention", "perfect-square-recognition"]
+  strongestSkills Json // ["gcf-identification", "difference-of-squares"]
+
   // Error pattern analysis
-  commonErrors          Json     // [{ type: "sign-error", frequency: 12, impact: "high" }]
-  improvementPriority   String   // 'critical', 'high', 'medium', 'low'
-  
+  commonErrors        Json // [{ type: "sign-error", frequency: 12, impact: "high" }]
+  improvementPriority String // 'critical', 'high', 'medium', 'low'
+
   // === PERSONALIZED RECOMMENDATIONS ===
-  recommendedPractice   Json     // [{ type: "simple-trinomials", reason: "Below target" }]
-  estimatedTimeToMastery Int     // Minutes of focused practice needed
-  confidenceLevel       Float    // 0-1 how confident the system is in mastery
-  
+  recommendedPractice    Json // [{ type: "simple-trinomials", reason: "Below target" }]
+  estimatedTimeToMastery Int // Minutes of focused practice needed
+  confidenceLevel        Float // 0-1 how confident the system is in mastery
+
   // === COMPARATIVE ANALYTICS ===
-  percentileRank        Float    // How student compares to peers (0-100)
-  comparedToAverage     Float    // How far above/below average (-1 to +1)
-  
+  percentileRank    Float // How student compares to peers (0-100)
+  comparedToAverage Float // How far above/below average (-1 to +1)
+
   // === PARETO ANALYSIS ===
   // 80/20 rule - which 20% of error types cause 80% of problems?
-  criticalErrorTypes    Json     // Top error types to address first
-  
+  criticalErrorTypes Json // Top error types to address first
+
   // User reference
-  user                  User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
   @@unique([userId, topicSlug])
   @@index([userId, generatedAt])
 }

@@ -20,13 +20,30 @@ export default function RemediationStation({
     score?: number
     timeSpent?: number
   }>>([])
-  const [startTime, setStartTime] = useState(Date.now())
+  const [startTime, setStartTime] = useState(0)
+  const [elapsedMinutes, setElapsedMinutes] = useState(0)
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      setStartTime(Date.now())
+    }, 0)
+    return () => clearTimeout(timeoutId)
+  }, [])
+
+  useEffect(() => {
+    if (startTime <= 0) return
+    const interval = setInterval(() => {
+      setElapsedMinutes(Math.floor((Date.now() - startTime) / 60000))
+    }, 1000)
+    return () => clearInterval(interval)
+  }, [startTime])
   
   const currentStep = remediationPath.steps[currentStepIndex]
   const progress = ((currentStepIndex + 1) / remediationPath.steps.length) * 100
 
   const handleStepComplete = (score?: number) => {
-    const timeSpent = (Date.now() - startTime) / 60000 // Convert to minutes
+    const now = Date.now()
+    const timeSpent = startTime > 0 ? (now - startTime) / 60000 : 0 // Convert to minutes
     
     setCompletedSteps([
       ...completedSteps,
@@ -39,7 +56,8 @@ export default function RemediationStation({
     
     if (currentStepIndex < remediationPath.steps.length - 1) {
       setCurrentStepIndex(currentStepIndex + 1)
-      setStartTime(Date.now())
+      setStartTime(now)
+      setElapsedMinutes(0)
     } else {
       // All steps completed
       onComplete()
@@ -99,7 +117,7 @@ export default function RemediationStation({
           <div className="space-y-2">
             <div className="flex justify-between text-sm opacity-90">
               <span>Step {currentStepIndex + 1} of {remediationPath.steps.length}</span>
-              <span>Est. Time Remaining: {remediationPath.estimatedTime - Math.floor((Date.now() - startTime) / 60000)} min</span>
+              <span>Est. Time Remaining: {remediationPath.estimatedTime - elapsedMinutes} min</span>
             </div>
             <div className="bg-white/20 rounded-full h-3 overflow-hidden">
               <div

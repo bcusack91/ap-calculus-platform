@@ -19,9 +19,12 @@ export default function BookmarkButton({ lessonId, lessonTitle, variant = 'full'
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-    setMounted(true)
-    const bookmarks: BookmarkEntry[] = JSON.parse(localStorage.getItem('studymondo-bookmarks') || '[]')
-    setSaved(bookmarks.some(b => b.id === lessonId))
+    const timeoutId = setTimeout(() => {
+      setMounted(true)
+      const bookmarks: BookmarkEntry[] = JSON.parse(localStorage.getItem('studymondo-bookmarks') || '[]')
+      setSaved(bookmarks.some(b => b.id === lessonId))
+    }, 0)
+    return () => clearTimeout(timeoutId)
   }, [lessonId])
 
   const toggle = () => {

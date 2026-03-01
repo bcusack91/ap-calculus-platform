@@ -25,7 +25,7 @@ async function main() {
   let totalTopics = 0;
   let topicsWithProblems = 0;
   let topicsWithFlashcards = 0;
-  let topicsEmpty = [];
+  const topicsEmpty = [];
 
   for (const category of course.categories) {
     console.log(`\n📁 ${category.name} (${category.topics.length} topics):`);

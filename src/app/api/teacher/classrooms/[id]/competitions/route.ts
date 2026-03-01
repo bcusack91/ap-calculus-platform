@@ -11,34 +11,40 @@ export async function GET(
   req: NextRequest,
   { params }: { params: Promise<{ id: string }> }
 ) {
-  const { id } = await params
-  const result = await requireClassroomOwner(id)
-  if ('error' in result && result.error) return result.error
+  try {
+    const { id } = await params
+    const result = await requireClassroomOwner(id)
+    if ('error' in result && result.error) return result.error
 
-  const competitions = await prisma.scheduledCompetition.findMany({
-    where: { classroomId: id },
-    include: {
-      participants: {
-        include: {
-          user: { select: { id: true, name: true, email: true, image: true } },
+    const competitions = await prisma.scheduledCompetition.findMany({
+      where: { classroomId: id },
+      include: {
+        participants: {
+          include: {
+            user: { select: { id: true, name: true, email: true, image: true } },
+          },
+          orderBy: { rank: 'asc' },
         },
-        orderBy: { rank: 'asc' },
+        _count: { select: { participants: true } },
       },
-      _count: { select: { participants: true } },
-    },
-    orderBy: { scheduledAt: 'desc' },
-  })
+      orderBy: { scheduledAt: 'desc' },
+    })
 
-  return NextResponse.json({ competitions })
+    return NextResponse.json({ competitions })
+  } catch (error) {
+    console.error('[GET /api/teacher/classrooms/[id]/competitions]', error)
+    return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
+  }
 }
 
 export async function POST(
   req: NextRequest,
   { params }: { params: Promise<{ id: string }> }
 ) {
-  const { id } = await params
-  const result = await requireClassroomOwner(id)
-  if ('error' in result && result.error) return result.error
+  try {
+    const { id } = await params
+    const result = await requireClassroomOwner(id)
+    if ('error' in result && result.error) return result.error
 
   const { title, topicSlug, gameMode, scheduledAt, endsAt, duration } = await req.json()
 
@@ -69,4 +75,8 @@ export async function POST(
   })
 
   return NextResponse.json({ competition }, { status: 201 })
+  } catch (error) {
+    console.error('[POST /api/teacher/classrooms/[id]/competitions]', error)
+    return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
+  }
 }

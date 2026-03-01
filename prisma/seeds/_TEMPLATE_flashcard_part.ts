@@ -53,7 +53,7 @@ export async function seedFlashcards() {
   })
 
   if (!topic) {
-    throw new Error(\`Topic "\${TOPIC_SLUG}" not found. Make sure the topic has been created first.\`)
+    throw new Error(`Topic "${TOPIC_SLUG}" not found. Make sure the topic has been created first.`)
   }
 
   // ============================================
@@ -66,7 +66,7 @@ export async function seedFlashcards() {
         topicId: topic.id,
         lessonPart: LESSON_PART,
         front: 'Question 1: What is the main concept?',
-        back: 'Answer: Explanation with key details. Include formulas if needed: E = mc². Keep it concise but complete.',
+        back: 'Answer: Explanation with key details. Include formulas if needed: E = mc^2. Keep it concise but complete.',
       },
       {
         topicId: topic.id,
@@ -84,7 +84,7 @@ export async function seedFlashcards() {
     ],
   })
 
-  console.log(\`✓ Created flashcards for Part \${LESSON_PART}: \${PART_NAME}\`)
+  console.log(`✓ Created flashcards for Part ${LESSON_PART}: ${PART_NAME}`)
 }
 
 // ============================================
@@ -94,7 +94,7 @@ export async function seedFlashcards() {
 if (require.main === module) {
   seedFlashcards()
     .then(() => {
-      console.log(\`\\n✅ Successfully seeded \${PART_NAME} flashcards!\`)
+      console.log(`\n✅ Successfully seeded ${PART_NAME} flashcards!`)
     })
     .catch((e) => {
       console.error('Error seeding:', e)

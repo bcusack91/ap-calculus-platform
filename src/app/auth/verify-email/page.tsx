@@ -12,14 +12,18 @@ function VerifyEmailContent() {
 
   useEffect(() => {
     if (!token) {
-      setStatus('error')
-      setMessage('No verification token provided.')
-      return
+      const timeoutId = setTimeout(() => {
+        setStatus('error')
+        setMessage('No verification token provided.')
+      }, 0)
+      return () => clearTimeout(timeoutId)
     }
 
+    let isCancelled = false
     fetch(`/api/auth/verify-email?token=${token}`)
       .then((res) => res.json())
       .then((data) => {
+        if (isCancelled) return
         if (data.error) {
           setStatus('error')
           setMessage(data.error)
@@ -29,9 +33,14 @@ function VerifyEmailContent() {
         }
       })
       .catch(() => {
+        if (isCancelled) return
         setStatus('error')
         setMessage('Something went wrong. Please try again.')
       })
+
+    return () => {
+      isCancelled = true
+    }
   }, [token])
 
   return (

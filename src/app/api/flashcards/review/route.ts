@@ -3,6 +3,7 @@ import { Prisma } from '@prisma/client'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { calculateNextReview, buttonToQuality } from '@/lib/spaced-repetition'
+import { flashcardReviewSchema, parseBody } from '@/lib/validations'
 
 /**
  * POST /api/flashcards/review
@@ -20,14 +21,14 @@ export async function POST(req: NextRequest) {
     }
 
     const body = await req.json()
-    const { flashcardId, rating } = body // rating: 'again' | 'hard' | 'good' | 'easy'
-
-    if (!flashcardId || !rating) {
+    const parsed = parseBody(flashcardReviewSchema, body)
+    if (!parsed.success) {
       return NextResponse.json(
-        { error: 'Flashcard ID and rating are required' },
+        { error: parsed.error },
         { status: 400 }
       )
     }
+    const { flashcardId, rating } = parsed.data
 
     // Get current progress
     const progress = await prisma.flashcardProgress.findUnique({

@@ -24,7 +24,7 @@ interface AdBannerProps {
 
 export function AdBanner({ slot, format = 'auto', responsive = true }: AdBannerProps) {
   const { data: session } = useSession()
-  const [consentGiven, setConsentGiven] = useState(false)
+  const [consentGiven, setConsentGiven] = useState(() => hasAdConsent())
   
   // Don't show ads to premium users
   const isPremium = session?.user?.role === 'PREMIUM'
@@ -34,30 +34,29 @@ export function AdBanner({ slot, format = 'auto', responsive = true }: AdBannerP
 
   // Check consent on mount and listen for changes
   useEffect(() => {
-    setConsentGiven(hasAdConsent())
-    
     // Re-check consent when storage changes (e.g. user accepts cookies)
     const handleStorage = () => setConsentGiven(hasAdConsent())
     window.addEventListener('storage', handleStorage)
     
     // Also poll briefly since cookie consent updates localStorage in the same tab
     const interval = setInterval(() => {
-      if (hasAdConsent() !== consentGiven) {
-        setConsentGiven(hasAdConsent())
-      }
+      setConsentGiven((previous) => {
+        const next = hasAdConsent()
+        return previous === next ? previous : next
+      })
     }, 2000)
     
     return () => {
       window.removeEventListener('storage', handleStorage)
       clearInterval(interval)
     }
-  }, [consentGiven])
+  }, [])
 
   useEffect(() => {
     if (isPremium || isDevelopment || !consentGiven) return
 
     try {
-      // @ts-ignore
+      // @ts-expect-error Google AdSense global is injected by the script tag
       (window.adsbygoogle = window.adsbygoogle || []).push({})
     } catch (err) {
       console.error('AdSense error:', err)
@@ -119,9 +118,13 @@ export function AdBanner({ slot, format = 'auto', responsive = true }: AdBannerP
 }
 
 export function InArticleAd() {
-  return <AdBanner slot="in-article" format="auto" />
+  const slot = process.env.NEXT_PUBLIC_AD_SLOT_IN_ARTICLE
+  if (!slot) return null
+  return <AdBanner slot={slot} format="auto" />
 }
 
 export function SidebarAd() {
-  return <AdBanner slot="sidebar" format="vertical" responsive={false} />
+  const slot = process.env.NEXT_PUBLIC_AD_SLOT_SIDEBAR
+  if (!slot) return null
+  return <AdBanner slot={slot} format="vertical" responsive={false} />
 }

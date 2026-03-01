@@ -7,10 +7,11 @@ import { prisma } from '@/lib/prisma'
  * Body: { joinCode: "ABC123" }
  */
 export async function POST(req: NextRequest) {
-  const session = await auth()
-  if (!session?.user?.email) {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
-  }
+  try {
+    const session = await auth()
+    if (!session?.user?.email) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    }
 
   const { joinCode } = await req.json()
 
@@ -66,4 +67,8 @@ export async function POST(req: NextRequest) {
     success: true,
     classroom: { name: classroom.name, teacher: classroom.teacher?.name },
   })
+  } catch (error) {
+    console.error('[POST /api/teacher/classrooms/join]', error)
+    return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
+  }
 }

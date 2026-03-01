@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { generateMatchQuestions } from '@/lib/competitive-utils'
+import type { Prisma } from '@prisma/client'
 
 /**
  * Create a practice match against an AI opponent
@@ -80,9 +81,7 @@ export async function POST(req: NextRequest) {
     // Generate questions for the match based on selected topic
     // Pass completedTopics so question banks can filter to only completed sections
     const completedTopicSlugs = user.topicProgress.map(tp => tp.topic.slug)
-    console.log('Generating questions for topic:', topicSlug, '| Completed topics:', completedTopicSlugs.length)
     const questions = generateMatchQuestions(10, topicSlug, completedTopicSlugs)
-    console.log('Generated questions:', questions.length, 'First question type:', questions[0]?.type)
     
     // Create practice match in database
     const competitiveMatch = await prisma.competitiveMatch.create({
@@ -105,7 +104,7 @@ export async function POST(req: NextRequest) {
           player2QuestionIndex: 0,
           aiDifficulty, // Store AI difficulty for answer simulation
           isPracticeMatch: true, // Flag to indicate this is practice
-        },
+        } as unknown as Prisma.InputJsonValue,
       }
     })
 

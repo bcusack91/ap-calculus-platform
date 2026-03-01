@@ -28,25 +28,31 @@ export default function CorrectAnswerCelebration({ show, onDone }: CorrectAnswer
 
   useEffect(() => {
     if (show) {
-      setMessage(MESSAGES[Math.floor(Math.random() * MESSAGES.length)])
-      setEmoji(EMOJIS[Math.floor(Math.random() * EMOJIS.length)])
-      
-      // Generate confetti particles
-      const newParticles = Array.from({ length: 12 }, (_, i) => ({
-        id: i,
-        x: Math.random() * 100,
-        y: Math.random() * 100,
-        emoji: ['🎊', '✨', '⭐', '🌟', '💫', '🎉'][Math.floor(Math.random() * 6)],
-        delay: Math.random() * 0.5,
-      }))
-      setParticles(newParticles)
-      setVisible(true)
+      let hideTimer: ReturnType<typeof setTimeout> | undefined
+      const showTimer = setTimeout(() => {
+        setMessage(MESSAGES[Math.floor(Math.random() * MESSAGES.length)])
+        setEmoji(EMOJIS[Math.floor(Math.random() * EMOJIS.length)])
 
-      const timer = setTimeout(() => {
-        setVisible(false)
-        onDone?.()
-      }, 2200)
-      return () => clearTimeout(timer)
+        const newParticles = Array.from({ length: 12 }, (_, i) => ({
+          id: i,
+          x: Math.random() * 100,
+          y: Math.random() * 100,
+          emoji: ['🎊', '✨', '⭐', '🌟', '💫', '🎉'][Math.floor(Math.random() * 6)],
+          delay: Math.random() * 0.5,
+        }))
+        setParticles(newParticles)
+        setVisible(true)
+
+        hideTimer = setTimeout(() => {
+          setVisible(false)
+          onDone?.()
+        }, 2200)
+      }, 0)
+
+      return () => {
+        clearTimeout(showTimer)
+        if (hideTimer) clearTimeout(hideTimer)
+      }
     }
   }, [show, onDone])
 

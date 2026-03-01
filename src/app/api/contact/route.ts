@@ -1,8 +1,27 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
+import { checkRateLimit, getClientIp } from "@/lib/rate-limit";
+
+// Rate limit: 5 contact submissions per IP per hour
+const CONTACT_RATE_LIMIT = { maxRequests: 5, windowMs: 60 * 60 * 1000 };
 
 export async function POST(request: NextRequest) {
   try {
+    // Rate limit by IP address (not by submitted email, which is spoofable)
+    const ip = getClientIp(request);
+    const rateLimitResult = checkRateLimit(`contact:${ip}`, CONTACT_RATE_LIMIT);
+    if (!rateLimitResult.success) {
+      return NextResponse.json(
+        { error: "Too many submissions. Please try again later." },
+        {
+          status: 429,
+          headers: {
+            "Retry-After": String(Math.ceil((rateLimitResult.resetTime - Date.now()) / 1000)),
+          },
+        }
+      );
+    }
+
     const body = await request.json();
     const { name, email, subject, category, message } = body;
 

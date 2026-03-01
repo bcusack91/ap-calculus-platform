@@ -1,5 +1,8 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { prisma } from "@/lib/prisma";
+
+export const revalidate = 3600; // ISR: revalidate every hour
 
 export const metadata: Metadata = {
   title: "Study Mondo — Free Math & Science Study Platform",
@@ -7,197 +10,73 @@ export const metadata: Metadata = {
     "Master 24 courses from Grade 4 through AP with free notes, flashcards, interactive lessons, and practice problems. 700+ topics, completely free.",
 };
 
-
-// Course type definition
-type Course = {
-  slug: string;
-  name: string;
-  icon: string;
-  description: string;
-  gradient: string;
+// Presentational data for each course (gradients, icons, descriptions, section)
+const courseMeta: Record<string, { icon: string; description: string; gradient: string; section: string }> = {
+  'grade-4-math': { icon: '4️⃣', description: 'Multiplication, division, fractions, decimals', gradient: 'from-pink-500 to-rose-500', section: 'Middle School Math (Grades 4-8)' },
+  'grade-5-math': { icon: '5️⃣', description: 'Place value, fractions, volume, coordinates', gradient: 'from-rose-500 to-red-500', section: 'Middle School Math (Grades 4-8)' },
+  'grade-6-math': { icon: '6️⃣', description: 'Ratios, rates, integers, geometry basics', gradient: 'from-red-500 to-orange-500', section: 'Middle School Math (Grades 4-8)' },
+  'grade-7-math': { icon: '7️⃣', description: 'Rational numbers, proportions, percents', gradient: 'from-orange-500 to-amber-500', section: 'Middle School Math (Grades 4-8)' },
+  'grade-8-math': { icon: '8️⃣', description: 'Exponents, linear functions, geometry', gradient: 'from-amber-500 to-yellow-500', section: 'Middle School Math (Grades 4-8)' },
+  'pre-algebra': { icon: '🔢', description: 'Integers, fractions, basic equations', gradient: 'from-yellow-500 to-lime-500', section: 'High School Math (Grades 9-12)' },
+  'algebra-1': { icon: '📊', description: 'Linear equations, functions, quadratics', gradient: 'from-sky-600 to-blue-600', section: 'High School Math (Grades 9-12)' },
+  'geometry': { icon: '📐', description: 'Shapes, angles, proofs, spatial reasoning', gradient: 'from-emerald-600 to-green-600', section: 'High School Math (Grades 9-12)' },
+  'algebra-2': { icon: '🔣', description: 'Advanced functions, exponentials, logs', gradient: 'from-cyan-600 to-teal-600', section: 'High School Math (Grades 9-12)' },
+  'ap-precalculus': { icon: '📈', description: 'Functions, trig, vectors, matrices', gradient: 'from-blue-600 to-indigo-600', section: 'High School Math (Grades 9-12)' },
+  'ap-calculus-ab': { icon: '∫', description: 'Limits, derivatives, integrals, applications', gradient: 'from-purple-600 to-violet-600', section: 'High School Math (Grades 9-12)' },
+  'ap-calculus-bc': { icon: '∬', description: 'Series, parametric, polar, advanced integration', gradient: 'from-violet-600 to-purple-600', section: 'High School Math (Grades 9-12)' },
+  'ap-statistics': { icon: '📊', description: 'Data, probability, statistical inference', gradient: 'from-pink-600 to-rose-600', section: 'High School Math (Grades 9-12)' },
+  'ap-physics-1': { icon: '⚛️', description: 'Mechanics, waves, basic circuits', gradient: 'from-green-600 to-emerald-600', section: 'AP Sciences' },
+  'ap-physics-2': { icon: '🔬', description: 'Fluids, thermodynamics, E&M, modern', gradient: 'from-teal-600 to-cyan-600', section: 'AP Sciences' },
+  'ap-physics-c-mechanics': { icon: '🎯', description: 'Calculus-based mechanics', gradient: 'from-indigo-600 to-purple-600', section: 'AP Sciences' },
+  'ap-physics-c-em': { icon: '⚡', description: 'Electricity, magnetism, induction', gradient: 'from-violet-600 to-fuchsia-600', section: 'AP Sciences' },
+  'ap-chemistry': { icon: '🧪', description: 'Atomic structure, bonding, equilibrium', gradient: 'from-orange-600 to-red-600', section: 'AP Sciences' },
+  'ap-biology': { icon: '🧬', description: 'Cells, genetics, evolution, ecology', gradient: 'from-rose-600 to-pink-600', section: 'AP Sciences' },
+  'ap-psychology': { icon: '🧠', description: 'Behavior, cognition, development, disorders', gradient: 'from-amber-600 to-orange-600', section: 'AP Sciences' },
+  'organic-chemistry': { icon: '⚗️', description: 'Structure, reactions, synthesis, spectroscopy', gradient: 'from-lime-600 to-green-600', section: 'AP Sciences' },
+  'sat-prep': { icon: '📝', description: 'Math, Reading, Writing strategies', gradient: 'from-blue-600 to-cyan-600', section: 'Test Prep' },
+  'act-prep': { icon: '📋', description: 'Math, English, Reading, Science', gradient: 'from-purple-600 to-pink-600', section: 'Test Prep' },
+  'mcat-prep': { icon: '🏥', description: 'Chem/Phys, CARS, Bio/Biochem, Psych/Soc', gradient: 'from-emerald-600 to-teal-600', section: 'Test Prep' },
 };
 
-// Organized course sections
-const coursesBySection: Record<string, Course[]> = {
-  'Middle School Math (Grades 4-8)': [
-    {
-      slug: 'grade-4-math',
-      name: 'Grade 4 Math',
-      icon: '4️⃣',
-      description: 'Multiplication, division, fractions, decimals',
-      gradient: 'from-pink-500 to-rose-500'
-    },
-    {
-      slug: 'grade-5-math',
-      name: 'Grade 5 Math',
-      icon: '5️⃣',
-      description: 'Place value, fractions, volume, coordinates',
-      gradient: 'from-rose-500 to-red-500'
-    },
-    {
-      slug: 'grade-6-math',
-      name: 'Grade 6 Math',
-      icon: '6️⃣',
-      description: 'Ratios, rates, integers, geometry basics',
-      gradient: 'from-red-500 to-orange-500'
-    },
-    {
-      slug: 'grade-7-math',
-      name: 'Grade 7 Math',
-      icon: '7️⃣',
-      description: 'Rational numbers, proportions, percents',
-      gradient: 'from-orange-500 to-amber-500'
-    },
-    {
-      slug: 'grade-8-math',
-      name: 'Grade 8 Math',
-      icon: '8️⃣',
-      description: 'Exponents, linear functions, geometry',
-      gradient: 'from-amber-500 to-yellow-500'
-    },
-  ],
-  'High School Math (Grades 9-12)': [
-    {
-      slug: 'pre-algebra',
-      name: 'Pre-Algebra',
-      icon: '🔢',
-      description: 'Integers, fractions, basic equations',
-      gradient: 'from-yellow-500 to-lime-500'
-    },
-    {
-      slug: 'algebra-1',
-      name: 'Algebra 1',
-      icon: '📊',
-      description: 'Linear equations, functions, quadratics',
-      gradient: 'from-sky-600 to-blue-600'
-    },
-    {
-      slug: 'geometry',
-      name: 'Geometry',
-      icon: '📐',
-      description: 'Shapes, angles, proofs, spatial reasoning',
-      gradient: 'from-emerald-600 to-green-600'
-    },
-    {
-      slug: 'algebra-2',
-      name: 'Algebra 2',
-      icon: '🔣',
-      description: 'Advanced functions, exponentials, logs',
-      gradient: 'from-cyan-600 to-teal-600'
-    },
-    {
-      slug: 'ap-precalculus',
-      name: 'AP Precalculus',
-      icon: '📈',
-      description: 'Functions, trig, vectors, matrices',
-      gradient: 'from-blue-600 to-indigo-600'
-    },
-    {
-      slug: 'ap-calculus-ab',
-      name: 'AP Calculus AB',
-      icon: '∫',
-      description: 'Limits, derivatives, integrals, applications',
-      gradient: 'from-purple-600 to-violet-600'
-    },
-    {
-      slug: 'ap-calculus-bc',
-      name: 'AP Calculus BC',
-      icon: '∬',
-      description: 'Series, parametric, polar, advanced integration',
-      gradient: 'from-violet-600 to-purple-600'
-    },
-    {
-      slug: 'ap-statistics',
-      name: 'AP Statistics',
-      icon: '📊',
-      description: 'Data, probability, statistical inference',
-      gradient: 'from-pink-600 to-rose-600'
-    },
-  ],
-  'AP Sciences': [
-    {
-      slug: 'ap-physics-1',
-      name: 'AP Physics 1',
-      icon: '⚛️',
-      description: 'Mechanics, waves, basic circuits',
-      gradient: 'from-green-600 to-emerald-600'
-    },
-    {
-      slug: 'ap-physics-2',
-      name: 'AP Physics 2',
-      icon: '🔬',
-      description: 'Fluids, thermodynamics, E&M, modern',
-      gradient: 'from-teal-600 to-cyan-600'
-    },
-    {
-      slug: 'ap-physics-c-mechanics',
-      name: 'AP Physics C: Mechanics',
-      icon: '🎯',
-      description: 'Calculus-based mechanics',
-      gradient: 'from-indigo-600 to-purple-600'
-    },
-    {
-      slug: 'ap-physics-c-em',
-      name: 'AP Physics C: E&M',
-      icon: '⚡',
-      description: 'Electricity, magnetism, induction',
-      gradient: 'from-violet-600 to-fuchsia-600'
-    },
-    {
-      slug: 'ap-chemistry',
-      name: 'AP Chemistry',
-      icon: '🧪',
-      description: 'Atomic structure, bonding, equilibrium',
-      gradient: 'from-orange-600 to-red-600'
-    },
-    {
-      slug: 'ap-biology',
-      name: 'AP Biology',
-      icon: '🧬',
-      description: 'Cells, genetics, evolution, ecology',
-      gradient: 'from-rose-600 to-pink-600'
-    },
-    {
-      slug: 'ap-psychology',
-      name: 'AP Psychology',
-      icon: '🧠',
-      description: 'Behavior, cognition, development, disorders',
-      gradient: 'from-amber-600 to-orange-600'
-    },
-    {
-      slug: 'organic-chemistry',
-      name: 'Organic Chemistry',
-      icon: '⚗️',
-      description: 'Structure, reactions, synthesis, spectroscopy',
-      gradient: 'from-lime-600 to-green-600'
-    }
-  ],
-  'Test Prep': [
-    {
-      slug: 'sat-prep',
-      name: 'SAT Prep',
-      icon: '📝',
-      description: 'Math, Reading, Writing strategies',
-      gradient: 'from-blue-600 to-cyan-600'
-    },
-    {
-      slug: 'act-prep',
-      name: 'ACT Prep',
-      icon: '📋',
-      description: 'Math, English, Reading, Science',
-      gradient: 'from-purple-600 to-pink-600'
-    },
-    {
-      slug: 'mcat-prep',
-      name: 'MCAT Prep',
-      icon: '🏥',
-      description: 'Chem/Phys, CARS, Bio/Biochem, Psych/Soc',
-      gradient: 'from-emerald-600 to-teal-600'
-    }
-  ]
-};
+const defaultMeta = { icon: '📚', description: '', gradient: 'from-purple-600 to-blue-600', section: 'Other' };
 
-export default function Home() {
+// Section display order
+const sectionOrder = [
+  'Middle School Math (Grades 4-8)',
+  'High School Math (Grades 9-12)',
+  'AP Sciences',
+  'Test Prep',
+  'Other',
+];
+
+export default async function Home() {
+  const dbCourses = await prisma.course.findMany({
+    select: { slug: true, name: true, icon: true, description: true },
+    orderBy: { order: 'asc' },
+  });
+
+  // Merge DB data with presentational metadata and group by section
+  const coursesBySection: Record<string, { slug: string; name: string; icon: string; description: string; gradient: string }[]> = {};
+
+  for (const course of dbCourses) {
+    const meta = courseMeta[course.slug] ?? defaultMeta;
+    const section = meta.section;
+    if (!coursesBySection[section]) coursesBySection[section] = [];
+    coursesBySection[section].push({
+      slug: course.slug,
+      name: course.name,
+      icon: course.icon ?? meta.icon,
+      description: course.description || meta.description,
+      gradient: meta.gradient,
+    });
+  }
+
+  // Sort sections in the defined order
+  const orderedSections = Object.entries(coursesBySection).sort(
+    ([a], [b]) => (sectionOrder.indexOf(a) === -1 ? 999 : sectionOrder.indexOf(a)) - (sectionOrder.indexOf(b) === -1 ? 999 : sectionOrder.indexOf(b))
+  );
+
+  const totalCourses = dbCourses.length;
   return (
     <div className="flex flex-col">
       {/* JSON-LD Structured Data */}
@@ -261,7 +140,7 @@ export default function Home() {
               From Grade 4 to AP. SAT to ACT.
             </p>
             <p className="mt-3 text-lg leading-8 text-gray-600 dark:text-gray-400">
-              24 courses · 700+ topics · Completely free
+              {totalCourses} courses · 700+ topics · Completely free
             </p>
             <div className="mt-8 flex items-center justify-center gap-4">
               <Link
@@ -280,7 +159,7 @@ export default function Home() {
             {/* Social Proof Stats */}
             <div className="mt-12 grid grid-cols-3 gap-6 max-w-md mx-auto">
               <div>
-                <div className="text-2xl font-bold text-purple-700 dark:text-purple-400">24</div>
+                <div className="text-2xl font-bold text-purple-700 dark:text-purple-400">{totalCourses}</div>
                 <div className="text-xs text-gray-500 dark:text-gray-400">Courses</div>
               </div>
               <div>
@@ -309,7 +188,7 @@ export default function Home() {
           </div>
           
           <div className="mx-auto max-w-7xl">
-            {Object.entries(coursesBySection).map(([sectionName, courses], sectionIdx) => (
+            {orderedSections.map(([sectionName, courses], sectionIdx) => (
               <div key={sectionName} className={sectionIdx > 0 ? 'mt-20' : ''}>
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 pb-2 border-b-2 border-purple-200 dark:border-purple-800">
                   {sectionName}

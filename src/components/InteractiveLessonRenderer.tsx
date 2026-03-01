@@ -505,8 +505,8 @@ export default function InteractiveLessonRenderer({ topicSlug, preloadedParts, c
       currentSection.type === 'multiple-choice' ||
       currentSection.type === 'reference-angle-quiz' ||
       currentSection.type === 'factoring-practice' ||
-      (currentSection.type === 'text' && currentSection.content.includes('[UNIT_CIRCLE_GAME]')) ||
-      (currentSection.type === 'text' && currentSection.content.includes('[FULL_UNIT_CIRCLE_GAME]'))
+      (currentSection.type === 'text' && currentSection.content?.includes('[UNIT_CIRCLE_GAME]')) ||
+      (currentSection.type === 'text' && currentSection.content?.includes('[FULL_UNIT_CIRCLE_GAME]'))
     )
   
   // Disable Next button if it's an exercise that hasn't been completed
@@ -664,7 +664,7 @@ export default function InteractiveLessonRenderer({ topicSlug, preloadedParts, c
       <div className="bg-white/95 dark:bg-gray-800/95 backdrop-blur-sm rounded-2xl shadow-2xl p-10 border-2 border-purple-100/50 dark:border-purple-500/20 min-h-[500px] transition-all duration-300 hover:shadow-3xl hover:border-purple-200/70 dark:hover:border-purple-400/30">
         <SectionRenderer 
           key={currentSection.id}
-          section={currentSection} 
+          section={currentSection as unknown as Section} 
           onComplete={handleSectionComplete}
           isComplete={isCurrentSectionComplete}
           isLastSection={currentSectionIndex === sections.length - 1}
@@ -2118,7 +2118,10 @@ function FadeInText({ content, onComplete }: { content: string; onComplete?: () 
                   tr: ({ children }) => <tr className="border-b border-purple-200 dark:border-purple-800">{children}</tr>,
                   th: ({ children }) => <th className="px-6 py-3 text-left text-lg font-bold text-purple-900 dark:text-purple-100 border border-purple-300 dark:border-purple-700">{children}</th>,
                   td: ({ children }) => <td className="px-6 py-4 text-lg border border-purple-200 dark:border-purple-800">{children}</td>,
-                  img: ({ src, alt }) => <img src={src} alt={alt || ''} className="max-w-full h-auto my-6 rounded-lg" />,
+                  img: ({ src, alt }) => {
+                    // eslint-disable-next-line @next/next/no-img-element
+                    return <img src={src} alt={alt || ''} className="max-w-full h-auto my-6 rounded-lg" />
+                  },
                   iframe: ({ src, width, height, ...props }) => <iframe src={src} width={width || '100%'} height={height || '600'} className="w-full rounded-lg my-6" {...props} />,
                 }}
               >
@@ -2192,7 +2195,10 @@ function FadeInText({ content, onComplete }: { content: string; onComplete?: () 
             tr: ({ children }) => <tr className="border-b border-purple-200 dark:border-purple-800">{children}</tr>,
             th: ({ children }) => <th className="px-6 py-3 text-left text-lg font-bold text-purple-900 dark:text-purple-100 border border-purple-300 dark:border-purple-700">{children}</th>,
             td: ({ children }) => <td className="px-6 py-4 text-lg border border-purple-200 dark:border-purple-800">{children}</td>,
-            img: ({ src, alt }) => <img src={src} alt={alt || ''} className="max-w-full h-auto my-6 rounded-lg" />,
+            img: ({ src, alt }) => {
+              // eslint-disable-next-line @next/next/no-img-element
+              return <img src={src} alt={alt || ''} className="max-w-full h-auto my-6 rounded-lg" />
+            },
             iframe: ({ src, width, height, ...props }) => <iframe src={src} width={width || '100%'} height={height || '600'} className="w-full rounded-lg my-6" {...props} />,
           }}
         >
@@ -2452,23 +2458,6 @@ function MiniBossBattle({
     }
   }, [gameState, currentQuestion, aiTimerActive, currentQuestionIndex, config.aiAccuracy, questionTypes])
 
-  // Load first question after entrance animation
-  useEffect(() => {
-    if (gameState === 'battle' && !currentQuestion) {
-      loadNextQuestion()
-    }
-  }, [gameState, currentQuestion, loadNextQuestion])
-
-  // Start entrance animation
-  useEffect(() => {
-    if (gameState === 'entrance') {
-      const timer = setTimeout(() => {
-        setEntranceAnimComplete(true)
-      }, 3000) // 3 second entrance animation
-      return () => clearTimeout(timer)
-    }
-  }, [gameState])
-
   const loadNextQuestion = useCallback(() => {
     if (currentQuestionIndex >= questionTypes.length) {
       // Restart question sequence if needed
@@ -2498,6 +2487,23 @@ function MiniBossBattle({
     setSelectedAnswer('')
     setShowFeedback(false)
   }, [currentQuestionIndex, questionTypes, config.questionBankModule, usedQuestionIds])
+
+  // Load first question after entrance animation
+  useEffect(() => {
+    if (gameState === 'battle' && !currentQuestion) {
+      loadNextQuestion()
+    }
+  }, [gameState, currentQuestion, loadNextQuestion])
+
+  // Start entrance animation
+  useEffect(() => {
+    if (gameState === 'entrance') {
+      const timer = setTimeout(() => {
+        setEntranceAnimComplete(true)
+      }, 3000) // 3 second entrance animation
+      return () => clearTimeout(timer)
+    }
+  }, [gameState])
 
   const handleAnswerSelect = (optionLabel: string) => {
     if (showFeedback) return

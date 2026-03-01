@@ -9,11 +9,16 @@ interface CompetitiveProfile {
   overallMMR: number
   wins: number
   losses: number
+  totalMatches: number
+  winStreak: number
+  averageAccuracy: number
 }
 
 interface QueueStatus {
   status: string
   matchId?: string
+  position?: number
+  estimatedWait?: number
   [key: string]: unknown
 }
 

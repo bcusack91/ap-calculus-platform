@@ -11,9 +11,10 @@ export async function GET(
   req: NextRequest,
   { params }: { params: Promise<{ id: string }> }
 ) {
-  const { id } = await params
-  const result = await requireClassroomOwner(id)
-  if ('error' in result && result.error) return result.error
+  try {
+    const { id } = await params
+    const result = await requireClassroomOwner(id)
+    if ('error' in result && result.error) return result.error
 
   // Get all active members
   const members = await prisma.classroomMember.findMany({
@@ -132,4 +133,8 @@ export async function GET(
   }
 
   return NextResponse.json({ students: studentPerformance, summary: classSummary })
+  } catch (error) {
+    console.error('[GET /api/teacher/classrooms/[id]/performance]', error)
+    return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
+  }
 }

@@ -80,12 +80,12 @@ export default function UnitCircleTable() {
                 </th>
               </tr>
             </thead>
-            <tbody className="bg-white divide-y divide-blue-100">
+            <tbody className="bg-white dark:bg-gray-900 divide-y divide-blue-100 dark:divide-gray-700">
               {angles.map((angle, index) => (
                 <tr 
                   key={index}
-                  className={`transition-colors hover:bg-blue-50 ${
-                    index % 2 === 0 ? 'bg-gray-50' : 'bg-white'
+                  className={`transition-colors hover:bg-blue-50 dark:hover:bg-gray-800 ${
+                    index % 2 === 0 ? 'bg-gray-50 dark:bg-gray-800/50' : 'bg-white dark:bg-gray-900'
                   }`}
                 >
                   <td className="px-6 py-4 whitespace-nowrap text-base font-semibold text-blue-900">

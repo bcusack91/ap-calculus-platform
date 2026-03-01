@@ -9,9 +9,10 @@ export async function DELETE(
   req: NextRequest,
   { params }: { params: Promise<{ id: string; memberId: string }> }
 ) {
-  const { id, memberId } = await params
-  const result = await requireClassroomOwner(id)
-  if ('error' in result && result.error) return result.error
+  try {
+    const { id, memberId } = await params
+    const result = await requireClassroomOwner(id)
+    if ('error' in result && result.error) return result.error
 
   await prisma.classroomMember.update({
     where: { id: memberId },
@@ -19,4 +20,8 @@ export async function DELETE(
   })
 
   return NextResponse.json({ success: true })
+  } catch (error) {
+    console.error('[DELETE /api/teacher/classrooms/[id]/members/[memberId]]', error)
+    return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
+  }
 }

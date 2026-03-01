@@ -1,22 +1,12 @@
-'use client'
-
-import { useEffect, useState } from 'react'
 import Link from 'next/link'
-import { AvatarData } from '@/types/avatar'
+import { prisma } from '@/lib/prisma'
+import type { Metadata } from 'next'
 
-interface LeaderboardEntry {
-  position: number
-  name: string
-  avatarData: AvatarData | null
-  mmr: number
-  rank: string
-  totalMatches: number
-  wins: number
-  losses: number
-  winRate: number
-  winStreak: number
-  bestWinStreak: number
-  averageAccuracy: number
+export const revalidate = 300 // 5 minutes ISR
+
+export const metadata: Metadata = {
+  title: 'Competitive Leaderboard | Study Mondo',
+  description: 'See the top-ranked players in Study Mondo competitive mode, ranked by MMR.',
 }
 
 const rankColors: Record<string, string> = {
@@ -39,19 +29,42 @@ const rankEmoji: Record<string, string> = {
   Grandmaster: '🏆',
 }
 
-export default function LeaderboardPage() {
-  const [entries, setEntries] = useState<LeaderboardEntry[]>([])
-  const [loading, setLoading] = useState(true)
+export default async function LeaderboardPage() {
+  const profiles = await prisma.competitiveProfile.findMany({
+    where: { totalMatches: { gte: 1 } },
+    orderBy: { overallMMR: 'desc' },
+    take: 100,
+    select: {
+      overallMMR: true,
+      totalMatches: true,
+      wins: true,
+      losses: true,
+      winStreak: true,
+      bestWinStreak: true,
+      averageAccuracy: true,
+      rank: true,
+      user: {
+        select: {
+          name: true,
+          avatarData: true,
+        },
+      },
+    },
+  })
 
-  useEffect(() => {
-    fetch('/api/leaderboard')
-      .then((res) => res.json())
-      .then((data) => {
-        setEntries(data)
-        setLoading(false)
-      })
-      .catch(() => setLoading(false))
-  }, [])
+  const entries = profiles.map((p, i) => ({
+    position: i + 1,
+    name: p.user.name || 'Anonymous',
+    mmr: p.overallMMR,
+    rank: p.rank,
+    totalMatches: p.totalMatches,
+    wins: p.wins,
+    losses: p.losses,
+    winRate: p.totalMatches > 0 ? Math.round((p.wins / p.totalMatches) * 100) : 0,
+    winStreak: p.winStreak,
+    bestWinStreak: p.bestWinStreak,
+    averageAccuracy: Math.round(p.averageAccuracy),
+  }))
 
   return (
     <div className="container py-10">
@@ -72,12 +85,7 @@ export default function LeaderboardPage() {
           </Link>
         </div>
 
-        {loading ? (
-          <div className="text-center py-20">
-            <div className="inline-block w-8 h-8 border-4 border-purple-600 border-t-transparent rounded-full animate-spin" />
-            <p className="mt-4 text-gray-600 dark:text-gray-400">Loading leaderboard...</p>
-          </div>
-        ) : entries.length === 0 ? (
+        {entries.length === 0 ? (
           <div className="text-center py-20 bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700">
             <div className="text-6xl mb-4">🎮</div>
             <h2 className="text-2xl font-bold mb-2">No Rankings Yet</h2>
@@ -121,7 +129,7 @@ export default function LeaderboardPage() {
                 </div>
                 {/* 3rd Place */}
                 <div className="flex flex-col items-center pt-12">
-                  <div className="w-18 h-18 rounded-full bg-gradient-to-br from-amber-600 to-amber-700 flex items-center justify-center text-2xl font-bold text-white mb-3 shadow-lg w-16 h-16">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-amber-600 to-amber-700 flex items-center justify-center text-2xl font-bold text-white mb-3 shadow-lg">
                     3
                   </div>
                   <div className="font-bold text-lg text-center">{entries[2].name}</div>

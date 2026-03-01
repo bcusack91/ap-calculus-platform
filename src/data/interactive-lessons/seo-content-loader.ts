@@ -37,7 +37,7 @@ export async function getInteractiveLessonSEOContent(
       if (!data?.sections) continue
 
       const textSections = data.sections
-        .filter((s) => s.content && typeof s.content === 'string' && s.content.trim().length > 0)
+        .filter((s): s is typeof s & { content: string } => !!s.content && typeof s.content === 'string' && s.content.trim().length > 0)
         .map((s) => ({
           id: s.id || `section-${i}`,
           content: s.content.trim(),

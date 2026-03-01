@@ -8,23 +8,29 @@ import { requireTeacher, generateJoinCode } from '@/lib/teacher-auth'
  */
 
 export async function GET() {
-  const result = await requireTeacher()
-  if ('error' in result && result.error) return result.error
+  try {
+    const result = await requireTeacher()
+    if ('error' in result && result.error) return result.error
 
-  const classrooms = await prisma.classroom.findMany({
-    where: { teacherId: result.user!.id },
-    include: {
-      _count: { select: { members: true, assignments: true, competitions: true } },
-    },
-    orderBy: { createdAt: 'desc' },
-  })
+    const classrooms = await prisma.classroom.findMany({
+      where: { teacherId: result.user!.id },
+      include: {
+        _count: { select: { members: true, assignments: true, competitions: true } },
+      },
+      orderBy: { createdAt: 'desc' },
+    })
 
-  return NextResponse.json({ classrooms })
+    return NextResponse.json({ classrooms })
+  } catch (error) {
+    console.error('[GET /api/teacher/classrooms]', error)
+    return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
+  }
 }
 
 export async function POST(req: NextRequest) {
-  const result = await requireTeacher()
-  if ('error' in result && result.error) return result.error
+  try {
+    const result = await requireTeacher()
+    if ('error' in result && result.error) return result.error
 
   const { name, description, subject, grade, schoolId } = await req.json()
 
@@ -58,4 +64,8 @@ export async function POST(req: NextRequest) {
   })
 
   return NextResponse.json({ classroom }, { status: 201 })
+  } catch (error) {
+    console.error('[POST /api/teacher/classrooms]', error)
+    return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
+  }
 }

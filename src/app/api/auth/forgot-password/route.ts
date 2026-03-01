@@ -1,9 +1,23 @@
 import { prisma } from '@/lib/prisma'
 import { NextResponse } from 'next/server'
 import crypto from 'crypto'
+import { checkRateLimit, getClientIp } from '@/lib/rate-limit'
+
+// Rate limit: 3 password reset requests per IP per 15 minutes
+const RESET_RATE_LIMIT = { maxRequests: 3, windowMs: 15 * 60 * 1000 }
 
 export async function POST(req: Request) {
   try {
+    // Rate limit by IP to prevent abuse
+    const ip = getClientIp(req)
+    const rateLimitResult = checkRateLimit(`forgot-password:${ip}`, RESET_RATE_LIMIT)
+    if (!rateLimitResult.success) {
+      // Still return the generic success message to prevent enumeration
+      return NextResponse.json({
+        message: 'If an account with that email exists, a password reset link has been sent.',
+      })
+    }
+
     const { email } = await req.json()
 
     if (!email) {
@@ -34,9 +48,7 @@ export async function POST(req: Request) {
 
     const resetUrl = `${process.env.NEXTAUTH_URL || 'https://www.studymondo.com'}/auth/reset-password?token=${token}`
 
-    // Log the reset URL for development. In production, send via email.
     // TODO: Configure email provider (e.g. Resend, SendGrid, or SMTP)
-    console.log(`[Password Reset] URL for ${email}: ${resetUrl}`)
 
     // If you have an email provider configured, uncomment and adapt:
     // await sendEmail({

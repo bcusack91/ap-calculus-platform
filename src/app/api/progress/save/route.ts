@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { generateFlashcardsFromContent, getTopFlashcards } from '@/lib/flashcard-generation'
+import { progressSaveSchema, parseBody } from '@/lib/validations'
 
 export async function POST(request: Request) {
   try {
@@ -14,7 +15,15 @@ export async function POST(request: Request) {
       )
     }
 
-    const { topicSlug, topicId, lessonPart, completedSections, masteryLevel, timeSpent, isPartCompletion } = await request.json()
+    const body = await request.json()
+    const parsed = parseBody(progressSaveSchema, body)
+    if (!parsed.success) {
+      return NextResponse.json(
+        { error: parsed.error },
+        { status: 400 }
+      )
+    }
+    const { topicSlug, topicId, lessonPart, completedSections, masteryLevel, timeSpent, isPartCompletion } = parsed.data
     
     if (!topicSlug && !topicId) {
       return NextResponse.json(
@@ -24,14 +33,20 @@ export async function POST(request: Request) {
     }
 
     let topic
-    // Use topicId if provided (cached), otherwise lookup by slug
+    // Always verify the topic exists in the database, even if topicId is provided.
+    // Trusting a client-supplied ID without verification could allow saving
+    // progress against non-existent or unauthorized topics.
     if (topicId) {
-      topic = { id: topicId } // Skip DB query if we have the ID
+      topic = await prisma.topic.findUnique({
+        where: { id: topicId },
+        select: { id: true },
+      })
     } else {
       // Get topic ID from slug (fallback)
       topic = await prisma.topic.findUnique({
-        where: { slug: topicSlug }
-        })
+        where: { slug: topicSlug },
+        select: { id: true },
+      })
     }
 
     if (!topic) {
@@ -48,7 +63,7 @@ export async function POST(request: Request) {
       status = 'MASTERED'
     } else if (masteryLevel >= 0.8 || lessonPart === 4) {
       status = 'COMPLETED'
-    } else if (lessonPart > 1 || (completedSections && completedSections.length > 0)) {
+    } else if ((lessonPart !== undefined && lessonPart > 1) || (completedSections && completedSections.length > 0)) {
       status = 'IN_PROGRESS'
     } else {
       status = 'NOT_STARTED'

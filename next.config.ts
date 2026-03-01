@@ -2,17 +2,6 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   outputFileTracingRoot: __dirname,
-  eslint: {
-    // Warning: This allows production builds to successfully complete even if
-    // your project has ESLint errors.
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    // Warning: This allows production builds to successfully complete even if
-    // your project has type errors.
-    // TODO: Fix all type errors and remove this flag
-    ignoreBuildErrors: true,
-  },
   images: {
     remotePatterns: [
       {
