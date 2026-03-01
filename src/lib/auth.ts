@@ -97,7 +97,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       }
       return session
     },
-    async jwt({ token, user }) {
+    async jwt({ token, user, trigger }) {
       if (user) {
         const dbUser = await prisma.user.findUnique({
           where: { id: user.id }
@@ -109,6 +109,21 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
           token.emailVerified = dbUser.emailVerified
         }
       }
+
+      // Refresh emailVerified (and role) from DB on every session update
+      // so changes like email verification are reflected without re-login
+      if (!user && token.sub) {
+        const dbUser = await prisma.user.findUnique({
+          where: { id: token.sub },
+          select: { emailVerified: true, role: true, stripeCustomerId: true },
+        })
+        if (dbUser) {
+          token.emailVerified = dbUser.emailVerified
+          token.role = dbUser.role
+          token.stripeCustomerId = dbUser.stripeCustomerId ?? undefined
+        }
+      }
+
       return token
     }
   },
