@@ -24,9 +24,18 @@ function InlineLatex({ text, className }: { text: string; className?: string }) 
     return <span className={className}>{text}</span>
   }
 
+  // Protect escaped dollar signs (\$) from being treated as LaTeX delimiters
+  const ESCAPED_DOLLAR = '\u0000DOLLAR\u0000'
+  let processed = text.replace(/\\\$/g, ESCAPED_DOLLAR)
+
+  // If no unescaped $ remains, just restore and return plain text
+  if (!processed.includes('$')) {
+    return <span className={className}>{text.replace(/\\\$/g, '$')}</span>
+  }
+
   // Split on LaTeX delimiters: $$...$$ (display) and $...$ (inline)
   const parts: { type: 'text' | 'latex'; content: string; display: boolean }[] = []
-  let remaining = text
+  let remaining = processed
   
   while (remaining.length > 0) {
     // Check for display math $$...$$ first
@@ -74,7 +83,7 @@ function InlineLatex({ text, className }: { text: string; className?: string }) 
     <span className={className}>
       {parts.map((part, i) => {
         if (part.type === 'text') {
-          return <span key={i}>{part.content}</span>
+          return <span key={i}>{part.content.replace(/\u0000DOLLAR\u0000/g, '$')}</span>
         }
         try {
           return (
