@@ -3,6 +3,7 @@ import { auth } from '@/lib/auth'
 import { NextResponse } from 'next/server'
 import crypto from 'crypto'
 import { checkRateLimit } from '@/lib/rate-limit'
+import { sendVerificationEmail } from '@/lib/email'
 
 // Rate limit: 3 verification emails per user per hour
 const VERIFY_RATE_LIMIT = { maxRequests: 3, windowMs: 60 * 60 * 1000 }
@@ -45,7 +46,7 @@ export async function POST() {
 
     const verifyUrl = `${process.env.NEXTAUTH_URL || 'https://www.studymondo.com'}/auth/verify-email?token=${token}`
 
-    // TODO: Send via email provider (e.g. Resend, SendGrid).
+    await sendVerificationEmail(email, verifyUrl)
 
     return NextResponse.json({ message: 'Verification email sent' })
   } catch (error) {

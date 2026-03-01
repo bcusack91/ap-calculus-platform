@@ -2,6 +2,7 @@ import { prisma } from '@/lib/prisma'
 import { NextResponse } from 'next/server'
 import crypto from 'crypto'
 import { checkRateLimit, getClientIp } from '@/lib/rate-limit'
+import { sendPasswordResetEmail } from '@/lib/email'
 
 // Rate limit: 3 password reset requests per IP per 15 minutes
 const RESET_RATE_LIMIT = { maxRequests: 3, windowMs: 15 * 60 * 1000 }
@@ -48,14 +49,7 @@ export async function POST(req: Request) {
 
     const resetUrl = `${process.env.NEXTAUTH_URL || 'https://www.studymondo.com'}/auth/reset-password?token=${token}`
 
-    // TODO: Configure email provider (e.g. Resend, SendGrid, or SMTP)
-
-    // If you have an email provider configured, uncomment and adapt:
-    // await sendEmail({
-    //   to: email,
-    //   subject: 'Reset Your Study Mondo Password',
-    //   html: `<p>Click <a href="${resetUrl}">here</a> to reset your password. This link expires in 1 hour.</p>`,
-    // })
+    await sendPasswordResetEmail(email, resetUrl)
 
     return successResponse
   } catch (error) {
