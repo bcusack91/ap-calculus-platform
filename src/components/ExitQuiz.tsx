@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useCallback, useMemo } from 'react'
+import katex from 'katex'
 import 'katex/dist/katex.min.css'
 
 interface ExitQuizQuestion {
@@ -25,12 +26,7 @@ interface ExitQuizProps {
 
 // Minimal LaTeX rendering using KaTeX
 function renderLatex(text: string): string {
-  if (typeof window === 'undefined') return text
-
   try {
-    const katex = (window as unknown as { katex?: { renderToString: (s: string, o: object) => string } }).katex
-    if (!katex) return text
-
     // Replace display math $$...$$ first
     let result = text.replace(/\$\$([^$]+?)\$\$/g, (_match, latex) => {
       try { return katex.renderToString(latex.trim(), { throwOnError: false, displayMode: true }) }
