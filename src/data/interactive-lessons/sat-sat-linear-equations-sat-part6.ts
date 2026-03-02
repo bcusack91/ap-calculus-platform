@@ -89,13 +89,13 @@ If the SAT asks *"What value of $k$ makes this equation have no solution?"*, the
           {
             question: 'For what value of $b$ does $2(x + b) = 2x + 10$ have no solution?',
             options: [
-              '$3$',
-              '$5$',
-              '$7$',
-              'No value — this equation always has a solution for some $b$'
+              '$b = 5$',
+              '$b = 3$',
+              '$b = 10$',
+              'Any value of $b$ other than $5$'
             ],
             correctAnswer: 3,
-            explanation: "Distribute: $2x + 2b = 2x + 10$. Subtract $2x$: $2b = 10$, so $b = 5$, which gives infinitely many solutions. For any other $b$, you get a contradiction like $6 = 10$ — that means no solution. Since no single listed value of $b$ uniquely creates no solution, the answer is D."
+            explanation: "Distribute: $2x + 2b = 2x + 10$. Subtract $2x$ from both sides: $2b = 10$. When $b = 5$, this is $10 = 10$ (true), giving infinitely many solutions. For any other value of $b$ (like $3$, $7$, $10$, etc.), you get a false statement (e.g. $6 = 10$), which means no solution. The answer is any $b \\neq 5$."
           }
         ]
       }
