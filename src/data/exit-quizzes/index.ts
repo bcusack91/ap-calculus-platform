@@ -12,6 +12,9 @@ import { generateExitQuiz as genFunctions } from './sat-functions'
 import { generateExitQuiz as genExponentsRadicals } from './sat-exponents-radicals'
 import { generateExitQuiz as genRatiosProportions } from './sat-ratios-proportions-percents'
 import { generateExitQuiz as genStatistics } from './sat-statistics-data-interpretation'
+import { generateExitQuiz as genExponentialFunctions } from './sat-exponential-functions'
+import { generateExitQuiz as genCircles } from './sat-circles'
+import { generateExitQuiz as genComplexNumbers } from './sat-complex-numbers'
 
 const quizGenerators: Record<string, (count?: number) => ExitQuizQuestion[]> = {
   'sat-linear-equations-inequalities': genLinearEquations,
@@ -20,6 +23,9 @@ const quizGenerators: Record<string, (count?: number) => ExitQuizQuestion[]> = {
   'sat-exponents-radicals': genExponentsRadicals,
   'sat-ratios-proportions-percents': genRatiosProportions,
   'sat-statistics-data-interpretation': genStatistics,
+  'sat-exponential-functions': genExponentialFunctions,
+  'sat-circles': genCircles,
+  'sat-complex-numbers': genComplexNumbers,
 }
 
 /**

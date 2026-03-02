@@ -3295,6 +3295,8 @@ const slugAliases: Record<string, string> = {
   'sat-punctuation': 'sat-punctuation-sat',
   'sat-punctuation-commas-semicolons': 'sat-punctuation-commas-semicolons-sat',
   'sat-ratios-proportions-percents': 'sat-ratios-proportions-sat',
+  'sat-exponential-functions': 'sat-exponential-functions-sat',
+  'sat-circles': 'sat-circles-trig-sat',
   'sat-linear-equations-inequalities': 'sat-linear-equations-sat',
   'sat-statistics-data-interpretation': 'sat-data-statistics-sat',
   'sat-reading-comprehension': 'sat-reading-evidence-sat',

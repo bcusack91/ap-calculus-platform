@@ -44,6 +44,9 @@ export async function POST(request: Request) {
         'sat-exponents-radicals': ['advanced-math'],
         'sat-ratios-proportions-percents': ['problem-solving'],
         'sat-statistics-data-interpretation': ['problem-solving'],
+        'sat-exponential-functions': ['advanced-math'],
+        'sat-circles': ['additional-topics'],
+        'sat-complex-numbers': ['advanced-math'],
       }
 
       const categories = topicToCategoryMap[topicSlug] || []
