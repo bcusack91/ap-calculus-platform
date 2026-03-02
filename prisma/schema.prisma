@@ -51,6 +51,7 @@ model User {
   competitionParticipations CompetitionParticipant[]
   competitiveGrantsReceived CompetitiveGrant[]       @relation("CompetitiveGrantStudent")
   competitiveGrantsGiven    CompetitiveGrant[]       @relation("CompetitiveGrantTeacher")
+  exitQuizAttempts          ExitQuizAttempt[]
 }
 
 model Account {
@@ -684,6 +685,25 @@ model CompetitiveGrant {
 
   @@unique([studentId, grantedById])
   @@index([studentId])
+}
+
+model ExitQuizAttempt {
+  id          String   @id @default(cuid())
+  userId      String
+  topicSlug   String   // e.g., 'sat-linear-equations-inequalities'
+  score       Int      // number correct (out of 10)
+  totalQuestions Int   @default(10)
+  passed      Boolean  @default(false) // true if score >= 7
+  mustRedoUnit Boolean @default(false) // true if score < 5
+  answers     Json     // array of { questionId, selectedAnswer, correct }
+  startedAt   DateTime @default(now())
+  completedAt DateTime @default(now())
+  timeSpent   Int      @default(0) // seconds
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, topicSlug])
+  @@index([userId])
 }
 
 model ClassroomMember {

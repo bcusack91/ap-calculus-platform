@@ -13,6 +13,9 @@ import katex from 'katex'
 import { FlashcardNotification } from '@/components/flashcard-notification'
 import CorrectAnswerCelebration from '@/components/CorrectAnswerCelebration'
 import BookmarkButton from '@/components/BookmarkButton'
+import ExitQuiz from '@/components/ExitQuiz'
+import { generateExitQuiz, hasExitQuiz } from '@/data/exit-quizzes/sat-linear-equations-inequalities'
+import type { ExitQuizQuestion } from '@/data/exit-quizzes/sat-linear-equations-inequalities'
 import LessonProgressBar from '@/components/LessonProgressBar'
 import KeyboardShortcutHint from '@/components/KeyboardShortcutHint'
 import { useLessonKeyboard } from '@/hooks/useLessonKeyboard'
@@ -272,6 +275,17 @@ export default function InteractiveLessonRenderer({ topicSlug, preloadedParts, c
     topicTitle: string
   } | null>(null)
 
+  // Exit quiz state
+  const [showExitQuiz, setShowExitQuiz] = useState(false)
+  const [exitQuizQuestions, setExitQuizQuestions] = useState<ExitQuizQuestion[]>([])
+  const [exitQuizStatus, setExitQuizStatus] = useState<{
+    totalAttempts: number
+    hasPassed: boolean
+    lastScore: number | null
+    mustRedoUnit: boolean
+  }>({ totalAttempts: 0, hasPassed: false, lastScore: null, mustRedoUnit: false })
+  const topicHasExitQuiz = hasExitQuiz(topicSlug)
+
   // Lesson data from server-preloaded parts (no client-side dynamic imports needed)
   const lessonData = preloadedParts[lessonPart - 1]?.data ?? null
 
@@ -409,6 +423,28 @@ export default function InteractiveLessonRenderer({ topicSlug, preloadedParts, c
     }
   }, [completedSections, progressLoaded, saveProgress])
 
+  // Fetch exit quiz status on mount (if topic has exit quiz)
+  useEffect(() => {
+    if (!topicHasExitQuiz || !session?.user) return
+    const fetchStatus = async () => {
+      try {
+        const res = await fetch(`/api/exit-quiz/status?topicSlug=${encodeURIComponent(topicSlug)}`)
+        if (res.ok) {
+          const data = await res.json()
+          setExitQuizStatus({
+            totalAttempts: data.totalAttempts,
+            hasPassed: data.hasPassed,
+            lastScore: data.lastScore,
+            mustRedoUnit: data.mustRedoUnit,
+          })
+        }
+      } catch (err) {
+        console.error('Failed to fetch exit quiz status:', err)
+      }
+    }
+    fetchStatus()
+  }, [topicHasExitQuiz, topicSlug, session?.user])
+
   const sections = lessonData?.sections ?? []
   const currentSection = sections?.[currentSectionIndex]
   const progress = sections?.length > 0 ? ((completedSections.size) / sections.length) * 100 : 0
@@ -446,6 +482,14 @@ export default function InteractiveLessonRenderer({ topicSlug, preloadedParts, c
         setCompletedSections(new Set())
         window.scrollTo({ top: 0, behavior: 'smooth' })
       } else if (entersCompetitiveModeOnComplete) {
+        // If this topic has an exit quiz and user hasn't passed yet, show the quiz
+        if (topicHasExitQuiz && !exitQuizStatus.hasPassed) {
+          const questions = generateExitQuiz(10)
+          setExitQuizQuestions(questions)
+          setShowExitQuiz(true)
+          window.scrollTo({ top: 0, behavior: 'smooth' })
+          return
+        }
         // On final section, save full mastery then move to competitive mode
         const finalSave = async () => {
           if (session?.user) {
@@ -502,6 +546,31 @@ export default function InteractiveLessonRenderer({ topicSlug, preloadedParts, c
       setCelebrationKey(prev => prev + 1)
       setShowCelebration(true)
     }
+  }
+
+  // Exit quiz completion handler
+  const handleExitQuizComplete = (score: number, total: number, passed: boolean, mustRedoUnit: boolean) => {
+    setShowExitQuiz(false)
+    setExitQuizStatus(prev => ({
+      ...prev,
+      totalAttempts: prev.totalAttempts + 1,
+      hasPassed: passed || prev.hasPassed,
+      lastScore: score,
+      mustRedoUnit: !passed && mustRedoUnit,
+    }))
+
+    if (passed) {
+      // Passed! Navigate to competitive mode
+      router.push('/competitive')
+    } else if (mustRedoUnit) {
+      // Score < 5/10: must redo the entire unit. Reset to part 1.
+      updateLessonPart(1 as LessonPart)
+      setCurrentSectionIndex(0)
+      setCompletedSections(new Set())
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+    // Score 5-6/10: can retry immediately — they stay on the last part
+    // and can click the button again to retake
   }
 
   const isCurrentSectionComplete = completedSections.has(currentSectionIndex)
@@ -582,6 +651,22 @@ export default function InteractiveLessonRenderer({ topicSlug, preloadedParts, c
     
     // Parts 3 and 4 don't have practice modes yet
     setShowPracticeMode(false)
+  }
+
+  // Show exit quiz overlay
+  if (showExitQuiz && exitQuizQuestions.length > 0) {
+    return (
+      <ExitQuiz
+        topicSlug={topicSlug}
+        topicTitle={lessonTitle}
+        questions={exitQuizQuestions}
+        onComplete={handleExitQuizComplete}
+        onCancel={() => setShowExitQuiz(false)}
+        previousAttempts={exitQuizStatus.totalAttempts}
+        lastScore={exitQuizStatus.lastScore}
+        mustRedoUnit={exitQuizStatus.mustRedoUnit}
+      />
+    )
   }
 
   if (!currentSection) {
@@ -722,6 +807,8 @@ export default function InteractiveLessonRenderer({ topicSlug, preloadedParts, c
             ? lessonPart === 1 && topicSlug === 'the-unit-circle'
               ? 'On to Part 2 →'
               : 'Continue to Next Part →'
+            : topicHasExitQuiz && !exitQuizStatus.hasPassed
+            ? '📝 Take Exit Quiz →'
             : entersCompetitiveModeOnComplete
             ? '🎮 Enter Competitive Mode →'
             : '✅ Lesson Complete!'}

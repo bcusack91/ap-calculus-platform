@@ -58,6 +58,12 @@ export async function GET(
     where: { userId: { in: studentIds } },
   })
 
+  // Get exit quiz attempts for all students
+  const exitQuizAttempts = await prisma.exitQuizAttempt.findMany({
+    where: { userId: { in: studentIds } },
+    orderBy: { completedAt: 'desc' },
+  })
+
   // Aggregate per-student
   const studentPerformance = members.map((member) => {
     const userId = member.user.id
@@ -116,6 +122,24 @@ export async function GET(
           mastery: Math.round((tp.masteryLevel || 0) * 100),
           lastAccessed: tp.lastAccessed,
         })),
+      exitQuizzes: (() => {
+        const quizzes = exitQuizAttempts.filter((a) => a.userId === userId)
+        // Group by topicSlug
+        const byTopic: Record<string, typeof quizzes> = {}
+        for (const q of quizzes) {
+          if (!byTopic[q.topicSlug]) byTopic[q.topicSlug] = []
+          byTopic[q.topicSlug].push(q)
+        }
+        return Object.entries(byTopic).map(([topicSlug, attempts]) => ({
+          topicSlug,
+          totalAttempts: attempts.length,
+          passed: attempts.some((a) => a.passed),
+          bestScore: Math.max(...attempts.map((a) => a.score)),
+          lastScore: attempts[0]?.score ?? null,
+          lastAttempt: attempts[0]?.completedAt ?? null,
+          mustRedoUnit: !attempts.some((a) => a.passed) && (attempts[0]?.mustRedoUnit ?? false),
+        }))
+      })(),
     }
   })
 
