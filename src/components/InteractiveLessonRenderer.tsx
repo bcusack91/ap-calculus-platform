@@ -481,15 +481,14 @@ export default function InteractiveLessonRenderer({ topicSlug, preloadedParts, c
         setCurrentSectionIndex(0)
         setCompletedSections(new Set())
         window.scrollTo({ top: 0, behavior: 'smooth' })
+      } else if (topicHasExitQuiz && !exitQuizStatus.hasPassed) {
+        // Show exit quiz regardless of completion destination
+        const questions = generateExitQuiz(topicSlug, 10)
+        setExitQuizQuestions(questions)
+        setShowExitQuiz(true)
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+        return
       } else if (entersCompetitiveModeOnComplete) {
-        // If this topic has an exit quiz and user hasn't passed yet, show the quiz
-        if (topicHasExitQuiz && !exitQuizStatus.hasPassed) {
-          const questions = generateExitQuiz(topicSlug, 10)
-          setExitQuizQuestions(questions)
-          setShowExitQuiz(true)
-          window.scrollTo({ top: 0, behavior: 'smooth' })
-          return
-        }
         // On final section, save full mastery then move to competitive mode
         const finalSave = async () => {
           if (session?.user) {

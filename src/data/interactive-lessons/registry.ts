@@ -2591,6 +2591,7 @@ const interactiveLessonRegistry: Record<string, InteractiveTopicConfig> = {
   // SAT Prep — 20 Topics
   // ═══════════════════════════════════════════
   'sat-linear-equations-sat': {
+    completionDestination: 'competitive',
     parts: [
       { title: 'Linear Equations Basics', loader: () => import('./sat-sat-linear-equations-sat-part1').then(m => m.satLinearEquationsPart1Data) },
       { title: 'Multi-Step Equations', loader: () => import('./sat-sat-linear-equations-sat-part2').then(m => m.satLinearEquationsPart2Data) },
