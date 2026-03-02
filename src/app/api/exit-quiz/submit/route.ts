@@ -39,6 +39,11 @@ export async function POST(request: Request) {
       // Map topic slugs to competitive category slugs
       const topicToCategoryMap: Record<string, string[]> = {
         'sat-linear-equations-inequalities': ['algebra'],
+        'sat-quadratic-equations': ['algebra'],
+        'sat-functions': ['advanced-math'],
+        'sat-exponents-radicals': ['advanced-math'],
+        'sat-ratios-proportions-percents': ['problem-solving'],
+        'sat-statistics-data-interpretation': ['problem-solving'],
       }
 
       const categories = topicToCategoryMap[topicSlug] || []

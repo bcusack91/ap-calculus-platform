@@ -863,13 +863,3 @@ export function generateExitQuiz(count: number = 10): ExitQuizQuestion[] {
   return shuffle(selected).map(t => t.generate())
 }
 
-/**
- * Map of topic slugs that have exit quizzes
- */
-export const EXIT_QUIZ_TOPICS: Record<string, boolean> = {
-  'sat-linear-equations-inequalities': true,
-}
-
-export function hasExitQuiz(topicSlug: string): boolean {
-  return EXIT_QUIZ_TOPICS[topicSlug] === true
-}

@@ -14,8 +14,8 @@ import { FlashcardNotification } from '@/components/flashcard-notification'
 import CorrectAnswerCelebration from '@/components/CorrectAnswerCelebration'
 import BookmarkButton from '@/components/BookmarkButton'
 import ExitQuiz from '@/components/ExitQuiz'
-import { generateExitQuiz, hasExitQuiz } from '@/data/exit-quizzes/sat-linear-equations-inequalities'
-import type { ExitQuizQuestion } from '@/data/exit-quizzes/sat-linear-equations-inequalities'
+import { generateExitQuiz, hasExitQuiz } from '@/data/exit-quizzes'
+import type { ExitQuizQuestion } from '@/data/exit-quizzes'
 import LessonProgressBar from '@/components/LessonProgressBar'
 import KeyboardShortcutHint from '@/components/KeyboardShortcutHint'
 import { useLessonKeyboard } from '@/hooks/useLessonKeyboard'
@@ -484,7 +484,7 @@ export default function InteractiveLessonRenderer({ topicSlug, preloadedParts, c
       } else if (entersCompetitiveModeOnComplete) {
         // If this topic has an exit quiz and user hasn't passed yet, show the quiz
         if (topicHasExitQuiz && !exitQuizStatus.hasPassed) {
-          const questions = generateExitQuiz(10)
+          const questions = generateExitQuiz(topicSlug, 10)
           setExitQuizQuestions(questions)
           setShowExitQuiz(true)
           window.scrollTo({ top: 0, behavior: 'smooth' })
