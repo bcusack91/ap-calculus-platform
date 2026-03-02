@@ -442,7 +442,7 @@ const questionPool: QuestionTemplate[] = [
       return {
         id: this.id, category: this.category,
         question: `A shirt originally costs $\\$${originalPrice}$. It is on sale for ${discountPct}% off. What is the sale price?`,
-        options: [`$\\$${salePrice}$`, `$\\$${salePrice + 5}$`, `$\\$${salePrice - 5}$`, `$\\$${originalPrice - discountPct}$`].sort(() => Math.random() - 0.5),
+        options: [`$\\$${salePrice}$`, `$\\$${salePrice + 5}$`, `$\\$${salePrice - 5}$`, `$\\$${salePrice + 10}$`].sort(() => Math.random() - 0.5),
         get correctIndex() { return this.options.indexOf(`$\\$${salePrice}$`) },
         explanation: `Discount = $${originalPrice} \\times ${discountPct / 100} = \\$${Math.round(originalPrice * discountPct / 100)}$. Sale price = $${originalPrice} - ${Math.round(originalPrice * discountPct / 100)} = \\$${salePrice}$`
       }

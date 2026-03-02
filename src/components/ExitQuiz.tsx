@@ -25,15 +25,16 @@ interface ExitQuizProps {
 }
 
 // Minimal LaTeX rendering using KaTeX
+// The regex (?:[^$\\]|\\.)+ handles escaped dollar signs (\$) inside math
 function renderLatex(text: string): string {
   try {
     // Replace display math $$...$$ first
-    let result = text.replace(/\$\$([^$]+?)\$\$/g, (_match, latex) => {
+    let result = text.replace(/\$\$((?:[^$\\]|\\.)+)\$\$/g, (_match, latex) => {
       try { return katex.renderToString(latex.trim(), { throwOnError: false, displayMode: true }) }
       catch { return latex }
     })
     // Then inline math $...$
-    result = result.replace(/\$([^$]+?)\$/g, (_match, latex) => {
+    result = result.replace(/\$((?:[^$\\]|\\.)+)\$/g, (_match, latex) => {
       try { return katex.renderToString(latex.trim(), { throwOnError: false, displayMode: false }) }
       catch { return latex }
     })

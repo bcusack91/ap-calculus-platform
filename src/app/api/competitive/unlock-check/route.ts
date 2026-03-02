@@ -44,7 +44,18 @@ export async function GET() {
       (tp.masteryLevel || 0) >= 0.8
     )
     
-    const completedTopicSlugs = completedTopics.map(tp => tp.topic.slug)
+    const completedTopicSlugsFromProgress = completedTopics.map(tp => tp.topic.slug)
+
+    // Also check exit quiz attempts — a passed exit quiz should count as completion
+    // even if the topic slug doesn't exist in the Topic table
+    const passedExitQuizzes = await prisma.exitQuizAttempt.findMany({
+      where: { userId: user.id, passed: true },
+      select: { topicSlug: true },
+      distinct: ['topicSlug']
+    })
+    const passedQuizSlugs = passedExitQuizzes.map(q => q.topicSlug)
+
+    const completedTopicSlugs = [...new Set([...completedTopicSlugsFromProgress, ...passedQuizSlugs])]
     const hasCompletedAnyTopic = completedTopicSlugs.length > 0
 
     // Check for teacher-granted competitive access
