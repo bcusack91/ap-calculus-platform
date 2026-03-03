@@ -66,16 +66,16 @@ type MarkdownCodeProps = {
 
 const MarkdownComponents = {
   h1: ({ children }: MarkdownChildrenProps) => (
-    <h1 className="text-3xl font-bold mb-6 mt-8 text-gray-900">{children}</h1>
+    <h1 className="text-3xl font-bold mb-6 mt-8 text-gray-900 dark:text-gray-100">{children}</h1>
   ),
   h2: ({ children }: MarkdownChildrenProps) => (
-    <h2 className="text-2xl font-bold mb-4 mt-8 text-gray-800 border-l-4 border-purple-500 pl-4 bg-purple-50 py-2 rounded-r">{children}</h2>
+    <h2 className="text-2xl font-bold mb-4 mt-8 text-gray-800 dark:text-gray-100 border-l-4 border-purple-500 pl-4 bg-purple-50 dark:bg-purple-900/30 py-2 rounded-r">{children}</h2>
   ),
   h3: ({ children }: MarkdownChildrenProps) => (
-    <h3 className="text-xl font-semibold mb-3 mt-6 text-gray-700">{children}</h3>
+    <h3 className="text-xl font-semibold mb-3 mt-6 text-gray-700 dark:text-gray-200">{children}</h3>
   ),
   p: ({ children }: MarkdownChildrenProps) => (
-    <p className="mb-4 leading-relaxed text-gray-700">{children}</p>
+    <p className="mb-4 leading-relaxed text-gray-700 dark:text-gray-300">{children}</p>
   ),
   ul: ({ children }: MarkdownChildrenProps) => (
     <ul className="list-disc list-inside mb-4 space-y-2 ml-4">{children}</ul>
@@ -84,21 +84,51 @@ const MarkdownComponents = {
     <ol className="list-decimal list-inside mb-4 space-y-2 ml-4">{children}</ol>
   ),
   li: ({ children }: MarkdownChildrenProps) => (
-    <li className="text-gray-700">{children}</li>
+    <li className="text-gray-700 dark:text-gray-300">{children}</li>
   ),
   blockquote: ({ children }: MarkdownChildrenProps) => (
-    <blockquote className="border-l-4 border-blue-500 bg-blue-50 pl-4 py-3 mb-4 italic rounded-r">
+    <blockquote className="!border-l-4 !border-purple-500 dark:!border-purple-400 !bg-gradient-to-r !from-purple-50 !to-transparent dark:!from-purple-900/20 dark:!to-transparent !pl-4 !py-3 !mb-4 italic !rounded-r !shadow-none">
       {children}
     </blockquote>
   ),
   code: ({ inline, children }: MarkdownCodeProps) => 
     inline ? (
-      <code className="bg-gray-100 px-2 py-1 rounded text-sm font-mono text-purple-700">{children}</code>
+      <code className="bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded text-sm font-mono text-purple-700 dark:text-purple-300">{children}</code>
     ) : (
-      <code className="block bg-gray-900 text-gray-100 p-4 rounded-lg mb-4 overflow-x-auto">{children}</code>
+      <code className="block bg-gray-900 dark:bg-gray-950 text-gray-100 p-4 rounded-lg mb-4 overflow-x-auto">{children}</code>
     ),
   strong: ({ children }: MarkdownChildrenProps) => (
-    <strong className="font-bold text-purple-700">{children}</strong>
+    <strong className="font-bold text-gray-900 dark:text-white">{children}</strong>
+  ),
+  hr: () => (
+    <hr className="my-8 border-t-2 border-gray-200 dark:border-gray-700" />
+  ),
+  table: ({ children }: MarkdownChildrenProps) => (
+    <div className="overflow-x-auto mb-6">
+      <table className="w-full border-collapse text-sm">
+        {children}
+      </table>
+    </div>
+  ),
+  thead: ({ children }: MarkdownChildrenProps) => (
+    <thead className="bg-purple-50 dark:bg-purple-900/30">
+      {children}
+    </thead>
+  ),
+  th: ({ children }: MarkdownChildrenProps) => (
+    <th className="border border-gray-200 dark:border-gray-700 px-4 py-3 text-left font-semibold text-gray-800 dark:text-gray-200">
+      {children}
+    </th>
+  ),
+  td: ({ children }: MarkdownChildrenProps) => (
+    <td className="border border-gray-200 dark:border-gray-700 px-4 py-3 text-gray-700 dark:text-gray-300">
+      {children}
+    </td>
+  ),
+  tr: ({ children }: MarkdownChildrenProps) => (
+    <tr className="even:bg-gray-50 dark:even:bg-gray-800/50">
+      {children}
+    </tr>
   ),
 }
 
@@ -278,7 +308,7 @@ export default async function TopicPage(props: TopicPageProps) {
             */}
 
             {/* Main Content with styled boxes */}
-            <div className="bg-white rounded-lg shadow-md p-8 mb-8 border border-gray-200">
+            <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-8 mb-8 border border-gray-200 dark:border-gray-700">
               <div className="prose prose-lg max-w-none">
                 {/* Check if content includes component markers */}
                 {topic.textContent.includes('<MultiplicationAnimation') || 
@@ -309,18 +339,18 @@ export default async function TopicPage(props: TopicPageProps) {
                   <span className="text-3xl">📚</span> Practice Problems
                 </h2>
               </div>
-              <div className="space-y-6 bg-green-50 p-6 rounded-b-lg border-2 border-green-200">
+              <div className="space-y-6 bg-green-50 dark:bg-green-900/10 p-6 rounded-b-lg border-2 border-green-200 dark:border-green-800">
                 {topic.exampleProblems.length === 0 ? (
                   <p className="text-muted-foreground">No example problems available yet.</p>
                 ) : (
                   topic.exampleProblems.map((problem, index: number) => (
-                    <div key={problem.id} className="bg-white rounded-lg border-2 border-green-300 p-6 shadow-md hover:shadow-lg transition-shadow">
+                    <div key={problem.id} className="bg-white dark:bg-gray-900 rounded-lg border-2 border-green-300 dark:border-green-700 p-6 shadow-md hover:shadow-lg transition-shadow">
                       <div className="flex items-start justify-between mb-4">
                         <h3 className="text-lg font-semibold flex items-center gap-2">
                           <span className="bg-green-600 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold">
                             {index + 1}
                           </span>
-                          <span className="text-gray-900">
+                          <span className="text-gray-900 dark:text-gray-100">
                             Problem {index + 1}
                             <span className={`ml-2 text-sm font-normal px-2 py-1 rounded ${
                               problem.difficulty === 'EASY' ? 'bg-green-100 text-green-800' :
@@ -341,8 +371,8 @@ export default async function TopicPage(props: TopicPageProps) {
                         */}
                       </div>
 
-                      <div className="mb-4 bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r">
-                        <h4 className="font-semibold mb-2 text-blue-900 flex items-center gap-2">
+                      <div className="mb-4 bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 p-4 rounded-r">
+                        <h4 className="font-semibold mb-2 text-blue-900 dark:text-blue-200 flex items-center gap-2">
                           <span>❓</span> Question:
                         </h4>
                         <div className="prose max-w-none">
@@ -354,10 +384,10 @@ export default async function TopicPage(props: TopicPageProps) {
 
                       {/* Show solution for all problems in free tier launch */}
                       <details className="mt-4">
-                        <summary className="cursor-pointer font-semibold text-gray-900 hover:text-purple-600 bg-purple-50 p-3 rounded border-2 border-purple-200 transition-colors">
+                        <summary className="cursor-pointer font-semibold text-gray-900 dark:text-gray-100 hover:text-purple-600 bg-purple-50 dark:bg-purple-900/30 p-3 rounded border-2 border-purple-200 dark:border-purple-700 transition-colors">
                           💡 Show Solution
                         </summary>
-                        <div className="mt-4 prose max-w-none bg-purple-50 p-4 rounded border-l-4 border-purple-500">
+                        <div className="mt-4 prose max-w-none bg-purple-50 dark:bg-purple-900/20 p-4 rounded border-l-4 border-purple-500">
                           <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]} components={MarkdownComponents}>
                             {problem.solution}
                           </ReactMarkdown>
@@ -375,10 +405,10 @@ export default async function TopicPage(props: TopicPageProps) {
                 {prevTopic ? (
                   <Link
                     href={`/topics/${prevTopic.slug}`}
-                    className="flex-1 block rounded-lg border-2 border-gray-200 bg-white p-5 hover:border-purple-400 hover:shadow-md transition-all group"
+                    className="flex-1 block rounded-lg border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-5 hover:border-purple-400 hover:shadow-md transition-all group"
                   >
-                    <div className="text-sm text-gray-500 mb-1">← Previous Topic</div>
-                    <div className="font-semibold text-gray-900 group-hover:text-purple-700 transition-colors">
+                    <div className="text-sm text-gray-500 dark:text-gray-400 mb-1">← Previous Topic</div>
+                    <div className="font-semibold text-gray-900 dark:text-gray-100 group-hover:text-purple-700 dark:group-hover:text-purple-400 transition-colors">
                       {prevTopic.title}
                     </div>
                   </Link>
@@ -388,10 +418,10 @@ export default async function TopicPage(props: TopicPageProps) {
                 {nextTopic ? (
                   <Link
                     href={`/topics/${nextTopic.slug}`}
-                    className="flex-1 block rounded-lg border-2 border-gray-200 bg-white p-5 hover:border-purple-400 hover:shadow-md transition-all text-right group"
+                    className="flex-1 block rounded-lg border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-5 hover:border-purple-400 hover:shadow-md transition-all text-right group"
                   >
-                    <div className="text-sm text-gray-500 mb-1">Next Topic →</div>
-                    <div className="font-semibold text-gray-900 group-hover:text-purple-700 transition-colors">
+                    <div className="text-sm text-gray-500 dark:text-gray-400 mb-1">Next Topic →</div>
+                    <div className="font-semibold text-gray-900 dark:text-gray-100 group-hover:text-purple-700 dark:group-hover:text-purple-400 transition-colors">
                       {nextTopic.title}
                     </div>
                   </Link>
