@@ -47,7 +47,7 @@ export default function CompetitivePage() {
   const [inQueue, setInQueue] = useState(false)
   const [queueStatus, setQueueStatus] = useState<QueueStatus | null>(null)
   const [selectedMode, setSelectedMode] = useState('SPEED_RACE')
-  const [selectedTopic, setSelectedTopic] = useState<'the-unit-circle' | 'reflection-refraction' | 'derivatives' | 'limits' | 'integrals' | 'algebra' | 'algebra2' | 'sat-punctuation-commas-semicolons' | 'sat-punctuation' | 'cumulative'>('the-unit-circle')
+  const [selectedTopic, setSelectedTopic] = useState<'the-unit-circle' | 'reflection-refraction' | 'derivatives' | 'limits' | 'integrals' | 'algebra' | 'algebra2' | 'sat-punctuation-commas-semicolons' | 'sat-punctuation' | 'parametric-equations' | 'vectors' | 'polar-coordinates' | 'cumulative'>('the-unit-circle')
   const [completedTopics, setCompletedTopics] = useState<string[]>([])
   const [competitiveCategories, setCompetitiveCategories] = useState<Record<string, boolean>>({})
   const [algebra2SubtopicDetails, setAlgebra2SubtopicDetails] = useState<{key: string; label: string}[]>([])
@@ -538,6 +538,75 @@ export default function CompetitivePage() {
                 All Punctuation Rules
               </p>
               {!competitiveCategories['sat-punctuation'] && (
+                <span className="text-xs text-red-500 mt-1 block">Complete the Topic First</span>
+              )}
+            </button>
+
+            <button
+              onClick={() => setSelectedTopic('parametric-equations')}
+              disabled={!competitiveCategories['parametric-equations']}
+              className={`p-5 rounded-xl transition-all ${
+                selectedTopic === 'parametric-equations'
+                  ? 'ring-4 ring-purple-500 bg-white dark:bg-gray-800 shadow-xl'
+                  : 'bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl'
+              } ${
+                !competitiveCategories['parametric-equations']
+                  ? 'opacity-50 cursor-not-allowed'
+                  : 'cursor-pointer'
+              }`}
+            >
+              <div className="text-3xl mb-2">📈</div>
+              <h3 className="text-lg font-bold mb-1">Parametric Equations</h3>
+              <p className="text-xs text-gray-600 dark:text-gray-400">
+                Curves & Eliminating Parameters
+              </p>
+              {!competitiveCategories['parametric-equations'] && (
+                <span className="text-xs text-red-500 mt-1 block">Complete the Topic First</span>
+              )}
+            </button>
+
+            <button
+              onClick={() => setSelectedTopic('vectors')}
+              disabled={!competitiveCategories['vectors']}
+              className={`p-5 rounded-xl transition-all ${
+                selectedTopic === 'vectors'
+                  ? 'ring-4 ring-purple-500 bg-white dark:bg-gray-800 shadow-xl'
+                  : 'bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl'
+              } ${
+                !competitiveCategories['vectors']
+                  ? 'opacity-50 cursor-not-allowed'
+                  : 'cursor-pointer'
+              }`}
+            >
+              <div className="text-3xl mb-2">➡️</div>
+              <h3 className="text-lg font-bold mb-1">Vectors</h3>
+              <p className="text-xs text-gray-600 dark:text-gray-400">
+                Magnitude, Dot Product & More
+              </p>
+              {!competitiveCategories['vectors'] && (
+                <span className="text-xs text-red-500 mt-1 block">Complete the Topic First</span>
+              )}
+            </button>
+
+            <button
+              onClick={() => setSelectedTopic('polar-coordinates')}
+              disabled={!competitiveCategories['polar-coordinates']}
+              className={`p-5 rounded-xl transition-all ${
+                selectedTopic === 'polar-coordinates'
+                  ? 'ring-4 ring-purple-500 bg-white dark:bg-gray-800 shadow-xl'
+                  : 'bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl'
+              } ${
+                !competitiveCategories['polar-coordinates']
+                  ? 'opacity-50 cursor-not-allowed'
+                  : 'cursor-pointer'
+              }`}
+            >
+              <div className="text-3xl mb-2">🌀</div>
+              <h3 className="text-lg font-bold mb-1">Polar Coordinates</h3>
+              <p className="text-xs text-gray-600 dark:text-gray-400">
+                Polar Curves & Conversions
+              </p>
+              {!competitiveCategories['polar-coordinates'] && (
                 <span className="text-xs text-red-500 mt-1 block">Complete the Topic First</span>
               )}
             </button>

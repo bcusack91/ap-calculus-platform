@@ -3315,7 +3315,6 @@ const slugAliases: Record<string, string> = {
   'polynomial-functions-end-behavior-precalc': 'polynomial-functions-precalc',
   'logarithmic-functions-equations-precalc': 'logarithmic-functions-precalc',
   'trigonometric-identities': 'trigonometric-identities-precalc',
-  'parametric-equations-vectors-precalc': 'parametric-equations-precalc',
 }
 
 function resolveSlug(topicSlug: string): string {

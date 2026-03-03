@@ -9,6 +9,9 @@ import { getAlgebra2Questions, getUnlockedAlgebra2Subtopics } from '@/data/compe
 import { getNegativeNumbersQuestions } from '@/data/competitive-questions/negative-numbers-bank'
 import { getSatPunctuationQuestions } from '@/data/competitive-questions/sat-punctuation-bank'
 import { getSatPunctuationGeneralQuestions } from '@/data/competitive-questions/sat-punctuation-general-bank'
+import { getParametricQuestions } from '@/data/competitive-questions/parametric-equations-bank'
+import { getVectorQuestions } from '@/data/competitive-questions/vectors-bank'
+import { getPolarQuestions } from '@/data/competitive-questions/polar-coordinates-bank'
 
 interface UnitCirclePosition {
   angle: number;
@@ -137,6 +140,9 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
     'negative-numbers-grade6': getNegativeNumbersQuestions as unknown as (count?: number) => OptionQuestion[],
     'sat-punctuation-commas-semicolons': getSatPunctuationQuestions as unknown as (count?: number) => OptionQuestion[],
     'sat-punctuation': getSatPunctuationGeneralQuestions as unknown as (count?: number) => OptionQuestion[],
+    'parametric-equations': getParametricQuestions as unknown as (count?: number) => OptionQuestion[],
+    'vectors': getVectorQuestions as unknown as (count?: number) => OptionQuestion[],
+    'polar-coordinates': getPolarQuestions as unknown as (count?: number) => OptionQuestion[],
   }
 
   if (topicSlug && topicSlug in mcqBanks) {
@@ -284,6 +290,27 @@ function generateCumulativeQuestions(totalQuestions: number, completedTopics?: s
     return { id: i, question: q.question, options: shuffled.options, correctAnswer: shuffled.correctAnswer, answerIndex: shuffled.answerIndex, explanation: q.explanation, difficulty: q.difficulty, type: 'multiple-choice' } as MatchQuestion
   })
   allBankQuestions.push(...a2Questions)
+
+  // Parametric equations
+  const paramQuestions = getParametricQuestions(1).map((q, i) => {
+    const shuffled = shuffleOptions(q as unknown as OptionQuestion)
+    return { id: i, question: q.question, options: shuffled.options, correctAnswer: shuffled.correctAnswer, answerIndex: shuffled.answerIndex, explanation: q.explanation, difficulty: q.difficulty, type: 'multiple-choice' } as MatchQuestion
+  })
+  allBankQuestions.push(...paramQuestions)
+
+  // Vectors
+  const vecQuestions = getVectorQuestions(1).map((q, i) => {
+    const shuffled = shuffleOptions(q as unknown as OptionQuestion)
+    return { id: i, question: q.question, options: shuffled.options, correctAnswer: shuffled.correctAnswer, answerIndex: shuffled.answerIndex, explanation: q.explanation, difficulty: q.difficulty, type: 'multiple-choice' } as MatchQuestion
+  })
+  allBankQuestions.push(...vecQuestions)
+
+  // Polar coordinates
+  const polarQuestions = getPolarQuestions(1).map((q, i) => {
+    const shuffled = shuffleOptions(q as unknown as OptionQuestion)
+    return { id: i, question: q.question, options: shuffled.options, correctAnswer: shuffled.correctAnswer, answerIndex: shuffled.answerIndex, explanation: q.explanation, difficulty: q.difficulty, type: 'multiple-choice' } as MatchQuestion
+  })
+  allBankQuestions.push(...polarQuestions)
 
   questions.push(...allBankQuestions)
 

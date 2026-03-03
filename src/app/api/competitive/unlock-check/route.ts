@@ -105,6 +105,15 @@ export async function GET() {
       'sat-punctuation': grantAllCategories || grantedCategories.has('sat-punctuation') || completedTopicSlugs.some(s =>
         s.includes('sat-punctuation')
       ),
+      'parametric-equations': grantAllCategories || grantedCategories.has('parametric-equations') || completedTopicSlugs.some(s =>
+        s.includes('parametric-equations') || s.includes('parametric-equations-precalc')
+      ),
+      'vectors': grantAllCategories || grantedCategories.has('vectors') || completedTopicSlugs.some(s =>
+        s.includes('vectors-two-dimensions') || s.includes('vectors-in-plane') || s.includes('vector')
+      ),
+      'polar-coordinates': grantAllCategories || grantedCategories.has('polar-coordinates') || completedTopicSlugs.some(s =>
+        s.includes('polar-coordinates') || s.includes('polar-coord')
+      ),
     }
 
     // Compute which specific Algebra 2 subtopics are unlocked
