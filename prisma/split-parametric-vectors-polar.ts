@@ -498,11 +498,9 @@ Multiply by $r$ or use identities to introduce $x$, $y$, $r^2$.
 
 ## Symmetry Tests
 
-| Symmetry | Test |
-|----------|------|
-| Polar axis ($x$-axis) | Replace $\\theta$ with $-\\theta$ |
-| Line $\\theta = \\pi/2$ ($y$-axis) | Replace $\\theta$ with $\\pi - \\theta$ |
-| Pole (origin) | Replace $r$ with $-r$ |
+- **Polar axis** ($x$-axis): Replace $\\theta$ with $-\\theta$
+- **Line** $\\theta = \\pi/2$ ($y$-axis): Replace $\\theta$ with $\\pi - \\theta$
+- **Pole** (origin): Replace $r$ with $-r$
 
 ---
 
