@@ -70,7 +70,27 @@ export default async function CoursePage({ params }: CoursePageProps) {
     notFound()
   }
 
-  const totalTopics = course.categories.reduce((sum, cat) => sum + cat.topics.length, 0)
+  // AP Calculus BC is a superset of AB — include AB categories as foundation
+  let abCategories: typeof course.categories = []
+  if (slug === 'ap-calculus-bc') {
+    const abCourse = await prisma.course.findUnique({
+      where: { slug: 'ap-calculus-ab' },
+      include: {
+        categories: {
+          include: {
+            topics: { orderBy: { order: 'asc' } }
+          },
+          orderBy: { order: 'asc' }
+        }
+      }
+    })
+    if (abCourse) {
+      abCategories = abCourse.categories
+    }
+  }
+
+  const allCategories = [...abCategories, ...course.categories]
+  const totalTopics = allCategories.reduce((sum, cat) => sum + cat.topics.length, 0)
 
   // Map course colors to Tailwind classes
   const colorMap: Record<string, { bg: string; gradient: string }> = {
@@ -104,7 +124,7 @@ export default async function CoursePage({ params }: CoursePageProps) {
               url: 'https://www.studymondo.com',
             },
             numberOfCredits: totalTopics,
-            hasCourseInstance: course.categories.map((cat) => ({
+            hasCourseInstance: allCategories.map((cat) => ({
               '@type': 'CourseInstance',
               name: cat.name,
               description: cat.description,
@@ -126,11 +146,16 @@ export default async function CoursePage({ params }: CoursePageProps) {
               <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">{course.description}</p>
               <div className="flex gap-6 text-sm text-gray-600 dark:text-gray-400">
                 <div>
-                  <span className="font-semibold">{course.categories.length}</span> Categories
+                  <span className="font-semibold">{allCategories.length}</span> Categories
                 </div>
                 <div>
                   <span className="font-semibold">{totalTopics}</span> Topics
                 </div>
+                {abCategories.length > 0 && (
+                  <div className="text-violet-600 dark:text-violet-400 font-medium">
+                    Includes all AB + BC content
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -141,21 +166,27 @@ export default async function CoursePage({ params }: CoursePageProps) {
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Course Overview</h2>
           <div className="prose prose-lg max-w-none text-gray-700 dark:text-gray-300">
             <p>
-              This {course.name} course on Study Mondo covers {totalTopics} topics organized across {course.categories.length} categories. 
+              This {course.name} course on Study Mondo covers {totalTopics} topics organized across {allCategories.length} categories. 
               Each topic includes detailed written explanations, worked examples, practice problems with step-by-step solutions, 
               flashcards for review, and interactive lessons to help you master the material.
             </p>
-            {course.categories.length > 0 && (
+            {abCategories.length > 0 && (
+              <p className="text-violet-700 dark:text-violet-300 font-medium">
+                Since AP Calculus BC is a superset of AB, this page includes all Calculus AB topics as your foundation, 
+                followed by the BC-exclusive topics.
+              </p>
+            )}
+            {allCategories.length > 0 && (
               <div className="mt-4">
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">What You&apos;ll Learn</h3>
                 <ul className="list-disc pl-6 space-y-1">
-                  {course.categories.slice(0, 8).map((cat) => (
+                  {allCategories.slice(0, 12).map((cat) => (
                     <li key={cat.id}>
                       <strong>{cat.name}</strong>{cat.description ? ` — ${cat.description}` : ''} ({cat.topics.length} {cat.topics.length === 1 ? 'topic' : 'topics'})
                     </li>
                   ))}
-                  {course.categories.length > 8 && (
-                    <li>...and {course.categories.length - 8} more categories</li>
+                  {allCategories.length > 12 && (
+                    <li>...and {allCategories.length - 12} more categories</li>
                   )}
                 </ul>
               </div>
@@ -167,8 +198,84 @@ export default async function CoursePage({ params }: CoursePageProps) {
         </div>
 
         {/* Categories Grid */}
-        {course.categories.length > 0 ? (
+        {allCategories.length > 0 ? (
           <div className="space-y-12">
+            {/* AB Foundation Section (only shown on BC page) */}
+            {abCategories.length > 0 && (
+              <>
+                <div className="flex items-center gap-4" id="ab-foundation">
+                  <div className="flex items-center gap-3 bg-purple-50 dark:bg-purple-900/30 rounded-full px-6 py-2 border border-purple-200 dark:border-purple-700">
+                    <span className="text-2xl">∫</span>
+                    <h2 className="text-xl font-bold text-purple-700 dark:text-purple-300">Calculus AB Foundation</h2>
+                  </div>
+                  <div className="flex-1 h-px bg-purple-200 dark:bg-purple-800" />
+                </div>
+                {abCategories.map((category) => (
+                  <div key={category.id} className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 p-8 shadow-sm ring-1 ring-purple-100 dark:ring-purple-900/50">
+                    <div className="flex items-center justify-between mb-6">
+                      <div className="flex items-center gap-3">
+                        {category.icon && (
+                          <span className="text-3xl">{category.icon}</span>
+                        )}
+                        <div>
+                          <Link 
+                            href={`/categories/${category.slug}`}
+                            className="text-2xl font-bold text-gray-900 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+                          >
+                            {category.name}
+                          </Link>
+                          {category.description && (
+                            <p className="text-gray-600 dark:text-gray-400 mt-1">{category.description}</p>
+                          )}
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <span className="text-xs font-medium text-purple-600 dark:text-purple-400 bg-purple-50 dark:bg-purple-900/30 px-2 py-1 rounded-full">AB</span>
+                        <Link
+                          href={`/categories/${category.slug}`}
+                          className="text-sm text-purple-600 hover:text-purple-700 font-medium whitespace-nowrap"
+                        >
+                          View All →
+                        </Link>
+                      </div>
+                    </div>
+
+                    {category.topics.length > 0 ? (
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        {category.topics.map((topic) => (
+                          <Link
+                            key={topic.id}
+                            href={`/topics/${topic.slug}`}
+                            className="group block p-4 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-600 hover:shadow-md transition-all"
+                          >
+                            <h3 className="font-semibold text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors mb-2">
+                              {topic.title}
+                            </h3>
+                            <p className="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">
+                              {topic.description}
+                            </p>
+                          </Link>
+                        ))}
+                      </div>
+                    ) : (
+                      <div className="text-center py-12 text-gray-500">
+                        <p className="text-lg">Topics coming soon for this category!</p>
+                      </div>
+                    )}
+                  </div>
+                ))}
+
+                {/* Divider between AB and BC sections */}
+                <div className="flex items-center gap-4" id="bc-exclusive">
+                  <div className="flex items-center gap-3 bg-violet-50 dark:bg-violet-900/30 rounded-full px-6 py-2 border border-violet-200 dark:border-violet-700">
+                    <span className="text-2xl">∬</span>
+                    <h2 className="text-xl font-bold text-violet-700 dark:text-violet-300">BC-Exclusive Topics</h2>
+                  </div>
+                  <div className="flex-1 h-px bg-violet-200 dark:bg-violet-800" />
+                </div>
+              </>
+            )}
+
             {course.categories.map((category) => (
               <div key={category.id} className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 p-8 shadow-sm">
                 <div className="flex items-center justify-between mb-6">
