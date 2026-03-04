@@ -1,20 +1,16 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import Link from 'next/link'
 import { generateGridInProblems, checkGridInAnswer, type GridInProblem } from '@/data/sat-grid-in'
 
 export default function SATGridInPage() {
-  const [problems, setProblems] = useState<GridInProblem[]>([])
+  const [problems, setProblems] = useState<GridInProblem[]>(() => generateGridInProblems(10))
   const [currentIdx, setCurrentIdx] = useState(0)
   const [inputValue, setInputValue] = useState('')
   const [result, setResult] = useState<'correct' | 'incorrect' | null>(null)
   const [score, setScore] = useState({ correct: 0, total: 0 })
   const [showExplanation, setShowExplanation] = useState(false)
-
-  useEffect(() => {
-    setProblems(generateGridInProblems(10))
-  }, [])
 
   const current = problems[currentIdx]
 
