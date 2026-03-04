@@ -74,6 +74,17 @@ export default function RemediationStation({
     }
   }
 
+  const getLevelGradient = (level: string) => {
+    const gradients: Record<string, string> = {
+      red: 'from-red-500 to-red-600',
+      orange: 'from-orange-500 to-orange-600',
+      yellow: 'from-yellow-500 to-yellow-600',
+      blue: 'from-blue-500 to-blue-600',
+      gray: 'from-gray-500 to-gray-600',
+    }
+    return gradients[getLevelColor(level)] || gradients.gray
+  }
+
   const getLevelEmoji = (level: string) => {
     switch (level) {
       case 'foundational': return '🔧'
@@ -84,7 +95,6 @@ export default function RemediationStation({
     }
   }
 
-  const color = getLevelColor(remediationPath.level)
   const emoji = getLevelEmoji(remediationPath.level)
 
   return (
@@ -92,7 +102,7 @@ export default function RemediationStation({
       <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden flex flex-col">
         
         {/* Header */}
-        <div className={`bg-gradient-to-r from-${color}-500 to-${color}-600 p-6 text-white`}>
+        <div className={`bg-gradient-to-r ${getLevelGradient(remediationPath.level)} p-6 text-white`}>
           <div className="flex items-center gap-4 mb-4">
             <div className="text-5xl">{emoji}</div>
             <div className="flex-1">

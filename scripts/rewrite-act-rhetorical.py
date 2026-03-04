@@ -5,7 +5,7 @@ Output directory: src/data/interactive-lessons/
 File pattern:    act-act-english-rhetorical-act-part{1..7}.ts
 """
 
-import os, textwrap
+import os, re, textwrap
 
 OUT_DIR = os.path.join(
     os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
@@ -15,7 +15,78 @@ OUT_DIR = os.path.join(
 SLUG = "act-english-rhetorical-act"
 
 
+def _fix_ts_apostrophes(body: str) -> str:
+    """Escape apostrophes inside single-quoted TypeScript strings.
+
+    Scans character-by-character to correctly track backtick template
+    literals (where apostrophes are fine) vs. single-quoted strings
+    (where mid-word apostrophes must be escaped).
+
+    A quote character is a mid-string apostrophe IFF it appears between
+    two word characters (e.g. paragraph's, doesn't, Curie's).
+    """
+    chars = list(body)
+    result: list[str] = []
+    i = 0
+    n = len(chars)
+    in_backtick = False
+
+    while i < n:
+        ch = chars[i]
+
+        # Toggle backtick template literal mode
+        if ch == '`' and (i == 0 or chars[i - 1] != '\\'):
+            in_backtick = not in_backtick
+            result.append(ch)
+            i += 1
+            continue
+
+        # Inside a template literal — pass through unchanged
+        if in_backtick:
+            result.append(ch)
+            i += 1
+            continue
+
+        # Start of a single-quoted string
+        if ch == "'":
+            # Collect the entire single-quoted string
+            buf = ["'"]
+            i += 1
+            while i < n and chars[i] != '\n':
+                c = chars[i]
+                if c == '\\' and i + 1 < n:
+                    # Already-escaped character — keep as-is
+                    buf.append(c)
+                    buf.append(chars[i + 1])
+                    i += 2
+                    continue
+                if c == "'":
+                    # Mid-string apostrophe: word char before AND after
+                    prev_char = chars[i - 1] if i > 0 else ''
+                    next_char = chars[i + 1] if i + 1 < n else ''
+                    if prev_char.isalpha() and next_char.isalpha():
+                        # This is a contraction/possessive — escape it
+                        buf.append("\\'")
+                        i += 1
+                        continue
+                    else:
+                        # This is the closing quote
+                        buf.append("'")
+                        i += 1
+                        break
+                buf.append(c)
+                i += 1
+            result.extend(buf)
+            continue
+
+        result.append(ch)
+        i += 1
+
+    return ''.join(result)
+
+
 def write(n: int, body: str):
+    body = _fix_ts_apostrophes(body)
     path = os.path.join(OUT_DIR, f"act-{SLUG}-part{n}.ts")
     with open(path, "w") as f:
         f.write(body)

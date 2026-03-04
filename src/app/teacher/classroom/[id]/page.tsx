@@ -211,6 +211,16 @@ export default function ClassroomDetailPage() {
     setTimeout(() => setCopiedCode(false), 2000)
   }
 
+  const copyJoinLink = () => {
+    if (!classroom) return
+    const link = `${window.location.origin}/join-class?code=${classroom.joinCode}`
+    navigator.clipboard.writeText(link)
+    setCopiedCode(true)
+    setTimeout(() => setCopiedCode(false), 2000)
+  }
+
+  const [showQR, setShowQR] = useState(false)
+
   const removeMember = async (memberId: string) => {
     if (!confirm('Remove this student from the classroom?')) return
     const res = await fetch(`/api/teacher/classrooms/${classroomId}/members/${memberId}`, {
@@ -412,7 +422,7 @@ export default function ClassroomDetailPage() {
               <span>{activeMembers.length} students</span>
             </div>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 flex-wrap">
             <div className="bg-white dark:bg-gray-800 rounded-xl px-4 py-2 flex items-center gap-2 shadow">
               <span className="text-xs text-gray-500">Join Code:</span>
               <span className="font-mono font-bold text-lg text-blue-600">{classroom.joinCode}</span>
@@ -424,8 +434,48 @@ export default function ClassroomDetailPage() {
                 {copiedCode ? '✓' : '📋'}
               </button>
             </div>
+            <button
+              onClick={copyJoinLink}
+              className="px-3 py-2 text-xs font-medium bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-lg hover:bg-blue-100 dark:hover:bg-blue-900/50 transition-colors"
+              title="Copy shareable invite link"
+            >
+              🔗 Copy Link
+            </button>
+            <button
+              onClick={() => setShowQR(!showQR)}
+              className="px-3 py-2 text-xs font-medium bg-purple-50 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 rounded-lg hover:bg-purple-100 dark:hover:bg-purple-900/50 transition-colors"
+              title="Show QR code for students to scan"
+            >
+              📱 QR Code
+            </button>
           </div>
         </div>
+
+        {/* QR Code Modal */}
+        {showQR && classroom && (
+          <div className="mb-6 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6 shadow-sm text-center max-w-sm mx-auto">
+            <h3 className="font-bold text-gray-900 dark:text-white mb-3">Scan to Join</h3>
+            <div className="bg-white p-4 rounded-lg inline-block mb-3">
+              {/* Simple QR code using a public API — no npm dependency needed */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={`https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(`${typeof window !== 'undefined' ? window.location.origin : 'https://www.studymondo.com'}/join-class?code=${classroom.joinCode}`)}`}
+                alt={`QR code to join classroom ${classroom.name}`}
+                width={200}
+                height={200}
+                className="mx-auto"
+              />
+            </div>
+            <p className="text-sm text-gray-500 mb-1">Join Code: <strong className="font-mono text-blue-600">{classroom.joinCode}</strong></p>
+            <p className="text-xs text-gray-400">Students can scan this or go to studymondo.com/join-class</p>
+            <button
+              onClick={() => setShowQR(false)}
+              className="mt-3 text-xs text-gray-500 hover:text-gray-700 transition-colors"
+            >
+              Close
+            </button>
+          </div>
+        )}
 
         {/* Tabs */}
         <div className="flex gap-1 mb-6 bg-white dark:bg-gray-800 rounded-xl p-1 shadow overflow-x-auto">
@@ -679,7 +729,20 @@ export default function ClassroomDetailPage() {
         {/* Performance Tab */}
         {activeTab === 'performance' && (
           <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
-            <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">📊 Student Performance</h2>
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="text-xl font-bold text-gray-900 dark:text-white">📊 Student Performance</h2>
+              {perfData && perfData.students.length > 0 && (
+                <div className="flex items-center gap-2">
+                  <a
+                    href={`/api/teacher/classrooms/${classroomId}/export?format=csv`}
+                    download
+                    className="px-3 py-1.5 text-xs font-medium bg-green-50 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-lg hover:bg-green-100 dark:hover:bg-green-900/50 transition-colors"
+                  >
+                    📥 Export CSV
+                  </a>
+                </div>
+              )}
+            </div>
             {loadingPerf ? (
               <div className="text-center py-12 text-gray-500">Loading performance data...</div>
             ) : !perfData ? (

@@ -61,3 +61,91 @@ export function parseBody<T>(
   }
   return { success: true, data: result.data }
 }
+
+// ─── Study Plan Schemas ────────────────────────────────────────────────
+export const createStudyPlanSchema = z.object({
+  title: z.string().min(1, 'Title is required').max(200),
+  examDate: z.string().nullable().optional(),
+  goalType: z.string().optional().default('CUSTOM'),
+  courseSlug: z.string().nullable().optional(),
+  targetScore: z.union([z.string(), z.number()]).nullable().optional(),
+  tasks: z.array(z.object({
+    title: z.string().min(1),
+    topicSlug: z.string().optional(),
+    type: z.string().optional().default('LESSON'),
+    dueDate: z.string().optional(),
+  })).optional(),
+})
+
+export const updateStudyPlanSchema = z.object({
+  id: z.string().min(1, 'Plan ID is required'),
+  title: z.string().min(1).max(200).optional(),
+  examDate: z.string().nullable().optional(),
+  goalType: z.string().optional(),
+  targetScore: z.union([z.string(), z.number()]).nullable().optional(),
+  isActive: z.boolean().optional(),
+})
+
+// ─── Study Task Schemas ────────────────────────────────────────────────
+export const updateStudyTaskSchema = z.object({
+  id: z.string().min(1, 'Task ID is required'),
+  completed: z.boolean().optional(),
+  title: z.string().optional(),
+  dueDate: z.string().nullable().optional(),
+  sortOrder: z.number().optional(),
+})
+
+export const createStudyTaskSchema = z.object({
+  planId: z.string().min(1, 'Plan ID is required'),
+  title: z.string().min(1, 'Title is required'),
+  topicSlug: z.string().optional(),
+  type: z.string().optional().default('CUSTOM'),
+  dueDate: z.string().optional(),
+})
+
+// ─── Challenge Schemas ─────────────────────────────────────────────────
+export const joinChallengeSchema = z.object({
+  challengeId: z.string().min(1, 'Challenge ID is required'),
+})
+
+export const updateChallengeProgressSchema = z.object({
+  challengeId: z.string().min(1, 'Challenge ID is required'),
+  increment: z.number().int().positive().optional().default(1),
+})
+
+// ─── Notes Schema ──────────────────────────────────────────────────────
+export const upsertNoteSchema = z.object({
+  topicSlug: z.string().min(1, 'Topic slug is required'),
+  content: z.string().max(50_000, 'Note too long (max 50,000 chars)'),
+})
+
+// ─── Bookmark Schemas ──────────────────────────────────────────────────
+export const createBookmarkSchema = z.object({
+  topicSlug: z.string().min(1, 'Topic slug is required'),
+  title: z.string().min(1, 'Title is required'),
+  part: z.number().int().min(1).optional().default(1),
+})
+
+export const deleteBookmarkSchema = z.object({
+  topicSlug: z.string().min(1, 'Topic slug is required'),
+  part: z.number().int().min(1).optional().default(1),
+})
+
+// ─── Curriculum Schemas ────────────────────────────────────────────────
+export const createCurriculumSchema = z.object({
+  classroomId: z.string().min(1, 'Classroom ID is required'),
+  title: z.string().min(1, 'Title is required').max(200),
+  description: z.string().optional(),
+  startDate: z.string().optional(),
+  endDate: z.string().optional(),
+  weeks: z.array(z.object({
+    weekNum: z.number().int().min(1),
+    title: z.string().optional(),
+    notes: z.string().optional(),
+    items: z.array(z.object({
+      title: z.string().min(1),
+      topicSlug: z.string().optional(),
+      type: z.string().optional().default('LESSON'),
+    })).optional(),
+  })).optional(),
+})

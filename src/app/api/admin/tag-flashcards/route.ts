@@ -1,16 +1,11 @@
 import { NextResponse } from 'next/server'
-import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
+import { requireAdmin } from '@/lib/auth-guard'
 
 export async function POST() {
   try {
-    const session = await auth()
-    if (!session?.user || session.user.role !== 'ADMIN') {
-      return NextResponse.json(
-        { error: 'Unauthorized — admin access required' },
-        { status: 403 }
-      )
-    }
+    const authResult = await requireAdmin()
+    if ('error' in authResult) return authResult.error
 
     // Find the reflection-refraction topic
     const topic = await prisma.topic.findUnique({

@@ -1,15 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { adminUserUpdateSchema, parseBody } from '@/lib/validations'
+import { requireAdmin } from '@/lib/auth-guard'
 
 // GET /api/admin/users?search=email
 export async function GET(request: NextRequest) {
   try {
-    const session = await auth()
-    if (!session?.user || session.user.role !== 'ADMIN') {
-      return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
-    }
+    const authResult = await requireAdmin()
+    if ('error' in authResult) return authResult.error
 
     const search = request.nextUrl.searchParams.get('search') || ''
     if (!search || search.length < 2) {
@@ -45,10 +43,9 @@ export async function GET(request: NextRequest) {
 // PUT /api/admin/users  { userId, role }
 export async function PUT(request: NextRequest) {
   try {
-    const session = await auth()
-    if (!session?.user || session.user.role !== 'ADMIN') {
-      return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
-    }
+    const authResult = await requireAdmin()
+    if ('error' in authResult) return authResult.error
+    const { user: currentUser } = authResult
 
     const body = await request.json()
     const parsed = parseBody(adminUserUpdateSchema, body)
@@ -58,7 +55,7 @@ export async function PUT(request: NextRequest) {
     const { userId, role } = parsed.data
 
     // Prevent demoting yourself
-    if (userId === session.user.id && role !== 'ADMIN') {
+    if (userId === currentUser.id && role !== 'ADMIN') {
       return NextResponse.json({ error: 'Cannot change your own role' }, { status: 400 })
     }
 

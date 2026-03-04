@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { prisma } from '@/lib/prisma'
 import type { Metadata } from 'next'
+import { courseMeta, defaultCourseMeta } from '@/data/course-metadata'
 
 export const revalidate = 3600 // ISR: revalidate every hour
 
@@ -24,80 +25,6 @@ export default async function TopicsPage() {
     orderBy: { order: 'asc' }
   })
 
-  // Course metadata for display
-  const courseInfo: Record<string, { icon: string; gradient: string; description: string }> = {
-    'ap-calculus-ab': {
-      icon: '∫',
-      gradient: 'from-purple-600 to-violet-600',
-      description: 'Limits, derivatives, integrals, and applications'
-    },
-    'ap-calculus-bc': {
-      icon: '∬',
-      gradient: 'from-violet-600 to-purple-600',
-      description: 'Series, parametric, polar, and advanced integration'
-    },
-    'ap-precalculus': {
-      icon: '📐',
-      gradient: 'from-blue-600 to-cyan-600',
-      description: 'Functions, trigonometry, vectors, and complex numbers'
-    },
-    'ap-physics-1': {
-      icon: '⚛️',
-      gradient: 'from-green-600 to-emerald-600',
-      description: 'Mechanics, waves, and basic circuits'
-    },
-    'ap-physics-2': {
-      icon: '🔬',
-      gradient: 'from-teal-600 to-cyan-600',
-      description: 'Fluids, thermodynamics, E&M, and modern physics'
-    },
-    'ap-physics-c-mechanics': {
-      icon: '🎯',
-      gradient: 'from-indigo-600 to-purple-600',
-      description: 'Calculus-based mechanics and kinematics'
-    },
-    'ap-physics-c-em': {
-      icon: '⚡',
-      gradient: 'from-violet-600 to-fuchsia-600',
-      description: 'Electricity, magnetism, and electromagnetic induction'
-    },
-    'ap-chemistry': {
-      icon: '🧪',
-      gradient: 'from-orange-600 to-red-600',
-      description: 'Atomic structure, bonding, reactions, and equilibrium'
-    },
-    'ap-biology': {
-      icon: '🧬',
-      gradient: 'from-rose-600 to-pink-600',
-      description: 'Cells, genetics, evolution, and ecology'
-    },
-    'ap-psychology': {
-      icon: '🧠',
-      gradient: 'from-amber-600 to-orange-600',
-      description: 'Behavior, cognition, development, and disorders'
-    },
-    'organic-chemistry': {
-      icon: '⚗️',
-      gradient: 'from-lime-600 to-green-600',
-      description: 'Structure, reactions, synthesis, and spectroscopy'
-    },
-    'sat-prep': {
-      icon: '📝',
-      gradient: 'from-blue-600 to-indigo-600',
-      description: 'Math, reading, writing, and test strategies for the SAT'
-    },
-    'act-prep': {
-      icon: '📋',
-      gradient: 'from-red-600 to-rose-600',
-      description: 'English, math, reading, science, and test strategies for the ACT'
-    },
-    'mcat-prep': {
-      icon: '🏥',
-      gradient: 'from-emerald-600 to-teal-600',
-      description: 'Chem/Phys, CARS, Bio/Biochem, and Psych/Soc for the MCAT'
-    }
-  }
-
   return (
     <div className="container py-10">
       <div className="mx-auto max-w-7xl">
@@ -110,10 +37,11 @@ export default async function TopicsPage() {
 
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 mt-8">
           {courses.map((course) => {
-            const info = courseInfo[course.slug] || { 
-              icon: '📚', 
-              gradient: 'from-gray-600 to-gray-800',
-              description: course.description 
+            const meta = courseMeta[course.slug] ?? defaultCourseMeta
+            const info = {
+              icon: meta.icon,
+              gradient: meta.gradient,
+              description: meta.description || course.description,
             }
             
             return (

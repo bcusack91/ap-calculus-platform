@@ -278,13 +278,13 @@ export default function CompetitivePage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 p-6">
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 px-4 py-6 sm:p-6">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8">
-          <div className="flex justify-between items-center mb-4">
-            <div></div> {/* Spacer for centering */}
-            <h1 className="text-5xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-3 mb-4">
+            <div className="hidden sm:block" /> {/* Spacer for centering */}
+            <h1 className="text-3xl sm:text-5xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
               Competitive Mode
             </h1>
             <button
@@ -294,30 +294,30 @@ export default function CompetitivePage() {
               ✏️ Customize Avatar
             </button>
           </div>
-          <p className="text-xl text-gray-600 dark:text-gray-400">
+          <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400">
             Challenge other students and climb the ranks!
           </p>
         </div>
 
         {/* Profile Card */}
         {profile && (
-          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-xl p-8 mb-8">
-            <div className="flex items-center justify-between">
+          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-xl p-5 sm:p-8 mb-8">
+            <div className="grid grid-cols-3 gap-4 text-center">
               <div>
-                <h2 className="text-3xl font-bold mb-2">{profile.rank}</h2>
-                <p className="text-gray-600 dark:text-gray-400">Current Rank</p>
+                <h2 className="text-xl sm:text-3xl font-bold mb-1">{profile.rank}</h2>
+                <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">Current Rank</p>
               </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-purple-600 dark:text-purple-400">
+              <div>
+                <div className="text-2xl sm:text-4xl font-bold text-purple-600 dark:text-purple-400">
                   {profile.overallMMR}
                 </div>
-                <p className="text-gray-600 dark:text-gray-400">MMR Rating</p>
+                <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">MMR Rating</p>
               </div>
               <div>
-                <div className="text-3xl font-bold text-green-600">
+                <div className="text-xl sm:text-3xl font-bold text-green-600">
                   {profile.wins}W
                 </div>
-                <div className="text-3xl font-bold text-red-600">
+                <div className="text-xl sm:text-3xl font-bold text-red-600">
                   {profile.losses}L
                 </div>
               </div>

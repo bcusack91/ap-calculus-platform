@@ -7,6 +7,7 @@ import { CookieConsent } from "@/components/cookie-consent";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import AdSenseScript from "@/components/AdSenseScript";
 import { Footer } from "@/components/footer";
+import { organizationJsonLd, websiteJsonLd } from "@/lib/jsonld";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -46,12 +47,21 @@ export const metadata: Metadata = {
     url: "https://www.studymondo.com",
     siteName: "Study Mondo",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Study Mondo — Free AP Study Platform",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Study Mondo — Free AP Study Platform",
     description:
       "Free notes, flashcards, and practice problems for AP Calculus, Physics, Chemistry, and Biology.",
+    images: ["/og-image.png"],
   },
   icons: {
     icon: [
@@ -73,6 +83,15 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* JSON-LD structured data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd()) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd()) }}
+        />
         {/* Prevent flash of wrong theme */}
         <script
           dangerouslySetInnerHTML={{

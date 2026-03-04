@@ -15,6 +15,7 @@ const footerLinks = {
     { name: 'Competitive Mode', href: '/competitive' },
     { name: 'Leaderboard', href: '/leaderboard' },
     { name: 'Search', href: '/search' },
+    { name: 'Pricing', href: '/pricing' },
   ],
   'Company': [
     { name: 'About', href: '/about' },

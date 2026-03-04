@@ -6,11 +6,29 @@ import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import AvatarDisplay from '@/components/AvatarDisplay'
 import { AvatarData } from '@/types/avatar'
+import ProgressRing from '@/components/ProgressRing'
+import AchievementToast from '@/components/AchievementToast'
+import ProgressCharts from '@/components/ProgressCharts'
+import StudyPlanner from '@/components/StudyPlanner'
+import ChallengesWidget from '@/components/ChallengesWidget'
+import FlashcardStudySession from '@/components/FlashcardStudySession'
 
 interface BookmarkEntry {
   id: string
+  topicSlug: string
   title: string
-  savedAt: string
+  part: number
+  createdAt: string
+}
+
+interface AchievementData {
+  id: string
+  name: string
+  description: string
+  icon: string
+  category: string
+  unlocked: boolean
+  unlockedAt: string | null
 }
 
 interface DashboardData {
@@ -56,68 +74,139 @@ export default function DashboardPage() {
   const [verificationSent, setVerificationSent] = useState(false)
   const [sendingVerification, setSendingVerification] = useState(false)
   const [pendingAssignments, setPendingAssignments] = useState(0)
+  const [achievements, setAchievements] = useState<AchievementData[]>([])
+  const [achievementStats, setAchievementStats] = useState({ unlocked: 0, total: 0 })
+  const [newAchievements, setNewAchievements] = useState<string[]>([])
+
   useEffect(() => {
     if (status === 'unauthenticated') {
       router.push('/auth/signin?callbackUrl=/dashboard')
       return
     }
     if (status === 'authenticated') {
-      fetchDashboard()
-      fetchAvatar()
-      fetchAssignments()
+      fetchAll()
     }
-    // Load bookmarks from localStorage
-    try {
-      const saved = localStorage.getItem('studymondo-bookmarks')
-      if (saved) setBookmarks(JSON.parse(saved))
-    } catch {}
-  }, [status, router])
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [status])
 
-  const fetchDashboard = async () => {
-    try {
-      const res = await fetch('/api/dashboard')
-      if (res.ok) {
-        setData(await res.json())
-      }
-    } catch (err) {
-      console.error('Failed to load dashboard:', err)
-    } finally {
-      setLoading(false)
+  const fetchAll = async () => {
+    const [dashRes, avatarRes, assignRes, bookmarkRes, achieveRes, onboardRes] = await Promise.allSettled([
+      fetch('/api/dashboard'),
+      fetch('/api/user/avatar'),
+      fetch('/api/student/assignments'),
+      fetch('/api/bookmarks'),
+      fetch('/api/achievements'),
+      fetch('/api/onboarding'),
+    ])
+
+    if (dashRes.status === 'fulfilled' && dashRes.value.ok) {
+      setData(await dashRes.value.json())
     }
-  }
-
-  const fetchAvatar = async () => {
-    try {
-      const res = await fetch('/api/user/avatar')
-      const d = await res.json()
+    if (avatarRes.status === 'fulfilled' && avatarRes.value.ok) {
+      const d = await avatarRes.value.json()
       setAvatarData(d.avatarData)
-    } catch {
-      // ignore
     }
-  }
-
-  const fetchAssignments = async () => {
-    try {
-      const res = await fetch('/api/student/assignments')
-      if (res.ok) {
-        const d = await res.json()
-        const pending = (d.assignments || []).filter(
-          (a: { submission: { status: string } }) =>
-            a.submission.status !== 'COMPLETED'
-        ).length
-        setPendingAssignments(pending)
+    if (assignRes.status === 'fulfilled' && assignRes.value.ok) {
+      const d = await assignRes.value.json()
+      const pending = (d.assignments || []).filter(
+        (a: { submission: { status: string } }) => a.submission.status !== 'COMPLETED'
+      ).length
+      setPendingAssignments(pending)
+    }
+    if (bookmarkRes.status === 'fulfilled' && bookmarkRes.value.ok) {
+      const d = await bookmarkRes.value.json()
+      setBookmarks(d.bookmarks || [])
+    }
+    if (achieveRes.status === 'fulfilled' && achieveRes.value.ok) {
+      const d = await achieveRes.value.json()
+      setAchievements(d.achievements || [])
+      setAchievementStats({ unlocked: d.totalUnlocked, total: d.totalAchievements })
+    }
+    if (onboardRes.status === 'fulfilled' && onboardRes.value.ok) {
+      const d = await onboardRes.value.json()
+      if (!d.hasCompletedOnboarding) {
+        router.push('/onboarding')
+        return
       }
-    } catch {
-      // ignore
     }
+
+    // Check for new achievements
+    try {
+      const checkRes = await fetch('/api/achievements', { method: 'POST' })
+      if (checkRes.ok) {
+        const d = await checkRes.json()
+        if (d.newlyUnlocked?.length > 0) {
+          setNewAchievements(d.newlyUnlocked)
+          const refreshRes = await fetch('/api/achievements')
+          if (refreshRes.ok) {
+            const rd = await refreshRes.json()
+            setAchievements(rd.achievements || [])
+            setAchievementStats({ unlocked: rd.totalUnlocked, total: rd.totalAchievements })
+          }
+        }
+      }
+    } catch { /* silent */ }
+
+    setLoading(false)
   }
 
+  const removeBookmark = async (topicSlug: string, part: number) => {
+    setBookmarks((prev) => prev.filter((b) => !(b.topicSlug === topicSlug && b.part === part)))
+    try {
+      await fetch('/api/bookmarks', {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ topicSlug, part }),
+      })
+    } catch { /* silent */ }
+  }
+
+  // Skeleton loading
   if (status === 'loading' || loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900 flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-purple-600 mx-auto mb-4" />
-          <p className="text-gray-600">Loading your dashboard...</p>
+      <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
+        <div className="container py-8 sm:py-12">
+          <div className="flex items-center gap-4 mb-8">
+            <div className="w-14 h-14 rounded-full bg-gray-200 dark:bg-gray-700 animate-pulse" />
+            <div className="space-y-2">
+              <div className="w-48 h-7 bg-gray-200 dark:bg-gray-700 rounded animate-pulse" />
+              <div className="w-32 h-4 bg-gray-200 dark:bg-gray-700 rounded animate-pulse" />
+            </div>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+            {[1, 2, 3, 4].map((i) => (
+              <div key={i} className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-5">
+                <div className="w-16 h-8 bg-gray-200 dark:bg-gray-700 rounded animate-pulse mb-2" />
+                <div className="w-24 h-4 bg-gray-200 dark:bg-gray-700 rounded animate-pulse" />
+              </div>
+            ))}
+          </div>
+          <div className="grid lg:grid-cols-3 gap-8">
+            <div className="lg:col-span-2 space-y-8">
+              {[1, 2].map((i) => (
+                <div key={i} className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6">
+                  <div className="w-40 h-6 bg-gray-200 dark:bg-gray-700 rounded animate-pulse mb-4" />
+                  <div className="space-y-3">
+                    {[1, 2, 3].map((j) => (
+                      <div key={j} className="w-full h-12 bg-gray-200 dark:bg-gray-700 rounded animate-pulse" />
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="space-y-6">
+              {[1, 2].map((i) => (
+                <div key={i} className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6">
+                  <div className="w-32 h-5 bg-gray-200 dark:bg-gray-700 rounded animate-pulse mb-4" />
+                  <div className="space-y-3">
+                    {[1, 2].map((j) => (
+                      <div key={j} className="w-full h-14 bg-gray-200 dark:bg-gray-700 rounded animate-pulse" />
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     )
@@ -141,10 +230,10 @@ export default function DashboardPage() {
 
   const statusColor = (s: string) => {
     switch (s) {
-      case 'MASTERED': return 'text-yellow-700 bg-yellow-100'
-      case 'COMPLETED': return 'text-green-700 bg-green-100'
-      case 'IN_PROGRESS': return 'text-blue-700 bg-blue-100'
-      default: return 'text-gray-600 bg-gray-100'
+      case 'MASTERED': return 'text-yellow-700 bg-yellow-100 dark:text-yellow-300 dark:bg-yellow-900/30'
+      case 'COMPLETED': return 'text-green-700 bg-green-100 dark:text-green-300 dark:bg-green-900/30'
+      case 'IN_PROGRESS': return 'text-blue-700 bg-blue-100 dark:text-blue-300 dark:bg-blue-900/30'
+      default: return 'text-gray-600 bg-gray-100 dark:text-gray-400 dark:bg-gray-700/30'
     }
   }
 
@@ -160,8 +249,20 @@ export default function DashboardPage() {
     return new Date(dateStr).toLocaleDateString()
   }
 
+  const totalTopics = overview?.topicsStarted ?? 0
+  const completionPct = totalTopics > 0
+    ? Math.round(((overview?.topicsCompleted ?? 0) + (overview?.topicsMastered ?? 0)) / totalTopics * 100)
+    : 0
+  const masteryPct = totalTopics > 0
+    ? Math.round((overview?.topicsMastered ?? 0) / totalTopics * 100)
+    : 0
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
+      {newAchievements.length > 0 && (
+        <AchievementToast achievements={newAchievements} onDismiss={() => setNewAchievements([])} />
+      )}
+
       <div className="container py-8 sm:py-12">
         {/* Header */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8">
@@ -175,26 +276,15 @@ export default function DashboardPage() {
             </div>
           </div>
           <div className="flex flex-wrap gap-3">
-            <Link
-              href="/join-class"
-              className="px-4 py-2 text-sm font-medium rounded-lg border border-purple-300 dark:border-purple-600 hover:bg-purple-50 dark:hover:bg-purple-900/20 transition-colors text-purple-700 dark:text-purple-300"
-            >
+            <Link href="/join-class" className="px-4 py-2 text-sm font-medium rounded-lg border border-purple-300 dark:border-purple-600 hover:bg-purple-50 dark:hover:bg-purple-900/20 transition-colors text-purple-700 dark:text-purple-300">
               🏫 Join a Class
             </Link>
-            <Link
-              href="/profile"
-              className="px-4 py-2 text-sm font-medium rounded-lg border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-gray-700 dark:text-gray-300"
-            >
+            <Link href="/profile" className="px-4 py-2 text-sm font-medium rounded-lg border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-gray-700 dark:text-gray-300">
               Edit Profile
             </Link>
-            <Link
-              href="/flashcards/review/dashboard"
-              className="px-4 py-2 text-sm font-medium rounded-lg bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700 transition-all"
-            >
+            <Link href="/flashcards/review/dashboard" className="px-4 py-2 text-sm font-medium rounded-lg bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700 transition-all">
               Review Flashcards {overview && overview.dueFlashcards > 0 && (
-                <span className="ml-1 px-2 py-0.5 bg-white/20 rounded-full text-xs">
-                  {overview.dueFlashcards} due
-                </span>
+                <span className="ml-1 px-2 py-0.5 bg-white/20 rounded-full text-xs">{overview.dueFlashcards} due</span>
               )}
             </Link>
           </div>
@@ -206,9 +296,7 @@ export default function DashboardPage() {
             <span className="text-2xl">📧</span>
             <div className="flex-1">
               <p className="font-semibold text-yellow-900 dark:text-yellow-200">Verify your email address</p>
-              <p className="text-sm text-yellow-800 dark:text-yellow-300">
-                Please verify {session.user.email} to secure your account.
-              </p>
+              <p className="text-sm text-yellow-800 dark:text-yellow-300">Please verify {session.user.email} to secure your account.</p>
             </div>
             {verificationSent ? (
               <span className="text-sm font-medium text-green-700 dark:text-green-400">✅ Verification email sent!</span>
@@ -216,10 +304,7 @@ export default function DashboardPage() {
               <button
                 onClick={async () => {
                   setSendingVerification(true)
-                  try {
-                    await fetch('/api/auth/verify-email', { method: 'POST' })
-                    setVerificationSent(true)
-                  } catch {}
+                  try { await fetch('/api/auth/verify-email', { method: 'POST' }); setVerificationSent(true) } catch {}
                   setSendingVerification(false)
                 }}
                 disabled={sendingVerification}
@@ -231,57 +316,47 @@ export default function DashboardPage() {
           </div>
         )}
 
-        {/* Stats Grid */}
+        {/* Stats Grid with Progress Rings */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
-          <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-5 shadow-sm">
-            <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">
-              {overview?.topicsCompleted ?? 0}
+          <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-5 shadow-sm flex items-center gap-3">
+            <ProgressRing percentage={completionPct} size={48} strokeWidth={5} color="#8b5cf6" />
+            <div>
+              <div className="text-2xl font-bold text-gray-900 dark:text-white">{overview?.topicsCompleted ?? 0}</div>
+              <div className="text-xs text-gray-600 dark:text-gray-400">Completed</div>
             </div>
-            <div className="text-sm text-gray-600 dark:text-gray-400 mt-1">Topics Completed</div>
+          </div>
+          <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-5 shadow-sm flex items-center gap-3">
+            <ProgressRing percentage={masteryPct} size={48} strokeWidth={5} color="#f59e0b" />
+            <div>
+              <div className="text-2xl font-bold text-gray-900 dark:text-white">{overview?.topicsMastered ?? 0}</div>
+              <div className="text-xs text-gray-600 dark:text-gray-400">Mastered</div>
+            </div>
           </div>
           <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-5 shadow-sm">
-            <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-orange-500">
-              {overview?.topicsMastered ?? 0}
-            </div>
-            <div className="text-sm text-gray-600 dark:text-gray-400 mt-1">Topics Mastered</div>
-          </div>
-          <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-5 shadow-sm">
-            <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-emerald-500">
-              {overview?.totalFlashcards ?? 0}
-            </div>
+            <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-emerald-500">{overview?.totalFlashcards ?? 0}</div>
             <div className="text-sm text-gray-600 dark:text-gray-400 mt-1">Flashcards Studied</div>
           </div>
           <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-5 shadow-sm">
-            <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-rose-500">
-              {streak?.current ?? 0}🔥
-            </div>
+            <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-rose-500">{streak?.current ?? 0}🔥</div>
             <div className="text-sm text-gray-600 dark:text-gray-400 mt-1">Day Streak</div>
           </div>
         </div>
 
-        {/* Pending Assignments Banner */}
+        {/* Pending Assignments */}
         {pendingAssignments > 0 && (
-          <Link
-            href="/assignments"
-            className="mb-8 flex items-center justify-between bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 border border-blue-200 dark:border-blue-800 rounded-xl p-4 hover:shadow-md transition-all group"
-          >
+          <Link href="/assignments" className="mb-8 flex items-center justify-between bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 border border-blue-200 dark:border-blue-800 rounded-xl p-4 hover:shadow-md transition-all group">
             <div className="flex items-center gap-3">
               <span className="text-2xl">📋</span>
               <div>
-                <p className="font-semibold text-gray-900 dark:text-white">
-                  {pendingAssignments} assignment{pendingAssignments !== 1 ? 's' : ''} pending
-                </p>
+                <p className="font-semibold text-gray-900 dark:text-white">{pendingAssignments} assignment{pendingAssignments !== 1 ? 's' : ''} pending</p>
                 <p className="text-sm text-gray-500">From your teachers — click to view</p>
               </div>
             </div>
-            <span className="text-purple-600 font-semibold group-hover:translate-x-1 transition-transform">
-              View →
-            </span>
+            <span className="text-purple-600 font-semibold group-hover:translate-x-1 transition-transform">View →</span>
           </Link>
         )}
 
         <div className="grid lg:grid-cols-3 gap-8">
-          {/* Main Content — 2 cols */}
           <div className="lg:col-span-2 space-y-8">
             {/* Course Progress */}
             {courseProgress.length > 0 && (
@@ -293,24 +368,13 @@ export default function DashboardPage() {
                     const done = course.completed + course.mastered
                     const pct = total > 0 ? Math.round((done / total) * 100) : 0
                     return (
-                      <Link
-                        key={course.slug}
-                        href={`/courses/${course.slug}`}
-                        className="block group"
-                      >
+                      <Link key={course.slug} href={`/courses/${course.slug}`} className="block group">
                         <div className="flex items-center justify-between mb-1">
-                          <span className="font-medium text-gray-900 group-hover:text-purple-600 transition-colors">
-                            {course.name}
-                          </span>
-                          <span className="text-sm text-gray-500">
-                            {done}/{total} topics · {pct}%
-                          </span>
+                          <span className="font-medium text-gray-900 dark:text-white group-hover:text-purple-600 transition-colors">{course.name}</span>
+                          <span className="text-sm text-gray-500">{done}/{total} topics · {pct}%</span>
                         </div>
-                        <div className="w-full bg-gray-200 rounded-full h-2.5">
-                          <div
-                            className="bg-gradient-to-r from-purple-500 to-blue-500 h-2.5 rounded-full transition-all"
-                            style={{ width: `${pct}%` }}
-                          />
+                        <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+                          <div className="bg-gradient-to-r from-purple-500 to-blue-500 h-2.5 rounded-full transition-all" style={{ width: `${pct}%` }} />
                         </div>
                       </Link>
                     )
@@ -319,86 +383,93 @@ export default function DashboardPage() {
               </div>
             )}
 
+            {/* Achievements */}
+            <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6 shadow-sm">
+              <div className="flex items-center justify-between mb-4">
+                <h2 className="text-xl font-bold text-gray-900 dark:text-white">🏆 Achievements</h2>
+                <span className="text-sm text-gray-500">{achievementStats.unlocked}/{achievementStats.total} unlocked</span>
+              </div>
+              {achievements.length === 0 ? (
+                <p className="text-sm text-gray-500 text-center py-4">Complete topics, review flashcards, and build streaks to earn achievements!</p>
+              ) : (
+                <div className="grid grid-cols-4 sm:grid-cols-6 gap-3">
+                  {achievements.slice(0, 12).map((a) => (
+                    <div
+                      key={a.id}
+                      title={`${a.name}: ${a.description}${a.unlocked ? '' : ' (Locked)'}`}
+                      className={`flex flex-col items-center p-2 rounded-lg transition-all ${
+                        a.unlocked ? 'bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-700' : 'opacity-40 grayscale'
+                      }`}
+                    >
+                      <span className="text-2xl">{a.icon}</span>
+                      <span className="text-[10px] text-center text-gray-600 dark:text-gray-400 mt-1 leading-tight">{a.name}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+
             {/* Recent Activity */}
             <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6 shadow-sm">
               <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4">🕐 Recent Activity</h2>
               {recentActivity.length === 0 ? (
                 <div className="text-center py-8">
+                  <div className="text-4xl mb-3">📖</div>
                   <p className="text-gray-500 mb-4">No activity yet! Start learning to see your progress here.</p>
-                  <Link
-                    href="/"
-                    className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all"
-                  >
-                    Browse Courses →
-                  </Link>
+                  <Link href="/" className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all">Browse Courses →</Link>
                 </div>
               ) : (
-                <div className="divide-y divide-gray-100">
+                <div className="divide-y divide-gray-100 dark:divide-gray-700">
                   {recentActivity.map((activity, i) => (
-                    <Link
-                      key={i}
-                      href={`/topics/${activity.topicSlug}`}
-                      className="flex items-center justify-between py-3 hover:bg-gray-50 -mx-2 px-2 rounded-lg transition-colors group"
-                    >
+                    <Link key={i} href={`/topics/${activity.topicSlug}`} className="flex items-center justify-between py-3 hover:bg-gray-50 dark:hover:bg-gray-700/50 -mx-2 px-2 rounded-lg transition-colors group">
                       <div className="min-w-0">
-                        <p className="font-medium text-gray-900 group-hover:text-purple-600 truncate transition-colors">
-                          {activity.topicTitle}
-                        </p>
+                        <p className="font-medium text-gray-900 dark:text-white group-hover:text-purple-600 truncate transition-colors">{activity.topicTitle}</p>
                         <p className="text-xs text-gray-500">{activity.courseName}</p>
                       </div>
                       <div className="flex items-center gap-3 flex-shrink-0 ml-3">
-                        <span className={`text-xs font-medium px-2 py-1 rounded-full ${statusColor(activity.status)}`}>
-                          {statusLabel(activity.status)}
-                        </span>
-                        <span className="text-xs text-gray-400">
-                          {timeAgo(activity.lastAccessed)}
-                        </span>
+                        <span className={`text-xs font-medium px-2 py-1 rounded-full ${statusColor(activity.status)}`}>{statusLabel(activity.status)}</span>
+                        <span className="text-xs text-gray-400">{timeAgo(activity.lastAccessed)}</span>
                       </div>
                     </Link>
                   ))}
                 </div>
               )}
             </div>
+
+            {/* Progress Charts */}
+            <ProgressCharts />
+
+            {/* Study Planner */}
+            <StudyPlanner />
+
+            {/* Weekly Challenges */}
+            <ChallengesWidget />
           </div>
 
-          {/* Sidebar — 1 col */}
+          {/* Sidebar */}
           <div className="space-y-6">
-            {/* Quick Actions */}
             <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6 shadow-sm">
               <h3 className="font-bold text-gray-900 dark:text-white mb-4">⚡ Quick Actions</h3>
               <div className="space-y-3">
-                <Link
-                  href="/flashcards/review/start"
-                  className="flex items-center gap-3 p-3 rounded-lg bg-gradient-to-r from-purple-50 to-blue-50 border border-purple-200 hover:border-purple-300 transition-colors group"
-                >
+                <Link href="/flashcards/review/start" className="flex items-center gap-3 p-3 rounded-lg bg-gradient-to-r from-purple-50 to-blue-50 dark:from-purple-900/20 dark:to-blue-900/20 border border-purple-200 dark:border-purple-700 hover:border-purple-300 transition-colors group">
                   <span className="text-2xl">🎴</span>
                   <div>
-                    <p className="font-medium text-purple-900 group-hover:text-purple-700">Review Flashcards</p>
-                    <p className="text-xs text-purple-600">
-                      {overview && overview.dueFlashcards > 0
-                        ? `${overview.dueFlashcards} cards due`
-                        : 'All caught up!'}
-                    </p>
+                    <p className="font-medium text-purple-900 dark:text-purple-200">Review Flashcards</p>
+                    <p className="text-xs text-purple-600 dark:text-purple-400">{overview && overview.dueFlashcards > 0 ? `${overview.dueFlashcards} cards due` : 'All caught up!'}</p>
                   </div>
                 </Link>
-                <Link
-                  href="/competitive"
-                  className="flex items-center gap-3 p-3 rounded-lg bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 hover:border-green-300 transition-colors group"
-                >
+                <Link href="/competitive" className="flex items-center gap-3 p-3 rounded-lg bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 border border-green-200 dark:border-green-700 hover:border-green-300 transition-colors group">
                   <span className="text-2xl">🎮</span>
                   <div>
-                    <p className="font-medium text-green-900 group-hover:text-green-700">Competitive Mode</p>
-                    <p className="text-xs text-green-600">Challenge AI or other students</p>
+                    <p className="font-medium text-green-900 dark:text-green-200">Competitive Mode</p>
+                    <p className="text-xs text-green-600 dark:text-green-400">Challenge AI or other students</p>
                   </div>
                 </Link>
-                <Link
-                  href="/topics"
-                  className="flex items-center gap-3 p-3 rounded-lg bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-200 hover:border-amber-300 transition-colors group"
-                >
+                <Link href="/topics" className="flex items-center gap-3 p-3 rounded-lg bg-gradient-to-r from-amber-50 to-yellow-50 dark:from-amber-900/20 dark:to-yellow-900/20 border border-amber-200 dark:border-amber-700 hover:border-amber-300 transition-colors group">
                   <span className="text-2xl">📖</span>
                   <div>
-                    <p className="font-medium text-amber-900 group-hover:text-amber-700">Browse Topics</p>
-                    <p className="text-xs text-amber-600">Explore all study materials</p>
+                    <p className="font-medium text-amber-900 dark:text-amber-200">Browse Topics</p>
+                    <p className="text-xs text-amber-600 dark:text-amber-400">Explore all study materials</p>
                   </div>
                 </Link>
               </div>
@@ -418,16 +489,14 @@ export default function DashboardPage() {
                 </div>
               </div>
               {(streak?.current ?? 0) > 0 && (
-                <p className="mt-3 text-sm text-orange-100">
-                  Keep it going! Study today to maintain your streak.
-                </p>
+                <p className="mt-3 text-sm text-orange-100">Keep it going! Study today to maintain your streak.</p>
               )}
             </div>
 
             {/* Study Stats */}
             <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6 shadow-sm">
               <h3 className="font-bold text-gray-900 dark:text-white mb-4">📊 Study Stats</h3>
-                <div className="space-y-3">
+              <div className="space-y-3">
                 <div className="flex justify-between">
                   <span className="text-gray-600 dark:text-gray-400">Topics Started</span>
                   <span className="font-semibold text-gray-900 dark:text-gray-100">{overview?.topicsStarted ?? 0}</span>
@@ -455,50 +524,35 @@ export default function DashboardPage() {
               </div>
             </div>
 
-            {/* Bookmarked Lessons */}
+            {/* Bookmarks (server-synced) */}
             {bookmarks.length > 0 && (
               <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6 shadow-sm">
                 <h3 className="font-bold text-gray-900 dark:text-white mb-4">🔖 Saved Lessons</h3>
                 <div className="space-y-2">
-                  {bookmarks.slice(0, 5).map((bookmark) => {
-                    // Parse the bookmark ID to create a link (format: topicSlug-partN)
-                    const parts = bookmark.id.match(/^(.+)-part(\d+)$/)
-                    const slug = parts ? parts[1] : bookmark.id
-                    const partNum = parts ? parts[2] : '1'
-                    return (
-                      <Link
-                        key={bookmark.id}
-                        href={`/topics/${slug}?part=${partNum}`}
-                        className="flex items-center justify-between p-2 -mx-2 rounded-lg hover:bg-purple-50 transition-colors group"
+                  {bookmarks.slice(0, 5).map((bookmark) => (
+                    <Link
+                      key={`${bookmark.topicSlug}-${bookmark.part}`}
+                      href={`/topics/${bookmark.topicSlug}?part=${bookmark.part}`}
+                      className="flex items-center justify-between p-2 -mx-2 rounded-lg hover:bg-purple-50 dark:hover:bg-purple-900/20 transition-colors group"
+                    >
+                      <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-purple-600 truncate">{bookmark.title}</span>
+                      <button
+                        onClick={(e) => { e.preventDefault(); removeBookmark(bookmark.topicSlug, bookmark.part) }}
+                        className="text-gray-400 hover:text-red-500 transition-colors ml-2 flex-shrink-0"
+                        title="Remove bookmark"
+                        aria-label={`Remove bookmark for ${bookmark.title}`}
                       >
-                        <span className="text-sm font-medium text-gray-700 group-hover:text-purple-600 truncate">
-                          {bookmark.title}
-                        </span>
-                        <button
-                          onClick={(e) => {
-                            e.preventDefault()
-                            const updated = bookmarks.filter(b => b.id !== bookmark.id)
-                            setBookmarks(updated)
-                            localStorage.setItem('studymondo-bookmarks', JSON.stringify(updated))
-                          }}
-                          className="text-gray-400 hover:text-red-500 transition-colors ml-2 flex-shrink-0"
-                          title="Remove bookmark"
-                        >
-                          <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                          </svg>
-                        </button>
-                      </Link>
-                    )
-                  })}
-                  {bookmarks.length > 5 && (
-                    <p className="text-xs text-gray-500 pt-1">
-                      +{bookmarks.length - 5} more saved
-                    </p>
-                  )}
+                        <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
+                      </button>
+                    </Link>
+                  ))}
+                  {bookmarks.length > 5 && <p className="text-xs text-gray-500 pt-1">+{bookmarks.length - 5} more saved</p>}
                 </div>
               </div>
             )}
+
+            {/* Quick Flashcard Review */}
+            <FlashcardStudySession />
           </div>
         </div>
       </div>

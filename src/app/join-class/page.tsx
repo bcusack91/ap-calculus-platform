@@ -1,18 +1,52 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect, Suspense } from 'react'
 import { useSession } from 'next-auth/react'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 
-export default function JoinClassPage() {
+function JoinClassContent() {
   const { data: session, status } = useSession()
   const _router = useRouter()
   void _router;
-  const [joinCode, setJoinCode] = useState('')
+  const searchParams = useSearchParams()
+  const codeFromUrl = searchParams.get('code') || ''
+  const [joinCode, setJoinCode] = useState(codeFromUrl.toUpperCase())
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
   const [success, setSuccess] = useState<{ name: string; teacher: string } | null>(null)
+  const [autoJoinAttempted, setAutoJoinAttempted] = useState(false)
+
+  // Auto-join if code was provided via URL and user is authenticated
+  useEffect(() => {
+    if (codeFromUrl && session && !autoJoinAttempted) {
+      setAutoJoinAttempted(true)
+      handleAutoJoin(codeFromUrl.toUpperCase())
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [codeFromUrl, session])
+
+  const handleAutoJoin = async (code: string) => {
+    setLoading(true)
+    setError('')
+    try {
+      const res = await fetch('/api/teacher/classrooms/join', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ joinCode: code }),
+      })
+      const data = await res.json()
+      if (res.ok) {
+        setSuccess({ name: data.classroom?.name || 'Classroom', teacher: data.classroom?.teacher || 'Teacher' })
+      } else {
+        setError(data.error || 'Failed to join classroom')
+      }
+    } catch {
+      setError('Something went wrong. Please try again.')
+    } finally {
+      setLoading(false)
+    }
+  }
 
   if (status === 'loading') {
     return (
@@ -172,5 +206,17 @@ export default function JoinClassPage() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function JoinClassPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600" />
+      </div>
+    }>
+      <JoinClassContent />
+    </Suspense>
   )
 }

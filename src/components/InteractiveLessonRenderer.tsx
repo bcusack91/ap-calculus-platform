@@ -13,10 +13,13 @@ import katex from 'katex'
 import { FlashcardNotification } from '@/components/flashcard-notification'
 import CorrectAnswerCelebration from '@/components/CorrectAnswerCelebration'
 import BookmarkButton from '@/components/BookmarkButton'
-import ExitQuiz from '@/components/ExitQuiz'
+import dynamic from 'next/dynamic'
 import { generateExitQuiz, hasExitQuiz } from '@/data/exit-quizzes'
 import type { ExitQuizQuestion } from '@/data/exit-quizzes'
 import LessonProgressBar from '@/components/LessonProgressBar'
+
+// Lazy-load ExitQuiz since it's only shown after lesson completion
+const ExitQuiz = dynamic(() => import('@/components/ExitQuiz'), { ssr: false })
 import KeyboardShortcutHint from '@/components/KeyboardShortcutHint'
 import { useLessonKeyboard } from '@/hooks/useLessonKeyboard'
 
@@ -422,6 +425,15 @@ export default function InteractiveLessonRenderer({ topicSlug, preloadedParts, c
       }
     }
   }, [completedSections, progressLoaded, saveProgress])
+
+  // Periodic auto-save every 60 seconds if there are completed sections
+  useEffect(() => {
+    if (!progressLoaded || completedSections.size === 0 || !session?.user) return
+    const interval = setInterval(() => {
+      saveProgress(undefined, false)
+    }, 60000)
+    return () => clearInterval(interval)
+  }, [progressLoaded, completedSections.size, session?.user, saveProgress])
 
   // Fetch exit quiz status on mount (if topic has exit quiz)
   useEffect(() => {

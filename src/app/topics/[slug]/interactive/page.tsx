@@ -1,12 +1,10 @@
-import { Suspense } from 'react'
 import { notFound } from 'next/navigation'
 import { prisma } from '@/lib/prisma'
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import Script from 'next/script'
-import InteractiveLessonRenderer from '@/components/InteractiveLessonRenderer'
-import DynamicInteractiveLessonRenderer from '@/components/DynamicInteractiveLessonRenderer'
 import InteractiveLessonSEO from '@/components/InteractiveLessonSEO'
+import ClientLessonRenderer from '@/components/ClientLessonRenderer'
 import { hasInteractiveLesson } from '@/data/interactive-lessons/registry'
 import { preloadAllLessonParts } from '@/data/interactive-lessons/server-loader'
 import 'katex/dist/katex.min.css'
@@ -156,26 +154,21 @@ export default async function InteractivePage(props: InteractivePageProps) {
         </div>
 
         {/* Interactive Lesson Renderer (client-side stepper) */}
-        {/* Suspense required because InteractiveLessonRenderer uses useSearchParams() */}
-        <Suspense fallback={
-          <div className="flex items-center justify-center min-h-[400px]">
-            <div className="text-center space-y-4">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600 mx-auto"></div>
-              <p className="text-lg text-gray-600 dark:text-gray-400">Loading lesson...</p>
-            </div>
-          </div>
-        }>
-          {hasHandCraftedLesson && lessonConfig && lessonConfig.parts.length > 0 ? (
-            <InteractiveLessonRenderer
-              topicSlug={topic.slug}
-              preloadedParts={lessonConfig.parts}
-              completionDestination={lessonConfig.completionDestination}
-              practiceModeParts={lessonConfig.practiceModeParts}
-            />
-          ) : (
-            <DynamicInteractiveLessonRenderer topicSlug={topic.slug} textContent={topic.textContent!} />
-          )}
-        </Suspense>
+        {hasHandCraftedLesson && lessonConfig && lessonConfig.parts.length > 0 ? (
+          <ClientLessonRenderer
+            mode="handcrafted"
+            topicSlug={topic.slug}
+            preloadedParts={lessonConfig.parts}
+            completionDestination={lessonConfig.completionDestination}
+            practiceModeParts={lessonConfig.practiceModeParts}
+          />
+        ) : (
+          <ClientLessonRenderer
+            mode="dynamic"
+            topicSlug={topic.slug}
+            textContent={topic.textContent!}
+          />
+        )}
 
         {/* SEO: Server-rendered lesson content for search engine crawling */}
         {/* This renders all lesson text as HTML that Googlebot can index.

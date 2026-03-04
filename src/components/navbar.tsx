@@ -57,12 +57,23 @@ export function Navbar() {
         setCoursesOpen(false)
       }
     }
+    function handleKeyDown(e: KeyboardEvent) {
+      if (e.key === 'Escape') {
+        setCoursesOpen(false)
+        setMobileMenuOpen(false)
+      }
+    }
     document.addEventListener('mousedown', handleClick)
-    return () => document.removeEventListener('mousedown', handleClick)
+    document.addEventListener('keydown', handleKeyDown)
+    return () => {
+      document.removeEventListener('mousedown', handleClick)
+      document.removeEventListener('keydown', handleKeyDown)
+    }
   }, [])
 
   return (
-    <nav className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header role="banner">
+    <nav aria-label="Main navigation" className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
         <div className="mr-4 flex flex-1 items-center justify-between">
           <Link href="/" className="mr-6 flex items-center space-x-2">
@@ -88,7 +99,7 @@ export function Navbar() {
           </Link>
           
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
+          <div className="hidden md:flex items-center space-x-6 text-sm font-medium" role="menubar">
             <Link href="/topics" className="transition-colors hover:text-foreground/80">
               Topics
             </Link>
@@ -96,10 +107,13 @@ export function Navbar() {
             <div ref={coursesRef} className="relative">
               <button
                 onClick={() => setCoursesOpen(!coursesOpen)}
+                onKeyDown={(e) => { if (e.key === 'Escape') { setCoursesOpen(false); (e.target as HTMLElement).focus() } }}
                 className="transition-colors hover:text-foreground/80 flex items-center gap-1"
+                aria-haspopup="true"
+                aria-expanded={coursesOpen}
               >
                 Courses
-                <svg className={`h-3 w-3 transition-transform ${coursesOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className={`h-3 w-3 transition-transform ${coursesOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
@@ -134,6 +148,9 @@ export function Navbar() {
             <Link href="/about" className="transition-colors hover:text-foreground/80">
               About
             </Link>
+            <Link href="/pricing" className="transition-colors hover:text-foreground/80 text-amber-600 dark:text-amber-400 font-semibold">
+              💎 Pricing
+            </Link>
             <Link href="/contact" className="transition-colors hover:text-foreground/80">
               Contact
             </Link>
@@ -143,7 +160,7 @@ export function Navbar() {
               </svg>
             </Link>
             <ThemeToggle />
-          </nav>
+          </div>
         </div>
 
         {/* Auth Section */}
@@ -164,10 +181,14 @@ export function Navbar() {
                     🛡️ Admin
                   </Link>
                 )}
-                {isPremium && (
-                  <span className="inline-flex items-center px-2 py-1 text-xs font-semibold rounded-full bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200">
-                    Premium
+                {isPremium ? (
+                  <span className="inline-flex items-center px-2.5 py-1 text-xs font-semibold rounded-full bg-gradient-to-r from-purple-100 to-blue-100 text-purple-800 dark:from-purple-900 dark:to-blue-900 dark:text-purple-200 border border-purple-200 dark:border-purple-700">
+                    ✨ Premium
                   </span>
+                ) : session && (
+                  <Link href="/pricing" className="inline-flex items-center px-2.5 py-1 text-xs font-semibold rounded-full bg-amber-50 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300 border border-amber-200 dark:border-amber-700 hover:bg-amber-100 dark:hover:bg-amber-900/50 transition-colors">
+                    Upgrade
+                  </Link>
                 )}
                 <span className="text-sm text-gray-700 dark:text-gray-300">{session.user?.name || session.user?.email}</span>
                 
@@ -183,6 +204,7 @@ export function Navbar() {
                 <button
                   onClick={() => signOut()}
                   className="rounded-md px-4 py-2 text-sm font-medium hover:bg-accent bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
+                  aria-label="Sign out of your account"
                 >
                   Sign Out
                 </button>
@@ -221,7 +243,7 @@ export function Navbar() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-t">
+        <div className="md:hidden border-t" role="menu" aria-label="Mobile navigation">
           <div className="space-y-1 px-4 pb-3 pt-2">
             <Link href="/topics" className="block px-3 py-2 text-base font-medium hover:bg-accent rounded-md">
               Topics
@@ -251,6 +273,9 @@ export function Navbar() {
             </Link>
             <Link href="/about" className="block px-3 py-2 text-base font-medium hover:bg-accent rounded-md">
               About
+            </Link>
+            <Link href="/pricing" className="block px-3 py-2 text-base font-medium text-amber-600 dark:text-amber-400 hover:bg-accent rounded-md">
+              💎 Pricing
             </Link>
             <Link href="/contact" className="block px-3 py-2 text-base font-medium hover:bg-accent rounded-md">
               Contact
@@ -310,5 +335,6 @@ export function Navbar() {
         </div>
       )}
     </nav>
+    </header>
   )
 }
