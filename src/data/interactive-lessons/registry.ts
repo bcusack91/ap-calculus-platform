@@ -3074,6 +3074,51 @@ const interactiveLessonRegistry: Record<string, InteractiveTopicConfig> = {
       { title: 'Electrochemistry & Redox', loader: () => import('./mcat-mcat-general-chemistry-mcat-part7').then(m => m.mcatGenChemPart7Data) },
     ],
   },
+  'mcat-general-chemistry-atomic-structure-mcat': {
+    parts: [
+      { title: 'Quantum Numbers & Electron Configuration', loader: () => import('./mcat-mcat-general-chemistry-atomic-structure-mcat-part1').then(m => m.mcatAtomicStructurePart1Data) },
+      { title: 'Periodic Trends', loader: () => import('./mcat-mcat-general-chemistry-atomic-structure-mcat-part2').then(m => m.mcatAtomicStructurePart2Data) },
+      { title: 'Spectra, PES & Bohr Model', loader: () => import('./mcat-mcat-general-chemistry-atomic-structure-mcat-part3').then(m => m.mcatAtomicStructurePart3Data) },
+      { title: 'Nuclear Chemistry & Half-Life', loader: () => import('./mcat-mcat-general-chemistry-atomic-structure-mcat-part4').then(m => m.mcatAtomicStructurePart4Data) },
+      { title: 'Mixed MCAT Review', loader: () => import('./mcat-mcat-general-chemistry-atomic-structure-mcat-part5').then(m => m.mcatAtomicStructurePart5Data) },
+    ],
+  },
+  'mcat-general-chemistry-stoichiometry-mcat': {
+    parts: [
+      { title: 'Moles, Molar Mass & Empirical Formulas', loader: () => import('./mcat-mcat-general-chemistry-stoichiometry-mcat-part1').then(m => m.mcatStoichiometryPart1Data) },
+      { title: 'Limiting Reagent & Reaction Types', loader: () => import('./mcat-mcat-general-chemistry-stoichiometry-mcat-part2').then(m => m.mcatStoichiometryPart2Data) },
+      { title: 'Solutions, Molarity & Colligative Properties', loader: () => import('./mcat-mcat-general-chemistry-stoichiometry-mcat-part3').then(m => m.mcatStoichiometryPart3Data) },
+      { title: 'Gas Laws & Electrochemistry', loader: () => import('./mcat-mcat-general-chemistry-stoichiometry-mcat-part4').then(m => m.mcatStoichiometryPart4Data) },
+      { title: 'Mixed MCAT Review', loader: () => import('./mcat-mcat-general-chemistry-stoichiometry-mcat-part5').then(m => m.mcatStoichiometryPart5Data) },
+    ],
+  },
+  'mcat-general-chemistry-acid-base-equilibrium-mcat': {
+    parts: [
+      { title: 'pH, pOH & Strong vs. Weak Acids', loader: () => import('./mcat-mcat-general-chemistry-acid-base-equilibrium-mcat-part1').then(m => m.mcatAcidBaseEqPart1Data) },
+      { title: 'Ka, Kb & Henderson-Hasselbalch', loader: () => import('./mcat-mcat-general-chemistry-acid-base-equilibrium-mcat-part2').then(m => m.mcatAcidBaseEqPart2Data) },
+      { title: 'Buffers & Physiological Chemistry', loader: () => import('./mcat-mcat-general-chemistry-acid-base-equilibrium-mcat-part3').then(m => m.mcatAcidBaseEqPart3Data) },
+      { title: 'Titrations & Indicators', loader: () => import('./mcat-mcat-general-chemistry-acid-base-equilibrium-mcat-part4').then(m => m.mcatAcidBaseEqPart4Data) },
+      { title: 'Equilibrium, Ksp & Le Chatelier\'s Principle', loader: () => import('./mcat-mcat-general-chemistry-acid-base-equilibrium-mcat-part5').then(m => m.mcatAcidBaseEqPart5Data) },
+    ],
+  },
+  'mcat-general-chemistry-kinetics-mcat': {
+    parts: [
+      { title: 'Rate Laws & Reaction Order', loader: () => import('./mcat-mcat-general-chemistry-kinetics-mcat-part1').then(m => m.mcatKineticsPart1Data) },
+      { title: 'Integrated Rate Laws & Half-Life', loader: () => import('./mcat-mcat-general-chemistry-kinetics-mcat-part2').then(m => m.mcatKineticsPart2Data) },
+      { title: 'Activation Energy & Arrhenius Equation', loader: () => import('./mcat-mcat-general-chemistry-kinetics-mcat-part3').then(m => m.mcatKineticsPart3Data) },
+      { title: 'Mechanisms, RDS & Catalysis', loader: () => import('./mcat-mcat-general-chemistry-kinetics-mcat-part4').then(m => m.mcatKineticsPart4Data) },
+      { title: 'Mixed MCAT Review', loader: () => import('./mcat-mcat-general-chemistry-kinetics-mcat-part5').then(m => m.mcatKineticsPart5Data) },
+    ],
+  },
+  'mcat-general-chemistry-thermodynamics-mcat': {
+    parts: [
+      { title: 'Enthalpy & Hess\'s Law', loader: () => import('./mcat-mcat-general-chemistry-thermodynamics-mcat-part1').then(m => m.mcatThermoPart1Data) },
+      { title: 'Entropy & Laws of Thermodynamics', loader: () => import('./mcat-mcat-general-chemistry-thermodynamics-mcat-part2').then(m => m.mcatThermoPart2Data) },
+      { title: 'Gibbs Free Energy, Keq & Cell Potential', loader: () => import('./mcat-mcat-general-chemistry-thermodynamics-mcat-part3').then(m => m.mcatThermoPart3Data) },
+      { title: 'Phase Changes & Heating Curves', loader: () => import('./mcat-mcat-general-chemistry-thermodynamics-mcat-part4').then(m => m.mcatThermoPart4Data) },
+      { title: 'Mixed MCAT Review', loader: () => import('./mcat-mcat-general-chemistry-thermodynamics-mcat-part5').then(m => m.mcatThermoPart5Data) },
+    ],
+  },
   'mcat-organic-chemistry-mcat': {
     parts: [
       { title: 'Functional Groups & Nomenclature', loader: () => import('./mcat-mcat-organic-chemistry-mcat-part1').then(m => m.mcatOrgChemPart1Data) },
