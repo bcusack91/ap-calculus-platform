@@ -143,17 +143,21 @@ model Topic {
   videoUrl        String?
   videoThumbnail  String?
   isPremium       Boolean          @default(false)
+  parentTopicId   String?
   createdAt       DateTime         @default(now())
   updatedAt       DateTime         @updatedAt
   exampleProblems ExampleProblem[]
   flashcards      Flashcard[]
   quizzes         Quiz[]
   category        Category         @relation(fields: [categoryId], references: [id])
+  parentTopic     Topic?           @relation("TopicSubtopics", fields: [parentTopicId], references: [id])
+  subtopics       Topic[]          @relation("TopicSubtopics")
   topicProgress   TopicProgress[]
   Topic_A         Topic[]          @relation("TopicPrerequisites")
   Topic_B         Topic[]          @relation("TopicPrerequisites")
 
   @@index([categoryId])
+  @@index([parentTopicId])
 }
 
 model Category {

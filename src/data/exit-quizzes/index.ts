@@ -12,7 +12,7 @@ import type { ExitQuizQuestion } from './sat-linear-equations-inequalities'
 /*  Lazy loader map — each entry dynamically imports its quiz file     */
 /* ------------------------------------------------------------------ */
 
-type QuizLoader = () => Promise<{ generateExitQuiz: (count?: number) => ExitQuizQuestion[] }>
+type QuizLoader = () => Promise<{ generateExitQuiz: (count?: number, topicSlug?: string) => ExitQuizQuestion[] }>
 
 const quizLoaders: Record<string, QuizLoader> = {
   // Original math
@@ -64,14 +64,39 @@ const quizLoaders: Record<string, QuizLoader> = {
   // Chem/Phys
   'mcat-general-chemistry': () => import('./mcat-general-chemistry'),
   'mcat-general-chemistry-mcat': () => import('./mcat-general-chemistry'), // alias
+  'mcat-general-chemistry-atomic-structure-mcat': () => import('./mcat-general-chemistry'),
+  'mcat-general-chemistry-stoichiometry-mcat': () => import('./mcat-general-chemistry'),
+  'mcat-general-chemistry-thermodynamics-mcat': () => import('./mcat-general-chemistry'),
+  'mcat-general-chemistry-kinetics-mcat': () => import('./mcat-general-chemistry'),
+  'mcat-general-chemistry-acid-base-equilibrium-mcat': () => import('./mcat-general-chemistry'),
   'mcat-organic-chemistry': () => import('./mcat-organic-chemistry'),
   'mcat-organic-chemistry-mcat': () => import('./mcat-organic-chemistry'), // alias
+  'mcat-organic-chemistry-functional-groups-mcat': () => import('./mcat-organic-chemistry'),
+  'mcat-organic-chemistry-stereochemistry-mcat': () => import('./mcat-organic-chemistry'),
+  'mcat-organic-chemistry-sn1-sn2-e1-e2-mcat': () => import('./mcat-organic-chemistry'),
+  'mcat-organic-chemistry-carbonyls-mcat': () => import('./mcat-organic-chemistry'),
+  'mcat-organic-chemistry-spectroscopy-mcat': () => import('./mcat-organic-chemistry'),
   'mcat-physics-mechanics': () => import('./mcat-physics-mechanics'),
   'mcat-physics-mechanics-mcat': () => import('./mcat-physics-mechanics'), // alias
+  'mcat-physics-mechanics-kinematics-mcat': () => import('./mcat-physics-mechanics'),
+  'mcat-physics-mechanics-forces-newton-laws-mcat': () => import('./mcat-physics-mechanics'),
+  'mcat-physics-mechanics-work-energy-power-mcat': () => import('./mcat-physics-mechanics'),
+  'mcat-physics-mechanics-momentum-collisions-mcat': () => import('./mcat-physics-mechanics'),
+  'mcat-physics-mechanics-fluids-waves-mcat': () => import('./mcat-physics-mechanics'),
   'mcat-physics-electricity': () => import('./mcat-physics-electricity'),
   'mcat-physics-electricity-mcat': () => import('./mcat-physics-electricity'), // alias
+  'mcat-physics-electricity-electrostatics-mcat': () => import('./mcat-physics-electricity'),
+  'mcat-physics-electricity-circuits-mcat': () => import('./mcat-physics-electricity'),
+  'mcat-physics-electricity-magnetism-mcat': () => import('./mcat-physics-electricity'),
+  'mcat-physics-electricity-optics-mcat': () => import('./mcat-physics-electricity'),
+  'mcat-physics-electricity-electrochemistry-mcat': () => import('./mcat-physics-electricity'),
   'mcat-biochemistry': () => import('./mcat-biochemistry'),
   'mcat-biochemistry-foundations-mcat': () => import('./mcat-biochemistry'), // alias
+  'mcat-biochemistry-amino-acids-proteins-mcat': () => import('./mcat-biochemistry'),
+  'mcat-biochemistry-enzymes-kinetics-mcat': () => import('./mcat-biochemistry'),
+  'mcat-biochemistry-carbohydrate-metabolism-mcat': () => import('./mcat-biochemistry'),
+  'mcat-biochemistry-lipid-metabolism-mcat': () => import('./mcat-biochemistry'),
+  'mcat-biochemistry-bioenergetics-mcat': () => import('./mcat-biochemistry'),
   // CARS
   'mcat-cars': () => import('./mcat-cars'),
   'mcat-cars-strategy-mcat': () => import('./mcat-cars'), // alias
@@ -112,5 +137,5 @@ export async function generateExitQuiz(topicSlug: string, count: number = 10): P
     throw new Error(`No exit quiz found for topic: ${topicSlug}`)
   }
   const mod = await loader()
-  return mod.generateExitQuiz(count)
+  return mod.generateExitQuiz(count, topicSlug)
 }

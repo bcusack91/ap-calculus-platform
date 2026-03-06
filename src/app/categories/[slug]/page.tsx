@@ -65,12 +65,16 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
         }
       },
       topics: {
+        where: {
+          parentTopicId: null,
+        },
         orderBy: { order: 'asc' },
         include: {
           _count: {
             select: {
               exampleProblems: true,
               flashcards: true,
+              subtopics: true,
             }
           }
         }
@@ -142,6 +146,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
   }
 
   const colors = colorMap[category.course.color || 'purple'] || colorMap.purple
+  const totalSubtopics = category.topics.reduce((sum, topic) => sum + topic._count.subtopics, 0)
 
   return (
     <div className="container py-10">
@@ -194,6 +199,9 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
                   <span className="font-semibold">{category.topics.length}</span> Topics
                 </div>
                 <div>
+                  <span className="font-semibold">{totalSubtopics}</span> Subtopics
+                </div>
+                <div>
                   <span className="font-semibold">
                     {category.topics.reduce((sum, topic) => sum + topic._count.exampleProblems, 0)}
                   </span> Practice Problems
@@ -216,6 +224,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
               {category.description && <p>{category.description}</p>}
               <p>
                 This section contains {category.topics.length} {category.topics.length === 1 ? 'topic' : 'topics'} with{' '}
+                {totalSubtopics} {totalSubtopics === 1 ? 'subtopic' : 'subtopics'},{' '}
                 {category.topics.reduce((sum, topic) => sum + topic._count.exampleProblems, 0)} practice problems and{' '}
                 {category.topics.reduce((sum, topic) => sum + topic._count.flashcards, 0)} flashcards.
                 Each topic includes comprehensive written notes, worked examples with detailed solutions, 
@@ -253,6 +262,11 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
                   <p className="text-sm text-gray-600 dark:text-gray-400 line-clamp-3 mb-4">
                     {topic.description}
                   </p>
+                  {topic._count.subtopics > 0 && (
+                    <p className="text-xs font-semibold text-indigo-700 dark:text-indigo-300 mb-4">
+                      {topic._count.subtopics} {topic._count.subtopics === 1 ? 'subtopic' : 'subtopics'}
+                    </p>
+                  )}
                   <div className="flex gap-4 text-xs text-gray-500">
                     {topic._count.exampleProblems > 0 && (
                       <div className="flex items-center gap-1">

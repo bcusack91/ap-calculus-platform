@@ -162,6 +162,19 @@ export default async function TopicPage(props: TopicPageProps) {
       },
       exampleProblems: {
         orderBy: { order: 'asc' }
+      },
+      parentTopic: {
+        select: { slug: true, title: true }
+      },
+      subtopics: {
+        orderBy: { order: 'asc' },
+        select: {
+          slug: true,
+          title: true,
+          description: true,
+          order: true,
+          _count: { select: { exampleProblems: true } }
+        }
       }
     }
   })
@@ -284,6 +297,12 @@ export default async function TopicPage(props: TopicPageProps) {
               <Link href="/topics" className="hover:text-purple-600 transition-colors">Topics</Link>
               {' / '}
               <Link href={`/categories/${topic.category.slug}`} className="hover:text-purple-600 transition-colors">{topic.category.name}</Link>
+              {topic.parentTopic && (
+                <>
+                  {' / '}
+                  <Link href={`/topics/${topic.parentTopic.slug}`} className="hover:text-purple-600 transition-colors">{topic.parentTopic.title}</Link>
+                </>
+              )}
               {' / '}
               <span className="text-foreground font-medium">{topic.title}</span>
             </nav>
@@ -309,6 +328,47 @@ export default async function TopicPage(props: TopicPageProps) {
                 description={topic.description}
               />
             </div>
+
+            {/* Subtopics Grid — shown when this topic has child topics */}
+            {topic.subtopics.length > 0 && (
+              <div className="mb-10">
+                <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-5 rounded-t-lg">
+                  <h2 className="text-2xl font-bold flex items-center gap-2">
+                    <span className="text-3xl">📂</span> Subtopics in {topic.title}
+                  </h2>
+                  <p className="text-indigo-100 mt-1">Select a subtopic below to start studying</p>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 bg-indigo-50 dark:bg-indigo-900/10 p-6 rounded-b-lg border-2 border-indigo-200 dark:border-indigo-800">
+                  {topic.subtopics.map((sub, idx) => (
+                    <Link
+                      key={sub.slug}
+                      href={`/topics/${sub.slug}`}
+                      className="group block bg-white dark:bg-gray-900 rounded-lg border-2 border-indigo-200 dark:border-indigo-700 p-5 hover:border-purple-400 hover:shadow-lg transition-all"
+                    >
+                      <div className="flex items-start gap-3">
+                        <span className="flex-shrink-0 bg-indigo-600 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold">
+                          {idx + 1}
+                        </span>
+                        <div className="flex-1 min-w-0">
+                          <h3 className="font-semibold text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors mb-1">
+                            {sub.title}
+                          </h3>
+                          <p className="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">
+                            {sub.description}
+                          </p>
+                          {sub._count.exampleProblems > 0 && (
+                            <span className="inline-block mt-2 text-xs font-medium text-green-700 bg-green-100 dark:bg-green-900/30 dark:text-green-300 px-2 py-0.5 rounded-full">
+                              {sub._count.exampleProblems} practice {sub._count.exampleProblems === 1 ? 'problem' : 'problems'}
+                            </span>
+                          )}
+                        </div>
+                        <span className="text-gray-400 group-hover:text-purple-500 transition-colors text-lg">→</span>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
 
             {/* Interactive Lesson Banner - Show for all topics */}
             <div className="mb-8 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-white p-6 rounded-lg shadow-lg border-2 border-yellow-400">

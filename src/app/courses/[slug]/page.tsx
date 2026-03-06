@@ -68,7 +68,11 @@ export default async function CoursePage({ params }: CoursePageProps) {
       categories: {
         include: {
           topics: {
-            orderBy: { order: 'asc' }
+            where: { parentTopicId: null },
+            orderBy: { order: 'asc' },
+            include: {
+              _count: { select: { subtopics: true } }
+            }
           }
         },
         orderBy: { order: 'asc' }
@@ -88,7 +92,13 @@ export default async function CoursePage({ params }: CoursePageProps) {
       include: {
         categories: {
           include: {
-            topics: { orderBy: { order: 'asc' } }
+            topics: {
+              where: { parentTopicId: null },
+              orderBy: { order: 'asc' },
+              include: {
+                _count: { select: { subtopics: true } }
+              }
+            }
           },
           orderBy: { order: 'asc' }
         }
@@ -277,6 +287,11 @@ export default async function CoursePage({ params }: CoursePageProps) {
                             <p className="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">
                               {topic.description}
                             </p>
+                            {'_count' in topic && (topic as typeof topic & { _count: { subtopics: number } })._count.subtopics > 0 && (
+                              <span className="inline-block mt-2 text-xs font-medium text-indigo-700 bg-indigo-100 dark:bg-indigo-900/30 dark:text-indigo-300 px-2 py-0.5 rounded-full">
+                                {(topic as typeof topic & { _count: { subtopics: number } })._count.subtopics} subtopics
+                              </span>
+                            )}
                           </Link>
                         ))}
                       </div>
@@ -340,6 +355,11 @@ export default async function CoursePage({ params }: CoursePageProps) {
                         <p className="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">
                           {topic.description}
                         </p>
+                        {'_count' in topic && (topic as typeof topic & { _count: { subtopics: number } })._count.subtopics > 0 && (
+                          <span className="inline-block mt-2 text-xs font-medium text-indigo-700 bg-indigo-100 dark:bg-indigo-900/30 dark:text-indigo-300 px-2 py-0.5 rounded-full">
+                            {(topic as typeof topic & { _count: { subtopics: number } })._count.subtopics} subtopics
+                          </span>
+                        )}
                       </Link>
                     ))}
                   </div>

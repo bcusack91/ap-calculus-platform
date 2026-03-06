@@ -34,6 +34,44 @@ interface TestStats {
   sectionBreakdown: Record<string, { attempts: number; best: number }>
 }
 
+interface ModuleRecommendation {
+  slug: string
+  title: string
+  percentage: number
+  correct: number
+  total: number
+}
+
+function formatTopicTitleFromSlug(slug: string): string {
+  return slug
+    .replace(/^mcat-/, '')
+    .replace(/-mcat$/, '')
+    .split('-')
+    .map((part) => {
+      const upper = part.toUpperCase()
+      if (upper === 'DNA' || upper === 'RNA' || upper === 'PH') return upper
+      return part.charAt(0).toUpperCase() + part.slice(1)
+    })
+    .join(' ')
+}
+
+function getModuleRecommendations(byTopic: { slug: string; correct: number; total: number }[]): ModuleRecommendation[] {
+  return byTopic
+    .map((entry) => {
+      const percentage = entry.total > 0 ? Math.round((entry.correct / entry.total) * 100) : 0
+      return {
+        slug: entry.slug,
+        title: formatTopicTitleFromSlug(entry.slug),
+        percentage,
+        correct: entry.correct,
+        total: entry.total,
+      }
+    })
+    .filter((entry) => entry.total > 0 && entry.percentage < 70)
+    .sort((a, b) => a.percentage - b.percentage)
+    .slice(0, 4)
+}
+
 /* ------------------------------------------------------------------ */
 /*  Page                                                               */
 /* ------------------------------------------------------------------ */
@@ -191,6 +229,8 @@ export default function MCATractricePage() {
 
   // Results view
   if (activeTest && showResults && testResult) {
+    const moduleRecommendations = getModuleRecommendations(testResult.byTopic)
+
     return (
       <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-teal-50 py-8 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
         <div className="container">
@@ -268,6 +308,38 @@ export default function MCATractricePage() {
                 })}
               </div>
             </div>
+
+            {moduleRecommendations.length > 0 && (
+              <div className="mb-6 rounded-2xl border border-amber-200 bg-amber-50/70 p-6 dark:border-amber-700 dark:bg-amber-900/20">
+                <h3 className="mb-2 text-lg font-semibold text-amber-900 dark:text-amber-200">
+                  Recommended Learning Modules
+                </h3>
+                <p className="mb-4 text-sm text-amber-800 dark:text-amber-300">
+                  Based on this test, these are your lowest-performing topics. Review these modules first, then retake to measure improvement.
+                </p>
+                <div className="space-y-3">
+                  {moduleRecommendations.map((rec) => (
+                    <div
+                      key={rec.slug}
+                      className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-amber-200 bg-white px-4 py-3 dark:border-amber-800 dark:bg-gray-900"
+                    >
+                      <div>
+                        <p className="font-semibold text-gray-900 dark:text-white">{rec.title}</p>
+                        <p className="text-xs text-gray-600 dark:text-gray-400">
+                          {rec.correct}/{rec.total} correct ({rec.percentage}%)
+                        </p>
+                      </div>
+                      <Link
+                        href={`/topics/${rec.slug}`}
+                        className="rounded-lg bg-amber-600 px-3 py-2 text-xs font-semibold text-white transition hover:bg-amber-700"
+                      >
+                        Study Module
+                      </Link>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
 
             <div className="flex gap-3">
               <button
@@ -445,7 +517,7 @@ export default function MCATractricePage() {
                   Sections Practiced
                 </p>
                 <p className="mt-1 text-2xl font-bold text-teal-600 dark:text-teal-400">
-                  {Object.keys(stats.sectionBreakdown ?? {}).length}/4
+                  {Object.keys(stats.sectionBreakdown ?? {}).length}/{MCAT_SECTIONS.length}
                 </p>
               </div>
             </div>
@@ -460,6 +532,10 @@ export default function MCATractricePage() {
               {MCAT_SECTIONS.map(sec => {
                 const sectionStats = stats?.sectionBreakdown?.[sec.id]
                 const gradients: Record<string, string> = {
+                  'gen-chem-comprehensive': 'from-sky-500 to-indigo-500',
+                  'organic-comprehensive': 'from-rose-500 to-orange-500',
+                  'physics-comprehensive': 'from-cyan-500 to-blue-600',
+                  'biochem-comprehensive': 'from-lime-500 to-emerald-600',
                   'chem-phys': 'from-blue-500 to-cyan-500',
                   'cars': 'from-amber-500 to-orange-500',
                   'bio-biochem': 'from-green-500 to-emerald-500',
