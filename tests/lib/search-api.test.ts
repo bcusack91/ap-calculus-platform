@@ -19,7 +19,7 @@ vi.mock('@/lib/prisma', () => ({
 
 // Mock unstable_cache to pass through the function directly
 vi.mock('next/cache', () => ({
-  unstable_cache: (fn: Function) => fn,
+  unstable_cache: <T extends (...args: unknown[]) => unknown>(fn: T) => fn,
 }))
 
 const { GET } = await import('@/app/api/search/route')
