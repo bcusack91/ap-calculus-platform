@@ -12,8 +12,8 @@ export const satCalcStrategyPart3Data = {
 Algebraically solving systems can be tedious (substitution, elimination). Desmos finds the intersection in seconds.
 
 ### Method: Graph Both Equations
-1. Enter equation 1: `y = 3x - 2`
-2. Enter equation 2: `y = -x + 6`
+1. Enter equation 1: \`y = 3x - 2\`
+2. Enter equation 2: \`y = -x + 6\`
 3. Click the intersection dot → **(2, 4)**
 
 ### Systems with No Solution

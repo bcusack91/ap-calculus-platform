@@ -9,10 +9,10 @@ export const satCalcStrategyPart2Data = {
 **Part 2 of 7 — Essential Desmos Skills for the SAT**
 
 ### Entering Equations
-- Type equations directly: `y = 2x + 3`
-- Use `^` for exponents: `y = x^2 - 4`
-- Use `sqrt()` for square roots: `y = sqrt(x + 1)`
-- Fractions: type `(2/3)x` or use the fraction template
+- Type equations directly: \`y = 2x + 3\`
+- Use \`^\` for exponents: \`y = x^2 - 4\`
+- Use \`sqrt()\` for square roots: \`y = sqrt(x + 1)\`
+- Fractions: type \`(2/3)x\` or use the fraction template
 
 ### Finding Key Features
 | What You Need | What to Do in Desmos |
@@ -29,7 +29,7 @@ Click the equation number → "Table" to see exact x/y pairs. This is powerful f
 - Checking if a point is on a line
 
 ### Sliders
-If you type `y = ax + b`, Desmos creates sliders for `a` and `b`. This helps you:
+If you type \`y = ax + b\`, Desmos creates sliders for \`a\` and \`b\`. This helps you:
 - Match a graph to given constraints
 - Understand how changing a coefficient affects the graph
 - Find parameter values that satisfy conditions`

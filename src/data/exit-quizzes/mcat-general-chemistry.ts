@@ -3,7 +3,9 @@
  * Covers: atomic structure, bonding, acids/bases, kinetics, thermodynamics, electrochemistry
  */
 
-export interface ExitQuizQuestion {
+import type { ExitQuizQuestion } from './sat-linear-equations-inequalities'
+
+export interface MCATQuizQuestion {
   question: string
   options: string[]
   correctAnswer: number
@@ -11,7 +13,7 @@ export interface ExitQuizQuestion {
   difficulty: 'easy' | 'medium' | 'hard'
 }
 
-const questionPool: ExitQuizQuestion[] = [
+const questionPool: MCATQuizQuestion[] = [
   {
     question: 'Which quantum number determines the shape of an orbital?',
     options: ['Principal quantum number (n)', 'Angular momentum quantum number (l)', 'Magnetic quantum number (ml)', 'Spin quantum number (ms)'],
@@ -156,5 +158,12 @@ const questionPool: ExitQuizQuestion[] = [
 
 export function generateExitQuiz(count: number = 10): ExitQuizQuestion[] {
   const shuffled = [...questionPool].sort(() => Math.random() - 0.5)
-  return shuffled.slice(0, Math.min(count, shuffled.length))
+  return shuffled.slice(0, Math.min(count, shuffled.length)).map((q, i) => ({
+    id: `mcat-genchem-${i}`,
+    question: q.question,
+    options: q.options,
+    correctIndex: q.correctAnswer,
+    explanation: q.explanation,
+    category: 'mcat-general-chemistry',
+  }))
 }

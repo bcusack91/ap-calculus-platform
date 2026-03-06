@@ -2828,13 +2828,13 @@ const interactiveLessonRegistry: Record<string, InteractiveTopicConfig> = {
   },
   'sat-test-day-strategy-sat': {
     parts: [
-      { title: 'Test Format', loader: () => import('./sat-sat-test-day-strategy-sat-part1').then(m => m.satTestDayPart1Data) },
-      { title: 'What to Bring', loader: () => import('./sat-sat-test-day-strategy-sat-part2').then(m => m.satTestDayPart2Data) },
-      { title: 'Section Timing', loader: () => import('./sat-sat-test-day-strategy-sat-part3').then(m => m.satTestDayPart3Data) },
-      { title: 'Guessing Strategy', loader: () => import('./sat-sat-test-day-strategy-sat-part4').then(m => m.satTestDayPart4Data) },
-      { title: 'Mental Preparation', loader: () => import('./sat-sat-test-day-strategy-sat-part5').then(m => m.satTestDayPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./sat-sat-test-day-strategy-sat-part6').then(m => m.satTestDayPart6Data) },
-      { title: 'Review & Applications', loader: () => import('./sat-sat-test-day-strategy-sat-part7').then(m => m.satTestDayPart7Data) },
+      { title: 'Test Format', loader: () => import('./sat-sat-test-day-strategy-sat-part1').then(m => m.satTestDayStrategyPart1Data) },
+      { title: 'What to Bring', loader: () => import('./sat-sat-test-day-strategy-sat-part2').then(m => m.satTestDayStrategyPart2Data) },
+      { title: 'Section Timing', loader: () => import('./sat-sat-test-day-strategy-sat-part3').then(m => m.satTestDayStrategyPart3Data) },
+      { title: 'Guessing Strategy', loader: () => import('./sat-sat-test-day-strategy-sat-part4').then(m => m.satTestDayStrategyPart4Data) },
+      { title: 'Mental Preparation', loader: () => import('./sat-sat-test-day-strategy-sat-part5').then(m => m.satTestDayStrategyPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./sat-sat-test-day-strategy-sat-part6').then(m => m.satTestDayStrategyPart6Data) },
+      { title: 'Review & Applications', loader: () => import('./sat-sat-test-day-strategy-sat-part7').then(m => m.satTestDayStrategyPart7Data) },
     ],
   },
   // ═══════════════════════════════════════════

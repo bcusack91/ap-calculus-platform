@@ -3,9 +3,10 @@
  * Covers: amino acids, protein structure, enzymes, metabolism, bioenergetics
  */
 
-import type { ExitQuizQuestion } from './mcat-general-chemistry'
+import type { MCATQuizQuestion } from './mcat-general-chemistry'
+import type { ExitQuizQuestion } from './sat-linear-equations-inequalities'
 
-const questionPool: ExitQuizQuestion[] = [
+const questionPool: MCATQuizQuestion[] = [
   {
     question: 'At physiological pH (7.4), a typical amino acid exists as a:',
     options: ['Cation (positive charge)', 'Anion (negative charge)', 'Zwitterion', 'Neutral uncharged molecule'],
@@ -115,5 +116,12 @@ const questionPool: ExitQuizQuestion[] = [
 
 export function generateExitQuiz(count: number = 10): ExitQuizQuestion[] {
   const shuffled = [...questionPool].sort(() => Math.random() - 0.5)
-  return shuffled.slice(0, Math.min(count, shuffled.length))
+  return shuffled.slice(0, Math.min(count, shuffled.length)).map((q, i) => ({
+    id: `biochemistry-${i}`,
+    question: q.question,
+    options: q.options,
+    correctIndex: q.correctAnswer,
+    explanation: q.explanation,
+    category: 'mcat-biochemistry',
+  }))
 }

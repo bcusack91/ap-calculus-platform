@@ -12,7 +12,7 @@ export const satCalcStrategyPart5Data = {
 Click "+" → "Table" in Desmos. Enter your x and y values. Desmos plots the points automatically.
 
 ### Linear Regression
-After entering data points, type: `y₁ ~ mx₁ + b`
+After entering data points, type: \`y₁ ~ mx₁ + b\`
 
 Desmos finds the best-fit line and gives you:
 - **m** (slope) — the rate of change
@@ -25,11 +25,11 @@ Desmos finds the best-fit line and gives you:
 3. Use the equation to predict values or find the slope
 
 ### Exponential Regression
-For data that curves: `y₁ ~ ab^(x₁)`
+For data that curves: \`y₁ ~ ab^(x₁)\`
 - Good for: population growth, compound interest, radioactive decay
 
 ### Quadratic Regression
-For parabolic data: `y₁ ~ ax₁² + bx₁ + c`
+For parabolic data: \`y₁ ~ ax₁² + bx₁ + c\`
 - Good for: projectile motion, area problems, profit/revenue curves
 
 ### Residuals

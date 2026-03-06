@@ -2,9 +2,10 @@
  * MCAT Genetics & Evolution Exit Quiz
  */
 
-import type { ExitQuizQuestion } from './mcat-general-chemistry'
+import type { MCATQuizQuestion } from './mcat-general-chemistry'
+import type { ExitQuizQuestion } from './sat-linear-equations-inequalities'
 
-const questionPool: ExitQuizQuestion[] = [
+const questionPool: MCATQuizQuestion[] = [
   {
     question: 'In a cross between two heterozygous (Aa) organisms, what fraction of offspring are expected to be homozygous recessive?', options: ['1/4', '1/2', '3/4', '1/3'], correctAnswer: 0, explanation: 'Aa × Aa yields: AA (1/4), Aa (2/4), aa (1/4). One-quarter of offspring are homozygous recessive (aa).', difficulty: 'easy',
   },
@@ -51,5 +52,12 @@ const questionPool: ExitQuizQuestion[] = [
 
 export function generateExitQuiz(count: number = 10): ExitQuizQuestion[] {
   const shuffled = [...questionPool].sort(() => Math.random() - 0.5)
-  return shuffled.slice(0, Math.min(count, shuffled.length))
+  return shuffled.slice(0, Math.min(count, shuffled.length)).map((q, i) => ({
+    id: `genetics-evolution-${i}`,
+    question: q.question,
+    options: q.options,
+    correctIndex: q.correctAnswer,
+    explanation: q.explanation,
+    category: 'mcat-genetics-evolution',
+  }))
 }

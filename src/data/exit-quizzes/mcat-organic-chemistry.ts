@@ -3,9 +3,10 @@
  * Covers: functional groups, stereochemistry, SN1/SN2/E1/E2, carbonyl chemistry, spectroscopy
  */
 
-import type { ExitQuizQuestion } from './mcat-general-chemistry'
+import type { MCATQuizQuestion } from './mcat-general-chemistry'
+import type { ExitQuizQuestion } from './sat-linear-equations-inequalities'
 
-const questionPool: ExitQuizQuestion[] = [
+const questionPool: MCATQuizQuestion[] = [
   {
     question: 'An SN2 reaction is favored by which combination of conditions?',
     options: ['Tertiary substrate, polar protic solvent', 'Primary substrate, strong nucleophile, polar aprotic solvent', 'Secondary substrate, weak base, heat', 'Tertiary substrate, polar aprotic solvent'],
@@ -115,5 +116,12 @@ const questionPool: ExitQuizQuestion[] = [
 
 export function generateExitQuiz(count: number = 10): ExitQuizQuestion[] {
   const shuffled = [...questionPool].sort(() => Math.random() - 0.5)
-  return shuffled.slice(0, Math.min(count, shuffled.length))
+  return shuffled.slice(0, Math.min(count, shuffled.length)).map((q, i) => ({
+    id: `organic-chemistry-${i}`,
+    question: q.question,
+    options: q.options,
+    correctIndex: q.correctAnswer,
+    explanation: q.explanation,
+    category: 'mcat-organic-chemistry',
+  }))
 }

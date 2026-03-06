@@ -2,9 +2,10 @@
  * MCAT Cell Biology & Molecular Biology Exit Quiz
  */
 
-import type { ExitQuizQuestion } from './mcat-general-chemistry'
+import type { MCATQuizQuestion } from './mcat-general-chemistry'
+import type { ExitQuizQuestion } from './sat-linear-equations-inequalities'
 
-const questionPool: ExitQuizQuestion[] = [
+const questionPool: MCATQuizQuestion[] = [
   {
     question: 'Which phase of the cell cycle is characterized by DNA replication?',
     options: ['G1 phase', 'S phase', 'G2 phase', 'M phase'],
@@ -114,5 +115,12 @@ const questionPool: ExitQuizQuestion[] = [
 
 export function generateExitQuiz(count: number = 10): ExitQuizQuestion[] {
   const shuffled = [...questionPool].sort(() => Math.random() - 0.5)
-  return shuffled.slice(0, Math.min(count, shuffled.length))
+  return shuffled.slice(0, Math.min(count, shuffled.length)).map((q, i) => ({
+    id: `biology-${i}`,
+    question: q.question,
+    options: q.options,
+    correctIndex: q.correctAnswer,
+    explanation: q.explanation,
+    category: 'mcat-biology',
+  }))
 }

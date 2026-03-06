@@ -10,17 +10,17 @@ export const satCalcStrategyPart4Data = {
 
 ### Graphing Inequalities
 Desmos shades the solution region automatically:
-- `y > 2x + 1` → shades above the line
-- `y ≤ -x + 3` → shades below and on the line
-- Use `<`, `>`, `<=`, `>=` on your keyboard
+- \`y > 2x + 1\` → shades above the line
+- \`y ≤ -x + 3\` → shades below and on the line
+- Use \`<\`, \`>\`, \`<=\`, \`>=\` on your keyboard
 
 ### Systems of Inequalities
 Enter multiple inequalities. The **overlapping shaded region** is the solution set. Desmos uses different colors for each, making the overlap visible.
 
 ### Domain Restrictions
 Limit a function to certain x-values using braces:
-- `y = x^2 {0 < x < 5}` → only shows parabola between x = 0 and x = 5
-- `y = 2x + 1 {x >= 0}` → only shows the positive part
+- \`y = x^2 {0 < x < 5}\` → only shows parabola between x = 0 and x = 5
+- \`y = 2x + 1 {x >= 0}\` → only shows the positive part
 
 ### Finding Integer Solutions
 When the SAT asks "how many integer values of x satisfy both inequalities":
@@ -30,8 +30,8 @@ When the SAT asks "how many integer values of x satisfy both inequalities":
 4. The Desmos table feature helps verify specific integer points
 
 ### Absolute Value Inequalities
-- `|x - 3| < 5` means the distance from 3 is less than 5
-- Graph `y = |x - 3|` and `y = 5`, and identify where the V-shape is **below** the horizontal line`
+- \`|x - 3| < 5\` means the distance from 3 is less than 5
+- Graph \`y = |x - 3|\` and \`y = 5\`, and identify where the V-shape is **below** the horizontal line`
     },
     {
       id: 'cs4-q1',

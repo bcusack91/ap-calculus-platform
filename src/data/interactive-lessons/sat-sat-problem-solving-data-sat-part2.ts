@@ -21,7 +21,7 @@ $$\text{% Change} = \frac{\text{New} - \text{Original}}{\text{Original}} \times 
 
 ### Successive Percent Changes
 A 10% increase followed by a 10% decrease is **NOT** back to the original:
-$$100 \xrightarrow{+10\%} 110 \xrightarrow{-10\%} 99$$
+$$100 \\xrightarrow{+10\\%} 110 \\xrightarrow{-10\\%} 99$$
 
 ### SAT Classic: "What percent of X is Y?"
 Translate directly: "What percent of 80 is 24?"

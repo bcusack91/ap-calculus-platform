@@ -3,9 +3,10 @@
  * Covers: reading comprehension, reasoning, argument analysis, inference
  */
 
-import type { ExitQuizQuestion } from './mcat-general-chemistry'
+import type { MCATQuizQuestion } from './mcat-general-chemistry'
+import type { ExitQuizQuestion } from './sat-linear-equations-inequalities'
 
-const questionPool: ExitQuizQuestion[] = [
+const questionPool: MCATQuizQuestion[] = [
   {
     question: 'A passage argues that modern architecture has abandoned humanistic values in favor of pure functionality. The author\'s main thesis is best described as:',
     options: ['Modern architecture is more efficient than classical architecture', 'Architectural design should prioritize both aesthetic and human needs', 'Functionalism is the optimal design philosophy', 'Classical architecture should be revived entirely'],
@@ -108,5 +109,12 @@ const questionPool: ExitQuizQuestion[] = [
 
 export function generateExitQuiz(count: number = 10): ExitQuizQuestion[] {
   const shuffled = [...questionPool].sort(() => Math.random() - 0.5)
-  return shuffled.slice(0, Math.min(count, shuffled.length))
+  return shuffled.slice(0, Math.min(count, shuffled.length)).map((q, i) => ({
+    id: `cars-${i}`,
+    question: q.question,
+    options: q.options,
+    correctIndex: q.correctAnswer,
+    explanation: q.explanation,
+    category: 'mcat-cars',
+  }))
 }

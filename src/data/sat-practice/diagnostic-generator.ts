@@ -203,10 +203,12 @@ export async function generateDiagnosticTest(): Promise<DiagnosticTestData> {
         : q.skill === 'inference' ? 'comprehension'
         : 'comprehension'
       questions.push({
+        id: `diag-passage-${p.genre}-${q.question.slice(0, 20).replace(/\W/g, '')}`,
         question: q.question,
         options: q.options,
         correctIndex: q.correctAnswer,
         explanation: q.explanation,
+        category: `passage-${p.genre}`,
         domain,
         sourceSlug: `passage-${p.genre}`,
       })

@@ -2,9 +2,10 @@
  * MCAT Physics: Electricity & Optics Exit Quiz
  */
 
-import type { ExitQuizQuestion } from './mcat-general-chemistry'
+import type { MCATQuizQuestion } from './mcat-general-chemistry'
+import type { ExitQuizQuestion } from './sat-linear-equations-inequalities'
 
-const questionPool: ExitQuizQuestion[] = [
+const questionPool: MCATQuizQuestion[] = [
   {
     question: 'Two point charges of +2 μC and -4 μC are separated by 0.3 m. Is the force attractive or repulsive, and what is its magnitude? (k = 9 × 10⁹ N·m²/C²)',
     options: ['Attractive, 0.8 N', 'Repulsive, 0.8 N', 'Attractive, 2.4 N', 'Repulsive, 2.4 N'],
@@ -107,5 +108,12 @@ const questionPool: ExitQuizQuestion[] = [
 
 export function generateExitQuiz(count: number = 10): ExitQuizQuestion[] {
   const shuffled = [...questionPool].sort(() => Math.random() - 0.5)
-  return shuffled.slice(0, Math.min(count, shuffled.length))
+  return shuffled.slice(0, Math.min(count, shuffled.length)).map((q, i) => ({
+    id: `physics-electricity-${i}`,
+    question: q.question,
+    options: q.options,
+    correctIndex: q.correctAnswer,
+    explanation: q.explanation,
+    category: 'mcat-physics-electricity',
+  }))
 }

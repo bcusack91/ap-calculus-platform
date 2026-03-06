@@ -2,9 +2,10 @@
  * MCAT Organ Systems, Anatomy & Physiology Exit Quiz
  */
 
-import type { ExitQuizQuestion } from './mcat-general-chemistry'
+import type { MCATQuizQuestion } from './mcat-general-chemistry'
+import type { ExitQuizQuestion } from './sat-linear-equations-inequalities'
 
-const questionPool: ExitQuizQuestion[] = [
+const questionPool: MCATQuizQuestion[] = [
   {
     question: 'The sinoatrial (SA) node is located in:', options: ['Left ventricle', 'Right atrium', 'Left atrium', 'Right ventricle'], correctAnswer: 1, explanation: 'The SA node is located in the wall of the right atrium. It is the primary pacemaker of the heart, initiating each heartbeat.', difficulty: 'easy',
   },
@@ -54,5 +55,12 @@ const questionPool: ExitQuizQuestion[] = [
 
 export function generateExitQuiz(count: number = 10): ExitQuizQuestion[] {
   const shuffled = [...questionPool].sort(() => Math.random() - 0.5)
-  return shuffled.slice(0, Math.min(count, shuffled.length))
+  return shuffled.slice(0, Math.min(count, shuffled.length)).map((q, i) => ({
+    id: `organ-systems-${i}`,
+    question: q.question,
+    options: q.options,
+    correctIndex: q.correctAnswer,
+    explanation: q.explanation,
+    category: 'mcat-organ-systems',
+  }))
 }

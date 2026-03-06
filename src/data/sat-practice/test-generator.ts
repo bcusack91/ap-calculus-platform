@@ -150,10 +150,12 @@ function passagesToTestQuestions(passages: ReadingPassage[]): SATTestQuestion[] 
   for (const p of passages) {
     for (const q of p.questions) {
       questions.push({
+        id: `sat-passage-${p.genre}-${q.question.slice(0, 20).replace(/\W/g, '')}`,
         question: q.question,
         options: q.options,
         correctIndex: q.correctAnswer,
         explanation: q.explanation,
+        category: `passage-${p.genre}`,
         section: 'reading-writing',
         sourceSlug: `passage-${p.genre}`,
         passage: {

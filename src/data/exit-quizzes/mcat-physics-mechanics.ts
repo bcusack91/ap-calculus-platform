@@ -3,9 +3,10 @@
  * Covers: kinematics, Newton's laws, work/energy, momentum, fluids, waves
  */
 
-import type { ExitQuizQuestion } from './mcat-general-chemistry'
+import type { MCATQuizQuestion } from './mcat-general-chemistry'
+import type { ExitQuizQuestion } from './sat-linear-equations-inequalities'
 
-const questionPool: ExitQuizQuestion[] = [
+const questionPool: MCATQuizQuestion[] = [
   {
     question: 'A projectile is launched at 30° above the horizontal at 20 m/s. What is the horizontal component of its initial velocity?',
     options: ['10 m/s', '17.3 m/s', '14.1 m/s', '20 m/s'],
@@ -115,5 +116,12 @@ const questionPool: ExitQuizQuestion[] = [
 
 export function generateExitQuiz(count: number = 10): ExitQuizQuestion[] {
   const shuffled = [...questionPool].sort(() => Math.random() - 0.5)
-  return shuffled.slice(0, Math.min(count, shuffled.length))
+  return shuffled.slice(0, Math.min(count, shuffled.length)).map((q, i) => ({
+    id: `physics-mechanics-${i}`,
+    question: q.question,
+    options: q.options,
+    correctIndex: q.correctAnswer,
+    explanation: q.explanation,
+    category: 'mcat-physics-mechanics',
+  }))
 }
