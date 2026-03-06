@@ -3069,9 +3069,9 @@ const interactiveLessonRegistry: Record<string, InteractiveTopicConfig> = {
       { title: 'Chemical Bonding', loader: () => import('./mcat-mcat-general-chemistry-mcat-part2').then(m => m.mcatGenChemPart2Data) },
       { title: 'Stoichiometry & Solutions', loader: () => import('./mcat-mcat-general-chemistry-mcat-part3').then(m => m.mcatGenChemPart3Data) },
       { title: 'Acids, Bases & Buffers', loader: () => import('./mcat-mcat-general-chemistry-mcat-part4').then(m => m.mcatGenChemPart4Data) },
-      { title: 'Chemical Kinetics', loader: () => import('./mcat-mcat-general-chemistry-mcat-part5').then(m => m.mcatGenChemPart5Data) },
-      { title: 'Thermodynamics & Equilibrium', loader: () => import('./mcat-mcat-general-chemistry-mcat-part6').then(m => m.mcatGenChemPart6Data) },
-      { title: 'Review & MCAT Practice', loader: () => import('./mcat-mcat-general-chemistry-mcat-part7').then(m => m.mcatGenChemPart7Data) },
+      { title: 'Thermodynamics & Equilibrium', loader: () => import('./mcat-mcat-general-chemistry-mcat-part5').then(m => m.mcatGenChemPart5Data) },
+      { title: 'Chemical Kinetics', loader: () => import('./mcat-mcat-general-chemistry-mcat-part6').then(m => m.mcatGenChemPart6Data) },
+      { title: 'Electrochemistry & Redox', loader: () => import('./mcat-mcat-general-chemistry-mcat-part7').then(m => m.mcatGenChemPart7Data) },
     ],
   },
   'mcat-organic-chemistry-mcat': {
