@@ -52,6 +52,7 @@ jobs:
     needs: [lint-typecheck, test]
     env:
       DATABASE_URL: "postgresql://postgres:postgres@localhost:5432/builddb"
+      DIRECT_URL: "postgresql://postgres:postgres@localhost:5432/builddb"
       NEXTAUTH_SECRET: "ci-build-secret"
       NEXTAUTH_URL: "http://localhost:3000"
     services:
