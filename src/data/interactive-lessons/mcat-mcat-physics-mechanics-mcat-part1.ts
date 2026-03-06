@@ -25,7 +25,15 @@ $$\\Delta x = vt - \\tfrac{1}{2}at^2$$
 
 ### MCAT Tip: Free Fall
 
-All objects fall at the same rate regardless of mass (ignoring air resistance). $g \\approx 10\\;\\text{m/s}^2$ for quick calculations on the MCAT.`
+All objects fall at the same rate regardless of mass (ignoring air resistance). $g \\approx 10\\;\\text{m/s}^2$ for quick calculations on the MCAT.
+
+### Relative Motion Shortcut
+
+In one-dimensional motion, use relative velocity directly:
+
+$$v_{A/B} = v_A - v_B$$
+
+This simplifies chase and meeting-time questions.`
     },
     {
       id: 'pm1-quiz1',
@@ -44,6 +52,18 @@ All objects fall at the same rate regardless of mass (ignoring air resistance). 
             options: [`The same range (complementary angles)`, `A longer range`, `A shorter range`, `The same max height`],
             correctAnswer: 0,
             explanation: `Complementary angles (30° and 60°) give the same range: $R = v_0^2\\sin(2\\theta)/g$. $\\sin(60°) = \\sin(120°)$. But 60° reaches a greater height.`
+          },
+          {
+            question: `Two runners move in the same direction at 8 m/s and 5 m/s. Their relative speed is:`,
+            options: [`3 m/s`, `13 m/s`, `1.6 m/s`, `40 m/s`],
+            correctAnswer: 0,
+            explanation: `For same-direction motion, relative speed is the difference in speeds: $8 - 5 = 3$ m/s.`
+          },
+          {
+            question: `For horizontal projectile motion (ignoring air resistance), horizontal acceleration is:`,
+            options: [`0`, `$g$`, `$g\\sin\\theta$`, `Depends on mass`],
+            correctAnswer: 0,
+            explanation: `No horizontal net force means $a_x = 0$, so horizontal velocity remains constant.`
           }
         ]
       }
@@ -55,7 +75,8 @@ All objects fall at the same rate regardless of mass (ignoring air resistance). 
 
 - Use $g \\approx 10\\;\\text{m/s}^2$ for MCAT calculations
 - Projectile motion: separate into x (constant velocity) and y (constant acceleration)
-- Complementary angles give same range; 45° gives maximum range`
+- Complementary angles give same range; 45° gives maximum range
+- Relative velocity questions are often one subtraction when set up correctly.`
     }
   ]
 };

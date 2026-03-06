@@ -30,7 +30,13 @@ Always conserved in the absence of external forces!
 | Inelastic | Conserved | NOT conserved (some lost to heat/deformation) |
 | Perfectly inelastic | Conserved | Maximum KE loss (objects stick together) |
 
-For perfectly inelastic: $m_1v_1 + m_2v_2 = (m_1 + m_2)v_f$`
+For perfectly inelastic: $m_1v_1 + m_2v_2 = (m_1 + m_2)v_f$
+
+### Why Increasing Collision Time Matters
+
+From $J = F\\Delta t = \\Delta p$, for fixed momentum change, increasing $\\Delta t$ lowers average force.
+
+This principle explains airbags, padded helmets, and crumple zones.`
     },
     {
       id: 'pm4-quiz1',
@@ -43,6 +49,18 @@ For perfectly inelastic: $m_1v_1 + m_2v_2 = (m_1 + m_2)v_f$`
             options: [`6.67 m/s`, `10 m/s`, `20 m/s`, `3.33 m/s`],
             correctAnswer: 0,
             explanation: `Perfectly inelastic: $m_1v_1 = (m_1 + m_2)v_f$. $1000(20) = 3000 \\cdot v_f \\implies v_f = 20{,}000/3000 \\approx 6.67$ m/s.`
+          },
+          {
+            question: `In an isolated elastic collision, which quantity is conserved for the system?`,
+            options: [`Momentum only`, `Kinetic energy only`, `Both momentum and kinetic energy`, `Neither momentum nor kinetic energy`],
+            correctAnswer: 2,
+            explanation: `Elastic collisions conserve both total momentum and total kinetic energy.`
+          },
+          {
+            question: `If the same change in momentum occurs over a longer time interval, average force is:`,
+            options: [`Greater`, `Smaller`, `Unchanged`, `Zero`],
+            correctAnswer: 1,
+            explanation: `Since $F_{avg}=\\Delta p/\\Delta t$, increasing $\\Delta t$ decreases average force for fixed $\\Delta p$.`
           }
         ]
       }

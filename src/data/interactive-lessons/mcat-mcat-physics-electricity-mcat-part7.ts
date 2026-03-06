@@ -30,7 +30,9 @@ $$^A_Z X \\qquad A = \\text{mass number}, Z = \\text{atomic number}$$
 
 $$N = N_0\\left(\\frac{1}{2}\\right)^{t/t_{1/2}}$$
 
-After $n$ half-lives: $N = N_0/2^n$`
+After $n$ half-lives: $N = N_0/2^n$
+
+Activity is proportional to number of undecayed nuclei, so activity falls exponentially with the same half-life behavior.`
     },
     {
       id: 'pe7-quiz1',
@@ -49,6 +51,12 @@ After $n$ half-lives: $N = N_0/2^n$`
             options: [`$^{234}_{90}\\text{Th}$ ($A - 4$, $Z - 2$)`, `$^{238}_{93}\\text{Np}$`, `$^{234}_{92}\\text{U}$`, `$^{238}_{90}\\text{Th}$`],
             correctAnswer: 0,
             explanation: `Alpha decay emits $^4_2\\text{He}$: $A$ decreases by 4 (238→234) and $Z$ decreases by 2 (92→90). Element 90 = Thorium.`
+          },
+          {
+            question: `After 4 half-lives, the fraction of original nuclei remaining is:`,
+            options: [`1/4`, `1/8`, `1/16`, `1/32`],
+            correctAnswer: 2,
+            explanation: `Remaining fraction is $(1/2)^n$. For n=4, $(1/2)^4 = 1/16$.`
           }
         ]
       }

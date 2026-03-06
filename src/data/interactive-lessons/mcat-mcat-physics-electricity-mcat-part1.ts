@@ -31,7 +31,11 @@ $$V = k\\frac{Q}{r} \\qquad \\Delta V = -\\int \\vec{E}\\cdot d\\vec{r}$$
 $$U = k\\frac{q_1 q_2}{r} = qV$$
 
 - Positive charges move from high V to low V spontaneously
-- Negative charges move from low V to high V spontaneously`
+- Negative charges move from low V to high V spontaneously
+
+### Equipotential Insight
+
+Moving along an equipotential surface requires no work by the electric field because $\\Delta V = 0$.`
     },
     {
       id: 'pe1-quiz1',
@@ -50,6 +54,18 @@ $$U = k\\frac{q_1 q_2}{r} = qV$$
             options: [`Uniform (same magnitude everywhere between plates)`, `Stronger near the positive plate`, `Zero`, `Inversely proportional to distance`],
             correctAnswer: 0,
             explanation: `Between parallel plates, $E = V/d$ is uniform. This is why parallel plate capacitors are used in many MCAT problems — the uniform field simplifies calculations.`
+          },
+          {
+            question: `Electric field lines around a positive point charge point:`,
+            options: [`Toward the charge`, `Away from the charge`, `Clockwise`, `In circles`],
+            correctAnswer: 1,
+            explanation: `By convention, field direction is the force on a positive test charge, so lines radiate outward from positive charges.`
+          },
+          {
+            question: `Moving a charge along an equipotential surface changes electric potential energy by:`,
+            options: [`A positive amount`, `A negative amount`, `Zero`, `An amount depending only on distance`],
+            correctAnswer: 2,
+            explanation: `No potential difference means no electrical work: $\\Delta U=q\\Delta V=0$.`
           }
         ]
       }

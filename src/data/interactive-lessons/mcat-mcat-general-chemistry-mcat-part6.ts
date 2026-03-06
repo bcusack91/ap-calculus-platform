@@ -33,7 +33,18 @@ $$\\ln k = \\ln A - \\frac{E_a}{RT}$$
 
 ### Rate-Determining Step
 
-The slowest step determines the overall rate law.`
+The slowest step determines the overall rate law.
+
+### Integrated Rate Law Patterns
+
+- Zero order: $[A]_t = [A]_0 - kt$ (linear in [A] vs t)
+- First order: $\\ln[A]_t = \\ln[A]_0 - kt$ (linear in ln[A] vs t)
+- Second order: $1/[A]_t = 1/[A]_0 + kt$ (linear in 1/[A] vs t)
+
+Half-life behavior:
+
+- First-order: constant $t_{1/2}$ regardless of concentration
+- Zero/second-order: $t_{1/2}$ depends on initial concentration`
     },
     {
       id: 'gc6-quiz1',
@@ -52,6 +63,18 @@ The slowest step determines the overall rate law.`
             options: [`Lowers $E_a$ and speeds up both forward and reverse reactions equally`, `Increases $\\Delta G$ of the reaction`, `Shifts the equilibrium toward products`, `Only affects the forward reaction rate`],
             correctAnswer: 0,
             explanation: `A catalyst lowers $E_a$ for both forward and reverse reactions equally. It does NOT change equilibrium ($K$, $\\Delta G$) — it only helps reach equilibrium faster.`
+          },
+          {
+            question: `A reaction has a constant half-life of 15 min. This reaction is most likely:`,
+            options: [`Zero order`, `First order`, `Second order`, `Third order`],
+            correctAnswer: 1,
+            explanation: `A concentration-independent half-life is the hallmark of first-order kinetics.`
+          },
+          {
+            question: `If the rate law is $rate=k[A]^2[B]$, by what factor does rate change when [A] doubles and [B] triples?`,
+            options: [`6`, `8`, `12`, `24`],
+            correctAnswer: 2,
+            explanation: `Rate factor = $2^2 \\times 3^1 = 4 \\times 3 = 12$.`
           }
         ]
       }
@@ -64,7 +87,8 @@ The slowest step determines the overall rate law.`
 - Rate law exponents are EXPERIMENTAL, not from balanced equation
 - Method of initial rates: change one reactant, observe rate change
 - Catalysts lower $E_a$ but don't change $K$, $\\Delta G$, or $\\Delta H$
-- Rate-determining step = slowest elementary step`
+- Rate-determining step = slowest elementary step
+- Recognize first-order kinetics quickly from constant half-life.`
     }
   ]
 };

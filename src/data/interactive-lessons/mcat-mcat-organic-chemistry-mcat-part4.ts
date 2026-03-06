@@ -26,7 +26,17 @@ $$\\text{Acid halide} > \\text{Anhydride} > \\text{Ester} > \\text{Amide} > \\te
 
 ### Biochemistry Connection
 
-Thioester (CoA derivatives) are key metabolic intermediates — more reactive than regular esters due to weak C-S bond.`
+Thioester (CoA derivatives) are key metabolic intermediates — more reactive than regular esters due to weak C-S bond.
+
+### Core Mechanistic Pattern
+
+Most derivative reactions proceed through:
+
+1. Nucleophilic attack on carbonyl carbon
+2. Tetrahedral intermediate formation
+3. Collapse and leaving-group departure
+
+The best leaving group generally determines the direction and feasibility of interconversion.`
     },
     {
       id: 'oc4-quiz1',
@@ -39,6 +49,18 @@ Thioester (CoA derivatives) are key metabolic intermediates — more reactive th
             options: [`Amide`, `Acid chloride`, `Ester`, `Anhydride`],
             correctAnswer: 0,
             explanation: `Amides are least reactive because $\\text{NH}_2^-$ is a very poor leaving group. Also, nitrogen donates electrons into the carbonyl via resonance, reducing electrophilicity.`
+          },
+          {
+            question: `Base hydrolysis of an ester (saponification) produces:`,
+            options: [`Carboxylate + alcohol`, `Carboxylic acid + alcohol`, `Amide + water`, `Acid chloride + alcohol`],
+            correctAnswer: 0,
+            explanation: `Under basic conditions, ester hydrolysis yields a carboxylate salt and alcohol. Acid workup can protonate the carboxylate afterward.`
+          },
+          {
+            question: `Which derivative is most electrophilic at the carbonyl carbon?`,
+            options: [`Amide`, `Ester`, `Anhydride`, `Acid chloride`],
+            correctAnswer: 3,
+            explanation: `Acid chlorides are most reactive because chloride is a very good leaving group and provides less resonance stabilization than amides/esters.`
           }
         ]
       }
@@ -51,7 +73,8 @@ Thioester (CoA derivatives) are key metabolic intermediates — more reactive th
 - Reactivity of acid derivatives: halide > anhydride > ester > amide
 - Saponification = base hydrolysis of an ester → soap (carboxylate salt)
 - Thioesters (e.g., acetyl-CoA) are bioloical activated intermediates
-- Peptide bond = amide bond — resistant to hydrolysis (needs enzymes)`
+- Peptide bond = amide bond — resistant to hydrolysis (needs enzymes)
+- Reaction prediction improves if you compare leaving-group quality first.`
     }
   ]
 };

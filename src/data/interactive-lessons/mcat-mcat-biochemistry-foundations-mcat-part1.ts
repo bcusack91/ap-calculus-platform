@@ -28,7 +28,14 @@ export const mcatBiochemPart1Data = {
 
 ### Disulfide Bonds
 
-Cysteine + Cysteine → Cystine (C-S-S-C), covalent bond stabilizing tertiary structure.`
+Cysteine + Cysteine → Cystine (C-S-S-C), covalent bond stabilizing tertiary structure.
+
+### Isoelectric Point (pI) Logic
+
+- At pH < pI, amino acids/proteins tend to carry net positive charge.
+- At pH > pI, they tend to carry net negative charge.
+
+This is heavily tested in electrophoresis and separation contexts.`
     },
     {
       id: 'bc1-quiz1',
@@ -47,6 +54,18 @@ Cysteine + Cysteine → Cystine (C-S-S-C), covalent bond stabilizing tertiary st
             options: [`Hydrogen bonds between backbone C=O and N-H groups 4 residues apart`, `Disulfide bonds`, `Hydrophobic interactions`, `Ionic bonds between side chains`],
             correctAnswer: 0,
             explanation: `$\\alpha$-helices are stabilized by H-bonds between the C=O of residue $i$ and the N-H of residue $i+4$. These are backbone (not side chain) interactions, making them secondary structure.`
+          },
+          {
+            question: `At pH well above its isoelectric point, a protein will usually have net:`,
+            options: [`Positive charge`, `Negative charge`, `Zero charge always`, `No ionizable groups`],
+            correctAnswer: 1,
+            explanation: `At pH above pI, more groups are deprotonated, producing a net negative charge.`
+          },
+          {
+            question: `Which amino acid side chain can form a disulfide bond under oxidizing conditions?`,
+            options: [`Serine`, `Methionine`, `Cysteine`, `Tyrosine`],
+            correctAnswer: 2,
+            explanation: `Cysteine thiol groups can oxidize to form a disulfide linkage (cystine).`
           }
         ]
       }

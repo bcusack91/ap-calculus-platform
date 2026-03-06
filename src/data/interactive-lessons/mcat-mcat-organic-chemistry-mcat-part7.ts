@@ -24,7 +24,14 @@ export const mcatOrgChemPart7Data = {
 | Nonpolar | Gly, Ala, Val, Leu, Ile, Pro, Phe, Trp, Met |
 | Polar uncharged | Ser, Thr, Cys, Tyr, Asn, Gln |
 | Positive (basic) | Lys, Arg, His |
-| Negative (acidic) | Asp, Glu |`
+| Negative (acidic) | Asp, Glu |
+
+### Test-Day Organic Workflow
+
+1. Identify the functional group(s) first.
+2. Decide mechanism class (substitution, elimination, addition, acyl substitution).
+3. Check stereochemical consequence (inversion, racemization, retention).
+4. Use reagent strength and solvent to resolve competing pathways.`
     },
     {
       id: 'oc7-quiz1',
@@ -43,6 +50,18 @@ export const mcatOrgChemPart7Data = {
             options: [`$-15°$ (equal and opposite)`, `$+15°$`, `$0°$`, `$+30°$`],
             correctAnswer: 0,
             explanation: `Enantiomers rotate plane-polarized light by equal magnitude but opposite direction. If one is +15°, the other must be -15°.`
+          },
+          {
+            question: `A tertiary alkyl bromide in methanol under heat is most likely to undergo:`,
+            options: [`SN2`, `SN1/E1 competition`, `E2 only`, `No reaction`],
+            correctAnswer: 1,
+            explanation: `Tertiary substrate blocks SN2. Protic solvent and heat often give carbocation pathways with SN1/E1 competition.`
+          },
+          {
+            question: `Which reagent pair most often indicates oxidation of a secondary alcohol to a ketone?`,
+            options: [`PCC or Jones reagent`, `LiAlH$_4$`, `NaBH$_4$`, `NaOH/heat`],
+            correctAnswer: 0,
+            explanation: `PCC and Jones are oxidizing reagents. Secondary alcohols are oxidized to ketones by either reagent.`
           }
         ]
       }
@@ -52,7 +71,9 @@ export const mcatOrgChemPart7Data = {
       type: 'text' as const,
       content: `### Organic Chemistry — Complete! ✅
 
-Master the reaction decision chart, functional groups, and stereochemistry. These connect directly to amino acid and enzyme chemistry in Biochemistry.`
+Master the reaction decision chart, functional groups, and stereochemistry. These connect directly to amino acid and enzyme chemistry in Biochemistry.
+
+The strongest MCAT performance comes from mechanism-first thinking, not memorizing isolated reactions.`
     }
   ]
 };

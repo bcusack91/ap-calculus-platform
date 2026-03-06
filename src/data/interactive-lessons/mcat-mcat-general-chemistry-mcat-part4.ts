@@ -29,7 +29,24 @@ $$K_a \\times K_b = K_w = 1.0 \\times 10^{-14}$$
 $$\\text{pH} = pK_a + \\log\\frac{[A^-]}{[HA]}$$
 
 - At half-equivalence point: $[A^-] = [HA]$, so $\\text{pH} = pK_a$
-- Buffers work best when pH is within $\\pm 1$ of $pK_a$`
+- Buffers work best when pH is within $\\pm 1$ of $pK_a$
+
+### Strong vs Weak Acids/Bases
+
+- **Strong acids** (HCl, HBr, HI, HNO$_3$, HClO$_4$, H$_2$SO$_4$ first proton): complete dissociation.
+- **Weak acids/bases**: partial dissociation, equilibrium-based calculations.
+
+For weak acid HA in water when $C \gg K_a$:
+
+$$[H^+] \\approx \\sqrt{K_a C}$$
+
+### Titration Curves: What To Recognize Quickly
+
+- Weak acid + strong base:
+  - Initial pH higher than strong acid of same concentration
+  - Buffer region before equivalence
+  - At half-equivalence: pH = pKa
+  - Equivalence pH > 7`
     },
     {
       id: 'gc4-quiz1',
@@ -54,6 +71,18 @@ $$\\text{pH} = pK_a + \\log\\frac{[A^-]}{[HA]}$$
             options: [`Greater than 7`, `Equal to 7`, `Less than 7`, `Equal to $pK_a$`],
             correctAnswer: 0,
             explanation: `At equivalence, all HA is converted to $A^-$ (conjugate base), which hydrolyzes water to produce $OH^-$. So pH > 7.`
+          },
+          {
+            question: `If a buffer has [A-] = [HA], then adding a small amount of strong acid will primarily:`,
+            options: [`Convert HA to A-`, `Convert A- to HA`, `Leave both unchanged`, `Fully consume both`],
+            correctAnswer: 1,
+            explanation: `Added H+ is consumed by the conjugate base A-, producing HA. This is why buffer pH changes only modestly.`
+          },
+          {
+            question: `A solution has pOH = 3.40 at 25 C. Its pH is:`,
+            options: [`10.60`, `3.40`, `7.00`, `14.00`],
+            correctAnswer: 0,
+            explanation: `At 25 C, pH + pOH = 14. Therefore pH = 14 - 3.40 = 10.60.`
           }
         ]
       }
@@ -66,7 +95,8 @@ $$\\text{pH} = pK_a + \\log\\frac{[A^-]}{[HA]}$$
 - Weak acid pH: $\\text{pH} = \\frac{1}{2}(pK_a - \\log C)$ or use $[H^+] = \\sqrt{K_a C}$
 - Henderson-Hasselbalch: memorize and practice
 - Titration: weak acid + strong base → equivalence pH > 7
-- At half-equivalence: pH = $pK_a$ (most common MCAT question!)`
+- At half-equivalence: pH = $pK_a$ (most common MCAT question!)
+- Always identify whether species are strong/weak before choosing equations.`
     }
   ]
 };

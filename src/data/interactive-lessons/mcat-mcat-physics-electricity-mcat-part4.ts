@@ -28,7 +28,9 @@ $$\\sin\\theta_c = \\frac{n_2}{n_1} \\quad (n_1 > n_2)$$
 
 - Only occurs when going from denser to less dense medium
 - Angle of incidence must exceed the critical angle
-- Applications: fiber optics, diamond sparkle`
+- Applications: fiber optics, diamond sparkle
+
+Higher refractive index means lower light speed in that medium ($n=c/v$).`
     },
     {
       id: 'pe4-quiz1',
@@ -41,6 +43,12 @@ $$\\sin\\theta_c = \\frac{n_2}{n_1} \\quad (n_1 > n_2)$$
             options: [`49° ($\\sin^{-1}(1/1.33) \\approx 49°$)`, `90°`, `33°`, `75°`],
             correctAnswer: 0,
             explanation: `$\\sin\\theta_c = n_2/n_1 = 1.00/1.33 = 0.75$. $\\theta_c = \\sin^{-1}(0.75) \\approx 49°$. Any light hitting the water-air surface at $> 49°$ from normal undergoes total internal reflection.`
+          },
+          {
+            question: `Light enters glass from air. It will:`,
+            options: [`Speed up and bend away from normal`, `Slow down and bend toward normal`, `Keep same speed and direction`, `Speed up and bend toward normal`],
+            correctAnswer: 1,
+            explanation: `Glass has higher refractive index than air, so speed decreases and ray bends toward the normal.`
           }
         ]
       }

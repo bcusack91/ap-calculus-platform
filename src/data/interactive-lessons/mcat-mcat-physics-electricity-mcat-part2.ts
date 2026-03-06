@@ -33,7 +33,11 @@ $$P = IV = I^2R = \\frac{V^2}{R}$$
 $$C = \\frac{Q}{V} \\qquad U = \\frac{1}{2}CV^2$$
 
 - Series: $\\frac{1}{C_T} = \\frac{1}{C_1} + \\frac{1}{C_2}$ (OPPOSITE of resistors!)
-- Parallel: $C_T = C_1 + C_2$ `
+- Parallel: $C_T = C_1 + C_2$
+
+### RC Intuition
+
+Capacitors resist instantaneous voltage change, which is why they smooth signals and create charging/discharging time constants in physiology instrumentation contexts.`
     },
     {
       id: 'pe2-quiz1',
@@ -52,6 +56,18 @@ $$C = \\frac{Q}{V} \\qquad U = \\frac{1}{2}CV^2$$
             options: [`24 W`, `6 W`, `144 W`, `48 W`],
             correctAnswer: 0,
             explanation: `$P = IV = 2(12) = 24$ W. Could also use $P = I^2R$ or $V^2/R$ if you know the resistance.`
+          },
+          {
+            question: `In a series circuit with ideal wires, which quantity is the same through each resistor?`,
+            options: [`Voltage`, `Current`, `Resistance`, `Power`],
+            correctAnswer: 1,
+            explanation: `Series elements carry the same current, while voltage divides across components.`
+          },
+          {
+            question: `Adding a resistor in parallel to an existing network makes total equivalent resistance:`,
+            options: [`Increase`, `Decrease`, `Stay the same`, `Become zero always`],
+            correctAnswer: 1,
+            explanation: `A new parallel path increases total conductance, so equivalent resistance decreases.`
           }
         ]
       }

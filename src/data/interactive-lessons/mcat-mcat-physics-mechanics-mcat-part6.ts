@@ -29,7 +29,11 @@ $$x_{cm} = \\frac{\\sum m_i x_i}{\\sum m_i}$$
 - **Pulley**: redirects force; compound pulleys multiply force
 - **Inclined plane**: reduces force needed but increases distance
 
-**Key Principle**: Machines reduce force but NEVER reduce work ($W = Fd$ is constant).`
+**Key Principle**: Machines reduce force but NEVER reduce work ($W = Fd$ is constant).
+
+### Pivot Choice Strategy
+
+Choose a pivot that eliminates unknown forces (often a support point) so torque equations simplify quickly.`
     },
     {
       id: 'pm6-quiz1',
@@ -42,6 +46,12 @@ $$x_{cm} = \\frac{\\sum m_i x_i}{\\sum m_i}$$
             options: [`750 N$\\cdot$m`, `600 N$\\cdot$m`, `450 N$\\cdot$m`, `300 N$\\cdot$m`],
             correctAnswer: 0,
             explanation: `Beam weight acts at center of mass (1.5 m from support): $\\tau_1 = 10(10)(1.5) = 150$ N$\\cdot$m. Hanging mass: $\\tau_2 = 20(10)(3) = 600$ N$\\cdot$m. Total: $150 + 600 = 750$ N$\\cdot$m.`
+          },
+          {
+            question: `A 10 N force is applied perpendicular to a wrench 0.20 m from the bolt. The torque magnitude is:`,
+            options: [`0.5 N m`, `2.0 N m`, `10 N m`, `20 N m`],
+            correctAnswer: 1,
+            explanation: `$\\tau = rF\\sin\\theta = 0.20(10)\\sin 90° = 2.0$ N m.`
           }
         ]
       }

@@ -28,7 +28,20 @@ $$E = E° - \\frac{RT}{nF}\\ln Q = E° - \\frac{0.0592}{n}\\log Q \\quad (\\text
 
 $$\\Delta G° = -nFE°$$
 
-where $n$ = moles of electrons transferred, $F$ = 96,485 C/mol`
+where $n$ = moles of electrons transferred, $F$ = 96,485 C/mol
+
+### Oxidizing vs Reducing Agents
+
+- **Oxidizing agent** gets reduced (accepts electrons)
+- **Reducing agent** gets oxidized (donates electrons)
+
+Quick check: if a species loses electrons, it is the reducing agent.
+
+### Electrode Roles (Always True)
+
+- Anode = oxidation
+- Cathode = reduction
+- Electrons move through the external circuit from anode to cathode`
     },
     {
       id: 'gc7-quiz1',
@@ -47,6 +60,18 @@ where $n$ = moles of electrons transferred, $F$ = 96,485 C/mol`
             options: [`Anode (positive electrode)`, `Cathode (negative electrode)`, `Salt bridge`, `It varies`],
             correctAnswer: 0,
             explanation: `Oxidation ALWAYS occurs at the anode (both galvanic and electrolytic). In electrolytic cells, the anode is positive (connected to + terminal of battery).`
+          },
+          {
+            question: `If $E°_{cell}$ is positive under standard conditions, which statement is true?`,
+            options: [`The reaction is nonspontaneous`, `The reaction is spontaneous and $\\Delta G° < 0$`, `The reaction is at equilibrium`, `The reaction must be electrolytic`],
+            correctAnswer: 1,
+            explanation: `A positive standard cell potential corresponds to a negative standard free energy change, so the process is thermodynamically spontaneous.`
+          },
+          {
+            question: `In a redox reaction, the species that is oxidized acts as the:`,
+            options: [`Oxidizing agent`, `Reducing agent`, `Catalyst`, `Electrolyte`],
+            correctAnswer: 1,
+            explanation: `The species that is oxidized donates electrons to another species and therefore reduces that other species.`
           }
         ]
       }
@@ -59,7 +84,8 @@ where $n$ = moles of electrons transferred, $F$ = 96,485 C/mol`
 - AN OX, RED CAT: Anode = Oxidation, Reduction = Cathode (always!)
 - Galvanic: spontaneous, $E° > 0$; Electrolytic: non-spontaneous, $E° < 0$
 - $\\Delta G° = -nFE°$: positive cell potential means negative free energy
-- Nernst equation: how concentration affects cell potential`
+- Nernst equation: how concentration affects cell potential
+- Oxidized species is the reducing agent; reduced species is the oxidizing agent`
     }
   ]
 };

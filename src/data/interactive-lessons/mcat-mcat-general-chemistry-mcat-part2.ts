@@ -8,29 +8,40 @@ export const mcatGenChemPart2Data = {
 
 **Part 2 of 7 — Bonding & Molecular Geometry**
 
-### Bond Types
+    ### Bonding Models and Polarity
 
-| Type | Description | Example |
-|------|-------------|---------|
-| Ionic | Metal + nonmetal, electron transfer | NaCl |
-| Covalent | Nonmetal + nonmetal, electron sharing | $H_2O$ |
-| Metallic | Metal + metal, electron sea | Fe |
-| Coordinate | Both electrons from one atom | $NH_4^+$ |
+    Bonding on the MCAT is about predicting **shape -> polarity -> intermolecular forces -> physical behavior**.
 
-### VSEPR Geometry
+    - **Ionic**: full electron transfer (large electronegativity difference)
+    - **Polar covalent**: unequal sharing
+    - **Nonpolar covalent**: nearly equal sharing
+    - **Coordinate covalent**: both bonding electrons from one donor atom
 
-| Electron groups | Molecular geometry | Bond angle | Example |
-|----------------|-------------------|------------|---------|
-| 2 | Linear | 180° | $CO_2$ |
-| 3 (0 lone) | Trigonal planar | 120° | $BF_3$ |
-| 3 (1 lone) | Bent | ~117° | $SO_2$ |
-| 4 (0 lone) | Tetrahedral | 109.5° | $CH_4$ |
-| 4 (1 lone) | Trigonal pyramidal | ~107° | $NH_3$ |
-| 4 (2 lone) | Bent | ~104.5° | $H_2O$ |
+    ### VSEPR Strategy (Fast and Reliable)
 
-### Intermolecular Forces (weakest → strongest)
+    1. Draw a Lewis structure.
+    2. Count electron domains around central atom.
+    3. Determine electron-domain geometry.
+    4. Convert to molecular geometry after removing lone pairs.
 
-London dispersion < Dipole-dipole < Hydrogen bonding < Ion-dipole`
+    | Electron domains | Lone pairs on central atom | Molecular geometry | Approx angle |
+    |------------------|---------------------------|--------------------|--------------|
+    | 2 | 0 | Linear | 180° |
+    | 3 | 0 | Trigonal planar | 120° |
+    | 3 | 1 | Bent | <120° |
+    | 4 | 0 | Tetrahedral | 109.5° |
+    | 4 | 1 | Trigonal pyramidal | ~107° |
+    | 4 | 2 | Bent | ~104.5° |
+
+    Lone pairs repel more strongly than bonding pairs, compressing angles.
+
+    ### Intermolecular Forces and Macroscopic Consequences
+
+    **Strength trend** (for comparable molecules):
+
+    London < dipole-dipole < H-bonding < ion-dipole
+
+    Stronger IMFs generally increase boiling point, viscosity, and surface tension and reduce vapor pressure.`
     },
     {
       id: 'gc2-quiz1',
@@ -49,6 +60,24 @@ London dispersion < Dipole-dipole < Hydrogen bonding < Ion-dipole`
             options: [`Hydrogen bonding in methanol`, `Greater London dispersion forces in ethane`, `Ion-dipole interactions`, `Covalent bonding differences`],
             correctAnswer: 0,
             explanation: `Methanol has O-H bonds capable of hydrogen bonding (O is electronegative with lone pairs). Ethane only has weak London dispersion forces.`
+          },
+          {
+            question: `Which molecule is NONPOLAR despite containing polar bonds?`,
+            options: [`$CO_2$`, `$SO_2$`, `$NH_3$`, `$H_2O$`],
+            correctAnswer: 0,
+            explanation: `$CO_2$ is linear, so equal and opposite bond dipoles cancel. $SO_2$, $NH_3$, and $H_2O$ are bent/pyramidal and therefore polar.`
+          },
+          {
+            question: `Which species has trigonal pyramidal molecular geometry?`,
+            options: [`$BF_3$`, `$NH_3$`, `$CO_2$`, `$SO_3$`],
+            correctAnswer: 1,
+            explanation: `$NH_3$ has 4 electron domains (3 bonds + 1 lone pair), giving trigonal pyramidal molecular geometry.`
+          },
+          {
+            question: `Which interaction is strongest between $Na^+$ and $H_2O$ molecules in solution?`,
+            options: [`London dispersion`, `Hydrogen bonding`, `Ion-dipole`, `Dipole-dipole`],
+            correctAnswer: 2,
+            explanation: `Hydration of ions in water is driven primarily by ion-dipole attraction between ionic charge and water dipole.`
           }
         ]
       }
@@ -58,10 +87,10 @@ London dispersion < Dipole-dipole < Hydrogen bonding < Ion-dipole`
       type: 'text' as const,
       content: `### Key Takeaways — Part 2
 
-- Count ALL electron groups (bonds + lone pairs) for VSEPR
-- Lone pairs compress bond angles below ideal
-- H-bonding requires H bonded to F, O, or N AND a lone pair on another F, O, or N
-- Boiling point: H-bonding > dipole-dipole > London (for similar MW)`
+- Molecular shape determines dipole cancellation or net polarity.
+- Distinguish electron-domain geometry from molecular geometry.
+- Connect IMF strength to boiling point and phase behavior.
+- Always ask: "Does this molecule have both a polar bond and asymmetric geometry?"`
     }
   ]
 };

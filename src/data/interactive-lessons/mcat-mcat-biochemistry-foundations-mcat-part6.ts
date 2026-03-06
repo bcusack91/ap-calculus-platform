@@ -34,7 +34,9 @@ $$\\text{DNA} \\xrightarrow{\\text{Transcription}} \\text{mRNA} \\xrightarrow{\\
 | Replication | Helicase | Unwinds double helix |
 | Replication | Primase | Makes RNA primer |
 | Transcription | RNA polymerase | Synthesizes mRNA from DNA template |
-| Translation | Ribosome | Reads mRNA, assembles protein |`
+| Translation | Ribosome | Reads mRNA, assembles protein |
+
+Directionality is crucial: polymerases synthesize nucleic acid in the 5' to 3' direction by adding to a free 3'-OH.`
     },
     {
       id: 'bc6-quiz1',
@@ -53,6 +55,18 @@ $$\\text{DNA} \\xrightarrow{\\text{Transcription}} \\text{mRNA} \\xrightarrow{\\
             options: [`A free $3\`-OH$ group to add nucleotides (needs a primer!)`, `A $5\`-OH$ group`, `No primer — it can start de novo`, `Only single-stranded DNA`],
             correctAnswer: 0,
             explanation: `DNA polymerase can only add nucleotides to an existing $3'-OH$ group. This is why primase must first lay down an RNA primer. RNA polymerase, in contrast, can start de novo.`
+          },
+          {
+            question: `Higher GC content usually increases DNA melting temperature because:`,
+            options: [`GC bases are larger`, `GC pairs have three hydrogen bonds`, `GC pairs are uncharged`, `GC prevents base stacking`],
+            correctAnswer: 1,
+            explanation: `G-C pairs form three hydrogen bonds versus two for A-T, increasing duplex stability.`
+          },
+          {
+            question: `During replication, DNA polymerase reads the template strand in which direction?`,
+            options: [`5' to 3'`, `3' to 5'`, `Both simultaneously`, `Random direction`],
+            correctAnswer: 1,
+            explanation: `Because synthesis is 5' to 3', the template must be read 3' to 5'.`
           }
         ]
       }

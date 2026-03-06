@@ -30,7 +30,9 @@ $$m = -\\frac{d_i}{d_o} = \\frac{h_i}{h_o}$$
 ### MCAT Must-Know
 
 - **Concave mirror / Convex lens**: Converging, $f > 0$
-- **Convex mirror / Concave lens**: Diverging, $f < 0$, always produces virtual, upright, reduced image`
+- **Convex mirror / Concave lens**: Diverging, $f < 0$, always produces virtual, upright, reduced image
+
+Always interpret sign of $d_i$ and $m$ before choosing the image description.`
     },
     {
       id: 'pe5-quiz1',
@@ -49,6 +51,12 @@ $$m = -\\frac{d_i}{d_o} = \\frac{h_i}{h_o}$$
             options: [`Virtual, upright, and reduced`, `Real, inverted, and enlarged`, `Virtual, inverted, and reduced`, `Real, upright, and enlarged`],
             correctAnswer: 0,
             explanation: `Diverging optical elements (convex mirror, concave lens) ALWAYS produce virtual, upright, reduced images regardless of object position. This is a must-memorize fact.`
+          },
+          {
+            question: `For a converging lens, a positive image distance indicates the image is:`,
+            options: [`Virtual and upright`, `Real and inverted`, `Virtual and inverted`, `Always reduced`],
+            correctAnswer: 1,
+            explanation: `Positive $d_i$ means image forms on opposite side of lens, which is a real image and typically inverted.`
           }
         ]
       }

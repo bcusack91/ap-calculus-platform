@@ -32,7 +32,9 @@ $$f' = f\\frac{v \\pm v_{observer}}{v \\mp v_{source}}$$
 ### Standing Waves
 
 - **Both ends fixed**: $\\lambda_n = \\frac{2L}{n}$, $f_n = n\\frac{v}{2L}$
-- **One end open**: $\\lambda_n = \\frac{4L}{n}$ (odd harmonics only: $n = 1, 3, 5...$)`
+- **One end open**: $\\lambda_n = \\frac{4L}{n}$ (odd harmonics only: $n = 1, 3, 5...$)
+
+For a fixed source frequency, wavelength changes with medium because $\\lambda = v/f$ and wave speed depends on medium properties.`
     },
     {
       id: 'pm7-quiz1',
@@ -51,6 +53,12 @@ $$f' = f\\frac{v \\pm v_{observer}}{v \\mp v_{source}}$$
             options: [`20 dB`, `10 dB`, `100 dB`, `2 dB`],
             correctAnswer: 0,
             explanation: `$\\Delta\\beta = 10\\log(100) = 10(2) = 20$ dB. Each factor of 10 in intensity = +10 dB.`
+          },
+          {
+            question: `A 340 Hz tone travels from air into water. Which statement is correct?`,
+            options: [`Frequency changes, wavelength constant`, `Frequency constant, wavelength changes`, `Both frequency and wavelength constant`, `Both frequency and wavelength decrease`],
+            correctAnswer: 1,
+            explanation: `Frequency is set by the source and stays constant across boundaries; speed changes with medium, so wavelength must change.`
           }
         ]
       }

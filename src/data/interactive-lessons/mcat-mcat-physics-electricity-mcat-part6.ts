@@ -33,7 +33,9 @@ $$KE_{max} = hf - \\phi$$
 ### Diffraction & Interference
 
 - **Constructive**: $d\\sin\\theta = n\\lambda$ (bright fringes)
-- **Destructive**: $d\\sin\\theta = (n + \\frac{1}{2})\\lambda$ (dark fringes)`
+- **Destructive**: $d\\sin\\theta = (n + \\frac{1}{2})\\lambda$ (dark fringes)
+
+Below threshold frequency, no electrons are emitted regardless of light intensity because single photons do not carry enough energy.`
     },
     {
       id: 'pe6-quiz1',
@@ -46,6 +48,12 @@ $$KE_{max} = hf - \\phi$$
             options: [`Increases the number of ejected electrons (more photons hitting surface)`, `Increases the kinetic energy of ejected electrons`, `Decreases the work function`, `Has no effect`],
             correctAnswer: 0,
             explanation: `Intensity = number of photons per unit time. More photons → more electrons ejected. The KE of each electron depends only on frequency ($KE = hf - \\phi$), not intensity.`
+          },
+          {
+            question: `If frequency is below threshold, increasing intensity causes photoelectron KE to:`,
+            options: [`Increase linearly`, `Increase then plateau`, `Stay nonexistent (no emission)`, `Become negative`],
+            correctAnswer: 2,
+            explanation: `No emission occurs below threshold frequency, so there are no emitted electrons and no kinetic-energy distribution to increase.`
           }
         ]
       }

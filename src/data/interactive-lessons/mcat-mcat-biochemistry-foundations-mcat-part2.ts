@@ -31,7 +31,9 @@ $$\\frac{1}{v} = \\frac{K_m}{V_{max}} \\cdot \\frac{1}{[S]} + \\frac{1}{V_{max}}
 | Competitive | No change | Increases (apparent) | Yes |
 | Uncompetitive | Decreases | Decreases | No |
 | Noncompetitive | Decreases | No change | No |
-| Mixed | Decreases | Can increase or decrease | No |`
+| Mixed | Decreases | Can increase or decrease | No |
+
+Catalytic efficiency is often summarized by $k_{cat}/K_m$, useful for comparing enzymes at low substrate concentrations.`
     },
     {
       id: 'bc2-quiz1',
@@ -50,6 +52,18 @@ $$\\frac{1}{v} = \\frac{K_m}{V_{max}} \\cdot \\frac{1}{[S]} + \\frac{1}{V_{max}}
             options: [`90 $\\mu$mol/min`, `50 $\\mu$mol/min`, `100 $\\mu$mol/min`, `10 $\\mu$mol/min`],
             correctAnswer: 0,
             explanation: `$v = V_{max}[S]/(K_m + [S]) = 100(18)/(2 + 18) = 1800/20 = 90$ $\\mu$mol/min. At high [S] relative to $K_m$, the enzyme approaches $V_{max}$.`
+          },
+          {
+            question: `A competitive inhibitor can often be overcome by:`,
+            options: [`Lowering substrate concentration`, `Increasing substrate concentration`, `Removing enzyme`, `Increasing pH only`],
+            correctAnswer: 1,
+            explanation: `Competitive inhibitors compete at the active site, so higher substrate concentration can outcompete inhibitor binding.`
+          },
+          {
+            question: `At $[S]=K_m$, reaction velocity equals:`,
+            options: [`$V_{max}$`, `$V_{max}/2$`, `$2V_{max}$`, `0`],
+            correctAnswer: 1,
+            explanation: `By definition of Michaelis-Menten kinetics, $K_m$ is the substrate concentration at half-maximal velocity.`
           }
         ]
       }

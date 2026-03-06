@@ -8,26 +8,46 @@ export const mcatGenChemPart1Data = {
 
 **Part 1 of 7 — Atomic Structure & Periodic Trends**
 
-### Atomic Structure
+### Atomic Structure: What Actually Drives Reactivity
 
-- **Quantum numbers**: $n$ (shell), $l$ (subshell: 0=s, 1=p, 2=d, 3=f), $m_l$ (-l to +l), $m_s$ ($\\pm 1/2$)
-- **Electron configuration**: Fill in order of increasing energy (1s, 2s, 2p, 3s, 3p, 4s, 3d...)
-- **Aufbau principle**: Electrons fill lowest energy orbitals first
-- **Hund's rule**: Electrons occupy degenerate orbitals singly before pairing
-- **Pauli exclusion**: No two electrons can share all four quantum numbers
+The MCAT expects you to connect **electron structure** to bonding, acidity/basicity, and redox behavior.
 
-### Periodic Trends (HIGH YIELD!)
+- **Quantum numbers**:
+  - $n$: principal shell (energy level)
+  - $l$: subshell shape (0=s, 1=p, 2=d, 3=f)
+  - $m_l$: orbital orientation ($-l$ to $+l$)
+  - $m_s$: spin ($\\pm 1/2$)
+- **Pauli exclusion**: no two electrons in an atom can have the same four quantum numbers.
+- **Hund's rule**: degenerate orbitals fill singly first to minimize electron-electron repulsion.
+- **Aufbau principle**: lower-energy orbitals fill first, with known transition-metal exceptions.
 
-| Property | Across Period → | Down Group ↓ |
-|----------|----------------|--------------|
+### Effective Nuclear Charge and Shielding
+
+Periodic trends are best explained by **effective nuclear charge** ($Z_{eff}$):
+
+$$Z_{eff} = Z - S$$
+
+- $Z$ = number of protons
+- $S$ = shielding from core electrons
+
+Across a period, $Z_{eff}$ increases strongly, so valence electrons are held tighter.
+
+### Periodic Trends You Must Reason, Not Memorize
+
+| Property | Across Period (left -> right) | Down Group (top -> bottom) |
+|----------|-------------------------------|-----------------------------|
 | Atomic radius | Decreases | Increases |
-| Ionization energy | Increases | Decreases |
+| First ionization energy | Increases (with small exceptions) | Decreases |
 | Electronegativity | Increases | Decreases |
-| Electron affinity | More negative | Less negative |
+| Metallic character | Decreases | Increases |
 
-### MCAT Trap
+### High-Yield Exceptions and Ionization Logic
 
-Transition metals: 4s electrons are removed FIRST despite being filled first. $\\text{Fe}^{2+}$: lose 4s$^2$, keep 3d$^6$.`
+- **Cr**: $[Ar]3d^5 4s^1$
+- **Cu**: $[Ar]3d^{10} 4s^1$
+- For transition metal cations, remove **4s before 3d**.
+  - Example: $Fe$: $[Ar]3d^6 4s^2$
+  - $Fe^{2+}$: $[Ar]3d^6$`
     },
     {
       id: 'gc1-quiz1',
@@ -52,6 +72,18 @@ Transition metals: 4s electrons are removed FIRST despite being filled first. $\
             options: [`IIA (2)`, `IIIA (13)`, `IA (1)`, `IVA (14)`],
             correctAnswer: 0,
             explanation: `Group IIA has 2 valence electrons. Removing the 3rd requires breaking into a noble gas core — huge energy jump.`
+          },
+          {
+            question: `Which set of quantum numbers is NOT allowed for an electron?`,
+            options: [`$n=3, l=2, m_l=-1, m_s=+1/2$`, `$n=2, l=2, m_l=0, m_s=-1/2$`, `$n=4, l=1, m_l=+1, m_s=-1/2$`, `$n=1, l=0, m_l=0, m_s=+1/2$`],
+            correctAnswer: 1,
+            explanation: `For a given $n$, allowed $l$ values are 0 to $n-1$. If $n=2$, then $l$ can only be 0 or 1. So $l=2$ is impossible.`
+          },
+          {
+            question: `Compared with neutral Fe, the electron configuration of $Fe^{3+}$ is:`,
+            options: [`$[Ar]3d^5$`, `$[Ar]3d^3$`, `$[Ar]4s^1 3d^4$`, `$[Ar]4s^2 3d^3$`],
+            correctAnswer: 0,
+            explanation: `Neutral Fe is $[Ar]3d^6 4s^2$. Remove electrons from 4s first (2), then one from 3d, giving $[Ar]3d^5$.`
           }
         ]
       }
@@ -61,10 +93,10 @@ Transition metals: 4s electrons are removed FIRST despite being filled first. $\
       type: 'text' as const,
       content: `### Key Takeaways — Part 1
 
-- Know quantum numbers cold — the MCAT loves "which set of quantum numbers is impossible?"
-- Periodic trends: radius ↑ down/left, IE ↑ up/right, EN ↑ up/right
-- Exceptions: Cr ($3d^5\\,4s^1$), Cu ($3d^{10}\\,4s^1$)
-- Transition metal ions: remove 4s first`
+- Know quantum number rules cold; MCAT loves invalid-set questions.
+- Explain trends with **$Z_{eff}$ and shielding**, not memorized arrows.
+- Practice exceptions (Cr, Cu) and cation electron removal from transition metals.
+- Use ionization-energy jump logic to infer valence electron count.`
     }
   ]
 };

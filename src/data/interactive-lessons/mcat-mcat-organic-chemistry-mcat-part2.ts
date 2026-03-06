@@ -23,7 +23,13 @@ export const mcatOrgChemPart2Data = {
 - **SN2**: Rate = $k[\\text{substrate}][\\text{nuc}]$. Backside attack → inversion. Sterically hindered substrates slow it.
 - **SN1**: Rate = $k[\\text{substrate}]$. Carbocation intermediate → racemization. Favored by 3° substrates, polar protic solvents.
 - **E2**: Strong BULKY base (t-BuOK) favors elimination over substitution. Anti-periplanar geometry required.
-- **E1**: Shares carbocation intermediate with SN1. Heat favors elimination.`
+- **E1**: Shares carbocation intermediate with SN1. Heat favors elimination.
+
+### Fast Test-Day Decision Rules
+
+- If you see **methyl/1 degree + strong nucleophile + aprotic solvent**, think SN2 first.
+- If you see **3 degree substrate + protic solvent**, think SN1/E1 competition.
+- If you see **strong bulky base + heat**, think E2 (often Hofmann product favored).`
     },
     {
       id: 'oc2-quiz1',
@@ -42,6 +48,18 @@ export const mcatOrgChemPart2Data = {
             options: [`Inversion of configuration`, `Retention of configuration`, `Racemic mixture`, `Random configuration`],
             correctAnswer: 0,
             explanation: `SN2 proceeds through a single backside-attack step, giving 100% inversion of stereochemistry at the carbon center (Walden inversion).`
+          },
+          {
+            question: `Which condition most strongly favors E2 over SN2 for a secondary alkyl halide?`,
+            options: [`Strong bulky base and heat`, `Weak nucleophile in polar protic solvent`, `Strong nucleophile in DMSO at low temperature`, `Dilute aqueous acid`],
+            correctAnswer: 0,
+            explanation: `Bulky strong base and heat strongly bias elimination, especially for secondary/tertiary substrates.`
+          },
+          {
+            question: `The rate law $rate=k[substrate]$ is consistent with:`,
+            options: [`SN2 only`, `SN1 or E1`, `E2 only`, `No substitution/elimination mechanism`],
+            correctAnswer: 1,
+            explanation: `SN1 and E1 are unimolecular in the rate-determining step, so their rates depend only on substrate concentration.`
           }
         ]
       }
@@ -54,7 +72,8 @@ export const mcatOrgChemPart2Data = {
 - SN2: strong nuc + methyl/1° + polar aprotic → inversion
 - SN1: weak nuc + 3° + polar protic → racemization
 - E2: strong bulky base + 2°/3° → Zaitsev product
-- The SN1/E1/SN2/E2 decision chart is GUARANTEED on the MCAT`
+- The SN1/E1/SN2/E2 decision chart is GUARANTEED on the MCAT
+- Tie mechanism choice to substrate class first, then reagent/solvent/temperature.`
     }
   ]
 };

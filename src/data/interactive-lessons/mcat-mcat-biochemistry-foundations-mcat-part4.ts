@@ -31,7 +31,9 @@ $$\\text{Acetyl-CoA} + \\text{OAA} \\to \\text{Citrate} \\to \\cdots \\to \\text
 - Glycolysis: 2 ATP + 2 NADH (~3-5 ATP)
 - PDH: 2 NADH (~5 ATP)
 - TCA: 6 NADH (~15 ATP) + 2 FADH$_2$ (~3 ATP) + 2 GTP
-- **Total: ~30-32 ATP per glucose**`
+- **Total: ~30-32 ATP per glucose**
+
+Chemiosmosis links ETC to ATP synthase: proton-motive force (electrochemical gradient) drives ATP production.`
     },
     {
       id: 'bc4-quiz1',
@@ -50,6 +52,18 @@ $$\\text{Acetyl-CoA} + \\text{OAA} \\to \\text{Citrate} \\to \\cdots \\to \\text
             options: [`FADH$_2$ enters at Complex II, bypassing Complex I (fewer protons pumped)`, `FADH$_2$ has less energy than NADH`, `FADH$_2$ cannot cross the membrane`, `$FADH_2$ is used only in the TCA cycle`],
             correctAnswer: 0,
             explanation: `FADH$_2$ donates electrons to Complex II, which does NOT pump protons. NADH enters at Complex I, which DOES pump protons. So FADH$_2$ contributes to fewer H$^+$ pumped → fewer ATP (~1.5 vs ~2.5 per electron pair).`
+          },
+          {
+            question: `The final electron acceptor in the ETC is:`,
+            options: [`NAD+`, `FAD`, `O$_2$`, `CO$_2$`],
+            correctAnswer: 2,
+            explanation: `Oxygen accepts electrons at Complex IV and is reduced to water.`
+          },
+          {
+            question: `An uncoupler primarily causes which immediate effect?`,
+            options: [`Increased proton gradient`, `Reduced oxygen consumption`, `Dissipation of proton gradient with less ATP synthesis`, `Direct inhibition of glycolysis`],
+            correctAnswer: 2,
+            explanation: `Uncouplers allow protons to re-enter matrix without ATP synthase, reducing ATP yield despite ongoing electron transport.`
           }
         ]
       }

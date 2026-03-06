@@ -30,7 +30,9 @@ $$\\text{Glucose} \\xrightarrow{10\\text{ steps}} 2\\text{ Pyruvate}$$
 |-----------|---------|---------|
 | Aerobic | Pyruvate dehydrogenase | Acetyl-CoA → TCA |
 | Anaerobic (muscle) | Lactate dehydrogenase | Lactate (regenerates NAD$^+$) |
-| Anaerobic (yeast) | Pyruvate decarboxylase | Ethanol + CO$_2$ |`
+| Anaerobic (yeast) | Pyruvate decarboxylase | Ethanol + CO$_2$ |
+
+Gluconeogenesis bypasses the three irreversible glycolysis steps using pyruvate carboxylase/PEPCK, fructose-1,6-bisphosphatase, and glucose-6-phosphatase.`
     },
     {
       id: 'bc3-quiz1',
@@ -49,6 +51,18 @@ $$\\text{Glucose} \\xrightarrow{10\\text{ steps}} 2\\text{ Pyruvate}$$
             options: [`Regenerate NAD$^+$ to continue glycolysis`, `Produce more ATP`, `Feed into the TCA cycle`, `Prevent acidosis`],
             correctAnswer: 0,
             explanation: `Lactate dehydrogenase converts pyruvate → lactate while oxidizing NADH → NAD$^+$. The regenerated NAD$^+$ is needed for glyceraldehyde-3-P dehydrogenase (step 6) to keep glycolysis running anaerobically.`
+          },
+          {
+            question: `The primary rate-limiting enzyme of glycolysis is:`,
+            options: [`Hexokinase`, `PFK-1`, `Pyruvate kinase`, `Lactate dehydrogenase`],
+            correctAnswer: 1,
+            explanation: `PFK-1 is the committed, major regulatory step and the classic rate-limiting enzyme for glycolysis.`
+          },
+          {
+            question: `High fructose-2,6-bisphosphate tends to:`,
+            options: [`Inhibit glycolysis`, `Activate glycolysis`, `Block pyruvate kinase`, `Activate glycogenolysis only`],
+            correctAnswer: 1,
+            explanation: `Fructose-2,6-bisphosphate activates PFK-1 and promotes glycolytic flux.`
           }
         ]
       }

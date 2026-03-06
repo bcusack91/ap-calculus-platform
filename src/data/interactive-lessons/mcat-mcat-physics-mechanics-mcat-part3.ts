@@ -26,7 +26,14 @@ $$KE_i + PE_i = KE_f + PE_f \\quad (\\text{if no non-conservative forces})$$
 
 $$P = \\frac{W}{t} = Fv$$
 
-Units: Watts (W) = J/s`
+Units: Watts (W) = J/s
+
+### Conservative vs Nonconservative Forces
+
+- Conservative (gravity, springs): path-independent work; mechanical energy conserved.
+- Nonconservative (friction, drag): convert mechanical energy to thermal/internal energy.
+
+When friction is present, include nonconservative work in the energy equation.`
     },
     {
       id: 'pm3-quiz1',
@@ -45,6 +52,18 @@ Units: Watts (W) = J/s`
             options: [`250 J`, `500 J`, `433 J`, `0 J`],
             correctAnswer: 0,
             explanation: `$W = Fd\\cos\\theta = 100(5)\\cos 60° = 500(0.5) = 250$ J.`
+          },
+          {
+            question: `If kinetic friction does -40 J of work on a block, the block's mechanical energy changes by:`,
+            options: [`-40 J`, `+40 J`, `0 J`, `Depends only on mass`],
+            correctAnswer: 0,
+            explanation: `Negative nonconservative work removes mechanical energy from the system.`
+          },
+          {
+            question: `Power can be written as $P=Fv$ when:`,
+            options: [`Force is parallel to velocity`, `Force is perpendicular to velocity`, `Velocity is zero`, `Motion is circular only`],
+            correctAnswer: 0,
+            explanation: `Instantaneous power is dot product $P=\\vec{F}\\cdot\\vec{v}=Fv\\cos\\theta$. The scalar form $Fv$ assumes parallel vectors.`
           }
         ]
       }
@@ -57,7 +76,8 @@ Units: Watts (W) = J/s`
 - $W = Fd\\cos\\theta$: only the component of force parallel to displacement does work
 - Conservation of energy: $KE + PE = \\text{constant}$ (no friction/air resistance)
 - $v = \\sqrt{2gh}$ for an object dropped from height $h$ — memorize this shortcut
-- Power = Work/time = Force $\\times$ velocity`
+- Power = Work/time = Force $\\times$ velocity
+- Friction does negative work and reduces mechanical energy.`
     }
   ]
 };

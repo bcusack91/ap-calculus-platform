@@ -29,7 +29,14 @@ export const mcatPhysMechPart2Data = {
 
 - Component along plane: $mg\\sin\\theta$
 - Component perpendicular: $mg\\cos\\theta$ (= Normal force if no other vertical forces)
-- Friction on incline: $f = \\mu mg\\cos\\theta$`
+- Friction on incline: $f = \\mu mg\\cos\\theta$
+
+### Force-Analysis Workflow
+
+1. Isolate one object.
+2. Draw every real force (weight, normal, tension, friction, applied).
+3. Choose axes along likely motion.
+4. Write $\\sum F = ma$ per axis.`
     },
     {
       id: 'pm2-quiz1',
@@ -48,6 +55,18 @@ export const mcatPhysMechPart2Data = {
             options: [`720 N`, `600 N`, `480 N`, `588 N`],
             correctAnswer: 0,
             explanation: `Apparent weight = $m(g + a) = 60(10 + 2) = 720$ N. Accelerating up increases apparent weight; accelerating down decreases it.`
+          },
+          {
+            question: `A box moves at constant speed on a rough surface. The net force is:`,
+            options: [`Zero`, `Equal to $mg$`, `Equal to normal force`, `Equal to friction only`],
+            correctAnswer: 0,
+            explanation: `Constant speed means zero acceleration, so by Newton's second law the net force must be zero.`
+          },
+          {
+            question: `Which Newton law explains recoil of a gun?`,
+            options: [`First law`, `Second law`, `Third law`, `Law of gravitation`],
+            correctAnswer: 2,
+            explanation: `Action-reaction pairs are Newton's third law: bullet forward force and equal opposite force on gun backward.`
           }
         ]
       }
@@ -60,7 +79,8 @@ export const mcatPhysMechPart2Data = {
 - $F_{net} = ma$: always draw a free body diagram first!
 - Incline: $mg\\sin\\theta$ along the plane, $mg\\cos\\theta$ perpendicular
 - Elevator problems: apparent weight = $m(g \\pm a)$
-- Static friction is a maximum ($f_s \\le \\mu_s N$); kinetic friction is exact ($f_k = \\mu_k N$)`
+- Static friction is a maximum ($f_s \\le \\mu_s N$); kinetic friction is exact ($f_k = \\mu_k N$)
+- If speed is constant, net force is zero even if multiple forces are present.`
     }
   ]
 };

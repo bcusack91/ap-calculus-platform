@@ -33,7 +33,13 @@ export const mcatOrgChemPart6Data = {
 A proton with $n$ equivalent neighboring protons splits into $n + 1$ peaks.
 
 - Triplet: 2 neighbors
-- Quartet: 3 neighbors`
+- Quartet: 3 neighbors
+
+### Integration and Signal Counting
+
+- Integration gives relative proton counts for each signal.
+- Number of unique proton environments gives number of distinct $^1$H NMR signals.
+- Symmetry can reduce the number of observed signals.`
     },
     {
       id: 'oc6-quiz1',
@@ -52,6 +58,18 @@ A proton with $n$ equivalent neighboring protons splits into $n + 1$ peaks.
             options: [`Quartet (3 neighbors from $\\text{CH}_3$)`, `Triplet`, `Singlet`, `Doublet`],
             correctAnswer: 0,
             explanation: `The $\\text{CH}_2$ has 3 neighboring H atoms on the $\\text{CH}_3$. By the n+1 rule: $3 + 1 = 4$ peaks = quartet. (The OH neighbor is often ignored due to rapid exchange).`
+          },
+          {
+            question: `A molecular ion peak at m/z 78 in mass spectrometry most directly indicates:`,
+            options: [`Boiling point`, `Molecular weight`, `Number of hydrogens`, `Functional-group identity`],
+            correctAnswer: 1,
+            explanation: `The molecular ion peak (M+) gives the approximate molecular mass of the compound.`
+          },
+          {
+            question: `A proton signal split into a triplet has how many equivalent neighboring protons?`,
+            options: [`1`, `2`, `3`, `4`],
+            correctAnswer: 1,
+            explanation: `Triplet means n+1 = 3, so n = 2 equivalent neighboring protons.`
           }
         ]
       }
@@ -64,7 +82,8 @@ A proton with $n$ equivalent neighboring protons splits into $n + 1$ peaks.
 - IR: Broad O-H (3200-3600 for alcohol, 2500-3300 for acid) and sharp C=O (~1715)
 - NMR: Chemical shift tells you environment, splitting tells you neighbors
 - n+1 rule: number of peaks = neighbors + 1
-- Mass spec: molecular ion peak (M$^+$) gives molecular weight`
+- Mass spec: molecular ion peak (M$^+$) gives molecular weight
+- Use all clues together: IR functional groups + NMR environment + mass constraints.`
     }
   ]
 };

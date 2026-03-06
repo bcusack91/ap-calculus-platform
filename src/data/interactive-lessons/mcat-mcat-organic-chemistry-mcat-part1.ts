@@ -32,7 +32,15 @@ export const mcatOrgChemPart1Data = {
 
 1. Assign priority by atomic number (highest = 1)
 2. Orient lowest priority group away from you
-3. 1→2→3 clockwise = R; counterclockwise = S`
+3. 1→2→3 clockwise = R; counterclockwise = S
+
+### Stereochemical Relationships You Must Distinguish
+
+- **Constitutional isomers**: same formula, different connectivity
+- **Stereoisomers**: same connectivity, different 3D arrangement
+- **Conformational isomers**: interconvert by bond rotation (usually not isolated)
+
+On the MCAT, many questions hide stereochemistry inside a passage about receptor binding where only one stereoisomer is biologically active.`
     },
     {
       id: 'oc1-quiz1',
@@ -51,6 +59,18 @@ export const mcatOrgChemPart1Data = {
             options: [`Amide`, `Amine`, `Ester`, `Carboxylic acid`],
             correctAnswer: 0,
             explanation: `The peptide bond ($-CO-NH-$) is an amide bond formed between the carboxyl group of one amino acid and the amino group of another, with loss of water.`
+          },
+          {
+            question: `Two molecules differ at one chiral center but are not mirror images. They are:`,
+            options: [`Enantiomers`, `Diastereomers`, `Constitutional isomers`, `Conformers`],
+            correctAnswer: 1,
+            explanation: `Diastereomers are stereoisomers that are not mirror images and usually have different physical/chemical properties.`
+          },
+          {
+            question: `A molecule is achiral despite having two stereocenters because it has an internal plane of symmetry. This is a:`,
+            options: [`Racemic mixture`, `Meso compound`, `Constitutional isomer`, `Geometric isomer`],
+            correctAnswer: 1,
+            explanation: `A meso compound has stereocenters but is overall achiral due to an internal symmetry plane.`
           }
         ]
       }
@@ -63,7 +83,8 @@ export const mcatOrgChemPart1Data = {
 - Know ALL functional groups instantly — they appear in every MCAT passage
 - $2^n$ rule for maximum stereoisomers
 - Enantiomers: mirror images, same properties (except rotation). Diastereomers: different properties.
-- Amide = peptide bond — this connects to biochemistry`
+- Amide = peptide bond — this connects to biochemistry
+- Always classify relationship first: constitutional vs stereoisomer vs conformer.`
     }
   ]
 };

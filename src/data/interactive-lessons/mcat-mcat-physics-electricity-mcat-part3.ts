@@ -29,7 +29,9 @@ $$F = ILB\\sin\\theta$$
 $$\\varepsilon = -\\frac{d\\Phi_B}{dt}$$
 
 - Changing magnetic flux induces an EMF (voltage)
-- **Lenz's Law**: Induced current opposes the change that caused it`
+- **Lenz's Law**: Induced current opposes the change that caused it
+
+Flux changes can come from changing field strength, loop area, or orientation relative to the field.`
     },
     {
       id: 'pe3-quiz1',
@@ -42,6 +44,12 @@ $$\\varepsilon = -\\frac{d\\Phi_B}{dt}$$
             options: [`Zero ($\\sin 0° = 0$)`, `Maximum`, `Equal to $qvB$`, `Depends on speed only`],
             correctAnswer: 0,
             explanation: `$F = qvB\\sin\\theta$. When $\\vec{v}$ is parallel to $\\vec{B}$, $\\theta = 0°$, and $\\sin 0° = 0$. The charge must have a velocity component PERPENDICULAR to $\\vec{B}$ to feel a force.`
+          },
+          {
+            question: `A loop is rotated in a uniform magnetic field with constant angular speed. The induced EMF is caused by changing:`,
+            options: [`Charge on the wire`, `Magnetic flux through the loop`, `Wire resistance only`, `Electric field strength only`],
+            correctAnswer: 1,
+            explanation: `Faraday's law states induced EMF is proportional to rate of change of magnetic flux through the loop.`
           }
         ]
       }

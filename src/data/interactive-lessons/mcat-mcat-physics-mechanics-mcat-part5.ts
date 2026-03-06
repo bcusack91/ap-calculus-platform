@@ -36,7 +36,11 @@ $$P_1 + \\frac{1}{2}\\rho v_1^2 + \\rho g h_1 = P_2 + \\frac{1}{2}\\rho v_2^2 + 
 
 $$A_1 v_1 = A_2 v_2$$
 
-Narrower pipe → faster flow → lower pressure (Venturi effect)`
+Narrower pipe → faster flow → lower pressure (Venturi effect)
+
+### Flow Rate
+
+Volume flow rate $Q = Av$ helps connect continuity to units (m$^3$/s) and physiology passages about blood flow.`
     },
     {
       id: 'pm5-quiz1',
@@ -55,6 +59,12 @@ Narrower pipe → faster flow → lower pressure (Venturi effect)`
             options: [`60%`, `40%`, `100%`, `50%`],
             correctAnswer: 0,
             explanation: `For floating: $\\rho_{object}/\\rho_{fluid} = V_{submerged}/V_{total} = 600/1000 = 0.60$. So 60% is submerged.`
+          },
+          {
+            question: `At the same depth in the same fluid, pressure is primarily determined by:`,
+            options: [`Depth only (plus surface pressure)`, `Container shape`, `Fluid velocity only`, `Object mass in fluid`],
+            correctAnswer: 0,
+            explanation: `Hydrostatic pressure follows $P=P_0+\\rho gh$, so at equal depth in same fluid, pressure is the same regardless of container shape.`
           }
         ]
       }
