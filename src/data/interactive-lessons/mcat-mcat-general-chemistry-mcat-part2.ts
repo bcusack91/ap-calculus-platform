@@ -248,19 +248,3 @@ Examples: $\\text{H}_2\\text{O}$, $\\text{NH}_3$, $\\text{HF}$, alcohols, carbox
     }
   ]
 };
-          }
-        ]
-      }
-    },
-    {
-      id: 'gc2-summary',
-      type: 'text' as const,
-      content: `### Key Takeaways — Part 2
-
-- Molecular shape determines dipole cancellation or net polarity.
-- Distinguish electron-domain geometry from molecular geometry.
-- Connect IMF strength to boiling point and phase behavior.
-- Always ask: "Does this molecule have both a polar bond and asymmetric geometry?"`
-    }
-  ]
-};
